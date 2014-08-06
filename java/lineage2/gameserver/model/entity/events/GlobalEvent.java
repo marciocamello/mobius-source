@@ -20,7 +20,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
-
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.listener.Listener;
 import lineage2.commons.listener.ListenerList;
@@ -50,7 +49,6 @@ import lineage2.gameserver.taskmanager.actionrunner.ActionRunner;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.TimeUtils;
-
 import org.napile.primitive.Containers;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
@@ -104,49 +102,16 @@ public abstract class GlobalEvent extends LoggerObject
 		}
 	}
 	
-	/**
-	 * Field EVENT. (value is ""event"")
-	 */
 	public static final String EVENT = "event";
-	/**
-	 * Field _onTimeActions.
-	 */
 	protected final IntObjectMap<List<EventAction>> _onTimeActions = new TreeIntObjectMap<>();
-	/**
-	 * Field _onStartActions.
-	 */
 	protected final List<EventAction> _onStartActions = new ArrayList<>(0);
-	/**
-	 * Field _onStopActions.
-	 */
 	protected final List<EventAction> _onStopActions = new ArrayList<>(0);
-	/**
-	 * Field _onInitActions.
-	 */
 	protected final List<EventAction> _onInitActions = new ArrayList<>(0);
-	/**
-	 * Field _objects.
-	 */
 	protected final Map<String, List<Serializable>> _objects = new HashMap<>(0);
-	/**
-	 * Field _id.
-	 */
 	protected final int _id;
-	/**
-	 * Field _name.
-	 */
 	protected final String _name;
-	/**
-	 * Field _timerName.
-	 */
 	protected final String _timerName;
-	/**
-	 * Field _listenerList.
-	 */
 	protected final ListenerListImpl _listenerList = new ListenerListImpl();
-	/**
-	 * Field _banishedItems.
-	 */
 	protected IntObjectMap<ItemInstance> _banishedItems = Containers.emptyIntObjectMap();
 	
 	/**

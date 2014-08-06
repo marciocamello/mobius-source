@@ -16,7 +16,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.concurrent.TimeUnit;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
@@ -26,10 +25,8 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import gnu.trove.iterator.TIntObjectIterator;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
@@ -39,61 +36,19 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public class ItemAuction
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(ItemAuction.class);
-	/**
-	 * Field ENDING_TIME_EXTEND_5.
-	 */
 	private static final long ENDING_TIME_EXTEND_5 = TimeUnit.MILLISECONDS.convert(5, TimeUnit.MINUTES);
-	/**
-	 * Field ENDING_TIME_EXTEND_8.
-	 */
 	private static final long ENDING_TIME_EXTEND_8 = TimeUnit.MILLISECONDS.convert(8, TimeUnit.MINUTES);
-	/**
-	 * Field _auctionId.
-	 */
 	private final int _auctionId;
-	/**
-	 * Field _instanceId.
-	 */
 	private final int _instanceId;
-	/**
-	 * Field _startingTime.
-	 */
 	private final long _startingTime;
-	/**
-	 * Field _endingTime.
-	 */
 	private final long _endingTime;
-	/**
-	 * Field _auctionItem.
-	 */
 	private final AuctionItem _auctionItem;
-	/**
-	 * Field _auctionBids.
-	 */
 	private final TIntObjectHashMap<ItemAuctionBid> _auctionBids;
-	/**
-	 * Field _auctionState.
-	 */
 	private ItemAuctionState _auctionState;
-	/**
-	 * Field _scheduledAuctionEndingExtendState.
-	 */
 	private int _scheduledAuctionEndingExtendState;
-	/**
-	 * Field _auctionEndingExtendState.
-	 */
 	private int _auctionEndingExtendState;
-	/**
-	 * Field _highestBid.
-	 */
 	private ItemAuctionBid _highestBid;
-	/**
-	 * Field _lastBidPlayerObjId.
-	 */
 	private int _lastBidPlayerObjId;
 	
 	/**

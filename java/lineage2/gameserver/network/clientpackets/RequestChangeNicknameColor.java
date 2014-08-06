@@ -21,9 +21,6 @@ import lineage2.gameserver.model.items.ItemInstance;
  */
 public class RequestChangeNicknameColor extends L2GameClientPacket
 {
-	/**
-	 * Field COLORS.
-	 */
 	private static final int COLORS[] =
 	{
 		0x9393FF,
@@ -37,13 +34,7 @@ public class RequestChangeNicknameColor extends L2GameClientPacket
 		0x486295,
 		0x999999
 	};
-	/**
-	 * Field _itemObjectId. Field _colorNum.
-	 */
 	private int _colorNum, _itemObjectId;
-	/**
-	 * Field _title.
-	 */
 	private String _title;
 	
 	/**

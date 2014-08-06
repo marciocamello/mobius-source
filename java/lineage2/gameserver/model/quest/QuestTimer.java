@@ -14,7 +14,6 @@ package lineage2.gameserver.model.quest;
 
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -25,25 +24,10 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public class QuestTimer extends RunnableImpl
 {
-	/**
-	 * Field _name.
-	 */
 	private final String _name;
-	/**
-	 * Field _npc.
-	 */
 	private final NpcInstance _npc;
-	/**
-	 * Field _time.
-	 */
 	private long _time;
-	/**
-	 * Field _qs.
-	 */
 	private QuestState _qs;
-	/**
-	 * Field _schedule.
-	 */
 	private ScheduledFuture<?> _schedule;
 	
 	/**

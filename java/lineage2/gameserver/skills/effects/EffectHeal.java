@@ -23,9 +23,6 @@ import lineage2.gameserver.stats.Stats;
  */
 public class EffectHeal extends Effect
 {
-	/**
-	 * Field _ignoreHpEff.
-	 */
 	private final boolean _ignoreHpEff;
 	
 	/**

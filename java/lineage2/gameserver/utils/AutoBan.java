@@ -18,14 +18,12 @@ import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.dao.CharacterDAO;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,9 +33,6 @@ import org.slf4j.LoggerFactory;
  */
 public final class AutoBan
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(AutoBan.class);
 	
 	/**

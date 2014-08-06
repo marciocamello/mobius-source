@@ -37,17 +37,8 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class RequestJoinCastleSiege extends L2GameClientPacket
 {
-	/**
-	 * Field _id.
-	 */
 	private int _id;
-	/**
-	 * Field _isAttacker.
-	 */
 	private boolean _isAttacker;
-	/**
-	 * Field _isJoining.
-	 */
 	private boolean _isJoining;
 	
 	/**

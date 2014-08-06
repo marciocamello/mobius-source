@@ -20,9 +20,6 @@ import lineage2.gameserver.model.Player;
  */
 public class NetPingPacket extends L2GameServerPacket
 {
-	/**
-	 * Field _clientId.
-	 */
 	private final int _clientId;
 	
 	/**

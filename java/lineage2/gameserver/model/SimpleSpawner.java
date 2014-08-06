@@ -13,7 +13,6 @@
 package lineage2.gameserver.model;
 
 import java.util.ArrayList;
-
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -22,7 +21,6 @@ import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.templates.spawn.SpawnRange;
 import lineage2.gameserver.utils.Location;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,26 +30,11 @@ import org.slf4j.LoggerFactory;
  */
 public class SimpleSpawner extends Spawner
 {
-	/**
-	 * Field serialVersionUID. (value is 1)
-	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(SimpleSpawner.class);
-	/**
-	 * Field _npcTemplate.
-	 */
 	private final NpcTemplate _npcTemplate;
-	/**
-	 * Field _heading. Field _locz. Field _locy. Field _locx.
-	 */
 	private int _locx, _locy, _locz, _heading;
-	/**
-	 * Field _territory.
-	 */
 	private Territory _territory;
 	
 	/**

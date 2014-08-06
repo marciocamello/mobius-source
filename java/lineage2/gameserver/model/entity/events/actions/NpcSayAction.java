@@ -30,21 +30,9 @@ import lineage2.gameserver.utils.MapUtils;
  */
 public class NpcSayAction implements EventAction
 {
-	/**
-	 * Field _npcId.
-	 */
 	private final int _npcId;
-	/**
-	 * Field _range.
-	 */
 	private final int _range;
-	/**
-	 * Field _chatType.
-	 */
 	private final ChatType _chatType;
-	/**
-	 * Field _text.
-	 */
 	private final NpcString _text;
 	
 	/**

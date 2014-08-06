@@ -26,18 +26,8 @@ import lineage2.gameserver.network.serverpackets.ExShowUsmVideo;
  */
 public class RequestChangeToAwakenedClass extends L2GameClientPacket
 {
-	/**
-	 * Field SCROLL_OF_AFTERLIFE. (value is 17600)
-	 */
 	private static final int SCROLL_OF_AFTERLIFE = 17600;
-	
-	/**
-	 * Field STONE_OF_DESTINY. (value is 17722)
-	 */
 	private static final int STONE_OF_DESTINY = 17722;
-	/**
-	 * Field change.
-	 */
 	private int change;
 	
 	/**

@@ -30,7 +30,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.BbsUtil;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,22 +40,13 @@ import org.slf4j.LoggerFactory;
  */
 public final class ManageProf implements ScriptFile, ICommunityBoardHandler
 {
-	/**
-	 * Field _commands.
-	 */
 	private static final String[] _commands =
 	{
 		"_bbscareer;",
 		"_bbsclass_change",
 		"_bbsclass_upgrade"
 	};
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(ManageProf.class);
-	/**
-	 * Field jobLevel.
-	 */
 	int jobLevel = 0;
 	
 	/**

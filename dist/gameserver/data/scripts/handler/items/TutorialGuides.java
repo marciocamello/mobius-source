@@ -22,9 +22,6 @@ import lineage2.gameserver.network.serverpackets.TutorialShowHtml;
  */
 public final class TutorialGuides extends ScriptItemHandler
 {
-	/**
-	 * Field _itemIds.
-	 */
 	private static final int[] _itemIds =
 	{
 		32777,

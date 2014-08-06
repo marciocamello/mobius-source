@@ -26,9 +26,6 @@ import lineage2.gameserver.utils.AutoBan;
  */
 public class CharacterSelected extends L2GameClientPacket
 {
-	/**
-	 * Field _charSlot.
-	 */
 	private int _charSlot;
 	
 	/**

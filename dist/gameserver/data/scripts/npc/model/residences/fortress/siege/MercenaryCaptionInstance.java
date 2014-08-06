@@ -13,7 +13,6 @@
 package npc.model.residences.fortress.siege;
 
 import java.util.List;
-
 import lineage2.gameserver.listener.actor.OnDeathListener;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.entity.events.impl.FortressSiegeEvent;
@@ -84,9 +83,6 @@ public final class MercenaryCaptionInstance extends MonsterInstance
 		}
 	}
 	
-	/**
-	 * Field _doorDeathListener.
-	 */
 	private final DoorDeathListener _doorDeathListener = new DoorDeathListener();
 	
 	/**

@@ -33,7 +33,6 @@ public class _10325_SearchingForNewPower extends Quest implements ScriptFile
 	private final static int KINCAID = 32159; // Dwarves
 	private final static int XONIA = 32144; // Kamael
 	/* ~Race dependent talk NPCs~ */
-	
 	private final static int SPIRITSHOT = 2509;
 	private final static int SOULSHOT = 1835;
 	

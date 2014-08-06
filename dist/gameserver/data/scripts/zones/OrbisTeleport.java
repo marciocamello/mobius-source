@@ -61,7 +61,6 @@ public final class OrbisTeleport implements ScriptFile
 	
 	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
-		
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{

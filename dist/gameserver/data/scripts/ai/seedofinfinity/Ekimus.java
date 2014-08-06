@@ -24,9 +24,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public final class Ekimus extends Mystic
 {
-	/**
-	 * Field delayTimer.
-	 */
 	private long delayTimer = 0;
 	
 	/**

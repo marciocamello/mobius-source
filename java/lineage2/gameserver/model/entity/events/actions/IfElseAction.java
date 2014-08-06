@@ -14,7 +14,6 @@ package lineage2.gameserver.model.entity.events.actions;
 
 import java.util.Collections;
 import java.util.List;
-
 import lineage2.gameserver.model.entity.events.EventAction;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 
@@ -24,21 +23,9 @@ import lineage2.gameserver.model.entity.events.GlobalEvent;
  */
 public class IfElseAction implements EventAction
 {
-	/**
-	 * Field _name.
-	 */
 	private final String _name;
-	/**
-	 * Field _reverse.
-	 */
 	private final boolean _reverse;
-	/**
-	 * Field _ifList.
-	 */
 	private List<EventAction> _ifList = Collections.emptyList();
-	/**
-	 * Field _elseList.
-	 */
 	private List<EventAction> _elseList = Collections.emptyList();
 	
 	/**

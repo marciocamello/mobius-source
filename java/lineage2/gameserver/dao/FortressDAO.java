@@ -15,12 +15,10 @@ package lineage2.gameserver.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.entity.residence.Fortress;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,21 +28,9 @@ import org.slf4j.LoggerFactory;
  */
 public class FortressDAO
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(FortressDAO.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final FortressDAO _instance = new FortressDAO();
-	/**
-	 * Field SELECT_SQL_QUERY. (value is ""SELECT * FROM fortress WHERE id = ?"")
-	 */
 	public static final String SELECT_SQL_QUERY = "SELECT * FROM fortress WHERE id = ?";
-	/**
-	 * Field UPDATE_SQL_QUERY. (value is ""UPDATE fortress SET castle_id=?, state=?, cycle=?, reward_count=?, paid_cycle=?, supply_count=?, siege_date=?, last_siege_date=?, own_date=?, facility_0=?, facility_1=?, facility_2=?, facility_3=?, facility_4=? WHERE id=?"")
-	 */
 	public static final String UPDATE_SQL_QUERY = "UPDATE fortress SET castle_id=?, state=?, cycle=?, reward_count=?, paid_cycle=?, supply_count=?, siege_date=?, last_siege_date=?, own_date=?, facility_0=?, facility_1=?, facility_2=?, facility_3=?, facility_4=? WHERE id=?";
 	
 	/**

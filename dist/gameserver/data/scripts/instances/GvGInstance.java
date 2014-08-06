@@ -15,7 +15,6 @@ package instances;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.lang.reference.HardReferences;
 import lineage2.commons.threading.RunnableImpl;
@@ -44,9 +43,7 @@ import lineage2.gameserver.network.serverpackets.Revive;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
-
 import org.apache.commons.lang3.mutable.MutableInt;
-
 import events.GvG.GvG;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
@@ -57,39 +54,28 @@ public final class GvGInstance extends Reflection
 {
 	private final static int BOX_ID = 18822;
 	private final static int BOSS_ID = 25655;
-	
 	private final static int SCORE_BOX = 20;
 	private final static int SCORE_BOSS = 100;
 	private final static int SCORE_KILL = 5;
 	private final static int SCORE_DEATH = 3;
-	
 	private final int eventTime = 1200;
 	private final long bossSpawnTime = 10 * 60 * 1000L;
-	
 	private boolean active = false;
-	
 	Party team1;
 	Party team2;
 	private final List<HardReference<Player>> bothTeams = new CopyOnWriteArrayList<>();
-	
 	private final TIntObjectHashMap<MutableInt> score = new TIntObjectHashMap<>();
 	private int team1Score = 0;
 	private int team2Score = 0;
-	
 	private long startTime;
-	
 	private ScheduledFuture<?> _bossSpawnTask;
 	private ScheduledFuture<?> _countDownTask;
 	private ScheduledFuture<?> _battleEndTask;
-	
 	private final DeathListener _deathListener = new DeathListener();
 	private final TeleportListener _teleportListener = new TeleportListener();
 	private final PlayerPartyLeaveListener _playerPartyLeaveListener = new PlayerPartyLeaveListener();
-	
 	Zone zonepvp;
-	
 	Zone peace1;
-	
 	Zone peace2;
 	
 	public void setTeam1(Party party1)

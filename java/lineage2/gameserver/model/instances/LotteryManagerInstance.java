@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.instances;
 
 import java.text.DateFormat;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.instancemanager.games.LotteryManager;

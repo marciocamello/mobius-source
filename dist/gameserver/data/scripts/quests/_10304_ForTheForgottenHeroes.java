@@ -22,16 +22,13 @@ public class _10304_ForTheForgottenHeroes extends Quest implements ScriptFile
 {
 	// npc
 	private static final int ISHAEL = 32894;
-	
 	// mobs
 	private static final int YUI = 25837;
 	private static final int KINEN = 25840;
 	private static final int KONJAN = 25845;
 	private static final int RASINDA = 25841;
-	
 	private static final int MAKYSHA = 25838;
 	private static final int HORNAPI = 25839;
-	
 	private static final int YONTYMAK = 25846;
 	private static final int FRON = 25825;
 	

@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.StringHolder;
@@ -43,7 +42,6 @@ import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.HtmlUtils;
-
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -54,69 +52,21 @@ import org.slf4j.LoggerFactory;
  */
 public class Hero
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Hero.class);
-	/**
-	 * Field _instance.
-	 */
 	private static Hero _instance;
-	/**
-	 * Field GET_HEROES. (value is ""SELECT * FROM heroes WHERE played = 1"")
-	 */
 	private static final String GET_HEROES = "SELECT * FROM heroes WHERE played = 1";
-	/**
-	 * Field GET_ALL_HEROES. (value is ""SELECT * FROM heroes"")
-	 */
 	private static final String GET_ALL_HEROES = "SELECT * FROM heroes";
-	/**
-	 * Field _heroes.
-	 */
 	private static Map<Integer, StatsSet> _heroes;
-	/**
-	 * Field _completeHeroes.
-	 */
 	private static Map<Integer, StatsSet> _completeHeroes;
-	/**
-	 * Field _herodiary.
-	 */
 	private static Map<Integer, List<HeroDiary>> _herodiary;
-	/**
-	 * Field _heroMessage.
-	 */
 	private static Map<Integer, String> _heroMessage;
-	/**
-	 * Field COUNT. (value is ""count"")
-	 */
 	public static final String COUNT = "count";
-	/**
-	 * Field PLAYED. (value is ""played"")
-	 */
 	public static final String PLAYED = "played";
-	/**
-	 * Field CLAN_NAME. (value is ""clan_name"")
-	 */
 	public static final String CLAN_NAME = "clan_name";
-	/**
-	 * Field CLAN_CREST. (value is ""clan_crest"")
-	 */
 	public static final String CLAN_CREST = "clan_crest";
-	/**
-	 * Field ALLY_NAME. (value is ""ally_name"")
-	 */
 	public static final String ALLY_NAME = "ally_name";
-	/**
-	 * Field ALLY_CREST. (value is ""ally_crest"")
-	 */
 	public static final String ALLY_CREST = "ally_crest";
-	/**
-	 * Field ACTIVE. (value is ""active"")
-	 */
 	public static final String ACTIVE = "active";
-	/**
-	 * Field MESSAGE. (value is ""message"")
-	 */
 	public static final String MESSAGE = "message";
 	
 	/**

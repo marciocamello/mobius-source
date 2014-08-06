@@ -14,7 +14,6 @@ package instances;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -51,7 +50,6 @@ public final class MemoryOfDisaster extends Reflection
 		33544,
 		33546
 	};
-	
 	private boolean introShowed = false;
 	
 	public MemoryOfDisaster(Player player)

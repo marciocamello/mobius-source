@@ -23,17 +23,8 @@ import lineage2.gameserver.utils.Location;
  */
 public class RequestExMoveToLocationInAirShip extends L2GameClientPacket
 {
-	/**
-	 * Field _pos.
-	 */
 	private final Location _pos = new Location();
-	/**
-	 * Field _originPos.
-	 */
 	private final Location _originPos = new Location();
-	/**
-	 * Field _boatObjectId.
-	 */
 	private int _boatObjectId;
 	
 	/**

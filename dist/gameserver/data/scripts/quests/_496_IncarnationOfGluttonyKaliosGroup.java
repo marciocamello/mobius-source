@@ -21,7 +21,6 @@ public class _496_IncarnationOfGluttonyKaliosGroup extends Quest implements Scri
 {
 	// npc
 	public static final int KARTIA_RESEARCH = 33647;
-	
 	// mobs
 	public static final int KALIOS = 25884;
 	

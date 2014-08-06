@@ -26,13 +26,10 @@ public class _10293_SevenSignsForbiddenBook extends Quest implements ScriptFile
 {
 	private static final int Elcardia = 32784;
 	private static final int Sophia = 32596;
-	
 	private static final int SophiaInzone1 = 32861;
 	private static final int ElcardiaInzone1 = 32785;
 	private static final int SophiaInzone2 = 32863;
-	
 	private static final int SolinasBiography = 17213;
-	
 	private static final int[] books =
 	{
 		32809,

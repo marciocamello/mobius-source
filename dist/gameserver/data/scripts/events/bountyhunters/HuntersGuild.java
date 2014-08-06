@@ -14,7 +14,6 @@ package events.bountyhunters;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
@@ -37,7 +36,6 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import npc.model.QueenAntLarvaInstance;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,17 +45,11 @@ import org.slf4j.LoggerFactory;
  */
 public final class HuntersGuild extends Functions implements ScriptFile, IVoicedCommandHandler, OnDeathListener
 {
-	/**
-	 * Field _commandList.
-	 */
 	private static final String[] _commandList = new String[]
 	{
 		"gettask",
 		"declinetask"
 	};
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(HuntersGuild.class);
 	
 	/**

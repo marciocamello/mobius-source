@@ -15,7 +15,6 @@ package lineage2.gameserver.model.entity;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Future;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -37,45 +36,15 @@ import lineage2.gameserver.utils.Location;
  */
 public class DelusionChamber extends Reflection
 {
-	/**
-	 * Field killChamberTask.
-	 */
 	private Future<?> killChamberTask;
-	/**
-	 * Field MILLISECONDS_IN_MINUTE. (value is 60000)
-	 */
 	protected static final int MILLISECONDS_IN_MINUTE = 60000;
-	/**
-	 * Field _roomType.
-	 */
 	protected int _roomType;
-	/**
-	 * Field _choosenRoom.
-	 */
 	protected int _choosenRoom = -1;
-	/**
-	 * Field isBossRoom.
-	 */
 	protected boolean isBossRoom = false;
-	/**
-	 * Field _completedRooms.
-	 */
 	protected final List<Integer> _completedRooms = new ArrayList<>();
-	/**
-	 * Field jumps_current.
-	 */
 	protected int jumps_current = 0;
-	/**
-	 * Field _hasJumped.
-	 */
 	protected boolean _hasJumped = false;
-	/**
-	 * Field teleporterTask.
-	 */
 	private Future<?> teleporterTask;
-	/**
-	 * Field spawnTask.
-	 */
 	private Future<?> spawnTask;
 	
 	/**

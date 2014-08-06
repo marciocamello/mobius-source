@@ -36,9 +36,6 @@ public final class RainbowMessengerInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field ITEM_ID. (value is 8034)
-	 */
 	public static final int ITEM_ID = 8034;
 	
 	/**

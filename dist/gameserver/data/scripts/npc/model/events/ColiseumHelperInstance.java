@@ -29,9 +29,6 @@ public class ColiseumHelperInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field LOCS.
-	 */
 	private final Location[][] LOCS = new Location[][]
 	{
 		{

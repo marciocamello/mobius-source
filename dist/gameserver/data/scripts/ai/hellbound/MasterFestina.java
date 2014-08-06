@@ -30,29 +30,11 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class MasterFestina extends Fighter
 {
-	/**
-	 * Field _zone.
-	 */
 	private static Zone _zone;
-	/**
-	 * Field _mysticSpawnPoints.
-	 */
 	private static Location[] _mysticSpawnPoints;
-	/**
-	 * Field _spiritGuardSpawnPoints.
-	 */
 	private static Location[] _spiritGuardSpawnPoints;
-	/**
-	 * Field FOUNDRY_MYSTIC_ID. (value is 22387)
-	 */
 	private final static int FOUNDRY_MYSTIC_ID = 22387;
-	/**
-	 * Field FOUNDRY_SPIRIT_GUARD_ID. (value is 22389)
-	 */
 	private final static int FOUNDRY_SPIRIT_GUARD_ID = 22389;
-	/**
-	 * Field lastFactionNotifyTime.
-	 */
 	private long lastFactionNotifyTime = 0;
 	
 	/**

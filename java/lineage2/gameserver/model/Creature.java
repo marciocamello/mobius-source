@@ -13,7 +13,6 @@
 package lineage2.gameserver.model;
 
 import static lineage2.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -31,7 +30,6 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
-
 import javolution.util.FastList;
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.lang.reference.HardReference;
@@ -121,14 +119,12 @@ import lineage2.gameserver.templates.spawn.WalkerRouteTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.PositionUtils;
-
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import gnu.trove.set.hash.TIntHashSet;
 
 /**
@@ -147,12 +143,6 @@ public abstract class Creature extends GameObject
 	 */
 	public class MoveNextTask extends RunnableImpl
 	{
-		/**
-		 * Field donedist.
-		 */
-		/**
-		 * Field alldist.
-		 */
 		private double alldist, donedist;
 		
 		/**
@@ -326,128 +316,36 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Creature.class);
-	/**
-	 * Field HEADINGS_IN_PI. (value is 10430.378350470453)
-	 */
 	public static final double HEADINGS_IN_PI = 10430.378350470452724949566316381;
-	/**
-	 * Field INTERACTION_DISTANCE. (value is 200)
-	 */
 	public static final int INTERACTION_DISTANCE = 200;
-	/**
-	 * Field _castingSkill.
-	 */
 	private Skill _castingSkill;
-	/**
-	 * Field _castInterruptTime.
-	 */
 	private long _castInterruptTime;
-	/**
-	 * Field _animationEndTime.
-	 */
 	private long _animationEndTime;
-	/**
-	 * Field _scheduledCastCount.
-	 */
 	public int _scheduledCastCount;
-	/**
-	 * Field _scheduledCastInterval.
-	 */
 	public int _scheduledCastInterval;
-	/**
-	 * Field _skillTask.
-	 */
 	public Future<?> _skillTask;
-	/**
-	 * Field _skillLaunchedTask.
-	 */
 	public Future<?> _skillLaunchedTask;
-	/**
-	 * Field _skillDoubleTask.
-	 */
 	public Future<?> _skillDoubleTask;
-	/**
-	 * Field _skillDoubleLaunchedTask.
-	 */
 	public Future<?> _skillDoubleLaunchedTask;
-	/**
-	 * Field _stanceTask.
-	 */
 	private Future<?> _stanceTask;
-	/**
-	 * Field _stanceTaskRunnable.
-	 */
 	private Runnable _stanceTaskRunnable;
-	/**
-	 * Field _stanceEndTime.
-	 */
 	private long _stanceEndTime;
-	/**
-	 * Field CLIENT_BAR_SIZE. (value is 352)
-	 */
 	public final static int CLIENT_BAR_SIZE = 352;
-	/**
-	 * Field _lastCpBarUpdate.
-	 */
 	private int _lastCpBarUpdate = -1;
-	/**
-	 * Field _lastHpBarUpdate.
-	 */
 	private int _lastHpBarUpdate = -1;
-	/**
-	 * Field _lastMpBarUpdate.
-	 */
 	private int _lastMpBarUpdate = -1;
-	/**
-	 * Field _currentCp.
-	 */
 	protected double _currentCp = 0;
-	/**
-	 * Field _currentHp.
-	 */
 	protected double _currentHp = 1;
-	/**
-	 * Field _currentMp.
-	 */
 	protected double _currentMp = 1;
-	/**
-	 * Field _abnormalEffects.
-	 */
 	private int _abnormalEffects;
-	/**
-	 * Field _abnormalEffects2.
-	 */
 	private int _abnormalEffects2;
-	/**
-	 * Field _abnormalEffects3.
-	 */
 	private int _abnormalEffects3;
-	/**
-	 * Field _isAttackAborted.
-	 */
-	
 	private final FastList<Integer> _aveList = new FastList<>();
-	
 	protected boolean _isAttackAborted;
-	/**
-	 * Field _attackEndTime.
-	 */
 	protected long _attackEndTime;
-	/**
-	 * Field _attackReuseEndTime.
-	 */
 	protected long _attackReuseEndTime;
-	/**
-	 * Field _poleAttackCount.
-	 */
 	private int _poleAttackCount = 0;
-	/**
-	 * Field POLE_VAMPIRIC_MOD.
-	 */
 	private static final double[] POLE_VAMPIRIC_MOD =
 	{
 		1,
@@ -457,329 +355,87 @@ public abstract class Creature extends GameObject
 		0.2,
 		0.01
 	};
-	/**
-	 * Field _skills.
-	 */
 	protected final Map<Integer, Skill> _skills = new ConcurrentSkipListMap<>();
-	/**
-	 * Field _triggers.
-	 */
 	protected Map<TriggerType, Set<TriggerInfo>> _triggers;
-	/**
-	 * Field _skillReuses.
-	 */
 	protected final IntObjectMap<TimeStamp> _skillReuses = new CHashIntObjectMap<>();
-	/**
-	 * Field _effectList.
-	 */
 	protected volatile EffectList _effectList;
-	/**
-	 * Field _statsRecorder.
-	 */
 	protected volatile CharStatsChangeRecorder<? extends Creature> _statsRecorder;
-	/**
-	 * Field _blockedStats.
-	 */
 	private List<Stats> _blockedStats;
-	/**
-	 * Field isDead.
-	 */
 	protected final AtomicBoolean isDead = new AtomicBoolean();
-	/**
-	 * Field isTeleporting.
-	 */
 	protected final AtomicBoolean isTeleporting = new AtomicBoolean();
-	/**
-	 * Field _skillMastery.
-	 */
 	private Map<Integer, Integer> _skillMastery;
-	/**
-	 * Field _isInvul.
-	 */
 	protected boolean _isInvul;
-	/**
-	 * Field _fakeDeath.
-	 */
 	private boolean _fakeDeath;
-	/**
-	 * Field _isBlessedByNoblesse.
-	 */
 	private boolean _isBlessedByNoblesse;
-	/**
-	 * Field _isSalvation.
-	 */
 	private boolean _isSalvation;
-	/**
-	 * Field _meditated.
-	 */
 	private boolean _meditated;
-	/**
-	 * Field _lockedTarget.
-	 */
 	private boolean _lockedTarget;
-	/**
-	 * Field _isTargetable.
-	 */
 	private boolean _isTargetable = true;
-	/**
-	 * Field _blocked.
-	 */
 	private boolean _blocked;
-	/**
-	 * Field _afraid.
-	 */
 	private final AtomicState _afraid = new AtomicState();
-	/**
-	 * Field _muted.
-	 */
 	private final AtomicState _muted = new AtomicState();
-	/**
-	 * Field _pmuted.
-	 */
 	private final AtomicState _pmuted = new AtomicState();
-	/**
-	 * Field _amuted.
-	 */
 	private final AtomicState _amuted = new AtomicState();
-	/**
-	 * Field _pulled.
-	 */
 	private final AtomicState _pulled = new AtomicState();
-	/**
-	 * Field _airbinded.
-	 */
 	private final AtomicState _airbinded = new AtomicState();
-	/**
-	 * Field _knockbacked.
-	 */
 	private final AtomicState _knockedback = new AtomicState();
-	/**
-	 * Field _knockdowned.
-	 */
 	private final AtomicState _knockeddown = new AtomicState();
-	/**
-	 * Field _paralyzed.
-	 */
 	private final AtomicState _paralyzed = new AtomicState();
-	/**
-	 * Field _rooted.
-	 */
 	private final AtomicState _rooted = new AtomicState();
-	/**
-	 * Field _sleeping.
-	 */
 	private final AtomicState _sleeping = new AtomicState();
-	/**
-	 * Field _stunned.
-	 */
 	private final AtomicState _stunned = new AtomicState();
-	/**
-	 * Field _immobilized.
-	 */
 	private final AtomicState _immobilized = new AtomicState();
-	/**
-	 * Field _confused.
-	 */
 	private final AtomicState _confused = new AtomicState();
-	/**
-	 * Field _frozen.
-	 */
 	private final AtomicState _frozen = new AtomicState();
-	/**
-	 * Field _healBlocked.
-	 */
 	private final AtomicState _healBlocked = new AtomicState();
-	/**
-	 * Field _damageBlocked.
-	 */
 	private final AtomicState _damageBlocked = new AtomicState();
-	/**
-	 * Field _buffImmunity.
-	 */
 	private final AtomicState _buffImmunity = new AtomicState();
-	/**
-	 * Field _debuffImmunity.
-	 */
 	private final AtomicState _debuffImmunity = new AtomicState();
-	/**
-	 * Field _effectImmunity.
-	 */
 	private final AtomicState _effectImmunity = new AtomicState();
-	/**
-	 * Field _weaponEquipBlocked.
-	 */
 	private final AtomicState _weaponEquipBlocked = new AtomicState();
-	/**
-	 * Field _flying.
-	 */
 	private boolean _flying;
-	/**
-	 * Field _running.
-	 */
 	private boolean _running;
-	/**
-	 * Field isMoving.
-	 */
 	public boolean isMoving;
-	/**
-	 * Field isFollow.
-	 */
 	public boolean isFollow;
-	/**
-	 * Field moveLock.
-	 */
 	final Lock moveLock = new ReentrantLock();
-	/**
-	 * Field _moveTask.
-	 */
 	Future<?> _moveTask;
-	/**
-	 * Field _moveTaskRunnable.
-	 */
 	private MoveNextTask _moveTaskRunnable;
-	/**
-	 * Field moveList.
-	 */
 	List<Location> moveList;
-	/**
-	 * Field destination.
-	 */
 	private Location destination;
-	/**
-	 * Field movingDestTempPos.
-	 */
 	final Location movingDestTempPos = new Location();
-	/**
-	 * Field _offset.
-	 */
 	int _offset;
-	/**
-	 * Field _forestalling.
-	 */
 	boolean _forestalling;
-	/**
-	 * Field target.
-	 */
 	private volatile HardReference<? extends GameObject> target = HardReferences.emptyRef();
-	/**
-	 * Field castingTarget.
-	 */
 	private volatile HardReference<? extends Creature> castingTarget = HardReferences.emptyRef();
-	/**
-	 * Field followTarget.
-	 */
 	private volatile HardReference<? extends Creature> followTarget = HardReferences.emptyRef();
-	/**
-	 * Field _aggressionTarget.
-	 */
 	private volatile HardReference<? extends Creature> _aggressionTarget = HardReferences.emptyRef();
-	/**
-	 * Field _targetRecorder.
-	 */
 	private final List<List<Location>> _targetRecorder = new ArrayList<>();
-	/**
-	 * Field _followTimestamp.
-	 */
 	long _followTimestamp;
-	/**
-	 * Field _startMoveTime.
-	 */
 	long _startMoveTime;
-	/**
-	 * Field _previousSpeed.
-	 */
 	int _previousSpeed = 0;
-	/**
-	 * Field _heading.
-	 */
 	private int _heading;
-	/**
-	 * Field _calculators.
-	 */
 	private final Calculator[] _calculators;
-	/**
-	 * Field _template.
-	 */
 	protected CharTemplate _template;
-	/**
-	 * Field _ai.
-	 */
 	protected volatile CharacterAI _ai;
-	/**
-	 * Field _name.
-	 */
 	protected String _name;
-	/**
-	 * Field _title.
-	 */
 	protected String _title;
-	/**
-	 * Field _team.
-	 */
 	protected TeamType _team = TeamType.NONE;
-	/**
-	 * Field _isRegenerating.
-	 */
 	private boolean _isRegenerating;
-	/**
-	 * Field regenLock.
-	 */
 	final Lock regenLock = new ReentrantLock();
-	/**
-	 * Field _regenTask.
-	 */
 	private Future<?> _regenTask;
-	/**
-	 * Field _regenTaskRunnable.
-	 */
 	private Runnable _regenTaskRunnable;
-	/**
-	 * Field _isEnabledDoubleCast.
-	 */
 	public boolean _isEnabledDoubleCast = false;
-	/**
-	 * Field _isKnockedDown.
-	 */
 	public final boolean _isKnockedDown = false;
-	/**
-	 * Field _isKnockedDown.
-	 */
 	public final boolean _isAirBind = false;
-	/**
-	 * Field _zones.
-	 */
 	private final List<Zone> _zones = new LazyArrayList<>();
-	/**
-	 * Field zonesLock.
-	 */
 	private final ReadWriteLock zonesLock = new ReentrantReadWriteLock();
-	/**
-	 * Field zonesRead.
-	 */
 	private final Lock zonesRead = zonesLock.readLock();
-	/**
-	 * Field zonesWrite.
-	 */
 	private final Lock zonesWrite = zonesLock.writeLock();
-	/**
-	 * Field listeners.
-	 */
 	protected volatile CharListenerList listeners;
-	/**
-	 * Field _deathImmune.
-	 */
 	protected boolean _deathImmune = false;
-	
 	private List<Player> _statusListeners;
 	private final Lock statusListenersLock = new ReentrantLock();
-	
-	/**
-	 * Field _walkerRoutesTemplate.
-	 */
 	protected WalkerRouteTemplate _walkerRoutesTemplate = null;
-	/**
-	 * Field _storedId.
-	 */
 	protected Long _storedId;
 	
 	/**
@@ -791,21 +447,9 @@ public abstract class Creature extends GameObject
 		return _storedId;
 	}
 	
-	/**
-	 * Field reference.
-	 */
 	protected HardReference<? extends Creature> reference;
-	/**
-	 * Field _transformationId.
-	 */
 	private int _transformationId;
-	/**
-	 * Field _transformationTemplate.
-	 */
 	private int _transformationTemplate;
-	/**
-	 * Field _transformationName.
-	 */
 	private String _transformationName;
 	
 	/**
@@ -2463,9 +2107,6 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
-	/**
-	 * Field _flyLoc.
-	 */
 	private Location _flyLoc;
 	
 	/**
@@ -7721,9 +7362,6 @@ public abstract class Creature extends GameObject
 		}
 	}
 	
-	/**
-	 * Field _unActiveSkills.
-	 */
 	private final TIntHashSet _unActiveSkills = new TIntHashSet();
 	
 	/**

@@ -24,7 +24,6 @@ import lineage2.gameserver.network.serverpackets.ExDynamicQuestPacket;
 import lineage2.gameserver.network.serverpackets.ExDynamicQuestPacket.DynamicQuestInfo;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ReflectionUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,9 +35,7 @@ public final class SeedOfHellfire extends DynamicQuest implements ScriptFile
 	private static final Logger _log = LoggerFactory.getLogger(SeedOfHellfire.class);
 	private static final String QUEST_ZONE_SOUTH = "[hellfire_south_stage2]";
 	private static final String QUEST_ZONE_NORTH = "[hellfire_north_stage2]";
-	
 	private static final int QUEST_ID = 15;
-	
 	private static final int MIN_LEVEL = 97;
 	private static final int MAX_LEVEL = 99;
 	private static final int DURATION = 60 * 60;

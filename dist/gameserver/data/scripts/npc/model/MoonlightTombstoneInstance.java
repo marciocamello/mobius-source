@@ -14,7 +14,6 @@ package npc.model;
 
 import java.util.List;
 import java.util.StringTokenizer;
-
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -33,17 +32,8 @@ public final class MoonlightTombstoneInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field KEY_ID. (value is 9714)
-	 */
 	private static final int KEY_ID = 9714;
-	/**
-	 * Field COLLAPSE_TIME. (value is 5)
-	 */
 	private final static long COLLAPSE_TIME = 5;
-	/**
-	 * Field _activated.
-	 */
 	private boolean _activated = false;
 	
 	/**

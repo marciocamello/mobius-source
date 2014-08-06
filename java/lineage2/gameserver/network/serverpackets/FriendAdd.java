@@ -17,7 +17,6 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class FriendAdd extends L2GameServerPacket
 {
-	
 	private final String _unk;
 	
 	public FriendAdd(String unk)

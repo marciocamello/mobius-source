@@ -32,9 +32,6 @@ public final class LogisticsOfficerInstance extends FacilityManagerInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field SUPPLY_NPC.
-	 */
 	private static final int[] SUPPLY_NPC = new int[]
 	{
 		35665,
@@ -44,9 +41,6 @@ public final class LogisticsOfficerInstance extends FacilityManagerInstance
 		35803,
 		35834
 	};
-	/**
-	 * Field ITEM_ID. (value is 9910)
-	 */
 	private static final int ITEM_ID = 9910;
 	
 	/**

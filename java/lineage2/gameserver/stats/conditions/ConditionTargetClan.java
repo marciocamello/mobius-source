@@ -21,9 +21,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionTargetClan extends Condition
 {
-	/**
-	 * Field _test.
-	 */
 	private final boolean _test;
 	
 	/**

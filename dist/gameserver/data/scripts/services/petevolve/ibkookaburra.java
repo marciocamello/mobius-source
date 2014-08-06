@@ -28,17 +28,8 @@ import lineage2.gameserver.tables.PetDataTable.L2Pet;
  */
 public final class ibkookaburra extends Functions
 {
-	/**
-	 * Field BABY_KOOKABURRA.
-	 */
 	private static final int BABY_KOOKABURRA = PetDataTable.BABY_KOOKABURRA_ID;
-	/**
-	 * Field BABY_KOOKABURRA_OCARINA.
-	 */
 	private static final int BABY_KOOKABURRA_OCARINA = L2Pet.BABY_KOOKABURRA.getControlItemId();
-	/**
-	 * Field IN_KOOKABURRA_OCARINA.
-	 */
 	private static final int IN_KOOKABURRA_OCARINA = L2Pet.IMPROVED_BABY_KOOKABURRA.getControlItemId();
 	
 	/**

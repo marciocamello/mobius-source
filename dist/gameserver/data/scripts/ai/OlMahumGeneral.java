@@ -24,9 +24,6 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class OlMahumGeneral extends Fighter
 {
-	/**
-	 * Field _firstTimeAttacked.
-	 */
 	private boolean _firstTimeAttacked = true;
 	
 	/**

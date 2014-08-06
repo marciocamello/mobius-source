@@ -20,13 +20,7 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionPlayerMinMaxDamage extends Condition
 {
-	/**
-	 * Field _min.
-	 */
 	private final double _min;
-	/**
-	 * Field _max.
-	 */
 	private final double _max;
 	
 	/**

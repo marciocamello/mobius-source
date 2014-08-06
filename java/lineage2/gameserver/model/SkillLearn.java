@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.gameserver.model.base.Race;
 
 /**
@@ -25,49 +24,16 @@ import lineage2.gameserver.model.base.Race;
  */
 public final class SkillLearn implements Comparable<SkillLearn>
 {
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _level.
-	 */
 	private final int _level;
-	/**
-	 * Field _minLevel.
-	 */
 	private final int _minLevel;
-	/**
-	 * Field _cost.
-	 */
 	private final int _cost;
-	/**
-	 * Field _itemId.
-	 */
 	private final int _itemId;
-	/**
-	 * Field _itemCount.
-	 */
 	private final long _itemCount;
-	/**
-	 * Field _clicked.
-	 */
 	private final boolean _clicked;
-	/**
-	 * Field _deprecated.
-	 */
 	private final boolean _deprecated;
-	/**
-	 * Field _race.
-	 */
 	private final Race _race;
-	/**
-	 * Field required_items.
-	 */
 	private final Map<Integer, Long> required_items;
-	/**
-	 * Field delete_skills.
-	 */
 	private final List<Integer> delete_skills;
 	
 	/**

@@ -22,13 +22,7 @@ import lineage2.gameserver.network.serverpackets.ExGetBookMarkInfo;
  */
 public class RequestModifyBookMarkSlot extends L2GameClientPacket
 {
-	/**
-	 * Field acronym. Field name.
-	 */
 	private String name, acronym;
-	/**
-	 * Field slot. Field icon.
-	 */
 	private int icon, slot;
 	
 	/**

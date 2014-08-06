@@ -21,9 +21,6 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class LoggerObject
 {
-	/**
-	 * Field _log.
-	 */
 	protected final Logger _log = LoggerFactory.getLogger(getClass());
 	
 	/**

@@ -18,9 +18,6 @@ package lineage2.gameserver.network.clientpackets;
  */
 public class RequestExCleftEnter extends L2GameClientPacket
 {
-	/**
-	 * Field unk.
-	 */
 	@SuppressWarnings("unused")
 	private int unk;
 	

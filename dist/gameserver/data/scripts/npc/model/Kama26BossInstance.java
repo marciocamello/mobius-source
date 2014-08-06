@@ -13,7 +13,6 @@
 package npc.model;
 
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.listener.reflection.OnReflectionCollapseListener;
@@ -34,13 +33,7 @@ public final class Kama26BossInstance extends KamalokaBossInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _spawner.
-	 */
 	ScheduledFuture<?> _spawner;
-	/**
-	 * Field _refCollapseListener.
-	 */
 	private final ReflectionCollapseListener _refCollapseListener = new ReflectionCollapseListener();
 	
 	/**

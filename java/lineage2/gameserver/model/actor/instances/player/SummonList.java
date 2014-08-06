@@ -17,7 +17,6 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.dao.EffectsDAO;
 import lineage2.gameserver.dao.ServitorsDAO;
@@ -35,7 +34,6 @@ import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,25 +43,10 @@ import org.slf4j.LoggerFactory;
  */
 public class SummonList implements Iterable<Summon>
 {
-	/**
-	 * Field _owner.
-	 */
 	public Player _owner;
-	/**
-	 * Field _pet.
-	 */
 	private PetInstance _pet;
-	/**
-	 * Field _summonList.
-	 */
 	private final ConcurrentHashMap<Integer, Summon> _summonList;
-	/**
-	 * Field _log.
-	 */
 	static final Logger _log = LoggerFactory.getLogger(SummonList.class);
-	/**
-	 * Field _usedPoints.
-	 */
 	private int _usedPoints = 0;
 	
 	/**

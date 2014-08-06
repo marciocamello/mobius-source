@@ -17,7 +17,6 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class ExResponseCommissionRegister extends L2GameServerPacket
 {
-	
 	@Override
 	protected void writeImpl()
 	{
@@ -28,5 +27,4 @@ public class ExResponseCommissionRegister extends L2GameServerPacket
 		writeQ(0x00);
 		writeD(-1);
 	}
-	
 }

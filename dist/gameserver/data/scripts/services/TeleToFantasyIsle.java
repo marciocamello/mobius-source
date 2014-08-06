@@ -24,9 +24,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class TeleToFantasyIsle extends Functions
 {
-	/**
-	 * Field POINTS.
-	 */
 	public static final Location[] POINTS =
 	{
 		new Location(-60695, -56896, -2032),

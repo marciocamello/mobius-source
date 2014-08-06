@@ -13,7 +13,6 @@
 package handler.voicecommands;
 
 import java.util.List;
-
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler;
 import lineage2.gameserver.handler.voicecommands.VoicedCommandHandler;
@@ -27,7 +26,6 @@ import lineage2.gameserver.utils.Location;
 public final class Relocate implements IVoicedCommandHandler, ScriptFile
 {
 	public static final int SUMMON_PRICE = 5;
-	
 	private final String[] _commandList = new String[]
 	{
 		"summon_clan"

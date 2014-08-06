@@ -24,13 +24,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public final class WaterDragonDetractor extends Fighter
 {
-	/**
-	 * Field SPIRIT_OF_LAKE. (value is 9689)
-	 */
 	private static final int SPIRIT_OF_LAKE = 9689;
-	/**
-	 * Field BLUE_CRYSTAL. (value is 9595)
-	 */
 	private static final int BLUE_CRYSTAL = 9595;
 	
 	/**

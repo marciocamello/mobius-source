@@ -14,14 +14,12 @@ package lineage2.gameserver.model;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.text.StrTable;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.model.items.ItemInstance;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,34 +29,13 @@ import org.slf4j.LoggerFactory;
  */
 public class GameObjectsStorage
 {
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(GameObjectsStorage.class);
-	/**
-	 * Field STORAGE_PLAYERS.
-	 */
 	private static final int STORAGE_PLAYERS = 0x00;
-	/**
-	 * Field STORAGE_SUMMONS.
-	 */
 	private static final int STORAGE_SUMMONS = 0x01;
-	/**
-	 * Field STORAGE_NPCS.
-	 */
 	private static final int STORAGE_NPCS = 0x02;
-	/**
-	 * Field STORAGE_OTHER.
-	 */
 	private static final int STORAGE_OTHER = 0x1E;
-	/**
-	 * Field STORAGE_NONE.
-	 */
 	private static final int STORAGE_NONE = 0x1F;
-	/**
-	 * Field storages.
-	 */
 	@SuppressWarnings("rawtypes")
 	private static final GameObjectArray[] storages = new GameObjectArray[STORAGE_NONE];
 	static
@@ -366,13 +343,7 @@ public class GameObjectsStorage
 		return null;
 	}
 	
-	/**
-	 * Field offline_refresh.
-	 */
 	private static long offline_refresh = 0;
-	/**
-	 * Field offline_count.
-	 */
 	private static int offline_count = 0;
 	
 	/**

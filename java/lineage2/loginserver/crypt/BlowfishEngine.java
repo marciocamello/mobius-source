@@ -20,9 +20,6 @@ import java.io.IOException;
  */
 public class BlowfishEngine
 {
-	/**
-	 * Field KS3. Field KS2. Field KS1. Field KS0. Field KP.
-	 */
 	private final static int[] KP =
 	{
 		0x243F6A88,
@@ -1076,37 +1073,13 @@ public class BlowfishEngine
 		0x578FDFE3,
 		0x3AC372E6
 	};
-	/**
-	 * Field ROUNDS. (value is 16)
-	 */
 	private static final int ROUNDS = 16;
-	/**
-	 * Field BLOCK_SIZE. (value is 8)
-	 */
 	private static final int BLOCK_SIZE = 8;
-	/**
-	 * Field SBOX_SK. (value is 256)
-	 */
 	private static final int SBOX_SK = 256;
-	/**
-	 * Field P_SZ.
-	 */
 	private static final int P_SZ = ROUNDS + 2;
-	/**
-	 * Field S3. Field S2. Field S1. Field S0.
-	 */
 	private final int[] S0, S1, S2, S3;
-	/**
-	 * Field P.
-	 */
 	private final int[] P;
-	/**
-	 * Field encrypting.
-	 */
 	private boolean encrypting = false;
-	/**
-	 * Field workingKey.
-	 */
 	private byte[] workingKey = null;
 	
 	/**

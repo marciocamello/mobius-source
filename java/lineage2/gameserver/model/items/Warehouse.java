@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.List;
-
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.gameserver.dao.ItemsDAO;
 import lineage2.gameserver.model.items.ItemInstance.ItemLocation;
@@ -29,9 +28,6 @@ import lineage2.gameserver.templates.item.ItemTemplate.ItemClass;
  */
 public abstract class Warehouse extends ItemContainer
 {
-	/**
-	 * Field _itemsDAO.
-	 */
 	private static final ItemsDAO _itemsDAO = ItemsDAO.getInstance();
 	
 	/**
@@ -39,25 +35,10 @@ public abstract class Warehouse extends ItemContainer
 	 */
 	public static enum WarehouseType
 	{
-		/**
-		 * Field NONE.
-		 */
 		NONE,
-		/**
-		 * Field PRIVATE.
-		 */
 		PRIVATE,
-		/**
-		 * Field CLAN.
-		 */
 		CLAN,
-		/**
-		 * Field CASTLE.
-		 */
 		CASTLE,
-		/**
-		 * Field FREIGHT.
-		 */
 		FREIGHT
 	}
 	
@@ -66,9 +47,6 @@ public abstract class Warehouse extends ItemContainer
 	 */
 	public static class ItemClassComparator implements Comparator<ItemInstance>
 	{
-		/**
-		 * Field instance.
-		 */
 		private static final Comparator<ItemInstance> instance = new ItemClassComparator();
 		
 		/**
@@ -115,9 +93,6 @@ public abstract class Warehouse extends ItemContainer
 		}
 	}
 	
-	/**
-	 * Field _ownerId.
-	 */
 	protected final int _ownerId;
 	
 	/**

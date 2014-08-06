@@ -20,17 +20,8 @@ import lineage2.gameserver.network.loginservercon.SendablePacket;
  */
 public class BonusRequest extends SendablePacket
 {
-	/**
-	 * Field account.
-	 */
 	private final String account;
-	/**
-	 * Field bonus.
-	 */
 	private final double bonus;
-	/**
-	 * Field bonusExpire.
-	 */
 	private final int bonusExpire;
 	
 	/**

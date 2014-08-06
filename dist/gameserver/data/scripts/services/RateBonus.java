@@ -13,7 +13,6 @@
 package services;
 
 import java.util.Date;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.dao.AccountBonusDAO;

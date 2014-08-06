@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Future;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -75,13 +74,7 @@ public class EffectCubic extends Effect
 		}
 	}
 	
-	/**
-	 * Field _template.
-	 */
 	private final CubicTemplate _template;
-	/**
-	 * Field _task.
-	 */
 	private Future<?> _task = null;
 	
 	/**

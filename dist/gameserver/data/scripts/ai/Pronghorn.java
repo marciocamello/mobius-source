@@ -28,17 +28,8 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Pronghorn extends Fighter
 {
-	/**
-	 * Field _mobsNotSpawned.
-	 */
 	private boolean _mobsNotSpawned = true;
-	/**
-	 * Field MOBS. (value is 22087)
-	 */
 	private static final int MOBS = 22087;
-	/**
-	 * Field MOBS_COUNT. (value is 4)
-	 */
 	private static final int MOBS_COUNT = 4;
 	
 	/**

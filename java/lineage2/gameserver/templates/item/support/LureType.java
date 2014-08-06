@@ -18,12 +18,6 @@ package lineage2.gameserver.templates.item.support;
  */
 public enum LureType
 {
-	/**
-	 * Field NORMAL.
-	 */
 	NORMAL,
-	/**
-	 * Field NIGHT.
-	 */
 	NIGHT
 }

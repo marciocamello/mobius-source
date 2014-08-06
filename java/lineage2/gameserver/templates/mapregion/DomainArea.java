@@ -20,13 +20,7 @@ import lineage2.gameserver.model.Territory;
  */
 public class DomainArea implements RegionData
 {
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _territory.
-	 */
 	private final Territory _territory;
 	
 	/**

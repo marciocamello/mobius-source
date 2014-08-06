@@ -20,7 +20,6 @@ import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
 import lineage2.gameserver.utils.Util;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,29 +29,11 @@ import org.slf4j.LoggerFactory;
  */
 public class SoDManager
 {
-	/**
-	 * Field SPAWN_GROUP. (value is ""sod_free"")
-	 */
 	private static final String SPAWN_GROUP = "sod_free";
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(SoDManager.class);
-	/**
-	 * Field _instance.
-	 */
 	private static SoDManager _instance;
-	/**
-	 * Field SOD_OPEN_TIME.
-	 */
 	private static final long SOD_OPEN_TIME = 12 * 60 * 60 * 1000L;
-	/**
-	 * Field _zone.
-	 */
 	private static Zone _zone;
-	/**
-	 * Field _isOpened.
-	 */
 	private static boolean _isOpened = false;
 	
 	/**

@@ -17,7 +17,6 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-
 import lineage2.commons.threading.LoggingRejectedExecutionHandler;
 import lineage2.commons.threading.PriorityThreadFactory;
 import lineage2.commons.threading.RunnableImpl;
@@ -29,13 +28,7 @@ import lineage2.commons.threading.RunnableStatsWrapper;
  */
 public class ThreadPoolManager
 {
-	/**
-	 * Field MAX_DELAY.
-	 */
 	private static final long MAX_DELAY = TimeUnit.NANOSECONDS.toMillis(Long.MAX_VALUE - System.nanoTime()) / 2;
-	/**
-	 * Field _instance.
-	 */
 	private static final ThreadPoolManager _instance = new ThreadPoolManager();
 	
 	/**
@@ -47,17 +40,8 @@ public class ThreadPoolManager
 		return _instance;
 	}
 	
-	/**
-	 * Field _scheduledExecutor.
-	 */
 	final ScheduledThreadPoolExecutor _scheduledExecutor;
-	/**
-	 * Field _executor.
-	 */
 	final ThreadPoolExecutor _executor;
-	/**
-	 * Field _shutdown.
-	 */
 	private boolean _shutdown;
 	
 	/**

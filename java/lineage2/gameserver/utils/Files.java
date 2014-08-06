@@ -14,7 +14,6 @@ package lineage2.gameserver.utils;
 
 import java.io.File;
 import java.io.IOException;
-
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,9 +24,6 @@ import org.slf4j.LoggerFactory;
  */
 public class Files
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Files.class);
 	
 	/**

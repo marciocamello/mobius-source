@@ -13,7 +13,6 @@
 package quests;
 
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.CtrlIntention;
@@ -57,17 +56,13 @@ public class _10331_StartOfFate extends Quest implements ScriptFile
 	private static final int SEBION = 32978; // ok
 	private static final int BELIS_VERIFICATION_SYSTEM = 33215;
 	private static final int ELECTRICITY_GENERATOR = 33216;
-	
 	private static final int NEMERTESS = 22984; // ok
 	private static final int HANDYMAN = 22997; // ok
 	private static final int OPERATIVE = 22998; // ok
-	
 	private static final int SARILS_NECKLACE = 17580;
 	private static final int BELIS_MARK = 17615;
 	private static final int PROOF_OF_COURAGE = 17821;
-	
 	private static final Location ESAGIRA_5_AREA = new Location(-111774, 231933, -3160);
-	
 	private static final int INSTANCED_ZONE_ID = 178;
 	private static final int NEED_BELIS_MARKS_COUNT = 3;
 	private static final int NEED_OPERATIVES_KILLS_COUNT = 6;

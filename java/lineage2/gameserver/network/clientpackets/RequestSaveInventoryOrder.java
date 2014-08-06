@@ -20,9 +20,6 @@ import lineage2.gameserver.model.Player;
  */
 public class RequestSaveInventoryOrder extends L2GameClientPacket
 {
-	/**
-	 * Field _items.
-	 */
 	int[][] _items;
 	
 	/**

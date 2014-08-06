@@ -30,85 +30,25 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class clanhall extends Functions
 {
-	/**
-	 * Field GREAT_WOLF.
-	 */
 	private static final int GREAT_WOLF = PetDataTable.GREAT_WOLF_ID;
-	/**
-	 * Field WHITE_WOLF.
-	 */
 	private static final int WHITE_WOLF = PetDataTable.WGREAT_WOLF_ID;
-	/**
-	 * Field FENRIR.
-	 */
 	private static final int FENRIR = PetDataTable.FENRIR_WOLF_ID;
-	/**
-	 * Field WHITE_FENRIR.
-	 */
 	private static final int WHITE_FENRIR = PetDataTable.WFENRIR_WOLF_ID;
-	/**
-	 * Field WIND_STRIDER.
-	 */
 	private static final int WIND_STRIDER = PetDataTable.STRIDER_WIND_ID;
-	/**
-	 * Field RED_WIND_STRIDER.
-	 */
 	private static final int RED_WIND_STRIDER = PetDataTable.RED_STRIDER_WIND_ID;
-	/**
-	 * Field STAR_STRIDER.
-	 */
 	private static final int STAR_STRIDER = PetDataTable.STRIDER_STAR_ID;
-	/**
-	 * Field RED_STAR_STRIDER.
-	 */
 	private static final int RED_STAR_STRIDER = PetDataTable.RED_STRIDER_STAR_ID;
-	/**
-	 * Field TWILING_STRIDER.
-	 */
 	private static final int TWILING_STRIDER = PetDataTable.STRIDER_TWILIGHT_ID;
-	/**
-	 * Field RED_TWILING_STRIDER.
-	 */
 	private static final int RED_TWILING_STRIDER = PetDataTable.RED_STRIDER_TWILIGHT_ID;
-	/**
-	 * Field GREAT_WOLF_NECKLACE.
-	 */
 	private static final int GREAT_WOLF_NECKLACE = L2Pet.GREAT_WOLF.getControlItemId();
-	/**
-	 * Field FENRIR_NECKLACE.
-	 */
 	private static final int FENRIR_NECKLACE = L2Pet.FENRIR_WOLF.getControlItemId();
-	/**
-	 * Field WIND_STRIDER_ITEM.
-	 */
 	private static final int WIND_STRIDER_ITEM = L2Pet.STRIDER_WIND.getControlItemId();
-	/**
-	 * Field STAR_STRIDER_ITEM.
-	 */
 	private static final int STAR_STRIDER_ITEM = L2Pet.STRIDER_STAR.getControlItemId();
-	/**
-	 * Field TWILING_STRIDER_ITEM.
-	 */
 	private static final int TWILING_STRIDER_ITEM = L2Pet.STRIDER_TWILIGHT.getControlItemId();
-	/**
-	 * Field WHITE_WOLF_NECKLACE.
-	 */
 	private static final int WHITE_WOLF_NECKLACE = L2Pet.WGREAT_WOLF.getControlItemId();
-	/**
-	 * Field WHITE_FENRIR_NECKLACE.
-	 */
 	private static final int WHITE_FENRIR_NECKLACE = L2Pet.WFENRIR_WOLF.getControlItemId();
-	/**
-	 * Field RED_WS_ITEM.
-	 */
 	private static final int RED_WS_ITEM = L2Pet.RED_STRIDER_WIND.getControlItemId();
-	/**
-	 * Field RED_SS_ITEM.
-	 */
 	private static final int RED_SS_ITEM = L2Pet.RED_STRIDER_STAR.getControlItemId();
-	/**
-	 * Field RED_TW_ITEM.
-	 */
 	private static final int RED_TW_ITEM = L2Pet.RED_STRIDER_TWILIGHT.getControlItemId();
 	
 	/**

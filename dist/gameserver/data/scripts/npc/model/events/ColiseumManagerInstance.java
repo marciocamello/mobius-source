@@ -13,7 +13,6 @@
 package npc.model.events;
 
 import java.util.List;
-
 import lineage2.commons.collections.CollectionUtils;
 import lineage2.gameserver.data.xml.holder.EventHolder;
 import lineage2.gameserver.model.Party;
@@ -22,7 +21,6 @@ import lineage2.gameserver.model.entity.events.EventType;
 import lineage2.gameserver.model.entity.events.impl.UndergroundColiseumEvent;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
-
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -35,13 +33,7 @@ public final class ColiseumManagerInstance extends ColiseumHelperInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _startHtm.
-	 */
 	private final String _startHtm;
-	/**
-	 * Field _coliseumId.
-	 */
 	private final int _coliseumId;
 	
 	/**

@@ -47,7 +47,6 @@ public class ExBR_PresentBuyProductPacket extends L2GameServerPacket
 	// времени покупка
 	// невозможна
 	public static final int RESULT_ITEM_WAS_SALED = -14;// Предмет продан
-	
 	private final int result;
 	
 	public ExBR_PresentBuyProductPacket(int result)

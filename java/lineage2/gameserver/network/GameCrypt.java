@@ -18,13 +18,7 @@ package lineage2.gameserver.network;
  */
 public class GameCrypt
 {
-	/**
-	 * Field _outKey. Field _inKey.
-	 */
 	private final byte[] _inKey = new byte[16], _outKey = new byte[16];
-	/**
-	 * Field _isEnabled.
-	 */
 	private boolean _isEnabled = false;
 	
 	/**

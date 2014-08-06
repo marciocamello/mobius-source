@@ -13,7 +13,6 @@
 package lineage2.gameserver.utils;
 
 import java.util.Comparator;
-
 import lineage2.gameserver.model.Effect;
 
 /**
@@ -22,9 +21,6 @@ import lineage2.gameserver.model.Effect;
  */
 public class EffectsComparator implements Comparator<Effect>
 {
-	/**
-	 * Field instance.
-	 */
 	private static final EffectsComparator instance = new EffectsComparator();
 	
 	/**

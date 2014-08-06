@@ -14,7 +14,6 @@ package lineage2.gameserver.data.xml.holder;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.templates.spawn.WalkerRouteTemplate;
 
@@ -24,13 +23,7 @@ import lineage2.gameserver.templates.spawn.WalkerRouteTemplate;
  */
 public final class WalkerRoutesHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final WalkerRoutesHolder _instance = new WalkerRoutesHolder();
-	/**
-	 * Field _spawns.
-	 */
 	private final List<WalkerRouteTemplate> _spawns = new ArrayList<>();
 	
 	/**

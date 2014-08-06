@@ -21,9 +21,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionPlayerInstanceZone extends Condition
 {
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
 	
 	/**

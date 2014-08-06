@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.concurrent.atomic.AtomicLong;
-
 import lineage2.commons.dao.JdbcDAO;
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.dao.JdbcEntityStats;
@@ -31,15 +30,11 @@ import lineage2.gameserver.model.items.ItemInstance.ItemLocation;
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Element;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(ItemsDAO.class);
 	private final static String RESTORE_ITEM = "SELECT object_id, owner_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, life_time, custom_flags, augmentation_id, attribute_fire, attribute_water, attribute_wind, attribute_earth, attribute_holy, attribute_unholy, agathion_energy, visual_id FROM items WHERE object_id = ?";
 	private final static String RESTORE_OWNER_ITEMS = "SELECT object_id FROM items WHERE owner_id = ? AND loc = ?";
@@ -58,29 +53,11 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		return instance;
 	}
 	
-	/**
-	 * Field load.
-	 */
 	final AtomicLong load = new AtomicLong();
-	/**
-	 * Field insert.
-	 */
 	final AtomicLong insert = new AtomicLong();
-	/**
-	 * Field update.
-	 */
 	final AtomicLong update = new AtomicLong();
-	/**
-	 * Field delete.
-	 */
 	final AtomicLong delete = new AtomicLong();
-	/**
-	 * Field cache.
-	 */
 	private final Cache cache;
-	/**
-	 * Field stats.
-	 */
 	private final JdbcEntityStats stats = new JdbcEntityStats()
 	{
 		@Override

@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
-
 import org.apache.commons.lang3.StringUtils;
 
 public class PrivateStoreMsgBuy extends L2GameServerPacket

@@ -22,17 +22,8 @@ import lineage2.gameserver.model.matching.MatchingRoom;
  */
 public class RequestPartyMatchDetail extends L2GameClientPacket
 {
-	/**
-	 * Field _roomId.
-	 */
 	private int _roomId;
-	/**
-	 * Field _locations.
-	 */
 	private int _locations;
-	/**
-	 * Field _level.
-	 */
 	private int _level;
 	
 	/**

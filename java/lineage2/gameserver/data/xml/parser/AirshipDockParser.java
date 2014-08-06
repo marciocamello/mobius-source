@@ -17,14 +17,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-
 import lineage2.commons.data.xml.AbstractFileParser;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.AirshipDockHolder;
 import lineage2.gameserver.model.entity.events.objects.BoatPoint;
 import lineage2.gameserver.network.serverpackets.components.SceneMovie;
 import lineage2.gameserver.templates.AirshipDock;
-
 import org.dom4j.Element;
 
 /**
@@ -33,9 +31,6 @@ import org.dom4j.Element;
  */
 public final class AirshipDockParser extends AbstractFileParser<AirshipDockHolder>
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final AirshipDockParser _instance = new AirshipDockParser();
 	
 	/**

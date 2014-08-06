@@ -21,9 +21,6 @@ import lineage2.gameserver.network.serverpackets.PackageSendableList;
  */
 public class RequestPackageSendableItemList extends L2GameClientPacket
 {
-	/**
-	 * Field _objectId.
-	 */
 	private int _objectId;
 	
 	/**

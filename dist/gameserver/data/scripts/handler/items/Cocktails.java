@@ -24,9 +24,6 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class Cocktails extends SimpleItemHandler
 {
-	/**
-	 * Field ITEM_IDS.
-	 */
 	private static final int[] ITEM_IDS = new int[]
 	{
 		10178,
@@ -51,9 +48,6 @@ public final class Cocktails extends SimpleItemHandler
 		return ITEM_IDS;
 	}
 	
-	/**
-	 * Field bless_list.
-	 */
 	private static final int[] bless_list =
 	{
 		11517,
@@ -62,9 +56,6 @@ public final class Cocktails extends SimpleItemHandler
 		11522,
 		11521,
 	};
-	/**
-	 * Field sweet_list.
-	 */
 	private static final int[] sweet_list =
 	{
 		2404,
@@ -78,9 +69,6 @@ public final class Cocktails extends SimpleItemHandler
 		2412,
 		2413,
 	};
-	/**
-	 * Field fresh_list.
-	 */
 	private static final int[] fresh_list =
 	{
 		2414,
@@ -93,9 +81,6 @@ public final class Cocktails extends SimpleItemHandler
 		2418,
 		2419,
 	};
-	/**
-	 * Field milk_list.
-	 */
 	private static final int[] milk_list =
 	{
 		2873,

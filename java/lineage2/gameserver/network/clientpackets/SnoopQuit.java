@@ -18,9 +18,6 @@ package lineage2.gameserver.network.clientpackets;
  */
 public class SnoopQuit extends L2GameClientPacket
 {
-	/**
-	 * Field _snoopID.
-	 */
 	@SuppressWarnings("unused")
 	private int _snoopID;
 	

@@ -19,7 +19,6 @@ public class ExPutShapeShiftingTargetItemResult extends L2GameServerPacket
 {
 	public static final L2GameServerPacket FAIL = new ExPutShapeShiftingTargetItemResult(0x00, 0L);
 	public static final int SUCCESS_RESULT = 0x01;
-	
 	private final int _resultId;
 	private final long _price;
 	

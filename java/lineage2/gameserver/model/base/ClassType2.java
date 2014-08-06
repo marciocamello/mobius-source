@@ -18,53 +18,17 @@ package lineage2.gameserver.model.base;
  */
 public enum ClassType2
 {
-	/**
-	 * Field None.
-	 */
 	None(10280, 10612),
-	/**
-	 * Field Warrior.
-	 */
 	Warrior(10281, 10289),
-	/**
-	 * Field Knight.
-	 */
 	Knight(10282, 10288),
-	/**
-	 * Field Rogue.
-	 */
 	Rogue(10283, 10290),
-	/**
-	 * Field Rogue.
-	 */
 	Archer(10283, 10290),
-	/**
-	 * Field Healer.
-	 */
 	Healer(10285, 10291),
-	/**
-	 * Field Enchanter.
-	 */
 	Enchanter(10287, 10293),
-	/**
-	 * Field Summoner.
-	 */
 	Summoner(10286, 10294),
-	/**
-	 * Field Wizard.
-	 */
 	Wizard(10284, 10292);
-	/**
-	 * Field VALUES.
-	 */
 	public static final ClassType2[] VALUES = values();
-	/**
-	 * Field _certificate.
-	 */
 	private final int _certificate;
-	/**
-	 * Field _transformation.
-	 */
 	private final int _transformation;
 	
 	/**

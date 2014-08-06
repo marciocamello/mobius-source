@@ -10,7 +10,6 @@ import lineage2.gameserver.utils.Location;
 /**
  * @author Awakeninger
  */
-
 public final class ShilenAltarInstance extends NpcInstance
 {
 	private static final long serialVersionUID = 1L;
@@ -30,7 +29,6 @@ public final class ShilenAltarInstance extends NpcInstance
 	
 	// private long _savedTime;
 	// DoorInstance _door1 = getReflection().getDoor(DoorEnter1);
-	
 	public ShilenAltarInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);

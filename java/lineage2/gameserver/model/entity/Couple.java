@@ -14,12 +14,10 @@ package lineage2.gameserver.model.entity;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.idfactory.IdFactory;
 import lineage2.gameserver.instancemanager.CoupleManager;
 import lineage2.gameserver.model.Player;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,37 +27,13 @@ import org.slf4j.LoggerFactory;
  */
 public class Couple
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Couple.class);
-	/**
-	 * Field _id.
-	 */
 	private int _id = 0;
-	/**
-	 * Field _player1Id.
-	 */
 	private int _player1Id = 0;
-	/**
-	 * Field _player2Id.
-	 */
 	private int _player2Id = 0;
-	/**
-	 * Field _maried.
-	 */
 	private boolean _maried = false;
-	/**
-	 * Field _affiancedDate.
-	 */
 	private long _affiancedDate;
-	/**
-	 * Field _weddingDate.
-	 */
 	private long _weddingDate;
-	/**
-	 * Field isChanged.
-	 */
 	private boolean isChanged;
 	
 	/**

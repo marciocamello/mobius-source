@@ -18,7 +18,6 @@ import java.lang.reflect.Constructor;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ai.CharacterAI;
@@ -47,49 +46,16 @@ public class AdminSpawn implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_show_spawns.
-		 */
 		admin_show_spawns,
-		/**
-		 * Field admin_spawn.
-		 */
 		admin_spawn,
-		/**
-		 * Field admin_spawn_monster.
-		 */
 		admin_spawn_monster,
-		/**
-		 * Field admin_spawn_index.
-		 */
 		admin_spawn_index,
-		/**
-		 * Field admin_spawn1.
-		 */
 		admin_spawn1,
-		/**
-		 * Field admin_setheading.
-		 */
 		admin_setheading,
-		/**
-		 * Field admin_setai.
-		 */
 		admin_setai,
-		/**
-		 * Field admin_setaiparam.
-		 */
 		admin_setaiparam,
-		/**
-		 * Field admin_dumpparams.
-		 */
 		admin_dumpparams,
-		/**
-		 * Field admin_generate_loc.
-		 */
 		admin_generate_loc,
-		/**
-		 * Field admin_dumpspawn.
-		 */
 		admin_dumpspawn
 	}
 	

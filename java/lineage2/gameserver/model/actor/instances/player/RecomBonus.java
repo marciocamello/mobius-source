@@ -20,9 +20,6 @@ import lineage2.gameserver.model.Player;
  */
 public final class RecomBonus
 {
-	/**
-	 * Field _recoBonus.
-	 */
 	private static final int[][] _recoBonus =
 	{
 		{

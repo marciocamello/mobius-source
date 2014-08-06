@@ -19,7 +19,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
@@ -33,7 +32,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,13 +41,7 @@ import org.slf4j.LoggerFactory;
  */
 public class FishingChampionShipManager
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(FishingChampionShipManager.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final FishingChampionShipManager _instance = new FishingChampionShipManager();
 	
 	/**
@@ -61,41 +53,14 @@ public class FishingChampionShipManager
 		return _instance;
 	}
 	
-	/**
-	 * Field _enddate.
-	 */
 	long _enddate = 0;
-	/**
-	 * Field _playersName.
-	 */
 	private final List<String> _playersName = new ArrayList<>();
-	/**
-	 * Field _fishLength.
-	 */
 	private final List<String> _fishLength = new ArrayList<>();
-	/**
-	 * Field _winPlayersName.
-	 */
 	private final List<String> _winPlayersName = new ArrayList<>();
-	/**
-	 * Field _winFishLength.
-	 */
 	private final List<String> _winFishLength = new ArrayList<>();
-	/**
-	 * Field _tmpPlayers.
-	 */
 	final List<Fisher> _tmpPlayers = new ArrayList<>();
-	/**
-	 * Field _winPlayers.
-	 */
 	final List<Fisher> _winPlayers = new ArrayList<>();
-	/**
-	 * Field _minFishLength.
-	 */
 	private double _minFishLength = 0;
-	/**
-	 * Field _needRefresh.
-	 */
 	boolean _needRefresh = true;
 	
 	/**
@@ -305,7 +270,6 @@ public class FishingChampionShipManager
 	 * @param par int ng
 	 * @return String
 	 */
-	
 	public String getCurrentName(int par)
 	{
 		if (_playersName.size() >= par)
@@ -321,7 +285,6 @@ public class FishingChampionShipManager
 	 * @param par inrin
 	 * @return
 	 */
-	
 	public String getFishLength(int par)
 	{
 		if (_winFishLength.size() >= par)
@@ -337,7 +300,6 @@ public class FishingChampionShipManager
 	 * @param par inrin
 	 * @return
 	 */
-	
 	public String getCurrentFishLength(int par)
 	{
 		if (_fishLength.size() >= par)
@@ -352,7 +314,6 @@ public class FishingChampionShipManager
 	 * Method getReward.
 	 * @param pl Player
 	 */
-	
 	public void getReward(Player pl)
 	{
 		String filename = "fisherman/championship/getReward.htm";
@@ -415,7 +376,6 @@ public class FishingChampionShipManager
 	 * Method showMidResult.
 	 * @param pl Player
 	 */
-	
 	public void showMidResult(Player pl)
 	{
 		if (_needRefresh)
@@ -451,7 +411,6 @@ public class FishingChampionShipManager
 	 * @param pl Player
 	 * @param npc NpcInstance
 	 */
-	
 	public void showChampScreen(Player pl, NpcInstance npc)
 	{
 		NpcHtmlMessage html = new NpcHtmlMessage(pl.getObjectId());
@@ -481,7 +440,6 @@ public class FishingChampionShipManager
 	/**
 	 * Method shutdown.
 	 */
-	
 	public void shutdown()
 	{
 		ServerVariables.set("fishChampionshipEnd", _enddate);
@@ -528,7 +486,6 @@ public class FishingChampionShipManager
 	/**
 	 * Method refreshResult.
 	 */
-	
 	private synchronized void refreshResult()
 	{
 		_needRefresh = false;
@@ -562,7 +519,6 @@ public class FishingChampionShipManager
 	/**
 	 * Method refreshWinResult.
 	 */
-	
 	void refreshWinResult()
 	{
 		_winPlayersName.clear();
@@ -610,7 +566,6 @@ public class FishingChampionShipManager
 		/**
 		 * Method runImpl.
 		 */
-		
 		@Override
 		public void runImpl()
 		{
@@ -649,7 +604,6 @@ public class FishingChampionShipManager
 		/**
 		 * Method runImpl.
 		 */
-		
 		@Override
 		public void runImpl()
 		{
@@ -660,25 +614,11 @@ public class FishingChampionShipManager
 	 */
 	
 	private class Fisher
-	/**
-	 * Field _length.
-	 */
-	/**
-	 * Field _length.
-	 */
 	{
 		private double _length = 0./**
-		 * Field _name.
-		 */
-		/**
-		 * Field _name.
 		 */
 		;
 		String _name/**
-		 * Field _reward.
-		 */
-		/**
-		 * Field _reward.
 		 */
 		;
 		private int _reward = 0;
@@ -689,7 +629,6 @@ public class FishingChampionShipManager
 		 * @param length double
 		 * @param rewardType int
 		 */
-		
 		public Fisher(String name, double length, int rewardType)
 		{
 			setName(name);
@@ -701,7 +640,6 @@ public class FishingChampionShipManager
 		 * Method setLength.
 		 * @param value double
 		 */
-		
 		public void setLength(double value)
 		{
 			_length = value;
@@ -711,7 +649,6 @@ public class FishingChampionShipManager
 		 * Method setName.
 		 * @param value String
 		 */
-		
 		public void setName(String value)
 		{
 			_name = value;
@@ -721,7 +658,6 @@ public class FishingChampionShipManager
 		 * Method setRewardType.
 		 * @param value int
 		 */
-		
 		public void setRewardType(int value)
 		{
 			_reward = value;
@@ -731,7 +667,6 @@ public class FishingChampionShipManager
 		 * Method getName.ring
 		 * @return
 		 */
-		
 		public String getName()
 		{
 			return _name;
@@ -741,7 +676,6 @@ public class FishingChampionShipManager
 		 * Method getRewardType. int
 		 * @return
 		 */
-		
 		public int getRewardType()
 		{
 			return _reward;
@@ -751,7 +685,6 @@ public class FishingChampionShipManager
 		 * Method getLength.uble
 		 * @return
 		 */
-		
 		public double getLength()
 		{
 			return _length;

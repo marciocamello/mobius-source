@@ -21,9 +21,6 @@ import lineage2.gameserver.network.serverpackets.ExUISetting;
  */
 public class RequestSaveKeyMapping extends L2GameClientPacket
 {
-	/**
-	 * Field _data.
-	 */
 	private byte[] _data;
 	
 	/**

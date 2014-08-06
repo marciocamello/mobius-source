@@ -30,9 +30,6 @@ public class AdminCancel implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_cancel.
-		 */
 		admin_cancel
 	}
 	

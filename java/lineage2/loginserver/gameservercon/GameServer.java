@@ -16,9 +16,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
-
 import lineage2.loginserver.Config;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,73 +26,25 @@ import org.slf4j.LoggerFactory;
  */
 public class GameServer
 {
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(GameServer.class);
-	/**
-	 * Field _id.
-	 */
 	private int _id;
-	/**
-	 * Field _externalHost. Field _internalHost.
-	 */
 	private String _internalHost, _externalHost;
-	/**
-	 * Field _ports.
-	 */
 	private int[] _ports = new int[]
 	{
 		7777
 	};
-	/**
-	 * Field _serverType.
-	 */
 	private int _serverType;
-	/**
-	 * Field _ageLimit.
-	 */
 	private int _ageLimit;
-	/**
-	 * Field _protocol.
-	 */
 	private int _protocol;
-	/**
-	 * Field _isOnline.
-	 */
 	private boolean _isOnline;
-	/**
-	 * Field _isPvp.
-	 */
 	private boolean _isPvp;
-	/**
-	 * Field _isShowingBrackets.
-	 */
 	private boolean _isShowingBrackets;
-	/**
-	 * Field _isGmOnly.
-	 */
 	private boolean _isGmOnly;
-	/**
-	 * Field _maxPlayers.
-	 */
 	private int _maxPlayers;
-	/**
-	 * Field _conn.
-	 */
 	private GameServerConnection _conn;
-	/**
-	 * Field _isAuthed.
-	 */
 	private boolean _isAuthed;
-	/**
-	 * Field _port.
-	 */
 	private int _port;
-	/**
-	 * Field _accounts.
-	 */
 	private final Set<String> _accounts = new CopyOnWriteArraySet<>();
 	
 	/**

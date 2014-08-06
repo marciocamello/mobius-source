@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.clientpackets;
 
 import java.util.List;
-
 import lineage2.commons.math.SafeMath;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
@@ -33,18 +32,9 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class AddTradeItem extends L2GameClientPacket
 {
-	/**
-	 * Field _tradeId.
-	 */
 	@SuppressWarnings("unused")
 	private int _tradeId;
-	/**
-	 * Field _objectId.
-	 */
 	private int _objectId;
-	/**
-	 * Field _amount.
-	 */
 	private long _amount;
 	
 	/**

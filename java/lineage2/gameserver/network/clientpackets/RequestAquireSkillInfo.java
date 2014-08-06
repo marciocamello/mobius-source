@@ -29,17 +29,8 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public class RequestAquireSkillInfo extends L2GameClientPacket
 {
-	/**
-	 * Field _id.
-	 */
 	private int _id;
-	/**
-	 * Field _level.
-	 */
 	private int _level;
-	/**
-	 * Field _type.
-	 */
 	private AcquireType _type;
 	
 	/**

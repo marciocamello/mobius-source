@@ -41,5 +41,4 @@ public class NoActionNpcInstance extends NpcInstance
 	public void onActionSelect(final Player player, final boolean forced)
 	{
 	}
-	
 }

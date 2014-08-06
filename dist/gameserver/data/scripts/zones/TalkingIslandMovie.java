@@ -28,13 +28,7 @@ import quests._10320_LetsGototheCentralSquare;
  */
 public final class TalkingIslandMovie implements ScriptFile
 {
-	/**
-	 * Field ZONE_NAME. (value is ""[ti_presentation_video]"")
-	 */
 	private static final String ZONE_NAME = "[ti_presentation_video]";
-	/**
-	 * Field _zoneListener.
-	 */
 	private static ZoneListener _zoneListener;
 	
 	/**

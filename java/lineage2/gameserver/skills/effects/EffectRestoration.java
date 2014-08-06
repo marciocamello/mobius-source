@@ -23,13 +23,7 @@ import lineage2.gameserver.utils.ItemFunctions;
  */
 public class EffectRestoration extends Effect
 {
-	/**
-	 * Field itemId.
-	 */
 	private final int itemId;
-	/**
-	 * Field count.
-	 */
 	private final long count;
 	
 	/**

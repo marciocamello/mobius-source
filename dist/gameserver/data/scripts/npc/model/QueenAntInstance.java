@@ -14,7 +14,6 @@ package npc.model;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.model.Creature;
@@ -37,17 +36,8 @@ public final class QueenAntInstance extends BossInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field Queen_Ant_Larva. (value is 29002)
-	 */
 	private static final int Queen_Ant_Larva = 29002;
-	/**
-	 * Field _spawns.
-	 */
 	private final List<SimpleSpawner> _spawns = new ArrayList<>();
-	/**
-	 * Field Larva.
-	 */
 	private NpcInstance Larva = null;
 	
 	/**

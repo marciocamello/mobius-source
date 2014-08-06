@@ -14,7 +14,6 @@ package lineage2.gameserver.data.xml.holder;
 
 import java.util.ArrayList;
 import java.util.Collection;
-
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.templates.item.RecipeTemplate;
 import gnu.trove.map.hash.TIntObjectHashMap;
@@ -25,17 +24,8 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public final class RecipeHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final RecipeHolder _instance = new RecipeHolder();
-	/**
-	 * Field _listByRecipeId.
-	 */
 	private final TIntObjectHashMap<RecipeTemplate> _listByRecipeId = new TIntObjectHashMap<>();
-	/**
-	 * Field _listByRecipeItem.
-	 */
 	private final TIntObjectHashMap<RecipeTemplate> _listByRecipeItem = new TIntObjectHashMap<>();
 	
 	/**

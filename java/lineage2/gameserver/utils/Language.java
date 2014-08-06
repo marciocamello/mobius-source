@@ -18,17 +18,8 @@ package lineage2.gameserver.utils;
  */
 public enum Language
 {
-	/**
-	 * Field ENGLISH.
-	 */
 	ENGLISH("en");
-	/**
-	 * Field VALUES.
-	 */
 	public static final Language[] VALUES = Language.values();
-	/**
-	 * Field _shortName.
-	 */
 	private String _shortName;
 	
 	/**

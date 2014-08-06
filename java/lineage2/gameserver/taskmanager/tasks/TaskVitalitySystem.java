@@ -13,7 +13,6 @@
 package lineage2.gameserver.taskmanager.tasks;
 
 import java.util.Calendar;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
@@ -22,7 +21,6 @@ import lineage2.gameserver.taskmanager.Task;
 import lineage2.gameserver.taskmanager.TaskManager;
 import lineage2.gameserver.taskmanager.TaskManager.ExecutedTask;
 import lineage2.gameserver.taskmanager.TaskTypes;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,13 +30,7 @@ import org.slf4j.LoggerFactory;
  */
 public class TaskVitalitySystem extends Task
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(TaskVitalitySystem.class);
-	/**
-	 * Field NAME. (value is ""sp_vitalitysystem"")
-	 */
 	private static final String NAME = "sp_vitalitysystem";
 	
 	/**

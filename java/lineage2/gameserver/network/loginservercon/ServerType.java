@@ -18,37 +18,13 @@ package lineage2.gameserver.network.loginservercon;
  */
 public enum ServerType
 {
-	/**
-	 * Field NORMAL.
-	 */
 	NORMAL,
-	/**
-	 * Field RELAX.
-	 */
 	RELAX,
-	/**
-	 * Field TEST.
-	 */
 	TEST,
-	/**
-	 * Field NO_LABEL.
-	 */
 	NO_LABEL,
-	/**
-	 * Field RESTRICTED.
-	 */
 	RESTRICTED,
-	/**
-	 * Field EVENT.
-	 */
 	EVENT,
-	/**
-	 * Field FREE.
-	 */
 	FREE;
-	/**
-	 * Field _mask.
-	 */
 	private int _mask;
 	
 	/**

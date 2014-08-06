@@ -34,9 +34,6 @@ import lineage2.gameserver.utils.ItemFunctions;
  */
 public class RequestRecipeItemMakeSelf extends L2GameClientPacket
 {
-	/**
-	 * Field _recipeId.
-	 */
 	private int _recipeId;
 	
 	/**

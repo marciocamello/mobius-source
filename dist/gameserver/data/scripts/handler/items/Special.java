@@ -29,9 +29,7 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
-
 import org.apache.commons.lang3.ArrayUtils;
-
 import quests._464_Oath;
 import bosses.AntharasManager;
 import bosses.ValakasManager;
@@ -42,9 +40,6 @@ import bosses.ValakasManager;
  */
 public final class Special extends SimpleItemHandler
 {
-	/**
-	 * Field ITEM_IDS.
-	 */
 	private static final int[] ITEM_IDS = new int[]
 	{
 		8060,

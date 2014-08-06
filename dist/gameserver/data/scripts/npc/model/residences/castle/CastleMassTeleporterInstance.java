@@ -14,7 +14,6 @@ package npc.model.residences.castle;
 
 import java.util.List;
 import java.util.concurrent.Future;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Player;
@@ -69,13 +68,7 @@ public final class CastleMassTeleporterInstance extends NpcInstance
 		}
 	}
 	
-	/**
-	 * Field _teleportTask.
-	 */
 	Future<?> _teleportTask = null;
-	/**
-	 * Field _teleportLoc.
-	 */
 	final Location _teleportLoc;
 	
 	/**

@@ -20,9 +20,6 @@ import lineage2.gameserver.model.Player;
  */
 public class ExMagicAttackInfo extends L2GameServerPacket
 {
-	/**
-	 * Field player.
-	 */
 	Player player;
 	
 	/**

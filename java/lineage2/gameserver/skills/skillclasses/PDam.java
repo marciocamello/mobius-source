@@ -13,7 +13,6 @@
 package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
-
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.FinishRotating;
@@ -29,21 +28,9 @@ import lineage2.gameserver.templates.StatsSet;
  */
 public class PDam extends Skill
 {
-	/**
-	 * Field _onCrit.
-	 */
 	private final boolean _onCrit;
-	/**
-	 * Field _directHp.
-	 */
 	private final boolean _directHp;
-	/**
-	 * Field _turner.
-	 */
 	private final boolean _turner;
-	/**
-	 * Field _blow.
-	 */
 	private final boolean _blow;
 	
 	/**

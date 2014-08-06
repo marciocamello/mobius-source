@@ -13,14 +13,12 @@
 package lineage2.gameserver.templates;
 
 import java.lang.reflect.Constructor;
-
 import lineage2.commons.geometry.Polygon;
 import lineage2.gameserver.ai.CharacterAI;
 import lineage2.gameserver.ai.DoorAI;
 import lineage2.gameserver.model.instances.DoorInstance;
 import lineage2.gameserver.scripts.Scripts;
 import lineage2.gameserver.utils.Location;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,13 +28,7 @@ import org.slf4j.LoggerFactory;
  */
 public class DoorTemplate extends CharTemplate
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(DoorTemplate.class);
-	/**
-	 * Field DEFAULT_AI_CONSTRUCTOR.
-	 */
 	@SuppressWarnings("unchecked")
 	public static final Constructor<DoorAI> DEFAULT_AI_CONSTRUCTOR = (Constructor<DoorAI>) CharacterAI.class.getConstructors()[0];
 	
@@ -45,83 +37,26 @@ public class DoorTemplate extends CharTemplate
 	 */
 	public static enum DoorType
 	{
-		/**
-		 * Field DOOR.
-		 */
 		DOOR,
-		/**
-		 * Field WALL.
-		 */
 		WALL
 	}
 	
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _name.
-	 */
 	private final String _name;
-	/**
-	 * Field _doorType.
-	 */
 	private final DoorType _doorType;
-	/**
-	 * Field _unlockable.
-	 */
 	private final boolean _unlockable;
-	/**
-	 * Field _isHPVisible.
-	 */
 	private final boolean _isHPVisible;
-	/**
-	 * Field _opened.
-	 */
 	private final boolean _opened;
-	/**
-	 * Field _targetable.
-	 */
 	private final boolean _targetable;
-	/**
-	 * Field _polygon.
-	 */
 	private final Polygon _polygon;
-	/**
-	 * Field _loc.
-	 */
 	private final Location _loc;
-	/**
-	 * Field _key.
-	 */
 	private final int _key;
-	/**
-	 * Field _openTime.
-	 */
 	private final int _openTime;
-	/**
-	 * Field _rndTime.
-	 */
 	private final int _rndTime;
-	/**
-	 * Field _closeTime.
-	 */
 	private final int _closeTime;
-	/**
-	 * Field _masterDoor.
-	 */
 	private final int _masterDoor;
-	/**
-	 * Field _aiParams.
-	 */
 	private final StatsSet _aiParams;
-	/**
-	 * Field _classAI.
-	 */
 	private Class<DoorAI> _classAI = DoorAI.class;
-	/**
-	 * Field _constructorAI.
-	 */
 	private Constructor<DoorAI> _constructorAI = DEFAULT_AI_CONSTRUCTOR;
 	
 	/**

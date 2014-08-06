@@ -17,7 +17,6 @@ import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.AggroList;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -26,9 +25,6 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public final class Tentacle_19171 extends Fighter
 {
-	/**
-	 * Field ATTACK_IDS.
-	 */
 	private static final int[] ATTACK_IDS =
 	{
 		19191,

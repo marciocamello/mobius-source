@@ -26,9 +26,6 @@ import lineage2.gameserver.tables.ClanTable;
  */
 public class RequestOustAlly extends L2GameClientPacket
 {
-	/**
-	 * Field _clanName.
-	 */
 	private String _clanName;
 	
 	/**

@@ -27,38 +27,17 @@ import lineage2.gameserver.utils.Location;
  */
 public final class SelSquadLeader extends Fighter
 {
-	/**
-	 * Field isBusy.
-	 */
 	private boolean isBusy;
-	/**
-	 * Field isImmobilized.
-	 */
 	private boolean isImmobilized;
-	/**
-	 * Field busyTimeout.
-	 */
 	private long busyTimeout = 0;
-	/**
-	 * Field idleTimeout.
-	 */
 	private long idleTimeout = 0;
-	/**
-	 * Field phrase.
-	 */
 	private static final NpcString[] phrase =
 	{
 		NpcString.COME_AND_EAT,
 		NpcString.LOOKS_DELICIOUS,
 		NpcString.LETS_GO_EAT
 	};
-	/**
-	 * Field NPC_ID_FIRE.
-	 */
 	private static final int NPC_ID_FIRE = 18927;
-	/**
-	 * Field NPC_ID_FIRE_FEED.
-	 */
 	private static final int NPC_ID_FIRE_FEED = 18933;
 	
 	/**

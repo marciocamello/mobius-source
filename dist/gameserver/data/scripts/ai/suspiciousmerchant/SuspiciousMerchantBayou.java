@@ -24,9 +24,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class SuspiciousMerchantBayou extends DefaultAI
 {
-	/**
-	 * Field points.
-	 */
 	static final Location[] points =
 	{
 		new Location(190423, 43540, -3656),
@@ -51,17 +48,8 @@ public final class SuspiciousMerchantBayou extends DefaultAI
 		new Location(189579, 45949, -4240),
 		new Location(190423, 43540, -3656)
 	};
-	/**
-	 * Field current_point.
-	 */
 	private int current_point = -1;
-	/**
-	 * Field wait_timeout.
-	 */
 	private long wait_timeout = 0;
-	/**
-	 * Field wait.
-	 */
 	private boolean wait = false;
 	
 	/**

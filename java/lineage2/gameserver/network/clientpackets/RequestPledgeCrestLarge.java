@@ -18,9 +18,6 @@ import lineage2.gameserver.network.serverpackets.ExPledgeCrestLarge;
 
 public class RequestPledgeCrestLarge extends L2GameClientPacket
 {
-	/**
-	 * Field _crestId.
-	 */
 	private int _crestId;
 	
 	/**

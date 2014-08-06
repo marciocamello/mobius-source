@@ -23,7 +23,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
 
 public final class BirthingRoom implements ScriptFile
 {
-	
 	private static final String[] zones =
 	{
 		"[Birthing_room_0]",
@@ -61,7 +60,6 @@ public final class BirthingRoom implements ScriptFile
 	
 	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
-		
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{

@@ -20,9 +20,6 @@ import lineage2.gameserver.model.Player;
  */
 public class RequestDeleteMacro extends L2GameClientPacket
 {
-	/**
-	 * Field _id.
-	 */
 	private int _id;
 	
 	/**

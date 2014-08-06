@@ -14,7 +14,6 @@ package lineage2.gameserver.model.entity.events.impl;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.BoatHolder;
@@ -36,21 +35,9 @@ import lineage2.gameserver.utils.MapUtils;
  */
 public class BoatWayEvent extends GlobalEvent
 {
-	/**
-	 * Field BOAT_POINTS. (value is ""boat_points"")
-	 */
 	public static final String BOAT_POINTS = "boat_points";
-	/**
-	 * Field _ticketId.
-	 */
 	private final int _ticketId;
-	/**
-	 * Field _returnLoc.
-	 */
 	private final Location _returnLoc;
-	/**
-	 * Field _boat.
-	 */
 	private final Boat _boat;
 	
 	/**

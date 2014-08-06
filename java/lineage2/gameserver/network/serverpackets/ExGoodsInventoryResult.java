@@ -34,7 +34,6 @@ public class ExGoodsInventoryResult extends L2GameServerPacket
 	public static final L2GameServerPacket ALREADY_RECIVED = new ExGoodsInventoryResult(-106);
 	public static final L2GameServerPacket PRODUCT_CANNOT_BE_RECEIVED_AT_CURRENT_SERVER = new ExGoodsInventoryResult(-107);
 	public static final L2GameServerPacket PRODUCT_CANNOT_BE_RECEIVED_AT_CURRENT_PLAYER = new ExGoodsInventoryResult(-108);
-	
 	private final int _result;
 	
 	public ExGoodsInventoryResult(int result)

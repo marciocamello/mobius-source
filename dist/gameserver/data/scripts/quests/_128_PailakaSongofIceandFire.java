@@ -21,7 +21,6 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
@@ -31,19 +30,16 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 	private static final int ADLER2 = 32510;
 	private static final int SINAI = 32500;
 	private static final int TINSPECTOR = 32507;
-	
 	// BOSS
 	private static final int HILLAS = 18610;
 	private static final int PAPION = 18609;
 	private static final int GARGOS = 18607;
 	private static final int KINSUS = 18608;
 	private static final int ADIANTUM = 18620;
-	
 	// MOBS
 	private static final int Bloom = 18616;
 	private static final int CrystalWaterBottle = 32492;
 	private static final int BurningBrazier = 32493;
-	
 	// ITEMS
 	private static final int PailakaInstantShield = 13032;
 	private static final int QuickHealingPotion = 13033;
@@ -54,7 +50,6 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 	private static final int SwordofIceandFire = 13036;
 	private static final int EssenceofWater = 13038;
 	private static final int EssenceofFire = 13039;
-	
 	private static final int TempleBookofSecrets1 = 13130;
 	private static final int TempleBookofSecrets2 = 13131;
 	private static final int TempleBookofSecrets3 = 13132;
@@ -62,13 +57,11 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 	private static final int TempleBookofSecrets5 = 13134;
 	private static final int TempleBookofSecrets6 = 13135;
 	private static final int TempleBookofSecrets7 = 13136;
-	
 	// REWARDS
 	private static final int PailakaRing = 13294;
 	private static final int PailakaEarring = 13293;
 	private static final int ScrollofEscape = 736;
 	private static final int Adena = 57;
-	
 	private static final int[] MOBS = new int[]
 	{
 		18611,
@@ -89,7 +82,6 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 		8604,
 		8605
 	};
-	
 	private static final int izId = 43;
 	
 	public _128_PailakaSongofIceandFire()

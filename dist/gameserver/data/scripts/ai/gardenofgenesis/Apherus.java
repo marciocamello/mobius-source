@@ -14,7 +14,6 @@ package ai.gardenofgenesis;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -35,7 +34,6 @@ public final class Apherus extends Fighter
 {
 	final Skill GroundStrike; // TODO[K]
 	final Skill JumpAttack; // TODO[K]
-	
 	static final int[] DOORS =
 	{
 		26210041,

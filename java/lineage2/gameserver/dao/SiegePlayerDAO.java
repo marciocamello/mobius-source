@@ -17,11 +17,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.entity.residence.Residence;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,29 +29,11 @@ import org.slf4j.LoggerFactory;
  */
 public class SiegePlayerDAO
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(SiegePlayerDAO.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final SiegePlayerDAO _instance = new SiegePlayerDAO();
-	/**
-	 * Field INSERT_SQL_QUERY. (value is ""INSERT INTO siege_players(residence_id, object_id, clan_id) VALUES (?,?,?)"")
-	 */
 	public static final String INSERT_SQL_QUERY = "INSERT INTO siege_players(residence_id, object_id, clan_id) VALUES (?,?,?)";
-	/**
-	 * Field DELETE_SQL_QUERY. (value is ""DELETE FROM siege_players WHERE residence_id=? AND object_id=? AND clan_id=?"")
-	 */
 	public static final String DELETE_SQL_QUERY = "DELETE FROM siege_players WHERE residence_id=? AND object_id=? AND clan_id=?";
-	/**
-	 * Field DELETE_SQL_QUERY2. (value is ""DELETE FROM siege_players WHERE residence_id=?"")
-	 */
 	public static final String DELETE_SQL_QUERY2 = "DELETE FROM siege_players WHERE residence_id=?";
-	/**
-	 * Field SELECT_SQL_QUERY. (value is ""SELECT object_id FROM siege_players WHERE residence_id=? AND clan_id=?"")
-	 */
 	public static final String SELECT_SQL_QUERY = "SELECT object_id FROM siege_players WHERE residence_id=? AND clan_id=?";
 	
 	/**

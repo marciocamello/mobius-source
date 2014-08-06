@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Future;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ai.ClonePlayerAI;
@@ -46,30 +45,12 @@ import lineage2.gameserver.utils.Location;
  */
 public class ClonePlayer extends Playable
 {
-	/**
-	 * Field serialVersionUID. (value is -7275714049223105460)
-	 */
 	private static final long serialVersionUID = -7275714049223105460L;
-	/**
-	 * Field SUMMON_DISAPPEAR_RANGE. (value is 2500)
-	 */
 	private static final int SUMMON_DISAPPEAR_RANGE = 2500;
-	/**
-	 * Field _owner.
-	 */
 	private final Player _owner;
-	/**
-	 * Field _spsCharged.
-	 */
 	private int _spsCharged;
-	/**
-	 * Field _ssCharged. Field _follow.
-	 */
 	private boolean _follow = true, _ssCharged = false;
 	private final OwnerAttakListener _listener;
-	/**
-	 * Field _decayTask.
-	 */
 	private Future<?> _decayTask;
 	
 	/**
@@ -170,7 +151,6 @@ public class ClonePlayer extends Playable
 	 * owner) { player.sendPacket(new CharInfo(this)); player.sendPacket(ActionFail.STATIC); } else if (isAutoAttackable(player)) { player.getAI().Attack(this, false, shift); } else { if (player.getAI().getIntention() != CtrlIntention.AI_INTENTION_FOLLOW) { if (!shift) {
 	 * player.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, this, Config.FOLLOW_RANGE); } else { player.sendActionFailed(); } } else { player.sendActionFailed(); } } }
 	 */
-	
 	/**
 	 * Method onDeath.
 	 * @param killer Creature

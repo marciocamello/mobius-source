@@ -18,9 +18,6 @@ package lineage2.gameserver.network.clientpackets;
  */
 public class RequestPCCafeCouponUse extends L2GameClientPacket
 {
-	/**
-	 * Field _unknown.
-	 */
 	@SuppressWarnings("unused")
 	private String _unknown;
 	

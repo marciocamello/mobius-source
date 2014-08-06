@@ -22,25 +22,10 @@ import lineage2.gameserver.model.Player;
  */
 public class Friend
 {
-	/**
-	 * Field _objectId.
-	 */
 	private final int _objectId;
-	/**
-	 * Field _name.
-	 */
 	private String _name;
-	/**
-	 * Field _classId.
-	 */
 	private int _classId;
-	/**
-	 * Field _level.
-	 */
 	private int _level;
-	/**
-	 * Field _playerRef.
-	 */
 	private HardReference<Player> _playerRef = HardReferences.emptyRef();
 	
 	/**

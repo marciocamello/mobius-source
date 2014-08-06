@@ -23,9 +23,6 @@ import lineage2.gameserver.network.serverpackets.ExPutItemResultForVariationMake
  */
 public class RequestConfirmTargetItem extends AbstractRefinePacket
 {
-	/**
-	 * Field _itemObjId.
-	 */
 	private int _itemObjId;
 	
 	/**

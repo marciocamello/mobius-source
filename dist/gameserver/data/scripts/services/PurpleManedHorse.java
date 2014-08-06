@@ -26,21 +26,9 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public final class PurpleManedHorse extends Functions implements ScriptFile
 {
-	/**
-	 * Field Enabled.
-	 */
 	private static boolean Enabled = false;
-	/**
-	 * Field MultiSellID. (value is -1001)
-	 */
 	private static final int MultiSellID = -1001;
-	/**
-	 * Field dlg.
-	 */
 	private static final PrintfFormat dlg = new PrintfFormat("<br>[npc_%%objectId%%_Multisell %d|%s]");
-	/**
-	 * Field list.
-	 */
 	private static MultiSellListContainer list;
 	
 	/**

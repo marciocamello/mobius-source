@@ -17,7 +17,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.handler.admincommands.impl.AdminEditChar;
@@ -42,7 +41,6 @@ import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.Util;
-
 import org.apache.commons.lang3.StringUtils;
 
 /**

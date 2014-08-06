@@ -32,13 +32,7 @@ public final class JiniaNpcInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field normalFreyaIzId. (value is 139)
-	 */
 	private static final int normalFreyaIzId = 139;
-	/**
-	 * Field extremeFreyaIzId. (value is 144)
-	 */
 	private static final int extremeFreyaIzId = 144;
 	
 	/**

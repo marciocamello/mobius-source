@@ -15,7 +15,6 @@ package events.glitmedal;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
@@ -31,7 +30,6 @@ import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Util;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,61 +39,19 @@ import org.slf4j.LoggerFactory;
  */
 public final class glitmedal extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
-	/**
-	 * Field EVENT_MANAGER_ID1.
-	 */
 	private static final int EVENT_MANAGER_ID1 = 31228;
-	/**
-	 * Field EVENT_MANAGER_ID2.
-	 */
 	private static final int EVENT_MANAGER_ID2 = 31229;
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(glitmedal.class);
-	/**
-	 * Field isTalker.
-	 */
 	private int isTalker;
-	/**
-	 * Field EVENT_MEDAL.
-	 */
 	private static final int EVENT_MEDAL = 6392;
-	/**
-	 * Field EVENT_GLITTMEDAL.
-	 */
 	private static final int EVENT_GLITTMEDAL = 6393;
-	/**
-	 * Field Badge_of_Rabbit.
-	 */
 	private static final int Badge_of_Rabbit = 6399;
-	/**
-	 * Field Badge_of_Hyena.
-	 */
 	private static final int Badge_of_Hyena = 6400;
-	/**
-	 * Field Badge_of_Fox.
-	 */
 	private static final int Badge_of_Fox = 6401;
-	/**
-	 * Field Badge_of_Wolf.
-	 */
 	private static final int Badge_of_Wolf = 6402;
-	/**
-	 * Field _spawns.
-	 */
 	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
-	/**
-	 * Field _active.
-	 */
 	private static boolean _active = false;
-	/**
-	 * Field MultiSellLoaded.
-	 */
 	private static boolean MultiSellLoaded = false;
-	/**
-	 * Field multiSellFiles.
-	 */
 	private static final File[] multiSellFiles =
 	{
 		new File(Config.DATAPACK_ROOT, "data/xml/other/event/glitmedal/502.xml"),

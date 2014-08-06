@@ -29,9 +29,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public final class GardenDoorInstance extends NpcInstance
 {
 	private static final long serialVersionUID = 4953313362819211890L;
-	
 	private static final int APHROS_KEY = 17373;
-	
 	private static final int APHROS = 25866; // RAID
 	private static final int GUARDIAN = 25776;
 	private static final int ANGEL_STATUE_KEEPER = 23038;
@@ -41,7 +39,6 @@ public final class GardenDoorInstance extends NpcInstance
 	private static long timeRespwn2 = 0;
 	private static long timeRespwn3 = 0;
 	private static long timeRespwn4 = 0;
-	
 	static final int[] DOORS =
 	{
 		26210041,

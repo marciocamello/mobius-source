@@ -15,7 +15,6 @@ package lineage2.commons.compiler;
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
 import java.net.URI;
-
 import javax.tools.SimpleJavaFileObject;
 
 /**
@@ -24,13 +23,7 @@ import javax.tools.SimpleJavaFileObject;
  */
 public class MemoryByteCode extends SimpleJavaFileObject
 {
-	/**
-	 * Field oStream.
-	 */
 	private ByteArrayOutputStream oStream;
-	/**
-	 * Field className.
-	 */
 	private final String className;
 	
 	/**

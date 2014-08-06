@@ -16,7 +16,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
 import lineage2.commons.data.xml.AbstractDirParser;
 import lineage2.commons.geometry.Circle;
 import lineage2.commons.geometry.Polygon;
@@ -29,7 +28,6 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.ZoneTemplate;
 import lineage2.gameserver.utils.Location;
-
 import org.dom4j.Element;
 
 /**
@@ -38,9 +36,6 @@ import org.dom4j.Element;
  */
 public class ZoneParser extends AbstractDirParser<ZoneHolder>
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final ZoneParser _instance = new ZoneParser();
 	
 	/**

@@ -25,21 +25,9 @@ import lineage2.gameserver.utils.Location;
  */
 public class RequestExMagicSkillUseGround extends L2GameClientPacket
 {
-	/**
-	 * Field _loc.
-	 */
 	private final Location _loc = new Location();
-	/**
-	 * Field _skillId.
-	 */
 	private int _skillId;
-	/**
-	 * Field _ctrlPressed.
-	 */
 	private boolean _ctrlPressed;
-	/**
-	 * Field _shiftPressed.
-	 */
 	private boolean _shiftPressed;
 	
 	/**

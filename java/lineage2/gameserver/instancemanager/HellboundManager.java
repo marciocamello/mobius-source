@@ -16,9 +16,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
-
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import lineage2.commons.geometry.Polygon;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
@@ -31,7 +29,6 @@ import lineage2.gameserver.model.Territory;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
-
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -44,33 +41,12 @@ import org.w3c.dom.Node;
  */
 public class HellboundManager
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(HellboundManager.class);
-	/**
-	 * Field _list.
-	 */
 	private static ArrayList<HellboundSpawn> _list;
-	/**
-	 * Field _spawnList.
-	 */
 	private static List<SimpleSpawner> _spawnList;
-	/**
-	 * Field _instance.
-	 */
 	private static HellboundManager _instance;
-	/**
-	 * Field _initialStage.
-	 */
 	static int _initialStage;
-	/**
-	 * Field _taskDelay.
-	 */
 	private static final long _taskDelay = 2 * 60 * 1000L;
-	/**
-	 * Field _deathListener.
-	 */
 	final DeathListener _deathListener = new DeathListener();
 	
 	/**
@@ -611,33 +587,12 @@ public class HellboundManager
 	 */
 	public class HellboundSpawn
 	{
-		/**
-		 * Field _npcId.
-		 */
 		private final int _npcId;
-		/**
-		 * Field _loc.
-		 */
 		private final Location _loc;
-		/**
-		 * Field _amount.
-		 */
 		private final int _amount;
-		/**
-		 * Field _spawnTerritory.
-		 */
 		private final Territory _spawnTerritory;
-		/**
-		 * Field _respawn.
-		 */
 		private final int _respawn;
-		/**
-		 * Field _respawnRnd.
-		 */
 		private final int _respawnRnd;
-		/**
-		 * Field _stages.
-		 */
 		private final int[] _stages;
 		
 		/**

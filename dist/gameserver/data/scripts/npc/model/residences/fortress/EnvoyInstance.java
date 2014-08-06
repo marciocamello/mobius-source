@@ -34,37 +34,13 @@ public final class EnvoyInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field COND_LEADER. (value is 0)
-	 */
 	public static final int COND_LEADER = 0;
-	/**
-	 * Field COND_FAIL. (value is 1)
-	 */
 	public static final int COND_FAIL = 1;
-	/**
-	 * Field _castleId.
-	 */
 	private final int _castleId;
-	/**
-	 * Field _mainDialog.
-	 */
 	private final String _mainDialog;
-	/**
-	 * Field _failDialog.
-	 */
 	private final String _failDialog;
-	/**
-	 * Field _successContractDialog.
-	 */
 	private final String _successContractDialog;
-	/**
-	 * Field _successIndependentDialog.
-	 */
 	private final String _successIndependentDialog;
-	/**
-	 * Field _failContractDialog.
-	 */
 	private final String _failContractDialog;
 	
 	/**

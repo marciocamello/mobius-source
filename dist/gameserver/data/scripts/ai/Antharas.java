@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.DefaultAI;
@@ -35,29 +34,11 @@ import bosses.AntharasManager;
  */
 public final class Antharas extends DefaultAI
 {
-	/**
-	 * Field s_paralyze. Field s_curse. Field s_fear2. Field s_fear.
-	 */
 	final Skill s_fear = getSkill(4108, 1), s_fear2 = getSkill(5092, 1), s_curse = getSkill(4109, 1), s_paralyze = getSkill(4111, 1);
-	/**
-	 * Field s_breath. Field s_meteor. Field s_antharas_ordinary_attack2. Field s_antharas_ordinary_attack. Field s_shock2. Field s_shock.
-	 */
 	final Skill s_shock = getSkill(4106, 1), s_shock2 = getSkill(4107, 1), s_antharas_ordinary_attack = getSkill(4112, 1), s_antharas_ordinary_attack2 = getSkill(4113, 1), s_meteor = getSkill(5093, 1), s_breath = getSkill(4110, 1);
-	/**
-	 * Field s_regen3. Field s_regen2. Field s_regen1.
-	 */
 	final Skill s_regen1 = getSkill(4239, 1), s_regen2 = getSkill(4240, 1), s_regen3 = getSkill(4241, 1);
-	/**
-	 * Field _hpStage.
-	 */
 	private int _hpStage = 0;
-	/**
-	 * Field _minionsSpawnDelay.
-	 */
 	private static long _minionsSpawnDelay = 0;
-	/**
-	 * Field minions.
-	 */
 	private final List<NpcInstance> minions = new ArrayList<>();
 	
 	/**

@@ -18,7 +18,6 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class ExShowUsmVideo extends L2GameServerPacket
 {
-	
 	public static final int Q001 = 0x01; // Какие то врата красные
 	public static final int GD1_INTRO = 0x02; // Стартовое видео
 	public static final int Q002 = 0x03; // Какие то врата синие
@@ -33,7 +32,6 @@ public class ExShowUsmVideo extends L2GameServerPacket
 	public static final int Q010 = 0x0A; // Пробуждение, начало
 	public static final int Q011 = 0x0B; //
 	public static final int Q012 = 0x0C; //
-	
 	private final int _id;
 	
 	public ExShowUsmVideo(int id)
@@ -47,5 +45,4 @@ public class ExShowUsmVideo extends L2GameServerPacket
 		writeEx(0x10E);
 		writeD(_id);
 	}
-	
 }

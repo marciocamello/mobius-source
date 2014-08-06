@@ -15,9 +15,7 @@ package lineage2.gameserver.data.xml.holder;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.MultiSellEntry;
@@ -27,12 +25,10 @@ import lineage2.gameserver.network.serverpackets.MultiSellList;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.XMLUtil;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
-
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
@@ -41,13 +37,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public class MultiSellHolder
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(MultiSellHolder.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final MultiSellHolder _instance = new MultiSellHolder();
 	
 	/**
@@ -59,17 +49,8 @@ public class MultiSellHolder
 		return _instance;
 	}
 	
-	/**
-	 * Field NODE_PRODUCTION. (value is ""production"")
-	 */
 	private static final String NODE_PRODUCTION = "production";
-	/**
-	 * Field NODE_INGRIDIENT. (value is ""ingredient"")
-	 */
 	private static final String NODE_INGRIDIENT = "ingredient";
-	/**
-	 * Field entries.
-	 */
 	private final TIntObjectHashMap<MultiSellListContainer> entries = new TIntObjectHashMap<>();
 	
 	/**
@@ -112,33 +93,12 @@ public class MultiSellHolder
 	 */
 	public static class MultiSellListContainer
 	{
-		/**
-		 * Field _listId.
-		 */
 		private int _listId;
-		/**
-		 * Field _isnew.
-		 */
 		private boolean _isnew = false;
-		/**
-		 * Field _showall.
-		 */
 		private boolean _showall = true;
-		/**
-		 * Field keep_enchanted.
-		 */
 		private boolean keep_enchanted = false;
-		/**
-		 * Field is_dutyfree.
-		 */
 		private boolean is_dutyfree = false;
-		/**
-		 * Field nokey.
-		 */
 		private boolean nokey = false;
-		/**
-		 * Field entries.
-		 */
 		final List<MultiSellEntry> entries = new ArrayList<>();
 		
 		/**

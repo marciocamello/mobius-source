@@ -20,9 +20,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionTargetPercentCp extends Condition
 {
-	/**
-	 * Field _cp.
-	 */
 	private final double _cp;
 	
 	/**

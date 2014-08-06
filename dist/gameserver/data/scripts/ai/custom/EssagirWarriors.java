@@ -26,9 +26,6 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class EssagirWarriors extends DefaultAI
 {
-	/**
-	 * Field SMP_COORDS.
-	 */
 	private final static int[][] SMP_COORDS =
 	{
 		{
@@ -72,17 +69,8 @@ public final class EssagirWarriors extends DefaultAI
 			-3068
 		}
 	};
-	/**
-	 * Field SAY_RAFF. (value is 12000)
-	 */
 	private static final int SAY_RAFF = 12000;
-	/**
-	 * Field currentState.
-	 */
 	private int currentState;
-	/**
-	 * Field lastSayTimer.
-	 */
 	private long lastSayTimer = 0;
 	
 	/**

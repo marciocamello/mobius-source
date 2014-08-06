@@ -25,7 +25,6 @@ public class _10379_AnUninvitedGuest extends Quest implements ScriptFile
 	// NPC's
 	private static final int ENDRIGO = 30632;
 	private static final int SCALDISECT_THE_FURIOUS = 23212;
-	
 	// Item's
 	private static final int SOE_GUILLOTINE_FORTRESS = 35292;
 	

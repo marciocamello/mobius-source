@@ -28,9 +28,6 @@ public final class AwakenTPInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field val.
-	 */
 	private final int val = 1;
 	
 	/**

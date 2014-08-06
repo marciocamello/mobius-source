@@ -13,7 +13,6 @@
 package events.TrickOfTrans;
 
 import java.util.ArrayList;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
@@ -26,7 +25,6 @@ import lineage2.gameserver.model.actor.listener.CharListenerList;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,101 +34,29 @@ import org.slf4j.LoggerFactory;
  */
 public final class TrickOfTrans extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(TrickOfTrans.class);
-	/**
-	 * Field EVENT_MANAGER_ID.
-	 */
 	private static final int EVENT_MANAGER_ID = 32132;
-	/**
-	 * Field CHESTS_ID.
-	 */
 	private static final int CHESTS_ID = 13036;
-	/**
-	 * Field RED_PSTC.
-	 */
 	private static final int RED_PSTC = 9162;
-	/**
-	 * Field BLUE_PSTC.
-	 */
 	private static final int BLUE_PSTC = 9163;
-	/**
-	 * Field ORANGE_PSTC.
-	 */
 	private static final int ORANGE_PSTC = 9164;
-	/**
-	 * Field BLACK_PSTC.
-	 */
 	private static final int BLACK_PSTC = 9165;
-	/**
-	 * Field WHITE_PSTC.
-	 */
 	private static final int WHITE_PSTC = 9166;
-	/**
-	 * Field GREEN_PSTC.
-	 */
 	private static final int GREEN_PSTC = 9167;
-	/**
-	 * Field RED_PSTC_R.
-	 */
 	private static final int RED_PSTC_R = 9171;
-	/**
-	 * Field BLUE_PSTC_R.
-	 */
 	private static final int BLUE_PSTC_R = 9172;
-	/**
-	 * Field ORANGE_PSTC_R.
-	 */
 	private static final int ORANGE_PSTC_R = 9173;
-	/**
-	 * Field BLACK_PSTC_R.
-	 */
 	private static final int BLACK_PSTC_R = 9174;
-	/**
-	 * Field WHITE_PSTC_R.
-	 */
 	private static final int WHITE_PSTC_R = 9175;
-	/**
-	 * Field GREEN_PSTC_R.
-	 */
 	private static final int GREEN_PSTC_R = 9176;
-	/**
-	 * Field A_CHEST_KEY.
-	 */
 	private static final int A_CHEST_KEY = 9205;
-	/**
-	 * Field _active.
-	 */
 	private static boolean _active = false;
-	/**
-	 * Field _em_spawns.
-	 */
 	private static final ArrayList<SimpleSpawner> _em_spawns = new ArrayList<>();
-	/**
-	 * Field _ch_spawns.
-	 */
 	private static final ArrayList<SimpleSpawner> _ch_spawns = new ArrayList<>();
-	/**
-	 * Field PhilosophersStoneOre.
-	 */
 	private static final int PhilosophersStoneOre = 9168;
-	/**
-	 * Field PhilosophersStoneOreMax.
-	 */
 	private static final int PhilosophersStoneOreMax = 17;
-	/**
-	 * Field PhilosophersStoneConversionFormula.
-	 */
 	private static final int PhilosophersStoneConversionFormula = 9169;
-	/**
-	 * Field MagicReagents.
-	 */
 	private static final int MagicReagents = 9170;
-	/**
-	 * Field MagicReagentsMax.
-	 */
 	private static final int MagicReagentsMax = 30;
 	
 	/**

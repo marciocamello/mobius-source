@@ -14,7 +14,6 @@ package events.SummerMeleons;
 
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -75,9 +74,6 @@ public final class MeleonAI extends Fighter
 		}
 	}
 	
-	/**
-	 * Field _dropList.
-	 */
 	protected static final RewardData[] _dropList = new RewardData[]
 	{
 		new RewardData(1539, 1, 5, 15000),
@@ -160,58 +156,22 @@ public final class MeleonAI extends Fighter
 		new RewardData(959, 1, 1, 50),
 		new RewardData(960, 1, 1, 300)
 	};
-	/**
-	 * Field Young_Watermelon. (value is 13271)
-	 */
 	public final static int Young_Watermelon = 13271;
-	/**
-	 * Field Rain_Watermelon. (value is 13273)
-	 */
 	public final static int Rain_Watermelon = 13273;
-	/**
-	 * Field Defective_Watermelon. (value is 13272)
-	 */
 	public final static int Defective_Watermelon = 13272;
-	/**
-	 * Field Young_Honey_Watermelon. (value is 13275)
-	 */
 	public final static int Young_Honey_Watermelon = 13275;
-	/**
-	 * Field Rain_Honey_Watermelon. (value is 13277)
-	 */
 	public final static int Rain_Honey_Watermelon = 13277;
-	/**
-	 * Field Defective_Honey_Watermelon. (value is 13276)
-	 */
 	public final static int Defective_Honey_Watermelon = 13276;
-	/**
-	 * Field Large_Rain_Watermelon. (value is 13274)
-	 */
 	public final static int Large_Rain_Watermelon = 13274;
-	/**
-	 * Field Large_Rain_Honey_Watermelon. (value is 13278)
-	 */
 	public final static int Large_Rain_Honey_Watermelon = 13278;
-	/**
-	 * Field Squash_Level_up. (value is 4513)
-	 */
 	public final static int Squash_Level_up = 4513;
-	/**
-	 * Field Squash_Poisoned. (value is 4514)
-	 */
 	public final static int Squash_Poisoned = 4514;
-	/**
-	 * Field textOnSpawn.
-	 */
 	private static final String[] textOnSpawn = new String[]
 	{
 		"scripts.events.SummerMeleons.MeleonAI.textOnSpawn.0",
 		"scripts.events.SummerMeleons.MeleonAI.textOnSpawn.1",
 		"scripts.events.SummerMeleons.MeleonAI.textOnSpawn.2"
 	};
-	/**
-	 * Field textOnAttack.
-	 */
 	private static final String[] textOnAttack = new String[]
 	{
 		"Who is biting me? Ouch! Oops! Hey you, now I'm going to ask you!",
@@ -224,9 +184,6 @@ public final class MeleonAI extends Fighter
 		"You hit or tickle? Can not make it ... Pathetic attempts!",
 		"Only musical weapon opens watermelon. Your blunt weapon is not an assistant!"
 	};
-	/**
-	 * Field textTooFast.
-	 */
 	private static final String[] textTooFast = new String[]
 	{
 		"That's what blows! That's technique!",
@@ -238,9 +195,6 @@ public final class MeleonAI extends Fighter
 		"Show imagination, come back, what are you topcheshsya!",
 		"Wake up as you leave, you're quite dull and boring ..."
 	};
-	/**
-	 * Field textSuccess0.
-	 */
 	private static final String[] textSuccess0 = new String[]
 	{
 		"Watermelon grows well if his drink carefully, you know this secret, is not it?",
@@ -249,18 +203,12 @@ public final class MeleonAI extends Fighter
 		"Let's pour more between the first and second pereryvchik small!",
 		"Refueling on the fly!"
 	};
-	/**
-	 * Field textFail0.
-	 */
 	private static final String[] textFail0 = new String[]
 	{
 		"You deaf? I need nectar, and not something that you pour you!",
 		"What you're a loser and look like cheerfully! I need nectar Leu quality, otherwise get shish!",
 		"And again, fail, how long can? You want me to laugh?"
 	};
-	/**
-	 * Field textSuccess1.
-	 */
 	private static final String[] textSuccess1 = new String[]
 	{
 		"Now sing! Arbuuuuuu-uh-uh!",
@@ -268,9 +216,6 @@ public final class MeleonAI extends Fighter
 		"I grow quickly, have time to rebound? Ha!",
 		"You're a master of his craft! More, please!"
 	};
-	/**
-	 * Field textFail1.
-	 */
 	private static final String[] textFail1 = new String[]
 	{
 		"Strike while the iron on the spot! Otherwise, you are no gingerbread.",
@@ -278,18 +223,12 @@ public final class MeleonAI extends Fighter
 		"Let's have actively spud, watered well, what kind of pathetic attempts?",
 		"You want me to so he died? Come to grow right!"
 	};
-	/**
-	 * Field textSuccess2.
-	 */
 	private static final String[] textSuccess2 = new String[]
 	{
 		"Here! Whew! Come on, and soon I'll love you forever!",
 		"At this rate, I will be the emperor of watermelons!",
 		"Very good, I put you on the Ladder of agriculture, you wisely me grow!"
 	};
-	/**
-	 * Field textFail2.
-	 */
 	private static final String[] textFail2 = new String[]
 	{
 		"And you do local? Watermelon eyes You see? It is a failure!",
@@ -297,66 +236,33 @@ public final class MeleonAI extends Fighter
 		"Well, Feed me, huh? Normally only, not here this dubious nectar ...",
 		"And you're not a terrorist event? Can you hunger morish me? What do you want?"
 	};
-	/**
-	 * Field textSuccess3.
-	 */
 	private static final String[] textSuccess3 = new String[]
 	{
 		"Life is getting better, do not be sorry lei!",
 		"You taught this mom do you have a great work!",
 		"Why do you have growth? There be? I will be very juicy watermelon!"
 	};
-	/**
-	 * Field textFail3.
-	 */
 	private static final String[] textFail3 = new String[]
 	{
 		"Is that Vodicka of sewage? You know what nectar?",
 		"Gods, save me from this sad sack, he's all the spoils!"
 	};
-	/**
-	 * Field textSuccess4.
-	 */
 	private static final String[] textSuccess4 = new String[]
 	{
 		"That's a charge! Have you slipped into nectar? There's just 40 degrees! Ahahaha I get drunk!",
 		"You're risking not grow watermelon, and the whole rocket! Adds, come again!"
 	};
-	/**
-	 * Field textFail4.
-	 */
 	private static final String[] textFail4 = new String[]
 	{
 		"Oh, how I want to drink ... Nectar, please ...",
 		"Lei nectar here and see what happens!"
 	};
-	/**
-	 * Field _npcId.
-	 */
 	int _npcId;
-	/**
-	 * Field _nectar.
-	 */
 	private int _nectar;
-	/**
-	 * Field _tryCount.
-	 */
 	private int _tryCount;
-	/**
-	 * Field _lastNectarUse.
-	 */
 	private long _lastNectarUse;
-	/**
-	 * Field _timeToUnspawn.
-	 */
 	long _timeToUnspawn;
-	/**
-	 * Field _polimorphTask.
-	 */
 	private ScheduledFuture<?> _polimorphTask;
-	/**
-	 * Field NECTAR_REUSE.
-	 */
 	private static final int NECTAR_REUSE = 3000;
 	
 	/**

@@ -23,9 +23,6 @@ import lineage2.loginserver.serverpackets.LoginFail;
  */
 public class AuthGameGuard extends L2LoginClientPacket
 {
-	/**
-	 * Field _sessionId.
-	 */
 	private int _sessionId;
 	
 	/**

@@ -34,7 +34,6 @@ public class _10382_DayOfLiberation extends Quest implements ScriptFile
 	private static final int TAUTIS_BRACLET = 35293;
 	private static final int normalTautiInstanceId = 218;
 	private static final int MARK_OF_THE_RESISTANCE = 34909;
-	
 	private static final String TAUTI_KILL = "tauti";
 	
 	@Override

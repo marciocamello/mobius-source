@@ -13,7 +13,6 @@
 package ai;
 
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.Fighter;
@@ -27,9 +26,6 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class DeluLizardmanSpecialCommander extends Fighter
 {
-	/**
-	 * Field _shouted.
-	 */
 	private boolean _shouted = false;
 	
 	/**

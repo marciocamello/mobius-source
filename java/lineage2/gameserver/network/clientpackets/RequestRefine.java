@@ -30,13 +30,7 @@ import lineage2.gameserver.tables.AugmentationData;
  */
 public final class RequestRefine extends AbstractRefinePacket
 {
-	/**
-	 * Field _gemstoneItemObjId. Field _refinerItemObjId. Field _targetItemObjId.
-	 */
 	private int _targetItemObjId, _refinerItemObjId, _gemstoneItemObjId;
-	/**
-	 * Field _gemstoneCount.
-	 */
 	private long _gemstoneCount;
 	
 	/**

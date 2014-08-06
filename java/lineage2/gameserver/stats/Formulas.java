@@ -43,7 +43,6 @@ public class Formulas
 	 * @param cha Creature
 	 * @return double
 	 */
-	
 	public static double calcHpRegen(Creature cha)
 	{
 		double init;
@@ -123,53 +122,17 @@ public class Formulas
 	 */
 	public static class AttackInfo
 	{
-		/**
-		 * Field reflectableDamage.
-		 */
 		public double reflectableDamage = 0;
-		/**
-		 * Field damage.
-		 */
 		public double damage = 0;
-		/**
-		 * Field defence.
-		 */
 		public double defence = 0;
-		/**
-		 * Field crit_static.
-		 */
 		public double crit_static = 0;
-		/**
-		 * Field death_rcpt.
-		 */
 		public double death_rcpt = 0;
-		/**
-		 * Field lethal1.
-		 */
 		public double lethal1 = 0;
-		/**
-		 * Field lethal2.
-		 */
 		public double lethal2 = 0;
-		/**
-		 * Field lethal_dmg.
-		 */
 		public double lethal_dmg = 0;
-		/**
-		 * Field crit.
-		 */
 		public boolean crit = false;
-		/**
-		 * Field shld.
-		 */
 		public boolean shld = false;
-		/**
-		 * Field lethal.
-		 */
 		public boolean lethal = false;
-		/**
-		 * Field miss.
-		 */
 		public boolean miss = false;
 	}
 	

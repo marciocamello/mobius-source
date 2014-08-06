@@ -26,9 +26,7 @@ import java.util.Iterator;
 import java.util.Queue;
 import java.util.Set;
 import java.util.concurrent.locks.Lock;
-
 import lineage2.loginserver.ThreadPoolManager;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,25 +36,10 @@ import org.slf4j.LoggerFactory;
  */
 public class GameServerCommunication extends Thread
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(GameServerCommunication.class);
-	/**
-	 * Field instance.
-	 */
 	private static final GameServerCommunication instance = new GameServerCommunication();
-	/**
-	 * Field writeBuffer.
-	 */
 	private final ByteBuffer writeBuffer = ByteBuffer.allocate(64 * 1024).order(ByteOrder.LITTLE_ENDIAN);
-	/**
-	 * Field selector.
-	 */
 	private Selector selector;
-	/**
-	 * Field shutdown.
-	 */
 	private boolean shutdown;
 	
 	/**

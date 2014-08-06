@@ -13,7 +13,6 @@
 package lineage2.loginserver;
 
 import java.nio.ByteBuffer;
-
 import lineage2.commons.net.nio.impl.IPacketHandler;
 import lineage2.commons.net.nio.impl.ReceivablePacket;
 import lineage2.loginserver.L2LoginClient.LoginClientState;

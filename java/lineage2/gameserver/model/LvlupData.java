@@ -18,49 +18,16 @@ package lineage2.gameserver.model;
  */
 public class LvlupData
 {
-	/**
-	 * Field _classid.
-	 */
 	private int _classid;
-	/**
-	 * Field _classLvl.
-	 */
 	private int _classLvl;
-	/**
-	 * Field _classHpAdd.
-	 */
 	private double _classHpAdd;
-	/**
-	 * Field _classHpBase.
-	 */
 	private double _classHpBase;
-	/**
-	 * Field _classHpModifier.
-	 */
 	private double _classHpModifier;
-	/**
-	 * Field _classCpAdd.
-	 */
 	private double _classCpAdd;
-	/**
-	 * Field _classCpBase.
-	 */
 	private double _classCpBase;
-	/**
-	 * Field _classCpModifier.
-	 */
 	private double _classCpModifier;
-	/**
-	 * Field _classMpAdd.
-	 */
 	private double _classMpAdd;
-	/**
-	 * Field _classMpBase.
-	 */
 	private double _classMpBase;
-	/**
-	 * Field _classMpModifier.
-	 */
 	private double _classMpModifier;
 	
 	/**

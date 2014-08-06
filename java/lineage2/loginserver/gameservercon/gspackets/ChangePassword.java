@@ -16,7 +16,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.logging.Logger;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.loginserver.Config;
 import lineage2.loginserver.database.L2DatabaseFactory;
@@ -29,25 +28,10 @@ import lineage2.loginserver.gameservercon.lspackets.ChangePasswordResponse;
  */
 public class ChangePassword extends ReceivablePacket
 {
-	/**
-	 * Field log.
-	 */
 	private static final Logger log = Logger.getLogger(ChangePassword.class.getName());
-	/**
-	 * Field accname.
-	 */
 	private String accname;
-	/**
-	 * Field oldPass.
-	 */
 	String oldPass;
-	/**
-	 * Field newPass.
-	 */
 	String newPass;
-	/**
-	 * Field hwid.
-	 */
 	String hwid;
 	
 	/**

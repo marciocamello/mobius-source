@@ -23,9 +23,6 @@ import lineage2.gameserver.stats.Stats;
  */
 public class EffectHealCPPercent extends Effect
 {
-	/**
-	 * Field _ignoreCpEff.
-	 */
 	private final boolean _ignoreCpEff;
 	
 	/**

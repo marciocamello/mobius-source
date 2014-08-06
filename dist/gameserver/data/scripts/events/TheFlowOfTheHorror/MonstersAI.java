@@ -14,7 +14,6 @@ package events.TheFlowOfTheHorror;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.ai.Fighter;
@@ -29,13 +28,7 @@ import lineage2.gameserver.utils.Location;
  */
 public final class MonstersAI extends Fighter
 {
-	/**
-	 * Field _points.
-	 */
 	private List<Location> _points = new ArrayList<>();
-	/**
-	 * Field current_point.
-	 */
 	private int current_point = -1;
 	
 	/**

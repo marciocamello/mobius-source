@@ -24,9 +24,6 @@ import lineage2.gameserver.scripts.Functions;
  */
 public class Ping extends Functions implements IVoicedCommandHandler
 {
-	/**
-	 * Field _commandList.
-	 */
 	private final String[] _commandList = new String[]
 	{
 		"ping"
@@ -68,9 +65,6 @@ public class Ping extends Functions implements IVoicedCommandHandler
 	 */
 	static final class AnswerTask implements Runnable
 	{
-		/**
-		 * Field _player.
-		 */
 		private final Player _player;
 		
 		/**

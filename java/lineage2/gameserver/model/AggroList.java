@@ -21,7 +21,6 @@ import java.util.Map;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
-
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -39,13 +38,7 @@ public class AggroList
 	 */
 	private abstract class DamageHate
 	{
-		/**
-		 * Field hate.
-		 */
 		public int hate;
-		/**
-		 * Field damage.
-		 */
 		public int damage;
 	}
 	
@@ -54,9 +47,6 @@ public class AggroList
 	 */
 	public class HateInfo extends DamageHate
 	{
-		/**
-		 * Field attacker.
-		 */
 		public final Creature attacker;
 		
 		/**
@@ -78,9 +68,6 @@ public class AggroList
 	 */
 	public class AggroInfo extends DamageHate
 	{
-		/**
-		 * Field attackerId.
-		 */
 		public final int attackerId;
 		
 		/**
@@ -99,9 +86,6 @@ public class AggroList
 	 */
 	public static class DamageComparator implements Comparator<DamageHate>
 	{
-		/**
-		 * Field instance.
-		 */
 		private static final Comparator<DamageHate> instance = new DamageComparator();
 		
 		/**
@@ -138,9 +122,6 @@ public class AggroList
 	 */
 	public static class HateComparator implements Comparator<DamageHate>
 	{
-		/**
-		 * Field instance.
-		 */
 		private static final Comparator<DamageHate> instance = new HateComparator();
 		
 		/**
@@ -173,25 +154,10 @@ public class AggroList
 		}
 	}
 	
-	/**
-	 * Field npc.
-	 */
 	private final NpcInstance npc;
-	/**
-	 * Field hateList.
-	 */
 	private final TIntObjectHashMap<AggroInfo> hateList = new TIntObjectHashMap<>();
-	/**
-	 * Field lock.
-	 */
 	private final ReadWriteLock lock = new ReentrantReadWriteLock();
-	/**
-	 * Field readLock.
-	 */
 	private final Lock readLock = lock.readLock();
-	/**
-	 * Field writeLock.
-	 */
 	private final Lock writeLock = lock.writeLock();
 	
 	/**

@@ -18,9 +18,7 @@ import static lineage2.gameserver.ai.CtrlIntention.AI_INTENTION_CAST;
 import static lineage2.gameserver.ai.CtrlIntention.AI_INTENTION_FOLLOW;
 import static lineage2.gameserver.ai.CtrlIntention.AI_INTENTION_INTERACT;
 import static lineage2.gameserver.ai.CtrlIntention.AI_INTENTION_PICK_UP;
-
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.cache.Msg;
@@ -43,49 +41,16 @@ import lineage2.gameserver.utils.Location;
  */
 public class PlayableAI extends CharacterAI
 {
-	/**
-	 * Field thinking.
-	 */
 	private volatile int thinking = 0;
-	/**
-	 * Field _intention_arg1. Field _intention_arg0.
-	 */
 	protected Object _intention_arg0 = null, _intention_arg1 = null;
-	/**
-	 * Field _skill.
-	 */
 	protected Skill _skill;
-	/**
-	 * Field _nextAction.
-	 */
 	private nextAction _nextAction;
-	/**
-	 * Field _nextAction_arg0.
-	 */
 	private Object _nextAction_arg0;
-	/**
-	 * Field _nextAction_arg1.
-	 */
 	private Object _nextAction_arg1;
-	/**
-	 * Field _nextAction_arg2.
-	 */
 	private boolean _nextAction_arg2;
-	/**
-	 * Field _nextAction_arg3.
-	 */
 	private boolean _nextAction_arg3;
-	/**
-	 * Field _forceUse.
-	 */
 	protected boolean _forceUse;
-	/**
-	 * Field _dontMove.
-	 */
 	private boolean _dontMove;
-	/**
-	 * Field _followTask.
-	 */
 	ScheduledFuture<?> _followTask;
 	
 	/**
@@ -102,33 +67,12 @@ public class PlayableAI extends CharacterAI
 	 */
 	public enum nextAction
 	{
-		/**
-		 * Field ATTACK.
-		 */
 		ATTACK,
-		/**
-		 * Field CAST.
-		 */
 		CAST,
-		/**
-		 * Field MOVE.
-		 */
 		MOVE,
-		/**
-		 * Field REST.
-		 */
 		REST,
-		/**
-		 * Field PICKUP.
-		 */
 		PICKUP,
-		/**
-		 * Field INTERACT.
-		 */
 		INTERACT,
-		/**
-		 * Field COUPLE_ACTION.
-		 */
 		COUPLE_ACTION
 	}
 	
@@ -565,13 +509,7 @@ public class PlayableAI extends CharacterAI
 	 */
 	protected class ExecuteFollow extends RunnableImpl
 	{
-		/**
-		 * Field _target.
-		 */
 		private final Creature _target;
-		/**
-		 * Field _range.
-		 */
 		private final int _range;
 		
 		/**

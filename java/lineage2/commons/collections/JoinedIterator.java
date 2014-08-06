@@ -22,21 +22,9 @@ import java.util.List;
  */
 public class JoinedIterator<E> implements Iterator<E>
 {
-	/**
-	 * Field _iterators.
-	 */
 	private Iterator<E>[] _iterators;
-	/**
-	 * Field _currentIteratorIndex.
-	 */
 	private int _currentIteratorIndex;
-	/**
-	 * Field _currentIterator.
-	 */
 	private Iterator<E> _currentIterator;
-	/**
-	 * Field _lastUsedIterator.
-	 */
 	private Iterator<E> _lastUsedIterator;
 	
 	/**

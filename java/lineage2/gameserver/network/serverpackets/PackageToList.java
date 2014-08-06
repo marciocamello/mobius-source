@@ -14,7 +14,6 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.Collections;
 import java.util.Map;
-
 import lineage2.gameserver.model.Player;
 
 /**

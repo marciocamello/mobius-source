@@ -23,14 +23,8 @@ import lineage2.gameserver.network.serverpackets.PledgeReceiveMemberInfo;
  */
 public class RequestPledgeMemberInfo extends L2GameClientPacket
 {
-	/**
-	 * Field _pledgeType.
-	 */
 	@SuppressWarnings("unused")
 	private int _pledgeType;
-	/**
-	 * Field _target.
-	 */
 	private String _target;
 	
 	/**

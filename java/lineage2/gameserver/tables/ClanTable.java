@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
@@ -36,7 +35,6 @@ import lineage2.gameserver.network.serverpackets.PledgeShowMemberListDeleteAll;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.utils.SiegeUtils;
 import lineage2.gameserver.utils.Util;
-
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,21 +45,9 @@ import org.slf4j.LoggerFactory;
  */
 public class ClanTable
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(ClanTable.class);
-	/**
-	 * Field _instance.
-	 */
 	private static ClanTable _instance;
-	/**
-	 * Field _clans.
-	 */
 	private final Map<Integer, Clan> _clans = new ConcurrentHashMap<>();
-	/**
-	 * Field _alliances.
-	 */
 	private final Map<Integer, Alliance> _alliances = new ConcurrentHashMap<>();
 	
 	/**

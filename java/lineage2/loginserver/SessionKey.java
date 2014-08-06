@@ -20,25 +20,10 @@ import lineage2.commons.util.Rnd;
  */
 public class SessionKey
 {
-	/**
-	 * Field playOkID1.
-	 */
 	public final int playOkID1;
-	/**
-	 * Field playOkID2.
-	 */
 	public final int playOkID2;
-	/**
-	 * Field loginOkID1.
-	 */
 	public final int loginOkID1;
-	/**
-	 * Field loginOkID2.
-	 */
 	public final int loginOkID2;
-	/**
-	 * Field hashCode.
-	 */
 	private final int hashCode;
 	
 	/**

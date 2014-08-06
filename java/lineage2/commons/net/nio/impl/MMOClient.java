@@ -22,13 +22,7 @@ import java.nio.ByteBuffer;
 @SuppressWarnings("rawtypes")
 public abstract class MMOClient<T extends MMOConnection>
 {
-	/**
-	 * Field _connection.
-	 */
 	private T _connection;
-	/**
-	 * Field isAuthed.
-	 */
 	private boolean isAuthed;
 	
 	/**

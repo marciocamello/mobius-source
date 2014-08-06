@@ -14,7 +14,6 @@ package ai;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
@@ -30,13 +29,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public final class Baium extends DefaultAI
 {
-	/**
-	 * Field _firstTimeAttacked.
-	 */
 	private boolean _firstTimeAttacked = true;
-	/**
-	 * Field group_hold. Field thunderbolt. Field earth_quake. Field energy_wave. Field baium_normal_attack.
-	 */
 	private final Skill baium_normal_attack, energy_wave, earth_quake, thunderbolt, group_hold;
 	
 	/**

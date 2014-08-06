@@ -14,7 +14,6 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.model.items.CrystallizationItem;
 
 /**
@@ -23,9 +22,6 @@ import lineage2.gameserver.model.items.CrystallizationItem;
  */
 public class ExGetCrystalizingEstimation extends L2GameServerPacket
 {
-	/**
-	 * Field _items.
-	 */
 	private List<CrystallizationItem> _items;
 	
 	/**

@@ -19,7 +19,6 @@ public class ExCleftList extends L2GameServerPacket
 	public static final int CleftType_Add = 1;
 	public static final int CleftType_Remove = 2;
 	public static final int CleftType_TeamChange = 3;
-	
 	private final int CleftType = 0; // TODO
 	
 	@Override

@@ -18,48 +18,15 @@ package lineage2.gameserver.model.base;
  */
 public enum SummonType
 {
-	/**
-	 * Field PET.
-	 */
 	PET,
-	/**
-	 * Field SERVITOR.
-	 */
 	SERVITOR,
-	/**
-	 * Field MULTI_SERVITOR.
-	 */
 	MULTI_SERVITOR,
-	/**
-	 * Field SIEGE_SUMMON.
-	 */
 	SIEGE_SUMMON,
-	/**
-	 * Field AGATHION.
-	 */
 	AGATHION,
-	/**
-	 * Field TRAP.
-	 */
 	TRAP,
-	/**
-	 * Field MERCHANT.
-	 */
 	MERCHANT,
-	/**
-	 * Field TREE.
-	 */
 	TREE,
-	/**
-	 * Field SYMBOL.
-	 */
 	SYMBOL,
-	/**
-	 * Field CLONE.
-	 */
 	CLONE,
-	/**
-	 * Field NPC.
-	 */
 	NPC
 }

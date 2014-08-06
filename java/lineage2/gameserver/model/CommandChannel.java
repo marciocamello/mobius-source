@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-
 import lineage2.commons.collections.JoinedIterator;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.entity.Reflection;
@@ -35,35 +34,12 @@ import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
  */
 public class CommandChannel implements PlayerGroup
 {
-	/**
-	 * Field STRATEGY_GUIDE_ID. (value is 8871)
-	 */
 	public static final int STRATEGY_GUIDE_ID = 8871;
-	/**
-	 * Field CLAN_IMPERIUM_ID. (value is 391)
-	 */
 	public static final int CLAN_IMPERIUM_ID = 391;
-	
-	/**
-	 * Field _commandChannelParties.
-	 */
 	private final List<Party> _commandChannelParties = new CopyOnWriteArrayList<>();
-	/**
-	 * Field _commandChannelLeader.
-	 */
 	private Player _commandChannelLeader;
-	/**
-	 * Field _commandChannelLvl.
-	 */
 	private int _commandChannelLvl;
-	/**
-	 * Field _reflection.
-	 */
 	private Reflection _reflection;
-	
-	/**
-	 * Field _matchingRoom.
-	 */
 	private MatchingRoom _matchingRoom;
 	
 	/**

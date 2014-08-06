@@ -25,9 +25,6 @@ import lineage2.gameserver.network.serverpackets.ServerClose;
  */
 public class KickPlayer extends ReceivablePacket
 {
-	/**
-	 * Field account.
-	 */
 	String account;
 	
 	/**

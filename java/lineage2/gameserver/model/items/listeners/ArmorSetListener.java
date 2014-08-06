@@ -14,7 +14,6 @@ package lineage2.gameserver.model.items.listeners;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.data.xml.holder.ArmorSetsHolder;
 import lineage2.gameserver.listener.inventory.OnEquipListener;
 import lineage2.gameserver.model.ArmorSet;
@@ -32,9 +31,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public final class ArmorSetListener implements OnEquipListener
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final ArmorSetListener _instance = new ArmorSetListener();
 	
 	/**

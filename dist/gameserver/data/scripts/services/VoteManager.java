@@ -20,9 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TreeMap;
-
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.commons.util.Rnd;
@@ -35,7 +33,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Util;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
@@ -58,35 +55,14 @@ public final class VoteManager extends Functions implements IVoicedCommandHandle
 			// TODO Auto-generated constructor stub
 		}
 		
-		/**
-		 * Field active.
-		 */
 		public boolean active;
-		/**
-		 * Field name.
-		 */
 		public String name;
-		/**
-		 * Field id.
-		 */
 		public int id;
-		/**
-		 * Field maxPerAccount.
-		 */
 		public int maxPerAccount;
-		/**
-		 * Field variants.
-		 */
 		public final TreeMap<Integer, String> variants = new TreeMap<>();
-		/**
-		 * Field results.
-		 */
 		public final Map<String, Integer[]> results = new HashMap<>();
 	}
 	
-	/**
-	 * Field VoteList.
-	 */
 	private static final Map<Integer, Vote> VoteList = new HashMap<>();
 	
 	/**
@@ -304,9 +280,6 @@ public final class VoteManager extends Functions implements IVoicedCommandHandle
 		}
 	}
 	
-	/**
-	 * Field _commandList.
-	 */
 	private final String[] _commandList = new String[]
 	{
 		"vote"

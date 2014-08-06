@@ -23,13 +23,7 @@ import lineage2.gameserver.utils.Util;
  */
 public class RequestCharacterNameCreatable extends L2GameClientPacket
 {
-	/**
-	 * Field _C__D0_B0_REQUESTCHARACTERNAMECREATABLE. (value is ""[C] D0:B0 RequestCharacterNameCreatable"")
-	 */
 	private static final String _C__D0_B0_REQUESTCHARACTERNAMECREATABLE = "[C] D0:B0 RequestCharacterNameCreatable";
-	/**
-	 * Field _nickname.
-	 */
 	private String _nickname;
 	
 	/**

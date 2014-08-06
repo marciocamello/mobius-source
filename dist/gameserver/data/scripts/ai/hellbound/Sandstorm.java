@@ -28,21 +28,9 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Sandstorm extends DefaultAI
 {
-	/**
-	 * Field AGGRO_RANGE. (value is 200)
-	 */
 	private static final int AGGRO_RANGE = 200;
-	/**
-	 * Field SKILL1.
-	 */
 	private static final Skill SKILL1 = SkillTable.getInstance().getInfo(5435, 1);
-	/**
-	 * Field SKILL2.
-	 */
 	private static final Skill SKILL2 = SkillTable.getInstance().getInfo(5494, 1);
-	/**
-	 * Field lastThrow.
-	 */
 	private long lastThrow = 0;
 	
 	/**

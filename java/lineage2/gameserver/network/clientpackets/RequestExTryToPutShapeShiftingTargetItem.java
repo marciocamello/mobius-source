@@ -24,7 +24,6 @@ import lineage2.gameserver.network.serverpackets.ExShapeShiftingResult;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.item.ExItemType;
 import lineage2.gameserver.templates.item.ItemTemplate.Grade;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**

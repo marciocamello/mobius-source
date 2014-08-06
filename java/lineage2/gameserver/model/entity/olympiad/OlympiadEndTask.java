@@ -18,7 +18,6 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.entity.Hero;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,9 +27,6 @@ import org.slf4j.LoggerFactory;
  */
 public class OlympiadEndTask extends RunnableImpl
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(OlympiadEndTask.class);
 	
 	/**

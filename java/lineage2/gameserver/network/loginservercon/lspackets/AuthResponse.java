@@ -16,7 +16,6 @@ import lineage2.gameserver.network.loginservercon.LoginServerCommunication;
 import lineage2.gameserver.network.loginservercon.ReceivablePacket;
 import lineage2.gameserver.network.loginservercon.gspackets.OnlineStatus;
 import lineage2.gameserver.network.loginservercon.gspackets.PlayerInGame;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,17 +25,8 @@ import org.slf4j.LoggerFactory;
  */
 public class AuthResponse extends ReceivablePacket
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(AuthResponse.class);
-	/**
-	 * Field _serverId.
-	 */
 	private int _serverId;
-	/**
-	 * Field _serverName.
-	 */
 	private String _serverName;
 	
 	/**

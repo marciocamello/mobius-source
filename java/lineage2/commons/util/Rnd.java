@@ -15,7 +15,6 @@ package lineage2.commons.util;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicLong;
-
 import org.apache.commons.math3.random.MersenneTwister;
 import org.apache.commons.math3.random.RandomGenerator;
 
@@ -32,17 +31,8 @@ public class Rnd
 	{
 	}
 	
-	/**
-	 * Field random.
-	 */
 	private static final Random random = new Random();
-	/**
-	 * Field rnd.
-	 */
 	private static final ThreadLocal<RandomGenerator> rnd = new ThreadLocalGeneratorHolder();
-	/**
-	 * Field seedUniquifier.
-	 */
 	static final AtomicLong seedUniquifier = new AtomicLong(8682522807148012L);
 	
 	/**

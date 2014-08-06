@@ -14,7 +14,6 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.Collection;
 import java.util.Collections;
-
 import lineage2.gameserver.model.quest.dynamic.DynamicQuestParticipant;
 import lineage2.gameserver.model.quest.dynamic.DynamicQuestTask;
 
@@ -23,7 +22,6 @@ import lineage2.gameserver.model.quest.dynamic.DynamicQuestTask;
  */
 public class ExDynamicQuestPacket extends L2GameServerPacket
 {
-	
 	/*
 	 * private final int type; private final int subType; private final int questId; private final int step; private final int remainingTime; private final Map<Integer, DynamicQuest.DynamicQuestTask> tasks;
 	 */
@@ -34,7 +32,6 @@ public class ExDynamicQuestPacket extends L2GameServerPacket
 	 * DynamicQuest.DynamicQuestTask>) Collections.EMPTY_MAP); } public ExDynamicQuestPacket(int type, int subType, int questId, int step, int remainingTime, Map<Integer, DynamicQuest.DynamicQuestTask> tasks) { this.type = type; // 0- Campaign, 1 - Zone Quest, this.subType = subType; // 0 - start, 1
 	 * - end, 2 - progress, 3 - statistic this.questId = questId; this.step = step; this.remainingTime = remainingTime; this.tasks = tasks; }
 	 */
-	
 	public ExDynamicQuestPacket(DynamicQuestInfo questInfo)
 	{
 		this.questInfo = questInfo;

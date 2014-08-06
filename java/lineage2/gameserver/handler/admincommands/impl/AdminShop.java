@@ -31,21 +31,9 @@ public class AdminShop implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_buy.
-		 */
 		admin_buy,
-		/**
-		 * Field admin_gmshop.
-		 */
 		admin_gmshop,
-		/**
-		 * Field admin_tax.
-		 */
 		admin_tax,
-		/**
-		 * Field admin_taxclear.
-		 */
 		admin_taxclear
 	}
 	

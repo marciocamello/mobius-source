@@ -21,9 +21,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionZoneType extends Condition
 {
-	/**
-	 * Field _zoneType.
-	 */
 	private final ZoneType _zoneType;
 	
 	/**

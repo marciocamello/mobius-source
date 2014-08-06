@@ -24,13 +24,7 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class CaughtMystic extends Mystic
 {
-	/**
-	 * Field TIME_TO_LIVE. (value is 60000)
-	 */
 	private static final int TIME_TO_LIVE = 60000;
-	/**
-	 * Field TIME_TO_DIE.
-	 */
 	private final long TIME_TO_DIE = System.currentTimeMillis() + TIME_TO_LIVE;
 	
 	/**

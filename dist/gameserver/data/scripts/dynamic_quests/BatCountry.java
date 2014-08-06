@@ -29,7 +29,6 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ItemFunctions;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,10 +39,8 @@ public final class BatCountry extends DynamicQuest implements ScriptFile
 	private static final int DURATION = 1800; // 30 minutes duration
 	private static final String START_TIME = "00 14,18 * * Wed,Sat"; // Start days: Wednesday, Saturday - time: 2.00 p.m., 6.00 p.m.
 	private static final String SPAWN_GROUP = "bat_country_mobs"; // xml spawn
-	
 	private final OnSocialActionListener _action = new OnSocialActionListenerImpl();
 	private final OnUseItemListener _onUseItem = new OnUseItemListenerImpl();
-	
 	private static final int MIN_LEVEL = 40;
 	private static final int MAX_LEVEL = 99;
 	// NPC
@@ -263,7 +260,6 @@ public final class BatCountry extends DynamicQuest implements ScriptFile
 	
 	private final class OnUseItemListenerImpl extends Functions implements OnUseItemListener
 	{
-		
 		public OnUseItemListenerImpl()
 		{
 			// TODO Auto-generated constructor stub

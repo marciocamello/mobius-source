@@ -20,7 +20,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public final class SwampSoul extends Mystic
 {
-	
 	public SwampSoul(NpcInstance actor)
 	{
 		super(actor);

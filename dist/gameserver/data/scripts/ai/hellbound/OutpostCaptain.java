@@ -25,9 +25,6 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class OutpostCaptain extends Fighter
 {
-	/**
-	 * Field _attacked.
-	 */
 	private boolean _attacked = false;
 	
 	/**

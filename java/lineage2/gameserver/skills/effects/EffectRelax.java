@@ -24,9 +24,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class EffectRelax extends Effect
 {
-	/**
-	 * Field _isWereSitting.
-	 */
 	private boolean _isWereSitting;
 	
 	/**

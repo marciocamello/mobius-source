@@ -25,9 +25,6 @@ import lineage2.gameserver.tables.FakePlayersTable;
  */
 public class Online extends Functions implements IVoicedCommandHandler
 {
-	/**
-	 * Field _commandList.
-	 */
 	private final String[] _commandList =
 	{
 		"online"

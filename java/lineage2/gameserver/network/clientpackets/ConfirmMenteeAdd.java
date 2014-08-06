@@ -25,9 +25,6 @@ import lineage2.gameserver.utils.MentorUtil;
  */
 public class ConfirmMenteeAdd extends L2GameClientPacket
 {
-	/**
-	 * Field _answer.
-	 */
 	private int _answer;
 	
 	/**

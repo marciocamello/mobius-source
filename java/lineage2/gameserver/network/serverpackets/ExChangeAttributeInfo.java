@@ -18,13 +18,7 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class ExChangeAttributeInfo extends L2GameServerPacket
 {
-	/**
-	 * Field _attribute.
-	 */
 	private int _attribute = -1;
-	/**
-	 * Field _ObjectIdStone.
-	 */
 	private final int _ObjectIdStone;
 	
 	/**

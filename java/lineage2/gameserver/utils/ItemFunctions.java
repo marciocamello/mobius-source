@@ -34,7 +34,6 @@ import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.templates.item.ArmorTemplate.ArmorType;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -807,9 +806,6 @@ public final class ItemFunctions
 		return new int[0];
 	}
 	
-	/**
-	 * Field catalyst.
-	 */
 	public static final int[][] catalyst =
 	{
 		// WP D
@@ -872,7 +868,6 @@ public final class ItemFunctions
 			14087,
 			14711
 		},
-		
 		// WP R
 		{
 			23347,

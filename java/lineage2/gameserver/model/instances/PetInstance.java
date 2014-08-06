@@ -16,7 +16,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.concurrent.Future;
-
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.threading.RunnableImpl;
@@ -46,7 +45,6 @@ import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.templates.npc.NpcTemplate;
-
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -61,13 +59,7 @@ public class PetInstance extends Summon
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(PetInstance.class);
-	/**
-	 * Field DELUXE_FOOD_FOR_STRIDER. (value is 5169)
-	 */
 	private static final int DELUXE_FOOD_FOR_STRIDER = 5169;
 	
 	/**
@@ -104,37 +96,13 @@ public class PetInstance extends Summon
 		}
 	}
 	
-	/**
-	 * Field _controlItemObjId.
-	 */
 	private final int _controlItemObjId;
-	/**
-	 * Field _curFed.
-	 */
 	private int _curFed;
-	/**
-	 * Field _data.
-	 */
 	protected PetData _data;
-	/**
-	 * Field _feedTask.
-	 */
 	private Future<?> _feedTask;
-	/**
-	 * Field _inventory.
-	 */
 	protected PetInventory _inventory;
-	/**
-	 * Field _level.
-	 */
 	private int _level;
-	/**
-	 * Field _respawned.
-	 */
 	private boolean _respawned;
-	/**
-	 * Field lostExp.
-	 */
 	private int lostExp;
 	
 	/**

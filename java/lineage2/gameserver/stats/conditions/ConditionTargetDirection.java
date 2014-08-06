@@ -21,9 +21,6 @@ import lineage2.gameserver.utils.PositionUtils;
  */
 public class ConditionTargetDirection extends Condition
 {
-	/**
-	 * Field _dir.
-	 */
 	private final PositionUtils.TargetDirection _dir;
 	
 	/**

@@ -15,7 +15,6 @@ package events.SavingSnowman;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
@@ -50,7 +49,6 @@ import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.Util;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -60,41 +58,14 @@ import org.slf4j.LoggerFactory;
  */
 public final class SavingSnowman extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(SavingSnowman.class);
-	/**
-	 * Field _spawns.
-	 */
 	static final List<SimpleSpawner> _spawns = new ArrayList<>();
-	/**
-	 * Field _snowmanShoutTask.
-	 */
 	private static ScheduledFuture<?> _snowmanShoutTask;
-	/**
-	 * Field _saveTask.
-	 */
 	private static ScheduledFuture<?> _saveTask;
-	/**
-	 * Field _sayTask.
-	 */
 	private static ScheduledFuture<?> _sayTask;
-	/**
-	 * Field _eatTask.
-	 */
 	private static ScheduledFuture<?> _eatTask;
-	/**
-	 * Field _snowmanState.
-	 */
 	public static SnowmanState _snowmanState;
-	/**
-	 * Field _snowman.
-	 */
 	static NpcInstance _snowman;
-	/**
-	 * Field _thomas.
-	 */
 	private static Creature _thomas;
 	
 	/**
@@ -102,71 +73,23 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 	 */
 	public static enum SnowmanState
 	{
-		/**
-		 * Field CAPTURED.
-		 */
 		CAPTURED,
-		/**
-		 * Field KILLED.
-		 */
 		KILLED,
-		/**
-		 * Field SAVED.
-		 */
 		SAVED;
 	}
 	
-	/**
-	 * Field INITIAL_SAVE_DELAY.
-	 */
 	private static final int INITIAL_SAVE_DELAY = 10 * 60 * 1000;
-	/**
-	 * Field SAVE_INTERVAL.
-	 */
 	private static final int SAVE_INTERVAL = 60 * 60 * 1000;
-	/**
-	 * Field SNOWMAN_SHOUT_INTERVAL.
-	 */
 	private static final int SNOWMAN_SHOUT_INTERVAL = 1 * 60 * 1000;
-	/**
-	 * Field THOMAS_EAT_DELAY.
-	 */
 	private static final int THOMAS_EAT_DELAY = 10 * 60 * 1000;
-	/**
-	 * Field SATNA_SAY_INTERVAL.
-	 */
 	private static final int SATNA_SAY_INTERVAL = 5 * 60 * 1000;
-	/**
-	 * Field EVENT_MANAGER_ID. (value is 13184)
-	 */
 	private static final int EVENT_MANAGER_ID = 13184;
-	/**
-	 * Field CTREE_ID. (value is 13006)
-	 */
 	private static final int CTREE_ID = 13006;
-	/**
-	 * Field EVENT_REWARDER_ID. (value is 13186)
-	 */
 	private static final int EVENT_REWARDER_ID = 13186;
-	/**
-	 * Field SNOWMAN_ID. (value is 13160)
-	 */
 	private static final int SNOWMAN_ID = 13160;
-	/**
-	 * Field THOMAS_ID. (value is 13183)
-	 */
 	private static final int THOMAS_ID = 13183;
-	/**
-	 * Field SANTA_BUFF_REUSE.
-	 */
 	private static final int SANTA_BUFF_REUSE = 12 * 3600 * 1000;
-	/**
-	 * Field SANTA_LOTTERY_REUSE.
-	 */
 	private static final int SANTA_LOTTERY_REUSE = 3 * 3600 * 1000;
-	/**
-	 * Field WEAPONS.
-	 */
 	private static final int[][] WEAPONS =
 	{
 		{
@@ -250,9 +173,6 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 			20178
 		}
 	};
-	/**
-	 * Field _active.
-	 */
 	static boolean _active = false;
 	
 	/**
@@ -1104,8 +1024,6 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		});
 	}
 	
-	/**
-	 */
 	public final class SayTask extends RunnableImpl
 	{
 		/**
@@ -1129,8 +1047,6 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		}
 	}
 	
-	/**
-	 */
 	public final class ShoutTask extends RunnableImpl
 	{
 		/**
@@ -1148,8 +1064,6 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		}
 	}
 	
-	/**
-	 */
 	public final class SaveTask extends RunnableImpl
 	{
 		/**

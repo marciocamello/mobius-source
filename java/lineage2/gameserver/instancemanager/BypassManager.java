@@ -15,7 +15,6 @@ package lineage2.gameserver.instancemanager;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import lineage2.gameserver.handler.bbs.ICommunityBoardHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.Log;
@@ -27,9 +26,6 @@ import lineage2.gameserver.utils.Strings;
  */
 public class BypassManager
 {
-	/**
-	 * Field p.
-	 */
 	private static final Pattern p = Pattern.compile("\"(bypass +-h +)(.+?)\"");
 	
 	/**
@@ -37,25 +33,10 @@ public class BypassManager
 	 */
 	public static enum BypassType
 	{
-		/**
-		 * Field ENCODED.
-		 */
 		ENCODED,
-		/**
-		 * Field ENCODED_BBS.
-		 */
 		ENCODED_BBS,
-		/**
-		 * Field SIMPLE.
-		 */
 		SIMPLE,
-		/**
-		 * Field SIMPLE_BBS.
-		 */
 		SIMPLE_BBS,
-		/**
-		 * Field SIMPLE_DIRECT.
-		 */
 		SIMPLE_DIRECT
 	}
 	
@@ -175,17 +156,8 @@ public class BypassManager
 	 */
 	public static class DecodedBypass
 	{
-		/**
-		 * Field bypass.
-		 */
 		public String bypass;
-		/**
-		 * Field bbs.
-		 */
 		public boolean bbs;
-		/**
-		 * Field handler.
-		 */
 		public ICommunityBoardHandler handler;
 		
 		/**

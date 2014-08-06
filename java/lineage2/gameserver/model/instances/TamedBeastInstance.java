@@ -17,7 +17,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Future;
-
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.lang.reference.HardReferences;
 import lineage2.commons.threading.RunnableImpl;
@@ -45,45 +44,15 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field MAX_DISTANCE_FROM_OWNER. (value is 2000)
-	 */
 	private static final int MAX_DISTANCE_FROM_OWNER = 2000;
-	/**
-	 * Field MAX_DISTANCE_FOR_BUFF. (value is 200)
-	 */
 	private static final int MAX_DISTANCE_FOR_BUFF = 200;
-	/**
-	 * Field MAX_DURATION. (value is 1200000)
-	 */
 	private static final int MAX_DURATION = 1200000;
-	/**
-	 * Field DURATION_CHECK_INTERVAL. (value is 60000)
-	 */
 	private static final int DURATION_CHECK_INTERVAL = 60000;
-	/**
-	 * Field DURATION_INCREASE_INTERVAL. (value is 20000)
-	 */
 	private static final int DURATION_INCREASE_INTERVAL = 20000;
-	/**
-	 * Field _playerRef.
-	 */
 	private HardReference<Player> _playerRef = HardReferences.emptyRef();
-	/**
-	 * Field _remainingTime. Field _foodSkillId.
-	 */
 	private int _foodSkillId, _remainingTime = MAX_DURATION;
-	/**
-	 * Field _durationCheckTask.
-	 */
 	private Future<?> _durationCheckTask = null;
-	/**
-	 * Field _skills.
-	 */
 	private final List<Skill> _skills = new ArrayList<>();
-	/**
-	 * Field TAMED_DATA.
-	 */
 	@SuppressWarnings("unchecked")
 	private static final Map.Entry<NpcString, int[]>[] TAMED_DATA = new Map.Entry[6];
 	static
@@ -256,17 +225,8 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 	 */
 	public static class Buff extends RunnableImpl
 	{
-		/**
-		 * Field _actor.
-		 */
 		private final NpcInstance _actor;
-		/**
-		 * Field _owner.
-		 */
 		private final Player _owner;
-		/**
-		 * Field _skill.
-		 */
 		private final Skill _skill;
 		
 		/**
@@ -424,9 +384,6 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 	 */
 	private static class CheckDuration extends RunnableImpl
 	{
-		/**
-		 * Field _tamedBeast.
-		 */
 		private final TamedBeastInstance _tamedBeast;
 		
 		/**

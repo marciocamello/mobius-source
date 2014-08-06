@@ -16,7 +16,6 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
-
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.listener.actor.player.OnPlayerExitListener;
 import lineage2.gameserver.listener.actor.player.OnPlayerPartyInviteListener;
@@ -42,19 +41,12 @@ import lineage2.gameserver.utils.Location;
 public class PartySubstitute
 {
 	static final Set<Player> _waitingParty = new HashSet<>();
-	
 	static final ConcurrentMap<Player, Integer> _waitingPlayer = new ConcurrentHashMap<>();
-	
 	public static final long TIME_OUT = 300000;
-	
 	public static final long ACCEPT_TIME_OUT = 180000;
-	
 	private static final long REFRASH_TIME = 60000;
-	
 	private static final int LEVEL_DIFF = 5;
-	
 	private static final int SKILL_INVUL_ID = 1750;
-	
 	private final SubstituteListeners _listener;
 	
 	public PartySubstitute()

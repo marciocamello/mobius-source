@@ -13,7 +13,6 @@
 package handler.items;
 
 import java.util.Collection;
-
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.RecipeHolder;
 import lineage2.gameserver.model.Playable;
@@ -31,9 +30,6 @@ import lineage2.gameserver.templates.item.RecipeTemplate;
  */
 public final class Recipes extends ScriptItemHandler
 {
-	/**
-	 * Field _itemIds.
-	 */
 	private static int[] _itemIds = null;
 	
 	/**

@@ -26,17 +26,8 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class RequestPartyMatchConfig extends L2GameClientPacket
 {
-	/**
-	 * Field _page.
-	 */
 	private int _page;
-	/**
-	 * Field _region.
-	 */
 	private int _region;
-	/**
-	 * Field _allLevels.
-	 */
 	private int _allLevels;
 	
 	/**

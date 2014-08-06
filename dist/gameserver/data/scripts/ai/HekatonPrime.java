@@ -22,9 +22,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public final class HekatonPrime extends Fighter
 {
-	/**
-	 * Field _lastTimeAttacked.
-	 */
 	private long _lastTimeAttacked;
 	
 	/**

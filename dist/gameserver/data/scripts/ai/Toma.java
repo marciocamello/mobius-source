@@ -25,22 +25,13 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Toma extends DefaultAI
 {
-	/**
-	 * Field _points.
-	 */
 	private final Location[] _points =
 	{
 		new Location(151680, -174891, -1807, 41400),
 		new Location(154153, -220105, -3402),
 		new Location(178834, -184336, -352)
 	};
-	/**
-	 * Field TELEPORT_PERIOD.
-	 */
 	private static final long TELEPORT_PERIOD = 30 * 60 * 1000;
-	/**
-	 * Field _lastTeleport.
-	 */
 	private long _lastTeleport = System.currentTimeMillis();
 	
 	/**

@@ -15,7 +15,6 @@ package lineage2.gameserver.model.entity.events.objects;
 import java.io.Serializable;
 import java.util.List;
 import java.util.concurrent.Future;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -41,9 +40,6 @@ public class KrateisCubePlayerObject implements Serializable, Comparable<Krateis
 	 */
 	private class RessurectTask extends RunnableImpl
 	{
-		/**
-		 * Field _seconds.
-		 */
 		private int _seconds = 10;
 		
 		/**
@@ -77,25 +73,10 @@ public class KrateisCubePlayerObject implements Serializable, Comparable<Krateis
 		}
 	}
 	
-	/**
-	 * Field _player.
-	 */
 	final Player _player;
-	/**
-	 * Field _registrationTime.
-	 */
 	private final long _registrationTime;
-	/**
-	 * Field _showRank.
-	 */
 	private boolean _showRank;
-	/**
-	 * Field _points.
-	 */
 	private int _points;
-	/**
-	 * Field _ressurectTask.
-	 */
 	Future<?> _ressurectTask;
 	
 	/**

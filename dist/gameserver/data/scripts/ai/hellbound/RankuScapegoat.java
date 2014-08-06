@@ -24,9 +24,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public final class RankuScapegoat extends DefaultAI
 {
-	/**
-	 * Field Eidolon_ID. (value is 25543)
-	 */
 	private static final int Eidolon_ID = 25543;
 	
 	/**

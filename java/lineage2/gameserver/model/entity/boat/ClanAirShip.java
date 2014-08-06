@@ -15,7 +15,6 @@ package lineage2.gameserver.model.entity.boat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Future;
-
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.lang.reference.HardReferences;
 import lineage2.commons.threading.RunnableImpl;
@@ -45,45 +44,15 @@ public class ClanAirShip extends AirShip
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field MAINTENANCE_DELAY.
-	 */
 	private static final long MAINTENANCE_DELAY = 60 * 1000L;
-	/**
-	 * Field MAX_FUEL. (value is 600)
-	 */
 	public static final int MAX_FUEL = 600;
-	/**
-	 * Field _currentFuel.
-	 */
 	private int _currentFuel;
-	/**
-	 * Field _dock.
-	 */
 	private AirshipDock _dock;
-	/**
-	 * Field _platform.
-	 */
 	private AirshipDock.AirshipPlatform _platform;
-	/**
-	 * Field _driverRef.
-	 */
 	private HardReference<Player> _driverRef = HardReferences.emptyRef();
-	/**
-	 * Field _controlKey.
-	 */
 	private final GameObject _controlKey = new ControlKeyInstance();
-	/**
-	 * Field _clan.
-	 */
 	private final Clan _clan;
-	/**
-	 * Field _customMove.
-	 */
 	private boolean _customMove;
-	/**
-	 * Field _deleteTask.
-	 */
 	private Future<?> _deleteTask = null;
 	
 	/**

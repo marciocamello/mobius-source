@@ -28,17 +28,8 @@ import lineage2.gameserver.utils.Location;
  */
 public final class FrostBuffalo extends Fighter
 {
-	/**
-	 * Field _mobsNotSpawned.
-	 */
 	private boolean _mobsNotSpawned = true;
-	/**
-	 * Field MOBS. (value is 22093)
-	 */
 	private static final int MOBS = 22093;
-	/**
-	 * Field MOBS_COUNT. (value is 4)
-	 */
 	private static final int MOBS_COUNT = 4;
 	
 	/**

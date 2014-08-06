@@ -25,7 +25,6 @@ import lineage2.gameserver.model.items.Warehouse.WarehouseType;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.Log;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -34,21 +33,9 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public class SendWareHouseDepositList extends L2GameClientPacket
 {
-	/**
-	 * Field _WAREHOUSE_FEE. (value is 30)
-	 */
 	private static final long _WAREHOUSE_FEE = 30;
-	/**
-	 * Field _count.
-	 */
 	private int _count;
-	/**
-	 * Field _items.
-	 */
 	private int[] _items;
-	/**
-	 * Field _itemQ.
-	 */
 	private long[] _itemQ;
 	
 	/**

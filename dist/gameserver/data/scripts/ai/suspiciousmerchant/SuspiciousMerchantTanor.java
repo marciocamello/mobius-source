@@ -24,9 +24,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class SuspiciousMerchantTanor extends DefaultAI
 {
-	/**
-	 * Field points.
-	 */
 	static final Location[] points =
 	{
 		new Location(58314, 136319, -2000),
@@ -51,17 +48,8 @@ public final class SuspiciousMerchantTanor extends DefaultAI
 		new Location(57078, 137124, -2216),
 		new Location(58314, 136319, -2000)
 	};
-	/**
-	 * Field current_point.
-	 */
 	private int current_point = -1;
-	/**
-	 * Field wait_timeout.
-	 */
 	private long wait_timeout = 0;
-	/**
-	 * Field wait.
-	 */
 	private boolean wait = false;
 	
 	/**

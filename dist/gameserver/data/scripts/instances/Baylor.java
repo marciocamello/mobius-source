@@ -22,7 +22,6 @@ import lineage2.gameserver.utils.Location;
 /**
  * @author Awakeninger
  */
-
 public final class Baylor extends Reflection
 {
 	private static final int Baylor = 29213;

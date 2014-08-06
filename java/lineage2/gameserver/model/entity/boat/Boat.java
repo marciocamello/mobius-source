@@ -17,7 +17,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
-
 import lineage2.gameserver.ai.BoatAI;
 import lineage2.gameserver.ai.CharacterAI;
 import lineage2.gameserver.model.Creature;
@@ -46,29 +45,11 @@ public abstract class Boat extends Creature
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _moveSpeed.
-	 */
 	private int _moveSpeed;
-	/**
-	 * Field _rotationSpeed.
-	 */
 	private int _rotationSpeed;
-	/**
-	 * Field _fromHome.
-	 */
 	protected int _fromHome;
-	/**
-	 * Field _runState.
-	 */
 	protected int _runState;
-	/**
-	 * Field _ways.
-	 */
 	private final BoatWayEvent[] _ways = new BoatWayEvent[2];
-	/**
-	 * Field _players.
-	 */
 	protected final Set<Player> _players = new CopyOnWriteArraySet<>();
 	
 	/**

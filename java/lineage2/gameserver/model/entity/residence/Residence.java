@@ -20,7 +20,6 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
-
 import lineage2.commons.dao.JdbcEntity;
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.dbutils.DbUtils;
@@ -42,7 +41,6 @@ import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -73,89 +71,26 @@ public abstract class Residence implements JdbcEntity
 		}
 	}
 	
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Residence.class);
-	/**
-	 * Field CYCLE_TIME.
-	 */
 	public static final long CYCLE_TIME = 60 * 60 * 1000L;
-	/**
-	 * Field _id.
-	 */
 	protected final int _id;
-	/**
-	 * Field _name.
-	 */
 	protected final String _name;
-	/**
-	 * Field _owner.
-	 */
 	protected Clan _owner;
-	/**
-	 * Field _zone.
-	 */
 	protected Zone _zone;
-	/**
-	 * Field _functions.
-	 */
 	protected final List<ResidenceFunction> _functions = new ArrayList<>();
-	/**
-	 * Field _skills.
-	 */
 	protected final List<Skill> _skills = new ArrayList<>();
-	/**
-	 * Field _siegeEvent.
-	 */
 	protected SiegeEvent<?, ?> _siegeEvent;
-	/**
-	 * Field _siegeDate.
-	 */
 	protected final Calendar _siegeDate = Calendar.getInstance();
-	/**
-	 * Field _lastSiegeDate.
-	 */
 	protected final Calendar _lastSiegeDate = Calendar.getInstance();
-	/**
-	 * Field _ownDate.
-	 */
 	protected final Calendar _ownDate = Calendar.getInstance();
-	/**
-	 * Field _cycleTask.
-	 */
 	protected ScheduledFuture<?> _cycleTask;
-	/**
-	 * Field _cycle.
-	 */
 	private int _cycle;
-	/**
-	 * Field _rewardCount.
-	 */
 	private int _rewardCount;
-	/**
-	 * Field _paidCycle.
-	 */
 	private int _paidCycle;
-	/**
-	 * Field _jdbcEntityState.
-	 */
 	protected JdbcEntityState _jdbcEntityState = JdbcEntityState.CREATED;
-	/**
-	 * Field _banishPoints.
-	 */
 	protected final List<Location> _banishPoints = new ArrayList<>();
-	/**
-	 * Field _ownerRestartPoints.
-	 */
 	protected final List<Location> _ownerRestartPoints = new ArrayList<>();
-	/**
-	 * Field _otherRestartPoints.
-	 */
 	protected final List<Location> _otherRestartPoints = new ArrayList<>();
-	/**
-	 * Field _chaosRestartPoints.
-	 */
 	protected final List<Location> _chaosRestartPoints = new ArrayList<>();
 	
 	/**
@@ -626,9 +561,6 @@ public abstract class Residence implements JdbcEntity
 	 */
 	private class AutoTaskForFunctions extends RunnableImpl
 	{
-		/**
-		 * Field _function.
-		 */
 		ResidenceFunction _function;
 		
 		/**

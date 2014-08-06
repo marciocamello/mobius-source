@@ -22,13 +22,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public final class JumpTracksHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final JumpTracksHolder _instance = new JumpTracksHolder();
-	/**
-	 * Field _jumpingTracks.
-	 */
 	private final TIntObjectHashMap<JumpTrack> _jumpingTracks = new TIntObjectHashMap<>();
 	
 	/**

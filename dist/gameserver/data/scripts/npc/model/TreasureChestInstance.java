@@ -30,9 +30,6 @@ public final class TreasureChestInstance extends ChestInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field TREASURE_BOMB_ID. (value is 4143)
-	 */
 	private static final int TREASURE_BOMB_ID = 4143;
 	
 	/**

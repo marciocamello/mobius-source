@@ -20,13 +20,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public class ClassData
 {
-	/**
-	 * Field _classId.
-	 */
 	private final int _classId;
-	/**
-	 * Field _lvlsUpData.
-	 */
 	private final TIntObjectHashMap<LvlUpData> _lvlsUpData = new TIntObjectHashMap<>();
 	
 	/**

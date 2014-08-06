@@ -20,10 +20,8 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 /**
  * @author Awakeninger
  */
-
 public final class BalrogStoryInstance extends NpcInstance
 {
-	
 	/**
 	 *
 	 */

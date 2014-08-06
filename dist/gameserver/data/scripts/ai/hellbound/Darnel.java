@@ -14,7 +14,6 @@ package ai.hellbound;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -72,9 +71,6 @@ public final class Darnel extends DefaultAI
 		}
 	}
 	
-	/**
-	 * Field trapSkills.
-	 */
 	final Skill[] trapSkills = new Skill[]
 	{
 		SkillTable.getInstance().getInfo(5267, 1),
@@ -82,13 +78,7 @@ public final class Darnel extends DefaultAI
 		SkillTable.getInstance().getInfo(5269, 1),
 		SkillTable.getInstance().getInfo(5270, 1)
 	};
-	/**
-	 * Field Poison.
-	 */
 	final Skill Poison;
-	/**
-	 * Field Paralysis.
-	 */
 	final Skill Paralysis;
 	
 	/**

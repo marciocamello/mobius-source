@@ -13,7 +13,6 @@
 package services;
 
 import java.util.List;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Player;
@@ -28,9 +27,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class LindviorMovie implements ScriptFile
 {
-	/**
-	 * Field movieDelay.
-	 */
 	private static final long movieDelay = 3 * 60 * 60 * 1000L;
 	
 	/**
@@ -50,9 +46,6 @@ public final class LindviorMovie implements ScriptFile
 	 */
 	public final class ShowLindviorMovie extends RunnableImpl
 	{
-		/**
-		 * Field _zone.
-		 */
 		Zone _zone;
 		
 		/**

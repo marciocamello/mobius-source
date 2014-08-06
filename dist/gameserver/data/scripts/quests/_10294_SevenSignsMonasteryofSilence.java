@@ -13,7 +13,6 @@
 package quests;
 
 import java.util.StringTokenizer;
-
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -37,16 +36,12 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 	private static final int GreenRelicWatcher = RelicWatcher[1];
 	private static final int BlueRelicWatcher = RelicWatcher[2];
 	private static final int RedRelicWatcher = RelicWatcher[3];
-	
 	private static final int JudevanEtinasEvilThoughts = 32888;
 	private static final int SolinaLayrother = 27407;
-	
 	private static final int JudevanEtinasEvilThoughts2 = 32797;
 	private static final int SolinasEvilThoughts = 32793;
-	
 	// reading desks
 	private static final int[] ReadingDesk = ArrayUtils.createAscendingArray(32821, 32836);
-	
 	private static final int[] YellowRoomDesks =
 	{
 		ReadingDesk[0],
@@ -55,7 +50,6 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 		ReadingDesk[3]
 	};
 	private static final int YellowTrueReadingDesk = YellowRoomDesks[2];
-	
 	private static final int[] GreenRoomDesks =
 	{
 		ReadingDesk[4],
@@ -64,7 +58,6 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 		ReadingDesk[7]
 	};
 	private static final int GreenTrueReadingDesk = GreenRoomDesks[3];
-	
 	private static final int[] BlueRoomDesks =
 	{
 		ReadingDesk[8],
@@ -73,7 +66,6 @@ public class _10294_SevenSignsMonasteryofSilence extends Quest implements Script
 		ReadingDesk[11]
 	};
 	private static final int BlueTrueReadingDesk = BlueRoomDesks[1];
-	
 	private static final int[] RedRoomDesks =
 	{
 		ReadingDesk[12],

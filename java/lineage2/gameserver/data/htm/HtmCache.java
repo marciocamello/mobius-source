@@ -14,7 +14,6 @@ package lineage2.gameserver.data.htm;
 
 import java.io.File;
 import java.io.IOException;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.Language;
@@ -22,7 +21,6 @@ import lineage2.gameserver.utils.Strings;
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Element;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -34,25 +32,10 @@ import org.slf4j.LoggerFactory;
  */
 public class HtmCache
 {
-	/**
-	 * Field DISABLED. (value is 0)
-	 */
 	public static final int DISABLED = 0;
-	/**
-	 * Field LAZY. (value is 1)
-	 */
 	public static final int LAZY = 1;
-	/**
-	 * Field ENABLED. (value is 2)
-	 */
 	public static final int ENABLED = 2;
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(HtmCache.class);
-	/**
-	 * Field _instance.
-	 */
 	private final static HtmCache _instance = new HtmCache();
 	
 	/**
@@ -64,9 +47,6 @@ public class HtmCache
 		return _instance;
 	}
 	
-	/**
-	 * Field _cache.
-	 */
 	private final Cache[] _cache = new Cache[Language.VALUES.length];
 	
 	/**

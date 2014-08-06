@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-
 import lineage2.gameserver.dao.ItemsDAO;
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
@@ -27,13 +26,7 @@ import lineage2.gameserver.model.items.ItemInstance;
  */
 public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectInfoPackage>
 {
-	/**
-	 * Field selectionInfo.
-	 */
 	private final List<CharSelectInfoPackage> selectionInfo;
-	/**
-	 * Field vitalityPoints.
-	 */
 	private int vitalityPoints;
 	
 	/**
@@ -98,125 +91,32 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 	 */
 	public static class CharSelectInfoPackage
 	{
-		/**
-		 * Field _name.
-		 */
 		private String _name;
-		/**
-		 * Field _objectId.
-		 */
 		private int _objectId = 0;
-		/**
-		 * Field _charId.
-		 */
 		private int _charId = 0x00030b7a;
-		/**
-		 * Field _exp.
-		 */
 		private long _exp = 0;
-		/**
-		 * Field _sp.
-		 */
 		private int _sp = 0;
-		/**
-		 * Field _clanId.
-		 */
 		private int _clanId = 0;
-		/**
-		 * Field _race.
-		 */
 		private int _race = 0;
-		/**
-		 * Field _classId.
-		 */
 		private int _classId = 0;
-		/**
-		 * Field _baseClassId.
-		 */
 		private int _baseClassId = 0;
-		/**
-		 * Field _deleteTimer.
-		 */
 		private int _deleteTimer = 0;
-		/**
-		 * Field _lastAccess.
-		 */
 		private long _lastAccess = 0L;
-		/**
-		 * Field _face.
-		 */
 		private int _face = 0;
-		/**
-		 * Field _hairStyle.
-		 */
 		private int _hairStyle = 0;
-		/**
-		 * Field _hairColor.
-		 */
 		private int _hairColor = 0;
-		/**
-		 * Field _faceB.
-		 */
 		private int _faceB = 0;
-		/**
-		 * Field _hairStyleB.
-		 */
 		private int _hairStyleB = 0;
-		/**
-		 * Field _hairColorB.
-		 */
 		private int _hairColorB = 0;
-		/**
-		 * Field _sex.
-		 */
 		private int _sex = 0;
-		/**
-		 * Field _level.
-		 */
 		private int _level = 1;
-		/**
-		 * Field _pvp.
-		 */
-		/**
-		 * Field _pk.
-		 */
-		/**
-		 * Field _karma.
-		 */
 		private int _karma = 0, _pk = 0, _pvp = 0;
-		/**
-		 * Field _maxHp.
-		 */
 		private int _maxHp = 0;
-		/**
-		 * Field _currentHp.
-		 */
 		private double _currentHp = 0;
-		/**
-		 * Field _maxMp.
-		 */
 		private int _maxMp = 0;
-		/**
-		 * Field _currentMp.
-		 */
 		private double _currentMp = 0;
-		/**
-		 * Field _paperdoll.
-		 */
 		private final ItemInstance[] _paperdoll;
-		/**
-		 * Field _accesslevel.
-		 */
 		private int _accesslevel = 0;
-		/**
-		 * Field _z.
-		 */
-		/**
-		 * Field _y.
-		 */
-		/**
-		 * Field _x.
-		 */
 		private int _x = 0, _y = 0, _z = 0;
 		
 		/**

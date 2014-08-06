@@ -22,9 +22,6 @@ import lineage2.gameserver.network.serverpackets.ExMPCCShowPartyMemberInfo;
  */
 public class RequestExMPCCShowPartyMembersInfo extends L2GameClientPacket
 {
-	/**
-	 * Field _objectId.
-	 */
 	private int _objectId;
 	
 	/**

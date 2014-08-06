@@ -21,9 +21,6 @@ import lineage2.gameserver.model.matching.MatchingRoom;
  */
 public class RequestWithdrawPartyRoom extends L2GameClientPacket
 {
-	/**
-	 * Field _roomId.
-	 */
 	private int _roomId;
 	
 	/**

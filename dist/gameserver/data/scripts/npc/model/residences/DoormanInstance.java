@@ -30,33 +30,12 @@ public abstract class DoormanInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field COND_OWNER. (value is 0)
-	 */
 	protected static final int COND_OWNER = 0;
-	/**
-	 * Field COND_SIEGE. (value is 1)
-	 */
 	protected static final int COND_SIEGE = 1;
-	/**
-	 * Field COND_FAIL. (value is 2)
-	 */
 	protected static final int COND_FAIL = 2;
-	/**
-	 * Field _siegeDialog.
-	 */
 	protected String _siegeDialog;
-	/**
-	 * Field _mainDialog.
-	 */
 	protected String _mainDialog;
-	/**
-	 * Field _failDialog.
-	 */
 	protected String _failDialog;
-	/**
-	 * Field _doors.
-	 */
 	protected int[] _doors;
 	
 	/**

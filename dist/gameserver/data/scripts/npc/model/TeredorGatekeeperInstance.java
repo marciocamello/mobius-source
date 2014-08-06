@@ -21,7 +21,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
 
 public final class TeredorGatekeeperInstance extends NpcInstance
 {
-	
 	private static final long serialVersionUID = 6518350180076969631L;
 	private static final int teredorInstanceId = 160;
 	

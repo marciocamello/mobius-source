@@ -18,109 +18,31 @@ package lineage2.gameserver.model;
  */
 public class PetData
 {
-	/**
-	 * Field _id.
-	 */
 	private int _id;
-	/**
-	 * Field _level.
-	 */
 	private int _level;
-	/**
-	 * Field _feedMax.
-	 */
 	private int _feedMax;
-	/**
-	 * Field _feedBattle.
-	 */
 	private int _feedBattle;
-	/**
-	 * Field _feedNormal.
-	 */
 	private int _feedNormal;
-	/**
-	 * Field _pAtk.
-	 */
 	private int _pAtk;
-	/**
-	 * Field _pDef.
-	 */
 	private int _pDef;
-	/**
-	 * Field _mAtk.
-	 */
 	private int _mAtk;
-	/**
-	 * Field _mDef.
-	 */
 	private int _mDef;
-	/**
-	 * Field _hp.
-	 */
 	private int _hp;
-	/**
-	 * Field _mp.
-	 */
 	private int _mp;
-	/**
-	 * Field _hpRegen.
-	 */
 	private int _hpRegen;
-	/**
-	 * Field _mpRegen.
-	 */
 	private int _mpRegen;
-	/**
-	 * Field _exp.
-	 */
 	private long _exp;
-	/**
-	 * Field _accuracy.
-	 */
 	private int _accuracy;
-	/**
-	 * Field _evasion.
-	 */
 	private int _evasion;
-	/**
-	 * Field _critical.
-	 */
 	private int _critical;
-	/**
-	 * Field _speed.
-	 */
 	private int _speed;
-	/**
-	 * Field _atkSpeed.
-	 */
 	private int _atkSpeed;
-	/**
-	 * Field _castSpeed.
-	 */
 	private int _castSpeed;
-	/**
-	 * Field _maxLoad.
-	 */
 	private int _maxLoad;
-	/**
-	 * Field _controlItemId.
-	 */
 	private int _controlItemId;
-	/**
-	 * Field _foodId.
-	 */
 	private int _foodId;
-	/**
-	 * Field _minLevel.
-	 */
 	private int _minLevel;
-	/**
-	 * Field _addFed.
-	 */
 	private int _addFed;
-	/**
-	 * Field _isMountable.
-	 */
 	private boolean _isMountable;
 	
 	/**

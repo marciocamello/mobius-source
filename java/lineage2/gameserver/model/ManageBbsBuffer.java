@@ -14,7 +14,6 @@ package lineage2.gameserver.model;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,18 +23,9 @@ import org.slf4j.LoggerFactory;
  */
 public class ManageBbsBuffer
 {
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(ManageBbsBuffer.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final ManageBbsBuffer _instance = new ManageBbsBuffer();
-	/**
-	 * Field listScheme.
-	 */
 	private final List<SBufferScheme> listScheme;
 	
 	/**
@@ -207,21 +197,9 @@ public class ManageBbsBuffer
 	 */
 	public static class SBufferScheme
 	{
-		/**
-		 * Field id.
-		 */
 		public int id;
-		/**
-		 * Field obj_id.
-		 */
 		public int obj_id;
-		/**
-		 * Field name.
-		 */
 		public String name;
-		/**
-		 * Field skills_id.
-		 */
 		public List<Integer> skills_id;
 		
 		/**

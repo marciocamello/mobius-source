@@ -14,7 +14,6 @@ package events.GiftOfVitality;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
@@ -25,7 +24,6 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,29 +33,11 @@ import org.slf4j.LoggerFactory;
  */
 public final class GiftOfVitality extends Functions implements ScriptFile
 {
-	/**
-	 * Field EVENT_NAME. (value is ""GiftOfVitality"")
-	 */
 	private static final String EVENT_NAME = "GiftOfVitality";
-	/**
-	 * Field REUSE_HOURS. (value is 24)
-	 */
 	private static final int REUSE_HOURS = 24;
-	/**
-	 * Field EVENT_MANAGER_ID. (value is 109)
-	 */
 	private static final int EVENT_MANAGER_ID = 109;
-	/**
-	 * Field _spawns.
-	 */
 	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(GiftOfVitality.class);
-	/**
-	 * Field _mageBuff.
-	 */
 	private final static int[][] _mageBuff = new int[][]
 	{
 		{
@@ -89,9 +69,6 @@ public final class GiftOfVitality extends Functions implements ScriptFile
 			1
 		},
 	};
-	/**
-	 * Field _warrBuff.
-	 */
 	private final static int[][] _warrBuff = new int[][]
 	{
 		{
@@ -129,17 +106,8 @@ public final class GiftOfVitality extends Functions implements ScriptFile
 	 */
 	public enum BuffType
 	{
-		/**
-		 * Field PLAYER.
-		 */
 		PLAYER,
-		/**
-		 * Field SUMMON.
-		 */
 		SUMMON,
-		/**
-		 * Field VITALITY.
-		 */
 		VITALITY,
 	}
 	

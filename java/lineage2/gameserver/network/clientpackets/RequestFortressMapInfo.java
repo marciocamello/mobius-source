@@ -23,9 +23,6 @@ import lineage2.gameserver.network.serverpackets.ExShowFortressMapInfo;
  */
 public class RequestFortressMapInfo extends L2GameClientPacket
 {
-	/**
-	 * Field _fortressId.
-	 */
 	private int _fortressId;
 	
 	/**

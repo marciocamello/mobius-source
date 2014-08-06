@@ -26,7 +26,6 @@ import lineage2.gameserver.network.serverpackets.components.SceneMovie;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -35,7 +34,6 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public class _10369_NoblesseTheTestOfSoul extends Quest implements ScriptFile, OnMagicUseListener
 {
-	
 	// npc
 	private static final int Cerenas = 31281;
 	private static final int EvasAltar = 33686;
@@ -45,7 +43,6 @@ public class _10369_NoblesseTheTestOfSoul extends Quest implements ScriptFile, O
 	private static final int HelpingRune = 19293;
 	private static final int HelpingTree = 27486;
 	private static final int SeedWaler = 18678;
-	
 	// monster
 	private static final int OneWho = 27482;
 	private static final int[] HotSprings =
@@ -60,13 +57,11 @@ public class _10369_NoblesseTheTestOfSoul extends Quest implements ScriptFile, O
 		22263,
 		22264
 	};
-	
 	// skill
 	private static final int Trower = 9442;
 	// private static final int EmptyHotSkill = 9443;
 	private static final int HelpingS = 9444;
 	// private static final int SummonStoneSkill = 9445;
-	
 	// item
 	private static final int HelpingSeed = 34961;
 	private static final int Ashes = 34962;

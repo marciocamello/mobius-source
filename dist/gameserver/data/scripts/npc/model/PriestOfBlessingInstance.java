@@ -15,7 +15,6 @@ package npc.model;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -41,21 +40,9 @@ public final class PriestOfBlessingInstance extends NpcInstance
 	 */
 	private static class Hourglass
 	{
-		/**
-		 * Field minLevel.
-		 */
 		public int minLevel;
-		/**
-		 * Field maxLevel.
-		 */
 		public int maxLevel;
-		/**
-		 * Field itemPrice.
-		 */
 		public int itemPrice;
-		/**
-		 * Field itemId.
-		 */
 		public int[] itemId;
 		
 		/**
@@ -74,9 +61,6 @@ public final class PriestOfBlessingInstance extends NpcInstance
 		}
 	}
 	
-	/**
-	 * Field hourglassList.
-	 */
 	private static final List<Hourglass> hourglassList = new ArrayList<>();
 	static
 	{

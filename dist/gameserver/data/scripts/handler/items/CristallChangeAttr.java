@@ -14,7 +14,6 @@ package handler.items;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInfo;
@@ -22,7 +21,6 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ExChangeAttributeItemList;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.item.ItemTemplate;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -31,9 +29,6 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public final class CristallChangeAttr extends ScriptItemHandler
 {
-	/**
-	 * Field ITEM_IDS.
-	 */
 	private final int[] ITEM_IDS =
 	{
 		33502,

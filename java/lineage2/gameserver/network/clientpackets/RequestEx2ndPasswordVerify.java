@@ -20,9 +20,6 @@ import lineage2.gameserver.Config;
  */
 public class RequestEx2ndPasswordVerify extends L2GameClientPacket
 {
-	/**
-	 * Field _password.
-	 */
 	private String _password;
 	
 	/**

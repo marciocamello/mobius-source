@@ -14,7 +14,6 @@ package lineage2.gameserver.model;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.templates.StatsSet;
@@ -32,21 +31,9 @@ public class HardSpawner extends Spawner
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _template.
-	 */
 	private final SpawnTemplate _template;
-	/**
-	 * Field _pointIndex.
-	 */
 	private int _pointIndex;
-	/**
-	 * Field _npcIndex.
-	 */
 	private int _npcIndex;
-	/**
-	 * Field _reSpawned.
-	 */
 	private final List<NpcInstance> _reSpawned = new CopyOnWriteArrayList<>();
 	
 	/**

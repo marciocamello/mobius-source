@@ -20,6 +20,5 @@ public enum ResidenceSide
 	NEUTRAL,
 	LIGHT,
 	DARK;
-	
 	public static final ResidenceSide[] VALUES = values();
 }

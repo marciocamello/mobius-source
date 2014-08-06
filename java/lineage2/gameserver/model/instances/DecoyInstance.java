@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
@@ -29,7 +28,6 @@ import lineage2.gameserver.network.serverpackets.CharInfo;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,22 +41,10 @@ public class DecoyInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(DecoyInstance.class);
-	/**
-	 * Field _playerRef.
-	 */
 	private final HardReference<Player> _playerRef;
-	/**
-	 * Field _timeRemaining. Field _lifeTime.
-	 */
 	private int _lifeTime, _timeRemaining;
-	/**
-	 * Field _hateSpam. Field _decoyLifeTask.
-	 */
 	private ScheduledFuture<?> _decoyLifeTask, _hateSpam;
 	
 	/**
@@ -131,9 +117,6 @@ public class DecoyInstance extends NpcInstance
 	 */
 	class HateSpam extends RunnableImpl
 	{
-		/**
-		 * Field _skill.
-		 */
 		private final Skill _skill;
 		
 		/**

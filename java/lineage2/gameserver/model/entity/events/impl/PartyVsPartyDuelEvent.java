@@ -14,7 +14,6 @@ package lineage2.gameserver.model.entity.events.impl;
 
 import java.util.Iterator;
 import java.util.List;
-
 import lineage2.commons.collections.CollectionUtils;
 import lineage2.commons.collections.JoinedIterator;
 import lineage2.commons.collections.MultiValueSet;

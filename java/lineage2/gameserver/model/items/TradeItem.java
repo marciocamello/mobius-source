@@ -18,25 +18,10 @@ package lineage2.gameserver.model.items;
  */
 public final class TradeItem extends ItemInfo
 {
-	/**
-	 * Field _price.
-	 */
 	private long _price;
-	/**
-	 * Field _referencePrice.
-	 */
 	private long _referencePrice;
-	/**
-	 * Field _currentValue.
-	 */
 	private long _currentValue;
-	/**
-	 * Field _lastRechargeTime.
-	 */
 	private int _lastRechargeTime;
-	/**
-	 * Field _rechargeTime.
-	 */
 	private int _rechargeTime;
 	
 	/**

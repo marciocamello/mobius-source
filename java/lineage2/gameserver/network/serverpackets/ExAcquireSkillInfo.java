@@ -19,9 +19,6 @@ import lineage2.gameserver.tables.SkillTable;
 
 public class ExAcquireSkillInfo extends L2GameServerPacket
 {
-	/**
-	 * Field skillLearn.
-	 */
 	private final SkillLearn skillLearn;
 	
 	/**

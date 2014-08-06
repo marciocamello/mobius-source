@@ -18,9 +18,6 @@ package lineage2.commons.net.utils;
  */
 public class NetUtils
 {
-	/**
-	 * Field PRIVATE.
-	 */
 	private final static NetList PRIVATE = new NetList();
 	static
 	{

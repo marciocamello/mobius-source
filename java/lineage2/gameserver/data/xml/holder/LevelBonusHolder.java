@@ -21,13 +21,7 @@ import gnu.trove.map.hash.TIntDoubleHashMap;
  */
 public final class LevelBonusHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final LevelBonusHolder _instance = new LevelBonusHolder();
-	/**
-	 * Field _bonusList.
-	 */
 	private final TIntDoubleHashMap _bonusList = new TIntDoubleHashMap();
 	
 	/**

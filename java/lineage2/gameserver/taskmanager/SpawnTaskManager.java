@@ -14,7 +14,6 @@ package lineage2.gameserver.taskmanager;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
@@ -28,21 +27,9 @@ import lineage2.gameserver.utils.Util;
  */
 public class SpawnTaskManager
 {
-	/**
-	 * Field _spawnTasks.
-	 */
 	SpawnTask[] _spawnTasks = new SpawnTask[500];
-	/**
-	 * Field _spawnTasksSize.
-	 */
 	int _spawnTasksSize = 0;
-	/**
-	 * Field spawnTasks_lock.
-	 */
 	final Object spawnTasks_lock = new Object();
-	/**
-	 * Field _instance.
-	 */
 	private static SpawnTaskManager _instance;
 	
 	/**
@@ -193,13 +180,7 @@ public class SpawnTaskManager
 	 */
 	private class SpawnTask
 	{
-		/**
-		 * Field _npcRef.
-		 */
 		private final HardReference<NpcInstance> _npcRef;
-		/**
-		 * Field endtime.
-		 */
 		public long endtime;
 		
 		/**

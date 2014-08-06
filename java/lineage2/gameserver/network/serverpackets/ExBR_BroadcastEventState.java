@@ -23,7 +23,6 @@ public class ExBR_BroadcastEventState extends L2GameServerPacket
 	private int _param4;
 	private String _param5;
 	private String _param6;
-	
 	public static final int APRIL_FOOLS = 20090401;
 	public static final int EVAS_INFERNO = 20090801; // event state (0 - hide, 1
 	// - show), day (1-14),
@@ -37,7 +36,6 @@ public class ExBR_BroadcastEventState extends L2GameServerPacket
 	public static final int APRIL_FOOLS_10 = 20100401; // event state (0 - hide,
 	
 	// 1 - show)
-	
 	public ExBR_BroadcastEventState(int eventId, int eventState)
 	{
 		_eventId = eventId;

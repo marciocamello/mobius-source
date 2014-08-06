@@ -19,7 +19,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.StringTokenizer;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
@@ -32,7 +31,6 @@ import lineage2.gameserver.network.serverpackets.ExMailArrived;
 import lineage2.gameserver.network.serverpackets.ShowBoard;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,13 +40,7 @@ import org.slf4j.LoggerFactory;
  */
 public final class PrivateMail extends Functions implements ScriptFile, ICommunityBoardHandler
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(PrivateMail.class);
-	/**
-	 * Field MESSAGE_PER_PAGE. (value is 10)
-	 */
 	private static final int MESSAGE_PER_PAGE = 10;
 	
 	/**
@@ -501,21 +493,9 @@ public final class PrivateMail extends Functions implements ScriptFile, ICommuni
 	 */
 	private static class MailData
 	{
-		/**
-		 * Field author.
-		 */
 		public String author;
-		/**
-		 * Field title.
-		 */
 		public String title;
-		/**
-		 * Field postDate.
-		 */
 		public String postDate;
-		/**
-		 * Field messageId.
-		 */
 		public int messageId;
 		
 		/**

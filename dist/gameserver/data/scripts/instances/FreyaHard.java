@@ -14,7 +14,6 @@ package instances;
 
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicInteger;
-
 import lineage2.commons.geometry.Polygon;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
@@ -44,7 +43,6 @@ import lineage2.gameserver.utils.Location;
  * @author pchayka
  *         <p/>
  */
-
 public final class FreyaHard extends Reflection
 {
 	private static final int FreyaThrone = 29177;
@@ -57,7 +55,6 @@ public final class FreyaHard extends Reflection
 	private static final int Sirra = 32762;
 	private static final int Jinia = 18850;
 	private static final int Kegor = 18851;
-	
 	private static final int[] _eventTriggers =
 	{
 		23140202,
@@ -68,24 +65,18 @@ public final class FreyaHard extends Reflection
 		23140214,
 		23140216
 	};
-	
 	private Zone damagezone, attackUp, pcbuff, pcbuff2;
-	
 	ScheduledFuture<?> firstStageGuardSpawn;
 	ScheduledFuture<?> secondStageGuardSpawn;
 	ScheduledFuture<?> thirdStageGuardSpawn;
-	
 	private final ZoneListener _epicZoneListener = new ZoneListener();
 	private final ZoneListenerL _landingZoneListener = new ZoneListenerL();
 	final DeathListener _deathListener = new DeathListener();
 	final CurrentHpListener _currentHpListener = new CurrentHpListener();
-	
 	boolean _entryLocked = false;
 	boolean _startLaunched = false;
 	boolean _freyaSlayed = false;
-	
 	final AtomicInteger raidplayers = new AtomicInteger();
-	
 	static final Territory centralRoom = new Territory().add(new Polygon().add(114264, -113672).add(113640, -114344).add(113640, -115240).add(114264, -115912).add(115176, -115912).add(115800, -115272).add(115800, -114328).add(115192, -113672).setZmax(-11225).setZmin(-11225));
 	
 	public FreyaHard()

@@ -38,29 +38,11 @@ import lineage2.gameserver.utils.Util;
  */
 public class CharacterCreate extends L2GameClientPacket
 {
-	/**
-	 * Field _name.
-	 */
 	private String _name;
-	/**
-	 * Field _sex.
-	 */
 	private int _sex;
-	/**
-	 * Field _classId.
-	 */
 	private int _classId;
-	/**
-	 * Field _hairStyle.
-	 */
 	private int _hairStyle;
-	/**
-	 * Field _hairColor.
-	 */
 	private int _hairColor;
-	/**
-	 * Field _face.
-	 */
 	private int _face;
 	
 	/**

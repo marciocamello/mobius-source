@@ -18,9 +18,6 @@ package lineage2.gameserver.network.clientpackets;
  */
 public class RequestTeleport extends L2GameClientPacket
 {
-	/**
-	 * Field unk4. Field unk3. Field unk2. Field _type. Field unk.
-	 */
 	@SuppressWarnings("unused")
 	private int unk, _type, unk2, unk3, unk4;
 	

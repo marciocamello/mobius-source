@@ -13,7 +13,6 @@
 package ai;
 
 import java.util.List;
-
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -25,17 +24,8 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class MasterYogi extends DefaultAI
 {
-	/**
-	 * Field wait_timeout1.
-	 */
 	private long wait_timeout1 = 0;
-	/**
-	 * Field wait_timeout2.
-	 */
 	private long wait_timeout2 = 0;
-	/**
-	 * Field range.
-	 */
 	private int range = 0;
 	
 	/**

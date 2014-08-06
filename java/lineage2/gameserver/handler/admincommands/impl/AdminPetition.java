@@ -17,7 +17,6 @@ import lineage2.gameserver.instancemanager.PetitionManager;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-
 import org.apache.commons.lang3.math.NumberUtils;
 
 /**
@@ -31,29 +30,11 @@ public class AdminPetition implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_view_petitions.
-		 */
 		admin_view_petitions,
-		/**
-		 * Field admin_view_petition.
-		 */
 		admin_view_petition,
-		/**
-		 * Field admin_accept_petition.
-		 */
 		admin_accept_petition,
-		/**
-		 * Field admin_reject_petition.
-		 */
 		admin_reject_petition,
-		/**
-		 * Field admin_reset_petitions.
-		 */
 		admin_reset_petitions,
-		/**
-		 * Field admin_force_peti.
-		 */
 		admin_force_peti
 	}
 	

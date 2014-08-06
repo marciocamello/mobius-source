@@ -19,7 +19,6 @@ import lineage2.gameserver.taskmanager.Task;
 import lineage2.gameserver.taskmanager.TaskManager;
 import lineage2.gameserver.taskmanager.TaskManager.ExecutedTask;
 import lineage2.gameserver.taskmanager.TaskTypes;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,13 +28,7 @@ import org.slf4j.LoggerFactory;
  */
 public class TaskEndHero extends Task
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(TaskEndHero.class);
-	/**
-	 * Field NAME. (value is ""TaskEndHero"")
-	 */
 	private static final String NAME = "TaskEndHero";
 	
 	/**

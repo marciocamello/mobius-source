@@ -91,5 +91,4 @@ public class AdminForgePacket extends L2GameServerPacket
 	{
 		_parts.add(new Part(b, string));
 	}
-	
 }

@@ -20,65 +20,20 @@ import lineage2.commons.collections.MultiValueSet;
  */
 public class FishTemplate
 {
-	/**
-	 * Field _group.
-	 */
 	private final FishGroup _group;
-	/**
-	 * Field _grade.
-	 */
 	private final FishGrade _grade;
-	/**
-	 * Field _biteRate.
-	 */
 	private final double _biteRate;
-	/**
-	 * Field _guts.
-	 */
 	private final double _guts;
-	/**
-	 * Field _lengthRate.
-	 */
 	private final double _lengthRate;
-	/**
-	 * Field _hpRegen.
-	 */
 	private final double _hpRegen;
-	/**
-	 * Field _gutsCheckProbability.
-	 */
 	private final double _gutsCheckProbability;
-	/**
-	 * Field _cheatingProb.
-	 */
 	private final double _cheatingProb;
-	/**
-	 * Field _itemId.
-	 */
 	private final int _itemId;
-	/**
-	 * Field _hp.
-	 */
 	private final int _hp;
-	/**
-	 * Field _level.
-	 */
 	private final int _level;
-	/**
-	 * Field _maxLength.
-	 */
 	private final int _maxLength;
-	/**
-	 * Field _startCombatTime.
-	 */
 	private final int _startCombatTime;
-	/**
-	 * Field _combatDuration.
-	 */
 	private final int _combatDuration;
-	/**
-	 * Field _gutsCheckTime.
-	 */
 	private final int _gutsCheckTime;
 	
 	/**

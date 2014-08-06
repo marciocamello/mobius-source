@@ -20,13 +20,7 @@ import lineage2.commons.collections.MultiValueSet;
  */
 public class StatsSet extends MultiValueSet<String>
 {
-	/**
-	 * Field serialVersionUID. (value is -2209589233655930756)
-	 */
 	private static final long serialVersionUID = -2209589233655930756L;
-	/**
-	 * Field EMPTY.
-	 */
 	public static final StatsSet EMPTY = new StatsSet()
 	{
 		/**

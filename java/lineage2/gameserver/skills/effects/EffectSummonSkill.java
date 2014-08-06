@@ -24,9 +24,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class EffectSummonSkill extends Effect
 {
-	/**
-	 * Field _skillToCastLevel. Field _skillToCast.
-	 */
 	private final int _skillToCast, _skillToCastLevel;
 	
 	/**

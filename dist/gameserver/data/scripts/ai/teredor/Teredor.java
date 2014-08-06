@@ -13,7 +13,6 @@
 package ai.teredor;
 
 import java.util.List;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -35,69 +34,24 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Teredor extends Fighter
 {
-	/**
-	 * Field teredor.
-	 */
 	static final int teredor = 19160;
-	/**
-	 * Field eliteMillipede.
-	 */
 	private static final int eliteMillipede = 19015;
-	/**
-	 * Field teredorLairEgg.
-	 */
 	static final int teredorLairEgg = 19023;
-	/**
-	 * Field coordsToSpawnEggs.
-	 */
 	final Location[] coordsToSpawnEggs =
 	{
 		new Location(176360, -185096, -3826),
 		new Location(175896, -185576, -3826)
 	};
-	/**
-	 * Field timeFromPassiveToActive.
-	 */
 	static final int timeFromPassiveToActive = 10;
-	/**
-	 * Field delayEggTask.
-	 */
 	private static final int delayEggTask = 90;
-	/**
-	 * Field _teredorActive.
-	 */
 	boolean _teredorActive = true;
-	/**
-	 * Field _eliteSpawned.
-	 */
 	boolean _eliteSpawned = false;
-	/**
-	 * Field _battleActive.
-	 */
 	boolean _battleActive = false;
-	/**
-	 * Field _jumpAttacked.
-	 */
 	boolean _jumpAttacked = false;
-	/**
-	 * Field _canUsePoison.
-	 */
 	boolean _canUsePoison = false;
-	/**
-	 * Field _poisonCasted.
-	 */
 	boolean _poisonCasted = false;
-	/**
-	 * Field teredorEggs.
-	 */
 	List<NpcInstance> teredorEggs;
-	/**
-	 * Field actor.
-	 */
 	private final NpcInstance actor = getActor();
-	/**
-	 * Field _currentHpListener.
-	 */
 	private final CurrentHpListener _currentHpListener = new CurrentHpListener();
 	
 	/**
@@ -216,9 +170,6 @@ public final class Teredor extends Fighter
 	 */
 	public final class TeredorPassiveTask extends RunnableImpl
 	{
-		/**
-		 * Field _npc.
-		 */
 		NpcInstance _npc;
 		
 		/**
@@ -252,9 +203,6 @@ public final class Teredor extends Fighter
 	 */
 	public final class TeredorActiveTask extends RunnableImpl
 	{
-		/**
-		 * Field _npc.
-		 */
 		NpcInstance _npc;
 		
 		/**
@@ -291,9 +239,6 @@ public final class Teredor extends Fighter
 	 */
 	public final class EggSpawnTask extends RunnableImpl
 	{
-		/**
-		 * Field _r.
-		 */
 		Reflection _r;
 		
 		/**

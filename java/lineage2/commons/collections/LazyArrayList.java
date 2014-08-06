@@ -17,7 +17,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.RandomAccess;
-
 import org.apache.commons.pool.ObjectPool;
 import org.apache.commons.pool.PoolableObjectFactory;
 import org.apache.commons.pool.impl.GenericObjectPool;
@@ -30,9 +29,6 @@ import org.apache.commons.pool.impl.GenericObjectPool;
 @SuppressWarnings("unchecked")
 public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.io.Serializable
 {
-	/**
-	 * Field serialVersionUID. (value is 8683452581122892189)
-	 */
 	private static final long serialVersionUID = 8683452581122892189L;
 	
 	/**
@@ -100,13 +96,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		}
 	}
 	
-	/**
-	 * Field POOL_SIZE.
-	 */
 	private static final int POOL_SIZE = Integer.parseInt(System.getProperty("lazyarraylist.poolsize", "-1"));
-	/**
-	 * Field POOL.
-	 */
 	private static final ObjectPool<Object> POOL = new GenericObjectPool<>(new PoolableLazyArrayListFactory(), POOL_SIZE, GenericObjectPool.WHEN_EXHAUSTED_GROW, 0L, -1);
 	
 	/**
@@ -145,25 +135,10 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		}
 	}
 	
-	/**
-	 * Field L.
-	 */
 	private static final int L = 1 << 3;
-	/**
-	 * Field H.
-	 */
 	private static final int H = 1 << 10;
-	/**
-	 * Field elementData.
-	 */
 	protected transient Object[] elementData;
-	/**
-	 * Field size.
-	 */
 	protected transient int size = 0;
-	/**
-	 * Field capacity.
-	 */
 	protected transient int capacity = L;
 	
 	/**
@@ -726,13 +701,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	 */
 	private class LazyItr implements Iterator<E>
 	{
-		/**
-		 * Field cursor.
-		 */
 		int cursor = 0;
-		/**
-		 * Field lastRet.
-		 */
 		int lastRet = -1;
 		
 		/**

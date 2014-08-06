@@ -17,7 +17,6 @@ import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.database.DatabaseFactory;
@@ -386,7 +385,6 @@ public class _501_ProofOfClanAlliance extends Quest implements ScriptFile
 						{
 							deads = st.get("dead_list").split(" ").length;
 						}
-						
 						finally
 						{
 							if (deads == 3)

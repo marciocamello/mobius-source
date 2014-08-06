@@ -21,14 +21,8 @@ import lineage2.gameserver.utils.Location;
 @Deprecated
 public class RequestExGetOnAirShip extends L2GameClientPacket
 {
-	/**
-	 * Field _shipId.
-	 */
 	@SuppressWarnings("unused")
 	private int _shipId;
-	/**
-	 * Field loc.
-	 */
 	private final Location loc = new Location();
 	
 	/**

@@ -17,7 +17,6 @@ public class EnchantResult extends L2GameServerPacket
 	private final int _resultId, _crystalId;
 	private final long _count;
 	private final int _enchantValue;
-	
 	public static final EnchantResult SUCESS = new EnchantResult(0, 0, 0); // вещь
 	// заточилась
 	// public static final EnchantResult FAILED = new EnchantResult(1, 0, 0); //
@@ -62,7 +61,6 @@ public class EnchantResult extends L2GameServerPacket
 	// из
 	// итем
 	// молла)
-	
 	public EnchantResult(int resultId, int crystalId, long count)
 	{
 		this(resultId, crystalId, count, 0);

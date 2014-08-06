@@ -31,45 +31,15 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class FortuneBug extends DefaultAI
 {
-	/**
-	 * Field MAX_RADIUS. (value is 500)
-	 */
 	private static final int MAX_RADIUS = 500;
-	/**
-	 * Field ItemName_A. (value is 57)
-	 */
 	private static final int ItemName_A = 57;
-	/**
-	 * Field ItemName_B_1. (value is 1881)
-	 */
 	private static final int ItemName_B_1 = 1881;
-	/**
-	 * Field ItemName_B_2. (value is 1890)
-	 */
 	private static final int ItemName_B_2 = 1890;
-	/**
-	 * Field ItemName_B_3. (value is 1880)
-	 */
 	private static final int ItemName_B_3 = 1880;
-	/**
-	 * Field ItemName_B_4. (value is 729)
-	 */
 	private static final int ItemName_B_4 = 729;
-	/**
-	 * Field s_display_bug_of_fortune1.
-	 */
 	private static final Skill s_display_bug_of_fortune1 = SkillTable.getInstance().getInfo(6045, 1);
-	/**
-	 * Field s_display_jackpot_firework.
-	 */
 	private static final Skill s_display_jackpot_firework = SkillTable.getInstance().getInfo(5778, 1);
-	/**
-	 * Field _nextEat.
-	 */
 	private long _nextEat;
-	/**
-	 * Field i_ai2. Field i_ai1. Field i_ai0.
-	 */
 	private int i_ai0, i_ai1, i_ai2;
 	
 	/**

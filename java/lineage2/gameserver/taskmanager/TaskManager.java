@@ -19,7 +19,6 @@ import static lineage2.gameserver.taskmanager.TaskTypes.TYPE_SHEDULED;
 import static lineage2.gameserver.taskmanager.TaskTypes.TYPE_SPECIAL;
 import static lineage2.gameserver.taskmanager.TaskTypes.TYPE_STARTUP;
 import static lineage2.gameserver.taskmanager.TaskTypes.TYPE_TIME;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -32,7 +31,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
@@ -41,7 +39,6 @@ import lineage2.gameserver.taskmanager.tasks.SoIStageUpdater;
 import lineage2.gameserver.taskmanager.tasks.TaskRecom;
 import lineage2.gameserver.taskmanager.tasks.TaskVitalitySystem;
 import lineage2.gameserver.taskmanager.tasks.WorldStatisticUpdate;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -51,17 +48,8 @@ import org.slf4j.LoggerFactory;
  */
 public final class TaskManager
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(TaskManager.class);
-	/**
-	 * Field _instance.
-	 */
 	private static TaskManager _instance;
-	/**
-	 * Field SQL_STATEMENTS.
-	 */
 	static final String[] SQL_STATEMENTS =
 	{
 		"SELECT id,task,type,last_activation,param1,param2,param3 FROM global_tasks",
@@ -69,13 +57,7 @@ public final class TaskManager
 		"SELECT id FROM global_tasks WHERE task=?",
 		"INSERT INTO global_tasks (task,type,last_activation,param1,param2,param3) VALUES(?,?,?,?,?,?)"
 	};
-	/**
-	 * Field _tasks.
-	 */
 	private final Map<Integer, Task> _tasks = new ConcurrentHashMap<>();
-	/**
-	 * Field _currentTasks.
-	 */
 	final List<ExecutedTask> _currentTasks = new ArrayList<>();
 	
 	/**
@@ -83,29 +65,11 @@ public final class TaskManager
 	 */
 	public class ExecutedTask extends RunnableImpl
 	{
-		/**
-		 * Field _id.
-		 */
 		int _id;
-		/**
-		 * Field _lastActivation.
-		 */
 		long _lastActivation;
-		/**
-		 * Field _task.
-		 */
 		Task _task;
-		/**
-		 * Field _type.
-		 */
 		TaskTypes _type;
-		/**
-		 * Field _params.
-		 */
 		String[] _params;
-		/**
-		 * Field _scheduled.
-		 */
 		ScheduledFuture<?> _scheduled;
 		
 		/**

@@ -14,7 +14,6 @@ package lineage2.gameserver.data.xml.holder;
 
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.templates.DoorTemplate;
-
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 
@@ -24,13 +23,7 @@ import org.napile.primitive.maps.impl.HashIntObjectMap;
  */
 public final class DoorHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final DoorHolder _instance = new DoorHolder();
-	/**
-	 * Field _doors.
-	 */
 	private final IntObjectMap<DoorTemplate> _doors = new HashIntObjectMap<>();
 	
 	/**

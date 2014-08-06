@@ -31,101 +31,29 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class FreyaThrone extends Fighter
 {
-	/**
-	 * Field Skill_EternalBlizzard. (value is 6274)
-	 */
 	private static final int Skill_EternalBlizzard = 6274;
-	/**
-	 * Field _eternalblizzardReuseTimer.
-	 */
 	private long _eternalblizzardReuseTimer = 0;
-	/**
-	 * Field _eternalblizzardReuseDelay.
-	 */
 	private static final int _eternalblizzardReuseDelay = 60;
-	/**
-	 * Field Skill_IceBall. (value is 6278)
-	 */
 	private static final int Skill_IceBall = 6278;
-	/**
-	 * Field _iceballReuseTimer.
-	 */
 	private long _iceballReuseTimer = 0;
-	/**
-	 * Field _iceballReuseDelay.
-	 */
 	private static final int _iceballReuseDelay = 20;
-	/**
-	 * Field _iceballChance.
-	 */
 	private static final int _iceballChance = 60;
-	/**
-	 * Field Skill_SummonElemental. (value is 6277)
-	 */
 	private static final int Skill_SummonElemental = 6277;
-	/**
-	 * Field _summonReuseTimer.
-	 */
 	private long _summonReuseTimer = 0;
-	/**
-	 * Field _summonReuseDelay.
-	 */
 	private static final int _summonReuseDelay = 60;
-	/**
-	 * Field _summonChance.
-	 */
 	private static final int _summonChance = 70;
-	/**
-	 * Field Skill_SelfNova. (value is 6279)
-	 */
 	private static final int Skill_SelfNova = 6279;
-	/**
-	 * Field _selfnovaReuseTimer.
-	 */
 	private long _selfnovaReuseTimer = 0;
-	/**
-	 * Field _selfnovaReuseDelay.
-	 */
 	private static final int _selfnovaReuseDelay = 70;
-	/**
-	 * Field Skill_DeathSentence. (value is 6280)
-	 */
 	private static final int Skill_DeathSentence = 6280;
-	/**
-	 * Field _deathsentenceReuseTimer.
-	 */
 	private long _deathsentenceReuseTimer = 0;
-	/**
-	 * Field _deathsentenceReuseDelay.
-	 */
 	private static final int _deathsentenceReuseDelay = 50;
-	/**
-	 * Field _deathsentenceChance.
-	 */
 	private static final int _deathsentenceChance = 60;
-	/**
-	 * Field Skill_Anger. (value is 6285)
-	 */
 	private static final int Skill_Anger = 6285;
-	/**
-	 * Field _angerReuseTimer.
-	 */
 	private long _angerReuseTimer = 0;
-	/**
-	 * Field _angerReuseDelay.
-	 */
 	private static final int _angerReuseDelay = 50;
-	/**
-	 * Field _angerChance.
-	 */
 	private static final int _angerChance = 60;
-	/**
-	 * Field _idleDelay.
-	 */
 	private long _idleDelay = 0;
-	/**
-	 * Field lastFactionNotifyTime.
-	 */
 	private long lastFactionNotifyTime = 0;
 	
 	/**

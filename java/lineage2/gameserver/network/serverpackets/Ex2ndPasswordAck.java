@@ -16,7 +16,6 @@ public class Ex2ndPasswordAck extends L2GameServerPacket
 {
 	public static final int SUCCESS = 0x00;
 	public static final int WRONG_PATTERN = 0x01;
-	
 	private final int _response;
 	
 	public Ex2ndPasswordAck(int response)

@@ -14,7 +14,6 @@ package lineage2.gameserver.network.clientpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.instancemanager.CastleManorManager;
 import lineage2.gameserver.model.Player;
@@ -28,13 +27,7 @@ import lineage2.gameserver.templates.manor.CropProcure;
  */
 public class RequestSetCrop extends L2GameClientPacket
 {
-	/**
-	 * Field _manorId. Field _count.
-	 */
 	private int _count, _manorId;
-	/**
-	 * Field _items.
-	 */
 	private long[] _items;
 	
 	/**

@@ -14,7 +14,6 @@ package npc.model.residences.castle;
 
 import java.util.List;
 import java.util.Set;
-
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.entity.events.impl.CastleSiegeEvent;
 import lineage2.gameserver.model.entity.events.objects.CastleDamageZoneObject;
@@ -31,9 +30,6 @@ public final class CastleFlameTowerInstance extends SiegeToggleNpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _zoneList.
-	 */
 	private Set<String> _zoneList;
 	
 	/**

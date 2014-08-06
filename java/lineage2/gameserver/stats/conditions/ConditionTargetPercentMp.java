@@ -20,9 +20,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionTargetPercentMp extends Condition
 {
-	/**
-	 * Field _mp.
-	 */
 	private final double _mp;
 	
 	/**

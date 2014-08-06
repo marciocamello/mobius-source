@@ -14,7 +14,6 @@ package services;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener;
@@ -35,17 +34,8 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class TeleToGH extends Functions implements ScriptFile
 {
-	/**
-	 * Field _spawns.
-	 */
 	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
-	/**
-	 * Field _zone.
-	 */
 	private static final Zone _zone = ReflectionUtils.getZone("[giran_harbor_offshore]");
-	/**
-	 * Field _zoneListener.
-	 */
 	private static ZoneListener _zoneListener;
 	
 	/**

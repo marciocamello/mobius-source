@@ -14,10 +14,8 @@ package lineage2.gameserver.handler.bbs;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.templates.StatsSet;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,21 +25,9 @@ import org.slf4j.LoggerFactory;
  */
 public class CommunityBoardManager
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(CommunityBoardManager.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final CommunityBoardManager _instance = new CommunityBoardManager();
-	/**
-	 * Field _handlers.
-	 */
 	private final Map<String, ICommunityBoardHandler> _handlers = new HashMap<>();
-	/**
-	 * Field _properties.
-	 */
 	private final StatsSet _properties = new StatsSet();
 	
 	/**

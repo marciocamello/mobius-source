@@ -17,10 +17,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Date;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,9 +28,6 @@ import org.slf4j.LoggerFactory;
  */
 public final class EpicBossState
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(EpicBossState.class);
 	
 	/**
@@ -40,35 +35,14 @@ public final class EpicBossState
 	 */
 	public static enum State
 	{
-		/**
-		 * Field NOTSPAWN.
-		 */
 		NOTSPAWN,
-		/**
-		 * Field ALIVE.
-		 */
 		ALIVE,
-		/**
-		 * Field DEAD.
-		 */
 		DEAD,
-		/**
-		 * Field INTERVAL.
-		 */
 		INTERVAL
 	}
 	
-	/**
-	 * Field _bossId.
-	 */
 	private int _bossId;
-	/**
-	 * Field _respawnDate.
-	 */
 	private long _respawnDate;
-	/**
-	 * Field _state.
-	 */
 	private State _state;
 	
 	/**

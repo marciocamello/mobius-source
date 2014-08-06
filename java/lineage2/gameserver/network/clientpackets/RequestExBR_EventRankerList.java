@@ -18,9 +18,6 @@ package lineage2.gameserver.network.clientpackets;
  */
 public class RequestExBR_EventRankerList extends L2GameClientPacket
 {
-	/**
-	 * Field unk3. Field unk2. Field unk.
-	 */
 	@SuppressWarnings("unused")
 	private int unk, unk2, unk3;
 	

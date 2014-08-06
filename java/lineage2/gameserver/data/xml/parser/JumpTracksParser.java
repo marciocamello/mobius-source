@@ -14,7 +14,6 @@ package lineage2.gameserver.data.xml.parser;
 
 import java.io.File;
 import java.util.Iterator;
-
 import lineage2.commons.data.xml.AbstractFileParser;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.JumpTracksHolder;
@@ -22,7 +21,6 @@ import lineage2.gameserver.templates.jump.JumpPoint;
 import lineage2.gameserver.templates.jump.JumpTrack;
 import lineage2.gameserver.templates.jump.JumpWay;
 import lineage2.gameserver.utils.Location;
-
 import org.dom4j.Element;
 
 /**
@@ -31,9 +29,6 @@ import org.dom4j.Element;
  */
 public final class JumpTracksParser extends AbstractFileParser<JumpTracksHolder>
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final JumpTracksParser _instance = new JumpTracksParser();
 	
 	/**

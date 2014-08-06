@@ -24,9 +24,6 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class WardofDeath extends DefaultAI
 {
-	/**
-	 * Field mobs.
-	 */
 	private static final int[] mobs =
 	{
 		22516,

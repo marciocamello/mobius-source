@@ -18,14 +18,8 @@ package lineage2.gameserver.network.clientpackets;
  */
 public class PetitionVote extends L2GameClientPacket
 {
-	/**
-	 * Field _unk1. Field _type.
-	 */
 	@SuppressWarnings("unused")
 	private int _type, _unk1;
-	/**
-	 * Field _petitionText.
-	 */
 	@SuppressWarnings("unused")
 	private String _petitionText;
 	

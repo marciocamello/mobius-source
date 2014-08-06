@@ -14,14 +14,12 @@ package lineage2.gameserver.data.xml.parser;
 
 import java.io.File;
 import java.util.Iterator;
-
 import lineage2.commons.data.xml.AbstractFileParser;
 import lineage2.commons.geometry.Polygon;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.instancemanager.MapRegionManager;
 import lineage2.gameserver.model.Territory;
 import lineage2.gameserver.templates.mapregion.DomainArea;
-
 import org.dom4j.Element;
 
 /**
@@ -30,9 +28,6 @@ import org.dom4j.Element;
  */
 public class DomainParser extends AbstractFileParser<MapRegionManager>
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final DomainParser _instance = new DomainParser();
 	
 	/**

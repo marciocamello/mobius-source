@@ -31,9 +31,6 @@ public final class CannibalisticStakatoChiefInstance extends RaidBossInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field ITEMS.
-	 */
 	private static final int ITEMS[] =
 	{
 		14833,

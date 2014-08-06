@@ -17,7 +17,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.GameTimeController;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -29,7 +28,6 @@ import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.templates.spawn.PeriodOfDay;
 import lineage2.gameserver.templates.spawn.SpawnTemplate;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -75,21 +73,9 @@ public class SpawnManager
 		}
 	}
 	
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(SpawnManager.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final SpawnManager _instance = new SpawnManager();
-	/**
-	 * Field _spawns.
-	 */
 	private final Map<String, List<Spawner>> _spawns = new ConcurrentHashMap<>();
-	/**
-	 * Field _listeners.
-	 */
 	private final Listeners _listeners = new Listeners();
 	
 	/**

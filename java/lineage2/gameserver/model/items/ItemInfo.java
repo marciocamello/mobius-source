@@ -22,81 +22,24 @@ import lineage2.gameserver.templates.item.ItemTemplate;
  */
 public class ItemInfo
 {
-	/**
-	 * Field ownerId.
-	 */
 	private int ownerId;
-	/**
-	 * Field lastChange.
-	 */
 	private int lastChange;
-	/**
-	 * Field type1.
-	 */
 	private int type1;
-	/**
-	 * Field objectId.
-	 */
 	private int objectId;
-	/**
-	 * Field itemId.
-	 */
 	private int itemId;
-	/**
-	 * Field count.
-	 */
 	private long count;
-	/**
-	 * Field type2.
-	 */
 	private int type2;
-	/**
-	 * Field customType1.
-	 */
 	private int customType1;
-	/**
-	 * Field isEquipped.
-	 */
 	private boolean isEquipped;
-	/**
-	 * Field bodyPart.
-	 */
 	private int bodyPart;
-	/**
-	 * Field enchantLevel.
-	 */
 	private int enchantLevel;
-	/**
-	 * Field customType2.
-	 */
 	private int customType2;
-	/**
-	 * Field augmentationId.
-	 */
 	private int augmentationId;
-	/**
-	 * Field shadowLifeTime.
-	 */
 	private int shadowLifeTime;
-	/**
-	 * Field attackElement.
-	 */
 	private int attackElement = Element.NONE.getId();
-	/**
-	 * Field attackElementValue.
-	 */
 	private int attackElementValue;
-	/**
-	 * Field defenceFire.
-	 */
 	private int defenceFire;
-	/**
-	 * Field defenceWater.
-	 */
 	private int defenceWater;
-	/**
-	 * Field defenceWind.
-	 */
 	private int defenceWind;
 	private int defenceEarth;
 	private int defenceHoly;
@@ -105,7 +48,6 @@ public class ItemInfo
 	private int temporalLifeTime;
 	private int[] enchantOptions = ItemInstance.EMPTY_ENCHANT_OPTIONS;
 	private int visualId;
-	
 	private ItemTemplate item;
 	
 	/**

@@ -14,7 +14,6 @@ package lineage2.gameserver.tables;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;

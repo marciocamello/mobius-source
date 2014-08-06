@@ -13,7 +13,6 @@
 package lineage2.gameserver.model;
 
 import java.util.List;
-
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -30,7 +29,6 @@ import lineage2.gameserver.taskmanager.SpawnTaskManager;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.templates.spawn.SpawnRange;
 import lineage2.gameserver.utils.Location;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,53 +42,17 @@ public abstract class Spawner extends EventOwner implements Cloneable
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _log.
-	 */
 	protected static final Logger _log = LoggerFactory.getLogger(Spawner.class);
-	/**
-	 * Field MIN_RESPAWN_DELAY. (value is 20)
-	 */
 	protected static final int MIN_RESPAWN_DELAY = 20;
-	/**
-	 * Field _maximumCount.
-	 */
 	protected int _maximumCount;
-	/**
-	 * Field _referenceCount.
-	 */
 	protected int _referenceCount;
-	/**
-	 * Field _currentCount.
-	 */
 	protected int _currentCount;
-	/**
-	 * Field _scheduledCount.
-	 */
 	protected int _scheduledCount;
-	/**
-	 * Field _nativeRespawnDelay. Field _respawnDelayRandom. Field _respawnDelay.
-	 */
 	protected int _respawnDelay, _respawnDelayRandom, _nativeRespawnDelay;
-	/**
-	 * Field _respawnTime.
-	 */
 	protected int _respawnTime;
-	/**
-	 * Field _doRespawn.
-	 */
 	protected boolean _doRespawn;
-	/**
-	 * Field _lastSpawn.
-	 */
 	protected NpcInstance _lastSpawn;
-	/**
-	 * Field _spawned.
-	 */
 	protected List<NpcInstance> _spawned;
-	/**
-	 * Field _reflection.
-	 */
 	protected Reflection _reflection = ReflectionManager.DEFAULT;
 	
 	/**

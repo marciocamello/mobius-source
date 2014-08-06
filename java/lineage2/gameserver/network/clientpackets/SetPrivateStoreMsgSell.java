@@ -20,9 +20,6 @@ import lineage2.gameserver.model.Player;
  */
 public class SetPrivateStoreMsgSell extends L2GameClientPacket
 {
-	/**
-	 * Field _storename.
-	 */
 	private String _storename;
 	
 	/**

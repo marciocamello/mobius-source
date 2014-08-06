@@ -22,9 +22,6 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class TakeBeastHandler extends Functions
 {
-	/**
-	 * Field BEAST_WHIP.
-	 */
 	private final int BEAST_WHIP = 15473;
 	
 	/**

@@ -13,7 +13,6 @@
 package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
-
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.model.Creature;
@@ -42,31 +41,13 @@ public class SummonSiegeFlag extends Skill
 	 */
 	public static enum FlagType
 	{
-		/**
-		 * Field DESTROY.
-		 */
 		DESTROY,
-		/**
-		 * Field NORMAL.
-		 */
 		NORMAL,
-		/**
-		 * Field ADVANCED.
-		 */
 		ADVANCED,
-		/**
-		 * Field OUTPOST.
-		 */
 		OUTPOST
 	}
 	
-	/**
-	 * Field _flagType.
-	 */
 	private final FlagType _flagType;
-	/**
-	 * Field _advancedMult.
-	 */
 	private final double _advancedMult;
 	
 	/**

@@ -23,13 +23,7 @@ import lineage2.gameserver.stats.Env;
  */
 public class EffectLockInventory extends Effect
 {
-	/**
-	 * Field _lockType.
-	 */
 	private final LockType _lockType;
-	/**
-	 * Field _lockItems.
-	 */
 	private final int[] _lockItems;
 	
 	/**

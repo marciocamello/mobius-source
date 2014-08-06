@@ -22,9 +22,6 @@ import lineage2.gameserver.model.quest.Quest;
  */
 public class RequestTutorialQuestionMark extends L2GameClientPacket
 {
-	/**
-	 * Field _number.
-	 */
 	int _number = 0;
 	
 	/**

@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.SubUnit;

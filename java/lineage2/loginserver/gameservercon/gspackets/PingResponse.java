@@ -14,7 +14,6 @@ package lineage2.loginserver.gameservercon.gspackets;
 
 import lineage2.loginserver.gameservercon.GameServer;
 import lineage2.loginserver.gameservercon.ReceivablePacket;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,13 +23,7 @@ import org.slf4j.LoggerFactory;
  */
 public class PingResponse extends ReceivablePacket
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(PingResponse.class);
-	/**
-	 * Field _serverTime.
-	 */
 	private long _serverTime;
 	
 	/**

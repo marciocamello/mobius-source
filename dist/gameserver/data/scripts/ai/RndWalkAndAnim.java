@@ -25,9 +25,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class RndWalkAndAnim extends DefaultAI
 {
-	/**
-	 * Field PET_WALK_RANGE. (value is 100)
-	 */
 	protected static final int PET_WALK_RANGE = 100;
 	
 	/**

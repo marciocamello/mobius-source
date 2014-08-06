@@ -27,17 +27,8 @@ import lineage2.gameserver.utils.Location;
  */
 public class AnswerCoupleAction extends L2GameClientPacket
 {
-	/**
-	 * Field _charObjId.
-	 */
 	private int _charObjId;
-	/**
-	 * Field _actionId.
-	 */
 	private int _actionId;
-	/**
-	 * Field _answer.
-	 */
 	private int _answer;
 	
 	/**

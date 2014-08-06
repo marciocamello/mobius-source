@@ -18,29 +18,11 @@ package lineage2.gameserver.utils;
  */
 public class SqlBatch
 {
-	/**
-	 * Field _header.
-	 */
 	private final String _header;
-	/**
-	 * Field _tail.
-	 */
 	private final String _tail;
-	/**
-	 * Field _sb.
-	 */
 	private StringBuilder _sb;
-	/**
-	 * Field _result.
-	 */
 	private final StringBuilder _result;
-	/**
-	 * Field _limit.
-	 */
 	private long _limit = Long.MAX_VALUE;
-	/**
-	 * Field isEmpty.
-	 */
 	private boolean isEmpty = true;
 	
 	/**

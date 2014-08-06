@@ -14,7 +14,6 @@ package ai.selmahum;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.geodata.GeoEngine;
@@ -27,13 +26,7 @@ import lineage2.gameserver.utils.Location;
  */
 public final class SelChef extends Fighter
 {
-	/**
-	 * Field targetLoc.
-	 */
 	private Location targetLoc;
-	/**
-	 * Field wait_timeout.
-	 */
 	private long wait_timeout = 0;
 	
 	/**

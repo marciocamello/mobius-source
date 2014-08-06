@@ -20,25 +20,10 @@ import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
  */
 public class ReentrantReadWriteLock
 {
-	/**
-	 * Field stateUpdater.
-	 */
 	private static final AtomicIntegerFieldUpdater<ReentrantReadWriteLock> stateUpdater = AtomicIntegerFieldUpdater.newUpdater(ReentrantReadWriteLock.class, "state");
-	/**
-	 * Field SHARED_SHIFT. (value is 16)
-	 */
 	static final int SHARED_SHIFT = 16;
-	/**
-	 * Field SHARED_UNIT.
-	 */
 	static final int SHARED_UNIT = (1 << SHARED_SHIFT);
-	/**
-	 * Field MAX_COUNT.
-	 */
 	static final int MAX_COUNT = (1 << SHARED_SHIFT) - 1;
-	/**
-	 * Field EXCLUSIVE_MASK.
-	 */
 	static final int EXCLUSIVE_MASK = (1 << SHARED_SHIFT) - 1;
 	
 	/**
@@ -66,13 +51,7 @@ public class ReentrantReadWriteLock
 	 */
 	static final class HoldCounter
 	{
-		/**
-		 * Field count.
-		 */
 		int count;
-		/**
-		 * Field tid.
-		 */
 		final long tid = Thread.currentThread().getId();
 		
 		/**
@@ -108,21 +87,9 @@ public class ReentrantReadWriteLock
 		}
 	}
 	
-	/**
-	 * Field readHolds.
-	 */
 	transient ThreadLocalHoldCounter readHolds;
-	/**
-	 * Field cachedHoldCounter.
-	 */
 	transient HoldCounter cachedHoldCounter;
-	/**
-	 * Field owner.
-	 */
 	private Thread owner;
-	/**
-	 * Field state.
-	 */
 	private volatile int state;
 	
 	/**

@@ -23,7 +23,6 @@ import lineage2.gameserver.stats.Formulas;
  */
 public class EffectMDamOverTime extends Effect
 {
-	
 	/**
 	 * Constructor for EffectDamOverTime.
 	 * @param env Env

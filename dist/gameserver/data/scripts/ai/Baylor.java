@@ -14,7 +14,6 @@ package ai;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -35,81 +34,24 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public final class Baylor extends DefaultAI
 {
-	/**
-	 * Field Berserk.
-	 */
 	final Skill Berserk;
-	/**
-	 * Field Invincible.
-	 */
 	final Skill Invincible;
-	/**
-	 * Field Imprison.
-	 */
 	final Skill Imprison;
-	/**
-	 * Field GroundStrike.
-	 */
 	final Skill GroundStrike;
-	/**
-	 * Field JumpAttack.
-	 */
 	final Skill JumpAttack;
-	/**
-	 * Field StrongPunch.
-	 */
 	final Skill StrongPunch;
-	/**
-	 * Field Stun1.
-	 */
 	final Skill Stun1;
-	/**
-	 * Field Stun2.
-	 */
 	final Skill Stun2;
-	/**
-	 * Field Stun3.
-	 */
 	final Skill Stun3;
-	/**
-	 * Field PresentationBalor2.
-	 */
 	static final int PresentationBalor2 = 5402;
-	/**
-	 * Field PresentationBalor3.
-	 */
 	static final int PresentationBalor3 = 5403;
-	/**
-	 * Field PresentationBalor4.
-	 */
 	static final int PresentationBalor4 = 5404;
-	/**
-	 * Field PresentationBalor10.
-	 */
 	static final int PresentationBalor10 = 5410;
-	/**
-	 * Field PresentationBalor11.
-	 */
 	static final int PresentationBalor11 = 5411;
-	/**
-	 * Field PresentationBalor12.
-	 */
 	static final int PresentationBalor12 = 5412;
-	/**
-	 * Field Water_Dragon_Claw. (value is 2360)
-	 */
 	static private final int Water_Dragon_Claw = 2360;
-	/**
-	 * Field _isUsedInvincible.
-	 */
 	private boolean _isUsedInvincible = false;
-	/**
-	 * Field _claw_count.
-	 */
 	private int _claw_count = 0;
-	/**
-	 * Field _last_claw_time.
-	 */
 	private long _last_claw_time = 0;
 	
 	/**

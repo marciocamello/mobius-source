@@ -26,13 +26,7 @@ public final class ShuttleTemplate extends CharTemplate
 	 */
 	public static class ShuttleDoor
 	{
-		/**
-		 * Field _id.
-		 */
 		private final int _id;
-		/**
-		 * Field unkParam.
-		 */
 		public final int[] unkParam = new int[9];
 		
 		/**
@@ -64,13 +58,7 @@ public final class ShuttleTemplate extends CharTemplate
 		}
 	}
 	
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _doors.
-	 */
 	private final TreeMap<Integer, ShuttleDoor> _doors = new TreeMap<>();
 	
 	/**

@@ -23,7 +23,6 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.reward.RewardList;
@@ -34,17 +33,8 @@ import lineage2.gameserver.model.reward.RewardList;
  */
 public class Util
 {
-	/**
-	 * Field PATTERN. (value is ""0.0000000000E00"")
-	 */
 	static final String PATTERN = "0.0000000000E00";
-	/**
-	 * Field df.
-	 */
 	static final DecimalFormat df;
-	/**
-	 * Field adenaFormatter.
-	 */
 	private static NumberFormat adenaFormatter;
 	static
 	{
@@ -449,9 +439,6 @@ public class Util
 		return result;
 	}
 	
-	/**
-	 * Field _pattern.
-	 */
 	private static final Pattern _pattern = Pattern.compile("<!--TEMPLET(\\d+)(.*?)TEMPLET-->", Pattern.DOTALL);
 	
 	/**

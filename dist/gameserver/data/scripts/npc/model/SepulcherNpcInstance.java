@@ -16,7 +16,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Future;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.GameObjectsStorage;
@@ -44,21 +43,9 @@ public final class SepulcherNpcInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _hallGateKeepers.
-	 */
 	protected static final Map<Integer, Integer> _hallGateKeepers = new HashMap<>();
-	/**
-	 * Field _spawnMonsterTask. Field _closeTask.
-	 */
 	protected Future<?> _closeTask = null, _spawnMonsterTask = null;
-	/**
-	 * Field HTML_FILE_PATH. (value is ""SepulcherNpc/"")
-	 */
 	private final static String HTML_FILE_PATH = "SepulcherNpc/";
-	/**
-	 * Field HALLS_KEY. (value is 7260)
-	 */
 	private final static int HALLS_KEY = 7260;
 	
 	/**
@@ -266,13 +253,7 @@ public final class SepulcherNpcInstance extends NpcInstance
 	 */
 	private class CloseNextDoor extends RunnableImpl
 	{
-		/**
-		 * Field _gk.
-		 */
 		private final GateKeeper _gk;
-		/**
-		 * Field state.
-		 */
 		private int state = 0;
 		
 		/**
@@ -317,9 +298,6 @@ public final class SepulcherNpcInstance extends NpcInstance
 	 */
 	private class SpawnMonster extends RunnableImpl
 	{
-		/**
-		 * Field _NpcId.
-		 */
 		private final int _NpcId;
 		
 		/**

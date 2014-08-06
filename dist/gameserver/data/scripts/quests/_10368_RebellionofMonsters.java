@@ -20,14 +20,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 //By Evil_dnk
 public class _10368_RebellionofMonsters extends Quest implements ScriptFile
 {
-	
 	private static final int fred = 33179;
-	
 	private static final int jaga = 23024;
 	private static final int jagav = 23025;
 	private static final int incect = 23099;
 	private static final int incectl = 23100;
-	
 	private static final String jaga_item = "jaga";
 	private static final String jagav_item = "jagav";
 	private static final String incect_item = "incect";

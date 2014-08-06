@@ -13,13 +13,11 @@
 package lineage2.gameserver.model.instances;
 
 import java.util.StringTokenizer;
-
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.residence.Residence;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,9 +31,6 @@ public final class WyvernManagerInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(WyvernManagerInstance.class);
 	

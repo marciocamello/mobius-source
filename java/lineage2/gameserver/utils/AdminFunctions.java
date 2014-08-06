@@ -27,9 +27,6 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
  */
 public final class AdminFunctions
 {
-	/**
-	 * Field JAIL_SPAWN.
-	 */
 	public final static Location JAIL_SPAWN = new Location(-114648, -249384, -2984);
 	
 	/**

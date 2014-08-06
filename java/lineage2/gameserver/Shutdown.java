@@ -14,7 +14,6 @@ package lineage2.gameserver;
 
 import java.util.Timer;
 import java.util.TimerTask;
-
 import lineage2.commons.net.nio.impl.SelectorThread;
 import lineage2.commons.time.cron.SchedulingPattern;
 import lineage2.commons.time.cron.SchedulingPattern.InvalidPatternException;
@@ -31,7 +30,6 @@ import lineage2.gameserver.network.loginservercon.LoginServerCommunication;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.Scripts;
 import lineage2.gameserver.utils.Util;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,25 +39,10 @@ import org.slf4j.LoggerFactory;
  */
 public class Shutdown extends Thread
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Shutdown.class);
-	/**
-	 * Field SHUTDOWN. (value is 0)
-	 */
 	public static final int SHUTDOWN = 0;
-	/**
-	 * Field RESTART. (value is 2)
-	 */
 	public static final int RESTART = 2;
-	/**
-	 * Field NONE. (value is -1)
-	 */
 	public static final int NONE = -1;
-	/**
-	 * Field _instance.
-	 */
 	private static final Shutdown _instance = new Shutdown();
 	
 	/**
@@ -71,17 +54,8 @@ public class Shutdown extends Thread
 		return _instance;
 	}
 	
-	/**
-	 * Field counter.
-	 */
 	private Timer counter;
-	/**
-	 * Field shutdownMode.
-	 */
 	int shutdownMode;
-	/**
-	 * Field shutdownCounter.
-	 */
 	int shutdownCounter;
 	
 	/**

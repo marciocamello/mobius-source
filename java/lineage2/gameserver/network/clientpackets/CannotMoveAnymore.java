@@ -22,9 +22,6 @@ import lineage2.gameserver.utils.Location;
  */
 public class CannotMoveAnymore extends L2GameClientPacket
 {
-	/**
-	 * Field _loc.
-	 */
 	private final Location _loc = new Location();
 	
 	/**

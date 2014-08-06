@@ -22,13 +22,7 @@ import lineage2.gameserver.model.pledge.Alliance;
  */
 public class RequestSetAllyCrest extends L2GameClientPacket
 {
-	/**
-	 * Field _length.
-	 */
 	private int _length;
-	/**
-	 * Field _data.
-	 */
 	private byte[] _data;
 	
 	/**

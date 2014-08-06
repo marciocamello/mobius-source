@@ -20,7 +20,6 @@ public class ExRegistPartySubstitute extends L2GameServerPacket
 {
 	public static final int REGISTER_OK = 1;
 	public static final int REGISTER_TIMEOUT = 0;
-	
 	private final int _objId;
 	private final int _code;
 	

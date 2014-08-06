@@ -29,17 +29,8 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class RequestConfirmCastleSiegeWaitingList extends L2GameClientPacket
 {
-	/**
-	 * Field _approved.
-	 */
 	private boolean _approved;
-	/**
-	 * Field _unitId.
-	 */
 	private int _unitId;
-	/**
-	 * Field _clanId.
-	 */
 	private int _clanId;
 	
 	/**

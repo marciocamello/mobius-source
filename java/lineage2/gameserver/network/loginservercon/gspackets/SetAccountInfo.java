@@ -20,17 +20,8 @@ import lineage2.gameserver.network.loginservercon.SendablePacket;
  */
 public class SetAccountInfo extends SendablePacket
 {
-	/**
-	 * Field _account.
-	 */
 	private final String _account;
-	/**
-	 * Field _size.
-	 */
 	private final int _size;
-	/**
-	 * Field _deleteChars.
-	 */
 	private final int[] _deleteChars;
 	
 	/**

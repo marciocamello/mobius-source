@@ -27,18 +27,12 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class TimakOrcTroopLeader extends Fighter
 {
-	/**
-	 * Field BROTHERS.
-	 */
 	private static final int[] BROTHERS =
 	{
 		20768,
 		20769,
 		20770
 	};
-	/**
-	 * Field _firstTimeAttacked.
-	 */
 	private boolean _firstTimeAttacked = true;
 	
 	/**

@@ -23,13 +23,7 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class ManaRegen extends Functions
 {
-	/**
-	 * Field ADENA. (value is 57)
-	 */
 	private static final int ADENA = 57;
-	/**
-	 * Field PRICE. (value is 5)
-	 */
 	private static final long PRICE = 5;
 	
 	/**

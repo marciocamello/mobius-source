@@ -14,7 +14,6 @@ package lineage2.gameserver.skills.skillclasses;
 
 import java.util.Collections;
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Effect;
@@ -34,9 +33,6 @@ import lineage2.gameserver.utils.EffectsComparator;
  */
 public class StealBuff extends Skill
 {
-	/**
-	 * Field _stealCount.
-	 */
 	private final int _stealCount;
 	
 	/**

@@ -23,9 +23,6 @@ import lineage2.gameserver.templates.item.RecipeTemplate;
  */
 public class RequestRecipeItemMakeInfo extends L2GameClientPacket
 {
-	/**
-	 * Field _id.
-	 */
 	private int _id;
 	
 	/**

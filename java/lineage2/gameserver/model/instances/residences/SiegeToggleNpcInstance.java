@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.instances.residences;
 
 import java.util.Set;
-
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
@@ -34,13 +33,7 @@ public abstract class SiegeToggleNpcInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _fakeInstance.
-	 */
 	private NpcInstance _fakeInstance;
-	/**
-	 * Field _maxHp.
-	 */
 	private int _maxHp;
 	
 	/**

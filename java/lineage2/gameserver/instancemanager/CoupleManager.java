@@ -17,7 +17,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
@@ -26,7 +25,6 @@ import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Couple;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,21 +34,9 @@ import org.slf4j.LoggerFactory;
  */
 public class CoupleManager
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(CoupleManager.class);
-	/**
-	 * Field _instance.
-	 */
 	private static CoupleManager _instance;
-	/**
-	 * Field _couples.
-	 */
 	private List<Couple> _couples;
-	/**
-	 * Field _deletedCouples.
-	 */
 	private List<Couple> _deletedCouples;
 	
 	/**

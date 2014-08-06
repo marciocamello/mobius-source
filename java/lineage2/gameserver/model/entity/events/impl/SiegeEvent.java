@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.dao.JdbcEntityState;
@@ -121,85 +120,25 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		}
 	}
 	
-	/**
-	 * Field OWNER. (value is ""owner"")
-	 */
 	public static final String OWNER = "owner";
-	/**
-	 * Field OLD_OWNER. (value is ""old_owner"")
-	 */
 	public static final String OLD_OWNER = "old_owner";
-	/**
-	 * Field ATTACKERS. (value is ""attackers"")
-	 */
 	public static final String ATTACKERS = "attackers";
-	/**
-	 * Field DEFENDERS. (value is ""defenders"")
-	 */
 	public static final String DEFENDERS = "defenders";
-	/**
-	 * Field SPECTATORS. (value is ""spectators"")
-	 */
 	public static final String SPECTATORS = "spectators";
-	/**
-	 * Field SIEGE_ZONES. (value is ""siege_zones"")
-	 */
 	public static final String SIEGE_ZONES = "siege_zones";
-	/**
-	 * Field FLAG_ZONES. (value is ""flag_zones"")
-	 */
 	public static final String FLAG_ZONES = "flag_zones";
-	/**
-	 * Field DAY_OF_WEEK. (value is ""day_of_week"")
-	 */
 	public static final String DAY_OF_WEEK = "day_of_week";
-	/**
-	 * Field HOUR_OF_DAY. (value is ""hour_of_day"")
-	 */
 	public static final String HOUR_OF_DAY = "hour_of_day";
-	/**
-	 * Field REGISTRATION. (value is ""registration"")
-	 */
 	public static final String REGISTRATION = "registration";
-	/**
-	 * Field DOORS. (value is ""doors"")
-	 */
 	public static final String DOORS = "doors";
-	/**
-	 * Field _residence.
-	 */
 	protected R _residence;
-	/**
-	 * Field _isInProgress.
-	 */
 	private boolean _isInProgress;
-	/**
-	 * Field _isRegistrationOver.
-	 */
 	private boolean _isRegistrationOver;
-	/**
-	 * Field _dayOfWeek.
-	 */
 	protected int _dayOfWeek;
-	/**
-	 * Field _hourOfDay.
-	 */
 	protected int _hourOfDay;
-	/**
-	 * Field _oldOwner.
-	 */
 	protected Clan _oldOwner;
-	/**
-	 * Field _killListener.
-	 */
 	protected final OnKillListener _killListener = new KillListener();
-	/**
-	 * Field _doorDeathListener.
-	 */
 	protected final OnDeathListener _doorDeathListener = new DoorDeathListener();
-	/**
-	 * Field _siegeSummons.
-	 */
 	protected final List<HardReference<SummonInstance>> _siegeSummons = new ArrayList<>();
 	
 	/**

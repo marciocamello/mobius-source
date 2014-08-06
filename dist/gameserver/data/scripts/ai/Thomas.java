@@ -24,13 +24,7 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class Thomas extends Fighter
 {
-	/**
-	 * Field _lastSay.
-	 */
 	private long _lastSay;
-	/**
-	 * Field _stay.
-	 */
 	private static final String[] _stay =
 	{
 		"Ха...Ха... Вы при�?ли �?па�?ти �?неговика?",
@@ -38,10 +32,6 @@ public final class Thomas extends Fighter
 		"Чтобы �?па�?ти ва�?его �?неговика, вам придет�?�? убит�? мен�?!",
 		"Ха...Ха... Вы думаете �?то так про�?то?"
 	};
-	
-	/**
-	 * Field _attacked.
-	 */
 	private static final String[] _attacked =
 	{
 		"Вы должны в�?е умерет�?!",

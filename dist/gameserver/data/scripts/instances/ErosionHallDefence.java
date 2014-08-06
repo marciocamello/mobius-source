@@ -13,7 +13,6 @@
 package instances;
 
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
@@ -38,7 +37,6 @@ import quests._697_DefendtheHallofErosion;
 /**
  * @author pchayka
  */
-
 public final class ErosionHallDefence extends Reflection
 {
 	private static final int AliveTumor = 18708;

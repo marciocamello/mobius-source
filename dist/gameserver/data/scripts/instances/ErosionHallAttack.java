@@ -14,7 +14,6 @@ package instances;
 
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
@@ -38,14 +37,12 @@ import lineage2.gameserver.utils.Location;
 /**
  * @author pchayka
  */
-
 public final class ErosionHallAttack extends Reflection
 {
 	private static final int AliveTumor = 18708;
 	private static final int DeadTumor = 32535;
 	private static final int Cohemenes = 25634;
 	private static final int RegenerationCoffin = 18710;
-	
 	private final Zone[] viceraZones = new Zone[12];
 	private final int[] zoneEventTriggers = ArrayUtils.createAscendingArray(14240001, 14240012);
 	private final ZoneListener startZoneListener = new ZoneListener();
@@ -53,13 +50,11 @@ public final class ErosionHallAttack extends Reflection
 	boolean conquestBegun = false;
 	boolean conquestEnded = false;
 	long tumorRespawnTime;
-	
 	NpcInstance cohemenes = null;
 	long startTime;
 	private ScheduledFuture<?> timerTask;
 	
 	// 25516 25520 25524 25526 25522 25532 25517 25519 25521 25534 25518
-	
 	@Override
 	protected void onCreate()
 	{

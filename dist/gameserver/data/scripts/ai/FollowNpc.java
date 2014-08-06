@@ -13,7 +13,6 @@
 package ai;
 
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -31,13 +30,7 @@ import lineage2.gameserver.utils.Location;
  */
 public final class FollowNpc extends DefaultAI
 {
-	/**
-	 * Field _thinking.
-	 */
 	private boolean _thinking = false;
-	/**
-	 * Field _followTask.
-	 */
 	ScheduledFuture<?> _followTask;
 	
 	/**

@@ -14,7 +14,6 @@ package events.Christmas;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
@@ -28,7 +27,6 @@ import lineage2.gameserver.model.actor.listener.CharListenerList;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,21 +36,9 @@ import org.slf4j.LoggerFactory;
  */
 public final class Christmas extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
-	/**
-	 * Field EVENT_MANAGER_ID.
-	 */
 	private static final int EVENT_MANAGER_ID = 31863;
-	/**
-	 * Field CTREE_ID.
-	 */
 	private static final int CTREE_ID = 13006;
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Christmas.class);
-	/**
-	 * Field _dropdata.
-	 */
 	private static final int[][] _dropdata =
 	{
 		{
@@ -72,13 +58,7 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 			5
 		},
 	};
-	/**
-	 * Field _spawns.
-	 */
 	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
-	/**
-	 * Field _active.
-	 */
 	private static boolean _active = false;
 	
 	/**

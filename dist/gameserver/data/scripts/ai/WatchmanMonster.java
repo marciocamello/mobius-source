@@ -27,29 +27,14 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class WatchmanMonster extends Fighter
 {
-	/**
-	 * Field _lastSearch.
-	 */
 	private long _lastSearch = 0;
-	/**
-	 * Field isSearching.
-	 */
 	private boolean isSearching = false;
-	/**
-	 * Field _attackerRef.
-	 */
 	private HardReference<? extends Creature> _attackerRef = HardReferences.emptyRef();
-	/**
-	 * Field flood.
-	 */
 	static final String[] flood =
 	{
 		"I'll be back",
 		"You are stronger than expected"
 	};
-	/**
-	 * Field flood2.
-	 */
 	static final String[] flood2 =
 	{
 		"Help me!",

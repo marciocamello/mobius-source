@@ -26,10 +26,8 @@ public class _10384_AnAudienceWithTauti extends Quest implements ScriptFile
 {
 	private final static int FERGASON = 33681;
 	private final static int AKU = 33671;
-	
 	private final static int BOTTLE_OF_TAUTI_SOUL = 35295;
 	private final static int TAUTI_FRAGMENT = 34960;
-	
 	private final static int TAUTI_EXTREME = 29234;
 	
 	@Override

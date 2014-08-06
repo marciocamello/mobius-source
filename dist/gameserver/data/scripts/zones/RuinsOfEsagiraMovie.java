@@ -26,13 +26,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class RuinsOfEsagiraMovie implements ScriptFile
 {
-	/**
-	 * Field ZONE_NAME. (value is ""[roe_presentation_video]"")
-	 */
 	private static final String ZONE_NAME = "[roe_presentation_video]";
-	/**
-	 * Field _zoneListener.
-	 */
 	private static ZoneListener _zoneListener;
 	
 	/**

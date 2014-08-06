@@ -21,7 +21,6 @@ public class _495_IncarnationOfJealousyPellineGroup extends Quest implements Scr
 {
 	// npc
 	public static final int KARTIA_RESEARCH = 33647;
-	
 	// mobs
 	public static final int FILINE = 25883;
 	

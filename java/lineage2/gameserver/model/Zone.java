@@ -19,7 +19,6 @@ import java.util.concurrent.Future;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
-
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.listener.Listener;
@@ -45,9 +44,6 @@ import lineage2.gameserver.utils.PositionUtils;
  */
 public class Zone
 {
-	/**
-	 * Field EMPTY_L2ZONE_ARRAY.
-	 */
 	public static final Zone[] EMPTY_L2ZONE_ARRAY = new Zone[0];
 	
 	/**
@@ -55,97 +51,28 @@ public class Zone
 	 */
 	public static enum ZoneType
 	{
-		/**
-		 * Field AirshipController.
-		 */
 		AirshipController,
-		/**
-		 * Field SIEGE.
-		 */
 		SIEGE,
-		/**
-		 * Field RESIDENCE.
-		 */
 		RESIDENCE,
-		/**
-		 * Field HEADQUARTER.
-		 */
 		HEADQUARTER,
-		/**
-		 * Field FISHING.
-		 */
 		FISHING,
-		/**
-		 * Field CHANGED_ZONE.
-		 */
 		CHANGED_ZONE,
-		/**
-		 * Field water.
-		 */
 		water,
-		/**
-		 * Field battle_zone.
-		 */
 		battle_zone,
-		/**
-		 * Field damage.
-		 */
 		damage,
-		/**
-		 * Field instant_skill.
-		 */
 		instant_skill,
-		/**
-		 * Field mother_tree.
-		 */
 		mother_tree,
-		/**
-		 * Field peace_zone.
-		 */
 		peace_zone,
-		/**
-		 * Field poison.
-		 */
 		poison,
-		/**
-		 * Field ssq_zone.
-		 */
 		ssq_zone,
-		/**
-		 * Field swamp.
-		 */
 		swamp,
-		/**
-		 * Field no_escape.
-		 */
 		no_escape,
-		/**
-		 * Field no_landing.
-		 */
 		no_landing,
-		/**
-		 * Field no_restart.
-		 */
 		no_restart,
-		/**
-		 * Field no_summon.
-		 */
 		no_summon,
-		/**
-		 * Field dummy.
-		 */
 		dummy,
-		/**
-		 * Field offshore.
-		 */
 		offshore,
-		/**
-		 * Field epic.
-		 */
 		epic,
-		/**
-		 * Field JUMPING.
-		 */
 		JUMPING,
 	}
 	
@@ -154,43 +81,16 @@ public class Zone
 	 */
 	public enum ZoneTarget
 	{
-		/**
-		 * Field pc.
-		 */
 		pc,
-		/**
-		 * Field npc.
-		 */
 		npc,
-		/**
-		 * Field only_pc.
-		 */
 		only_pc
 	}
 	
-	/**
-	 * Field BLOCKED_ACTION_PRIVATE_STORE. (value is ""open_private_store"")
-	 */
 	public static final String BLOCKED_ACTION_PRIVATE_STORE = "open_private_store";
-	/**
-	 * Field BLOCKED_ACTION_PRIVATE_WORKSHOP. (value is ""open_private_workshop"")
-	 */
 	public static final String BLOCKED_ACTION_PRIVATE_WORKSHOP = "open_private_workshop";
-	/**
-	 * Field BLOCKED_ACTION_DROP_MERCHANT_GUARD. (value is ""drop_merchant_guard"")
-	 */
 	public static final String BLOCKED_ACTION_DROP_MERCHANT_GUARD = "drop_merchant_guard";
-	/**
-	 * Field BLOCKED_ACTION_SAVE_BOOKMARK. (value is ""save_bookmark"")
-	 */
 	public static final String BLOCKED_ACTION_SAVE_BOOKMARK = "save_bookmark";
-	/**
-	 * Field BLOCKED_ACTION_USE_BOOKMARK. (value is ""use_bookmark"")
-	 */
 	public static final String BLOCKED_ACTION_USE_BOOKMARK = "use_bookmark";
-	/**
-	 * Field BLOCKED_ACTION_MINIMAP. (value is ""open_minimap"")
-	 */
 	public static final String BLOCKED_ACTION_MINIMAP = "open_minimap";
 	
 	/**
@@ -198,17 +98,8 @@ public class Zone
 	 */
 	private abstract class ZoneTimer extends RunnableImpl
 	{
-		/**
-		 * Field cha.
-		 */
 		protected Creature cha;
-		/**
-		 * Field future.
-		 */
 		protected Future<?> future;
-		/**
-		 * Field active.
-		 */
 		protected boolean active;
 		
 		/**
@@ -414,53 +305,17 @@ public class Zone
 		}
 	}
 	
-	/**
-	 * Field _type.
-	 */
 	private ZoneType _type;
-	/**
-	 * Field _active.
-	 */
 	private boolean _active;
-	/**
-	 * Field _params.
-	 */
 	private final MultiValueSet<String> _params;
-	/**
-	 * Field _template.
-	 */
 	private final ZoneTemplate _template;
-	/**
-	 * Field _reflection.
-	 */
 	private Reflection _reflection;
-	/**
-	 * Field listeners.
-	 */
 	private final ZoneListenerList listeners = new ZoneListenerList();
-	/**
-	 * Field lock.
-	 */
 	private final ReadWriteLock lock = new ReentrantReadWriteLock();
-	/**
-	 * Field readLock.
-	 */
 	private final Lock readLock = lock.readLock();
-	/**
-	 * Field writeLock.
-	 */
 	private final Lock writeLock = lock.writeLock();
-	/**
-	 * Field _objects.
-	 */
 	private final List<Creature> _objects = new LazyArrayList<>(32);
-	/**
-	 * Field _zoneTimers.
-	 */
 	private final Map<Creature, ZoneTimer> _zoneTimers = new ConcurrentHashMap<>();
-	/**
-	 * Field ZONE_STATS_ORDER.
-	 */
 	public final static int ZONE_STATS_ORDER = 0x40;
 	
 	/**

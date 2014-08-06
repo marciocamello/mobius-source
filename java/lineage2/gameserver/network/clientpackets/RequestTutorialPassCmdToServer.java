@@ -22,9 +22,6 @@ import lineage2.gameserver.model.quest.Quest;
  */
 public class RequestTutorialPassCmdToServer extends L2GameClientPacket
 {
-	/**
-	 * Field _bypass.
-	 */
 	String _bypass = null;
 	
 	/**

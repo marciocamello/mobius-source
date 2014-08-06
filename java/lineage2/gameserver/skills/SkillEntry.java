@@ -13,7 +13,6 @@
 package lineage2.gameserver.skills;
 
 import java.util.AbstractMap;
-
 import lineage2.gameserver.model.Skill;
 
 /**
@@ -26,9 +25,6 @@ public class SkillEntry extends AbstractMap.SimpleImmutableEntry<SkillEntryType,
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _disabled.
-	 */
 	private boolean _disabled;
 	
 	/**

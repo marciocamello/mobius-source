@@ -23,9 +23,6 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class LuxorAgathion extends Functions
 {
-	/**
-	 * Field INGRIDIENTS.
-	 */
 	private static final int[][] INGRIDIENTS =
 	{
 		{
@@ -57,21 +54,9 @@ public final class LuxorAgathion extends Functions
 			7500000
 		}
 	};
-	/**
-	 * Field OldAgathion. (value is 10408)
-	 */
 	private static final int OldAgathion = 10408;
-	/**
-	 * Field ShadowPurpleVikingCirclet. (value is 10315)
-	 */
 	private static final int ShadowPurpleVikingCirclet = 10315;
-	/**
-	 * Field ShadowGoldenVikingCirclet. (value is 10321)
-	 */
 	private static final int ShadowGoldenVikingCirclet = 10321;
-	/**
-	 * Field ANGEL_BRACELET_IDS.
-	 */
 	private static final int[] ANGEL_BRACELET_IDS = new int[]
 	{
 		10320,
@@ -80,9 +65,6 @@ public final class LuxorAgathion extends Functions
 		10318,
 		10319
 	};
-	/**
-	 * Field DEVIL_BRACELET_IDS.
-	 */
 	private static final int[] DEVIL_BRACELET_IDS = new int[]
 	{
 		10326,
@@ -91,13 +73,7 @@ public final class LuxorAgathion extends Functions
 		10324,
 		10325
 	};
-	/**
-	 * Field SUCCESS_RATE.
-	 */
 	private static final int SUCCESS_RATE = 60;
-	/**
-	 * Field RARE_RATE.
-	 */
 	private static final int RARE_RATE = 5;
 	
 	/**

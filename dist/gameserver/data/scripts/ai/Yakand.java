@@ -24,9 +24,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Yakand extends DefaultAI
 {
-	/**
-	 * Field points.
-	 */
 	static final Location[] points =
 	{
 		new Location(-48820, -113748, -232),
@@ -42,17 +39,8 @@ public final class Yakand extends DefaultAI
 		new Location(-48821, -113496, -232),
 		new Location(-48820, -113748, -232)
 	};
-	/**
-	 * Field current_point.
-	 */
 	private int current_point = -1;
-	/**
-	 * Field wait_timeout.
-	 */
 	private long wait_timeout = 0;
-	/**
-	 * Field wait.
-	 */
 	private boolean wait = false;
 	
 	/**

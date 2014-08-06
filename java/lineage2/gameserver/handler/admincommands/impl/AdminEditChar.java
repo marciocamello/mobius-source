@@ -19,7 +19,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 import java.util.StringTokenizer;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.database.mysql;
@@ -42,7 +41,6 @@ import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.MentorUtil;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.Util;
-
 import org.apache.commons.lang3.math.NumberUtils;
 
 /**
@@ -56,109 +54,31 @@ public class AdminEditChar implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_edit_character.
-		 */
 		admin_edit_character,
-		/**
-		 * Field admin_character_actions.
-		 */
 		admin_character_actions,
-		/**
-		 * Field admin_current_player.
-		 */
 		admin_current_player,
-		/**
-		 * Field admin_nokarma.
-		 */
 		admin_nokarma,
-		/**
-		 * Field admin_setkarma.
-		 */
 		admin_setkarma,
-		/**
-		 * Field admin_character_list.
-		 */
 		admin_character_list,
-		/**
-		 * Field admin_show_characters.
-		 */
 		admin_show_characters,
-		/**
-		 * Field admin_find_character.
-		 */
 		admin_find_character,
-		/**
-		 * Field admin_save_modifications.
-		 */
 		admin_save_modifications,
-		/**
-		 * Field admin_rec.
-		 */
 		admin_rec,
-		/**
-		 * Field admin_settitle.
-		 */
 		admin_settitle,
-		/**
-		 * Field admin_setclass.
-		 */
 		admin_setclass,
-		/**
-		 * Field admin_setname.
-		 */
 		admin_setname,
-		/**
-		 * Field admin_setsex.
-		 */
 		admin_setsex,
-		/**
-		 * Field admin_setcolor.
-		 */
 		admin_setcolor,
-		/**
-		 * Field admin_add_exp_sp_to_character.
-		 */
 		admin_add_exp_sp_to_character,
-		/**
-		 * Field admin_add_exp_sp.
-		 */
 		admin_add_exp_sp,
-		/**
-		 * Field admin_sethero.
-		 */
 		admin_sethero,
-		/**
-		 * Field admin_setnoble.
-		 */
 		admin_setnoble,
-		/**
-		 * Field admin_trans.
-		 */
 		admin_trans,
-		/**
-		 * Field admin_setsubclass.
-		 */
 		admin_setsubclass,
-		/**
-		 * Field admin_setfame.
-		 */
 		admin_setfame,
-		/**
-		 * Field admin_setbday.
-		 */
 		admin_setbday,
-		/**
-		 * Field admin_give_item.
-		 */
 		admin_give_item,
-		/**
-		 * Field admin_add_bang.
-		 */
 		admin_add_bang,
-		/**
-		 * Field admin_set_bang.
-		 */
 		admin_set_bang,
 		admin_reset_mentor_penalty
 	}

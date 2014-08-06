@@ -28,13 +28,7 @@ import ai.residences.SiegeGuardFighter;
  */
 public final class LidiaVonHellmann extends SiegeGuardFighter
 {
-	/**
-	 * Field DRAIN_SKILL.
-	 */
 	private static final Skill DRAIN_SKILL = SkillTable.getInstance().getInfo(4999, 1);
-	/**
-	 * Field DAMAGE_SKILL.
-	 */
 	private static final Skill DAMAGE_SKILL = SkillTable.getInstance().getInfo(4998, 1);
 	
 	/**

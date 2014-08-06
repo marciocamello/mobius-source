@@ -22,13 +22,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public final class ShuttleTemplateHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final ShuttleTemplateHolder _instance = new ShuttleTemplateHolder();
-	/**
-	 * Field _templates.
-	 */
 	private final TIntObjectHashMap<ShuttleTemplate> _templates = new TIntObjectHashMap<>();
 	
 	/**

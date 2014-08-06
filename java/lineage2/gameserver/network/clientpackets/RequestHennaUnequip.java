@@ -22,9 +22,6 @@ import lineage2.gameserver.templates.Henna;
  */
 public class RequestHennaUnequip extends L2GameClientPacket
 {
-	/**
-	 * Field _symbolId.
-	 */
 	private int _symbolId;
 	
 	/**

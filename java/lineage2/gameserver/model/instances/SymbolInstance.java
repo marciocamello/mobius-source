@@ -15,7 +15,6 @@ package lineage2.gameserver.model.instances;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Creature;
@@ -37,21 +36,9 @@ public class SymbolInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _owner.
-	 */
 	final Creature _owner;
-	/**
-	 * Field _skill.
-	 */
 	final Skill _skill;
-	/**
-	 * Field _targetTask.
-	 */
 	private ScheduledFuture<?> _targetTask;
-	/**
-	 * Field _destroyTask.
-	 */
 	private ScheduledFuture<?> _destroyTask;
 	
 	/**

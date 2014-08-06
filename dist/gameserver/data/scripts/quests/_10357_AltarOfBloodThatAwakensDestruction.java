@@ -22,7 +22,6 @@ public class _10357_AltarOfBloodThatAwakensDestruction extends Quest implements 
 	// npc
 	private static final int JORJINO = 33515;
 	private static final int ELKARDIA = 32798;
-	
 	private static final String A_LIST = "a_list";
 	private static final String B_LIST = "b_list";
 	

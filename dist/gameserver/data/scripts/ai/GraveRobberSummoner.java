@@ -28,9 +28,6 @@ import lineage2.gameserver.templates.npc.MinionData;
  */
 public final class GraveRobberSummoner extends Mystic
 {
-	/**
-	 * Field Servitors.
-	 */
 	private static final int[] Servitors =
 	{
 		22683,
@@ -38,9 +35,6 @@ public final class GraveRobberSummoner extends Mystic
 		22685,
 		22686
 	};
-	/**
-	 * Field _lastMinionCount.
-	 */
 	int _lastMinionCount = 1;
 	
 	/**

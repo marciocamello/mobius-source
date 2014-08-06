@@ -24,13 +24,7 @@ import java.util.NoSuchElementException;
  */
 public class GCArray<E> implements Collection<E>
 {
-	/**
-	 * Field elementData.
-	 */
 	private transient E[] elementData;
-	/**
-	 * Field size.
-	 */
 	private int size;
 	
 	/**
@@ -439,17 +433,8 @@ public class GCArray<E> implements Collection<E>
 	 */
 	private class Itr implements Iterator<E>
 	{
-		/**
-		 * Field data.
-		 */
 		final E[] data = toNativeArray();
-		/**
-		 * Field size.
-		 */
 		final int size = data.length;
-		/**
-		 * Field cursor.
-		 */
 		int cursor = 0;
 		
 		/**

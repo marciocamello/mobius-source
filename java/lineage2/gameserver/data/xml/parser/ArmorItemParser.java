@@ -14,7 +14,6 @@ package lineage2.gameserver.data.xml.parser;
 
 import java.io.File;
 import java.util.Iterator;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.data.xml.holder.OptionDataHolder;
@@ -27,7 +26,6 @@ import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.ArmorTemplate;
 import lineage2.gameserver.templates.item.Bodypart;
 import lineage2.gameserver.templates.item.ItemTemplate;
-
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -36,9 +34,6 @@ import org.apache.commons.lang3.StringUtils;
  */
 public final class ArmorItemParser extends StatParser<ItemHolder>
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final ArmorItemParser _instance = new ArmorItemParser();
 	
 	/**

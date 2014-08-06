@@ -14,12 +14,10 @@ package events.PcCafePointsExchange;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SimpleSpawner;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,21 +27,9 @@ import org.slf4j.LoggerFactory;
  */
 public final class PcCafePointsExchange extends Functions implements ScriptFile
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(PcCafePointsExchange.class);
-	/**
-	 * Field EVENT_NAME. (value is ""PcCafePointsExchange"")
-	 */
 	private static final String EVENT_NAME = "PcCafePointsExchange";
-	/**
-	 * Field EVENT_MANAGER_ID. (value is 32130)
-	 */
 	private static final int EVENT_MANAGER_ID = 32130;
-	/**
-	 * Field _spawns.
-	 */
 	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
 	
 	/**

@@ -5,7 +5,6 @@
  * Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
-
 package lineage2.gameserver.network.serverpackets;
 
 public class ExChangeMPCost extends L2GameServerPacket

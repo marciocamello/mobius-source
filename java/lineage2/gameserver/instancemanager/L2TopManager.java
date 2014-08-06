@@ -26,7 +26,6 @@ import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
@@ -41,41 +40,14 @@ import lineage2.gameserver.utils.Log;
  */
 public class L2TopManager
 {
-	/**
-	 * Field SELECT_PLAYER_OBJID. (value is ""SELECT obj_Id FROM characters WHERE char_name=?"")
-	 */
 	private static final String SELECT_PLAYER_OBJID = "SELECT obj_Id FROM characters WHERE char_name=?";
-	/**
-	 * Field SELECT_CHARACTER_MMOTOP_DATA. (value is ""SELECT * FROM character_l2top_votes WHERE id=? AND date=? AND multipler=?"")
-	 */
 	private static final String SELECT_CHARACTER_MMOTOP_DATA = "SELECT * FROM character_l2top_votes WHERE id=? AND date=? AND multipler=?";
-	/**
-	 * Field INSERT_L2TOP_DATA. (value is ""INSERT INTO character_l2top_votes (date, id, nick, multipler) values (?,?,?,?)"")
-	 */
 	private static final String INSERT_L2TOP_DATA = "INSERT INTO character_l2top_votes (date, id, nick, multipler) values (?,?,?,?)";
-	/**
-	 * Field DELETE_L2TOP_DATA. (value is ""DELETE FROM character_l2top_votes WHERE date<?"")
-	 */
 	private static final String DELETE_L2TOP_DATA = "DELETE FROM character_l2top_votes WHERE date<?";
-	/**
-	 * Field SELECT_MULTIPLER_L2TOP_DATA. (value is ""SELECT multipler FROM character_l2top_votes WHERE id=? AND has_reward=0"")
-	 */
 	private static final String SELECT_MULTIPLER_L2TOP_DATA = "SELECT multipler FROM character_l2top_votes WHERE id=? AND has_reward=0";
-	/**
-	 * Field UPDATE_L2TOP_DATA. (value is ""UPDATE character_l2top_votes SET has_reward=1 WHERE id=?"")
-	 */
 	private static final String UPDATE_L2TOP_DATA = "UPDATE character_l2top_votes SET has_reward=1 WHERE id=?";
-	/**
-	 * Field voteWeb. (value is "Config.DATAPACK_ROOT + "/data/l2top_vote-web.txt"")
-	 */
 	private final static String voteWeb = Config.DATAPACK_ROOT + "/data/l2top_vote-web.txt";
-	/**
-	 * Field voteSms. (value is "Config.DATAPACK_ROOT + "/data/l2top_vote-sms.txt"")
-	 */
 	private final static String voteSms = Config.DATAPACK_ROOT + "/data/l2top_vote-sms.txt";
-	/**
-	 * Field _instance.
-	 */
 	private static L2TopManager _instance;
 	
 	/**

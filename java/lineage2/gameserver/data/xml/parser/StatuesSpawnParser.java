@@ -15,17 +15,13 @@ package lineage2.gameserver.data.xml.parser;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.data.xml.AbstractFileParser;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.StatuesHolder;
 import lineage2.gameserver.model.worldstatistics.CategoryType;
 import lineage2.gameserver.utils.Location;
-
 import org.dom4j.Element;
 
-/**
- */
 public class StatuesSpawnParser extends AbstractFileParser<StatuesHolder>
 {
 	private static final StatuesSpawnParser ourInstance = new StatuesSpawnParser();
@@ -55,7 +51,6 @@ public class StatuesSpawnParser extends AbstractFileParser<StatuesHolder>
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{
-		
 		for (Element statuesElement : rootElement.elements())
 		{
 			int type = Integer.parseInt(statuesElement.attributeValue("type"));

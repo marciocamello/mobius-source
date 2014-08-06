@@ -16,7 +16,6 @@ public class SendTradeDone extends L2GameServerPacket
 {
 	public static final L2GameServerPacket SUCCESS = new SendTradeDone(1);
 	public static final L2GameServerPacket FAIL = new SendTradeDone(0);
-	
 	private final int _response;
 	
 	private SendTradeDone(int num)

@@ -15,12 +15,10 @@ package lineage2.gameserver.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.ManageBbsBuffer;
 import lineage2.gameserver.model.ManageBbsBuffer.SBufferScheme;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,25 +28,10 @@ import org.slf4j.LoggerFactory;
  */
 public class CommunityBufferDAO
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(CommunityBufferDAO.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final CommunityBufferDAO _instance = new CommunityBufferDAO();
-	/**
-	 * Field SELECT_SQL_QUERY. (value is ""SELECT * FROM bbs_skillsave"")
-	 */
 	public static final String SELECT_SQL_QUERY = "SELECT * FROM bbs_skillsave";
-	/**
-	 * Field DELETE_SQL_QUERY. (value is ""DELETE FROM bbs_skillsave WHERE charId=? AND schameid=?"")
-	 */
 	public static final String DELETE_SQL_QUERY = "DELETE FROM bbs_skillsave WHERE charId=? AND schameid=?";
-	/**
-	 * Field INSERT_SQL_QUERY. (value is ""INSERT INTO bbs_skillsave (charId,schameid,name,skills) VALUES(?,?,?,?)"")
-	 */
 	public static final String INSERT_SQL_QUERY = "INSERT INTO bbs_skillsave (charId,schameid,name,skills) VALUES(?,?,?,?)";
 	
 	/**

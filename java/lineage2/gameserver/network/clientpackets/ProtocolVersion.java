@@ -15,7 +15,6 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.network.serverpackets.KeyPacket;
 import lineage2.gameserver.network.serverpackets.SendStatus;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,13 +24,7 @@ import org.slf4j.LoggerFactory;
  */
 public class ProtocolVersion extends L2GameClientPacket
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(ProtocolVersion.class);
-	/**
-	 * Field _version.
-	 */
 	private int _version;
 	
 	/**

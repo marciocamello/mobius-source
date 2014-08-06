@@ -33,9 +33,6 @@ public final class OddGlobeInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field instancedZoneId. (value is 151)
-	 */
 	private static final int instancedZoneId = 151;
 	
 	/**
@@ -92,9 +89,6 @@ public final class OddGlobeInstance extends NpcInstance
 	 */
 	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
-		/**
-		 * Field done.
-		 */
 		private boolean done = false;
 		
 		/**
@@ -134,9 +128,6 @@ public final class OddGlobeInstance extends NpcInstance
 	 */
 	public final class ZoneListener2 implements OnZoneEnterLeaveListener
 	{
-		/**
-		 * Field done.
-		 */
 		private boolean done = false;
 		
 		/**

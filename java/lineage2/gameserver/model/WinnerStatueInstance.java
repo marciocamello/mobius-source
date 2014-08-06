@@ -14,7 +14,6 @@ package lineage2.gameserver.model;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.ServerObjectInfo;
 import lineage2.gameserver.templates.StatuesSpawnTemplate;
@@ -64,7 +63,6 @@ public final class WinnerStatueInstance extends GameObject
 	 * WorldStatisticsManager.getInstance().getWinners(template.getCategoryType(), false, WorldStatisticsManager.STATUES_TOP_PLAYER_LIMIT); player.sendPacket(new ExLoadStatHotLink(template.getCategoryType().getClientId(), template.getCategoryType().getSubcat(), globalStatistic, monthlyStatistic));
 	 * player.sendActionFailed(); }
 	 */
-	
 	public StatuesSpawnTemplate getTemplate()
 	{
 		return template;

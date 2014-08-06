@@ -34,7 +34,6 @@ public class _10296_SevenSignsPoweroftheSeal extends Quest implements ScriptFile
 	private static final int Hardin = 30832;
 	private static final int Wood = 32593;
 	private static final int Franz = 32597;
-	
 	private static final Location hiddenLoc = new Location(120744, -87432, -3392);
 	
 	public _10296_SevenSignsPoweroftheSeal()

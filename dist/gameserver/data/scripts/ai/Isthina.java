@@ -13,7 +13,6 @@
 package ai;
 
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -35,117 +34,33 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class Isthina extends Fighter
 {
-	/**
-	 * Field ISTINA_LIGHT.
-	 */
 	static final int ISTINA_LIGHT = 29195;
-	/**
-	 * Field ISTINA_HARD.
-	 */
 	static final int ISTINA_HARD = 29196;
-	/**
-	 * Field BARRIER_OF_REFLECTION.
-	 */
 	static final Skill BARRIER_OF_REFLECTION = SkillTable.getInstance().getInfo(14215, 1);
-	/**
-	 * Field FLOOD.
-	 */
 	static final Skill FLOOD = SkillTable.getInstance().getInfo(14220, 1);
-	/**
-	 * Field MANIFESTATION_OF_AUTHORITY.
-	 */
 	static final Skill MANIFESTATION_OF_AUTHORITY = SkillTable.getInstance().getInfo(14289, 1);
-	/**
-	 * Field ACID_ERUPTION1.
-	 */
 	private static final Skill ACID_ERUPTION1 = SkillTable.getInstance().getInfo(14221, 1);
-	/**
-	 * Field ACID_ERUPTION2.
-	 */
 	private static final Skill ACID_ERUPTION2 = SkillTable.getInstance().getInfo(14222, 1);
-	/**
-	 * Field ACID_ERUPTION3.
-	 */
 	private static final Skill ACID_ERUPTION3 = SkillTable.getInstance().getInfo(14223, 1);
-	/**
-	 * Field ACID_ERUPTION1_TIMER.
-	 */
 	private long ACID_ERUPTION1_TIMER = 0;
-	/**
-	 * Field ACID_ERUPTION2_TIMER.
-	 */
 	private long ACID_ERUPTION2_TIMER = 0;
-	/**
-	 * Field ACID_ERUPTION3_TIMER.
-	 */
 	private long ACID_ERUPTION3_TIMER = 0;
-	/**
-	 * Field ACID_ERUPTION1_DELAY.
-	 */
 	private static final long ACID_ERUPTION1_DELAY = 60;
-	/**
-	 * Field ACID_ERUPTION2_DELAY.
-	 */
 	private static final long ACID_ERUPTION2_DELAY = 60;
-	/**
-	 * Field ACID_ERUPTION3_DELAY.
-	 */
 	private static final long ACID_ERUPTION3_DELAY = 60;
-	/**
-	 * Field DEATH_BLOW.
-	 */
 	static final int DEATH_BLOW = 14219;
-	/**
-	 * Field ISTINA_MARK.
-	 */
 	static final int ISTINA_MARK = 14218;
-	/**
-	 * Field RED_RING.
-	 */
 	static final int RED_RING = 14220101;
-	/**
-	 * Field BLUE_RING.
-	 */
 	static final int BLUE_RING = 14220102;
-	/**
-	 * Field GREEN_RING.
-	 */
 	static final int GREEN_RING = 14220103;
-	/**
-	 * Field RED_RING_LOC.
-	 */
 	final Zone RED_RING_LOC;
-	/**
-	 * Field BLUE_RING_LOC.
-	 */
 	final Zone BLUE_RING_LOC;
-	/**
-	 * Field GREEN_RING_LOC.
-	 */
 	final Zone GREEN_RING_LOC;
-	/**
-	 * Field _effectCheckTask.
-	 */
 	ScheduledFuture<?> _effectCheckTask = null;
-	/**
-	 * Field _authorityLock.
-	 */
 	private boolean _authorityLock = false;
-	/**
-	 * Field _hasFlood.
-	 */
 	private static final boolean _hasFlood = false;
-	/**
-	 * Field _hasBarrier.
-	 */
 	private static final boolean _hasBarrier = false;
-	/**
-	 * Field _ring.
-	 */
 	int _ring;
-	/**
-	 * Field _zone.
-	 */
 	static Zone _zone;
 	
 	/**
@@ -369,9 +284,6 @@ public final class Isthina extends Fighter
 	 */
 	private class EffectCheckTask extends RunnableImpl
 	{
-		/**
-		 * Field _npc.
-		 */
 		private final NpcInstance _npc;
 		
 		/**
@@ -450,9 +362,6 @@ public final class Isthina extends Fighter
 	 */
 	private class runAuthorityRing extends RunnableImpl
 	{
-		/**
-		 * Field _npc.
-		 */
 		private final NpcInstance _npc;
 		
 		/**

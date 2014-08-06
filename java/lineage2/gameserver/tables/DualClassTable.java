@@ -17,10 +17,8 @@ import lineage2.gameserver.model.SubClass;
 import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.model.base.ClassLevel;
 import lineage2.gameserver.model.base.SubClassType;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import gnu.trove.list.array.TIntArrayList;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
@@ -30,17 +28,8 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public final class DualClassTable
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(DualClassTable.class);
-	/**
-	 * Field _instance.
-	 */
 	private static DualClassTable _instance;
-	/**
-	 * Field _subClasses.
-	 */
 	private TIntObjectHashMap<TIntArrayList> _dualClasses;
 	
 	/**

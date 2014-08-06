@@ -23,9 +23,6 @@ import lineage2.gameserver.model.actor.instances.player.Macro.L2MacroCmd;
  */
 public class RequestMakeMacro extends L2GameClientPacket
 {
-	/**
-	 * Field _macro.
-	 */
 	private Macro _macro;
 	
 	/**

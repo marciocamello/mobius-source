@@ -22,7 +22,6 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public class _10386_PathOfMystery extends Quest implements ScriptFile
 {
-	
 	private static final int TOPOI = 30499;
 	private static final int HESET = 33780;
 	private static final int BERNA = 33796;

@@ -14,7 +14,6 @@ package lineage2.loginserver.gameservercon.gspackets;
 
 import lineage2.loginserver.accounts.Account;
 import lineage2.loginserver.gameservercon.ReceivablePacket;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,21 +23,9 @@ import org.slf4j.LoggerFactory;
  */
 public class ChangeAccessLevel extends ReceivablePacket
 {
-	/**
-	 * Field _log.
-	 */
 	public static final Logger _log = LoggerFactory.getLogger(ChangeAccessLevel.class);
-	/**
-	 * Field account.
-	 */
 	private String account;
-	/**
-	 * Field level.
-	 */
 	private int level;
-	/**
-	 * Field banExpire.
-	 */
 	private int banExpire;
 	
 	/**

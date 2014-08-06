@@ -23,9 +23,6 @@ import lineage2.gameserver.stats.Stats;
  */
 public class ConditionPlayerCubic extends Condition
 {
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
 	
 	/**

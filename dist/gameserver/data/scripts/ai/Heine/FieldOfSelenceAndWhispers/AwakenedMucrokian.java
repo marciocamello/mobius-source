@@ -13,7 +13,6 @@
 package ai.Heine.FieldOfSelenceAndWhispers;
 
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.Fighter;
@@ -28,9 +27,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class AwakenedMucrokian extends Fighter
 {
-	/**
-	 * Field mob.
-	 */
 	private NpcInstance mob = null;
 	
 	/**

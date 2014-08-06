@@ -14,7 +14,6 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.listener.actor.player.OnAnswerListener;
 import lineage2.gameserver.model.Player;
-
 import org.apache.commons.lang3.tuple.Pair;
 
 /**
@@ -23,9 +22,6 @@ import org.apache.commons.lang3.tuple.Pair;
  */
 public class ConfirmDlg extends L2GameClientPacket
 {
-	/**
-	 * Field _requestId. Field _answer.
-	 */
 	private int _answer, _requestId;
 	
 	/**

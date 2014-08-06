@@ -14,7 +14,6 @@ package lineage2.gameserver.model.petition;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import lineage2.gameserver.utils.Language;
 
 /**
@@ -23,17 +22,8 @@ import lineage2.gameserver.utils.Language;
  */
 public abstract class PetitionGroup
 {
-	/**
-	 * Field _name.
-	 */
 	private final Map<Language, String> _name = new HashMap<>(Language.VALUES.length);
-	/**
-	 * Field _description.
-	 */
 	private final Map<Language, String> _description = new HashMap<>(Language.VALUES.length);
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
 	
 	/**

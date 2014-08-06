@@ -28,7 +28,6 @@ public final class VitaminManager extends Functions
 	private static final int MinionCoupon = 21275; // Minion Coupon
 	private static final int SuperiorMinionCoupon = 21279; // Superior Minion Coupon
 	private static final int EnhancedRoseSpiritCoupon = 20914; // Enhanced Rose Spirit Coupon
-	
 	/**
 	 * Minion Pets
 	 */
@@ -36,14 +35,12 @@ public final class VitaminManager extends Functions
 	private static final int FairyPrincessWhistle = 13018;
 	private static final int WildBeastFighterWhistle = 13019;
 	private static final int FoxShamanWhistle = 13020;
-	
 	/**
 	 * Superior Minion Pets
 	 */
 	private static final int ToyKnightWhistle = 14061;
 	private static final int SpiritShamanWhistle = 14062;
 	private static final int TurtleAsceticWhistle = 14064;
-	
 	/**
 	 * Rose Spirit
 	 */

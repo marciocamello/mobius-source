@@ -13,7 +13,6 @@
 package ai.incubatorOfEvil;
 
 import java.util.List;
-
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.Mystic;
 import lineage2.gameserver.geodata.GeoEngine;

@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
-
 import javolution.util.FastList;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
@@ -35,10 +34,8 @@ import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.tables.SkillTreeTable;
 import lineage2.gameserver.utils.ItemFunctions;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import gnu.trove.map.hash.TIntIntHashMap;
 
 /**
@@ -47,111 +44,54 @@ import gnu.trove.map.hash.TIntIntHashMap;
  */
 public class AwakingManager implements OnPlayerEnterListener
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(AwakingManager.class);
-	/**
-	 * Field _instance.
-	 */
 	private static AwakingManager _instance;
-	/**
-	 * Field ESSENCE_OF_THE_LESSER_GIANTS. (value is 30306)
-	 */
 	private static final int ESSENCE_OF_THE_LESSER_GIANTS = 30306;
-	/**
-	 * Field _CA.
-	 */
 	private static final TIntIntHashMap _CA = new TIntIntHashMap(69);
-	/**
-	 * Field _LegacyWeapon.
-	 */
 	private static final TIntIntHashMap _LegacyWeapon = new TIntIntHashMap(36);
-	/**
-	 * Field _AwakenPower.
-	 */
 	private static final TIntIntHashMap _AwakenPower = new TIntIntHashMap(8);
-	/**
-	 * Field _AwakenPower.
-	 */
 	private static final TIntIntHashMap _CloakDualClass = new TIntIntHashMap(8);
-	
-	/**
-	 * Field _AlterSigel.
-	 */
 	private static final Integer[] _AlterSigel =
 	{
 		10250,
 		10249
 	};
-	
-	/**
-	 * Field _AlterTyrr.
-	 */
 	private static final Integer[] _AlterTyrr =
 	{
 		10500,
 		10499
 	};
-	
-	/**
-	 * Field _AlterOthell.
-	 */
 	private static final Integer[] _AlterOthell =
 	{
 		10750,
 		10749
 	};
-	
-	/**
-	 * Field _AlterYul.
-	 */
 	private static final Integer[] _AlterYul =
 	{
 		11000,
 		10999
 	};
-	
-	/**
-	 * Field _AlterFeoh.
-	 */
 	private static final Integer[] _AlterFeoh =
 	{
 		11249,
 		11247
 	};
-	
-	/**
-	 * Field _AlterIss.
-	 */
 	private static final Integer[] _AlterIss =
 	{
 		11750,
 		11749
 	};
-	
-	/**
-	 * Field _AlterWynn.
-	 */
 	private static final Integer[] _AlterWynn =
 	{
 		11500,
 		11499
 	};
-	
-	/**
-	 * Field _AlterAerore.
-	 */
 	private static final Integer[] _AlterAerore =
 	{
 		12000,
 		11999
 	};
-	
 	private static final HashMap<Integer, Integer[]> _AlterSkills = new HashMap<>();
-	/**
-	 * Field count30T.
-	 */
 	private static final int[] count30T =
 	{
 		0,
@@ -186,9 +126,6 @@ public class AwakingManager implements OnPlayerEnterListener
 		70,
 		83
 	};
-	/**
-	 * Field count15T.
-	 */
 	private static final int[] count15T =
 	{
 		0,

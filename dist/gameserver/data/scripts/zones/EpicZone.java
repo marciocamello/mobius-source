@@ -27,9 +27,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class EpicZone implements ScriptFile
 {
-	/**
-	 * Field _zoneListener.
-	 */
 	private static ZoneListener _zoneListener;
 	
 	/**

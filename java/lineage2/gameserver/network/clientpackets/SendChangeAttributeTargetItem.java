@@ -22,13 +22,7 @@ import lineage2.gameserver.network.serverpackets.ExChangeAttributeInfo;
  */
 public class SendChangeAttributeTargetItem extends L2GameClientPacket
 {
-	/**
-	 * Field _crystalItemId.
-	 */
 	public int _crystalItemId;
-	/**
-	 * Field _itemObjId.
-	 */
 	public int _itemObjId;
 	
 	/**

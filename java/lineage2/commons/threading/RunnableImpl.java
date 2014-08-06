@@ -21,9 +21,6 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class RunnableImpl implements Runnable
 {
-	/**
-	 * Field _log.
-	 */
 	public static final Logger _log = LoggerFactory.getLogger(RunnableImpl.class);
 	
 	/**

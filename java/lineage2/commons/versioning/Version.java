@@ -16,7 +16,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.jar.Attributes;
 import java.util.jar.JarFile;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,33 +25,12 @@ import org.slf4j.LoggerFactory;
  */
 public class Version
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Version.class);
-	/**
-	 * Field _revisionNumber.
-	 */
 	private String _revisionNumber = "exported";
-	/**
-	 * Field _versionNumber.
-	 */
 	private String _versionNumber = "-1";
-	/**
-	 * Field _buildNumber.
-	 */
 	private String _buildNumber = "-1";
-	/**
-	 * Field _buildDate.
-	 */
 	private String _buildDate = "";
-	/**
-	 * Field _buildJdk.
-	 */
 	private String _buildJdk = "";
-	/**
-	 * Field _vendor.
-	 */
 	private String _vendor = "";
 	
 	/**

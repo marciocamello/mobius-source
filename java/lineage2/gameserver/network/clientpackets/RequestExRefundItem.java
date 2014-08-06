@@ -14,7 +14,6 @@ package lineage2.gameserver.network.clientpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.math.SafeMath;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
@@ -25,7 +24,6 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ExBuySellList;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Log;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -34,18 +32,9 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public class RequestExRefundItem extends L2GameClientPacket
 {
-	/**
-	 * Field _listId.
-	 */
 	@SuppressWarnings("unused")
 	private int _listId;
-	/**
-	 * Field _count.
-	 */
 	private int _count;
-	/**
-	 * Field _items.
-	 */
 	private int[] _items;
 	
 	/**

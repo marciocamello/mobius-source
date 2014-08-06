@@ -13,7 +13,6 @@
 package ai.DwarvenVillageAttack;
 
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.ai.Fighter;
@@ -24,7 +23,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 public class Dwarvs extends Fighter
@@ -48,7 +46,6 @@ public class Dwarvs extends Fighter
 		19171,
 		19172
 	};
-	
 	private static final Location[] MOVE_LOC =
 	{
 		new Location(115830, -182103, -1400),
@@ -56,22 +53,18 @@ public class Dwarvs extends Fighter
 		new Location(116830, -180257, -1176),
 		new Location(116552, -180008, -1187),
 	};
-	
 	private static final Location[] WAY_1 =
 	{
 		new Location(117147, -179248, -1120),
 	};
-	
 	private static final Location[] WAY_2 =
 	{
 		new Location(116279, -179360, -112),
 	};
-	
 	private static final Location[] WAY_3 =
 	{
 		new Location(115110, -178852, -896),
 	};
-	
 	private boolean startBattle = false;
 	private int currentPoint = 0;
 	private int currentPoint2 = 0;

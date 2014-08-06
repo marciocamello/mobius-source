@@ -27,9 +27,6 @@ public class AdminIP implements IAdminCommandHandler
 	 */
 	private enum Commands
 	{
-		/**
-		 * Field admin_charip.
-		 */
 		admin_charip
 	}
 	

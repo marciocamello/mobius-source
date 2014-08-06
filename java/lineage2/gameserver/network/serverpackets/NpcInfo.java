@@ -22,7 +22,6 @@ import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.utils.Location;
-
 import org.apache.commons.lang3.StringUtils;
 
 /**

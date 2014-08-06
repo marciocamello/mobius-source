@@ -21,13 +21,7 @@ import lineage2.loginserver.gameservercon.ReceivablePacket;
  */
 public class Player2ndAuthSetBanTime extends ReceivablePacket
 {
-	/**
-	 * Field _account.
-	 */
 	private String _account;
-	/**
-	 * Field _banTime.
-	 */
 	private int _banTime;
 	
 	/**

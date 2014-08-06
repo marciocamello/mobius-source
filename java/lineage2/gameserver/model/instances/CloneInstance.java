@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.instances;
 
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.ClonePlayer;
 import lineage2.gameserver.model.Creature;
@@ -31,25 +30,10 @@ import lineage2.gameserver.utils.Location;
  */
 public class CloneInstance extends ClonePlayer
 {
-	/**
-	 * Field serialVersionUID. (value is -3990686488577795700)
-	 */
 	private static final long serialVersionUID = -3990686488577795700L;
-	/**
-	 * Field _owner.
-	 */
 	private final Player _owner;
-	/**
-	 * Field _lifetimeCountdown.
-	 */
 	private final int _lifetimeCountdown;
-	/**
-	 * Field _targetTask.
-	 */
 	private ScheduledFuture<?> _targetTask;
-	/**
-	 * Field _destroyTask.
-	 */
 	private ScheduledFuture<?> _destroyTask;
 	
 	/**
@@ -454,5 +438,4 @@ public class CloneInstance extends ClonePlayer
 	{
 		return _owner.getPDef(target);
 	}
-	
 }

@@ -26,17 +26,8 @@ import lineage2.gameserver.utils.Location;
  */
 public final class OiAriosh extends Fighter
 {
-	/**
-	 * Field MOB. (value is 18556)
-	 */
 	private static final int MOB = 18556;
-	/**
-	 * Field _hpCount.
-	 */
 	private int _hpCount = 0;
-	/**
-	 * Field _hps.
-	 */
 	private static final int[] _hps =
 	{
 		80,

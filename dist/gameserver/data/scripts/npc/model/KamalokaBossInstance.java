@@ -13,14 +13,12 @@
 package npc.model;
 
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,13 +32,7 @@ public class KamalokaBossInstance extends LostCaptainInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _log.
-	 */
 	static final Logger _log = LoggerFactory.getLogger(KamalokaBossInstance.class);
-	/**
-	 * Field _manaRegen.
-	 */
 	private ScheduledFuture<?> _manaRegen;
 	
 	/**

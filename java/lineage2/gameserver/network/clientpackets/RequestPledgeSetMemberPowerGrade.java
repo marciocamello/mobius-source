@@ -23,13 +23,7 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
  */
 public class RequestPledgeSetMemberPowerGrade extends L2GameClientPacket
 {
-	/**
-	 * Field _powerGrade.
-	 */
 	private int _powerGrade;
-	/**
-	 * Field _name.
-	 */
 	private String _name;
 	
 	/**

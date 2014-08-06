@@ -25,9 +25,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Typhoon extends Fighter
 {
-	/**
-	 * Field points.
-	 */
 	static final Location[] points =
 	{
 		new Location(-16696, 250232, -2956),
@@ -53,17 +50,8 @@ public final class Typhoon extends Fighter
 		new Location(-16712, 250520, -3029),
 		new Location(-15864, 250872, -3013)
 	};
-	/**
-	 * Field current_point.
-	 */
 	private int current_point = -1;
-	/**
-	 * Field wait_timeout.
-	 */
 	private long wait_timeout = 0;
-	/**
-	 * Field wait.
-	 */
 	private boolean wait = false;
 	
 	/**

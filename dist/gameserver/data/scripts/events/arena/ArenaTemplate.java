@@ -15,7 +15,6 @@ package events.arena;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
@@ -41,113 +40,32 @@ import lineage2.gameserver.utils.PositionUtils;
  */
 public abstract class ArenaTemplate extends Functions
 {
-	/**
-	 * Field _managerId.
-	 */
 	protected int _managerId;
-	/**
-	 * Field _className.
-	 */
 	protected String _className;
-	/**
-	 * Field _chatName.
-	 */
 	protected String _chatName;
-	/**
-	 * Field _creatorId.
-	 */
 	protected Long _creatorId;
-	/**
-	 * Field _status.
-	 */
 	protected int _status = 0;
-	/**
-	 * Field _battleType.
-	 */
 	protected int _battleType = 1;
-	/**
-	 * Field _team1exp.
-	 */
 	protected int _team1exp = 0;
-	/**
-	 * Field _team2exp.
-	 */
 	protected int _team2exp = 0;
-	/**
-	 * Field _price.
-	 */
 	protected int _price = 10000;
-	/**
-	 * Field _team1count.
-	 */
 	protected int _team1count = 1;
-	/**
-	 * Field _team2count.
-	 */
 	protected int _team2count = 1;
-	/**
-	 * Field _team1min.
-	 */
 	protected int _team1min = 1;
-	/**
-	 * Field _team1max.
-	 */
 	protected int _team1max = 85;
-	/**
-	 * Field _team2min.
-	 */
 	protected int _team2min = 1;
-	/**
-	 * Field _team2max.
-	 */
 	protected int _team2max = 85;
-	/**
-	 * Field _timeToStart.
-	 */
 	protected int _timeToStart = 10;
-	/**
-	 * Field _timeOutTask.
-	 */
 	protected boolean _timeOutTask;
-	/**
-	 * Field _team1points.
-	 */
 	protected List<Location> _team1points;
-	/**
-	 * Field _team2points.
-	 */
 	protected List<Location> _team2points;
-	/**
-	 * Field _team1list.
-	 */
 	protected List<Long> _team1list;
-	/**
-	 * Field _team2list.
-	 */
 	protected List<Long> _team2list;
-	/**
-	 * Field _team1live.
-	 */
 	protected List<Long> _team1live;
-	/**
-	 * Field _team2live.
-	 */
 	protected List<Long> _team2live;
-	/**
-	 * Field _expToReturn.
-	 */
 	protected Map<Integer, Integer> _expToReturn;
-	/**
-	 * Field _classToReturn.
-	 */
 	protected Map<Integer, Integer> _classToReturn;
-	/**
-	 * Field _zone.
-	 */
 	protected Zone _zone;
-	/**
-	 * Field _zoneListener.
-	 */
 	protected ZoneListener _zoneListener;
 	
 	/**
@@ -1054,8 +972,6 @@ public abstract class ArenaTemplate extends Functions
 		}
 	}
 	
-	/**
-	 */
 	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		/**
@@ -1103,13 +1019,7 @@ public abstract class ArenaTemplate extends Functions
 	 */
 	public final class TeleportTask extends RunnableImpl
 	{
-		/**
-		 * Field loc.
-		 */
 		Location loc;
-		/**
-		 * Field target.
-		 */
 		Creature target;
 		
 		/**

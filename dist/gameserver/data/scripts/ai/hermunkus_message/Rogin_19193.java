@@ -13,7 +13,6 @@
 package ai.hermunkus_message;
 
 import java.util.List;
-
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.entity.Reflection;
@@ -27,13 +26,7 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class Rogin_19193 extends Dwarvs
 {
-	/**
-	 * Field BRONK_ID. (value is 19192)
-	 */
 	private static final int BRONK_ID = 19192;
-	/**
-	 * Field MOVE_LOC.
-	 */
 	private static final int[][] MOVE_LOC =
 	{
 		{
@@ -42,9 +35,6 @@ public final class Rogin_19193 extends Dwarvs
 			-1600
 		}
 	};
-	/**
-	 * Field currentPoint.
-	 */
 	private int currentPoint;
 	
 	/**

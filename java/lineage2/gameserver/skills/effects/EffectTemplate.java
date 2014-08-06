@@ -14,7 +14,6 @@ package lineage2.gameserver.skills.effects;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.EffectList;
@@ -24,7 +23,6 @@ import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.StatTemplate;
 import lineage2.gameserver.stats.conditions.Condition;
 import lineage2.gameserver.templates.StatsSet;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,117 +32,33 @@ import org.slf4j.LoggerFactory;
  */
 public final class EffectTemplate extends StatTemplate
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(EffectTemplate.class);
-	/**
-	 * Field EMPTY_ARRAY.
-	 */
 	public static final EffectTemplate[] EMPTY_ARRAY = new EffectTemplate[0];
-	/**
-	 * Field NO_STACK.
-	 */
 	public static final String NO_STACK = "none".intern();
-	/**
-	 * Field HP_RECOVER_CAST.
-	 */
 	public static final String HP_RECOVER_CAST = "HpRecoverCast".intern();
-	/**
-	 * Field _attachCond.
-	 */
 	public Condition _attachCond;
-	/**
-	 * Field _value.
-	 */
 	public final double _value;
-	/**
-	 * Field _count.
-	 */
 	public final int _count;
-	/**
-	 * Field _period.
-	 */
 	public final long _period;
-	/**
-	 * Field _abnormalEffect.
-	 */
 	public AbnormalEffect _abnormalEffect;
-	/**
-	 * Field _abnormalEffect2.
-	 */
 	public AbnormalEffect _abnormalEffect2;
-	/**
-	 * Field _abnormalEffect3.
-	 */
 	public AbnormalEffect _abnormalEffect3;
-	/**
-	 * Field _effectType.
-	 */
 	public final EffectType _effectType;
-	/**
-	 * Field _stackTypes.
-	 */
 	public final List<String> _stackTypes = new ArrayList<>();
-	/**
-	 * Field _stackOrder.
-	 */
 	public final int _stackOrder;
-	/**
-	 * Field _displayId.
-	 */
 	public final int _displayId;
-	/**
-	 * Field _displayLevel.
-	 */
 	public final int _displayLevel;
-	/**
-	 * Field _applyOnCaster.
-	 */
 	public final boolean _applyOnCaster;
-	/**
-	 * Field _applyOnSummon.
-	 */
 	public final boolean _applyOnSummon;
-	/**
-	 * Field _cancelOnAction.
-	 */
 	public final boolean _cancelOnAction;
-	/**
-	 * Field _cancelOnAttacked.
-	 */
 	public final boolean _cancelOnAttacked;
-	/**
-	 * Field _isReflectable.
-	 */
 	public final boolean _isReflectable;
-	/**
-	 * Field _isSaveable.
-	 */
 	private final Boolean _isSaveable;
-	/**
-	 * Field _isCancelable.
-	 */
 	private final Boolean _isCancelable;
-	/**
-	 * Field _isOffensive.
-	 */
 	private final Boolean _isOffensive;
-	/**
-	 * Field _skillToCast.
-	 */
 	protected final int _skillToCast;
-	/**
-	 * Field _skillToCastLevel.
-	 */
 	protected final int _skillToCastLevel;
-	/**
-	 * Field _paramSet.
-	 */
 	private final StatsSet _paramSet;
-	/**
-	 * Field _chance.
-	 */
 	private final int _chance;
 	
 	/**

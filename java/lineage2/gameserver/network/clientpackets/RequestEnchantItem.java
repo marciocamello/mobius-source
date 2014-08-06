@@ -37,13 +37,7 @@ import lineage2.gameserver.utils.ItemFunctions;
  */
 public class RequestEnchantItem extends AbstractEnchantPacket
 {
-	/**
-	 * Field _objectId.
-	 */
 	private int _objectId;
-	/**
-	 * Field _catalystObjId.
-	 */
 	private int _catalystObjId;
 	
 	/**

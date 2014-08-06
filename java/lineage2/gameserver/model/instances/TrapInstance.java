@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
@@ -48,9 +47,6 @@ public final class TrapInstance extends NpcInstance
 	 */
 	private static class CastTask extends RunnableImpl
 	{
-		/**
-		 * Field _trapRef.
-		 */
 		private final HardReference<NpcInstance> _trapRef;
 		
 		/**
@@ -127,25 +123,10 @@ public final class TrapInstance extends NpcInstance
 		}
 	}
 	
-	/**
-	 * Field _ownerRef.
-	 */
 	private final HardReference<? extends Creature> _ownerRef;
-	/**
-	 * Field _skill.
-	 */
 	final Skill _skill;
-	/**
-	 * Field _targetTask.
-	 */
 	private ScheduledFuture<?> _targetTask;
-	/**
-	 * Field _destroyTask.
-	 */
 	private ScheduledFuture<?> _destroyTask;
-	/**
-	 * Field _detected.
-	 */
 	private boolean _detected;
 	
 	/**

@@ -13,13 +13,10 @@
 package lineage2.commons.data.xml;
 
 import java.io.File;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import javolution.util.FastList;
 import lineage2.commons.util.fileio.XMLFilter;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -34,21 +31,9 @@ import org.xml.sax.SAXParseException;
  */
 public abstract class DocumentParser
 {
-	/**
-	 * Field _log.
-	 */
 	private final static Logger _log = LoggerFactory.getLogger(DocumentParser.class);
-	/**
-	 * Field xmlFilter.
-	 */
 	private static final XMLFilter xmlFilter = new XMLFilter();
-	/**
-	 * Field _currentFile.
-	 */
 	private File _currentFile;
-	/**
-	 * Field _currentDocument.
-	 */
 	private Document _currentDocument;
 	
 	/**

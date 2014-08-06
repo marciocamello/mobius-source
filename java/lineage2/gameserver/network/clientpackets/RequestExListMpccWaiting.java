@@ -21,17 +21,8 @@ import lineage2.gameserver.network.serverpackets.ExListMpccWaiting;
  */
 public class RequestExListMpccWaiting extends L2GameClientPacket
 {
-	/**
-	 * Field _listId.
-	 */
 	private int _listId;
-	/**
-	 * Field _locationId.
-	 */
 	private int _locationId;
-	/**
-	 * Field _allLevels.
-	 */
 	private boolean _allLevels;
 	
 	/**

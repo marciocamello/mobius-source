@@ -24,9 +24,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class SuspiciousMerchantSGludio extends DefaultAI
 {
-	/**
-	 * Field points.
-	 */
 	static final Location[] points =
 	{
 		new Location(-28169, 216864, -3544),
@@ -55,17 +52,8 @@ public final class SuspiciousMerchantSGludio extends DefaultAI
 		new Location(-29028, 215089, -3672),
 		new Location(-28169, 216864, -3544)
 	};
-	/**
-	 * Field current_point.
-	 */
 	private int current_point = -1;
-	/**
-	 * Field wait_timeout.
-	 */
 	private long wait_timeout = 0;
-	/**
-	 * Field wait.
-	 */
 	private boolean wait = false;
 	
 	/**

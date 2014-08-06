@@ -28,9 +28,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class DarionChallenger extends Fighter
 {
-	/**
-	 * Field TeleportCube. (value is 32467)
-	 */
 	private static final int TeleportCube = 32467;
 	
 	/**

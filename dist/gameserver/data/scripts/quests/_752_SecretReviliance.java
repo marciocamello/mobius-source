@@ -28,7 +28,6 @@ public class _752_SecretReviliance extends Quest implements ScriptFile
 	private static final int INIE = 36075;
 	// reward items
 	private static final int SCROLL = 36082;
-	
 	private static final int HESET = 33780;
 	
 	public _752_SecretReviliance()

@@ -28,9 +28,6 @@ public class ControlKeyInstance extends GameObject
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field reference.
-	 */
 	protected HardReference<ControlKeyInstance> reference;
 	
 	/**

@@ -16,12 +16,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
-
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.matching.MatchingRoom;
 import lineage2.gameserver.templates.mapregion.RestartArea;
 import lineage2.gameserver.templates.mapregion.RestartPoint;
-
 import org.apache.commons.lang3.ArrayUtils;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
@@ -37,14 +35,7 @@ public class MatchingRoomManager
 	 */
 	private class RoomsHolder
 	{
-		/**
-		 * Field _id.
-		 */
 		private int _id = 1;
-		
-		/**
-		 * Field _rooms.
-		 */
 		final IntObjectMap<MatchingRoom> _rooms = new CHashIntObjectMap<>();
 		
 		/**
@@ -68,9 +59,6 @@ public class MatchingRoomManager
 		}
 	}
 	
-	/**
-	 * Field _instance.
-	 */
 	private static final MatchingRoomManager _instance = new MatchingRoomManager();
 	
 	/**
@@ -82,13 +70,7 @@ public class MatchingRoomManager
 		return _instance;
 	}
 	
-	/**
-	 * Field _holder.
-	 */
 	private final RoomsHolder[] _holder = new RoomsHolder[2];
-	/**
-	 * Field _players.
-	 */
 	private final Set<Player> _players = new CopyOnWriteArraySet<>();
 	
 	/**

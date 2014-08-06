@@ -18,17 +18,8 @@ package lineage2.gameserver.model.pledge;
  */
 public class RankPrivs
 {
-	/**
-	 * Field _rank.
-	 */
 	private final int _rank;
-	/**
-	 * Field _party.
-	 */
 	private int _party;
-	/**
-	 * Field _privs.
-	 */
 	private int _privs;
 	
 	/**

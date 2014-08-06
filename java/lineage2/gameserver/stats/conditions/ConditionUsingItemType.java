@@ -21,9 +21,6 @@ import lineage2.gameserver.stats.Env;
  */
 public final class ConditionUsingItemType extends Condition
 {
-	/**
-	 * Field _mask.
-	 */
 	private final long _mask;
 	
 	/**

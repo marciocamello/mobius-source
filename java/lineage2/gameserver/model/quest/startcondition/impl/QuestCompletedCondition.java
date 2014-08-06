@@ -21,9 +21,6 @@ import lineage2.gameserver.model.quest.startcondition.ICheckStartCondition;
  */
 public final class QuestCompletedCondition implements ICheckStartCondition
 {
-	/**
-	 * Field questName.
-	 */
 	private final String questName;
 	
 	/**

@@ -18,17 +18,8 @@ package lineage2.gameserver.model;
  */
 public class PremiumItem
 {
-	/**
-	 * Field _itemId.
-	 */
 	private final int _itemId;
-	/**
-	 * Field _count.
-	 */
 	private long _count;
-	/**
-	 * Field _sender.
-	 */
 	private final String _sender;
 	
 	/**

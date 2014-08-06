@@ -23,41 +23,14 @@ public final class AccountKicked extends L2LoginServerPacket
 	 */
 	public static enum AccountKickedReason
 	{
-		/**
-		 * Field REASON_FALSE_DATA_STEALER_REPORT.
-		 */
 		REASON_FALSE_DATA_STEALER_REPORT(0x00),
-		/**
-		 * Field REASON_DATA_STEALER.
-		 */
 		REASON_DATA_STEALER(0x01),
-		/**
-		 * Field REASON_SOUSPICION_DATA_STEALER.
-		 */
 		REASON_SOUSPICION_DATA_STEALER(0x03),
-		/**
-		 * Field REASON_NON_PAYEMENT_CELL_PHONE.
-		 */
 		REASON_NON_PAYEMENT_CELL_PHONE(0x04),
-		/**
-		 * Field REASON_30_DAYS_SUSPENDED_CASH.
-		 */
 		REASON_30_DAYS_SUSPENDED_CASH(0x08),
-		/**
-		 * Field REASON_PERMANENTLY_SUSPENDED_CASH.
-		 */
 		REASON_PERMANENTLY_SUSPENDED_CASH(0x10),
-		/**
-		 * Field REASON_PERMANENTLY_BANNED.
-		 */
 		REASON_PERMANENTLY_BANNED(0x20),
-		/**
-		 * Field REASON_ACCOUNT_MUST_BE_VERIFIED.
-		 */
 		REASON_ACCOUNT_MUST_BE_VERIFIED(0x40);
-		/**
-		 * Field _code.
-		 */
 		private final int _code;
 		
 		/**
@@ -79,9 +52,6 @@ public final class AccountKicked extends L2LoginServerPacket
 		}
 	}
 	
-	/**
-	 * Field reason.
-	 */
 	private final int reason;
 	
 	/**

@@ -18,7 +18,6 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
@@ -35,7 +34,6 @@ import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.templates.manor.CropProcure;
 import lineage2.gameserver.templates.manor.SeedProduction;
 import lineage2.gameserver.utils.Log;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,61 +43,19 @@ import org.slf4j.LoggerFactory;
  */
 public class CastleManorManager
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(CastleManorManager.class);
-	/**
-	 * Field _instance.
-	 */
 	private static CastleManorManager _instance;
-	/**
-	 * Field PERIOD_CURRENT. (value is 0)
-	 */
 	public static final int PERIOD_CURRENT = 0;
-	/**
-	 * Field PERIOD_NEXT. (value is 1)
-	 */
 	public static final int PERIOD_NEXT = 1;
-	/**
-	 * Field var_name. (value is ""ManorApproved"")
-	 */
 	protected static final String var_name = "ManorApproved";
-	/**
-	 * Field CASTLE_MANOR_LOAD_PROCURE. (value is ""SELECT * FROM castle_manor_procure WHERE castle_id=?"")
-	 */
 	private static final String CASTLE_MANOR_LOAD_PROCURE = "SELECT * FROM castle_manor_procure WHERE castle_id=?";
-	/**
-	 * Field CASTLE_MANOR_LOAD_PRODUCTION. (value is ""SELECT * FROM castle_manor_production WHERE castle_id=?"")
-	 */
 	private static final String CASTLE_MANOR_LOAD_PRODUCTION = "SELECT * FROM castle_manor_production WHERE castle_id=?";
-	/**
-	 * Field NEXT_PERIOD_APPROVE.
-	 */
 	static final int NEXT_PERIOD_APPROVE = Config.MANOR_APPROVE_TIME;
-	/**
-	 * Field NEXT_PERIOD_APPROVE_MIN.
-	 */
 	static final int NEXT_PERIOD_APPROVE_MIN = Config.MANOR_APPROVE_MIN;
-	/**
-	 * Field MANOR_REFRESH.
-	 */
 	static final int MANOR_REFRESH = Config.MANOR_REFRESH_TIME;
-	/**
-	 * Field MANOR_REFRESH_MIN.
-	 */
 	static final int MANOR_REFRESH_MIN = Config.MANOR_REFRESH_MIN;
-	/**
-	 * Field MAINTENANCE_PERIOD.
-	 */
 	protected static final long MAINTENANCE_PERIOD = Config.MANOR_MAINTENANCE_PERIOD / 60000;
-	/**
-	 * Field _underMaintenance.
-	 */
 	private boolean _underMaintenance;
-	/**
-	 * Field _disabled.
-	 */
 	private boolean _disabled;
 	
 	/**

@@ -14,7 +14,6 @@ package lineage2.gameserver.network.clientpackets;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-
 import lineage2.commons.math.SafeMath;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
@@ -32,21 +31,9 @@ import lineage2.gameserver.utils.TradeHelper;
  */
 public class SetPrivateStoreBuyList extends L2GameClientPacket
 {
-	/**
-	 * Field _count.
-	 */
 	private int _count;
-	/**
-	 * Field _items.
-	 */
 	private int[] _items;
-	/**
-	 * Field _itemQ.
-	 */
 	private long[] _itemQ;
-	/**
-	 * Field _itemP.
-	 */
 	private long[] _itemP;
 	
 	/**

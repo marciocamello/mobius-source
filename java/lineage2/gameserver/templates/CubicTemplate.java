@@ -16,7 +16,6 @@ import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.gameserver.model.Skill;
 import gnu.trove.map.hash.TIntIntHashMap;
 
@@ -31,25 +30,10 @@ public class CubicTemplate
 	 */
 	public static class SkillInfo
 	{
-		/**
-		 * Field _skill.
-		 */
 		private final Skill _skill;
-		/**
-		 * Field _chance.
-		 */
 		private final int _chance;
-		/**
-		 * Field _actionType.
-		 */
 		private final ActionType _actionType;
-		/**
-		 * Field _canAttackDoor.
-		 */
 		private final boolean _canAttackDoor;
-		/**
-		 * Field _chanceList.
-		 */
 		private final TIntIntHashMap _chanceList;
 		
 		/**
@@ -121,39 +105,15 @@ public class CubicTemplate
 	 */
 	public static enum ActionType
 	{
-		/**
-		 * Field ATTACK.
-		 */
 		ATTACK,
-		/**
-		 * Field DEBUFF.
-		 */
 		DEBUFF,
-		/**
-		 * Field CANCEL.
-		 */
 		CANCEL,
-		/**
-		 * Field HEAL.
-		 */
 		HEAL
 	}
 	
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _level.
-	 */
 	private final int _level;
-	/**
-	 * Field _delay.
-	 */
 	private final int _delay;
-	/**
-	 * Field _skills.
-	 */
 	private final List<Map.Entry<Integer, List<SkillInfo>>> _skills = new ArrayList<>(3);
 	
 	/**

@@ -18,9 +18,6 @@ package lineage2.gameserver.network.clientpackets;
  */
 public class RequestSEKCustom extends L2GameClientPacket
 {
-	/**
-	 * Field Direction. Field SlotNum.
-	 */
 	@SuppressWarnings("unused")
 	private int SlotNum, Direction;
 	

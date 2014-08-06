@@ -24,87 +24,26 @@ import gnu.trove.list.array.TIntArrayList;
  */
 public class CharStatsChangeRecorder<T extends Creature>
 {
-	/**
-	 * Field BROADCAST_CHAR_INFO.
-	 */
 	public static final int BROADCAST_CHAR_INFO = 1 << 0;
-	/**
-	 * Field SEND_CHAR_INFO.
-	 */
 	public static final int SEND_CHAR_INFO = 1 << 1;
-	/**
-	 * Field SEND_STATUS_INFO.
-	 */
 	public static final int SEND_STATUS_INFO = 1 << 2;
-	/**
-	 * Field _activeChar.
-	 */
 	protected final T _activeChar;
-	/**
-	 * Field _level.
-	 */
 	protected int _level;
-	/**
-	 * Field _accuracy.
-	 */
 	protected int _accuracy;
-	/**
-	 * Field _attackSpeed.
-	 */
 	protected int _attackSpeed;
-	/**
-	 * Field _castSpeed.
-	 */
 	protected int _castSpeed;
-	/**
-	 * Field _criticalHit.
-	 */
 	protected int _criticalHit;
-	/**
-	 * Field _evasion.
-	 */
 	protected int _evasion;
-	/**
-	 * Field _magicAttack.
-	 */
 	protected int _magicAttack;
-	/**
-	 * Field _magicDefence.
-	 */
 	protected int _magicDefence;
-	/**
-	 * Field _maxHp.
-	 */
 	protected int _maxHp;
-	/**
-	 * Field _maxMp.
-	 */
 	protected int _maxMp;
-	/**
-	 * Field _physicAttack.
-	 */
 	protected int _physicAttack;
-	/**
-	 * Field _physicDefence.
-	 */
 	protected int _physicDefence;
-	/**
-	 * Field _runSpeed.
-	 */
 	protected int _runSpeed;
-	/**
-	 * Field _team.
-	 */
 	protected TeamType _team;
-	/**
-	 * Field _changes.
-	 */
 	protected int _changes;
-	/**
-	 * Field _abnormalEffects.
-	 */
 	protected final TIntArrayList _abnormalEffects = new TIntArrayList();
-	
 	protected final FastList<Integer> _aveList = new FastList<>();
 	
 	/**

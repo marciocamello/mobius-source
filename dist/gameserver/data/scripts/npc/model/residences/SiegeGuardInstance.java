@@ -14,7 +14,6 @@ package npc.model.residences;
 
 import java.util.List;
 import java.util.Map;
-
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.Experience;

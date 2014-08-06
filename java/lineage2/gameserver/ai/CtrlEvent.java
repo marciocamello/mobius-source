@@ -18,84 +18,24 @@ package lineage2.gameserver.ai;
  */
 public enum CtrlEvent
 {
-	/**
-	 * Field EVT_THINK.
-	 */
 	EVT_THINK,
-	/**
-	 * Field EVT_ATTACKED.
-	 */
 	EVT_ATTACKED,
-	/**
-	 * Field EVT_CLAN_ATTACKED.
-	 */
 	EVT_CLAN_ATTACKED,
-	/**
-	 * Field EVT_AGGRESSION.
-	 */
 	EVT_AGGRESSION,
-	/**
-	 * Field EVT_READY_TO_ACT.
-	 */
 	EVT_READY_TO_ACT,
-	/**
-	 * Field EVT_ARRIVED.
-	 */
 	EVT_ARRIVED,
-	/**
-	 * Field EVT_ARRIVED_TARGET.
-	 */
 	EVT_ARRIVED_TARGET,
-	/**
-	 * Field EVT_ARRIVED_BLOCKED.
-	 */
 	EVT_ARRIVED_BLOCKED,
-	/**
-	 * Field EVT_FORGET_OBJECT.
-	 */
 	EVT_FORGET_OBJECT,
-	/**
-	 * Field EVT_DEAD.
-	 */
 	EVT_DEAD,
-	/**
-	 * Field EVT_FAKE_DEATH.
-	 */
 	EVT_FAKE_DEATH,
-	/**
-	 * Field EVT_FINISH_CASTING.
-	 */
 	EVT_FINISH_CASTING,
-	/**
-	 * Field EVT_SEE_SPELL.
-	 */
 	EVT_SEE_SPELL,
-	/**
-	 * Field EVT_SPAWN.
-	 */
 	EVT_SPAWN,
-	/**
-	 * Field EVT_DESPAWN.
-	 */
 	EVT_DESPAWN,
-	/**
-	 * Field EVT_TIMER.
-	 */
 	EVT_TIMER,
-	/**
-	 * Field EVT_TELEPORTED.
-	 */
 	EVT_TELEPORTED,
-	/**
-	 * Field EVT_MENU_SELECTED.
-	 */
 	EVT_MENU_SELECTED,
-	/**
-	 * Field EVT_SCRIPT_EVENT.
-	 */
 	EVT_SCRIPT_EVENT,
-	/**
-	 * Field EVT_KNOCK_DOWN.
-	 */
 	EVT_KNOCK_DOWN
 }

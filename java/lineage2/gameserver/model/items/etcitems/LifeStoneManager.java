@@ -13,17 +13,13 @@
 package lineage2.gameserver.model.items.etcitems;
 
 import java.io.File;
-
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import lineage2.gameserver.Config;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
-
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
@@ -32,13 +28,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public class LifeStoneManager
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(LifeStoneManager.class);
-	/**
-	 * Field _stones.
-	 */
 	private static final TIntObjectHashMap<LifeStoneInfo> _stones = new TIntObjectHashMap<>();
 	
 	/**

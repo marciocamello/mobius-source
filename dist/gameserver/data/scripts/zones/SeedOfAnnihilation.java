@@ -16,7 +16,6 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -39,13 +38,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class SeedOfAnnihilation implements ScriptFile
 {
-	/**
-	 * Field ANNIHILATION_FURNACE. (value is 18928)
-	 */
 	private static final int ANNIHILATION_FURNACE = 18928;
-	/**
-	 * Field ZONE_BUFFS_LIST.
-	 */
 	static final int[][] ZONE_BUFFS_LIST =
 	{
 		{
@@ -79,9 +72,6 @@ public final class SeedOfAnnihilation implements ScriptFile
 			2
 		}
 	};
-	/**
-	 * Field _teleportZones.
-	 */
 	static final Map<String, Location> _teleportZones = new HashMap<>();
 	static
 	{
@@ -90,17 +80,8 @@ public final class SeedOfAnnihilation implements ScriptFile
 		_teleportZones.put("[13_23_telzone_from_cocracon]", new Location(-181217, 186711, -10528));
 		_teleportZones.put("[14_23_telzone_from_raptilicon]", new Location(-179275, 186802, -10720));
 	}
-	/**
-	 * Field _zoneListener.
-	 */
 	private static ZoneListener _zoneListener;
-	/**
-	 * Field _regionsData.
-	 */
 	final SeedRegion[] _regionsData = new SeedRegion[3];
-	/**
-	 * Field _seedsNextStatusChange.
-	 */
 	Long _seedsNextStatusChange;
 	
 	/**
@@ -108,25 +89,10 @@ public final class SeedOfAnnihilation implements ScriptFile
 	 */
 	private class SeedRegion
 	{
-		/**
-		 * Field buff_zone_pc.
-		 */
 		public String[] buff_zone_pc;
-		/**
-		 * Field buff_zone_npc.
-		 */
 		public String[] buff_zone_npc;
-		/**
-		 * Field af_spawns.
-		 */
 		public int[][] af_spawns;
-		/**
-		 * Field af_npcs.
-		 */
 		public final NpcInstance[] af_npcs = new NpcInstance[2];
-		/**
-		 * Field activeBuff.
-		 */
 		public int activeBuff = 0;
 		
 		/**

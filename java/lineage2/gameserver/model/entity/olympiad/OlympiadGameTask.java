@@ -13,13 +13,11 @@
 package lineage2.gameserver.model.entity.olympiad;
 
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.utils.Log;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,29 +27,11 @@ import org.slf4j.LoggerFactory;
  */
 public class OlympiadGameTask extends RunnableImpl
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(OlympiadGameTask.class);
-	/**
-	 * Field _game.
-	 */
 	private final OlympiadGame _game;
-	/**
-	 * Field _status.
-	 */
 	private final BattleStatus _status;
-	/**
-	 * Field _count.
-	 */
 	private int _count;
-	/**
-	 * Field _time.
-	 */
 	private final long _time;
-	/**
-	 * Field _terminated.
-	 */
 	private boolean _terminated = false;
 	
 	/**

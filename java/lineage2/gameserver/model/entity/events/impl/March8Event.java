@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.entity.events.impl;
 
 import java.util.Calendar;
-
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
@@ -24,13 +23,7 @@ import lineage2.gameserver.model.entity.events.GlobalEvent;
  */
 public class March8Event extends GlobalEvent
 {
-	/**
-	 * Field _calendar.
-	 */
 	private final Calendar _calendar = Calendar.getInstance();
-	/**
-	 * Field LENGTH.
-	 */
 	private static final long LENGTH = 7 * 24 * 60 * 60 * 1000L;
 	
 	/**

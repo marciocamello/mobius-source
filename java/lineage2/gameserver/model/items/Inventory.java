@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.items;
 
 import java.util.Comparator;
-
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.listener.Listener;
 import lineage2.commons.listener.ListenerList;
@@ -26,7 +25,6 @@ import lineage2.gameserver.model.items.listeners.StatsListener;
 import lineage2.gameserver.templates.item.EtcItemTemplate.EtcItemType;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,121 +34,34 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class Inventory extends ItemContainer
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Inventory.class);
-	/**
-	 * Field PAPERDOLL_UNDER. (value is 0)
-	 */
 	public static final int PAPERDOLL_UNDER = 0;
-	/**
-	 * Field PAPERDOLL_REAR. (value is 1)
-	 */
 	public static final int PAPERDOLL_REAR = 1;
-	/**
-	 * Field PAPERDOLL_LEAR. (value is 2)
-	 */
 	public static final int PAPERDOLL_LEAR = 2;
-	/**
-	 * Field PAPERDOLL_NECK. (value is 3)
-	 */
 	public static final int PAPERDOLL_NECK = 3;
-	/**
-	 * Field PAPERDOLL_RFINGER. (value is 4)
-	 */
 	public static final int PAPERDOLL_RFINGER = 4;
-	/**
-	 * Field PAPERDOLL_LFINGER. (value is 5)
-	 */
 	public static final int PAPERDOLL_LFINGER = 5;
-	/**
-	 * Field PAPERDOLL_HEAD. (value is 6)
-	 */
 	public static final int PAPERDOLL_HEAD = 6;
-	/**
-	 * Field PAPERDOLL_RHAND. (value is 7)
-	 */
 	public static final int PAPERDOLL_RHAND = 7;
-	/**
-	 * Field PAPERDOLL_LHAND. (value is 8)
-	 */
 	public static final int PAPERDOLL_LHAND = 8;
-	/**
-	 * Field PAPERDOLL_GLOVES. (value is 9)
-	 */
 	public static final int PAPERDOLL_GLOVES = 9;
-	/**
-	 * Field PAPERDOLL_CHEST. (value is 10)
-	 */
 	public static final int PAPERDOLL_CHEST = 10;
-	/**
-	 * Field PAPERDOLL_LEGS. (value is 11)
-	 */
 	public static final int PAPERDOLL_LEGS = 11;
-	/**
-	 * Field PAPERDOLL_FEET. (value is 12)
-	 */
 	public static final int PAPERDOLL_FEET = 12;
-	/**
-	 * Field PAPERDOLL_BACK. (value is 13)
-	 */
 	public static final int PAPERDOLL_BACK = 13;
-	/**
-	 * Field PAPERDOLL_LRHAND. (value is 14)
-	 */
 	public static final int PAPERDOLL_LRHAND = 14;
-	/**
-	 * Field PAPERDOLL_HAIR. (value is 15)
-	 */
 	public static final int PAPERDOLL_HAIR = 15;
-	/**
-	 * Field PAPERDOLL_DHAIR. (value is 16)
-	 */
 	public static final int PAPERDOLL_DHAIR = 16;
-	/**
-	 * Field PAPERDOLL_RBRACELET. (value is 17)
-	 */
 	public static final int PAPERDOLL_RBRACELET = 17;
-	/**
-	 * Field PAPERDOLL_LBRACELET. (value is 18)
-	 */
 	public static final int PAPERDOLL_LBRACELET = 18;
-	/**
-	 * Field PAPERDOLL_DECO1. (value is 19)
-	 */
 	public static final int PAPERDOLL_DECO1 = 19;
-	/**
-	 * Field PAPERDOLL_DECO2. (value is 20)
-	 */
 	public static final int PAPERDOLL_DECO2 = 20;
-	/**
-	 * Field PAPERDOLL_DECO3. (value is 21)
-	 */
 	public static final int PAPERDOLL_DECO3 = 21;
-	/**
-	 * Field PAPERDOLL_DECO4. (value is 22)
-	 */
 	public static final int PAPERDOLL_DECO4 = 22;
-	/**
-	 * Field PAPERDOLL_DECO5. (value is 23)
-	 */
 	public static final int PAPERDOLL_DECO5 = 23;
-	/**
-	 * Field PAPERDOLL_DECO6. (value is 24)
-	 */
 	public static final int PAPERDOLL_DECO6 = 24;
-	/**
-	 * Field PAPERDOLL_BELT. (value is 25)
-	 */
 	public static final int PAPERDOLL_BELT = 25;
-	/**
-	 * Field PAPERDOLL_MAX. (value is 26)
-	 */
 	public static final int PAPERDOLL_MAX = 26;
-	/**
-	 * Field PAPERDOLL_ORDER.
-	 */
 	public static final int[] PAPERDOLL_ORDER =
 	{
 		Inventory.PAPERDOLL_UNDER,
@@ -218,9 +129,6 @@ public abstract class Inventory extends ItemContainer
 	 */
 	public static class ItemOrderComparator implements Comparator<ItemInstance>
 	{
-		/**
-		 * Field instance.
-		 */
 		private static final Comparator<ItemInstance> instance = new ItemOrderComparator();
 		
 		/**
@@ -250,25 +158,10 @@ public abstract class Inventory extends ItemContainer
 		}
 	}
 	
-	/**
-	 * Field _ownerId.
-	 */
 	protected final int _ownerId;
-	/**
-	 * Field _paperdoll.
-	 */
 	protected final ItemInstance[] _paperdoll = new ItemInstance[PAPERDOLL_MAX];
-	/**
-	 * Field _listeners.
-	 */
 	protected final InventoryListenerList _listeners = new InventoryListenerList();
-	/**
-	 * Field _totalWeight.
-	 */
 	protected int _totalWeight;
-	/**
-	 * Field _wearedMask.
-	 */
 	protected long _wearedMask;
 	
 	/**

@@ -21,9 +21,6 @@ import java.util.Iterator;
  */
 public final class NetList extends ArrayList<Net>
 {
-	/**
-	 * Field serialVersionUID. (value is 4266033257195615387)
-	 */
 	private static final long serialVersionUID = 4266033257195615387L;
 	
 	/**

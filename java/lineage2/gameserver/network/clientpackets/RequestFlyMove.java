@@ -26,9 +26,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class RequestFlyMove extends L2GameClientPacket
 {
-	/**
-	 * Field _nextWayId.
-	 */
 	private int _nextWayId;
 	
 	/**

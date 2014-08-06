@@ -25,9 +25,6 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class Battleground extends SimpleItemHandler
 {
-	/**
-	 * Field ITEM_IDS.
-	 */
 	private static final int[] ITEM_IDS = new int[]
 	{
 		10143,

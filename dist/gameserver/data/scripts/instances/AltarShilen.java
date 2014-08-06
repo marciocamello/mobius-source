@@ -21,7 +21,6 @@ import lineage2.gameserver.utils.Location;
 /**
  * @author Awakeninger
  */
-
 public final class AltarShilen extends Reflection
 {
 	private static final int StartNPC1 = 32788;
@@ -40,7 +39,6 @@ public final class AltarShilen extends Reflection
 	final Location Boss2Loc = new Location(178152, 14856, -10768, 16383);
 	final Location End1Loc = new Location(178152, 13576, -8045);
 	final Location End2Loc = new Location(178152, 13576, -10476);
-	
 	private static final long BeforeDelay = 0 * 1000L;
 	
 	@Override
@@ -86,5 +84,4 @@ public final class AltarShilen extends Reflection
 			_r.addSpawnWithoutRespawn(EndStage1, Altar2, 0);
 		}
 	}
-	
 }

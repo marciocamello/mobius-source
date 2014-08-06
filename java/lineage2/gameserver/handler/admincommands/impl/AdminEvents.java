@@ -27,9 +27,6 @@ public class AdminEvents implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_events.
-		 */
 		admin_events
 	}
 	

@@ -13,7 +13,6 @@
 package npc.model;
 
 import java.util.concurrent.Future;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Creature;
@@ -37,29 +36,11 @@ public final class SepulcherMonsterInstance extends MonsterInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field mysteriousBoxId.
-	 */
 	public int mysteriousBoxId = 0;
-	/**
-	 * Field _victimShout.
-	 */
 	Future<?> _victimShout = null;
-	/**
-	 * Field _victimSpawnKeyBoxTask.
-	 */
 	private Future<?> _victimSpawnKeyBoxTask = null;
-	/**
-	 * Field _changeImmortalTask.
-	 */
 	private Future<?> _changeImmortalTask = null;
-	/**
-	 * Field _onDeadEventTask.
-	 */
 	private Future<?> _onDeadEventTask = null;
-	/**
-	 * Field HALLS_KEY. (value is 7260)
-	 */
 	private final static int HALLS_KEY = 7260;
 	
 	/**
@@ -308,9 +289,6 @@ public final class SepulcherMonsterInstance extends MonsterInstance
 	 */
 	private class VictimShout extends RunnableImpl
 	{
-		/**
-		 * Field _activeChar.
-		 */
 		private final SepulcherMonsterInstance _activeChar;
 		
 		/**
@@ -347,9 +325,6 @@ public final class SepulcherMonsterInstance extends MonsterInstance
 	 */
 	private class VictimSpawnKeyBox extends RunnableImpl
 	{
-		/**
-		 * Field _activeChar.
-		 */
 		private final SepulcherMonsterInstance _activeChar;
 		
 		/**
@@ -393,9 +368,6 @@ public final class SepulcherMonsterInstance extends MonsterInstance
 	 */
 	private class OnDeadEvent extends RunnableImpl
 	{
-		/**
-		 * Field _activeChar.
-		 */
 		SepulcherMonsterInstance _activeChar;
 		
 		/**
@@ -503,9 +475,6 @@ public final class SepulcherMonsterInstance extends MonsterInstance
 	 */
 	private class ChangeImmortal extends RunnableImpl
 	{
-		/**
-		 * Field activeChar.
-		 */
 		private final SepulcherMonsterInstance activeChar;
 		
 		/**

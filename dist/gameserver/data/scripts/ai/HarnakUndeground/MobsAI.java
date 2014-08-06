@@ -13,9 +13,7 @@
 package ai.HarnakUndeground;
 
 import instances.HarnakUndergroundRuins;
-
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.CtrlIntention;
@@ -41,7 +39,6 @@ public final class MobsAI extends Fighter
 		14614
 	};
 	private static final int ULTIMATE_BUFF_ID = 4318;
-	
 	private boolean selected = false;
 	private final int NEXT_MOB_ID;
 	private final int MSG1_ID, MSG2_ID;

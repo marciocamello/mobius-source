@@ -15,13 +15,11 @@ package lineage2.gameserver.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.skills.TimeStamp;
 import lineage2.gameserver.utils.SqlBatch;
-
 import org.napile.primitive.maps.IntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,25 +30,10 @@ import org.slf4j.LoggerFactory;
  */
 public class CharacterGroupReuseDAO
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(CharacterGroupReuseDAO.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final CharacterGroupReuseDAO _instance = new CharacterGroupReuseDAO();
-	/**
-	 * Field DELETE_SQL_QUERY. (value is ""DELETE FROM character_group_reuse WHERE object_id=?"")
-	 */
 	public static final String DELETE_SQL_QUERY = "DELETE FROM character_group_reuse WHERE object_id=?";
-	/**
-	 * Field SELECT_SQL_QUERY. (value is ""SELECT * FROM character_group_reuse WHERE object_id=?"")
-	 */
 	public static final String SELECT_SQL_QUERY = "SELECT * FROM character_group_reuse WHERE object_id=?";
-	/**
-	 * Field INSERT_SQL_QUERY. (value is ""REPLACE INTO `character_group_reuse` (`object_id`,`reuse_group`,`item_id`,`end_time`,`reuse`) VALUES"")
-	 */
 	public static final String INSERT_SQL_QUERY = "REPLACE INTO `character_group_reuse` (`object_id`,`reuse_group`,`item_id`,`end_time`,`reuse`) VALUES";
 	
 	/**

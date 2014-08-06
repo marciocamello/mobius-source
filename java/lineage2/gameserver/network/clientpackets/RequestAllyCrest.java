@@ -21,9 +21,6 @@ import lineage2.gameserver.network.serverpackets.AllianceCrest;
  */
 public class RequestAllyCrest extends L2GameClientPacket
 {
-	/**
-	 * Field _crestId.
-	 */
 	private int _crestId;
 	
 	/**

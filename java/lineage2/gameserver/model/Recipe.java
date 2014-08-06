@@ -20,53 +20,17 @@ import lineage2.gameserver.templates.item.RecipeTemplate.RecipeComponent;
  */
 public class Recipe
 {
-	/**
-	 * Field _recipes.
-	 */
 	private RecipeComponent[] _recipes;
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _level.
-	 */
 	private final int _level;
-	/**
-	 * Field _recipeId.
-	 */
 	private final int _recipeId;
-	/**
-	 * Field _recipeName.
-	 */
 	private final String _recipeName;
-	/**
-	 * Field _successRate.
-	 */
 	private final int _successRate;
-	/**
-	 * Field _mpCost.
-	 */
 	private final int _mpCost;
-	/**
-	 * Field _itemId.
-	 */
 	private final int _itemId;
-	/**
-	 * Field _foundation.
-	 */
 	private final int _foundation;
-	/**
-	 * Field _count.
-	 */
 	private final int _count;
-	/**
-	 * Field _isdwarvencraft.
-	 */
 	private final boolean _isdwarvencraft;
-	/**
-	 * Field _sp. Field _exp.
-	 */
 	private final long _exp, _sp;
 	
 	/**

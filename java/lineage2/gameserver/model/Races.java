@@ -18,9 +18,6 @@ package lineage2.gameserver.model;
  */
 public class Races
 {
-	/**
-	 * Field _STR.
-	 */
 	public static final int[][] _STR =
 	{
 		{
@@ -40,9 +37,6 @@ public class Races
 			88
 		}
 	};
-	/**
-	 * Field _DEX.
-	 */
 	public static final int[][] _DEX =
 	{
 		{
@@ -62,9 +56,6 @@ public class Races
 			57
 		}
 	};
-	/**
-	 * Field _CON.
-	 */
 	public static final int[][] _CON =
 	{
 		{
@@ -84,9 +75,6 @@ public class Races
 			80
 		}
 	};
-	/**
-	 * Field _INT.
-	 */
 	public static final int[][] _INT =
 	{
 		{
@@ -106,9 +94,6 @@ public class Races
 			43
 		}
 	};
-	/**
-	 * Field _WIT.
-	 */
 	public static final int[][] _WIT =
 	{
 		{
@@ -128,9 +113,6 @@ public class Races
 			36
 		}
 	};
-	/**
-	 * Field _MEN.
-	 */
 	public static final int[][] _MEN =
 	{
 		{

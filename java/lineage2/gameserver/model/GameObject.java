@@ -15,7 +15,6 @@ package lineage2.gameserver.model;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
-
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.lang.reference.HardReferences;
 import lineage2.gameserver.ai.CtrlIntention;
@@ -32,7 +31,6 @@ import lineage2.gameserver.scripts.Events;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.Util;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,57 +40,18 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class GameObject extends EventOwner
 {
-	/**
-	 * Field serialVersionUID. (value is -950375486287118921)
-	 */
 	private static final long serialVersionUID = -950375486287118921L;
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(GameObject.class);
-	/**
-	 * Field EMPTY_L2OBJECT_ARRAY.
-	 */
 	public final static GameObject[] EMPTY_L2OBJECT_ARRAY = new GameObject[0];
-	/**
-	 * Field CREATED. (value is 0)
-	 */
 	protected final static int CREATED = 0;
-	/**
-	 * Field VISIBLE. (value is 1)
-	 */
 	protected final static int VISIBLE = 1;
-	/**
-	 * Field DELETED. (value is -1)
-	 */
 	protected final static int DELETED = -1;
-	/**
-	 * Field objectId.
-	 */
 	protected int objectId;
-	/**
-	 * Field _x.
-	 */
 	private int _x;
-	/**
-	 * Field _y.
-	 */
 	private int _y;
-	/**
-	 * Field _z.
-	 */
 	private int _z;
-	/**
-	 * Field _reflection.
-	 */
 	protected Reflection _reflection = ReflectionManager.DEFAULT;
-	/**
-	 * Field _currentRegion.
-	 */
 	private WorldRegion _currentRegion;
-	/**
-	 * Field _state.
-	 */
 	private final AtomicInteger _state = new AtomicInteger(CREATED);
 	
 	/**
@@ -1313,5 +1272,4 @@ public abstract class GameObject extends EventOwner
 	{
 		return false;
 	}
-	
 }

@@ -17,7 +17,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -35,7 +34,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.ReflectionUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,130 +43,40 @@ import org.slf4j.LoggerFactory;
  */
 public final class BelethManager extends Functions implements ScriptFile
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(BelethManager.class);
-	/**
-	 * Field _zone.
-	 */
 	static final Zone _zone = ReflectionUtils.getZone("[Beleth_room]");
-	/**
-	 * Field _zoneListener.
-	 */
 	private static final ZoneListener _zoneListener = new ZoneListener();
-	/**
-	 * Field _indexedPlayers.
-	 */
 	static final List<Player> _indexedPlayers = new ArrayList<>();
-	/**
-	 * Field _npcList.
-	 */
 	static final List<NpcInstance> _npcList = new ArrayList<>();
-	/**
-	 * Field _doorWaitTimeDuration. (value is 60000)
-	 */
 	private static final int _doorWaitTimeDuration = 60000;
-	/**
-	 * Field _spawnWaitTimeDuration. (value is 120000)
-	 */
 	private static final int _spawnWaitTimeDuration = 120000;
-	/**
-	 * Field _closeDoorTimeDuration. (value is 180000)
-	 */
 	private static final int _closeDoorTimeDuration = 180000;
-	/**
-	 * Field _clonesRespawnTimeTimeDuration. (value is 40000)
-	 */
 	private static final int _clonesRespawnTimeTimeDuration = 40000;
-	/**
-	 * Field _ringAvailableTime. (value is 300000)
-	 */
 	private static final int _ringAvailableTime = 300000;
-	/**
-	 * Field _clearEntityTime. (value is 600000)
-	 */
 	private static final int _clearEntityTime = 600000;
-	/**
-	 * Field _belethRespawnTime.
-	 */
 	private static final long _belethRespawnTime = 2 * 24 * 60 * 60 * 1000;
-	/**
-	 * Field _entityInactivityTime.
-	 */
 	private static final long _entityInactivityTime = 2 * 60 * 60 * 1000;
-	/**
-	 * Field _ringSpawnTime. (value is 300000)
-	 */
 	private static final int _ringSpawnTime = 300000;
-	/**
-	 * Field _lastSpawnTime. (value is 600000)
-	 */
 	private static final int _lastSpawnTime = 600000;
-	/**
-	 * Field DOOR. (value is 20240001)
-	 */
 	private static final int DOOR = 20240001;
-	/**
-	 * Field CORRDOOR. (value is 20240002)
-	 */
 	private static final int CORRDOOR = 20240002;
-	/**
-	 * Field COFFDOOR. (value is 20240003)
-	 */
 	private static final int COFFDOOR = 20240003;
-	/**
-	 * Field _taskStarted.
-	 */
 	static boolean _taskStarted = false;
-	/**
-	 * Field _entryLocked.
-	 */
 	static boolean _entryLocked = false;
-	/**
-	 * Field _ringAvailable.
-	 */
 	private static boolean _ringAvailable = false;
-	/**
-	 * Field _belethAlive.
-	 */
 	static boolean _belethAlive = false;
-	/**
-	 * Field VORTEX. (value is 29125)
-	 */
 	private static final int VORTEX = 29125;
-	/**
-	 * Field ELF. (value is 29128)
-	 */
 	private static final int ELF = 29128;
-	/**
-	 * Field COFFIN. (value is 32470)
-	 */
 	private static final int COFFIN = 32470;
-	/**
-	 * Field BELETH. (value is 29118)
-	 */
 	private static final int BELETH = 29118;
-	/**
-	 * Field CLONE. (value is 29119)
-	 */
 	private static final int CLONE = 29119;
-	/**
-	 * Field locZ. (value is -9353)
-	 */
 	private static final int locZ = -9353;
-	/**
-	 * Field VORTEXSPAWN.
-	 */
 	static final int[] VORTEXSPAWN =
 	{
 		16325,
 		214983,
 		-9353
 	};
-	/**
-	 * Field COFFSPAWN.
-	 */
 	static final int[] COFFSPAWN =
 	{
 		12471,
@@ -176,9 +84,6 @@ public final class BelethManager extends Functions implements ScriptFile
 		-9360,
 		49152
 	};
-	/**
-	 * Field BELSPAWN.
-	 */
 	static final int[] BELSPAWN =
 	{
 		16325,
@@ -186,37 +91,13 @@ public final class BelethManager extends Functions implements ScriptFile
 		-9353,
 		49152
 	};
-	/**
-	 * Field _beleth.
-	 */
 	static RaidBossInstance _beleth = null;
-	/**
-	 * Field centerX. (value is 16325)
-	 */
 	private static final int centerX = 16325;
-	/**
-	 * Field centerY. (value is 213135)
-	 */
 	private static final int centerY = 213135;
-	/**
-	 * Field _clones.
-	 */
 	static final Map<MonsterInstance, Location> _clones = new ConcurrentHashMap<>();
-	/**
-	 * Field _cloneLoc.
-	 */
 	static final Location[] _cloneLoc = new Location[56];
-	/**
-	 * Field cloneRespawnTask.
-	 */
 	static ScheduledFuture<?> cloneRespawnTask;
-	/**
-	 * Field ringSpawnTask.
-	 */
 	static ScheduledFuture<?> ringSpawnTask;
-	/**
-	 * Field lastSpawnTask.
-	 */
 	static ScheduledFuture<?> lastSpawnTask;
 	
 	/**
@@ -411,61 +292,19 @@ public final class BelethManager extends Functions implements ScriptFile
 	 */
 	private enum Event
 	{
-		/**
-		 * Field none.
-		 */
 		none,
-		/**
-		 * Field start.
-		 */
 		start,
-		/**
-		 * Field open_door.
-		 */
 		open_door,
-		/**
-		 * Field close_door.
-		 */
 		close_door,
-		/**
-		 * Field beleth_spawn.
-		 */
 		beleth_spawn,
-		/**
-		 * Field beleth_despawn.
-		 */
 		beleth_despawn,
-		/**
-		 * Field clone_despawn.
-		 */
 		clone_despawn,
-		/**
-		 * Field clone_spawn.
-		 */
 		clone_spawn,
-		/**
-		 * Field ring_unset.
-		 */
 		ring_unset,
-		/**
-		 * Field beleth_dead.
-		 */
 		beleth_dead,
-		/**
-		 * Field entity_clear.
-		 */
 		entity_clear,
-		/**
-		 * Field inactivity_check.
-		 */
 		inactivity_check,
-		/**
-		 * Field spawn_ring.
-		 */
 		spawn_ring,
-		/**
-		 * Field spawn_extras.
-		 */
 		spawn_extras
 	}
 	
@@ -474,9 +313,6 @@ public final class BelethManager extends Functions implements ScriptFile
 	 */
 	public static class eventExecutor extends RunnableImpl
 	{
-		/**
-		 * Field _event.
-		 */
 		Event _event;
 		
 		/**

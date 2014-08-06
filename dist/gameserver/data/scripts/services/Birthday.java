@@ -29,21 +29,9 @@ import lineage2.gameserver.utils.PositionUtils;
  */
 public final class Birthday extends Functions
 {
-	/**
-	 * Field EXPLORERHAT. (value is 10250)
-	 */
 	private static final int EXPLORERHAT = 10250;
-	/**
-	 * Field HAT. (value is 13488)
-	 */
 	private static final int HAT = 13488;
-	/**
-	 * Field NPC_ALEGRIA. (value is 32600)
-	 */
 	private static final int NPC_ALEGRIA = 32600;
-	/**
-	 * Field msgSpawned. (value is ""scripts/services/Birthday-spawned.htm"")
-	 */
 	private static final String msgSpawned = "scripts/services/Birthday-spawned.htm";
 	
 	/**

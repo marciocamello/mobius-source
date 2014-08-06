@@ -25,9 +25,6 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
  */
 public final class BeastShot extends ScriptItemHandler
 {
-	/**
-	 * Field _itemIds.
-	 */
 	private final static int[] _itemIds =
 	{
 		6645,

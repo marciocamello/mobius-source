@@ -23,7 +23,6 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.ReflectionUtils;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -36,13 +35,7 @@ public final class AuctionedDoormanInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _doors.
-	 */
 	private final int[] _doors;
-	/**
-	 * Field _elite.
-	 */
 	private final boolean _elite;
 	
 	/**

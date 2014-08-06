@@ -14,7 +14,6 @@ package npc.model;
 
 import java.util.HashMap;
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
 import lineage2.gameserver.instancemanager.AwakingManager;
@@ -412,9 +411,9 @@ public final class PowerfulDeviceInstance extends NpcInstance
 			case 107:
 				NextClassId1 = 173;
 				break;
+			
 			// case 136:
 			// NextClassId = 176);
-			
 			case 96:
 				NextClassId1 = 176;
 				break;
@@ -825,5 +824,4 @@ public final class PowerfulDeviceInstance extends NpcInstance
 		
 		return false;
 	}
-	
 }

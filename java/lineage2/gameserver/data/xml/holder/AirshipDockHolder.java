@@ -22,13 +22,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public final class AirshipDockHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final AirshipDockHolder _instance = new AirshipDockHolder();
-	/**
-	 * Field _docks.
-	 */
 	private final TIntObjectHashMap<AirshipDock> _docks = new TIntObjectHashMap<>(4);
 	
 	/**

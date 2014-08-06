@@ -21,13 +21,7 @@ import lineage2.gameserver.network.loginservercon.SendablePacket;
  */
 public class PlayerAuthRequest extends SendablePacket
 {
-	/**
-	 * Field account.
-	 */
 	private final String account;
-	/**
-	 * Field loginOkID2. Field loginOkID1. Field playOkID2. Field playOkID1.
-	 */
 	private final int playOkID1, playOkID2, loginOkID1, loginOkID2;
 	
 	/**

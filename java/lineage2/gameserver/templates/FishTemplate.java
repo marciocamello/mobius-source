@@ -18,49 +18,16 @@ package lineage2.gameserver.templates;
  */
 public class FishTemplate
 {
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _level.
-	 */
 	private final int _level;
-	/**
-	 * Field _name.
-	 */
 	private final String _name;
-	/**
-	 * Field _HP.
-	 */
 	private final int _HP;
-	/**
-	 * Field _HpRegen.
-	 */
 	private final int _HpRegen;
-	/**
-	 * Field _type.
-	 */
 	private final int _type;
-	/**
-	 * Field _group.
-	 */
 	private final int _group;
-	/**
-	 * Field _fish_guts.
-	 */
 	private final int _fish_guts;
-	/**
-	 * Field _guts_check_time.
-	 */
 	private final int _guts_check_time;
-	/**
-	 * Field _wait_time.
-	 */
 	private final int _wait_time;
-	/**
-	 * Field _combat_time.
-	 */
 	private final int _combat_time;
 	
 	/**

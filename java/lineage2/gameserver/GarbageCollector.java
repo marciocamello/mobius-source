@@ -21,9 +21,6 @@ import org.slf4j.LoggerFactory;
  */
 public class GarbageCollector
 {
-	/**
-	 * Field _log.
-	 */
 	static final Logger _log = LoggerFactory.getLogger(GarbageCollector.class);
 	static
 	{

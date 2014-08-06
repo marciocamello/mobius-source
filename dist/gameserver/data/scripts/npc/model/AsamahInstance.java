@@ -29,13 +29,7 @@ public final class AsamahInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field ElrokianTrap. (value is 8763)
-	 */
 	private static final int ElrokianTrap = 8763;
-	/**
-	 * Field TrapStone. (value is 8764)
-	 */
 	private static final int TrapStone = 8764;
 	
 	/**

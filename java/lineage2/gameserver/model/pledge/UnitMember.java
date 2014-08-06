@@ -14,12 +14,10 @@ package lineage2.gameserver.model.pledge;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.NickNameChanged;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,58 +27,19 @@ import org.slf4j.LoggerFactory;
  */
 public class UnitMember
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(UnitMember.class);
-	/**
-	 * Field _player.
-	 */
 	private Player _player;
-	/**
-	 * Field _clan.
-	 */
 	private Clan _clan;
-	/**
-	 * Field _name.
-	 */
 	private String _name;
-	/**
-	 * Field _title.
-	 */
 	private String _title;
-	/**
-	 * Field _objectId.
-	 */
 	private final int _objectId;
-	/**
-	 * Field _level.
-	 */
 	private int _level;
-	/**
-	 * Field _classId.
-	 */
 	private int _classId;
-	/**
-	 * Field _sex.
-	 */
 	private int _sex;
-	/**
-	 * Field _pledgeType.
-	 */
 	private int _race;
 	private int _pledgeType;
-	/**
-	 * Field _powerGrade.
-	 */
 	private int _powerGrade;
-	/**
-	 * Field _apprentice.
-	 */
 	private int _apprentice;
-	/**
-	 * Field _leaderOf.
-	 */
 	private int _leaderOf = Clan.SUBUNIT_NONE;
 	
 	/**

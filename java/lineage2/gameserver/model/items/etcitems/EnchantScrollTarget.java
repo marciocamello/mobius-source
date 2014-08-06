@@ -18,12 +18,6 @@ package lineage2.gameserver.model.items.etcitems;
  */
 public enum EnchantScrollTarget
 {
-	/**
-	 * Field WEAPON.
-	 */
 	WEAPON,
-	/**
-	 * Field ARMOR.
-	 */
 	ARMOR
 }

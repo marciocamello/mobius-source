@@ -26,29 +26,11 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public class DeathPenalty
 {
-	/**
-	 * Field _skillId. (value is 14571)
-	 */
 	private static final int _skillId = 14571;
-	/**
-	 * Field _fortuneOfNobleseSkillId. (value is 1325)
-	 */
 	private static final int _fortuneOfNobleseSkillId = 1325;
-	/**
-	 * Field _charmOfLuckSkillId. (value is 2168)
-	 */
 	private static final int _charmOfLuckSkillId = 2168;
-	/**
-	 * Field _playerRef.
-	 */
 	private final HardReference<Player> _playerRef;
-	/**
-	 * Field _level.
-	 */
 	private int _level;
-	/**
-	 * Field _hasCharmOfLuck.
-	 */
 	private boolean _hasCharmOfLuck;
 	
 	/**

@@ -20,11 +20,9 @@ import java.util.TreeMap;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.loginserver.database.L2DatabaseFactory;
 import lineage2.loginserver.gameservercon.GameServer;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,13 +32,7 @@ import org.slf4j.LoggerFactory;
  */
 public class GameServerManager
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(GameServerManager.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final GameServerManager _instance = new GameServerManager();
 	
 	/**
@@ -52,21 +44,9 @@ public class GameServerManager
 		return _instance;
 	}
 	
-	/**
-	 * Field _gameServers.
-	 */
 	private final Map<Integer, GameServer> _gameServers = new TreeMap<>();
-	/**
-	 * Field _lock.
-	 */
 	private final ReadWriteLock _lock = new ReentrantReadWriteLock();
-	/**
-	 * Field _readLock.
-	 */
 	private final Lock _readLock = _lock.readLock();
-	/**
-	 * Field _writeLock.
-	 */
 	private final Lock _writeLock = _lock.writeLock();
 	
 	/**

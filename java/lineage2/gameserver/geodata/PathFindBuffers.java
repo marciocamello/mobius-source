@@ -17,7 +17,6 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
 import lineage2.commons.text.StrTable;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.utils.Location;
@@ -31,29 +30,11 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public class PathFindBuffers
 {
-	/**
-	 * Field MIN_MAP_SIZE.
-	 */
 	public final static int MIN_MAP_SIZE = 1 << 6;
-	/**
-	 * Field STEP_MAP_SIZE.
-	 */
 	public final static int STEP_MAP_SIZE = 1 << 5;
-	/**
-	 * Field MAX_MAP_SIZE.
-	 */
 	public final static int MAX_MAP_SIZE = 1 << 9;
-	/**
-	 * Field buffers.
-	 */
 	private static final TIntObjectHashMap<PathFindBuffer[]> buffers = new TIntObjectHashMap<>();
-	/**
-	 * Field sizes.
-	 */
 	private static int[] sizes = new int[0];
-	/**
-	 * Field lock.
-	 */
 	private static final Lock lock = new ReentrantLock();
 	static
 	{
@@ -292,52 +273,16 @@ public class PathFindBuffers
 	 */
 	public static class PathFindBuffer
 	{
-		/**
-		 * Field mapSize.
-		 */
 		final int mapSize;
-		/**
-		 * Field nodes.
-		 */
 		final GeoNode[][] nodes;
-		/**
-		 * Field open.
-		 */
 		final Queue<GeoNode> open;
-		/**
-		 * Field offsetY.
-		 */
-		/**
-		 * Field offsetX.
-		 */
 		int offsetX, offsetY;
-		/**
-		 * Field inUse.
-		 */
 		boolean inUse;
-		/**
-		 * Field totalUses.
-		 */
 		long totalUses;
-		/**
-		 * Field successUses.
-		 */
 		long successUses;
-		/**
-		 * Field overtimeUses.
-		 */
 		long overtimeUses;
-		/**
-		 * Field playableUses.
-		 */
 		long playableUses;
-		/**
-		 * Field totalTime.
-		 */
 		long totalTime;
-		/**
-		 * Field totalItr.
-		 */
 		long totalItr;
 		
 		/**
@@ -381,49 +326,13 @@ public class PathFindBuffers
 	 */
 	public static class GeoNode implements Comparable<GeoNode>
 	{
-		/**
-		 * Field NONE. (value is 0)
-		 */
 		public final static int NONE = 0;
-		/**
-		 * Field OPENED. (value is 1)
-		 */
 		public final static int OPENED = 1;
-		/**
-		 * Field CLOSED. (value is -1)
-		 */
 		public final static int CLOSED = -1;
-		/**
-		 * Field y.
-		 */
-		/**
-		 * Field x.
-		 */
 		public int x, y;
-		/**
-		 * Field nswe.
-		 */
-		/**
-		 * Field z.
-		 */
 		public short z, nswe;
-		/**
-		 * Field costToEnd.
-		 */
-		/**
-		 * Field costFromStart.
-		 */
-		/**
-		 * Field totalCost.
-		 */
 		public float totalCost, costFromStart, costToEnd;
-		/**
-		 * Field state.
-		 */
 		public int state;
-		/**
-		 * Field parent.
-		 */
 		public GeoNode parent;
 		
 		/**

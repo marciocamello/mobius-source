@@ -26,9 +26,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.StringTokenizer;
 import java.util.regex.Pattern;
-
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import lineage2.commons.configuration.ExProperties;
 import lineage2.commons.net.nio.impl.SelectorConfig;
 import lineage2.gameserver.data.htm.HtmCache;
@@ -36,7 +34,6 @@ import lineage2.gameserver.model.actor.instances.player.Bonus;
 import lineage2.gameserver.model.base.Experience;
 import lineage2.gameserver.model.base.PlayerAccess;
 import lineage2.gameserver.network.loginservercon.ServerType;
-
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.math.NumberUtils;

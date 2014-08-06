@@ -16,7 +16,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicBoolean;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.ai.CtrlEvent;
@@ -48,13 +47,7 @@ public final class GustavInstance extends SiegeGuardInstance implements _34Siege
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _canDead.
-	 */
 	private final AtomicBoolean _canDead = new AtomicBoolean();
-	/**
-	 * Field _teleportTask.
-	 */
 	private Future<?> _teleportTask;
 	
 	/**

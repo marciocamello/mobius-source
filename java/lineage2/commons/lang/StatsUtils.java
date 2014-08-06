@@ -27,13 +27,7 @@ import java.lang.management.ThreadMXBean;
  */
 public final class StatsUtils
 {
-	/**
-	 * Field memMXbean.
-	 */
 	private static final MemoryMXBean memMXbean = ManagementFactory.getMemoryMXBean();
-	/**
-	 * Field threadMXbean.
-	 */
 	private static final ThreadMXBean threadMXbean = ManagementFactory.getThreadMXBean();
 	
 	/**

@@ -26,7 +26,6 @@ import java.util.Hashtable;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
@@ -41,29 +40,11 @@ import lineage2.gameserver.utils.Log;
  */
 public class SMSWayToPay
 {
-	/**
-	 * Field SELECT_PLAYER_OBJID. (value is ""SELECT obj_Id FROM characters WHERE char_name=?"")
-	 */
 	private static final String SELECT_PLAYER_OBJID = "SELECT obj_Id FROM characters WHERE char_name=?";
-	/**
-	 * Field SELECT_CHARACTER_SMS_DATA. (value is ""SELECT * FROM character_sms_donate WHERE id=? AND wText=?"")
-	 */
 	private static final String SELECT_CHARACTER_SMS_DATA = "SELECT * FROM character_sms_donate WHERE id=? AND wText=?";
-	/**
-	 * Field INSERT_SMS_DATA. (value is ""INSERT INTO character_sms_donate (id, service_id, status, time, curr_id, sum, profit, email, client_id, wNumber, wPhone, wText, wCost, wProfit, wCountry) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"")
-	 */
 	private static final String INSERT_SMS_DATA = "INSERT INTO character_sms_donate (id, service_id, status, time, curr_id, sum, profit, email, client_id, wNumber, wPhone, wText, wCost, wProfit, wCountry) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-	/**
-	 * Field DELETE_SMS_DATA. (value is ""DELETE FROM character_sms_donate WHERE time<?"")
-	 */
 	private static final String DELETE_SMS_DATA = "DELETE FROM character_sms_donate WHERE time<?";
-	/**
-	 * Field UPDATE_SMS_DATA. (value is ""UPDATE character_sms_donate SET has_reward=1 WHERE wText=?"")
-	 */
 	private static final String UPDATE_SMS_DATA = "UPDATE character_sms_donate SET has_reward=1 WHERE wText=?";
-	/**
-	 * Field SELECT_RPOFIT_SMS_DATA. (value is ""SELECT wCost, wProfit FROM character_sms_donate WHERE wText=? AND has_reward=0"")
-	 */
 	private static final String SELECT_RPOFIT_SMS_DATA = "SELECT wCost, wProfit FROM character_sms_donate WHERE wText=? AND has_reward=0";
 	
 	/**
@@ -71,51 +52,18 @@ public class SMSWayToPay
 	 */
 	public static class DataContainer
 	{
-		/**
-		 * Field id.
-		 */
 		public int id;
-		/**
-		 * Field service_id.
-		 */
 		public int service_id;
-		/**
-		 * Field status.
-		 */
 		public int status;
-		/**
-		 * Field time.
-		 */
 		public long time;
-		/**
-		 * Field curr_id.
-		 */
 		public int curr_id;
-		/**
-		 * Field sum.
-		 */
 		public float sum;
-		/**
-		 * Field profit.
-		 */
 		public float profit;
-		/**
-		 * Field email.
-		 */
 		public String email;
-		/**
-		 * Field client_id.
-		 */
 		public int client_id;
-		/**
-		 * Field client_params.
-		 */
 		public String client_params;
 	}
 	
-	/**
-	 * Field _instance.
-	 */
 	private static SMSWayToPay _instance;
 	
 	/**

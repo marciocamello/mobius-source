@@ -16,7 +16,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
 import lineage2.commons.data.xml.AbstractDirParser;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -47,9 +46,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class NpcParser extends AbstractDirParser<NpcHolder>
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final NpcParser _instance = new NpcParser();
 	
 	/**

@@ -18,13 +18,7 @@ package lineage2.gameserver.templates.npc;
  */
 public class MinionData
 {
-	/**
-	 * Field _minionId.
-	 */
 	private final int _minionId;
-	/**
-	 * Field _minionAmount.
-	 */
 	private final int _minionAmount;
 	
 	/**

@@ -26,23 +26,11 @@ public class ConditionPlayerRiding extends Condition
 	 */
 	public enum CheckPlayerRiding
 	{
-		/**
-		 * Field NONE.
-		 */
 		NONE,
-		/**
-		 * Field STRIDER.
-		 */
 		STRIDER,
-		/**
-		 * Field WYVERN.
-		 */
 		WYVERN
 	}
 	
-	/**
-	 * Field _riding.
-	 */
 	private final CheckPlayerRiding _riding;
 	
 	/**

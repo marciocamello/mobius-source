@@ -15,7 +15,6 @@ package lineage2.gameserver.model.items;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.collections.GArray;
 import lineage2.commons.dao.JdbcEntity;
 import lineage2.commons.dao.JdbcEntityState;
@@ -53,26 +52,14 @@ import lineage2.gameserver.templates.item.ItemTemplate.ItemClass;
 import lineage2.gameserver.templates.item.ItemType;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
-
 import org.napile.primitive.Containers;
 import org.napile.primitive.sets.IntSet;
 import org.napile.primitive.sets.impl.HashIntSet;
 
 public final class ItemInstance extends GameObject implements JdbcEntity
 {
-	/**
-	 * Field EMPTY_ENCHANT_OPTIONS.
-	 */
 	public static final int[] EMPTY_ENCHANT_OPTIONS = new int[3];
-	
-	/**
-	 * Field serialVersionUID. (value is 3162753878915133228)
-	 */
 	private static final long serialVersionUID = 3162753878915133228L;
-	
-	/**
-	 * Field _itemsDAO.
-	 */
 	private static final ItemsDAO _itemsDAO = ItemsDAO.getInstance();
 	
 	/**
@@ -80,195 +67,54 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	 */
 	public static enum ItemLocation
 	{
-		/**
-		 * Field VOID.
-		 */
 		VOID,
-		/**
-		 * Field INVENTORY.
-		 */
 		INVENTORY,
-		/**
-		 * Field PAPERDOLL.
-		 */
 		PAPERDOLL,
-		/**
-		 * Field PET_INVENTORY.
-		 */
 		PET_INVENTORY,
-		/**
-		 * Field PET_PAPERDOLL.
-		 */
 		PET_PAPERDOLL,
-		/**
-		 * Field WAREHOUSE.
-		 */
 		WAREHOUSE,
-		/**
-		 * Field CLANWH.
-		 */
 		CLANWH,
-		/**
-		 * Field FREIGHT.
-		 */
 		FREIGHT,
-		/**
-		 * Field LEASE.
-		 */
 		@Deprecated
 		LEASE,
-		/**
-		 * Field MAIL.
-		 */
 		MAIL,
-		/**
-		 * Field COMMISSION.
-		 */
 		COMMISSION
 	}
 	
-	/**
-	 * Field CHARGED_NONE. (value is 0)
-	 */
 	public static final int CHARGED_NONE = 0;
-	/**
-	 * Field CHARGED_SOULSHOT. (value is 1)
-	 */
 	public static final int CHARGED_SOULSHOT = 1;
-	/**
-	 * Field CHARGED_SPIRITSHOT. (value is 1)
-	 */
 	public static final int CHARGED_SPIRITSHOT = 1;
-	/**
-	 * Field CHARGED_BLESSED_SPIRITSHOT. (value is 2)
-	 */
 	public static final int CHARGED_BLESSED_SPIRITSHOT = 2;
-	
-	/**
-	 * Field FLAG_NO_DROP.
-	 */
 	public static final int FLAG_NO_DROP = 1 << 0;
-	/**
-	 * Field FLAG_NO_TRADE.
-	 */
 	public static final int FLAG_NO_TRADE = 1 << 1;
-	/**
-	 * Field FLAG_NO_TRANSFER.
-	 */
 	public static final int FLAG_NO_TRANSFER = 1 << 2;
-	/**
-	 * Field FLAG_NO_CRYSTALLIZE.
-	 */
 	public static final int FLAG_NO_CRYSTALLIZE = 1 << 3;
-	/**
-	 * Field FLAG_NO_ENCHANT.
-	 */
 	public static final int FLAG_NO_ENCHANT = 1 << 4;
-	/**
-	 * Field FLAG_NO_DESTROY.
-	 */
 	public static final int FLAG_NO_DESTROY = 1 << 5;
-	
-	/**
-	 * Field ownerId.
-	 */
 	private int ownerId;
-	/**
-	 * Field itemId.
-	 */
 	private int itemId;
-	/**
-	 * Field count.
-	 */
 	private long count;
-	/**
-	 * Field enchantLevel.
-	 */
 	private int enchantLevel = -1;
-	/**
-	 * Field loc.
-	 */
 	private ItemLocation loc;
-	/**
-	 * Field locData.
-	 */
 	private int locData;
-	/**
-	 * Field customType1.
-	 */
 	private int customType1;
-	/**
-	 * Field customType2.
-	 */
 	private int customType2;
-	/**
-	 * Field lifeTime.
-	 */
 	private int lifeTime;
-	/**
-	 * Field customFlags.
-	 */
 	private int customFlags;
-	/**
-	 * Field attrs.
-	 */
 	private ItemAttributes attrs = new ItemAttributes();
-	/**
-	 * Field _enchantOptions.
-	 */
 	private int[] _enchantOptions = EMPTY_ENCHANT_OPTIONS;
-	/**
-	 * Field template.
-	 */
 	private ItemTemplate template;
-	/**
-	 * Field isEquipped.
-	 */
 	private boolean isEquipped;
-	/**
-	 * Field _dropTime.
-	 */
 	private long _dropTime;
-	
-	/**
-	 * Field _dropPlayers.
-	 */
 	private IntSet _dropPlayers = Containers.EMPTY_INT_SET;
-	/**
-	 * Field _dropTimeOwner.
-	 */
 	private long _dropTimeOwner;
-	
-	/**
-	 * Field _chargedSoulshot.
-	 */
 	private int _chargedSoulshot = CHARGED_NONE;
-	/**
-	 * Field _chargedSpiritshot.
-	 */
 	private int _chargedSpiritshot = CHARGED_NONE;
-	
-	/**
-	 * Field _chargedFishtshot.
-	 */
 	private boolean _chargedFishtshot = false;
 	private int _visualId;
-	/**
-	 * Field _augmentationId.
-	 */
 	private int _augmentationId;
-	/**
-	 * Field _agathionEnergy.
-	 */
 	private int _agathionEnergy;
-	
-	/**
-	 * Field _attachment.
-	 */
 	private ItemAttachment _attachment;
-	/**
-	 * Field _state.
-	 */
 	private JdbcEntityState _state = JdbcEntityState.CREATED;
 	
 	/**
@@ -571,9 +417,6 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		return getLifeTime() - (int) (System.currentTimeMillis() / 1000L);
 	}
 	
-	/**
-	 * Field _timerTask.
-	 */
 	private ScheduledFuture<?> _timerTask;
 	
 	/**
@@ -844,9 +687,6 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	 */
 	public class FuncAttack extends Func
 	{
-		/**
-		 * Field element.
-		 */
 		private final Element element;
 		
 		/**
@@ -877,9 +717,6 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	 */
 	public class FuncDefence extends Func
 	{
-		/**
-		 * Field element.
-		 */
 		private final Element element;
 		
 		/**

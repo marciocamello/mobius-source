@@ -18,21 +18,9 @@ package lineage2.gameserver.model;
  */
 public class IconEffect
 {
-	/**
-	 * Field _skillId.
-	 */
 	private final int _skillId;
-	/**
-	 * Field _level.
-	 */
 	private final int _level;
-	/**
-	 * Field _duration.
-	 */
 	private final int _duration;
-	/**
-	 * Field _obj.
-	 */
 	private final int _obj;
 	
 	/**

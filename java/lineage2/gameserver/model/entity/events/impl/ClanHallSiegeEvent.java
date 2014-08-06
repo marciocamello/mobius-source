@@ -30,9 +30,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class ClanHallSiegeEvent extends SiegeEvent<ClanHall, SiegeClanObject>
 {
-	/**
-	 * Field BOSS. (value is ""boss"")
-	 */
 	public static final String BOSS = "boss";
 	
 	/**

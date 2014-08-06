@@ -21,13 +21,7 @@ import lineage2.gameserver.model.Player;
  */
 public class RequestCommissionBuyInfo extends L2GameClientPacket
 {
-	/**
-	 * Field auctionId.
-	 */
 	private long auctionId;
-	/**
-	 * Field exItemType.
-	 */
 	private int exItemType;
 	
 	/**

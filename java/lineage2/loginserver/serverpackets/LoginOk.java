@@ -22,9 +22,6 @@ import lineage2.loginserver.SessionKey;
  */
 public final class LoginOk extends L2LoginServerPacket
 {
-	/**
-	 * Field _loginOk2. Field _loginOk1.
-	 */
 	private final int _loginOk1, _loginOk2;
 	
 	/**

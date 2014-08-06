@@ -29,29 +29,11 @@ public class AdminPolymorph implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_polyself.
-		 */
 		admin_polyself,
-		/**
-		 * Field admin_polymorph.
-		 */
 		admin_polymorph,
-		/**
-		 * Field admin_poly.
-		 */
 		admin_poly,
-		/**
-		 * Field admin_unpolyself.
-		 */
 		admin_unpolyself,
-		/**
-		 * Field admin_unpolymorph.
-		 */
 		admin_unpolymorph,
-		/**
-		 * Field admin_unpoly.
-		 */
 		admin_unpoly
 	}
 	

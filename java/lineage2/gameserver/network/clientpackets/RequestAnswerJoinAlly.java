@@ -24,9 +24,6 @@ import lineage2.gameserver.model.pledge.Alliance;
  */
 public class RequestAnswerJoinAlly extends L2GameClientPacket
 {
-	/**
-	 * Field _response.
-	 */
 	private int _response;
 	
 	/**

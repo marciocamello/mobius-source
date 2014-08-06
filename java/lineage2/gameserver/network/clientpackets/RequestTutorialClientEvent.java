@@ -22,9 +22,6 @@ import lineage2.gameserver.model.quest.Quest;
  */
 public class RequestTutorialClientEvent extends L2GameClientPacket
 {
-	/**
-	 * Field event.
-	 */
 	int event = 0;
 	
 	/**

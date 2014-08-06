@@ -29,13 +29,7 @@ import quests._288_HandleWithCare;
  */
 public final class SeerUgoros extends Mystic
 {
-	/**
-	 * Field _weeds.
-	 */
 	private int _weeds = 0;
-	/**
-	 * Field _skill.
-	 */
 	private static final Skill _skill = SkillTable.getInstance().getInfo(6426, 1);
 	
 	/**

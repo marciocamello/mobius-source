@@ -17,7 +17,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 public class _485_HotSpringWater extends Quest implements ScriptFile
@@ -25,7 +24,6 @@ public class _485_HotSpringWater extends Quest implements ScriptFile
 	// npc
 	public static final int GUIDE = 33463;
 	public static final int VALDEMOR = 30844;
-	
 	// mobs
 	private final static int[] Mobs =
 	{
@@ -40,7 +38,6 @@ public class _485_HotSpringWater extends Quest implements ScriptFile
 		21322,
 		21323
 	};
-	
 	// q items
 	public static final int WATER = 19497;
 	

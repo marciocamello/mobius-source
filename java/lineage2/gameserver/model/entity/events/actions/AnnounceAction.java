@@ -21,9 +21,6 @@ import lineage2.gameserver.model.entity.events.GlobalEvent;
  */
 public class AnnounceAction implements EventAction
 {
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
 	
 	/**

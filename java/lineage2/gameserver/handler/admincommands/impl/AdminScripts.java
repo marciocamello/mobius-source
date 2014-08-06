@@ -32,17 +32,8 @@ public class AdminScripts implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_scripts_reload.
-		 */
 		admin_scripts_reload,
-		/**
-		 * Field admin_sreload.
-		 */
 		admin_sreload,
-		/**
-		 * Field admin_sqreload.
-		 */
 		admin_sqreload
 	}
 	

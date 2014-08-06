@@ -29,25 +29,10 @@ import lineage2.gameserver.utils.Location;
  */
 public final class ZakenNightly extends Fighter
 {
-	/**
-	 * Field doll_blader_b. (value is 29023)
-	 */
 	private static final int doll_blader_b = 29023;
-	/**
-	 * Field vale_master_b. (value is 29024)
-	 */
 	private static final int vale_master_b = 29024;
-	/**
-	 * Field pirates_zombie_captain_b. (value is 29026)
-	 */
 	private static final int pirates_zombie_captain_b = 29026;
-	/**
-	 * Field pirates_zombie_b. (value is 29027)
-	 */
 	private static final int pirates_zombie_b = 29027;
-	/**
-	 * Field _locations.
-	 */
 	static final Location[] _locations = new Location[]
 	{
 		new Location(55272, 219112, -3496),
@@ -66,21 +51,9 @@ public final class ZakenNightly extends Fighter
 		new Location(54248, 220136, -2952),
 		new Location(56296, 220136, -2952)
 	};
-	/**
-	 * Field _teleportSelfTimer.
-	 */
 	private long _teleportSelfTimer = 0L;
-	/**
-	 * Field _teleportSelfReuse.
-	 */
 	private static final long _teleportSelfReuse = 30000L;
-	/**
-	 * Field actor.
-	 */
 	final NpcInstance actor = getActor();
-	/**
-	 * Field _stage.
-	 */
 	private int _stage = 0;
 	
 	/**

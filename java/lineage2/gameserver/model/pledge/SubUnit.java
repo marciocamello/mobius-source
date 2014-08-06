@@ -16,14 +16,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Collection;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.ExSubPledgeSkillAdd;
 import lineage2.gameserver.tables.SkillTable;
-
 import org.apache.commons.lang3.StringUtils;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
@@ -37,37 +35,13 @@ import org.slf4j.LoggerFactory;
  */
 public class SubUnit
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(SubUnit.class);
-	/**
-	 * Field _skills.
-	 */
 	private final IntObjectMap<Skill> _skills = new CTreeIntObjectMap<>();
-	/**
-	 * Field _members.
-	 */
 	private final IntObjectMap<UnitMember> _members = new CHashIntObjectMap<>();
-	/**
-	 * Field _type.
-	 */
 	private final int _type;
-	/**
-	 * Field _leaderObjectId.
-	 */
 	private int _leaderObjectId;
-	/**
-	 * Field _leader.
-	 */
 	private UnitMember _leader;
-	/**
-	 * Field _name.
-	 */
 	private String _name;
-	/**
-	 * Field _clan.
-	 */
 	private final Clan _clan;
 	
 	/**

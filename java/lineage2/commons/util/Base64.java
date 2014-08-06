@@ -42,41 +42,28 @@ import java.util.zip.GZIPOutputStream;
 public class Base64
 {
 	private static final Logger _log = Logger.getLogger(Base64.class.getName());
-	
 	/* P U B L I C F I E L D S */
-	
 	/** No options specified. Value is zero. */
 	public static final int NO_OPTIONS = 0;
-	
 	/** Specify encoding. */
 	public static final int ENCODE = 1;
-	
 	/** Specify decoding. */
 	public static final int DECODE = 0;
-	
 	/** Specify that data should be gzip-compressed. */
 	public static final int GZIP = 2;
-	
 	/** Don't break lines when encoding (violates strict Base64 specification) */
 	public static final int DONT_BREAK_LINES = 8;
-	
 	/* Private Fields */
-	
 	/** Maximum line length (76) of Base64 output. */
 	private static final int MAX_LINE_LENGTH = 76;
-	
 	/** The equals sign (=) as a byte. */
 	private static final byte EQUALS_SIGN = (byte) '=';
-	
 	/** The new line character (\n) as a byte. */
 	private static final byte NEW_LINE = (byte) '\n';
-	
 	/** Preferred encoding. */
 	private static final Charset PREFERRED_ENCODING = StandardCharsets.UTF_8;
-	
 	/** The 64 valid Base64 values. */
 	private static final byte[] ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".getBytes(PREFERRED_ENCODING);
-	
 	/**
 	 * Translates a Base64 value to either its 6-bit reconstruction value or a negative number indicating some other meaning.
 	 */
@@ -118,7 +105,6 @@ public class Base64
 		 */
 	};
 	// @formatter:on
-	
 	// private static final byte BAD_ENCODING = -9; // Indicates error in encoding
 	private static final byte WHITE_SPACE_ENC = -5; // Indicates white space in encoding
 	private static final byte EQUALS_SIGN_ENC = -1; // Indicates equals sign in encoding
@@ -129,7 +115,6 @@ public class Base64
 	}
 	
 	/* E N C O D I N G M E T H O D S */
-	
 	/**
 	 * Encodes up to the first three bytes of array <var>threeBytes</var> and returns a four-byte array in Base64 notation. The actual number of significant bytes in your array is given by <var>numSigBytes</var>. The array <var>threeBytes</var> needs only be as big as <var>numSigBytes</var>. Code
 	 * can reuse a byte array by passing a four-byte array as <var>b4</var>.
@@ -403,7 +388,6 @@ public class Base64
 	}
 	
 	/* D E C O D I N G M E T H O D S */
-	
 	/**
 	 * Decodes four bytes from array <var>source</var> and writes the resulting bytes (up to three of them) to <var>destination</var>. The source and destination arrays can be manipulated anywhere along their length by specifying <var>srcOffset</var> and <var>destOffset</var>. This method does not
 	 * check to make sure your arrays are large enough to accomodate <var>srcOffset</var> + 4 for the <var>source</var> array or <var>destOffset</var> + 3 for the <var>destination</var> array. This method returns the actual number of bytes that were converted from the Base64 encoding.
@@ -596,7 +580,6 @@ public class Base64
 	}
 	
 	/* I N N E R C L A S S I N P U T S T R E A M */
-	
 	/**
 	 * A {@link #InputStream} will read data from another {@link java.io.InputStream}, given in the constructor, and encode/decode to/from Base64 notation on the fly.
 	 * @see Base64
@@ -799,7 +782,6 @@ public class Base64
 				
 				// if( b < 0 && i == 0 )
 				// return -1;
-				
 				if (b >= 0)
 				{
 					dest[off + i] = (byte) b;
@@ -816,11 +798,9 @@ public class Base64
 			
 			return i;
 		}
-		
 	}
 	
 	/* I N N E R C L A S S O U T P U T S T R E A M */
-	
 	/**
 	 * A {@link #OutputStream} will write data to another {@link java.io.OutputStream}, given in the constructor, and encode/decode to/from Base64 notation on the fly.
 	 * @see Base64
@@ -991,11 +971,9 @@ public class Base64
 		{
 			// 1. Ensure that pending characters are written
 			flushBase64();
-			
 			// 2. Actually close the stream
 			// Base class both flushes and closes.
 			super.close();
-			
 			buffer = null;
 			out = null;
 		}

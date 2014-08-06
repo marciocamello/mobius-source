@@ -19,7 +19,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -35,7 +34,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
 import npc.model.SepulcherMonsterInstance;
 import npc.model.SepulcherNpcInstance;
 import npc.model.SepulcherRaidInstance;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,73 +43,22 @@ import org.slf4j.LoggerFactory;
  */
 public final class FourSepulchersSpawn extends Functions implements ScriptFile
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(FourSepulchersSpawn.class);
-	/**
-	 * Field _shadowSpawns.
-	 */
 	public static final Map<Integer, NpcLocation> _shadowSpawns = new HashMap<>();
-	/**
-	 * Field _mysteriousBoxSpawns.
-	 */
 	public static final Map<Integer, NpcLocation> _mysteriousBoxSpawns = new HashMap<>();
-	/**
-	 * Field _dukeFinalMobs.
-	 */
 	public static final Map<Integer, List<NpcLocation>> _dukeFinalMobs = new HashMap<>();
-	/**
-	 * Field _emperorsGraveNpcs.
-	 */
 	public static final Map<Integer, List<NpcLocation>> _emperorsGraveNpcs = new HashMap<>();
-	/**
-	 * Field _magicalMonsters.
-	 */
 	public static final Map<Integer, List<NpcLocation>> _magicalMonsters = new HashMap<>();
-	/**
-	 * Field _physicalMonsters.
-	 */
 	public static final Map<Integer, List<NpcLocation>> _physicalMonsters = new HashMap<>();
-	/**
-	 * Field _startHallSpawns.
-	 */
 	public static final Map<Integer, Location> _startHallSpawns = new HashMap<>();
-	/**
-	 * Field _hallInUse.
-	 */
 	public static final Map<Integer, Boolean> _hallInUse = new HashMap<>();
-	/**
-	 * Field _GateKeepers.
-	 */
 	public static final List<GateKeeper> _GateKeepers = new ArrayList<>();
-	/**
-	 * Field _keyBoxNpc.
-	 */
 	public static final Map<Integer, Integer> _keyBoxNpc = new HashMap<>();
-	/**
-	 * Field _victim.
-	 */
 	public static final Map<Integer, Integer> _victim = new HashMap<>();
-	/**
-	 * Field _archonSpawned.
-	 */
 	public static final Map<Integer, Boolean> _archonSpawned = new HashMap<>();
-	/**
-	 * Field _dukeMobs.
-	 */
 	public static final Map<Integer, List<SepulcherMonsterInstance>> _dukeMobs = new HashMap<>();
-	/**
-	 * Field _viscountMobs.
-	 */
 	public static final Map<Integer, List<SepulcherMonsterInstance>> _viscountMobs = new HashMap<>();
-	/**
-	 * Field _managers.
-	 */
 	public static List<SepulcherNpcInstance> _managers;
-	/**
-	 * Field _allMobs.
-	 */
 	public static final List<NpcInstance> _allMobs = new ArrayList<>();
 	
 	/**
@@ -123,9 +70,6 @@ public final class FourSepulchersSpawn extends Functions implements ScriptFile
 		 *
 		 */
 		private static final long serialVersionUID = 1L;
-		/**
-		 * Field npcId.
-		 */
 		public int npcId;
 		
 		/**
@@ -151,9 +95,6 @@ public final class FourSepulchersSpawn extends Functions implements ScriptFile
 		}
 	}
 	
-	/**
-	 * Field _startHallSpawn.
-	 */
 	private static final Location[] _startHallSpawn =
 	{
 		new Location(181632, -85587, -7218),
@@ -161,9 +102,6 @@ public final class FourSepulchersSpawn extends Functions implements ScriptFile
 		new Location(173217, -86132, -7218),
 		new Location(175608, -82296, -7218)
 	};
-	/**
-	 * Field _shadowSpawnLoc.
-	 */
 	private static final NpcLocation[][] _shadowSpawnLoc =
 	{
 		{
@@ -926,13 +864,7 @@ public final class FourSepulchersSpawn extends Functions implements ScriptFile
 		 *
 		 */
 		private static final long serialVersionUID = 1L;
-		/**
-		 * Field door.
-		 */
 		public final DoorInstance door;
-		/**
-		 * Field template.
-		 */
 		public final NpcTemplate template;
 		
 		/**

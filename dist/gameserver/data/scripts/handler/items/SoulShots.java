@@ -32,9 +32,6 @@ import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
  */
 public final class SoulShots extends ScriptItemHandler
 {
-	/**
-	 * Field _itemIds.
-	 */
 	private static final int[] _itemIds =
 	{
 		5789,
@@ -55,9 +52,6 @@ public final class SoulShots extends ScriptItemHandler
 		17754,
 		33780
 	};
-	/**
-	 * Field _skillIds.
-	 */
 	private static final int[] _skillIds =
 	{
 		2039,

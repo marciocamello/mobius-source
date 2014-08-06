@@ -30,13 +30,7 @@ import lineage2.gameserver.network.serverpackets.GMViewWarehouseWithdrawList;
  */
 public class RequestGMCommand extends L2GameClientPacket
 {
-	/**
-	 * Field _targetName.
-	 */
 	private String _targetName;
-	/**
-	 * Field _command.
-	 */
 	private int _command;
 	
 	/**

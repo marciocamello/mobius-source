@@ -20,25 +20,10 @@ import lineage2.gameserver.templates.item.ItemTemplate.Grade;
  */
 public class EnchantScrollInfo
 {
-	/**
-	 * Field itemId.
-	 */
 	private int itemId;
-	/**
-	 * Field type.
-	 */
 	private EnchantScrollType type;
-	/**
-	 * Field target.
-	 */
 	private EnchantScrollTarget target;
-	/**
-	 * Field grade.
-	 */
 	private Grade grade;
-	/**
-	 * Field max. Field safe. Field min. Field chance.
-	 */
 	private int chance, min, safe, max;
 	
 	/**

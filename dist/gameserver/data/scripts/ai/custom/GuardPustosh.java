@@ -25,41 +25,14 @@ import lineage2.gameserver.utils.NpcUtils;
  */
 public final class GuardPustosh extends Fighter
 {
-	/**
-	 * Field KANILOV. (value is 27459)
-	 */
 	private final static int KANILOV = 27459;
-	/**
-	 * Field POSLOF. (value is 27460)
-	 */
 	private final static int POSLOF = 27460;
-	/**
-	 * Field SAKUM. (value is 27453)
-	 */
 	private final static int SAKUM = 27453;
-	/**
-	 * Field SCHUAZEN. (value is 33517)
-	 */
 	private final static int SCHUAZEN = 33517;
-	/**
-	 * Field SELON. (value is 33518)
-	 */
 	private final static int SELON = 33518;
-	/**
-	 * Field POSLOF_OFFICER. (value is 19163)
-	 */
 	private final static int POSLOF_OFFICER = 19163;
-	/**
-	 * Field COMMANDO. (value is 19126)
-	 */
 	private final static int COMMANDO = 19126;
-	/**
-	 * Field COMMANDO_CAPTAIN. (value is 19127)
-	 */
 	private final static int COMMANDO_CAPTAIN = 19127;
-	/**
-	 * Field COMMANDO_SPAWNS.
-	 */
 	private final static int[][] COMMANDO_SPAWNS =
 	{
 		{

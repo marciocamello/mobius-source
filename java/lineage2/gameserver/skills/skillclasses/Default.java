@@ -13,13 +13,11 @@
 package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
-
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.templates.StatsSet;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,9 +27,6 @@ import org.slf4j.LoggerFactory;
  */
 public class Default extends Skill
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Default.class);
 	
 	/**

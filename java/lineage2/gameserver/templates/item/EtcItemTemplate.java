@@ -27,85 +27,25 @@ public final class EtcItemTemplate extends ItemTemplate
 	 */
 	public enum EtcItemType implements ItemType
 	{
-		/**
-		 * Field ARROW.
-		 */
 		ARROW(1, "Arrow"),
-		/**
-		 * Field MATERIAL.
-		 */
 		MATERIAL(2, "Material"),
-		/**
-		 * Field PET_COLLAR.
-		 */
 		PET_COLLAR(3, "PetCollar"),
-		/**
-		 * Field POTION.
-		 */
 		POTION(4, "Potion"),
-		/**
-		 * Field RECIPE.
-		 */
 		RECIPE(5, "Recipe"),
-		/**
-		 * Field SCROLL.
-		 */
 		SCROLL(6, "Scroll"),
-		/**
-		 * Field QUEST.
-		 */
 		QUEST(7, "Quest"),
-		/**
-		 * Field MONEY.
-		 */
 		MONEY(8, "Money"),
-		/**
-		 * Field OTHER.
-		 */
 		OTHER(9, "Other"),
-		/**
-		 * Field SPELLBOOK.
-		 */
 		SPELLBOOK(10, "Spellbook"),
-		/**
-		 * Field SEED.
-		 */
 		SEED(11, "Seed"),
-		/**
-		 * Field BAIT.
-		 */
 		BAIT(12, "Bait"),
-		/**
-		 * Field SHOT.
-		 */
 		SHOT(13, "Shot"),
-		/**
-		 * Field BOLT.
-		 */
 		BOLT(14, "Bolt"),
-		/**
-		 * Field RUNE.
-		 */
 		RUNE(15, "Rune"),
-		/**
-		 * Field HERB.
-		 */
 		HERB(16, "Herb"),
-		/**
-		 * Field MERCENARY_TICKET.
-		 */
 		MERCENARY_TICKET(17, "Mercenary Ticket"),
-		/**
-		 * Field UNLIMITED_ARROW.
-		 */
 		UNLIMITED_ARROW(18, "Unlimited Arrow");
-		/**
-		 * Field _mask.
-		 */
 		private final long _mask;
-		/**
-		 * Field _name.
-		 */
 		private final String _name;
 		
 		/**

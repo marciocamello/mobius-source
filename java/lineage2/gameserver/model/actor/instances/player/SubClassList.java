@@ -15,11 +15,9 @@ package lineage2.gameserver.model.actor.instances.player;
 import java.util.Collection;
 import java.util.List;
 import java.util.TreeMap;
-
 import lineage2.gameserver.dao.CharacterSubclassDAO;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SubClass;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,37 +27,13 @@ import org.slf4j.LoggerFactory;
  */
 public class SubClassList
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(SubClassList.class);
-	/**
-	 * Field MAX_SUB_COUNT. (value is 4)
-	 */
 	public static final int MAX_SUB_COUNT = 4;
-	/**
-	 * Field _listByIndex.
-	 */
 	private final TreeMap<Integer, SubClass> _listByIndex = new TreeMap<>();
-	/**
-	 * Field _listByClassId.
-	 */
 	private final TreeMap<Integer, SubClass> _listByClassId = new TreeMap<>();
-	/**
-	 * Field _owner.
-	 */
 	private final Player _owner;
-	/**
-	 * Field _baseSubClass.
-	 */
 	private SubClass _baseSubClass = null;
-	/**
-	 * Field _activeSubClass.
-	 */
 	private SubClass _activeSubClass = null;
-	/**
-	 * Field _lastFreeIndex.
-	 */
 	private int _lastFreeIndex = 1;
 	
 	/**

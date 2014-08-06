@@ -21,13 +21,7 @@ import lineage2.gameserver.stats.Env;
  */
 public abstract class Condition
 {
-	/**
-	 * Field EMPTY_ARRAY.
-	 */
 	public static final Condition[] EMPTY_ARRAY = new Condition[0];
-	/**
-	 * Field _message.
-	 */
 	private SystemMsg _message;
 	
 	/**

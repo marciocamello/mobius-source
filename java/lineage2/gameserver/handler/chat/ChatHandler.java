@@ -21,13 +21,7 @@ import lineage2.gameserver.network.serverpackets.components.ChatType;
  */
 public class ChatHandler extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final ChatHandler _instance = new ChatHandler();
-	/**
-	 * Field _handlers.
-	 */
 	private final IChatHandler[] _handlers = new IChatHandler[ChatType.VALUES.length];
 	
 	/**

@@ -18,17 +18,8 @@ package lineage2.gameserver.model.items.etcitems;
  */
 public class LifeStoneInfo
 {
-	/**
-	 * Field itemId.
-	 */
 	private int itemId;
-	/**
-	 * Field level.
-	 */
 	private int level;
-	/**
-	 * Field grade.
-	 */
 	private LifeStoneGrade grade;
 	
 	/**

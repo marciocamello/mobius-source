@@ -13,7 +13,6 @@
 package instances;
 
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.listener.actor.OnDeathListener;
@@ -25,7 +24,6 @@ import lineage2.gameserver.network.serverpackets.ExSendUIEvent;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.utils.Location;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -344,5 +342,4 @@ public final class SufferingHallDefence extends Reflection
 		
 		super.onCollapse();
 	}
-	
 }

@@ -19,15 +19,12 @@ import java.io.FileReader;
 import java.io.LineNumberReader;
 import java.util.HashMap;
 import java.util.Map;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.base.EnchantSkillLearn;
 import lineage2.gameserver.skills.SkillsEngine;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import gnu.trove.map.hash.TIntIntHashMap;
 
 /**
@@ -36,29 +33,11 @@ import gnu.trove.map.hash.TIntIntHashMap;
  */
 public class SkillTable
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(SkillTable.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final SkillTable _instance = new SkillTable();
-	/**
-	 * Field identifySkills.
-	 */
 	public final Map<Integer, Integer> identifySkills = new HashMap<>();
-	/**
-	 * Field _skills.
-	 */
 	private Map<Integer, Skill> _skills;
-	/**
-	 * Field _maxLevelsTable.
-	 */
 	private TIntIntHashMap _maxLevelsTable;
-	/**
-	 * Field _baseLevelsTable.
-	 */
 	private TIntIntHashMap _baseLevelsTable;
 	
 	/**

@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.items;
 
 import java.util.Collection;
-
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.model.items.ItemInstance.ItemLocation;
@@ -26,9 +25,6 @@ import lineage2.gameserver.utils.ItemFunctions;
  */
 public class PetInventory extends Inventory
 {
-	/**
-	 * Field _actor.
-	 */
 	private final PetInstance _actor;
 	
 	/**

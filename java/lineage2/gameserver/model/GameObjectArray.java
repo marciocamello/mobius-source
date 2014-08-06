@@ -17,7 +17,6 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,33 +27,12 @@ import org.slf4j.LoggerFactory;
  */
 public class GameObjectArray<E extends GameObject> implements Iterable<E>
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(GameObjectArray.class);
-	/**
-	 * Field name.
-	 */
 	public final String name;
-	/**
-	 * Field initCapacity. Field resizeStep.
-	 */
 	public final int resizeStep, initCapacity;
-	/**
-	 * Field freeIndexes.
-	 */
 	private final List<Integer> freeIndexes;
-	/**
-	 * Field elementData.
-	 */
 	E[] elementData;
-	/**
-	 * Field size.
-	 */
 	int size = 0;
-	/**
-	 * Field real_size.
-	 */
 	private int real_size = 0;
 	
 	/**
@@ -361,13 +339,7 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 	 */
 	class Itr implements Iterator<E>
 	{
-		/**
-		 * Field cursor.
-		 */
 		private int cursor = 0;
-		/**
-		 * Field _next.
-		 */
 		private E _next;
 		
 		/**

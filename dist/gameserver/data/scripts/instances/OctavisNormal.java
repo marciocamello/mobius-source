@@ -14,7 +14,6 @@ package instances;
 
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicInteger;
-
 import lineage2.commons.geometry.Polygon;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
@@ -42,30 +41,22 @@ public final class OctavisNormal extends Reflection
 	private static final int Octavis2 = 29193;
 	private static final int Octavis3 = 29194;
 	private static final int OctavisRider = 29192;
-	
 	private static final int guardOctavisGladiator = 22928; // Two Stage Guard TODO[K]: 23086, 23143, 23145,
 	private static final int guardOctavisHighAcademic = 22930; // Three Stage Guard TODO[K]: 23088,
-	
 	private final ZoneListener _epicZoneListener = new ZoneListener();
 	final DeathListener _deathListener = new DeathListener();
 	final CurrentHpListener _currentHpListenerFistsStage = new CurrentHpListener();
 	final CurrentHpListener _currentHpListenerOctavisRide = new CurrentHpListener();
 	final CurrentHpListener _currentHpListenerTwoStage = new CurrentHpListener();
-	
 	ScheduledFuture<?> twoStageGuardSpawn;
 	ScheduledFuture<?> threeStageGuardSpawn;
-	
 	boolean _entryLocked = false;
 	boolean _startLaunched = false;
 	boolean _lockedTurn = false;
-	
 	NpcInstance octavisMassive;
-	
 	private static final int Door = 26210001;
 	private static final int Door2 = 26210002;
-	
 	static final Territory centralRoomPoint = new Territory().add(new Polygon().add(210548, -118712).add(210548, -118800).add(210348, -118612).add(210748, -118312).add(210548, -118912).add(210648, -118812).add(210548, -118712).add(210448, -118512).setZmax(-10020).setZmin(-9020));
-	
 	final AtomicInteger raidplayers = new AtomicInteger();
 	
 	@Override

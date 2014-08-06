@@ -27,7 +27,6 @@ import lineage2.gameserver.utils.Location;
 /**
  * @author Awakeninger
  */
-
 public final class CrystalHall extends Reflection
 {
 	private static final int RB1 = 25881;

@@ -14,7 +14,6 @@ package quests;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Creature;
@@ -27,7 +26,6 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.ReflectionUtils;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 public class _144_PailakaInjuredDragon extends Quest implements ScriptFile

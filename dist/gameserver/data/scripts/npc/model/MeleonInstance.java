@@ -29,41 +29,14 @@ public final class MeleonInstance extends SpecialMonsterInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field Young_Watermelon. (value is 13271)
-	 */
 	public final static int Young_Watermelon = 13271;
-	/**
-	 * Field Rain_Watermelon. (value is 13273)
-	 */
 	public final static int Rain_Watermelon = 13273;
-	/**
-	 * Field Defective_Watermelon. (value is 13272)
-	 */
 	public final static int Defective_Watermelon = 13272;
-	/**
-	 * Field Young_Honey_Watermelon. (value is 13275)
-	 */
 	public final static int Young_Honey_Watermelon = 13275;
-	/**
-	 * Field Rain_Honey_Watermelon. (value is 13277)
-	 */
 	public final static int Rain_Honey_Watermelon = 13277;
-	/**
-	 * Field Defective_Honey_Watermelon. (value is 13276)
-	 */
 	public final static int Defective_Honey_Watermelon = 13276;
-	/**
-	 * Field Large_Rain_Watermelon. (value is 13274)
-	 */
 	public final static int Large_Rain_Watermelon = 13274;
-	/**
-	 * Field Large_Rain_Honey_Watermelon. (value is 13278)
-	 */
 	public final static int Large_Rain_Honey_Watermelon = 13278;
-	/**
-	 * Field _spawnerRef.
-	 */
 	private HardReference<Player> _spawnerRef;
 	
 	/**

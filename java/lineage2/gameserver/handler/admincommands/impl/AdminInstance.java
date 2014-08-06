@@ -31,33 +31,12 @@ public class AdminInstance implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_instance.
-		 */
 		admin_instance,
-		/**
-		 * Field admin_instance_id.
-		 */
 		admin_instance_id,
-		/**
-		 * Field admin_collapse.
-		 */
 		admin_collapse,
-		/**
-		 * Field admin_reset_reuse.
-		 */
 		admin_reset_reuse,
-		/**
-		 * Field admin_reset_reuse_all.
-		 */
 		admin_reset_reuse_all,
-		/**
-		 * Field admin_set_reuse.
-		 */
 		admin_set_reuse,
-		/**
-		 * Field admin_addtiatkill.
-		 */
 		admin_addtiatkill
 	}
 	

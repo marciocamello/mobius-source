@@ -20,7 +20,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.logging.LogUtils;
 import lineage2.commons.threading.RunnableImpl;
@@ -53,11 +52,9 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
-
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import gnu.trove.map.hash.TIntObjectHashMap;
 import gnu.trove.set.hash.TIntHashSet;
 
@@ -67,130 +64,39 @@ import gnu.trove.set.hash.TIntHashSet;
  */
 public class Quest
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Quest.class);
-	/**
-	 * Field SOUND_ITEMGET. (value is ""ItemSound.quest_itemget"")
-	 */
 	public static final String SOUND_ITEMGET = "ItemSound.quest_itemget";
-	/**
-	 * Field SOUND_ACCEPT. (value is ""ItemSound.quest_accept"")
-	 */
 	public static final String SOUND_ACCEPT = "ItemSound.quest_accept";
-	/**
-	 * Field SOUND_MIDDLE. (value is ""ItemSound.quest_middle"")
-	 */
 	public static final String SOUND_MIDDLE = "ItemSound.quest_middle";
-	/**
-	 * Field SOUND_FINISH. (value is ""ItemSound.quest_finish"")
-	 */
 	public static final String SOUND_FINISH = "ItemSound.quest_finish";
-	/**
-	 * Field SOUND_GIVEUP. (value is ""ItemSound.quest_giveup"")
-	 */
 	public static final String SOUND_GIVEUP = "ItemSound.quest_giveup";
-	/**
-	 * Field SOUND_TUTORIAL. (value is ""ItemSound.quest_tutorial"")
-	 */
 	public static final String SOUND_TUTORIAL = "ItemSound.quest_tutorial";
-	/**
-	 * Field SOUND_JACKPOT. (value is ""ItemSound.quest_jackpot"")
-	 */
 	public static final String SOUND_JACKPOT = "ItemSound.quest_jackpot";
-	/**
-	 * Field SOUND_HORROR2. (value is ""SkillSound5.horror_02"")
-	 */
 	public static final String SOUND_HORROR2 = "SkillSound5.horror_02";
-	/**
-	 * Field SOUND_BEFORE_BATTLE. (value is ""Itemsound.quest_before_battle"")
-	 */
 	public static final String SOUND_BEFORE_BATTLE = "Itemsound.quest_before_battle";
-	/**
-	 * Field SOUND_FANFARE_MIDDLE. (value is ""ItemSound.quest_fanfare_middle"")
-	 */
 	public static final String SOUND_FANFARE_MIDDLE = "ItemSound.quest_fanfare_middle";
-	/**
-	 * Field SOUND_FANFARE2. (value is ""ItemSound.quest_fanfare_2"")
-	 */
 	public static final String SOUND_FANFARE2 = "ItemSound.quest_fanfare_2";
-	/**
-	 * Field SOUND_BROKEN_KEY. (value is ""ItemSound2.broken_key"")
-	 */
 	public static final String SOUND_BROKEN_KEY = "ItemSound2.broken_key";
-	/**
-	 * Field SOUND_ENCHANT_SUCESS. (value is ""ItemSound3.sys_enchant_sucess"")
-	 */
 	public static final String SOUND_ENCHANT_SUCESS = "ItemSound3.sys_enchant_sucess";
-	/**
-	 * Field SOUND_ENCHANT_FAILED. (value is ""ItemSound3.sys_enchant_failed"")
-	 */
 	public static final String SOUND_ENCHANT_FAILED = "ItemSound3.sys_enchant_failed";
-	/**
-	 * Field SOUND_ED_CHIMES05. (value is ""AmdSound.ed_chimes_05"")
-	 */
 	public static final String SOUND_ED_CHIMES05 = "AmdSound.ed_chimes_05";
-	/**
-	 * Field SOUND_ARMOR_WOOD_3. (value is ""ItemSound.armor_wood_3"")
-	 */
 	public static final String SOUND_ARMOR_WOOD_3 = "ItemSound.armor_wood_3";
-	/**
-	 * Field SOUND_ITEM_DROP_EQUIP_ARMOR_CLOTH. (value is ""ItemSound.item_drop_equip_armor_cloth"")
-	 */
 	public static final String SOUND_ITEM_DROP_EQUIP_ARMOR_CLOTH = "ItemSound.item_drop_equip_armor_cloth";
-	/**
-	 * Field NO_QUEST_DIALOG. (value is ""no-quest"")
-	 */
 	public static final String NO_QUEST_DIALOG = "no-quest";
-	/**
-	 * Field FONT_QUEST_AVAILABLE. (value is ""<font color=\"6699ff\">"")
-	 */
 	private static final String FONT_QUEST_AVAILABLE = "<font color=\"6699ff\">";
-	/**
-	 * Field FONT_QUEST_DONE. (value is ""<font color=\"787878\">"")
-	 */
 	private static final String FONT_QUEST_DONE = "<font color=\"787878\">";
-	/**
-	 * Field FONT_QUEST_NOT_AVAILABLE. (value is ""<font color=\"a62f31\">"")
-	 */
 	private static final String FONT_QUEST_NOT_AVAILABLE = "<font color=\"a62f31\">";
 	/**
-	 * Field TODO_FIND_HTML. (value is ""<font color=\"6699ff\">TODO:<br>
 	 * Find this dialog"")
 	 */
 	protected static final String TODO_FIND_HTML = "<font color=\"6699ff\">TODO:<br>Find this dialog";
-	/**
-	 * Field ADENA_ID. (value is 57)
-	 */
 	public static final int ADENA_ID = 57;
-	/**
-	 * Field PARTY_NONE. (value is 0)
-	 */
 	public static final int PARTY_NONE = 0;
-	/**
-	 * Field PARTY_ONE. (value is 1)
-	 */
 	public static final int PARTY_ONE = 1;
-	/**
-	 * Field PARTY_ALL. (value is 2)
-	 */
 	public static final int PARTY_ALL = 2;
-	/**
-	 * Field _pausedQuestTimers.
-	 */
 	private final Map<Integer, Map<String, QuestTimer>> _pausedQuestTimers = new ConcurrentHashMap<>();
-	/**
-	 * Field _questItems.
-	 */
 	private final TIntHashSet _questItems = new TIntHashSet();
-	/**
-	 * Field _npcLogList.
-	 */
 	private TIntObjectHashMap<List<QuestNpcLogInfo>> _npcLogList = TroveUtils.emptyIntObjectMap();
-	/**
-	 * Field startConditionList.
-	 */
 	private final List<ICheckStartCondition> startConditionList = new ArrayList<>();
 	
 	/**
@@ -429,33 +335,12 @@ public class Quest
 		}
 	}
 	
-	/**
-	 * Field _name.
-	 */
 	protected final String _name;
-	/**
-	 * Field _party.
-	 */
 	protected final int _party;
-	/**
-	 * Field _questId.
-	 */
 	protected final int _questId;
-	/**
-	 * Field CREATED. (value is 1)
-	 */
 	public final static int CREATED = 1;
-	/**
-	 * Field STARTED. (value is 2)
-	 */
 	public final static int STARTED = 2;
-	/**
-	 * Field COMPLETED. (value is 3)
-	 */
 	public final static int COMPLETED = 3;
-	/**
-	 * Field DELAYED. (value is 4)
-	 */
 	public final static int DELAYED = 4;
 	
 	/**
@@ -1466,9 +1351,6 @@ public class Quest
 	 */
 	public class DeSpawnScheduleTimerTask extends RunnableImpl
 	{
-		/**
-		 * Field _npc.
-		 */
 		NpcInstance _npc = null;
 		
 		/**

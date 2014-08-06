@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
 import lineage2.gameserver.model.Player;
@@ -24,7 +23,6 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.SkillLearn;
 import lineage2.gameserver.model.base.AcquireType;
 import lineage2.gameserver.model.base.EnchantSkillLearn;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,7 +43,6 @@ public class SkillTreeTable
 	public static final int NEW_CHANGE_ENCHANT_BOOK = 30299;
 	public static final int UNTRAIN_NEW_ENCHANT_BOOK = 30300;
 	public static final int ENCHANT_BOOK_LINDVIOR = 37044;
-	
 	public static final Map<Integer, List<EnchantSkillLearn>> _enchant = new ConcurrentHashMap<>();
 	private static SkillTreeTable _instance;
 	private static final Logger _log = LoggerFactory.getLogger(SkillTreeTable.class);

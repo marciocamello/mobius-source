@@ -14,7 +14,6 @@ package lineage2.gameserver.data.xml.holder;
 
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.templates.OptionDataTemplate;
-
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 
@@ -24,13 +23,7 @@ import org.napile.primitive.maps.impl.HashIntObjectMap;
  */
 public final class OptionDataHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final OptionDataHolder _instance = new OptionDataHolder();
-	/**
-	 * Field _templates.
-	 */
 	private final IntObjectMap<OptionDataTemplate> _templates = new HashIntObjectMap<>();
 	
 	/**

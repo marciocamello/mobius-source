@@ -22,9 +22,7 @@ public class _640_TheZeroHour extends Quest implements ScriptFile
 {
 	// npc
 	public static final int KAHMAN = 31554;
-	
 	public static final int QUEEN_FANG = 14859;
-	
 	public static final int QUEEN = 25671; // queen sheed
 	
 	@Override

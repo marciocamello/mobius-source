@@ -20,9 +20,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionPlayerMaxLevel extends Condition
 {
-	/**
-	 * Field _level.
-	 */
 	private final int _level;
 	
 	/**

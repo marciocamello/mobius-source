@@ -26,21 +26,9 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public final class EdwinFollower extends DefaultAI
 {
-	/**
-	 * Field EDWIN_ID. (value is 32072)
-	 */
 	private static final int EDWIN_ID = 32072;
-	/**
-	 * Field DRIFT_DISTANCE. (value is 200)
-	 */
 	private static final int DRIFT_DISTANCE = 200;
-	/**
-	 * Field _wait_timeout.
-	 */
 	private long _wait_timeout = 0;
-	/**
-	 * Field _edwinRef.
-	 */
 	private HardReference<? extends Creature> _edwinRef = HardReferences.emptyRef();
 	
 	/**

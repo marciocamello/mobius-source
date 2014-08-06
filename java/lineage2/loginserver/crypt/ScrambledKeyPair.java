@@ -22,13 +22,7 @@ import java.security.interfaces.RSAPublicKey;
  */
 public class ScrambledKeyPair
 {
-	/**
-	 * Field _pair.
-	 */
 	private final KeyPair _pair;
-	/**
-	 * Field _scrambledModulus.
-	 */
 	private final byte[] _scrambledModulus;
 	
 	/**

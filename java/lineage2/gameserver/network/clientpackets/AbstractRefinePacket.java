@@ -25,21 +25,9 @@ import lineage2.gameserver.templates.item.ItemTemplate.Grade;
  */
 public abstract class AbstractRefinePacket extends L2GameClientPacket
 {
-	/**
-	 * Field GEMSTONE_D. (value is 2130)
-	 */
 	protected static final int GEMSTONE_D = 2130;
-	/**
-	 * Field GEMSTONE_C. (value is 2131)
-	 */
 	protected static final int GEMSTONE_C = 2131;
-	/**
-	 * Field GEMSTONE_B. (value is 2132)
-	 */
 	protected static final int GEMSTONE_B = 2132;
-	/**
-	 * Field GEMSTONE_A. (value is 2133)
-	 */
 	protected static final int GEMSTONE_A = 2133;
 	
 	/**

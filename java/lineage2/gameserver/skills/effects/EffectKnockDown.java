@@ -30,13 +30,8 @@ import gnu.trove.map.hash.TIntIntHashMap;
  */
 public class EffectKnockDown extends Effect
 {
-	/**
-	 * Field _z. Field _y. Field _x.
-	 */
 	private int _x, _y, _z;
-	
 	private static final TIntIntHashMap _ChainKnockSkills = new TIntIntHashMap(8);
-	
 	private static final TIntIntHashMap _ChainedTemporalReplace = new TIntIntHashMap(8);
 	
 	/**

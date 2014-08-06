@@ -24,17 +24,8 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class BlacksmithMammon extends DefaultAI
 {
-	/**
-	 * Field _chatVar.
-	 */
 	private long _chatVar = 0;
-	/**
-	 * Field chatDelay.
-	 */
 	private static final long chatDelay = 30 * 60 * 1000L;
-	/**
-	 * Field mamonText.
-	 */
 	private static final NpcString[] mamonText =
 	{
 		NpcString.RULERS_OF_THE_SEAL_I_BRING_YOU_WONDROUS_GIFTS,

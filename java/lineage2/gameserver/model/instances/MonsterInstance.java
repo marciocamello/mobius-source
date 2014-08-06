@@ -19,7 +19,6 @@ import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -70,13 +69,7 @@ public class MonsterInstance extends NpcInstance
 	 */
 	protected static final class RewardInfo
 	{
-		/**
-		 * Field _attacker.
-		 */
 		protected Creature _attacker;
-		/**
-		 * Field _dmg.
-		 */
 		protected int _dmg = 0;
 		
 		/**
@@ -115,69 +108,21 @@ public class MonsterInstance extends NpcInstance
 		}
 	}
 	
-	/**
-	 * Field minionMaintainTask.
-	 */
 	private ScheduledFuture<?> minionMaintainTask;
-	/**
-	 * Field minionList.
-	 */
 	private final MinionList minionList;
-	/**
-	 * Field _isSeeded.
-	 */
 	private boolean _isSeeded;
-	/**
-	 * Field _seederId.
-	 */
 	private int _seederId;
-	/**
-	 * Field _altSeed.
-	 */
 	private boolean _altSeed;
-	/**
-	 * Field _harvestItem.
-	 */
 	private RewardItem _harvestItem;
-	/**
-	 * Field harvestLock.
-	 */
 	private final Lock harvestLock = new ReentrantLock();
-	/**
-	 * Field overhitAttackerId.
-	 */
 	private int overhitAttackerId;
-	/**
-	 * Field _overhitDamage.
-	 */
 	private double _overhitDamage;
-	/**
-	 * Field _absorbersIds.
-	 */
 	private TIntHashSet _absorbersIds;
-	/**
-	 * Field absorbLock.
-	 */
 	private final Lock absorbLock = new ReentrantLock();
-	/**
-	 * Field _isSpoiled.
-	 */
 	private boolean _isSpoiled;
-	/**
-	 * Field spoilerId.
-	 */
 	private int spoilerId;
-	/**
-	 * Field _sweepItems.
-	 */
 	private List<RewardItem> _sweepItems;
-	/**
-	 * Field sweepLock.
-	 */
 	private final Lock sweepLock = new ReentrantLock();
-	/**
-	 * Field _isChampion.
-	 */
 	private int _isChampion;
 	
 	/**
@@ -1283,17 +1228,8 @@ public class MonsterInstance extends NpcInstance
 		super.reduceCurrentHp(i, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
 	}
 	
-	/**
-	 * Field MIN_DISTANCE_FOR_USE_UD.
-	 */
 	private final double MIN_DISTANCE_FOR_USE_UD = 200.0;
-	/**
-	 * Field MIN_DISTANCE_FOR_CANCEL_UD.
-	 */
 	private final double MIN_DISTANCE_FOR_CANCEL_UD = 50.0;
-	/**
-	 * Field UD_USE_CHANCE.
-	 */
 	private final double UD_USE_CHANCE = 30.0;
 	
 	/**

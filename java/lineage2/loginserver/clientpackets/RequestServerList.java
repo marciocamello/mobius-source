@@ -23,13 +23,7 @@ import lineage2.loginserver.serverpackets.ServerList;
  */
 public class RequestServerList extends L2LoginClientPacket
 {
-	/**
-	 * Field _loginOkID1.
-	 */
 	private int _loginOkID1;
-	/**
-	 * Field _loginOkID2.
-	 */
 	private int _loginOkID2;
 	
 	/**

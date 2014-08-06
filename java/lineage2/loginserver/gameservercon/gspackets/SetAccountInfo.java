@@ -15,7 +15,6 @@ package lineage2.loginserver.gameservercon.gspackets;
 import lineage2.loginserver.accounts.SessionManager;
 import lineage2.loginserver.gameservercon.GameServer;
 import lineage2.loginserver.gameservercon.ReceivablePacket;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -24,17 +23,8 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public class SetAccountInfo extends ReceivablePacket
 {
-	/**
-	 * Field _account.
-	 */
 	private String _account;
-	/**
-	 * Field _size.
-	 */
 	private int _size;
-	/**
-	 * Field _deleteChars.
-	 */
 	private int[] _deleteChars;
 	
 	/**

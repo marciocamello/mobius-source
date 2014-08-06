@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.instances;
 
 import java.util.concurrent.Future;
-
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
@@ -38,37 +37,13 @@ public class SummonInstance extends Summon
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field CYCLE.
-	 */
 	public final int CYCLE = 5000;
-	/**
-	 * Field _summonSkillId.
-	 */
 	private final int _summonSkillId;
-	/**
-	 * Field _summonSkillLvl.
-	 */
 	private final int _summonSkillLvl;
-	/**
-	 * Field _expPenalty.
-	 */
 	private double _expPenalty = 0;
-	/**
-	 * Field _disappearTask.
-	 */
 	Future<?> _disappearTask;
-	/**
-	 * Field _lifetimeCountdown.
-	 */
 	int _lifetimeCountdown;
-	/**
-	 * Field _maxLifetime.
-	 */
 	private int _maxLifetime;
-	/**
-	 * Field _summonPoint.
-	 */
 	private final int _summonPoint;
 	
 	/**

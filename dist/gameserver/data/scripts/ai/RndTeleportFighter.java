@@ -29,9 +29,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class RndTeleportFighter extends Fighter
 {
-	/**
-	 * Field _lastTeleport.
-	 */
 	private long _lastTeleport;
 	
 	/**

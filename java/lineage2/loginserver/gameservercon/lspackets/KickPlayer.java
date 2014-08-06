@@ -20,9 +20,6 @@ import lineage2.loginserver.gameservercon.SendablePacket;
  */
 public class KickPlayer extends SendablePacket
 {
-	/**
-	 * Field account.
-	 */
 	private final String account;
 	
 	/**

@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.base;
 
 import java.util.Arrays;
-
 import lineage2.gameserver.stats.Stats;
 
 /**
@@ -22,49 +21,16 @@ import lineage2.gameserver.stats.Stats;
  */
 public enum Element
 {
-	/**
-	 * Field FIRE.
-	 */
 	FIRE(0, Stats.ATTACK_FIRE, Stats.DEFENCE_FIRE),
-	/**
-	 * Field WATER.
-	 */
 	WATER(1, Stats.ATTACK_WATER, Stats.DEFENCE_WATER),
-	/**
-	 * Field WIND.
-	 */
 	WIND(2, Stats.ATTACK_WIND, Stats.DEFENCE_WIND),
-	/**
-	 * Field EARTH.
-	 */
 	EARTH(3, Stats.ATTACK_EARTH, Stats.DEFENCE_EARTH),
-	/**
-	 * Field HOLY.
-	 */
 	HOLY(4, Stats.ATTACK_HOLY, Stats.DEFENCE_HOLY),
-	/**
-	 * Field UNHOLY.
-	 */
 	UNHOLY(5, Stats.ATTACK_UNHOLY, Stats.DEFENCE_UNHOLY),
-	/**
-	 * Field NONE.
-	 */
 	NONE(-2, null, null);
-	/**
-	 * Field VALUES.
-	 */
 	public final static Element[] VALUES = Arrays.copyOf(values(), 6);
-	/**
-	 * Field id.
-	 */
 	private final int id;
-	/**
-	 * Field attack.
-	 */
 	private final Stats attack;
-	/**
-	 * Field defence.
-	 */
 	private final Stats defence;
 	
 	/**

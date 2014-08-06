@@ -23,33 +23,12 @@ import lineage2.gameserver.templates.StatsSet;
  */
 public final class WeaponTemplate extends ItemTemplate
 {
-	/**
-	 * Field _soulShotCount.
-	 */
 	private final int _soulShotCount;
-	/**
-	 * Field _spiritShotCount.
-	 */
 	private final int _spiritShotCount;
-	/**
-	 * Field _kamaelConvert.
-	 */
 	private final int _kamaelConvert;
-	/**
-	 * Field _rndDam.
-	 */
 	private final int _rndDam;
-	/**
-	 * Field _atkReuse.
-	 */
 	private final int _atkReuse;
-	/**
-	 * Field _mpConsume.
-	 */
 	private final int _mpConsume;
-	/**
-	 * Field _critical.
-	 */
 	private int _critical;
 	
 	/**
@@ -57,97 +36,28 @@ public final class WeaponTemplate extends ItemTemplate
 	 */
 	public enum WeaponType implements ItemType
 	{
-		/**
-		 * Field NONE.
-		 */
 		NONE(1, "Shield", null),
-		/**
-		 * Field SWORD.
-		 */
 		SWORD(2, "Sword", Stats.SWORD_WPN_VULNERABILITY),
-		/**
-		 * Field BLUNT.
-		 */
 		BLUNT(3, "Blunt", Stats.BLUNT_WPN_VULNERABILITY),
-		/**
-		 * Field DAGGER.
-		 */
 		DAGGER(4, "Dagger", Stats.DAGGER_WPN_VULNERABILITY),
-		/**
-		 * Field BOW.
-		 */
 		BOW(5, "Bow", Stats.BOW_WPN_VULNERABILITY),
-		/**
-		 * Field POLE.
-		 */
 		POLE(6, "Pole", Stats.POLE_WPN_VULNERABILITY),
-		/**
-		 * Field ETC.
-		 */
 		ETC(7, "Etc", null),
-		/**
-		 * Field FIST.
-		 */
 		FIST(8, "Fist", Stats.FIST_WPN_VULNERABILITY),
-		/**
-		 * Field DUAL.
-		 */
 		DUAL(9, "Dual Sword", Stats.DUAL_WPN_VULNERABILITY),
-		/**
-		 * Field DUALFIST.
-		 */
 		DUALFIST(10, "Dual Fist", Stats.FIST_WPN_VULNERABILITY),
-		/**
-		 * Field BIGSWORD.
-		 */
 		BIGSWORD(11, "Big Sword", Stats.SWORD_WPN_VULNERABILITY),
-		/**
-		 * Field PET.
-		 */
 		PET(12, "Pet", Stats.FIST_WPN_VULNERABILITY),
-		/**
-		 * Field ROD.
-		 */
 		ROD(13, "Rod", null),
-		/**
-		 * Field BIGBLUNT.
-		 */
 		BIGBLUNT(14, "Big Blunt", Stats.BLUNT_WPN_VULNERABILITY),
-		/**
-		 * Field CROSSBOW.
-		 */
 		CROSSBOW(15, "Crossbow", Stats.CROSSBOW_WPN_VULNERABILITY),
-		/**
-		 * Field RAPIER.
-		 */
 		RAPIER(16, "Rapier", Stats.DAGGER_WPN_VULNERABILITY),
-		/**
-		 * Field ANCIENTSWORD.
-		 */
 		ANCIENTSWORD(17, "Ancient Sword", Stats.SWORD_WPN_VULNERABILITY),
-		/**
-		 * Field DUALDAGGER.
-		 */
 		DUALDAGGER(18, "Dual Dagger", Stats.DAGGER_WPN_VULNERABILITY),
-		/**
-		 * Field DUALBLUNT.
-		 */
 		DUALBLUNT(19, "Dual Blunt", null);
-		/**
-		 * Field VALUES.
-		 */
 		public final static WeaponType[] VALUES = values();
-		/**
-		 * Field _mask.
-		 */
 		private final long _mask;
-		/**
-		 * Field _name.
-		 */
 		private final String _name;
-		/**
-		 * Field _defence.
-		 */
 		private final Stats _defence;
 		
 		/**

@@ -14,7 +14,6 @@ package ai.seedofdestruction;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
@@ -27,9 +26,6 @@ import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
  */
 public final class TiatCamera extends DefaultAI
 {
-	/**
-	 * Field _players.
-	 */
 	private final List<Player> _players = new ArrayList<>();
 	
 	/**

@@ -16,7 +16,6 @@ import java.util.Collections;
 import java.util.EnumMap;
 import java.util.EnumSet;
 import java.util.Set;
-
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SubClass;
 import lineage2.gameserver.model.base.ClassId;
@@ -30,49 +29,16 @@ import lineage2.gameserver.model.base.Race;
  */
 public final class SubClassInfo
 {
-	/**
-	 * Field MAIN_SUBCLASS_SET.
-	 */
 	private static final Set<ClassId> MAIN_SUBCLASS_SET;
-	/**
-	 * Field MAIN_SUBCLASS_SET1.
-	 */
 	private static final Set<ClassId> MAIN_SUBCLASS_SET1;
-	/**
-	 * Field KAMAEL_SUBCLASS_SET.
-	 */
 	private static final Set<ClassId> KAMAEL_SUBCLASS_SET;
-	/**
-	 * Field BANNED_SUBCLASSES.
-	 */
 	private static final Set<ClassId> BANNED_SUBCLASSES = EnumSet.of(ClassId.OVERLORD, ClassId.WARSMITH);
-	/**
-	 * Field SUBCLASS_SET_1.
-	 */
 	private static final Set<ClassId> SUBCLASS_SET_1 = EnumSet.of(ClassId.DARK_AVENGER, ClassId.PALADIN, ClassId.TEMPLE_KNIGHT, ClassId.SHILLEN_KNIGHT);
-	/**
-	 * Field SUBCLASS_SET_2.
-	 */
 	private static final Set<ClassId> SUBCLASS_SET_2 = EnumSet.of(ClassId.TREASURE_HUNTER, ClassId.ABYSS_WALKER, ClassId.PLAIN_WALKER);
-	/**
-	 * Field SUBCLASS_SET_3.
-	 */
 	private static final Set<ClassId> SUBCLASS_SET_3 = EnumSet.of(ClassId.HAWKEYE, ClassId.SILVER_RANGER, ClassId.PHANTOM_RANGER);
-	/**
-	 * Field SUBCLASS_SET_4.
-	 */
 	private static final Set<ClassId> SUBCLASS_SET_4 = EnumSet.of(ClassId.WARLOCK, ClassId.ELEMENTAL_SUMMONER, ClassId.PHANTOM_SUMMONER);
-	/**
-	 * Field SUBCLASS_SET_5.
-	 */
 	private static final Set<ClassId> SUBCLASS_SET_5 = EnumSet.of(ClassId.SORCERER, ClassId.SPELLSINGER, ClassId.SPELLHOWLER);
-	/**
-	 * Field SUBCLASS_SET_6.
-	 */
 	private static final Set<ClassId> SUBCLASS_SET_6 = EnumSet.of(ClassId.INSPECTOR);
-	/**
-	 * Field SUBCLASS_SET_MAP.
-	 */
 	@SuppressWarnings("rawtypes")
 	private static final EnumMap<ClassId, Set> SUBCLASS_SET_MAP = new EnumMap<>(ClassId.class);
 	

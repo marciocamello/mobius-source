@@ -28,17 +28,8 @@ import lineage2.gameserver.templates.player.PlayerTemplate;
  */
 public class FakePlayer extends Creature
 {
-	/**
-	 * Field serialVersionUID. (value is -7275714049223105460)
-	 */
 	private static final long serialVersionUID = -7275714049223105460L;
-	/**
-	 * Field _owner.
-	 */
 	private final Player _owner;
-	/**
-	 * Field _listener.
-	 */
 	private final OwnerAttakListener _listener;
 	
 	/**

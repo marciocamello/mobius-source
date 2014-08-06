@@ -34,21 +34,9 @@ public class AdminClanHall implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_clanhall.
-		 */
 		admin_clanhall,
-		/**
-		 * Field admin_clanhallset.
-		 */
 		admin_clanhallset,
-		/**
-		 * Field admin_clanhalldel.
-		 */
 		admin_clanhalldel,
-		/**
-		 * Field admin_clanhallteleportself.
-		 */
 		admin_clanhallteleportself
 	}
 	

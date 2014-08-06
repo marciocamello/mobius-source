@@ -14,7 +14,6 @@ package events.CofferofShadows;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
@@ -27,7 +26,6 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Util;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,29 +35,11 @@ import org.slf4j.LoggerFactory;
  */
 public final class CofferofShadows extends Functions implements ScriptFile, OnPlayerEnterListener
 {
-	/**
-	 * Field COFFER_PRICE.
-	 */
 	private static final int COFFER_PRICE = 50000;
-	/**
-	 * Field COFFER_ID.
-	 */
 	private static final int COFFER_ID = 8659;
-	/**
-	 * Field EVENT_MANAGER_ID.
-	 */
 	private static final int EVENT_MANAGER_ID = 32091;
-	/**
-	 * Field _spawns.
-	 */
 	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(CofferofShadows.class);
-	/**
-	 * Field _active.
-	 */
 	private static boolean _active = false;
 	
 	/**
@@ -251,9 +231,6 @@ public final class CofferofShadows extends Functions implements ScriptFile, OnPl
 		Functions.addItem(player, COFFER_ID, coffer_count);
 	}
 	
-	/**
-	 * Field buycoffer_counts.
-	 */
 	private static final int[] buycoffer_counts =
 	{
 		1,

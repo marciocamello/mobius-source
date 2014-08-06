@@ -20,9 +20,6 @@ import lineage2.loginserver.gameservercon.SendablePacket;
  */
 public class GetAccountInfo extends SendablePacket
 {
-	/**
-	 * Field _name.
-	 */
 	private final String _name;
 	
 	/**

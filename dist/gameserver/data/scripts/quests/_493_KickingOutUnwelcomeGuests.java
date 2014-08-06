@@ -22,7 +22,6 @@ public class _493_KickingOutUnwelcomeGuests extends Quest implements ScriptFile
 {
 	// npc
 	public static final int JORJINO = 33515;
-	
 	public static final String A_LIST = "a_list";
 	public static final String B_LIST = "b_list";
 	public static final String C_LIST = "c_list";

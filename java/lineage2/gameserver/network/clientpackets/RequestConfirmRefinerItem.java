@@ -27,13 +27,7 @@ import lineage2.gameserver.templates.item.ItemTemplate.Grade;
  */
 public class RequestConfirmRefinerItem extends AbstractRefinePacket
 {
-	/**
-	 * Field _targetItemObjId.
-	 */
 	private int _targetItemObjId;
-	/**
-	 * Field _refinerItemObjId.
-	 */
 	private int _refinerItemObjId;
 	
 	/**

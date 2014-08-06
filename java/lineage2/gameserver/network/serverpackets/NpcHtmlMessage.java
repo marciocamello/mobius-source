@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -26,7 +25,6 @@ import lineage2.gameserver.scripts.Scripts;
 import lineage2.gameserver.scripts.Scripts.ScriptClassAndMethod;
 import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.Strings;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,7 +39,6 @@ public class NpcHtmlMessage extends L2GameServerPacket
 	protected static final Logger _log = LoggerFactory.getLogger(NpcHtmlMessage.class);
 	protected static final Pattern objectId = Pattern.compile("%objectId%");
 	protected static final Pattern playername = Pattern.compile("%playername%");
-	
 	protected int _npcObjId;
 	protected String _html;
 	protected String _file = null;

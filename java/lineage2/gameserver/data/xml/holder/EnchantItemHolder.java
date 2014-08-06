@@ -14,14 +14,12 @@ package lineage2.gameserver.data.xml.holder;
 
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.model.items.etcitems.AppearanceStone;
-
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 
 public class EnchantItemHolder extends AbstractHolder
 {
 	private static final EnchantItemHolder _instance = new EnchantItemHolder();
-	
 	private final IntObjectMap<AppearanceStone> _appearanceStones = new HashIntObjectMap<>();
 	
 	private EnchantItemHolder()

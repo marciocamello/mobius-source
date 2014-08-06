@@ -28,37 +28,16 @@ import lineage2.gameserver.utils.Location;
  */
 public final class DarkWaterDragon extends Fighter
 {
-	/**
-	 * Field _mobsSpawned.
-	 */
 	private int _mobsSpawned = 0;
-	/**
-	 * Field FAFURION. (value is 18482)
-	 */
 	private static final int FAFURION = 18482;
-	/**
-	 * Field SHADE1. (value is 22268)
-	 */
 	private static final int SHADE1 = 22268;
-	/**
-	 * Field SHADE2. (value is 22269)
-	 */
 	private static final int SHADE2 = 22269;
-	/**
-	 * Field MOBS.
-	 */
 	private static final int[] MOBS =
 	{
 		SHADE1,
 		SHADE2
 	};
-	/**
-	 * Field MOBS_COUNT. (value is 5)
-	 */
 	private static final int MOBS_COUNT = 5;
-	/**
-	 * Field RED_CRYSTAL. (value is 9596)
-	 */
 	private static final int RED_CRYSTAL = 9596;
 	
 	/**

@@ -31,13 +31,7 @@ import lineage2.gameserver.utils.Log;
  */
 public final class RequestExEnchantSkillRouteChange extends L2GameClientPacket
 {
-	/**
-	 * Field _skillId.
-	 */
 	private int _skillId;
-	/**
-	 * Field _skillLvl.
-	 */
 	private int _skillLvl;
 	
 	/**

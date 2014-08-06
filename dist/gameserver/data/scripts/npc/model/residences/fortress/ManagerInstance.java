@@ -35,9 +35,6 @@ public final class ManagerInstance extends ResidenceManager
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field REWARD_CYCLE.
-	 */
 	private static final long REWARD_CYCLE = 6 * 60 * 60;
 	
 	/**

@@ -15,7 +15,6 @@ package instances;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -39,14 +38,12 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
  * @author pchayka
  *         <p/>
  */
-
 public final class Frintezza extends Reflection
 {
 	private static final int HallAlarmDevice = 18328;
@@ -56,7 +53,6 @@ public final class Frintezza extends Reflection
 	private static final int TeleportCube = 29061;
 	private static final int _frintezzasSwordId = 7903;
 	private static final int DewdropItem = 8556;
-	
 	static final int[] hallADoors =
 	{
 		17130051,
@@ -106,7 +102,6 @@ public final class Frintezza extends Reflection
 		18337,
 		18338
 	};
-	
 	static final int _intervalOfFrintezzaSongs = 30000;
 	
 	public static class NpcLocation extends Location
@@ -130,10 +125,8 @@ public final class Frintezza extends Reflection
 	
 	// The Boss
 	static final NpcLocation frintezzaSpawn = new NpcLocation(-87784, -155090, -9080, 16048, 29045);
-	
 	// Weak Scarlet Van Halisha.
 	static final NpcLocation scarletSpawnWeak = new NpcLocation(-87784, -153288, -9176, 16384, 29046);
-	
 	// Portrait spawns - 4 portraits = 4 spawns
 	static final NpcLocation[] portraitSpawns =
 	{
@@ -142,7 +135,6 @@ public final class Frintezza extends Reflection
 		new NpcLocation(-89368, -152456, -9168, 64817, 29048),
 		new NpcLocation(-89416, -153976, -9168, 57730, 29049)
 	};
-	
 	// Demon spawns - 4 portraits = 4 demons
 	static final NpcLocation[] demonSpawns =
 	{
@@ -151,7 +143,6 @@ public final class Frintezza extends Reflection
 		new NpcLocation(-89368, -152456, -9168, 64817, 29051),
 		new NpcLocation(-89416, -153976, -9168, 57730, 29050)
 	};
-	
 	NpcInstance _frintezzaDummy;
 	NpcInstance frintezza;
 	NpcInstance weakScarlet;
@@ -159,13 +150,10 @@ public final class Frintezza extends Reflection
 	final NpcInstance[] portraits = new NpcInstance[4];
 	final NpcInstance[] demons = new NpcInstance[4];
 	int _scarletMorph = 0;
-	
 	private static final long battleStartDelay = 5 * 60000L; // 5min
-	
 	final DeathListener _deathListener = new DeathListener();
 	final CurrentHpListener _currentHpListener = new CurrentHpListener();
 	private final ZoneListener _zoneListener = new ZoneListener();
-	
 	ScheduledFuture<?> musicTask;
 	
 	@Override

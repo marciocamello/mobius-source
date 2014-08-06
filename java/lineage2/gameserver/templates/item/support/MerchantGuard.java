@@ -20,17 +20,8 @@ import org.napile.primitive.sets.IntSet;
  */
 public class MerchantGuard
 {
-	/**
-	 * Field _itemId.
-	 */
 	private final int _itemId;
-	/**
-	 * Field _npcId.
-	 */
 	private final int _npcId;
-	/**
-	 * Field _max.
-	 */
 	private final int _max;
 	
 	/**

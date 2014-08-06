@@ -25,13 +25,7 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class EvilNpc extends DefaultAI
 {
-	/**
-	 * Field _lastAction.
-	 */
 	private long _lastAction;
-	/**
-	 * Field _txt.
-	 */
 	private static final String[] _txt =
 	{
 		"от�?тан�?!",

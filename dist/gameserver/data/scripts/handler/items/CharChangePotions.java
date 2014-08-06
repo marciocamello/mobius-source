@@ -23,9 +23,6 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
  */
 public final class CharChangePotions extends ScriptItemHandler
 {
-	/**
-	 * Field _itemIds.
-	 */
 	private static final int[] _itemIds =
 	{
 		5235,

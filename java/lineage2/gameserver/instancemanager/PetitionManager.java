@@ -19,7 +19,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.handler.petition.IPetitionHandler;
 import lineage2.gameserver.model.Player;
@@ -30,7 +29,6 @@ import lineage2.gameserver.network.serverpackets.Say2;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.tables.GmListTable;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,9 +38,6 @@ import org.slf4j.LoggerFactory;
  */
 public final class PetitionManager implements IPetitionHandler
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(PetitionManager.class.getName());
 	
 	/**
@@ -50,41 +45,14 @@ public final class PetitionManager implements IPetitionHandler
 	 */
 	public static enum PetitionState
 	{
-		/**
-		 * Field Pending.
-		 */
 		Pending,
-		/**
-		 * Field Responder_Cancel.
-		 */
 		Responder_Cancel,
-		/**
-		 * Field Responder_Missing.
-		 */
 		Responder_Missing,
-		/**
-		 * Field Responder_Reject.
-		 */
 		Responder_Reject,
-		/**
-		 * Field Responder_Complete.
-		 */
 		Responder_Complete,
-		/**
-		 * Field Petitioner_Cancel.
-		 */
 		Petitioner_Cancel,
-		/**
-		 * Field Petitioner_Missing.
-		 */
 		Petitioner_Missing,
-		/**
-		 * Field In_Process.
-		 */
 		In_Process,
-		/**
-		 * Field Completed.
-		 */
 		Completed
 	}
 	
@@ -93,47 +61,17 @@ public final class PetitionManager implements IPetitionHandler
 	 */
 	public static enum PetitionType
 	{
-		/**
-		 * Field Immobility.
-		 */
 		Immobility,
-		/**
-		 * Field Recovery_Related.
-		 */
 		Recovery_Related,
-		/**
-		 * Field Bug_Report.
-		 */
 		Bug_Report,
-		/**
-		 * Field Quest_Related.
-		 */
 		Quest_Related,
-		/**
-		 * Field Bad_User.
-		 */
 		Bad_User,
-		/**
-		 * Field Suggestions.
-		 */
 		Suggestions,
-		/**
-		 * Field Game_Tip.
-		 */
 		Game_Tip,
-		/**
-		 * Field Operation_Related.
-		 */
 		Operation_Related,
-		/**
-		 * Field Other.
-		 */
 		Other
 	}
 	
-	/**
-	 * Field _instance.
-	 */
 	private static final PetitionManager _instance = new PetitionManager();
 	
 	/**
@@ -145,17 +83,8 @@ public final class PetitionManager implements IPetitionHandler
 		return _instance;
 	}
 	
-	/**
-	 * Field _nextId.
-	 */
 	private final AtomicInteger _nextId = new AtomicInteger();
-	/**
-	 * Field _pendingPetitions.
-	 */
 	private final Map<Integer, Petition> _pendingPetitions = new ConcurrentHashMap<>();
-	/**
-	 * Field _completedPetitions.
-	 */
 	private final Map<Integer, Petition> _completedPetitions = new ConcurrentHashMap<>();
 	
 	/**
@@ -163,42 +92,15 @@ public final class PetitionManager implements IPetitionHandler
 	 */
 	private class Petition
 	{
-		/**
-		 * Field _submitTime.
-		 */
 		private final long _submitTime = System.currentTimeMillis();
-		/**
-		 * Field _endTime.
-		 */
 		@SuppressWarnings("unused")
 		private long _endTime = -1;
-		/**
-		 * Field _id.
-		 */
 		private final int _id;
-		/**
-		 * Field _type.
-		 */
 		private final PetitionType _type;
-		/**
-		 * Field _state.
-		 */
 		private PetitionState _state = PetitionState.Pending;
-		/**
-		 * Field _content.
-		 */
 		private final String _content;
-		/**
-		 * Field _messageLog.
-		 */
 		private final List<Say2> _messageLog = new ArrayList<>();
-		/**
-		 * Field _petitioner.
-		 */
 		private final int _petitioner;
-		/**
-		 * Field _responder.
-		 */
 		private int _responder;
 		
 		/**

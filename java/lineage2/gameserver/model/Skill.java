@@ -18,7 +18,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.StringTokenizer;
-
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.geometry.Polygon;
 import lineage2.commons.lang.ArrayUtils;
@@ -131,7 +130,6 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.PositionUtils;
-
 import org.apache.commons.lang3.math.NumberUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -147,21 +145,9 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 */
 	public static class AddedSkill
 	{
-		/**
-		 * Field EMPTY_ARRAY.
-		 */
 		public static final AddedSkill[] EMPTY_ARRAY = new AddedSkill[0];
-		/**
-		 * Field id.
-		 */
 		public int id;
-		/**
-		 * Field level.
-		 */
 		public int level;
-		/**
-		 * Field _skill.
-		 */
 		private Skill _skill;
 		
 		/**
@@ -195,25 +181,10 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 */
 	public static enum NextAction
 	{
-		/**
-		 * Field ATTACK.
-		 */
 		ATTACK,
-		/**
-		 * Field CAST.
-		 */
 		CAST,
-		/**
-		 * Field DEFAULT.
-		 */
 		DEFAULT,
-		/**
-		 * Field MOVE.
-		 */
 		MOVE,
-		/**
-		 * Field NONE.
-		 */
 		NONE
 	}
 	
@@ -222,21 +193,9 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 */
 	public static enum SkillOpType
 	{
-		/**
-		 * Field OP_ACTIVE.
-		 */
 		OP_ACTIVE,
-		/**
-		 * Field OP_PASSIVE.
-		 */
 		OP_PASSIVE,
-		/**
-		 * Field OP_TOGGLE.
-		 */
 		OP_TOGGLE,
-		/**
-		 * Field OP_ACTIVE_TOGGLE.
-		 */
 		OP_ACTIVE_TOGGLE
 	}
 	
@@ -245,17 +204,8 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 */
 	public static enum Ternary
 	{
-		/**
-		 * Field TRUE.
-		 */
 		TRUE,
-		/**
-		 * Field FALSE.
-		 */
 		FALSE,
-		/**
-		 * Field DEFAULT.
-		 */
 		DEFAULT
 	}
 	
@@ -264,21 +214,9 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 */
 	public static enum SkillMagicType
 	{
-		/**
-		 * Field PHYSIC.
-		 */
 		PHYSIC,
-		/**
-		 * Field MAGIC.
-		 */
 		MAGIC,
-		/**
-		 * Field SPECIAL.
-		 */
 		SPECIAL,
-		/**
-		 * Field MUSIC.
-		 */
 		MUSIC
 	}
 	
@@ -287,157 +225,43 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 */
 	public static enum SkillTargetType
 	{
-		/**
-		 * Field TARGET_ALLY.
-		 */
 		TARGET_ALLY,
-		/**
-		 * Field TARGET_AREA.
-		 */
 		TARGET_AREA,
-		/**
-		 * Field TARGET_AREA_AIM_CORPSE.
-		 */
 		TARGET_AREA_AIM_CORPSE,
-		/**
-		 * Field TARGET_AURA.
-		 */
 		TARGET_AURA,
-		/**
-		 * Field TARGET_PET_AURA.
-		 */
 		TARGET_PET_AURA,
-		/**
-		 * Field TARGET_CHEST.
-		 */
 		TARGET_CHEST,
-		/**
-		 * Field TARGET_FEEDABLE_BEAST.
-		 */
 		TARGET_FEEDABLE_BEAST,
-		/**
-		 * Field TARGET_CLAN.
-		 */
 		TARGET_CLAN,
-		/**
-		 * Field TARGET_CLAN_ONLY.
-		 */
 		TARGET_CLAN_ONLY,
-		/**
-		 * Field TARGET_CORPSE.
-		 */
 		TARGET_CORPSE,
-		/**
-		 * Field TARGET_CORPSE_PLAYER.
-		 */
 		TARGET_CORPSE_PLAYER,
-		/**
-		 * Field TARGET_ENEMY_PET.
-		 */
 		TARGET_ENEMY_PET,
-		/**
-		 * Field TARGET_ENEMY_SUMMON.
-		 */
 		TARGET_ENEMY_SUMMON,
-		/**
-		 * Field TARGET_ENEMY_SERVITOR.
-		 */
 		TARGET_ENEMY_SERVITOR,
-		/**
-		 * Field TARGET_EVENT.
-		 */
 		TARGET_EVENT,
-		/**
-		 * Field TARGET_FLAGPOLE.
-		 */
 		TARGET_FLAGPOLE,
-		/**
-		 * Field TARGET_COMMCHANNEL.
-		 */
 		TARGET_COMMCHANNEL,
-		/**
-		 * Field TARGET_HOLY.
-		 */
 		TARGET_HOLY,
-		/**
-		 * Field TARGET_ITEM.
-		 */
 		TARGET_ITEM,
-		/**
-		 * Field TARGET_MENTEE.
-		 */
 		TARGET_MENTEE,
-		/**
-		 * Field TARGET_MULTIFACE.
-		 */
 		TARGET_MULTIFACE,
-		/**
-		 * Field TARGET_MULTIFACE_AURA.
-		 */
 		TARGET_MULTIFACE_AURA,
-		/**
-		 * Field TARGET_TUNNEL.
-		 */
 		TARGET_TUNNEL,
-		/**
-		 * Field TARGET_NONE.
-		 */
 		TARGET_NONE,
-		/**
-		 * Field TARGET_ONE.
-		 */
 		TARGET_ONE,
-		/**
-		 * Field TARGET_ONE_PLAYER.
-		 */
 		TARGET_ONE_PLAYER,
-		/**
-		 * Field TARGET_OWNER.
-		 */
 		TARGET_OWNER,
-		/**
-		 * Field TARGET_PARTY.
-		 */
 		TARGET_PARTY,
-		/**
-		 * Field TARGET_PARTY_ONE.
-		 */
 		TARGET_PARTY_ONE,
-		/**
-		 * Field TARGET_PARTY_WITHOUT_ME.
-		 */
 		TARGET_PARTY_WITHOUT_ME,
-		/**
-		 * Field TARGET_PET.
-		 */
 		TARGET_PET,
-		/**
-		 * Field TARGET_SUMMON.
-		 */
 		TARGET_SUMMON,
-		/**
-		 * Field TARGET_SELF.
-		 */
 		TARGET_SELF,
-		/**
-		 * Field TARGET_SIEGE.
-		 */
 		TARGET_SIEGE,
-		/**
-		 * Field TARGET_UNLOCKABLE.
-		 */
 		TARGET_UNLOCKABLE,
-		/**
-		 * Field TARGET_SUMMON_AURA.
-		 */
 		TARGET_SUMMON_AURA,
-		/**
-		 * Field TARGET_SUMMON_AURA_AND_ME.
-		 */
 		TARGET_SUMMON_AURA_AND_ME,
-		/**
-		 * Field TARGET_GROUND.
-		 */
 		TARGET_GROUND
 	}
 	
@@ -446,406 +270,106 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 */
 	public static enum SkillType
 	{
-		/**
-		 * Field AGGRESSION.
-		 */
 		AGGRESSION(Aggression.class),
-		/**
-		 * Field AIEFFECTS.
-		 */
 		AIEFFECTS(AIeffects.class),
-		/**
-		 * Field BALANCE.
-		 */
 		BALANCE(Balance.class),
-		/**
-		 * Field BEAST_FEED.
-		 */
 		BEAST_FEED(BeastFeed.class),
-		/**
-		 * Field BLEED.
-		 */
 		BLEED(Continuous.class),
-		/**
-		 * Field BUFF.
-		 */
 		BUFF(Continuous.class),
-		/**
-		 * Field BUFF_CHARGER.
-		 */
 		BUFF_CHARGER(BuffCharger.class),
-		/**
-		 * Field CALL.
-		 */
 		CALL(Call.class),
-		/**
-		 * Field CHAIN_HEAL.
-		 */
 		CHAIN_HEAL(ChainHeal.class),
-		/**
-		 * Field CHARGE.
-		 */
 		CHARGE(Charge.class),
-		/**
-		 * Field CHARGE_SOUL.
-		 */
 		CHARGE_SOUL(ChargeSoul.class),
-		/**
-		 * Field CLAN_GATE.
-		 */
 		CLAN_GATE(ClanGate.class),
-		/**
-		 * Field COMBATPOINTHEAL.
-		 */
 		COMBATPOINTHEAL(CombatPointHeal.class),
-		/**
-		 * Field CONT.
-		 */
 		CONT(Toggle.class),
-		/**
-		 * Field CPDAM.
-		 */
 		CPDAM(CPDam.class),
-		/**
-		 * Field CPHOT.
-		 */
 		CPHOT(Continuous.class),
-		/**
-		 * Field CRAFT.
-		 */
 		CRAFT(Craft.class),
-		/**
-		 * Field DEATH_PENALTY.
-		 */
 		DEATH_PENALTY(DeathPenalty.class),
-		/**
-		 * Field DECOY.
-		 */
 		DECOY(Decoy.class),
-		/**
-		 * Field DEBUFF.
-		 */
 		DEBUFF(Continuous.class),
-		/**
-		 * Field DELETE_HATE.
-		 */
 		DELETE_HATE(DeleteHate.class),
-		/**
-		 * Field DELETE_HATE_OF_ME.
-		 */
 		DELETE_HATE_OF_ME(DeleteHateOfMe.class),
-		/**
-		 * Field DESTROY_SUMMON.
-		 */
 		DESTROY_SUMMON(DestroySummon.class),
-		/**
-		 * Field DEFUSE_TRAP.
-		 */
 		DEFUSE_TRAP(DefuseTrap.class),
-		/**
-		 * Field DETECT_TRAP.
-		 */
 		DETECT_TRAP(DetectTrap.class),
-		/**
-		 * Field DISCORD.
-		 */
 		DISCORD(Continuous.class),
-		/**
-		 * Field DOT.
-		 */
 		DOT(Continuous.class),
-		/**
-		 * Field DRAIN.
-		 */
 		DRAIN(Drain.class),
-		/**
-		 * Field DRAIN_SOUL.
-		 */
 		DRAIN_SOUL(DrainSoul.class),
-		/**
-		 * Field EFFECT.
-		 */
 		EFFECT(lineage2.gameserver.skills.skillclasses.Effect.class),
-		/**
-		 * Field EFFECTS_FROM_SKILLS.
-		 */
 		EFFECTS_FROM_SKILLS(EffectsFromSkills.class),
-		/**
-		 * Field ENERGY_REPLENISH.
-		 */
 		ENERGY_REPLENISH(EnergyReplenish.class),
-		/**
-		 * Field ENCHANT_ARMOR.
-		 */
 		ENCHANT_ARMOR,
-		/**
-		 * Field ENCHANT_WEAPON.
-		 */
 		ENCHANT_WEAPON,
-		/**
-		 * Field EXTRACT_STONE.
-		 */
 		EXTRACT_STONE(ExtractStone.class),
-		/**
-		 * Field FEED_PET.
-		 */
 		FEED_PET,
-		/**
-		 * Field FISHING.
-		 */
 		FISHING(FishingSkill.class),
-		/**
-		 * Field HARDCODED.
-		 */
 		HARDCODED(lineage2.gameserver.skills.skillclasses.Effect.class),
-		/**
-		 * Field HARVESTING.
-		 */
 		HARVESTING(Harvesting.class),
-		/**
-		 * Field HEAL.
-		 */
 		HEAL(Heal.class),
-		/**
-		 * Field HEAL_WITH_CP.
-		 */
 		HEAL_WITH_CP(HealWithCp.class),
-		/**
-		 * Field HEAL_HP_CP.
-		 */
 		HEAL_HP_CP(HealHpCp.class),
-		/**
-		 * Field HEAL_PERCENT.
-		 */
 		HEAL_PERCENT(HealPercent.class),
-		/**
-		 * Field HOT.
-		 */
 		HOT(Continuous.class),
-		/**
-		 * Field KAMAEL_WEAPON_EXCHANGE.
-		 */
 		KAMAEL_WEAPON_EXCHANGE(KamaelWeaponExchange.class),
-		/**
-		 * Field ITEM_R.
-		 */
 		ITEM_R(ItemR.class),
-		/**
-		 * Field LETHAL_SHOT.
-		 */
 		LETHAL_SHOT(LethalShot.class),
-		/**
-		 * Field LUCK.
-		 */
 		LUCK,
-		/**
-		 * Field MANADAM.
-		 */
 		MANADAM(ManaDam.class),
-		/**
-		 * Field MANAHEAL.
-		 */
 		MANAHEAL(ManaHeal.class),
-		/**
-		 * Field MANAHEAL_PERCENT.
-		 */
 		MANAHEAL_PERCENT(ManaHealPercent.class),
-		/**
-		 * Field MDAM.
-		 */
 		MDAM(MDam.class),
-		/**
-		 * Field EMDAM.
-		 */
 		EMDAM(EMDam.class),
-		/**
-		 * Field MDOT.
-		 */
 		MDOT(Continuous.class),
-		/**
-		 * Field MPHOT.
-		 */
 		MPHOT(Continuous.class),
-		/**
-		 * Field MUTE.
-		 */
 		MUTE(Disablers.class),
-		/**
-		 * Field NEGATE_EFFECTS.
-		 */
 		NEGATE_EFFECTS(NegateEffects.class),
-		/**
-		 * Field NEGATE_STATS.
-		 */
 		NEGATE_STATS(NegateStats.class),
-		/**
-		 * Field ADD_PC_BANG.
-		 */
 		ADD_PC_BANG(PcBangPointsAdd.class),
-		/**
-		 * Field NOTDONE.
-		 */
 		NOTDONE,
-		/**
-		 * Field NOTUSED.
-		 */
 		NOTUSED,
-		/**
-		 * Field PARALYZE.
-		 */
 		PARALYZE(Disablers.class),
-		/**
-		 * Field PASSIVE.
-		 */
 		PASSIVE,
-		/**
-		 * Field PDAM.
-		 */
 		PDAM(PDam.class),
-		/**
-		 * Field PET_SUMMON.
-		 */
 		PET_SUMMON(PetSummon.class),
-		/**
-		 * Field POISON.
-		 */
 		POISON(Continuous.class),
-		/**
-		 * Field PUMPING.
-		 */
 		PUMPING(ReelingPumping.class),
-		/**
-		 * Field RECALL.
-		 */
 		RECALL(Recall.class),
-		/**
-		 * Field REELING.
-		 */
 		REELING(ReelingPumping.class),
-		/**
-		 * Field REFILL.
-		 */
 		REFILL(Refill.class),
-		/**
-		 * Field RESURRECT.
-		 */
 		RESURRECT(Resurrect.class),
-		/**
-		 * Field RESTORE_ITEM.
-		 */
 		RESTORE_ITEM(lineage2.gameserver.skills.skillclasses.Effect.class),
-		/**
-		 * Field REPLACE.
-		 */
 		REPLACE(Replace.class),
-		/**
-		 * Field RIDE.
-		 */
 		RIDE(Ride.class),
-		/**
-		 * Field ROOT.
-		 */
 		ROOT(Disablers.class),
-		/**
-		 * Field SHIFT_AGGRESSION.
-		 */
 		SHIFT_AGGRESSION(ShiftAggression.class),
-		/**
-		 * Field SLEEP.
-		 */
 		SLEEP(Disablers.class),
-		/**
-		 * Field SOULSHOT.
-		 */
 		SOULSHOT,
-		/**
-		 * Field SOWING.
-		 */
 		SOWING(Sowing.class),
-		/**
-		 * Field SPHEAL.
-		 */
 		SPHEAL(SPHeal.class),
-		/**
-		 * Field SPIRITSHOT.
-		 */
 		SPIRITSHOT,
-		/**
-		 * Field SPOIL.
-		 */
 		SPOIL(Spoil.class),
-		/**
-		 * Field STEAL_BUFF.
-		 */
 		STEAL_BUFF(StealBuff.class),
-		/**
-		 * Field STUN.
-		 */
 		STUN(Disablers.class),
-		/**
-		 * Field SUB_JOB.
-		 */
 		SUB_JOB(Subjob.class),
-		/**
-		 * Field SUMMON.
-		 */
 		SUMMON(SummonServitor.class),
-		/**
-		 * Field SUMMON_FLAG.
-		 */
 		SUMMON_FLAG(SummonSiegeFlag.class),
-		/**
-		 * Field SUMMON_ITEM.
-		 */
 		SUMMON_ITEM(SummonItem.class),
 		RESTORATION(Restoration.class),
-		/**
-		 * Field SUMMON_MENTOR.
-		 */
 		SUMMON_MENTOR(SummonMentor.class),
-		/**
-		 * Field SWEEP.
-		 */
 		SWEEP(Sweep.class),
-		/**
-		 * Field TAKECASTLE.
-		 */
 		TAKECASTLE(TakeCastle.class),
-		/**
-		 * Field TAKEFORTRESS.
-		 */
 		TAKEFORTRESS(TakeFortress.class),
-		/**
-		 * Field TAMECONTROL.
-		 */
 		TAMECONTROL(TameControl.class),
-		/**
-		 * Field TELEPORT_NPC.
-		 */
 		TELEPORT_NPC(TeleportNpc.class),
-		/**
-		 * Field TRANSFORMATION.
-		 */
 		TRANSFORMATION(Transformation.class),
-		/**
-		 * Field UNLOCK.
-		 */
 		UNLOCK(Unlock.class),
-		/**
-		 * Field WATCHER_GAZE.
-		 */
 		WATCHER_GAZE(Continuous.class),
-		/**
-		 * Field VITALITY_HEAL.
-		 */
 		VITALITY_HEAL(VitalityHeal.class),
-		/**
-		 * Field SWEEP.
-		 */
 		PLUNDER(Plunder.class);
-		/**
-		 * Field clazz.
-		 */
 		private final Class<? extends Skill> clazz;
 		
 		/**
@@ -1000,675 +524,173 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		}
 	}
 	
-	/**
-	 * Field _log.
-	 */
 	static final Logger _log = LoggerFactory.getLogger(Skill.class);
-	/**
-	 * Field EMPTY_ARRAY.
-	 */
 	public static final Skill[] EMPTY_ARRAY = new Skill[0];
-	/**
-	 * Field _effectTemplates.
-	 */
 	protected EffectTemplate[] _effectTemplates = EffectTemplate.EMPTY_ARRAY;
-	/**
-	 * Field _teachers.
-	 */
 	protected List<Integer> _teachers;
-	/**
-	 * Field _canLearn.
-	 */
 	protected List<ClassId> _canLearn;
-	/**
-	 * Field _addedSkills.
-	 */
 	protected AddedSkill[] _addedSkills = AddedSkill.EMPTY_ARRAY;
-	/**
-	 * Field _itemConsume.
-	 */
 	protected final int[] _itemConsume;
-	/**
-	 * Field _itemConsumeId.
-	 */
 	protected final int[] _itemConsumeId;
-	/**
-	 * Field _relationSkillsId.
-	 */
 	protected final int[] _relationSkillsId;
-	/**
-	 * Field _referenceItemId.
-	 */
 	protected final int _referenceItemId;
-	/**
-	 * Field _referenceItemMpConsume.
-	 */
 	protected final int _referenceItemMpConsume;
-	/**
-	 * Field SKILL_CRAFTING. (value is 172)
-	 */
 	public static final int SKILL_CRAFTING = 172;
-	/**
-	 * Field SKILL_POLEARM_MASTERY. (value is 216)
-	 */
 	public static final int SKILL_POLEARM_MASTERY = 216;
-	/**
-	 * Field SKILL_CRYSTALLIZE. (value is 248)
-	 */
 	public static final int SKILL_CRYSTALLIZE = 248;
-	/**
-	 * Field SKILL_WEAPON_MAGIC_MASTERY1. (value is 249)
-	 */
 	public static final int SKILL_WEAPON_MAGIC_MASTERY1 = 249;
-	/**
-	 * Field SKILL_WEAPON_MAGIC_MASTERY2. (value is 250)
-	 */
 	public static final int SKILL_WEAPON_MAGIC_MASTERY2 = 250;
-	/**
-	 * Field SKILL_BLINDING_BLOW. (value is 321)
-	 */
 	public static final int SKILL_BLINDING_BLOW = 321;
-	/**
-	 * Field SKILL_STRIDER_ASSAULT. (value is 325)
-	 */
 	public static final int SKILL_STRIDER_ASSAULT = 325;
-	/**
-	 * Field SKILL_WYVERN_AEGIS. (value is 327)
-	 */
 	public static final int SKILL_WYVERN_AEGIS = 327;
-	/**
-	 * Field SKILL_BLUFF. (value is 358)
-	 */
 	public static final int SKILL_BLUFF = 358;
-	/**
-	 * Field SKILL_HEROIC_MIRACLE. (value is 395)
-	 */
 	public static final int SKILL_HEROIC_MIRACLE = 395;
-	/**
-	 * Field SKILL_HEROIC_BERSERKER. (value is 396)
-	 */
 	public static final int SKILL_HEROIC_BERSERKER = 396;
-	/**
-	 * Field SKILL_SOUL_MASTERY. (value is 467)
-	 */
 	public static final int SKILL_SOUL_MASTERY = 467;
-	/**
-	 * Field SKILL_TRANSFORM_DISPEL. (value is 619)
-	 */
 	public static final int SKILL_TRANSFORM_DISPEL = 619;
-	/**
-	 * Field SKILL_FINAL_FLYING_FORM. (value is 840)
-	 */
 	public static final int SKILL_FINAL_FLYING_FORM = 840;
-	/**
-	 * Field SKILL_AURA_BIRD_FALCON. (value is 841)
-	 */
 	public static final int SKILL_AURA_BIRD_FALCON = 841;
-	/**
-	 * Field SKILL_AURA_BIRD_OWL. (value is 842)
-	 */
 	public static final int SKILL_AURA_BIRD_OWL = 842;
-	/**
-	 * Field SKILL_DETECTION. (value is 933)
-	 */
 	public static final int SKILL_DETECTION = 933;
-	/**
-	 * Field SKILL_RECHARGE. (value is 1013)
-	 */
 	public static final int SKILL_RECHARGE = 1013;
-	/**
-	 * Field SKILL_TRANSFER_PAIN. (value is 1262)
-	 */
 	public static final int SKILL_TRANSFER_PAIN = 1262;
-	/**
-	 * Field SKILL_FISHING_MASTERY. (value is 1315)
-	 */
 	public static final int SKILL_FISHING_MASTERY = 1315;
-	/**
-	 * Field SKILL_NOBLESSE_BLESSING. (value is 1323)
-	 */
 	public static final int SKILL_NOBLESSE_BLESSING = 1323;
-	/**
-	 * Field SKILL_SUMMON_CP_POTION. (value is 1324)
-	 */
 	public static final int SKILL_SUMMON_CP_POTION = 1324;
-	/**
-	 * Field SKILL_FORTUNE_OF_NOBLESSE. (value is 1325)
-	 */
 	public static final int SKILL_FORTUNE_OF_NOBLESSE = 1325;
-	/**
-	 * Field SKILL_HARMONY_OF_NOBLESSE. (value is 1326)
-	 */
 	public static final int SKILL_HARMONY_OF_NOBLESSE = 1326;
-	/**
-	 * Field SKILL_SYMPHONY_OF_NOBLESSE. (value is 1327)
-	 */
 	public static final int SKILL_SYMPHONY_OF_NOBLESSE = 1327;
-	/**
-	 * Field SKILL_HEROIC_VALOR. (value is 1374)
-	 */
 	public static final int SKILL_HEROIC_VALOR = 1374;
-	/**
-	 * Field SKILL_HEROIC_GRANDEUR. (value is 1375)
-	 */
 	public static final int SKILL_HEROIC_GRANDEUR = 1375;
-	/**
-	 * Field SKILL_HEROIC_DREAD. (value is 1376)
-	 */
 	public static final int SKILL_HEROIC_DREAD = 1376;
-	/**
-	 * Field SKILL_MYSTIC_IMMUNITY. (value is 1411)
-	 */
 	public static final int SKILL_MYSTIC_IMMUNITY = 1411;
-	/**
-	 * Field SKILL_RAID_BLESSING. (value is 2168)
-	 */
 	public static final int SKILL_RAID_BLESSING = 2168;
-	/**
-	 * Field SKILL_HINDER_STRIDER. (value is 4258)
-	 */
 	public static final int SKILL_HINDER_STRIDER = 4258;
-	/**
-	 * Field SKILL_WYVERN_BREATH. (value is 4289)
-	 */
 	public static final int SKILL_WYVERN_BREATH = 4289;
-	/**
-	 * Field SKILL_RAID_CURSE. (value is 4515)
-	 */
 	public static final int SKILL_RAID_CURSE = 4515;
-	/**
-	 * Field SKILL_CHARM_OF_COURAGE. (value is 5041)
-	 */
 	public static final int SKILL_CHARM_OF_COURAGE = 5041;
-	/**
-	 * Field SKILL_EVENT_TIMER. (value is 5239)
-	 */
 	public static final int SKILL_EVENT_TIMER = 5239;
-	/**
-	 * Field SKILL_BATTLEFIELD_DEATH_SYNDROME. (value is 5660)
-	 */
 	public static final int SKILL_BATTLEFIELD_DEATH_SYNDROME = 5660;
-	/**
-	 * Field SKILL_SERVITOR_SHARE. (value is 1557)
-	 */
 	public static final int SKILL_SERVITOR_SHARE = 1557;
-	/**
-	 * Field SKILL_TRUE_FIRE. (value is 11007)
-	 */
 	public static final int SKILL_TRUE_FIRE = 11007;
-	/**
-	 * Field SKILL_TRUE_WATER. (value is 11008)
-	 */
 	public static final int SKILL_TRUE_WATER = 11008;
-	/**
-	 * Field SKILL_TRUE_WIND. (value is 11009)
-	 */
 	public static final int SKILL_TRUE_WIND = 11009;
-	/**
-	 * Field SKILL_TRUE_EARTH. (value is 11010)
-	 */
 	public static final int SKILL_TRUE_EARTH = 11010;
-	/**
-	 * Field SKILL_DUAL_CAST. (value is 11068)
-	 */
 	public static final int SKILL_DUAL_CAST = 11068;
-	/**
-	 * Field _isAuraSkill.
-	 */
 	protected boolean _isAuraSkill;
-	/**
-	 * Field _isAlterSkill.
-	 */
 	protected boolean _isAlterSkill;
-	/**
-	 * Field _isAltUse.
-	 */
 	protected boolean _isAltUse;
-	/**
-	 * Field _isBehind.
-	 */
 	protected boolean _isBehind;
-	/**
-	 * Field _scopeAngle.
-	 */
 	protected int _scopeAngle;
-	/**
-	 * Field _maxHitCancelCount.
-	 */
 	protected int _maxHitCancelCount;
-	/**
-	 * Field _isCancelable.
-	 */
 	protected boolean _isCancelable;
-	/**
-	 * Field _isCorpse.
-	 */
 	protected boolean _isCorpse;
-	/**
-	 * Field _isCommon.
-	 */
 	protected boolean _isCommon;
-	/**
-	 * Field _castOverStun.
-	 */
 	protected boolean _castOverStun;
-	/**
-	 * Field _isItemHandler.
-	 */
 	protected boolean _isItemHandler;
-	/**
-	 * Field _isOffensive.
-	 */
 	protected boolean _isOffensive;
-	/**
-	 * Field _isPvpSkill.
-	 */
 	protected boolean _isPvpSkill;
-	/**
-	 * Field _isNotUsedByAI.
-	 */
 	protected boolean _isNotUsedByAI;
-	/**
-	 * Field _isFishingSkill.
-	 */
 	protected boolean _isFishingSkill;
-	/**
-	 * Field _isPvm.
-	 */
 	protected boolean _isPvm;
-	/**
-	 * Field _isForceUse.
-	 */
 	protected boolean _isForceUse;
-	/**
-	 * Field _isNewbie.
-	 */
 	protected boolean _isNewbie;
-	/**
-	 * Field _isPreservedOnDeath.
-	 */
 	protected boolean _isPreservedOnDeath;
-	/**
-	 * Field _isHeroic.
-	 */
 	protected boolean _isHeroic;
-	/**
-	 * Field _isSaveable.
-	 */
 	protected boolean _isSaveable;
-	/**
-	 * Field _isSkillTimePermanent.
-	 */
 	protected boolean _isSkillTimePermanent;
-	/**
-	 * Field _isReuseDelayPermanent.
-	 */
 	protected boolean _isReuseDelayPermanent;
-	/**
-	 * Field _isHealDamageSkill.
-	 */
 	protected boolean _isHealDamageSkill = false;
-	/**
-	 * Field _lakcisHealStance.
-	 */
 	protected boolean _skillHealStance = false;
-	/**
-	 * Field _isReflectable.
-	 */
 	protected boolean _isReflectable;
-	/**
-	 * Field _isSuicideAttack.
-	 */
 	protected boolean _isSuicideAttack;
-	/**
-	 * Field _isShieldignore.
-	 */
 	protected boolean _isShieldignore;
-	/**
-	 * Field _isUndeadOnly.
-	 */
 	protected boolean _isUndeadOnly;
-	/**
-	 * Field _isUseSS.
-	 */
 	protected Ternary _isUseSS;
-	/**
-	 * Field _isOverhit.
-	 */
 	protected boolean _isOverhit;
-	/**
-	 * Field _isSoulBoost.
-	 */
 	protected boolean _isSoulBoost;
-	/**
-	 * Field _isChargeBoost.
-	 */
 	protected boolean _isChargeBoost;
-	/**
-	 * Field _isUsingWhileCasting.
-	 */
 	protected boolean _isUsingWhileCasting;
-	/**
-	 * Field _isIgnoreResists.
-	 */
 	protected boolean _isIgnoreResists;
-	/**
-	 * Field _isIgnoreInvul.
-	 */
 	protected boolean _isIgnoreInvul;
-	/**
-	 * Field _isTrigger.
-	 */
 	protected boolean _isTrigger;
-	/**
-	 * Field _isNotAffectedByMute.
-	 */
 	protected boolean _isNotAffectedByMute;
-	/**
-	 * Field _basedOnTargetDebuff.
-	 */
 	protected boolean _basedOnTargetDebuff;
-	/**
-	 * Field _deathlink.
-	 */
 	protected boolean _deathlink;
-	/**
-	 * Field _hideStartMessage.
-	 */
 	protected boolean _hideStartMessage;
-	/**
-	 * Field _hideUseMessage.
-	 */
 	protected boolean _hideUseMessage;
-	/**
-	 * Field _skillInterrupt.
-	 */
 	protected boolean _skillInterrupt;
-	/**
-	 * Field _flyingTransformUsage.
-	 */
 	protected boolean _flyingTransformUsage;
-	/**
-	 * Field _flySpeed.
-	 */
 	protected int _flySpeed;
-	/**
-	 * Field _canUseTeleport.
-	 */
 	protected boolean _canUseTeleport;
-	/**
-	 * Field _isProvoke.
-	 */
 	protected boolean _isProvoke;
-	/**
-	 * Field _isCubicSkill.
-	 */
 	protected boolean _isCubicSkill = false;
-	/**
-	 * Field _isAwakeningToggle.
-	 */
 	protected boolean _isAwakeningToggle = false;
-	/**
-	 * Field _isSelfDispellable.
-	 */
 	protected boolean _isSelfDispellable;
-	/**
-	 * Field _isRelation.
-	 */
 	protected boolean _isRelation = false;
-	/**
-	 * Field _skillType.
-	 */
 	protected SkillType _skillType;
-	/**
-	 * Field _operateType.
-	 */
 	protected SkillOpType _operateType;
-	/**
-	 * Field _targetType.
-	 */
 	protected SkillTargetType _targetType;
-	/**
-	 * Field _magicType.
-	 */
 	protected SkillMagicType _magicType;
-	/**
-	 * Field _traitType.
-	 */
 	protected SkillTrait _traitType;
-	/**
-	 * Field _saveVs.
-	 */
 	protected BaseStats _saveVs;
-	/**
-	 * Field _dispelOnDamage;
-	 */
 	protected boolean _dispelOnDamage;
-	/**
-	 * Field _nextAction.
-	 */
 	protected NextAction _nextAction;
-	/**
-	 * Field _element.
-	 */
 	protected Element _element;
-	/**
-	 * Field _flyType.
-	 */
 	protected FlyType _flyType;
-	/**
-	 * Field _flyToBack.
-	 */
 	protected boolean _flyToBack;
-	/**
-	 * Field _preCondition.
-	 */
 	protected Condition[] _preCondition = Condition.EMPTY_ARRAY;
-	/**
-	 * Field _id.
-	 */
 	public int _id;
-	/**
-	 * Field _level.
-	 */
 	protected int _level;
-	/**
-	 * Field _baseLevel.
-	 */
 	protected int _baseLevel;
-	/**
-	 * Field _displayId.
-	 */
 	protected int _displayId;
-	/**
-	 * Field _displayLevel.
-	 */
 	protected int _displayLevel;
-	/**
-	 * Field _activateRate.
-	 */
 	protected int _activateRate;
-	/**
-	 * Field _castRange.
-	 */
 	protected int _castRange;
-	/**
-	 * Field _cancelTarget.
-	 */
 	protected int _cancelTarget;
-	/**
-	 * Field _condCharges.
-	 */
 	protected int _condCharges;
-	/**
-	 * Field _coolTime.
-	 */
 	protected int _coolTime;
-	/**
-	 * Field _delayedEffect.
-	 */
 	protected int _delayedEffect;
-	/**
-	 * Field _effectPoint.
-	 */
 	protected int _effectPoint;
-	/**
-	 * Field _energyConsume.
-	 */
 	protected int _energyConsume;
-	/**
-	 * Field _elementPower.
-	 */
 	protected int _elementPower;
-	/**
-	 * Field _flyRadius.
-	 */
 	protected int _flyRadius;
-	/**
-	 * Field _hitTime.
-	 */
 	protected int _hitTime;
-	/**
-	 * Field _hpConsume.
-	 */
 	protected int _hpConsume;
-	/**
-	 * Field _levelModifier.
-	 */
 	protected int _levelModifier;
-	/**
-	 * Field _magicLevel.
-	 */
 	protected int _magicLevel;
-	/**
-	 * Field _matak.
-	 */
 	protected int _matak;
-	/**
-	 * Field _minPledgeClass.
-	 */
 	protected int _minPledgeClass;
-	/**
-	 * Field _minRank.
-	 */
 	protected int _minRank;
-	/**
-	 * Field _negatePower.
-	 */
 	protected int _negatePower;
-	/**
-	 * Field _negateSkill.
-	 */
 	protected int _negateSkill;
-	/**
-	 * Field _npcId.
-	 */
 	protected int _npcId;
-	/**
-	 * Field _numCharges.
-	 */
 	protected int _numCharges;
-	/**
-	 * Field _maxCharges.
-	 */
 	protected int _maxCharges;
-	/**
-	 * Field _skillInterruptTime.
-	 */
 	protected int _skillInterruptTime;
-	/**
-	 * Field _skillRadius.
-	 */
 	protected int _skillRadius;
-	/**
-	 * Field _soulsConsume.
-	 */
 	protected int _soulsConsume;
-	/**
-	 * Field _symbolId.
-	 */
 	protected int _symbolId;
-	/**
-	 * Field _weaponsAllowed.
-	 */
 	protected int _weaponsAllowed;
-	/**
-	 * Field _castCount.
-	 */
 	protected int _castCount;
-	/**
-	 * Field _enchantLevelCount.
-	 */
 	protected int _enchantLevelCount;
-	/**
-	 * Field _criticalRate.
-	 */
 	protected int _criticalRate;
-	/**
-	 * Field _reuseDelay.
-	 */
 	protected long _reuseDelay;
-	/**
-	 * Field _power.
-	 */
 	protected double _power;
-	/**
-	 * Field _powerPvP.
-	 */
 	protected double _powerPvP;
-	/**
-	 * Field _powerPvE.
-	 */
 	protected double _powerPvE;
-	/**
-	 * Field _mpConsume1.
-	 */
 	protected double _mpConsume1;
-	/**
-	 * Field _mpConsume2.
-	 */
 	protected double _mpConsume2;
-	/**
-	 * Field _lethal1.
-	 */
 	protected double _lethal1;
-	/**
-	 * Field _lethal2.
-	 */
 	protected double _lethal2;
-	/**
-	 * Field _absorbPart.
-	 */
 	protected double _absorbPart;
-	/**
-	 * Field _name.
-	 */
 	protected String _name;
-	/**
-	 * Field _baseValues.
-	 */
 	protected String _baseValues;
-	/**
-	 * Field _icon.
-	 */
 	protected String _icon;
-	
 	protected boolean _isMarkDamage;
-	/**
-	 * Field _skillToCast.
-	 */
 	protected int _skillToCast;
-	/**
-	 * Field _skillToCastLevel.
-	 */
 	protected int _skillToCastLevel;
-	/**
-	 * Field hashCode.
-	 */
 	private final int hashCode;
-	/**
-	 * Field reuseGroupId.
-	 */
 	private final int reuseGroupId = -1;
 	protected boolean _isPowerModified = false;
 	private final int _powerModCount;
@@ -3023,7 +2045,6 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		int count = 0;
 		
 		// Polygon terr = null;
-		
 		for (Creature target : activeChar.getAroundCharacters(_skillRadius, 300))
 		{
 			// if ((terr != null) && !terr.isInside(target.getX(), target.getY(), target.getZ()))

@@ -21,9 +21,6 @@ import java.util.HashMap;
  */
 public class MultiValueSet<T> extends HashMap<T, Object>
 {
-	/**
-	 * Field serialVersionUID. (value is 8071544899414292397)
-	 */
 	private static final long serialVersionUID = 8071544899414292397L;
 	
 	/**

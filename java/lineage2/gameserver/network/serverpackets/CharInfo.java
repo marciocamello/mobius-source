@@ -27,14 +27,12 @@ import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.skills.effects.EffectCubic;
 import lineage2.gameserver.utils.Location;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class CharInfo extends L2GameServerPacket
 {
 	private static final Logger _log = LoggerFactory.getLogger(CharInfo.class);
-	
 	private int[][] _inv;
 	private int _mAtkSpd, _pAtkSpd;
 	private int _runSpd, _walkSpd, _swimSpd, _flRunSpd, _flWalkSpd, _flyRunSpd, _flyWalkSpd;

@@ -18,21 +18,9 @@ package lineage2.gameserver.templates;
  */
 public class SoulCrystal
 {
-	/**
-	 * Field _itemId.
-	 */
 	private final int _itemId;
-	/**
-	 * Field _level.
-	 */
 	private final int _level;
-	/**
-	 * Field _nextItemId.
-	 */
 	private final int _nextItemId;
-	/**
-	 * Field _cursedNextItemId.
-	 */
 	private final int _cursedNextItemId;
 	
 	/**

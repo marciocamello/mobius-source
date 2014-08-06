@@ -20,7 +20,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
@@ -29,7 +28,6 @@ import lineage2.gameserver.model.worldstatistics.CategoryType;
 import lineage2.gameserver.model.worldstatistics.CharacterStatistic;
 import lineage2.gameserver.model.worldstatistics.CharacterStatisticElement;
 import lineage2.gameserver.templates.StatuesSpawnTemplate;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

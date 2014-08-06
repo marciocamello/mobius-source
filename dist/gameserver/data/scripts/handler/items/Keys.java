@@ -31,9 +31,6 @@ import gnu.trove.set.hash.TIntHashSet;
  */
 public final class Keys extends ScriptItemHandler
 {
-	/**
-	 * Field _itemIds.
-	 */
 	private int[] _itemIds = null;
 	
 	/**

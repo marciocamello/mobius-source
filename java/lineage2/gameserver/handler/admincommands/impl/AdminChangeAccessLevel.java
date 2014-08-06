@@ -18,7 +18,6 @@ import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
@@ -30,7 +29,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.utils.Files;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,9 +38,6 @@ import org.slf4j.LoggerFactory;
  */
 public class AdminChangeAccessLevel implements IAdminCommandHandler
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(AdminChangeAccessLevel.class);
 	
 	/**
@@ -50,25 +45,10 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_changelvl.
-		 */
 		admin_changelvl,
-		/**
-		 * Field admin_moders.
-		 */
 		admin_moders,
-		/**
-		 * Field admin_moders_add.
-		 */
 		admin_moders_add,
-		/**
-		 * Field admin_moders_del.
-		 */
 		admin_moders_del,
-		/**
-		 * Field admin_penalty.
-		 */
 		admin_penalty
 	}
 	

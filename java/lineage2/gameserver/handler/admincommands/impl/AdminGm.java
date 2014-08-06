@@ -26,9 +26,6 @@ public class AdminGm implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_gm.
-		 */
 		admin_gm
 	}
 	

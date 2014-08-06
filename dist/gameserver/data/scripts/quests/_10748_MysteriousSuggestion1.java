@@ -24,7 +24,6 @@ public class _10748_MysteriousSuggestion1 extends Quest implements ScriptFile
 {
 	// NPC'S
 	private static final int MUSTERIOUS_BUTLER = 33685;
-	
 	// Item's
 	private static final int TOURNAMENT_REMNANTS_I = 35544;
 	private static final int MYSTERIOUS_MARK = 34900;

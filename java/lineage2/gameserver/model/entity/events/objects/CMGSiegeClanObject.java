@@ -16,7 +16,6 @@ import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.pledge.Clan;
-
 import org.napile.primitive.sets.IntSet;
 import org.napile.primitive.sets.impl.HashIntSet;
 
@@ -30,13 +29,7 @@ public class CMGSiegeClanObject extends SiegeClanObject
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _players.
-	 */
 	private final IntSet _players = new HashIntSet();
-	/**
-	 * Field _param.
-	 */
 	private long _param;
 	
 	/**

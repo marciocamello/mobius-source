@@ -24,29 +24,11 @@ import lineage2.gameserver.utils.Location;
  */
 public final class RandomWalkingAI extends DefaultAI
 {
-	/**
-	 * Field AI_WALK_RANGE.
-	 */
 	protected static final int AI_WALK_RANGE = Rnd.get(200, 700);
-	/**
-	 * Field Boy. (value is 33224)
-	 */
 	private static final int Boy = 33224;
-	/**
-	 * Field Girl. (value is 33217)
-	 */
 	private static final int Girl = 33217;
-	/**
-	 * Field Marsha. (value is 33109)
-	 */
 	private static final int Marsha = 33109;
-	/**
-	 * Field Rabbits. (value is 33203)
-	 */
 	private static final int Rabbits = 33203;
-	/**
-	 * Field Rabbits2. (value is 32971)
-	 */
 	private static final int Rabbits2 = 32971;
 	
 	/**

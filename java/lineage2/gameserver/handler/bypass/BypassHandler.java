@@ -18,9 +18,6 @@ package lineage2.gameserver.handler.bypass;
  */
 public class BypassHandler
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final BypassHandler _instance = new BypassHandler();
 	
 	/**

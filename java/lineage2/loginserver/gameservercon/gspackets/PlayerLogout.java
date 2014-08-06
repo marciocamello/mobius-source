@@ -21,9 +21,6 @@ import lineage2.loginserver.gameservercon.ReceivablePacket;
  */
 public class PlayerLogout extends ReceivablePacket
 {
-	/**
-	 * Field account.
-	 */
 	private String account;
 	
 	/**

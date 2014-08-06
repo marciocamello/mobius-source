@@ -15,7 +15,6 @@ package instances;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Future;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -33,21 +32,17 @@ import npc.model.PathfinderInstance;
 public final class KamalokaNightmare extends Reflection
 {
 	private static final int PATHFINDER = 32485;
-	
 	private static final int RANK_1_MIN_POINTS = 500;
 	private static final int RANK_2_MIN_POINTS = 2500;
 	private static final int RANK_3_MIN_POINTS = 4500;
 	private static final int RANK_4_MIN_POINTS = 5500;
 	private static final int RANK_5_MIN_POINTS = 7000;
 	private static final int RANK_6_MIN_POINTS = 9000;
-	
 	private final int _playerId;
 	private Future<?> _expireTask;
-	
 	private int killedKanabions = 0;
 	private int killedDoplers = 0;
 	private int killedVoiders = 0;
-	
 	int delay_after_spawn = 0;
 	boolean is_spawn_possible = true;
 	

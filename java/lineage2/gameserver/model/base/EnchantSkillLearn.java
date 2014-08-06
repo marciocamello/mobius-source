@@ -21,37 +21,13 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class EnchantSkillLearn
 {
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _level.
-	 */
 	private final int _level;
-	/**
-	 * Field _name.
-	 */
 	private final String _name;
-	/**
-	 * Field _type.
-	 */
 	private final String _type;
-	/**
-	 * Field _baseLvl.
-	 */
 	private final int _baseLvl;
-	/**
-	 * Field _maxLvl.
-	 */
 	private final int _maxLvl;
-	/**
-	 * Field _minSkillLevel.
-	 */
 	private final int _minSkillLevel;
-	/**
-	 * Field _costMul.
-	 */
 	private final int _costMul;
 	
 	/**
@@ -139,9 +115,6 @@ public final class EnchantSkillLearn
 		return SkillTable.getInstance().getInfo(_id, 1).isOffensive() ? _priceCombat[_level % 100] : _priceBuff[_level % 100];
 	}
 	
-	/**
-	 * Field _chance.
-	 */
 	private static final int[][] _chance =
 	{
 		{},
@@ -506,9 +479,6 @@ public final class EnchantSkillLearn
 			24
 		},
 	};
-	/**
-	 * Field _chance15.
-	 */
 	private static final int[][] _chance15 =
 	{
 		{},
@@ -693,9 +663,6 @@ public final class EnchantSkillLearn
 			54
 		},
 	};
-	/**
-	 * Field _chance10.
-	 */
 	private static final int[][] _chance10 =
 	{
 		{},
@@ -870,9 +837,6 @@ public final class EnchantSkillLearn
 			54
 		},
 	};
-	/**
-	 * Field _priceBuff.
-	 */
 	private static final int[][] _priceBuff =
 	{
 		{},
@@ -997,9 +961,6 @@ public final class EnchantSkillLearn
 			566426
 		},
 	};
-	/**
-	 * Field _priceCombat.
-	 */
 	private static final int[][] _priceCombat =
 	{
 		{},

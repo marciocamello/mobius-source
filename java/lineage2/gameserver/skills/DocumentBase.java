@@ -18,9 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
-
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.skills.effects.EffectTemplate;
 import lineage2.gameserver.stats.StatTemplate;
@@ -84,7 +82,6 @@ import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.ArmorTemplate.ArmorType;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
 import lineage2.gameserver.utils.PositionUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -97,17 +94,8 @@ import org.w3c.dom.Node;
  */
 abstract class DocumentBase
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(DocumentBase.class);
-	/**
-	 * Field file.
-	 */
 	private final File file;
-	/**
-	 * Field tables.
-	 */
 	protected Map<String, Object[]> tables;
 	
 	/**

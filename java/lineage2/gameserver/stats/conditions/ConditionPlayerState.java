@@ -26,39 +26,15 @@ public class ConditionPlayerState extends Condition
 	 */
 	public enum CheckPlayerState
 	{
-		/**
-		 * Field RESTING.
-		 */
 		RESTING,
-		/**
-		 * Field MOVING.
-		 */
 		MOVING,
-		/**
-		 * Field RUNNING.
-		 */
 		RUNNING,
-		/**
-		 * Field STANDING.
-		 */
 		STANDING,
-		/**
-		 * Field FLYING.
-		 */
 		FLYING,
-		/**
-		 * Field FLYING_TRANSFORM.
-		 */
 		FLYING_TRANSFORM
 	}
 	
-	/**
-	 * Field _check.
-	 */
 	private final CheckPlayerState _check;
-	/**
-	 * Field _required.
-	 */
 	private final boolean _required;
 	
 	/**

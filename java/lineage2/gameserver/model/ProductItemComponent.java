@@ -21,21 +21,9 @@ import lineage2.gameserver.templates.item.ItemTemplate;
  */
 public class ProductItemComponent
 {
-	/**
-	 * Field _itemId.
-	 */
 	private final int _itemId;
-	/**
-	 * Field _count.
-	 */
 	private final int _count;
-	/**
-	 * Field _weight.
-	 */
 	private final int _weight;
-	/**
-	 * Field _dropable.
-	 */
 	private final boolean _dropable;
 	
 	/**

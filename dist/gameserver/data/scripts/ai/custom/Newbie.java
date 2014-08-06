@@ -26,9 +26,6 @@ import services.SupportMagic;
  */
 public final class Newbie extends DefaultAI
 {
-	/**
-	 * Field lastebuff.
-	 */
 	private long lastebuff = 0;
 	
 	/**

@@ -14,7 +14,6 @@ package instances;
 
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.ai.CtrlEvent;
@@ -53,14 +52,11 @@ public final class HarnakUndergroundRuins extends Reflection
 	private static final String THIRD_ROOM_SEALS = "4_group_seal";
 	private static final String THIRD_ROOM_MINIONS = "4_group_minion";
 	private static final String HERMUNKUS_GROUP = "hermunkus";
-	
 	private boolean introShowed = false;
 	private volatile int first_room_mobs_count = 8;
 	private int secondRoomGroup = 0;
 	int classId = -1;
-	
 	private ScheduledFuture<?> failTask;
-	
 	private final int state;
 	
 	public HarnakUndergroundRuins(int state)

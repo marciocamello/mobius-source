@@ -24,9 +24,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class GhostOfVonHellmannsPage extends DefaultAI
 {
-	/**
-	 * Field points.
-	 */
 	static final Location[] points =
 	{
 		new Location(51462, -54539, -3176),
@@ -37,26 +34,14 @@ public final class GhostOfVonHellmannsPage extends DefaultAI
 		new Location(52237, -51483, -3112),
 		new Location(52024, -51262, -3096)
 	};
-	/**
-	 * Field NPCtext.
-	 */
 	static final String[] NPCtext = new String[]
 	{
 		"Follow me...",
 		"This where that here...",
 		"I want to speak to you..."
 	};
-	/**
-	 * Field current_point.
-	 */
 	private int current_point = -1;
-	/**
-	 * Field wait_timeout.
-	 */
 	private long wait_timeout = 0;
-	/**
-	 * Field wait.
-	 */
 	private boolean wait = false;
 	
 	/**

@@ -27,9 +27,6 @@ import lineage2.gameserver.stats.funcs.FuncMul;
  */
 public class ResidenceEnterLeaveListenerImpl implements OnZoneEnterLeaveListener
 {
-	/**
-	 * Field STATIC.
-	 */
 	public static final OnZoneEnterLeaveListener STATIC = new ResidenceEnterLeaveListenerImpl();
 	
 	/**

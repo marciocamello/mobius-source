@@ -26,13 +26,7 @@ public class StaticObjectObject implements SpawnableObject
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _uid.
-	 */
 	private final int _uid;
-	/**
-	 * Field _instance.
-	 */
 	private StaticObjectInstance _instance;
 	
 	/**

@@ -22,9 +22,6 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class NevitVoice extends SimpleItemHandler
 {
-	/**
-	 * Field ITEM_IDS.
-	 */
 	private static final int[] ITEM_IDS = new int[]
 	{
 		17094

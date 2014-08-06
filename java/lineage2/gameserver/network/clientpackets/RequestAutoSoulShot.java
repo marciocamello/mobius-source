@@ -24,13 +24,7 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
  */
 public class RequestAutoSoulShot extends L2GameClientPacket
 {
-	/**
-	 * Field _itemId.
-	 */
 	private int _itemId;
-	/**
-	 * Field _type.
-	 */
 	private boolean _type;
 	
 	/**

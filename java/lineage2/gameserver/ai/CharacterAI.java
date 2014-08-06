@@ -13,7 +13,6 @@
 package lineage2.gameserver.ai;
 
 import java.util.List;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.ai.PlayableAI.nextAction;
@@ -486,17 +485,8 @@ public class CharacterAI extends AbstractAI
 	 */
 	protected class Timer extends RunnableImpl
 	{
-		/**
-		 * Field _timerId.
-		 */
 		private final int _timerId;
-		/**
-		 * Field _arg1.
-		 */
 		private final Object _arg1;
-		/**
-		 * Field _arg2.
-		 */
 		private final Object _arg2;
 		
 		/**

@@ -38,21 +38,9 @@ public final class InfiltrationOfficer extends Guard implements OnAttackListener
 	 */
 	public enum State
 	{
-		/**
-		 * Field AI_IDLE.
-		 */
 		AI_IDLE(0),
-		/**
-		 * Field AI_FOLLOW.
-		 */
 		AI_FOLLOW(1),
-		/**
-		 * Field AI_ATTACK_GENERATOR.
-		 */
 		AI_ATTACK_GENERATOR(2),
-		/**
-		 * Field AI_NEXT_STEP.
-		 */
 		AI_NEXT_STEP(3);
 		/**
 		 * Constructor for State.
@@ -63,13 +51,7 @@ public final class InfiltrationOfficer extends Guard implements OnAttackListener
 		}
 	}
 	
-	/**
-	 * Field GENERATOR. (value is 33216)
-	 */
 	private final static int GENERATOR = 33216;
-	/**
-	 * Field POINTS.
-	 */
 	private final static int[][] POINTS =
 	{
 		{
@@ -88,33 +70,12 @@ public final class InfiltrationOfficer extends Guard implements OnAttackListener
 			-8617
 		},
 	};
-	/**
-	 * Field configured.
-	 */
 	private boolean configured = false;
-	/**
-	 * Field _step.
-	 */
 	private short _step = 0;
-	/**
-	 * Field _state.
-	 */
 	private State _state = State.AI_IDLE;
-	/**
-	 * Field lastFollowPlayer.
-	 */
 	private long lastFollowPlayer = 0;
-	/**
-	 * Field attacksGenerator.
-	 */
 	private boolean attacksGenerator = false;
-	/**
-	 * Field lastOfficerSay.
-	 */
 	private long lastOfficerSay = 0;
-	/**
-	 * Field player.
-	 */
 	private Player player = null;
 	
 	/**

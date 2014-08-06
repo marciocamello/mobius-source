@@ -25,17 +25,8 @@ import lineage2.gameserver.utils.Location;
  */
 public class MoveBackwardToLocation extends L2GameClientPacket
 {
-	/**
-	 * Field _targetLoc.
-	 */
 	private final Location _targetLoc = new Location();
-	/**
-	 * Field _originLoc.
-	 */
 	private final Location _originLoc = new Location();
-	/**
-	 * Field _moveMovement.
-	 */
 	private int _moveMovement;
 	
 	/**

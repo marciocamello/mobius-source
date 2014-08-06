@@ -26,9 +26,6 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public final class RunnableStatsManager
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final RunnableStatsManager _instance = new RunnableStatsManager();
 	
 	/**
@@ -40,13 +37,7 @@ public final class RunnableStatsManager
 		return _instance;
 	}
 	
-	/**
-	 * Field classStats.
-	 */
 	final Map<Class<?>, ClassStat> classStats = new HashMap<>();
-	/**
-	 * Field lock.
-	 */
 	private final Lock lock = new ReentrantLock();
 	
 	/**
@@ -54,25 +45,10 @@ public final class RunnableStatsManager
 	 */
 	private class ClassStat
 	{
-		/**
-		 * Field clazz.
-		 */
 		final Class<?> clazz;
-		/**
-		 * Field runCount.
-		 */
 		long runCount = 0;
-		/**
-		 * Field runTime.
-		 */
 		long runTime = 0;
-		/**
-		 * Field minTime.
-		 */
 		long minTime = Long.MAX_VALUE;
-		/**
-		 * Field maxTime.
-		 */
 		long maxTime = Long.MIN_VALUE;
 		
 		/**
@@ -145,12 +121,10 @@ public final class RunnableStatsManager
 			{
 				return 1;
 			}
-			
 			if (c1.maxTime == c2.maxTime)
 			{
 				return 0;
 			}
-			
 			return -1;
 		});
 		return result;

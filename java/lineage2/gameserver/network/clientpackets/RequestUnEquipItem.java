@@ -24,9 +24,6 @@ import lineage2.gameserver.templates.item.ItemTemplate;
 @Deprecated
 public class RequestUnEquipItem extends L2GameClientPacket
 {
-	/**
-	 * Field _slot.
-	 */
 	private int _slot;
 	
 	/**

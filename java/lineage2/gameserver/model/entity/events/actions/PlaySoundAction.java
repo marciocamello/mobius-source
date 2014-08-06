@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.entity.events.actions;
 
 import java.util.List;
-
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.EventAction;
@@ -26,17 +25,8 @@ import lineage2.gameserver.network.serverpackets.PlaySound;
  */
 public class PlaySoundAction implements EventAction
 {
-	/**
-	 * Field _range.
-	 */
 	private final int _range;
-	/**
-	 * Field _sound.
-	 */
 	private final String _sound;
-	/**
-	 * Field _type.
-	 */
 	private final PlaySound.Type _type;
 	
 	/**

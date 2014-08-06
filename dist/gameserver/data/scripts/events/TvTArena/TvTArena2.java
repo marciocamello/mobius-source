@@ -15,7 +15,6 @@ package events.TvTArena;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -34,7 +33,6 @@ import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,9 +42,6 @@ import org.slf4j.LoggerFactory;
  */
 public final class TvTArena2 extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(TvTArena2.class);
 	
 	/**
@@ -121,9 +116,6 @@ public final class TvTArena2 extends Functions implements ScriptFile, OnDeathLis
 		}
 	}
 	
-	/**
-	 * Field _instance.
-	 */
 	private static TvTTemplate _instance;
 	
 	/**
@@ -316,9 +308,6 @@ public final class TvTArena2 extends Functions implements ScriptFile, OnDeathLis
 		getInstance().template_timeOut();
 	}
 	
-	/**
-	 * Field _spawns.
-	 */
 	private final List<NpcInstance> _spawns = new ArrayList<>();
 	
 	/**

@@ -29,9 +29,6 @@ public final class BatracosInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field urogosIzId. (value is 505)
-	 */
 	private static final int urogosIzId = 505;
 	
 	/**

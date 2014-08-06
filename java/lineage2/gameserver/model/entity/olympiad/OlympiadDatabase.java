@@ -21,7 +21,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
@@ -31,7 +30,6 @@ import lineage2.gameserver.instancemanager.ServerVariables;
 import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.StatsSet;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,9 +39,6 @@ import org.slf4j.LoggerFactory;
  */
 public class OlympiadDatabase
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(OlympiadDatabase.class);
 	
 	/**

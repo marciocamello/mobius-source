@@ -24,13 +24,7 @@ import lineage2.gameserver.model.petition.PetitionSubGroup;
  */
 public final class RequestPetition extends L2GameClientPacket
 {
-	/**
-	 * Field _content.
-	 */
 	private String _content;
-	/**
-	 * Field _type.
-	 */
 	private int _type;
 	
 	/**

@@ -24,25 +24,10 @@ import lineage2.loginserver.gameservercon.lspackets.PlayerAuthResponse;
  */
 public class PlayerAuthRequest extends ReceivablePacket
 {
-	/**
-	 * Field account.
-	 */
 	private String account;
-	/**
-	 * Field playOkId1.
-	 */
 	private int playOkId1;
-	/**
-	 * Field playOkId2.
-	 */
 	private int playOkId2;
-	/**
-	 * Field loginOkId1.
-	 */
 	private int loginOkId1;
-	/**
-	 * Field loginOkId2.
-	 */
 	private int loginOkId2;
 	
 	/**

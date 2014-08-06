@@ -20,7 +20,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Calendar;
 import java.util.StringTokenizer;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
@@ -35,37 +34,13 @@ import lineage2.gameserver.utils.Log;
  */
 public class MMOTopManager
 {
-	/**
-	 * Field SELECT_PLAYER_OBJID. (value is ""SELECT obj_Id FROM characters WHERE char_name=?"")
-	 */
 	private static final String SELECT_PLAYER_OBJID = "SELECT obj_Id FROM characters WHERE char_name=?";
-	/**
-	 * Field SELECT_CHARACTER_MMOTOP_DATA. (value is ""SELECT * FROM character_mmotop_votes WHERE id=? AND date=? AND multipler=?"")
-	 */
 	private static final String SELECT_CHARACTER_MMOTOP_DATA = "SELECT * FROM character_mmotop_votes WHERE id=? AND date=? AND multipler=?";
-	/**
-	 * Field INSERT_MMOTOP_DATA. (value is ""INSERT INTO character_mmotop_votes (date, id, nick, multipler) values (?,?,?,?)"")
-	 */
 	private static final String INSERT_MMOTOP_DATA = "INSERT INTO character_mmotop_votes (date, id, nick, multipler) values (?,?,?,?)";
-	/**
-	 * Field DELETE_MMOTOP_DATA. (value is ""DELETE FROM character_mmotop_votes WHERE date<?"")
-	 */
 	private static final String DELETE_MMOTOP_DATA = "DELETE FROM character_mmotop_votes WHERE date<?";
-	/**
-	 * Field SELECT_MULTIPLER_MMOTOP_DATA. (value is ""SELECT multipler FROM character_mmotop_votes WHERE id=? AND has_reward=0"")
-	 */
 	private static final String SELECT_MULTIPLER_MMOTOP_DATA = "SELECT multipler FROM character_mmotop_votes WHERE id=? AND has_reward=0";
-	/**
-	 * Field UPDATE_MMOTOP_DATA. (value is ""UPDATE character_mmotop_votes SET has_reward=1 WHERE id=?"")
-	 */
 	private static final String UPDATE_MMOTOP_DATA = "UPDATE character_mmotop_votes SET has_reward=1 WHERE id=?";
-	/**
-	 * Field reader.
-	 */
 	BufferedReader reader;
-	/**
-	 * Field _instance.
-	 */
 	private static MMOTopManager _instance;
 	
 	/**

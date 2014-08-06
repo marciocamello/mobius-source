@@ -13,7 +13,6 @@
 package npc.model;
 
 import java.util.concurrent.Future;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Creature;
@@ -35,13 +34,7 @@ public final class SepulcherRaidInstance extends RaidBossInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field mysteriousBoxId.
-	 */
 	public int mysteriousBoxId = 0;
-	/**
-	 * Field _onDeadEventTask.
-	 */
 	private Future<?> _onDeadEventTask = null;
 	
 	/**
@@ -149,9 +142,6 @@ public final class SepulcherRaidInstance extends RaidBossInstance
 	 */
 	private class OnDeadEvent extends RunnableImpl
 	{
-		/**
-		 * Field _activeChar.
-		 */
 		SepulcherRaidInstance _activeChar;
 		
 		/**

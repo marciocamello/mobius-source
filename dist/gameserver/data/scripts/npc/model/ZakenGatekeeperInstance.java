@@ -31,17 +31,8 @@ public final class ZakenGatekeeperInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field nightZakenIzId. (value is 114)
-	 */
 	private static final int nightZakenIzId = 114;
-	/**
-	 * Field dayZakenIzId. (value is 133)
-	 */
 	private static final int dayZakenIzId = 133;
-	/**
-	 * Field ultraZakenIzId. (value is 135)
-	 */
 	private static final int ultraZakenIzId = 135;
 	
 	/**

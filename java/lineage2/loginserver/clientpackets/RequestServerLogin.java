@@ -26,17 +26,8 @@ import lineage2.loginserver.serverpackets.PlayOk;
  */
 public class RequestServerLogin extends L2LoginClientPacket
 {
-	/**
-	 * Field _loginOkID1.
-	 */
 	private int _loginOkID1;
-	/**
-	 * Field _loginOkID2.
-	 */
 	private int _loginOkID2;
-	/**
-	 * Field _serverId.
-	 */
 	private int _serverId;
 	
 	/**

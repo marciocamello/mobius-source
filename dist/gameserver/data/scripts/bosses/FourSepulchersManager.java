@@ -17,7 +17,6 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -35,10 +34,8 @@ import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
 import npc.model.SepulcherNpcInstance;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import bosses.FourSepulchersSpawn.GateKeeper;
 
 /**
@@ -47,81 +44,24 @@ import bosses.FourSepulchersSpawn.GateKeeper;
  */
 public final class FourSepulchersManager extends Functions implements ScriptFile, OnDeathListener
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(FourSepulchersManager.class);
-	/**
-	 * Field QUEST_ID. (value is ""_620_FourGoblets"")
-	 */
 	public static final String QUEST_ID = "_620_FourGoblets";
-	/**
-	 * Field _zone.
-	 */
 	private static final Zone[] _zone = new Zone[4];
-	/**
-	 * Field ENTRANCE_PASS. (value is 7075)
-	 */
 	private static final int ENTRANCE_PASS = 7075;
-	/**
-	 * Field USED_PASS. (value is 7261)
-	 */
 	private static final int USED_PASS = 7261;
-	/**
-	 * Field CHAPEL_KEY. (value is 7260)
-	 */
 	private static final int CHAPEL_KEY = 7260;
-	/**
-	 * Field ANTIQUE_BROOCH. (value is 7262)
-	 */
 	private static final int ANTIQUE_BROOCH = 7262;
-	/**
-	 * Field _inEntryTime.
-	 */
 	static boolean _inEntryTime = false;
-	/**
-	 * Field _inAttackTime.
-	 */
 	static boolean _inAttackTime = false;
-	/**
-	 * Field _changeCoolDownTimeTask.
-	 */
 	static ScheduledFuture<?> _changeCoolDownTimeTask = null;
-	/**
-	 * Field _changeEntryTimeTask.
-	 */
 	static ScheduledFuture<?> _changeEntryTimeTask = null;
-	/**
-	 * Field _changeWarmUpTimeTask.
-	 */
 	static ScheduledFuture<?> _changeWarmUpTimeTask = null;
-	/**
-	 * Field _changeAttackTimeTask.
-	 */
 	static ScheduledFuture<?> _changeAttackTimeTask = null;
-	/**
-	 * Field _coolDownTimeEnd.
-	 */
 	private static long _coolDownTimeEnd = 0;
-	/**
-	 * Field _entryTimeEnd.
-	 */
 	static long _entryTimeEnd = 0;
-	/**
-	 * Field _warmUpTimeEnd.
-	 */
 	static long _warmUpTimeEnd = 0;
-	/**
-	 * Field _attackTimeEnd.
-	 */
 	static long _attackTimeEnd = 0;
-	/**
-	 * Field _newCycleMin.
-	 */
 	static final int _newCycleMin = 55;
-	/**
-	 * Field _firstTimeRun.
-	 */
 	static boolean _firstTimeRun;
 	
 	/**

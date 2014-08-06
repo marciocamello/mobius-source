@@ -28,7 +28,6 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArrayList;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,80 +43,25 @@ import org.slf4j.LoggerFactory;
 })
 public class SelectorThread<T extends MMOClient> extends Thread
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(SelectorThread.class);
-	
-	/**
-	 * Field _selector.
-	 */
 	private final Selector _selector = Selector.open();
-	
 	// Implementations
-	/**
-	 * Field _packetHandler.
-	 */
 	private final IPacketHandler<T> _packetHandler;
-	/**
-	 * Field _executor.
-	 */
 	private final IMMOExecutor<T> _executor;
-	/**
-	 * Field _clientFactory.
-	 */
 	private final IClientFactory<T> _clientFactory;
-	/**
-	 * Field _acceptFilter.
-	 */
 	private IAcceptFilter _acceptFilter;
-	
-	/**
-	 * Field _shutdown.
-	 */
 	private boolean _shutdown;
-	
 	// Configs
-	/**
-	 * Field _sc.
-	 */
 	private final SelectorConfig _sc;
-	/**
-	 * Field HELPER_BUFFER_SIZE.
-	 */
 	private final int HELPER_BUFFER_SIZE;
-	
 	// MAIN BUFFERS
-	/**
-	 * Field DIRECT_WRITE_BUFFER.
-	 */
 	private final ByteBuffer DIRECT_WRITE_BUFFER;
-	/**
-	 * Field READ_BUFFER. Field WRITE_BUFFER.
-	 */
 	private final ByteBuffer WRITE_BUFFER, READ_BUFFER;
-	/**
-	 * Field WRITE_CLIENT.
-	 */
 	private T WRITE_CLIENT;
-	
 	// ByteBuffers General Purpose Pool
-	/**
-	 * Field _bufferPool.
-	 */
 	private final Queue<ByteBuffer> _bufferPool;
-	/**
-	 * Field _connections.
-	 */
 	private final List<MMOConnection<T>> _connections;
-	
-	/**
-	 * Field ALL_SELECTORS.
-	 */
 	private static final List<SelectorThread> ALL_SELECTORS = new ArrayList<>();
-	/**
-	 * Field stats.
-	 */
 	private static final SelectorStats stats = new SelectorStats();
 	
 	/**
@@ -135,16 +79,13 @@ public class SelectorThread<T extends MMOClient> extends Thread
 		{
 			ALL_SELECTORS.add(this);
 		}
-		
 		_sc = sc;
 		_acceptFilter = acceptFilter;
 		_packetHandler = packetHandler;
 		_clientFactory = clientFactory;
 		_executor = executor;
-		
 		_bufferPool = new ArrayDeque<>(_sc.HELPER_BUFFER_COUNT);
 		_connections = new CopyOnWriteArrayList<>();
-		
 		DIRECT_WRITE_BUFFER = ByteBuffer.wrap(new byte[_sc.WRITE_BUFFER_SIZE]).order(_sc.BYTE_ORDER);
 		WRITE_BUFFER = ByteBuffer.wrap(new byte[_sc.WRITE_BUFFER_SIZE]).order(_sc.BYTE_ORDER);
 		READ_BUFFER = ByteBuffer.wrap(new byte[_sc.READ_BUFFER_SIZE]).order(_sc.BYTE_ORDER);
@@ -166,7 +107,6 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	{
 		ServerSocketChannel selectable = ServerSocketChannel.open();
 		selectable.configureBlocking(false);
-		
 		selectable.socket().bind(address == null ? new InetSocketAddress(tcpPort) : new InetSocketAddress(address, tcpPort));
 		selectable.register(getSelector(), selectable.validOps());
 		setName("SelectorThread:" + selectable.socket().getLocalPort());
@@ -438,9 +378,9 @@ public class SelectorThread<T extends MMOClient> extends Thread
 			{
 				buf.flip();
 				stats.increaseIncomingBytes(result);
-				
 				@SuppressWarnings("unused")
 				int i;
+				
 				for (i = 0; this.tryReadPacket2(key, con, buf); i++)
 				{
 				}
@@ -830,9 +770,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 				con.getClient().setConnection(null);
 				con.getSelectionKey().attach(null);
 				con.getSelectionKey().cancel();
-				
 				_connections.remove(con);
-				
 				stats.decreseOpenedConnections();
 			}
 		}

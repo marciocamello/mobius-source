@@ -16,7 +16,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.StringTokenizer;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
@@ -29,7 +28,6 @@ import lineage2.gameserver.network.serverpackets.ShowBoard;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.BbsUtil;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,9 +37,6 @@ import org.slf4j.LoggerFactory;
  */
 public final class ManageTeleport extends Functions implements ScriptFile, ICommunityBoardHandler
 {
-	/**
-	 * Field _log.
-	 */
 	static final Logger _log = LoggerFactory.getLogger(ManageTeleport.class);
 	
 	/**

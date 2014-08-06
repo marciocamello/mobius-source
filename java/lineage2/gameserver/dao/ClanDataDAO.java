@@ -15,7 +15,6 @@ package lineage2.gameserver.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.entity.residence.Castle;
@@ -24,7 +23,6 @@ import lineage2.gameserver.model.entity.residence.Fortress;
 import lineage2.gameserver.model.entity.residence.Residence;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.tables.ClanTable;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,25 +32,10 @@ import org.slf4j.LoggerFactory;
  */
 public class ClanDataDAO
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(ClanDataDAO.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final ClanDataDAO _instance = new ClanDataDAO();
-	/**
-	 * Field SELECT_CASTLE_OWNER. (value is ""SELECT clan_id FROM clan_data WHERE hasCastle = ? LIMIT 1"")
-	 */
 	public static final String SELECT_CASTLE_OWNER = "SELECT clan_id FROM clan_data WHERE hasCastle = ? LIMIT 1";
-	/**
-	 * Field SELECT_FORTRESS_OWNER. (value is ""SELECT clan_id FROM clan_data WHERE hasFortress = ? LIMIT 1"")
-	 */
 	public static final String SELECT_FORTRESS_OWNER = "SELECT clan_id FROM clan_data WHERE hasFortress = ? LIMIT 1";
-	/**
-	 * Field SELECT_CLANHALL_OWNER. (value is ""SELECT clan_id FROM clan_data WHERE hasHideout = ? LIMIT 1"")
-	 */
 	public static final String SELECT_CLANHALL_OWNER = "SELECT clan_id FROM clan_data WHERE hasHideout = ? LIMIT 1";
 	
 	/**

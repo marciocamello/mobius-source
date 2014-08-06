@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
@@ -51,7 +50,6 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.ReflectionUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -61,9 +59,6 @@ import org.slf4j.LoggerFactory;
  */
 public final class LastHero extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(LastHero.class);
 	
 	/**
@@ -111,61 +106,19 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
-	/**
-	 * Field _startTask.
-	 */
 	private static ScheduledFuture<?> _startTask;
-	/**
-	 * Field players_list.
-	 */
 	private static List<Long> players_list = new CopyOnWriteArrayList<>();
-	/**
-	 * Field live_list.
-	 */
 	static List<Long> live_list = new CopyOnWriteArrayList<>();
-	/**
-	 * Field _isRegistrationActive.
-	 */
 	private static boolean _isRegistrationActive = false;
-	/**
-	 * Field _status.
-	 */
 	static int _status = 0;
-	/**
-	 * Field _time_to_start.
-	 */
 	private static int _time_to_start;
-	/**
-	 * Field _category.
-	 */
 	private static int _category;
-	/**
-	 * Field _minLevel.
-	 */
 	private static int _minLevel;
-	/**
-	 * Field _maxLevel.
-	 */
 	private static int _maxLevel;
-	/**
-	 * Field _autoContinue.
-	 */
 	private static int _autoContinue = 0;
-	/**
-	 * Field _endTask.
-	 */
 	private static ScheduledFuture<?> _endTask;
-	/**
-	 * Field _zone.
-	 */
 	private static final Zone _zone = ReflectionUtils.getZone("[colosseum_battle]");
-	/**
-	 * Field _zoneListener.
-	 */
 	private static final ZoneListener _zoneListener = new ZoneListener();
-	/**
-	 * Field _enter.
-	 */
 	private static final Location _enter = new Location(149505, 46719, -3417);
 	
 	/**
@@ -208,9 +161,6 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		onReload();
 	}
 	
-	/**
-	 * Field _active.
-	 */
 	static boolean _active = false;
 	
 	/**
@@ -1076,13 +1026,7 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 	 */
 	private static class TeleportTask extends RunnableImpl
 	{
-		/**
-		 * Field loc.
-		 */
 		Location loc;
-		/**
-		 * Field target.
-		 */
 		Creature target;
 		
 		/**

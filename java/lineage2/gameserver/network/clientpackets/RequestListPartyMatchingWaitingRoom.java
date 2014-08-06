@@ -21,9 +21,6 @@ import lineage2.gameserver.network.serverpackets.ExListPartyMatchingWaitingRoom;
  */
 public class RequestListPartyMatchingWaitingRoom extends L2GameClientPacket
 {
-	/**
-	 * Field _classes. Field _page. Field _maxLevel. Field _minLevel.
-	 */
 	private int _minLevel, _maxLevel, _page, _classes[];
 	
 	/**

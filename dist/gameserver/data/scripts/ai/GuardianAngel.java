@@ -24,9 +24,6 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class GuardianAngel extends DefaultAI
 {
-	/**
-	 * Field flood.
-	 */
 	static final String[] flood =
 	{
 		"Waaaah! Step back from the confounded box! I will take it myself!",

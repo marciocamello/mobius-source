@@ -14,13 +14,11 @@ package lineage2.gameserver.model;
 
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
-
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.cache.Msg;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,13 +28,7 @@ import org.slf4j.LoggerFactory;
  */
 public class Request extends MultiValueSet<String>
 {
-	/**
-	 * Field serialVersionUID. (value is 1)
-	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(Request.class);
 	
@@ -45,103 +37,31 @@ public class Request extends MultiValueSet<String>
 	 */
 	public static enum L2RequestType
 	{
-		/**
-		 * Field CUSTOM.
-		 */
 		CUSTOM,
-		/**
-		 * Field PARTY.
-		 */
 		PARTY,
-		/**
-		 * Field PARTY_ROOM.
-		 */
 		PARTY_ROOM,
-		/**
-		 * Field CLAN.
-		 */
 		CLAN,
-		/**
-		 * Field ALLY.
-		 */
 		ALLY,
-		/**
-		 * Field TRADE.
-		 */
 		TRADE,
-		/**
-		 * Field TRADE_REQUEST.
-		 */
 		TRADE_REQUEST,
-		/**
-		 * Field FRIEND.
-		 */
 		FRIEND,
-		/**
-		 * Field CHANNEL.
-		 */
 		CHANNEL,
-		/**
-		 * Field DUEL.
-		 */
 		DUEL,
-		/**
-		 * Field COUPLE_ACTION.
-		 */
 		COUPLE_ACTION,
-		/**
-		 * Field MENTEE.
-		 */
 		MENTEE,
-		/**
-		 * Field SUBSTITUTE.
-		 */
 		SUBSTITUTE
 	}
 	
-	/**
-	 * Field _nextId.
-	 */
 	private final static AtomicInteger _nextId = new AtomicInteger();
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _type.
-	 */
 	private final L2RequestType _type;
-	/**
-	 * Field _requestor.
-	 */
 	private final HardReference<Player> _requestor;
-	/**
-	 * Field _reciever.
-	 */
 	private final HardReference<Player> _receiver;
-	/**
-	 * Field _isRequestorConfirmed.
-	 */
 	private boolean _isRequestorConfirmed;
-	/**
-	 * Field _isRecieverConfirmed.
-	 */
 	private boolean _isRecieverConfirmed;
-	/**
-	 * Field _isCancelled.
-	 */
 	private boolean _isCancelled;
-	/**
-	 * Field _isDone.
-	 */
 	private boolean _isDone;
-	/**
-	 * Field _timeout.
-	 */
 	private long _timeout;
-	/**
-	 * Field _timeoutTask.
-	 */
 	private Future<?> _timeoutTask;
 	
 	/**

@@ -25,9 +25,6 @@ import lineage2.gameserver.utils.NpcUtils;
  */
 public final class Fireplace extends DefaultAI
 {
-	/**
-	 * Field delay.
-	 */
 	private static final long delay = 5 * 60 * 1000L;
 	
 	/**
@@ -90,9 +87,6 @@ public final class Fireplace extends DefaultAI
 	 */
 	static public final class DeleteCauldron extends RunnableImpl
 	{
-		/**
-		 * Field _npc.
-		 */
 		NpcInstance _npc;
 		
 		/**

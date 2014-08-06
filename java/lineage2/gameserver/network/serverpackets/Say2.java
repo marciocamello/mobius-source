@@ -22,7 +22,6 @@ public class Say2 extends NpcStringContainer
 	private final ChatType _type;
 	private SysString _sysString;
 	private SystemMsg _systemMsg;
-	
 	private final int _objectId;
 	private String _charName;
 	

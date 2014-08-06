@@ -20,9 +20,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionPlayerOlympiad extends Condition
 {
-	/**
-	 * Field _value.
-	 */
 	private final boolean _value;
 	
 	/**

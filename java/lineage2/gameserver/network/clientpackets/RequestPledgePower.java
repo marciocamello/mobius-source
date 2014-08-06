@@ -22,17 +22,8 @@ import lineage2.gameserver.network.serverpackets.ManagePledgePower;
  */
 public class RequestPledgePower extends L2GameClientPacket
 {
-	/**
-	 * Field _rank.
-	 */
 	private int _rank;
-	/**
-	 * Field _action.
-	 */
 	private int _action;
-	/**
-	 * Field _privs.
-	 */
 	private int _privs;
 	
 	/**

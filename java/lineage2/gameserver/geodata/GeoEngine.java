@@ -29,14 +29,12 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import lineage2.commons.geometry.Shape;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.geodata.GeoOptimizer.BlockLink;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.utils.Location;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -46,41 +44,14 @@ import org.slf4j.LoggerFactory;
  */
 public class GeoEngine
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(GeoEngine.class);
-	/**
-	 * Field NSWE_NONE. (value is 0) Field NSWE_ALL. (value is 15) Field NORTH. (value is 8) Field SOUTH. (value is 4) Field WEST. (value is 2) Field EAST. (value is 1)
-	 */
 	public static final byte EAST = 1, WEST = 2, SOUTH = 4, NORTH = 8, NSWE_ALL = 15, NSWE_NONE = 0;
-	/**
-	 * Field BLOCKTYPE_FLAT. (value is 0)
-	 */
 	public static final byte BLOCKTYPE_FLAT = 0;
-	/**
-	 * Field BLOCKTYPE_COMPLEX. (value is 1)
-	 */
 	public static final byte BLOCKTYPE_COMPLEX = 1;
-	/**
-	 * Field BLOCKTYPE_MULTILEVEL. (value is 2)
-	 */
 	public static final byte BLOCKTYPE_MULTILEVEL = 2;
-	/**
-	 * Field BLOCKS_IN_MAP.
-	 */
 	public static final int BLOCKS_IN_MAP = 256 * 256;
-	/**
-	 * Field MAX_LAYERS.
-	 */
 	public static int MAX_LAYERS = 1;
-	/**
-	 * Field rawgeo.
-	 */
 	private static final MappedByteBuffer[][] rawgeo = new MappedByteBuffer[World.WORLD_SIZE_X][World.WORLD_SIZE_Y];
-	/**
-	 * Field geodata.
-	 */
 	private static final byte[][][][][] geodata = new byte[World.WORLD_SIZE_X][World.WORLD_SIZE_Y][1][][];
 	
 	/**

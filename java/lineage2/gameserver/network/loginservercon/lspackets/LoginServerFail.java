@@ -14,7 +14,6 @@ package lineage2.gameserver.network.loginservercon.lspackets;
 
 import lineage2.gameserver.network.loginservercon.LoginServerCommunication;
 import lineage2.gameserver.network.loginservercon.ReceivablePacket;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,13 +23,7 @@ import org.slf4j.LoggerFactory;
  */
 public class LoginServerFail extends ReceivablePacket
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(LoginServerFail.class);
-	/**
-	 * Field reasons.
-	 */
 	private static final String[] reasons =
 	{
 		"none",
@@ -42,9 +35,6 @@ public class LoginServerFail extends ReceivablePacket
 		"not authed",
 		"already logged in"
 	};
-	/**
-	 * Field _reason.
-	 */
 	private int _reason;
 	
 	/**

@@ -34,7 +34,6 @@ public final class SiegeSiege implements ScriptFile
 	ResidenceSide _side;
 	
 	// private static Castle castle
-	
 	@Override
 	public void onLoad()
 	{

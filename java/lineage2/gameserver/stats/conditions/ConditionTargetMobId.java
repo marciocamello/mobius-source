@@ -20,9 +20,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionTargetMobId extends Condition
 {
-	/**
-	 * Field _mobId.
-	 */
 	private final int _mobId;
 	
 	/**

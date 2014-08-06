@@ -22,13 +22,7 @@ import lineage2.gameserver.utils.Location;
  */
 public class CannotMoveAnymoreInVehicle extends L2GameClientPacket
 {
-	/**
-	 * Field _loc.
-	 */
 	private final Location _loc = new Location();
-	/**
-	 * Field _boatid.
-	 */
 	private int _boatid;
 	
 	/**

@@ -29,85 +29,25 @@ public final class RainbowChestInstance extends MonsterInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field ItemA. (value is 8035)
-	 */
 	private static final int ItemA = 8035;
-	/**
-	 * Field ItemB. (value is 8036)
-	 */
 	private static final int ItemB = 8036;
-	/**
-	 * Field ItemC. (value is 8037)
-	 */
 	private static final int ItemC = 8037;
-	/**
-	 * Field ItemD. (value is 8038)
-	 */
 	private static final int ItemD = 8038;
-	/**
-	 * Field ItemE. (value is 8039)
-	 */
 	private static final int ItemE = 8039;
-	/**
-	 * Field ItemF. (value is 8040)
-	 */
 	private static final int ItemF = 8040;
-	/**
-	 * Field ItemG. (value is 8041)
-	 */
 	private static final int ItemG = 8041;
-	/**
-	 * Field ItemH. (value is 8042)
-	 */
 	private static final int ItemH = 8042;
-	/**
-	 * Field ItemI. (value is 8043)
-	 */
 	private static final int ItemI = 8043;
-	/**
-	 * Field ItemK. (value is 8045)
-	 */
 	private static final int ItemK = 8045;
-	/**
-	 * Field ItemL. (value is 8046)
-	 */
 	private static final int ItemL = 8046;
-	/**
-	 * Field ItemN. (value is 8047)
-	 */
 	private static final int ItemN = 8047;
-	/**
-	 * Field ItemO. (value is 8048)
-	 */
 	private static final int ItemO = 8048;
-	/**
-	 * Field ItemP. (value is 8049)
-	 */
 	private static final int ItemP = 8049;
-	/**
-	 * Field ItemR. (value is 8050)
-	 */
 	private static final int ItemR = 8050;
-	/**
-	 * Field ItemS. (value is 8051)
-	 */
 	private static final int ItemS = 8051;
-	/**
-	 * Field ItemT. (value is 8052)
-	 */
 	private static final int ItemT = 8052;
-	/**
-	 * Field ItemU. (value is 8053)
-	 */
 	private static final int ItemU = 8053;
-	/**
-	 * Field ItemW. (value is 8054)
-	 */
 	private static final int ItemW = 8054;
-	/**
-	 * Field ItemY. (value is 8055)
-	 */
 	private static final int ItemY = 8055;
 	
 	/**

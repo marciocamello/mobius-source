@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -39,37 +38,13 @@ import bosses.ValakasManager;
  */
 public final class Valakas extends DefaultAI
 {
-	/**
-	 * Field s_regen. Field s_berserk. Field s_defence_down. Field s_fear. Field s_lava_skin.
-	 */
 	final Skill s_lava_skin = getSkill(4680, 1), s_fear = getSkill(4689, 1), s_defence_down = getSkill(5864, 1), s_berserk = getSkill(5865, 1), s_regen = getSkill(4691, 1);
-	/**
-	 * Field s_breath_high. Field s_breath_low. Field s_meteor. Field s_tail_lash. Field s_tail_stomp_a. Field s_tremple_right. Field s_tremple_left.
-	 */
 	final Skill s_tremple_left = getSkill(4681, 1), s_tremple_right = getSkill(4682, 1), s_tail_stomp_a = getSkill(4685, 1), s_tail_lash = getSkill(4688, 1), s_meteor = getSkill(4690, 1), s_breath_low = getSkill(4683, 1), s_breath_high = getSkill(4684, 1);
-	/**
-	 * Field s_destroy_soul2. Field s_destroy_body2. Field s_destroy_soul. Field s_destroy_body.
-	 */
 	final Skill s_destroy_body = getSkill(5860, 1), s_destroy_soul = getSkill(5861, 1), s_destroy_body2 = getSkill(5862, 1), s_destroy_soul2 = getSkill(5863, 1);
-	/**
-	 * Field defenceDownTimer.
-	 */
 	private long defenceDownTimer = Long.MAX_VALUE;
-	/**
-	 * Field defenceDownReuse.
-	 */
 	private static final long defenceDownReuse = 120000L;
-	/**
-	 * Field _attacksIndex. Field _counterAttackIndex. Field _rangedAttacksIndex.
-	 */
 	private double _rangedAttacksIndex, _counterAttackIndex, _attacksIndex;
-	/**
-	 * Field _hpStage.
-	 */
 	private int _hpStage = 0;
-	/**
-	 * Field minions.
-	 */
 	private final List<NpcInstance> minions = new ArrayList<>();
 	
 	/**

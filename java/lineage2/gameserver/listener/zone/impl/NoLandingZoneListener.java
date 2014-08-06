@@ -27,9 +27,6 @@ import lineage2.gameserver.tables.PetDataTable;
  */
 public class NoLandingZoneListener implements OnZoneEnterLeaveListener
 {
-	/**
-	 * Field STATIC.
-	 */
 	public static final OnZoneEnterLeaveListener STATIC = new NoLandingZoneListener();
 	
 	/**

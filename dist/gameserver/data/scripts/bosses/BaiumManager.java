@@ -13,13 +13,11 @@
 package bosses;
 
 import static lineage2.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -45,10 +43,8 @@ import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.ReflectionUtils;
 import lineage2.gameserver.utils.TimeUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import bosses.EpicBossState.State;
 
 /**
@@ -57,9 +53,6 @@ import bosses.EpicBossState.State;
  */
 public final class BaiumManager extends Functions implements ScriptFile, OnDeathListener
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(BaiumManager.class);
 	
 	/**
@@ -142,13 +135,7 @@ public final class BaiumManager extends Functions implements ScriptFile, OnDeath
 	 */
 	public static class KillPc extends RunnableImpl
 	{
-		/**
-		 * Field _boss.
-		 */
 		private final BossInstance _boss;
-		/**
-		 * Field _target.
-		 */
 		private final Player _target;
 		
 		/**
@@ -183,13 +170,7 @@ public final class BaiumManager extends Functions implements ScriptFile, OnDeath
 	 */
 	public static class MoveAtRandom extends RunnableImpl
 	{
-		/**
-		 * Field _npc.
-		 */
 		private final NpcInstance _npc;
-		/**
-		 * Field _pos.
-		 */
 		private final Location _pos;
 		
 		/**
@@ -221,9 +202,6 @@ public final class BaiumManager extends Functions implements ScriptFile, OnDeath
 	 */
 	public static class SetMobilised extends RunnableImpl
 	{
-		/**
-		 * Field _boss.
-		 */
 		private final BossInstance _boss;
 		
 		/**
@@ -250,13 +228,7 @@ public final class BaiumManager extends Functions implements ScriptFile, OnDeath
 	 */
 	public static class Social extends RunnableImpl
 	{
-		/**
-		 * Field _action.
-		 */
 		private final int _action;
-		/**
-		 * Field _npc.
-		 */
 		private final NpcInstance _npc;
 		
 		/**
@@ -281,109 +253,31 @@ public final class BaiumManager extends Functions implements ScriptFile, OnDeath
 		}
 	}
 	
-	/**
-	 * Field _callAngelTask.
-	 */
 	private static ScheduledFuture<?> _callAngelTask = null;
-	/**
-	 * Field _cubeSpawnTask.
-	 */
 	private static ScheduledFuture<?> _cubeSpawnTask = null;
-	/**
-	 * Field _intervalEndTask.
-	 */
 	private static ScheduledFuture<?> _intervalEndTask = null;
-	/**
-	 * Field _killPcTask.
-	 */
 	private static ScheduledFuture<?> _killPcTask = null;
-	/**
-	 * Field _mobiliseTask.
-	 */
 	private static ScheduledFuture<?> _mobiliseTask = null;
-	/**
-	 * Field _moveAtRandomTask.
-	 */
 	private static ScheduledFuture<?> _moveAtRandomTask = null;
-	/**
-	 * Field _sleepCheckTask.
-	 */
 	static ScheduledFuture<?> _sleepCheckTask = null;
-	/**
-	 * Field _socialTask.
-	 */
 	private static ScheduledFuture<?> _socialTask = null;
-	/**
-	 * Field _socialTask2.
-	 */
 	private static ScheduledFuture<?> _socialTask2 = null;
-	/**
-	 * Field _onAnnihilatedTask.
-	 */
 	private static ScheduledFuture<?> _onAnnihilatedTask = null;
-	/**
-	 * Field _state.
-	 */
 	static EpicBossState _state;
-	/**
-	 * Field _lastAttackTime.
-	 */
 	static long _lastAttackTime = 0;
-	/**
-	 * Field _npcBaium.
-	 */
 	private static NpcInstance _npcBaium;
-	/**
-	 * Field _statueSpawn.
-	 */
 	static SimpleSpawner _statueSpawn = null;
-	/**
-	 * Field _teleportCube.
-	 */
 	static NpcInstance _teleportCube = null;
-	/**
-	 * Field _teleportCubeSpawn.
-	 */
 	static SimpleSpawner _teleportCubeSpawn = null;
-	/**
-	 * Field _monsters.
-	 */
 	private static final List<NpcInstance> _monsters = new ArrayList<>();
-	/**
-	 * Field _monsterSpawn.
-	 */
 	private static final Map<Integer, SimpleSpawner> _monsterSpawn = new ConcurrentHashMap<>();
-	/**
-	 * Field _angels.
-	 */
 	static final List<NpcInstance> _angels = new ArrayList<>();
-	/**
-	 * Field _angelSpawns.
-	 */
 	static final List<SimpleSpawner> _angelSpawns = new ArrayList<>();
-	/**
-	 * Field _zone.
-	 */
 	private static Zone _zone;
-	/**
-	 * Field ARCHANGEL. (value is 29021)
-	 */
 	private final static int ARCHANGEL = 29021;
-	/**
-	 * Field BAIUM. (value is 29020)
-	 */
 	private final static int BAIUM = 29020;
-	/**
-	 * Field BAIUM_NPC. (value is 29025)
-	 */
 	private final static int BAIUM_NPC = 29025;
-	/**
-	 * Field Dying.
-	 */
 	private static boolean Dying = false;
-	/**
-	 * Field ANGEL_LOCATION.
-	 */
 	private final static Location[] ANGEL_LOCATION = new Location[]
 	{
 		new Location(113004, 16209, 10076, 60242),
@@ -397,29 +291,11 @@ public final class BaiumManager extends Functions implements ScriptFile, OnDeath
 		new Location(115391, 17593, 10076, 55346),
 		new Location(115245, 17558, 10076, 35536)
 	};
-	/**
-	 * Field CUBE_LOCATION.
-	 */
 	private final static Location CUBE_LOCATION = new Location(115203, 16620, 10078, 0);
-	/**
-	 * Field STATUE_LOCATION.
-	 */
 	private final static Location STATUE_LOCATION = new Location(115996, 17417, 10106, 41740);
-	/**
-	 * Field TELEPORT_CUBE. (value is 31759)
-	 */
 	private final static int TELEPORT_CUBE = 31759;
-	/**
-	 * Field FWB_LIMITUNTILSLEEP.
-	 */
 	private final static int FWB_LIMITUNTILSLEEP = 30 * 60000;
-	/**
-	 * Field FWB_FIXINTERVALOFBAIUM.
-	 */
 	private final static int FWB_FIXINTERVALOFBAIUM = 5 * 24 * 60 * 60000;
-	/**
-	 * Field FWB_RANDOMINTERVALOFBAIUM.
-	 */
 	private final static int FWB_RANDOMINTERVALOFBAIUM = 8 * 60 * 60000;
 	
 	/**
@@ -777,9 +653,6 @@ public final class BaiumManager extends Functions implements ScriptFile, OnDeath
 	 */
 	public static class EarthquakeTask extends RunnableImpl
 	{
-		/**
-		 * Field baium.
-		 */
 		private final BossInstance baium;
 		
 		/**

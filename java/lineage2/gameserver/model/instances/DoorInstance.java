@@ -17,7 +17,6 @@ import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
 import lineage2.commons.geometry.Shape;
 import lineage2.commons.listener.Listener;
 import lineage2.commons.threading.RunnableImpl;
@@ -39,8 +38,6 @@ import lineage2.gameserver.network.serverpackets.StaticObject;
 import lineage2.gameserver.templates.DoorTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 
-/**
- */
 public final class DoorInstance extends Creature implements GeoCollision
 {
 	/**
@@ -59,9 +56,6 @@ public final class DoorInstance extends Creature implements GeoCollision
 	 */
 	private class AutoOpenClose extends RunnableImpl
 	{
-		/**
-		 * Field _open.
-		 */
 		private final boolean _open;
 		
 		/**
@@ -90,29 +84,11 @@ public final class DoorInstance extends Creature implements GeoCollision
 		}
 	}
 	
-	/**
-	 * Field _open.
-	 */
 	private boolean _open = true;
-	/**
-	 * Field _geoOpen.
-	 */
 	private boolean _geoOpen = true;
-	/**
-	 * Field _openLock.
-	 */
 	private final Lock _openLock = new ReentrantLock();
-	/**
-	 * Field _upgradeHp.
-	 */
 	private int _upgradeHp;
-	/**
-	 * Field _geoAround.
-	 */
 	private byte[][] _geoAround;
-	/**
-	 * Field _autoActionTask.
-	 */
 	protected ScheduledFuture<?> _autoActionTask;
 	
 	/**

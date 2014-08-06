@@ -13,7 +13,6 @@
 package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Playable;
@@ -27,25 +26,10 @@ import lineage2.gameserver.utils.ItemFunctions;
  */
 public class SummonItem extends Skill
 {
-	/**
-	 * Field _itemId.
-	 */
 	private final int _itemId;
-	/**
-	 * Field _minId.
-	 */
 	private final int _minId;
-	/**
-	 * Field _maxId.
-	 */
 	private final int _maxId;
-	/**
-	 * Field _minCount.
-	 */
 	private final long _minCount;
-	/**
-	 * Field _maxCount.
-	 */
 	private final long _maxCount;
 	
 	/**

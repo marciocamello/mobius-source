@@ -15,7 +15,6 @@ package lineage2.gameserver.model.entity.events.impl;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.commons.time.cron.SchedulingPattern;
@@ -149,17 +148,8 @@ public class KrateisCubeEvent extends GlobalEvent
 		}
 	}
 	
-	/**
-	 * Field DATE_PATTERN.
-	 */
 	private static final SchedulingPattern DATE_PATTERN = new SchedulingPattern("0,30 * * * *");
-	/**
-	 * Field RETURN_LOC.
-	 */
 	private static final Location RETURN_LOC = new Location(-70381, -70937, -1428);
-	/**
-	 * Field SKILL_IDS.
-	 */
 	private static final int[] SKILL_IDS =
 	{
 		1086,
@@ -174,9 +164,6 @@ public class KrateisCubeEvent extends GlobalEvent
 		1062,
 		5739
 	};
-	/**
-	 * Field SKILL_LEVEL.
-	 */
 	private static final int[] SKILL_LEVEL =
 	{
 		2,
@@ -191,49 +178,15 @@ public class KrateisCubeEvent extends GlobalEvent
 		2,
 		1
 	};
-	
-	/**
-	 * Field PARTICLE_PLAYERS. (value is ""particle_players"")
-	 */
 	public static final String PARTICLE_PLAYERS = "particle_players";
-	/**
-	 * Field REGISTERED_PLAYERS. (value is ""registered_players"")
-	 */
 	public static final String REGISTERED_PLAYERS = "registered_players";
-	/**
-	 * Field WAIT_LOCS. (value is ""wait_locs"")
-	 */
 	public static final String WAIT_LOCS = "wait_locs";
-	/**
-	 * Field TELEPORT_LOCS. (value is ""teleport_locs"")
-	 */
 	public static final String TELEPORT_LOCS = "teleport_locs";
-	/**
-	 * Field PREPARE. (value is ""prepare"")
-	 */
 	public static final String PREPARE = "prepare";
-	
-	/**
-	 * Field _minLevel.
-	 */
 	private final int _minLevel;
-	/**
-	 * Field _maxLevel.
-	 */
 	private final int _maxLevel;
-	
-	/**
-	 * Field _calendar.
-	 */
 	private final Calendar _calendar = Calendar.getInstance();
-	
-	/**
-	 * Field _runnerEvent.
-	 */
 	private KrateisCubeRunnerEvent _runnerEvent;
-	/**
-	 * Field _listeners.
-	 */
 	private final Listeners _listeners = new Listeners();
 	
 	/**

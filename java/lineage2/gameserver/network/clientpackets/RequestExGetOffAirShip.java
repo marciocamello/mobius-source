@@ -19,24 +19,12 @@ package lineage2.gameserver.network.clientpackets;
 @Deprecated
 public class RequestExGetOffAirShip extends L2GameClientPacket
 {
-	/**
-	 * Field _x.
-	 */
 	@SuppressWarnings("unused")
 	private int _x;
-	/**
-	 * Field _y.
-	 */
 	@SuppressWarnings("unused")
 	private int _y;
-	/**
-	 * Field _z.
-	 */
 	@SuppressWarnings("unused")
 	private int _z;
-	/**
-	 * Field _id.
-	 */
 	@SuppressWarnings("unused")
 	private int _id;
 	

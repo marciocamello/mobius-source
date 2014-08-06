@@ -22,9 +22,6 @@ import lineage2.gameserver.model.matching.MatchingRoom;
  */
 public class RequestExJoinMpccRoom extends L2GameClientPacket
 {
-	/**
-	 * Field _roomId.
-	 */
 	private int _roomId;
 	
 	/**

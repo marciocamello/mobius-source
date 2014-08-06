@@ -14,7 +14,6 @@ package lineage2.gameserver.model;
 
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.GameTimeController;
@@ -41,73 +40,22 @@ import lineage2.gameserver.utils.Location;
  */
 public class Fishing
 {
-	/**
-	 * Field _fisher.
-	 */
 	final Player _fisher;
-	/**
-	 * Field FISHING_NONE. (value is 0)
-	 */
 	public final static int FISHING_NONE = 0;
-	/**
-	 * Field FISHING_STARTED. (value is 1)
-	 */
 	public final static int FISHING_STARTED = 1;
-	/**
-	 * Field FISHING_WAITING. (value is 2)
-	 */
 	public final static int FISHING_WAITING = 2;
-	/**
-	 * Field FISHING_COMBAT. (value is 3)
-	 */
 	public final static int FISHING_COMBAT = 3;
-	/**
-	 * Field _state.
-	 */
 	private final AtomicInteger _state;
-	/**
-	 * Field _time.
-	 */
 	int _time;
-	/**
-	 * Field _stop.
-	 */
 	int _stop;
-	/**
-	 * Field _gooduse.
-	 */
 	private int _gooduse;
-	/**
-	 * Field _anim.
-	 */
 	int _anim;
-	/**
-	 * Field _combatMode.
-	 */
 	int _combatMode = -1;
-	/**
-	 * Field _deceptiveMode.
-	 */
 	int _deceptiveMode;
-	/**
-	 * Field _fishCurHP.
-	 */
 	int _fishCurHP;
-	/**
-	 * Field _fish.
-	 */
 	FishTemplate _fish;
-	/**
-	 * Field _lureId.
-	 */
 	int _lureId;
-	/**
-	 * Field _fishingTask.
-	 */
 	private Future<?> _fishingTask;
-	/**
-	 * Field _fishLoc.
-	 */
 	private final Location _fishLoc = new Location();
 	
 	/**
@@ -236,9 +184,6 @@ public class Fishing
 	 */
 	protected class LookingForFishTask extends RunnableImpl
 	{
-		/**
-		 * Field _endTaskTime.
-		 */
 		private final long _endTaskTime;
 		
 		/**

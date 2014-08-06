@@ -18,24 +18,9 @@ package lineage2.gameserver.model.reward;
  */
 public enum RewardType
 {
-	/**
-	 * Field RATED_GROUPED.
-	 */
 	RATED_GROUPED,
-	/**
-	 * Field NOT_RATED_NOT_GROUPED.
-	 */
 	NOT_RATED_NOT_GROUPED,
-	/**
-	 * Field NOT_RATED_GROUPED.
-	 */
 	NOT_RATED_GROUPED,
-	/**
-	 * Field SWEEP.
-	 */
 	SWEEP;
-	/**
-	 * Field VALUES.
-	 */
 	public static final RewardType[] VALUES = values();
 }

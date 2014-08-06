@@ -34,9 +34,6 @@ public final class SealDeviceInstance extends MonsterInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _gaveItem.
-	 */
 	private boolean _gaveItem = false;
 	
 	/**
@@ -94,9 +91,6 @@ public final class SealDeviceInstance extends MonsterInstance
 	 */
 	private class TeleportPlayer extends RunnableImpl
 	{
-		/**
-		 * Field _p.
-		 */
 		Player _p;
 		
 		/**

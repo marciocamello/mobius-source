@@ -30,9 +30,6 @@ public final class PailakaGatekeeperInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field rimIzId. (value is 80)
-	 */
 	private static final int rimIzId = 80;
 	
 	/**

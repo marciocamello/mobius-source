@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
-
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.math.SafeMath;
@@ -36,7 +35,6 @@ import lineage2.gameserver.templates.manor.CropProcure;
 import lineage2.gameserver.templates.manor.SeedProduction;
 import lineage2.gameserver.utils.GameStats;
 import lineage2.gameserver.utils.Log;
-
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CTreeIntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
@@ -50,26 +48,21 @@ public class Castle extends Residence
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	
 	private static final Logger _log = LoggerFactory.getLogger(Castle.class);
-	
 	private static final String CASTLE_MANOR_DELETE_PRODUCTION = "DELETE FROM castle_manor_production WHERE castle_id=?;";
 	private static final String CASTLE_MANOR_DELETE_PRODUCTION_PERIOD = "DELETE FROM castle_manor_production WHERE castle_id=? AND period=?;";
 	private static final String CASTLE_MANOR_DELETE_PROCURE = "DELETE FROM castle_manor_procure WHERE castle_id=?;";
 	private static final String CASTLE_MANOR_DELETE_PROCURE_PERIOD = "DELETE FROM castle_manor_procure WHERE castle_id=? AND period=?;";
 	private static final String CASTLE_UPDATE_CROP = "UPDATE castle_manor_procure SET can_buy=? WHERE crop_id=? AND castle_id=? AND period=?";
 	private static final String CASTLE_UPDATE_SEED = "UPDATE castle_manor_production SET can_produce=? WHERE seed_id=? AND castle_id=? AND period=?";
-	
 	private final IntObjectMap<MerchantGuard> _merchantGuards = new HashIntObjectMap<>();
 	@SuppressWarnings("rawtypes")
 	private final IntObjectMap<List> _relatedFortresses = new CTreeIntObjectMap<>();
-	
 	private List<CropProcure> _procure;
 	private List<SeedProduction> _production;
 	private List<CropProcure> _procureNext;
 	private List<SeedProduction> _productionNext;
 	private boolean _isNextPeriodApproved;
-	
 	private int _TaxPercent;
 	private double _TaxRate;
 	private long _treasury;
@@ -293,7 +286,6 @@ public class Castle extends Residence
 	}
 	
 	// This method add to the treasury
-	
 	/**
 	 * Add amount to castle instance's treasury (warehouse).
 	 * @param amount

@@ -24,7 +24,6 @@ public class ChangeWaitType extends L2GameServerPacket
 	private final int _objectId;
 	private final int _moveType;
 	private final int _x, _y, _z;
-	
 	public static final int WT_SITTING = 0;
 	public static final int WT_STANDING = 1;
 	public static final int WT_START_FAKEDEATH = 2;

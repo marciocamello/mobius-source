@@ -31,21 +31,17 @@ public final class KartiaManagerInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	
 	private static final Location TELEPORT_POSITION = new Location(-109032, -10440, -11949);
-	
 	private static final int Adolph88 = 33609;
 	private static final int Barton88 = 33611;
 	private static final int Hayuk88 = 33613;
 	private static final int Eliyah88 = 33615;
 	private static final int Elise88 = 33617;
-	
 	private static final int Adolph93 = 33620;
 	private static final int Barton93 = 33622;
 	private static final int Hayuk93 = 33624;
 	private static final int Eliyah93 = 33626;
 	private static final int Elise93 = 33628;
-	
 	private static final int Adolph98 = 33631;
 	private static final int Barton98 = 33633;
 	private static final int Hayuk98 = 33635;

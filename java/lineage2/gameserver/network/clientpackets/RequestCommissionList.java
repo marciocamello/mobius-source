@@ -23,25 +23,10 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public class RequestCommissionList extends L2GameClientPacket
 {
-	/**
-	 * Field listType.
-	 */
 	private int listType;
-	/**
-	 * Field category.
-	 */
 	private int category;
-	/**
-	 * Field rareType.
-	 */
 	private int rareType;
-	/**
-	 * Field itemGrade.
-	 */
 	private int itemGrade;
-	/**
-	 * Field searchName.
-	 */
 	private String searchName;
 	
 	/**

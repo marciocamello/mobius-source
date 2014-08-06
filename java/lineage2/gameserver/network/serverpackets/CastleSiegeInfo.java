@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.serverpackets;
 
 import java.util.Calendar;
-
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.impl.CastleSiegeEvent;
 import lineage2.gameserver.model.entity.residence.Castle;
@@ -21,7 +20,6 @@ import lineage2.gameserver.model.entity.residence.ClanHall;
 import lineage2.gameserver.model.entity.residence.Residence;
 import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
-
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 

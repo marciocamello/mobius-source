@@ -19,7 +19,6 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -28,26 +27,14 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public class Patrollers extends Fighter
 {
-	/**
-	 * Field _points.
-	 */
 	protected Location[] _points;
-	/**
-	 * Field _teleporters.
-	 */
 	private final int[] _teleporters =
 	{
 		22857,
 		22833,
 		22834
 	};
-	/**
-	 * Field _lastPoint.
-	 */
 	private int _lastPoint = 0;
-	/**
-	 * Field _firstThought.
-	 */
 	private boolean _firstThought = true;
 	
 	/**

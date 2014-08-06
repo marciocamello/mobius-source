@@ -21,7 +21,6 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.StringTokenizer;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
@@ -42,7 +41,6 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.utils.Util;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -52,17 +50,8 @@ import org.slf4j.LoggerFactory;
  */
 public final class ClanCommunity extends Functions implements ScriptFile, ICommunityBoardHandler
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(ClanCommunity.class);
-	/**
-	 * Field CLANS_PER_PAGE. (value is 10)
-	 */
 	private static final int CLANS_PER_PAGE = 10;
-	/**
-	 * Field _listener.
-	 */
 	private final Listener _listener = new Listener();
 	
 	/**

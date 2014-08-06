@@ -14,7 +14,6 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
 
@@ -47,7 +46,6 @@ public class RelationChanged extends L2GameServerPacket
 	// alliance
 	public static final int RELATION_ISINTERRITORYWARS = 0x80000; // Territory
 	// Wars
-	
 	protected final List<RelationChangedData> _data;
 	
 	protected RelationChanged(int s)

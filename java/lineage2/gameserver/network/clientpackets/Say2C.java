@@ -15,7 +15,6 @@ package lineage2.gameserver.network.clientpackets;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.ItemInfoCache;
 import lineage2.gameserver.cache.Msg;
@@ -38,12 +37,10 @@ import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.MapUtils;
 import lineage2.gameserver.utils.Strings;
 import lineage2.gameserver.utils.Util;
-
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import com.graphbuilder.math.Expression;
 import com.graphbuilder.math.ExpressionParseException;
 import com.graphbuilder.math.ExpressionTree;
@@ -55,29 +52,11 @@ import com.graphbuilder.math.VarMap;
  */
 public class Say2C extends L2GameClientPacket
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Say2C.class);
-	/**
-	 * Field EX_ITEM_LINK_PATTERN.
-	 */
 	private static final Pattern EX_ITEM_LINK_PATTERN = Pattern.compile("[\b]\tType=[0-9]+[\\s]+\tID=([0-9]+)[\\s]+\tColor=[0-9]+[\\s]+\tUnderline=[0-9]+[\\s]+\tTitle=\u001B(.[^\u001B]*)[^\b]");
-	/**
-	 * Field SKIP_ITEM_LINK_PATTERN.
-	 */
 	private static final Pattern SKIP_ITEM_LINK_PATTERN = Pattern.compile("[\b]\tType=[0-9]+(.[^\b]*)[\b]");
-	/**
-	 * Field _text.
-	 */
 	private String _text;
-	/**
-	 * Field _type.
-	 */
 	private ChatType _type;
-	/**
-	 * Field _target.
-	 */
 	private String _target;
 	
 	/**

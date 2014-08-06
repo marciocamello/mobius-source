@@ -17,7 +17,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 public class _474_WaitingForTheSummer extends Quest implements ScriptFile
@@ -25,12 +24,10 @@ public class _474_WaitingForTheSummer extends Quest implements ScriptFile
 	// npc
 	private static final int GUIDE = 33463;
 	private static final int VISHOTSKY = 31981;
-	
 	// q items
 	private static final int BUFFALO_MEAT = 19490;
 	private static final int URSUS_MEAT = 19491;
 	private static final int YETI_MIAT = 19492;
-	
 	// mobs
 	private static final int[] BUFFALO =
 	{

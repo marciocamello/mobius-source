@@ -17,13 +17,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Arrays;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import gnu.trove.list.array.TIntArrayList;
 
 /**
@@ -32,13 +29,7 @@ import gnu.trove.list.array.TIntArrayList;
  */
 public abstract class IdFactory
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(IdFactory.class);
-	/**
-	 * Field EXTRACT_OBJ_ID_TABLES.
-	 */
 	public static final String[][] EXTRACT_OBJ_ID_TABLES =
 	{
 		{
@@ -70,21 +61,9 @@ public abstract class IdFactory
 			"id"
 		}
 	};
-	/**
-	 * Field FIRST_OID.
-	 */
 	public static final int FIRST_OID = 0x10000000;
-	/**
-	 * Field LAST_OID.
-	 */
 	public static final int LAST_OID = 0x7FFFFFFF;
-	/**
-	 * Field FREE_OBJECT_ID_SIZE.
-	 */
 	public static final int FREE_OBJECT_ID_SIZE = LAST_OID - FIRST_OID;
-	/**
-	 * Field _instance.
-	 */
 	protected static final IdFactory _instance = new BitSetIDFactory();
 	
 	/**
@@ -96,13 +75,7 @@ public abstract class IdFactory
 		return _instance;
 	}
 	
-	/**
-	 * Field initialized.
-	 */
 	protected boolean initialized;
-	/**
-	 * Field releasedCount.
-	 */
 	protected long releasedCount = 0;
 	
 	/**

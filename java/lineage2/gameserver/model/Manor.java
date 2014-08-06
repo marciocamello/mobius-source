@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.concurrent.ConcurrentHashMap;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
@@ -30,7 +29,6 @@ import lineage2.gameserver.instancemanager.CastleManorManager;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.manor.CropProcure;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,17 +38,8 @@ import org.slf4j.LoggerFactory;
  */
 public class Manor
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Manor.class);
-	/**
-	 * Field _instance.
-	 */
 	private static Manor _instance;
-	/**
-	 * Field _seeds.
-	 */
 	private static Map<Integer, SeedData> _seeds;
 	
 	/**
@@ -445,45 +434,15 @@ public class Manor
 	 */
 	public class SeedData
 	{
-		/**
-		 * Field _id.
-		 */
 		private int _id;
-		/**
-		 * Field _level.
-		 */
 		private final int _level;
-		/**
-		 * Field _crop.
-		 */
 		private final int _crop;
-		/**
-		 * Field _mature.
-		 */
 		private final int _mature;
-		/**
-		 * Field _type1.
-		 */
 		private int _type1;
-		/**
-		 * Field _type2.
-		 */
 		private int _type2;
-		/**
-		 * Field _manorId.
-		 */
 		private int _manorId;
-		/**
-		 * Field _isAlternative.
-		 */
 		private int _isAlternative;
-		/**
-		 * Field _limitSeeds.
-		 */
 		private long _limitSeeds;
-		/**
-		 * Field _limitCrops.
-		 */
 		private long _limitCrops;
 		
 		/**

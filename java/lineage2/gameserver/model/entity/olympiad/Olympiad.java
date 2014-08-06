@@ -19,7 +19,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.configuration.ExProperties;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
@@ -37,7 +36,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.MultiValueIntegerMap;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,141 +45,39 @@ import org.slf4j.LoggerFactory;
  */
 public class Olympiad
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Olympiad.class);
-	/**
-	 * Field _nobles.
-	 */
 	public static Map<Integer, StatsSet> _nobles;
-	/**
-	 * Field _noblesRank.
-	 */
 	public static Map<Integer, Integer> _noblesRank;
-	/**
-	 * Field _heroesToBe.
-	 */
 	public static List<StatsSet> _heroesToBe;
-	/**
-	 * Field _nonClassBasedRegisters.
-	 */
 	public static final List<Integer> _nonClassBasedRegisters = new CopyOnWriteArrayList<>();
-	/**
-	 * Field _classBasedRegisters.
-	 */
 	public static final MultiValueIntegerMap _classBasedRegisters = new MultiValueIntegerMap();
-	/**
-	 * Field OLYMPIAD_HTML_PATH. (value is ""olympiad/"")
-	 */
 	public static final String OLYMPIAD_HTML_PATH = "olympiad/";
-	/**
-	 * Field CHAR_ID. (value is ""char_id"")
-	 */
 	public static final String CHAR_ID = "char_id";
-	/**
-	 * Field CLASS_ID. (value is ""class_id"")
-	 */
 	public static final String CLASS_ID = "class_id";
-	/**
-	 * Field CHAR_NAME. (value is ""char_name"")
-	 */
 	public static final String CHAR_NAME = "char_name";
-	/**
-	 * Field POINTS. (value is ""olympiad_points"")
-	 */
 	public static final String POINTS = "olympiad_points";
-	/**
-	 * Field POINTS_PAST. (value is ""olympiad_points_past"")
-	 */
 	public static final String POINTS_PAST = "olympiad_points_past";
-	/**
-	 * Field POINTS_PAST_STATIC. (value is ""olympiad_points_past_static"")
-	 */
 	public static final String POINTS_PAST_STATIC = "olympiad_points_past_static";
-	/**
-	 * Field COMP_DONE. (value is ""competitions_done"")
-	 */
 	public static final String COMP_DONE = "competitions_done";
-	/**
-	 * Field COMP_WIN. (value is ""competitions_win"")
-	 */
 	public static final String COMP_WIN = "competitions_win";
-	/**
-	 * Field COMP_LOOSE. (value is ""competitions_loose"")
-	 */
 	public static final String COMP_LOOSE = "competitions_loose";
-	/**
-	 * Field GAME_CLASSES_COUNT. (value is ""game_classes_count"")
-	 */
 	public static final String GAME_CLASSES_COUNT = "game_classes_count";
-	/**
-	 * Field GAME_NOCLASSES_COUNT. (value is ""game_noclasses_count"")
-	 */
 	public static final String GAME_NOCLASSES_COUNT = "game_noclasses_count";
-	/**
-	 * Field _olympiadEnd.
-	 */
 	public static long _olympiadEnd;
-	/**
-	 * Field _validationEnd.
-	 */
 	public static long _validationEnd;
-	/**
-	 * Field _period.
-	 */
 	public static int _period;
-	/**
-	 * Field _nextWeeklyChange.
-	 */
 	public static long _nextWeeklyChange;
-	/**
-	 * Field _currentCycle.
-	 */
 	public static int _currentCycle;
-	/**
-	 * Field _compEnd.
-	 */
 	private static long _compEnd;
-	/**
-	 * Field _compStart.
-	 */
 	private static Calendar _compStart;
-	/**
-	 * Field _inCompPeriod.
-	 */
 	public static boolean _inCompPeriod;
-	/**
-	 * Field _isOlympiadEnd.
-	 */
 	public static boolean _isOlympiadEnd;
-	/**
-	 * Field _scheduledOlympiadEnd.
-	 */
 	private static ScheduledFuture<?> _scheduledOlympiadEnd;
-	/**
-	 * Field _scheduledManagerTask.
-	 */
 	public static ScheduledFuture<?> _scheduledManagerTask;
-	/**
-	 * Field _scheduledWeeklyTask.
-	 */
 	public static ScheduledFuture<?> _scheduledWeeklyTask;
-	/**
-	 * Field _scheduledValdationTask.
-	 */
 	public static ScheduledFuture<?> _scheduledValdationTask;
-	/**
-	 * Field STADIUMS.
-	 */
 	public static final Stadia[] STADIUMS = new Stadia[Config.OLYMPIAD_STADIAS_COUNT];
-	/**
-	 * Field _manager.
-	 */
 	public static OlympiadManager _manager;
-	/**
-	 * Field _npcs.
-	 */
 	private static final List<NpcInstance> _npcs = new ArrayList<>();
 	
 	/**

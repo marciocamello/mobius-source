@@ -15,7 +15,6 @@ package lineage2.gameserver.taskmanager;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
@@ -29,7 +28,6 @@ import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Log;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,21 +37,9 @@ import org.slf4j.LoggerFactory;
  */
 public class DelayedItemsManager extends RunnableImpl
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(DelayedItemsManager.class);
-	/**
-	 * Field _instance.
-	 */
 	private static DelayedItemsManager _instance;
-	/**
-	 * Field _lock.
-	 */
 	private static final Object _lock = new Object();
-	/**
-	 * Field last_payment_id.
-	 */
 	private int last_payment_id = 0;
 	
 	/**

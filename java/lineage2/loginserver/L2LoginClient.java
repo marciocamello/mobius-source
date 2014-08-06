@@ -15,7 +15,6 @@ package lineage2.loginserver;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.security.interfaces.RSAPrivateKey;
-
 import lineage2.commons.net.nio.impl.MMOClient;
 import lineage2.commons.net.nio.impl.MMOConnection;
 import lineage2.loginserver.accounts.Account;
@@ -26,7 +25,6 @@ import lineage2.loginserver.serverpackets.AccountKicked.AccountKickedReason;
 import lineage2.loginserver.serverpackets.L2LoginServerPacket;
 import lineage2.loginserver.serverpackets.LoginFail;
 import lineage2.loginserver.serverpackets.LoginFail.LoginFailReason;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,9 +34,6 @@ import org.slf4j.LoggerFactory;
  */
 public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 {
-	/**
-	 * Field _log.
-	 */
 	private final static Logger _log = LoggerFactory.getLogger(L2LoginClient.class);
 	
 	/**
@@ -46,59 +41,20 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 	 */
 	public static enum LoginClientState
 	{
-		/**
-		 * Field CONNECTED.
-		 */
 		CONNECTED,
-		/**
-		 * Field AUTHED_GG.
-		 */
 		AUTHED_GG,
-		/**
-		 * Field AUTHED.
-		 */
 		AUTHED,
-		/**
-		 * Field DISCONNECTED.
-		 */
 		DISCONNECTED
 	}
 	
-	/**
-	 * Field _state.
-	 */
 	private LoginClientState _state;
-	/**
-	 * Field _loginCrypt.
-	 */
 	private LoginCrypt _loginCrypt;
-	/**
-	 * Field _scrambledPair.
-	 */
 	private ScrambledKeyPair _scrambledPair;
-	/**
-	 * Field _blowfishKey.
-	 */
 	private byte[] _blowfishKey;
-	/**
-	 * Field _login.
-	 */
 	private String _login;
-	/**
-	 * Field _skey.
-	 */
 	private SessionKey _skey;
-	/**
-	 * Field _account.
-	 */
 	private Account _account;
-	/**
-	 * Field _ipAddr.
-	 */
 	private final String _ipAddr;
-	/**
-	 * Field _sessionId.
-	 */
 	private int _sessionId;
 	
 	/**

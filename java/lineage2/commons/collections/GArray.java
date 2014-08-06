@@ -25,17 +25,8 @@ import java.util.NoSuchElementException;
  */
 public class GArray<E> implements Collection<E>
 {
-	/**
-	 * Field elementData.
-	 */
 	protected transient E[] elementData;
-	/**
-	 * Field modCount.
-	 */
 	protected transient int modCount = 0;
-	/**
-	 * Field size.
-	 */
 	protected int size;
 	
 	/**
@@ -489,17 +480,8 @@ public class GArray<E> implements Collection<E>
 	 */
 	private class Itr implements Iterator<E>
 	{
-		/**
-		 * Field cursor.
-		 */
 		int cursor = 0;
-		/**
-		 * Field lastRet.
-		 */
 		int lastRet = -1;
-		/**
-		 * Field expectedModCount.
-		 */
 		int expectedModCount = modCount;
 		
 		/**

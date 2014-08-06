@@ -25,9 +25,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Gordon extends Fighter
 {
-	/**
-	 * Field points.
-	 */
 	static final Location[] points =
 	{
 		new Location(146268, -64651, -3412),
@@ -63,17 +60,8 @@ public final class Gordon extends Fighter
 		new Location(151511, -64366, -3174),
 		new Location(149161, -64576, -3316)
 	};
-	/**
-	 * Field current_point.
-	 */
 	private int current_point = -1;
-	/**
-	 * Field wait_timeout.
-	 */
 	private long wait_timeout = 0;
-	/**
-	 * Field wait.
-	 */
 	private boolean wait = false;
 	
 	/**

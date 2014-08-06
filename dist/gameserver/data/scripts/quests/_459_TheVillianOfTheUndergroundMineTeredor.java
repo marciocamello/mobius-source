@@ -17,8 +17,6 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
 
-/**
- */
 public class _459_TheVillianOfTheUndergroundMineTeredor extends Quest implements ScriptFile
 {
 	private static final int NPC_FILAUR = 30535;

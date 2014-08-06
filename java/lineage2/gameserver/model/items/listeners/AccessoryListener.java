@@ -26,9 +26,6 @@ import lineage2.gameserver.templates.item.ItemTemplate;
  */
 public final class AccessoryListener implements OnEquipListener
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final AccessoryListener _instance = new AccessoryListener();
 	
 	/**

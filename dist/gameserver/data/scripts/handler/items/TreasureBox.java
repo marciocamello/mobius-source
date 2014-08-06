@@ -18,7 +18,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.Functions;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -257,7 +256,6 @@ public final class TreasureBox extends SimpleItemHandler
 	}
 	
 	// --------------------------------------------------Chest end
-	
 	// --------------------------------------------------Enchant
 	// Enchant Scroll Box - R Grade
 	private void use32731(Player player, boolean ctrl)
@@ -536,7 +534,6 @@ public final class TreasureBox extends SimpleItemHandler
 	}
 	
 	// --------------------------------------------------Enchant end
-	
 	// --------------------------------------------------Elixir
 	// Elixir Box (R-Grade)
 	private void use32737(Player player, boolean ctrl)
@@ -706,7 +703,6 @@ public final class TreasureBox extends SimpleItemHandler
 	}
 	
 	// --------------------------------------------------Elixir end
-	
 	// --------------------------------------------------Hair Accessory
 	// Hair Accessory Chest
 	private void use32728(Player player, boolean ctrl)
@@ -933,7 +929,6 @@ public final class TreasureBox extends SimpleItemHandler
 	}
 	
 	// --------------------------------------------------Hair Accessory end
-	
 	// --------------------------------------------------Awakening Chest
 	private void use32264(Player player, boolean ctrl)
 	{
@@ -1000,7 +995,6 @@ public final class TreasureBox extends SimpleItemHandler
 	}
 	
 	// --------------------------------------------------Awakening Chest end
-	
 	// -------------Aden Hero's Treasure Box
 	private void use33771(Player player, boolean ctrl) // Red
 	{
@@ -1024,7 +1018,6 @@ public final class TreasureBox extends SimpleItemHandler
 	}
 	
 	// -------------Aden Hero's Treasure Box end
-	
 	// -------------Other Items
 	private void use32241(Player player, boolean ctrl) // Adventures Box
 	{
@@ -1138,7 +1131,6 @@ public final class TreasureBox extends SimpleItemHandler
 	}
 	
 	// -------------Other Items
-	
 	private static boolean canBeExtracted(Player player, ItemInstance item)
 	{
 		if ((player.getWeightPenalty() >= 3) || (player.getInventory().getSize() > (player.getInventoryLimit() - 10)))

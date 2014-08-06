@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.instances;
 
 import java.util.StringTokenizer;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;

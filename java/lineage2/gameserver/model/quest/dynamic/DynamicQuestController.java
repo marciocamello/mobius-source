@@ -14,12 +14,10 @@ package lineage2.gameserver.model.quest.dynamic;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.time.cron.SchedulingPattern;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Player;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

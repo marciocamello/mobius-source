@@ -17,7 +17,6 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.templates.npc.MinionData;
 import lineage2.gameserver.templates.npc.NpcTemplate;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -30,9 +29,6 @@ public final class SeedOfAnnihilationInstance extends MonsterInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field BISTAKON_MOBS.
-	 */
 	private static final int[] BISTAKON_MOBS = new int[]
 	{
 		22750,
@@ -40,18 +36,12 @@ public final class SeedOfAnnihilationInstance extends MonsterInstance
 		22752,
 		22753
 	};
-	/**
-	 * Field COKRAKON_MOBS.
-	 */
 	private static final int[] COKRAKON_MOBS = new int[]
 	{
 		22763,
 		22764,
 		22765
 	};
-	/**
-	 * Field BISTAKON_MINIONS.
-	 */
 	private static final int[][] BISTAKON_MINIONS = new int[][]
 	{
 		{
@@ -75,9 +65,6 @@ public final class SeedOfAnnihilationInstance extends MonsterInstance
 			22749
 		}
 	};
-	/**
-	 * Field COKRAKON_MINIONS.
-	 */
 	private static final int[][] COKRAKON_MINIONS = new int[][]
 	{
 		{

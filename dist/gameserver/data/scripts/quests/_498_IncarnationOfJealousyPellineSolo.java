@@ -21,7 +21,6 @@ public class _498_IncarnationOfJealousyPellineSolo extends Quest implements Scri
 {
 	// npc
 	public static final int KARTIA_RESEARCH = 33647;
-	
 	// mobs
 	public static final int FILINE = 19254;
 	

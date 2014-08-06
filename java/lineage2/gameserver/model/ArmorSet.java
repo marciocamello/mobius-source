@@ -15,7 +15,6 @@ package lineage2.gameserver.model;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
-
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.tables.SkillTable;
@@ -28,41 +27,14 @@ import gnu.trove.set.hash.TIntHashSet;
  */
 public final class ArmorSet
 {
-	/**
-	 * Field _chests.
-	 */
 	private final TIntHashSet _chests = new TIntHashSet();
-	/**
-	 * Field _legs.
-	 */
 	private final TIntHashSet _legs = new TIntHashSet();
-	/**
-	 * Field _head.
-	 */
 	private final TIntHashSet _head = new TIntHashSet();
-	/**
-	 * Field _gloves.
-	 */
 	private final TIntHashSet _gloves = new TIntHashSet();
-	/**
-	 * Field _feet.
-	 */
 	private final TIntHashSet _feet = new TIntHashSet();
-	/**
-	 * Field _shield.
-	 */
 	private final TIntHashSet _shield = new TIntHashSet();
-	/**
-	 * Field _skills.
-	 */
 	private final TIntObjectHashMap<List<Skill>> _skills = new TIntObjectHashMap<>();
-	/**
-	 * Field _shieldSkills.
-	 */
 	private final List<Skill> _shieldSkills = new ArrayList<>();
-	/**
-	 * Field _enchant6skills.
-	 */
 	private final List<Skill> _enchant6skills = new ArrayList<>();
 	
 	/**

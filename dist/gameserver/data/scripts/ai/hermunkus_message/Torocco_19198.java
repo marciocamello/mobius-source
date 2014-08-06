@@ -13,7 +13,6 @@
 package ai.hermunkus_message;
 
 import java.util.List;
-
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.entity.Reflection;
@@ -27,9 +26,6 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class Torocco_19198 extends Dwarvs
 {
-	/**
-	 * Field ROGIN_ID. (value is 19193)
-	 */
 	private static final int ROGIN_ID = 19193;
 	
 	/**

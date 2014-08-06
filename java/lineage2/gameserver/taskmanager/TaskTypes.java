@@ -18,32 +18,11 @@ package lineage2.gameserver.taskmanager;
  */
 public enum TaskTypes
 {
-	/**
-	 * Field TYPE_NONE.
-	 */
 	TYPE_NONE,
-	/**
-	 * Field TYPE_TIME.
-	 */
 	TYPE_TIME,
-	/**
-	 * Field TYPE_SHEDULED.
-	 */
 	TYPE_SHEDULED,
-	/**
-	 * Field TYPE_FIXED_SHEDULED.
-	 */
 	TYPE_FIXED_SHEDULED,
-	/**
-	 * Field TYPE_GLOBAL_TASK.
-	 */
 	TYPE_GLOBAL_TASK,
-	/**
-	 * Field TYPE_STARTUP.
-	 */
 	TYPE_STARTUP,
-	/**
-	 * Field TYPE_SPECIAL.
-	 */
 	TYPE_SPECIAL
 }

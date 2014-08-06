@@ -18,32 +18,11 @@ package lineage2.gameserver.model.items.etcitems;
  */
 public enum LifeStoneGrade
 {
-	/**
-	 * Field LOW.
-	 */
 	LOW,
-	/**
-	 * Field MIDDLE.
-	 */
 	MIDDLE,
-	/**
-	 * Field HIGHT.
-	 */
 	HIGHT,
-	/**
-	 * Field TOP.
-	 */
 	TOP,
-	/**
-	 * Field ACCESSORY.
-	 */
 	ACCESSORY,
-	/**
-	 * Field FORGOTTEN.
-	 */
 	FORGOTTEN,
-	/**
-	 * Field UNDERWEAR.
-	 */
 	UNDERWEAR;
 }

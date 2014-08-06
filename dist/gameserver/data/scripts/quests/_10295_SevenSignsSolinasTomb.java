@@ -22,7 +22,6 @@ import lineage2.gameserver.network.serverpackets.EventTrigger;
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -41,18 +40,14 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 	private static final int AltarofHallowsSword = 32858;
 	private static final int AltarofHallowsBook = 32859;
 	private static final int AltarofHallowsShield = 32860;
-	
 	private static final int TeleportControlDevice2 = 32837;
 	private static final int TeleportControlDevice3 = 32842;
 	private static final int TomboftheSaintess = 32843;
-	
 	private static final int ScrollofAbstinence = 17228;
 	private static final int ShieldofSacrifice = 17229;
 	private static final int SwordofHolySpirit = 17230;
 	private static final int StaffofBlessing = 17231;
-	
 	private static final int Solina = 32793;
-	
 	private static final int[] SolinaGuardians =
 	{
 		18952,
@@ -67,7 +62,6 @@ public class _10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 		18958,
 		18959
 	};
-	
 	static
 	{
 		new Location(55672, -252120, -6760);

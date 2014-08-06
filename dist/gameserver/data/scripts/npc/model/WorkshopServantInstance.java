@@ -36,9 +36,6 @@ public final class WorkshopServantInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field medals.
-	 */
 	private static final int[] medals =
 	{
 		10427,
@@ -47,9 +44,6 @@ public final class WorkshopServantInstance extends NpcInstance
 		10430,
 		10431,
 	};
-	/**
-	 * Field phrases.
-	 */
 	private static final String[] phrases =
 	{
 		"We won't let you go with this knowledge! Die!",

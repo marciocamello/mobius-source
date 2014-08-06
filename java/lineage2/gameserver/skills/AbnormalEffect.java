@@ -53,7 +53,6 @@ public enum AbnormalEffect
 	REAL_TARGET("realtarget", 0x20000000, 30),
 	DEATH_MARK("deathmark", 0x40000000, 31),
 	SKULL_FEAR("soulshock", 0x80000000, 32),
-	
 	// special effects
 	S_INVINCIBLE("invul2", 0x000001, 33),
 	S_AIR_STUN("airstun", 0x000002, 34),
@@ -95,7 +94,6 @@ public enum AbnormalEffect
 	TALISMAN_POWER3("talismanpower3", 0x300000, 74),
 	TALISMAN_POWER4("talismanpower4", 0x400000, 75),
 	TALISMAN_POWER5("talismanpower5", 0x500000, 76),
-	
 	// event effects
 	E_AFRO_1("afrobaguette1", 0x000001, 0),
 	E_AFRO_2("afrobaguette2", 0x000002, 0),
@@ -107,7 +105,6 @@ public enum AbnormalEffect
 	E_VESPER_3("vesper3", 0x000080, 0),
 	HUNTING_BONUS("hunting_bonus", 0x80000, 0),
 	AVE_ADVENT_BLESSING("ave_advent_blessing", 0x080000, 0); // Add NevitAdvent by pmq
-	
 	private final int _mask;
 	private final String _name;
 	private final int _id;

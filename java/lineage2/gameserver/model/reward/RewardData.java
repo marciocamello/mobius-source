@@ -14,14 +14,12 @@ package lineage2.gameserver.model.reward;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.math.SafeMath;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.templates.item.ItemTemplate;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -30,29 +28,11 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public class RewardData implements Cloneable
 {
-	/**
-	 * Field _item.
-	 */
 	private final ItemTemplate _item;
-	/**
-	 * Field _notRate.
-	 */
 	private boolean _notRate = false;
-	/**
-	 * Field _mindrop.
-	 */
 	private long _mindrop;
-	/**
-	 * Field _maxdrop.
-	 */
 	private long _maxdrop;
-	/**
-	 * Field _chance.
-	 */
 	private double _chance;
-	/**
-	 * Field _chanceInGroup.
-	 */
 	private double _chanceInGroup;
 	
 	/**

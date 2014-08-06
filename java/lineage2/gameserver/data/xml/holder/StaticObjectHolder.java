@@ -15,7 +15,6 @@ package lineage2.gameserver.data.xml.holder;
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.model.instances.StaticObjectInstance;
 import lineage2.gameserver.templates.StaticObjectTemplate;
-
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 
@@ -25,17 +24,8 @@ import org.napile.primitive.maps.impl.HashIntObjectMap;
  */
 public final class StaticObjectHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final StaticObjectHolder _instance = new StaticObjectHolder();
-	/**
-	 * Field _templates.
-	 */
 	private final IntObjectMap<StaticObjectTemplate> _templates = new HashIntObjectMap<>();
-	/**
-	 * Field _spawned.
-	 */
 	private final IntObjectMap<StaticObjectInstance> _spawned = new HashIntObjectMap<>();
 	
 	/**

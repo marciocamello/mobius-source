@@ -20,7 +20,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
-
 import lineage2.commons.collections.GArray;
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.model.Player;
@@ -39,9 +38,6 @@ import lineage2.gameserver.model.pledge.SubUnit;
  */
 public final class SkillAcquireHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final SkillAcquireHolder _instance = new SkillAcquireHolder();
 	
 	/**
@@ -53,51 +49,16 @@ public final class SkillAcquireHolder extends AbstractHolder
 		return _instance;
 	}
 	
-	/**
-	 * Field _AwakenClassKeepSkills.
-	 */
 	private static final List<Integer> _AwakenGeneralKeepSkills = new ArrayList<>();
-	
-	/**
-	 * Field _AwakenClassKeepSkills.
-	 */
 	private static final HashMap<Integer, HashMap<Integer, List<Integer>>> _AwakenClassKeepSkills = new HashMap<>();
-	
-	/**
-	 * Field _normalSkillTree.
-	 */
 	private static final HashMap<Integer, List<SkillLearn>> _normalSkillTree = new HashMap<>();
-	/**
-	 * Field _transferSkillTree.
-	 */
 	private static final HashMap<Integer, List<SkillLearn>> _transferSkillTree = new HashMap<>();
-	/**
-	 * Field _fishingSkillTree.
-	 */
 	private static final HashMap<Integer, List<SkillLearn>> _fishingSkillTree = new HashMap<>();
-	/**
-	 * Field _transformationSkillTree.
-	 */
 	private static final HashMap<Integer, List<SkillLearn>> _transformationSkillTree = new HashMap<>();
-	/**
-	 * Field _certificationSkillTree.
-	 */
 	private static final GArray<SkillLearn> _certificationSkillTree = new GArray<>();
-	/**
-	 * Field _certificationSkillTree.
-	 */
 	private static final GArray<SkillLearn> _dualCertificationSkillTree = new GArray<>();
-	/**
-	 * Field _collectionSkillTree.
-	 */
 	private static final GArray<SkillLearn> _collectionSkillTree = new GArray<>();
-	/**
-	 * Field _pledgeSkillTree.
-	 */
 	private static final GArray<SkillLearn> _pledgeSkillTree = new GArray<>();
-	/**
-	 * Field _subUnitSkillTree.
-	 */
 	private static final GArray<SkillLearn> _subUnitSkillTree = new GArray<>();
 	
 	/**
@@ -897,7 +858,6 @@ public final class SkillAcquireHolder extends AbstractHolder
 	 * Method addSkillsToMaintain.
 	 * @param map
 	 */
-	
 	public void addSkillsToMaintain(HashMap<Integer, HashMap<Integer, List<Integer>>> map)
 	{
 		int ClassID;
@@ -933,7 +893,6 @@ public final class SkillAcquireHolder extends AbstractHolder
 	 * Method addClassToRemove.
 	 * @param skillList
 	 */
-	
 	public void addSkillsToMaintain(List<Integer> skillList)
 	{
 		_AwakenGeneralKeepSkills.addAll(skillList);

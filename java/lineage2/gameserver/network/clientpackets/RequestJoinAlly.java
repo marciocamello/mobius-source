@@ -29,9 +29,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class RequestJoinAlly extends L2GameClientPacket
 {
-	/**
-	 * Field _objectId.
-	 */
 	private int _objectId;
 	
 	/**

@@ -25,9 +25,6 @@ import lineage2.gameserver.stats.Env;
  */
 public final class EffectInvisible extends Effect
 {
-	/**
-	 * Field _invisibleType.
-	 */
 	private InvisibleType _invisibleType = InvisibleType.NONE;
 	
 	/**

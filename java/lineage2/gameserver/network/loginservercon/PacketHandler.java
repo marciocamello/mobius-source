@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.loginservercon;
 
 import java.nio.ByteBuffer;
-
 import lineage2.gameserver.network.loginservercon.lspackets.AuthResponse;
 import lineage2.gameserver.network.loginservercon.lspackets.ChangePasswordResponse;
 import lineage2.gameserver.network.loginservercon.lspackets.GetAccountInfo;
@@ -21,7 +20,6 @@ import lineage2.gameserver.network.loginservercon.lspackets.KickPlayer;
 import lineage2.gameserver.network.loginservercon.lspackets.LoginServerFail;
 import lineage2.gameserver.network.loginservercon.lspackets.PingRequest;
 import lineage2.gameserver.network.loginservercon.lspackets.PlayerAuthResponse;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,9 +29,6 @@ import org.slf4j.LoggerFactory;
  */
 public class PacketHandler
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(PacketHandler.class);
 	
 	/**

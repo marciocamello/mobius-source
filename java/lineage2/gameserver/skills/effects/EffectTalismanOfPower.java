@@ -22,7 +22,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class EffectTalismanOfPower extends Effect
 {
-	
 	public EffectTalismanOfPower(Env env, EffectTemplate template)
 	{
 		super(env, template);

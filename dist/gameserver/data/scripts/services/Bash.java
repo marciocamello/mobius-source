@@ -21,9 +21,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.handler.admincommands.AdminCommandHandler;
@@ -33,7 +31,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Files;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -45,9 +42,6 @@ import org.w3c.dom.Node;
  */
 public final class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Bash.class);
 	
 	/**
@@ -55,31 +49,13 @@ public final class Bash extends Functions implements IAdminCommandHandler, Scrip
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_bashreload.
-		 */
 		admin_bashreload
 	}
 	
-	/**
-	 * Field wrongPage.
-	 */
 	private static final String wrongPage = "scripts/services/Bash-wrongPage.htm";
-	/**
-	 * Field notPage.
-	 */
 	private static final String notPage = "scripts/services/Bash-notPage.htm";
-	/**
-	 * Field readPage.
-	 */
 	private static final String readPage = "scripts/services/Bash-readPage.htm";
-	/**
-	 * Field xmlData.
-	 */
 	private static final String xmlData = Config.DATAPACK_ROOT + "/data/bash.xml";
-	/**
-	 * Field quotes.
-	 */
 	private static final List<String> quotes = new ArrayList<>();
 	
 	/**

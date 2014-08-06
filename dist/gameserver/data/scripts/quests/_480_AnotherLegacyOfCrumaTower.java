@@ -28,10 +28,8 @@ public class _480_AnotherLegacyOfCrumaTower extends Quest implements ScriptFile
 	public static final int LILEJ = 33155;
 	public static final int LINKENS = 33163;
 	public static final int STRANGE_MECHANIC_CR = 33158;
-	
 	public static final int MARTES_NPC = 33292; // martes NPC
 	public static final int MARTES_RB = 25829; // martes RB
-	
 	// items
 	public static final int TRESURE_TOOL = 17619;
 	public static final int MARTES_CORE = 17728;

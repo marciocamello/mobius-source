@@ -28,13 +28,7 @@ import gnu.trove.map.hash.TObjectIntHashMap;
  */
 public final class EffectCurseOfLifeFlow extends Effect
 {
-	/**
-	 * Field _listener.
-	 */
 	private CurseOfLifeFlowListener _listener;
-	/**
-	 * Field _damageList.
-	 */
 	final TObjectIntHashMap<HardReference<? extends Creature>> _damageList = new TObjectIntHashMap<>();
 	
 	/**

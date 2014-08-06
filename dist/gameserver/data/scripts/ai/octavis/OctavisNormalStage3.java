@@ -34,38 +34,29 @@ public final class OctavisNormalStage3 extends Fighter
 	private static final int Skill_EternalBlizzard = 6274;
 	private long _eternalblizzardReuseTimer = 0;
 	private final int _eternalblizzardReuseDelay = 60;
-	
 	private static final int Skill_IceBall = 6278;
 	private long _iceballReuseTimer = 0;
 	private final int _iceballReuseDelay = 10;
-	
 	private static final int Skill_SummonElemental = 6277;
 	private long _summonReuseTimer = 0;
 	private final int _summonReuseDelay = 50;
-	
 	private static final int Skill_SelfNova = 6279;
 	private long _selfnovaReuseTimer = 0;
 	private final int _selfnovaReuseDelay = 60;
-	
 	private static final int Skill_DeathSentence = 6280;
 	private long _deathsentenceReuseTimer = 0;
 	private final int _deathsentenceReuseDelay = 40;
-	
 	private static final int Skill_ReflectMagic = 6282;
 	private long _reflectReuseTimer = 0;
 	private final int _reflectReuseDelay = 40;
-	
 	private static final int Skill_IceStorm = 6283;
 	private long _icestormReuseTimer = 0;
 	private final int _icestormReuseDelay = 50;
-	
 	private static final int Skill_Anger = 6285;
 	private long _angerReuseTimer = 0;
 	private final int _angerReuseDelay = 30;
-	
 	private long _dispelTimer = 0;
 	private final int _dispelReuseDelay = 7;
-	
 	private long _idleDelay = 0;
 	private long _lastFactionNotifyTime = 0;
 	

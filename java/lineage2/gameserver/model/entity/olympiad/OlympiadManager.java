@@ -16,11 +16,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,13 +28,7 @@ import org.slf4j.LoggerFactory;
  */
 public class OlympiadManager extends RunnableImpl
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(OlympiadManager.class);
-	/**
-	 * Field _olympiadInstances.
-	 */
 	private final Map<Integer, OlympiadGame> _olympiadInstances = new ConcurrentHashMap<>();
 	
 	/**

@@ -16,11 +16,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.concurrent.atomic.AtomicLong;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.instancemanager.ServerVariables;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,37 +28,13 @@ import org.slf4j.LoggerFactory;
  */
 public class GameStats
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(GameStats.class);
-	/**
-	 * Field _updatePlayerBase.
-	 */
 	private static final AtomicLong _updatePlayerBase = new AtomicLong(0L);
-	/**
-	 * Field _playerEnterGameCounter.
-	 */
 	private static final AtomicLong _playerEnterGameCounter = new AtomicLong(0L);
-	/**
-	 * Field _taxSum.
-	 */
 	private static final AtomicLong _taxSum = new AtomicLong(0L);
-	/**
-	 * Field _taxLastUpdate.
-	 */
 	private static long _taxLastUpdate;
-	/**
-	 * Field _rouletteSum.
-	 */
 	private static final AtomicLong _rouletteSum = new AtomicLong(0L);
-	/**
-	 * Field _rouletteLastUpdate.
-	 */
 	private static long _rouletteLastUpdate;
-	/**
-	 * Field _adenaSum.
-	 */
 	private static final AtomicLong _adenaSum = new AtomicLong(0L);
 	static
 	{

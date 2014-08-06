@@ -26,7 +26,6 @@ public class _756_TopQualityPetra extends Quest implements ScriptFile
 {
 	private final int AKU_MARK = 34910;
 	private final int TOP_QUALITY_PETRA = 35703;
-	
 	private final int AKU = 33671;
 	
 	public _756_TopQualityPetra()

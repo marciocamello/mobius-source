@@ -22,7 +22,6 @@ import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
 import lineage2.commons.listener.Listener;
 import lineage2.commons.listener.ListenerList;
 import lineage2.commons.threading.RunnableImpl;
@@ -56,14 +55,12 @@ import lineage2.gameserver.templates.ZoneTemplate;
 import lineage2.gameserver.templates.spawn.SpawnTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.NpcUtils;
-
 import org.apache.commons.lang3.StringUtils;
 import org.napile.primitive.Containers;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import gnu.trove.set.hash.TIntHashSet;
 
 /**
@@ -92,106 +89,31 @@ public class Reflection
 		}
 	}
 	
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(Reflection.class);
-	/**
-	 * Field _nextId.
-	 */
 	private final static AtomicInteger _nextId = new AtomicInteger();
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _name.
-	 */
 	private String _name = StringUtils.EMPTY;
-	/**
-	 * Field _instance.
-	 */
 	private InstantZone _instance;
-	/**
-	 * Field _geoIndex.
-	 */
 	private int _geoIndex;
-	/**
-	 * Field _resetLoc.
-	 */
 	private Location _resetLoc;
-	/**
-	 * Field _returnLoc.
-	 */
 	private Location _returnLoc;
-	/**
-	 * Field _teleportLoc.
-	 */
 	private Location _teleportLoc;
-	/**
-	 * Field _spawns.
-	 */
 	protected final List<Spawner> _spawns = new ArrayList<>();
-	/**
-	 * Field _objects.
-	 */
 	public final List<GameObject> _objects = new ArrayList<>();
-	/**
-	 * Field _doors.
-	 */
 	protected IntObjectMap<DoorInstance> _doors = Containers.emptyIntObjectMap();
-	/**
-	 * Field _zones.
-	 */
 	protected Map<String, Zone> _zones = Collections.emptyMap();
-	/**
-	 * Field _spawners.
-	 */
 	protected Map<String, List<Spawner>> _spawners = Collections.emptyMap();
-	/**
-	 * Field _visitors.
-	 */
 	protected final TIntHashSet _visitors = new TIntHashSet();
-	/**
-	 * Field lock.
-	 */
 	public final Lock lock = new ReentrantLock();
-	/**
-	 * Field _playerCount.
-	 */
 	protected int _playerCount;
-	/**
-	 * Field _party.
-	 */
 	protected Party _party;
-	/**
-	 * Field _commandChannel.
-	 */
 	protected CommandChannel _commandChannel;
-	/**
-	 * Field _collapseIfEmptyTime.
-	 */
 	private int _collapseIfEmptyTime;
-	/**
-	 * Field _isCollapseStarted.
-	 */
 	private boolean _isCollapseStarted;
-	/**
-	 * Field _collapseTask.
-	 */
 	private Future<?> _collapseTask;
-	/**
-	 * Field _collapse1minTask.
-	 */
 	private Future<?> _collapse1minTask;
-	/**
-	 * Field _hiddencollapseTask.
-	 */
 	private Future<?> _hiddencollapseTask;
-	/**
-	 * Field listeners.
-	 */
 	private final ReflectionListenerList listeners = new ReflectionListenerList();
 	
 	/**

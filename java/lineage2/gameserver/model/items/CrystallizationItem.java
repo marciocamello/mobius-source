@@ -18,17 +18,8 @@ package lineage2.gameserver.model.items;
  */
 public class CrystallizationItem
 {
-	/**
-	 * Field _itemId.
-	 */
 	private final int _itemId;
-	/**
-	 * Field _count.
-	 */
 	private final long _count;
-	/**
-	 * Field _chance.
-	 */
 	private final double _chance;
 	
 	/**

@@ -20,13 +20,10 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.TreeMap;
-
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.ProductItem;
 import lineage2.gameserver.model.ProductItemComponent;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -40,17 +37,8 @@ public class ProductHolder
 {
 	public static int MAX_ITEMS_IN_RECENT_LIST;
 	public static String RECENT_PRDCT_LIST_VAR;
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(ProductHolder.class.getName());
-	/**
-	 * Field _itemsList.
-	 */
 	TreeMap<Integer, ProductItem> _itemsList;
-	/**
-	 * Field _instance.
-	 */
 	private static ProductHolder _instance = new ProductHolder();
 	
 	/**

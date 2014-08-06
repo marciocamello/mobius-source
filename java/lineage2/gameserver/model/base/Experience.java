@@ -20,9 +20,6 @@ import lineage2.gameserver.Config;
  */
 public class Experience
 {
-	/**
-	 * Field LEVEL.
-	 */
 	public final static long LEVEL[] =
 	{
 		-1L,

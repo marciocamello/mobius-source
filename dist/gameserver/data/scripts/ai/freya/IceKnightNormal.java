@@ -13,7 +13,6 @@
 package ai.freya;
 
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.ai.CtrlEvent;
@@ -29,13 +28,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public final class IceKnightNormal extends Fighter
 {
-	/**
-	 * Field iced.
-	 */
 	boolean iced;
-	/**
-	 * Field task.
-	 */
 	private ScheduledFuture<?> task;
 	
 	/**

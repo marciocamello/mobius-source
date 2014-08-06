@@ -26,9 +26,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class OlympiadStat implements IUserCommandHandler
 {
-	/**
-	 * Field COMMAND_IDS.
-	 */
 	private static final int[] COMMAND_IDS =
 	{
 		109

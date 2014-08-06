@@ -29,13 +29,7 @@ public class AdminGmChat implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_gmchat.
-		 */
 		admin_gmchat,
-		/**
-		 * Field admin_snoop.
-		 */
 		admin_snoop
 	}
 	

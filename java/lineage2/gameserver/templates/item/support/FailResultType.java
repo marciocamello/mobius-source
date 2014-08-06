@@ -18,16 +18,7 @@ package lineage2.gameserver.templates.item.support;
  */
 public enum FailResultType
 {
-	/**
-	 * Field NOTHING.
-	 */
 	NOTHING,
-	/**
-	 * Field CRYSTALS.
-	 */
 	CRYSTALS,
-	/**
-	 * Field DROP_ENCHANT.
-	 */
 	DROP_ENCHANT
 }

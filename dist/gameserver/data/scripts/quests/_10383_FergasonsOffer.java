@@ -16,7 +16,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -27,11 +26,9 @@ import org.apache.commons.lang3.ArrayUtils;
 public class _10383_FergasonsOffer extends Quest implements ScriptFile
 {
 	private final static int UNSTABLE_PETRA = 34958;
-	
 	private final static int SIZRAK = 33669;
 	private final static int FERGASON = 33681;
 	private final static int AKU = 33671;
-	
 	private final static int[] COUCH =
 	{
 		23233,

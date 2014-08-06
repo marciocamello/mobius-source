@@ -14,7 +14,6 @@ package lineage2.gameserver.handler.admincommands.impl;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-
 import lineage2.commons.lang.StatsUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.GameTimeController;
@@ -23,7 +22,6 @@ import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
-
 import org.apache.commons.lang3.math.NumberUtils;
 
 /**
@@ -37,17 +35,8 @@ public class AdminShutdown implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_server_shutdown.
-		 */
 		admin_server_shutdown,
-		/**
-		 * Field admin_server_restart.
-		 */
 		admin_server_restart,
-		/**
-		 * Field admin_server_abort.
-		 */
 		admin_server_abort
 	}
 	

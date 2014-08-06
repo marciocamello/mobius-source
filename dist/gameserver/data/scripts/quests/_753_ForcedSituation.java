@@ -27,9 +27,7 @@ public class _753_ForcedSituation extends Quest implements ScriptFile
 	private static final int KEY = 36054;
 	// reward items
 	private static final int SCROLL = 36082;
-	
 	private static final int BERNA = 33796;
-	
 	private static final String GOLEM_KILL = "Golem_kill";
 	
 	public _753_ForcedSituation()

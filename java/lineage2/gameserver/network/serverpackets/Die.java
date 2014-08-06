@@ -14,7 +14,6 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.RestartType;
@@ -27,7 +26,6 @@ public class Die extends L2GameServerPacket
 	private final int _objectId;
 	private final boolean _fake;
 	private boolean _sweepable;
-	
 	private final Map<RestartType, Boolean> _types = new HashMap<>(RestartType.VALUES.length);
 	
 	public Die(Creature cha)

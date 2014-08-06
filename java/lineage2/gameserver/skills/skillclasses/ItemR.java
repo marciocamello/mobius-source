@@ -13,7 +13,6 @@
 package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
@@ -27,21 +26,9 @@ import lineage2.gameserver.templates.StatsSet;
  */
 public class ItemR extends Skill
 {
-	/**
-	 * Field _item_r1.
-	 */
 	private final int _item_r1;
-	/**
-	 * Field _item_r2.
-	 */
 	private final int _item_r2;
-	/**
-	 * Field _item_r3.
-	 */
 	private final int _item_r3;
-	/**
-	 * Field _item_del.
-	 */
 	private final int _item_del;
 	
 	/**

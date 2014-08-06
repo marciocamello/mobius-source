@@ -25,7 +25,6 @@ public class _10380_TheExecutionersExecution extends Quest implements ScriptFile
 	// NPC's
 	private static final int ENDRIGO = 30632;
 	private static final int GUILLOTINE_OF_DEATH = 25892;
-	
 	// Item's
 	private static final int GLORIOUS_T_SHIRT = 35291;
 	

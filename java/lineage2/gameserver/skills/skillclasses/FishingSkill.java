@@ -13,7 +13,6 @@
 package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
-
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.cache.Msg;

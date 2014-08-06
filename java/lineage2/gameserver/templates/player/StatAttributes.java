@@ -18,29 +18,11 @@ package lineage2.gameserver.templates.player;
  */
 public class StatAttributes
 {
-	/**
-	 * Field _int.
-	 */
 	private int _int = 0;
-	/**
-	 * Field _str.
-	 */
 	private int _str = 0;
-	/**
-	 * Field _con.
-	 */
 	private int _con = 0;
-	/**
-	 * Field _men.
-	 */
 	private int _men = 0;
-	/**
-	 * Field _dex.
-	 */
 	private int _dex = 0;
-	/**
-	 * Field _wit.
-	 */
 	private int _wit = 0;
 	
 	/**

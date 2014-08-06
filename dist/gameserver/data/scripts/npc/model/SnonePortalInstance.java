@@ -22,7 +22,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
 /**
  * @author Awakeninger
  */
-
 public final class SnonePortalInstance extends NpcInstance
 {
 	/**

@@ -21,29 +21,11 @@ import lineage2.gameserver.model.items.ItemAttributes;
  */
 public class MultiSellIngredient implements Cloneable
 {
-	/**
-	 * Field _itemId.
-	 */
 	private int _itemId;
-	/**
-	 * Field _itemCount.
-	 */
 	private long _itemCount;
-	/**
-	 * Field _itemEnchant.
-	 */
 	private int _itemEnchant;
-	/**
-	 * Field _chance.
-	 */
 	int _chance;
-	/**
-	 * Field _itemAttributes.
-	 */
 	private ItemAttributes _itemAttributes;
-	/**
-	 * Field _mantainIngredient.
-	 */
 	private boolean _mantainIngredient;
 	
 	/**

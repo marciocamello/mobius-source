@@ -13,7 +13,6 @@
 package handler.items;
 
 import java.util.List;
-
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
@@ -33,9 +32,6 @@ import gnu.trove.set.hash.TIntHashSet;
  */
 public final class Spellbooks extends ScriptItemHandler
 {
-	/**
-	 * Field _itemIds.
-	 */
 	private int[] _itemIds = null;
 	
 	/**

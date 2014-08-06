@@ -24,9 +24,6 @@ import lineage2.gameserver.network.serverpackets.ExResponseShowStepTwo;
  */
 public class RequestExShowStepTwo extends L2GameClientPacket
 {
-	/**
-	 * Field _petitionGroupId.
-	 */
 	private int _petitionGroupId;
 	
 	/**

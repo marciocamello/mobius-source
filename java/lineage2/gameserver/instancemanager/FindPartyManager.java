@@ -21,13 +21,7 @@ import lineage2.gameserver.model.Player;
  */
 public class FindPartyManager
 {
-	/**
-	 * Field lookingForParty.
-	 */
 	FastList<Player> lookingForParty;
-	/**
-	 * Field wannaToChangeThisPlayer.
-	 */
 	FastList<Player> wannaToChangeThisPlayer;
 	
 	/**
@@ -168,9 +162,6 @@ public class FindPartyManager
 		return null;
 	}
 	
-	/**
-	 * Field _instance.
-	 */
 	private static final FindPartyManager _instance = new FindPartyManager();
 	
 	/**

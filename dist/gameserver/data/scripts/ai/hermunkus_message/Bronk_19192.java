@@ -13,9 +13,7 @@
 package ai.hermunkus_message;
 
 import instances.MemoryOfDisaster;
-
 import java.util.List;
-
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.entity.Reflection;
@@ -29,9 +27,6 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class Bronk_19192 extends Dwarvs
 {
-	/**
-	 * Field TOROCCO_ID. (value is 19198)
-	 */
 	private static final int TOROCCO_ID = 19198;
 	
 	/**

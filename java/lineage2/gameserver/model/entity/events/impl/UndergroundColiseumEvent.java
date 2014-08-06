@@ -15,7 +15,6 @@ package lineage2.gameserver.model.entity.events.impl;
 import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.time.cron.SchedulingPattern;
 import lineage2.gameserver.model.Player;
@@ -27,25 +26,10 @@ import lineage2.gameserver.model.entity.events.GlobalEvent;
  */
 public class UndergroundColiseumEvent extends GlobalEvent
 {
-	/**
-	 * Field DATE_PATTERN.
-	 */
 	private static final SchedulingPattern DATE_PATTERN = new SchedulingPattern("0 21 * * mon,sat,sun");
-	/**
-	 * Field _startCalendar.
-	 */
 	private final Calendar _startCalendar = Calendar.getInstance();
-	/**
-	 * Field _registeredPlayers.
-	 */
 	private final List<Player> _registeredPlayers = new CopyOnWriteArrayList<>();
-	/**
-	 * Field _minLevel.
-	 */
 	private final int _minLevel;
-	/**
-	 * Field _maxLevel.
-	 */
 	private final int _maxLevel;
 	
 	/**

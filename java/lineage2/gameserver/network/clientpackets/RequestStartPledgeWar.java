@@ -24,9 +24,6 @@ import lineage2.gameserver.tables.ClanTable;
  */
 public class RequestStartPledgeWar extends L2GameClientPacket
 {
-	/**
-	 * Field _pledgeName.
-	 */
 	private String _pledgeName;
 	
 	/**

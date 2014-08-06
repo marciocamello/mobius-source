@@ -25,7 +25,6 @@ import lineage2.gameserver.model.items.Warehouse.WarehouseType;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Log;
-
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,21 +35,9 @@ import org.slf4j.LoggerFactory;
  */
 public class SendWareHouseWithDrawList extends L2GameClientPacket
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(SendWareHouseWithDrawList.class);
-	/**
-	 * Field _count.
-	 */
 	private int _count;
-	/**
-	 * Field _items.
-	 */
 	private int[] _items;
-	/**
-	 * Field _itemQ.
-	 */
 	private long[] _itemQ;
 	
 	/**

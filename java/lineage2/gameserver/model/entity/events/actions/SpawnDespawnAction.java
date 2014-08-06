@@ -21,13 +21,7 @@ import lineage2.gameserver.model.entity.events.GlobalEvent;
  */
 public class SpawnDespawnAction implements EventAction
 {
-	/**
-	 * Field _spawn.
-	 */
 	private final boolean _spawn;
-	/**
-	 * Field _name.
-	 */
 	private final String _name;
 	
 	/**

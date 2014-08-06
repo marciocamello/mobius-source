@@ -25,9 +25,6 @@ import lineage2.gameserver.skills.EffectType;
  */
 public class RequestDispel extends L2GameClientPacket
 {
-	/**
-	 * Field _level. Field _id. Field _objectId.
-	 */
 	private int _objectId, _id, _level;
 	
 	/**

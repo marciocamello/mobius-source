@@ -14,7 +14,6 @@ package quests;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Player;

@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
@@ -37,7 +36,6 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.Util;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -46,29 +44,11 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public class RequestExSendPost extends L2GameClientPacket
 {
-	/**
-	 * Field _messageType.
-	 */
 	private int _messageType;
-	/**
-	 * Field _body. Field _topic. Field _recieverName.
-	 */
 	private String _recieverName, _topic, _body;
-	/**
-	 * Field _count.
-	 */
 	private int _count;
-	/**
-	 * Field _items.
-	 */
 	private int[] _items;
-	/**
-	 * Field _itemQ.
-	 */
 	private long[] _itemQ;
-	/**
-	 * Field _price.
-	 */
 	private long _price;
 	
 	/**

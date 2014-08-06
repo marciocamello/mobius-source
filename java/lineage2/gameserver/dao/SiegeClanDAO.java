@@ -18,13 +18,11 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.entity.events.objects.SiegeClanObject;
 import lineage2.gameserver.model.entity.residence.Residence;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,33 +32,12 @@ import org.slf4j.LoggerFactory;
  */
 public class SiegeClanDAO
 {
-	/**
-	 * Field SELECT_SQL_QUERY. (value is ""SELECT clan_id, param, date FROM siege_clans WHERE residence_id=? AND type=? ORDER BY date"")
-	 */
 	public static final String SELECT_SQL_QUERY = "SELECT clan_id, param, date FROM siege_clans WHERE residence_id=? AND type=? ORDER BY date";
-	/**
-	 * Field INSERT_SQL_QUERY. (value is ""INSERT INTO siege_clans(residence_id, clan_id, param, type, date) VALUES (?, ?, ?, ?, ?)"")
-	 */
 	public static final String INSERT_SQL_QUERY = "INSERT INTO siege_clans(residence_id, clan_id, param, type, date) VALUES (?, ?, ?, ?, ?)";
-	/**
-	 * Field UPDATE_SQL_QUERY. (value is ""UPDATE siege_clans SET type=?, param=? WHERE residence_id=? AND clan_id=?"")
-	 */
 	public static final String UPDATE_SQL_QUERY = "UPDATE siege_clans SET type=?, param=? WHERE residence_id=? AND clan_id=?";
-	/**
-	 * Field DELETE_SQL_QUERY. (value is ""DELETE FROM siege_clans WHERE residence_id=? AND clan_id=? AND type=?"")
-	 */
 	public static final String DELETE_SQL_QUERY = "DELETE FROM siege_clans WHERE residence_id=? AND clan_id=? AND type=?";
-	/**
-	 * Field DELETE_SQL_QUERY2. (value is ""DELETE FROM siege_clans WHERE residence_id=?"")
-	 */
 	public static final String DELETE_SQL_QUERY2 = "DELETE FROM siege_clans WHERE residence_id=?";
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(SiegeClanDAO.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final SiegeClanDAO _instance = new SiegeClanDAO();
 	
 	/**

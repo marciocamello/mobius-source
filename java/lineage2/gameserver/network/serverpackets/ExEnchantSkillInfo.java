@@ -14,18 +14,14 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.model.base.EnchantSkillLearn;
 import lineage2.gameserver.tables.SkillTreeTable;
 
 public class ExEnchantSkillInfo extends L2GameServerPacket
 {
 	private final List<Integer> _routes;
-	
 	private final int _id, _level;
-	
 	private int _canAdd;
-	
 	private int canDecrease;
 	
 	public ExEnchantSkillInfo(int id, int level)

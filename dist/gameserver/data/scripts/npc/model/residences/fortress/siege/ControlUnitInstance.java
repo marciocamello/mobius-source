@@ -29,21 +29,9 @@ public final class ControlUnitInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field ITEM_ID. (value is 10014)
-	 */
 	private static final int ITEM_ID = 10014;
-	/**
-	 * Field COND_CAN_OPEN. (value is 0)
-	 */
 	private static final int COND_CAN_OPEN = 0;
-	/**
-	 * Field COND_NO_ITEM. (value is 1)
-	 */
 	private static final int COND_NO_ITEM = 1;
-	/**
-	 * Field COND_POWER. (value is 2)
-	 */
 	private static final int COND_POWER = 2;
 	
 	/**

@@ -27,9 +27,6 @@ import lineage2.gameserver.scripts.Functions;
  */
 public class Help extends Functions implements IVoicedCommandHandler
 {
-	/**
-	 * Field _commandList.
-	 */
 	private final String[] _commandList = new String[]
 	{
 		"help",

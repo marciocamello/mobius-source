@@ -36,17 +36,8 @@ public final class PathfinderInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field INSTANCE_75LVL_ID. (value is 56)
-	 */
 	private static final int INSTANCE_75LVL_ID = 56;
-	/**
-	 * Field _rank.
-	 */
 	private int _rank = -1;
-	/**
-	 * Field _rewarded.
-	 */
 	private boolean _rewarded = false;
 	
 	/**

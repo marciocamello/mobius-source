@@ -18,12 +18,10 @@ import java.util.Calendar;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentSkipListMap;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.TeleportLocation;
 import lineage2.gameserver.tables.SkillTable;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,81 +31,24 @@ import org.slf4j.LoggerFactory;
  */
 public class ResidenceFunction
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(ResidenceFunction.class);
-	/**
-	 * Field TELEPORT. (value is 1)
-	 */
 	public static final int TELEPORT = 1;
-	/**
-	 * Field ITEM_CREATE. (value is 2)
-	 */
 	public static final int ITEM_CREATE = 2;
-	/**
-	 * Field RESTORE_HP. (value is 3)
-	 */
 	public static final int RESTORE_HP = 3;
-	/**
-	 * Field RESTORE_MP. (value is 4)
-	 */
 	public static final int RESTORE_MP = 4;
-	/**
-	 * Field RESTORE_EXP. (value is 5)
-	 */
 	public static final int RESTORE_EXP = 5;
-	/**
-	 * Field SUPPORT. (value is 6)
-	 */
 	public static final int SUPPORT = 6;
-	/**
-	 * Field CURTAIN. (value is 7)
-	 */
 	public static final int CURTAIN = 7;
-	/**
-	 * Field PLATFORM. (value is 8)
-	 */
 	public static final int PLATFORM = 8;
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _type.
-	 */
 	private final int _type;
-	/**
-	 * Field _level.
-	 */
 	private int _level;
-	/**
-	 * Field _endDate.
-	 */
 	private final Calendar _endDate;
-	/**
-	 * Field _inDebt.
-	 */
 	private boolean _inDebt;
-	/**
-	 * Field _active.
-	 */
 	private boolean _active;
-	/**
-	 * Field _leases.
-	 */
 	private final Map<Integer, Integer> _leases = new ConcurrentSkipListMap<>();
-	/**
-	 * Field _teleports.
-	 */
 	private final Map<Integer, TeleportLocation[]> _teleports = new ConcurrentSkipListMap<>();
-	/**
-	 * Field _buylists.
-	 */
 	private final Map<Integer, int[]> _buylists = new ConcurrentSkipListMap<>();
-	/**
-	 * Field _buffs.
-	 */
 	private final Map<Integer, Object[][]> _buffs = new ConcurrentSkipListMap<>();
 	
 	/**
@@ -371,21 +312,9 @@ public class ResidenceFunction
 		return _leases.keySet();
 	}
 	
-	/**
-	 * Field A. (value is """")
-	 */
 	public static final String A = "";
-	/**
-	 * Field W. (value is ""W"")
-	 */
 	public static final String W = "W";
-	/**
-	 * Field M. (value is ""M"")
-	 */
 	public static final String M = "M";
-	/**
-	 * Field buffs_template.
-	 */
 	/*
 	 * 15374 1 Clan Hall - Horn Melody For 30 min., P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%. none none\0 15375 1 Clan Hall - Drum Melody For 30 min., Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 20, Critical Damage during a standard attack + 20%, P. Atk. + 10%, P.
 	 * Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, Debuff Resistance + 10%, and P. Def. when receiving a critical attack. Also, Spd. - 15%, and Critical Damage during a standard attack is increased after receiving a certain amount of damage. none none\0 15376 1

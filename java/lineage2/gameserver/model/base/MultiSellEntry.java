@@ -21,21 +21,9 @@ import java.util.List;
  */
 public class MultiSellEntry
 {
-	/**
-	 * Field _entryId.
-	 */
 	private int _entryId;
-	/**
-	 * Field _ingredients.
-	 */
 	private final List<MultiSellIngredient> _ingredients = new ArrayList<>();
-	/**
-	 * Field _production.
-	 */
 	private final List<MultiSellIngredient> _production = new ArrayList<>();
-	/**
-	 * Field _tax.
-	 */
 	private long _tax;
 	
 	/**

@@ -17,7 +17,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
-
 import org.apache.commons.io.IOUtils;
 
 /**
@@ -26,13 +25,7 @@ import org.apache.commons.io.IOUtils;
  */
 public class ExProperties extends Properties
 {
-	/**
-	 * Field serialVersionUID. (value is 1)
-	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field defaultDelimiter. (value is ""[\\s,;]+"")
-	 */
 	public static final String defaultDelimiter = "[\\s,;]+";
 	
 	/**

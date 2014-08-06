@@ -20,7 +20,6 @@ import lineage2.gameserver.dao.CharacterDAO;
 public class ExBlockRemoveResult extends L2GameServerPacket
 {
 	private static final String _S__FE_ED_EXBLOCKREMOVERESULT = "[S] FE:ED ExBlockRemoveResult";
-	
 	private final int objId;
 	
 	public ExBlockRemoveResult(int OID)
@@ -41,5 +40,4 @@ public class ExBlockRemoveResult extends L2GameServerPacket
 	{
 		return _S__FE_ED_EXBLOCKREMOVERESULT;
 	}
-	
 }

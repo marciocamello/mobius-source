@@ -13,7 +13,6 @@
 package lineage2.gameserver.templates.player;
 
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.base.Sex;
@@ -29,83 +28,26 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public final class PlayerTemplate extends CharTemplate
 {
-	/**
-	 * Field _race.
-	 */
 	private final Race _race;
-	/**
-	 * Field _sex.
-	 */
 	private final Sex _sex;
-	/**
-	 * Field _minAttr.
-	 */
 	private final StatAttributes _minAttr;
-	/**
-	 * Field _maxAttr.
-	 */
 	private final StatAttributes _maxAttr;
-	/**
-	 * Field _baseAttr.
-	 */
 	private final StatAttributes _baseAttr;
-	/**
-	 * Field _armDef.
-	 */
 	private final BaseArmorDefence _armDef;
-	/**
-	 * Field _jewlDef.
-	 */
 	private final BaseJewelDefence _jewlDef;
-	/**
-	 * Field collision_radius.
-	 */
 	@SuppressWarnings("unused")
 	private final double collision_radius;
-	/**
-	 * Field collision_height.
-	 */
 	@SuppressWarnings("unused")
 	private final double collision_height;
-	/**
-	 * Field _baseRandDam.
-	 */
 	private int _baseRandDam = 0;
-	/**
-	 * Field _baseSafeFallHeight.
-	 */
 	private final double _baseSafeFallHeight;
-	/**
-	 * Field _baseBreathBonus.
-	 */
 	private double _baseBreathBonus = 0;
-	/**
-	 * Field _baseFlyRunSpd.
-	 */
 	private double _baseFlyRunSpd = 0;
-	/**
-	 * Field _baseFlyWalkSpd.
-	 */
 	private double _baseFlyWalkSpd = 0;
-	/**
-	 * Field _baseRideRunSpd.
-	 */
 	private double _baseRideRunSpd = 0;
-	/**
-	 * Field _baseRideWalkSpd.
-	 */
 	private double _baseRideWalkSpd = 0;
-	/**
-	 * Field _startLocs.
-	 */
 	private final List<Location> _startLocs;
-	/**
-	 * Field _startItems.
-	 */
 	private final List<StartItem> _startItems;
-	/**
-	 * Field _lvlUpData.
-	 */
 	private final TIntObjectHashMap<LvlUpData> _lvlUpData;
 	
 	/**

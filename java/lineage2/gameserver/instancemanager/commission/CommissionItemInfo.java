@@ -21,33 +21,12 @@ import lineage2.gameserver.templates.item.ExItemType;
  */
 public class CommissionItemInfo
 {
-	/**
-	 * Field auctionId.
-	 */
 	private long auctionId;
-	/**
-	 * Field registeredPrice.
-	 */
 	private long registeredPrice;
-	/**
-	 * Field exItemType.
-	 */
 	private ExItemType exItemType;
-	/**
-	 * Field saleDays.
-	 */
 	private int saleDays;
-	/**
-	 * Field saleEndTime.
-	 */
 	private long saleEndTime;
-	/**
-	 * Field sellerName.
-	 */
 	private String sellerName;
-	/**
-	 * Field item.
-	 */
 	private final ItemInstance item;
 	
 	/**

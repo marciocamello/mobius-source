@@ -15,7 +15,6 @@ package lineage2.gameserver.geodata;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;

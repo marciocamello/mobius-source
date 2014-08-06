@@ -14,7 +14,6 @@ package instances;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -37,7 +36,6 @@ import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -50,32 +48,23 @@ public final class TautiNormal extends Reflection
 	private static final int TAUTI_NORMAL = 29233;
 	private static final int TAUTI_NORMAL_AXE = 29236;
 	private static final int JAHAK = 19287;
-	
 	NpcInstance TAUTI;
 	NpcInstance TAUTI_AXE;
-	
 	private static final String FIRST_ROOM_GROUP = "third_stage_first_room";
 	private static final String SECOND_ROOM_GROUP = "third_stage_second_room";
-	
 	private static final int DOOR_HALL = 15240001;
 	private static final int DOOR_TAUTI_ROOM = 15240002;
-	
 	static final Location TAUTI_SPAWN = new Location(-147264, 212896, -10056);
-	
 	private final ZoneListener _epicZoneListener = new ZoneListener();
 	final DeathListener _deathListener = new DeathListener();
 	final CurrentHpListener _currentHpListener = new CurrentHpListener();
-	
 	boolean _entryLocked = false;
 	boolean _startLaunched = false;
 	boolean _sayLocked = false;
 	boolean _hpListenerLocked = false;
 	private boolean _reenterLocked = false;
-	
 	int _stage = 0;
-	
 	final AtomicInteger raidplayers = new AtomicInteger();
-	
 	private static final int[] KUNDAS =
 	{
 		19262,
@@ -94,7 +83,6 @@ public final class TautiNormal extends Reflection
 		12000,
 		14000
 	};
-	
 	private static final NpcString[] KUNDAS_MESSAGES =
 	{
 		NpcString.EVERYONE_DIE,
@@ -106,7 +94,6 @@ public final class TautiNormal extends Reflection
 		NpcString.I_WILL_PUNISH_YOU_IN_THE_NAME_TAUTI_THE_CRIME_IS_STEALING_THE_PUNISHMENT_IS_DEATH,
 		NpcString.FIGHT_FOR_THE_SAKE_OF_OUR_FUTURE
 	};
-	
 	private static final NpcString[] SOFAS_MESSAGES =
 	{
 		NpcString.FOR_OUR_FRIENDS_AND_FAMILY,
@@ -318,7 +305,6 @@ public final class TautiNormal extends Reflection
 						{
 							player.sendPacket(new ExShowScreenMessage(NpcString.LORD_TAUTI_REVEIVE_MY_PETRA_AND_BE_STRENGTHENED_THEN_DEFEAT_THESE_FEEBLE_WRETCHES, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 						}
-						
 						for (NpcInstance npc : getAllByNpcId(JAHAK, true))
 						{
 							Skill skill1 = SkillTable.getInstance().getInfo(14625, 1);

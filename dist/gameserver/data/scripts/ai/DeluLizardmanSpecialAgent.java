@@ -24,9 +24,6 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class DeluLizardmanSpecialAgent extends Ranger
 {
-	/**
-	 * Field _firstTimeAttacked.
-	 */
 	private boolean _firstTimeAttacked = true;
 	
 	/**

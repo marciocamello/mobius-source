@@ -16,7 +16,6 @@ import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.EventType;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
-
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.TreeIntObjectMap;
 
@@ -26,13 +25,7 @@ import org.napile.primitive.maps.impl.TreeIntObjectMap;
  */
 public final class EventHolder extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final EventHolder _instance = new EventHolder();
-	/**
-	 * Field _events.
-	 */
 	private final IntObjectMap<GlobalEvent> _events = new TreeIntObjectMap<>();
 	
 	/**

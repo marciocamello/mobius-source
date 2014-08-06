@@ -14,13 +14,11 @@ package lineage2.gameserver.templates;
 
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.time.cron.SchedulingPattern;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Territory;
 import lineage2.gameserver.templates.spawn.SpawnTemplate;
 import lineage2.gameserver.utils.Location;
-
 import org.napile.primitive.maps.IntObjectMap;
 
 /**
@@ -34,17 +32,8 @@ public class InstantZone
 	 */
 	public static class DoorInfo
 	{
-		/**
-		 * Field _template.
-		 */
 		private final DoorTemplate _template;
-		/**
-		 * Field _opened.
-		 */
 		private final boolean _opened;
-		/**
-		 * Field _invul.
-		 */
 		private final boolean _invul;
 		
 		/**
@@ -93,13 +82,7 @@ public class InstantZone
 	 */
 	public static class ZoneInfo
 	{
-		/**
-		 * Field _template.
-		 */
 		private final ZoneTemplate _template;
-		/**
-		 * Field _active.
-		 */
 		private final boolean _active;
 		
 		/**
@@ -137,13 +120,7 @@ public class InstantZone
 	 */
 	public static class SpawnInfo2
 	{
-		/**
-		 * Field _template.
-		 */
 		private final List<SpawnTemplate> _template;
-		/**
-		 * Field _spawned.
-		 */
 		private final boolean _spawned;
 		
 		/**
@@ -181,33 +158,12 @@ public class InstantZone
 	 */
 	public static class SpawnInfo
 	{
-		/**
-		 * Field _spawnType.
-		 */
 		private final int _spawnType;
-		/**
-		 * Field _npcId.
-		 */
 		private final int _npcId;
-		/**
-		 * Field _count.
-		 */
 		private final int _count;
-		/**
-		 * Field _respawn.
-		 */
 		private final int _respawn;
-		/**
-		 * Field _respawnRnd.
-		 */
 		private final int _respawnRnd;
-		/**
-		 * Field _coords.
-		 */
 		private final List<Location> _coords;
-		/**
-		 * Field _territory.
-		 */
 		private final Territory _territory;
 		
 		/**
@@ -323,129 +279,36 @@ public class InstantZone
 		}
 	}
 	
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _name.
-	 */
 	private final String _name;
-	/**
-	 * Field _resetReuse.
-	 */
 	private final SchedulingPattern _resetReuse;
-	/**
-	 * Field _sharedReuseGroup.
-	 */
 	private final int _sharedReuseGroup;
-	/**
-	 * Field _timelimit.
-	 */
 	private final int _timelimit;
-	/**
-	 * Field _dispelBuffs.
-	 */
 	private final boolean _dispelBuffs;
-	/**
-	 * Field _minLevel.
-	 */
 	private final int _minLevel;
-	/**
-	 * Field _maxLevel.
-	 */
 	private final int _maxLevel;
-	/**
-	 * Field _minParty.
-	 */
 	private final int _minParty;
-	/**
-	 * Field _maxParty.
-	 */
 	private final int _maxParty;
-	/**
-	 * Field _onPartyDismiss.
-	 */
 	private final boolean _onPartyDismiss;
-	/**
-	 * Field _timer.
-	 */
 	private final int _timer;
-	/**
-	 * Field _teleportCoords.
-	 */
 	private final List<Location> _teleportCoords;
-	/**
-	 * Field _returnCoords.
-	 */
 	private final Location _returnCoords;
-	/**
-	 * Field _mapx.
-	 */
 	private final int _mapx;
-	/**
-	 * Field _mapy.
-	 */
 	private final int _mapy;
-	/**
-	 * Field _doors.
-	 */
 	private final IntObjectMap<DoorInfo> _doors;
-	/**
-	 * Field _zones.
-	 */
 	private final Map<String, ZoneInfo> _zones;
-	/**
-	 * Field _spawns.
-	 */
 	private final Map<String, SpawnInfo2> _spawns;
-	/**
-	 * Field _spawnsInfo.
-	 */
 	private final List<SpawnInfo> _spawnsInfo;
-	/**
-	 * Field _collapseIfEmpty.
-	 */
 	private final int _collapseIfEmpty;
-	/**
-	 * Field _maxChannels.
-	 */
 	private final int _maxChannels;
-	/**
-	 * Field _removedItemId.
-	 */
 	private final int _removedItemId;
-	/**
-	 * Field _removedItemCount.
-	 */
 	private final int _removedItemCount;
-	/**
-	 * Field _removedItemNecessity.
-	 */
 	private final boolean _removedItemNecessity;
-	/**
-	 * Field _giveItemId.
-	 */
 	private final int _giveItemId;
-	/**
-	 * Field _givedItemCount.
-	 */
 	private final int _givedItemCount;
-	/**
-	 * Field _requiredQuestId.
-	 */
 	private final int _requiredQuestId;
-	/**
-	 * Field _setReuseUponEntry.
-	 */
 	private final boolean _setReuseUponEntry;
-	/**
-	 * Field _addParams.
-	 */
 	private final StatsSet _addParams;
-	/**
-	 * Field _entryType.
-	 */
 	private final InstantZoneEntryType _entryType;
 	
 	/**

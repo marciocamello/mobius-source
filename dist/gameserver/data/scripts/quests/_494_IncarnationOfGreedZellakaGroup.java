@@ -21,7 +21,6 @@ public class _494_IncarnationOfGreedZellakaGroup extends Quest implements Script
 {
 	// npc
 	public static final int KARTIA_RESEARCH = 33647;
-	
 	// mobs
 	public static final int CHALAKA = 25882;
 	

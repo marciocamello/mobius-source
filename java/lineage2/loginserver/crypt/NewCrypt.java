@@ -20,13 +20,7 @@ import java.io.IOException;
  */
 public class NewCrypt
 {
-	/**
-	 * Field _crypt.
-	 */
 	private final BlowfishEngine _crypt;
-	/**
-	 * Field _decrypt.
-	 */
 	private final BlowfishEngine _decrypt;
 	
 	/**

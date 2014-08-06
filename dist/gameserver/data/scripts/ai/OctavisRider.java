@@ -23,9 +23,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class OctavisRider extends DefaultAI
 {
-	/**
-	 * Field _points.
-	 */
 	private final Location[] _points =
 	{
 		new Location(207992, 120904, -10038, 49151),
@@ -37,9 +34,6 @@ public final class OctavisRider extends DefaultAI
 		new Location(207528, 119768, -10038),
 		new Location(207992, 120232, -10038)
 	};
-	/**
-	 * Field _lastPoint.
-	 */
 	private int _lastPoint = 0;
 	
 	/**

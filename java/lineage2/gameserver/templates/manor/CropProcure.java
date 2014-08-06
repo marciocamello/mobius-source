@@ -18,25 +18,10 @@ package lineage2.gameserver.templates.manor;
  */
 public class CropProcure
 {
-	/**
-	 * Field _rewardType.
-	 */
 	int _rewardType;
-	/**
-	 * Field _cropId.
-	 */
 	int _cropId;
-	/**
-	 * Field _buyResidual.
-	 */
 	long _buyResidual;
-	/**
-	 * Field _buy.
-	 */
 	long _buy;
-	/**
-	 * Field _price.
-	 */
 	long _price;
 	
 	/**

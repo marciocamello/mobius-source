@@ -17,7 +17,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.database.DatabaseFactory;
@@ -28,7 +27,6 @@ import lineage2.gameserver.model.instances.SummonInstance;
 import lineage2.gameserver.skills.skillclasses.SummonServitor;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,25 +36,10 @@ import org.slf4j.LoggerFactory;
  */
 public class ServitorsDAO
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(MentoringDAO.class);
-	/**
-	 * Field INSERT_SQL_QUERY. (value is ""INSERT INTO servitors(objId, ownerId, curHp, curMp, skill_id, skill_lvl) VALUES (?,?,?,?,?,?)"")
-	 */
 	private static final String INSERT_SQL_QUERY = "INSERT INTO servitors(objId, ownerId, curHp, curMp, skill_id, skill_lvl) VALUES (?,?,?,?,?,?)";
-	/**
-	 * Field SELECT_SQL_QUERY. (value is ""SELECT objId, curHp, curMp, skill_id, skill_lvl FROM servitors WHERE ownerId=?"")
-	 */
 	private static final String SELECT_SQL_QUERY = "SELECT objId, curHp, curMp, skill_id, skill_lvl FROM servitors WHERE ownerId=?";
-	/**
-	 * Field DELETE_SQL_QUERY. (value is ""DELETE FROM servitors WHERE ownerId=?"")
-	 */
 	private static final String DELETE_SQL_QUERY = "DELETE FROM servitors WHERE ownerId=?";
-	/**
-	 * Field ourInstance.
-	 */
 	private static final ServitorsDAO ourInstance = new ServitorsDAO();
 	
 	/**

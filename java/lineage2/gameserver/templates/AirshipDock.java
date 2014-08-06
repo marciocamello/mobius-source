@@ -14,7 +14,6 @@ package lineage2.gameserver.templates;
 
 import java.util.Collections;
 import java.util.List;
-
 import lineage2.gameserver.model.entity.events.objects.BoatPoint;
 import lineage2.gameserver.network.serverpackets.components.SceneMovie;
 import lineage2.gameserver.utils.Location;
@@ -30,25 +29,10 @@ public class AirshipDock
 	 */
 	public static class AirshipPlatform
 	{
-		/**
-		 * Field _oustMovie.
-		 */
 		private final SceneMovie _oustMovie;
-		/**
-		 * Field _oustLoc.
-		 */
 		private final Location _oustLoc;
-		/**
-		 * Field _spawnLoc.
-		 */
 		private final Location _spawnLoc;
-		/**
-		 * Field _arrivalPoints.
-		 */
 		private List<BoatPoint> _arrivalPoints = Collections.emptyList();
-		/**
-		 * Field _departPoints.
-		 */
 		private List<BoatPoint> _departPoints = Collections.emptyList();
 		
 		/**
@@ -114,17 +98,8 @@ public class AirshipDock
 		}
 	}
 	
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _teleportList.
-	 */
 	private List<BoatPoint> _teleportList = Collections.emptyList();
-	/**
-	 * Field _platformList.
-	 */
 	private List<AirshipPlatform> _platformList = Collections.emptyList();
 	
 	/**

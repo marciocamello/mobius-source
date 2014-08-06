@@ -20,13 +20,7 @@ import lineage2.gameserver.network.loginservercon.SendablePacket;
  */
 public class Player2ndAuthSetBanTime extends SendablePacket
 {
-	/**
-	 * Field _login.
-	 */
 	private final String _login;
-	/**
-	 * Field _banTime.
-	 */
 	private final int _banTime;
 	
 	/**

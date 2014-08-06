@@ -32,7 +32,6 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.ReflectionUtils;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -41,9 +40,6 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public final class StakatoNest extends Fighter
 {
-	/**
-	 * Field BIZARRE_COCOON.
-	 */
 	private static final int[] BIZARRE_COCOON =
 	{
 		18793,
@@ -53,77 +49,23 @@ public final class StakatoNest extends Fighter
 		18797,
 		18798
 	};
-	/**
-	 * Field CANNIBALISTIC_STAKATO_LEADER. (value is 22625)
-	 */
 	private static final int CANNIBALISTIC_STAKATO_LEADER = 22625;
-	/**
-	 * Field SPIKE_STAKATO_NURSE. (value is 22630)
-	 */
 	private static final int SPIKE_STAKATO_NURSE = 22630;
-	/**
-	 * Field SPIKE_STAKATO_NURSE_CHANGED. (value is 22631)
-	 */
 	private static final int SPIKE_STAKATO_NURSE_CHANGED = 22631;
-	/**
-	 * Field SPIKED_STAKATO_BABY. (value is 22632)
-	 */
 	private static final int SPIKED_STAKATO_BABY = 22632;
-	/**
-	 * Field SPIKED_STAKATO_CAPTAIN. (value is 22629)
-	 */
 	private static final int SPIKED_STAKATO_CAPTAIN = 22629;
-	/**
-	 * Field FEMALE_SPIKED_STAKATO. (value is 22620)
-	 */
 	private static final int FEMALE_SPIKED_STAKATO = 22620;
-	/**
-	 * Field MALE_SPIKED_STAKATO. (value is 22621)
-	 */
 	private static final int MALE_SPIKED_STAKATO = 22621;
-	/**
-	 * Field MALE_SPIKED_STAKATO_2. (value is 22622)
-	 */
 	private static final int MALE_SPIKED_STAKATO_2 = 22622;
-	/**
-	 * Field SPIKED_STAKATO_GUARD. (value is 22619)
-	 */
 	private static final int SPIKED_STAKATO_GUARD = 22619;
-	/**
-	 * Field SKILL_GROWTH_ACCELERATOR. (value is 2905)
-	 */
 	private static final int SKILL_GROWTH_ACCELERATOR = 2905;
-	/**
-	 * Field CANNIBALISTIC_STAKATO_CHIEF. (value is 25667)
-	 */
 	private static final int CANNIBALISTIC_STAKATO_CHIEF = 25667;
-	/**
-	 * Field QUEEN_SHYEED. (value is 25671)
-	 */
 	private static final int QUEEN_SHYEED = 25671;
-	/**
-	 * Field FAIL_COCOON_CHANCE. (value is 8)
-	 */
 	private static final int FAIL_COCOON_CHANCE = 8;
-	/**
-	 * Field ABSORB_MINION_CHANCE. (value is 10)
-	 */
 	private static final int ABSORB_MINION_CHANCE = 10;
-	/**
-	 * Field _zone_mob_buff.
-	 */
 	private static final Zone _zone_mob_buff = ReflectionUtils.getZone("[stakato_mob_buff]");
-	/**
-	 * Field _zone_mob_buff_pc_display.
-	 */
 	private static final Zone _zone_mob_buff_pc_display = ReflectionUtils.getZone("[stakato_mob_buff_display]");
-	/**
-	 * Field _zone_pc_buff.
-	 */
 	private static final Zone _zone_pc_buff = ReflectionUtils.getZone("[stakato_pc_buff]");
-	/**
-	 * Field _debuffed.
-	 */
 	private static boolean _debuffed = false;
 	
 	/**
@@ -332,17 +274,8 @@ public final class StakatoNest extends Fighter
 	 */
 	private class ChangeMonster extends RunnableImpl
 	{
-		/**
-		 * Field _monsterId.
-		 */
 		private final int _monsterId;
-		/**
-		 * Field _killer.
-		 */
 		private final Creature _killer;
-		/**
-		 * Field _npc.
-		 */
 		private final NpcInstance _npc;
 		
 		/**

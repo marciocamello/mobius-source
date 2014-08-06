@@ -22,7 +22,6 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.GameClient;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 import lineage2.gameserver.templates.item.ItemTemplate;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -232,5 +231,4 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 	{
 		return this;
 	}
-	
 }

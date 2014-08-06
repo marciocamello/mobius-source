@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.items;
 
 import java.io.Serializable;
-
 import lineage2.gameserver.model.base.Element;
 
 /**
@@ -22,33 +21,12 @@ import lineage2.gameserver.model.base.Element;
  */
 public class ItemAttributes implements Serializable
 {
-	/**
-	 * Field serialVersionUID. (value is 401594188363005415)
-	 */
 	private static final long serialVersionUID = 401594188363005415L;
-	/**
-	 * Field fire.
-	 */
 	private int fire;
-	/**
-	 * Field water.
-	 */
 	private int water;
-	/**
-	 * Field wind.
-	 */
 	private int wind;
-	/**
-	 * Field earth.
-	 */
 	private int earth;
-	/**
-	 * Field holy.
-	 */
 	private int holy;
-	/**
-	 * Field unholy.
-	 */
 	private int unholy;
 	
 	/**

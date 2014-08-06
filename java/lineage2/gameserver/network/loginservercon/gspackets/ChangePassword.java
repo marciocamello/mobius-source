@@ -20,21 +20,9 @@ import lineage2.gameserver.network.loginservercon.SendablePacket;
  */
 public class ChangePassword extends SendablePacket
 {
-	/**
-	 * Field account.
-	 */
 	private final String account;
-	/**
-	 * Field oldPass.
-	 */
 	private final String oldPass;
-	/**
-	 * Field newPass.
-	 */
 	private final String newPass;
-	/**
-	 * Field hwid.
-	 */
 	private final String hwid;
 	
 	/**

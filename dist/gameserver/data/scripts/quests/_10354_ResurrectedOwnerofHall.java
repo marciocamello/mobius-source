@@ -27,7 +27,6 @@ public class _10354_ResurrectedOwnerofHall extends Quest implements ScriptFile
 	// NPC's
 	private static final int LYDIA = 32892;
 	private static final int OCTAVIS = 29212;
-	
 	// Item's
 	private static final int BOTTLE_OF_OCTAVIS_SOUL = 34884;
 	

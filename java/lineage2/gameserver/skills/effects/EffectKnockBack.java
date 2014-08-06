@@ -26,9 +26,6 @@ import lineage2.gameserver.utils.Location;
  */
 public class EffectKnockBack extends Effect
 {
-	/**
-	 * Field _z. Field _y. Field _x.
-	 */
 	private int _x, _y, _z;
 	private Location _loc = new Location(_x, _y, _z);
 	

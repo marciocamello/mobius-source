@@ -17,12 +17,10 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.loginserver.Config;
 import lineage2.loginserver.SessionKey;
 import lineage2.loginserver.ThreadPoolManager;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,14 +30,8 @@ import org.slf4j.LoggerFactory;
  */
 public class SessionManager
 {
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(SessionManager.class);
-	/**
-	 * Field _instance.
-	 */
 	private static final SessionManager _instance = new SessionManager();
 	
 	/**
@@ -56,17 +48,8 @@ public class SessionManager
 	 */
 	public final class Session
 	{
-		/**
-		 * Field account.
-		 */
 		final Account account;
-		/**
-		 * Field skey.
-		 */
 		private final SessionKey skey;
-		/**
-		 * Field expireTime.
-		 */
 		private final long expireTime;
 		
 		/**
@@ -108,13 +91,7 @@ public class SessionManager
 		}
 	}
 	
-	/**
-	 * Field sessions.
-	 */
 	final Map<SessionKey, Session> sessions = new HashMap<>();
-	/**
-	 * Field lock.
-	 */
 	final Lock lock = new ReentrantLock();
 	
 	/**

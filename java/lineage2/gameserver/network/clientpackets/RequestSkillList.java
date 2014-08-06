@@ -20,9 +20,6 @@ import lineage2.gameserver.model.Player;
  */
 public final class RequestSkillList extends L2GameClientPacket
 {
-	/**
-	 * Field _C__50_REQUESTSKILLLIST. (value is ""[C] 50 RequestSkillList"")
-	 */
 	private static final String _C__50_REQUESTSKILLLIST = "[C] 50 RequestSkillList";
 	
 	/**

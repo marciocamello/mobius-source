@@ -26,17 +26,8 @@ import lineage2.gameserver.utils.Location;
  */
 public class WalkerAI extends DefaultAI
 {
-	/**
-	 * Field _routeIndex.
-	 */
 	private int _routeIndex = 0;
-	/**
-	 * Field _direction.
-	 */
 	private short _direction = 1;
-	/**
-	 * Field _lastMove.
-	 */
 	private long _lastMove = 0;
 	
 	/**

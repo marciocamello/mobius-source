@@ -14,7 +14,6 @@ package services;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Summon;
@@ -31,9 +30,6 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class SupportMagic extends Functions
 {
-	/**
-	 * Field _mageBuff.
-	 */
 	private final static int[][] _mageBuff = new int[][]
 	{
 		{
@@ -91,9 +87,6 @@ public final class SupportMagic extends Functions
 			1
 		},
 	};
-	/**
-	 * Field _warrBuff.
-	 */
 	private final static int[][] _warrBuff = new int[][]
 	{
 		{
@@ -151,9 +144,6 @@ public final class SupportMagic extends Functions
 			1
 		},
 	};
-	/**
-	 * Field _summonBuff.
-	 */
 	private final static int[][] _summonBuff = new int[][]
 	{
 		{
@@ -229,13 +219,7 @@ public final class SupportMagic extends Functions
 			1
 		},
 	};
-	/**
-	 * Field minSupLvl. (value is 1)
-	 */
 	private final static int minSupLvl = 1;
-	/**
-	 * Field maxSupLvl. (value is 75)
-	 */
 	private final static int maxSupLvl = 91;
 	
 	/**

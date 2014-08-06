@@ -23,9 +23,6 @@ import lineage2.gameserver.network.serverpackets.ShowMiniMap;
  */
 public final class WorldMap extends ScriptItemHandler
 {
-	/**
-	 * Field _itemIds.
-	 */
 	private static final int[] _itemIds =
 	{
 		1665,

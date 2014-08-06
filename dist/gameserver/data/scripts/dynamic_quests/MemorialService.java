@@ -22,7 +22,6 @@ import lineage2.gameserver.model.quest.dynamic.DynamicQuest;
 import lineage2.gameserver.network.clientpackets.RequestActionUse;
 import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.scripts.ScriptFile;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

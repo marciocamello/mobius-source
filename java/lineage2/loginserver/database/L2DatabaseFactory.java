@@ -14,7 +14,6 @@ package lineage2.loginserver.database;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-
 import lineage2.commons.dbcp.BasicDataSource;
 import lineage2.loginserver.Config;
 
@@ -24,9 +23,6 @@ import lineage2.loginserver.Config;
  */
 public class L2DatabaseFactory extends BasicDataSource
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final L2DatabaseFactory _instance = new L2DatabaseFactory();
 	
 	/**

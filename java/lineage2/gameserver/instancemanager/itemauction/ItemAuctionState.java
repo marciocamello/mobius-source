@@ -20,17 +20,8 @@ import lineage2.commons.lang.ArrayUtils;
  */
 public enum ItemAuctionState
 {
-	/**
-	 * Field CREATED.
-	 */
 	CREATED,
-	/**
-	 * Field STARTED.
-	 */
 	STARTED,
-	/**
-	 * Field FINISHED.
-	 */
 	FINISHED;
 	/**
 	 * Method stateForStateId.

@@ -34,29 +34,11 @@ import lineage2.gameserver.utils.Util;
  */
 public final class exchange extends Functions
 {
-	/**
-	 * Field PEticketB. (value is 7583)
-	 */
 	private static final int PEticketB = 7583;
-	/**
-	 * Field PEticketC. (value is 7584)
-	 */
 	private static final int PEticketC = 7584;
-	/**
-	 * Field PEticketK. (value is 7585)
-	 */
 	private static final int PEticketK = 7585;
-	/**
-	 * Field BbuffaloP. (value is 6648)
-	 */
 	private static final int BbuffaloP = 6648;
-	/**
-	 * Field BcougarC. (value is 6649)
-	 */
 	private static final int BcougarC = 6649;
-	/**
-	 * Field BkookaburraO. (value is 6650)
-	 */
 	private static final int BkookaburraO = 6650;
 	
 	/**

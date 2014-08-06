@@ -27,13 +27,7 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class RequestDuelStart extends L2GameClientPacket
 {
-	/**
-	 * Field _name.
-	 */
 	private String _name;
-	/**
-	 * Field _duelType.
-	 */
 	private int _duelType;
 	
 	/**

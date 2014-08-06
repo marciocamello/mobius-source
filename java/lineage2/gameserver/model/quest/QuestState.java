@@ -19,7 +19,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
@@ -49,7 +48,6 @@ import lineage2.gameserver.network.serverpackets.TutorialShowQuestionMark;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.spawn.PeriodOfDay;
 import lineage2.gameserver.utils.ItemFunctions;
-
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -161,53 +159,17 @@ public final class QuestState
 		}
 	}
 	
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(QuestState.class);
-	/**
-	 * Field RESTART_HOUR. (value is 6)
-	 */
 	public static final int RESTART_HOUR = 6;
-	/**
-	 * Field RESTART_MINUTES. (value is 30)
-	 */
 	public static final int RESTART_MINUTES = 30;
-	/**
-	 * Field VAR_COND. (value is ""cond"")
-	 */
 	public static final String VAR_COND = "cond";
-	/**
-	 * Field EMPTY_ARRAY.
-	 */
 	public final static QuestState[] EMPTY_ARRAY = new QuestState[0];
-	/**
-	 * Field _player.
-	 */
 	private final Player _player;
-	/**
-	 * Field _quest.
-	 */
 	final Quest _quest;
-	/**
-	 * Field _state.
-	 */
 	private int _state;
-	/**
-	 * Field _cond.
-	 */
 	private Integer _cond = null;
-	/**
-	 * Field _vars.
-	 */
 	private final Map<String, String> _vars = new ConcurrentHashMap<>();
-	/**
-	 * Field _timers.
-	 */
 	private final Map<String, QuestTimer> _timers = new ConcurrentHashMap<>();
-	/**
-	 * Field _onKillListener.
-	 */
 	private OnKillListener _onKillListener = null;
 	
 	/**
@@ -1699,8 +1661,6 @@ public final class QuestState
 		return restartTime <= System.currentTimeMillis();
 	}
 	
-	/**
-	 */
 	public void startQuest()
 	{
 		setState(2); // STARTED

@@ -15,7 +15,6 @@ package lineage2.gameserver.model.entity.events.objects;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.instancemanager.ReflectionManager;
@@ -35,38 +34,13 @@ public class DuelSnapshotObject implements Serializable
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _team.
-	 */
 	private final TeamType _team;
-	/**
-	 * Field _player.
-	 */
 	final Player _player;
-	/**
-	 * Field _effects.
-	 */
 	private final List<Effect> _effects;
-	/**
-	 * Field _returnLoc.
-	 */
 	final Location _returnLoc;
-	/**
-	 * Field _currentHp.
-	 */
 	private final double _currentHp;
-	/**
-	 * Field _currentMp.
-	 */
 	private final double _currentMp;
-	/**
-	 * Field _currentCp.
-	 */
 	private final double _currentCp;
-	
-	/**
-	 * Field _isDead.
-	 */
 	private boolean _isDead;
 	
 	/**

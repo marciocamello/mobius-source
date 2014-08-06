@@ -14,7 +14,6 @@ package events.TheFlowOfTheHorror;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.lang.reference.HardReferences;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -28,7 +27,6 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,65 +36,20 @@ import org.slf4j.LoggerFactory;
  */
 public final class TheFlowOfTheHorror extends Functions implements ScriptFile
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(TheFlowOfTheHorror.class);
-	/**
-	 * Field Gilmore.
-	 */
 	private static final int Gilmore = 30754;
-	/**
-	 * Field Shackle.
-	 */
 	private static final int Shackle = 20235;
-	/**
-	 * Field _oldGilmoreRef.
-	 */
 	private static HardReference<NpcInstance> _oldGilmoreRef = HardReferences.emptyRef();
-	/**
-	 * Field _stage.
-	 */
 	private static int _stage = 1;
-	/**
-	 * Field _spawns.
-	 */
 	private static final List<MonsterInstance> _spawns = new ArrayList<>();
-	/**
-	 * Field points11.
-	 */
 	private static final List<Location> points11 = new ArrayList<>();
-	/**
-	 * Field points12.
-	 */
 	private static final List<Location> points12 = new ArrayList<>();
-	/**
-	 * Field points13.
-	 */
 	private static final List<Location> points13 = new ArrayList<>();
-	/**
-	 * Field points21.
-	 */
 	private static final List<Location> points21 = new ArrayList<>();
-	/**
-	 * Field points22.
-	 */
 	private static final List<Location> points22 = new ArrayList<>();
-	/**
-	 * Field points23.
-	 */
 	private static final List<Location> points23 = new ArrayList<>();
-	/**
-	 * Field points31.
-	 */
 	private static final List<Location> points31 = new ArrayList<>();
-	/**
-	 * Field points32.
-	 */
 	private static final List<Location> points32 = new ArrayList<>();
-	/**
-	 * Field points33.
-	 */
 	private static final List<Location> points33 = new ArrayList<>();
 	
 	/**

@@ -14,7 +14,6 @@ package lineage2.gameserver.network.clientpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.math.SafeMath;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
@@ -27,7 +26,6 @@ import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.items.TradeItem;
 import lineage2.gameserver.network.serverpackets.ExBuySellList;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,26 +35,11 @@ import org.slf4j.LoggerFactory;
  */
 public class RequestBuyItem extends L2GameClientPacket
 {
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(RequestBuyItem.class);
-	/**
-	 * Field _listId.
-	 */
 	private int _listId;
-	/**
-	 * Field _count.
-	 */
 	private int _count;
-	/**
-	 * Field _items.
-	 */
 	private int[] _items;
-	/**
-	 * Field _itemQ.
-	 */
 	private long[] _itemQ;
 	
 	/**

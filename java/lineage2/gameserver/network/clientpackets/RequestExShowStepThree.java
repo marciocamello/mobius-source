@@ -24,9 +24,6 @@ import lineage2.gameserver.network.serverpackets.ExResponseShowContents;
  */
 public class RequestExShowStepThree extends L2GameClientPacket
 {
-	/**
-	 * Field _subId.
-	 */
 	private int _subId;
 	
 	/**

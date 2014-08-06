@@ -13,7 +13,6 @@
 package ai;
 
 import java.util.List;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -32,9 +31,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class KrateisCubeWatcherBlue extends DefaultAI
 {
-	/**
-	 * Field RESTORE_CHANCE. (value is 60)
-	 */
 	private static final int RESTORE_CHANCE = 60;
 	
 	/**

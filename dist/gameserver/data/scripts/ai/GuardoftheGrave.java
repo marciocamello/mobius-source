@@ -26,13 +26,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public final class GuardoftheGrave extends Fighter
 {
-	/**
-	 * Field DESPAWN_TIME.
-	 */
 	private static final int DESPAWN_TIME = 2 * 45 * 1000;
-	/**
-	 * Field CHIEFTAINS_TREASURE_CHEST. (value is 18816)
-	 */
 	private static final int CHIEFTAINS_TREASURE_CHEST = 18816;
 	
 	/**

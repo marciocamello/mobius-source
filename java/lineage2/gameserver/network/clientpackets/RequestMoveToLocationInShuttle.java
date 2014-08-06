@@ -23,17 +23,8 @@ import lineage2.gameserver.utils.Location;
  */
 public class RequestMoveToLocationInShuttle extends L2GameClientPacket
 {
-	/**
-	 * Field _pos.
-	 */
 	private final Location _pos = new Location();
-	/**
-	 * Field _originPos.
-	 */
 	private final Location _originPos = new Location();
-	/**
-	 * Field _shuttleId.
-	 */
 	private int _shuttleId;
 	
 	/**

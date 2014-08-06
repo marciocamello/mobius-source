@@ -28,9 +28,6 @@ import lineage2.gameserver.utils.Log;
  */
 public class RequestExCancelSentPost extends L2GameClientPacket
 {
-	/**
-	 * Field postId.
-	 */
 	private int postId;
 	
 	/**

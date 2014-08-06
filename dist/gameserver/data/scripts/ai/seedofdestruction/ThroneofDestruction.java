@@ -17,7 +17,6 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -26,21 +25,9 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public final class ThroneofDestruction extends DefaultAI
 {
-	/**
-	 * Field DOOR. (value is 12240031)
-	 */
 	private static final int DOOR = 12240031;
-	/**
-	 * Field TIAT_NPC_ID. (value is 29163)
-	 */
 	private static final int TIAT_NPC_ID = 29163;
-	/**
-	 * Field TIAT_LOC.
-	 */
 	private static final Location TIAT_LOC = new Location(-250403, 207273, -11952, 16384);
-	/**
-	 * Field checkNpcs.
-	 */
 	private static final int[] checkNpcs =
 	{
 		18778,

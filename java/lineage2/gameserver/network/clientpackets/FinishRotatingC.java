@@ -21,13 +21,7 @@ import lineage2.gameserver.network.serverpackets.FinishRotating;
  */
 public class FinishRotatingC extends L2GameClientPacket
 {
-	/**
-	 * Field _degree.
-	 */
 	private int _degree;
-	/**
-	 * Field _unknown.
-	 */
 	@SuppressWarnings("unused")
 	private int _unknown;
 	

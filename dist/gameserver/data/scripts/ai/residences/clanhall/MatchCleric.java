@@ -22,9 +22,6 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class MatchCleric extends MatchFighter
 {
-	/**
-	 * Field HEAL.
-	 */
 	public static final Skill HEAL = SkillTable.getInstance().getInfo(4056, 6);
 	
 	/**

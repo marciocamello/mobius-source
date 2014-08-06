@@ -24,17 +24,8 @@ import lineage2.gameserver.stats.conditions.Condition;
  */
 public class TriggerInfo extends Skill.AddedSkill
 {
-	/**
-	 * Field _type.
-	 */
 	private final TriggerType _type;
-	/**
-	 * Field _chance.
-	 */
 	private final double _chance;
-	/**
-	 * Field _conditions.
-	 */
 	private Condition[] _conditions = Condition.EMPTY_ARRAY;
 	
 	/**

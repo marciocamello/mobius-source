@@ -25,13 +25,7 @@ import lineage2.gameserver.tables.SkillTreeTable;
  */
 public class RequestExEnchantSkillInfo extends L2GameClientPacket
 {
-	/**
-	 * Field _skillId.
-	 */
 	private int _skillId;
-	/**
-	 * Field _skillLvl.
-	 */
 	private int _skillLvl;
 	
 	/**

@@ -22,9 +22,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionPlayerRace extends Condition
 {
-	/**
-	 * Field _race.
-	 */
 	private final Race _race;
 	
 	/**

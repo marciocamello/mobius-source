@@ -27,33 +27,12 @@ public class AdminRide implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_ride.
-		 */
 		admin_ride,
-		/**
-		 * Field admin_ride_wyvern.
-		 */
 		admin_ride_wyvern,
-		/**
-		 * Field admin_ride_strider.
-		 */
 		admin_ride_strider,
-		/**
-		 * Field admin_unride.
-		 */
 		admin_unride,
-		/**
-		 * Field admin_wr.
-		 */
 		admin_wr,
-		/**
-		 * Field admin_sr.
-		 */
 		admin_sr,
-		/**
-		 * Field admin_ur.
-		 */
 		admin_ur
 	}
 	

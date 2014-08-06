@@ -28,9 +28,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Mucrokian extends Fighter
 {
-	/**
-	 * Field MsgText.
-	 */
 	public static final NpcString[] MsgText =
 	{
 		NpcString.PEUNGLUI_MUGLANEP_NAIA_WAGANAGEL_PEUTAGUN,

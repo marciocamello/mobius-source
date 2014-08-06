@@ -19,12 +19,10 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
-
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.threading.RunnableImpl;
@@ -39,10 +37,8 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.ItemInstance.ItemLocation;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
@@ -51,49 +47,16 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public class ItemAuctionInstance
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(ItemAuctionInstance.class);
-	/**
-	 * Field DATE_FORMAT.
-	 */
 	private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
-	/**
-	 * Field START_TIME_SPACE.
-	 */
 	private static final long START_TIME_SPACE = TimeUnit.MILLISECONDS.convert(1, TimeUnit.MINUTES);
-	/**
-	 * Field FINISH_TIME_SPACE.
-	 */
 	private static final long FINISH_TIME_SPACE = TimeUnit.MILLISECONDS.convert(10, TimeUnit.MINUTES);
-	/**
-	 * Field _instanceId.
-	 */
 	private final int _instanceId;
-	/**
-	 * Field _auctions.
-	 */
 	private final TIntObjectHashMap<ItemAuction> _auctions;
-	/**
-	 * Field _items.
-	 */
 	private final List<AuctionItem> _items;
-	/**
-	 * Field _dateTime.
-	 */
 	private final SchedulingPattern _dateTime;
-	/**
-	 * Field _currentAuction.
-	 */
 	private ItemAuction _currentAuction;
-	/**
-	 * Field _nextAuction.
-	 */
 	private ItemAuction _nextAuction;
-	/**
-	 * Field _stateTask.
-	 */
 	private ScheduledFuture<?> _stateTask;
 	
 	/**
@@ -279,23 +242,17 @@ public class ItemAuctionInstance
 			
 			default:
 			{
-				Arrays.sort(auctions, new Comparator<ItemAuction>()
+				Arrays.sort(auctions, (o1, o2) ->
 				{
-					@Override
-					public int compare(ItemAuction o1, ItemAuction o2)
+					if (o2.getStartingTime() > o1.getStartingTime())
 					{
-						if (o2.getStartingTime() > o1.getStartingTime())
-						{
-							return 1;
-						}
-						
-						if (o2.getStartingTime() < o1.getStartingTime())
-						{
-							return -1;
-						}
-						
-						return 0;
+						return 1;
 					}
+					if (o2.getStartingTime() < o1.getStartingTime())
+					{
+						return -1;
+					}
+					return 0;
 				});
 				long currentTime = System.currentTimeMillis();
 				
@@ -400,9 +357,6 @@ public class ItemAuctionInstance
 	 */
 	private class ScheduleAuctionTask extends RunnableImpl
 	{
-		/**
-		 * Field _auction.
-		 */
 		private final ItemAuction _auction;
 		
 		/**

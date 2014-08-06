@@ -13,7 +13,6 @@
 package ai;
 
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -30,29 +29,11 @@ import lineage2.gameserver.scripts.Functions;
  */
 public final class Kama63Minion extends Fighter
 {
-	/**
-	 * Field BOSS_ID. (value is 18571)
-	 */
 	private static final int BOSS_ID = 18571;
-	/**
-	 * Field MINION_DIE_TIME. (value is 25000)
-	 */
 	private static final int MINION_DIE_TIME = 25000;
-	/**
-	 * Field _wait_timeout.
-	 */
 	private long _wait_timeout = 0;
-	/**
-	 * Field _boss.
-	 */
 	private NpcInstance _boss;
-	/**
-	 * Field _spawned.
-	 */
 	private boolean _spawned = false;
-	/**
-	 * Field _dieTask.
-	 */
 	ScheduledFuture<?> _dieTask = null;
 	
 	/**
@@ -151,13 +132,7 @@ public final class Kama63Minion extends Fighter
 	 */
 	static public final class DieScheduleTimerTask extends RunnableImpl
 	{
-		/**
-		 * Field _minion.
-		 */
 		NpcInstance _minion = null;
-		/**
-		 * Field _master.
-		 */
 		NpcInstance _master = null;
 		
 		/**

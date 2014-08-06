@@ -27,17 +27,8 @@ public class DoorObject implements SpawnableObject, InitableObject
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field _id.
-	 */
 	private final int _id;
-	/**
-	 * Field _door.
-	 */
 	private DoorInstance _door;
-	/**
-	 * Field _weak.
-	 */
 	private boolean _weak;
 	
 	/**

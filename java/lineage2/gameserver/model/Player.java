@@ -17,7 +17,6 @@ import static lineage2.gameserver.network.serverpackets.ExSetCompassZoneCode.ZON
 import static lineage2.gameserver.network.serverpackets.ExSetCompassZoneCode.ZONE_PVP_FLAG;
 import static lineage2.gameserver.network.serverpackets.ExSetCompassZoneCode.ZONE_SIEGE_FLAG;
 import static lineage2.gameserver.network.serverpackets.ExSetCompassZoneCode.ZONE_SSQ_FLAG;
-
 import java.awt.Color;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -48,7 +47,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.dbutils.DbUtils;
@@ -306,7 +304,6 @@ import lineage2.gameserver.utils.SiegeUtils;
 import lineage2.gameserver.utils.SqlBatch;
 import lineage2.gameserver.utils.Strings;
 import lineage2.gameserver.utils.TeleportUtils;
-
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
@@ -327,149 +324,41 @@ public final class Player extends Playable implements PlayerGroup
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field DEFAULT_TITLE_COLOR.
-	 */
 	public static final int DEFAULT_TITLE_COLOR = 0xFFFF77;
-	/**
-	 * Field MAX_POST_FRIEND_SIZE. (value is 100)
-	 */
 	public static final int MAX_POST_FRIEND_SIZE = 100;
-	/**
-	 * Field MAX_FRIEND_SIZE. (value is 128)
-	 */
 	public static final int MAX_FRIEND_SIZE = 128;
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(Player.class);
-	/**
-	 * Field NO_TRADERS_VAR. (value is ""notraders"")
-	 */
 	public static final String NO_TRADERS_VAR = "notraders";
-	/**
-	 * Field NO_ANIMATION_OF_CAST_VAR. (value is ""notShowBuffAnim"")
-	 */
 	public static final String NO_ANIMATION_OF_CAST_VAR = "notShowBuffAnim";
-	/**
-	 * Field MY_BIRTHDAY_RECEIVE_YEAR. (value is ""MyBirthdayReceiveYear"")
-	 */
 	public static final String MY_BIRTHDAY_RECEIVE_YEAR = "MyBirthdayReceiveYear";
-	/**
-	 * Field NOT_CONNECTED. (value is ""<not connected>"")
-	 */
 	private static final String NOT_CONNECTED = "<not connected>";
-	/**
-	 * Field _classlist.
-	 */
 	public final Map<Integer, SubClass> _classlist = new HashMap<>(4);
-	/**
-	 * Field OBSERVER_NONE. (value is 0)
-	 */
 	public final static int OBSERVER_NONE = 0;
-	/**
-	 * Field OBSERVER_STARTING. (value is 1)
-	 */
 	public final static int OBSERVER_STARTING = 1;
-	/**
-	 * Field OBSERVER_STARTED. (value is 3)
-	 */
 	public final static int OBSERVER_STARTED = 3;
-	/**
-	 * Field OBSERVER_LEAVING. (value is 2)
-	 */
 	public final static int OBSERVER_LEAVING = 2;
-	/**
-	 * Field STORE_PRIVATE_NONE. (value is 0)
-	 */
 	public static final int STORE_PRIVATE_NONE = 0;
-	/**
-	 * Field STORE_PRIVATE_SELL. (value is 1)
-	 */
 	public static final int STORE_PRIVATE_SELL = 1;
-	/**
-	 * Field STORE_PRIVATE_BUY. (value is 3)
-	 */
 	public static final int STORE_PRIVATE_BUY = 3;
-	/**
-	 * Field STORE_PRIVATE_MANUFACTURE. (value is 5)
-	 */
 	public static final int STORE_PRIVATE_MANUFACTURE = 5;
-	/**
-	 * Field STORE_OBSERVING_GAMES. (value is 7)
-	 */
 	public static final int STORE_OBSERVING_GAMES = 7;
-	/**
-	 * Field STORE_PRIVATE_SELL_PACKAGE. (value is 8)
-	 */
 	public static final int STORE_PRIVATE_SELL_PACKAGE = 8;
-	/**
-	 * Field RANK_VAGABOND. (value is 0)
-	 */
 	public static final int RANK_VAGABOND = 0;
-	/**
-	 * Field RANK_VASSAL. (value is 1)
-	 */
 	public static final int RANK_VASSAL = 1;
-	/**
-	 * Field RANK_HEIR. (value is 2)
-	 */
 	public static final int RANK_HEIR = 2;
-	/**
-	 * Field RANK_KNIGHT. (value is 3)
-	 */
 	public static final int RANK_KNIGHT = 3;
-	/**
-	 * Field RANK_WISEMAN. (value is 4)
-	 */
 	public static final int RANK_WISEMAN = 4;
-	/**
-	 * Field RANK_BARON. (value is 5)
-	 */
 	public static final int RANK_BARON = 5;
-	/**
-	 * Field RANK_VISCOUNT. (value is 6)
-	 */
 	public static final int RANK_VISCOUNT = 6;
-	/**
-	 * Field RANK_COUNT. (value is 7)
-	 */
 	public static final int RANK_COUNT = 7;
-	/**
-	 * Field RANK_MARQUIS. (value is 8)
-	 */
 	public static final int RANK_MARQUIS = 8;
-	/**
-	 * Field RANK_DUKE. (value is 9)
-	 */
 	public static final int RANK_DUKE = 9;
-	/**
-	 * Field RANK_GRAND_DUKE. (value is 10)
-	 */
 	public static final int RANK_GRAND_DUKE = 10;
-	/**
-	 * Field RANK_DISTINGUISHED_KING. (value is 11)
-	 */
 	public static final int RANK_DISTINGUISHED_KING = 11;
-	/**
-	 * Field RANK_EMPEROR. (value is 12)
-	 */
 	public static final int RANK_EMPEROR = 12;
-	/**
-	 * Field LANG_ENG. (value is 0)
-	 */
 	public static final int LANG_ENG = 0;
-	/**
-	 * Field LANG_RUS. (value is 1)
-	 */
 	public static final int LANG_RUS = 1;
-	/**
-	 * Field LANG_UNK. (value is -1)
-	 */
 	public static final int LANG_UNK = -1;
-	/**
-	 * Field EXPERTISE_LEVELS.
-	 */
 	public static final int[] EXPERTISE_LEVELS =
 	{
 		0,
@@ -485,552 +374,145 @@ public final class Player extends Playable implements PlayerGroup
 		99,
 		Integer.MAX_VALUE
 	};
-	/**
-	 * Field _connection.
-	 */
 	private GameClient _connection;
-	/**
-	 * Field _login.
-	 */
 	private String _login;
-	/**
-	 * Field _pvpKills. Field _pkKills. Field _karma.
-	 */
 	private int _karma, _pkKills, _pvpKills;
-	/**
-	 * Field _hairColor. Field _hairStyle. Field _face. Field _faceB. Field _hairStyleB. Field _hairColorB.
-	 */
 	private int _face, _hairStyle, _hairColor, _faceB, _hairStyleB, _hairColorB;
-	/**
-	 * Field _fame. Field _recomLeftToday. Field _recomHave.
-	 */
 	private int _recomHave, _recomLeftToday, _fame;
-	/**
-	 * Field _recomLeft.
-	 */
 	private int _recomLeft = 20;
-	/**
-	 * Field _recomBonusTime.
-	 */
 	private int _recomBonusTime = 3600;
-	/**
-	 * Field _isRecomTimerActive. Field _isHourglassEffected.
-	 */
 	private boolean _isHourglassEffected, _isRecomTimerActive;
-	/**
-	 * Field _isUndying.
-	 */
 	private boolean _isUndying = false;
-	/**
-	 * Field _deleteTimer.
-	 */
 	private int _deleteTimer;
 	private long _startingTimeInFullParty = 0L;
 	private long _startingTimeInParty = 0L;
-	/**
-	 * Field _ping.
-	 */
 	private int _ping = -1;
-	/**
-	 * Field _NoChannelBegin. Field _NoChannel. Field _deleteClanTime. Field _leaveClanTime. Field _onlineBeginTime. Field _onlineTime. Field _createTime.
-	 */
 	private long _createTime, _onlineTime, _onlineBeginTime, _leaveClanTime, _deleteClanTime, _NoChannel, _NoChannelBegin;
-	/**
-	 * Field _uptime.
-	 */
 	private long _uptime;
-	/**
-	 * Field _lastAccess.
-	 */
 	private long _lastAccess;
-	/**
-	 * Field _titlecolor. Field _nameColor.
-	 */
 	private int _nameColor, _titlecolor;
-	/**
-	 * Field _vitality.
-	 */
 	private int _vitality;
-	/**
-	 * Field _overloaded.
-	 */
 	private boolean _overloaded;
-	/**
-	 * Field _identItem.
-	 */
 	public final boolean _identItem = false;
-	/**
-	 * Field sittingTaskLaunched.
-	 */
 	boolean sittingTaskLaunched;
-	/**
-	 * Field _waitTimeWhenSit.
-	 */
 	private int _waitTimeWhenSit;
-	/**
-	 * Field AutoLootHerbs. Field _autoLoot.
-	 */
 	private boolean _autoLoot = Config.AUTO_LOOT, AutoLootHerbs = Config.AUTO_LOOT_HERBS;
-	/**
-	 * Field _inventory.
-	 */
 	private final PcInventory _inventory = new PcInventory(this);
-	/**
-	 * Field _warehouse.
-	 */
 	private final Warehouse _warehouse = new PcWarehouse(this);
-	/**
-	 * Field _refund.
-	 */
 	private final ItemContainer _refund = new PcRefund(this);
-	/**
-	 * Field _freight.
-	 */
 	private final PcFreight _freight = new PcFreight(this);
-	/**
-	 * Field bookmarks.
-	 */
 	public final BookMarkList bookmarks = new BookMarkList(this, 0);
-	/**
-	 * Field antiFlood.
-	 */
 	public final AntiFlood antiFlood = new AntiFlood();
-	/**
-	 * Field _recipebook.
-	 */
 	private final Map<Integer, RecipeTemplate> _recipebook = new TreeMap<>();
-	/**
-	 * Field _commonrecipebook.
-	 */
 	private final Map<Integer, RecipeTemplate> _commonrecipebook = new TreeMap<>();
-	/**
-	 * Field _premiumItems.
-	 */
 	private final Map<Integer, PremiumItem> _premiumItems = new TreeMap<>();
-	/**
-	 * Field _quests.
-	 */
 	private final Map<String, QuestState> _quests = new HashMap<>();
-	/**
-	 * Field _shortCuts.
-	 */
 	private final ShortCutList _shortCuts = new ShortCutList(this);
-	/**
-	 * Field _macroses.
-	 */
 	private final MacroList _macroses = new MacroList(this);
-	/**
-	 * Field _privatestore.
-	 */
 	private int _privatestore;
-	/**
-	 * Field _manufactureName.
-	 */
 	private String _manufactureName;
-	/**
-	 * Field _createList.
-	 */
 	private List<ManufactureItem> _createList = Collections.emptyList();
-	/**
-	 * Field _sellStoreName.
-	 */
 	private String _sellStoreName;
-	/**
-	 * Field _sellList.
-	 */
 	private List<TradeItem> _sellList = Collections.emptyList();
-	/**
-	 * Field _packageSellList.
-	 */
 	private List<TradeItem> _packageSellList = Collections.emptyList();
-	/**
-	 * Field _buyStoreName.
-	 */
 	private String _buyStoreName;
-	/**
-	 * Field _buyList.
-	 */
 	private List<TradeItem> _buyList = Collections.emptyList();
-	/**
-	 * Field _tradeList.
-	 */
 	private List<TradeItem> _tradeList = Collections.emptyList();
-	/**
-	 * Field _henna.
-	 */
 	private final Henna[] _henna = new Henna[3];
-	/**
-	 * Field _hennaCON. Field _hennaWIT. Field _hennaMEN. Field _hennaDEX. Field _hennaINT. Field _hennaSTR.
-	 */
 	private int _hennaSTR, _hennaINT, _hennaDEX, _hennaMEN, _hennaWIT, _hennaCON;
-	/**
-	 * Field _party.
-	 */
 	private Party _party;
-	/**
-	 * Field _lastPartyPosition.
-	 */
 	private Location _lastPartyPosition;
-	/**
-	 * Field _clan.
-	 */
 	private Clan _clan;
-	/**
-	 * Field _apprentice. Field _lvlJoinedAcademy. Field _powerGrade. Field _pledgeType. Field _pledgeClass.
-	 */
 	private int _pledgeClass = 0, _pledgeType = Clan.SUBUNIT_NONE, _powerGrade = 0, _lvlJoinedAcademy = 0, _apprentice = 0;
-	/**
-	 * Field _accessLevel.
-	 */
 	private int _accessLevel;
-	/**
-	 * Field _playerAccess.
-	 */
 	private PlayerAccess _playerAccess = new PlayerAccess();
-	/**
-	 * Field _blockAll. Field _tradeRefusal. Field _messageRefusal.
-	 */
 	private boolean _messageRefusal = false, _tradeRefusal = false, _blockAll = false;
-	/**
-	 * Field _riding.
-	 */
 	private boolean _riding;
-	/**
-	 * Field _decoy.
-	 */
 	private DecoyInstance _decoy = null;
-	/**
-	 * Field _cubics.
-	 */
 	private Map<Integer, EffectCubic> _cubics = null;
-	/**
-	 * Field _agathionId.
-	 */
 	private int _agathionId = 0;
-	/**
-	 * Field _request.
-	 */
 	private Request _request;
-	/**
-	 * Field _arrowItem.
-	 */
 	private ItemInstance _arrowItem;
-	/**
-	 * Field _fistsWeaponItem.
-	 */
 	private WeaponTemplate _fistsWeaponItem;
-	/**
-	 * Field _chars.
-	 */
 	private Map<Integer, String> _chars = new HashMap<>(8);
-	/**
-	 * Field expertiseIndex.
-	 */
 	public int expertiseIndex = 0;
-	/**
-	 * Field _enchantScroll.
-	 */
 	private ItemInstance _enchantScroll = null;
-	/**
-	 * Field _usingWHType.
-	 */
 	private WarehouseType _usingWHType;
-	/**
-	 * Field _isOnline.
-	 */
 	private boolean _isOnline = false;
-	/**
-	 * Field _isLogout.
-	 */
 	private final AtomicBoolean _isLogout = new AtomicBoolean();
-	/**
-	 * Field _lastNpc.
-	 */
 	private HardReference<NpcInstance> _lastNpc = HardReferences.emptyRef();
-	/**
-	 * Field _multisell.
-	 */
 	private MultiSellListContainer _multisell = null;
-	/**
-	 * Field _activeSoulShots.
-	 */
 	private final Set<Integer> _activeSoulShots = new CopyOnWriteArraySet<>();
-	/**
-	 * Field _observerRegion.
-	 */
 	private WorldRegion _observerRegion;
-	/**
-	 * Field _observerMode.
-	 */
 	private final AtomicInteger _observerMode = new AtomicInteger(0);
-	/**
-	 * Field _telemode.
-	 */
 	public int _telemode = 0;
-	/**
-	 * Field _handysBlockCheckerEventArena.
-	 */
 	private int _handysBlockCheckerEventArena = -1;
-	/**
-	 * Field entering.
-	 */
 	public boolean entering = true;
-	/**
-	 * Field _stablePoint.
-	 */
 	public Location _stablePoint = null;
-	/**
-	 * Field _loto.
-	 */
 	public final int _loto[] = new int[5];
-	/**
-	 * Field _race.
-	 */
 	public final int _race[] = new int[2];
-	/**
-	 * Field _blockList.
-	 */
 	private final Map<Integer, String> _blockList = new ConcurrentSkipListMap<>();
-	/**
-	 * Field _friendList.
-	 */
 	private final FriendList _friendList = new FriendList(this);
-	/**
-	 * Field _hero.
-	 */
 	private boolean _hero = false;
-	/**
-	 * Field _boat.
-	 */
 	private Boat _boat;
-	/**
-	 * Field _inBoatPosition.
-	 */
 	private Location _inBoatPosition;
-	/**
-	 * Field _bonus.
-	 */
 	private final Bonus _bonus = new Bonus();
-	/**
-	 * Field _bonusExpiration.
-	 */
 	private Future<?> _bonusExpiration;
-	/**
-	 * Field _isSitting.
-	 */
 	private boolean _isSitting;
-	/**
-	 * Field _sittingObject.
-	 */
 	private StaticObjectInstance _sittingObject;
-	/**
-	 * Field _noble.
-	 */
 	private boolean _noble = false;
-	/**
-	 * Field _inOlympiadMode.
-	 */
 	private boolean _inOlympiadMode;
-	/**
-	 * Field _olympiadGame.
-	 */
 	private OlympiadGame _olympiadGame;
-	/**
-	 * Field _olympiadObserveGame.
-	 */
 	private OlympiadGame _olympiadObserveGame;
-	/**
-	 * Field _olympiadSide.
-	 */
 	private int _olympiadSide = -1;
-	
 	private ItemInstance _enchantItem;
 	private ItemInstance _enchantSupportItem;
-	/**
-	 * Field _varka.
-	 */
 	private int _varka = 0;
-	/**
-	 * Field _ketra.
-	 */
 	private int _ketra = 0;
-	/**
-	 * Field _ram.
-	 */
 	private int _ram = 0;
-	/**
-	 * Field _keyBindings.
-	 */
 	private byte[] _keyBindings = ArrayUtils.EMPTY_BYTE_ARRAY;
-	/**
-	 * Field _cursedWeaponEquippedId.
-	 */
 	private int _cursedWeaponEquippedId = 0;
-	/**
-	 * Field _fishing.
-	 */
 	private final Fishing _fishing = new Fishing(this);
-	/**
-	 * Field _isFishing.
-	 */
 	private boolean _isFishing;
-	/**
-	 * Field _taskWater.
-	 */
 	private Future<?> _taskWater;
-	/**
-	 * Field _autoSaveTask.
-	 */
 	private Future<?> _autoSaveTask;
-	/**
-	 * Field _kickTask.
-	 */
 	private Future<?> _kickTask;
-	/**
-	 * Field _pcCafePointsTask.
-	 */
 	private Future<?> _pcCafePointsTask;
-	/**
-	 * Field _unjailTask.
-	 */
 	private Future<?> _unjailTask;
-	/**
-	 * Field _storeLock.
-	 */
 	private final Lock _storeLock = new ReentrantLock();
-	/**
-	 * Field _subClassOperationLock.
-	 */
 	private final Lock _subClassOperationLock = new ReentrantLock();
-	/**
-	 * Field _zoneMask.
-	 */
 	private int _zoneMask;
-	/**
-	 * Field _offline.
-	 */
 	private boolean _offline = false;
-	/**
-	 * Field _pcBangPoints.
-	 */
 	private int _pcBangPoints;
-	/**
-	 * Field _transformationSkills.
-	 */
 	final Map<Integer, Skill> _transformationSkills = new HashMap<>();
-	/**
-	 * Field _expandInventory.
-	 */
 	private int _expandInventory = 0;
-	/**
-	 * Field _expandWarehouse.
-	 */
 	private int _expandWarehouse = 0;
-	/**
-	 * Field _battlefieldChatId.
-	 */
 	private int _battlefieldChatId;
-	/**
-	 * Field _lectureMark.
-	 */
 	private int _lectureMark;
-	/**
-	 * Field _invisibleType.
-	 */
 	private InvisibleType _invisibleType = InvisibleType.NONE;
-	/**
-	 * Field bypasses_bbs. Field bypasses.
-	 */
 	private List<String> bypasses = null, bypasses_bbs = null;
-	/**
-	 * Field _postFriends.
-	 */
 	private IntObjectMap<String> _postFriends = Containers.emptyIntObjectMap();
-	/**
-	 * Field _blockedActions.
-	 */
 	private final List<String> _blockedActions = new ArrayList<>();
-	/**
-	 * Field _notShowBuffAnim.
-	 */
 	private boolean _notShowBuffAnim = false;
-	/**
-	 * Field _notShowTraders.
-	 */
 	private boolean _notShowTraders = false;
-	/**
-	 * Field _debug.
-	 */
 	private boolean _debug = false;
-	/**
-	 * Field _dropDisabled.
-	 */
 	private long _dropDisabled;
-	/**
-	 * Field _lastItemAuctionInfoRequest.
-	 */
 	private long _lastItemAuctionInfoRequest;
-	/**
-	 * Field _sharedGroupReuses.
-	 */
 	private final IntObjectMap<TimeStamp> _sharedGroupReuses = new CHashIntObjectMap<>();
-	/**
-	 * Field _askDialog.
-	 */
 	private Pair<Integer, OnAnswerListener> _askDialog = null;
-	/**
-	 * Field _matchingRoom.
-	 */
 	private MatchingRoom _matchingRoom;
-	/**
-	 * Field _petitionGroup.
-	 */
 	private PetitionMainGroup _petitionGroup;
-	/**
-	 * Field _instancesReuses.
-	 */
 	private final Map<Integer, Long> _instancesReuses = new ConcurrentHashMap<>();
-	/**
-	 * Field _currentJumpTrack.
-	 */
 	private JumpTrack _currentJumpTrack = null;
-	/**
-	 * Field _currentJumpWay.
-	 */
 	private JumpWay _currentJumpWay = null;
-	/**
-	 * Field _summons.
-	 */
 	private ConcurrentHashMap<Integer, Summon> _summons = new ConcurrentHashMap<>(4);
-	/**
-	 * Field _tree.
-	 */
 	private boolean _tree;
-	/**
-	 * Field _ServitorShareRestore.
-	 */
 	boolean _ServitorShareRestore = false;
-	
 	Effect _ServitorShareRestoreData = null;
-	/**
-	 * Field _collision_radius.
-	 */
 	private final double _collision_radius;
-	/**
-	 * Field _collision_height.
-	 */
 	private final double _collision_height;
-	/**
-	 * Field _subClassList.
-	 */
 	private final SubClassList _subClassList = new SubClassList(this);
-	/**
-	 * Field _summonList.
-	 */
 	private final SummonList _summonList = new SummonList(this);
-	/**
-	 * Field mentorSystem.
-	 */
 	private final MentoringSystem mentorSystem;
 	
 	/**
@@ -2384,9 +1866,6 @@ public final class Player extends Playable implements PlayerGroup
 		sendVoteSystemInfo();
 	}
 	
-	/**
-	 * Field _recomBonusTask.
-	 */
 	private ScheduledFuture<?> _recomBonusTask;
 	
 	/**
@@ -2471,9 +1950,6 @@ public final class Player extends Playable implements PlayerGroup
 		}
 	}
 	
-	/**
-	 * Field _updateEffectIconsTask.
-	 */
 	Future<?> _updateEffectIconsTask;
 	
 	/**
@@ -3162,9 +2638,6 @@ public final class Player extends Playable implements PlayerGroup
 		return success;
 	}
 	
-	/**
-	 * Field partySearchStatusIsOn.
-	 */
 	boolean partySearchStatusIsOn = false;
 	
 	/**
@@ -3185,9 +2658,6 @@ public final class Player extends Playable implements PlayerGroup
 		partySearchStatusIsOn = partySearchStatus;
 	}
 	
-	/**
-	 * Field playerForChange.
-	 */
 	Player playerForChange;
 	
 	/**
@@ -3208,9 +2678,6 @@ public final class Player extends Playable implements PlayerGroup
 		playerForChange = _playerForChange;
 	}
 	
-	/**
-	 * Field _isIgnoringDeath.
-	 */
 	boolean _isIgnoringDeath = false;
 	
 	/**
@@ -4326,9 +3793,6 @@ public final class Player extends Playable implements PlayerGroup
 		return;
 	}
 	
-	/**
-	 * Field _polyNpcId.
-	 */
 	private int _polyNpcId;
 	
 	/**
@@ -8405,17 +7869,8 @@ public final class Player extends Playable implements PlayerGroup
 		return super.getSpeed(baseSpeed);
 	}
 	
-	/**
-	 * Field _mountNpcId.
-	 */
 	private int _mountNpcId;
-	/**
-	 * Field _mountObjId.
-	 */
 	private int _mountObjId;
-	/**
-	 * Field _mountLevel.
-	 */
 	private int _mountLevel;
 	
 	/**
@@ -10100,9 +9555,6 @@ public final class Player extends Playable implements PlayerGroup
 		}
 	}
 	
-	/**
-	 * Field user_variables.
-	 */
 	private final Map<String, String> user_variables = new ConcurrentHashMap<>();
 	
 	/**
@@ -11570,25 +11022,10 @@ public final class Player extends Playable implements PlayerGroup
 		return _party == null ? _bonus.getDropSpoil() : _party._rateSpoil;
 	}
 	
-	/**
-	 * Field _maried.
-	 */
 	private boolean _maried = false;
-	/**
-	 * Field _partnerId.
-	 */
 	private int _partnerId = 0;
-	/**
-	 * Field _coupleId.
-	 */
 	private int _coupleId = 0;
-	/**
-	 * Field _maryrequest.
-	 */
 	private boolean _maryrequest = false;
-	/**
-	 * Field _maryaccepted.
-	 */
 	private boolean _maryaccepted = false;
 	
 	/**
@@ -11722,9 +11159,6 @@ public final class Player extends Playable implements PlayerGroup
 		return getActiveSubClass() == null ? null : getActiveSubClass().getDeathPenalty(this);
 	}
 	
-	/**
-	 * Field _charmOfCourage.
-	 */
 	private boolean _charmOfCourage = false;
 	
 	/**
@@ -11752,13 +11186,7 @@ public final class Player extends Playable implements PlayerGroup
 		sendEtcStatusUpdate();
 	}
 	
-	/**
-	 * Field _increasedForce.
-	 */
 	private int _increasedForce = 0;
-	/**
-	 * Field _consumedSouls.
-	 */
 	private int _consumedSouls = 0;
 	
 	/**
@@ -11849,9 +11277,6 @@ public final class Player extends Playable implements PlayerGroup
 		sendEtcStatusUpdate();
 	}
 	
-	/**
-	 * Field _lastFalling.
-	 */
 	private long _lastFalling;
 	
 	/**
@@ -12197,13 +11622,7 @@ public final class Player extends Playable implements PlayerGroup
 		sendPacket(new SystemMessage(message));
 	}
 	
-	/**
-	 * Field _lastClientPosition.
-	 */
 	private Location _lastClientPosition;
-	/**
-	 * Field _lastServerPosition.
-	 */
 	private Location _lastServerPosition;
 	
 	/**
@@ -12242,9 +11661,6 @@ public final class Player extends Playable implements PlayerGroup
 		return _lastServerPosition;
 	}
 	
-	/**
-	 * Field _useSeed.
-	 */
 	private int _useSeed = 0;
 	
 	/**
@@ -12384,17 +11800,8 @@ public final class Player extends Playable implements PlayerGroup
 		return result;
 	}
 	
-	/**
-	 * Field _pvpFlag.
-	 */
 	protected int _pvpFlag;
-	/**
-	 * Field _PvPRegTask.
-	 */
 	private Future<?> _PvPRegTask;
-	/**
-	 * Field _lastPvpAttack.
-	 */
 	private long _lastPvpAttack;
 	
 	/**
@@ -12502,9 +11909,6 @@ public final class Player extends Playable implements PlayerGroup
 		return getEvent(DuelEvent.class) != null;
 	}
 	
-	/**
-	 * Field _tamedBeasts.
-	 */
 	private final Map<Integer, TamedBeastInstance> _tamedBeasts = new ConcurrentHashMap<>();
 	
 	/**
@@ -12534,9 +11938,6 @@ public final class Player extends Playable implements PlayerGroup
 		_tamedBeasts.remove(npcId);
 	}
 	
-	/**
-	 * Field _lastAttackPacket.
-	 */
 	private long _lastAttackPacket = 0;
 	
 	/**
@@ -12556,9 +11957,6 @@ public final class Player extends Playable implements PlayerGroup
 		_lastAttackPacket = System.currentTimeMillis();
 	}
 	
-	/**
-	 * Field _lastMovePacket.
-	 */
 	private long _lastMovePacket = 0;
 	
 	/**
@@ -12869,9 +12267,6 @@ public final class Player extends Playable implements PlayerGroup
 		return true;
 	}
 	
-	/**
-	 * Field _groundSkillLoc.
-	 */
 	private Location _groundSkillLoc;
 	
 	/**
@@ -13429,9 +12824,6 @@ public final class Player extends Playable implements PlayerGroup
 		return (weapon != null) && weapon.getTemplate().isTerritoryFlag();
 	}
 	
-	/**
-	 * Field _buyListId.
-	 */
 	private int _buyListId;
 	
 	/**
@@ -13544,9 +12936,6 @@ public final class Player extends Playable implements PlayerGroup
 		return getVitality() > 0 ? Config.ALT_VITALITY_RATE : 0.0;
 	}
 	
-	/**
-	 * Field _incorrectValidateCount.
-	 */
 	private final int _incorrectValidateCount = 0;
 	
 	/**
@@ -13680,13 +13069,7 @@ public final class Player extends Playable implements PlayerGroup
 		sendPacket(new SpecialCamera(target.getObjectId(), dist, yaw, pitch, time, duration, turn, rise, widescreen, unk));
 	}
 	
-	/**
-	 * Field _movieId.
-	 */
 	private int _movieId = 0;
-	/**
-	 * Field _isInMovie.
-	 */
 	private boolean _isInMovie;
 	
 	/**
@@ -14000,9 +13383,6 @@ public final class Player extends Playable implements PlayerGroup
 		return _dropDisabled > System.currentTimeMillis();
 	}
 	
-	/**
-	 * Field _petControlItem.
-	 */
 	private ItemInstance _petControlItem = null;
 	
 	/**
@@ -14032,9 +13412,6 @@ public final class Player extends Playable implements PlayerGroup
 		return _petControlItem;
 	}
 	
-	/**
-	 * Field isActive.
-	 */
 	private final AtomicBoolean isActive = new AtomicBoolean();
 	
 	/**
@@ -14085,9 +13462,6 @@ public final class Player extends Playable implements PlayerGroup
 		});
 	}
 	
-	/**
-	 * Field _traps.
-	 */
 	private Map<Integer, Long> _traps;
 	
 	/**
@@ -14272,13 +13646,7 @@ public final class Player extends Playable implements PlayerGroup
 		return (PlayerStatsChangeRecorder) _statsRecorder;
 	}
 	
-	/**
-	 * Field _hourlyTask.
-	 */
 	private Future<?> _hourlyTask;
-	/**
-	 * Field _hoursInGame.
-	 */
 	private int _hoursInGame = 0;
 	
 	/**
@@ -14337,9 +13705,6 @@ public final class Player extends Playable implements PlayerGroup
 		}
 	}
 	
-	/**
-	 * Field _agathionResAvailable.
-	 */
 	private boolean _agathionResAvailable = false;
 	
 	/**
@@ -14369,9 +13734,6 @@ public final class Player extends Playable implements PlayerGroup
 		return isInBoat() && getBoat().isClanAirShip() && (((ClanAirShip) getBoat()).getDriver() == this);
 	}
 	
-	/**
-	 * Field _userSession.
-	 */
 	private Map<String, String> _userSession;
 	
 	/**
@@ -15330,9 +14692,6 @@ public final class Player extends Playable implements PlayerGroup
 		setCurrentJumpWay(null);
 	}
 	
-	/**
-	 * Field is_bbs_use.
-	 */
 	private boolean is_bbs_use = false;
 	
 	/**
@@ -15408,13 +14767,7 @@ public final class Player extends Playable implements PlayerGroup
 		return getClassId().getClassLevel().ordinal();
 	}
 	
-	/**
-	 * Field _acquiredItemMonthly.
-	 */
 	final HashMap<Integer, Long> _acquiredItemMonthly = new HashMap<>();
-	/**
-	 * Field _acquiredItemTotal.
-	 */
 	final HashMap<Integer, Long> _acquiredItemTotal = new HashMap<>();
 	
 	/**
@@ -15492,9 +14845,6 @@ public final class Player extends Playable implements PlayerGroup
 		return totalOnlineTime;
 	}
 	
-	/**
-	 * Field partyTime.
-	 */
 	long partyTime = 0;
 	
 	/**
@@ -15515,9 +14865,6 @@ public final class Player extends Playable implements PlayerGroup
 		return partyTime;
 	}
 	
-	/**
-	 * Field fullPartyTime.
-	 */
 	long fullPartyTime = 0;
 	
 	/**
@@ -15699,13 +15046,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 	}
 	
-	/**
-	 * Field _skillCastingTask.
-	 */
 	ScheduledFuture<?> _skillCastingTask;
-	/**
-	 * Field _skill.
-	 */
 	static Skill _skill;
 	
 	/**
@@ -15714,9 +15055,6 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	private class SummonSkillCastingTask implements Runnable
 	{
-		/**
-		 * Field _caster.
-		 */
 		private final Player _caster;
 		
 		/**
@@ -15974,5 +15312,4 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		return (isAwaking()) && (getLevel() > 84);
 	}
-	
 }

@@ -21,9 +21,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionTargetPlayer extends Condition
 {
-	/**
-	 * Field _flag.
-	 */
 	private final boolean _flag;
 	
 	/**

@@ -14,7 +14,6 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.utils.Location;
 

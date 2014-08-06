@@ -20,9 +20,6 @@ import lineage2.gameserver.model.Player;
  */
 public class RequestPledgeExtendedInfo extends L2GameClientPacket
 {
-	/**
-	 * Field _name.
-	 */
 	@SuppressWarnings("unused")
 	private String _name;
 	

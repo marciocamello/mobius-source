@@ -21,13 +21,7 @@ import lineage2.gameserver.network.serverpackets.StartRotating;
  */
 public class StartRotatingC extends L2GameClientPacket
 {
-	/**
-	 * Field _degree.
-	 */
 	private int _degree;
-	/**
-	 * Field _side.
-	 */
 	private int _side;
 	
 	/**

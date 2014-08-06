@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-
 import lineage2.gameserver.data.xml.holder.InstantZoneHolder;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.CommandChannel;
@@ -27,7 +26,6 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.DoorInstance;
 import lineage2.gameserver.network.GamePacketHandler;
 import lineage2.gameserver.templates.InstantZone;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,9 +35,6 @@ import org.slf4j.LoggerFactory;
  */
 public class ReflectionUtils
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(GamePacketHandler.class);
 	
 	/**

@@ -14,7 +14,6 @@ package npc.model;
 
 import java.util.List;
 import java.util.StringTokenizer;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.data.xml.holder.MultiSellHolder;
@@ -40,73 +39,22 @@ public final class CaravanTraderInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field NativeTreasure. (value is 9684)
-	 */
 	private static final int NativeTreasure = 9684;
-	/**
-	 * Field HolyWater. (value is 9673)
-	 */
 	private static final int HolyWater = 9673;
-	/**
-	 * Field DarionsBadge. (value is 9674)
-	 */
 	private static final int DarionsBadge = 9674;
-	/**
-	 * Field FirstMark. (value is 9850)
-	 */
 	private static final int FirstMark = 9850;
-	/**
-	 * Field SecondMark. (value is 9851)
-	 */
 	private static final int SecondMark = 9851;
-	/**
-	 * Field ThirdMark. (value is 9852)
-	 */
 	private static final int ThirdMark = 9852;
-	/**
-	 * Field ForthMark. (value is 9853)
-	 */
 	private static final int ForthMark = 9853;
-	/**
-	 * Field ScorpionPoisonStinger. (value is 10012)
-	 */
 	private static final int ScorpionPoisonStinger = 10012;
-	/**
-	 * Field MarkOfBetrayal. (value is 9676)
-	 */
 	private static final int MarkOfBetrayal = 9676;
-	/**
-	 * Field MagicBottle. (value is 9672)
-	 */
 	private static final int MagicBottle = 9672;
-	/**
-	 * Field NativeHelmet. (value is 9669)
-	 */
 	private static final int NativeHelmet = 9669;
-	/**
-	 * Field NativeTunic. (value is 9670)
-	 */
 	private static final int NativeTunic = 9670;
-	/**
-	 * Field NativePants. (value is 9671)
-	 */
 	private static final int NativePants = 9671;
-	/**
-	 * Field LifeForce. (value is 9681)
-	 */
 	private static final int LifeForce = 9681;
-	/**
-	 * Field DimLifeForce. (value is 9680)
-	 */
 	private static final int DimLifeForce = 9680;
-	/**
-	 * Field ContainedLifeForce. (value is 9682)
-	 */
 	private static final int ContainedLifeForce = 9682;
-	/**
-	 * Field FieryDemonBloodSkill. (value is 2357)
-	 */
 	private static final int FieryDemonBloodSkill = 2357;
 	
 	/**

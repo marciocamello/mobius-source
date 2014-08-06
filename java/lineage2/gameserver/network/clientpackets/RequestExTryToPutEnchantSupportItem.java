@@ -24,13 +24,7 @@ import lineage2.gameserver.utils.ItemFunctions;
  */
 public class RequestExTryToPutEnchantSupportItem extends L2GameClientPacket
 {
-	/**
-	 * Field _itemId.
-	 */
 	private int _itemId;
-	/**
-	 * Field _catalystId.
-	 */
 	private int _catalystId;
 	
 	/**

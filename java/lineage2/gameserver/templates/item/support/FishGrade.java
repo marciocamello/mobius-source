@@ -18,16 +18,7 @@ package lineage2.gameserver.templates.item.support;
  */
 public enum FishGrade
 {
-	/**
-	 * Field EASY.
-	 */
 	EASY,
-	/**
-	 * Field NORMAL.
-	 */
 	NORMAL,
-	/**
-	 * Field HARD.
-	 */
 	HARD
 }

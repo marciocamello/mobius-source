@@ -17,7 +17,6 @@ import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.templates.mapregion.RegionData;
 import lineage2.gameserver.utils.Location;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -26,9 +25,6 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public class MapRegionManager extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static MapRegionManager _instance;
 	
 	/**
@@ -45,9 +41,6 @@ public class MapRegionManager extends AbstractHolder
 		return _instance;
 	}
 	
-	/**
-	 * Field map.
-	 */
 	private final RegionData[][][] map = new RegionData[World.WORLD_SIZE_X][World.WORLD_SIZE_Y][0];
 	
 	/**

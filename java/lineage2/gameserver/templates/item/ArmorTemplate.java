@@ -21,45 +21,15 @@ import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
  */
 public final class ArmorTemplate extends ItemTemplate
 {
-	/**
-	 * Field EMPTY_RING. (value is 5.0)
-	 */
 	public static final double EMPTY_RING = 5;
-	/**
-	 * Field EMPTY_EARRING. (value is 9.0)
-	 */
 	public static final double EMPTY_EARRING = 9;
-	/**
-	 * Field EMPTY_NECKLACE. (value is 13.0)
-	 */
 	public static final double EMPTY_NECKLACE = 13;
-	/**
-	 * Field EMPTY_HELMET. (value is 12.0)
-	 */
 	public static final double EMPTY_HELMET = 12;
-	/**
-	 * Field EMPTY_BODY_FIGHTER. (value is 31.0)
-	 */
 	public static final double EMPTY_BODY_FIGHTER = 31;
-	/**
-	 * Field EMPTY_LEGS_FIGHTER. (value is 18.0)
-	 */
 	public static final double EMPTY_LEGS_FIGHTER = 18;
-	/**
-	 * Field EMPTY_BODY_MYSTIC. (value is 15.0)
-	 */
 	public static final double EMPTY_BODY_MYSTIC = 15;
-	/**
-	 * Field EMPTY_LEGS_MYSTIC. (value is 8.0)
-	 */
 	public static final double EMPTY_LEGS_MYSTIC = 8;
-	/**
-	 * Field EMPTY_GLOVES. (value is 8.0)
-	 */
 	public static final double EMPTY_GLOVES = 8;
-	/**
-	 * Field EMPTY_BOOTS. (value is 7.0)
-	 */
 	public static final double EMPTY_BOOTS = 7;
 	
 	/**
@@ -67,41 +37,14 @@ public final class ArmorTemplate extends ItemTemplate
 	 */
 	public enum ArmorType implements ItemType
 	{
-		/**
-		 * Field NONE.
-		 */
 		NONE(1, "None"),
-		/**
-		 * Field LIGHT.
-		 */
 		LIGHT(2, "Light"),
-		/**
-		 * Field HEAVY.
-		 */
 		HEAVY(3, "Heavy"),
-		/**
-		 * Field MAGIC.
-		 */
 		MAGIC(4, "Magic"),
-		/**
-		 * Field PET.
-		 */
 		PET(5, "Pet"),
-		/**
-		 * Field SIGIL.
-		 */
 		SIGIL(6, "Sigil");
-		/**
-		 * Field VALUES.
-		 */
 		public final static ArmorType[] VALUES = values();
-		/**
-		 * Field _mask.
-		 */
 		private final long _mask;
-		/**
-		 * Field _name.
-		 */
 		private final String _name;
 		
 		/**

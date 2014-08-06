@@ -22,17 +22,8 @@ import lineage2.gameserver.model.Player;
  */
 public class ReviveAnswerListener implements OnAnswerListener
 {
-	/**
-	 * Field _playerRef.
-	 */
 	private final HardReference<Player> _playerRef;
-	/**
-	 * Field _power.
-	 */
 	private final double _power;
-	/**
-	 * Field _forPet.
-	 */
 	private final boolean _forPet;
 	
 	/**

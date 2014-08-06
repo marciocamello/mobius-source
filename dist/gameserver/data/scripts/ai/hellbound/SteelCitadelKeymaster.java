@@ -25,13 +25,7 @@ import lineage2.gameserver.utils.Location;
  */
 public final class SteelCitadelKeymaster extends Fighter
 {
-	/**
-	 * Field _firstTimeAttacked.
-	 */
 	private boolean _firstTimeAttacked = true;
-	/**
-	 * Field AMASKARI_ID. (value is 22449)
-	 */
 	private static final int AMASKARI_ID = 22449;
 	
 	/**

@@ -26,9 +26,6 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public class Escape implements IUserCommandHandler
 {
-	/**
-	 * Field COMMAND_IDS.
-	 */
 	private static final int[] COMMAND_IDS =
 	{
 		52

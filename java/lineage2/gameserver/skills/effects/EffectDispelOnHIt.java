@@ -22,7 +22,6 @@ import lineage2.gameserver.stats.Env;
 public final class EffectDispelOnHIt extends Effect
 {
 	public int _hitCount = 0;
-	
 	public int _maxHitCount = 0;
 	
 	/**

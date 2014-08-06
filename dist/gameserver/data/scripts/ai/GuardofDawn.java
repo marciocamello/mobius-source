@@ -59,13 +59,7 @@ public final class GuardofDawn extends DefaultAI
 	 */
 	public final class Teleportation extends RunnableImpl
 	{
-		/**
-		 * Field _telePoint.
-		 */
 		Location _telePoint = null;
-		/**
-		 * Field _target.
-		 */
 		Playable _target = null;
 		
 		/**

@@ -27,13 +27,7 @@ import lineage2.gameserver.utils.Location;
  */
 public final class YehanBrother extends Fighter
 {
-	/**
-	 * Field _spawnTimer.
-	 */
 	private long _spawnTimer = 0;
-	/**
-	 * Field _minions.
-	 */
 	private static final int[] _minions = ArrayUtils.createAscendingArray(22509, 22512);
 	
 	/**

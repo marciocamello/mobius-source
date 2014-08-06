@@ -24,9 +24,6 @@ import lineage2.gameserver.stats.Env;
  */
 public final class EffectTransformation extends Effect
 {
-	/**
-	 * Field isFlyingTransform.
-	 */
 	private final boolean isFlyingTransform;
 	
 	/**

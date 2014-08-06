@@ -18,17 +18,8 @@ package lineage2.gameserver.model.base;
  */
 public enum Sex
 {
-	/**
-	 * Field MALE.
-	 */
 	MALE,
-	/**
-	 * Field FEMALE.
-	 */
 	FEMALE;
-	/**
-	 * Field VALUES.
-	 */
 	public static final Sex[] VALUES = values();
 	
 	/**

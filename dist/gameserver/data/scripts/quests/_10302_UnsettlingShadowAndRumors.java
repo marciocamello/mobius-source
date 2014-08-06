@@ -22,7 +22,6 @@ public class _10302_UnsettlingShadowAndRumors extends Quest implements ScriptFil
 	// npc
 	private static final int KANIBYS = 32898;
 	private static final int ISHAEL = 32894;
-	
 	private static final int KES = 32901;
 	private static final int KEY = 32903;
 	private static final int KIK = 32902;

@@ -27,18 +27,12 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Obelisk extends DefaultAI
 {
-	/**
-	 * Field MOBS.
-	 */
 	private static final int[] MOBS =
 	{
 		22541,
 		22544,
 		22543
 	};
-	/**
-	 * Field _firstTimeAttacked.
-	 */
 	private boolean _firstTimeAttacked = true;
 	
 	/**

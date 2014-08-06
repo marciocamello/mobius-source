@@ -22,9 +22,6 @@ import lineage2.gameserver.stats.Stats;
  */
 public class EffectManaHealOverTime extends Effect
 {
-	/**
-	 * Field _ignoreMpEff.
-	 */
 	private final boolean _ignoreMpEff;
 	
 	/**

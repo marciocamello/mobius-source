@@ -18,17 +18,8 @@ package lineage2.gameserver.templates.player;
  */
 public final class LvlUpData
 {
-	/**
-	 * Field _hp.
-	 */
 	private final double _hp;
-	/**
-	 * Field _mp.
-	 */
 	private final double _mp;
-	/**
-	 * Field _cp.
-	 */
 	private final double _cp;
 	
 	/**

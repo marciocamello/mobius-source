@@ -13,9 +13,7 @@
 package npc.model;
 
 import instances.HeartInfinityAttack;
-
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -35,9 +33,6 @@ public final class DeadTumorInstance extends NpcInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field warpTimer.
-	 */
 	private long warpTimer = 0;
 	
 	/**

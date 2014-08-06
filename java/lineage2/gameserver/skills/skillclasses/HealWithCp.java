@@ -13,7 +13,6 @@
 package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
-
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
@@ -30,13 +29,7 @@ import lineage2.gameserver.templates.StatsSet;
  */
 public class HealWithCp extends Skill
 {
-	/**
-	 * Field _ignoreHpEff.
-	 */
 	private final boolean _ignoreHpEff;
-	/**
-	 * Field _staticPower.
-	 */
 	private final boolean _staticPower;
 	
 	/**

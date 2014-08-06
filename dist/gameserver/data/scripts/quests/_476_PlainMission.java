@@ -22,7 +22,6 @@ public class _476_PlainMission extends Quest implements ScriptFile
 	// npc
 	public static final int GUIDE = 33463;
 	public static final int ANDREI = 31292;
-	
 	public static final String A_LIST = "a_list";
 	public static final String B_LIST = "b_list";
 	public static final String C_LIST = "c_list";

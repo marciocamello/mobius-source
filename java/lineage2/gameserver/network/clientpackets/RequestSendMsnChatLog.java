@@ -19,13 +19,7 @@ package lineage2.gameserver.network.clientpackets;
 @SuppressWarnings("unused")
 public class RequestSendMsnChatLog extends L2GameClientPacket
 {
-	/**
-	 * Field unk3.
-	 */
 	private int unk3;
-	/**
-	 * Field unk2. Field unk.
-	 */
 	private String unk, unk2;
 	
 	/**

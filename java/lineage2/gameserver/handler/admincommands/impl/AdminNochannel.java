@@ -31,13 +31,7 @@ public class AdminNochannel implements IAdminCommandHandler
 	 */
 	private static enum Commands
 	{
-		/**
-		 * Field admin_nochannel.
-		 */
 		admin_nochannel,
-		/**
-		 * Field admin_nc.
-		 */
 		admin_nc
 	}
 	

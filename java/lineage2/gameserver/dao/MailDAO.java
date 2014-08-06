@@ -22,7 +22,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
-
 import lineage2.commons.dao.JdbcDAO;
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.dao.JdbcEntityStats;
@@ -33,7 +32,6 @@ import lineage2.gameserver.model.mail.Mail;
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Element;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,57 +41,18 @@ import org.slf4j.LoggerFactory;
  */
 public class MailDAO implements JdbcDAO<Integer, Mail>
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(MailDAO.class);
-	/**
-	 * Field RESTORE_MAIL. (value is ""SELECT sender_id, sender_name, receiver_id, receiver_name, expire_time, topic, body, price, type, unread, returnable, systemMsg1, systemMsg2 FROM mail WHERE message_id = ?"")
-	 */
 	private final static String RESTORE_MAIL = "SELECT sender_id, sender_name, receiver_id, receiver_name, expire_time, topic, body, price, type, unread, returnable, systemMsg1, systemMsg2 FROM mail WHERE message_id = ?";
-	/**
-	 * Field STORE_MAIL. (value is ""INSERT INTO mail(sender_id, sender_name, receiver_id, receiver_name, expire_time, topic, body, price, type, unread, returnable, systemMsg1, systemMsg2) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)"")
-	 */
 	private final static String STORE_MAIL = "INSERT INTO mail(sender_id, sender_name, receiver_id, receiver_name, expire_time, topic, body, price, type, unread, returnable, systemMsg1, systemMsg2) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
-	/**
-	 * Field UPDATE_MAIL. (value is ""UPDATE mail SET sender_id = ?, sender_name = ?, receiver_id = ?, receiver_name = ?, expire_time = ?, topic = ?, body = ?, price = ?, type = ?, unread = ?, returnable = ?, systemMsg1 = ?, systemMsg2 = ? WHERE message_id = ?"")
-	 */
 	private final static String UPDATE_MAIL = "UPDATE mail SET sender_id = ?, sender_name = ?, receiver_id = ?, receiver_name = ?, expire_time = ?, topic = ?, body = ?, price = ?, type = ?, unread = ?, returnable = ?, systemMsg1 = ?, systemMsg2 = ? WHERE message_id = ?";
-	/**
-	 * Field REMOVE_MAIL. (value is ""DELETE FROM mail WHERE message_id = ?"")
-	 */
 	private final static String REMOVE_MAIL = "DELETE FROM mail WHERE message_id = ?";
-	/**
-	 * Field RESTORE_EXPIRED_MAIL. (value is ""SELECT message_id FROM mail WHERE expire_time <= ?"")
-	 */
 	private final static String RESTORE_EXPIRED_MAIL = "SELECT message_id FROM mail WHERE expire_time <= ?";
-	/**
-	 * Field RESTORE_OWN_MAIL. (value is ""SELECT message_id FROM character_mail WHERE char_id = ? AND is_sender = ?"")
-	 */
 	private final static String RESTORE_OWN_MAIL = "SELECT message_id FROM character_mail WHERE char_id = ? AND is_sender = ?";
-	/**
-	 * Field STORE_OWN_MAIL. (value is ""INSERT INTO character_mail(char_id, message_id, is_sender) VALUES (?,?,?)"")
-	 */
 	private final static String STORE_OWN_MAIL = "INSERT INTO character_mail(char_id, message_id, is_sender) VALUES (?,?,?)";
-	/**
-	 * Field REMOVE_OWN_MAIL. (value is ""DELETE FROM character_mail WHERE char_id = ? AND message_id = ? AND is_sender = ?"")
-	 */
 	private final static String REMOVE_OWN_MAIL = "DELETE FROM character_mail WHERE char_id = ? AND message_id = ? AND is_sender = ?";
-	/**
-	 * Field RESTORE_MAIL_ATTACHMENTS. (value is ""SELECT item_id FROM mail_attachments WHERE message_id = ?"")
-	 */
 	private final static String RESTORE_MAIL_ATTACHMENTS = "SELECT item_id FROM mail_attachments WHERE message_id = ?";
-	/**
-	 * Field STORE_MAIL_ATTACHMENT. (value is ""INSERT INTO mail_attachments(message_id, item_id) VALUES (?,?)"")
-	 */
 	private final static String STORE_MAIL_ATTACHMENT = "INSERT INTO mail_attachments(message_id, item_id) VALUES (?,?)";
-	/**
-	 * Field REMOVE_MAIL_ATTACHMENTS. (value is ""DELETE FROM mail_attachments WHERE message_id = ?"")
-	 */
 	private final static String REMOVE_MAIL_ATTACHMENTS = "DELETE FROM mail_attachments WHERE message_id = ?";
-	/**
-	 * Field instance.
-	 */
 	private final static MailDAO instance = new MailDAO();
 	
 	/**
@@ -105,29 +64,11 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 		return instance;
 	}
 	
-	/**
-	 * Field load.
-	 */
 	final AtomicLong load = new AtomicLong();
-	/**
-	 * Field insert.
-	 */
 	final AtomicLong insert = new AtomicLong();
-	/**
-	 * Field update.
-	 */
 	final AtomicLong update = new AtomicLong();
-	/**
-	 * Field delete.
-	 */
 	final AtomicLong delete = new AtomicLong();
-	/**
-	 * Field cache.
-	 */
 	private final Cache cache;
-	/**
-	 * Field stats.
-	 */
 	private final JdbcEntityStats stats = new JdbcEntityStats()
 	{
 		@Override

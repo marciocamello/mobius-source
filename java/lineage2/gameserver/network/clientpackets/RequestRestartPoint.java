@@ -31,7 +31,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.TeleportUtils;
-
 import org.apache.commons.lang3.tuple.Pair;
 
 /**
@@ -40,9 +39,6 @@ import org.apache.commons.lang3.tuple.Pair;
  */
 public class RequestRestartPoint extends L2GameClientPacket
 {
-	/**
-	 * Field _restartType.
-	 */
 	private RestartType _restartType;
 	
 	/**

@@ -41,6 +41,5 @@ public enum ChatType
 	BATTLEFIELD, // 20 ^
 	MPCC_ROOM, // 21 added epiloge, similarity PARTY_ROOM current for SS
 	NPC_SAY;
-	
 	public static final ChatType[] VALUES = values();
 }

@@ -20,25 +20,10 @@ import lineage2.gameserver.utils.Location;
  */
 public class JumpLocation
 {
-	/**
-	 * Field zoneName.
-	 */
 	private final String zoneName;
-	/**
-	 * Field id.
-	 */
 	private final int id;
-	/**
-	 * Field is_last.
-	 */
 	private final boolean is_last;
-	/**
-	 * Field routes.
-	 */
 	private final int[] routes;
-	/**
-	 * Field location.
-	 */
 	private final Location location;
 	
 	/**

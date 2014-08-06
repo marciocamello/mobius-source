@@ -17,7 +17,6 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
@@ -51,13 +50,7 @@ public class RaidBossInstance extends MonsterInstance
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	/**
-	 * Field minionMaintainTask.
-	 */
 	private ScheduledFuture<?> minionMaintainTask;
-	/**
-	 * Field MINION_UNSPAWN_INTERVAL. (value is 5000)
-	 */
 	private static final int MINION_UNSPAWN_INTERVAL = 5000;
 	
 	/**
@@ -115,9 +108,6 @@ public class RaidBossInstance extends MonsterInstance
 	 */
 	private class MaintainKilledMinion extends RunnableImpl
 	{
-		/**
-		 * Field minion.
-		 */
 		private final MinionInstance minion;
 		
 		/**

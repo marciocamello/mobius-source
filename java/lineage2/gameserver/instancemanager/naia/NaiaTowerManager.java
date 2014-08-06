@@ -16,14 +16,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,45 +31,15 @@ import org.slf4j.LoggerFactory;
  */
 public final class NaiaTowerManager
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(NaiaTowerManager.class);
-	/**
-	 * Field _groupList.
-	 */
 	static final Map<Integer, List<Player>> _groupList = new HashMap<>();
-	/**
-	 * Field _roomsDone.
-	 */
 	private static final Map<Integer, List<Player>> _roomsDone = new HashMap<>();
-	/**
-	 * Field _groupTimer.
-	 */
 	static final Map<Integer, Long> _groupTimer = new HashMap<>();
-	/**
-	 * Field _roomMobs.
-	 */
 	private static Map<Integer, List<NpcInstance>> _roomMobs;
-	/**
-	 * Field _roomMobList.
-	 */
 	private static List<NpcInstance> _roomMobList;
-	/**
-	 * Field _towerAccessible.
-	 */
 	private static long _towerAccessible = 0;
-	/**
-	 * Field _index.
-	 */
 	private static int _index = 0;
-	/**
-	 * Field lockedRooms.
-	 */
 	public static HashMap<Integer, Boolean> lockedRooms;
-	/**
-	 * Field _instance.
-	 */
 	private static final NaiaTowerManager _instance = new NaiaTowerManager();
 	
 	/**

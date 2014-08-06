@@ -21,9 +21,6 @@ import lineage2.gameserver.model.Player;
  */
 public class SendBypassBuildCmd extends L2GameClientPacket
 {
-	/**
-	 * Field _command.
-	 */
 	private String _command;
 	
 	/**

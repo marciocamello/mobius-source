@@ -23,7 +23,6 @@ public class ChangeMoveType extends L2GameServerPacket
 {
 	public static final int WALK = 0;
 	public static final int RUN = 1;
-	
 	private final int _chaId;
 	private final boolean _running;
 	

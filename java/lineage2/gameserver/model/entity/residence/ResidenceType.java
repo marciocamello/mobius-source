@@ -18,20 +18,8 @@ package lineage2.gameserver.model.entity.residence;
  */
 public enum ResidenceType
 {
-	/**
-	 * Field Castle.
-	 */
 	Castle,
-	/**
-	 * Field ClanHall.
-	 */
 	ClanHall,
-	/**
-	 * Field Fortress.
-	 */
 	Fortress;
-	/**
-	 * Field VALUES.
-	 */
 	public static final ResidenceType[] VALUES = values();
 }

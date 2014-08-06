@@ -24,9 +24,7 @@ public enum SysString
 	PREVIOUS(1037),
 	// Text: Next
 	NEXT(1038);
-	
 	private static final SysString[] VALUES = values();
-	
 	private final int _id;
 	
 	SysString(int i)

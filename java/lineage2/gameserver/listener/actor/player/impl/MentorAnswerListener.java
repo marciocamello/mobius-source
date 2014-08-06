@@ -24,13 +24,7 @@ import lineage2.gameserver.model.base.TeamType;
  */
 public class MentorAnswerListener implements OnAnswerListener
 {
-	/**
-	 * Field _playerRef.
-	 */
 	private final HardReference<Player> _playerRef;
-	/**
-	 * Field _mentee.
-	 */
 	private final String _mentee;
 	
 	/**

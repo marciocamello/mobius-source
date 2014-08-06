@@ -13,7 +13,6 @@
 package ai;
 
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.Fighter;
@@ -25,7 +24,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import lineage2.gameserver.tables.SkillTable;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -34,9 +32,6 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public final class SeducedInvestigator extends Fighter
 {
-	/**
-	 * Field _allowedTargets.
-	 */
 	private final int[] _allowedTargets =
 	{
 		25659,
@@ -46,9 +41,6 @@ public final class SeducedInvestigator extends Fighter
 		25663,
 		25664
 	};
-	/**
-	 * Field _reuse.
-	 */
 	private long _reuse = 0;
 	
 	/**

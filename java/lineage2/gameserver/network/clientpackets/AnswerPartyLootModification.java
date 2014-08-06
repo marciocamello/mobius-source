@@ -21,9 +21,6 @@ import lineage2.gameserver.model.Player;
  */
 public class AnswerPartyLootModification extends L2GameClientPacket
 {
-	/**
-	 * Field _answer.
-	 */
 	public int _answer;
 	
 	/**

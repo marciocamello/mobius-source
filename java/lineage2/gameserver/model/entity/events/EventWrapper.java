@@ -20,13 +20,7 @@ import lineage2.gameserver.taskmanager.actionrunner.ActionWrapper;
  */
 public class EventWrapper extends ActionWrapper
 {
-	/**
-	 * Field _event.
-	 */
 	private final GlobalEvent _event;
-	/**
-	 * Field _time.
-	 */
 	private final int _time;
 	
 	/**

@@ -22,7 +22,6 @@ public class _473_InTheCoralGarden extends Quest implements ScriptFile
 {
 	// npc
 	public static final int FIOREN = 33044;
-	
 	// mobs
 	public static final int MICHAEL = 25799;
 	

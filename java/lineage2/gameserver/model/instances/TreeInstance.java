@@ -15,7 +15,6 @@ package lineage2.gameserver.model.instances;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
@@ -38,29 +37,11 @@ import lineage2.gameserver.utils.Location;
  */
 public class TreeInstance extends Summon
 {
-	/**
-	 * Field serialVersionUID. (value is -3990686488577795700)
-	 */
 	private static final long serialVersionUID = -3990686488577795700L;
-	/**
-	 * Field _owner.
-	 */
 	private final Player _owner;
-	/**
-	 * Field _skill.
-	 */
 	final Skill _skill;
-	/**
-	 * Field _lifetimeCountdown.
-	 */
 	private final int _lifetimeCountdown;
-	/**
-	 * Field _targetTask.
-	 */
 	private ScheduledFuture<?> _targetTask;
-	/**
-	 * Field _destroyTask.
-	 */
 	private ScheduledFuture<?> _destroyTask;
 	
 	/**
@@ -116,9 +97,6 @@ public class TreeInstance extends Summon
 	 */
 	private static class CastTask extends RunnableImpl
 	{
-		/**
-		 * Field _trapRef.
-		 */
 		private final HardReference<? extends Playable> _trapRef;
 		
 		/**

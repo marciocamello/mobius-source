@@ -25,9 +25,6 @@ import npc.model.HellboundRemnantInstance;
  */
 public final class HolyWater extends SimpleItemHandler
 {
-	/**
-	 * Field ITEM_IDS.
-	 */
 	private static final int[] ITEM_IDS = new int[]
 	{
 		9673

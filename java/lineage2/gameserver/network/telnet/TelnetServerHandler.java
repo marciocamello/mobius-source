@@ -20,7 +20,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import lineage2.gameserver.Config;
 import lineage2.gameserver.network.telnet.commands.TelnetBan;
 import lineage2.gameserver.network.telnet.commands.TelnetConfig;
@@ -30,7 +29,6 @@ import lineage2.gameserver.network.telnet.commands.TelnetSay;
 import lineage2.gameserver.network.telnet.commands.TelnetServer;
 import lineage2.gameserver.network.telnet.commands.TelnetStatus;
 import lineage2.gameserver.network.telnet.commands.TelnetWorld;
-
 import org.jboss.netty.channel.ChannelFuture;
 import org.jboss.netty.channel.ChannelFutureListener;
 import org.jboss.netty.channel.ChannelHandlerContext;
@@ -47,17 +45,8 @@ import org.slf4j.LoggerFactory;
  */
 public class TelnetServerHandler extends SimpleChannelUpstreamHandler implements TelnetCommandHolder
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(TelnetServerHandler.class);
-	/**
-	 * Field COMMAND_ARGS_PATTERN.
-	 */
 	private static final Pattern COMMAND_ARGS_PATTERN = Pattern.compile("\"([^\"]*)\"|([^\\s]+)");
-	/**
-	 * Field _commands.
-	 */
 	final Set<TelnetCommand> _commands = new LinkedHashSet<>();
 	
 	/**

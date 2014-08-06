@@ -13,7 +13,6 @@
 package events.Christmas;
 
 import java.util.Calendar;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.ThreadPoolManager;
@@ -31,9 +30,6 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class NewYearTimer implements ScriptFile
 {
-	/**
-	 * Field instance.
-	 */
 	static NewYearTimer instance;
 	
 	/**
@@ -148,9 +144,6 @@ public final class NewYearTimer implements ScriptFile
 	 */
 	static private class NewYearAnnouncer extends RunnableImpl
 	{
-		/**
-		 * Field message.
-		 */
 		private final String message;
 		
 		/**

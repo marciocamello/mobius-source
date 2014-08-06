@@ -13,7 +13,6 @@
 package ai.residences.clanhall;
 
 import java.util.List;
-
 import lineage2.commons.collections.CollectionUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ai.CtrlIntention;

@@ -23,9 +23,6 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
  */
 public final class SealDevice extends Fighter
 {
-	/**
-	 * Field _firstAttack.
-	 */
 	private boolean _firstAttack = false;
 	
 	/**

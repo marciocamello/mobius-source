@@ -14,7 +14,6 @@ package events.March8;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
@@ -30,7 +29,6 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Util;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,42 +38,18 @@ import org.slf4j.LoggerFactory;
  */
 public final class March8 extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(March8.class);
-	/**
-	 * Field EVENT_NAME. (value is ""March8"")
-	 */
 	private static final String EVENT_NAME = "March8";
-	/**
-	 * Field RECIPE_PRICE. (value is 50000)
-	 */
 	private static final int RECIPE_PRICE = 50000;
-	/**
-	 * Field RECIPE_ID. (value is 20191)
-	 */
 	private static final int RECIPE_ID = 20191;
-	/**
-	 * Field EVENT_MANAGER_ID. (value is 4301)
-	 */
 	private static final int EVENT_MANAGER_ID = 4301;
-	/**
-	 * Field _spawns.
-	 */
 	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
-	/**
-	 * Field DROP.
-	 */
 	private static final int[] DROP =
 	{
 		20192,
 		20193,
 		20194
 	};
-	/**
-	 * Field _active.
-	 */
 	private static boolean _active = false;
 	
 	/**

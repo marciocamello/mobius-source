@@ -18,9 +18,6 @@ package lineage2.gameserver.network.clientpackets;
  */
 public class RequestCreatePledge extends L2GameClientPacket
 {
-	/**
-	 * Field _pledgename.
-	 */
 	@SuppressWarnings("unused")
 	private String _pledgename;
 	

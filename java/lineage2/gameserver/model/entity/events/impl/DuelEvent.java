@@ -14,7 +14,6 @@ package lineage2.gameserver.model.entity.events.impl;
 
 import java.util.Iterator;
 import java.util.List;
-
 import lineage2.commons.collections.JoinedIterator;
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.gameserver.listener.actor.player.OnPlayerExitListener;
@@ -64,26 +63,10 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 		}
 	}
 	
-	/**
-	 * Field RED_TEAM.
-	 */
 	public static final String RED_TEAM = TeamType.RED.name();
-	/**
-	 * Field BLUE_TEAM.
-	 */
 	public static final String BLUE_TEAM = TeamType.BLUE.name();
-	
-	/**
-	 * Field _playerExitListener.
-	 */
 	protected final OnPlayerExitListener _playerExitListener = new OnPlayerExitListenerImpl();
-	/**
-	 * Field _winner.
-	 */
 	protected TeamType _winner = TeamType.NONE;
-	/**
-	 * Field _aborted.
-	 */
 	protected boolean _aborted;
 	
 	/**

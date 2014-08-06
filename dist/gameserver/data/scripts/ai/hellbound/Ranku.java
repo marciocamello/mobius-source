@@ -26,25 +26,10 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Ranku extends Fighter
 {
-	/**
-	 * Field TELEPORTATION_CUBIC_ID. (value is 32375)
-	 */
 	private static final int TELEPORTATION_CUBIC_ID = 32375;
-	/**
-	 * Field CUBIC_POSITION.
-	 */
 	private static final Location CUBIC_POSITION = new Location(-19056, 278732, -15000, 0);
-	/**
-	 * Field SCAPEGOAT_ID. (value is 32305)
-	 */
 	private static final int SCAPEGOAT_ID = 32305;
-	/**
-	 * Field _massacreTimer.
-	 */
 	private long _massacreTimer = 0;
-	/**
-	 * Field _massacreDelay.
-	 */
 	private static final long _massacreDelay = 30000L;
 	
 	/**

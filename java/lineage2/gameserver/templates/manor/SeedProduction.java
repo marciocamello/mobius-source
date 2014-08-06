@@ -18,21 +18,9 @@ package lineage2.gameserver.templates.manor;
  */
 public class SeedProduction
 {
-	/**
-	 * Field _seedId.
-	 */
 	int _seedId;
-	/**
-	 * Field _residual.
-	 */
 	long _residual;
-	/**
-	 * Field _price.
-	 */
 	long _price;
-	/**
-	 * Field _sales.
-	 */
 	long _sales;
 	
 	/**

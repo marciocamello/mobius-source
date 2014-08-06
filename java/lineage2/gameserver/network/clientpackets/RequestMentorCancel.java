@@ -23,13 +23,7 @@ import lineage2.gameserver.utils.MentorUtil;
  */
 public class RequestMentorCancel extends L2GameClientPacket
 {
-	/**
-	 * Field _mtype.
-	 */
 	private int _mtype;
-	/**
-	 * Field _charName.
-	 */
 	private String _charName;
 	
 	/**

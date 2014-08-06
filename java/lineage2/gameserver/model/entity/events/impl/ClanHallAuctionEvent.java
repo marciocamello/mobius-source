@@ -15,7 +15,6 @@ package lineage2.gameserver.model.entity.events.impl;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
-
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.gameserver.dao.SiegeClanDAO;
@@ -30,7 +29,6 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.templates.item.ItemTemplate;
-
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -39,9 +37,6 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class ClanHallAuctionEvent extends SiegeEvent<ClanHall, AuctionSiegeClanObject>
 {
-	/**
-	 * Field _endSiegeDate.
-	 */
 	private final Calendar _endSiegeDate = Calendar.getInstance();
 	
 	/**

@@ -28,9 +28,6 @@ public final class AdminGlobalEvent extends ScriptAdminCommand
 	 */
 	enum Commands
 	{
-		/**
-		 * Field admin_list_events.
-		 */
 		admin_list_events
 	}
 	

@@ -20,9 +20,6 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionPlayerMinLevel extends Condition
 {
-	/**
-	 * Field _level.
-	 */
 	private final int _level;
 	
 	/**

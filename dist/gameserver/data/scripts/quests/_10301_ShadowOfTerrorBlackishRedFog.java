@@ -14,7 +14,6 @@ package quests;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
@@ -40,11 +39,9 @@ public class _10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 	private static final int CRYSTALL = 17604;
 	private static final int SPIRIT_ITEM = 17588;
 	private static final int LARGE_VERDANT_WILDS = 33489;
-	
 	private static final int WISP = 32938;
 	
 	// private final boolean _spawned = false;
-	
 	public _10301_ShadowOfTerrorBlackishRedFog()
 	{
 		super(false);

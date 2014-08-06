@@ -24,12 +24,10 @@ import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.loginserver.Config;
 import lineage2.loginserver.ThreadPoolManager;
 import lineage2.loginserver.gameservercon.lspackets.PingRequest;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,45 +37,15 @@ import org.slf4j.LoggerFactory;
  */
 public class GameServerConnection
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(GameServerConnection.class);
-	/**
-	 * Field readBuffer.
-	 */
 	final ByteBuffer readBuffer = ByteBuffer.allocate(64 * 1024).order(ByteOrder.LITTLE_ENDIAN);
-	/**
-	 * Field sendQueue.
-	 */
 	final Queue<SendablePacket> sendQueue = new ArrayDeque<>();
-	/**
-	 * Field sendLock.
-	 */
 	final Lock sendLock = new ReentrantLock();
-	/**
-	 * Field isPengingWrite.
-	 */
 	final AtomicBoolean isPengingWrite = new AtomicBoolean();
-	/**
-	 * Field selector.
-	 */
 	private final Selector selector;
-	/**
-	 * Field key.
-	 */
 	private final SelectionKey key;
-	/**
-	 * Field gameServer.
-	 */
 	GameServer gameServer;
-	/**
-	 * Field _pingTask.
-	 */
 	private Future<?> _pingTask;
-	/**
-	 * Field _pingRetry.
-	 */
 	int _pingRetry;
 	
 	/**

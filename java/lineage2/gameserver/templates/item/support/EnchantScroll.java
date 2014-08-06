@@ -18,13 +18,7 @@ package lineage2.gameserver.templates.item.support;
  */
 public class EnchantScroll extends EnchantItem
 {
-	/**
-	 * Field _resultType.
-	 */
 	private final FailResultType _resultType;
-	/**
-	 * Field _visualEffect.
-	 */
 	private final boolean _visualEffect;
 	
 	/**

@@ -23,13 +23,7 @@ import lineage2.gameserver.network.serverpackets.RecipeShopItemInfo;
  */
 public class RequestRecipeShopMakeInfo extends L2GameClientPacket
 {
-	/**
-	 * Field _manufacturerId.
-	 */
 	private int _manufacturerId;
-	/**
-	 * Field _recipeId.
-	 */
 	private int _recipeId;
 	
 	/**

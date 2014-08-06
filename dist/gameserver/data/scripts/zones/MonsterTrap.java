@@ -31,13 +31,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class MonsterTrap implements ScriptFile
 {
-	/**
-	 * Field _zoneListener.
-	 */
 	private static ZoneListener _zoneListener;
-	/**
-	 * Field zones.
-	 */
 	private static final String[] zones =
 	{
 		"[hellbound_trap1]",
@@ -193,9 +187,6 @@ public final class MonsterTrap implements ScriptFile
 	 */
 	public final class UnSpawnTask extends RunnableImpl
 	{
-		/**
-		 * Field spawn.
-		 */
 		private final SimpleSpawner spawn;
 		
 		/**

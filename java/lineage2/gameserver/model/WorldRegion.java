@@ -18,7 +18,6 @@ import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
@@ -26,7 +25,6 @@ import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,13 +34,7 @@ import org.slf4j.LoggerFactory;
  */
 public final class WorldRegion implements Iterable<GameObject>
 {
-	/**
-	 * Field EMPTY_L2WORLDREGION_ARRAY.
-	 */
 	public final static WorldRegion[] EMPTY_L2WORLDREGION_ARRAY = new WorldRegion[0];
-	/**
-	 * Field _log.
-	 */
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(WorldRegion.class);
 	
@@ -51,9 +43,6 @@ public final class WorldRegion implements Iterable<GameObject>
 	 */
 	public class ActivateTask extends RunnableImpl
 	{
-		/**
-		 * Field _isActivating.
-		 */
 		private final boolean _isActivating;
 		
 		/**
@@ -82,37 +71,13 @@ public final class WorldRegion implements Iterable<GameObject>
 		}
 	}
 	
-	/**
-	 * Field tileZ. Field tileY. Field tileX.
-	 */
 	private final int tileX, tileY, tileZ;
-	/**
-	 * Field _objects.
-	 */
 	private volatile GameObject[] _objects = GameObject.EMPTY_L2OBJECT_ARRAY;
-	/**
-	 * Field _objectsCount.
-	 */
 	private int _objectsCount = 0;
-	/**
-	 * Field _zones.
-	 */
 	private volatile Zone[] _zones = Zone.EMPTY_L2ZONE_ARRAY;
-	/**
-	 * Field _playersCount.
-	 */
 	private int _playersCount = 0;
-	/**
-	 * Field _isActive.
-	 */
 	private final AtomicBoolean _isActive = new AtomicBoolean();
-	/**
-	 * Field _activateTask.
-	 */
 	private Future<?> _activateTask;
-	/**
-	 * Field lock.
-	 */
 	private final Lock lock = new ReentrantLock();
 	
 	/**
@@ -485,13 +450,7 @@ public final class WorldRegion implements Iterable<GameObject>
 	 */
 	private class InternalIterator implements Iterator<GameObject>
 	{
-		/**
-		 * Field objects.
-		 */
 		final GameObject[] objects;
-		/**
-		 * Field cursor.
-		 */
 		int cursor = 0;
 		
 		/**

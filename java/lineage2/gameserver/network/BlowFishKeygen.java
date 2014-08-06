@@ -20,13 +20,7 @@ import lineage2.commons.util.Rnd;
  */
 public class BlowFishKeygen
 {
-	/**
-	 * Field CRYPT_KEYS_SIZE. (value is 20)
-	 */
 	private static final int CRYPT_KEYS_SIZE = 20;
-	/**
-	 * Field CRYPT_KEYS.
-	 */
 	private static final byte[][] CRYPT_KEYS = new byte[CRYPT_KEYS_SIZE][16];
 	static
 	{

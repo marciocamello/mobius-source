@@ -23,9 +23,6 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
  */
 public class BypassUserCmd extends L2GameClientPacket
 {
-	/**
-	 * Field _command.
-	 */
 	private int _command;
 	
 	/**

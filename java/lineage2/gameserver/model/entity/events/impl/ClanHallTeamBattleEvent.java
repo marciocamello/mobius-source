@@ -13,7 +13,6 @@
 package lineage2.gameserver.model.entity.events.impl;
 
 import java.util.List;
-
 import lineage2.commons.collections.CollectionUtils;
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.gameserver.dao.SiegeClanDAO;
@@ -37,25 +36,10 @@ import lineage2.gameserver.utils.Location;
  */
 public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanObject>
 {
-	/**
-	 * Field TRYOUT_PART. (value is ""tryout_part"")
-	 */
 	public static final String TRYOUT_PART = "tryout_part";
-	/**
-	 * Field CHALLENGER_RESTART_POINTS. (value is ""challenger_restart_points"")
-	 */
 	public static final String CHALLENGER_RESTART_POINTS = "challenger_restart_points";
-	/**
-	 * Field FIRST_DOORS. (value is ""first_doors"")
-	 */
 	public static final String FIRST_DOORS = "first_doors";
-	/**
-	 * Field SECOND_DOORS. (value is ""second_doors"")
-	 */
 	public static final String SECOND_DOORS = "second_doors";
-	/**
-	 * Field NEXT_STEP. (value is ""next_step"")
-	 */
 	public static final String NEXT_STEP = "next_step";
 	
 	/**

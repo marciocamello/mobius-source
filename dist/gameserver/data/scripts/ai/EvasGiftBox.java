@@ -24,22 +24,13 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public final class EvasGiftBox extends Fighter
 {
-	/**
-	 * Field KISS_OF_EVA.
-	 */
 	private static final int[] KISS_OF_EVA = new int[]
 	{
 		1073,
 		3141,
 		3252
 	};
-	/**
-	 * Field Red_Coral. (value is 9692)
-	 */
 	private static final int Red_Coral = 9692;
-	/**
-	 * Field Crystal_Fragment. (value is 9693)
-	 */
 	private static final int Crystal_Fragment = 9693;
 	
 	/**

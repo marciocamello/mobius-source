@@ -22,7 +22,6 @@ import lineage2.gameserver.model.GameObject;
  */
 public class Attack extends L2GameServerPacket
 {
-	
 	private static final int FLAG = 0x00; // Обычный удар без надписей.
 	private static final int FLAG_MISS = 0x01; // Увернулся от удара
 	private static final int FLAG_CRIT = 0x04; // Крит.

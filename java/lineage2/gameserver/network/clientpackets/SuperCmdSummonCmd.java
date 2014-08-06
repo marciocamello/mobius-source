@@ -18,9 +18,6 @@ package lineage2.gameserver.network.clientpackets;
  */
 class SuperCmdSummonCmd extends L2GameClientPacket
 {
-	/**
-	 * Field _summonName.
-	 */
 	@SuppressWarnings("unused")
 	private String _summonName;
 	

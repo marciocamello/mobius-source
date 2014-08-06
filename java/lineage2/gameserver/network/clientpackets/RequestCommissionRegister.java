@@ -23,21 +23,9 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public class RequestCommissionRegister extends L2GameClientPacket
 {
-	/**
-	 * Field objectId.
-	 */
 	private int objectId;
-	/**
-	 * Field itemName.
-	 */
 	private String itemName;
-	/**
-	 * Field count. Field price.
-	 */
 	private long price, count;
-	/**
-	 * Field days.
-	 */
 	private int days;
 	
 	/**

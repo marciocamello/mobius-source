@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.loginservercon;
 
 import java.nio.ByteBuffer;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,9 +22,6 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class ReceivablePacket extends lineage2.commons.net.nio.ReceivablePacket<LoginServerCommunication>
 {
-	/**
-	 * Field _log.
-	 */
 	private static final Logger _log = LoggerFactory.getLogger(ReceivablePacket.class);
 	
 	/**

@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.serverpackets;
 
 import java.util.Collection;
-
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SubClass;
 
@@ -22,7 +21,6 @@ import lineage2.gameserver.model.SubClass;
  * @author Darvin
  * @data 09.02.2012
  */
-
 public class ExSubjobInfo extends L2GameServerPacket
 {
 	private final Collection<SubClass> _subClasses;

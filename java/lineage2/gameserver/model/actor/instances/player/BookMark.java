@@ -20,17 +20,8 @@ import lineage2.gameserver.utils.Location;
  */
 public class BookMark
 {
-	/**
-	 * Field z. Field y. Field x.
-	 */
 	public final int x, y, z;
-	/**
-	 * Field icon.
-	 */
 	private int icon;
-	/**
-	 * Field acronym. Field name.
-	 */
 	private String name, acronym;
 	
 	/**

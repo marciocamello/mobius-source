@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.clientpackets;
 
 import java.util.List;
-
 import lineage2.gameserver.instancemanager.WorldStatisticsManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.worldstatistics.CharacterStatisticElement;
@@ -21,7 +20,6 @@ import lineage2.gameserver.network.serverpackets.ExLoadStatUser;
 
 public class RequestUserStatistics extends L2GameClientPacket
 {
-	
 	@Override
 	protected void readImpl()
 	{

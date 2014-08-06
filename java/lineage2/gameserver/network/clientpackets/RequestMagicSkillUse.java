@@ -25,17 +25,8 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public class RequestMagicSkillUse extends L2GameClientPacket
 {
-	/**
-	 * Field _magicId.
-	 */
 	private Integer _magicId;
-	/**
-	 * Field _ctrlPressed.
-	 */
 	private boolean _ctrlPressed;
-	/**
-	 * Field _shiftPressed.
-	 */
 	private boolean _shiftPressed;
 	
 	/**

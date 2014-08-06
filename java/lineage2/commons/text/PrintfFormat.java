@@ -3756,118 +3756,34 @@ public class PrintfFormat
 			}
 		}
 		
-		/**
-		 * Field thousands.
-		 */
 		private boolean thousands = false;
-		/**
-		 * Field leftJustify.
-		 */
 		private boolean leftJustify = false;
-		/**
-		 * Field leadingSign.
-		 */
 		private boolean leadingSign = false;
-		/**
-		 * Field leadingSpace.
-		 */
 		private boolean leadingSpace = false;
-		/**
-		 * Field alternateForm.
-		 */
 		private boolean alternateForm = false;
-		/**
-		 * Field leadingZeros.
-		 */
 		private boolean leadingZeros = false;
-		/**
-		 * Field variableFieldWidth.
-		 */
 		private boolean variableFieldWidth = false;
-		/**
-		 * Field fieldWidth.
-		 */
 		private int fieldWidth = 0;
-		/**
-		 * Field fieldWidthSet.
-		 */
 		private boolean fieldWidthSet = false;
-		/**
-		 * Field precision.
-		 */
 		private int precision = 0;
-		/**
-		 * Field defaultDigits. (value is 6)
-		 */
 		private final static int defaultDigits = 6;
-		/**
-		 * Field variablePrecision.
-		 */
 		private boolean variablePrecision = false;
-		/**
-		 * Field precisionSet.
-		 */
 		private boolean precisionSet = false;
-		/**
-		 * Field positionalSpecification.
-		 */
 		private boolean positionalSpecification = false;
-		/**
-		 * Field argumentPosition.
-		 */
 		private int argumentPosition = 0;
-		/**
-		 * Field positionalFieldWidth.
-		 */
 		private boolean positionalFieldWidth = false;
-		/**
-		 * Field argumentPositionForFieldWidth.
-		 */
 		private int argumentPositionForFieldWidth = 0;
-		/**
-		 * Field positionalPrecision.
-		 */
 		private boolean positionalPrecision = false;
-		/**
-		 * Field argumentPositionForPrecision.
-		 */
 		private int argumentPositionForPrecision = 0;
-		/**
-		 * Field optionalh.
-		 */
 		private boolean optionalh = false;
-		/**
-		 * Field optionall.
-		 */
 		private boolean optionall = false;
-		/**
-		 * Field optionalL.
-		 */
 		private boolean optionalL = false;
-		/**
-		 * Field conversionCharacter.
-		 */
 		private char conversionCharacter = '\0';
-		/**
-		 * Field pos.
-		 */
 		private int pos = 0;
-		/**
-		 * Field fmt.
-		 */
 		private String fmt;
 	}
 	
-	/**
-	 * Field vFmt.
-	 */
 	private final List<ConversionSpecification> vFmt = new ArrayList<>();
-	/**
-	 * Field cPos.
-	 */
 	private int cPos = 0;
-	/**
-	 * Field dfs.
-	 */
 	DecimalFormatSymbols dfs = null;
 }

@@ -15,7 +15,6 @@ package lineage2.gameserver.handler.admincommands;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.handler.admincommands.impl.AdminAdmin;
 import lineage2.gameserver.handler.admincommands.impl.AdminAnnouncements;
@@ -76,9 +75,6 @@ import lineage2.gameserver.utils.Log;
  */
 public class AdminCommandHandler extends AbstractHolder
 {
-	/**
-	 * Field _instance.
-	 */
 	private static final AdminCommandHandler _instance = new AdminCommandHandler();
 	
 	/**
@@ -90,9 +86,6 @@ public class AdminCommandHandler extends AbstractHolder
 		return _instance;
 	}
 	
-	/**
-	 * Field _datatable.
-	 */
 	private final Map<String, IAdminCommandHandler> _datatable = new HashMap<>();
 	
 	/**

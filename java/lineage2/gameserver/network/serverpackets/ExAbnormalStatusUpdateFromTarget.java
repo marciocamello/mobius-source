@@ -13,12 +13,10 @@
 package lineage2.gameserver.network.serverpackets;
 
 import java.util.Arrays;
-
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.utils.EffectsComparator;
-
 import org.apache.commons.lang3.ArrayUtils;
 
 public class ExAbnormalStatusUpdateFromTarget extends L2GameServerPacket
