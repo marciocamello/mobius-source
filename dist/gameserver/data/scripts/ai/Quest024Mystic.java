@@ -25,7 +25,7 @@ import quests._024_InhabitantsOfTheForestOfTheDead;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Quest024Mystic extends Mystic
+public final class Quest024Mystic extends Mystic
 {
 	/**
 	 * Constructor for Quest024Mystic.

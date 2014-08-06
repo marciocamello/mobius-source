@@ -22,7 +22,7 @@ import lineage2.gameserver.utils.WarehouseFunctions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class FreightSenderInstance extends MerchantInstance
+public final class FreightSenderInstance extends MerchantInstance
 {
 	/**
 	 *

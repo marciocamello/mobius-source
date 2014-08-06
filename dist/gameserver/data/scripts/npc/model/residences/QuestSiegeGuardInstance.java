@@ -31,7 +31,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class QuestSiegeGuardInstance extends SiegeGuardInstance
+public final class QuestSiegeGuardInstance extends SiegeGuardInstance
 {
 	/**
 	 *

@@ -21,7 +21,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ManaRegen extends Functions
+public final class ManaRegen extends Functions
 {
 	/**
 	 * Field ADENA. (value is 57)

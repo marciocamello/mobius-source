@@ -17,8 +17,8 @@ package lineage2.gameserver.network.serverpackets;
  **/
 public class ExPutShapeShiftingExtractionItemResult extends L2GameServerPacket
 {
-	public static L2GameServerPacket FAIL = new ExPutShapeShiftingExtractionItemResult(0x00);
-	public static L2GameServerPacket SUCCESS = new ExPutShapeShiftingExtractionItemResult(0x01);
+	public static final L2GameServerPacket FAIL = new ExPutShapeShiftingExtractionItemResult(0x00);
+	public static final L2GameServerPacket SUCCESS = new ExPutShapeShiftingExtractionItemResult(0x01);
 	
 	private final int _result;
 	

@@ -30,7 +30,7 @@ import lineage2.gameserver.templates.item.ItemTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Pushkin extends Functions
+public final class Pushkin extends Functions
 {
 	/**
 	 * Method DialogAppend_30300.

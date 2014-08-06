@@ -24,7 +24,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SeedOfAnnihilationInstance extends MonsterInstance
+public final class SeedOfAnnihilationInstance extends MonsterInstance
 {
 	/**
 	 *

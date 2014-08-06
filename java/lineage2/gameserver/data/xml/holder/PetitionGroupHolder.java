@@ -29,7 +29,7 @@ public class PetitionGroupHolder extends AbstractHolder
 	/**
 	 * Field _instance.
 	 */
-	private static PetitionGroupHolder _instance = new PetitionGroupHolder();
+	private static final PetitionGroupHolder _instance = new PetitionGroupHolder();
 	/**
 	 * Field _petitionGroups.
 	 */

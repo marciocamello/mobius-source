@@ -29,7 +29,7 @@ import org.slf4j.LoggerFactory;
 public class DynamicQuestController
 {
 	private static final Logger log = LoggerFactory.getLogger(DynamicQuestController.class);
-	private static DynamicQuestController ourInstance = new DynamicQuestController();
+	private static final DynamicQuestController ourInstance = new DynamicQuestController();
 	final Map<Integer, DynamicQuest> dynamicQuestsMap;
 	private final Map<String, DynamicQuest> dynamicQuestsMapByName;
 	

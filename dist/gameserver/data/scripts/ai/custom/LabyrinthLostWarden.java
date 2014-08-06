@@ -24,7 +24,7 @@ import lineage2.gameserver.stats.funcs.FuncSet;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class LabyrinthLostWarden extends Fighter
+public final class LabyrinthLostWarden extends Fighter
 {
 	/**
 	 * Constructor for LabyrinthLostWarden.

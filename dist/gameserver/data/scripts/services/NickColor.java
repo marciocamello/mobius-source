@@ -23,7 +23,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class NickColor extends Functions
+public final class NickColor extends Functions
 {
 	/**
 	 * Method list.

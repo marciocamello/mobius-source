@@ -27,7 +27,7 @@ import npc.model.residences.fortress.FacilityManagerInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GuardCaptionInstance extends FacilityManagerInstance
+public final class GuardCaptionInstance extends FacilityManagerInstance
 {
 	/**
 	 *

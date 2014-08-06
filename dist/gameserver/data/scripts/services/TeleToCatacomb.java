@@ -20,7 +20,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TeleToCatacomb extends Functions
+public final class TeleToCatacomb extends Functions
 {
 	/**
 	 * Method DialogAppend_31212.

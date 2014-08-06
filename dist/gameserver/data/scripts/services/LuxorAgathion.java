@@ -21,7 +21,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class LuxorAgathion extends Functions
+public final class LuxorAgathion extends Functions
 {
 	/**
 	 * Field INGRIDIENTS.
@@ -72,7 +72,7 @@ public class LuxorAgathion extends Functions
 	/**
 	 * Field ANGEL_BRACELET_IDS.
 	 */
-	private static int[] ANGEL_BRACELET_IDS = new int[]
+	private static final int[] ANGEL_BRACELET_IDS = new int[]
 	{
 		10320,
 		10316,
@@ -83,7 +83,7 @@ public class LuxorAgathion extends Functions
 	/**
 	 * Field DEVIL_BRACELET_IDS.
 	 */
-	private static int[] DEVIL_BRACELET_IDS = new int[]
+	private static final int[] DEVIL_BRACELET_IDS = new int[]
 	{
 		10326,
 		10322,
@@ -94,11 +94,11 @@ public class LuxorAgathion extends Functions
 	/**
 	 * Field SUCCESS_RATE.
 	 */
-	private static int SUCCESS_RATE = 60;
+	private static final int SUCCESS_RATE = 60;
 	/**
 	 * Field RARE_RATE.
 	 */
-	private static int RARE_RATE = 5;
+	private static final int RARE_RATE = 5;
 	
 	/**
 	 * Method angelAgathion.

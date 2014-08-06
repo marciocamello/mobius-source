@@ -25,11 +25,11 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.utils.Location;
 
 /**
- * ����� ������������ Rim Pailaka - Rune
+ * Rim Pailaka - Rune
  * @author pchayka
  */
 
-public class RimPailaka extends Reflection
+public final class RimPailaka extends Reflection
 {
 	private static final int SeducedKnight = 36562;
 	private static final int SeducedRanger = 36563;
@@ -43,8 +43,8 @@ public class RimPailaka extends Reflection
 	private static final int KanadisFollower3 = 25664;
 	private static final long initdelay = 30 * 1000L;
 	private static final long firstwavedelay = 120 * 1000L;
-	private static final long secondwavedelay = 480 * 1000L; // 8 ����� ����� ������ �����
-	private static final long thirdwavedelay = 480 * 1000L; // 16 ����� ����� ������ �����
+	private static final long secondwavedelay = 480 * 1000L; // 8
+	private static final long thirdwavedelay = 480 * 1000L; // 16
 	
 	private ScheduledFuture<?> initTask;
 	private ScheduledFuture<?> firstwaveTask;
@@ -65,7 +65,7 @@ public class RimPailaka extends Reflection
 		firstwaveTask = ThreadPoolManager.getInstance().schedule(new FirstWave(), firstwavedelay);
 	}
 	
-	public class InvestigatorsSpawn extends RunnableImpl
+	public final class InvestigatorsSpawn extends RunnableImpl
 	{
 		@Override
 		public void runImpl()
@@ -81,7 +81,7 @@ public class RimPailaka extends Reflection
 		}
 	}
 	
-	public class FirstWave extends RunnableImpl
+	public final class FirstWave extends RunnableImpl
 	{
 		@Override
 		public void runImpl()
@@ -108,7 +108,7 @@ public class RimPailaka extends Reflection
 		}
 	}
 	
-	public class SecondWave extends RunnableImpl
+	public final class SecondWave extends RunnableImpl
 	{
 		@Override
 		public void runImpl()
@@ -135,7 +135,7 @@ public class RimPailaka extends Reflection
 		}
 	}
 	
-	public class ThirdWave extends RunnableImpl
+	public final class ThirdWave extends RunnableImpl
 	{
 		@Override
 		public void runImpl()
@@ -161,7 +161,7 @@ public class RimPailaka extends Reflection
 		}
 	}
 	
-	public class CollapseTimer extends RunnableImpl
+	public final class CollapseTimer extends RunnableImpl
 	{
 		private int _minutes = 0;
 		

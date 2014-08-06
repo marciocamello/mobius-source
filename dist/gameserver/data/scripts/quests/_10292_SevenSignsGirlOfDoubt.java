@@ -40,7 +40,7 @@ public class _10292_SevenSignsGirlOfDoubt extends Quest implements ScriptFile
 	};
 	private static final int CREATURE_OF_THE_DUSK_1 = 27422;
 	private static final int CREATURE_OF_THE_DUSK_2 = 27424;
-	private static int ELCARDIAS_MARK = 17226;
+	private static final int ELCARDIAS_MARK = 17226;
 	
 	public _10292_SevenSignsGirlOfDoubt()
 	{

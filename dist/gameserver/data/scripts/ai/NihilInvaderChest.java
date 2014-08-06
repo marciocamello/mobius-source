@@ -22,7 +22,7 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class NihilInvaderChest extends DefaultAI
+public final class NihilInvaderChest extends DefaultAI
 {
 	/**
 	 * Field _firstLevelItems.

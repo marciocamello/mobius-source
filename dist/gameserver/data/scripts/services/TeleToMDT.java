@@ -21,7 +21,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TeleToMDT extends Functions
+public final class TeleToMDT extends Functions
 {
 	/**
 	 * Method toMDT.

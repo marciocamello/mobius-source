@@ -19,7 +19,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Devno extends DevnoSubAI
+public final class Devno extends DevnoSubAI
 {
 	/**
 	 * Constructor for Devno.

@@ -52,7 +52,7 @@ import bosses.EpicBossState.State;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ValakasManager extends Functions implements ScriptFile, OnDeathListener
+public final class ValakasManager extends Functions implements ScriptFile, OnDeathListener
 {
 	/**
 	 * Field _log.
@@ -157,11 +157,11 @@ public class ValakasManager extends Functions implements ScriptFile, OnDeathList
 	/**
 	 * Field _teleportCube.
 	 */
-	private static List<NpcInstance> _teleportCube = new ArrayList<>();
+	private static final List<NpcInstance> _teleportCube = new ArrayList<>();
 	/**
 	 * Field _spawnedMinions.
 	 */
-	private static List<NpcInstance> _spawnedMinions = new ArrayList<>();
+	private static final List<NpcInstance> _spawnedMinions = new ArrayList<>();
 	/**
 	 * Field _valakas.
 	 */

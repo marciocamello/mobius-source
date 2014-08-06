@@ -37,7 +37,7 @@ public class CharacterDAO
 	/**
 	 * Field _instance.
 	 */
-	private static CharacterDAO _instance = new CharacterDAO();
+	private static final CharacterDAO _instance = new CharacterDAO();
 	
 	/**
 	 * Method getInstance.

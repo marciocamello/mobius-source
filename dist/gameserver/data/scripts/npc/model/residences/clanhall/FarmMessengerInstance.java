@@ -40,7 +40,7 @@ import quests._655_AGrandPlanForTamingWildBeasts;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class FarmMessengerInstance extends NpcInstance
+public final class FarmMessengerInstance extends NpcInstance
 {
 	/**
 	 *

@@ -23,7 +23,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class MoSMonk extends Fighter
+public final class MoSMonk extends Fighter
 {
 	/**
 	 * Constructor for MoSMonk.

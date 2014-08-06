@@ -28,8 +28,8 @@ public class _616_MagicalPowerofFire2 extends Quest implements ScriptFile
 	private static final int UDAN = 31379;
 	private static final int FIRE_HEART_OF_NASTRON = 7244;
 	private static final int RED_TOTEM = 7243;
-	private static int Reward_First = 4589;
-	private static int Reward_Last = 4594;
+	private static final int Reward_First = 4589;
+	private static final int Reward_Last = 4594;
 	private static final int SoulOfFireNastron = 25306;
 	private NpcInstance SoulOfFireNastronSpawn = null;
 	

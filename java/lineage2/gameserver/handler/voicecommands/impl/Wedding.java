@@ -125,7 +125,7 @@ public class Wedding implements IVoicedCommandHandler
 	/**
 	 * Field _voicedCommands.
 	 */
-	private static String[] _voicedCommands =
+	private static final String[] _voicedCommands =
 	{
 		"divorce",
 		"engage",

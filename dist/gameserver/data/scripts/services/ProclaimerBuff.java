@@ -21,7 +21,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Pandragon
  * @version $Revision: 1.0 $
  */
-public class ProclaimerBuff extends Functions
+public final class ProclaimerBuff extends Functions
 {
 	/**
 	 * Method getProclaimerBlessing.

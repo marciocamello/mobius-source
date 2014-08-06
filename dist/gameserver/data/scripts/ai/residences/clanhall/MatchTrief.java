@@ -20,7 +20,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class MatchTrief extends MatchFighter
+public final class MatchTrief extends MatchFighter
 {
 	/**
 	 * Field HOLD.

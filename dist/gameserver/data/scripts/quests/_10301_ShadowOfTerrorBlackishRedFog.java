@@ -31,8 +31,8 @@ import lineage2.gameserver.utils.NpcUtils;
 public class _10301_ShadowOfTerrorBlackishRedFog extends Quest implements ScriptFile
 {
 	// massives && single Npc
-	private static List<NpcInstance> _Priests = new ArrayList<>();
-	private static List<NpcInstance> _MobsToDie = new ArrayList<>();
+	private static final List<NpcInstance> _Priests = new ArrayList<>();
+	private static final List<NpcInstance> _MobsToDie = new ArrayList<>();
 	private static NpcInstance _mainZhrec = null;
 	// npc & items
 	private static final int RADA = 33100;

@@ -23,7 +23,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Leodas extends Fighter
+public final class Leodas extends Fighter
 {
 	/**
 	 * Constructor for Leodas.

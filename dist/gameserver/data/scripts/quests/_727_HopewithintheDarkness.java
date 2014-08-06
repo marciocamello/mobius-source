@@ -26,8 +26,8 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _727_HopewithintheDarkness extends Quest implements ScriptFile
 {
-	private static int KnightsEpaulette = 9912;
-	private static int KanadisGuide3 = 25661;
+	private static final int KnightsEpaulette = 9912;
+	private static final int KanadisGuide3 = 25661;
 	
 	@Override
 	public void onLoad()

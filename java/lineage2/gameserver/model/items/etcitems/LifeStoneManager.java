@@ -39,7 +39,7 @@ public class LifeStoneManager
 	/**
 	 * Field _stones.
 	 */
-	private static TIntObjectHashMap<LifeStoneInfo> _stones = new TIntObjectHashMap<>();
+	private static final TIntObjectHashMap<LifeStoneInfo> _stones = new TIntObjectHashMap<>();
 	
 	/**
 	 * Method load.

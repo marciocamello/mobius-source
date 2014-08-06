@@ -38,13 +38,13 @@ public final class AltarGatekeeperInstance extends NpcInstance
 	private static final int DoorEnter6 = 25180006;
 	private static final int DoorEnter7 = 25180007;
 	private long _savedTime;
-	DoorInstance _door1 = ReflectionUtils.getDoor(DoorEnter1);
-	DoorInstance _door2 = ReflectionUtils.getDoor(DoorEnter2);
-	DoorInstance _door3 = ReflectionUtils.getDoor(DoorEnter3);
-	DoorInstance _door4 = ReflectionUtils.getDoor(DoorEnter4);
-	DoorInstance _door5 = ReflectionUtils.getDoor(DoorEnter5);
-	DoorInstance _door6 = ReflectionUtils.getDoor(DoorEnter6);
-	DoorInstance _door7 = ReflectionUtils.getDoor(DoorEnter7);
+	final DoorInstance _door1 = ReflectionUtils.getDoor(DoorEnter1);
+	final DoorInstance _door2 = ReflectionUtils.getDoor(DoorEnter2);
+	final DoorInstance _door3 = ReflectionUtils.getDoor(DoorEnter3);
+	final DoorInstance _door4 = ReflectionUtils.getDoor(DoorEnter4);
+	final DoorInstance _door5 = ReflectionUtils.getDoor(DoorEnter5);
+	final DoorInstance _door6 = ReflectionUtils.getDoor(DoorEnter6);
+	final DoorInstance _door7 = ReflectionUtils.getDoor(DoorEnter7);
 	
 	public AltarGatekeeperInstance(int objectId, NpcTemplate template)
 	{

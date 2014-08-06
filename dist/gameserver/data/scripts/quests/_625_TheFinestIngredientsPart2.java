@@ -30,14 +30,14 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 
 public class _625_TheFinestIngredientsPart2 extends Quest implements ScriptFile
 {
-	private static int Jeremy = 31521;
-	private static int Yetis_Table = 31542;
-	static int RB_Icicle_Emperor_Bumbalump = 25296;
-	private static int Soy_Sauce_Jar = 7205;
-	private static int Food_for_Bumbalump = 7209;
-	private static int Special_Yeti_Meat = 7210;
-	private static int Reward_First = 4589;
-	private static int Reward_Last = 4594;
+	private static final int Jeremy = 31521;
+	private static final int Yetis_Table = 31542;
+	static final int RB_Icicle_Emperor_Bumbalump = 25296;
+	private static final int Soy_Sauce_Jar = 7205;
+	private static final int Food_for_Bumbalump = 7209;
+	private static final int Special_Yeti_Meat = 7210;
+	private static final int Reward_First = 4589;
+	private static final int Reward_Last = 4594;
 	
 	public _625_TheFinestIngredientsPart2()
 	{

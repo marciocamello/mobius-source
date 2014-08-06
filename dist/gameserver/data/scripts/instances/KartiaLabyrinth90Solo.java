@@ -30,7 +30,7 @@ import lineage2.gameserver.utils.Location;
 
 import org.apache.commons.lang3.ArrayUtils;
 
-public class KartiaLabyrinth90Solo extends Reflection
+public final class KartiaLabyrinth90Solo extends Reflection
 {
 	private ScheduledFuture<?> firstStageGuardSpawn;
 	DeathListener _deathListener;
@@ -90,7 +90,7 @@ public class KartiaLabyrinth90Solo extends Reflection
 		}
 	}
 	
-	public class ZoneListenerL implements OnZoneEnterLeaveListener
+	public final class ZoneListenerL implements OnZoneEnterLeaveListener
 	{
 		public ZoneListenerL()
 		{
@@ -112,7 +112,7 @@ public class KartiaLabyrinth90Solo extends Reflection
 		}
 	}
 	
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		public ZoneListener()
 		{

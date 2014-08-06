@@ -21,14 +21,14 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _192_SevenSignSeriesOfDoubt extends Quest implements ScriptFile
 {
-	private static int CROOP = 30676;
-	private static int HECTOR = 30197;
-	private static int STAN = 30200;
-	private static int CORPSE = 32568;
-	private static int HOLLINT = 30191;
-	private static int CROOP_INTRO = 13813;
-	private static int JACOB_NECK = 13814;
-	private static int CROOP_LETTER = 13815;
+	private static final int CROOP = 30676;
+	private static final int HECTOR = 30197;
+	private static final int STAN = 30200;
+	private static final int CORPSE = 32568;
+	private static final int HOLLINT = 30191;
+	private static final int CROOP_INTRO = 13813;
+	private static final int JACOB_NECK = 13814;
+	private static final int CROOP_LETTER = 13815;
 	
 	public _192_SevenSignSeriesOfDoubt()
 	{

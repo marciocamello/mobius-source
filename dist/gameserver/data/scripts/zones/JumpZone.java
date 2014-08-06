@@ -27,7 +27,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class JumpZone implements ScriptFile
+public final class JumpZone implements ScriptFile
 {
 	/**
 	 * Field zoneTask.

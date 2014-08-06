@@ -23,11 +23,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _633_InTheForgottenVillage extends Quest implements ScriptFile
 {
-	private static int MINA = 31388;
-	private static int RIB_BONE = 7544;
-	private static int Z_LIVER = 7545;
-	private static Map<Integer, Double> DAMOBS = new HashMap<>();
-	private static Map<Integer, Double> UNDEADS = new HashMap<>();
+	private static final int MINA = 31388;
+	private static final int RIB_BONE = 7544;
+	private static final int Z_LIVER = 7545;
+	private static final Map<Integer, Double> DAMOBS = new HashMap<>();
+	private static final Map<Integer, Double> UNDEADS = new HashMap<>();
 	
 	@Override
 	public void onLoad()

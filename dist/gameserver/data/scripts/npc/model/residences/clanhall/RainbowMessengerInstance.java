@@ -30,7 +30,7 @@ import lineage2.gameserver.utils.TimeUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class RainbowMessengerInstance extends NpcInstance
+public final class RainbowMessengerInstance extends NpcInstance
 {
 	/**
 	 *

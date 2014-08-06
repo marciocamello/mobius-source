@@ -23,7 +23,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class PaganDoormans extends Functions
+public final class PaganDoormans extends Functions
 {
 	/**
 	 * Field MainDoorId. (value is 19160001)

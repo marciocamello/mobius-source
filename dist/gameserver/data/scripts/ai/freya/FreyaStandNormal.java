@@ -30,7 +30,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class FreyaStandNormal extends Fighter
+public final class FreyaStandNormal extends Fighter
 {
 	/**
 	 * Field Skill_EternalBlizzard. (value is 6274)

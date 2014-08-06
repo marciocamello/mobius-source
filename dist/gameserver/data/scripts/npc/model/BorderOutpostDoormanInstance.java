@@ -22,7 +22,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class BorderOutpostDoormanInstance extends GuardInstance
+public final class BorderOutpostDoormanInstance extends GuardInstance
 {
 	/**
 	 *

@@ -19,7 +19,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Marsha extends MarshaSubAI
+public final class Marsha extends MarshaSubAI
 {
 	/**
 	 * Constructor for Marsha.

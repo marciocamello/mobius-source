@@ -23,100 +23,100 @@ import lineage2.gameserver.model.reward.RewardData;
  * @version $Revision: 1.0 $
  */
 @SuppressWarnings("unused")
-public class l2day extends LettersCollection
+public final class l2day extends LettersCollection
 {
 	/**
 	 * Field BSOE.
 	 */
-	private static int BSOE = 3958;
+	private static final int BSOE = 3958;
 	/**
 	 * Field BSOR.
 	 */
-	private static int BSOR = 3959;
+	private static final int BSOR = 3959;
 	/**
 	 * Field GUIDANCE.
 	 */
-	private static int GUIDANCE = 3926;
+	private static final int GUIDANCE = 3926;
 	/**
 	 * Field WHISPER.
 	 */
-	private static int WHISPER = 3927;
+	private static final int WHISPER = 3927;
 	/**
 	 * Field FOCUS.
 	 */
-	private static int FOCUS = 3928;
+	private static final int FOCUS = 3928;
 	/**
 	 * Field ACUMEN.
 	 */
-	private static int ACUMEN = 3929;
+	private static final int ACUMEN = 3929;
 	/**
 	 * Field HASTE.
 	 */
-	private static int HASTE = 3930;
+	private static final int HASTE = 3930;
 	/**
 	 * Field AGILITY.
 	 */
-	private static int AGILITY = 3931;
+	private static final int AGILITY = 3931;
 	/**
 	 * Field EMPOWER.
 	 */
-	private static int EMPOWER = 3932;
+	private static final int EMPOWER = 3932;
 	/**
 	 * Field MIGHT.
 	 */
-	private static int MIGHT = 3933;
+	private static final int MIGHT = 3933;
 	/**
 	 * Field WINDWALK.
 	 */
-	private static int WINDWALK = 3934;
+	private static final int WINDWALK = 3934;
 	/**
 	 * Field SHIELD.
 	 */
-	private static int SHIELD = 3935;
+	private static final int SHIELD = 3935;
 	/**
 	 * Field ENCH_WPN_D.
 	 */
-	private static int ENCH_WPN_D = 955;
+	private static final int ENCH_WPN_D = 955;
 	/**
 	 * Field ENCH_WPN_C.
 	 */
-	private static int ENCH_WPN_C = 951;
+	private static final int ENCH_WPN_C = 951;
 	/**
 	 * Field ENCH_WPN_B.
 	 */
-	private static int ENCH_WPN_B = 947;
+	private static final int ENCH_WPN_B = 947;
 	/**
 	 * Field ENCH_WPN_A.
 	 */
-	private static int ENCH_WPN_A = 729;
+	private static final int ENCH_WPN_A = 729;
 	/**
 	 * Field RABBIT_EARS.
 	 */
-	private static int RABBIT_EARS = 8947;
+	private static final int RABBIT_EARS = 8947;
 	/**
 	 * Field FEATHERED_HAT.
 	 */
-	private static int FEATHERED_HAT = 8950;
+	private static final int FEATHERED_HAT = 8950;
 	/**
 	 * Field FAIRY_ANTENNAE.
 	 */
-	private static int FAIRY_ANTENNAE = 8949;
+	private static final int FAIRY_ANTENNAE = 8949;
 	/**
 	 * Field ARTISANS_GOOGLES.
 	 */
-	private static int ARTISANS_GOOGLES = 8951;
+	private static final int ARTISANS_GOOGLES = 8951;
 	/**
 	 * Field LITTLE_ANGEL_WING.
 	 */
-	private static int LITTLE_ANGEL_WING = 8948;
+	private static final int LITTLE_ANGEL_WING = 8948;
 	/**
 	 * Field RING_OF_ANT_QUIEEN.
 	 */
-	private static int RING_OF_ANT_QUIEEN = 6660;
+	private static final int RING_OF_ANT_QUIEEN = 6660;
 	/**
 	 * Field RING_OF_CORE.
 	 */
-	private static int RING_OF_CORE = 6662;
+	private static final int RING_OF_CORE = 6662;
 	static
 	{
 		_name = "l2day";

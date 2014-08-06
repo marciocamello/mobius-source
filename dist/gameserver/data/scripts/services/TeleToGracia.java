@@ -20,7 +20,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TeleToGracia extends Functions
+public final class TeleToGracia extends Functions
 {
 	/**
 	 * Method tele.

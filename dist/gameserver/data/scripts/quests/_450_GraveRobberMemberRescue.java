@@ -43,10 +43,10 @@ public class _450_GraveRobberMemberRescue extends Quest implements ScriptFile
 	{
 	}
 	
-	private static int KANEMIKA = 32650;
-	private static int WARRIOR_NPC = 32651;
-	private static int WARRIOR_MON = 22741;
-	private static int EVIDENCE_OF_MIGRATION = 14876;
+	private static final int KANEMIKA = 32650;
+	private static final int WARRIOR_NPC = 32651;
+	private static final int WARRIOR_MON = 22741;
+	private static final int EVIDENCE_OF_MIGRATION = 14876;
 	
 	public _450_GraveRobberMemberRescue()
 	{

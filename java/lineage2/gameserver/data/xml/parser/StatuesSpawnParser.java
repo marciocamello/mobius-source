@@ -28,7 +28,7 @@ import org.dom4j.Element;
  */
 public class StatuesSpawnParser extends AbstractFileParser<StatuesHolder>
 {
-	private static StatuesSpawnParser ourInstance = new StatuesSpawnParser();
+	private static final StatuesSpawnParser ourInstance = new StatuesSpawnParser();
 	
 	private StatuesSpawnParser()
 	{

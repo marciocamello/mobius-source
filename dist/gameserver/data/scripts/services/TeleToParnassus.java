@@ -34,16 +34,16 @@ import lineage2.gameserver.utils.ReflectionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TeleToParnassus extends Functions implements ScriptFile
+public final class TeleToParnassus extends Functions implements ScriptFile
 {
 	/**
 	 * Field _spawns.
 	 */
-	private static List<SimpleSpawner> _spawns = new ArrayList<>();
+	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
 	/**
 	 * Field _zone.
 	 */
-	private static Zone _zone = ReflectionUtils.getZone("[parnassus_offshore]");
+	private static final Zone _zone = ReflectionUtils.getZone("[parnassus_offshore]");
 	/**
 	 * Field _zoneListener.
 	 */
@@ -483,7 +483,7 @@ public class TeleToParnassus extends Functions implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		/**
 		 * Method onZoneEnter.

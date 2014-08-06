@@ -35,7 +35,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class FafurionKindred extends Fighter
+public final class FafurionKindred extends Fighter
 {
 	/**
 	 * Field DETRACTOR1. (value is 22270)
@@ -68,7 +68,7 @@ public class FafurionKindred extends Fighter
 	/**
 	 * Field spawns.
 	 */
-	List<SimpleSpawner> spawns = new ArrayList<>();
+	final List<SimpleSpawner> spawns = new ArrayList<>();
 	/**
 	 * Field ft.
 	 */

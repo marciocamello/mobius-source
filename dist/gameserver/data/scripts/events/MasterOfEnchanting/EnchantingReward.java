@@ -24,7 +24,7 @@ import lineage2.gameserver.scripts.ScriptFile;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class EnchantingReward extends Functions implements ScriptFile
+public final class EnchantingReward extends Functions implements ScriptFile
 {
 	/**
 	 * Field MASTER_YOGI_STAFF.

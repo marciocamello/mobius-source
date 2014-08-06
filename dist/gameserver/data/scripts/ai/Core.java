@@ -27,7 +27,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Core extends Fighter
+public final class Core extends Fighter
 {
 	/**
 	 * Field _firstTimeAttacked.

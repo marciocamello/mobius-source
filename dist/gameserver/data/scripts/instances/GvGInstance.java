@@ -53,7 +53,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 /**
  * @author pchayka
  */
-public class GvGInstance extends Reflection
+public final class GvGInstance extends Reflection
 {
 	private final static int BOX_ID = 18822;
 	private final static int BOSS_ID = 25655;
@@ -582,7 +582,7 @@ public class GvGInstance extends Reflection
 		return team2Score;
 	}
 	
-	public class BossSpawn extends RunnableImpl
+	public final class BossSpawn extends RunnableImpl
 	{
 		@Override
 		public void runImpl()
@@ -593,7 +593,7 @@ public class GvGInstance extends Reflection
 		}
 	}
 	
-	public class CountingDown extends RunnableImpl
+	public final class CountingDown extends RunnableImpl
 	{
 		@Override
 		public void runImpl()
@@ -602,7 +602,7 @@ public class GvGInstance extends Reflection
 		}
 	}
 	
-	public class BattleEnd extends RunnableImpl
+	public final class BattleEnd extends RunnableImpl
 	{
 		@Override
 		public void runImpl()
@@ -612,7 +612,7 @@ public class GvGInstance extends Reflection
 		}
 	}
 	
-	public class Finish extends RunnableImpl
+	public final class Finish extends RunnableImpl
 	{
 		@Override
 		public void runImpl()

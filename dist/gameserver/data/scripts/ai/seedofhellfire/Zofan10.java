@@ -19,7 +19,7 @@ import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 
-public class Zofan10 extends Fighter
+public final class Zofan10 extends Fighter
 {
 	public Zofan10(NpcInstance actor)
 	{

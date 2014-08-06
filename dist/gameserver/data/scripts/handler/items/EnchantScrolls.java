@@ -22,7 +22,7 @@ import lineage2.gameserver.network.serverpackets.ChooseInventoryItem;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class EnchantScrolls extends ScriptItemHandler
+public final class EnchantScrolls extends ScriptItemHandler
 {
 	/**
 	 * Method useItem.

@@ -21,7 +21,7 @@ import lineage2.gameserver.scripts.Functions;
 /**
  * @author Iqman
  */
-public class Avanguard_Xaok extends DefaultAI
+public final class Avanguard_Xaok extends DefaultAI
 {
 	public Avanguard_Xaok(NpcInstance actor)
 	{

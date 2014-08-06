@@ -21,7 +21,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Orfen_RibaIren extends Fighter
+public final class Orfen_RibaIren extends Fighter
 {
 	/**
 	 * Field Orfen_id. (value is 29014)

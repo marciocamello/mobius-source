@@ -25,7 +25,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ObtainTalisman extends Functions
+public final class ObtainTalisman extends Functions
 {
 	/**
 	 * Method Obtain.

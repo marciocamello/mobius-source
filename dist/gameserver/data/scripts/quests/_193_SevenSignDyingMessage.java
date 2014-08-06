@@ -27,15 +27,15 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _193_SevenSignDyingMessage extends Quest implements ScriptFile
 {
-	private static int Hollint = 30191;
-	private static int Cain = 32569;
-	private static int Eric = 32570;
-	private static int SirGustavAthebaldt = 30760;
-	private static int ShilensEvilThoughts = 27343;
-	private static int JacobsNecklace = 13814;
-	private static int DeadmansHerb = 13813;
-	private static int SculptureofDoubt = 14352;
-	private static Map<Integer, Integer> spawns = new HashMap<>();
+	private static final int Hollint = 30191;
+	private static final int Cain = 32569;
+	private static final int Eric = 32570;
+	private static final int SirGustavAthebaldt = 30760;
+	private static final int ShilensEvilThoughts = 27343;
+	private static final int JacobsNecklace = 13814;
+	private static final int DeadmansHerb = 13813;
+	private static final int SculptureofDoubt = 14352;
+	private static final Map<Integer, Integer> spawns = new HashMap<>();
 	
 	public _193_SevenSignDyingMessage()
 	{

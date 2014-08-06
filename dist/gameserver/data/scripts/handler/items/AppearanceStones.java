@@ -18,7 +18,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ExChooseShapeShiftingItem;
 
-public class AppearanceStones extends ScriptItemHandler
+public final class AppearanceStones extends ScriptItemHandler
 {
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)

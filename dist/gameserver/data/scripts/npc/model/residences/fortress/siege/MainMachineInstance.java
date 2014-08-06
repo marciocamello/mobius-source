@@ -28,7 +28,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class MainMachineInstance extends NpcInstance
+public final class MainMachineInstance extends NpcInstance
 {
 	/**
 	 *

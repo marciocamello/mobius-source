@@ -25,7 +25,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class OrfenInstance extends BossInstance
+public final class OrfenInstance extends BossInstance
 {
 	/**
 	 *

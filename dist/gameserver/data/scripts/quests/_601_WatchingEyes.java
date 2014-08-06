@@ -20,10 +20,10 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _601_WatchingEyes extends Quest implements ScriptFile
 {
-	private static int EYE_OF_ARGOS = 31683;
-	private static int PROOF_OF_AVENGER = 7188;
-	private static int DROP_CHANCE = 50;
-	private static int[] MOBS =
+	private static final int EYE_OF_ARGOS = 31683;
+	private static final int PROOF_OF_AVENGER = 7188;
+	private static final int DROP_CHANCE = 50;
+	private static final int[] MOBS =
 	{
 		21306,
 		21308,
@@ -31,7 +31,7 @@ public class _601_WatchingEyes extends Quest implements ScriptFile
 		21310,
 		21311
 	};
-	private static int[][] REWARDS =
+	private static final int[][] REWARDS =
 	{
 		{
 			6699,

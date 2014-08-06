@@ -28,7 +28,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class MasterFestina extends Fighter
+public final class MasterFestina extends Fighter
 {
 	/**
 	 * Field _zone.

@@ -43,7 +43,7 @@ public class Rnd
 	/**
 	 * Field seedUniquifier.
 	 */
-	static AtomicLong seedUniquifier = new AtomicLong(8682522807148012L);
+	static final AtomicLong seedUniquifier = new AtomicLong(8682522807148012L);
 	
 	/**
 	 * @author Mobius

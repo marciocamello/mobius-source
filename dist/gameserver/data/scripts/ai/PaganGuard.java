@@ -20,7 +20,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class PaganGuard extends Mystic
+public final class PaganGuard extends Mystic
 {
 	/**
 	 * Constructor for PaganGuard.

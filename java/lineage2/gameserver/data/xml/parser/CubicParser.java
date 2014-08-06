@@ -37,7 +37,7 @@ public final class CubicParser extends AbstractFileParser<CubicHolder>
 	/**
 	 * Field _instance.
 	 */
-	private static CubicParser _instance = new CubicParser();
+	private static final CubicParser _instance = new CubicParser();
 	
 	/**
 	 * Method getInstance.

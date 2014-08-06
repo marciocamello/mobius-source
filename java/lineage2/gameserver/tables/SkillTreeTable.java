@@ -46,7 +46,7 @@ public class SkillTreeTable
 	public static final int UNTRAIN_NEW_ENCHANT_BOOK = 30300;
 	public static final int ENCHANT_BOOK_LINDVIOR = 37044;
 	
-	public static Map<Integer, List<EnchantSkillLearn>> _enchant = new ConcurrentHashMap<>();
+	public static final Map<Integer, List<EnchantSkillLearn>> _enchant = new ConcurrentHashMap<>();
 	private static SkillTreeTable _instance;
 	private static final Logger _log = LoggerFactory.getLogger(SkillTreeTable.class);
 	

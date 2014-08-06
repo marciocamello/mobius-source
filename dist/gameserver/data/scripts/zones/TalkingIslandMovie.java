@@ -26,7 +26,7 @@ import quests._10320_LetsGototheCentralSquare;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TalkingIslandMovie implements ScriptFile
+public final class TalkingIslandMovie implements ScriptFile
 {
 	/**
 	 * Field ZONE_NAME. (value is ""[ti_presentation_video]"")
@@ -82,7 +82,7 @@ public class TalkingIslandMovie implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		/**
 		 * Method onZoneEnter.

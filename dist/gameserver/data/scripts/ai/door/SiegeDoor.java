@@ -19,7 +19,7 @@ import lineage2.gameserver.model.instances.DoorInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SiegeDoor extends DoorAI
+public final class SiegeDoor extends DoorAI
 {
 	/**
 	 * Constructor for SiegeDoor.

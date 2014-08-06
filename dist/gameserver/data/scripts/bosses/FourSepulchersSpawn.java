@@ -43,7 +43,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class FourSepulchersSpawn extends Functions implements ScriptFile
+public final class FourSepulchersSpawn extends Functions implements ScriptFile
 {
 	/**
 	 * Field _log.
@@ -52,59 +52,59 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 	/**
 	 * Field _shadowSpawns.
 	 */
-	public static Map<Integer, NpcLocation> _shadowSpawns = new HashMap<>();
+	public static final Map<Integer, NpcLocation> _shadowSpawns = new HashMap<>();
 	/**
 	 * Field _mysteriousBoxSpawns.
 	 */
-	public static Map<Integer, NpcLocation> _mysteriousBoxSpawns = new HashMap<>();
+	public static final Map<Integer, NpcLocation> _mysteriousBoxSpawns = new HashMap<>();
 	/**
 	 * Field _dukeFinalMobs.
 	 */
-	public static Map<Integer, List<NpcLocation>> _dukeFinalMobs = new HashMap<>();
+	public static final Map<Integer, List<NpcLocation>> _dukeFinalMobs = new HashMap<>();
 	/**
 	 * Field _emperorsGraveNpcs.
 	 */
-	public static Map<Integer, List<NpcLocation>> _emperorsGraveNpcs = new HashMap<>();
+	public static final Map<Integer, List<NpcLocation>> _emperorsGraveNpcs = new HashMap<>();
 	/**
 	 * Field _magicalMonsters.
 	 */
-	public static Map<Integer, List<NpcLocation>> _magicalMonsters = new HashMap<>();
+	public static final Map<Integer, List<NpcLocation>> _magicalMonsters = new HashMap<>();
 	/**
 	 * Field _physicalMonsters.
 	 */
-	public static Map<Integer, List<NpcLocation>> _physicalMonsters = new HashMap<>();
+	public static final Map<Integer, List<NpcLocation>> _physicalMonsters = new HashMap<>();
 	/**
 	 * Field _startHallSpawns.
 	 */
-	public static Map<Integer, Location> _startHallSpawns = new HashMap<>();
+	public static final Map<Integer, Location> _startHallSpawns = new HashMap<>();
 	/**
 	 * Field _hallInUse.
 	 */
-	public static Map<Integer, Boolean> _hallInUse = new HashMap<>();
+	public static final Map<Integer, Boolean> _hallInUse = new HashMap<>();
 	/**
 	 * Field _GateKeepers.
 	 */
-	public static List<GateKeeper> _GateKeepers = new ArrayList<>();
+	public static final List<GateKeeper> _GateKeepers = new ArrayList<>();
 	/**
 	 * Field _keyBoxNpc.
 	 */
-	public static Map<Integer, Integer> _keyBoxNpc = new HashMap<>();
+	public static final Map<Integer, Integer> _keyBoxNpc = new HashMap<>();
 	/**
 	 * Field _victim.
 	 */
-	public static Map<Integer, Integer> _victim = new HashMap<>();
+	public static final Map<Integer, Integer> _victim = new HashMap<>();
 	/**
 	 * Field _archonSpawned.
 	 */
-	public static Map<Integer, Boolean> _archonSpawned = new HashMap<>();
+	public static final Map<Integer, Boolean> _archonSpawned = new HashMap<>();
 	/**
 	 * Field _dukeMobs.
 	 */
-	public static Map<Integer, List<SepulcherMonsterInstance>> _dukeMobs = new HashMap<>();
+	public static final Map<Integer, List<SepulcherMonsterInstance>> _dukeMobs = new HashMap<>();
 	/**
 	 * Field _viscountMobs.
 	 */
-	public static Map<Integer, List<SepulcherMonsterInstance>> _viscountMobs = new HashMap<>();
+	public static final Map<Integer, List<SepulcherMonsterInstance>> _viscountMobs = new HashMap<>();
 	/**
 	 * Field _managers.
 	 */
@@ -112,7 +112,7 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 	/**
 	 * Field _allMobs.
 	 */
-	public static List<NpcInstance> _allMobs = new ArrayList<>();
+	public static final List<NpcInstance> _allMobs = new ArrayList<>();
 	
 	/**
 	 * @author Mobius
@@ -154,7 +154,7 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 	/**
 	 * Field _startHallSpawn.
 	 */
-	private static Location[] _startHallSpawn =
+	private static final Location[] _startHallSpawn =
 	{
 		new Location(181632, -85587, -7218),
 		new Location(179963, -88978, -7218),
@@ -164,7 +164,7 @@ public class FourSepulchersSpawn extends Functions implements ScriptFile
 	/**
 	 * Field _shadowSpawnLoc.
 	 */
-	private static NpcLocation[][] _shadowSpawnLoc =
+	private static final NpcLocation[][] _shadowSpawnLoc =
 	{
 		{
 			new NpcLocation(191231, -85574, -7216, 33380, 25339),

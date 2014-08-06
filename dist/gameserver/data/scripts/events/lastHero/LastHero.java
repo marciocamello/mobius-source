@@ -59,7 +59,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class LastHero extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
+public final class LastHero extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
 {
 	/**
 	 * Field _log.
@@ -69,7 +69,7 @@ public class LastHero extends Functions implements ScriptFile, OnDeathListener, 
 	/**
 	 * @author Mobius
 	 */
-	public class StartTask extends RunnableImpl
+	public final class StartTask extends RunnableImpl
 	{
 		/**
 		 * Method runImpl.
@@ -158,11 +158,11 @@ public class LastHero extends Functions implements ScriptFile, OnDeathListener, 
 	/**
 	 * Field _zone.
 	 */
-	private static Zone _zone = ReflectionUtils.getZone("[colosseum_battle]");
+	private static final Zone _zone = ReflectionUtils.getZone("[colosseum_battle]");
 	/**
 	 * Field _zoneListener.
 	 */
-	private static ZoneListener _zoneListener = new ZoneListener();
+	private static final ZoneListener _zoneListener = new ZoneListener();
 	/**
 	 * Field _enter.
 	 */

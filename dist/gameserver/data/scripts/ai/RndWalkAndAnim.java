@@ -23,7 +23,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class RndWalkAndAnim extends DefaultAI
+public final class RndWalkAndAnim extends DefaultAI
 {
 	/**
 	 * Field PET_WALK_RANGE. (value is 100)

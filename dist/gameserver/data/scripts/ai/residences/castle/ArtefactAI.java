@@ -29,7 +29,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ArtefactAI extends CharacterAI
+public final class ArtefactAI extends CharacterAI
 {
 	/**
 	 * Constructor for ArtefactAI.

@@ -54,7 +54,7 @@ import npc.model.residences.ResidenceManager;
 
 import org.napile.primitive.maps.IntObjectMap;
 
-public class ChamberlainLightInstance extends ResidenceManager
+public final class ChamberlainLightInstance extends ResidenceManager
 {
 	/**
 	 *

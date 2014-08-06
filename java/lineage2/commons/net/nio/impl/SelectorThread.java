@@ -118,7 +118,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	/**
 	 * Field stats.
 	 */
-	private static SelectorStats stats = new SelectorStats();
+	private static final SelectorStats stats = new SelectorStats();
 	
 	/**
 	 * Constructor for SelectorThread.

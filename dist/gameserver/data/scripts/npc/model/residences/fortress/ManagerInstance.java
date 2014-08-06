@@ -29,7 +29,7 @@ import npc.model.residences.ResidenceManager;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ManagerInstance extends ResidenceManager
+public final class ManagerInstance extends ResidenceManager
 {
 	/**
 	 *

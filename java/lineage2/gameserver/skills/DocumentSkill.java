@@ -69,7 +69,7 @@ public final class DocumentSkill extends DocumentBase
 		/**
 		 * Field skills.
 		 */
-		public List<lineage2.gameserver.model.Skill> skills = new ArrayList<>();
+		public final List<lineage2.gameserver.model.Skill> skills = new ArrayList<>();
 		/**
 		 * Field currentSkills.
 		 */

@@ -21,8 +21,8 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _688_DefeatTheElrokianRaiders extends Quest implements ScriptFile
 {
-	private static int DROP_CHANCE = 50;
-	private static int DINOSAUR_FANG_NECKLACE = 8785;
+	private static final int DROP_CHANCE = 50;
+	private static final int DINOSAUR_FANG_NECKLACE = 8785;
 	
 	@Override
 	public void onLoad()

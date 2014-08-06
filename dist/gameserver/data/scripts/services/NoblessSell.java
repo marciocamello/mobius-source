@@ -23,7 +23,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class NoblessSell extends Functions
+public final class NoblessSell extends Functions
 {
 	/**
 	 * Method get.

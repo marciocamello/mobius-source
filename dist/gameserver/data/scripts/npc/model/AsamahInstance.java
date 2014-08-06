@@ -23,7 +23,7 @@ import quests._111_ElrokianHuntersProof;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class AsamahInstance extends NpcInstance
+public final class AsamahInstance extends NpcInstance
 {
 	/**
 	 *

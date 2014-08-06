@@ -20,7 +20,7 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Kamaloka extends SimpleItemHandler
+public final class Kamaloka extends SimpleItemHandler
 {
 	/**
 	 * Field ITEM_IDS.

@@ -100,11 +100,11 @@ public abstract class Residence implements JdbcEntity
 	/**
 	 * Field _functions.
 	 */
-	protected List<ResidenceFunction> _functions = new ArrayList<>();
+	protected final List<ResidenceFunction> _functions = new ArrayList<>();
 	/**
 	 * Field _skills.
 	 */
-	protected List<Skill> _skills = new ArrayList<>();
+	protected final List<Skill> _skills = new ArrayList<>();
 	/**
 	 * Field _siegeEvent.
 	 */
@@ -112,15 +112,15 @@ public abstract class Residence implements JdbcEntity
 	/**
 	 * Field _siegeDate.
 	 */
-	protected Calendar _siegeDate = Calendar.getInstance();
+	protected final Calendar _siegeDate = Calendar.getInstance();
 	/**
 	 * Field _lastSiegeDate.
 	 */
-	protected Calendar _lastSiegeDate = Calendar.getInstance();
+	protected final Calendar _lastSiegeDate = Calendar.getInstance();
 	/**
 	 * Field _ownDate.
 	 */
-	protected Calendar _ownDate = Calendar.getInstance();
+	protected final Calendar _ownDate = Calendar.getInstance();
 	/**
 	 * Field _cycleTask.
 	 */
@@ -144,19 +144,19 @@ public abstract class Residence implements JdbcEntity
 	/**
 	 * Field _banishPoints.
 	 */
-	protected List<Location> _banishPoints = new ArrayList<>();
+	protected final List<Location> _banishPoints = new ArrayList<>();
 	/**
 	 * Field _ownerRestartPoints.
 	 */
-	protected List<Location> _ownerRestartPoints = new ArrayList<>();
+	protected final List<Location> _ownerRestartPoints = new ArrayList<>();
 	/**
 	 * Field _otherRestartPoints.
 	 */
-	protected List<Location> _otherRestartPoints = new ArrayList<>();
+	protected final List<Location> _otherRestartPoints = new ArrayList<>();
 	/**
 	 * Field _chaosRestartPoints.
 	 */
-	protected List<Location> _chaosRestartPoints = new ArrayList<>();
+	protected final List<Location> _chaosRestartPoints = new ArrayList<>();
 	
 	/**
 	 * Constructor for Residence.

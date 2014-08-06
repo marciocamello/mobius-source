@@ -24,7 +24,7 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.network.serverpackets.components.SceneMovie;
 import lineage2.gameserver.utils.Location;
 
-public class TautiInstance extends Reflection
+public final class TautiInstance extends Reflection
 {
 	private ScheduledFuture<?> firstStageGuardSpawn;
 	private final ZoneListener _epicZoneListener;
@@ -60,7 +60,7 @@ public class TautiInstance extends Reflection
 		}
 	}
 	
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		public ZoneListener()
 		{

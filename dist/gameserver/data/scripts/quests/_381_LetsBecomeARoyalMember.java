@@ -20,17 +20,17 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _381_LetsBecomeARoyalMember extends Quest implements ScriptFile
 {
-	private static int KAILS_COIN = 5899;
-	private static int COIN_ALBUM = 5900;
-	private static int MEMBERSHIP_1 = 3813;
-	private static int CLOVER_COIN = 7569;
-	private static int ROYAL_MEMBERSHIP = 5898;
-	private static int SORINT = 30232;
-	private static int SANDRA = 30090;
-	private static int ANCIENT_GARGOYLE = 21018;
-	private static int VEGUS = 27316;
-	private static int GARGOYLE_CHANCE = 5;
-	private static int VEGUS_CHANCE = 100;
+	private static final int KAILS_COIN = 5899;
+	private static final int COIN_ALBUM = 5900;
+	private static final int MEMBERSHIP_1 = 3813;
+	private static final int CLOVER_COIN = 7569;
+	private static final int ROYAL_MEMBERSHIP = 5898;
+	private static final int SORINT = 30232;
+	private static final int SANDRA = 30090;
+	private static final int ANCIENT_GARGOYLE = 21018;
+	private static final int VEGUS = 27316;
+	private static final int GARGOYLE_CHANCE = 5;
+	private static final int VEGUS_CHANCE = 100;
 	
 	@Override
 	public void onLoad()

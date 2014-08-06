@@ -45,7 +45,7 @@ import bosses.FourSepulchersSpawn.GateKeeper;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class FourSepulchersManager extends Functions implements ScriptFile, OnDeathListener
+public final class FourSepulchersManager extends Functions implements ScriptFile, OnDeathListener
 {
 	/**
 	 * Field _log.
@@ -118,7 +118,7 @@ public class FourSepulchersManager extends Functions implements ScriptFile, OnDe
 	/**
 	 * Field _newCycleMin.
 	 */
-	static int _newCycleMin = 55;
+	static final int _newCycleMin = 55;
 	/**
 	 * Field _firstTimeRun.
 	 */

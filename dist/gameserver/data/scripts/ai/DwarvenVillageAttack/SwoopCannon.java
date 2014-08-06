@@ -18,7 +18,7 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 
-public class SwoopCannon extends DefaultAI
+public final class SwoopCannon extends DefaultAI
 {
 	private static final int SKILL_ID = 16023;
 	

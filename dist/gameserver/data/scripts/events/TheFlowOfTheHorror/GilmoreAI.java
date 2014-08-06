@@ -29,7 +29,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GilmoreAI extends Fighter
+public final class GilmoreAI extends Fighter
 {
 	/**
 	 * Field points_stage1.

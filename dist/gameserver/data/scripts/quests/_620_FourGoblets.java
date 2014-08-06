@@ -40,27 +40,27 @@ public class _620_FourGoblets extends Quest implements ScriptFile
 	{
 	}
 	
-	private static int NAMELESS_SPIRIT = 31453;
-	private static int GHOST_OF_WIGOTH_1 = 31452;
-	private static int GHOST_OF_WIGOTH_2 = 31454;
-	private static int CONQ_SM = 31921;
-	private static int EMPER_SM = 31922;
-	private static int SAGES_SM = 31923;
-	private static int JUDGE_SM = 31924;
-	private static int GHOST_CHAMBERLAIN_1 = 31919;
-	private static int GHOST_CHAMBERLAIN_2 = 31920;
-	private static int GRAVE_PASS = 7261;
-	private static int[] GOBLETS = new int[]
+	private static final int NAMELESS_SPIRIT = 31453;
+	private static final int GHOST_OF_WIGOTH_1 = 31452;
+	private static final int GHOST_OF_WIGOTH_2 = 31454;
+	private static final int CONQ_SM = 31921;
+	private static final int EMPER_SM = 31922;
+	private static final int SAGES_SM = 31923;
+	private static final int JUDGE_SM = 31924;
+	private static final int GHOST_CHAMBERLAIN_1 = 31919;
+	private static final int GHOST_CHAMBERLAIN_2 = 31920;
+	private static final int GRAVE_PASS = 7261;
+	private static final int[] GOBLETS = new int[]
 	{
 		7256,
 		7257,
 		7258,
 		7259
 	};
-	private static int RELIC = 7254;
+	private static final int RELIC = 7254;
 	public final static int Sealed_Box = 7255;
-	private static int ANTIQUE_BROOCH = 7262;
-	private static int[] RCP_REWARDS = new int[]
+	private static final int ANTIQUE_BROOCH = 7262;
+	private static final int[] RCP_REWARDS = new int[]
 	{
 		6881,
 		6883,

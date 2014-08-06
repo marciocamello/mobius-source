@@ -90,7 +90,7 @@ public final class OddGlobeInstance extends NpcInstance
 	/**
 	 * @author Mobius
 	 */
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		/**
 		 * Field done.
@@ -132,7 +132,7 @@ public final class OddGlobeInstance extends NpcInstance
 	/**
 	 * @author Mobius
 	 */
-	public class ZoneListener2 implements OnZoneEnterLeaveListener
+	public final class ZoneListener2 implements OnZoneEnterLeaveListener
 	{
 		/**
 		 * Field done.

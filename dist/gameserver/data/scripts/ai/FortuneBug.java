@@ -29,7 +29,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class FortuneBug extends DefaultAI
+public final class FortuneBug extends DefaultAI
 {
 	/**
 	 * Field MAX_RADIUS. (value is 500)

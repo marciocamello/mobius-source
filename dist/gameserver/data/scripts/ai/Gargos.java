@@ -21,7 +21,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Gargos extends Fighter
+public final class Gargos extends Fighter
 {
 	/**
 	 * Field _lastFire.

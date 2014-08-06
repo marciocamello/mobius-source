@@ -25,7 +25,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class CastleFlameTowerInstance extends SiegeToggleNpcInstance
+public final class CastleFlameTowerInstance extends SiegeToggleNpcInstance
 {
 	/**
 	 *

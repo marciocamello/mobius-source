@@ -23,7 +23,7 @@ import quests._10288_SecretMission;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class PriestAquilaniInstance extends NpcInstance
+public final class PriestAquilaniInstance extends NpcInstance
 {
 	/**
 	 *

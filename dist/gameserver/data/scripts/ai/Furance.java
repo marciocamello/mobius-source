@@ -23,7 +23,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Furance extends DefaultAI
+public final class Furance extends DefaultAI
 {
 	/**
 	 * Constructor for Furance.
@@ -55,7 +55,7 @@ public class Furance extends DefaultAI
 	/**
 	 * @author Mobius
 	 */
-	public class Switch extends RunnableImpl
+	public final class Switch extends RunnableImpl
 	{
 		/**
 		 * Method runImpl.

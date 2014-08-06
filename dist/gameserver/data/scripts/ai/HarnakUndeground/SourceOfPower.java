@@ -25,7 +25,7 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 
-public class SourceOfPower extends DefaultAI
+public final class SourceOfPower extends DefaultAI
 {
 	private static final int SKILL_ID = 14625;
 	private static final int LIGHT_HEAL_ID = 14736;

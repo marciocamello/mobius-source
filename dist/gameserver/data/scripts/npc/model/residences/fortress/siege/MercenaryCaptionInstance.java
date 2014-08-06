@@ -31,7 +31,7 @@ import ai.residences.fortress.siege.MercenaryCaption;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class MercenaryCaptionInstance extends MonsterInstance
+public final class MercenaryCaptionInstance extends MonsterInstance
 {
 	/**
 	 *

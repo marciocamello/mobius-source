@@ -19,11 +19,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _039_RedEyedInvaders extends Quest implements ScriptFile
 {
-	int BBN = 7178;
-	int RBN = 7179;
-	int IP = 7180;
-	int GML = 7181;
-	int[] REW =
+	final int BBN = 7178;
+	final int RBN = 7179;
+	final int IP = 7180;
+	final int GML = 7181;
+	final int[] REW =
 	{
 		6521,
 		6529,

@@ -36,7 +36,7 @@ public final class ResidenceHolder extends AbstractHolder
 	/**
 	 * Field _instance.
 	 */
-	private static ResidenceHolder _instance = new ResidenceHolder();
+	private static final ResidenceHolder _instance = new ResidenceHolder();
 	/**
 	 * Field _residences.
 	 */

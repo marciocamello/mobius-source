@@ -22,7 +22,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class FrightenedOrc extends Fighter
+public final class FrightenedOrc extends Fighter
 {
 	/**
 	 * Field _sayOnAttack.

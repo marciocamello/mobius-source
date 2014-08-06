@@ -26,7 +26,7 @@ import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class FishShots extends ScriptItemHandler
+public final class FishShots extends ScriptItemHandler
 {
 	/**
 	 * Field _itemIds.

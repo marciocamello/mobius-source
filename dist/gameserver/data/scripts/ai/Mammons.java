@@ -32,7 +32,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Mammons extends Functions implements ScriptFile
+public final class Mammons extends Functions implements ScriptFile
 {
 	/**
 	 * Field _log.

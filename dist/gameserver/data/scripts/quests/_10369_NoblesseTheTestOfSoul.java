@@ -83,9 +83,9 @@ public class _10369_NoblesseTheTestOfSoul extends Quest implements ScriptFile, O
 	private static final int EmptyHot = 34887;
 	private static final int HotFull = 34888;
 	private static final int NovellProphecy = 34886;
-	private static int NoblessTiara = 7694;
-	private static int DimensionalDiamond = 7562;
-	private static int NoblessePrivi = 34983;
+	private static final int NoblessTiara = 7694;
+	private static final int DimensionalDiamond = 7562;
+	private static final int NoblessePrivi = 34983;
 	
 	public _10369_NoblesseTheTestOfSoul()
 	{

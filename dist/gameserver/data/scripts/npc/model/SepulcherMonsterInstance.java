@@ -31,7 +31,7 @@ import bosses.FourSepulchersSpawn;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SepulcherMonsterInstance extends MonsterInstance
+public final class SepulcherMonsterInstance extends MonsterInstance
 {
 	/**
 	 *

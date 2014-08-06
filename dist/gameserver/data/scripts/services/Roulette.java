@@ -26,7 +26,7 @@ import lineage2.gameserver.utils.Util;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Roulette extends Functions
+public final class Roulette extends Functions
 {
 	/**
 	 * Field R. (value is ""red"")

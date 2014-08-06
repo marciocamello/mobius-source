@@ -43,7 +43,7 @@ import org.w3c.dom.Node;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class VoteManager extends Functions implements IVoicedCommandHandler, ScriptFile
+public final class VoteManager extends Functions implements IVoicedCommandHandler, ScriptFile
 {
 	/**
 	 * @author Mobius
@@ -77,17 +77,17 @@ public class VoteManager extends Functions implements IVoicedCommandHandler, Scr
 		/**
 		 * Field variants.
 		 */
-		public TreeMap<Integer, String> variants = new TreeMap<>();
+		public final TreeMap<Integer, String> variants = new TreeMap<>();
 		/**
 		 * Field results.
 		 */
-		public Map<String, Integer[]> results = new HashMap<>();
+		public final Map<String, Integer[]> results = new HashMap<>();
 	}
 	
 	/**
 	 * Field VoteList.
 	 */
-	private static Map<Integer, Vote> VoteList = new HashMap<>();
+	private static final Map<Integer, Vote> VoteList = new HashMap<>();
 	
 	/**
 	 * Method vote.

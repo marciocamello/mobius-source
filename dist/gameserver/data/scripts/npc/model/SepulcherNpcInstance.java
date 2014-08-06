@@ -38,7 +38,7 @@ import bosses.FourSepulchersSpawn.GateKeeper;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SepulcherNpcInstance extends NpcInstance
+public final class SepulcherNpcInstance extends NpcInstance
 {
 	/**
 	 *
@@ -47,7 +47,7 @@ public class SepulcherNpcInstance extends NpcInstance
 	/**
 	 * Field _hallGateKeepers.
 	 */
-	protected static Map<Integer, Integer> _hallGateKeepers = new HashMap<>();
+	protected static final Map<Integer, Integer> _hallGateKeepers = new HashMap<>();
 	/**
 	 * Field _spawnMonsterTask. Field _closeTask.
 	 */

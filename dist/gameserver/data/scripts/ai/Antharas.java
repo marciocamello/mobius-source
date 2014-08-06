@@ -33,7 +33,7 @@ import bosses.AntharasManager;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Antharas extends DefaultAI
+public final class Antharas extends DefaultAI
 {
 	/**
 	 * Field s_paralyze. Field s_curse. Field s_fear2. Field s_fear.

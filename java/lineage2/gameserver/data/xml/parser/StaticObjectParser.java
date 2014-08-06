@@ -32,7 +32,7 @@ public final class StaticObjectParser extends AbstractFileParser<StaticObjectHol
 	/**
 	 * Field _instance.
 	 */
-	private static StaticObjectParser _instance = new StaticObjectParser();
+	private static final StaticObjectParser _instance = new StaticObjectParser();
 	
 	/**
 	 * Method getInstance.

@@ -20,9 +20,9 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _643_RiseAndFallOfTheElrokiTribe extends Quest implements ScriptFile
 {
-	private static int DROP_CHANCE = 75;
-	private static int BONES_OF_A_PLAINS_DINOSAUR = 8776;
-	private static int[] PLAIN_DINOSAURS =
+	private static final int DROP_CHANCE = 75;
+	private static final int BONES_OF_A_PLAINS_DINOSAUR = 8776;
+	private static final int[] PLAIN_DINOSAURS =
 	{
 		22208,
 		22209,
@@ -39,7 +39,7 @@ public class _643_RiseAndFallOfTheElrokiTribe extends Quest implements ScriptFil
 		22744,
 		22745
 	};
-	private static int[] REWARDS =
+	private static final int[] REWARDS =
 	{
 		8712,
 		8713,

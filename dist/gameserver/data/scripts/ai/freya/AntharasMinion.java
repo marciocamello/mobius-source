@@ -24,7 +24,7 @@ import bosses.AntharasManager;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class AntharasMinion extends Fighter
+public final class AntharasMinion extends Fighter
 {
 	/**
 	 * Constructor for AntharasMinion.

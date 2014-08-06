@@ -21,7 +21,7 @@ import lineage2.gameserver.network.serverpackets.ShowMiniMap;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class WorldMap extends ScriptItemHandler
+public final class WorldMap extends ScriptItemHandler
 {
 	/**
 	 * Field _itemIds.

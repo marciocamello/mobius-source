@@ -19,7 +19,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Remons extends RemonsSubAI
+public final class Remons extends RemonsSubAI
 {
 	/**
 	 * Constructor for Remons.

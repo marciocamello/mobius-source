@@ -24,7 +24,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GuardoftheGrave extends Fighter
+public final class GuardoftheGrave extends Fighter
 {
 	/**
 	 * Field DESPAWN_TIME.

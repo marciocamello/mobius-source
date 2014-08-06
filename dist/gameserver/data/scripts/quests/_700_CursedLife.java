@@ -20,18 +20,18 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _700_CursedLife extends Quest implements ScriptFile
 {
-	private static int Orbyu = 32560;
-	private static int SwallowedSkull = 13872;
-	private static int SwallowedSternum = 13873;
-	private static int SwallowedBones = 13874;
-	private static int MutantBird1 = 22602;
-	private static int MutantBird2 = 22603;
-	private static int DraHawk1 = 22604;
-	private static int DraHawk2 = 22605;
-	private static int Rok = 25624;
-	private static int _skullprice = 50000;
-	private static int _sternumprice = 5000;
-	private static int _bonesprice = 500;
+	private static final int Orbyu = 32560;
+	private static final int SwallowedSkull = 13872;
+	private static final int SwallowedSternum = 13873;
+	private static final int SwallowedBones = 13874;
+	private static final int MutantBird1 = 22602;
+	private static final int MutantBird2 = 22603;
+	private static final int DraHawk1 = 22604;
+	private static final int DraHawk2 = 22605;
+	private static final int Rok = 25624;
+	private static final int _skullprice = 50000;
+	private static final int _sternumprice = 5000;
+	private static final int _bonesprice = 500;
 	
 	@Override
 	public void onLoad()

@@ -362,7 +362,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Field _classlist.
 	 */
-	public Map<Integer, SubClass> _classlist = new HashMap<>(4);
+	public final Map<Integer, SubClass> _classlist = new HashMap<>(4);
 	/**
 	 * Field OBSERVER_NONE. (value is 0)
 	 */
@@ -558,7 +558,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Field _identItem.
 	 */
-	public boolean _identItem = false;
+	public final boolean _identItem = false;
 	/**
 	 * Field sittingTaskLaunched.
 	 */
@@ -782,11 +782,11 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Field _loto.
 	 */
-	public int _loto[] = new int[5];
+	public final int _loto[] = new int[5];
 	/**
 	 * Field _race.
 	 */
-	public int _race[] = new int[2];
+	public final int _race[] = new int[2];
 	/**
 	 * Field _blockList.
 	 */
@@ -917,7 +917,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Field _transformationSkills.
 	 */
-	Map<Integer, Skill> _transformationSkills = new HashMap<>();
+	final Map<Integer, Skill> _transformationSkills = new HashMap<>();
 	/**
 	 * Field _expandInventory.
 	 */
@@ -15411,11 +15411,11 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Field _acquiredItemMonthly.
 	 */
-	HashMap<Integer, Long> _acquiredItemMonthly = new HashMap<>();
+	final HashMap<Integer, Long> _acquiredItemMonthly = new HashMap<>();
 	/**
 	 * Field _acquiredItemTotal.
 	 */
-	HashMap<Integer, Long> _acquiredItemTotal = new HashMap<>();
+	final HashMap<Integer, Long> _acquiredItemTotal = new HashMap<>();
 	
 	/**
 	 * Method getAcquiredItem.

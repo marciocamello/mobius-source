@@ -19,16 +19,16 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _624_TheFinestIngredientsPart1 extends Quest implements ScriptFile
 {
-	private static int JEREMY = 31521;
-	private static int HOT_SPRINGS_ATROX = 21321;
-	private static int HOT_SPRINGS_NEPENTHES = 21319;
-	private static int HOT_SPRINGS_ATROXSPAWN = 21317;
-	private static int HOT_SPRINGS_BANDERSNATCHLING = 21314;
-	private static int SECRET_SPICE = 7204;
-	private static int TRUNK_OF_NEPENTHES = 7202;
-	private static int FOOT_OF_BANDERSNATCHLING = 7203;
-	private static int CRYOLITE = 7080;
-	private static int SAUCE = 7205;
+	private static final int JEREMY = 31521;
+	private static final int HOT_SPRINGS_ATROX = 21321;
+	private static final int HOT_SPRINGS_NEPENTHES = 21319;
+	private static final int HOT_SPRINGS_ATROXSPAWN = 21317;
+	private static final int HOT_SPRINGS_BANDERSNATCHLING = 21314;
+	private static final int SECRET_SPICE = 7204;
+	private static final int TRUNK_OF_NEPENTHES = 7202;
+	private static final int FOOT_OF_BANDERSNATCHLING = 7203;
+	private static final int CRYOLITE = 7080;
+	private static final int SAUCE = 7205;
 	
 	@Override
 	public void onLoad()

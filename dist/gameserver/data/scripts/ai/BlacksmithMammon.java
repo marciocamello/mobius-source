@@ -22,7 +22,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class BlacksmithMammon extends DefaultAI
+public final class BlacksmithMammon extends DefaultAI
 {
 	/**
 	 * Field _chatVar.

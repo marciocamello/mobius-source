@@ -43,11 +43,11 @@ public class SelectorConfig
 	/**
 	 * Field HEADER_SIZE.
 	 */
-	public int HEADER_SIZE = 2;
+	public final int HEADER_SIZE = 2;
 	/**
 	 * Field PACKET_SIZE.
 	 */
-	public int PACKET_SIZE = 32768;
+	public final int PACKET_SIZE = 32768;
 	/**
 	 * Field HELPER_BUFFER_COUNT.
 	 */
@@ -55,5 +55,5 @@ public class SelectorConfig
 	/**
 	 * Field BYTE_ORDER.
 	 */
-	public ByteOrder BYTE_ORDER = ByteOrder.LITTLE_ENDIAN;
+	public final ByteOrder BYTE_ORDER = ByteOrder.LITTLE_ENDIAN;
 }

@@ -64,7 +64,7 @@ public class RaidBossSpawnManager
 	/**
 	 * Field _spawntable.
 	 */
-	protected static Map<Integer, Spawner> _spawntable = new ConcurrentHashMap<>();
+	protected static final Map<Integer, Spawner> _spawntable = new ConcurrentHashMap<>();
 	/**
 	 * Field _storedInfo.
 	 */

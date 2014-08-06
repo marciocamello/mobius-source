@@ -26,7 +26,7 @@ import npc.model.OrfenInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Orfen extends Fighter
+public final class Orfen extends Fighter
 {
 	/**
 	 * Field MsgOnRecall.

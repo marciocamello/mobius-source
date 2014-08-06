@@ -19,7 +19,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Eleve extends EleveSubAI
+public final class Eleve extends EleveSubAI
 {
 	/**
 	 * Constructor for Eleve.

@@ -41,7 +41,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class heart extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
+public final class heart extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
 	/**
 	 * Field _log.

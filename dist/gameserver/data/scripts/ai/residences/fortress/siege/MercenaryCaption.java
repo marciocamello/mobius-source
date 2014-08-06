@@ -27,7 +27,7 @@ import npc.model.residences.fortress.siege.MercenaryCaptionInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class MercenaryCaption extends Fighter
+public final class MercenaryCaption extends Fighter
 {
 	/**
 	 * Field _points.

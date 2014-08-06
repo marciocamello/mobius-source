@@ -44,12 +44,12 @@ import lineage2.gameserver.utils.ReflectionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class KashaNegate implements ScriptFile
+public final class KashaNegate implements ScriptFile
 {
 	/**
 	 * Field _buffs.
 	 */
-	static int[] _buffs =
+	static final int[] _buffs =
 	{
 		6150,
 		6152,
@@ -58,7 +58,7 @@ public class KashaNegate implements ScriptFile
 	/**
 	 * Field ZONES.
 	 */
-	static String[] ZONES =
+	static final String[] ZONES =
 	{
 		"[kasha1]",
 		"[kasha2]",
@@ -72,7 +72,7 @@ public class KashaNegate implements ScriptFile
 	/**
 	 * Field mobs.
 	 */
-	static int[] mobs =
+	static final int[] mobs =
 	{
 		18812,
 		18813,
@@ -81,7 +81,7 @@ public class KashaNegate implements ScriptFile
 	/**
 	 * Field _debuff.
 	 */
-	private static int _debuff = 6149;
+	private static final int _debuff = 6149;
 	/**
 	 * Field _buffTask.
 	 */
@@ -89,7 +89,7 @@ public class KashaNegate implements ScriptFile
 	/**
 	 * Field TICK_BUFF_DELAY.
 	 */
-	private static long TICK_BUFF_DELAY = 10000L;
+	private static final long TICK_BUFF_DELAY = 10000L;
 	/**
 	 * Field _zoneListener.
 	 */
@@ -379,7 +379,7 @@ public class KashaNegate implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		/**
 		 * Method onZoneEnter.

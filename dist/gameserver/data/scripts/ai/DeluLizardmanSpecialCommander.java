@@ -25,7 +25,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class DeluLizardmanSpecialCommander extends Fighter
+public final class DeluLizardmanSpecialCommander extends Fighter
 {
 	/**
 	 * Field _shouted.

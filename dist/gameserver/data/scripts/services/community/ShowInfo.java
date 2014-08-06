@@ -21,7 +21,7 @@ import lineage2.gameserver.scripts.ScriptFile;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ShowInfo extends Functions implements ScriptFile
+public final class ShowInfo extends Functions implements ScriptFile
 {
 	/**
 	 * Method show.

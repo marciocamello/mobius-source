@@ -22,7 +22,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Potions extends SimpleItemHandler
+public final class Potions extends SimpleItemHandler
 {
 	/**
 	 * Field ITEM_IDS.

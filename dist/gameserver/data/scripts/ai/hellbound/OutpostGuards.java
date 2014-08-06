@@ -19,7 +19,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class OutpostGuards extends Fighter
+public final class OutpostGuards extends Fighter
 {
 	/**
 	 * Constructor for OutpostGuards.

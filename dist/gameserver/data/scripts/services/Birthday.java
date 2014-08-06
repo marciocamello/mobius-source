@@ -27,7 +27,7 @@ import lineage2.gameserver.utils.PositionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Birthday extends Functions
+public final class Birthday extends Functions
 {
 	/**
 	 * Field EXPLORERHAT. (value is 10250)

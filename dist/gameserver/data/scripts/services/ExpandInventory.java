@@ -24,7 +24,7 @@ import lineage2.gameserver.templates.item.ItemTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ExpandInventory extends Functions
+public final class ExpandInventory extends Functions
 {
 	/**
 	 * Method get.

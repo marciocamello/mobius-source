@@ -25,7 +25,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class NaiaRoomController extends DefaultAI
+public final class NaiaRoomController extends DefaultAI
 {
 	/**
 	 * Constructor for NaiaRoomController.

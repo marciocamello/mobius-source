@@ -33,7 +33,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SuspiciousMerchantInstance extends NpcInstance
+public final class SuspiciousMerchantInstance extends NpcInstance
 {
 	/**
 	 *

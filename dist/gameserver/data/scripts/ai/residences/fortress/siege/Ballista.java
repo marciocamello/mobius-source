@@ -25,7 +25,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Ballista extends DefaultAI
+public final class Ballista extends DefaultAI
 {
 	/**
 	 * Field BALLISTA_BOMB_SKILL_ID. (value is 2342)

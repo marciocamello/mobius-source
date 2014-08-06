@@ -33,7 +33,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ManageFriends implements ScriptFile, ICommunityBoardHandler
+public final class ManageFriends implements ScriptFile, ICommunityBoardHandler
 {
 	/**
 	 * Field _log.

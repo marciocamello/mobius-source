@@ -24,7 +24,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ThroneofDestruction extends DefaultAI
+public final class ThroneofDestruction extends DefaultAI
 {
 	/**
 	 * Field DOOR. (value is 12240031)

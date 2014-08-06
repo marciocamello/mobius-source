@@ -32,7 +32,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SeducedInvestigator extends Fighter
+public final class SeducedInvestigator extends Fighter
 {
 	/**
 	 * Field _allowedTargets.

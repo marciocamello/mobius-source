@@ -24,7 +24,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Succubus extends Fighter
+public final class Succubus extends Fighter
 {
 	/**
 	 * Field SAY_TEXT.

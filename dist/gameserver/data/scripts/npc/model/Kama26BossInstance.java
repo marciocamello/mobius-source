@@ -28,7 +28,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Kama26BossInstance extends KamalokaBossInstance
+public final class Kama26BossInstance extends KamalokaBossInstance
 {
 	/**
 	 *
@@ -93,7 +93,7 @@ public class Kama26BossInstance extends KamalokaBossInstance
 	/**
 	 * @author Mobius
 	 */
-	public class MinionSpawner extends RunnableImpl
+	public final class MinionSpawner extends RunnableImpl
 	{
 		/**
 		 * Method runImpl.
@@ -112,7 +112,7 @@ public class Kama26BossInstance extends KamalokaBossInstance
 	/**
 	 * @author Mobius
 	 */
-	public class ReflectionCollapseListener implements OnReflectionCollapseListener
+	public final class ReflectionCollapseListener implements OnReflectionCollapseListener
 	{
 		/**
 		 * Method onReflectionCollapse.

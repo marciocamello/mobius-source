@@ -20,14 +20,14 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _702_ATrapForRevenge extends Quest implements ScriptFile
 {
-	private static int PLENOS = 32563;
-	private static int TENIUS = 32555;
-	private static int DRAKES_FLESH = 13877;
-	private static int LEONARD = 9628;
-	private static int ADAMANTINE = 9629;
-	private static int ORICHALCUM = 9630;
-	private static int DRAK = 22612;
-	private static int MUTATED_DRAKE_WING = 22611;
+	private static final int PLENOS = 32563;
+	private static final int TENIUS = 32555;
+	private static final int DRAKES_FLESH = 13877;
+	private static final int LEONARD = 9628;
+	private static final int ADAMANTINE = 9629;
+	private static final int ORICHALCUM = 9630;
+	private static final int DRAK = 22612;
+	private static final int MUTATED_DRAKE_WING = 22611;
 	
 	@Override
 	public void onLoad()

@@ -21,7 +21,7 @@ import lineage2.gameserver.utils.ItemFunctions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class RafortyInstance extends NpcInstance
+public final class RafortyInstance extends NpcInstance
 {
 	/**
 	 *

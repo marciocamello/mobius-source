@@ -49,7 +49,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Rename extends Functions
+public final class Rename extends Functions
 {
 	/**
 	 * Field _log.

@@ -26,7 +26,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 /**
  * @author KilRoy FIXME[K] - Deprecated method getMembers()
  */
-public class SizrakInstance extends NpcInstance
+public final class SizrakInstance extends NpcInstance
 {
 	private static final long serialVersionUID = -5672768757660962094L;
 	private static final int normalTautiInstanceId = 218;

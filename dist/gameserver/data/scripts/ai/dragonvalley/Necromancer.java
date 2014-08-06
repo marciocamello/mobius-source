@@ -23,7 +23,7 @@ import lineage2.gameserver.utils.NpcUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Necromancer extends Mystic
+public final class Necromancer extends Mystic
 {
 	/**
 	 * Constructor for Necromancer.

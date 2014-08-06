@@ -29,7 +29,7 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Location;
 
-public class FortunaInstance extends Reflection
+public final class FortunaInstance extends Reflection
 {
 	private ScheduledFuture<?> firstStageGuardSpawn;
 	DeathListener _deathListener;
@@ -65,7 +65,7 @@ public class FortunaInstance extends Reflection
 		}
 	}
 	
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		public ZoneListener()
 		{

@@ -55,27 +55,27 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	/**
 	 * Field SUSPENDED.
 	 */
-	public static int SUSPENDED = -1;
+	public static final int SUSPENDED = -1;
 	/**
 	 * Field STARTING.
 	 */
-	public static int STARTING = 0;
+	public static final int STARTING = 0;
 	/**
 	 * Field STARTED.
 	 */
-	public static int STARTED = 1;
+	public static final int STARTED = 1;
 	/**
 	 * Field ACTING.
 	 */
-	public static int ACTING = 2;
+	public static final int ACTING = 2;
 	/**
 	 * Field FINISHING.
 	 */
-	public static int FINISHING = 3;
+	public static final int FINISHING = 3;
 	/**
 	 * Field FINISHED.
 	 */
-	public static int FINISHED = 4;
+	public static final int FINISHED = 4;
 	/**
 	 * Field _effector.
 	 */

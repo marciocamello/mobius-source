@@ -22,28 +22,28 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _690_JudesRequest extends Quest implements ScriptFile
 {
-	private static int JUDE = 32356;
-	private static int EVIL_WEAPON = 10327;
-	private static int Evil = 22399;
-	private static int EVIL_WEAPON_CHANCE = 30;
-	private static int ISawsword = 10373;
-	private static int IDisperser = 10374;
-	private static int ISpirit = 10375;
-	private static int IHeavyArms = 10376;
-	private static int ITrident = 10377;
-	private static int IHammer = 10378;
-	private static int IHand = 10379;
-	private static int IHall = 10380;
-	private static int ISpitter = 10381;
-	private static int ISawswordP = 10397;
-	private static int IDisperserP = 10398;
-	private static int ISpiritP = 10399;
-	private static int IHeavyArmsP = 10400;
-	private static int ITridentP = 10401;
-	private static int IHammerP = 10402;
-	private static int IHandP = 10403;
-	private static int IHallP = 10404;
-	private static int ISpitterP = 10405;
+	private static final int JUDE = 32356;
+	private static final int EVIL_WEAPON = 10327;
+	private static final int Evil = 22399;
+	private static final int EVIL_WEAPON_CHANCE = 30;
+	private static final int ISawsword = 10373;
+	private static final int IDisperser = 10374;
+	private static final int ISpirit = 10375;
+	private static final int IHeavyArms = 10376;
+	private static final int ITrident = 10377;
+	private static final int IHammer = 10378;
+	private static final int IHand = 10379;
+	private static final int IHall = 10380;
+	private static final int ISpitter = 10381;
+	private static final int ISawswordP = 10397;
+	private static final int IDisperserP = 10398;
+	private static final int ISpiritP = 10399;
+	private static final int IHeavyArmsP = 10400;
+	private static final int ITridentP = 10401;
+	private static final int IHammerP = 10402;
+	private static final int IHandP = 10403;
+	private static final int IHallP = 10404;
+	private static final int ISpitterP = 10405;
 	
 	@Override
 	public void onLoad()

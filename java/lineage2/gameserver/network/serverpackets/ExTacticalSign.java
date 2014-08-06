@@ -28,11 +28,11 @@ public class ExTacticalSign extends L2GameServerPacket
 	 */
 	private final int _signId;
 	
-	public static int SIGN_NONE = 0;
-	public static int SIGN_STAR = 1;
-	public static int SIGN_HEART = 2;
-	public static int SIGN_MOON = 3;
-	public static int SIGN_CROSS = 4;
+	public static final int SIGN_NONE = 0;
+	public static final int SIGN_STAR = 1;
+	public static final int SIGN_HEART = 2;
+	public static final int SIGN_MOON = 3;
+	public static final int SIGN_CROSS = 4;
 	
 	/**
 	 * Constructor for ExTacticalSign.

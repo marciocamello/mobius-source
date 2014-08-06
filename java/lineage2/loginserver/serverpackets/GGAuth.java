@@ -24,11 +24,11 @@ public final class GGAuth extends L2LoginServerPacket
 	/**
 	 * Field _log.
 	 */
-	static Logger _log = LoggerFactory.getLogger(GGAuth.class);
+	static final Logger _log = LoggerFactory.getLogger(GGAuth.class);
 	/**
 	 * Field SKIP_GG_AUTH_REQUEST.
 	 */
-	public static int SKIP_GG_AUTH_REQUEST = 0x0b;
+	public static final int SKIP_GG_AUTH_REQUEST = 0x0b;
 	/**
 	 * Field _response.
 	 */

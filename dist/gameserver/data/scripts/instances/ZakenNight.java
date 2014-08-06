@@ -21,7 +21,7 @@ import lineage2.gameserver.utils.Location;
 /**
  * @author pchayka
  */
-public class ZakenNight extends Reflection
+public final class ZakenNight extends Reflection
 {
 	private static final int Zaken = 29022;
 	private static final long initdelay = 480 * 1000L; // 480
@@ -39,7 +39,7 @@ public class ZakenNight extends Reflection
 		ThreadPoolManager.getInstance().schedule(new ZakenSpawn(this), initdelay + (Rnd.get(120, 240) * 1000L));
 	}
 	
-	public class ZakenSpawn extends RunnableImpl
+	public final class ZakenSpawn extends RunnableImpl
 	{
 		Reflection _r;
 		

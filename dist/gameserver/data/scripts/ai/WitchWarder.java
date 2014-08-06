@@ -19,7 +19,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class WitchWarder extends Fighter
+public final class WitchWarder extends Fighter
 {
 	/**
 	 * Field _wait_timeout.

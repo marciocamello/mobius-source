@@ -26,7 +26,7 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ResidenceDoor extends DoorAI
+public final class ResidenceDoor extends DoorAI
 {
 	/**
 	 * Constructor for ResidenceDoor.

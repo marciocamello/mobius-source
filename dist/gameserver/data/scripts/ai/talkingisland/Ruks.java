@@ -19,7 +19,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Ruks extends RuksSubAI
+public final class Ruks extends RuksSubAI
 {
 	/**
 	 * Constructor for Ruks.

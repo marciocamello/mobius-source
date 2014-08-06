@@ -25,7 +25,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SSQDoor extends DoorAI
+public final class SSQDoor extends DoorAI
 {
 	/**
 	 * Field room1.

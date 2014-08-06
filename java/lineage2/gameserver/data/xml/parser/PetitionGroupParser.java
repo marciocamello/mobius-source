@@ -33,7 +33,7 @@ public class PetitionGroupParser extends AbstractFileParser<PetitionGroupHolder>
 	/**
 	 * Field _instance.
 	 */
-	private static PetitionGroupParser _instance = new PetitionGroupParser();
+	private static final PetitionGroupParser _instance = new PetitionGroupParser();
 	
 	/**
 	 * Method getInstance.

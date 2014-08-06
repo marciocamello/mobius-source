@@ -26,7 +26,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Sandstorm extends DefaultAI
+public final class Sandstorm extends DefaultAI
 {
 	/**
 	 * Field AGGRO_RANGE. (value is 200)

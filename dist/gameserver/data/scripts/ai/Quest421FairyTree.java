@@ -22,7 +22,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Quest421FairyTree extends Fighter
+public final class Quest421FairyTree extends Fighter
 {
 	/**
 	 * Constructor for Quest421FairyTree.

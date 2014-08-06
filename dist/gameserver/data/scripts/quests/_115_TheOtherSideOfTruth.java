@@ -19,17 +19,17 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _115_TheOtherSideOfTruth extends Quest implements ScriptFile
 {
-	private static int Rafforty = 32020;
-	private static int Misa = 32018;
-	private static int Kierre = 32022;
-	private static int Ice_Sculpture1 = 32021;
-	private static int Ice_Sculpture2 = 32077;
-	private static int Ice_Sculpture3 = 32078;
-	private static int Ice_Sculpture4 = 32079;
-	private static int Misas_Letter = 8079;
-	private static int Raffortys_Letter = 8080;
-	private static int Piece_of_Tablet = 8081;
-	private static int Report_Piece = 8082;
+	private static final int Rafforty = 32020;
+	private static final int Misa = 32018;
+	private static final int Kierre = 32022;
+	private static final int Ice_Sculpture1 = 32021;
+	private static final int Ice_Sculpture2 = 32077;
+	private static final int Ice_Sculpture3 = 32078;
+	private static final int Ice_Sculpture4 = 32079;
+	private static final int Misas_Letter = 8079;
+	private static final int Raffortys_Letter = 8080;
+	private static final int Piece_of_Tablet = 8081;
+	private static final int Report_Piece = 8082;
 	
 	public _115_TheOtherSideOfTruth()
 	{

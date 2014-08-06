@@ -26,7 +26,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SoulCoffin extends DefaultAI
+public final class SoulCoffin extends DefaultAI
 {
 	/**
 	 * Field checkTimer.

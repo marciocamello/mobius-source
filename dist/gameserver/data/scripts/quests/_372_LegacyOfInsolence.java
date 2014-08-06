@@ -23,69 +23,69 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _372_LegacyOfInsolence extends Quest implements ScriptFile
 {
-	private static int HOLLY = 30839;
-	private static int WALDERAL = 30844;
-	private static int DESMOND = 30855;
-	private static int PATRIN = 30929;
-	private static int CLAUDIA = 31001;
-	private static int CORRUPT_SAGE = 20817;
-	private static int ERIN_EDIUNCE = 20821;
-	private static int HALLATE_INSP = 20825;
-	private static int PLATINUM_OVL = 20829;
-	private static int PLATINUM_PRE = 21069;
-	private static int MESSENGER_A1 = 21062;
-	private static int MESSENGER_A2 = 21063;
-	private static int Ancient_Red_Papyrus = 5966;
-	private static int Ancient_Blue_Papyrus = 5967;
-	private static int Ancient_Black_Papyrus = 5968;
-	private static int Ancient_White_Papyrus = 5969;
-	private static int[] Revelation_of_the_Seals_Range =
+	private static final int HOLLY = 30839;
+	private static final int WALDERAL = 30844;
+	private static final int DESMOND = 30855;
+	private static final int PATRIN = 30929;
+	private static final int CLAUDIA = 31001;
+	private static final int CORRUPT_SAGE = 20817;
+	private static final int ERIN_EDIUNCE = 20821;
+	private static final int HALLATE_INSP = 20825;
+	private static final int PLATINUM_OVL = 20829;
+	private static final int PLATINUM_PRE = 21069;
+	private static final int MESSENGER_A1 = 21062;
+	private static final int MESSENGER_A2 = 21063;
+	private static final int Ancient_Red_Papyrus = 5966;
+	private static final int Ancient_Blue_Papyrus = 5967;
+	private static final int Ancient_Black_Papyrus = 5968;
+	private static final int Ancient_White_Papyrus = 5969;
+	private static final int[] Revelation_of_the_Seals_Range =
 	{
 		5972,
 		5978
 	};
-	private static int[] Ancient_Epic_Chapter_Range =
+	private static final int[] Ancient_Epic_Chapter_Range =
 	{
 		5979,
 		5983
 	};
-	private static int[] Imperial_Genealogy_Range =
+	private static final int[] Imperial_Genealogy_Range =
 	{
 		5984,
 		5988
 	};
-	private static int[] Blueprint_Tower_of_Insolence_Range =
+	private static final int[] Blueprint_Tower_of_Insolence_Range =
 	{
 		5989,
 		6001
 	};
-	private static int[] Reward_Dark_Crystal =
+	private static final int[] Reward_Dark_Crystal =
 	{
 		5368,
 		5392,
 		5426
 	};
-	private static int[] Reward_Tallum =
+	private static final int[] Reward_Tallum =
 	{
 		5370,
 		5394,
 		5428
 	};
-	private static int[] Reward_Nightmare =
+	private static final int[] Reward_Nightmare =
 	{
 		5380,
 		5404,
 		5430
 	};
-	private static int[] Reward_Majestic =
+	private static final int[] Reward_Majestic =
 	{
 		5382,
 		5406,
 		5432
 	};
-	private static int Three_Recipes_Reward_Chance = 1;
-	private static int Two_Recipes_Reward_Chance = 2;
-	private static int Adena4k_Reward_Chance = 2;
+	private static final int Three_Recipes_Reward_Chance = 1;
+	private static final int Two_Recipes_Reward_Chance = 2;
+	private static final int Adena4k_Reward_Chance = 2;
 	private final Map<Integer, int[]> DROPLIST = new HashMap<>();
 	
 	public _372_LegacyOfInsolence()

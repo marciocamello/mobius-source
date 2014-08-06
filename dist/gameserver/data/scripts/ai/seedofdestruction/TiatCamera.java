@@ -25,7 +25,7 @@ import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TiatCamera extends DefaultAI
+public final class TiatCamera extends DefaultAI
 {
 	/**
 	 * Field _players.

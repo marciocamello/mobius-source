@@ -37,15 +37,15 @@ public class _451_LuciensAltar extends Quest implements ScriptFile
 	{
 	}
 	
-	private static int DAICHIR = 30537;
-	private static int REPLENISHED_BEAD = 14877;
-	private static int DISCHARGED_BEAD = 14878;
-	private static int ALTAR_1 = 32706;
-	private static int ALTAR_2 = 32707;
-	private static int ALTAR_3 = 32708;
-	private static int ALTAR_4 = 32709;
-	private static int ALTAR_5 = 32710;
-	private static int[] ALTARS = new int[]
+	private static final int DAICHIR = 30537;
+	private static final int REPLENISHED_BEAD = 14877;
+	private static final int DISCHARGED_BEAD = 14878;
+	private static final int ALTAR_1 = 32706;
+	private static final int ALTAR_2 = 32707;
+	private static final int ALTAR_3 = 32708;
+	private static final int ALTAR_4 = 32709;
+	private static final int ALTAR_5 = 32710;
+	private static final int[] ALTARS = new int[]
 	{
 		ALTAR_1,
 		ALTAR_2,

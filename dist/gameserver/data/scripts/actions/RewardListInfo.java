@@ -36,7 +36,7 @@ import org.apache.commons.lang3.StringUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class RewardListInfo
+public final class RewardListInfo
 {
 	/**
 	 * Field pf.

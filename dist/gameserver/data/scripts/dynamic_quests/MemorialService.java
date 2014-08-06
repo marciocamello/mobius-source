@@ -26,7 +26,7 @@ import lineage2.gameserver.scripts.ScriptFile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class MemorialService extends DynamicQuest implements ScriptFile
+public final class MemorialService extends DynamicQuest implements ScriptFile
 {
 	private static final Logger _log = LoggerFactory.getLogger(MemorialService.class);
 	// ID

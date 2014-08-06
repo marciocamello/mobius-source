@@ -28,7 +28,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class EpicBossState
+public final class EpicBossState
 {
 	/**
 	 * Field _log.

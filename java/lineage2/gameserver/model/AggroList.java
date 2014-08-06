@@ -102,7 +102,7 @@ public class AggroList
 		/**
 		 * Field instance.
 		 */
-		private static Comparator<DamageHate> instance = new DamageComparator();
+		private static final Comparator<DamageHate> instance = new DamageComparator();
 		
 		/**
 		 * Method getInstance.
@@ -141,7 +141,7 @@ public class AggroList
 		/**
 		 * Field instance.
 		 */
-		private static Comparator<DamageHate> instance = new HateComparator();
+		private static final Comparator<DamageHate> instance = new HateComparator();
 		
 		/**
 		 * Method getInstance.

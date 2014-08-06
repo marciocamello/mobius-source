@@ -82,7 +82,7 @@ public class MentorUtil
 		}
 	};
 	
-	public static int[] effectsForMentee =
+	public static final int[] effectsForMentee =
 	{
 		9227,
 		9228,
@@ -93,18 +93,18 @@ public class MentorUtil
 		9233
 	};
 	
-	public static int skillForMentee = 9379;
+	public static final int skillForMentee = 9379;
 	
-	public static int[] skillsForMentor =
+	public static final int[] skillsForMentor =
 	{
 		9376,
 		9377,
 		9378
 	};
 	
-	public static int effectForMentor = 9256;
+	public static final int effectForMentor = 9256;
 	
-	public static int[] effectsRemove =
+	public static final int[] effectsRemove =
 	{
 		9233,
 		9227,
@@ -116,7 +116,7 @@ public class MentorUtil
 		9256
 	};
 	
-	public static int[] skillRemove =
+	public static final int[] skillRemove =
 	{
 		9376,
 		9377,

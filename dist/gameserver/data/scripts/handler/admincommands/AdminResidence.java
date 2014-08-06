@@ -42,7 +42,7 @@ import npc.model.residences.fortress.siege.PowerControlUnitInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class AdminResidence extends ScriptAdminCommand
+public final class AdminResidence extends ScriptAdminCommand
 {
 	/**
 	 * @author Mobius

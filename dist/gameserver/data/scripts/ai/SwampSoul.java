@@ -18,7 +18,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 /**
  * @author ALF
  */
-public class SwampSoul extends Mystic
+public final class SwampSoul extends Mystic
 {
 	
 	public SwampSoul(NpcInstance actor)

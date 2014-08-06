@@ -23,7 +23,7 @@ import npc.model.HellboundRemnantInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class HolyWater extends SimpleItemHandler
+public final class HolyWater extends SimpleItemHandler
 {
 	/**
 	 * Field ITEM_IDS.

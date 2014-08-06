@@ -21,7 +21,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Epidos extends Fighter
+public final class Epidos extends Fighter
 {
 	/**
 	 * Constructor for Epidos.

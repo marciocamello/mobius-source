@@ -40,7 +40,7 @@ public final class GunPrisionInstance extends NpcInstance
 	
 	boolean checkShot = true;
 	
-	private static Location[] point_bombs =
+	private static final Location[] point_bombs =
 	{
 		new Location(176856, 144152, -11875),
 		new Location(176808, 141384, -11859),
@@ -48,7 +48,7 @@ public final class GunPrisionInstance extends NpcInstance
 		new Location(174056, 144056, -11870)
 	};
 	
-	private static Location[] point_bombs_spezion =
+	private static final Location[] point_bombs_spezion =
 	{
 		new Location(186056, 144152, -11851),
 		new Location(186072, 141320, -11855),

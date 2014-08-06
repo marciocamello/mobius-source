@@ -22,7 +22,7 @@ import bosses.ValakasManager;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ValakasMinion extends Mystic
+public final class ValakasMinion extends Mystic
 {
 	/**
 	 * Constructor for ValakasMinion.

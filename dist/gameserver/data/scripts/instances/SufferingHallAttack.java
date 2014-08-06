@@ -26,7 +26,7 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 /**
  * @author pchayka
  */
-public class SufferingHallAttack extends Reflection
+public final class SufferingHallAttack extends Reflection
 {
 	private static final int AliveTumor = 18704;
 	private static final int DeadTumor = 32531;

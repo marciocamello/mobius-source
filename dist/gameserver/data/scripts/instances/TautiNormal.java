@@ -44,7 +44,7 @@ import org.slf4j.LoggerFactory;
 /**
  * @author KilRoy http://l2on.net/?c=npc&id=29234 - Extreme Mode Tauti http://l2on.net/?c=npc&id=29233 - Normal Mode Tauti http://l2on.net/?c=npc&id=19287 - Normal Mode Jahak http://l2on.net/?c=npc&id=29237 - Tauti Axe Extreme Mode http://l2on.net/?c=npc&id=29236 - Tauti Axe Normal Mode
  */
-public class TautiNormal extends Reflection
+public final class TautiNormal extends Reflection
 {
 	static final Logger _log = LoggerFactory.getLogger(TautiNormal.class);
 	private static final int TAUTI_NORMAL = 29233;
@@ -63,8 +63,8 @@ public class TautiNormal extends Reflection
 	static final Location TAUTI_SPAWN = new Location(-147264, 212896, -10056);
 	
 	private final ZoneListener _epicZoneListener = new ZoneListener();
-	DeathListener _deathListener = new DeathListener();
-	CurrentHpListener _currentHpListener = new CurrentHpListener();
+	final DeathListener _deathListener = new DeathListener();
+	final CurrentHpListener _currentHpListener = new CurrentHpListener();
 	
 	boolean _entryLocked = false;
 	boolean _startLaunched = false;
@@ -74,20 +74,20 @@ public class TautiNormal extends Reflection
 	
 	int _stage = 0;
 	
-	AtomicInteger raidplayers = new AtomicInteger();
+	final AtomicInteger raidplayers = new AtomicInteger();
 	
-	private static int[] KUNDAS =
+	private static final int[] KUNDAS =
 	{
 		19262,
 		19263,
 		19264
 	};
-	private static int[] SOFAS =
+	private static final int[] SOFAS =
 	{
 		33679,
 		33680
 	};
-	static int[] SAY_TIMER =
+	static final int[] SAY_TIMER =
 	{
 		5000,
 		8000,
@@ -157,7 +157,7 @@ public class TautiNormal extends Reflection
 		return !((raidplayers < getInstancedZone().getMinParty()) || _startLaunched);
 	}
 	
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
@@ -212,14 +212,10 @@ public class TautiNormal extends Reflection
 				player.showQuestMovie(ExStartScenePlayer.SCENE_SC_TAUTI_OPENING);
 			}
 			
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					TAUTI = addSpawnWithoutRespawn(TAUTI_NORMAL, TAUTI_SPAWN, 0);
-					TAUTI.addListener(_currentHpListener);
-				}
+				TAUTI = addSpawnWithoutRespawn(TAUTI_NORMAL, TAUTI_SPAWN, 0);
+				TAUTI.addListener(_currentHpListener);
 			}, 30000L);
 		}
 	}
@@ -295,7 +291,7 @@ public class TautiNormal extends Reflection
 		}
 	}
 	
-	public class CurrentHpListener implements OnCurrentHpDamageListener
+	public final class CurrentHpListener implements OnCurrentHpDamageListener
 	{
 		@Override
 		public void onCurrentHpDamage(final Creature actor, final double damage, final Creature attacker, Skill skill)
@@ -313,25 +309,21 @@ public class TautiNormal extends Reflection
 						player.sendPacket(new ExShowScreenMessage(NpcString.JAHAK_IS_INFUSING_ITS_PETRA_TO_TAUTI, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 					}
 					
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule(() ->
 					{
-						@Override
-						public void run()
+						addSpawnWithoutRespawn(JAHAK, TAUTI.getLoc(), 50);
+						addSpawnWithoutRespawn(JAHAK, TAUTI.getLoc(), 50);
+						
+						for (Player player : getPlayers())
 						{
-							addSpawnWithoutRespawn(JAHAK, TAUTI.getLoc(), 50);
-							addSpawnWithoutRespawn(JAHAK, TAUTI.getLoc(), 50);
-							
-							for (Player player : getPlayers())
-							{
-								player.sendPacket(new ExShowScreenMessage(NpcString.LORD_TAUTI_REVEIVE_MY_PETRA_AND_BE_STRENGTHENED_THEN_DEFEAT_THESE_FEEBLE_WRETCHES, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
-							}
-							
-							for (NpcInstance npc : getAllByNpcId(JAHAK, true))
-							{
-								Skill skill = SkillTable.getInstance().getInfo(14625, 1);
-								npc.doCast(skill, actor, false);
-								npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 300);
-							}
+							player.sendPacket(new ExShowScreenMessage(NpcString.LORD_TAUTI_REVEIVE_MY_PETRA_AND_BE_STRENGTHENED_THEN_DEFEAT_THESE_FEEBLE_WRETCHES, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
+						}
+						
+						for (NpcInstance npc : getAllByNpcId(JAHAK, true))
+						{
+							Skill skill1 = SkillTable.getInstance().getInfo(14625, 1);
+							npc.doCast(skill1, actor, false);
+							npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 300);
 						}
 					}, 5000L);
 				}
@@ -344,17 +336,13 @@ public class TautiNormal extends Reflection
 					}
 					
 					TAUTI.teleToLocation(-149244, 209882, -10199, TAUTI.getReflection());
-					ThreadPoolManager.getInstance().schedule(new Runnable()
+					ThreadPoolManager.getInstance().schedule(() ->
 					{
-						@Override
-						public void run()
-						{
-							TAUTI_AXE = addSpawnWithoutRespawn(TAUTI_NORMAL_AXE, TAUTI_SPAWN, 0);
-							TAUTI_AXE.addListener(_deathListener);
-							TAUTI_AXE.setCurrentHp(TAUTI.getCurrentHp(), false);
-							TAUTI.removeListener(_currentHpListener);
-							TAUTI.deleteMe();
-						}
+						TAUTI_AXE = addSpawnWithoutRespawn(TAUTI_NORMAL_AXE, TAUTI_SPAWN, 0);
+						TAUTI_AXE.addListener(_deathListener);
+						TAUTI_AXE.setCurrentHp(TAUTI.getCurrentHp(), false);
+						TAUTI.removeListener(_currentHpListener);
+						TAUTI.deleteMe();
 					}, 18000L);
 				}
 			}

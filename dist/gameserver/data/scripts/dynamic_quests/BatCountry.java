@@ -33,7 +33,7 @@ import lineage2.gameserver.utils.ItemFunctions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class BatCountry extends DynamicQuest implements ScriptFile
+public final class BatCountry extends DynamicQuest implements ScriptFile
 {
 	public static final Logger _log = LoggerFactory.getLogger(BatCountry.class);
 	private static final int QUEST_ID = 14;

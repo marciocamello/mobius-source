@@ -21,7 +21,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Transparent_18919 extends DefaultAI
+public final class Transparent_18919 extends DefaultAI
 {
 	/**
 	 * Field SKILL_ID. (value is 14649)

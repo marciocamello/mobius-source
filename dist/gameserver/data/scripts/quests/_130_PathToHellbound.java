@@ -20,9 +20,9 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _130_PathToHellbound extends Quest implements ScriptFile
 {
-	private static int CASIAN = 30612;
-	private static int GALATE = 32292;
-	private static int CASIAN_BLUE_CRY = 12823;
+	private static final int CASIAN = 30612;
+	private static final int GALATE = 32292;
+	private static final int CASIAN_BLUE_CRY = 12823;
 	
 	@Override
 	public void onLoad()

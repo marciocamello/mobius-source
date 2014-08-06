@@ -47,7 +47,7 @@ public final class ResidenceParser extends AbstractDirParser<ResidenceHolder>
 	/**
 	 * Field _instance.
 	 */
-	private static ResidenceParser _instance = new ResidenceParser();
+	private static final ResidenceParser _instance = new ResidenceParser();
 	
 	/**
 	 * Method getInstance.

@@ -18,7 +18,7 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
-public class InfiltrationOfficerInstance extends NpcInstance
+public final class InfiltrationOfficerInstance extends NpcInstance
 {
 	private static final long serialVersionUID = 1L;
 	

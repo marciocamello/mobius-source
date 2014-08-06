@@ -50,7 +50,7 @@ public abstract class SagasSuperclass extends Quest
 	protected Race StartRace;
 	
 	// massives
-	static List<NpcInstance> _npcWaves = new ArrayList<>();
+	static final List<NpcInstance> _npcWaves = new ArrayList<>();
 	
 	private static final int Avanguard_aden = 33407;
 	private static final int Avanguard_corpse1 = 33166;
@@ -84,7 +84,7 @@ public abstract class SagasSuperclass extends Quest
 	// onKill won't work here because mobs also killing mobs
 	private final DeathListener deathListener = new DeathListener();
 	
-	protected static Map<Integer, Class<?>> Quests = new HashMap<>();
+	protected static final Map<Integer, Class<?>> Quests = new HashMap<>();
 	static
 	{
 		Quests.put(10341, _10341_DayOfDestinyHumanFate.class);
@@ -95,7 +95,7 @@ public abstract class SagasSuperclass extends Quest
 		Quests.put(10346, _10346_DayOfDestinyKamaelsFate.class);
 	}
 	
-	protected static int[][] QuestRace = new int[][]
+	protected static final int[][] QuestRace = new int[][]
 	{
 		{
 			0

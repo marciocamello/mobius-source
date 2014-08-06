@@ -22,7 +22,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GhostOfVonHellmannsPage extends DefaultAI
+public final class GhostOfVonHellmannsPage extends DefaultAI
 {
 	/**
 	 * Field points.

@@ -19,7 +19,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GuardRndWalkAndAnim extends Guard
+public final class GuardRndWalkAndAnim extends Guard
 {
 	/**
 	 * Constructor for GuardRndWalkAndAnim.

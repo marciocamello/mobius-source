@@ -76,7 +76,7 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 	/**
 	 * Field _playerExitListener.
 	 */
-	protected OnPlayerExitListener _playerExitListener = new OnPlayerExitListenerImpl();
+	protected final OnPlayerExitListener _playerExitListener = new OnPlayerExitListenerImpl();
 	/**
 	 * Field _winner.
 	 */

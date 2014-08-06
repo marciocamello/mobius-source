@@ -27,11 +27,11 @@ public class QuestManager
 	/**
 	 * Field _questsByName.
 	 */
-	private static Map<String, Quest> _questsByName = new ConcurrentHashMap<>();
+	private static final Map<String, Quest> _questsByName = new ConcurrentHashMap<>();
 	/**
 	 * Field _questsById.
 	 */
-	private static Map<Integer, Quest> _questsById = new ConcurrentHashMap<>();
+	private static final Map<Integer, Quest> _questsById = new ConcurrentHashMap<>();
 	
 	/**
 	 * Method getQuest.

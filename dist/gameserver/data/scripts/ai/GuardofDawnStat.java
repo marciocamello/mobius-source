@@ -29,7 +29,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GuardofDawnStat extends DefaultAI
+public final class GuardofDawnStat extends DefaultAI
 {
 	/**
 	 * Field _aggrorange. (value is 120)
@@ -63,7 +63,7 @@ public class GuardofDawnStat extends DefaultAI
 	/**
 	 * @author Mobius
 	 */
-	public class Teleportation extends RunnableImpl
+	public final class Teleportation extends RunnableImpl
 	{
 		/**
 		 * Field _telePoint.

@@ -23,7 +23,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Rooney extends DefaultAI
+public final class Rooney extends DefaultAI
 {
 	/**
 	 * Field points.

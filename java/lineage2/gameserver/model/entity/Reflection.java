@@ -132,11 +132,11 @@ public class Reflection
 	/**
 	 * Field _spawns.
 	 */
-	protected List<Spawner> _spawns = new ArrayList<>();
+	protected final List<Spawner> _spawns = new ArrayList<>();
 	/**
 	 * Field _objects.
 	 */
-	public List<GameObject> _objects = new ArrayList<>();
+	public final List<GameObject> _objects = new ArrayList<>();
 	/**
 	 * Field _doors.
 	 */
@@ -152,7 +152,7 @@ public class Reflection
 	/**
 	 * Field _visitors.
 	 */
-	protected TIntHashSet _visitors = new TIntHashSet();
+	protected final TIntHashSet _visitors = new TIntHashSet();
 	/**
 	 * Field lock.
 	 */

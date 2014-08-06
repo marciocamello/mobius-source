@@ -22,7 +22,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class DaimonTheWhiteEyed extends DefaultAI
+public final class DaimonTheWhiteEyed extends DefaultAI
 {
 	/**
 	 * Field points.

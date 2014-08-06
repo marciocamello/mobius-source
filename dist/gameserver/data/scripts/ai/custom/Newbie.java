@@ -24,7 +24,7 @@ import services.SupportMagic;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Newbie extends DefaultAI
+public final class Newbie extends DefaultAI
 {
 	/**
 	 * Field lastebuff.

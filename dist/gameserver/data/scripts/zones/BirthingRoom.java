@@ -21,7 +21,7 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ReflectionUtils;
 
-public class BirthingRoom implements ScriptFile
+public final class BirthingRoom implements ScriptFile
 {
 	
 	private static final String[] zones =
@@ -59,7 +59,7 @@ public class BirthingRoom implements ScriptFile
 	{
 	}
 	
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		
 		@Override

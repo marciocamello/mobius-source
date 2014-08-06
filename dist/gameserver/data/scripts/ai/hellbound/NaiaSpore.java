@@ -24,7 +24,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class NaiaSpore extends Fighter
+public final class NaiaSpore extends Fighter
 {
 	/**
 	 * Field epidosIndex.

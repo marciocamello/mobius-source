@@ -21,7 +21,7 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class CharChangePotions extends ScriptItemHandler
+public final class CharChangePotions extends ScriptItemHandler
 {
 	/**
 	 * Field _itemIds.

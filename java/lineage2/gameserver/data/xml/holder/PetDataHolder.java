@@ -30,7 +30,7 @@ public class PetDataHolder extends AbstractHolder
 	/**
 	 * Field _instance.
 	 */
-	private static PetDataHolder _instance = new PetDataHolder();
+	private static final PetDataHolder _instance = new PetDataHolder();
 	/**
 	 * Field _pets.
 	 */

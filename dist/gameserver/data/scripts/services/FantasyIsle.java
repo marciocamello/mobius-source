@@ -30,7 +30,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class FantasyIsle extends Functions implements ScriptFile
+public final class FantasyIsle extends Functions implements ScriptFile
 {
 	/**
 	 * Field _startTask.
@@ -43,71 +43,71 @@ public class FantasyIsle extends Functions implements ScriptFile
 	/**
 	 * Field MC.
 	 */
-	private static int MC = 32433;
+	private static final int MC = 32433;
 	/**
 	 * Field singer1.
 	 */
-	private static int singer1 = 32431;
+	private static final int singer1 = 32431;
 	/**
 	 * Field singer2.
 	 */
-	private static int singer2 = 32432;
+	private static final int singer2 = 32432;
 	/**
 	 * Field circus1.
 	 */
-	private static int circus1 = 32442;
+	private static final int circus1 = 32442;
 	/**
 	 * Field circus2.
 	 */
-	private static int circus2 = 32443;
+	private static final int circus2 = 32443;
 	/**
 	 * Field circus3.
 	 */
-	private static int circus3 = 32444;
+	private static final int circus3 = 32444;
 	/**
 	 * Field circus4.
 	 */
-	private static int circus4 = 32445;
+	private static final int circus4 = 32445;
 	/**
 	 * Field circus5.
 	 */
-	private static int circus5 = 32446;
+	private static final int circus5 = 32446;
 	/**
 	 * Field individual1.
 	 */
-	private static int individual1 = 32439;
+	private static final int individual1 = 32439;
 	/**
 	 * Field individual2.
 	 */
-	private static int individual2 = 32440;
+	private static final int individual2 = 32440;
 	/**
 	 * Field individual3.
 	 */
-	private static int individual3 = 32441;
+	private static final int individual3 = 32441;
 	/**
 	 * Field showstuff1.
 	 */
-	private static int showstuff1 = 32424;
+	private static final int showstuff1 = 32424;
 	/**
 	 * Field showstuff2.
 	 */
-	private static int showstuff2 = 32425;
+	private static final int showstuff2 = 32425;
 	/**
 	 * Field showstuff3.
 	 */
-	private static int showstuff3 = 32426;
+	private static final int showstuff3 = 32426;
 	/**
 	 * Field showstuff4.
 	 */
-	private static int showstuff4 = 32427;
+	private static final int showstuff4 = 32427;
 	/**
 	 * Field showstuff5.
 	 */
-	private static int showstuff5 = 32428;
+	private static final int showstuff5 = 32428;
 	/**
 	 * Field WALKS.
 	 */
-	private static Map<String, Walk> WALKS = new HashMap<>();
+	private static final Map<String, Walk> WALKS = new HashMap<>();
 	static
 	{
 		WALKS.put("npc1_1", new Walk(-56546, -56384, -2008, "npc1_2", 1200));
@@ -202,7 +202,7 @@ public class FantasyIsle extends Functions implements ScriptFile
 	/**
 	 * Field TEXT.
 	 */
-	private static String[] TEXT = new String[]
+	private static final String[] TEXT = new String[]
 	{
 		"How come people are not here... We are about to start the show.. Hmm",
 		"Ugh, I have butterflies in my stomach.. The show starts soon...",
@@ -230,7 +230,7 @@ public class FantasyIsle extends Functions implements ScriptFile
 	/**
 	 * Field TALKS.
 	 */
-	private static Map<String, Talk> TALKS = new HashMap<>();
+	private static final Map<String, Talk> TALKS = new HashMap<>();
 	static
 	{
 		TALKS.put("1", new Talk(TEXT[1], "2", 1000));
@@ -299,7 +299,7 @@ public class FantasyIsle extends Functions implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public class StartTask extends RunnableImpl
+	public final class StartTask extends RunnableImpl
 	{
 		/**
 		 * Method runImpl.

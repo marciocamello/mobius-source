@@ -25,7 +25,7 @@ import lineage2.gameserver.model.quest.QuestState;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class QuestNotAggroMob extends DefaultAI
+public final class QuestNotAggroMob extends DefaultAI
 {
 	/**
 	 * Constructor for QuestNotAggroMob.

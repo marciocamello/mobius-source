@@ -20,7 +20,7 @@ import lineage2.gameserver.network.serverpackets.ShowXMasSeal;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Books extends SimpleItemHandler
+public final class Books extends SimpleItemHandler
 {
 	/**
 	 * Field ITEM_IDS.

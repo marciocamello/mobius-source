@@ -39,7 +39,7 @@ public class CharacterGroupReuseDAO
 	/**
 	 * Field _instance.
 	 */
-	private static CharacterGroupReuseDAO _instance = new CharacterGroupReuseDAO();
+	private static final CharacterGroupReuseDAO _instance = new CharacterGroupReuseDAO();
 	/**
 	 * Field DELETE_SQL_QUERY. (value is ""DELETE FROM character_group_reuse WHERE object_id=?"")
 	 */

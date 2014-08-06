@@ -19,7 +19,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Morgan extends MorganSubAI
+public final class Morgan extends MorganSubAI
 {
 	/**
 	 * Constructor for Morgan.

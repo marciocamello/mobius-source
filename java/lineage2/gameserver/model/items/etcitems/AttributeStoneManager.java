@@ -40,7 +40,7 @@ public class AttributeStoneManager
 	/**
 	 * Field _stones.
 	 */
-	private static TIntObjectHashMap<AttributeStoneInfo> _stones = new TIntObjectHashMap<>();
+	private static final TIntObjectHashMap<AttributeStoneInfo> _stones = new TIntObjectHashMap<>();
 	
 	/**
 	 * Method load.

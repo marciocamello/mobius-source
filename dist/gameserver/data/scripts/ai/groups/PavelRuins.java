@@ -27,7 +27,7 @@ import lineage2.gameserver.utils.PositionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class PavelRuins extends Fighter
+public final class PavelRuins extends Fighter
 {
 	/**
 	 * Field PAVEL_SAFETY_DEVICE. (value is 18917)

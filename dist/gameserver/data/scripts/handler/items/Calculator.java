@@ -20,7 +20,7 @@ import lineage2.gameserver.network.serverpackets.ShowCalc;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Calculator extends ScriptItemHandler
+public final class Calculator extends ScriptItemHandler
 {
 	/**
 	 * Field CALCULATOR. (value is 4393)

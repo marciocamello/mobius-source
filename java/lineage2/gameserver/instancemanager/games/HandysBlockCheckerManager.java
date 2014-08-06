@@ -47,7 +47,7 @@ public final class HandysBlockCheckerManager
 	/**
 	 * Field _arenaVotes.
 	 */
-	private static TIntIntHashMap _arenaVotes = new TIntIntHashMap();
+	private static final TIntIntHashMap _arenaVotes = new TIntIntHashMap();
 	/**
 	 * Field _arenaStatus.
 	 */
@@ -55,7 +55,7 @@ public final class HandysBlockCheckerManager
 	/**
 	 * Field _registrationPenalty.
 	 */
-	static List<Integer> _registrationPenalty = new ArrayList<>();
+	static final List<Integer> _registrationPenalty = new ArrayList<>();
 	
 	/**
 	 * Method getArenaVotes.
@@ -355,7 +355,7 @@ public final class HandysBlockCheckerManager
 		/**
 		 * Field _instance.
 		 */
-		static HandysBlockCheckerManager _instance = new HandysBlockCheckerManager();
+		static final HandysBlockCheckerManager _instance = new HandysBlockCheckerManager();
 	}
 	
 	/**

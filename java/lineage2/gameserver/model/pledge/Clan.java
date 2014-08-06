@@ -136,15 +136,15 @@ public class Clan implements Iterable<UnitMember>
 	/**
 	 * Field EXPELLED_MEMBER_PENALTY.
 	 */
-	public static long EXPELLED_MEMBER_PENALTY = 24 * 60 * 60 * 1000L;
+	public static final long EXPELLED_MEMBER_PENALTY = 24 * 60 * 60 * 1000L;
 	/**
 	 * Field LEAVED_ALLY_PENALTY.
 	 */
-	public static long LEAVED_ALLY_PENALTY = 24 * 60 * 60 * 1000L;
+	public static final long LEAVED_ALLY_PENALTY = 24 * 60 * 60 * 1000L;
 	/**
 	 * Field DISSOLVED_ALLY_PENALTY.
 	 */
-	public static long DISSOLVED_ALLY_PENALTY = 24 * 60 * 60 * 1000L;
+	public static final long DISSOLVED_ALLY_PENALTY = 24 * 60 * 60 * 1000L;
 	/**
 	 * Field _warehouse.
 	 */
@@ -168,15 +168,15 @@ public class Clan implements Iterable<UnitMember>
 	/**
 	 * Field _skills.
 	 */
-	protected IntObjectMap<Skill> _skills = new CTreeIntObjectMap<>();
+	protected final IntObjectMap<Skill> _skills = new CTreeIntObjectMap<>();
 	/**
 	 * Field _privs.
 	 */
-	protected IntObjectMap<RankPrivs> _privs = new CTreeIntObjectMap<>();
+	protected final IntObjectMap<RankPrivs> _privs = new CTreeIntObjectMap<>();
 	/**
 	 * Field _subUnits.
 	 */
-	protected IntObjectMap<SubUnit> _subUnits = new CTreeIntObjectMap<>();
+	protected final IntObjectMap<SubUnit> _subUnits = new CTreeIntObjectMap<>();
 	/**
 	 * Field _clanLeaderSkill.
 	 */

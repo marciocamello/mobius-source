@@ -14,7 +14,6 @@ package lineage2.commons.threading;
 
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -140,23 +139,19 @@ public final class RunnableStatsManager
 		{
 			lock.unlock();
 		}
-		Collections.sort(result, new Comparator<ClassStat>()
+		Collections.sort(result, (c1, c2) ->
 		{
-			@Override
-			public int compare(ClassStat c1, ClassStat c2)
+			if (c1.maxTime < c2.maxTime)
 			{
-				if (c1.maxTime < c2.maxTime)
-				{
-					return 1;
-				}
-				
-				if (c1.maxTime == c2.maxTime)
-				{
-					return 0;
-				}
-				
-				return -1;
+				return 1;
 			}
+			
+			if (c1.maxTime == c2.maxTime)
+			{
+				return 0;
+			}
+			
+			return -1;
 		});
 		return result;
 	}

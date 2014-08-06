@@ -28,7 +28,7 @@ import lineage2.gameserver.tables.SkillTable;
 /**
  * @author cruel
  */
-public class SpezionBoss extends Fighter
+public final class SpezionBoss extends Fighter
 {
 	private ScheduledFuture<?> DeadTask;
 	
@@ -71,7 +71,7 @@ public class SpezionBoss extends Fighter
 		super.onEvtDead(killer);
 	}
 	
-	public class SpawnMinion extends RunnableImpl
+	public final class SpawnMinion extends RunnableImpl
 	{
 		@Override
 		public void runImpl()

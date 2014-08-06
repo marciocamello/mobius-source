@@ -20,7 +20,7 @@ import lineage2.gameserver.utils.ItemFunctions;
 /**
  * @author vegax
  */
-public class MentoringInstance extends NpcInstance
+public final class MentoringInstance extends NpcInstance
 {
 	private static final long serialVersionUID = 907679679965868534L;
 	

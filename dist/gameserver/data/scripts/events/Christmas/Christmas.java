@@ -36,7 +36,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Christmas extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
+public final class Christmas extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
 	/**
 	 * Field EVENT_MANAGER_ID.

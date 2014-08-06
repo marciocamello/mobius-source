@@ -25,7 +25,7 @@ import quests._024_InhabitantsOfTheForestOfTheDead;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Quest024Fighter extends Fighter
+public final class Quest024Fighter extends Fighter
 {
 	/**
 	 * Constructor for Quest024Fighter.

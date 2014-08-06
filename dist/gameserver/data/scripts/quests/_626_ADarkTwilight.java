@@ -21,7 +21,7 @@ import lineage2.gameserver.scripts.ScriptFile;
 public class _626_ADarkTwilight extends Quest implements ScriptFile
 {
 	private static final int Hierarch = 31517;
-	private static int BloodOfSaint = 7169;
+	private static final int BloodOfSaint = 7169;
 	
 	@Override
 	public void onLoad()

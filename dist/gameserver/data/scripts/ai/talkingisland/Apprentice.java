@@ -21,7 +21,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Apprentice extends DefaultAI
+public final class Apprentice extends DefaultAI
 {
 	/**
 	 * Constructor for Apprentice.

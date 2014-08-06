@@ -34,7 +34,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class NewbieGuideInstance extends NpcInstance
+public final class NewbieGuideInstance extends NpcInstance
 {
 	/**
 	 *

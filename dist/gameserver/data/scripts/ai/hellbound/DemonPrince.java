@@ -23,7 +23,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class DemonPrince extends Fighter
+public final class DemonPrince extends Fighter
 {
 	/**
 	 * Field ULTIMATE_DEFENSE_SKILL_ID. (value is 5044)

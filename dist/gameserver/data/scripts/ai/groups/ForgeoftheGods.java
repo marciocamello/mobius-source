@@ -30,7 +30,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ForgeoftheGods extends Fighter
+public final class ForgeoftheGods extends Fighter
 {
 	/**
 	 * Field RANDOM_SPAWN_MOBS.

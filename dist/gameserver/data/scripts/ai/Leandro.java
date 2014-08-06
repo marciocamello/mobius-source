@@ -23,7 +23,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Leandro extends DefaultAI
+public final class Leandro extends DefaultAI
 {
 	/**
 	 * Field points.

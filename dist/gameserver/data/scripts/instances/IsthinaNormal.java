@@ -38,7 +38,7 @@ import lineage2.gameserver.utils.Location;
 /**
  * @author KilRoy
  */
-public class IsthinaNormal extends Reflection
+public final class IsthinaNormal extends Reflection
 {
 	public int ballistaSeconds = 30;
 	public long ballistaDamage = 0;
@@ -72,7 +72,7 @@ public class IsthinaNormal extends Reflection
 		return !((raidplayers < getInstancedZone().getMinParty()) || _startLaunched);
 	}
 	
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
@@ -130,7 +130,7 @@ public class IsthinaNormal extends Reflection
 		}
 	}
 	
-	public class CurrentHpListener implements OnCurrentHpDamageListener
+	public final class CurrentHpListener implements OnCurrentHpDamageListener
 	{
 		@Override
 		public void onCurrentHpDamage(final Creature actor, final double damage, final Creature attacker, Skill skill)
@@ -143,57 +143,53 @@ public class IsthinaNormal extends Reflection
 				}
 				
 				ballistaDamage += damage;
-				ThreadPoolManager.getInstance().schedule(new Runnable()
+				ThreadPoolManager.getInstance().schedule(() ->
 				{
-					@Override
-					public void run()
+					if (actor.isDead())
 					{
-						if (actor.isDead())
-						{
-							return;
-						}
-						
-						if (!_lockedTurn && (ballistaSeconds <= 0))
-						{
-							_lockedTurn = true;
-							
-							if (ballistaDamage < actor.getMaxHp())
-							{
-								double damagePercent = ballistaDamage / 4660000.0;
-								int rewardId = 0;
-								
-								if (damagePercent > 0.5)
-								{
-									rewardId = 30374;
-								}
-								else if (damagePercent > 0.15)
-								{
-									rewardId = 30371;
-								}
-								
-								Functions.addItem(attacker.getPlayer(), rewardId, 1);
-								ThreadPoolManager.getInstance().schedule(new IsthinaDeathFinalA(), 10);
-								actor.removeListener(_currentHpListenerBallista);
-								WorldStatisticsManager.getInstance().updateStat(attacker.getPlayer(), CategoryType.EPIC_BOSS_KILLS_29195, 1);
-							}
-							else
-							{
-								ThreadPoolManager.getInstance().schedule(new IsthinaDeathFinalB(), 10);
-								actor.removeListener(_currentHpListenerBallista);
-								WorldStatisticsManager.getInstance().updateStat(attacker.getPlayer(), CategoryType.EPIC_BOSS_KILLS_29195, 1);
-							}
-						}
-						
-						int progress = (int) Math.min(6000, (ballistaDamage / 4660000) * 6000);
-						progress -= progress % 60;
-						
-						for (Player player : getPlayers())
-						{
-							player.sendPacket(new ExSendUIEvent(player, 2, ballistaSeconds, progress, 122520, NpcString.NONE2));
-						}
-						
-						ballistaSeconds -= 1;
+						return;
 					}
+					
+					if (!_lockedTurn && (ballistaSeconds <= 0))
+					{
+						_lockedTurn = true;
+						
+						if (ballistaDamage < actor.getMaxHp())
+						{
+							double damagePercent = ballistaDamage / 4660000.0;
+							int rewardId = 0;
+							
+							if (damagePercent > 0.5)
+							{
+								rewardId = 30374;
+							}
+							else if (damagePercent > 0.15)
+							{
+								rewardId = 30371;
+							}
+							
+							Functions.addItem(attacker.getPlayer(), rewardId, 1);
+							ThreadPoolManager.getInstance().schedule(new IsthinaDeathFinalA(), 10);
+							actor.removeListener(_currentHpListenerBallista);
+							WorldStatisticsManager.getInstance().updateStat(attacker.getPlayer(), CategoryType.EPIC_BOSS_KILLS_29195, 1);
+						}
+						else
+						{
+							ThreadPoolManager.getInstance().schedule(new IsthinaDeathFinalB(), 10);
+							actor.removeListener(_currentHpListenerBallista);
+							WorldStatisticsManager.getInstance().updateStat(attacker.getPlayer(), CategoryType.EPIC_BOSS_KILLS_29195, 1);
+						}
+					}
+					
+					int progress = (int) Math.min(6000, (ballistaDamage / 4660000) * 6000);
+					progress -= progress % 60;
+					
+					for (Player player : getPlayers())
+					{
+						player.sendPacket(new ExSendUIEvent(player, 2, ballistaSeconds, progress, 122520, NpcString.NONE2));
+					}
+					
+					ballistaSeconds -= 1;
 				}, 1000);
 			}
 		}

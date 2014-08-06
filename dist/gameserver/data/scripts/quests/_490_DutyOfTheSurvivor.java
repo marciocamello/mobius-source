@@ -42,8 +42,8 @@ public class _490_DutyOfTheSurvivor extends Quest implements ScriptFile
 		23172,
 		23173
 	};
-	private static int Zhelch = 34059;
-	private static int Blood = 34060;
+	private static final int Zhelch = 34059;
+	private static final int Blood = 34060;
 	
 	@Override
 	public void onLoad()

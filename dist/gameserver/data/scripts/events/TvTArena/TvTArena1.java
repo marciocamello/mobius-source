@@ -42,7 +42,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TvTArena1 extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
+public final class TvTArena1 extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
 {
 	/**
 	 * Field _log.

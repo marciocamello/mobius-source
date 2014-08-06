@@ -34,7 +34,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Darnel extends DefaultAI
+public final class Darnel extends DefaultAI
 {
 	/**
 	 * @author Mobius

@@ -19,7 +19,7 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 
-public class TeredorFirst extends DefaultAI
+public final class TeredorFirst extends DefaultAI
 {
 	private static final int SKILL_ID = 16021;
 	

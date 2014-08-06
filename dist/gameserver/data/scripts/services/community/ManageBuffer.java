@@ -42,7 +42,7 @@ import org.slf4j.LoggerFactory;
  * @author vegax
  * @version $Revision: 1.0 $ Summons Buff fix by vegax for L2JEuropa
  */
-public class ManageBuffer extends Functions implements ScriptFile, ICommunityBoardHandler
+public final class ManageBuffer extends Functions implements ScriptFile, ICommunityBoardHandler
 {
 	/**
 	 * Field _log.

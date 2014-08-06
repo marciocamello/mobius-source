@@ -29,12 +29,12 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TeredorEggs extends Fighter
+public final class TeredorEggs extends Fighter
 {
 	/**
 	 * Field eggMonsters.
 	 */
-	static int[] eggMonsters =
+	static final int[] eggMonsters =
 	{
 		18993,
 		18994

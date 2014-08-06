@@ -45,9 +45,9 @@ public class GameServer
 	 * Field _ports.
 	 */
 	private int[] _ports = new int[]
-		{
+	{
 		7777
-		};
+	};
 	/**
 	 * Field _serverType.
 	 */

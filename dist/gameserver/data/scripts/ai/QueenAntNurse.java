@@ -27,7 +27,7 @@ import npc.model.QueenAntInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class QueenAntNurse extends Priest
+public final class QueenAntNurse extends Priest
 {
 	/**
 	 * Constructor for QueenAntNurse.

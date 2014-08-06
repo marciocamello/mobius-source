@@ -30,12 +30,12 @@ import handler.items.ScriptItemHandler;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class MeleonSeed extends ScriptItemHandler
+public final class MeleonSeed extends ScriptItemHandler
 {
 	/**
 	 * @author Mobius
 	 */
-	static public class DeSpawnScheduleTimerTask extends RunnableImpl
+	static public final class DeSpawnScheduleTimerTask extends RunnableImpl
 	{
 		/**
 		 * Field spawnedPlant.

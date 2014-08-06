@@ -37,7 +37,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TheFallHarvest extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
+public final class TheFallHarvest extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
 	/**
 	 * Field _log.

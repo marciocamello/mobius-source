@@ -22,7 +22,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class EvasGiftBox extends Fighter
+public final class EvasGiftBox extends Fighter
 {
 	/**
 	 * Field KISS_OF_EVA.

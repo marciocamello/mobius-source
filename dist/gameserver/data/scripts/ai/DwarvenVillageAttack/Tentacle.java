@@ -20,7 +20,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 
 import org.apache.commons.lang3.ArrayUtils;
 
-public class Tentacle extends Fighter
+public final class Tentacle extends Fighter
 {
 	private static final int[] ATTACK_IDS =
 	{

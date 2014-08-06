@@ -24,7 +24,7 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class RollingDice extends ScriptItemHandler
+public final class RollingDice extends ScriptItemHandler
 {
 	/**
 	 * Field _itemIds.

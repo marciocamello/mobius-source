@@ -22,7 +22,7 @@ import events.SavingSnowman.SavingSnowman;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ThomasInstance extends MonsterInstance
+public final class ThomasInstance extends MonsterInstance
 {
 	/**
 	 *

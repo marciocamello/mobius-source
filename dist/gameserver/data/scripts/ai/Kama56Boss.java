@@ -31,7 +31,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Kama56Boss extends Fighter
+public final class Kama56Boss extends Fighter
 {
 	/**
 	 * Field _nextOrderTime.

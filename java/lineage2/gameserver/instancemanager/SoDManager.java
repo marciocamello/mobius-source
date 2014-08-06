@@ -45,7 +45,7 @@ public class SoDManager
 	/**
 	 * Field SOD_OPEN_TIME.
 	 */
-	private static long SOD_OPEN_TIME = 12 * 60 * 60 * 1000L;
+	private static final long SOD_OPEN_TIME = 12 * 60 * 60 * 1000L;
 	/**
 	 * Field _zone.
 	 */

@@ -40,15 +40,15 @@ public final class NaiaTowerManager
 	/**
 	 * Field _groupList.
 	 */
-	static Map<Integer, List<Player>> _groupList = new HashMap<>();
+	static final Map<Integer, List<Player>> _groupList = new HashMap<>();
 	/**
 	 * Field _roomsDone.
 	 */
-	private static Map<Integer, List<Player>> _roomsDone = new HashMap<>();
+	private static final Map<Integer, List<Player>> _roomsDone = new HashMap<>();
 	/**
 	 * Field _groupTimer.
 	 */
-	static Map<Integer, Long> _groupTimer = new HashMap<>();
+	static final Map<Integer, Long> _groupTimer = new HashMap<>();
 	/**
 	 * Field _roomMobs.
 	 */

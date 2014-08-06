@@ -45,7 +45,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class HuntersGuild extends Functions implements ScriptFile, IVoicedCommandHandler, OnDeathListener
+public final class HuntersGuild extends Functions implements ScriptFile, IVoicedCommandHandler, OnDeathListener
 {
 	/**
 	 * Field _commandList.

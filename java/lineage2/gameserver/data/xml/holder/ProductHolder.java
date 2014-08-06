@@ -43,7 +43,7 @@ public class ProductHolder
 	/**
 	 * Field _log.
 	 */
-	private static Logger _log = LoggerFactory.getLogger(ProductHolder.class.getName());
+	private static final Logger _log = LoggerFactory.getLogger(ProductHolder.class.getName());
 	/**
 	 * Field _itemsList.
 	 */

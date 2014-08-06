@@ -35,7 +35,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class FreyaEvent extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
+public final class FreyaEvent extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
 	/**
 	 * Field EVENT_MANAGER_ID. (value is 13296)

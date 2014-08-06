@@ -21,7 +21,7 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SealDevice extends Fighter
+public final class SealDevice extends Fighter
 {
 	/**
 	 * Field _firstAttack.

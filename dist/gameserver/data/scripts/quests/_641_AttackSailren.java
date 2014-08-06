@@ -19,15 +19,15 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _641_AttackSailren extends Quest implements ScriptFile
 {
-	private static int STATUE = 32109;
-	private static int VEL1 = 22196;
-	private static int VEL2 = 22197;
-	private static int VEL3 = 22198;
-	private static int VEL4 = 22218;
-	private static int VEL5 = 22223;
-	private static int PTE = 22199;
-	private static int FRAGMENTS = 8782;
-	private static int GAZKH = 8784;
+	private static final int STATUE = 32109;
+	private static final int VEL1 = 22196;
+	private static final int VEL2 = 22197;
+	private static final int VEL3 = 22198;
+	private static final int VEL4 = 22218;
+	private static final int VEL5 = 22223;
+	private static final int PTE = 22199;
+	private static final int FRAGMENTS = 8782;
+	private static final int GAZKH = 8784;
 	
 	@Override
 	public void onLoad()

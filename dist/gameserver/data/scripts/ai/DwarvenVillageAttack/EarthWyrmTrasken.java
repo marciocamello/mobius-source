@@ -19,7 +19,7 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 
-public class EarthWyrmTrasken extends DefaultAI
+public final class EarthWyrmTrasken extends DefaultAI
 {
 	private static final int RHAND_ID = 15280;
 	private static final int ENRAGED_SKILL_ID = 14505;

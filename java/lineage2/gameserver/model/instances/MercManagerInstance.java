@@ -32,15 +32,15 @@ public final class MercManagerInstance extends MerchantInstance
 	/**
 	 * Field COND_ALL_FALSE.
 	 */
-	private static int COND_ALL_FALSE = 0;
+	private static final int COND_ALL_FALSE = 0;
 	/**
 	 * Field COND_BUSY_BECAUSE_OF_SIEGE.
 	 */
-	private static int COND_BUSY_BECAUSE_OF_SIEGE = 1;
+	private static final int COND_BUSY_BECAUSE_OF_SIEGE = 1;
 	/**
 	 * Field COND_OWNER.
 	 */
-	private static int COND_OWNER = 2;
+	private static final int COND_OWNER = 2;
 	
 	/**
 	 * Constructor for MercManagerInstance.

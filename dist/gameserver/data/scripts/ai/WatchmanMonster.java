@@ -25,7 +25,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class WatchmanMonster extends Fighter
+public final class WatchmanMonster extends Fighter
 {
 	/**
 	 * Field _lastSearch.

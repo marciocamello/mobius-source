@@ -31,7 +31,7 @@ import lineage2.gameserver.utils.Location;
 
 import org.apache.commons.lang3.ArrayUtils;
 
-public class SiegeGolem extends DefaultAI
+public final class SiegeGolem extends DefaultAI
 {
 	private static final int SKILL_ID = 16024;
 	private static final int[] ATTACK_IDS =

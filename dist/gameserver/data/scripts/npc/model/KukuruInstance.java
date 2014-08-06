@@ -23,7 +23,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class KukuruInstance extends NpcInstance
+public final class KukuruInstance extends NpcInstance
 {
 	/**
 	 * Field serialVersionUID. (value is 2769307524084003609)

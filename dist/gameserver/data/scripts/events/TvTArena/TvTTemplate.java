@@ -50,27 +50,27 @@ public abstract class TvTTemplate extends Functions
 	/**
 	 * Field ITEM_ID.
 	 */
-	private static int ITEM_ID = 4357;
+	private static final int ITEM_ID = 4357;
 	/**
 	 * Field ITEM_NAME.
 	 */
-	private static String ITEM_NAME = "Silver Shilen";
+	private static final String ITEM_NAME = "Silver Shilen";
 	/**
 	 * Field LENGTH_TEAM.
 	 */
-	private static int LENGTH_TEAM = 12;
+	private static final int LENGTH_TEAM = 12;
 	/**
 	 * Field ALLOW_BUFFS.
 	 */
-	private static boolean ALLOW_BUFFS = false;
+	private static final boolean ALLOW_BUFFS = false;
 	/**
 	 * Field ALLOW_CLAN_SKILL.
 	 */
-	private static boolean ALLOW_CLAN_SKILL = true;
+	private static final boolean ALLOW_CLAN_SKILL = true;
 	/**
 	 * Field ALLOW_HERO_SKILL.
 	 */
-	private static boolean ALLOW_HERO_SKILL = false;
+	private static final boolean ALLOW_HERO_SKILL = false;
 	/**
 	 * Field _managerId.
 	 */
@@ -94,7 +94,7 @@ public abstract class TvTTemplate extends Functions
 	/**
 	 * Field _CharacterFound.
 	 */
-	protected int _CharacterFound = 0;
+	protected final int _CharacterFound = 0;
 	/**
 	 * Field _price.
 	 */
@@ -1262,7 +1262,7 @@ public abstract class TvTTemplate extends Functions
 	
 	/**
 	 */
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		/**
 		 * Method onZoneEnter.
@@ -1306,7 +1306,7 @@ public abstract class TvTTemplate extends Functions
 	
 	/**
 	 */
-	public class TeleportTask extends RunnableImpl
+	public final class TeleportTask extends RunnableImpl
 	{
 		/**
 		 * Field loc.

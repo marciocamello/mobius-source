@@ -30,14 +30,14 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import gnu.trove.map.hash.TIntIntHashMap;
 
-public class PowerfulDeviceInstance extends NpcInstance
+public final class PowerfulDeviceInstance extends NpcInstance
 {
 	private static final long serialVersionUID = 8836489477695730511L;
-	private static TIntIntHashMap _NPC = new TIntIntHashMap(34);
-	private static TIntIntHashMap _DESTINYCHANGECLASSES = new TIntIntHashMap(35);
-	private static HashMap<Integer, String> _NAMECLASSES = new HashMap<>();
+	private static final TIntIntHashMap _NPC = new TIntIntHashMap(34);
+	private static final TIntIntHashMap _DESTINYCHANGECLASSES = new TIntIntHashMap(35);
+	private static final HashMap<Integer, String> _NAMECLASSES = new HashMap<>();
 	private final int sp = Rnd.get(10000000);
-	int NextClassId = 0;
+	final int NextClassId = 0;
 	
 	public PowerfulDeviceInstance(int objectId, NpcTemplate template)
 	{

@@ -28,7 +28,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GuardianWaterspirit extends Fighter
+public final class GuardianWaterspirit extends Fighter
 {
 	/**
 	 * Field mob.

@@ -58,7 +58,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SavingSnowman extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
+public final class SavingSnowman extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
 	/**
 	 * Field _log.
@@ -67,7 +67,7 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 	/**
 	 * Field _spawns.
 	 */
-	static List<SimpleSpawner> _spawns = new ArrayList<>();
+	static final List<SimpleSpawner> _spawns = new ArrayList<>();
 	/**
 	 * Field _snowmanShoutTask.
 	 */
@@ -1106,7 +1106,7 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 	
 	/**
 	 */
-	public class SayTask extends RunnableImpl
+	public final class SayTask extends RunnableImpl
 	{
 		/**
 		 * Method runImpl.
@@ -1131,7 +1131,7 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 	
 	/**
 	 */
-	public class ShoutTask extends RunnableImpl
+	public final class ShoutTask extends RunnableImpl
 	{
 		/**
 		 * Method runImpl.
@@ -1150,7 +1150,7 @@ public class SavingSnowman extends Functions implements ScriptFile, OnDeathListe
 	
 	/**
 	 */
-	public class SaveTask extends RunnableImpl
+	public final class SaveTask extends RunnableImpl
 	{
 		/**
 		 * Method runImpl.

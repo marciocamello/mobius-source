@@ -30,7 +30,7 @@ import lineage2.gameserver.utils.WarehouseFunctions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class WarehouseInstance extends NpcInstance
+public final class WarehouseInstance extends NpcInstance
 {
 	/**
 	 *

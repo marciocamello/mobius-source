@@ -20,19 +20,19 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _032_AnObviousLie extends Quest implements ScriptFile
 {
-	int MAXIMILIAN = 30120;
-	int GENTLER = 30094;
-	int MIKI_THE_CAT = 31706;
-	int ALLIGATOR = 20135;
-	int CHANCE_FOR_DROP = 30;
-	int MAP = 7165;
-	int MEDICINAL_HERB = 7166;
-	int SPIRIT_ORES = 3031;
-	int THREAD = 1868;
-	int SUEDE = 1866;
-	int RACCOON_EAR = 7680;
-	int CAT_EAR = 6843;
-	int RABBIT_EAR = 7683;
+	final int MAXIMILIAN = 30120;
+	final int GENTLER = 30094;
+	final int MIKI_THE_CAT = 31706;
+	final int ALLIGATOR = 20135;
+	final int CHANCE_FOR_DROP = 30;
+	final int MAP = 7165;
+	final int MEDICINAL_HERB = 7166;
+	final int SPIRIT_ORES = 3031;
+	final int THREAD = 1868;
+	final int SUEDE = 1866;
+	final int RACCOON_EAR = 7680;
+	final int CAT_EAR = 6843;
+	final int RABBIT_EAR = 7683;
 	
 	@Override
 	public void onLoad()

@@ -24,8 +24,8 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _382_KailsMagicCoin extends Quest implements ScriptFile
 {
-	private static int ROYAL_MEMBERSHIP = 5898;
-	private static int VERGARA = 30687;
+	private static final int ROYAL_MEMBERSHIP = 5898;
+	private static final int VERGARA = 30687;
 	private static final Map<Integer, int[]> MOBS = new HashMap<>();
 	static
 	{

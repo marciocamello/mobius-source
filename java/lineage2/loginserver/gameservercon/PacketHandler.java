@@ -40,7 +40,7 @@ public class PacketHandler
 	/**
 	 * Field _log.
 	 */
-	private static Logger _log = LoggerFactory.getLogger(PacketHandler.class);
+	private static final Logger _log = LoggerFactory.getLogger(PacketHandler.class);
 	
 	/**
 	 * Method handlePacket.

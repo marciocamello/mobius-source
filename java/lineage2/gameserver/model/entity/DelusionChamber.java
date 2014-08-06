@@ -60,7 +60,7 @@ public class DelusionChamber extends Reflection
 	/**
 	 * Field _completedRooms.
 	 */
-	protected List<Integer> _completedRooms = new ArrayList<>();
+	protected final List<Integer> _completedRooms = new ArrayList<>();
 	/**
 	 * Field jumps_current.
 	 */

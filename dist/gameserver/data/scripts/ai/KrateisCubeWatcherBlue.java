@@ -30,7 +30,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class KrateisCubeWatcherBlue extends DefaultAI
+public final class KrateisCubeWatcherBlue extends DefaultAI
 {
 	/**
 	 * Field RESTORE_CHANCE. (value is 60)

@@ -44,7 +44,7 @@ import bosses.EpicBossState.State;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SailrenManager extends Functions implements ScriptFile, OnDeathListener
+public final class SailrenManager extends Functions implements ScriptFile, OnDeathListener
 {
 	/**
 	 * Field _log.

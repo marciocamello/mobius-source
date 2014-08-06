@@ -26,7 +26,7 @@ import lineage2.gameserver.tables.PetDataTable.L2Pet;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ibkookaburra extends Functions
+public final class ibkookaburra extends Functions
 {
 	/**
 	 * Field BABY_KOOKABURRA.

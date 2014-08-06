@@ -45,7 +45,7 @@ import org.apache.commons.lang3.StringUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class AuctioneerInstance extends NpcInstance
+public final class AuctioneerInstance extends NpcInstance
 {
 	/**
 	 *

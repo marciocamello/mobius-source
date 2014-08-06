@@ -30,7 +30,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class MasterOfEnchanting extends Functions implements ScriptFile, OnPlayerEnterListener
+public final class MasterOfEnchanting extends Functions implements ScriptFile, OnPlayerEnterListener
 {
 	/**
 	 * Field _log.

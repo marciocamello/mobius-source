@@ -72,40 +72,40 @@ public abstract class MatchingRoom implements PlayerGroup
 	/**
 	 * Field PARTY_MATCHING.
 	 */
-	public static int PARTY_MATCHING = 0;
+	public static final int PARTY_MATCHING = 0;
 	/**
 	 * Field CC_MATCHING.
 	 */
-	public static int CC_MATCHING = 1;
+	public static final int CC_MATCHING = 1;
 	
 	/**
 	 * Field WAIT_PLAYER.
 	 */
-	public static int WAIT_PLAYER = 0;
+	public static final int WAIT_PLAYER = 0;
 	/**
 	 * Field ROOM_MASTER.
 	 */
-	public static int ROOM_MASTER = 1;
+	public static final int ROOM_MASTER = 1;
 	/**
 	 * Field PARTY_MEMBER.
 	 */
-	public static int PARTY_MEMBER = 2;
+	public static final int PARTY_MEMBER = 2;
 	/**
 	 * Field UNION_LEADER.
 	 */
-	public static int UNION_LEADER = 3;
+	public static final int UNION_LEADER = 3;
 	/**
 	 * Field UNION_PARTY.
 	 */
-	public static int UNION_PARTY = 4;
+	public static final int UNION_PARTY = 4;
 	/**
 	 * Field WAIT_PARTY.
 	 */
-	public static int WAIT_PARTY = 5;
+	public static final int WAIT_PARTY = 5;
 	/**
 	 * Field WAIT_NORMAL.
 	 */
-	public static int WAIT_NORMAL = 6;
+	public static final int WAIT_NORMAL = 6;
 	
 	/**
 	 * Field _id.
@@ -143,7 +143,7 @@ public abstract class MatchingRoom implements PlayerGroup
 	/**
 	 * Field _members.
 	 */
-	protected Set<Player> _members = new CopyOnWriteArraySet<>();
+	protected final Set<Player> _members = new CopyOnWriteArraySet<>();
 	
 	/**
 	 * Constructor for MatchingRoom.

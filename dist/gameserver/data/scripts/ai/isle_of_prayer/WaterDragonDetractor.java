@@ -22,7 +22,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class WaterDragonDetractor extends Fighter
+public final class WaterDragonDetractor extends Fighter
 {
 	/**
 	 * Field SPIRIT_OF_LAKE. (value is 9689)

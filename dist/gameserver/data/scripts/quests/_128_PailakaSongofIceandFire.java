@@ -27,49 +27,49 @@ import org.apache.commons.lang3.ArrayUtils;
 public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 {
 	// NPC
-	private static int ADLER = 32497;
-	private static int ADLER2 = 32510;
-	private static int SINAI = 32500;
-	private static int TINSPECTOR = 32507;
+	private static final int ADLER = 32497;
+	private static final int ADLER2 = 32510;
+	private static final int SINAI = 32500;
+	private static final int TINSPECTOR = 32507;
 	
 	// BOSS
-	private static int HILLAS = 18610;
-	private static int PAPION = 18609;
-	private static int GARGOS = 18607;
-	private static int KINSUS = 18608;
-	private static int ADIANTUM = 18620;
+	private static final int HILLAS = 18610;
+	private static final int PAPION = 18609;
+	private static final int GARGOS = 18607;
+	private static final int KINSUS = 18608;
+	private static final int ADIANTUM = 18620;
 	
 	// MOBS
-	private static int Bloom = 18616;
-	private static int CrystalWaterBottle = 32492;
-	private static int BurningBrazier = 32493;
+	private static final int Bloom = 18616;
+	private static final int CrystalWaterBottle = 32492;
+	private static final int BurningBrazier = 32493;
 	
 	// ITEMS
-	private static int PailakaInstantShield = 13032;
-	private static int QuickHealingPotion = 13033;
-	private static int FireAttributeEnhancer = 13040;
-	private static int WaterAttributeEnhancer = 13041;
-	private static int SpritesSword = 13034;
-	private static int EnhancedSpritesSword = 13035;
-	private static int SwordofIceandFire = 13036;
-	private static int EssenceofWater = 13038;
-	private static int EssenceofFire = 13039;
+	private static final int PailakaInstantShield = 13032;
+	private static final int QuickHealingPotion = 13033;
+	private static final int FireAttributeEnhancer = 13040;
+	private static final int WaterAttributeEnhancer = 13041;
+	private static final int SpritesSword = 13034;
+	private static final int EnhancedSpritesSword = 13035;
+	private static final int SwordofIceandFire = 13036;
+	private static final int EssenceofWater = 13038;
+	private static final int EssenceofFire = 13039;
 	
-	private static int TempleBookofSecrets1 = 13130;
-	private static int TempleBookofSecrets2 = 13131;
-	private static int TempleBookofSecrets3 = 13132;
-	private static int TempleBookofSecrets4 = 13133;
-	private static int TempleBookofSecrets5 = 13134;
-	private static int TempleBookofSecrets6 = 13135;
-	private static int TempleBookofSecrets7 = 13136;
+	private static final int TempleBookofSecrets1 = 13130;
+	private static final int TempleBookofSecrets2 = 13131;
+	private static final int TempleBookofSecrets3 = 13132;
+	private static final int TempleBookofSecrets4 = 13133;
+	private static final int TempleBookofSecrets5 = 13134;
+	private static final int TempleBookofSecrets6 = 13135;
+	private static final int TempleBookofSecrets7 = 13136;
 	
 	// REWARDS
-	private static int PailakaRing = 13294;
-	private static int PailakaEarring = 13293;
-	private static int ScrollofEscape = 736;
-	private static int Adena = 57;
+	private static final int PailakaRing = 13294;
+	private static final int PailakaEarring = 13293;
+	private static final int ScrollofEscape = 736;
+	private static final int Adena = 57;
 	
-	private static int[] MOBS = new int[]
+	private static final int[] MOBS = new int[]
 	{
 		18611,
 		18612,
@@ -77,13 +77,13 @@ public class _128_PailakaSongofIceandFire extends Quest implements ScriptFile
 		18614,
 		18615
 	};
-	private static int[] HPHERBS = new int[]
+	private static final int[] HPHERBS = new int[]
 	{
 		8600,
 		8601,
 		8602
 	};
-	private static int[] MPHERBS = new int[]
+	private static final int[] MPHERBS = new int[]
 	{
 		8603,
 		8604,

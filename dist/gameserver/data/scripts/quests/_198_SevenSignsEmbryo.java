@@ -26,15 +26,15 @@ import lineage2.gameserver.utils.ReflectionUtils;
 
 public class _198_SevenSignsEmbryo extends Quest implements ScriptFile
 {
-	private static int Wood = 32593;
-	private static int Franz = 32597;
-	private static int Jaina = 32582;
-	private static int ShilensEvilThoughtsCapt = 27346;
-	private static int PieceOfDoubt = 14355;
-	private static int DawnsBracelet = 15312;
-	private static int Adena = 57;
+	private static final int Wood = 32593;
+	private static final int Franz = 32597;
+	private static final int Jaina = 32582;
+	private static final int ShilensEvilThoughtsCapt = 27346;
+	private static final int PieceOfDoubt = 14355;
+	private static final int DawnsBracelet = 15312;
+	private static final int Adena = 57;
 	private static final int izId = 113;
-	Location setcloc = new Location(-23734, -9184, -5384, 0);
+	final Location setcloc = new Location(-23734, -9184, -5384, 0);
 	
 	public _198_SevenSignsEmbryo()
 	{

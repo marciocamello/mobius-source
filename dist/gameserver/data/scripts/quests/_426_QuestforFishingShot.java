@@ -22,8 +22,8 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _426_QuestforFishingShot extends Quest implements ScriptFile
 {
-	private static int SWEET_FLUID = 7586;
-	private static int[] MOBS =
+	private static final int SWEET_FLUID = 7586;
+	private static final int[] MOBS =
 	{
 		20005,
 		20013,
@@ -255,7 +255,7 @@ public class _426_QuestforFishingShot extends Quest implements ScriptFile
 		21543,
 		21544
 	};
-	private static int[] HMOBS =
+	private static final int[] HMOBS =
 	{
 		20651,
 		20652,

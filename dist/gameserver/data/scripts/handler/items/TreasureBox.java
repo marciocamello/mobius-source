@@ -26,7 +26,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @date 02.10.2012 15:54 =================================================== 32727 A Treasure Box - Double-click to acquire at random a hair Accessory Pack, pendant, box, enchant scroll box, and elixir box. =================================================== 33477 Hero's Treasure Box - Box
  *       containing 1 of various R-Grade items (Elixirs, Enchant Scrolls, etc.) ===================================================
  */
-public class TreasureBox extends SimpleItemHandler
+public final class TreasureBox extends SimpleItemHandler
 {
 	private static final int[] ITEM_IDS = new int[]
 	{

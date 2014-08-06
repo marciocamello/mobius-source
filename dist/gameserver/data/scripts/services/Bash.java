@@ -43,7 +43,7 @@ import org.w3c.dom.Node;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
+public final class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 {
 	/**
 	 * Field _log.
@@ -64,23 +64,23 @@ public class Bash extends Functions implements IAdminCommandHandler, ScriptFile
 	/**
 	 * Field wrongPage.
 	 */
-	private static String wrongPage = "scripts/services/Bash-wrongPage.htm";
+	private static final String wrongPage = "scripts/services/Bash-wrongPage.htm";
 	/**
 	 * Field notPage.
 	 */
-	private static String notPage = "scripts/services/Bash-notPage.htm";
+	private static final String notPage = "scripts/services/Bash-notPage.htm";
 	/**
 	 * Field readPage.
 	 */
-	private static String readPage = "scripts/services/Bash-readPage.htm";
+	private static final String readPage = "scripts/services/Bash-readPage.htm";
 	/**
 	 * Field xmlData.
 	 */
-	private static String xmlData = Config.DATAPACK_ROOT + "/data/bash.xml";
+	private static final String xmlData = Config.DATAPACK_ROOT + "/data/bash.xml";
 	/**
 	 * Field quotes.
 	 */
-	private static List<String> quotes = new ArrayList<>();
+	private static final List<String> quotes = new ArrayList<>();
 	
 	/**
 	 * Method useAdminCommand.

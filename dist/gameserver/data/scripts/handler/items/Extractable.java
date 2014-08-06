@@ -25,7 +25,7 @@ import lineage2.gameserver.scripts.Functions;
 
 import org.apache.commons.lang3.ArrayUtils;
 
-public class Extractable extends SimpleItemHandler
+public final class Extractable extends SimpleItemHandler
 {
 	private static final int[] ITEM_IDS = new int[]
 	{

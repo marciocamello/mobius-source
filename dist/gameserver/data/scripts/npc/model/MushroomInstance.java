@@ -30,7 +30,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class MushroomInstance extends MonsterInstance
+public final class MushroomInstance extends MonsterInstance
 {
 	/**
 	 *

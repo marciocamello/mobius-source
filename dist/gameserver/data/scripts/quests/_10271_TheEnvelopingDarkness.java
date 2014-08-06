@@ -20,11 +20,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _10271_TheEnvelopingDarkness extends Quest implements ScriptFile
 {
-	private static int Orbyu = 32560;
-	private static int El = 32556;
-	private static int MedibalsCorpse = 32528;
-	private static int InspectorMedibalsDocument = 13852;
-	private static int CC_MINIMUM = 36;
+	private static final int Orbyu = 32560;
+	private static final int El = 32556;
+	private static final int MedibalsCorpse = 32528;
+	private static final int InspectorMedibalsDocument = 13852;
+	private static final int CC_MINIMUM = 36;
 	
 	@Override
 	public void onLoad()

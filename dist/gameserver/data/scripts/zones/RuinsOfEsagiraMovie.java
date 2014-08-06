@@ -24,7 +24,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class RuinsOfEsagiraMovie implements ScriptFile
+public final class RuinsOfEsagiraMovie implements ScriptFile
 {
 	/**
 	 * Field ZONE_NAME. (value is ""[roe_presentation_video]"")
@@ -80,7 +80,7 @@ public class RuinsOfEsagiraMovie implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		/**
 		 * Method onZoneEnter.

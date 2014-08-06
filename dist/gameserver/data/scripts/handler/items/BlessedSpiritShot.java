@@ -25,7 +25,7 @@ import lineage2.gameserver.templates.item.WeaponTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class BlessedSpiritShot extends ScriptItemHandler
+public final class BlessedSpiritShot extends ScriptItemHandler
 {
 	/**
 	 * Field _itemIds.

@@ -19,8 +19,8 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _121_PavelTheGiants extends Quest implements ScriptFile
 {
-	private static int NEWYEAR = 31961;
-	private static int YUMI = 32041;
+	private static final int NEWYEAR = 31961;
+	private static final int YUMI = 32041;
 	
 	@Override
 	public void onLoad()

@@ -29,7 +29,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GuardianAltar extends DefaultAI
+public final class GuardianAltar extends DefaultAI
 {
 	/**
 	 * Field DarkShamanVarangka. (value is 18808)

@@ -19,7 +19,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Soros extends SorosSubAI
+public final class Soros extends SorosSubAI
 {
 	/**
 	 * Constructor for Soros.

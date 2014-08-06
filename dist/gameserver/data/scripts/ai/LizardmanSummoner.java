@@ -23,7 +23,7 @@ import lineage2.gameserver.utils.PositionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class LizardmanSummoner extends Mystic
+public final class LizardmanSummoner extends Mystic
 {
 	/**
 	 * Field TANTA_LIZARDMAN_SCOUT.

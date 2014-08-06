@@ -484,11 +484,11 @@ public abstract class Creature extends GameObject
 	/**
 	 * Field isDead.
 	 */
-	protected AtomicBoolean isDead = new AtomicBoolean();
+	protected final AtomicBoolean isDead = new AtomicBoolean();
 	/**
 	 * Field isTeleporting.
 	 */
-	protected AtomicBoolean isTeleporting = new AtomicBoolean();
+	protected final AtomicBoolean isTeleporting = new AtomicBoolean();
 	/**
 	 * Field _skillMastery.
 	 */
@@ -740,11 +740,11 @@ public abstract class Creature extends GameObject
 	/**
 	 * Field _isKnockedDown.
 	 */
-	public boolean _isKnockedDown = false;
+	public final boolean _isKnockedDown = false;
 	/**
 	 * Field _isKnockedDown.
 	 */
-	public boolean _isAirBind = false;
+	public final boolean _isAirBind = false;
 	/**
 	 * Field _zones.
 	 */

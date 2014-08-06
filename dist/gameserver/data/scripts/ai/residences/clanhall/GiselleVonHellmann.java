@@ -30,7 +30,7 @@ import ai.residences.SiegeGuardMystic;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GiselleVonHellmann extends SiegeGuardMystic
+public final class GiselleVonHellmann extends SiegeGuardMystic
 {
 	/**
 	 * Field DAMAGE_SKILL.

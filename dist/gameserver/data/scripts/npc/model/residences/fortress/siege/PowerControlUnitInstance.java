@@ -31,7 +31,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class PowerControlUnitInstance extends NpcInstance
+public final class PowerControlUnitInstance extends NpcInstance
 {
 	/**
 	 *

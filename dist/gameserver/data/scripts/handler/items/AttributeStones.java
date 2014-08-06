@@ -23,7 +23,7 @@ import lineage2.gameserver.network.serverpackets.ExChooseInventoryAttributeItem;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class AttributeStones extends ScriptItemHandler
+public final class AttributeStones extends ScriptItemHandler
 {
 	/**
 	 * Method useItem.

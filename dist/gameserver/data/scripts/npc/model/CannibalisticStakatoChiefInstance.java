@@ -25,7 +25,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class CannibalisticStakatoChiefInstance extends RaidBossInstance
+public final class CannibalisticStakatoChiefInstance extends RaidBossInstance
 {
 	/**
 	 *

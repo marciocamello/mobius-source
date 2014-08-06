@@ -25,7 +25,7 @@ import lineage2.gameserver.tables.PetDataTable.L2Pet;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ibcougar extends Functions
+public final class ibcougar extends Functions
 {
 	/**
 	 * Field BABY_COUGAR.

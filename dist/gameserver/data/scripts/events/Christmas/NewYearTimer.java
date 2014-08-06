@@ -29,7 +29,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class NewYearTimer implements ScriptFile
+public final class NewYearTimer implements ScriptFile
 {
 	/**
 	 * Field instance.

@@ -25,7 +25,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Torocco_19198 extends Dwarvs
+public final class Torocco_19198 extends Dwarvs
 {
 	/**
 	 * Field ROGIN_ID. (value is 19193)

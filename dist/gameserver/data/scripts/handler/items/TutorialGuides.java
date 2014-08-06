@@ -20,7 +20,7 @@ import lineage2.gameserver.network.serverpackets.TutorialShowHtml;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TutorialGuides extends ScriptItemHandler
+public final class TutorialGuides extends ScriptItemHandler
 {
 	/**
 	 * Field _itemIds.

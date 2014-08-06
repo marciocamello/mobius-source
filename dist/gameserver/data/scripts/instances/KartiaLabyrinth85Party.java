@@ -28,7 +28,7 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.utils.Location;
 
-public class KartiaLabyrinth85Party extends Reflection
+public final class KartiaLabyrinth85Party extends Reflection
 {
 	private ScheduledFuture<?> firstStageGuardSpawn;
 	DeathListener _deathListener;
@@ -40,10 +40,10 @@ public class KartiaLabyrinth85Party extends Reflection
 	private static final int DOOR1_ID = 16170002;
 	private static final int DOOR2_ID = 16170003;
 	
-	int KartiaGuard = 19229;
-	int KartiaWatchman = 19230;
-	int DimensionalWatchman = 19231;
-	int LordOfKartia = 25882;
+	final int KartiaGuard = 19229;
+	final int KartiaWatchman = 19230;
+	final int DimensionalWatchman = 19231;
+	final int LordOfKartia = 25882;
 	
 	public KartiaLabyrinth85Party()
 	{
@@ -77,7 +77,7 @@ public class KartiaLabyrinth85Party extends Reflection
 		}
 	}
 	
-	public class ZoneListenerL implements OnZoneEnterLeaveListener
+	public final class ZoneListenerL implements OnZoneEnterLeaveListener
 	{
 		public ZoneListenerL()
 		{
@@ -99,7 +99,7 @@ public class KartiaLabyrinth85Party extends Reflection
 		}
 	}
 	
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		public ZoneListener()
 		{

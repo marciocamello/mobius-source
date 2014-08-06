@@ -29,7 +29,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class CristallChangeAttr extends ScriptItemHandler
+public final class CristallChangeAttr extends ScriptItemHandler
 {
 	/**
 	 * Field ITEM_IDS.

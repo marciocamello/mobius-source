@@ -23,7 +23,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 /**
  * @author KilRoy
  */
-public class KundaGuard extends Fighter
+public final class KundaGuard extends Fighter
 {
 	public KundaGuard(NpcInstance actor)
 	{

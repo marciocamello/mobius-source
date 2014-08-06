@@ -24,7 +24,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  * @author ALF
  * @date 03.09.2012
  */
-public class FairyCoconsInstance extends NpcInstance
+public final class FairyCoconsInstance extends NpcInstance
 {
 	private static final long serialVersionUID = 1871608359166390528L;
 	private static final int[] little_simpleAttackMobs =

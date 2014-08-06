@@ -24,7 +24,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Soldiers extends Fighter
+public final class Soldiers extends Fighter
 {
 	/**
 	 * Field ATTACK_IDS.

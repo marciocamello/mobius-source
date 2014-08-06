@@ -112,23 +112,23 @@ public class SchedulingPattern
 	/**
 	 * Field minuteMatchers.
 	 */
-	protected List<ValueMatcher> minuteMatchers = new ArrayList<>();
+	protected final List<ValueMatcher> minuteMatchers = new ArrayList<>();
 	/**
 	 * Field hourMatchers.
 	 */
-	protected List<ValueMatcher> hourMatchers = new ArrayList<>();
+	protected final List<ValueMatcher> hourMatchers = new ArrayList<>();
 	/**
 	 * Field dayOfMonthMatchers.
 	 */
-	protected List<ValueMatcher> dayOfMonthMatchers = new ArrayList<>();
+	protected final List<ValueMatcher> dayOfMonthMatchers = new ArrayList<>();
 	/**
 	 * Field monthMatchers.
 	 */
-	protected List<ValueMatcher> monthMatchers = new ArrayList<>();
+	protected final List<ValueMatcher> monthMatchers = new ArrayList<>();
 	/**
 	 * Field dayOfWeekMatchers.
 	 */
-	protected List<ValueMatcher> dayOfWeekMatchers = new ArrayList<>();
+	protected final List<ValueMatcher> dayOfWeekMatchers = new ArrayList<>();
 	/**
 	 * Field matcherSize.
 	 */
@@ -786,7 +786,7 @@ public class SchedulingPattern
 		/**
 		 * Field ALIASES.
 		 */
-		private static String[] ALIASES =
+		private static final String[] ALIASES =
 		{
 			"jan",
 			"feb",
@@ -837,7 +837,7 @@ public class SchedulingPattern
 		/**
 		 * Field ALIASES.
 		 */
-		private static String[] ALIASES =
+		private static final String[] ALIASES =
 		{
 			"sun",
 			"mon",

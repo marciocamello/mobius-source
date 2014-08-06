@@ -43,7 +43,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class BelethManager extends Functions implements ScriptFile
+public final class BelethManager extends Functions implements ScriptFile
 {
 	/**
 	 * Field _log.
@@ -52,7 +52,7 @@ public class BelethManager extends Functions implements ScriptFile
 	/**
 	 * Field _zone.
 	 */
-	static Zone _zone = ReflectionUtils.getZone("[Beleth_room]");
+	static final Zone _zone = ReflectionUtils.getZone("[Beleth_room]");
 	/**
 	 * Field _zoneListener.
 	 */
@@ -60,11 +60,11 @@ public class BelethManager extends Functions implements ScriptFile
 	/**
 	 * Field _indexedPlayers.
 	 */
-	static List<Player> _indexedPlayers = new ArrayList<>();
+	static final List<Player> _indexedPlayers = new ArrayList<>();
 	/**
 	 * Field _npcList.
 	 */
-	static List<NpcInstance> _npcList = new ArrayList<>();
+	static final List<NpcInstance> _npcList = new ArrayList<>();
 	/**
 	 * Field _doorWaitTimeDuration. (value is 60000)
 	 */
@@ -201,11 +201,11 @@ public class BelethManager extends Functions implements ScriptFile
 	/**
 	 * Field _clones.
 	 */
-	static Map<MonsterInstance, Location> _clones = new ConcurrentHashMap<>();
+	static final Map<MonsterInstance, Location> _clones = new ConcurrentHashMap<>();
 	/**
 	 * Field _cloneLoc.
 	 */
-	static Location[] _cloneLoc = new Location[56];
+	static final Location[] _cloneLoc = new Location[56];
 	/**
 	 * Field cloneRespawnTask.
 	 */

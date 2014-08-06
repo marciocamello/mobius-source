@@ -24,7 +24,7 @@ import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class BaiumNpc extends DefaultAI
+public final class BaiumNpc extends DefaultAI
 {
 	/**
 	 * Field _wait_timeout.

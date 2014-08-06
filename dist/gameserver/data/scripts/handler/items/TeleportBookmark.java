@@ -21,7 +21,7 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TeleportBookmark extends SimpleItemHandler
+public final class TeleportBookmark extends SimpleItemHandler
 {
 	/**
 	 * Field ITEM_IDS.

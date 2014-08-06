@@ -21,14 +21,14 @@ import lineage2.gameserver.utils.Location;
 
 public class _10272_LightFragment extends Quest implements ScriptFile
 {
-	private static int Orbyu = 32560;
-	private static int Artius = 32559;
-	private static int Lelikia = 32567;
-	private static int Ginby = 32566;
-	private static int Lekon = 32557;
-	private static int DestroyedDarknessFragmentPowder = 13853;
-	private static int DestroyedLightFragmentPowder = 13854;
-	private static int SacredLightFragment = 13855;
+	private static final int Orbyu = 32560;
+	private static final int Artius = 32559;
+	private static final int Lelikia = 32567;
+	private static final int Ginby = 32566;
+	private static final int Lekon = 32557;
+	private static final int DestroyedDarknessFragmentPowder = 13853;
+	private static final int DestroyedLightFragmentPowder = 13854;
+	private static final int SacredLightFragment = 13855;
 	private static final Location LELIKIA_POSITION = new Location(-170936, 247768, 1102);
 	private static final Location BASE_POSITION = new Location(-185032, 242824, 1553);
 	

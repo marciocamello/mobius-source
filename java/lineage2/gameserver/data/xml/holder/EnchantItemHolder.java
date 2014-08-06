@@ -20,7 +20,7 @@ import org.napile.primitive.maps.impl.HashIntObjectMap;
 
 public class EnchantItemHolder extends AbstractHolder
 {
-	private static EnchantItemHolder _instance = new EnchantItemHolder();
+	private static final EnchantItemHolder _instance = new EnchantItemHolder();
 	
 	private final IntObjectMap<AppearanceStone> _appearanceStones = new HashIntObjectMap<>();
 	

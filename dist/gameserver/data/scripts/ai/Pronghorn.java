@@ -26,7 +26,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Pronghorn extends Fighter
+public final class Pronghorn extends Fighter
 {
 	/**
 	 * Field _mobsNotSpawned.

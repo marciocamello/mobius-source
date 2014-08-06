@@ -23,7 +23,7 @@ public final class OrbisInstance extends MonsterInstance
 	 */
 	private static final long serialVersionUID = 1L;
 	private final int _weaponId;
-	Creature attacker = getPlayer();
+	final Creature attacker = getPlayer();
 	
 	public OrbisInstance(int ObjectID, NpcTemplate temp)
 	{

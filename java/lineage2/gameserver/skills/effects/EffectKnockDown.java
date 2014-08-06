@@ -35,9 +35,9 @@ public class EffectKnockDown extends Effect
 	 */
 	private int _x, _y, _z;
 	
-	private static TIntIntHashMap _ChainKnockSkills = new TIntIntHashMap(8);
+	private static final TIntIntHashMap _ChainKnockSkills = new TIntIntHashMap(8);
 	
-	private static TIntIntHashMap _ChainedTemporalReplace = new TIntIntHashMap(8);
+	private static final TIntIntHashMap _ChainedTemporalReplace = new TIntIntHashMap(8);
 	
 	/**
 	 * Constructor for EffectKnockDown.

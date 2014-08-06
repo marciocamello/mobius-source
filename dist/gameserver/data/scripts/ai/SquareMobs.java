@@ -23,9 +23,9 @@ import lineage2.gameserver.stats.funcs.Func;
 import lineage2.gameserver.templates.npc.MinionData;
 
 /**
- * @Author Awakeninger При спавне саммонят случайную охрану. Защита прямо пропорциональна количеству охранников. private static final int Mob1 = 23012; private static final int Mob2 = 23010; private static final int Mob3 = 23011;
+ * @Author When Awakeninger Sammon random spawn protection. Protection is directly proportional to the number of guards. private static final int Mob1 = 23012; private static final int Mob2 = 23010; private static final int Mob3 = 23011;
  */
-public class SquareMobs extends Mystic
+public final class SquareMobs extends Mystic
 {
 	private static final int[] Servitors =
 	{

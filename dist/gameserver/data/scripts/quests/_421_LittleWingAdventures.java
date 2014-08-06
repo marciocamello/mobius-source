@@ -40,21 +40,21 @@ import lineage2.gameserver.utils.Location;
 
 public class _421_LittleWingAdventures extends Quest implements ScriptFile
 {
-	private static int Cronos = 30610;
-	private static int Mimyu = 30747;
-	private static int Fairy_Tree_of_Wind = 27185;
-	private static int Fairy_Tree_of_Star = 27186;
-	private static int Fairy_Tree_of_Twilight = 27187;
-	private static int Fairy_Tree_of_Abyss = 27188;
-	static int Soul_of_Tree_Guardian = 27189;
-	private static int Dragonflute_of_Wind = L2Pet.HATCHLING_WIND.getControlItemId();
-	private static int Dragonflute_of_Star = L2Pet.HATCHLING_STAR.getControlItemId();
-	private static int Dragonflute_of_Twilight = L2Pet.HATCHLING_TWILIGHT.getControlItemId();
-	private static int Dragon_Bugle_of_Wind = L2Pet.STRIDER_WIND.getControlItemId();
-	private static int Dragon_Bugle_of_Star = L2Pet.STRIDER_STAR.getControlItemId();
-	private static int Dragon_Bugle_of_Twilight = L2Pet.STRIDER_TWILIGHT.getControlItemId();
-	private static int Fairy_Leaf = 4325;
-	private static int Min_Fairy_Tree_Attaks = 110;
+	private static final int Cronos = 30610;
+	private static final int Mimyu = 30747;
+	private static final int Fairy_Tree_of_Wind = 27185;
+	private static final int Fairy_Tree_of_Star = 27186;
+	private static final int Fairy_Tree_of_Twilight = 27187;
+	private static final int Fairy_Tree_of_Abyss = 27188;
+	static final int Soul_of_Tree_Guardian = 27189;
+	private static final int Dragonflute_of_Wind = L2Pet.HATCHLING_WIND.getControlItemId();
+	private static final int Dragonflute_of_Star = L2Pet.HATCHLING_STAR.getControlItemId();
+	private static final int Dragonflute_of_Twilight = L2Pet.HATCHLING_TWILIGHT.getControlItemId();
+	private static final int Dragon_Bugle_of_Wind = L2Pet.STRIDER_WIND.getControlItemId();
+	private static final int Dragon_Bugle_of_Star = L2Pet.STRIDER_STAR.getControlItemId();
+	private static final int Dragon_Bugle_of_Twilight = L2Pet.STRIDER_TWILIGHT.getControlItemId();
+	private static final int Fairy_Leaf = 4325;
+	private static final int Min_Fairy_Tree_Attaks = 110;
 	
 	public _421_LittleWingAdventures()
 	{

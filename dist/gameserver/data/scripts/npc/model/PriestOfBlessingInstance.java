@@ -29,7 +29,7 @@ import lineage2.gameserver.utils.Util;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class PriestOfBlessingInstance extends NpcInstance
+public final class PriestOfBlessingInstance extends NpcInstance
 {
 	/**
 	 *
@@ -77,7 +77,7 @@ public class PriestOfBlessingInstance extends NpcInstance
 	/**
 	 * Field hourglassList.
 	 */
-	private static List<Hourglass> hourglassList = new ArrayList<>();
+	private static final List<Hourglass> hourglassList = new ArrayList<>();
 	static
 	{
 		hourglassList.add(new Hourglass(1, 19, 4000, new int[]

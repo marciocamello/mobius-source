@@ -26,7 +26,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class KukuruInstance extends Functions
+public final class KukuruInstance extends Functions
 {
 	/**
 	 * Method getgokukuru.

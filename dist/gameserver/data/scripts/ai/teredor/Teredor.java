@@ -33,12 +33,12 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Teredor extends Fighter
+public final class Teredor extends Fighter
 {
 	/**
 	 * Field teredor.
 	 */
-	static int teredor = 19160;
+	static final int teredor = 19160;
 	/**
 	 * Field eliteMillipede.
 	 */
@@ -46,7 +46,7 @@ public class Teredor extends Fighter
 	/**
 	 * Field teredorLairEgg.
 	 */
-	static int teredorLairEgg = 19023;
+	static final int teredorLairEgg = 19023;
 	/**
 	 * Field coordsToSpawnEggs.
 	 */
@@ -58,7 +58,7 @@ public class Teredor extends Fighter
 	/**
 	 * Field timeFromPassiveToActive.
 	 */
-	static int timeFromPassiveToActive = 10;
+	static final int timeFromPassiveToActive = 10;
 	/**
 	 * Field delayEggTask.
 	 */
@@ -176,7 +176,7 @@ public class Teredor extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	public class CurrentHpListener implements OnCurrentHpDamageListener
+	public final class CurrentHpListener implements OnCurrentHpDamageListener
 	{
 		/**
 		 * Method onCurrentHpDamage.
@@ -214,7 +214,7 @@ public class Teredor extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	public class TeredorPassiveTask extends RunnableImpl
+	public final class TeredorPassiveTask extends RunnableImpl
 	{
 		/**
 		 * Field _npc.
@@ -250,7 +250,7 @@ public class Teredor extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	public class TeredorActiveTask extends RunnableImpl
+	public final class TeredorActiveTask extends RunnableImpl
 	{
 		/**
 		 * Field _npc.
@@ -289,7 +289,7 @@ public class Teredor extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	public class EggSpawnTask extends RunnableImpl
+	public final class EggSpawnTask extends RunnableImpl
 	{
 		/**
 		 * Field _r.

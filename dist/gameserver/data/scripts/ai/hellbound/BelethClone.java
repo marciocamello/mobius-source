@@ -21,7 +21,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class BelethClone extends Mystic
+public final class BelethClone extends Mystic
 {
 	/**
 	 * Constructor for BelethClone.

@@ -42,7 +42,7 @@ public class CharacterSubclassDAO
 	/**
 	 * Field _instance.
 	 */
-	private static CharacterSubclassDAO _instance = new CharacterSubclassDAO();
+	private static final CharacterSubclassDAO _instance = new CharacterSubclassDAO();
 	/**
 	 * Field SELECT_SQL_QUERY. (value is ""SELECT class_id, default_class_id, exp, sp, curHp, curCp, curMp, active, type, death_penalty, certification, dual_certificationFROM character_subclasses WHERE char_obj_id=?"")
 	 */

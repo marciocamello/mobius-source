@@ -23,7 +23,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class FreyaQuest extends Fighter
+public final class FreyaQuest extends Fighter
 {
 	/**
 	 * Constructor for FreyaQuest.

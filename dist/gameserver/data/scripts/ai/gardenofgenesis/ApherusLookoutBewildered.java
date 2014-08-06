@@ -19,7 +19,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.NpcUtils;
 
-public class ApherusLookoutBewildered extends Fighter
+public final class ApherusLookoutBewildered extends Fighter
 {
 	public ApherusLookoutBewildered(NpcInstance actor)
 	{

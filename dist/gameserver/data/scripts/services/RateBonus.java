@@ -32,7 +32,7 @@ import lineage2.gameserver.utils.Log;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class RateBonus extends Functions
+public final class RateBonus extends Functions
 {
 	/**
 	 * Method list.

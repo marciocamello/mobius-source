@@ -71,7 +71,7 @@ public class HellboundManager
 	/**
 	 * Field _deathListener.
 	 */
-	DeathListener _deathListener = new DeathListener();
+	final DeathListener _deathListener = new DeathListener();
 	
 	/**
 	 * Method getInstance.

@@ -19,7 +19,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Howl extends Patrollers
+public final class Howl extends Patrollers
 {
 	/**
 	 * Constructor for Howl.

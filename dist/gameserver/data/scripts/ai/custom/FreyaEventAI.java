@@ -28,7 +28,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class FreyaEventAI extends DefaultAI
+public final class FreyaEventAI extends DefaultAI
 {
 	/**
 	 * Field GIFT_SKILLS.

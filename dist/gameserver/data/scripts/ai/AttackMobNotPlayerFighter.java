@@ -26,7 +26,7 @@ import lineage2.gameserver.model.quest.QuestState;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class AttackMobNotPlayerFighter extends Fighter
+public final class AttackMobNotPlayerFighter extends Fighter
 {
 	/**
 	 * Constructor for AttackMobNotPlayerFighter.

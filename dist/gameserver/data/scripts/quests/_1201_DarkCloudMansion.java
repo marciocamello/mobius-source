@@ -387,7 +387,7 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 		public int counter;
 	}
 	
-	private static TIntObjectHashMap<World> worlds = new TIntObjectHashMap<>();
+	private static final TIntObjectHashMap<World> worlds = new TIntObjectHashMap<>();
 	
 	@Override
 	public void onLoad()

@@ -24,16 +24,16 @@ import lineage2.gameserver.tables.SkillTable;
 
 public class _194_SevenSignsMammonsContract extends Quest implements ScriptFile
 {
-	private static int Colin = 32571;
-	private static int SirGustavAthebaldt = 30760;
-	private static int Frog = 32572;
-	private static int Tess = 32573;
-	private static int Kuta = 32574;
-	private static int ClaudiaAthebaldt = 31001;
-	private static int AthebaldtsIntroduction = 13818;
-	private static int FrogKingsBead = 13820;
-	private static int GrandmaTessCandyPouch = 13821;
-	private static int NativesGlove = 13819;
+	private static final int Colin = 32571;
+	private static final int SirGustavAthebaldt = 30760;
+	private static final int Frog = 32572;
+	private static final int Tess = 32573;
+	private static final int Kuta = 32574;
+	private static final int ClaudiaAthebaldt = 31001;
+	private static final int AthebaldtsIntroduction = 13818;
+	private static final int FrogKingsBead = 13820;
+	private static final int GrandmaTessCandyPouch = 13821;
+	private static final int NativesGlove = 13819;
 	
 	public _194_SevenSignsMammonsContract()
 	{

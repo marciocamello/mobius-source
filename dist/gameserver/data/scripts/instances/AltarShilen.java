@@ -22,7 +22,7 @@ import lineage2.gameserver.utils.Location;
  * @author Awakeninger
  */
 
-public class AltarShilen extends Reflection
+public final class AltarShilen extends Reflection
 {
 	private static final int StartNPC1 = 32788;
 	private static final int StartNPC2 = 32789;
@@ -56,7 +56,7 @@ public class AltarShilen extends Reflection
 		super.onPlayerExit(player);
 	}
 	
-	public class CannonSpawn extends RunnableImpl
+	public final class CannonSpawn extends RunnableImpl
 	{
 		Reflection _r;
 		

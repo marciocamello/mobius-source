@@ -41,7 +41,7 @@ import quests._504_CompetitionForTheBanditStronghold;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class BanditMessagerInstance extends NpcInstance
+public final class BanditMessagerInstance extends NpcInstance
 {
 	/**
 	 *

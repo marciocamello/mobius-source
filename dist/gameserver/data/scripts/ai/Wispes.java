@@ -26,7 +26,7 @@ import lineage2.gameserver.tables.SkillTable;
 /**
  * @author ALF
  */
-public class Wispes extends DefaultAI
+public final class Wispes extends DefaultAI
 {
 	public Wispes(NpcInstance actor)
 	{

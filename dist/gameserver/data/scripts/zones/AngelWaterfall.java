@@ -29,10 +29,10 @@ import quests._10301_ShadowOfTerrorBlackishRedFog;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class AngelWaterfall implements ScriptFile
+public final class AngelWaterfall implements ScriptFile
 {
 	private static ZoneListener _zoneListener;
-	private static String[] zones =
+	private static final String[] zones =
 	{
 		"[25_20_telzone_to_magmeld]"
 	};
@@ -79,7 +79,7 @@ public class AngelWaterfall implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		/**
 		 * Method onZoneEnter.

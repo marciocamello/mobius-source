@@ -33,9 +33,9 @@ public class HarnakUndegroundManager
 	private static HarnakUndegroundManager _instance;
 	static int secondStageAltarCount;
 	static int thirdStageAltarCount;
-	static int HARNAK = 25772;
-	static int ANGRY_HARNAK = 25774;
-	static int DEMONIC_NOKTUM = 25773;
+	static final int HARNAK = 25772;
+	static final int ANGRY_HARNAK = 25774;
+	static final int DEMONIC_NOKTUM = 25773;
 	private static TIntObjectHashMap<Integer> npcListIdSecond;
 	private static TIntObjectHashMap<Integer> npcListIdThird;
 	

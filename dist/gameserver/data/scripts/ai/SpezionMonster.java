@@ -22,7 +22,7 @@ import lineage2.gameserver.tables.SkillTable;
 /**
  * @author cruel
  */
-public class SpezionMonster extends Mystic
+public final class SpezionMonster extends Mystic
 {
 	
 	public SpezionMonster(NpcInstance actor)

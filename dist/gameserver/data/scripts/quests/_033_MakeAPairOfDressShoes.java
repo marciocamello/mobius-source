@@ -19,9 +19,9 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _033_MakeAPairOfDressShoes extends Quest implements ScriptFile
 {
-	int LEATHER = 1882;
-	int THREAD = 1868;
-	int DRESS_SHOES_BOX = 7113;
+	final int LEATHER = 1882;
+	final int THREAD = 1868;
+	final int DRESS_SHOES_BOX = 7113;
 	
 	@Override
 	public void onLoad()

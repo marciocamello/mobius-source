@@ -25,7 +25,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class EpicZone implements ScriptFile
+public final class EpicZone implements ScriptFile
 {
 	/**
 	 * Field _zoneListener.
@@ -65,7 +65,7 @@ public class EpicZone implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		/**
 		 * Method onZoneEnter.

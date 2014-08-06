@@ -35,7 +35,7 @@ import lineage2.gameserver.utils.Location;
  * @author Camelion
  * @modified KilRoy
  */
-public class MemoryOfDisaster extends Reflection
+public final class MemoryOfDisaster extends Reflection
 {
 	private static final int ROGIN_ID = 19193;
 	private static final int TENTACLE_ID = 19171;
@@ -208,16 +208,12 @@ public class MemoryOfDisaster extends Reflection
 				player.showQuestMovie(ExStartScenePlayer.SCENE_AWAKENING_OPENING_D);
 			}
 			
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					dieNextElf();
-					dieNextElf();
-					dieNextElf();
-					dieNextElf();
-				}
+				dieNextElf();
+				dieNextElf();
+				dieNextElf();
+				dieNextElf();
 			}, 20000);
 			ThreadPoolManager.getInstance().schedule(new Scene2(), 83000);
 		}

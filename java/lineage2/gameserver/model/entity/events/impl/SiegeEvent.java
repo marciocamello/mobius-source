@@ -192,15 +192,15 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	/**
 	 * Field _killListener.
 	 */
-	protected OnKillListener _killListener = new KillListener();
+	protected final OnKillListener _killListener = new KillListener();
 	/**
 	 * Field _doorDeathListener.
 	 */
-	protected OnDeathListener _doorDeathListener = new DoorDeathListener();
+	protected final OnDeathListener _doorDeathListener = new DoorDeathListener();
 	/**
 	 * Field _siegeSummons.
 	 */
-	protected List<HardReference<SummonInstance>> _siegeSummons = new ArrayList<>();
+	protected final List<HardReference<SummonInstance>> _siegeSummons = new ArrayList<>();
 	
 	/**
 	 * Constructor for SiegeEvent.

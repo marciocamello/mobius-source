@@ -34,7 +34,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class DragonValley implements ScriptFile
+public final class DragonValley implements ScriptFile
 {
 	/**
 	 * Field _zoneListener.
@@ -51,7 +51,7 @@ public class DragonValley implements ScriptFile
 	/**
 	 * Field inzone.
 	 */
-	static List<Player> inzone = new ArrayList<>();
+	static final List<Player> inzone = new ArrayList<>();
 	/**
 	 * Field buffTask.
 	 */
@@ -99,7 +99,7 @@ public class DragonValley implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		/**
 		 * Method onZoneEnter.

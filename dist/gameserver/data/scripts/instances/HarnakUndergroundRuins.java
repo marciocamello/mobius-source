@@ -38,7 +38,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Camelion
  * @modified KilRoy
  */
-public class HarnakUndergroundRuins extends Reflection
+public final class HarnakUndergroundRuins extends Reflection
 {
 	private static final int DOOR1_ID = 16240100;
 	private static final int DOOR2_ID = 16240102;
@@ -184,14 +184,7 @@ public class HarnakUndergroundRuins extends Reflection
 			p.showQuestMovie(ExStartScenePlayer.SCENE_AWAKENING_BOSS_ENDING_A);
 		}
 		
-		ThreadPoolManager.getInstance().schedule(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				spawnByGroup(HERMUNKUS_GROUP);
-			}
-		}, 25050L);
+		ThreadPoolManager.getInstance().schedule(() -> spawnByGroup(HERMUNKUS_GROUP), 25050L);
 	}
 	
 	private class ScreenMessageTask extends RunnableImpl
@@ -227,17 +220,13 @@ public class HarnakUndergroundRuins extends Reflection
 		public void runImpl()
 		{
 			spawnByGroup("1_group");
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
+				List<NpcInstance> npcs = getAllByNpcId(RAKZAN_ID, true);
+				
+				if (!npcs.isEmpty())
 				{
-					List<NpcInstance> npcs = getAllByNpcId(RAKZAN_ID, true);
-					
-					if (!npcs.isEmpty())
-					{
-						npcs.get(0).getAI().notifyEvent(CtrlEvent.EVT_SCRIPT_EVENT, "SELECT_ME");
-					}
+					npcs.get(0).getAI().notifyEvent(CtrlEvent.EVT_SCRIPT_EVENT, "SELECT_ME");
 				}
 			}, 3000);
 		}

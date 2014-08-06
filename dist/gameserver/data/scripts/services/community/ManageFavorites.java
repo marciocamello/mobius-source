@@ -35,7 +35,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ManageFavorites implements ScriptFile, ICommunityBoardHandler
+public final class ManageFavorites implements ScriptFile, ICommunityBoardHandler
 {
 	/**
 	 * Field _log.
