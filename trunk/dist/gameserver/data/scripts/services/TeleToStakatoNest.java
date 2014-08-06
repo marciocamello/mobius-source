@@ -24,7 +24,7 @@ import quests._240_ImTheOnlyOneYouCanTrust;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TeleToStakatoNest extends Functions
+public final class TeleToStakatoNest extends Functions
 {
 	/**
 	 * Field teleports.

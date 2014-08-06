@@ -22,7 +22,7 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.NpcUtils;
 
-public class GuillotineMonsters extends Fighter
+public final class GuillotineMonsters extends Fighter
 {
 	private boolean _chekerLocked = true;
 	

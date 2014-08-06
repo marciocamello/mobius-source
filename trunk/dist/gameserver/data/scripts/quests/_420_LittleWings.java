@@ -38,38 +38,38 @@ public class _420_LittleWings extends Quest implements ScriptFile
 	private static final int Road_Scavenger = 20551;
 	private static final int Breka_Orc_Overlord = 20270;
 	private static final int Dead_Seeker = 20202;
-	private static int Coal = 1870;
-	private static int Charcoal = 1871;
-	private static int Silver_Nugget = 1873;
-	private static int Stone_of_Purity = 1875;
-	private static int GemstoneD = 2130;
-	private static int GemstoneC = 2131;
-	private static int Dragonflute_of_Wind = 3500;
-	private static int Dragonflute_of_Twilight = 3502;
-	private static int Hatchlings_Soft_Leather = 3912;
-	private static int Hatchlings_Mithril_Coat = 3918;
-	private static int Food_For_Hatchling = 4038;
-	private static int Fairy_Dust = 3499;
-	private static int Fairy_Stone = 3816;
-	private static int Deluxe_Fairy_Stone = 3817;
-	private static int Fairy_Stone_List = 3818;
-	private static int Deluxe_Fairy_Stone_List = 3819;
-	private static int Toad_Lord_Back_Skin = 3820;
-	private static int Juice_of_Monkshood = 3821;
-	private static int Scale_of_Drake_Exarion = 3822;
-	private static int Scale_of_Drake_Zwov = 3824;
-	private static int Scale_of_Drake_Kalibran = 3826;
-	private static int Scale_of_Wyvern_Suzet = 3828;
-	private static int Scale_of_Wyvern_Shamhai = 3830;
-	private static int Egg_of_Drake_Exarion = 3823;
-	private static int Egg_of_Drake_Zwov = 3825;
-	private static int Egg_of_Drake_Kalibran = 3827;
-	private static int Egg_of_Wyvern_Suzet = 3829;
-	private static int Egg_of_Wyvern_Shamhai = 3831;
+	private static final int Coal = 1870;
+	private static final int Charcoal = 1871;
+	private static final int Silver_Nugget = 1873;
+	private static final int Stone_of_Purity = 1875;
+	private static final int GemstoneD = 2130;
+	private static final int GemstoneC = 2131;
+	private static final int Dragonflute_of_Wind = 3500;
+	private static final int Dragonflute_of_Twilight = 3502;
+	private static final int Hatchlings_Soft_Leather = 3912;
+	private static final int Hatchlings_Mithril_Coat = 3918;
+	private static final int Food_For_Hatchling = 4038;
+	private static final int Fairy_Dust = 3499;
+	private static final int Fairy_Stone = 3816;
+	private static final int Deluxe_Fairy_Stone = 3817;
+	private static final int Fairy_Stone_List = 3818;
+	private static final int Deluxe_Fairy_Stone_List = 3819;
+	private static final int Toad_Lord_Back_Skin = 3820;
+	private static final int Juice_of_Monkshood = 3821;
+	private static final int Scale_of_Drake_Exarion = 3822;
+	private static final int Scale_of_Drake_Zwov = 3824;
+	private static final int Scale_of_Drake_Kalibran = 3826;
+	private static final int Scale_of_Wyvern_Suzet = 3828;
+	private static final int Scale_of_Wyvern_Shamhai = 3830;
+	private static final int Egg_of_Drake_Exarion = 3823;
+	private static final int Egg_of_Drake_Zwov = 3825;
+	private static final int Egg_of_Drake_Kalibran = 3827;
+	private static final int Egg_of_Wyvern_Suzet = 3829;
+	private static final int Egg_of_Wyvern_Shamhai = 3831;
 	private static final int Toad_Lord_Back_Skin_Chance = 30;
 	private static final int Egg_Chance = 50;
 	private static final int Pet_Armor_Chance = 35;
-	private static int[][] Fairy_Stone_Items =
+	private static final int[][] Fairy_Stone_Items =
 	{
 		{
 			Coal,
@@ -92,7 +92,7 @@ public class _420_LittleWings extends Quest implements ScriptFile
 			10
 		}
 	};
-	private static int[][] Delux_Fairy_Stone_Items =
+	private static final int[][] Delux_Fairy_Stone_Items =
 	{
 		{
 			Coal,

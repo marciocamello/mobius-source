@@ -27,7 +27,7 @@ import gnu.trove.set.hash.TIntHashSet;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ItemSkills extends ScriptItemHandler
+public final class ItemSkills extends ScriptItemHandler
 {
 	/**
 	 * Field _itemIds.

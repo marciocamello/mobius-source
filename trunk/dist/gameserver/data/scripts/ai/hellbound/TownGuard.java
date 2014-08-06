@@ -23,7 +23,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TownGuard extends Fighter
+public final class TownGuard extends Fighter
 {
 	/**
 	 * Constructor for TownGuard.

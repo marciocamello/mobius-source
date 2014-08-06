@@ -28,7 +28,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Baium extends DefaultAI
+public final class Baium extends DefaultAI
 {
 	/**
 	 * Field _firstTimeAttacked.

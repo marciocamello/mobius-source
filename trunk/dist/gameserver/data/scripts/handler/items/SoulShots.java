@@ -30,7 +30,7 @@ import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SoulShots extends ScriptItemHandler
+public final class SoulShots extends ScriptItemHandler
 {
 	/**
 	 * Field _itemIds.

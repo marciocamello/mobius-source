@@ -49,7 +49,7 @@ import lineage2.gameserver.utils.Util;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ItemBroker extends Functions
+public final class ItemBroker extends Functions
 {
 	/**
 	 * Field MAX_ITEMS_PER_PAGE. (value is 10)
@@ -62,11 +62,11 @@ public class ItemBroker extends Functions
 	/**
 	 * Field _npcInfos.
 	 */
-	private static Map<Integer, NpcInfo> _npcInfos = new ConcurrentHashMap<>();
+	private static final Map<Integer, NpcInfo> _npcInfos = new ConcurrentHashMap<>();
 	/**
 	 * Field RARE_ITEMS.
 	 */
-	public int[] RARE_ITEMS =
+	public final int[] RARE_ITEMS =
 	{
 		16255,
 		16256,
@@ -1288,7 +1288,7 @@ public class ItemBroker extends Functions
 	/**
 	 * @author Mobius
 	 */
-	public class NpcInfo
+	public final class NpcInfo
 	{
 		/**
 		 * Field lastUpdate.
@@ -1311,7 +1311,7 @@ public class ItemBroker extends Functions
 	/**
 	 * @author Mobius
 	 */
-	public class Item
+	public final class Item
 	{
 		/**
 		 * Field itemId.

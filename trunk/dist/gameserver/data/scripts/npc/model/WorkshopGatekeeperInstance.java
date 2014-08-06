@@ -32,7 +32,7 @@ import org.napile.primitive.sets.impl.HashIntSet;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class WorkshopGatekeeperInstance extends NpcInstance
+public final class WorkshopGatekeeperInstance extends NpcInstance
 {
 	/**
 	 *

@@ -36,7 +36,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TheFlowOfTheHorror extends Functions implements ScriptFile
+public final class TheFlowOfTheHorror extends Functions implements ScriptFile
 {
 	/**
 	 * Field _log.
@@ -45,11 +45,11 @@ public class TheFlowOfTheHorror extends Functions implements ScriptFile
 	/**
 	 * Field Gilmore.
 	 */
-	private static int Gilmore = 30754;
+	private static final int Gilmore = 30754;
 	/**
 	 * Field Shackle.
 	 */
-	private static int Shackle = 20235;
+	private static final int Shackle = 20235;
 	/**
 	 * Field _oldGilmoreRef.
 	 */
@@ -61,43 +61,43 @@ public class TheFlowOfTheHorror extends Functions implements ScriptFile
 	/**
 	 * Field _spawns.
 	 */
-	private static List<MonsterInstance> _spawns = new ArrayList<>();
+	private static final List<MonsterInstance> _spawns = new ArrayList<>();
 	/**
 	 * Field points11.
 	 */
-	private static List<Location> points11 = new ArrayList<>();
+	private static final List<Location> points11 = new ArrayList<>();
 	/**
 	 * Field points12.
 	 */
-	private static List<Location> points12 = new ArrayList<>();
+	private static final List<Location> points12 = new ArrayList<>();
 	/**
 	 * Field points13.
 	 */
-	private static List<Location> points13 = new ArrayList<>();
+	private static final List<Location> points13 = new ArrayList<>();
 	/**
 	 * Field points21.
 	 */
-	private static List<Location> points21 = new ArrayList<>();
+	private static final List<Location> points21 = new ArrayList<>();
 	/**
 	 * Field points22.
 	 */
-	private static List<Location> points22 = new ArrayList<>();
+	private static final List<Location> points22 = new ArrayList<>();
 	/**
 	 * Field points23.
 	 */
-	private static List<Location> points23 = new ArrayList<>();
+	private static final List<Location> points23 = new ArrayList<>();
 	/**
 	 * Field points31.
 	 */
-	private static List<Location> points31 = new ArrayList<>();
+	private static final List<Location> points31 = new ArrayList<>();
 	/**
 	 * Field points32.
 	 */
-	private static List<Location> points32 = new ArrayList<>();
+	private static final List<Location> points32 = new ArrayList<>();
 	/**
 	 * Field points33.
 	 */
-	private static List<Location> points33 = new ArrayList<>();
+	private static final List<Location> points33 = new ArrayList<>();
 	
 	/**
 	 * Method onLoad.

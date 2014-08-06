@@ -54,7 +54,7 @@ public class AdminMammon implements IAdminCommandHandler
 	/**
 	 * Field npcIds.
 	 */
-	List<Integer> npcIds = new ArrayList<Integer>();
+	final List<Integer> npcIds = new ArrayList<Integer>();
 	
 	/**
 	 * Method useAdminCommand.

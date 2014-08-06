@@ -29,7 +29,7 @@ import bosses.FourSepulchersSpawn;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SepulcherRaidInstance extends RaidBossInstance
+public final class SepulcherRaidInstance extends RaidBossInstance
 {
 	/**
 	 *

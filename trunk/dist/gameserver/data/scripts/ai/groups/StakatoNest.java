@@ -39,7 +39,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class StakatoNest extends Fighter
+public final class StakatoNest extends Fighter
 {
 	/**
 	 * Field BIZARRE_COCOON.

@@ -21,12 +21,12 @@ import lineage2.gameserver.network.serverpackets.EventTrigger;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ReflectionUtils;
 
-public class ArcanZone implements ScriptFile
+public final class ArcanZone implements ScriptFile
 {
 	private static final String TELEPORT_ZONE_NAME = "[Arcan_0]";
 	private static ZoneListener _zoneListener;
-	static int _BLUE = 262001;
-	static int _RED = 262003;
+	static final int _BLUE = 262001;
+	static final int _RED = 262003;
 	
 	private void init()
 	{
@@ -51,7 +51,7 @@ public class ArcanZone implements ScriptFile
 	{
 	}
 	
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)

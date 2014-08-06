@@ -452,7 +452,7 @@ public class Util
 	/**
 	 * Field _pattern.
 	 */
-	private static Pattern _pattern = Pattern.compile("<!--TEMPLET(\\d+)(.*?)TEMPLET-->", Pattern.DOTALL);
+	private static final Pattern _pattern = Pattern.compile("<!--TEMPLET(\\d+)(.*?)TEMPLET-->", Pattern.DOTALL);
 	
 	/**
 	 * Method parseTemplate.

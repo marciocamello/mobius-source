@@ -37,7 +37,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SeedOfAnnihilation implements ScriptFile
+public final class SeedOfAnnihilation implements ScriptFile
 {
 	/**
 	 * Field ANNIHILATION_FURNACE. (value is 18928)
@@ -123,7 +123,7 @@ public class SeedOfAnnihilation implements ScriptFile
 		/**
 		 * Field af_npcs.
 		 */
-		public NpcInstance[] af_npcs = new NpcInstance[2];
+		public final NpcInstance[] af_npcs = new NpcInstance[2];
 		/**
 		 * Field activeBuff.
 		 */
@@ -387,7 +387,7 @@ public class SeedOfAnnihilation implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		/**
 		 * Method onZoneEnter.

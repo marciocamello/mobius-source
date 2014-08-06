@@ -65,7 +65,7 @@ public class Alliance
 	/**
 	 * Field EXPELLED_MEMBER_PENALTY.
 	 */
-	public static long EXPELLED_MEMBER_PENALTY = 24 * 60 * 60 * 1000L;
+	public static final long EXPELLED_MEMBER_PENALTY = 24 * 60 * 60 * 1000L;
 	
 	/**
 	 * Constructor for Alliance.

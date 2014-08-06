@@ -33,7 +33,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class AdminClientSupport extends ScriptAdminCommand
+public final class AdminClientSupport extends ScriptAdminCommand
 {
 	/**
 	 * Field _log.

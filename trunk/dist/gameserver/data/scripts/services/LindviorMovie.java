@@ -26,12 +26,12 @@ import lineage2.gameserver.utils.ReflectionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class LindviorMovie implements ScriptFile
+public final class LindviorMovie implements ScriptFile
 {
 	/**
 	 * Field movieDelay.
 	 */
-	private static long movieDelay = 3 * 60 * 60 * 1000L;
+	private static final long movieDelay = 3 * 60 * 60 * 1000L;
 	
 	/**
 	 * Method onLoad.
@@ -48,7 +48,7 @@ public class LindviorMovie implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public class ShowLindviorMovie extends RunnableImpl
+	public final class ShowLindviorMovie extends RunnableImpl
 	{
 		/**
 		 * Field _zone.

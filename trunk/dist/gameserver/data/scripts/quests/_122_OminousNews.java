@@ -19,8 +19,8 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _122_OminousNews extends Quest implements ScriptFile
 {
-	int MOIRA = 31979;
-	int KARUDA = 32017;
+	final int MOIRA = 31979;
+	final int KARUDA = 32017;
 	
 	@Override
 	public void onLoad()

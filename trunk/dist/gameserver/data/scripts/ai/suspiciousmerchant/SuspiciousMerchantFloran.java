@@ -22,7 +22,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SuspiciousMerchantFloran extends DefaultAI
+public final class SuspiciousMerchantFloran extends DefaultAI
 {
 	/**
 	 * Field points.

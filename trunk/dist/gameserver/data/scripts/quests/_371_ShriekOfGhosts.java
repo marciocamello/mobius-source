@@ -25,22 +25,22 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _371_ShriekOfGhosts extends Quest implements ScriptFile
 {
-	private static int REVA = 30867;
-	private static int PATRIN = 30929;
-	private static int Hallates_Warrior = 20818;
-	private static int Hallates_Knight = 20820;
-	private static int Hallates_Commander = 20824;
-	private static int Ancient_Porcelain__Excellent = 6003;
-	private static int Ancient_Porcelain__High_Quality = 6004;
-	private static int Ancient_Porcelain__Low_Quality = 6005;
-	private static int Ancient_Porcelain__Lowest_Quality = 6006;
-	private static int Ancient_Ash_Urn = 5903;
-	private static int Ancient_Porcelain = 6002;
-	private static int Urn_Chance = 43;
-	private static int Ancient_Porcelain__Excellent_Chance = 1;
-	private static int Ancient_Porcelain__High_Quality_Chance = 14;
-	private static int Ancient_Porcelain__Low_Quality_Chance = 46;
-	private static int Ancient_Porcelain__Lowest_Quality_Chance = 84;
+	private static final int REVA = 30867;
+	private static final int PATRIN = 30929;
+	private static final int Hallates_Warrior = 20818;
+	private static final int Hallates_Knight = 20820;
+	private static final int Hallates_Commander = 20824;
+	private static final int Ancient_Porcelain__Excellent = 6003;
+	private static final int Ancient_Porcelain__High_Quality = 6004;
+	private static final int Ancient_Porcelain__Low_Quality = 6005;
+	private static final int Ancient_Porcelain__Lowest_Quality = 6006;
+	private static final int Ancient_Ash_Urn = 5903;
+	private static final int Ancient_Porcelain = 6002;
+	private static final int Urn_Chance = 43;
+	private static final int Ancient_Porcelain__Excellent_Chance = 1;
+	private static final int Ancient_Porcelain__High_Quality_Chance = 14;
+	private static final int Ancient_Porcelain__Low_Quality_Chance = 46;
+	private static final int Ancient_Porcelain__Lowest_Quality_Chance = 84;
 	private final Map<Integer, Integer> common_chances = new HashMap<>();
 	
 	public _371_ShriekOfGhosts()

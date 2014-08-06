@@ -19,10 +19,10 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _012_SecretMeetingWithVarkaSilenos extends Quest implements ScriptFile
 {
-	int CADMON = 31296;
-	int HELMUT = 31258;
-	int NARAN_ASHANUK = 31378;
-	int MUNITIONS_BOX = 7232;
+	final int CADMON = 31296;
+	final int HELMUT = 31258;
+	final int NARAN_ASHANUK = 31378;
+	final int MUNITIONS_BOX = 7232;
 	
 	@Override
 	public void onLoad()

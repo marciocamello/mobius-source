@@ -24,7 +24,7 @@ import lineage2.gameserver.utils.NpcUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class AnnihilationFighter extends Fighter
+public final class AnnihilationFighter extends Fighter
 {
 	/**
 	 * Constructor for AnnihilationFighter.

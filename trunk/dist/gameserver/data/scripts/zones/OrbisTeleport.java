@@ -19,7 +19,7 @@ import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
 
-public class OrbisTeleport implements ScriptFile
+public final class OrbisTeleport implements ScriptFile
 {
 	private static ZoneListener _zoneListener;
 	private static final String[] zones =
@@ -59,7 +59,7 @@ public class OrbisTeleport implements ScriptFile
 	{
 	}
 	
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		
 		@Override

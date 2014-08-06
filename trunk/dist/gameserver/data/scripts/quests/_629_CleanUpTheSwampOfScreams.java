@@ -19,10 +19,10 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _629_CleanUpTheSwampOfScreams extends Quest implements ScriptFile
 {
-	private static int CAPTAIN = 31553;
-	private static int CLAWS = 7250;
-	private static int COIN = 7251;
-	private static int[][] CHANCE =
+	private static final int CAPTAIN = 31553;
+	private static final int CLAWS = 7250;
+	private static final int COIN = 7251;
+	private static final int[][] CHANCE =
 	{
 		{
 			21508,

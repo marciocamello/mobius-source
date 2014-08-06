@@ -40,7 +40,7 @@ import bosses.ValakasManager;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Special extends SimpleItemHandler
+public final class Special extends SimpleItemHandler
 {
 	/**
 	 * Field ITEM_IDS.

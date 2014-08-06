@@ -25,7 +25,7 @@ import ai.hellbound.NaiaLock;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class NaiaControllerInstance extends NpcInstance
+public final class NaiaControllerInstance extends NpcInstance
 {
 	/**
 	 *

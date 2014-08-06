@@ -50,7 +50,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ClanCommunity extends Functions implements ScriptFile, ICommunityBoardHandler
+public final class ClanCommunity extends Functions implements ScriptFile, ICommunityBoardHandler
 {
 	/**
 	 * Field _log.

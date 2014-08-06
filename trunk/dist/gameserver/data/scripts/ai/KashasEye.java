@@ -21,7 +21,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class KashasEye extends DefaultAI
+public final class KashasEye extends DefaultAI
 {
 	/**
 	 * Constructor for KashasEye.

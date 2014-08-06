@@ -19,7 +19,7 @@ import lineage2.gameserver.model.Player;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SimplePetitionHandler implements IPetitionHandler
+public final class SimplePetitionHandler implements IPetitionHandler
 {
 	/**
 	 * Constructor for SimplePetitionHandler.

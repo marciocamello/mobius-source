@@ -42,13 +42,13 @@ public class CertificationFunctions
 	 */
 	public static final String PATH = "villagemaster/certification/";
 	
-	private static HashMap<Integer, Integer> _certificationList = new HashMap<>();
+	private static final HashMap<Integer, Integer> _certificationList = new HashMap<>();
 	
 	private static CertificationFunctions _instance;
 	
-	private static int CERTIFICATE = 10280;
+	private static final int CERTIFICATE = 10280;
 	
-	private static int DUAL_CERTIFICATE = 36078;
+	private static final int DUAL_CERTIFICATE = 36078;
 	
 	/**
 	 * Method getInstance.

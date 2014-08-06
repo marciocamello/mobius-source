@@ -23,7 +23,7 @@ import lineage2.gameserver.utils.ItemFunctions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class HeroItems extends Functions
+public final class HeroItems extends Functions
 {
 	/**
 	 * Field HERO_ITEMS.

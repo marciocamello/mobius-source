@@ -23,7 +23,7 @@ import ai.residences.clanhall.MatchTrief;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class MatchTriefInstance extends CTBBossInstance
+public final class MatchTriefInstance extends CTBBossInstance
 {
 	/**
 	 *

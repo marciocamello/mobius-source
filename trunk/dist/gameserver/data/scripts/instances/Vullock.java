@@ -31,7 +31,7 @@ import lineage2.gameserver.utils.Location;
 /**
  * @author Awakeninger
  */
-public class Vullock extends Reflection
+public final class Vullock extends Reflection
 {
 	private static final int Vullock = 29218;
 	private static final int VullockSlave = 29219;
@@ -50,7 +50,7 @@ public class Vullock extends Reflection
 	private static final long BeforeDelay = 60 * 1000L;
 	private static final long BeforeDelayVDO = 42 * 1000L;
 	// private boolean _lockedTurn = false;
-	static Territory centralRoomPoint = new Territory().add(new Polygon().add(152712, 142936).add(154360, 142936).add(154360, 141288).add(152712, 141288).setZmax(-12862).setZmin(-12700));
+	static final Territory centralRoomPoint = new Territory().add(new Polygon().add(152712, 142936).add(154360, 142936).add(154360, 141288).add(152712, 141288).setZmax(-12862).setZmin(-12700));
 	
 	@Override
 	public void onPlayerEnter(Player player)
@@ -105,7 +105,7 @@ public class Vullock extends Reflection
 		}
 	}
 	
-	public class CurrentHpListener implements OnCurrentHpDamageListener
+	public final class CurrentHpListener implements OnCurrentHpDamageListener
 	{
 		@Override
 		public void onCurrentHpDamage(Creature actor, double damage, Creature attacker, Skill skill)
@@ -131,7 +131,7 @@ public class Vullock extends Reflection
 		
 	}
 	
-	public class CaveStage extends RunnableImpl
+	public final class CaveStage extends RunnableImpl
 	{
 		// Reflection _r1;
 		
@@ -158,7 +158,7 @@ public class Vullock extends Reflection
 		}
 	}
 	
-	public class VullockSpawn extends RunnableImpl
+	public final class VullockSpawn extends RunnableImpl
 	{
 		Reflection _r;
 		

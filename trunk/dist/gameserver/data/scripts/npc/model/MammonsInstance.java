@@ -21,7 +21,7 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
-public class MammonsInstance extends NpcInstance
+public final class MammonsInstance extends NpcInstance
 {
 	
 	private static final long serialVersionUID = 1796248576314922526L;

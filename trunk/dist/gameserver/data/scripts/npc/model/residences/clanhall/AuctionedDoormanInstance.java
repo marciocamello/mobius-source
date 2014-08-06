@@ -30,7 +30,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class AuctionedDoormanInstance extends NpcInstance
+public final class AuctionedDoormanInstance extends NpcInstance
 {
 	/**
 	 *

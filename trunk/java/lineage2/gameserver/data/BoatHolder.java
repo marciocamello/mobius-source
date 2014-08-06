@@ -37,7 +37,7 @@ public final class BoatHolder extends AbstractHolder
 	/**
 	 * Field _instance.
 	 */
-	private static BoatHolder _instance = new BoatHolder();
+	private static final BoatHolder _instance = new BoatHolder();
 	/**
 	 * Field _boats.
 	 */

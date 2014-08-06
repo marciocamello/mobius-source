@@ -23,7 +23,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Battleground extends SimpleItemHandler
+public final class Battleground extends SimpleItemHandler
 {
 	/**
 	 * Field ITEM_IDS.

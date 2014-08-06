@@ -28,7 +28,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SwampSpirit extends DefaultAI
+public final class SwampSpirit extends DefaultAI
 {
 	private static final Skill healSkill = SkillTable.getInstance().getInfo(14064, 1);
 	private static final Skill healSkillBig = SkillTable.getInstance().getInfo(14065, 1);

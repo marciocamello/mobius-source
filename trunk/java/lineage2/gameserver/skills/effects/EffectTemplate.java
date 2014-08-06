@@ -85,7 +85,7 @@ public final class EffectTemplate extends StatTemplate
 	/**
 	 * Field _stackTypes.
 	 */
-	public List<String> _stackTypes = new ArrayList<>();
+	public final List<String> _stackTypes = new ArrayList<>();
 	/**
 	 * Field _stackOrder.
 	 */

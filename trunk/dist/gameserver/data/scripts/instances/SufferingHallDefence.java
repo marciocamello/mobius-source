@@ -31,7 +31,7 @@ import org.apache.commons.lang3.ArrayUtils;
 /**
  * @author pchayka
  */
-public class SufferingHallDefence extends Reflection
+public final class SufferingHallDefence extends Reflection
 {
 	private static final int AliveTumor = 18704;
 	private static final int DeadTumor = 18705;

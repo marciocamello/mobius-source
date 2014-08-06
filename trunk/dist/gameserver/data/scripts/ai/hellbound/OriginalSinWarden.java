@@ -24,7 +24,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class OriginalSinWarden extends Fighter
+public final class OriginalSinWarden extends Fighter
 {
 	/**
 	 * Field servants1.

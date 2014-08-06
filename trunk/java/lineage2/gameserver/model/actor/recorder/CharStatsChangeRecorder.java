@@ -103,9 +103,9 @@ public class CharStatsChangeRecorder<T extends Creature>
 	/**
 	 * Field _abnormalEffects.
 	 */
-	protected TIntArrayList _abnormalEffects = new TIntArrayList();
+	protected final TIntArrayList _abnormalEffects = new TIntArrayList();
 	
-	protected FastList<Integer> _aveList = new FastList<>();
+	protected final FastList<Integer> _aveList = new FastList<>();
 	
 	/**
 	 * Constructor for CharStatsChangeRecorder.

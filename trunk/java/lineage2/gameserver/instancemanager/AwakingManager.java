@@ -62,19 +62,19 @@ public class AwakingManager implements OnPlayerEnterListener
 	/**
 	 * Field _CA.
 	 */
-	private static TIntIntHashMap _CA = new TIntIntHashMap(69);
+	private static final TIntIntHashMap _CA = new TIntIntHashMap(69);
 	/**
 	 * Field _LegacyWeapon.
 	 */
-	private static TIntIntHashMap _LegacyWeapon = new TIntIntHashMap(36);
+	private static final TIntIntHashMap _LegacyWeapon = new TIntIntHashMap(36);
 	/**
 	 * Field _AwakenPower.
 	 */
-	private static TIntIntHashMap _AwakenPower = new TIntIntHashMap(8);
+	private static final TIntIntHashMap _AwakenPower = new TIntIntHashMap(8);
 	/**
 	 * Field _AwakenPower.
 	 */
-	private static TIntIntHashMap _CloakDualClass = new TIntIntHashMap(8);
+	private static final TIntIntHashMap _CloakDualClass = new TIntIntHashMap(8);
 	
 	/**
 	 * Field _AlterSigel.

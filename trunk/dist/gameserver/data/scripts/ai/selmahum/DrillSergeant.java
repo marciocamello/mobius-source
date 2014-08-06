@@ -25,7 +25,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class DrillSergeant extends Fighter
+public final class DrillSergeant extends Fighter
 {
 	/**
 	 * Field recruits.

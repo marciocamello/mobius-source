@@ -40,7 +40,7 @@ public class EnchantScrollManager
 	/**
 	 * Field _scrolls.
 	 */
-	private static TIntObjectHashMap<EnchantScrollInfo> _scrolls = new TIntObjectHashMap<>();
+	private static final TIntObjectHashMap<EnchantScrollInfo> _scrolls = new TIntObjectHashMap<>();
 	
 	/**
 	 * Method load.

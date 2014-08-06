@@ -25,7 +25,7 @@ import lineage2.gameserver.scripts.Functions;
 /**
  * @author Iqman
  */
-public class NpcWarriorAI extends Fighter
+public final class NpcWarriorAI extends Fighter
 {
 	private NpcInstance target = null;
 	

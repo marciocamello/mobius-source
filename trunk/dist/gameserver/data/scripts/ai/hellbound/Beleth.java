@@ -25,7 +25,7 @@ import bosses.BelethManager;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Beleth extends Mystic
+public final class Beleth extends Mystic
 {
 	/**
 	 * Field lastFactionNotifyTime.

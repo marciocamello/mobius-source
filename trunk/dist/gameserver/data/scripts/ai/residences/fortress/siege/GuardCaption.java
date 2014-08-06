@@ -28,7 +28,7 @@ import ai.residences.SiegeGuardFighter;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GuardCaption extends SiegeGuardFighter
+public final class GuardCaption extends SiegeGuardFighter
 {
 	/**
 	 * Constructor for GuardCaption.

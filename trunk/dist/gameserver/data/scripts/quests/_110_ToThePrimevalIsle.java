@@ -19,9 +19,9 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _110_ToThePrimevalIsle extends Quest implements ScriptFile
 {
-	int ANTON = 31338;
-	int MARQUEZ = 32113;
-	int ANCIENT_BOOK = 8777;
+	final int ANTON = 31338;
+	final int MARQUEZ = 32113;
+	final int ANCIENT_BOOK = 8777;
 	
 	@Override
 	public void onLoad()

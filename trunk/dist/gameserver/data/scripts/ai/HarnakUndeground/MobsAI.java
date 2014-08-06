@@ -30,7 +30,7 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 
-public class MobsAI extends Fighter
+public final class MobsAI extends Fighter
 {
 	private static final Location moveLoc1 = new Location(-107930, 206328, -10872);
 	private static final Location moveLoc2 = new Location(-107930, 208861, -10872);

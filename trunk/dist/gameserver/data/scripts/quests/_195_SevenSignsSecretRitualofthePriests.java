@@ -31,16 +31,16 @@ import ai.GuardofDawnStat;
 
 public class _195_SevenSignsSecretRitualofthePriests extends Quest implements ScriptFile
 {
-	private static int ClaudiaAthebaldt = 31001;
-	private static int John = 32576;
-	private static int Raymond = 30289;
-	private static int LightofDawn = 32575;
-	private static int IdentityConfirmDevice = 32578;
-	private static int PasswordEntryDevice = 32577;
-	private static int IasonHeine = 30969;
-	private static int BookShelf = 32580;
-	private static int GuardsoftheDawnIdentityCard = 13822;
-	private static int EmperorShunaimansContract = 13823;
+	private static final int ClaudiaAthebaldt = 31001;
+	private static final int John = 32576;
+	private static final int Raymond = 30289;
+	private static final int LightofDawn = 32575;
+	private static final int IdentityConfirmDevice = 32578;
+	private static final int PasswordEntryDevice = 32577;
+	private static final int IasonHeine = 30969;
+	private static final int BookShelf = 32580;
+	private static final int GuardsoftheDawnIdentityCard = 13822;
+	private static final int EmperorShunaimansContract = 13823;
 	private static final int door1 = 17240001;
 	private static final int door2 = 17240002;
 	private static final int door3 = 17240003;

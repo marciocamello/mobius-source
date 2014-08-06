@@ -19,9 +19,9 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _642_APowerfulPrimevalCreature extends Quest implements ScriptFile
 {
-	private static int Dinn = 32105;
-	private static int Ancient_Egg = 18344;
-	private static int[] Dino =
+	private static final int Dinn = 32105;
+	private static final int Ancient_Egg = 18344;
+	private static final int[] Dino =
 	{
 		22196,
 		22197,
@@ -46,7 +46,7 @@ public class _642_APowerfulPrimevalCreature extends Quest implements ScriptFile
 		22744,
 		22745
 	};
-	private static int[] Rewards =
+	private static final int[] Rewards =
 	{
 		8690,
 		8692,
@@ -60,10 +60,10 @@ public class _642_APowerfulPrimevalCreature extends Quest implements ScriptFile
 		8708,
 		8710
 	};
-	private static int Dinosaur_Tissue = 8774;
-	private static int Dinosaur_Egg = 8775;
-	private static int Dinosaur_Tissue_Chance = 33;
-	private static int Dinosaur_Egg_Chance = 1;
+	private static final int Dinosaur_Tissue = 8774;
+	private static final int Dinosaur_Egg = 8775;
+	private static final int Dinosaur_Tissue_Chance = 33;
+	private static final int Dinosaur_Egg_Chance = 1;
 	
 	public _642_APowerfulPrimevalCreature()
 	{

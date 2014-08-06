@@ -29,7 +29,7 @@ import quests._10365_SeekerEscort;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SeekerEscort extends DefaultAI
+public final class SeekerEscort extends DefaultAI
 {
 	/**
 	 * Field SAY_INTERVAL. (value is 3000)

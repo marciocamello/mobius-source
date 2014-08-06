@@ -32,12 +32,12 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TeredorLairEggs extends Fighter
+public final class TeredorLairEggs extends Fighter
 {
 	/**
 	 * Field awakenedMillipede.
 	 */
-	static int awakenedMillipede = 18995;
+	static final int awakenedMillipede = 18995;
 	/**
 	 * Field teredorLarva.
 	 */
@@ -53,7 +53,7 @@ public class TeredorLairEggs extends Fighter
 	/**
 	 * Field monsterSpawnDelay.
 	 */
-	static int monsterSpawnDelay = 15;
+	static final int monsterSpawnDelay = 15;
 	/**
 	 * Field poisonId.
 	 */
@@ -140,7 +140,7 @@ public class TeredorLairEggs extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	public class TaskSetBlue implements Runnable
+	public final class TaskSetBlue implements Runnable
 	{
 		/**
 		 * Field _npc.
@@ -185,7 +185,7 @@ public class TeredorLairEggs extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	public class SpawnMonster extends RunnableImpl
+	public final class SpawnMonster extends RunnableImpl
 	{
 		/**
 		 * Field _npc.

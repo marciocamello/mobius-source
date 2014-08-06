@@ -18,7 +18,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SiegeGuardPriest extends SiegeGuard
+public final class SiegeGuardPriest extends SiegeGuard
 {
 	/**
 	 * Constructor for SiegeGuardPriest.

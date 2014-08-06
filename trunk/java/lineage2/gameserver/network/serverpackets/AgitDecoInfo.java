@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
 public class AgitDecoInfo extends L2GameServerPacket
 {
 	private static final Logger _log = LoggerFactory.getLogger(AgitDecoInfo.class);
-	private static int[] _buff =
+	private static final int[] _buff =
 	{
 		0,
 		1,
@@ -43,7 +43,7 @@ public class AgitDecoInfo extends L2GameServerPacket
 		2,
 		2
 	};
-	private static int[] _itCr8 =
+	private static final int[] _itCr8 =
 	{
 		0,
 		1,

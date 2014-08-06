@@ -33,7 +33,7 @@ import lineage2.gameserver.utils.Location;
 /**
  * @author cruel
  */
-public class SpezionNormal extends Reflection
+public final class SpezionNormal extends Reflection
 {
 	private final static int TELEPORT_CUBE = 32947;
 	private final static int SPEZION_NORMAL = 25779;

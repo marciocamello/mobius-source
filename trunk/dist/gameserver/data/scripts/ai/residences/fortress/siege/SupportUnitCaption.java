@@ -29,7 +29,7 @@ import ai.residences.SiegeGuardMystic;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SupportUnitCaption extends SiegeGuardMystic
+public final class SupportUnitCaption extends SiegeGuardMystic
 {
 	/**
 	 * Constructor for SupportUnitCaption.

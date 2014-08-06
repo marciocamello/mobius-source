@@ -22,7 +22,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class KarulBugbear extends Ranger
+public final class KarulBugbear extends Ranger
 {
 	/**
 	 * Field _firstTimeAttacked.

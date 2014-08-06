@@ -20,11 +20,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _050_LanoscosSpecialBait extends Quest implements ScriptFile
 {
-	int Lanosco = 31570;
-	int SingingWind = 21026;
-	int EssenceofWind = 7621;
-	int WindFishingLure = 7610;
-	Integer FishSkill = 1315;
+	final int Lanosco = 31570;
+	final int SingingWind = 21026;
+	final int EssenceofWind = 7621;
+	final int WindFishingLure = 7610;
+	final Integer FishSkill = 1315;
 	
 	@Override
 	public void onLoad()

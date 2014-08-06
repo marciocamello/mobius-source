@@ -23,7 +23,7 @@ import lineage2.gameserver.utils.Location;
  * @author Awakeninger
  */
 
-public class Baylor extends Reflection
+public final class Baylor extends Reflection
 {
 	private static final int Baylor = 29213;
 	private static final int Golem1 = 23123;
@@ -73,7 +73,7 @@ public class Baylor extends Reflection
 		}
 	}
 	
-	public class BaylorSpawn extends RunnableImpl
+	public final class BaylorSpawn extends RunnableImpl
 	{
 		Reflection _r;
 		

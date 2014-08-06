@@ -31,7 +31,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class InfiltrationOfficer extends Guard implements OnAttackListener, OnMagicUseListener
+public final class InfiltrationOfficer extends Guard implements OnAttackListener, OnMagicUseListener
 {
 	/**
 	 * @author Mobius

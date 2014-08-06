@@ -35,7 +35,7 @@ import org.slf4j.LoggerFactory;
  * BUTTON BR BODY BAR ADDRESS A SEL LIST VAR FORE READONL ROWS VALIGN FIXWIDTH BORDERCOLORLI BORDERCOLORDA BORDERCOLOR BORDER BGCOLOR BACKGROUND ALIGN VALU READONLY MULTIPLE SELECTED TYP TYPE MAXLENGTH CHECKED SRC Y X QUERYDELAY NOSCROLLBAR IMGSRC B FG SIZE FACE COLOR DEFFON DEFFIXEDFONT WIDTH VALUE
  * TOOLTIP NAME MIN MAX HEIGHT DISABLED ALIGN MSG LINK HREF ACTION ClassId fstring
  */
-// TODO [G1ta0] пересмотреть
+// TODO [G1ta0] review
 public class NpcHtmlMessage extends L2GameServerPacket
 {
 	protected static final Logger _log = LoggerFactory.getLogger(NpcHtmlMessage.class);
@@ -45,7 +45,7 @@ public class NpcHtmlMessage extends L2GameServerPacket
 	protected int _npcObjId;
 	protected String _html;
 	protected String _file = null;
-	protected List<String> _replaces = new ArrayList<>();
+	protected final List<String> _replaces = new ArrayList<>();
 	protected boolean have_appends = false;
 	
 	public NpcHtmlMessage(Player player, int npcId, String filename, int val)
@@ -58,7 +58,7 @@ public class NpcHtmlMessage extends L2GameServerPacket
 			
 			if ((filename != null) && filename.equalsIgnoreCase("npcdefault.htm"))
 			{
-				setHtml(""); // контент задается скриптами через DialogAppend_
+				setHtml(""); // content is defined through scripts DialogAppend_
 			}
 			else
 			{
@@ -66,7 +66,7 @@ public class NpcHtmlMessage extends L2GameServerPacket
 			}
 			
 			String replaces = "";
-			// Добавить в конец странички текст, определенный в скриптах.
+			// Add to the end of the page the text defined in the scripts.
 			Object[] script_args = new Object[]
 			{
 				new Integer(val)
@@ -97,7 +97,7 @@ public class NpcHtmlMessage extends L2GameServerPacket
 	{
 		this(player, npc.getNpcId(), filename, val);
 		_npcObjId = npc.getObjectId();
-		// FIXME [G1ta0] не есть истина, исправить
+		// FIXME [G1ta0] is not true, correct
 		player.setLastNpc(npc);
 		replace("%npcId%", String.valueOf(npc.getNpcId()));
 		replace("%npcname%", npc.getName());
@@ -187,8 +187,7 @@ public class NpcHtmlMessage extends L2GameServerPacket
 			return;
 		}
 		
-		if (_file != null) // TODO может быть не очень хорошо здесь это
-		// делать...
+		if (_file != null) // TODO may not be very good to do it here...
 		{
 			if (player.isGM())
 			{

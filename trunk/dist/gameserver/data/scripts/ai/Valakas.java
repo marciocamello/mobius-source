@@ -37,7 +37,7 @@ import bosses.ValakasManager;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Valakas extends DefaultAI
+public final class Valakas extends DefaultAI
 {
 	/**
 	 * Field s_regen. Field s_berserk. Field s_defence_down. Field s_fear. Field s_lava_skin.

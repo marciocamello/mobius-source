@@ -29,7 +29,7 @@ import lineage2.gameserver.tables.SkillTable;
 /**
  * @author KilRoy
  */
-public class OctavisNormalStage2 extends Fighter
+public final class OctavisNormalStage2 extends Fighter
 {
 	private static final int Skill_EternalBlizzard = 6274;
 	private long _eternalblizzardReuseTimer = 0;

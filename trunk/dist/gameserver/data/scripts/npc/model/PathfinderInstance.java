@@ -30,7 +30,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class PathfinderInstance extends NpcInstance
+public final class PathfinderInstance extends NpcInstance
 {
 	/**
 	 *

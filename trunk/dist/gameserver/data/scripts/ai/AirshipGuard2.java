@@ -22,7 +22,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class AirshipGuard2 extends Guard
+public final class AirshipGuard2 extends Guard
 {
 	/**
 	 * Field points.

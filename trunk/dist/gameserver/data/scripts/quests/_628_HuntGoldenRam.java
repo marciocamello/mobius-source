@@ -20,12 +20,12 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _628_HuntGoldenRam extends Quest implements ScriptFile
 {
-	private static int KAHMAN = 31554;
-	private static int CHITIN = 7248;
-	private static int CHITIN2 = 7249;
-	private static int RECRUIT = 7246;
-	private static int SOLDIER = 7247;
-	private static int CHANCE = 49;
+	private static final int KAHMAN = 31554;
+	private static final int CHITIN = 7248;
+	private static final int CHITIN2 = 7249;
+	private static final int RECRUIT = 7246;
+	private static final int SOLDIER = 7247;
+	private static final int CHANCE = 49;
 	
 	@Override
 	public void onLoad()

@@ -23,7 +23,7 @@ import lineage2.gameserver.utils.NpcUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Venom extends Fighter
+public final class Venom extends Fighter
 {
 	/**
 	 * Constructor for Venom.

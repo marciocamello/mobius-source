@@ -19,11 +19,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _028_ChestCaughtWithABaitOfIcyAir extends Quest implements ScriptFile
 {
-	int OFulle = 31572;
-	int Kiki = 31442;
-	int BigYellowTreasureChest = 6503;
-	int KikisLetter = 7626;
-	int ElvenRing = 881;
+	final int OFulle = 31572;
+	final int Kiki = 31442;
+	final int BigYellowTreasureChest = 6503;
+	final int KikisLetter = 7626;
+	final int ElvenRing = 881;
 	
 	@Override
 	public void onLoad()

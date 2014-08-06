@@ -32,7 +32,7 @@ import quests._698_BlocktheLordsEscape;
 /**
  * @author pchayka
  */
-public class HeartInfinityDefence extends Reflection
+public final class HeartInfinityDefence extends Reflection
 {
 	private static final int DeadTumor = 32535;
 	private static final int AliveTumor = 18708;

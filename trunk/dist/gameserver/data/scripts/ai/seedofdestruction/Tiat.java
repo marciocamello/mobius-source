@@ -36,7 +36,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Tiat extends Fighter
+public final class Tiat extends Fighter
 {
 	/**
 	 * Field TIAT_TRANSFORMATION_SKILL_ID. (value is 5974)

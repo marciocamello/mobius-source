@@ -28,7 +28,7 @@ import ai.residences.SiegeGuardRanger;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ArcherCaption extends SiegeGuardRanger
+public final class ArcherCaption extends SiegeGuardRanger
 {
 	/**
 	 * Constructor for ArcherCaption.

@@ -27,7 +27,7 @@ public class _610_MagicalPowerofWater2 extends Quest implements ScriptFile
 	private static final int ASEFA = 31372;
 	private static final int VARKAS_HOLY_ALTAR = 31560;
 	private static final int GREEN_TOTEM = 7238;
-	int ICE_HEART_OF_ASHUTAR = 7239;
+	final int ICE_HEART_OF_ASHUTAR = 7239;
 	private static final int Reward_First = 4589;
 	private static final int Reward_Last = 4594;
 	private static final int SoulOfWaterAshutar = 25316;

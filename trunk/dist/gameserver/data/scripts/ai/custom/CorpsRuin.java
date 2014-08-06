@@ -20,7 +20,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class CorpsRuin extends DefaultAI
+public final class CorpsRuin extends DefaultAI
 {
 	/**
 	 * Constructor for CorpsRuin.

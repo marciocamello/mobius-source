@@ -66,11 +66,11 @@ public class Olympiad
 	/**
 	 * Field _nonClassBasedRegisters.
 	 */
-	public static List<Integer> _nonClassBasedRegisters = new CopyOnWriteArrayList<>();
+	public static final List<Integer> _nonClassBasedRegisters = new CopyOnWriteArrayList<>();
 	/**
 	 * Field _classBasedRegisters.
 	 */
-	public static MultiValueIntegerMap _classBasedRegisters = new MultiValueIntegerMap();
+	public static final MultiValueIntegerMap _classBasedRegisters = new MultiValueIntegerMap();
 	/**
 	 * Field OLYMPIAD_HTML_PATH. (value is ""olympiad/"")
 	 */
@@ -182,7 +182,7 @@ public class Olympiad
 	/**
 	 * Field _npcs.
 	 */
-	private static List<NpcInstance> _npcs = new ArrayList<>();
+	private static final List<NpcInstance> _npcs = new ArrayList<>();
 	
 	/**
 	 * Method load.

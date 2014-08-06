@@ -31,7 +31,7 @@ import lineage2.gameserver.templates.mapregion.DomainArea;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Seed extends ScriptItemHandler
+public final class Seed extends ScriptItemHandler
 {
 	/**
 	 * Field _itemIds.

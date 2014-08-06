@@ -37,7 +37,7 @@ public class ActionRunner extends LoggerObject
 	/**
 	 * Field _instance.
 	 */
-	private static ActionRunner _instance = new ActionRunner();
+	private static final ActionRunner _instance = new ActionRunner();
 	/**
 	 * Field _futures.
 	 */

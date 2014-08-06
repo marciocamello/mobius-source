@@ -19,13 +19,13 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 
-public class Nursery extends Reflection
+public final class Nursery extends Reflection
 {
-	int Creature1 = 23033;
-	int Creature2 = 23034;
-	int Creature3 = 23035;
-	int Creature4 = 23036;
-	int Creature5 = 23037;
+	final int Creature1 = 23033;
+	final int Creature2 = 23034;
+	final int Creature3 = 23035;
+	final int Creature4 = 23036;
+	final int Creature5 = 23037;
 	int reward;
 	NpcInstance tuy;
 	@SuppressWarnings("unused")

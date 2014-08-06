@@ -19,14 +19,14 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _701_ProofofExistence extends Quest implements ScriptFile
 {
-	private static int Artius = 32559;
-	private static int DeadmansRemains = 13875;
-	private static int BansheeQueensEye = 13876;
-	private static int Enira = 25625;
-	private static int FloatingSkull1 = 22606;
-	private static int FloatingSkull2 = 22607;
-	private static int FloatingZombie1 = 22608;
-	private static int FloatingZombie2 = 22609;
+	private static final int Artius = 32559;
+	private static final int DeadmansRemains = 13875;
+	private static final int BansheeQueensEye = 13876;
+	private static final int Enira = 25625;
+	private static final int FloatingSkull1 = 22606;
+	private static final int FloatingSkull2 = 22607;
+	private static final int FloatingZombie1 = 22608;
+	private static final int FloatingZombie2 = 22609;
 	
 	@Override
 	public void onLoad()

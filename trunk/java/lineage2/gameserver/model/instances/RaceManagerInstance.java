@@ -126,7 +126,7 @@ public class RaceManagerInstance extends NpcInstance
 	/**
 	 * Field cost.
 	 */
-	protected static int cost[] =
+	protected static final int cost[] =
 	{
 		100,
 		500,

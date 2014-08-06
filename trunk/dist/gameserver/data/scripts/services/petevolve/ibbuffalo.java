@@ -26,7 +26,7 @@ import lineage2.gameserver.tables.PetDataTable.L2Pet;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ibbuffalo extends Functions
+public final class ibbuffalo extends Functions
 {
 	/**
 	 * Field BABY_BUFFALO.

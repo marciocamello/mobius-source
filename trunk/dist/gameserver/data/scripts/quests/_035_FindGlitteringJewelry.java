@@ -19,11 +19,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _035_FindGlitteringJewelry extends Quest implements ScriptFile
 {
-	int ROUGH_JEWEL = 7162;
-	int ORIHARUKON = 1893;
-	int SILVER_NUGGET = 1873;
-	int THONS = 4044;
-	int JEWEL_BOX = 7077;
+	final int ROUGH_JEWEL = 7162;
+	final int ORIHARUKON = 1893;
+	final int SILVER_NUGGET = 1873;
+	final int THONS = 4044;
+	final int JEWEL_BOX = 7077;
 	
 	@Override
 	public void onLoad()

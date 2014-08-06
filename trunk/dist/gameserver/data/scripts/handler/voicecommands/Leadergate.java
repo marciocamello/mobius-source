@@ -18,7 +18,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.skills.EffectType;
 
-public class Leadergate implements IVoicedCommandHandler, ScriptFile
+public final class Leadergate implements IVoicedCommandHandler, ScriptFile
 {
 	private final String[] _commandList = new String[]
 	{

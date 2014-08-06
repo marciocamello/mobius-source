@@ -23,7 +23,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class JiniaGuild extends Fighter
+public final class JiniaGuild extends Fighter
 {
 	/**
 	 * Constructor for JiniaGuild.

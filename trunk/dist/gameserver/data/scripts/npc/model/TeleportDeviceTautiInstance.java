@@ -23,7 +23,7 @@ import lineage2.gameserver.utils.Location;
  * @author KilRoy
  * @reworked Awakeninger
  */
-public class TeleportDeviceTautiInstance extends NpcInstance
+public final class TeleportDeviceTautiInstance extends NpcInstance
 {
 	private static final long serialVersionUID = 8347875591381814256L;
 	private boolean accepted = false;

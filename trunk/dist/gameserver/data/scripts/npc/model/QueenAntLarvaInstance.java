@@ -21,7 +21,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class QueenAntLarvaInstance extends MonsterInstance
+public final class QueenAntLarvaInstance extends MonsterInstance
 {
 	/**
 	 *

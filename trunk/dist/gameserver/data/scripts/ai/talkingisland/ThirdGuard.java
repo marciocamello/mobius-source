@@ -15,7 +15,7 @@ package ai.talkingisland;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 
-public class ThirdGuard extends TIGuardSubAI
+public final class ThirdGuard extends TIGuardSubAI
 {
 	public ThirdGuard(NpcInstance actor)
 	{

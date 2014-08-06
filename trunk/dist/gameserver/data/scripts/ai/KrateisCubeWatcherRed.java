@@ -30,7 +30,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class KrateisCubeWatcherRed extends DefaultAI
+public final class KrateisCubeWatcherRed extends DefaultAI
 {
 	/**
 	 * Field SKILLS.

@@ -22,10 +22,10 @@ import lineage2.gameserver.utils.Location;
 /**
  * @author pchayka
  */
-public class ZakenDay extends Reflection
+public final class ZakenDay extends Reflection
 {
 	private static final int Anchor = 32468;
-	private static Location[] zakenTp =
+	private static final Location[] zakenTp =
 	{
 		new Location(55272, 219080, -2952),
 		new Location(55272, 219080, -3224),

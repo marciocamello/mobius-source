@@ -19,7 +19,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class DragonRaid extends Fighter
+public final class DragonRaid extends Fighter
 {
 	/**
 	 * Field lastAttackTime.

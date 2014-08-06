@@ -21,7 +21,7 @@ import lineage2.gameserver.utils.NpcUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class DrakeBosses extends Fighter
+public final class DrakeBosses extends Fighter
 {
 	/**
 	 * Constructor for DrakeBosses.

@@ -22,7 +22,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Thomas extends Fighter
+public final class Thomas extends Fighter
 {
 	/**
 	 * Field _lastSay.

@@ -31,7 +31,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Maguen extends Fighter
+public final class Maguen extends Fighter
 {
 	/**
 	 * Field maguenStatsSkills.

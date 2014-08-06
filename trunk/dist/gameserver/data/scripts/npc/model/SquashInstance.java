@@ -23,7 +23,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SquashInstance extends SpecialMonsterInstance
+public final class SquashInstance extends SpecialMonsterInstance
 {
 	/**
 	 *

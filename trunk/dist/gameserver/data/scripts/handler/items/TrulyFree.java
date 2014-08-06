@@ -24,7 +24,7 @@ import org.apache.commons.lang3.ArrayUtils;
 /**
  * @author Gorodetskiy
  */
-public class TrulyFree extends SimpleItemHandler
+public final class TrulyFree extends SimpleItemHandler
 {
 	private static final int[] ITEM_IDS = new int[]
 	{

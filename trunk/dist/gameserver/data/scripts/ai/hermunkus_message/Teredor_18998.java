@@ -23,7 +23,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Teredor_18998 extends DefaultAI
+public final class Teredor_18998 extends DefaultAI
 {
 	/**
 	 * Field SKILL_ID. (value is 16021)

@@ -30,7 +30,7 @@ import lineage2.gameserver.templates.InstantZone;
 import lineage2.gameserver.utils.Location;
 import npc.model.PathfinderInstance;
 
-public class KamalokaNightmare extends Reflection
+public final class KamalokaNightmare extends Reflection
 {
 	private static final int PATHFINDER = 32485;
 	

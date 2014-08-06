@@ -23,7 +23,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class NaiaCube extends DefaultAI
+public final class NaiaCube extends DefaultAI
 {
 	/**
 	 * Constructor for NaiaCube.

@@ -37,7 +37,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class CommunityStats implements ScriptFile, ICommunityBoardHandler
+public final class CommunityStats implements ScriptFile, ICommunityBoardHandler
 {
 	/**
 	 * Field _log.
@@ -100,7 +100,7 @@ public class CommunityStats implements ScriptFile, ICommunityBoardHandler
 	
 	/**
 	 */
-	public class CBStatMan
+	public final class CBStatMan
 	{
 		/**
 		 * Field PlayerId.

@@ -47,7 +47,7 @@ public class SkillTable
 	/**
 	 * Field identifySkills.
 	 */
-	public Map<Integer, Integer> identifySkills = new HashMap<>();
+	public final Map<Integer, Integer> identifySkills = new HashMap<>();
 	/**
 	 * Field _skills.
 	 */

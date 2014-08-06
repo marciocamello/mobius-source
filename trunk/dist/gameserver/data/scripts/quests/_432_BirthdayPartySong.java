@@ -19,10 +19,10 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _432_BirthdayPartySong extends Quest implements ScriptFile
 {
-	private static int MELODY_MAESTRO_OCTAVIA = 31043;
-	private static int ROUGH_HEWN_ROCK_GOLEMS = 21103;
-	private static int RED_CRYSTALS = 7541;
-	private static int BIRTHDAY_ECHO_CRYSTAL = 7061;
+	private static final int MELODY_MAESTRO_OCTAVIA = 31043;
+	private static final int ROUGH_HEWN_ROCK_GOLEMS = 21103;
+	private static final int RED_CRYSTALS = 7541;
+	private static final int BIRTHDAY_ECHO_CRYSTAL = 7061;
 	
 	@Override
 	public void onLoad()

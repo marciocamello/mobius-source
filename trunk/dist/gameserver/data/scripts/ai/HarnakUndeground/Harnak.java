@@ -27,7 +27,7 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.tables.SkillTable;
 import quests._10338_SeizeYourDestiny;
 
-public class Harnak extends Fighter
+public final class Harnak extends Fighter
 {
 	private static final int[] SKILL_IDS =
 	{

@@ -24,7 +24,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class OiAriosh extends Fighter
+public final class OiAriosh extends Fighter
 {
 	/**
 	 * Field MOB. (value is 18556)

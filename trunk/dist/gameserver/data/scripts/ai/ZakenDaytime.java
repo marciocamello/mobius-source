@@ -29,7 +29,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ZakenDaytime extends Fighter
+public final class ZakenDaytime extends Fighter
 {
 	/**
 	 * Field _locations.

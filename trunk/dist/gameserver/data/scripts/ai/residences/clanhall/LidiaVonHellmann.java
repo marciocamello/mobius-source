@@ -26,7 +26,7 @@ import ai.residences.SiegeGuardFighter;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class LidiaVonHellmann extends SiegeGuardFighter
+public final class LidiaVonHellmann extends SiegeGuardFighter
 {
 	/**
 	 * Field DRAIN_SKILL.

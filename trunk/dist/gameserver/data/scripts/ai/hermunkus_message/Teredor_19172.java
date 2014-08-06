@@ -24,7 +24,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Teredor_19172 extends Fighter
+public final class Teredor_19172 extends Fighter
 {
 	/**
 	 * Field ATTACK_IDS.

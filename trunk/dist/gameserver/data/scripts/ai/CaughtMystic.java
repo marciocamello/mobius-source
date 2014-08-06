@@ -22,7 +22,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class CaughtMystic extends Mystic
+public final class CaughtMystic extends Mystic
 {
 	/**
 	 * Field TIME_TO_LIVE. (value is 60000)

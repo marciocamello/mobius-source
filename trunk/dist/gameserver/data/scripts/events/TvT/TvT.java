@@ -60,7 +60,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
+public final class TvT extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
 {
 	/**
 	 * Field _log.
@@ -70,7 +70,7 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 	/**
 	 * @author Mobius
 	 */
-	public class StartTask extends RunnableImpl
+	public final class StartTask extends RunnableImpl
 	{
 		/**
 		 * Method runImpl.
@@ -167,19 +167,19 @@ public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTel
 	/**
 	 * Field _zone.
 	 */
-	private static Zone _zone = ReflectionUtils.getZone("[colosseum_battle]");
+	private static final Zone _zone = ReflectionUtils.getZone("[colosseum_battle]");
 	/**
 	 * Field _zoneListener.
 	 */
-	private static ZoneListener _zoneListener = new ZoneListener();
+	private static final ZoneListener _zoneListener = new ZoneListener();
 	/**
 	 * Field team1spawn.
 	 */
-	private static Territory team1spawn = new Territory().add(new Polygon().add(149878, 47505).add(150262, 47513).add(150502, 47233).add(150507, 46300).add(150256, 46002).add(149903, 46005).setZmin(-3408).setZmax(-3308));
+	private static final Territory team1spawn = new Territory().add(new Polygon().add(149878, 47505).add(150262, 47513).add(150502, 47233).add(150507, 46300).add(150256, 46002).add(149903, 46005).setZmin(-3408).setZmax(-3308));
 	/**
 	 * Field team2spawn.
 	 */
-	private static Territory team2spawn = new Territory().add(new Polygon().add(149027, 46005).add(148686, 46003).add(148448, 46302).add(148449, 47231).add(148712, 47516).add(149014, 47527).setZmin(-3408).setZmax(-3308));
+	private static final Territory team2spawn = new Territory().add(new Polygon().add(149027, 46005).add(148686, 46003).add(148448, 46302).add(148449, 47231).add(148712, 47516).add(149014, 47527).setZmin(-3408).setZmax(-3308));
 	
 	/**
 	 * Method onLoad.

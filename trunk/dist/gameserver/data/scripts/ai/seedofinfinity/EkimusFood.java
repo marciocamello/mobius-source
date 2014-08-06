@@ -23,7 +23,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class EkimusFood extends DefaultAI
+public final class EkimusFood extends DefaultAI
 {
 	/**
 	 * Field _route1.

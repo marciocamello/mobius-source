@@ -21,7 +21,7 @@ import lineage2.gameserver.network.serverpackets.ExChangeNicknameNColor;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class NameColor extends SimpleItemHandler
+public final class NameColor extends SimpleItemHandler
 {
 	/**
 	 * Field ITEM_IDS.

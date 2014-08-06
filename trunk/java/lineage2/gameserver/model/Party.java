@@ -99,7 +99,7 @@ public class Party implements PlayerGroup
 	/**
 	 * Field _tacticalSigns.
 	 */
-	private static Map<Integer, GameObject> _tacticalSigns = new HashMap<>(4);
+	private static final Map<Integer, GameObject> _tacticalSigns = new HashMap<>(4);
 	/**
 	 * Field _partyLvl.
 	 */

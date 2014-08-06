@@ -24,7 +24,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TreasureChestInstance extends ChestInstance
+public final class TreasureChestInstance extends ChestInstance
 {
 	/**
 	 *

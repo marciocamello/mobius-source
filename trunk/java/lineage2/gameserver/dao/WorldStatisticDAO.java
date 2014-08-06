@@ -63,7 +63,7 @@ public class WorldStatisticDAO
 	// Select winners
 	private static final String SELECT_GLOBAL_WINNERS = "SELECT ws.objId, c.char_name, ws.value FROM world_statistic_winners ws LEFT JOIN characters c ON c.obj_Id = ws.objId WHERE ws.categoryId=? ORDER BY ws.value DESC, ws.date DESC LIMIT ?";
 	private static final String SELECT_MONTHLY_WINNERS = "SELECT ws.objId, c.char_name, ws.value FROM world_statistic_winners_monthly ws LEFT JOIN characters c ON c.obj_Id = ws.objId WHERE ws.categoryId=? ORDER BY ws.value DESC, ws.date DESC LIMIT ?";
-	private static WorldStatisticDAO ourInstance = new WorldStatisticDAO();
+	private static final WorldStatisticDAO ourInstance = new WorldStatisticDAO();
 	private final Lock writeLock = new ReentrantReadWriteLock().writeLock();
 	
 	private WorldStatisticDAO()

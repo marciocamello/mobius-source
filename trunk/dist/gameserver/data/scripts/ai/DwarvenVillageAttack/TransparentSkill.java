@@ -17,7 +17,7 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 
-public class TransparentSkill extends DefaultAI
+public final class TransparentSkill extends DefaultAI
 {
 	private static final int SKILL_ID = 14649;
 	

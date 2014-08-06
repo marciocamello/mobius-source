@@ -30,7 +30,7 @@ import ai.residences.SiegeGuardFighter;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class AlfredVonHellmann extends SiegeGuardFighter
+public final class AlfredVonHellmann extends SiegeGuardFighter
 {
 	/**
 	 * Field DAMAGE_SKILL.

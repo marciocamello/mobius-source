@@ -29,36 +29,15 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GuardofDawn extends DefaultAI
+public final class GuardofDawn extends DefaultAI
 {
-	/**
-	 * Field _aggrorange. (value is 150)
-	 */
 	private static final int _aggrorange = 150;
-	/**
-	 * Field _skill.
-	 */
 	private static final Skill _skill = SkillTable.getInstance().getInfo(5978, 1);
-	/**
-	 * Field _locStart.
-	 */
 	private Location _locStart = null;
-	/**
-	 * Field _locEnd.
-	 */
 	private Location _locEnd = null;
-	/**
-	 * Field _locTele.
-	 */
 	private Location _locTele = null;
-	/**
-	 * Field moveToEnd.
-	 */
 	private boolean moveToEnd = true;
-	/**
-	 * Field noCheckPlayers.
-	 */
-	boolean noCheckPlayers = false;
+	private boolean noCheckPlayers = false;
 	
 	/**
 	 * Constructor for GuardofDawn.
@@ -78,7 +57,7 @@ public class GuardofDawn extends DefaultAI
 	/**
 	 * @author Mobius
 	 */
-	public class Teleportation extends RunnableImpl
+	public final class Teleportation extends RunnableImpl
 	{
 		/**
 		 * Field _telePoint.

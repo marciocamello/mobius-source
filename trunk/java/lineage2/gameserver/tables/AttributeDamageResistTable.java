@@ -38,9 +38,9 @@ public class AttributeDamageResistTable
 	/**
 	 * Field _log.
 	 */
-	private static Logger _log = LoggerFactory.getLogger(AttributeDamageResistTable.class);
+	private static final Logger _log = LoggerFactory.getLogger(AttributeDamageResistTable.class);
 	
-	private static ArrayList<AttributeCap> _cappedAttributeList = new ArrayList<>();
+	private static final ArrayList<AttributeCap> _cappedAttributeList = new ArrayList<>();
 	
 	private static Double _baseAtk;
 	private static Double _baseDef;
@@ -48,23 +48,19 @@ public class AttributeDamageResistTable
 	private static Integer _baseCap;
 	private static Integer _overCap;
 	
-	static final Comparator<AttributeCap> CapOrder = new Comparator<AttributeCap>()
+	static final Comparator<AttributeCap> CapOrder = (a1, a2) ->
 	{
-		@Override
-		public int compare(AttributeCap a1, AttributeCap a2)
+		if (a2.getCap() < a1.getCap())
 		{
-			if (a2.getCap() < a1.getCap())
-			{
-				return -1;
-			}
-			else if (a1.getCap() == a2.getCap())
-			{
-				return 0;
-			}
-			else
-			{
-				return 1;
-			}
+			return -1;
+		}
+		else if (a1.getCap() == a2.getCap())
+		{
+			return 0;
+		}
+		else
+		{
+			return 1;
 		}
 	};
 	

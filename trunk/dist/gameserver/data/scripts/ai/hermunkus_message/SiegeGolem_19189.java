@@ -35,7 +35,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SiegeGolem_19189 extends DefaultAI
+public final class SiegeGolem_19189 extends DefaultAI
 {
 	/**
 	 * Field SKILL_ID. (value is 16024)

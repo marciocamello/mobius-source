@@ -39,7 +39,7 @@ import quests._697_DefendtheHallofErosion;
  * @author pchayka
  */
 
-public class ErosionHallDefence extends Reflection
+public final class ErosionHallDefence extends Reflection
 {
 	private static final int AliveTumor = 18708;
 	private static final int DeadTumor = 32535;
@@ -135,7 +135,7 @@ public class ErosionHallDefence extends Reflection
 		timerTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new TimerTask(), 298 * 1000L, 5 * 60 * 1000L);
 	}
 	
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)

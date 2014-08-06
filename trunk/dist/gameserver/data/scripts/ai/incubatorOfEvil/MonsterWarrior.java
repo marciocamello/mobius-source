@@ -23,7 +23,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 /**
  * @author Iqman
  */
-public class MonsterWarrior extends Fighter
+public final class MonsterWarrior extends Fighter
 {
 	private Creature target = null;
 	

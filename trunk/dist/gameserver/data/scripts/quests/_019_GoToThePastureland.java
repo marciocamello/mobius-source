@@ -19,9 +19,9 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _019_GoToThePastureland extends Quest implements ScriptFile
 {
-	int VLADIMIR = 31302;
-	int TUNATUN = 31537;
-	int BEAST_MEAT = 7547;
+	final int VLADIMIR = 31302;
+	final int TUNATUN = 31537;
+	final int BEAST_MEAT = 7547;
 	
 	@Override
 	public void onLoad()

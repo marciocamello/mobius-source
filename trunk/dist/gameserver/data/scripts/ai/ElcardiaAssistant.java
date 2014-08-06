@@ -41,7 +41,7 @@ import quests._10296_SevenSignsPoweroftheSeal;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ElcardiaAssistant extends DefaultAI
+public final class ElcardiaAssistant extends DefaultAI
 {
 	/**
 	 * Field _thinking.

@@ -42,7 +42,7 @@ import npc.model.residences.SiegeGuardInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GustavInstance extends SiegeGuardInstance implements _34SiegeGuard
+public final class GustavInstance extends SiegeGuardInstance implements _34SiegeGuard
 {
 	/**
 	 *

@@ -25,7 +25,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TiatsTrap extends DefaultAI
+public final class TiatsTrap extends DefaultAI
 {
 	/**
 	 * Field holdTraps.

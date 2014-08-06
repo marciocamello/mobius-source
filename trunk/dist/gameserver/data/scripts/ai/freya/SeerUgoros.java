@@ -27,7 +27,7 @@ import quests._288_HandleWithCare;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SeerUgoros extends Mystic
+public final class SeerUgoros extends Mystic
 {
 	/**
 	 * Field _weeds.

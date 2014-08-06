@@ -34,7 +34,7 @@ import lineage2.gameserver.utils.Location;
 /**
  * @author KilRoy
  */
-public class EvilIncubator extends Reflection
+public final class EvilIncubator extends Reflection
 {
 	private static final int ADOLPH_HELPERS1 = 33171;
 	private static final int ADOLPH_HELPERS2 = 33172;

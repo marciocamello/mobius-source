@@ -220,7 +220,7 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile
 		public Map<NpcInstance, Boolean> npclist;
 	}
 	
-	private static TIntObjectHashMap<World> worlds = new TIntObjectHashMap<>();
+	private static final TIntObjectHashMap<World> worlds = new TIntObjectHashMap<>();
 	
 	@Override
 	public void onLoad()

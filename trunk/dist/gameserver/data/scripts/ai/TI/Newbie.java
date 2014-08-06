@@ -30,7 +30,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Newbie extends DefaultAI
+public final class Newbie extends DefaultAI
 {
 	/**
 	 * Field _mageBuff.

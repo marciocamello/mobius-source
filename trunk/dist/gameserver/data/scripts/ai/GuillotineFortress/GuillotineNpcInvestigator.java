@@ -21,7 +21,7 @@ import lineage2.gameserver.scripts.Functions;
 /**
  * User: Mangol Date: 17.12.12 Time: 19:08 Location: Guillotine Fortress
  */
-public class GuillotineNpcInvestigator extends GuillotineNpcPriest
+public final class GuillotineNpcInvestigator extends GuillotineNpcPriest
 {
 	
 	public GuillotineNpcInvestigator(NpcInstance actor)

@@ -19,11 +19,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _029_ChestCaughtWithABaitOfEarth extends Quest implements ScriptFile
 {
-	int Willie = 31574;
-	int Anabel = 30909;
-	int SmallPurpleTreasureChest = 6507;
-	int SmallGlassBox = 7627;
-	int PlatedLeatherGloves = 2455;
+	final int Willie = 31574;
+	final int Anabel = 30909;
+	final int SmallPurpleTreasureChest = 6507;
+	final int SmallGlassBox = 7627;
+	final int PlatedLeatherGloves = 2455;
 	
 	@Override
 	public void onLoad()

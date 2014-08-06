@@ -27,7 +27,7 @@ public class DatabaseFactory extends BasicDataSource
 	/**
 	 * Field _instance.
 	 */
-	private static DatabaseFactory _instance = new DatabaseFactory();
+	private static final DatabaseFactory _instance = new DatabaseFactory();
 	
 	/**
 	 * Method getInstance.

@@ -19,11 +19,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _034_InSearchOfClothes extends Quest implements ScriptFile
 {
-	int SPINNERET = 7528;
-	int SUEDE = 1866;
-	int THREAD = 1868;
-	int SPIDERSILK = 1493;
-	int MYSTERIOUS_CLOTH = 7076;
+	final int SPINNERET = 7528;
+	final int SUEDE = 1866;
+	final int THREAD = 1868;
+	final int SPIDERSILK = 1493;
+	final int MYSTERIOUS_CLOTH = 7076;
 	
 	@Override
 	public void onLoad()

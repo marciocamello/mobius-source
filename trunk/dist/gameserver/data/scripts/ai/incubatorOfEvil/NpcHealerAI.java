@@ -25,7 +25,7 @@ import lineage2.gameserver.scripts.Functions;
 /**
  * @author Iqman
  */
-public class NpcHealerAI extends Priest
+public final class NpcHealerAI extends Priest
 {
 	private NpcInstance target = null;
 	

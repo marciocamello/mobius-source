@@ -35,11 +35,11 @@ public class EnchantStatBonusTable
 	/**
 	 * Field _log.
 	 */
-	private static Logger _log = LoggerFactory.getLogger(EnchantStatBonusTable.class);
+	private static final Logger _log = LoggerFactory.getLogger(EnchantStatBonusTable.class);
 	
-	private static HashMap<Integer, List<enchantStat>> _enchantStatListArmor = new HashMap<>();
+	private static final HashMap<Integer, List<enchantStat>> _enchantStatListArmor = new HashMap<>();
 	
-	private static HashMap<WeaponType, List<enchantStat>> _enchantStatListWeapon = new HashMap<>();
+	private static final HashMap<WeaponType, List<enchantStat>> _enchantStatListWeapon = new HashMap<>();
 	
 	private List<enchantStat> _enchantDefenseList;
 	

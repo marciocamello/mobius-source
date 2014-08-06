@@ -35,7 +35,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class CofferofShadows extends Functions implements ScriptFile, OnPlayerEnterListener
+public final class CofferofShadows extends Functions implements ScriptFile, OnPlayerEnterListener
 {
 	/**
 	 * Field COFFER_PRICE.

@@ -31,7 +31,7 @@ import gnu.trove.set.hash.TIntHashSet;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SoulCrystals extends ScriptItemHandler
+public final class SoulCrystals extends ScriptItemHandler
 {
 	/**
 	 * Field _itemIds.

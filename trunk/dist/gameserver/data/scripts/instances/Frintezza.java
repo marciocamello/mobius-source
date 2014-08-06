@@ -47,7 +47,7 @@ import org.apache.commons.lang3.ArrayUtils;
  *         <p/>
  */
 
-public class Frintezza extends Reflection
+public final class Frintezza extends Reflection
 {
 	private static final int HallAlarmDevice = 18328;
 	private static final int DarkChoirPlayer = 18339;
@@ -107,7 +107,7 @@ public class Frintezza extends Reflection
 		18338
 	};
 	
-	static int _intervalOfFrintezzaSongs = 30000;
+	static final int _intervalOfFrintezzaSongs = 30000;
 	
 	public static class NpcLocation extends Location
 	{
@@ -129,13 +129,13 @@ public class Frintezza extends Reflection
 	}
 	
 	// The Boss
-	static NpcLocation frintezzaSpawn = new NpcLocation(-87784, -155090, -9080, 16048, 29045);
+	static final NpcLocation frintezzaSpawn = new NpcLocation(-87784, -155090, -9080, 16048, 29045);
 	
 	// Weak Scarlet Van Halisha.
-	static NpcLocation scarletSpawnWeak = new NpcLocation(-87784, -153288, -9176, 16384, 29046);
+	static final NpcLocation scarletSpawnWeak = new NpcLocation(-87784, -153288, -9176, 16384, 29046);
 	
 	// Portrait spawns - 4 portraits = 4 spawns
-	static NpcLocation[] portraitSpawns =
+	static final NpcLocation[] portraitSpawns =
 	{
 		new NpcLocation(-86136, -153960, -9168, 35048, 29048),
 		new NpcLocation(-86184, -152456, -9168, 28205, 29049),
@@ -144,7 +144,7 @@ public class Frintezza extends Reflection
 	};
 	
 	// Demon spawns - 4 portraits = 4 demons
-	static NpcLocation[] demonSpawns =
+	static final NpcLocation[] demonSpawns =
 	{
 		new NpcLocation(-86136, -153960, -9168, 35048, 29050),
 		new NpcLocation(-86184, -152456, -9168, 28205, 29051),
@@ -890,7 +890,7 @@ public class Frintezza extends Reflection
 		}
 	}
 	
-	public class CurrentHpListener implements OnCurrentHpDamageListener
+	public final class CurrentHpListener implements OnCurrentHpDamageListener
 	{
 		@Override
 		public void onCurrentHpDamage(Creature actor, double damage, Creature attacker, Skill skill)
@@ -1030,7 +1030,7 @@ public class Frintezza extends Reflection
 		}
 	}
 	
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)

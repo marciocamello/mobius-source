@@ -26,8 +26,8 @@ public class ArcanManager
 	private static ArcanManager _instance;
 	private static final long _taskDelay = 30 * 60 * 1000L; // 30min
 	private static int _Stage = 0;
-	static int _BLUE = 262001;
-	static int _RED = 262003;
+	static final int _BLUE = 262001;
+	static final int _RED = 262003;
 	
 	public static ArcanManager getInstance()
 	{

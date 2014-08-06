@@ -19,13 +19,13 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _699_GuardianoftheSkies extends Quest implements ScriptFile
 {
-	private static int Lekon = 32557;
-	private static int VulturesGoldenFeather = 13871;
-	private static int VultureRider1 = 22614;
-	private static int VultureRider2 = 22615;
-	private static int EliteRider = 25633;
-	private static int Valdstone = 25623;
-	private static int _featherprice = 5000;
+	private static final int Lekon = 32557;
+	private static final int VulturesGoldenFeather = 13871;
+	private static final int VultureRider1 = 22614;
+	private static final int VultureRider2 = 22615;
+	private static final int EliteRider = 25633;
+	private static final int Valdstone = 25623;
+	private static final int _featherprice = 5000;
 	
 	@Override
 	public void onLoad()

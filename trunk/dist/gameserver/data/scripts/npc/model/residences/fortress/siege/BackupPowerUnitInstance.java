@@ -28,7 +28,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class BackupPowerUnitInstance extends NpcInstance
+public final class BackupPowerUnitInstance extends NpcInstance
 {
 	/**
 	 *

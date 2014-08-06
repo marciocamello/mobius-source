@@ -28,7 +28,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class HandysBlockCheckerInstance extends NpcInstance
+public final class HandysBlockCheckerInstance extends NpcInstance
 {
 	/**
 	 *

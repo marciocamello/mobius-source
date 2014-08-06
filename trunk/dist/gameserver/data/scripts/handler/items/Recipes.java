@@ -29,7 +29,7 @@ import lineage2.gameserver.templates.item.RecipeTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Recipes extends ScriptItemHandler
+public final class Recipes extends ScriptItemHandler
 {
 	/**
 	 * Field _itemIds.

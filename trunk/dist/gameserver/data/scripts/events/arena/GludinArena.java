@@ -33,7 +33,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GludinArena extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
+public final class GludinArena extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
 {
 	/**
 	 * @author Mobius

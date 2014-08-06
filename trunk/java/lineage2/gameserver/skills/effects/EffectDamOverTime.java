@@ -28,7 +28,7 @@ public class EffectDamOverTime extends Effect
 	/**
 	 * Field bleed.
 	 */
-	private static int[] bleed = new int[]
+	private static final int[] bleed = new int[]
 	{
 		12,
 		17,
@@ -46,7 +46,7 @@ public class EffectDamOverTime extends Effect
 	/**
 	 * Field poison.
 	 */
-	private static int[] poison = new int[]
+	private static final int[] poison = new int[]
 	{
 		11,
 		16,

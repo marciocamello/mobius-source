@@ -32,7 +32,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class NaiaRoomControllerInstance extends NpcInstance
+public final class NaiaRoomControllerInstance extends NpcInstance
 {
 	/**
 	 *

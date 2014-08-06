@@ -35,7 +35,7 @@ import npc.model.residences.clanhall.RainbowYetiInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class RainbowYeti extends CharacterAI
+public final class RainbowYeti extends CharacterAI
 {
 	/**
 	 * @author Mobius

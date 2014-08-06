@@ -18,7 +18,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 
-public class Hermuncus extends DefaultAI
+public final class Hermuncus extends DefaultAI
 {
 	private final boolean LAST_SPAWN;
 	

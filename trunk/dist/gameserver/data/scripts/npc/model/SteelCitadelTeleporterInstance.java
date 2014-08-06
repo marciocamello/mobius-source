@@ -23,7 +23,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SteelCitadelTeleporterInstance extends NpcInstance
+public final class SteelCitadelTeleporterInstance extends NpcInstance
 {
 	/**
 	 *

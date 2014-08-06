@@ -31,7 +31,7 @@ import lineage2.gameserver.utils.PositionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Kanabion extends Fighter
+public final class Kanabion extends Fighter
 {
 	/**
 	 * Constructor for Kanabion.

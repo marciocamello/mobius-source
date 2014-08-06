@@ -22,14 +22,14 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _197_SevenSignsTheSacredBookofSeal extends Quest implements ScriptFile
 {
-	private static int Wood = 32593;
-	private static int Orven = 30857;
-	private static int Leopard = 32594;
-	private static int Lawrence = 32595;
-	private static int ShilensEvilThoughts = 27396;
-	private static int Sofia = 32596;
-	private static int PieceofDoubt = 14354;
-	private static int MysteriousHandwrittenText = 13829;
+	private static final int Wood = 32593;
+	private static final int Orven = 30857;
+	private static final int Leopard = 32594;
+	private static final int Lawrence = 32595;
+	private static final int ShilensEvilThoughts = 27396;
+	private static final int Sofia = 32596;
+	private static final int PieceofDoubt = 14354;
+	private static final int MysteriousHandwrittenText = 13829;
 	
 	public _197_SevenSignsTheSacredBookofSeal()
 	{

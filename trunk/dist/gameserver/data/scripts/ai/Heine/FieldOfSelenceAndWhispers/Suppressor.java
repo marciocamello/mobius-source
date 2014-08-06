@@ -28,7 +28,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Suppressor extends Fighter
+public final class Suppressor extends Fighter
 {
 	/**
 	 * Field mob.

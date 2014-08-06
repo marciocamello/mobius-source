@@ -66,12 +66,12 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
+public final class CTF extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
 {
 	/**
 	 * Field _log.
 	 */
-	static Logger _log = LoggerFactory.getLogger(CTF.class.getName());
+	static final Logger _log = LoggerFactory.getLogger(CTF.class.getName());
 	/**
 	 * Field REMOVE_BUFFS. (value is false)
 	 */
@@ -146,11 +146,11 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	/**
 	 * Field MIN_PLAYERS.
 	 */
-	private static int MIN_PLAYERS = 0;
+	private static final int MIN_PLAYERS = 0;
 	/**
 	 * Field _listAllowSaveBuffs.
 	 */
-	private static int[] _listAllowSaveBuffs =
+	private static final int[] _listAllowSaveBuffs =
 	{
 		1388,
 		1389,
@@ -260,7 +260,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	/**
 	 * Field _listBuff.
 	 */
-	static int[][][] _listBuff =
+	static final int[][][] _listBuff =
 	{
 		{
 			{
@@ -314,11 +314,11 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	/**
 	 * Field ALLOW_RESTRICT_SKILLS.
 	 */
-	private static boolean ALLOW_RESTRICT_SKILLS = false;
+	private static final boolean ALLOW_RESTRICT_SKILLS = false;
 	/**
 	 * Field RESTRICT_SKILLS.
 	 */
-	private static int[][] RESTRICT_SKILLS =
+	private static final int[][] RESTRICT_SKILLS =
 	{
 		{
 			1218,
@@ -336,7 +336,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	/**
 	 * Field colors.
 	 */
-	public static String[] colors =
+	public static final String[] colors =
 	{
 		"00ff00",
 		"ffffff",
@@ -345,7 +345,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	/**
 	 * Field players_list.
 	 */
-	private static List<Long> players_list = new CopyOnWriteArrayList<>();
+	private static final List<Long> players_list = new CopyOnWriteArrayList<>();
 	/**
 	 * Field live_list.
 	 */
@@ -353,11 +353,11 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	/**
 	 * Field ALLOW_RESTRICT_ITEMS.
 	 */
-	private static boolean ALLOW_RESTRICT_ITEMS = false;
+	private static final boolean ALLOW_RESTRICT_ITEMS = false;
 	/**
 	 * Field RESTRICT_ITEMS.
 	 */
-	private static int[] RESTRICT_ITEMS =
+	private static final int[] RESTRICT_ITEMS =
 	{
 		725,
 		727
@@ -365,7 +365,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	/**
 	 * Field PROTECT_IP_ACTIVE.
 	 */
-	private static boolean PROTECT_IP_ACTIVE = false;
+	private static final boolean PROTECT_IP_ACTIVE = false;
 	/**
 	 * Field _startTask.
 	 */
@@ -373,15 +373,15 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	/**
 	 * Field _saveBuffList.
 	 */
-	static HashMap<Long, LazyArrayList<Effect>> _saveBuffList = new HashMap<>();
+	static final HashMap<Long, LazyArrayList<Effect>> _saveBuffList = new HashMap<>();
 	/**
 	 * Field _spawns.
 	 */
-	private static List<SimpleSpawner> _spawns = new ArrayList<>();
+	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
 	/**
 	 * Field EVENT_MANAGER_ID.
 	 */
-	private static int EVENT_MANAGER_ID = 31143;
+	private static final int EVENT_MANAGER_ID = 31143;
 	
 	/**
 	 * Method spawnNpcs.
@@ -578,7 +578,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	/**
 	 * @author Mobius
 	 */
-	public class StartTask implements Runnable
+	public final class StartTask implements Runnable
 	{
 		/**
 		 * Field endTime.
@@ -624,18 +624,18 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			
 			_log.info("CTF: started, end Time: " + endTime);
 			start(new String[]
-				{
+			{
 				"-1",
 				"-1",
 				endTime
-				});
+			});
 		}
 	}
 	
 	/**
 	 * Field startTasks.
 	 */
-	private static List<ScheduledFuture<?>> startTasks = new ArrayList<>();
+	private static final List<ScheduledFuture<?>> startTasks = new ArrayList<>();
 	/**
 	 * Field players_list1.
 	 */
@@ -647,11 +647,11 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	/**
 	 * Field players_list3.
 	 */
-	static LazyArrayList<Long> players_list3 = new LazyArrayList<>();
+	static final LazyArrayList<Long> players_list3 = new LazyArrayList<>();
 	/**
 	 * Field players_list4.
 	 */
-	private static LazyArrayList<Long> players_list4 = new LazyArrayList<>();
+	private static final LazyArrayList<Long> players_list4 = new LazyArrayList<>();
 	/**
 	 * Field whiteFlag.
 	 */
@@ -699,55 +699,55 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 	/**
 	 * Field ALLOW_BUFFS.
 	 */
-	private static boolean ALLOW_BUFFS = true;
+	private static final boolean ALLOW_BUFFS = true;
 	/**
 	 * Field ALLOW_CLAN_SKILL.
 	 */
-	private static boolean ALLOW_CLAN_SKILL = true;
+	private static final boolean ALLOW_CLAN_SKILL = true;
 	/**
 	 * Field ALLOW_HERO_SKILL.
 	 */
-	private static boolean ALLOW_HERO_SKILL = true;
+	private static final boolean ALLOW_HERO_SKILL = true;
 	/**
 	 * Field EVENT_CTF_rate.
 	 */
-	private static boolean EVENT_CTF_rate = false;
+	private static final boolean EVENT_CTF_rate = false;
 	/**
 	 * Field ALLOW_PETS.
 	 */
-	private static boolean ALLOW_PETS = true;
+	private static final boolean ALLOW_PETS = true;
 	/**
 	 * Field TIME_FOR_RES.
 	 */
-	private static int TIME_FOR_RES = 5;
+	private static final int TIME_FOR_RES = 5;
 	/**
 	 * Field _zone.
 	 */
-	private static Zone _zone = ReflectionUtils.getZone("[colosseum_battle]");
+	private static final Zone _zone = ReflectionUtils.getZone("[colosseum_battle]");
 	/**
 	 * Field _zoneListener.
 	 */
-	private static ZoneListener _zoneListener = new ZoneListener();
+	private static final ZoneListener _zoneListener = new ZoneListener();
 	/**
 	 * Field team1loc.
 	 */
-	private static Location team1loc = new Location(-82952, -44344, -11496, -11396);
+	private static final Location team1loc = new Location(-82952, -44344, -11496, -11396);
 	/**
 	 * Field team2loc.
 	 */
-	private static Location team2loc = new Location(-82536, -47016, -11504, -11404);
+	private static final Location team2loc = new Location(-82536, -47016, -11504, -11404);
 	/**
 	 * Field team3loc.
 	 */
-	private static Location team3loc = new Location(-80680, -44296, -11496, -11396);
+	private static final Location team3loc = new Location(-80680, -44296, -11496, -11396);
 	/**
 	 * Field team4loc.
 	 */
-	private static Location team4loc = new Location(-78680, -41296, -11496, -11204);
+	private static final Location team4loc = new Location(-78680, -41296, -11496, -11204);
 	/**
 	 * Field _resurrectionList.
 	 */
-	private static HashMap<Long, ScheduledFuture<?>> _resurrectionList = new HashMap<>();
+	private static final HashMap<Long, ScheduledFuture<?>> _resurrectionList = new HashMap<>();
 	
 	/**
 	 * Method canSpawnPet.
@@ -1128,9 +1128,9 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		sayToAll("scripts.events.CTF.AnnouncePreStart", param);
 		executeTask("events.CTF.CTF", "question", new Object[0], 10000);
 		executeTask("events.CTF.CTF", "announce", new Object[]
-			{
+		{
 			var[2]
-			}, 60000);
+		}, 60000);
 	}
 	
 	/**
@@ -1183,9 +1183,9 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			};
 			sayToAll("scripts.events.CTF.AnnouncePreStart", param);
 			executeTask("events.CTF.CTF", "announce", new Object[]
-				{
+			{
 				s
-				}, 60000);
+			}, 60000);
 		}
 		else
 		{
@@ -1193,9 +1193,9 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			_isRegistrationActive = false;
 			sayToAll("scripts.events.CTF.AnnounceEventStarting", null);
 			executeTask("events.CTF.CTF", "prepare", new Object[]
-				{
+			{
 				s
-				}, 5000);
+			}, 5000);
 		}
 	}
 	
@@ -1321,9 +1321,9 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		executeTask("events.CTF.CTF", "paralyzePlayers", new Object[0], 4000);
 		executeTask("events.CTF.CTF", "teleportPlayersToColiseum", new Object[0], 5000);
 		executeTask("events.CTF.CTF", "go", new Object[]
-			{
+		{
 			s
-			}, 60000);
+		}, 60000);
 		sayToAll("scripts.events.CTF.AnnounceFinalCountdown", null);
 	}
 	
@@ -1468,10 +1468,10 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 			}
 			
 			start(new String[]
-				{
+			{
 				"" + (_autoContinue + 1),
 				"" + (_autoContinue + 1)
-				});
+			});
 		}
 	}
 	
@@ -1708,7 +1708,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				}
 				
 				break;
-				
+			
 			case 2:
 				for (Player player : getPlayers(players_list2))
 				{
@@ -1716,7 +1716,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				}
 				
 				break;
-				
+			
 			case 3:
 				for (Player player : getPlayers(players_list3))
 				{
@@ -1724,7 +1724,7 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 				}
 				
 				break;
-				
+			
 			case 4:
 				for (Player player : getPlayers(players_list4))
 				{
@@ -2260,9 +2260,9 @@ public class CTF extends Functions implements ScriptFile, OnDeathListener, OnTel
 		{
 			self.sendMessage("Wait " + TIME_FOR_RES + " seconds you can resurrect at base.");
 			_resurrectionList.put(self.getStoredId(), executeTask("events.CTF.CTF", "resurrectAtBase", new Object[]
-				{
+			{
 				(Player) self
-				}, TIME_FOR_RES * 100));
+			}, TIME_FOR_RES * 100));
 		}
 		
 		if ((self instanceof MonsterInstance) && ((self == greenFlag) || (self == whiteFlag) || (self == yellowFlag) || (self == blackFlag)))

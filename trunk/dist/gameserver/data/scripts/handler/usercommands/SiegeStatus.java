@@ -21,7 +21,7 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SiegeStatus extends ScriptUserCommand
+public final class SiegeStatus extends ScriptUserCommand
 {
 	/**
 	 * Field COMMANDS.

@@ -23,7 +23,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TotemSummon extends DefaultAI
+public final class TotemSummon extends DefaultAI
 {
 	/**
 	 * Field TotemofBody. (value is 143)

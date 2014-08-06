@@ -25,7 +25,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TimakOrcTroopLeader extends Fighter
+public final class TimakOrcTroopLeader extends Fighter
 {
 	/**
 	 * Field BROTHERS.

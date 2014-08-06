@@ -52,7 +52,7 @@ public class InstantZoneParser extends AbstractDirParser<InstantZoneHolder>
 	/**
 	 * Field _instance.
 	 */
-	private static InstantZoneParser _instance = new InstantZoneParser();
+	private static final InstantZoneParser _instance = new InstantZoneParser();
 	
 	/**
 	 * Method getInstance.

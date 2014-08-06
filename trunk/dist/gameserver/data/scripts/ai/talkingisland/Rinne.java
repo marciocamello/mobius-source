@@ -19,7 +19,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Rinne extends RinneSubAI
+public final class Rinne extends RinneSubAI
 {
 	/**
 	 * Constructor for Rinne.

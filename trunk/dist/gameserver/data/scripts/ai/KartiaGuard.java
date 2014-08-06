@@ -27,7 +27,7 @@ import lineage2.gameserver.utils.Location;
 /**
  * @version $Revision: 1.0 $
  */
-public class KartiaGuard extends Fighter
+public final class KartiaGuard extends Fighter
 {
 	
 	private long _ReuseTimer = 0;

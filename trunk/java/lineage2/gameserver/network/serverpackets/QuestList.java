@@ -34,7 +34,7 @@ public class QuestList extends L2GameServerPacket
 	 */
 	
 	private final List<int[]> questlist;
-	private static byte[] unk = new byte[128];
+	private static final byte[] unk = new byte[128];
 	
 	public QuestList(Player player)
 	{

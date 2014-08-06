@@ -26,17 +26,17 @@ import lineage2.gameserver.utils.Location;
 /**
  * @author pchayka
  */
-public class ZakenDay83 extends Reflection
+public final class ZakenDay83 extends Reflection
 {
 	private static final int Anchor = 32468;
 	private static final int UltraDayZaken = 29181;
-	private static Location[] zakenTp =
+	private static final Location[] zakenTp =
 	{
 		new Location(55272, 219080, -2952),
 		new Location(55272, 219080, -3224),
 		new Location(55272, 219080, -3496),
 	};
-	private static Location zakenSpawn = new Location(55048, 216808, -3772);
+	private static final Location zakenSpawn = new Location(55048, 216808, -3772);
 	private final DeathListener _deathListener = new DeathListener();
 	long _savedTime;
 	

@@ -29,7 +29,7 @@ import ai.residences.SiegeGuardFighter;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class General extends SiegeGuardFighter
+public final class General extends SiegeGuardFighter
 {
 	/**
 	 * Constructor for General.

@@ -40,7 +40,7 @@ import lineage2.gameserver.utils.Location;
 /**
  * @author pchayka
  */
-public class HeartInfinityAttack extends Reflection
+public final class HeartInfinityAttack extends Reflection
 {
 	private static final int AliveTumor = 18708;
 	private static final int DeadTumor = 32535;

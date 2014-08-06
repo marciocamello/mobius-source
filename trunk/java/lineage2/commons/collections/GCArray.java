@@ -442,11 +442,11 @@ public class GCArray<E> implements Collection<E>
 		/**
 		 * Field data.
 		 */
-		E[] data = toNativeArray();
+		final E[] data = toNativeArray();
 		/**
 		 * Field size.
 		 */
-		int size = data.length;
+		final int size = data.length;
 		/**
 		 * Field cursor.
 		 */

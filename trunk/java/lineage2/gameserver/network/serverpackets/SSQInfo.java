@@ -17,11 +17,11 @@ package lineage2.gameserver.network.serverpackets;
  * <p/>
  * packet id 0x73 format: cc
  * <p/>
- * Пример пакета с оффа (828 протокол): 73 01 01
+ * Example package offs (828 minutes): 73 01 01   *
  * <p/>
- * Возможные варианты использования данного пакета: 0 0 - Обычное небо??? 1 1 - Dusk Sky 2 2 - Dawn Sky??? 3 3 - Небо постепенно краснеет (за 10 секунд)
+ * Possible uses of this package 0 0 - Normal sky??? January 1 - Dusk Sky February 2 - Dawn Sky??? March 3 - The sky gradually turns red (for 10 seconds)   *
  * <p/>
- * Возможно и другие вариации, эффект не совсем понятен. 1 0 0 1
+ * Perhaps other variations, the effect is not well understood. 1 0 0 1
  * @author SYS
  */
 public class SSQInfo extends L2GameServerPacket

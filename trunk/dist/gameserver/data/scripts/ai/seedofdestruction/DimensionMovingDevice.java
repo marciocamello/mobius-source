@@ -23,7 +23,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class DimensionMovingDevice extends DefaultAI
+public final class DimensionMovingDevice extends DefaultAI
 {
 	/**
 	 * Field MOBS_WAVE_DELAY.

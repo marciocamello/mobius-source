@@ -23,7 +23,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class BallistaInstance extends NpcInstance
+public final class BallistaInstance extends NpcInstance
 {
 	/**
 	 *

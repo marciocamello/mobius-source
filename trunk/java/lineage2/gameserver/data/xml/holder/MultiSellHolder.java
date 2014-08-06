@@ -48,7 +48,7 @@ public class MultiSellHolder
 	/**
 	 * Field _instance.
 	 */
-	private static MultiSellHolder _instance = new MultiSellHolder();
+	private static final MultiSellHolder _instance = new MultiSellHolder();
 	
 	/**
 	 * Method getInstance.

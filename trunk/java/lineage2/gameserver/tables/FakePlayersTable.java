@@ -80,7 +80,7 @@ public class FakePlayersTable
 	/**
 	 * Field _activeFakePlayers.
 	 */
-	static GCArray<String> _activeFakePlayers = new GCArray<>();
+	static final GCArray<String> _activeFakePlayers = new GCArray<>();
 	/**
 	 * Field _instance.
 	 */

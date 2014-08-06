@@ -20,9 +20,9 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 
-public class DarkElves extends DefaultAI
+public final class DarkElves extends DefaultAI
 {
-	private static NpcString[] TEXT =
+	private static final NpcString[] TEXT =
 	{
 		NpcString.GAH_SHILEN_WHY_MUST_YOU_MAKE_US_SUFFER,
 		NpcString.SHILEN_ABANDONED_US_IT_IS_OUR_TIME_TO_DIE,

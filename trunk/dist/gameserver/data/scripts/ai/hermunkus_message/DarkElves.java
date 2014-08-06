@@ -24,7 +24,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class DarkElves extends DefaultAI
+public final class DarkElves extends DefaultAI
 {
 	/**
 	 * Field TEXT.

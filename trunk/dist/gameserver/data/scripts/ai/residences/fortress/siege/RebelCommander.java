@@ -22,7 +22,7 @@ import ai.residences.SiegeGuardFighter;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class RebelCommander extends SiegeGuardFighter
+public final class RebelCommander extends SiegeGuardFighter
 {
 	/**
 	 * Constructor for RebelCommander.

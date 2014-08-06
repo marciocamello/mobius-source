@@ -22,7 +22,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class PetSummon extends ScriptItemHandler
+public final class PetSummon extends ScriptItemHandler
 {
 	/**
 	 * Field _itemIds.

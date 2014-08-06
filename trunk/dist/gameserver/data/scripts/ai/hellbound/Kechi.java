@@ -31,7 +31,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Kechi extends DefaultAI
+public final class Kechi extends DefaultAI
 {
 	/**
 	 * Field KechiDoubleCutter.

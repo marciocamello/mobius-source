@@ -23,13 +23,13 @@ import org.apache.commons.lang3.ArrayUtils;
 
 public class _311_ExpulsionOfEvilSpirits extends Quest implements ScriptFile
 {
-	private static int Chairen = 32655;
-	private static int SoulCoreContainingEvilSpirit = 14881;
-	private static int ProtectionSoulsPendant = 14848;
-	private static int RagnaOrcAmulet = 14882;
-	private static int DROP_CHANCE1 = 1;
-	private static int DROP_CHANCE2 = 40;
-	private static int[] MOBS =
+	private static final int Chairen = 32655;
+	private static final int SoulCoreContainingEvilSpirit = 14881;
+	private static final int ProtectionSoulsPendant = 14848;
+	private static final int RagnaOrcAmulet = 14882;
+	private static final int DROP_CHANCE1 = 1;
+	private static final int DROP_CHANCE2 = 40;
+	private static final int[] MOBS =
 	{
 		22691,
 		22692,

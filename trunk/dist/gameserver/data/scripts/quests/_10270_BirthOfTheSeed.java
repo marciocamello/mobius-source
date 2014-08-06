@@ -19,16 +19,16 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _10270_BirthOfTheSeed extends Quest implements ScriptFile
 {
-	private static int PLENOS = 32563;
-	private static int ARTIUS = 32559;
-	private static int LELIKIA = 32567;
-	private static int GINBY = 32566;
-	private static int Yehan_Klodekus_Badge = 13868;
-	private static int Yehan_Klanikus_Badge = 13869;
-	private static int Lich_Crystal = 13870;
-	private static int Yehan_Klodekus = 25665;
-	private static int Yehan_Klanikus = 25666;
-	private static int Cohemenes = 25634;
+	private static final int PLENOS = 32563;
+	private static final int ARTIUS = 32559;
+	private static final int LELIKIA = 32567;
+	private static final int GINBY = 32566;
+	private static final int Yehan_Klodekus_Badge = 13868;
+	private static final int Yehan_Klanikus_Badge = 13869;
+	private static final int Lich_Crystal = 13870;
+	private static final int Yehan_Klodekus = 25665;
+	private static final int Yehan_Klanikus = 25666;
+	private static final int Cohemenes = 25634;
 	
 	@Override
 	public void onLoad()

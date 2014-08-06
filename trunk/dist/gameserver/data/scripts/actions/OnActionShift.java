@@ -49,7 +49,7 @@ import org.apache.commons.lang3.StringUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class OnActionShift extends Functions
+public final class OnActionShift extends Functions
 {
 	/**
 	 * Method OnActionShift_NpcInstance.

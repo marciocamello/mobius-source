@@ -20,7 +20,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Kama56Minion extends Fighter
+public final class Kama56Minion extends Fighter
 {
 	/**
 	 * Constructor for Kama56Minion.

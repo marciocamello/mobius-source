@@ -41,9 +41,9 @@ import lineage2.gameserver.utils.Location;
  */
 public class PartySubstitute
 {
-	static Set<Player> _waitingParty = new HashSet<>();
+	static final Set<Player> _waitingParty = new HashSet<>();
 	
-	static ConcurrentMap<Player, Integer> _waitingPlayer = new ConcurrentHashMap<>();
+	static final ConcurrentMap<Player, Integer> _waitingPlayer = new ConcurrentHashMap<>();
 	
 	public static final long TIME_OUT = 300000;
 	

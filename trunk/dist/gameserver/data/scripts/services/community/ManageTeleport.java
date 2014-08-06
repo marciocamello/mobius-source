@@ -37,7 +37,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ManageTeleport extends Functions implements ScriptFile, ICommunityBoardHandler
+public final class ManageTeleport extends Functions implements ScriptFile, ICommunityBoardHandler
 {
 	/**
 	 * Field _log.

@@ -28,7 +28,7 @@ import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ReflectionUtils;
 
-public class SiegePiece implements ScriptFile
+public final class SiegePiece implements ScriptFile
 {
 	private static ZoneListener _zoneListener;
 	ResidenceSide _side;
@@ -74,7 +74,7 @@ public class SiegePiece implements ScriptFile
 		}
 	}
 	
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)

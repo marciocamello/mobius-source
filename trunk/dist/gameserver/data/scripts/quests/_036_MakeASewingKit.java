@@ -19,10 +19,10 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _036_MakeASewingKit extends Quest implements ScriptFile
 {
-	int REINFORCED_STEEL = 7163;
-	int ARTISANS_FRAME = 1891;
-	int ORIHARUKON = 1893;
-	int SEWING_KIT = 7078;
+	final int REINFORCED_STEEL = 7163;
+	final int ARTISANS_FRAME = 1891;
+	final int ORIHARUKON = 1893;
+	final int SEWING_KIT = 7078;
 	
 	@Override
 	public void onLoad()

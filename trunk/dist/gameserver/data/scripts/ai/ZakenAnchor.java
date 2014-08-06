@@ -19,7 +19,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ZakenAnchor extends DefaultAI
+public final class ZakenAnchor extends DefaultAI
 {
 	/**
 	 * Field DayZaken. (value is 29176)

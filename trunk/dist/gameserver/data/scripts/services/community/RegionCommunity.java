@@ -46,7 +46,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class RegionCommunity implements ScriptFile, ICommunityBoardHandler
+public final class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 {
 	/**
 	 * Field _log.

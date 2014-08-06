@@ -25,7 +25,7 @@ import lineage2.gameserver.tables.PetDataTable.L2Pet;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class fenrir extends Functions
+public final class fenrir extends Functions
 {
 	/**
 	 * Field GREAT_WOLF.

@@ -72,7 +72,7 @@ public class CommissionShopManager
 	/**
 	 * Field ourInstance.
 	 */
-	private static CommissionShopManager ourInstance = new CommissionShopManager();
+	private static final CommissionShopManager ourInstance = new CommissionShopManager();
 	
 	/**
 	 * Method getInstance.

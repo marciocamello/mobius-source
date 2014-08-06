@@ -25,9 +25,9 @@ import gnu.trove.map.hash.TIntIntHashMap;
  */
 public final class EffectHellBinding extends Effect
 {
-	private static TIntIntHashMap _ChainedAirSkills = new TIntIntHashMap(8);
+	private static final TIntIntHashMap _ChainedAirSkills = new TIntIntHashMap(8);
 	
-	private static TIntIntHashMap _ChainedTemporalReplace = new TIntIntHashMap(8);
+	private static final TIntIntHashMap _ChainedTemporalReplace = new TIntIntHashMap(8);
 	
 	public EffectHellBinding(Env env, EffectTemplate template)
 	{

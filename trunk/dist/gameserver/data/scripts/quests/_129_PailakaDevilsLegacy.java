@@ -27,12 +27,12 @@ import org.apache.commons.lang3.ArrayUtils;
 
 public class _129_PailakaDevilsLegacy extends Quest implements ScriptFile
 {
-	private static int DISURVIVOR = 32498;
-	private static int SUPPORTER = 32501;
-	private static int DADVENTURER = 32508;
-	private static int DADVENTURER2 = 32511;
-	private static int CHEST = 32495;
-	private static int[] Pailaka2nd = new int[]
+	private static final int DISURVIVOR = 32498;
+	private static final int SUPPORTER = 32501;
+	private static final int DADVENTURER = 32508;
+	private static final int DADVENTURER2 = 32511;
+	private static final int CHEST = 32495;
+	private static final int[] Pailaka2nd = new int[]
 	{
 		18623,
 		18624,
@@ -40,30 +40,30 @@ public class _129_PailakaDevilsLegacy extends Quest implements ScriptFile
 		18626,
 		18627
 	};
-	private static int KAMS = 18629;
-	private static int ALKASO = 18631;
-	private static int LEMATAN = 18633;
-	private static int ScrollOfEscape = 736;
-	private static int SWORD = 13042;
-	private static int ENCHSWORD = 13043;
-	private static int LASTSWORD = 13044;
-	private static int KDROP = 13046;
-	private static int ADROP = 13047;
-	private static int KEY = 13150;
-	private static int[] HERBS = new int[]
+	private static final int KAMS = 18629;
+	private static final int ALKASO = 18631;
+	private static final int LEMATAN = 18633;
+	private static final int ScrollOfEscape = 736;
+	private static final int SWORD = 13042;
+	private static final int ENCHSWORD = 13043;
+	private static final int LASTSWORD = 13044;
+	private static final int KDROP = 13046;
+	private static final int ADROP = 13047;
+	private static final int KEY = 13150;
+	private static final int[] HERBS = new int[]
 	{
 		8601,
 		8602,
 		8604,
 		8605
 	};
-	private static int[] CHESTDROP = new int[]
+	private static final int[] CHESTDROP = new int[]
 	{
 		13033,
 		13048,
 		13049
 	};
-	private static int PBRACELET = 13295;
+	private static final int PBRACELET = 13295;
 	private static final int izId = 44;
 	
 	public _129_PailakaDevilsLegacy()

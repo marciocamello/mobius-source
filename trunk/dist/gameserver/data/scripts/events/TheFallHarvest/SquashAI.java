@@ -35,12 +35,12 @@ import npc.model.SquashInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SquashAI extends Fighter
+public final class SquashAI extends Fighter
 {
 	/**
 	 * @author Mobius
 	 */
-	public class PolimorphTask extends RunnableImpl
+	public final class PolimorphTask extends RunnableImpl
 	{
 		/**
 		 * Method runImpl.

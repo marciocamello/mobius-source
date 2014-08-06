@@ -38,7 +38,7 @@ public class EnchantHPBonusTable
 	/**
 	 * Field _log.
 	 */
-	private static Logger _log = LoggerFactory.getLogger(EnchantHPBonusTable.class);
+	private static final Logger _log = LoggerFactory.getLogger(EnchantHPBonusTable.class);
 	/**
 	 * Field _armorHPBonus.
 	 */

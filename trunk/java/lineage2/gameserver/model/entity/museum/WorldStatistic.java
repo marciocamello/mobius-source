@@ -18,7 +18,7 @@ package lineage2.gameserver.model.entity.museum;
  */
 public class WorldStatistic
 {
-	private static WorldStatistic _instance = new WorldStatistic();
+	private static final WorldStatistic _instance = new WorldStatistic();
 	
 	public static WorldStatistic getInstance()
 	{

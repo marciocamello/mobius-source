@@ -22,7 +22,7 @@ import quests._250_WatchWhatYouEat;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SallyInstance extends NpcInstance
+public final class SallyInstance extends NpcInstance
 {
 	/**
 	 *

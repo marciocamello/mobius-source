@@ -23,7 +23,7 @@ import lineage2.gameserver.utils.NpcUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Fireplace extends DefaultAI
+public final class Fireplace extends DefaultAI
 {
 	/**
 	 * Field delay.
@@ -59,7 +59,7 @@ public class Fireplace extends DefaultAI
 	/**
 	 * @author Mobius
 	 */
-	public class Switch extends RunnableImpl
+	public final class Switch extends RunnableImpl
 	{
 		/**
 		 * Method runImpl.
@@ -88,7 +88,7 @@ public class Fireplace extends DefaultAI
 	/**
 	 * @author Mobius
 	 */
-	static public class DeleteCauldron extends RunnableImpl
+	static public final class DeleteCauldron extends RunnableImpl
 	{
 		/**
 		 * Field _npc.

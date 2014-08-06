@@ -46,7 +46,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class BaylorManager extends Functions implements ScriptFile
+public final class BaylorManager extends Functions implements ScriptFile
 {
 	/**
 	 * Method baylor_spawn.
@@ -347,7 +347,7 @@ public class BaylorManager extends Functions implements ScriptFile
 	/**
 	 * Field _crystaline.
 	 */
-	static NpcInstance[] _crystaline = new NpcInstance[8];
+	static final NpcInstance[] _crystaline = new NpcInstance[8];
 	/**
 	 * Field _baylor.
 	 */

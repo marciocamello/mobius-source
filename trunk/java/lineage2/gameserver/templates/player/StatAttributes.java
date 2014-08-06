@@ -52,9 +52,9 @@ public class StatAttributes
 	 * @param dex int
 	 * @param wit int
 	 */
-	public StatAttributes(int _int, int str, int con, int men, int dex, int wit)
+	public StatAttributes(int inte, int str, int con, int men, int dex, int wit)
 	{
-		this._int = _int;
+		_int = inte;
 		_str = str;
 		_con = con;
 		_men = men;

@@ -30,7 +30,7 @@ import lineage2.gameserver.scripts.ScriptFile;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class CWHPrivileges implements IVoicedCommandHandler, ScriptFile
+public final class CWHPrivileges implements IVoicedCommandHandler, ScriptFile
 {
 	/**
 	 * Field _commandList.

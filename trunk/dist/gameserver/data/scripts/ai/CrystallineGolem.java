@@ -28,7 +28,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class CrystallineGolem extends Fighter
+public final class CrystallineGolem extends Fighter
 {
 	/**
 	 * Field CORAL_GARDEN_SECRETGATE. (value is 24220026)

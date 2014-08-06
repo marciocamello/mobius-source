@@ -22,7 +22,7 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 
-public class OctavisFollower extends DefaultAI
+public final class OctavisFollower extends DefaultAI
 {
 	private static final int Rider = 29192;
 	private static final int DRIFT_DISTANCE = 10;

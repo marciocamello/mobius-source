@@ -24,7 +24,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TullyWorkshopZone implements ScriptFile
+public final class TullyWorkshopZone implements ScriptFile
 {
 	/**
 	 * Field _zoneListener.
@@ -78,7 +78,7 @@ public class TullyWorkshopZone implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		/**
 		 * Field TullyFloor2LocationPoint.

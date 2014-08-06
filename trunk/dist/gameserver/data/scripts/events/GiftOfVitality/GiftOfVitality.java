@@ -33,7 +33,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GiftOfVitality extends Functions implements ScriptFile
+public final class GiftOfVitality extends Functions implements ScriptFile
 {
 	/**
 	 * Field EVENT_NAME. (value is ""GiftOfVitality"")

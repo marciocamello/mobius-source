@@ -35,25 +35,25 @@ public class FuncEnchant extends Func
 	/**
 	 * Field _log.
 	 */
-	private static Logger _log = LoggerFactory.getLogger(EnchantStatBonusTable.class);
+	private static final Logger _log = LoggerFactory.getLogger(EnchantStatBonusTable.class);
 	
-	private static int _limit1 = Config.OVERENCHANT_LIMIT1;
+	private static final int _limit1 = Config.OVERENCHANT_LIMIT1;
 	
-	private static int _limit2 = Config.OVERENCHANT_LIMIT2;
+	private static final int _limit2 = Config.OVERENCHANT_LIMIT2;
 	
-	private static int _limit3 = Config.OVERENCHANT_LIMIT3;
+	private static final int _limit3 = Config.OVERENCHANT_LIMIT3;
 	
-	private static int _limit4 = Config.OVERENCHANT_LIMIT4;
+	private static final int _limit4 = Config.OVERENCHANT_LIMIT4;
 	
-	private static double _overEnchantMul1 = Config.OVERENCHANT_MUL1;
+	private static final double _overEnchantMul1 = Config.OVERENCHANT_MUL1;
 	
-	private static double _overEnchantMul2 = Config.OVERENCHANT_MUL2;
+	private static final double _overEnchantMul2 = Config.OVERENCHANT_MUL2;
 	
-	private static double _overEnchantMul3 = Config.OVERENCHANT_MUL3;
+	private static final double _overEnchantMul3 = Config.OVERENCHANT_MUL3;
 	
-	private static double _overEnchantMul4 = Config.OVERENCHANT_MUL4;
+	private static final double _overEnchantMul4 = Config.OVERENCHANT_MUL4;
 	
-	private static double _blessedMultiplier = Config.BLESSED_ARMOR_WEAPON_MUL;
+	private static final double _blessedMultiplier = Config.BLESSED_ARMOR_WEAPON_MUL;
 	
 	/**
 	 * Constructor for FuncEnchant.

@@ -23,7 +23,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 /**
  * @author Iqman
  */
-public class MonsterMage extends Mystic
+public final class MonsterMage extends Mystic
 {
 	private Creature target = null;
 	

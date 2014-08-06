@@ -22,9 +22,9 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
 /**
- * Даный класс является обработчиком интернациональных сообщений. Поддержживается полностью юникод.
+ * Dany class is the handler of international communications. Podderzhzhivaetsya fully Unicode.
  * <p/>
- * По функциональности он не уступает SystemMessage, но поддерживает одновременно несколько языков.
+ * In terms of functionality it is not inferior SystemMessage, but supports multiple languages.
  * @Author: Death
  * @Date: 10/6/2007
  * @Time: 10:34:57
@@ -35,9 +35,9 @@ public class CustomMessage
 	private int mark = 0;
 	
 	/**
-	 * Создает новый инстанс сообщения.
-	 * @param address адрес(ключ) параметра с языком интернационализации
-	 * @param player игрок у которого будет взят язык
+	 * Creates a new instance of the message.
+	 * @Param address address (key) parameter with the language internationalization
+	 * @Param player the player who will have taken language
 	 * @param args
 	 */
 	public CustomMessage(String address, Player player, Object... args)
@@ -47,10 +47,10 @@ public class CustomMessage
 	}
 	
 	/**
-	 * Заменяет следующий елемент числом.<br>
+	 * Replaces the following yelement number.<br>
 	 * {0} {1} ... {Integer.MAX_VALUE}
-	 * @param number чем мы хотим заменить
-	 * @return этот инстанс уже с имененным текстом
+	 * @Param number than we want to replace
+	 * @Return this instance since hostname text
 	 */
 	public CustomMessage addNumber(long number)
 	{
@@ -102,10 +102,10 @@ public class CustomMessage
 	}
 	
 	/**
-	 * Заменяет следующий елемент строкой.<br>
+	 * Replaces the following line yelement.<br>
 	 * {0} {1} ... {Integer.MAX_VALUE}
-	 * @param str чем мы хотим заменить
-	 * @return этот инстанс уже с имененным текстом
+	 * @Param str what we want to replace
+	 * @Return this instance since hostname text
 	 */
 	public CustomMessage addString(String str)
 	{
@@ -115,10 +115,10 @@ public class CustomMessage
 	}
 	
 	/**
-	 * Заменяет следующий елемент именем скилла.<br>
+	 * Replaces the following name yelement skill.<br>
 	 * {0} {1} ... {Integer.MAX_VALUE}
-	 * @param skill именем которого мы хотим заменить.
-	 * @return этот инстанс уже с имененным текстом
+	 * @Param skill whose name we want to replace.
+	 * @Return this instance since hostname text
 	 */
 	public CustomMessage addSkillName(Skill skill)
 	{
@@ -128,11 +128,11 @@ public class CustomMessage
 	}
 	
 	/**
-	 * Заменяет следующий елемент именем скилла.<br>
+	 * Replaces the following name yelement skill.<br>
 	 * {0} {1} ... {Integer.MAX_VALUE}
-	 * @param skillId именем которого мы хотим заменить.
-	 * @param skillLevel уровень скилла
-	 * @return этот инстанс уже с имененным текстом
+	 * @Param skillId whose name we want to replace.
+	 * @Param skillLevel skill level
+	 * @Return this instance since hostname text
 	 */
 	public CustomMessage addSkillName(int skillId, int skillLevel)
 	{
@@ -140,10 +140,10 @@ public class CustomMessage
 	}
 	
 	/**
-	 * Заменяет следующий елемент именем предмета.<br>
+	 * Replaces the following yelement named object.<br>
 	 * {0} {1} ... {Integer.MAX_VALUE}
-	 * @param item именем которого мы хотим заменить.
-	 * @return этот инстанс уже с имененным текстом
+	 * @Param item whose name we want to replace.
+	 * @Return this instance since hostname text
 	 */
 	public CustomMessage addItemName(ItemTemplate item)
 	{
@@ -153,10 +153,10 @@ public class CustomMessage
 	}
 	
 	/**
-	 * Заменяет следующий елемент именем предмета.<br>
+	 * Replaces the following yelement named object.<br>
 	 * {0} {1} ... {Integer.MAX_VALUE}
-	 * @param itemId именем которого мы хотим заменить.
-	 * @return этот инстанс уже с имененным текстом
+	 * @Param itemId whose name we want to replace.
+	 * @Return this instance since hostname text
 	 */
 	public CustomMessage addItemName(int itemId)
 	{
@@ -164,10 +164,10 @@ public class CustomMessage
 	}
 	
 	/**
-	 * Заменяет следующий елемент именем предмета.<br>
+	 * Replaces the following yelement named object.<br>
 	 * {0} {1} ... {Integer.MAX_VALUE}
-	 * @param item именем которого мы хотим заменить.
-	 * @return этот инстанс уже с имененным текстом
+	 * @Param item whose name we want to replace.
+	 * @Return this instance since hostname text
 	 */
 	public CustomMessage addItemName(ItemInstance item)
 	{
@@ -175,10 +175,10 @@ public class CustomMessage
 	}
 	
 	/**
-	 * Заменяет следующий елемент именем персонажа.<br>
+	 * Replaces the following yelement character name.<br>
 	 * {0} {1} ... {Integer.MAX_VALUE}
-	 * @param cha именем которого мы хотим заменить.
-	 * @return этот инстанс уже с имененным текстом
+	 * @Param cha whose name we want to replace.
+	 * @Return this instance since hostname text
 	 */
 	public CustomMessage addCharName(Creature cha)
 	{
@@ -188,8 +188,8 @@ public class CustomMessage
 	}
 	
 	/**
-	 * Возвращает локализированную строку, полученную после всех действий.
-	 * @return строка.
+	 * Returns a localized string retrieved after all other actions.
+	 * @Return string.
 	 */
 	@Override
 	public String toString()

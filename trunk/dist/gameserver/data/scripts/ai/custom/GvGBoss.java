@@ -21,7 +21,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GvGBoss extends Fighter
+public final class GvGBoss extends Fighter
 {
 	/**
 	 * Field phrase1.

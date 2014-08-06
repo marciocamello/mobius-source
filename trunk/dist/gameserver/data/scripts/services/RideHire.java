@@ -24,7 +24,7 @@ import lineage2.gameserver.utils.SiegeUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class RideHire extends Functions
+public final class RideHire extends Functions
 {
 	/**
 	 * Method DialogAppend_30827.

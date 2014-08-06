@@ -23,12 +23,12 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class PathfinderEquipment extends SimpleItemHandler
+public final class PathfinderEquipment extends SimpleItemHandler
 {
 	/**
 	 * Field rewards.
 	 */
-	private static TIntObjectHashMap<int[][]> rewards = new TIntObjectHashMap<>();
+	private static final TIntObjectHashMap<int[][]> rewards = new TIntObjectHashMap<>();
 	static
 	{
 		rewards.put(12824, new int[][]

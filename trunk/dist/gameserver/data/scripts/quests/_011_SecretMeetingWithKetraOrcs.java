@@ -19,10 +19,10 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _011_SecretMeetingWithKetraOrcs extends Quest implements ScriptFile
 {
-	int CADMON = 31296;
-	int LEON = 31256;
-	int WAHKAN = 31371;
-	int MUNITIONS_BOX = 7231;
+	final int CADMON = 31296;
+	final int LEON = 31256;
+	final int WAHKAN = 31371;
+	final int MUNITIONS_BOX = 7231;
 	
 	@Override
 	public void onLoad()

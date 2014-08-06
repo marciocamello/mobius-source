@@ -23,7 +23,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class BuyHeroStatus extends Functions
+public final class BuyHeroStatus extends Functions
 {
 	/**
 	 * Method list.

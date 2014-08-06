@@ -19,7 +19,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class MikhailInstance extends _34BossMinionInstance
+public final class MikhailInstance extends _34BossMinionInstance
 {
 	/**
 	 *

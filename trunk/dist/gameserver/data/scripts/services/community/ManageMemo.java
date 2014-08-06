@@ -38,7 +38,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ManageMemo implements ScriptFile, ICommunityBoardHandler
+public final class ManageMemo implements ScriptFile, ICommunityBoardHandler
 {
 	/**
 	 * Field _log.

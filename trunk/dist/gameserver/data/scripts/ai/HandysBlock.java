@@ -32,7 +32,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class HandysBlock extends DefaultAI
+public final class HandysBlock extends DefaultAI
 {
 	/**
 	 * Constructor for HandysBlock.

@@ -33,7 +33,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Baylor extends DefaultAI
+public final class Baylor extends DefaultAI
 {
 	/**
 	 * Field Berserk.

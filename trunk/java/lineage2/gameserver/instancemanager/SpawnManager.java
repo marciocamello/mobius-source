@@ -82,7 +82,7 @@ public class SpawnManager
 	/**
 	 * Field _instance.
 	 */
-	private static SpawnManager _instance = new SpawnManager();
+	private static final SpawnManager _instance = new SpawnManager();
 	/**
 	 * Field _spawns.
 	 */

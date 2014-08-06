@@ -38,10 +38,10 @@ public class _312_TakeAdvantageOfTheCrisis extends Quest implements ScriptFile
 	{
 	}
 	
-	private static int FILAUR = 30535;
-	private static int MINERAL_FRAGMENT = 14875;
-	private static int DROP_CHANCE = 40;
-	private static int[] MINE_MOBS = new int[]
+	private static final int FILAUR = 30535;
+	private static final int MINERAL_FRAGMENT = 14875;
+	private static final int DROP_CHANCE = 40;
+	private static final int[] MINE_MOBS = new int[]
 	{
 		22678,
 		22679,

@@ -31,7 +31,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
 /**
  * @author KilRoy
  */
-public class Apherus extends Fighter
+public final class Apherus extends Fighter
 {
 	final Skill GroundStrike; // TODO[K]
 	final Skill JumpAttack; // TODO[K]

@@ -24,7 +24,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Ranku extends Fighter
+public final class Ranku extends Fighter
 {
 	/**
 	 * Field TELEPORTATION_CUBIC_ID. (value is 32375)

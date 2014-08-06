@@ -23,7 +23,7 @@ import ai.residences.clanhall.MatchCleric;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class MatchClericInstance extends CTBBossInstance
+public final class MatchClericInstance extends CTBBossInstance
 {
 	/**
 	 *

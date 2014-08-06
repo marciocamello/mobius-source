@@ -22,7 +22,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class IceCaptainKnight extends Fighter
+public final class IceCaptainKnight extends Fighter
 {
 	/**
 	 * Constructor for IceCaptainKnight.

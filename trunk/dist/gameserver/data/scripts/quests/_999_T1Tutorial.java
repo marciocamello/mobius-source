@@ -26,16 +26,16 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _999_T1Tutorial extends Quest implements ScriptFile
 {
-	private static int RECOMMENDATION_01 = 1067;
-	private static int RECOMMENDATION_02 = 1068;
-	private static int LEAF_OF_MOTHERTREE = 1069;
-	private static int BLOOD_OF_JUNDIN = 1070;
-	private static int LICENSE_OF_MINER = 1498;
-	private static int VOUCHER_OF_FLAME = 1496;
-	private static int SOULSHOT_NOVICE = 5789;
-	private static int SPIRITSHOT_NOVICE = 5790;
-	static int BLUE_GEM = 6353;
-	private static int DIPLOMA = 9881;
+	private static final int RECOMMENDATION_01 = 1067;
+	private static final int RECOMMENDATION_02 = 1068;
+	private static final int LEAF_OF_MOTHERTREE = 1069;
+	private static final int BLOOD_OF_JUNDIN = 1070;
+	private static final int LICENSE_OF_MINER = 1498;
+	private static final int VOUCHER_OF_FLAME = 1496;
+	private static final int SOULSHOT_NOVICE = 5789;
+	private static final int SPIRITSHOT_NOVICE = 5790;
+	static final int BLUE_GEM = 6353;
+	private static final int DIPLOMA = 9881;
 	
 	private static class Event
 	{
@@ -83,7 +83,7 @@ public class _999_T1Tutorial extends Quest implements ScriptFile
 		}
 	}
 	
-	private static Map<String, Event> events = new HashMap<>();
+	private static final Map<String, Event> events = new HashMap<>();
 	static
 	{
 		events.put("32133_02", new Event("32133-03.htm", -119692, 44504, 380, DIPLOMA, 0x7b, SOULSHOT_NOVICE, 200, 0x7c, SOULSHOT_NOVICE, 200));
@@ -100,7 +100,7 @@ public class _999_T1Tutorial extends Quest implements ScriptFile
 		events.put("30573_02", new Event("30573-03.htm", 0, 0, 0, VOUCHER_OF_FLAME, 0x31, SPIRITSHOT_NOVICE, 100, 0x2c, SOULSHOT_NOVICE, 200));
 		events.put("30573_04", new Event("30573-04.htm", -45067, -113549, -235, 0, 0x31, 0, 0, 0x2c, 0, 0));
 	}
-	private static Map<Integer, Talk> talks = new HashMap<>();
+	private static final Map<Integer, Talk> talks = new HashMap<>();
 	static
 	{
 		talks.put(30017, new Talk(0, new String[]

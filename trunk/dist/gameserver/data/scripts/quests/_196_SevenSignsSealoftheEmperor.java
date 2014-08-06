@@ -29,19 +29,19 @@ import lineage2.gameserver.utils.ReflectionUtils;
 
 public class _196_SevenSignsSealoftheEmperor extends Quest implements ScriptFile
 {
-	private static int IasonHeine = 30969;
-	private static int MerchantofMammon = 32584;
-	private static int PromiseofMammon = 32585;
-	private static int Shunaiman = 32586;
-	private static int Leon = 32587;
-	private static int DisciplesGatekeeper = 32657;
-	private static int CourtMagician = 32598;
-	private static int Wood = 32593;
+	private static final int IasonHeine = 30969;
+	private static final int MerchantofMammon = 32584;
+	private static final int PromiseofMammon = 32585;
+	private static final int Shunaiman = 32586;
+	private static final int Leon = 32587;
+	private static final int DisciplesGatekeeper = 32657;
+	private static final int CourtMagician = 32598;
+	private static final int Wood = 32593;
 	private NpcInstance MerchantofMammonSpawn;
-	private static int ElmoredenHolyWater = 13808;
-	private static int CourtMagiciansMagicStaff = 13809;
-	private static int SealOfBinding = 13846;
-	private static int SacredSwordofEinhasad = 15310;
+	private static final int ElmoredenHolyWater = 13808;
+	private static final int CourtMagiciansMagicStaff = 13809;
+	private static final int SealOfBinding = 13846;
+	private static final int SacredSwordofEinhasad = 15310;
 	private static final int door11 = 17240111;
 	private static final int izId = 112;
 	

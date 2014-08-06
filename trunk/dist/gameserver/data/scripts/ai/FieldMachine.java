@@ -24,7 +24,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class FieldMachine extends DefaultAI
+public final class FieldMachine extends DefaultAI
 {
 	/**
 	 * Field _lastAction.

@@ -19,7 +19,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 /**
  * @author KilRoyS 33560, 33561, 33562, 33563, 33564, 33565, 33566, 33567, 33568, 33569 - Hermunkus teleport NPC
  */
-public class HermunkusInstance extends NpcInstance
+public final class HermunkusInstance extends NpcInstance
 {
 	private static final long serialVersionUID = 6626658591714594410L;
 	

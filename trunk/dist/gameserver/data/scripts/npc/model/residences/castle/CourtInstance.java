@@ -26,7 +26,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class CourtInstance extends NpcInstance
+public final class CourtInstance extends NpcInstance
 {
 	/**
 	 *

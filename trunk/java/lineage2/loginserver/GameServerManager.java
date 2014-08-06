@@ -37,7 +37,7 @@ public class GameServerManager
 	/**
 	 * Field _log.
 	 */
-	private static Logger _log = LoggerFactory.getLogger(GameServerManager.class);
+	private static final Logger _log = LoggerFactory.getLogger(GameServerManager.class);
 	/**
 	 * Field _instance.
 	 */

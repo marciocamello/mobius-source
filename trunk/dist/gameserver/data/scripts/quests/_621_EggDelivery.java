@@ -20,20 +20,20 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _621_EggDelivery extends Quest implements ScriptFile
 {
-	private static int JEREMY = 31521;
-	private static int VALENTINE = 31584;
-	private static int PULIN = 31543;
-	private static int NAFF = 31544;
-	private static int CROCUS = 31545;
-	private static int KUBER = 31546;
-	private static int BEOLIN = 31547;
+	private static final int JEREMY = 31521;
+	private static final int VALENTINE = 31584;
+	private static final int PULIN = 31543;
+	private static final int NAFF = 31544;
+	private static final int CROCUS = 31545;
+	private static final int KUBER = 31546;
+	private static final int BEOLIN = 31547;
 	private static final int BoiledEgg = 7206;
 	private static final int FeeOfBoiledEgg = 7196;
 	private static final int HastePotion = 734;
 	private static final int RecipeSealedTateossianRing = 6849;
 	private static final int RecipeSealedTateossianEarring = 6847;
 	private static final int RecipeSealedTateossianNecklace = 6851;
-	private static int Tateossian_CHANCE = 20;
+	private static final int Tateossian_CHANCE = 20;
 	
 	public _621_EggDelivery()
 	{

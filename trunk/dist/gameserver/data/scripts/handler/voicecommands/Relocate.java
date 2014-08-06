@@ -24,9 +24,9 @@ import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.skills.skillclasses.Call;
 import lineage2.gameserver.utils.Location;
 
-public class Relocate implements IVoicedCommandHandler, ScriptFile
+public final class Relocate implements IVoicedCommandHandler, ScriptFile
 {
-	public static int SUMMON_PRICE = 5;
+	public static final int SUMMON_PRICE = 5;
 	
 	private final String[] _commandList = new String[]
 	{

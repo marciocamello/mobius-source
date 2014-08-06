@@ -19,7 +19,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class CleftVortexGateInstance extends NpcInstance
+public final class CleftVortexGateInstance extends NpcInstance
 {
 	/**
 	 *

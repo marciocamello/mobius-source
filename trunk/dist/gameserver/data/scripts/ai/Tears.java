@@ -37,7 +37,7 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Tears extends DefaultAI
+public final class Tears extends DefaultAI
 {
 	/**
 	 * @author Mobius
@@ -122,7 +122,7 @@ public class Tears extends DefaultAI
 	/**
 	 * Field spawns.
 	 */
-	List<NpcInstance> spawns = new ArrayList<>();
+	final List<NpcInstance> spawns = new ArrayList<>();
 	/**
 	 * Field _isUsedInvincible.
 	 */

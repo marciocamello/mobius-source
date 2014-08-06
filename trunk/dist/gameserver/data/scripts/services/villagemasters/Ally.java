@@ -16,7 +16,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.VillageMasterInstance;
 import lineage2.gameserver.scripts.Functions;
 
-public class Ally extends Functions
+public final class Ally extends Functions
 {
 	/**
 	 * Method CheckCreateAlly.

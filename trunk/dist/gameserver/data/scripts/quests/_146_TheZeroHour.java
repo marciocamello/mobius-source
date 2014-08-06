@@ -19,10 +19,10 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _146_TheZeroHour extends Quest implements ScriptFile
 {
-	private static int KAHMAN = 31554;
-	private static int STAKATO_QUEENS_FANG = 14859;
-	private static int KAHMANS_SUPPLY_BOX = 14849;
-	private static int QUEEN_SHYEED_ID = 25671;
+	private static final int KAHMAN = 31554;
+	private static final int STAKATO_QUEENS_FANG = 14859;
+	private static final int KAHMANS_SUPPLY_BOX = 14849;
+	private static final int QUEEN_SHYEED_ID = 25671;
 	
 	@Override
 	public void onLoad()

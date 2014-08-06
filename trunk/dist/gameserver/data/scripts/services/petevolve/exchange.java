@@ -32,7 +32,7 @@ import lineage2.gameserver.utils.Util;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class exchange extends Functions
+public final class exchange extends Functions
 {
 	/**
 	 * Field PEticketB. (value is 7583)

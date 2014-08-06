@@ -61,14 +61,14 @@ public final class SubClassManagerInstance extends NpcInstance
 	 */
 	private static final int CERTIFICATE_ID = 30433;
 	
-	private static TIntIntHashMap _DESTINYCHANGECLASSES = new TIntIntHashMap(8);
+	private static final TIntIntHashMap _DESTINYCHANGECLASSES = new TIntIntHashMap(8);
 	
 	private static Map<Integer, Double> _REAWAKENINGCOST = new HashMap<>();
 	
 	/**
 	 * Field _log.
 	 */
-	private static Logger _log = LoggerFactory.getLogger(SubClassManagerInstance.class);
+	private static final Logger _log = LoggerFactory.getLogger(SubClassManagerInstance.class);
 	
 	/**
 	 * Constructor for SubClassManagerInstance.

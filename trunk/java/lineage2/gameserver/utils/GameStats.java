@@ -37,15 +37,15 @@ public class GameStats
 	/**
 	 * Field _updatePlayerBase.
 	 */
-	private static AtomicLong _updatePlayerBase = new AtomicLong(0L);
+	private static final AtomicLong _updatePlayerBase = new AtomicLong(0L);
 	/**
 	 * Field _playerEnterGameCounter.
 	 */
-	private static AtomicLong _playerEnterGameCounter = new AtomicLong(0L);
+	private static final AtomicLong _playerEnterGameCounter = new AtomicLong(0L);
 	/**
 	 * Field _taxSum.
 	 */
-	private static AtomicLong _taxSum = new AtomicLong(0L);
+	private static final AtomicLong _taxSum = new AtomicLong(0L);
 	/**
 	 * Field _taxLastUpdate.
 	 */
@@ -53,7 +53,7 @@ public class GameStats
 	/**
 	 * Field _rouletteSum.
 	 */
-	private static AtomicLong _rouletteSum = new AtomicLong(0L);
+	private static final AtomicLong _rouletteSum = new AtomicLong(0L);
 	/**
 	 * Field _rouletteLastUpdate.
 	 */
@@ -61,7 +61,7 @@ public class GameStats
 	/**
 	 * Field _adenaSum.
 	 */
-	private static AtomicLong _adenaSum = new AtomicLong(0L);
+	private static final AtomicLong _adenaSum = new AtomicLong(0L);
 	static
 	{
 		_taxSum.set(ServerVariables.getLong("taxsum", 0));

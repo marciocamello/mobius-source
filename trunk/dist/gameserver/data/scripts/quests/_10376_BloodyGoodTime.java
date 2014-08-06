@@ -31,7 +31,7 @@ public class _10376_BloodyGoodTime extends Quest implements ScriptFile
 	private static final int MOB_BLOODY_VEIN = 27481;
 	private static final int REWARD_MAGIC_RUNE_CLIP = 32700;
 	public static final String _bloodyVein = "NightmareDeath";
-	private static Map<Integer, Integer> spawns = new HashMap<>();
+	private static final Map<Integer, Integer> spawns = new HashMap<>();
 	
 	public _10376_BloodyGoodTime()
 	{

@@ -23,7 +23,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class AliveTumor extends DefaultAI
+public final class AliveTumor extends DefaultAI
 {
 	/**
 	 * Field checkTimer.

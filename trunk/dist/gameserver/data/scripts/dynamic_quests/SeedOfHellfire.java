@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
 /**
  * @author KilRoy
  */
-public class SeedOfHellfire extends DynamicQuest implements ScriptFile
+public final class SeedOfHellfire extends DynamicQuest implements ScriptFile
 {
 	private static final Logger _log = LoggerFactory.getLogger(SeedOfHellfire.class);
 	private static final String QUEST_ZONE_SOUTH = "[hellfire_south_stage2]";

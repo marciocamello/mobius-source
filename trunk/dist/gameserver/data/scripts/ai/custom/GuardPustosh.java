@@ -23,7 +23,7 @@ import lineage2.gameserver.utils.NpcUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GuardPustosh extends Fighter
+public final class GuardPustosh extends Fighter
 {
 	/**
 	 * Field KANILOV. (value is 27459)

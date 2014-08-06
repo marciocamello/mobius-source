@@ -20,7 +20,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SnowmanInstance extends NpcInstance
+public final class SnowmanInstance extends NpcInstance
 {
 	/**
 	 *

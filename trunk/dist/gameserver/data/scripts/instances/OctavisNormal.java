@@ -36,7 +36,7 @@ import lineage2.gameserver.utils.Location;
 /**
  * @author KilRoy Skills: 14027, 14035, 14279-14282, 14285, 14474(5),
  */
-public class OctavisNormal extends Reflection
+public final class OctavisNormal extends Reflection
 {
 	private static final int Octavis1 = 29191;
 	private static final int Octavis2 = 29193;
@@ -64,7 +64,7 @@ public class OctavisNormal extends Reflection
 	private static final int Door = 26210001;
 	private static final int Door2 = 26210002;
 	
-	static Territory centralRoomPoint = new Territory().add(new Polygon().add(210548, -118712).add(210548, -118800).add(210348, -118612).add(210748, -118312).add(210548, -118912).add(210648, -118812).add(210548, -118712).add(210448, -118512).setZmax(-10020).setZmin(-9020));
+	static final Territory centralRoomPoint = new Territory().add(new Polygon().add(210548, -118712).add(210548, -118800).add(210348, -118612).add(210748, -118312).add(210548, -118912).add(210648, -118812).add(210548, -118712).add(210448, -118512).setZmax(-10020).setZmin(-9020));
 	
 	final AtomicInteger raidplayers = new AtomicInteger();
 	
@@ -81,7 +81,7 @@ public class OctavisNormal extends Reflection
 		super.onCollapse();
 	}
 	
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
@@ -124,7 +124,7 @@ public class OctavisNormal extends Reflection
 		return !((raidplayers < getInstancedZone().getMinParty()) || _startLaunched);
 	}
 	
-	public class CurrentHpListener implements OnCurrentHpDamageListener
+	public final class CurrentHpListener implements OnCurrentHpDamageListener
 	{
 		@Override
 		public void onCurrentHpDamage(Creature actor, double damage, Creature attacker, Skill skill)
@@ -217,18 +217,14 @@ public class OctavisNormal extends Reflection
 				player.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_OCTABIS_OPENING);
 			}
 			
-			ThreadPoolManager.getInstance().schedule(new Runnable()
+			ThreadPoolManager.getInstance().schedule(() ->
 			{
-				@Override
-				public void run()
-				{
-					NpcInstance octavisFirstStage = addSpawnWithoutRespawn(Octavis1, new Location(207192, 120568, -10032, 49151), 0);
-					octavisFirstStage.addListener(_currentHpListenerFistsStage);
-					octavisFirstStage.setLockedTarget(true);
-					octavisMassive = octavisFirstStage;
-					NpcInstance octavisRider = addSpawnWithoutRespawn(OctavisRider, new Location(207192, 120588, -10032, 49151), 0);
-					octavisRider.addListener(_currentHpListenerOctavisRide);
-				}
+				NpcInstance octavisFirstStage = addSpawnWithoutRespawn(Octavis1, new Location(207192, 120568, -10032, 49151), 0);
+				octavisFirstStage.addListener(_currentHpListenerFistsStage);
+				octavisFirstStage.setLockedTarget(true);
+				octavisMassive = octavisFirstStage;
+				NpcInstance octavisRider = addSpawnWithoutRespawn(OctavisRider, new Location(207192, 120588, -10032, 49151), 0);
+				octavisRider.addListener(_currentHpListenerOctavisRide);
 			}, 26700);
 		}
 	}

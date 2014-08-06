@@ -27,7 +27,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ZakenNightly extends Fighter
+public final class ZakenNightly extends Fighter
 {
 	/**
 	 * Field doll_blader_b. (value is 29023)

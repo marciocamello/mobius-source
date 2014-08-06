@@ -27,7 +27,7 @@ import quests._695_DefendtheHallofSuffering;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TepiosRewardInstance extends NpcInstance
+public final class TepiosRewardInstance extends NpcInstance
 {
 	/**
 	 *

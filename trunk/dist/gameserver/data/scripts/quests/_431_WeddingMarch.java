@@ -19,9 +19,9 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _431_WeddingMarch extends Quest implements ScriptFile
 {
-	private static int MELODY_MAESTRO_KANTABILON = 31042;
-	private static int SILVER_CRYSTAL = 7540;
-	private static int WEDDING_ECHO_CRYSTAL = 7062;
+	private static final int MELODY_MAESTRO_KANTABILON = 31042;
+	private static final int SILVER_CRYSTAL = 7540;
+	private static final int WEDDING_ECHO_CRYSTAL = 7062;
 	
 	@Override
 	public void onLoad()

@@ -47,7 +47,7 @@ public class ItemAuctionManager
 	/**
 	 * Field _log.
 	 */
-	private static Logger _log = LoggerFactory.getLogger(ItemAuctionManager.class);
+	private static final Logger _log = LoggerFactory.getLogger(ItemAuctionManager.class);
 	/**
 	 * Field _instance.
 	 */

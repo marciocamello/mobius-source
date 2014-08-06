@@ -55,7 +55,7 @@ public class MiniGameScoreManager
 	/**
 	 * Field _instance.
 	 */
-	private static MiniGameScoreManager _instance = new MiniGameScoreManager();
+	private static final MiniGameScoreManager _instance = new MiniGameScoreManager();
 	
 	/**
 	 * Method getInstance.

@@ -25,7 +25,7 @@ import lineage2.gameserver.scripts.Functions;
 /**
  * @author Iqman
  */
-public class NpcMageAI extends Mystic
+public final class NpcMageAI extends Mystic
 {
 	private NpcInstance target = null;
 	

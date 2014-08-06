@@ -24,7 +24,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GatekeeperZombie extends Mystic
+public final class GatekeeperZombie extends Mystic
 {
 	/**
 	 * Constructor for GatekeeperZombie.

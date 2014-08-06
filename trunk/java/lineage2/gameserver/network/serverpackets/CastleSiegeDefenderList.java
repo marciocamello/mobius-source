@@ -34,7 +34,7 @@ import org.apache.commons.lang3.StringUtils;
  * c = 0xcb<BR>
  * d = unitId<BR>
  * d = unknow (0x00)<BR>
- * d = активация регистрации (0x01)<BR>
+ * d = activation registration (0x01)<BR>
  * d = unknow (0x00)<BR>
  * d = Number of Defending Clans?<BR>
  * d = Number of Defending Clans<BR>
@@ -53,10 +53,10 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class CastleSiegeDefenderList extends L2GameServerPacket
 {
-	public static int OWNER = 1;
-	public static int WAITING = 2;
-	public static int ACCEPTED = 3;
-	public static int REFUSE = 4;
+	public static final int OWNER = 1;
+	public static final int WAITING = 2;
+	public static final int ACCEPTED = 3;
+	public static final int REFUSE = 4;
 	
 	private final int _id, _registrationValid;
 	private List<DefenderClan> _defenderClans = Collections.emptyList();

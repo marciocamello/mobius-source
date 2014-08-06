@@ -28,7 +28,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class clanhall extends Functions
+public final class clanhall extends Functions
 {
 	/**
 	 * Field GREAT_WOLF.

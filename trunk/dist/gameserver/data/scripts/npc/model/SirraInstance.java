@@ -25,7 +25,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SirraInstance extends NpcInstance
+public final class SirraInstance extends NpcInstance
 {
 	/**
 	 *

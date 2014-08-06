@@ -46,7 +46,7 @@ public class PathFindBuffers
 	/**
 	 * Field buffers.
 	 */
-	private static TIntObjectHashMap<PathFindBuffer[]> buffers = new TIntObjectHashMap<>();
+	private static final TIntObjectHashMap<PathFindBuffer[]> buffers = new TIntObjectHashMap<>();
 	/**
 	 * Field sizes.
 	 */
@@ -54,7 +54,7 @@ public class PathFindBuffers
 	/**
 	 * Field lock.
 	 */
-	private static Lock lock = new ReentrantLock();
+	private static final Lock lock = new ReentrantLock();
 	static
 	{
 		TIntIntHashMap config = new TIntIntHashMap();

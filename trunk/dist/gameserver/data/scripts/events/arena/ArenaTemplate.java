@@ -1056,7 +1056,7 @@ public abstract class ArenaTemplate extends Functions
 	
 	/**
 	 */
-	public class ZoneListener implements OnZoneEnterLeaveListener
+	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		/**
 		 * Method onZoneEnter.
@@ -1101,7 +1101,7 @@ public abstract class ArenaTemplate extends Functions
 	/**
 	 * @author Mobius
 	 */
-	public class TeleportTask extends RunnableImpl
+	public final class TeleportTask extends RunnableImpl
 	{
 		/**
 		 * Field loc.

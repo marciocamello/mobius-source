@@ -19,7 +19,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class DustTracker extends Patrollers
+public final class DustTracker extends Patrollers
 {
 	/**
 	 * Constructor for DustTracker.

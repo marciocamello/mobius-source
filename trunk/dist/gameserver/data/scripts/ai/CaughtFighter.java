@@ -22,7 +22,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class CaughtFighter extends Fighter
+public final class CaughtFighter extends Fighter
 {
 	/**
 	 * Field TIME_TO_LIVE. (value is 60000)

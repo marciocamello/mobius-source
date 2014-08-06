@@ -73,83 +73,83 @@ public class LettersCollection extends Functions implements ScriptFile, OnDeathL
 	/**
 	 * Field A.
 	 */
-	protected static int A = 3875;
+	protected static final int A = 3875;
 	/**
 	 * Field C.
 	 */
-	protected static int C = 3876;
+	protected static final int C = 3876;
 	/**
 	 * Field E.
 	 */
-	protected static int E = 3877;
+	protected static final int E = 3877;
 	/**
 	 * Field F.
 	 */
-	protected static int F = 3878;
+	protected static final int F = 3878;
 	/**
 	 * Field G.
 	 */
-	protected static int G = 3879;
+	protected static final int G = 3879;
 	/**
 	 * Field H.
 	 */
-	protected static int H = 3880;
+	protected static final int H = 3880;
 	/**
 	 * Field I.
 	 */
-	protected static int I = 3881;
+	protected static final int I = 3881;
 	/**
 	 * Field L.
 	 */
-	protected static int L = 3882;
+	protected static final int L = 3882;
 	/**
 	 * Field N.
 	 */
-	protected static int N = 3883;
+	protected static final int N = 3883;
 	/**
 	 * Field O.
 	 */
-	protected static int O = 3884;
+	protected static final int O = 3884;
 	/**
 	 * Field R.
 	 */
-	protected static int R = 3885;
+	protected static final int R = 3885;
 	/**
 	 * Field S.
 	 */
-	protected static int S = 3886;
+	protected static final int S = 3886;
 	/**
 	 * Field T.
 	 */
-	protected static int T = 3887;
+	protected static final int T = 3887;
 	/**
 	 * Field II.
 	 */
-	protected static int II = 3888;
+	protected static final int II = 3888;
 	/**
 	 * Field Y.
 	 */
-	protected static int Y = 13417;
+	protected static final int Y = 13417;
 	/**
 	 * Field _5.
 	 */
-	protected static int _5 = 13418;
+	protected static final int _5 = 13418;
 	/**
 	 * Field EVENT_MANAGER_ID.
 	 */
-	protected static int EVENT_MANAGER_ID = 31230;
+	protected static final int EVENT_MANAGER_ID = 31230;
 	/**
 	 * Field _words.
 	 */
-	protected static Map<String, Integer[][]> _words = new HashMap<>();
+	protected static final Map<String, Integer[][]> _words = new HashMap<>();
 	/**
 	 * Field _rewards.
 	 */
-	protected static Map<String, RewardData[]> _rewards = new HashMap<>();
+	protected static final Map<String, RewardData[]> _rewards = new HashMap<>();
 	/**
 	 * Field _spawns.
 	 */
-	protected static List<SimpleSpawner> _spawns = new ArrayList<>();
+	protected static final List<SimpleSpawner> _spawns = new ArrayList<>();
 	
 	/**
 	 * Method onLoad.

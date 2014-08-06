@@ -27,7 +27,7 @@ public abstract class L2LoginClientPacket extends ReceivablePacket<L2LoginClient
 	/**
 	 * Field _log.
 	 */
-	private static Logger _log = LoggerFactory.getLogger(L2LoginClientPacket.class);
+	private static final Logger _log = LoggerFactory.getLogger(L2LoginClientPacket.class);
 	
 	/**
 	 * Method read.

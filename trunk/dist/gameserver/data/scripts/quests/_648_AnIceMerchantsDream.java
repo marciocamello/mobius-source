@@ -23,14 +23,14 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _648_AnIceMerchantsDream extends Quest implements ScriptFile
 {
-	private static int Rafforty = 32020;
-	private static int Ice_Shelf = 32023;
-	private static int Silver_Hemocyte = 8057;
-	private static int Silver_Ice_Crystal = 8077;
-	private static int Black_Ice_Crystal = 8078;
-	private static int Silver_Hemocyte_Chance = 10;
-	private static int Silver2Black_Chance = 30;
-	private static List<Integer> silver2black = new ArrayList<>();
+	private static final int Rafforty = 32020;
+	private static final int Ice_Shelf = 32023;
+	private static final int Silver_Hemocyte = 8057;
+	private static final int Silver_Ice_Crystal = 8077;
+	private static final int Black_Ice_Crystal = 8078;
+	private static final int Silver_Hemocyte_Chance = 10;
+	private static final int Silver2Black_Chance = 30;
+	private static final List<Integer> silver2black = new ArrayList<>();
 	
 	public _648_AnIceMerchantsDream()
 	{

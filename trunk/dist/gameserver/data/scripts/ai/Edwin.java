@@ -22,7 +22,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Edwin extends DefaultAI
+public final class Edwin extends DefaultAI
 {
 	/**
 	 * Field points.

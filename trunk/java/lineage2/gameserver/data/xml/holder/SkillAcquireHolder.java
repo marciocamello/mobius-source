@@ -56,49 +56,49 @@ public final class SkillAcquireHolder extends AbstractHolder
 	/**
 	 * Field _AwakenClassKeepSkills.
 	 */
-	private static List<Integer> _AwakenGeneralKeepSkills = new ArrayList<>();
+	private static final List<Integer> _AwakenGeneralKeepSkills = new ArrayList<>();
 	
 	/**
 	 * Field _AwakenClassKeepSkills.
 	 */
-	private static HashMap<Integer, HashMap<Integer, List<Integer>>> _AwakenClassKeepSkills = new HashMap<>();
+	private static final HashMap<Integer, HashMap<Integer, List<Integer>>> _AwakenClassKeepSkills = new HashMap<>();
 	
 	/**
 	 * Field _normalSkillTree.
 	 */
-	private static HashMap<Integer, List<SkillLearn>> _normalSkillTree = new HashMap<>();
+	private static final HashMap<Integer, List<SkillLearn>> _normalSkillTree = new HashMap<>();
 	/**
 	 * Field _transferSkillTree.
 	 */
-	private static HashMap<Integer, List<SkillLearn>> _transferSkillTree = new HashMap<>();
+	private static final HashMap<Integer, List<SkillLearn>> _transferSkillTree = new HashMap<>();
 	/**
 	 * Field _fishingSkillTree.
 	 */
-	private static HashMap<Integer, List<SkillLearn>> _fishingSkillTree = new HashMap<>();
+	private static final HashMap<Integer, List<SkillLearn>> _fishingSkillTree = new HashMap<>();
 	/**
 	 * Field _transformationSkillTree.
 	 */
-	private static HashMap<Integer, List<SkillLearn>> _transformationSkillTree = new HashMap<>();
+	private static final HashMap<Integer, List<SkillLearn>> _transformationSkillTree = new HashMap<>();
 	/**
 	 * Field _certificationSkillTree.
 	 */
-	private static GArray<SkillLearn> _certificationSkillTree = new GArray<>();
+	private static final GArray<SkillLearn> _certificationSkillTree = new GArray<>();
 	/**
 	 * Field _certificationSkillTree.
 	 */
-	private static GArray<SkillLearn> _dualCertificationSkillTree = new GArray<>();
+	private static final GArray<SkillLearn> _dualCertificationSkillTree = new GArray<>();
 	/**
 	 * Field _collectionSkillTree.
 	 */
-	private static GArray<SkillLearn> _collectionSkillTree = new GArray<>();
+	private static final GArray<SkillLearn> _collectionSkillTree = new GArray<>();
 	/**
 	 * Field _pledgeSkillTree.
 	 */
-	private static GArray<SkillLearn> _pledgeSkillTree = new GArray<>();
+	private static final GArray<SkillLearn> _pledgeSkillTree = new GArray<>();
 	/**
 	 * Field _subUnitSkillTree.
 	 */
-	private static GArray<SkillLearn> _subUnitSkillTree = new GArray<>();
+	private static final GArray<SkillLearn> _subUnitSkillTree = new GArray<>();
 	
 	/**
 	 * Method getMinLevelForNewSkill.

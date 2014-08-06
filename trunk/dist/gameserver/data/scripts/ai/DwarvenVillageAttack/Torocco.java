@@ -21,7 +21,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 
-public class Torocco extends Dwarvs
+public final class Torocco extends Dwarvs
 {
 	private static final int ROGIN_ID = 19193;
 	

@@ -24,7 +24,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GeneralDilios extends DefaultAI
+public final class GeneralDilios extends DefaultAI
 {
 	/**
 	 * Field GUARD_ID. (value is 32619)

@@ -55,7 +55,7 @@ import bosses.EpicBossState.State;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class BaiumManager extends Functions implements ScriptFile, OnDeathListener
+public final class BaiumManager extends Functions implements ScriptFile, OnDeathListener
 {
 	/**
 	 * Field _log.
@@ -356,11 +356,11 @@ public class BaiumManager extends Functions implements ScriptFile, OnDeathListen
 	/**
 	 * Field _angels.
 	 */
-	static List<NpcInstance> _angels = new ArrayList<>();
+	static final List<NpcInstance> _angels = new ArrayList<>();
 	/**
 	 * Field _angelSpawns.
 	 */
-	static List<SimpleSpawner> _angelSpawns = new ArrayList<>();
+	static final List<SimpleSpawner> _angelSpawns = new ArrayList<>();
 	/**
 	 * Field _zone.
 	 */

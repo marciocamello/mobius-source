@@ -26,7 +26,7 @@ public class ListenerList<T>
 	/**
 	 * Field listeners.
 	 */
-	protected Set<Listener<T>> listeners = new CopyOnWriteArraySet<>();
+	protected final Set<Listener<T>> listeners = new CopyOnWriteArraySet<>();
 	
 	/**
 	 * Method getListeners.

@@ -19,7 +19,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class AdeptGludio extends Adept
+public final class AdeptGludio extends Adept
 {
 	/**
 	 * Constructor for AdeptGludio.

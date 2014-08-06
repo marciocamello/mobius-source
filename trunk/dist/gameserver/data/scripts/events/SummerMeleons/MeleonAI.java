@@ -35,12 +35,12 @@ import npc.model.MeleonInstance;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class MeleonAI extends Fighter
+public final class MeleonAI extends Fighter
 {
 	/**
 	 * @author Mobius
 	 */
-	public class PolimorphTask extends RunnableImpl
+	public final class PolimorphTask extends RunnableImpl
 	{
 		/**
 		 * Method runImpl.

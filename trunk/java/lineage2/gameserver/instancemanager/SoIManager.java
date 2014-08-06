@@ -46,7 +46,7 @@ public class SoIManager
 	/**
 	 * Field openSeedTeleportLocs.
 	 */
-	private static Location[] openSeedTeleportLocs =
+	private static final Location[] openSeedTeleportLocs =
 	{
 		new Location(-179537, 209551, -15504),
 		new Location(-179779, 212540, -15520),

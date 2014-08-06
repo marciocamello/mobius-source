@@ -21,7 +21,7 @@ import lineage2.gameserver.scripts.Functions;
 /**
  * @author Iqman
  */
-public class Avanguard_Ellis extends DefaultAI
+public final class Avanguard_Ellis extends DefaultAI
 {
 	public Avanguard_Ellis(NpcInstance actor)
 	{

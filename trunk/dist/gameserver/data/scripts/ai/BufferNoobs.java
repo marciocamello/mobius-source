@@ -29,7 +29,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class BufferNoobs extends DefaultAI
+public final class BufferNoobs extends DefaultAI
 {
 	/**
 	 * Field BUFFS.

@@ -26,7 +26,7 @@ import org.dom4j.Element;
 
 public class EnchantItemParser extends AbstractFileParser<EnchantItemHolder>
 {
-	private static EnchantItemParser _instance = new EnchantItemParser();
+	private static final EnchantItemParser _instance = new EnchantItemParser();
 	
 	private EnchantItemParser()
 	{

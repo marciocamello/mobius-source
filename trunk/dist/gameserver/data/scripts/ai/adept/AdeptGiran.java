@@ -19,7 +19,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class AdeptGiran extends Adept
+public final class AdeptGiran extends Adept
 {
 	/**
 	 * Constructor for AdeptGiran.

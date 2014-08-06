@@ -25,7 +25,7 @@ public final class CubicHolder extends AbstractHolder
 	/**
 	 * Field _instance.
 	 */
-	private static CubicHolder _instance = new CubicHolder();
+	private static final CubicHolder _instance = new CubicHolder();
 	/**
 	 * Field _cubics.
 	 */

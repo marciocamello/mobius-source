@@ -31,7 +31,7 @@ public class PetDataParser extends AbstractDirParser<PetDataHolder>
 	/**
 	 * Field _instance.
 	 */
-	private static PetDataParser _instance = new PetDataParser();
+	private static final PetDataParser _instance = new PetDataParser();
 	
 	/**
 	 * Method getInstance.

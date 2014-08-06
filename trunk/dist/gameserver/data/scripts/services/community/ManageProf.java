@@ -39,7 +39,7 @@ import org.slf4j.LoggerFactory;
  * @Translated by KadeL
  * @version $Revision: 1.0 $
  */
-public class ManageProf implements ScriptFile, ICommunityBoardHandler
+public final class ManageProf implements ScriptFile, ICommunityBoardHandler
 {
 	/**
 	 * Field _commands.

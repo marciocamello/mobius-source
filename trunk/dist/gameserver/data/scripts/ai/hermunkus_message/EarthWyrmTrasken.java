@@ -23,7 +23,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class EarthWyrmTrasken extends DefaultAI
+public final class EarthWyrmTrasken extends DefaultAI
 {
 	/**
 	 * Field RHAND_ID. (value is 15280)

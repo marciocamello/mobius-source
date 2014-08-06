@@ -19,7 +19,7 @@ import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 
-public class SubclassRB extends Fighter
+public final class SubclassRB extends Fighter
 {
 	private final static int SHILLEN_MESSAGER = 27470; // GoD Update
 	private final static int DEATH_LORD = 27477; // GoD Update

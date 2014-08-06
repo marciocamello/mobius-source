@@ -21,8 +21,8 @@ import lineage2.gameserver.model.Creature;
  */
 public class ChangeMoveType extends L2GameServerPacket
 {
-	public static int WALK = 0;
-	public static int RUN = 1;
+	public static final int WALK = 0;
+	public static final int RUN = 1;
 	
 	private final int _chaId;
 	private final boolean _running;

@@ -30,7 +30,7 @@ import lineage2.gameserver.utils.PositionUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GuardofDawnFemale extends DefaultAI
+public final class GuardofDawnFemale extends DefaultAI
 {
 	/**
 	 * Field _aggrorange. (value is 300)
@@ -64,7 +64,7 @@ public class GuardofDawnFemale extends DefaultAI
 	/**
 	 * @author Mobius
 	 */
-	public class Teleportation extends RunnableImpl
+	public final class Teleportation extends RunnableImpl
 	{
 		/**
 		 * Field _telePoint.

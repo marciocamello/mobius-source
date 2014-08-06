@@ -22,7 +22,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 
-public class NpcArcherAI extends Ranger
+public final class NpcArcherAI extends Ranger
 {
 	private NpcInstance target = null;
 	

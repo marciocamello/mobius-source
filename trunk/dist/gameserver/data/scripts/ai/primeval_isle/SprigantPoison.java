@@ -21,7 +21,7 @@ import lineage2.gameserver.tables.SkillTable;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SprigantPoison extends DefaultAI
+public final class SprigantPoison extends DefaultAI
 {
 	/**
 	 * Field SKILL.

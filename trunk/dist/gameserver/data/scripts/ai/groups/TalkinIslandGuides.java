@@ -26,7 +26,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class TalkinIslandGuides extends DefaultAI
+public final class TalkinIslandGuides extends DefaultAI
 {
 	/**
 	 * Field SEARCHING_MYST_POWER_SOLDIER. (value is 33016)

@@ -26,7 +26,7 @@ import lineage2.gameserver.templates.npc.MinionData;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GraveRobberSummoner extends Mystic
+public final class GraveRobberSummoner extends Mystic
 {
 	/**
 	 * Field Servitors.

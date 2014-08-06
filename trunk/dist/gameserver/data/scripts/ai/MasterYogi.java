@@ -23,7 +23,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class MasterYogi extends DefaultAI
+public final class MasterYogi extends DefaultAI
 {
 	/**
 	 * Field wait_timeout1.

@@ -19,7 +19,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SandTracker extends Patrollers
+public final class SandTracker extends Patrollers
 {
 	/**
 	 * Constructor for SandTracker.

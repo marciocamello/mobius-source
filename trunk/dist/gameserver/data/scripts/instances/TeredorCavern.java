@@ -18,11 +18,11 @@ import lineage2.gameserver.utils.Location;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class TeredorCavern extends Reflection
+public final class TeredorCavern extends Reflection
 {
 	private static final Logger _log = LoggerFactory.getLogger(TeredorCavern.class);
-	private static int Teredor = 25785;
-	private static Location TeredorSpawnCoords = new Location(176160, -185200, -3800);
+	private static final int Teredor = 25785;
+	private static final Location TeredorSpawnCoords = new Location(176160, -185200, -3800);
 	
 	@Override
 	protected void onCreate()

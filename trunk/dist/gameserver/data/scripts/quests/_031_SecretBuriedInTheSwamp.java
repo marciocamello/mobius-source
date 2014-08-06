@@ -19,13 +19,13 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _031_SecretBuriedInTheSwamp extends Quest implements ScriptFile
 {
-	int ABERCROMBIE = 31555;
-	int FORGOTTEN_MONUMENT_1 = 31661;
-	int FORGOTTEN_MONUMENT_2 = 31662;
-	int FORGOTTEN_MONUMENT_3 = 31663;
-	int FORGOTTEN_MONUMENT_4 = 31664;
-	int CORPSE_OF_DWARF = 31665;
-	int KRORINS_JOURNAL = 7252;
+	final int ABERCROMBIE = 31555;
+	final int FORGOTTEN_MONUMENT_1 = 31661;
+	final int FORGOTTEN_MONUMENT_2 = 31662;
+	final int FORGOTTEN_MONUMENT_3 = 31663;
+	final int FORGOTTEN_MONUMENT_4 = 31664;
+	final int CORPSE_OF_DWARF = 31665;
+	final int KRORINS_JOURNAL = 7252;
 	
 	@Override
 	public void onLoad()

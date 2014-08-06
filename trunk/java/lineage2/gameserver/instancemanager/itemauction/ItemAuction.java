@@ -42,15 +42,15 @@ public class ItemAuction
 	/**
 	 * Field _log.
 	 */
-	private static Logger _log = LoggerFactory.getLogger(ItemAuction.class);
+	private static final Logger _log = LoggerFactory.getLogger(ItemAuction.class);
 	/**
 	 * Field ENDING_TIME_EXTEND_5.
 	 */
-	private static long ENDING_TIME_EXTEND_5 = TimeUnit.MILLISECONDS.convert(5, TimeUnit.MINUTES);
+	private static final long ENDING_TIME_EXTEND_5 = TimeUnit.MILLISECONDS.convert(5, TimeUnit.MINUTES);
 	/**
 	 * Field ENDING_TIME_EXTEND_8.
 	 */
-	private static long ENDING_TIME_EXTEND_8 = TimeUnit.MILLISECONDS.convert(8, TimeUnit.MINUTES);
+	private static final long ENDING_TIME_EXTEND_8 = TimeUnit.MILLISECONDS.convert(8, TimeUnit.MINUTES);
 	/**
 	 * Field _auctionId.
 	 */

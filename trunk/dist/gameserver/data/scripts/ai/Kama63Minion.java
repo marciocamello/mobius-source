@@ -28,7 +28,7 @@ import lineage2.gameserver.scripts.Functions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Kama63Minion extends Fighter
+public final class Kama63Minion extends Fighter
 {
 	/**
 	 * Field BOSS_ID. (value is 18571)
@@ -149,7 +149,7 @@ public class Kama63Minion extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	static public class DieScheduleTimerTask extends RunnableImpl
+	static public final class DieScheduleTimerTask extends RunnableImpl
 	{
 		/**
 		 * Field _minion.

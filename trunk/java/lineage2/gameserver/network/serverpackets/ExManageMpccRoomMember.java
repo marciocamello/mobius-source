@@ -21,9 +21,9 @@ import lineage2.gameserver.model.matching.MatchingRoom;
  */
 public class ExManageMpccRoomMember extends L2GameServerPacket
 {
-	public static int ADD_MEMBER = 0;
-	public static int UPDATE_MEMBER = 1;
-	public static int REMOVE_MEMBER = 2;
+	public static final int ADD_MEMBER = 0;
+	public static final int UPDATE_MEMBER = 1;
+	public static final int REMOVE_MEMBER = 2;
 	
 	private final int _type;
 	private final MpccRoomMemberInfo _memberInfo;

@@ -31,12 +31,12 @@ import handler.items.ScriptItemHandler;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Seed extends ScriptItemHandler
+public final class Seed extends ScriptItemHandler
 {
 	/**
 	 * @author Mobius
 	 */
-	static public class DeSpawnScheduleTimerTask extends RunnableImpl
+	static public final class DeSpawnScheduleTimerTask extends RunnableImpl
 	{
 		/**
 		 * Field spawnedTree.

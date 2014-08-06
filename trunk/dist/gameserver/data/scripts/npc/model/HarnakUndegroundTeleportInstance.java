@@ -53,8 +53,8 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 	};
 	private static final int SEALED_HARNAK_KEY = 30429;
 	private static final int HARNAK_KEY = 30430;
-	static int NOKTUM = 25771;
-	static int DEMONIC_NOKTUM = 25773;
+	static final int NOKTUM = 25771;
+	static final int DEMONIC_NOKTUM = 25773;
 	final DeathListener _deathListener = new DeathListener();
 	int _stateSecond = 0;
 	int _stateThird = 0;

@@ -21,7 +21,7 @@ import lineage2.gameserver.scripts.Functions;
 /**
  * @author Iqman
  */
-public class Avanguard_Barton extends DefaultAI
+public final class Avanguard_Barton extends DefaultAI
 {
 	public Avanguard_Barton(NpcInstance actor)
 	{
