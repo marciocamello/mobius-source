@@ -1077,6 +1077,7 @@ public abstract class GameObject extends EventOwner
 	 * @param simpleTypes boolean
 	 * @return String
 	 */
+	@SuppressWarnings("unused")
 	private String dump(boolean simpleTypes)
 	{
 		return Util.dumpObject(this, simpleTypes, true, true);

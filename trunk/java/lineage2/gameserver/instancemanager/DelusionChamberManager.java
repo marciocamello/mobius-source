@@ -289,6 +289,7 @@ public class DelusionChamberManager
 		 * @param z int
 		 * @return boolean
 		 */
+		@SuppressWarnings("unused")
 		private boolean checkIfInZone(int x, int y, int z)
 		{
 			return _territory.isInside(x, y, z);

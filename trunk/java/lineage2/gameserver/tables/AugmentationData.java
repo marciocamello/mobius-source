@@ -165,10 +165,15 @@ public class AugmentationData
 	 */
 	private class augmentationStat
 	{
+		@SuppressWarnings("unused")
 		private final Stats _stat;
+		@SuppressWarnings("unused")
 		private final int _singleSize;
+		@SuppressWarnings("unused")
 		private final int _combinedSize;
+		@SuppressWarnings("unused")
 		private final double _singleValues[];
+		@SuppressWarnings("unused")
 		private final double _combinedValues[];
 		
 		/**

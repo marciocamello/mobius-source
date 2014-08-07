@@ -36,8 +36,8 @@ public class CustomMessage
 	
 	/**
 	 * Creates a new instance of the message.
-	 * @Param address address (key) parameter with the language internationalization
-	 * @Param player the player who will have taken language
+	 * @param address address (key) parameter with the language internationalization
+	 * @param player the player who will have taken language
 	 * @param args
 	 */
 	public CustomMessage(String address, Player player, Object... args)
@@ -49,8 +49,8 @@ public class CustomMessage
 	/**
 	 * Replaces the following yelement number.<br>
 	 * {0} {1} ... {Integer.MAX_VALUE}
-	 * @Param number than we want to replace
-	 * @Return this instance since hostname text
+	 * @param number than we want to replace
+	 * @return this instance since hostname text
 	 */
 	public CustomMessage addNumber(long number)
 	{
@@ -104,8 +104,8 @@ public class CustomMessage
 	/**
 	 * Replaces the following line yelement.<br>
 	 * {0} {1} ... {Integer.MAX_VALUE}
-	 * @Param str what we want to replace
-	 * @Return this instance since hostname text
+	 * @param str what we want to replace
+	 * @return this instance since hostname text
 	 */
 	public CustomMessage addString(String str)
 	{
@@ -117,8 +117,8 @@ public class CustomMessage
 	/**
 	 * Replaces the following name yelement skill.<br>
 	 * {0} {1} ... {Integer.MAX_VALUE}
-	 * @Param skill whose name we want to replace.
-	 * @Return this instance since hostname text
+	 * @param skill whose name we want to replace.
+	 * @return this instance since hostname text
 	 */
 	public CustomMessage addSkillName(Skill skill)
 	{
@@ -130,9 +130,9 @@ public class CustomMessage
 	/**
 	 * Replaces the following name yelement skill.<br>
 	 * {0} {1} ... {Integer.MAX_VALUE}
-	 * @Param skillId whose name we want to replace.
-	 * @Param skillLevel skill level
-	 * @Return this instance since hostname text
+	 * @param skillId whose name we want to replace.
+	 * @param skillLevel skill level
+	 * @return this instance since hostname text
 	 */
 	public CustomMessage addSkillName(int skillId, int skillLevel)
 	{
@@ -142,8 +142,8 @@ public class CustomMessage
 	/**
 	 * Replaces the following yelement named object.<br>
 	 * {0} {1} ... {Integer.MAX_VALUE}
-	 * @Param item whose name we want to replace.
-	 * @Return this instance since hostname text
+	 * @param item whose name we want to replace.
+	 * @return this instance since hostname text
 	 */
 	public CustomMessage addItemName(ItemTemplate item)
 	{
@@ -155,8 +155,8 @@ public class CustomMessage
 	/**
 	 * Replaces the following yelement named object.<br>
 	 * {0} {1} ... {Integer.MAX_VALUE}
-	 * @Param itemId whose name we want to replace.
-	 * @Return this instance since hostname text
+	 * @param itemId whose name we want to replace.
+	 * @return this instance since hostname text
 	 */
 	public CustomMessage addItemName(int itemId)
 	{
@@ -166,8 +166,8 @@ public class CustomMessage
 	/**
 	 * Replaces the following yelement named object.<br>
 	 * {0} {1} ... {Integer.MAX_VALUE}
-	 * @Param item whose name we want to replace.
-	 * @Return this instance since hostname text
+	 * @param item whose name we want to replace.
+	 * @return this instance since hostname text
 	 */
 	public CustomMessage addItemName(ItemInstance item)
 	{
@@ -177,8 +177,8 @@ public class CustomMessage
 	/**
 	 * Replaces the following yelement character name.<br>
 	 * {0} {1} ... {Integer.MAX_VALUE}
-	 * @Param cha whose name we want to replace.
-	 * @Return this instance since hostname text
+	 * @param cha whose name we want to replace.
+	 * @return this instance since hostname text
 	 */
 	public CustomMessage addCharName(Creature cha)
 	{
@@ -189,7 +189,7 @@ public class CustomMessage
 	
 	/**
 	 * Returns a localized string retrieved after all other actions.
-	 * @Return string.
+	 * @return string.
 	 */
 	@Override
 	public String toString()

@@ -2639,6 +2639,7 @@ public class GeoEngine
 	/**
 	 * Method initChecksums.
 	 */
+	@SuppressWarnings("unused")
 	private static void initChecksums()
 	{
 		_log.info("GeoEngine: - Generating Checksums...");
@@ -2671,6 +2672,7 @@ public class GeoEngine
 	 * Method initBlockMatches.
 	 * @param maxScanRegions int
 	 */
+	@SuppressWarnings("unused")
 	private static void initBlockMatches(int maxScanRegions)
 	{
 		_log.info("GeoEngine: Generating Block Matches...");

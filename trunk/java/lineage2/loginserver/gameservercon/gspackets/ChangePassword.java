@@ -33,6 +33,7 @@ public class ChangePassword extends ReceivablePacket
 	private String accname;
 	private String oldPass;
 	private String newPass;
+	@SuppressWarnings("unused")
 	private String hwid;
 	
 	/**

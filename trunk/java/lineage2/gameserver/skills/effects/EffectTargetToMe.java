@@ -25,15 +25,15 @@ import lineage2.gameserver.utils.Location;
  */
 public class EffectTargetToMe extends Effect
 {
+	int _x;
+	int _y;
+	int _z;
+	
 	/**
 	 * Constructor for EffectTargetToMe.
 	 * @param env Env
 	 * @param template EffectTemplate
 	 */
-	int _x;
-	int _y;
-	int _z;
-	
 	public EffectTargetToMe(Env env, EffectTemplate template)
 	{
 		super(env, template);

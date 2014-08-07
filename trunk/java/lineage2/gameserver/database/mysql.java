@@ -302,6 +302,11 @@ public abstract class mysql
 	 * @param where String
 	 * @return Integer[][]
 	 */
+	@SuppressWarnings(
+	{
+		"unused",
+		"null"
+	})
 	private static Integer[][] simple_get_int_array(DatabaseFactory db, String[] ret_fields, String table, String where)
 	{
 		String fields = null;

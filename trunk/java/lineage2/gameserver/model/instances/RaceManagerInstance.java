@@ -518,6 +518,7 @@ public class RaceManagerInstance extends NpcInstance
 		 * Constructor for Race.
 		 * @param info Info[]
 		 */
+		@SuppressWarnings("unused")
 		public Race(Info[] info)
 		{
 			this.info = info;
@@ -528,6 +529,7 @@ public class RaceManagerInstance extends NpcInstance
 		 * @param lane int
 		 * @return Info
 		 */
+		@SuppressWarnings("unused")
 		public Info getLaneInfo(int lane)
 		{
 			return info[lane];
@@ -550,6 +552,7 @@ public class RaceManagerInstance extends NpcInstance
 			 * @param odds int
 			 * @param payout int
 			 */
+			@SuppressWarnings("unused")
 			public Info(int id, int place, int odds, int payout)
 			{
 				this.id = id;
@@ -562,6 +565,7 @@ public class RaceManagerInstance extends NpcInstance
 			 * Method getId.
 			 * @return int
 			 */
+			@SuppressWarnings("unused")
 			public int getId()
 			{
 				return id;
@@ -571,6 +575,7 @@ public class RaceManagerInstance extends NpcInstance
 			 * Method getOdds.
 			 * @return int
 			 */
+			@SuppressWarnings("unused")
 			public int getOdds()
 			{
 				return odds;
@@ -580,6 +585,7 @@ public class RaceManagerInstance extends NpcInstance
 			 * Method getPayout.
 			 * @return int
 			 */
+			@SuppressWarnings("unused")
 			public int getPayout()
 			{
 				return payout;
@@ -589,6 +595,7 @@ public class RaceManagerInstance extends NpcInstance
 			 * Method getPlace.
 			 * @return int
 			 */
+			@SuppressWarnings("unused")
 			public int getPlace()
 			{
 				return place;

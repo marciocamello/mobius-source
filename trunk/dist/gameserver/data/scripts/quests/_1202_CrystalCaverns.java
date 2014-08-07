@@ -195,9 +195,6 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile
 	
 	private class World
 	{
-		/**
-		 * 
-		 */
 		public World()
 		{
 		}
@@ -207,6 +204,7 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile
 		int killedCaptains;
 		int bosses;
 		boolean OracleTriggered;
+		@SuppressWarnings("unused")
 		List<Integer> rewarded;
 		Room emeraldRoom;
 		Room steamRoom1;
@@ -224,9 +222,6 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile
 	
 	private class Room
 	{
-		/**
-		 * 
-		 */
 		public Room()
 		{
 		}

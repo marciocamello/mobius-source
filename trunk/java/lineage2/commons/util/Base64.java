@@ -817,7 +817,7 @@ public class Base64
 		private int lineLength;
 		private final boolean breakLines;
 		private final byte[] b4; // Scratch used in a few places
-		private boolean suspendEncoding;
+		private final boolean suspendEncoding;
 		
 		/**
 		 * Constructs a {@link #OutputStream} in either ENCODE or DECODE mode.
@@ -839,7 +839,7 @@ public class Base64
 		 * @see Base64#DONT_BREAK_LINES
 		 * @since 1.3
 		 */
-		private OutputStream(java.io.OutputStream pOut, int options)
+		OutputStream(java.io.OutputStream pOut, int options)
 		{
 			super(pOut);
 			// this.options = options;

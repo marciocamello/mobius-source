@@ -47,8 +47,11 @@ public class ExEventMatchTeamInfo extends L2GameServerPacket
 	
 	private static class EventMatchTeamInfo
 	{
+		@SuppressWarnings("unused")
 		public String _name, pet_Name;
+		@SuppressWarnings("unused")
 		public int _id, curCp, maxCp, curHp, maxHp, curMp, maxMp, level, class_id, race_id;
+		@SuppressWarnings("unused")
 		public int pet_id, pet_NpcId, pet_curHp, pet_maxHp, pet_curMp, pet_maxMp, pet_level;
 		
 		EventMatchTeamInfo(Player member)
