@@ -37,7 +37,7 @@ public class QuestTimer extends RunnableImpl
 	 * @param time long
 	 * @param npc NpcInstance
 	 */
-	QuestTimer(String name, long time, NpcInstance npc)
+	public QuestTimer(String name, long time, NpcInstance npc)
 	{
 		_name = name;
 		_time = time;
@@ -57,7 +57,7 @@ public class QuestTimer extends RunnableImpl
 	 * Method getQuestState.
 	 * @return QuestState
 	 */
-	private QuestState getQuestState()
+	QuestState getQuestState()
 	{
 		return _qs;
 	}

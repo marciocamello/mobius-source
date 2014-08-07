@@ -12,17 +12,13 @@
  */
 package lineage2.gameserver.model.quest.dynamic;
 
-/**
- * @author Дмитрий
- * @date 31.10.12 23:51
- */
 public class DynamicQuestParticipant implements Comparable<DynamicQuestParticipant>
 {
 	private final String name;
 	private int currentPoints;
 	private int additionalPoints;
 	
-	DynamicQuestParticipant(String name)
+	public DynamicQuestParticipant(String name)
 	{
 		this.name = name;
 	}
@@ -47,7 +43,7 @@ public class DynamicQuestParticipant implements Comparable<DynamicQuestParticipa
 		this.additionalPoints = additionalPoints;
 	}
 	
-	void increaseCurrentPoints(int points)
+	public void increaseCurrentPoints(int points)
 	{
 		currentPoints += points;
 	}

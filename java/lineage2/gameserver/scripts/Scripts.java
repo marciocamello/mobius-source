@@ -63,8 +63,8 @@ public class Scripts
 	}
 	
 	public static final Map<Integer, List<ScriptClassAndMethod>> dialogAppends = new HashMap<>();
-	static final Map<String, ScriptClassAndMethod> onAction = new HashMap<>();
-	static final Map<String, ScriptClassAndMethod> onActionShift = new HashMap<>();
+	public static final Map<String, ScriptClassAndMethod> onAction = new HashMap<>();
+	public static final Map<String, ScriptClassAndMethod> onActionShift = new HashMap<>();
 	private final Compiler compiler = new Compiler();
 	private final Map<String, Class<?>> _classes = new TreeMap<>();
 	
@@ -656,7 +656,7 @@ public class Scripts
 		 * @param className String
 		 * @param methodName String
 		 */
-		ScriptClassAndMethod(String className, String methodName)
+		public ScriptClassAndMethod(String className, String methodName)
 		{
 			this.className = className;
 			this.methodName = methodName;

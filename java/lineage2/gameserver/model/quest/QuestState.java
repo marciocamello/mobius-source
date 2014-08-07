@@ -63,12 +63,8 @@ public final class QuestState
 	/**
 	 * @author Mobius
 	 */
-	private class OnDeathListenerImpl implements OnDeathListener
+	public class OnDeathListenerImpl implements OnDeathListener
 	{
-		public OnDeathListenerImpl()
-		{
-		}
-		
 		/**
 		 * Method onDeath.
 		 * @param actor Creature
@@ -93,12 +89,8 @@ public final class QuestState
 	/**
 	 * @author Mobius
 	 */
-	private class PlayerOnKillListenerImpl implements OnKillListener
+	public class PlayerOnKillListenerImpl implements OnKillListener
 	{
-		public PlayerOnKillListenerImpl()
-		{
-		}
-		
 		/**
 		 * Method onKill.
 		 * @param actor Creature
@@ -170,8 +162,8 @@ public final class QuestState
 	}
 	
 	private static final Logger _log = LoggerFactory.getLogger(QuestState.class);
-	private static final int RESTART_HOUR = 6;
-	private static final int RESTART_MINUTES = 30;
+	public static final int RESTART_HOUR = 6;
+	public static final int RESTART_MINUTES = 30;
 	public static final String VAR_COND = "cond";
 	public final static QuestState[] EMPTY_ARRAY = new QuestState[0];
 	private final Player _player;
@@ -188,7 +180,7 @@ public final class QuestState
 	 * @param player Player
 	 * @param state int
 	 */
-	QuestState(Quest quest, Player player, int state)
+	public QuestState(Quest quest, Player player, int state)
 	{
 		_quest = quest;
 		_player = player;
@@ -258,7 +250,7 @@ public final class QuestState
 	/**
 	 * Method removePlayerOnKillListener.
 	 */
-	private void removePlayerOnKillListener()
+	public void removePlayerOnKillListener()
 	{
 		if (_onKillListener != null)
 		{
@@ -719,7 +711,7 @@ public final class QuestState
 	 * @param calcChance double
 	 * @return int
 	 */
-	private int rollDrop(int count, double calcChance)
+	public int rollDrop(int count, double calcChance)
 	{
 		if ((calcChance <= 0) || (count <= 0))
 		{
@@ -736,7 +728,7 @@ public final class QuestState
 	 * @param calcChance double
 	 * @return int
 	 */
-	private int rollDrop(int min, int max, double calcChance)
+	public int rollDrop(int min, int max, double calcChance)
 	{
 		if ((calcChance <= 0) || (min <= 0) || (max <= 0))
 		{
@@ -1368,7 +1360,7 @@ public final class QuestState
 	 * @param rangefrom GameObject
 	 * @return List<Player>
 	 */
-	private List<Player> getPartyMembers(int state, int maxrange, GameObject rangefrom)
+	public List<Player> getPartyMembers(int state, int maxrange, GameObject rangefrom)
 	{
 		List<Player> result = new ArrayList<>();
 		Party party = getPlayer().getParty();
@@ -1412,7 +1404,7 @@ public final class QuestState
 	 * @param rangefrom GameObject
 	 * @return Player
 	 */
-	private Player getRandomPartyMember(int state, int maxrange, GameObject rangefrom)
+	public Player getRandomPartyMember(int state, int maxrange, GameObject rangefrom)
 	{
 		List<Player> list = getPartyMembers(state, maxrange, rangefrom);
 		
@@ -1570,7 +1562,7 @@ public final class QuestState
 	 * @param store boolean
 	 * @return String
 	 */
-	private String setCond(int newCond, boolean store)
+	public String setCond(int newCond, boolean store)
 	{
 		if (newCond == getCond())
 		{
@@ -1624,7 +1616,7 @@ public final class QuestState
 	/**
 	 * Method setRestartTime.
 	 */
-	private void setRestartTime()
+	public void setRestartTime()
 	{
 		Calendar reDo = Calendar.getInstance();
 		

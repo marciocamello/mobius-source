@@ -148,7 +148,7 @@ public class Quest
 	 * Method updateQuestInDb.
 	 * @param qs QuestState
 	 */
-	static void updateQuestInDb(QuestState qs)
+	public static void updateQuestInDb(QuestState qs)
 	{
 		updateQuestVarInDb(qs, "<state>", qs.getStateName());
 	}
@@ -159,7 +159,7 @@ public class Quest
 	 * @param var String
 	 * @param value String
 	 */
-	static void updateQuestVarInDb(QuestState qs, String var, String value)
+	public static void updateQuestVarInDb(QuestState qs, String var, String value)
 	{
 		Player player = qs.getPlayer();
 		
@@ -195,7 +195,7 @@ public class Quest
 	 * Method deleteQuestInDb.
 	 * @param qs QuestState
 	 */
-	static void deleteQuestInDb(QuestState qs)
+	public static void deleteQuestInDb(QuestState qs)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -223,7 +223,7 @@ public class Quest
 	 * @param qs QuestState
 	 * @param var String
 	 */
-	static void deleteQuestVarInDb(QuestState qs, String var)
+	public static void deleteQuestVarInDb(QuestState qs, String var)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -338,9 +338,9 @@ public class Quest
 		}
 	}
 	
-	private final String _name;
-	private final int _party;
-	private final int _questId;
+	protected final String _name;
+	protected final int _party;
+	protected final int _questId;
 	public final static int CREATED = 1;
 	public final static int STARTED = 2;
 	public final static int COMPLETED = 3;
@@ -376,7 +376,7 @@ public class Quest
 	 * @param state String
 	 * @return int
 	 */
-	private static int getStateId(String state)
+	public static int getStateId(String state)
 	{
 		if (state.equalsIgnoreCase("Start"))
 		{
@@ -447,7 +447,7 @@ public class Quest
 	 * @param eventType QuestEventType
 	 * @return NpcTemplate
 	 */
-	private NpcTemplate addEventId(int npcId, QuestEventType eventType)
+	public NpcTemplate addEventId(int npcId, QuestEventType eventType)
 	{
 		try
 		{
@@ -820,7 +820,7 @@ public class Quest
 	 * @param victim Creature
 	 * @param qs QuestState
 	 */
-	void notifyDeath(Creature killer, Creature victim, QuestState qs)
+	public void notifyDeath(Creature killer, Creature victim, QuestState qs)
 	{
 		String res = null;
 		
@@ -887,7 +887,7 @@ public class Quest
 	 * @param target Player
 	 * @param qs QuestState
 	 */
-	void notifyKill(Player target, QuestState qs)
+	public void notifyKill(Player target, QuestState qs)
 	{
 		String res = null;
 		
@@ -978,7 +978,7 @@ public class Quest
 	 * Method notifyCreate.
 	 * @param qs QuestState
 	 */
-	void notifyCreate(QuestState qs)
+	public void notifyCreate(QuestState qs)
 	{
 		try
 		{
@@ -1020,7 +1020,7 @@ public class Quest
 	 * Method onCreate.
 	 * @param qs QuestState
 	 */
-	private void onCreate(QuestState qs)
+	public void onCreate(QuestState qs)
 	{
 	}
 	
@@ -1076,7 +1076,7 @@ public class Quest
 	 * @param st QuestState
 	 * @return String
 	 */
-	private String onKill(Player killed, QuestState st)
+	public String onKill(Player killed, QuestState st)
 	{
 		return null;
 	}
@@ -1163,7 +1163,7 @@ public class Quest
 	 * @param fileName String
 	 * @param showQuestInfo boolean
 	 */
-	private void showHtmlFile(Player player, String fileName, boolean showQuestInfo)
+	protected void showHtmlFile(Player player, String fileName, boolean showQuestInfo)
 	{
 		showHtmlFile(player, fileName, showQuestInfo, ArrayUtils.EMPTY_OBJECT_ARRAY);
 	}
@@ -1202,7 +1202,7 @@ public class Quest
 	 * @param player Player
 	 * @param fileName String
 	 */
-	private void showSimpleHtmFile(Player player, String fileName)
+	protected void showSimpleHtmFile(Player player, String fileName)
 	{
 		if (player == null)
 		{
@@ -1352,15 +1352,15 @@ public class Quest
 	/**
 	 * @author Mobius
 	 */
-	private class DeSpawnScheduleTimerTask extends RunnableImpl
+	public class DeSpawnScheduleTimerTask extends RunnableImpl
 	{
-		private NpcInstance _npc = null;
+		NpcInstance _npc = null;
 		
 		/**
 		 * Constructor for DeSpawnScheduleTimerTask.
 		 * @param npc NpcInstance
 		 */
-		DeSpawnScheduleTimerTask(NpcInstance npc)
+		public DeSpawnScheduleTimerTask(NpcInstance npc)
 		{
 			_npc = npc;
 		}
@@ -1409,7 +1409,7 @@ public class Quest
 	 * @param despawnDelay int
 	 * @return NpcInstance
 	 */
-	private NpcInstance addSpawn(int npcId, Location loc, int randomOffset, int despawnDelay)
+	public NpcInstance addSpawn(int npcId, Location loc, int randomOffset, int despawnDelay)
 	{
 		NpcInstance result = Functions.spawn(randomOffset > 50 ? Location.findPointToStay(loc, 0, randomOffset, ReflectionManager.DEFAULT.getGeoIndex()) : loc, npcId);
 		
@@ -1526,7 +1526,7 @@ public class Quest
 	{
 	}
 	
-	private void onReenterInstance(QuestState st, Reflection reflection)
+	public void onReenterInstance(QuestState st, Reflection reflection)
 	{
 	}
 }
