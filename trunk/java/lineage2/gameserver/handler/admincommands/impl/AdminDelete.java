@@ -20,6 +20,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Spawner;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.CustomSpawnTable;
+
 import org.apache.commons.lang3.math.NumberUtils;
 
 /**

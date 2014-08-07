@@ -33,7 +33,7 @@ public class KaronfSubAI extends DefaultAI
 	 * Constructor for KaronfSubAI.
 	 * @param actor NpcInstance
 	 */
-	public KaronfSubAI(NpcInstance actor)
+	KaronfSubAI(NpcInstance actor)
 	{
 		super(actor);
 	}

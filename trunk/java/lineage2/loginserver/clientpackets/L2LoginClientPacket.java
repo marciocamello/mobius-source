@@ -14,6 +14,7 @@ package lineage2.loginserver.clientpackets;
 
 import lineage2.commons.net.nio.impl.ReceivablePacket;
 import lineage2.loginserver.L2LoginClient;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

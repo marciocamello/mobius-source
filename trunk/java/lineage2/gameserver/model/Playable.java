@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
+
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.util.Rnd;
 import lineage2.commons.util.concurrent.atomic.AtomicState;
@@ -50,13 +51,10 @@ import lineage2.gameserver.utils.Location;
 
 public abstract class Playable extends Creature
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private final AtomicState _isSilentMoving = new AtomicState();
 	private boolean _isPendingRevive;
-	protected final ReadWriteLock questLock = new ReentrantReadWriteLock();
+	private final ReadWriteLock questLock = new ReentrantReadWriteLock();
 	protected final Lock questRead = questLock.readLock();
 	protected final Lock questWrite = questLock.writeLock();
 	
@@ -65,7 +63,7 @@ public abstract class Playable extends Creature
 	 * @param objectId int
 	 * @param template CharTemplate
 	 */
-	public Playable(int objectId, CharTemplate template)
+	Playable(int objectId, CharTemplate template)
 	{
 		super(objectId, template);
 	}
@@ -181,7 +179,7 @@ public abstract class Playable extends Creature
 	 * @param target Creature
 	 * @return boolean
 	 */
-	public boolean checkTarget(Creature target)
+	private boolean checkTarget(Creature target)
 	{
 		Player player = getPlayer();
 		
@@ -512,7 +510,7 @@ public abstract class Playable extends Creature
 	 * @param witchCtrl boolean
 	 * @return boolean
 	 */
-	public boolean isCtrlAttackable(Creature attacker, boolean force, boolean witchCtrl)
+	private boolean isCtrlAttackable(Creature attacker, boolean force, boolean witchCtrl)
 	{
 		Player player = getPlayer();
 		

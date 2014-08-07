@@ -129,7 +129,7 @@ public final class WarehouseFunctions
 	 * @param type WarehouseType
 	 * @return boolean
 	 */
-	public static boolean canShowWarehouseWithdrawList(Player player, WarehouseType type)
+	private static boolean canShowWarehouseWithdrawList(Player player, WarehouseType type)
 	{
 		if (!player.getPlayerAccess().UseWarehouse)
 		{
@@ -194,7 +194,7 @@ public final class WarehouseFunctions
 	 * @param type WarehouseType
 	 * @return boolean
 	 */
-	public static boolean canShowWarehouseDepositList(Player player, WarehouseType type)
+	private static boolean canShowWarehouseDepositList(Player player, WarehouseType type)
 	{
 		if (!player.getPlayerAccess().UseWarehouse)
 		{

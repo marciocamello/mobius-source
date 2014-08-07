@@ -22,6 +22,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
+
 import lineage2.commons.dao.JdbcDAO;
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.dao.JdbcEntityStats;
@@ -32,6 +33,7 @@ import lineage2.gameserver.model.mail.Mail;
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Element;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -575,7 +577,7 @@ public class MailDAO implements JdbcDAO<Integer, Mail>
 	 * @param messageIds Collection<Integer>
 	 * @return List<Mail>
 	 */
-	public List<Mail> load(Collection<Integer> messageIds)
+	private List<Mail> load(Collection<Integer> messageIds)
 	{
 		if (messageIds.isEmpty())
 		{

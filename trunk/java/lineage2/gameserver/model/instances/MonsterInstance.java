@@ -19,6 +19,7 @@ import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -59,25 +60,22 @@ import gnu.trove.set.hash.TIntHashSet;
  */
 public class MonsterInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * @author Mobius
 	 */
-	protected static final class RewardInfo
+	private static final class RewardInfo
 	{
-		protected Creature _attacker;
-		protected int _dmg = 0;
+		private final Creature _attacker;
+		int _dmg = 0;
 		
 		/**
 		 * Constructor for RewardInfo.
 		 * @param attacker Creature
 		 * @param dmg int
 		 */
-		public RewardInfo(final Creature attacker, final int dmg)
+		RewardInfo(final Creature attacker, final int dmg)
 		{
 			_attacker = attacker;
 			_dmg = dmg;
@@ -87,7 +85,7 @@ public class MonsterInstance extends NpcInstance
 		 * Method addDamage.
 		 * @param dmg int
 		 */
-		public void addDamage(int dmg)
+		void addDamage(int dmg)
 		{
 			if (dmg < 0)
 			{
@@ -309,8 +307,12 @@ public class MonsterInstance extends NpcInstance
 	/**
 	 * @author Mobius
 	 */
-	public class MinionMaintainTask extends RunnableImpl
+	private class MinionMaintainTask extends RunnableImpl
 	{
+		public MinionMaintainTask()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -789,7 +791,7 @@ public class MonsterInstance extends NpcInstance
 	/**
 	 * Method clearAbsorbers.
 	 */
-	public void clearAbsorbers()
+	private void clearAbsorbers()
 	{
 		absorbLock.lock();
 		
@@ -1008,7 +1010,7 @@ public class MonsterInstance extends NpcInstance
 	/**
 	 * Method clearSweep.
 	 */
-	public void clearSweep()
+	private void clearSweep()
 	{
 		sweepLock.lock();
 		
@@ -1030,7 +1032,7 @@ public class MonsterInstance extends NpcInstance
 	 * @param lastAttacker Creature
 	 * @param topDamager Creature
 	 */
-	public void rollRewards(Map.Entry<RewardType, RewardList> entry, final Creature lastAttacker, Creature topDamager)
+	private void rollRewards(Map.Entry<RewardType, RewardList> entry, final Creature lastAttacker, Creature topDamager)
 	{
 		RewardType type = entry.getKey();
 		RewardList list = entry.getValue();
@@ -1172,7 +1174,7 @@ public class MonsterInstance extends NpcInstance
 	 * @param normalExp double
 	 * @return int
 	 */
-	public int calculateOverhitExp(final double normalExp)
+	private int calculateOverhitExp(final double normalExp)
 	{
 		double overhitPercentage = (getOverhitDamage() * 100) / getMaxHp();
 		

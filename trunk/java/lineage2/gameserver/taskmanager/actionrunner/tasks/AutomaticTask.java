@@ -21,7 +21,7 @@ import lineage2.gameserver.taskmanager.actionrunner.ActionWrapper;
  */
 public abstract class AutomaticTask extends ActionWrapper
 {
-	public static final String TASKS = "automatic_tasks";
+	private static final String TASKS = "automatic_tasks";
 	
 	/**
 	 * Constructor for AutomaticTask.

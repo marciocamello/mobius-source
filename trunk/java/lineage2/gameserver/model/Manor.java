@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.concurrent.ConcurrentHashMap;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
@@ -29,6 +30,7 @@ import lineage2.gameserver.instancemanager.CastleManorManager;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.manor.CropProcure;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -432,7 +434,7 @@ public class Manor
 	/**
 	 * @author Mobius
 	 */
-	public class SeedData
+	private class SeedData
 	{
 		private int _id;
 		private final int _level;
@@ -451,7 +453,7 @@ public class Manor
 		 * @param crop int
 		 * @param mature int
 		 */
-		public SeedData(int level, int crop, int mature)
+		SeedData(int level, int crop, int mature)
 		{
 			_level = level;
 			_crop = crop;
@@ -468,7 +470,7 @@ public class Manor
 		 * @param lim1 long
 		 * @param lim2 long
 		 */
-		public void setData(int id, int t1, int t2, int manorId, int isAlt, long lim1, long lim2)
+		void setData(int id, int t1, int t2, int manorId, int isAlt, long lim1, long lim2)
 		{
 			_id = id;
 			_type1 = t1;
@@ -520,7 +522,7 @@ public class Manor
 		 * @param type int
 		 * @return int
 		 */
-		public int getReward(int type)
+		int getReward(int type)
 		{
 			return type == 1 ? _type1 : _type2;
 		}

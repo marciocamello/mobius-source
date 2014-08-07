@@ -17,7 +17,7 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class ExCubeGameChangeTimeToStart extends L2GameServerPacket
 {
-	int _seconds;
+	private final int _seconds;
 	
 	public ExCubeGameChangeTimeToStart(int seconds)
 	{

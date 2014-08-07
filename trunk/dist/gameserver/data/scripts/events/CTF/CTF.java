@@ -18,6 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.ThreadPoolManager;
@@ -57,6 +58,7 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.ReflectionUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -516,7 +518,7 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 	/**
 	 * @author Mobius
 	 */
-	public final class StartTask implements Runnable
+	private final class StartTask implements Runnable
 	{
 		private final String endTime;
 		
@@ -524,7 +526,7 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 		 * Constructor for StartTask.
 		 * @param endTime String
 		 */
-		public StartTask(String endTime)
+		StartTask(String endTime)
 		{
 			this.endTime = endTime;
 		}
@@ -2194,17 +2196,17 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 		OnEscape(player);
 	}
 	
-	public static class TeleportTask implements Runnable
+	private static class TeleportTask implements Runnable
 	{
-		Location loc;
-		Creature target;
+		private final Location loc;
+		private final Creature target;
 		
 		/**
 		 * Constructor for TeleportTask.
 		 * @param target Creature
 		 * @param loc Location
 		 */
-		public TeleportTask(Creature target, Location loc)
+		TeleportTask(Creature target, Location loc)
 		{
 			this.target = target;
 			this.loc = loc;
@@ -2338,9 +2340,9 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
-	public static class restoreBuffListForPlayer implements Runnable
+	private static class restoreBuffListForPlayer implements Runnable
 	{
-		Player player;
+		private final Player player;
 		
 		/**
 		 * Constructor for restoreBuffListForPlayer.
@@ -2395,15 +2397,15 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
-	public static class buffPlayer implements Runnable
+	private static class buffPlayer implements Runnable
 	{
-		Player player;
+		private final Player player;
 		
 		/**
 		 * Constructor for buffPlayer.
 		 * @param player Player
 		 */
-		buffPlayer(Player player)
+		private buffPlayer(Player player)
 		{
 			this.player = player;
 		}
@@ -2450,9 +2452,9 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
-	public static class timer implements Runnable
+	private static class timer implements Runnable
 	{
-		int time;
+		private int time;
 		
 		/**
 		 * Constructor for timer.
@@ -3155,7 +3157,6 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 		 */
 		public ZoneListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

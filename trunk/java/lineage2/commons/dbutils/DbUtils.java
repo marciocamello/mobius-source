@@ -28,7 +28,7 @@ public class DbUtils
 	 * @param conn Connection
 	 * @throws SQLException
 	 */
-	public static void close(Connection conn) throws SQLException
+	private static void close(Connection conn) throws SQLException
 	{
 		if (conn != null)
 		{

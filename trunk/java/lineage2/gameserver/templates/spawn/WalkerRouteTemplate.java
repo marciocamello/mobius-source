@@ -14,6 +14,7 @@ package lineage2.gameserver.templates.spawn;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.utils.Location;
 
 /**
@@ -62,7 +63,7 @@ public class WalkerRouteTemplate
 		 * @param delay long
 		 * @param end boolean
 		 */
-		public Route(int x, int y, int z, int h, long delay, boolean end)
+		Route(int x, int y, int z, int h, long delay, boolean end)
 		{
 			_x = x;
 			_y = y;

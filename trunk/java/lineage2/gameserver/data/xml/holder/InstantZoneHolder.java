@@ -15,10 +15,12 @@ package lineage2.gameserver.data.xml.holder;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.commons.time.cron.SchedulingPattern;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.templates.InstantZone;
+
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 
@@ -123,7 +125,7 @@ public class InstantZoneHolder extends AbstractHolder
 	 * @param id int
 	 * @return List<Integer>
 	 */
-	public List<Integer> getSharedReuseInstanceIds(int id)
+	private List<Integer> getSharedReuseInstanceIds(int id)
 	{
 		if (getInstantZone(id).getSharedReuseGroup() < 1)
 		{

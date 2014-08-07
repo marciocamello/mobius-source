@@ -30,6 +30,7 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.BbsUtil;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

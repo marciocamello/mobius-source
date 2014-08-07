@@ -17,6 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener;
@@ -126,7 +127,6 @@ public final class DragonValley implements ScriptFile
 		 */
 		public BuffTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

@@ -14,6 +14,7 @@ package services;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener;
@@ -484,7 +485,7 @@ public final class TeleToGH extends Functions implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public final class ZoneListener implements OnZoneEnterLeaveListener
+	private final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		/**
 		 * Method onZoneEnter.

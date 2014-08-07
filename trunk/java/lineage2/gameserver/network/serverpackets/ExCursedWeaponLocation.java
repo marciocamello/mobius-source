@@ -13,11 +13,9 @@
 package lineage2.gameserver.network.serverpackets;
 
 import java.util.List;
+
 import lineage2.gameserver.utils.Location;
 
-/**
- * Format: (ch) d[ddddd] Живой пример с оффа: FE 46 00 01 00 00 00 FE 1F 00 00 01 00 00 00 03 A9 FF FF E7 5C FF FF 60 D5 FF FF
- */
 public class ExCursedWeaponLocation extends L2GameServerPacket
 {
 	private final List<CursedWeaponInfo> _cursedWeaponInfo;
@@ -53,9 +51,9 @@ public class ExCursedWeaponLocation extends L2GameServerPacket
 	
 	public static class CursedWeaponInfo
 	{
-		public Location _pos;
-		public int _id;
-		public int _status;
+		final Location _pos;
+		final int _id;
+		final int _status;
 		
 		public CursedWeaponInfo(Location p, int ID, int status)
 		{

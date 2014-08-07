@@ -13,6 +13,7 @@
 package ai.freya;
 
 import java.util.List;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -209,7 +210,6 @@ public final class Maguen extends Fighter
 		 */
 		Plasma()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -232,7 +232,6 @@ public final class Maguen extends Fighter
 		 */
 		Despawn()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

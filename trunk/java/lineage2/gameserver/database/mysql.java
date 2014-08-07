@@ -22,7 +22,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import lineage2.commons.dbutils.DbUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,7 +43,7 @@ public abstract class mysql
 	 * @param vars Object[]
 	 * @return boolean
 	 */
-	public static boolean setEx(DatabaseFactory db, String query, Object... vars)
+	private static boolean setEx(DatabaseFactory db, String query, Object... vars)
 	{
 		Connection con = null;
 		Statement statement = null;
@@ -87,7 +89,7 @@ public abstract class mysql
 	 * @param vars Object[]
 	 * @throws SQLException
 	 */
-	public static void setVars(PreparedStatement statement, Object... vars) throws SQLException
+	private static void setVars(PreparedStatement statement, Object... vars) throws SQLException
 	{
 		Number n;
 		long long_val;
@@ -189,55 +191,12 @@ public abstract class mysql
 	}
 	
 	/**
-	 * Method getAll.
-	 * @param query String
-	 * @return List<Map<String,Object>>
-	 */
-	public static List<Map<String, Object>> getAll(String query)
-	{
-		List<Map<String, Object>> ret = new ArrayList<>();
-		Connection con = null;
-		Statement statement = null;
-		ResultSet rset = null;
-		
-		try
-		{
-			con = DatabaseFactory.getInstance().getConnection();
-			statement = con.createStatement();
-			rset = statement.executeQuery(query);
-			ResultSetMetaData md = rset.getMetaData();
-			
-			while (rset.next())
-			{
-				Map<String, Object> tmp = new HashMap<>();
-				
-				for (int i = md.getColumnCount(); i > 0; i--)
-				{
-					tmp.put(md.getColumnName(i), rset.getObject(i));
-				}
-				
-				ret.add(tmp);
-			}
-		}
-		catch (Exception e)
-		{
-			_log.warn("Could not execute query '" + query + "': " + e);
-			e.printStackTrace();
-		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement, rset);
-		}
-		return ret;
-	}
-	
-	/**
 	 * Method get_array.
 	 * @param db DatabaseFactory
 	 * @param query String
 	 * @return List<Object>
 	 */
-	public static List<Object> get_array(DatabaseFactory db, String query)
+	private static List<Object> get_array(DatabaseFactory db, String query)
 	{
 		List<Object> ret = new ArrayList<>();
 		Connection con = null;
@@ -343,7 +302,7 @@ public abstract class mysql
 	 * @param where String
 	 * @return Integer[][]
 	 */
-	public static Integer[][] simple_get_int_array(DatabaseFactory db, String[] ret_fields, String table, String where)
+	private static Integer[][] simple_get_int_array(DatabaseFactory db, String[] ret_fields, String table, String where)
 	{
 		String fields = null;
 		{
@@ -399,17 +358,5 @@ public abstract class mysql
 			DbUtils.closeQuietly(con, statement, rset);
 		}
 		return res;
-	}
-	
-	/**
-	 * Method simple_get_int_array.
-	 * @param ret_fields String[]
-	 * @param table String
-	 * @param where String
-	 * @return Integer[][]
-	 */
-	public static Integer[][] simple_get_int_array(String[] ret_fields, String table, String where)
-	{
-		return simple_get_int_array(null, ret_fields, table, where);
 	}
 }

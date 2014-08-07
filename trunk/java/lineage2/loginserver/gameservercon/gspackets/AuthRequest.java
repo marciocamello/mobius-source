@@ -17,6 +17,7 @@ import lineage2.loginserver.gameservercon.GameServer;
 import lineage2.loginserver.gameservercon.ReceivablePacket;
 import lineage2.loginserver.gameservercon.lspackets.AuthResponse;
 import lineage2.loginserver.gameservercon.lspackets.LoginServerFail;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

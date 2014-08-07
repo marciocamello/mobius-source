@@ -13,6 +13,7 @@
 package lineage2.gameserver.network.serverpackets;
 
 import java.util.List;
+
 import lineage2.gameserver.model.worldstatistics.CharacterStatistic;
 
 public class ExLoadStatHotLink extends L2GameServerPacket
@@ -46,7 +47,7 @@ public class ExLoadStatHotLink extends L2GameServerPacket
 			writeD(statistic.getObjId()); // objId
 			writeS(statistic.getName()); // CharName
 			writeQ(statistic.getValue()); // Value
-			writeH(0x00);// TODO: Поднялся или опустился в рейтинге
+			writeH(0x00);// TODO
 			writeD(0x00);
 			writeD(0x00);
 		}
@@ -61,7 +62,7 @@ public class ExLoadStatHotLink extends L2GameServerPacket
 			writeD(statistic.getObjId()); // objId
 			writeS(statistic.getName()); // CharName
 			writeQ(statistic.getValue()); // Value
-			writeH(0x00);// TODO: Поднялся или опустился в рейтинге
+			writeH(0x00);// TODO
 			writeD(0x00);
 			writeD(0x00);
 		}

@@ -24,7 +24,7 @@ import java.util.Locale;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public final class Locator
+final class Locator
 {
 	/**
 	 * Constructor for Locator.
@@ -38,7 +38,7 @@ public final class Locator
 	 * @param c Class<?>
 	 * @return File
 	 */
-	public static File getClassSource(Class<?> c)
+	static File getClassSource(Class<?> c)
 	{
 		String classResource = c.getName().replace('.', '/') + ".class";
 		return getResourceSource(c.getClassLoader(), classResource);
@@ -50,7 +50,7 @@ public final class Locator
 	 * @param resource String
 	 * @return File
 	 */
-	public static File getResourceSource(ClassLoader c, String resource)
+	private static File getResourceSource(ClassLoader c, String resource)
 	{
 		if (c == null)
 		{
@@ -94,7 +94,7 @@ public final class Locator
 	 * @param uri String
 	 * @return String
 	 */
-	public static String fromURI(String uri)
+	private static String fromURI(String uri)
 	{
 		URL url = null;
 		
@@ -179,7 +179,7 @@ public final class Locator
 	 * Method getToolsJar.
 	 * @return File
 	 */
-	public static File getToolsJar()
+	static File getToolsJar()
 	{
 		boolean toolsJarAvailable = false;
 		
@@ -229,7 +229,7 @@ public final class Locator
 	 * @return URL[] * @throws MalformedURLException
 	 * @throws MalformedURLException
 	 */
-	public static URL[] getLocationURLs(File location) throws MalformedURLException
+	static URL[] getLocationURLs(File location) throws MalformedURLException
 	{
 		return getLocationURLs(location, new String[]
 		{
@@ -244,7 +244,7 @@ public final class Locator
 	 * @return URL[] * @throws MalformedURLException
 	 * @throws MalformedURLException
 	 */
-	public static URL[] getLocationURLs(File location, final String[] extensions) throws MalformedURLException
+	private static URL[] getLocationURLs(File location, final String[] extensions) throws MalformedURLException
 	{
 		URL[] urls = new URL[0];
 		

@@ -26,9 +26,6 @@ import lineage2.gameserver.utils.TimeUtils;
  */
 public final class BrakelInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

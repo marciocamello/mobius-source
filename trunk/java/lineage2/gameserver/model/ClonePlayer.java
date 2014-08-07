@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Future;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ai.ClonePlayerAI;
@@ -72,7 +73,7 @@ public class ClonePlayer extends Playable
 	 * Method startDecay.
 	 * @param delay long
 	 */
-	protected void startDecay(long delay)
+	private void startDecay(long delay)
 	{
 		stopDecay();
 		_decayTask = DecayTaskManager.getInstance().addDecayTask(this, delay);
@@ -81,7 +82,7 @@ public class ClonePlayer extends Playable
 	/**
 	 * Method stopDecay.
 	 */
-	protected void stopDecay()
+	private void stopDecay()
 	{
 		if (_decayTask != null)
 		{
@@ -257,7 +258,7 @@ public class ClonePlayer extends Playable
 	/**
 	 * Method updateEffectIconsImpl.
 	 */
-	public void updateEffectIconsImpl()
+	private void updateEffectIconsImpl()
 	{
 		Player owner = getPlayer();
 		PartySpelled ps = new PartySpelled(this, true);
@@ -594,7 +595,7 @@ public class ClonePlayer extends Playable
 	/**
 	 * Method notifyOwerStartAttak.
 	 */
-	public void notifyOwnerStartAttak()
+	void notifyOwnerStartAttak()
 	{
 		getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _owner.getTarget());
 	}
@@ -609,7 +610,6 @@ public class ClonePlayer extends Playable
 		 */
 		public OwnerAttakListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

@@ -13,6 +13,7 @@
 package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Creature;

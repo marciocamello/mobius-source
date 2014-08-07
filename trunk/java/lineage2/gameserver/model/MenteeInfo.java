@@ -36,20 +36,20 @@ public class MenteeInfo
 		_isMentor = isMentor;
 	}
 	
-	public MenteeInfo(Player player)
+	MenteeInfo(Player player)
 	{
 		_objectId = player.getObjectId();
 		update(player, true);
 	}
 	
-	public MenteeInfo(Player player, boolean isMentor)
+	MenteeInfo(Player player, boolean isMentor)
 	{
 		_objectId = player.getObjectId();
 		_isMentor = isMentor;
 		update(player, true);
 	}
 	
-	public void update(Player player, boolean set)
+	void update(Player player, boolean set)
 	{
 		_level = player.getLevel();
 		_name = player.getName();

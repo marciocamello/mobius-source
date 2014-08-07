@@ -16,7 +16,9 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
+
 import lineage2.loginserver.Config;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -51,7 +53,7 @@ public class GameServer
 	 * Constructor for GameServer.
 	 * @param conn GameServerConnection
 	 */
-	public GameServer(GameServerConnection conn)
+	GameServer(GameServerConnection conn)
 	{
 		_conn = conn;
 	}
@@ -242,7 +244,7 @@ public class GameServer
 	/**
 	 * Method setDown.
 	 */
-	public void setDown()
+	void setDown()
 	{
 		setAuthed(false);
 		setConnection(null);

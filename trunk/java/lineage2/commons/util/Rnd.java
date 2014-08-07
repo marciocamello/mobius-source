@@ -15,6 +15,7 @@ package lineage2.commons.util;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicLong;
+
 import org.apache.commons.math3.random.MersenneTwister;
 import org.apache.commons.math3.random.RandomGenerator;
 
@@ -38,8 +39,12 @@ public class Rnd
 	/**
 	 * @author Mobius
 	 */
-	static final class ThreadLocalGeneratorHolder extends ThreadLocal<RandomGenerator>
+	private static final class ThreadLocalGeneratorHolder extends ThreadLocal<RandomGenerator>
 	{
+		public ThreadLocalGeneratorHolder()
+		{
+		}
+		
 		/**
 		 * Method initialValue.
 		 * @return RandomGenerator
@@ -133,7 +138,7 @@ public class Rnd
 	 * Method nextGaussian.
 	 * @return double
 	 */
-	public static double nextGaussian()
+	static double nextGaussian()
 	{
 		return rnd().nextGaussian();
 	}
@@ -142,7 +147,7 @@ public class Rnd
 	 * Method nextBoolean.
 	 * @return boolean
 	 */
-	public static boolean nextBoolean()
+	static boolean nextBoolean()
 	{
 		return rnd().nextBoolean();
 	}
@@ -204,7 +209,7 @@ public class Rnd
 	 * @param array byte[]
 	 * @return byte[]
 	 */
-	public static byte[] nextBytes(byte[] array)
+	static byte[] nextBytes(byte[] array)
 	{
 		random.nextBytes(array);
 		return array;

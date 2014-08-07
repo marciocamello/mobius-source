@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
@@ -89,7 +90,7 @@ public final class HandysBlockCheckerManager
 	 * Method clearArenaVotes.
 	 * @param arena int
 	 */
-	public synchronized void clearArenaVotes(int arena)
+	private synchronized void clearArenaVotes(int arena)
 	{
 		_arenaVotes.put(arena, 0);
 	}
@@ -347,16 +348,16 @@ public final class HandysBlockCheckerManager
 	 */
 	public class ArenaParticipantsHolder
 	{
-		int _arena;
-		List<Player> _redPlayers;
-		List<Player> _bluePlayers;
-		BlockCheckerEngine _engine;
+		private final int _arena;
+		final List<Player> _redPlayers;
+		private final List<Player> _bluePlayers;
+		private final BlockCheckerEngine _engine;
 		
 		/**
 		 * Constructor for ArenaParticipantsHolder.
 		 * @param arena int
 		 */
-		public ArenaParticipantsHolder(int arena)
+		ArenaParticipantsHolder(int arena)
 		{
 			_arena = arena;
 			_redPlayers = new ArrayList<>(6);
@@ -399,7 +400,7 @@ public final class HandysBlockCheckerManager
 		 * @param player Player
 		 * @param team int
 		 */
-		public void addPlayer(Player player, int team)
+		void addPlayer(Player player, int team)
 		{
 			if (team == 0)
 			{
@@ -416,7 +417,7 @@ public final class HandysBlockCheckerManager
 		 * @param player Player
 		 * @param team int
 		 */
-		public void removePlayer(Player player, int team)
+		void removePlayer(Player player, int team)
 		{
 			if (team == 0)
 			{

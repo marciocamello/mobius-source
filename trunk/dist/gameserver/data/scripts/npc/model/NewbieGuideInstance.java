@@ -14,6 +14,7 @@ package npc.model;
 
 import java.util.Arrays;
 import java.util.List;
+
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.Experience;
@@ -25,6 +26,7 @@ import lineage2.gameserver.network.serverpackets.PlaySound;
 import lineage2.gameserver.network.serverpackets.RadarControl;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.NpcTemplate;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,9 +36,6 @@ import org.slf4j.LoggerFactory;
  */
 public final class NewbieGuideInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final Logger _log = LoggerFactory.getLogger(NewbieGuideInstance.class);
 	private static final List<?> mainHelpers = Arrays.asList(30598, 30599, 30600, 30601, 30602, 32135);

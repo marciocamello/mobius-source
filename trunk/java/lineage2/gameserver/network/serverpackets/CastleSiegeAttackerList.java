@@ -14,11 +14,13 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.Collections;
 import java.util.List;
+
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.entity.events.objects.SiegeClanObject;
 import lineage2.gameserver.model.entity.residence.Residence;
 import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
+
 import org.apache.commons.lang3.StringUtils;
 
 /**

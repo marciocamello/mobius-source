@@ -74,7 +74,7 @@ public enum CompType
 	 * Method hasBuffer.
 	 * @return boolean
 	 */
-	public boolean hasBuffer()
+	boolean hasBuffer()
 	{
 		return _hasBuffer;
 	}

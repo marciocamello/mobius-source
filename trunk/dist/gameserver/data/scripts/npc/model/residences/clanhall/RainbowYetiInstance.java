@@ -15,6 +15,7 @@ package npc.model.residences.clanhall;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Future;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -39,9 +40,6 @@ import lineage2.gameserver.utils.ItemFunctions;
  */
 public final class RainbowYetiInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int ItemA = 8035;
 	private static final int ItemB = 8036;
@@ -112,7 +110,6 @@ public final class RainbowYetiInstance extends NpcInstance
 		 */
 		public GenerateTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

@@ -13,6 +13,7 @@
 package lineage2.gameserver.utils;
 
 import java.io.Serializable;
+
 import lineage2.commons.geometry.Point3D;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.geodata.GeoEngine;
@@ -20,6 +21,7 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.templates.spawn.SpawnRange;
+
 import org.dom4j.Element;
 
 /**
@@ -28,9 +30,6 @@ import org.dom4j.Element;
  */
 public class Location extends Point3D implements SpawnRange, Serializable
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	public int h;
 	
@@ -69,7 +68,7 @@ public class Location extends Point3D implements SpawnRange, Serializable
 	 * Constructor for Location.
 	 * @param obj GameObject
 	 */
-	public Location(GameObject obj)
+	private Location(GameObject obj)
 	{
 		this(obj.getX(), obj.getY(), obj.getZ(), obj.getHeading());
 	}
@@ -92,17 +91,6 @@ public class Location extends Point3D implements SpawnRange, Serializable
 	public Location correctGeoZ()
 	{
 		z = GeoEngine.getHeight(x, y, z, 0);
-		return this;
-	}
-	
-	/**
-	 * Method correctGeoZ.
-	 * @param refIndex int
-	 * @return Location
-	 */
-	public Location correctGeoZ(int refIndex)
-	{
-		z = GeoEngine.getHeight(x, y, z, refIndex);
 		return this;
 	}
 	
@@ -232,7 +220,7 @@ public class Location extends Point3D implements SpawnRange, Serializable
 	 * @param y int
 	 * @return double
 	 */
-	public double distance(int x, int y)
+	private double distance(int x, int y)
 	{
 		long dx = this.x - x;
 		long dy = this.y - y;
@@ -256,7 +244,7 @@ public class Location extends Point3D implements SpawnRange, Serializable
 	 * @param z int
 	 * @return double
 	 */
-	public double distance3D(int x, int y, int z)
+	private double distance3D(int x, int y, int z)
 	{
 		long dx = this.x - x;
 		long dy = this.y - y;
@@ -428,38 +416,13 @@ public class Location extends Point3D implements SpawnRange, Serializable
 	
 	/**
 	 * Method findAroundPosition.
-	 * @param loc Location
-	 * @param radius int
-	 * @param geoIndex int
-	 * @return Location
-	 */
-	public static Location findAroundPosition(Location loc, int radius, int geoIndex)
-	{
-		return findAroundPosition(loc.x, loc.y, loc.z, 0, radius, geoIndex);
-	}
-	
-	/**
-	 * Method findAroundPosition.
-	 * @param loc Location
-	 * @param radiusmin int
-	 * @param radiusmax int
-	 * @param geoIndex int
-	 * @return Location
-	 */
-	public static Location findAroundPosition(Location loc, int radiusmin, int radiusmax, int geoIndex)
-	{
-		return findAroundPosition(loc.x, loc.y, loc.z, radiusmin, radiusmax, geoIndex);
-	}
-	
-	/**
-	 * Method findAroundPosition.
 	 * @param obj GameObject
 	 * @param loc Location
 	 * @param radiusmin int
 	 * @param radiusmax int
 	 * @return Location
 	 */
-	public static Location findAroundPosition(GameObject obj, Location loc, int radiusmin, int radiusmax)
+	private static Location findAroundPosition(GameObject obj, Location loc, int radiusmin, int radiusmax)
 	{
 		return findAroundPosition(loc.x, loc.y, loc.z, radiusmin, radiusmax, obj.getGeoIndex());
 	}
@@ -600,7 +563,7 @@ public class Location extends Point3D implements SpawnRange, Serializable
 	 * @param radiusmax int
 	 * @return Location
 	 */
-	public static Location coordsRandomize(int x, int y, int z, int heading, int radiusmin, int radiusmax)
+	private static Location coordsRandomize(int x, int y, int z, int heading, int radiusmin, int radiusmax)
 	{
 		if ((radiusmax == 0) || (radiusmax < radiusmin))
 		{

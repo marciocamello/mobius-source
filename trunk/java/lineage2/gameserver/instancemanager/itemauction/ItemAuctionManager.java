@@ -20,18 +20,22 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.time.cron.SchedulingPattern;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.templates.StatsSet;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
+
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
@@ -241,7 +245,7 @@ public class ItemAuctionManager
 	 * Method deleteAuction.
 	 * @param auctionId int
 	 */
-	public void deleteAuction(int auctionId)
+	void deleteAuction(int auctionId)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;

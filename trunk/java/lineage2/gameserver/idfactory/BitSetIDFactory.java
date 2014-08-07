@@ -14,9 +14,11 @@ package lineage2.gameserver.idfactory;
 
 import java.util.BitSet;
 import java.util.concurrent.atomic.AtomicInteger;
+
 import lineage2.commons.math.PrimeFinder;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,7 +26,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class BitSetIDFactory extends IdFactory
+class BitSetIDFactory extends IdFactory
 {
 	private static final Logger _log = LoggerFactory.getLogger(BitSetIDFactory.class);
 	private BitSet freeIds;
@@ -34,8 +36,12 @@ public class BitSetIDFactory extends IdFactory
 	/**
 	 * @author Mobius
 	 */
-	public class BitSetCapacityCheck extends RunnableImpl
+	private class BitSetCapacityCheck extends RunnableImpl
 	{
+		public BitSetCapacityCheck()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -161,7 +167,7 @@ public class BitSetIDFactory extends IdFactory
 	 * Method usedIdCount.
 	 * @return int
 	 */
-	protected synchronized int usedIdCount()
+	private synchronized int usedIdCount()
 	{
 		return size() - FIRST_OID;
 	}
@@ -170,7 +176,7 @@ public class BitSetIDFactory extends IdFactory
 	 * Method reachingBitSetCapacity.
 	 * @return boolean
 	 */
-	protected synchronized boolean reachingBitSetCapacity()
+	synchronized boolean reachingBitSetCapacity()
 	{
 		return PrimeFinder.nextPrime((usedIdCount() * 11) / 10) > freeIds.size();
 	}
@@ -178,7 +184,7 @@ public class BitSetIDFactory extends IdFactory
 	/**
 	 * Method increaseBitSetCapacity.
 	 */
-	protected synchronized void increaseBitSetCapacity()
+	synchronized void increaseBitSetCapacity()
 	{
 		BitSet newBitSet = new BitSet(PrimeFinder.nextPrime((usedIdCount() * 11) / 10));
 		newBitSet.or(freeIds);

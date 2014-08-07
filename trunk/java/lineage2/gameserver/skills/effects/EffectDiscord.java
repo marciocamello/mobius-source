@@ -14,6 +14,7 @@ package lineage2.gameserver.skills.effects;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.cache.Msg;

@@ -15,6 +15,7 @@ package npc.model.residences;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.AggroList;
@@ -32,9 +33,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class QuestSiegeGuardInstance extends SiegeGuardInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

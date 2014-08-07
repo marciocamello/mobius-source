@@ -14,6 +14,7 @@ package lineage2.gameserver.data.xml.parser;
 
 import java.io.File;
 import java.util.Iterator;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.data.xml.holder.OptionDataHolder;
@@ -26,6 +27,7 @@ import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.Bodypart;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate;
+
 import org.apache.commons.lang3.StringUtils;
 
 /**

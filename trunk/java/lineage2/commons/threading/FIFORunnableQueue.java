@@ -19,7 +19,7 @@ import java.util.Queue;
  * @version $Revision: 1.0 $
  * @param <T>
  */
-public abstract class FIFORunnableQueue<T extends Runnable> implements Runnable
+abstract class FIFORunnableQueue<T extends Runnable> implements Runnable
 {
 	private static final int NONE = 0;
 	private static final int QUEUED = 1;

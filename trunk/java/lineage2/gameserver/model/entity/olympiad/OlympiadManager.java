@@ -16,9 +16,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,7 +37,7 @@ public class OlympiadManager extends RunnableImpl
 	 * Method sleep.
 	 * @param time long
 	 */
-	public void sleep(long time)
+	private void sleep(long time)
 	{
 		try
 		{
@@ -150,7 +152,7 @@ public class OlympiadManager extends RunnableImpl
 	 * Method freeOlympiadInstance.
 	 * @param index int
 	 */
-	public void freeOlympiadInstance(int index)
+	void freeOlympiadInstance(int index)
 	{
 		_olympiadInstances.remove(index);
 		Olympiad.STADIUMS[index].setStadiaFree();

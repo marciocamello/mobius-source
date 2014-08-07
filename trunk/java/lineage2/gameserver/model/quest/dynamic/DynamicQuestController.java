@@ -14,10 +14,12 @@ package lineage2.gameserver.model.quest.dynamic;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.time.cron.SchedulingPattern;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Player;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -51,7 +53,7 @@ public class DynamicQuestController
 	/**
 	 * @param questId
 	 */
-	public void startQuest(int questId)
+	void startQuest(int questId)
 	{
 		startQuest(questId, 1);
 	}
@@ -60,7 +62,7 @@ public class DynamicQuestController
 	 * @param questId
 	 * @param step
 	 */
-	public void startQuest(int questId, int step)
+	private void startQuest(int questId, int step)
 	{
 		DynamicQuest quest = dynamicQuestsMap.get(questId);
 		quest.setCurrentStep(step);
@@ -77,7 +79,7 @@ public class DynamicQuestController
 	 * @param questId
 	 * @param success
 	 */
-	public void endQuest(int questId, boolean success)
+	void endQuest(int questId, boolean success)
 	{
 		DynamicQuest quest = dynamicQuestsMap.get(questId);
 		quest.stop(success, new QuestFinalizer(questId));
@@ -135,7 +137,7 @@ public class DynamicQuestController
 		}
 	}
 	
-	public void taskCompleted(int questId, int taskId)
+	void taskCompleted(int questId, int taskId)
 	{
 		if (dynamicQuestsMap.containsKey(questId))
 		{

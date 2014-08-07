@@ -120,7 +120,7 @@ public class AdminClanHall implements IAdminCommandHandler
 	 * Method showClanHallSelectPage.
 	 * @param activeChar Player
 	 */
-	public void showClanHallSelectPage(Player activeChar)
+	private void showClanHallSelectPage(Player activeChar)
 	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		StringBuilder replyMSG = new StringBuilder("<html><body>");
@@ -142,7 +142,7 @@ public class AdminClanHall implements IAdminCommandHandler
 	 * @param activeChar Player
 	 * @param clanhall ClanHall
 	 */
-	public void showClanHallPage(Player activeChar, ClanHall clanhall)
+	private void showClanHallPage(Player activeChar, ClanHall clanhall)
 	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		StringBuilder replyMSG = new StringBuilder("<html><body>");

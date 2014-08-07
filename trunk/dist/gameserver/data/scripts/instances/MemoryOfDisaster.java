@@ -14,6 +14,7 @@ package instances;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -129,12 +130,8 @@ public final class MemoryOfDisaster extends Reflection
 	
 	private class TeleportTask extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public TeleportTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -172,12 +169,8 @@ public final class MemoryOfDisaster extends Reflection
 	
 	private class SpawnRoginTask extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public SpawnRoginTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -189,12 +182,8 @@ public final class MemoryOfDisaster extends Reflection
 	
 	private class Scene1 extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public Scene1()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -219,12 +208,8 @@ public final class MemoryOfDisaster extends Reflection
 	
 	private class Scene2 extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public Scene2()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -241,12 +226,8 @@ public final class MemoryOfDisaster extends Reflection
 	
 	private class Scene3 extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public Scene3()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -263,12 +244,8 @@ public final class MemoryOfDisaster extends Reflection
 	
 	private class EndInstanceTask extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public EndInstanceTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

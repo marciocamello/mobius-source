@@ -53,7 +53,7 @@ public class MMOConnection<T extends MMOClient>
 	 * @param socket Socket
 	 * @param key SelectionKey
 	 */
-	public MMOConnection(SelectorThread<T> selectorThread, Socket socket, SelectionKey key)
+	MMOConnection(SelectorThread<T> selectorThread, Socket socket, SelectionKey key)
 	{
 		_selectorThread = selectorThread;
 		_selectionKey = key;
@@ -86,7 +86,7 @@ public class MMOConnection<T extends MMOClient>
 	 * Method recvPacket.
 	 * @param rp ReceivablePacket<T>
 	 */
-	public void recvPacket(ReceivablePacket<T> rp)
+	void recvPacket(ReceivablePacket<T> rp)
 	{
 		if (rp == null)
 		{
@@ -196,7 +196,7 @@ public class MMOConnection<T extends MMOClient>
 	/**
 	 * Method disableReadInterest.
 	 */
-	protected void disableReadInterest()
+	private void disableReadInterest()
 	{
 		try
 		{
@@ -227,7 +227,7 @@ public class MMOConnection<T extends MMOClient>
 	/**
 	 * Method disableWriteInterest.
 	 */
-	protected void disableWriteInterest()
+	private void disableWriteInterest()
 	{
 		try
 		{
@@ -310,7 +310,7 @@ public class MMOConnection<T extends MMOClient>
 	 * Method getRecvQueue.
 	 * @return Queue<ReceivablePacket<T>>
 	 */
-	protected Queue<ReceivablePacket<T>> getRecvQueue()
+	Queue<ReceivablePacket<T>> getRecvQueue()
 	{
 		return _recvQueue;
 	}

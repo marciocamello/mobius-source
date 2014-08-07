@@ -14,10 +14,6 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Creature;
 
-/**
- * Format: ddd Пример пакета: 40 c8 22 00 49 be 50 00 00 86 25 0b 00
- * @author SYS
- */
 public class MagicAndSkillList extends L2GameServerPacket
 {
 	private final int _chaId;
@@ -36,7 +32,7 @@ public class MagicAndSkillList extends L2GameServerPacket
 	{
 		writeC(0x40);
 		writeD(_chaId);
-		writeD(_unk1); // в снифе было 20670
-		writeD(_unk2); // в снифе было 730502
+		writeD(_unk1);
+		writeD(_unk2);
 	}
 }

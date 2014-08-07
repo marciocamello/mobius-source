@@ -14,6 +14,7 @@ package lineage2.gameserver.skills;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.skills.effects.EffectAddSkills;
 import lineage2.gameserver.skills.effects.EffectAgathionRes;

@@ -18,7 +18,7 @@ import java.util.concurrent.atomic.AtomicLong;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class SelectorStats
+class SelectorStats
 {
 	private final AtomicLong _connectionsTotal = new AtomicLong();
 	private final AtomicLong _connectionsCurrent = new AtomicLong();
@@ -33,7 +33,7 @@ public class SelectorStats
 	/**
 	 * Method increaseOpenedConnections.
 	 */
-	public void increaseOpenedConnections()
+	void increaseOpenedConnections()
 	{
 		if (_connectionsCurrent.incrementAndGet() > _connectionsMax.get())
 		{
@@ -46,7 +46,7 @@ public class SelectorStats
 	/**
 	 * Method decreseOpenedConnections.
 	 */
-	public void decreseOpenedConnections()
+	void decreseOpenedConnections()
 	{
 		_connectionsCurrent.decrementAndGet();
 	}
@@ -55,7 +55,7 @@ public class SelectorStats
 	 * Method increaseIncomingBytes.
 	 * @param size int
 	 */
-	public void increaseIncomingBytes(int size)
+	void increaseIncomingBytes(int size)
 	{
 		if (size > _bytesMaxPerRead.get())
 		{
@@ -69,7 +69,7 @@ public class SelectorStats
 	 * Method increaseOutgoingBytes.
 	 * @param size int
 	 */
-	public void increaseOutgoingBytes(int size)
+	void increaseOutgoingBytes(int size)
 	{
 		if (size > _bytesMaxPerWrite.get())
 		{
@@ -82,7 +82,7 @@ public class SelectorStats
 	/**
 	 * Method increaseIncomingPacketsCount.
 	 */
-	public void increaseIncomingPacketsCount()
+	void increaseIncomingPacketsCount()
 	{
 		_incomingPacketsTotal.incrementAndGet();
 	}
@@ -90,7 +90,7 @@ public class SelectorStats
 	/**
 	 * Method increaseOutgoingPacketsCount.
 	 */
-	public void increaseOutgoingPacketsCount()
+	void increaseOutgoingPacketsCount()
 	{
 		_outgoingPacketsTotal.incrementAndGet();
 	}

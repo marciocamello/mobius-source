@@ -13,6 +13,7 @@
 package lineage2.gameserver.model.entity.events.objects;
 
 import java.io.Serializable;
+
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 
 /**

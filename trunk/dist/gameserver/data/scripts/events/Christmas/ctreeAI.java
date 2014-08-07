@@ -28,7 +28,7 @@ public final class ctreeAI extends DefaultAI
 	 * Constructor for ctreeAI.
 	 * @param actor NpcInstance
 	 */
-	public ctreeAI(NpcInstance actor)
+	ctreeAI(NpcInstance actor)
 	{
 		super(actor);
 	}

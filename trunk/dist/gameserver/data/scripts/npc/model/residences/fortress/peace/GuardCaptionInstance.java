@@ -13,6 +13,7 @@
 package npc.model.residences.fortress.peace;
 
 import java.util.List;
+
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.impl.FortressSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
@@ -28,9 +29,6 @@ import npc.model.residences.fortress.FacilityManagerInstance;
  */
 public final class GuardCaptionInstance extends FacilityManagerInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

@@ -22,8 +22,8 @@ import lineage2.gameserver.network.serverpackets.ExChangeAttributeInfo;
  */
 public class SendChangeAttributeTargetItem extends L2GameClientPacket
 {
-	public int _crystalItemId;
-	public int _itemObjId;
+	private int _crystalItemId;
+	private int _itemObjId;
 	
 	/**
 	 * Method readImpl.

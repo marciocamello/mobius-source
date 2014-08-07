@@ -24,9 +24,6 @@ import events.SavingSnowman.SavingSnowman;
  */
 public final class ThomasInstance extends MonsterInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

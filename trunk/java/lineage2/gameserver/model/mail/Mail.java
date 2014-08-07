@@ -14,6 +14,7 @@ package lineage2.gameserver.model.mail;
 
 import java.util.HashSet;
 import java.util.Set;
+
 import lineage2.commons.dao.JdbcEntity;
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.gameserver.dao.MailDAO;

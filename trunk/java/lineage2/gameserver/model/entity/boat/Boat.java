@@ -17,6 +17,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
+
 import lineage2.gameserver.ai.BoatAI;
 import lineage2.gameserver.ai.CharacterAI;
 import lineage2.gameserver.model.Creature;
@@ -41,9 +42,6 @@ import lineage2.gameserver.utils.PositionUtils;
  */
 public abstract class Boat extends Creature
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private int _moveSpeed;
 	private int _rotationSpeed;
@@ -57,7 +55,7 @@ public abstract class Boat extends Creature
 	 * @param objectId int
 	 * @param template CharTemplate
 	 */
-	public Boat(int objectId, CharTemplate template)
+	Boat(int objectId, CharTemplate template)
 	{
 		super(objectId, template);
 	}
@@ -286,7 +284,7 @@ public abstract class Boat extends Creature
 	 * Method broadcastPacketToPassengers.
 	 * @param packet IStaticPacket
 	 */
-	public void broadcastPacketToPassengers(IStaticPacket packet)
+	void broadcastPacketToPassengers(IStaticPacket packet)
 	{
 		for (Player player : _players)
 		{

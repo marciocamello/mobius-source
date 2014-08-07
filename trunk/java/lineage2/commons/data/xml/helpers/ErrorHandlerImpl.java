@@ -13,6 +13,7 @@
 package lineage2.commons.data.xml.helpers;
 
 import lineage2.commons.data.xml.AbstractParser;
+
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXParseException;
 

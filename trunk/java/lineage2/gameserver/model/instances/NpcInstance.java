@@ -23,6 +23,7 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
@@ -112,8 +113,10 @@ import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
 import lineage2.gameserver.utils.Strings;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import gnu.trove.iterator.TIntObjectIterator;
 
 /**
@@ -122,17 +125,14 @@ import gnu.trove.iterator.TIntObjectIterator;
  */
 public class NpcInstance extends Creature
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
-	public static final String NO_CHAT_WINDOW = "noChatWindow";
-	public static final String NO_RANDOM_WALK = "noRandomWalk";
-	public static final String NO_RANDOM_ANIMATION = "noRandomAnimation";
-	public static final String TARGETABLE = "TargetEnabled";
-	public static final String ATTACKABLE = "attackable";
-	public static final String SHOW_NAME = "showName";
-	public static final String SHOW_TITLE = "showTitle";
+	private static final String NO_CHAT_WINDOW = "noChatWindow";
+	private static final String NO_RANDOM_WALK = "noRandomWalk";
+	private static final String NO_RANDOM_ANIMATION = "noRandomAnimation";
+	private static final String TARGETABLE = "TargetEnabled";
+	private static final String ATTACKABLE = "attackable";
+	private static final String SHOW_NAME = "showName";
+	private static final String SHOW_TITLE = "showTitle";
 	private static final Logger _log = LoggerFactory.getLogger(NpcInstance.class);
 	private int _personalAggroRange = -1;
 	private int _level = 0;
@@ -145,7 +145,7 @@ public class NpcInstance extends Creature
 	private int npcState = 0;
 	protected boolean _hasRandomAnimation;
 	protected boolean _hasRandomWalk;
-	protected boolean _hasChatWindow;
+	private boolean _hasChatWindow;
 	private Future<?> _decayTask;
 	private Future<?> _animationTask;
 	private final AggroList _aggroList;
@@ -590,7 +590,7 @@ public class NpcInstance extends Creature
 		return getTemplate().npcId;
 	}
 	
-	protected boolean _unAggred = false;
+	private boolean _unAggred = false;
 	
 	/**
 	 * Method setUnAggred.
@@ -776,7 +776,7 @@ public class NpcInstance extends Creature
 	 * Method startDecay.
 	 * @param delay long
 	 */
-	protected void startDecay(long delay)
+	private void startDecay(long delay)
 	{
 		stopDecay();
 		_decayTask = DecayTaskManager.getInstance().addDecayTask(this, delay);
@@ -1159,7 +1159,7 @@ public class NpcInstance extends Creature
 	 * @param player Player
 	 * @param questId String
 	 */
-	public void showQuestWindow(Player player, String questId)
+	private void showQuestWindow(Player player, String questId)
 	{
 		if (!player.isQuestContinuationPossible(true))
 		{
@@ -1578,7 +1578,7 @@ public class NpcInstance extends Creature
 	 * @param player Player
 	 * @param list TeleportLocation[]
 	 */
-	public void showTeleportList(Player player, TeleportLocation[] list)
+	private void showTeleportList(Player player, TeleportLocation[] list)
 	{
 		StringBuilder sb = new StringBuilder();
 		sb.append("&$556;").append("<br><br>");
@@ -1731,7 +1731,7 @@ public class NpcInstance extends Creature
 	 * Method showQuestWindow.
 	 * @param player Player
 	 */
-	public void showQuestWindow(Player player)
+	private void showQuestWindow(Player player)
 	{
 		Map<Integer, QuestInfo> options = new HashMap<>();
 		Quest[] starts = getTemplate().getEventQuests(QuestEventType.QUEST_START);
@@ -1781,7 +1781,7 @@ public class NpcInstance extends Creature
 	 * @param player Player
 	 * @param quests List<QuestInfo>
 	 */
-	public void showQuestChooseWindow(Player player, List<QuestInfo> quests)
+	private void showQuestChooseWindow(Player player, List<QuestInfo> quests)
 	{
 		StringBuilder sb = new StringBuilder();
 		sb.append("<html><body>");
@@ -1953,7 +1953,7 @@ public class NpcInstance extends Creature
 	 * Method showBusyWindow.
 	 * @param player Player
 	 */
-	public void showBusyWindow(Player player)
+	private void showBusyWindow(Player player)
 	{
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		html.setFile("npcbusy.htm");
@@ -2113,7 +2113,7 @@ public class NpcInstance extends Creature
 		showAcquireList(AcquireType.COLLECTION, player);
 	}
 	
-	public void showTransformationMultisell(Player player)
+	private void showTransformationMultisell(Player player)
 	{
 		if (!Config.ALLOW_LEARN_TRANS_SKILLS_WO_QUEST)
 		{

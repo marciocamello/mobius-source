@@ -25,14 +25,13 @@ import services.SupportMagic;
 public class _10352_LegacyofCrumaTower extends Quest implements ScriptFile
 {
 	// npc
-	public static final int LILEJ = 33155;
-	public static final int LINKENS = 33163;
-	public static final int STRANGE_MECHANIC_CR = 33158;
-	public static final int MARTES_NPC = 33292; // martes NPC
-	public static final int MARTES_RB = 25829; // martes RB
+	private static final int LILEJ = 33155;
+	private static final int LINKENS = 33163;
+	private static final int MARTES_NPC = 33292; // martes NPC
+	private static final int MARTES_RB = 25829; // martes RB
 	// items
-	public static final int TRESURE_TOOL = 17619;
-	public static final int MARTES_CORE = 17728;
+	private static final int TRESURE_TOOL = 17619;
+	private static final int MARTES_CORE = 17728;
 	
 	@Override
 	public void onLoad()

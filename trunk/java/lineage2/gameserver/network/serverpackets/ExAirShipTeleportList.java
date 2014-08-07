@@ -14,6 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.Collections;
 import java.util.List;
+
 import lineage2.gameserver.model.entity.boat.ClanAirShip;
 import lineage2.gameserver.model.entity.events.objects.BoatPoint;
 

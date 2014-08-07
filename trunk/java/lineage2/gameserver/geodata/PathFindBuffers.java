@@ -17,7 +17,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-import lineage2.commons.text.StrTable;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.utils.Location;
 import gnu.trove.iterator.TIntIntIterator;
@@ -28,11 +28,11 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class PathFindBuffers
+class PathFindBuffers
 {
-	public final static int MIN_MAP_SIZE = 1 << 6;
-	public final static int STEP_MAP_SIZE = 1 << 5;
-	public final static int MAX_MAP_SIZE = 1 << 9;
+	private final static int MIN_MAP_SIZE = 1 << 6;
+	private final static int STEP_MAP_SIZE = 1 << 5;
+	private final static int MAX_MAP_SIZE = 1 << 9;
 	private static final TIntObjectHashMap<PathFindBuffer[]> buffers = new TIntObjectHashMap<>();
 	private static int[] sizes = new int[0];
 	private static final Lock lock = new ReentrantLock();
@@ -143,7 +143,7 @@ public class PathFindBuffers
 	 * @param mapSize int
 	 * @return PathFindBuffer
 	 */
-	public static PathFindBuffer alloc(int mapSize)
+	static PathFindBuffer alloc(int mapSize)
 	{
 		if (mapSize > MAX_MAP_SIZE)
 		{
@@ -189,7 +189,7 @@ public class PathFindBuffers
 	 * Method recycle.
 	 * @param buffer PathFindBuffer
 	 */
-	public static void recycle(PathFindBuffer buffer)
+	static void recycle(PathFindBuffer buffer)
 	{
 		lock.lock();
 		
@@ -204,74 +204,9 @@ public class PathFindBuffers
 	}
 	
 	/**
-	 * Method getStats.
-	 * @return StrTable
-	 */
-	public static StrTable getStats()
-	{
-		StrTable table = new StrTable("PathFind Buffers Stats");
-		lock.lock();
-		
-		try
-		{
-			long totalUses = 0, totalPlayable = 0, totalTime = 0;
-			int index = 0;
-			int count;
-			long uses;
-			long playable;
-			long itrs;
-			long success;
-			long overtime;
-			long time;
-			
-			for (int size : sizes)
-			{
-				index++;
-				count = 0;
-				uses = 0;
-				playable = 0;
-				itrs = 0;
-				success = 0;
-				overtime = 0;
-				time = 0;
-				
-				for (PathFindBuffer buff : buffers.get(size))
-				{
-					count++;
-					uses += buff.totalUses;
-					playable += buff.playableUses;
-					success += buff.successUses;
-					overtime += buff.overtimeUses;
-					time += buff.totalTime / 1000000;
-					itrs += buff.totalItr;
-				}
-				
-				totalUses += uses;
-				totalPlayable += playable;
-				totalTime += time;
-				table.set(index, "Size", size);
-				table.set(index, "Count", count);
-				table.set(index, "Uses (success%)", uses + "(" + String.format("%2.2f", (uses > 0) ? (success * 100.) / uses : 0) + "%)");
-				table.set(index, "Uses, playble", playable + "(" + String.format("%2.2f", (uses > 0) ? (playable * 100.) / uses : 0) + "%)");
-				table.set(index, "Uses, overtime", overtime + "(" + String.format("%2.2f", (uses > 0) ? (overtime * 100.) / uses : 0) + "%)");
-				table.set(index, "Iter., avg", (uses > 0) ? itrs / uses : 0);
-				table.set(index, "Time, avg (ms)", String.format("%1.3f", (uses > 0) ? (double) time / uses : 0.));
-			}
-			
-			table.addTitle("Uses, total / playable  : " + totalUses + " / " + totalPlayable);
-			table.addTitle("Uses, total time / avg (ms) : " + totalTime + " / " + String.format("%1.3f", totalUses > 0 ? (double) totalTime / totalUses : 0));
-		}
-		finally
-		{
-			lock.unlock();
-		}
-		return table;
-	}
-	
-	/**
 	 * @author Mobius
 	 */
-	public static class PathFindBuffer
+	static class PathFindBuffer
 	{
 		final int mapSize;
 		final GeoNode[][] nodes;
@@ -289,7 +224,7 @@ public class PathFindBuffers
 		 * Constructor for PathFindBuffer.
 		 * @param mapSize int
 		 */
-		public PathFindBuffer(int mapSize)
+		PathFindBuffer(int mapSize)
 		{
 			open = new PriorityQueue<>(mapSize);
 			this.mapSize = mapSize;
@@ -307,7 +242,7 @@ public class PathFindBuffers
 		/**
 		 * Method free.
 		 */
-		public void free()
+		void free()
 		{
 			open.clear();
 			
@@ -324,16 +259,16 @@ public class PathFindBuffers
 	/**
 	 * @author Mobius
 	 */
-	public static class GeoNode implements Comparable<GeoNode>
+	static class GeoNode implements Comparable<GeoNode>
 	{
-		public final static int NONE = 0;
-		public final static int OPENED = 1;
-		public final static int CLOSED = -1;
-		public int x, y;
-		public short z, nswe;
-		public float totalCost, costFromStart, costToEnd;
-		public int state;
-		public GeoNode parent;
+		final static int NONE = 0;
+		final static int OPENED = 1;
+		final static int CLOSED = -1;
+		int x, y;
+		short z, nswe;
+		float totalCost, costFromStart, costToEnd;
+		int state;
+		GeoNode parent;
 		
 		/**
 		 * Constructor for GeoNode.
@@ -350,7 +285,7 @@ public class PathFindBuffers
 		 * @param z short
 		 * @return GeoNode
 		 */
-		public GeoNode set(int x, int y, short z)
+		GeoNode set(int x, int y, short z)
 		{
 			this.x = x;
 			this.y = y;
@@ -370,7 +305,7 @@ public class PathFindBuffers
 		/**
 		 * Method free.
 		 */
-		public void free()
+		void free()
 		{
 			nswe = -1;
 			costFromStart = 0f;

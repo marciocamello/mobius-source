@@ -178,7 +178,6 @@ public class _604_DaimontheWhiteEyedPart2 extends Quest implements ScriptFile
 	{
 		public DeathListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

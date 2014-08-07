@@ -25,7 +25,7 @@ public class SafeMath
 	 * @return int
 	 * @throws ArithmeticException
 	 */
-	public static int addAndCheck(int a, int b) throws ArithmeticException
+	static int addAndCheck(int a, int b) throws ArithmeticException
 	{
 		return addAndCheck(a, b, "overflow: add", false);
 	}
@@ -36,7 +36,7 @@ public class SafeMath
 	 * @param b int
 	 * @return int
 	 */
-	public static int addAndLimit(int a, int b)
+	static int addAndLimit(int a, int b)
 	{
 		return addAndCheck(a, b, null, true);
 	}
@@ -179,7 +179,7 @@ public class SafeMath
 	 * @return int
 	 * @throws ArithmeticException
 	 */
-	public static int mulAndCheck(int a, int b) throws ArithmeticException
+	static int mulAndCheck(int a, int b) throws ArithmeticException
 	{
 		return mulAndCheck(a, b, "overflow: mul", false);
 	}
@@ -190,7 +190,7 @@ public class SafeMath
 	 * @param b int
 	 * @return int
 	 */
-	public static int mulAndLimit(int a, int b)
+	static int mulAndLimit(int a, int b)
 	{
 		return mulAndCheck(a, b, "overflow: mul", true);
 	}

@@ -13,6 +13,7 @@
 package lineage2.gameserver.model.items;
 
 import java.io.Serializable;
+
 import lineage2.gameserver.model.base.Element;
 
 /**
@@ -46,7 +47,7 @@ public class ItemAttributes implements Serializable
 	 * @param holy int
 	 * @param unholy int
 	 */
-	public ItemAttributes(int fire, int water, int wind, int earth, int holy, int unholy)
+	private ItemAttributes(int fire, int water, int wind, int earth, int holy, int unholy)
 	{
 		this.fire = fire;
 		this.water = water;
@@ -237,7 +238,7 @@ public class ItemAttributes implements Serializable
 	 * @param element Element
 	 * @param value int
 	 */
-	public void setValue(Element element, int value)
+	void setValue(Element element, int value)
 	{
 		switch (element)
 		{

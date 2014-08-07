@@ -33,7 +33,7 @@ public class SorosSubAI extends DefaultAI
 	 * Constructor for SorosSubAI.
 	 * @param actor NpcInstance
 	 */
-	public SorosSubAI(NpcInstance actor)
+	SorosSubAI(NpcInstance actor)
 	{
 		super(actor);
 	}

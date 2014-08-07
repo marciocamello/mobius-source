@@ -170,7 +170,7 @@ public class AttributeStoneInfo
 	 * Method setincWeaponArmor.
 	 * @param intWeaponArmor int
 	 */
-	public void setincWeaponArmor(int intWeaponArmor)
+	void setincWeaponArmor(int intWeaponArmor)
 	{
 		incWeaponArmor = intWeaponArmor;
 	}

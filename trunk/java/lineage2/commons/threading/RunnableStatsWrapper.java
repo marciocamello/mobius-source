@@ -28,7 +28,7 @@ public class RunnableStatsWrapper implements Runnable
 	 * Constructor for RunnableStatsWrapper.
 	 * @param runnable Runnable
 	 */
-	RunnableStatsWrapper(Runnable runnable)
+	private RunnableStatsWrapper(Runnable runnable)
 	{
 		_runnable = runnable;
 	}
@@ -57,7 +57,7 @@ public class RunnableStatsWrapper implements Runnable
 	 * Method execute.
 	 * @param runnable Runnable
 	 */
-	public static void execute(Runnable runnable)
+	private static void execute(Runnable runnable)
 	{
 		long begin = System.nanoTime();
 		

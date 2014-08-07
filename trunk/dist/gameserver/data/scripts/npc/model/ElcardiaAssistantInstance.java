@@ -14,6 +14,7 @@ package npc.model;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -26,9 +27,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class ElcardiaAssistantInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private final static int[][] _elcardiaBuff = new int[][]
 	{

@@ -17,6 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Future;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -384,7 +385,6 @@ public final class KashaNegate implements ScriptFile
 		 */
 		public BuffTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

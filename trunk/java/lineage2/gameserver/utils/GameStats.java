@@ -16,9 +16,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.concurrent.atomic.AtomicLong;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.instancemanager.ServerVariables;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

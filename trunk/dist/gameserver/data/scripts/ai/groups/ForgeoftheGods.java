@@ -13,6 +13,7 @@
 package ai.groups;
 
 import java.util.List;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.Fighter;
@@ -22,6 +23,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
+
 import org.apache.commons.lang3.ArrayUtils;
 
 /**

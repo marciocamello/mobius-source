@@ -15,6 +15,7 @@ package events.TvTArena;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -33,6 +34,7 @@ import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -54,7 +56,6 @@ public final class TvTArena2 extends Functions implements ScriptFile, OnDeathLis
 		 */
 		TvTArena2Impl()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

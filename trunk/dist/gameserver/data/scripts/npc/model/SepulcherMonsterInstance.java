@@ -13,6 +13,7 @@
 package npc.model;
 
 import java.util.concurrent.Future;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Creature;
@@ -32,9 +33,6 @@ import bosses.FourSepulchersSpawn;
  */
 public final class SepulcherMonsterInstance extends MonsterInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	public int mysteriousBoxId = 0;
 	Future<?> _victimShout = null;

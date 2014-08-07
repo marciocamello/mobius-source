@@ -18,7 +18,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
+
 import javax.xml.parsers.DocumentBuilderFactory;
+
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.skills.effects.EffectTemplate;
 import lineage2.gameserver.stats.StatTemplate;
@@ -82,6 +84,7 @@ import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.ArmorTemplate.ArmorType;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
 import lineage2.gameserver.utils.PositionUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -176,7 +179,7 @@ abstract class DocumentBase
 	 * @param name String
 	 * @param table Object[]
 	 */
-	protected void setTable(String name, Object[] table)
+	private void setTable(String name, Object[] table)
 	{
 		tables.put(name, table);
 	}
@@ -289,7 +292,7 @@ abstract class DocumentBase
 	 * @param template StatTemplate
 	 * @param name String
 	 */
-	protected void attachFunc(Node n, StatTemplate template, String name)
+	private void attachFunc(Node n, StatTemplate template, String name)
 	{
 		Stats stat = Stats.valueOfXml(n.getAttributes().getNamedItem("stat").getNodeValue());
 		String order = n.getAttributes().getNamedItem("order").getNodeValue();
@@ -310,7 +313,7 @@ abstract class DocumentBase
 	 * @param n Node
 	 * @param template Object
 	 */
-	protected void attachEffect(Node n, Object template)
+	private void attachEffect(Node n, Object template)
 	{
 		NamedNodeMap attrs = n.getAttributes();
 		StatsSet set = new StatsSet();
@@ -499,7 +502,7 @@ abstract class DocumentBase
 	 * @param n Node
 	 * @return Condition
 	 */
-	protected Condition parseLogicAnd(Node n)
+	private Condition parseLogicAnd(Node n)
 	{
 		ConditionLogicAnd cond = new ConditionLogicAnd();
 		
@@ -524,7 +527,7 @@ abstract class DocumentBase
 	 * @param n Node
 	 * @return Condition
 	 */
-	protected Condition parseLogicOr(Node n)
+	private Condition parseLogicOr(Node n)
 	{
 		ConditionLogicOr cond = new ConditionLogicOr();
 		
@@ -549,7 +552,7 @@ abstract class DocumentBase
 	 * @param n Node
 	 * @return Condition
 	 */
-	protected Condition parseLogicNot(Node n)
+	private Condition parseLogicNot(Node n)
 	{
 		for (n = n.getFirstChild(); n != null; n = n.getNextSibling())
 		{
@@ -568,7 +571,7 @@ abstract class DocumentBase
 	 * @param n Node
 	 * @return Condition
 	 */
-	protected Condition parsePlayerCondition(Node n)
+	private Condition parsePlayerCondition(Node n)
 	{
 		Condition cond = null;
 		NamedNodeMap attrs = n.getAttributes();
@@ -733,7 +736,7 @@ abstract class DocumentBase
 	 * @param n Node
 	 * @return Condition
 	 */
-	protected Condition parseTargetCondition(Node n)
+	private Condition parseTargetCondition(Node n)
 	{
 		Condition cond = null;
 		NamedNodeMap attrs = n.getAttributes();
@@ -853,7 +856,7 @@ abstract class DocumentBase
 	 * @param n Node
 	 * @return Condition
 	 */
-	protected Condition parseUsingCondition(Node n)
+	private Condition parseUsingCondition(Node n)
 	{
 		Condition cond = null;
 		NamedNodeMap attrs = n.getAttributes();
@@ -938,7 +941,7 @@ abstract class DocumentBase
 	 * @param n Node
 	 * @return Condition
 	 */
-	protected Condition parseHasCondition(Node n)
+	private Condition parseHasCondition(Node n)
 	{
 		Condition cond = null;
 		NamedNodeMap attrs = n.getAttributes();
@@ -975,7 +978,7 @@ abstract class DocumentBase
 	 * @param n Node
 	 * @return Condition
 	 */
-	protected Condition parseGameCondition(Node n)
+	private Condition parseGameCondition(Node n)
 	{
 		Condition cond = null;
 		NamedNodeMap attrs = n.getAttributes();
@@ -1004,7 +1007,7 @@ abstract class DocumentBase
 	 * @param n Node
 	 * @return Condition
 	 */
-	protected Condition parseZoneCondition(Node n)
+	private Condition parseZoneCondition(Node n)
 	{
 		Condition cond = null;
 		NamedNodeMap attrs = n.getAttributes();
@@ -1153,7 +1156,7 @@ abstract class DocumentBase
 	 * @param c Condition
 	 * @return Condition
 	 */
-	protected Condition joinAnd(Condition cond, Condition c)
+	private Condition joinAnd(Condition cond, Condition c)
 	{
 		if (cond == null)
 		{

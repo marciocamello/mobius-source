@@ -27,9 +27,9 @@ import lineage2.gameserver.utils.ItemFunctions;
  */
 public class RequestChangeAttributeItem extends L2GameClientPacket
 {
-	public int _consumeItemId;
-	public int _itemObjId;
-	public int _newElementId;
+	private int _consumeItemId;
+	private int _itemObjId;
+	private int _newElementId;
 	
 	/**
 	 * Method readImpl.

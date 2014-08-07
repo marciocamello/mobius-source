@@ -18,6 +18,7 @@ import java.lang.reflect.Constructor;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ai.CharacterAI;

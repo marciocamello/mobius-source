@@ -48,7 +48,7 @@ public class GameCrypt
 	 * @param size int
 	 * @return boolean
 	 */
-	public boolean decrypt(byte[] raw, final int offset, final int size)
+	boolean decrypt(byte[] raw, final int offset, final int size)
 	{
 		if (!_isEnabled)
 		{
@@ -82,7 +82,7 @@ public class GameCrypt
 	 * @param offset int
 	 * @param size int
 	 */
-	public void encrypt(byte[] raw, final int offset, final int size)
+	void encrypt(byte[] raw, final int offset, final int size)
 	{
 		if (!_isEnabled)
 		{

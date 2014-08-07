@@ -16,9 +16,12 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+
 import javax.xml.parsers.DocumentBuilderFactory;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.AttributeCap;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -37,7 +40,7 @@ public class AttributeDamageResistTable
 	private static Double _baseDef;
 	private static Integer _baseCap;
 	private static Integer _overCap;
-	static final Comparator<AttributeCap> CapOrder = (a1, a2) ->
+	private static final Comparator<AttributeCap> CapOrder = (a1, a2) ->
 	{
 		if (a2.getCap() < a1.getCap())
 		{

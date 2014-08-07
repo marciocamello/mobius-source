@@ -26,7 +26,9 @@ import java.util.Iterator;
 import java.util.Queue;
 import java.util.Set;
 import java.util.concurrent.locks.Lock;
+
 import lineage2.loginserver.ThreadPoolManager;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -153,7 +155,7 @@ public class GameServerCommunication extends Thread
 	 * @param key SelectionKey
 	 * @throws IOException
 	 */
-	public void accept(SelectionKey key) throws IOException
+	private void accept(SelectionKey key) throws IOException
 	{
 		ServerSocketChannel ssc = (ServerSocketChannel) key.channel();
 		SocketChannel sc;
@@ -171,7 +173,7 @@ public class GameServerCommunication extends Thread
 	 * @param key SelectionKey
 	 * @throws IOException
 	 */
-	public void read(SelectionKey key) throws IOException
+	private void read(SelectionKey key) throws IOException
 	{
 		SocketChannel channel = (SocketChannel) key.channel();
 		GameServerConnection conn = (GameServerConnection) key.attachment();
@@ -205,7 +207,7 @@ public class GameServerCommunication extends Thread
 	 * @return boolean
 	 * @throws IOException
 	 */
-	protected boolean tryReadPacket(SelectionKey key, GameServer gs, ByteBuffer buf) throws IOException
+	private boolean tryReadPacket(SelectionKey key, GameServer gs, ByteBuffer buf) throws IOException
 	{
 		int pos = buf.position();
 		
@@ -263,7 +265,7 @@ public class GameServerCommunication extends Thread
 	 * @param key SelectionKey
 	 * @throws IOException
 	 */
-	public void write(SelectionKey key) throws IOException
+	private void write(SelectionKey key) throws IOException
 	{
 		GameServerConnection conn = (GameServerConnection) key.attachment();
 		GameServer gs = conn.getGameServer();
@@ -345,7 +347,7 @@ public class GameServerCommunication extends Thread
 	 * Method close.
 	 * @param key SelectionKey
 	 */
-	public void close(SelectionKey key)
+	private void close(SelectionKey key)
 	{
 		if (key == null)
 		{

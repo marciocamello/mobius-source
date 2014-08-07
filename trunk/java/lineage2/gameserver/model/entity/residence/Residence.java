@@ -20,6 +20,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
+
 import lineage2.commons.dao.JdbcEntity;
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.dbutils.DbUtils;
@@ -41,6 +42,7 @@ import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -50,16 +52,17 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class Residence implements JdbcEntity
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * @author Mobius
 	 */
-	public class ResidenceCycleTask extends RunnableImpl
+	private class ResidenceCycleTask extends RunnableImpl
 	{
+		public ResidenceCycleTask()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -72,32 +75,32 @@ public abstract class Residence implements JdbcEntity
 	}
 	
 	private static final Logger _log = LoggerFactory.getLogger(Residence.class);
-	public static final long CYCLE_TIME = 60 * 60 * 1000L;
+	private static final long CYCLE_TIME = 60 * 60 * 1000L;
 	protected final int _id;
-	protected final String _name;
+	private final String _name;
 	protected Clan _owner;
-	protected Zone _zone;
-	protected final List<ResidenceFunction> _functions = new ArrayList<>();
-	protected final List<Skill> _skills = new ArrayList<>();
-	protected SiegeEvent<?, ?> _siegeEvent;
-	protected final Calendar _siegeDate = Calendar.getInstance();
-	protected final Calendar _lastSiegeDate = Calendar.getInstance();
-	protected final Calendar _ownDate = Calendar.getInstance();
-	protected ScheduledFuture<?> _cycleTask;
+	private Zone _zone;
+	private final List<ResidenceFunction> _functions = new ArrayList<>();
+	private final List<Skill> _skills = new ArrayList<>();
+	private SiegeEvent<?, ?> _siegeEvent;
+	private final Calendar _siegeDate = Calendar.getInstance();
+	private final Calendar _lastSiegeDate = Calendar.getInstance();
+	private final Calendar _ownDate = Calendar.getInstance();
+	private ScheduledFuture<?> _cycleTask;
 	private int _cycle;
 	private int _rewardCount;
 	private int _paidCycle;
-	protected JdbcEntityState _jdbcEntityState = JdbcEntityState.CREATED;
-	protected final List<Location> _banishPoints = new ArrayList<>();
-	protected final List<Location> _ownerRestartPoints = new ArrayList<>();
-	protected final List<Location> _otherRestartPoints = new ArrayList<>();
-	protected final List<Location> _chaosRestartPoints = new ArrayList<>();
+	private JdbcEntityState _jdbcEntityState = JdbcEntityState.CREATED;
+	private final List<Location> _banishPoints = new ArrayList<>();
+	private final List<Location> _ownerRestartPoints = new ArrayList<>();
+	private final List<Location> _otherRestartPoints = new ArrayList<>();
+	private final List<Location> _chaosRestartPoints = new ArrayList<>();
 	
 	/**
 	 * Constructor for Residence.
 	 * @param set StatsSet
 	 */
-	public Residence(StatsSet set)
+	Residence(StatsSet set)
 	{
 		_id = set.getInteger("id");
 		_name = set.getString("name");
@@ -294,7 +297,7 @@ public abstract class Residence implements JdbcEntity
 	/**
 	 * Method rewardSkills.
 	 */
-	public void rewardSkills()
+	void rewardSkills()
 	{
 		Clan owner = getOwner();
 		
@@ -311,7 +314,7 @@ public abstract class Residence implements JdbcEntity
 	/**
 	 * Method removeSkills.
 	 */
-	public void removeSkills()
+	void removeSkills()
 	{
 		Clan owner = getOwner();
 		
@@ -491,7 +494,7 @@ public abstract class Residence implements JdbcEntity
 	 * Method removeFunction.
 	 * @param type int
 	 */
-	public void removeFunction(int type)
+	private void removeFunction(int type)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -626,7 +629,7 @@ public abstract class Residence implements JdbcEntity
 	/**
 	 * Method cancelCycleTask.
 	 */
-	public void cancelCycleTask()
+	void cancelCycleTask()
 	{
 		_cycle = 0;
 		_paidCycle = 0;

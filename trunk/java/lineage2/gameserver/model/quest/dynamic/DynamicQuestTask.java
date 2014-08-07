@@ -16,30 +16,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
- * @author Дмитрий
- * @date 28.10.12 18:46
- */
 public class DynamicQuestTask
 {
-	public final int questId;
 	public final int taskId;
+	private final int questId;
 	private final int maxPoints;
 	private int currentPoints;
 	private final int addMode;
 	private final List<DynamicQuestParticipant> taskParticipants;
 	private final ReentrantLock lock = new ReentrantLock();
 	
-	public DynamicQuestTask(int taskId, int questId, int maxPoints, int addMode)
+	DynamicQuestTask(int taskId, int questId, int maxPoints, int addMode)
 	{
-		this.questId = questId;
 		this.taskId = taskId;
+		this.questId = questId;
 		this.maxPoints = maxPoints;
 		this.addMode = addMode;
 		taskParticipants = new ArrayList<>();
 	}
 	
-	public void clear()
+	void clear()
 	{
 		currentPoints = 0;
 		taskParticipants.clear();
@@ -55,7 +51,7 @@ public class DynamicQuestTask
 		return currentPoints;
 	}
 	
-	public void increasePoints(DynamicQuestParticipant player, int points)
+	void increasePoints(DynamicQuestParticipant player, int points)
 	{
 		if (!isCompleted())
 		{

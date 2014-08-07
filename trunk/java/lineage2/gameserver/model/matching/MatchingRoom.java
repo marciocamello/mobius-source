@@ -16,6 +16,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
+
 import lineage2.gameserver.instancemanager.MatchingRoomManager;
 import lineage2.gameserver.listener.actor.player.OnPlayerPartyInviteListener;
 import lineage2.gameserver.listener.actor.player.OnPlayerPartyLeaveListener;
@@ -42,7 +43,6 @@ public abstract class MatchingRoom implements PlayerGroup
 		 */
 		public PartyListenerImpl()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -85,7 +85,7 @@ public abstract class MatchingRoom implements PlayerGroup
 	private String _topic;
 	private final PartyListenerImpl _listener = new PartyListenerImpl();
 	protected final Player _leader;
-	protected final Set<Player> _members = new CopyOnWriteArraySet<>();
+	private final Set<Player> _members = new CopyOnWriteArraySet<>();
 	
 	/**
 	 * Constructor for MatchingRoom.
@@ -96,7 +96,7 @@ public abstract class MatchingRoom implements PlayerGroup
 	 * @param lootType int
 	 * @param topic String
 	 */
-	public MatchingRoom(Player leader, int minLevel, int maxLevel, int maxMemberSize, int lootType, String topic)
+	MatchingRoom(Player leader, int minLevel, int maxLevel, int maxMemberSize, int lootType, String topic)
 	{
 		_leader = leader;
 		_id = MatchingRoomManager.getInstance().addMatchingRoom(this);

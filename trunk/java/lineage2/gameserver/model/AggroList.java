@@ -21,6 +21,7 @@ import java.util.Map;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
+
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -68,7 +69,7 @@ public class AggroList
 	 */
 	public class AggroInfo extends DamageHate
 	{
-		public final int attackerId;
+		final int attackerId;
 		
 		/**
 		 * Constructor for AggroInfo.
@@ -84,7 +85,7 @@ public class AggroList
 	/**
 	 * @author Mobius
 	 */
-	public static class DamageComparator implements Comparator<DamageHate>
+	private static class DamageComparator implements Comparator<DamageHate>
 	{
 		private static final Comparator<DamageHate> instance = new DamageComparator();
 		
@@ -92,7 +93,7 @@ public class AggroList
 		 * Method getInstance.
 		 * @return Comparator<DamageHate>
 		 */
-		public static Comparator<DamageHate> getInstance()
+		static Comparator<DamageHate> getInstance()
 		{
 			return instance;
 		}

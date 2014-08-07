@@ -15,6 +15,7 @@ package lineage2.gameserver.model.instances;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
+
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
@@ -29,9 +30,6 @@ import gnu.trove.set.hash.TIntHashSet;
  */
 public class OlympiadBufferInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private final TIntHashSet buffs = new TIntHashSet();
 	

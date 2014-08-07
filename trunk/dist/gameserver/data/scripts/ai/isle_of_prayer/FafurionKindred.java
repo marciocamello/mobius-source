@@ -15,6 +15,7 @@ package ai.isle_of_prayer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -182,7 +183,6 @@ public final class FafurionKindred extends Fighter
 		 */
 		PoisonTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -206,7 +206,6 @@ public final class FafurionKindred extends Fighter
 		 */
 		DeSpawnTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

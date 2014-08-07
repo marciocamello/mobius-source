@@ -18,6 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.StringTokenizer;
+
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.geometry.Polygon;
 import lineage2.commons.lang.ArrayUtils;
@@ -130,6 +131,7 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.PositionUtils;
+
 import org.apache.commons.lang3.math.NumberUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -145,9 +147,9 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 */
 	public static class AddedSkill
 	{
-		public static final AddedSkill[] EMPTY_ARRAY = new AddedSkill[0];
-		public int id;
-		public int level;
+		static final AddedSkill[] EMPTY_ARRAY = new AddedSkill[0];
+		int id;
+		int level;
 		private Skill _skill;
 		
 		/**
@@ -191,7 +193,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	/**
 	 * @author Mobius
 	 */
-	public static enum SkillOpType
+	private static enum SkillOpType
 	{
 		OP_ACTIVE,
 		OP_PASSIVE,
@@ -202,7 +204,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	/**
 	 * @author Mobius
 	 */
-	public static enum Ternary
+	private static enum Ternary
 	{
 		TRUE,
 		FALSE,
@@ -212,7 +214,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	/**
 	 * @author Mobius
 	 */
-	public static enum SkillMagicType
+	private static enum SkillMagicType
 	{
 		PHYSIC,
 		MAGIC,
@@ -526,15 +528,15 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	
 	static final Logger _log = LoggerFactory.getLogger(Skill.class);
 	public static final Skill[] EMPTY_ARRAY = new Skill[0];
-	protected EffectTemplate[] _effectTemplates = EffectTemplate.EMPTY_ARRAY;
-	protected List<Integer> _teachers;
-	protected List<ClassId> _canLearn;
-	protected AddedSkill[] _addedSkills = AddedSkill.EMPTY_ARRAY;
-	protected final int[] _itemConsume;
+	private EffectTemplate[] _effectTemplates = EffectTemplate.EMPTY_ARRAY;
+	private List<Integer> _teachers;
+	private List<ClassId> _canLearn;
+	private AddedSkill[] _addedSkills = AddedSkill.EMPTY_ARRAY;
+	private final int[] _itemConsume;
 	protected final int[] _itemConsumeId;
-	protected final int[] _relationSkillsId;
-	protected final int _referenceItemId;
-	protected final int _referenceItemMpConsume;
+	private final int[] _relationSkillsId;
+	private final int _referenceItemId;
+	private final int _referenceItemMpConsume;
 	public static final int SKILL_CRAFTING = 172;
 	public static final int SKILL_POLEARM_MASTERY = 216;
 	public static final int SKILL_CRYSTALLIZE = 248;
@@ -577,122 +579,122 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	public static final int SKILL_TRUE_WIND = 11009;
 	public static final int SKILL_TRUE_EARTH = 11010;
 	public static final int SKILL_DUAL_CAST = 11068;
-	protected boolean _isAuraSkill;
-	protected boolean _isAlterSkill;
-	protected boolean _isAltUse;
-	protected boolean _isBehind;
-	protected int _scopeAngle;
-	protected int _maxHitCancelCount;
-	protected boolean _isCancelable;
-	protected boolean _isCorpse;
-	protected boolean _isCommon;
-	protected boolean _castOverStun;
+	private final boolean _isAuraSkill;
+	private final boolean _isAlterSkill;
+	private final boolean _isAltUse;
+	private final boolean _isBehind;
+	private final int _scopeAngle;
+	private final int _maxHitCancelCount;
+	private final boolean _isCancelable;
+	private final boolean _isCorpse;
+	private final boolean _isCommon;
+	private final boolean _castOverStun;
 	protected boolean _isItemHandler;
-	protected boolean _isOffensive;
-	protected boolean _isPvpSkill;
-	protected boolean _isNotUsedByAI;
-	protected boolean _isFishingSkill;
-	protected boolean _isPvm;
-	protected boolean _isForceUse;
-	protected boolean _isNewbie;
-	protected boolean _isPreservedOnDeath;
-	protected boolean _isHeroic;
-	protected boolean _isSaveable;
-	protected boolean _isSkillTimePermanent;
-	protected boolean _isReuseDelayPermanent;
-	protected boolean _isHealDamageSkill = false;
-	protected boolean _skillHealStance = false;
-	protected boolean _isReflectable;
-	protected boolean _isSuicideAttack;
-	protected boolean _isShieldignore;
-	protected boolean _isUndeadOnly;
-	protected Ternary _isUseSS;
-	protected boolean _isOverhit;
-	protected boolean _isSoulBoost;
-	protected boolean _isChargeBoost;
-	protected boolean _isUsingWhileCasting;
-	protected boolean _isIgnoreResists;
-	protected boolean _isIgnoreInvul;
-	protected boolean _isTrigger;
-	protected boolean _isNotAffectedByMute;
-	protected boolean _basedOnTargetDebuff;
-	protected boolean _deathlink;
-	protected boolean _hideStartMessage;
-	protected boolean _hideUseMessage;
-	protected boolean _skillInterrupt;
-	protected boolean _flyingTransformUsage;
-	protected int _flySpeed;
-	protected boolean _canUseTeleport;
-	protected boolean _isProvoke;
-	protected boolean _isCubicSkill = false;
-	protected boolean _isAwakeningToggle = false;
-	protected boolean _isSelfDispellable;
-	protected boolean _isRelation = false;
+	private final boolean _isOffensive;
+	private final boolean _isPvpSkill;
+	private final boolean _isNotUsedByAI;
+	private final boolean _isFishingSkill;
+	private final boolean _isPvm;
+	private final boolean _isForceUse;
+	private final boolean _isNewbie;
+	private final boolean _isPreservedOnDeath;
+	private final boolean _isHeroic;
+	private final boolean _isSaveable;
+	private final boolean _isSkillTimePermanent;
+	private final boolean _isReuseDelayPermanent;
+	private boolean _isHealDamageSkill = false;
+	private boolean _skillHealStance = false;
+	final boolean _isReflectable;
+	private final boolean _isSuicideAttack;
+	private final boolean _isShieldignore;
+	private final boolean _isUndeadOnly;
+	private final Ternary _isUseSS;
+	private boolean _isOverhit;
+	private final boolean _isSoulBoost;
+	private final boolean _isChargeBoost;
+	private final boolean _isUsingWhileCasting;
+	private final boolean _isIgnoreResists;
+	private final boolean _isIgnoreInvul;
+	private final boolean _isTrigger;
+	private final boolean _isNotAffectedByMute;
+	private final boolean _basedOnTargetDebuff;
+	private final boolean _deathlink;
+	private final boolean _hideStartMessage;
+	private final boolean _hideUseMessage;
+	private final boolean _skillInterrupt;
+	private final boolean _flyingTransformUsage;
+	private final int _flySpeed;
+	private final boolean _canUseTeleport;
+	private final boolean _isProvoke;
+	private boolean _isCubicSkill = false;
+	private boolean _isAwakeningToggle = false;
+	private final boolean _isSelfDispellable;
+	private boolean _isRelation = false;
 	protected SkillType _skillType;
-	protected SkillOpType _operateType;
+	private SkillOpType _operateType;
 	protected SkillTargetType _targetType;
-	protected SkillMagicType _magicType;
-	protected SkillTrait _traitType;
-	protected BaseStats _saveVs;
-	protected boolean _dispelOnDamage;
-	protected NextAction _nextAction;
-	protected Element _element;
-	protected FlyType _flyType;
-	protected boolean _flyToBack;
-	protected Condition[] _preCondition = Condition.EMPTY_ARRAY;
+	private SkillMagicType _magicType;
+	private final SkillTrait _traitType;
+	private final BaseStats _saveVs;
+	private final boolean _dispelOnDamage;
+	private NextAction _nextAction;
+	private Element _element;
+	private final FlyType _flyType;
+	private final boolean _flyToBack;
+	private Condition[] _preCondition = Condition.EMPTY_ARRAY;
 	public int _id;
 	protected int _level;
-	protected int _baseLevel;
+	private int _baseLevel;
 	protected int _displayId;
 	protected int _displayLevel;
-	protected int _activateRate;
-	protected int _castRange;
-	protected int _cancelTarget;
-	protected int _condCharges;
-	protected int _coolTime;
-	protected int _delayedEffect;
+	private final int _activateRate;
+	private int _castRange;
+	private final int _cancelTarget;
+	private final int _condCharges;
+	private int _coolTime;
+	private final int _delayedEffect;
 	protected int _effectPoint;
-	protected int _energyConsume;
-	protected int _elementPower;
-	protected int _flyRadius;
-	protected int _hitTime;
-	protected int _hpConsume;
-	protected int _levelModifier;
-	protected int _magicLevel;
-	protected int _matak;
-	protected int _minPledgeClass;
-	protected int _minRank;
-	protected int _negatePower;
-	protected int _negateSkill;
+	private final int _energyConsume;
+	private final int _elementPower;
+	private final int _flyRadius;
+	private int _hitTime;
+	private int _hpConsume;
+	private final int _levelModifier;
+	private int _magicLevel;
+	private final int _matak;
+	private final int _minPledgeClass;
+	private final int _minRank;
+	private final int _negatePower;
+	private final int _negateSkill;
 	protected int _npcId;
-	protected int _numCharges;
-	protected int _maxCharges;
-	protected int _skillInterruptTime;
-	protected int _skillRadius;
-	protected int _soulsConsume;
-	protected int _symbolId;
-	protected int _weaponsAllowed;
-	protected int _castCount;
-	protected int _enchantLevelCount;
-	protected int _criticalRate;
-	protected long _reuseDelay;
+	private final int _numCharges;
+	private final int _maxCharges;
+	private int _skillInterruptTime;
+	private final int _skillRadius;
+	private final int _soulsConsume;
+	private final int _symbolId;
+	private final int _weaponsAllowed;
+	private final int _castCount;
+	private int _enchantLevelCount;
+	private final int _criticalRate;
+	private long _reuseDelay;
 	protected double _power;
-	protected double _powerPvP;
-	protected double _powerPvE;
-	protected double _mpConsume1;
-	protected double _mpConsume2;
-	protected double _lethal1;
-	protected double _lethal2;
+	private final double _powerPvP;
+	private final double _powerPvE;
+	private double _mpConsume1;
+	private double _mpConsume2;
+	private final double _lethal1;
+	private final double _lethal2;
 	protected double _absorbPart;
-	protected String _name;
-	protected String _baseValues;
-	protected String _icon;
-	protected boolean _isMarkDamage;
-	protected int _skillToCast;
-	protected int _skillToCastLevel;
+	private String _name;
+	private final String _baseValues;
+	private final String _icon;
+	private final boolean _isMarkDamage;
+	private final int _skillToCast;
+	private final int _skillToCastLevel;
 	private final int hashCode;
 	private final int reuseGroupId = -1;
-	protected boolean _isPowerModified = false;
+	private boolean _isPowerModified = false;
 	private final int _powerModCount;
 	private final HashMap<List<String>, Double> _powerModifiers = new HashMap<>();
 	private final double _power2;
@@ -989,7 +991,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 * @param activeChar Creature
 	 * @return boolean
 	 */
-	public final boolean getWeaponDependancy(Creature activeChar)
+	private final boolean getWeaponDependancy(Creature activeChar)
 	{
 		if (_weaponsAllowed == 0)
 		{
@@ -2164,7 +2166,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 * @param timeMult double
 	 * @param skillReflected boolean
 	 */
-	public final void getEffects(final Creature effector, final Creature effected, final boolean calcChance, final boolean applyOnCaster, final long timeConst, final double timeMult, final boolean skillReflected)
+	private final void getEffects(final Creature effector, final Creature effected, final boolean calcChance, final boolean applyOnCaster, final long timeConst, final double timeMult, final boolean skillReflected)
 	{
 		if (isPassive() || !hasEffects() || (effector == null) || (effected == null))
 		{
@@ -2655,7 +2657,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 * @param list List<Effect>
 	 * @return Effect
 	 */
-	public Effect getSameByStackType(List<Effect> list)
+	private Effect getSameByStackType(List<Effect> list)
 	{
 		Effect ret;
 		
@@ -2668,16 +2670,6 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		}
 		
 		return null;
-	}
-	
-	/**
-	 * Method getSameByStackType.
-	 * @param list EffectList
-	 * @return Effect
-	 */
-	public Effect getSameByStackType(EffectList list)
-	{
-		return getSameByStackType(list.getAllEffects());
 	}
 	
 	/**
@@ -3206,7 +3198,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 * @param et EffectTemplate
 	 * @return boolean
 	 */
-	public boolean isBlockedByChar(Creature effected, EffectTemplate et)
+	boolean isBlockedByChar(Creature effected, EffectTemplate et)
 	{
 		if (et.getAttachedFuncs() == null)
 		{
@@ -3874,7 +3866,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 * Method flyingTransformUsage.
 	 * @return boolean
 	 */
-	public boolean flyingTransformUsage()
+	private boolean flyingTransformUsage()
 	{
 		return _flyingTransformUsage;
 	}
@@ -3883,7 +3875,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 * Method canUseTeleport.
 	 * @return boolean
 	 */
-	public boolean canUseTeleport()
+	boolean canUseTeleport()
 	{
 		return _canUseTeleport;
 	}

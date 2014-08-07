@@ -26,9 +26,6 @@ import npc.model.residences.ResidenceManager;
  */
 public class ManagerInstance extends ResidenceManager
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

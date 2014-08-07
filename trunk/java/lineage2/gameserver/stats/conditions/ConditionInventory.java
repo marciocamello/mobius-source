@@ -26,7 +26,7 @@ public abstract class ConditionInventory extends Condition
 	 * Constructor for ConditionInventory.
 	 * @param slot int
 	 */
-	public ConditionInventory(int slot)
+	ConditionInventory(int slot)
 	{
 		_slot = slot;
 	}

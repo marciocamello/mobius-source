@@ -20,6 +20,7 @@ import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
 import lineage2.gameserver.utils.Util;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -97,7 +98,7 @@ public class SoDManager
 	 * Method getTiatKills.
 	 * @return int
 	 */
-	public static int getTiatKills()
+	private static int getTiatKills()
 	{
 		return ServerVariables.getInt("Tial_kills", 0);
 	}
@@ -133,7 +134,7 @@ public class SoDManager
 	 * Method handleDoors.
 	 * @param doOpen boolean
 	 */
-	public static void handleDoors(boolean doOpen)
+	private static void handleDoors(boolean doOpen)
 	{
 		for (int i = 12240003; i <= 12240031; i++)
 		{

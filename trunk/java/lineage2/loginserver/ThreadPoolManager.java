@@ -17,6 +17,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
+
 import lineage2.commons.threading.RunnableImpl;
 
 /**
@@ -81,7 +82,7 @@ public class ThreadPoolManager
 	 * @param delay long
 	 * @return ScheduledFuture<?>
 	 */
-	public ScheduledFuture<?> schedule(Runnable r, long delay)
+	ScheduledFuture<?> schedule(Runnable r, long delay)
 	{
 		return scheduledExecutor.schedule(r, validate(delay), TimeUnit.MILLISECONDS);
 	}

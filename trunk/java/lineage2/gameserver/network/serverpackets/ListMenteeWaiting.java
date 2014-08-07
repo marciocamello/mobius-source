@@ -14,17 +14,19 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ListMenteeWaiting extends L2GameServerPacket
 {
 	public static final Logger _log = LoggerFactory.getLogger(ListMenteeWaiting.class);
-	List<Player> mentees;
-	int page;
-	int playersInPage;
+	private final List<Player> mentees;
+	private final int page;
+	private final int playersInPage;
 	
 	public ListMenteeWaiting(Player activeChar, int _page, int minLevel, int maxLevel)
 	{

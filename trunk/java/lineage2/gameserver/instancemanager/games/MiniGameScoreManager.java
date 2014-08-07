@@ -19,10 +19,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
+
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CTreeIntObjectMap;
 import org.slf4j.Logger;
@@ -127,7 +129,7 @@ public class MiniGameScoreManager
 	 * @param score int
 	 * @return boolean
 	 */
-	public boolean addScore(String name, int score)
+	private boolean addScore(String name, int score)
 	{
 		Set<String> set = _scores.get(score);
 		

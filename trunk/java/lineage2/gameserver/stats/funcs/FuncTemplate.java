@@ -14,8 +14,10 @@ package lineage2.gameserver.stats.funcs;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.conditions.Condition;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,9 +29,9 @@ public final class FuncTemplate
 {
 	private static final Logger _log = LoggerFactory.getLogger(FuncTemplate.class);
 	public static final FuncTemplate[] EMPTY_ARRAY = new FuncTemplate[0];
-	public Condition _applyCond;
-	public Class<?> _func;
-	public Constructor<?> _constructor;
+	private final Condition _applyCond;
+	private Class<?> _func;
+	private Constructor<?> _constructor;
 	public Stats _stat;
 	public int _order;
 	public double _value;

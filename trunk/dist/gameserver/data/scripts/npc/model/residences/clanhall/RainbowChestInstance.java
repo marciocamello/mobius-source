@@ -25,9 +25,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class RainbowChestInstance extends MonsterInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int ItemA = 8035;
 	private static final int ItemB = 8036;

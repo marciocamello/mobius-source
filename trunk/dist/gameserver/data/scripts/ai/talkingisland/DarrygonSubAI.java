@@ -33,7 +33,7 @@ public class DarrygonSubAI extends DefaultAI
 	 * Constructor for DarrygonSubAI.
 	 * @param actor NpcInstance
 	 */
-	public DarrygonSubAI(NpcInstance actor)
+	DarrygonSubAI(NpcInstance actor)
 	{
 		super(actor);
 	}

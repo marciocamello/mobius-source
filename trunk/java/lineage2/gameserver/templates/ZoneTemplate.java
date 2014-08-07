@@ -13,6 +13,7 @@
 package lineage2.gameserver.templates;
 
 import java.util.List;
+
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.configuration.ExProperties;
 import lineage2.gameserver.model.Skill;

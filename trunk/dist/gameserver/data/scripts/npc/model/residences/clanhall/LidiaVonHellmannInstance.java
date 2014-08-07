@@ -14,6 +14,7 @@ package npc.model.residences.clanhall;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import lineage2.gameserver.model.AggroList;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Playable;
@@ -30,9 +31,6 @@ import npc.model.residences.SiegeGuardInstance;
  */
 public final class LidiaVonHellmannInstance extends SiegeGuardInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

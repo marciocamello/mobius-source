@@ -24,9 +24,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class MatchScoutInstance extends CTBBossInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private long _massiveDamage;
 	

@@ -14,6 +14,7 @@ package npc.model;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Zone;
@@ -31,9 +32,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class ArenaManagerInstance extends WarehouseInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private final static int[][] _arenaBuff = new int[][]
 	{

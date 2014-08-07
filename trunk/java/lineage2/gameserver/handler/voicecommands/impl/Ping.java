@@ -63,7 +63,7 @@ public class Ping extends Functions implements IVoicedCommandHandler
 	/**
 	 * @author Mobius
 	 */
-	static final class AnswerTask implements Runnable
+	private static final class AnswerTask implements Runnable
 	{
 		private final Player _player;
 		
@@ -71,7 +71,7 @@ public class Ping extends Functions implements IVoicedCommandHandler
 		 * Constructor for AnswerTask.
 		 * @param player Player
 		 */
-		public AnswerTask(Player player)
+		AnswerTask(Player player)
 		{
 			_player = player;
 		}

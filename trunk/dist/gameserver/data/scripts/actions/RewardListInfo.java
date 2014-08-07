@@ -16,6 +16,7 @@ import java.text.NumberFormat;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.Experience;
@@ -28,6 +29,7 @@ import lineage2.gameserver.model.reward.RewardType;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.utils.HtmlUtils;
+
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -49,7 +51,7 @@ public final class RewardListInfo
 	 * @param player Player
 	 * @param npc NpcInstance
 	 */
-	public static void showInfo(Player player, NpcInstance npc)
+	static void showInfo(Player player, NpcInstance npc)
 	{
 		final int diff = npc.calculateLevelDiffForDrop(player.isInParty() ? player.getParty().getLevel() : player.getLevel());
 		double mod = npc.calcStat(Stats.REWARD_MULTIPLIER, 1., player, null);
@@ -110,7 +112,7 @@ public final class RewardListInfo
 	 * @param player Player
 	 * @param mod double
 	 */
-	public static void ratedGroupedRewardList(StringBuilder tmp, NpcInstance npc, RewardList list, Player player, double mod)
+	private static void ratedGroupedRewardList(StringBuilder tmp, NpcInstance npc, RewardList list, Player player, double mod)
 	{
 		tmp.append("<table width=270 border=0>");
 		tmp.append("<tr><td><table width=270 border=0><tr><td><font color=\"aaccff\">").append(list.getType()).append("</font></td></tr></table></td></tr>");
@@ -200,7 +202,7 @@ public final class RewardListInfo
 	 * @param list RewardList
 	 * @param mod double
 	 */
-	public static void notRatedGroupedRewardList(StringBuilder tmp, RewardList list, double mod)
+	private static void notRatedGroupedRewardList(StringBuilder tmp, RewardList list, double mod)
 	{
 		tmp.append("<table width=270 border=0>");
 		tmp.append("<tr><td><table width=270 border=0><tr><td><font color=\"aaccff\">").append(list.getType()).append("</font></td></tr></table></td></tr>");
@@ -247,7 +249,7 @@ public final class RewardListInfo
 	 * @param rate double
 	 * @param mod double
 	 */
-	public static void notGroupedRewardList(StringBuilder tmp, RewardList list, double rate, double mod)
+	private static void notGroupedRewardList(StringBuilder tmp, RewardList list, double rate, double mod)
 	{
 		tmp.append("<table width=270 border=0>");
 		tmp.append("<tr><td><img src=\"L2UI.SquareBlank\" width=270 height=10> </td></tr>");

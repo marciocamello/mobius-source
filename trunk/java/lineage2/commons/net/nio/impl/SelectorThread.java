@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArrayList;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -144,7 +145,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	 * @param buf ByteBuffer
 	 * @param con MMOConnection<T>
 	 */
-	protected void freeBuffer(ByteBuffer buf, MMOConnection<T> con)
+	private void freeBuffer(ByteBuffer buf, MMOConnection<T> con)
 	{
 		if (buf == READ_BUFFER)
 		{
@@ -282,7 +283,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	 * Method finishConnection.
 	 * @param key SelectionKey
 	 */
-	protected void finishConnection(SelectionKey key)
+	private void finishConnection(SelectionKey key)
 	{
 		try
 		{
@@ -301,7 +302,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	 * Method acceptConnection.
 	 * @param key SelectionKey
 	 */
-	protected void acceptConnection(SelectionKey key)
+	private void acceptConnection(SelectionKey key)
 	{
 		ServerSocketChannel ssc = (ServerSocketChannel) key.channel();
 		SocketChannel sc;
@@ -339,7 +340,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	 * Method readPacket.
 	 * @param key SelectionKey
 	 */
-	protected void readPacket(SelectionKey key)
+	private void readPacket(SelectionKey key)
 	{
 		MMOConnection<T> con = (MMOConnection<T>) key.attachment();
 		
@@ -413,7 +414,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	 * @param buf ByteBuffer
 	 * @return boolean
 	 */
-	protected boolean tryReadPacket2(SelectionKey key, MMOConnection<T> con, ByteBuffer buf)
+	private boolean tryReadPacket2(SelectionKey key, MMOConnection<T> con, ByteBuffer buf)
 	{
 		if (con.isClosed())
 		{
@@ -474,7 +475,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	 * Method allocateReadBuffer.
 	 * @param con MMOConnection<T>
 	 */
-	protected void allocateReadBuffer(MMOConnection<T> con)
+	private void allocateReadBuffer(MMOConnection<T> con)
 	{
 		con.setReadBuffer(getPooledBuffer().put(READ_BUFFER));
 		READ_BUFFER.clear();
@@ -488,7 +489,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	 * @param con MMOConnection<T>
 	 * @return boolean
 	 */
-	protected boolean parseClientPacket(IPacketHandler<T> handler, ByteBuffer buf, int dataSize, MMOConnection<T> con)
+	private boolean parseClientPacket(IPacketHandler<T> handler, ByteBuffer buf, int dataSize, MMOConnection<T> con)
 	{
 		T client = con.getClient();
 		int pos = buf.position();
@@ -525,7 +526,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	 * Method writePacket.
 	 * @param key SelectionKey
 	 */
-	protected void writePacket(SelectionKey key)
+	private void writePacket(SelectionKey key)
 	{
 		MMOConnection<T> con = (MMOConnection<T>) key.attachment();
 		prepareWriteBuffer(con);
@@ -587,7 +588,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	 * Method prepareWriteBuffer.
 	 * @param con MMOConnection<T>
 	 */
-	protected void prepareWriteBuffer(MMOConnection<T> con)
+	private void prepareWriteBuffer(MMOConnection<T> con)
 	{
 		WRITE_CLIENT = con.getClient();
 		DIRECT_WRITE_BUFFER.clear();
@@ -646,7 +647,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	 * @param sp SendablePacket<T>
 	 * @param encrypt boolean
 	 */
-	protected final void putPacketIntoWriteBuffer(SendablePacket<T> sp, boolean encrypt)
+	private final void putPacketIntoWriteBuffer(SendablePacket<T> sp, boolean encrypt)
 	{
 		WRITE_BUFFER.clear();
 		// reserve space for the size
@@ -682,7 +683,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	 * Method getConfig.
 	 * @return SelectorConfig
 	 */
-	protected SelectorConfig getConfig()
+	SelectorConfig getConfig()
 	{
 		return _sc;
 	}
@@ -691,7 +692,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	 * Method getSelector.
 	 * @return Selector
 	 */
-	protected Selector getSelector()
+	private Selector getSelector()
 	{
 		return _selector;
 	}
@@ -709,7 +710,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	 * Method getPacketHandler.
 	 * @return IPacketHandler<T>
 	 */
-	protected IPacketHandler<T> getPacketHandler()
+	private IPacketHandler<T> getPacketHandler()
 	{
 		return _packetHandler;
 	}
@@ -718,7 +719,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	 * Method getClientFactory.
 	 * @return IClientFactory<T>
 	 */
-	protected IClientFactory<T> getClientFactory()
+	private IClientFactory<T> getClientFactory()
 	{
 		return _clientFactory;
 	}
@@ -736,7 +737,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	 * Method getAcceptFilter.
 	 * @return IAcceptFilter
 	 */
-	protected IAcceptFilter getAcceptFilter()
+	private IAcceptFilter getAcceptFilter()
 	{
 		return _acceptFilter;
 	}
@@ -745,7 +746,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	 * Method closeConnectionImpl.
 	 * @param con MMOConnection<T>
 	 */
-	protected void closeConnectionImpl(MMOConnection<T> con)
+	private void closeConnectionImpl(MMOConnection<T> con)
 	{
 		try
 		{
@@ -796,7 +797,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	/**
 	 * Method closeAllChannels.
 	 */
-	protected void closeAllChannels()
+	private void closeAllChannels()
 	{
 		Set<SelectionKey> keys = getSelector().keys();
 		
@@ -816,7 +817,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	/**
 	 * Method closeSelectorThread.
 	 */
-	protected void closeSelectorThread()
+	private void closeSelectorThread()
 	{
 		closeAllChannels();
 		
@@ -834,7 +835,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	 * Method getStats.
 	 * @return CharSequence
 	 */
-	public static CharSequence getStats()
+	static CharSequence getStats()
 	{
 		StringBuilder list = new StringBuilder();
 		list.append("selectorThreadCount: .... ").append(ALL_SELECTORS.size()).append('\n');

@@ -99,7 +99,7 @@ public class SubClass
 	 * Method addExp.
 	 * @param val long
 	 */
-	public void addExp(long val)
+	void addExp(long val)
 	{
 		setExp(_exp + val);
 	}
@@ -117,7 +117,7 @@ public class SubClass
 	 * Method addSp.
 	 * @param val long
 	 */
-	public void addSp(long val)
+	void addSp(long val)
 	{
 		setSp(_sp + val);
 	}

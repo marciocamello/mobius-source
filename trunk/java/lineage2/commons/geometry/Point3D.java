@@ -18,7 +18,7 @@ package lineage2.commons.geometry;
  */
 public class Point3D extends Point2D
 {
-	public static final Point3D[] EMPTY_ARRAY = new Point3D[0];
+	static final Point3D[] EMPTY_ARRAY = new Point3D[0];
 	public int z;
 	
 	/**

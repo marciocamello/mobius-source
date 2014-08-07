@@ -102,7 +102,7 @@ public class DeathPenalty
 	 * Method notifyDead.
 	 * @param killer Creature
 	 */
-	public void notifyDead(Creature killer)
+	void notifyDead(Creature killer)
 	{
 		if (!Config.ALLOW_DEATH_PENALTY_C5)
 		{
@@ -144,7 +144,7 @@ public class DeathPenalty
 	 * Method restore.
 	 * @param player Player
 	 */
-	public void restore(Player player)
+	void restore(Player player)
 	{
 		if (player.getEffectList().getEffectsBySkillId(_skillId) != null)
 		{
@@ -182,7 +182,7 @@ public class DeathPenalty
 	/**
 	 * Method addLevel.
 	 */
-	public void addLevel()
+	private void addLevel()
 	{
 		Player player = getPlayer();
 		
@@ -210,7 +210,7 @@ public class DeathPenalty
 	 * Method castEffect.
 	 * @param player Player
 	 */
-	public void castEffect(Player player)
+	void castEffect(Player player)
 	{
 		if (getLevel(player) > 0)
 		{
@@ -270,7 +270,7 @@ public class DeathPenalty
 	/**
 	 * Method checkCharmOfLuck.
 	 */
-	public void checkCharmOfLuck()
+	void checkCharmOfLuck()
 	{
 		Player player = getPlayer();
 		

@@ -18,6 +18,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
@@ -25,6 +26,7 @@ import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,7 +43,7 @@ public final class WorldRegion implements Iterable<GameObject>
 	/**
 	 * @author Mobius
 	 */
-	public class ActivateTask extends RunnableImpl
+	private class ActivateTask extends RunnableImpl
 	{
 		private final boolean _isActivating;
 		
@@ -49,7 +51,7 @@ public final class WorldRegion implements Iterable<GameObject>
 		 * Constructor for ActivateTask.
 		 * @param isActivating boolean
 		 */
-		public ActivateTask(boolean isActivating)
+		ActivateTask(boolean isActivating)
 		{
 			_isActivating = isActivating;
 		}
@@ -250,7 +252,7 @@ public final class WorldRegion implements Iterable<GameObject>
 	 * Method addObject.
 	 * @param obj GameObject
 	 */
-	public void addObject(GameObject obj)
+	void addObject(GameObject obj)
 	{
 		if (obj == null)
 		{
@@ -291,7 +293,7 @@ public final class WorldRegion implements Iterable<GameObject>
 	 * Method removeObject.
 	 * @param obj GameObject
 	 */
-	public void removeObject(GameObject obj)
+	void removeObject(GameObject obj)
 	{
 		if (obj == null)
 		{

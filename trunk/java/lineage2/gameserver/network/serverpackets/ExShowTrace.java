@@ -14,6 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.utils.Location;
 
@@ -21,14 +22,14 @@ public class ExShowTrace extends L2GameServerPacket
 {
 	private final List<Trace> _traces = new ArrayList<>();
 	
-	static final class Trace
+	private static final class Trace
 	{
-		public final int _x;
-		public final int _y;
-		public final int _z;
-		public final int _time;
+		final int _x;
+		final int _y;
+		final int _z;
+		final int _time;
 		
-		public Trace(int x, int y, int z, int time)
+		Trace(int x, int y, int z, int time)
 		{
 			_x = x;
 			_y = y;
@@ -47,7 +48,7 @@ public class ExShowTrace extends L2GameServerPacket
 		addLine(from.x, from.y, from.z, to.x, to.y, to.z, step, time);
 	}
 	
-	public void addLine(int from_x, int from_y, int from_z, int to_x, int to_y, int to_z, int step, int time)
+	private void addLine(int from_x, int from_y, int from_z, int to_x, int to_y, int to_z, int step, int time)
 	{
 		int x_diff = to_x - from_x;
 		int y_diff = to_y - from_y;

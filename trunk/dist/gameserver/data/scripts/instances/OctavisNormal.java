@@ -14,6 +14,7 @@ package instances;
 
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicInteger;
+
 import lineage2.commons.geometry.Polygon;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
@@ -188,12 +189,8 @@ public final class OctavisNormal extends Reflection
 	
 	private class FirstStage extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public FirstStage()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -222,12 +219,8 @@ public final class OctavisNormal extends Reflection
 	
 	private class TwoStage extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public TwoStage()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -289,12 +282,8 @@ public final class OctavisNormal extends Reflection
 	
 	private class ThreeStage extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public ThreeStage()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -315,12 +304,8 @@ public final class OctavisNormal extends Reflection
 	
 	private class DeathListener implements OnDeathListener
 	{
-		/**
-		 *
-		 */
 		public DeathListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -338,12 +323,8 @@ public final class OctavisNormal extends Reflection
 	
 	private class EndingMovie extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public EndingMovie()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -365,12 +346,8 @@ public final class OctavisNormal extends Reflection
 	
 	private class CollapseInstance extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public CollapseInstance()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

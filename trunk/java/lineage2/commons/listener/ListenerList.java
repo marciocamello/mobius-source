@@ -23,7 +23,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
  */
 public class ListenerList<T>
 {
-	protected final Set<Listener<T>> listeners = new CopyOnWriteArraySet<>();
+	private final Set<Listener<T>> listeners = new CopyOnWriteArraySet<>();
 	
 	/**
 	 * Method getListeners.

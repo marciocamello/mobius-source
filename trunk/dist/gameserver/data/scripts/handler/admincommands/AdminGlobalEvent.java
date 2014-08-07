@@ -26,7 +26,7 @@ public final class AdminGlobalEvent extends ScriptAdminCommand
 	/**
 	 * @author Mobius
 	 */
-	enum Commands
+	private enum Commands
 	{
 		admin_list_events
 	}

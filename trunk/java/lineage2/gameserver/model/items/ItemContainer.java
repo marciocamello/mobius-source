@@ -17,10 +17,12 @@ import java.util.List;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
+
 import lineage2.commons.math.SafeMath;
 import lineage2.gameserver.dao.ItemsDAO;
 import lineage2.gameserver.idfactory.IdFactory;
 import lineage2.gameserver.utils.ItemFunctions;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,9 +36,9 @@ public abstract class ItemContainer
 	private static final Logger _log = LoggerFactory.getLogger(ItemContainer.class);
 	protected static final ItemsDAO _itemsDAO = ItemsDAO.getInstance();
 	protected final List<ItemInstance> _items = new ArrayList<>();
-	protected final ReadWriteLock lock = new ReentrantReadWriteLock();
-	protected final Lock readLock = lock.readLock();
-	protected final Lock writeLock = lock.writeLock();
+	private final ReadWriteLock lock = new ReentrantReadWriteLock();
+	private final Lock readLock = lock.readLock();
+	private final Lock writeLock = lock.writeLock();
 	
 	/**
 	 * Constructor for ItemContainer.
@@ -423,7 +425,7 @@ public abstract class ItemContainer
 	 * @param count long
 	 * @return ItemInstance
 	 */
-	public ItemInstance removeItem(ItemInstance item, long count)
+	private ItemInstance removeItem(ItemInstance item, long count)
 	{
 		if (item == null)
 		{

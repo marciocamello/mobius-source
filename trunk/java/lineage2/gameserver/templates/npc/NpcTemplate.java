@@ -18,6 +18,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import lineage2.commons.util.TroveUtils;
 import lineage2.gameserver.ai.CharacterAI;
 import lineage2.gameserver.idfactory.IdFactory;
@@ -35,9 +36,11 @@ import lineage2.gameserver.scripts.Scripts;
 import lineage2.gameserver.skills.effects.EffectTemplate;
 import lineage2.gameserver.templates.CharTemplate;
 import lineage2.gameserver.templates.StatsSet;
+
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
@@ -48,14 +51,14 @@ public final class NpcTemplate extends CharTemplate
 {
 	private static final Logger _log = LoggerFactory.getLogger(NpcTemplate.class);
 	@SuppressWarnings("unchecked")
-	public static final Constructor<NpcInstance> DEFAULT_TYPE_CONSTRUCTOR = (Constructor<NpcInstance>) NpcInstance.class.getConstructors()[0];
+	private static final Constructor<NpcInstance> DEFAULT_TYPE_CONSTRUCTOR = (Constructor<NpcInstance>) NpcInstance.class.getConstructors()[0];
 	@SuppressWarnings("unchecked")
-	public static final Constructor<CharacterAI> DEFAULT_AI_CONSTRUCTOR = (Constructor<CharacterAI>) CharacterAI.class.getConstructors()[0];
+	private static final Constructor<CharacterAI> DEFAULT_AI_CONSTRUCTOR = (Constructor<CharacterAI>) CharacterAI.class.getConstructors()[0];
 	
 	/**
 	 * @author Mobius
 	 */
-	public static enum ShotsType
+	private static enum ShotsType
 	{
 		NONE,
 		SOUL,
@@ -77,7 +80,7 @@ public final class NpcTemplate extends CharTemplate
 	public final int lhand;
 	public final double rateHp;
 	private Faction faction = Faction.NONE;
-	public final String jClass;
+	private final String jClass;
 	public final int displayId;
 	public final ShotsType shots;
 	public boolean isRaid = false;

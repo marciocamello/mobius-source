@@ -17,9 +17,9 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class ExCubeGameChangePoints extends L2GameServerPacket
 {
-	int _timeLeft;
-	int _bluePoints;
-	int _redPoints;
+	private final int _timeLeft;
+	private final int _bluePoints;
+	private final int _redPoints;
 	
 	public ExCubeGameChangePoints(int timeLeft, int bluePoints, int redPoints)
 	{

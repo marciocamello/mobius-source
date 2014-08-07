@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.dao.CharacterSubclassDAO;
@@ -36,7 +37,7 @@ import lineage2.gameserver.scripts.Functions;
  */
 public class CertificationFunctions
 {
-	public static final String PATH = "villagemaster/certification/";
+	private static final String PATH = "villagemaster/certification/";
 	private static final HashMap<Integer, Integer> _certificationList = new HashMap<>();
 	private static CertificationFunctions _instance;
 	private static final int CERTIFICATE = 10280;
@@ -241,7 +242,7 @@ public class CertificationFunctions
 	 * @param first boolean
 	 * @return boolean
 	 */
-	public static boolean checkConditions(int level, NpcInstance npc, Player player, boolean first)
+	private static boolean checkConditions(int level, NpcInstance npc, Player player, boolean first)
 	{
 		String typeCertificate = new String();
 		

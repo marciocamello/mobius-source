@@ -24,7 +24,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public final class RunnableStatsManager
+final class RunnableStatsManager
 {
 	private static final RunnableStatsManager _instance = new RunnableStatsManager();
 	
@@ -32,7 +32,7 @@ public final class RunnableStatsManager
 	 * Method getInstance.
 	 * @return RunnableStatsManager
 	 */
-	public static final RunnableStatsManager getInstance()
+	static final RunnableStatsManager getInstance()
 	{
 		return _instance;
 	}
@@ -67,7 +67,7 @@ public final class RunnableStatsManager
 	 * @param cl Class<?>
 	 * @param runTime long
 	 */
-	public void handleStats(Class<?> cl, long runTime)
+	void handleStats(Class<?> cl, long runTime)
 	{
 		try
 		{

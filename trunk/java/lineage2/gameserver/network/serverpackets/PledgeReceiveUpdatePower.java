@@ -16,7 +16,7 @@ public class PledgeReceiveUpdatePower extends L2GameServerPacket
 {
 	private final int _privs;
 	
-	public PledgeReceiveUpdatePower(int privs)
+	PledgeReceiveUpdatePower(int privs)
 	{
 		_privs = privs;
 	}

@@ -13,6 +13,7 @@
 package lineage2.gameserver.model;
 
 import java.util.Map;
+
 import lineage2.gameserver.network.serverpackets.ExTacticalSign;
 
 /**

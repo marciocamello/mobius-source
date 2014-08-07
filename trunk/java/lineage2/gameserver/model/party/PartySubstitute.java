@@ -16,6 +16,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.listener.actor.player.OnPlayerExitListener;
 import lineage2.gameserver.listener.actor.player.OnPlayerPartyInviteListener;
@@ -81,7 +82,7 @@ public class PartySubstitute
 		p.getParty().broadCast(new PartySmallWindowUpdate(p));
 	}
 	
-	public void updatePlayerToReplace(Player p, int i)
+	void updatePlayerToReplace(Player p, int i)
 	{
 		_waitingPlayer.put(p, i);
 	}
@@ -91,19 +92,15 @@ public class PartySubstitute
 		return _waitingPlayer.containsKey(p);
 	}
 	
-	public void removePlayerReplace(Player p)
+	void removePlayerReplace(Player p)
 	{
 		_waitingPlayer.remove(p);
 	}
 	
 	private class SubstituteListeners implements OnPlayerExitListener, OnPlayerPartyLeaveListener, OnPlayerPartyInviteListener
 	{
-		/**
-		 *
-		 */
 		public SubstituteListeners()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -172,7 +169,7 @@ public class PartySubstitute
 		}
 	}
 	
-	public boolean isGoodPlayer(Player a, Player b)
+	boolean isGoodPlayer(Player a, Player b)
 	{
 		int plvl = a.getLevel();
 		int tlvl = b.getLevel();

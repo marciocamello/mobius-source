@@ -14,6 +14,7 @@ package ai.residences.fortress.siege;
 
 import java.util.Collections;
 import java.util.List;
+
 import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.entity.events.impl.FortressSiegeEvent;

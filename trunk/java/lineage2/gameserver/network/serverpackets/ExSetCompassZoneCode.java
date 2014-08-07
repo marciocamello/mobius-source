@@ -39,7 +39,7 @@ public class ExSetCompassZoneCode extends L2GameServerPacket
 		this(player.getZoneMask());
 	}
 	
-	public ExSetCompassZoneCode(int zoneMask)
+	private ExSetCompassZoneCode(int zoneMask)
 	{
 		if ((zoneMask & ZONE_ALTERED_FLAG) == ZONE_ALTERED_FLAG)
 		{

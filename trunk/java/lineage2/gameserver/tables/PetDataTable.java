@@ -15,6 +15,7 @@ package lineage2.gameserver.tables;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Creature;
@@ -22,8 +23,10 @@ import lineage2.gameserver.model.PetData;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.items.ItemInstance;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
@@ -456,7 +459,7 @@ public class PetDataTable
 	 * @param npcId int
 	 * @return int
 	 */
-	public static int getFoodId(int npcId)
+	private static int getFoodId(int npcId)
 	{
 		for (L2Pet pet : L2Pet.values())
 		{
@@ -510,7 +513,7 @@ public class PetDataTable
 	 * @param npcId int
 	 * @return int
 	 */
-	public static int getAddFed(int npcId)
+	private static int getAddFed(int npcId)
 	{
 		for (L2Pet pet : L2Pet.values())
 		{

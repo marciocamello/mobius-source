@@ -60,7 +60,7 @@ public final class AdminFunctions
 	 * @param reason String
 	 * @return boolean
 	 */
-	public static boolean kick(Player player, String reason)
+	private static boolean kick(Player player, String reason)
 	{
 		if (Config.ALLOW_CURSED_WEAPONS && Config.DROP_CURSED_WEAPONS_ON_KICK)
 		{

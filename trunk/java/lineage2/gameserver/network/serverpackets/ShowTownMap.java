@@ -17,9 +17,9 @@ public class ShowTownMap extends L2GameServerPacket
 	/**
 	 * Format: csdd
 	 */
-	String _texture;
-	int _x;
-	int _y;
+	private final String _texture;
+	private final int _x;
+	private final int _y;
 	
 	public ShowTownMap(String texture, int x, int y)
 	{

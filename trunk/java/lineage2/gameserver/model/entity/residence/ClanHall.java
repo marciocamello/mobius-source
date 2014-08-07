@@ -14,6 +14,7 @@ package lineage2.gameserver.model.entity.residence;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.dao.ClanDataDAO;
 import lineage2.gameserver.dao.ClanHallDAO;
@@ -25,6 +26,7 @@ import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.ItemTemplate;
+
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,9 +37,6 @@ import org.slf4j.LoggerFactory;
  */
 public class ClanHall extends Residence
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final Logger _log = LoggerFactory.getLogger(ClanHall.class);
 	private static final int REWARD_CYCLE = 168;

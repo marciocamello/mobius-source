@@ -19,6 +19,7 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,9 +29,6 @@ import org.slf4j.LoggerFactory;
  */
 public class MammonsInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(MammonsInstance.class);

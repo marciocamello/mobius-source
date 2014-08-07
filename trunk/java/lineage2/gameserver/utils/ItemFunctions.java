@@ -34,6 +34,7 @@ import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.templates.item.ArmorTemplate.ArmorType;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
+
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -175,7 +176,7 @@ public final class ItemFunctions
 	 * @param itemId int
 	 * @return boolean
 	 */
-	public final static boolean isClanApellaItem(int itemId)
+	private final static boolean isClanApellaItem(int itemId)
 	{
 		return ((itemId >= 7860) && (itemId <= 7879)) || ((itemId >= 9830) && (itemId <= 9839));
 	}
@@ -443,7 +444,7 @@ public final class ItemFunctions
 	 * @param itemId int
 	 * @return boolean
 	 */
-	public final static boolean isAncientEnchantScroll(int itemId)
+	private final static boolean isAncientEnchantScroll(int itemId)
 	{
 		switch (itemId)
 		{
@@ -663,7 +664,7 @@ public final class ItemFunctions
 	 * @param item ItemInstance
 	 * @return int[]
 	 */
-	public final static int[] getEnchantScrollId(ItemInstance item)
+	private final static int[] getEnchantScrollId(ItemInstance item)
 	{
 		if (item.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON)
 		{
@@ -806,7 +807,7 @@ public final class ItemFunctions
 		return new int[0];
 	}
 	
-	public static final int[][] catalyst =
+	private static final int[][] catalyst =
 	{
 		// WP D
 		{
@@ -889,7 +890,7 @@ public final class ItemFunctions
 	 * @param item ItemInstance
 	 * @return int[]
 	 */
-	public final static int[] getEnchantCatalystId(ItemInstance item)
+	private final static int[] getEnchantCatalystId(ItemInstance item)
 	{
 		if (item.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON)
 		{

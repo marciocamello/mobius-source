@@ -22,9 +22,9 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
  */
 public class RequestCommissionDelete extends L2GameClientPacket
 {
-	public long _bidId;
-	public int itemObjId;
-	public int exItemType;
+	private long _bidId;
+	private int itemObjId;
+	private int exItemType;
 	
 	/**
 	 * Method readImpl.

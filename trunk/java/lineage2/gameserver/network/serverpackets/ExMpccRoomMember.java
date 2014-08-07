@@ -15,6 +15,7 @@ package lineage2.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import lineage2.gameserver.instancemanager.MatchingRoomManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.matching.MatchingRoom;
@@ -56,16 +57,16 @@ public class ExMpccRoomMember extends L2GameServerPacket
 		}
 	}
 	
-	static class MpccRoomMemberInfo
+	private static class MpccRoomMemberInfo
 	{
-		public final int objectId;
-		public final int classId;
-		public final int level;
-		public final int location;
-		public final int memberType;
-		public final String name;
+		final int objectId;
+		final int classId;
+		final int level;
+		final int location;
+		final int memberType;
+		final String name;
 		
-		public MpccRoomMemberInfo(Player member, int type)
+		MpccRoomMemberInfo(Player member, int type)
 		{
 			objectId = member.getObjectId();
 			name = member.getName();

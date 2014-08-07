@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+
 import lineage2.commons.logging.LoggerObject;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
@@ -65,7 +66,7 @@ public class ActionRunner extends LoggerObject
 	 * Method register.
 	 * @param task AutomaticTask
 	 */
-	public void register(AutomaticTask task)
+	private void register(AutomaticTask task)
 	{
 		register(task.reCalcTime(true), task);
 	}
@@ -98,7 +99,7 @@ public class ActionRunner extends LoggerObject
 	 * @param r ActionWrapper
 	 * @param diff long
 	 */
-	protected void addScheduled(String name, final ActionWrapper r, long diff)
+	private void addScheduled(String name, final ActionWrapper r, long diff)
 	{
 		_lock.lock();
 		

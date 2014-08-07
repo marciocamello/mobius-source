@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class LoggerObject
 {
-	protected final Logger _log = LoggerFactory.getLogger(getClass());
+	private final Logger _log = LoggerFactory.getLogger(getClass());
 	
 	/**
 	 * Method error.

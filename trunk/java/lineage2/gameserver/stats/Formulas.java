@@ -124,11 +124,11 @@ public class Formulas
 	{
 		public double reflectableDamage = 0;
 		public double damage = 0;
-		public double defence = 0;
-		public double crit_static = 0;
-		public double death_rcpt = 0;
-		public double lethal1 = 0;
-		public double lethal2 = 0;
+		double defence = 0;
+		double crit_static = 0;
+		double death_rcpt = 0;
+		double lethal1 = 0;
+		double lethal2 = 0;
 		public double lethal_dmg = 0;
 		public boolean crit = false;
 		public boolean shld = false;
@@ -701,7 +701,7 @@ public class Formulas
 	 * @param skill Skill
 	 * @return boolean
 	 */
-	public static boolean calcBlow(Creature activeChar, Creature target, Skill skill)
+	private static boolean calcBlow(Creature activeChar, Creature target, Skill skill)
 	{
 		WeaponTemplate weapon = activeChar.getActiveWeaponItem();
 		double base_weapon_crit = weapon == null ? 4. : weapon.getCritical();
@@ -749,7 +749,7 @@ public class Formulas
 	 * @param blow boolean
 	 * @return double
 	 */
-	public static double calcCrit(Creature attacker, Creature target, Skill skill, boolean blow)
+	private static double calcCrit(Creature attacker, Creature target, Skill skill, boolean blow)
 	{
 		if (attacker.isPlayer() && (attacker.getActiveWeaponItem() == null))
 		{
@@ -915,7 +915,7 @@ public class Formulas
 	 * @param target Creature
 	 * @return boolean
 	 */
-	public static boolean calcMagicMiss(Creature attacker, Creature target)
+	private static boolean calcMagicMiss(Creature attacker, Creature target)
 	{
 		int chanceToHit = 88 + (2 * (attacker.getMAccuracy() - target.getMEvasionRate((attacker))));
 		chanceToHit = Math.max(chanceToHit, 28);
@@ -929,7 +929,7 @@ public class Formulas
 	 * @param target Creature
 	 * @return boolean
 	 */
-	public static boolean calcShldUse(Creature attacker, Creature target)
+	private static boolean calcShldUse(Creature attacker, Creature target)
 	{
 		WeaponTemplate template = target.getSecondaryWeaponItem();
 		
@@ -1310,7 +1310,7 @@ public class Formulas
 	 * @param value double
 	 * @return double
 	 */
-	public static double calcDamageResists(Skill skill, Creature attacker, Creature defender, double value)
+	static double calcDamageResists(Skill skill, Creature attacker, Creature defender, double value)
 	{
 		if (attacker == defender)
 		{

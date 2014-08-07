@@ -15,6 +15,7 @@ package lineage2.gameserver.handler.admincommands;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.handler.admincommands.impl.AdminAdmin;
 import lineage2.gameserver.handler.admincommands.impl.AdminAnnouncements;
@@ -161,7 +162,7 @@ public class AdminCommandHandler extends AbstractHolder
 	 * @param adminCommand String
 	 * @return IAdminCommandHandler
 	 */
-	public IAdminCommandHandler getAdminCommandHandler(String adminCommand)
+	IAdminCommandHandler getAdminCommandHandler(String adminCommand)
 	{
 		String command = adminCommand;
 		

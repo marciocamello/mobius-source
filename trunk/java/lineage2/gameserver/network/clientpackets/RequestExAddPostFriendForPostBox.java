@@ -19,6 +19,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExConfirmAddingPostFriend;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+
 import org.napile.primitive.maps.IntObjectMap;
 
 /**

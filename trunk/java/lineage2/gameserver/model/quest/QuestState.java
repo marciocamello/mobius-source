@@ -19,6 +19,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
@@ -48,6 +49,7 @@ import lineage2.gameserver.network.serverpackets.TutorialShowQuestionMark;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.spawn.PeriodOfDay;
 import lineage2.gameserver.utils.ItemFunctions;
+
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -61,8 +63,12 @@ public final class QuestState
 	/**
 	 * @author Mobius
 	 */
-	public class OnDeathListenerImpl implements OnDeathListener
+	private class OnDeathListenerImpl implements OnDeathListener
 	{
+		public OnDeathListenerImpl()
+		{
+		}
+		
 		/**
 		 * Method onDeath.
 		 * @param actor Creature
@@ -87,8 +93,12 @@ public final class QuestState
 	/**
 	 * @author Mobius
 	 */
-	public class PlayerOnKillListenerImpl implements OnKillListener
+	private class PlayerOnKillListenerImpl implements OnKillListener
 	{
+		public PlayerOnKillListenerImpl()
+		{
+		}
+		
 		/**
 		 * Method onKill.
 		 * @param actor Creature
@@ -160,8 +170,8 @@ public final class QuestState
 	}
 	
 	private static final Logger _log = LoggerFactory.getLogger(QuestState.class);
-	public static final int RESTART_HOUR = 6;
-	public static final int RESTART_MINUTES = 30;
+	private static final int RESTART_HOUR = 6;
+	private static final int RESTART_MINUTES = 30;
 	public static final String VAR_COND = "cond";
 	public final static QuestState[] EMPTY_ARRAY = new QuestState[0];
 	private final Player _player;
@@ -178,7 +188,7 @@ public final class QuestState
 	 * @param player Player
 	 * @param state int
 	 */
-	public QuestState(Quest quest, Player player, int state)
+	QuestState(Quest quest, Player player, int state)
 	{
 		_quest = quest;
 		_player = player;
@@ -248,7 +258,7 @@ public final class QuestState
 	/**
 	 * Method removePlayerOnKillListener.
 	 */
-	public void removePlayerOnKillListener()
+	private void removePlayerOnKillListener()
 	{
 		if (_onKillListener != null)
 		{
@@ -709,7 +719,7 @@ public final class QuestState
 	 * @param calcChance double
 	 * @return int
 	 */
-	public int rollDrop(int count, double calcChance)
+	private int rollDrop(int count, double calcChance)
 	{
 		if ((calcChance <= 0) || (count <= 0))
 		{
@@ -726,7 +736,7 @@ public final class QuestState
 	 * @param calcChance double
 	 * @return int
 	 */
-	public int rollDrop(int min, int max, double calcChance)
+	private int rollDrop(int min, int max, double calcChance)
 	{
 		if ((calcChance <= 0) || (min <= 0) || (max <= 0))
 		{
@@ -1358,7 +1368,7 @@ public final class QuestState
 	 * @param rangefrom GameObject
 	 * @return List<Player>
 	 */
-	public List<Player> getPartyMembers(int state, int maxrange, GameObject rangefrom)
+	private List<Player> getPartyMembers(int state, int maxrange, GameObject rangefrom)
 	{
 		List<Player> result = new ArrayList<>();
 		Party party = getPlayer().getParty();
@@ -1402,7 +1412,7 @@ public final class QuestState
 	 * @param rangefrom GameObject
 	 * @return Player
 	 */
-	public Player getRandomPartyMember(int state, int maxrange, GameObject rangefrom)
+	private Player getRandomPartyMember(int state, int maxrange, GameObject rangefrom)
 	{
 		List<Player> list = getPartyMembers(state, maxrange, rangefrom);
 		
@@ -1560,7 +1570,7 @@ public final class QuestState
 	 * @param store boolean
 	 * @return String
 	 */
-	public String setCond(int newCond, boolean store)
+	private String setCond(int newCond, boolean store)
 	{
 		if (newCond == getCond())
 		{
@@ -1614,7 +1624,7 @@ public final class QuestState
 	/**
 	 * Method setRestartTime.
 	 */
-	public void setRestartTime()
+	private void setRestartTime()
 	{
 		Calendar reDo = Calendar.getInstance();
 		

@@ -15,6 +15,7 @@ package lineage2.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Summon;
@@ -86,15 +87,15 @@ public class PartySmallWindowAll extends L2GameServerPacket
 		}
 	}
 	
-	public static class PartySmallWindowMemberInfo
+	static class PartySmallWindowMemberInfo
 	{
-		public String _name, pet_Name;
-		public int _id, curCp, maxCp, curHp, maxHp, curMp, maxMp, level, class_id, race_id;
-		public int vitality;
-		public Collection<Summon> _pets;
-		public int replace;
+		String _name, pet_Name;
+		int _id, curCp, maxCp, curHp, maxHp, curMp, maxMp, level, class_id, race_id;
+		int vitality;
+		final Collection<Summon> _pets;
+		final int replace;
 		
-		public PartySmallWindowMemberInfo(Player member)
+		PartySmallWindowMemberInfo(Player member)
 		{
 			_name = member.getName();
 			_id = member.getObjectId();

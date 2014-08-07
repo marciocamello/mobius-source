@@ -21,9 +21,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public class ReflectionBossInstance extends RaidBossInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private final static int COLLAPSE_AFTER_DEATH_TIME = 5;
 	
@@ -52,7 +49,7 @@ public class ReflectionBossInstance extends RaidBossInstance
 	/**
 	 * Method clearReflection.
 	 */
-	protected void clearReflection()
+	private void clearReflection()
 	{
 		getReflection().clearReflection(COLLAPSE_AFTER_DEATH_TIME, true);
 	}

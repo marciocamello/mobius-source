@@ -16,11 +16,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.templates.item.support.FishGroup;
 import lineage2.gameserver.templates.item.support.FishTemplate;
 import lineage2.gameserver.templates.item.support.LureTemplate;
 import lineage2.gameserver.templates.item.support.LureType;
+
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 

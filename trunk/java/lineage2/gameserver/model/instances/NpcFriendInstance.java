@@ -13,6 +13,7 @@
 package lineage2.gameserver.model.instances;
 
 import java.util.StringTokenizer;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -26,9 +27,6 @@ import lineage2.gameserver.utils.WarehouseFunctions;
  */
 public final class NpcFriendInstance extends MerchantInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

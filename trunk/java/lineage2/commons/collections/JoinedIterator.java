@@ -87,7 +87,7 @@ public class JoinedIterator<E> implements Iterator<E>
 	/**
 	 * Method updateCurrentIterator.
 	 */
-	protected void updateCurrentIterator()
+	private void updateCurrentIterator()
 	{
 		if (_currentIterator == null)
 		{

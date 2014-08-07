@@ -25,9 +25,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class MeleonInstance extends SpecialMonsterInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	public final static int Young_Watermelon = 13271;
 	public final static int Rain_Watermelon = 13273;

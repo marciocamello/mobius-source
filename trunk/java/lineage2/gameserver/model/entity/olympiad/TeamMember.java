@@ -13,6 +13,7 @@
 package lineage2.gameserver.model.entity.olympiad;
 
 import java.util.Set;
+
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Player;
@@ -35,6 +36,7 @@ import lineage2.gameserver.templates.InstantZone;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
+
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -71,7 +73,7 @@ public class TeamMember
 	/**
 	 * Method doDie.
 	 */
-	public void doDie()
+	void doDie()
 	{
 		_isDead = true;
 	}
@@ -84,7 +86,7 @@ public class TeamMember
 	 * @param game OlympiadGame
 	 * @param side int
 	 */
-	public TeamMember(int obj_id, String name, Player player, OlympiadGame game, int side)
+	TeamMember(int obj_id, String name, Player player, OlympiadGame game, int side)
 	{
 		_objId = obj_id;
 		_name = name;
@@ -116,7 +118,7 @@ public class TeamMember
 	/**
 	 * Method incGameCount.
 	 */
-	public void incGameCount()
+	void incGameCount()
 	{
 		StatsSet set = getStat();
 		
@@ -138,7 +140,7 @@ public class TeamMember
 	/**
 	 * Method takePointsForCrash.
 	 */
-	public void takePointsForCrash()
+	void takePointsForCrash()
 	{
 		if (!checkPlayer())
 		{
@@ -182,7 +184,7 @@ public class TeamMember
 	 * Method checkPlayer.
 	 * @return boolean
 	 */
-	public boolean checkPlayer()
+	boolean checkPlayer()
 	{
 		Player player = _player;
 		
@@ -197,7 +199,7 @@ public class TeamMember
 	/**
 	 * Method portPlayerToArena.
 	 */
-	public void portPlayerToArena()
+	void portPlayerToArena()
 	{
 		Player player = _player;
 		
@@ -246,7 +248,7 @@ public class TeamMember
 	/**
 	 * Method portPlayerBack.
 	 */
-	public void portPlayerBack()
+	void portPlayerBack()
 	{
 		Player player = _player;
 		
@@ -315,7 +317,7 @@ public class TeamMember
 	/**
 	 * Method preparePlayer.
 	 */
-	public void preparePlayer()
+	void preparePlayer()
 	{
 		Player player = _player;
 		
@@ -430,7 +432,7 @@ public class TeamMember
 	/**
 	 * Method saveNobleData.
 	 */
-	public void saveNobleData()
+	void saveNobleData()
 	{
 		OlympiadDatabase.saveNobleData(_objId);
 	}
@@ -438,7 +440,7 @@ public class TeamMember
 	/**
 	 * Method logout.
 	 */
-	public void logout()
+	void logout()
 	{
 		_player = null;
 	}
@@ -465,7 +467,7 @@ public class TeamMember
 	 * Method addDamage.
 	 * @param d double
 	 */
-	public void addDamage(double d)
+	void addDamage(double d)
 	{
 		_damage += d;
 	}

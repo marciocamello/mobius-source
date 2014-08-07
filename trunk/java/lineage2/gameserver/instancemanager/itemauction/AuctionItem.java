@@ -21,7 +21,7 @@ import lineage2.gameserver.utils.ItemFunctions;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public final class AuctionItem extends ItemInfo
+final class AuctionItem extends ItemInfo
 {
 	private final int _auctionItemId;
 	private final int _auctionLength;
@@ -36,7 +36,7 @@ public final class AuctionItem extends ItemInfo
 	 * @param itemCount long
 	 * @param itemExtra StatsSet
 	 */
-	public AuctionItem(final int auctionItemId, final int auctionLength, final long auctionInitBid, final int itemId, final long itemCount, final StatsSet itemExtra)
+	AuctionItem(final int auctionItemId, final int auctionLength, final long auctionInitBid, final int itemId, final long itemCount, final StatsSet itemExtra)
 	{
 		_auctionItemId = auctionItemId;
 		_auctionLength = auctionLength;
@@ -79,7 +79,7 @@ public final class AuctionItem extends ItemInfo
 	 * Method createNewItemInstance.
 	 * @return ItemInstance
 	 */
-	public final ItemInstance createNewItemInstance()
+	final ItemInstance createNewItemInstance()
 	{
 		final ItemInstance item = ItemFunctions.createItem(getItemId());
 		item.setEnchantLevel(getEnchantLevel());

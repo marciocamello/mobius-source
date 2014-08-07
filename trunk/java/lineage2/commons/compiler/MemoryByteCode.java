@@ -15,13 +15,14 @@ package lineage2.commons.compiler;
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
 import java.net.URI;
+
 import javax.tools.SimpleJavaFileObject;
 
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class MemoryByteCode extends SimpleJavaFileObject
+class MemoryByteCode extends SimpleJavaFileObject
 {
 	private ByteArrayOutputStream oStream;
 	private final String className;
@@ -31,7 +32,7 @@ public class MemoryByteCode extends SimpleJavaFileObject
 	 * @param className String
 	 * @param uri URI
 	 */
-	public MemoryByteCode(String className, URI uri)
+	MemoryByteCode(String className, URI uri)
 	{
 		super(uri, Kind.CLASS);
 		this.className = className;

@@ -20,6 +20,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Calendar;
 import java.util.StringTokenizer;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
@@ -40,7 +41,7 @@ public class MMOTopManager
 	private static final String DELETE_MMOTOP_DATA = "DELETE FROM character_mmotop_votes WHERE date<?";
 	private static final String SELECT_MULTIPLER_MMOTOP_DATA = "SELECT multipler FROM character_mmotop_votes WHERE id=? AND has_reward=0";
 	private static final String UPDATE_MMOTOP_DATA = "UPDATE character_mmotop_votes SET has_reward=1 WHERE id=?";
-	BufferedReader reader;
+	private BufferedReader reader;
 	private static MMOTopManager _instance;
 	
 	/**
@@ -71,7 +72,7 @@ public class MMOTopManager
 	 * Method getPage.
 	 * @param address String
 	 */
-	public void getPage(String address)
+	void getPage(String address)
 	{
 		try
 		{
@@ -87,7 +88,7 @@ public class MMOTopManager
 	/**
 	 * Method parse.
 	 */
-	public void parse()
+	void parse()
 	{
 		try
 		{
@@ -147,7 +148,7 @@ public class MMOTopManager
 	 * @param charName String
 	 * @param voteType int
 	 */
-	public void checkAndSave(long voteTime, String charName, int voteType)
+	private void checkAndSave(long voteTime, String charName, int voteType)
 	{
 		Connection con = null;
 		PreparedStatement selectObjectStatement = null, selectMmotopStatement = null, insertStatement = null;
@@ -313,7 +314,6 @@ public class MMOTopManager
 		 */
 		public ConnectAndUpdate()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -338,7 +338,6 @@ public class MMOTopManager
 		 */
 		public Clean()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -362,7 +361,6 @@ public class MMOTopManager
 		 */
 		public GiveReward()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

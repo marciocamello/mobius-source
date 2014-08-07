@@ -13,6 +13,7 @@
 package instances;
 
 import java.util.List;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -282,12 +283,8 @@ public final class EvilIncubator extends Reflection
 	
 	private class FirstWaveTask extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public FirstWaveTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -319,12 +316,8 @@ public final class EvilIncubator extends Reflection
 	
 	private class SecondWaveTask extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public SecondWaveTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -357,12 +350,8 @@ public final class EvilIncubator extends Reflection
 	
 	private class DeathListener implements OnDeathListener
 	{
-		/**
-		 *
-		 */
 		public DeathListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

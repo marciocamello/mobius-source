@@ -14,6 +14,7 @@ package ai;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -64,7 +65,6 @@ public final class Baylor extends DefaultAI
 		 */
 		SpawnSocial()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

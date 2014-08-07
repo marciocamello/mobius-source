@@ -16,6 +16,7 @@ import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.logging.Logger;
+
 import lineage2.commons.util.Base64;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.network.GameClient;
@@ -114,7 +115,7 @@ public class SecondaryPasswordAuth
 	 * @param attempts int
 	 * @return boolean
 	 */
-	public boolean insertWrongAttempt(int attempts)
+	private boolean insertWrongAttempt(int attempts)
 	{
 		LoginServerCommunication.getInstance().sendPacket(new Player2ndAuthSetAttempts(_activeClient.getLogin(), attempts));
 		return true;
@@ -206,7 +207,7 @@ public class SecondaryPasswordAuth
 	 * Method insertBanTime.
 	 * @param banTime int
 	 */
-	public void insertBanTime(int banTime)
+	private void insertBanTime(int banTime)
 	{
 		LoginServerCommunication.getInstance().sendPacket(new Player2ndAuthSetBanTime(_activeClient.getLogin(), banTime));
 		_unBanTime = System.currentTimeMillis() + (banTime * 60000);

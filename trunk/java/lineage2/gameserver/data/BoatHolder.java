@@ -13,6 +13,7 @@
 package lineage2.gameserver.data;
 
 import java.lang.reflect.Constructor;
+
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.data.xml.holder.ShuttleTemplateHolder;
 import lineage2.gameserver.idfactory.IdFactory;

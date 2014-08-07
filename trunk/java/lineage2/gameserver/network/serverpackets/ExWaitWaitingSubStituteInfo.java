@@ -18,7 +18,7 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class ExWaitWaitingSubStituteInfo extends L2GameServerPacket
 {
-	boolean turnOn;
+	private boolean turnOn;
 	
 	/**
 	 * Constructor for ExWaitWaitingSubStituteInfo.

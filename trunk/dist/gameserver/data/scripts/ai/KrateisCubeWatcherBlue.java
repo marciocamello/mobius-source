@@ -13,6 +13,7 @@
 package ai;
 
 import java.util.List;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;

@@ -15,6 +15,7 @@ package lineage2.gameserver.model.entity.events.impl;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.time.cron.SchedulingPattern;
 import lineage2.gameserver.data.xml.holder.EventHolder;
@@ -33,8 +34,8 @@ import lineage2.gameserver.scripts.Functions;
 public class KrateisCubeRunnerEvent extends GlobalEvent
 {
 	private static final SchedulingPattern DATE_PATTERN = new SchedulingPattern("0,30 * * * *");
-	public static final String MANAGER = "manager";
-	public static final String REGISTRATION = "registration";
+	private static final String MANAGER = "manager";
+	private static final String REGISTRATION = "registration";
 	private boolean _isInProgress;
 	private boolean _isRegistrationOver;
 	private final List<KrateisCubeEvent> _cubes = new ArrayList<>(3);

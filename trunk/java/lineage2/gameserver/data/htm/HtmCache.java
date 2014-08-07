@@ -14,6 +14,7 @@ package lineage2.gameserver.data.htm;
 
 import java.io.File;
 import java.io.IOException;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.Language;
@@ -21,6 +22,7 @@ import lineage2.gameserver.utils.Strings;
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Element;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -156,7 +158,7 @@ public class HtmCache
 	 * @param rootPath String
 	 * @throws IOException
 	 */
-	public void putContent(Language lang, File f, final String rootPath) throws IOException
+	private void putContent(Language lang, File f, final String rootPath) throws IOException
 	{
 		String content = FileUtils.readFileToString(f, "UTF-8");
 		String path = f.getAbsolutePath().substring(rootPath.length()).replace("\\", "/");

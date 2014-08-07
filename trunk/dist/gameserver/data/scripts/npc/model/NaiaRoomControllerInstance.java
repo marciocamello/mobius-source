@@ -14,6 +14,7 @@ package npc.model;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.commons.geometry.Rectangle;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -33,9 +34,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class NaiaRoomControllerInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final Territory _room1territory = new Territory().add(new Rectangle(-46652, 245576, -45735, 246648).setZmin(-9175).setZmax(-9075));
 	private static final Territory _room3territory = new Territory().add(new Rectangle(-52088, 245667, -51159, 246609).setZmin(-10037).setZmax(-9837));

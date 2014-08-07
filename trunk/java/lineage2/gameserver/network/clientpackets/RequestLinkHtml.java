@@ -14,6 +14,7 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

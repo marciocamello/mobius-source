@@ -17,6 +17,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -34,8 +35,10 @@ import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
 import npc.model.SepulcherNpcInstance;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import bosses.FourSepulchersSpawn.GateKeeper;
 
 /**
@@ -435,7 +438,6 @@ public final class FourSepulchersManager extends Functions implements ScriptFile
 		 */
 		ManagerSay()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -476,7 +478,6 @@ public final class FourSepulchersManager extends Functions implements ScriptFile
 		 */
 		ChangeEntryTime()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -519,7 +520,6 @@ public final class FourSepulchersManager extends Functions implements ScriptFile
 		 */
 		ChangeWarmUpTime()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -561,7 +561,6 @@ public final class FourSepulchersManager extends Functions implements ScriptFile
 		 */
 		ChangeAttackTime()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -641,7 +640,6 @@ public final class FourSepulchersManager extends Functions implements ScriptFile
 		 */
 		ChangeCoolDownTime()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

@@ -15,12 +15,14 @@ package lineage2.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.model.entity.events.impl.ClanHallAuctionEvent;
 import lineage2.gameserver.model.entity.events.impl.ClanHallMiniGameEvent;
 import lineage2.gameserver.model.entity.residence.ClanHall;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.tables.ClanTable;
+
 import org.apache.commons.lang3.StringUtils;
 
 public class ExShowAgitInfo extends L2GameServerPacket
@@ -72,12 +74,14 @@ public class ExShowAgitInfo extends L2GameServerPacket
 		}
 	}
 	
-	static class AgitInfo
+	private static class AgitInfo
 	{
-		public String clan_name, leader_name;
-		public int ch_id, getType;
+		final String clan_name;
+		final String leader_name;
+		final int ch_id;
+		final int getType;
 		
-		public AgitInfo(String clan_name, String leader_name, int ch_id, int lease)
+		AgitInfo(String clan_name, String leader_name, int ch_id, int lease)
 		{
 			this.clan_name = clan_name;
 			this.leader_name = leader_name;

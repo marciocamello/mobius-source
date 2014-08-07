@@ -30,7 +30,8 @@ public final class TeleportBookmark extends SimpleItemHandler
 	
 	/**
 	 * Method getItemIds.
-	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 * @return int[]
+	 * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
 	 */
 	@Override
 	public int[] getItemIds()

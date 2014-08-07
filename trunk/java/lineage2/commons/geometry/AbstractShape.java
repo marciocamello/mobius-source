@@ -16,7 +16,7 @@ package lineage2.commons.geometry;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public abstract class AbstractShape implements Shape
+abstract class AbstractShape implements Shape
 {
 	protected final Point3D max = new Point3D();
 	protected final Point3D min = new Point3D();

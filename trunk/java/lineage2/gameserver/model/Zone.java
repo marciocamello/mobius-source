@@ -19,6 +19,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
+
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.listener.Listener;
@@ -44,7 +45,7 @@ import lineage2.gameserver.utils.PositionUtils;
  */
 public class Zone
 {
-	public static final Zone[] EMPTY_L2ZONE_ARRAY = new Zone[0];
+	static final Zone[] EMPTY_L2ZONE_ARRAY = new Zone[0];
 	
 	/**
 	 * @author Mobius
@@ -272,13 +273,17 @@ public class Zone
 	/**
 	 * @author Mobius
 	 */
-	public class ZoneListenerList extends ListenerList<Zone>
+	private class ZoneListenerList extends ListenerList<Zone>
 	{
+		public ZoneListenerList()
+		{
+		}
+		
 		/**
 		 * Method onEnter.
 		 * @param actor Creature
 		 */
-		public void onEnter(Creature actor)
+		void onEnter(Creature actor)
 		{
 			if (!getListeners().isEmpty())
 			{
@@ -293,7 +298,7 @@ public class Zone
 		 * Method onLeave.
 		 * @param actor Creature
 		 */
-		public void onLeave(Creature actor)
+		void onLeave(Creature actor)
 		{
 			if (!getListeners().isEmpty())
 			{
@@ -316,7 +321,7 @@ public class Zone
 	private final Lock writeLock = lock.writeLock();
 	private final List<Creature> _objects = new LazyArrayList<>(32);
 	private final Map<Creature, ZoneTimer> _zoneTimers = new ConcurrentHashMap<>();
-	public final static int ZONE_STATS_ORDER = 0x40;
+	private final static int ZONE_STATS_ORDER = 0x40;
 	
 	/**
 	 * Constructor for Zone.
@@ -332,7 +337,7 @@ public class Zone
 	 * @param type ZoneType
 	 * @param template ZoneTemplate
 	 */
-	public Zone(ZoneType type, ZoneTemplate template)
+	private Zone(ZoneType type, ZoneTemplate template)
 	{
 		_type = type;
 		_template = template;
@@ -623,7 +628,7 @@ public class Zone
 	 * Method doEnter.
 	 * @param cha Creature
 	 */
-	public void doEnter(Creature cha)
+	void doEnter(Creature cha)
 	{
 		boolean added = false;
 		writeLock.lock();
@@ -650,7 +655,7 @@ public class Zone
 	 * Method onZoneEnter.
 	 * @param actor Creature
 	 */
-	protected void onZoneEnter(Creature actor)
+	private void onZoneEnter(Creature actor)
 	{
 		checkEffects(actor, true);
 		addZoneStats(actor);
@@ -680,7 +685,7 @@ public class Zone
 	 * Method doLeave.
 	 * @param cha Creature
 	 */
-	public void doLeave(Creature cha)
+	void doLeave(Creature cha)
 	{
 		boolean removed = false;
 		writeLock.lock();
@@ -704,7 +709,7 @@ public class Zone
 	 * Method onZoneLeave.
 	 * @param actor Creature
 	 */
-	protected void onZoneLeave(Creature actor)
+	private void onZoneLeave(Creature actor)
 	{
 		checkEffects(actor, false);
 		removeZoneStats(actor);

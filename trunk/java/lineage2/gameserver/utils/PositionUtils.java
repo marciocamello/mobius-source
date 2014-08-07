@@ -68,7 +68,7 @@ public class PositionUtils
 	 * @param attacker Creature
 	 * @return boolean
 	 */
-	public static boolean isInFrontOf(Creature target, Creature attacker)
+	private static boolean isInFrontOf(Creature target, Creature attacker)
 	{
 		if (target == null)
 		{
@@ -104,7 +104,7 @@ public class PositionUtils
 	 * @param attacker Creature
 	 * @return boolean
 	 */
-	public static boolean isBehind(Creature target, Creature attacker)
+	private static boolean isBehind(Creature target, Creature attacker)
 	{
 		if (target == null)
 		{
@@ -223,7 +223,7 @@ public class PositionUtils
 	 * @param obj2Y int
 	 * @return double
 	 */
-	public static double calculateAngleFrom(int obj1X, int obj1Y, int obj2X, int obj2Y)
+	private static double calculateAngleFrom(int obj1X, int obj1Y, int obj2X, int obj2Y)
 	{
 		double angleTarget = Math.toDegrees(Math.atan2(obj2Y - obj1Y, obj2X - obj1X));
 		
@@ -240,20 +240,6 @@ public class PositionUtils
 	 * @param range int
 	 * @param x1 int
 	 * @param y1 int
-	 * @param x2 int
-	 * @param y2 int
-	 * @return boolean
-	 */
-	public static boolean checkIfInRange(int range, int x1, int y1, int x2, int y2)
-	{
-		return checkIfInRange(range, x1, y1, 0, x2, y2, 0, false);
-	}
-	
-	/**
-	 * Method checkIfInRange.
-	 * @param range int
-	 * @param x1 int
-	 * @param y1 int
 	 * @param z1 int
 	 * @param x2 int
 	 * @param y2 int
@@ -261,7 +247,7 @@ public class PositionUtils
 	 * @param includeZAxis boolean
 	 * @return boolean
 	 */
-	public static boolean checkIfInRange(int range, int x1, int y1, int z1, int x2, int y2, int z2, boolean includeZAxis)
+	private static boolean checkIfInRange(int range, int x1, int y1, int z1, int x2, int y2, int z2, boolean includeZAxis)
 	{
 		long dx = x1 - x2;
 		long dy = y1 - y2;
@@ -414,7 +400,7 @@ public class PositionUtils
 	 * @param y2 int
 	 * @return double
 	 */
-	public static double getDistance(int x1, int y1, int x2, int y2)
+	private static double getDistance(int x1, int y1, int x2, int y2)
 	{
 		return Math.hypot(x1 - x2, y1 - y2);
 	}

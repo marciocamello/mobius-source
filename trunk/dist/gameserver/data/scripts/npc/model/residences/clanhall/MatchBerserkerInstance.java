@@ -23,9 +23,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public class MatchBerserkerInstance extends CTBBossInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

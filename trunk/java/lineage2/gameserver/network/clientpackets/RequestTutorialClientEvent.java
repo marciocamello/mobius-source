@@ -22,7 +22,7 @@ import lineage2.gameserver.model.quest.Quest;
  */
 public class RequestTutorialClientEvent extends L2GameClientPacket
 {
-	int event = 0;
+	private int event = 0;
 	
 	/**
 	 * Method readImpl.

@@ -20,9 +20,11 @@ import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.CRC32;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.World;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,16 +32,16 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GeoOptimizer
+class GeoOptimizer
 {
 	static final Logger log = LoggerFactory.getLogger(GeoOptimizer.class);
-	public static int[][][] checkSums;
+	static int[][][] checkSums;
 	private static final byte version = 1;
 	
 	/**
 	 * @author Mobius
 	 */
-	public static class GeoBlocksMatchFinder extends RunnableImpl
+	static class GeoBlocksMatchFinder extends RunnableImpl
 	{
 		private final int geoX, geoY, rx, ry, maxScanRegions;
 		private final String fileName;
@@ -50,7 +52,7 @@ public class GeoOptimizer
 		 * @param _geoY int
 		 * @param _maxScanRegions int
 		 */
-		public GeoBlocksMatchFinder(int _geoX, int _geoY, int _maxScanRegions)
+		GeoBlocksMatchFinder(int _geoX, int _geoY, int _maxScanRegions)
 		{
 			super();
 			geoX = _geoX;
@@ -203,7 +205,7 @@ public class GeoOptimizer
 	/**
 	 * @author Mobius
 	 */
-	public static class CheckSumLoader extends RunnableImpl
+	static class CheckSumLoader extends RunnableImpl
 	{
 		private final int geoX, geoY, rx, ry;
 		private final byte[][][] region;
@@ -215,7 +217,7 @@ public class GeoOptimizer
 		 * @param _geoY int
 		 * @param _region byte[][][]
 		 */
-		public CheckSumLoader(int _geoX, int _geoY, byte[][][] _region)
+		CheckSumLoader(int _geoX, int _geoY, byte[][][] _region)
 		{
 			super();
 			geoX = _geoX;
@@ -333,10 +335,10 @@ public class GeoOptimizer
 	/**
 	 * @author Mobius
 	 */
-	public static class BlockLink
+	static class BlockLink
 	{
-		public final int blockIndex, linkBlockIndex;
-		public final byte linkMapX, linkMapY;
+		final int blockIndex, linkBlockIndex;
+		final byte linkMapX, linkMapY;
 		
 		/**
 		 * Constructor for BlockLink.
@@ -345,7 +347,7 @@ public class GeoOptimizer
 		 * @param _linkMapY byte
 		 * @param _linkBlockIndex short
 		 */
-		public BlockLink(short _blockIndex, byte _linkMapX, byte _linkMapY, short _linkBlockIndex)
+		BlockLink(short _blockIndex, byte _linkMapX, byte _linkMapY, short _linkBlockIndex)
 		{
 			blockIndex = _blockIndex & 0xFFFF;
 			linkMapX = _linkMapX;
@@ -360,7 +362,7 @@ public class GeoOptimizer
 		 * @param _linkMapY byte
 		 * @param _linkBlockIndex int
 		 */
-		public BlockLink(int _blockIndex, byte _linkMapX, byte _linkMapY, int _linkBlockIndex)
+		BlockLink(int _blockIndex, byte _linkMapX, byte _linkMapY, int _linkBlockIndex)
 		{
 			blockIndex = _blockIndex & 0xFFFF;
 			linkMapX = _linkMapX;
@@ -374,7 +376,7 @@ public class GeoOptimizer
 	 * @param fileName String
 	 * @return BlockLink[]
 	 */
-	public static BlockLink[] loadBlockMatches(String fileName)
+	static BlockLink[] loadBlockMatches(String fileName)
 	{
 		File f = new File(Config.DATAPACK_ROOT, fileName);
 		

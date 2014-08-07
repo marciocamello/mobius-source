@@ -18,7 +18,6 @@ public class ExChangeAttributeOk extends L2GameServerPacket
 	
 	public ExChangeAttributeOk()
 	{
-		//
 	}
 	
 	@Override

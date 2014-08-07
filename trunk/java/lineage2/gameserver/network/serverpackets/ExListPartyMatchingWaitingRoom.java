@@ -15,6 +15,7 @@ package lineage2.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.gameserver.instancemanager.MatchingRoomManager;
 import lineage2.gameserver.model.Player;
@@ -71,13 +72,15 @@ public class ExListPartyMatchingWaitingRoom extends L2GameServerPacket
 		}
 	}
 	
-	static class PartyMatchingWaitingInfo
+	private static class PartyMatchingWaitingInfo
 	{
-		public final int classId, level, currentInstance;
-		public final String name;
-		public final int[] instanceReuses;
+		final int classId;
+		final int level;
+		final int currentInstance;
+		final String name;
+		final int[] instanceReuses;
 		
-		public PartyMatchingWaitingInfo(Player member)
+		PartyMatchingWaitingInfo(Player member)
 		{
 			name = member.getName();
 			classId = member.getClassId().getId();

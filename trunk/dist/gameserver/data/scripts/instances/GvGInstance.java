@@ -15,6 +15,7 @@ package instances;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.lang.reference.HardReferences;
 import lineage2.commons.threading.RunnableImpl;
@@ -43,7 +44,9 @@ import lineage2.gameserver.network.serverpackets.Revive;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
+
 import org.apache.commons.lang3.mutable.MutableInt;
+
 import events.GvG.GvG;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
@@ -250,12 +253,8 @@ public final class GvGInstance extends Reflection
 	
 	private class DeathListener implements OnDeathListener
 	{
-		/**
-		 *
-		 */
 		public DeathListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -626,12 +625,8 @@ public final class GvGInstance extends Reflection
 	 */
 	private class TeleportListener implements OnTeleportListener
 	{
-		/**
-		 *
-		 */
 		public TeleportListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -652,12 +647,8 @@ public final class GvGInstance extends Reflection
 	 */
 	private class PlayerPartyLeaveListener implements OnPlayerPartyLeaveListener
 	{
-		/**
-		 *
-		 */
 		public PlayerPartyLeaveListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

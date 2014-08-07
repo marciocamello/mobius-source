@@ -18,6 +18,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
@@ -34,6 +35,7 @@ import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.templates.manor.CropProcure;
 import lineage2.gameserver.templates.manor.SeedProduction;
 import lineage2.gameserver.utils.Log;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,14 +49,14 @@ public class CastleManorManager
 	private static CastleManorManager _instance;
 	public static final int PERIOD_CURRENT = 0;
 	public static final int PERIOD_NEXT = 1;
-	protected static final String var_name = "ManorApproved";
+	private static final String var_name = "ManorApproved";
 	private static final String CASTLE_MANOR_LOAD_PROCURE = "SELECT * FROM castle_manor_procure WHERE castle_id=?";
 	private static final String CASTLE_MANOR_LOAD_PRODUCTION = "SELECT * FROM castle_manor_production WHERE castle_id=?";
 	static final int NEXT_PERIOD_APPROVE = Config.MANOR_APPROVE_TIME;
 	static final int NEXT_PERIOD_APPROVE_MIN = Config.MANOR_APPROVE_MIN;
 	static final int MANOR_REFRESH = Config.MANOR_REFRESH_TIME;
 	static final int MANOR_REFRESH_MIN = Config.MANOR_REFRESH_MIN;
-	protected static final long MAINTENANCE_PERIOD = Config.MANOR_MAINTENANCE_PERIOD / 60000;
+	static final long MAINTENANCE_PERIOD = Config.MANOR_MAINTENANCE_PERIOD / 60000;
 	private boolean _underMaintenance;
 	private boolean _disabled;
 	
@@ -182,7 +184,7 @@ public class CastleManorManager
 	/**
 	 * Method init.
 	 */
-	protected void init()
+	private void init()
 	{
 		if (ServerVariables.getString(var_name, "").isEmpty())
 		{
@@ -210,7 +212,7 @@ public class CastleManorManager
 	/**
 	 * Method setNextPeriod.
 	 */
-	public void setNextPeriod()
+	void setNextPeriod()
 	{
 		List<Castle> castleList = ResidenceHolder.getInstance().getResidenceList(Castle.class);
 		
@@ -306,7 +308,7 @@ public class CastleManorManager
 	/**
 	 * Method approveNextPeriod.
 	 */
-	public void approveNextPeriod()
+	void approveNextPeriod()
 	{
 		List<Castle> castleList = ResidenceHolder.getInstance().getResidenceList(Castle.class);
 		
@@ -466,7 +468,6 @@ public class CastleManorManager
 		 */
 		public ManorTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

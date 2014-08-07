@@ -46,7 +46,7 @@ public class SchedulingPattern
 	 * @param schedulingPattern String
 	 * @return boolean
 	 */
-	public static boolean validate(String schedulingPattern)
+	static boolean validate(String schedulingPattern)
 	{
 		try
 		{
@@ -61,12 +61,12 @@ public class SchedulingPattern
 	}
 	
 	private final String asString;
-	protected final List<ValueMatcher> minuteMatchers = new ArrayList<>();
-	protected final List<ValueMatcher> hourMatchers = new ArrayList<>();
-	protected final List<ValueMatcher> dayOfMonthMatchers = new ArrayList<>();
-	protected final List<ValueMatcher> monthMatchers = new ArrayList<>();
-	protected final List<ValueMatcher> dayOfWeekMatchers = new ArrayList<>();
-	protected int matcherSize = 0;
+	private final List<ValueMatcher> minuteMatchers = new ArrayList<>();
+	private final List<ValueMatcher> hourMatchers = new ArrayList<>();
+	private final List<ValueMatcher> dayOfMonthMatchers = new ArrayList<>();
+	private final List<ValueMatcher> monthMatchers = new ArrayList<>();
+	private final List<ValueMatcher> dayOfWeekMatchers = new ArrayList<>();
+	private int matcherSize = 0;
 	
 	/**
 	 * Constructor for SchedulingPattern.
@@ -354,7 +354,7 @@ public class SchedulingPattern
 	 * @param millis long
 	 * @return boolean
 	 */
-	public boolean match(TimeZone timezone, long millis)
+	private boolean match(TimeZone timezone, long millis)
 	{
 		GregorianCalendar gc = new GregorianCalendar(timezone);
 		gc.setTimeInMillis(millis);
@@ -390,7 +390,7 @@ public class SchedulingPattern
 	 * @param millis long
 	 * @return boolean
 	 */
-	public boolean match(long millis)
+	boolean match(long millis)
 	{
 		return match(TimeZone.getDefault(), millis);
 	}
@@ -401,7 +401,7 @@ public class SchedulingPattern
 	 * @param millis long
 	 * @return long
 	 */
-	public long next(TimeZone timezone, long millis)
+	private long next(TimeZone timezone, long millis)
 	{
 		long next = -1L;
 		
@@ -817,7 +817,6 @@ public class SchedulingPattern
 		 */
 		public AlwaysTrueValueMatcher()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

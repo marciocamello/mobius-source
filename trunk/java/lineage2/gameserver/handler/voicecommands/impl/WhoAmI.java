@@ -14,6 +14,7 @@ package lineage2.gameserver.handler.voicecommands.impl;
 
 import java.text.NumberFormat;
 import java.util.Locale;
+
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler;
 import lineage2.gameserver.model.Creature;
@@ -25,6 +26,7 @@ import lineage2.gameserver.stats.Formulas;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
 import lineage2.gameserver.utils.Strings;
+
 import org.apache.commons.lang3.text.StrBuilder;
 
 /**

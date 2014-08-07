@@ -13,16 +13,15 @@
 package lineage2.gameserver.instancemanager;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
+
 import javolution.util.FastList;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
 import lineage2.gameserver.listener.actor.player.OnPlayerEnterListener;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
-import lineage2.gameserver.model.SkillLearn;
 import lineage2.gameserver.model.actor.listener.CharListenerList;
 import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.model.base.ClassLevel;
@@ -34,8 +33,10 @@ import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.tables.SkillTreeTable;
 import lineage2.gameserver.utils.ItemFunctions;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import gnu.trove.map.hash.TIntIntHashMap;
 
 /**
@@ -149,7 +150,7 @@ public class AwakingManager implements OnPlayerEnterListener
 	/**
 	 * Method load.
 	 */
-	public void load()
+	private void load()
 	{
 		if (Config.AWAKING_FREE)
 		{
@@ -457,33 +458,6 @@ public class AwakingManager implements OnPlayerEnterListener
 	}
 	
 	/**
-	 * Method SendReqToAwaking.
-	 * @param player Player, int toClassId
-	 * @param toClassId
-	 */
-	public void SendReqToAwaking(Player player, int toClassId)
-	{
-		if (player.getClassId().level() < 3)
-		{
-			return;
-		}
-		
-		player.sendPacket(new ExChangeToAwakenedClass(toClassId));
-		return;
-	}
-	
-	/**
-	 * Method onStartQuestAccept.
-	 * @param player Player
-	 */
-	public void onStartQuestAccept(Player player)
-	{
-		player.teleToLocation(-114708, 243918, -7968);
-		player.sendPacket(new ExShowUsmVideo(ExShowUsmVideo.Q010));
-		return;
-	}
-	
-	/**
 	 * Method SetAwakingId.
 	 * @param player Player
 	 */
@@ -531,7 +505,7 @@ public class AwakingManager implements OnPlayerEnterListener
 	 * @param player Player
 	 * @return null
 	 */
-	public Skill getRaceSkill(Player player)
+	private Skill getRaceSkill(Player player)
 	{
 		int race = player.getRace().ordinal();
 		Skill skill = null;
@@ -602,38 +576,6 @@ public class AwakingManager implements OnPlayerEnterListener
 			
 			ItemFunctions.addItem(player, _CloakDualClass.get(newClassId), 1, true);
 		}
-	}
-	
-	/**
-	 * Method giveDeletedSkillList.
-	 * @param player Player
-	 * @return String
-	 */
-	public String giveDeletedSkillList(Player player)
-	{
-		int newClassId = _CA.get(player.getClassId().getId());
-		Collection<SkillLearn> skills = SkillAcquireHolder.getInstance().getAvailableAllSkillsForDellet(player, newClassId);
-		StringBuilder tmp = new StringBuilder();
-		
-		for (SkillLearn s : skills)
-		{
-			Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
-			
-			if (sk.isRelationSkill())
-			{
-				final int[] _ss = sk.getRelationSkills();
-				
-				if (_ss != null)
-				{
-					for (int _k : _ss)
-					{
-						SkillTable.getInstance().getInfo(_k, SkillTable.getInstance().getBaseLevel(_k));
-					}
-				}
-			}
-		}
-		
-		return tmp.toString();
 	}
 	
 	/**

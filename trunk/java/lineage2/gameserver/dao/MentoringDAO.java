@@ -17,10 +17,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.MenteeInfo;
 import lineage2.gameserver.model.Player;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -144,7 +146,7 @@ public class MentoringDAO
 		}
 	}
 	
-	public boolean isCertificateProvide(String accountName)
+	boolean isCertificateProvide(String accountName)
 	{
 		boolean provided = false;
 		Connection con = null;
@@ -174,7 +176,7 @@ public class MentoringDAO
 		return provided;
 	}
 	
-	public void addCertificateProvide(String accountName)
+	void addCertificateProvide(String accountName)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;

@@ -27,6 +27,7 @@ import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.skills.effects.EffectCubic;
 import lineage2.gameserver.utils.Location;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -395,7 +396,7 @@ public class CharInfo extends L2GameServerPacket
 		writeC(0x00);
 	}
 	
-	public static final int[] PAPERDOLL_ORDER =
+	private static final int[] PAPERDOLL_ORDER =
 	{
 		Inventory.PAPERDOLL_UNDER,
 		Inventory.PAPERDOLL_HEAD,

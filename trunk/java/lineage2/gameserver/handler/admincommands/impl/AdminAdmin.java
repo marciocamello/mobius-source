@@ -17,6 +17,7 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
@@ -32,6 +33,7 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.PlaySound;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.stats.Stats;
+
 import org.apache.commons.lang3.math.NumberUtils;
 
 /**
@@ -576,7 +578,7 @@ public class AdminAdmin implements IAdminCommandHandler
 	 * @param activeChar Player
 	 * @param sound String
 	 */
-	public void playAdminSound(Player activeChar, String sound)
+	private void playAdminSound(Player activeChar, String sound)
 	{
 		activeChar.broadcastPacket(new PlaySound(sound));
 		activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/admin.htm"));

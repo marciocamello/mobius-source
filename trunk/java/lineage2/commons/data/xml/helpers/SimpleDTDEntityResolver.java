@@ -13,6 +13,7 @@
 package lineage2.commons.data.xml.helpers;
 
 import java.io.File;
+
 import org.xml.sax.EntityResolver;
 import org.xml.sax.InputSource;
 

@@ -59,7 +59,7 @@ public class HtmlUtils
 	 * @param id int
 	 * @return String
 	 */
-	public static String htmlSysString(int id)
+	private static String htmlSysString(int id)
 	{
 		return "&$" + id + ";";
 	}

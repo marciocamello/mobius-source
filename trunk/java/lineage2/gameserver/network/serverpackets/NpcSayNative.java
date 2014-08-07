@@ -14,9 +14,6 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.instances.NpcInstance;
 
-/**
- * @author ALF Для отправки нативных NpcStringId
- */
 public class NpcSayNative extends L2GameServerPacket
 {
 	private final int _id;

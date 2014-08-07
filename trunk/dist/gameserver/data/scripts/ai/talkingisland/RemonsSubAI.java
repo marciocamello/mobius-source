@@ -33,7 +33,7 @@ public class RemonsSubAI extends DefaultAI
 	 * Constructor for RemonsSubAI.
 	 * @param actor NpcInstance
 	 */
-	public RemonsSubAI(NpcInstance actor)
+	RemonsSubAI(NpcInstance actor)
 	{
 		super(actor);
 	}

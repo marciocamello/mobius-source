@@ -14,6 +14,7 @@ package quests;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -29,7 +30,7 @@ public class _10376_BloodyGoodTime extends Quest implements ScriptFile
 	private static final int NPC_ANDREI = 31292;
 	private static final int MOB_BLOODY_VEIN = 27481;
 	private static final int REWARD_MAGIC_RUNE_CLIP = 32700;
-	public static final String _bloodyVein = "NightmareDeath";
+	private static final String _bloodyVein = "NightmareDeath";
 	private static final Map<Integer, Integer> spawns = new HashMap<>();
 	
 	public _10376_BloodyGoodTime()

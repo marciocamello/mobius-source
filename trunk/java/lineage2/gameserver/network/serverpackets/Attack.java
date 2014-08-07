@@ -22,11 +22,11 @@ import lineage2.gameserver.model.GameObject;
  */
 public class Attack extends L2GameServerPacket
 {
-	private static final int FLAG = 0x00; // Обычный удар без надписей.
-	private static final int FLAG_MISS = 0x01; // Увернулся от удара
-	private static final int FLAG_CRIT = 0x04; // Крит.
-	private static final int FLAG_SHIELD = 0x06; // Заблокировал Крит.
-	private static final int FLAG_SOULSHOT = 0x08; // Удар с соской.
+	private static final int FLAG = 0x00; // Usual kick unprinted.
+	private static final int FLAG_MISS = 0x01; // Dodged the blow.
+	private static final int FLAG_CRIT = 0x04; // Crit.
+	private static final int FLAG_SHIELD = 0x06; // Block Crit.
+	private static final int FLAG_SOULSHOT = 0x08; // Beat with a pacifier.
 	
 	private class Hit
 	{
@@ -58,7 +58,7 @@ public class Attack extends L2GameServerPacket
 		}
 	}
 	
-	public final int _attackerId;
+	private final int _attackerId;
 	public final boolean _soulshot;
 	private final int _grade;
 	private final int _x, _y, _z, _tx, _ty, _tz;

@@ -28,7 +28,7 @@ public class PremiumItem
 	 * @param count long
 	 * @param sender String
 	 */
-	public PremiumItem(int itemid, long count, String sender)
+	PremiumItem(int itemid, long count, String sender)
 	{
 		_itemId = itemid;
 		_count = count;

@@ -15,6 +15,7 @@ package lineage2.gameserver.model.instances;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
@@ -243,7 +244,7 @@ public class TreeInstance extends Summon
 	/**
 	 * Method stopDisappear.
 	 */
-	protected synchronized void stopDisappear()
+	private synchronized void stopDisappear()
 	{
 		if (_destroyTask != null)
 		{

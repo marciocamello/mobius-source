@@ -15,10 +15,12 @@ package lineage2.gameserver.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.ManageBbsBuffer;
 import lineage2.gameserver.model.ManageBbsBuffer.SBufferScheme;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,9 +32,9 @@ public class CommunityBufferDAO
 {
 	private static final Logger _log = LoggerFactory.getLogger(CommunityBufferDAO.class);
 	private static final CommunityBufferDAO _instance = new CommunityBufferDAO();
-	public static final String SELECT_SQL_QUERY = "SELECT * FROM bbs_skillsave";
-	public static final String DELETE_SQL_QUERY = "DELETE FROM bbs_skillsave WHERE charId=? AND schameid=?";
-	public static final String INSERT_SQL_QUERY = "INSERT INTO bbs_skillsave (charId,schameid,name,skills) VALUES(?,?,?,?)";
+	private static final String SELECT_SQL_QUERY = "SELECT * FROM bbs_skillsave";
+	private static final String DELETE_SQL_QUERY = "DELETE FROM bbs_skillsave WHERE charId=? AND schameid=?";
+	private static final String INSERT_SQL_QUERY = "INSERT INTO bbs_skillsave (charId,schameid,name,skills) VALUES(?,?,?,?)";
 	
 	/**
 	 * Method getInstance.

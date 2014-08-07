@@ -14,10 +14,12 @@ package lineage2.gameserver.model.pledge;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.NickNameChanged;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

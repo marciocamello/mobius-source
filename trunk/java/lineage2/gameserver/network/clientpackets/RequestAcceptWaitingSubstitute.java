@@ -22,7 +22,7 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public class RequestAcceptWaitingSubstitute extends L2GameClientPacket
 {
-	boolean willJoin;
+	private boolean willJoin;
 	
 	/**
 	 * Method readImpl.

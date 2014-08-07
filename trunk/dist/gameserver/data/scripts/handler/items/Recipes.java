@@ -13,6 +13,7 @@
 package handler.items;
 
 import java.util.Collection;
+
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.RecipeHolder;
 import lineage2.gameserver.model.Playable;
@@ -52,7 +53,8 @@ public final class Recipes extends ScriptItemHandler
 	 * @param playable Playable
 	 * @param item ItemInstance
 	 * @param ctrl boolean
-	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
 	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)

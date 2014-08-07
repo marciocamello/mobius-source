@@ -21,9 +21,9 @@ import lineage2.gameserver.model.Player;
  */
 public class RequestExBR_LectureMark extends L2GameClientPacket
 {
-	public static final int INITIAL_MARK = 1;
-	public static final int EVANGELIST_MARK = 2;
-	public static final int OFF_MARK = 3;
+	private static final int INITIAL_MARK = 1;
+	private static final int EVANGELIST_MARK = 2;
+	private static final int OFF_MARK = 3;
 	private int _mark;
 	
 	/**

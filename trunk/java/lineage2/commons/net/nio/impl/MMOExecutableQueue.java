@@ -24,7 +24,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @param <T>
  */
 @SuppressWarnings("rawtypes")
-public class MMOExecutableQueue<T extends MMOClient> implements Queue<ReceivablePacket<T>>, Runnable
+class MMOExecutableQueue<T extends MMOClient> implements Queue<ReceivablePacket<T>>, Runnable
 {
 	private static final int NONE = 0;
 	private static final int QUEUED = 1;
@@ -37,7 +37,7 @@ public class MMOExecutableQueue<T extends MMOClient> implements Queue<Receivable
 	 * Constructor for MMOExecutableQueue.
 	 * @param executor IMMOExecutor<T>
 	 */
-	public MMOExecutableQueue(IMMOExecutor<T> executor)
+	MMOExecutableQueue(IMMOExecutor<T> executor)
 	{
 		_executor = executor;
 		_queue = new ArrayDeque<>();

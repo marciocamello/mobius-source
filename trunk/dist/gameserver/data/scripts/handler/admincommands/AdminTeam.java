@@ -27,7 +27,7 @@ public final class AdminTeam extends ScriptAdminCommand
 	/**
 	 * @author Mobius
 	 */
-	enum Commands
+	private enum Commands
 	{
 		admin_setteam
 	}

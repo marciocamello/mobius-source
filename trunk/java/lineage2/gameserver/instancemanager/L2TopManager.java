@@ -26,6 +26,7 @@ import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
@@ -402,7 +403,6 @@ public class L2TopManager
 		 */
 		public ConnectAndUpdate()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -428,7 +428,6 @@ public class L2TopManager
 		 */
 		public Clean()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -452,7 +451,6 @@ public class L2TopManager
 		 */
 		public GiveReward()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

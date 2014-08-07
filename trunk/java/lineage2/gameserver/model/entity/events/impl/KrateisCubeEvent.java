@@ -15,6 +15,7 @@ package lineage2.gameserver.model.entity.events.impl;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
+
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.commons.time.cron.SchedulingPattern;
@@ -60,7 +61,6 @@ public class KrateisCubeEvent extends GlobalEvent
 		 */
 		public Listeners()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -178,11 +178,11 @@ public class KrateisCubeEvent extends GlobalEvent
 		2,
 		1
 	};
-	public static final String PARTICLE_PLAYERS = "particle_players";
+	private static final String PARTICLE_PLAYERS = "particle_players";
 	public static final String REGISTERED_PLAYERS = "registered_players";
 	public static final String WAIT_LOCS = "wait_locs";
 	public static final String TELEPORT_LOCS = "teleport_locs";
-	public static final String PREPARE = "prepare";
+	private static final String PREPARE = "prepare";
 	private final int _minLevel;
 	private final int _maxLevel;
 	private final Calendar _calendar = Calendar.getInstance();
@@ -213,7 +213,7 @@ public class KrateisCubeEvent extends GlobalEvent
 	/**
 	 * Method prepare.
 	 */
-	public void prepare()
+	private void prepare()
 	{
 		NpcInstance npc = _runnerEvent.getNpc();
 		List<KrateisCubePlayerObject> registeredPlayers = removeObjects(REGISTERED_PLAYERS);

@@ -32,9 +32,6 @@ import lineage2.gameserver.utils.TimeUtils;
  */
 public final class RainbowMessengerInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	public static final int ITEM_ID = 8034;
 	

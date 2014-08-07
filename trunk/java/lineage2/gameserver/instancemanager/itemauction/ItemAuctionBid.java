@@ -29,7 +29,7 @@ public final class ItemAuctionBid
 	 * @param charId int
 	 * @param lastBid long
 	 */
-	public ItemAuctionBid(int charId, long lastBid)
+	ItemAuctionBid(int charId, long lastBid)
 	{
 		_charId = charId;
 		_lastBid = lastBid;

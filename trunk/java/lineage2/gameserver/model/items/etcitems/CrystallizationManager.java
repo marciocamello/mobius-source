@@ -15,12 +15,15 @@ package lineage2.gameserver.model.items.etcitems;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+
 import javax.xml.parsers.DocumentBuilderFactory;
+
 import javolution.util.FastList;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.items.CrystallizationItem;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.templates.item.ItemTemplate.Grade;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;

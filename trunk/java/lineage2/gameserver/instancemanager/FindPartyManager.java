@@ -21,8 +21,8 @@ import lineage2.gameserver.model.Player;
  */
 public class FindPartyManager
 {
-	FastList<Player> lookingForParty;
-	FastList<Player> wannaToChangeThisPlayer;
+	private FastList<Player> lookingForParty;
+	private FastList<Player> wannaToChangeThisPlayer;
 	
 	/**
 	 * Method load.
@@ -31,24 +31,6 @@ public class FindPartyManager
 	{
 		lookingForParty = new FastList<>();
 		wannaToChangeThisPlayer = new FastList<>();
-	}
-	
-	/**
-	 * Method addLookingForParty.
-	 * @param player Player
-	 */
-	public void addLookingForParty(Player player)
-	{
-		lookingForParty.add(player);
-	}
-	
-	/**
-	 * Method addChangeThisPlayer.
-	 * @param player Player
-	 */
-	public void addChangeThisPlayer(Player player)
-	{
-		wannaToChangeThisPlayer.add(player);
 	}
 	
 	/**
@@ -85,81 +67,6 @@ public class FindPartyManager
 	public void removeChangeThisPlayer(Player player)
 	{
 		wannaToChangeThisPlayer.remove(player);
-	}
-	
-	/**
-	 * Method getLookingForParty.
-	 * @param level int
-	 * @param classId int
-	 * @return boolean
-	 */
-	public boolean getLookingForParty(int level, int classId)
-	{
-		for (Player player : lookingForParty)
-		{
-			if ((player.getLevel() == level) && (player.getClassId().getId() == classId))
-			{
-				return true;
-			}
-		}
-		
-		return false;
-	}
-	
-	/**
-	 * Method getWannaToChangeThisPlayer.
-	 * @param level int
-	 * @param classId int
-	 * @return boolean
-	 */
-	public boolean getWannaToChangeThisPlayer(int level, int classId)
-	{
-		for (Player player : wannaToChangeThisPlayer)
-		{
-			if ((player.getLevel() == level) && (player.getClassId().getId() == classId))
-			{
-				return true;
-			}
-		}
-		
-		return false;
-	}
-	
-	/**
-	 * Method getWannaToChangeThisPlayer.
-	 * @param objectID int
-	 * @return boolean
-	 */
-	public boolean getWannaToChangeThisPlayer(int objectID)
-	{
-		for (Player player : wannaToChangeThisPlayer)
-		{
-			if (player.getObjectId() == objectID)
-			{
-				return true;
-			}
-		}
-		
-		return false;
-	}
-	
-	/**
-	 * Method getPlayerFromChange.
-	 * @param level int
-	 * @param classId int
-	 * @return Player
-	 */
-	public Player getPlayerFromChange(int level, int classId)
-	{
-		for (Player player : wannaToChangeThisPlayer)
-		{
-			if ((player.getLevel() == level) && (player.getClassId().getId() == classId))
-			{
-				return player;
-			}
-		}
-		
-		return null;
 	}
 	
 	private static final FindPartyManager _instance = new FindPartyManager();

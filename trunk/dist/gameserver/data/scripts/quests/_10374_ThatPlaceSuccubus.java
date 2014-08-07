@@ -27,11 +27,11 @@ public class _10374_ThatPlaceSuccubus extends Quest implements ScriptFile
 	private static final int ShooterMirage = 23188;
 	private static final int ShamanMirage = 23189;
 	private static final int MartyrMirage = 23190;
-	public static final String Mirage_Fighter = "MirageFighter";
-	public static final String Warrior_Mirage = "WarriorMirage";
-	public static final String Shooter_Mirage = "ShooterMirage";
-	public static final String Shaman_Mirage = "ShamanMirage";
-	public static final String Martyr_Mirage = "MartyrMirage";
+	private static final String Mirage_Fighter = "MirageFighter";
+	private static final String Warrior_Mirage = "WarriorMirage";
+	private static final String Shooter_Mirage = "ShooterMirage";
+	private static final String Shaman_Mirage = "ShamanMirage";
+	private static final String Martyr_Mirage = "MartyrMirage";
 	
 	public _10374_ThatPlaceSuccubus()
 	{

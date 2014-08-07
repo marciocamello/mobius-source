@@ -16,6 +16,7 @@ import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
+
 import org.apache.commons.lang3.ArrayUtils;
 
 /**

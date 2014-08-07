@@ -23,9 +23,6 @@ public class StatsSet extends MultiValueSet<String>
 	private static final long serialVersionUID = -2209589233655930756L;
 	public static final StatsSet EMPTY = new StatsSet()
 	{
-		/**
-		 *
-		 */
 		private static final long serialVersionUID = 1L;
 		
 		@Override
@@ -47,7 +44,7 @@ public class StatsSet extends MultiValueSet<String>
 	 * Constructor for StatsSet.
 	 * @param set StatsSet
 	 */
-	public StatsSet(StatsSet set)
+	private StatsSet(StatsSet set)
 	{
 		super(set);
 	}

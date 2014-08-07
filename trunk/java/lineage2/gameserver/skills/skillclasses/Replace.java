@@ -13,11 +13,13 @@
 package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
+
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.Location;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

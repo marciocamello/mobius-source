@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -34,6 +35,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 import npc.model.SepulcherMonsterInstance;
 import npc.model.SepulcherNpcInstance;
 import npc.model.SepulcherRaidInstance;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -66,9 +68,6 @@ public final class FourSepulchersSpawn extends Functions implements ScriptFile
 	 */
 	public static class NpcLocation extends Location
 	{
-		/**
-		 *
-		 */
 		private static final long serialVersionUID = 1L;
 		public int npcId;
 		
@@ -860,9 +859,6 @@ public final class FourSepulchersSpawn extends Functions implements ScriptFile
 	 */
 	public static class GateKeeper extends Location
 	{
-		/**
-		 *
-		 */
 		private static final long serialVersionUID = 1L;
 		public final DoorInstance door;
 		public final NpcTemplate template;

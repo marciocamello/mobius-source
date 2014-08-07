@@ -24,6 +24,7 @@ import lineage2.gameserver.network.serverpackets.ExDynamicQuestPacket;
 import lineage2.gameserver.network.serverpackets.ExDynamicQuestPacket.DynamicQuestInfo;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ReflectionUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -212,12 +213,8 @@ public final class SeedOfHellfire extends DynamicQuest implements ScriptFile
 	
 	private final class KillListenerImpl implements OnKillListener
 	{
-		/**
-		 *
-		 */
 		public KillListenerImpl()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -277,12 +274,8 @@ public final class SeedOfHellfire extends DynamicQuest implements ScriptFile
 	
 	private final class ZoneListener implements OnZoneEnterLeaveListener
 	{
-		/**
-		 *
-		 */
 		public ZoneListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

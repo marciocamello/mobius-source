@@ -14,6 +14,7 @@ package lineage2.gameserver.model.quest.startcondition.impl;
 
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.quest.startcondition.ICheckStartCondition;
+
 import org.apache.commons.lang3.ArrayUtils;
 
 /**

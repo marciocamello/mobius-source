@@ -14,6 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.Collection;
 import java.util.Collections;
+
 import lineage2.gameserver.model.Creature;
 
 public class MagicSkillLaunched extends L2GameServerPacket

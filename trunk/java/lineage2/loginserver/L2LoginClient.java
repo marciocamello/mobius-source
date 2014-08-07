@@ -15,6 +15,7 @@ package lineage2.loginserver;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.security.interfaces.RSAPrivateKey;
+
 import lineage2.commons.net.nio.impl.MMOClient;
 import lineage2.commons.net.nio.impl.MMOConnection;
 import lineage2.loginserver.accounts.Account;
@@ -25,6 +26,7 @@ import lineage2.loginserver.serverpackets.AccountKicked.AccountKickedReason;
 import lineage2.loginserver.serverpackets.L2LoginServerPacket;
 import lineage2.loginserver.serverpackets.LoginFail;
 import lineage2.loginserver.serverpackets.LoginFail.LoginFailReason;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -61,7 +63,7 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 	 * Constructor for L2LoginClient.
 	 * @param con MMOConnection<L2LoginClient>
 	 */
-	public L2LoginClient(MMOConnection<L2LoginClient> con)
+	L2LoginClient(MMOConnection<L2LoginClient> con)
 	{
 		super(con);
 		_state = LoginClientState.CONNECTED;

@@ -15,6 +15,7 @@ package lineage2.gameserver.model.instances;
 import java.util.Collections;
 import java.util.List;
 import java.util.StringTokenizer;
+
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.BuyListHolder.NpcTradeList;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
@@ -40,9 +41,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public class ManorManagerInstance extends MerchantInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

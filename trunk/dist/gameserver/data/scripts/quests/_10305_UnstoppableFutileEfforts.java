@@ -19,7 +19,7 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _10305_UnstoppableFutileEfforts extends Quest implements ScriptFile
 {
-	public static final String A_LIST = "a_list";
+	private static final String A_LIST = "a_list";
 	// npc
 	private static final int NOETI = 32895;
 	

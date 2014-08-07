@@ -19,6 +19,7 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
+
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -41,7 +42,7 @@ public class Patrollers extends Fighter
 	 * Constructor for Patrollers.
 	 * @param actor NpcInstance
 	 */
-	public Patrollers(NpcInstance actor)
+	Patrollers(NpcInstance actor)
 	{
 		super(actor);
 		MAX_PURSUE_RANGE = Integer.MAX_VALUE - 10;

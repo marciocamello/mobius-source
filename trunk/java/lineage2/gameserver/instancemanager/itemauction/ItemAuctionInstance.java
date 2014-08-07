@@ -23,6 +23,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
+
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.threading.RunnableImpl;
@@ -37,8 +38,10 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.ItemInstance.ItemLocation;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
@@ -147,7 +150,7 @@ public class ItemAuctionInstance
 	/**
 	 * Method shutdown.
 	 */
-	public void shutdown()
+	void shutdown()
 	{
 		ScheduledFuture<?> stateTask = _stateTask;
 		

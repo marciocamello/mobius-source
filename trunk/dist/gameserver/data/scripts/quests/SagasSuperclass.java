@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import lineage2.gameserver.listener.actor.OnDeathListener;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
@@ -40,7 +41,7 @@ import ai.NpcWarriorAI;
 
 public abstract class SagasSuperclass extends Quest
 {
-	public SagasSuperclass(boolean party)
+	SagasSuperclass(boolean party)
 	{
 		super(party);
 	}
@@ -77,7 +78,7 @@ public abstract class SagasSuperclass extends Quest
 	private static final int Ring_Shout = 17484;
 	// onKill won't work here because mobs also killing mobs
 	private final DeathListener deathListener = new DeathListener();
-	protected static final Map<Integer, Class<?>> Quests = new HashMap<>();
+	private static final Map<Integer, Class<?>> Quests = new HashMap<>();
 	static
 	{
 		Quests.put(10341, _10341_DayOfDestinyHumanFate.class);
@@ -791,12 +792,8 @@ public abstract class SagasSuperclass extends Quest
 	
 	private class DeathListener implements OnDeathListener
 	{
-		/**
-		 *
-		 */
 		public DeathListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -846,7 +843,7 @@ public abstract class SagasSuperclass extends Quest
 		return null;
 	}
 	
-	public static boolean checkWave(Player player, NpcInstance npc, int waveId, QuestState st)
+	private static boolean checkWave(Player player, NpcInstance npc, int waveId, QuestState st)
 	{
 		if (_npcWaves.contains(npc))
 		{
@@ -1060,7 +1057,7 @@ public abstract class SagasSuperclass extends Quest
 		return true;
 	}
 	
-	public QuestState findQuest(Player player)
+	QuestState findQuest(Player player)
 	{
 		QuestState st = null;
 		st = player.getQuestState(Quests.get(questId()));

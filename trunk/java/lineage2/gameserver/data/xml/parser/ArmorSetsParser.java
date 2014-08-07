@@ -14,10 +14,12 @@ package lineage2.gameserver.data.xml.parser;
 
 import java.io.File;
 import java.util.Iterator;
+
 import lineage2.commons.data.xml.AbstractFileParser;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ArmorSetsHolder;
 import lineage2.gameserver.model.ArmorSet;
+
 import org.dom4j.Element;
 
 /**

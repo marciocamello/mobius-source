@@ -14,6 +14,7 @@ package events.TheFlowOfTheHorror;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.ai.Fighter;
@@ -44,7 +45,7 @@ public final class MonstersAI extends Fighter
 	 * Constructor for MonstersAI.
 	 * @param actor NpcInstance
 	 */
-	public MonstersAI(NpcInstance actor)
+	MonstersAI(NpcInstance actor)
 	{
 		super(actor);
 		AI_TASK_ATTACK_DELAY = 500;

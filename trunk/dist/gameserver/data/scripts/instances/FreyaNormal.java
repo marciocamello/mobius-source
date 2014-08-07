@@ -14,6 +14,7 @@ package instances;
 
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicInteger;
+
 import lineage2.commons.geometry.Polygon;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
@@ -202,12 +203,8 @@ public final class FreyaNormal extends Reflection
 	
 	private class StartNormalFreya extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public StartNormalFreya()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -234,12 +231,8 @@ public final class FreyaNormal extends Reflection
 	
 	private class PreStage extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public PreStage()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -265,12 +258,8 @@ public final class FreyaNormal extends Reflection
 	
 	private class FirstStage extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public FirstStage()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -364,12 +353,8 @@ public final class FreyaNormal extends Reflection
 	
 	private class PreSecondStage extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public PreSecondStage()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -396,12 +381,8 @@ public final class FreyaNormal extends Reflection
 	
 	private class TimerToSecondStage extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public TimerToSecondStage()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -418,12 +399,8 @@ public final class FreyaNormal extends Reflection
 	
 	private class SecondStage extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public SecondStage()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -444,12 +421,8 @@ public final class FreyaNormal extends Reflection
 	
 	private class KnightCaptainSpawnMovie extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public KnightCaptainSpawnMovie()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -471,12 +444,8 @@ public final class FreyaNormal extends Reflection
 	
 	private class KnightCaptainSpawn extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public KnightCaptainSpawn()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -496,12 +465,8 @@ public final class FreyaNormal extends Reflection
 	
 	private class PreThirdStage extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public PreThirdStage()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -528,12 +493,8 @@ public final class FreyaNormal extends Reflection
 	
 	private class PreThirdStageM extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public PreThirdStageM()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -550,12 +511,8 @@ public final class FreyaNormal extends Reflection
 	
 	private class ThirdStage extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public ThirdStage()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -581,12 +538,8 @@ public final class FreyaNormal extends Reflection
 	
 	private class PreForthStage extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public PreForthStage()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -609,12 +562,8 @@ public final class FreyaNormal extends Reflection
 	
 	private class ForthStage extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public ForthStage()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -639,12 +588,8 @@ public final class FreyaNormal extends Reflection
 	
 	private class FreyaDeathStage extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public FreyaDeathStage()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -683,12 +628,8 @@ public final class FreyaNormal extends Reflection
 	
 	private class ConclusionMovie extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public ConclusionMovie()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -705,12 +646,8 @@ public final class FreyaNormal extends Reflection
 	
 	private class InstanceConclusion extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public InstanceConclusion()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -728,12 +665,8 @@ public final class FreyaNormal extends Reflection
 	
 	private class DeathListener implements OnDeathListener
 	{
-		/**
-		 *
-		 */
 		public DeathListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

@@ -19,7 +19,7 @@ import lineage2.gameserver.model.mail.Mail;
  */
 public class ExUnReadMailCount extends L2GameServerPacket
 {
-	public int count;
+	private final int count;
 	
 	public ExUnReadMailCount(Mail mail)
 	{

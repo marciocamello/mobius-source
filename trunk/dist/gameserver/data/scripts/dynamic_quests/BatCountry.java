@@ -29,6 +29,7 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ItemFunctions;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -211,7 +212,6 @@ public final class BatCountry extends DynamicQuest implements ScriptFile
 	{
 		public OnSocialActionListenerImpl()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -262,7 +262,6 @@ public final class BatCountry extends DynamicQuest implements ScriptFile
 	{
 		public OnUseItemListenerImpl()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

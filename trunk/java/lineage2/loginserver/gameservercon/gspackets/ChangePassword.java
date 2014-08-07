@@ -16,6 +16,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.logging.Logger;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.loginserver.Config;
 import lineage2.loginserver.database.L2DatabaseFactory;
@@ -30,9 +31,9 @@ public class ChangePassword extends ReceivablePacket
 {
 	private static final Logger log = Logger.getLogger(ChangePassword.class.getName());
 	private String accname;
-	String oldPass;
-	String newPass;
-	String hwid;
+	private String oldPass;
+	private String newPass;
+	private String hwid;
 	
 	/**
 	 * Method readImpl.

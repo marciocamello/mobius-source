@@ -13,6 +13,7 @@
 package lineage2.loginserver.clientpackets;
 
 import javax.crypto.Cipher;
+
 import lineage2.loginserver.Config;
 import lineage2.loginserver.GameServerManager;
 import lineage2.loginserver.IpBanManager;

@@ -19,8 +19,8 @@ import lineage2.gameserver.model.Player;
  */
 public class ExAdenaInvenCount extends L2GameServerPacket
 {
-	public int invsize;
-	public long count;
+	private final int invsize;
+	private final long count;
 	
 	public ExAdenaInvenCount(Player pl)
 	{

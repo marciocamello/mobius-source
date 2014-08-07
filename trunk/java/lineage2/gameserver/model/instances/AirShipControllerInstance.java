@@ -26,9 +26,6 @@ import lineage2.gameserver.utils.Location;
  */
 public class AirShipControllerInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

@@ -13,6 +13,7 @@
 package lineage2.gameserver.model.entity.events.objects;
 
 import java.util.Set;
+
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.model.instances.residences.SiegeToggleNpcInstance;
@@ -24,9 +25,6 @@ import lineage2.gameserver.utils.Location;
  */
 public class SiegeToggleNpcObject implements SpawnableObject
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private final SiegeToggleNpcInstance _toggleNpc;
 	private final Location _location;

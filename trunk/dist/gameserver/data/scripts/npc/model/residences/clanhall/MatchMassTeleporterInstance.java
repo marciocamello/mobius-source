@@ -13,6 +13,7 @@
 package npc.model.residences.clanhall;
 
 import java.util.List;
+
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.entity.events.impl.ClanHallTeamBattleEvent;
@@ -28,9 +29,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class MatchMassTeleporterInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private final int _flagId;
 	private long _timeout;

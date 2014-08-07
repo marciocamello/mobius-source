@@ -15,6 +15,7 @@ package lineage2.gameserver.model.entity.boat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Future;
+
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.lang.reference.HardReferences;
 import lineage2.commons.threading.RunnableImpl;
@@ -40,9 +41,6 @@ import lineage2.gameserver.utils.Location;
  */
 public class ClanAirShip extends AirShip
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final long MAINTENANCE_DELAY = 60 * 1000L;
 	public static final int MAX_FUEL = 600;
@@ -509,7 +507,6 @@ public class ClanAirShip extends AirShip
 		 */
 		public FuelAndDeleteTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

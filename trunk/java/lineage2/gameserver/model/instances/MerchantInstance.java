@@ -13,6 +13,7 @@
 package lineage2.gameserver.model.instances;
 
 import java.util.StringTokenizer;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.htm.HtmCache;
@@ -33,6 +34,7 @@ import lineage2.gameserver.templates.mapregion.DomainArea;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,9 +44,6 @@ import org.slf4j.LoggerFactory;
  */
 public class MerchantInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final Logger _log = LoggerFactory.getLogger(MerchantInstance.class);
 	

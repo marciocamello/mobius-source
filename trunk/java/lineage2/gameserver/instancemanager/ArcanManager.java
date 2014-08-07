@@ -26,8 +26,8 @@ public class ArcanManager
 	private static ArcanManager _instance;
 	private static final long _taskDelay = 30 * 60 * 1000L; // 30min
 	private static int _Stage = 0;
-	static final int _BLUE = 262001;
-	static final int _RED = 262003;
+	private static final int _BLUE = 262001;
+	private static final int _RED = 262003;
 	
 	public static ArcanManager getInstance()
 	{
@@ -48,12 +48,8 @@ public class ArcanManager
 	
 	private class ChangeStage extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public ChangeStage()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -76,7 +72,7 @@ public class ArcanManager
 		}
 	}
 	
-	public void broadcastPacket(int value, boolean b, boolean message)
+	void broadcastPacket(int value, boolean b, boolean message)
 	{
 		L2GameServerPacket trigger = new EventTrigger(value, b);
 		

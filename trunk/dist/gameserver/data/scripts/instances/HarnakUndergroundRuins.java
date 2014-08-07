@@ -14,6 +14,7 @@ package instances;
 
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.ai.CtrlEvent;
@@ -204,12 +205,8 @@ public final class HarnakUndergroundRuins extends Reflection
 	
 	private class SpawnNpcTask extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public SpawnNpcTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -288,12 +285,8 @@ public final class HarnakUndergroundRuins extends Reflection
 	
 	private class SpawnThirdRoom extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public SpawnThirdRoom()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -305,12 +298,8 @@ public final class HarnakUndergroundRuins extends Reflection
 	
 	private class FailTask extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public FailTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -332,12 +321,8 @@ public final class HarnakUndergroundRuins extends Reflection
 	
 	private class EndTask extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public EndTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

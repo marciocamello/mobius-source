@@ -20,6 +20,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
+
 import lineage2.commons.collections.GArray;
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.model.Player;
@@ -893,7 +894,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 	 * Method addClassToRemove.
 	 * @param skillList
 	 */
-	public void addSkillsToMaintain(List<Integer> skillList)
+	void addSkillsToMaintain(List<Integer> skillList)
 	{
 		_AwakenGeneralKeepSkills.addAll(skillList);
 	}

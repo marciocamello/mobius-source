@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
@@ -31,6 +32,7 @@ import lineage2.gameserver.model.reward.RewardData;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.npc.NpcTemplate;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,7 +43,7 @@ import org.slf4j.LoggerFactory;
 public class LettersCollection extends Functions implements ScriptFile, OnDeathListener, OnPlayerEnterListener
 {
 	private static final Logger _log = LoggerFactory.getLogger(LettersCollection.class);
-	protected static boolean _active;
+	private static boolean _active;
 	protected static String _name;
 	protected static int[][] letters;
 	protected static int[][] EVENT_MANAGERS = null;
@@ -63,10 +65,10 @@ public class LettersCollection extends Functions implements ScriptFile, OnDeathL
 	protected static final int II = 3888;
 	protected static final int Y = 13417;
 	protected static final int _5 = 13418;
-	protected static final int EVENT_MANAGER_ID = 31230;
+	private static final int EVENT_MANAGER_ID = 31230;
 	protected static final Map<String, Integer[][]> _words = new HashMap<>();
 	protected static final Map<String, RewardData[]> _rewards = new HashMap<>();
-	protected static final List<SimpleSpawner> _spawns = new ArrayList<>();
+	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
 	
 	/**
 	 * Method onLoad.
@@ -93,7 +95,7 @@ public class LettersCollection extends Functions implements ScriptFile, OnDeathL
 	 * Method isActive.
 	 * @return boolean
 	 */
-	protected static boolean isActive()
+	private static boolean isActive()
 	{
 		return IsActive(_name);
 	}
@@ -101,7 +103,7 @@ public class LettersCollection extends Functions implements ScriptFile, OnDeathL
 	/**
 	 * Method spawnEventManagers.
 	 */
-	protected void spawnEventManagers()
+	private void spawnEventManagers()
 	{
 		SpawnNPCs(EVENT_MANAGER_ID, EVENT_MANAGERS, _spawns);
 	}
@@ -109,7 +111,7 @@ public class LettersCollection extends Functions implements ScriptFile, OnDeathL
 	/**
 	 * Method unSpawnEventManagers.
 	 */
-	protected void unSpawnEventManagers()
+	private void unSpawnEventManagers()
 	{
 		deSpawnNPCs(_spawns);
 	}

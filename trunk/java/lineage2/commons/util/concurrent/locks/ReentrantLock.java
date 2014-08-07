@@ -18,7 +18,7 @@ import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class ReentrantLock
+class ReentrantLock
 {
 	private static final AtomicIntegerFieldUpdater<ReentrantLock> stateUpdater = AtomicIntegerFieldUpdater.newUpdater(ReentrantLock.class, "state");
 	private Thread owner;

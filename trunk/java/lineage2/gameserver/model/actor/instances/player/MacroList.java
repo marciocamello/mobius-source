@@ -18,14 +18,17 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.actor.instances.player.Macro.L2MacroCmd;
 import lineage2.gameserver.network.serverpackets.SendMacroList;
 import lineage2.gameserver.utils.Strings;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 public class MacroList

@@ -14,6 +14,7 @@ package lineage2.gameserver.ai;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.instances.NpcInstance;

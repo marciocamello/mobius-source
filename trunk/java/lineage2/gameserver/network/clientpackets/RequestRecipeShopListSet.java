@@ -14,6 +14,7 @@ package lineage2.gameserver.network.clientpackets;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;

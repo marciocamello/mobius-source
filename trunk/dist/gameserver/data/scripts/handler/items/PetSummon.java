@@ -32,7 +32,8 @@ public final class PetSummon extends ScriptItemHandler
 	 * @param playable Playable
 	 * @param item ItemInstance
 	 * @param ctrl boolean
-	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
 	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)

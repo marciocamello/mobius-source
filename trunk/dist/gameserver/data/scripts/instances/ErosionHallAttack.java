@@ -14,6 +14,7 @@ package instances;
 
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
@@ -131,12 +132,8 @@ public final class ErosionHallAttack extends Reflection
 	
 	private class DeathListener implements OnDeathListener
 	{
-		/**
-		 *
-		 */
 		public DeathListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -229,12 +226,8 @@ public final class ErosionHallAttack extends Reflection
 	
 	private class TimerTask extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public TimerTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

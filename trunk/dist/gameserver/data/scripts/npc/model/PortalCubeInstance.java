@@ -13,8 +13,10 @@
 package npc.model;
 
 import instances.SpezionNormal;
+
 import java.util.HashMap;
 import java.util.Map;
+
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
@@ -24,9 +26,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class PortalCubeInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	final Map<Integer, Integer> players = new HashMap<>();
 	

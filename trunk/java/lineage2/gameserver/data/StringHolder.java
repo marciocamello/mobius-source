@@ -18,6 +18,7 @@ import java.io.LineNumberReader;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
+
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
@@ -54,7 +55,7 @@ public final class StringHolder extends AbstractHolder
 	 * @param name String
 	 * @return String
 	 */
-	public String getNullable(Player player, String name)
+	String getNullable(Player player, String name)
 	{
 		Language lang = player == null ? Language.ENGLISH : player.getLanguage();
 		return get(lang, name);

@@ -15,6 +15,7 @@ package bosses;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -39,8 +40,10 @@ import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.ReflectionUtils;
 import lineage2.gameserver.utils.TimeUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import bosses.EpicBossState.State;
 
 /**
@@ -253,7 +256,6 @@ public final class AntharasManager extends Functions implements ScriptFile, OnDe
 		 */
 		CheckLastAttack()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -286,7 +288,6 @@ public final class AntharasManager extends Functions implements ScriptFile, OnDe
 		 */
 		IntervalEnd()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -310,7 +311,6 @@ public final class AntharasManager extends Functions implements ScriptFile, OnDe
 		 */
 		onAnnihilated()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

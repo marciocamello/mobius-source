@@ -134,7 +134,7 @@ public class Strings
 	 * @param replace String
 	 * @return String
 	 */
-	public static String replace(String str, String regex, int flags, String replace)
+	private static String replace(String str, String regex, int flags, String replace)
 	{
 		return Pattern.compile(regex, flags).matcher(str).replaceAll(replace);
 	}
@@ -182,7 +182,7 @@ public class Strings
 	 * @param maxCount int
 	 * @return String
 	 */
-	public static String joinStrings(String glueStr, String[] strings, int startIdx, int maxCount)
+	static String joinStrings(String glueStr, String[] strings, int startIdx, int maxCount)
 	{
 		String result = "";
 		
@@ -217,7 +217,7 @@ public class Strings
 	 * @param startIdx int
 	 * @return String
 	 */
-	public static String joinStrings(String glueStr, String[] strings, int startIdx)
+	private static String joinStrings(String glueStr, String[] strings, int startIdx)
 	{
 		return joinStrings(glueStr, strings, startIdx, -1);
 	}

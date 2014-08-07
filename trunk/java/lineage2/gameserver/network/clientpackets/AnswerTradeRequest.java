@@ -13,6 +13,7 @@
 package lineage2.gameserver.network.clientpackets;
 
 import java.util.concurrent.CopyOnWriteArrayList;
+
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Request;

@@ -13,6 +13,7 @@
 package lineage2.gameserver.network.loginservercon;
 
 import java.nio.ByteBuffer;
+
 import lineage2.gameserver.network.loginservercon.lspackets.AuthResponse;
 import lineage2.gameserver.network.loginservercon.lspackets.ChangePasswordResponse;
 import lineage2.gameserver.network.loginservercon.lspackets.GetAccountInfo;
@@ -20,6 +21,7 @@ import lineage2.gameserver.network.loginservercon.lspackets.KickPlayer;
 import lineage2.gameserver.network.loginservercon.lspackets.LoginServerFail;
 import lineage2.gameserver.network.loginservercon.lspackets.PingRequest;
 import lineage2.gameserver.network.loginservercon.lspackets.PlayerAuthResponse;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,7 +38,7 @@ public class PacketHandler
 	 * @param buf ByteBuffer
 	 * @return ReceivablePacket
 	 */
-	public static ReceivablePacket handlePacket(ByteBuffer buf)
+	static ReceivablePacket handlePacket(ByteBuffer buf)
 	{
 		ReceivablePacket packet = null;
 		int id = buf.get() & 0xff;

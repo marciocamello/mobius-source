@@ -19,6 +19,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
@@ -32,6 +33,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -255,7 +257,7 @@ public class FishingChampionShipManager
 	 * @param par int
 	 * @return String
 	 */
-	public String getWinnerName(int par)
+	private String getWinnerName(int par)
 	{
 		if (_winPlayersName.size() >= par)
 		{
@@ -270,7 +272,7 @@ public class FishingChampionShipManager
 	 * @param par int ng
 	 * @return String
 	 */
-	public String getCurrentName(int par)
+	private String getCurrentName(int par)
 	{
 		if (_playersName.size() >= par)
 		{
@@ -285,7 +287,7 @@ public class FishingChampionShipManager
 	 * @param par inrin
 	 * @return
 	 */
-	public String getFishLength(int par)
+	private String getFishLength(int par)
 	{
 		if (_winFishLength.size() >= par)
 		{
@@ -300,7 +302,7 @@ public class FishingChampionShipManager
 	 * @param par inrin
 	 * @return
 	 */
-	public String getCurrentFishLength(int par)
+	private String getCurrentFishLength(int par)
 	{
 		if (_fishLength.size() >= par)
 		{
@@ -546,21 +548,18 @@ public class FishingChampionShipManager
 			_winPlayersName.add(_winPlayers.get(x)._name);
 			_winFishLength.add(String.valueOf(_winPlayers.get(x).getLength()));
 		}
-	}/*
-	 * * @author Mobius
-	 */
+	}
 	
-	private class finishChamp extends RunnableImpl
 	/**
-	 * Constructor for finishChamp.
+	 * @author Mobius
 	 */
+	private class finishChamp extends RunnableImpl
 	/**
 	 * Constructor for finishChamp.
 	 */
 	{
 		public finishChamp()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -584,21 +583,18 @@ public class FishingChampionShipManager
 			_log.info("Fishing Championship Manager : start new event period.");
 			ThreadPoolManager.getInstance().schedule(new finishChamp(), _enddate - System.currentTimeMillis());
 		}
-	}/*
-	 * * @author Mobius
-	 */
+	}
 	
-	private class needRefresh extends RunnableImpl
 	/**
-	 * Constructor for needRefresh.
+	 * @author Mobius
 	 */
+	private class needRefresh extends RunnableImpl
 	/**
 	 * Constructor for needRefresh.
 	 */
 	{
 		public needRefresh()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -609,18 +605,15 @@ public class FishingChampionShipManager
 		{
 			_needRefresh = true;
 		}
-	}/*
-	 * * @author Mobius
-	 */
+	}
 	
+	/**
+	 * @author Mobius
+	 */
 	private class Fisher
 	{
-		private double _length = 0./**
-		 */
-		;
-		String _name/**
-		 */
-		;
+		private double _length = 0.;
+		String _name;
 		private int _reward = 0;
 		
 		/**

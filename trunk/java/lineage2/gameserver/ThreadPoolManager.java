@@ -17,6 +17,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
+
 import lineage2.commons.threading.LoggingRejectedExecutionHandler;
 import lineage2.commons.threading.PriorityThreadFactory;
 import lineage2.commons.threading.RunnableImpl;
@@ -86,7 +87,7 @@ public class ThreadPoolManager
 	 * @param r Runnable
 	 * @return Runnable
 	 */
-	public Runnable wrap(Runnable r)
+	private Runnable wrap(Runnable r)
 	{
 		return Config.ENABLE_RUNNABLE_STATS ? RunnableStatsWrapper.wrap(r) : r;
 	}
@@ -139,7 +140,7 @@ public class ThreadPoolManager
 	 * Method shutdown.
 	 * @throws InterruptedException
 	 */
-	public void shutdown() throws InterruptedException
+	void shutdown() throws InterruptedException
 	{
 		_shutdown = true;
 		

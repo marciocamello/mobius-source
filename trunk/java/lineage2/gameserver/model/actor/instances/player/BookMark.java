@@ -31,7 +31,7 @@ public class BookMark
 	 * @param aname String
 	 * @param aacronym String
 	 */
-	public BookMark(Location loc, int aicon, String aname, String aacronym)
+	BookMark(Location loc, int aicon, String aname, String aacronym)
 	{
 		this(loc.x, loc.y, loc.z, aicon, aname, aacronym);
 	}
@@ -45,7 +45,7 @@ public class BookMark
 	 * @param aname String
 	 * @param aacronym String
 	 */
-	public BookMark(int _x, int _y, int _z, int aicon, String aname, String aacronym)
+	BookMark(int _x, int _y, int _z, int aicon, String aname, String aacronym)
 	{
 		x = _x;
 		y = _y;

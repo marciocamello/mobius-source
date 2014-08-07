@@ -13,6 +13,7 @@
 package lineage2.gameserver.templates.player;
 
 import java.util.List;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.base.Sex;
@@ -250,7 +251,7 @@ public final class PlayerTemplate extends CharTemplate
 	 * @param lvl int
 	 * @return LvlUpData
 	 */
-	public LvlUpData getLvlUpData(int lvl)
+	private LvlUpData getLvlUpData(int lvl)
 	{
 		return _lvlUpData.get(lvl);
 	}

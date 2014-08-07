@@ -14,6 +14,7 @@ package lineage2.gameserver.network.clientpackets;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.commons.math.SafeMath;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;

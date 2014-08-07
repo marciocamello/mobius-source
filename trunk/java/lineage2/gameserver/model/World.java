@@ -15,6 +15,7 @@ package lineage2.gameserver.model;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Zone.ZoneType;
@@ -22,6 +23,7 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.utils.Location;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,11 +42,11 @@ public class World
 	public static final int MAP_MAX_Z = Config.MAP_MAX_Z;
 	public static final int WORLD_SIZE_X = (Config.GEO_X_LAST - Config.GEO_X_FIRST) + 1;
 	public static final int WORLD_SIZE_Y = (Config.GEO_Y_LAST - Config.GEO_Y_FIRST) + 1;
-	public static final int SHIFT_BY = Config.SHIFT_BY;
-	public static final int SHIFT_BY_Z = Config.SHIFT_BY_Z;
-	public static final int OFFSET_X = Math.abs(MAP_MIN_X >> SHIFT_BY);
-	public static final int OFFSET_Y = Math.abs(MAP_MIN_Y >> SHIFT_BY);
-	public static final int OFFSET_Z = Math.abs(MAP_MIN_Z >> SHIFT_BY_Z);
+	private static final int SHIFT_BY = Config.SHIFT_BY;
+	private static final int SHIFT_BY_Z = Config.SHIFT_BY_Z;
+	private static final int OFFSET_X = Math.abs(MAP_MIN_X >> SHIFT_BY);
+	private static final int OFFSET_Y = Math.abs(MAP_MIN_Y >> SHIFT_BY);
+	private static final int OFFSET_Z = Math.abs(MAP_MIN_Z >> SHIFT_BY_Z);
 	private static final int REGIONS_X = (MAP_MAX_X >> SHIFT_BY) + OFFSET_X;
 	private static final int REGIONS_Y = (MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y;
 	private static final int REGIONS_Z = (MAP_MAX_Z >> SHIFT_BY_Z) + OFFSET_Z;
@@ -129,7 +131,7 @@ public class World
 	 * @param x int
 	 * @return int
 	 */
-	public static int validCoordX(int x)
+	static int validCoordX(int x)
 	{
 		if (x < MAP_MIN_X)
 		{
@@ -148,7 +150,7 @@ public class World
 	 * @param y int
 	 * @return int
 	 */
-	public static int validCoordY(int y)
+	static int validCoordY(int y)
 	{
 		if (y < MAP_MIN_Y)
 		{
@@ -167,7 +169,7 @@ public class World
 	 * @param z int
 	 * @return int
 	 */
-	public static int validCoordZ(int z)
+	static int validCoordZ(int z)
 	{
 		if (z < MAP_MIN_Z)
 		{
@@ -221,7 +223,7 @@ public class World
 	 * @param z2 int
 	 * @return boolean
 	 */
-	static boolean isNeighbour(int x1, int y1, int z1, int x2, int y2, int z2)
+	private static boolean isNeighbour(int x1, int y1, int z1, int x2, int y2, int z2)
 	{
 		return (x1 <= (x2 + 1)) && (x1 >= (x2 - 1)) && (y1 <= (y2 + 1)) && (y1 >= (y2 - 1)) && (z1 <= (z2 + 1)) && (z1 >= (z2 - 1));
 	}
@@ -231,7 +233,7 @@ public class World
 	 * @param loc Location
 	 * @return WorldRegion
 	 */
-	public static WorldRegion getRegion(Location loc)
+	static WorldRegion getRegion(Location loc)
 	{
 		return getRegion(validX(regionX(loc.x)), validY(regionY(loc.y)), validZ(regionZ(loc.z)));
 	}
@@ -241,7 +243,7 @@ public class World
 	 * @param obj GameObject
 	 * @return WorldRegion
 	 */
-	public static WorldRegion getRegion(GameObject obj)
+	private static WorldRegion getRegion(GameObject obj)
 	{
 		return getRegion(validX(regionX(obj.getX())), validY(regionY(obj.getY())), validZ(regionZ(obj.getZ())));
 	}
@@ -300,7 +302,7 @@ public class World
 	 * @param object GameObject
 	 * @param dropper Creature
 	 */
-	public static void addVisibleObject(GameObject object, Creature dropper)
+	static void addVisibleObject(GameObject object, Creature dropper)
 	{
 		if ((object == null) || !object.isVisible() || object.isInObserverMode())
 		{
@@ -371,7 +373,7 @@ public class World
 	 * Method removeVisibleObject.
 	 * @param object GameObject
 	 */
-	public static void removeVisibleObject(GameObject object)
+	static void removeVisibleObject(GameObject object)
 	{
 		if ((object == null) || object.isVisible() || object.isInObserverMode())
 		{
@@ -440,7 +442,7 @@ public class World
 	 * @param object GameObject
 	 * @return List<GameObject>
 	 */
-	public static List<GameObject> getAroundObjects(GameObject object)
+	static List<GameObject> getAroundObjects(GameObject object)
 	{
 		WorldRegion currentRegion = object.getCurrentRegion();
 		
@@ -770,7 +772,7 @@ public class World
 	 * @param object GameObject
 	 * @return List<Playable>
 	 */
-	public static List<Playable> getAroundPlayables(GameObject object)
+	static List<Playable> getAroundPlayables(GameObject object)
 	{
 		WorldRegion currentRegion = object.getCurrentRegion();
 		
@@ -990,7 +992,7 @@ public class World
 	 * @param region WorldRegion
 	 * @return boolean
 	 */
-	public static boolean isNeighborsEmpty(WorldRegion region)
+	private static boolean isNeighborsEmpty(WorldRegion region)
 	{
 		for (int x = validX(region.getX() - 1); x <= validX(region.getX() + 1); x++)
 		{
@@ -1013,7 +1015,7 @@ public class World
 	 * Method activate.
 	 * @param currentRegion WorldRegion
 	 */
-	public static void activate(WorldRegion currentRegion)
+	static void activate(WorldRegion currentRegion)
 	{
 		for (int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 		{
@@ -1031,7 +1033,7 @@ public class World
 	 * Method deactivate.
 	 * @param currentRegion WorldRegion
 	 */
-	public static void deactivate(WorldRegion currentRegion)
+	static void deactivate(WorldRegion currentRegion)
 	{
 		for (int x = validX(currentRegion.getX() - 1); x <= validX(currentRegion.getX() + 1); x++)
 		{
@@ -1088,7 +1090,7 @@ public class World
 	 * Method removeObjectsFromPlayer.
 	 * @param player Player
 	 */
-	public static void removeObjectsFromPlayer(Player player)
+	static void removeObjectsFromPlayer(Player player)
 	{
 		WorldRegion currentRegion = player.isInObserverMode() ? player.getObserverRegion() : player.getCurrentRegion();
 		
@@ -1266,7 +1268,7 @@ public class World
 	 * @param reflection Reflection
 	 * @return boolean
 	 */
-	public static boolean isWater(Location loc, Reflection reflection)
+	static boolean isWater(Location loc, Reflection reflection)
 	{
 		return getWater(loc, reflection) != null;
 	}
@@ -1277,7 +1279,7 @@ public class World
 	 * @param reflection Reflection
 	 * @return Zone
 	 */
-	public static Zone getWater(Location loc, Reflection reflection)
+	private static Zone getWater(Location loc, Reflection reflection)
 	{
 		WorldRegion region = getRegion(loc);
 		Zone[] zones = region.getZones();

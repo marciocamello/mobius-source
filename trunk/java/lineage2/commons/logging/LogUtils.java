@@ -32,7 +32,7 @@ public class LogUtils
 	 * Method dumpStack.
 	 * @return String
 	 */
-	public static String dumpStack()
+	static String dumpStack()
 	{
 		return dumpStack(new Throwable());
 	}

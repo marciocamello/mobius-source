@@ -21,10 +21,12 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
 import lineage2.commons.configuration.ExProperties;
 import lineage2.commons.util.Rnd;
 import lineage2.loginserver.crypt.PasswordHash;
 import lineage2.loginserver.crypt.ScrambledKeyPair;
+
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
@@ -38,8 +40,8 @@ import org.slf4j.LoggerFactory;
 public class Config
 {
 	private final static Logger _log = LoggerFactory.getLogger(Config.class);
-	public static final String LOGIN_CONFIGURATION_FILE = "config/loginserver.ini";
-	public static final String SERVER_NAMES_FILE = "config/xml/servername.xml";
+	private static final String LOGIN_CONFIGURATION_FILE = "config/loginserver.ini";
+	private static final String SERVER_NAMES_FILE = "config/xml/servername.xml";
 	public static String LOGIN_HOST;
 	public static int PORT_LOGIN;
 	public static String GAME_SERVER_LOGIN_HOST;
@@ -82,7 +84,7 @@ public class Config
 	/**
 	 * Method load.
 	 */
-	public static void load()
+	static void load()
 	{
 		loadConfiguration();
 		loadServerNames();
@@ -92,7 +94,7 @@ public class Config
 	 * Method initCrypt.
 	 * @throws Throwable
 	 */
-	public static void initCrypt() throws Throwable
+	static void initCrypt() throws Throwable
 	{
 		DEFAULT_CRYPT = new PasswordHash(Config.DEFAULT_PASSWORD_HASH);
 		List<PasswordHash> legacy = new ArrayList<>();
@@ -134,7 +136,7 @@ public class Config
 	/**
 	 * Method loadServerNames.
 	 */
-	public final static void loadServerNames()
+	private final static void loadServerNames()
 	{
 		SERVER_NAMES.clear();
 		
@@ -167,7 +169,7 @@ public class Config
 	/**
 	 * Method loadConfiguration.
 	 */
-	public static void loadConfiguration()
+	private static void loadConfiguration()
 	{
 		ExProperties serverSettings = load(LOGIN_CONFIGURATION_FILE);
 		LOGIN_HOST = serverSettings.getProperty("LoginserverHostname", "127.0.0.1");
@@ -202,7 +204,7 @@ public class Config
 	 * @param filename String
 	 * @return ExProperties
 	 */
-	public static ExProperties load(String filename)
+	private static ExProperties load(String filename)
 	{
 		return load(new File(filename));
 	}
@@ -212,7 +214,7 @@ public class Config
 	 * @param file File
 	 * @return ExProperties
 	 */
-	public static ExProperties load(File file)
+	private static ExProperties load(File file)
 	{
 		ExProperties result = new ExProperties();
 		
@@ -232,7 +234,7 @@ public class Config
 	 * Method getScrambledRSAKeyPair.
 	 * @return ScrambledKeyPair
 	 */
-	public static ScrambledKeyPair getScrambledRSAKeyPair()
+	static ScrambledKeyPair getScrambledRSAKeyPair()
 	{
 		return _keyPairs[Rnd.get(_keyPairs.length)];
 	}
@@ -241,7 +243,7 @@ public class Config
 	 * Method getBlowfishKey.
 	 * @return byte[]
 	 */
-	public static byte[] getBlowfishKey()
+	static byte[] getBlowfishKey()
 	{
 		return _blowfishKeys[Rnd.get(_blowfishKeys.length)];
 	}

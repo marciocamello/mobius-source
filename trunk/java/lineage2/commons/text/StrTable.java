@@ -55,7 +55,7 @@ public class StrTable
 	 * @param val boolean
 	 * @return StrTable
 	 */
-	public StrTable set(int rowIndex, String colName, boolean val)
+	StrTable set(int rowIndex, String colName, boolean val)
 	{
 		return set(rowIndex, colName, Boolean.toString(val));
 	}
@@ -67,7 +67,7 @@ public class StrTable
 	 * @param val byte
 	 * @return StrTable
 	 */
-	public StrTable set(int rowIndex, String colName, byte val)
+	StrTable set(int rowIndex, String colName, byte val)
 	{
 		return set(rowIndex, colName, Byte.toString(val));
 	}
@@ -79,7 +79,7 @@ public class StrTable
 	 * @param val char
 	 * @return StrTable
 	 */
-	public StrTable set(int rowIndex, String colName, char val)
+	StrTable set(int rowIndex, String colName, char val)
 	{
 		return set(rowIndex, colName, String.valueOf(val));
 	}
@@ -91,7 +91,7 @@ public class StrTable
 	 * @param val short
 	 * @return StrTable
 	 */
-	public StrTable set(int rowIndex, String colName, short val)
+	StrTable set(int rowIndex, String colName, short val)
 	{
 		return set(rowIndex, colName, Short.toString(val));
 	}
@@ -127,7 +127,7 @@ public class StrTable
 	 * @param val float
 	 * @return StrTable
 	 */
-	public StrTable set(int rowIndex, String colName, float val)
+	StrTable set(int rowIndex, String colName, float val)
 	{
 		return set(rowIndex, colName, Float.toString(val));
 	}
@@ -139,7 +139,7 @@ public class StrTable
 	 * @param val double
 	 * @return StrTable
 	 */
-	public StrTable set(int rowIndex, String colName, double val)
+	StrTable set(int rowIndex, String colName, double val)
 	{
 		return set(rowIndex, colName, Double.toString(val));
 	}
@@ -151,7 +151,7 @@ public class StrTable
 	 * @param val Object
 	 * @return StrTable
 	 */
-	public StrTable set(int rowIndex, String colName, Object val)
+	StrTable set(int rowIndex, String colName, Object val)
 	{
 		return set(rowIndex, colName, String.valueOf(val));
 	}

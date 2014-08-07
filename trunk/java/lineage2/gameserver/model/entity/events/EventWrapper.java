@@ -18,7 +18,7 @@ import lineage2.gameserver.taskmanager.actionrunner.ActionWrapper;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class EventWrapper extends ActionWrapper
+class EventWrapper extends ActionWrapper
 {
 	private final GlobalEvent _event;
 	private final int _time;
@@ -29,7 +29,7 @@ public class EventWrapper extends ActionWrapper
 	 * @param event GlobalEvent
 	 * @param time int
 	 */
-	public EventWrapper(String name, GlobalEvent event, int time)
+	EventWrapper(String name, GlobalEvent event, int time)
 	{
 		super(name);
 		_event = event;

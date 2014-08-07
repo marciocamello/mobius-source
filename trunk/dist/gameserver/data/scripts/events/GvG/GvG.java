@@ -13,12 +13,14 @@
 package events.GvG;
 
 import instances.GvGInstance;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.lang.reference.HardReferences;
@@ -38,6 +40,7 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.InstantZone;
 import lineage2.gameserver.utils.Location;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -51,7 +54,7 @@ public final class GvG extends Functions implements ScriptFile
 	public static final Location TEAM1_LOC = new Location(139736, 145832, -15264);
 	public static final Location TEAM2_LOC = new Location(139736, 139832, -15264);
 	public static final Location RETURN_LOC = new Location(43816, -48232, -822);
-	public static final int[] everydayStartTime =
+	private static final int[] everydayStartTime =
 	{
 		21,
 		30,
@@ -74,8 +77,15 @@ public final class GvG extends Functions implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public static class RegTask extends RunnableImpl
+	private static class RegTask extends RunnableImpl
 	{
+		/**
+		 * 
+		 */
+		public RegTask()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -89,15 +99,15 @@ public final class GvG extends Functions implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public static class Countdown extends RunnableImpl
+	private static class Countdown extends RunnableImpl
 	{
-		int _timer;
+		private final int _timer;
 		
 		/**
 		 * Constructor for Countdown.
 		 * @param timer int
 		 */
-		public Countdown(int timer)
+		Countdown(int timer)
 		{
 			_timer = timer;
 		}
@@ -171,8 +181,15 @@ public final class GvG extends Functions implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public static class Launch extends RunnableImpl
+	private static class Launch extends RunnableImpl
 	{
+		/**
+		 * 
+		 */
+		public Launch()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */

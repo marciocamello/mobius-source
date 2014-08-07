@@ -17,7 +17,7 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class ExShowBeautyMenuPacket extends L2GameServerPacket
 {
-	public int _type;
+	private final int _type;
 	
 	public ExShowBeautyMenuPacket(int type)
 	{

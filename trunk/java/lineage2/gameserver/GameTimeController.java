@@ -15,6 +15,7 @@
 package lineage2.gameserver;
 
 import java.util.Calendar;
+
 import lineage2.commons.listener.Listener;
 import lineage2.commons.listener.ListenerList;
 import lineage2.commons.threading.RunnableImpl;
@@ -24,6 +25,7 @@ import lineage2.gameserver.listener.game.OnStartListener;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ClientSetTime;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,12 +40,8 @@ public class GameTimeController
 	 */
 	private class OnStartListenerImpl implements OnStartListener
 	{
-		/**
-		 * Constructor for OnStartListenerImpl.
-		 */
 		public OnStartListenerImpl()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -60,8 +58,12 @@ public class GameTimeController
 	/**
 	 * @author Mobius
 	 */
-	public class CheckSunState extends RunnableImpl
+	private class CheckSunState extends RunnableImpl
 	{
+		public CheckSunState()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -88,12 +90,16 @@ public class GameTimeController
 	/**
 	 * @author Mobius
 	 */
-	protected class GameTimeListenerList extends ListenerList<GameServer>
+	private class GameTimeListenerList extends ListenerList<GameServer>
 	{
+		public GameTimeListenerList()
+		{
+		}
+		
 		/**
 		 * Method onDay.
 		 */
-		public void onDay()
+		void onDay()
 		{
 			for (Listener<GameServer> listener : getListeners())
 			{
@@ -107,7 +113,7 @@ public class GameTimeController
 		/**
 		 * Method onNight.
 		 */
-		public void onNight()
+		void onNight()
 		{
 			for (Listener<GameServer> listener : getListeners())
 			{
@@ -120,8 +126,8 @@ public class GameTimeController
 	}
 	
 	private static final Logger _log = LoggerFactory.getLogger(GameTimeController.class);
-	public static final int TICKS_PER_SECOND = 10;
-	public static final int MILLIS_IN_TICK = 1000 / TICKS_PER_SECOND;
+	private static final int TICKS_PER_SECOND = 10;
+	private static final int MILLIS_IN_TICK = 1000 / TICKS_PER_SECOND;
 	private static final GameTimeController _instance = new GameTimeController();
 	private final long _gameStartTime;
 	private final GameTimeListenerList listenerEngine = new GameTimeListenerList();

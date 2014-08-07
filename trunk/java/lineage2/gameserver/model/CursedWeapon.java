@@ -15,6 +15,7 @@ package lineage2.gameserver.model;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Skill.AddedSkill;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -50,7 +51,7 @@ public class CursedWeapon
 	/**
 	 * @author Mobius
 	 */
-	public enum CursedWeaponState
+	private enum CursedWeaponState
 	{
 		NONE,
 		ACTIVATED,

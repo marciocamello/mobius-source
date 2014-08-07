@@ -48,7 +48,7 @@ public final class LevelBonusHolder extends AbstractHolder
 	 * @param lvl int
 	 * @return double
 	 */
-	public double getLevelBonus(int lvl)
+	double getLevelBonus(int lvl)
 	{
 		return _bonusList.get(lvl);
 	}

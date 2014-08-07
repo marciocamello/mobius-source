@@ -15,6 +15,7 @@ package lineage2.gameserver.model.entity;
 import java.text.SimpleDateFormat;
 import java.util.AbstractMap;
 import java.util.Map;
+
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.utils.HtmlUtils;
@@ -39,7 +40,7 @@ public class HeroDiary
 	 * @param time long
 	 * @param param int
 	 */
-	public HeroDiary(int id, long time, int param)
+	HeroDiary(int id, long time, int param)
 	{
 		_id = id;
 		_time = time;
@@ -51,7 +52,7 @@ public class HeroDiary
 	 * @param player Player
 	 * @return Map.Entry<String,String>
 	 */
-	public Map.Entry<String, String> toString(Player player)
+	Map.Entry<String, String> toString(Player player)
 	{
 		CustomMessage message = null;
 		

@@ -52,17 +52,17 @@ public final class GuardofDawnFemale extends DefaultAI
 	/**
 	 * @author Mobius
 	 */
-	public final class Teleportation extends RunnableImpl
+	private final class Teleportation extends RunnableImpl
 	{
-		Location _telePoint = null;
-		Playable _target = null;
+		private Location _telePoint = null;
+		private Playable _target = null;
 		
 		/**
 		 * Constructor for Teleportation.
 		 * @param telePoint Location
 		 * @param target Playable
 		 */
-		public Teleportation(Location telePoint, Playable target)
+		Teleportation(Location telePoint, Playable target)
 		{
 			_telePoint = telePoint;
 			_target = target;

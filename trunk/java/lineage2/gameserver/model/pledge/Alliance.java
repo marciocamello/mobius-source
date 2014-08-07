@@ -17,12 +17,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.cache.CrestCache;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.tables.ClanTable;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,7 +41,7 @@ public class Alliance
 	private final Map<Integer, Clan> _members = new ConcurrentHashMap<>();
 	private int _allyCrestId;
 	private long _expelledMemberTime;
-	public static final long EXPELLED_MEMBER_PENALTY = 24 * 60 * 60 * 1000L;
+	private static final long EXPELLED_MEMBER_PENALTY = 24 * 60 * 60 * 1000L;
 	
 	/**
 	 * Constructor for Alliance.
@@ -269,7 +271,7 @@ public class Alliance
 	/**
 	 * Method updateAllyInDB.
 	 */
-	public void updateAllyInDB()
+	private void updateAllyInDB()
 	{
 		if (getLeaderId() == 0)
 		{

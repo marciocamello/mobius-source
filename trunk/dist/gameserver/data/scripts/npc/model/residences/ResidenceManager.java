@@ -14,6 +14,7 @@ package npc.model.residences;
 
 import java.util.List;
 import java.util.StringTokenizer;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
@@ -33,6 +34,7 @@ import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.ReflectionUtils;
 import lineage2.gameserver.utils.TimeUtils;
 import lineage2.gameserver.utils.WarehouseFunctions;
+
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -41,9 +43,6 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public abstract class ResidenceManager extends MerchantInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	protected static final int COND_FAIL = 0;
 	protected static final int COND_SIEGE = 1;

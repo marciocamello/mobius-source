@@ -18,7 +18,7 @@ import lineage2.gameserver.network.serverpackets.components.ChatType;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public interface IChatHandler
+interface IChatHandler
 {
 	/**
 	 * Method say.

@@ -21,6 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
@@ -30,6 +31,7 @@ import lineage2.gameserver.instancemanager.ServerVariables;
 import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.StatsSet;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -113,7 +115,7 @@ public class OlympiadDatabase
 	/**
 	 * Method cleanupNobles.
 	 */
-	public static synchronized void cleanupNobles()
+	static synchronized void cleanupNobles()
 	{
 		_log.info("Olympiad: Calculating last period...");
 		Connection con = null;
@@ -203,7 +205,7 @@ public class OlympiadDatabase
 	/**
 	 * Method sortHerosToBe.
 	 */
-	public static synchronized void sortHerosToBe()
+	static synchronized void sortHerosToBe()
 	{
 		if (Olympiad._period != 1)
 		{
@@ -256,7 +258,7 @@ public class OlympiadDatabase
 	 * Method saveNobleData.
 	 * @param nobleId int
 	 */
-	public static synchronized void saveNobleData(int nobleId)
+	static synchronized void saveNobleData(int nobleId)
 	{
 		OlympiadNobleDAO.getInstance().replace(nobleId);
 	}
@@ -264,7 +266,7 @@ public class OlympiadDatabase
 	/**
 	 * Method saveNobleData.
 	 */
-	public static synchronized void saveNobleData()
+	static synchronized void saveNobleData()
 	{
 		if (Olympiad._nobles == null)
 		{
@@ -280,7 +282,7 @@ public class OlympiadDatabase
 	/**
 	 * Method setNewOlympiadEnd.
 	 */
-	public static synchronized void setNewOlympiadEnd()
+	static synchronized void setNewOlympiadEnd()
 	{
 		Announcements.getInstance().announceToAll(new SystemMessage(SystemMessage.OLYMPIAD_PERIOD_S1_HAS_STARTED).addNumber(Olympiad._currentCycle));
 		Calendar currentTime = Calendar.getInstance();

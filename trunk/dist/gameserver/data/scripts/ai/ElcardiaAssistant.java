@@ -15,6 +15,7 @@ package ai;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -354,8 +355,12 @@ public final class ElcardiaAssistant extends DefaultAI
 	/**
 	 * @author Mobius
 	 */
-	protected class ThinkFollow extends RunnableImpl
+	private class ThinkFollow extends RunnableImpl
 	{
+		public ThinkFollow()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */

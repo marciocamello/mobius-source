@@ -24,10 +24,10 @@ public class _10375_SuccubusDisciples extends Quest implements ScriptFile
 	private static final int NightmareofDarkness = 23192;
 	private static final int NightmareofMadness = 23197;
 	private static final int NightmareofSilence = 23198;
-	public static final String Nightmare_Death = "NightmareDeath";
-	public static final String Nightmare_of_Darkness = "NightmareofDarkness";
-	public static final String Nightmare_of_Madness = "NightmareofMadness";
-	public static final String Nightmare_of_Silence = "NightmareofSilence";
+	private static final String Nightmare_Death = "NightmareDeath";
+	private static final String Nightmare_of_Darkness = "NightmareofDarkness";
+	private static final String Nightmare_of_Madness = "NightmareofMadness";
+	private static final String Nightmare_of_Silence = "NightmareofSilence";
 	
 	public _10375_SuccubusDisciples()
 	{

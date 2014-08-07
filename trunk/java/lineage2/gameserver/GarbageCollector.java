@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class GarbageCollector
+class GarbageCollector
 {
 	static final Logger _log = LoggerFactory.getLogger(GarbageCollector.class);
 	static
@@ -30,8 +30,12 @@ public class GarbageCollector
 	/**
 	 * @author Mobius
 	 */
-	static class GarbageCollectorTask implements Runnable
+	private static class GarbageCollectorTask implements Runnable
 	{
+		public GarbageCollectorTask()
+		{
+		}
+		
 		/**
 		 * Method run.
 		 * @see java.lang.Runnable#run()

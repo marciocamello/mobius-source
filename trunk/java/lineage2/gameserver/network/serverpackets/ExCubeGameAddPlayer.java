@@ -21,7 +21,7 @@ public class ExCubeGameAddPlayer extends L2GameServerPacket
 {
 	private final int _objectId;
 	private final String _name;
-	boolean _isRedTeam;
+	private final boolean _isRedTeam;
 	
 	public ExCubeGameAddPlayer(Player player, boolean isRedTeam)
 	{

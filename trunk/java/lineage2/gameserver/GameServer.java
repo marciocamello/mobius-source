@@ -15,6 +15,7 @@ package lineage2.gameserver;
 import java.io.File;
 import java.net.InetAddress;
 import java.net.ServerSocket;
+
 import lineage2.commons.lang.StatsUtils;
 import lineage2.commons.listener.Listener;
 import lineage2.commons.listener.ListenerList;
@@ -64,7 +65,6 @@ import lineage2.gameserver.instancemanager.itemauction.ItemAuctionManager;
 import lineage2.gameserver.instancemanager.naia.NaiaCoreManager;
 import lineage2.gameserver.instancemanager.naia.NaiaTowerManager;
 import lineage2.gameserver.listener.GameListener;
-import lineage2.gameserver.listener.game.OnShutdownListener;
 import lineage2.gameserver.listener.game.OnStartListener;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.entity.Hero;
@@ -94,6 +94,7 @@ import lineage2.gameserver.taskmanager.TaskManager;
 import lineage2.gameserver.taskmanager.tasks.RestoreOfflineTraders;
 import lineage2.gameserver.utils.Strings;
 import net.sf.ehcache.CacheManager;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -109,12 +110,16 @@ public class GameServer
 	/**
 	 * @author Mobius
 	 */
-	public class GameServerListenerList extends ListenerList<GameServer>
+	private class GameServerListenerList extends ListenerList<GameServer>
 	{
+		public GameServerListenerList()
+		{
+		}
+		
 		/**
 		 * Method onStart.
 		 */
-		public void onStart()
+		void onStart()
 		{
 			for (Listener<GameServer> listener : getListeners())
 			{
@@ -124,23 +129,9 @@ public class GameServer
 				}
 			}
 		}
-		
-		/**
-		 * Method onShutdown.
-		 */
-		public void onShutdown()
-		{
-			for (Listener<GameServer> listener : getListeners())
-			{
-				if (OnShutdownListener.class.isInstance(listener))
-				{
-					((OnShutdownListener) listener).onShutdown();
-				}
-			}
-		}
 	}
 	
-	public static GameServer _instance;
+	private static GameServer _instance;
 	private final SelectorThread<GameClient> _selectorThreads[];
 	private final Version version;
 	private TelnetServer statusServer;
@@ -160,7 +151,7 @@ public class GameServer
 	 * Method time.
 	 * @return int
 	 */
-	public int time()
+	private int time()
 	{
 		return (int) (System.currentTimeMillis() / 1000);
 	}
@@ -169,7 +160,7 @@ public class GameServer
 	 * Method uptime.
 	 * @return int
 	 */
-	public int uptime()
+	int uptime()
 	{
 		return time() - _serverStarted;
 	}
@@ -186,11 +177,11 @@ public class GameServer
 		_listeners = new GameServerListenerList();
 		new File("./log/").mkdir();
 		version = new Version(GameServer.class);
-		_log.info("=================================================");
+		_log.info("==============================================================");
 		// _log.info("Revision: ................ " + version.getRevisionNumber());
 		_log.info("Build date: .............. " + version.getBuildDate());
 		_log.info("Compiler version: ........ " + version.getBuildJdk());
-		_log.info("=================================================");
+		_log.info("==============================================================");
 		Config.load();
 		checkFreePorts();
 		Class.forName(Config.DATABASE_DRIVER).newInstance();
@@ -369,7 +360,7 @@ public class GameServer
 	 * @param listener T
 	 * @return boolean
 	 */
-	public <T extends GameListener> boolean addListener(T listener)
+	<T extends GameListener> boolean addListener(T listener)
 	{
 		return _listeners.add(listener);
 	}
@@ -380,7 +371,7 @@ public class GameServer
 	 * @param listener T
 	 * @return boolean
 	 */
-	public <T extends GameListener> boolean removeListener(T listener)
+	<T extends GameListener> boolean removeListener(T listener)
 	{
 		return _listeners.remove(listener);
 	}
@@ -388,7 +379,7 @@ public class GameServer
 	/**
 	 * Method checkFreePorts.
 	 */
-	public static void checkFreePorts()
+	private static void checkFreePorts()
 	{
 		boolean binded = false;
 		

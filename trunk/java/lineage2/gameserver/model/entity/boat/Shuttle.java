@@ -73,7 +73,7 @@ public class Shuttle extends Boat
 	private static final long serialVersionUID = 1L;
 	private final TIntObjectHashMap<ShuttleWayEvent> _floors = new TIntObjectHashMap<>();
 	private boolean _moveBack;
-	public int _currentWay;
+	private int _currentWay;
 	
 	/**
 	 * Constructor for Shuttle.

@@ -18,8 +18,10 @@ import static lineage2.gameserver.geodata.GeoEngine.NSWE_ALL;
 import static lineage2.gameserver.geodata.GeoEngine.NSWE_NONE;
 import static lineage2.gameserver.geodata.GeoEngine.SOUTH;
 import static lineage2.gameserver.geodata.GeoEngine.WEST;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.geodata.PathFindBuffers.GeoNode;
 import lineage2.gameserver.geodata.PathFindBuffers.PathFindBuffer;
@@ -30,7 +32,7 @@ import lineage2.gameserver.utils.Location;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class PathFind
+class PathFind
 {
 	private int geoIndex = 0;
 	private PathFindBuffer buff;
@@ -50,7 +52,7 @@ public class PathFind
 	 * @param obj GameObject
 	 * @param geoIndex int
 	 */
-	public PathFind(int x, int y, int z, int destX, int destY, int destZ, GameObject obj, int geoIndex)
+	PathFind(int x, int y, int z, int destX, int destY, int destZ, GameObject obj, int geoIndex)
 	{
 		this.geoIndex = geoIndex;
 		startPoint = Config.PATHFIND_BOOST == 0 ? new Location(x, y, z) : GeoEngine.moveCheckWithCollision(x, y, z, destX, destY, true, geoIndex);

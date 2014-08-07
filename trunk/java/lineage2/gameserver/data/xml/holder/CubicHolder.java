@@ -67,7 +67,7 @@ public final class CubicHolder extends AbstractHolder
 	 * @param level int
 	 * @return int
 	 */
-	public int hash(int id, int level)
+	private int hash(int id, int level)
 	{
 		return (id * 10000) + level;
 	}

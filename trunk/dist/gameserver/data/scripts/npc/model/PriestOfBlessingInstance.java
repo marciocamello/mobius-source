@@ -15,6 +15,7 @@ package npc.model;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -30,9 +31,6 @@ import lineage2.gameserver.utils.Util;
  */
 public final class PriestOfBlessingInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

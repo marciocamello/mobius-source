@@ -13,6 +13,7 @@
 package instances;
 
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -151,12 +152,8 @@ public final class HeartInfinityDefence extends Reflection
 	
 	private class DeathListener implements OnDeathListener
 	{
-		/**
-		 *
-		 */
 		public DeathListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -202,12 +199,8 @@ public final class HeartInfinityDefence extends Reflection
 	
 	private class TimerTask extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public TimerTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

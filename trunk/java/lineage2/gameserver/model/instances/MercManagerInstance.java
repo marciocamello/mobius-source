@@ -13,6 +13,7 @@
 package lineage2.gameserver.model.instances;
 
 import java.util.StringTokenizer;
+
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -24,9 +25,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class MercManagerInstance extends MerchantInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int COND_ALL_FALSE = 0;
 	private static final int COND_BUSY_BECAUSE_OF_SIEGE = 1;

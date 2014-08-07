@@ -14,12 +14,14 @@ package lineage2.gameserver.model;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.commons.text.StrTable;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.model.items.ItemInstance;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -91,7 +93,7 @@ public class GameObjectsStorage
 	 * @param storedId long
 	 * @return GameObject
 	 */
-	public static GameObject get(long storedId)
+	private static GameObject get(long storedId)
 	{
 		int STORAGE_ID;
 		
@@ -109,7 +111,7 @@ public class GameObjectsStorage
 	 * @param storedId Long
 	 * @return GameObject
 	 */
-	public static GameObject get(Long storedId)
+	static GameObject get(Long storedId)
 	{
 		int STORAGE_ID;
 		
@@ -281,7 +283,7 @@ public class GameObjectsStorage
 	 * Method getAllObjectsCount.
 	 * @return int
 	 */
-	public static int getAllObjectsCount()
+	private static int getAllObjectsCount()
 	{
 		int result = 0;
 		
@@ -513,7 +515,7 @@ public class GameObjectsStorage
 	 * @return long
 	 */
 	@SuppressWarnings("unchecked")
-	public static long put(GameObject o)
+	static long put(GameObject o)
 	{
 		int STORAGE_ID = selectStorageID(o);
 		return (o.getObjectId() & 0xFFFFFFFFL) | ((STORAGE_ID & 0x1FL) << 32) | ((storages[STORAGE_ID].add(o) & 0xFFFFFFFFL) << 37);
@@ -534,7 +536,7 @@ public class GameObjectsStorage
 	 * @param objId int
 	 * @return long
 	 */
-	public static long objIdNoStore(int objId)
+	static long objIdNoStore(int objId)
 	{
 		return (objId & 0xFFFFFFFFL) | ((STORAGE_NONE & 0x1FL) << 32);
 	}
@@ -554,7 +556,7 @@ public class GameObjectsStorage
 	 * @param storedId long
 	 * @return GameObject
 	 */
-	public static GameObject remove(long storedId)
+	static GameObject remove(long storedId)
 	{
 		int STORAGE_ID = getStorageID(storedId);
 		return STORAGE_ID == STORAGE_NONE ? null : storages[STORAGE_ID].remove(getStoredIndex(storedId), getStoredObjectId(storedId));
@@ -585,7 +587,7 @@ public class GameObjectsStorage
 	 * @param storedId long
 	 * @return int
 	 */
-	public static int getStoredObjectId(long storedId)
+	static int getStoredObjectId(long storedId)
 	{
 		return (int) storedId;
 	}

@@ -69,7 +69,7 @@ public final class ArtefactAI extends CharacterAI
 	/**
 	 * @author Mobius
 	 */
-	class notifyGuard extends RunnableImpl
+	private class notifyGuard extends RunnableImpl
 	{
 		private final HardReference<Player> _playerRef;
 		

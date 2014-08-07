@@ -19,7 +19,7 @@ import java.nio.ByteBuffer;
  * @version $Revision: 1.0 $
  * @param <T>
  */
-public abstract class AbstractPacket<T>
+abstract class AbstractPacket<T>
 {
 	/**
 	 * Method getByteBuffer.

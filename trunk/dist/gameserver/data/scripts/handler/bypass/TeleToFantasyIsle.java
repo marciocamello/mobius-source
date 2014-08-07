@@ -33,7 +33,8 @@ public final class TeleToFantasyIsle extends ScriptBypassHandler
 	
 	/**
 	 * Method getBypasses.
-	 * @return String[] * @see lineage2.gameserver.handler.bypass.IBypassHandler#getBypasses()
+	 * @return String[]
+	 * @see lineage2.gameserver.handler.bypass.IBypassHandler#getBypasses()
 	 */
 	@Override
 	public String[] getBypasses()

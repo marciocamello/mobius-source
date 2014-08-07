@@ -29,7 +29,9 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
+
 import org.apache.commons.lang3.ArrayUtils;
+
 import quests._464_Oath;
 import bosses.AntharasManager;
 import bosses.ValakasManager;
@@ -62,7 +64,8 @@ public final class Special extends SimpleItemHandler
 	
 	/**
 	 * Method getItemIds.
-	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 * @return int[]
+	 * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
 	 */
 	@Override
 	public int[] getItemIds()

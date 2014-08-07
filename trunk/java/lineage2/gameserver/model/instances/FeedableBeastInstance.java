@@ -14,6 +14,7 @@ package lineage2.gameserver.model.instances;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -26,8 +27,10 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import gnu.trove.list.array.TIntArrayList;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
@@ -37,9 +40,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public class FeedableBeastInstance extends MonsterInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final Logger _log = LoggerFactory.getLogger(NpcInstance.class);
 	

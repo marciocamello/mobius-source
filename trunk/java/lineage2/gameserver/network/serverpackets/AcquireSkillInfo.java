@@ -15,6 +15,7 @@ package lineage2.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import lineage2.gameserver.model.SkillLearn;
 import lineage2.gameserver.model.base.AcquireType;
 

@@ -14,6 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.model.base.AcquireType;
 
 /**
@@ -24,14 +25,14 @@ public class AcquireSkillList extends L2GameServerPacket
 	private final AcquireType _type;
 	private final List<Skill> _skills;
 	
-	class Skill
+	private class Skill
 	{
-		public int id;
-		public int nextLevel;
-		public int maxLevel;
-		public int cost;
-		public int requirements;
-		public int subUnit;
+		final int id;
+		final int nextLevel;
+		final int maxLevel;
+		final int cost;
+		final int requirements;
+		final int subUnit;
 		
 		Skill(int id, int nextLevel, int maxLevel, int cost, int requirements, int subUnit)
 		{

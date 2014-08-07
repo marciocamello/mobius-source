@@ -16,6 +16,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.concurrent.TimeUnit;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
@@ -25,8 +26,10 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import gnu.trove.iterator.TIntObjectIterator;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
@@ -60,7 +63,7 @@ public class ItemAuction
 	 * @param auctionItem AuctionItem
 	 * @param auctionState ItemAuctionState
 	 */
-	public ItemAuction(int auctionId, int instanceId, long startingTime, long endingTime, AuctionItem auctionItem, ItemAuctionState auctionState)
+	ItemAuction(int auctionId, int instanceId, long startingTime, long endingTime, AuctionItem auctionItem, ItemAuctionState auctionState)
 	{
 		_auctionId = auctionId;
 		_instanceId = instanceId;
@@ -100,7 +103,7 @@ public class ItemAuction
 	 * @param wanted ItemAuctionState
 	 * @return boolean
 	 */
-	public synchronized boolean setAuctionState(ItemAuctionState expected, ItemAuctionState wanted)
+	synchronized boolean setAuctionState(ItemAuctionState expected, ItemAuctionState wanted)
 	{
 		if (_auctionState != expected)
 		{
@@ -143,7 +146,7 @@ public class ItemAuction
 	 * Method createNewItemInstance.
 	 * @return ItemInstance
 	 */
-	public ItemInstance createNewItemInstance()
+	ItemInstance createNewItemInstance()
 	{
 		return _auctionItem.createNewItemInstance();
 	}
@@ -243,7 +246,7 @@ public class ItemAuction
 	/**
 	 * Method store.
 	 */
-	public void store()
+	void store()
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -277,7 +280,7 @@ public class ItemAuction
 	 * @param playerObjId int
 	 * @return int
 	 */
-	public int getAndSetLastBidPlayerObjectId(int playerObjId)
+	private int getAndSetLastBidPlayerObjectId(int playerObjId)
 	{
 		int lastBid = _lastBidPlayerObjId;
 		_lastBidPlayerObjId = playerObjId;
@@ -289,7 +292,7 @@ public class ItemAuction
 	 * @param bid ItemAuctionBid
 	 * @param delete boolean
 	 */
-	public void updatePlayerBid(ItemAuctionBid bid, boolean delete)
+	private void updatePlayerBid(ItemAuctionBid bid, boolean delete)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -455,7 +458,7 @@ public class ItemAuction
 	 * Method broadcastToAllBidders.
 	 * @param packet L2GameServerPacket
 	 */
-	public void broadcastToAllBidders(L2GameServerPacket packet)
+	void broadcastToAllBidders(L2GameServerPacket packet)
 	{
 		TIntObjectIterator<ItemAuctionBid> itr = _auctionBids.iterator();
 		ItemAuctionBid bid;
@@ -599,7 +602,7 @@ public class ItemAuction
 	 * @param charId int
 	 * @return ItemAuctionBid
 	 */
-	public ItemAuctionBid getBidFor(int charId)
+	ItemAuctionBid getBidFor(int charId)
 	{
 		return _auctionBids.get(charId);
 	}

@@ -21,6 +21,7 @@ import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
 import lineage2.gameserver.utils.Util;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -98,7 +99,7 @@ public class SoIManager
 	 * Method getOpenedTime.
 	 * @return long
 	 */
-	public static long getOpenedTime()
+	private static long getOpenedTime()
 	{
 		if (getCurrentStage() != 3)
 		{
@@ -149,7 +150,7 @@ public class SoIManager
 	 * Method openSeed.
 	 * @param time long
 	 */
-	public static void openSeed(long time)
+	private static void openSeed(long time)
 	{
 		if (time <= 0)
 		{
@@ -174,7 +175,7 @@ public class SoIManager
 	/**
 	 * Method closeSeed.
 	 */
-	public static void closeSeed()
+	static void closeSeed()
 	{
 		_log.info("Seed of Infinity Manager: Closing the seed.");
 		ServerVariables.unset("SoI_opened");
@@ -193,7 +194,7 @@ public class SoIManager
 	/**
 	 * Method checkStageAndSpawn.
 	 */
-	public static void checkStageAndSpawn()
+	private static void checkStageAndSpawn()
 	{
 		SpawnManager.getInstance().despawn("soi_world_closedmouths");
 		SpawnManager.getInstance().despawn("soi_world_mouths");
@@ -287,7 +288,7 @@ public class SoIManager
 	 * Method setCohemenesCount.
 	 * @param i int
 	 */
-	public static void setCohemenesCount(int i)
+	private static void setCohemenesCount(int i)
 	{
 		ServerVariables.set("SoI_CohemenesCount", i);
 	}
@@ -296,7 +297,7 @@ public class SoIManager
 	 * Method setEkimusCount.
 	 * @param i int
 	 */
-	public static void setEkimusCount(int i)
+	private static void setEkimusCount(int i)
 	{
 		ServerVariables.set("SoI_EkimusCount", i);
 	}
@@ -305,7 +306,7 @@ public class SoIManager
 	 * Method setHoEDefCount.
 	 * @param i int
 	 */
-	public static void setHoEDefCount(int i)
+	private static void setHoEDefCount(int i)
 	{
 		ServerVariables.set("SoI_hoedefkillcount", i);
 	}
@@ -314,7 +315,7 @@ public class SoIManager
 	 * Method getCohemenesCount.
 	 * @return int
 	 */
-	public static int getCohemenesCount()
+	private static int getCohemenesCount()
 	{
 		return ServerVariables.getInt("SoI_CohemenesCount", 0);
 	}
@@ -323,7 +324,7 @@ public class SoIManager
 	 * Method getEkimusCount.
 	 * @return int
 	 */
-	public static int getEkimusCount()
+	private static int getEkimusCount()
 	{
 		return ServerVariables.getInt("SoI_EkimusCount", 0);
 	}
@@ -332,7 +333,7 @@ public class SoIManager
 	 * Method getHoEDefCount.
 	 * @return int
 	 */
-	public static int getHoEDefCount()
+	private static int getHoEDefCount()
 	{
 		return ServerVariables.getInt("SoI_hoedefkillcount", 0);
 	}

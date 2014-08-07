@@ -17,6 +17,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.LineNumberReader;
 import java.util.logging.Logger;
+
 import lineage2.commons.collections.GArray;
 import lineage2.commons.collections.GCArray;
 import lineage2.commons.util.Rnd;
@@ -33,8 +34,12 @@ public class FakePlayersTable
 	/**
 	 * @author Mobius
 	 */
-	public class Task implements Runnable
+	private class Task implements Runnable
 	{
+		public Task()
+		{
+		}
+		
 		/**
 		 * Method run.
 		 * @see java.lang.Runnable#run()

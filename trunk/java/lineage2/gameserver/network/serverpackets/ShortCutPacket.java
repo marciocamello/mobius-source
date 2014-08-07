@@ -23,7 +23,7 @@ import lineage2.gameserver.skills.TimeStamp;
  */
 public abstract class ShortCutPacket extends L2GameServerPacket
 {
-	public static ShortcutInfo convert(Player player, ShortCut shortCut)
+	static ShortcutInfo convert(Player player, ShortCut shortCut)
 	{
 		ShortcutInfo shortcutInfo = null;
 		int page = shortCut.getSlot() + (shortCut.getPage() * 12);
@@ -69,13 +69,13 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 		return shortcutInfo;
 	}
 	
-	protected static class ItemShortcutInfo extends ShortcutInfo
+	private static class ItemShortcutInfo extends ShortcutInfo
 	{
 		private final int _reuseGroup;
 		private final int _currentReuse;
 		private final int _basicReuse;
 		
-		public ItemShortcutInfo(int type, int page, int id, int reuseGroup, int currentReuse, int basicReuse, int augmentationId, int characterType)
+		ItemShortcutInfo(int type, int page, int id, int reuseGroup, int currentReuse, int basicReuse, int augmentationId, int characterType)
 		{
 			super(type, page, id, characterType);
 			_reuseGroup = reuseGroup;
@@ -98,19 +98,14 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 		}
 	}
 	
-	protected static class SkillShortcutInfo extends ShortcutInfo
+	private static class SkillShortcutInfo extends ShortcutInfo
 	{
 		private final int _level;
 		
-		public SkillShortcutInfo(int type, int page, int id, int level, int characterType)
+		SkillShortcutInfo(int type, int page, int id, int level, int characterType)
 		{
 			super(type, page, id, characterType);
 			_level = level;
-		}
-		
-		public int getLevel()
-		{
-			return _level;
 		}
 		
 		@Override
@@ -126,12 +121,12 @@ public abstract class ShortCutPacket extends L2GameServerPacket
 	
 	protected static class ShortcutInfo
 	{
-		protected final int _type;
-		protected final int _page;
+		private final int _type;
+		private final int _page;
 		protected final int _id;
 		protected final int _characterType;
 		
-		public ShortcutInfo(int type, int page, int id, int characterType)
+		ShortcutInfo(int type, int page, int id, int characterType)
 		{
 			_type = type;
 			_page = page;

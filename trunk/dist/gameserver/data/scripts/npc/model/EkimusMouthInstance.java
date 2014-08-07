@@ -29,9 +29,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class EkimusMouthInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int hosattackIzId = 115;
 	private static final int hoeattackIzId = 119;

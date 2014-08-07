@@ -14,6 +14,7 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.instancemanager.games.HandysBlockCheckerManager;
 import lineage2.gameserver.model.Player;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,7 +25,7 @@ import org.slf4j.LoggerFactory;
 public final class RequestExCubeGameChangeTeam extends L2GameClientPacket
 {
 	private static final Logger _log = LoggerFactory.getLogger(RequestExCubeGameChangeTeam.class);
-	int _team, _arena;
+	private int _team, _arena;
 	
 	/**
 	 * Method readImpl.

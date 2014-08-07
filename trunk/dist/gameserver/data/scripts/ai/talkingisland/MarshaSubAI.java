@@ -33,7 +33,7 @@ public class MarshaSubAI extends DefaultAI
 	 * Constructor for MarshaSubAI.
 	 * @param actor NpcInstance
 	 */
-	public MarshaSubAI(NpcInstance actor)
+	MarshaSubAI(NpcInstance actor)
 	{
 		super(actor);
 	}

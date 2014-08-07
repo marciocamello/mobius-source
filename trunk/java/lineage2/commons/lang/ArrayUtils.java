@@ -22,7 +22,7 @@ import java.util.Comparator;
  */
 public final class ArrayUtils
 {
-	public static final int INDEX_NOT_FOUND = -1;
+	private static final int INDEX_NOT_FOUND = -1;
 	
 	/**
 	 * Method valid.
@@ -94,7 +94,7 @@ public final class ArrayUtils
 	 * @param value T
 	 * @return boolean
 	 */
-	public static <T> boolean contains(T[] array, T value)
+	static <T> boolean contains(T[] array, T value)
 	{
 		if (array == null)
 		{
@@ -120,7 +120,7 @@ public final class ArrayUtils
 	 * @param index int
 	 * @return int
 	 */
-	public static <T> int indexOf(T[] array, T value, int index)
+	private static <T> int indexOf(T[] array, T value, int index)
 	{
 		if ((index < 0) || (array.length <= index))
 		{

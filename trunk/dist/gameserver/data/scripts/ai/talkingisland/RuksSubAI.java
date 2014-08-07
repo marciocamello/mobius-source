@@ -33,7 +33,7 @@ public class RuksSubAI extends DefaultAI
 	 * Constructor for RuksSubAI.
 	 * @param actor NpcInstance
 	 */
-	public RuksSubAI(NpcInstance actor)
+	RuksSubAI(NpcInstance actor)
 	{
 		super(actor);
 	}

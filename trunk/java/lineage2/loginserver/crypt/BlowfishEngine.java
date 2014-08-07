@@ -1099,7 +1099,7 @@ public class BlowfishEngine
 	 * @param pEncrypting boolean
 	 * @param key byte[]
 	 */
-	public void init(boolean pEncrypting, byte[] key)
+	void init(boolean pEncrypting, byte[] key)
 	{
 		encrypting = pEncrypting;
 		workingKey = key;
@@ -1124,7 +1124,7 @@ public class BlowfishEngine
 	 * @return int
 	 * @throws IOException
 	 */
-	public final int processBlock(byte[] in, int inOff, byte[] out, int outOff) throws IOException
+	final int processBlock(byte[] in, int inOff, byte[] out, int outOff) throws IOException
 	{
 		if (workingKey == null)
 		{

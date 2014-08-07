@@ -22,6 +22,7 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.templates.mapregion.RestartArea;
 import lineage2.gameserver.templates.mapregion.RestartPoint;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,7 +33,7 @@ import org.slf4j.LoggerFactory;
 public class TeleportUtils
 {
 	private static final Logger _log = LoggerFactory.getLogger(TeleportUtils.class);
-	public final static Location DEFAULT_RESTART = new Location(17817, 170079, -3530);
+	private final static Location DEFAULT_RESTART = new Location(17817, 170079, -3530);
 	
 	/**
 	 * Constructor for TeleportUtils.
@@ -59,7 +60,7 @@ public class TeleportUtils
 	 * @param restartType RestartType
 	 * @return Location
 	 */
-	public static Location getRestartLocation(Player player, Location from, RestartType restartType)
+	private static Location getRestartLocation(Player player, Location from, RestartType restartType)
 	{
 		Reflection r = player.getReflection();
 		

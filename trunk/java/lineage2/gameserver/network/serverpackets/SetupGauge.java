@@ -25,7 +25,7 @@ public class SetupGauge extends L2GameServerPacket
 	private final int _dat1;
 	private int _time;
 	
-	public static enum Colors
+	private static enum Colors
 	{
 		BLUE_DUAL,
 		BLUE,

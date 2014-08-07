@@ -57,7 +57,6 @@ public final class Leodas extends Fighter
 		 */
 		CloseDoor()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

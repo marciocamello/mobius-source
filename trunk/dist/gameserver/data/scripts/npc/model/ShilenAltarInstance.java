@@ -13,9 +13,6 @@ import lineage2.gameserver.utils.Location;
 public final class ShilenAltarInstance extends NpcInstance
 {
 	private static final long serialVersionUID = 1L;
-	/**
-	 *
-	 */
 	// private static final int DoorEnter1 = 25180001;
 	// private static final int DoorEnter2 = 25180002;
 	// private static final int DoorEnter3 = 25180003;

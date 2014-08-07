@@ -18,6 +18,7 @@ import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.utils.ReflectionUtils;
 import lineage2.gameserver.utils.Util;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -60,7 +61,7 @@ public class SoHManager
 		return _zone;
 	}
 	
-	public static long getOpenedTime()
+	private static long getOpenedTime()
 	{
 		if (getCurrentStage() != 2)
 		{
@@ -70,7 +71,7 @@ public class SoHManager
 		return (ServerVariables.getLong("SoH_opened", 0) * 1000L) - System.currentTimeMillis();
 	}
 	
-	public static boolean isSeedOpen()
+	private static boolean isSeedOpen()
 	{
 		return getOpenedTime() > 0;
 	}
@@ -101,7 +102,7 @@ public class SoHManager
 		return ServerVariables.getInt("SoH_stage", 1);
 	}
 	
-	public static void checkStageAndSpawn()
+	private static void checkStageAndSpawn()
 	{
 		SpawnManager.getInstance().despawn(SPAWN_GROUP);
 		SpawnManager.getInstance().despawn(SPAWN_GROUP2);
@@ -122,7 +123,7 @@ public class SoHManager
 		}
 	}
 	
-	public static void openSeed(long timelimit)
+	private static void openSeed(long timelimit)
 	{
 		if (timelimit <= 0)
 		{
@@ -144,7 +145,7 @@ public class SoHManager
 		}, timelimit);
 	}
 	
-	public static void closeSeed()
+	static void closeSeed()
 	{
 		_log.info("Seed of Hellfire Manager: Closing the seed.");
 		ServerVariables.unset("SoH_opened");

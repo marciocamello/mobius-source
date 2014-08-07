@@ -16,6 +16,7 @@ import lineage2.gameserver.network.loginservercon.LoginServerCommunication;
 import lineage2.gameserver.network.loginservercon.ReceivablePacket;
 import lineage2.gameserver.network.loginservercon.gspackets.OnlineStatus;
 import lineage2.gameserver.network.loginservercon.gspackets.PlayerInGame;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

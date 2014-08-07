@@ -13,6 +13,7 @@
 package npc.model.residences.fortress.siege;
 
 import java.util.StringTokenizer;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Spawner;
@@ -23,6 +24,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.templates.npc.NpcTemplate;
+
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -31,9 +33,6 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public final class PowerControlUnitInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	public static final int LIMIT = 3;
 	public static final int COND_NO_ENTERED = 0;

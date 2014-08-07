@@ -16,6 +16,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -242,12 +243,8 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 	
 	private class runNpcStateChangeSecond extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public runNpcStateChangeSecond()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -299,12 +296,8 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 	
 	private class runNpcStateChangeThird extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public runNpcStateChangeThird()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -338,12 +331,8 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 	
 	private class DeathListener implements OnDeathListener
 	{
-		/**
-		 *
-		 */
 		public DeathListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

@@ -14,6 +14,7 @@ package events.TheFallHarvest;
 
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -39,8 +40,15 @@ public final class SquashAI extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	public final class PolimorphTask extends RunnableImpl
+	private final class PolimorphTask extends RunnableImpl
 	{
+		/**
+		 * 
+		 */
+		public PolimorphTask()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -74,7 +82,7 @@ public final class SquashAI extends Fighter
 		}
 	}
 	
-	protected static final RewardData[] _dropList = new RewardData[]
+	private static final RewardData[] _dropList = new RewardData[]
 	{
 		new RewardData(1539, 1, 5, 15000),
 		new RewardData(1374, 1, 3, 15000),
@@ -156,16 +164,16 @@ public final class SquashAI extends Fighter
 		new RewardData(959, 1, 1, 50),
 		new RewardData(960, 1, 1, 300),
 	};
-	public final static int Young_Squash = 12774;
-	public final static int High_Quality_Squash = 12775;
-	public final static int Low_Quality_Squash = 12776;
-	public final static int Large_Young_Squash = 12777;
-	public final static int High_Quality_Large_Squash = 12778;
-	public final static int Low_Quality_Large_Squash = 12779;
-	public final static int King_Squash = 13016;
-	public final static int Emperor_Squash = 13017;
-	public final static int Squash_Level_up = 4513;
-	public final static int Squash_Poisoned = 4514;
+	private final static int Young_Squash = 12774;
+	private final static int High_Quality_Squash = 12775;
+	private final static int Low_Quality_Squash = 12776;
+	private final static int Large_Young_Squash = 12777;
+	private final static int High_Quality_Large_Squash = 12778;
+	private final static int Low_Quality_Large_Squash = 12779;
+	private final static int King_Squash = 13016;
+	private final static int Emperor_Squash = 13017;
+	private final static int Squash_Level_up = 4513;
+	private final static int Squash_Poisoned = 4514;
 	private static final String[] textOnSpawn = new String[]
 	{
 		"scripts.events.TheFallHarvest.SquashAI.textOnSpawn.0",
@@ -269,7 +277,7 @@ public final class SquashAI extends Fighter
 	 * Constructor for SquashAI.
 	 * @param actor NpcInstance
 	 */
-	public SquashAI(NpcInstance actor)
+	SquashAI(NpcInstance actor)
 	{
 		super(actor);
 		_npcId = getActor().getNpcId();

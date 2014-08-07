@@ -13,6 +13,7 @@
 package lineage2.gameserver.model.instances;
 
 import java.util.concurrent.Future;
+
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
@@ -33,11 +34,8 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public class SummonInstance extends Summon
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
-	public final int CYCLE = 5000;
+	private final int CYCLE = 5000;
 	private final int _summonSkillId;
 	private final int _summonSkillLvl;
 	private double _expPenalty = 0;
@@ -139,8 +137,12 @@ public class SummonInstance extends Summon
 	/**
 	 * @author Mobius
 	 */
-	class Lifetime extends RunnableImpl
+	private class Lifetime extends RunnableImpl
 	{
+		public Lifetime()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -194,7 +196,7 @@ public class SummonInstance extends Summon
 	/**
 	 * Method stopDisappear.
 	 */
-	protected synchronized void stopDisappear()
+	private synchronized void stopDisappear()
 	{
 		if (_disappearTask != null)
 		{

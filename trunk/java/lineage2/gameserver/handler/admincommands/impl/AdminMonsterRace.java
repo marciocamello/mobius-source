@@ -39,7 +39,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 		admin_mons
 	}
 	
-	protected static int state = -1;
+	static int state = -1;
 	
 	/**
 	 * Method useAdminCommand.
@@ -123,7 +123,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 	/**
 	 * @author Mobius
 	 */
-	class RunRace extends RunnableImpl
+	private class RunRace extends RunnableImpl
 	{
 		private final int[][] codes;
 		private final Player activeChar;
@@ -133,7 +133,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 		 * @param codes int[][]
 		 * @param activeChar Player
 		 */
-		public RunRace(int[][] codes, Player activeChar)
+		RunRace(int[][] codes, Player activeChar)
 		{
 			this.codes = codes;
 			this.activeChar = activeChar;
@@ -154,7 +154,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 	/**
 	 * @author Mobius
 	 */
-	class RunEnd extends RunnableImpl
+	private class RunEnd extends RunnableImpl
 	{
 		private final Player activeChar;
 		
@@ -162,7 +162,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 		 * Constructor for RunEnd.
 		 * @param activeChar Player
 		 */
-		public RunEnd(Player activeChar)
+		RunEnd(Player activeChar)
 		{
 			this.activeChar = activeChar;
 		}

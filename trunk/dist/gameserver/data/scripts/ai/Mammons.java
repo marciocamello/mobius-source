@@ -13,6 +13,7 @@
 package ai;
 
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -23,6 +24,7 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -119,8 +121,12 @@ public final class Mammons extends Functions implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public static class TeleportMammons implements Runnable
+	private static class TeleportMammons implements Runnable
 	{
+		public TeleportMammons()
+		{
+		}
+		
 		/**
 		 * Method run.
 		 * @see java.lang.Runnable#run()

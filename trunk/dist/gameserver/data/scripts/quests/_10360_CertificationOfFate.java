@@ -24,6 +24,7 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExShowUsmVideo;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.HtmlUtils;
+
 import org.apache.commons.lang3.ArrayUtils;
 
 public class _10360_CertificationOfFate extends Quest implements ScriptFile

@@ -14,12 +14,14 @@ package lineage2.gameserver.model.reward;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.commons.math.SafeMath;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.templates.item.ItemTemplate;
+
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -236,7 +238,7 @@ public class RewardData implements Cloneable
 	 * @param rate double
 	 * @return List<RewardItem>
 	 */
-	public List<RewardItem> roll(double rate)
+	private List<RewardItem> roll(double rate)
 	{
 		double mult = Math.ceil(rate);
 		List<RewardItem> ret = new ArrayList<>(1);
