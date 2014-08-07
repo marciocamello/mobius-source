@@ -14,6 +14,7 @@ package events.GiftOfVitality;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
@@ -24,6 +25,7 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -104,7 +106,7 @@ public final class GiftOfVitality extends Functions implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public enum BuffType
+	private enum BuffType
 	{
 		PLAYER,
 		SUMMON,

@@ -13,6 +13,7 @@
 package lineage2.gameserver.model.instances;
 
 import java.text.DateFormat;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.instancemanager.games.LotteryManager;
@@ -33,9 +34,6 @@ import lineage2.gameserver.utils.Log;
  */
 public class LotteryManagerInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

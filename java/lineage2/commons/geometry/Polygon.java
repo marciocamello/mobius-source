@@ -20,7 +20,7 @@ import lineage2.commons.lang.ArrayUtils;
  */
 public class Polygon extends AbstractShape
 {
-	protected Point2D[] points = Point2D.EMPTY_ARRAY;
+	private Point2D[] points = Point2D.EMPTY_ARRAY;
 	
 	/**
 	 * Method add.
@@ -39,7 +39,7 @@ public class Polygon extends AbstractShape
 	 * @param p Point2D
 	 * @return Polygon
 	 */
-	public Polygon add(Point2D p)
+	private Polygon add(Point2D p)
 	{
 		if (points.length == 0)
 		{

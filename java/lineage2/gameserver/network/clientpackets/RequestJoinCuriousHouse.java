@@ -14,6 +14,7 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExCuriousHouseEnter;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,6 +44,3 @@ public class RequestJoinCuriousHouse extends L2GameClientPacket
 		_log.info("[IMPLEMENT ME!] RequestJoinCuriousHouse (maybe trigger)");
 	}
 }
-/*
- * int __thiscall UNetworkHandler__RequestJoinCuriousHouse(int this) { return (*(int (__cdecl **)(_DWORD, _DWORD, signed int, signed int))(**(_DWORD **)(this + 72) + 108))((_DWORD *)(this + 72), "ch", 208, 195); }
- */

@@ -17,6 +17,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.RandomAccess;
+
 import org.apache.commons.pool.ObjectPool;
 import org.apache.commons.pool.PoolableObjectFactory;
 import org.apache.commons.pool.impl.GenericObjectPool;
@@ -42,7 +43,6 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		 */
 		public PoolableLazyArrayListFactory()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -137,9 +137,9 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	
 	private static final int L = 1 << 3;
 	private static final int H = 1 << 10;
-	protected transient Object[] elementData;
-	protected transient int size = 0;
-	protected transient int capacity = L;
+	private transient Object[] elementData;
+	private transient int size = 0;
+	private transient int capacity = L;
 	
 	/**
 	 * Constructor for LazyArrayList.
@@ -256,7 +256,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	 * Method ensureCapacity.
 	 * @param newSize int
 	 */
-	protected void ensureCapacity(int newSize)
+	private void ensureCapacity(int newSize)
 	{
 		if (newSize > capacity)
 		{
@@ -428,7 +428,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	/**
 	 * Method trim.
 	 */
-	protected void trim()
+	private void trim()
 	{
 	}
 	
@@ -512,7 +512,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	 * Method capacity.
 	 * @return int
 	 */
-	public int capacity()
+	int capacity()
 	{
 		return capacity;
 	}
@@ -709,7 +709,6 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		 */
 		public LazyItr()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

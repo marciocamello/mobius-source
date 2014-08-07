@@ -25,7 +25,7 @@ public class TIGuardSubAI extends DefaultAI
 	protected Location[] _points;
 	private int _lastPoint = 0;
 	
-	public TIGuardSubAI(NpcInstance actor)
+	TIGuardSubAI(NpcInstance actor)
 	{
 		super(actor);
 	}

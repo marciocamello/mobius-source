@@ -24,9 +24,6 @@ import npc.model.residences.SiegeGuardInstance;
  */
 public abstract class _34BossMinionInstance extends SiegeGuardInstance implements _34SiegeGuard
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

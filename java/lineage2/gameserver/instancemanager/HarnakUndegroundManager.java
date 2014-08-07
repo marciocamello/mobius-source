@@ -18,8 +18,10 @@ import lineage2.gameserver.network.serverpackets.Earthquake;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.utils.NpcUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
@@ -29,11 +31,11 @@ public class HarnakUndegroundManager
 {
 	private static final Logger _log = LoggerFactory.getLogger(HarnakUndegroundManager.class);
 	private static HarnakUndegroundManager _instance;
-	static int secondStageAltarCount;
-	static int thirdStageAltarCount;
-	static final int HARNAK = 25772;
-	static final int ANGRY_HARNAK = 25774;
-	static final int DEMONIC_NOKTUM = 25773;
+	private static int secondStageAltarCount;
+	private static int thirdStageAltarCount;
+	private static final int HARNAK = 25772;
+	private static final int ANGRY_HARNAK = 25774;
+	private static final int DEMONIC_NOKTUM = 25773;
 	private static TIntObjectHashMap<Integer> npcListIdSecond;
 	private static TIntObjectHashMap<Integer> npcListIdThird;
 	
@@ -144,7 +146,7 @@ public class HarnakUndegroundManager
 		return false;
 	}
 	
-	public boolean requestAddNpcToListSecond(int npcId)
+	private boolean requestAddNpcToListSecond(int npcId)
 	{
 		if (npcListIdSecond.get(npcId) == null)
 		{
@@ -165,7 +167,7 @@ public class HarnakUndegroundManager
 		}
 	}
 	
-	public boolean requestAddNpcToListThird(int npcId)
+	private boolean requestAddNpcToListThird(int npcId)
 	{
 		if (npcListIdThird.get(npcId) == null)
 		{

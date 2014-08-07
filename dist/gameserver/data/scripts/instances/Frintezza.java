@@ -15,6 +15,7 @@ package instances;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -38,6 +39,7 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
+
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -106,9 +108,6 @@ public final class Frintezza extends Reflection
 	
 	public static class NpcLocation extends Location
 	{
-		/**
-		 *
-		 */
 		private static final long serialVersionUID = -4688915115513862819L;
 		public int npcId;
 		
@@ -172,12 +171,8 @@ public final class Frintezza extends Reflection
 	
 	private class FrintezzaStart extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public FrintezzaStart()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -360,12 +355,8 @@ public final class Frintezza extends Reflection
 	
 	private class Music extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public Music()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -916,12 +907,8 @@ public final class Frintezza extends Reflection
 	
 	private class DeathListener implements OnDeathListener
 	{
-		/**
-		 *
-		 */
 		public DeathListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

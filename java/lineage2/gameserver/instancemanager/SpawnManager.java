@@ -17,6 +17,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.GameTimeController;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -28,6 +29,7 @@ import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.templates.spawn.PeriodOfDay;
 import lineage2.gameserver.templates.spawn.SpawnTemplate;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,7 +49,6 @@ public class SpawnManager
 		 */
 		public Listeners()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -106,7 +107,7 @@ public class SpawnManager
 	 * @param templateList List<SpawnTemplate>
 	 * @return List<Spawner>
 	 */
-	public List<Spawner> fillSpawn(String group, List<SpawnTemplate> templateList)
+	private List<Spawner> fillSpawn(String group, List<SpawnTemplate> templateList)
 	{
 		if (Config.DONTLOADSPAWN)
 		{

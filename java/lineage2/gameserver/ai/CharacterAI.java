@@ -13,6 +13,7 @@
 package lineage2.gameserver.ai;
 
 import java.util.List;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.ai.PlayableAI.nextAction;
@@ -475,7 +476,7 @@ public class CharacterAI extends AbstractAI
 	 * @param arg2 Object
 	 * @param delay long
 	 */
-	protected void addTimer(int timerId, Object arg1, Object arg2, long delay)
+	private void addTimer(int timerId, Object arg1, Object arg2, long delay)
 	{
 		ThreadPoolManager.getInstance().schedule(new Timer(timerId, arg1, arg2), delay);
 	}
@@ -483,7 +484,7 @@ public class CharacterAI extends AbstractAI
 	/**
 	 * @author Mobius
 	 */
-	protected class Timer extends RunnableImpl
+	private class Timer extends RunnableImpl
 	{
 		private final int _timerId;
 		private final Object _arg1;
@@ -495,7 +496,7 @@ public class CharacterAI extends AbstractAI
 		 * @param arg1 Object
 		 * @param arg2 Object
 		 */
-		public Timer(int timerId, Object arg1, Object arg2)
+		Timer(int timerId, Object arg1, Object arg2)
 		{
 			_timerId = timerId;
 			_arg1 = arg1;
@@ -540,7 +541,7 @@ public class CharacterAI extends AbstractAI
 	 * @param arg2 Object
 	 * @param radius int
 	 */
-	protected void broadCastScriptEvent(String event, Object arg1, Object arg2, int radius)
+	private void broadCastScriptEvent(String event, Object arg1, Object arg2, int radius)
 	{
 		List<NpcInstance> npcs = World.getAroundNpc(getActor(), radius, radius);
 		

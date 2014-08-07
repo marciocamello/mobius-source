@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Playable;
@@ -128,7 +129,6 @@ public class EffectRestorationRandom extends Effect
 		 */
 		public Item()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		public int itemId;

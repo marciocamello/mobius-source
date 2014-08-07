@@ -14,8 +14,10 @@ package lineage2.gameserver.handler.bbs;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.templates.StatsSet;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -105,7 +107,7 @@ public class CommunityBoardManager
 	 * @param name String
 	 * @param val String
 	 */
-	public void setProperty(String name, String val)
+	void setProperty(String name, String val)
 	{
 		_properties.set(name, val);
 	}
@@ -115,7 +117,7 @@ public class CommunityBoardManager
 	 * @param name String
 	 * @param val int
 	 */
-	public void setProperty(String name, int val)
+	void setProperty(String name, int val)
 	{
 		_properties.set(name, val);
 	}
@@ -125,7 +127,7 @@ public class CommunityBoardManager
 	 * @param name String
 	 * @return int
 	 */
-	public int getIntProperty(String name)
+	int getIntProperty(String name)
 	{
 		return _properties.getInteger(name, 0);
 	}

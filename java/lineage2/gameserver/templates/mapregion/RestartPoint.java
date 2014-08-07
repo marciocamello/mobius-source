@@ -13,6 +13,7 @@
 package lineage2.gameserver.templates.mapregion;
 
 import java.util.List;
+
 import lineage2.gameserver.utils.Location;
 
 /**

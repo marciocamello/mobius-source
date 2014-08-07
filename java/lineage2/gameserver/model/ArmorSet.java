@@ -15,6 +15,7 @@ package lineage2.gameserver.model;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
+
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.tables.SkillTable;
@@ -196,7 +197,7 @@ public final class ArmorSet
 	 * @param feet int
 	 * @return boolean
 	 */
-	public boolean containAll(int chest, int legs, int head, int gloves, int feet)
+	private boolean containAll(int chest, int legs, int head, int gloves, int feet)
 	{
 		if (!_chests.isEmpty() && !_chests.contains(chest))
 		{

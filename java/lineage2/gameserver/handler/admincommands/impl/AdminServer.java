@@ -15,6 +15,7 @@ package lineage2.gameserver.handler.admincommands.impl;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import lineage2.gameserver.ai.CharacterAI;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -224,7 +225,7 @@ public class AdminServer implements IAdminCommandHandler
 	 * @param targetChar Player
 	 * @param filename String
 	 */
-	public static void showHelpPage(Player targetChar, String filename)
+	private static void showHelpPage(Player targetChar, String filename)
 	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile("admin/" + filename);

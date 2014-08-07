@@ -13,6 +13,7 @@
 package ai;
 
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -96,7 +97,7 @@ public final class FollowNpc extends DefaultAI
 	/**
 	 * Method thinkFollow.
 	 */
-	protected void thinkFollow()
+	private void thinkFollow()
 	{
 		final NpcInstance actor = getActor();
 		final Creature target = actor.getFollowTarget();
@@ -130,8 +131,12 @@ public final class FollowNpc extends DefaultAI
 	/**
 	 * @author Mobius
 	 */
-	protected class ThinkFollow extends RunnableImpl
+	private class ThinkFollow extends RunnableImpl
 	{
+		public ThinkFollow()
+		{
+		}
+		
 		/**
 		 * Method getActor.
 		 * @return NpcInstance

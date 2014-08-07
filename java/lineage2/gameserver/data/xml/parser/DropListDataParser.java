@@ -20,6 +20,7 @@ import lineage2.gameserver.model.reward.RewardGroup;
 import lineage2.gameserver.model.reward.RewardList;
 import lineage2.gameserver.model.reward.RewardType;
 import lineage2.gameserver.templates.npc.NpcTemplate;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.NamedNodeMap;
@@ -64,7 +65,7 @@ public final class DropListDataParser extends DocumentParser
 	/**
 	 * Method reload.
 	 */
-	public void reload()
+	void reload()
 	{
 		load();
 	}

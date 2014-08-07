@@ -26,9 +26,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class TreasureChestInstance extends ChestInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int TREASURE_BOMB_ID = 4143;
 	

@@ -17,6 +17,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.net.nio.impl.MMOClient;
 import lineage2.commons.net.nio.impl.MMOConnection;
@@ -33,6 +34,7 @@ import lineage2.gameserver.network.loginservercon.SessionKey;
 import lineage2.gameserver.network.loginservercon.gspackets.PlayerLogout;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.utils.SecondaryPasswordAuth;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,8 +46,8 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 {
 	private static final Logger _log = LoggerFactory.getLogger(GameClient.class);
 	private static final String NO_IP = "?.?.?.?";
-	public GameCrypt _crypt = null;
-	public GameClientState _state;
+	private GameCrypt _crypt = null;
+	private GameClientState _state;
 	
 	public static enum GameClientState
 	{
@@ -69,7 +71,7 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 	 * Constructor for GameClient.
 	 * @param con MMOConnection<GameClient>
 	 */
-	public GameClient(MMOConnection<GameClient> con)
+	GameClient(MMOConnection<GameClient> con)
 	{
 		super(con);
 		_state = GameClientState.CONNECTED;
@@ -566,7 +568,7 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 	/**
 	 * Method onUnknownPacket.
 	 */
-	public void onUnknownPacket()
+	void onUnknownPacket()
 	{
 		if (_unknownPackets++ >= 10)
 		{

@@ -14,6 +14,7 @@ package quests;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import lineage2.gameserver.instancemanager.QuestManager;
 import lineage2.gameserver.listener.actor.OnCurrentHpDamageListener;
 import lineage2.gameserver.listener.actor.player.OnPlayerEnterListener;

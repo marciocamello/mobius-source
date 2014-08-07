@@ -51,7 +51,7 @@ public class MemoryClassLoader extends ClassLoader
 	 * Method addClass.
 	 * @param mbc MemoryByteCode
 	 */
-	public void addClass(MemoryByteCode mbc)
+	void addClass(MemoryByteCode mbc)
 	{
 		classes.put(mbc.getName(), mbc);
 		loaded.put(mbc.getName(), mbc);
@@ -62,7 +62,7 @@ public class MemoryClassLoader extends ClassLoader
 	 * @param name String
 	 * @return MemoryByteCode
 	 */
-	public MemoryByteCode getClass(String name)
+	MemoryByteCode getClass(String name)
 	{
 		return classes.get(name);
 	}

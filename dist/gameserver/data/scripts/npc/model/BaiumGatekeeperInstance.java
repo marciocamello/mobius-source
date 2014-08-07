@@ -27,9 +27,6 @@ import bosses.BaiumManager;
  */
 public final class BaiumGatekeeperInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int Baium = 29020;
 	private static final int BaiumNpc = 29025;

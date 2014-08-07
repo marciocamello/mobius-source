@@ -14,6 +14,7 @@ package lineage2.gameserver.model;
 
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.GameTimeController;
@@ -41,10 +42,10 @@ import lineage2.gameserver.utils.Location;
 public class Fishing
 {
 	final Player _fisher;
-	public final static int FISHING_NONE = 0;
-	public final static int FISHING_STARTED = 1;
-	public final static int FISHING_WAITING = 2;
-	public final static int FISHING_COMBAT = 3;
+	private final static int FISHING_NONE = 0;
+	private final static int FISHING_STARTED = 1;
+	private final static int FISHING_WAITING = 2;
+	private final static int FISHING_COMBAT = 3;
 	private final AtomicInteger _state;
 	int _time;
 	int _stop;
@@ -62,7 +63,7 @@ public class Fishing
 	 * Constructor for Fishing.
 	 * @param fisher Player
 	 */
-	public Fishing(Player fisher)
+	Fishing(Player fisher)
 	{
 		_fisher = fisher;
 		_state = new AtomicInteger(FISHING_NONE);
@@ -118,7 +119,7 @@ public class Fishing
 	/**
 	 * Method startFishing.
 	 */
-	public void startFishing()
+	void startFishing()
 	{
 		if (!_state.compareAndSet(FISHING_NONE, FISHING_STARTED))
 		{
@@ -135,7 +136,7 @@ public class Fishing
 	/**
 	 * Method stopFishing.
 	 */
-	public void stopFishing()
+	void stopFishing()
 	{
 		if (_state.getAndSet(FISHING_NONE) == FISHING_NONE)
 		{
@@ -153,7 +154,7 @@ public class Fishing
 	 * Method endFishing.
 	 * @param win boolean
 	 */
-	public void endFishing(boolean win)
+	void endFishing(boolean win)
 	{
 		if (!_state.compareAndSet(FISHING_COMBAT, FISHING_NONE))
 		{
@@ -182,7 +183,7 @@ public class Fishing
 	/**
 	 * @author Mobius
 	 */
-	protected class LookingForFishTask extends RunnableImpl
+	private class LookingForFishTask extends RunnableImpl
 	{
 		private final long _endTaskTime;
 		
@@ -266,7 +267,6 @@ public class Fishing
 		 */
 		public FishCombatTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -574,7 +574,7 @@ public class Fishing
 	 * Method spawnPenaltyMonster.
 	 * @param fisher Player
 	 */
-	public static void spawnPenaltyMonster(Player fisher)
+	private static void spawnPenaltyMonster(Player fisher)
 	{
 		int npcId = 18319 + Math.min(fisher.getLevel() / 11, 7);
 		MonsterInstance npc = new MonsterInstance(IdFactory.getInstance().getNextId(), NpcHolder.getInstance().getTemplate(npcId));
@@ -918,7 +918,7 @@ public class Fishing
 	 * @param lureId int
 	 * @return int
 	 */
-	public static int getLureGrade(int lureId)
+	private static int getLureGrade(int lureId)
 	{
 		switch (lureId)
 		{
@@ -976,7 +976,7 @@ public class Fishing
 	 * @param lureId int
 	 * @return boolean
 	 */
-	public static boolean isNightLure(int lureId)
+	static boolean isNightLure(int lureId)
 	{
 		switch (lureId)
 		{

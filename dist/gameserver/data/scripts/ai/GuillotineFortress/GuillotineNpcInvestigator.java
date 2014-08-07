@@ -86,12 +86,8 @@ public final class GuillotineNpcInvestigator extends GuillotineNpcPriest
 	
 	private class RunDialog extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public RunDialog()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

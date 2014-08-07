@@ -25,16 +25,16 @@ import java.util.NoSuchElementException;
  */
 public class GArray<E> implements Collection<E>
 {
-	protected transient E[] elementData;
-	protected transient int modCount = 0;
-	protected int size;
+	private transient E[] elementData;
+	transient int modCount = 0;
+	private int size;
 	
 	/**
 	 * Constructor for GArray.
 	 * @param initialCapacity int
 	 */
 	@SuppressWarnings("unchecked")
-	public GArray(int initialCapacity)
+	private GArray(int initialCapacity)
 	{
 		if (initialCapacity < 0)
 		{
@@ -65,7 +65,7 @@ public class GArray<E> implements Collection<E>
 	 * Method ensureCapacity.
 	 * @param minCapacity int
 	 */
-	public void ensureCapacity(int minCapacity)
+	private void ensureCapacity(int minCapacity)
 	{
 		modCount++;
 		int oldCapacity = elementData.length;
@@ -151,7 +151,7 @@ public class GArray<E> implements Collection<E>
 	 * @param index int
 	 * @return E
 	 */
-	public E get(int index)
+	E get(int index)
 	{
 		RangeCheck(index);
 		return elementData[index];
@@ -209,7 +209,7 @@ public class GArray<E> implements Collection<E>
 	 * @param index int
 	 * @return E
 	 */
-	public E remove(int index)
+	E remove(int index)
 	{
 		modCount++;
 		RangeCheck(index);
@@ -223,7 +223,7 @@ public class GArray<E> implements Collection<E>
 	 * Method removeFirst.
 	 * @return E
 	 */
-	public E removeFirst()
+	E removeFirst()
 	{
 		return size > 0 ? remove(0) : null;
 	}
@@ -232,7 +232,7 @@ public class GArray<E> implements Collection<E>
 	 * Method removeLast.
 	 * @return E
 	 */
-	public E removeLast()
+	E removeLast()
 	{
 		if (size > 0)
 		{
@@ -252,7 +252,7 @@ public class GArray<E> implements Collection<E>
 	 * @param element E
 	 * @return E
 	 */
-	public E set(int index, E element)
+	E set(int index, E element)
 	{
 		RangeCheck(index);
 		E oldValue = elementData[index];
@@ -265,7 +265,7 @@ public class GArray<E> implements Collection<E>
 	 * @param o Object
 	 * @return int
 	 */
-	public int indexOf(Object o)
+	int indexOf(Object o)
 	{
 		if (o == null)
 		{
@@ -459,7 +459,7 @@ public class GArray<E> implements Collection<E>
 	/**
 	 * Method clearSize.
 	 */
-	public void clearSize()
+	void clearSize()
 	{
 		modCount++;
 		size = 0;
@@ -489,7 +489,6 @@ public class GArray<E> implements Collection<E>
 		 */
 		public Itr()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

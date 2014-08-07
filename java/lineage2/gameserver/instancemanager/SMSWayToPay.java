@@ -26,6 +26,7 @@ import java.util.Hashtable;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
@@ -50,18 +51,22 @@ public class SMSWayToPay
 	/**
 	 * @author Mobius
 	 */
-	public static class DataContainer
+	private static class DataContainer
 	{
-		public int id;
-		public int service_id;
-		public int status;
-		public long time;
-		public int curr_id;
-		public float sum;
-		public float profit;
-		public String email;
-		public int client_id;
-		public String client_params;
+		public DataContainer()
+		{
+		}
+		
+		int id;
+		int service_id;
+		int status;
+		long time;
+		int curr_id;
+		float sum;
+		float profit;
+		String email;
+		int client_id;
+		String client_params;
 	}
 	
 	private static SMSWayToPay _instance;
@@ -136,7 +141,7 @@ public class SMSWayToPay
 	/**
 	 * Method parse.
 	 */
-	public void parse()
+	void parse()
 	{
 		ArrayList<DataContainer> Containers = new ArrayList<>();
 		String[] arrayedDatas = pageToString(Config.SMS_PAYMENT_WEB_ADDRESS).split("\\{");
@@ -227,7 +232,7 @@ public class SMSWayToPay
 	 * @param wProfit float
 	 * @param wCountry String
 	 */
-	public void checkAndSave(int id, int service_id, int status, long time, int curr_id, float sum, float profit, String email, int client_id, int wNumber, String wPhone, String wText, float wCost, float wProfit, String wCountry)
+	private void checkAndSave(int id, int service_id, int status, long time, int curr_id, float sum, float profit, String email, int client_id, int wNumber, String wPhone, String wText, float wCost, float wProfit, String wCountry)
 	{
 		int objId = 0;
 		Connection con = null;
@@ -413,7 +418,6 @@ public class SMSWayToPay
 		 */
 		public ConnectAndUpdate()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -437,7 +441,6 @@ public class SMSWayToPay
 		 */
 		public Clean()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -461,7 +464,6 @@ public class SMSWayToPay
 		 */
 		public GiveReward()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

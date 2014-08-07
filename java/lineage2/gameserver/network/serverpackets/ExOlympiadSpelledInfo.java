@@ -14,6 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.model.Player;
 
 public class ExOlympiadSpelledInfo extends L2GameServerPacket
@@ -22,13 +23,13 @@ public class ExOlympiadSpelledInfo extends L2GameServerPacket
 	private int char_obj_id = 0;
 	private final List<Effect> _effects;
 	
-	class Effect
+	private class Effect
 	{
-		int skillId;
-		int level;
-		int duration;
+		final int skillId;
+		final int level;
+		final int duration;
 		
-		public Effect(int skillId, int level, int duration)
+		Effect(int skillId, int level, int duration)
 		{
 			this.skillId = skillId;
 			this.level = level;

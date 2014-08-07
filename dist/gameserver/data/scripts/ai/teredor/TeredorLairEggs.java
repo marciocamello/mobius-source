@@ -107,11 +107,11 @@ public final class TeredorLairEggs extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	public final class TaskSetBlue implements Runnable
+	private final class TaskSetBlue implements Runnable
 	{
-		NpcInstance _npc;
-		Player _player;
-		Reflection _ref;
+		private final NpcInstance _npc;
+		private final Player _player;
+		private final Reflection _ref;
 		
 		/**
 		 * Constructor for TaskSetBlue.
@@ -119,7 +119,7 @@ public final class TeredorLairEggs extends Fighter
 		 * @param player Player
 		 * @param ref Reflection
 		 */
-		public TaskSetBlue(NpcInstance npc, Player player, Reflection ref)
+		TaskSetBlue(NpcInstance npc, Player player, Reflection ref)
 		{
 			_npc = npc;
 			_player = player;
@@ -143,11 +143,11 @@ public final class TeredorLairEggs extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	public final class SpawnMonster extends RunnableImpl
+	private final class SpawnMonster extends RunnableImpl
 	{
-		NpcInstance _npc;
-		Player _player;
-		Reflection _ref;
+		private final NpcInstance _npc;
+		private final Player _player;
+		private final Reflection _ref;
 		
 		/**
 		 * Constructor for SpawnMonster.
@@ -155,7 +155,7 @@ public final class TeredorLairEggs extends Fighter
 		 * @param player Player
 		 * @param ref Reflection
 		 */
-		public SpawnMonster(NpcInstance npc, Player player, Reflection ref)
+		SpawnMonster(NpcInstance npc, Player player, Reflection ref)
 		{
 			_npc = npc;
 			_player = player;

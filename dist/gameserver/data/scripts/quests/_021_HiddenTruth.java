@@ -23,22 +23,19 @@ import lineage2.gameserver.utils.Location;
 
 public class _021_HiddenTruth extends Quest implements ScriptFile
 {
-	public static final int DARIN = 30048;
-	public static final int ROXXY = 30006;
-	public static final int BAULRO = 30033;
-	public static final int MysteriousWizard = 31522;
-	public static final int Tombstone = 31523;
-	public static final int GhostofvonHellmannId = 31524;
-	public static final int GhostofvonHellmannsPageId = 31525;
-	public static final int BrokenBookshelf = 31526;
-	public static final int Agripel = 31348;
-	public static final int Dominic = 31350;
-	public static final int Benedict = 31349;
-	public static final int Innocentin = 31328;
-	public static final int CrossofEinhasad = 7140;
-	public static final int CrossofEinhasadNextQuest = 7141;
-	public NpcInstance GhostofvonHellmannsPage;
-	public NpcInstance GhostofvonHellmann;
+	private static final int MysteriousWizard = 31522;
+	private static final int Tombstone = 31523;
+	private static final int GhostofvonHellmannId = 31524;
+	private static final int GhostofvonHellmannsPageId = 31525;
+	private static final int BrokenBookshelf = 31526;
+	private static final int Agripel = 31348;
+	private static final int Dominic = 31350;
+	private static final int Benedict = 31349;
+	private static final int Innocentin = 31328;
+	private static final int CrossofEinhasad = 7140;
+	private static final int CrossofEinhasadNextQuest = 7141;
+	private NpcInstance GhostofvonHellmannsPage;
+	private NpcInstance GhostofvonHellmann;
 	
 	private void spawnGhostofvonHellmannsPage()
 	{

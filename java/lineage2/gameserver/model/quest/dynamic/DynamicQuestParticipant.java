@@ -22,7 +22,7 @@ public class DynamicQuestParticipant implements Comparable<DynamicQuestParticipa
 	private int currentPoints;
 	private int additionalPoints;
 	
-	public DynamicQuestParticipant(String name)
+	DynamicQuestParticipant(String name)
 	{
 		this.name = name;
 	}
@@ -47,7 +47,7 @@ public class DynamicQuestParticipant implements Comparable<DynamicQuestParticipa
 		this.additionalPoints = additionalPoints;
 	}
 	
-	public void increaseCurrentPoints(int points)
+	void increaseCurrentPoints(int points)
 	{
 		currentPoints += points;
 	}

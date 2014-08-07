@@ -18,7 +18,9 @@ import static lineage2.gameserver.ai.CtrlIntention.AI_INTENTION_CAST;
 import static lineage2.gameserver.ai.CtrlIntention.AI_INTENTION_FOLLOW;
 import static lineage2.gameserver.ai.CtrlIntention.AI_INTENTION_INTERACT;
 import static lineage2.gameserver.ai.CtrlIntention.AI_INTENTION_PICK_UP;
+
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.cache.Msg;
@@ -42,7 +44,8 @@ import lineage2.gameserver.utils.Location;
 public class PlayableAI extends CharacterAI
 {
 	private volatile int thinking = 0;
-	protected Object _intention_arg0 = null, _intention_arg1 = null;
+	Object _intention_arg0 = null;
+	Object _intention_arg1 = null;
 	protected Skill _skill;
 	private nextAction _nextAction;
 	private Object _nextAction_arg0;
@@ -57,7 +60,7 @@ public class PlayableAI extends CharacterAI
 	 * Constructor for PlayableAI.
 	 * @param actor Playable
 	 */
-	public PlayableAI(Playable actor)
+	PlayableAI(Playable actor)
 	{
 		super(actor);
 	}
@@ -454,8 +457,12 @@ public class PlayableAI extends CharacterAI
 	/**
 	 * @author Mobius
 	 */
-	protected class ThinkFollow extends RunnableImpl
+	private class ThinkFollow extends RunnableImpl
 	{
+		public ThinkFollow()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -507,7 +514,7 @@ public class PlayableAI extends CharacterAI
 	/**
 	 * @author Mobius
 	 */
-	protected class ExecuteFollow extends RunnableImpl
+	private class ExecuteFollow extends RunnableImpl
 	{
 		private final Creature _target;
 		private final int _range;
@@ -517,7 +524,7 @@ public class PlayableAI extends CharacterAI
 		 * @param target Creature
 		 * @param range int
 		 */
-		public ExecuteFollow(Creature target, int range)
+		ExecuteFollow(Creature target, int range)
 		{
 			_target = target;
 			_range = range;
@@ -577,7 +584,7 @@ public class PlayableAI extends CharacterAI
 	/**
 	 * Method thinkInteract.
 	 */
-	protected void thinkInteract()
+	private void thinkInteract()
 	{
 		Playable actor = getActor();
 		GameObject target = (GameObject) _intention_arg0;
@@ -631,7 +638,7 @@ public class PlayableAI extends CharacterAI
 	/**
 	 * Method thinkPickUp.
 	 */
-	protected void thinkPickUp()
+	private void thinkPickUp()
 	{
 		final Playable actor = getActor();
 		final GameObject target = (GameObject) _intention_arg0;
@@ -890,14 +897,14 @@ public class PlayableAI extends CharacterAI
 	/**
 	 * Method thinkIdle.
 	 */
-	protected void thinkIdle()
+	private void thinkIdle()
 	{
 	}
 	
 	/**
 	 * Method thinkRest.
 	 */
-	protected void thinkRest()
+	private void thinkRest()
 	{
 	}
 	

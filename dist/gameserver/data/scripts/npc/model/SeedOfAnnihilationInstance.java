@@ -17,6 +17,7 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.templates.npc.MinionData;
 import lineage2.gameserver.templates.npc.NpcTemplate;
+
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -25,9 +26,6 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public final class SeedOfAnnihilationInstance extends MonsterInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int[] BISTAKON_MOBS = new int[]
 	{

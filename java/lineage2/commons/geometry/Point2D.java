@@ -16,9 +16,9 @@ package lineage2.commons.geometry;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class Point2D implements Cloneable
+class Point2D implements Cloneable
 {
-	public static final Point2D[] EMPTY_ARRAY = new Point2D[0];
+	static final Point2D[] EMPTY_ARRAY = new Point2D[0];
 	public int x;
 	public int y;
 	
@@ -34,7 +34,7 @@ public class Point2D implements Cloneable
 	 * @param x int
 	 * @param y int
 	 */
-	public Point2D(int x, int y)
+	Point2D(int x, int y)
 	{
 		this.x = x;
 		this.y = y;
@@ -92,7 +92,7 @@ public class Point2D implements Cloneable
 	 * @param y int
 	 * @return boolean
 	 */
-	public boolean equals(int x, int y)
+	private boolean equals(int x, int y)
 	{
 		return (this.x == x) && (this.y == y);
 	}

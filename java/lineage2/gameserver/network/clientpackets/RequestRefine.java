@@ -100,7 +100,7 @@ public final class RequestRefine extends AbstractRefinePacket
 	 * @param lsi LifeStoneInfo
 	 * @return boolean
 	 */
-	boolean TryAugmentItem(Player player, ItemInstance targetItem, LifeStoneInfo lsi)
+	private boolean TryAugmentItem(Player player, ItemInstance targetItem, LifeStoneInfo lsi)
 	{
 		if (!player.getInventory().destroyItemByObjectId(_gemstoneItemObjId, _gemstoneCount))
 		{

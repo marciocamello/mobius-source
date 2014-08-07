@@ -24,9 +24,6 @@ import lineage2.gameserver.utils.WarehouseFunctions;
  */
 public final class FreightSenderInstance extends MerchantInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

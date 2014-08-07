@@ -15,6 +15,7 @@ package lineage2.gameserver.data.xml.parser;
 import java.util.Iterator;
 import java.util.List;
 import java.util.StringTokenizer;
+
 import lineage2.commons.data.xml.AbstractDirParser;
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.model.entity.residence.ResidenceType;
@@ -44,6 +45,7 @@ import lineage2.gameserver.stats.triggers.TriggerInfo;
 import lineage2.gameserver.stats.triggers.TriggerType;
 import lineage2.gameserver.templates.item.ArmorTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate;
+
 import org.dom4j.Attribute;
 import org.dom4j.Element;
 
@@ -52,7 +54,7 @@ import org.dom4j.Element;
  * @version $Revision: 1.0 $
  * @param <H>
  */
-public abstract class StatParser<H extends AbstractHolder> extends AbstractDirParser<H>
+abstract class StatParser<H extends AbstractHolder> extends AbstractDirParser<H>
 {
 	/**
 	 * Constructor for StatParser.
@@ -86,7 +88,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 	 * @param element Element
 	 * @return Condition
 	 */
-	protected Condition parseCond(Element element)
+	private Condition parseCond(Element element)
 	{
 		String name = element.getName();
 		
@@ -127,7 +129,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 	 * @param n Element
 	 * @return Condition
 	 */
-	protected Condition parseLogicAnd(Element n)
+	private Condition parseLogicAnd(Element n)
 	{
 		ConditionLogicAnd cond = new ConditionLogicAnd();
 		
@@ -150,7 +152,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 	 * @param n Element
 	 * @return Condition
 	 */
-	protected Condition parseLogicOr(Element n)
+	private Condition parseLogicOr(Element n)
 	{
 		ConditionLogicOr cond = new ConditionLogicOr();
 		
@@ -173,7 +175,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 	 * @param n Element
 	 * @return Condition
 	 */
-	protected Condition parseLogicNot(Element n)
+	private Condition parseLogicNot(Element n)
 	{
 		for (Object element : n.elements())
 		{
@@ -189,7 +191,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 	 * @param element Element
 	 * @return Condition
 	 */
-	protected Condition parseTargetCondition(Element element)
+	private Condition parseTargetCondition(Element element)
 	{
 		Condition cond = null;
 		
@@ -213,7 +215,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 	 * @param element Element
 	 * @return Condition
 	 */
-	protected Condition parseZoneCondition(Element element)
+	private Condition parseZoneCondition(Element element)
 	{
 		Condition cond = null;
 		
@@ -237,7 +239,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 	 * @param element Element
 	 * @return Condition
 	 */
-	protected Condition parsePlayerCondition(Element element)
+	private Condition parsePlayerCondition(Element element)
 	{
 		Condition cond = null;
 		
@@ -299,7 +301,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 	 * @param element Element
 	 * @return Condition
 	 */
-	protected Condition parseUsingCondition(Element element)
+	private Condition parseUsingCondition(Element element)
 	{
 		Condition cond = null;
 		
@@ -374,7 +376,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 	 * @param c Condition
 	 * @return Condition
 	 */
-	protected Condition joinAnd(Condition cond, Condition c)
+	private Condition joinAnd(Condition cond, Condition c)
 	{
 		if (cond == null)
 		{
@@ -468,7 +470,7 @@ public abstract class StatParser<H extends AbstractHolder> extends AbstractDirPa
 	 * @param template StatTemplate
 	 * @param name String
 	 */
-	protected void attachFunc(Element n, StatTemplate template, String name)
+	private void attachFunc(Element n, StatTemplate template, String name)
 	{
 		Stats stat = Stats.valueOfXml(n.attributeValue("stat"));
 		String order = n.attributeValue("order");

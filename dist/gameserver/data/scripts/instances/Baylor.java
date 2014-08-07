@@ -51,12 +51,8 @@ public final class Baylor extends Reflection
 	// player.showQuestMovie(SceneMovie.si_barlog_opening);
 	private class FirstStage extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public FirstStage()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

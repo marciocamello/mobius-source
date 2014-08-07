@@ -20,11 +20,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
+
 import javax.tools.Diagnostic;
 import javax.tools.DiagnosticListener;
 import javax.tools.JavaCompiler;
 import javax.tools.JavaFileObject;
 import javax.tools.StandardJavaFileManager;
+
 import org.eclipse.jdt.internal.compiler.tool.EclipseCompiler;
 import org.eclipse.jdt.internal.compiler.tool.EclipseFileManager;
 import org.slf4j.Logger;
@@ -48,7 +50,7 @@ public class Compiler
 	 * @param files File[]
 	 * @return boolean
 	 */
-	public boolean compile(File... files)
+	private boolean compile(File... files)
 	{
 		List<String> options = new ArrayList<>();
 		options.add("-Xlint:all");
@@ -96,7 +98,6 @@ public class Compiler
 		 */
 		public DefaultDiagnosticListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

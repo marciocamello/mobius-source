@@ -20,7 +20,9 @@ import java.util.concurrent.Delayed;
 import java.util.concurrent.RunnableScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
+
 import lineage2.commons.collections.LazyArrayList;
+
 import org.apache.commons.lang3.mutable.MutableLong;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,7 +34,7 @@ import org.slf4j.LoggerFactory;
 public abstract class SteppingRunnableQueueManager implements Runnable
 {
 	static final Logger _log = LoggerFactory.getLogger(SteppingRunnableQueueManager.class);
-	protected final long tickPerStepInMillis;
+	final long tickPerStepInMillis;
 	private final List<SteppingScheduledFuture<?>> queue = new CopyOnWriteArrayList<>();
 	private final AtomicBoolean isRunning = new AtomicBoolean();
 	
@@ -49,7 +51,7 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 	 * @author Mobius
 	 * @param <V>
 	 */
-	public class SteppingScheduledFuture<V> implements RunnableScheduledFuture<V>
+	private class SteppingScheduledFuture<V> implements RunnableScheduledFuture<V>
 	{
 		final Runnable r;
 		private final long stepping;
@@ -64,7 +66,7 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 		 * @param stepping long
 		 * @param isPeriodic boolean
 		 */
-		public SteppingScheduledFuture(Runnable r, long initial, long stepping, boolean isPeriodic)
+		SteppingScheduledFuture(Runnable r, long initial, long stepping, boolean isPeriodic)
 		{
 			this.r = r;
 			this.step = initial;

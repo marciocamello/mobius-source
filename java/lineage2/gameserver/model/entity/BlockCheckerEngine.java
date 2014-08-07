@@ -18,6 +18,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -48,6 +49,7 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ReflectionUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -314,7 +316,7 @@ public final class BlockCheckerEngine
 	 * Method clearArena.
 	 * @param zoneName String
 	 */
-	public void clearArena(String zoneName)
+	void clearArena(String zoneName)
 	{
 		Zone zone = ReflectionUtils.getZone(zoneName);
 		
@@ -446,10 +448,10 @@ public final class BlockCheckerEngine
 	/**
 	 * @author Mobius
 	 */
-	class SpawnRound extends RunnableImpl
+	private class SpawnRound extends RunnableImpl
 	{
-		int _numOfBoxes;
-		int _round;
+		private final int _numOfBoxes;
+		private final int _round;
 		
 		/**
 		 * Constructor for SpawnRound.
@@ -607,8 +609,12 @@ public final class BlockCheckerEngine
 	/**
 	 * @author Mobius
 	 */
-	class EndEvent extends RunnableImpl
+	private class EndEvent extends RunnableImpl
 	{
+		public EndEvent()
+		{
+		}
+		
 		/**
 		 * Method clearMe.
 		 */
@@ -834,7 +840,6 @@ public final class BlockCheckerEngine
 		 */
 		public OnExitPlayerListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

@@ -32,9 +32,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class WorkshopServantInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int[] medals =
 	{

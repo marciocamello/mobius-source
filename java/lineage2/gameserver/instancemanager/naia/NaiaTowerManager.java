@@ -16,12 +16,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,7 +41,7 @@ public final class NaiaTowerManager
 	private static List<NpcInstance> _roomMobList;
 	private static long _towerAccessible = 0;
 	private static int _index = 0;
-	public static HashMap<Integer, Boolean> lockedRooms;
+	private static HashMap<Integer, Boolean> lockedRooms;
 	private static final NaiaTowerManager _instance = new NaiaTowerManager();
 	
 	/**
@@ -279,7 +281,6 @@ public final class NaiaTowerManager
 		 */
 		public GroupTowerTimer()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

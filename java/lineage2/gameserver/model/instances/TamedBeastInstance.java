@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Future;
+
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.lang.reference.HardReferences;
 import lineage2.commons.threading.RunnableImpl;
@@ -40,9 +41,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class TamedBeastInstance extends FeedableBeastInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int MAX_DISTANCE_FROM_OWNER = 2000;
 	private static final int MAX_DISTANCE_FOR_BUFF = 200;

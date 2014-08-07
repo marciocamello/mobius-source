@@ -13,8 +13,10 @@
 package lineage2.gameserver.network.clientpackets;
 
 import java.util.Collection;
+
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -24,9 +24,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class SpezionNpcInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	public SpezionNpcInstance(int objectId, NpcTemplate template)

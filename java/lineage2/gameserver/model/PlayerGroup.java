@@ -13,6 +13,7 @@
 package lineage2.gameserver.model;
 
 import java.util.Iterator;
+
 import lineage2.commons.collections.EmptyIterator;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 

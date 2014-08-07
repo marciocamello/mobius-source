@@ -33,7 +33,7 @@ public class InsideSubAI extends DefaultAI
 	 * Constructor for InsideSubAI.
 	 * @param actor NpcInstance
 	 */
-	public InsideSubAI(NpcInstance actor)
+	InsideSubAI(NpcInstance actor)
 	{
 		super(actor);
 	}

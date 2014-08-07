@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
@@ -50,6 +51,7 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.ReflectionUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -64,8 +66,15 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 	/**
 	 * @author Mobius
 	 */
-	public final class StartTask extends RunnableImpl
+	private final class StartTask extends RunnableImpl
 	{
+		/**
+		 * 
+		 */
+		public StartTask()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -968,7 +977,6 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		 */
 		public ZoneListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

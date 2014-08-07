@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.actor.instances.player.Friend;
 
@@ -55,12 +56,8 @@ public class L2FriendList extends L2GameServerPacket
 	
 	private static class FriendInfo
 	{
-		/**
-		 *
-		 */
 		public FriendInfo()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		int _objectId;

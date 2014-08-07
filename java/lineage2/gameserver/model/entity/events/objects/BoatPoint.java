@@ -13,6 +13,7 @@
 package lineage2.gameserver.model.entity.events.objects;
 
 import lineage2.gameserver.utils.Location;
+
 import org.dom4j.Element;
 
 /**
@@ -21,9 +22,6 @@ import org.dom4j.Element;
  */
 public class BoatPoint extends Location
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private int _speed1;
 	private int _speed2;
@@ -41,7 +39,7 @@ public class BoatPoint extends Location
 	 * @param fuel int
 	 * @param teleport boolean
 	 */
-	public BoatPoint(int x, int y, int z, int h, int speed1, int speed2, int fuel, boolean teleport)
+	private BoatPoint(int x, int y, int z, int h, int speed1, int speed2, int fuel, boolean teleport)
 	{
 		super(x, y, z, h);
 		_speed1 = speed1;

@@ -14,11 +14,13 @@ package lineage2.gameserver.data.xml.parser;
 
 import java.io.File;
 import java.util.Iterator;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.OptionDataHolder;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.OptionDataTemplate;
+
 import org.dom4j.Element;
 
 /**

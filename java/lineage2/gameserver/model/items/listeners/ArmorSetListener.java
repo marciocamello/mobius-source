@@ -14,6 +14,7 @@ package lineage2.gameserver.model.items.listeners;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.data.xml.holder.ArmorSetsHolder;
 import lineage2.gameserver.listener.inventory.OnEquipListener;
 import lineage2.gameserver.model.ArmorSet;

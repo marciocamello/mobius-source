@@ -26,6 +26,7 @@ import lineage2.gameserver.network.serverpackets.components.SceneMovie;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
+
 import org.apache.commons.lang3.ArrayUtils;
 
 /**

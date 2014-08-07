@@ -13,6 +13,7 @@
 package handler.voicecommands;
 
 import java.util.List;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
@@ -66,7 +67,8 @@ public final class CWHPrivileges implements IVoicedCommandHandler, ScriptFile
 	
 	/**
 	 * Method getVoicedCommandList.
-	 * @return String[] * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#getVoicedCommandList()
+	 * @return String[]
+	 * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#getVoicedCommandList()
 	 */
 	@Override
 	public String[] getVoicedCommandList()
@@ -79,7 +81,8 @@ public final class CWHPrivileges implements IVoicedCommandHandler, ScriptFile
 	 * @param command String
 	 * @param activeChar Player
 	 * @param args String
-	 * @return boolean * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
 	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String args)

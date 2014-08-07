@@ -46,16 +46,16 @@ public class ExManageMpccRoomMember extends L2GameServerPacket
 		writeD(_memberInfo.memberType);
 	}
 	
-	static class MpccRoomMemberInfo
+	private static class MpccRoomMemberInfo
 	{
-		public final int objectId;
-		public final int classId;
-		public final int level;
-		public final int location;
-		public final int memberType;
-		public final String name;
+		final int objectId;
+		final int classId;
+		final int level;
+		final int location;
+		final int memberType;
+		final String name;
 		
-		public MpccRoomMemberInfo(Player member, int type)
+		MpccRoomMemberInfo(Player member, int type)
 		{
 			objectId = member.getObjectId();
 			name = member.getName();

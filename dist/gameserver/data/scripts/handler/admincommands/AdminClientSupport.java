@@ -25,6 +25,7 @@ import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,7 +40,7 @@ public final class AdminClientSupport extends ScriptAdminCommand
 	/**
 	 * @author Mobius
 	 */
-	public enum Commands
+	private enum Commands
 	{
 		admin_setskill,
 		admin_summon

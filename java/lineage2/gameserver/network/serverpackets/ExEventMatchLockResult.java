@@ -18,6 +18,5 @@ public class ExEventMatchLockResult extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0x0B);
-		// TODO пока не реализован даже в клиенте
 	}
 }

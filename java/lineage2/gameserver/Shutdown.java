@@ -14,6 +14,7 @@ package lineage2.gameserver;
 
 import java.util.Timer;
 import java.util.TimerTask;
+
 import lineage2.commons.net.nio.impl.SelectorThread;
 import lineage2.commons.time.cron.SchedulingPattern;
 import lineage2.commons.time.cron.SchedulingPattern.InvalidPatternException;
@@ -30,6 +31,7 @@ import lineage2.gameserver.network.loginservercon.LoginServerCommunication;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.Scripts;
 import lineage2.gameserver.utils.Util;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -68,7 +70,6 @@ public class Shutdown extends Thread
 		 */
 		public ShutdownCounter()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -178,7 +179,7 @@ public class Shutdown extends Thread
 	 * @param time String
 	 * @param shutdownMode int
 	 */
-	public void schedule(String time, int shutdownMode)
+	void schedule(String time, int shutdownMode)
 	{
 		SchedulingPattern cronTime;
 		

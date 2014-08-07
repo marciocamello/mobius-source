@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -25,6 +26,7 @@ import lineage2.gameserver.scripts.Scripts;
 import lineage2.gameserver.scripts.Scripts.ScriptClassAndMethod;
 import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.Strings;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,7 +35,6 @@ import org.slf4j.LoggerFactory;
  * BUTTON BR BODY BAR ADDRESS A SEL LIST VAR FORE READONL ROWS VALIGN FIXWIDTH BORDERCOLORLI BORDERCOLORDA BORDERCOLOR BORDER BGCOLOR BACKGROUND ALIGN VALU READONLY MULTIPLE SELECTED TYP TYPE MAXLENGTH CHECKED SRC Y X QUERYDELAY NOSCROLLBAR IMGSRC B FG SIZE FACE COLOR DEFFON DEFFIXEDFONT WIDTH VALUE
  * TOOLTIP NAME MIN MAX HEIGHT DISABLED ALIGN MSG LINK HREF ACTION ClassId fstring
  */
-// TODO [G1ta0] review
 public class NpcHtmlMessage extends L2GameServerPacket
 {
 	protected static final Logger _log = LoggerFactory.getLogger(NpcHtmlMessage.class);

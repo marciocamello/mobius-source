@@ -25,9 +25,6 @@ import lineage2.gameserver.utils.NpcUtils;
  */
 public final class MaguenTraderInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

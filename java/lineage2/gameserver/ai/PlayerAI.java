@@ -13,7 +13,9 @@
 package lineage2.gameserver.ai;
 
 import static lineage2.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
+
 import java.util.List;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.geodata.GeoEngine;

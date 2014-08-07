@@ -14,6 +14,7 @@ package lineage2.gameserver.model.instances;
 
 import java.util.Collections;
 import java.util.List;
+
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
@@ -33,9 +34,6 @@ import lineage2.gameserver.utils.Location;
  */
 public class StaticObjectInstance extends GameObject
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private final HardReference<StaticObjectInstance> reference;
 	private final StaticObjectTemplate _template;

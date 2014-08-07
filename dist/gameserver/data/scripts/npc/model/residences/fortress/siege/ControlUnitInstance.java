@@ -25,9 +25,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class ControlUnitInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int ITEM_ID = 10014;
 	private static final int COND_CAN_OPEN = 0;

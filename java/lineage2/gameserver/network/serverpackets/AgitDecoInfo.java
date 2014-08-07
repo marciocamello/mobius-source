@@ -14,6 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.entity.residence.ClanHall;
 import lineage2.gameserver.model.entity.residence.ResidenceFunction;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

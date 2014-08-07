@@ -15,6 +15,7 @@ package events.SavingSnowman;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
@@ -49,6 +50,7 @@ import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.Util;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -64,14 +66,14 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 	private static ScheduledFuture<?> _saveTask;
 	private static ScheduledFuture<?> _sayTask;
 	private static ScheduledFuture<?> _eatTask;
-	public static SnowmanState _snowmanState;
+	static SnowmanState _snowmanState;
 	static NpcInstance _snowman;
 	private static Creature _thomas;
 	
 	/**
 	 * @author Mobius
 	 */
-	public static enum SnowmanState
+	private static enum SnowmanState
 	{
 		CAPTURED,
 		KILLED,
@@ -548,7 +550,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 	 * Method spawnRewarder.
 	 * @param rewarded Player
 	 */
-	public static void spawnRewarder(Player rewarded)
+	private static void spawnRewarder(Player rewarded)
 	{
 		for (NpcInstance npc : rewarded.getAroundNpc(1500, 300))
 		{
@@ -881,7 +883,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 	/**
 	 * Method captureSnowman.
 	 */
-	public void captureSnowman()
+	void captureSnowman()
 	{
 		Location spawnPoint = getRandomSpawnPoint();
 		
@@ -1024,8 +1026,15 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		});
 	}
 	
-	public final class SayTask extends RunnableImpl
+	private final class SayTask extends RunnableImpl
 	{
+		/**
+		 * 
+		 */
+		public SayTask()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -1047,8 +1056,15 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		}
 	}
 	
-	public final class ShoutTask extends RunnableImpl
+	private final class ShoutTask extends RunnableImpl
 	{
+		/**
+		 * 
+		 */
+		public ShoutTask()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -1064,8 +1080,15 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		}
 	}
 	
-	public final class SaveTask extends RunnableImpl
+	private final class SaveTask extends RunnableImpl
 	{
+		/**
+		 * 
+		 */
+		public SaveTask()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */

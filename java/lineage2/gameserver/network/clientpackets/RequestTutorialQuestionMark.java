@@ -22,7 +22,7 @@ import lineage2.gameserver.model.quest.Quest;
  */
 public class RequestTutorialQuestionMark extends L2GameClientPacket
 {
-	int _number = 0;
+	private int _number = 0;
 	
 	/**
 	 * Method readImpl.

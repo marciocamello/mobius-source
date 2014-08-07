@@ -14,6 +14,7 @@ package instances;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -36,6 +37,7 @@ import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -177,12 +179,8 @@ public final class TautiNormal extends Reflection
 	
 	private class StartNormalTauti extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public StartNormalTauti()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -209,12 +207,8 @@ public final class TautiNormal extends Reflection
 	
 	private class DeathListener implements OnDeathListener
 	{
-		/**
-		 *
-		 */
 		public DeathListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -229,12 +223,8 @@ public final class TautiNormal extends Reflection
 	
 	private class TautiDeath extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public TautiDeath()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

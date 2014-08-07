@@ -17,6 +17,7 @@ import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.templates.mapregion.RegionData;
 import lineage2.gameserver.utils.Location;
+
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -119,7 +120,7 @@ public class MapRegionManager extends AbstractHolder
 	 * @return T
 	 */
 	@SuppressWarnings("unchecked")
-	public <T extends RegionData> T getRegionData(Class<T> clazz, int x, int y, int z)
+	private <T extends RegionData> T getRegionData(Class<T> clazz, int x, int y, int z)
 	{
 		for (RegionData rd : map[regionX(x)][regionY(y)])
 		{

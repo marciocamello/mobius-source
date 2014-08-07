@@ -15,6 +15,7 @@ package lineage2.gameserver.model;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
+
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.lang.reference.HardReferences;
 import lineage2.gameserver.ai.CtrlIntention;
@@ -31,6 +32,7 @@ import lineage2.gameserver.scripts.Events;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.Util;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,15 +44,15 @@ public abstract class GameObject extends EventOwner
 {
 	private static final long serialVersionUID = -950375486287118921L;
 	private static final Logger _log = LoggerFactory.getLogger(GameObject.class);
-	public final static GameObject[] EMPTY_L2OBJECT_ARRAY = new GameObject[0];
-	protected final static int CREATED = 0;
-	protected final static int VISIBLE = 1;
-	protected final static int DELETED = -1;
+	final static GameObject[] EMPTY_L2OBJECT_ARRAY = new GameObject[0];
+	private final static int CREATED = 0;
+	private final static int VISIBLE = 1;
+	private final static int DELETED = -1;
 	protected int objectId;
 	private int _x;
 	private int _y;
 	private int _z;
-	protected Reflection _reflection = ReflectionManager.DEFAULT;
+	private Reflection _reflection = ReflectionManager.DEFAULT;
 	private WorldRegion _currentRegion;
 	private final AtomicInteger _state = new AtomicInteger(CREATED);
 	
@@ -324,7 +326,7 @@ public abstract class GameObject extends EventOwner
 	 * Method spawn0.
 	 * @param dropper Creature
 	 */
-	protected void spawn0(Creature dropper)
+	private void spawn0(Creature dropper)
 	{
 		if (!_state.compareAndSet(CREATED, VISIBLE))
 		{
@@ -452,7 +454,7 @@ public abstract class GameObject extends EventOwner
 	 * @param y int
 	 * @return long
 	 */
-	public final long getXYDeltaSq(int x, int y)
+	private final long getXYDeltaSq(int x, int y)
 	{
 		long dx = x - getX();
 		long dy = y - getY();
@@ -464,7 +466,7 @@ public abstract class GameObject extends EventOwner
 	 * @param loc Location
 	 * @return long
 	 */
-	public final long getXYDeltaSq(Location loc)
+	private final long getXYDeltaSq(Location loc)
 	{
 		return getXYDeltaSq(loc.x, loc.y);
 	}
@@ -474,7 +476,7 @@ public abstract class GameObject extends EventOwner
 	 * @param z int
 	 * @return long
 	 */
-	public final long getZDeltaSq(int z)
+	private final long getZDeltaSq(int z)
 	{
 		long dz = z - getZ();
 		return dz * dz;
@@ -497,7 +499,7 @@ public abstract class GameObject extends EventOwner
 	 * @param z int
 	 * @return long
 	 */
-	public final long getXYZDeltaSq(int x, int y, int z)
+	private final long getXYZDeltaSq(int x, int y, int z)
 	{
 		return getXYDeltaSq(x, y) + getZDeltaSq(z);
 	}
@@ -507,7 +509,7 @@ public abstract class GameObject extends EventOwner
 	 * @param loc Location
 	 * @return long
 	 */
-	public final long getXYZDeltaSq(Location loc)
+	private final long getXYZDeltaSq(Location loc)
 	{
 		return getXYDeltaSq(loc.x, loc.y) + getZDeltaSq(loc.z);
 	}
@@ -656,7 +658,7 @@ public abstract class GameObject extends EventOwner
 	 * @param range long
 	 * @return boolean
 	 */
-	public final boolean isInRangeZSq(Location loc, long range)
+	private final boolean isInRangeZSq(Location loc, long range)
 	{
 		return getXYZDeltaSq(loc) <= range;
 	}
@@ -717,7 +719,7 @@ public abstract class GameObject extends EventOwner
 	 * @param ignoreZ boolean
 	 * @return double
 	 */
-	public final double getRealDistance3D(GameObject obj, boolean ignoreZ)
+	private final double getRealDistance3D(GameObject obj, boolean ignoreZ)
 	{
 		double distance = ignoreZ ? getDistance(obj) : getDistance3D(obj);
 		
@@ -1072,19 +1074,10 @@ public abstract class GameObject extends EventOwner
 	
 	/**
 	 * Method dump.
-	 * @return String
-	 */
-	public String dump()
-	{
-		return dump(true);
-	}
-	
-	/**
-	 * Method dump.
 	 * @param simpleTypes boolean
 	 * @return String
 	 */
-	public String dump(boolean simpleTypes)
+	private String dump(boolean simpleTypes)
 	{
 		return Util.dumpObject(this, simpleTypes, true, true);
 	}

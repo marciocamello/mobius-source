@@ -18,6 +18,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.database.DatabaseFactory;
@@ -27,6 +28,7 @@ import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.Zone.ZoneType;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,7 +38,7 @@ import org.slf4j.LoggerFactory;
  */
 public class BookMarkList
 {
-	public static final ZoneType[] FORBIDDEN_ZONES = new ZoneType[]
+	private static final ZoneType[] FORBIDDEN_ZONES = new ZoneType[]
 	{
 		ZoneType.RESIDENCE,
 		ZoneType.ssq_zone,
@@ -113,7 +115,7 @@ public class BookMarkList
 	 * @param e BookMark
 	 * @return boolean
 	 */
-	public synchronized boolean add(BookMark e)
+	private synchronized boolean add(BookMark e)
 	{
 		if (elementData.size() >= getCapacity())
 		{
@@ -207,7 +209,7 @@ public class BookMarkList
 	 * @param takeFlag boolean
 	 * @return boolean
 	 */
-	public boolean add(String aname, String aacronym, int aiconId, boolean takeFlag)
+	private boolean add(String aname, String aacronym, int aiconId, boolean takeFlag)
 	{
 		return (owner != null) && add(owner.getLoc(), aname, aacronym, aiconId, takeFlag);
 	}
@@ -221,7 +223,7 @@ public class BookMarkList
 	 * @param takeFlag boolean
 	 * @return boolean
 	 */
-	public boolean add(Location loc, String aname, String aacronym, int aiconId, boolean takeFlag)
+	private boolean add(Location loc, String aname, String aacronym, int aiconId, boolean takeFlag)
 	{
 		if (!checkFirstConditions(owner) || !checkTeleportLocation(owner, loc))
 		{
@@ -330,7 +332,7 @@ public class BookMarkList
 	 * @param player Player
 	 * @return boolean
 	 */
-	public static boolean checkFirstConditions(Player player)
+	private static boolean checkFirstConditions(Player player)
 	{
 		if (player == null)
 		{
@@ -393,7 +395,7 @@ public class BookMarkList
 	 * @param player Player
 	 * @return boolean
 	 */
-	public static boolean checkTeleportConditions(Player player)
+	private static boolean checkTeleportConditions(Player player)
 	{
 		if (player == null)
 		{
@@ -427,7 +429,7 @@ public class BookMarkList
 	 * @param loc Location
 	 * @return boolean
 	 */
-	public static boolean checkTeleportLocation(Player player, Location loc)
+	private static boolean checkTeleportLocation(Player player, Location loc)
 	{
 		return checkTeleportLocation(player, loc.x, loc.y, loc.z);
 	}
@@ -440,7 +442,7 @@ public class BookMarkList
 	 * @param z int
 	 * @return boolean
 	 */
-	public static boolean checkTeleportLocation(Player player, int x, int y, int z)
+	private static boolean checkTeleportLocation(Player player, int x, int y, int z)
 	{
 		if (player == null)
 		{

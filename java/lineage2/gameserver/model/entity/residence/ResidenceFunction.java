@@ -18,10 +18,12 @@ import java.util.Calendar;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentSkipListMap;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.TeleportLocation;
 import lineage2.gameserver.tables.SkillTable;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -157,7 +159,7 @@ public class ResidenceFunction
 	 * Method updateRentTime.
 	 * @param inDebt boolean
 	 */
-	public void updateRentTime(boolean inDebt)
+	void updateRentTime(boolean inDebt)
 	{
 		setEndTimeInMillis(System.currentTimeMillis() + 86400000);
 		Connection con = null;
@@ -197,7 +199,7 @@ public class ResidenceFunction
 	 * @param level int
 	 * @return TeleportLocation[]
 	 */
-	public TeleportLocation[] getTeleports(int level)
+	private TeleportLocation[] getTeleports(int level)
 	{
 		return _teleports.get(level);
 	}
@@ -231,7 +233,7 @@ public class ResidenceFunction
 	 * @param level int
 	 * @return int
 	 */
-	public int getLease(int level)
+	int getLease(int level)
 	{
 		return _leases.get(level);
 	}
@@ -260,7 +262,7 @@ public class ResidenceFunction
 	 * @param level int
 	 * @return int[]
 	 */
-	public int[] getBuylist(int level)
+	private int[] getBuylist(int level)
 	{
 		return _buylists.get(level);
 	}
@@ -289,7 +291,7 @@ public class ResidenceFunction
 	 * @param level int
 	 * @return Object[][]
 	 */
-	public Object[][] getBuffs(int level)
+	private Object[][] getBuffs(int level)
 	{
 		return _buffs.get(level);
 	}

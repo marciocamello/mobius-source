@@ -14,6 +14,7 @@ package events.TvTArena;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
@@ -54,19 +55,19 @@ public abstract class TvTTemplate extends Functions
 	private static final boolean ALLOW_HERO_SKILL = false;
 	protected int _managerId;
 	protected String _className;
-	protected Long _creatorId;
-	protected NpcInstance _manager;
+	private Long _creatorId;
+	private NpcInstance _manager;
 	protected int _status = 0;
 	protected final int _CharacterFound = 0;
-	protected int _price = 10000;
-	protected int _team1count = 1;
-	protected int _team2count = 1;
-	protected int _team1min = 1;
-	protected int _team1max = 85;
-	protected int _team2min = 1;
-	protected int _team2max = 85;
-	protected int _timeToStart = 10;
-	protected boolean _timeOutTask;
+	private int _price = 10000;
+	private int _team1count = 1;
+	private int _team2count = 1;
+	private int _team1min = 1;
+	private int _team1max = 85;
+	private int _team2min = 1;
+	private int _team2max = 85;
+	private int _timeToStart = 10;
+	private boolean _timeOutTask;
 	protected List<Location> _team1points;
 	protected List<Location> _team2points;
 	protected List<Long> _team1list;
@@ -89,7 +90,7 @@ public abstract class TvTTemplate extends Functions
 	/**
 	 * Method template_stop.
 	 */
-	public void template_stop()
+	void template_stop()
 	{
 		if (_status <= 0)
 		{
@@ -112,7 +113,7 @@ public abstract class TvTTemplate extends Functions
 	 * Method template_create1.
 	 * @param player Player
 	 */
-	public void template_create1(Player player)
+	void template_create1(Player player)
 	{
 		if (_status > 0)
 		{
@@ -133,7 +134,7 @@ public abstract class TvTTemplate extends Functions
 	 * Method template_register.
 	 * @param player Player
 	 */
-	public void template_register(Player player)
+	void template_register(Player player)
 	{
 		if (_status == 0)
 		{
@@ -162,7 +163,7 @@ public abstract class TvTTemplate extends Functions
 	 * @param manager NpcInstance
 	 * @param var String[]
 	 */
-	public void template_check1(Player player, NpcInstance manager, String[] var)
+	void template_check1(Player player, NpcInstance manager, String[] var)
 	{
 		if (var.length != 8)
 		{
@@ -254,7 +255,7 @@ public abstract class TvTTemplate extends Functions
 	 * Method template_register_check.
 	 * @param player Player
 	 */
-	public void template_register_check(Player player)
+	void template_register_check(Player player)
 	{
 		if (_status == 0)
 		{
@@ -403,7 +404,7 @@ public abstract class TvTTemplate extends Functions
 	/**
 	 * Method template_announce.
 	 */
-	public void template_announce()
+	void template_announce()
 	{
 		Player creator = GameObjectsStorage.getAsPlayer(_creatorId);
 		
@@ -435,7 +436,7 @@ public abstract class TvTTemplate extends Functions
 	/**
 	 * Method template_prepare.
 	 */
-	public void template_prepare()
+	void template_prepare()
 	{
 		if (_status != 1)
 		{
@@ -479,7 +480,7 @@ public abstract class TvTTemplate extends Functions
 	/**
 	 * Method template_start.
 	 */
-	public void template_start()
+	void template_start()
 	{
 		if (_status != 2)
 		{
@@ -501,7 +502,7 @@ public abstract class TvTTemplate extends Functions
 	/**
 	 * Method clearArena.
 	 */
-	public void clearArena()
+	private void clearArena()
 	{
 		for (GameObject obj : _zone.getObjects())
 		{
@@ -516,7 +517,7 @@ public abstract class TvTTemplate extends Functions
 	 * Method checkTeams.
 	 * @return boolean
 	 */
-	public boolean checkTeams()
+	private boolean checkTeams()
 	{
 		if (_team1live.isEmpty())
 		{
@@ -535,7 +536,7 @@ public abstract class TvTTemplate extends Functions
 	/**
 	 * Method saveBackCoords.
 	 */
-	public void saveBackCoords()
+	private void saveBackCoords()
 	{
 		for (Player player : getPlayers(_team1list))
 		{
@@ -551,7 +552,7 @@ public abstract class TvTTemplate extends Functions
 	/**
 	 * Method teleportPlayersToSavedCoords.
 	 */
-	public void teleportPlayersToSavedCoords()
+	private void teleportPlayersToSavedCoords()
 	{
 		for (Player player : getPlayers(_team1list))
 		{
@@ -611,7 +612,7 @@ public abstract class TvTTemplate extends Functions
 	/**
 	 * Method healPlayers.
 	 */
-	public void healPlayers()
+	private void healPlayers()
 	{
 		for (Player player : getPlayers(_team1list))
 		{
@@ -629,7 +630,7 @@ public abstract class TvTTemplate extends Functions
 	/**
 	 * Method ressurectPlayers.
 	 */
-	public void ressurectPlayers()
+	private void ressurectPlayers()
 	{
 		for (Player player : getPlayers(_team1list))
 		{
@@ -659,7 +660,7 @@ public abstract class TvTTemplate extends Functions
 	/**
 	 * Method removeBuff.
 	 */
-	public void removeBuff()
+	private void removeBuff()
 	{
 		for (Player player : getPlayers(_team1list))
 		{
@@ -783,7 +784,7 @@ public abstract class TvTTemplate extends Functions
 	/**
 	 * Method backBuff.
 	 */
-	public void backBuff()
+	private void backBuff()
 	{
 		for (Player player : getPlayers(_team1list))
 		{
@@ -871,7 +872,7 @@ public abstract class TvTTemplate extends Functions
 	/**
 	 * Method paralyzeTeams.
 	 */
-	public void paralyzeTeams()
+	private void paralyzeTeams()
 	{
 		Skill revengeSkill = SkillTable.getInstance().getInfo(Skill.SKILL_RAID_CURSE, 1);
 		
@@ -901,7 +902,7 @@ public abstract class TvTTemplate extends Functions
 	/**
 	 * Method unParalyzeTeams.
 	 */
-	public void unParalyzeTeams()
+	private void unParalyzeTeams()
 	{
 		for (Player player : getPlayers(_team1list))
 		{
@@ -931,7 +932,7 @@ public abstract class TvTTemplate extends Functions
 	/**
 	 * Method teleportTeamsToArena.
 	 */
-	public void teleportTeamsToArena()
+	private void teleportTeamsToArena()
 	{
 		Integer n = 0;
 		
@@ -959,7 +960,7 @@ public abstract class TvTTemplate extends Functions
 	 * @param player Player
 	 * @return boolean
 	 */
-	public boolean playerHasLost(Player player)
+	private boolean playerHasLost(Player player)
 	{
 		if (player.getTeam() == TeamType.BLUE)
 		{
@@ -979,7 +980,7 @@ public abstract class TvTTemplate extends Functions
 	 * Method teamHasLost.
 	 * @param team_id Integer
 	 */
-	public void teamHasLost(Integer team_id)
+	private void teamHasLost(Integer team_id)
 	{
 		if (team_id == 1)
 		{
@@ -1005,7 +1006,7 @@ public abstract class TvTTemplate extends Functions
 	/**
 	 * Method template_timeOut.
 	 */
-	public void template_timeOut()
+	void template_timeOut()
 	{
 		if (_timeOutTask && (_status == 3))
 		{
@@ -1026,7 +1027,7 @@ public abstract class TvTTemplate extends Functions
 	 * Method payItemToTeam.
 	 * @param team_id Integer
 	 */
-	public void payItemToTeam(Integer team_id)
+	private void payItemToTeam(Integer team_id)
 	{
 		if (team_id == 1)
 		{
@@ -1047,7 +1048,7 @@ public abstract class TvTTemplate extends Functions
 	/**
 	 * Method returnItemToTeams.
 	 */
-	public void returnItemToTeams()
+	private void returnItemToTeams()
 	{
 		for (Player player : getPlayers(_team1list))
 		{
@@ -1063,7 +1064,7 @@ public abstract class TvTTemplate extends Functions
 	/**
 	 * Method clearTeams.
 	 */
-	public void clearTeams()
+	private void clearTeams()
 	{
 		for (Player player : getPlayers(_team1list))
 		{
@@ -1164,7 +1165,7 @@ public abstract class TvTTemplate extends Functions
 	 * Method onTeleport.
 	 * @param player Player
 	 */
-	public void onTeleport(Player player)
+	void onTeleport(Player player)
 	{
 		if ((player != null) && (_status > 1) && (player.getTeam() != TeamType.NONE) && player.isInZone(_zone))
 		{
@@ -1172,7 +1173,7 @@ public abstract class TvTTemplate extends Functions
 		}
 	}
 	
-	public final class ZoneListener implements OnZoneEnterLeaveListener
+	final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		/**
 		 * Method onZoneEnter.
@@ -1214,17 +1215,17 @@ public abstract class TvTTemplate extends Functions
 		}
 	}
 	
-	public final class TeleportTask extends RunnableImpl
+	private final class TeleportTask extends RunnableImpl
 	{
-		Location loc;
-		Creature target;
+		private final Location loc;
+		private final Creature target;
 		
 		/**
 		 * Constructor for TeleportTask.
 		 * @param target Creature
 		 * @param loc Location
 		 */
-		public TeleportTask(Creature target, Location loc)
+		TeleportTask(Creature target, Location loc)
 		{
 			this.target = target;
 			this.loc = loc;
@@ -1284,7 +1285,7 @@ public abstract class TvTTemplate extends Functions
 	 * Method sayToAll.
 	 * @param text String
 	 */
-	public void sayToAll(String text)
+	private void sayToAll(String text)
 	{
 		Announcements.getInstance().announceToAll(_manager.getName() + ": " + text, ChatType.CRITICAL_ANNOUNCE);
 	}

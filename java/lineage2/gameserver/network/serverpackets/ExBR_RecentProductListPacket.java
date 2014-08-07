@@ -14,6 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.Collection;
+
 import lineage2.gameserver.data.xml.holder.ProductHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.ProductItem;
@@ -54,7 +55,7 @@ public class ExBR_RecentProductListPacket extends L2GameServerPacket
 			writeD(template.getProductId()); // product id
 			writeH(template.getCategory()); // category 1 - enchant 2 - supplies 3 - decoration 4 - package 5 - other
 			writeD(template.getPoints()); // points
-			writeD(template.getTabId()); // show tab 2-th group - 1 ?????????? ?????? ??? ????
+			writeD(template.getTabId()); // show tab 2-th group - 1 ?
 			writeD((int) (template.getStartTimeSale() / 1000)); // start sale unix date in seconds
 			writeD((int) (template.getEndTimeSale() / 1000)); // end sale unix date in seconds
 			writeC(127); // day week (127 = not daily goods)

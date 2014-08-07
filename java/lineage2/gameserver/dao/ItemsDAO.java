@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.concurrent.atomic.AtomicLong;
+
 import lineage2.commons.dao.JdbcDAO;
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.dao.JdbcEntityStats;
@@ -30,6 +31,7 @@ import lineage2.gameserver.model.items.ItemInstance.ItemLocation;
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Element;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -365,7 +367,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 	 * @param objectIds Collection<Integer>
 	 * @return Collection<ItemInstance>
 	 */
-	public Collection<ItemInstance> load(Collection<Integer> objectIds)
+	private Collection<ItemInstance> load(Collection<Integer> objectIds)
 	{
 		Collection<ItemInstance> list = Collections.emptyList();
 		
@@ -420,7 +422,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 	 * Method save.
 	 * @param items Collection<ItemInstance>
 	 */
-	public void save(Collection<ItemInstance> items)
+	void save(Collection<ItemInstance> items)
 	{
 		if (items.isEmpty())
 		{
@@ -497,7 +499,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 	 * Method saveOrUpdate.
 	 * @param items Collection<ItemInstance>
 	 */
-	public void saveOrUpdate(Collection<ItemInstance> items)
+	void saveOrUpdate(Collection<ItemInstance> items)
 	{
 		if (items.isEmpty())
 		{

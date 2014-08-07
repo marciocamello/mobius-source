@@ -15,7 +15,9 @@ package lineage2.gameserver.data.xml.holder;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.parsers.DocumentBuilderFactory;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.MultiSellEntry;
@@ -25,10 +27,12 @@ import lineage2.gameserver.network.serverpackets.MultiSellList;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.XMLUtil;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
+
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
@@ -58,7 +62,7 @@ public class MultiSellHolder
 	 * @param id int
 	 * @return MultiSellListContainer
 	 */
-	public MultiSellListContainer getList(int id)
+	private MultiSellListContainer getList(int id)
 	{
 		return entries.get(id);
 	}
@@ -288,7 +292,7 @@ public class MultiSellHolder
 	 * @param s String
 	 * @return MultiSellListContainer
 	 */
-	public MultiSellListContainer remove(String s)
+	MultiSellListContainer remove(String s)
 	{
 		return remove(new File(s));
 	}
@@ -308,7 +312,7 @@ public class MultiSellHolder
 	 * @param id int
 	 * @return MultiSellListContainer
 	 */
-	public MultiSellListContainer remove(int id)
+	private MultiSellListContainer remove(int id)
 	{
 		return entries.remove(id);
 	}
@@ -376,7 +380,7 @@ public class MultiSellHolder
 	 * @param id int
 	 * @return MultiSellListContainer
 	 */
-	protected MultiSellListContainer parseDocument(Document doc, int id)
+	private MultiSellListContainer parseDocument(Document doc, int id)
 	{
 		MultiSellListContainer list = new MultiSellListContainer();
 		int entId = 1;
@@ -418,7 +422,7 @@ public class MultiSellHolder
 	 * @param multiSellId int
 	 * @return MultiSellEntry
 	 */
-	protected MultiSellEntry parseEntry(Node n, int multiSellId)
+	private MultiSellEntry parseEntry(Node n, int multiSellId)
 	{
 		MultiSellEntry entry = new MultiSellEntry();
 		

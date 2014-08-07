@@ -13,6 +13,7 @@
 package ai.hellbound;
 
 import java.util.List;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.ai.DefaultAI;
@@ -194,7 +195,6 @@ public final class NaiaRoomController extends DefaultAI
 		 */
 		LastDoorClose()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

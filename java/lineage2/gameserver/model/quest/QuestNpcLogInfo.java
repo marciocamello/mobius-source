@@ -28,7 +28,7 @@ public class QuestNpcLogInfo
 	 * @param varName String
 	 * @param maxCount int
 	 */
-	public QuestNpcLogInfo(int[] npcIds, String varName, int maxCount)
+	QuestNpcLogInfo(int[] npcIds, String varName, int maxCount)
 	{
 		_npcIds = npcIds;
 		_varName = varName;

@@ -27,31 +27,31 @@ public interface JdbcDAO<K extends Serializable, E extends JdbcEntity>
 	 * @param key K
 	 * @return E
 	 */
-	public E load(K key);
+	E load(K key);
 	
 	/**
 	 * Method save.
 	 * @param e E
 	 */
-	public void save(E e);
+	void save(E e);
 	
 	/**
 	 * Method update.
 	 * @param e E
 	 */
-	public void update(E e);
+	void update(E e);
 	
 	/**
 	 * Method saveOrUpdate.
 	 * @param e E
 	 */
-	public void saveOrUpdate(E e);
+	void saveOrUpdate(E e);
 	
 	/**
 	 * Method delete.
 	 * @param e E
 	 */
-	public void delete(E e);
+	void delete(E e);
 	
 	/**
 	 * Method getStats.

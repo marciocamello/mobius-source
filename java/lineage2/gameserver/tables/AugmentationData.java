@@ -16,7 +16,9 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
+
 import javax.xml.parsers.DocumentBuilderFactory;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.items.etcitems.LifeStoneGrade;
@@ -24,11 +26,13 @@ import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.triggers.TriggerInfo;
 import lineage2.gameserver.stats.triggers.TriggerType;
 import lineage2.gameserver.templates.item.ItemTemplate;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
+
 import gnu.trove.list.array.TDoubleArrayList;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
@@ -159,7 +163,7 @@ public class AugmentationData
 	/**
 	 * @author Mobius
 	 */
-	public class augmentationStat
+	private class augmentationStat
 	{
 		private final Stats _stat;
 		private final int _singleSize;
@@ -173,70 +177,13 @@ public class AugmentationData
 		 * @param sValues double[]
 		 * @param cValues double[]
 		 */
-		public augmentationStat(Stats stat, double sValues[], double cValues[])
+		augmentationStat(Stats stat, double sValues[], double cValues[])
 		{
 			_stat = stat;
 			_singleSize = sValues.length;
 			_singleValues = sValues;
 			_combinedSize = cValues.length;
 			_combinedValues = cValues;
-		}
-		
-		/**
-		 * Method getSingleStatSize.
-		 * @return int
-		 */
-		public int getSingleStatSize()
-		{
-			return _singleSize;
-		}
-		
-		/**
-		 * Method getCombinedStatSize.
-		 * @return int
-		 */
-		public int getCombinedStatSize()
-		{
-			return _combinedSize;
-		}
-		
-		/**
-		 * Method getSingleStatValue.
-		 * @param i int
-		 * @return double
-		 */
-		public double getSingleStatValue(int i)
-		{
-			if ((i >= _singleSize) || (i < 0))
-			{
-				return _singleValues[_singleSize - 1];
-			}
-			
-			return _singleValues[i];
-		}
-		
-		/**
-		 * Method getCombinedStatValue.
-		 * @param i int
-		 * @return double
-		 */
-		public double getCombinedStatValue(int i)
-		{
-			if ((i >= _combinedSize) || (i < 0))
-			{
-				return _combinedValues[_combinedSize - 1];
-			}
-			
-			return _combinedValues[i];
-		}
-		
-		/**
-		 * Method getStat.
-		 * @return Stats
-		 */
-		public Stats getStat()
-		{
-			return _stat;
 		}
 	}
 	

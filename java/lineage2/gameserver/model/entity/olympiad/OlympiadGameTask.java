@@ -13,11 +13,13 @@
 package lineage2.gameserver.model.entity.olympiad;
 
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.utils.Log;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,7 +27,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class OlympiadGameTask extends RunnableImpl
+class OlympiadGameTask extends RunnableImpl
 {
 	private static final Logger _log = LoggerFactory.getLogger(OlympiadGameTask.class);
 	private final OlympiadGame _game;
@@ -83,7 +85,7 @@ public class OlympiadGameTask extends RunnableImpl
 	 * Method shedule.
 	 * @return ScheduledFuture<?>
 	 */
-	public ScheduledFuture<?> shedule()
+	ScheduledFuture<?> shedule()
 	{
 		return ThreadPoolManager.getInstance().schedule(this, _time);
 	}
@@ -95,7 +97,7 @@ public class OlympiadGameTask extends RunnableImpl
 	 * @param count int
 	 * @param time long
 	 */
-	public OlympiadGameTask(OlympiadGame game, BattleStatus status, int count, long time)
+	OlympiadGameTask(OlympiadGame game, BattleStatus status, int count, long time)
 	{
 		_game = game;
 		_status = status;

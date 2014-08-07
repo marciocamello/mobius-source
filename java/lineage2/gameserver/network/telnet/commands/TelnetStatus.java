@@ -18,6 +18,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.Set;
+
 import lineage2.commons.lang.StatsUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.GameTimeController;
@@ -28,6 +29,7 @@ import lineage2.gameserver.network.telnet.TelnetCommand;
 import lineage2.gameserver.network.telnet.TelnetCommandHolder;
 import lineage2.gameserver.tables.GmListTable;
 import lineage2.gameserver.utils.Util;
+
 import org.apache.commons.lang3.time.DurationFormatUtils;
 
 /**
@@ -100,7 +102,7 @@ public class TelnetStatus implements TelnetCommandHolder
 	 * Method getGameTime.
 	 * @return String
 	 */
-	public static String getGameTime()
+	static String getGameTime()
 	{
 		int t = GameTimeController.getInstance().getGameTime();
 		int h = t / 60;
@@ -116,7 +118,7 @@ public class TelnetStatus implements TelnetCommandHolder
 	 * Method getUptime.
 	 * @return String
 	 */
-	public static String getUptime()
+	static String getUptime()
 	{
 		return DurationFormatUtils.formatDurationHMS(ManagementFactory.getRuntimeMXBean().getUptime());
 	}
@@ -125,7 +127,7 @@ public class TelnetStatus implements TelnetCommandHolder
 	 * Method getStartTime.
 	 * @return String
 	 */
-	public static String getStartTime()
+	static String getStartTime()
 	{
 		return new Date(ManagementFactory.getRuntimeMXBean().getStartTime()).toString();
 	}
@@ -134,7 +136,7 @@ public class TelnetStatus implements TelnetCommandHolder
 	 * Method getCurrentTime.
 	 * @return String
 	 */
-	public static String getCurrentTime()
+	static String getCurrentTime()
 	{
 		return new Date().toString();
 	}

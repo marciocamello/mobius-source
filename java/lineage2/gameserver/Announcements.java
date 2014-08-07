@@ -19,6 +19,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.StringTokenizer;
 import java.util.concurrent.Future;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObjectsStorage;
@@ -29,6 +30,7 @@ import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 import lineage2.gameserver.utils.MapUtils;
+
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -53,7 +55,7 @@ public class Announcements
 		 * @param t int
 		 * @param announce String
 		 */
-		public Announce(int t, String announce)
+		Announce(int t, String announce)
 		{
 			_time = t;
 			_announce = announce;
@@ -72,7 +74,7 @@ public class Announcements
 		 * Method showAnnounce.
 		 * @param player Player
 		 */
-		public void showAnnounce(Player player)
+		void showAnnounce(Player player)
 		{
 			Say2 cs = new Say2(0, ChatType.ANNOUNCEMENT, player.getName(), _announce);
 			player.sendPacket(cs);
@@ -81,7 +83,7 @@ public class Announcements
 		/**
 		 * Method start.
 		 */
-		public void start()
+		void start()
 		{
 			if (_time > 0)
 			{
@@ -92,7 +94,7 @@ public class Announcements
 		/**
 		 * Method stop.
 		 */
-		public void stop()
+		void stop()
 		{
 			if (_task != null)
 			{

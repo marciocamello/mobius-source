@@ -28,9 +28,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class JiniaNpcInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int normalFreyaIzId = 139;
 	private static final int extremeFreyaIzId = 144;

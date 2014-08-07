@@ -15,6 +15,7 @@ package lineage2.gameserver.model;
 import java.util.List;
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.listener.actor.OnAttackListener;
@@ -33,6 +34,7 @@ import lineage2.gameserver.stats.funcs.Func;
 import lineage2.gameserver.stats.funcs.FuncOwner;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.taskmanager.EffectTaskManager;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,12 +46,12 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 {
 	public static final Logger _log = LoggerFactory.getLogger(Effect.class);
 	public final static Effect[] EMPTY_L2EFFECT_ARRAY = new Effect[0];
-	public static final int SUSPENDED = -1;
-	public static final int STARTING = 0;
-	public static final int STARTED = 1;
-	public static final int ACTING = 2;
-	public static final int FINISHING = 3;
-	public static final int FINISHED = 4;
+	private static final int SUSPENDED = -1;
+	private static final int STARTING = 0;
+	private static final int STARTED = 1;
+	private static final int ACTING = 2;
+	private static final int FINISHING = 3;
+	private static final int FINISHED = 4;
 	protected final Creature _effector;
 	public final Creature _effected;
 	protected final Skill _skill;
@@ -380,7 +382,6 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		 */
 		public ActionDispelListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -422,7 +423,6 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		 */
 		public AttackedDispelListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -579,7 +579,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	/**
 	 * Method schedule.
 	 */
-	public final void schedule()
+	final void schedule()
 	{
 		Creature effected = getEffected();
 		
@@ -623,7 +623,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	/**
 	 * Method start.
 	 */
-	public final void start()
+	final void start()
 	{
 		if (setState(STARTING, STARTED))
 		{
@@ -807,7 +807,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	 * @param newEffect Effect
 	 * @return boolean
 	 */
-	public boolean maybeScheduleNext(Effect newEffect)
+	boolean maybeScheduleNext(Effect newEffect)
 	{
 		if (newEffect.getStackOrder() < getStackOrder())
 		{
@@ -867,7 +867,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	 * @param player Player
 	 * @param os ExOlympiadSpelledInfo
 	 */
-	public void addOlympiadSpelledIcon(Player player, ExOlympiadSpelledInfo os)
+	void addOlympiadSpelledIcon(Player player, ExOlympiadSpelledInfo os)
 	{
 		if (!isActive() || isHidden())
 		{

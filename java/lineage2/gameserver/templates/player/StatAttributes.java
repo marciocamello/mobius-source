@@ -27,7 +27,7 @@ public class StatAttributes
 	
 	/**
 	 * Constructor for StatAttributes.
-	 * @param _int int
+	 * @param inte int
 	 * @param str int
 	 * @param con int
 	 * @param men int

@@ -13,6 +13,7 @@
 package lineage2.gameserver.model;
 
 import java.util.List;
+
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
@@ -63,7 +64,7 @@ public class GameObjectTasks
 	/**
 	 * @author Mobius
 	 */
-	public static class SoulConsumeTask extends RunnableImpl
+	static class SoulConsumeTask extends RunnableImpl
 	{
 		private final HardReference<Player> _playerRef;
 		
@@ -71,7 +72,7 @@ public class GameObjectTasks
 		 * Constructor for SoulConsumeTask.
 		 * @param player Player
 		 */
-		public SoulConsumeTask(Player player)
+		SoulConsumeTask(Player player)
 		{
 			_playerRef = player.getRef();
 		}
@@ -96,7 +97,7 @@ public class GameObjectTasks
 	/**
 	 * @author Mobius
 	 */
-	public static class PvPFlagTask extends RunnableImpl
+	static class PvPFlagTask extends RunnableImpl
 	{
 		private final HardReference<Player> _playerRef;
 		
@@ -104,7 +105,7 @@ public class GameObjectTasks
 		 * Constructor for PvPFlagTask.
 		 * @param player Player
 		 */
-		public PvPFlagTask(Player player)
+		PvPFlagTask(Player player)
 		{
 			_playerRef = player.getRef();
 		}
@@ -142,7 +143,7 @@ public class GameObjectTasks
 	/**
 	 * @author Mobius
 	 */
-	public static class HourlyTask extends RunnableImpl
+	static class HourlyTask extends RunnableImpl
 	{
 		private final HardReference<Player> _playerRef;
 		
@@ -150,7 +151,7 @@ public class GameObjectTasks
 		 * Constructor for HourlyTask.
 		 * @param player Player
 		 */
-		public HourlyTask(Player player)
+		HourlyTask(Player player)
 		{
 			_playerRef = player.getRef();
 		}
@@ -177,7 +178,7 @@ public class GameObjectTasks
 	/**
 	 * @author Mobius
 	 */
-	public static class RecomBonusTask extends RunnableImpl
+	static class RecomBonusTask extends RunnableImpl
 	{
 		private final HardReference<Player> _playerRef;
 		
@@ -185,7 +186,7 @@ public class GameObjectTasks
 		 * Constructor for RecomBonusTask.
 		 * @param player Player
 		 */
-		public RecomBonusTask(Player player)
+		RecomBonusTask(Player player)
 		{
 			_playerRef = player.getRef();
 		}
@@ -211,7 +212,7 @@ public class GameObjectTasks
 	/**
 	 * @author Mobius
 	 */
-	public static class WaterTask extends RunnableImpl
+	static class WaterTask extends RunnableImpl
 	{
 		private final HardReference<Player> _playerRef;
 		
@@ -219,7 +220,7 @@ public class GameObjectTasks
 		 * Constructor for WaterTask.
 		 * @param player Player
 		 */
-		public WaterTask(Player player)
+		WaterTask(Player player)
 		{
 			_playerRef = player.getRef();
 		}
@@ -252,7 +253,7 @@ public class GameObjectTasks
 	/**
 	 * @author Mobius
 	 */
-	public static class KickTask extends RunnableImpl
+	static class KickTask extends RunnableImpl
 	{
 		private final HardReference<Player> _playerRef;
 		
@@ -260,7 +261,7 @@ public class GameObjectTasks
 		 * Constructor for KickTask.
 		 * @param player Player
 		 */
-		public KickTask(Player player)
+		KickTask(Player player)
 		{
 			_playerRef = player.getRef();
 		}
@@ -286,7 +287,7 @@ public class GameObjectTasks
 	/**
 	 * @author Mobius
 	 */
-	public static class UnJailTask extends RunnableImpl
+	static class UnJailTask extends RunnableImpl
 	{
 		private final HardReference<Player> _playerRef;
 		
@@ -294,7 +295,7 @@ public class GameObjectTasks
 		 * Constructor for UnJailTask.
 		 * @param player Player
 		 */
-		public UnJailTask(Player player)
+		UnJailTask(Player player)
 		{
 			_playerRef = player.getRef();
 		}
@@ -321,7 +322,7 @@ public class GameObjectTasks
 	/**
 	 * @author Mobius
 	 */
-	public static class EndSitDownTask extends RunnableImpl
+	static class EndSitDownTask extends RunnableImpl
 	{
 		private final HardReference<Player> _playerRef;
 		
@@ -329,7 +330,7 @@ public class GameObjectTasks
 		 * Constructor for EndSitDownTask.
 		 * @param player Player
 		 */
-		public EndSitDownTask(Player player)
+		EndSitDownTask(Player player)
 		{
 			_playerRef = player.getRef();
 		}
@@ -355,7 +356,7 @@ public class GameObjectTasks
 	/**
 	 * @author Mobius
 	 */
-	public static class EndStandUpTask extends RunnableImpl
+	static class EndStandUpTask extends RunnableImpl
 	{
 		private final HardReference<Player> _playerRef;
 		
@@ -363,7 +364,7 @@ public class GameObjectTasks
 		 * Constructor for EndStandUpTask.
 		 * @param player Player
 		 */
-		public EndStandUpTask(Player player)
+		EndStandUpTask(Player player)
 		{
 			_playerRef = player.getRef();
 		}
@@ -394,9 +395,9 @@ public class GameObjectTasks
 	/**
 	 * @author Mobius
 	 */
-	public static class AltMagicUseTask extends RunnableImpl
+	static class AltMagicUseTask extends RunnableImpl
 	{
-		public final Skill _skill;
+		private final Skill _skill;
 		private final HardReference<? extends Creature> _charRef, _targetRef;
 		
 		/**
@@ -405,7 +406,7 @@ public class GameObjectTasks
 		 * @param target Creature
 		 * @param skill Skill
 		 */
-		public AltMagicUseTask(Creature character, Creature target, Skill skill)
+		AltMagicUseTask(Creature character, Creature target, Skill skill)
 		{
 			_charRef = character.getRef();
 			_targetRef = target.getRef();
@@ -432,7 +433,7 @@ public class GameObjectTasks
 	/**
 	 * @author Mobius
 	 */
-	public static class CastEndTimeTask extends RunnableImpl
+	static class CastEndTimeTask extends RunnableImpl
 	{
 		private final HardReference<? extends Creature> _charRef;
 		
@@ -440,7 +441,7 @@ public class GameObjectTasks
 		 * Constructor for CastEndTimeTask.
 		 * @param character Creature
 		 */
-		public CastEndTimeTask(Creature character)
+		CastEndTimeTask(Creature character)
 		{
 			_charRef = character.getRef();
 		}
@@ -465,10 +466,10 @@ public class GameObjectTasks
 	/**
 	 * @author Mobius
 	 */
-	public static class HitTask extends RunnableImpl
+	static class HitTask extends RunnableImpl
 	{
-		boolean _crit, _miss, _shld, _soulshot, _unchargeSS, _notify;
-		int _damage, _reflectableDamage;
+		private final boolean _crit, _miss, _shld, _soulshot, _unchargeSS, _notify;
+		private final int _damage, _reflectableDamage;
 		private final HardReference<? extends Creature> _charRef, _targetRef;
 		
 		/**
@@ -484,7 +485,7 @@ public class GameObjectTasks
 		 * @param unchargeSS boolean
 		 * @param notify boolean
 		 */
-		public HitTask(Creature cha, Creature target, int damage, int reflectableDamage, boolean crit, boolean miss, boolean soulshot, boolean shld, boolean unchargeSS, boolean notify)
+		HitTask(Creature cha, Creature target, int damage, int reflectableDamage, boolean crit, boolean miss, boolean soulshot, boolean shld, boolean unchargeSS, boolean notify)
 		{
 			_charRef = cha.getRef();
 			_targetRef = target.getRef();
@@ -528,9 +529,9 @@ public class GameObjectTasks
 	/**
 	 * @author Mobius
 	 */
-	public static class MagicUseTask extends RunnableImpl
+	static class MagicUseTask extends RunnableImpl
 	{
-		public boolean _forceUse;
+		private final boolean _forceUse;
 		private final HardReference<? extends Creature> _charRef;
 		
 		/**
@@ -538,7 +539,7 @@ public class GameObjectTasks
 		 * @param cha Creature
 		 * @param forceUse boolean
 		 */
-		public MagicUseTask(Creature cha, boolean forceUse)
+		MagicUseTask(Creature cha, boolean forceUse)
 		{
 			_charRef = cha.getRef();
 			_forceUse = forceUse;
@@ -573,9 +574,9 @@ public class GameObjectTasks
 	/**
 	 * @author Mobius
 	 */
-	public static class MagicLaunchedTask extends RunnableImpl
+	static class MagicLaunchedTask extends RunnableImpl
 	{
-		public boolean _forceUse;
+		private final boolean _forceUse;
 		private final HardReference<? extends Creature> _charRef;
 		
 		/**
@@ -583,7 +584,7 @@ public class GameObjectTasks
 		 * @param cha Creature
 		 * @param forceUse boolean
 		 */
-		public MagicLaunchedTask(Creature cha, boolean forceUse)
+		MagicLaunchedTask(Creature cha, boolean forceUse)
 		{
 			_charRef = cha.getRef();
 			_forceUse = forceUse;

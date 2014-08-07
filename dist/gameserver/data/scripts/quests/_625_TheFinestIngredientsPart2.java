@@ -195,7 +195,6 @@ public class _625_TheFinestIngredientsPart2 extends Quest implements ScriptFile
 	{
 		public DeathListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

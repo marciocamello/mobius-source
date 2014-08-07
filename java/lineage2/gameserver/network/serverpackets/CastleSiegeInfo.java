@@ -13,6 +13,7 @@
 package lineage2.gameserver.network.serverpackets;
 
 import java.util.Calendar;
+
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.impl.CastleSiegeEvent;
 import lineage2.gameserver.model.entity.residence.Castle;
@@ -20,6 +21,7 @@ import lineage2.gameserver.model.entity.residence.ClanHall;
 import lineage2.gameserver.model.entity.residence.Residence;
 import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
+
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
@@ -40,7 +42,6 @@ import org.apache.commons.lang3.StringUtils;
  * d = current time (seconds)<BR>
  * d = Siege time (seconds) (0 for selectable)<BR>
  * d = Size of Siege Time Select Related d - next siege time
- * @reworked VISTALL
  */
 public class CastleSiegeInfo extends L2GameServerPacket
 {
@@ -75,7 +76,7 @@ public class CastleSiegeInfo extends L2GameServerPacket
 		_startTime = (int) (ch.getSiegeDate().getTimeInMillis() / 1000);
 	}
 	
-	protected CastleSiegeInfo(Residence residence, Player player)
+	private CastleSiegeInfo(Residence residence, Player player)
 	{
 		_id = residence.getId();
 		_ownerObjectId = residence.getOwnerId();

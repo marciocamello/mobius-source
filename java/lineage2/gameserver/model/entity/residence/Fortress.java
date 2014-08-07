@@ -16,6 +16,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.dao.ClanDataDAO;
@@ -26,6 +27,7 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.ItemTemplate;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,9 +37,6 @@ import org.slf4j.LoggerFactory;
  */
 public class Fortress extends Residence
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final Logger _log = LoggerFactory.getLogger(Fortress.class);
 	private static final long REMOVE_CYCLE = 7 * 24;
@@ -307,7 +306,7 @@ public class Fortress extends Residence
 	/**
 	 * Method clearFacility.
 	 */
-	public void clearFacility()
+	private void clearFacility()
 	{
 		for (int i = 0; i < _facilities.length; i++)
 		{
@@ -328,7 +327,7 @@ public class Fortress extends Residence
 	 * Method addRelatedCastle.
 	 * @param castle Castle
 	 */
-	public void addRelatedCastle(Castle castle)
+	void addRelatedCastle(Castle castle)
 	{
 		_relatedCastles.add(castle);
 	}

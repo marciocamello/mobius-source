@@ -17,6 +17,7 @@ import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
 import lineage2.commons.data.xml.AbstractDirParser;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
@@ -31,6 +32,7 @@ import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.item.support.MerchantGuard;
 import lineage2.gameserver.utils.Location;
+
 import org.dom4j.Attribute;
 import org.dom4j.Element;
 import org.napile.primitive.sets.IntSet;

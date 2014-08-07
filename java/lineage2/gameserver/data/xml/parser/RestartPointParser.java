@@ -18,6 +18,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
 import lineage2.commons.data.xml.AbstractFileParser;
 import lineage2.commons.geometry.Polygon;
 import lineage2.commons.geometry.Rectangle;
@@ -29,6 +30,7 @@ import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.templates.mapregion.RestartArea;
 import lineage2.gameserver.templates.mapregion.RestartPoint;
 import lineage2.gameserver.utils.Location;
+
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 import org.dom4j.Attribute;

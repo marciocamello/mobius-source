@@ -14,6 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.model.base.EnchantSkillLearn;
 import lineage2.gameserver.tables.SkillTreeTable;
 
@@ -60,7 +61,7 @@ public class ExEnchantSkillInfo extends L2GameServerPacket
 		}
 	}
 	
-	public void addEnchantSkillDetail(int level)
+	private void addEnchantSkillDetail(int level)
 	{
 		_routes.add(level);
 	}

@@ -13,6 +13,7 @@
 package ai.DwarvenVillageAttack;
 
 import java.util.List;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.ai.Fighter;
@@ -23,6 +24,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
+
 import org.apache.commons.lang3.ArrayUtils;
 
 public class Dwarvs extends Fighter
@@ -72,7 +74,7 @@ public class Dwarvs extends Fighter
 	private int diedTentacle = 0; // if 3 - start move
 	private Location[] way = {};
 	
-	public Dwarvs(NpcInstance actor)
+	Dwarvs(NpcInstance actor)
 	{
 		super(actor);
 		AI_TASK_ATTACK_DELAY = 10;

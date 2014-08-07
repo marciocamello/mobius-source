@@ -33,7 +33,7 @@ public class AlladaSubAI extends DefaultAI
 	 * Constructor for AlladaSubAI.
 	 * @param actor NpcInstance
 	 */
-	public AlladaSubAI(NpcInstance actor)
+	AlladaSubAI(NpcInstance actor)
 	{
 		super(actor);
 	}

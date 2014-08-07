@@ -18,7 +18,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.concurrent.ScheduledFuture;
+
 import javax.xml.parsers.DocumentBuilderFactory;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
@@ -34,12 +36,14 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
+
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
+
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
@@ -349,7 +353,7 @@ public class CursedWeaponsManager
 	 * Method removeFromDb.
 	 * @param itemId int
 	 */
-	public void removeFromDb(int itemId)
+	private void removeFromDb(int itemId)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -398,7 +402,6 @@ public class CursedWeaponsManager
 		 */
 		public RemoveTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -503,7 +506,7 @@ public class CursedWeaponsManager
 	 * Method saveData.
 	 * @param cw CursedWeapon
 	 */
-	public void saveData(CursedWeapon cw)
+	private void saveData(CursedWeapon cw)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -735,7 +738,7 @@ public class CursedWeaponsManager
 	 * Method announce.
 	 * @param sm SystemMessage
 	 */
-	public void announce(SystemMessage sm)
+	private void announce(SystemMessage sm)
 	{
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{

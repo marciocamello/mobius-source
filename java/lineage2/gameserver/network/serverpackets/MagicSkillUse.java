@@ -14,9 +14,6 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Creature;
 
-/**
- * Format: dddddddddh [h] h [ddd] Пример пакета: 48 86 99 00 4F 86 99 00 4F EF 08 00 00 01 00 00 00 00 00 00 00 00 00 00 00 F9 B5 FF FF 7D E0 01 00 68 F3 FF FF 00 00 00 00
- */
 public class MagicSkillUse extends L2GameServerPacket
 {
 	private final int _targetId;
@@ -100,7 +97,7 @@ public class MagicSkillUse extends L2GameServerPacket
 		writeD(_tz);
 	}
 	
-	public static int getSkillReplace(int _skillId)
+	private static int getSkillReplace(int _skillId)
 	{
 		switch (_skillId)
 		{

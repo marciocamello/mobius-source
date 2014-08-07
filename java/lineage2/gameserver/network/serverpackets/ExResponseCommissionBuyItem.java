@@ -22,7 +22,7 @@ public class ExResponseCommissionBuyItem extends L2GameServerPacket
 	private int _itemId;
 	private long _count;
 	
-	public ExResponseCommissionBuyItem(int code)
+	private ExResponseCommissionBuyItem(int code)
 	{
 		_code = code;
 	}

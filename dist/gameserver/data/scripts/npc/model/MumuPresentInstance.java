@@ -22,9 +22,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class MumuPresentInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	public MumuPresentInstance(int objectId, NpcTemplate template)

@@ -17,6 +17,7 @@ import lineage2.gameserver.instancemanager.PetitionManager;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+
 import org.apache.commons.lang3.math.NumberUtils;
 
 /**

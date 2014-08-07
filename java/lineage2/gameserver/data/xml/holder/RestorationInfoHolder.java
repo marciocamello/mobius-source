@@ -26,7 +26,7 @@ public final class RestorationInfoHolder extends AbstractHolder
 		return getRestorationInfo(skill.getId(), skill.getLevel());
 	}
 	
-	public RestorationInfo getRestorationInfo(int skillId, int skillLvl)
+	private RestorationInfo getRestorationInfo(int skillId, int skillLvl)
 	{
 		return _restorationInfoList.get(SkillTable.getSkillHashCode(skillId, skillLvl));
 	}

@@ -12,9 +12,6 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-/**
- * Format: ch Протокол 828: при отправке пакета клиенту ничего не происходит.
- */
 public class ExPlayScene extends L2GameServerPacket
 {
 	@Override

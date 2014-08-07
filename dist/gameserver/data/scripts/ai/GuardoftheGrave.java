@@ -99,7 +99,6 @@ public final class GuardoftheGrave extends Fighter
 		 */
 		DeSpawnTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

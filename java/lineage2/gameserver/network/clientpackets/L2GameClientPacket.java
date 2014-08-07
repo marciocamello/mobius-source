@@ -14,10 +14,12 @@ package lineage2.gameserver.network.clientpackets;
 
 import java.nio.BufferUnderflowException;
 import java.util.List;
+
 import lineage2.commons.net.nio.impl.ReceivablePacket;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.GameClient;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

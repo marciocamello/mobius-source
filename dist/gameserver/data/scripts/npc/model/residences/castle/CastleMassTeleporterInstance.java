@@ -14,6 +14,7 @@ package npc.model.residences.castle;
 
 import java.util.List;
 import java.util.concurrent.Future;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Player;
@@ -33,9 +34,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class CastleMassTeleporterInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**
@@ -48,7 +46,6 @@ public final class CastleMassTeleporterInstance extends NpcInstance
 		 */
 		public TeleportTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

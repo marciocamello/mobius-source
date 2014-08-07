@@ -159,7 +159,7 @@ public final class Kanabion extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	public static class SpawnNext extends RunnableImpl
+	private static class SpawnNext extends RunnableImpl
 	{
 		private final NpcInstance _actor;
 		private final Creature _player;
@@ -171,7 +171,7 @@ public final class Kanabion extends Fighter
 		 * @param player Creature
 		 * @param nextId int
 		 */
-		public SpawnNext(NpcInstance actor, Creature player, int nextId)
+		SpawnNext(NpcInstance actor, Creature player, int nextId)
 		{
 			_actor = actor;
 			_player = player;

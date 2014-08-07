@@ -13,6 +13,7 @@
 package lineage2.commons.compiler;
 
 import java.net.URI;
+
 import javax.tools.FileObject;
 import javax.tools.ForwardingJavaFileManager;
 import javax.tools.JavaFileObject;
@@ -23,7 +24,7 @@ import javax.tools.StandardJavaFileManager;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class MemoryJavaFileManager extends ForwardingJavaFileManager<StandardJavaFileManager>
+class MemoryJavaFileManager extends ForwardingJavaFileManager<StandardJavaFileManager>
 {
 	private final MemoryClassLoader cl;
 	
@@ -32,7 +33,7 @@ public class MemoryJavaFileManager extends ForwardingJavaFileManager<StandardJav
 	 * @param sjfm StandardJavaFileManager
 	 * @param xcl MemoryClassLoader
 	 */
-	public MemoryJavaFileManager(StandardJavaFileManager sjfm, MemoryClassLoader xcl)
+	MemoryJavaFileManager(StandardJavaFileManager sjfm, MemoryClassLoader xcl)
 	{
 		super(sjfm);
 		cl = xcl;

@@ -25,9 +25,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class AltarGatekeeperInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int DoorEnter1 = 25180001;
 	private static final int DoorEnter2 = 25180002;

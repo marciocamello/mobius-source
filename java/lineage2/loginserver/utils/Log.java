@@ -14,10 +14,12 @@ package lineage2.loginserver.utils;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.loginserver.Config;
 import lineage2.loginserver.accounts.Account;
 import lineage2.loginserver.database.L2DatabaseFactory;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

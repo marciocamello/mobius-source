@@ -14,6 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.UnitMember;
@@ -117,12 +118,17 @@ public class GMViewPledgeInfo extends L2GameServerPacket
 		infos.clear();
 	}
 	
-	static class PledgeMemberInfo
+	private static class PledgeMemberInfo
 	{
-		public String _name;
-		public int level, class_id, online, sex, race, sponsor;
+		final String _name;
+		final int level;
+		final int class_id;
+		final int online;
+		final int sex;
+		final int race;
+		final int sponsor;
 		
-		public PledgeMemberInfo(String __name, int _level, int _class_id, int _online, int _sex, int _race, int _sponsor)
+		PledgeMemberInfo(String __name, int _level, int _class_id, int _online, int _sex, int _race, int _sponsor)
 		{
 			_name = __name;
 			level = _level;

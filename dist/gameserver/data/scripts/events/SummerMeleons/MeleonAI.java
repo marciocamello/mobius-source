@@ -14,6 +14,7 @@ package events.SummerMeleons;
 
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -39,8 +40,15 @@ public final class MeleonAI extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	public final class PolimorphTask extends RunnableImpl
+	private final class PolimorphTask extends RunnableImpl
 	{
+		/**
+		 * 
+		 */
+		public PolimorphTask()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -74,7 +82,7 @@ public final class MeleonAI extends Fighter
 		}
 	}
 	
-	protected static final RewardData[] _dropList = new RewardData[]
+	private static final RewardData[] _dropList = new RewardData[]
 	{
 		new RewardData(1539, 1, 5, 15000),
 		new RewardData(1374, 1, 3, 15000),
@@ -156,16 +164,16 @@ public final class MeleonAI extends Fighter
 		new RewardData(959, 1, 1, 50),
 		new RewardData(960, 1, 1, 300)
 	};
-	public final static int Young_Watermelon = 13271;
-	public final static int Rain_Watermelon = 13273;
-	public final static int Defective_Watermelon = 13272;
-	public final static int Young_Honey_Watermelon = 13275;
-	public final static int Rain_Honey_Watermelon = 13277;
-	public final static int Defective_Honey_Watermelon = 13276;
-	public final static int Large_Rain_Watermelon = 13274;
-	public final static int Large_Rain_Honey_Watermelon = 13278;
-	public final static int Squash_Level_up = 4513;
-	public final static int Squash_Poisoned = 4514;
+	private final static int Young_Watermelon = 13271;
+	private final static int Rain_Watermelon = 13273;
+	private final static int Defective_Watermelon = 13272;
+	private final static int Young_Honey_Watermelon = 13275;
+	private final static int Rain_Honey_Watermelon = 13277;
+	private final static int Defective_Honey_Watermelon = 13276;
+	private final static int Large_Rain_Watermelon = 13274;
+	private final static int Large_Rain_Honey_Watermelon = 13278;
+	private final static int Squash_Level_up = 4513;
+	private final static int Squash_Poisoned = 4514;
 	private static final String[] textOnSpawn = new String[]
 	{
 		"scripts.events.SummerMeleons.MeleonAI.textOnSpawn.0",
@@ -269,7 +277,7 @@ public final class MeleonAI extends Fighter
 	 * Constructor for MeleonAI.
 	 * @param actor NpcInstance
 	 */
-	public MeleonAI(NpcInstance actor)
+	MeleonAI(NpcInstance actor)
 	{
 		super(actor);
 		_npcId = getActor().getNpcId();

@@ -18,10 +18,10 @@ package lineage2.gameserver.templates.manor;
  */
 public class SeedProduction
 {
-	int _seedId;
-	long _residual;
-	long _price;
-	long _sales;
+	private final int _seedId;
+	private long _residual;
+	private final long _price;
+	private long _sales;
 	
 	/**
 	 * Constructor for SeedProduction.

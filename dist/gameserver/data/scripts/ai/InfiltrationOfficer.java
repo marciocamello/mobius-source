@@ -36,7 +36,7 @@ public final class InfiltrationOfficer extends Guard implements OnAttackListener
 	/**
 	 * @author Mobius
 	 */
-	public enum State
+	private enum State
 	{
 		AI_IDLE(0),
 		AI_FOLLOW(1),

@@ -18,15 +18,15 @@ package lineage2.commons.geometry;
  */
 public class Circle extends AbstractShape
 {
-	protected final Point2D c;
-	protected final int r;
+	private final Point2D c;
+	private final int r;
 	
 	/**
 	 * Constructor for Circle.
 	 * @param center Point2D
 	 * @param radius int
 	 */
-	public Circle(Point2D center, int radius)
+	private Circle(Point2D center, int radius)
 	{
 		c = center;
 		r = radius;

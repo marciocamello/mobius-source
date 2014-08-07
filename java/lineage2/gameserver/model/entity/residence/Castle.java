@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
+
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.math.SafeMath;
@@ -35,6 +36,7 @@ import lineage2.gameserver.templates.manor.CropProcure;
 import lineage2.gameserver.templates.manor.SeedProduction;
 import lineage2.gameserver.utils.GameStats;
 import lineage2.gameserver.utils.Log;
+
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CTreeIntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
@@ -44,9 +46,6 @@ import org.slf4j.LoggerFactory;
 @SuppressWarnings("unchecked")
 public class Castle extends Residence
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final Logger _log = LoggerFactory.getLogger(Castle.class);
 	private static final String CASTLE_MANOR_DELETE_PRODUCTION = "DELETE FROM castle_manor_production WHERE castle_id=?;";
@@ -938,7 +937,7 @@ public class Castle extends Residence
 		// int n = 1;
 	}
 	
-	public void broadcastResidenceSupport()
+	private void broadcastResidenceSupport()
 	{
 		if (getId() == 1)
 		{

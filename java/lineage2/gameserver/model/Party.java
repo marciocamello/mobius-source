@@ -22,6 +22,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
@@ -80,11 +81,11 @@ public class Party implements PlayerGroup
 	private int _itemOrder = 0;
 	private Reflection _reflection;
 	private CommandChannel _commandChannel;
-	public double _rateExp;
-	public double _rateSp;
-	public double _rateDrop;
-	public double _rateAdena;
-	public double _rateSpoil;
+	double _rateExp;
+	double _rateSp;
+	double _rateDrop;
+	double _rateAdena;
+	double _rateSpoil;
 	private ScheduledFuture<?> positionTask;
 	private int _requestChangeLoot = -1;
 	long _requestChangeLootTimer = 0;
@@ -406,7 +407,7 @@ public class Party implements PlayerGroup
 	/**
 	 * Method dissolveParty.
 	 */
-	public void dissolveParty()
+	private void dissolveParty()
 	{
 		for (Player p : _members)
 		{
@@ -1075,7 +1076,7 @@ public class Party implements PlayerGroup
 	 * @param members List<Player>
 	 * @param dest Location
 	 */
-	public static void TeleportParty(List<Player> members, Location dest)
+	private static void TeleportParty(List<Player> members, Location dest)
 	{
 		for (Player _member : members)
 		{
@@ -1094,7 +1095,7 @@ public class Party implements PlayerGroup
 	 * @param territory Territory
 	 * @param dest Location
 	 */
-	public static void TeleportParty(List<Player> members, Territory territory, Location dest)
+	private static void TeleportParty(List<Player> members, Territory territory, Location dest)
 	{
 		if (!territory.isInside(dest.x, dest.y))
 		{
@@ -1142,7 +1143,7 @@ public class Party implements PlayerGroup
 	 * @param members List<Player>
 	 * @param territory Territory
 	 */
-	public static void RandomTeleportParty(List<Player> members, Territory territory)
+	private static void RandomTeleportParty(List<Player> members, Territory territory)
 	{
 		for (Player member : members)
 		{
@@ -1182,7 +1183,6 @@ public class Party implements PlayerGroup
 		 */
 		public UpdatePositionTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -1335,7 +1335,6 @@ public class Party implements PlayerGroup
 		 */
 		public ChangeLootCheck()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -1374,7 +1373,7 @@ public class Party implements PlayerGroup
 	 * Method removeTacticalSigns.
 	 * @param player Player
 	 */
-	public void removeTacticalSigns(Player player)
+	private void removeTacticalSigns(Player player)
 	{
 		for (Map.Entry<Integer, GameObject> entry : _tacticalSigns.entrySet())
 		{

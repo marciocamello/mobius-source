@@ -13,6 +13,7 @@
 package lineage2.gameserver.model.instances;
 
 import java.util.concurrent.Future;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -26,6 +27,7 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,9 +37,6 @@ import org.slf4j.LoggerFactory;
  */
 public final class PetBabyInstance extends PetInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final Logger _log = LoggerFactory.getLogger(PetBabyInstance.class);
 	Future<?> _actionTask;
@@ -52,7 +51,7 @@ public final class PetBabyInstance extends PetInstance
 	 * @param _currentLevel int
 	 * @param exp long
 	 */
-	public PetBabyInstance(int objectId, NpcTemplate template, Player owner, ItemInstance control, int _currentLevel, long exp)
+	PetBabyInstance(int objectId, NpcTemplate template, Player owner, ItemInstance control, int _currentLevel, long exp)
 	{
 		super(objectId, template, owner, control, _currentLevel, exp);
 	}
@@ -64,7 +63,7 @@ public final class PetBabyInstance extends PetInstance
 	 * @param owner Player
 	 * @param control ItemInstance
 	 */
-	public PetBabyInstance(int objectId, NpcTemplate template, Player owner, ItemInstance control)
+	PetBabyInstance(int objectId, NpcTemplate template, Player owner, ItemInstance control)
 	{
 		super(objectId, template, owner, control);
 	}
@@ -78,8 +77,12 @@ public final class PetBabyInstance extends PetInstance
 	/**
 	 * @author Mobius
 	 */
-	class ActionTask extends RunnableImpl
+	private class ActionTask extends RunnableImpl
 	{
+		public ActionTask()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -120,7 +123,7 @@ public final class PetBabyInstance extends PetInstance
 	 * Method onActionTask.
 	 * @return Skill
 	 */
-	public Skill onActionTask()
+	Skill onActionTask()
 	{
 		try
 		{
@@ -251,7 +254,7 @@ public final class PetBabyInstance extends PetInstance
 	/**
 	 * Method stopBuffTask.
 	 */
-	public synchronized void stopBuffTask()
+	private synchronized void stopBuffTask()
 	{
 		if (_actionTask != null)
 		{

@@ -17,6 +17,7 @@ import static lineage2.gameserver.network.serverpackets.ExSetCompassZoneCode.ZON
 import static lineage2.gameserver.network.serverpackets.ExSetCompassZoneCode.ZONE_PVP_FLAG;
 import static lineage2.gameserver.network.serverpackets.ExSetCompassZoneCode.ZONE_SIEGE_FLAG;
 import static lineage2.gameserver.network.serverpackets.ExSetCompassZoneCode.ZONE_SSQ_FLAG;
+
 import java.awt.Color;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -47,6 +48,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.dbutils.DbUtils;
@@ -304,6 +306,7 @@ import lineage2.gameserver.utils.SiegeUtils;
 import lineage2.gameserver.utils.SqlBatch;
 import lineage2.gameserver.utils.Strings;
 import lineage2.gameserver.utils.TeleportUtils;
+
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
@@ -320,20 +323,17 @@ import org.slf4j.LoggerFactory;
  */
 public final class Player extends Playable implements PlayerGroup
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	public static final int DEFAULT_TITLE_COLOR = 0xFFFF77;
 	public static final int MAX_POST_FRIEND_SIZE = 100;
 	public static final int MAX_FRIEND_SIZE = 128;
 	private static final Logger _log = LoggerFactory.getLogger(Player.class);
 	public static final String NO_TRADERS_VAR = "notraders";
-	public static final String NO_ANIMATION_OF_CAST_VAR = "notShowBuffAnim";
+	private static final String NO_ANIMATION_OF_CAST_VAR = "notShowBuffAnim";
 	public static final String MY_BIRTHDAY_RECEIVE_YEAR = "MyBirthdayReceiveYear";
 	private static final String NOT_CONNECTED = "<not connected>";
 	public final Map<Integer, SubClass> _classlist = new HashMap<>(4);
-	public final static int OBSERVER_NONE = 0;
+	private final static int OBSERVER_NONE = 0;
 	public final static int OBSERVER_STARTING = 1;
 	public final static int OBSERVER_STARTED = 3;
 	public final static int OBSERVER_LEAVING = 2;
@@ -359,7 +359,7 @@ public final class Player extends Playable implements PlayerGroup
 	public static final int LANG_ENG = 0;
 	public static final int LANG_RUS = 1;
 	public static final int LANG_UNK = -1;
-	public static final int[] EXPERTISE_LEVELS =
+	private static final int[] EXPERTISE_LEVELS =
 	{
 		0,
 		20,
@@ -445,12 +445,12 @@ public final class Player extends Playable implements PlayerGroup
 	private final Set<Integer> _activeSoulShots = new CopyOnWriteArraySet<>();
 	private WorldRegion _observerRegion;
 	private final AtomicInteger _observerMode = new AtomicInteger(0);
-	public int _telemode = 0;
+	private int _telemode = 0;
 	private int _handysBlockCheckerEventArena = -1;
 	public boolean entering = true;
 	public Location _stablePoint = null;
-	public final int _loto[] = new int[5];
-	public final int _race[] = new int[2];
+	private final int _loto[] = new int[5];
+	private final int _race[] = new int[2];
 	private final Map<Integer, String> _blockList = new ConcurrentSkipListMap<>();
 	private final FriendList _friendList = new FriendList(this);
 	private boolean _hero = false;
@@ -521,7 +521,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * @param template PlayerTemplate
 	 * @param accountName String
 	 */
-	public Player(final int objectId, final PlayerTemplate template, final String accountName)
+	private Player(final int objectId, final PlayerTemplate template, final String accountName)
 	{
 		super(objectId, template);
 		mentorSystem = new MentoringSystem(this);
@@ -1421,7 +1421,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method stopQuestTimers.
 	 */
-	public void stopQuestTimers()
+	private void stopQuestTimers()
 	{
 		for (QuestState qs : getAllQuestsStates())
 		{
@@ -1439,7 +1439,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method resumeQuestTimers.
 	 */
-	public void resumeQuestTimers()
+	private void resumeQuestTimers()
 	{
 		for (QuestState qs : getAllQuestsStates())
 		{
@@ -1726,7 +1726,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Method addRecomLeft.
 	 * @return int
 	 */
-	public int addRecomLeft()
+	int addRecomLeft()
 	{
 		int recoms = 0;
 		
@@ -1871,7 +1871,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method startRecomBonusTask.
 	 */
-	public void startRecomBonusTask()
+	private void startRecomBonusTask()
 	{
 		if ((_recomBonusTask == null) && (getRecomBonusTime() > 0) && isRecomTimerActive() && !isHourglassEffected())
 		{
@@ -1883,7 +1883,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Method stopRecomBonusTask.
 	 * @param saveTime boolean
 	 */
-	public void stopRecomBonusTask(boolean saveTime)
+	private void stopRecomBonusTask(boolean saveTime)
 	{
 		if (_recomBonusTask != null)
 		{
@@ -2242,7 +2242,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method refreshExpertisePenalty.
 	 */
-	public void refreshExpertisePenalty()
+	private void refreshExpertisePenalty()
 	{
 		if (isLogoutStarted())
 		{
@@ -2638,7 +2638,7 @@ public final class Player extends Playable implements PlayerGroup
 		return success;
 	}
 	
-	boolean partySearchStatusIsOn = false;
+	private boolean partySearchStatusIsOn = false;
 	
 	/**
 	 * Method getPartySearchStatus.
@@ -2658,7 +2658,7 @@ public final class Player extends Playable implements PlayerGroup
 		partySearchStatusIsOn = partySearchStatus;
 	}
 	
-	Player playerForChange;
+	private Player playerForChange;
 	
 	/**
 	 * Method getPlayerForChange.
@@ -2678,7 +2678,7 @@ public final class Player extends Playable implements PlayerGroup
 		playerForChange = _playerForChange;
 	}
 	
-	boolean _isIgnoringDeath = false;
+	private boolean _isIgnoringDeath = false;
 	
 	/**
 	 * Method setIsIgnoringDeath.
@@ -2702,7 +2702,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Method addClanPointsOnProfession.
 	 * @param id int
 	 */
-	public void addClanPointsOnProfession(final int id)
+	private void addClanPointsOnProfession(final int id)
 	{
 		if ((getLvlJoinedAcademy() != 0) && (_clan != null) && (_clan.getLevel() >= 5) && ClassId.VALUES[id].isOfLevel(ClassLevel.Second))
 		{
@@ -3477,7 +3477,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Method removeSkillFromShortCut.
 	 * @param skillId int
 	 */
-	public void removeSkillFromShortCut(final int skillId)
+	private void removeSkillFromShortCut(final int skillId)
 	{
 		_shortCuts.deleteShortCutBySkillId(skillId);
 	}
@@ -3568,7 +3568,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method updateWaitSitTime.
 	 */
-	public void updateWaitSitTime()
+	void updateWaitSitTime()
 	{
 		if (_waitTimeWhenSit < 200)
 		{
@@ -4153,7 +4153,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * @param log String
 	 * @return boolean
 	 */
-	public boolean pickupItem(ItemInstance item, String log)
+	boolean pickupItem(ItemInstance item, String log)
 	{
 		PickableAttachment attachment = item.getAttachment() instanceof PickableAttachment ? (PickableAttachment) item.getAttachment() : null;
 		
@@ -4489,7 +4489,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * @param player Player
 	 * @return boolean
 	 */
-	public final boolean atWarWith(final Player player)
+	private final boolean atWarWith(final Player player)
 	{
 		return (_clan != null) && (player.getClan() != null) && (getPledgeType() != -1) && (player.getPledgeType() != -1) && _clan.isAtWarWith(player.getClan().getClanId());
 	}
@@ -4499,7 +4499,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * @param player Player
 	 * @return boolean
 	 */
-	public boolean atMutualWarWith(Player player)
+	boolean atMutualWarWith(Player player)
 	{
 		return (_clan != null) && (player.getClan() != null) && (getPledgeType() != -1) && (player.getPledgeType() != -1) && _clan.isAtWarWith(player.getClan().getClanId()) && player.getClan().isAtWarWith(_clan.getClanId());
 	}
@@ -4508,7 +4508,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Method doPurePk.
 	 * @param killer Player
 	 */
-	public final void doPurePk(final Player killer)
+	private final void doPurePk(final Player killer)
 	{
 		final int pkCountMulti = Math.max(killer.getPkKills() / 2, 1);
 		killer.decreaseKarma(Config.KARMA_MIN_KARMA * pkCountMulti);
@@ -4521,7 +4521,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Method doKillInPeace.
 	 * @param killer Player
 	 */
-	public final void doKillInPeace(final Player killer)
+	private final void doKillInPeace(final Player killer)
 	{
 		if (_karma >= 0)
 		{
@@ -4545,7 +4545,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * @param items List<ItemInstance>
 	 * @param maxCount int
 	 */
-	public void checkAddItemToDrop(List<ItemInstance> array, List<ItemInstance> items, int maxCount)
+	private void checkAddItemToDrop(List<ItemInstance> array, List<ItemInstance> items, int maxCount)
 	{
 		for (int i = 0; (i < maxCount) && !items.isEmpty(); i++)
 		{
@@ -4573,7 +4573,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Method doPKPVPManage.
 	 * @param killer Creature
 	 */
-	protected void doPKPVPManage(Creature killer)
+	private void doPKPVPManage(Creature killer)
 	{
 		FlagItemAttachment attachment = getActiveWeaponFlagAttachment();
 		
@@ -4879,7 +4879,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Method deathPenalty.
 	 * @param killer Creature
 	 */
-	public void deathPenalty(Creature killer)
+	private void deathPenalty(Creature killer)
 	{
 		if (killer == null)
 		{
@@ -5046,7 +5046,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * @param dropper Creature
 	 * @return List<L2GameServerPacket>
 	 */
-	public List<L2GameServerPacket> addVisibleObject(GameObject object, Creature dropper)
+	List<L2GameServerPacket> addVisibleObject(GameObject object, Creature dropper)
 	{
 		if (isLogoutStarted() || (object == null) || (object.getObjectId() == getObjectId()) || !object.isVisible())
 		{
@@ -5166,7 +5166,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * @param list List<L2GameServerPacket>
 	 * @return List<L2GameServerPacket>
 	 */
-	public List<L2GameServerPacket> removeVisibleObject(GameObject object, List<L2GameServerPacket> list)
+	List<L2GameServerPacket> removeVisibleObject(GameObject object, List<L2GameServerPacket> list)
 	{
 		if (isLogoutStarted() || (object == null) || (object.getObjectId() == getObjectId()))
 		{
@@ -5316,7 +5316,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method stopAllTimers.
 	 */
-	public void stopAllTimers()
+	private void stopAllTimers()
 	{
 		setAgathion(0);
 		stopWaterTask();
@@ -5358,7 +5358,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Method scheduleDelete.
 	 * @param time long
 	 */
-	public void scheduleDelete(long time)
+	private void scheduleDelete(long time)
 	{
 		if (isLogoutStarted() || isInOfflineMode())
 		{
@@ -5951,7 +5951,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Method updateKarma.
 	 * @param flagChanged boolean
 	 */
-	public void updateKarma(boolean flagChanged)
+	private void updateKarma(boolean flagChanged)
 	{
 		sendStatusUpdate(true, true, StatusUpdateField.KARMA);
 		
@@ -6020,7 +6020,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Method increaseKarma.
 	 * @param add_karma long
 	 */
-	public void increaseKarma(final long add_karma)
+	void increaseKarma(final long add_karma)
 	{
 		long new_karma = _karma + add_karma;
 		
@@ -6058,7 +6058,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Method decreaseKarma.
 	 * @param i int
 	 */
-	public void decreaseKarma(final int i)
+	private void decreaseKarma(final int i)
 	{
 		_karma -= i;
 		updateKarma(_karma > 0);
@@ -7184,7 +7184,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method storeDisableSkills.
 	 */
-	public void storeDisableSkills()
+	private void storeDisableSkills()
 	{
 		Connection con = null;
 		Statement statement = null;
@@ -8780,7 +8780,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * @param charId int
 	 * @return boolean
 	 */
-	public boolean isInBlockList(final int charId)
+	private boolean isInBlockList(final int charId)
 	{
 		return (_blockList != null) && _blockList.containsKey(charId);
 	}
@@ -9829,7 +9829,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method stopWaterTask.
 	 */
-	public void stopWaterTask()
+	void stopWaterTask()
 	{
 		if (_taskWater != null)
 		{
@@ -9843,7 +9843,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method startWaterTask.
 	 */
-	public void startWaterTask()
+	private void startWaterTask()
 	{
 		if (isDead())
 		{
@@ -10211,7 +10211,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method storeCharSubClasses.
 	 */
-	public void storeCharSubClasses()
+	private void storeCharSubClasses()
 	{
 		SubClass main = getActiveSubClass();
 		
@@ -10365,7 +10365,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * @param store boolean
 	 * @param exp
 	 */
-	public void setActiveSubClass(int subId, boolean store, long exp)
+	private void setActiveSubClass(int subId, boolean store, long exp)
 	{
 		if (!_subClassOperationLock.tryLock())
 		{
@@ -10483,7 +10483,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method stopKickTask.
 	 */
-	public void stopKickTask()
+	private void stopKickTask()
 	{
 		if (_kickTask != null)
 		{
@@ -11529,7 +11529,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method startAutoSaveTask.
 	 */
-	public void startAutoSaveTask()
+	private void startAutoSaveTask()
 	{
 		if (!Config.AUTOSAVE)
 		{
@@ -11545,7 +11545,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method stopAutoSaveTask.
 	 */
-	public void stopAutoSaveTask()
+	private void stopAutoSaveTask()
 	{
 		if (_autoSaveTask != null)
 		{
@@ -11558,7 +11558,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method startPcBangPointsTask.
 	 */
-	public void startPcBangPointsTask()
+	private void startPcBangPointsTask()
 	{
 		if (!Config.ALT_PCBANG_POINTS_ENABLED || (Config.ALT_PCBANG_POINTS_DELAY <= 0))
 		{
@@ -11574,7 +11574,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method stopPcBangPointsTask.
 	 */
-	public void stopPcBangPointsTask()
+	private void stopPcBangPointsTask()
 	{
 		if (_pcCafePointsTask != null)
 		{
@@ -11800,7 +11800,7 @@ public final class Player extends Playable implements PlayerGroup
 		return result;
 	}
 	
-	protected int _pvpFlag;
+	private int _pvpFlag;
 	private Future<?> _PvPRegTask;
 	private long _lastPvpAttack;
 	
@@ -11808,7 +11808,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Method getlastPvpAttack.
 	 * @return long
 	 */
-	public long getlastPvpAttack()
+	long getlastPvpAttack()
 	{
 		return _lastPvpAttack;
 	}
@@ -11849,7 +11849,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method stopPvPFlag.
 	 */
-	public void stopPvPFlag()
+	void stopPvPFlag()
 	{
 		if (_PvPRegTask != null)
 		{
@@ -11864,7 +11864,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Method updatePvPFlag.
 	 * @param value int
 	 */
-	public void updatePvPFlag(int value)
+	void updatePvPFlag(int value)
 	{
 		if (_handysBlockCheckerEventArena != -1)
 		{
@@ -12409,7 +12409,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method restoreTradeList.
 	 */
-	public void restoreTradeList()
+	private void restoreTradeList()
 	{
 		String var;
 		var = getVar("selllist");
@@ -12590,7 +12590,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method restoreRecipeBook.
 	 */
-	public void restoreRecipeBook()
+	private void restoreRecipeBook()
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -13219,7 +13219,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method saveNameToDB.
 	 */
-	public final void saveNameToDB()
+	private final void saveNameToDB()
 	{
 		Connection con = null;
 		PreparedStatement st = null;
@@ -13561,7 +13561,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method destroyAllTraps.
 	 */
-	public void destroyAllTraps()
+	private void destroyAllTraps()
 	{
 		Map<Integer, Long> traps = _traps;
 		
@@ -13662,7 +13662,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method startHourlyTask.
 	 */
-	public void startHourlyTask()
+	private void startHourlyTask()
 	{
 		_hourlyTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new HourlyTask(this), 3600000L, 3600000L);
 	}
@@ -13670,7 +13670,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method stopHourlyTask.
 	 */
-	public void stopHourlyTask()
+	private void stopHourlyTask()
 	{
 		if (_hourlyTask != null)
 		{
@@ -14496,7 +14496,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Method blockActions.
 	 * @param actions String[]
 	 */
-	public void blockActions(String... actions)
+	void blockActions(String... actions)
 	{
 		Collections.addAll(_blockedActions, actions);
 	}
@@ -14505,7 +14505,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * Method unblockActions.
 	 * @param actions String[]
 	 */
-	public void unblockActions(String... actions)
+	void unblockActions(String... actions)
 	{
 		for (String action : actions)
 		{
@@ -14607,7 +14607,7 @@ public final class Player extends Playable implements PlayerGroup
 		_lectureMark = lectureMark;
 	}
 	
-	public void updateTargetSelectionInfo()
+	private void updateTargetSelectionInfo()
 	{
 		final GameObject obj = getTarget();
 		
@@ -14617,7 +14617,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 	}
 	
-	public void updateTargetSelectionInfo(final GameObject ob)
+	private void updateTargetSelectionInfo(final GameObject ob)
 	{
 		sendPacket(new MyTargetSelected(this, ob));
 		
@@ -14767,8 +14767,8 @@ public final class Player extends Playable implements PlayerGroup
 		return getClassId().getClassLevel().ordinal();
 	}
 	
-	final HashMap<Integer, Long> _acquiredItemMonthly = new HashMap<>();
-	final HashMap<Integer, Long> _acquiredItemTotal = new HashMap<>();
+	private final HashMap<Integer, Long> _acquiredItemMonthly = new HashMap<>();
+	private final HashMap<Integer, Long> _acquiredItemTotal = new HashMap<>();
 	
 	/**
 	 * Method getAcquiredItem.
@@ -14845,7 +14845,7 @@ public final class Player extends Playable implements PlayerGroup
 		return totalOnlineTime;
 	}
 	
-	long partyTime = 0;
+	private long partyTime = 0;
 	
 	/**
 	 * Method setPartyTime.
@@ -14865,7 +14865,7 @@ public final class Player extends Playable implements PlayerGroup
 		return partyTime;
 	}
 	
-	long fullPartyTime = 0;
+	private long fullPartyTime = 0;
 	
 	/**
 	 * Method setFullPartyTime.
@@ -15287,7 +15287,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 	}
 	
-	public void mentoringLogoutConditions()
+	private void mentoringLogoutConditions()
 	{
 		if (getMentorSystem().whoIsOnline(false))
 		{

@@ -442,7 +442,6 @@ public class GCSArray<E> implements Collection<E>
 		 */
 		public Itr()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

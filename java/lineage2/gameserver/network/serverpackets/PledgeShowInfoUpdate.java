@@ -14,6 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
+
 import org.apache.commons.lang3.StringUtils;
 
 public class PledgeShowInfoUpdate extends L2GameServerPacket

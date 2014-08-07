@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
@@ -35,6 +36,7 @@ import lineage2.gameserver.network.serverpackets.PledgeShowMemberListDeleteAll;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.utils.SiegeUtils;
 import lineage2.gameserver.utils.Util;
+
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -124,7 +126,7 @@ public class ClanTable
 	 * @param charId int
 	 * @return Clan
 	 */
-	public Clan getClanByCharId(int charId)
+	private Clan getClanByCharId(int charId)
 	{
 		if (charId <= 0)
 		{
@@ -188,7 +190,7 @@ public class ClanTable
 	/**
 	 * Method restoreClans.
 	 */
-	public void restoreClans()
+	private void restoreClans()
 	{
 		List<Integer> clanIds = new ArrayList<>();
 		Connection con = null;
@@ -244,7 +246,7 @@ public class ClanTable
 	/**
 	 * Method restoreAllies.
 	 */
-	public void restoreAllies()
+	private void restoreAllies()
 	{
 		List<Integer> allyIds = new ArrayList<>();
 		Connection con = null;
@@ -395,7 +397,7 @@ public class ClanTable
 	 * Method deleteClanFromDb.
 	 * @param clanId int
 	 */
-	public void deleteClanFromDb(int clanId)
+	private void deleteClanFromDb(int clanId)
 	{
 		long curtime = System.currentTimeMillis();
 		Connection con = null;
@@ -488,7 +490,7 @@ public class ClanTable
 	 * Method deleteAllyFromDb.
 	 * @param allyId int
 	 */
-	public void deleteAllyFromDb(int allyId)
+	private void deleteAllyFromDb(int allyId)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;

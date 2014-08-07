@@ -21,7 +21,7 @@ import lineage2.gameserver.model.Player;
 public class ExMPCCPartyInfoUpdate extends L2GameServerPacket
 {
 	private final Party _party;
-	Player _leader;
+	private final Player _leader;
 	private final int _mode, _count;
 	
 	/**

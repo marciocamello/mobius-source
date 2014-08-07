@@ -13,6 +13,7 @@
 package lineage2.gameserver.model.items;
 
 import java.util.Collection;
+
 import lineage2.commons.collections.CollectionUtils;
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.threading.RunnableImpl;
@@ -33,6 +34,7 @@ import lineage2.gameserver.taskmanager.DelayedItemsManager;
 import lineage2.gameserver.templates.item.EtcItemTemplate.EtcItemType;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
+
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
@@ -789,7 +791,7 @@ public class PcInventory extends Inventory
 	/**
 	 * @author Mobius
 	 */
-	protected class ShadowLifeTimeTask extends RunnableImpl
+	private class ShadowLifeTimeTask extends RunnableImpl
 	{
 		private final ItemInstance item;
 		
@@ -860,7 +862,7 @@ public class PcInventory extends Inventory
 	/**
 	 * @author Mobius
 	 */
-	protected class LifeTimeTask extends RunnableImpl
+	private class LifeTimeTask extends RunnableImpl
 	{
 		private final ItemInstance item;
 		

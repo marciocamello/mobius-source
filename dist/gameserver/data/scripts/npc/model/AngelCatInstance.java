@@ -15,6 +15,7 @@ package npc.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
@@ -28,9 +29,6 @@ import lineage2.gameserver.utils.ItemFunctions;
  */
 public final class AngelCatInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final String VAR_DATA = "angelCat_buff";
 	private static final String SELECT_DATA = "SELECT var, value FROM account_gsdata WHERE account_name=? AND var LIKE 'angelCat_buff'";

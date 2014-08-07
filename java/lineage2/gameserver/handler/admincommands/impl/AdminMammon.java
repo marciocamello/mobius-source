@@ -14,6 +14,7 @@ package lineage2.gameserver.handler.admincommands.impl;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
@@ -38,7 +39,7 @@ public class AdminMammon implements IAdminCommandHandler
 		admin_list_spawns
 	}
 	
-	final List<Integer> npcIds = new ArrayList<Integer>();
+	private final List<Integer> npcIds = new ArrayList<Integer>();
 	
 	/**
 	 * Method useAdminCommand.
@@ -130,7 +131,7 @@ public class AdminMammon implements IAdminCommandHandler
 	 * @param teleportIndex int
 	 * @param makeVisible int
 	 */
-	public void findAdminNPCs(Player activeChar, List<Integer> npcIdList, int teleportIndex, int makeVisible)
+	private void findAdminNPCs(Player activeChar, List<Integer> npcIdList, int teleportIndex, int makeVisible)
 	{
 		int index = 0;
 		

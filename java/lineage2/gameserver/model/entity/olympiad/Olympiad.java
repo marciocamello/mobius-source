@@ -19,6 +19,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.configuration.ExProperties;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
@@ -36,6 +37,7 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.MultiValueIntegerMap;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,10 +49,10 @@ public class Olympiad
 {
 	private static final Logger _log = LoggerFactory.getLogger(Olympiad.class);
 	public static Map<Integer, StatsSet> _nobles;
-	public static Map<Integer, Integer> _noblesRank;
-	public static List<StatsSet> _heroesToBe;
-	public static final List<Integer> _nonClassBasedRegisters = new CopyOnWriteArrayList<>();
-	public static final MultiValueIntegerMap _classBasedRegisters = new MultiValueIntegerMap();
+	static Map<Integer, Integer> _noblesRank;
+	static List<StatsSet> _heroesToBe;
+	static final List<Integer> _nonClassBasedRegisters = new CopyOnWriteArrayList<>();
+	static final MultiValueIntegerMap _classBasedRegisters = new MultiValueIntegerMap();
 	public static final String OLYMPIAD_HTML_PATH = "olympiad/";
 	public static final String CHAR_ID = "char_id";
 	public static final String CLASS_ID = "class_id";
@@ -63,19 +65,19 @@ public class Olympiad
 	public static final String COMP_LOOSE = "competitions_loose";
 	public static final String GAME_CLASSES_COUNT = "game_classes_count";
 	public static final String GAME_NOCLASSES_COUNT = "game_noclasses_count";
-	public static long _olympiadEnd;
-	public static long _validationEnd;
-	public static int _period;
-	public static long _nextWeeklyChange;
-	public static int _currentCycle;
+	static long _olympiadEnd;
+	static long _validationEnd;
+	static int _period;
+	static long _nextWeeklyChange;
+	static int _currentCycle;
 	private static long _compEnd;
 	private static Calendar _compStart;
 	public static boolean _inCompPeriod;
-	public static boolean _isOlympiadEnd;
+	static boolean _isOlympiadEnd;
 	private static ScheduledFuture<?> _scheduledOlympiadEnd;
-	public static ScheduledFuture<?> _scheduledManagerTask;
-	public static ScheduledFuture<?> _scheduledWeeklyTask;
-	public static ScheduledFuture<?> _scheduledValdationTask;
+	static ScheduledFuture<?> _scheduledManagerTask;
+	static ScheduledFuture<?> _scheduledWeeklyTask;
+	static ScheduledFuture<?> _scheduledValdationTask;
 	public static final Stadia[] STADIUMS = new Stadia[Config.OLYMPIAD_STADIAS_COUNT];
 	public static OlympiadManager _manager;
 	private static final List<NpcInstance> _npcs = new ArrayList<>();
@@ -216,7 +218,7 @@ public class Olympiad
 	/**
 	 * Method init.
 	 */
-	public static void init()
+	static void init()
 	{
 		if (_period == 1)
 		{
@@ -584,7 +586,7 @@ public class Olympiad
 	 * Method getMillisToCompEnd.
 	 * @return long
 	 */
-	public static long getMillisToCompEnd()
+	static long getMillisToCompEnd()
 	{
 		return _compEnd - Calendar.getInstance().getTimeInMillis();
 	}
@@ -606,7 +608,7 @@ public class Olympiad
 	/**
 	 * Method doWeekTasks.
 	 */
-	public static synchronized void doWeekTasks()
+	static synchronized void doWeekTasks()
 	{
 		if (_period == 1)
 		{
@@ -716,7 +718,7 @@ public class Olympiad
 	 * @param gameId int
 	 * @return OlympiadGame
 	 */
-	public static OlympiadGame getOlympiadGame(int gameId)
+	private static OlympiadGame getOlympiadGame(int gameId)
 	{
 		if ((_manager == null) || (gameId < 0))
 		{
@@ -966,7 +968,7 @@ public class Olympiad
 	 * Method getNpcs.
 	 * @return List<NpcInstance>
 	 */
-	public static List<NpcInstance> getNpcs()
+	static List<NpcInstance> getNpcs()
 	{
 		return _npcs;
 	}

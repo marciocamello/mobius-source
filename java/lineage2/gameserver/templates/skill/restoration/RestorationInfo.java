@@ -2,6 +2,7 @@ package lineage2.gameserver.templates.skill.restoration;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.commons.util.Rnd;
 
 public final class RestorationInfo

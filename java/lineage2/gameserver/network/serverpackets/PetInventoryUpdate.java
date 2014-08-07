@@ -14,15 +14,15 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.model.items.ItemInfo;
 import lineage2.gameserver.model.items.ItemInstance;
 
 public class PetInventoryUpdate extends L2GameServerPacket
 {
-	public static final int UNCHANGED = 0;
-	public static final int ADDED = 1;
-	public static final int MODIFIED = 2;
-	public static final int REMOVED = 3;
+	private static final int ADDED = 1;
+	private static final int MODIFIED = 2;
+	private static final int REMOVED = 3;
 	private final List<ItemInfo> _items = new ArrayList<>(1);
 	
 	public PetInventoryUpdate()

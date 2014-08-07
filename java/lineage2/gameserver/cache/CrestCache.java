@@ -18,11 +18,14 @@ import java.sql.ResultSet;
 import java.sql.Types;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
+
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import gnu.trove.map.hash.TIntIntHashMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
@@ -68,7 +71,7 @@ public class CrestCache
 	/**
 	 * Method load.
 	 */
-	public void load()
+	private void load()
 	{
 		int count = 0;
 		int pledgeId, crestId;
@@ -506,7 +509,7 @@ public class CrestCache
 		return crestId;
 	}
 	
-	public TIntObjectHashMap<byte[]> get_pledgeCrestLarge()
+	private TIntObjectHashMap<byte[]> get_pledgeCrestLarge()
 	{
 		return _pledgeCrestLarge;
 	}

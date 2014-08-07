@@ -25,9 +25,6 @@ import quests._10288_SecretMission;
  */
 public final class PriestAquilaniInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

@@ -13,8 +13,11 @@
 package lineage2.gameserver.network.telnet;
 
 import static org.jboss.netty.channel.Channels.pipeline;
+
 import java.nio.charset.Charset;
+
 import lineage2.gameserver.Config;
+
 import org.jboss.netty.channel.ChannelHandler;
 import org.jboss.netty.channel.ChannelPipeline;
 import org.jboss.netty.channel.ChannelPipelineFactory;
@@ -35,7 +38,7 @@ public class TelnetPipelineFactory implements ChannelPipelineFactory
 	 * Constructor for TelnetPipelineFactory.
 	 * @param handler ChannelHandler
 	 */
-	public TelnetPipelineFactory(ChannelHandler handler)
+	TelnetPipelineFactory(ChannelHandler handler)
 	{
 		this.handler = handler;
 	}

@@ -35,15 +35,15 @@ public final class MeleonSeed extends ScriptItemHandler
 	/**
 	 * @author Mobius
 	 */
-	static public final class DeSpawnScheduleTimerTask extends RunnableImpl
+	static private final class DeSpawnScheduleTimerTask extends RunnableImpl
 	{
-		SimpleSpawner spawnedPlant = null;
+		private SimpleSpawner spawnedPlant = null;
 		
 		/**
 		 * Constructor for DeSpawnScheduleTimerTask.
 		 * @param spawn SimpleSpawner
 		 */
-		public DeSpawnScheduleTimerTask(SimpleSpawner spawn)
+		private DeSpawnScheduleTimerTask(SimpleSpawner spawn)
 		{
 			spawnedPlant = spawn;
 		}

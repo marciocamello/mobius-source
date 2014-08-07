@@ -13,6 +13,7 @@
 package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
+
 import org.napile.primitive.maps.IntObjectMap;
 
 /**

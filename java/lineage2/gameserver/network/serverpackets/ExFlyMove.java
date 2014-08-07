@@ -20,8 +20,8 @@ import lineage2.gameserver.templates.jump.JumpPoint;
  */
 public class ExFlyMove extends L2GameServerPacket
 {
-	public static final int MANY_WAY_TYPE = 0;
-	public static final int ONE_WAY_TYPE = 2;
+	private static final int MANY_WAY_TYPE = 0;
+	private static final int ONE_WAY_TYPE = 2;
 	private final int _objId;
 	private final JumpPoint[] _points;
 	private int _type;

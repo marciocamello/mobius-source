@@ -15,6 +15,7 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.network.serverpackets.KeyPacket;
 import lineage2.gameserver.network.serverpackets.SendStatus;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

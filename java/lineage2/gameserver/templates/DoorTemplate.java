@@ -13,12 +13,14 @@
 package lineage2.gameserver.templates;
 
 import java.lang.reflect.Constructor;
+
 import lineage2.commons.geometry.Polygon;
 import lineage2.gameserver.ai.CharacterAI;
 import lineage2.gameserver.ai.DoorAI;
 import lineage2.gameserver.model.instances.DoorInstance;
 import lineage2.gameserver.scripts.Scripts;
 import lineage2.gameserver.utils.Location;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,7 +32,7 @@ public class DoorTemplate extends CharTemplate
 {
 	private static final Logger _log = LoggerFactory.getLogger(DoorTemplate.class);
 	@SuppressWarnings("unchecked")
-	public static final Constructor<DoorAI> DEFAULT_AI_CONSTRUCTOR = (Constructor<DoorAI>) CharacterAI.class.getConstructors()[0];
+	private static final Constructor<DoorAI> DEFAULT_AI_CONSTRUCTOR = (Constructor<DoorAI>) CharacterAI.class.getConstructors()[0];
 	
 	/**
 	 * @author Mobius

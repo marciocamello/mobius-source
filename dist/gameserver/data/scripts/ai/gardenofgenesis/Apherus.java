@@ -14,6 +14,7 @@ package ai.gardenofgenesis;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -177,12 +178,8 @@ public final class Apherus extends Fighter
 	
 	private class runDoorOpener extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public runDoorOpener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

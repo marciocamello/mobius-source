@@ -13,6 +13,7 @@
 package instances;
 
 import java.util.concurrent.atomic.AtomicInteger;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.instancemanager.WorldStatisticsManager;
@@ -103,12 +104,8 @@ public final class IsthinaNormal extends Reflection
 	
 	private class StartNormalIsthina extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public StartNormalIsthina()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -193,12 +190,8 @@ public final class IsthinaNormal extends Reflection
 	
 	private class DeathListener implements OnDeathListener
 	{
-		/**
-		 *
-		 */
 		public DeathListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -213,12 +206,8 @@ public final class IsthinaNormal extends Reflection
 	
 	private class IsthinaDeath extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public IsthinaDeath()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -235,12 +224,8 @@ public final class IsthinaNormal extends Reflection
 	
 	private class IsthinaDeathFinalA extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public IsthinaDeathFinalA()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -267,12 +252,8 @@ public final class IsthinaNormal extends Reflection
 	
 	private class IsthinaDeathFinalB extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public IsthinaDeathFinalB()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -299,12 +280,8 @@ public final class IsthinaNormal extends Reflection
 	
 	private class FinalAndCollapse extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public FinalAndCollapse()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -317,12 +294,8 @@ public final class IsthinaNormal extends Reflection
 	
 	private class SpawnBallista extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public SpawnBallista()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

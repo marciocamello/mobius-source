@@ -14,6 +14,7 @@ package lineage2.gameserver.data.xml.parser;
 
 import java.io.File;
 import java.util.Iterator;
+
 import lineage2.commons.data.xml.AbstractFileParser;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.BeautyShopHolder;
@@ -21,7 +22,9 @@ import lineage2.gameserver.model.beautyshop.BeautyShopFace;
 import lineage2.gameserver.model.beautyshop.BeautyShopHairColor;
 import lineage2.gameserver.model.beautyshop.BeautyShopHairStyle;
 import lineage2.gameserver.model.beautyshop.BeautyShopSet;
+
 import org.dom4j.Element;
+
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**

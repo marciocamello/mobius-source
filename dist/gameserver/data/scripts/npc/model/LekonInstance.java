@@ -23,9 +23,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class LekonInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int ENERGY_STAR_STONE = 13277;
 	private static final int AIRSHIP_SUMMON_LICENSE = 13559;

@@ -15,6 +15,7 @@ package services;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.GameTimeController;
 import lineage2.gameserver.ThreadPoolManager;
@@ -235,8 +236,15 @@ public final class FantasyIsle extends Functions implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public final class StartTask extends RunnableImpl
+	private final class StartTask extends RunnableImpl
 	{
+		/**
+		 * 
+		 */
+		public StartTask()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -494,10 +502,13 @@ public final class FantasyIsle extends Functions implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public static class Walk
+	private static class Walk
 	{
-		public int x, y, z, time;
-		public String event;
+		final int x;
+		final int y;
+		final int z;
+		final int time;
+		final String event;
 		
 		/**
 		 * Constructor for Walk.
@@ -507,7 +518,7 @@ public final class FantasyIsle extends Functions implements ScriptFile
 		 * @param event String
 		 * @param time int
 		 */
-		public Walk(int x, int y, int z, String event, int time)
+		Walk(int x, int y, int z, String event, int time)
 		{
 			this.x = x;
 			this.y = y;
@@ -520,10 +531,11 @@ public final class FantasyIsle extends Functions implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public static class Talk
+	private static class Talk
 	{
-		public int time;
-		public String text, event;
+		final int time;
+		final String text;
+		final String event;
 		
 		/**
 		 * Constructor for Talk.
@@ -531,7 +543,7 @@ public final class FantasyIsle extends Functions implements ScriptFile
 		 * @param event String
 		 * @param time int
 		 */
-		public Talk(String text, String event, int time)
+		Talk(String text, String event, int time)
 		{
 			this.text = text;
 			this.event = event;

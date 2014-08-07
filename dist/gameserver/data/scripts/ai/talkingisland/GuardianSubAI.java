@@ -33,7 +33,7 @@ public class GuardianSubAI extends DefaultAI
 	 * Constructor for GuardianSubAI.
 	 * @param actor NpcInstance
 	 */
-	public GuardianSubAI(NpcInstance actor)
+	GuardianSubAI(NpcInstance actor)
 	{
 		super(actor);
 	}

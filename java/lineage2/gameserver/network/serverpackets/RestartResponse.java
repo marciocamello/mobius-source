@@ -18,7 +18,7 @@ public class RestartResponse extends L2GameServerPacket
 	private final String _message;
 	private final int _param;
 	
-	public RestartResponse(int param)
+	private RestartResponse(int param)
 	{
 		_message = "bye";
 		_param = param;

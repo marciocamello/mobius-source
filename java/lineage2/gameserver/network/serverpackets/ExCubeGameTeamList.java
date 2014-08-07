@@ -13,6 +13,7 @@
 package lineage2.gameserver.network.serverpackets;
 
 import java.util.Collection;
+
 import lineage2.gameserver.model.Player;
 
 /**
@@ -20,10 +21,10 @@ import lineage2.gameserver.model.Player;
  */
 public class ExCubeGameTeamList extends L2GameServerPacket
 {
-	Collection<Player> _bluePlayers;
-	Collection<Player> _redPlayers;
-	int _roomNumber;
-	int _timeleft;
+	private final Collection<Player> _bluePlayers;
+	private final Collection<Player> _redPlayers;
+	private final int _roomNumber;
+	private int _timeleft;
 	
 	public ExCubeGameTeamList(Collection<Player> redPlayers, Collection<Player> bluePlayers, int roomNumber)
 	{

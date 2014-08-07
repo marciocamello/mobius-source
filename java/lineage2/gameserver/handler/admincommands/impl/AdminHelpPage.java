@@ -69,7 +69,7 @@ public class AdminHelpPage implements IAdminCommandHandler
 	 * @param targetChar Player
 	 * @param content String
 	 */
-	public static void showHelpHtml(Player targetChar, String content)
+	static void showHelpHtml(Player targetChar, String content)
 	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setHtml(content);

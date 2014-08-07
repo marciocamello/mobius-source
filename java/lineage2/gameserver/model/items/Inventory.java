@@ -13,6 +13,7 @@
 package lineage2.gameserver.model.items;
 
 import java.util.Comparator;
+
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.listener.Listener;
 import lineage2.commons.listener.ListenerList;
@@ -25,6 +26,7 @@ import lineage2.gameserver.model.items.listeners.StatsListener;
 import lineage2.gameserver.templates.item.EtcItemTemplate.EtcItemType;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -95,8 +97,12 @@ public abstract class Inventory extends ItemContainer
 	/**
 	 * @author Mobius
 	 */
-	public class InventoryListenerList extends ListenerList<Playable>
+	class InventoryListenerList extends ListenerList<Playable>
 	{
+		public InventoryListenerList()
+		{
+		}
+		
 		/**
 		 * Method onEquip.
 		 * @param slot int
@@ -127,7 +133,7 @@ public abstract class Inventory extends ItemContainer
 	/**
 	 * @author Mobius
 	 */
-	public static class ItemOrderComparator implements Comparator<ItemInstance>
+	static class ItemOrderComparator implements Comparator<ItemInstance>
 	{
 		private static final Comparator<ItemInstance> instance = new ItemOrderComparator();
 		
@@ -135,7 +141,7 @@ public abstract class Inventory extends ItemContainer
 		 * Method getInstance.
 		 * @return Comparator<ItemInstance>
 		 */
-		public static final Comparator<ItemInstance> getInstance()
+		static final Comparator<ItemInstance> getInstance()
 		{
 			return instance;
 		}
@@ -158,11 +164,11 @@ public abstract class Inventory extends ItemContainer
 		}
 	}
 	
-	protected final int _ownerId;
+	private final int _ownerId;
 	protected final ItemInstance[] _paperdoll = new ItemInstance[PAPERDOLL_MAX];
 	protected final InventoryListenerList _listeners = new InventoryListenerList();
-	protected int _totalWeight;
-	protected long _wearedMask;
+	private int _totalWeight;
+	private long _wearedMask;
 	
 	/**
 	 * Constructor for Inventory.
@@ -439,7 +445,7 @@ public abstract class Inventory extends ItemContainer
 	 * Method addListener.
 	 * @param listener OnEquipListener
 	 */
-	public void addListener(OnEquipListener listener)
+	void addListener(OnEquipListener listener)
 	{
 		_listeners.add(listener);
 	}
@@ -1100,7 +1106,7 @@ public abstract class Inventory extends ItemContainer
 	 * @param count long
 	 * @return boolean
 	 */
-	public boolean validateCapacity(ItemTemplate item, long count)
+	private boolean validateCapacity(ItemTemplate item, long count)
 	{
 		long slots = 0;
 		
@@ -1166,7 +1172,7 @@ public abstract class Inventory extends ItemContainer
 	 * @param count long
 	 * @return boolean
 	 */
-	public boolean validateWeight(ItemTemplate item, long count)
+	private boolean validateWeight(ItemTemplate item, long count)
 	{
 		long weight = item.getWeight() * count;
 		return validateWeight(weight);

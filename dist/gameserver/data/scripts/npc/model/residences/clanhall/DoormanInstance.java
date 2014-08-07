@@ -22,9 +22,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class DoormanInstance extends npc.model.residences.DoormanInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

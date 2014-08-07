@@ -85,7 +85,7 @@ public class MultiValueIntegerMap
 	 * @param key Integer
 	 * @return List<Integer>
 	 */
-	public List<Integer> remove(Integer key)
+	private List<Integer> remove(Integer key)
 	{
 		return map.remove(key);
 	}

@@ -33,7 +33,7 @@ public class RinneSubAI extends DefaultAI
 	 * Constructor for RinneSubAI.
 	 * @param actor NpcInstance
 	 */
-	public RinneSubAI(NpcInstance actor)
+	RinneSubAI(NpcInstance actor)
 	{
 		super(actor);
 	}

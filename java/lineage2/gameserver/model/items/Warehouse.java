@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.List;
+
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.gameserver.dao.ItemsDAO;
 import lineage2.gameserver.model.items.ItemInstance.ItemLocation;
@@ -93,7 +94,7 @@ public abstract class Warehouse extends ItemContainer
 		}
 	}
 	
-	protected final int _ownerId;
+	private final int _ownerId;
 	
 	/**
 	 * Constructor for Warehouse.

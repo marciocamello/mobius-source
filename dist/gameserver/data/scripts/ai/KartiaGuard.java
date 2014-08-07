@@ -13,6 +13,7 @@
 package ai;
 
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ai.CtrlIntention;

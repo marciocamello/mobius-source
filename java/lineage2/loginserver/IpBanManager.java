@@ -18,6 +18,7 @@ import java.util.Map;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,7 +50,6 @@ public class IpBanManager
 		 */
 		public IpSession()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		public int tryCount;
@@ -57,10 +57,10 @@ public class IpBanManager
 		public long banExpire;
 	}
 	
-	final Map<String, IpSession> ips = new HashMap<>();
+	private final Map<String, IpSession> ips = new HashMap<>();
 	private final ReadWriteLock lock = new ReentrantReadWriteLock();
 	private final Lock readLock = lock.readLock();
-	final Lock writeLock = lock.writeLock();
+	private final Lock writeLock = lock.writeLock();
 	
 	/**
 	 * Constructor for IpBanManager.
@@ -98,7 +98,7 @@ public class IpBanManager
 	 * @param ip String
 	 * @return boolean
 	 */
-	public boolean isIpBanned(String ip)
+	boolean isIpBanned(String ip)
 	{
 		readLock.lock();
 		

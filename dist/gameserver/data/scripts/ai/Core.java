@@ -103,10 +103,10 @@ public final class Core extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	static class DeSpawnScheduleTimerTask extends RunnableImpl
+	private static class DeSpawnScheduleTimerTask extends RunnableImpl
 	{
-		final NpcInstance cubic1;
-		final NpcInstance cubic2;
+		private final NpcInstance cubic1;
+		private final NpcInstance cubic2;
 		
 		/**
 		 * Constructor for DeSpawnScheduleTimerTask.

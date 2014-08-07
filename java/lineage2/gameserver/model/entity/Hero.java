@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.StringHolder;
@@ -42,6 +43,7 @@ import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.HtmlUtils;
+
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -280,7 +282,7 @@ public class Hero
 	 * Method updateHeroes.
 	 * @param id int
 	 */
-	public void updateHeroes(int id)
+	private void updateHeroes(int id)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -422,7 +424,7 @@ public class Hero
 	 * Method loadDiary.
 	 * @param charId int
 	 */
-	public void loadDiary(int charId)
+	private void loadDiary(int charId)
 	{
 		List<HeroDiary> diary = new ArrayList<>();
 		Connection con = null;
@@ -595,7 +597,7 @@ public class Hero
 	 * Method loadMessage.
 	 * @param charId int
 	 */
-	public void loadMessage(int charId)
+	private void loadMessage(int charId)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -636,7 +638,7 @@ public class Hero
 	 * Method saveHeroMessage.
 	 * @param charId int
 	 */
-	public void saveHeroMessage(int charId)
+	private void saveHeroMessage(int charId)
 	{
 		if (_heroMessage.get(charId) == null)
 		{

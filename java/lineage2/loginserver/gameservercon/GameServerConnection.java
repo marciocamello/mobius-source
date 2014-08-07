@@ -24,10 +24,12 @@ import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.loginserver.Config;
 import lineage2.loginserver.ThreadPoolManager;
 import lineage2.loginserver.gameservercon.lspackets.PingRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,10 +40,10 @@ import org.slf4j.LoggerFactory;
 public class GameServerConnection
 {
 	private static final Logger _log = LoggerFactory.getLogger(GameServerConnection.class);
-	final ByteBuffer readBuffer = ByteBuffer.allocate(64 * 1024).order(ByteOrder.LITTLE_ENDIAN);
+	private final ByteBuffer readBuffer = ByteBuffer.allocate(64 * 1024).order(ByteOrder.LITTLE_ENDIAN);
 	final Queue<SendablePacket> sendQueue = new ArrayDeque<>();
 	final Lock sendLock = new ReentrantLock();
-	final AtomicBoolean isPengingWrite = new AtomicBoolean();
+	private final AtomicBoolean isPengingWrite = new AtomicBoolean();
 	private final Selector selector;
 	private final SelectionKey key;
 	GameServer gameServer;
@@ -58,7 +60,6 @@ public class GameServerConnection
 		 */
 		public PingTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -86,7 +87,7 @@ public class GameServerConnection
 	 * Constructor for GameServerConnection.
 	 * @param key SelectionKey
 	 */
-	public GameServerConnection(SelectionKey key)
+	GameServerConnection(SelectionKey key)
 	{
 		this.key = key;
 		selector = key.selector();
@@ -96,7 +97,7 @@ public class GameServerConnection
 	 * Method sendPacket.
 	 * @param packet SendablePacket
 	 */
-	public void sendPacket(SendablePacket packet)
+	void sendPacket(SendablePacket packet)
 	{
 		boolean wakeUp;
 		sendLock.lock();
@@ -156,7 +157,7 @@ public class GameServerConnection
 	/**
 	 * Method closeNow.
 	 */
-	public void closeNow()
+	void closeNow()
 	{
 		key.interestOps(SelectionKey.OP_CONNECT);
 		selector.wakeup();
@@ -165,7 +166,7 @@ public class GameServerConnection
 	/**
 	 * Method onDisconnection.
 	 */
-	public void onDisconnection()
+	void onDisconnection()
 	{
 		try
 		{
@@ -258,7 +259,7 @@ public class GameServerConnection
 	/**
 	 * Method stopPingTask.
 	 */
-	public void stopPingTask()
+	private void stopPingTask()
 	{
 		if (_pingTask != null)
 		{

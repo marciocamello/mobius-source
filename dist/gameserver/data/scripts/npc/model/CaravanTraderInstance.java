@@ -14,6 +14,7 @@ package npc.model;
 
 import java.util.List;
 import java.util.StringTokenizer;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.data.xml.holder.MultiSellHolder;
@@ -35,9 +36,6 @@ import lineage2.gameserver.utils.Util;
  */
 public final class CaravanTraderInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int NativeTreasure = 9684;
 	private static final int HolyWater = 9673;
@@ -813,7 +811,6 @@ public final class CaravanTraderInstance extends NpcInstance
 		 */
 		public CloseDoor()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

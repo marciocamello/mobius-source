@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.cache.Msg;
@@ -39,9 +40,6 @@ import lineage2.gameserver.utils.Location;
  */
 public class RaceManagerInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	public static final int LANES = 8;
 	public static final int WINDOW_START = 0;
@@ -57,7 +55,7 @@ public class RaceManagerInstance extends NpcInstance
 	private static final int STARTING_RACE = 2;
 	private static final int RACE_END = 3;
 	private static int state = RACE_END;
-	protected static final int[][] codes =
+	static final int[][] codes =
 	{
 		{
 			-1,
@@ -73,8 +71,8 @@ public class RaceManagerInstance extends NpcInstance
 		}
 	};
 	private static boolean notInitialized = true;
-	protected static MonRaceInfo packet;
-	protected static final int cost[] =
+	static MonRaceInfo packet;
+	private static final int cost[] =
 	{
 		100,
 		500,
@@ -142,7 +140,7 @@ public class RaceManagerInstance extends NpcInstance
 	/**
 	 * @author Mobius
 	 */
-	class Announcement extends RunnableImpl
+	private class Announcement extends RunnableImpl
 	{
 		private final int type;
 		
@@ -150,7 +148,7 @@ public class RaceManagerInstance extends NpcInstance
 		 * Constructor for Announcement.
 		 * @param type int
 		 */
-		public Announcement(int type)
+		Announcement(int type)
 		{
 			this.type = type;
 		}
@@ -169,7 +167,7 @@ public class RaceManagerInstance extends NpcInstance
 	 * Method makeAnnouncement.
 	 * @param type int
 	 */
-	public void makeAnnouncement(int type)
+	void makeAnnouncement(int type)
 	{
 		SystemMessage sm = new SystemMessage(type);
 		
@@ -227,7 +225,7 @@ public class RaceManagerInstance extends NpcInstance
 	 * Method broadcast.
 	 * @param pkt L2GameServerPacket
 	 */
-	protected void broadcast(L2GameServerPacket pkt)
+	void broadcast(L2GameServerPacket pkt)
 	{
 		for (RaceManagerInstance manager : managers)
 		{
@@ -241,7 +239,7 @@ public class RaceManagerInstance extends NpcInstance
 	/**
 	 * Method sendMonsterInfo.
 	 */
-	public void sendMonsterInfo()
+	void sendMonsterInfo()
 	{
 		broadcast(packet);
 	}
@@ -338,7 +336,7 @@ public class RaceManagerInstance extends NpcInstance
 	 * Method showOdds.
 	 * @param player Player
 	 */
-	public void showOdds(Player player)
+	private void showOdds(Player player)
 	{
 		if (state == ACCEPTING_BETS)
 		{
@@ -367,7 +365,7 @@ public class RaceManagerInstance extends NpcInstance
 	 * Method showMonsterInfo.
 	 * @param player Player
 	 */
-	public void showMonsterInfo(Player player)
+	private void showMonsterInfo(Player player)
 	{
 		int npcId = getTemplate().npcId;
 		String filename, search;
@@ -391,7 +389,7 @@ public class RaceManagerInstance extends NpcInstance
 	 * @param player Player
 	 * @param val int
 	 */
-	public void showBuyTicket(Player player, int val)
+	private void showBuyTicket(Player player, int val)
 	{
 		if (state != ACCEPTING_BETS)
 		{
@@ -512,7 +510,7 @@ public class RaceManagerInstance extends NpcInstance
 	/**
 	 * @author Mobius
 	 */
-	public class Race
+	private class Race
 	{
 		private final Info[] info;
 		
@@ -538,7 +536,7 @@ public class RaceManagerInstance extends NpcInstance
 		/**
 		 * @author Mobius
 		 */
-		public class Info
+		private class Info
 		{
 			private final int id;
 			private final int place;
@@ -601,8 +599,12 @@ public class RaceManagerInstance extends NpcInstance
 	/**
 	 * @author Mobius
 	 */
-	class RunRace extends RunnableImpl
+	private class RunRace extends RunnableImpl
 	{
+		public RunRace()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -618,8 +620,12 @@ public class RaceManagerInstance extends NpcInstance
 	/**
 	 * @author Mobius
 	 */
-	class RunEnd extends RunnableImpl
+	private class RunEnd extends RunnableImpl
 	{
+		public RunEnd()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */

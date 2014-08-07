@@ -30,7 +30,7 @@ public class SqlBatch
 	 * @param header String
 	 * @param tail String
 	 */
-	public SqlBatch(String header, String tail)
+	private SqlBatch(String header, String tail)
 	{
 		_header = header + "\n";
 		_tail = (tail != null) && (tail.length() > 0) ? " " + tail + ";\n" : ";\n";
@@ -79,7 +79,7 @@ public class SqlBatch
 	/**
 	 * Method writeBuffer.
 	 */
-	public void writeBuffer()
+	private void writeBuffer()
 	{
 		String last = _sb.toString();
 		

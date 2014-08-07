@@ -22,6 +22,7 @@ import lineage2.gameserver.model.quest.dynamic.DynamicQuest;
 import lineage2.gameserver.network.clientpackets.RequestActionUse;
 import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.scripts.ScriptFile;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -198,12 +199,8 @@ public final class MemorialService extends DynamicQuest implements ScriptFile
 	
 	private final class OnSocialActionListenerImpl implements OnSocialActionListener
 	{
-		/**
-		 *
-		 */
 		public OnSocialActionListenerImpl()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

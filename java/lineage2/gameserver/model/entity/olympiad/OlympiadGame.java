@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -40,6 +41,7 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.InstantZone;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.Log;
+
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -51,8 +53,8 @@ import org.slf4j.LoggerFactory;
 public class OlympiadGame
 {
 	private static final Logger _log = LoggerFactory.getLogger(OlympiadGame.class);
-	public static final int MAX_POINTS_LOOSE = 10;
-	public boolean validated = false;
+	static final int MAX_POINTS_LOOSE = 10;
+	boolean validated = false;
 	private int _winner = 0;
 	private int _state = 0;
 	private final int _id;
@@ -69,7 +71,7 @@ public class OlympiadGame
 	 * @param type CompType
 	 * @param opponents List<Integer>
 	 */
-	public OlympiadGame(int id, CompType type, List<Integer> opponents)
+	OlympiadGame(int id, CompType type, List<Integer> opponents)
 	{
 		_type = type;
 		_id = id;
@@ -126,7 +128,7 @@ public class OlympiadGame
 	/**
 	 * Method addBuffers.
 	 */
-	public void addBuffers()
+	void addBuffers()
 	{
 		if (!_type.hasBuffer())
 		{
@@ -142,7 +144,7 @@ public class OlympiadGame
 	/**
 	 * Method deleteBuffers.
 	 */
-	public void deleteBuffers()
+	void deleteBuffers()
 	{
 		_reflection.despawnByGroup(getBufferSpawnGroup(_reflection.getInstancedZoneId()));
 	}
@@ -150,7 +152,7 @@ public class OlympiadGame
 	/**
 	 * Method managerShout.
 	 */
-	public void managerShout()
+	void managerShout()
 	{
 		for (NpcInstance npc : Olympiad.getNpcs())
 		{
@@ -177,7 +179,7 @@ public class OlympiadGame
 	/**
 	 * Method portPlayersToArena.
 	 */
-	public void portPlayersToArena()
+	void portPlayersToArena()
 	{
 		_team1.portPlayersToArena();
 		_team2.portPlayersToArena();
@@ -186,7 +188,7 @@ public class OlympiadGame
 	/**
 	 * Method preparePlayers.
 	 */
-	public void preparePlayers()
+	void preparePlayers()
 	{
 		_team1.preparePlayers();
 		_team2.preparePlayers();
@@ -195,7 +197,7 @@ public class OlympiadGame
 	/**
 	 * Method portPlayersBack.
 	 */
-	public void portPlayersBack()
+	private void portPlayersBack()
 	{
 		_team1.portPlayersBack();
 		_team2.portPlayersBack();
@@ -204,7 +206,7 @@ public class OlympiadGame
 	/**
 	 * Method collapse.
 	 */
-	public void collapse()
+	void collapse()
 	{
 		portPlayersBack();
 		clearSpectators();
@@ -215,7 +217,7 @@ public class OlympiadGame
 	 * Method validateWinner.
 	 * @param aborted boolean
 	 */
-	public void validateWinner(boolean aborted)
+	void validateWinner(boolean aborted)
 	{
 		int state = _state;
 		_state = 0;
@@ -287,7 +289,7 @@ public class OlympiadGame
 	 * @param winnerTeam OlympiadTeam
 	 * @param looseTeam OlympiadTeam
 	 */
-	public void winGame(OlympiadTeam winnerTeam, OlympiadTeam looseTeam)
+	private void winGame(OlympiadTeam winnerTeam, OlympiadTeam looseTeam)
 	{
 		ExReceiveOlympiad.MatchResult packet = new ExReceiveOlympiad.MatchResult(false, winnerTeam.getName());
 		int pointDiff = 0;
@@ -357,7 +359,7 @@ public class OlympiadGame
 	/**
 	 * Method tie.
 	 */
-	public void tie()
+	private void tie()
 	{
 		TeamMember[] teamMembers1 = _team1.getMembers().toArray(new TeamMember[_team1.getMembers().size()]);
 		TeamMember[] teamMembers2 = _team2.getMembers().toArray(new TeamMember[_team2.getMembers().size()]);
@@ -438,7 +440,7 @@ public class OlympiadGame
 	/**
 	 * Method openDoors.
 	 */
-	public void openDoors()
+	void openDoors()
 	{
 		for (DoorInstance door : _reflection.getDoors())
 		{
@@ -469,7 +471,7 @@ public class OlympiadGame
 	 * @param objId int
 	 * @return boolean
 	 */
-	public boolean isRegistered(int objId)
+	boolean isRegistered(int objId)
 	{
 		return _team1.contains(objId) || _team2.contains(objId);
 	}
@@ -504,7 +506,7 @@ public class OlympiadGame
 	/**
 	 * Method clearSpectators.
 	 */
-	public void clearSpectators()
+	private void clearSpectators()
 	{
 		for (Player pc : _spectators)
 		{
@@ -569,7 +571,7 @@ public class OlympiadGame
 	/**
 	 * Method broadcastRelation.
 	 */
-	public void broadcastRelation()
+	private void broadcastRelation()
 	{
 		for (Player player : _team1.getPlayers())
 		{
@@ -588,7 +590,7 @@ public class OlympiadGame
 	 * @param toTeams boolean
 	 * @param toSpectators boolean
 	 */
-	public void broadcastPacket(L2GameServerPacket packet, boolean toTeams, boolean toSpectators)
+	void broadcastPacket(L2GameServerPacket packet, boolean toTeams, boolean toSpectators)
 	{
 		if (toTeams)
 		{
@@ -614,7 +616,7 @@ public class OlympiadGame
 	 * @param toTeams boolean
 	 * @param toSpectators boolean
 	 */
-	public void broadcastPacket(IStaticPacket packet, boolean toTeams, boolean toSpectators)
+	private void broadcastPacket(IStaticPacket packet, boolean toTeams, boolean toSpectators)
 	{
 		if (toTeams)
 		{
@@ -757,7 +759,7 @@ public class OlympiadGame
 	 * Method checkPlayersOnline.
 	 * @return boolean
 	 */
-	public boolean checkPlayersOnline()
+	boolean checkPlayersOnline()
 	{
 		return _team1.checkPlayers() && _team2.checkPlayers();
 	}
@@ -767,19 +769,19 @@ public class OlympiadGame
 	 * @param player Player
 	 * @return boolean
 	 */
-	public boolean logoutPlayer(Player player)
+	boolean logoutPlayer(Player player)
 	{
 		return (player != null) && (player.getOlympiadSide() == 1 ? _team1.logout(player) : _team2.logout(player));
 	}
 	
-	OlympiadGameTask _task;
-	ScheduledFuture<?> _shedule;
+	private OlympiadGameTask _task;
+	private ScheduledFuture<?> _shedule;
 	
 	/**
 	 * Method sheduleTask.
 	 * @param task OlympiadGameTask
 	 */
-	public synchronized void sheduleTask(OlympiadGameTask task)
+	synchronized void sheduleTask(OlympiadGameTask task)
 	{
 		if (_shedule != null)
 		{

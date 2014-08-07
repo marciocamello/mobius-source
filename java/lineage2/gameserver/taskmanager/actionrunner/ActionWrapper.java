@@ -13,8 +13,10 @@
 package lineage2.gameserver.taskmanager.actionrunner;
 
 import java.util.concurrent.Future;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,7 +43,7 @@ public abstract class ActionWrapper extends RunnableImpl
 	 * Method schedule.
 	 * @param time long
 	 */
-	public void schedule(long time)
+	void schedule(long time)
 	{
 		_scheduledFuture = ThreadPoolManager.getInstance().schedule(this, time);
 	}
@@ -49,7 +51,7 @@ public abstract class ActionWrapper extends RunnableImpl
 	/**
 	 * Method cancel.
 	 */
-	public void cancel()
+	void cancel()
 	{
 		if (_scheduledFuture != null)
 		{

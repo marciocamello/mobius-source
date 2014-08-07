@@ -17,6 +17,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,11 +26,12 @@ import org.slf4j.LoggerFactory;
  * @version $Revision: 1.0 $
  * @param <E>
  */
-public class GameObjectArray<E extends GameObject> implements Iterable<E>
+class GameObjectArray<E extends GameObject> implements Iterable<E>
 {
 	private static final Logger _log = LoggerFactory.getLogger(GameObjectArray.class);
-	public final String name;
-	public final int resizeStep, initCapacity;
+	final String name;
+	private final int resizeStep;
+	final int initCapacity;
 	private final List<Integer> freeIndexes;
 	E[] elementData;
 	int size = 0;
@@ -42,7 +44,7 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 	 * @param _resizeStep int
 	 */
 	@SuppressWarnings("unchecked")
-	public GameObjectArray(String _name, int initialCapacity, int _resizeStep)
+	GameObjectArray(String _name, int initialCapacity, int _resizeStep)
 	{
 		name = _name;
 		resizeStep = _resizeStep;
@@ -66,7 +68,7 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 	 * Method size.
 	 * @return int
 	 */
-	public int size()
+	int size()
 	{
 		return size;
 	}
@@ -84,7 +86,7 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 	 * Method capacity.
 	 * @return int
 	 */
-	public int capacity()
+	int capacity()
 	{
 		return elementData.length;
 	}
@@ -94,7 +96,7 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 	 * @param e E
 	 * @return int
 	 */
-	public synchronized int add(E e)
+	synchronized int add(E e)
 	{
 		Integer freeIndex = null;
 		
@@ -128,7 +130,7 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 	 * @param expectedObjId int
 	 * @return E
 	 */
-	public synchronized E remove(int index, int expectedObjId)
+	synchronized E remove(int index, int expectedObjId)
 	{
 		if (index >= size)
 		{
@@ -162,7 +164,7 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 	 * @param index int
 	 * @return E
 	 */
-	public E get(int index)
+	E get(int index)
 	{
 		return index >= size ? null : elementData[index];
 	}
@@ -172,7 +174,7 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 	 * @param objId int
 	 * @return E
 	 */
-	public E findByObjectId(int objId)
+	E findByObjectId(int objId)
 	{
 		if (objId <= 0)
 		{
@@ -199,7 +201,7 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 	 * @param s String
 	 * @return E
 	 */
-	public E findByName(String s)
+	E findByName(String s)
 	{
 		if (s == null)
 		{
@@ -226,7 +228,7 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 	 * @param s String
 	 * @return List<E>
 	 */
-	public List<E> findAllByName(String s)
+	List<E> findAllByName(String s)
 	{
 		if (s == null)
 		{
@@ -263,7 +265,7 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 	 * @param list List<E>
 	 * @return List<E>
 	 */
-	public List<E> getAll(List<E> list)
+	List<E> getAll(List<E> list)
 	{
 		E o;
 		
@@ -337,10 +339,14 @@ public class GameObjectArray<E extends GameObject> implements Iterable<E>
 	/**
 	 * @author Mobius
 	 */
-	class Itr implements Iterator<E>
+	private class Itr implements Iterator<E>
 	{
 		private int cursor = 0;
 		private E _next;
+		
+		public Itr()
+		{
+		}
 		
 		/**
 		 * Method hasNext.

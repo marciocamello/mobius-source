@@ -19,12 +19,15 @@ import java.io.FileReader;
 import java.io.LineNumberReader;
 import java.util.HashMap;
 import java.util.Map;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.base.EnchantSkillLearn;
 import lineage2.gameserver.skills.SkillsEngine;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import gnu.trove.map.hash.TIntIntHashMap;
 
 /**
@@ -148,7 +151,7 @@ public class SkillTable
 	/**
 	 * Method loadAlfaData.
 	 */
-	public void loadAlfaData()
+	private void loadAlfaData()
 	{
 		LineNumberReader lnr = null;
 		

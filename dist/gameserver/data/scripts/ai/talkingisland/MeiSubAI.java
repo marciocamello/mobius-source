@@ -33,7 +33,7 @@ public class MeiSubAI extends DefaultAI
 	 * Constructor for MeiSubAI.
 	 * @param actor NpcInstance
 	 */
-	public MeiSubAI(NpcInstance actor)
+	MeiSubAI(NpcInstance actor)
 	{
 		super(actor);
 	}

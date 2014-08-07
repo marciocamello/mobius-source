@@ -17,6 +17,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
@@ -28,6 +29,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ShowBoard;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.BbsUtil;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -93,26 +95,28 @@ public final class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		};
 	}
 	
-	public final class CBStatMan
+	private final class CBStatMan
 	{
-		public int PlayerId = 0;
-		public String ChName = "";
-		public int ChGameTime = 0;
-		public int ChPk = 0;
-		public int ChPvP = 0;
-		public int ChOnOff = 0;
-		public int ChSex = 0;
-		public String NameCastl;
-		public Object siegeDate;
-		public String Percent;
-		public Object id2;
-		public int id;
-		public int ClanLevel;
-		public int hasCastle;
-		public int ReputationClan;
-		public String AllyName;
-		public String ClanName;
-		public String Owner;
+		public CBStatMan()
+		{
+		}
+		
+		int PlayerId = 0;
+		String ChName = "";
+		int ChGameTime = 0;
+		int ChPk = 0;
+		int ChPvP = 0;
+		int ChOnOff = 0;
+		int ChSex = 0;
+		String NameCastl;
+		Object siegeDate;
+		String Percent;
+		int id;
+		int ClanLevel;
+		int hasCastle;
+		int ReputationClan;
+		String AllyName;
+		String ClanName;
 	}
 	
 	/**

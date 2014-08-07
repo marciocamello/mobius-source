@@ -41,7 +41,7 @@ public final class BeautyShopHolder extends AbstractHolder
 		_sets.put(set.getId(), set);
 	}
 	
-	public BeautyShopSet getSet(int id)
+	private BeautyShopSet getSet(int id)
 	{
 		return (_sets.get(id));
 	}

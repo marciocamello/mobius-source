@@ -13,6 +13,7 @@
 package lineage2.gameserver.model.instances;
 
 import java.util.Collection;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
@@ -189,7 +190,7 @@ public final class VillageMasterInstance extends NpcInstance
 	 * @param player Player
 	 * @param clanName String
 	 */
-	public void createClan(Player player, String clanName)
+	private void createClan(Player player, String clanName)
 	{
 		if (player.getLevel() < 10)
 		{
@@ -240,7 +241,7 @@ public final class VillageMasterInstance extends NpcInstance
 	 * @param leader Player
 	 * @param newLeader String
 	 */
-	public void setLeader(Player leader, String newLeader)
+	private void setLeader(Player leader, String newLeader)
 	{
 		if (!leader.isClanLeader())
 		{
@@ -295,7 +296,7 @@ public final class VillageMasterInstance extends NpcInstance
 	 * @param minClanLvl int
 	 * @param leaderName String
 	 */
-	public void createSubPledge(Player player, String clanName, int pledgeType, int minClanLvl, String leaderName)
+	private void createSubPledge(Player player, String clanName, int pledgeType, int minClanLvl, String leaderName)
 	{
 		UnitMember subLeader = null;
 		Clan clan = player.getClan();
@@ -403,7 +404,7 @@ public final class VillageMasterInstance extends NpcInstance
 	 * @param clanName String
 	 * @param leaderName String
 	 */
-	public void assignSubPledgeLeader(Player player, String clanName, String leaderName)
+	private void assignSubPledgeLeader(Player player, String clanName, String leaderName)
 	{
 		Clan clan = player.getClan();
 		
@@ -521,7 +522,7 @@ public final class VillageMasterInstance extends NpcInstance
 	 * Method levelUpClan.
 	 * @param player Player
 	 */
-	public void levelUpClan(Player player)
+	private void levelUpClan(Player player)
 	{
 		Clan clan = player.getClan();
 		
@@ -693,7 +694,7 @@ public final class VillageMasterInstance extends NpcInstance
 	 * @param player Player
 	 * @param allyName String
 	 */
-	public void createAlly(Player player, String allyName)
+	private void createAlly(Player player, String allyName)
 	{
 		if (!player.isClanLeader())
 		{

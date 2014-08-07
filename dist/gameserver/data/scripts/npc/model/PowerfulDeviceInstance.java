@@ -14,6 +14,7 @@ package npc.model;
 
 import java.util.HashMap;
 import java.util.List;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
 import lineage2.gameserver.instancemanager.AwakingManager;

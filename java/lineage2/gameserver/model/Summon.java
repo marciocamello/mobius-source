@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Future;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -62,9 +63,6 @@ import gnu.trove.iterator.TIntObjectIterator;
  */
 public abstract class Summon extends Playable
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int SUMMON_DISAPPEAR_RANGE = 2500;
 	private final Player _owner;
@@ -793,7 +791,7 @@ public abstract class Summon extends Playable
 	/**
 	 * Method teleportToOwner.
 	 */
-	public void teleportToOwner()
+	void teleportToOwner()
 	{
 		Player owner = getPlayer();
 		setNonAggroTime(System.currentTimeMillis() + Config.NONAGGRO_TIME_ONTELEPORT);

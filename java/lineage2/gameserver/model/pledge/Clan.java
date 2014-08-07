@@ -21,6 +21,7 @@ import java.util.Collection;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
+
 import lineage2.commons.collections.JoinedIterator;
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
@@ -51,6 +52,7 @@ import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Log;
+
 import org.apache.commons.lang3.StringUtils;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CTreeIntObjectMap;
@@ -80,18 +82,18 @@ public class Clan implements Iterable<UnitMember>
 	private ClanAirShip _airship;
 	private boolean _airshipLicense;
 	private int _airshipFuel;
-	public static final long EXPELLED_MEMBER_PENALTY = 24 * 60 * 60 * 1000L;
-	public static final long LEAVED_ALLY_PENALTY = 24 * 60 * 60 * 1000L;
-	public static final long DISSOLVED_ALLY_PENALTY = 24 * 60 * 60 * 1000L;
+	private static final long EXPELLED_MEMBER_PENALTY = 24 * 60 * 60 * 1000L;
+	private static final long LEAVED_ALLY_PENALTY = 24 * 60 * 60 * 1000L;
+	private static final long DISSOLVED_ALLY_PENALTY = 24 * 60 * 60 * 1000L;
 	private final ClanWarehouse _warehouse;
 	private int _whBonus = -1;
 	private String _notice = null;
 	private final List<Clan> _atWarWith = new ArrayList<>();
 	private final List<Clan> _underAttackFrom = new ArrayList<>();
-	protected final IntObjectMap<Skill> _skills = new CTreeIntObjectMap<>();
-	protected final IntObjectMap<RankPrivs> _privs = new CTreeIntObjectMap<>();
-	protected final IntObjectMap<SubUnit> _subUnits = new CTreeIntObjectMap<>();
-	static Skill _clanLeaderSkill = SkillTable.getInstance().getInfo(19009, 1);
+	private final IntObjectMap<Skill> _skills = new CTreeIntObjectMap<>();
+	private final IntObjectMap<RankPrivs> _privs = new CTreeIntObjectMap<>();
+	private final IntObjectMap<SubUnit> _subUnits = new CTreeIntObjectMap<>();
+	private static Skill _clanLeaderSkill = SkillTable.getInstance().getInfo(19009, 1);
 	private int _reputation = 0;
 	public static final int CP_NOTHING = 0;
 	public static final int CP_CL_INVITE_CLAN = 2;
@@ -250,7 +252,7 @@ public class Clan implements Iterable<UnitMember>
 	 * @param unitType int
 	 * @return String
 	 */
-	public String getUnitName(int unitType)
+	private String getUnitName(int unitType)
 	{
 		if ((unitType == SUBUNIT_NONE) || !_subUnits.containsKey(unitType))
 		{
@@ -295,7 +297,7 @@ public class Clan implements Iterable<UnitMember>
 	 * @param unitType int
 	 * @return UnitMember
 	 */
-	public UnitMember getLeader(int unitType)
+	private UnitMember getLeader(int unitType)
 	{
 		if ((unitType == SUBUNIT_NONE) || !_subUnits.containsKey(unitType))
 		{
@@ -1668,7 +1670,7 @@ public class Clan implements Iterable<UnitMember>
 	 * @param pledgeType int
 	 * @return int
 	 */
-	public int getAvailablePledgeTypes(int pledgeType)
+	private int getAvailablePledgeTypes(int pledgeType)
 	{
 		if (pledgeType == SUBUNIT_MAIN_CLAN)
 		{
@@ -1888,7 +1890,7 @@ public class Clan implements Iterable<UnitMember>
 	/**
 	 * Method InitializePrivs.
 	 */
-	public void InitializePrivs()
+	private void InitializePrivs()
 	{
 		for (int i = RANK_FIRST; i <= RANK_LAST; i++)
 		{
@@ -1945,7 +1947,7 @@ public class Clan implements Iterable<UnitMember>
 	 * @param rank int
 	 * @return int
 	 */
-	public int countMembersByRank(int rank)
+	int countMembersByRank(int rank)
 	{
 		int ret = 0;
 		
@@ -2030,7 +2032,6 @@ public class Clan implements Iterable<UnitMember>
 		 */
 		public ClanReputationComparator()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

@@ -17,7 +17,7 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class ExCubeGameEnd extends L2GameServerPacket
 {
-	boolean _isRedTeamWin;
+	private final boolean _isRedTeamWin;
 	
 	public ExCubeGameEnd(boolean isRedTeamWin)
 	{

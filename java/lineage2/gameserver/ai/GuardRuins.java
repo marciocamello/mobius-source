@@ -13,6 +13,7 @@
 package lineage2.gameserver.ai;
 
 import java.util.List;
+
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 

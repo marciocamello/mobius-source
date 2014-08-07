@@ -80,7 +80,7 @@ public final class TeleToFantasyIsle extends Functions
 	/**
 	 * Method teleOut.
 	 */
-	public void teleOut()
+	private void teleOut()
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();

@@ -25,8 +25,8 @@ import lineage2.gameserver.scripts.Functions;
  */
 public class ChangePasswordResponse extends ReceivablePacket
 {
-	String account;
-	boolean changed;
+	private String account;
+	private boolean changed;
 	
 	/**
 	 * Method readImpl.

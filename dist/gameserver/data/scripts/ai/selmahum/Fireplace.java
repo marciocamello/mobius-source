@@ -56,8 +56,12 @@ public final class Fireplace extends DefaultAI
 	/**
 	 * @author Mobius
 	 */
-	public final class Switch extends RunnableImpl
+	private final class Switch extends RunnableImpl
 	{
+		public Switch()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */

@@ -17,7 +17,7 @@ import java.util.List;
 
 public class ExEnchantSkillList extends L2GameServerPacket
 {
-	public enum EnchantSkillType
+	private enum EnchantSkillType
 	{
 		NORMAL,
 		SAFE,
@@ -28,10 +28,10 @@ public class ExEnchantSkillList extends L2GameServerPacket
 	private final List<Skill> _skills;
 	private final EnchantSkillType _type;
 	
-	class Skill
+	private class Skill
 	{
-		public int id;
-		public int level;
+		final int id;
+		final int level;
 		
 		Skill(int id, int nextLevel)
 		{

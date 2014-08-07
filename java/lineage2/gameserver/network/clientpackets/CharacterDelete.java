@@ -20,6 +20,7 @@ import lineage2.gameserver.network.serverpackets.CharacterDeleteFail;
 import lineage2.gameserver.network.serverpackets.CharacterDeleteSuccess;
 import lineage2.gameserver.network.serverpackets.CharacterSelectionInfo;
 import lineage2.gameserver.network.serverpackets.ExLoginVitalityEffectInfo;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

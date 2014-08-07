@@ -24,9 +24,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class ZakenCandleInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int OHS_Weapon = 15280;
 	private static final int THS_Weapon = 15281;

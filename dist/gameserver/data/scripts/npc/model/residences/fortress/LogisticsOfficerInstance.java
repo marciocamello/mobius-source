@@ -28,9 +28,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class LogisticsOfficerInstance extends FacilityManagerInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int[] SUPPLY_NPC = new int[]
 	{

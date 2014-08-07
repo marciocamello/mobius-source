@@ -69,11 +69,11 @@ public final class SubclassRB extends Fighter
 		ThreadPoolManager.getInstance().schedule(new ChestDespawnTask(chest), 120 * 1000);
 	}
 	
-	class ChestDespawnTask extends RunnableImpl
+	private class ChestDespawnTask extends RunnableImpl
 	{
-		final NpcInstance _chest;
+		private final NpcInstance _chest;
 		
-		public ChestDespawnTask(NpcInstance chest)
+		ChestDespawnTask(NpcInstance chest)
 		{
 			_chest = chest;
 		}

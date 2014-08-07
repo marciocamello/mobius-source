@@ -21,6 +21,7 @@ import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.time.cron.SchedulingPattern;
 import lineage2.gameserver.ThreadPoolManager;
@@ -35,6 +36,7 @@ import lineage2.gameserver.network.serverpackets.ExDynamicQuestPacket.ScoreBoard
 import lineage2.gameserver.network.serverpackets.ExDynamicQuestPacket.StartedQuest;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.utils.ItemFunctions;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -636,12 +638,8 @@ public abstract class DynamicQuest
 	
 	private class OnPlayerEnterListenerImpl implements OnPlayerEnterListener
 	{
-		/**
-		 *
-		 */
 		public OnPlayerEnterListenerImpl()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

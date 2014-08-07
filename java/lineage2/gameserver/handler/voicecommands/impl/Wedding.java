@@ -14,9 +14,11 @@ package lineage2.gameserver.handler.voicecommands.impl;
 
 import static lineage2.gameserver.model.Zone.ZoneType.no_restart;
 import static lineage2.gameserver.model.Zone.ZoneType.no_summon;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
@@ -44,6 +46,7 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.skills.AbnormalEffect;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
+
 import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -153,7 +156,7 @@ public class Wedding implements IVoicedCommandHandler
 	 * @param activeChar Player
 	 * @return boolean
 	 */
-	public boolean divorce(Player activeChar)
+	private boolean divorce(Player activeChar)
 	{
 		if (activeChar.getPartnerId() == 0)
 		{
@@ -210,7 +213,7 @@ public class Wedding implements IVoicedCommandHandler
 	 * @param activeChar Player
 	 * @return boolean
 	 */
-	public boolean engage(final Player activeChar)
+	private boolean engage(final Player activeChar)
 	{
 		if (activeChar.getTarget() == null)
 		{
@@ -349,7 +352,7 @@ public class Wedding implements IVoicedCommandHandler
 	 * @param activeChar Player
 	 * @return boolean
 	 */
-	public boolean goToLove(Player activeChar)
+	private boolean goToLove(Player activeChar)
 	{
 		if (!activeChar.isMaried())
 		{
@@ -412,7 +415,7 @@ public class Wedding implements IVoicedCommandHandler
 	/**
 	 * @author Mobius
 	 */
-	static class EscapeFinalizer extends RunnableImpl
+	private static class EscapeFinalizer extends RunnableImpl
 	{
 		private final Player _activeChar;
 		private final Location _loc;
@@ -458,7 +461,7 @@ public class Wedding implements IVoicedCommandHandler
 	/**
 	 * Method onLoad.
 	 */
-	public void onLoad()
+	void onLoad()
 	{
 		VoicedCommandHandler.getInstance().registerVoicedCommandHandler(this);
 	}
@@ -466,14 +469,14 @@ public class Wedding implements IVoicedCommandHandler
 	/**
 	 * Method onReload.
 	 */
-	public void onReload()
+	void onReload()
 	{
 	}
 	
 	/**
 	 * Method onShutdown.
 	 */
-	public void onShutdown()
+	void onShutdown()
 	{
 	}
 }

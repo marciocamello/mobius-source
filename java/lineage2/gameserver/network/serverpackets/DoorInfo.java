@@ -37,6 +37,6 @@ public class DoorInfo extends L2GameServerPacket
 		writeC(0x4C);
 		writeD(obj_id);
 		writeD(door_id);
-		writeD(view_hp); // отображать ли хп у двери или стены
+		writeD(view_hp); // xn show whether the door or wall
 	}
 }

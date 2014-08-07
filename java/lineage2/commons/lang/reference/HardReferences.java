@@ -163,7 +163,7 @@ public class HardReferences
 	 * @param refs Iterable<HardReference<T>>
 	 * @return Iterable<T>
 	 */
-	public static <T> Iterable<T> iterate(Iterable<HardReference<T>> refs)
+	static <T> Iterable<T> iterate(Iterable<HardReference<T>> refs)
 	{
 		return new WrappedIterable<>(refs);
 	}

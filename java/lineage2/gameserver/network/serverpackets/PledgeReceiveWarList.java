@@ -14,6 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.model.pledge.Clan;
 
 public class PledgeReceiveWarList extends L2GameServerPacket
@@ -55,12 +56,13 @@ public class PledgeReceiveWarList extends L2GameServerPacket
 		}
 	}
 	
-	static class WarInfo
+	private static class WarInfo
 	{
-		public String clan_name;
-		public int unk1, unk2;
+		final String clan_name;
+		final int unk1;
+		final int unk2;
 		
-		public WarInfo(String _clan_name, int _unk1, int _unk2)
+		WarInfo(String _clan_name, int _unk1, int _unk2)
 		{
 			clan_name = _clan_name;
 			unk1 = _unk1;

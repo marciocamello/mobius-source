@@ -56,7 +56,8 @@ public final class SoulCrystals extends ScriptItemHandler
 	 * @param playable Playable
 	 * @param item ItemInstance
 	 * @param ctrl boolean
-	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
 	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
@@ -98,7 +99,7 @@ public final class SoulCrystals extends ScriptItemHandler
 	/**
 	 * @author Mobius
 	 */
-	static class CrystalFinalizer extends RunnableImpl
+	private static class CrystalFinalizer extends RunnableImpl
 	{
 		private final Player _activeChar;
 		private final MonsterInstance _target;

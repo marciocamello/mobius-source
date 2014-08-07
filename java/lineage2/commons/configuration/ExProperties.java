@@ -17,6 +17,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+
 import org.apache.commons.io.IOUtils;
 
 /**
@@ -33,7 +34,7 @@ public class ExProperties extends Properties
 	 * @param fileName String
 	 * @throws IOException
 	 */
-	public void load(String fileName) throws IOException
+	void load(String fileName) throws IOException
 	{
 		load(new File(fileName));
 	}
@@ -62,7 +63,7 @@ public class ExProperties extends Properties
 	 * @param s String
 	 * @return boolean
 	 */
-	public static boolean parseBoolean(String s)
+	private static boolean parseBoolean(String s)
 	{
 		switch (s.length())
 		{
@@ -249,7 +250,7 @@ public class ExProperties extends Properties
 	 * @param delimiter String
 	 * @return String[]
 	 */
-	public String[] getProperty(String name, String[] defaultValue, String delimiter)
+	private String[] getProperty(String name, String[] defaultValue, String delimiter)
 	{
 		String[] val = defaultValue;
 		String value;
@@ -268,7 +269,7 @@ public class ExProperties extends Properties
 	 * @param defaultValue boolean[]
 	 * @return boolean[]
 	 */
-	public boolean[] getProperty(String name, boolean[] defaultValue)
+	boolean[] getProperty(String name, boolean[] defaultValue)
 	{
 		return getProperty(name, defaultValue, defaultDelimiter);
 	}
@@ -280,7 +281,7 @@ public class ExProperties extends Properties
 	 * @param delimiter String
 	 * @return boolean[]
 	 */
-	public boolean[] getProperty(String name, boolean[] defaultValue, String delimiter)
+	private boolean[] getProperty(String name, boolean[] defaultValue, String delimiter)
 	{
 		boolean[] val = defaultValue;
 		String value;
@@ -317,7 +318,7 @@ public class ExProperties extends Properties
 	 * @param delimiter String
 	 * @return int[]
 	 */
-	public int[] getProperty(String name, int[] defaultValue, String delimiter)
+	private int[] getProperty(String name, int[] defaultValue, String delimiter)
 	{
 		int[] val = defaultValue;
 		String value;
@@ -342,7 +343,7 @@ public class ExProperties extends Properties
 	 * @param defaultValue long[]
 	 * @return long[]
 	 */
-	public long[] getProperty(String name, long[] defaultValue)
+	long[] getProperty(String name, long[] defaultValue)
 	{
 		return getProperty(name, defaultValue, defaultDelimiter);
 	}
@@ -354,7 +355,7 @@ public class ExProperties extends Properties
 	 * @param delimiter String
 	 * @return long[]
 	 */
-	public long[] getProperty(String name, long[] defaultValue, String delimiter)
+	private long[] getProperty(String name, long[] defaultValue, String delimiter)
 	{
 		long[] val = defaultValue;
 		String value;
@@ -391,7 +392,7 @@ public class ExProperties extends Properties
 	 * @param delimiter String
 	 * @return double[]
 	 */
-	public double[] getProperty(String name, double[] defaultValue, String delimiter)
+	private double[] getProperty(String name, double[] defaultValue, String delimiter)
 	{
 		double[] val = defaultValue;
 		String value;

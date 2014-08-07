@@ -14,6 +14,7 @@ package npc.model;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Creature;
@@ -31,9 +32,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class MushroomInstance extends MonsterInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int FANTASY_MUSHROOM = 18864;
 	private static final int FANTASY_MUSHROOM_SKILL = 6427;

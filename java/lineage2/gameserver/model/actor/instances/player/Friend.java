@@ -47,7 +47,7 @@ public class Friend
 	 * Constructor for Friend.
 	 * @param player Player
 	 */
-	public Friend(Player player)
+	Friend(Player player)
 	{
 		_objectId = player.getObjectId();
 		update(player, true);
@@ -58,7 +58,7 @@ public class Friend
 	 * @param player Player
 	 * @param set boolean
 	 */
-	public void update(Player player, boolean set)
+	void update(Player player, boolean set)
 	{
 		_level = player.getLevel();
 		_name = player.getName();

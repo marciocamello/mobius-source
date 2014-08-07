@@ -20,7 +20,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TreeMap;
+
 import javax.xml.parsers.DocumentBuilderFactory;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.commons.util.Rnd;
@@ -33,6 +35,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Util;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
@@ -52,7 +55,6 @@ public final class VoteManager extends Functions implements IVoicedCommandHandle
 		 */
 		public Vote()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		public boolean active;

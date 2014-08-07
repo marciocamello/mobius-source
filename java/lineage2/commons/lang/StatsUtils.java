@@ -34,7 +34,7 @@ public final class StatsUtils
 	 * Method getMemUsed.
 	 * @return long
 	 */
-	public static long getMemUsed()
+	private static long getMemUsed()
 	{
 		return memMXbean.getHeapMemoryUsage().getUsed();
 	}
@@ -52,7 +52,7 @@ public final class StatsUtils
 	 * Method getMemMax.
 	 * @return long
 	 */
-	public static long getMemMax()
+	private static long getMemMax()
 	{
 		return memMXbean.getHeapMemoryUsage().getMax();
 	}
@@ -61,7 +61,7 @@ public final class StatsUtils
 	 * Method getMemMaxMb.
 	 * @return String
 	 */
-	public static String getMemMaxMb()
+	static String getMemMaxMb()
 	{
 		return (getMemMax() / 0x100000) + " Mb";
 	}
@@ -70,7 +70,7 @@ public final class StatsUtils
 	 * Method getMemFree.
 	 * @return long
 	 */
-	public static long getMemFree()
+	private static long getMemFree()
 	{
 		MemoryUsage heapMemoryUsage = memMXbean.getHeapMemoryUsage();
 		return heapMemoryUsage.getMax() - heapMemoryUsage.getUsed();
@@ -80,7 +80,7 @@ public final class StatsUtils
 	 * Method getMemFreeMb.
 	 * @return String
 	 */
-	public static String getMemFreeMb()
+	static String getMemFreeMb()
 	{
 		return (getMemFree() / 0x100000) + " Mb";
 	}
@@ -112,7 +112,7 @@ public final class StatsUtils
 	 * Method getThreadStats.
 	 * @return CharSequence
 	 */
-	public static CharSequence getThreadStats()
+	static CharSequence getThreadStats()
 	{
 		StringBuilder list = new StringBuilder();
 		int threadCount = threadMXbean.getThreadCount();
@@ -136,7 +136,7 @@ public final class StatsUtils
 	 * @param stackTrace boolean
 	 * @return CharSequence
 	 */
-	public static CharSequence getThreadStats(boolean lockedMonitors, boolean lockedSynchronizers, boolean stackTrace)
+	static CharSequence getThreadStats(boolean lockedMonitors, boolean lockedSynchronizers, boolean stackTrace)
 	{
 		StringBuilder list = new StringBuilder();
 		
@@ -177,7 +177,7 @@ public final class StatsUtils
 	 * Method getGCStats.
 	 * @return CharSequence
 	 */
-	public static CharSequence getGCStats()
+	static CharSequence getGCStats()
 	{
 		StringBuilder list = new StringBuilder();
 		

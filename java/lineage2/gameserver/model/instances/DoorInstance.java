@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+
 import lineage2.commons.geometry.Shape;
 import lineage2.commons.listener.Listener;
 import lineage2.commons.threading.RunnableImpl;
@@ -40,9 +41,6 @@ import lineage2.gameserver.templates.item.WeaponTemplate;
 
 public final class DoorInstance extends Creature implements GeoCollision
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	@Override
@@ -89,7 +87,7 @@ public final class DoorInstance extends Creature implements GeoCollision
 	private final Lock _openLock = new ReentrantLock();
 	private int _upgradeHp;
 	private byte[][] _geoAround;
-	protected ScheduledFuture<?> _autoActionTask;
+	private ScheduledFuture<?> _autoActionTask;
 	
 	/**
 	 * Constructor for DoorInstance.
@@ -153,7 +151,7 @@ public final class DoorInstance extends Creature implements GeoCollision
 	 * @param open boolean
 	 * @return boolean
 	 */
-	protected boolean setOpen(boolean open)
+	private boolean setOpen(boolean open)
 	{
 		if (_open == open)
 		{
@@ -169,7 +167,7 @@ public final class DoorInstance extends Creature implements GeoCollision
 	 * @param open boolean
 	 * @param actionDelay long
 	 */
-	public void scheduleAutoAction(boolean open, long actionDelay)
+	private void scheduleAutoAction(boolean open, long actionDelay)
 	{
 		if (_autoActionTask != null)
 		{
@@ -609,7 +607,7 @@ public final class DoorInstance extends Creature implements GeoCollision
 	 * @param open boolean
 	 * @return boolean
 	 */
-	protected boolean setGeoOpen(boolean open)
+	private boolean setGeoOpen(boolean open)
 	{
 		if (_geoOpen == open)
 		{

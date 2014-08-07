@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -75,7 +76,6 @@ public final class BaylorManager extends Functions implements ScriptFile
 		 */
 		ActivityTimeEnd()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -177,7 +177,6 @@ public final class BaylorManager extends Functions implements ScriptFile
 		 */
 		IntervalEnd()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -230,7 +229,6 @@ public final class BaylorManager extends Functions implements ScriptFile
 		 */
 		EndScene()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

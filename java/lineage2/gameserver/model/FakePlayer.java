@@ -153,7 +153,7 @@ public class FakePlayer extends Creature
 	/**
 	 * Method notifyOwerStartAttak.
 	 */
-	public void notifyOwerStartAttak()
+	void notifyOwerStartAttak()
 	{
 		getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _owner.getTarget());
 	}
@@ -168,7 +168,6 @@ public class FakePlayer extends Creature
 		 */
 		public OwnerAttakListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

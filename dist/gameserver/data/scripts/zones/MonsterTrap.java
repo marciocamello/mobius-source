@@ -90,7 +90,6 @@ public final class MonsterTrap implements ScriptFile
 		 */
 		public ZoneListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

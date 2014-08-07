@@ -24,7 +24,7 @@ public class MultiSellIngredient implements Cloneable
 	private int _itemId;
 	private long _itemCount;
 	private int _itemEnchant;
-	int _chance;
+	private int _chance;
 	private ItemAttributes _itemAttributes;
 	private boolean _mantainIngredient;
 	
@@ -56,7 +56,7 @@ public class MultiSellIngredient implements Cloneable
 	 * @param enchant int
 	 * @param chance int
 	 */
-	public MultiSellIngredient(int itemId, long itemCount, int enchant, int chance)
+	private MultiSellIngredient(int itemId, long itemCount, int enchant, int chance)
 	{
 		_itemId = itemId;
 		_itemCount = itemCount;

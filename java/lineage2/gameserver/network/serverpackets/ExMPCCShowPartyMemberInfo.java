@@ -14,6 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 
@@ -51,12 +52,13 @@ public class ExMPCCShowPartyMemberInfo extends L2GameServerPacket
 		members.clear();
 	}
 	
-	static class PartyMemberInfo
+	private static class PartyMemberInfo
 	{
-		public String name;
-		public int object_id, class_id;
+		final String name;
+		final int object_id;
+		final int class_id;
 		
-		public PartyMemberInfo(String _name, int _object_id, int _class_id)
+		PartyMemberInfo(String _name, int _object_id, int _class_id)
 		{
 			name = _name;
 			object_id = _object_id;

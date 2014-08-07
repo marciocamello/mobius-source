@@ -14,6 +14,7 @@ package ai.hellbound;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.instancemanager.naia.NaiaCoreManager;
 import lineage2.gameserver.model.Creature;

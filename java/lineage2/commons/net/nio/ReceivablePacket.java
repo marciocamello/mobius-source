@@ -23,7 +23,7 @@ public abstract class ReceivablePacket<T> extends AbstractPacket<T> implements R
 	 * Method getAvaliableBytes.
 	 * @return int
 	 */
-	protected int getAvaliableBytes()
+	int getAvaliableBytes()
 	{
 		return getByteBuffer().remaining();
 	}
@@ -43,7 +43,7 @@ public abstract class ReceivablePacket<T> extends AbstractPacket<T> implements R
 	 * @param offset int
 	 * @param len int
 	 */
-	protected void readB(byte[] dst, int offset, int len)
+	void readB(byte[] dst, int offset, int len)
 	{
 		getByteBuffer().get(dst, offset, len);
 	}

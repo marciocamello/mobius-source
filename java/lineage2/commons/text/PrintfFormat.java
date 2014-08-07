@@ -39,7 +39,7 @@ public class PrintfFormat
 	 * @param fmtArg String
 	 * @throws IllegalArgumentException
 	 */
-	public PrintfFormat(Locale locale, String fmtArg) throws IllegalArgumentException
+	private PrintfFormat(Locale locale, String fmtArg) throws IllegalArgumentException
 	{
 		dfs = new DecimalFormatSymbols(locale);
 		int ePos = 0;
@@ -265,7 +265,7 @@ public class PrintfFormat
 	 * Method sprintf.
 	 * @return String
 	 */
-	public String sprintf()
+	String sprintf()
 	{
 		char c = 0;
 		StringBuilder sb = new StringBuilder();
@@ -293,7 +293,7 @@ public class PrintfFormat
 	 * @return String
 	 * @throws IllegalArgumentException
 	 */
-	public String sprintf(int x) throws IllegalArgumentException
+	String sprintf(int x) throws IllegalArgumentException
 	{
 		char c = 0;
 		StringBuilder sb = new StringBuilder();
@@ -325,7 +325,7 @@ public class PrintfFormat
 	 * @return String
 	 * @throws IllegalArgumentException
 	 */
-	public String sprintf(long x) throws IllegalArgumentException
+	String sprintf(long x) throws IllegalArgumentException
 	{
 		char c = 0;
 		StringBuilder sb = new StringBuilder();
@@ -357,7 +357,7 @@ public class PrintfFormat
 	 * @return String
 	 * @throws IllegalArgumentException
 	 */
-	public String sprintf(double x) throws IllegalArgumentException
+	String sprintf(double x) throws IllegalArgumentException
 	{
 		char c = 0;
 		StringBuilder sb = new StringBuilder();
@@ -421,7 +421,7 @@ public class PrintfFormat
 	 * @return String
 	 * @throws IllegalArgumentException
 	 */
-	public String sprintf(Object x) throws IllegalArgumentException
+	String sprintf(Object x) throws IllegalArgumentException
 	{
 		char c = 0;
 		StringBuilder sb = new StringBuilder();

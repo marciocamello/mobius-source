@@ -20,11 +20,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _051_OFullesSpecialBait extends Quest implements ScriptFile
 {
-	final int OFulle = 31572;
-	final int FetteredSoul = 20552;
-	final int LostBaitIngredient = 7622;
-	final int IcyAirFishingLure = 7611;
-	final Integer FishSkill = 1315;
+	private final int OFulle = 31572;
+	private final int FetteredSoul = 20552;
+	private final int LostBaitIngredient = 7622;
+	private final int IcyAirFishingLure = 7611;
+	private final Integer FishSkill = 1315;
 	
 	@Override
 	public void onLoad()

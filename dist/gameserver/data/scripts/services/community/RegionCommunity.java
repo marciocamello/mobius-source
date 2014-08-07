@@ -18,6 +18,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.StringTokenizer;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
@@ -37,6 +38,7 @@ import lineage2.gameserver.templates.item.RecipeTemplate;
 import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.MapUtils;
 import lineage2.gameserver.utils.Util;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -791,7 +793,6 @@ public final class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 		 */
 		public PlayersComparator()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

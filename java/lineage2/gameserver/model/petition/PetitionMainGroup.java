@@ -13,6 +13,7 @@
 package lineage2.gameserver.model.petition;
 
 import java.util.Collection;
+
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 

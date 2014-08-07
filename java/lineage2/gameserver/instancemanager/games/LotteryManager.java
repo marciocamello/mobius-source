@@ -17,6 +17,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Calendar;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
@@ -27,6 +28,7 @@ import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,7 +39,7 @@ import org.slf4j.LoggerFactory;
 public class LotteryManager
 {
 	public static final long SECOND = 1000;
-	public static final long MINUTE = 60000;
+	private static final long MINUTE = 60000;
 	private static LotteryManager _instance;
 	private static final Logger _log = LoggerFactory.getLogger(LotteryManager.class);
 	private static final String INSERT_LOTTERY = "INSERT INTO games(id, idnr, enddate, prize, newprize) VALUES (?, ?, ?, ?, ?)";
@@ -46,11 +48,11 @@ public class LotteryManager
 	private static final String SELECT_LAST_LOTTERY = "SELECT idnr, prize, newprize, enddate, finished FROM games WHERE id = 1 ORDER BY idnr DESC LIMIT 1";
 	private static final String SELECT_LOTTERY_ITEM = "SELECT enchant_level, custom_type2 FROM items WHERE item_id = 4442 AND custom_type1 = ?";
 	private static final String SELECT_LOTTERY_TICKET = "SELECT number1, number2, prize1, prize2, prize3 FROM games WHERE id = 1 AND idnr = ?";
-	protected int _number;
-	protected int _prize;
-	protected boolean _isSellingTickets;
-	protected boolean _isStarted;
-	protected long _enddate;
+	int _number;
+	private int _prize;
+	boolean _isSellingTickets;
+	boolean _isStarted;
+	private long _enddate;
 	
 	/**
 	 * Constructor for LotteryManager.
@@ -563,7 +565,7 @@ public class LotteryManager
 	 * @param type2 int
 	 * @return int[]
 	 */
-	public int[] checkTicket(int id, int enchant, int type2)
+	private int[] checkTicket(int id, int enchant, int type2)
 	{
 		int res[] =
 		{

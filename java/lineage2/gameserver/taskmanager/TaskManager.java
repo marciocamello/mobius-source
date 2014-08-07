@@ -19,6 +19,7 @@ import static lineage2.gameserver.taskmanager.TaskTypes.TYPE_SHEDULED;
 import static lineage2.gameserver.taskmanager.TaskTypes.TYPE_SPECIAL;
 import static lineage2.gameserver.taskmanager.TaskTypes.TYPE_STARTUP;
 import static lineage2.gameserver.taskmanager.TaskTypes.TYPE_TIME;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -31,6 +32,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
@@ -39,6 +41,7 @@ import lineage2.gameserver.taskmanager.tasks.SoIStageUpdater;
 import lineage2.gameserver.taskmanager.tasks.TaskRecom;
 import lineage2.gameserver.taskmanager.tasks.TaskVitalitySystem;
 import lineage2.gameserver.taskmanager.tasks.WorldStatisticUpdate;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -65,11 +68,11 @@ public final class TaskManager
 	 */
 	public class ExecutedTask extends RunnableImpl
 	{
-		int _id;
-		long _lastActivation;
-		Task _task;
-		TaskTypes _type;
-		String[] _params;
+		private final int _id;
+		private long _lastActivation;
+		private final Task _task;
+		private final TaskTypes _type;
+		private final String[] _params;
 		ScheduledFuture<?> _scheduled;
 		
 		/**
@@ -79,7 +82,7 @@ public final class TaskManager
 		 * @param rset ResultSet
 		 * @throws SQLException
 		 */
-		public ExecutedTask(Task task, TaskTypes type, ResultSet rset) throws SQLException
+		ExecutedTask(Task task, TaskTypes type, ResultSet rset) throws SQLException
 		{
 			_task = task;
 			_type = type;
@@ -186,7 +189,7 @@ public final class TaskManager
 		/**
 		 * Method stopTask.
 		 */
-		public void stopTask()
+		private void stopTask()
 		{
 			_task.onDestroy();
 			
@@ -237,7 +240,7 @@ public final class TaskManager
 	 * Method registerTask.
 	 * @param task Task
 	 */
-	public void registerTask(Task task)
+	private void registerTask(Task task)
 	{
 		int key = task.getName().hashCode();
 		
@@ -418,7 +421,7 @@ public final class TaskManager
 	 * @param lastActivation long
 	 * @return boolean
 	 */
-	public static boolean addUniqueTask(String task, TaskTypes type, String param1, String param2, String param3, long lastActivation)
+	private static boolean addUniqueTask(String task, TaskTypes type, String param1, String param2, String param3, long lastActivation)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -465,24 +468,10 @@ public final class TaskManager
 	 * @param param1 String
 	 * @param param2 String
 	 * @param param3 String
-	 * @return boolean
-	 */
-	public static boolean addTask(String task, TaskTypes type, String param1, String param2, String param3)
-	{
-		return addTask(task, type, param1, param2, param3, 0);
-	}
-	
-	/**
-	 * Method addTask.
-	 * @param task String
-	 * @param type TaskTypes
-	 * @param param1 String
-	 * @param param2 String
-	 * @param param3 String
 	 * @param lastActivation long
 	 * @return boolean
 	 */
-	public static boolean addTask(String task, TaskTypes type, String param1, String param2, String param3, long lastActivation)
+	private static boolean addTask(String task, TaskTypes type, String param1, String param2, String param3, long lastActivation)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;

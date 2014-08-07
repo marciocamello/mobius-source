@@ -14,10 +14,12 @@ package lineage2.gameserver.model.entity;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.idfactory.IdFactory;
 import lineage2.gameserver.instancemanager.CoupleManager;
 import lineage2.gameserver.model.Player;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

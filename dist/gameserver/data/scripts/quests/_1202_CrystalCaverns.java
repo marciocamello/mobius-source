@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ai.CtrlEvent;
@@ -192,31 +193,45 @@ public class _1202_CrystalCaverns extends Quest implements ScriptFile
 	private static final int Garden_Castalia = 22317;
 	private static final int CORAL_GARDEN_GATEWAY = 24220025;
 	
-	public class World
+	private class World
 	{
-		public int instanceId;
-		public int status;
-		public int killedCaptains;
-		public int bosses;
-		public boolean OracleTriggered;
-		public List<Integer> rewarded;
-		public Room emeraldRoom;
-		public Room steamRoom1;
-		public Room steamRoom2;
-		public Room steamRoom3;
-		public Room steamRoom4;
-		public Room SecretRoom1;
-		public Room SecretRoom2;
-		public Room SecretRoom3;
-		public Room SecretRoom4;
-		public Room DarnelRoom;
-		public Room kechiRoom;
-		public Room CoralGardenHall;
+		/**
+		 * 
+		 */
+		public World()
+		{
+		}
+		
+		int instanceId;
+		int status;
+		int killedCaptains;
+		int bosses;
+		boolean OracleTriggered;
+		List<Integer> rewarded;
+		Room emeraldRoom;
+		Room steamRoom1;
+		Room steamRoom2;
+		Room steamRoom3;
+		Room steamRoom4;
+		Room SecretRoom1;
+		Room SecretRoom2;
+		Room SecretRoom3;
+		Room SecretRoom4;
+		Room DarnelRoom;
+		Room kechiRoom;
+		Room CoralGardenHall;
 	}
 	
-	public class Room
+	private class Room
 	{
-		public Map<NpcInstance, Boolean> npclist;
+		/**
+		 * 
+		 */
+		public Room()
+		{
+		}
+		
+		Map<NpcInstance, Boolean> npclist;
 	}
 	
 	private static final TIntObjectHashMap<World> worlds = new TIntObjectHashMap<>();

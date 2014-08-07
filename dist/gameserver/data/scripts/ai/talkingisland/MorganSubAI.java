@@ -33,7 +33,7 @@ public class MorganSubAI extends DefaultAI
 	 * Constructor for MorganSubAI.
 	 * @param actor NpcInstance
 	 */
-	public MorganSubAI(NpcInstance actor)
+	MorganSubAI(NpcInstance actor)
 	{
 		super(actor);
 	}

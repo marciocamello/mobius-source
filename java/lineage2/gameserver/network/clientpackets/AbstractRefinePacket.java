@@ -25,10 +25,10 @@ import lineage2.gameserver.templates.item.ItemTemplate.Grade;
  */
 public abstract class AbstractRefinePacket extends L2GameClientPacket
 {
-	protected static final int GEMSTONE_D = 2130;
-	protected static final int GEMSTONE_C = 2131;
-	protected static final int GEMSTONE_B = 2132;
-	protected static final int GEMSTONE_A = 2133;
+	private static final int GEMSTONE_D = 2130;
+	private static final int GEMSTONE_C = 2131;
+	private static final int GEMSTONE_B = 2132;
+	private static final int GEMSTONE_A = 2133;
 	
 	/**
 	 * Method isValid.
@@ -136,7 +136,7 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 	 * @param player Player
 	 * @return boolean
 	 */
-	protected static final boolean isValid(Player player)
+	private static final boolean isValid(Player player)
 	{
 		if (player.isActionsDisabled())
 		{

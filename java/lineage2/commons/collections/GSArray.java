@@ -34,7 +34,7 @@ public class GSArray<E> implements Collection<E>
 	 * @param initialCapacity int
 	 */
 	@SuppressWarnings("unchecked")
-	public GSArray(int initialCapacity)
+	private GSArray(int initialCapacity)
 	{
 		super();
 		
@@ -58,7 +58,7 @@ public class GSArray<E> implements Collection<E>
 	 * Method ensureCapacity.
 	 * @param minCapacity int
 	 */
-	public synchronized void ensureCapacity(int minCapacity)
+	private synchronized void ensureCapacity(int minCapacity)
 	{
 		modCount++;
 		int oldCapacity = elementData.length;
@@ -100,7 +100,7 @@ public class GSArray<E> implements Collection<E>
 	 * Method toNativeArray.
 	 * @return E[]
 	 */
-	public synchronized E[] toNativeArray()
+	synchronized E[] toNativeArray()
 	{
 		return Arrays.copyOf(elementData, size);
 	}
@@ -144,7 +144,7 @@ public class GSArray<E> implements Collection<E>
 	 * @param index int
 	 * @return E
 	 */
-	public synchronized E get(int index)
+	synchronized E get(int index)
 	{
 		RangeCheck(index);
 		return elementData[index];
@@ -202,7 +202,7 @@ public class GSArray<E> implements Collection<E>
 	 * @param index int
 	 * @return E
 	 */
-	public synchronized E remove(int index)
+	synchronized E remove(int index)
 	{
 		RangeCheck(index);
 		modCount++;
@@ -218,7 +218,7 @@ public class GSArray<E> implements Collection<E>
 	 * @param element E
 	 * @return E
 	 */
-	public synchronized E set(int index, E element)
+	synchronized E set(int index, E element)
 	{
 		RangeCheck(index);
 		E oldValue = elementData[index];
@@ -231,7 +231,7 @@ public class GSArray<E> implements Collection<E>
 	 * @param o Object
 	 * @return int
 	 */
-	public synchronized int indexOf(Object o)
+	synchronized int indexOf(Object o)
 	{
 		if (o == null)
 		{
@@ -420,7 +420,7 @@ public class GSArray<E> implements Collection<E>
 	/**
 	 * Method clearSize.
 	 */
-	public synchronized void clearSize()
+	synchronized void clearSize()
 	{
 		modCount++;
 		size = 0;
@@ -450,7 +450,6 @@ public class GSArray<E> implements Collection<E>
 		 */
 		public Itr()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

@@ -13,6 +13,7 @@
 package npc.model.residences.clanhall;
 
 import java.util.List;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Creature;
@@ -34,9 +35,6 @@ import lineage2.gameserver.utils.NpcUtils;
  */
 public final class RainbowGourdInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	CMGSiegeClanObject _winner;
 	

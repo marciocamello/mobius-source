@@ -25,9 +25,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class SteelCitadelTeleporterInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

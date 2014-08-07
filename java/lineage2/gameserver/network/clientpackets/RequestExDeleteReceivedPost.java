@@ -13,10 +13,12 @@
 package lineage2.gameserver.network.clientpackets;
 
 import java.util.List;
+
 import lineage2.gameserver.dao.MailDAO;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.mail.Mail;
 import lineage2.gameserver.network.serverpackets.ExShowReceivedPostList;
+
 import org.apache.commons.lang3.ArrayUtils;
 
 /**

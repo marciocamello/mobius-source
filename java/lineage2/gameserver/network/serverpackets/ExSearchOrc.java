@@ -12,10 +12,6 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-/**
- * Пример пакета Kamael 828 протокол: 0000: fe 45 00 d9 9f 5e 8d 8b da 38 41 7a a0 3b 73 d1 .E...^...8Az.;s. 0010: 27 78 23 7f af 11 4b cc c4 2c de 81 86 73 9e 92 'x#..K..,...s.. 0020: d2 e3 f4 3b e6 a2 fb 69 65 df 44 c2 4f 6c 75 07 ...;...ie.D.Olu. 0030: b5 6b e5 29 00 d8 7f f7 78 60 f1 b7 a1 17
- * f8 f9 .k.)...x`...... 0040: 12 eb 07 ...
- */
 public class ExSearchOrc extends L2GameServerPacket
 {
 	// bchb

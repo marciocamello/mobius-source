@@ -21,9 +21,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public class StatueInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private final int _recordId;
 	private final int _socialId;

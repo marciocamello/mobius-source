@@ -23,12 +23,13 @@ public enum ItemAuctionState
 	CREATED,
 	STARTED,
 	FINISHED;
+	
 	/**
 	 * Method stateForStateId.
 	 * @param stateId int
 	 * @return ItemAuctionState
 	 */
-	public static final ItemAuctionState stateForStateId(int stateId)
+	static final ItemAuctionState stateForStateId(int stateId)
 	{
 		return ArrayUtils.valid(values(), stateId);
 	}

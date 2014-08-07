@@ -20,6 +20,7 @@ import java.util.Map.Entry;
 import java.util.NavigableMap;
 import java.util.TreeMap;
 import java.util.concurrent.ConcurrentHashMap;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.data.xml.holder.RecipeHolder;
@@ -1275,31 +1276,37 @@ public final class ItemBroker extends Functions
 	/**
 	 * @author Mobius
 	 */
-	public final class NpcInfo
+	private final class NpcInfo
 	{
-		public long lastUpdate;
-		public TreeMap<String, TreeMap<Long, Item>> bestSellItems;
-		public TreeMap<String, TreeMap<Long, Item>> bestBuyItems;
-		public TreeMap<String, TreeMap<Long, Item>> bestCraftItems;
+		/**
+		 * 
+		 */
+		public NpcInfo()
+		{
+		}
+		
+		long lastUpdate;
+		TreeMap<String, TreeMap<Long, Item>> bestSellItems;
+		TreeMap<String, TreeMap<Long, Item>> bestBuyItems;
+		TreeMap<String, TreeMap<Long, Item>> bestCraftItems;
 	}
 	
 	/**
 	 * @author Mobius
 	 */
-	public final class Item
+	private final class Item
 	{
-		public final int itemId;
-		public final int itemObjId;
-		public final int type;
-		public final long price;
-		public final long count;
-		public final int enchant;
-		public final boolean rare;
-		public final long merchantStoredId;
-		public final String name;
-		public final String merchantName;
-		public final Location player;
-		public final TradeItem item;
+		final int itemId;
+		final int itemObjId;
+		final long price;
+		final long count;
+		final int enchant;
+		final boolean rare;
+		final long merchantStoredId;
+		final String name;
+		final String merchantName;
+		final Location player;
+		final TradeItem item;
 		
 		/**
 		 * Constructor for Item.
@@ -1315,10 +1322,9 @@ public final class ItemBroker extends Functions
 		 * @param itemObjId int
 		 * @param item TradeItem
 		 */
-		public Item(int itemId, int type, long price, long count, int enchant, String itemName, long storedId, String merchantName, Location player, int itemObjId, TradeItem item)
+		Item(int itemId, int type, long price, long count, int enchant, String itemName, long storedId, String merchantName, Location player, int itemObjId, TradeItem item)
 		{
 			this.itemId = itemId;
-			this.type = type;
 			this.price = price;
 			this.count = count;
 			this.enchant = enchant;

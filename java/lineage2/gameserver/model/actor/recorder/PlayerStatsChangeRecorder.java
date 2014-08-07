@@ -20,6 +20,7 @@ import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.matching.MatchingRoom;
 import lineage2.gameserver.network.serverpackets.ExStorageMaxCount;
 import lineage2.gameserver.network.serverpackets.StatusUpdate.StatusUpdateField;
+
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -28,11 +29,11 @@ import org.apache.commons.lang3.StringUtils;
  */
 public final class PlayerStatsChangeRecorder extends CharStatsChangeRecorder<Player>
 {
-	public static final int BROADCAST_KARMA = 1 << 3;
-	public static final int SEND_STORAGE_INFO = 1 << 4;
-	public static final int SEND_MAX_LOAD = 1 << 5;
-	public static final int SEND_CUR_LOAD = 1 << 6;
-	public static final int BROADCAST_CHAR_INFO2 = 1 << 7;
+	private static final int BROADCAST_KARMA = 1 << 3;
+	private static final int SEND_STORAGE_INFO = 1 << 4;
+	private static final int SEND_MAX_LOAD = 1 << 5;
+	private static final int SEND_CUR_LOAD = 1 << 6;
+	private static final int BROADCAST_CHAR_INFO2 = 1 << 7;
 	private int _maxCp;
 	private int _maxLoad;
 	private int _curLoad;

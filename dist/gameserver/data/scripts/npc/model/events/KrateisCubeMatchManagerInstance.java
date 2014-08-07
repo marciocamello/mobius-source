@@ -13,6 +13,7 @@
 package npc.model.events;
 
 import java.util.List;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.Player;
@@ -27,9 +28,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class KrateisCubeMatchManagerInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

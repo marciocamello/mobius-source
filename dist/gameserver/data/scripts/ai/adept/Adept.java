@@ -33,7 +33,7 @@ public class Adept extends DefaultAI
 	 * Constructor for Adept.
 	 * @param actor NpcInstance
 	 */
-	public Adept(NpcInstance actor)
+	Adept(NpcInstance actor)
 	{
 		super(actor);
 	}

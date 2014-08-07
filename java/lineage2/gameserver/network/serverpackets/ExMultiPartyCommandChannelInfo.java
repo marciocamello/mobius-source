@@ -14,6 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.model.CommandChannel;
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
@@ -58,12 +59,13 @@ public class ExMultiPartyCommandChannelInfo extends L2GameServerPacket
 		}
 	}
 	
-	static class ChannelPartyInfo
+	private static class ChannelPartyInfo
 	{
-		public String Leader_name;
-		public int Leader_obj_id, MemberCount;
+		final String Leader_name;
+		final int Leader_obj_id;
+		final int MemberCount;
 		
-		public ChannelPartyInfo(String _Leader_name, int _Leader_obj_id, int _MemberCount)
+		ChannelPartyInfo(String _Leader_name, int _Leader_obj_id, int _MemberCount)
 		{
 			Leader_name = _Leader_name;
 			Leader_obj_id = _Leader_obj_id;

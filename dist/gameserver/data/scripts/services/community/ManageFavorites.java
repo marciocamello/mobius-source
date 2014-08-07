@@ -17,6 +17,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Date;
 import java.util.StringTokenizer;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
@@ -26,6 +27,7 @@ import lineage2.gameserver.handler.bbs.ICommunityBoardHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ShowBoard;
 import lineage2.gameserver.scripts.ScriptFile;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

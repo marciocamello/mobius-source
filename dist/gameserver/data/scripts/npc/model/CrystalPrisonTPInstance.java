@@ -25,9 +25,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class CrystalPrisonTPInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int VullockInstance = 167;
 	private static final int BaylorInstance = 168;

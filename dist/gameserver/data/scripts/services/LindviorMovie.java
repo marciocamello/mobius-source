@@ -13,6 +13,7 @@
 package services;
 
 import java.util.List;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Player;
@@ -44,15 +45,15 @@ public final class LindviorMovie implements ScriptFile
 	/**
 	 * @author Mobius
 	 */
-	public final class ShowLindviorMovie extends RunnableImpl
+	private final class ShowLindviorMovie extends RunnableImpl
 	{
-		Zone _zone;
+		private final Zone _zone;
 		
 		/**
 		 * Constructor for ShowLindviorMovie.
 		 * @param zone Zone
 		 */
-		public ShowLindviorMovie(Zone zone)
+		ShowLindviorMovie(Zone zone)
 		{
 			_zone = zone;
 		}

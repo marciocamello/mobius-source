@@ -17,10 +17,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import javax.xml.parsers.DocumentBuilderFactory;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.items.TradeItem;
 import lineage2.gameserver.templates.item.ItemTemplate;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -196,7 +199,7 @@ public class BuyListHolder
 	 * @param template ItemTemplate
 	 * @return boolean
 	 */
-	public boolean checkItem(ItemTemplate template)
+	private boolean checkItem(ItemTemplate template)
 	{
 		if (template.isCommonItem() && !Config.ALT_ALLOW_SELL_COMMON)
 		{
@@ -248,7 +251,7 @@ public class BuyListHolder
 	 * @param listId int
 	 * @param list NpcTradeList
 	 */
-	public void addToBuyList(int listId, NpcTradeList list)
+	void addToBuyList(int listId, NpcTradeList list)
 	{
 		_lists.put(listId, list);
 	}

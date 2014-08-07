@@ -17,10 +17,12 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.entity.residence.Residence;
+
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.TreeIntObjectMap;
 
@@ -132,7 +134,7 @@ public final class ResidenceHolder extends AbstractHolder
 	 * @param ref Reflection
 	 * @return R
 	 */
-	public <R extends Residence> R getResidenceByCoord(Class<R> type, int x, int y, int z, Reflection ref)
+	private <R extends Residence> R getResidenceByCoord(Class<R> type, int x, int y, int z, Reflection ref)
 	{
 		Collection<Residence> residences = type == null ? getResidences() : (Collection<Residence>) getResidenceList(type);
 		

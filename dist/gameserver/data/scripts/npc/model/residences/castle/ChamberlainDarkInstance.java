@@ -15,6 +15,7 @@ package npc.model.residences.castle;
 import java.util.Collections;
 import java.util.List;
 import java.util.StringTokenizer;
+
 import lineage2.gameserver.dao.CastleDamageZoneDAO;
 import lineage2.gameserver.dao.CastleDoorUpgradeDAO;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
@@ -50,13 +51,11 @@ import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.ReflectionUtils;
 import npc.model.residences.ResidenceManager;
+
 import org.napile.primitive.maps.IntObjectMap;
 
 public final class ChamberlainDarkInstance extends ResidenceManager
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 7889598664307011523L;
 	
 	public ChamberlainDarkInstance(int objectId, NpcTemplate template)

@@ -62,12 +62,8 @@ public final class Vullock extends Reflection
 	
 	private class DeathListener implements OnDeathListener
 	{
-		/**
-		 *
-		 */
 		public DeathListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -87,12 +83,8 @@ public final class Vullock extends Reflection
 	
 	private class FirstStage extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public FirstStage()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

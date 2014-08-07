@@ -13,6 +13,7 @@
 package handler.items;
 
 import java.util.Collection;
+
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.gameserver.dao.CastleHiredGuardDAO;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
@@ -29,6 +30,7 @@ import lineage2.gameserver.templates.item.support.MerchantGuard;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.PositionUtils;
+
 import org.napile.primitive.sets.IntSet;
 import org.napile.primitive.sets.impl.HashIntSet;
 
@@ -43,7 +45,8 @@ public final class MercTicket extends ScriptItemHandler
 	 * @param playable Playable
 	 * @param item ItemInstance
 	 * @param ctrl boolean
-	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
 	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)

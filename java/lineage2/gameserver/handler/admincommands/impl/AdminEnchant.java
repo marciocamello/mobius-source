@@ -230,7 +230,7 @@ public class AdminEnchant implements IAdminCommandHandler
 	 * Method showMainPage.
 	 * @param activeChar Player
 	 */
-	public void showMainPage(Player activeChar)
+	private void showMainPage(Player activeChar)
 	{
 		GameObject target = activeChar.getTarget();
 		

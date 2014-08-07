@@ -15,6 +15,7 @@ package lineage2.gameserver.stats;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.gameserver.stats.funcs.Func;
 import lineage2.gameserver.stats.funcs.FuncTemplate;
@@ -27,7 +28,7 @@ import lineage2.gameserver.stats.triggers.TriggerInfo;
 public class StatTemplate
 {
 	protected FuncTemplate[] _funcTemplates = FuncTemplate.EMPTY_ARRAY;
-	protected List<TriggerInfo> _triggerList = Collections.emptyList();
+	private List<TriggerInfo> _triggerList = Collections.emptyList();
 	
 	/**
 	 * Method getTriggerList.

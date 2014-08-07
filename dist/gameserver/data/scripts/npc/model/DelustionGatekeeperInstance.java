@@ -13,6 +13,7 @@
 package npc.model;
 
 import java.util.Map;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.instancemanager.DelusionChamberManager;
@@ -30,9 +31,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class DelustionGatekeeperInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

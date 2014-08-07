@@ -75,7 +75,6 @@ public final class Glacier extends Fighter
 		 */
 		Freeze()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -98,7 +97,6 @@ public final class Glacier extends Fighter
 		 */
 		Despawn()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

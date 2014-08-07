@@ -20,6 +20,7 @@ import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.utils.Location;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,7 +28,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public abstract class AbstractAI extends RunnableImpl
+abstract class AbstractAI extends RunnableImpl
 {
 	protected static final Logger _log = LoggerFactory.getLogger(AbstractAI.class);
 	protected final Creature _actor;
@@ -215,7 +216,7 @@ public abstract class AbstractAI extends RunnableImpl
 	 * @param evt CtrlEvent
 	 * @param args Object[]
 	 */
-	public void notifyEvent(CtrlEvent evt, Object[] args)
+	private void notifyEvent(CtrlEvent evt, Object[] args)
 	{
 		Creature actor = getActor();
 		
@@ -327,7 +328,7 @@ public abstract class AbstractAI extends RunnableImpl
 	 * Method clientStopMoving.
 	 * @param validate boolean
 	 */
-	public void clientStopMoving(boolean validate)
+	void clientStopMoving(boolean validate)
 	{
 		Creature actor = getActor();
 		actor.stopMove(validate);

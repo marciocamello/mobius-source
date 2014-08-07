@@ -15,6 +15,7 @@ package lineage2.gameserver.network.serverpackets;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.dao.CharacterDAO;
@@ -27,6 +28,7 @@ import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.base.SubClassType;
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.utils.AutoBan;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

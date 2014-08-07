@@ -15,6 +15,7 @@ package lineage2.gameserver.model.base;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
+
 import lineage2.gameserver.data.xml.holder.ClassDataHolder;
 import lineage2.gameserver.templates.player.ClassData;
 

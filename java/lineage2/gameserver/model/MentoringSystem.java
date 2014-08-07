@@ -14,12 +14,14 @@ package lineage2.gameserver.model;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.dao.MentoringDAO;
 import lineage2.gameserver.network.serverpackets.ExMentorList;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.MentorUtil;
+
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -30,7 +32,7 @@ public class MentoringSystem
 	private List<MenteeInfo> menteeInfo = new ArrayList<>();
 	private final Player _mentor;
 	
-	public MentoringSystem(Player mentor)
+	MentoringSystem(Player mentor)
 	{
 		_mentor = mentor;
 	}
@@ -154,12 +156,12 @@ public class MentoringSystem
 		return 0;
 	}
 	
-	public void restore()
+	void restore()
 	{
 		menteeInfo = MentoringDAO.getInstance().selectMenteeList(_mentor);
 	}
 	
-	public boolean whoIsOnline(boolean login)
+	boolean whoIsOnline(boolean login)
 	{
 		for (MenteeInfo mentee : menteeInfo)
 		{
@@ -191,7 +193,7 @@ public class MentoringSystem
 		return false;
 	}
 	
-	public void notify(boolean online)
+	void notify(boolean online)
 	{
 		for (MenteeInfo mentee : menteeInfo)
 		{
@@ -223,7 +225,7 @@ public class MentoringSystem
 		}
 	}
 	
-	public MenteeInfo checkInList(int objectId)
+	private MenteeInfo checkInList(int objectId)
 	{
 		for (MenteeInfo mentee : menteeInfo)
 		{

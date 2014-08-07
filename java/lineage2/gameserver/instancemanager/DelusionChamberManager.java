@@ -18,7 +18,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+
 import javax.xml.parsers.DocumentBuilderFactory;
+
 import lineage2.commons.geometry.Rectangle;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -31,6 +33,7 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.TeleportToLocation;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -93,7 +96,7 @@ public class DelusionChamberManager
 	/**
 	 * Method load.
 	 */
-	public void load()
+	private void load()
 	{
 		int countGood = 0, countBad = 0;
 		
@@ -238,20 +241,6 @@ public class DelusionChamberManager
 	}
 	
 	/**
-	 * Method reload.
-	 */
-	public void reload()
-	{
-		for (int b : _rooms.keySet())
-		{
-			_rooms.get(b).clear();
-		}
-		
-		_rooms.clear();
-		load();
-	}
-	
-	/**
 	 * Method teleportToWaitingRoom.
 	 * @param player Player
 	 */
@@ -276,7 +265,7 @@ public class DelusionChamberManager
 		 * @param tele Location
 		 * @param isBossRoom boolean
 		 */
-		public DelusionChamberRoom(Territory territory, Location tele, boolean isBossRoom)
+		DelusionChamberRoom(Territory territory, Location tele, boolean isBossRoom)
 		{
 			_territory = territory;
 			_teleportCoords = tele;
@@ -295,22 +284,12 @@ public class DelusionChamberManager
 		
 		/**
 		 * Method checkIfInZone.
-		 * @param loc Location
-		 * @return boolean
-		 */
-		public boolean checkIfInZone(Location loc)
-		{
-			return checkIfInZone(loc.x, loc.y, loc.z);
-		}
-		
-		/**
-		 * Method checkIfInZone.
 		 * @param x int
 		 * @param y int
 		 * @param z int
 		 * @return boolean
 		 */
-		public boolean checkIfInZone(int x, int y, int z)
+		private boolean checkIfInZone(int x, int y, int z)
 		{
 			return _territory.isInside(x, y, z);
 		}

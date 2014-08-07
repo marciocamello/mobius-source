@@ -16,6 +16,7 @@ import java.util.Collections;
 import java.util.EnumMap;
 import java.util.EnumSet;
 import java.util.Set;
+
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SubClass;
 import lineage2.gameserver.model.base.ClassId;
@@ -182,7 +183,7 @@ public final class SubClassInfo
 	 * @param level ClassLevel
 	 * @return EnumSet<ClassId>
 	 */
-	public static EnumSet<ClassId> getSet(Race race, ClassLevel level)
+	private static EnumSet<ClassId> getSet(Race race, ClassLevel level)
 	{
 		EnumSet<ClassId> allOf = EnumSet.noneOf(ClassId.class);
 		

@@ -16,12 +16,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Collection;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.ExSubPledgeSkillAdd;
 import lineage2.gameserver.tables.SkillTable;
+
 import org.apache.commons.lang3.StringUtils;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
@@ -66,7 +68,7 @@ public class SubUnit
 	 * @param leader int
 	 * @param name String
 	 */
-	public SubUnit(Clan c, int type, int leader, String name)
+	SubUnit(Clan c, int type, int leader, String name)
 	{
 		_clan = c;
 		_type = type;
@@ -106,7 +108,7 @@ public class SubUnit
 	 * @param obj int
 	 * @return boolean
 	 */
-	public boolean isUnitMember(int obj)
+	boolean isUnitMember(int obj)
 	{
 		return _members.containsKey(obj);
 	}
@@ -157,7 +159,7 @@ public class SubUnit
 	 * Method removeUnitMember.
 	 * @param objectId int
 	 */
-	public void removeUnitMember(int objectId)
+	void removeUnitMember(int objectId)
 	{
 		UnitMember m = _members.remove(objectId);
 		
@@ -407,7 +409,7 @@ public class SubUnit
 	 * Method addSkillsQuietly.
 	 * @param player Player
 	 */
-	public void addSkillsQuietly(Player player)
+	void addSkillsQuietly(Player player)
 	{
 		for (Skill skill : _skills.values())
 		{
@@ -419,7 +421,7 @@ public class SubUnit
 	 * Method enableSkills.
 	 * @param player Player
 	 */
-	public void enableSkills(Player player)
+	void enableSkills(Player player)
 	{
 		for (Skill skill : _skills.values())
 		{
@@ -434,7 +436,7 @@ public class SubUnit
 	 * Method disableSkills.
 	 * @param player Player
 	 */
-	public void disableSkills(Player player)
+	void disableSkills(Player player)
 	{
 		for (Skill skill : _skills.values())
 		{
@@ -500,7 +502,7 @@ public class SubUnit
 	/**
 	 * Method restore.
 	 */
-	public void restore()
+	void restore()
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -548,7 +550,7 @@ public class SubUnit
 	/**
 	 * Method restoreSkills.
 	 */
-	public void restoreSkills()
+	void restoreSkills()
 	{
 		Connection con = null;
 		PreparedStatement statement = null;

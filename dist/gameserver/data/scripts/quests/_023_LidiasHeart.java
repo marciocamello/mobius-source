@@ -19,17 +19,17 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class _023_LidiasHeart extends Quest implements ScriptFile
 {
-	final int Innocentin = 31328;
-	final int BrokenBookshelf = 31526;
-	final int GhostofvonHellmann = 31524;
-	final int Tombstone = 31523;
-	final int Violet = 31386;
-	final int Box = 31530;
-	final int MapForestofDeadman = 7063;
-	final int SilverKey = 7149;
-	final int LidiaHairPin = 7148;
-	final int LidiaDiary = 7064;
-	final int SilverSpear = 7150;
+	private final int Innocentin = 31328;
+	private final int BrokenBookshelf = 31526;
+	private final int GhostofvonHellmann = 31524;
+	private final int Tombstone = 31523;
+	private final int Violet = 31386;
+	private final int Box = 31530;
+	private final int MapForestofDeadman = 7063;
+	private final int SilverKey = 7149;
+	private final int LidiaHairPin = 7148;
+	private final int LidiaDiary = 7064;
+	private final int SilverSpear = 7150;
 	
 	@Override
 	public void onLoad()

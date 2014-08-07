@@ -55,8 +55,12 @@ public final class Furance extends DefaultAI
 	/**
 	 * @author Mobius
 	 */
-	public final class Switch extends RunnableImpl
+	private final class Switch extends RunnableImpl
 	{
+		public Switch()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */

@@ -13,6 +13,7 @@
 package lineage2.loginserver.crypt;
 
 import java.io.IOException;
+
 import lineage2.commons.util.Rnd;
 
 /**

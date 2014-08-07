@@ -29,6 +29,7 @@ import lineage2.gameserver.stats.funcs.FuncTemplate;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.EtcItemTemplate.EtcItemType;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
+
 import org.napile.primitive.Containers;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;

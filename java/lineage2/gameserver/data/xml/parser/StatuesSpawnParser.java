@@ -15,11 +15,13 @@ package lineage2.gameserver.data.xml.parser;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.commons.data.xml.AbstractFileParser;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.StatuesHolder;
 import lineage2.gameserver.model.worldstatistics.CategoryType;
 import lineage2.gameserver.utils.Location;
+
 import org.dom4j.Element;
 
 public class StatuesSpawnParser extends AbstractFileParser<StatuesHolder>

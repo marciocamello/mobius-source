@@ -19,22 +19,22 @@ import lineage2.gameserver.model.World;
 public class ExFriendDetailInfo extends L2GameServerPacket
 {
 	private static final String _S__FE_ExFriendDetailInfo_0XEC = "[S] 83 ExFriendDetailInfo";
-	Player player;
-	int friendObjId;
-	String name;
-	int isOnline;
-	int level;
-	int classId;
-	int clanId;
-	int clanCrestId = 0;
-	String clanName = "";
-	int allyId = 0;
-	int allyCrestId = 0;
-	String allyName = "";
-	int createdMonth;
-	int createdDay;
-	long lastLogin;
-	String memo;
+	private final Player player;
+	private final int friendObjId;
+	private final String name;
+	private final int isOnline;
+	private int level;
+	private int classId;
+	private int clanId;
+	private int clanCrestId = 0;
+	private String clanName = "";
+	private int allyId = 0;
+	private int allyCrestId = 0;
+	private String allyName = "";
+	private int createdMonth;
+	private int createdDay;
+	private long lastLogin;
+	private String memo;
 	
 	public ExFriendDetailInfo(Player activeChar, int objId)
 	{

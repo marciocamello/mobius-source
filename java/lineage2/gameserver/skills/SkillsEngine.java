@@ -18,9 +18,11 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.tables.SkillTable;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.FileFilterUtils;
 import org.slf4j.Logger;
@@ -56,7 +58,7 @@ public class SkillsEngine
 	 * @param file File
 	 * @return List<Skill>
 	 */
-	public List<Skill> loadSkills(File file)
+	private List<Skill> loadSkills(File file)
 	{
 		if (file == null)
 		{

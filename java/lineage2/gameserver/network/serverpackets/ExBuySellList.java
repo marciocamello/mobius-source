@@ -15,6 +15,7 @@ package lineage2.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import lineage2.gameserver.data.xml.holder.BuyListHolder.NpcTradeList;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
@@ -55,7 +56,7 @@ public abstract class ExBuySellList extends L2GameServerPacket
 			super.writeImpl();
 			writeQ(_adena); // current money
 			writeD(_listId);
-			writeD(0x00); // L2WT GOD Количество занятых слотов
+			writeD(0x00); // L2WT GOD
 			writeH(_buyList.size());
 			
 			for (TradeItem item : _buyList)
@@ -109,7 +110,7 @@ public abstract class ExBuySellList extends L2GameServerPacket
 		protected void writeImpl()
 		{
 			super.writeImpl();
-			writeD(0x00); // L2WT GOD Количество занятых слотов
+			writeD(0x00); // L2WT GOD
 			writeH(_sellList.size());
 			
 			for (TradeItem item : _sellList)
@@ -133,7 +134,7 @@ public abstract class ExBuySellList extends L2GameServerPacket
 	
 	private final int _type;
 	
-	public ExBuySellList(int type)
+	ExBuySellList(int type)
 	{
 		_type = type;
 	}

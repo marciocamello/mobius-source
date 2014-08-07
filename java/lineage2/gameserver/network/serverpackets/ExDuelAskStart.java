@@ -14,8 +14,8 @@ package lineage2.gameserver.network.serverpackets;
 
 public class ExDuelAskStart extends L2GameServerPacket
 {
-	String _requestor;
-	int _isPartyDuel;
+	private final String _requestor;
+	private final int _isPartyDuel;
 	
 	public ExDuelAskStart(String requestor, int isPartyDuel)
 	{

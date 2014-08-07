@@ -14,6 +14,7 @@ package lineage2.gameserver.model.petition;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import lineage2.gameserver.utils.Language;
 
 /**
@@ -30,7 +31,7 @@ public abstract class PetitionGroup
 	 * Constructor for PetitionGroup.
 	 * @param id int
 	 */
-	public PetitionGroup(int id)
+	PetitionGroup(int id)
 	{
 		_id = id;
 	}

@@ -17,8 +17,6 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class ExCubeGameCloseUI extends L2GameServerPacket
 {
-	int _seconds;
-	
 	public ExCubeGameCloseUI()
 	{
 	}

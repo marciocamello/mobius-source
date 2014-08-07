@@ -13,6 +13,7 @@
 package npc.model;
 
 import java.util.StringTokenizer;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
@@ -33,9 +34,6 @@ import lineage2.gameserver.utils.Util;
  */
 public final class ClassMasterInstance extends MerchantInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

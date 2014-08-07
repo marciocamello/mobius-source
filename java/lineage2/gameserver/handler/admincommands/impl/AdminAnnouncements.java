@@ -13,6 +13,7 @@
 package lineage2.gameserver.handler.admincommands.impl;
 
 import java.util.List;
+
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.GameObjectsStorage;
@@ -171,7 +172,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 	 * Method listAnnouncements.
 	 * @param activeChar Player
 	 */
-	public void listAnnouncements(Player activeChar)
+	private void listAnnouncements(Player activeChar)
 	{
 		List<Announcements.Announce> announcements = Announcements.getInstance().getAnnouncements();
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);

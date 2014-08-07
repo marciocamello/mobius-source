@@ -16,7 +16,9 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
+
 import javax.xml.parsers.DocumentBuilderFactory;
+
 import lineage2.commons.geometry.Polygon;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
@@ -29,6 +31,7 @@ import lineage2.gameserver.model.Territory;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
+
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,7 +50,7 @@ public class HellboundManager
 	private static HellboundManager _instance;
 	static int _initialStage;
 	private static final long _taskDelay = 2 * 60 * 1000L;
-	final DeathListener _deathListener = new DeathListener();
+	private final DeathListener _deathListener = new DeathListener();
 	
 	/**
 	 * Method getInstance.
@@ -215,7 +218,6 @@ public class HellboundManager
 		 */
 		public DeathListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -563,7 +565,6 @@ public class HellboundManager
 		 */
 		public StageCheckTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -605,7 +606,7 @@ public class HellboundManager
 		 * @param respawnRnd int
 		 * @param stages int[]
 		 */
-		public HellboundSpawn(int npcId, Location loc, int amount, Territory spawnTerritory, int respawn, int respawnRnd, int[] stages)
+		HellboundSpawn(int npcId, Location loc, int amount, Territory spawnTerritory, int respawn, int respawnRnd, int[] stages)
 		{
 			_npcId = npcId;
 			_loc = loc;

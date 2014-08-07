@@ -15,6 +15,7 @@ package lineage2.gameserver.model.instances;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Creature;
@@ -32,9 +33,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public class SymbolInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	final Creature _owner;
 	final Skill _skill;

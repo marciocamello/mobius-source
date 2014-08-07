@@ -20,6 +20,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 import java.util.StringTokenizer;
+
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.gameserver.dao.SiegeClanDAO;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
@@ -37,6 +38,7 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.HtmlUtils;
+
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -45,9 +47,6 @@ import org.apache.commons.lang3.StringUtils;
  */
 public final class AuctioneerInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yy");
 	private static final NumberFormat NUMBER_FORMAT = NumberFormat.getIntegerInstance(Locale.KOREA);

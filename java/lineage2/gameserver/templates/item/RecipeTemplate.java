@@ -14,6 +14,7 @@ package lineage2.gameserver.templates.item;
 
 import java.util.ArrayList;
 import java.util.Collection;
+
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.commons.util.Rnd;
 

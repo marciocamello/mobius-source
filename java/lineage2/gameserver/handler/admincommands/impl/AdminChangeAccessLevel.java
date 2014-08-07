@@ -18,6 +18,7 @@ import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
@@ -29,6 +30,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.utils.Files;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

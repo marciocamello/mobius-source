@@ -16,6 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Future;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.GameObjectsStorage;
@@ -39,9 +40,6 @@ import bosses.FourSepulchersSpawn.GateKeeper;
  */
 public final class SepulcherNpcInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	protected static final Map<Integer, Integer> _hallGateKeepers = new HashMap<>();
 	protected Future<?> _closeTask = null, _spawnMonsterTask = null;

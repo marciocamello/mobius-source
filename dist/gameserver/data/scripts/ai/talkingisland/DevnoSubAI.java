@@ -33,7 +33,7 @@ public class DevnoSubAI extends DefaultAI
 	 * Constructor for DevnoSubAI.
 	 * @param actor NpcInstance
 	 */
-	public DevnoSubAI(NpcInstance actor)
+	DevnoSubAI(NpcInstance actor)
 	{
 		super(actor);
 	}

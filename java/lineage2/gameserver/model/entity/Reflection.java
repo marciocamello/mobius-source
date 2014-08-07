@@ -22,6 +22,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+
 import lineage2.commons.listener.Listener;
 import lineage2.commons.listener.ListenerList;
 import lineage2.commons.threading.RunnableImpl;
@@ -55,12 +56,14 @@ import lineage2.gameserver.templates.ZoneTemplate;
 import lineage2.gameserver.templates.spawn.SpawnTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.NpcUtils;
+
 import org.apache.commons.lang3.StringUtils;
 import org.napile.primitive.Containers;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import gnu.trove.set.hash.TIntHashSet;
 
 /**
@@ -72,8 +75,12 @@ public class Reflection
 	/**
 	 * @author Mobius
 	 */
-	public class ReflectionListenerList extends ListenerList<Reflection>
+	private class ReflectionListenerList extends ListenerList<Reflection>
 	{
+		public ReflectionListenerList()
+		{
+		}
+		
 		/**
 		 * Method onCollapse.
 		 */
@@ -99,16 +106,16 @@ public class Reflection
 	private Location _resetLoc;
 	private Location _returnLoc;
 	private Location _teleportLoc;
-	protected final List<Spawner> _spawns = new ArrayList<>();
+	private final List<Spawner> _spawns = new ArrayList<>();
 	public final List<GameObject> _objects = new ArrayList<>();
-	protected IntObjectMap<DoorInstance> _doors = Containers.emptyIntObjectMap();
-	protected Map<String, Zone> _zones = Collections.emptyMap();
-	protected Map<String, List<Spawner>> _spawners = Collections.emptyMap();
-	protected final TIntHashSet _visitors = new TIntHashSet();
+	private IntObjectMap<DoorInstance> _doors = Containers.emptyIntObjectMap();
+	private Map<String, Zone> _zones = Collections.emptyMap();
+	private Map<String, List<Spawner>> _spawners = Collections.emptyMap();
+	private final TIntHashSet _visitors = new TIntHashSet();
 	public final Lock lock = new ReentrantLock();
 	protected int _playerCount;
-	protected Party _party;
-	protected CommandChannel _commandChannel;
+	private Party _party;
+	private CommandChannel _commandChannel;
 	private int _collapseIfEmptyTime;
 	private boolean _isCollapseStarted;
 	private Future<?> _collapseTask;
@@ -236,7 +243,7 @@ public class Reflection
 	 * Method setGeoIndex.
 	 * @param geoIndex int
 	 */
-	protected void setGeoIndex(int geoIndex)
+	private void setGeoIndex(int geoIndex)
 	{
 		_geoIndex = geoIndex;
 	}
@@ -391,7 +398,7 @@ public class Reflection
 	/**
 	 * Method stopCollapseTimer.
 	 */
-	public void stopCollapseTimer()
+	private void stopCollapseTimer()
 	{
 		lock.lock();
 		
@@ -418,7 +425,7 @@ public class Reflection
 	/**
 	 * Method minuteBeforeCollapse.
 	 */
-	public void minuteBeforeCollapse()
+	void minuteBeforeCollapse()
 	{
 		if (_isCollapseStarted)
 		{
@@ -816,7 +823,7 @@ public class Reflection
 	 * Method addSpawn.
 	 * @param spawn SimpleSpawner
 	 */
-	public void addSpawn(SimpleSpawner spawn)
+	void addSpawn(SimpleSpawner spawn)
 	{
 		if (spawn != null)
 		{
@@ -828,7 +835,7 @@ public class Reflection
 	 * Method fillSpawns.
 	 * @param si List<InstantZone.SpawnInfo>
 	 */
-	public void fillSpawns(List<InstantZone.SpawnInfo> si)
+	private void fillSpawns(List<InstantZone.SpawnInfo> si)
 	{
 		if (si == null)
 		{

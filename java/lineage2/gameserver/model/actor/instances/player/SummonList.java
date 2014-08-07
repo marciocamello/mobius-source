@@ -17,6 +17,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.dao.EffectsDAO;
 import lineage2.gameserver.dao.ServitorsDAO;
@@ -34,6 +35,7 @@ import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,7 +45,7 @@ import org.slf4j.LoggerFactory;
  */
 public class SummonList implements Iterable<Summon>
 {
-	public Player _owner;
+	private final Player _owner;
 	private PetInstance _pet;
 	private final ConcurrentHashMap<Integer, Summon> _summonList;
 	static final Logger _log = LoggerFactory.getLogger(SummonList.class);
@@ -255,7 +257,7 @@ public class SummonList implements Iterable<Summon>
 	/**
 	 * Method restorePet.
 	 */
-	public void restorePet()
+	private void restorePet()
 	{
 		int controlItemId = _owner.getVarInt("petss@");
 		
@@ -307,7 +309,7 @@ public class SummonList implements Iterable<Summon>
 	/**
 	 * Method restoreServitors.
 	 */
-	public void restoreServitors()
+	private void restoreServitors()
 	{
 		List<Summon> summons = ServitorsDAO.getInstance().restore(_owner);
 		

@@ -18,7 +18,6 @@ public class ExChangeAttributeFail extends L2GameServerPacket
 	
 	public ExChangeAttributeFail()
 	{
-		//
 	}
 	
 	@Override

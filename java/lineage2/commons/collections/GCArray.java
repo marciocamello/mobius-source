@@ -32,7 +32,7 @@ public class GCArray<E> implements Collection<E>
 	 * @param initialCapacity int
 	 */
 	@SuppressWarnings("unchecked")
-	public GCArray(int initialCapacity)
+	private GCArray(int initialCapacity)
 	{
 		super();
 		
@@ -56,7 +56,7 @@ public class GCArray<E> implements Collection<E>
 	 * Method ensureCapacity.
 	 * @param minCapacity int
 	 */
-	public void ensureCapacity(int minCapacity)
+	private void ensureCapacity(int minCapacity)
 	{
 		int oldCapacity = elementData.length;
 		
@@ -97,7 +97,7 @@ public class GCArray<E> implements Collection<E>
 	 * Method toNativeArray.
 	 * @return E[]
 	 */
-	public E[] toNativeArray()
+	E[] toNativeArray()
 	{
 		return Arrays.copyOf(elementData, size);
 	}
@@ -141,7 +141,7 @@ public class GCArray<E> implements Collection<E>
 	 * @param index int
 	 * @return E
 	 */
-	public E get(int index)
+	E get(int index)
 	{
 		RangeCheck(index);
 		return elementData[index];
@@ -214,7 +214,7 @@ public class GCArray<E> implements Collection<E>
 	 * @param element E
 	 * @return E
 	 */
-	public E set(int index, E element)
+	E set(int index, E element)
 	{
 		RangeCheck(index);
 		E oldValue = elementData[index];
@@ -227,7 +227,7 @@ public class GCArray<E> implements Collection<E>
 	 * @param o Object
 	 * @return int
 	 */
-	public int indexOf(Object o)
+	int indexOf(Object o)
 	{
 		if (o == null)
 		{
@@ -413,7 +413,7 @@ public class GCArray<E> implements Collection<E>
 	/**
 	 * Method clearSize.
 	 */
-	public void clearSize()
+	void clearSize()
 	{
 		size = 0;
 	}
@@ -442,7 +442,6 @@ public class GCArray<E> implements Collection<E>
 		 */
 		public Itr()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

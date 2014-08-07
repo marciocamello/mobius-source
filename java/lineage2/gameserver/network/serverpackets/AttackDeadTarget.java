@@ -17,7 +17,7 @@ public class AttackDeadTarget extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		// just trigger - без аргументов
+		// just trigger - no arguments
 		writeC(0x04);
 	}
 }

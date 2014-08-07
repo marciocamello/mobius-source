@@ -21,6 +21,7 @@ import lineage2.gameserver.tables.EnchantStatBonusTable;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.item.ItemType;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

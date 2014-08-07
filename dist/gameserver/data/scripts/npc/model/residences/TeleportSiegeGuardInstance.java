@@ -21,9 +21,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class TeleportSiegeGuardInstance extends SiegeGuardInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

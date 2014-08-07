@@ -239,7 +239,7 @@ public class CharacterCreate extends L2GameClientPacket
 	 * Method startTutorialQuest.
 	 * @param player Player
 	 */
-	public static void startTutorialQuest(Player player)
+	private static void startTutorialQuest(Player player)
 	{
 		Quest q = QuestManager.getQuest(255);
 		

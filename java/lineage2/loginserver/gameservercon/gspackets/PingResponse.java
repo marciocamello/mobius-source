@@ -14,6 +14,7 @@ package lineage2.loginserver.gameservercon.gspackets;
 
 import lineage2.loginserver.gameservercon.GameServer;
 import lineage2.loginserver.gameservercon.ReceivablePacket;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -14,6 +14,7 @@ package lineage2.gameserver.utils;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.database.mysql;
 import lineage2.gameserver.model.Effect;
@@ -80,7 +81,7 @@ public class MentorUtil
 			put(85, 863);
 		}
 	};
-	public static final int[] effectsForMentee =
+	private static final int[] effectsForMentee =
 	{
 		9227,
 		9228,
@@ -90,15 +91,15 @@ public class MentorUtil
 		9232,
 		9233
 	};
-	public static final int skillForMentee = 9379;
-	public static final int[] skillsForMentor =
+	private static final int skillForMentee = 9379;
+	private static final int[] skillsForMentor =
 	{
 		9376,
 		9377,
 		9378
 	};
-	public static final int effectForMentor = 9256;
-	public static final int[] effectsRemove =
+	private static final int effectForMentor = 9256;
+	private static final int[] effectsRemove =
 	{
 		9233,
 		9227,
@@ -109,7 +110,7 @@ public class MentorUtil
 		9232,
 		9256
 	};
-	public static final int[] skillRemove =
+	private static final int[] skillRemove =
 	{
 		9376,
 		9377,
@@ -152,7 +153,7 @@ public class MentorUtil
 		}
 	}
 	
-	public static void addEffectToPlayer(Skill skill, Player target)
+	private static void addEffectToPlayer(Skill skill, Player target)
 	{
 		for (EffectTemplate et : skill.getEffectTemplates())
 		{
@@ -224,7 +225,7 @@ public class MentorUtil
 		}
 	}
 	
-	public static void removeConditionsFromMentee(Player player)
+	private static void removeConditionsFromMentee(Player player)
 	{
 		for (MenteeInfo mentee : player.getMentorSystem().getMenteeInfo())
 		{

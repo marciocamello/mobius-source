@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -34,6 +35,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.ReflectionUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -233,7 +235,6 @@ public final class BelethManager extends Functions implements ScriptFile
 		 */
 		CloneRespawnTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -271,7 +272,6 @@ public final class BelethManager extends Functions implements ScriptFile
 		 */
 		BelethSpawnTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

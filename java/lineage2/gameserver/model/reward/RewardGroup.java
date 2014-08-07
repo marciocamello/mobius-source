@@ -15,6 +15,7 @@ package lineage2.gameserver.model.reward;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import lineage2.commons.math.SafeMath;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -146,7 +147,7 @@ public class RewardGroup implements Cloneable
 	 * @param isSiegeGuard boolean
 	 * @return List<RewardItem>
 	 */
-	public List<RewardItem> roll(RewardType type, Player player, double mod, boolean isRaid, boolean isSiegeGuard)
+	List<RewardItem> roll(RewardType type, Player player, double mod, boolean isRaid, boolean isSiegeGuard)
 	{
 		switch (type)
 		{
@@ -187,7 +188,7 @@ public class RewardGroup implements Cloneable
 	 * @param playerRate double
 	 * @return List<RewardItem>
 	 */
-	public List<RewardItem> rollItems(double mod, double baseRate, double playerRate)
+	private List<RewardItem> rollItems(double mod, double baseRate, double playerRate)
 	{
 		if (mod <= 0)
 		{

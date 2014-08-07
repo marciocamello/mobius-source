@@ -25,6 +25,7 @@ import java.util.TreeMap;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -42,6 +43,7 @@ import lineage2.gameserver.tables.GmListTable;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.SqlBatch;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -53,9 +55,9 @@ public class RaidBossSpawnManager
 {
 	private static final Logger _log = LoggerFactory.getLogger(RaidBossSpawnManager.class);
 	private static RaidBossSpawnManager _instance;
-	protected static final Map<Integer, Spawner> _spawntable = new ConcurrentHashMap<>();
-	protected static Map<Integer, StatsSet> _storedInfo;
-	protected static Map<Integer, Map<Integer, Integer>> _points;
+	private static final Map<Integer, Spawner> _spawntable = new ConcurrentHashMap<>();
+	private static Map<Integer, StatsSet> _storedInfo;
+	private static Map<Integer, Map<Integer, Integer>> _points;
 	
 	/**
 	 * @author Mobius
@@ -83,7 +85,7 @@ public class RaidBossSpawnManager
 	/**
 	 * Method reloadBosses.
 	 */
-	public void reloadBosses()
+	void reloadBosses()
 	{
 		loadStatus();
 		restorePointsTable();
@@ -93,7 +95,7 @@ public class RaidBossSpawnManager
 	/**
 	 * Method cleanUp.
 	 */
-	public void cleanUp()
+	void cleanUp()
 	{
 		updateAllStatusDb();
 		updatePointsDb();
@@ -231,7 +233,7 @@ public class RaidBossSpawnManager
 	 * @param npcId int
 	 * @param spawnDat Spawner
 	 */
-	public void addNewSpawn(int npcId, Spawner spawnDat)
+	void addNewSpawn(int npcId, Spawner spawnDat)
 	{
 		if (_spawntable.containsKey(npcId))
 		{
@@ -317,8 +319,8 @@ public class RaidBossSpawnManager
 		return _spawntable;
 	}
 	
-	public static final Integer KEY_RANK = new Integer(-1);
-	public static final Integer KEY_TOTAL_POINTS = new Integer(0);
+	private static final Integer KEY_RANK = new Integer(-1);
+	private static final Integer KEY_TOTAL_POINTS = new Integer(0);
 	private final Lock pointsLock = new ReentrantLock();
 	
 	/**

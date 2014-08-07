@@ -18,7 +18,7 @@ public class JoinParty extends L2GameServerPacket
 	public static final L2GameServerPacket FAIL = new JoinParty(0);
 	private final int _response;
 	
-	public JoinParty(int response)
+	private JoinParty(int response)
 	{
 		_response = response;
 	}

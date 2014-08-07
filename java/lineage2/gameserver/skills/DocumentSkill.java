@@ -20,12 +20,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Skill.SkillType;
 import lineage2.gameserver.model.base.EnchantSkillLearn;
 import lineage2.gameserver.stats.conditions.Condition;
 import lineage2.gameserver.tables.SkillTreeTable;
 import lineage2.gameserver.templates.StatsSet;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -43,14 +45,18 @@ public final class DocumentSkill extends DocumentBase
 	/**
 	 * @author Mobius
 	 */
-	public class Skill
+	private class Skill
 	{
-		public int id;
-		public String name;
-		public StatsSet[] sets;
-		public int currentLevel;
-		public final List<lineage2.gameserver.model.Skill> skills = new ArrayList<>();
-		public List<lineage2.gameserver.model.Skill> currentSkills = new ArrayList<>();
+		public Skill()
+		{
+		}
+		
+		int id;
+		String name;
+		StatsSet[] sets;
+		int currentLevel;
+		final List<lineage2.gameserver.model.Skill> skills = new ArrayList<>();
+		List<lineage2.gameserver.model.Skill> currentSkills = new ArrayList<>();
 	}
 	
 	private Skill currentSkill;
@@ -200,7 +206,7 @@ public final class DocumentSkill extends DocumentBase
 	 * Method parseSkill.
 	 * @param n Node
 	 */
-	protected void parseSkill(Node n)
+	private void parseSkill(Node n)
 	{
 		NamedNodeMap attrs = n.getAttributes();
 		int skillId = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());

@@ -31,7 +31,7 @@ import lineage2.gameserver.utils.Location;
  */
 public final class GilmoreAI extends Fighter
 {
-	static final Location[] points_stage1 =
+	private static final Location[] points_stage1 =
 	{
 		new Location(73195, 118483, -3722),
 		new Location(73535, 117945, -3754),
@@ -41,11 +41,11 @@ public final class GilmoreAI extends Fighter
 		new Location(72463, 118401, -3694),
 		new Location(72912, 117895, -3723)
 	};
-	static final Location[] points_stage2 =
+	private static final Location[] points_stage2 =
 	{
 		new Location(73615, 117629, -3765)
 	};
-	static final String[] text_stage1 =
+	private static final String[] text_stage1 =
 	{
 		"Text1",
 		"Text2",
@@ -55,10 +55,10 @@ public final class GilmoreAI extends Fighter
 		"Text6",
 		"Text7"
 	};
-	static final String[] text_stage2 =
+	private static final String[] text_stage2 =
 	{
-		"Готовы?",
-		"�?ачнем, нел�?з�? тер�?т�? ни минуты!"
+		"Ready?",
+		"We begin, Nell? Give us another minute!"
 	};
 	private long wait_timeout = 0;
 	private boolean wait = false;
@@ -69,7 +69,7 @@ public final class GilmoreAI extends Fighter
 	 * Constructor for GilmoreAI.
 	 * @param actor NpcInstance
 	 */
-	public GilmoreAI(NpcInstance actor)
+	GilmoreAI(NpcInstance actor)
 	{
 		super(actor);
 		AI_TASK_ATTACK_DELAY = 250;

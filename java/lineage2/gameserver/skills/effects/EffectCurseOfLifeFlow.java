@@ -113,7 +113,6 @@ public final class EffectCurseOfLifeFlow extends Effect
 		 */
 		public CurseOfLifeFlowListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

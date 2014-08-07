@@ -33,7 +33,7 @@ public class EleveSubAI extends DefaultAI
 	 * Constructor for EleveSubAI.
 	 * @param actor NpcInstance
 	 */
-	public EleveSubAI(NpcInstance actor)
+	EleveSubAI(NpcInstance actor)
 	{
 		super(actor);
 	}

@@ -14,6 +14,7 @@ package quests;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Player;
@@ -576,12 +577,12 @@ public class _999_T1Tutorial extends Quest implements ScriptFile
 		return null;
 	}
 	
-	public static class DropGem extends RunnableImpl
+	private static class DropGem extends RunnableImpl
 	{
 		private final NpcInstance _npc;
 		private final QuestState _st;
 		
-		public DropGem(NpcInstance npc, QuestState st)
+		DropGem(NpcInstance npc, QuestState st)
 		{
 			_npc = npc;
 			_st = st;

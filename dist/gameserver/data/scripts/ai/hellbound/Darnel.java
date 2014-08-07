@@ -14,6 +14,7 @@ package ai.hellbound;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -45,7 +46,6 @@ public final class Darnel extends DefaultAI
 		 */
 		TrapTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**

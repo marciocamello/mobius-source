@@ -14,6 +14,7 @@ package lineage2.gameserver.templates;
 
 import java.util.Collections;
 import java.util.List;
+
 import lineage2.gameserver.model.entity.events.objects.BoatPoint;
 import lineage2.gameserver.network.serverpackets.components.SceneMovie;
 import lineage2.gameserver.utils.Location;

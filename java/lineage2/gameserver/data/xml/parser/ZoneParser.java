@@ -16,6 +16,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
 import lineage2.commons.data.xml.AbstractDirParser;
 import lineage2.commons.geometry.Circle;
 import lineage2.commons.geometry.Polygon;
@@ -28,6 +29,7 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.ZoneTemplate;
 import lineage2.gameserver.utils.Location;
+
 import org.dom4j.Element;
 
 /**
@@ -229,7 +231,7 @@ public class ZoneParser extends AbstractDirParser<ZoneHolder>
 	 * @return Rectangle
 	 * @throws Exception
 	 */
-	public static Rectangle parseRectangle(Element n) throws Exception
+	private static Rectangle parseRectangle(Element n) throws Exception
 	{
 		int x1, y1, x2, y2, zmin = World.MAP_MIN_Z, zmax = World.MAP_MAX_Z;
 		Iterator<Element> i = n.elementIterator();
@@ -267,7 +269,7 @@ public class ZoneParser extends AbstractDirParser<ZoneHolder>
 	 * @return Polygon
 	 * @throws Exception
 	 */
-	public static Polygon parsePolygon(Element shape) throws Exception
+	static Polygon parsePolygon(Element shape) throws Exception
 	{
 		Polygon poly = new Polygon();
 		
@@ -299,7 +301,7 @@ public class ZoneParser extends AbstractDirParser<ZoneHolder>
 	 * @return Circle
 	 * @throws Exception
 	 */
-	public static Circle parseCircle(Element shape) throws Exception
+	private static Circle parseCircle(Element shape) throws Exception
 	{
 		Circle circle;
 		String[] coord = shape.attribute("loc").getValue().split("[\\s,;]+");

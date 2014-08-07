@@ -41,8 +41,8 @@ import lineage2.gameserver.model.instances.MonsterInstance;
  */
 public class MyTargetSelected extends L2GameServerPacket
 {
-	final int _color;
-	final int _obj;
+	private final int _color;
+	private final int _obj;
 	
 	public MyTargetSelected(final Player player, final GameObject obj)
 	{

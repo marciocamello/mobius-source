@@ -15,6 +15,7 @@ package lineage2.gameserver.model.items;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.collections.GArray;
 import lineage2.commons.dao.JdbcEntity;
 import lineage2.commons.dao.JdbcEntityState;
@@ -52,6 +53,7 @@ import lineage2.gameserver.templates.item.ItemTemplate.ItemClass;
 import lineage2.gameserver.templates.item.ItemType;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
+
 import org.napile.primitive.Containers;
 import org.napile.primitive.sets.IntSet;
 import org.napile.primitive.sets.impl.HashIntSet;
@@ -423,7 +425,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	 * Method startTimer.
 	 * @param r Runnable
 	 */
-	public void startTimer(Runnable r)
+	void startTimer(Runnable r)
 	{
 		_timerTask = LazyPrecisionTaskManager.getInstance().scheduleAtFixedRate(r, 0, 60000L);
 	}
@@ -431,7 +433,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	/**
 	 * Method stopTimer.
 	 */
-	public void stopTimer()
+	void stopTimer()
 	{
 		if (_timerTask != null)
 		{
@@ -685,7 +687,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	/**
 	 * @author Mobius
 	 */
-	public class FuncAttack extends Func
+	private class FuncAttack extends Func
 	{
 		private final Element element;
 		
@@ -695,7 +697,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		 * @param order int
 		 * @param owner Object
 		 */
-		public FuncAttack(Element element, int order, Object owner)
+		FuncAttack(Element element, int order, Object owner)
 		{
 			super(element.getAttack(), order, owner);
 			this.element = element;
@@ -715,7 +717,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	/**
 	 * @author Mobius
 	 */
-	public class FuncDefence extends Func
+	private class FuncDefence extends Func
 	{
 		private final Element element;
 		
@@ -725,7 +727,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		 * @param order int
 		 * @param owner Object
 		 */
-		public FuncDefence(Element element, int order, Object owner)
+		FuncDefence(Element element, int order, Object owner)
 		{
 			super(element.getDefence(), order, owner);
 			this.element = element;

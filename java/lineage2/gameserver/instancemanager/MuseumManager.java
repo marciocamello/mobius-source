@@ -21,7 +21,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import javax.xml.parsers.DocumentBuilderFactory;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
@@ -32,6 +34,7 @@ import lineage2.gameserver.model.instances.L2StatueInstance;
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.npc.NpcTemplate;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -40,10 +43,10 @@ import org.w3c.dom.Node;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class MuseumManager
+class MuseumManager
 {
 	private static final Logger _log = Logger.getLogger(MuseumManager.class.getName());
-	Connection con = null;
+	private Connection con = null;
 	
 	/**
 	 * @author Mobius
@@ -55,7 +58,6 @@ public class MuseumManager
 		 */
 		public LoadTask()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		/**
@@ -71,11 +73,11 @@ public class MuseumManager
 	}
 	
 	private final LoadTask loadTask;
-	List<Museum> Museums;
+	private final List<Museum> Museums;
 	HashMap<Integer, int[]> topPlayerItems;
 	HashMap<Integer, int[]> topPlayerAppearance;
-	List<int[]> _locations;
-	List<String[]> _loadingInfo;
+	private final List<int[]> _locations;
+	private List<String[]> _loadingInfo;
 	private GameObject objects;
 	
 	/**
@@ -136,7 +138,7 @@ public class MuseumManager
 	/**
 	 * Method load.
 	 */
-	public void load()
+	void load()
 	{
 		_log.info(getClass().getSimpleName() + ": Initializing");
 		
@@ -193,53 +195,6 @@ public class MuseumManager
 	
 	/**
 	 * Method getMuseums.
-	 * @param category int
-	 * @param isTotal boolean
-	 * @return List<Museum>
-	 */
-	public List<Museum> getMuseums(int category, boolean isTotal)
-	{
-		List<Museum> museums = new ArrayList<>();
-		
-		for (Museum museum : Museums)
-		{
-			if (museum.isTotal() == isTotal)
-			{
-				if (museum.getCategory() == category)
-				{
-					museums.add(museum);
-				}
-			}
-		}
-		
-		return museums;
-	}
-	
-	/**
-	 * Method getMuseum.
-	 * @param objectID int
-	 * @param category int
-	 * @param isTotal boolean
-	 * @return Museum
-	 */
-	public Museum getMuseum(int objectID, int category, boolean isTotal)
-	{
-		for (Museum museum : Museums)
-		{
-			if (museum.getObjectId() == objectID)
-			{
-				if (museum.isTotal() == isTotal)
-				{
-					return museum;
-				}
-			}
-		}
-		
-		return null;
-	}
-	
-	/**
-	 * Method getMuseums.
 	 * @return List<Museum>
 	 */
 	public List<Museum> getMuseums()
@@ -250,11 +205,11 @@ public class MuseumManager
 	/**
 	 * @author Mobius
 	 */
-	public class Museum
+	private class Museum
 	{
-		int objectID, category;
-		boolean isTotal;
-		long acquiredItem;
+		private final int objectID, category;
+		private final boolean isTotal;
+		private final long acquiredItem;
 		
 		/**
 		 * Constructor for Museum.
@@ -263,7 +218,7 @@ public class MuseumManager
 		 * @param _category int
 		 * @param _isTotal boolean
 		 */
-		public Museum(int _objectID, long _acquiredItem, int _category, boolean _isTotal)
+		Museum(int _objectID, long _acquiredItem, int _category, boolean _isTotal)
 		{
 			objectID = _objectID;
 			acquiredItem = _acquiredItem;
@@ -297,15 +252,6 @@ public class MuseumManager
 		{
 			return category;
 		}
-		
-		/**
-		 * Method getAcquiredItem.
-		 * @return long
-		 */
-		public long getAcquiredItem()
-		{
-			return acquiredItem;
-		}
 	}
 	
 	/**
@@ -322,7 +268,7 @@ public class MuseumManager
 	 * @param objectID int
 	 * @return int[]
 	 */
-	public int[] getTopPlayerItems(int objectID)
+	private int[] getTopPlayerItems(int objectID)
 	{
 		int[] items =
 		{
@@ -420,7 +366,7 @@ public class MuseumManager
 	 * @param objectID int
 	 * @return int[]
 	 */
-	public int[] getTopPlayerAppearance(int objectID)
+	private int[] getTopPlayerAppearance(int objectID)
 	{
 		int[] items =
 		{
@@ -547,7 +493,7 @@ public class MuseumManager
 	/**
 	 * Method parseLocations.
 	 */
-	public void parseLocations()
+	private void parseLocations()
 	{
 		_log.info(getClass().getSimpleName() + ": Initializing locations");
 		_locations.clear();
@@ -597,7 +543,7 @@ public class MuseumManager
 	 * Method getInstance.
 	 * @return MuseumManager
 	 */
-	public static MuseumManager getInstance()
+	static MuseumManager getInstance()
 	{
 		if (_instance == null)
 		{

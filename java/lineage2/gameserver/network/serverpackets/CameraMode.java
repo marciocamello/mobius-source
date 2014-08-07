@@ -14,7 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 public class CameraMode extends L2GameServerPacket
 {
-	int _mode;
+	private final int _mode;
 	
 	/**
 	 * Forces client camera mode change

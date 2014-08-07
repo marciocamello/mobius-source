@@ -22,7 +22,7 @@ import lineage2.gameserver.model.quest.Quest;
  */
 public class RequestTutorialLinkHtml extends L2GameClientPacket
 {
-	String _bypass;
+	private String _bypass;
 	
 	/**
 	 * Method readImpl.

@@ -14,6 +14,7 @@ package npc.model.residences.clanhall;
 
 import java.util.List;
 import java.util.StringTokenizer;
+
 import lineage2.commons.collections.CollectionUtils;
 import lineage2.gameserver.dao.SiegeClanDAO;
 import lineage2.gameserver.dao.SiegePlayerDAO;
@@ -30,7 +31,9 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.TimeUtils;
+
 import org.apache.commons.lang3.StringUtils;
+
 import quests._655_AGrandPlanForTamingWildBeasts;
 
 /**
@@ -39,9 +42,6 @@ import quests._655_AGrandPlanForTamingWildBeasts;
  */
 public final class FarmMessengerInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

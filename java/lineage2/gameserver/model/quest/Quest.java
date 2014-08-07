@@ -20,6 +20,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.logging.LogUtils;
 import lineage2.commons.threading.RunnableImpl;
@@ -52,9 +53,11 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
+
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import gnu.trove.map.hash.TIntObjectHashMap;
 import gnu.trove.set.hash.TIntHashSet;
 
@@ -145,7 +148,7 @@ public class Quest
 	 * Method updateQuestInDb.
 	 * @param qs QuestState
 	 */
-	public static void updateQuestInDb(QuestState qs)
+	static void updateQuestInDb(QuestState qs)
 	{
 		updateQuestVarInDb(qs, "<state>", qs.getStateName());
 	}
@@ -156,7 +159,7 @@ public class Quest
 	 * @param var String
 	 * @param value String
 	 */
-	public static void updateQuestVarInDb(QuestState qs, String var, String value)
+	static void updateQuestVarInDb(QuestState qs, String var, String value)
 	{
 		Player player = qs.getPlayer();
 		
@@ -192,7 +195,7 @@ public class Quest
 	 * Method deleteQuestInDb.
 	 * @param qs QuestState
 	 */
-	public static void deleteQuestInDb(QuestState qs)
+	static void deleteQuestInDb(QuestState qs)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -220,7 +223,7 @@ public class Quest
 	 * @param qs QuestState
 	 * @param var String
 	 */
-	public static void deleteQuestVarInDb(QuestState qs, String var)
+	static void deleteQuestVarInDb(QuestState qs, String var)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -335,9 +338,9 @@ public class Quest
 		}
 	}
 	
-	protected final String _name;
-	protected final int _party;
-	protected final int _questId;
+	private final String _name;
+	private final int _party;
+	private final int _questId;
 	public final static int CREATED = 1;
 	public final static int STARTED = 2;
 	public final static int COMPLETED = 3;
@@ -373,7 +376,7 @@ public class Quest
 	 * @param state String
 	 * @return int
 	 */
-	public static int getStateId(String state)
+	private static int getStateId(String state)
 	{
 		if (state.equalsIgnoreCase("Start"))
 		{
@@ -444,7 +447,7 @@ public class Quest
 	 * @param eventType QuestEventType
 	 * @return NpcTemplate
 	 */
-	public NpcTemplate addEventId(int npcId, QuestEventType eventType)
+	private NpcTemplate addEventId(int npcId, QuestEventType eventType)
 	{
 		try
 		{
@@ -817,7 +820,7 @@ public class Quest
 	 * @param victim Creature
 	 * @param qs QuestState
 	 */
-	public void notifyDeath(Creature killer, Creature victim, QuestState qs)
+	void notifyDeath(Creature killer, Creature victim, QuestState qs)
 	{
 		String res = null;
 		
@@ -884,7 +887,7 @@ public class Quest
 	 * @param target Player
 	 * @param qs QuestState
 	 */
-	public void notifyKill(Player target, QuestState qs)
+	void notifyKill(Player target, QuestState qs)
 	{
 		String res = null;
 		
@@ -975,7 +978,7 @@ public class Quest
 	 * Method notifyCreate.
 	 * @param qs QuestState
 	 */
-	public void notifyCreate(QuestState qs)
+	void notifyCreate(QuestState qs)
 	{
 		try
 		{
@@ -1017,7 +1020,7 @@ public class Quest
 	 * Method onCreate.
 	 * @param qs QuestState
 	 */
-	public void onCreate(QuestState qs)
+	private void onCreate(QuestState qs)
 	{
 	}
 	
@@ -1073,7 +1076,7 @@ public class Quest
 	 * @param st QuestState
 	 * @return String
 	 */
-	public String onKill(Player killed, QuestState st)
+	private String onKill(Player killed, QuestState st)
 	{
 		return null;
 	}
@@ -1160,7 +1163,7 @@ public class Quest
 	 * @param fileName String
 	 * @param showQuestInfo boolean
 	 */
-	protected void showHtmlFile(Player player, String fileName, boolean showQuestInfo)
+	private void showHtmlFile(Player player, String fileName, boolean showQuestInfo)
 	{
 		showHtmlFile(player, fileName, showQuestInfo, ArrayUtils.EMPTY_OBJECT_ARRAY);
 	}
@@ -1199,7 +1202,7 @@ public class Quest
 	 * @param player Player
 	 * @param fileName String
 	 */
-	protected void showSimpleHtmFile(Player player, String fileName)
+	private void showSimpleHtmFile(Player player, String fileName)
 	{
 		if (player == null)
 		{
@@ -1349,15 +1352,15 @@ public class Quest
 	/**
 	 * @author Mobius
 	 */
-	public class DeSpawnScheduleTimerTask extends RunnableImpl
+	private class DeSpawnScheduleTimerTask extends RunnableImpl
 	{
-		NpcInstance _npc = null;
+		private NpcInstance _npc = null;
 		
 		/**
 		 * Constructor for DeSpawnScheduleTimerTask.
 		 * @param npc NpcInstance
 		 */
-		public DeSpawnScheduleTimerTask(NpcInstance npc)
+		DeSpawnScheduleTimerTask(NpcInstance npc)
 		{
 			_npc = npc;
 		}
@@ -1406,7 +1409,7 @@ public class Quest
 	 * @param despawnDelay int
 	 * @return NpcInstance
 	 */
-	public NpcInstance addSpawn(int npcId, Location loc, int randomOffset, int despawnDelay)
+	private NpcInstance addSpawn(int npcId, Location loc, int randomOffset, int despawnDelay)
 	{
 		NpcInstance result = Functions.spawn(randomOffset > 50 ? Location.findPointToStay(loc, 0, randomOffset, ReflectionManager.DEFAULT.getGeoIndex()) : loc, npcId);
 		
@@ -1523,7 +1526,7 @@ public class Quest
 	{
 	}
 	
-	public void onReenterInstance(QuestState st, Reflection reflection)
+	private void onReenterInstance(QuestState st, Reflection reflection)
 	{
 	}
 }

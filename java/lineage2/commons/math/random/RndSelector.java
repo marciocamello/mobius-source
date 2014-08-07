@@ -15,6 +15,7 @@ package lineage2.commons.math.random;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import lineage2.commons.util.Rnd;
 
 /**
@@ -97,7 +98,7 @@ public class RndSelector<E>
 	 * @param maxWeight int
 	 * @return E
 	 */
-	public E chance(int maxWeight)
+	private E chance(int maxWeight)
 	{
 		if (maxWeight <= 0)
 		{
@@ -140,7 +141,7 @@ public class RndSelector<E>
 	/**
 	 * Method clear.
 	 */
-	public void clear()
+	void clear()
 	{
 		totalWeight = 0;
 		nodes.clear();

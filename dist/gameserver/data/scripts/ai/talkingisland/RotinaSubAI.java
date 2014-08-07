@@ -33,7 +33,7 @@ public class RotinaSubAI extends DefaultAI
 	 * Constructor for RotinaSubAI.
 	 * @param actor NpcInstance
 	 */
-	public RotinaSubAI(NpcInstance actor)
+	RotinaSubAI(NpcInstance actor)
 	{
 		super(actor);
 	}

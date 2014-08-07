@@ -14,6 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Summon;
 
@@ -44,13 +45,13 @@ public class ExEventMatchTeamInfo extends L2GameServerPacket
 		// TODO dcd[dSdddddddddd]
 	}
 	
-	public static class EventMatchTeamInfo
+	private static class EventMatchTeamInfo
 	{
 		public String _name, pet_Name;
 		public int _id, curCp, maxCp, curHp, maxHp, curMp, maxMp, level, class_id, race_id;
 		public int pet_id, pet_NpcId, pet_curHp, pet_maxHp, pet_curMp, pet_maxMp, pet_level;
 		
-		public EventMatchTeamInfo(Player member)
+		EventMatchTeamInfo(Player member)
 		{
 			_name = member.getName();
 			_id = member.getObjectId();

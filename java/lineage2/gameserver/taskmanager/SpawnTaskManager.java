@@ -14,6 +14,7 @@ package lineage2.gameserver.taskmanager;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
@@ -68,8 +69,12 @@ public class SpawnTaskManager
 	/**
 	 * @author Mobius
 	 */
-	public class SpawnScheduler extends RunnableImpl
+	private class SpawnScheduler extends RunnableImpl
 	{
+		public SpawnScheduler()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -228,7 +233,7 @@ public class SpawnTaskManager
 	 * Method removeObject.
 	 * @param actor NpcInstance
 	 */
-	public void removeObject(NpcInstance actor)
+	private void removeObject(NpcInstance actor)
 	{
 		synchronized (spawnTasks_lock)
 		{

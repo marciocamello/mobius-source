@@ -21,6 +21,7 @@ import lineage2.gameserver.model.entity.events.objects.CTBTeamObject;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
+
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -29,11 +30,8 @@ import org.apache.commons.lang3.StringUtils;
  */
 public abstract class CTBBossInstance extends MonsterInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
-	public static final Skill SKILL = SkillTable.getInstance().getInfo(5456, 1);
+	private static final Skill SKILL = SkillTable.getInstance().getInfo(5456, 1);
 	private CTBTeamObject _matchTeamObject;
 	
 	/**

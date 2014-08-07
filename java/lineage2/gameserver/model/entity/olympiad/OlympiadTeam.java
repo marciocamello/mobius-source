@@ -15,6 +15,7 @@ package lineage2.gameserver.model.entity.olympiad;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
@@ -22,6 +23,7 @@ import lineage2.gameserver.network.serverpackets.ExOlympiadUserInfo;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 import lineage2.gameserver.templates.StatsSet;
+
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
@@ -46,7 +48,7 @@ public class OlympiadTeam
 	 * @param game OlympiadGame
 	 * @param side int
 	 */
-	public OlympiadTeam(OlympiadGame game, int side)
+	OlympiadTeam(OlympiadGame game, int side)
 	{
 		_game = game;
 		_side = side;
@@ -57,7 +59,7 @@ public class OlympiadTeam
 	 * Method addMember.
 	 * @param obj_id int
 	 */
-	public void addMember(int obj_id)
+	void addMember(int obj_id)
 	{
 		String player_name = "";
 		Player player = GameObjectsStorage.getPlayer(obj_id);
@@ -85,7 +87,7 @@ public class OlympiadTeam
 	 * @param player Player
 	 * @param damage double
 	 */
-	public void addDamage(Player player, double damage)
+	void addDamage(Player player, double damage)
 	{
 		_damage += damage;
 		TeamMember member = _members.get(player.getObjectId());
@@ -113,7 +115,7 @@ public class OlympiadTeam
 	/**
 	 * Method portPlayersToArena.
 	 */
-	public void portPlayersToArena()
+	void portPlayersToArena()
 	{
 		for (TeamMember member : _members.values())
 		{
@@ -124,7 +126,7 @@ public class OlympiadTeam
 	/**
 	 * Method portPlayersBack.
 	 */
-	public void portPlayersBack()
+	void portPlayersBack()
 	{
 		for (TeamMember member : _members.values())
 		{
@@ -135,7 +137,7 @@ public class OlympiadTeam
 	/**
 	 * Method preparePlayers.
 	 */
-	public void preparePlayers()
+	void preparePlayers()
 	{
 		for (TeamMember member : _members.values())
 		{
@@ -187,7 +189,7 @@ public class OlympiadTeam
 	/**
 	 * Method takePointsForCrash.
 	 */
-	public void takePointsForCrash()
+	void takePointsForCrash()
 	{
 		for (TeamMember member : _members.values())
 		{
@@ -199,7 +201,7 @@ public class OlympiadTeam
 	 * Method checkPlayers.
 	 * @return boolean
 	 */
-	public boolean checkPlayers()
+	boolean checkPlayers()
 	{
 		for (TeamMember member : _members.values())
 		{
@@ -273,7 +275,7 @@ public class OlympiadTeam
 	 * Method broadcast.
 	 * @param p L2GameServerPacket
 	 */
-	public void broadcast(L2GameServerPacket p)
+	void broadcast(L2GameServerPacket p)
 	{
 		for (TeamMember member : _members.values())
 		{
@@ -290,7 +292,7 @@ public class OlympiadTeam
 	 * Method broadcast.
 	 * @param p IStaticPacket
 	 */
-	public void broadcast(IStaticPacket p)
+	void broadcast(IStaticPacket p)
 	{
 		for (TeamMember member : _members.values())
 		{
@@ -324,7 +326,7 @@ public class OlympiadTeam
 	 * @param player Player
 	 * @return boolean
 	 */
-	public boolean logout(Player player)
+	boolean logout(Player player)
 	{
 		if (player != null)
 		{
@@ -347,7 +349,7 @@ public class OlympiadTeam
 	 * @param player Player
 	 * @return boolean
 	 */
-	public boolean doDie(Player player)
+	boolean doDie(Player player)
 	{
 		if (player != null)
 		{
@@ -368,7 +370,7 @@ public class OlympiadTeam
 	/**
 	 * Method saveNobleData.
 	 */
-	public void saveNobleData()
+	void saveNobleData()
 	{
 		for (TeamMember member : _members.values())
 		{

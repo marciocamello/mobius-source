@@ -30,9 +30,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class EnvoyInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	public static final int COND_LEADER = 0;
 	public static final int COND_FAIL = 1;

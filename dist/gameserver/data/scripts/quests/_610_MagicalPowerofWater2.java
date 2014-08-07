@@ -182,7 +182,6 @@ public class _610_MagicalPowerofWater2 extends Quest implements ScriptFile
 	{
 		public DeathListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

@@ -15,9 +15,11 @@ package lineage2.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.model.entity.residence.Fortress;
 import lineage2.gameserver.model.pledge.Clan;
+
 import org.apache.commons.lang3.StringUtils;
 
 public class ExShowFortressInfo extends L2GameServerPacket
@@ -51,13 +53,14 @@ public class ExShowFortressInfo extends L2GameServerPacket
 		}
 	}
 	
-	static class FortressInfo
+	private static class FortressInfo
 	{
-		public int _id, _siege;
-		public String _owner;
-		public boolean _status;
+		final int _id;
+		final int _siege;
+		final String _owner;
+		final boolean _status;
 		
-		public FortressInfo(String owner, int id, boolean status, int siege)
+		FortressInfo(String owner, int id, boolean status, int siege)
 		{
 			_owner = owner;
 			_id = id;

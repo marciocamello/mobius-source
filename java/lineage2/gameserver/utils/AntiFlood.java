@@ -13,6 +13,7 @@
 package lineage2.gameserver.utils;
 
 import org.apache.commons.lang3.StringUtils;
+
 import gnu.trove.iterator.TIntLongIterator;
 import gnu.trove.map.hash.TIntLongHashMap;
 

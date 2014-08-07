@@ -23,7 +23,7 @@ public class Pointer extends DefaultAI
 	private int _lastPoint = 0;
 	private boolean _firstThought = true;
 	
-	public Pointer(NpcInstance actor)
+	Pointer(NpcInstance actor)
 	{
 		super(actor);
 	}

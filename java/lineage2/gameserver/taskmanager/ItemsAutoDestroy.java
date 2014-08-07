@@ -13,6 +13,7 @@
 package lineage2.gameserver.taskmanager;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
@@ -81,8 +82,12 @@ public class ItemsAutoDestroy
 	/**
 	 * @author Mobius
 	 */
-	public class CheckItemsForDestroy extends RunnableImpl
+	private class CheckItemsForDestroy extends RunnableImpl
 	{
+		public CheckItemsForDestroy()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -110,9 +115,13 @@ public class ItemsAutoDestroy
 	/**
 	 * @author Mobius
 	 */
-	public class CheckHerbsForDestroy extends RunnableImpl
+	private class CheckHerbsForDestroy extends RunnableImpl
 	{
-		static final long _sleep = 60000;
+		private static final long _sleep = 60000;
+		
+		public CheckHerbsForDestroy()
+		{
+		}
 		
 		/**
 		 * Method runImpl.

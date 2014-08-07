@@ -27,7 +27,7 @@ public abstract class Func implements Comparable<Func>
 	public final int order;
 	public final Object owner;
 	public final double value;
-	protected Condition cond;
+	private Condition cond;
 	
 	/**
 	 * Constructor for Func.

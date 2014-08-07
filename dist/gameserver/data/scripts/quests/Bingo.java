@@ -14,20 +14,21 @@ package quests;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.commons.util.Rnd;
 
-public class Bingo
+class Bingo
 {
-	protected final static String template = "%msg%<br><br>%choices%<br><br>%board%";
-	protected final static String template_final = "%msg%<br><br>%board%";
-	protected final static String template_board = "For your information, below is your current selection.<br><table border=\"1\" border color=\"white\" width=100><tr><td align=\"center\">%cell1%</td><td align=\"center\">%cell2%</td><td align=\"center\">%cell3%</td></tr><tr><td align=\"center\">%cell4%</td><td align=\"center\">%cell5%</td><td align=\"center\">%cell6%</td></tr><tr><td align=\"center\">%cell7%</td><td align=\"center\">%cell8%</td><td align=\"center\">%cell9%</td></tr></table>";
-	protected final static String msg_again = "You have already selected that number. Choose your %choicenum% number again.";
-	protected final static String msg_begin = "I've arranged 9 numbers on the panel.<br>Now, select your %choicenum% number.";
-	protected final static String msg_next = "Now, choose your %choicenum% number.";
-	protected final static String msg_0lines = "You are spectacularly unlucky! The red-colored numbers on the panel below are the ones you chose. As you can see, they didn't create even a single line. Did you know that it is harder not to create a single line than creating all 3 lines?";
-	protected final static String msg_3lines = "You've created 3 lines! The red colored numbers on the bingo panel below are the numbers you chose. Congratulations!";
-	protected final static String msg_lose = "Hmm... You didn't make 3 lines. Why don't you try again? The red-colored numbers on the panel are the ones you chose.";
-	protected final static String[] nums =
+	private final static String template = "%msg%<br><br>%choices%<br><br>%board%";
+	private final static String template_final = "%msg%<br><br>%board%";
+	private final static String template_board = "For your information, below is your current selection.<br><table border=\"1\" border color=\"white\" width=100><tr><td align=\"center\">%cell1%</td><td align=\"center\">%cell2%</td><td align=\"center\">%cell3%</td></tr><tr><td align=\"center\">%cell4%</td><td align=\"center\">%cell5%</td><td align=\"center\">%cell6%</td></tr><tr><td align=\"center\">%cell7%</td><td align=\"center\">%cell8%</td><td align=\"center\">%cell9%</td></tr></table>";
+	private final static String msg_again = "You have already selected that number. Choose your %choicenum% number again.";
+	private final static String msg_begin = "I've arranged 9 numbers on the panel.<br>Now, select your %choicenum% number.";
+	private final static String msg_next = "Now, choose your %choicenum% number.";
+	private final static String msg_0lines = "You are spectacularly unlucky! The red-colored numbers on the panel below are the ones you chose. As you can see, they didn't create even a single line. Did you know that it is harder not to create a single line than creating all 3 lines?";
+	private final static String msg_3lines = "You've created 3 lines! The red colored numbers on the bingo panel below are the numbers you chose. Congratulations!";
+	private final static String msg_lose = "Hmm... You didn't make 3 lines. Why don't you try again? The red-colored numbers on the panel are the ones you chose.";
+	private final static String[] nums =
 	{
 		"first",
 		"second",
@@ -41,7 +42,7 @@ public class Bingo
 	private final List<Integer> board = new ArrayList<>();
 	private final List<Integer> guesses = new ArrayList<>();
 	
-	public Bingo(String template_choice)
+	Bingo(String template_choice)
 	{
 		_template_choice = template_choice;
 		
@@ -56,7 +57,7 @@ public class Bingo
 		}
 	}
 	
-	public String Select(String s)
+	String Select(String s)
 	{
 		try
 		{
@@ -68,7 +69,7 @@ public class Bingo
 		}
 	}
 	
-	public String Select(int choise)
+	private String Select(int choise)
 	{
 		if ((choise < 1) || (choise > 9))
 		{
@@ -90,7 +91,7 @@ public class Bingo
 		return getDialog("");
 	}
 	
-	protected String getBoard()
+	private String getBoard()
 	{
 		if (guesses.size() == 0)
 		{
@@ -117,7 +118,7 @@ public class Bingo
 		return result;
 	}
 	
-	public String getDialog(String _msg)
+	String getDialog(String _msg)
 	{
 		String result = template;
 		
@@ -167,7 +168,7 @@ public class Bingo
 		return result;
 	}
 	
-	public int calcLines()
+	private int calcLines()
 	{
 		lines = 0;
 		lines += checkLine(0, 1, 2) ? 1 : 0;
@@ -181,7 +182,7 @@ public class Bingo
 		return lines;
 	}
 	
-	public boolean checkLine(int idx1, int idx2, int idx3)
+	private boolean checkLine(int idx1, int idx2, int idx3)
 	{
 		return guesses.contains(board.get(idx1)) && guesses.contains(board.get(idx2)) && guesses.contains(board.get(idx3));
 	}

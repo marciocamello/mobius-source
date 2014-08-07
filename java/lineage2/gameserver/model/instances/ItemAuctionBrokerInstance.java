@@ -14,6 +14,7 @@ package lineage2.gameserver.model.instances;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.instancemanager.itemauction.ItemAuction;
 import lineage2.gameserver.instancemanager.itemauction.ItemAuctionInstance;
@@ -29,9 +30,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class ItemAuctionBrokerInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final SimpleDateFormat fmt = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
 	private ItemAuctionInstance _instance;

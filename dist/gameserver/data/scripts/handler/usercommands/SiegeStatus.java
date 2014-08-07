@@ -32,7 +32,8 @@ public final class SiegeStatus extends ScriptUserCommand
 	 * Method useUserCommand.
 	 * @param id int
 	 * @param player Player
-	 * @return boolean * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#useUserCommand(int, Player)
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#useUserCommand(int, Player)
 	 */
 	@Override
 	public boolean useUserCommand(int id, Player player)
@@ -71,7 +72,8 @@ public final class SiegeStatus extends ScriptUserCommand
 	
 	/**
 	 * Method getUserCommandList.
-	 * @return int[] * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#getUserCommandList()
+	 * @return int[]
+	 * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#getUserCommandList()
 	 */
 	@Override
 	public int[] getUserCommandList()

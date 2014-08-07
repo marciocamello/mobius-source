@@ -14,6 +14,7 @@ package lineage2.gameserver.handler.admincommands.impl;
 
 import java.util.ArrayList;
 import java.util.StringTokenizer;
+
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.instancemanager.CastleManorManager;

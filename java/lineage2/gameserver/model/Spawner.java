@@ -13,6 +13,7 @@
 package lineage2.gameserver.model;
 
 import java.util.List;
+
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -29,6 +30,7 @@ import lineage2.gameserver.taskmanager.SpawnTaskManager;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.templates.spawn.SpawnRange;
 import lineage2.gameserver.utils.Location;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,20 +40,19 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class Spawner extends EventOwner implements Cloneable
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	protected static final Logger _log = LoggerFactory.getLogger(Spawner.class);
-	protected static final int MIN_RESPAWN_DELAY = 20;
+	private static final int MIN_RESPAWN_DELAY = 20;
 	protected int _maximumCount;
 	protected int _referenceCount;
 	protected int _currentCount;
 	protected int _scheduledCount;
-	protected int _respawnDelay, _respawnDelayRandom, _nativeRespawnDelay;
-	protected int _respawnTime;
-	protected boolean _doRespawn;
-	protected NpcInstance _lastSpawn;
+	protected int _respawnDelay;
+	protected int _respawnDelayRandom;
+	private int _nativeRespawnDelay;
+	private int _respawnTime;
+	private boolean _doRespawn;
+	private NpcInstance _lastSpawn;
 	protected List<NpcInstance> _spawned;
 	protected Reflection _reflection = ReflectionManager.DEFAULT;
 	
@@ -394,7 +395,7 @@ public abstract class Spawner extends EventOwner implements Cloneable
 	 * @param spawnedNpc NpcInstance
 	 * @param deadTime long
 	 */
-	public void decreaseCount0(NpcTemplate template, NpcInstance spawnedNpc, long deadTime)
+	void decreaseCount0(NpcTemplate template, NpcInstance spawnedNpc, long deadTime)
 	{
 		_currentCount--;
 		

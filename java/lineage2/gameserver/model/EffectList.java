@@ -18,12 +18,15 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+
 import lineage2.gameserver.skills.EffectType;
 import lineage2.gameserver.skills.effects.EffectTemplate;
 import lineage2.gameserver.skills.skillclasses.Transformation;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.funcs.FuncTemplate;
+
 import org.apache.commons.lang3.ArrayUtils;
+
 import gnu.trove.list.array.TIntArrayList;
 import gnu.trove.map.hash.TIntObjectHashMap;
 import gnu.trove.set.hash.TIntHashSet;
@@ -34,14 +37,14 @@ import gnu.trove.set.hash.TIntHashSet;
  */
 public class EffectList
 {
-	public static final int NONE_SLOT_TYPE = -1;
-	public static final int BUFF_SLOT_TYPE = 0;
-	public static final int MUSIC_SLOT_TYPE = 1;
-	public static final int TRIGGER_SLOT_TYPE = 2;
-	public static final int DEBUFF_SLOT_TYPE = 3;
-	public static final int DEBUFF_LIMIT = 8;
-	public static final int MUSIC_LIMIT = 12;
-	public static final int TRIGGER_LIMIT = 12;
+	private static final int NONE_SLOT_TYPE = -1;
+	private static final int BUFF_SLOT_TYPE = 0;
+	private static final int MUSIC_SLOT_TYPE = 1;
+	private static final int TRIGGER_SLOT_TYPE = 2;
+	private static final int DEBUFF_SLOT_TYPE = 3;
+	private static final int DEBUFF_LIMIT = 8;
+	private static final int MUSIC_LIMIT = 12;
+	private static final int TRIGGER_LIMIT = 12;
 	private final Creature _actor;
 	private List<Effect> _effects;
 	private final Lock lock = new ReentrantLock();
@@ -50,7 +53,7 @@ public class EffectList
 	 * Constructor for EffectList.
 	 * @param owner Creature
 	 */
-	public EffectList(Creature owner)
+	EffectList(Creature owner)
 	{
 		_actor = owner;
 	}
@@ -172,7 +175,7 @@ public class EffectList
 	 * @param type String
 	 * @return Effect
 	 */
-	public Effect getEffectByStackType(String type)
+	Effect getEffectByStackType(String type)
 	{
 		if (isEmpty())
 		{
@@ -382,7 +385,7 @@ public class EffectList
 	 * @param e Effect
 	 * @return int
 	 */
-	public static int getSlotType(Effect e)
+	private static int getSlotType(Effect e)
 	{
 		if (e.getSkill().isPassive() || e.getSkill().isToggle() || (e.getSkill() instanceof Transformation) || e.getStackType().contains(EffectTemplate.HP_RECOVER_CAST) || (e.getEffectType() == EffectType.Cubic))
 		{
@@ -544,7 +547,7 @@ public class EffectList
 	 * Method removeEffect.
 	 * @param effect Effect
 	 */
-	public void removeEffect(Effect effect)
+	void removeEffect(Effect effect)
 	{
 		if (effect == null)
 		{
@@ -729,7 +732,7 @@ public class EffectList
 	 * Method stopAllSkillEffects.
 	 * @param type EffectType
 	 */
-	public void stopAllSkillEffects(EffectType type)
+	void stopAllSkillEffects(EffectType type)
 	{
 		if (isEmpty())
 		{

@@ -20,7 +20,7 @@ import lineage2.gameserver.stats.Env;
  */
 public class ConditionFirstEffectSuccess extends Condition
 {
-	boolean _param;
+	private final boolean _param;
 	
 	/**
 	 * Constructor for ConditionFirstEffectSuccess.

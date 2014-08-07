@@ -21,12 +21,12 @@ import java.util.Calendar;
  */
 public class ProductItem
 {
-	public static final long NOT_LIMITED_START_TIME = 315558000000L;
-	public static final long NOT_LIMITED_END_TIME = 2127452400000L;
-	public static final int NOT_LIMITED_START_HOUR = 0;
-	public static final int NOT_LIMITED_END_HOUR = 23;
-	public static final int NOT_LIMITED_START_MIN = 0;
-	public static final int NOT_LIMITED_END_MIN = 59;
+	private static final long NOT_LIMITED_START_TIME = 315558000000L;
+	private static final long NOT_LIMITED_END_TIME = 2127452400000L;
+	private static final int NOT_LIMITED_START_HOUR = 0;
+	private static final int NOT_LIMITED_END_HOUR = 23;
+	private static final int NOT_LIMITED_START_MIN = 0;
+	private static final int NOT_LIMITED_END_MIN = 59;
 	private final int _productId;
 	private final int _category;
 	private final int _points;

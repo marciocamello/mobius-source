@@ -20,6 +20,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.network.telnet.commands.TelnetBan;
 import lineage2.gameserver.network.telnet.commands.TelnetConfig;
@@ -29,6 +30,7 @@ import lineage2.gameserver.network.telnet.commands.TelnetSay;
 import lineage2.gameserver.network.telnet.commands.TelnetServer;
 import lineage2.gameserver.network.telnet.commands.TelnetStatus;
 import lineage2.gameserver.network.telnet.commands.TelnetWorld;
+
 import org.jboss.netty.channel.ChannelFuture;
 import org.jboss.netty.channel.ChannelFutureListener;
 import org.jboss.netty.channel.ChannelHandlerContext;
@@ -102,7 +104,7 @@ public class TelnetServerHandler extends SimpleChannelUpstreamHandler implements
 	 * Method addHandler.
 	 * @param handler TelnetCommandHolder
 	 */
-	public void addHandler(TelnetCommandHolder handler)
+	private void addHandler(TelnetCommandHolder handler)
 	{
 		for (TelnetCommand cmd : handler.getCommands())
 		{

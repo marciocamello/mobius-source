@@ -14,6 +14,7 @@ package lineage2.gameserver.network.clientpackets;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.dao.CharacterDAO;

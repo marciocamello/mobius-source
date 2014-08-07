@@ -13,10 +13,13 @@
 package lineage2.commons.data.xml;
 
 import java.io.File;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+
 import javolution.util.FastList;
 import lineage2.commons.util.fileio.XMLFilter;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -45,7 +48,7 @@ public abstract class DocumentParser
 	 * Method parseFile.
 	 * @param f File
 	 */
-	protected void parseFile(File f)
+	private void parseFile(File f)
 	{
 		if (!xmlFilter.accept(f))
 		{
@@ -109,7 +112,7 @@ public abstract class DocumentParser
 	 * @param dir File
 	 * @return boolean
 	 */
-	protected boolean parseDirectory(File dir)
+	private boolean parseDirectory(File dir)
 	{
 		if (!dir.exists())
 		{
@@ -131,7 +134,7 @@ public abstract class DocumentParser
 	 * Method parseDocument.
 	 * @param doc Document
 	 */
-	protected void parseDocument(Document doc)
+	void parseDocument(Document doc)
 	{
 	}
 	
@@ -157,7 +160,7 @@ public abstract class DocumentParser
 	 * @param name String
 	 * @return Integer
 	 */
-	protected static Integer parseInteger(NamedNodeMap n, String name)
+	static Integer parseInteger(NamedNodeMap n, String name)
 	{
 		return Integer.valueOf(n.getNamedItem(name).getNodeValue());
 	}
@@ -167,7 +170,7 @@ public abstract class DocumentParser
 	 * @param n Node
 	 * @return int
 	 */
-	protected static int parseInt(Node n)
+	static int parseInt(Node n)
 	{
 		return Integer.parseInt(n.getNodeValue());
 	}
@@ -177,7 +180,7 @@ public abstract class DocumentParser
 	 * @param n Node
 	 * @return Integer
 	 */
-	protected static Integer parseInteger(Node n)
+	static Integer parseInteger(Node n)
 	{
 		return Integer.valueOf(n.getNodeValue());
 	}
@@ -188,7 +191,7 @@ public abstract class DocumentParser
 	 * @param name String
 	 * @return Long
 	 */
-	protected static Long parseLong(NamedNodeMap n, String name)
+	static Long parseLong(NamedNodeMap n, String name)
 	{
 		return Long.valueOf(n.getNamedItem(name).getNodeValue());
 	}
@@ -198,7 +201,7 @@ public abstract class DocumentParser
 	 * @param n Node
 	 * @return Long
 	 */
-	protected static Long parseLong(Node n)
+	static Long parseLong(Node n)
 	{
 		return Long.valueOf(n.getNodeValue());
 	}
@@ -209,7 +212,7 @@ public abstract class DocumentParser
 	 * @param name String
 	 * @return boolean
 	 */
-	protected static boolean parseBoolean(NamedNodeMap n, String name)
+	static boolean parseBoolean(NamedNodeMap n, String name)
 	{
 		Node b = n.getNamedItem(name);
 		return (b != null) && (Boolean.parseBoolean(b.getNodeValue()));
@@ -220,7 +223,7 @@ public abstract class DocumentParser
 	 * @param n Node
 	 * @return boolean
 	 */
-	protected static boolean parseBoolean(Node n)
+	static boolean parseBoolean(Node n)
 	{
 		return Boolean.parseBoolean(n.getNodeValue());
 	}
@@ -230,7 +233,7 @@ public abstract class DocumentParser
 	 * @param n Node
 	 * @return byte
 	 */
-	protected static byte parseByte(Node n)
+	static byte parseByte(Node n)
 	{
 		return Byte.valueOf(n.getNodeValue()).byteValue();
 	}
@@ -252,7 +255,7 @@ public abstract class DocumentParser
 	 * @param name String
 	 * @return float
 	 */
-	protected static float parseFloat(NamedNodeMap n, String name)
+	static float parseFloat(NamedNodeMap n, String name)
 	{
 		return Float.valueOf(n.getNamedItem(name).getNodeValue()).floatValue();
 	}
@@ -262,7 +265,7 @@ public abstract class DocumentParser
 	 * @param n Node
 	 * @return float
 	 */
-	protected static float parseFloat(Node n)
+	static float parseFloat(Node n)
 	{
 		return Float.valueOf(n.getNodeValue()).floatValue();
 	}
@@ -275,7 +278,7 @@ public abstract class DocumentParser
 		/**
 		 * Constructor for XMLErrorHandler.
 		 */
-		protected XMLErrorHandler()
+		private XMLErrorHandler()
 		{
 		}
 		
@@ -319,7 +322,7 @@ public abstract class DocumentParser
 	 * @param pathName String
 	 * @return FastList<File>
 	 */
-	public static FastList<File> getAllFileList(File dir, String pathName)
+	private static FastList<File> getAllFileList(File dir, String pathName)
 	{
 		FastList<File> list = new FastList<>();
 		

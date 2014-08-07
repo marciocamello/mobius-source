@@ -48,9 +48,9 @@ public class ExGetBossRecord extends L2GameServerPacket
 	
 	public static class BossRecordInfo
 	{
-		public int _bossId;
-		public int _points;
-		public int _unk1;
+		final int _bossId;
+		final int _points;
+		final int _unk1;
 		
 		public BossRecordInfo(int bossId, int points, int unk1)
 		{

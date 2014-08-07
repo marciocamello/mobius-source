@@ -166,12 +166,8 @@ public final class GardenDoorInstance extends NpcInstance
 	
 	private class runDoorOpener extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public runDoorOpener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

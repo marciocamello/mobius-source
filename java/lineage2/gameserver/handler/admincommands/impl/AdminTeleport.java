@@ -14,6 +14,7 @@ package lineage2.gameserver.handler.admincommands.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.gameserver.ai.CtrlIntention;

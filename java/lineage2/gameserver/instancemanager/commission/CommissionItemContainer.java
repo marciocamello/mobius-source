@@ -13,6 +13,7 @@
 package lineage2.gameserver.instancemanager.commission;
 
 import java.util.Collection;
+
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.gameserver.model.items.ItemContainer;
 import lineage2.gameserver.model.items.ItemInstance;
@@ -88,7 +89,7 @@ public class CommissionItemContainer extends ItemContainer
 	/**
 	 * Method restore.
 	 */
-	public void restore()
+	void restore()
 	{
 		writeLock();
 		

@@ -28,7 +28,7 @@ public class RequestSetPledgeCrestLarge extends L2GameClientPacket
 		_request = i;
 	}
 	
-	byte[] concatenateByteArrays(byte[] a, byte[] b)
+	private byte[] concatenateByteArrays(byte[] a, byte[] b)
 	{
 		byte[] result = new byte[a.length + b.length];
 		System.arraycopy(a, 0, result, 0, a.length);

@@ -33,7 +33,7 @@ public class HeraSubAI extends DefaultAI
 	 * Constructor for HeraSubAI.
 	 * @param actor NpcInstance
 	 */
-	public HeraSubAI(NpcInstance actor)
+	HeraSubAI(NpcInstance actor)
 	{
 		super(actor);
 	}

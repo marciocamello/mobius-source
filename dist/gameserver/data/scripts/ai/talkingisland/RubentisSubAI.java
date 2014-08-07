@@ -33,7 +33,7 @@ public class RubentisSubAI extends DefaultAI
 	 * Constructor for RubentisSubAI.
 	 * @param actor NpcInstance
 	 */
-	public RubentisSubAI(NpcInstance actor)
+	RubentisSubAI(NpcInstance actor)
 	{
 		super(actor);
 	}

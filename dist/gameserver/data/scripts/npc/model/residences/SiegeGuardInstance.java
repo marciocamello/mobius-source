@@ -14,6 +14,7 @@ package npc.model.residences;
 
 import java.util.List;
 import java.util.Map;
+
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.Experience;
@@ -32,9 +33,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public class SiegeGuardInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	/**

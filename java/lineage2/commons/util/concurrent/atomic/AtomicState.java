@@ -27,7 +27,7 @@ public class AtomicState
 	 * Constructor for AtomicState.
 	 * @param initialValue boolean
 	 */
-	public AtomicState(boolean initialValue)
+	AtomicState(boolean initialValue)
 	{
 		value = initialValue ? 1 : 0;
 	}

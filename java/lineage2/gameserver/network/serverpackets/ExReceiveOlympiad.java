@@ -15,6 +15,7 @@ package lineage2.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.entity.olympiad.OlympiadGame;
@@ -164,7 +165,7 @@ public abstract class ExReceiveOlympiad extends L2GameServerPacket
 	
 	private final int _type;
 	
-	public ExReceiveOlympiad(int type)
+	ExReceiveOlympiad(int type)
 	{
 		_type = type;
 	}

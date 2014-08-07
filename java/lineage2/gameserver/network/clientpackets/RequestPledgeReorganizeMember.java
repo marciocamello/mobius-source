@@ -27,10 +27,10 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
  */
 public class RequestPledgeReorganizeMember extends L2GameClientPacket
 {
-	int _replace;
-	String _subjectName;
-	int _targetUnit;
-	String _replaceName;
+	private int _replace;
+	private String _subjectName;
+	private int _targetUnit;
+	private String _replaceName;
 	
 	/**
 	 * Method readImpl.

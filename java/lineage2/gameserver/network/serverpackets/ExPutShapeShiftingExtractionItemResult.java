@@ -21,7 +21,7 @@ public class ExPutShapeShiftingExtractionItemResult extends L2GameServerPacket
 	public static final L2GameServerPacket SUCCESS = new ExPutShapeShiftingExtractionItemResult(0x01);
 	private final int _result;
 	
-	public ExPutShapeShiftingExtractionItemResult(int result)
+	private ExPutShapeShiftingExtractionItemResult(int result)
 	{
 		_result = result;
 	}

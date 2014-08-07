@@ -19,6 +19,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.handler.petition.IPetitionHandler;
 import lineage2.gameserver.model.Player;
@@ -29,6 +30,7 @@ import lineage2.gameserver.network.serverpackets.Say2;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.tables.GmListTable;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,7 +45,7 @@ public final class PetitionManager implements IPetitionHandler
 	/**
 	 * @author Mobius
 	 */
-	public static enum PetitionState
+	private static enum PetitionState
 	{
 		Pending,
 		Responder_Cancel,
@@ -59,7 +61,7 @@ public final class PetitionManager implements IPetitionHandler
 	/**
 	 * @author Mobius
 	 */
-	public static enum PetitionType
+	private static enum PetitionType
 	{
 		Immobility,
 		Recovery_Related,
@@ -306,16 +308,6 @@ public final class PetitionManager implements IPetitionHandler
 	}
 	
 	/**
-	 * Method clearCompletedPetitions.
-	 */
-	public void clearCompletedPetitions()
-	{
-		int numPetitions = getPendingPetitionCount();
-		getCompletedPetitions().clear();
-		_log.info("PetitionManager: Completed petition data cleared. " + numPetitions + " petition(s) removed.");
-	}
-	
-	/**
 	 * Method clearPendingPetitions.
 	 */
 	public void clearPendingPetitions()
@@ -436,7 +428,7 @@ public final class PetitionManager implements IPetitionHandler
 	 * Method getCompletedPetitions.
 	 * @return Map<Integer,Petition>
 	 */
-	protected Map<Integer, Petition> getCompletedPetitions()
+	Map<Integer, Petition> getCompletedPetitions()
 	{
 		return _completedPetitions;
 	}
@@ -445,7 +437,7 @@ public final class PetitionManager implements IPetitionHandler
 	 * Method getPendingPetitions.
 	 * @return Map<Integer,Petition>
 	 */
-	protected Map<Integer, Petition> getPendingPetitions()
+	Map<Integer, Petition> getPendingPetitions()
 	{
 		return _pendingPetitions;
 	}

@@ -22,7 +22,7 @@ import lineage2.gameserver.network.serverpackets.RecipeShopSellList;
  */
 public class RequestRecipeShopSellList extends L2GameClientPacket
 {
-	int _manufacturerId;
+	private int _manufacturerId;
 	
 	/**
 	 * Method readImpl.

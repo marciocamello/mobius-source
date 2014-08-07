@@ -85,7 +85,7 @@ public abstract class MMOClient<T extends MMOConnection>
 	/**
 	 * Method closeLater.
 	 */
-	public void closeLater()
+	void closeLater()
 	{
 		if (isConnected())
 		{

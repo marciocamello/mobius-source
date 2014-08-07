@@ -13,6 +13,7 @@
 package lineage2.gameserver.model.base;
 
 import java.util.Arrays;
+
 import lineage2.gameserver.stats.Stats;
 
 /**

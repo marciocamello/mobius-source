@@ -15,8 +15,10 @@ package lineage2.gameserver.data.xml.holder;
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.model.PetData;
 import lineage2.gameserver.templates.StatsSet;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
@@ -77,7 +79,7 @@ public class PetDataHolder extends AbstractHolder
 	 * @param level int
 	 * @return PetData
 	 */
-	public PetData getInfo(int petNpcId, int level)
+	PetData getInfo(int petNpcId, int level)
 	{
 		PetData result = null;
 		

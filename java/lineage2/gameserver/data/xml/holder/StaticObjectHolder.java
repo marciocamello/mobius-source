@@ -15,6 +15,7 @@ package lineage2.gameserver.data.xml.holder;
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.model.instances.StaticObjectInstance;
 import lineage2.gameserver.templates.StaticObjectTemplate;
+
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 
@@ -51,7 +52,7 @@ public final class StaticObjectHolder extends AbstractHolder
 	 * @param id int
 	 * @return StaticObjectTemplate
 	 */
-	public StaticObjectTemplate getTemplate(int id)
+	StaticObjectTemplate getTemplate(int id)
 	{
 		return _templates.get(id);
 	}

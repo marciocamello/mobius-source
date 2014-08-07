@@ -259,7 +259,7 @@ public enum Stats
 	 * @param val double
 	 * @return double
 	 */
-	public double validate(double val)
+	double validate(double val)
 	{
 		if (val < _min)
 		{

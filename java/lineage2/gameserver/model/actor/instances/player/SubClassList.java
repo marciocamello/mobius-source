@@ -15,9 +15,11 @@ package lineage2.gameserver.model.actor.instances.player;
 import java.util.Collection;
 import java.util.List;
 import java.util.TreeMap;
+
 import lineage2.gameserver.dao.CharacterSubclassDAO;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SubClass;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

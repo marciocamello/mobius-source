@@ -14,7 +14,7 @@ package lineage2.gameserver.data;
 
 import lineage2.gameserver.model.worldstatistics.CategoryType;
 
-public final class WorldStatisticHolder
+final class WorldStatisticHolder
 {
 	private final CategoryType _cat;
 	private final short _place;

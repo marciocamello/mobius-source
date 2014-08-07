@@ -14,6 +14,7 @@ package quests;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
@@ -24,19 +25,19 @@ import lineage2.gameserver.utils.Location;
 
 public class _022_TragedyInVonHellmannForest extends Quest implements ScriptFile
 {
-	public final int Well = 31527;
-	public final int Tifaren = 31334;
-	public final int Innocentin = 31328;
-	public final int SoulOfWell = 27217;
-	public final int GhostOfPriest = 31528;
-	public final int GhostOfAdventurer = 31529;
-	public final int ReportBox = 7147;
-	public final int LostSkullOfElf = 7142;
-	public final int CrossOfEinhasad = 7141;
-	public final int SealedReportBox = 7146;
-	public final int LetterOfInnocentin = 7143;
-	public final int JewelOfAdventurerRed = 7145;
-	public final int JewelOfAdventurerGreen = 7144;
+	private final int Well = 31527;
+	private final int Tifaren = 31334;
+	private final int Innocentin = 31328;
+	private final int SoulOfWell = 27217;
+	private final int GhostOfPriest = 31528;
+	private final int GhostOfAdventurer = 31529;
+	private final int ReportBox = 7147;
+	private final int LostSkullOfElf = 7142;
+	private final int CrossOfEinhasad = 7141;
+	private final int SealedReportBox = 7146;
+	private final int LetterOfInnocentin = 7143;
+	private final int JewelOfAdventurerRed = 7145;
+	private final int JewelOfAdventurerGreen = 7144;
 	private static final List<Integer> Mobs = new ArrayList<>();
 	static
 	{

@@ -27,9 +27,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class ZakenGatekeeperInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int nightZakenIzId = 114;
 	private static final int dayZakenIzId = 133;

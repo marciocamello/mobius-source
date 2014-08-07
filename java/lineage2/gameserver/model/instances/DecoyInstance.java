@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
@@ -28,6 +29,7 @@ import lineage2.gameserver.network.serverpackets.CharInfo;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,9 +39,6 @@ import org.slf4j.LoggerFactory;
  */
 public class DecoyInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(DecoyInstance.class);
@@ -86,8 +85,12 @@ public class DecoyInstance extends NpcInstance
 	/**
 	 * @author Mobius
 	 */
-	class DecoyLifetime extends RunnableImpl
+	private class DecoyLifetime extends RunnableImpl
 	{
+		public DecoyLifetime()
+		{
+		}
+		
 		/**
 		 * Method runImpl.
 		 */
@@ -115,7 +118,7 @@ public class DecoyInstance extends NpcInstance
 	/**
 	 * @author Mobius
 	 */
-	class HateSpam extends RunnableImpl
+	private class HateSpam extends RunnableImpl
 	{
 		private final Skill _skill;
 		
@@ -170,7 +173,7 @@ public class DecoyInstance extends NpcInstance
 	 * Method decTimeRemaining.
 	 * @param value int
 	 */
-	public void decTimeRemaining(int value)
+	void decTimeRemaining(int value)
 	{
 		_timeRemaining -= value;
 	}

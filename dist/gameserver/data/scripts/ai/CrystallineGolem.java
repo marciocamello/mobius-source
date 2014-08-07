@@ -36,20 +36,17 @@ public final class CrystallineGolem extends Fighter
 	private Location lastPoint = null;
 	private static final String[] says = new String[]
 	{
-		"�?�?м, н�?м!!!",
-		"Дай!!!",
-		"Хочу!!!",
-		"�?оe!!!",
-		"Еще!!!",
-		"Еда!!!"
+		"Give!",
+		"I want!",
+		"More!",
+		"Food!",
 	};
 	private static final String[] says2 = new String[]
 	{
-		"�?тдай!!!",
-		"Верни!!!",
-		"Жадные вы, уйду �? от ва�?...",
-		"�?уда оно подевало�?�??",
-		"�?аверное показало�?�?..."
+		"Give!",
+		"Where you go? Island of...?",
+		"Removed it?",
+		"You showed...?",
 	};
 	private static final TIntObjectHashMap<Info> instanceInfo = new TIntObjectHashMap<>();
 	
@@ -63,7 +60,6 @@ public final class CrystallineGolem extends Fighter
 		 */
 		Info()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		boolean stage1 = false;

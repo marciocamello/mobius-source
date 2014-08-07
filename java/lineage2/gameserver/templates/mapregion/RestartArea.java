@@ -13,6 +13,7 @@
 package lineage2.gameserver.templates.mapregion;
 
 import java.util.Map;
+
 import lineage2.gameserver.model.Territory;
 import lineage2.gameserver.model.base.Race;
 

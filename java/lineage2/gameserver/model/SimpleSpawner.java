@@ -13,6 +13,7 @@
 package lineage2.gameserver.model;
 
 import java.util.ArrayList;
+
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -21,6 +22,7 @@ import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.templates.spawn.SpawnRange;
 import lineage2.gameserver.utils.Location;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

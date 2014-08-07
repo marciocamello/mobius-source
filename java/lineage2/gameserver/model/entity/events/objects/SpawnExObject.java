@@ -15,10 +15,12 @@ package lineage2.gameserver.model.entity.events.objects;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import lineage2.gameserver.instancemanager.SpawnManager;
 import lineage2.gameserver.model.Spawner;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.model.instances.NpcInstance;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,9 +30,6 @@ import org.slf4j.LoggerFactory;
  */
 public class SpawnExObject implements SpawnableObject
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final Logger _log = LoggerFactory.getLogger(SpawnExObject.class);
 	private final List<Spawner> _spawns;

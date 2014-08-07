@@ -14,11 +14,13 @@ package lineage2.gameserver.model;
 
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
+
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.cache.Msg;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -167,7 +169,7 @@ public class Request extends MultiValueSet<String>
 	/**
 	 * Method timeout.
 	 */
-	public void timeout()
+	void timeout()
 	{
 		Player player = getReceiver();
 		

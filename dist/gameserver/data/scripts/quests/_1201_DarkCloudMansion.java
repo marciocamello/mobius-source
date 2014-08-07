@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.CharacterAI;
 import lineage2.gameserver.instancemanager.ReflectionManager;
@@ -362,28 +363,42 @@ public class _1201_DarkCloudMansion extends Quest implements ScriptFile
 		}
 	};
 	
-	public class World
+	private class World
 	{
-		public int instanceId;
-		public int status;
-		public List<Long> rewarded;
-		public Room StartRoom;
-		public Room Hall;
-		public Room FirstRoom;
-		public Room SecondRoom;
-		public Room ThirdRoom;
-		public Room ForthRoom;
-		public Room FifthRoom;
+		/**
+		 * 
+		 */
+		public World()
+		{
+		}
+		
+		int instanceId;
+		int status;
+		List<Long> rewarded;
+		Room StartRoom;
+		Room Hall;
+		Room FirstRoom;
+		Room SecondRoom;
+		Room ThirdRoom;
+		Room ForthRoom;
+		Room FifthRoom;
 	}
 	
-	public class Room
+	private class Room
 	{
-		public Map<NpcInstance, Boolean> npclist;
-		public List<long[]> npclist2;
-		public List<long[]> monolith;
-		public int[] monolithOrder;
-		public List<int[]> belethOrder;
-		public int counter;
+		/**
+		 * 
+		 */
+		public Room()
+		{
+		}
+		
+		Map<NpcInstance, Boolean> npclist;
+		List<long[]> npclist2;
+		List<long[]> monolith;
+		int[] monolithOrder;
+		List<int[]> belethOrder;
+		int counter;
 	}
 	
 	private static final TIntObjectHashMap<World> worlds = new TIntObjectHashMap<>();

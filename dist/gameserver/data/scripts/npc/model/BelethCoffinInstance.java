@@ -13,6 +13,7 @@
 package npc.model;
 
 import java.util.StringTokenizer;
+
 import lineage2.gameserver.model.CommandChannel;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -28,9 +29,6 @@ import bosses.BelethManager;
  */
 public final class BelethCoffinInstance extends NpcInstance
 {
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 	private static final int RING = 10314;
 	

@@ -44,15 +44,15 @@ public class Base64
 	private static final Logger _log = Logger.getLogger(Base64.class.getName());
 	/* P U B L I C F I E L D S */
 	/** No options specified. Value is zero. */
-	public static final int NO_OPTIONS = 0;
+	private static final int NO_OPTIONS = 0;
 	/** Specify encoding. */
-	public static final int ENCODE = 1;
+	private static final int ENCODE = 1;
 	/** Specify decoding. */
-	public static final int DECODE = 0;
+	private static final int DECODE = 0;
 	/** Specify that data should be gzip-compressed. */
-	public static final int GZIP = 2;
+	private static final int GZIP = 2;
 	/** Don't break lines when encoding (violates strict Base64 specification) */
-	public static final int DONT_BREAK_LINES = 8;
+	private static final int DONT_BREAK_LINES = 8;
 	/* Private Fields */
 	/** Maximum line length (76) of Base64 output. */
 	private static final int MAX_LINE_LENGTH = 76;
@@ -222,7 +222,7 @@ public class Base64
 	 * @see Base64#DONT_BREAK_LINES
 	 * @since 2.0
 	 */
-	public static String encodeObject(Serializable serializableObject, int options)
+	private static String encodeObject(Serializable serializableObject, int options)
 	{
 		// Isolate options
 		int gzip = (options & GZIP);
@@ -280,7 +280,7 @@ public class Base64
 	 * @see Base64#DONT_BREAK_LINES
 	 * @since 2.0
 	 */
-	public static String encodeBytes(byte[] source, int options)
+	static String encodeBytes(byte[] source, int options)
 	{
 		return encodeBytes(source, 0, source.length, options);
 	}
@@ -293,7 +293,7 @@ public class Base64
 	 * @return
 	 * @since 1.4
 	 */
-	public static String encodeBytes(byte[] source, int off, int len)
+	static String encodeBytes(byte[] source, int off, int len)
 	{
 		return encodeBytes(source, off, len, NO_OPTIONS);
 	}
@@ -321,7 +321,7 @@ public class Base64
 	 * @see Base64#DONT_BREAK_LINES
 	 * @since 2.0
 	 */
-	public static String encodeBytes(byte[] source, int off, int len, int options)
+	private static String encodeBytes(byte[] source, int off, int len, int options)
 	{
 		// Isolate options
 		int dontBreakLines = (options & DONT_BREAK_LINES);
@@ -457,7 +457,7 @@ public class Base64
 	 * @return decoded data
 	 * @since 1.3
 	 */
-	public static byte[] decode(byte[] source, int off, int len)
+	private static byte[] decode(byte[] source, int off, int len)
 	{
 		int len34 = (len * 3) / 4;
 		byte[] outBuff = new byte[len34]; // Upper limit on size of output
@@ -509,7 +509,7 @@ public class Base64
 	 * @return the decoded data
 	 * @since 1.4
 	 */
-	public static byte[] decode(String s)
+	private static byte[] decode(String s)
 	{
 		byte[] bytes = s.getBytes(PREFERRED_ENCODING);
 		// Decode
@@ -556,7 +556,7 @@ public class Base64
 	 * @return The decoded and deserialized object
 	 * @since 1.5
 	 */
-	public static Object decodeToObject(String encodedObject)
+	static Object decodeToObject(String encodedObject)
 	{
 		// Decode and gunzip if necessary
 		byte[] objBytes = decode(encodedObject);
@@ -586,7 +586,7 @@ public class Base64
 	 * @see java.io.FilterInputStream
 	 * @since 1.3
 	 */
-	public static class InputStream extends FilterInputStream
+	static class InputStream extends FilterInputStream
 	{
 		// private int options; // Options specified
 		private final boolean encode; // Encoding or decoding
@@ -807,7 +807,7 @@ public class Base64
 	 * @see java.io.FilterOutputStream
 	 * @since 1.3
 	 */
-	public static class OutputStream extends FilterOutputStream
+	private static class OutputStream extends FilterOutputStream
 	{
 		// private int options;
 		private final boolean encode;
@@ -818,16 +818,6 @@ public class Base64
 		private final boolean breakLines;
 		private final byte[] b4; // Scratch used in a few places
 		private boolean suspendEncoding;
-		
-		/**
-		 * Constructs a {@link #OutputStream} in ENCODE mode.
-		 * @param pOut the {@link java.io.OutputStream} to which data will be written.
-		 * @since 1.3
-		 */
-		public OutputStream(java.io.OutputStream pOut)
-		{
-			this(pOut, ENCODE);
-		}
 		
 		/**
 		 * Constructs a {@link #OutputStream} in either ENCODE or DECODE mode.
@@ -849,7 +839,7 @@ public class Base64
 		 * @see Base64#DONT_BREAK_LINES
 		 * @since 1.3
 		 */
-		public OutputStream(java.io.OutputStream pOut, int options)
+		private OutputStream(java.io.OutputStream pOut, int options)
 		{
 			super(pOut);
 			// this.options = options;
@@ -946,7 +936,7 @@ public class Base64
 		 * Method added by PHIL. [Thanks, PHIL. -Rob] This pads the buffer without closing the stream.
 		 * @throws IOException
 		 */
-		public void flushBase64() throws IOException
+		private void flushBase64() throws IOException
 		{
 			if (position > 0)
 			{
@@ -976,26 +966,6 @@ public class Base64
 			super.close();
 			buffer = null;
 			out = null;
-		}
-		
-		/**
-		 * Suspends encoding of the stream. May be helpful if you need to embed a piece of base640-encoded data in a stream.
-		 * @throws IOException
-		 * @since 1.5.1
-		 */
-		public void suspendEncoding() throws IOException
-		{
-			flushBase64();
-			suspendEncoding = true;
-		}
-		
-		/**
-		 * Resumes encoding of the stream. May be helpful if you need to embed a piece of base640-encoded data in a stream.
-		 * @since 1.5.1
-		 */
-		public void resumeEncoding()
-		{
-			suspendEncoding = false;
 		}
 	}
 }

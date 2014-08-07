@@ -13,6 +13,7 @@
 package lineage2.gameserver.ai;
 
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.geodata.GeoEngine;
@@ -114,7 +115,7 @@ public class FakePlayerAI extends CharacterAI
 	/**
 	 * Method thinkFollow.
 	 */
-	protected void thinkFollow()
+	private void thinkFollow()
 	{
 		FakePlayer actor = getActor();
 		Creature target = (Creature) _intention_arg0;
@@ -150,7 +151,7 @@ public class FakePlayerAI extends CharacterAI
 	 * Method thinkAttack.
 	 * @param checkRange boolean
 	 */
-	protected void thinkAttack(boolean checkRange)
+	private void thinkAttack(boolean checkRange)
 	{
 		FakePlayer actor = getActor();
 		Player player = actor.getPlayer();
@@ -229,7 +230,7 @@ public class FakePlayerAI extends CharacterAI
 	/**
 	 * @author Mobius
 	 */
-	protected class ThinkFollow extends RunnableImpl
+	private class ThinkFollow extends RunnableImpl
 	{
 		/**
 		 * Constructor for ThinkFollow.

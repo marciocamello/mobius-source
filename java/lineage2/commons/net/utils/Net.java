@@ -26,7 +26,7 @@ public class Net
 	 * @param net int
 	 * @param mask int
 	 */
-	public Net(int net, int mask)
+	private Net(int net, int mask)
 	{
 		address = net;
 		netmask = mask;
@@ -36,7 +36,7 @@ public class Net
 	 * Method address.
 	 * @return int
 	 */
-	public int address()
+	private int address()
 	{
 		return address;
 	}
@@ -45,7 +45,7 @@ public class Net
 	 * Method netmask.
 	 * @return int
 	 */
-	public int netmask()
+	private int netmask()
 	{
 		return netmask;
 	}
@@ -55,7 +55,7 @@ public class Net
 	 * @param address int
 	 * @return boolean
 	 */
-	public boolean isInRange(int address)
+	private boolean isInRange(int address)
 	{
 		return ((address & netmask) == this.address);
 	}
@@ -65,7 +65,7 @@ public class Net
 	 * @param address String
 	 * @return boolean
 	 */
-	public boolean isInRange(String address)
+	boolean isInRange(String address)
 	{
 		return isInRange(parseAddress(address));
 	}
@@ -121,7 +121,7 @@ public class Net
 	 * @return int
 	 * @throws IllegalArgumentException
 	 */
-	public static int parseAddress(String s) throws IllegalArgumentException
+	private static int parseAddress(String s) throws IllegalArgumentException
 	{
 		int ip = 0;
 		String[] octets = s.split("\\.");
@@ -145,7 +145,7 @@ public class Net
 	 * @return int
 	 * @throws IllegalArgumentException
 	 */
-	public static int parseNetmask(String s) throws IllegalArgumentException
+	private static int parseNetmask(String s) throws IllegalArgumentException
 	{
 		int mask = 0;
 		String[] octets = s.split("\\.");

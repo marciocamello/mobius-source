@@ -13,6 +13,7 @@
 package instances;
 
 import java.util.concurrent.ScheduledFuture;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -80,12 +81,8 @@ public final class SpezionNormal extends Reflection
 	
 	private class Spawn extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public Spawn()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -105,12 +102,8 @@ public final class SpezionNormal extends Reflection
 	
 	private class Fail extends RunnableImpl
 	{
-		/**
-		 *
-		 */
 		public Fail()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
@@ -204,12 +197,8 @@ public final class SpezionNormal extends Reflection
 	
 	private class DeathListener implements OnDeathListener
 	{
-		/**
-		 *
-		 */
 		public DeathListener()
 		{
-			// TODO Auto-generated constructor stub
 		}
 		
 		@Override

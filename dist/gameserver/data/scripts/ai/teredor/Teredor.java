@@ -13,6 +13,7 @@
 package ai.teredor;
 
 import java.util.List;
+
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
@@ -130,8 +131,12 @@ public final class Teredor extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	public final class CurrentHpListener implements OnCurrentHpDamageListener
+	private final class CurrentHpListener implements OnCurrentHpDamageListener
 	{
+		public CurrentHpListener()
+		{
+		}
+		
 		/**
 		 * Method onCurrentHpDamage.
 		 * @param actor Creature
@@ -168,15 +173,15 @@ public final class Teredor extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	public final class TeredorPassiveTask extends RunnableImpl
+	private final class TeredorPassiveTask extends RunnableImpl
 	{
-		NpcInstance _npc;
+		private final NpcInstance _npc;
 		
 		/**
 		 * Constructor for TeredorPassiveTask.
 		 * @param npc NpcInstance
 		 */
-		public TeredorPassiveTask(NpcInstance npc)
+		TeredorPassiveTask(NpcInstance npc)
 		{
 			_npc = npc;
 		}
@@ -201,7 +206,7 @@ public final class Teredor extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	public final class TeredorActiveTask extends RunnableImpl
+	private final class TeredorActiveTask extends RunnableImpl
 	{
 		NpcInstance _npc;
 		
@@ -209,7 +214,7 @@ public final class Teredor extends Fighter
 		 * Constructor for TeredorActiveTask.
 		 * @param npc NpcInstance
 		 */
-		public TeredorActiveTask(NpcInstance npc)
+		TeredorActiveTask(NpcInstance npc)
 		{
 			_npc = npc;
 		}
@@ -237,15 +242,15 @@ public final class Teredor extends Fighter
 	/**
 	 * @author Mobius
 	 */
-	public final class EggSpawnTask extends RunnableImpl
+	private final class EggSpawnTask extends RunnableImpl
 	{
-		Reflection _r;
+		private final Reflection _r;
 		
 		/**
 		 * Constructor for EggSpawnTask.
 		 * @param r Reflection
 		 */
-		public EggSpawnTask(Reflection r)
+		EggSpawnTask(Reflection r)
 		{
 			_r = r;
 		}

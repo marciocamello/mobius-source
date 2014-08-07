@@ -14,6 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
 
@@ -46,14 +47,14 @@ public class RelationChanged extends L2GameServerPacket
 	// alliance
 	public static final int RELATION_ISINTERRITORYWARS = 0x80000; // Territory
 	// Wars
-	protected final List<RelationChangedData> _data;
+	private final List<RelationChangedData> _data;
 	
-	protected RelationChanged(int s)
+	private RelationChanged(int s)
 	{
 		_data = new ArrayList<>(s);
 	}
 	
-	protected void add(RelationChangedData data)
+	private void add(RelationChangedData data)
 	{
 		_data.add(data);
 	}
@@ -74,13 +75,15 @@ public class RelationChanged extends L2GameServerPacket
 		}
 	}
 	
-	static class RelationChangedData
+	private static class RelationChangedData
 	{
-		public final int charObjId;
-		public final boolean isAutoAttackable;
-		public final int relation, karma, pvpFlag;
+		final int charObjId;
+		final boolean isAutoAttackable;
+		final int relation;
+		final int karma;
+		final int pvpFlag;
 		
-		public RelationChangedData(Playable cha, boolean _isAutoAttackable, int _relation)
+		RelationChangedData(Playable cha, boolean _isAutoAttackable, int _relation)
 		{
 			isAutoAttackable = _isAutoAttackable;
 			relation = _relation;
@@ -90,15 +93,8 @@ public class RelationChanged extends L2GameServerPacket
 		}
 	}
 	
-	/**
-	 * @param sendTo
-	 * @param targetPlayable игрок, отношение к которому изменилось
-	 * @param activeChar игрок, которому будет отослан пакет с результатом
-	 * @return
-	 */
 	public static L2GameServerPacket update(Player sendTo, Playable targetPlayable, Player activeChar)
 	{
-		// FIXME [G1ta0] идиотизм
 		if ((sendTo == null) || (targetPlayable == null) || (activeChar == null))
 		{
 			return null;

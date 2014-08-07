@@ -21,7 +21,7 @@ import lineage2.loginserver.gameservercon.SendablePacket;
 public class ChangePasswordResponse extends SendablePacket
 {
 	private final String _account;
-	boolean _hasChanged;
+	private final boolean _hasChanged;
 	
 	/**
 	 * Constructor for ChangePasswordResponse.

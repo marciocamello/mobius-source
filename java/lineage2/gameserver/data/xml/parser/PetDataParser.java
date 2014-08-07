@@ -14,17 +14,19 @@ package lineage2.gameserver.data.xml.parser;
 
 import java.io.File;
 import java.util.Iterator;
+
 import lineage2.commons.data.xml.AbstractDirParser;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.PetDataHolder;
 import lineage2.gameserver.templates.StatsSet;
+
 import org.dom4j.Element;
 
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class PetDataParser extends AbstractDirParser<PetDataHolder>
+class PetDataParser extends AbstractDirParser<PetDataHolder>
 {
 	private static final PetDataParser _instance = new PetDataParser();
 	

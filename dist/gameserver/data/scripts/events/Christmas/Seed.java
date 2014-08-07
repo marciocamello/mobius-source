@@ -36,15 +36,15 @@ public final class Seed extends ScriptItemHandler
 	/**
 	 * @author Mobius
 	 */
-	static public final class DeSpawnScheduleTimerTask extends RunnableImpl
+	static private final class DeSpawnScheduleTimerTask extends RunnableImpl
 	{
-		SimpleSpawner spawnedTree = null;
+		private SimpleSpawner spawnedTree = null;
 		
 		/**
 		 * Constructor for DeSpawnScheduleTimerTask.
 		 * @param spawn SimpleSpawner
 		 */
-		public DeSpawnScheduleTimerTask(SimpleSpawner spawn)
+		DeSpawnScheduleTimerTask(SimpleSpawner spawn)
 		{
 			spawnedTree = spawn;
 		}

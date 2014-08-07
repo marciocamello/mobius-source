@@ -18,6 +18,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
+
 import org.apache.commons.lang3.ArrayUtils;
 
 public class _466_PlacingMySmallPower extends Quest implements ScriptFile
