@@ -209,6 +209,7 @@ class MuseumManager
 	{
 		private final int objectID, category;
 		private final boolean isTotal;
+		@SuppressWarnings("unused")
 		private final long acquiredItem;
 		
 		/**

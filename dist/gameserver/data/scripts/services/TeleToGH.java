@@ -487,6 +487,10 @@ public final class TeleToGH extends Functions implements ScriptFile
 	 */
 	private final class ZoneListener implements OnZoneEnterLeaveListener
 	{
+		public ZoneListener()
+		{
+		}
+		
 		/**
 		 * Method onZoneEnter.
 		 * @param zone Zone

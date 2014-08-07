@@ -471,6 +471,7 @@ public final class TaskManager
 	 * @param lastActivation long
 	 * @return boolean
 	 */
+	@SuppressWarnings("unused")
 	private static boolean addTask(String task, TaskTypes type, String param1, String param2, String param3, long lastActivation)
 	{
 		Connection con = null;

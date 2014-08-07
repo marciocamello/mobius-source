@@ -31,7 +31,7 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class NewYearTimer implements ScriptFile
 {
-	private static NewYearTimer instance;
+	static NewYearTimer instance;
 	
 	/**
 	 * Method getInstance.

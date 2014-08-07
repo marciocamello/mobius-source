@@ -101,6 +101,7 @@ public final class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		{
 		}
 		
+		@SuppressWarnings("unused")
 		int PlayerId = 0;
 		String ChName = "";
 		int ChGameTime = 0;

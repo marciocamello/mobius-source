@@ -278,14 +278,15 @@ public abstract class DocumentParser
 		/**
 		 * Constructor for XMLErrorHandler.
 		 */
-		private XMLErrorHandler()
+		XMLErrorHandler()
 		{
 		}
 		
 		/**
 		 * Method warning.
 		 * @param e SAXParseException
-		 * @throws SAXParseException * @see org.xml.sax.ErrorHandler#warning(SAXParseException)
+		 * @throws SAXParseException
+		 * @see org.xml.sax.ErrorHandler#warning(SAXParseException)
 		 */
 		@Override
 		public void warning(SAXParseException e) throws SAXParseException
@@ -296,7 +297,8 @@ public abstract class DocumentParser
 		/**
 		 * Method error.
 		 * @param e SAXParseException
-		 * @throws SAXParseException * @see org.xml.sax.ErrorHandler#error(SAXParseException)
+		 * @throws SAXParseException
+		 * @see org.xml.sax.ErrorHandler#error(SAXParseException)
 		 */
 		@Override
 		public void error(SAXParseException e) throws SAXParseException

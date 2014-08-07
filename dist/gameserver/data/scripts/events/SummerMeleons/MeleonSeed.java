@@ -43,7 +43,7 @@ public final class MeleonSeed extends ScriptItemHandler
 		 * Constructor for DeSpawnScheduleTimerTask.
 		 * @param spawn SimpleSpawner
 		 */
-		private DeSpawnScheduleTimerTask(SimpleSpawner spawn)
+		DeSpawnScheduleTimerTask(SimpleSpawner spawn)
 		{
 			spawnedPlant = spawn;
 		}

@@ -24,6 +24,7 @@ public class RequestCommissionDelete extends L2GameClientPacket
 {
 	private long _bidId;
 	private int itemObjId;
+	@SuppressWarnings("unused")
 	private int exItemType;
 	
 	/**

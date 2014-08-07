@@ -1082,6 +1082,7 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 	 * @param first boolean
 	 * @return boolean
 	 */
+	@SuppressWarnings("unused")
 	public static boolean checkPlayer(Player player, boolean first)
 	{
 		if (first && (!_isRegistrationActive || player.isDead()))
@@ -2870,6 +2871,7 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 	 * @param item ItemInstance
 	 * @return boolean
 	 */
+	@SuppressWarnings("unused")
 	public static boolean canUseItem(Player player, ItemInstance item)
 	{
 		if (ALLOW_RESTRICT_ITEMS && (playerInCommand(player.getStoredId()) > 0))
