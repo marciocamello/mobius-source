@@ -54,8 +54,8 @@ import lineage2.gameserver.utils.Strings;
  */
 public class Functions
 {
-	private final HardReference<Player> self = HardReferences.emptyRef();
-	private final HardReference<NpcInstance> npc = HardReferences.emptyRef();
+	public HardReference<Player> self = HardReferences.emptyRef();
+	public HardReference<NpcInstance> npc = HardReferences.emptyRef();
 	
 	/**
 	 * Method executeTask.
@@ -67,7 +67,7 @@ public class Functions
 	 * @param delay long
 	 * @return ScheduledFuture<?>
 	 */
-	private static ScheduledFuture<?> executeTask(final Player caller, final String className, final String methodName, final Object[] args, final Map<String, Object> variables, long delay)
+	public static ScheduledFuture<?> executeTask(final Player caller, final String className, final String methodName, final Object[] args, final Map<String, Object> variables, long delay)
 	{
 		return ThreadPoolManager.getInstance().schedule(new RunnableImpl()
 		{
@@ -127,7 +127,7 @@ public class Functions
 	 * @param args Object[]
 	 * @return Object
 	 */
-	private static Object callScripts(String className, String methodName, Object[] args)
+	public static Object callScripts(String className, String methodName, Object[] args)
 	{
 		return callScripts(className, methodName, args, null);
 	}
@@ -140,7 +140,7 @@ public class Functions
 	 * @param variables Map<String,Object>
 	 * @return Object
 	 */
-	private static Object callScripts(String className, String methodName, Object[] args, Map<String, Object> variables)
+	public static Object callScripts(String className, String methodName, Object[] args, Map<String, Object> variables)
 	{
 		return callScripts(null, className, methodName, args, variables);
 	}
@@ -154,7 +154,7 @@ public class Functions
 	 * @param variables Map<String,Object>
 	 * @return Object
 	 */
-	static Object callScripts(Player player, String className, String methodName, Object[] args, Map<String, Object> variables)
+	public static Object callScripts(Player player, String className, String methodName, Object[] args, Map<String, Object> variables)
 	{
 		return Scripts.getInstance().callScripts(player, className, methodName, args, variables);
 	}
@@ -241,7 +241,7 @@ public class Functions
 	 * @param text String
 	 * @param range int
 	 */
-	private static void npcSayInRange(NpcInstance npc, String text, int range)
+	public static void npcSayInRange(NpcInstance npc, String text, int range)
 	{
 		npcSayInRange(npc, range, NpcString.NONE, text);
 	}
@@ -580,7 +580,7 @@ public class Functions
 	 * @return NpcInstance
 	 */
 	@Deprecated
-	private static NpcInstance spawn(Location loc, int npcId, Reflection reflection)
+	public static NpcInstance spawn(Location loc, int npcId, Reflection reflection)
 	{
 		return NpcUtils.spawnSingle(npcId, loc, reflection, 0);
 	}

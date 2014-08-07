@@ -53,7 +53,7 @@ public class DynamicQuestController
 	/**
 	 * @param questId
 	 */
-	void startQuest(int questId)
+	public void startQuest(int questId)
 	{
 		startQuest(questId, 1);
 	}
@@ -62,7 +62,7 @@ public class DynamicQuestController
 	 * @param questId
 	 * @param step
 	 */
-	private void startQuest(int questId, int step)
+	public void startQuest(int questId, int step)
 	{
 		DynamicQuest quest = dynamicQuestsMap.get(questId);
 		quest.setCurrentStep(step);
@@ -79,7 +79,7 @@ public class DynamicQuestController
 	 * @param questId
 	 * @param success
 	 */
-	void endQuest(int questId, boolean success)
+	public void endQuest(int questId, boolean success)
 	{
 		DynamicQuest quest = dynamicQuestsMap.get(questId);
 		quest.stop(success, new QuestFinalizer(questId));
@@ -137,7 +137,7 @@ public class DynamicQuestController
 		}
 	}
 	
-	void taskCompleted(int questId, int taskId)
+	public void taskCompleted(int questId, int taskId)
 	{
 		if (dynamicQuestsMap.containsKey(questId))
 		{

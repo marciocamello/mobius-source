@@ -40,11 +40,6 @@ import lineage2.gameserver.utils.ItemFunctions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * @author Дмитрий
- * @modified KilRoy
- * @date 27.10.12 23:48
- */
 public abstract class DynamicQuest
 {
 	protected static final int TASK_INCREASE_MODE_NO_LIMIT = 0;
@@ -638,8 +633,12 @@ public abstract class DynamicQuest
 	
 	private class OnPlayerEnterListenerImpl implements OnPlayerEnterListener
 	{
+		/**
+		 *
+		 */
 		public OnPlayerEnterListenerImpl()
 		{
+			// TODO Auto-generated constructor stub
 		}
 		
 		@Override
