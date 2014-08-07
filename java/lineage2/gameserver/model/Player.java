@@ -2971,7 +2971,7 @@ public final class Player extends Playable implements PlayerGroup
 		long normalSp = (long) (noRateSp * ((Config.RATE_SP * getRateSp()) + getVitalityBonus()));
 		long expWithoutBonus = (long) (noRateExp * Config.RATE_XP * getRateExp());
 		long spWithoutBonus = (long) (noRateSp * Config.RATE_SP * getRateSp());
-		addExpAndSp(normalExp, normalSp, normalExp - expWithoutBonus, normalSp - spWithoutBonus, false, true);
+		addExpAndSp(normalExp, normalSp, normalExp - expWithoutBonus, normalSp - spWithoutBonus, false, true, false);
 	}
 	
 	/**
@@ -2982,7 +2982,19 @@ public final class Player extends Playable implements PlayerGroup
 	@Override
 	public void addExpAndSp(long exp, long sp)
 	{
-		addExpAndSp(exp, sp, 0, 0, false, false);
+		addExpAndSp(exp, sp, 0, 0, false, false, false);
+	}
+	
+	/**
+	 * Method addExpAndSp.
+	 * @param exp long
+	 * @param sp long
+	 * @param delevel boolean
+	 */
+	@Override
+	public void addExpAndSp(long exp, long sp, boolean delevel)
+	{
+		addExpAndSp(exp, sp, 0, 0, false, false, delevel);
 	}
 	
 	/**
@@ -2993,8 +3005,9 @@ public final class Player extends Playable implements PlayerGroup
 	 * @param bonusAddSp long
 	 * @param applyRate boolean
 	 * @param applyToPet boolean
+	 * @param delevel boolean
 	 */
-	public void addExpAndSp(long addToExp, long addToSp, long bonusAddExp, long bonusAddSp, boolean applyRate, boolean applyToPet)
+	public void addExpAndSp(long addToExp, long addToSp, long bonusAddExp, long bonusAddSp, boolean applyRate, boolean applyToPet, boolean delevel)
 	{
 		if (getActiveSubClass() == null)
 		{
@@ -3052,7 +3065,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		
 		int oldLvl = getActiveSubClass().getLevel();
-		getActiveSubClass().addExp(addToExp);
+		getActiveSubClass().addExp(addToExp, delevel);
 		getActiveSubClass().addSp(addToSp);
 		
 		if ((addToExp > 0L) && (addToSp > 0L) && ((bonusAddExp > 0L) || (bonusAddSp > 0L)))
@@ -10410,7 +10423,7 @@ public final class Player extends Playable implements PlayerGroup
 			
 			if (exp > 0)
 			{
-				newActiveSub.setExp(exp);
+				newActiveSub.setExp(exp, true);
 			}
 			
 			removeAllSkills();

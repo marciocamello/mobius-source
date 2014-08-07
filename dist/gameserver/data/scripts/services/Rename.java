@@ -370,7 +370,7 @@ public final class Rename extends Functions
 		player.getActiveSubClass().setType(SubClassType.SUBCLASS);
 		player.getActiveSubClass().setCertification(newBase.getCertification());
 		newBase.setCertification(0);
-		player.getActiveSubClass().setExp(player.getExp());
+		player.getActiveSubClass().setExp(player.getExp(), false);
 		player.checkSkills();
 		newBase.setType(SubClassType.BASE_CLASS);
 		player.setHairColor(0);

@@ -90,11 +90,11 @@ public final class NewbieGuideInstance extends NpcInstance
 					
 					if (player.getLevel() == 1)
 					{
-						player.addExpAndSp(Experience.LEVEL[2] - player.getExp(), 50, 0, 0, true, false);
+						player.addExpAndSp(Experience.LEVEL[2] - player.getExp(), 50, 0, 0, true, false, false);
 					}
 					else
 					{
-						player.addExpAndSp(0, 50, 0, 0, true, false);
+						player.addExpAndSp(0, 50, 0, 0, true, false, false);
 					}
 				}
 				
@@ -106,7 +106,7 @@ public final class NewbieGuideInstance extends NpcInstance
 						{
 							String oldVar = player.getVar("ng1");
 							player.setVar("ng1", oldVar == null ? "1" : String.valueOf(Integer.parseInt(oldVar) + 1), -1);
-							player.addExpAndSp(Experience.LEVEL[6] - player.getExp(), 127, 0, 0, true, false);
+							player.addExpAndSp(Experience.LEVEL[6] - player.getExp(), 127, 0, 0, true, false, false);
 							player.addAdena(11567);
 						}
 						
@@ -127,7 +127,7 @@ public final class NewbieGuideInstance extends NpcInstance
 							String oldVar = player.getVar("ng2");
 							player.setVar("ng2", oldVar == null ? "1" : String.valueOf(Integer.parseInt(oldVar) + 1), -1);
 							long addexp = Experience.LEVEL[10] - player.getExp();
-							player.addExpAndSp(addexp, addexp / 24, 0, 0, true, false);
+							player.addExpAndSp(addexp, addexp / 24, 0, 0, true, false, false);
 						}
 						
 						player.sendPacket(new NpcHtmlMessage(player, this, "newbiehelper/q3-1.htm", val).replace("%tonpc%", getQuestNpc(3, player)));
@@ -147,7 +147,7 @@ public final class NewbieGuideInstance extends NpcInstance
 							String oldVar = player.getVar("ng3");
 							player.setVar("ng3", oldVar == null ? "1" : String.valueOf(Integer.parseInt(oldVar) + 1), -1);
 							long addexp = Experience.LEVEL[15] - player.getExp();
-							player.addExpAndSp(addexp, addexp / 22, 0, 0, true, false);
+							player.addExpAndSp(addexp, addexp / 22, 0, 0, true, false, false);
 							player.addAdena(38180);
 						}
 						
@@ -168,7 +168,7 @@ public final class NewbieGuideInstance extends NpcInstance
 							String oldVar = player.getVar("ng4");
 							player.setVar("ng4", oldVar == null ? "1" : String.valueOf(Integer.parseInt(oldVar) + 1), -1);
 							long addexp = Experience.LEVEL[18] - player.getExp();
-							player.addExpAndSp(addexp, addexp / 5, 0, 0, true, false);
+							player.addExpAndSp(addexp, addexp / 5, 0, 0, true, false, false);
 							player.addAdena(10018);
 						}
 						

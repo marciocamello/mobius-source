@@ -12,6 +12,7 @@
  */
 package lineage2.gameserver.model;
 
+import lineage2.gameserver.Config;
 import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.model.base.ClassLevel;
 import lineage2.gameserver.model.base.Experience;
@@ -41,6 +42,7 @@ public class SubClass
 	private long _exp = 0;
 	private int _sp = 0;
 	private int _maxLvl = Experience.getMaxLevel();
+	private long _minExp = Experience.LEVEL[Config.STARTING_LEVEL];
 	private long _maxExp = Experience.LEVEL[_maxLvl + 1] - 1;
 	private int _certification;
 	private int _dualCertification;
@@ -98,10 +100,11 @@ public class SubClass
 	/**
 	 * Method addExp.
 	 * @param val long
+	 * @param delevel boolean
 	 */
-	void addExp(long val)
+	public void addExp(long val, boolean delevel)
 	{
-		setExp(_exp + val);
+		setExp(_exp + val, delevel);
 	}
 	
 	/**
@@ -158,10 +161,18 @@ public class SubClass
 	/**
 	 * Method setExp.
 	 * @param val long
+	 * @param delevel
 	 */
-	public void setExp(long val)
+	public void setExp(long val, boolean delevel)
 	{
-		_exp = Math.min(Math.max(Experience.LEVEL[_level], val), _maxExp);
+		if (delevel)
+		{
+			_exp = Math.min(Math.max(_minExp, val), _maxExp);
+		}
+		else
+		{
+			_exp = Math.min(Math.max(Experience.LEVEL[_level], val), _maxExp);
+		}
 		_level = Experience.getLevel(_exp);
 	}
 	
@@ -494,8 +505,9 @@ public class SubClass
 		if (_type == SubClassType.SUBCLASS)
 		{
 			_maxLvl = Experience.getMaxSubLevel();
+			_minExp = Experience.LEVEL[Config.SUB_START_LEVEL];
 			_maxExp = Experience.LEVEL[_maxLvl + 1] - 1;
-			_level = Math.min(Math.max(40, _level), _maxLvl);
+			_level = Math.min(Math.max(Config.SUB_START_LEVEL, _level), _maxLvl);
 		}
 		else
 		{
@@ -508,6 +520,7 @@ public class SubClass
 				_maxLvl = Experience.getMaxLevel();
 			}
 			
+			_minExp = Experience.LEVEL[Config.STARTING_LEVEL];
 			_maxExp = Experience.LEVEL[_maxLvl + 1] - 1;
 			_level = Math.min(Math.max(1, _level), _maxLvl);
 		}
