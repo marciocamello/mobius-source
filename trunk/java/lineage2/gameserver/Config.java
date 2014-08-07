@@ -691,6 +691,7 @@ public class Config
 	public static boolean LOAD_GM_SPAWN_CUSTOM;
 	public static int STARTING_ADENA;
 	public static int STARTING_LEVEL;
+	public static int SUB_START_LEVEL;
 	public static int BOW_REUSE;
 	public static int CROSSBOW_REUSE;
 	public static int LIM_PATK;
@@ -1278,6 +1279,7 @@ public class Config
 		REGEN_SIT_WAIT = otherSettings.getProperty("RegenSitWait", false);
 		STARTING_ADENA = otherSettings.getProperty("StartingAdena", 0);
 		STARTING_LEVEL = otherSettings.getProperty("StartingLevel", 1);
+		SUB_START_LEVEL = otherSettings.getProperty("SubClassStartLevel", 40);
 		UNSTUCK_SKILL = otherSettings.getProperty("UnstuckSkill", true);
 		RESPAWN_RESTORE_CP = otherSettings.getProperty("RespawnRestoreCP", 0.) / 100;
 		RESPAWN_RESTORE_HP = otherSettings.getProperty("RespawnRestoreHP", 65.) / 100;

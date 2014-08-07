@@ -61,7 +61,7 @@ public class AdminLevel implements IAdminCommandHandler
 		if (target.isPlayer())
 		{
 			Long exp_add = Experience.LEVEL[level] - ((Player) target).getExp();
-			((Player) target).addExpAndSp(exp_add, 0);
+			((Player) target).addExpAndSp(exp_add, 0, true);
 			return;
 		}
 		
@@ -78,7 +78,7 @@ public class AdminLevel implements IAdminCommandHandler
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
-	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 * @return boolean
 	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
@@ -150,7 +150,8 @@ public class AdminLevel implements IAdminCommandHandler
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return Enum[]
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
 	 */
 	@Override
 	public Enum<?>[] getAdminCommandEnum()

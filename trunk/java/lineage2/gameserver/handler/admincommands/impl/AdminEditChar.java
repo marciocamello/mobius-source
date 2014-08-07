@@ -88,7 +88,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
-	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 * @return boolean
 	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
@@ -1204,15 +1204,17 @@ public class AdminEditChar implements IAdminCommandHandler
 			return;
 		}
 		
-		Player player = (Player) target;
-		String[] strvals = ExpSp.split("&");
-		long[] vals = new long[strvals.length];
+		final Player player = (Player) target;
+		final String[] strvals = ExpSp.split("&");
+		final long[] vals = new long[strvals.length];
+		
 		for (int i = 0; i < strvals.length; i++)
 		{
 			strvals[i] = strvals[i].trim();
 			vals[i] = strvals[i].isEmpty() ? 0 : Long.parseLong(strvals[i]);
 		}
-		player.addExpAndSp(vals[0], vals[1], 0, 0, false, false);
+		
+		player.addExpAndSp(vals[0], vals[1]);
 		player.sendMessage("Admin is adding you " + vals[0] + " exp and " + vals[1] + " SP.");
 		activeChar.sendMessage("Added " + vals[0] + " exp and " + vals[1] + " SP to " + player.getName() + ".");
 	}

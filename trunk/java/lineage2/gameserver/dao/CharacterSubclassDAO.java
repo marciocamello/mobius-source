@@ -134,7 +134,7 @@ public class CharacterSubclassDAO
 				SubClass subClass = new SubClass();
 				subClass.setClassId(rset.getInt("class_id"));
 				subClass.setDefaultClassId(rset.getInt("default_class_id"));
-				subClass.setExp(rset.getLong("exp"));
+				subClass.setExp(rset.getLong("exp"), false);
 				subClass.setSp(rset.getInt("sp"));
 				subClass.setHp(rset.getDouble("curHp"));
 				subClass.setMp(rset.getDouble("curMp"));

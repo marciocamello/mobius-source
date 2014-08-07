@@ -6782,6 +6782,16 @@ public abstract class Creature extends GameObject
 	}
 	
 	/**
+	 * Method addExpAndSp.
+	 * @param exp long
+	 * @param sp long
+	 * @param delevel boolean
+	 */
+	public void addExpAndSp(long exp, long sp, boolean delevel)
+	{
+	}
+	
+	/**
 	 * Method broadcastCharInfo.
 	 */
 	public void broadcastCharInfo()
