@@ -26,7 +26,6 @@ import lineage2.gameserver.database.mysql;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.GameObjectsStorage;
-import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.actor.instances.player.SubClassInfo;
 import lineage2.gameserver.model.base.ClassId;
@@ -42,8 +41,6 @@ import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.MentorUtil;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.Util;
-
-import org.apache.commons.lang3.math.NumberUtils;
 
 /**
  * @author Mobius
@@ -479,10 +476,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			try
 			{
 				final String val = fullString.substring(16).trim();
-				String[] vals = val.split(" ");
-				long exp = NumberUtils.toLong(vals[0], 0L);
-				int sp = vals.length > 1 ? NumberUtils.toInt(vals[1], 0) : 0;
-				adminAddExpSp(activeChar, exp, sp);
+				adminAddExpSp(activeChar, val);
 			}
 			catch (Exception e)
 			{
@@ -1184,12 +1178,11 @@ public class AdminEditChar implements IAdminCommandHandler
 	}
 	
 	/**
-	 * Method adminAddExpSp.
+	 * Admin add exp sp.
 	 * @param activeChar Player
-	 * @param exp long
-	 * @param sp int
+	 * @param ExpSp String
 	 */
-	private void adminAddExpSp(Player activeChar, long exp, int sp)
+	private void adminAddExpSp(Player activeChar, final String ExpSp)
 	{
 		if (!activeChar.getPlayerAccess().CanEditCharAll)
 		{
@@ -1211,9 +1204,17 @@ public class AdminEditChar implements IAdminCommandHandler
 			return;
 		}
 		
-		Playable playable = (Playable) target;
-		playable.addExpAndSp(exp, sp);
-		activeChar.sendMessage("Added " + exp + " experience and " + sp + " SP to " + playable.getName() + ".");
+		Player player = (Player) target;
+		String[] strvals = ExpSp.split("&");
+		long[] vals = new long[strvals.length];
+		for (int i = 0; i < strvals.length; i++)
+		{
+			strvals[i] = strvals[i].trim();
+			vals[i] = strvals[i].isEmpty() ? 0 : Long.parseLong(strvals[i]);
+		}
+		player.addExpAndSp(vals[0], vals[1], 0, 0, false, false);
+		player.sendMessage("Admin is adding you " + vals[0] + " exp and " + vals[1] + " SP.");
+		activeChar.sendMessage("Added " + vals[0] + " exp and " + vals[1] + " SP to " + player.getName() + ".");
 	}
 	
 	/**
