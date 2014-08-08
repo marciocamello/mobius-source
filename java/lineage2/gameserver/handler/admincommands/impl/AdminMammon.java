@@ -74,6 +74,7 @@ public class AdminMammon implements IAdminCommandHandler
 			}
 			catch (Exception NumberFormatException)
 			{
+				// empty catch clause
 			}
 			
 			findAdminNPCs(activeChar, npcIds, teleportIndex, -1);

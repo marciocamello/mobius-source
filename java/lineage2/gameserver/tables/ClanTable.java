@@ -637,6 +637,7 @@ public class ClanTable
 			}
 			catch (Throwable e)
 			{
+				// empty catch clause
 			}
 		}
 	}

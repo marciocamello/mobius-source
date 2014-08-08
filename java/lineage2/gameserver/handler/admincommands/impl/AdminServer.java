@@ -78,6 +78,7 @@ public class AdminServer implements IAdminCommandHandler
 				}
 				catch (StringIndexOutOfBoundsException e)
 				{
+					// empty catch clause
 				}
 				
 				break;
@@ -171,6 +172,7 @@ public class AdminServer implements IAdminCommandHandler
 						}
 						catch (Exception e)
 						{
+							// empty catch clause
 						}
 					}
 				}
@@ -202,6 +204,7 @@ public class AdminServer implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
+					// empty catch clause
 				}
 				
 				break;

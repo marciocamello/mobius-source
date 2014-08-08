@@ -156,6 +156,7 @@ public class Say2C extends L2GameClientPacket
 				}
 				catch (ExpressionParseException ignored)
 				{
+					// empty catch clause
 				}
 				
 				if (expr != null)
@@ -172,6 +173,7 @@ public class Say2C extends L2GameClientPacket
 					}
 					catch (Exception ignored)
 					{
+						// empty catch clause
 					}
 				}
 			}

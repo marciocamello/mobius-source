@@ -374,7 +374,7 @@ public final class AuctioneerInstance extends NpcInstance
 				}
 				catch (ParseException e)
 				{
-					//
+					// empty catch clause
 				}
 			}
 			
@@ -623,6 +623,7 @@ public final class AuctioneerInstance extends NpcInstance
 				}
 				catch (Exception e)
 				{
+					// empty catch clause
 				}
 			}
 			

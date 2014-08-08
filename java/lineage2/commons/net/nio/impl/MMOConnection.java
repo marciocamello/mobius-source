@@ -204,6 +204,7 @@ public class MMOConnection<T extends MMOClient>
 		}
 		catch (CancelledKeyException e)
 		{
+			// empty catch clause
 		}
 	}
 	
@@ -221,6 +222,7 @@ public class MMOConnection<T extends MMOClient>
 		}
 		catch (CancelledKeyException e)
 		{
+			// empty catch clause
 		}
 	}
 	
@@ -238,6 +240,7 @@ public class MMOConnection<T extends MMOClient>
 		}
 		catch (CancelledKeyException e)
 		{
+			// empty catch clause
 		}
 	}
 	

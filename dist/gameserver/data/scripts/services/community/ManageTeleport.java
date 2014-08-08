@@ -186,6 +186,7 @@ public final class ManageTeleport extends Functions implements ScriptFile, IComm
 				}
 				catch (Exception e)
 				{
+					// empty catch clause
 				}
 				finally
 				{
@@ -213,6 +214,7 @@ public final class ManageTeleport extends Functions implements ScriptFile, IComm
 			}
 			catch (Exception e)
 			{
+				// empty catch clause
 			}
 			finally
 			{
@@ -264,6 +266,7 @@ public final class ManageTeleport extends Functions implements ScriptFile, IComm
 		}
 		catch (Exception e)
 		{
+			// empty catch clause
 		}
 		finally
 		{
@@ -299,6 +302,7 @@ public final class ManageTeleport extends Functions implements ScriptFile, IComm
 		}
 		catch (Exception e)
 		{
+			// empty catch clause
 		}
 		finally
 		{
@@ -348,6 +352,7 @@ public final class ManageTeleport extends Functions implements ScriptFile, IComm
 		}
 		catch (Exception e)
 		{
+			// empty catch clause
 		}
 		finally
 		{

@@ -1956,6 +1956,7 @@ public class GeoEngine
 				}
 				catch (Exception e)
 				{
+					// empty catch clause
 				}
 			}
 		}

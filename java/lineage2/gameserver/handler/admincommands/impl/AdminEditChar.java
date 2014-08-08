@@ -216,6 +216,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
+				// empty catch clause
 			}
 		}
 		else if (fullString.startsWith("admin_show_characters"))
@@ -228,6 +229,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
+				// empty catch clause
 			}
 		}
 		else if (fullString.startsWith("admin_find_character"))

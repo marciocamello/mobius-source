@@ -62,6 +62,7 @@ public class AdminGmChat implements IAdminCommandHandler
 				}
 				catch (StringIndexOutOfBoundsException e)
 				{
+					// empty catch clause
 				}
 				
 				break;

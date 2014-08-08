@@ -414,6 +414,7 @@ public class GameServer
 					}
 					catch (InterruptedException e2)
 					{
+						// empty catch clause
 					}
 				}
 			}

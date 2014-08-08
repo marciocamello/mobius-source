@@ -88,9 +88,11 @@ public final class CaravanTraderInstance extends NpcInstance
 			}
 			catch (IndexOutOfBoundsException ioobe)
 			{
+				// empty catch clause
 			}
 			catch (NumberFormatException nfe)
 			{
+				// empty catch clause
 			}
 			
 			showDialog(player, getHtmlPath(getNpcId(), val, player));

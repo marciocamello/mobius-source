@@ -292,6 +292,7 @@ public class LoginServerCommunication extends Thread
 			}
 			catch (InterruptedException e)
 			{
+				// empty catch clause
 			}
 		}
 	}
@@ -491,6 +492,7 @@ public class LoginServerCommunication extends Thread
 		}
 		catch (IOException e)
 		{
+			// empty catch clause
 		}
 		
 		writeLock.lock();

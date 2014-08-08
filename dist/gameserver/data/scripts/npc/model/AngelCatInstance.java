@@ -142,6 +142,7 @@ public final class AngelCatInstance extends NpcInstance
 		}
 		catch (Exception e)
 		{
+			// empty catch clause
 		}
 		finally
 		{

@@ -130,9 +130,11 @@ public class SMSWayToPay
 		}
 		catch (MalformedURLException e)
 		{
+			// empty catch clause
 		}
 		catch (Exception e)
 		{
+			// empty catch clause
 		}
 		
 		return str;

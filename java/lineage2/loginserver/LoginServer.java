@@ -102,6 +102,7 @@ public class LoginServer
 				}
 				catch (Exception ignored)
 				{
+					// empty catch clause
 				}
 			}
 		}

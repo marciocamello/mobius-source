@@ -2388,6 +2388,7 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 					}
 					catch (Exception e)
 					{
+						// empty catch clause
 					}
 				}
 			}
@@ -2444,6 +2445,7 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 				}
 				catch (Exception e)
 				{
+					// empty catch clause
 				}
 			}
 			

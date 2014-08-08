@@ -102,6 +102,7 @@ public class CommunityBufferDAO
 		}
 		catch (Exception e)
 		{
+			// empty catch clause
 		}
 		finally
 		{
@@ -137,6 +138,7 @@ public class CommunityBufferDAO
 		}
 		catch (Exception e)
 		{
+			// empty catch clause
 		}
 		finally
 		{

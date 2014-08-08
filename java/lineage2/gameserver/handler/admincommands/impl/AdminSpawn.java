@@ -97,6 +97,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				}
 				catch (StringIndexOutOfBoundsException e)
 				{
+					// empty catch clause
 				}
 				
 				break;
@@ -119,6 +120,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
+					// empty catch clause
 				}
 				
 				break;
@@ -148,6 +150,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
+					// empty catch clause
 				}
 				
 				break;
@@ -365,10 +368,12 @@ public class AdminSpawn implements IAdminCommandHandler
 					}
 					catch (Exception e)
 					{
+						// empty catch clause
 					}
 				}
 				catch (Exception e)
 				{
+					// empty catch clause
 				}
 				
 				break;

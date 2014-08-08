@@ -2388,6 +2388,7 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 					}
 					catch (Exception e)
 					{
+						// empty catch clause
 					}
 				}
 			}
@@ -2444,6 +2445,7 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 				}
 				catch (Exception e)
 				{
+					// empty catch clause
 				}
 			}
 			

@@ -146,6 +146,7 @@ public class FakePlayersTable
 			}
 			catch (Exception e1)
 			{
+				// empty catch clause
 			}
 		}
 	}
