@@ -425,7 +425,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	 * Method startTimer.
 	 * @param r Runnable
 	 */
-	void startTimer(Runnable r)
+	public void startTimer(Runnable r)
 	{
 		_timerTask = LazyPrecisionTaskManager.getInstance().scheduleAtFixedRate(r, 0, 60000L);
 	}
@@ -433,7 +433,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	/**
 	 * Method stopTimer.
 	 */
-	void stopTimer()
+	public void stopTimer()
 	{
 		if (_timerTask != null)
 		{
@@ -687,7 +687,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	/**
 	 * @author Mobius
 	 */
-	private class FuncAttack extends Func
+	public class FuncAttack extends Func
 	{
 		private final Element element;
 		
@@ -697,7 +697,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		 * @param order int
 		 * @param owner Object
 		 */
-		FuncAttack(Element element, int order, Object owner)
+		public FuncAttack(Element element, int order, Object owner)
 		{
 			super(element.getAttack(), order, owner);
 			this.element = element;
@@ -717,7 +717,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	/**
 	 * @author Mobius
 	 */
-	private class FuncDefence extends Func
+	public class FuncDefence extends Func
 	{
 		private final Element element;
 		
@@ -727,7 +727,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		 * @param order int
 		 * @param owner Object
 		 */
-		FuncDefence(Element element, int order, Object owner)
+		public FuncDefence(Element element, int order, Object owner)
 		{
 			super(element.getDefence(), order, owner);
 			this.element = element;
