@@ -100,6 +100,7 @@ public class AdminRepairChar implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
+			// empty catch clause
 		}
 		finally
 		{

@@ -146,6 +146,7 @@ public class RequestExCancelSentPost extends L2GameClientPacket
 			}
 			catch (ArithmeticException ae)
 			{
+				// empty catch clause
 			}
 			finally
 			{

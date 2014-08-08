@@ -85,9 +85,11 @@ public final class BlacksmithInstance extends NpcInstance
 				}
 				catch (IndexOutOfBoundsException ioobe)
 				{
+					// empty catch clause
 				}
 				catch (NumberFormatException nfe)
 				{
+					// empty catch clause
 				}
 				
 				showMessageWindow(player, val);

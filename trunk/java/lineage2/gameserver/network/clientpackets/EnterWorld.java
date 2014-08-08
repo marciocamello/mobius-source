@@ -382,8 +382,9 @@ public class EnterWorld extends L2GameClientPacket
 					activeChar.doCast(SkillTable.getInstance().getInfo(7029, var_gmspeed), activeChar, true);
 				}
 			}
-			catch (Exception E)
+			catch (Exception e)
 			{
+				// empty catch clause
 			}
 		}
 		

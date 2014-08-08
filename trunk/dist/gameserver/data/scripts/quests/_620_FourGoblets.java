@@ -248,6 +248,7 @@ public class _620_FourGoblets extends Quest implements ScriptFile
 			}
 			catch (Exception e)
 			{
+				// empty catch clause
 			}
 			
 			if (ArrayUtils.contains(RCP_REWARDS, id))

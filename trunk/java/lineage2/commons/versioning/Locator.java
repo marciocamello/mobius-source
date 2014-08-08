@@ -104,6 +104,7 @@ final class Locator
 		}
 		catch (MalformedURLException emYouEarlEx)
 		{
+			// empty catch clause
 		}
 		
 		if ((url == null) || !"file".equals(url.getProtocol()))
@@ -197,6 +198,7 @@ final class Locator
 			}
 			catch (Exception e2)
 			{
+				// empty catch clause
 			}
 		}
 		

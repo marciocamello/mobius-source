@@ -111,6 +111,7 @@ public class AdminPledge implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
+					// empty catch clause
 				}
 			}
 			else if (action.equals("setlevel"))
@@ -148,6 +149,7 @@ public class AdminPledge implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
+					// empty catch clause
 				}
 			}
 			else if (action.equals("resetcreate"))

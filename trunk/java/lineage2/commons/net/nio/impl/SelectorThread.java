@@ -251,6 +251,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 							}
 							catch (CancelledKeyException cke)
 							{
+								// empty catch clause
 							}
 						}
 					}
@@ -262,6 +263,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 				}
 				catch (InterruptedException ie)
 				{
+					// empty catch clause
 				}
 			}
 			catch (IOException e)
@@ -274,6 +276,7 @@ public class SelectorThread<T extends MMOClient> extends Thread
 				}
 				catch (InterruptedException ie)
 				{
+					// empty catch clause
 				}
 			}
 		}

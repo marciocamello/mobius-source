@@ -107,6 +107,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
+					// empty catch clause
 				}
 				
 				break;

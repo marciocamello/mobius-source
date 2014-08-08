@@ -275,6 +275,7 @@ public class SkillTable
 			}
 			catch (Exception e1)
 			{
+				// empty catch clause
 			}
 		}
 		_log.info("Load ASC skills...");

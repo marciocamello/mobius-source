@@ -111,6 +111,7 @@ public class AdminShop implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
+			// empty catch clause
 		}
 		
 		NpcTradeList list = BuyListHolder.getInstance().getBuyList(val);

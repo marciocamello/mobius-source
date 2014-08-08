@@ -344,6 +344,7 @@ public final class TaskManager
 			}
 			catch (Exception e)
 			{
+				// empty catch clause
 			}
 		}
 		else if (type == TYPE_SPECIAL)

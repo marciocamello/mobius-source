@@ -180,6 +180,7 @@ public class ItemAuctionInstance
 			}
 			catch (IndexOutOfBoundsException e)
 			{
+				// empty catch clause
 			}
 		}
 		

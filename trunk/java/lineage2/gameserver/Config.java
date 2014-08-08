@@ -1325,6 +1325,7 @@ public class Config
 				}
 				catch (NumberFormatException nfe)
 				{
+					// empty catch clause
 				}
 			}
 		}
@@ -2079,6 +2080,7 @@ public class Config
 			}
 			catch (Exception e2)
 			{
+				// empty catch clause
 			}
 		}
 	}
@@ -2192,9 +2194,11 @@ public class Config
 		}
 		catch (IllegalArgumentException e)
 		{
+			// empty catch clause
 		}
 		catch (IllegalAccessException e)
 		{
+			// empty catch clause
 		}
 		
 		return null;

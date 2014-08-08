@@ -95,6 +95,7 @@ public class _311_ExpulsionOfEvilSpirits extends Quest implements ScriptFile
 			}
 			catch (Exception e)
 			{
+				// empty catch clause
 			}
 			
 			if (id > 0)

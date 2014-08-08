@@ -276,6 +276,7 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 			}
 			catch (Exception e)
 			{
+				// empty catch clause
 			}
 			finally
 			{
@@ -341,6 +342,7 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 			}
 			catch (Exception e)
 			{
+				// empty catch clause
 			}
 			finally
 			{
@@ -420,6 +422,7 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 			}
 			catch (Exception e)
 			{
+				// empty catch clause
 			}
 			finally
 			{
@@ -483,6 +486,7 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 			}
 			catch (Exception e)
 			{
+				// empty catch clause
 			}
 			finally
 			{
@@ -553,6 +557,7 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 			}
 			catch (Exception e)
 			{
+				// empty catch clause
 			}
 			finally
 			{
@@ -774,6 +779,7 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 				}
 				catch (Exception e)
 				{
+					// empty catch clause
 				}
 				finally
 				{

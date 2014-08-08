@@ -128,6 +128,7 @@ public final class ManageFavorites implements ScriptFile, ICommunityBoardHandler
 			}
 			catch (Exception e)
 			{
+				// empty catch clause
 			}
 			finally
 			{
@@ -190,6 +191,7 @@ public final class ManageFavorites implements ScriptFile, ICommunityBoardHandler
 			}
 			catch (Exception e)
 			{
+				// empty catch clause
 			}
 			finally
 			{

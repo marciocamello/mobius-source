@@ -41,7 +41,8 @@ public class PriorityThreadFactory implements ThreadFactory
 	/**
 	 * Method newThread.
 	 * @param r Runnable
-	 * @return Thread * @see java.util.concurrent.ThreadFactory#newThread(Runnable)
+	 * @return Thread
+	 * @see java.util.concurrent.ThreadFactory#newThread(Runnable)
 	 */
 	@Override
 	public Thread newThread(Runnable r)

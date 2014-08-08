@@ -86,6 +86,7 @@ public class AdminMenu implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
+				// empty catch clause
 			}
 		}
 		else if (fullString.startsWith("admin_goto_char_menu"))
@@ -98,6 +99,7 @@ public class AdminMenu implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
+				// empty catch clause
 			}
 		}
 		else if (fullString.equals("admin_kill_menu"))

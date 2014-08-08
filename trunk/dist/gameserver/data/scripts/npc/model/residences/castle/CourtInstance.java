@@ -83,9 +83,11 @@ public final class CourtInstance extends NpcInstance
 				}
 				catch (IndexOutOfBoundsException ioobe)
 				{
+					// empty catch clause
 				}
 				catch (NumberFormatException nfe)
 				{
+					// empty catch clause
 				}
 				
 				showChatWindow(player, val);

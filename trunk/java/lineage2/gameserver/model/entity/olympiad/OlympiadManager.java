@@ -45,6 +45,7 @@ public class OlympiadManager extends RunnableImpl
 		}
 		catch (InterruptedException e)
 		{
+			// empty catch clause
 		}
 	}
 	

@@ -242,6 +242,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
+					// empty catch clause
 				}
 				
 				if ((npc = GameObjectsStorage.getNpc(npcName)) != null)
@@ -562,6 +563,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
+			// empty catch clause
 		}
 		finally
 		{

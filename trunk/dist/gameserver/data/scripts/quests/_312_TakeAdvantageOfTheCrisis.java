@@ -91,6 +91,7 @@ public class _312_TakeAdvantageOfTheCrisis extends Quest implements ScriptFile
 			}
 			catch (Exception e)
 			{
+				// empty catch clause
 			}
 			
 			if (id > 0)

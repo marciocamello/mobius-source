@@ -609,6 +609,7 @@ public class Manor
 			}
 			catch (Exception e1)
 			{
+				// empty catch clause
 			}
 		}
 	}

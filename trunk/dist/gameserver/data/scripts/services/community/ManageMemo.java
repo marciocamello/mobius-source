@@ -249,6 +249,7 @@ public final class ManageMemo implements ScriptFile, ICommunityBoardHandler
 			}
 			catch (Exception e)
 			{
+				// empty catch clause
 			}
 			finally
 			{
@@ -273,6 +274,7 @@ public final class ManageMemo implements ScriptFile, ICommunityBoardHandler
 			}
 			catch (Exception e)
 			{
+				// empty catch clause
 			}
 			finally
 			{
@@ -329,6 +331,7 @@ public final class ManageMemo implements ScriptFile, ICommunityBoardHandler
 			}
 			catch (Exception e)
 			{
+				// empty catch clause
 			}
 			finally
 			{
@@ -426,6 +429,7 @@ public final class ManageMemo implements ScriptFile, ICommunityBoardHandler
 					}
 					catch (Exception e)
 					{
+						// empty catch clause
 					}
 					finally
 					{
@@ -512,6 +516,7 @@ public final class ManageMemo implements ScriptFile, ICommunityBoardHandler
 		}
 		catch (Exception e)
 		{
+			// empty catch clause
 		}
 		finally
 		{

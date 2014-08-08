@@ -135,6 +135,7 @@ public class _642_APowerfulPrimevalCreature extends Quest implements ScriptFile
 			}
 			catch (Exception E)
 			{
+				// empty catch clause
 			}
 		}
 		

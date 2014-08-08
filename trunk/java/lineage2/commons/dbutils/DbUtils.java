@@ -86,6 +86,7 @@ public class DbUtils
 		}
 		catch (SQLException e)
 		{
+			// empty catch clause
 		}
 	}
 	
@@ -160,6 +161,7 @@ public class DbUtils
 		}
 		catch (SQLException e)
 		{
+			// empty catch clause
 		}
 	}
 	
@@ -175,6 +177,7 @@ public class DbUtils
 		}
 		catch (SQLException e)
 		{
+			// empty catch clause
 		}
 	}
 }

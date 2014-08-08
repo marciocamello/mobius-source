@@ -193,6 +193,7 @@ public class RequestExReceivePost extends L2GameClientPacket
 			}
 			catch (ArithmeticException ae)
 			{
+				// empty catch clause
 			}
 			finally
 			{

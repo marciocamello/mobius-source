@@ -75,6 +75,7 @@ public class AdminManor implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
+				// empty catch clause
 			}
 			
 			if (castleId > 0)

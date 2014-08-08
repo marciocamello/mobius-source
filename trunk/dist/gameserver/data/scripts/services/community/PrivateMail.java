@@ -148,6 +148,7 @@ public final class PrivateMail extends Functions implements ScriptFile, ICommuni
 			}
 			catch (Exception e)
 			{
+				// empty catch clause
 			}
 			finally
 			{
@@ -369,6 +370,7 @@ public final class PrivateMail extends Functions implements ScriptFile, ICommuni
 			}
 			catch (Exception e)
 			{
+				// empty catch clause
 			}
 			finally
 			{

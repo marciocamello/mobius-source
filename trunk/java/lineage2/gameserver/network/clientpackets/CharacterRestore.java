@@ -47,6 +47,7 @@ public class CharacterRestore extends L2GameClientPacket
 		}
 		catch (Exception e)
 		{
+			// empty catch clause
 		}
 		
 		CharacterSelectionInfo cl = new CharacterSelectionInfo(client.getLogin(), client.getSessionKey().playOkID1);

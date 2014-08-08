@@ -132,6 +132,7 @@ public class MMOTopManager
 					}
 					catch (Exception e)
 					{
+						// empty catch clause
 					}
 				}
 			}
