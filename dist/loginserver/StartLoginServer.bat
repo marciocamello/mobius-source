@@ -9,16 +9,16 @@ if ERRORLEVEL 1 goto error
 goto end
 :restart
 echo.
-echo Server restarted ...
+echo Server restarted...
 echo.
 goto start
 :error
 echo.
-echo Server terminated abnormaly ...
+echo Server terminated abnormaly...
 echo.
 :end
 echo.
-echo Server terminated ...
+echo Server terminated...
 echo.
 
 pause
