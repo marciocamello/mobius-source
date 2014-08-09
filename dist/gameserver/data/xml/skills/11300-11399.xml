@@ -377,11 +377,12 @@
 		<set name="summonTotalLifeTime" val="3600000"/>
 		<set name="summonTimeLostIdle" val="500"/>
 		<set name="summonTimeLostActive" val="1000"/>
-		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SUMMON"/>
+		<set name="summonType" val="MULTI_SERVITOR"/>
+		<set name="summonPoint" val="2"/>
+		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="3500"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="summonType" val="SERVITOR"/>
 		<set name="magicLvl" val="#magicLevel"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="npcId" val="#npcIds"/>
@@ -393,11 +394,12 @@
 		<set name="summonTotalLifeTime" val="3600000"/>
 		<set name="summonTimeLostIdle" val="500"/>
 		<set name="summonTimeLostActive" val="1000"/>
-		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SUMMON"/>
+		<set name="summonType" val="MULTI_SERVITOR"/>
+		<set name="summonPoint" val="2"/>
+		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="3500"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="summonType" val="SERVITOR"/>
 		<set name="magicLvl" val="#magicLevel"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="npcId" val="#npcIds"/>
@@ -409,11 +411,12 @@
 		<set name="summonTotalLifeTime" val="3600000"/>
 		<set name="summonTimeLostIdle" val="500"/>
 		<set name="summonTimeLostActive" val="1000"/>
-		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SUMMON"/>
+		<set name="summonType" val="MULTI_SERVITOR"/>
+		<set name="summonPoint" val="2"/>
+		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="3500"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="summonType" val="SERVITOR"/>
 		<set name="magicLvl" val="#magicLevel"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="npcId" val="#npcIds"/>
@@ -578,11 +581,12 @@
 		<set name="summonTotalLifeTime" val="3600000"/>
 		<set name="summonTimeLostIdle" val="500"/>
 		<set name="summonTimeLostActive" val="1000"/>
-		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SUMMON"/>
+		<set name="summonType" val="MULTI_SERVITOR"/>
+		<set name="summonPoint" val="2"/>
+		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="3500"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="summonType" val="SERVITOR"/>
 		<set name="magicLvl" val="#magicLevel"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="npcId" val="#npcIds"/>
@@ -594,11 +598,12 @@
 		<set name="summonTotalLifeTime" val="3600000"/>
 		<set name="summonTimeLostIdle" val="500"/>
 		<set name="summonTimeLostActive" val="1000"/>
-		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SUMMON"/>
+		<set name="summonType" val="MULTI_SERVITOR"/>
+		<set name="summonPoint" val="2"/>
+		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="3500"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="summonType" val="SERVITOR"/>
 		<set name="magicLvl" val="#magicLevel"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="npcId" val="#npcIds"/>
@@ -610,11 +615,12 @@
 		<set name="summonTotalLifeTime" val="3600000"/>
 		<set name="summonTimeLostIdle" val="500"/>
 		<set name="summonTimeLostActive" val="1000"/>
-		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SUMMON"/>
+		<set name="summonType" val="MULTI_SERVITOR"/>
+		<set name="summonPoint" val="2"/>
+		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="3500"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="summonType" val="SERVITOR"/>
 		<set name="magicLvl" val="#magicLevel"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="npcId" val="#npcIds"/>
@@ -751,11 +757,12 @@
 		<set name="summonTotalLifeTime" val="3600000"/>
 		<set name="summonTimeLostIdle" val="500"/>
 		<set name="summonTimeLostActive" val="1000"/>
-		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SUMMON"/>
+		<set name="summonType" val="MULTI_SERVITOR"/>
+		<set name="summonPoint" val="2"/>
+		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="3500"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="summonType" val="SERVITOR"/>
 		<set name="magicLvl" val="#magicLevel"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="npcId" val="#npcIds"/>
@@ -767,11 +774,12 @@
 		<set name="summonTotalLifeTime" val="3600000"/>
 		<set name="summonTimeLostIdle" val="500"/>
 		<set name="summonTimeLostActive" val="1000"/>
-		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SUMMON"/>
+		<set name="summonType" val="MULTI_SERVITOR"/>
+		<set name="summonPoint" val="2"/>
+		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="3500"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="summonType" val="SERVITOR"/>
 		<set name="magicLvl" val="#magicLevel"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="npcId" val="#npcIds"/>
@@ -783,11 +791,12 @@
 		<set name="summonTotalLifeTime" val="3600000"/>
 		<set name="summonTimeLostIdle" val="500"/>
 		<set name="summonTimeLostActive" val="1000"/>
-		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SUMMON"/>
+		<set name="summonType" val="MULTI_SERVITOR"/>
+		<set name="summonPoint" val="2"/>
+		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="3500"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="summonType" val="SERVITOR"/>
 		<set name="magicLvl" val="#magicLevel"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="npcId" val="#npcIds"/>
