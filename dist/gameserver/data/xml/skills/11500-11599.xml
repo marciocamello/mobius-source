@@ -1806,23 +1806,22 @@
 		</for>
 	</skill>
 	<skill id="11570" levels="1" name="Healing Melody">
-		<table name="#mpConsume2">194</table>
-		<table name="#mpConsume2">70</table>
-		<set name="reuseDelay" val="5000"/>
+		<table name="#ench1mpConsume"> 187 181 175 169 163 156 150 144 138 132 </table>
 		<set name="hitTime" val="2000"/>
-		<set name="castRange" val="900"/>
-		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="magicLvl" val="85"/>
+		<set name="mpConsume2" val="39"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="effectPoint" val="398"/>
-		<set name="castRange" val="900"/>
+		<set name="castRange" val="900" />
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="healPercents" val="35;32;30;27;25;23;21;20;10;10;10"/>
-		<set name="healRadius" val="600"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="skillRadius" val="600"/>
 		<set name="skillType" val="CHAIN_HEAL"/>
 		<set name="target" val="TARGET_ONE"/>
-		<set name="relationSkillsId" val="1553;1488;58;1229;"/>
-		<enchant1 levels="10" name="Cost"/>
+		<set name="relationSkillsId" val="1229;1488;58;1553" />
+		<enchant1 name="mpConsume" val="#ench1mpConsume" />
 	</skill>
 	<skill id="11571" levels="1" name="Recovery Melody">
 		<table name="#mpConsume2">120</table>

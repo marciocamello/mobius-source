@@ -465,8 +465,8 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22039" levels="2" name="Rune of XP 30%">
-		<table name="#power">0.3 0.5</table>
+	<skill id="22039" levels="4" name="Rune of XP 30%">
+		<table name="#power">0.3 0.5 1 2</table>
 		<set name="icon" val="br_cashtex.skill.br_cash_rune_of_exp_buff_3"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -476,8 +476,8 @@
 			<add order="0x40" stat="ExpMultiplier" val="#power"/>
 		</for>
 	</skill>
-	<skill id="22040" levels="2" name="Rune of SP 30%">
-		<table name="#power">0.3 0.5</table>
+	<skill id="22040" levels="4" name="Rune of SP 30%">
+		<table name="#power">0.3 0.5 1 2</table>
 		<set name="icon" val="br_cashtex.skill.br_cash_rune_of_sp_buff_3"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
