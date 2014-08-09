@@ -195,7 +195,7 @@ public enum ClassId
 	feohSoultaker(167, ClassType.MYSTIC, null, null, null, ClassLevel.Awaking, ClassType2.Wizard),
 	feohMysticMuse(168, ClassType.MYSTIC, null, null, null, ClassLevel.Awaking, ClassType2.Wizard),
 	feohStormScreamer(169, ClassType.MYSTIC, null, null, null, ClassLevel.Awaking, ClassType2.Wizard),
-	feohSOUL_HOUND(170, ClassType.MYSTIC, null, null, null, ClassLevel.Awaking, ClassType2.Wizard),
+	FeohSoulHound(170, ClassType.MYSTIC, null, null, null, ClassLevel.Awaking, ClassType2.Wizard),
 	issHierophant(171, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Enchanter),
 	issSwordMuse(172, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Enchanter),
 	issSpectralDancer(173, ClassType.FIGHTER, null, null, null, ClassLevel.Awaking, ClassType2.Enchanter),
@@ -389,7 +389,7 @@ public enum ClassId
 			put(ClassId.feohSoultaker, EnumSet.of(ClassId.SOULTAKER));
 			put(ClassId.feohMysticMuse, EnumSet.of(ClassId.MYSTIC_MUSE));
 			put(ClassId.feohStormScreamer, EnumSet.of(ClassId.STORM_SCREAMER));
-			put(ClassId.feohSOUL_HOUND, EnumSet.of(ClassId.M_SOUL_HOUND, ClassId.F_SOUL_HOUND));
+			put(ClassId.FeohSoulHound, EnumSet.of(ClassId.M_SOUL_HOUND, ClassId.F_SOUL_HOUND));
 			put(ClassId.issHierophant, EnumSet.of(ClassId.HIEROPHANT));
 			put(ClassId.issSwordMuse, EnumSet.of(ClassId.SWORD_MUSE));
 			put(ClassId.issSpectralDancer, EnumSet.of(ClassId.SPECTRAL_DANCER));
