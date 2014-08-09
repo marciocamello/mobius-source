@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
-<list>	
+<list>
 	<armor id="35915" name="Draco's Hat" add_name="STR (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_ev_draco_hair_acc"/>

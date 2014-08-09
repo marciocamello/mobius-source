@@ -54,6 +54,138 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_pouch_gold_i00"/>
 	</etcitem>
+	<etcitem id="34733" name="Pa'agrio's Box">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34734" name="Maphr's Box">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34735" name="Sayha's Box">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34736" name="Eva's Box	">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34737" name="Pa'agrio's XL Box">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34738" name="Maphr's XL Box">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34739" name="Sayha's XL Box">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34740" name="Eva's XL Box">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34741" name="XP Bottle">
+		<set name="icon" value="icon.exp_bottle"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34742" name="Scroll: 500,000,000 XP">
+		<set name="dropable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="SCROLL"/>
+		<set name="icon" value="icon.exp_bottle_scroll"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<skills>
+			<skill id="13377" level="1"/>
+		</skills>
+	</etcitem>
+	<etcitem id="34751" name="Agathion - XP Bottle Pack (10-hour)">
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34752" name="Agathion - XP Bottle Pack (20-hour)">
+		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34753" name="Agathion - XP Bottle Pack (30-hour)">
+		<set name="icon" value="icon.etc_pi_gift_box_i01"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34754" name="Agathion - XP Bottle Pack (40-hour)">
+		<set name="icon" value="icon.etc_pi_gift_box_i01"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34755" name="Agathion - XP Bottle Pack (50-hour)">
+		<set name="icon" value="icon.etc_pi_gift_box_i03"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34756" name="Agathion - XP Bottle Pack (60-hour)">
+		<set name="icon" value="icon.etc_pi_gift_box_i03"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34757" name="Agathion - XP Bottle Pack (70-hour)">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="34758" name="Agathion - XP Bottle Pack (80-hour)">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
 	<etcitem id="34760" name="Mentee Certificate Pack">
 		<set name="freightable" value="true"/>
 		<set name="dropable" value="false"/>

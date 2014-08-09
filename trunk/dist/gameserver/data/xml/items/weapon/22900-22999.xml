@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<weapon id="22916" name="Salvation Bow">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.weapon_krono_bow_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BOW"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="1"/>
+		<set name="mp_consume" value="1"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="1"/>
+			<add stat="mAtk" order="0x10" value="1"/>
+			<set stat="atkBaseSpeed" order="0x08" value="293"/>
+			<set stat="baseCrit" order="0x08" value="120"/>
+			<add stat="accCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+</list>

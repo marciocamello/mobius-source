@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="37507" name="Enhanced Octavis' Ring" add_name="Warrior">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.octavis_ring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="103"/>
+			<add stat="maxMp" order="0x60" value="37"/>
+		</for>
+	</armor>
+	<armor id="37508" name="Enhanced Octavis' Earring" add_name="Warrior">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.octavis_earring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="154"/>
+			<add stat="maxMp" order="0x60" value="56"/>
+		</for>
+	</armor>
+	<armor id="37509" name="Enhanced Octavis' Necklace" add_name="Warrior">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.octavis_necklace_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="205"/>
+			<add stat="maxMp" order="0x60" value="74"/>
+		</for>
+	</armor>
+	<armor id="37510" name="Enhanced Istina's Ring" add_name="Warrior">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.istina_ring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="103"/>
+			<add stat="maxMp" order="0x60" value="37"/>
+		</for>
+	</armor>
+	<armor id="37511" name="Enhanced Istina's Earring" add_name="Warrior">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.istina_earring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="154"/>
+			<add stat="maxMp" order="0x60" value="56"/>
+		</for>
+	</armor>
+	<armor id="37512" name="Enhanced Istina's Necklace" add_name="Warrior">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.istina_necklace_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="205"/>
+			<add stat="maxMp" order="0x60" value="74"/>
+		</for>
+	</armor>
+	<armor id="37513" name="Enhanced Octavis' Ring" add_name="Wizard">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.octavis_ring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="103"/>
+			<add stat="maxMp" order="0x60" value="37"/>
+		</for>
+	</armor>
+	<armor id="37514" name="Enhanced Octavis' Earring" add_name="Wizard">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.octavis_earring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="154"/>
+			<add stat="maxMp" order="0x60" value="56"/>
+		</for>
+	</armor>
+	<armor id="37515" name="Enhanced Octavis' Necklace" add_name="Wizard">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.octavis_necklace_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="205"/>
+			<add stat="maxMp" order="0x60" value="74"/>
+		</for>
+	</armor>
+	<armor id="37516" name="Enhanced Istina's Ring" add_name="Wizard">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.istina_ring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="103"/>
+			<add stat="maxMp" order="0x60" value="37"/>
+		</for>
+	</armor>
+	<armor id="37517" name="Enhanced Istina's Earring" add_name="Wizard">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.istina_earring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="154"/>
+			<add stat="maxMp" order="0x60" value="56"/>
+		</for>
+	</armor>
+	<armor id="37518" name="Enhanced Istina's Necklace" add_name="Wizard">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.istina_necklace_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="205"/>
+			<add stat="maxMp" order="0x60" value="74"/>
+		</for>
+	</armor>
+	<armor id="37521" name="Baium's Soul Ring">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessory_ring_of_baium_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="79"/>
+			<add stat="maxMp" order="0x60" value="31"/>
+		</for>
+	</armor>
+	<armor id="37522" name="Frintezza's Soul Necklace">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessory_necklace_of_frintessa_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="158"/>
+			<add stat="maxMp" order="0x60" value="62"/>
+		</for>
+	</armor>
+	<armor id="37525" name="Agathion - Bae Kisung" add_name="90-day">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.bracelet_agathion_bm_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="NONE"/>
+		</equip>
+	</armor>
+	<armor id="37533" name="NC Messenger's Hat">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.nc_hair_acc"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="37534" name="Santa Suit">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.armor_ev_santas_clothes"/>
+		<set name="price" value="0"/>
+		<set name="type" value="HEAVY"/>
+		<equip>
+			<slot id="NONE"/>
+		</equip>
+	</armor>
+	<armor id="37535" name="Santa Hat">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_santas_cap_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+</list>
