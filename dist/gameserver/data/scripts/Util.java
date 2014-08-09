@@ -61,7 +61,7 @@ public final class Util extends Functions
 		
 		if (player.getMountType() == 2)
 		{
-			player.sendMessage("Телепортаци�? верхом на виверне невозможна.");
+			player.sendMessage("Teleportation is impossible while riding a wyvern.");
 			return;
 		}
 		
