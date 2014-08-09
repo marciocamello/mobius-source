@@ -147,7 +147,7 @@ insert  into class_list values
 ('FeohSoultaker', 167, -1, -1),
 ('FeohMysticMuse', 168, -1, -1),
 ('FeohStormScreamer', 169, -1, -1),
-('FeohSOUL_HOUND', 170, -1, -1),
+('FeohSoulHound', 170, -1, -1),
 
 ('IssHierophant', 171, -1, -1),
 ('IssSwordMuse', 172, -1, -1),
