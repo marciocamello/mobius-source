@@ -1,5 +1,11 @@
 <?xml version="1.0"?>
 <list>
+	<skill id="11496" levels="2" name="Summoner Boss Penalty">
+		<set name="icon" val="icon.skill0217"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
 	<skill id="11497" levels="1" name="Summoner - Individual Passive">
 		<set name="icon" val="icon.skill0217"/>
 		<set name="target" val="TARGET_NONE"/>
