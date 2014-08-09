@@ -3265,4 +3265,1398 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
+	<npc id="15066" name="Wynn Kai the Cat" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="15.0"/>
+		<set name="level" value="85"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="21856"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2096"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="1859"/>
+		<set name="basePDef" value="2286"/>
+		<set name="baseMAtk" value="1367"/>
+		<set name="baseMDef" value="4298"/>
+		<set name="basePAtkSpd" value="343"/>
+		<set name="baseCritRate" value="95"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15067" name="Wynn Kai the Cat" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="15.0"/>
+		<set name="level" value="87"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="22367"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2177"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="1994"/>
+		<set name="basePDef" value="2405"/>
+		<set name="baseMAtk" value="1494"/>
+		<set name="baseMDef" value="4567"/>
+		<set name="basePAtkSpd" value="343"/>
+		<set name="baseCritRate" value="95"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="140"/>
+			<defence attribute="water" value="140"/>
+			<defence attribute="wind" value="140"/>
+			<defence attribute="earth" value="140"/>
+			<defence attribute="holy" value="140"/>
+			<defence attribute="unholy" value="140"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15068" name="Wynn Kai the Cat" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="15.0"/>
+		<set name="level" value="89"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="22889"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2258"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="2139"/>
+		<set name="basePDef" value="2531"/>
+		<set name="baseMAtk" value="1619"/>
+		<set name="baseMDef" value="4854"/>
+		<set name="basePAtkSpd" value="343"/>
+		<set name="baseCritRate" value="95"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="160"/>
+			<defence attribute="water" value="160"/>
+			<defence attribute="wind" value="160"/>
+			<defence attribute="earth" value="160"/>
+			<defence attribute="holy" value="160"/>
+			<defence attribute="unholy" value="160"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15069" name="Wynn Kai the Cat" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="15.0"/>
+		<set name="level" value="91"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="23427"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2339"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="2294"/>
+		<set name="basePDef" value="2662"/>
+		<set name="baseMAtk" value="1755"/>
+		<set name="baseMDef" value="5158"/>
+		<set name="basePAtkSpd" value="343"/>
+		<set name="baseCritRate" value="95"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="180"/>
+			<defence attribute="water" value="180"/>
+			<defence attribute="wind" value="180"/>
+			<defence attribute="earth" value="180"/>
+			<defence attribute="holy" value="180"/>
+			<defence attribute="unholy" value="180"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15070" name="Wynn Kai the Cat" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="15.0"/>
+		<set name="level" value="93"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="23976"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2422"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="2462"/>
+		<set name="basePDef" value="2800"/>
+		<set name="baseMAtk" value="1906"/>
+		<set name="baseMDef" value="5480"/>
+		<set name="basePAtkSpd" value="343"/>
+		<set name="baseCritRate" value="95"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="200"/>
+			<defence attribute="water" value="200"/>
+			<defence attribute="wind" value="200"/>
+			<defence attribute="earth" value="200"/>
+			<defence attribute="holy" value="200"/>
+			<defence attribute="unholy" value="200"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15071" name="Wynn Kai the Cat" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="15.0"/>
+		<set name="level" value="95"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="30202"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2505"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="3519"/>
+		<set name="basePDef" value="3437"/>
+		<set name="baseMAtk" value="3674"/>
+		<set name="baseMDef" value="6790"/>
+		<set name="basePAtkSpd" value="343"/>
+		<set name="baseCritRate" value="95"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="240"/>
+			<defence attribute="water" value="240"/>
+			<defence attribute="wind" value="240"/>
+			<defence attribute="earth" value="240"/>
+			<defence attribute="holy" value="240"/>
+			<defence attribute="unholy" value="240"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15072" name="Wynn Kai the Cat" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="15.0"/>
+		<set name="level" value="97"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="31992"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2590"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="3776"/>
+		<set name="basePDef" value="3615"/>
+		<set name="baseMAtk" value="3982"/>
+		<set name="baseMDef" value="7211"/>
+		<set name="basePAtkSpd" value="343"/>
+		<set name="baseCritRate" value="95"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="260"/>
+			<defence attribute="water" value="260"/>
+			<defence attribute="wind" value="260"/>
+			<defence attribute="earth" value="260"/>
+			<defence attribute="holy" value="260"/>
+			<defence attribute="unholy" value="260"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15073" name="Wynn Kai the Cat" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="15.0"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="32311"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2675"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="4050"/>
+		<set name="basePDef" value="3801"/>
+		<set name="baseMAtk" value="4313"/>
+		<set name="baseMDef" value="7655"/>
+		<set name="basePAtkSpd" value="343"/>
+		<set name="baseCritRate" value="95"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="280"/>
+			<defence attribute="water" value="280"/>
+			<defence attribute="wind" value="280"/>
+			<defence attribute="earth" value="280"/>
+			<defence attribute="holy" value="280"/>
+			<defence attribute="unholy" value="280"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15074" name="Wynn Feline King" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="16.0"/>
+		<set name="level" value="85"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="15298"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1466"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="2657"/>
+		<set name="basePDef" value="1599"/>
+		<set name="baseMAtk" value="1367"/>
+		<set name="baseMDef" value="3005"/>
+		<set name="basePAtkSpd" value="491"/>
+		<set name="baseCritRate" value="142"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15075" name="Wynn Feline King" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="16.0"/>
+		<set name="level" value="87"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="15656"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1522"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="2849"/>
+		<set name="basePDef" value="1682"/>
+		<set name="baseMAtk" value="1494"/>
+		<set name="baseMDef" value="3195"/>
+		<set name="basePAtkSpd" value="491"/>
+		<set name="baseCritRate" value="142"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="140"/>
+			<defence attribute="water" value="140"/>
+			<defence attribute="wind" value="140"/>
+			<defence attribute="earth" value="140"/>
+			<defence attribute="holy" value="140"/>
+			<defence attribute="unholy" value="140"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15076" name="Wynn Feline King" title="">
+		<set name="collision_radius" value="7.5"/>
+		<set name="collision_height" value="16.0"/>
+		<set name="level" value="89"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="16021"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1580"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="3056"/>
+		<set name="basePDef" value="1771"/>
+		<set name="baseMAtk" value="1619"/>
+		<set name="baseMDef" value="3397"/>
+		<set name="basePAtkSpd" value="491"/>
+		<set name="baseCritRate" value="142"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="160"/>
+			<defence attribute="water" value="160"/>
+			<defence attribute="wind" value="160"/>
+			<defence attribute="earth" value="160"/>
+			<defence attribute="holy" value="160"/>
+			<defence attribute="unholy" value="160"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15077" name="Wynn Feline King" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="16.0"/>
+		<set name="level" value="91"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="16398"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1636"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="3280"/>
+		<set name="basePDef" value="1863"/>
+		<set name="baseMAtk" value="1755"/>
+		<set name="baseMDef" value="3607"/>
+		<set name="basePAtkSpd" value="491"/>
+		<set name="baseCritRate" value="142"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="180"/>
+			<defence attribute="water" value="180"/>
+			<defence attribute="wind" value="180"/>
+			<defence attribute="earth" value="180"/>
+			<defence attribute="holy" value="180"/>
+			<defence attribute="unholy" value="180"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15078" name="Wynn Feline King" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="16.0"/>
+		<set name="level" value="93"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="16782"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1695"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="3518"/>
+		<set name="basePDef" value="1960"/>
+		<set name="baseMAtk" value="1906"/>
+		<set name="baseMDef" value="3834"/>
+		<set name="basePAtkSpd" value="491"/>
+		<set name="baseCritRate" value="142"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="200"/>
+			<defence attribute="water" value="200"/>
+			<defence attribute="wind" value="200"/>
+			<defence attribute="earth" value="200"/>
+			<defence attribute="holy" value="200"/>
+			<defence attribute="unholy" value="200"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15079" name="Wynn Feline King" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="16.0"/>
+		<set name="level" value="95"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="21140"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1752"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="5031"/>
+		<set name="basePDef" value="2404"/>
+		<set name="baseMAtk" value="3674"/>
+		<set name="baseMDef" value="4750"/>
+		<set name="basePAtkSpd" value="491"/>
+		<set name="baseCritRate" value="142"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="240"/>
+			<defence attribute="water" value="240"/>
+			<defence attribute="wind" value="240"/>
+			<defence attribute="earth" value="240"/>
+			<defence attribute="holy" value="240"/>
+			<defence attribute="unholy" value="240"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15080" name="Wynn Feline King" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="16.0"/>
+		<set name="level" value="97"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="22394"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1813"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="5397"/>
+		<set name="basePDef" value="2529"/>
+		<set name="baseMAtk" value="3982"/>
+		<set name="baseMDef" value="5046"/>
+		<set name="basePAtkSpd" value="491"/>
+		<set name="baseCritRate" value="142"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="260"/>
+			<defence attribute="water" value="260"/>
+			<defence attribute="wind" value="260"/>
+			<defence attribute="earth" value="260"/>
+			<defence attribute="holy" value="260"/>
+			<defence attribute="unholy" value="260"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15081" name="Wynn Feline King" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="16.0"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="22616"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1872"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="5787"/>
+		<set name="basePDef" value="2660"/>
+		<set name="baseMAtk" value="4313"/>
+		<set name="baseMDef" value="5357"/>
+		<set name="basePAtkSpd" value="491"/>
+		<set name="baseCritRate" value="142"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="280"/>
+			<defence attribute="water" value="280"/>
+			<defence attribute="wind" value="280"/>
+			<defence attribute="earth" value="280"/>
+			<defence attribute="holy" value="280"/>
+			<defence attribute="unholy" value="280"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15082" name="Wynn Feline Queen" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="27.0"/>
+		<set name="level" value="85"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="1000"/>
+		<set name="baseHpMax" value="10928"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1048"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="2652"/>
+		<set name="basePDef" value="1143"/>
+		<set name="baseMAtk" value="1367"/>
+		<set name="baseMDef" value="2147"/>
+		<set name="basePAtkSpd" value="343"/>
+		<set name="baseCritRate" value="142"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15083" name="Wynn Feline Queen" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="27.0"/>
+		<set name="level" value="87"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="1000"/>
+		<set name="baseHpMax" value="11182"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1087"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="2846"/>
+		<set name="basePDef" value="1202"/>
+		<set name="baseMAtk" value="1494"/>
+		<set name="baseMDef" value="2283"/>
+		<set name="basePAtkSpd" value="343"/>
+		<set name="baseCritRate" value="142"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="140"/>
+			<defence attribute="water" value="140"/>
+			<defence attribute="wind" value="140"/>
+			<defence attribute="earth" value="140"/>
+			<defence attribute="holy" value="140"/>
+			<defence attribute="unholy" value="140"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15084" name="Wynn Feline Queen" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="27.0"/>
+		<set name="level" value="89"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="1000"/>
+		<set name="baseHpMax" value="11443"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1128"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="3054"/>
+		<set name="basePDef" value="1265"/>
+		<set name="baseMAtk" value="1619"/>
+		<set name="baseMDef" value="2427"/>
+		<set name="basePAtkSpd" value="343"/>
+		<set name="baseCritRate" value="142"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="160"/>
+			<defence attribute="water" value="160"/>
+			<defence attribute="wind" value="160"/>
+			<defence attribute="earth" value="160"/>
+			<defence attribute="holy" value="160"/>
+			<defence attribute="unholy" value="160"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15085" name="Wynn Feline Queen" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="27.0"/>
+		<set name="level" value="91"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="1000"/>
+		<set name="baseHpMax" value="11713"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1169"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="3277"/>
+		<set name="basePDef" value="1330"/>
+		<set name="baseMAtk" value="1755"/>
+		<set name="baseMDef" value="2577"/>
+		<set name="basePAtkSpd" value="343"/>
+		<set name="baseCritRate" value="142"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="180"/>
+			<defence attribute="water" value="180"/>
+			<defence attribute="wind" value="180"/>
+			<defence attribute="earth" value="180"/>
+			<defence attribute="holy" value="180"/>
+			<defence attribute="unholy" value="180"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15086" name="Wynn Feline Queen" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="27.0"/>
+		<set name="level" value="93"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="1000"/>
+		<set name="baseHpMax" value="11987"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1210"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="3515"/>
+		<set name="basePDef" value="1399"/>
+		<set name="baseMAtk" value="1906"/>
+		<set name="baseMDef" value="2737"/>
+		<set name="basePAtkSpd" value="343"/>
+		<set name="baseCritRate" value="142"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="200"/>
+			<defence attribute="water" value="200"/>
+			<defence attribute="wind" value="200"/>
+			<defence attribute="earth" value="200"/>
+			<defence attribute="holy" value="200"/>
+			<defence attribute="unholy" value="200"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15087" name="Wynn Feline Queen" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="27.0"/>
+		<set name="level" value="95"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="1000"/>
+		<set name="baseHpMax" value="15101"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1252"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="5030"/>
+		<set name="basePDef" value="1718"/>
+		<set name="baseMAtk" value="3674"/>
+		<set name="baseMDef" value="3395"/>
+		<set name="basePAtkSpd" value="343"/>
+		<set name="baseCritRate" value="142"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="240"/>
+			<defence attribute="water" value="240"/>
+			<defence attribute="wind" value="240"/>
+			<defence attribute="earth" value="240"/>
+			<defence attribute="holy" value="240"/>
+			<defence attribute="unholy" value="240"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15088" name="Wynn Feline Queen" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="27.0"/>
+		<set name="level" value="97"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="1000"/>
+		<set name="baseHpMax" value="15995"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1295"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="5392"/>
+		<set name="basePDef" value="1807"/>
+		<set name="baseMAtk" value="3982"/>
+		<set name="baseMDef" value="3605"/>
+		<set name="basePAtkSpd" value="343"/>
+		<set name="baseCritRate" value="142"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="260"/>
+			<defence attribute="water" value="260"/>
+			<defence attribute="wind" value="260"/>
+			<defence attribute="earth" value="260"/>
+			<defence attribute="holy" value="260"/>
+			<defence attribute="unholy" value="260"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15089" name="Wynn Feline Queen" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="15.0"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="1000"/>
+		<set name="baseHpMax" value="16154"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1337"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="5782"/>
+		<set name="basePDef" value="1900"/>
+		<set name="baseMAtk" value="4313"/>
+		<set name="baseMDef" value="3827"/>
+		<set name="basePAtkSpd" value="343"/>
+		<set name="baseCritRate" value="142"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="198"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="280"/>
+			<defence attribute="water" value="280"/>
+			<defence attribute="wind" value="280"/>
+			<defence attribute="earth" value="280"/>
+			<defence attribute="holy" value="280"/>
+			<defence attribute="unholy" value="280"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15090" name="Wynn Nightshade" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="32.0"/>
+		<set name="level" value="85"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1870"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="994"/>
+		<set name="basePDef" value="364"/>
+		<set name="baseMAtk" value="679"/>
+		<set name="baseMDef" value="267"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="100"/>
+			<defence attribute="water" value="100"/>
+			<defence attribute="wind" value="100"/>
+			<defence attribute="earth" value="100"/>
+			<defence attribute="holy" value="100"/>
+			<defence attribute="unholy" value="100"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15091" name="Wynn Nightshade" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="32.0"/>
+		<set name="level" value="87"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1870"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="994"/>
+		<set name="basePDef" value="364"/>
+		<set name="baseMAtk" value="679"/>
+		<set name="baseMDef" value="267"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="100"/>
+			<defence attribute="water" value="100"/>
+			<defence attribute="wind" value="100"/>
+			<defence attribute="earth" value="100"/>
+			<defence attribute="holy" value="100"/>
+			<defence attribute="unholy" value="100"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15092" name="Wynn Nightshade" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="32.0"/>
+		<set name="level" value="89"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1870"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="994"/>
+		<set name="basePDef" value="364"/>
+		<set name="baseMAtk" value="679"/>
+		<set name="baseMDef" value="267"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="100"/>
+			<defence attribute="water" value="100"/>
+			<defence attribute="wind" value="100"/>
+			<defence attribute="earth" value="100"/>
+			<defence attribute="holy" value="100"/>
+			<defence attribute="unholy" value="100"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15093" name="Wynn Nightshade" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="32.0"/>
+		<set name="level" value="91"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1870"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="994"/>
+		<set name="basePDef" value="364"/>
+		<set name="baseMAtk" value="679"/>
+		<set name="baseMDef" value="267"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="100"/>
+			<defence attribute="water" value="100"/>
+			<defence attribute="wind" value="100"/>
+			<defence attribute="earth" value="100"/>
+			<defence attribute="holy" value="100"/>
+			<defence attribute="unholy" value="100"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15094" name="Wynn Nightshade" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="32.0"/>
+		<set name="level" value="93"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1870"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="994"/>
+		<set name="basePDef" value="364"/>
+		<set name="baseMAtk" value="679"/>
+		<set name="baseMDef" value="267"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="100"/>
+			<defence attribute="water" value="100"/>
+			<defence attribute="wind" value="100"/>
+			<defence attribute="earth" value="100"/>
+			<defence attribute="holy" value="100"/>
+			<defence attribute="unholy" value="100"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15095" name="Wynn Nightshade" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="32.0"/>
+		<set name="level" value="95"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1870"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="994"/>
+		<set name="basePDef" value="364"/>
+		<set name="baseMAtk" value="679"/>
+		<set name="baseMDef" value="267"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="100"/>
+			<defence attribute="water" value="100"/>
+			<defence attribute="wind" value="100"/>
+			<defence attribute="earth" value="100"/>
+			<defence attribute="holy" value="100"/>
+			<defence attribute="unholy" value="100"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15096" name="Wynn Nightshade" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="32.0"/>
+		<set name="level" value="97"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1870"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="994"/>
+		<set name="basePDef" value="364"/>
+		<set name="baseMAtk" value="679"/>
+		<set name="baseMDef" value="267"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="100"/>
+			<defence attribute="water" value="100"/>
+			<defence attribute="wind" value="100"/>
+			<defence attribute="earth" value="100"/>
+			<defence attribute="holy" value="100"/>
+			<defence attribute="unholy" value="100"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15097" name="Wynn Nightshade" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="32.0"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1870"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="994"/>
+		<set name="basePDef" value="364"/>
+		<set name="baseMAtk" value="679"/>
+		<set name="baseMDef" value="267"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="100"/>
+			<defence attribute="water" value="100"/>
+			<defence attribute="wind" value="100"/>
+			<defence attribute="earth" value="100"/>
+			<defence attribute="holy" value="100"/>
+			<defence attribute="unholy" value="100"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15098" name="Wynn Spectral Lord" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="31.0"/>
+		<set name="level" value="85"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1870"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="994"/>
+		<set name="basePDef" value="364"/>
+		<set name="baseMAtk" value="679"/>
+		<set name="baseMDef" value="267"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="100"/>
+			<defence attribute="water" value="100"/>
+			<defence attribute="wind" value="100"/>
+			<defence attribute="earth" value="100"/>
+			<defence attribute="holy" value="100"/>
+			<defence attribute="unholy" value="100"/>
+		</attributes>
+		<skills/>
+	</npc>
+	<npc id="15099" name="Wynn Spectral Lord" title="">
+		<set name="collision_radius" value="9.5"/>
+		<set name="collision_height" value="31.0"/>
+		<set name="level" value="87"/>
+		<set name="type" value="Pet"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1870"/>
+		<set name="baseMpReg" value="6"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="73"/>
+		<set name="baseDEX" value="40"/>
+		<set name="baseINT" value="31"/>
+		<set name="baseWIT" value="65"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="994"/>
+		<set name="basePDef" value="364"/>
+		<set name="baseMAtk" value="679"/>
+		<set name="baseMDef" value="267"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="160"/>
+		<set name="aggroRange" value="0"/>
+		<attributes>
+			<defence attribute="fire" value="100"/>
+			<defence attribute="water" value="100"/>
+			<defence attribute="wind" value="100"/>
+			<defence attribute="earth" value="100"/>
+			<defence attribute="holy" value="100"/>
+			<defence attribute="unholy" value="100"/>
+		</attributes>
+		<skills/>
+	</npc>
 </list>
