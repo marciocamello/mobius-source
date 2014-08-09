@@ -628,9 +628,15 @@
 	</skill>
 	<skill id="21258" levels="1" name="Rocking Horse Mount">
 		<set name="icon" val="icon.skilltransform3"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="addSkills" val="619;1"/>
+		<set name="npcId" val="158"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Transformation" time="1800" val="20007"/>
+		</for>
 	</skill>
 	<skill id="21259" levels="1" name="Release Agathion's Seal - Chorong">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>

@@ -2551,7 +2551,7 @@
 		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="1"/>
-		<set name="collision_height" value="32.5"/>
+		<set name="collision_height" value="20.5"/>
 		<set name="collision_radius" value="31.0"/>
 		<set name="level" value="85"/>
 		<set name="rewardExp" value="0"/>

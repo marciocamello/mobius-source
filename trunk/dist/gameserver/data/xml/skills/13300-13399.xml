@@ -350,6 +350,17 @@
 			<add order="0x40" stat="talismansLimit" val="4"/>
 		</for>
 	</skill>
+	<skill id="13377" levels="1" name="Scroll: XP">
+		<set name="itemConsumeId" val="34742" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="isHandler" val="true" />
+		<set name="reuseDelay" val="5000"/>
+		<set name="power" val="500000000" />
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RESTORATION"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
 	<skill id="13378" levels="1" name="Refined Istina's Bracelet">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
