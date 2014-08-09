@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="37500" name="Water Stone" add_name="Event">
+		<set name="icon" value="icon.etc_water_stone_i00"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37501" name="Earth Stone" add_name="Event">
+		<set name="icon" value="icon.etc_earth_stone_i00"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37502" name="Wind Stone" add_name="Event">
+		<set name="icon" value="icon.etc_wind_stone_i00"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37503" name="Dark Stone" add_name="Event">
+		<set name="icon" value="icon.etc_unholy_stone_i00"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37504" name="Holy Stone" add_name="Event">
+		<set name="icon" value="icon.etc_holy_stone_i00"/>
+		<set name="weight" value="1"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37505" name="Octavis Crystal">
+		<set name="icon" value="icon.etc_shinecryst_green_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37506" name="Istina Crystal">
+		<set name="icon" value="icon.etc_shinecryst_red_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37519" name="Bottle of Frintezza's Soul">
+		<set name="icon" value="icon.etc_fruit_juice_glass_bottle_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37520" name="Bottle of Baium's Soul">
+		<set name="icon" value="icon.etc_fruit_juice_glass_bottle_i09"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37523" name="Summon Scroll: Bae Kisung">
+		<set name="icon" value="icon.etc_star_scroll_baekisung"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37524" name="Passion Treasure Chest">
+		<set name="icon" value="icon.event_high_oriental_park_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37527" name="Transformation Scroll: Part-time Seller" add_name="One-eyed ParaPara Cat">
+		<set name="icon" value="icon.etc_transform_warrior_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37528" name="Transformation Scroll: Part-time Seller" add_name="Smiling ParaPara Cat">
+		<set name="icon" value="icon.etc_transform_warrior_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37529" name="Transformation Scroll: Part-time Seller" add_name="Charming ParaPara Cat">
+		<set name="icon" value="icon.etc_transform_warrior_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37530" name="Transformation Scroll: Part-time Seller" add_name="Ferocious ParaPara Cat">
+		<set name="icon" value="icon.etc_transform_warrior_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37531" name="Transformation Scroll: Part-time Seller" add_name="Merchant ParaPara Cat">
+		<set name="icon" value="icon.etc_transform_warrior_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37532" name="Lindvior's Egg">
+		<set name="icon" value="icon.etc_ev_lind_egg"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37536" name="Transformation Potion: Santa">
+		<set name="icon" value="icon.etc_lesser_potion_purple_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37537" name="Bae Kisung's Gift Box">
+		<set name="icon" value="icon.event_high_oriental_park_i00"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37538" name="Bae Kisung Agathion Pack">
+		<set name="icon" value="icon.etc_pi_box_wish_pack"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37539" name="Enchant Scroll Pack">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37540" name="Giant's Enchant Scroll Pack">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37541" name="Blessed Enchant Scroll Pack">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37542" name="Summon Scroll: Bae Kisung" add_name="test">
+		<set name="icon" value="icon.etc_star_scroll_baekisung"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37543" name="Frost Squash Nectar">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37544" name="Snowball">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37545" name="Large Snowball">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37546" name="Rudolph's 2012 Gift" add_name="Stage 1">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37547" name="Rudolph's 2012 Gift" add_name="Stage 2">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37548" name="Rudolph's 2012 Gift" add_name="Stage 3">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37549" name="Rudolph's 2012 Gift" add_name="Stage 4">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37550" name="Snowman's Buff">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37551" name="Holiday Gift">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37552" name="Frozen Squash Seed">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37553" name="Frozen Large Squash Seed">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37554" name="Kisung's Cherry Nose Buff Scroll" add_name="Event">
+		<set name="icon" value="icon.etc_star_scroll_baekisung"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="37555" name="Snow Crystal">
+		<set name="icon" value="icon.etc_int_symbol_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+</list>

@@ -1,6 +1,199 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
+	<etcitem id="22900" name="Spellbook: Expand Inventory Lv1">
+		<set name="icon" value="BranchSys3.lcon.g_inven_expan_book"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22901" name="Spellbook: Expand Inventory Lv2">
+		<set name="icon" value="BranchSys3.lcon.g_inven_expan_book"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22902" name="Spellbook: Expand Warehouse Lv1">
+		<set name="icon" value="BranchSys3.lcon.g_storage_expan_book"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22903" name="Spellbook: Expand Warehouse Lv2">
+		<set name="icon" value="BranchSys3.lcon.g_storage_expan_book"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22904" name="Scroll: Enchant Power Shirt">
+		<set name="icon" value="BranchSys2.icon.etc_scroll_of_enchant_shirt_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22905" name="Blessed Scroll: Enchant Power Shirt">
+		<set name="icon" value="BranchSys2.icon.etc_scroll_of_enchant_shirt_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22906" name="XP Rune III (Lv. 1-99) 50% Pack (1-hour)">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22910" name="Wedding Cake Pack">
+		<set name="icon" value="BranchSys2.Icon.br_wedding_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22912" name="Formal Wear Pack (30-day)">
+		<set name="icon" value="BranchSys.icon.br_lucky_bag_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22915" name="Flower Shower">
+		<set name="icon" value="BranchSys2.Icon.br_flower_shower_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22919" name="Fire Stone">
+		<set name="icon" value="icon.etc_fire_stone_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22920" name="Water Stone">
+		<set name="icon" value="icon.etc_water_stone_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22921" name="Earth Stone">
+		<set name="icon" value="icon.etc_earth_stone_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22922" name="Wind Stone">
+		<set name="icon" value="icon.etc_wind_stone_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22923" name="Dark Stone">
+		<set name="icon" value="icon.etc_unholy_stone_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22924" name="Holy Stone">
+		<set name="icon" value="icon.etc_holy_stone_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22925" name="Fire Crystal">
+		<set name="icon" value="icon.etc_fire_crystal_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22926" name="Water Crysta">
+		<set name="icon" value="icon.etc_water_crystal_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22927" name="Earth Crystal">
+		<set name="icon" value="icon.etc_earth_crystal_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22928" name="Wind Crystal">
+		<set name="icon" value="icon.etc_wind_crystal_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22929" name="Dark Crystal">
+		<set name="icon" value="icon.etc_unholy_crystal_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22930" name="Holy Crysta">
+		<set name="icon" value="icon.etc_holy_crystal_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22932" name="Extra Pass - Kartia's Labyrinth Level 85 Solo">
+		<set name="icon" value="icon.etc_ticket_red_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22933" name="Extra Pass - Kartia's Labyrinth Level 90 Solo">
+		<set name="icon" value="icon.etc_ticket_red_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22934" name="Extra Pass - Kartia's Labyrinth Level 95 Solo">
+		<set name="icon" value="icon.etc_ticket_red_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22935" name="Extra Pass - Kartia's Labyrinth Level 85 Party">
+		<set name="icon" value="icon.etc_ticket_red_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22936" name="Extra Pass - Kartia's Labyrinth Level 90 Party">
+		<set name="icon" value="icon.etc_ticket_red_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22937" name="Extra Pass - Kartia's Labyrinth Level 95 Party">
+		<set name="icon" value="icon.etc_ticket_red_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22944" name="XP Rune III (Lv. 1-99) 50%" add_name="1-hour">
+		<set name="icon" value="br_cashtex.item.br_cash_rune_of_exp_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22945" name="Honeymoon Ticket (7-day)" add_name="7-day">
+		<set name="icon" value="BranchSys2.Icon.br_weddin_ticket_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22946" name="Big Wedding Cake">
+		<set name="icon" value="BranchSys2.Icon.br_big_wedding_cake_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22959" name="SP Rune 50%" add_name="1-hour">
+		<set name="icon" value="br_cashtex.item.br_cash_rune_of_sp_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22960" name="XP Rune I (Lv. 1-85) 100%" add_name="1-hour">
+		<set name="icon" value="br_cashtex.item.br_cash_rune_of_feather_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22961" name="XP Rune I (Lv. 1-85) 200%" add_name="1-hour">
+		<set name="icon" value="br_cashtex.item.br_cash_rune_of_feather_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
 	<etcitem id="22966" name="Vitality Maintaining Potion (1-hour)">
 		<set name="icon" value="BranchSys2.br_essence_rose_i00"/>
 		<set name="type" value="OTHER"/>
@@ -13,7 +206,85 @@
 		<set name="tradeable" value="false"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="22980" name="XP Rune I (Lv1-85) 100% Pack (1-hour)">
+	<etcitem id="22967" name="Agathion - Singer and Dancer Pack (30-day)">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22968" name="Mount - Black Bear Pack (30-day)">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22969" name="Black Gem Mask Pack (30-day)">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22970" name="Refined Angel Ring Pack (30-day)">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22971" name="Refined Devil Horn Pack (30-day)">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22972" name="Ruthless Tribe Mask Pack (30-day)">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22973" name="Agathion - Uthanka Pack (30-day)">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22974" name="Agathion - Cheerleader Orodriel Pack (30-day)">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22975" name="Mount - Tame Princess Ant Pack (30-day)">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22976" name="Agathion - Dryad Pack (30-day)">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22977" name="Pink Paper Mask Set Pack (30-day)">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22978" name="Arrow-Pierced Apple Pack (30-day)">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22979" name="SP Rune 50% Pack (1-hour)">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22980" name="XP Rune I (Lv. 1-85) 100% Pack (1-hour)">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -24,5 +295,119 @@
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
 		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="22981" name="XP Rune I (Lv. 1-85) 200% Pack (1-hour)">
+		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22982" name="Lv. 1 STR Symbol - Giant Dye" add_name="STR + 3 / DEX - 2">
+		<set name="icon" value="icon.lv1_1_dye_str"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22983" name="Lv. 1 DEX Symbol - Giant Dye" add_name="DEX + 3 / CON - 2">
+		<set name="icon" value="icon.lv1_1_dye_dex"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22984" name="Lv. 1 CON Symbol - Giant Dye" add_name="	CON + 3 / STR - 2">
+		<set name="icon" value="icon.lv1_1_dye_con"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22985" name="Lv. 1 INT Symbol - Giant Dye" add_name="INT + 3 / WIT - 2">
+		<set name="icon" value="icon.lv1_1_dye_int"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22986" name="Lv. 1 WIT Symbol - Giant Dye" add_name="WIT + 3 / MEN - 2">
+		<set name="icon" value="icon.lv1_1_dye_wit"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22987" name="Lv. 1 MEN Symbol - Giant Dye" add_name="MEN + 3 / INT - 2">
+		<set name="icon" value="icon.lv1_1_dye_men"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22988" name="Lv. 1 STR Symbol - Ancient Dye" add_name="STR + 3 / DEX - 2 / Fire Resistance + 5">
+		<set name="icon" value="icon.lv1_2_dye_str"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22989" name="Lv. 1 DEX Symbol - Ancient Dye" add_name="DEX + 3 / CON - 2 / Earth Resistance + 5">
+		<set name="icon" value="icon.lv1_2_dye_dex"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22990" name="Lv. 1 CON Symbol - Ancient Dye" add_name="CON + 3 / STR - 2 / Dark Attack Resistance + 5">
+		<set name="icon" value="icon.lv1_2_dye_con"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22991" name="Lv. 1 INT Symbol - Ancient Dye" add_name="INT + 3 / WIT - 2 / Water Resistance + 5">
+		<set name="icon" value="icon.lv1_2_dye_int"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22992" name="Lv. 1 WIT Symbol - Ancient Dye" add_name="WIT + 3 / MEN - 2 / Wind Resistance + 5">
+		<set name="icon" value="icon.lv1_2_dye_wit"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22993" name="Lv. 1 MEN Symbol - Ancient Dye" add_name="MEN + 3 / INT - 2 / Holy Attack Resistance + 5">
+		<set name="icon" value="icon.lv1_2_dye_men"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22994" name="Lv. 1 STR Symbol - Legendary Dye" add_name="STR + 3 / DEX - 1 / Fire Resistance + 5">
+		<set name="icon" value="icon.lv1_3_dye_str"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22995" name="Lv. 1 DEX Symbol - Legendary Dye" add_name="DEX + 3 / CON - 1 / Earth Resistance + 5">
+		<set name="icon" value="icon.lv1_3_dye_dex"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22996" name="Lv. 1 CON Symbol - Legendary Dye" add_name="CON + 3 / STR - 1 / Dark Attack Resistance + 5">
+		<set name="icon" value="icon.lv1_3_dye_con"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22997" name="Lv. 1 INT Symbol - Legendary Dye" add_name="INT + 3 / WIT - 1 / Water Resistance + 5">
+		<set name="icon" value="icon.lv1_3_dye_int"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22998" name="Lv. 1 WIT Symbol - Legendary Dye" add_name="WIT + 3 / MEN - 1 / Wind Resistance + 5">
+		<set name="icon" value="icon.lv1_3_dye_wit"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22999" name="Lv. 1 MEN Symbol - Legendary Dye" add_name="MEN + 3 / INT - 1 / Holy Attack Resistance + 5">
+		<set name="icon" value="icon.lv1_3_dye_men"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
 	</etcitem>
 </list>

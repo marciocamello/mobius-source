@@ -18,4 +18,111 @@
 			</not>
 		</cond>
 	</etcitem>
+	<etcitem id="22883" name="Vitality Replenishing Scroll">
+		<set name="icon" value="BranchSys3.lcon.g_scrl_vitality_point_up"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22884" name="Vitality Replenishing High-grade Scroll">
+		<set name="icon" value="BranchSys3.lcon.g_scrl_vitality_point_up_2"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22885" name="Vitality Replenishing Top-grade Scroll">
+		<set name="icon" value="BranchSys3.lcon.g_scrl_vitality_point_up_3"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22886" name="Uthanka's Ring">
+		<set name="icon" value="BranchSys3.lcon.g_ring_of_uthanka"/>
+		<set name="weight" value="150"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22888" name="Mysterious Soulshot (R-grade)">
+		<set name="icon" value="icon.soulshot_r_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="R"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22889" name="Mysterious Spiritshot (R-grade)">
+		<set name="icon" value="icon.blessed_spiritshot_r_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="R"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22890" name="Mysterious Soulshot Large Pack (R-grade) 10000">
+		<set name="icon" value="icon.br_cash_pack_of_soulshot_r_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22891" name="Mysterious Soulshot Pack (R-grade) 5000 ??.">
+		<set name="icon" value="icon.br_cash_pack_of_soulshot_r_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22892" name="Mysterious Spiritshot Large Pack (R-grade) 10 000 ??.">
+		<set name="icon" value="icon.br_cash_pack_of_spiritshot_r_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22893" name="Mysterious Spiritshot Pack (R-grade) 5000 ??.">
+		<set name="icon" value="icon.br_cash_pack_of_spiritshot_r_i00"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22894" name="Letter - W">
+		<set name="icon" value="icon.etc_alphabet_w_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22895" name="Ancient Kartia's Labyrinth Chronicle">
+		<set name="icon" value="BranchSys3.lcon.g_record_of_cartia"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22896" name="Ancient Kartia's Labyrinth Origins" add_name="Stage 1">
+		<set name="icon" value="BranchSys3.lcon.g_scroll_of_cartia_85"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22897" name="Ancient Kartia's Labyrinth Origins" add_name="Stage 2">
+		<set name="icon" value="BranchSys3.lcon.g_scroll_of_cartia_90"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22898" name="Ancient Kartia's Labyrinth Origins" add_name="Stage 3">
+		<set name="icon" value="BranchSys3.lcon.g_scroll_of_cartia_95"/>
+		<set name="weight" value="120"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="22899" name="Vitality Decrease Scroll">
+		<set name="icon" value="icon.etc_penalty_recovery_i02"/>
+		<set name="weight" value="30"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
 </list>

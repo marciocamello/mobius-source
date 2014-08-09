@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<weapon id="37300" name="Steel Requiem Caster (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.weapon_anatrian_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="360"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="348"/>
+			<add stat="mAtk" order="0x10" value="252"/>
+			<set stat="atkBaseSpeed" order="0x08" value="379"/>
+			<set stat="baseCrit" order="0x08" value="60"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="37301" name="Steel Requiem Buster (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.weapon_kaynon_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="510"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="348"/>
+			<add stat="mAtk" order="0x10" value="252"/>
+			<set stat="atkBaseSpeed" order="0x08" value="379"/>
+			<set stat="baseCrit" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="37302" name="Steel Requiem Stormer (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.weapon_soryu_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="POLE"/>
+		<set name="weight" value="670"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="435"/>
+			<add stat="mAtk" order="0x10" value="189"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="80"/>
+			<add stat="accCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="37303" name="Steel Requiem Slasher (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.weapon_polion_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="580"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="529"/>
+			<add stat="mAtk" order="0x10" value="189"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="37304" name="Steel Requiem Dualsword (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DUAL"/>
+		<set name="weight" value="510"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="529"/>
+			<add stat="mAtk" order="0x10" value="189"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="37305" name="Steel Requiem Fighter (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.weapon_fantasma_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="weight" value="520"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="5"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="529"/>
+			<add stat="mAtk" order="0x10" value="189"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="60"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="37306" name="Steel Requiem Dual Blunt (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.weapon_r_dualblunt_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DUALBLUNT"/>
+		<set name="weight" value="580"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="529"/>
+			<add stat="mAtk" order="0x10" value="189"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="60"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="37307" name="Steel Requiem Shaper (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.weapon_aspeda_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DAGGER"/>
+		<set name="weight" value="510"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="5"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="380"/>
+			<add stat="mAtk" order="0x10" value="189"/>
+			<set stat="atkBaseSpeed" order="0x08" value="433"/>
+			<set stat="baseCrit" order="0x08" value="120"/>
+			<add stat="accCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="37308" name="Steel Requiem Dual Dagger (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.weapon_r_dualdagger_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DUALDAGGER"/>
+		<set name="weight" value="680"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="435"/>
+			<add stat="mAtk" order="0x10" value="189"/>
+			<set stat="atkBaseSpeed" order="0x08" value="433"/>
+			<set stat="baseCrit" order="0x08" value="120"/>
+			<add stat="accCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="37309" name="Steel Requiem Thrower (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.weapon_grabathus_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BOW"/>
+		<set name="weight" value="510"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="5"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="856"/>
+			<add stat="mAtk" order="0x10" value="189"/>
+			<set stat="atkBaseSpeed" order="0x08" value="293"/>
+			<set stat="baseCrit" order="0x08" value="120"/>
+			<add stat="accCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="37310" name="Steel Requiem Shooter (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.weapon_shyayaka_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="530"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="5"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="771"/>
+			<add stat="mAtk" order="0x10" value="189"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="120"/>
+			<add stat="accCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="37311" name="Steel Requiem Avenger (30-day)" >
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.weapon_batista_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="580"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="435"/>
+			<add stat="mAtk" order="0x10" value="189"/>
+			<set stat="atkBaseSpeed" order="0x08" value="379"/>
+			<set stat="baseCrit" order="0x08" value="60"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="37312" name="Steel Requiem Retributer (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.weapon_grangkaz_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="360"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="423"/>
+			<add stat="mAtk" order="0x10" value="278"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="60"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="37376" name="Steel Draconic Bow (60-day)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.weapon_draconic_bow_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BOW"/>
+		<set name="weight" value="550"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="5"/>
+		<set name="mp_consume" value="6"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="581"/>
+			<add stat="mAtk" order="0x10" value="132"/>
+			<set stat="atkBaseSpeed" order="0x08" value="293"/>
+			<set stat="baseCrit" order="0x08" value="120"/>
+			<add stat="accCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="37377" name="Steel Dynasty Bow (60-day)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.weapon_dynasty_bow_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BOW"/>
+		<set name="weight" value="510"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="5"/>
+		<set name="mp_consume" value="6"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="654"/>
+			<add stat="mAtk" order="0x10" value="151"/>
+			<set stat="atkBaseSpeed" order="0x08" value="293"/>
+			<set stat="baseCrit" order="0x08" value="120"/>
+			<add stat="accCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+</list>

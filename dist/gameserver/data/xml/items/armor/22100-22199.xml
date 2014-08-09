@@ -78,7 +78,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22159" name="Pirate's eyepatch">
+	<armor id="22159" name="Pirate's Eyepatch">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_eye_bandage_i00"/>
@@ -169,7 +169,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22166" name="Noblewoman's hairpin">
+	<armor id="22166" name="Noblewoman's Hairpin">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_hairpin_i00"/>
@@ -399,8 +399,11 @@
 		<set name="type" value="NONE"/>
 		<set name="weight" value="30"/>
 		<equip>
-			<slot id="NONE"/>
+			<slot id="RIGHT_BRACELET"/>
 		</equip>
-		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="ex_type" value="BRACELET"/>
+		<skills>
+			<skill id="21258" level="1"/>
+		</skills>
 	</armor>
 </list>

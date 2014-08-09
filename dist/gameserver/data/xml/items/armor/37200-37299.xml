@@ -1,0 +1,571 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="37200" name="Steel Dynasty Shoes (60-day)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.armor_t93_b_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="360"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="61"/>
+		</for>
+	</armor>
+	<armor id="37201" name="Steel Dynasty Sigil (60-day)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.dynasty_sigil_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="310"/>
+		<equip>
+			<slot id="NONE"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="15"/>
+			<add stat="rEvas" order="0x10" value="-8"/>
+		</for>
+	</armor>
+	<armor id="37202" name="Steel Dynasty Leather Armor (60-day)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.armor_t92_u_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="1390"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="170"/>
+		</for>
+	</armor>
+	<armor id="37203" name="Steel Dynasty Leather Leggings (60-day)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.armor_t92_l_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="460"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="106"/>
+		</for>
+	</armor>
+	<armor id="37204" name="Steel Dynasty Leather Helmet (60-day)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="180"/>
+		<equip>
+			<slot id="HEAD"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="92"/>
+		</for>
+	</armor>
+	<armor id="37205" name="Steel Dynasty Leather Gloves (60-day)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.armor_t92_g_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="170"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="61"/>
+		</for>
+	</armor>
+	<armor id="37206" name="Steel Dynasty Leather Boots (60-day)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.armor_t92_b_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="360"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="61"/>
+		</for>
+	</armor>
+	<armor id="37207" name="Steel Immortal Breastplate (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.armor_t501_u_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="2510"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="309"/>
+		</for>
+	</armor>
+	<armor id="37208" name="Steel Immortal Gaiters (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.armor_t501_l_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="1060"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="193"/>
+		</for>
+	</armor>
+	<armor id="37209" name="Steel Immortal Helmet (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.armor_helmet_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="180"/>
+		<equip>
+			<slot id="HEAD"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="116"/>
+		</for>
+	</armor>
+	<armor id="37210" name="Steel Immortal Gauntlets (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.armor_t501_g_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="170"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="77"/>
+		</for>
+	</armor>
+	<armor id="37211" name="Steel Immortal Boots (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.armor_t501_b_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="360"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="77"/>
+		</for>
+	</armor>
+	<armor id="37213" name="Steel Immortal Leather Armor (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.armor_t502_u_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="1380"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="247"/>
+			<add stat="rEvas" order="0x10" value="5"/>
+			<add stat="mEvas" order="0x10" value="5"/>
+		</for>
+	</armor>
+	<armor id="37214" name="Steel Immortal Leather Leggings (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.armor_t502_l_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="440"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="154"/>
+			<add stat="rEvas" order="0x10" value="3"/>
+			<add stat="mEvas" order="0x10" value="3"/>
+		</for>
+	</armor>
+	<armor id="37215" name="Steel Immortal Leather Helmet (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="180"/>
+		<equip>
+			<slot id="HEAD"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="116"/>
+		</for>
+	</armor>
+	<armor id="37216" name="Steel Immortal Leather Gloves (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.armor_t502_g_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="170"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="77"/>
+		</for>
+	</armor>
+	<armor id="37217" name="Steel Immortal Leather Boots (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.armor_t502_b_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="360"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="77"/>
+		</for>
+	</armor>
+	<armor id="37218" name="Steel Immortal Tunic (30-day)	">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.armor_t503_u_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="580"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="169"/>
+			<add stat="mDef" order="0x10" value="36"/>
+			<add stat="maxMp" order="0x60" value="649"/>
+		</for>
+	</armor>
+	<armor id="37219" name="Steel Immortal Stockings (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.armor_t503_l_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="MAGIC"/>
+		<set name="weight" value="280"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="106"/>
+			<add stat="mDef" order="0x10" value="24"/>
+			<add stat="maxMp" order="0x60" value="427"/>
+		</for>
+	</armor>
+	<armor id="37220" name="Steel Immortal Circlet (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.armor_circlet_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="180"/>
+		<equip>
+			<slot id="HEAD"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="116"/>
+		</for>
+	</armor>
+	<armor id="37221" name="Steel Immortal Gloves (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.armor_t503_g_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="170"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="77"/>
+		</for>
+	</armor>
+	<armor id="37222" name="Steel Immortal Shoes (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.armor_t503_b_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="360"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="77"/>
+		</for>
+	</armor>
+	<armor id="37223" name="Steel Immortal Sigil (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.weapon_karyen_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="310"/>
+		<equip>
+			<slot id="NONE"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="38"/>
+			<add stat="rEvas" order="0x10" value="-8"/>
+		</for>
+	</armor>
+	<armor id="37224" name="Steel Moonstone Earring (60-day)">
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.accessary_moonstone_earing_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="50"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="39"/>
+		</for>
+	</armor>
+	<armor id="37225" name="Steel Aquastone Necklace (60-day)">
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.accessary_aquastone_necklace_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="50"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="52"/>
+		</for>
+	</armor>
+	<armor id="37226" name="Steel Aquastone Ring (60-day)">
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.accessary_aquastone_ring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="50"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="26"/>
+		</for>
+	</armor>
+	<armor id="37227" name="Steel Adamantite Earring (60-day)">
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.accessary_adamantite_earing_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="50"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="51"/>
+		</for>
+	</armor>
+	<armor id="37228" name="Steel Adamantite Necklace (60-day)">
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.accessary_adamantite_necklace_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="50"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="68"/>
+		</for>
+	</armor>
+	<armor id="37229" name="Steel Adamantite Ring (60-day)">
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.accessary_adamantite_ring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="50"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="34"/>
+		</for>
+	</armor>
+	<armor id="37230" name="Steel Phoenix Earring (60-day)">
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.accessary_phoenixs_earing_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="50"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="60"/>
+			<add stat="maxMp" order="0x60" value="20"/>
+		</for>
+	</armor>
+	<armor id="37231" name="Steel Phoenix Necklace (60-day)">
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.accessary_phoenixs_necklace_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="50"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="80"/>
+			<add stat="maxMp" order="0x60" value="26"/>
+		</for>
+	</armor>
+	<armor id="37232" name="Steel Phoenix Ring (60-day)">
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.accessary_phoenixs_ring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="50"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="40"/>
+			<add stat="maxMp" order="0x60" value="13"/>
+		</for>
+	</armor>
+	<armor id="37233" name="Steel Tateossian Earring (60-day)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.accessory_tateossian_earring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="50"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="71"/>
+			<add stat="maxMp" order="0x60" value="31"/>
+		</for>
+	</armor>
+	<armor id="37234" name="Steel Tateossian Necklace (60-day)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.accessory_tateossian_necklace_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="50"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="95"/>
+			<add stat="maxMp" order="0x60" value="42"/>
+		</for>
+	</armor>
+	<armor id="37235" name="Steel Tateossian Ring (60-day)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.accessory_tateossian_ring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="50"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="48"/>
+			<add stat="maxMp" order="0x60" value="21"/>
+		</for>
+	</armor>
+	<armor id="37236" name="Steel Dynasty Earring (60-day)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.accessary_dynasty_earing_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="50"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="79"/>
+			<add stat="maxMp" order="0x60" value="35"/>
+		</for>
+	</armor>
+	<armor id="37237" name="Steel Dynasty Necklace (60-day)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.accessary_dynasty_necklace_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="50"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="106"/>
+			<add stat="maxMp" order="0x60" value="46"/>
+		</for>
+	</armor>
+	<armor id="37238" name="Steel Dynasty Ring (60-day)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.accessary_dynasty_ring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="50"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="60"/>
+			<add stat="maxMp" order="0x60" value="23"/>
+		</for>
+	</armor>
+	<armor id="37239" name="Steel Immortal Earring (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.r1_earring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="50"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="94"/>
+			<add stat="maxMp" order="0x60" value="40"/>
+		</for>
+	</armor>
+	<armor id="37240" name="Steel Immortal Necklace (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.r1_necklace_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="50"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="126"/>
+			<add stat="maxMp" order="0x60" value="53"/>
+		</for>
+	</armor>
+	<armor id="37241" name="Steel Immortal Ring (30-day)">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.r1_ring_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="50"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="63"/>
+			<add stat="maxMp" order="0x60" value="26"/>
+		</for>
+	</armor>
+</list>

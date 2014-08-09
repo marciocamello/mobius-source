@@ -85,7 +85,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-		<etcitem id="35930" name="Healing Potion of Chaos">
+	<etcitem id="35930" name="Healing Potion of Chaos">
 		<set name="icon" value="icon.etc_potion_gold_i00"/>
 		<set name="weight" value="10"/>
 		<set name="stackable" value="true"/>

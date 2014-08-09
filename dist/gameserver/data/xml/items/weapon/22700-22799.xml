@@ -326,4 +326,561 @@
 			<enchant stat="pDef" order="0x0C" value="0"/>
 		</for>
 	</weapon>
+	<weapon id="22775" name="Drake Maul">
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_drake_maul_i00"/>
+		<set name="price" value="205668000"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1740"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="532"/>
+			<add stat="mAtk" order="0x10" value="192"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22776" name="Drake Maul" add_name="HP Drain">
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_drake_maul_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1740"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="532"/>
+			<add stat="mAtk" order="0x10" value="192"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22777" name="Drake Maul" add_name="HP Regeneration">
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_drake_maul_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1740"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="532"/>
+			<add stat="mAtk" order="0x10" value="192"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22778" name="Drake Maul" add_name="Health">
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_drake_maul_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1740"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="532"/>
+			<add stat="mAtk" order="0x10" value="192"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22779" name="Drake Maul {for adults}">
+		<set name="is_pvp" value="true"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_drake_maul_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1740"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="532"/>
+			<add stat="mAtk" order="0x10" value="192"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22780" name="Drake Maul {for adults}" add_name="HP Drain">
+		<set name="is_pvp" value="true"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_drake_maul_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1740"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="532"/>
+			<add stat="mAtk" order="0x10" value="192"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22781" name="Drake Maul {for adults}" add_name="HP Regeneration">
+		<set name="is_pvp" value="true"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_drake_maul_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1740"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="532"/>
+			<add stat="mAtk" order="0x10" value="192"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22782" name="Drake Maul {for adults}" add_name="Health">
+		<set name="is_pvp" value="true"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_drake_maul_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1740"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="532"/>
+			<add stat="mAtk" order="0x10" value="192"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22783" name="Drake Maul - Evil Spirit">
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_drake_maul_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1740"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="532"/>
+			<add stat="mAtk" order="0x10" value="192"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22784" name="Drake Maul - Evil Spirit" add_name="HP Drain">
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_drake_maul_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1740"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="532"/>
+			<add stat="mAtk" order="0x10" value="192"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22785" name="Drake Maul - Evil Spirit" add_name="HP Regeneration">
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_drake_maul_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1740"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="532"/>
+			<add stat="mAtk" order="0x10" value="192"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22786" name="Drake Maul - Evil Spirit" add_name="Health">
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_drake_maul_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1740"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="532"/>
+			<add stat="mAtk" order="0x10" value="192"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22787" name="Drake Maul - Evil Spirit {for adults}">
+		<set name="is_pvp" value="true"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_drake_maul_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1740"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="532"/>
+			<add stat="mAtk" order="0x10" value="192"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22788" name="Drake Maul - Evil Spirit {for adults}" add_name="HP Drain">
+		<set name="is_pvp" value="true"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_drake_maul_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1740"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="532"/>
+			<add stat="mAtk" order="0x10" value="192"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22789" name="Drake Maul - Evil Spirit {for adults}" add_name="HP Regeneration">
+		<set name="is_pvp" value="true"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_drake_maul_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1740"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="532"/>
+			<add stat="mAtk" order="0x10" value="192"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22790" name="Drake Maul - Evil Spirit {for adults}" add_name="Health">
+		<set name="is_pvp" value="true"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_drake_maul_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1740"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="532"/>
+			<add stat="mAtk" order="0x10" value="192"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22791" name="Freya's Staff">
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_glacierin_i00"/>
+		<set name="price" value="205668000"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1080"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="426"/>
+			<add stat="mAtk" order="0x10" value="281"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22792" name="Freya's Staff" add_name="Magic Hold">
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_glacierin_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1080"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="426"/>
+			<add stat="mAtk" order="0x10" value="281"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22793" name="Freya's Staff" add_name="Empower">
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_glacierin_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1080"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="426"/>
+			<add stat="mAtk" order="0x10" value="281"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22794" name="Freya's Staff" add_name="MP Regeneration">
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_glacierin_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1080"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="426"/>
+			<add stat="mAtk" order="0x10" value="281"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22795" name="Freya's Staff {for adults}">
+		<set name="is_magic_weapon" value="true"/>
+		<set name="is_pvp" value="true"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_glacierin_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1080"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="426"/>
+			<add stat="mAtk" order="0x10" value="281"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22796" name="Freya's Staff {for adults}" add_name="Magic Hold">
+		<set name="is_magic_weapon" value="true"/>
+		<set name="is_pvp" value="true"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_glacierin_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1080"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="426"/>
+			<add stat="mAtk" order="0x10" value="281"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22797" name="Freya's Staff {for adults}" add_name="Empower">
+		<set name="is_magic_weapon" value="true"/>
+		<set name="is_pvp" value="true"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_glacierin_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1080"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="426"/>
+			<add stat="mAtk" order="0x10" value="281"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22798" name="Freya's Staff {for adults}" add_name="MP Regeneration">
+		<set name="is_magic_weapon" value="true"/>
+		<set name="is_pvp" value="true"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_glacierin_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1080"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="426"/>
+			<add stat="mAtk" order="0x10" value="281"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="22799" name="Freya's Staff - Cleverness">
+		<set name="is_magic_weapon" value="true"/>
+		<set name="crystal_type" value="S80"/>
+		<set name="icon" value="BranchSys3.Icon.g_glacierin_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="1080"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="426"/>
+			<add stat="mAtk" order="0x10" value="281"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
 </list>

@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="23202" name="Alien Mask">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.ev_shiny_alien_mask_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="23203" name="Reanimated Corpse Mask">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.ev_shiny_frankenstein_mask_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="23204" name="Shriek Mask">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.ev_shiny_scream_mask_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="23205" name="Red Devil Mask">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.ev_shiny_doccabi_mask_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="23206" name="Mummy Mask">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.ev_shiny_mummy_mask_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="23226" name="Seductive Swimsuit">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_co_swimsuit_event_03"/>
+		<set name="price" value="0"/>
+		<set name="type" value="HEAVY"/>
+		<equip>
+			<slot id="NONE"/>
+		</equip>
+	</armor>
+	<armor id="23231" name="Aria's Warrior Helmet">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys2.icon.br_close_helmet_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<armor id="23237" name="Agathion - Pirate Captain Uthanka">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.icon.br_aga_uthanka_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="NONE"/>
+		</equip>
+	</armor>
+	<armor id="23240" name="Pa'agrio's Shirt">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.pi_shirt_of_wolf_2nd_fire"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="130"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+</list>

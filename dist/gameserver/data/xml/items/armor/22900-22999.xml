@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="22907" name="NoItemName">
+	<armor id="22907" name="Straw Hat">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_straw_hat_i00"/>
 		<set name="type" value="NONE"/>
@@ -11,7 +11,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22908" name="NoItemName">
+	<armor id="22908" name="Scar">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.Accessary_scar_i00"/>
 		<set name="type" value="NONE"/>
@@ -21,7 +21,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22909" name="NoItemName">
+	<armor id="22909" name="Ruthless Tribe Mask	">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_mask_i00"/>
 		<set name="type" value="NONE"/>
@@ -31,13 +31,13 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22911" name="NoItemName">
+	<armor id="22911" name="Formal Wear" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.armor_t2000_ul_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="0"/>
 	</armor>
-	<armor id="22913" name="NoItemName">
+	<armor id="22913" name="Wedding Ring - Male">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.Icon.br_wedding_ring_m_i00"/>
 		<set name="type" value="NONE"/>
@@ -54,7 +54,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="22914" name="NoItemName">
+	<armor id="22914" name="Wedding Ring - Female">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.Icon.br_wedding_ring_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -71,7 +71,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="22917" name="NoItemName">
+	<armor id="22917" name="Refined Jester Hat">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_jester_cap_2_i00"/>
 		<set name="type" value="NONE"/>
@@ -81,7 +81,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22918" name="NoItemName">
+	<armor id="22918" name="Assassin's Bamboo Hat">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_Bamboo_Hat_i00"/>
 		<set name="type" value="NONE"/>
@@ -91,7 +91,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22931" name="NoItemName">
+	<armor id="22931" name="Warrior's Helmet">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_close_helmet_i00"/>
 		<set name="type" value="NONE"/>
@@ -101,67 +101,67 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22932" name="NoItemName">
+	<armor id="22938" name="Castle Siege Equipment Repair Tool - Aden Castle">
 		<set name="crystal_type" value="NONE"/>
-		<set name="icon" value="icon.etc_ticket_red_i00"/>
+		<set name="icon" value="icon.weapon_iron_hammer_i00"/>
+		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="0"/>
+		<set name="weight" value="30"/>
 		<equip>
 			<slot id="NONE"/>
 		</equip>
-		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="22933" name="NoItemName">
+	<armor id="22939" name="Castle Siege Equipment Repair Tool - Rune Castle">
 		<set name="crystal_type" value="NONE"/>
-		<set name="icon" value="icon.etc_ticket_red_i00"/>
+		<set name="icon" value="icon.weapon_iron_hammer_i00"/>
+		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="0"/>
+		<set name="weight" value="30"/>
 		<equip>
 			<slot id="NONE"/>
 		</equip>
-		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="22934" name="NoItemName">
+	<armor id="22940" name="Corrosive Chemical Container - Aden Castle">
 		<set name="crystal_type" value="NONE"/>
-		<set name="icon" value="icon.etc_ticket_red_i00"/>
+		<set name="icon" value="icon.empty_bottle"/>
+		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="0"/>
+		<set name="weight" value="30"/>
 		<equip>
 			<slot id="NONE"/>
 		</equip>
-		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="22935" name="NoItemName">
+	<armor id="22941" name="Corrosive Chemical Container - Rune Castle">
 		<set name="crystal_type" value="NONE"/>
-		<set name="icon" value="icon.etc_ticket_red_i00"/>
+		<set name="icon" value="icon.empty_bottle"/>
+		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="0"/>
+		<set name="weight" value="30"/>
 		<equip>
 			<slot id="NONE"/>
 		</equip>
-		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="22936" name="NoItemName">
+	<armor id="22942" name="Engraving Activation Stone - Aden Castle">
 		<set name="crystal_type" value="NONE"/>
-		<set name="icon" value="icon.etc_ticket_red_i00"/>
+		<set name="icon" value="icon.etc_raid_f_i00"/>
+		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="0"/>
+		<set name="weight" value="30"/>
 		<equip>
 			<slot id="NONE"/>
 		</equip>
-		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="22937" name="NoItemName">
+	<armor id="22943" name="Engraving Activation Stone - Rune Castle">
 		<set name="crystal_type" value="NONE"/>
-		<set name="icon" value="icon.etc_ticket_red_i00"/>
+		<set name="icon" value="icon.etc_raid_f_i00"/>
+		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="0"/>
+		<set name="weight" value="30"/>
 		<equip>
 			<slot id="NONE"/>
 		</equip>
-		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="22947" name="NoItemName">
+	<armor id="22947" name="Agathion - Singer and Dancer" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_singer_dancer_i00"/>
 		<set name="type" value="NONE"/>
@@ -171,7 +171,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="22948" name="NoItemName">
+	<armor id="22948" name="Mount - Black Bear" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys3.Icon.g_black_bear_i00"/>
 		<set name="type" value="NONE"/>
@@ -181,7 +181,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="22949" name="NoItemName">
+	<armor id="22949" name="Black Gem Mask" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_black_gem_mask_i00"/>
 		<set name="type" value="NONE"/>
@@ -191,7 +191,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22950" name="NoItemName">
+	<armor id="22950" name="Refined Angel Ring" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_angel_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -201,7 +201,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22951" name="NoItemName">
+	<armor id="22951" name="Refined Devil Horn" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_devil_horn_i00"/>
 		<set name="type" value="NONE"/>
@@ -211,7 +211,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22952" name="NoItemName">
+	<armor id="22952" name="Ruthless Tribe Mask" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_mask_i00"/>
 		<set name="type" value="NONE"/>
@@ -221,7 +221,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22953" name="NoItemName">
+	<armor id="22953" name="Agathion - Uthanka" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_aga_uthanka_i00"/>
 		<set name="type" value="NONE"/>
@@ -231,7 +231,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="22954" name="NoItemName">
+	<armor id="22954" name="Agathion - Cheerleader Orodrie" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_cheer_FElf_i00"/>
 		<set name="type" value="NONE"/>
@@ -241,7 +241,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="22955" name="NoItemName">
+	<armor id="22955" name="Mount - Tame Princess Ant" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys3.Icon.g_ant_princess_i00"/>
 		<set name="type" value="NONE"/>
@@ -251,7 +251,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="22956" name="NoItemName">
+	<armor id="22956" name="Agathion - Dryad" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_aga_dryad_i00"/>
 		<set name="type" value="NONE"/>
@@ -261,7 +261,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="22957" name="NoItemName">
+	<armor id="22957" name="Pink Paper Mask Set" add_name="Blessed Soul (30-day)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_party_hat_mask_i00"/>
 		<set name="type" value="NONE"/>
@@ -271,7 +271,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22958" name="NoItemName">
+	<armor id="22958" name="Arrow-Pierced Apple" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_arrow_apple_i00"/>
 		<set name="type" value="NONE"/>
@@ -281,7 +281,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22962" name="NoItemName">
+	<armor id="22962" name="Fancy Flower Hat">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon2.pi_flowerhat_for_lady"/>
 		<set name="type" value="NONE"/>
@@ -291,7 +291,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22963" name="NoItemName">
+	<armor id="22963" name="Shiny Platform Summon Bracelet">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.Icon.br_shiny_platform_i00"/>
 		<set name="type" value="NONE"/>
@@ -301,7 +301,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="22964" name="NoItemName">
+	<armor id="22964" name="Pink Paper Mask Set">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_party_hat_mask_i00"/>
 		<set name="type" value="NONE"/>
@@ -311,7 +311,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22965" name="NoItemName">
+	<armor id="22965" name="Arrow-Pierced Apple">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_arrow_apple_i00"/>
 		<set name="type" value="NONE"/>
