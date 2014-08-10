@@ -384,44 +384,132 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="19080" levels="1" name="Sigel Ixion">
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="619;1"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="npcId" val="19048"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect name="Transformation" time="300" val="508" count="1"/>
+		</for>
 	</skill>
 	<skill id="19081" levels="1" name="Tyrr Ixion">
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="619;1"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="npcId" val="19050"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect name="Transformation" count="1" time="300" val="510"/>
+		</for>
 	</skill>
 	<skill id="19082" levels="1" name="Othell Ixion">
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="619;1"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="npcId" val="19051"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect name="Transformation" count="1" time="300" val="511"/>
+		</for>
 	</skill>
 	<skill id="19083" levels="1" name="Yul Ixion">
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="619;1"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="npcId" val="19049"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect name="Transformation" count="1" time="300" val="512"/>
+		</for>
 	</skill>
 	<skill id="19084" levels="1" name="Feoh Ixion">
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="619;1"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="npcId" val="19052"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect name="Transformation" count="1" time="300" val="513"/>
+		</for>
 	</skill>
 	<skill id="19085" levels="1" name="Iss Ixion">
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="619;1"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="npcId" val="19053"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect name="Transformation" count="1" time="300" val="514"/>
+		</for>
 	</skill>
 	<skill id="19086" levels="1" name="Wynn Ixion">
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="619;1"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="npcId" val="19054"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect name="Transformation" count="1" time="300" val="515"/>
+		</for>
 	</skill>
 	<skill id="19087" levels="1" name="Aeore Ixion">
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="addSkills" val="619;1"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="npcId" val="19055"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect name="Transformation" count="1" time="300" val="516"/>
+		</for>
 	</skill>
 	<skill id="19088" levels="4" name="Summon Siege Golem">
 		<table name="#npcId">15054 15055 15056 15057</table>
