@@ -77,7 +77,6 @@ import lineage2.gameserver.model.items.etcitems.LifeStoneManager;
 import lineage2.gameserver.network.GameClient;
 import lineage2.gameserver.network.GamePacketHandler;
 import lineage2.gameserver.network.loginservercon.LoginServerCommunication;
-import lineage2.gameserver.network.telnet.TelnetServer;
 import lineage2.gameserver.scripts.Scripts;
 import lineage2.gameserver.tables.AttributeDamageResistTable;
 import lineage2.gameserver.tables.AugmentationData;
@@ -134,7 +133,6 @@ public class GameServer
 	private static GameServer _instance;
 	private final SelectorThread<GameClient> _selectorThreads[];
 	private final Version version;
-	private TelnetServer statusServer;
 	private final GameServerListenerList _listeners;
 	private final int _serverStarted;
 	
@@ -316,15 +314,6 @@ public class GameServer
 		}
 		
 		getListeners().onStart();
-		
-		if (Config.IS_TELNET_ENABLED)
-		{
-			statusServer = new TelnetServer();
-		}
-		else
-		{
-			_log.info("Telnet server is currently disabled.");
-		}
 		_log.info("=================================================");
 		String memUsage = new StringBuilder().append(StatsUtils.getMemUsage()).toString();
 		
@@ -438,14 +427,5 @@ public class GameServer
 	public Version getVersion()
 	{
 		return version;
-	}
-	
-	/**
-	 * Method getStatusServer.
-	 * @return TelnetServer
-	 */
-	public TelnetServer getStatusServer()
-	{
-		return statusServer;
 	}
 }
