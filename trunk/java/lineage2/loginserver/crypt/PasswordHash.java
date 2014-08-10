@@ -12,8 +12,8 @@
  */
 package lineage2.loginserver.crypt;
 
-import jonelo.jacksum.JacksumAPI;
-import jonelo.jacksum.algorithm.AbstractChecksum;
+import java.security.MessageDigest;
+import java.util.Base64;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -63,9 +63,9 @@ public class PasswordHash
 	 */
 	public String encrypt(String password) throws Exception
 	{
-		AbstractChecksum checksum = JacksumAPI.getChecksumInstance(name);
-		checksum.setEncoding("BASE64");
-		checksum.update(password.getBytes());
-		return checksum.format("#CHECKSUM");
+		MessageDigest checksum = MessageDigest.getInstance(name);
+		byte[] raw = password.getBytes("UTF-8");
+		raw = checksum.digest(raw);
+		return Base64.getEncoder().encodeToString(raw);
 	}
 }
