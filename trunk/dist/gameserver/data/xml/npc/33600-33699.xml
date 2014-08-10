@@ -388,16 +388,20 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="KartiaManager"/>
+		<equip>
+			<rhand item_id="8211"/>
+			<lhand item_id="8210"/>
+		</equip>
 		<skills>
 			<skill id="4416" level="14"/>
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33609" name="Adolph" title="Aden Vanguard Captain">
@@ -435,19 +439,30 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Guard"/>
+		<faction name="kartia_support_guard" range="1000" />
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
+			<set name="TargetEnabled" value="false"/>
 		</ai_params>
+		<equip>
+			<rhand item_id="8211"/>
+			<lhand item_id="8210"/>
+		</equip>
 		<skills>
-			<skill id="4416" level="14"/>
+			<skill id="4416" level="14" />
+			<skill id="14840" level="1" />
+			<skill id="14843" level="1" />
+			<skill id="14846" level="1" />
+			<skill id="14849" level="1" />
+			<skill id="14889" level="1" />
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33610" name="Barton" title="Aden Vanguard">
@@ -485,6 +500,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
+		<equip>
+			<rhand item_id="2624"/>
+		</equip>
 		<skills>
 			<skill id="4416" level="17"/>
 		</skills>
@@ -532,19 +550,26 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Guard"/>
+		<faction name="kartia_support_guard" range="1000" />
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
+			<set name="TargetEnabled" value="false"/>
 		</ai_params>
+		<equip>
+			<rhand item_id="2624"/>
+		</equip>
 		<skills>
-			<skill id="4416" level="17"/>
+			<skill id="4416" level="17" />
+			<skill id="14864" level="1" />
+			<skill id="14867" level="1" />
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33612" name="Hayuk" title="Aden Vanguard">
@@ -629,19 +654,26 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Guard"/>
+		<faction name="kartia_support_guard" range="1000" />
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
+			<set name="TargetEnabled" value="false"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="15"/>
+			<skill id="4416" level="15" />
+			<skill id="14870" level="1" />
+			<skill id="14873" level="1" />
+			<skill id="14876" level="1" />
+			<skill id="14879" level="1" />
+			<skill id="14882" level="1" />
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33614" name="Eliyah" title="Aden Vanguard">
@@ -679,9 +711,6 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills>
-			<skill id="4416" level="14"/>
-		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
@@ -726,19 +755,23 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Guard"/>
+		<faction name="kartia_support_guard" range="1000" />
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
+			<set name="TargetEnabled" value="false"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>
+			<skill id="4416" level="14" />
+			<skill id="14883" level="1" />
+			<skill id="14886" level="1" />
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33616" name="Elise" title="Aden Vanguard">
@@ -776,6 +809,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
+		<equip>
+			<rhand item_id="8688"/>
+		</equip>
 		<skills>
 			<skill id="4416" level="14"/>
 		</skills>
@@ -823,24 +859,34 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Guard"/>
+		<faction name="kartia_support_guard" range="1000" />
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
+			<set name="TargetEnabled" value="false"/>
 		</ai_params>
+		<equip>
+			<rhand item_id="8688"/>
+		</equip>
 		<skills>
-			<skill id="4416" level="14"/>
+			<skill id="4416" level="14" />
+			<skill id="14898" level="1" />
+			<skill id="14899" level="1" />
+			<skill id="14902" level="1" />
+			<skill id="14905" level="1" />
+			<skill id="14908" level="1" />
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33618" name="Eliyah's Guardian Spirit" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Guard"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -872,17 +918,20 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Guard" />
+		<faction name="kartia_support_guard" range="1000" />
 		<skills>
-			<skill id="4416" level="7"/>
+			<skill id="4416" level="7" />
+			<skill id="14892" level="1" />
+			<skill id="14895" level="1" />
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="390" />
+			<defence attribute="earth" value="275" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33619" name="Adolph" title="Aden Vanguard Captain">
@@ -920,6 +969,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
+		<equip>
+			<rhand item_id="8211"/>
+			<lhand item_id="8210"/>
+		</equip>
 		<skills>
 			<skill id="4416" level="14"/>
 		</skills>
@@ -967,19 +1020,30 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Guard"/>
+		<faction name="kartia_support_guard" range="1000" />
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
+			<set name="TargetEnabled" value="false"/>
 		</ai_params>
+		<equip>
+			<rhand item_id="8211"/>
+			<lhand item_id="8210"/>
+		</equip>
 		<skills>
-			<skill id="4416" level="14"/>
+			<skill id="4416" level="14" />
+			<skill id="14841" level="1" />
+			<skill id="14844" level="1" />
+			<skill id="14847" level="1" />
+			<skill id="14850" level="1" />
+			<skill id="14890" level="1" />
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33621" name="Barton" title="Aden Vanguard">
@@ -1017,6 +1081,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
+		<equip>
+			<rhand item_id="2624"/>
+		</equip>
 		<skills>
 			<skill id="4416" level="17"/>
 		</skills>
@@ -1064,19 +1131,26 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Guard"/>
+		<faction name="kartia_support_guard" range="1000" />
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
+			<set name="TargetEnabled" value="false"/>
 		</ai_params>
+		<equip>
+			<rhand item_id="2624"/>
+		</equip>
 		<skills>
-			<skill id="4416" level="17"/>
+			<skill id="4416" level="17" />
+			<skill id="14865" level="17" />
+			<skill id="14868" level="17" />
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33623" name="Hayuk" title="Aden Vanguard">
@@ -1161,19 +1235,26 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Guard"/>
+		<faction name="kartia_support_guard" range="1000" />
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
+			<set name="TargetEnabled" value="false"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="15"/>
+			<skill id="4416" level="15" />
+			<skill id="14871" level="1" />
+			<skill id="14874" level="1" />
+			<skill id="14877" level="1" />
+			<skill id="14880" level="1" />
+			<skill id="14882" level="1" />
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33625" name="Eliyah" title="Aden Vanguard">
@@ -1258,19 +1339,23 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Guard"/>
+		<faction name="kartia_support_guard" range="1000" />
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
+			<set name="TargetEnabled" value="false"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>
+			<skill id="4416" level="14" />
+			<skill id="14884" level="1" />
+			<skill id="14887" level="1" />
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33627" name="Elise" title="Aden Vanguard">
@@ -1308,6 +1393,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
+		<equip>
+			<rhand item_id="8688"/>
+		</equip>
 		<skills>
 			<skill id="4416" level="14"/>
 		</skills>
@@ -1355,24 +1443,34 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Guard"/>
+		<faction name="kartia_support_guard" range="1000" />
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
+			<set name="TargetEnabled" value="false"/>
 		</ai_params>
+		<equip>
+			<rhand item_id="8688"/>
+		</equip>
 		<skills>
-			<skill id="4416" level="14"/>
+			<skill id="4416" level="14" />
+			<skill id="14898" level="1" />
+			<skill id="14900" level="1" />
+			<skill id="14903" level="1" />
+			<skill id="14906" level="1" />
+			<skill id="14909" level="1" />
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33629" name="Eliyah's Guardian Spirit" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Guard" />
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -1404,17 +1502,20 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Guard" />
+		<faction name="kartia_support_guard" range="1000" />
 		<skills>
-			<skill id="4416" level="7"/>
+			<skill id="4416" level="7" />
+			<skill id="14893" level="1" />
+			<skill id="14896" level="1" />
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="390" />
+			<defence attribute="earth" value="275" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33630" name="Adolph" title="Aden Vanguard Captain">
@@ -1452,6 +1553,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
+		<equip>
+			<rhand item_id="8211"/>
+			<lhand item_id="8210"/>
+		</equip>
 		<skills>
 			<skill id="4416" level="14"/>
 		</skills>
@@ -1499,19 +1604,30 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Guard"/>
+		<faction name="kartia_support_guard" range="1000" />
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
+			<set name="TargetEnabled" value="false"/>
 		</ai_params>
+		<equip>
+			<rhand item_id="8211"/>
+			<lhand item_id="8210"/>
+		</equip>
 		<skills>
-			<skill id="4416" level="14"/>
+			<skill id="4416" level="14" />
+			<skill id="14842" level="1" />
+			<skill id="14845" level="1" />
+			<skill id="14848" level="1" />
+			<skill id="14851" level="1" />
+			<skill id="14891" level="1" />
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33632" name="Barton" title="Aden Vanguard">
@@ -1549,6 +1665,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
+		<equip>
+			<rhand item_id="2624"/>
+		</equip>
 		<skills>
 			<skill id="4416" level="17"/>
 		</skills>
@@ -1596,19 +1715,24 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Guard"/>
+		<faction name="kartia_support_guard" range="1000" />
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
+			<set name="TargetEnabled" value="false"/>
 		</ai_params>
+		<equip>
+			<rhand item_id="2624"/>
+		</equip>
 		<skills>
 			<skill id="4416" level="17"/>
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33634" name="Hayuk" title="Aden Vanguard">
@@ -1693,19 +1817,26 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Guard"/>
+		<faction name="kartia_support_guard" range="1000" />
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
+			<set name="TargetEnabled" value="false"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="15"/>
+			<skill id="4416" level="15" />
+			<skill id="14872" level="1" />
+			<skill id="14875" level="1" />
+			<skill id="14878" level="1" />
+			<skill id="14881" level="1" />
+			<skill id="14882" level="1" />
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33636" name="Eliyah" title="Aden Vanguard">
@@ -1790,19 +1921,23 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Guard"/>
+		<faction name="kartia_support_guard" range="1000" />
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
+			<set name="TargetEnabled" value="false"/>
 		</ai_params>
 		<skills>
-			<skill id="4416" level="14"/>
+			<skill id="4416" level="14" />
+			<skill id="14885" level="1" />
+			<skill id="14888" level="1" />
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33638" name="Elise" title="Aden Vanguard">
@@ -1840,6 +1975,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
+		<equip>
+			<rhand item_id="8688"/>
+		</equip>
 		<skills>
 			<skill id="4416" level="14"/>
 		</skills>
@@ -1887,24 +2025,34 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Guard"/>
+		<faction name="kartia_support_guard" range="1000" />
 		<ai_params>
 			<set name="noRandomWalk" value="true"/>
+			<set name="TargetEnabled" value="false"/>
 		</ai_params>
+		<equip>
+			<rhand item_id="8688"/>
+		</equip>
 		<skills>
-			<skill id="4416" level="14"/>
+			<skill id="4416" level="14" />
+			<skill id="14898" level="1" />
+			<skill id="14901" level="1" />
+			<skill id="14904" level="1" />
+			<skill id="14907" level="1" />
+			<skill id="14910" level="1" />
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33640" name="Eliyah's Guardian Spirit" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Guard" />
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -1936,22 +2084,25 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Guard" />
+		<faction name="kartia_support_guard" range="1000" />
 		<skills>
-			<skill id="4416" level="7"/>
+			<skill id="4416" level="7" />
+			<skill id="14894" level="1" />
+			<skill id="14897" level="1" />
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="390" />
+			<defence attribute="earth" value="275" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33641" name="Kartia Prisoner" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="KartiaGuard"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -1983,15 +2134,19 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Guard"/>
+		<faction name="kartia_support_guard" range="1000" />
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
+		<skills>
+			<skill id="14992" level="1" />
+		</skills>
 	</npc>
 	<npc id="33642" name="Support Troop" title="">
 		<set name="aggroRange" value="0"/>
@@ -2027,19 +2182,22 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Guard" />
+		<skills>
+			<skill id="14912" level="1" />
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33643" name="Kartia Prisoner" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="KartiaGuard"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2071,19 +2229,23 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Guard" />
+		<faction name="kartia_support_guard" range="1000" />
+		<skills>
+			<skill id="14992" level="1" />
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33644" name="Support Troop" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="KartiaGuard"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2115,19 +2277,22 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Guard" />
+		<skills>
+			<skill id="14914" level="1" />
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33645" name="Kartia Prisoner" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="KartiaGuard"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2159,19 +2324,23 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Guard" />
+		<faction name="kartia_support_guard" range="1000" />
+		<skills>
+			<skill id="14992" level="1" />
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33646" name="Support Troop" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="KartiaGuard"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2203,14 +2372,17 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Guard" />
+		<skills>
+			<skill id="14916" level="1" />
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300" />
+			<defence attribute="water" value="300" />
+			<defence attribute="wind" value="300" />
+			<defence attribute="earth" value="300" />
+			<defence attribute="holy" value="300" />
+			<defence attribute="unholy" value="300" />
 		</attributes>
 	</npc>
 	<npc id="33647" name="Kartia Researcher" title="">
