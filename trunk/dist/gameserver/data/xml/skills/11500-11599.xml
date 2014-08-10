@@ -2171,6 +2171,76 @@
 			</effect>
 		</for>
 	</skill>
+	<skill id="11595" levels="1" name="Knight's Frenzied Harmony">
+		<set name="target" val="TARGET_CLAN"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="700"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="reuseDelay" val="2000"/>
+		<set name="mpConsume2" val="140"/>
+		<set name="castRange" val="900"/>
+		<set name="magicLevel" val="85"/>
+		<for>
+			<effect count="1" name="Buff" time="2520" val="0">
+				<mul order="0x30" stat="pAtk" val="1.12"/>
+				<mul order="0x30" stat="pDef" val="1.45"/>
+				<mul order="0x30" stat="sDef" val="1.5"/>
+				<mul order="0x30" stat="rShld" val="1.3"/>
+				<mul order="0x30" stat="cAtk" val="1.35"/>
+				<add order="0x40" stat="rCrit" val="200"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11596" levels="1" name="Warrior's Frenzied Harmony">
+		<set name="target" val="TARGET_CLAN"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="700"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="reuseDelay" val="2000"/>
+		<set name="mpConsume2" val="140"/>
+		<set name="castRange" val="900"/>
+		<set name="magicLevel" val="85"/>
+		<for>
+			<effect count="1" name="Buff" time="2520" val="0">
+				<mul order="0x30" stat="pAtk" val="1.35"/>
+				<mul order="0x30" stat="mAtk" val="1.16"/>
+				<mul order="0x30" stat="pAtkSpd" val="1.08"/>
+				<mul order="0x30" stat="mAtkSpd" val="1.08"/>
+				<mul order="0x30" stat="cAtk" val="1.35"/>
+				<add order="0x40" stat="mCritRate" val="100"/>
+				<add order="0x40" stat="runSpd" val="8"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11597" levels="1" name="Magician's Frenzied Harmony">
+		<set name="target" val="TARGET_CLAN"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="700"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="reuseDelay" val="2000"/>
+		<set name="mpConsume2" val="140"/>
+		<set name="castRange" val="900"/>
+		<set name="magicLevel" val="85"/>
+		<for>
+			<effect count="1" name="Buff" time="2520" val="0">
+				<mul order="0x30" stat="pAtk" val="1.08"/>
+				<mul order="0x30" stat="mAtk" val="1.4"/>
+				<mul order="0x30" stat="mAtkSpd" val="1.08"/>
+				<mul order="0x30" stat="pAtkSpd" val="1.08"/>
+				<mul order="0x30" stat="mDef" val="1.14"/>
+				<add order="0x40" stat="mCritRate" val="100"/>
+				<mul order="0x30" stat="regMp" val="1.2"/>
+				<add order="0x40" stat="runSpd" val="8"/>
+				<mul order="0x30" stat="mpConsum" val="0.85"/>
+				<mul order="0x30" stat="mpConsumePhysical" val="0.95"/>
+				<mul order="0x30" stat="mReuse" val="0.8"/>
+				<mul order="0x30" stat="pReuse" val="0.8"/>
+			</effect>
+		</for>
+	</skill>
 	<skill id="11598" levels="4" name="Greater Freezing Flame">
 		<table name="#dmg">359 364 378 384</table>
 		<table name="#effectPoint">379 495 597 646</table>
