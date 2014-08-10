@@ -362,10 +362,6 @@
 				<player olympiad="true"/>
 			</not>
 		</cond>
-		<skills>
-			<skill id="22033" level="1"/>
-		</skills>
-		<set name="capsuled" value="true"/>
 	</etcitem>
 	<etcitem id="20278" name="Gold Afro Hair Pack">
 		<set name="freightable" value="true"/>

@@ -723,9 +723,5 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
-		<skills>
-			<skill id="22010" level="1"/>
-		</skills>
-		<set name="capsuled" value="true"/>
 	</etcitem>
 </list>
