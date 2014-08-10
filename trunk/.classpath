@@ -12,7 +12,6 @@
 	<classpathentry kind="lib" path="dist/libs/jacksum-1.7.0.jar"/>
 	<classpathentry kind="lib" path="dist/libs/javolution-5.5.1.jar" sourcepath="dist/libs/javolution-5.5.1-src.zip"/>
 	<classpathentry kind="lib" path="dist/libs/log4j-1.2.17.jar"/>
-	<classpathentry kind="lib" path="dist/libs/mesp-1.02.jar"/>
 	<classpathentry kind="lib" path="dist/libs/mysql-connector-java-5.1.31-bin.jar"/>
 	<classpathentry kind="lib" path="dist/libs/napile.primitive.jar" sourcepath="dist/libs/napile.primitive-src.zip"/>
 	<classpathentry kind="lib" path="dist/libs/netty-3.6.2.jar"/>

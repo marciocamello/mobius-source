@@ -37,17 +37,11 @@ import lineage2.gameserver.tables.FakePlayersTable;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.MapUtils;
 import lineage2.gameserver.utils.Strings;
-import lineage2.gameserver.utils.Util;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.graphbuilder.math.Expression;
-import com.graphbuilder.math.ExpressionParseException;
-import com.graphbuilder.math.ExpressionTree;
-import com.graphbuilder.math.VarMap;
 
 /**
  * @author Mobius
@@ -141,43 +135,6 @@ public class Say2C extends L2GameClientPacket
 			}
 			
 			activeChar.sendMessage(new CustomMessage("common.command404", activeChar));
-			return;
-		}
-		else if (_text.startsWith("=="))
-		{
-			String expression = _text.substring(2);
-			Expression expr = null;
-			
-			if (!expression.isEmpty())
-			{
-				try
-				{
-					expr = ExpressionTree.parse(expression);
-				}
-				catch (ExpressionParseException ignored)
-				{
-					// empty catch clause
-				}
-				
-				if (expr != null)
-				{
-					double result;
-					
-					try
-					{
-						VarMap vm = new VarMap();
-						vm.setValue("adena", activeChar.getAdena());
-						result = expr.eval(vm, null);
-						activeChar.sendMessage(expression);
-						activeChar.sendMessage("=" + Util.formatDouble(result, "NaN", false));
-					}
-					catch (Exception ignored)
-					{
-						// empty catch clause
-					}
-				}
-			}
-			
 			return;
 		}
 		
