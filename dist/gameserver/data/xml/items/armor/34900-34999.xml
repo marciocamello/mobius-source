@@ -16,10 +16,6 @@
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
-		<skills>
-			<skill id="19039" level="1"/>
-			<skill id="19041" level="1"/>
-		</skills>
 		<cond msgId="1518">
 			<player castleLight="true"/>
 		</cond>
@@ -39,10 +35,6 @@
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
-		<skills>
-			<skill id="19040" level="1"/>
-			<skill id="19041" level="1"/>
-		</skills>
 		<cond msgId="1518">
 			<player castleDark="true"/>
 		</cond>
@@ -257,10 +249,6 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
-		<skills>
-			<skill id="19037" level="1"/>
-			<skill id="19041" level="1"/>
-		</skills>
 		<cond msgId="1518">
 			<player castleLightClanLeader="true"/>
 		</cond>
@@ -279,10 +267,6 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
-		<skills>
-			<skill id="19038" level="1"/>
-			<skill id="19041" level="1"/>
-		</skills>
 		<cond msgId="1518">
 			<player castleDarkClanLeader="true"/>
 		</cond>
