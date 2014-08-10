@@ -60,7 +60,6 @@ public class Config
 	private static final String ALT_SETTINGS_FILE = "config/altsettings.ini";
 	private static final String FORMULAS_CONFIGURATION_FILE = "config/formulas.ini";
 	private static final String PVP_CONFIG_FILE = "config/pvp.ini";
-	private static final String TELNET_CONFIGURATION_FILE = "config/telnet.ini";
 	private static final String CONFIGURATION_FILE = "config/server.ini";
 	private static final String AI_CONFIG_FILE = "config/ai.ini";
 	private static final String GEODATA_CONFIG_FILE = "config/geodata.ini";
@@ -532,11 +531,6 @@ public class Config
 	public static int DEEPBLUE_DROP_MAXDIFF;
 	public static int DEEPBLUE_DROP_RAID_MAXDIFF;
 	public static boolean UNSTUCK_SKILL;
-	static boolean IS_TELNET_ENABLED;
-	public static String TELNET_DEFAULT_ENCODING;
-	public static String TELNET_PASSWORD;
-	public static String TELNET_HOSTNAME;
-	public static int TELNET_PORT;
 	// public static boolean CB_PLAYER_IN_COMBAT;
 	// public static boolean CB_PLAYER_ON_EVENT;
 	// public static boolean CB_PLAYER_ON_OLYMPIAD;
@@ -1151,19 +1145,6 @@ public class Config
 			});
 			ENCHANT_ATT_PVP = communitySettings.getProperty("CBEnchantAtributePvP", false);
 		}
-	}
-	
-	/**
-	 * Method loadTelnetConfig.
-	 */
-	private static void loadTelnetConfig()
-	{
-		ExProperties telnetSettings = load(TELNET_CONFIGURATION_FILE);
-		IS_TELNET_ENABLED = telnetSettings.getProperty("EnableTelnet", false);
-		TELNET_DEFAULT_ENCODING = telnetSettings.getProperty("TelnetEncoding", "UTF-8");
-		TELNET_PORT = telnetSettings.getProperty("Port", 7000);
-		TELNET_HOSTNAME = telnetSettings.getProperty("BindAddress", "127.0.0.1");
-		TELNET_PASSWORD = telnetSettings.getProperty("Password", "");
 	}
 	
 	/**
@@ -2010,7 +1991,6 @@ public class Config
 	public static void load()
 	{
 		loadServerConfig();
-		loadTelnetConfig();
 		loadResidenceConfig();
 		loadOtherConfig();
 		loadTopSettings();
