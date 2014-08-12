@@ -27,7 +27,7 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
-import quests._698_BlocktheLordsEscape;
+import quests.Q00698_BlockTheLordsEscape;
 
 /**
  * @author pchayka
@@ -268,7 +268,7 @@ public final class HeartInfinityDefence extends Reflection
 		{
 			if (win)
 			{
-				QuestState qs = p.getQuestState(_698_BlocktheLordsEscape.class);
+				QuestState qs = p.getQuestState(Q00698_BlockTheLordsEscape.class);
 				
 				if ((qs != null) && (qs.getCond() == 1))
 				{

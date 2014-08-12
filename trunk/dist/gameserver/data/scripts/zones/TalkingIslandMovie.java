@@ -20,7 +20,7 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.components.SceneMovie;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ReflectionUtils;
-import quests._10320_LetsGototheCentralSquare;
+import quests.Q10320_LetsGoToTheCentralSquare;
 
 /**
  * @author Mobius
@@ -93,7 +93,7 @@ public final class TalkingIslandMovie implements ScriptFile
 				
 				if (!player.getVarB("@ti_present_video"))
 				{
-					QuestState qs = player.getQuestState(_10320_LetsGototheCentralSquare.class);
+					QuestState qs = player.getQuestState(Q10320_LetsGoToTheCentralSquare.class);
 					
 					if ((qs != null) && (qs.getCond() == 1))
 					{

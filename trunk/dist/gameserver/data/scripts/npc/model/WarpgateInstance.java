@@ -50,7 +50,7 @@ public final class WarpgateInstance extends NpcInstance
 		
 		if (command.startsWith("enter_hellbound"))
 		{
-			if ((HellboundManager.getHellboundLevel() != 0) && player.isQuestCompleted("_130_PathToHellbound"))
+			if ((HellboundManager.getHellboundLevel() != 0) && player.isQuestCompleted("Q00130_PathToHellbound"))
 			{
 				player.teleToLocation(-11272, 236464, -3248);
 				return;

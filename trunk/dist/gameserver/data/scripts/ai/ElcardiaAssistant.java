@@ -32,10 +32,10 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
-import quests._10293_SevenSignsForbiddenBook;
-import quests._10294_SevenSignsMonasteryofSilence;
-import quests._10295_SevenSignsSolinasTomb;
-import quests._10296_SevenSignsPoweroftheSeal;
+import quests.Q10293_SevenSignsForbiddenBookOfTheElmoredenKingdom;
+import quests.Q10294_SevenSignsToTheMonasteryOfSilence;
+import quests.Q10295_SevenSignsSolinasTomb;
+import quests.Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal;
 
 /**
  * @author Mobius
@@ -192,7 +192,7 @@ public final class ElcardiaAssistant extends DefaultAI
 			switch (ref.getInstancedZoneId())
 			{
 				case 156:
-					final QuestState qs = masterplayer.getQuestState(_10293_SevenSignsForbiddenBook.class);
+					final QuestState qs = masterplayer.getQuestState(Q10293_SevenSignsForbiddenBookOfTheElmoredenKingdom.class);
 					
 					if ((qs != null) && !qs.isCompleted())
 					{
@@ -225,7 +225,7 @@ public final class ElcardiaAssistant extends DefaultAI
 					break;
 				
 				case 151:
-					final QuestState qs2 = masterplayer.getQuestState(_10294_SevenSignsMonasteryofSilence.class);
+					final QuestState qs2 = masterplayer.getQuestState(Q10294_SevenSignsToTheMonasteryOfSilence.class);
 					
 					if ((qs2 != null) && !qs2.isCompleted())
 					{
@@ -270,7 +270,7 @@ public final class ElcardiaAssistant extends DefaultAI
 						}
 					}
 					
-					final QuestState qs3 = masterplayer.getQuestState(_10295_SevenSignsSolinasTomb.class);
+					final QuestState qs3 = masterplayer.getQuestState(Q10295_SevenSignsSolinasTomb.class);
 					
 					if ((qs3 != null) && !qs3.isCompleted())
 					{
@@ -315,7 +315,7 @@ public final class ElcardiaAssistant extends DefaultAI
 						}
 					}
 					
-					final QuestState qs4 = masterplayer.getQuestState(_10296_SevenSignsPoweroftheSeal.class);
+					final QuestState qs4 = masterplayer.getQuestState(Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.class);
 					
 					if ((qs4 != null) && !qs4.isCompleted())
 					{

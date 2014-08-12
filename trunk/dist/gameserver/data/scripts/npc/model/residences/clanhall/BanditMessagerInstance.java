@@ -35,7 +35,7 @@ import lineage2.gameserver.utils.TimeUtils;
 
 import org.apache.commons.lang3.StringUtils;
 
-import quests._504_CompetitionForTheBanditStronghold;
+import quests.Q00504_CompetitionForTheBanditStronghold;
 
 /**
  * @author Mobius
@@ -92,7 +92,7 @@ public final class BanditMessagerInstance extends NpcInstance
 				return;
 			}
 			
-			QuestState questState = player.getQuestState(_504_CompetitionForTheBanditStronghold.class);
+			QuestState questState = player.getQuestState(Q00504_CompetitionForTheBanditStronghold.class);
 			
 			if ((questState == null) || (questState.getQuestItemsCount(5009) != 1))
 			{
@@ -273,7 +273,7 @@ public final class BanditMessagerInstance extends NpcInstance
 		
 		if (siegeEvent.isRegistrationOver())
 		{
-			showChatWindow(player, "quests/_504_CompetitionForTheBanditStronghold/azit_messenger_q0504_03.htm", "%siege_time%", TimeUtils.toSimpleFormat(clanHall.getSiegeDate()));
+			showChatWindow(player, "quests/Q00504_CompetitionForTheBanditStronghold/azit_messenger_q0504_03.htm", "%siege_time%", TimeUtils.toSimpleFormat(clanHall.getSiegeDate()));
 			return false;
 		}
 		
@@ -284,13 +284,13 @@ public final class BanditMessagerInstance extends NpcInstance
 		
 		if ((clan == null) || (player.getObjectId() != clan.getLeaderId()))
 		{
-			showChatWindow(player, "quests/_504_CompetitionForTheBanditStronghold/azit_messenger_q0504_05.htm");
+			showChatWindow(player, "quests/Q00504_CompetitionForTheBanditStronghold/azit_messenger_q0504_05.htm");
 			return false;
 		}
 		
 		if ((player.getObjectId() == clan.getLeaderId()) && (clan.getLevel() < 4))
 		{
-			showChatWindow(player, "quests/_504_CompetitionForTheBanditStronghold/azit_messenger_q0504_04.htm");
+			showChatWindow(player, "quests/Q00504_CompetitionForTheBanditStronghold/azit_messenger_q0504_04.htm");
 			return false;
 		}
 		
@@ -302,7 +302,7 @@ public final class BanditMessagerInstance extends NpcInstance
 		
 		if (clan.getHasHideout() > 0)
 		{
-			showChatWindow(player, "quests/_504_CompetitionForTheBanditStronghold/azit_messenger_q0504_10.htm");
+			showChatWindow(player, "quests/Q00504_CompetitionForTheBanditStronghold/azit_messenger_q0504_10.htm");
 			return false;
 		}
 		

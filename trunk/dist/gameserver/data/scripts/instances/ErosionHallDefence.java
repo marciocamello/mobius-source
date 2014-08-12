@@ -33,7 +33,7 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
-import quests._697_DefendtheHallofErosion;
+import quests.Q00697_DefendTheHallOfErosion;
 
 /**
  * @author pchayka
@@ -311,7 +311,7 @@ public final class ErosionHallDefence extends Reflection
 		{
 			if (win)
 			{
-				QuestState qs = p.getQuestState(_697_DefendtheHallofErosion.class);
+				QuestState qs = p.getQuestState(Q00697_DefendTheHallOfErosion.class);
 				
 				if ((qs != null) && (qs.getCond() == 1))
 				{

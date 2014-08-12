@@ -276,7 +276,7 @@ public final class MemoryOfDisaster extends Reflection
 				return;
 			}
 			
-			QuestState st = player.getQuestState("_255_Tutorial");
+			QuestState st = player.getQuestState("Q00255_Tutorial");
 			
 			if (st != null)
 			{

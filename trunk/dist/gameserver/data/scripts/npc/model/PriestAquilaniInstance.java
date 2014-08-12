@@ -17,7 +17,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
-import quests._10288_SecretMission;
+import quests.Q10288_SecretMission;
 
 /**
  * @author Mobius
@@ -46,7 +46,7 @@ public final class PriestAquilaniInstance extends NpcInstance
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
-		if ((player.getQuestState(_10288_SecretMission.class) != null) && player.getQuestState(_10288_SecretMission.class).isCompleted())
+		if ((player.getQuestState(Q10288_SecretMission.class) != null) && player.getQuestState(Q10288_SecretMission.class).isCompleted())
 		{
 			player.sendPacket(new NpcHtmlMessage(player, this, "default/32780-1.htm", val));
 			return;

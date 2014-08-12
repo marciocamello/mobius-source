@@ -21,7 +21,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
-import quests._288_HandleWithCare;
+import quests.Q00288_HandleWithCare;
 
 /**
  * @author Mobius
@@ -94,7 +94,7 @@ public final class SeerUgoros extends Mystic
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		final QuestState qs = killer.getPlayer().getQuestState(_288_HandleWithCare.class);
+		final QuestState qs = killer.getPlayer().getQuestState(Q00288_HandleWithCare.class);
 		
 		if ((qs != null) && (qs.getCond() == 1))
 		{

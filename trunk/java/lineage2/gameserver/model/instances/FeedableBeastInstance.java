@@ -522,7 +522,7 @@ public class FeedableBeastInstance extends MonsterInstance
 			nextNpc.setFoodType(getFoodSpice(skill_id));
 			nextNpc.setRunning();
 			nextNpc.setOwner(player);
-			QuestState st = player.getQuestState("_020_BringUpWithLove");
+			QuestState st = player.getQuestState("Q00020_BringUpWithLove");
 			
 			if ((st != null) && !st.isCompleted() && Rnd.chance(5) && (st.getQuestItemsCount(7185) == 0))
 			{
@@ -530,7 +530,7 @@ public class FeedableBeastInstance extends MonsterInstance
 				st.setCond(2);
 			}
 			
-			st = player.getQuestState("_655_AGrandPlanForTamingWildBeasts");
+			st = player.getQuestState("Q00655_AGrandPlanForTamingWildBeasts");
 			
 			if ((st != null) && !st.isCompleted() && (st.getCond() == 1))
 			{

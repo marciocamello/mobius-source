@@ -23,7 +23,7 @@ import lineage2.gameserver.network.serverpackets.components.SceneMovie;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
-import quests._10301_ShadowOfTerrorBlackishRedFog;
+import quests.Q10301_ShadowOfTerrorBlackishRedFog;
 
 /**
  * @author Mobius
@@ -106,7 +106,7 @@ public final class AngelWaterfall implements ScriptFile
 			}
 			
 			Player player = cha.getPlayer();
-			QuestState qs = player.getQuestState(_10301_ShadowOfTerrorBlackishRedFog.class);
+			QuestState qs = player.getQuestState(Q10301_ShadowOfTerrorBlackishRedFog.class);
 			
 			if ((qs != null) && (qs.getCond() == 3) && (player.getVar("instance10301") == null))
 			{

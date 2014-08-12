@@ -209,8 +209,6 @@ class MuseumManager
 	{
 		private final int objectID, category;
 		private final boolean isTotal;
-		@SuppressWarnings("unused")
-		private final long acquiredItem;
 		
 		/**
 		 * Constructor for Museum.
@@ -222,7 +220,6 @@ class MuseumManager
 		Museum(int _objectID, long _acquiredItem, int _category, boolean _isTotal)
 		{
 			objectID = _objectID;
-			acquiredItem = _acquiredItem;
 			category = _category;
 			isTotal = _isTotal;
 		}

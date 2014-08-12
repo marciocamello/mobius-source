@@ -65,7 +65,7 @@ public final class NewbieGuideInstance extends NpcInstance
 			{
 				if (player.getVar("NewGuidReward") == null)
 				{
-					QuestState qs = player.getQuestState("_999_T1Tutorial");
+					QuestState qs = player.getQuestState("Q00999_T1Tutorial");
 					
 					if (qs != null)
 					{

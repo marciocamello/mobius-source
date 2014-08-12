@@ -39,7 +39,7 @@ import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.utils.Location;
-import quests._10286_ReunionWithSirra;
+import quests.Q10286_ReunionWithSirra;
 
 /**
  * @author pchayka
@@ -215,7 +215,7 @@ public final class FreyaNormal extends Reflection
 			
 			for (Player player : getPlayers())
 			{
-				QuestState qs = player.getQuestState(_10286_ReunionWithSirra.class);
+				QuestState qs = player.getQuestState(Q10286_ReunionWithSirra.class);
 				
 				if ((qs != null) && (qs.getCond() == 5))
 				{
@@ -612,7 +612,7 @@ public final class FreyaNormal extends Reflection
 			// Movie + quest update
 			for (Player p : getPlayers())
 			{
-				QuestState qs = p.getQuestState(_10286_ReunionWithSirra.class);
+				QuestState qs = p.getQuestState(Q10286_ReunionWithSirra.class);
 				
 				if ((qs != null) && (qs.getCond() == 6))
 				{

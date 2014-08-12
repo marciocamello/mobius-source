@@ -16,7 +16,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.templates.npc.NpcTemplate;
-import quests._250_WatchWhatYouEat;
+import quests.Q00250_WatchWhatYouEat;
 
 /**
  * @author Mobius
@@ -51,7 +51,7 @@ public final class SallyInstance extends NpcInstance
 		
 		if (command.equals("ask_about_rare_plants"))
 		{
-			QuestState qs = player.getQuestState(_250_WatchWhatYouEat.class);
+			QuestState qs = player.getQuestState(Q00250_WatchWhatYouEat.class);
 			
 			if ((qs != null) && qs.isCompleted())
 			{

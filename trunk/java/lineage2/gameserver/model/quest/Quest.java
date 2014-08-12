@@ -414,7 +414,7 @@ public class Quest
 	public Quest(int party)
 	{
 		_name = getClass().getSimpleName();
-		_questId = Integer.parseInt(_name.split("_")[1]);
+		_questId = Integer.valueOf(_name.substring(1, 6));
 		_party = party;
 		QuestManager.addQuest(this);
 	}

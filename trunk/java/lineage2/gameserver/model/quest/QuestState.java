@@ -152,7 +152,8 @@ public final class QuestState
 		
 		/**
 		 * Method ignorePetOrSummon.
-		 * @return boolean * @see lineage2.gameserver.listener.actor.OnKillListener#ignorePetOrSummon()
+		 * @return boolean
+		 * @see lineage2.gameserver.listener.actor.OnKillListener#ignorePetOrSummon()
 		 */
 		@Override
 		public boolean ignorePetOrSummon()
@@ -1106,7 +1107,7 @@ public final class QuestState
 		
 		if (type == 1)
 		{
-			text = HtmCache.getInstance().getNotNull("quests/_255_Tutorial/" + html, player);
+			text = HtmCache.getInstance().getNotNull("quests/Q00255_Tutorial/" + html, player);
 		}
 		
 		player.sendPacket(new TutorialShowHtml(text, type));

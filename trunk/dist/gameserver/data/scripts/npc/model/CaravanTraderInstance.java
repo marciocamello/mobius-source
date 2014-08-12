@@ -389,7 +389,7 @@ public final class CaravanTraderInstance extends NpcInstance
 		}
 		else if (command.startsWith("tully_entrance"))
 		{
-			if (player.isQuestCompleted("_132_MatrasCuriosity"))
+			if (player.isQuestCompleted("Q00132_MatrasCuriosity"))
 			{
 				player.teleToLocation(new Location(17947, 283205, -9696));
 				return;
@@ -436,7 +436,7 @@ public final class CaravanTraderInstance extends NpcInstance
 			
 			for (Player member : members)
 			{
-				if ((member == null) || !isInRange(member, 500) || !member.isQuestCompleted("_132_MatrasCuriosity"))
+				if ((member == null) || !isInRange(member, 500) || !member.isQuestCompleted("Q00132_MatrasCuriosity"))
 				{
 					showDialog(player, getHtmlPath(getNpcId(), 1, player));
 					return;

@@ -23,7 +23,7 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
-import quests._10365_SeekerEscort;
+import quests.Q10365_SeekerEscort;
 
 /**
  * @author Mobius
@@ -250,7 +250,7 @@ public final class SeekerEscort extends DefaultAI
 		}
 		
 		final Player player = target.getPlayer();
-		final QuestState st = player.getQuestState(_10365_SeekerEscort.class);
+		final QuestState st = player.getQuestState(Q10365_SeekerEscort.class);
 		final int zone = st.getInt("zone");
 		int saytimes = st.getInt("saytimes");
 		final int cond = st.getCond();
