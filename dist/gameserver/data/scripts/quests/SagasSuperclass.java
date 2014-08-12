@@ -81,12 +81,12 @@ public abstract class SagasSuperclass extends Quest
 	private static final Map<Integer, Class<?>> Quests = new HashMap<>();
 	static
 	{
-		Quests.put(10341, _10341_DayOfDestinyHumanFate.class);
-		Quests.put(10342, _10342_DayOfDestinyElvenFate.class);
-		Quests.put(10343, _10343_DayOfDestinyDarkElfsFate.class);
-		Quests.put(10344, _10344_DayOfDestinyOrcsFate.class);
-		Quests.put(10345, _10345_DayOfDestinyDwarfsFate.class);
-		Quests.put(10346, _10346_DayOfDestinyKamaelsFate.class);
+		Quests.put(10341, Q10341_DayOfDestinyHumansFate.class);
+		Quests.put(10342, Q10342_DayOfDestinyElvenFate.class);
+		Quests.put(10343, Q10343_DayOfDestinyDarkElfsFate.class);
+		Quests.put(10344, Q10344_DayOfDestinyOrcsFate.class);
+		Quests.put(10345, Q10345_DayOfDestinyDwarfsFate.class);
+		Quests.put(10346, Q10346_DayOfDestinyKamaelsFate.class);
 	}
 	protected static final int[][] QuestRace = new int[][]
 	{

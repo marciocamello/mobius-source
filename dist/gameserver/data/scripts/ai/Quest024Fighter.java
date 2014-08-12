@@ -19,7 +19,7 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
-import quests._024_InhabitantsOfTheForestOfTheDead;
+import quests.Q00024_InhabitantsOfTheForestOfTheDead;
 
 /**
  * @author Mobius
@@ -43,13 +43,13 @@ public final class Quest024Fighter extends Fighter
 	@Override
 	protected boolean thinkActive()
 	{
-		final Quest q = QuestManager.getQuest(_024_InhabitantsOfTheForestOfTheDead.class);
+		final Quest q = QuestManager.getQuest(Q00024_InhabitantsOfTheForestOfTheDead.class);
 		
 		if (q != null)
 		{
 			for (Player player : World.getAroundPlayers(getActor(), 300, 200))
 			{
-				QuestState questState = player.getQuestState(_024_InhabitantsOfTheForestOfTheDead.class);
+				QuestState questState = player.getQuestState(Q00024_InhabitantsOfTheForestOfTheDead.class);
 				
 				if ((questState != null) && (questState.getCond() == 3))
 				{

@@ -51,7 +51,7 @@ public class OpenSealedBox
 		
 		takecount = count;
 		
-		if (st.getQuestItemsCount(_620_FourGoblets.Sealed_Box) < count)
+		if (st.getQuestItemsCount(Q00620_FourGoblets.Sealed_Box) < count)
 		{
 			result = count == 1 ? "I don't see a box... Come back when you find one!" : "I don't see enougth boxes... Come back when you find enougth!";
 			return;
@@ -93,7 +93,7 @@ public class OpenSealedBox
 				return "You haven't enougth free slots in your inventory.";
 			}
 			
-			st.takeItems(_620_FourGoblets.Sealed_Box, takecount);
+			st.takeItems(Q00620_FourGoblets.Sealed_Box, takecount);
 			
 			for (Integer itemId : rewards.keySet())
 			{

@@ -24,9 +24,6 @@ import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -2635,69 +2632,5 @@ public class GeoEngine
 	static boolean compareGeoBlocks(int mapX1, int mapY1, int blockIndex1, int mapX2, int mapY2, int blockIndex2)
 	{
 		return equalsData(geodata[mapX1][mapY1][blockIndex1][0], geodata[mapX2][mapY2][blockIndex2][0]);
-	}
-	
-	/**
-	 * Method initChecksums.
-	 */
-	@SuppressWarnings("unused")
-	private static void initChecksums()
-	{
-		_log.info("GeoEngine: - Generating Checksums...");
-		new File(Config.DATAPACK_ROOT, "geodata/checksum").mkdirs();
-		ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
-		GeoOptimizer.checkSums = new int[World.WORLD_SIZE_X][World.WORLD_SIZE_Y][];
-		
-		for (int mapX = 0; mapX < World.WORLD_SIZE_X; mapX++)
-		{
-			for (int mapY = 0; mapY < World.WORLD_SIZE_Y; mapY++)
-			{
-				if (geodata[mapX][mapY] != null)
-				{
-					executor.execute(new GeoOptimizer.CheckSumLoader(mapX, mapY, geodata[mapX][mapY]));
-				}
-			}
-		}
-		
-		try
-		{
-			executor.awaitTermination(Long.MAX_VALUE, TimeUnit.SECONDS);
-		}
-		catch (InterruptedException e)
-		{
-			_log.error("", e);
-		}
-	}
-	
-	/**
-	 * Method initBlockMatches.
-	 * @param maxScanRegions int
-	 */
-	@SuppressWarnings("unused")
-	private static void initBlockMatches(int maxScanRegions)
-	{
-		_log.info("GeoEngine: Generating Block Matches...");
-		new File(Config.DATAPACK_ROOT, "geodata/matches").mkdirs();
-		ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
-		
-		for (int mapX = 0; mapX < World.WORLD_SIZE_X; mapX++)
-		{
-			for (int mapY = 0; mapY < World.WORLD_SIZE_Y; mapY++)
-			{
-				if ((geodata[mapX][mapY] != null) && (GeoOptimizer.checkSums != null) && (GeoOptimizer.checkSums[mapX][mapY] != null))
-				{
-					executor.execute(new GeoOptimizer.GeoBlocksMatchFinder(mapX, mapY, maxScanRegions));
-				}
-			}
-		}
-		
-		try
-		{
-			executor.awaitTermination(Long.MAX_VALUE, TimeUnit.SECONDS);
-		}
-		catch (InterruptedException e)
-		{
-			_log.error("", e);
-		}
 	}
 }

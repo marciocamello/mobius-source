@@ -254,6 +254,7 @@ public class DelusionChamberManager
 	 */
 	public class DelusionChamberRoom
 	{
+		@SuppressWarnings("unused")
 		private final Territory _territory;
 		private final Location _teleportCoords;
 		private final boolean _isBossRoom;
@@ -280,19 +281,6 @@ public class DelusionChamberManager
 		public Location getTeleportCoords()
 		{
 			return _teleportCoords;
-		}
-		
-		/**
-		 * Method checkIfInZone.
-		 * @param x int
-		 * @param y int
-		 * @param z int
-		 * @return boolean
-		 */
-		@SuppressWarnings("unused")
-		private boolean checkIfInZone(int x, int y, int z)
-		{
-			return _territory.isInside(x, y, z);
 		}
 		
 		/**

@@ -17,7 +17,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.NpcTemplate;
-import quests._111_ElrokianHuntersProof;
+import quests.Q00111_ElrokianHuntersProof;
 
 /**
  * @author Mobius
@@ -55,7 +55,7 @@ public final class AsamahInstance extends NpcInstance
 		if (command.equals("buyTrap"))
 		{
 			String htmltext = null;
-			QuestState ElrokianHuntersProof = player.getQuestState(_111_ElrokianHuntersProof.class);
+			QuestState ElrokianHuntersProof = player.getQuestState(Q00111_ElrokianHuntersProof.class);
 			
 			if ((player.getLevel() >= 75) && (ElrokianHuntersProof != null) && ElrokianHuntersProof.isCompleted() && (Functions.getItemCount(player, 57) > 1000000))
 			{
@@ -80,7 +80,7 @@ public final class AsamahInstance extends NpcInstance
 		else if (command.equals("buyStones"))
 		{
 			String htmltext = null;
-			QuestState ElrokianHuntersProof = player.getQuestState(_111_ElrokianHuntersProof.class);
+			QuestState ElrokianHuntersProof = player.getQuestState(Q00111_ElrokianHuntersProof.class);
 			
 			if ((player.getLevel() >= 75) && (ElrokianHuntersProof != null) && ElrokianHuntersProof.isCompleted() && (Functions.getItemCount(player, 57) > 1000000))
 			{

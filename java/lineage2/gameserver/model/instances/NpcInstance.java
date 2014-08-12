@@ -2057,10 +2057,6 @@ public class NpcInstance extends Creature
 			
 			player.sendPacket(AcquireSkillDone.STATIC);
 		}
-		/**
-		 * Method showTransferSkillList.
-		 * @param player Player
-		 */
 		else
 		{
 			player.sendPacket(asl);
@@ -2069,6 +2065,10 @@ public class NpcInstance extends Creature
 		player.sendActionFailed();
 	}
 	
+	/**
+	 * Method showTransferSkillList.
+	 * @param player Player
+	 */
 	public void showTransferSkillList(Player player)
 	{
 		ClassId classId = player.getClassId();
@@ -2092,10 +2092,6 @@ public class NpcInstance extends Creature
 		
 		AcquireType type = AcquireType.transferType(player.getActiveClassId());
 		
-		/**
-		 * Method showCollectionSkillList.
-		 * @param player Player
-		 */
 		if (type == null)
 		{
 			return;
@@ -2104,20 +2100,24 @@ public class NpcInstance extends Creature
 		showAcquireList(type, player);
 	}
 	
-	public static void showCollectionSkillList(Player player)
 	/**
-	 * Method showTransformationMultisell.
+	 * Method showCollectionSkillList.
 	 * @param player Player
 	 */
+	public static void showCollectionSkillList(Player player)
 	{
 		showAcquireList(AcquireType.COLLECTION, player);
 	}
 	
+	/**
+	 * Method showTransformationMultisell.
+	 * @param player Player
+	 */
 	private void showTransformationMultisell(Player player)
 	{
 		if (!Config.ALLOW_LEARN_TRANS_SKILLS_WO_QUEST)
 		{
-			if (!player.isQuestCompleted("_136_MoreThanMeetsTheEye"))
+			if (!player.isQuestCompleted("Q00136_MoreThanMeetsTheEye"))
 			{
 				showChatWindow(player, "trainer/" + getNpcId() + "-nobuy.htm");
 				return;
@@ -2125,26 +2125,22 @@ public class NpcInstance extends Creature
 		}
 		
 		Castle castle = getCastle(player);
-		MultiSellHolder.getInstance().SeparateAndSend(32323, player, /**
-		 * Method showTransformationSkillList.
-		 * @param player Player
-		 * @param type AcquireType
-		 */
-		castle != null ? castle.getTaxRate() : 0);
+		MultiSellHolder.getInstance().SeparateAndSend(32323, player, castle != null ? castle.getTaxRate() : 0);
 		player.sendActionFailed();
 	}
 	
+	/**
+	 * Method showTransformationSkillList.
+	 * @param player Player
+	 * @param type AcquireType
+	 */
 	public void showTransformationSkillList(Player player, AcquireType type)
 	{
 		if (!Config.ALLOW_LEARN_TRANS_SKILLS_WO_QUEST)
 		{
-			if (!player.isQuestCompleted("_136_MoreThanMeetsTheEye"))
+			if (!player.isQuestCompleted("Q00136_MoreThanMeetsTheEye"))
 			{
-				showChatWindow(player, "trainer/" + getNpcId() + /**
-				 * Method showFishingSkillList.
-				 * @param player Player
-				 */
-				"-noquest.htm");
+				showChatWindow(player, "trainer/" + getNpcId() + "-noquest.htm");
 				return;
 			}
 		}
@@ -2152,32 +2148,36 @@ public class NpcInstance extends Creature
 		showAcquireList(type, player);
 	}
 	
-	public static void showFishingSkillList(Player player)
 	/**
-	 * Method showClanSkillList.
+	 * Method showFishingSkillList.
 	 * @param player Player
 	 */
+	public static void showFishingSkillList(Player player)
 	{
 		showAcquireList(AcquireType.FISHING, player);
 	}
 	
+	/**
+	 * Method showClanSkillList.
+	 * @param player Player
+	 */
 	public static void showClanSkillList(Player player)
 	{
 		if ((player.getClan() == null) || !player.isClanLeader())
 		{
 			player.sendPacket(SystemMsg.ONLY_THE_CLAN_LEADER_IS_ENABLED);
 			player.sendActionFailed();
-			/**
-			 * Method showAcquireList.
-			 * @param t AcquireType
-			 * @param player Player
-			 */
 			return;
 		}
 		
 		showAcquireList(AcquireType.CLAN, player);
 	}
 	
+	/**
+	 * Method showAcquireList.
+	 * @param t AcquireType
+	 * @param player Player
+	 */
 	public static void showAcquireList(AcquireType t, Player player)
 	{
 		final Collection<SkillLearn> skills = SkillAcquireHolder.getInstance().getAvailableSkills(player, t);
@@ -2193,10 +2193,6 @@ public class NpcInstance extends Creature
 			player.sendPacket(AcquireSkillDone.STATIC);
 			player.sendPacket(SystemMsg.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
 		}
-		/**
-		 * Method showSubUnitSkillList.
-		 * @param player Player
-		 */
 		else
 		{
 			player.sendPacket(asl);
@@ -2205,6 +2201,10 @@ public class NpcInstance extends Creature
 		player.sendActionFailed();
 	}
 	
+	/**
+	 * Method showSubUnitSkillList.
+	 * @param player Player
+	 */
 	public static void showSubUnitSkillList(Player player)
 	{
 		Clan clan = player.getClan();
@@ -2239,48 +2239,48 @@ public class NpcInstance extends Creature
 			player.sendPacket(AcquireSkillDone.STATIC);
 			player.sendPacket(SystemMsg.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
 		}
-		/**
-		 * Method getSpawnAnimation.
-		 * @return int
-		 */
 		else
 		{
 			player.sendPacket(asl);
 		}
 		
 		player.sendActionFailed();
-		/**
-		 * Method getColRadius.
-		 * @return double
-		 */
 	}
 	
+	/**
+	 * Method getSpawnAnimation.
+	 * @return int
+	 */
 	public int getSpawnAnimation()
 	{
 		return _spawnAnimation;
 	}
 	
-	@Override
 	/**
-	 * Method getColHeight.
+	 * Method getColRadius.
 	 * @return double
 	 */
+	@Override
 	public double getColRadius()
 	{
 		return getCollisionRadius();
 	}
 	
-	@Override
 	/**
-	 * Method calculateLevelDiffForDrop.
-	 * @param charLevel int
-	 * @return int
+	 * Method getColHeight.
+	 * @return double
 	 */
+	@Override
 	public double getColHeight()
 	{
 		return getCollisionHeight();
 	}
 	
+	/**
+	 * Method calculateLevelDiffForDrop.
+	 * @param charLevel int
+	 * @return int
+	 */
 	public int calculateLevelDiffForDrop(int charLevel)
 	{
 		if (!Config.DEEPBLUE_DROP_RULES)
@@ -2290,22 +2290,22 @@ public class NpcInstance extends Creature
 		
 		int mobLevel = getLevel();
 		int deepblue_maxdiff = this instanceof RaidBossInstance ? Config.DEEPBLUE_DROP_RAID_MAXDIFF : Config.DEEPBLUE_DROP_MAXDIFF;
-		/**
-		 * Method toString.
-		 * @return String
-		 */
 		return Math.max(charLevel - mobLevel - deepblue_maxdiff, 0);
 	}
 	
-	@Override
 	/**
-	 * Method refreshID.
+	 * Method toString.
+	 * @return String
 	 */
+	@Override
 	public String toString()
 	{
 		return getNpcId() + " " + getName();
 	}
 	
+	/**
+	 * Method refreshID.
+	 */
 	public void refreshID()
 	{
 		objectId = IdFactory.getInstance().getNextId();

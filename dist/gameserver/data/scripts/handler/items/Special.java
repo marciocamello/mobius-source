@@ -32,7 +32,7 @@ import lineage2.gameserver.utils.Location;
 
 import org.apache.commons.lang3.ArrayUtils;
 
-import quests._464_Oath;
+import quests.Q00464_Oath;
 import bosses.AntharasManager;
 import bosses.ValakasManager;
 
@@ -305,7 +305,7 @@ public final class Special extends SimpleItemHandler
 	 */
 	private boolean use15537(Player player, boolean ctrl)
 	{
-		final QuestState qs = player.getQuestState(_464_Oath.class);
+		final QuestState qs = player.getQuestState(Q00464_Oath.class);
 		
 		if ((player.getLevel() >= 82) && (qs == null))
 		{
@@ -318,7 +318,7 @@ public final class Special extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendMessage(new CustomMessage("Quest._464_Oath.QuestCannotBeTaken", player));
+			player.sendMessage(new CustomMessage("Quest.Q00464_Oath.QuestCannotBeTaken", player));
 			return false;
 		}
 		
@@ -421,7 +421,7 @@ public final class Special extends SimpleItemHandler
 	
 	// TODO ADD MISSING QUEST
 	/*
-	 * private boolean use17619(Player player, boolean ctrl) { //TODO[Iqman+Nosferatu] Define zone in cruma tower we can use this scroll only there!! QuestState qs = player.getQuestState(_10352_LegacyofCrumaTower.class); QuestState qs2 = player.getQuestState(_480_AnotherLegacyOfCrumaTower.class);
+	 * private boolean use17619(Player player, boolean ctrl) { //TODO[Iqman+Nosferatu] Define zone in cruma tower we can use this scroll only there!! QuestState qs = player.getQuestState(Q10352_LegacyOfCrumaTower.class); QuestState qs2 = player.getQuestState(Q00480_AnotherLegacyOfCrumaTower.class);
 	 * if(player.getVar("MechanismSpawn") != null || qs == null || qs.getCond() > 4) { if(qs2 == null || qs2.getCond() > 4 || player.getVar("MechanismSpawn") != null) { player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(17619)); return false; } }
 	 * Functions.removeItem(player, 17619, 1); NpcInstance npc = Functions.spawn(Location.findPointToStay(player.getLoc(), 50, 100, player.getGeoIndex()), 17619); player.setVar("MechanismSpawn", "1", 120000); if(qs != null && !qs.isCompleted()) { Quest q = QuestManager.getQuest(10352);
 	 * player.processQuestEvent(q.getName(), "advanceCond3", null); } if(qs2 != null && !qs2.isCompleted()) { Quest q2 = QuestManager.getQuest(480); player.processQuestEvent(q2.getName(), "advanceCond3", null); } Functions.executeTask("handler.items.Special", "despawnNpc", new Object[] {npc,

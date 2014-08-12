@@ -34,7 +34,7 @@ import lineage2.gameserver.utils.TimeUtils;
 
 import org.apache.commons.lang3.StringUtils;
 
-import quests._655_AGrandPlanForTamingWildBeasts;
+import quests.Q00655_AGrandPlanForTamingWildBeasts;
 
 /**
  * @author Mobius
@@ -91,7 +91,7 @@ public final class FarmMessengerInstance extends NpcInstance
 				return;
 			}
 			
-			QuestState questState = player.getQuestState(_655_AGrandPlanForTamingWildBeasts.class);
+			QuestState questState = player.getQuestState(Q00655_AGrandPlanForTamingWildBeasts.class);
 			
 			if ((questState == null) || (questState.getQuestItemsCount(8293) != 1))
 			{
@@ -345,7 +345,7 @@ public final class FarmMessengerInstance extends NpcInstance
 		
 		if (siegeEvent.isRegistrationOver())
 		{
-			showChatWindow(player, "quests/_655_AGrandPlanForTamingWildBeasts/farm_messenger_q0655_11.htm", "%siege_time%", TimeUtils.toSimpleFormat(clanHall.getSiegeDate()));
+			showChatWindow(player, "quests/Q00655_AGrandPlanForTamingWildBeasts/farm_messenger_q0655_11.htm", "%siege_time%", TimeUtils.toSimpleFormat(clanHall.getSiegeDate()));
 			return false;
 		}
 		
@@ -356,13 +356,13 @@ public final class FarmMessengerInstance extends NpcInstance
 		
 		if ((clan == null) || (player.getObjectId() != clan.getLeaderId()))
 		{
-			showChatWindow(player, "quests/_655_AGrandPlanForTamingWildBeasts/farm_messenger_q0655_03.htm");
+			showChatWindow(player, "quests/Q00655_AGrandPlanForTamingWildBeasts/farm_messenger_q0655_03.htm");
 			return false;
 		}
 		
 		if ((player.getObjectId() == clan.getLeaderId()) && (clan.getLevel() < 4))
 		{
-			showChatWindow(player, "quests/_655_AGrandPlanForTamingWildBeasts/farm_messenger_q0655_05.htm");
+			showChatWindow(player, "quests/Q00655_AGrandPlanForTamingWildBeasts/farm_messenger_q0655_05.htm");
 			return false;
 		}
 		
@@ -374,7 +374,7 @@ public final class FarmMessengerInstance extends NpcInstance
 		
 		if (clan.getHasHideout() > 0)
 		{
-			showChatWindow(player, "quests/_655_AGrandPlanForTamingWildBeasts/farm_messenger_q0655_04.htm");
+			showChatWindow(player, "quests/Q00655_AGrandPlanForTamingWildBeasts/farm_messenger_q0655_04.htm");
 			return false;
 		}
 		

@@ -461,44 +461,4 @@ public final class TaskManager
 		}
 		return false;
 	}
-	
-	/**
-	 * Method addTask.
-	 * @param task String
-	 * @param type TaskTypes
-	 * @param param1 String
-	 * @param param2 String
-	 * @param param3 String
-	 * @param lastActivation long
-	 * @return boolean
-	 */
-	@SuppressWarnings("unused")
-	private static boolean addTask(String task, TaskTypes type, String param1, String param2, String param3, long lastActivation)
-	{
-		Connection con = null;
-		PreparedStatement statement = null;
-		
-		try
-		{
-			con = DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement(SQL_STATEMENTS[3]);
-			statement.setString(1, task);
-			statement.setString(2, type.toString());
-			statement.setLong(3, lastActivation / 1000);
-			statement.setString(4, param1);
-			statement.setString(5, param2);
-			statement.setString(6, param3);
-			statement.execute();
-			return true;
-		}
-		catch (SQLException e)
-		{
-			_log.warn("cannot add the task:	" + e.getMessage());
-		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement);
-		}
-		return false;
-	}
 }

@@ -487,7 +487,7 @@ public final class SubClassManagerInstance extends NpcInstance
 	{
 		if (!Config.ALLOW_LEARN_TRANS_SKILLS_WO_QUEST)
 		{
-			if (!player.isQuestCompleted("_136_MoreThanMeetsTheEye"))
+			if (!player.isQuestCompleted("Q00136_MoreThanMeetsTheEye"))
 			{
 				showChatWindow(player, "trainer/" + getNpcId() + "-noquest.htm");
 				return;

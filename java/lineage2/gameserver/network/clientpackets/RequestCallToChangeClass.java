@@ -71,7 +71,7 @@ public class RequestCallToChangeClass extends L2GameClientPacket
 				return;
 			}
 			
-			player.processQuestEvent("_10338_SeizeYourDestiny", "MemoryOfDisaster", null);
+			player.processQuestEvent("Q10338_SeizeYourDestiny", "MemoryOfDisaster", null);
 		}
 		else
 		{

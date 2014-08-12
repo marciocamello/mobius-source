@@ -48,7 +48,7 @@ import bosses.FourSepulchersSpawn.GateKeeper;
 public final class FourSepulchersManager extends Functions implements ScriptFile, OnDeathListener
 {
 	private static final Logger _log = LoggerFactory.getLogger(FourSepulchersManager.class);
-	public static final String QUEST_ID = "_620_FourGoblets";
+	public static final String QUEST_ID = "Q00620_FourGoblets";
 	private static final Zone[] _zone = new Zone[4];
 	private static final int ENTRANCE_PASS = 7075;
 	private static final int USED_PASS = 7261;

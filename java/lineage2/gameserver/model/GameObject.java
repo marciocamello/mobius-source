@@ -31,7 +31,6 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.Events;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
-import lineage2.gameserver.utils.Util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -1070,17 +1069,6 @@ public abstract class GameObject extends EventOwner
 	public String getName()
 	{
 		return getClass().getSimpleName() + ":" + objectId;
-	}
-	
-	/**
-	 * Method dump.
-	 * @param simpleTypes boolean
-	 * @return String
-	 */
-	@SuppressWarnings("unused")
-	private String dump(boolean simpleTypes)
-	{
-		return Util.dumpObject(this, simpleTypes, true, true);
 	}
 	
 	/**

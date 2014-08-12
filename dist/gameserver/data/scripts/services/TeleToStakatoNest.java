@@ -18,7 +18,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
-import quests._240_ImTheOnlyOneYouCanTrust;
+import quests.Q00240_ImTheOnlyOneYouCanTrust;
 
 /**
  * @author Mobius
@@ -48,7 +48,7 @@ public final class TeleToStakatoNest extends Functions
 			return;
 		}
 		
-		QuestState qs = player.getQuestState(_240_ImTheOnlyOneYouCanTrust.class);
+		QuestState qs = player.getQuestState(Q00240_ImTheOnlyOneYouCanTrust.class);
 		
 		if ((qs == null) || !qs.isCompleted())
 		{

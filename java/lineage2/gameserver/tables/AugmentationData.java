@@ -165,17 +165,6 @@ public class AugmentationData
 	 */
 	private class augmentationStat
 	{
-		@SuppressWarnings("unused")
-		private final Stats _stat;
-		@SuppressWarnings("unused")
-		private final int _singleSize;
-		@SuppressWarnings("unused")
-		private final int _combinedSize;
-		@SuppressWarnings("unused")
-		private final double _singleValues[];
-		@SuppressWarnings("unused")
-		private final double _combinedValues[];
-		
 		/**
 		 * Constructor for augmentationStat.
 		 * @param stat Stats
@@ -184,11 +173,6 @@ public class AugmentationData
 		 */
 		augmentationStat(Stats stat, double sValues[], double cValues[])
 		{
-			_stat = stat;
-			_singleSize = sValues.length;
-			_singleValues = sValues;
-			_combinedSize = cValues.length;
-			_combinedValues = cValues;
 		}
 	}
 	

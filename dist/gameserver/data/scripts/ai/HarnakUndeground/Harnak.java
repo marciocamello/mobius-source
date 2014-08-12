@@ -25,7 +25,7 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.tables.SkillTable;
-import quests._10338_SeizeYourDestiny;
+import quests.Q10338_SeizeYourDestiny;
 
 public final class Harnak extends Fighter
 {
@@ -64,7 +64,7 @@ public final class Harnak extends Fighter
 				
 				for (Player p : r.getPlayers())
 				{
-					QuestState st = p.getQuestState(_10338_SeizeYourDestiny.class);
+					QuestState st = p.getQuestState(Q10338_SeizeYourDestiny.class);
 					
 					if (st != null)
 					{
