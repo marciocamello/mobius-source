@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "restoration_info.dtd">
 <list>
-	<restoration skill_id="9100" skill_level="1" name="Vesper Weapon Box">
+	<restoration skill_id="9100" skill_level="1" name="Vesper Weapon Pack">
 		<group chance="7.1429">
 			<item id="13457" min_count="1" max_count="1"/>
 		</group>
@@ -45,7 +45,7 @@
 			<item id="13470" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="9101" skill_level="1" name="Icarus Weapon Box">
+	<restoration skill_id="9101" skill_level="1" name="Icarus Weapon Pack">
 		<group chance="8.3333">
 			<item id="10215" min_count="1" max_count="1"/>
 		</group>
@@ -83,7 +83,7 @@
 			<item id="10226" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="9102" skill_level="1" name="Dynasty Weapon Box">
+	<restoration skill_id="9102" skill_level="1" name="Dynasty Weapon Pack">
 		<group chance="7.1429">
 			<item id="9380" min_count="1" max_count="1"/>
 		</group>
@@ -127,7 +127,7 @@
 			<item id="9447" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="9103" skill_level="1" name="Box of Vesper Armor">
+	<restoration skill_id="9103" skill_level="1" name="Vesper Armor Pack">
 		<group chance="5.8824">
 			<item id="13143" min_count="1" max_count="1"/>
 		</group>
@@ -180,7 +180,7 @@
 			<item id="13887" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="9104" skill_level="1" name="Box of Moirai Armor">
+	<restoration skill_id="9104" skill_level="1" name="Moirai Armor Pack">
 		<group chance="5.8824">
 			<item id="15694" min_count="1" max_count="1"/>
 		</group>
@@ -233,7 +233,7 @@
 			<item id="15710" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="9105" skill_level="1" name="Box of Dynasty Armor">
+	<restoration skill_id="9105" skill_level="1" name="Dynasty Armor Pack">
 		<group chance="5.8824">
 			<item id="9514" min_count="1" max_count="1"/>
 		</group>
@@ -286,7 +286,7 @@
 			<item id="13886" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="9106" skill_level="1" name="Soul Crystal Box - Level 14">
+	<restoration skill_id="9106" skill_level="1" name="Soul Crystal - Step 14 Box">
 		<group chance="33.3333">
 			<item id="9570" min_count="1" max_count="1"/>
 		</group>
@@ -297,7 +297,7 @@
 			<item id="9572" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="9107" skill_level="1" name="Soul Crystal Box - Level 15">
+	<restoration skill_id="9107" skill_level="1" name="Soul Crystal - Step 15 Box">
 		<group chance="33.3333">
 			<item id="10480" min_count="1" max_count="1"/>
 		</group>
@@ -308,7 +308,7 @@
 			<item id="10482" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="9108" skill_level="1" name="Soul Crystal Box - Level 16">
+	<restoration skill_id="9108" skill_level="1" name="Soul Crystal - Step 16 Box">
 		<group chance="33.3333">
 			<item id="13071" min_count="1" max_count="1"/>
 		</group>
@@ -319,7 +319,7 @@
 			<item id="13073" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="9109" skill_level="1" name="Box of Facelift Potions">
+	<restoration skill_id="9109" skill_level="1" name="Facelifting Potion Pack">
 		<group chance="16.6667">
 			<item id="8664" min_count="1" max_count="1"/>
 		</group>
@@ -333,7 +333,7 @@
 			<item id="14739" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="9110" skill_level="1" name="Box of Haircolor Change Potions">
+	<restoration skill_id="9110" skill_level="1" name="Dye Potion Pack">
 		<group chance="16.6667">
 			<item id="8667" min_count="1" max_count="1"/>
 		</group>
@@ -350,7 +350,7 @@
 			<item id="14739" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="9111" skill_level="1" name="Box of Hairstyle Change Potions">
+	<restoration skill_id="9111" skill_level="1" name="Hairstyle Change Potion Pack">
 		<group chance="10.0">
 			<item id="8671" min_count="1" max_count="1"/>
 		</group>
@@ -376,7 +376,7 @@
 			<item id="14739" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="9112" skill_level="1" name="Box of Gold Apiga">
+	<restoration skill_id="9112" skill_level="1" name="Golden Apigas Box">
 		<group chance="14.2857">
 			<item id="9546" min_count="1" max_count="1"/>
 		</group>
@@ -425,7 +425,7 @@
 			<item id="14701" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="9164" skill_level="1" name="Special Gift of April Fool's Day - Event">
+	<restoration skill_id="9164" skill_level="1" name="April Fools' Day Special Gift (Event)">
 		<group chance="5.882">
 			<item id="13143" min_count="1" max_count="1"/>
 		</group>

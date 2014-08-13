@@ -355,7 +355,7 @@
 			<defence attribute="unholy" value="130"/>
 		</attributes>
 	</npc>
-	<npc id="22404" name="Arcane Captain" title="">
+	<npc id="22404" name="Arcane Guard Captain" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>

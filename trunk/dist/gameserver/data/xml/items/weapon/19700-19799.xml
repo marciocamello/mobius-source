@@ -20,7 +20,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="19719" name="Blessed Celestial Shield" add_name="Attack Type / Heavy">
+	<weapon id="19719" name="Blessed Durandia Shield" add_name="Attack Type / Heavy">
 		<set name="icon" value="icon.weapon_vesper_verteidiger_i01"/>
 		<set name="weight" value="1130"/>
 		<equip>

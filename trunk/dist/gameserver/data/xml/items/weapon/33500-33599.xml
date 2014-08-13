@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="33543" name="Returning hero exclusive - Bound Samurai Longsword*Samurai Longsword">
+	<weapon id="33543" name="Bound Samurai Long Sword*Samurai Long Sword" add_name="Event">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="weight" value="2080"/>
 		<set name="rnd_dam" value="10"/>
@@ -24,7 +24,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33545" name="Returning hero exclusive - Bound Tallum Blade*Damascus">
+	<weapon id="33545" name="Bound Tallum Blade*Damascus" add_name="Event">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="weight" value="1890"/>
 		<set name="rnd_dam" value="10"/>
@@ -47,7 +47,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33547" name="Returning hero exclusive - Bound Dynasty Sword" add_name="Focus">
+	<weapon id="33547" name="Bound Dynasty Sword" add_name="Focus (Event)">
 		<set name="icon" value="icon.weapon_dynasty_blade_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -73,7 +73,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33548" name="Returning hero exclusive - Bound Dynasty Sword" add_name="Health">
+	<weapon id="33548" name="Bound Dynasty Sword" add_name="Health (Event)">
 		<set name="icon" value="icon.weapon_dynasty_blade_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -99,7 +99,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33549" name="Returning hero exclusive - Bound Dynasty Sword" add_name="Light">
+	<weapon id="33549" name="Bound Dynasty Sword" add_name="Light Armor (Event)">
 		<set name="icon" value="icon.weapon_dynasty_blade_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -122,7 +122,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33550" name="Returning hero exclusive - Bound Dynasty Blade" add_name="Focus">
+	<weapon id="33550" name="Bound Dynasty Blade" add_name="Focus (Event)">
 		<set name="icon" value="icon.weapon_dynasty_twohand_sword_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -148,7 +148,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33551" name="Returning hero exclusive - Bound Dynasty Blade" add_name="Health">
+	<weapon id="33551" name="Bound Dynasty Blade" add_name="Health (Event)">
 		<set name="icon" value="icon.weapon_dynasty_twohand_sword_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -174,7 +174,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33552" name="Returning hero exclusive - Bound Dynasty Blade" add_name="Light">
+	<weapon id="33552" name="Bound Dynasty Blade" add_name="Light Armor (Event)">
 		<set name="icon" value="icon.weapon_dynasty_twohand_sword_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -197,7 +197,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33553" name="Returning hero exclusive - Bound Dynasty Phantom" add_name="Acumen">
+	<weapon id="33553" name="Bound Dynasty Phantom" add_name="Acumen (Event)">
 		<set name="icon" value="icon.weapon_dynasty_magic_sword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -223,7 +223,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33554" name="Returning hero exclusive - Bound Dynasty Phantom" add_name="Mana Up">
+	<weapon id="33554" name="Bound Dynasty Phantom" add_name="Mana Up (Event)">
 		<set name="icon" value="icon.weapon_dynasty_magic_sword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -249,7 +249,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33555" name="Returning hero exclusive - Bound Dynasty Phantom" add_name="Conversion">
+	<weapon id="33555" name="Bound Dynasty Phantom" add_name="Conversion (Event)">
 		<set name="icon" value="icon.weapon_dynasty_magic_sword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -272,7 +272,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33556" name="Returning hero exclusive - Bound Dynasty Bow" add_name="Cheap Shot">
+	<weapon id="33556" name="Bound Dynasty Bow" add_name="Cheap Shot (Event)">
 		<set name="icon" value="icon.weapon_dynasty_bow_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -297,7 +297,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33557" name="Returning hero exclusive - Bound Dynasty Bow" add_name="Guidance">
+	<weapon id="33557" name="Bound Dynasty Bow" add_name="Guidance (Event)">
 		<set name="icon" value="icon.weapon_dynasty_bow_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -325,7 +325,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33558" name="Returning hero exclusive - Bound Dynasty Bow" add_name="Focus">
+	<weapon id="33558" name="Bound Dynasty Bow" add_name="Focus (Event)">
 		<set name="icon" value="icon.weapon_dynasty_bow_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -353,7 +353,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33559" name="Returning hero exclusive - Bound Dynasty Knife" add_name="Focus">
+	<weapon id="33559" name="Bound Dynasty Knife" add_name="Focus (Event)">
 		<set name="icon" value="icon.weapon_dynasty_dagger_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -380,7 +380,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33560" name="Returning hero exclusive - Bound Dynasty Knife" add_name="Evasion">
+	<weapon id="33560" name="Bound Dynasty Knife" add_name="Evasion (Event)">
 		<set name="icon" value="icon.weapon_dynasty_dagger_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -404,7 +404,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33561" name="Returning hero exclusive - Bound Dynasty Knife" add_name="Critical Damage">
+	<weapon id="33561" name="Bound Dynasty Knife" add_name="Critical Damage (Event)">
 		<set name="icon" value="icon.weapon_dynasty_dagger_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -431,7 +431,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33562" name="Returning hero exclusive - Bound Dynasty Halberd" add_name="Anger">
+	<weapon id="33562" name="Bound Dynasty Halberd" add_name="Anger (Event)">
 		<set name="icon" value="icon.weapon_dynasty_spear_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -454,7 +454,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33563" name="Returning hero exclusive - Bound Dynasty Halberd" add_name="Critical Stun">
+	<weapon id="33563" name="Bound Dynasty Halberd" add_name="Critical Stun (Event)">
 		<set name="icon" value="icon.weapon_dynasty_spear_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -477,7 +477,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33564" name="Returning hero exclusive - Bound Dynasty Halberd" add_name="Light">
+	<weapon id="33564" name="Bound Dynasty Halberd" add_name="Light Armor (Event)">
 		<set name="icon" value="icon.weapon_dynasty_spear_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -500,7 +500,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33565" name="Returning hero exclusive - Bound Dynasty Cudgel" add_name="Anger">
+	<weapon id="33565" name="Bound Dynasty Cudgel" add_name="Anger (Event)">
 		<set name="icon" value="icon.weapon_dynasty_hammer_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -523,7 +523,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33566" name="Returning hero exclusive - Bound Dynasty Cudgel" add_name="Health">
+	<weapon id="33566" name="Bound Dynasty Cudgel" add_name="Health (Event)">
 		<set name="icon" value="icon.weapon_dynasty_hammer_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -549,7 +549,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33567" name="Returning hero exclusive - Bound Dynasty Cudgel" add_name="Rsk. Focus">
+	<weapon id="33567" name="Bound Dynasty Cudgel" add_name="Rsk. Focus (Event)">
 		<set name="icon" value="icon.weapon_dynasty_hammer_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -572,7 +572,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33568" name="Returning hero exclusive - Bound Dynasty Mace" add_name="Mana Up">
+	<weapon id="33568" name="Bound Dynasty Mace" add_name="Mana Up (Event)">
 		<set name="icon" value="icon.weapon_dynasty_staff_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -598,7 +598,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33569" name="Returning hero exclusive - Bound Dynasty Mace" add_name="Conversion">
+	<weapon id="33569" name="Bound Dynasty Mace" add_name="Conversion (Event)">
 		<set name="icon" value="icon.weapon_dynasty_staff_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -621,7 +621,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33570" name="Returning hero exclusive - Bound Dynasty Mace" add_name="Acumen">
+	<weapon id="33570" name="Bound Dynasty Mace" add_name="Acumen (Event)">
 		<set name="icon" value="icon.weapon_dynasty_staff_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -647,7 +647,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33571" name="Returning hero exclusive - Bound Dynasty Bagh-Nakh" add_name="Rsk. Evasion">
+	<weapon id="33571" name="Bound Dynasty Bagh-Nakh" add_name="Rsk. Evasion (Event)">
 		<set name="icon" value="icon.weapon_dynasty_jamadhr_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -670,7 +670,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33572" name="Returning hero exclusive - Bound Dynasty Bagh-Nakh" add_name="Focus">
+	<weapon id="33572" name="Bound Dynasty Bagh-Nakh" add_name="Focus (Event)">
 		<set name="icon" value="icon.weapon_dynasty_jamadhr_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -696,7 +696,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33573" name="Returning hero exclusive - Bound Dynasty Bagh-Nakh" add_name="Haste">
+	<weapon id="33573" name="Bound Dynasty Bagh-Nakh" add_name="Haste (Event)">
 		<set name="icon" value="icon.weapon_dynasty_jamadhr_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -722,7 +722,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33574" name="Returning hero exclusive - Bound Dynasty Staff" add_name="Mana Up">
+	<weapon id="33574" name="Bound Dynasty Staff" add_name="Mana Up (Event)">
 		<set name="icon" value="icon.weapon_dynasty_twohand_staff_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -748,7 +748,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33575" name="Returning hero exclusive - Bound Dynasty Staff" add_name="Conversion">
+	<weapon id="33575" name="Bound Dynasty Staff" add_name="Conversion (Event)">
 		<set name="icon" value="icon.weapon_dynasty_twohand_staff_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -771,7 +771,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33576" name="Returning hero exclusive - Bound Dynasty Staff" add_name="Acumen">
+	<weapon id="33576" name="Bound Dynasty Staff" add_name="Acumen (Event)">
 		<set name="icon" value="icon.weapon_dynasty_twohand_staff_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -797,7 +797,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33577" name="Returning hero exclusive - Bound Dynasty Crusher" add_name="Anger">
+	<weapon id="33577" name="Bound Dynasty Crusher" add_name="Anger (Event)">
 		<set name="icon" value="icon.weapon_dynasty_crusher_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -820,7 +820,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33578" name="Returning hero exclusive - Bound Dynasty Crusher" add_name="Health">
+	<weapon id="33578" name="Bound Dynasty Crusher" add_name="Health (Event)">
 		<set name="icon" value="icon.weapon_dynasty_crusher_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -846,7 +846,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33579" name="Returning hero exclusive - Bound Dynasty Crusher" add_name="Rsk. Focus">
+	<weapon id="33579" name="Bound Dynasty Crusher" add_name="Rsk. Focus (Event)">
 		<set name="icon" value="icon.weapon_dynasty_crusher_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -869,7 +869,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33580" name="Returning hero exclusive - Bound Dynasty Dual Daggers">
+	<weapon id="33580" name="Bound Dynasty Dual Dagger" add_name="Event">
 		<set name="icon" value="icon.dual_dagger_i00"/>
 		<set name="weight" value="2150"/>
 		<set name="rnd_dam" value="10"/>
@@ -892,7 +892,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33581" name="Returning hero exclusive - Bound Dynasty Dual Sword">
+	<weapon id="33581" name="Bound Dynasty Dualsword" add_name="Event">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -915,7 +915,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33582" name="Returning hero exclusive - Bound Dynasty Rapier" add_name="Focus">
+	<weapon id="33582" name="Bound Dynasty Rapier" add_name="Focus (Event)">
 		<set name="icon" value="icon.weapon_dynasty_rapier_i01"/>
 		<set name="weight" value="1280"/>
 		<set name="rnd_dam" value="40"/>
@@ -941,7 +941,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33583" name="Returning hero exclusive - Bound Dynasty Rapier" add_name="Health">
+	<weapon id="33583" name="Bound Dynasty Rapier" add_name="Health (Event)">
 		<set name="icon" value="icon.weapon_dynasty_rapier_i01"/>
 		<set name="weight" value="1280"/>
 		<set name="rnd_dam" value="40"/>
@@ -967,7 +967,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33584" name="Returning hero exclusive - Bound Dynasty Rapier" add_name="Light">
+	<weapon id="33584" name="Bound Dynasty Rapier" add_name="Light Armor (Event)">
 		<set name="icon" value="icon.weapon_dynasty_rapier_i01"/>
 		<set name="weight" value="1280"/>
 		<set name="rnd_dam" value="40"/>
@@ -990,7 +990,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33585" name="Returning hero exclusive - Bound Dynasty Ancient Sword" add_name="Focus">
+	<weapon id="33585" name="Bound Dynasty Ancient Sword" add_name="Focus (Event)">
 		<set name="icon" value="icon.weapon_dynasty_ancient_sword_i01"/>
 		<set name="weight" value="1800"/>
 		<set name="rnd_dam" value="15"/>
@@ -1016,7 +1016,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33586" name="Returning hero exclusive - Bound Dynasty Ancient Sword" add_name="Health">
+	<weapon id="33586" name="Bound Dynasty Ancient Sword" add_name="Health (Event)">
 		<set name="icon" value="icon.weapon_dynasty_ancient_sword_i01"/>
 		<set name="weight" value="1800"/>
 		<set name="rnd_dam" value="15"/>
@@ -1042,7 +1042,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33587" name="Returning hero exclusive - Bound Dynasty Ancient Sword" add_name="Light">
+	<weapon id="33587" name="Bound Dynasty Ancient Sword" add_name="Light Armor (Event)">
 		<set name="icon" value="icon.weapon_dynasty_ancient_sword_i01"/>
 		<set name="weight" value="1800"/>
 		<set name="rnd_dam" value="15"/>
@@ -1065,7 +1065,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33588" name="Returning hero exclusive - Bound Dynasty Crossbow" add_name="Cheap Shot">
+	<weapon id="33588" name="Bound Dynasty Crossbow" add_name="Cheap Shot (Event)">
 		<set name="icon" value="icon.weapon_dynasty_crossbow_i01"/>
 		<set name="weight" value="1580"/>
 		<set name="rnd_dam" value="10"/>
@@ -1089,7 +1089,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33589" name="Returning hero exclusive - Bound Dynasty Crossbow" add_name="Guidance">
+	<weapon id="33589" name="Bound Dynasty Crossbow" add_name="Guidance (Event)">
 		<set name="icon" value="icon.weapon_dynasty_crossbow_i01"/>
 		<set name="weight" value="1580"/>
 		<set name="rnd_dam" value="10"/>
@@ -1116,7 +1116,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33590" name="Returning hero exclusive - Bound Dynasty Crossbow" add_name="Focus">
+	<weapon id="33590" name="Bound Dynasty Crossbow" add_name="Focus (Event)">
 		<set name="icon" value="icon.weapon_dynasty_crossbow_i01"/>
 		<set name="weight" value="1580"/>
 		<set name="rnd_dam" value="10"/>
@@ -1143,7 +1143,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33596" name="Returning hero exclusive - Bound Dynasty Shield">
+	<weapon id="33596" name="Bound Dynasty Shield" add_name="Event">
 		<set name="icon" value="icon.shield_dynasty_shield_i00"/>
 		<set name="weight" value="1150"/>
 		<equip>

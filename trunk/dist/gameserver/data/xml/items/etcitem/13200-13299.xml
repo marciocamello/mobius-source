@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="13225" name="Kamaloka (Hall of the Abyss) 15-unit Box">
+	<etcitem id="13225" name="Kamaloka (Hall of the Abyss) 15-unit Pack">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -13,7 +13,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="13226" name="Near Kamaloka 15-unit Box">
+	<etcitem id="13226" name="Near Kamaloka 15-unit Pack">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -25,7 +25,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="13227" name="Kamaloka (Labyrinth of the Abyss) 15-unit Box">
+	<etcitem id="13227" name="Kamaloka (Labyrinth of the Abyss) 15-unit Pack">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -214,7 +214,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
 	</etcitem>
-	<etcitem id="13265" name="Gran Kain's Echo Crystal - Theme of the Feast">
+	<etcitem id="13265" name="Gran Kain's Echo Crystal - Theme of Festival">
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -534,7 +534,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="13297" name="Extra Pass - Kamaloka (Hall of the Abyss) (Event)">
+	<etcitem id="13297" name="Extra Pass: Kamaloka (Hall of the Abyss) (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -545,7 +545,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="5"/>
 	</etcitem>
-	<etcitem id="13298" name="Extra Pass - Near Kamaloka (Event)">
+	<etcitem id="13298" name="Extra Pass: Near Kamaloka (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -556,7 +556,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="5"/>
 	</etcitem>
-	<etcitem id="13299" name="Extra Pass - Kamaloka (Labyrinth of the Abyss) (Event)">
+	<etcitem id="13299" name="Extra Pass: Kamaloka (Labyrinth of the Abyss) (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

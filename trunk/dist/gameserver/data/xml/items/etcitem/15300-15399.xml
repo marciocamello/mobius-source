@@ -393,7 +393,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="15359" name="Winning instant lottery ticket - 100,000 PC Points" add_name="30-day">
+	<etcitem id="15359" name="Winning Lottery Ticket: 10,000 PC Points" add_name="30-day">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -403,7 +403,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="15360" name="Winning instant lottery ticket - 10,000 PC Points" add_name="30-day">
+	<etcitem id="15360" name="Winning Lottery Ticket: 1,000 PC Points" add_name="30-day">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -413,7 +413,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="15361" name="Winning instant lottery ticket - 2,000 PC Points" add_name="30-day">
+	<etcitem id="15361" name="Winning Lottery Ticket: 200 PC Points" add_name="30-day">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -423,7 +423,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="15362" name="Winning instant lottery ticket - 1,000 PC Points" add_name="30-day">
+	<etcitem id="15362" name="Winning Lottery Ticket: 100 PC Points" add_name="30-day">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -433,7 +433,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="15363" name="Winning instant lottery ticket - 100 PC Points" add_name="30-day">
+	<etcitem id="15363" name="Winning Lottery Ticket: 10 PC Points" add_name="30-day">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

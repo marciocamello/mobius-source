@@ -1,45 +1,547 @@
-<?xml version="1.0"?>
-<!DOCTYPE list SYSTEM "item.dtd">
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<armor id="35564" name="Ruler's Authority">
+        <set name="type" value="LIGHT"/>
+		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="0"/>
-		<set name="crystal_type" value="R"/>
-		<set name="crystallizable" value="false"/>
-		<set name="augmentable" value="false"/>
-		<set name="type" value="LIGHT"/>
-		<set name="weight" value="440"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
+        <set name="augmentable" value="false"/>
+		<set name="icon" value="icon.belt_rulers_authority"/>
+        <set name="weight" value="440"/>
+        <set name="ex_type" value="BELT"/>
 		<equip>
-			<slot id="BELT"/>
-		</equip>
-		<set name="ex_type" value="BELT"/>
-		<for>
-			<add stat="maxHp" order="0x10" value="1000"/>
-			<add stat="maxMp" order="0x10" value="1000"/>
-			<add stat="maxCp" order="0x10" value="1000"/>
-		</for>
-	</armor>
-	<armor id="35570" name="Tauti's Ring">
-		<set name="crystal_count" value="2510"/>
-		<set name="crystal_type" value="R"/>
-		<set name="crystallizable" value="false"/>
-		<set name="augmentable" value="false"/>
-		<set name="price" value="3700000"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="150"/>
-		<equip>
-			<slot id="RIGHT_FINGER"/>
-			<slot id="LEFT_FINGER"/>
-		</equip>
-		<set name="ex_type" value="RING"/>
+            <slot id="BELT"/> 
+        </equip>
 		<skills>
-			<skill id="8870" level="1"/>
-		</skills>
-		<for>
-			<add stat="defenceUnholy" order="0x10" value="25"/>
-			<add stat="defenceFire" order="0x10" value="25"/>
-			<add stat="mDef" order="0x10" value="94"/>
-			<add stat="maxMp" order="0x10" value="38"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+            <skill id="15145" level="1"/>
+        </skills>
+        <for>
+			<add stat="maxLoad" order="0x40" value="25600"/>
+			<add stat="inventoryLimit" order="0x40" value="36"/>
+			<add stat="pDef" order="0x40" value="50"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35565" name="Mysterious Belt" add_name="3-day">
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+        <set name="augmentable" value="false"/>
+		<set name="crystal_type" value="S"/>
+		<set name="crystal_count" value="0"/>
+        <set name="type" value="LIGHT"/>
+		<set name="icon" value="icon.belt_rulers_authority"/>
+        <set name="weight" value="440"/>
+		<set name="durability" value="4320"/>
+		<set name="temporal" value="true"/>
+        <equip>
+            <slot id="BELT"/> 
+        </equip>
+		<skills>
+            <skill id="15146" level="1"/>
+        </skills>
+        <set name="ex_type" value="BELT"/>
+        <for>
+            <add stat="pDef" order="0x40" value="50"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+    <armor id="35570" name="Tauti's Ring">
+        <set name="crystal_type" value="R"/>
+		<set name="crystallizable" value="true"/>
+        <set name="crystal_count" value="324"/>
+        <set name="augmentable" value="false"/>        
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+		<set name="price" value="7596000"/>
+        <equip>
+            <slot id="RIGHT_FINGER"/>
+            <slot id="LEFT_FINGER"/>
+        </equip>
+        <set name="ex_type" value="RING"/>
+		<skills>
+            <skill id="8870" level="1"/>
+        </skills>
+        <for>
+            <add stat="mDef" order="0x10" value="108"/>
+            <add stat="maxMp" order="0x10" value="38"/>		
+            <enchant stat="mDef" order="0x0C" value="0"/>          
 		</for>
-	</armor>
+    </armor>
+	<armor id="35571" name="Water Resistance Necklace">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="NECKLACE"/> 
+        </equip>
+        <set name="ex_type" value="NECKLACE"/>
+        <for>
+			<add stat="mDef" order="0x40" value="85"/>
+			<add stat="maxMp" order="0x40" value="33"/>
+			<add stat="defenceWater" order="0x40" value="26"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35572" name="Holy Attack Resistance Necklace">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="NECKLACE"/> 
+        </equip>
+        <set name="ex_type" value="NECKLACE"/>
+        <for>
+			<add stat="mDef" order="0x40" value="85"/>
+			<add stat="maxMp" order="0x40" value="33"/>
+			<add stat="defenceHoly" order="0x40" value="26"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35573" name="Wind Resistance Necklace">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="NECKLACE"/> 
+        </equip>
+        <set name="ex_type" value="NECKLACE"/>
+        <for>
+			<add stat="mDef" order="0x40" value="85"/>
+			<add stat="maxMp" order="0x40" value="33"/>
+			<add stat="defenceWind" order="0x40" value="26"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35574" name="Dark Attack Resistance Necklace">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="NECKLACE"/> 
+        </equip>
+        <set name="ex_type" value="NECKLACE"/>
+        <for>
+			<add stat="mDef" order="0x40" value="85"/>
+			<add stat="maxMp" order="0x40" value="33"/>
+			<add stat="defenceUnholy" order="0x40" value="26"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35575" name="Earth Resistance Necklace">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="NECKLACE"/> 
+        </equip>
+        <set name="ex_type" value="NECKLACE"/>
+        <for>
+			<add stat="mDef" order="0x40" value="85"/>
+			<add stat="maxMp" order="0x40" value="33"/>
+			<add stat="defenceWater" order="0x40" value="26"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35576" name="Fire Resistance Necklace">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="NECKLACE"/> 
+        </equip>
+        <set name="ex_type" value="NECKLACE"/>
+        <for>
+			<add stat="mDef" order="0x40" value="85"/>
+			<add stat="maxMp" order="0x40" value="33"/>
+			<add stat="defenceFire" order="0x40" value="26"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35577" name="Top-grade Water Resistance Necklace">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="NECKLACE"/> 
+        </equip>
+        <set name="ex_type" value="NECKLACE"/>
+        <for>
+			<add stat="mDef" order="0x40" value="158"/>
+			<add stat="maxMp" order="0x40" value="62"/>
+			<add stat="defenceWater" order="0x40" value="30"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35578" name="Top-grade Fire Resistance Necklace">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="NECKLACE"/> 
+        </equip>
+        <set name="ex_type" value="NECKLACE"/>
+        <for>
+			<add stat="mDef" order="0x40" value="158"/>
+			<add stat="maxMp" order="0x40" value="62"/>
+			<add stat="defenceFire" order="0x40" value="30"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35579" name="Top-grade Holy Attack Resistance Necklace">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="NECKLACE"/> 
+        </equip>
+        <set name="ex_type" value="NECKLACE"/>
+        <for>
+			<add stat="mDef" order="0x40" value="158"/>
+			<add stat="maxMp" order="0x40" value="62"/>
+			<add stat="defenceHoly" order="0x40" value="30"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35580" name="Top-grade Dark Attack Resistance Necklace">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="NECKLACE"/> 
+        </equip>
+        <set name="ex_type" value="NECKLACE"/>
+        <for>
+			<add stat="mDef" order="0x40" value="158"/>
+			<add stat="maxMp" order="0x40" value="62"/>
+			<add stat="defenceUnholy" order="0x40" value="30"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35581" name="Top-grade Wind Resistance Necklace">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="NECKLACE"/> 
+        </equip>
+        <set name="ex_type" value="NECKLACE"/>
+        <for>
+			<add stat="mDef" order="0x40" value="158"/>
+			<add stat="maxMp" order="0x40" value="62"/>
+			<add stat="defenceWind" order="0x40" value="30"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35582" name="Top-grade Earth Resistance Necklace">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="NECKLACE"/> 
+        </equip>
+        <set name="ex_type" value="NECKLACE"/>
+        <for>
+			<add stat="mDef" order="0x40" value="158"/>
+			<add stat="maxMp" order="0x40" value="62"/>
+			<add stat="defenceEarth" order="0x40" value="30"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35583" name="Earth Resistance Ring">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+         <equip>
+            <slot id="RIGHT_FINGER"/>
+            <slot id="LEFT_FINGER"/>
+        </equip>
+        <set name="ex_type" value="RING"/>
+        <for>
+			<add stat="mDef" order="0x40" value="42"/>
+			<add stat="maxMp" order="0x40" value="17"/>
+			<add stat="defenceEarth" order="0x40" value="12"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35584" name="Water Resistance Ring">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+         <equip>
+            <slot id="RIGHT_FINGER"/>
+            <slot id="LEFT_FINGER"/>
+        </equip>
+        <set name="ex_type" value="RING"/>
+        <for>
+			<add stat="mDef" order="0x40" value="42"/>
+			<add stat="maxMp" order="0x40" value="17"/>
+			<add stat="defenceWater" order="0x40" value="12"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35585" name="Fire Resistance Ring">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+         <equip>
+            <slot id="RIGHT_FINGER"/>
+            <slot id="LEFT_FINGER"/>
+        </equip>
+        <set name="ex_type" value="RING"/>
+        <for>
+			<add stat="mDef" order="0x40" value="42"/>
+			<add stat="maxMp" order="0x40" value="17"/>
+			<add stat="defenceFire" order="0x40" value="12"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35586" name="Holy Attack Resistance Ring">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+         <equip>
+            <slot id="RIGHT_FINGER"/>
+            <slot id="LEFT_FINGER"/>
+        </equip>
+        <set name="ex_type" value="RING"/>
+        <for>
+			<add stat="mDef" order="0x40" value="42"/>
+			<add stat="maxMp" order="0x40" value="17"/>
+			<add stat="defenceHoly" order="0x40" value="12"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35587" name="Dark Attack Resistance Ring">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+         <equip>
+            <slot id="RIGHT_FINGER"/>
+            <slot id="LEFT_FINGER"/>
+        </equip>
+        <set name="ex_type" value="RING"/>
+        <for>
+			<add stat="mDef" order="0x40" value="42"/>
+			<add stat="maxMp" order="0x40" value="17"/>
+			<add stat="defenceUnholy" order="0x40" value="12"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35588" name="Wind Resistance Ring">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+         <equip>
+            <slot id="RIGHT_FINGER"/>
+            <slot id="LEFT_FINGER"/>
+        </equip>
+        <set name="ex_type" value="RING"/>
+        <for>
+			<add stat="mDef" order="0x40" value="42"/>
+			<add stat="maxMp" order="0x40" value="17"/>
+			<add stat="defenceWind" order="0x40" value="12"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35589" name="Top-grade Earth Resistance Ring">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+         <equip>
+            <slot id="RIGHT_FINGER"/>
+            <slot id="LEFT_FINGER"/>
+        </equip>
+        <set name="ex_type" value="RING"/>
+        <for>
+			<add stat="mDef" order="0x40" value="79"/>
+			<add stat="maxMp" order="0x40" value="31"/>
+			<add stat="defenceEarth" order="0x40" value="15"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35590" name="Top-grade Water Resistance Ring">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+         <equip>
+            <slot id="RIGHT_FINGER"/>
+            <slot id="LEFT_FINGER"/>
+        </equip>
+        <set name="ex_type" value="RING"/>
+        <for>
+			<add stat="mDef" order="0x40" value="79"/>
+			<add stat="maxMp" order="0x40" value="31"/>
+			<add stat="defenceWater" order="0x40" value="15"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35591" name="Top-grade Fire Resistance Ring">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+         <equip>
+            <slot id="RIGHT_FINGER"/>
+            <slot id="LEFT_FINGER"/>
+        </equip>
+        <set name="ex_type" value="RING"/>
+        <for>
+			<add stat="mDef" order="0x40" value="79"/>
+			<add stat="maxMp" order="0x40" value="31"/>
+			<add stat="defenceFire" order="0x40" value="15"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35592" name="Top-grade Holy Attack Resistance Ring">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+         <equip>
+            <slot id="RIGHT_FINGER"/>
+            <slot id="LEFT_FINGER"/>
+        </equip>
+        <set name="ex_type" value="RING"/>
+        <for>
+			<add stat="mDef" order="0x40" value="79"/>
+			<add stat="maxMp" order="0x40" value="31"/>
+			<add stat="defenceHoly" order="0x40" value="15"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35593" name="Top-grade Dark Attack Resistance Ring">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+         <equip>
+            <slot id="RIGHT_FINGER"/>
+            <slot id="LEFT_FINGER"/>
+        </equip>
+        <set name="ex_type" value="RING"/>
+        <for>
+			<add stat="mDef" order="0x40" value="79"/>
+			<add stat="maxMp" order="0x40" value="31"/>
+			<add stat="defenceUnholy" order="0x40" value="15"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35594" name="Top-grade Wind Resistance Ring">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+         <equip>
+            <slot id="RIGHT_FINGER"/>
+            <slot id="LEFT_FINGER"/>
+        </equip>
+        <set name="ex_type" value="RING"/>
+        <for>
+			<add stat="mDef" order="0x40" value="79"/>
+			<add stat="maxMp" order="0x40" value="31"/>
+			<add stat="defenceWind" order="0x40" value="15"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35595" name="Water Royal Guard Necklace">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessory_nectklace_of_domi_protection_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="NECKLACE"/> 
+        </equip>
+        <set name="ex_type" value="NECKLACE"/>
+        <for>
+			<add stat="mDef" order="0x40" value="106"/>
+			<add stat="maxMp" order="0x40" value="46"/>
+			<add stat="defenceWater" order="0x40" value="30"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35596" name="Earth Royal Guard Necklace">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessory_nectklace_of_domi_protection_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="NECKLACE"/> 
+        </equip>
+        <set name="ex_type" value="NECKLACE"/>
+        <for>
+			<add stat="mDef" order="0x40" value="106"/>
+			<add stat="maxMp" order="0x40" value="46"/>
+			<add stat="defenceEarth" order="0x40" value="30"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35597" name="Fire Royal Guard Necklace">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessory_nectklace_of_domi_protection_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="NECKLACE"/> 
+        </equip>
+        <set name="ex_type" value="NECKLACE"/>
+        <for>
+			<add stat="mDef" order="0x40" value="106"/>
+			<add stat="maxMp" order="0x40" value="46"/>
+			<add stat="defenceFire" order="0x40" value="30"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35598" name="Holy Royal Guard Necklace">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessory_nectklace_of_domi_protection_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="NECKLACE"/> 
+        </equip>
+        <set name="ex_type" value="NECKLACE"/>
+        <for>
+			<add stat="mDef" order="0x40" value="106"/>
+			<add stat="maxMp" order="0x40" value="46"/>
+			<add stat="defenceHoly" order="0x40" value="30"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="35599" name="Dark Royal Guard Necklace">
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessory_nectklace_of_domi_protection_i00"/>
+		<set name="price" value="37000"/> <!-- с потолка -->
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="NECKLACE"/> 
+        </equip>
+        <set name="ex_type" value="NECKLACE"/>
+        <for>
+			<add stat="mDef" order="0x40" value="106"/>
+			<add stat="maxMp" order="0x40" value="46"/>
+			<add stat="defenceUnholy" order="0x40" value="30"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
 </list>

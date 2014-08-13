@@ -406,7 +406,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="34941" name="Life Stone - Hair Accessory" add_name="Event">
+	<etcitem id="34941" name="Life Stone: Hair Accessory" add_name="Event">
 		<set name="icon" value="icon.life_dust_hairacc_general"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
@@ -419,7 +419,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="34942" name="Lv2 Giant Dye Pack" add_name="Event">
+	<etcitem id="34942" name="Lv. 2 Giant Dye Pack" add_name="Event">
 		<set name="icon" value="icon.present_of_destination_event"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
@@ -432,7 +432,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="34943" name="Lv2 Legendary Dye Pack" add_name="Event">
+	<etcitem id="34943" name="Lv. 2 Legendary Dye Pack" add_name="Event">
 		<set name="icon" value="icon.present_of_destination_event"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
@@ -445,7 +445,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="34944" name="Lv2 Ancient Dye Pack" add_name="Event">
+	<etcitem id="34944" name="Lv. 2 Ancient Dye Pack" add_name="Event">
 		<set name="icon" value="icon.present_of_destination_event"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
@@ -458,7 +458,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="34945" name="Lv3 Giant Dye Pack" add_name="Event">
+	<etcitem id="34945" name="Lv. 3 Giant Dye Pack" add_name="Event">
 		<set name="icon" value="icon.present_of_destination_event"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
@@ -471,7 +471,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="34946" name="Lv3 Legendary Dye Pack" add_name="Event">
+	<etcitem id="34946" name="Lv. 3 Legendary Dye Pack" add_name="Event">
 		<set name="icon" value="icon.present_of_destination_event"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
@@ -484,7 +484,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="34947" name="Lv3 Ancient Dye Pack" add_name="Event">
+	<etcitem id="34947" name="Lv. 3 Ancient Dye Pack" add_name="Event">
 		<set name="icon" value="icon.present_of_destination_event"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
@@ -497,7 +497,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="34948" name="Scroll of Escape Box: Village" add_name="Event">
+	<etcitem id="34948" name="Scroll of Escape Pack: Village" add_name="Event">
 		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
@@ -510,7 +510,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="34949" name="Letter Collector's Gift (8th Anniversary)" add_name="Event">
+	<etcitem id="34949" name="Letter Collector's Gift (9th Anniversary)" add_name="Event">
 		<set name="icon" value="icon.shield_bread_i02"/>
 		<set name="type" value="SCROLL"/>
 		<set name="class" value="CONSUMABLE"/>
@@ -527,7 +527,7 @@
 			<skill id="9438" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="34950" name="Lv4 Giant Dye Pack" add_name="Event">
+	<etcitem id="34950" name="Lv. 4 Giant Dye Pack" add_name="Event">
 		<set name="icon" value="icon.present_of_destination_event"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
@@ -540,7 +540,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="34951" name="Lv4 Legendary Dye Pack" add_name="Event">
+	<etcitem id="34951" name="Lv. 4 Legendary Dye Pack" add_name="Event">
 		<set name="icon" value="icon.present_of_destination_event"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
@@ -553,7 +553,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="34952" name="Lv4 Ancient Dye Pack" add_name="Event">
+	<etcitem id="34952" name="Lv. 4 Ancient Dye Pack" add_name="Event">
 		<set name="icon" value="icon.present_of_destination_event"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
@@ -566,7 +566,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="34953" name="Lv5 Giant Dye Pack" add_name="Event">
+	<etcitem id="34953" name="Lv. 5 Giant Dye Pack" add_name="Event">
 		<set name="icon" value="icon.present_of_destination_event"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
@@ -579,7 +579,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="34954" name="Lv5 Legendary Dye Pack" add_name="Event">
+	<etcitem id="34954" name="Lv. 5 Legendary Dye Pack" add_name="Event">
 		<set name="icon" value="icon.present_of_destination_event"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
@@ -592,7 +592,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="34955" name="Lv5 Ancient Dye Pack" add_name="Event">
+	<etcitem id="34955" name="Lv. 5 Ancient Dye Pack" add_name="Event">
 		<set name="icon" value="icon.present_of_destination_event"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
@@ -988,7 +988,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="34990" name="Weapon Piece">
+	<etcitem id="34990" name="Corroded Weapon Fragment">
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1000,7 +1000,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_r_weapon_piece_i01"/>
 	</etcitem>
-	<etcitem id="34991" name="Armor Piece">
+	<etcitem id="34991" name="Corroded Armor Fragment">
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1012,7 +1012,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_r_armor_piece_i01"/>
 	</etcitem>
-	<etcitem id="34992" name="Accessory Gem">
+	<etcitem id="34992" name="Corroded Accessory Gem">
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>

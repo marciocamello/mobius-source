@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="12800" name="Pumpkin Transformation Stick" add_name="30 day limited period">
+	<weapon id="12800" name="Pumpkin Transformation Stick" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -307,7 +307,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12814" name="Shadow Item - Gatekeeper Transformation Stick">
+	<weapon id="12814" name="Shadow Item: Gatekeeper Transformation Stick">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -372,7 +372,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12853" name="Naga Storm - Molar {PvP}" add_name="Crt. Damage">
+	<weapon id="12853" name="Naga Storm - Molar {PvP}" add_name="Critical Damage">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -408,7 +408,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12854" name="Naga Storm - Molar {PvP}" add_name="Backblow">
+	<weapon id="12854" name="Naga Storm - Molar {PvP}" add_name="Back Blow">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -557,7 +557,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12858" name="Barakiel's Axe - On Fire {PvP}" add_name="Health">
+	<weapon id="12858" name="Barakiel's Axe - Mild {PvP}" add_name="Health">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -593,7 +593,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12859" name="Barakiel's Axe - On Fire {PvP}" add_name="Haste">
+	<weapon id="12859" name="Barakiel's Axe - Mild {PvP}" add_name="Haste">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -629,7 +629,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12860" name="Barakiel's Axe - On Fire {PvP}" add_name="Focus">
+	<weapon id="12860" name="Barakiel's Axe - Mild {PvP}" add_name="Focus">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -789,7 +789,7 @@
 			</mul>
 		</for>
 	</weapon>
-	<weapon id="12864" name="Behemoth's Tuning Fork - Destruction {PvP}" add_name="Focus">
+	<weapon id="12864" name="Behemoth' Tuning Fork - Destruction {PvP}" add_name="Focus">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -825,7 +825,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12865" name="Behemoth's Tuning Fork - Destruction {PvP}" add_name="Health">
+	<weapon id="12865" name="Behemoth' Tuning Fork - Destruction {PvP}" add_name="Health">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -861,7 +861,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12866" name="Behemoth's Tuning Fork - Destruction {PvP}" add_name="Anger">
+	<weapon id="12866" name="Behemoth' Tuning Fork - Destruction {PvP}" add_name="Anger">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1309,7 +1309,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12878" name="Sobekk's Hurricane - Landslide {PvP}" add_name="Crt. Drain">
+	<weapon id="12878" name="Sobekk's Hurricane - Landslide {PvP}" add_name="Critical Drain">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1606,7 +1606,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12886" name="Tiphon's Spear - Landslide {PvP}" add_name="Longblow">
+	<weapon id="12886" name="Tiphon's Spear - Landslide {PvP}" add_name="Long Blow">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>

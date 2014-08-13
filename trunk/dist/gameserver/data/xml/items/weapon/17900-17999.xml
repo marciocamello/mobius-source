@@ -263,7 +263,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="17910" name="Bound Specter Dual Sword">
+	<weapon id="17910" name="Bound Specter Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -341,7 +341,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="17918" name="Bound Seraph Shield" add_name="Heavy">
+	<weapon id="17918" name="Bound Seraph Shield" add_name="Heavy Armor">
 		<set name="icon" value="icon.beranka_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -664,7 +664,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="17944" name="Bound Amaranthine Dual Sword">
+	<weapon id="17944" name="Bound Amaranthine Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -745,7 +745,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="17952" name="Bound Eternal Shield" add_name="Heavy">
+	<weapon id="17952" name="Bound Eternal Shield" add_name="Heavy Armor">
 		<set name="icon" value="icon.weapon_akra_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1056,7 +1056,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="17978" name="Blessed Requiem Dual Sword">
+	<weapon id="17978" name="Blessed Requiem Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1134,7 +1134,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="17986" name="Blessed Immortal Shield" add_name="Heavy">
+	<weapon id="17986" name="Blessed Immortal Shield" add_name="Heavy Armor">
 		<set name="icon" value="icon.weapon_sacon_i00"/>
 		<set name="weight" value="1130"/>
 		<set name="price" value="20000000"/>

@@ -4002,7 +4002,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="1594" name="Singer Dancer Agathion" title="">
+	<npc id="1594" name="Singer and Dancer Agathion" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="34621" name="R Talisman - Half-kill and Lethal Strike Resistance {passive}">
+	<armor id="34621" name="Talisman (R-grade) - Half-kill/Lethal Strike Resistance (Passive)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -15,7 +15,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="34622" name="R Talisman - Half-kill and Lethal Strike Resistance {active}">
+	<armor id="34622" name="Talisman (R-grade) - Half-kill/Lethal Strike Resistance (Active)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -29,7 +29,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="34623" name="Pa'agrio's T-shirt">
+	<armor id="34623" name="Pa'agrio's Shirt">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.pi_shirt_of_wolf_2nd_fire"/>
 		<set name="type" value="NONE"/>
@@ -44,7 +44,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="34624" name="Shyeed's T-shirt">
+	<armor id="34624" name="Sayha's Shirt">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.pi_shirt_of_wolf_2nd_wind"/>
 		<set name="type" value="NONE"/>
@@ -59,7 +59,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="34625" name="Eva's T-shirt">
+	<armor id="34625" name="Eva's Shirt">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.pi_shirt_of_wolf_2nd_water"/>
 		<set name="type" value="NONE"/>
@@ -74,7 +74,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="34626" name="Maphr's T-shirt">
+	<armor id="34626" name="Maphr's Shirt">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.pi_shirt_of_wolf_2nd_earth"/>
 		<set name="type" value="NONE"/>
@@ -89,7 +89,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="34629" name="Pirate's eyepatch">
+	<armor id="34629" name="Pirate's Eyepatch">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_eye_bandage_i00"/>
 		<set name="type" value="NONE"/>
@@ -109,7 +109,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="34631" name="Eye Patch">
+	<armor id="34631" name="Eyepatch">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.Accessary_one_eye_i00"/>
 		<set name="type" value="NONE"/>

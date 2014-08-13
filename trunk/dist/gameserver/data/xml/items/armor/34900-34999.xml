@@ -79,7 +79,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="34937" name="Star Agathion - Soo-ro Kim" add_name="7-day">
+	<armor id="34937" name="Star Agathion - Sooro Kim" add_name="7-day">
 		<set name="icon" value="icon.bracelet_tersi_agathion"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
@@ -139,7 +139,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="34984" name="Talisman of Infinity">
+	<armor id="34984" name="Talisman - Infinity">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.br_rudolf_food_orange_i00"/>
 		<set name="type" value="NONE"/>
@@ -155,7 +155,7 @@
 			<skill id="8864" level="1"/>
 		</skills>
 	</armor>
-	<armor id="34985" name="Talisman of Destruction">
+	<armor id="34985" name="Talisman - Destruction">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.br_rudolf_food_orange_i00"/>
 		<set name="type" value="NONE"/>
@@ -171,7 +171,7 @@
 			<skill id="8864" level="2"/>
 		</skills>
 	</armor>
-	<armor id="34986" name="Talisman of Annihilation">
+	<armor id="34986" name="Talisman - Annihilation">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.br_rudolf_food_orange_i00"/>
 		<set name="type" value="NONE"/>
@@ -187,7 +187,7 @@
 			<skill id="8864" level="3"/>
 		</skills>
 	</armor>
-	<armor id="34987" name="Talisman of Hellfire">
+	<armor id="34987" name="Talisman - Hellfire">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.br_rudolf_food_red_i00"/>
 		<set name="type" value="NONE"/>
@@ -203,7 +203,7 @@
 			<skill id="8864" level="4"/>
 		</skills>
 	</armor>
-	<armor id="34988" name="Talisman of Desire">
+	<armor id="34988" name="Talisman - Desire">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.br_rudolf_food_blue_i00"/>
 		<set name="type" value="NONE"/>
@@ -219,7 +219,7 @@
 			<skill id="8864" level="5"/>
 		</skills>
 	</armor>
-	<armor id="34989" name="Talisman of Longing">
+	<armor id="34989" name="Talisman - Longing">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.br_rudolf_food_purple_i00"/>
 		<set name="type" value="NONE"/>
@@ -235,7 +235,7 @@
 			<skill id="8864" level="6"/>
 		</skills>
 	</armor>
-	<armor id="34996" name="Radiant Cloak of Light">
+	<armor id="34996" name="Cloak of Radiant Light">
 		<set name="type" value="NONE"/>
 		<set name="weight" value="220"/>
 		<set name="ex_type" value="CLOAK"/>
@@ -253,7 +253,7 @@
 			<player castleLightClanLeader="true"/>
 		</cond>
 	</armor>
-	<armor id="34997" name="Cold Cloak of Darkness">
+	<armor id="34997" name="Cloak of Cold Darkness">
 		<set name="type" value="NONE"/>
 		<set name="weight" value="220"/>
 		<set name="ex_type" value="CLOAK"/>

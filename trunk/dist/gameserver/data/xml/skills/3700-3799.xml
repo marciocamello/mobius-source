@@ -626,7 +626,7 @@
 			<add order="0x40" stat="bleedResist" val="8"/>
 		</for>
 	</skill>
-	<skill id="3752" levels="1" name="Majestic Gauntlet">
+	<skill id="3752" levels="1" name="Majestic Gauntlets">
 		<set name="icon" val="icon.armor_t83_g_i00"/>
 		<set name="magicLevel" val="67"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -674,7 +674,7 @@
 			<add order="0x40" stat="stunResist" val="4"/>
 		</for>
 	</skill>
-	<skill id="3756" levels="1" name="Majestic Gauntlet">
+	<skill id="3756" levels="1" name="Majestic Gauntlets">
 		<set name="icon" val="icon.armor_t84_g_i00"/>
 		<set name="magicLevel" val="67"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -746,7 +746,7 @@
 			<add order="0x40" stat="stunResist" val="5"/>
 		</for>
 	</skill>
-	<skill id="3760" levels="1" name="Majestic Gauntlet">
+	<skill id="3760" levels="1" name="Majestic Gauntlets">
 		<set name="icon" val="icon.armor_t85_g_i00"/>
 		<set name="magicLevel" val="67"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -811,7 +811,7 @@
 			<add order="0x40" stat="reflectDam" val="1.025"/>
 		</for>
 	</skill>
-	<skill id="3765" levels="1" name="Gauntlet of Nightmare">
+	<skill id="3765" levels="1" name="Gauntlets of Nightmare">
 		<set name="icon" val="icon.armor_t80_g_i00"/>
 		<set name="magicLevel" val="67"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -863,7 +863,7 @@
 			<add order="0x40" stat="absorbDam" val="1.5"/>
 		</for>
 	</skill>
-	<skill id="3769" levels="1" name="Gauntlet of Nightmare">
+	<skill id="3769" levels="1" name="Gauntlets of Nightmare">
 		<set name="icon" val="icon.armor_t81_g_i00"/>
 		<set name="magicLevel" val="67"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -889,7 +889,7 @@
 			<add order="0x40" stat="absorbDam" val="0.75"/>
 		</for>
 	</skill>
-	<skill id="3771" levels="1" name="Gauntlet of Nightmare">
+	<skill id="3771" levels="1" name="Gauntlets of Nightmare">
 		<set name="icon" val="icon.armor_t82_g_i00"/>
 		<set name="magicLevel" val="67"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1059,7 +1059,7 @@
 			<add order="0x40" stat="rootResist" val="7"/>
 		</for>
 	</skill>
-	<skill id="3784" levels="1" name="Imperial Crusader Gauntlet">
+	<skill id="3784" levels="1" name="Imperial Crusader Gauntlets">
 		<set name="icon" val="icon.armor_t88_g_i00"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1145,7 +1145,7 @@
 			<add order="0x40" stat="defenceUnholy" val="1"/>
 		</for>
 	</skill>
-	<skill id="3791" levels="1" name="Dynasty Gauntlet">
+	<skill id="3791" levels="1" name="Dynasty Gauntlets">
 		<set name="icon" val="icon.armor_t91_g_i00"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>

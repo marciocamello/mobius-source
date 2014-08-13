@@ -27,7 +27,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11801" name="Common Item - Sword of Limit">
+	<weapon id="11801" name="Common Item - Ultimate Sword">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="73"/>
 		<set name="crystal_type" value="C"/>
@@ -159,7 +159,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11806" name="Common Item - Mace of the Underworld">
+	<weapon id="11806" name="Common Item - Mace of Underworld">
 		<set name="enchantable" value="false"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
@@ -378,7 +378,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11814" name="Common Item - Akat Long Bow">
+	<weapon id="11814" name="Common Item - Akat Longbow">
 		<set name="enchantable" value="false"/>
 		<set name="atk_reuse" value="820"/>
 		<set name="crystal_count" value="73"/>
@@ -644,7 +644,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11824" name="Common Item - Pa'agrian Hammer">
+	<weapon id="11824" name="Common Item - Pa'agrio Hammer">
 		<set name="enchantable" value="false"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="73"/>
@@ -780,7 +780,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11829" name="Common Item - Homunkulus's Sword">
+	<weapon id="11829" name="Common Item - Homunkulus' Sword">
 		<set name="enchantable" value="false"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="73"/>
@@ -835,7 +835,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11831" name="Common Item - Stormbringer*Stormbringer">
+	<weapon id="11831" name="Common Item - StormBringer*StormBringer">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="C"/>
@@ -890,7 +890,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11833" name="Common Item - Pa'agrian Axe">
+	<weapon id="11833" name="Common Item - Pa'agrio Axe">
 		<set name="enchantable" value="false"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="78"/>
@@ -917,7 +917,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11834" name="Common Item - Stormbringer*Raid Sword">
+	<weapon id="11834" name="Common Item - StormBringer*Raid Sword">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="C"/>
@@ -943,7 +943,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11835" name="Common Item - Stormbringer*Shamshir">
+	<weapon id="11835" name="Common Item - StormBringer*Shamshir">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="C"/>
@@ -969,7 +969,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11836" name="Common Item - Stormbringer*Spirit Sword">
+	<weapon id="11836" name="Common Item - StormBringer*Spirit Sword">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="C"/>
@@ -995,7 +995,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11837" name="Common Item - Stormbringer*Katana">
+	<weapon id="11837" name="Common Item - StormBringer*Katana">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="C"/>
@@ -1712,7 +1712,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11864" name="Common Item - Stormbringer*Sword of Limit">
+	<weapon id="11864" name="Common Item - StormBringer*Ultimate Sword">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -1738,7 +1738,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11865" name="Common Item - Stormbringer*Sword of Delusion">
+	<weapon id="11865" name="Common Item - StormBringer*Sword of Delusion">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -1764,7 +1764,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11866" name="Common Item - Stormbringer*Sword of Nightmare">
+	<weapon id="11866" name="Common Item - StormBringer*Sword of Nightmare">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -1790,7 +1790,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11867" name="Common Item - Stormbringer*Tsurugi">
+	<weapon id="11867" name="Common Item - StormBringer*Tsurugi">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -1816,7 +1816,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11868" name="Common Item - Stormbringer*Caliburs">
+	<weapon id="11868" name="Common Item - StormBringer*Caliburs">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -1842,7 +1842,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11869" name="Common Item - Raid Sword*Sword of Limit">
+	<weapon id="11869" name="Common Item - Raid Sword*Ultimate Sword">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -1972,7 +1972,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11874" name="Common Item - Shamshir*Sword of Limit">
+	<weapon id="11874" name="Common Item - Shamshir*Ultimate Sword">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -2102,7 +2102,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11879" name="Common Item - Spirit Sword*Sword of Limit">
+	<weapon id="11879" name="Common Item - Spirit Sword*Ultimate Sword">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -2232,7 +2232,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11884" name="Common Item - Katana*Sword of Limit">
+	<weapon id="11884" name="Common Item - Katana*Ultimate Sword">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -2417,7 +2417,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11891" name="Common Item - Sword of Limit*Sword of Limit">
+	<weapon id="11891" name="Common Item - Ultimate Sword*Ultimate Sword">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -2443,7 +2443,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11892" name="Common Item - Sword of Limit*Sword of Delusion">
+	<weapon id="11892" name="Common Item - Ultimate Sword*Sword of Delusion">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -2469,7 +2469,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11893" name="Common Item - Sword of Limit*Sword of Nightmare">
+	<weapon id="11893" name="Common Item - Ultimate Sword*Sword of Nightmare">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -2495,7 +2495,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11894" name="Common Item - Sword of Limit*Tsurugi">
+	<weapon id="11894" name="Common Item - Ultimate Sword*Tsurugi">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -2548,7 +2548,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11896" name="Common Item - Dark Elven Long Bow">
+	<weapon id="11896" name="Common Item - Dark Elven Longbow">
 		<set name="enchantable" value="false"/>
 		<set name="atk_reuse" value="820"/>
 		<set name="crystal_count" value="47"/>

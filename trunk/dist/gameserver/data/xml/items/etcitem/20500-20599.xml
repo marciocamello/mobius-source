@@ -83,7 +83,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20507" name="Mother's Wreath 24-hour Pack (Event)">
+	<etcitem id="20507" name="Mother's Wreath Pack (24-hour) (Event)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -291,7 +291,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20519" name="Crystal: Enchant Ancient Weapon (S-grade)">
+	<etcitem id="20519" name="Ancient Scroll: Enchant Weapon (S-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
@@ -306,7 +306,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20520" name="Crystal: Enchant Ancient Armor (S-grade)">
+	<etcitem id="20520" name="Ancient Scroll: Enchant Armor (S-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
@@ -321,7 +321,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20521" name="Crystal: Enchant Divine Weapon (S-grade)">
+	<etcitem id="20521" name="Divine Scroll: Enchant Weapon (S-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
@@ -336,7 +336,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20522" name="Crystal: Enchant Divine Armor (S-grade)">
+	<etcitem id="20522" name="Divine Scroll: Enchant Armor (S-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
@@ -690,7 +690,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="20548" name="XP Rune III (Lv1-99) 30% Pack (5-hour)">
+	<etcitem id="20548" name="XP Rune III (Lv. 1-99) 30% Pack (5-hour)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -702,7 +702,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20549" name="XP Rune III (Lv1-99) 50% Pack (5-hour)">
+	<etcitem id="20549" name="XP Rune III (Lv. 1-99) 50% Pack (5-hour)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -714,7 +714,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20550" name="XP Rune III (Lv1-99) 30% Pack (10-hour)">
+	<etcitem id="20550" name="XP Rune III (Lv. 1-99) 30% Pack (10-hour)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -726,7 +726,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20551" name="XP Rune III (Lv1-99) 50% Pack (10-hour)">
+	<etcitem id="20551" name="XP Rune III (Lv. 1-99) 50% Pack (10-hour)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -738,7 +738,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20552" name="XP Rune III (Lv1-99) 30% Pack (7-day)">
+	<etcitem id="20552" name="XP Rune III (Lv. 1-99) 30% Pack (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -750,7 +750,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20553" name="XP Rune III (Lv1-99) 50% Pack (7-day)">
+	<etcitem id="20553" name="XP Rune III (Lv. 1-99) 50% Pack (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -834,7 +834,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20560" name="Rune of Crystal Level 3 5-hour Pack">
+	<etcitem id="20560" name="Rune of Crystal (Lv. 3) Pack (5-hour)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -846,7 +846,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20561" name="Rune of Crystal Level 5 5-hour Pack">
+	<etcitem id="20561" name="Rune of Crystal (Lv. 5) Pack (5-hour)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -858,7 +858,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20562" name="Rune of Crystal Level 3 10-hour Pack">
+	<etcitem id="20562" name="Rune of Crystal (Lv. 3) Pack (10-hour)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -870,7 +870,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20563" name="Rune of Crystal Level 5 10-hour Pack">
+	<etcitem id="20563" name="Rune of Crystal (Lv. 5) Pack (10-hour)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -882,7 +882,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20564" name="Rune of Crystal Level 3 Pack (7-day)">
+	<etcitem id="20564" name="Rune of Crystal (Lv. 3) Pack (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -894,7 +894,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20565" name="Rune of Crystal Level 5 Pack (7-day)">
+	<etcitem id="20565" name="Rune of Crystal (Lv. 5) Pack (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -918,7 +918,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20570" name="Eva's Rune (Event)" add_name="(5-hour)">
+	<etcitem id="20570" name="Eva's Rune (Event)" add_name="5-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -936,7 +936,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20571" name="Eva's Rune (Event)" add_name="(3-day)">
+	<etcitem id="20571" name="Eva's Rune (Event)" add_name="3-day">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -954,7 +954,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20572" name="XP Rune III (Lv1-99) 30%" add_name="(3-hour)">
+	<etcitem id="20572" name="XP Rune III (Lv. 1-99) 30%" add_name="3-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1051,7 +1051,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20579" name="Eva's Rune 5-hour Pack (Event)">
+	<etcitem id="20579" name="Eva's Rune Pack (5-hour) (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1069,7 +1069,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20581" name="XP Rune III (Lv1-99) 30% Pack (3-hour) (Event)">
+	<etcitem id="20581" name="XP Rune III (Lv. 1-99) 30% Pack (3-hour) (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1163,7 +1163,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20588" name="Agathion - Weaver 24-hour Pack" add_name="Power of the Golden Calf">
+	<etcitem id="20588" name="Agathion - Weaver Pack (24-hour)" add_name="Power of the Golden Calf">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -1183,7 +1183,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20590" name="Summon of Love Bracelet 24-hour Pack (Event)">
+	<etcitem id="20590" name="Summon of Love Bracelet Pack (24-hour) (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

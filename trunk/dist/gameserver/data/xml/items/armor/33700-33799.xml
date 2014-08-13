@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="33767" name="R Talisman - Lethal Strike Resistance">
+	<armor id="33767" name="Talisman (R-grade) - Lethal Strike Resistance (Active)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -15,7 +15,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="33768" name="R Talisman - Damage Shield Resistance">
+	<armor id="33768" name="Talisman (R-grade) - Damage Reflect Resistance (Active)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -29,7 +29,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="33769" name="R Talisman - Lethal Strike Resistance">
+	<armor id="33769" name="Talisman (R-grade) - Lethal Strike Resistance (Active)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -43,7 +43,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="33770" name="R Talisman - Damage Shield Resistance">
+	<armor id="33770" name="Talisman (R-grade) - Damage Reflect Resistance (Active)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -57,7 +57,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="33771" name="Aden Hero's Treasure Box">
+	<armor id="33771" name="Aden Hero's Reward Box">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="type" value="NONE"/>
@@ -67,7 +67,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="33772" name="Aden Hero's Treasure Box">
+	<armor id="33772" name="Aden Hero's Reward Box">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="type" value="NONE"/>
@@ -77,7 +77,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="33773" name="Aden Hero's Treasure Box">
+	<armor id="33773" name="Aden Hero's Reward Box">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="type" value="NONE"/>
@@ -87,7 +87,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="33797" name="Agathion Seal Bracelet - Tersi's Light" add_name="Event">
+	<armor id="33797" name="Agathion - Tersi's Light" add_name="Event">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.bracelet_tersi_agathion"/>
 		<set name="type" value="NONE"/>

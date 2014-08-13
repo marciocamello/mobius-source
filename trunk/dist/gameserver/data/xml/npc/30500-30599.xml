@@ -1708,7 +1708,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="30535" name="Filaur" title="Gray Pillar Member">
+	<npc id="30535" name="Filaur" title="Gray Pillar's">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>

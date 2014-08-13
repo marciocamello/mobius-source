@@ -349,7 +349,7 @@
 			<defence attribute="unholy" value="80"/>
 		</attributes>
 	</npc>
-	<npc id="36106" name="Ballista" title="Cloud Mountain">
+	<npc id="36106" name="Ballista" title="Cloud Mountain Fortress">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="residences.fortress.siege.Ballista"/>
 		<set name="baseAtkRange" value="40"/>

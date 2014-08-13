@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "restoration_info.dtd">
 <list>
-	<restoration skill_id="22272" skill_level="1" name="Beginner Adventurer's Treasure Sack">
+	<restoration skill_id="22272" skill_level="1" name="Novice Explorer's Treasure Sack">
 		<group chance="5.9">
 			<item id="312" min_count="1" max_count="1"/>
 		</group>

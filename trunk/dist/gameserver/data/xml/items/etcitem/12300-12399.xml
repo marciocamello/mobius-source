@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="12362" name="Lucky Enchant Stone: Enchant Weapon (D-grade)">
+	<etcitem id="12362" name="Lucky Enchant Stone: Weapon (D-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -14,7 +14,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="12363" name="Lucky Enchant Stone: Enchant Weapon (C-grade)">
+	<etcitem id="12363" name="Lucky Enchant Stone: Weapon (C-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -27,7 +27,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="12364" name="Lucky Enchant Stone: Enchant Weapon (B-grade)">
+	<etcitem id="12364" name="Lucky Enchant Stone: Weapon (B-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -40,7 +40,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="12365" name="Lucky Enchant Stone: Enchant Weapon (A-grade)">
+	<etcitem id="12365" name="Lucky Enchant Stone: Weapon (A-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -53,7 +53,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="12366" name="Lucky Enchant Stone: Enchant Weapon (S-grade)">
+	<etcitem id="12366" name="Lucky Enchant Stone: Weapon (S-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -66,7 +66,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="12367" name="Lucky Enchant Stone: Enchant Armor (D-grade)">
+	<etcitem id="12367" name="Lucky Enchant Stone: Armor (D-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -79,7 +79,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="12368" name="Lucky Enchant Stone: Enchant Armor (C-grade)">
+	<etcitem id="12368" name="Lucky Enchant Stone: Armor (C-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -92,7 +92,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="12369" name="Lucky Enchant Stone: Enchant Armor (B-grade)">
+	<etcitem id="12369" name="Lucky Enchant Stone: Armor (B-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -105,7 +105,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="12370" name="Lucky Enchant Stone: Enchant Armor (A-grade)">
+	<etcitem id="12370" name="Lucky Enchant Stone: Armor (A-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -118,7 +118,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="12371" name="Lucky Enchant Stone: Enchant Armor (S-grade)">
+	<etcitem id="12371" name="Lucky Enchant Stone: Armor (S-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

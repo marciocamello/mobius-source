@@ -96,7 +96,7 @@
 			</trigger>
 		</triggers>
 	</skill>
-	<skill id="10749" levels="1" name="Othell Chain Air Blow">
+	<skill id="10749" levels="1" name="">
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="2000"/>
 		<set name="mpConsume2" val="40"/>
@@ -111,7 +111,7 @@
 		<set name="isSkillTimePermanent" val="true"/>
 		<set name="isAlterSkill" val="true"/>
 	</skill>
-	<skill id="10750" levels="1" name="Othell Chain Knock Blow">
+	<skill id="10750" levels="1" name="">
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="0"/>
 		<set name="mpConsume1" val="40"/>
@@ -224,7 +224,7 @@
 			</triggers>
 		</for>
 	</skill>
-	<skill id="10755" levels="1" name="Superior Mind Resistance">
+	<skill id="10755" levels="1" name="Superior Mental Attack Resistance">
 		<table name="#vul">20</table>
 		<set name="magicLvl" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -244,7 +244,7 @@
 			<add order="0x40" stat="reflectPhysicDebuff" val="10"/>
 		</for>
 	</skill>
-	<skill id="10756" levels="1" name="Superior Critical Mastery">
+	<skill id="10756" levels="1" name="Superior Critical Arrow">
 		<table name="#vul">774</table>
 		<set name="magicLvl" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -261,7 +261,7 @@
 			<add order="0x40" stat="cAtkStatic" val="#vul"/>
 		</for>
 	</skill>
-	<skill id="10757" levels="4" name="Siege Fire Stance">
+	<skill id="10757" levels="4" name="Dead Eye Stance">
 		<table name="#powIncrease">1.25 1.3 1.35 1.4</table>
 		<table name="#magicLevel">85 86 87 88</table>
 		<table name="#mpConsume2">36</table>
@@ -1455,13 +1455,13 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10794" levels="1" name="Hawk Fly">
+	<skill id="10794" levels="1" name="Thunder Flight">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for/>
 	</skill>
-	<skill id="10795" levels="1" name="Hawk Cleanse">
+	<skill id="10795" levels="1" name="Thunder Purity">
 		<set name="target" val="TARGET_OWNER"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -1479,13 +1479,13 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for/>
 	</skill>
-	<skill id="10797" levels="1" name="Hawk Feather Blast">
+	<skill id="10797" levels="1" name="Thunder Feather Blast">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for/>
 	</skill>
-	<skill id="10798" levels="1" name="Hawk Sharp Claw">
+	<skill id="10798" levels="1" name="Thunder Sharp Claw">
 		<set name="power" val="9850"/>
 		<set name="reuseDelay" val="25000"/>
 		<set name="hitTime" val="1080"/>
@@ -1504,7 +1504,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10799" levels="1" name="Superior Magic Resistance">
+	<skill id="10799" levels="1" name="Superior M. Def.">
 		<table name="#mDef">199</table>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>

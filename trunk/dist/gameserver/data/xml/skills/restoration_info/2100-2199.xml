@@ -1,92 +1,92 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "restoration_info.dtd">
 <list>
-	<restoration skill_id="2104" skill_level="1" name="Greater Compressed Package of Soulshots: No-grade">
+	<restoration skill_id="2104" skill_level="1" name="Greater Soulshot Compressed Package (No-grade)">
 		<group chance="100.0">
 			<item id="1835" min_count="1000" max_count="1000"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2105" skill_level="1" name="Greater Compressed Package of Soulshots:  D-grade">
+	<restoration skill_id="2105" skill_level="1" name="Greater Soulshot Compressed Package (D-grade)">
 		<group chance="100.0">
 			<item id="1463" min_count="1000" max_count="1000"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2106" skill_level="1" name="Greater Compressed Package of Soulshots:  C-grade">
+	<restoration skill_id="2106" skill_level="1" name="Greater Soulshot Compressed Package (C-grade)">
 		<group chance="100.0">
 			<item id="1464" min_count="1000" max_count="1000"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2107" skill_level="1" name="Greater Compressed Package of Soulshots:  B-grade">
+	<restoration skill_id="2107" skill_level="1" name="Greater Soulshot Compressed Package (B-grade)">
 		<group chance="100.0">
 			<item id="1465" min_count="1000" max_count="1000"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2108" skill_level="1" name="Greater Compressed Package of Soulshots:  A-grade">
+	<restoration skill_id="2108" skill_level="1" name="Greater Soulshot Compressed Package (A-grade)">
 		<group chance="100.0">
 			<item id="1466" min_count="1000" max_count="1000"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2109" skill_level="1" name="Greater Compressed Package of Soulshots: S-grade">
+	<restoration skill_id="2109" skill_level="1" name="Greater Soulshot Compressed Package (S-grade)">
 		<group chance="100.0">
 			<item id="1467" min_count="1000" max_count="1000"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2110" skill_level="1" name="Greater Compressed Package of Spiritshots:  No-grade">
+	<restoration skill_id="2110" skill_level="1" name="Greater Spiritshot Compressed Package (No-grade)">
 		<group chance="100.0">
 			<item id="2509" min_count="1000" max_count="1000"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2111" skill_level="1" name="Greater Compressed Package of Spiritshots:  D-grade">
+	<restoration skill_id="2111" skill_level="1" name="Greater Spiritshot Compressed Package (D-grade)">
 		<group chance="100.0">
 			<item id="2510" min_count="1000" max_count="1000"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2112" skill_level="1" name="Greater Compressed Package of Spiritshots:  C-grade">
+	<restoration skill_id="2112" skill_level="1" name="Greater Spiritshot Compressed Package (C-grade)">
 		<group chance="100.0">
 			<item id="2511" min_count="1000" max_count="1000"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2113" skill_level="1" name="Greater Compressed Package of Spiritshots:  B-grade">
+	<restoration skill_id="2113" skill_level="1" name="Greater Spiritshot Compressed Package (B-grade)">
 		<group chance="100.0">
 			<item id="2512" min_count="1000" max_count="1000"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2114" skill_level="1" name="Greater Compressed Package of Spiritshots: A-grade">
+	<restoration skill_id="2114" skill_level="1" name="Greater Spiritshot Compressed Package (A-grade)">
 		<group chance="100.0">
 			<item id="2513" min_count="1000" max_count="1000"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2115" skill_level="1" name="Greater Compressed Package of Spiritshots: S-grade">
+	<restoration skill_id="2115" skill_level="1" name="Greater Spiritshot Compressed Package (S-grade)">
 		<group chance="100.0">
 			<item id="2514" min_count="1000" max_count="1000"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2116" skill_level="1" name="Greater Compressed Package of Blessed Spiritshots:  No-grade">
+	<restoration skill_id="2116" skill_level="1" name="Greater Blessed Spiritshot Compressed Package (No-grade)">
 		<group chance="100.0">
 			<item id="3947" min_count="1000" max_count="1000"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2117" skill_level="1" name="Greater Compressed Package of Blessed Spiritshots:  D-grade">
+	<restoration skill_id="2117" skill_level="1" name="Greater Blessed Spiritshot Compressed Package (D-grade)">
 		<group chance="100.0">
 			<item id="3948" min_count="1000" max_count="1000"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2118" skill_level="1" name="Greater Compressed Package of Blessed Spiritshots:  C-grade">
+	<restoration skill_id="2118" skill_level="1" name="Greater Blessed Spiritshot Compressed Package (C-grade)">
 		<group chance="100.0">
 			<item id="3949" min_count="1000" max_count="1000"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2119" skill_level="1" name="Greater Compressed Package of Blessed Spiritshots:  B-grade">
+	<restoration skill_id="2119" skill_level="1" name="Greater Blessed Spiritshot Compressed Package (B-grade)">
 		<group chance="100.0">
 			<item id="3950" min_count="1000" max_count="1000"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2120" skill_level="1" name="Greater Compressed Package of Blessed Spiritshots: A-grade">
+	<restoration skill_id="2120" skill_level="1" name="Greater Blessed Spiritshot Compressed Package (A-grade)">
 		<group chance="100.0">
 			<item id="3951" min_count="1000" max_count="1000"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2121" skill_level="1" name="Greater Compressed Package of Blessed Spiritshots: S-grade">
+	<restoration skill_id="2121" skill_level="1" name="Greater Blessed Spiritshot Compressed Package (S-grade)">
 		<group chance="100.0">
 			<item id="3952" min_count="1000" max_count="1000"/>
 		</group>
@@ -482,7 +482,7 @@
 			<item id="5996" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2190" skill_level="1" name="Item - Green Fish">
+	<restoration skill_id="2190" skill_level="1" name="Large Green Fat Fish">
 		<group chance="27.6">
 			<item id="6908" min_count="6" max_count="6"/>
 		</group>
@@ -490,7 +490,7 @@
 			<item id="6913" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2190" skill_level="2" name="Item - Green Fish">
+	<restoration skill_id="2190" skill_level="2" name="Large Green Fat Fish">
 		<group chance="28.2">
 			<item id="6908" min_count="6" max_count="6"/>
 		</group>
@@ -498,7 +498,7 @@
 			<item id="6911" min_count="2" max_count="2"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2190" skill_level="3" name="Item - Green Fish">
+	<restoration skill_id="2190" skill_level="3" name="Large Green Fat Fish">
 		<group chance="30.6">
 			<item id="6908" min_count="6" max_count="6"/>
 		</group>
@@ -506,7 +506,7 @@
 			<item id="6915" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2190" skill_level="4" name="Item - Green Fish">
+	<restoration skill_id="2190" skill_level="4" name="Large Green Fat Fish">
 		<group chance="33.4">
 			<item id="6908" min_count="6" max_count="6"/>
 		</group>
@@ -514,7 +514,7 @@
 			<item id="6913" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2190" skill_level="5" name="Item - Green Fish">
+	<restoration skill_id="2190" skill_level="5" name="Large Green Fat Fish">
 		<group chance="29.92">
 			<item id="6908" min_count="8" max_count="8"/>
 		</group>
@@ -522,7 +522,7 @@
 			<item id="6911" min_count="2" max_count="2"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2190" skill_level="6" name="Item - Green Fish">
+	<restoration skill_id="2190" skill_level="6" name="Large Green Fat Fish">
 		<group chance="41.6">
 			<item id="6908" min_count="6" max_count="6"/>
 		</group>
@@ -530,7 +530,7 @@
 			<item id="6915" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2190" skill_level="7" name="Item - Green Fish">
+	<restoration skill_id="2190" skill_level="7" name="Large Green Fat Fish">
 		<group chance="15.0">
 			<item id="6908" min_count="12" max_count="12"/>
 		</group>
@@ -541,7 +541,7 @@
 			<item id="6920" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2190" skill_level="8" name="Item - Green Fish">
+	<restoration skill_id="2190" skill_level="8" name="Large Green Fat Fish">
 		<group chance="39.68">
 			<item id="6908" min_count="8" max_count="8"/>
 		</group>
@@ -549,7 +549,7 @@
 			<item id="6911" min_count="2" max_count="2"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2190" skill_level="9" name="Item - Green Fish">
+	<restoration skill_id="2190" skill_level="9" name="Large Green Fat Fish">
 		<group chance="26.5">
 			<item id="6908" min_count="12" max_count="12"/>
 		</group>
@@ -557,7 +557,7 @@
 			<item id="6915" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2191" skill_level="1" name="Item - Jade Fish">
+	<restoration skill_id="2191" skill_level="1" name="Large Jade Fat Fish">
 		<group chance="19.0">
 			<item id="6908" min_count="12" max_count="12"/>
 		</group>
@@ -568,7 +568,7 @@
 			<item id="6920" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2191" skill_level="2" name="Item - Jade Fish">
+	<restoration skill_id="2191" skill_level="2" name="Large Jade Fat Fish">
 		<group chance="47.2">
 			<item id="6908" min_count="8" max_count="8"/>
 		</group>
@@ -576,7 +576,7 @@
 			<item id="6911" min_count="2" max_count="2"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2191" skill_level="3" name="Item - Jade Fish">
+	<restoration skill_id="2191" skill_level="3" name="Large Jade Fat Fish">
 		<group chance="31.0">
 			<item id="6908" min_count="12" max_count="12"/>
 		</group>
@@ -584,7 +584,7 @@
 			<item id="6915" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2191" skill_level="4" name="Item - Jade Fish">
+	<restoration skill_id="2191" skill_level="4" name="Large Jade Fat Fish">
 		<group chance="21.6668">
 			<item id="6908" min_count="12" max_count="12"/>
 		</group>
@@ -595,7 +595,7 @@
 			<item id="6920" min_count="16" max_count="16"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2191" skill_level="5" name="Item - Jade Fish">
+	<restoration skill_id="2191" skill_level="5" name="Large Jade Fat Fish">
 		<group chance="27.2">
 			<item id="6908" min_count="16" max_count="16"/>
 		</group>
@@ -603,7 +603,7 @@
 			<item id="6911" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2191" skill_level="6" name="Item - Jade Fish">
+	<restoration skill_id="2191" skill_level="6" name="Large Jade Fat Fish">
 		<group chance="35.5">
 			<item id="6908" min_count="12" max_count="12"/>
 		</group>
@@ -611,7 +611,7 @@
 			<item id="6915" min_count="2" max_count="2"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2191" skill_level="7" name="Item - Jade Fish">
+	<restoration skill_id="2191" skill_level="7" name="Large Jade Fat Fish">
 		<group chance="24.3332">
 			<item id="6908" min_count="12" max_count="12"/>
 		</group>
@@ -622,7 +622,7 @@
 			<item id="6920" min_count="16" max_count="16"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2191" skill_level="8" name="Item - Jade Fish">
+	<restoration skill_id="2191" skill_level="8" name="Large Jade Fat Fish">
 		<group chance="30.0">
 			<item id="6908" min_count="16" max_count="16"/>
 		</group>
@@ -630,7 +630,7 @@
 			<item id="6911" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2191" skill_level="9" name="Item - Jade Fish">
+	<restoration skill_id="2191" skill_level="9" name="Large Jade Fat Fish">
 		<group chance="38.5">
 			<item id="6908" min_count="12" max_count="12"/>
 		</group>
@@ -638,7 +638,7 @@
 			<item id="6915" min_count="2" max_count="2"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2192" skill_level="1" name="Item - Blue Fish">
+	<restoration skill_id="2192" skill_level="1" name="Large Blue Fat Fish">
 		<group chance="26.3332">
 			<item id="6908" min_count="12" max_count="12"/>
 		</group>
@@ -649,7 +649,7 @@
 			<item id="6920" min_count="16" max_count="16"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2192" skill_level="2" name="Item - Blue Fish">
+	<restoration skill_id="2192" skill_level="2" name="Large Blue Fat Fish">
 		<group chance="32.0">
 			<item id="6908" min_count="16" max_count="16"/>
 		</group>
@@ -657,7 +657,7 @@
 			<item id="6911" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2192" skill_level="3" name="Item - Blue Fish">
+	<restoration skill_id="2192" skill_level="3" name="Large Blue Fat Fish">
 		<group chance="41.0">
 			<item id="6908" min_count="12" max_count="12"/>
 		</group>
@@ -665,7 +665,7 @@
 			<item id="6915" min_count="2" max_count="2"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2192" skill_level="4" name="Item - Blue Fish">
+	<restoration skill_id="2192" skill_level="4" name="Large Blue Fat Fish">
 		<group chance="1.992">
 			<item id="6904" min_count="1" max_count="1"/>
 		</group>
@@ -682,7 +682,7 @@
 			<item id="6920" min_count="16" max_count="16"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2192" skill_level="5" name="Item - Blue Fish">
+	<restoration skill_id="2192" skill_level="5" name="Large Blue Fat Fish">
 		<group chance="2.0064">
 			<item id="6904" min_count="1" max_count="1"/>
 		</group>
@@ -699,7 +699,7 @@
 			<item id="6921" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2192" skill_level="6" name="Item - Blue Fish">
+	<restoration skill_id="2192" skill_level="6" name="Large Blue Fat Fish">
 		<group chance="2.52">
 			<item id="6904" min_count="1" max_count="1"/>
 		</group>
@@ -713,7 +713,7 @@
 			<item id="6915" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2192" skill_level="7" name="Item - Blue Fish">
+	<restoration skill_id="2192" skill_level="7" name="Large Blue Fat Fish">
 		<group chance="2.04">
 			<item id="6904" min_count="1" max_count="1"/>
 		</group>
@@ -730,7 +730,7 @@
 			<item id="6920" min_count="16" max_count="16"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2192" skill_level="8" name="Item - Blue Fish">
+	<restoration skill_id="2192" skill_level="8" name="Large Blue Fat Fish">
 		<group chance="2.0688">
 			<item id="6904" min_count="1" max_count="1"/>
 		</group>
@@ -747,7 +747,7 @@
 			<item id="6921" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2192" skill_level="9" name="Item - Blue Fish">
+	<restoration skill_id="2192" skill_level="9" name="Large Blue Fat Fish">
 		<group chance="2.61">
 			<item id="6904" min_count="1" max_count="1"/>
 		</group>
@@ -761,7 +761,7 @@
 			<item id="6915" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2193" skill_level="1" name="Item - Yellow Fish">
+	<restoration skill_id="2193" skill_level="1" name="Large Yellow Fat Fish">
 		<group chance="2.1216">
 			<item id="6904" min_count="1" max_count="1"/>
 		</group>
@@ -778,7 +778,7 @@
 			<item id="6920" min_count="16" max_count="16"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2193" skill_level="2" name="Item - Yellow Fish">
+	<restoration skill_id="2193" skill_level="2" name="Large Yellow Fat Fish">
 		<group chance="2.1456">
 			<item id="6904" min_count="1" max_count="1"/>
 		</group>
@@ -795,7 +795,7 @@
 			<item id="6921" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2193" skill_level="3" name="Item - Yellow Fish">
+	<restoration skill_id="2193" skill_level="3" name="Large Yellow Fat Fish">
 		<group chance="2.712">
 			<item id="6904" min_count="1" max_count="1"/>
 		</group>
@@ -809,7 +809,7 @@
 			<item id="6915" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2193" skill_level="4" name="Item - Yellow Fish">
+	<restoration skill_id="2193" skill_level="4" name="Large Yellow Fat Fish">
 		<group chance="2.592">
 			<item id="6904" min_count="1" max_count="1"/>
 		</group>
@@ -826,7 +826,7 @@
 			<item id="6920" min_count="16" max_count="16"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2193" skill_level="5" name="Item - Yellow Fish">
+	<restoration skill_id="2193" skill_level="5" name="Large Yellow Fat Fish">
 		<group chance="2.6544">
 			<item id="6904" min_count="1" max_count="1"/>
 		</group>
@@ -843,7 +843,7 @@
 			<item id="6921" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2193" skill_level="6" name="Item - Yellow Fish">
+	<restoration skill_id="2193" skill_level="6" name="Large Yellow Fat Fish">
 		<group chance="3.408">
 			<item id="6904" min_count="1" max_count="1"/>
 		</group>
@@ -857,7 +857,7 @@
 			<item id="6915" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2193" skill_level="7" name="Item - Yellow Fish">
+	<restoration skill_id="2193" skill_level="7" name="Large Yellow Fat Fish">
 		<group chance="2.784">
 			<item id="6904" min_count="1" max_count="1"/>
 		</group>
@@ -874,7 +874,7 @@
 			<item id="6920" min_count="16" max_count="16"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2193" skill_level="8" name="Item - Yellow Fish">
+	<restoration skill_id="2193" skill_level="8" name="Large Yellow Fat Fish">
 		<group chance="2.8512">
 			<item id="6904" min_count="1" max_count="1"/>
 		</group>
@@ -891,7 +891,7 @@
 			<item id="6921" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2193" skill_level="9" name="Item - Yellow Fish">
+	<restoration skill_id="2193" skill_level="9" name="Large Yellow Fat Fish">
 		<group chance="3.648">
 			<item id="6904" min_count="1" max_count="1"/>
 		</group>
@@ -905,7 +905,7 @@
 			<item id="6915" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2194" skill_level="1" name="Item - Orange Fish">
+	<restoration skill_id="2194" skill_level="1" name="Large Orange Fat Fish">
 		<group chance="2.9856">
 			<item id="6904" min_count="1" max_count="1"/>
 		</group>
@@ -922,7 +922,7 @@
 			<item id="6920" min_count="16" max_count="16"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2194" skill_level="2" name="Item - Orange Fish">
+	<restoration skill_id="2194" skill_level="2" name="Large Orange Fat Fish">
 		<group chance="3.048">
 			<item id="6904" min_count="1" max_count="1"/>
 		</group>
@@ -939,7 +939,7 @@
 			<item id="6921" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2194" skill_level="3" name="Item - Orange Fish">
+	<restoration skill_id="2194" skill_level="3" name="Large Orange Fat Fish">
 		<group chance="3.894">
 			<item id="6904" min_count="1" max_count="1"/>
 		</group>
@@ -953,7 +953,7 @@
 			<item id="6915" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2194" skill_level="4" name="Item - Orange Fish">
+	<restoration skill_id="2194" skill_level="4" name="Large Orange Fat Fish">
 		<group chance="5.304">
 			<item id="7698" min_count="1" max_count="1"/>
 		</group>
@@ -964,7 +964,7 @@
 			<item id="6914" min_count="2" max_count="2"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2194" skill_level="5" name="Item - Orange Fish">
+	<restoration skill_id="2194" skill_level="5" name="Large Orange Fat Fish">
 		<group chance="6.208">
 			<item id="7686" min_count="1" max_count="1"/>
 		</group>
@@ -975,7 +975,7 @@
 			<item id="6912" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2194" skill_level="6" name="Item - Orange Fish">
+	<restoration skill_id="2194" skill_level="6" name="Large Orange Fat Fish">
 		<group chance="6.336">
 			<item id="7697" min_count="1" max_count="1"/>
 		</group>
@@ -986,7 +986,7 @@
 			<item id="6916" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2194" skill_level="7" name="Item - Orange Fish">
+	<restoration skill_id="2194" skill_level="7" name="Large Orange Fat Fish">
 		<group chance="6.528">
 			<item id="7698" min_count="1" max_count="1"/>
 		</group>
@@ -997,7 +997,7 @@
 			<item id="6914" min_count="2" max_count="2"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2194" skill_level="8" name="Item - Orange Fish">
+	<restoration skill_id="2194" skill_level="8" name="Large Orange Fat Fish">
 		<group chance="6.72">
 			<item id="7686" min_count="1" max_count="1"/>
 		</group>
@@ -1008,7 +1008,7 @@
 			<item id="6912" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2194" skill_level="9" name="Item - Orange Fish">
+	<restoration skill_id="2194" skill_level="9" name="Large Orange Fat Fish">
 		<group chance="6.864">
 			<item id="7697" min_count="1" max_count="1"/>
 		</group>
@@ -1019,7 +1019,7 @@
 			<item id="6916" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2195" skill_level="1" name="Item - Violet Fish">
+	<restoration skill_id="2195" skill_level="1" name="Large Purple Fat Fish">
 		<group chance="7.0">
 			<item id="7698" min_count="1" max_count="1"/>
 		</group>
@@ -1030,7 +1030,7 @@
 			<item id="6914" min_count="2" max_count="2"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2195" skill_level="2" name="Item - Violet Fish">
+	<restoration skill_id="2195" skill_level="2" name="Large Purple Fat Fish">
 		<group chance="7.144">
 			<item id="7686" min_count="1" max_count="1"/>
 		</group>
@@ -1041,7 +1041,7 @@
 			<item id="6912" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2195" skill_level="3" name="Item - Violet Fish">
+	<restoration skill_id="2195" skill_level="3" name="Large Purple Fat Fish">
 		<group chance="7.28">
 			<item id="7697" min_count="1" max_count="1"/>
 		</group>
@@ -1052,7 +1052,7 @@
 			<item id="6916" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2195" skill_level="4" name="Item - Violet Fish">
+	<restoration skill_id="2195" skill_level="4" name="Large Purple Fat Fish">
 		<group chance="7.44">
 			<item id="7698" min_count="1" max_count="1"/>
 		</group>
@@ -1063,7 +1063,7 @@
 			<item id="6914" min_count="2" max_count="2"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2195" skill_level="5" name="Item - Violet Fish">
+	<restoration skill_id="2195" skill_level="5" name="Large Purple Fat Fish">
 		<group chance="7.584">
 			<item id="7686" min_count="1" max_count="1"/>
 		</group>
@@ -1074,7 +1074,7 @@
 			<item id="6912" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2195" skill_level="6" name="Item - Violet Fish">
+	<restoration skill_id="2195" skill_level="6" name="Large Purple Fat Fish">
 		<group chance="8.72">
 			<item id="7697" min_count="1" max_count="1"/>
 		</group>
@@ -1085,7 +1085,7 @@
 			<item id="6916" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2195" skill_level="7" name="Item - Violet Fish">
+	<restoration skill_id="2195" skill_level="7" name="Large Purple Fat Fish">
 		<group chance="5.3328">
 			<item id="7685" min_count="1" max_count="1"/>
 		</group>
@@ -1102,7 +1102,7 @@
 			<item id="6914" min_count="2" max_count="2"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2195" skill_level="8" name="Item - Violet Fish">
+	<restoration skill_id="2195" skill_level="8" name="Large Purple Fat Fish">
 		<group chance="6.798">
 			<item id="7686" min_count="1" max_count="1"/>
 		</group>
@@ -1116,7 +1116,7 @@
 			<item id="6912" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2195" skill_level="9" name="Item - Violet Fish">
+	<restoration skill_id="2195" skill_level="9" name="Large Purple Fat Fish">
 		<group chance="6.942">
 			<item id="7697" min_count="1" max_count="1"/>
 		</group>
@@ -1130,7 +1130,7 @@
 			<item id="6916" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2196" skill_level="1" name="Item - Red Fish">
+	<restoration skill_id="2196" skill_level="1" name="Large Red Fat Fish">
 		<group chance="6.1296">
 			<item id="7685" min_count="1" max_count="1"/>
 		</group>
@@ -1147,7 +1147,7 @@
 			<item id="6914" min_count="2" max_count="2"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2196" skill_level="2" name="Item - Red Fish">
+	<restoration skill_id="2196" skill_level="2" name="Large Red Fat Fish">
 		<group chance="7.806">
 			<item id="7686" min_count="1" max_count="1"/>
 		</group>
@@ -1161,7 +1161,7 @@
 			<item id="6912" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2196" skill_level="3" name="Item - Red Fish">
+	<restoration skill_id="2196" skill_level="3" name="Large Red Fat Fish">
 		<group chance="7.956">
 			<item id="7697" min_count="1" max_count="1"/>
 		</group>
@@ -1175,7 +1175,7 @@
 			<item id="6916" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2196" skill_level="4" name="Item - Red Fish">
+	<restoration skill_id="2196" skill_level="4" name="Large Red Fat Fish">
 		<group chance="6.4848">
 			<item id="7685" min_count="1" max_count="1"/>
 		</group>
@@ -1192,7 +1192,7 @@
 			<item id="6914" min_count="2" max_count="2"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2196" skill_level="5" name="Item - Red Fish">
+	<restoration skill_id="2196" skill_level="5" name="Large Red Fat Fish">
 		<group chance="8.256">
 			<item id="7686" min_count="1" max_count="1"/>
 		</group>
@@ -1206,7 +1206,7 @@
 			<item id="6912" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2196" skill_level="6" name="Item - Red Fish">
+	<restoration skill_id="2196" skill_level="6" name="Large Red Fat Fish">
 		<group chance="8.412">
 			<item id="7697" min_count="1" max_count="1"/>
 		</group>
@@ -1220,7 +1220,7 @@
 			<item id="6916" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2196" skill_level="7" name="Item - Red Fish">
+	<restoration skill_id="2196" skill_level="7" name="Large Red Fat Fish">
 		<group chance="7.5696">
 			<item id="7685" min_count="1" max_count="1"/>
 		</group>
@@ -1237,7 +1237,7 @@
 			<item id="6914" min_count="2" max_count="2"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2196" skill_level="8" name="Item - Red Fish">
+	<restoration skill_id="2196" skill_level="8" name="Large Red Fat Fish">
 		<group chance="9.648">
 			<item id="7686" min_count="1" max_count="1"/>
 		</group>
@@ -1251,7 +1251,7 @@
 			<item id="6912" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2196" skill_level="9" name="Item - Red Fish">
+	<restoration skill_id="2196" skill_level="9" name="Large Red Fat Fish">
 		<group chance="10.29">
 			<item id="7697" min_count="1" max_count="1"/>
 		</group>
@@ -1265,7 +1265,7 @@
 			<item id="6916" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2197" skill_level="1" name="Item - White Fish">
+	<restoration skill_id="2197" skill_level="1" name="Large White Fat Fish">
 		<group chance="8.3856">
 			<item id="7685" min_count="1" max_count="1"/>
 		</group>
@@ -1282,7 +1282,7 @@
 			<item id="6914" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2197" skill_level="2" name="Item - White Fish">
+	<restoration skill_id="2197" skill_level="2" name="Large White Fat Fish">
 		<group chance="10.686">
 			<item id="7686" min_count="1" max_count="1"/>
 		</group>
@@ -1296,7 +1296,7 @@
 			<item id="6912" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2197" skill_level="3" name="Item - White Fish">
+	<restoration skill_id="2197" skill_level="3" name="Large White Fat Fish">
 		<group chance="10.884">
 			<item id="7697" min_count="1" max_count="1"/>
 		</group>
@@ -1310,7 +1310,7 @@
 			<item id="6916" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2197" skill_level="4" name="Item - White Fish">
+	<restoration skill_id="2197" skill_level="4" name="Large White Fat Fish">
 		<group chance="8.8752">
 			<item id="7685" min_count="1" max_count="1"/>
 		</group>
@@ -1327,7 +1327,7 @@
 			<item id="6914" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2197" skill_level="5" name="Item - White Fish">
+	<restoration skill_id="2197" skill_level="5" name="Large White Fat Fish">
 		<group chance="11.322">
 			<item id="7686" min_count="1" max_count="1"/>
 		</group>
@@ -1341,7 +1341,7 @@
 			<item id="6912" min_count="16" max_count="16"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2197" skill_level="6" name="Item - White Fish">
+	<restoration skill_id="2197" skill_level="6" name="Large White Fat Fish">
 		<group chance="11.538">
 			<item id="7697" min_count="1" max_count="1"/>
 		</group>
@@ -1355,7 +1355,7 @@
 			<item id="6916" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2197" skill_level="7" name="Item - White Fish">
+	<restoration skill_id="2197" skill_level="7" name="Large White Fat Fish">
 		<group chance="9.4128">
 			<item id="7685" min_count="1" max_count="1"/>
 		</group>
@@ -1372,7 +1372,7 @@
 			<item id="6914" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2197" skill_level="8" name="Item - White Fish">
+	<restoration skill_id="2197" skill_level="8" name="Large White Fat Fish">
 		<group chance="12.0">
 			<item id="7686" min_count="1" max_count="1"/>
 		</group>
@@ -1386,7 +1386,7 @@
 			<item id="6912" min_count="16" max_count="16"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2197" skill_level="9" name="Item - White Fish">
+	<restoration skill_id="2197" skill_level="9" name="Large White Fat Fish">
 		<group chance="12.234">
 			<item id="7697" min_count="1" max_count="1"/>
 		</group>
@@ -1400,7 +1400,7 @@
 			<item id="6916" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2198" skill_level="1" name="Item - Black Fish">
+	<restoration skill_id="2198" skill_level="1" name="Large Black Fat Fish">
 		<group chance="9.9888">
 			<item id="7685" min_count="1" max_count="1"/>
 		</group>
@@ -1417,7 +1417,7 @@
 			<item id="6914" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2198" skill_level="2" name="Item - Black Fish">
+	<restoration skill_id="2198" skill_level="2" name="Large Black Fat Fish">
 		<group chance="12.738">
 			<item id="7686" min_count="1" max_count="1"/>
 		</group>
@@ -1431,7 +1431,7 @@
 			<item id="6912" min_count="16" max_count="16"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2198" skill_level="3" name="Item - Black Fish">
+	<restoration skill_id="2198" skill_level="3" name="Large Black Fat Fish">
 		<group chance="12.996">
 			<item id="7697" min_count="1" max_count="1"/>
 		</group>
@@ -1445,7 +1445,7 @@
 			<item id="6916" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2198" skill_level="4" name="Item - Black Fish">
+	<restoration skill_id="2198" skill_level="4" name="Large Black Fat Fish">
 		<group chance="11.0832">
 			<item id="7685" min_count="1" max_count="1"/>
 		</group>
@@ -1462,7 +1462,7 @@
 			<item id="6914" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2198" skill_level="5" name="Item - Black Fish">
+	<restoration skill_id="2198" skill_level="5" name="Large Black Fat Fish">
 		<group chance="9.428">
 			<item id="7686" min_count="2" max_count="2"/>
 		</group>
@@ -1476,7 +1476,7 @@
 			<item id="6912" min_count="16" max_count="16"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2198" skill_level="6" name="Item - Black Fish">
+	<restoration skill_id="2198" skill_level="6" name="Large Black Fat Fish">
 		<group chance="14.418">
 			<item id="7697" min_count="1" max_count="1"/>
 		</group>
@@ -1490,7 +1490,7 @@
 			<item id="6916" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2198" skill_level="7" name="Item - Black Fish">
+	<restoration skill_id="2198" skill_level="7" name="Large Black Fat Fish">
 		<group chance="11.7696">
 			<item id="7685" min_count="1" max_count="1"/>
 		</group>
@@ -1507,7 +1507,7 @@
 			<item id="6914" min_count="4" max_count="4"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2198" skill_level="8" name="Item - Black Fish">
+	<restoration skill_id="2198" skill_level="8" name="Large Black Fat Fish">
 		<group chance="10.008">
 			<item id="7686" min_count="2" max_count="2"/>
 		</group>
@@ -1521,7 +1521,7 @@
 			<item id="6912" min_count="16" max_count="16"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2198" skill_level="9" name="Item - Black Fish">
+	<restoration skill_id="2198" skill_level="9" name="Large Black Fat Fish">
 		<group chance="10.208">
 			<item id="7697" min_count="2" max_count="2"/>
 		</group>
@@ -1535,7 +1535,7 @@
 			<item id="6916" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2199" skill_level="1" name="Item - Green Treasure Box">
+	<restoration skill_id="2199" skill_level="1" name="Large Green Treasure Chest">
 		<group chance="30.6">
 			<item id="6908" min_count="12" max_count="12"/>
 		</group>
@@ -1543,7 +1543,7 @@
 			<item id="7609" min_count="8" max_count="8"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2199" skill_level="2" name="Item - Green Treasure Box">
+	<restoration skill_id="2199" skill_level="2" name="Large Green Treasure Chest">
 		<group chance="41.6">
 			<item id="6908" min_count="12" max_count="12"/>
 		</group>
@@ -1551,7 +1551,7 @@
 			<item id="7609" min_count="16" max_count="16"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2199" skill_level="3" name="Item - Green Treasure Box">
+	<restoration skill_id="2199" skill_level="3" name="Large Green Treasure Chest">
 		<group chance="26.5">
 			<item id="6908" min_count="24" max_count="24"/>
 		</group>

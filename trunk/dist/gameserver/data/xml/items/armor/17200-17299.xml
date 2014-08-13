@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="17200" name="National Representative Warrior's Earring">
+	<armor id="17200" name="Olympic Athlete's Earring">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_earring_of_hero_i00"/>
 		<set name="price" value="0"/>
@@ -18,7 +18,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17203" name="Agathion Seal Bracelet - Ball Trapping Gnosian">
+	<armor id="17203" name="Agathion - Ball Trapping Gnosian">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_kball_male_i00"/>
 		<set name="price" value="0"/>
@@ -29,7 +29,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17204" name="Agathion Seal Bracelet - Ball Trapping Orodriel">
+	<armor id="17204" name="Agathion - Ball Trapping Orodriel">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_kball_female_i00"/>
 		<set name="price" value="0"/>
@@ -40,7 +40,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17205" name="Agathion Seal Bracelet - Penalty Kick">
+	<armor id="17205" name="Agathion - Penalty Kick">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_kball_kick_i00"/>
 		<set name="price" value="0"/>
@@ -51,7 +51,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17269" name="Agathion Seal Bracelet - Antharas">
+	<armor id="17269" name="Agathion - Antharas">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.pi_high_agathion_bracelet_i00"/>
 		<set name="price" value="0"/>
@@ -62,7 +62,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17270" name="Agathion Seal Bracelet - Nevit's Messenger Kanna">
+	<armor id="17270" name="Agathion - Nevit's Messenger Kanna">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.pi_high_agathion_bracelet_i00"/>
 		<set name="price" value="0"/>
@@ -73,7 +73,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17271" name="Agathion Seal Bracelet - Guardian of the Dawn Kallesin">
+	<armor id="17271" name="Agathion - Guardian of Dawn Kallesin">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.pi_high_agathion_bracelet_i00"/>
 		<set name="price" value="0"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="34500" name="Player Commendation - Vesper Fighter (Fire)">
+	<weapon id="34500" name="Player Commendation - Vesper Fighter (Fire)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_fighter_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="155"/>
@@ -21,7 +21,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34501" name="Player Commendation - Vesper Fighter (Holy)">
+	<weapon id="34501" name="Player Commendation - Vesper Fighter (Holy)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_fighter_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="155"/>
@@ -41,7 +41,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34502" name="Player Commendation - Vesper Fighter (Dark)">
+	<weapon id="34502" name="Player Commendation - Vesper Fighter (Dark)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_fighter_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="155"/>
@@ -61,7 +61,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34503" name="Player Commendation - Vesper Pincer (Earth)">
+	<weapon id="34503" name="Player Commendation - Vesper Pincer (Earth)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_pincer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="128"/>
@@ -81,7 +81,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34504" name="Player Commendation - Vesper Pincer (Water)">
+	<weapon id="34504" name="Player Commendation - Vesper Pincer (Water)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_pincer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="128"/>
@@ -101,7 +101,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34505" name="Player Commendation - Vesper Pincer (Wind)">
+	<weapon id="34505" name="Player Commendation - Vesper Pincer (Wind)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_pincer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="128"/>
@@ -121,7 +121,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34506" name="Player Commendation - Vesper Pincer (Fire)">
+	<weapon id="34506" name="Player Commendation - Vesper Pincer (Fire)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_pincer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="128"/>
@@ -141,7 +141,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34507" name="Player Commendation - Vesper Pincer (Holy)">
+	<weapon id="34507" name="Player Commendation - Vesper Pincer (Holy)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_pincer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="128"/>
@@ -161,7 +161,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34508" name="Player Commendation - Vesper Pincer (Dark)">
+	<weapon id="34508" name="Player Commendation - Vesper Pincer (Dark)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_pincer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="128"/>
@@ -181,7 +181,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34509" name="Player Commendation - Apocalypse Retributer (Earth)">
+	<weapon id="34509" name="Player Commendation - Apocalypse Retributer (Earth)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_herencia_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -201,7 +201,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34510" name="Player Commendation - Apocalypse Retributer (Water)">
+	<weapon id="34510" name="Player Commendation - Apocalypse Retributer (Water)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_herencia_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -221,7 +221,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34511" name="Player Commendation - Apocalypse Retributer (Wind)">
+	<weapon id="34511" name="Player Commendation - Apocalypse Retributer (Wind)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_herencia_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -241,7 +241,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34512" name="Player Commendation - Apocalypse Retributer (Fire)">
+	<weapon id="34512" name="Player Commendation - Apocalypse Retributer (Fire)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_herencia_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -261,7 +261,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34513" name="Player Commendation - Apocalypse Retributer (Holy)">
+	<weapon id="34513" name="Player Commendation - Apocalypse Retributer (Holy)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_herencia_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -281,7 +281,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34514" name="Player Commendation - Apocalypse Retributer (Dark)">
+	<weapon id="34514" name="Player Commendation - Apocalypse Retributer (Dark)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_herencia_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -301,7 +301,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34515" name="Player Commendation - Apocalypse Buster (Earth)">
+	<weapon id="34515" name="Player Commendation - Apocalypse Buster (Earth)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_imerose_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -321,7 +321,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34516" name="Player Commendation - Apocalypse Buster (Water)">
+	<weapon id="34516" name="Player Commendation - Apocalypse Buster (Water)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_imerose_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -341,7 +341,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34517" name="Player Commendation - Apocalypse Buster (Wind)">
+	<weapon id="34517" name="Player Commendation - Apocalypse Buster (Wind)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_imerose_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -361,7 +361,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34518" name="Player Commendation - Apocalypse Buster (Fire)">
+	<weapon id="34518" name="Player Commendation - Apocalypse Buster (Fire)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_imerose_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -381,7 +381,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34519" name="Player Commendation - Apocalypse Buster (Holy)">
+	<weapon id="34519" name="Player Commendation - Apocalypse Buster (Holy)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_imerose_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -401,7 +401,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34520" name="Player Commendation - Apocalypse Buster (Dark)">
+	<weapon id="34520" name="Player Commendation - Apocalypse Buster (Dark)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_imerose_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -421,7 +421,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34521" name="Player Commendation - Apocalypse Shaper (Earth)">
+	<weapon id="34521" name="Player Commendation - Apocalypse Shaper (Earth)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_phasian_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -441,7 +441,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34522" name="Player Commendation - Apocalypse Shaper (Water)">
+	<weapon id="34522" name="Player Commendation - Apocalypse Shaper (Water)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_phasian_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -461,7 +461,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34523" name="Player Commendation - Apocalypse Shaper (Wind)">
+	<weapon id="34523" name="Player Commendation - Apocalypse Shaper (Wind)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_phasian_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -481,7 +481,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34524" name="Player Commendation - Apocalypse Shaper (Fire)">
+	<weapon id="34524" name="Player Commendation - Apocalypse Shaper (Fire)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_phasian_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -501,7 +501,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34525" name="Player Commendation - Apocalypse Shaper (Holy)">
+	<weapon id="34525" name="Player Commendation - Apocalypse Shaper (Holy)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_phasian_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -521,7 +521,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34526" name="Player Commendation - Apocalypse Shaper (Dark)">
+	<weapon id="34526" name="Player Commendation - Apocalypse Shaper (Dark)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_phasian_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -541,7 +541,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34527" name="Player Commendation - Apocalypse Shooter (Earth)">
+	<weapon id="34527" name="Player Commendation - Apocalypse Shooter (Earth)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_medianox_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="158"/>
@@ -561,7 +561,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34528" name="Player Commendation - Apocalypse Shooter (Water)">
+	<weapon id="34528" name="Player Commendation - Apocalypse Shooter (Water)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_medianox_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="158"/>
@@ -581,7 +581,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34529" name="Player Commendation - Apocalypse Shooter (Wind)">
+	<weapon id="34529" name="Player Commendation - Apocalypse Shooter (Wind)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_medianox_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="158"/>
@@ -601,7 +601,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34530" name="Player Commendation - Apocalypse Shooter (Fire)">
+	<weapon id="34530" name="Player Commendation - Apocalypse Shooter (Fire)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_medianox_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="158"/>
@@ -621,7 +621,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34531" name="Player Commendation - Apocalypse Shooter (Holy)">
+	<weapon id="34531" name="Player Commendation - Apocalypse Shooter (Holy)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_medianox_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="158"/>
@@ -641,7 +641,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34532" name="Player Commendation - Apocalypse Shooter (Dark)">
+	<weapon id="34532" name="Player Commendation - Apocalypse Shooter (Dark)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_medianox_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="158"/>
@@ -661,7 +661,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34533" name="Player Commendation - Apocalypse Thrower (Earth)">
+	<weapon id="34533" name="Player Commendation - Apocalypse Thrower (Earth)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_spina_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -681,7 +681,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34534" name="Player Commendation - Apocalypse Thrower (Water)">
+	<weapon id="34534" name="Player Commendation - Apocalypse Thrower (Water)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_spina_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -701,7 +701,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34535" name="Player Commendation - Apocalypse Thrower (Wind)">
+	<weapon id="34535" name="Player Commendation - Apocalypse Thrower (Wind)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_spina_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -721,7 +721,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34536" name="Player Commendation - Apocalypse Thrower (Fire)">
+	<weapon id="34536" name="Player Commendation - Apocalypse Thrower (Fire)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_spina_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -741,7 +741,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34537" name="Player Commendation - Apocalypse Thrower (Holy)">
+	<weapon id="34537" name="Player Commendation - Apocalypse Thrower (Holy)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_spina_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -761,7 +761,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34538" name="Player Commendation - Apocalypse Thrower (Dark)">
+	<weapon id="34538" name="Player Commendation - Apocalypse Thrower (Dark)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_spina_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -781,7 +781,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34539" name="Player Commendation - Apocalypse Stormer (Earth)">
+	<weapon id="34539" name="Player Commendation - Apocalypse Stormer (Earth)" add_name="Damage Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_grave_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="201"/>
@@ -801,7 +801,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34540" name="Player Commendation - Apocalypse Stormer (Water)">
+	<weapon id="34540" name="Player Commendation - Apocalypse Stormer (Water)" add_name="Damage Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_grave_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="201"/>
@@ -821,7 +821,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34541" name="Player Commendation - Apocalypse Stormer (Wind)">
+	<weapon id="34541" name="Player Commendation - Apocalypse Stormer (Wind)" add_name="Damage Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_grave_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="201"/>
@@ -841,7 +841,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34542" name="Player Commendation - Apocalypse Stormer (Fire)">
+	<weapon id="34542" name="Player Commendation - Apocalypse Stormer (Fire)" add_name="Damage Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_grave_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="201"/>
@@ -861,7 +861,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34543" name="Player Commendation - Apocalypse Stormer (Holy)">
+	<weapon id="34543" name="Player Commendation - Apocalypse Stormer (Holy)" add_name="Damage Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_grave_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="201"/>
@@ -881,7 +881,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34544" name="Player Commendation - Apocalypse Stormer (Dark)">
+	<weapon id="34544" name="Player Commendation - Apocalypse Stormer (Dark)" add_name="Damage Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_grave_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="201"/>
@@ -901,7 +901,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34545" name="Player Commendation - Apocalypse Slasher (Earth)">
+	<weapon id="34545" name="Player Commendation - Apocalypse Slasher (Earth)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_volver_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -921,7 +921,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34546" name="Player Commendation - Apocalypse Slasher (Water)">
+	<weapon id="34546" name="Player Commendation - Apocalypse Slasher (Water)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_volver_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -941,7 +941,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34547" name="Player Commendation - Apocalypse Slasher (Wind)">
+	<weapon id="34547" name="Player Commendation - Apocalypse Slasher (Wind)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_volver_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -961,7 +961,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34548" name="Player Commendation - Apocalypse Slasher (Fire)">
+	<weapon id="34548" name="Player Commendation - Apocalypse Slasher (Fire)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_volver_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -981,7 +981,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34549" name="Player Commendation - Apocalypse Slasher (Holy)">
+	<weapon id="34549" name="Player Commendation - Apocalypse Slasher (Holy)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_volver_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -1001,7 +1001,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34550" name="Player Commendation - Apocalypse Slasher (Dark)">
+	<weapon id="34550" name="Player Commendation - Apocalypse Slasher (Dark)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_volver_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -1021,7 +1021,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34551" name="Player Commendation - Apocalypse Avenger (Earth)">
+	<weapon id="34551" name="Player Commendation - Apocalypse Avenger (Earth)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_raksilion_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -1041,7 +1041,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34552" name="Player Commendation - Apocalypse Avenger (Water)">
+	<weapon id="34552" name="Player Commendation - Apocalypse Avenger (Water)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_raksilion_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -1061,7 +1061,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34553" name="Player Commendation - Apocalypse Avenger (Wind)">
+	<weapon id="34553" name="Player Commendation - Apocalypse Avenger (Wind)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_raksilion_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -1081,7 +1081,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34554" name="Player Commendation - Apocalypse Avenger (Fire)">
+	<weapon id="34554" name="Player Commendation - Apocalypse Avenger (Fire)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_raksilion_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -1101,7 +1101,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34555" name="Player Commendation - Apocalypse Avenger (Holy)">
+	<weapon id="34555" name="Player Commendation - Apocalypse Avenger (Holy)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_raksilion_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -1121,7 +1121,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34556" name="Player Commendation - Apocalypse Avenger (Dark)">
+	<weapon id="34556" name="Player Commendation - Apocalypse Avenger (Dark)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_raksilion_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -1141,7 +1141,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34557" name="Player Commendation - Apocalypse Caster (Earth)">
+	<weapon id="34557" name="Player Commendation - Apocalypse Caster (Earth)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_yuke_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -1161,7 +1161,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34558" name="Player Commendation - Apocalypse Caster (Water)">
+	<weapon id="34558" name="Player Commendation - Apocalypse Caster (Water)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_yuke_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -1181,7 +1181,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34559" name="Player Commendation - Apocalypse Caster (Wind)">
+	<weapon id="34559" name="Player Commendation - Apocalypse Caster (Wind)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_yuke_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -1201,7 +1201,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34560" name="Player Commendation - Apocalypse Caster (Fire)">
+	<weapon id="34560" name="Player Commendation - Apocalypse Caster (Fire)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_yuke_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -1221,7 +1221,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34561" name="Player Commendation - Apocalypse Caster (Holy)">
+	<weapon id="34561" name="Player Commendation - Apocalypse Caster (Holy)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_yuke_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -1241,7 +1241,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34562" name="Player Commendation - Apocalypse Caster (Dark)">
+	<weapon id="34562" name="Player Commendation - Apocalypse Caster (Dark)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_yuke_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -1261,7 +1261,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34563" name="Player Commendation - Apocalypse Cutter (Earth)">
+	<weapon id="34563" name="Player Commendation - Apocalypse Cutter (Earth)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_pasis_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -1281,7 +1281,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34564" name="Player Commendation - Apocalypse Cutter (Water)">
+	<weapon id="34564" name="Player Commendation - Apocalypse Cutter (Water)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_pasis_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -1301,7 +1301,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34565" name="Player Commendation - Apocalypse Cutter (Wind)">
+	<weapon id="34565" name="Player Commendation - Apocalypse Cutter (Wind)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_pasis_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -1321,7 +1321,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34566" name="Player Commendation - Apocalypse Cutter (Fire)">
+	<weapon id="34566" name="Player Commendation - Apocalypse Cutter (Fire)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_pasis_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -1341,7 +1341,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34567" name="Player Commendation - Apocalypse Cutter (Holy)">
+	<weapon id="34567" name="Player Commendation - Apocalypse Cutter (Holy)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_pasis_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -1361,7 +1361,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34568" name="Player Commendation - Apocalypse Cutter (Dark)">
+	<weapon id="34568" name="Player Commendation - Apocalypse Cutter (Dark)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_pasis_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -1381,7 +1381,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34569" name="Player Commendation - Apocalypse Fighter (Earth)">
+	<weapon id="34569" name="Player Commendation - Apocalypse Fighter (Earth)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_kirche_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="155"/>
@@ -1401,7 +1401,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34570" name="Player Commendation - Apocalypse Fighter (Water)">
+	<weapon id="34570" name="Player Commendation - Apocalypse Fighter (Water)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_kirche_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="155"/>
@@ -1421,7 +1421,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34571" name="Player Commendation - Apocalypse Fighter (Wind)">
+	<weapon id="34571" name="Player Commendation - Apocalypse Fighter (Wind)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_kirche_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="155"/>
@@ -1441,7 +1441,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34572" name="Player Commendation - Apocalypse Fighter (Fire)">
+	<weapon id="34572" name="Player Commendation - Apocalypse Fighter (Fire)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_kirche_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="155"/>
@@ -1461,7 +1461,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34573" name="Player Commendation - Apocalypse Fighter (Holy)">
+	<weapon id="34573" name="Player Commendation - Apocalypse Fighter (Holy)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_kirche_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="155"/>
@@ -1481,7 +1481,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34574" name="Player Commendation - Apocalypse Fighter (Dark)">
+	<weapon id="34574" name="Player Commendation - Apocalypse Fighter (Dark)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_kirche_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="155"/>

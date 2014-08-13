@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="20006" name="Agathion Seal Bracelet - Majo">
+	<armor id="20006" name="Agathion - Majo">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -20,7 +20,7 @@
 			<skill id="23000" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20007" name="Agathion Seal Bracelet - Gold Majo">
+	<armor id="20007" name="Agathion - Gold Majo">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -39,7 +39,7 @@
 			<skill id="23001" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20008" name="Agathion Seal Bracelet - Black Majo">
+	<armor id="20008" name="Agathion - Black Majo">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -58,7 +58,7 @@
 			<skill id="23002" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20009" name="Agathion Seal Bracelet - Majo" add_name="Big Head 30 Day Expiration Period">
+	<armor id="20009" name="Agathion - Majo" add_name="Big Head (30-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -80,7 +80,7 @@
 			<skill id="23004" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20010" name="Agathion Seal Bracelet - Gold Majo" add_name="Resurrection 30 Day Expiration Period">
+	<armor id="20010" name="Agathion - Gold Majo" add_name="Resurrection (30-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -107,7 +107,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20011" name="Agathion Seal Bracelet - Black Majo" add_name="Escape 30 Day Expiration Period">
+	<armor id="20011" name="Agathion - Black Majo" add_name="Escape (30-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -134,7 +134,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20012" name="Agathion Seal Bracelet - Plaipitak">
+	<armor id="20012" name="Agathion - Plaipitak">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -153,7 +153,7 @@
 			<skill id="23003" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20013" name="Agathion Seal Bracelet - Plaipitak" add_name="Big Head 30 Day Expiration Period">
+	<armor id="20013" name="Agathion - Plaipitak" add_name="Big Head (30-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -175,7 +175,7 @@
 			<skill id="23007" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20014" name="Agathion Seal Bracelet - Plaipitak" add_name="Resurrection 30 Day Expiration Period">
+	<armor id="20014" name="Agathion - Plaipitak" add_name="Resurrection (30-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -202,7 +202,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20015" name="Agathion Seal Bracelet - Plaipitak" add_name="Escape 30 Day Expiration Period">
+	<armor id="20015" name="Agathion - Plaipitak" add_name="Escape (30-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -229,7 +229,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20016" name="Horn-Rimmed Glasses" add_name="Agility">
+	<armor id="20016" name="Horn-rimmed Glasses" add_name="Agility">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -386,7 +386,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20029" name="Light Purple-Maned Horse Mounting Bracelet">
+	<armor id="20029" name="Mount - Darkmane Pacer">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -403,7 +403,7 @@
 			<skill id="8247" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20030" name="Light Purple-Maned Horse Mounting Bracelet" add_name="30 Day Expiration Period">
+	<armor id="20030" name="Mount - Darkmane Pacer" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -454,7 +454,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20063" name="Agathion Seal Bracelet - Baby Panda">
+	<armor id="20063" name="Agathion - Baby Panda">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -473,7 +473,7 @@
 			<skill id="23010" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20064" name="Agathion Seal Bracelet - Bamboo Panda">
+	<armor id="20064" name="Agathion - Bamboo Panda">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -492,7 +492,7 @@
 			<skill id="23011" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20065" name="Agathion Seal Bracelet - Sexy Panda">
+	<armor id="20065" name="Agathion - Sexy Panda">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -511,7 +511,7 @@
 			<skill id="23012" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20066" name="Agathion Seal Bracelet - Baby Panda" add_name="Big Head-15 Day Expiration Period">
+	<armor id="20066" name="Agathion - Baby Panda" add_name="Big Head (15-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -532,7 +532,7 @@
 			<skill id="23013" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20067" name="Agathion Seal Bracelet - Bamboo Panda" add_name="Resurrection-15 Day Expiration Period">
+	<armor id="20067" name="Agathion - Bamboo Panda" add_name="Resurrection (15-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -558,7 +558,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20068" name="Agathion Seal Bracelet - Sexy Panda" add_name="Escape-15 Day Expiration Period">
+	<armor id="20068" name="Agathion - Sexy Panda" add_name="Escape (15-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -584,7 +584,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20083" name="Afro Hair" add_name="Energy - 3 Hour Expiration Period">
+	<armor id="20083" name="Afro Hair" add_name="Vitality (3-hour)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -608,7 +608,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20084" name="Afro Hair" add_name="Energy - 3 Day Expiration Period">
+	<armor id="20084" name="Afro Hair" add_name="Vitality (3-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -632,7 +632,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20085" name="Afro Hair" add_name="Energy - 30 Day Expiration Period">
+	<armor id="20085" name="Afro Hair" add_name="Vitality (30-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -656,7 +656,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20086" name="Horn Rimmed Glasses" add_name="Energy - 3 Hour Expiration Period">
+	<armor id="20086" name="Horn-rimmed Glasses" add_name="Vitality (3-hour)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -680,7 +680,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20087" name="Horn Rimmed Glasses" add_name="Energy - 3 Day Expiration Period">
+	<armor id="20087" name="Horn-rimmed Glasses" add_name="Vitality (3-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -704,7 +704,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20088" name="Horn Rimmed Glasses" add_name="Energy - 30 Day Expiration Period">
+	<armor id="20088" name="Horn-rimmed Glasses" add_name="Vitality (30-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -728,7 +728,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20089" name="Assassin's Bamboo Hat" add_name="Energy - 3 Hour Expiration Period">
+	<armor id="20089" name="Assassin's Bamboo Hat" add_name="Vitality (3-hour)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -752,7 +752,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20090" name="Assassin's Bamboo Hat" add_name="Energy - 3 Day Expiration Period">
+	<armor id="20090" name="Assassin's Bamboo Hat" add_name="Vitality (3-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -776,7 +776,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20091" name="Assassin's Bamboo Hat" add_name="Energy - 30 Day Expiration Period">
+	<armor id="20091" name="Assassin's Bamboo Hat" add_name="Vitality (30-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -800,7 +800,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20094" name="Agathion Seal Bracelet: Rudolph" add_name="Energy - 30 Day Expiration Period">
+	<armor id="20094" name="Agathion - Rudolph" add_name="Vitality (30-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -822,7 +822,7 @@
 			<skill id="23016" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20095" name="Santa Horn Hat">
+	<armor id="20095" name="Santa's Antlers">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -836,7 +836,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="20098" name="Formal Dress - Event" add_name="1 hour Shadow time">
+	<armor id="20098" name="Formal Wear (Event)" add_name="Shadow (1-hour)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -850,7 +850,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="20099" name="Formal Dress - Event" add_name="7 Day Expiration Period">
+	<armor id="20099" name="Formal Wear (Event)" add_name="7-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="10080"/>

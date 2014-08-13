@@ -1082,7 +1082,7 @@
 			<add stat="accCombat" order="0x10" value="2"/>
 		</for>
 	</weapon>
-	<weapon id="37296" name="Steel Dynasty Rapier (60-day">
+	<weapon id="37296" name="Steel Dynasty Rapier (60-day)">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.weapon_dynasty_rapier_i00"/>
 		<set name="price" value="0"/>

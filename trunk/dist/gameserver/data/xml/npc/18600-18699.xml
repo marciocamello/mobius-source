@@ -5833,7 +5833,7 @@
 			<defence attribute="unholy" value="180"/>
 		</attributes>
 	</npc>
-	<npc id="18696" name="Dimension Moving Device" title="">
+	<npc id="18696" name="Dimensional Teleport Device" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="seedofdestruction.DimensionMovingDevice"/>
 		<set name="baseAtkRange" value="40"/>

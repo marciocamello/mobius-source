@@ -3904,7 +3904,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="32981" name="Newbie Helper" title="Training">
+	<npc id="32981" name="Adventurers' Guide" title="Training">
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>

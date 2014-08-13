@@ -105,7 +105,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17149" name="Varka Karm (used by Varka Silenos)" add_name="Promotion">
+	<armor id="17149" name="Varka Circlet" add_name="Promotion">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_barka_karm_i00"/>
@@ -118,7 +118,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17150" name="Ketra Karm (used by Ketra Orcs)" add_name="Promotion">
+	<armor id="17150" name="Ketra Circlet" add_name="Promotion">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_ketra_karm_i00"/>
@@ -277,7 +277,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17186" name="National Representative Warrior's Ring" add_name="3-day limited period">
+	<armor id="17186" name="Olympic Athlete's Ring" add_name="3-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_ring_of_hero_i00"/>
 		<set name="price" value="0"/>
@@ -296,7 +296,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17187" name="National Representative Warrior's Necklace" add_name="3-day limited period">
+	<armor id="17187" name="Olympic Athlete's Necklace" add_name="3-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_necklace_of_hero_i00"/>
 		<set name="price" value="0"/>
@@ -314,7 +314,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17188" name="National Representative Warrior's Earring" add_name="3-day limited period">
+	<armor id="17188" name="Olympic Athlete's Earring" add_name="3-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_earring_of_hero_i00"/>
 		<set name="price" value="0"/>
@@ -333,7 +333,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17189" name="National Representative Warrior's Ring" add_name="7-day limited period">
+	<armor id="17189" name="Olympic Athlete's Ring" add_name="7-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_ring_of_hero_i00"/>
 		<set name="price" value="0"/>
@@ -352,7 +352,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17190" name="National Representative Warrior's Necklace" add_name="7-day limited period">
+	<armor id="17190" name="Olympic Athlete's Necklace" add_name="7-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_necklace_of_hero_i00"/>
 		<set name="price" value="0"/>
@@ -370,7 +370,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17191" name="National Representative Warrior's Earring" add_name="7-day limited period">
+	<armor id="17191" name="Olympic Athlete's Earring" add_name="7-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_earring_of_hero_i00"/>
 		<set name="price" value="0"/>
@@ -389,7 +389,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17192" name="National Representative Warrior's Ring" add_name="10-day limited period">
+	<armor id="17192" name="Olympic Athlete's Ring" add_name="10-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_ring_of_hero_i00"/>
 		<set name="price" value="0"/>
@@ -408,7 +408,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17193" name="National Representative Warrior's Necklace" add_name="10-day limited period">
+	<armor id="17193" name="Olympic Athlete's Necklace" add_name="10-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_necklace_of_hero_i00"/>
 		<set name="price" value="0"/>
@@ -426,7 +426,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17194" name="National Representative Warrior's Earring" add_name="10-day limited period">
+	<armor id="17194" name="Olympic Athlete's Earring" add_name="10-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_earring_of_hero_i00"/>
 		<set name="price" value="0"/>
@@ -445,7 +445,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17195" name="National Representative Warrior's Ring" add_name="30-day limited period">
+	<armor id="17195" name="Olympic Athlete's Ring" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_ring_of_hero_i00"/>
 		<set name="price" value="0"/>
@@ -464,7 +464,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17196" name="National Representative Warrior's Necklace" add_name="30-day limited period">
+	<armor id="17196" name="Olympic Athlete's Necklace" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_necklace_of_hero_i00"/>
 		<set name="price" value="0"/>
@@ -482,7 +482,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17197" name="National Representative Warrior's Earring" add_name="30-day limited period">
+	<armor id="17197" name="Olympic Athlete's Earring" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_earring_of_hero_i00"/>
 		<set name="price" value="0"/>
@@ -501,7 +501,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17198" name="National Representative Warrior's Ring">
+	<armor id="17198" name="Olympic Athlete's Ring">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_ring_of_hero_i00"/>
 		<set name="price" value="0"/>
@@ -518,7 +518,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17199" name="National Representative Warrior's Necklace">
+	<armor id="17199" name="Olympic Athlete's Necklace">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_necklace_of_hero_i00"/>
 		<set name="price" value="0"/>

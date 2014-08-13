@@ -42,7 +42,7 @@
 			<effect count="1" name="Transformation" time="1800" val="15"/>
 		</for>
 	</skill>
-	<skill id="2702" levels="1" name="Giran Knight Mercenary">
+	<skill id="2702" levels="1" name="Giran Royal Guard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -63,7 +63,7 @@
 			<effect count="1" name="Transformation" time="1800" val="16"/>
 		</for>
 	</skill>
-	<skill id="2703" levels="1" name="Giran Archer Mercenary">
+	<skill id="2703" levels="1" name="Giran Archer Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -84,7 +84,7 @@
 			<effect count="1" name="Transformation" time="1800" val="17"/>
 		</for>
 	</skill>
-	<skill id="2704" levels="1" name="Giran Wizard Mercenary">
+	<skill id="2704" levels="1" name="Giran Wizard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -105,7 +105,7 @@
 			<effect count="1" name="Transformation" time="1800" val="18"/>
 		</for>
 	</skill>
-	<skill id="2705" levels="1" name="Giran Kamael Captain Mercenary">
+	<skill id="2705" levels="1" name="Giran Kamael Guard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -126,7 +126,7 @@
 			<effect count="1" name="Transformation" time="1800" val="19"/>
 		</for>
 	</skill>
-	<skill id="2706" levels="1" name="Giran Knight Captain Mercenary">
+	<skill id="2706" levels="1" name="Giran Knight of Dawn">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -147,7 +147,7 @@
 			<effect count="1" name="Transformation" time="1800" val="20"/>
 		</for>
 	</skill>
-	<skill id="2707" levels="1" name="Giran Commander Mercenary">
+	<skill id="2707" levels="1" name="Giran Fortress Commander">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -294,7 +294,7 @@
 			<effect count="1" name="Transformation" time="1800" val="15"/>
 		</for>
 	</skill>
-	<skill id="2714" levels="1" name="Oren Knight Mercenary">
+	<skill id="2714" levels="1" name="Oren Royal Guard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -315,7 +315,7 @@
 			<effect count="1" name="Transformation" time="1800" val="16"/>
 		</for>
 	</skill>
-	<skill id="2715" levels="1" name="Oren Archer Mercenary">
+	<skill id="2715" levels="1" name="Oren Archer Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -336,7 +336,7 @@
 			<effect count="1" name="Transformation" time="1800" val="17"/>
 		</for>
 	</skill>
-	<skill id="2716" levels="1" name="Oren Wizard Mercenary">
+	<skill id="2716" levels="1" name="Oren Wizard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -357,7 +357,7 @@
 			<effect count="1" name="Transformation" time="1800" val="18"/>
 		</for>
 	</skill>
-	<skill id="2717" levels="1" name="Oren Kamael Captain Mercenary">
+	<skill id="2717" levels="1" name="Oren Kamael Guard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -378,7 +378,7 @@
 			<effect count="1" name="Transformation" time="1800" val="19"/>
 		</for>
 	</skill>
-	<skill id="2718" levels="1" name="Oren Knight Captain Mercenary">
+	<skill id="2718" levels="1" name="Oren Knight of Dawn">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -399,7 +399,7 @@
 			<effect count="1" name="Transformation" time="1800" val="20"/>
 		</for>
 	</skill>
-	<skill id="2719" levels="1" name="Oren Commander Mercenary">
+	<skill id="2719" levels="1" name="Oren Fortress Commander">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -546,7 +546,7 @@
 			<effect count="1" name="Transformation" time="1800" val="15"/>
 		</for>
 	</skill>
-	<skill id="2726" levels="1" name="Aden Knight Mercenary">
+	<skill id="2726" levels="1" name="Aden Royal Guard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -567,7 +567,7 @@
 			<effect count="1" name="Transformation" time="1800" val="16"/>
 		</for>
 	</skill>
-	<skill id="2727" levels="1" name="Aden Archer Mercenary">
+	<skill id="2727" levels="1" name="Aden Archer Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -588,7 +588,7 @@
 			<effect count="1" name="Transformation" time="1800" val="17"/>
 		</for>
 	</skill>
-	<skill id="2728" levels="1" name="Aden Wizard Mercenary">
+	<skill id="2728" levels="1" name="Aden Wizard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -609,7 +609,7 @@
 			<effect count="1" name="Transformation" time="1800" val="18"/>
 		</for>
 	</skill>
-	<skill id="2729" levels="1" name="Aden Kamael Captain Mercenary">
+	<skill id="2729" levels="1" name="Aden Kamael Guard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -630,7 +630,7 @@
 			<effect count="1" name="Transformation" time="1800" val="19"/>
 		</for>
 	</skill>
-	<skill id="2730" levels="1" name="Aden Knight Captain Mercenary">
+	<skill id="2730" levels="1" name="Aden Knight of Dawn">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -651,7 +651,7 @@
 			<effect count="1" name="Transformation" time="1800" val="20"/>
 		</for>
 	</skill>
-	<skill id="2731" levels="1" name="Aden Commander Mercenary">
+	<skill id="2731" levels="1" name="Aden Fortress Commander">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -798,7 +798,7 @@
 			<effect count="1" name="Transformation" time="1800" val="15"/>
 		</for>
 	</skill>
-	<skill id="2738" levels="1" name="Innadril Knight Mercenary">
+	<skill id="2738" levels="1" name="Innadril Royal Guard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -819,7 +819,7 @@
 			<effect count="1" name="Transformation" time="1800" val="16"/>
 		</for>
 	</skill>
-	<skill id="2739" levels="1" name="Innadril Archer Mercenary">
+	<skill id="2739" levels="1" name="Innadril Archer Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -840,7 +840,7 @@
 			<effect count="1" name="Transformation" time="1800" val="17"/>
 		</for>
 	</skill>
-	<skill id="2740" levels="1" name="Innadril Wizard Mercenary">
+	<skill id="2740" levels="1" name="Innadril Wizard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -861,7 +861,7 @@
 			<effect count="1" name="Transformation" time="1800" val="18"/>
 		</for>
 	</skill>
-	<skill id="2741" levels="1" name="Innadril Kamael Captain Mercenary">
+	<skill id="2741" levels="1" name="Innadril Kamael Guard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -882,7 +882,7 @@
 			<effect count="1" name="Transformation" time="1800" val="19"/>
 		</for>
 	</skill>
-	<skill id="2742" levels="1" name="Innadril Knight Captain Mercenary">
+	<skill id="2742" levels="1" name="Innadril Knight of Dawn">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -903,7 +903,7 @@
 			<effect count="1" name="Transformation" time="1800" val="20"/>
 		</for>
 	</skill>
-	<skill id="2743" levels="1" name="Innadril Commander Mercenary">
+	<skill id="2743" levels="1" name="Innadril Fortress Commander">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1050,7 +1050,7 @@
 			<effect count="1" name="Transformation" time="1800" val="15"/>
 		</for>
 	</skill>
-	<skill id="2750" levels="1" name="Goddard Knight Mercenary">
+	<skill id="2750" levels="1" name="Goddard Royal Guard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1071,7 +1071,7 @@
 			<effect count="1" name="Transformation" time="1800" val="16"/>
 		</for>
 	</skill>
-	<skill id="2751" levels="1" name="Goddard Archer Mercenary">
+	<skill id="2751" levels="1" name="Goddard Archer Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1092,7 +1092,7 @@
 			<effect count="1" name="Transformation" time="1800" val="17"/>
 		</for>
 	</skill>
-	<skill id="2752" levels="1" name="Goddard Wizard Mercenary">
+	<skill id="2752" levels="1" name="Goddard Wizard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1113,7 +1113,7 @@
 			<effect count="1" name="Transformation" time="1800" val="18"/>
 		</for>
 	</skill>
-	<skill id="2753" levels="1" name="Goddard Kamael Captain Mercenary">
+	<skill id="2753" levels="1" name="Goddard Kamael Gauard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1134,7 +1134,7 @@
 			<effect count="1" name="Transformation" time="1800" val="19"/>
 		</for>
 	</skill>
-	<skill id="2754" levels="1" name="Goddard Knight Captain Mercenary">
+	<skill id="2754" levels="1" name="Goddard Knight of Dawn">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1155,7 +1155,7 @@
 			<effect count="1" name="Transformation" time="1800" val="20"/>
 		</for>
 	</skill>
-	<skill id="2755" levels="1" name="Goddard Commander Mercenary">
+	<skill id="2755" levels="1" name="Goddard Fortress Commander">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1302,7 +1302,7 @@
 			<effect count="1" name="Transformation" time="1800" val="15"/>
 		</for>
 	</skill>
-	<skill id="2762" levels="1" name="Rune Knight Mercenary">
+	<skill id="2762" levels="1" name="Rune Royal Guard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1323,7 +1323,7 @@
 			<effect count="1" name="Transformation" time="1800" val="16"/>
 		</for>
 	</skill>
-	<skill id="2763" levels="1" name="Rune Archer Mercenary">
+	<skill id="2763" levels="1" name="Rune Archer Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1344,7 +1344,7 @@
 			<effect count="1" name="Transformation" time="1800" val="17"/>
 		</for>
 	</skill>
-	<skill id="2764" levels="1" name="Rune Wizard Mercenary">
+	<skill id="2764" levels="1" name="Rune Wizard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1365,7 +1365,7 @@
 			<effect count="1" name="Transformation" time="1800" val="18"/>
 		</for>
 	</skill>
-	<skill id="2765" levels="1" name="Rune Kamael Captain Mercenary">
+	<skill id="2765" levels="1" name="Rune Kamael Guard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1386,7 +1386,7 @@
 			<effect count="1" name="Transformation" time="1800" val="19"/>
 		</for>
 	</skill>
-	<skill id="2766" levels="1" name="Rune Knight Captain Mercenary">
+	<skill id="2766" levels="1" name="Rune Knight of Dawn">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1407,7 +1407,7 @@
 			<effect count="1" name="Transformation" time="1800" val="20"/>
 		</for>
 	</skill>
-	<skill id="2767" levels="1" name="Rune Commander Mercenary">
+	<skill id="2767" levels="1" name="Rune Fortress Commander">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1554,7 +1554,7 @@
 			<effect count="1" name="Transformation" time="1800" val="15"/>
 		</for>
 	</skill>
-	<skill id="2774" levels="1" name="Schuttgart Knight Mercenary">
+	<skill id="2774" levels="1" name="Schuttgart Royal Guard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1575,7 +1575,7 @@
 			<effect count="1" name="Transformation" time="1800" val="16"/>
 		</for>
 	</skill>
-	<skill id="2775" levels="1" name="Schuttgart Archer Mercenary">
+	<skill id="2775" levels="1" name="Schuttgart Archer Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1596,7 +1596,7 @@
 			<effect count="1" name="Transformation" time="1800" val="17"/>
 		</for>
 	</skill>
-	<skill id="2776" levels="1" name="Schuttgart Wizard Mercenary">
+	<skill id="2776" levels="1" name="Schuttgart Wizard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1617,7 +1617,7 @@
 			<effect count="1" name="Transformation" time="1800" val="18"/>
 		</for>
 	</skill>
-	<skill id="2777" levels="1" name="Schuttgart Kamael Captain Mercenary">
+	<skill id="2777" levels="1" name="Schuttgart Kamael Guard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1638,7 +1638,7 @@
 			<effect count="1" name="Transformation" time="1800" val="19"/>
 		</for>
 	</skill>
-	<skill id="2778" levels="1" name="Schuttgart Knight Captain Mercenary">
+	<skill id="2778" levels="1" name="Schuttgart Knight of Dawn">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1659,7 +1659,7 @@
 			<effect count="1" name="Transformation" time="1800" val="20"/>
 		</for>
 	</skill>
-	<skill id="2779" levels="1" name="Schuttgart Commander Mercenary">
+	<skill id="2779" levels="1" name="Schuttgart Fortress Commander">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1700,7 +1700,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2782" levels="1" name="Turn Stone">
+	<skill id="2782" levels="1" name="Turn to Stone">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="81"/>
@@ -1800,7 +1800,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2792" levels="2" name="Stone of Stamina">
+	<skill id="2792" levels="2" name="Greater Stone of Stamina">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -1811,7 +1811,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2793" levels="2" name="Stone of Mana">
+	<skill id="2793" levels="2" name="Greater Stone of Mana">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -1831,7 +1831,7 @@
 			<player flyingTransform="true"/>
 		</cond>
 	</skill>
-	<skill id="2794" levels="2" name="Stone of Recovery">
+	<skill id="2794" levels="2" name="Greater Stone of Recovery">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>

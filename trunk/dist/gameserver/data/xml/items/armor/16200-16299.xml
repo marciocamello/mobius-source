@@ -128,7 +128,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16295" name="Moirai Gaiter">
+	<armor id="16295" name="Moirai Gaiters">
 		<set name="crystal_count" value="1010"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -149,7 +149,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16296" name="Moirai Leather Legging">
+	<armor id="16296" name="Moirai Leather Leggings">
 		<set name="crystal_count" value="758"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -192,7 +192,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16298" name="Moirai Gauntlet">
+	<armor id="16298" name="Moirai Gauntlets">
 		<set name="crystal_count" value="404"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="11000" levels="1" name="Yul Chain Skill Knock Blow">
+	<skill id="11000" levels="1" name="">
 		<set name="reuseDelay" val="7000"/>
 		<set name="hitTime" val="2200"/>
 		<set name="castRange" val="1100"/>
@@ -110,7 +110,7 @@
 			<mul order="0x30" stat="mpDanceConsume" val="0.6"/>
 		</for>
 	</skill>
-	<skill id="11006" levels="1" name="Superior Mental Resistance">
+	<skill id="11006" levels="1" name="Superior Mental Attack Resistance">
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="relationSkillsId" val="328;329;"/>
@@ -215,7 +215,7 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
 	</skill>
-	<skill id="11012" levels="8" name="Elemental Spike (fire)">
+	<skill id="11012" levels="8" name="Elemental Spike (Fire)">
 		<table name="#powerPvP">0</table>
 		<table name="#power">121 122 126 129 133 136 140 143</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -246,7 +246,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11013" levels="8" name="Elemental Spike (water)">
+	<skill id="11013" levels="8" name="Elemental Spike (Water)">
 		<table name="#powerPvP">0</table>
 		<table name="#power">121 122 126 129 133 136 140 143</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -277,7 +277,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11014" levels="8" name="Elemental Spike (wind)">
+	<skill id="11014" levels="8" name="Elemental Spike (Wind)">
 		<table name="#powerPvP">0</table>
 		<table name="#power">121 122 126 129 133 136 140 143</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -308,7 +308,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11015" levels="8" name="Elemental Spike (earth)">
+	<skill id="11015" levels="8" name="Elemental Spike (Earth)">
 		<table name="#powerPvP">0</table>
 		<table name="#power">121 122 126 129 133 136 140 143</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -339,7 +339,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11016" levels="8" name="Elemental Spike (4 attributes)">
+	<skill id="11016" levels="8" name="Elemental Spike (4 Elements)">
 		<table name="#powerPvP">0</table>
 		<table name="#power">121 122 126 129 133 136 140 143</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -395,7 +395,7 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
 	</skill>
-	<skill id="11018" levels="8" name="Elemental Crash (fire)">
+	<skill id="11018" levels="8" name="Elemental Crash (Fire)">
 		<table name="#powerPvP">0</table>
 		<table name="#power">144 146 150 154 159 163 167 171</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -426,7 +426,7 @@
 			<table name="#power">175 177 179 181 183 186 188 190 192 194</table>
 		</enchant3>
 	</skill>
-	<skill id="11019" levels="8" name="Elemental Crash (water)">
+	<skill id="11019" levels="8" name="Elemental Crash (Water)">
 		<table name="#powerPvP">0</table>
 		<table name="#power">144 146 150 154 159 163 167 171</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -457,7 +457,7 @@
 			<table name="#power">175 177 179 181 183 186 188 190 192 194</table>
 		</enchant3>
 	</skill>
-	<skill id="11020" levels="8" name="Elemental Crash (wind)">
+	<skill id="11020" levels="8" name="Elemental Crash (Wind)">
 		<table name="#powerPvP">0</table>
 		<table name="#power">144 146 150 154 159 163 167 171</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -488,7 +488,7 @@
 			<table name="#power">175 177 179 181 183 186 188 190 192 194</table>
 		</enchant3>
 	</skill>
-	<skill id="11021" levels="8" name="Elemental Crash (earth)">
+	<skill id="11021" levels="8" name="Elemental Crash (Earth)">
 		<table name="#powerPvP">0</table>
 		<table name="#power">144 146 150 154 159 163 167 171</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -519,7 +519,7 @@
 			<table name="#power">175 177 179 181 183 186 188 190 192 194</table>
 		</enchant3>
 	</skill>
-	<skill id="11022" levels="8" name="Elemental Crash (4 attributes)">
+	<skill id="11022" levels="8" name="Elemental Crash (4 Elements)">
 		<table name="#powerPvP">0</table>
 		<table name="#power">144 146 150 154 159 163 167 171</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -567,7 +567,7 @@
 			<table name="#power">433 438 443 448 453 458 464 469 474 479</table>
 		</enchant3>
 	</skill>
-	<skill id="11024" levels="8" name="Elemental Destruction (fire)">
+	<skill id="11024" levels="8" name="Elemental Destruction (Fire)">
 		<table name="#powerPvP">0</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#power">356 367 377 387 397 407 418 428</table>
@@ -592,7 +592,7 @@
 			<table name="#power">433 438 443 448 453 458 464 469 474 479</table>
 		</enchant3>
 	</skill>
-	<skill id="11025" levels="8" name="Elemental Destruction (water)">
+	<skill id="11025" levels="8" name="Elemental Destruction (Water)">
 		<table name="#powerPvP">0</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#power">356 367 377 387 397 407 418 428</table>
@@ -617,7 +617,7 @@
 			<table name="#power">433 438 443 448 453 458 464 469 474 479</table>
 		</enchant3>
 	</skill>
-	<skill id="11026" levels="8" name="Elemental Destruction (wind)">
+	<skill id="11026" levels="8" name="Elemental Destruction (Wind)">
 		<table name="#powerPvP">0</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#power">356 367 377 387 397 407 418 428</table>
@@ -642,7 +642,7 @@
 			<table name="#power">433 438 443 448 453 458 464 469 474 479</table>
 		</enchant3>
 	</skill>
-	<skill id="11027" levels="8" name="Elemental Destruction (earth)">
+	<skill id="11027" levels="8" name="Elemental Destruction (Earth)">
 		<table name="#powerPvP">0</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#power">356 367 377 387 397 407 418 428</table>
@@ -667,7 +667,7 @@
 			<table name="#power">433 438 443 448 453 458 464 469 474 479</table>
 		</enchant3>
 	</skill>
-	<skill id="11028" levels="8" name="Elemental Destruction (4 attributes)">
+	<skill id="11028" levels="8" name="Elemental Destruction (4 Elements)">
 		<table name="#powerPvP">0</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#power">356 367 377 387 397 407 418 428</table>
@@ -721,7 +721,7 @@
 			<effect count="15" name="DamOverTime" time="1" val="#dmg"/>
 		</for>
 	</skill>
-	<skill id="11030" levels="4" name="Death Siphon">
+	<skill id="11030" levels="4" name="Death Lord">
 		<table name="#dot">25 50 75 100</table>
 		<table name="#magicLevel">85 86 87 88</table>
 		<table name="#mpConsume2">49 50 51 52</table>
@@ -833,7 +833,7 @@
 			<table name="#power">232 235 238 240 243 246 249 251 254 257</table>
 		</enchant3>
 	</skill>
-	<skill id="11035" levels="8" name="Elemental Blast (fire)">
+	<skill id="11035" levels="8" name="Elemental Blast (Fire)">
 		<table name="#powerPvP">0</table>
 		<table name="#power">191 194 199 205 210 216 221 227</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -859,7 +859,7 @@
 			<table name="#power">232 235 238 240 243 246 249 251 254 257</table>
 		</enchant3>
 	</skill>
-	<skill id="11036" levels="8" name="Elemental Blast (water)">
+	<skill id="11036" levels="8" name="Elemental Blast (Water)">
 		<table name="#powerPvP">0</table>
 		<table name="#power">191 194 199 205 210 216 221 227</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -885,7 +885,7 @@
 			<table name="#power">232 235 238 240 243 246 249 251 254 257</table>
 		</enchant3>
 	</skill>
-	<skill id="11037" levels="8" name="Elemental Blast (wind)">
+	<skill id="11037" levels="8" name="Elemental Blast (Wind)">
 		<table name="#powerPvP">0</table>
 		<table name="#power">191 194 199 205 210 216 221 227</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -911,7 +911,7 @@
 			<table name="#power">232 235 238 240 243 246 249 251 254 257</table>
 		</enchant3>
 	</skill>
-	<skill id="11038" levels="8" name="Elemental Blast (earth)">
+	<skill id="11038" levels="8" name="Elemental Blast (Earth)">
 		<table name="#powerPvP">0</table>
 		<table name="#power">191 194 199 205 210 216 221 227</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -937,7 +937,7 @@
 			<table name="#power">232 235 238 240 243 246 249 251 254 257</table>
 		</enchant3>
 	</skill>
-	<skill id="11039" levels="8" name="Elemental Blast (4 attributes)">
+	<skill id="11039" levels="8" name="Elemental Blast (4 Elements)">
 		<table name="#powerPvP">0</table>
 		<table name="#power">191 194 199 205 210 216 221 227</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -1015,7 +1015,7 @@
 			<table name="#power">289 293 296 299 303 306 310 313 317 320</table>
 		</enchant3>
 	</skill>
-	<skill id="11042" levels="8" name="Elemental Storm (water)">
+	<skill id="11042" levels="8" name="Elemental Storm (Water)">
 		<table name="#powerPvP">0</table>
 		<table name="#power">238 245 252 259 265 272 279 286</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -1041,7 +1041,7 @@
 			<table name="#power">289 293 296 299 303 306 310 313 317 320</table>
 		</enchant3>
 	</skill>
-	<skill id="11043" levels="8" name="Elemental Storm (wind)">
+	<skill id="11043" levels="8" name="Elemental Storm (Wind)">
 		<table name="#powerPvP">0</table>
 		<table name="#power">238 245 252 259 265 272 279 286</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -1067,7 +1067,7 @@
 			<table name="#power">289 293 296 299 303 306 310 313 317 320</table>
 		</enchant3>
 	</skill>
-	<skill id="11044" levels="8" name="Elemental Storm (earth)">
+	<skill id="11044" levels="8" name="Elemental Storm (Earth)">
 		<table name="#powerPvP">0</table>
 		<table name="#power">238 245 252 259 265 272 279 286</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -1093,7 +1093,7 @@
 			<table name="#power">289 293 296 299 303 306 310 313 317 320</table>
 		</enchant3>
 	</skill>
-	<skill id="11045" levels="8" name="Elemental Storm (4 attributes)">
+	<skill id="11045" levels="8" name="Elemental Storm (4 Elements)">
 		<table name="#powerPvP">0</table>
 		<table name="#power">238 245 252 259 265 272 279 286</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -2149,7 +2149,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for/>
 	</skill>
-	<skill id="11087" levels="3" name="Elemental Crash (fire)">
+	<skill id="11087" levels="3" name="Elemental Crash (Fire)">
 		<set name="magicLevel" val="97"/>
 		<set name="reuseDelay" val="20000"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -2160,7 +2160,7 @@
 			<effect count="3" name="Fear" stackOrder="-1" stackType="Fear" time="1" val="0"/>
 		</for>
 	</skill>
-	<skill id="11088" levels="3" name="Elemental Crash (water)">
+	<skill id="11088" levels="3" name="Elemental Crash (Water)">
 		<set name="magicLevel" val="97"/>
 		<set name="reuseDelay" val="20000"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -2173,7 +2173,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11089" levels="3" name="Elemental Crash (wind)">
+	<skill id="11089" levels="3" name="Elemental Crash (Wind)">
 		<set name="magicLevel" val="97"/>
 		<set name="reuseDelay" val="20000"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -2195,7 +2195,7 @@
 			<effect name="Root" time="3" val="0" stackTypes="root_magically" stackOrder="1"/>
 		</for>
 	</skill>
-	<skill id="11091" levels="1" name="Elemental Crash (4 attributes)">
+	<skill id="11091" levels="1" name="Elemental Crash (4 Elements)">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>

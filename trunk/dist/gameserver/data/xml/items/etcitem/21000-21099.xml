@@ -191,7 +191,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="21032" name="Silpeed's Wing">
+	<etcitem id="21032" name="Silpheed's Wing">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -209,7 +209,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="21033" name="Silpeed's Blessing">
+	<etcitem id="21033" name="Silpheed's Blessing">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -580,7 +580,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21084" name="XP Rune III (Lv1-99) 30%">
+	<etcitem id="21084" name="XP Rune III (Lv. 1-99) 30%">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="br_cashtex.item.br_cash_rune_of_exp_i00"/>
 		<set name="weight" value="120"/>
@@ -589,7 +589,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21085" name="XP Rune III (Lv1-99) 30% Pack (1-hour)">
+	<etcitem id="21085" name="XP Rune III (Lv. 1-99) 30% Pack (1-hour)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -628,7 +628,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21091" name="XP Rune III (Lv1-99) 50% Pack (7-day)">
+	<etcitem id="21091" name="XP Rune III (Lv. 1-99) 50% Pack (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -690,7 +690,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="21096" name="Shiny Cube Fragment Armor - D">
+	<etcitem id="21096" name="Shiny Cube Fragment Armor (D-grade)">
 		<set name="icon" value="icon.event_cubic_piece_i00"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -698,7 +698,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21097" name="Shiny Cube Fragment Armor - C">
+	<etcitem id="21097" name="Shiny Cube Fragment Armor (C-grade)">
 		<set name="icon" value="icon.event_cubic_piece_i01"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -706,7 +706,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21098" name="Shiny Cube Fragment Armor - B">
+	<etcitem id="21098" name="Shiny Cube Fragment Armor (B-grade)">
 		<set name="icon" value="Branchsys2.icon.shine_cubic_a_piece_i02"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -714,7 +714,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21099" name="Shiny Cube Fragment Armor - A">
+	<etcitem id="21099" name="Shiny Cube Fragment Armor (A-grade)">
 		<set name="icon" value="Branchsys2.icon.shine_cubic_a_piece_i03"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>

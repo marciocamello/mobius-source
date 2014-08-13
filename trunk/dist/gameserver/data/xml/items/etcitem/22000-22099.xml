@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="22000" name="Small Fortuna box">
+	<etcitem id="22000" name="Small Fortuna Box">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -16,7 +16,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="22001" name="Middle fortune box">
+	<etcitem id="22001" name="Medium Fortune Box">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -31,7 +31,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="22002" name="Large Fortuna box">
+	<etcitem id="22002" name="Large Fortuna Box">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -46,7 +46,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="22003" name="Small Fortuna cube">
+	<etcitem id="22003" name="Small Fortuna Cube">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -76,7 +76,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="22005" name="Large Fortuna cube">
+	<etcitem id="22005" name="Large Fortuna Cube">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -171,7 +171,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22014" name="Crystal: Enchant Ancient Weapon (B-grade)">
+	<etcitem id="22014" name="Ancient Scroll: Enchant Weapon (B-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
@@ -181,7 +181,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22015" name="Crystal: Enchant Ancient Weapon (A-grade)">
+	<etcitem id="22015" name="Ancient Scroll: Enchant Weapon (A-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
@@ -191,7 +191,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22016" name="Crystal: Enchant Ancient Armor (B-grade)">
+	<etcitem id="22016" name="Ancient Scroll: Enchant Armor (B-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
@@ -201,7 +201,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22017" name="Crystal: Enchant Ancient Armor (A-grade)">
+	<etcitem id="22017" name="Ancient Scroll: Enchant Armor (A-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
@@ -211,7 +211,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22018" name="Crystal: Enchant Divine Weapon (B-grade)">
+	<etcitem id="22018" name="Divine Scroll: Enchant Weapon (B-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
@@ -221,7 +221,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22019" name="Crystal: Enchant Divine Weapon (A-grade)">
+	<etcitem id="22019" name="Divine Scroll: Enchant Weapon (A-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
@@ -231,7 +231,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22020" name="Crystal: Enchant Divine Armor (B-grade)">
+	<etcitem id="22020" name="Divine Scroll: Enchant Armor (B-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
@@ -241,7 +241,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22021" name="Crystal: Enchant Divine Armor (A-grade)">
+	<etcitem id="22021" name="Divine Scroll: Enchant Armor (A-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
@@ -886,7 +886,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22054" name="XP Rune III (Lv1-99)" add_name="(24-hour)">
+	<etcitem id="22054" name="XP Rune III (Lv. 1-99)" add_name="24-hour">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -902,7 +902,7 @@
 			<skill id="26046" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="22055" name="XP Rune III (Lv1-99)" add_name="(168-hour)">
+	<etcitem id="22055" name="XP Rune III (Lv. 1-99)" add_name="168-hour">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -918,7 +918,7 @@
 			<skill id="26046" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="22056" name="XP Rune III (Lv1-99)" add_name="(336-hour)">
+	<etcitem id="22056" name="XP Rune III (Lv. 1-99)" add_name="336-hour">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -934,7 +934,7 @@
 			<skill id="26046" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="22057" name="XP Rune III (Lv1-99)" add_name="(720-hour)">
+	<etcitem id="22057" name="XP Rune III (Lv. 1-99)" add_name="720-hour">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -950,7 +950,7 @@
 			<skill id="26046" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="22058" name="SP Rune" add_name="(24-hour)">
+	<etcitem id="22058" name="SP Rune" add_name="24-hour">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -966,7 +966,7 @@
 			<skill id="26047" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="22059" name="SP Rune" add_name="(168-hour)">
+	<etcitem id="22059" name="SP Rune" add_name="168-hour">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -982,7 +982,7 @@
 			<skill id="26047" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="22060" name="SP Rune" add_name="(336-hour)">
+	<etcitem id="22060" name="SP Rune" add_name="336-hour">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -998,7 +998,7 @@
 			<skill id="26047" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="22061" name="SP Rune" add_name="(720-hour)">
+	<etcitem id="22061" name="SP Rune" add_name="720-hour">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -1014,7 +1014,7 @@
 			<skill id="26047" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="22062" name="Rune of Crystal" add_name="(24-hour)">
+	<etcitem id="22062" name="Rune of Crystal" add_name="24-hour">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -1030,7 +1030,7 @@
 			<skill id="26048" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="22063" name="Rune of Crystal" add_name="(168-hour)">
+	<etcitem id="22063" name="Rune of Crystal" add_name="168-hour">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -1046,7 +1046,7 @@
 			<skill id="26048" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="22064" name="Rune of Crystal" add_name="(336-hour)">
+	<etcitem id="22064" name="Rune of Crystal" add_name="336-hour">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -1062,7 +1062,7 @@
 			<skill id="26048" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="22065" name="Rune of Crystal" add_name="(720-hour)">
+	<etcitem id="22065" name="Rune of Crystal" add_name="720-hour">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

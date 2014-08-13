@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="20109" name="Sword of Revolution - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20109" name="Sword of Revolution (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -36,7 +36,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20110" name="Titan Sword - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20110" name="Lesser Giant's Sword (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -71,7 +71,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20111" name="Maingauche - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20111" name="Maingauche (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -107,7 +107,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20112" name="Tarbar - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20112" name="Tarbar (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -143,7 +143,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20113" name="Titan Hammer - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20113" name="Lesser Giant's Hammer (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -179,7 +179,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20114" name="Priest Mace - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20114" name="Priest Mace (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="D"/>
@@ -216,7 +216,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20115" name="Goat Head Staff - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20115" name="Goat Head Staff (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="D"/>
@@ -253,7 +253,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20116" name="Bich'Hwa - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20116" name="Bich'Hwa (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -289,7 +289,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20117" name="Strengthened Long Bow - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20117" name="Reinforced Longbow (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="atk_reuse" value="820"/>
 		<set name="crystal_type" value="D"/>
@@ -327,7 +327,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20118" name="Winged Spear - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20118" name="Winged Spear (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -364,7 +364,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20119" name="Artisan's Sword*Artisan's Sword - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20119" name="Artisan's Sword*Artisan's Sword (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -399,7 +399,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20120" name="Epee - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20120" name="Epee (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -436,7 +436,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20121" name="Katzbalger - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20121" name="Katzbalger (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -472,7 +472,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20122" name="Arm Breaker - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20122" name="Arm Breaker (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_type" value="D"/>
@@ -509,7 +509,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20123" name="Samurai Longsword - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20123" name="Samurai Long Sword (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -544,7 +544,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20124" name="Berserker Blade - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20124" name="Berserker Blade (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -579,7 +579,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20125" name="Crystal Dagger - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20125" name="Crystal Dagger (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -615,7 +615,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20126" name="Yaksa Mace - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20126" name="Yaksa Mace (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -651,7 +651,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20127" name="Dwarven Hammer - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20127" name="Dwarven Hammer (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -687,7 +687,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20128" name="Ecliptic Axe - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20128" name="Ecliptic Axe (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="C"/>
@@ -724,7 +724,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20129" name="Demon's Staff - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20129" name="Demon's Staff (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="C"/>
@@ -761,7 +761,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20130" name="Great Pata - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20130" name="Great Pata (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -797,7 +797,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20131" name="Eminence Bow - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20131" name="Eminence Bow (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="atk_reuse" value="1500"/>
 		<set name="crystal_type" value="C"/>
@@ -835,7 +835,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20132" name="Orcish Poleaxe - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20132" name="Orcish Poleaxe (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -872,7 +872,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20133" name="Katana*Katana - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20133" name="Katana*Katana (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -908,7 +908,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20134" name="Admiral's Estoc - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20134" name="Admiral's Estoc (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -945,7 +945,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20135" name="Saber Tooth - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20135" name="Saber Tooth (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -981,7 +981,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20136" name="Sharpshooter - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20136" name="Sharpshooter (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_type" value="C"/>
@@ -1018,7 +1018,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20137" name="Sword of Damascus - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20137" name="Damascus Sword (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -1053,7 +1053,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20138" name="Guardian Sword - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20138" name="Guardian's Sword (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -1088,7 +1088,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20139" name="Demon's Dagger - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20139" name="Demon's Dagger (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -1124,7 +1124,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20140" name="Art of Battle Axe - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20140" name="Art of Battle Axe (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -1160,7 +1160,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20141" name="Star Buster - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20141" name="Star Buster (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -1196,7 +1196,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20142" name="Kaim Vanul's Bones - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20142" name="Kaim Vanul's Bones (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="B"/>
@@ -1233,7 +1233,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20143" name="Staff of Evil Spirits - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20143" name="Staff of Evil Spirits (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="B"/>
@@ -1270,7 +1270,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20144" name="Bellion Cestus - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20144" name="Bellion Cestus (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -1306,7 +1306,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20145" name="Bow of Peril - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20145" name="Bow of Peril (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="atk_reuse" value="1500"/>
 		<set name="crystal_type" value="B"/>
@@ -1344,7 +1344,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20146" name="Lance - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20146" name="Lance (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -1381,7 +1381,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20147" name="Samurai Long Sword*Samurai Long Sword - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20147" name="Samurai Long Sword*Samurai Long Sword (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -1417,7 +1417,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20148" name="Colichemarde - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20148" name="Colichemarde (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -1454,7 +1454,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20149" name="Dismantler - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20149" name="Dismantler (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -1490,7 +1490,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20150" name="Hell Hound - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20150" name="Hell Hound (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_type" value="B"/>
@@ -1527,7 +1527,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20151" name="Dark Legion - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20151" name="Dark Legion's Edge (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -1563,7 +1563,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20152" name="Dragon Slayer - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20152" name="Dragon Slayer (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -1599,7 +1599,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20153" name="Soul Separator - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20153" name="Soul Separator (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -1636,7 +1636,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20154" name="Elysian - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20154" name="Elysian (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -1673,7 +1673,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20155" name="Doom Crusher - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20155" name="Doom Crusher (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -1710,7 +1710,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20156" name="Flaming Dragon Skull - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20156" name="Flaming Dragon Skull (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="A"/>
@@ -1748,7 +1748,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20157" name="Branch of the Mother Tree - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20157" name="Branch of the Mother Tree (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="A"/>
@@ -1786,7 +1786,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20158" name="Dragon Grinder - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20158" name="Dragon Grinder (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -1823,7 +1823,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20159" name="Soul Bow - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20159" name="Soul Bow (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="atk_reuse" value="820"/>
 		<set name="crystal_type" value="A"/>
@@ -1862,7 +1862,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20160" name="Tallum Glaive - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20160" name="Tallum Glaive (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -1900,7 +1900,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20161" name="Damascus*Damascus - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20161" name="Damascus*Damascus (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -1937,7 +1937,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20162" name="Lacerator - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20162" name="Lacerator (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -1975,7 +1975,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20163" name="Undertaker - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20163" name="Undertaker (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -2012,7 +2012,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20164" name="Reaper - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20164" name="Reaper (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_type" value="A"/>
@@ -2050,7 +2050,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20165" name="Forgotten Blade - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20165" name="Forgotten Blade (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
@@ -2086,7 +2086,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20166" name="Heaven's Divider - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20166" name="Heaven's Divider (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
@@ -2122,7 +2122,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20167" name="Angel Slayer - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20167" name="Angel Slayer (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
@@ -2159,7 +2159,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20168" name="Basalt Battlehammer - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20168" name="Basalt Battlehammer (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
@@ -2196,7 +2196,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20169" name="Dragon Hunter Axe - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20169" name="Dragon Hunter Axe (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
@@ -2233,7 +2233,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20170" name="Arcana Mace - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20170" name="Arcana Mace (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="S"/>
@@ -2271,7 +2271,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20171" name="Imperial Staff - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20171" name="Imperial Staff (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="S"/>
@@ -2309,7 +2309,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20172" name="Demon Splinter - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20172" name="Demon Splinter (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
@@ -2346,7 +2346,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20173" name="Draconic Bow - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20173" name="Draconic Bow (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="atk_reuse" value="1500"/>
 		<set name="crystal_type" value="S"/>
@@ -2385,7 +2385,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20174" name="Saint Spear - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20174" name="Saint Spear (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
@@ -2423,7 +2423,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20175" name="Tallum Blade*Dark Legion - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20175" name="Tallum Blade*Dark Legion's Edge (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
@@ -2460,7 +2460,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20176" name="Laevateinn - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20176" name="Laevateinn (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
@@ -2498,7 +2498,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20177" name="Gram - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20177" name="Gram (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
@@ -2535,7 +2535,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20178" name="Sarnga - Event" add_name="4 Hour Expiration Period">
+	<weapon id="20178" name="Sarunga (Event)" add_name="4-hour">
 		<set name="enchantable" value="false"/>
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_type" value="S"/>

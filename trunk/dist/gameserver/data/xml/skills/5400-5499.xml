@@ -27,7 +27,7 @@
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
 	</skill>
-	<skill id="5402" levels="1" name="Presentation - Balor 2">
+	<skill id="5402" levels="1" name="Presentation - Baylor 2">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="500"/>
 		<set name="magicLevel" val="85"/>
@@ -36,7 +36,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5403" levels="1" name="Presentation - Balor 3">
+	<skill id="5403" levels="1" name="Presentation - Baylor 3">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="500"/>
 		<set name="magicLevel" val="85"/>
@@ -45,7 +45,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5404" levels="1" name="Presentation - Balor 4">
+	<skill id="5404" levels="1" name="Presentation - Baylor 4">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="500"/>
 		<set name="magicLevel" val="85"/>
@@ -102,7 +102,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5410" levels="1" name="Presentation - Balor 10">
+	<skill id="5410" levels="1" name="Presentation - Baylor 10">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="hitTime" val="17000"/>
@@ -110,7 +110,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5411" levels="1" name="Presentation - Balor 11">
+	<skill id="5411" levels="1" name="Presentation - Baylor 11">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="castRange" val="600"/>
@@ -119,7 +119,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5412" levels="1" name="Presentation - Balor 12">
+	<skill id="5412" levels="1" name="Presentation - Baylor 12">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="1000"/>
 		<set name="magicLevel" val="85"/>
@@ -129,7 +129,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5413" levels="1" name="Performing Agathion - Beast Farm">
+	<skill id="5413" levels="1" name="Agathion Cute Trick - Beast Farm">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="power" val="150"/>
@@ -141,7 +141,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 	</skill>
-	<skill id="5414" levels="1" name="Performing Agathion - Rainbow Clan Hall">
+	<skill id="5414" levels="1" name="Agathion Cute Trick - Rainbow Clan Hall">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="power" val="150"/>
@@ -153,7 +153,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 	</skill>
-	<skill id="5415" levels="1" name="Performing Agathion - Castle">
+	<skill id="5415" levels="1" name="Agathion Cute Trick - Castle">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="power" val="150"/>
@@ -173,7 +173,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5417" levels="1" name="Invincible">
+	<skill id="5417" levels="1" name="Invincibility">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -181,7 +181,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="cancelable" val="false"/>
 	</skill>
-	<skill id="5418" levels="1" name="Invincible">
+	<skill id="5418" levels="1" name="Invincibility">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -202,7 +202,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5420" levels="1" name="Invincible">
+	<skill id="5420" levels="1" name="Invincibility">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -345,7 +345,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5431" levels="1" name="Slow">
+	<skill id="5431" levels="1" name="Decrease Speed">
 		<set name="levelModifier" val="2"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="8000"/>
@@ -477,7 +477,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5441" levels="1" name="Mirror Image">
+	<skill id="5441" levels="1" name="Incarnation">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
 		<set name="hitTime" val="3000"/>
@@ -624,7 +624,7 @@
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0" displayId="1482" displayLevel="1"/>
 		</for>
 	</skill>
-	<skill id="5450" levels="7" name="Tin Skin">
+	<skill id="5450" levels="7" name="Thin Skin">
 		<table name="#dmg">30 60 90 150 250 350</table>
 		<table name="#magicLevel">46 52 58 62 66 70 74</table>
 		<set name="levelModifier" val="1"/>
@@ -721,7 +721,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5457" levels="1" name="Complete Recovery">
+	<skill id="5457" levels="1" name="Full Recovery">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="99"/>
@@ -730,7 +730,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5458" levels="1" name="Performing Agathion - Fortress">
+	<skill id="5458" levels="1" name="Agathion Cute Trick - Fortress">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -785,28 +785,28 @@
 		<set name="element" val="fire"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5462" levels="1" name="Fire Attacks">
+	<skill id="5462" levels="1" name="Fire Attack">
 		<set name="icon" val="icon.skill4279_new"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="5463" levels="1" name="Water Attacks">
+	<skill id="5463" levels="1" name="Water Attack">
 		<set name="icon" val="icon.skill4280_new"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="5464" levels="1" name="Wind Attacks">
+	<skill id="5464" levels="1" name="Wind Attack">
 		<set name="icon" val="icon.skill4281_new"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="5465" levels="1" name="Earth Attacks">
+	<skill id="5465" levels="1" name="Earth Attack">
 		<set name="icon" val="icon.skill4282_new"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -820,7 +820,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="5467" levels="1" name="Dark Attacks">
+	<skill id="5467" levels="1" name="Dark Attack">
 		<set name="icon" val="icon.skill4336_new"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -847,70 +847,70 @@
 		<set name="element" val="fire"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5469" levels="1" name="Raid Boss - Level 22">
+	<skill id="5469" levels="1" name="Raid Boss (Lv. 22)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="5470" levels="1" name="Raid Boss - Level 81">
+	<skill id="5470" levels="1" name="Raid Boss (Lv. 81)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="5471" levels="1" name="Raid Boss - Level 82">
+	<skill id="5471" levels="1" name="Raid Boss (Lv. 82)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="5472" levels="1" name="Raid Boss - Level 83">
+	<skill id="5472" levels="1" name="Raid Boss (Lv. 83)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="5473" levels="1" name="Raid Boss - Level 81">
+	<skill id="5473" levels="1" name="Raid Boss (Lv. 81)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="5474" levels="1" name="Raid Boss - Level 81">
+	<skill id="5474" levels="1" name="Raid Boss (Lv. 81)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="5475" levels="1" name="Raid Boss - Level 83">
+	<skill id="5475" levels="1" name="Raid Boss (Lv. 83)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="5476" levels="1" name="Raid Boss - Level 83">
+	<skill id="5476" levels="1" name="Raid Boss (Lv. 83)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="5477" levels="1" name="Raid Boss - Level 83">
+	<skill id="5477" levels="1" name="Raid Boss (Lv. 83)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="5478" levels="1" name="Raid Boss - Level 83">
+	<skill id="5478" levels="1" name="Raid Boss (Lv. 83)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -927,7 +927,7 @@
 			<add order="0x40" stat="paralyzeResist" val="95"/>
 		</for>
 	</skill>
-	<skill id="5480" levels="1" name="Balor Invincible Removal">
+	<skill id="5480" levels="1" name="Cancel Baylor Invincibility">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
@@ -937,13 +937,13 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5481" levels="1" name="Transform Penalty">
+	<skill id="5481" levels="1" name="Transformation Penalty">
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5482" levels="1" name="Transform Penalty">
+	<skill id="5482" levels="1" name="Transformation Penalty">
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>

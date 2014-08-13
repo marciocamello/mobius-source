@@ -57,7 +57,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="32322" name="Basic Talisman - P. Def.">
+	<armor id="32322" name="Basic Talisman - M. Def.">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -71,7 +71,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="32323" name="Basic Talisman - M. Def.">
+	<armor id="32323" name="Basic Talisman - M. Atk.">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -119,7 +119,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="32340" name="Fantasy Hard Leather Shirt" add_name="Not in Use">
+	<armor id="32340" name="Fantasy Durable Leather Shirt" add_name="Not in Use">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.armor_t30_u_i00"/>
 		<set name="type" value="LIGHT"/>
@@ -136,7 +136,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="32341" name="Fantasy Hard Leather Gaiters" add_name="Not in Use">
+	<armor id="32341" name="Fantasy Durable Leather Gaiters" add_name="Not in Use">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.armor_t30_l_i00"/>
 		<set name="type" value="LIGHT"/>
@@ -215,7 +215,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="32346" name="Fantasy Hard Leather Helmet" add_name="Not in Use">
+	<armor id="32346" name="Fantasy Durable Leather Helmet" add_name="Not in Use">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.armor_leather_helmet_i00"/>
 		<set name="type" value="NONE"/>
@@ -335,7 +335,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32367" name="Fantasy Gauntlet" add_name="Not in Use">
+	<armor id="32367" name="Fantasy Gauntlets" add_name="Not in Use">
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.armor_t10_g_i00"/>
 		<set name="type" value="NONE"/>

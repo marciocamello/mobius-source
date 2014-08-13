@@ -72,7 +72,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="9345" levels="1" name="A Treasure Box">
+	<skill id="9345" levels="1" name="Treasure Chest">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -81,7 +81,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="9346" levels="1" name="Hero Treasure Box">
+	<skill id="9346" levels="1" name="Hero's Treasure Chest">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -90,7 +90,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="9365" levels="2" name="Support of Eva">
+	<skill id="9365" levels="2" name="Power of Eva">
 		<table name="#regHpMp">1.2 1.3</table>
 		<table name="#regCp">1.3 1.5</table>
 		<set name="target" val="TARGET_SELF"/>
@@ -104,32 +104,32 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9367" levels="2" name="Support of Pa'agrio">
+	<skill id="9367" levels="2" name="Power of Pa'agrio">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9369" levels="2" name="Support of Maphr">
+	<skill id="9369" levels="2" name="Power of Maphr">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9371" levels="1" name="Portal of Shyeed">
+	<skill id="9371" levels="1" name="Sayha's Portal">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9372" levels="1" name="Portal of Shyeed">
+	<skill id="9372" levels="1" name="Sayha's Portal">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9373" levels="2" name="Support of Shyeed">
+	<skill id="9373" levels="2" name="Power of Sayha">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9376" levels="1" name="Mentor Guardian's Harmony">
+	<skill id="9376" levels="1" name="Mentor's Knight's Harmony">
 		<table name="#abnormal_time">120000</table>
 		<table name="#mpConsume2">1</table>
 		<table name="#mpConsume1">1</table>
@@ -156,7 +156,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9377" levels="1" name="Mentor's Magician's Harmony">
+	<skill id="9377" levels="1" name="Mentor's Wizard's Harmony">
 		<table name="#abnormal_time">120000</table>
 		<table name="#mpConsume2">1</table>
 		<table name="#mpConsume1">1</table>
@@ -191,7 +191,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9378" levels="1" name="Mentor's Berserker's Harmony">
+	<skill id="9378" levels="1" name="Mentor's Warrior's Harmony">
 		<table name="#abnormal_time">120000</table>
 		<table name="#mpConsume2">1</table>
 		<table name="#mpConsume1">1</table>
@@ -233,7 +233,7 @@
 		<set name="hitTime" val="10000"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 	</skill>
-	<skill id="9399" levels="1" name="Firecracker of Fear">
+	<skill id="9399" levels="1" name="Fearsome Firecracker">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="1500"/>

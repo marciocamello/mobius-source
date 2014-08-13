@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="12000" levels="1" name="Aerore Chain Skill Knock Blow">
+	<skill id="12000" levels="1" name="">
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="2000"/>
 		<set name="mpConsume2" val="40"/>
@@ -79,7 +79,7 @@
 			<set name="operateType" val="OP_ACTIVE"/>
 		</skill>
 	</skill>
-	<skill id="12008" levels="1" name="Orbis's Reflect Shield">
+	<skill id="12008" levels="1" name="Orbis' Reflect Shield">
 		<set name="icon" val="icon.skill3260"/>
 		<set name="castRange" val="150"/>
 		<set name="target" val="TARGET_ONE"/>

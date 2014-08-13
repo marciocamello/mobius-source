@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="34083" name="Player Commendation - Grand Epee (Earth)">
+	<weapon id="34083" name="Player Commendation - Grand Epee (Earth)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_rapier_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="144"/>
@@ -21,7 +21,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34084" name="Player Commendation - Grand Epee (Water)">
+	<weapon id="34084" name="Player Commendation - Grand Epee (Water)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_rapier_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="144"/>
@@ -41,7 +41,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34085" name="Player Commendation - Grand Epee (Wind)">
+	<weapon id="34085" name="Player Commendation - Grand Epee (Wind)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_rapier_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="144"/>
@@ -61,7 +61,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34086" name="Player Commendation - Grand Epee (Fire)">
+	<weapon id="34086" name="Player Commendation - Grand Epee (Fire)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_rapier_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="144"/>
@@ -81,7 +81,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34087" name="Player Commendation - Grand Epee (Holy)">
+	<weapon id="34087" name="Player Commendation - Grand Epee (Holy)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_rapier_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="144"/>
@@ -101,7 +101,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34088" name="Player Commendation - Grand Epee (Dark)">
+	<weapon id="34088" name="Player Commendation - Grand Epee (Dark)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_rapier_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="144"/>
@@ -121,7 +121,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34089" name="Player Commendation - Glaive (Earth)">
+	<weapon id="34089" name="Player Commendation - Glaive (Earth)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_glaive_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="205"/>
@@ -141,7 +141,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34090" name="Player Commendation - Glaive (Water)">
+	<weapon id="34090" name="Player Commendation - Glaive (Water)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_glaive_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="205"/>
@@ -161,7 +161,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34091" name="Player Commendation - Glaive (Wind)">
+	<weapon id="34091" name="Player Commendation - Glaive (Wind)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_glaive_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="205"/>
@@ -181,7 +181,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34092" name="Player Commendation - Glaive (Fire)">
+	<weapon id="34092" name="Player Commendation - Glaive (Fire)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_glaive_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="205"/>
@@ -201,7 +201,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34093" name="Player Commendation - Glaive (Holy)">
+	<weapon id="34093" name="Player Commendation - Glaive (Holy)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_glaive_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="205"/>
@@ -221,7 +221,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34094" name="Player Commendation - Glaive (Dark)">
+	<weapon id="34094" name="Player Commendation - Glaive (Dark)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_glaive_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="205"/>
@@ -241,7 +241,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34095" name="Player Commendation - Mithril Dagger (Earth)">
+	<weapon id="34095" name="Player Commendation - Mithril Dagger (Earth)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_mithril_dagger_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="106"/>
@@ -261,7 +261,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34096" name="Player Commendation - Mithril Dagger (Water)">
+	<weapon id="34096" name="Player Commendation - Mithril Dagger (Water)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_mithril_dagger_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="106"/>
@@ -281,7 +281,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34097" name="Player Commendation - Mithril Dagger (Wind)">
+	<weapon id="34097" name="Player Commendation - Mithril Dagger (Wind)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_mithril_dagger_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="106"/>
@@ -301,7 +301,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34098" name="Player Commendation - Mithril Dagger (Fire)">
+	<weapon id="34098" name="Player Commendation - Mithril Dagger (Fire)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_mithril_dagger_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="106"/>
@@ -321,7 +321,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34099" name="Player Commendation - Mithril Dagger (Holy)">
+	<weapon id="34099" name="Player Commendation - Mithril Dagger (Holy)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_mithril_dagger_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="106"/>

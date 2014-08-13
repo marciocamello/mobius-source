@@ -86,7 +86,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="13010" name="Extra Pass - Kamaloka (Hall of the Abyss)">
+	<etcitem id="13010" name="Extra Pass: Kamaloka (Hall of the Abyss)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -97,7 +97,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="5"/>
 	</etcitem>
-	<etcitem id="13011" name="Extra Pass - Near Kamaloka">
+	<etcitem id="13011" name="Extra Pass: Near Kamaloka">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -108,7 +108,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="5"/>
 	</etcitem>
-	<etcitem id="13012" name="Extra Pass - Kamaloka (Labyrinth of the Abyss)">
+	<etcitem id="13012" name="Extra Pass: Kamaloka (Labyrinth of the Abyss)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -669,7 +669,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="13081" name="Kamaloka Entrance Pass Pack">
+	<etcitem id="13081" name="Entrance Pass: Kamaloka Pack">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -715,7 +715,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="13085" name="Kamaloka Entrance Pass 3-unit Pack">
+	<etcitem id="13085" name="Entrance Pass: Kamaloka 3-unit Pack">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

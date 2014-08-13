@@ -48,7 +48,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for/>
 	</skill>
-	<skill id="8007" levels="1" name="Augment Option - Resistance to Holy">
+	<skill id="8007" levels="1" name="Augment Option - Holy Attack Resistance">
 		<set name="icon" val="icon.skill4416_dwarf"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -56,7 +56,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for/>
 	</skill>
-	<skill id="8008" levels="1" name="Augment Option - Dark Resistance">
+	<skill id="8008" levels="1" name="Augment Option - Dark Attack Resistance">
 		<set name="icon" val="icon.skill4416_dwarf"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -144,7 +144,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for/>
 	</skill>
-	<skill id="8019" levels="1" name="Augment Option - Resistance to Holy">
+	<skill id="8019" levels="1" name="Augment Option - Holy Attack Resistance">
 		<set name="icon" val="icon.skill4416_dwarf"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -152,7 +152,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for/>
 	</skill>
-	<skill id="8020" levels="1" name="Augment Option - Dark Resistance">
+	<skill id="8020" levels="1" name="Augment Option - Dark Attack Resistance">
 		<set name="icon" val="icon.skill4416_dwarf"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -240,7 +240,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for/>
 	</skill>
-	<skill id="8031" levels="1" name="Augment Option - Resistance to Holy">
+	<skill id="8031" levels="1" name="Augment Option - Holy Attack Resistance">
 		<set name="icon" val="icon.skill4416_dwarf"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -248,7 +248,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for/>
 	</skill>
-	<skill id="8032" levels="1" name="Augment Option - Dark Resistance">
+	<skill id="8032" levels="1" name="Augment Option - Dark Attack Resistance">
 		<set name="icon" val="icon.skill4416_dwarf"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -348,7 +348,7 @@
 			<add order="0x40" stat="attackEarth" val="10"/>
 		</for>
 	</skill>
-	<skill id="8043" levels="1" name="Augment Option - Resistance to Holy">
+	<skill id="8043" levels="1" name="Augment Option - Holy Attack Resistance">
 		<set name="icon" val="icon.skill4416_dwarf"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -358,7 +358,7 @@
 			<add order="0x40" stat="defenceHoly" val="10"/>
 		</for>
 	</skill>
-	<skill id="8044" levels="1" name="Augment Option - Dark Resistance">
+	<skill id="8044" levels="1" name="Augment Option - Dark Attack Resistance">
 		<set name="icon" val="icon.skill4416_dwarf"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>

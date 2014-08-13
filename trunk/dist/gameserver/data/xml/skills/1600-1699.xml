@@ -42,7 +42,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="1634" levels="1" name="Whirlwind">
+	<skill id="1634" levels="1" name="Spinning Slasher">
 		<set name="icon" val="icon.skill0036"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -54,7 +54,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="1636" levels="1" name="Change Stone">
+	<skill id="1636" levels="1" name="Petrify">
 		<set name="icon" val="icon.skill1540"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -121,7 +121,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="1647" levels="1" name="50% Immediate Herb of Mana">
+	<skill id="1647" levels="1" name="50% Instant Herb of Mana">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -145,7 +145,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="1651" levels="1" name="Resist Close-Range Weapon">
+	<skill id="1651" levels="1" name="Melee Weapon Resistance">
 		<set name="icon" val="icon.skill4071"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -199,7 +199,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="1660" levels="1" name="Whirlwind">
+	<skill id="1660" levels="1" name="Spinning Slasher">
 		<set name="icon" val="icon.skill0036"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -302,7 +302,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="1677" levels="1" name="Whirlwind">
+	<skill id="1677" levels="1" name="Spinning Slasher">
 		<set name="icon" val="icon.skill0036"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -320,7 +320,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="1680" levels="1" name="Smoke">
+	<skill id="1680" levels="1" name="Smokescreen">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>

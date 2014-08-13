@@ -628,7 +628,7 @@
 		</skills>
 		<set name="icon" value="icon.weapon_saber_i00"/>
 	</etcitem>
-	<etcitem id="31957" name="Unidentified Triple-Edged Jamadhr">
+	<etcitem id="31957" name="Unidentified Triple-edged Jamadhr">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -892,7 +892,7 @@
 		</skills>
 		<set name="icon" value="icon.weapon_cyclone_bow_i00"/>
 	</etcitem>
-	<etcitem id="31981" name="Unidentified Side">
+	<etcitem id="31981" name="Unidentified Scythe">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1024,7 +1024,7 @@
 		</skills>
 		<set name="icon" value="icon.weapon_blink_slasher_i00"/>
 	</etcitem>
-	<etcitem id="31993" name="Unidentified Blast Plate">
+	<etcitem id="31993" name="Unidentified Breastplate">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

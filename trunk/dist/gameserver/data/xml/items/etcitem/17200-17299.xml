@@ -554,7 +554,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="17276" name="Scroll: 5,000,000 SP">
+	<etcitem id="17276" name="Scroll: 500,000 SP">
 		<set name="icon" value="icon.etc_sp_scroll3_i00"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
@@ -566,7 +566,7 @@
 			<skill id="2167" level="8"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17277" name="Scroll: 10,000,000 SP">
+	<etcitem id="17277" name="Scroll: 1,000,000 SP">
 		<set name="icon" value="icon.etc_sp_scroll3_i00"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>

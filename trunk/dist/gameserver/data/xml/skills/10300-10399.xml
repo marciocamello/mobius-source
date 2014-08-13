@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="10300" levels="3" name="The Last Attack">
+	<skill id="10300" levels="3" name="Last Attack">
 		<table name="#targetHp">20</table>
 		<table name="#magicLevel">90 95 99</table>
 		<table name="#activateRate">30 40 50</table>

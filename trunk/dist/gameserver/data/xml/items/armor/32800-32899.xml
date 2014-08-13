@@ -153,7 +153,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32808" name="Sealed Bound Gauntlet of Nightmare">
+	<armor id="32808" name="Sealed Bound Gauntlets of Nightmare">
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5"/>
@@ -172,7 +172,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32809" name="Sealed Bound Majestic Gauntlet">
+	<armor id="32809" name="Sealed Bound Majestic Gauntlets">
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5"/>

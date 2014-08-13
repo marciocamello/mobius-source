@@ -17,7 +17,7 @@
 			<effect abnormal="bleeding" count="10" name="Bleed" stackOrder="10" time="20" val="0"/>
 		</for>
 	</skill>
-	<skill id="5501" levels="1" name="Stuns">
+	<skill id="5501" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill0100"/>
 		<set name="power" val="300"/>
@@ -35,7 +35,7 @@
 			<effect count="1" name="RemoveTarget" stackOrder="-1" stackType="RemoveTarget" time="0" val="0" chance="50" isReflectable="false"/>
 		</for>
 	</skill>
-	<skill id="5502" levels="1" name="Stuns">
+	<skill id="5502" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill0100"/>
 		<set name="power" val="300"/>
@@ -320,7 +320,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="saveVs" val="MEN"/>
 	</skill>
-	<skill id="5524" levels="1" name="Chain Buff - Resistance to Bow and Magic attacks">
+	<skill id="5524" levels="1" name="Chain Buff - Bow/Magic Resistance">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="castRange" val="400"/>
@@ -328,7 +328,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5525" levels="1" name="Chain Buff - Resistance to Melee Attacks">
+	<skill id="5525" levels="1" name="Chain Buff - Melee Resistance">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="castRange" val="400"/>
@@ -375,7 +375,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5529" levels="12" name="Surrender to the Unholy">
+	<skill id="5529" levels="12" name="Surrender to Dark">
 		<table name="#activateRate">40 44 48 52 56 58 60 62 64 66 68 70</table>
 		<table name="#mpConsume2">10 16 23 31 40 49 57 61 64 66 68 68</table>
 		<table name="#mpConsume1">3 4 6 8 10 13 15 16 16 17 17 17</table>
@@ -417,7 +417,7 @@
 		<set name="trait" val="BLEED"/>
 		<set name="saveVs" val="CON"/>
 	</skill>
-	<skill id="5531" levels="1" name="Direction-Beleth Magic Skill 1">
+	<skill id="5531" levels="1" name="Presentation - Beleth Magic Skill 1">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
@@ -428,7 +428,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5532" levels="1" name="Direction-Beleth Summon Skill 1">
+	<skill id="5532" levels="1" name="Presentation - Beleth Summon Skill 1">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
@@ -439,7 +439,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5533" levels="1" name="Direction-Beleth Self-Destruction Skill 1">
+	<skill id="5533" levels="1" name="Presentation - Beleth Self-destruction Skill 1">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
@@ -449,7 +449,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5534" levels="1" name="Direction-Beleth Transformation Skill 1">
+	<skill id="5534" levels="1" name="Presentation - Beleth Transformation Skill 1">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
@@ -458,7 +458,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5535" levels="1" name="Little Angel Cuteness Trick">
+	<skill id="5535" levels="1" name="Little Angel Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -472,7 +472,7 @@
 			<player agathion="16031"/>
 		</cond>
 	</skill>
-	<skill id="5536" levels="1" name="Little Devil Cuteness Trick">
+	<skill id="5536" levels="1" name="Little Devil Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -500,7 +500,7 @@
 			<player agathion="16033"/>
 		</cond>
 	</skill>
-	<skill id="5538" levels="1" name="Little Angel Agathion Special Skill - Firecrackers">
+	<skill id="5538" levels="1" name="Little Angel Agathion Special Skill: Firecrackers">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="1500"/>
@@ -514,7 +514,7 @@
 			<player agathion="16031"/>
 		</cond>
 	</skill>
-	<skill id="5539" levels="1" name="Little Angel Agathion Special Skill - Mysterious Power">
+	<skill id="5539" levels="1" name="Little Angel Agathion Special Skill: Mysterious Power">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="1800000"/>
@@ -532,7 +532,7 @@
 			<effect abnormal="bighead" count="1" name="Buff" stackType="BigHead" time="120" val="0"/>
 		</for>
 	</skill>
-	<skill id="5540" levels="1" name="Little Angel Agathion Special Skill - Blessed Escape">
+	<skill id="5540" levels="1" name="Little Angel Agathion Special Skill: Blessed Escape">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="86400000"/>
@@ -552,7 +552,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5541" levels="1" name="Little Angel Agathion Special Skill - Blessed Resurrection">
+	<skill id="5541" levels="1" name="Little Angel Agathion Special Skill: Blessed Resurrection">
 		<table name="#effectPoint">624</table>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
@@ -579,7 +579,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5542" levels="1" name="Little Devil Agathion Special Skill - Firecrackers">
+	<skill id="5542" levels="1" name="Little Devil Agathion Special Skill: Firecrackers">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="1500"/>
@@ -593,7 +593,7 @@
 			<player agathion="16032"/>
 		</cond>
 	</skill>
-	<skill id="5543" levels="1" name="Little Devil Agathion Special Skill - Mysterious Power">
+	<skill id="5543" levels="1" name="Little Devil Agathion Special Skill: Mysterious Power">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="1800000"/>
@@ -611,7 +611,7 @@
 			<effect abnormal="bighead" count="1" name="Buff" stackType="BigHead" time="120" val="0"/>
 		</for>
 	</skill>
-	<skill id="5544" levels="1" name="Little Devil Agathion Special Skill - Blessed Escape">
+	<skill id="5544" levels="1" name="Little Devil Agathion Special Skill: Blessed Escape">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="86400000"/>
@@ -631,7 +631,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5545" levels="1" name="Little Devil Agathion Special Skill - Blessed Resurrection">
+	<skill id="5545" levels="1" name="Little Devil Agathion Special Skill: Blessed Resurrection">
 		<table name="#effectPoint">624</table>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
@@ -695,7 +695,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5549" levels="1" name="Physical Short-range Weakness">
+	<skill id="5549" levels="1" name="Melee Attack Vulnerability">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="70"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -911,7 +911,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5562" levels="3" name="Spirit of Phoenix">
+	<skill id="5562" levels="3" name="Spirit of the Phoenix">
 		<table name="#defenceUnholy">0 30 30</table>
 		<table name="#defenceFire">0 30 30</table>
 		<table name="#hpEff">1 1 1.3</table>
@@ -969,7 +969,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5564" levels="3" name="Pain of Shillien">
+	<skill id="5564" levels="3" name="Pain of Shilen">
 		<table name="#attackWind">0 20 20</table>
 		<table name="#absorbDam">0 0 8</table>
 		<table name="#levelfit">2 3 3</table>
@@ -996,7 +996,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5565" levels="1" name="Expose Weak Point">
+	<skill id="5565" levels="1" name="Expose Vulnerability">
 		<set name="levelModifier" val="2"/>
 		<set name="icon" val="icon.skill0767"/>
 		<set name="reuseDelay" val="30000"/>
@@ -1016,7 +1016,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5566" levels="1" name="Post of Destruction">
+	<skill id="5566" levels="1" name="Force of Destruction">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill1050"/>
 		<set name="magicLevel" val="81"/>
@@ -1076,7 +1076,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5570" levels="1" name="Excessive Royalty">
+	<skill id="5570" levels="1" name="Excessive Loyalty">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill1497"/>
 		<set name="magicLevel" val="81"/>
@@ -1108,7 +1108,7 @@
 			<effect count="1" name="ManaHeal" time="0" val="73"/>
 		</for>
 	</skill>
-	<skill id="5572" levels="1" name="Warrior Ability - Haste">
+	<skill id="5572" levels="1" name="Warrior Ability: Haste">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill1086"/>
 		<set name="reuseDelay" val="20000"/>
@@ -1125,7 +1125,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5573" levels="1" name="Knight Ability - Defense">
+	<skill id="5573" levels="1" name="Knight Ability: Defense">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0110"/>
 		<set name="reuseDelay" val="20000"/>
@@ -1143,7 +1143,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5574" levels="1" name="Log Ability - Critical Chance">
+	<skill id="5574" levels="1" name="Rogue Ability: Critical Chance">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill1077"/>
 		<set name="reuseDelay" val="20000"/>
@@ -1160,7 +1160,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5575" levels="1" name="Wizard Ability - Mana Steel">
+	<skill id="5575" levels="1" name="Wizard Ability: Mana Steal">
 		<set name="icon" val="icon.skill1398"/>
 		<set name="reuseDelay" val="10000"/>
 		<set name="power" val="10"/>
@@ -1169,7 +1169,7 @@
 		<set name="skillType" val="MANAHEAL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5576" levels="1" name="Enchanter Ability - Barrier">
+	<skill id="5576" levels="1" name="Enchanter Ability: Barrier">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill1418"/>
 		<set name="reuseDelay" val="20000"/>
@@ -1184,7 +1184,7 @@
 			<effect abnormal="invul2" count="1" name="Invulnerable" stackOrder="1" stackType="sub_trigger_defence" time="5" val="0"/>
 		</for>
 	</skill>
-	<skill id="5577" levels="1" name="Healer Ability - Heal">
+	<skill id="5577" levels="1" name="Healer Ability: Heal">
 		<set name="icon" val="icon.skill1011"/>
 		<set name="reuseDelay" val="10000"/>
 		<set name="power" val="180"/>
@@ -1193,7 +1193,7 @@
 		<set name="skillType" val="HEAL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5578" levels="1" name="Summoner Ability - Spirit">
+	<skill id="5578" levels="1" name="Summoner Ability: Spirit">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill1349"/>
 		<set name="reuseDelay" val="20000"/>
@@ -1547,7 +1547,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="saveVs" val="MEN"/>
 	</skill>
-	<skill id="5597" levels="1" name="Invalid Skill cancel">
+	<skill id="5597" levels="1" name="Cancel Invalid Skill">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="95"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -1559,7 +1559,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5598" levels="12" name="Flash Resistance">
+	<skill id="5598" levels="12" name="Petrification Resistance">
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="#magicLevel"/>

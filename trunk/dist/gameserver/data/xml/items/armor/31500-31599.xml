@@ -41,7 +41,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31556" name="Bound Crafted Leather Gloves">
+	<armor id="31556" name="Bound Quality Leather Gloves">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="1"/>
@@ -79,7 +79,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31558" name="Bound Gauntlet">
+	<armor id="31558" name="Bound Gauntlets">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="3"/>
@@ -250,7 +250,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31570" name="Bound Steel Boots">
+	<armor id="31570" name="Bound Iron Boots">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="3"/>
@@ -307,7 +307,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31573" name="Bound Leather Gauntlet">
+	<armor id="31573" name="Bound Leather Gauntlets">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2"/>

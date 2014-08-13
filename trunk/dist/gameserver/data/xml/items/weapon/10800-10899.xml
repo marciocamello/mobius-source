@@ -206,7 +206,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10877" name="Great Axe - Thunder" add_name="Light">
+	<weapon id="10877" name="Great Axe - Thunder" add_name="Light Armor">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -236,7 +236,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10878" name="Sword of Limit*Sword of Limit - Destruction">
+	<weapon id="10878" name="Ultimate Sword*Ultimate Sword - Destruction">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -264,7 +264,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10879" name="Sword of Limit*Sword of Delusion - Destruction">
+	<weapon id="10879" name="Ultimate Sword*Sword of Delusion - Destruction">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -292,7 +292,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10880" name="Sword of Limit*Sword of Nightmare - Destruction">
+	<weapon id="10880" name="Ultimate Sword*Sword of Nightmare - Destruction">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -320,7 +320,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10881" name="Sword of Limit*Tsurugi - Destruction">
+	<weapon id="10881" name="Ultimate Sword*Tsurugi - Destruction">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -467,7 +467,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10886" name="Dark Elven Long Bow - Concentration">
+	<weapon id="10886" name="Dark Elven Longbow - Concentration">
 		<set name="atk_reuse" value="820"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -498,7 +498,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10887" name="Dark Elven Long Bow - Concentration" add_name="Evasion">
+	<weapon id="10887" name="Dark Elven Longbow - Concentration" add_name="Evasion">
 		<set name="atk_reuse" value="820"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -530,7 +530,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10888" name="Dark Elven Long Bow - Concentration" add_name="Critical Bleed">
+	<weapon id="10888" name="Dark Elven Longbow - Concentration" add_name="Critical Bleed">
 		<set name="atk_reuse" value="820"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -564,7 +564,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10889" name="Dark Elven Long Bow - Concentration" add_name="Miser">
+	<weapon id="10889" name="Dark Elven Longbow - Concentration" add_name="Miser">
 		<set name="atk_reuse" value="820"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -800,7 +800,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10897" name="Stormbringer*Samurai Long Sword - Destruction">
+	<weapon id="10897" name="StormBringer*Samurai Long Sword - Destruction">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -828,7 +828,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10898" name="Spell Breaker - Hail">
+	<weapon id="10898" name="Spell Breaker - Tidal Wave">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -857,7 +857,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10899" name="Spell Breaker - Hail" add_name="Acumen">
+	<weapon id="10899" name="Spell Breaker - Tidal Wave" add_name="Acumen">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="10212" name="npc Only (Bow)">
+	<weapon id="10212" name="For NPC (Bow)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.weapon_monster_i00"/>
 		<set name="rnd_dam" value="10"/>

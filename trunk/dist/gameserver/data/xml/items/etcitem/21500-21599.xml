@@ -297,7 +297,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21579" name="Neolithic Crystal - S84">
+	<etcitem id="21579" name="Neolithic Crystal (S84-grade)">
 		<set name="icon" value="BranchSys2.icon.etc_warding_orb_gold_i00"/>
 		<set name="weight" value="20"/>
 		<set name="stackable" value="true"/>

@@ -24,7 +24,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for/>
 	</skill>
-	<skill id="8103" levels="1" name="Augment Option - Resistance to Holy">
+	<skill id="8103" levels="1" name="Augment Option - Holy Attack Resistance">
 		<set name="icon" val="icon.skill4416_dwarf"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -32,7 +32,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for/>
 	</skill>
-	<skill id="8104" levels="1" name="Augment Option - Dark Resistance">
+	<skill id="8104" levels="1" name="Augment Option - Dark Attack Resistance">
 		<set name="icon" val="icon.skill4416_dwarf"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -120,7 +120,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for/>
 	</skill>
-	<skill id="8115" levels="1" name="Augment Option - Resistance to Holy">
+	<skill id="8115" levels="1" name="Augment Option - Holy Attack Resistance">
 		<set name="icon" val="icon.skill4416_dwarf"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -128,7 +128,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for/>
 	</skill>
-	<skill id="8116" levels="1" name="Augment Option - Dark Resistance">
+	<skill id="8116" levels="1" name="Augment Option - Dark Attack Resistance">
 		<set name="icon" val="icon.skill4416_dwarf"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -216,7 +216,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for/>
 	</skill>
-	<skill id="8127" levels="1" name="Augment Option - Resistance to Holy">
+	<skill id="8127" levels="1" name="Augment Option - Holy Attack Resistance">
 		<set name="icon" val="icon.skill4416_dwarf"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -224,7 +224,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for/>
 	</skill>
-	<skill id="8128" levels="1" name="Augment Option - Dark Resistance">
+	<skill id="8128" levels="1" name="Augment Option - Dark Attack Resistance">
 		<set name="icon" val="icon.skill4416_dwarf"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -312,7 +312,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for/>
 	</skill>
-	<skill id="8139" levels="1" name="Augment Option - Resistance to Holy">
+	<skill id="8139" levels="1" name="Augment Option - Holy Attack Resistance">
 		<set name="icon" val="icon.skill4416_dwarf"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -320,7 +320,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for/>
 	</skill>
-	<skill id="8140" levels="1" name="Augment Option - Dark Resistance">
+	<skill id="8140" levels="1" name="Augment Option - Dark Attack Resistance">
 		<set name="icon" val="icon.skill4416_dwarf"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -744,7 +744,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for/>
 	</skill>
-	<skill id="8193" levels="1" name="Nightmare Heavy Armor Set - PVP">
+	<skill id="8193" levels="1" name="Heavy Armor of Nightmare Set - PvP">
 		<set name="icon" val="icon.armor_t80_ul_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -766,7 +766,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8194" levels="1" name="Majestic Heavy Armor Set - PVP">
+	<skill id="8194" levels="1" name="Majestic Plate Heavy Armor Set - PvP">
 		<set name="icon" val="icon.armor_t83_ul_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -788,7 +788,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8195" levels="1" name="Light Armor of Nightmare Set - PVP">
+	<skill id="8195" levels="1" name="Light Armor of Nightmare Set - PvP">
 		<set name="icon" val="icon.armor_t81_ul_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -811,7 +811,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8196" levels="1" name="Light Majestic Leather Armor Set - PVP">
+	<skill id="8196" levels="1" name="Majestic Leather Light Armor Set - PvP">
 		<set name="icon" val="icon.armor_t84_ul_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -836,7 +836,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8197" levels="1" name="Robe of Nightmare Set - PVP">
+	<skill id="8197" levels="1" name="Robe of Nightmare Set - PvP">
 		<set name="icon" val="icon.armor_t82_ul_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -859,7 +859,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8198" levels="1" name="Majestic Robe Set - PVP">
+	<skill id="8198" levels="1" name="Majestic Robe Set - PvP">
 		<set name="icon" val="icon.armor_t85_ul_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -882,7 +882,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8199" levels="1" name="Imperial Crusader Breastplate Heavy Armor Set - PVP">
+	<skill id="8199" levels="1" name="Imperial Crusader Heavy Armor Set - PvP">
 		<set name="icon" val="icon.armor_t88_u_i00"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>

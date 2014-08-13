@@ -2038,7 +2038,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="30057" name="Aldo" title="Warehouse Keeper">
+	<npc id="30057" name="Amidol" title="Warehouse Keeper">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>

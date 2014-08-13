@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="6300" levels="1" name="Self-Destruction">
+	<skill id="6300" levels="1" name="Self-destruction">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="3194"/>
 		<set name="magicLevel" val="85"/>
@@ -27,7 +27,7 @@
 			<effect count="10" name="ManaHealOverTime" time="1" val="60"/>
 		</for>
 	</skill>
-	<skill id="6302" levels="1" name="Cold Air">
+	<skill id="6302" levels="1" name="Icy Air">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill6302"/>
 		<set name="magicLevel" val="84"/>
@@ -53,7 +53,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="sacred"/>
 	</skill>
-	<skill id="6304" levels="1" name="Shock">
+	<skill id="6304" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill0100"/>
 		<set name="coolTime" val="500"/>
@@ -72,7 +72,7 @@
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="3" val="0"/>
 		</for>
 	</skill>
-	<skill id="6305" levels="1" name="Sacred Gnosis">
+	<skill id="6305" levels="1" name="Divine Gnosis">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="500"/>
 		<set name="reuseDelay" val="4000"/>
@@ -185,7 +185,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="sacred"/>
 	</skill>
-	<skill id="6312" levels="1" name="Launch Sacred Sword Energy">
+	<skill id="6312" levels="1" name="Launch Holy Sword Energy">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="500"/>
 		<set name="reuseDelay" val="2000"/>
@@ -221,7 +221,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6314" levels="1" name="Sacred Judgement">
+	<skill id="6314" levels="1" name="Divine Judgment">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="500"/>
@@ -238,7 +238,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="sacred"/>
 	</skill>
-	<skill id="6315" levels="1" name="Sacred Strike">
+	<skill id="6315" levels="1" name="Divine Blow">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="500"/>
 		<set name="reuseDelay" val="3000"/>
@@ -252,7 +252,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="sacred"/>
 	</skill>
-	<skill id="6316" levels="1" name="Accomplish of Authority">
+	<skill id="6316" levels="1" name="Execution of Authority">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="5000"/>
@@ -270,7 +270,7 @@
 			<effect count="1" name="HealPercent" time="0" val="15"/>
 		</for>
 	</skill>
-	<skill id="6317" levels="1" name="Sacred Tacit">
+	<skill id="6317" levels="1" name="Divinity Tacit">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="500"/>
@@ -287,7 +287,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="sacred"/>
 	</skill>
-	<skill id="6318" levels="1" name="Divine Shield Protection">
+	<skill id="6318" levels="1" name="Holy Shield Defense">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1040"/>
 		<set name="reuseDelay" val="10000"/>
@@ -305,7 +305,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6319" levels="1" name="Sacred Magic Protection">
+	<skill id="6319" levels="1" name="Divine Magic Protection">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill6319"/>
 		<set name="reuseDelay" val="10000"/>
@@ -323,7 +323,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6320" levels="1" name="Summon Sacred Magic Force">
+	<skill id="6320" levels="1" name="Summon Holy Magic Circle">
 		<set name="levelModifier" val="2"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill6320"/>
@@ -432,7 +432,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="sacred"/>
 	</skill>
-	<skill id="6327" levels="1" name="Sacred Worship">
+	<skill id="6327" levels="1" name="Divinity Worship">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="500"/>
 		<set name="reuseDelay" val="3000"/>
@@ -463,7 +463,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="sacred"/>
 	</skill>
-	<skill id="6329" levels="1" name="Fighter Strike">
+	<skill id="6329" levels="1" name="Fighter Blow">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="500"/>
 		<set name="reuseDelay" val="3000"/>
@@ -493,7 +493,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6331" levels="1" name="Camp Fire Tired">
+	<skill id="6331" levels="1" name="Campfire Tired">
 		<set name="levelModifier" val="1"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -506,7 +506,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="saveVs" val="MEN"/>
 	</skill>
-	<skill id="6332" levels="1" name="Camp Fire Full">
+	<skill id="6332" levels="1" name="Campfire Full">
 		<set name="levelModifier" val="1"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -538,7 +538,7 @@
 			<effect abnormal="bleeding" count="1" name="Bleed" stackType="Bleed" stackOrder="3" time="3" val="200"/>
 		</for>
 	</skill>
-	<skill id="6334" levels="1" name="Shock">
+	<skill id="6334" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill0100"/>
 		<set name="coolTime" val="500"/>
@@ -618,7 +618,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6339" levels="1" name="Sacred Hammer Attack">
+	<skill id="6339" levels="1" name="Divine Hammer Attack">
 		<set name="levelModifier" val="2"/>
 		<set name="icon" val="icon.skill0096"/>
 		<set name="coolTime" val="500"/>
@@ -639,7 +639,7 @@
 			<effect abnormal="bleeding" count="1" name="Bleed" stackType="Bleed" stackOrder="3" time="3" val="200"/>
 		</for>
 	</skill>
-	<skill id="6340" levels="1" name="Shock">
+	<skill id="6340" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill0100"/>
 		<set name="coolTime" val="500"/>
@@ -758,7 +758,7 @@
 			<effect name="Buff" time="#time" val="0" stackOrder="1" stackType="soa_buff"/>
 		</for>
 	</skill>
-	<skill id="6368" levels="3" name="Maguen Plasma - Cokrakon">
+	<skill id="6368" levels="3" name="Maguen Plasma - Kokracon">
 		<table name="#time">3 10800 10800</table>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill6368_1"/>
@@ -859,7 +859,7 @@
 			<effect count="1" name="DamOverTime" time="300" val="#dam" stackType="Bleed" stackOrder="3" abnormal="bleeding"/>
 		</for>
 	</skill>
-	<skill id="6377" levels="10" name="Assault Boost">
+	<skill id="6377" levels="10" name="Speed Up">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -886,7 +886,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6379" levels="1" name="Blood Spurt">
+	<skill id="6379" levels="1" name="Critical Hit">
 		<set name="levelModifier" val="2"/>
 		<set name="icon" val="icon.skill0096"/>
 		<set name="coolTime" val="500"/>
@@ -1093,7 +1093,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="target" val="TARGET_AURA"/>
 	</skill>
-	<skill id="6389" levels="1" name="Cokrakon Sonic Cage">
+	<skill id="6389" levels="1" name="Kokracon Sonic Cage">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0102"/>
 		<set name="power" val="80"/>
@@ -1112,7 +1112,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6390" levels="1" name="Cokrakon Sonic Explosion">
+	<skill id="6390" levels="1" name="Kokracon Sonic Explosion">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1386"/>
 		<set name="reuseDelay" val="2000"/>
@@ -1133,7 +1133,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6391" levels="1" name="Cokrakon Sonic Slash">
+	<skill id="6391" levels="1" name="Kokracon Sonic Slash">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill0100"/>
 		<set name="coolTime" val="500"/>
@@ -1154,7 +1154,7 @@
 			<effect name="Stun" time="5" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun"/>
 		</for>
 	</skill>
-	<skill id="6392" levels="1" name="Cokrakon Sonic Shot">
+	<skill id="6392" levels="1" name="Kokracon Sonic Shot">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill1104"/>
 		<set name="coolTime" val="500"/>
@@ -1177,7 +1177,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6393" levels="1" name="Cokrakon Sonic Beam">
+	<skill id="6393" levels="1" name="Kokracon Sonic Beam">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="500"/>
 		<set name="reuseDelay" val="1000"/>
@@ -1192,7 +1192,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6394" levels="1" name="Cokrakon Sonic Bomb">
+	<skill id="6394" levels="1" name="Kokracon Sonic Bomb">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="500"/>
 		<set name="reuseDelay" val="1000"/>
@@ -1206,7 +1206,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6395" levels="1" name="Cokrakon Dreadful Clow">
+	<skill id="6395" levels="1" name="Kokracon Dreadful Clow">
 		<set name="levelModifier" val="2"/>
 		<set name="icon" val="icon.skill0096"/>
 		<set name="coolTime" val="500"/>
@@ -1228,7 +1228,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6396" levels="1" name="Cokrakon Panic">
+	<skill id="6396" levels="1" name="Kokracon Panic">
 		<set name="levelModifier" val="1"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1169"/>
@@ -1250,7 +1250,7 @@
 			<effect count="3" name="Fear" time="6" val="0"/>
 		</for>
 	</skill>
-	<skill id="6397" levels="1" name="Cokrakon Staggering Blow">
+	<skill id="6397" levels="1" name="Kokracon Staggering Blow">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill0100"/>
 		<set name="coolTime" val="500"/>
@@ -1270,7 +1270,7 @@
 			<effect name="Stun" time="3" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun"/>
 		</for>
 	</skill>
-	<skill id="6398" levels="1" name="Cokrakon Sonic Shout">
+	<skill id="6398" levels="1" name="Kokracon Sonic Shout">
 		<set name="levelModifier" val="1"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1169"/>
@@ -1292,7 +1292,7 @@
 			<effect count="2" name="Fear" time="6" val="0"/>
 		</for>
 	</skill>
-	<skill id="6399" levels="1" name="Cokrakon Dreadful Piercing">
+	<skill id="6399" levels="1" name="Kokracon Dreadful Piercing">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="500"/>
 		<set name="reuseDelay" val="1000"/>

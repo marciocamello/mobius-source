@@ -128,7 +128,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="16382" name="Shoes String of Sel Mahum">
+	<etcitem id="16382" name="Sel Mahum Shoes String">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

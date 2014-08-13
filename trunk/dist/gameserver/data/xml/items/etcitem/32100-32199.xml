@@ -661,7 +661,7 @@
 		</skills>
 		<set name="icon" value="icon.weapon_glaive_i00"/>
 	</etcitem>
-	<etcitem id="32160" name="Unidentified Sword of Limit">
+	<etcitem id="32160" name="Unidentified Ultimate Sword">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -771,7 +771,7 @@
 		</skills>
 		<set name="icon" value="icon.weapon_noble_elven_bow_i00"/>
 	</etcitem>
-	<etcitem id="32170" name="Unidentified Crafted Leather Gloves">
+	<etcitem id="32170" name="Unidentified Quality Leather Gloves">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

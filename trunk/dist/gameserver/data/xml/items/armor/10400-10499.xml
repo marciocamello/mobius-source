@@ -120,7 +120,7 @@
 			<skill id="3435" level="1"/>
 		</skills>
 	</armor>
-	<armor id="10423" name="Blue Talisman - Self-Destruction">
+	<armor id="10423" name="Blue Talisman - Self-destruction">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -154,7 +154,7 @@
 			<skill id="3438" level="1"/>
 		</skills>
 	</armor>
-	<armor id="10470" name="Shadow Item - Red Crescent">
+	<armor id="10470" name="Shadow Item: Red Crescent">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -174,7 +174,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="10471" name="Shadow Item - Ring of Devotion">
+	<armor id="10471" name="Shadow Item: Ring of Devotion">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -194,7 +194,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="10472" name="Shadow Item - Necklace of Devotion">
+	<armor id="10472" name="Shadow Item: Necklace of Devotion">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -213,7 +213,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="10487" name="Dynasty Jeweled Leather Armor" add_name="Force Master">
+	<armor id="10487" name="Dynasty Jewel Leather Armor" add_name="Force Master">
 		<set name="crystal_count" value="1212"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -234,7 +234,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="10488" name="Dynasty Jeweled Leather Armor" add_name="Weapon Master">
+	<armor id="10488" name="Dynasty Jewel Leather Armor" add_name="Weapon Master">
 		<set name="crystal_count" value="1212"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -255,7 +255,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="10489" name="Dynasty Jeweled Leather Armor" add_name="Enchanter">
+	<armor id="10489" name="Dynasty Jewel Leather Armor" add_name="Enchanter">
 		<set name="crystal_count" value="1212"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -276,7 +276,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="10490" name="Dynasty Jeweled Leather Armor" add_name="Summoner">
+	<armor id="10490" name="Dynasty Jewel Leather Armor" add_name="Summoner">
 		<set name="crystal_count" value="1212"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>

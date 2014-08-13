@@ -205,7 +205,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31008" name="Bound StormbRinger*Katana">
+	<weapon id="31008" name="Bound StormBringer*Katana">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -230,7 +230,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="31009" name="Bound StormbRinger*Spirit Sword">
+	<weapon id="31009" name="Bound StormBringer*Spirit Sword">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -255,7 +255,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="31010" name="Bound StormbRinger*StormbRinger">
+	<weapon id="31010" name="Bound StormBringer*StormBringer">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -280,7 +280,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="31011" name="Bound StormbRinger*Shamshir">
+	<weapon id="31011" name="Bound StormBringer*Shamshir">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -305,7 +305,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="31012" name="Bound StormbRinger*Raid Sword">
+	<weapon id="31012" name="Bound StormBringer*Raid Sword">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -330,7 +330,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="31013" name="Bound StormbRinger">
+	<weapon id="31013" name="Bound StormBringer">
 		<set name="icon" value="icon.weapon_stormbringer_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -355,7 +355,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31014" name="Bound StormbRinger" add_name="Critical Anger">
+	<weapon id="31014" name="Bound StormBringer" add_name="Critical Anger">
 		<set name="icon" value="icon.weapon_stormbringer_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -380,7 +380,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31015" name="Bound StormbRinger" add_name="Focus">
+	<weapon id="31015" name="Bound StormBringer" add_name="Focus">
 		<set name="icon" value="icon.weapon_stormbringer_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -408,7 +408,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31016" name="Bound StormbRinger" add_name="Light">
+	<weapon id="31016" name="Bound StormBringer" add_name="Light Armor">
 		<set name="icon" value="icon.weapon_stormbringer_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -514,7 +514,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31020" name="Bound Star Buster" add_name="Rsk. Haste Focus">
+	<weapon id="31020" name="Bound Star Buster" add_name="Rsk. Focus">
 		<set name="icon" value="icon.weapon_star_buster_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1023,7 +1023,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="31042" name="Bound Chevalier Rapier" add_name="Critical Drain Damage">
+	<weapon id="31042" name="Bound Chevalier Rapier" add_name="Critical Damage">
 		<set name="icon" value="icon.weapon_soldat_estoc_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1076,7 +1076,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="31044" name="Bound Chevalier Rapier" add_name="Critical Drain Damage">
+	<weapon id="31044" name="Bound Chevalier Rapier" add_name="Critical Damage">
 		<set name="icon" value="icon.weapon_soldat_estoc_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1101,7 +1101,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="31045" name="Bound Chevalier Rapier" add_name="Critical Drain Poison">
+	<weapon id="31045" name="Bound Chevalier Rapier" add_name="Critical Poison">
 		<set name="icon" value="icon.weapon_soldat_estoc_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1182,7 +1182,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="31048" name="Bound Chevalier Rapier" add_name="Critical Drain Drawin">
+	<weapon id="31048" name="Bound Chevalier Rapier" add_name="Critical Drain">
 		<set name="icon" value="icon.weapon_soldat_estoc_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1207,7 +1207,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="31049" name="Bound Chevalier Rapier" add_name="Critical Drain Poison">
+	<weapon id="31049" name="Bound Chevalier Rapier" add_name="Critical Poison">
 		<set name="icon" value="icon.weapon_soldat_estoc_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1313,7 +1313,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="31053" name="Bound Schlager" add_name="Light">
+	<weapon id="31053" name="Bound Schlager" add_name="Light Armor">
 		<set name="icon" value="icon.weapon_schlaeger_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1436,7 +1436,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31077" name="Bound Soldat Estoc" add_name="Light">
+	<weapon id="31077" name="Bound Soldat Estoc" add_name="Light Armor">
 		<set name="icon" value="icon.weapon_soldat_estoc_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="33200" name="Kukuri" title="">
+	<npc id="33200" name="Kukuru" title="">
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -3678,7 +3678,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="33276" name="Margarine" title="">
+	<npc id="33276" name="Madarin" title="">
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>

@@ -1,48 +1,48 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="6900" levels="1" name="84 level Raid Boss">
+	<skill id="6900" levels="1" name="Raid Boss (Lv. 84)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6901" levels="1" name="84 level Raid Boss">
+	<skill id="6901" levels="1" name="Raid Boss (Lv. 84)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6902" levels="1" name="84 level Raid Boss">
+	<skill id="6902" levels="1" name="Raid Boss (Lv. 84)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6903" levels="1" name="84 level Raid Boss">
+	<skill id="6903" levels="1" name="Raid Boss (Lv. 84)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6904" levels="1" name="84 level Raid Boss">
+	<skill id="6904" levels="1" name="Raid Boss (Lv. 84)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6905" levels="1" name="85 level Raid Boss">
+	<skill id="6905" levels="1" name="Raid Boss (Lv. 85)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6906" levels="1" name="85 level Raid Boss">
+	<skill id="6906" levels="1" name="Raid Boss (Lv. 85)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6907" levels="1" name="85 level Raid Boss">
+	<skill id="6907" levels="1" name="Raid Boss (Lv. 85)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -109,7 +109,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6916" levels="1" name="Antharas's Cute Tricks">
+	<skill id="6916" levels="1" name="Antharas' Cute Tricks">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -159,7 +159,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6921" levels="1" name="Penetration Attack">
+	<skill id="6921" levels="1" name="Penetrating Attack">
 		<set name="icon" val="icon.skill0122"/>
 		<set name="reuseDelay" val="30000"/>
 		<set name="magicLevel" val="80"/>

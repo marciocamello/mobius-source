@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="16134" name="Vesper Cutter- Thunder {PvP}">
+	<weapon id="16134" name="Vesper Cutter - Thunder {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -36,7 +36,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16135" name="Vesper Slasher- Gail {PvP}">
+	<weapon id="16135" name="Vesper Slasher - Great Gale {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -108,7 +108,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16137" name="Vesper Shaper - Gail {PvP}">
+	<weapon id="16137" name="Vesper Shaper - Great Gale {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -145,7 +145,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16138" name="Vesper Fighter - Gail {PvP}">
+	<weapon id="16138" name="Vesper Fighter - Great Gale {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -253,7 +253,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16141" name="Vesper Retributer - Gail {PvP}">
+	<weapon id="16141" name="Vesper Retributer - Great Gale {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -327,7 +327,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16143" name="Vesper Singer - Tidal Wave {PvP}">
+	<weapon id="16143" name="Vesper Singer - Hail {PvP}">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
@@ -404,7 +404,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16145" name="Vesper Pincer- Thunder {PvP}">
+	<weapon id="16145" name="Vesper Pincer - Thunder {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -441,7 +441,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16146" name="Vesper Schutze - Clairvoyance {PvP}">
+	<weapon id="16146" name="Vesper Shooter - Clairvoyance {PvP}">
 		<set name="atk_reuse" value="400"/>
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
@@ -479,7 +479,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16147" name="Vesper Nagan - Gail {PvP}">
+	<weapon id="16147" name="Vesper Nagan - Great Gale {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -514,7 +514,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16148" name="Vesper Dual Daggers - Gale">
+	<weapon id="16148" name="Vesper Dual Daggers - Great Gale">
 		<set name="crystal_count" value="8233"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -544,7 +544,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16149" name="Vesper Dual Daggers - Gale {PvP}">
+	<weapon id="16149" name="Vesper Dual Daggers - Great Gale {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -581,7 +581,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16150" name="Vesper Dual Sword - Destruction">
+	<weapon id="16150" name="Vesper Dualsword - Destruction">
 		<set name="crystal_count" value="7050"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -610,7 +610,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16151" name="Vesper Dual Sword - Destruction {PvP}">
+	<weapon id="16151" name="Vesper Dualsword - Destruction {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -710,7 +710,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16154" name="Periel Dual Sword">
+	<weapon id="16154" name="Periel Dualsword">
 		<set name="crystal_count" value="8233"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -738,7 +738,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16155" name="Periel Dual Sword {PvP}">
+	<weapon id="16155" name="Periel Dualsword {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -837,7 +837,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16158" name="Eternal Core Dual Sword">
+	<weapon id="16158" name="Eternal Core Dualsword">
 		<set name="crystal_count" value="9872"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -865,7 +865,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16159" name="Eternal Core Dual Sword {PvP}">
+	<weapon id="16159" name="Eternal Core Dualsword {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -899,7 +899,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16179" name="Vesper Cutter- Thunder {PvP}">
+	<weapon id="16179" name="Vesper Cutter - Thunder {PvP}" add_name="Haste">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -934,7 +934,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16180" name="Vesper Cutter- Thunder {PvP}">
+	<weapon id="16180" name="Vesper Cutter - Thunder {PvP}" add_name="Health">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -969,7 +969,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16181" name="Vesper Cutter- Thunder {PvP}">
+	<weapon id="16181" name="Vesper Cutter - Thunder {PvP}" add_name="Focus">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1004,7 +1004,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16182" name="Vesper Slasher- Gail {PvP}">
+	<weapon id="16182" name="Vesper Slasher - Great Gale {PvP}" add_name="Haste">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1039,7 +1039,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16183" name="Vesper Slasher- Gail {PvP}">
+	<weapon id="16183" name="Vesper Slasher - Great Gale {PvP}" add_name="Health">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1074,7 +1074,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16184" name="Vesper Slasher- Gail {PvP}">
+	<weapon id="16184" name="Vesper Slasher - Great Gale {PvP}" add_name="Focus">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1109,7 +1109,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16185" name="Vesper Buster - Cleverness {PvP}">
+	<weapon id="16185" name="Vesper Buster - Cleverness {PvP}" add_name="Mana Up">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
@@ -1146,7 +1146,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16186" name="Vesper Buster - Cleverness {PvP}">
+	<weapon id="16186" name="Vesper Buster - Cleverness {PvP}" add_name="Acumen">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
@@ -1183,7 +1183,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16187" name="Vesper Buster - Cleverness {PvP}">
+	<weapon id="16187" name="Vesper Buster - Cleverness {PvP}" add_name="Magic Hold">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
@@ -1222,7 +1222,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16188" name="Vesper Shaper - Gail {PvP}">
+	<weapon id="16188" name="Vesper Shaper - Great Gale {PvP}" add_name="Critical Damage">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1259,7 +1259,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16189" name="Vesper Shaper - Gail {PvP}">
+	<weapon id="16189" name="Vesper Shaper - Great Gale {PvP}" add_name="HP Drain">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1296,7 +1296,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16190" name="Vesper Shaper - Gail {PvP}">
+	<weapon id="16190" name="Vesper Shaper - Great Gale {PvP}" add_name="Haste">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1333,7 +1333,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16191" name="Vesper Fighter - Gail {PvP}">
+	<weapon id="16191" name="Vesper Fighter - Great Gale {PvP}" add_name="Focus">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1370,7 +1370,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16192" name="Vesper Fighter - Gail {PvP}">
+	<weapon id="16192" name="Vesper Fighter - Great Gale {PvP}" add_name="Health">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1407,7 +1407,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16193" name="Vesper Fighter - Gail {PvP}">
+	<weapon id="16193" name="Vesper Fighter - Great Gale {PvP}" add_name="Critical Stun">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1443,7 +1443,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16194" name="Vesper Stormer - Thunder {PvP}">
+	<weapon id="16194" name="Vesper Stormer - Thunder {PvP}" add_name="Health">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1479,7 +1479,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16195" name="Vesper Stormer - Thunder {PvP}">
+	<weapon id="16195" name="Vesper Stormer - Thunder {PvP}" add_name="Guidance">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1515,7 +1515,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16196" name="Vesper Stormer - Thunder {PvP}">
+	<weapon id="16196" name="Vesper Stormer - Thunder {PvP}" add_name="Haste">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1551,7 +1551,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16197" name="Vesper Avenger - Landslide {PvP}">
+	<weapon id="16197" name="Vesper Avenger - Landslide {PvP}" add_name="HP Drain">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1587,7 +1587,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16198" name="Vesper Avenger - Landslide {PvP}">
+	<weapon id="16198" name="Vesper Avenger - Landslide {PvP}" add_name="Health">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1623,7 +1623,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16199" name="Vesper Avenger - Landslide {PvP}">
+	<weapon id="16199" name="Vesper Avenger - Landslide {PvP}" add_name="HP Regeneration">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>

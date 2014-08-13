@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="30411" name="R Talisman - Knock back resistance {passive}">
+	<armor id="30411" name="Talisman (R-grade) - Knock back resistance (Passive)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -15,7 +15,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="30412" name="R Talisman - Knock down resistance {passive}">
+	<armor id="30412" name="Talisman (R-grade) - Knock down resistance (Passive)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -29,7 +29,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="30413" name="R Talisman - Binding resistance {passive}">
+	<armor id="30413" name="Talisman (R-grade) - Binding resistance (Passive)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -43,7 +43,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="30414" name="R Talisman - Pulling resistance {passive}">
+	<armor id="30414" name="Talisman (R-grade) - Pulling Resistance (Passive)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -57,7 +57,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="30415" name="R Talisman - Expulsion Resistance {passive}">
+	<armor id="30415" name="Talisman (R-grade) - Banishment Resistance (Passive)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -71,7 +71,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="30416" name="R Talisman - Mutation resistance {passive}">
+	<armor id="30416" name="Talisman (R-grade) - Mutation Resistance (Passive)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -85,7 +85,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="30417" name="R Talisman - Knock back resistance {passive}">
+	<armor id="30417" name="Talisman (R-grade) - Knock back resistance (Passive)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -99,7 +99,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="30418" name="R Talisman - Knock down resistance {passive}">
+	<armor id="30418" name="Talisman (R-grade) - Knock down resistance (Passive)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -113,7 +113,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="30419" name="R Talisman - Binding resistance {passive}">
+	<armor id="30419" name="Talisman (R-grade) - Binding resistance (Passive)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -127,7 +127,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="30420" name="R Talisman - Pulling resistance {passive}">
+	<armor id="30420" name="Talisman (R-grade) - Pulling Resistance (Passive)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -141,7 +141,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="30421" name="R Talisman - Expulsion Resistance {passive}">
+	<armor id="30421" name="Talisman (R-grade) - Banishment Resistance (Passive)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -155,7 +155,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="30422" name="R Talisman - Mutation resistance {passive}">
+	<armor id="30422" name="Talisman (R-grade) - Mutation Resistance (Passive)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>

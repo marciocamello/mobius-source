@@ -212,7 +212,7 @@
 			<item id="9602" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2490" skill_level="1" name="Magic Defense Toolkit for beginners">
+	<restoration skill_id="2490" skill_level="1" name="M. Def. Toolkit (Novice)">
 		<group chance="100.0">
 			<item id="10470" min_count="2" max_count="2"/>
 			<item id="10471" min_count="2" max_count="2"/>

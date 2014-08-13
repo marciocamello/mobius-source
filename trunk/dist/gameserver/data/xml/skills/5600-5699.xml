@@ -13,7 +13,7 @@
 			<effect count="1" name="DamOverTime" time="0" val="500"/>
 		</for>
 	</skill>
-	<skill id="5601" levels="12" name="Short-Range Physical Attack Resistance">
+	<skill id="5601" levels="12" name="Melee Attack Resistance">
 		<table name="#vuln">5 10 15 20 25 30 35 40 45 55 70 100</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="icon" val="icon.skill5601"/>
@@ -62,7 +62,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5604" levels="1" name="Blunt Mastery">
+	<skill id="5604" levels="1" name="Sword/Blunt Weapon Mastery">
 		<set name="icon" val="icon.skill0217"/>
 		<set name="reuseDelay" val="8000"/>
 		<set name="magicLevel" val="40"/>
@@ -171,7 +171,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5614" levels="1" name="Raid Boss - Level 87">
+	<skill id="5614" levels="1" name="Raid Boss (Lv. 87)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -183,7 +183,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5615" levels="1" name="Raid Boss - Level 87">
+	<skill id="5615" levels="1" name="Raid Boss (Lv. 87)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -195,7 +195,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5616" levels="1" name="Raid Boss - Level 87">
+	<skill id="5616" levels="1" name="Raid Boss (Lv. 87)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -207,7 +207,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5617" levels="1" name="Raid Boss - Level 87">
+	<skill id="5617" levels="1" name="Raid Boss (Lv. 87)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -219,7 +219,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5618" levels="1" name="Raid Boss - Level 87">
+	<skill id="5618" levels="1" name="Raid Boss (Lv. 87)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -240,7 +240,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5620" levels="12" name="Short-Range Physical Attack Weakness">
+	<skill id="5620" levels="12" name="Melee Attack Vulnerability">
 		<table name="#Rcpt">20</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="icon" val="icon.skill5620"/>
@@ -266,7 +266,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5622" levels="7" name="Double Skill Attack">
+	<skill id="5622" levels="7" name="8 Times Skill Attack">
 		<table name="#mod">2 3 4 5 6 7 8</table>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -277,7 +277,7 @@
 			<mul order="0x30" stat="skillPower" val="#mod"/>
 		</for>
 	</skill>
-	<skill id="5623" levels="1" name="Weakened Magic Force">
+	<skill id="5623" levels="1" name="Weakened Magic Circle">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0122"/>
 		<set name="magicLevel" val="1"/>
@@ -358,7 +358,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5629" levels="1" name="Adventurer's Bless the Body">
+	<skill id="5629" levels="1" name="Adventurer's Blessed Body">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1045"/>
 		<set name="magicLevel" val="60"/>
@@ -418,7 +418,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5633" levels="1" name="Adventurer's Bless the Soul">
+	<skill id="5633" levels="1" name="Adventurer's Blessed Soul">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1048"/>
 		<set name="magicLevel" val="60"/>
@@ -493,7 +493,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5638" levels="4" name="Feline Queen - Bless the Body">
+	<skill id="5638" levels="4" name="Feline Queen - Blessed Body">
 		<table name="#Tab-maxHp">1.2 1.25 1.3 1.35</table>
 		<table name="#abnormal_lv">3 4 5 6</table>
 		<table name="#mpConsume2">38 41 48 53</table>
@@ -517,7 +517,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5639" levels="4" name="Feline Queen - Bless the Soul">
+	<skill id="5639" levels="4" name="Feline Queen - Blessed Soul">
 		<table name="#Tab-maxMp">1.2 1.25 1.3 1.35</table>
 		<table name="#abnormal_lv">3 4 5 6</table>
 		<table name="#mpConsume2">38 41 46 52</table>
@@ -596,7 +596,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5643" levels="1" name="Unicorn Seraphim - Acumen">
+	<skill id="5643" levels="1" name="Seraphim the Unicorn - Acumen">
 		<table name="#Tab-mAtkSpd">1.3</table>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1085"/>
@@ -647,7 +647,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5646" levels="3" name="Unicorn Seraphim - Wild Magic">
+	<skill id="5646" levels="3" name="not_used">
 		<table name="#mCrit">2 3 3</table>
 		<table name="#stack">2 3 3</table>
 		<table name="#mpConsume2">46 52 41</table>
@@ -673,7 +673,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5647" levels="3" name="Unicorn Seraphim - Clarity">
+	<skill id="5647" levels="3" name="Seraphim the Unicorn - Clarity">
 		<table name="#mpConsumePhysical">0.9 0.85 0.8</table>
 		<table name="#mpConsum">0.96 0.93 0.9</table>
 		<table name="#mpDanceConsume">0.9 0.85 0.8</table>
@@ -704,7 +704,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5648" levels="2" name="Unicorn Seraphim - Empower">
+	<skill id="5648" levels="2" name="Seraphim the Unicorn - Empower">
 		<table name="#Tab-mAtk">1.65 1.75</table>
 		<table name="#abnormal_lv">2 3</table>
 		<table name="#mpConsume2">31 38</table>
@@ -1026,7 +1026,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5663" levels="5" name="Resistance to Ancient Sword">
+	<skill id="5663" levels="5" name="Ancient Sword Resistance">
 		<table name="#Tab-ancswordRcpt">10 20 30 40 50</table>
 		<set name="icon" val="icon.skill5663"/>
 		<set name="magicLevel" val="1"/>
@@ -1037,7 +1037,7 @@
 			<sub order="0x40" stat="swordWpnVuln" val="#Tab-ancswordRcpt"/>
 		</for>
 	</skill>
-	<skill id="5664" levels="5" name="Weakness to Ancient Sword">
+	<skill id="5664" levels="5" name="Ancient Sword Vulnerability">
 		<table name="#Tab-ancswordRcpt">10 20 30 40 50</table>
 		<set name="icon" val="icon.skill5664"/>
 		<set name="magicLevel" val="1"/>
@@ -1300,7 +1300,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5684" levels="1" name="PvP Weapon - Attack Chance">
+	<skill id="5684" levels="1" name="PvP Weapon - Attack Rate">
 		<set name="icon" val="icon.skill0005"/>
 		<set name="reuseDelay" val="10000"/>
 		<set name="magicLevel" val="80"/>
@@ -1504,7 +1504,7 @@
 			<effect count="1" name="MuteAll" time="10" val="0"/>
 		</for>
 	</skill>
-	<skill id="5698" levels="37" name="Bless the Blood">
+	<skill id="5698" levels="37" name="Blessed Blood">
 		<table name="#magicLevel">40 48 56 60 64 68 72 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		<table name="#power">217 281 345 377 406 436 470 475 480 485 490 495 500 505 510 515 520 525 530 535 540 545 550 555 560 565 570 575 580 585 590 595 600 605 610 615 620</table>
 		<set name="magicType" val="SPECIAL"/>
@@ -1518,7 +1518,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="useSS" val="false"/>
 	</skill>
-	<skill id="5699" levels="7" name="Decrease P. Def">
+	<skill id="5699" levels="7" name="Decrease P. Def.">
 		<table name="#magicLevel">29 39 49 59 69 78 81</table>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0122"/>

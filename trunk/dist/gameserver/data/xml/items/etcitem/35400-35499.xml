@@ -181,7 +181,7 @@
 		<set name="weight" value="60"/>
 		<set name="icon" value="icon.etc_r991_ring_piece"/>
 	</etcitem>
-	<etcitem id="35420" name="Recipe: Specter Shaper (60%)">
+	<etcitem id="35420" name="Recipe:�Specter Shaper (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -191,7 +191,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1166"/>
 	</etcitem>
-	<etcitem id="35421" name="Recipe: Specter Cutter (60%)">
+	<etcitem id="35421" name="Recipe:�Specter Cutter (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -201,7 +201,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1167"/>
 	</etcitem>
-	<etcitem id="35422" name="Recipe: Specter Slasher (60%)">
+	<etcitem id="35422" name="Recipe:�Specter Slasher (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -211,7 +211,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1168"/>
 	</etcitem>
-	<etcitem id="35423" name="Recipe: Specter Avenger (60%)">
+	<etcitem id="35423" name="Recipe:�Specter Avenger (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -221,7 +221,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1169"/>
 	</etcitem>
-	<etcitem id="35424" name="Recipe: Specter Fighter (60%)">
+	<etcitem id="35424" name="Recipe:�Specter Fighter (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -231,7 +231,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1170"/>
 	</etcitem>
-	<etcitem id="35425" name="Recipe: Specter Stormer (60%)">
+	<etcitem id="35425" name="Recipe:�Specter Stormer (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -241,7 +241,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1171"/>
 	</etcitem>
-	<etcitem id="35426" name="Recipe: Specter Thrower (60%)">
+	<etcitem id="35426" name="Recipe:�Specter Thrower (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -251,7 +251,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1172"/>
 	</etcitem>
-	<etcitem id="35427" name="Recipe: Specter Shooter (60%)">
+	<etcitem id="35427" name="Recipe:�Specter Shooter (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -261,7 +261,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1173"/>
 	</etcitem>
-	<etcitem id="35428" name="Recipe: Specter Buster (60%)">
+	<etcitem id="35428" name="Recipe:�Specter Buster (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -271,7 +271,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1174"/>
 	</etcitem>
-	<etcitem id="35429" name="Recipe: Specter Caster (60%)">
+	<etcitem id="35429" name="Recipe:�Specter Caster (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -281,7 +281,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1175"/>
 	</etcitem>
-	<etcitem id="35430" name="Recipe: Specter Retributer (60%)">
+	<etcitem id="35430" name="Recipe:�Specter Retributer (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -291,7 +291,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1176"/>
 	</etcitem>
-	<etcitem id="35431" name="Recipe: Seraph Helmet (60%)">
+	<etcitem id="35431" name="Recipe:�Seraph Helmet (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -301,7 +301,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1177"/>
 	</etcitem>
-	<etcitem id="35432" name="Recipe: Seraph Breastplate (60%)">
+	<etcitem id="35432" name="Recipe:�Seraph Breastplate (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -311,7 +311,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1178"/>
 	</etcitem>
-	<etcitem id="35433" name="Recipe: Seraph Gaiters (60%)">
+	<etcitem id="35433" name="Recipe:�Seraph Gaiters (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -321,7 +321,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1179"/>
 	</etcitem>
-	<etcitem id="35434" name="Recipe: Seraph Gauntlets (60%)">
+	<etcitem id="35434" name="Recipe:�Seraph Gauntlets (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -331,7 +331,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1180"/>
 	</etcitem>
-	<etcitem id="35435" name="Recipe: Seraph Boots (60%)">
+	<etcitem id="35435" name="Recipe:�Seraph Boots (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -341,7 +341,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1181"/>
 	</etcitem>
-	<etcitem id="35436" name="Recipe: Seraph Shield (60%)">
+	<etcitem id="35436" name="Recipe:�Seraph Shield (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -351,7 +351,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1182"/>
 	</etcitem>
-	<etcitem id="35437" name="Recipe: Seraph Leather Helmet (60%)">
+	<etcitem id="35437" name="Recipe:�Seraph Leather Helmet (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -361,7 +361,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1183"/>
 	</etcitem>
-	<etcitem id="35438" name="Recipe: Seraph Leather Armor (60%)">
+	<etcitem id="35438" name="Recipe:�Seraph Leather Armor (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -371,7 +371,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1184"/>
 	</etcitem>
-	<etcitem id="35439" name="Recipe: Seraph Leather Leggings (60%)">
+	<etcitem id="35439" name="Recipe:�Seraph Leather Leggings (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -381,7 +381,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1185"/>
 	</etcitem>
-	<etcitem id="35440" name="Recipe: Seraph Leather Gloves (60%)">
+	<etcitem id="35440" name="Recipe:�Seraph Leather Gloves (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -391,7 +391,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1186"/>
 	</etcitem>
-	<etcitem id="35441" name="Recipe: Seraph Leather Boots (60%)">
+	<etcitem id="35441" name="Recipe:�Seraph Leather Boots (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -401,7 +401,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1187"/>
 	</etcitem>
-	<etcitem id="35442" name="Recipe: Seraph Circlet (60%)">
+	<etcitem id="35442" name="Recipe:�Seraph Circlet (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -411,7 +411,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1188"/>
 	</etcitem>
-	<etcitem id="35443" name="Recipe: Seraph Tunic (60%)">
+	<etcitem id="35443" name="Recipe:�Seraph Tunic (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -421,7 +421,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1189"/>
 	</etcitem>
-	<etcitem id="35444" name="Recipe: Seraph Stockings (60%)">
+	<etcitem id="35444" name="Recipe:�Seraph Stockings (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -431,7 +431,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1190"/>
 	</etcitem>
-	<etcitem id="35445" name="Recipe: Seraph Gloves (60%)">
+	<etcitem id="35445" name="Recipe:�Seraph Gloves (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -441,7 +441,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1191"/>
 	</etcitem>
-	<etcitem id="35446" name="Recipe: Seraph Shoes (60%)">
+	<etcitem id="35446" name="Recipe:�Seraph Shoes (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -451,7 +451,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1192"/>
 	</etcitem>
-	<etcitem id="35447" name="Recipe: Seraph Sigil (60%)">
+	<etcitem id="35447" name="Recipe:�Seraph Sigil (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -461,7 +461,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1193"/>
 	</etcitem>
-	<etcitem id="35448" name="Recipe: Seraph Necklace (60%)">
+	<etcitem id="35448" name="Recipe:�Seraph Necklace (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -471,7 +471,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1194"/>
 	</etcitem>
-	<etcitem id="35449" name="Recipe: Seraph Earring (60%)">
+	<etcitem id="35449" name="Recipe:�Seraph Earring (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -481,7 +481,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1195"/>
 	</etcitem>
-	<etcitem id="35450" name="Recipe: Seraph Ring (60%)">
+	<etcitem id="35450" name="Recipe:�Seraph Ring (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -491,7 +491,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1196"/>
 	</etcitem>
-	<etcitem id="35451" name="Recipe: Amaranthine Shaper (60%)">
+	<etcitem id="35451" name="Recipe:�Amaranthine Shaper (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -501,7 +501,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1197"/>
 	</etcitem>
-	<etcitem id="35452" name="Recipe: Amaranthine Cutter (60%)">
+	<etcitem id="35452" name="Recipe:�Amaranthine Cutter (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -511,7 +511,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1198"/>
 	</etcitem>
-	<etcitem id="35453" name="Recipe: Amaranthine Slasher (60%)">
+	<etcitem id="35453" name="Recipe:�Amaranthine Slasher (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -521,7 +521,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1199"/>
 	</etcitem>
-	<etcitem id="35454" name="Recipe: Amaranthine Avenger (60%)">
+	<etcitem id="35454" name="Recipe:�Amaranthine Avenger (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -531,7 +531,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1200"/>
 	</etcitem>
-	<etcitem id="35455" name="Recipe: Amaranthine Fighter (60%)">
+	<etcitem id="35455" name="Recipe:�Amaranthine Fighter (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -541,7 +541,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1201"/>
 	</etcitem>
-	<etcitem id="35456" name="Recipe: Amaranthine Stormer (60%)">
+	<etcitem id="35456" name="Recipe:�Amaranthine Stormer (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -551,7 +551,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1202"/>
 	</etcitem>
-	<etcitem id="35457" name="Recipe: Amaranthine Thrower (60%)">
+	<etcitem id="35457" name="Recipe:�Amaranthine Thrower (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -561,7 +561,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1203"/>
 	</etcitem>
-	<etcitem id="35458" name="Recipe: Amaranthine Shooter (60%)">
+	<etcitem id="35458" name="Recipe:�Amaranthine Shooter (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -571,7 +571,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1204"/>
 	</etcitem>
-	<etcitem id="35459" name="Recipe: Amaranthine Buster (60%)">
+	<etcitem id="35459" name="Recipe:�Amaranthine Buster (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -581,7 +581,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1205"/>
 	</etcitem>
-	<etcitem id="35460" name="Recipe: Amaranthine Caster (60%)">
+	<etcitem id="35460" name="Recipe:�Amaranthine Caster (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -591,7 +591,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1206"/>
 	</etcitem>
-	<etcitem id="35461" name="Recipe: Amaranthine Retributer (60%)">
+	<etcitem id="35461" name="Recipe:�Amaranthine Retributer (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -601,7 +601,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1207"/>
 	</etcitem>
-	<etcitem id="35462" name="Recipe: Eternal Helmet (60%)">
+	<etcitem id="35462" name="Recipe:�Eternal Helmet (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -611,7 +611,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1208"/>
 	</etcitem>
-	<etcitem id="35463" name="Recipe: Eternal Breastplate (60%)">
+	<etcitem id="35463" name="Recipe:�Eternal Breastplate (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -621,7 +621,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1209"/>
 	</etcitem>
-	<etcitem id="35464" name="Recipe: Eternal Gaiters (60%)">
+	<etcitem id="35464" name="Recipe:�Eternal Gaiters (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -631,7 +631,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1210"/>
 	</etcitem>
-	<etcitem id="35465" name="Recipe: Eternal Gauntlets (60%)">
+	<etcitem id="35465" name="Recipe:�Eternal Gauntlets (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -641,7 +641,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1211"/>
 	</etcitem>
-	<etcitem id="35466" name="Recipe: Eternal Boots (60%)">
+	<etcitem id="35466" name="Recipe:�Eternal Boots (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -651,7 +651,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1212"/>
 	</etcitem>
-	<etcitem id="35467" name="Recipe: Eternal Shield (60%)">
+	<etcitem id="35467" name="Recipe:�Eternal Shield (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -661,7 +661,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1213"/>
 	</etcitem>
-	<etcitem id="35468" name="Recipe: Eternal Leather Helmet (60%)">
+	<etcitem id="35468" name="Recipe:�Eternal Leather Helmet (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -671,7 +671,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1214"/>
 	</etcitem>
-	<etcitem id="35469" name="Recipe: Eternal Leather Armor (60%)">
+	<etcitem id="35469" name="Recipe:�Eternal Leather Armor (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -681,7 +681,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1215"/>
 	</etcitem>
-	<etcitem id="35470" name="Recipe: Eternal Leather Leggings (60%)">
+	<etcitem id="35470" name="Recipe:�Eternal Leather Leggings (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -691,7 +691,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1216"/>
 	</etcitem>
-	<etcitem id="35471" name="Recipe: Eternal Leather Gloves (60%)">
+	<etcitem id="35471" name="Recipe:�Eternal Leather Gloves (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -701,7 +701,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1217"/>
 	</etcitem>
-	<etcitem id="35472" name="Recipe: Eternal Leather Boots (60%)">
+	<etcitem id="35472" name="Recipe:�Eternal Leather Boots (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -711,7 +711,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1218"/>
 	</etcitem>
-	<etcitem id="35473" name="Recipe: Eternal Circlet (60%)">
+	<etcitem id="35473" name="Recipe:�Eternal Circlet (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -721,7 +721,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1219"/>
 	</etcitem>
-	<etcitem id="35474" name="Recipe: Eternal Tunic (60%)">
+	<etcitem id="35474" name="Recipe:�Eternal Tunic (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -731,7 +731,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1220"/>
 	</etcitem>
-	<etcitem id="35475" name="Recipe: Eternal Stockings (60%)">
+	<etcitem id="35475" name="Recipe:�Eternal Stockings (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -741,7 +741,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1221"/>
 	</etcitem>
-	<etcitem id="35476" name="Recipe: Eternal Gloves (60%)">
+	<etcitem id="35476" name="Recipe:�Eternal Gloves (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -751,7 +751,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1222"/>
 	</etcitem>
-	<etcitem id="35477" name="Recipe: Eternal Shoes (60%)">
+	<etcitem id="35477" name="Recipe:�Eternal Shoes (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -761,7 +761,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1223"/>
 	</etcitem>
-	<etcitem id="35478" name="Recipe: Eternal Sigil (60%)">
+	<etcitem id="35478" name="Recipe:�Eternal Sigil (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -771,7 +771,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1224"/>
 	</etcitem>
-	<etcitem id="35479" name="Recipe: Eternal Necklace (60%)">
+	<etcitem id="35479" name="Recipe:�Eternal Necklace (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -781,7 +781,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1225"/>
 	</etcitem>
-	<etcitem id="35480" name="Recipe: Eternal Earring (60%)">
+	<etcitem id="35480" name="Recipe:�Eternal Earring (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -791,7 +791,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1226"/>
 	</etcitem>
-	<etcitem id="35481" name="Recipe: Eternal Ring (60%)">
+	<etcitem id="35481" name="Recipe:�Eternal Ring (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -801,7 +801,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1227"/>
 	</etcitem>
-	<etcitem id="35482" name="Recipe: Blessed Specter Shaper (60%)">
+	<etcitem id="35482" name="Recipe:�Blessed Specter Shaper (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -811,7 +811,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1228"/>
 	</etcitem>
-	<etcitem id="35483" name="Recipe: Blessed Specter Cutter (60%)">
+	<etcitem id="35483" name="Recipe:�Blessed Specter Cutter (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -821,7 +821,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1229"/>
 	</etcitem>
-	<etcitem id="35484" name="Recipe: Blessed Specter Slasher (60%)">
+	<etcitem id="35484" name="Recipe:�Blessed Specter Slasher (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -831,7 +831,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1230"/>
 	</etcitem>
-	<etcitem id="35485" name="Recipe: Blessed Specter Avenger (60%)">
+	<etcitem id="35485" name="Recipe:�Blessed Specter Avenger (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -841,7 +841,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1231"/>
 	</etcitem>
-	<etcitem id="35486" name="Recipe: Blessed Specter Fighter (60%)">
+	<etcitem id="35486" name="Recipe:�Blessed Specter Fighter (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -851,7 +851,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1232"/>
 	</etcitem>
-	<etcitem id="35487" name="Recipe: Blessed Specter Stormer (60%)">
+	<etcitem id="35487" name="Recipe:�Blessed Specter Stormer (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -861,7 +861,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1233"/>
 	</etcitem>
-	<etcitem id="35488" name="Recipe: Blessed Specter Thrower (60%)">
+	<etcitem id="35488" name="Recipe:�Blessed Specter Thrower (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -871,7 +871,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1234"/>
 	</etcitem>
-	<etcitem id="35489" name="Recipe: Blessed Specter Shooter (60%)">
+	<etcitem id="35489" name="Recipe:�Blessed Specter Shooter (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -881,7 +881,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1235"/>
 	</etcitem>
-	<etcitem id="35490" name="Recipe: Blessed Specter Buster (60%)">
+	<etcitem id="35490" name="Recipe:�Blessed Specter Buster (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -891,7 +891,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1236"/>
 	</etcitem>
-	<etcitem id="35491" name="Recipe: Blessed Specter Caster (60%)">
+	<etcitem id="35491" name="Recipe:�Blessed Specter Caster (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -901,7 +901,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1237"/>
 	</etcitem>
-	<etcitem id="35492" name="Recipe: Blessed Specter Retributer (60%)">
+	<etcitem id="35492" name="Recipe:�Blessed Specter Retributer (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -911,7 +911,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1238"/>
 	</etcitem>
-	<etcitem id="35493" name="Recipe: Blessed Seraph Helmet (60%)">
+	<etcitem id="35493" name="Recipe:�Blessed Seraph Helmet (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -921,7 +921,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1239"/>
 	</etcitem>
-	<etcitem id="35494" name="Recipe: Blessed Seraph Breastplate (60%)">
+	<etcitem id="35494" name="Recipe:�Blessed Seraph Breastplate (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -931,7 +931,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1240"/>
 	</etcitem>
-	<etcitem id="35495" name="Recipe: Blessed Seraph Gaiters (60%)">
+	<etcitem id="35495" name="Recipe:�Blessed Seraph Gaiters (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -941,7 +941,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1241"/>
 	</etcitem>
-	<etcitem id="35496" name="Recipe: Blessed Seraph Gauntlets (60%)">
+	<etcitem id="35496" name="Recipe:�Blessed Seraph Gauntlets (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -951,7 +951,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1242"/>
 	</etcitem>
-	<etcitem id="35497" name="Recipe: Blessed Seraph Boots (60%)">
+	<etcitem id="35497" name="Recipe:�Blessed Seraph Boots (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -961,7 +961,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1243"/>
 	</etcitem>
-	<etcitem id="35498" name="Recipe: Blessed Seraph Shield (60%)">
+	<etcitem id="35498" name="Recipe:�Blessed Seraph Shield (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>
@@ -971,7 +971,7 @@
 		<set name="type" value="RECIPE"/>
 		<set name="recipe_id" value="1244"/>
 	</etcitem>
-	<etcitem id="35499" name="Recipe: Blessed Seraph Leather Helmet (60%)">
+	<etcitem id="35499" name="Recipe:�Blessed Seraph Leather Helmet (60%)">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="material" value="liquid"/>
 		<set name="weight" value="30"/>

@@ -14,7 +14,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="14746" name="For Events - Refined Chick Hat">
+	<armor id="14746" name="Event - Refined Chick Hat">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_chicken_cap2_i00"/>
@@ -27,7 +27,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="14747" name="For Events - Refined Black Feather Mask">
+	<armor id="14747" name="Event - Refined Black Feather Mask">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_black_feather_mask2_i00"/>
@@ -40,7 +40,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="14748" name="For Events - Refined Carnival Circlet">
+	<armor id="14748" name="Event - Refined Carnival Circlet">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_carnival_circlet2_i00"/>
@@ -86,7 +86,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="14752" name="For Events - Refined Medieval Style Party Mask">
+	<armor id="14752" name="Event - Refined Medieval Party Mask">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_middle_age_party_mask2_i00"/>
@@ -99,7 +99,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="14753" name="Shadow Item - Refined Chick Hat" add_name="Escape">
+	<armor id="14753" name="Shadow Item: Refined Chick Hat" add_name="Escape">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="360"/>
@@ -116,7 +116,7 @@
 			<skill id="3264" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14754" name="Shadow Item - Refined Chick Hat" add_name="Big Head">
+	<armor id="14754" name="Shadow Item: Refined Chick Hat" add_name="Big Head">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="360"/>
@@ -133,7 +133,7 @@
 			<skill id="3265" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14755" name="Shadow Item - Refined Chick Hat" add_name="Firework">
+	<armor id="14755" name="Shadow Item: Refined Chick Hat" add_name="Firework">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="360"/>
@@ -150,7 +150,7 @@
 			<skill id="3266" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14756" name="Shadow Item - Refined Black Feather Mask" add_name="Escape">
+	<armor id="14756" name="Shadow Item: Refined Black Feather Mask" add_name="Escape">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="360"/>
@@ -167,7 +167,7 @@
 			<skill id="3264" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14757" name="Shadow Item - Refined Black Feather Mask" add_name="Big Head">
+	<armor id="14757" name="Shadow Item: Refined Black Feather Mask" add_name="Big Head">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="360"/>
@@ -184,7 +184,7 @@
 			<skill id="3265" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14758" name="Shadow Item - Refined Black Feather Mask" add_name="Firework">
+	<armor id="14758" name="Shadow Item: Refined Black Feather Mask" add_name="Firework">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="360"/>
@@ -201,7 +201,7 @@
 			<skill id="3266" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14759" name="Shadow Item - Refined Carnival Circlet" add_name="Escape">
+	<armor id="14759" name="Shadow Item: Refined Carnival Circlet" add_name="Escape">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="360"/>
@@ -218,7 +218,7 @@
 			<skill id="3264" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14760" name="Shadow Item - Refined Carnival Circlet" add_name="Big Head">
+	<armor id="14760" name="Shadow Item: Refined Carnival Circlet" add_name="Big Head">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="360"/>
@@ -235,7 +235,7 @@
 			<skill id="3265" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14761" name="Shadow Item - Refined Carnival Circlet" add_name="Firework">
+	<armor id="14761" name="Shadow Item: Refined Carnival Circlet" add_name="Firework">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="360"/>
@@ -252,7 +252,7 @@
 			<skill id="3266" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14762" name="Shadow Item - Refined Medieval Style Party Mask" add_name="Escape">
+	<armor id="14762" name="Shadow Item: Refined Medieval Party Mask" add_name="Escape">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="360"/>
@@ -269,7 +269,7 @@
 			<skill id="3264" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14763" name="Shadow Item - Refined Medieval Style Party Mask" add_name="Big Head">
+	<armor id="14763" name="Shadow Item: Refined Medieval Party Mask" add_name="Big Head">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="360"/>
@@ -286,7 +286,7 @@
 			<skill id="3265" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14764" name="Shadow Item - Refined Medieval Style Party Mask" add_name="Firework">
+	<armor id="14764" name="Shadow Item: Refined Medieval Party Mask" add_name="Firework">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="360"/>
@@ -303,7 +303,7 @@
 			<skill id="3266" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14771" name="Kat the Cat Hat" add_name="14 day limited period">
+	<armor id="14771" name="Kat the Cat Hat" add_name="14-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="20160"/>
@@ -327,7 +327,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="14773" name="Suit" add_name="14 day limited period">
+	<armor id="14773" name="Formal Wear (14-day)" add_name="14-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="20160"/>
@@ -344,7 +344,7 @@
 			<add stat="maxMp" order="0x10" value="15"/>
 		</for>
 	</armor>
-	<armor id="14775" name="Agathion Seal Bracelet - Love" add_name="14 day limited period">
+	<armor id="14775" name="Agathion - Love" add_name="14-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="20160"/>
@@ -363,7 +363,7 @@
 			<skill id="8245" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14776" name="Agathion Seal Bracelet - Juju" add_name="14 day limited period">
+	<armor id="14776" name="Agathion - Juju (14-day)" add_name="14-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="20160"/>

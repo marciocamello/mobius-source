@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "restoration_info.dtd">
 <list>
-	<restoration skill_id="620" skill_level="1" name="Quiver of Bolts: B Grade">
+	<restoration skill_id="620" skill_level="1" name="Quiver of Bolts (B-grade)">
 		<group chance="30.0">
 			<item id="9635" min_count="700" max_count="700"/>
 		</group>

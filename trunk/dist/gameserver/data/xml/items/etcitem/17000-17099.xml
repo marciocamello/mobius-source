@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="17000" name="Jewelry Pack (B-grade)" add_name="(90-day)">
+	<etcitem id="17000" name="Jewelry Pack (B-grade)" add_name="90-day">
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -9,7 +9,7 @@
 		<set name="icon" value="icon.etc_jewel_box_i00"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="17001" name="Jewelry Pack (C-grade)" add_name="(90-day)">
+	<etcitem id="17001" name="Jewelry Pack (C-grade)" add_name="90-day">
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -17,7 +17,7 @@
 		<set name="icon" value="icon.etc_jewel_box_i00"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="17002" name="Jewelry Pack (D-grade)" add_name="(90-day)">
+	<etcitem id="17002" name="Jewelry Pack (D-grade)" add_name="90-day">
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -162,7 +162,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="17025" name="PC Points Pack (7,000)">
+	<etcitem id="17025" name="PC Point Pack (700) (Event)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -237,7 +237,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="17030" name="Forgotten Scroll: Create Item Lv10">
+	<etcitem id="17030" name="Forgotten Scroll: Create Item Lv. 10">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -975,7 +975,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="17095" name="XP Buff 50% (1-hour)" add_name="40927">
+	<etcitem id="17095" name="XP Buff 50% (1-hour)" add_name="1~19">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -989,7 +989,7 @@
 			<skill id="9115" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17096" name="XP Buff 50% (1.5-hour)" add_name="40927">
+	<etcitem id="17096" name="XP Buff 50% (1.5-hour)" add_name="1~19">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -1003,7 +1003,7 @@
 			<skill id="9116" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17097" name="XP Buff 50% (2-hour)" add_name="40927">
+	<etcitem id="17097" name="XP Buff 50% (2-hour)" add_name="1~19">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -1017,7 +1017,7 @@
 			<skill id="9117" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17098" name="XP Buff 50% (2.5-hour)" add_name="40927">
+	<etcitem id="17098" name="XP Buff 50% (2.5-hour)" add_name="1~19">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -1031,7 +1031,7 @@
 			<skill id="9118" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17099" name="XP Buff 50% (3-hour)" add_name="40927">
+	<etcitem id="17099" name="XP Buff 50% (3-hour)" add_name="1~19">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

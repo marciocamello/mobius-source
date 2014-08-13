@@ -20,7 +20,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22302" levels="1" name="Sweet Chocolate">
+	<skill id="22302" levels="1" name="Sweet Chocolate (4-hour)">
 		<set name="icon" val="BranchSys.icon.br_valentine_darkchoco_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -38,31 +38,31 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22305" levels="1" name="Campfire Summon">
+	<skill id="22305" levels="1" name="Summon Campfire">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22306" levels="1" name="Event - Bad Bunny Scroll of Summon">
+	<skill id="22306" levels="1" name="Event - Scroll: Summon Bad Bunny">
 		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22307" levels="1" name="Event - Bad Bunny Captain Scroll of Summon">
+	<skill id="22307" levels="1" name="Event - Scroll: Summon Bad Bunny Captain">
 		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22308" levels="1" name="Event - Liverless Bunny Scroll of Summon">
+	<skill id="22308" levels="1" name="Event - Scroll: Summon Liverless Bunny">
 		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22309" levels="1" name="Event - Liverless Bunny Captain Scroll of Summon">
+	<skill id="22309" levels="1" name="Event - Scroll: Summon Liverless Bunny Captain">
 		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -97,43 +97,43 @@
 			<effect count="1" name="Vitality" stackType="vitalityRegen" stackOrder="1" time="14400" val="0"/>
 		</for>
 	</skill>
-	<skill id="22313" levels="1" name="Pa'agrio's Warm Breeze - 4 hour">
+	<skill id="22313" levels="1" name="Pa'agrio's Warm Breeze (4-hour)">
 		<set name="icon" val="BranchSys2.Icon.pi_wind_of_paagrio"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22314" levels="1" name="Treasure Sack 1st Place">
+	<skill id="22314" levels="1" name="1st Place Treasure Sack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22315" levels="2" name="Treasure Sack 2nd Place">
+	<skill id="22315" levels="2" name="2nd Place Treasure Sack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22316" levels="3" name="Treasure Sack 3rd Place">
+	<skill id="22316" levels="3" name="3rd Place Treasure Sack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22317" levels="4" name="Treasure Sack 4th Place">
+	<skill id="22317" levels="4" name="4th Place Treasure Sack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22318" levels="5" name="Treasure Sack 5th Place">
+	<skill id="22318" levels="5" name="5th Place Treasure Sack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22319" levels="6" name="Treasure Sack 6th Place">
+	<skill id="22319" levels="6" name="6th Place Treasure Sack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -247,7 +247,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22338" levels="1" name="Bless Shield">
+	<skill id="22338" levels="1" name="Blessed Shield">
 		<set name="icon" val="icon.etc_fruit_cocktail_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -349,103 +349,103 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22355" levels="1" name="Soul Crystal Box - Level 17">
+	<skill id="22355" levels="1" name="Soul Crystal - Step 17 Box">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22356" levels="1" name="Soul Crystal Box - Level 18">
+	<skill id="22356" levels="1" name="Soul Crystal - Step 18 Box">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22357" levels="1" name="S84 High-Grade Weapon Box">
+	<skill id="22357" levels="1" name="High-grade Weapon Pack (S84-grade)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22358" levels="1" name="Vorpal Armor Box">
+	<skill id="22358" levels="1" name="Vorpal Armor Pack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22359" levels="1" name="Scroll: Enchant Weapon of Destruction (S-Grade)">
+	<skill id="22359" levels="1" name="Destruction Scroll: Enchant Weapon (S-grade)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22360" levels="1" name="Scroll: Enchant Armor of Destruction (S-Grade)">
+	<skill id="22360" levels="1" name="Destruction Scroll: Enchant Armor (S-grade)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22361" levels="1" name="Scroll: Enchant Weapon of Destruction (A-Grade)">
+	<skill id="22361" levels="1" name="Destruction Scroll: Enchant Weapon (A-grade)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22362" levels="1" name="Scroll: Enchant Armor of Destruction (A-Grade)">
+	<skill id="22362" levels="1" name="Destruction Scroll: Enchant Armor (A-grade)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22363" levels="1" name="Scroll: Enchant Weapon of Destruction (B-Grade)">
+	<skill id="22363" levels="1" name="Destruction Scroll: Enchant Weapon (B-grade)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22364" levels="1" name="Scroll: Enchant Armor of Destruction (B-Grade)">
+	<skill id="22364" levels="1" name="Destruction Scroll: Enchant Armor (B-grade)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22365" levels="1" name="Scroll: Enchant Weapon of Destruction (C-Grade)">
+	<skill id="22365" levels="1" name="Destruction Scroll: Enchant Weapon (C-grade)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22366" levels="1" name="Scroll: Enchant Armor of Destruction (C-Grade)">
+	<skill id="22366" levels="1" name="Destruction Scroll: Enchant Armor (C-grade)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22367" levels="1" name="Scroll: Enchant Weapon of Destruction (D-Grade)">
+	<skill id="22367" levels="1" name="Destruction Scroll: Enchant Weapon (D-grade)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22368" levels="1" name="Scroll: Enchant Armor of Destruction (D-Grade)">
+	<skill id="22368" levels="1" name="Destruction Scroll: Enchant Armor (D-grade)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22369" levels="1" name="Blessed Spiritshot (S-Grade)">
+	<skill id="22369" levels="1" name="Blessed Spiritshot (S-grade)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22370" levels="1" name="Mysterious Soulshot Pack (S-Grade)">
+	<skill id="22370" levels="1" name="Mysterious Soulshot Pack (S-grade)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22371" levels="1" name="Mysterious Blessed Spiritshot Pack (S-Grade)">
+	<skill id="22371" levels="1" name="Mysterious Blessed Spiritshot Pack (S-grade)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -481,19 +481,19 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22377" levels="1" name="Bad Bunny's Necklace Box">
+	<skill id="22377" levels="1" name="Bad Bunny's Necklace Pack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22378" levels="1" name="Bad Bunny's Earring Box">
+	<skill id="22378" levels="1" name="Bad Bunny's Earring Pack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22379" levels="1" name="Bad Bunny's Ring Box">
+	<skill id="22379" levels="1" name="Bad Bunny's Ring Pack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -505,13 +505,13 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22381" levels="1" name="Attribute Stone Box">
+	<skill id="22381" levels="1" name="Attribute Stone Pack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22382" levels="1" name="Attribute Crystal Box">
+	<skill id="22382" levels="1" name="Attribute Crystal Pack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -535,7 +535,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22386" levels="1" name="Player Commendation - Transformation Scroll Box">
+	<skill id="22386" levels="1" name="Player Commendation - Transformation Scroll Pack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -547,13 +547,13 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22388" levels="1" name="Player Commendation - Transformation Stick Box">
+	<skill id="22388" levels="1" name="Player Commendation - Transformation Stick Pack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22389" levels="1" name="Player Commendation - Hair Accessory Box">
+	<skill id="22389" levels="1" name="Player Commendation - Hair Accessory Pack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -571,31 +571,31 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22392" levels="1" name="Cake of Happiness: Low-Grade">
+	<skill id="22392" levels="1" name="Cake of Happiness (Low-grade)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22393" levels="1" name="Cake of Happiness: Mid-Grade">
+	<skill id="22393" levels="1" name="Cake of Happiness (Mid-grade)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22394" levels="1" name="Cake of Happiness: High-Grade">
+	<skill id="22394" levels="1" name="Cake of Happiness (High-grade)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22395" levels="1" name="Cake of Happiness: Top-Grade">
+	<skill id="22395" levels="1" name="Cake of Happiness (Top-grade)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22396" levels="1" name="Fresh Cake of Happiness">
+	<skill id="22396" levels="1" name="Divine Cake of Happiness">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>

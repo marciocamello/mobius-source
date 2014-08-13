@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="20601" name="Anniversary Hat" add_name="Soul of Phoenix - 7 day limited period">
+	<armor id="20601" name="Anniversary Hat" add_name="Soul of Phoenix (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -59,7 +59,7 @@
 			<skill id="21093" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20615" name="Headphone" add_name="Park Theme">
+	<armor id="20615" name="Headphone" add_name="Theme Park">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -76,7 +76,7 @@
 			<skill id="21094" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20616" name="Headphone" add_name="Town Theme - 7 day limited period">
+	<armor id="20616" name="Headphone" add_name="Town Theme: Great Adventurer's Soul Power (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -96,7 +96,7 @@
 			<skill id="21111" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20617" name="Headphone" add_name="Hero Theme - 7 day limited period">
+	<armor id="20617" name="Headphone" add_name="Hero Theme: Brave Warrior's Soul Power (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -116,7 +116,7 @@
 			<skill id="21112" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20618" name="Headphone" add_name="Park Theme - 7 day limited period">
+	<armor id="20618" name="Headphone" add_name="Theme Park: Great Wizard's Soul Power (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -136,7 +136,7 @@
 			<skill id="21113" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20621" name="Agathion Seal Bracelet - Female Weaver" add_name="Flute Sound - 24 hours limited time">
+	<armor id="20621" name="Agathion - Weaver" add_name="Flute Sound (24-hour)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -162,7 +162,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20622" name="Agathion Seal Bracelet - Female Weaver" add_name="Flute Sound - 3 day limited time">
+	<armor id="20622" name="Agathion - Weaver" add_name="Flute Sound (3-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -188,7 +188,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20626" name="Anniversary Hat" add_name="Resurrection - 7 day limited period">
+	<armor id="20626" name="Anniversary Hat" add_name="Resurrection (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -212,7 +212,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20628" name="Summon of Love Bracelet" add_name="7 day limited period">
+	<armor id="20628" name="Summon of Love Bracelet" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -236,7 +236,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20633" name="Watermelon Hat" add_name="Ability of a Cool Watermelon - 7 day limited period">
+	<armor id="20633" name="Watermelon Hat" add_name="Ability of a Cool Watermelon (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -279,7 +279,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20642" name="Standard Item - Mithril Gloves">
+	<armor id="20642" name="Common Item - Mithril Gloves">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -298,7 +298,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="20643" name="Standard Item - Plate Boots">
+	<armor id="20643" name="Common Item - Plate Boots">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -317,7 +317,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="20645" name="Standard Item - Plate Helmet">
+	<armor id="20645" name="Common Item - Plate Helmet">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -336,7 +336,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="20646" name="Standard Item - Plate Gaiters">
+	<armor id="20646" name="Common Item - Plate Gaiters">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -355,7 +355,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="20647" name="Standard Item - Half Plate Armor">
+	<armor id="20647" name="Common Item - Half Plate Armor">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -374,7 +374,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="20648" name="Standard Item - Salamander Skin Mail">
+	<armor id="20648" name="Common Item - Salamander Skin Mail">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -393,7 +393,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="20650" name="Standard Item - Mithril Tunic">
+	<armor id="20650" name="Common Item - Mithril Tunic">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -413,7 +413,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="20651" name="Standard Item - Mithril Stockings">
+	<armor id="20651" name="Common Item - Mithril Stockings">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -433,7 +433,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="20652" name="Standard Item - Salamander Skin Boots">
+	<armor id="20652" name="Common Item - Salamander Skin Boots">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -452,7 +452,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="20653" name="Standard Item - Ogre Power Gauntlet">
+	<armor id="20653" name="Common Item - Ogre Power Gauntlets">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -471,7 +471,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="20654" name="Agathion Seal Bracelet - Chon-chon">
+	<armor id="20654" name="Agathion - Lucky Girl">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -495,7 +495,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20655" name="Agathion Seal Bracelet - Chon-chon" add_name="Great Warrior's Soul Power - 7 days limited time">
+	<armor id="20655" name="Agathion - Lucky Girl" add_name="Brave Warrior's Soul Power (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -521,7 +521,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20656" name="Agathion Seal Bracelet - Tang-tang">
+	<armor id="20656" name="Agathion - Lucky Boy">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -545,7 +545,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20657" name="Agathion Seal Bracelet - Tang-tang" add_name="Great Wizard's Soul Power - 7 days limited time">
+	<armor id="20657" name="Agathion - Lucky Boy" add_name="Great Wizard's Soul Power (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -571,7 +571,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20658" name="Agthion Seal Bracelet - Dancing Lucky Kid">
+	<armor id="20658" name="Agathion - Dancing Lucky Kid">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -595,7 +595,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20659" name="Agthion Seal Bracelet - Dancing Lucky Kid" add_name="Great Adventurer's Soul Power - 7 days limited time">
+	<armor id="20659" name="Agathion - Dancing Lucky Kid" add_name="Great Adventurer's Soul Power (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -621,7 +621,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20660" name="Agathion Seal Bracelet - Monkey King">
+	<armor id="20660" name="Agathion - Monkey King">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -645,7 +645,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20661" name="Agathion Seal Bracelet - Monkey King" add_name="Great Wizard's Soul Power - 7 days limited time">
+	<armor id="20661" name="Agathion - Monkey King" add_name="Great Wizard's Soul Power (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -671,7 +671,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20662" name="Agathion Seal Bracelet - Utanka Agathion">
+	<armor id="20662" name="Agathion - Uthanka">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -695,7 +695,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20663" name="Agathion Seal Bracelet - Utanka Agathion" add_name="Great Warrior's Soul Power - 7 days limited time">
+	<armor id="20663" name="Agathion - Uthanka" add_name="Brave Warrior's Soul Power (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -721,7 +721,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20664" name="Agathion Seal Bracelet - Bonus B Agathion">
+	<armor id="20664" name="Agathion - Bonus B">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -745,7 +745,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20665" name="Agathion Seal Bracelet - Bonus B Agathion" add_name="Great Adventurer's Soul Power - 7 days limited time">
+	<armor id="20665" name="Agathion - Bonus B" add_name="Great Adventurer's Soul Power (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -790,7 +790,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20667" name="Valkyrie Hat" add_name="Great Adventurer's Soul Power - 7 day limited time">
+	<armor id="20667" name="Valkyrie Hat" add_name="Great Adventurer's Soul Power (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -833,7 +833,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20669" name="Tiger Hat" add_name="Great Warrior's Soul Power - 7 days limited time">
+	<armor id="20669" name="Tiger Hat" add_name="Brave Warrior's Soul Power (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -857,7 +857,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20670" name="Maid's Hairband">
+	<armor id="20670" name="Maid Hairband">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -876,7 +876,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20671" name="Maid Hairband" add_name="Great Wizard's Soul Power - 7 days limited time">
+	<armor id="20671" name="Maid Hairband" add_name="Great Wizard's Soul Power (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -919,7 +919,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20673" name="Baby Panda Hat" add_name="Blessed Escape - 7 day limited period">
+	<armor id="20673" name="Baby Panda Hat" add_name="Blessed Escape (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -962,7 +962,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20675" name="Bamboo Panda Hat" add_name="Great Adventurer's Soul Power - 7 days limited time">
+	<armor id="20675" name="Bamboo Panda Hat" add_name="Great Adventurer's Soul Power (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1005,7 +1005,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20677" name="Sexy Panda Hat" add_name="Blessed Resurrection - 7 day limited period">
+	<armor id="20677" name="Sexy Panda Hat" add_name="Blessed Resurrection (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1029,7 +1029,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20678" name="Gate Keeper Hat">
+	<armor id="20678" name="Gatekeeper Hat">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1048,7 +1048,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20679" name="Gate Keeper Hat" add_name="Destroy Instinct - 7 day limited period ">
+	<armor id="20679" name="Gatekeeper Hat" add_name="Appetite for Destruction (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>

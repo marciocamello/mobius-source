@@ -1131,7 +1131,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30662" name="Bound Crystal">
+	<weapon id="30662" name="Bound Kris">
 		<set name="icon" value="icon.weapon_kris_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1157,7 +1157,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30663" name="Bound Crystal" add_name="Evasion">
+	<weapon id="30663" name="Bound Kris" add_name="Evasion">
 		<set name="icon" value="icon.weapon_kris_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1183,7 +1183,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30664" name="Bound Crystal" add_name="Focus">
+	<weapon id="30664" name="Bound Kris" add_name="Focus">
 		<set name="icon" value="icon.weapon_kris_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1212,7 +1212,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30665" name="Bound Crystal" add_name="Back Blow">
+	<weapon id="30665" name="Bound Kris" add_name="Back Blow">
 		<set name="icon" value="icon.weapon_kris_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="34000" name="Lv5 MEN Symbol - Legendary Dye" add_name="MEN+ 5 INT+ 1 Holy Attack Resistance + 25 / event">
+	<etcitem id="34000" name="Lv. 5 MEN Symbol - Legendary Dye" add_name="MEN + 5 / INT + 1 / Holy Attack Resistance + 25 (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -314,7 +314,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.fortuna_enter"/>
 	</etcitem>
-	<etcitem id="34035" name="XP Rune I (Lv1-85) 100% (3-hour)">
+	<etcitem id="34035" name="XP Rune I (Lv. 1-85) 100% (3-hour)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -322,7 +322,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_rune_of_feather_i00"/>
 	</etcitem>
-	<etcitem id="34036" name="XP Rune I (Lv1-85) 100% (5-hour)">
+	<etcitem id="34036" name="XP Rune I (Lv. 1-85) 100% (5-hour)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -330,7 +330,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_rune_of_feather_i00"/>
 	</etcitem>
-	<etcitem id="34037" name="XP Rune I (Lv1-85) 100% (7-day)">
+	<etcitem id="34037" name="XP Rune I (Lv. 1-85) 100% (7-day)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -338,7 +338,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_rune_of_feather_i00"/>
 	</etcitem>
-	<etcitem id="34038" name="XP Rune I (Lv1-85) 200% (3-hour)">
+	<etcitem id="34038" name="XP Rune I (Lv. 1-85) 200% (3-hour)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -346,7 +346,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_rune_of_feather_i00"/>
 	</etcitem>
-	<etcitem id="34039" name="XP Rune I (Lv1-85) 200% (5-hour)">
+	<etcitem id="34039" name="XP Rune I (Lv. 1-85) 200% (5-hour)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -354,7 +354,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_rune_of_feather_i00"/>
 	</etcitem>
-	<etcitem id="34040" name="XP Rune I (Lv1-85) 200% (7-day)">
+	<etcitem id="34040" name="XP Rune I (Lv. 1-85) 200% (7-day)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -362,7 +362,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_rune_of_feather_i00"/>
 	</etcitem>
-	<etcitem id="34041" name="XP Rune I (Lv1-85) 100% Pack (3-hour)">
+	<etcitem id="34041" name="XP Rune I (Lv. 1-85) 100% Pack (3-hour)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -371,7 +371,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 	</etcitem>
-	<etcitem id="34042" name="XP Rune I (Lv1-85) 100% Pack (5-hour)">
+	<etcitem id="34042" name="XP Rune I (Lv. 1-85) 100% Pack (5-hour)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -380,7 +380,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 	</etcitem>
-	<etcitem id="34043" name="XP Rune I (Lv1-85) 100% Pack (7-day)">
+	<etcitem id="34043" name="XP Rune I (Lv. 1-85) 100% Pack (7-day)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -389,7 +389,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 	</etcitem>
-	<etcitem id="34044" name="XP Rune I (Lv1-85) 200% Pack (3-hour)">
+	<etcitem id="34044" name="XP Rune I (Lv. 1-85) 200% Pack (3-hour)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -398,7 +398,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 	</etcitem>
-	<etcitem id="34045" name="XP Rune I (Lv1-85) 200% Pack (5-hour)">
+	<etcitem id="34045" name="XP Rune I (Lv. 1-85) 200% Pack (5-hour)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -407,7 +407,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 	</etcitem>
-	<etcitem id="34046" name="XP Rune I (Lv1-85) 200% Pack (7-day)">
+	<etcitem id="34046" name="XP Rune I (Lv. 1-85) 200% Pack (7-day)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -416,7 +416,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 	</etcitem>
-	<etcitem id="34047" name="XP Rune I (Lv1-85) 100% Pack (3-hour)" add_name="Event">
+	<etcitem id="34047" name="XP Rune I (Lv. 1-85) 100% Pack (3-hour)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -425,7 +425,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 	</etcitem>
-	<etcitem id="34048" name="XP Rune I (Lv1-85) 100% Pack (5-hour)" add_name="Event">
+	<etcitem id="34048" name="XP Rune I (Lv. 1-85) 100% Pack (5-hour)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -434,7 +434,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 	</etcitem>
-	<etcitem id="34049" name="XP Rune I (Lv1-85) 100% Pack (7-day)" add_name="Event">
+	<etcitem id="34049" name="XP Rune I (Lv. 1-85) 100% Pack (7-day)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -443,7 +443,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 	</etcitem>
-	<etcitem id="34050" name="XP Rune I (Lv1-85) 200% Pack (3-hour)" add_name="Event">
+	<etcitem id="34050" name="XP Rune I (Lv. 1-85) 200% Pack (3-hour)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -452,7 +452,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 	</etcitem>
-	<etcitem id="34051" name="XP Rune I (Lv1-85) 200% Pack (5-hour)" add_name="Event">
+	<etcitem id="34051" name="XP Rune I (Lv. 1-85) 200% Pack (5-hour)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -461,7 +461,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 	</etcitem>
-	<etcitem id="34052" name="XP Rune I (Lv1-85) 200% Pack (7-day)" add_name="Event">
+	<etcitem id="34052" name="XP Rune I (Lv. 1-85) 200% Pack (7-day)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

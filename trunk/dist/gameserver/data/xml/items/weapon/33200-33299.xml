@@ -265,7 +265,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33219" name="Behemoth's Tuning Fork of Destiny (Fire)" add_name="Health">
+	<weapon id="33219" name="Behemoth' Tuning Fork of Destiny (Fire)" add_name="Health">
 		<set name="icon" value="icon.weapon_tuning_fork_of_behemoth_i01"/>
 		<set name="weight" value="189"/>
 		<set name="rnd_dam" value="20"/>
@@ -653,7 +653,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33234" name="Behemoth's Tuning Fork of Destiny (Water)" add_name="Health">
+	<weapon id="33234" name="Behemoth' Tuning Fork of Destiny (Water)" add_name="Health">
 		<set name="icon" value="icon.weapon_tuning_fork_of_behemoth_i01"/>
 		<set name="weight" value="189"/>
 		<set name="rnd_dam" value="20"/>
@@ -1041,7 +1041,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33249" name="Behemoth's Tuning Fork of Destiny (Wind)" add_name="Health">
+	<weapon id="33249" name="Behemoth' Tuning Fork of Destiny (Wind)" add_name="Health">
 		<set name="icon" value="icon.weapon_tuning_fork_of_behemoth_i01"/>
 		<set name="weight" value="189"/>
 		<set name="rnd_dam" value="20"/>
@@ -1192,7 +1192,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33255" name="Sirra's Blade of Destiny (Wind)" add_name="Haste">
+	<weapon id="33255" name="Sirra's Blade of Destiny (Earth)" add_name="Haste">
 		<set name="icon" value="icon.weapon_sirr_blade_i01"/>
 		<set name="weight" value="130"/>
 		<set name="rnd_dam" value="10"/>
@@ -1218,7 +1218,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33256" name="Themis' Tongue of Destiny (Wind)" add_name="Mana Up">
+	<weapon id="33256" name="Themis' Tongue of Destiny (Earth)" add_name="Mana Up">
 		<set name="icon" value="icon.weapon_tongue_of_themis_i01"/>
 		<set name="weight" value="82"/>
 		<set name="rnd_dam" value="10"/>
@@ -1244,7 +1244,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33257" name="Eclair Bijou of Destiny (Wind)" add_name="Haste">
+	<weapon id="33257" name="Eclair Bijou of Destiny (Earth)" add_name="Haste">
 		<set name="icon" value="icon.weapon_greed_stinger_i01"/>
 		<set name="weight" value="130"/>
 		<set name="rnd_dam" value="40"/>
@@ -1270,7 +1270,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33258" name="Sword of Ipos of Destiny (Wind)" add_name="Focus">
+	<weapon id="33258" name="Sword of Ipos of Destiny (Earth)" add_name="Focus">
 		<set name="icon" value="icon.weapon_sword_of_ipos_i01"/>
 		<set name="weight" value="182"/>
 		<set name="rnd_dam" value="10"/>
@@ -1429,7 +1429,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33264" name="Behemoth's Tuning Fork of Destiny (Earth)" add_name="Health">
+	<weapon id="33264" name="Behemoth' Tuning Fork of Destiny (Earth)" add_name="Health">
 		<set name="icon" value="icon.weapon_tuning_fork_of_behemoth_i01"/>
 		<set name="weight" value="189"/>
 		<set name="rnd_dam" value="20"/>
@@ -1817,7 +1817,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33279" name="Behemoth's Tuning Fork of Destiny (Holy)" add_name="Health">
+	<weapon id="33279" name="Behemoth' Tuning Fork of Destiny (Holy)" add_name="Health">
 		<set name="icon" value="icon.weapon_tuning_fork_of_behemoth_i01"/>
 		<set name="weight" value="189"/>
 		<set name="rnd_dam" value="20"/>
@@ -2205,7 +2205,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33294" name="Behemoth's Tuning Fork of Destiny (Dark)" add_name="Health">
+	<weapon id="33294" name="Behemoth' Tuning Fork of Destiny (Dark)" add_name="Health">
 		<set name="icon" value="icon.weapon_tuning_fork_of_behemoth_i01"/>
 		<set name="weight" value="189"/>
 		<set name="rnd_dam" value="20"/>

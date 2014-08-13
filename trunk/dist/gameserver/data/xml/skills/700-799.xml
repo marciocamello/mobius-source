@@ -469,7 +469,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="720" levels="2" name="Anakim Divine Light Burst">
+	<skill id="720" levels="2" name="Anakim Holy Light Burst">
 		<table name="#mpConsume2">69 72</table>
 		<table name="#magicLevel">75 80</table>
 		<table name="#power">3189 3590</table>
@@ -1337,7 +1337,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="764" levels="1" name="Song of Wind Storm">
+	<skill id="764" levels="1" name="Song of Windstorm">
 		<table name="#abnormal_time">120</table>
 		<table name="#mpConsume2">60</table>
 		<table name="#magicLevel">76</table>
@@ -1412,7 +1412,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="767" levels="1" name="Expose Weak Point">
+	<skill id="767" levels="1" name="Expose Vulnerability">
 		<set name="icon" val="icon.skill0767"/>
 		<set name="magicLevel" val="81"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1800,7 +1800,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="784" levels="1" name="Spirit of Phoenix">
+	<skill id="784" levels="1" name="Spirit of the Phoenix">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0784"/>
 		<set name="reuseDelay" val="15000"/>
@@ -2195,7 +2195,7 @@
 		<set name="overHit" val="true"/>
 		<set name="behind" val="true"/>
 	</skill>
-	<skill id="798" levels="1" name="Divine Warrior Assault Attack">
+	<skill id="798" levels="1" name="Divine Warrior Crippling Attack">
 		<table name="#effectPoint">655</table>
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill_transform_s_attack"/>
@@ -2217,7 +2217,7 @@
 			<effect abnormal="poison" count="10" name="Poison" stackOrder="3" time="3" val="0"/>
 		</for>
 	</skill>
-	<skill id="799" levels="3" name="Master Ability - Defense">
+	<skill id="799" levels="3" name="Master Ability: Defense">
 		<table name="#pDef">20 40 60</table>
 		<set name="icon" val="icon.skill0142"/>
 		<set name="magicLevel" val="75"/>

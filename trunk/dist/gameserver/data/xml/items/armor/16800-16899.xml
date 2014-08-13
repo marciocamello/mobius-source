@@ -128,7 +128,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16843" name="Vesper Noble Gaiter">
+	<armor id="16843" name="Vesper Noble Gaiters">
 		<set name="crystal_count" value="1675"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -149,7 +149,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16844" name="Vesper Noble Leather Legging">
+	<armor id="16844" name="Vesper Noble Leather Leggings">
 		<set name="crystal_count" value="1256"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -192,7 +192,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16846" name="Vesper Noble Gauntlet">
+	<armor id="16846" name="Vesper Noble Gauntlets">
 		<set name="crystal_count" value="670"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -318,7 +318,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16854" name="Majestic Earring of Friendship " add_name="90 day limited period">
+	<armor id="16854" name="Majestic Earring of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -340,7 +340,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="16855" name="Majestic Necklace of Friendship" add_name="90 day limited period">
+	<armor id="16855" name="Majestic Necklace of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -361,7 +361,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="16856" name="Majestic Ring of Friendship" add_name="90 day limited period">
+	<armor id="16856" name="Majestic Ring of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -383,7 +383,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="16857" name="Friendship Earring of Black Ore" add_name="90 day limited period">
+	<armor id="16857" name="Black Ore Earring of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -404,7 +404,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="16858" name="Friendship Necklace of Black Ore" add_name="90 day limited period">
+	<armor id="16858" name="Black Ore Necklace of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -424,7 +424,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="16859" name="Friendship Ring of Black Ore" add_name="90 day limited period">
+	<armor id="16859" name="Black Ore Ring of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -445,7 +445,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="16860" name="Friendship Earring of Binding" add_name="90 day limited period">
+	<armor id="16860" name="Sealed Earring of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -466,7 +466,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="16861" name="Friendship Necklace of Binding" add_name="90 day limited period">
+	<armor id="16861" name="Sealed Necklace of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -486,7 +486,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="16862" name="Friendship Ring of Binding" add_name="90 day limited period">
+	<armor id="16862" name="Sealed Ring of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -507,7 +507,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="16863" name="Elven Earring of Friendship" add_name="90 day limited period">
+	<armor id="16863" name="Elven Earring of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -528,7 +528,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="16864" name="Elven Earring of Friendship" add_name="90 day limited period">
+	<armor id="16864" name="Elven Necklace of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -548,7 +548,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="16865" name="Elven Ring of Friendship" add_name="90 day limited period">
+	<armor id="16865" name="Elven Ring of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -569,7 +569,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="16866" name="Dark Crystal Robe of Friendship" add_name="90 day limited period">
+	<armor id="16866" name="Dark Crystal Robe of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -591,7 +591,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16867" name="Dark Crystal Helmet of Friendship" add_name="90 day limited period">
+	<armor id="16867" name="Dark Crystal Helmet of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -612,7 +612,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16868" name="Dark Crystal Gloves of Friendship - Robe" add_name="90 day limited period">
+	<armor id="16868" name="Dark Crystal Gloves of Fortune - Robe" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -633,7 +633,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16869" name="Dark Crystal Boots of Friendship - Robe" add_name="90 day limited period">
+	<armor id="16869" name="Dark Crystal Boots of Fortune - Robe" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -654,7 +654,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16871" name="Avadon Robe of Friendship" add_name="90 day limited period">
+	<armor id="16871" name="Avadon Robe of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -676,7 +676,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16872" name="Avadon Circlet of Friendship" add_name="90 day limited period">
+	<armor id="16872" name="Avadon Circlet of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -697,7 +697,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16873" name="Avadon Gloves of Friendship - Robe" add_name="90 day limited period">
+	<armor id="16873" name="Avadon Gloves of Fortune - Robe" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -718,7 +718,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16874" name="Avadon Boots of Friendship - Robe" add_name="90 day limited period">
+	<armor id="16874" name="Avadon Boots of Fortune - Robe" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -739,7 +739,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16876" name="Karmian Tunic of Friendship" add_name="90 day limited period">
+	<armor id="16876" name="Karmian Tunic of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -761,7 +761,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16877" name="Karmian Stockings of Friendship" add_name="90 day limited period">
+	<armor id="16877" name="Karmian Stockings of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -783,7 +783,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16878" name="Karmian Gloves of Friendship" add_name="90 day limited period">
+	<armor id="16878" name="Karmian Gloves of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -804,7 +804,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16879" name="Karmian Boots of Friendship" add_name="90 day limited period">
+	<armor id="16879" name="Karmian Boots of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -825,7 +825,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16880" name="Mithril Tunic of Friendship" add_name="90 day limited period">
+	<armor id="16880" name="Mithril Tunic of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -847,7 +847,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16881" name="Mithril Stockings of Friendship" add_name="90 day limited period">
+	<armor id="16881" name="Mithril Stockings of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -869,7 +869,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16882" name="Elven Mithril Gloves of Friendship" add_name="90 day limited period">
+	<armor id="16882" name="Elven Mithril Gloves of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -890,7 +890,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16883" name="Elven Mithril Boots of Friendship" add_name="90 day limited period">
+	<armor id="16883" name="Elven Mithril Boots of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -911,7 +911,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16884" name="Dark Crystal Leather Armor of Friendship" add_name="90 day limited period">
+	<armor id="16884" name="Dark Crystal Leather Armor of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -932,7 +932,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16885" name="Dark Crystal Leggings of Friendship" add_name="90 day limited period">
+	<armor id="16885" name="Dark Crystal Leggings of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -953,7 +953,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16886" name="Dark Crystal Gloves of Friendship - Light Armor" add_name="90 day limited period">
+	<armor id="16886" name="Dark Crystal Gloves of Fortune - Light Armor" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -974,7 +974,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16887" name="Dark Crystal Boots of Friendship - Light Armor" add_name="90 day limited period">
+	<armor id="16887" name="Dark Crystal Boots of Fortune - Light Armor" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -995,7 +995,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16888" name="Leather Armor of Doom of Friendship" add_name="90 day limited period">
+	<armor id="16888" name="Leather Armor of Doom of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -1016,7 +1016,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16889" name="Doom Helmet of Friendship" add_name="90 day limited period">
+	<armor id="16889" name="Doom Helmet of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -1037,7 +1037,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16890" name="Doom Gloves of Friendship - Heavy Armor" add_name="90 day limited period">
+	<armor id="16890" name="Doom Gloves of Fortune - Heavy Armor" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -1058,7 +1058,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16891" name="Doom Gloves of Friendship - Light Armor" add_name="90 day limited period">
+	<armor id="16891" name="Doom Gloves of Fortune - Light Armor" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -1079,7 +1079,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16892" name="Doom Boots of Friendship - Heavy Armor" add_name="90 day limited period">
+	<armor id="16892" name="Doom Boots of Fortune - Heavy Armor" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -1100,7 +1100,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16893" name="Doom Boots of Friendship - Light Armor" add_name="90 day limited period">
+	<armor id="16893" name="Doom Boots of Fortune - Light Armor" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -1121,7 +1121,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16894" name="Doom Plate Armor of Friendship" add_name="90 day limited period">
+	<armor id="16894" name="Doom Plate Armor of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -1142,7 +1142,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16896" name="Plate Leather Armor of Friendship" add_name="90 day limited period">
+	<armor id="16896" name="Plated Leather Armor of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -1163,7 +1163,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16897" name="Plate Leather Gaiters of Friendship" add_name="90 day limited period">
+	<armor id="16897" name="Plated Leather Gaiters of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -1184,7 +1184,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16898" name="Plate Leather Boots of Friendship" add_name="90 day limited period">
+	<armor id="16898" name="Plated Leather Boots of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -1205,7 +1205,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16899" name="Plate Leather Gloves of Friendship" add_name="90 day limited period">
+	<armor id="16899" name="Plated Leather Gloves of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>

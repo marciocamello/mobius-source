@@ -136,7 +136,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="103" name="Holiday Santa" title="Happy Holidays">
+	<npc id="103" name="Holiday Santa" title="Happy Holidays~">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -182,7 +182,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="104" name="Holiday Santa" title="Happy Holidays">
+	<npc id="104" name="Holiday Santa" title="Happy Holidays~">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -228,7 +228,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="105" name="Holiday Sled" title="Happy Holidays">
+	<npc id="105" name="Holiday Sled" title="Happy Holidays~">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1260,7 +1260,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="129" name="White-Bearded Santa" title="Happy Holidays">
+	<npc id="129" name="White-Bearded Santa" title="Happy Holidays~">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>

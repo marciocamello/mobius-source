@@ -615,7 +615,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31236" name="Bound Bec de Corbin" add_name="Light">
+	<weapon id="31236" name="Bound Bec de Corbin" add_name="Light Armor">
 		<set name="icon" value="icon.weapon_bech_de_corbin_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>

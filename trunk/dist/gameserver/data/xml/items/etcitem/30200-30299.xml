@@ -10,7 +10,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_fruit_cocktail_i00"/>
 	</etcitem>
-	<etcitem id="30275" name="Scroll: 100,000,000 SP">
+	<etcitem id="30275" name="Scroll: 10,000,000 SP">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

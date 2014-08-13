@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="36409" name="Blessed Antharas' Earring (14-day)" add_name="Event">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessory_earring_of_antaras_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="item_quality" value="BLESSED"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="170"/>
+			<add stat="maxMp" order="0x60" value="59"/>
+		</for>
+	</armor>
+	<armor id="36410" name="Blessed Valakas' Necklace (14-day)" add_name="Event">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessory_necklace_of_valakas_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="item_quality" value="BLESSED"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="226"/>
+			<add stat="maxMp" order="0x60" value="79"/>
+		</for>
+	</armor>
+	<armor id="36411" name="Tauti's Ring (14-day)" add_name="Event">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_tauti_ring"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="108"/>
+			<add stat="maxMp" order="0x60" value="38"/>
+		</for>
+	</armor>
+	<armor id="36412" name="Earth Wyrm Heart Ring (14-day)" add_name="Event">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.ring_earthworm_heart"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<for>
+			<add stat="mDef" order="0x10" value="108"/>
+			<add stat="maxMp" order="0x60" value="38"/>
+		</for>
+	</armor>
+	<armor id="36413" name="Single Mesh Armor">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.armor_t2000_ul_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="HEAVY"/>
+		<set name="weight" value="1000"/>
+		<equip>
+			<slot id="NONE"/>
+		</equip>
+	</armor>
+</list>

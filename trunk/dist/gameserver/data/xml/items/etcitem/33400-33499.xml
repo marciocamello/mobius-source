@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="33455" name="Scroll: Enchant Weapon of Destiny (D-grade)">
+	<etcitem id="33455" name="Destiny Scroll: Enchant Weapon (D-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -10,7 +10,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_scroll_of_enchant_weapon_i01"/>
 	</etcitem>
-	<etcitem id="33456" name="Scroll: Enchant Weapon of Destiny (C-grade)">
+	<etcitem id="33456" name="Destiny Scroll: Enchant Weapon (C-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -19,7 +19,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_scroll_of_enchant_weapon_i02"/>
 	</etcitem>
-	<etcitem id="33457" name="Scroll: Enchant Weapon of Destiny (B-grade)">
+	<etcitem id="33457" name="Destiny Scroll: Enchant Weapon (B-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -28,7 +28,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_scroll_of_enchant_weapon_i03"/>
 	</etcitem>
-	<etcitem id="33458" name="Scroll: Enchant Weapon of Destiny (A-grade)">
+	<etcitem id="33458" name="Destiny Scroll: Enchant Weapon (A-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -37,7 +37,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_scroll_of_enchant_weapon_i04"/>
 	</etcitem>
-	<etcitem id="33459" name="Scroll: Enchant Weapon of Destiny (S-grade)">
+	<etcitem id="33459" name="Destiny Scroll: Enchant Weapon (S-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -46,7 +46,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_scroll_of_enchant_weapon_i05"/>
 	</etcitem>
-	<etcitem id="33460" name="Scroll: Enchant Armor of Destiny (D-grade)">
+	<etcitem id="33460" name="Destiny Scroll: Enchant Armor (D-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -55,7 +55,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_scroll_of_enchant_armor_i01"/>
 	</etcitem>
-	<etcitem id="33461" name="Scroll: Enchant Armor of Destiny (C-grade)">
+	<etcitem id="33461" name="Destiny Scroll: Enchant Armor (C-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -64,7 +64,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_scroll_of_enchant_armor_i02"/>
 	</etcitem>
-	<etcitem id="33462" name="Scroll: Enchant Armor of Destiny (B-grade)">
+	<etcitem id="33462" name="Destiny Scroll: Enchant Armor (B-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -73,7 +73,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_scroll_of_enchant_armor_i03"/>
 	</etcitem>
-	<etcitem id="33463" name="Scroll: Enchant Armor of Destiny (A-grade)">
+	<etcitem id="33463" name="Destiny Scroll: Enchant Armor (A-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -82,7 +82,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_scroll_of_enchant_armor_i04"/>
 	</etcitem>
-	<etcitem id="33464" name="Scroll: Enchant Armor of Destiny (S-grade)">
+	<etcitem id="33464" name="Destiny Scroll: Enchant Armor (S-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -174,7 +174,7 @@
 		</skills>
 		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
 	</etcitem>
-	<etcitem id="33478" name="Scroll: Enchant Weapon of Destruction (R-grade)">
+	<etcitem id="33478" name="Destruction Scroll: Enchant Weapon (R-grade)">
 		<set name="icon" value="icon.scroll_of_enchant_weapon_i06"/>
 		<set name="stackable" value="true"/>
 		<set name="sellable" value="false"/>
@@ -187,7 +187,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="33479" name="Scroll: Enchant Armor of Destruction (R-grade)">
+	<etcitem id="33479" name="Destruction Scroll: Enchant Armor (R-grade)">
 		<set name="icon" value="icon.scroll_of_enchant_armor_i06"/>
 		<set name="stackable" value="true"/>
 		<set name="sellable" value="false"/>

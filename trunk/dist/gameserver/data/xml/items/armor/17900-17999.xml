@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="17913" name="Bound Seraph Helmet" add_name="Heavy">
+	<armor id="17913" name="Bound Seraph Helmet" add_name="Heavy Armor">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="38"/>
@@ -22,7 +22,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17914" name="Bound Seraph Breastplate" add_name="Heavy">
+	<armor id="17914" name="Bound Seraph Breastplate" add_name="Heavy Armor">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="102"/>
@@ -43,7 +43,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17915" name="Bound Seraph Gaiters" add_name="Heavy">
+	<armor id="17915" name="Bound Seraph Gaiters" add_name="Heavy Armor">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="63"/>
@@ -64,7 +64,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17916" name="Bound Seraph Gauntlet" add_name="Heavy">
+	<armor id="17916" name="Bound Seraph Gauntlets" add_name="Heavy Armor">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="25"/>
@@ -85,7 +85,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17917" name="Bound Seraph Boots" add_name="Heavy">
+	<armor id="17917" name="Bound Seraph Boots" add_name="Heavy Armor">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="25"/>
@@ -105,7 +105,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17919" name="Bound Seraph Leather Helmet" add_name="Light">
+	<armor id="17919" name="Bound Seraph Leather Helmet" add_name="Light Armor">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="38"/>
@@ -126,7 +126,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17920" name="Bound Seraph Leather Armor" add_name="Light">
+	<armor id="17920" name="Bound Seraph Leather Armor" add_name="Light Armor">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="102"/>
@@ -147,7 +147,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17921" name="Bound Seraph Leather Leggings" add_name="Light">
+	<armor id="17921" name="Bound Seraph Leather Leggings" add_name="Light Armor">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="63"/>
@@ -168,7 +168,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17922" name="Bound Seraph Leather Gloves" add_name="Light">
+	<armor id="17922" name="Bound Seraph Leather Gloves" add_name="Light Armor">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="25"/>
@@ -189,7 +189,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17923" name="Bound Seraph Leather Boots" add_name="Light">
+	<armor id="17923" name="Bound Seraph Leather Boots" add_name="Light Armor">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="25"/>
@@ -394,7 +394,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17947" name="Bound Eternal Helmet" add_name="Heavy">
+	<armor id="17947" name="Bound Eternal Helmet" add_name="Heavy Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="84"/>
@@ -415,7 +415,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17948" name="Bound Eternal Breastplate" add_name="Heavy">
+	<armor id="17948" name="Bound Eternal Breastplate" add_name="Heavy Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="225"/>
@@ -436,7 +436,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17949" name="Bound Eternal Gaiters" add_name="Heavy">
+	<armor id="17949" name="Bound Eternal Gaiters" add_name="Heavy Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="140"/>
@@ -457,7 +457,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17950" name="Bound Eternal Gauntlet" add_name="Heavy">
+	<armor id="17950" name="Bound Eternal Gauntlets" add_name="Heavy Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="56"/>
@@ -478,7 +478,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17951" name="Bound Eternal Boots" add_name="Heavy">
+	<armor id="17951" name="Bound Eternal Boots" add_name="Heavy Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="56"/>
@@ -498,7 +498,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17953" name="Bound Eternal Leather Helmet" add_name="Light">
+	<armor id="17953" name="Bound Eternal Leather Helmet" add_name="Light Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="84"/>
@@ -519,7 +519,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17954" name="Bound Eternal Leather Armor" add_name="Light">
+	<armor id="17954" name="Bound Eternal Leather Armor" add_name="Light Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="225"/>
@@ -540,7 +540,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17955" name="Bound Eternal Leather Leggings" add_name="Light">
+	<armor id="17955" name="Bound Eternal Leather Leggings" add_name="Light Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="140"/>
@@ -561,7 +561,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17956" name="Bound Eternal Leather Gloves" add_name="Light">
+	<armor id="17956" name="Bound Eternal Leather Gloves" add_name="Light Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="56"/>
@@ -582,7 +582,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17957" name="Bound Eternal Leather Boots" add_name="Light">
+	<armor id="17957" name="Bound Eternal Leather Boots" add_name="Light Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="56"/>
@@ -787,7 +787,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17981" name="Blessed Immortal Helmet" add_name="Heavy">
+	<armor id="17981" name="Blessed Immortal Helmet" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="146"/>
@@ -807,7 +807,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17982" name="Blessed Immortal Breastplate" add_name="Heavy">
+	<armor id="17982" name="Blessed Immortal Breastplate" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="244"/>
@@ -827,7 +827,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17983" name="Blessed Immortal Gaiters" add_name="Heavy">
+	<armor id="17983" name="Blessed Immortal Gaiters" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="244"/>
@@ -847,7 +847,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17984" name="Blessed Immortal Gauntlet" add_name="Heavy">
+	<armor id="17984" name="Blessed Immortal Gauntlets" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="97"/>
@@ -867,7 +867,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17985" name="Blessed Immortal Boots" add_name="Heavy">
+	<armor id="17985" name="Blessed Immortal Boots" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="97"/>
@@ -886,7 +886,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17987" name="Blessed Immortal Leather Helmet" add_name="Light">
+	<armor id="17987" name="Blessed Immortal Leather Helmet" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="146"/>
@@ -906,7 +906,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17988" name="Blessed Immortal Leather Armor" add_name="Light">
+	<armor id="17988" name="Blessed Immortal Leather Armor" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="391"/>
@@ -926,7 +926,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17989" name="Blessed Immortal Leather Leggings" add_name="Light">
+	<armor id="17989" name="Blessed Immortal Leather Leggings" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="244"/>
@@ -946,7 +946,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17990" name="Blessed Immortal Leather Gloves" add_name="Light">
+	<armor id="17990" name="Blessed Immortal Leather Gloves" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="97"/>
@@ -966,7 +966,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17991" name="Blessed Immortal Leather Boots" add_name="Light">
+	<armor id="17991" name="Blessed Immortal Leather Boots" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="97"/>

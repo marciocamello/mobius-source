@@ -46,7 +46,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="21733" name="Titan Sword" add_name="Event">
+	<weapon id="21733" name="Lesser Giant's Sword" add_name="Event">
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.weapon_giants_sword_i00"/>
 		<set name="price" value="0"/>
@@ -137,7 +137,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="21737" name="Titan Hammer" add_name="Event">
+	<weapon id="21737" name="Lesser Giant's Hammer" add_name="Event">
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.weapon_giants_hammer_i00"/>
 		<set name="price" value="0"/>
@@ -183,7 +183,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="21739" name="Reinforced Long Bow" add_name="Event">
+	<weapon id="21739" name="Reinforced Longbow" add_name="Event">
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.weapon_strengthening_long_bow_i00"/>
 		<set name="price" value="0"/>
@@ -343,7 +343,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="21754" name="Server Ziggi's Magic Pencil">
+	<weapon id="21754" name="Pencil Corps' Magic Pencil">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.g_pencil_of_servermaster"/>
 		<set name="price" value="0"/>
@@ -366,7 +366,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="21780" name="Imperial Crusader Shield of Friendship" add_name="90-day limited period">
+	<weapon id="21780" name="Imperial Crusader Shield of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.shield_imperial_crusader_shield_i00"/>
 		<set name="price" value="0"/>
@@ -383,7 +383,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="21798" name="Dynasty Shield of Friendship" add_name="90-day limited period">
+	<weapon id="21798" name="Dynasty Shield of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.shield_dynasty_shield_i00"/>
 		<set name="price" value="0"/>

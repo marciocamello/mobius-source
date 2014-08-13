@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="13319" name="O-type Stick (Event)" add_name="30-day limited period">
+	<weapon id="13319" name="O Stick (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -27,7 +27,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13320" name="X-type Stick (Event)" add_name="30-day limited period">
+	<weapon id="13320" name="X Stick (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -53,7 +53,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13321" name="Scissors-type Stick (Event)" add_name="30-day limited period">
+	<weapon id="13321" name="Scissors Stick (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -79,7 +79,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13322" name="Rock-type Stick (Event)" add_name="30-day limited period">
+	<weapon id="13322" name="Rock Stick (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -105,7 +105,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13323" name="Paper-type Stick (Event)" add_name="30-day limited period">
+	<weapon id="13323" name="Paper Stick (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -131,7 +131,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13324" name="Pumpkin Transformation Stick (Event)" add_name="30-day limited period">
+	<weapon id="13324" name="Pumpkin Transformation Stick (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -157,7 +157,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13334" name="O-type Stick (Event)" add_name="7-day Limited Period">
+	<weapon id="13334" name="O Stick (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -183,7 +183,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13335" name="X-type Stick (Event)" add_name="7-day Limited Period">
+	<weapon id="13335" name="X Stick (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -209,7 +209,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13336" name="Scissors-type Stick (Event)" add_name="7-day Limited Period">
+	<weapon id="13336" name="Scissors Stick (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -235,7 +235,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13337" name="Rock-type Stick (Event)" add_name="7-day Limited Period">
+	<weapon id="13337" name="Rock Stick (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -261,7 +261,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13338" name="Paper-type Stick (Event)" add_name="7-day Limited Period">
+	<weapon id="13338" name="Paper Stick (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -287,7 +287,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13339" name="Pumpkin Transformation Stick (Event)" add_name="7-day Limited Period">
+	<weapon id="13339" name="Pumpkin Transformation Stick (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>

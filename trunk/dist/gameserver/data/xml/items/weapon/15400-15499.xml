@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="15403" name="PC Cafe Use - Berserker Blade" add_name="Weapon for PC Cafe Use">
+	<weapon id="15403" name="Player Commendation - Berserker Blade" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.weapon_berserker_blade_i01"/>

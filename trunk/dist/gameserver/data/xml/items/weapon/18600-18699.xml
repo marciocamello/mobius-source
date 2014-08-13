@@ -303,7 +303,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18611" name="Requiem Dual Sword" add_name="Haste">
+	<weapon id="18611" name="Requiem Dualsword" add_name="Haste">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -330,7 +330,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18612" name="Requiem Dual Sword" add_name="Damage">
+	<weapon id="18612" name="Requiem Dualsword" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -357,7 +357,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18613" name="Requiem Dual Sword" add_name="Health">
+	<weapon id="18613" name="Requiem Dualsword" add_name="Health">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -384,7 +384,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18614" name="Requiem Dual Dagger" add_name="Damage">
+	<weapon id="18614" name="Requiem Dual Dagger" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -517,7 +517,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18619" name="Requiem Dual Blunt Weapon" add_name="Damage">
+	<weapon id="18619" name="Requiem Dual Blunt Weapon" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -603,7 +603,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18622" name="Bound Requiem Shaper" add_name="Focus ">
+	<weapon id="18622" name="Bound Requiem Shaper" add_name="Focus">
 		<set name="icon" value="icon.weapon_aspeda_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -748,7 +748,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18627" name="Bound Requiem Slasher" add_name="Damage">
+	<weapon id="18627" name="Bound Requiem Slasher" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_polion_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -916,7 +916,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18633" name="Bound Requiem Fighter" add_name="Damage">
+	<weapon id="18633" name="Bound Requiem Fighter" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_fantasma_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1025,7 +1025,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18637" name="Bound Requiem Stormer" add_name="Damage">
+	<weapon id="18637" name="Bound Requiem Stormer" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_soryu_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1053,7 +1053,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18638" name="Bound Requiem Thrower" add_name="Damage">
+	<weapon id="18638" name="Bound Requiem Thrower" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_grabathus_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1467,7 +1467,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18653" name="Bound Requiem Dual Sword" add_name="Haste">
+	<weapon id="18653" name="Bound Requiem Dualsword" add_name="Haste">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1495,7 +1495,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18654" name="Bound Requiem Dual Sword" add_name="Damage">
+	<weapon id="18654" name="Bound Requiem Dualsword" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1523,7 +1523,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18655" name="Bound Requiem Dual Sword" add_name="Health">
+	<weapon id="18655" name="Bound Requiem Dualsword" add_name="Health">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1551,7 +1551,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18656" name="Bound Requiem Dual Dagger" add_name="Damage">
+	<weapon id="18656" name="Bound Requiem Dual Dagger" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1689,7 +1689,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18661" name="Bound Requiem Dual Blunt Weapon" add_name="Damage">
+	<weapon id="18661" name="Bound Requiem Dual Blunt Weapon" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1774,7 +1774,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18664" name="Blessed Requiem Shaper" add_name="Focus ">
+	<weapon id="18664" name="Blessed Requiem Shaper" add_name="Focus">
 		<set name="icon" value="icon.weapon_aspeda_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -1915,7 +1915,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18669" name="Blessed Requiem Slasher" add_name="Damage">
+	<weapon id="18669" name="Blessed Requiem Slasher" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_polion_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -2083,7 +2083,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18675" name="Blessed Requiem Fighter" add_name="Damage">
+	<weapon id="18675" name="Blessed Requiem Fighter" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_fantasma_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -2195,7 +2195,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18679" name="Blessed Requiem Stormer" add_name="Damage">
+	<weapon id="18679" name="Blessed Requiem Stormer" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_soryu_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -2223,7 +2223,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18680" name="Blessed Requiem Thrower" add_name="Damage">
+	<weapon id="18680" name="Blessed Requiem Thrower" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_grabathus_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -2652,7 +2652,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18695" name="Blessed Requiem Dual Sword" add_name="Haste">
+	<weapon id="18695" name="Blessed Requiem Dualsword" add_name="Haste">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -2680,7 +2680,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18696" name="Blessed Requiem Dual Sword" add_name="Damage">
+	<weapon id="18696" name="Blessed Requiem Dualsword" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -2708,7 +2708,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18697" name="Blessed Requiem Dual Sword" add_name="Health">
+	<weapon id="18697" name="Blessed Requiem Dualsword" add_name="Health">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -2736,7 +2736,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18698" name="Blessed Requiem Dual Dagger" add_name="Damage">
+	<weapon id="18698" name="Blessed Requiem Dual Dagger" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>

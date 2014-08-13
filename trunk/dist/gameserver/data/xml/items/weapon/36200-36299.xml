@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="36200" name="NoItemName">
+	<weapon id="36200" name="Shooter Sealed with Heroes' Power">
 		<set name="icon" value="icon.weapon_infinity_shooter_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="CROSSBOW"/>
@@ -20,7 +20,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36201" name="NoItemName">
+	<weapon id="36201" name="Buster Sealed with Heroes' Power">
 		<set name="icon" value="icon.weapon_infinity_sword_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="SWORD"/>
@@ -39,7 +39,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36202" name="NoItemName">
+	<weapon id="36202" name="Caster Sealed with Heroes' Power">
 		<set name="icon" value="icon.weapon_the_mace_of_hero_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="BLUNT"/>
@@ -58,7 +58,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36203" name="NoItemName">
+	<weapon id="36203" name="Retributer Sealed with Heroes' Power">
 		<set name="icon" value="icon.weapon_the_staff_of_hero_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="BLUNT"/>
@@ -77,7 +77,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36204" name="NoItemName">
+	<weapon id="36204" name="Dualsword Sealed with Heroes' Power">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="DUAL"/>
@@ -96,7 +96,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36205" name="NoItemName">
+	<weapon id="36205" name="Dual Dagger Sealed with Heroes' Power">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="DUALDAGGER"/>
@@ -115,7 +115,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36206" name="NoItemName">
+	<weapon id="36206" name="Dual Blunt Sealed with Heroes' Power">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="DUALBLUNT"/>
@@ -134,7 +134,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36207" name="NoItemName">
+	<weapon id="36207" name="Shaper Imbued with Heroes' Power" add_name="2-hour">
 		<set name="icon" value="icon.weapon_the_dagger_of_hero_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="DAGGER"/>
@@ -153,7 +153,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36208" name="NoItemName">
+	<weapon id="36208" name="Cutter Imbued with Heroes' Power" add_name="2-hour">
 		<set name="icon" value="icon.weapon_the_sword_of_hero_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="SWORD"/>
@@ -172,7 +172,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36209" name="NoItemName">
+	<weapon id="36209" name="Slasher Imbued with Heroes' Power" add_name="2-hour">
 		<set name="icon" value="icon.weapon_the_two_handed_sword_of_hero_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="SWORD"/>
@@ -191,7 +191,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36210" name="NoItemName">
+	<weapon id="36210" name="Avenger Imbued with Heroes' Power" add_name="2-hour">
 		<set name="icon" value="icon.weapon_the_axe_of_hero_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="BLUNT"/>
@@ -210,7 +210,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36211" name="NoItemName">
+	<weapon id="36211" name="Fighter Imbued with Heroes' Power" add_name="2-hour">
 		<set name="icon" value="icon.weapon_the_fist_of_hero_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="DUALFIST"/>
@@ -229,7 +229,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36212" name="NoItemName">
+	<weapon id="36212" name="Stormer Imbued with Heroes' Power" add_name="2-hour">
 		<set name="icon" value="icon.weapon_the_pole_of_hero_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="POLE"/>
@@ -248,7 +248,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36213" name="NoItemName">
+	<weapon id="36213" name="Thrower Imbued with Heroes' Power" add_name="2-hour">
 		<set name="icon" value="icon.weapon_the_bow_of_hero_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="BOW"/>
@@ -267,7 +267,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36214" name="NoItemName">
+	<weapon id="36214" name="Shooter Imbued with Heroes' Power" add_name="2-hour">
 		<set name="icon" value="icon.weapon_infinity_shooter_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="CROSSBOW"/>
@@ -286,7 +286,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36215" name="NoItemName">
+	<weapon id="36215" name="Buster Imbued with Heroes' Power" add_name="2-hour">
 		<set name="icon" value="icon.weapon_infinity_sword_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="SWORD"/>
@@ -305,7 +305,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36216" name="NoItemName">
+	<weapon id="36216" name="Caster Imbued with Heroes' Power" add_name="2-hour">
 		<set name="icon" value="icon.weapon_the_mace_of_hero_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="BLUNT"/>
@@ -324,7 +324,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36217" name="NoItemName">
+	<weapon id="36217" name="Retributer Imbued with Heroes' Power" add_name="2-hour">
 		<set name="icon" value="icon.weapon_the_staff_of_hero_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="BLUNT"/>
@@ -343,7 +343,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36218" name="NoItemName">
+	<weapon id="36218" name="Dualsword Imbued with Heroes' Power" add_name="2-hour">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="DUAL"/>
@@ -362,7 +362,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36219" name="NoItemName">
+	<weapon id="36219" name="Dual Dagger Imbued with Heroes' Power" add_name="2-hour">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="DUALDAGGER"/>
@@ -381,7 +381,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36220" name="NoItemName">
+	<weapon id="36220" name="Dual Blunt Imbued with Heroes' Power" add_name="2-hour">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="DUALBLUNT"/>

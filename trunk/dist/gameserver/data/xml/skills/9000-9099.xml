@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="9000" levels="1" name="PC room private weapon strengthening order sheet (D-Grade)">
+	<skill id="9000" levels="1" name="Player Commendation - Scroll: Enchant Armor (D-grade)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9001" levels="1" name="PC room private armor strengthening order sheet (C-Grade)">
+	<skill id="9001" levels="1" name="Player Commendation - Scroll: Enchant Armor (C-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -15,7 +15,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9002" levels="1" name="PC room private armor strengthening order sheet (B-Grade)">
+	<skill id="9002" levels="1" name="Player Commendation - Scroll: Enchant Armor (B-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -23,7 +23,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9003" levels="1" name="PC room private weapon strengthening order sheet (A-Grade)">
+	<skill id="9003" levels="1" name="Player Commendation - Scroll: Enchant Armor (A-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -31,7 +31,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9004" levels="1" name="PC room private armor strengthening order sheet -S grade">
+	<skill id="9004" levels="1" name="Player Commendation - Scroll: Enchant Armor (S-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -39,7 +39,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9005" levels="1" name="PC room private blessed weapon strengthening order sheet (D-Grade)">
+	<skill id="9005" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (D-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -47,7 +47,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9006" levels="1" name="PC room private blessed weapon strengthening order sheet (C-Grade)">
+	<skill id="9006" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (C-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -55,7 +55,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9007" levels="1" name="PC room private blessed weapon strengthening order sheet (B-Grade)">
+	<skill id="9007" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (B-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -63,7 +63,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9008" levels="1" name="PC room private blessed weapon strengthening order sheet (A-Grade)">
+	<skill id="9008" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (A-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -71,7 +71,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9009" levels="1" name="PC room private blessed weapon strengthening order sheet (S-Grade)">
+	<skill id="9009" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (S-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -79,7 +79,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9010" levels="1" name="Cool air cannon">
+	<skill id="9010" levels="1" name="Cool Pack">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill1184"/>
 		<set name="coolTime" val="700"/>
@@ -236,7 +236,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9027" levels="1" name="PC lottery">
+	<skill id="9027" levels="1" name="Player Commendation Instant Lottery Ticket">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="10000"/>
@@ -245,7 +245,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9028" levels="1" name="Cool air cannon of fortune">
+	<skill id="9028" levels="1" name="Lucky Cool Pack">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill1184"/>
 		<set name="coolTime" val="700"/>
@@ -310,7 +310,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9034" levels="1" name="Vitality Belt Enchant Scroll">
+	<skill id="9034" levels="1" name="Scroll: Enchant Vitality Belt">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -372,7 +372,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9041" levels="1" name="Sixth Anniversary Cake">
+	<skill id="9041" levels="1" name="6th Anniversary Cake">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.event_six_party_cake_i00"/>
 		<set name="reuseDelay" val="43200000"/>
@@ -583,7 +583,7 @@
 			</or>
 		</cond>
 	</skill>
-	<skill id="9053" levels="1" name="S Grade Golden Spice">
+	<skill id="9053" levels="1" name="Golden Spice (S-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="1500"/>
@@ -606,7 +606,7 @@
 			</or>
 		</cond>
 	</skill>
-	<skill id="9054" levels="1" name="S Grade Crystal Spice">
+	<skill id="9054" levels="1" name="Crystal Spice (S-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="1500"/>
@@ -647,7 +647,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9057" levels="1" name="Freezing Core">
+	<skill id="9057" levels="1" name="Frozen Core">
 		<set name="icon" val="icon.skill1418"/>
 		<set name="reuseDelay" val="1200000"/>
 		<set name="magicLevel" val="1"/>
@@ -671,7 +671,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9058" levels="1" name="Black Freezing Core">
+	<skill id="9058" levels="1" name="Black Frozen Core">
 		<set name="icon" val="icon.skill1418"/>
 		<set name="reuseDelay" val="1200000"/>
 		<set name="magicLevel" val="1"/>
@@ -706,7 +706,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9060" levels="1" name="Maguen Machine">
+	<skill id="9060" levels="1" name="Maguen Plasma Collector">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="9000"/>
@@ -721,7 +721,7 @@
 			<target mobId="18839"/>
 		</cond>
 	</skill>
-	<skill id="9061" levels="1" name="Uldie Summon Scroll">
+	<skill id="9061" levels="1" name="Scroll: Summon Uldie">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="10000"/>
@@ -732,7 +732,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9062" levels="1" name="Belldandy Summon Scroll">
+	<skill id="9062" levels="1" name="Scroll: Summon Belldandy">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="10000"/>
@@ -743,7 +743,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9063" levels="1" name="Skooldie Summon Scroll">
+	<skill id="9063" levels="1" name="Scroll: Summon Skooldie">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="10000"/>
@@ -754,7 +754,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9064" levels="1" name="Halloween Toy Chest">
+	<skill id="9064" levels="1" name="Halloween Toy Box">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -763,7 +763,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9065" levels="1" name="Shiny Halloween Toy Chest">
+	<skill id="9065" levels="1" name="Shiny Halloween Toy Box">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -772,7 +772,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9066" levels="1" name="Scroll of Transformation Box">
+	<skill id="9066" levels="1" name="Transformation Scroll Pack">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -813,7 +813,7 @@
 			<effect count="1" name="Vitality" stackType="vitalityRegen" stackOrder="1" time="#effectTime" val="0"/>
 		</for>
 	</skill>
-	<skill id="9069" levels="1" name="10,000 SP scroll">
+	<skill id="9069" levels="1" name="Scroll: 10,000 SP">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -831,7 +831,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9071" levels="1" name="Halloween Pumpkin - event">
+	<skill id="9071" levels="1" name="Halloween Pumpkin (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -849,13 +849,13 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9073" levels="1" name="Energy of Vampiric Rage">
+	<skill id="9073" levels="1" name="Energy of HP Drain">
 		<set name="icon" val="icon.xel_mahun_vampiric_rage_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9074" levels="1" name="Salmon Soup">
+	<skill id="9074" levels="1" name="Salmon Porridge">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="600000"/>
@@ -881,7 +881,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9076" levels="1" name="Secret Door Key">
+	<skill id="9076" levels="1" name="Secret Gate Key">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -893,7 +893,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9078" levels="1" name="Rainbow Springs Potion">
+	<skill id="9078" levels="1" name="Hot Springs Recovery Potion">
 		<set name="itemConsumeId" val="17018"/>
 		<set name="itemConsumeCount" val="1"/>
 		<set name="icon" val="icon.etc_cp_potion_i01"/>
@@ -912,7 +912,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9079" levels="1" name="Santa's Buff Scroll">
+	<skill id="9079" levels="1" name="Scroll: Santa's Buff">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.mysterious_wedding_i00"/>
 		<set name="reuseDelay" val="10000"/>
@@ -922,7 +922,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9080" levels="1" name="Santa's Sock">
+	<skill id="9080" levels="1" name="Santa's Stockings">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="10000"/>
@@ -940,7 +940,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9082" levels="1" name="White Christmas Petition">
+	<skill id="9082" levels="1" name="White Winter Wish Candle">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_candle_white_i00"/>
 		<set name="reuseDelay" val="1800000"/>
@@ -951,7 +951,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9083" levels="1" name="Holiday Cake - event">
+	<skill id="9083" levels="1" name="Holiday Cake (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.event_six_party_cake_i00"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -960,7 +960,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9084" levels="1" name="White Christmas Petition - event">
+	<skill id="9084" levels="1" name="White Winter Wish Candle (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_candle_white_i00"/>
 		<set name="reuseDelay" val="1800000"/>
@@ -971,7 +971,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9085" levels="1" name="Santa Claus's Gift">
+	<skill id="9085" levels="1" name="Santa' Gift">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -980,7 +980,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9086" levels="1" name="Santa - Potion of Will">
+	<skill id="9086" levels="1" name="Santa - CP Potion">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -996,7 +996,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9088" levels="1" name="Cupid's Arrow">
+	<skill id="9088" levels="1" name="Cupid's Cure">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill3260"/>
 		<set name="reuseDelay" val="1000"/>
@@ -1009,7 +1009,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9089" levels="1" name="Cupid's Major Cure">
+	<skill id="9089" levels="1" name="Cupid's Enhanced Cure">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill3260"/>
 		<set name="reuseDelay" val="4000"/>
@@ -1082,7 +1082,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9096" levels="1" name="Event - White Baby Tiger Scroll">
+	<skill id="9096" levels="1" name="Event - Scroll: Summon Baby White Tiger">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
 		<set name="reuseDelay" val="10000"/>
@@ -1093,7 +1093,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9097" levels="1" name="Event - White Baby King-Tiger Scroll">
+	<skill id="9097" levels="1" name="Event - Scroll: Summon Baby White Tiger Captain">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
 		<set name="reuseDelay" val="10000"/>
@@ -1104,7 +1104,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9098" levels="1" name="Event - Sad White Baby Tiger Scroll">
+	<skill id="9098" levels="1" name="Event - Scroll: Summon Gloomy Baby White Tiger">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -1113,7 +1113,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9099" levels="1" name="Event - Sad White Baby King-Tiger Scroll">
+	<skill id="9099" levels="1" name="Event - Scroll: Summon Gloomy Baby White Tiger Captain">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
 		<set name="magicLevel" val="1"/>

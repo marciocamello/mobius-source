@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="11500" name="Sealed Imperial Crusader Gauntlet">
+	<armor id="11500" name="Sealed Imperial Crusader Gauntlets">
 		<set name="crystal_count" value="153"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -94,7 +94,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="11506" name="Imperial Crusader Gauntlet">
+	<armor id="11506" name="Imperial Crusader Gauntlets">
 		<set name="crystal_count" value="153"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -216,7 +216,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="11513" name="Dynasty Gauntlet">
+	<armor id="11513" name="Dynasty Gauntlets">
 		<set name="crystal_count" value="293"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -725,7 +725,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="11540" name="Dynasty Jewel Leather Mail">
+	<armor id="11540" name="Dynasty Jewel Leather Armor">
 		<set name="crystal_count" value="1212"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -746,7 +746,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="11541" name="Dynasty Jewel Leather Mail">
+	<armor id="11541" name="Dynasty Jewel Leather Armor">
 		<set name="crystal_count" value="1212"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -764,7 +764,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="11542" name="Dynasty Jewel Leather Mail">
+	<armor id="11542" name="Dynasty Jewel Leather Armor">
 		<set name="crystal_count" value="1212"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -782,7 +782,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="11543" name="Dynasty Jewel Leather Mail">
+	<armor id="11543" name="Dynasty Jewel Leather Armor">
 		<set name="crystal_count" value="1212"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -800,7 +800,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="11544" name="Dynasty Jewel Leather Mail">
+	<armor id="11544" name="Dynasty Jewel Leather Armor">
 		<set name="crystal_count" value="1212"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -818,7 +818,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="11545" name="Dynasty Jewel Leather Mail">
+	<armor id="11545" name="Dynasty Jewel Leather Armor">
 		<set name="crystal_count" value="1212"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -836,7 +836,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="11546" name="Dynasty Jewel Leather Mail">
+	<armor id="11546" name="Dynasty Jewel Leather Armor">
 		<set name="crystal_count" value="1212"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -1106,7 +1106,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="11560" name="Sealed Dynasty Gauntlet">
+	<armor id="11560" name="Sealed Dynasty Gauntlets">
 		<set name="crystal_count" value="293"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -1422,7 +1422,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="11578" name="Earring of Black Ore">
+	<armor id="11578" name="Black Ore Earring">
 		<set name="crystal_count" value="95"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1443,7 +1443,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="11579" name="Necklace of Black Ore">
+	<armor id="11579" name="Black Ore Necklace">
 		<set name="crystal_count" value="126"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1463,7 +1463,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="11580" name="Ring of Black Ore">
+	<armor id="11580" name="Black Ore Ring">
 		<set name="crystal_count" value="63"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>

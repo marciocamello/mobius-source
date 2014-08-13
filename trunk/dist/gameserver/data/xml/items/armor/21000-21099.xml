@@ -84,7 +84,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="21042" name="Flag Hat" add_name="7-day limited period">
+	<armor id="21042" name="Flag Hat" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_flag_cap_i00"/>
@@ -134,7 +134,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="21046" name="Agathion Seal Bracelet - Granny Tiger" add_name="7 day limited period">
+	<armor id="21046" name="Agathion - Granny Tiger" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_tiger_grandma_i00"/>
@@ -154,7 +154,7 @@
 			<skill id="23217" level="1"/>
 		</skills>
 	</armor>
-	<armor id="21047" name="Agathion Seal Bracelet - Granny Tiger">
+	<armor id="21047" name="Agathion - Granny Tiger">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_tiger_grandma_i00"/>
@@ -172,7 +172,7 @@
 			<skill id="23217" level="1"/>
 		</skills>
 	</armor>
-	<armor id="21048" name="Agathion Seal Bracelet - Flower Fairy Spirit">
+	<armor id="21048" name="Agathion - Flower Fairy Spirit">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_flower_i00"/>
@@ -190,7 +190,7 @@
 			<skill id="23218" level="1"/>
 		</skills>
 	</armor>
-	<armor id="21049" name="Agathion Seal Bracelet - Cheerleader Orodriel" add_name="7 day limited period">
+	<armor id="21049" name="Agathion - Cheerleader Orodriel" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_cheer_FElf_i00"/>
@@ -210,7 +210,7 @@
 			<skill id="23220" level="1"/>
 		</skills>
 	</armor>
-	<armor id="21050" name="Agathion Seal Bracelet - Cheerleader Orodriel">
+	<armor id="21050" name="Agathion - Cheerleader Orodriel">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_cheer_FElf_i00"/>
@@ -228,7 +228,7 @@
 			<skill id="23220" level="1"/>
 		</skills>
 	</armor>
-	<armor id="21051" name="Agathion Seal Bracelet - Cheerleader Lana" add_name="7 day limited period">
+	<armor id="21051" name="Agathion - Cheerleader Lanya" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_cheer_FFighter_i00"/>
@@ -248,7 +248,7 @@
 			<skill id="23222" level="1"/>
 		</skills>
 	</armor>
-	<armor id="21052" name="Agathion Seal Bracelet - Cheerleader Lana">
+	<armor id="21052" name="Agathion - Cheerleader Lanya">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_cheer_FFighter_i00"/>
@@ -266,7 +266,7 @@
 			<skill id="23222" level="1"/>
 		</skills>
 	</armor>
-	<armor id="21053" name="Agathion Seal Bracelet - Cheerleader Naonin" add_name="7 day limited period">
+	<armor id="21053" name="Agathion - Cheerleader Naonin" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_cheer_FKamael_i00"/>
@@ -286,7 +286,7 @@
 			<skill id="23224" level="1"/>
 		</skills>
 	</armor>
-	<armor id="21054" name="Agathion Seal Bracelet - Cheerleader Naonin">
+	<armor id="21054" name="Agathion - Cheerleader Naonin">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_cheer_FKamael_i00"/>
@@ -304,7 +304,7 @@
 			<skill id="23224" level="1"/>
 		</skills>
 	</armor>
-	<armor id="21055" name="Agathion Seal Bracelet - Cheerleader Mortia" add_name="7 day limited period">
+	<armor id="21055" name="Agathion - Cheerleader Mortia" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_cheer_FDarkelf_i00"/>
@@ -324,7 +324,7 @@
 			<skill id="23226" level="1"/>
 		</skills>
 	</armor>
-	<armor id="21056" name="Agathion Seal Bracelet - Cheerleader Mortia">
+	<armor id="21056" name="Agathion - Cheerleader Mortia">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_cheer_FDarkelf_i00"/>
@@ -342,7 +342,7 @@
 			<skill id="23226" level="1"/>
 		</skills>
 	</armor>
-	<armor id="21057" name="Agathion Seal Bracelet - Cheerleader Kaurin" add_name="7 day limited period">
+	<armor id="21057" name="Agathion - Cheerleader Kaurin" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_cheer_FOrc_i00"/>
@@ -362,7 +362,7 @@
 			<skill id="23228" level="1"/>
 		</skills>
 	</armor>
-	<armor id="21058" name="Agathion Seal Bracelet - Cheerleader Kaurin">
+	<armor id="21058" name="Agathion - Cheerleader Kaurin">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_cheer_FOrc_i00"/>
@@ -380,7 +380,7 @@
 			<skill id="23228" level="1"/>
 		</skills>
 	</armor>
-	<armor id="21059" name="Agathion Seal Bracelet - Cheerleader Meruril" add_name="7 day limited period">
+	<armor id="21059" name="Agathion - Cheerleader Meruril" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_cheer_FDwarf_i00"/>
@@ -400,7 +400,7 @@
 			<skill id="23230" level="1"/>
 		</skills>
 	</armor>
-	<armor id="21060" name="Agathion Seal Bracelet - Cheerleader Meruril">
+	<armor id="21060" name="Agathion - Cheerleader Meruril">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_cheer_FDwarf_i00"/>
@@ -418,7 +418,7 @@
 			<skill id="23230" level="1"/>
 		</skills>
 	</armor>
-	<armor id="21061" name="Agathion Seal Bracelet - Handy" add_name="7 day limited period">
+	<armor id="21061" name="Agathion - Handy" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_block_mother_i00"/>
@@ -438,7 +438,7 @@
 			<skill id="23232" level="1"/>
 		</skills>
 	</armor>
-	<armor id="21062" name="Agathion Seal Bracelet - Handy">
+	<armor id="21062" name="Agathion - Handy">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_block_mother_i00"/>
@@ -456,7 +456,7 @@
 			<skill id="23232" level="1"/>
 		</skills>
 	</armor>
-	<armor id="21088" name="Jet Bike Mounting Bracelet">
+	<armor id="21088" name="Mount - Jet Bike�">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_z_bike_i00"/>

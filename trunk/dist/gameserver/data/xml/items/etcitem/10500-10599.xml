@@ -583,7 +583,7 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="10591" name="Forgotten Scroll: Spirit of the Phoenix/Flame Icon">
+	<etcitem id="10591" name="Forgotten Scroll: Spirit of the Phoenix">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_shield_i01"/>
@@ -603,7 +603,7 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="10593" name="Forgotten Scroll: Pain of Shilen / Spirit of Shilen">
+	<etcitem id="10593" name="Forgotten Scroll: Pain of Shilen">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_shield_i01"/>

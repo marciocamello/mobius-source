@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="13132" levels="4" name="Set Effect - Twilight Light Armor 2 Piece (strong)">
+	<skill id="13132" levels="4" name="Set Effect - Twilight Light Armor 5 Piece (Enchant Type)">
 		<table name="#Res">0 7 7 7</table>
 		<table name="#maxHp">0 0 487 487</table>
 		<table name="#cAtk">0 0 0 242</table>
@@ -23,7 +23,7 @@
 			<add order="0x40" stat="defenceEarth" val="#def"/>
 		</for>
 	</skill>
-	<skill id="13138" levels="1" name="Atk. Spd. increasing talisman">
+	<skill id="13138" levels="1" name="Haste Talisman">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -31,7 +31,7 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.02"/>
 		</for>
 	</skill>
-	<skill id="13139" levels="1" name="P. Atk. increasing talisman">
+	<skill id="13139" levels="1" name="P. Atk. Talisman">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -39,7 +39,7 @@
 			<mul order="0x30" stat="pAtk" val="1.02"/>
 		</for>
 	</skill>
-	<skill id="13140" levels="1" name="P. Def. increasing talisman">
+	<skill id="13140" levels="1" name="P. Def. Talisman">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -47,7 +47,7 @@
 			<mul order="0x30" stat="pDef" val="1.03"/>
 		</for>
 	</skill>
-	<skill id="13141" levels="1" name="Casting Spd. increasing talisman">
+	<skill id="13141" levels="1" name="Casting Spd. Talisman">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -55,7 +55,7 @@
 			<mul order="0x30" stat="mAtkSpd" val="1.02"/>
 		</for>
 	</skill>
-	<skill id="13142" levels="4" name="M. Def. increasing talisman">
+	<skill id="13142" levels="4" name="M. Def. Talisman">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -63,7 +63,7 @@
 			<mul order="0x30" stat="mDef" val="1.03"/>
 		</for>
 	</skill>
-	<skill id="13143" levels="4" name="M. Atk. increasing talisman">
+	<skill id="13143" levels="4" name="M. Atk. Talisman">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -272,7 +272,7 @@
 			<mul order="0x30" stat="mAtkSpd" val="1.15"/>
 		</for>
 	</skill>
-	<skill id="13157" levels="1" name="Special Ability: Infinity Dual Sword">
+	<skill id="13157" levels="1" name="Special Ability: Infinity Dualsword">
 		<set name="icon" val="icon.weapon_r_dualsword_i00"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>

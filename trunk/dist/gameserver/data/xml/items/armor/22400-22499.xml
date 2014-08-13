@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="22400" name="Agathion Seal Bracelet - Valakas" add_name="Lv 7">
+	<armor id="22400" name="Agathion - Valakas" add_name="Lv. 7">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -45,7 +45,7 @@
 		</equip>
 		<set name="ex_type" value="BRACELET"/>
 	</armor>
-	<armor id="22477" name="Santa Girl's Cloak" add_name="1-Day Limited Period (Event)">
+	<armor id="22477" name="Santa Girl's Cloak" add_name="1-day (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys3.icon.g_christmas_cloak"/>
 		<set name="type" value="NONE"/>
@@ -60,7 +60,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="22478" name="Santa Girl's Cloak" add_name="7-Day Limited Period (event)">
+	<armor id="22478" name="Santa Girl's Cloak" add_name="7-day (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys3.icon.g_christmas_cloak"/>
 		<set name="type" value="NONE"/>
@@ -75,7 +75,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="22479" name="Santa Girl's Cloak" add_name="30-Day Limited Period (event)">
+	<armor id="22479" name="Santa Girl's Cloak" add_name="30-day (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys3.icon.g_christmas_cloak"/>
 		<set name="type" value="NONE"/>
@@ -105,7 +105,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="22481" name="Improved Bronze Bracelet" add_name="1-Day Limited Period">
+	<armor id="22481" name="Improved Bronze Bracelet" add_name="1-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_rbracelet_b_i01"/>
 		<set name="type" value="NONE"/>
@@ -115,7 +115,7 @@
 		</equip>
 		<set name="ex_type" value="BRACELET"/>
 	</armor>
-	<armor id="22482" name="Improved Bronze Bracelet" add_name="15-Day Limited Period">
+	<armor id="22482" name="Improved Bronze Bracelet" add_name="15-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_rbracelet_b_i01"/>
 		<set name="type" value="NONE"/>
@@ -125,7 +125,7 @@
 		</equip>
 		<set name="ex_type" value="BRACELET"/>
 	</armor>
-	<armor id="22483" name="Improved Bronze Bracelet" add_name="30-Day Limited Period">
+	<armor id="22483" name="Improved Bronze Bracelet" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_rbracelet_b_i01"/>
 		<set name="type" value="NONE"/>
@@ -135,7 +135,7 @@
 		</equip>
 		<set name="ex_type" value="BRACELET"/>
 	</armor>
-	<armor id="22484" name="Improved Bronze Bracelet" add_name="90-Day Limited Period">
+	<armor id="22484" name="Improved Bronze Bracelet" add_name="90-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_rbracelet_b_i01"/>
 		<set name="type" value="NONE"/>
@@ -145,7 +145,7 @@
 		</equip>
 		<set name="ex_type" value="BRACELET"/>
 	</armor>
-	<armor id="22485" name="Improved Steel Bracelet" add_name="1-Day Limited Period">
+	<armor id="22485" name="Improved Steel Bracelet" add_name="1-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_rbracelet_a_i02"/>
 		<set name="type" value="NONE"/>
@@ -155,7 +155,7 @@
 		</equip>
 		<set name="ex_type" value="BRACELET"/>
 	</armor>
-	<armor id="22486" name="Improved Steel Bracelet" add_name="15-Day Limited Period">
+	<armor id="22486" name="Improved Steel Bracelet" add_name="15-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_rbracelet_a_i02"/>
 		<set name="type" value="NONE"/>
@@ -165,7 +165,7 @@
 		</equip>
 		<set name="ex_type" value="BRACELET"/>
 	</armor>
-	<armor id="22487" name="Improved Steel Bracelet" add_name="30-Day Limited Period">
+	<armor id="22487" name="Improved Steel Bracelet" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_rbracelet_a_i02"/>
 		<set name="type" value="NONE"/>
@@ -175,7 +175,7 @@
 		</equip>
 		<set name="ex_type" value="BRACELET"/>
 	</armor>
-	<armor id="22488" name="Improved Steel Bracelet" add_name="90-Day Limited Period">
+	<armor id="22488" name="Improved Steel Bracelet" add_name="90-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_rbracelet_a_i02"/>
 		<set name="type" value="NONE"/>
@@ -185,7 +185,7 @@
 		</equip>
 		<set name="ex_type" value="BRACELET"/>
 	</armor>
-	<armor id="22489" name="Improved Mithril Bracelet" add_name="1-Day Limited Period">
+	<armor id="22489" name="Improved Mithril Bracelet" add_name="1-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_rbracelet_s_i03"/>
 		<set name="type" value="NONE"/>
@@ -195,7 +195,7 @@
 		</equip>
 		<set name="ex_type" value="BRACELET"/>
 	</armor>
-	<armor id="22490" name="Improved Mithril Bracelet" add_name="15-Day Limited Period">
+	<armor id="22490" name="Improved Mithril Bracelet" add_name="15-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_rbracelet_s_i03"/>
 		<set name="type" value="NONE"/>
@@ -205,7 +205,7 @@
 		</equip>
 		<set name="ex_type" value="BRACELET"/>
 	</armor>
-	<armor id="22491" name="Improved Mithril Bracelet" add_name="30-Day Limited Period">
+	<armor id="22491" name="Improved Mithril Bracelet" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_rbracelet_s_i03"/>
 		<set name="type" value="NONE"/>
@@ -215,7 +215,7 @@
 		</equip>
 		<set name="ex_type" value="BRACELET"/>
 	</armor>
-	<armor id="22492" name="Improved Mithril Bracelet" add_name="90-Day Limited Period">
+	<armor id="22492" name="Improved Mithril Bracelet" add_name="90-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_rbracelet_s_i03"/>
 		<set name="type" value="NONE"/>

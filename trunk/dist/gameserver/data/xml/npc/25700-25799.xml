@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="25700" name="Glakias" title="Archery Knight Captain">
+	<npc id="25700" name="Glakias" title="Ice Knight Captain">
 		<set name="baseSTR" value="60"/>
 		<set name="baseCON" value="57"/>
 		<set name="baseDEX" value="73"/>
@@ -2550,7 +2550,7 @@
 			<skill id="14043" level="1"/>
 		</skills>
 	</npc>
-	<npc id="25737" name="Fairy Attacker" title="Faithful Servant">
+	<npc id="25737" name="Fairy Knight" title="Faithful Servant">
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -3356,7 +3356,7 @@
 			<skill id="4416" level="13"/>
 		</skills>
 	</npc>
-	<npc id="25750" name="Fairy Attacker" title="Faithful Servant">
+	<npc id="25750" name="Fairy Knight" title="Faithful Servant">
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -4800,7 +4800,7 @@
 			<minion npc_id="25772" count="2"/>
 		</minions>
 	</npc>
-	<npc id="25771" name="Noctum" title="Tomb Manager">
+	<npc id="25771" name="Noctum" title="Gravekeeper">
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>

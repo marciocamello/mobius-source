@@ -354,7 +354,7 @@
 			<slot id="NONE"/>
 		</equip>
 	</armor>
-	<armor id="23152" name="Soul Avatar - Iken">
+	<armor id="23152" name="Soul Avatar - Lancet">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_aga_local2009_b_i00"/>
 		<set name="price" value="0"/>
@@ -364,7 +364,7 @@
 			<slot id="NONE"/>
 		</equip>
 	</armor>
-	<armor id="23153" name="Soul Avatar - Lanya">
+	<armor id="23153" name="Soul Avatar - Liposa">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_aga_local2009_a_i00"/>
 		<set name="price" value="0"/>
@@ -374,7 +374,7 @@
 			<slot id="NONE"/>
 		</equip>
 	</armor>
-	<armor id="23154" name="Soul Avatar - Gnosian">
+	<armor id="23154" name="Soul Avatar - Velarin">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_aga_local2009_f_i00"/>
 		<set name="price" value="0"/>
@@ -384,7 +384,7 @@
 			<slot id="NONE"/>
 		</equip>
 	</armor>
-	<armor id="23155" name="Soul Avatar - Orodriel">
+	<armor id="23155" name="Soul Avatar - Dulcinel">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_aga_local2009_e_i00"/>
 		<set name="price" value="0"/>
@@ -394,7 +394,7 @@
 			<slot id="NONE"/>
 		</equip>
 	</armor>
-	<armor id="23156" name="Soul Avatar - Lakinos">
+	<armor id="23156" name="Soul Avatar - Chimeros">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_aga_local2009_d_i00"/>
 		<set name="price" value="0"/>
@@ -404,7 +404,7 @@
 			<slot id="NONE"/>
 		</equip>
 	</armor>
-	<armor id="23157" name="Soul Avatar - Mortia">
+	<armor id="23157" name="Soul Avatar - Niveri">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_aga_local2009_c_i00"/>
 		<set name="price" value="0"/>
@@ -414,7 +414,7 @@
 			<slot id="NONE"/>
 		</equip>
 	</armor>
-	<armor id="23158" name="Soul Avatar - Heintz">
+	<armor id="23158" name="Soul Avatar - Hamell">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_aga_local2009_h_i00"/>
 		<set name="price" value="0"/>
@@ -424,7 +424,7 @@
 			<slot id="NONE"/>
 		</equip>
 	</armor>
-	<armor id="23159" name="Soul Avatar - Meruril">
+	<armor id="23159" name="Soul Avatar - Joriya">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_aga_local2009_g_i00"/>
 		<set name="price" value="0"/>
@@ -434,7 +434,7 @@
 			<slot id="NONE"/>
 		</equip>
 	</armor>
-	<armor id="23160" name="Soul Avatar - Taman Zu Rapatui">
+	<armor id="23160" name="Soul Avatar - Ralmak">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_aga_local2009_i_i00"/>
 		<set name="price" value="0"/>
@@ -444,7 +444,7 @@
 			<slot id="NONE"/>
 		</equip>
 	</armor>
-	<armor id="23161" name="Soul Avatar - Kaurin">
+	<armor id="23161" name="Soul Avatar - Goras">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_aga_local2009_j_i00"/>
 		<set name="price" value="0"/>
@@ -454,7 +454,7 @@
 			<slot id="NONE"/>
 		</equip>
 	</armor>
-	<armor id="23162" name="Soul Avatar - Ahertbein">
+	<armor id="23162" name="Soul Avatar - Vensar">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_aga_local2009_l_i00"/>
 		<set name="price" value="0"/>
@@ -464,7 +464,7 @@
 			<slot id="NONE"/>
 		</equip>
 	</armor>
-	<armor id="23163" name="Soul Avatar - Naonin">
+	<armor id="23163" name="Soul Avatar - Kiela">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_aga_local2009_k_i00"/>
 		<set name="price" value="0"/>
@@ -492,7 +492,7 @@
 			<slot id="NONE"/>
 		</equip>
 	</armor>
-	<armor id="23175" name="Brilliant Beach Sun Cap	30-day" add_name="Event">
+	<armor id="23175" name="Brilliant Beach Sun Cap" add_name="30-day (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys3.icon.g_beach_cap"/>
 		<set name="price" value="0"/>
@@ -502,7 +502,7 @@
 			<slot id="HAIR_ALL"/>
 		</equip>
 	</armor>
-	<armor id="23176" name="Stylish Straw Hat	30-day" add_name="Event">
+	<armor id="23176" name="Stylish Straw Hat" add_name="30-day (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys3.icon.g_straw_hat"/>
 		<set name="price" value="0"/>

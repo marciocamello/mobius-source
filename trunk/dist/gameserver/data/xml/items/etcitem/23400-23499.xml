@@ -121,7 +121,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="23420" name="Scroll: Enchant Armor (C-grade">
+	<etcitem id="23420" name="Scroll: Enchant Armor (C-grade)">
 		<set name="icon" value="icon.etc_scroll_of_enchant_armor_i02"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
@@ -388,7 +388,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="23486" name="Santa Outfit Appearance Stone" add_name="(14-day)">
+	<etcitem id="23486" name="Santa Outfit Appearance Stone" add_name="14-day">
 		<set name="icon" value="BranchSys3.icon1.g_scrl_change_chest"/>
 		<set name="type" value="OTHER"/>
 		<set name="stackable" value="true"/>
@@ -400,7 +400,7 @@
 		<set name="stackable" value="true"/>
 		<set name="weight" value="0"/>
 	</etcitem>
-	<etcitem id="23488" name="Santa Outfit Appearance Stone Pack" add_name="(14-day)">
+	<etcitem id="23488" name="Santa Outfit Appearance Stone Pack (14-day)">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
@@ -412,7 +412,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="23490" name="PC Vitality (1-hour)" add_name="?????">
+	<etcitem id="23490" name="PC Vitality (1-hour)" add_name="Event">
 		<set name="icon" value="icon.etc_pccafe_point_i00"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>

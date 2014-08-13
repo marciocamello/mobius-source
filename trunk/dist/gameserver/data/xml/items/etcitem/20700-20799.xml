@@ -37,7 +37,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20703" name="Agathion - Sexy Panda Pack (7-day)" add_name="Blessed Resurrection">
+	<etcitem id="20703" name="Sexy Panda Hat (7-day)" add_name="Blessed Resurrection">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -236,7 +236,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20734" name="Golden Jack O'Lantern Mask Pack (7-day)" add_name="Authority of Golden Jack O'Lantern Mask.">
+	<etcitem id="20734" name="Golden Jack O'Lantern Mask Pack (7-day)" add_name="Golden Jack O'Lantern's Authority">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -321,7 +321,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20741" name="SP Rune 30% (Event)" add_name="(1-hour)">
+	<etcitem id="20741" name="SP Rune 30% (Event)" add_name="1-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -336,7 +336,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20742" name="XP Rune III (Lv1-99) 30% (Event)" add_name="(1-hour)">
+	<etcitem id="20742" name="XP Rune III (Lv. 1-99) 30% (Event)" add_name="1-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -351,7 +351,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20748" name="Reanimated Corpse Mask Pack (7-day)" add_name="Blessing of Halloween">
+	<etcitem id="20748" name="Shiny Reanimated Corpse Mask Pack (7-day)" add_name="Blessing of Halloween">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -363,7 +363,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20749" name="Shriek Mask Pack (7-day)" add_name="Blessing of Halloween">
+	<etcitem id="20749" name="Shiny Shriek Mask Pack (7-day)" add_name="Blessing of Halloween">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -375,7 +375,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20750" name="Red Devil Mask Pack (7-day)" add_name="Blessing of Halloween">
+	<etcitem id="20750" name="Shiny Red Devil Mask Pack (7-day)" add_name="Blessing of Halloween">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -387,7 +387,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20751" name="Mummy Mask Pack (7-day)" add_name="Blessing of Halloween">
+	<etcitem id="20751" name="Shiny Mummy Mask Pack (7-day)" add_name="Blessing of Halloween">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -399,7 +399,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20752" name="Alien Mask Pack (7-day)" add_name="Blessing of Halloween">
+	<etcitem id="20752" name="Shiny Alien Mask Pack (7-day)" add_name="Blessing of Halloween">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -439,7 +439,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20755" name="Santa's Weapon Coupon - Regular" add_name="(24-hour)">
+	<etcitem id="20755" name="Santa's Weapon Coupon - Regular" add_name="24-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -452,7 +452,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20756" name="Santa's Shirt Coupon" add_name="(24-hour)">
+	<etcitem id="20756" name="Santa's Shirt Coupon" add_name="24-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -465,7 +465,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20757" name="Santa's Weapon Coupon - Jackpot" add_name="(24-hour)">
+	<etcitem id="20757" name="Santa's Weapon Coupon - Jackpot" add_name="24-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -523,7 +523,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20762" name="Rudolph Pet Exchange Ticket" add_name="(7-day)">
+	<etcitem id="20762" name="Rudolph Pet Exchange Ticket" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -537,7 +537,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20763" name="Rudolph Rearing Certificate" add_name="(24-hour)">
+	<etcitem id="20763" name="Rudolph Rearing Certificate" add_name="24-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

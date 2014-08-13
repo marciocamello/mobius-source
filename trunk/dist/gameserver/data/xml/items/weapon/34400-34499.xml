@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="34400" name="Player Commendation - Tallum Blade*Damascus (Dark)">
+	<weapon id="34400" name="Player Commendation - Tallum Blade*Damascus (Dark)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="189"/>
@@ -21,7 +21,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34401" name="Player Commendation - Themis' Tongue (Earth)">
+	<weapon id="34401" name="Player Commendation - Themis' Tongue (Earth)" add_name="Mana Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_tongue_of_themis_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="82"/>
@@ -41,7 +41,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34402" name="Player Commendation - Themis' Tongue (Water)">
+	<weapon id="34402" name="Player Commendation - Themis' Tongue (Water)" add_name="Mana Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_tongue_of_themis_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="82"/>
@@ -61,7 +61,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34403" name="Player Commendation - Themis' Tongue (Wind)">
+	<weapon id="34403" name="Player Commendation - Themis' Tongue (Wind)" add_name="Mana Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_tongue_of_themis_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="82"/>
@@ -81,7 +81,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34404" name="Player Commendation - Themis' Tongue (Fire)">
+	<weapon id="34404" name="Player Commendation - Themis' Tongue (Fire)" add_name="Mana Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_tongue_of_themis_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="82"/>
@@ -101,7 +101,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34405" name="Player Commendation - Themis' Tongue (Holy)">
+	<weapon id="34405" name="Player Commendation - Themis' Tongue (Holy)" add_name="Mana Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_tongue_of_themis_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="82"/>
@@ -121,7 +121,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34406" name="Player Commendation - Themis' Tongue (Dark)">
+	<weapon id="34406" name="Player Commendation - Themis' Tongue (Dark)" add_name="Mana Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_tongue_of_themis_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="82"/>
@@ -141,7 +141,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34407" name="Player Commendation - Cabrio's Hand (Earth)">
+	<weapon id="34407" name="Player Commendation - Cabrio's Hand (Earth)" add_name="Mana Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_hand_of_cabrio_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="151"/>
@@ -161,7 +161,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34408" name="Player Commendation - Cabrio's Hand (Water)">
+	<weapon id="34408" name="Player Commendation - Cabrio's Hand (Water)" add_name="Mana Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_hand_of_cabrio_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="151"/>
@@ -181,7 +181,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34409" name="Player Commendation - Cabrio's Hand (Wind)">
+	<weapon id="34409" name="Player Commendation - Cabrio's Hand (Wind)" add_name="Mana Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_hand_of_cabrio_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="151"/>
@@ -201,7 +201,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34410" name="Player Commendation - Cabrio's Hand (Fire)">
+	<weapon id="34410" name="Player Commendation - Cabrio's Hand (Fire)" add_name="Mana Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_hand_of_cabrio_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="151"/>
@@ -221,7 +221,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34411" name="Player Commendation - Cabrio's Hand (Holy)">
+	<weapon id="34411" name="Player Commendation - Cabrio's Hand (Holy)" add_name="Mana Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_hand_of_cabrio_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="151"/>
@@ -241,7 +241,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34412" name="Player Commendation - Cabrio's Hand (Dark)">
+	<weapon id="34412" name="Player Commendation - Cabrio's Hand (Dark)" add_name="Mana Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_hand_of_cabrio_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="151"/>
@@ -261,7 +261,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34413" name="Player Commendation - Vesper Nagan (Earth)">
+	<weapon id="34413" name="Player Commendation - Vesper Nagan (Earth)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_nagen_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="180"/>
@@ -281,7 +281,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34414" name="Player Commendation - Vesper Nagan (Water)">
+	<weapon id="34414" name="Player Commendation - Vesper Nagan (Water)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_nagen_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="180"/>
@@ -301,7 +301,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34415" name="Player Commendation - Vesper Nagan (Wind)">
+	<weapon id="34415" name="Player Commendation - Vesper Nagan (Wind)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_nagen_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="180"/>
@@ -321,7 +321,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34416" name="Player Commendation - Vesper Nagan (Fire)">
+	<weapon id="34416" name="Player Commendation - Vesper Nagan (Fire)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_nagen_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="180"/>
@@ -341,7 +341,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34417" name="Player Commendation - Vesper Nagan (Holy)">
+	<weapon id="34417" name="Player Commendation - Vesper Nagan (Holy)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_nagen_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="180"/>
@@ -361,7 +361,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34418" name="Player Commendation - Vesper Nagan (Dark)">
+	<weapon id="34418" name="Player Commendation - Vesper Nagan (Dark)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_nagen_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="180"/>
@@ -381,7 +381,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34419" name="Player Commendation - Vesper Dual Daggers (Earth)">
+	<weapon id="34419" name="Player Commendation - Vesper Dual Daggers (Earth)" add_name="PC-exclusive">
 		<set name="icon" value="icon.dual_dagger_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="205"/>
@@ -401,7 +401,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34420" name="Player Commendation - Vesper Dual Daggers (Water)">
+	<weapon id="34420" name="Player Commendation - Vesper Dual Daggers (Water)" add_name="PC-exclusive">
 		<set name="icon" value="icon.dual_dagger_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="205"/>
@@ -421,7 +421,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34421" name="Player Commendation - Vesper Dual Daggers (Wind)">
+	<weapon id="34421" name="Player Commendation - Vesper Dual Daggers (Wind)" add_name="PC-exclusive">
 		<set name="icon" value="icon.dual_dagger_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="205"/>
@@ -441,7 +441,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34422" name="Player Commendation - Vesper Dual Daggers (Fire)">
+	<weapon id="34422" name="Player Commendation - Vesper Dual Daggers (Fire)" add_name="PC-exclusive">
 		<set name="icon" value="icon.dual_dagger_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="205"/>
@@ -461,7 +461,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34423" name="Player Commendation - Vesper Dual Daggers (Holy)">
+	<weapon id="34423" name="Player Commendation - Vesper Dual Daggers (Holy)" add_name="PC-exclusive">
 		<set name="icon" value="icon.dual_dagger_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="205"/>
@@ -481,7 +481,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34424" name="Player Commendation - Vesper Dual Daggers (Dark)">
+	<weapon id="34424" name="Player Commendation - Vesper Dual Daggers (Dark)" add_name="PC-exclusive">
 		<set name="icon" value="icon.dual_dagger_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="205"/>
@@ -501,7 +501,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34425" name="Player Commendation - Vesper Dualsword (Earth)">
+	<weapon id="34425" name="Player Commendation - Vesper Dualsword (Earth)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -521,7 +521,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34426" name="Player Commendation - Vesper Dualsword (Water)">
+	<weapon id="34426" name="Player Commendation - Vesper Dualsword (Water)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -541,7 +541,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34427" name="Player Commendation - Vesper Dualsword (Wind)">
+	<weapon id="34427" name="Player Commendation - Vesper Dualsword (Wind)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -561,7 +561,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34428" name="Player Commendation - Vesper Dualsword (Fire)">
+	<weapon id="34428" name="Player Commendation - Vesper Dualsword (Fire)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -581,7 +581,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34429" name="Player Commendation - Vesper Dualsword (Holy)">
+	<weapon id="34429" name="Player Commendation - Vesper Dualsword (Holy)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -601,7 +601,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34430" name="Player Commendation - Vesper Dualsword (Dark)">
+	<weapon id="34430" name="Player Commendation - Vesper Dualsword (Dark)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -621,7 +621,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34431" name="Player Commendation - Vesper Retributer (Earth)">
+	<weapon id="34431" name="Player Commendation - Vesper Retributer (Earth)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_retributer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -641,7 +641,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34432" name="Player Commendation - Vesper Retributer (Water)">
+	<weapon id="34432" name="Player Commendation - Vesper Retributer (Water)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_retributer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -661,7 +661,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34433" name="Player Commendation - Vesper Retributer (Wind)">
+	<weapon id="34433" name="Player Commendation - Vesper Retributer (Wind)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_retributer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -681,7 +681,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34434" name="Player Commendation - Vesper Retributer (Fire)">
+	<weapon id="34434" name="Player Commendation - Vesper Retributer (Fire)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_retributer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -701,7 +701,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34435" name="Player Commendation - Vesper Retributer (Holy)">
+	<weapon id="34435" name="Player Commendation - Vesper Retributer (Holy)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_retributer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -721,7 +721,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34436" name="Player Commendation - Vesper Retributer (Dark)">
+	<weapon id="34436" name="Player Commendation - Vesper Retributer (Dark)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_retributer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -741,7 +741,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34437" name="Player Commendation - Vesper Buster (Earth)">
+	<weapon id="34437" name="Player Commendation - Vesper Buster (Earth)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_burster_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -761,7 +761,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34438" name="Player Commendation - Vesper Buster (Water)">
+	<weapon id="34438" name="Player Commendation - Vesper Buster (Water)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_burster_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -781,7 +781,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34439" name="Player Commendation - Vesper Buster (Wind)">
+	<weapon id="34439" name="Player Commendation - Vesper Buster (Wind)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_burster_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -801,7 +801,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34440" name="Player Commendation - Vesper Buster (Fire)">
+	<weapon id="34440" name="Player Commendation - Vesper Buster (Fire)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_burster_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -821,7 +821,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34441" name="Player Commendation - Vesper Buster (Holy)">
+	<weapon id="34441" name="Player Commendation - Vesper Buster (Holy)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_burster_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -841,7 +841,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34442" name="Player Commendation - Vesper Buster (Dark)">
+	<weapon id="34442" name="Player Commendation - Vesper Buster (Dark)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_burster_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -861,7 +861,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34443" name="Player Commendation - Vesper Shaper (Earth)">
+	<weapon id="34443" name="Player Commendation - Vesper Shaper (Earth)" add_name="Critical Damage (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_shaper_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -881,7 +881,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34444" name="Player Commendation - Vesper Shaper (Water)">
+	<weapon id="34444" name="Player Commendation - Vesper Shaper (Water)" add_name="Critical Damage (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_shaper_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -901,7 +901,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34445" name="Player Commendation - Vesper Shaper (Wind)">
+	<weapon id="34445" name="Player Commendation - Vesper Shaper (Wind)" add_name="Critical Damage (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_shaper_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -921,7 +921,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34446" name="Player Commendation - Vesper Shaper (Fire)">
+	<weapon id="34446" name="Player Commendation - Vesper Shaper (Fire)" add_name="Critical Damage (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_shaper_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -941,7 +941,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34447" name="Player Commendation - Vesper Shaper (Holy)">
+	<weapon id="34447" name="Player Commendation - Vesper Shaper (Holy)" add_name="Critical Damage (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_shaper_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -961,7 +961,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34448" name="Player Commendation - Vesper Shaper (Dark)">
+	<weapon id="34448" name="Player Commendation - Vesper Shaper (Dark)" add_name="Critical Damage (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_shaper_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -981,7 +981,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34449" name="Player Commendation - Vesper Shooter (Earth)">
+	<weapon id="34449" name="Player Commendation - Vesper Shooter (Earth)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_schutze_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="158"/>
@@ -1001,7 +1001,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34450" name="Player Commendation - Vesper Shooter (Water)">
+	<weapon id="34450" name="Player Commendation - Vesper Shooter (Water)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_schutze_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="158"/>
@@ -1021,7 +1021,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34451" name="Player Commendation - Vesper Shooter (Wind)">
+	<weapon id="34451" name="Player Commendation - Vesper Shooter (Wind)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_schutze_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="158"/>
@@ -1041,7 +1041,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34452" name="Player Commendation - Vesper Shooter (Fire)">
+	<weapon id="34452" name="Player Commendation - Vesper Shooter (Fire)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_schutze_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="158"/>
@@ -1061,7 +1061,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34453" name="Player Commendation - Vesper Shooter (Holy)">
+	<weapon id="34453" name="Player Commendation - Vesper Shooter (Holy)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_schutze_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="158"/>
@@ -1081,7 +1081,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34454" name="Player Commendation - Vesper Shooter (Dark)">
+	<weapon id="34454" name="Player Commendation - Vesper Shooter (Dark)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_schutze_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="158"/>
@@ -1101,7 +1101,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34455" name="Player Commendation - Vesper Thrower (Earth)">
+	<weapon id="34455" name="Player Commendation - Vesper Thrower (Earth)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_thrower_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -1121,7 +1121,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34456" name="Player Commendation - Vesper Thrower (Water)">
+	<weapon id="34456" name="Player Commendation - Vesper Thrower (Water)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_thrower_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -1141,7 +1141,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34457" name="Player Commendation - Vesper Thrower (Wind)">
+	<weapon id="34457" name="Player Commendation - Vesper Thrower (Wind)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_thrower_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -1161,7 +1161,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34458" name="Player Commendation - Vesper Thrower (Fire)">
+	<weapon id="34458" name="Player Commendation - Vesper Thrower (Fire)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_thrower_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -1181,7 +1181,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34459" name="Player Commendation - Vesper Thrower (Holy)">
+	<weapon id="34459" name="Player Commendation - Vesper Thrower (Holy)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_thrower_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -1201,7 +1201,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34460" name="Player Commendation - Vesper Thrower (Dark)">
+	<weapon id="34460" name="Player Commendation - Vesper Thrower (Dark)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_thrower_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -1221,7 +1221,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34461" name="Player Commendation - Vesper Stormer (Earth)">
+	<weapon id="34461" name="Player Commendation - Vesper Stormer (Earth)" add_name="Haste (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_stormer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="201"/>
@@ -1241,7 +1241,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34462" name="Player Commendation - Vesper Stormer (Water)">
+	<weapon id="34462" name="Player Commendation - Vesper Stormer (Water)" add_name="Haste (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_stormer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="201"/>
@@ -1261,7 +1261,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34463" name="Player Commendation - Vesper Stormer (Wind)">
+	<weapon id="34463" name="Player Commendation - Vesper Stormer (Wind)" add_name="Haste (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_stormer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="201"/>
@@ -1281,7 +1281,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34464" name="Player Commendation - Vesper Stormer (Fire)">
+	<weapon id="34464" name="Player Commendation - Vesper Stormer (Fire)" add_name="Haste (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_stormer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="201"/>
@@ -1301,7 +1301,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34465" name="Player Commendation - Vesper Stormer (Holy)">
+	<weapon id="34465" name="Player Commendation - Vesper Stormer (Holy)" add_name="Haste (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_stormer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="201"/>
@@ -1321,7 +1321,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34466" name="Player Commendation - Vesper Stormer (Dark)">
+	<weapon id="34466" name="Player Commendation - Vesper Stormer (Dark)" add_name="Haste (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_stormer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="201"/>
@@ -1341,7 +1341,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34467" name="Player Commendation - Vesper Slasher (Earth)">
+	<weapon id="34467" name="Player Commendation - Vesper Slasher (Earth)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_slasher_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -1361,7 +1361,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34468" name="Player Commendation - Vesper Slasher (Water)">
+	<weapon id="34468" name="Player Commendation - Vesper Slasher (Water)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_slasher_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -1381,7 +1381,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34469" name="Player Commendation - Vesper Slasher (Wind)">
+	<weapon id="34469" name="Player Commendation - Vesper Slasher (Wind)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_slasher_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -1401,7 +1401,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34470" name="Player Commendation - Vesper Slasher (Fire)">
+	<weapon id="34470" name="Player Commendation - Vesper Slasher (Fire)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_slasher_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -1421,7 +1421,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34471" name="Player Commendation - Vesper Slasher (Holy)">
+	<weapon id="34471" name="Player Commendation - Vesper Slasher (Holy)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_slasher_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -1441,7 +1441,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34472" name="Player Commendation - Vesper Slasher (Dark)">
+	<weapon id="34472" name="Player Commendation - Vesper Slasher (Dark)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_slasher_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -1461,7 +1461,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34473" name="Player Commendation - Vesper Singer (Earth)">
+	<weapon id="34473" name="Player Commendation - Vesper Singer (Earth)" add_name="Empower (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_singer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -1481,7 +1481,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34474" name="Player Commendation - Vesper Singer (Water)">
+	<weapon id="34474" name="Player Commendation - Vesper Singer (Water)" add_name="Empower (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_singer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -1501,7 +1501,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34475" name="Player Commendation - Vesper Singer (Wind)">
+	<weapon id="34475" name="Player Commendation - Vesper Singer (Wind)" add_name="Empower (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_singer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -1521,7 +1521,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34476" name="Player Commendation - Vesper Singer (Fire)">
+	<weapon id="34476" name="Player Commendation - Vesper Singer (Fire)" add_name="Empower (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_singer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -1541,7 +1541,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34477" name="Player Commendation - Vesper Singer (Holy)">
+	<weapon id="34477" name="Player Commendation - Vesper Singer (Holy)" add_name="Empower (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_singer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -1561,7 +1561,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34478" name="Player Commendation - Vesper Singer (Dark)">
+	<weapon id="34478" name="Player Commendation - Vesper Singer (Dark)" add_name="Empower (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_singer_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -1581,7 +1581,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34479" name="Player Commendation - Vesper Avenger (Earth)">
+	<weapon id="34479" name="Player Commendation - Vesper Avenger (Earth)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_avenger_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -1601,7 +1601,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34480" name="Player Commendation - Vesper Avenger (Water)">
+	<weapon id="34480" name="Player Commendation - Vesper Avenger (Water)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_avenger_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -1621,7 +1621,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34481" name="Player Commendation - Vesper Avenger (Wind)">
+	<weapon id="34481" name="Player Commendation - Vesper Avenger (Wind)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_avenger_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -1641,7 +1641,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34482" name="Player Commendation - Vesper Avenger (Fire)">
+	<weapon id="34482" name="Player Commendation - Vesper Avenger (Fire)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_avenger_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -1661,7 +1661,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34483" name="Player Commendation - Vesper Avenger (Holy)">
+	<weapon id="34483" name="Player Commendation - Vesper Avenger (Holy)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_avenger_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -1681,7 +1681,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34484" name="Player Commendation - Vesper Avenger (Dark)">
+	<weapon id="34484" name="Player Commendation - Vesper Avenger (Dark)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_avenger_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="174"/>
@@ -1701,7 +1701,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34485" name="Player Commendation - Vesper Caster (Earth)">
+	<weapon id="34485" name="Player Commendation - Vesper Caster (Earth)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_caster_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -1721,7 +1721,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34486" name="Player Commendation - Vesper Caster (Water)">
+	<weapon id="34486" name="Player Commendation - Vesper Caster (Water)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_caster_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -1741,7 +1741,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34487" name="Player Commendation - Vesper Caster (Wind)">
+	<weapon id="34487" name="Player Commendation - Vesper Caster (Wind)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_caster_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -1761,7 +1761,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34488" name="Player Commendation - Vesper Caster (Fire)">
+	<weapon id="34488" name="Player Commendation - Vesper Caster (Fire)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_caster_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -1781,7 +1781,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34489" name="Player Commendation - Vesper Caster (Holy)">
+	<weapon id="34489" name="Player Commendation - Vesper Caster (Holy)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_caster_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -1801,7 +1801,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34490" name="Player Commendation - Vesper Caster (Dark)">
+	<weapon id="34490" name="Player Commendation - Vesper Caster (Dark)" add_name="Acumen (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_caster_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="108"/>
@@ -1821,7 +1821,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34491" name="Player Commendation - Vesper Cutter (Earth)">
+	<weapon id="34491" name="Player Commendation - Vesper Cutter (Earth)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_cutter_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -1841,7 +1841,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34492" name="Player Commendation - Vesper Cutter (Water)">
+	<weapon id="34492" name="Player Commendation - Vesper Cutter (Water)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_cutter_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -1861,7 +1861,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34493" name="Player Commendation - Vesper Cutter (Wind)">
+	<weapon id="34493" name="Player Commendation - Vesper Cutter (Wind)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_cutter_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -1881,7 +1881,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34494" name="Player Commendation - Vesper Cutter (Fire)">
+	<weapon id="34494" name="Player Commendation - Vesper Cutter (Fire)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_cutter_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -1901,7 +1901,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34495" name="Player Commendation - Vesper Cutter (Holy)">
+	<weapon id="34495" name="Player Commendation - Vesper Cutter (Holy)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_cutter_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -1921,7 +1921,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34496" name="Player Commendation - Vesper Cutter (Dark)">
+	<weapon id="34496" name="Player Commendation - Vesper Cutter (Dark)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_cutter_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="152"/>
@@ -1941,7 +1941,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34497" name="Player Commendation - Vesper Fighter (Earth)">
+	<weapon id="34497" name="Player Commendation - Vesper Fighter (Earth)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_fighter_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="155"/>
@@ -1961,7 +1961,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34498" name="Player Commendation - Vesper Fighter (Water)">
+	<weapon id="34498" name="Player Commendation - Vesper Fighter (Water)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_fighter_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="155"/>
@@ -1981,7 +1981,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34499" name="Player Commendation - Vesper Fighter (Wind)">
+	<weapon id="34499" name="Player Commendation - Vesper Fighter (Wind)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_vesper_fighter_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="155"/>

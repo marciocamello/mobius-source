@@ -4157,7 +4157,7 @@
 			<reward item_id="9548" min="1" max="1" chance="0.03"/>
 		</rewardlist>
 	</npc>
-	<npc id="23168" name="Swamp Stalker" title="">
+	<npc id="23168" name="Swamp Tracker" title="">
 		<set name="aggroRange" value="250"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="15.0"/>

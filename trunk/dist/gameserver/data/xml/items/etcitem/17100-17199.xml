@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="17100" name="XP Buff 50% (1-hour)" add_name="20-39">
+	<etcitem id="17100" name="XP Buff 50% (1-hour)" add_name="20~39">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -15,7 +15,7 @@
 			<skill id="9120" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17101" name="XP Buff 50% (1.5-hour)" add_name="20-39">
+	<etcitem id="17101" name="XP Buff 50% (1.5-hour)" add_name="20~39">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -29,7 +29,7 @@
 			<skill id="9121" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17102" name="XP Buff 50% (2-hour)" add_name="20-39">
+	<etcitem id="17102" name="XP Buff 50% (2-hour)" add_name="20~39">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -43,7 +43,7 @@
 			<skill id="9122" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17103" name="XP Buff 50% (2.5-hour)" add_name="20-39">
+	<etcitem id="17103" name="XP Buff 50% (2.5-hour)" add_name="20~39">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -57,7 +57,7 @@
 			<skill id="9123" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17104" name="XP Buff 50% (3-hour)" add_name="20-39">
+	<etcitem id="17104" name="XP Buff 50% (3-hour)" add_name="20~39">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -71,7 +71,7 @@
 			<skill id="9124" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17105" name="XP Buff 50% (1-hour)" add_name="40-51">
+	<etcitem id="17105" name="XP Buff 50% (1-hour)" add_name="40~51">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -85,7 +85,7 @@
 			<skill id="9125" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17106" name="XP Buff 50% (1.5-hour)" add_name="40-51">
+	<etcitem id="17106" name="XP Buff 50% (1.5-hour)" add_name="40~51">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -99,7 +99,7 @@
 			<skill id="9126" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17107" name="XP Buff 50% (2-hour)" add_name="40-51">
+	<etcitem id="17107" name="XP Buff 50% (2-hour)" add_name="40~51">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -113,7 +113,7 @@
 			<skill id="9127" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17108" name="XP Buff 50% (2.5-hour)" add_name="40-51">
+	<etcitem id="17108" name="XP Buff 50% (2.5-hour)" add_name="40~51">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -127,7 +127,7 @@
 			<skill id="9128" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17109" name="XP Buff 50% (3-hour)" add_name="40-51">
+	<etcitem id="17109" name="XP Buff 50% (3-hour)" add_name="40~51">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -141,7 +141,7 @@
 			<skill id="9129" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17110" name="XP Buff 50% (1-hour)" add_name="52 - 60">
+	<etcitem id="17110" name="XP Buff 50% (1-hour)" add_name="52~60">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -155,7 +155,7 @@
 			<skill id="9130" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17111" name="XP Buff 50% (1.5-hour)" add_name="52 - 60">
+	<etcitem id="17111" name="XP Buff 50% (1.5-hour)" add_name="52~60">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -169,7 +169,7 @@
 			<skill id="9131" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17112" name="XP Buff 50% (2-hour)" add_name="52 - 60">
+	<etcitem id="17112" name="XP Buff 50% (2-hour)" add_name="52~60">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -183,7 +183,7 @@
 			<skill id="9132" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17113" name="XP Buff 50% (2.5-hour)" add_name="52 - 60">
+	<etcitem id="17113" name="XP Buff 50% (2.5-hour)" add_name="52~60">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -197,7 +197,7 @@
 			<skill id="9133" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17114" name="XP Buff 50% (3-hour)" add_name="52 - 60">
+	<etcitem id="17114" name="XP Buff 50% (3-hour)" add_name="52~60">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -211,7 +211,7 @@
 			<skill id="9134" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17115" name="XP Buff 50% (1-hour)" add_name="61 - 75">
+	<etcitem id="17115" name="XP Buff 50% (1-hour)" add_name="61~75">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -225,7 +225,7 @@
 			<skill id="9135" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17116" name="XP Buff 50% (1.5-hour)" add_name="61 - 75">
+	<etcitem id="17116" name="XP Buff 50% (1.5-hour)" add_name="61~75">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -239,7 +239,7 @@
 			<skill id="9136" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17117" name="XP Buff 50% (2-hour)" add_name="61 - 75">
+	<etcitem id="17117" name="XP Buff 50% (2-hour)" add_name="61~75">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -253,7 +253,7 @@
 			<skill id="9137" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17118" name="XP Buff 50% (2.5-hour)" add_name="61 - 75">
+	<etcitem id="17118" name="XP Buff 50% (2.5-hour)" add_name="61~75">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -267,7 +267,7 @@
 			<skill id="9138" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17119" name="XP Buff 50% (3-hour)" add_name="61 - 75">
+	<etcitem id="17119" name="XP Buff 50% (3-hour)" add_name="61~75">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -281,7 +281,7 @@
 			<skill id="9139" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17120" name="XP Buff 50% (1-hour)" add_name="76 - 79">
+	<etcitem id="17120" name="XP Buff 50% (1-hour)" add_name="76~79">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -295,7 +295,7 @@
 			<skill id="9140" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17121" name="XP Buff 50% (1.5-hour)" add_name="76 - 79">
+	<etcitem id="17121" name="XP Buff 50% (1.5-hour)" add_name="76~79">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -309,7 +309,7 @@
 			<skill id="9141" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17122" name="XP Buff 50% (2-hour)" add_name="76 - 79">
+	<etcitem id="17122" name="XP Buff 50% (2-hour)" add_name="76~79">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -323,7 +323,7 @@
 			<skill id="9142" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17123" name="XP Buff 50% (2.5-hour)" add_name="76 - 79">
+	<etcitem id="17123" name="XP Buff 50% (2.5-hour)" add_name="76~79">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -337,7 +337,7 @@
 			<skill id="9143" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17124" name="XP Buff 50% (3-hour)" add_name="76 - 79">
+	<etcitem id="17124" name="XP Buff 50% (3-hour)" add_name="76~79">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -351,7 +351,7 @@
 			<skill id="9144" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17125" name="XP Buff 50% (1-hour)" add_name="80-85">
+	<etcitem id="17125" name="XP Buff 50% (1-hour)" add_name="80~85">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -365,7 +365,7 @@
 			<skill id="9145" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17126" name="XP Buff 50% (1.5-hour)" add_name="80-85">
+	<etcitem id="17126" name="XP Buff 50% (1.5-hour)" add_name="80~85">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -379,7 +379,7 @@
 			<skill id="9146" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17127" name="XP Buff 50% (2-hour)" add_name="80-85">
+	<etcitem id="17127" name="XP Buff 50% (2-hour)" add_name="80~85">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -393,7 +393,7 @@
 			<skill id="9147" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17128" name="XP Buff 50% (2.5-hour)" add_name="80-85">
+	<etcitem id="17128" name="XP Buff 50% (2.5-hour)" add_name="80~85">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -407,7 +407,7 @@
 			<skill id="9148" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17129" name="XP Buff 50% (3-hour)" add_name="80-85">
+	<etcitem id="17129" name="XP Buff 50% (3-hour)" add_name="80~85">
 		<set name="delay_share_group" value="16"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -708,7 +708,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="17167" name="Scroll: Enchant Weapon (S-grade) Pack">
+	<etcitem id="17167" name="Scroll: Enchant Weapon Pack (S-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -751,7 +751,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="17184" name="Scroll: 500,000 SP">
+	<etcitem id="17184" name="Scroll: 50,000 SP">
 		<set name="icon" value="icon.etc_sp_scroll3_i00"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
@@ -763,7 +763,7 @@
 			<skill id="2167" level="6"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17185" name="Scroll: 1,000,000 SP">
+	<etcitem id="17185" name="Scroll: 100,000 SP">
 		<set name="icon" value="icon.etc_sp_scroll3_i00"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>

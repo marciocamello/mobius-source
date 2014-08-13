@@ -104,7 +104,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1305" levels="5" name="The Honor of Pa'agrio">
+	<skill id="1305" levels="5" name="Pa'agrio's Honor">
 		<table name="#mpConsume2">171 177 182 186 191</table>
 		<table name="#mpConsume1">43 45 46 47 48</table>
 		<table name="#magicLevel">66 68 70 72 74</table>
@@ -383,7 +383,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="isCommon" val="true"/>
 	</skill>
-	<skill id="1316" levels="1" name="Fishing Expertise: C Grade">
+	<skill id="1316" levels="1" name="Fishing Expertise (C-grade)">
 		<set name="icon" val="icon.skill1316"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -391,7 +391,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="isCommon" val="true"/>
 	</skill>
-	<skill id="1317" levels="1" name="Fishing Expertise: B Grade">
+	<skill id="1317" levels="1" name="Fishing Expertise (B-grade)">
 		<set name="icon" val="icon.skill1317"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -399,7 +399,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="isCommon" val="true"/>
 	</skill>
-	<skill id="1318" levels="1" name="Fishing Expertise: A Grade">
+	<skill id="1318" levels="1" name="Fishing Expertise (A-grade)">
 		<set name="icon" val="icon.skill1318"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -407,7 +407,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="isCommon" val="true"/>
 	</skill>
-	<skill id="1319" levels="1" name="Fishing Expertise: S Grade">
+	<skill id="1319" levels="1" name="Fishing Expertise (S-grade)">
 		<set name="icon" val="icon.skill1319"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -1451,7 +1451,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1352" levels="1" name="Elemental Protection">
+	<skill id="1352" levels="1" name="Elemental Resistance">
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">56</table>
 		<table name="#mpConsume1">14</table>
@@ -1487,7 +1487,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1353" levels="1" name="Divine Protection">
+	<skill id="1353" levels="1" name="Holy Attack Resistance">
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">56</table>
 		<table name="#mpConsume1">14</table>
@@ -1948,7 +1948,7 @@
 			<effect count="1" name="HealPercent" time="0" val="20"/>
 		</for>
 	</skill>
-	<skill id="1364" levels="1" name="Eye of Pa'agrio">
+	<skill id="1364" levels="1" name="Pa'agrio's Eye">
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">224</table>
 		<table name="#mpConsume1">56</table>
@@ -1982,7 +1982,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1365" levels="1" name="Soul of Pa'agrio">
+	<skill id="1365" levels="1" name="Pa'agrio's Soul">
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">224</table>
 		<table name="#mpConsume1">56</table>
@@ -2138,7 +2138,7 @@
 			<add order="0x40" stat="tradeLimit" val="#values"/>
 		</for>
 	</skill>
-	<skill id="1371" levels="8" name="Expand Storage">
+	<skill id="1371" levels="8" name="Expand Warehouse">
 		<table name="#values">6 12 18 24 30 36 42 48</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 80</table>
 		<set name="icon" val="icon.skill0333"/>
@@ -2324,7 +2324,7 @@
 			<effect count="1" name="Betray" time="30" val="0"/>
 		</for>
 	</skill>
-	<skill id="1381" levels="5" name="Mass Fear">
+	<skill id="1381" levels="5" name="Mass Curse Fear">
 		<table name="#activateRate">8 9 11 13 15</table>
 		<table name="#mpConsume2">64 69 74 78 82</table>
 		<table name="#mpConsume1">16 18 19 20 21</table>
@@ -2361,7 +2361,7 @@
 			<effect count="15" name="Fear" stackOrder="-1" stackType="Fear" time="1" val="0"/>
 		</for>
 	</skill>
-	<skill id="1382" levels="5" name="Mass Gloom">
+	<skill id="1382" levels="5" name="Mass Curse Gloom">
 		<table name="#itemConsumeCount">4 4 4 5</table>
 		<table name="#activateRate">40</table>
 		<table name="#mpConsume2">64 69 74 78 82</table>
@@ -2711,7 +2711,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1391" levels="3" name="Earth Chant">
+	<skill id="1391" levels="3" name="Chant of Earth">
 		<table name="#pDef">1.05 1.10 1.15</table>
 		<table name="#spiritOre">4 8 12</table>
 		<table name="#order">1 2 3</table>
@@ -2748,7 +2748,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1392" levels="3" name="Resist Holy">
+	<skill id="1392" levels="3" name="Holy Attack Resistance">
 		<table name="#Res">15 23 30</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">43 49 55</table>
@@ -2788,7 +2788,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1393" levels="3" name="Resist Dark">
+	<skill id="1393" levels="3" name="Dark Attack Resistance">
 		<table name="#Res">15 23 30</table>
 		<table name="#order">1 2 3</table>
 		<table name="#abnormal_time">1200</table>

@@ -5,7 +5,7 @@
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14601" levels="1" name="Cry of Fate - Mark of Weakness">
+	<skill id="14601" levels="1" name="Cry of Destiny - Mark of Weakness">
 		<table name="#DOT">174</table>
 		<set name="castRange" val="600"/>
 		<set name="hitTime" val="1200"/>
@@ -20,7 +20,7 @@
 			<effect count="10" name="DamOverTime" time="1" val="#DOT" stackOrder="7" stackType="poison1" abnormal="poison"/>
 		</for>
 	</skill>
-	<skill id="14602" levels="1" name="Cry of Fate - Mark of Plague">
+	<skill id="14602" levels="1" name="Cry of Destiny - Mark of Plague">
 		<table name="#DOT">238</table>
 		<set name="castRange" val="600"/>
 		<set name="hitTime" val="1500"/>
@@ -35,7 +35,7 @@
 			<effect count="10" name="DamOverTime" time="1" val="#DOT" stackOrder="7" stackType="poison2" abnormal="poison"/>
 		</for>
 	</skill>
-	<skill id="14603" levels="1" name="Cry of Fate - Exile">
+	<skill id="14603" levels="1" name="Cry of Destiny - Exile">
 		<table name="#DOT">167</table>
 		<set name="castRange" val="600"/>
 		<set name="hitTime" val="3000"/>
@@ -55,7 +55,7 @@
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14605" levels="1" name="Cry of Fate - Assault Attack">
+	<skill id="14605" levels="1" name="Cry of Destiny - Crippling Attack">
 		<table name="#Tab">0.7</table>
 		<set name="power" val="5175"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -69,13 +69,13 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14606" levels="1" name="Cry of Fate - Death Strike">
+	<skill id="14606" levels="1" name="Cry of Destiny - Death Strike">
 		<set name="power" val="9444"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14607" levels="1" name="Cry of Fate - Pipe Organ Melody">
+	<skill id="14607" levels="1" name="Cry of Destiny - Pipe Organ Melody">
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -93,7 +93,7 @@
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14609" levels="1" name="Cry of Fate - Dark Blast">
+	<skill id="14609" levels="1" name="Cry of Destiny - Dark Blast">
 		<set name="castRange" val="600"/>
 		<set name="hitTime" val="1500"/>
 		<set name="hitCancelTime" val="500"/>
@@ -103,7 +103,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="target" val="TARGET_ONE"/>
 	</skill>
-	<skill id="14610" levels="1" name="Cry of Fate - Light of Heal">
+	<skill id="14610" levels="1" name="Cry of Destiny - Radiant Heal">
 		<set name="hitTime" val="3000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="skillType" val="HEAL_WITH_CP"/>
@@ -112,7 +112,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="target" val="TARGET_SELF"/>
 	</skill>
-	<skill id="14611" levels="1" name="Cry of Fate - Dark Force">
+	<skill id="14611" levels="1" name="Cry of Destiny - Dark Force">
 		<set name="castRange" val="600"/>
 		<set name="hitTime" val="2000"/>
 		<set name="hitCancelTime" val="500"/>
@@ -156,7 +156,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14616" levels="1" name="Absorb status.">
+	<skill id="14616" levels="1" name="Blood Siphon">
 		<set name="icon" val="icon.skill1042"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -180,13 +180,13 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14620" levels="1" name="Aerial Yoke Resistance">
+	<skill id="14620" levels="1" name="Aerial Yoke Resistance 1">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14621" levels="1" name="Drag Resistance">
+	<skill id="14621" levels="1" name="Pulling Resistance">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -304,7 +304,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14640" levels="1" name="Move at High Speed">
+	<skill id="14640" levels="1" name="High-speed Movement">
 		<set name="icon" val="icon.skill1087"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -365,19 +365,19 @@
 		<set name="hitTime" val="500"/>
 		<for/>
 	</skill>
-	<skill id="14650" levels="1" name="Corpse Strike">
+	<skill id="14650" levels="1" name="Corpse' Blow">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14651" levels="1" name="Shock">
+	<skill id="14651" levels="1" name="Stun">
 		<set name="icon" val="icon.skill0092"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14652" levels="1" name="Absorb Blood">
+	<skill id="14652" levels="1" name="Blood Siphon">
 		<set name="icon" val="icon.skill1268"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -389,7 +389,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14654" levels="1" name="Absorb Darkness">
+	<skill id="14654" levels="1" name="Darkness Drain">
 		<set name="icon" val="icon.skill1401"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -413,13 +413,13 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14658" levels="1" name="Whirlwind">
+	<skill id="14658" levels="1" name="Spinning Slasher">
 		<set name="icon" val="icon.skill0036"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14659" levels="1" name="Shock">
+	<skill id="14659" levels="1" name="Stun">
 		<set name="icon" val="icon.skill0092"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -443,7 +443,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14663" levels="1" name="Guardian Blow">
+	<skill id="14663" levels="1" name="Guardian's Blow">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -504,7 +504,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14673" levels="1" name="Cry of Fate - Shield Charge">
+	<skill id="14673" levels="1" name="Cry of Destiny - Shield Charge">
 		<set name="power" val="1500"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
@@ -520,7 +520,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14674" levels="1" name="Cry of Fate - Chain Strike">
+	<skill id="14674" levels="1" name="Cry of Destiny - Chain Strike">
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="DEBUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -531,13 +531,13 @@
 			<effect count="1" name="TargetToMe" time="1" val="0"/>
 		</for>
 	</skill>
-	<skill id="14675" levels="1" name="Cry of Fate - Last Judgment">
+	<skill id="14675" levels="1" name="Cry of Destiny - Last Judgment">
 		<set name="icon" val="icon.skill10009"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14676" levels="1" name="Cry of Fate - Armor Destruction">
+	<skill id="14676" levels="1" name="Cry of Destiny - Armor Destruction">
 		<set name="target" val="TARGET_ONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="1090"/>
@@ -552,13 +552,13 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14677" levels="1" name="Cry of Fate - Giant Punch">
+	<skill id="14677" levels="1" name="Cry of Destiny - Giant Punch">
 		<set name="icon" val="icon.skill10266"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14678" levels="1" name="Cry of Fate - Power Bomber">
+	<skill id="14678" levels="1" name="Cry of Destiny - Power Bomber">
 		<set name="target" val="TARGET_ONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="1490"/>
@@ -571,7 +571,7 @@
 			<effect name="Stun" time="2" val="0" effectPower="65" effectType="STUN" abnormalLvl="1" abnormalType="stun"/>
 		</for>
 	</skill>
-	<skill id="14679" levels="1" name="Cry of Fate - Heart Breaker">
+	<skill id="14679" levels="1" name="Cry of Destiny - Heart Breaker">
 		<set name="target" val="TARGET_ONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="829"/>
@@ -583,7 +583,7 @@
 		<set name="overHit" val="true"/>
 		<set name="lethal1" val="10"/>
 	</skill>
-	<skill id="14680" levels="1" name="Cry of Fate - Dark Paralyze">
+	<skill id="14680" levels="1" name="Cry of Destiny - Dark Paralysis">
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="DEBUFF"/>
 		<set name="magicLevel" val="85"/>
@@ -592,7 +592,7 @@
 			<effect count="1" name="Petrification" stackOrder="-1" stackType="paralyze" time="5" val="0"/>
 		</for>
 	</skill>
-	<skill id="14686" levels="1" name="Cry of Fate - Elemental Crash">
+	<skill id="14686" levels="1" name="Cry of Destiny - Elemental Crash">
 		<table name="#magicLevel">85</table>
 		<table name="#mpInitialConsume">7</table>
 		<table name="#power">143</table>
@@ -618,13 +618,13 @@
 			<effect count="5" name="Fear" time="2" val="0" stackOrder="1" stackType="fear"/>
 		</for>
 	</skill>
-	<skill id="14687" levels="1" name="Cry of Fate - Hell Binding">
+	<skill id="14687" levels="1" name="Cry of Destiny - Hell Binding">
 		<set name="icon" val="icon.skill11050"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14688" levels="2" name="Cry of Fate - Mark of Weakness">
+	<skill id="14688" levels="2" name="Cry of Destiny - Mark of Weakness">
 		<table name="#DOT">40 5</table>
 		<set name="castRange" val="600"/>
 		<set name="hitTime" val="1200"/>
@@ -639,7 +639,7 @@
 			<effect count="10" name="DamOverTime" time="1" val="#DOT" stackOrder="7" stackType="poison1" abnormal="poison"/>
 		</for>
 	</skill>
-	<skill id="14689" levels="2" name="Cry of Fate - Mark of Plague">
+	<skill id="14689" levels="2" name="Cry of Destiny - Mark of Plague">
 		<table name="#DOT">70 8</table>
 		<set name="castRange" val="600"/>
 		<set name="hitTime" val="1500"/>
@@ -654,13 +654,13 @@
 			<effect count="10" name="DamOverTime" time="1" val="#DOT" stackOrder="7" stackType="poison2" abnormal="poison"/>
 		</for>
 	</skill>
-	<skill id="14690" levels="1" name="Cry of Fate - Exile">
+	<skill id="14690" levels="1" name="Cry of Destiny - Exile">
 		<set name="icon" val="icon.skill11273"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14691" levels="1" name="Cry of Fate - Assault Attack">
+	<skill id="14691" levels="1" name="Cry of Destiny - Crippling Attack">
 		<set name="castRange" val="40"/>
 		<set name="hitTime" val="910"/>
 		<set name="hitCancelTime" val="300"/>
@@ -676,7 +676,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14692" levels="1" name="Cry of Fate - Death Strike">
+	<skill id="14692" levels="1" name="Cry of Destiny - Death Strike">
 		<set name="castRange" val="40"/>
 		<set name="hitTime" val="1409"/>
 		<set name="hitCancelTime" val="500"/>
@@ -685,7 +685,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="target" val="TARGET_ONE"/>
 	</skill>
-	<skill id="14693" levels="1" name="Cry of Fate - Pipe Organ Melody">
+	<skill id="14693" levels="1" name="Cry of Destiny - Pipe Organ Melody">
 		<set name="hitTime" val="699"/>
 		<set name="hitCancelTime" val="300"/>
 		<set name="skillType" val="BUFF"/>
@@ -703,7 +703,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14694" levels="1" name="Cry of Fate - Dark Blast">
+	<skill id="14694" levels="1" name="Cry of Destiny - Dark Blast">
 		<set name="castRange" val="600"/>
 		<set name="hitTime" val="1500"/>
 		<set name="hitCancelTime" val="500"/>
@@ -714,13 +714,13 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="target" val="TARGET_ONE"/>
 	</skill>
-	<skill id="14695" levels="1" name="Cry of Fate - Light of Heal">
+	<skill id="14695" levels="1" name="Cry of Destiny - Radiant Heal">
 		<set name="icon" val="icon.skill11755"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14696" levels="1" name="Cry of Fate - Dark Force">
+	<skill id="14696" levels="1" name="Cry of Destiny - Dark Force">
 		<set name="icon" val="icon.skill0101"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>

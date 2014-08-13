@@ -1184,7 +1184,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="7091" levels="1" name="Master's Blessing - Improve Critical">
+	<skill id="7091" levels="1" name="Master's Blessing - Improve Critical Attack">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1502"/>
 		<set name="reuseDelay" val="2000"/>
@@ -1252,7 +1252,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="7096" levels="1" name="Master's Blessing - Blessing of Noblesse">
+	<skill id="7096" levels="1" name="Master's Blessing - Noblesse Blessing">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1323"/>
 		<set name="castRange" val="1000"/>

@@ -688,7 +688,7 @@
 		<set name="blow" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="4734" levels="12" name="Whirlwind">
+	<skill id="4734" levels="12" name="Spinning Slasher">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#power">56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398</table>
@@ -704,7 +704,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="4735" levels="12" name="Whirlwind">
+	<skill id="4735" levels="12" name="Spinning Slasher">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#power">48 128 352 920 2377 4645 7195 8490 9855 11350 12936 14430</table>
@@ -720,7 +720,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="4736" levels="12" name="Whirlwind">
+	<skill id="4736" levels="12" name="Spinning Slasher">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#power">26 68 188 491 1268 2479 3834 4519 5242 6037 6889 7675</table>
@@ -736,7 +736,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="4737" levels="12" name="Whirlwind">
+	<skill id="4737" levels="12" name="Spinning Slasher">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#power">24 64 176 461 1189 2326 3598 4245 4928 5682 6461 7215</table>
@@ -752,7 +752,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="4738" levels="12" name="Whirlwind">
+	<skill id="4738" levels="12" name="Spinning Slasher">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
 		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
 		<table name="#power">23 60 165 429 1109 2172 3362 3971 4614 5313 6047 6756</table>
@@ -1675,70 +1675,70 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4790" levels="1" name="Raid Boss - Level 23">
+	<skill id="4790" levels="1" name="Raid Boss (Lv. 23)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4791" levels="1" name="Raid Boss - Level 30">
+	<skill id="4791" levels="1" name="Raid Boss (Lv. 30)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4792" levels="1" name="Raid Boss - Level 42">
+	<skill id="4792" levels="1" name="Raid Boss (Lv. 42)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4793" levels="1" name="Raid Boss - Level 55">
+	<skill id="4793" levels="1" name="Raid Boss (Lv. 55)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4794" levels="1" name="Raid Boss - Level 50">
+	<skill id="4794" levels="1" name="Raid Boss (Lv. 50)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4795" levels="1" name="Raid Boss - Level 60">
+	<skill id="4795" levels="1" name="Raid Boss (Lv. 60)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4796" levels="1" name="Raid Boss - Level 25">
+	<skill id="4796" levels="1" name="Raid Boss (Lv. 25)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4797" levels="1" name="Raid Boss - Level 34">
+	<skill id="4797" levels="1" name="Raid Boss (Lv. 34)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4798" levels="1" name="Raid Boss - Level 34">
+	<skill id="4798" levels="1" name="Raid Boss (Lv. 34)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4799" levels="1" name="Raid Boss - Level 49">
+	<skill id="4799" levels="1" name="Raid Boss (Lv. 49)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="21100" levels="1" name="Soul of a Wise Magician's Ability">
+	<skill id="21100" levels="1" name="Great Wizard's Soul Power">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_maid_hairband_i00"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -63,7 +63,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="21103" levels="1" name="Soul of an Adventurer of Immortality's Ability">
+	<skill id="21103" levels="1" name="Great Adventurer's Soul Power">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_kungfupanda_cap_i00"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -134,7 +134,7 @@
 		<set name="npcId" val="1530"/>
 		<set name="summonType" val="agathion"/>
 	</skill>
-	<skill id="21107" levels="1" name="Release Agathion's Seal - Dancing Child of Fortune">
+	<skill id="21107" levels="1" name="Release Agathion's Seal - Dancing Lucky Kid">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="magicLevel" val="85"/>
@@ -160,7 +160,7 @@
 		<set name="npcId" val="1532"/>
 		<set name="summonType" val="agathion"/>
 	</skill>
-	<skill id="21109" levels="1" name="Release Agathion's Seal - Wutangka">
+	<skill id="21109" levels="1" name="Release Agathion's Seal - Uthanka">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="magicLevel" val="85"/>
@@ -186,7 +186,7 @@
 		<set name="npcId" val="1534"/>
 		<set name="summonType" val="agathion"/>
 	</skill>
-	<skill id="21111" levels="1" name="Soul of an Adventurer of Immortality's Ability">
+	<skill id="21111" levels="1" name="Great Adventurer's Soul Power">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_headphone_i00"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -209,7 +209,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21112" levels="1" name="Soul of a Strong Warrior's Ability">
+	<skill id="21112" levels="1" name="Brave Warrior's Soul Power">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_headphone_i00"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -232,7 +232,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21113" levels="1" name="Soul of a Wise Magician's Ability">
+	<skill id="21113" levels="1" name="Great Wizard's Soul Power">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_headphone_i00"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -255,7 +255,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21114" levels="1" name="Soul of an Adventurer of Immortality's Ability">
+	<skill id="21114" levels="1" name="Great Adventurer's Soul Power">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_spirit_skill_i00"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -278,7 +278,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21115" levels="1" name="Soul of a Strong Warrior's Ability">
+	<skill id="21115" levels="1" name="Brave Warrior's Soul Power">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_spirit_skill_i00"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -301,7 +301,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21116" levels="1" name="Soul of a Wise Magician's Ability">
+	<skill id="21116" levels="1" name="Great Wizard's Soul Power">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_spirit_skill_i00"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -324,7 +324,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21117" levels="1" name="Ability of Prominent Adventure's Soul">
+	<skill id="21117" levels="1" name="Great Adventurer's Soul Power">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_spirit_skill_i00"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -372,7 +372,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21119" levels="1" name="Soul of a Great Magician's Ability">
+	<skill id="21119" levels="1" name="Great Wizard's Soul Power">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_spirit_skill_i00"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -414,7 +414,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21122" levels="1" name="Blessing of Skooldie: Protection of Darkness">
+	<skill id="21122" levels="1" name="Skooldie's Blessing: Protection of Darkness">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="BranchSys.icon.br_scooldie_mask_i00"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -438,7 +438,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21123" levels="1" name="Blessing of Skooldie: Protection of Darkness">
+	<skill id="21123" levels="1" name="Skooldie's Blessing: Protection of Darkness">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="BranchSys.icon.br_scooldie_mask_i00"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -462,7 +462,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21124" levels="1" name="Blessing of Skooldie: Protection of Darkness">
+	<skill id="21124" levels="1" name="Skooldie's Blessing: Protection of Darkness">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="BranchSys.icon.br_scooldie_mask_i00"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -486,7 +486,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21125" levels="1" name="Blessing of Skooldie: Protection of Darkness">
+	<skill id="21125" levels="1" name="Skooldie's Blessing: Protection of Darkness">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="BranchSys.icon.br_scooldie_mask_i00"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -510,7 +510,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21126" levels="1" name="Blessing of Skooldie: Protection of Darkness">
+	<skill id="21126" levels="1" name="Skooldie's Blessing: Protection of Darkness">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="BranchSys.icon.br_scooldie_mask_i00"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -669,7 +669,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="21133" levels="1" name="Release Agathion's Seal - Frozen Corpse">
+	<skill id="21133" levels="1" name="Release Agathion's Seal - Zombie">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="magicLevel" val="85"/>
@@ -854,7 +854,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21142" levels="1" name="Release Agathion's Seal - Gwangong">
+	<skill id="21142" levels="1" name="Release Agathion's Seal - Guangong">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="magicLevel" val="85"/>
@@ -984,7 +984,7 @@
 		<set name="npcId" val="1559"/>
 		<set name="summonType" val="agathion"/>
 	</skill>
-	<skill id="21152" levels="1" name="Fireworks">
+	<skill id="21152" levels="1" name="Chain Fireworks">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_rocket_cap_i00"/>
 		<set name="reuseDelay" val="300000"/>
@@ -1101,7 +1101,7 @@
 		<set name="npcId" val="1539"/>
 		<set name="summonType" val="agathion"/>
 	</skill>
-	<skill id="21158" levels="1" name="Release Agathion's Seal - Lana">
+	<skill id="21158" levels="1" name="Release Agathion's Seal - Lanya">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="magicLevel" val="85"/>
@@ -1114,7 +1114,7 @@
 		<set name="npcId" val="1540"/>
 		<set name="summonType" val="agathion"/>
 	</skill>
-	<skill id="21159" levels="1" name="Release Agathion's Seal - Gnocian">
+	<skill id="21159" levels="1" name="Release Agathion's Seal - Gnosian">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="magicLevel" val="85"/>
@@ -1244,7 +1244,7 @@
 		<set name="npcId" val="1550"/>
 		<set name="summonType" val="agathion"/>
 	</skill>
-	<skill id="21169" levels="1" name="Kadomas Transformation">
+	<skill id="21169" levels="1" name="Transform Kadomas">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1280,7 +1280,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21171" levels="1" name="Jet Bike Mount">
+	<skill id="21171" levels="1" name="Ride Jet Bike">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1306,31 +1306,31 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="21172" levels="1" name="Enhanced Authority - CON+1 STR+1">
+	<skill id="21172" levels="1" name="Reinforced Authority - CON + 1 / STR + 1">
 		<set name="icon" val="BranchSys2.icon.br_soulavatar_stat_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21173" levels="1" name="Enhanced Authority - WIT+1 INT+1">
+	<skill id="21173" levels="1" name="Reinforced Authority - WIT + 1 / INT + 1">
 		<set name="icon" val="BranchSys2.icon.br_soulavatar_stat_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21174" levels="1" name="Enhanced Authority - WIT+1 MEN+1">
+	<skill id="21174" levels="1" name="Reinforced Authority - WIT + 1 / MEN + 1">
 		<set name="icon" val="BranchSys2.icon.br_soulavatar_stat_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21175" levels="1" name="Enhanced Authority - CON+1 DEX+1">
+	<skill id="21175" levels="1" name="Reinforced Authority - CON + 1 / DEX + 1">
 		<set name="icon" val="BranchSys2.icon.br_soulavatar_stat_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21176" levels="1" name="Divine Protection - Divinity">
+	<skill id="21176" levels="1" name="Divine Protection - Holy">
 		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -1360,7 +1360,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21181" levels="1" name="Divine Protection - Darkness">
+	<skill id="21181" levels="1" name="Divine Protection - Dark">
 		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -1402,13 +1402,13 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21188" levels="1" name="Recovery Ability - HP">
+	<skill id="21188" levels="1" name="Recovery Ability: HP">
 		<set name="icon" val="BranchSys2.icon.br_soulavatar_regen_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21189" levels="1" name="Recovery Ability - MP">
+	<skill id="21189" levels="1" name="Recovery Ability: MP">
 		<set name="icon" val="BranchSys2.icon.br_soulavatar_regen_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -1439,7 +1439,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21193" levels="1" name="Guardian Deity's Strength">
+	<skill id="21193" levels="1" name="Power of Guardian Deity">
 		<set name="icon" val="BranchSys2.icon.br_paiwan_cap_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -1458,7 +1458,7 @@
 		<set name="npcId" val="1575"/>
 		<set name="summonType" val="agathion"/>
 	</skill>
-	<skill id="21195" levels="1" name="Blessed Child Transformation Skill - Trejuo">
+	<skill id="21195" levels="1" name="Blessed Child Transformation Skill: Trejuo">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1472,7 +1472,7 @@
 			<effect count="1" name="Transformation" stackType="vitalityRegen" time="3600" val="20002"/>
 		</for>
 	</skill>
-	<skill id="21196" levels="1" name="Blessed Child Transformation Skill - Sujin">
+	<skill id="21196" levels="1" name="Blessed Child Transformation Skill: Sujin">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1498,7 +1498,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21199" levels="1" name="Vitality of Excellence">
+	<skill id="21199" levels="1" name="Vitality of Courage">
 		<set name="icon" val="BranchSys2.icon.br_pekingopera_mask_c_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>

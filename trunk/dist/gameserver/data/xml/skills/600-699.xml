@@ -44,7 +44,7 @@
 			<add stat="sDef" val="225" order="0x60"/>
 		</for>
 	</skill>
-	<skill id="604" levels="1" name="Residence Resist Typhoon">
+	<skill id="604" levels="1" name="Residence Typhoon Resistance">
 		<set name="icon" val="icon.skill0384"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -56,7 +56,7 @@
 			<add order="0x60" stat="defenceWind" val="10"/>
 		</for>
 	</skill>
-	<skill id="605" levels="1" name="Residence Resist Lava">
+	<skill id="605" levels="1" name="Residence Lava Resistance">
 		<set name="icon" val="icon.skill0385"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -199,7 +199,7 @@
 			<add order="0x40" val="#mDef" stat="mDef"/>
 		</for>
 	</skill>
-	<skill id="615" levels="3" name="Divine Squad">
+	<skill id="615" levels="3" name="Holy Squad">
 		<table name="#regHp">1.2 1.2 1.2</table>
 		<table name="#maxMp">1 1.3 1.3</table>
 		<table name="#mpConsum">1 1 0.95</table>
@@ -265,7 +265,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="618" levels="1" name="Transform Death Blader">
+	<skill id="618" levels="1" name="Transform Doom Wraith">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -293,7 +293,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="619" levels="1" name="Transform Dispel">
+	<skill id="619" levels="1" name="Dispel Transform">
 		<set name="icon" val="icon.skilltransform2"/>
 		<set name="magicLevel" val="56"/>
 		<set name="hitTime" val="2500"/>
@@ -305,7 +305,7 @@
 			<effect count="1" name="Transformation" time="0" val="0"/>
 		</for>
 	</skill>
-	<skill id="620" levels="1" name="Quiver of Bolts: B Grade">
+	<skill id="620" levels="1" name="Quiver of Bolts (B-grade)">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0620"/>
 		<set name="reuseDelay" val="600000"/>
@@ -525,7 +525,7 @@
 			<target mobId="13098"/>
 		</cond>
 	</skill>
-	<skill id="631" levels="6" name="Emergent Ability - Attack">
+	<skill id="631" levels="6" name="Emergent Ability: Attack">
 		<table name="#pAtk">10 20 28 35 42 49</table>
 		<table name="#magicLevel">60 75 80 80 80 80</table>
 		<set name="icon" val="icon.skill0141"/>
@@ -537,7 +537,7 @@
 			<add order="0x60" val="#pAtk" stat="pAtk"/>
 		</for>
 	</skill>
-	<skill id="632" levels="6" name="Emergent Ability - Defense">
+	<skill id="632" levels="6" name="Emergent Ability: Defense">
 		<table name="#pDef">10 20 30 40 50 60</table>
 		<table name="#magicLevel">60 75 80 80 80 80</table>
 		<set name="icon" val="icon.skill0142"/>
@@ -549,7 +549,7 @@
 			<add order="0x60" val="#pDef" stat="pDef"/>
 		</for>
 	</skill>
-	<skill id="633" levels="6" name="Emergent Ability - Empower">
+	<skill id="633" levels="6" name="Emergent Ability: Empower">
 		<table name="#mAtk">10.5 20.1 28.7 36.3 43 47.8</table>
 		<table name="#magicLevel">60 75 80 80 80 80</table>
 		<set name="icon" val="icon.skill0249"/>
@@ -561,7 +561,7 @@
 			<add order="0x60" val="#mAtk" stat="mAtk"/>
 		</for>
 	</skill>
-	<skill id="634" levels="6" name="Emergent Ability - Magic Defense">
+	<skill id="634" levels="6" name="Emergent Ability: M. Def.">
 		<table name="#mDef">15.1 30.2 45.4 60.5 75.6 90.7</table>
 		<table name="#magicLevel">60 75 80 80 80 80</table>
 		<set name="icon" val="icon.skill0146"/>
@@ -573,7 +573,7 @@
 			<add order="0x60" val="#mDef" stat="mDef"/>
 		</for>
 	</skill>
-	<skill id="635" levels="3" name="Not In Use">
+	<skill id="635" levels="3" name="Not in Use">
 		<table name="#magicLevel">60 75 80</table>
 		<set name="icon" val="icon.skill0635"/>
 		<set name="magicLevel" val="#magicLevel"/>
@@ -586,7 +586,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="636" levels="3" name="Not In Use">
+	<skill id="636" levels="3" name="Not in Use">
 		<table name="#magicLevel">60 75 80</table>
 		<set name="icon" val="icon.skill0636"/>
 		<set name="magicLevel" val="#magicLevel"/>
@@ -599,7 +599,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="637" levels="1" name="Master Ability - Attack">
+	<skill id="637" levels="1" name="Master Ability: Attack">
 		<set name="icon" val="icon.skill1068"/>
 		<set name="magicLevel" val="60"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -609,7 +609,7 @@
 			<add order="0x60" stat="pAtk" val="25"/>
 		</for>
 	</skill>
-	<skill id="638" levels="1" name="Master Ability - Empower">
+	<skill id="638" levels="1" name="Master Ability: Empower">
 		<set name="icon" val="icon.skill1059"/>
 		<set name="magicLevel" val="60"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -619,7 +619,7 @@
 			<add order="0x60" stat="mAtk" val="28.65"/>
 		</for>
 	</skill>
-	<skill id="639" levels="1" name="Master Ability - Casting">
+	<skill id="639" levels="1" name="Master Ability: Casting">
 		<set name="icon" val="icon.skill1085"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -629,7 +629,7 @@
 			<add order="0x60" stat="mAtkSpd" val="11"/>
 		</for>
 	</skill>
-	<skill id="640" levels="1" name="Master Ability - Focus">
+	<skill id="640" levels="1" name="Master Ability: Focus">
 		<set name="icon" val="icon.skill1077"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -639,7 +639,7 @@
 			<add order="0x60" stat="baseCrit" val="30"/>
 		</for>
 	</skill>
-	<skill id="641" levels="1" name="Knight Ability - Boost HP">
+	<skill id="641" levels="1" name="Knight Ability: Boost HP">
 		<set name="icon" val="icon.skill0211"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -649,7 +649,7 @@
 			<add order="0x60" val="295" stat="maxHp"/>
 		</for>
 	</skill>
-	<skill id="642" levels="1" name="Enchanter Ability - Boost Mana">
+	<skill id="642" levels="1" name="Enchanter Ability: Boost Mana">
 		<set name="icon" val="icon.skill0213"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -659,7 +659,7 @@
 			<add order="0x60" val="148" stat="maxMp"/>
 		</for>
 	</skill>
-	<skill id="643" levels="1" name="Summoner Ability - Boost HP/MP">
+	<skill id="643" levels="1" name="Summoner Ability: Boost HP/MP">
 		<set name="icon" val="icon.skill0211"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -670,7 +670,7 @@
 			<add order="0x60" val="74" stat="maxMp"/>
 		</for>
 	</skill>
-	<skill id="644" levels="1" name="Rogue Ability - Evasion">
+	<skill id="644" levels="1" name="Rogue Ability: Evasion">
 		<set name="icon" val="icon.skill1087"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -680,7 +680,7 @@
 			<add order="0x60" val="4" stat="rEvas"/>
 		</for>
 	</skill>
-	<skill id="645" levels="1" name="Rogue Ability - Long Shot">
+	<skill id="645" levels="1" name="Rogue Ability: Long Shot">
 		<set name="icon" val="icon.skill0113"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -692,7 +692,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="646" levels="1" name="Wizard Ability - Mana Gain">
+	<skill id="646" levels="1" name="Wizard Ability: Mana Gain">
 		<set name="icon" val="icon.skill0285"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -702,7 +702,7 @@
 			<add order="0x60" stat="mpEff" val="20"/>
 		</for>
 	</skill>
-	<skill id="647" levels="1" name="Enchanter Ability - Mana Recovery">
+	<skill id="647" levels="1" name="Enchanter Ability: Mana Recovery">
 		<set name="icon" val="icon.skill0229"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -712,7 +712,7 @@
 			<mul order="0x30" stat="regMp" val="1.10"/>
 		</for>
 	</skill>
-	<skill id="648" levels="1" name="Healer Ability - Prayer">
+	<skill id="648" levels="1" name="Healer Ability: Prayer">
 		<set name="icon" val="icon.skill1307"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -722,7 +722,7 @@
 			<mul order="0x30" stat="hpEff" val="1.06"/>
 		</for>
 	</skill>
-	<skill id="650" levels="1" name="Warrior Ability - Resist Trait">
+	<skill id="650" levels="1" name="Warrior Ability: Attribute Resistance">
 		<set name="icon" val="icon.skill0287"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -736,7 +736,7 @@
 			<add order="0x60" stat="cancelResist" val="5"/>
 		</for>
 	</skill>
-	<skill id="651" levels="1" name="Warrior Ability - Haste">
+	<skill id="651" levels="1" name="Warrior Ability: Haste">
 		<set name="icon" val="icon.skill1086"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -746,7 +746,7 @@
 			<trigger id="5572" level="1" type="ATTACK" chance="2"/>
 		</triggers>
 	</skill>
-	<skill id="652" levels="1" name="Knight Ability - Defense">
+	<skill id="652" levels="1" name="Knight Ability: Defense">
 		<set name="icon" val="icon.skill0110"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -758,7 +758,7 @@
 			</trigger>
 		</triggers>
 	</skill>
-	<skill id="653" levels="1" name="Rogue Ability - Critical Chance">
+	<skill id="653" levels="1" name="Rogue Ability: Critical Chance">
 		<set name="icon" val="icon.skill1077"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -768,7 +768,7 @@
 			<trigger id="5574" level="1" type="ATTACK" chance="2"/>
 		</triggers>
 	</skill>
-	<skill id="654" levels="1" name="Wizard Ability - Mana Steal">
+	<skill id="654" levels="1" name="Wizard Ability: Mana Steal">
 		<set name="icon" val="icon.skill1398"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -778,7 +778,7 @@
 			<trigger id="5575" level="1" type="ATTACK" chance="2"/>
 		</triggers>
 	</skill>
-	<skill id="655" levels="1" name="Enchanter Ability - Barrier">
+	<skill id="655" levels="1" name="Enchanter Ability: Barrier">
 		<set name="icon" val="icon.skill1418"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1424,7 +1424,7 @@
 		<set name="isReuseDelayPermanent" val="true"/>
 		<set name="saveVs" val="MEN"/>
 	</skill>
-	<skill id="681" levels="1" name="Divine Knight Hate Aura">
+	<skill id="681" levels="1" name="Divine Knight Aggression Aura">
 		<set name="levelModifier" val="2"/>
 		<set name="affectLimit" val="10;10"/>
 		<set name="icon" val="icon.skill_transform_etc"/>
@@ -1679,7 +1679,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="693" levels="1" name="Divine Wizard Divine Strike">
+	<skill id="693" levels="1" name="Divine Wizard Holy Strike">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill_transform_s_attack"/>
 		<set name="reuseDelay" val="8000"/>
@@ -1738,7 +1738,7 @@
 			<effect count="1" name="Sleep" stackOrder="-1" stackType="Sleep" time="30" val="0"/>
 		</for>
 	</skill>
-	<skill id="696" levels="1" name="Divine Wizard Surrender to Divine">
+	<skill id="696" levels="1" name="Divine Wizard Surrender to Holy">
 		<set name="levelModifier" val="2"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill_transform_debuff"/>

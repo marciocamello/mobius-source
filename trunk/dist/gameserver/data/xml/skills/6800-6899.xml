@@ -165,7 +165,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6813" levels="8" name="Focus Sonic">
+	<skill id="6813" levels="8" name="Sonic Focus">
 		<table name="#charges">1 2 3 4 5 6 7 8</table>
 		<table name="#magicLevel">40 43 49 55 60 66 70 79</table>
 		<set name="icon" val="icon.skill0008"/>
@@ -248,7 +248,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6821" levels="1" name="P. Def. Decrease">
+	<skill id="6821" levels="1" name="Decrease P. Def.">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill6873"/>
 		<set name="reuseDelay" val="15000"/>
@@ -268,7 +268,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6822" levels="1" name="P. Def. Decrease">
+	<skill id="6822" levels="1" name="Decrease P. Def.">
 		<set name="icon" val="icon.skill0122"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -423,7 +423,7 @@
 		<set name="skillType" val="MDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6832" levels="1" name="Summon Parasite Leech">
+	<skill id="6832" levels="1" name="Summon Parasitic Leech">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -1186,7 +1186,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6886" levels="1" name="Complete Recovery">
+	<skill id="6886" levels="1" name="Full Recovery">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -1312,19 +1312,19 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6897" levels="12" name="Shock">
+	<skill id="6897" levels="12" name="Stun">
 		<set name="icon" val="icon.skill0100"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6898" levels="1" name="84 level Raid Boss">
+	<skill id="6898" levels="1" name="Raid Boss (Lv. 84)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6899" levels="1" name="84 level Raid Boss">
+	<skill id="6899" levels="1" name="Raid Boss (Lv. 84)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>

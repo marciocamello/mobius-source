@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="14606" name="Gracian Soldier Two-Handed Sword">
+	<weapon id="14606" name="Gracian Soldier Two-handed Sword">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="false"/>
@@ -128,7 +128,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14624" name="Santa Claus' Behemoth Tuning Fork">
+	<weapon id="14624" name="Santa Claus' Behemoth' Tuning Fork">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.weapon_tuning_fork_of_behemoth_i00"/>
@@ -340,7 +340,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14630" name="Santa Claus' Hand of Cabrio">
+	<weapon id="14630" name="Santa Claus' Cabrio's Hand">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>

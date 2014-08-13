@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="10606" name="Agathion Seal Bracelet - Rudolph">
+	<armor id="10606" name="Agathion - Rudolph">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>
@@ -32,7 +32,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="10614" name="White Wool Hat (Event)">
+	<armor id="10614" name="White Sheep Hat (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_sheep_cap_white_i00"/>
@@ -45,7 +45,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="10615" name="Black Wool Hat (Event)">
+	<armor id="10615" name="Black Sheep Hat (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_sheep_cap_black_i00"/>
@@ -71,7 +71,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="10617" name="Ant Hat " add_name="Year 2008">
+	<armor id="10617" name="Ant Hat" add_name="Year 2008">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_ant_cap_i00"/>
@@ -84,7 +84,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="10618" name="Ol Mahum Hat " add_name="Year 2008">
+	<armor id="10618" name="Ol Mahum Hat" add_name="Year 2008">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_ol_mahum_cap_i00"/>
@@ -97,7 +97,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="10619" name="Wolf Hat " add_name="Year 2008">
+	<armor id="10619" name="Wolf Hat" add_name="Year 2008">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_wolf_cap_i00"/>
@@ -110,7 +110,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="10620" name="Shadow Item - Ant Hat" add_name="Blessed Scroll of Escape">
+	<armor id="10620" name="Shadow Item: Ant Hat" add_name="Blessed Escape">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="1440"/>
@@ -124,7 +124,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="10621" name="Shadow Item - Ant Hat" add_name="Blessed Scroll of Resurrection">
+	<armor id="10621" name="Shadow Item: Ant Hat" add_name="Blessed Resurrection">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="1440"/>
@@ -138,7 +138,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="10622" name="Shadow Item - Ant Hat" add_name="Firecracker">
+	<armor id="10622" name="Shadow Item: Ant Hat" add_name="Firework">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="1440"/>
@@ -155,7 +155,7 @@
 			<skill id="3266" level="1"/>
 		</skills>
 	</armor>
-	<armor id="10623" name="Shadow Item - Ant Hat" add_name="Big Head">
+	<armor id="10623" name="Shadow Item: Ant Hat" add_name="Big Head">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="1440"/>
@@ -172,7 +172,7 @@
 			<skill id="3265" level="1"/>
 		</skills>
 	</armor>
-	<armor id="10624" name="Shadow Item - Ol Mahum Hat" add_name="Blessed Scroll of Escape">
+	<armor id="10624" name="Shadow Item: Ol Mahum Hat" add_name="Blessed Escape">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="1440"/>
@@ -186,7 +186,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="10625" name="Shadow Item - Ol Mahum Hat" add_name="Blessed Scroll of Resurrection">
+	<armor id="10625" name="Shadow Item: Ol Mahum Hat" add_name="Blessed Resurrection">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="1440"/>
@@ -200,7 +200,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="10626" name="Shadow Item - Ol Mahum Hat" add_name="Firecracker">
+	<armor id="10626" name="Shadow Item: Ol Mahum Hat" add_name="Firework">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="1440"/>
@@ -217,7 +217,7 @@
 			<skill id="3266" level="1"/>
 		</skills>
 	</armor>
-	<armor id="10627" name="Shadow Item - Ol Mahum Hat" add_name="Big Head">
+	<armor id="10627" name="Shadow Item: Ol Mahum Hat" add_name="Big Head">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="1440"/>
@@ -234,7 +234,7 @@
 			<skill id="3265" level="1"/>
 		</skills>
 	</armor>
-	<armor id="10628" name="Shadow Item - Wolf Hat" add_name="Blessed Scroll of Escape">
+	<armor id="10628" name="Shadow Item: Wolf Hat" add_name="Blessed Escape">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="1440"/>
@@ -248,7 +248,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="10629" name="Shadow Item - Wolf Hat" add_name="Blessed Scroll of Resurrection">
+	<armor id="10629" name="Shadow Item: Wolf Hat" add_name="Blessed Resurrection">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="1440"/>
@@ -262,7 +262,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="10630" name="Shadow Item - Wolf Hat" add_name="Firecracker">
+	<armor id="10630" name="Shadow Item: Wolf Hat" add_name="Firework">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="1440"/>
@@ -279,7 +279,7 @@
 			<skill id="3266" level="1"/>
 		</skills>
 	</armor>
-	<armor id="10631" name="Shadow Item - Wolf Hat" add_name="Big Head">
+	<armor id="10631" name="Shadow Item: Wolf Hat" add_name="Big Head">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="1440"/>
@@ -296,7 +296,7 @@
 			<skill id="3265" level="1"/>
 		</skills>
 	</armor>
-	<armor id="10658" name="Pet Accessory (not used) ">
+	<armor id="10658" name="Pet Accessory (Not in Use)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_prefect_belt_i00"/>
 		<set name="price" value="33"/>
@@ -312,7 +312,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="10659" name="Agathion Summon Bracelet - Monkey">
+	<armor id="10659" name="Agathion - Monkey">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>
@@ -332,7 +332,7 @@
 			<skill id="8254" level="1"/>
 		</skills>
 	</armor>
-	<armor id="10660" name="Agathion Summon Bracelet - Griffin">
+	<armor id="10660" name="Agathion - Griffin">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>

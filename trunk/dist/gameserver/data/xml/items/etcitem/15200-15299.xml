@@ -73,7 +73,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15209" name="Equipment Set Pack Coupon (10-day)">
+	<etcitem id="15209" name="Equipment Set Pack (10-day) Coupon">
 		<set name="freightable" value="true"/>
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>

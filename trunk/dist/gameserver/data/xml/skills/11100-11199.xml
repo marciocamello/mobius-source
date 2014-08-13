@@ -275,7 +275,7 @@
 			<add order="0x40" stat="defenceEarth" val="20"/>
 		</for>
 	</skill>
-	<skill id="11185" levels="1" name="Superior Mana Boost">
+	<skill id="11185" levels="1" name="Superior MP Boost">
 		<table name="#maxMp">313</table>
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" val="#magicLevel"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="14300" name="Yaksa Mace">
+	<etcitem id="14300" name="Corroded Yaksa Mace">
 		<set name="crystal_count" value="1885"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -80,7 +80,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2010"/>
 	</etcitem>
-	<etcitem id="14307" name="Admiral's Estoc">
+	<etcitem id="14307" name="Corroded Admiral's Estoc">
 		<set name="crystal_count" value="1885"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -330,7 +330,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1820"/>
 	</etcitem>
-	<etcitem id="14329" name="Barakiel's Axe">
+	<etcitem id="14329" name="Corroded Barakiel's Axe">
 		<set name="crystal_count" value="2157"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -421,7 +421,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1510"/>
 	</etcitem>
-	<etcitem id="14337" name="Daimon Crystal">
+	<etcitem id="14337" name="Corroded Daimon Crystal">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="2157"/>
 		<set name="class" value="OTHER"/>
@@ -455,7 +455,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1300"/>
 	</etcitem>
-	<etcitem id="14340" name="Durendal">
+	<etcitem id="14340" name="Corroded Durendal">
 		<set name="crystal_count" value="2157"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

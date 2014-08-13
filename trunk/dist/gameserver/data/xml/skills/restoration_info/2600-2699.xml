@@ -44,7 +44,7 @@
 			<item id="13854" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2638" skill_level="1" name="Five-year anniversary event box">
+	<restoration skill_id="2638" skill_level="1" name="5th Anniversary Event Box">
 		<group chance="16.6">
 			<item id="9546" min_count="1" max_count="1"/>
 		</group>
@@ -64,7 +64,7 @@
 			<item id="9551" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2639" skill_level="1" name="Five-year anniversary event box">
+	<restoration skill_id="2639" skill_level="1" name="5th Anniversary Event Box">
 		<group chance="16.6">
 			<item id="9546" min_count="2" max_count="2"/>
 		</group>
@@ -84,7 +84,7 @@
 			<item id="9551" min_count="2" max_count="2"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2640" skill_level="1" name="Five-year anniversary event box">
+	<restoration skill_id="2640" skill_level="1" name="5th Anniversary Event Box">
 		<group chance="9.0">
 			<item id="10260" min_count="1" max_count="1"/>
 		</group>
@@ -119,7 +119,7 @@
 			<item id="10270" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2641" skill_level="1" name="Five-Year Anniversary Event Box">
+	<restoration skill_id="2641" skill_level="1" name="5th Anniversary Event Box">
 		<group chance="9.0">
 			<item id="10260" min_count="2" max_count="2"/>
 		</group>
@@ -154,7 +154,7 @@
 			<item id="10270" min_count="2" max_count="2"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2642" skill_level="1" name="Five-Year Anniversary Event Box">
+	<restoration skill_id="2642" skill_level="1" name="5th Anniversary Event Box">
 		<group chance="9.0">
 			<item id="10260" min_count="3" max_count="3"/>
 		</group>
@@ -189,7 +189,7 @@
 			<item id="10270" min_count="3" max_count="3"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2643" skill_level="1" name="Five-Year Anniversary Event Box">
+	<restoration skill_id="2643" skill_level="1" name="5th Anniversary Event Box">
 		<group chance="7.14">
 			<item id="7122" min_count="1" max_count="1"/>
 		</group>
@@ -233,7 +233,7 @@
 			<item id="7135" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2644" skill_level="1" name="Five-Year Anniversary Event Box">
+	<restoration skill_id="2644" skill_level="1" name="5th Anniversary Event Box">
 		<group chance="7.14">
 			<item id="7122" min_count="2" max_count="2"/>
 		</group>

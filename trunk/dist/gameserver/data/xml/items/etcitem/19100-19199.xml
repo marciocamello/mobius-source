@@ -147,7 +147,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.armor_t501_u_i00_piece"/>
 	</etcitem>
-	<etcitem id="19185" name="Unidentified Immortal Gaiters Ingredient">
+	<etcitem id="19185" name="Unidentified Immortal Gaiter Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -157,7 +157,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.armor_t501_l_i00_piece"/>
 	</etcitem>
-	<etcitem id="19186" name="Unidentified Immortal Gauntlets Ingredient">
+	<etcitem id="19186" name="Unidentified Immortal Gauntlet Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -167,7 +167,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.armor_t501_g_i00_piece"/>
 	</etcitem>
-	<etcitem id="19187" name="Unidentified Immortal Boots Ingredients">
+	<etcitem id="19187" name="Unidentified Immortal Boot Ingredients">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -207,7 +207,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.armor_t502_u_i00_piece"/>
 	</etcitem>
-	<etcitem id="19191" name="Unidentified Immortal Leather Leggings Ingredient">
+	<etcitem id="19191" name="Unidentified Immortal Leather Legging Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -217,7 +217,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.armor_t502_l_i00_piece"/>
 	</etcitem>
-	<etcitem id="19192" name="Unidentified Immortal Leather Gloves Ingredient">
+	<etcitem id="19192" name="Unidentified Immortal Leather Glove Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -227,7 +227,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.armor_t502_g_i00_piece"/>
 	</etcitem>
-	<etcitem id="19193" name="Unidentified Immortal Leather Boots Ingredient">
+	<etcitem id="19193" name="Unidentified Immortal Leather Boot Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -257,7 +257,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.armor_t503_u_i00_piece"/>
 	</etcitem>
-	<etcitem id="19196" name="Unidentified Immortal Stockings Ingredient">
+	<etcitem id="19196" name="Unidentified Immortal Stocking Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -267,7 +267,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.armor_t503_l_i00_piece"/>
 	</etcitem>
-	<etcitem id="19197" name="Unidentified Immortal Gloves Ingredient">
+	<etcitem id="19197" name="Unidentified Immortal Glove Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -277,7 +277,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.armor_t503_g_i00_piece"/>
 	</etcitem>
-	<etcitem id="19198" name="Unidentified Immortal Shoes Ingredient">
+	<etcitem id="19198" name="Unidentified Immortal Shoe Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

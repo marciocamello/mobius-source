@@ -10,7 +10,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.codex_of_incuse_forgetting"/>
 	</etcitem>
-	<etcitem id="30301" name="Superior Giant's Codex Manuscript">
+	<etcitem id="30301" name="Superior Giant's Codex Manuscript�">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -280,7 +280,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
 	</etcitem>
-	<etcitem id="30375" name="Infinite Orichalcum Quiver" add_name="Additional hit">
+	<etcitem id="30375" name="Infinite Orichalcum Quiver" add_name="Additional Hit">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -288,7 +288,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00"/>
 	</etcitem>
-	<etcitem id="30376" name="Infinite Orichalcum Quiver" add_name="Critical hit">
+	<etcitem id="30376" name="Infinite Orichalcum Quiver" add_name="Critical Hit">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -296,7 +296,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00"/>
 	</etcitem>
-	<etcitem id="30377" name="Infinite Orichalcum Quiver" add_name="Bleed hit">
+	<etcitem id="30377" name="Infinite Orichalcum Quiver" add_name="Bleed Hit">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -304,7 +304,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00"/>
 	</etcitem>
-	<etcitem id="30378" name="Infinite Orichalcum Bolt Container" add_name="Additional hit">
+	<etcitem id="30378" name="Infinite Orichalcum Bolt Container" add_name="Additional Hit">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -312,7 +312,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00"/>
 	</etcitem>
-	<etcitem id="30379" name="Infinite Orichalcum Bolt Container" add_name="Critical hit">
+	<etcitem id="30379" name="Infinite Orichalcum Bolt Container" add_name="Critical Hit">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -320,7 +320,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00"/>
 	</etcitem>
-	<etcitem id="30380" name="Infinite Orichalcum Bolt Container" add_name="Bleed hit">
+	<etcitem id="30380" name="Infinite Orichalcum Bolt Container" add_name="Bleed Hit">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -328,7 +328,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00"/>
 	</etcitem>
-	<etcitem id="30381" name="Lucky Enchant Stone: Enchant Weapon (R-grade)">
+	<etcitem id="30381" name="Lucky Enchant Stone: Weapon (R-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -341,7 +341,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="30382" name="Lucky Enchant Stone: Enchant Armor (R-grade)">
+	<etcitem id="30382" name="Lucky Enchant Stone: Armor (R-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="15280" name="NPC use clear 1HS">
+	<weapon id="15280" name="Transparent 1HS (NPC)">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_long_sword_i00"/>
@@ -24,7 +24,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15281" name="NPC use clear 2HS">
+	<weapon id="15281" name="Transparent 2HS (NPC)">
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_two_handed_sword_i00"/>
 		<set name="rnd_dam" value="10"/>

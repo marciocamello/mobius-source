@@ -837,7 +837,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="32518" name="Vortex Gate " title="Aerial Cleft">
+	<npc id="32518" name="Vortex Gate" title="Aerial Cleft">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -883,7 +883,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="32519" name="Vortex Gate " title="Aerial Cleft">
+	<npc id="32519" name="Vortex Gate" title="Aerial Cleft">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -2007,7 +2007,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="32543" name="Energy of Generation" title="">
+	<npc id="32543" name="Cocoring's Sprite" title="Chest of Glory">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -2096,7 +2096,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="32545" name="Kurkle" title="Gracian Special Product Middleman">
+	<npc id="32545" name="Cocoring's Sprite" title="Chest of Victory">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -3834,7 +3834,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="32582" name="Jaina" title="Priest">
+	<npc id="32582" name="Cocoring's Sprite" title="Chest of Friendship">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>

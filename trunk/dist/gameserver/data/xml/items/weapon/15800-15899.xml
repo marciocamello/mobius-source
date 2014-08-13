@@ -141,7 +141,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15834" name="Skull Edge" add_name="Crt. Damage">
+	<weapon id="15834" name="Skull Edge" add_name="Critical Damage">
 		<set name="crystal_count" value="8233"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -449,7 +449,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15845" name="Octo Claw" add_name="Crt. Stun">
+	<weapon id="15845" name="Octo Claw" add_name="Critical Stun">
 		<set name="crystal_count" value="8233"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -884,7 +884,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15860" name="Skull Carnium Bow" add_name="Crt. Slow">
+	<weapon id="15860" name="Skull Carnium Bow" add_name="Critical Slow">
 		<set name="atk_reuse" value="1500"/>
 		<set name="crystal_count" value="8233"/>
 		<set name="crystal_type" value="S80"/>
@@ -1154,7 +1154,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15869" name="Dominion Crossbow" add_name="Crt. Slow">
+	<weapon id="15869" name="Dominion Crossbow" add_name="Critical Slow">
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_count" value="8233"/>
 		<set name="crystal_type" value="S80"/>
@@ -1327,7 +1327,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15875" name="Mamba Edge" add_name="Crt. Damage">
+	<weapon id="15875" name="Mamba Edge" add_name="Critical Damage">
 		<set name="crystal_count" value="9872"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -1635,7 +1635,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15886" name="Jade Claw" add_name="Crt. Stun">
+	<weapon id="15886" name="Jade Claw" add_name="Critical Stun">
 		<set name="crystal_count" value="9872"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>

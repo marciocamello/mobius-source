@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "restoration_info.dtd">
 <list>
-	<restoration skill_id="22101" skill_level="1" name="Fortune of Love Box">
+	<restoration skill_id="22101" skill_level="1" name="Fortune Box of Love">
 		<group chance="40.0">
 			<item id="20590" min_count="1" max_count="1"/>
 		</group>
@@ -14,7 +14,7 @@
 			<item id="20623" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="22108" skill_level="1" name="Halloween Toy Chest">
+	<restoration skill_id="22108" skill_level="1" name="Halloween Toy Box">
 		<group chance="20.0">
 			<item id="20712" min_count="1" max_count="1"/>
 		</group>
@@ -31,7 +31,7 @@
 			<item id="20716" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="22109" skill_level="1" name="Shiny Halloween Toy Chest">
+	<restoration skill_id="22109" skill_level="1" name="Shiny Halloween Toy Box">
 		<group chance="20.0">
 			<item id="20718" min_count="1" max_count="1"/>
 		</group>
@@ -48,7 +48,7 @@
 			<item id="20722" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="22114" skill_level="1" name="Scroll of Transformation Box">
+	<restoration skill_id="22114" skill_level="1" name="Transformation Scroll Pack">
 		<group chance="33.0">
 			<item id="20364" min_count="1" max_count="1"/>
 		</group>
@@ -59,7 +59,7 @@
 			<item id="20366" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="22115" skill_level="1" name="White Bearded Santa's Weapon Exchange Ticket Box">
+	<restoration skill_id="22115" skill_level="1" name="Santa's Weapon Coupon Box">
 		<group chance="99.99949">
 			<item id="20755" min_count="1" max_count="1"/>
 		</group>

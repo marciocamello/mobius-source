@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="10125" name="Shadow Item - War Axe">
+	<weapon id="10125" name="Shadow Item: War Axe">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>

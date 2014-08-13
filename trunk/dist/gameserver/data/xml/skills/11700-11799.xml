@@ -19,7 +19,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11749" levels="1" name="Iss Chain Air Blow">
+	<skill id="11749" levels="1" name="">
 		<set name="reuseDelay" val="10000"/>
 		<set name="coolTime" val="500"/>
 		<set name="hitTime" val="2000"/>
@@ -35,7 +35,7 @@
 		<set name="isSkillTimePermanent" val="true"/>
 		<set name="isAlterSkill" val="true"/>
 	</skill>
-	<skill id="11750" levels="1" name="Iss Chain Knock Blow">
+	<skill id="11750" levels="1" name="">
 		<set name="reuseDelay" val="10000"/>
 		<set name="coolTime" val="500"/>
 		<set name="castRange" val="900"/>
@@ -55,7 +55,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="11751" levels="1" name="Superior Weapon Mastery">
+	<skill id="11751" levels="1" name="Superior Magic Weapon Mastery">
 		<table name="#pAtk">82</table>
 		<table name="#mAtk">103</table>
 		<set name="magicLevel" val="87"/>
@@ -379,7 +379,7 @@
 			<effect abnormal="dancestun" count="1" name="Petrification" stackOrder="-1" stackType="paralyze" time="#time" val="0"/>
 		</for>
 	</skill>
-	<skill id="11766" levels="8" name="Dark Veil">
+	<skill id="11766" levels="8" name="Dark Blast">
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
 		<table name="#power">128 132 136 140 144 146 150 154</table>
 		<table name="#elementPower">0</table>
@@ -866,7 +866,7 @@
 		<set name="relationSkillsId" val="1016;"/>
 		<for/>
 	</skill>
-	<skill id="11785" levels="3" name="Group Resurrection">
+	<skill id="11785" levels="3" name="Party Resurrection">
 		<table name="#power">90.0 95.0 100.0</table>
 		<table name="#effectPoint">196 290 374</table>
 		<table name="#magicLevel">92 93 95</table>
@@ -971,7 +971,7 @@
 			<add order="0x40" stat="mDef" val="#mDef"/>
 		</for>
 	</skill>
-	<skill id="11790" levels="1" name="Superior Elemental Protection">
+	<skill id="11790" levels="1" name="Superior Elemental Resistance">
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="BUFF"/>
@@ -1006,7 +1006,7 @@
 			</mul>
 		</for>
 	</skill>
-	<skill id="11792" levels="1" name="Superior Mind Resistance">
+	<skill id="11792" levels="1" name="Superior Mental Attack Resistance">
 		<set name="magicLevel" val="87"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>

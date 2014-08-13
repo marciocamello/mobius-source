@@ -2431,7 +2431,7 @@
 			<defence attribute="unholy" value="170"/>
 		</attributes>
 	</npc>
-	<npc id="18338" name="Dark Choir Witch Doctor" title="">
+	<npc id="18338" name="Dark Choir Shaman" title="">
 		<set name="aggroRange" value="2000"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>

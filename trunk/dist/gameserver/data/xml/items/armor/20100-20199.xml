@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="20100" name="Saving Santa Hat" add_name="24 Hour Expiration Period">
+	<armor id="20100" name="Rock-Paper-Scissors Santa Hat" add_name="24-hour">
 		<set name="reuse_delay" value="1000"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="21300" name="Lucky Enchant Stone: Enchant Armor (S-grade) Pack" add_name="Event">
+	<etcitem id="21300" name="Lucky Enchant Stone: Armor Pack (S-grade)" add_name="Event">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>

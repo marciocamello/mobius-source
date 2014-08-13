@@ -17,7 +17,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22101" levels="1" name="Fortune of Love Box">
+	<skill id="22101" levels="1" name="Fortune Box of Love">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -76,7 +76,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22105" levels="1" name="Uldie Summon Scroll (Event)">
+	<skill id="22105" levels="1" name="Scroll: Summon Uldie (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="12000"/>
@@ -92,7 +92,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22106" levels="1" name="Belldandy Summon Scroll (Event)">
+	<skill id="22106" levels="1" name="Scroll: Summon Belldandy (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="12000"/>
@@ -108,7 +108,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22107" levels="1" name="Skooldie Summon Scroll (Event)">
+	<skill id="22107" levels="1" name="Scroll: Summon Skooldie (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="12000"/>
@@ -191,7 +191,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22113" levels="1" name="Summon Peace Lamp">
+	<skill id="22113" levels="1" name="Summon Comfort Sky Lantern">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -204,7 +204,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22114" levels="1" name="Morph Scroll Box">
+	<skill id="22114" levels="1" name="Transformation Scroll Pack">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -218,7 +218,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22115" levels="1" name="Santa's Weapon Exchange Ticket Box">
+	<skill id="22115" levels="1" name="Santa's Weapon Coupon Box">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="itemConsumeId" val="20758"/>
@@ -234,7 +234,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22116" levels="1" name="Summon Flames Box">
+	<skill id="22116" levels="1" name="Summon Flame Box">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_fire_box_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -242,7 +242,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22117" levels="1" name="Flames Box Firework">
+	<skill id="22117" levels="1" name="Flame Box Firecracker">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0788"/>
 		<set name="magicLevel" val="1"/>
@@ -390,7 +390,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22130" levels="1" name="Food of Doubt's Effect">
+	<skill id="22130" levels="1" name="Mysterious Food's Effect">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.br_rudolf_food_unknown_i00"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -402,7 +402,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22131" levels="1" name="Red Firework Flames">
+	<skill id="22131" levels="1" name="Red Fireworks">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_firecracker_red_i00"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -414,7 +414,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22132" levels="1" name="Gold Firework Flames">
+	<skill id="22132" levels="1" name="Gold Fireworks">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_firecracker_gold_i00"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -426,7 +426,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22133" levels="1" name="Blue Firework Flames">
+	<skill id="22133" levels="1" name="Blue Fireworks">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_firecracker_blue_i00"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -438,7 +438,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22134" levels="1" name="Pink Firework Flames">
+	<skill id="22134" levels="1" name="Pink Fireworks">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_firecracker_pink_i00"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -450,7 +450,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22135" levels="1" name="White Firework Flames">
+	<skill id="22135" levels="1" name="White Firework">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_firecracker_white_i00"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -462,7 +462,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22136" levels="1" name="Silver Firework Flames">
+	<skill id="22136" levels="1" name="Silver Fireworks">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_firecracker_silver_i00"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -737,7 +737,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22158" levels="10" name="Red Rose Herb">
+	<skill id="22158" levels="10" name="Rose Petal">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys2.icon.Br_herb_rose_red_i00"/>
 		<set name="reuseDelay" val="2000"/>
@@ -779,7 +779,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22160" levels="1" name="Vesper's Critical P. Atk.">
+	<skill id="22160" levels="1" name="Vesper's Critical Damage">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys2.icon.br_royal_circlet_of_vesper_i00"/>
 		<set name="reuseDelay" val="2000"/>
@@ -832,7 +832,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22162" levels="1" name="Herb of Mt. Fuji">
+	<skill id="22162" levels="1" name="Mt. Fuji Herb">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys2.icon.br_fuji_herb_i00"/>
 		<set name="reuseDelay" val="2000"/>
@@ -903,7 +903,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22165" levels="1" name="Energy Replenishing">
+	<skill id="22165" levels="1" name="Replenish Energy">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0788"/>
 		<set name="magicLevel" val="1"/>
@@ -915,7 +915,7 @@
 		<set name="itemConsumeCount" val="1"/>
 		<set name="addEnergy" val="5000"/>
 	</skill>
-	<skill id="22166" levels="1" name="Energy Replenishing">
+	<skill id="22166" levels="1" name="Replenish Energy">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0788"/>
 		<set name="magicLevel" val="1"/>
@@ -927,7 +927,7 @@
 		<set name="itemConsumeCount" val="1"/>
 		<set name="addEnergy" val="10000"/>
 	</skill>
-	<skill id="22167" levels="1" name="April Fools' Day Vesper Weapon Gift">
+	<skill id="22167" levels="1" name="April Fool's Day Vesper Weapon Gift">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0001"/>
@@ -936,7 +936,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="22168" levels="1" name="Thirst for Victory Quenching Drink">
+	<skill id="22168" levels="1" name="Thirst for Victory Quenching Juice">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0001"/>
 		<set name="magicLevel" val="1"/>
@@ -944,7 +944,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="22169" levels="1" name="Soccer Ball of Cheers Release">
+	<skill id="22169" levels="1" name="Soccer Ball of Cheering Release">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="itemConsumeId" val="20993"/>
@@ -1007,14 +1007,14 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="22176" levels="1" name="Good/Bad of Mind">
+	<skill id="22176" levels="1" name="State of the Mind">
 		<set name="icon" val="icon.skill0001"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="22177" levels="1" name="Warrior's Breath">
+	<skill id="22177" levels="1" name="Warrior's Quick CP Potion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0001"/>
 		<set name="magicLevel" val="1"/>
@@ -1022,7 +1022,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="22178" levels="1" name="Potion of a Hero">
+	<skill id="22178" levels="1" name="Hero's Potion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0001"/>
 		<set name="reuseDelay" val="60000"/>
@@ -1048,7 +1048,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22181" levels="1" name="Refined Cubic - 1 time use">
+	<skill id="22181" levels="1" name="Refined Cube - 1 time use">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -1060,7 +1060,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22183" levels="1" name="Dragon Master Lee Transformation Scroll">
+	<skill id="22183" levels="1" name="Transformation Scroll: Dragon Master Lee">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform2"/>
 		<set name="itemConsumeId" val="21148"/>
@@ -1087,7 +1087,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22184" levels="1" name="Dragon Master Karin Transformation Scroll">
+	<skill id="22184" levels="1" name="Transformation Scroll: Dragon Master Karin">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform2"/>
 		<set name="itemConsumeId" val="21149"/>
@@ -1178,7 +1178,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22192" levels="1" name="Transformation Scroll: Death Blader">
+	<skill id="22192" levels="1" name="Transformation Scroll: Doom Wraith">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="hitTime" val="500"/>

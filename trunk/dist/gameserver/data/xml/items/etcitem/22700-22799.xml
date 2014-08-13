@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="22700" name="Equipment Appearance Restoration Stone (R-grade)">
+	<etcitem id="22700" name="Equipment Restoration Stone (R-grade)">
 		<set name="icon" value="BranchSys3.icon.g_bless_wp_processing_stone_r"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="true"/>
@@ -19,7 +19,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22701" name="Equipment Appearance Restoration Stone (S-grade)">
+	<etcitem id="22701" name="Equipment Restoration Stone (S-grade)">
 		<set name="icon" value="BranchSys3.icon.g_bless_wp_processing_stone_s"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="true"/>
@@ -37,7 +37,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22702" name="Equipment Appearance Restoration Stone (A-grade)">
+	<etcitem id="22702" name="Equipment Restoration Stone (A-grade)">
 		<set name="icon" value="BranchSys3.icon.g_bless_wp_processing_stone_a"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="true"/>
@@ -55,7 +55,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22703" name="Equipment Appearance Restoration Stone (B-grade)">
+	<etcitem id="22703" name="Equipment Restoration Stone (B-grade)">
 		<set name="icon" value="BranchSys3.icon.g_bless_wp_processing_stone_b"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="true"/>
@@ -73,7 +73,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22704" name="Equipment Appearance Restoration Stone (C-grade)">
+	<etcitem id="22704" name="Equipment Restoration Stone (C-grade)">
 		<set name="icon" value="BranchSys3.icon.g_bless_wp_processing_stone_c"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="true"/>
@@ -91,7 +91,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22705" name="Equipment Appearance Restoration Stone (D-grade)">
+	<etcitem id="22705" name="Equipment Restoration Stone (D-grade)">
 		<set name="icon" value="BranchSys3.icon.g_bless_wp_processing_stone_d"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="true"/>
@@ -261,186 +261,186 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22745" name="Vitality Increase Scroll">
+	<etcitem id="22745" name="Scroll: Increase Vitality">
 		<set name="icon" value="BranchSys3.lcon.g_scrl_vitality_count_up"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22746" name="Vitality Increase Scroll Pack">
+	<etcitem id="22746" name="Scroll: Increase Vitality Pack">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22747" name="Vitality Increase High-grade Scroll">
+	<etcitem id="22747" name="Scroll: Increase Vitality (High-grade)">
 		<set name="icon" value="BranchSys3.lcon.g_scrl_vitality_count_up_2"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22748" name="Vitality Increase High-grade Scroll Pack">
+	<etcitem id="22748" name="Scroll: Increase Vitality Pack (High-grade)">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22749" name="Vitality Increase Top-grade Scroll">
+	<etcitem id="22749" name="Scroll: Increase Vitality (Top-grade)">
 		<set name="icon" value="BranchSys3.lcon.g_scrl_vitality_count_up_3"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22750" name="Vitality Increase Top-grade Scroll Pack">
+	<etcitem id="22750" name="Scroll: Increase Vitality Pack (Top-grade)">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22751" name="Maphr's Rune 30% 3-hour">
+	<etcitem id="22751" name="Drop Rate Rune 30% (3-hour)">
 		<set name="icon" value="BranchSys3.lcon.g_rune_itemdrop_up"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22752" name="Maphr's Rune 30% 5-hour">
+	<etcitem id="22752" name="Drop Rate Rune 30% (5-hour)">
 		<set name="icon" value="BranchSys3.lcon.g_rune_itemdrop_up"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22753" name="Maphr's Rune 30% 7-day">
+	<etcitem id="22753" name="Drop Rate Rune 30% (7-day)">
 		<set name="icon" value="BranchSys3.lcon.g_rune_itemdrop_up"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22754" name="Maphr's Rune 50% 3-hour">
+	<etcitem id="22754" name="Drop Rate Rune 50% (3-hour)">
 		<set name="icon" value="BranchSys3.lcon.g_rune_itemdrop_up"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22755" name="Maphr's Rune 50% 5-hour">
+	<etcitem id="22755" name="Drop Rate Rune 50% (5-hour)">
 		<set name="icon" value="BranchSys3.lcon.g_rune_itemdrop_up"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22756" name="Maphr's Rune 50% 7-day">
+	<etcitem id="22756" name="Drop Rate Rune 50% (7-day)">
 		<set name="icon" value="BranchSys3.lcon.g_rune_itemdrop_up"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22757" name="Maphr's Rune 100% 3-hour">
+	<etcitem id="22757" name="Drop Rate Rune 100% (3-hour)">
 		<set name="icon" value="BranchSys3.lcon.g_rune_itemdrop_up"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22758" name="Maphr's Rune 100% 5-hour">
+	<etcitem id="22758" name="Drop Rate Rune 100% (5-hour)">
 		<set name="icon" value="BranchSys3.lcon.g_rune_itemdrop_up"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22759" name="Maphr's Rune 100% 7-day">
+	<etcitem id="22759" name="Drop Rate Rune 100% (7-day)">
 		<set name="icon" value="BranchSys3.lcon.g_rune_itemdrop_up"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22760" name="Maphr's Rune 200% 3-hour">
+	<etcitem id="22760" name="Drop Rate Rune 200% (3-hour)">
 		<set name="icon" value="BranchSys3.lcon.g_rune_itemdrop_up"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22761" name="Maphr's Rune 200% 5-hour">
+	<etcitem id="22761" name="Drop Rate Rune 200% (5-hour)">
 		<set name="icon" value="BranchSys3.lcon.g_rune_itemdrop_up"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22762" name="Maphr's Rune 200% 7-day">
+	<etcitem id="22762" name="Drop Rate Rune 200% (7-day)">
 		<set name="icon" value="BranchSys3.lcon.g_rune_itemdrop_up"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22763" name="Maphr's Rune 30% 3-hour Pack">
+	<etcitem id="22763" name="Drop Rate Rune 30% Pack (3-hour)">
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22764" name="Maphr's Rune 30% 5-hour Pack">
+	<etcitem id="22764" name="Drop Rate Rune 30% Pack (5-hour)">
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22765" name="Maphr's Rune 30% 7-day Pack">
+	<etcitem id="22765" name="Drop Rate Rune 30% Pack (7-day)">
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22766" name="Maphr's Rune 50% 3-hour Pack">
+	<etcitem id="22766" name="Drop Rate Rune 50% Pack (3-hour)">
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22767" name="Maphr's Rune 50% 5-hour Pack">
+	<etcitem id="22767" name="Drop Rate Rune 50% Pack (5-hour)">
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22768" name="Maphr's Rune 50% 7-day Pack">
+	<etcitem id="22768" name="Drop Rate Rune 50% Pack (7-day)">
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22769" name="Maphr's Rune 100% 3-hour Pack">
+	<etcitem id="22769" name="Drop Rate Rune 100% Pack (3-hour)">
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22770" name="Maphr's Rune 100% 5-hour Pack">
+	<etcitem id="22770" name="Drop Rate Rune 100% Pack (5-hour)">
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22771" name="Maphr's Rune 100% 7-day Pack">
+	<etcitem id="22771" name="Drop Rate Rune 100% Pack (7-day)">
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22772" name="Maphr's Rune 200% 3-hour Pack">
+	<etcitem id="22772" name="Drop Rate Rune 200% Pack (3-hour)">
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22773" name="Maphr's Rune 200% 5-hour Pack">
+	<etcitem id="22773" name="Drop Rate Rune 200% Pack (5-hour)">
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22774" name="Maphr's Rune 200% 7-day Pack">
+	<etcitem id="22774" name="Drop Rate Rune 200% Pack (7-day)">
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>

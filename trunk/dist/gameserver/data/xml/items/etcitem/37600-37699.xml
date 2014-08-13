@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+    <etcitem id="37607" name="Treasure Chest" add_name="Western Winds">
+		<set name="capsuled" value="true"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37608" name="Hair Accessory Pack" add_name="Western Winds">
+		<set name="capsuled" value="true"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37609" name="Pendant Pack" add_name="Western Winds">
+		<set name="capsuled" value="true"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37610" name="Enchant Scroll Pack" add_name="Western Winds">
+		<set name="capsuled" value="true"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37611" name="Attribute Stone Pack" add_name="Western Winds">
+		<set name="capsuled" value="true"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37612" name="Ingredient Box" add_name="Western Winds">
+		<set name="capsuled" value="true"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37613" name="Hero's Treasure Chest" add_name="Western Winds">
+		<set name="capsuled" value="true"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37614" name="Hero's Enchant Stone Pack" add_name="Western Winds">
+		<set name="capsuled" value="true"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37615" name="Hero's Giant Enchant Scroll Pack" add_name="Western Winds">
+		<set name="capsuled" value="true"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37616" name="Hero's Blessed Enchant Scroll Pack" add_name="Western Winds">
+		<set name="capsuled" value="true"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37617" name="Hero's Unbind Scroll Pack" add_name="Western Winds">
+		<set name="capsuled" value="true"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37618" name="Hero's Attribute Crystal Pack" add_name="Western Winds">
+		<set name="capsuled" value="true"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37619" name="PK Pack" add_name="Western Winds">
+		<set name="capsuled" value="true"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37620" name="Reputation Pack" add_name="Western Winds">
+		<set name="capsuled" value="true"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37621" name="Mysterious Shot Pack" add_name="Western Winds">
+		<set name="capsuled" value="true"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37622" name="Kaliel's Energy Box" add_name="Western Winds">
+		<set name="capsuled" value="true"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37623" name="Soul Bottle Pack" add_name="Western Winds">
+		<set name="capsuled" value="true"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37624" name="Top-grade Life Stone Pack" add_name="Western Winds">
+		<set name="capsuled" value="true"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+</list>

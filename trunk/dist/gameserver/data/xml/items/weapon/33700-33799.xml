@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="33717" name="Legacy Duelist Dual Sword">
+	<weapon id="33717" name="Legacy Duelist Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
 		<set name="rnd_dam" value="10"/>
 		<equip>
@@ -117,7 +117,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="33723" name="Legacy Arch Mage Sword">
+	<weapon id="33723" name="Legacy Archmage Sword">
 		<set name="icon" value="icon.weapon_terakan_i00"/>
 		<set name="rnd_dam" value="10"/>
 		<equip>
@@ -367,7 +367,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="33736" name="Legacy Spectral Dancer Dual Sword">
+	<weapon id="33736" name="Legacy Spectral Dancer Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
 		<set name="rnd_dam" value="10"/>
 		<equip>
@@ -484,7 +484,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="33742" name="Legacy Titan Two-Handed Sword">
+	<weapon id="33742" name="Legacy Titan Two-handed Sword">
 		<set name="icon" value="icon.weapon_spigel_i00"/>
 		<set name="rnd_dam" value="10"/>
 		<equip>
@@ -541,7 +541,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="33745" name="Legacy Doom Cryer Dual Sword">
+	<weapon id="33745" name="Legacy Doom Cryer Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
 		<set name="rnd_dam" value="10"/>
 		<equip>
@@ -599,7 +599,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="33750" name="Test-type old requiem weapon">
+	<weapon id="33750" name="Test - old requiem weapon">
 		<set name="icon" value="icon.weapon_estia_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -622,7 +622,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33751" name="Test-type color varying requiem weapon">
+	<weapon id="33751" name="Test - color varying requiem weapon">
 		<set name="icon" value="icon.weapon_estia_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -645,7 +645,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33752" name="Test-type apo requiem weapon">
+	<weapon id="33752" name="Test - apo requiem weapon">
 		<set name="icon" value="icon.weapon_estia_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -668,7 +668,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33753" name="Test-type color varying apo weapon">
+	<weapon id="33753" name="Test - color varying apo weapon">
 		<set name="icon" value="icon.weapon_estia_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -691,7 +691,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33754" name="Test-type old fanta weapon">
+	<weapon id="33754" name="Test - old fanta weapon">
 		<set name="icon" value="icon.weapon_estia_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -714,7 +714,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33755" name="Test-type color varying fanta weapon">
+	<weapon id="33755" name="Test - color varying fanta weapon">
 		<set name="icon" value="icon.weapon_estia_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -737,7 +737,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33756" name="Test-type old heli weapon">
+	<weapon id="33756" name="Test - old heli weapon">
 		<set name="icon" value="icon.weapon_estia_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -760,7 +760,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33757" name="Test-type color varying heli weapon">
+	<weapon id="33757" name="Test - color varying heli weapon">
 		<set name="icon" value="icon.weapon_estia_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -783,7 +783,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33758" name="Test-type Old Celestial Weapon">
+	<weapon id="33758" name="Test - Old Celestial Weapon">
 		<set name="icon" value="icon.weapon_estia_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -806,7 +806,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33759" name="Test-type Color Varying Celestial Weapon">
+	<weapon id="33759" name="Test - Color Varying Celestial Weapon">
 		<set name="icon" value="icon.weapon_estia_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>

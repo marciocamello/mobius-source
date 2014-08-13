@@ -415,7 +415,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="19322" name="Soldier" title="">
+	<npc id="19322" name="Yuti" title="Captain">
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -461,7 +461,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="19323" name="Soldier" title="">
+	<npc id="19323" name="Raider's Crossroads Decor" title="">
 		<set name="baseHpMax" value="2444.468"/>
 		<set name="baseMAtkSpd" value="500"/>
 		<set name="basePAtkSpd" value="253"/>

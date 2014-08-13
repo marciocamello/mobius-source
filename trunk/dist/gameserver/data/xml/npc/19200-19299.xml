@@ -1786,7 +1786,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19240" name="Daemon Angma" title="Sketchy">
+	<npc id="19240" name="Daemon Angma" title="Distracted">
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="level" value="40"/>
@@ -3300,7 +3300,7 @@
 			<skill id="4416" level="9"/>
 		</skills>
 	</npc>
-	<npc id="19276" name="Bundle for Presentation Purposes" title="">
+	<npc id="19276" name="Bundle (Presentation)" title="">
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="45.0"/>
 		<set name="level" value="99"/>
@@ -3341,7 +3341,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19277" name="Tauti's Axe for Presentation Purposes" title="">
+	<npc id="19277" name="Tauti's Axe (Presentation)" title="">
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="45.0"/>
 		<set name="level" value="99"/>
@@ -3382,7 +3382,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19278" name="Tauti for Presentation Purposes" title="">
+	<npc id="19278" name="Tauti (Presentation)" title="">
 		<set name="collision_radius" value="15.0"/>
 		<set name="collision_height" value="90.0"/>
 		<set name="level" value="99"/>
@@ -4238,7 +4238,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19299" name="Spicula's Elite Captain" title="">
+	<npc id="19299" name="Spicula Elite Captain" title="">
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="99"/>

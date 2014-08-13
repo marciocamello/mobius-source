@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="13740" name="Gludio Water Protection Necklace">
+	<armor id="13740" name="Gludio Water Resistance Necklace">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
@@ -19,7 +19,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="13741" name="Dion Divinity Protection Necklace">
+	<armor id="13741" name="Dion Holy Attack Resistance Necklace">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
@@ -37,7 +37,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="13742" name="Giran Wind Protection Necklace">
+	<armor id="13742" name="Giran Wind Resistance Necklace">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
@@ -55,7 +55,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="13743" name="Oren Darkness Protection Necklace">
+	<armor id="13743" name="Oren Dark Attack Resistance Necklace">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
@@ -73,7 +73,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="13744" name="Aden Earth Protection Necklace">
+	<armor id="13744" name="Aden Earth Resistance Necklace">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
@@ -91,7 +91,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="13745" name="Innadril Water Protection Necklace">
+	<armor id="13745" name="Innadril Water Resistance Necklace">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
@@ -109,7 +109,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="13746" name="Goddard Fire Protection Necklace">
+	<armor id="13746" name="Goddard Fire Resistance Necklace">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
@@ -127,7 +127,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="13747" name="Rune Fire Protection Necklace">
+	<armor id="13747" name="Rune Fire Resistance Necklace">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
@@ -145,7 +145,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="13748" name="Schuttgart Wind Protection Necklace">
+	<armor id="13748" name="Schuttgart Wind Resistance Necklace">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
@@ -256,7 +256,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="13756" name="Agathion Summon Bracelet - Knight">
+	<armor id="13756" name="Agathion - Knight">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>

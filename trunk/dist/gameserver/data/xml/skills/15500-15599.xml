@@ -1,0 +1,603 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="15500" levels="1" name="Major Energy of Life">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15501" levels="1" name="Superior Energy of Life">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15502" levels="1" name="Energy of Mana">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15503" levels="1" name="Major Energy of Mana">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15504" levels="1" name="Superior Energy of Mana">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15505" levels="1" name="Vitality Replenishing Aura">
+		<set name="icon" val="icon.skilltransform4"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15506" levels="1" name="Wondrous Herb of Power">
+		<set name="icon" val="icon.etc_warrior_set_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15507" levels="1" name="Wondrous Herb of Magic">
+		<set name="icon" val="icon.etc_magic_set_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15508" levels="4" name="Special Armor">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15509" levels="1" name="Laido Destruction">
+		<set name="icon" val="icon.skill0036"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15510" levels="1" name="Laido Repair">
+		<set name="icon" val="icon.skill1217"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15511" levels="1" name="Laido Punch">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15512" levels="1" name="Single Stroke">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15513" levels="1" name="Vital Hit">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15514" levels="1" name="Bloody Chain">
+		<set name="icon" val="icon.skill0036"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15515" levels="1" name="Penetrating Eyes">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15516" levels="1" name="Summon Giant Illusion">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15517" levels="1" name="Chaos Attack">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15518" levels="2" name="Confuse Body">
+		<set name="icon" val="icon.skill1422"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15519" levels="1" name="Summon Undead">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15520" levels="1" name="Rush Raid">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15521" levels="1" name="Flailing Spin">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15522" levels="1" name="Dark Poison">
+		<set name="icon" val="icon.skill4035"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15523" levels="1" name="Accelerate">
+		<set name="icon" val="icon.skill1204"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15524" levels="1" name="Suck Blood">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15525" levels="2" name="Rush Attack">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15526" levels="1" name="Karamar Breaker">
+		<set name="icon" val="icon.skill0036"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15527" levels="1" name="Chaos Breath">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15528" levels="1" name="Kaonel Rush">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15529" levels="1" name="Absorb Spirit">
+		<set name="icon" val="icon.skill1422"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15530" levels="1" name="Slumber">
+		<set name="icon" val="icon.skill4046"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15531" levels="1" name="Hold">
+		<set name="icon" val="icon.skill4047"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15532" levels="1" name="Pupil Focus">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15533" levels="1" name="Spiteful Grudge">
+		<set name="icon" val="icon.skill4035"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15534" levels="1" name="Mutilate Body">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15535" levels="1" name="Bloody Breath">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15536" levels="1" name="Chaotic Mana">
+		<set name="icon" val="icon.skill0046"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15537" levels="2" name="Blood Sacrifice: Decrease Speed">
+		<set name="icon" val="icon.skill1160"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15538" levels="2" name="Blood Sacrifice: Decrease Accuracy">
+		<set name="icon" val="icon.skill1160"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15539" levels="2" name="Blood Sacrifice: Decrease P. Def.">
+		<set name="icon" val="icon.skill1160"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15540" levels="2" name="Blood Sacrifice: Decrease M. Def.">
+		<set name="icon" val="icon.skill1160"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15541" levels="1" name="Flame Pillar">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15542" levels="1" name="Rush Raid">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15543" levels="1" name="Poison Fog">
+		<set name="icon" val="icon.skill4035"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15544" levels="1" name="Rush Attack">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15545" levels="1" name="Cubit Attack">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15546" levels="1" name="Dark Invisibility">
+		<set name="icon" val="icon.skill10784"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15547" levels="1" name="Point Attack">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15548" levels="1" name="Partial Healing">
+		<set name="icon" val="icon.skill1219"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15549" levels="1" name="Soul Break">
+		<set name="icon" val="icon.skill0036"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15550" levels="1" name="Heart Destroyer">
+		<set name="icon" val="icon.skill10509"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15551" levels="1" name="Weaken Attack">
+		<set name="icon" val="icon.skill1160"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15552" levels="1" name="Hell's Prison">
+		<set name="icon" val="icon.skill1068"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15553" levels="1" name="Chain Hit">
+		<set name="icon" val="icon.skill10015"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15554" levels="1" name="Broad Hit">
+		<set name="icon" val="icon.skill10016"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15555" levels="1" name="Cunning Strike">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15556" levels="1" name="Provoke">
+		<set name="icon" val="icon.skill10027"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15557" levels="1" name="Crossbow Attack">
+		<set name="icon" val="icon.skill0101"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15558" levels="1" name="Soul Howl">
+		<set name="icon" val="icon.skill4038"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15559" levels="1" name="Poison Attack">
+		<set name="icon" val="icon.skill4035"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15560" levels="1" name="Hurricane Attack">
+		<set name="icon" val="icon.skill0101"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15561" levels="1" name="Connected Drain">
+		<set name="icon" val="icon.skill0096"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15562" levels="1" name="Lethal Edge">
+		<set name="icon" val="icon.skill0223"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15563" levels="1" name="Falling Hit">
+		<set name="icon" val="icon.skill0036"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15564" levels="2" name="Theor's Attack">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15565" levels="1" name="Theor's AoE Attack">
+		<set name="icon" val="icon.skill0036"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15566" levels="1" name="Disarm">
+		<set name="icon" val="icon.skill0485"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15567" levels="1" name="Aerial Yoke">
+		<set name="icon" val="icon.skill1042"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15568" levels="1" name="Forward March">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15569" levels="1" name="Chaotic Reign">
+		<set name="icon" val="icon.skill1469"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15570" levels="1" name="Master Siege Shield">
+		<set name="icon" val="icon.skill_transform_buff"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15571" levels="1" name="Master Siege Attack">
+		<set name="icon" val="icon.skill_transform_etc"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15572" levels="1" name="Krogel's Haste">
+		<set name="icon" val="icon.skill1086"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15573" levels="1" name="Master Siege Punch">
+		<set name="icon" val="icon.skill_transform_debuff"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15574" levels="1" name="Master Siege Hammer">
+		<set name="icon" val="icon.skill_transform_s_attack"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15575" levels="1" name="Dedicated Blow">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15576" levels="1" name="Dedicated Shot">
+		<set name="icon" val="icon.skill0056"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15577" levels="1" name="Furious Blow">
+		<set name="icon" val="icon.skill0110"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15578" levels="1" name="Furious Bombing">
+		<set name="icon" val="icon.skill1068"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15579" levels="1" name="Cursed Blow">
+		<set name="icon" val="icon.skill0110"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15580" levels="1" name="Cursed Bombing">
+		<set name="icon" val="icon.skill1092"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15581" levels="1" name="Fearsome Blow">
+		<set name="icon" val="icon.skill0101"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15582" levels="1" name="Fearsome Bombing">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15583" levels="1" name="Despairing Blow">
+		<set name="icon" val="icon.skill1072"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15584" levels="1" name="Despairing Bombing">
+		<set name="icon" val="icon.skill0922"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15585" levels="1" name="Hateful Blow">
+		<set name="icon" val="icon.skill10768"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15586" levels="1" name="Chains of Hatred">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15587" levels="1" name="High-speed Shot">
+		<set name="icon" val="icon.skill1086"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15588" levels="1" name="Soulful Blow">
+		<set name="icon" val="icon.skill1167"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15589" levels="1" name="Painful Blow">
+		<set name="icon" val="icon.skill1275"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15590" levels="1" name="Fear of Lindvior">
+		<set name="icon" val="icon.skill4108"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15591" levels="1" name="Wind Pull">
+		<set name="icon" val="icon.skill0006"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15592" levels="1" name="Dark Wind Armor">
+		<set name="icon" val="icon.skill4095"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15593" levels="1" name="Air Strike">
+		<set name="icon" val="icon.skill0101"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15594" levels="1" name="Lindvior's Speed Decrease">
+		<set name="icon" val="icon.skill0127"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15595" levels="1" name="Lindvior's Fall">
+		<set name="icon" val="icon.skill0036"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15596" levels="1" name="Presentation - Lindvior's Takeoff">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15597" levels="1" name="Presentation - Lindvior's Landing">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15598" levels="1" name="Mighty Wind Strike">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15599" levels="1" name="Cyclone">
+		<set name="icon" val="icon.skill4107"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+</list>

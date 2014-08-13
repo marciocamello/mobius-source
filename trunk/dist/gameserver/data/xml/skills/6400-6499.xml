@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="6400" levels="1" name="Cokrakon Dwindling Velocity">
+	<skill id="6400" levels="1" name="Kokracon Dwindling Velocity">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1386"/>
 		<set name="reuseDelay" val="2000"/>
@@ -21,7 +21,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6401" levels="1" name="Cokrakon Wheeling Clow">
+	<skill id="6401" levels="1" name="Kokracon Wheeling Clow">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="500"/>
 		<set name="reuseDelay" val="1000"/>
@@ -342,7 +342,7 @@
 		<set name="hitTime" val="1000"/>
 		<set name="castRange" val="40"/>
 		<set name="effectRange" val="200"/> --&gt;</skill>
-	<skill id="6420" levels="1" name="Lizard Strike">
+	<skill id="6420" levels="1" name="Lizard Blow">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="83"/>
 		<set name="hitTime" val="1000"/>
@@ -357,7 +357,7 @@
 		<set name="hitTime" val="1000"/>
 		<set name="castRange" val="40"/>
 		<set name="effectRange" val="200"/> --&gt;</skill>
-	<skill id="6421" levels="1" name="Rage of Soldier">
+	<skill id="6421" levels="1" name="Warrior's Rage">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="84"/>
 		<set name="hitTime" val="1000"/>
@@ -387,7 +387,7 @@
 		<set name="hitTime" val="1000"/>
 		<set name="castRange" val="40"/>
 		<set name="effectRange" val="200"/> --&gt;</skill>
-	<skill id="6423" levels="1" name="Shock">
+	<skill id="6423" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill0100"/>
 		<set name="coolTime" val="1000"/>
@@ -457,7 +457,7 @@
 			<effect count="1" name="Stun" stackOrder="1" stackType="Stun" time="20" val="0"/>
 		</for>
 	</skill>
-	<skill id="6428" levels="1" name="Hold">
+	<skill id="6428" levels="1" name="Restore HP">
 		<set name="levelModifier" val="2"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1201"/>
@@ -627,7 +627,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6437" levels="7" name="Area of Freezing Core">
+	<skill id="6437" levels="7" name="Freezing Core Area">
 		<table name="#dmg">30 60 90 150 250 350 500</table>
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill1183"/>
@@ -675,7 +675,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6440" levels="1" name="Energy of Strong">
+	<skill id="6440" levels="1" name="Energy of Strength">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill6440"/>
 		<set name="magicLevel" val="84"/>
@@ -699,7 +699,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6441" levels="1" name="Energy of Agile">
+	<skill id="6441" levels="1" name="Energy of Agility">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill6441"/>
 		<set name="magicLevel" val="84"/>
@@ -723,7 +723,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6442" levels="1" name="Efficacy of Wisdom">
+	<skill id="6442" levels="1" name="Energy of Wisdom">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill6439"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -736,7 +736,7 @@
 			<effect count="1" name="Buff" time="60" val="0" stackType="signal_e"/>
 		</for>
 	</skill>
-	<skill id="6443" levels="1" name="Efficacy of Strength">
+	<skill id="6443" levels="1" name="Energy of Strength">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill6440"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -749,7 +749,7 @@
 			<effect count="1" name="Buff" time="60" val="0" stackType="signal_e"/>
 		</for>
 	</skill>
-	<skill id="6444" levels="1" name="Efficacy of Agility">
+	<skill id="6444" levels="1" name="Energy of Agility">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill6441"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -1018,7 +1018,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="6470" levels="1" name="1 win">
+	<skill id="6470" levels="1" name="First Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1032,7 +1032,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="6471" levels="1" name="2 win">
+	<skill id="6471" levels="1" name="2nd Consecutive Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1046,7 +1046,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="6472" levels="1" name="3 win">
+	<skill id="6472" levels="1" name="3rd Consecutive Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1060,7 +1060,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="6473" levels="1" name="4 win">
+	<skill id="6473" levels="1" name="4th Consecutive Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1074,7 +1074,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="6474" levels="1" name="5 win">
+	<skill id="6474" levels="1" name="5th Consecutive Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1088,7 +1088,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="6475" levels="1" name="6 win">
+	<skill id="6475" levels="1" name="6th Consecutive Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1102,7 +1102,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="6476" levels="1" name="7 win">
+	<skill id="6476" levels="1" name="7th Consecutive Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1116,7 +1116,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="6477" levels="1" name="8 win">
+	<skill id="6477" levels="1" name="8th Consecutive Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1130,7 +1130,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="6478" levels="1" name="9 win">
+	<skill id="6478" levels="1" name="9th Consecutive Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1144,7 +1144,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="6479" levels="1" name="10 win">
+	<skill id="6479" levels="1" name="10th Consecutive Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1158,7 +1158,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="6480" levels="1" name="11 win">
+	<skill id="6480" levels="1" name="11th Consecutive Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1172,7 +1172,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="6481" levels="1" name="12 win">
+	<skill id="6481" levels="1" name="12th Consecutive Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1186,7 +1186,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="6482" levels="1" name="13 win">
+	<skill id="6482" levels="1" name="13th Consecutive Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1200,7 +1200,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="6483" levels="1" name="14 win">
+	<skill id="6483" levels="1" name="14th Consecutive Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1214,7 +1214,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="6484" levels="1" name="15 win">
+	<skill id="6484" levels="1" name="15th Consecutive Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1228,7 +1228,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="6485" levels="1" name="16 win">
+	<skill id="6485" levels="1" name="16th Consecutive Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1242,7 +1242,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="6486" levels="1" name="17 win">
+	<skill id="6486" levels="1" name="17th Consecutive Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1256,7 +1256,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="6487" levels="1" name="18 win">
+	<skill id="6487" levels="1" name="18th Consecutive Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1270,7 +1270,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="6488" levels="1" name="19 win">
+	<skill id="6488" levels="1" name="19th Consecutive Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1284,7 +1284,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="6489" levels="1" name="20 win">
+	<skill id="6489" levels="1" name="20th Consecutive Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>

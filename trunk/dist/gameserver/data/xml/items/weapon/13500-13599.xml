@@ -193,7 +193,7 @@
 			<set stat="atkBaseSpeed" order="0x08" value="325"/>
 		</for>
 	</weapon>
-	<weapon id="13536" name="Flag of Goddard">
+	<weapon id="13536" name="Goddard Flag">
 		<set name="crystal_type" value="NONE"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -253,7 +253,7 @@
 			<set stat="atkBaseSpeed" order="0x08" value="325"/>
 		</for>
 	</weapon>
-	<weapon id="13539" name="Staff of Master Yogi ">
+	<weapon id="13539" name="Staff of Master Yogi">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.yogi_stick_i00"/>

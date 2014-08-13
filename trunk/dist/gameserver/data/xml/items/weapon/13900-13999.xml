@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="13971" name="Red Boing Fantasy Hammer">
+	<weapon id="13971" name="Fantasy Red Boing Hammer">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="false"/>
@@ -31,7 +31,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13972" name="Blue Boing Fantasy Hammer">
+	<weapon id="13972" name="Fantasy Blue Boing Hammer">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="false"/>
@@ -61,7 +61,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13973" name="Small Red Boing Fantasy Hammer">
+	<weapon id="13973" name="Small Fantasy Red Boing Hammer">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="false"/>
@@ -91,7 +91,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13974" name="Small Blue Boing Fantasy Hammer">
+	<weapon id="13974" name="Small Fantasy Blue Boing Hammer">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="false"/>
@@ -121,7 +121,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13978" name="Exclusive to Monsters (Mounted Troops High Level Leader)">
+	<weapon id="13978" name="Monster Only (Mounted Troops High Level Leader)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.mon_dragon_centurion_spear_i00"/>
 		<set name="price" value="188000"/>
@@ -147,7 +147,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13979" name="Exclusive to Monsters (Dragon Steed Troop Battle Infantry Sword)">
+	<weapon id="13979" name="Monster Only (Dragon Steed Troop Battle Infantry Sword)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.weapon_mon_dragon_legionaries_sword_i00"/>
 		<set name="price" value="105000"/>
@@ -169,7 +169,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13980" name="Exclusive to Monsters (Dragon Steed Troop Battle Infantry Shield)">
+	<weapon id="13980" name="Monster Only (Dragon Steed Troop Battle Infantry Shield)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.shield_mon_dragon_legionaries_shield_i00"/>
 		<set name="price" value="30"/>
@@ -189,7 +189,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13981" name="Exclusive to Monsters (Mounted Troops Tactics)">
+	<weapon id="13981" name="Monster Only (Mounted Troops Tactics)">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.weapon_mon_dragon_mage_staff_i00"/>
@@ -213,7 +213,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13982" name="Exclusive to Monsters (Death Knight_pole)">
+	<weapon id="13982" name="Monster Only (Death Knight_pole)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.weapon_mon_death_knight_a_pike_i00"/>
 		<set name="price" value="105000"/>
@@ -239,7 +239,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13983" name="Exclusive to Monsters (Death Knight_2hs)">
+	<weapon id="13983" name="Monster Only (Death Knight_2hs)">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="false"/>
@@ -263,7 +263,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13984" name="Exclusive to Monsters (Death Slayer_1hs)">
+	<weapon id="13984" name="Monster Only (Death Slayer_1hs)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.weapon_mon_deathslayer_a_blade_i00"/>
 		<set name="price" value="105000"/>
@@ -285,7 +285,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13985" name="Exclusive to Monsters (Death Slayer_r)">
+	<weapon id="13985" name="Monster Only (Death Slayer_r)">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -310,7 +310,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13986" name="Exclusive to Monsters (Death Slayer_l)">
+	<weapon id="13986" name="Monster Only (Death Slayer_l)">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -335,7 +335,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13987" name="Exclusive to Monsters (Savage Warrior)">
+	<weapon id="13987" name="Monster Only (Savage Warrior)">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>

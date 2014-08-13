@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="13308" name="Light Purple-Maned Horse Mounting Bracelet (Event)" add_name="7-day Limited Period">
+	<armor id="13308" name="Mount - Darkmane Pacer (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -20,7 +20,7 @@
 			<skill id="8247" level="1"/>
 		</skills>
 	</armor>
-	<armor id="13309" name="Agathion of Love (Event)" add_name="30-day limited period">
+	<armor id="13309" name="Agathion - Love (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -41,7 +41,7 @@
 			<skill id="8245" level="1"/>
 		</skills>
 	</armor>
-	<armor id="13310" name="Kat the Cat Hat (Event)" add_name="30-day limited period">
+	<armor id="13310" name="Kat the Cat Hat (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -57,7 +57,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13311" name="Feline Queen Hat (Event)" add_name="30-day limited period">
+	<armor id="13311" name="Feline Queen Hat (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -73,7 +73,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13312" name="Monster Eye Hat (Event)" add_name="30-day limited period">
+	<armor id="13312" name="Monster Eye Hat (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -89,7 +89,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13313" name="Brown Bear Hat (Event)" add_name="30-day limited period">
+	<armor id="13313" name="Brown Bear Hat (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -105,7 +105,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13314" name="Fungus Hat (Event)" add_name="30-day limited period">
+	<armor id="13314" name="Fungus Hat (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -121,7 +121,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13315" name="Skull Hat (Event)" add_name="30-day limited period">
+	<armor id="13315" name="Skull Hat (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -137,7 +137,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13316" name="Ornithomimus Hat (Event)" add_name="30-day limited period">
+	<armor id="13316" name="Ornithomimus Hat (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -153,7 +153,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13317" name="Feline King Hat (Event)" add_name="30-day limited period">
+	<armor id="13317" name="Feline King Hat (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -169,7 +169,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13318" name="Kai the Cat Hat (Event)" add_name="30-day limited period">
+	<armor id="13318" name="Kai the Cat Hat (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -185,7 +185,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13325" name="Kat the Cat Hat (Event)" add_name="7-day Limited Period">
+	<armor id="13325" name="Kat the Cat Hat (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -201,7 +201,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13326" name="Feline Queen Hat (Event)" add_name="7-day Limited Period">
+	<armor id="13326" name="Feline Queen Hat (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -217,7 +217,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13327" name="Monster Eye Hat (Event)" add_name="7-day Limited Period">
+	<armor id="13327" name="Monster Eye Hat (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -233,7 +233,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13328" name="Brown Bear Hat (Event)" add_name="7-day Limited Period">
+	<armor id="13328" name="Brown Bear Hat (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -249,7 +249,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13329" name="Fungus Hat (Event)" add_name="7-day Limited Period">
+	<armor id="13329" name="Fungus Hat (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -265,7 +265,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13330" name="Skull Hat (Event)" add_name="7-day Limited Period">
+	<armor id="13330" name="Skull Hat (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -281,7 +281,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13331" name="Ornithomimus Hat (Event)" add_name="7-day Limited Period">
+	<armor id="13331" name="Ornithomimus Hat (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -297,7 +297,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13332" name="Feline King Hat (Event)" add_name="7-day Limited Period">
+	<armor id="13332" name="Feline King Hat (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -313,7 +313,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13333" name="Kai the Cat Hat (Event)" add_name="7-day Limited Period">
+	<armor id="13333" name="Kai the Cat Hat (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -329,7 +329,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13340" name="Agathion of Love (Event)" add_name="7-day Limited Period">
+	<armor id="13340" name="Agathion - Love (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -350,7 +350,7 @@
 			<skill id="8245" level="1"/>
 		</skills>
 	</armor>
-	<armor id="13389" name="Kratei Barbed Shirt" add_name="CP">
+	<armor id="13389" name="Kratei Scale Shirt" add_name="CP">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.etc_shirts_a_i04"/>
@@ -394,7 +394,7 @@
 			</add>
 		</for>
 	</armor>
-	<armor id="13391" name="Kratei Striped Barbed Shirt" add_name="CP">
+	<armor id="13391" name="Kratei Striped Scale Shirt" add_name="CP">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.etc_stripe_shirts_a_i04"/>
@@ -438,7 +438,7 @@
 			</add>
 		</for>
 	</armor>
-	<armor id="13393" name="Shadow Item - Monkey Hat">
+	<armor id="13393" name="Shadow Item: Monkey Hat">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="100"/>
@@ -452,7 +452,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13394" name="Shadow Item - Pig Hat">
+	<armor id="13394" name="Shadow Item: Pig Hat">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="100"/>

@@ -5097,7 +5097,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 	</npc>
-	<npc id="27290" name="White Wing Commander " title="Quest Monster">
+	<npc id="27290" name="White Wing Commander" title="Quest Monster">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>

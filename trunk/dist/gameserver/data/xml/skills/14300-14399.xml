@@ -48,13 +48,13 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14308" levels="1" name="HP absorption.">
+	<skill id="14308" levels="1" name="HP Drain">
 		<set name="icon" val="icon.skill1147"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14309" levels="1" name="HP absorption.">
+	<skill id="14309" levels="1" name="HP Drain">
 		<set name="icon" val="icon.skill1147"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -150,19 +150,19 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14325" levels="1" name="Terror">
+	<skill id="14325" levels="1" name="Fear">
 		<set name="icon" val="icon.skill1169"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14326" levels="1" name="Blockade">
+	<skill id="14326" levels="1" name="Restrain">
 		<set name="icon" val="icon.skill1064"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14327" levels="1" name="HP absorption.">
+	<skill id="14327" levels="1" name="HP Drain">
 		<set name="icon" val="icon.skill1258"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -180,7 +180,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14330" levels="1" name="HP absorption.">
+	<skill id="14330" levels="1" name="HP Drain">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -321,25 +321,25 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14353" levels="1" name="Lazarus's Poison">
+	<skill id="14353" levels="1" name="Lazaros' Poison">
 		<set name="icon" val="icon.skill1168"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14354" levels="1" name="Evangelos's Shock">
+	<skill id="14354" levels="1" name="Evangelos' Shock">
 		<set name="icon" val="icon.skill0092"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14355" levels="1" name="Teopanis's Fear">
+	<skill id="14355" levels="1" name="Theofanis' Fear">
 		<set name="icon" val="icon.skill1169"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14356" levels="1" name="Sotiris's Yoke">
+	<skill id="14356" levels="1" name="Sotiris' Yoke">
 		<set name="icon" val="icon.skill1042"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -405,7 +405,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14367" levels="1" name="Darkness Absorb">
+	<skill id="14367" levels="1" name="Darkness Drain">
 		<set name="icon" val="icon.skill1010"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -429,7 +429,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14371" levels="1" name="Flame Cutting">
+	<skill id="14371" levels="1" name="Flame Slash">
 		<set name="icon" val="icon.skill0245"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -441,7 +441,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14373" levels="2" name="Death's Damage Zone">
+	<skill id="14373" levels="2" name="Damage Zone of Death">
 		<set name="icon" val="icon.skill1168"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -459,7 +459,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14376" levels="1" name="Equipment Cancel">
+	<skill id="14376" levels="1" name="Disarm">
 		<set name="icon" val="icon.skill0794"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -471,13 +471,13 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14378" levels="1" name="Antharas's Grinding">
+	<skill id="14378" levels="1" name="Antharas' Grinding">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14379" levels="1" name="Antharas's Grinding">
+	<skill id="14379" levels="1" name="Antharas' Grinding">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -507,7 +507,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14384" levels="1" name="Antharas Fossilization">
+	<skill id="14384" levels="1" name="Antharas Petrify">
 		<set name="icon" val="icon.skill4111"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -525,13 +525,13 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14387" levels="1" name="Antharas Terror">
+	<skill id="14387" levels="1" name="Antharas Fear">
 		<set name="icon" val="icon.skill4108"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14388" levels="1" name="Antharas Terror">
+	<skill id="14388" levels="1" name="Antharas Fear">
 		<set name="icon" val="icon.skill4108"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -597,7 +597,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14399" levels="1" name="Valakas Meteor">
+	<skill id="14399" levels="1" name="Valakas Meteor Storm">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>

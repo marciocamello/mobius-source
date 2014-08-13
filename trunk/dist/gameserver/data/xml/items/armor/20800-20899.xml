@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="20818" name="Soul Avatar Seal Bracelet - Iken">
+	<armor id="20818" name="Soul Avatar - Iken">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -30,7 +30,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20819" name="Agathion Seal Bracelet - Iken" add_name="Prominent Outsider Adventurer's Ability - 7 day limited period">
+	<armor id="20819" name="Agathion - Iken" add_name="Prominent Outsider Adventurer's Ability (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -57,7 +57,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20820" name="Soul Avatar Seal Bracelet - Lana">
+	<armor id="20820" name="Soul Avatar - Lanya">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -86,7 +86,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20821" name="Agathion Seal Bracelet - Lana" add_name="Prominent Outsider Adventurer's Ability - 7 day limited period">
+	<armor id="20821" name="Agathion - Lanya" add_name="Prominent Outsider Adventurer's Ability (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -113,7 +113,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20822" name="Soul Avatar Seal Bracelet - Gnosian">
+	<armor id="20822" name="Soul Avatar - Gnosian">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -142,7 +142,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20823" name="Agathion Seal Bracelet - Gnocian" add_name="Prominent Outsider Adventurer's Ability - 7 day limited period">
+	<armor id="20823" name="Agathion - Gnosian" add_name="Prominent Outsider Adventurer's Ability (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -169,7 +169,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20824" name="Soul Avatar Seal Bracelet - Orodriel">
+	<armor id="20824" name="Soul Avatar - Orodriel">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -198,7 +198,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20825" name="Agathion Seal Bracelet - Orodriel" add_name="Prominent Outsider Adventurer's Ability - 7 day limited period">
+	<armor id="20825" name="Agathion - Cheerleader Orodriel" add_name="Prominent Outsider Adventurer's Ability (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -225,7 +225,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20826" name="Soul Avatar Seal Bracelet - Lakinos">
+	<armor id="20826" name="Soul Avatar - Lakinos">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -254,7 +254,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20827" name="Agathion Seal Bracelet - Lakinos" add_name="Prominent Outsider Adventurer's Ability - 7 day limited period">
+	<armor id="20827" name="Agathion - Lakinos" add_name="Prominent Outsider Adventurer's Ability (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -280,7 +280,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20828" name="Soul Avatar Seal Bracelet - Mortia">
+	<armor id="20828" name="Soul Avatar - Mortia">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -309,7 +309,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20829" name="Agathion Seal Bracelet - Mortia" add_name="Prominent Outsider Adventurer's Ability - 7 day limited period">
+	<armor id="20829" name="Agathion - Mortia" add_name="Prominent Outsider Adventurer's Ability (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -336,7 +336,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20830" name="Soul Avatar Seal Bracelet - Heintz">
+	<armor id="20830" name="Soul Avatar - Heintz">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -365,7 +365,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20831" name="Agathion Seal Bracelet - Hayance" add_name="Prominent Outsider Adventurer's Ability - 7 day limited period">
+	<armor id="20831" name="Agathion - Heintz" add_name="Prominent Outsider Adventurer's Ability (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -392,7 +392,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20832" name="Soul Avatar Seal Bracelet - Meruril">
+	<armor id="20832" name="Soul Avatar - Meruril">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -421,7 +421,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20833" name="Agathion Seal Bracelet - Meruril" add_name="Prominent Outsider Adventurer's Ability - 7 day limited period">
+	<armor id="20833" name="Agathion - Meruril" add_name="Prominent Outsider Adventurer's Ability (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -448,7 +448,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20834" name="Soul Avatar Seal Bracelet - Taman Zu Rapatui">
+	<armor id="20834" name="Soul Avatar - Taman Zu Rapatui">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -477,7 +477,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20835" name="Agathion Seal Bracelet - Taman ze Lapatui" add_name="Prominent Outsider Adventurer's Ability - 7 day limited period">
+	<armor id="20835" name="Agathion - Taman Zu Rapatui" add_name="Prominent Outsider Adventurer's Ability (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -504,7 +504,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20836" name="Soul Avatar Seal Bracelet - Kaurin">
+	<armor id="20836" name="Soul Avatar - Kaurin">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -533,7 +533,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20837" name="Agathion Seal Bracelet - Kaurin" add_name="Prominent Outsider Adventurer's Ability - 7 day limited period">
+	<armor id="20837" name="Agathion - Kaurin" add_name="Prominent Outsider Adventurer's Ability (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -560,7 +560,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20838" name="Soul Avatar Seal Bracelet - Ahertbein">
+	<armor id="20838" name="Soul Avatar - Ahertbein">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -589,7 +589,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20839" name="Agathion Seal Bracelet - Ahertbein" add_name="Prominent Outsider Adventurer's Ability - 7 day limited period">
+	<armor id="20839" name="Agathion - Ahertbein" add_name="Prominent Outsider Adventurer's Ability (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -616,7 +616,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20840" name="Soul Avatar Seal Bracelet - Naonin">
+	<armor id="20840" name="Soul Avatar - Naonin">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -645,7 +645,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20841" name="Agathion Seal Bracelet - Naonin" add_name="Prominent Outsider Adventurer's Ability - 7 day limited period">
+	<armor id="20841" name="Agathion - Naonin" add_name="Prominent Outsider Adventurer's Ability (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -672,7 +672,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20897" name="Purple Paper Mask" add_name="Blessed Soul - 7 day limited period">
+	<armor id="20897" name="Purple Paper Mask" add_name="Blessed Soul (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>

@@ -115,7 +115,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30616" name="Bound Tallum Boots" add_name="Heavy">
+	<armor id="30616" name="Bound Tallum Boots" add_name="Heavy Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="3"/>
@@ -134,7 +134,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30617" name="Bound Tallum Boots" add_name="Tans Armor Use">
+	<armor id="30617" name="Bound Tallum Boots" add_name="Light Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="3"/>
@@ -191,7 +191,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30620" name="Bound Tallum Gloves" add_name="Heavy">
+	<armor id="30620" name="Bound Tallum Gloves" add_name="Heavy Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="3"/>
@@ -210,7 +210,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30621" name="Bound Tallum Gloves" add_name="Tans Armor Use">
+	<armor id="30621" name="Bound Tallum Gloves" add_name="Light Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="3"/>

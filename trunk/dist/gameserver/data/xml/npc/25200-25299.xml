@@ -211,7 +211,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="25203" name="Parhit Padisha Sobekk" title="Raid Fighter">
+	<npc id="25203" name="Parhit Sha Sobekk" title="Raid Fighter">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
@@ -271,7 +271,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="25204" name="Krokian Padisha Sobekk" title="Raid Fighter">
+	<npc id="25204" name="Krokian Sha Sobekk" title="Raid Fighter">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>

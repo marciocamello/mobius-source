@@ -20,7 +20,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="19927" name="Blessed Celestial Shield" add_name="Defense Type / Heavy">
+	<weapon id="19927" name="Blessed Durandia Shield" add_name="Defense Type / Heavy">
 		<set name="icon" value="icon.weapon_vesper_verteidiger_i01"/>
 		<set name="weight" value="1130"/>
 		<equip>
@@ -370,7 +370,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="19950" name="Requiem Fighter" add_name="Focus + Damage Up">
+	<weapon id="19950" name="Requiem Fighter" add_name="Focus + Damage">
 		<set name="icon" value="icon.weapon_fantasma_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -398,7 +398,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="19951" name="Requiem Fighter" add_name="Damage + Haste">
+	<weapon id="19951" name="Requiem Fighter" add_name="Damage Up + Haste">
 		<set name="icon" value="icon.weapon_fantasma_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -482,7 +482,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="19954" name="Requiem Stormer" add_name="Guidance + Damage">
+	<weapon id="19954" name="Requiem Stormer" add_name="Guidance + Damage Up">
 		<set name="icon" value="icon.weapon_soryu_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -510,7 +510,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="19955" name="Requiem Stormer" add_name="Damage + HP Drain">
+	<weapon id="19955" name="Requiem Stormer" add_name="Damage Up + HP Drain">
 		<set name="icon" value="icon.weapon_soryu_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -538,7 +538,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="19956" name="Requiem Thrower" add_name="Damage + Focus">
+	<weapon id="19956" name="Requiem Thrower" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_grabathus_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -596,7 +596,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="19958" name="Requiem Thrower" add_name="Long Blow + Damage">
+	<weapon id="19958" name="Requiem Thrower" add_name="Long Blow + Damage Up">
 		<set name="icon" value="icon.weapon_grabathus_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -967,7 +967,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="19971" name="Requiem Dual Sword" add_name="Haste + Damage Up">
+	<weapon id="19971" name="Requiem Dualsword" add_name="Haste + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -995,7 +995,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="19972" name="Requiem Dual Sword" add_name="Damage + Health">
+	<weapon id="19972" name="Requiem Dualsword" add_name="Damage Up + Health">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1023,7 +1023,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="19973" name="Requiem Dual Sword" add_name="Health + Haste">
+	<weapon id="19973" name="Requiem Dualsword" add_name="Health + Haste">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1051,7 +1051,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="19974" name="Requiem Dual Dagger" add_name="Damage + Focus">
+	<weapon id="19974" name="Requiem Dual Dagger" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -1107,7 +1107,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="19976" name="Requiem Dual Dagger" add_name="Guidance + Damage">
+	<weapon id="19976" name="Requiem Dual Dagger" add_name="Guidance + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -1162,7 +1162,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="19978" name="Requiem Dual Blunt Weapon" add_name="Guidance + Damage">
+	<weapon id="19978" name="Requiem Dual Blunt Weapon" add_name="Guidance + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -1189,7 +1189,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="19979" name="Requiem Dual Blunt Weapon" add_name="Damage + Focus ">
+	<weapon id="19979" name="Requiem Dual Blunt Weapon" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -1422,7 +1422,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="19987" name="Blessed Requiem Slasher" add_name="Damage + Haste">
+	<weapon id="19987" name="Blessed Requiem Slasher" add_name="Damage Up + Haste">
 		<set name="icon" value="icon.weapon_polion_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -1567,7 +1567,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="19992" name="Blessed Requiem Fighter" add_name="Focus + Damage Up">
+	<weapon id="19992" name="Blessed Requiem Fighter" add_name="Focus + Damage">
 		<set name="icon" value="icon.weapon_fantasma_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -1596,7 +1596,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="19993" name="Blessed Requiem Fighter" add_name="Damage + Haste">
+	<weapon id="19993" name="Blessed Requiem Fighter" add_name="Damage Up + Haste">
 		<set name="icon" value="icon.weapon_fantasma_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -1709,7 +1709,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="19997" name="Blessed Requiem Stormer" add_name="Damage + HP Drain">
+	<weapon id="19997" name="Blessed Requiem Stormer" add_name="Damage Up + HP Drain">
 		<set name="icon" value="icon.weapon_soryu_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -1737,7 +1737,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="19998" name="Blessed Requiem Thrower" add_name="Damage + Focus">
+	<weapon id="19998" name="Blessed Requiem Thrower" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_grabathus_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>

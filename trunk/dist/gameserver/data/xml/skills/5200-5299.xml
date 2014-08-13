@@ -80,7 +80,7 @@
 		<set name="trait" val="DERANGEMENT"/>
 		<set name="saveVs" val="MEN"/>
 	</skill>
-	<skill id="5204" levels="1" name="Production-First Gigantic Pig Combination">
+	<skill id="5204" levels="1" name="Presentation - First Gigantic Pig Combination">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="76"/>
 		<set name="hitTime" val="5800"/>
@@ -140,7 +140,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5208" levels="1" name="Event Wind walk">
+	<skill id="5208" levels="1" name="Wind Walk (Event)">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1204"/>
 		<set name="magicLevel" val="60"/>
@@ -154,7 +154,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5209" levels="1" name="Event Shield">
+	<skill id="5209" levels="1" name="Shield (Event)">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1040"/>
 		<set name="magicLevel" val="60"/>
@@ -168,7 +168,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5210" levels="1" name="Event Bless the body">
+	<skill id="5210" levels="1" name="Blessed Body (Event)">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1045"/>
 		<set name="magicLevel" val="60"/>
@@ -182,7 +182,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5211" levels="1" name="Event Vampiric rage">
+	<skill id="5211" levels="1" name="Vampiric Rage (Event)">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1268"/>
 		<set name="magicLevel" val="60"/>
@@ -196,7 +196,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5212" levels="1" name="Event Regeneration">
+	<skill id="5212" levels="1" name="Regeneration (Event)">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1044"/>
 		<set name="magicLevel" val="60"/>
@@ -210,7 +210,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5213" levels="1" name="Event Haste">
+	<skill id="5213" levels="1" name="Haste (Event)">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1086"/>
 		<set name="magicLevel" val="60"/>
@@ -224,7 +224,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5214" levels="1" name="Event Bless the soul">
+	<skill id="5214" levels="1" name="Blessed Soul (Event)">
 		<table name="#addMp">120</table>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1048"/>
@@ -239,7 +239,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5215" levels="1" name="Event Acumen">
+	<skill id="5215" levels="1" name="Acumen (Event)">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1085"/>
 		<set name="magicLevel" val="60"/>
@@ -253,7 +253,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5216" levels="1" name="Event Concentration">
+	<skill id="5216" levels="1" name="Concentration (Event)">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1078"/>
 		<set name="magicLevel" val="60"/>
@@ -267,7 +267,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5217" levels="1" name="Event Empower">
+	<skill id="5217" levels="1" name="Empower (Event)">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1059"/>
 		<set name="magicLevel" val="60"/>
@@ -290,7 +290,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="5219" levels="1" name="Stun of giant mutated animal">
+	<skill id="5219" levels="1" name="Giant Mutant Stun">
 		<set name="levelModifier" val="1"/>
 		<set name="affectLimit" val="10;10"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -313,7 +313,7 @@
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
 	</skill>
-	<skill id="5220" levels="1" name="Fear of giant mutated animal">
+	<skill id="5220" levels="1" name="Giant Mutant Fear">
 		<set name="affectLimit" val="10;10"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="2000"/>
@@ -333,21 +333,21 @@
 			<effect count="15" name="Fear" stackOrder="-1" stackType="Fear" time="1" val="0"/>
 		</for>
 	</skill>
-	<skill id="5221" levels="1" name="Balor - Physical Close Range Weak Point">
+	<skill id="5221" levels="1" name="Baylor - Physical Close Range Vulnerability">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="5222" levels="1" name="Balor - Physical Long Range Weak Point">
+	<skill id="5222" levels="1" name="Baylor - Physical Long Range Vulnerability">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="5223" levels="1" name="Balor - Magic Weak Point">
+	<skill id="5223" levels="1" name="Baylor - Magic Vulnerability">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -371,7 +371,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5225" levels="1" name="Invincible">
+	<skill id="5225" levels="1" name="Invincibility">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="6000"/>
 		<set name="magicLevel" val="85"/>
@@ -1202,7 +1202,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5275" levels="9" name="Whirlwind">
+	<skill id="5275" levels="9" name="Spinning Slasher">
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -1265,7 +1265,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="fire"/>
 	</skill>
-	<skill id="5279" levels="9" name="Whirlwind">
+	<skill id="5279" levels="9" name="Spinning Slasher">
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -1330,7 +1330,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="water"/>
 	</skill>
-	<skill id="5283" levels="9" name="Whirlwind">
+	<skill id="5283" levels="9" name="Spinning Slasher">
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -1395,7 +1395,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="wind"/>
 	</skill>
-	<skill id="5287" levels="9" name="Whirlwind">
+	<skill id="5287" levels="9" name="Spinning Slasher">
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -1460,7 +1460,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="earth"/>
 	</skill>
-	<skill id="5291" levels="9" name="Whirlwind">
+	<skill id="5291" levels="9" name="Spinning Slasher">
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -1525,7 +1525,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="holy"/>
 	</skill>
-	<skill id="5295" levels="9" name="Whirlwind">
+	<skill id="5295" levels="9" name="Spinning Slasher">
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -1590,7 +1590,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="unholy"/>
 	</skill>
-	<skill id="5299" levels="9" name="Whirlwind">
+	<skill id="5299" levels="9" name="Spinning Slasher">
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>

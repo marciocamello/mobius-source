@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="13034" name="Sprite's Sword">
+	<weapon id="13034" name="Spirit's Sword">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -33,7 +33,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13035" name="Enhanced Sprite's Sword">
+	<weapon id="13035" name="Reinforced Spirit's Sword">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -139,7 +139,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13043" name="Enhanced Ancient Legacy Sword">
+	<weapon id="13043" name="Reinforced Ancient Legacy Sword">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -250,7 +250,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13053" name="Enhanced Spear of Silenos">
+	<weapon id="13053" name="Reinforced Spear of Silenos">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -326,7 +326,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13061" name="Exclusive to Monsters (Baroness' Employee)">
+	<weapon id="13061" name="Monster Only (Baroness' Employee)">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -355,7 +355,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13062" name="Exclusive to Monsters (Employee's Friend)">
+	<weapon id="13062" name="Monster Only (Employee's Friend)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.weapon_mon_friend_employee_i00"/>

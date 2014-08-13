@@ -132,7 +132,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30315" name="Nabiarov Cloak" add_name="Wynn Summoner">
+	<armor id="30315" name="Naviarope Cloak" add_name="Wynn Summoner">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.vesper_cloack_i00"/>
 		<set name="type" value="NONE"/>
@@ -166,7 +166,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30317" name="Laksis Cloak" add_name="Aeore Healer">
+	<armor id="30317" name="Lakcis Cloak" add_name="Aeore Healer">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.vesper_cloack_i00"/>
 		<set name="type" value="NONE"/>
@@ -183,7 +183,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30330" name="Top-Grade Gludio Water Resistance Necklace">
+	<armor id="30330" name="Top-grade Gludio Water Resistance Necklace">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
 		<set name="type" value="NONE"/>
@@ -199,7 +199,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30331" name="Top-Grade Dion Holy Resistance Necklace">
+	<armor id="30331" name="Top-grade Dion Holy Attack Resistance Necklace">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
 		<set name="type" value="NONE"/>
@@ -215,7 +215,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30332" name="Top-Grade Giran Wind Resistance Necklace">
+	<armor id="30332" name="Top-grade Giran Wind Resistance Necklace">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
 		<set name="type" value="NONE"/>
@@ -231,7 +231,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30333" name="Top-Grade Oren Dark Resistance Necklace">
+	<armor id="30333" name="Top-grade Oren Dark Attack Resistance Necklace">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
 		<set name="type" value="NONE"/>
@@ -247,7 +247,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30334" name="Top-Grade Aden Earth Resistance Necklace">
+	<armor id="30334" name="Top-grade Aden Earth Resistance Necklace">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
 		<set name="type" value="NONE"/>
@@ -263,7 +263,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30335" name="Top-Grade Innadril Water Resistance Necklace">
+	<armor id="30335" name="Top-grade Innadril Water Resistance Necklace">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
 		<set name="type" value="NONE"/>
@@ -279,7 +279,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30336" name="Top-Grade Goddard Fire Resistance Necklace">
+	<armor id="30336" name="Top-grade Goddard Fire Resistance Necklace">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
 		<set name="type" value="NONE"/>
@@ -295,7 +295,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30337" name="Top-Grade Rune Fire Resistance Necklace">
+	<armor id="30337" name="Top-grade Rune Fire Resistance Necklace">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
 		<set name="type" value="NONE"/>
@@ -311,7 +311,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30338" name="Top-Grade Schuttgart Wind Resistance Necklace">
+	<armor id="30338" name="Top-grade Schuttgart Wind Resistance Necklace">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
 		<set name="type" value="NONE"/>
@@ -327,7 +327,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30339" name="Top-Grade Gludio Water Resistance Earring">
+	<armor id="30339" name="Top-grade Gludio Water Resistance Earring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
 		<set name="type" value="NONE"/>
@@ -344,7 +344,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30340" name="Top-Grade Dion Holy Resistance Earring">
+	<armor id="30340" name="Top-grade Dion Holy Attack Resistance Earring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
 		<set name="type" value="NONE"/>
@@ -361,7 +361,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30341" name="Top-Grade Giran Wind Resistance Earring">
+	<armor id="30341" name="Top-grade Giran Wind Resistance Earring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
 		<set name="type" value="NONE"/>
@@ -378,7 +378,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30342" name="Top-Grade Oren Dark Resistance Earring">
+	<armor id="30342" name="Top-grade Oren Dark Attack Resistance Earring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
 		<set name="type" value="NONE"/>
@@ -395,7 +395,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30343" name="Top-Grade Aden Earth Resistance Earring">
+	<armor id="30343" name="Top-grade Aden Earth Resistance Earring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
 		<set name="type" value="NONE"/>
@@ -412,7 +412,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30344" name="Top-Grade Innadril Water Resistance Earring">
+	<armor id="30344" name="Top-grade Innadril Water Resistance Earring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
 		<set name="type" value="NONE"/>
@@ -429,7 +429,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30345" name="Top-Grade Goddard Fire Resistance Earring">
+	<armor id="30345" name="Top-grade Goddard Fire Resistance Earring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
 		<set name="type" value="NONE"/>
@@ -446,7 +446,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30346" name="Top-Grade Rune Fire Resistance Earring">
+	<armor id="30346" name="Top-grade Rune Fire Resistance Earring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
 		<set name="type" value="NONE"/>
@@ -463,7 +463,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30347" name="Top-Grade Schuttgart Wind Resistance Earring">
+	<armor id="30347" name="Top-grade Schuttgart Wind Resistance Earring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
 		<set name="type" value="NONE"/>
@@ -480,7 +480,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30348" name="Top-Grade Gludio Earth Resistance Earring">
+	<armor id="30348" name="Top-grade Gludio Earth Resistance Earring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -497,7 +497,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30349" name="Top-Grade Dion Water Resistance Ring">
+	<armor id="30349" name="Top-grade Dion Water Resistance Ring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -514,7 +514,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30350" name="Top-Grade Giran Fire Resistance Ring">
+	<armor id="30350" name="Top-grade Giran Fire Resistance Ring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -531,7 +531,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30351" name="Top-Grade Oren Earth Resistance Ring">
+	<armor id="30351" name="Top-grade Oren Earth Resistance Ring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -548,7 +548,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30352" name="Top-Grade Aden Holy Resistance Ring">
+	<armor id="30352" name="Top-grade Aden Holy Attack Resistance Ring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -565,7 +565,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30353" name="Top-Grade Innadril Holy Resistance Ring">
+	<armor id="30353" name="Top-grade Innadril Holy Attack Resistance Ring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -582,7 +582,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30354" name="Top-Grade Goddard Dark Resistance Ring">
+	<armor id="30354" name="Top-grade Goddard Dark Attack Resistance Ring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -599,7 +599,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30355" name="Top-Grade Rune Wind Resistance Ring">
+	<armor id="30355" name="Top-grade Rune Wind Resistance Ring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -616,7 +616,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30356" name="Top-Grade Schuttgart Dark Resistance Ring">
+	<armor id="30356" name="Top-grade Schuttgart Dark Attack Resistance Ring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -747,7 +747,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30373" name="Cloak of Honor">
+	<armor id="30373" name="Glorious Cloak">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.vesper_cloack_i00"/>
 		<set name="type" value="NONE"/>

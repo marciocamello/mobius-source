@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="3300" levels="1" name="Yellow Talisman of Speed">
+	<skill id="3300" levels="1" name="Yellow Talisman - Speed">
 		<set name="icon" val="icon.etc_talisman_i02"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -10,7 +10,7 @@
 			<add order="0x60" stat="runSpd" val="5"/>
 		</for>
 	</skill>
-	<skill id="3301" levels="1" name="Yellow Talisman of Violent Haste">
+	<skill id="3301" levels="1" name="Yellow Talisman - Atk. Spd.">
 		<set name="icon" val="icon.etc_talisman_i02"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -20,7 +20,7 @@
 			<add order="0x60" stat="pAtkSpd" val="10"/>
 		</for>
 	</skill>
-	<skill id="3302" levels="1" name="Yellow Talisman of Arcane Haste">
+	<skill id="3302" levels="1" name="Yellow Talisman - Casting Spd.">
 		<set name="icon" val="icon.etc_talisman_i02"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -30,7 +30,7 @@
 			<add order="0x60" stat="mAtkSpd" val="8"/>
 		</for>
 	</skill>
-	<skill id="3303" levels="1" name="White Talisman of Bandages">
+	<skill id="3303" levels="1" name="White Talisman - Bleed Resistance">
 		<set name="icon" val="icon.etc_talisman_i06"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -40,7 +40,7 @@
 			<add order="0x40" stat="bleedResist" val="10"/>
 		</for>
 	</skill>
-	<skill id="3304" levels="1" name="White Talisman of Attention">
+	<skill id="3304" levels="1" name="White Talisman - Sleep Resistance">
 		<set name="icon" val="icon.etc_talisman_i06"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -50,7 +50,7 @@
 			<add order="0x40" stat="sleepResist" val="10"/>
 		</for>
 	</skill>
-	<skill id="3305" levels="1" name="White Talisman of Grounding">
+	<skill id="3305" levels="1" name="White Talisman - Stun Resistance">
 		<set name="icon" val="icon.etc_talisman_i06"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -60,7 +60,7 @@
 			<add order="0x40" stat="stunResist" val="10"/>
 		</for>
 	</skill>
-	<skill id="3306" levels="1" name="White Talisman of Bravery">
+	<skill id="3306" levels="1" name="White Talisman - Bravery">
 		<set name="icon" val="icon.etc_talisman_i06"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -70,7 +70,7 @@
 			<add order="0x40" stat="mentalResist" val="10"/>
 		</for>
 	</skill>
-	<skill id="3307" levels="1" name="White Talisman of Motion">
+	<skill id="3307" levels="1" name="White Talisman - Paralysis Resistance">
 		<set name="icon" val="icon.etc_talisman_i06"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -80,7 +80,7 @@
 			<add order="0x40" stat="paralyzeResist" val="10"/>
 		</for>
 	</skill>
-	<skill id="3308" levels="1" name="White Talisman of Freedom">
+	<skill id="3308" levels="1" name="White Talisman - Hold Resistance">
 		<set name="icon" val="icon.etc_talisman_i06"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -90,7 +90,7 @@
 			<add order="0x40" stat="rootResist" val="10"/>
 		</for>
 	</skill>
-	<skill id="3309" levels="1" name="White Talisman of Protection">
+	<skill id="3309" levels="1" name="White Talisman - Cancel Resistance">
 		<set name="icon" val="icon.etc_talisman_i06"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -100,7 +100,7 @@
 			<add order="0x40" stat="cancelResist" val="5"/>
 		</for>
 	</skill>
-	<skill id="3310" levels="1" name="Yellow Talisman of Physical Regeneration">
+	<skill id="3310" levels="1" name="Yellow Talisman - HP Regeneration">
 		<set name="icon" val="icon.etc_talisman_i02"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -110,7 +110,7 @@
 			<mul order="0x30" stat="regHp" val="1.03"/>
 		</for>
 	</skill>
-	<skill id="3311" levels="1" name="Yellow Talisman of CP Regeneration">
+	<skill id="3311" levels="1" name="Yellow Talisman - CP Regeneration">
 		<set name="icon" val="icon.etc_talisman_i02"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -120,7 +120,7 @@
 			<mul order="0x30" stat="regCp" val="1.03"/>
 		</for>
 	</skill>
-	<skill id="3312" levels="1" name="Yellow Talisman of Healing">
+	<skill id="3312" levels="1" name="Yellow Talisman - Healing">
 		<set name="icon" val="icon.etc_talisman_i02"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -130,7 +130,7 @@
 			<add order="0x60" stat="healPower" val="40"/>
 		</for>
 	</skill>
-	<skill id="3313" levels="1" name="Yellow Talisman of Alacrity">
+	<skill id="3313" levels="1" name="Yellow Talisman - Alacrity">
 		<set name="icon" val="icon.etc_talisman_i02"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -142,7 +142,7 @@
 			<add order="0x40" stat="runSpd" val="3"/>
 		</for>
 	</skill>
-	<skill id="3314" levels="1" name="Grey Talisman of Weight Training">
+	<skill id="3314" levels="1" name="Grey Talisman - Weight Training">
 		<set name="icon" val="icon.etc_talisman_i07"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -152,7 +152,7 @@
 			<mul order="0x30" stat="maxLoad" val="1.1"/>
 		</for>
 	</skill>
-	<skill id="3315" levels="1" name="Grey Talisman of Fishing">
+	<skill id="3315" levels="1" name="Grey Talisman - Mid-grade Fishing">
 		<set name="icon" val="icon.etc_talisman_i07"/>
 		<set name="power" val="26"/>
 		<set name="magicLevel" val="55"/>
@@ -168,7 +168,7 @@
 			<effect count="1" name="Buff" stackOrder="20" stackType="fishPot;GrayTalisman" time="3600" val="0"/>
 		</for>
 	</skill>
-	<skill id="3316" levels="1" name="Yellow Talisman of Critical Dodging">
+	<skill id="3316" levels="1" name="Yellow Talisman - Critical Dodging">
 		<set name="icon" val="icon.etc_talisman_i02"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -183,7 +183,7 @@
 			<mul order="0x30" stat="critChanceRcpt" val="0.97"/>
 		</for>
 	</skill>
-	<skill id="3317" levels="1" name="Yellow Talisman of Critical Reduction">
+	<skill id="3317" levels="1" name="Yellow Talisman - Critical Reduction">
 		<set name="icon" val="icon.etc_talisman_i02"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -222,7 +222,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="3320" levels="1" name="Yellow Talisman of Mental Regeneration">
+	<skill id="3320" levels="1" name="Yellow Talisman - MP Regeneration">
 		<set name="icon" val="icon.etc_talisman_i02"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -232,7 +232,7 @@
 			<mul order="0x30" stat="regMp" val="1.03"/>
 		</for>
 	</skill>
-	<skill id="3321" levels="1" name="Blue Talisman of Evasion">
+	<skill id="3321" levels="1" name="Blue Talisman - Evasion">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.etc_talisman_i01"/>
 		<set name="reuseDelay" val="360000"/>
@@ -254,7 +254,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3322" levels="1" name="Brass Bracelet">
+	<skill id="3322" levels="1" name="Iron Bracelet">
 		<set name="icon" val="icon.etc_rbracelet_c_i00"/>
 		<set name="magicLevel" val="20"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -365,7 +365,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="saveVs" val="MEN"/>
 	</skill>
-	<skill id="3332" levels="1" name="Orange Talisman of Hot Springs Recovery">
+	<skill id="3332" levels="1" name="Orange Talisman - Hot Springs CP Potion">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.etc_talisman_i04"/>
 		<set name="reuseDelay" val="300000"/>
@@ -385,7 +385,7 @@
 		<set name="referenceItemId" val="9952"/>
 		<set name="referenceItemMpConsume" val="5"/>
 	</skill>
-	<skill id="3333" levels="1" name="Orange Talisman of A Grade Elixir of Life">
+	<skill id="3333" levels="1" name="Orange Talisman - Elixir of Life (A-grade)">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.etc_talisman_i04"/>
 		<set name="reuseDelay" val="600000"/>
@@ -405,7 +405,7 @@
 		<set name="referenceItemId" val="9953"/>
 		<set name="referenceItemMpConsume" val="5"/>
 	</skill>
-	<skill id="3334" levels="1" name="Orange Talisman of A Grade Elixir of Mental Strength">
+	<skill id="3334" levels="1" name="Orange Talisman - Elixir of Mind (A-grade)">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.etc_talisman_i04"/>
 		<set name="reuseDelay" val="600000"/>
@@ -903,7 +903,7 @@
 		<set name="npcId" val="16029"/>
 		<set name="summonType" val="agathion"/>
 	</skill>
-	<skill id="3362" levels="1" name="Traits Strengthen Necklace">
+	<skill id="3362" levels="1" name="Stat Enhancing Necklace">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -913,7 +913,7 @@
 			<add order="0x40" stat="stunPower" val="18"/>
 		</for>
 	</skill>
-	<skill id="3363" levels="1" name="Traits Strengthen Ring">
+	<skill id="3363" levels="1" name="Stat Enhancing Ring">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -923,7 +923,7 @@
 			<add order="0x40" stat="stunPower" val="8"/>
 		</for>
 	</skill>
-	<skill id="3364" levels="1" name="Traits Strengthen Earring">
+	<skill id="3364" levels="1" name="Stat Enhancing Earring">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -963,7 +963,7 @@
 			<add order="0x40" stat="stunResist" val="12"/>
 		</for>
 	</skill>
-	<skill id="3368" levels="1" name="Traits Strengthen Necklace">
+	<skill id="3368" levels="1" name="Stat Enhancing Necklace">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -973,7 +973,7 @@
 			<add order="0x40" stat="bleedPower" val="11"/>
 		</for>
 	</skill>
-	<skill id="3369" levels="1" name="Traits Strengthen Ring">
+	<skill id="3369" levels="1" name="Stat Enhancing Ring">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -983,7 +983,7 @@
 			<add order="0x40" stat="bleedPower" val="5"/>
 		</for>
 	</skill>
-	<skill id="3370" levels="1" name="Traits Strengthen Earring">
+	<skill id="3370" levels="1" name="Stat Enhancing Earring">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1023,7 +1023,7 @@
 			<add order="0x40" stat="bleedResist" val="8"/>
 		</for>
 	</skill>
-	<skill id="3374" levels="1" name="Traits Strengthen Necklace">
+	<skill id="3374" levels="1" name="Stat Enhancing Necklace">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1033,7 +1033,7 @@
 			<add order="0x40" stat="poisonPower" val="16"/>
 		</for>
 	</skill>
-	<skill id="3375" levels="1" name="Traits Strengthen Ring">
+	<skill id="3375" levels="1" name="Stat Enhancing Ring">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1043,7 +1043,7 @@
 			<add order="0x40" stat="poisonPower" val="7"/>
 		</for>
 	</skill>
-	<skill id="3376" levels="1" name="Traits Strengthen Earring">
+	<skill id="3376" levels="1" name="Stat Enhancing Earring">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1083,7 +1083,7 @@
 			<add order="0x40" stat="poisonResist" val="11"/>
 		</for>
 	</skill>
-	<skill id="3380" levels="1" name="Traits Strengthen Necklace">
+	<skill id="3380" levels="1" name="Stat Enhancing Necklace">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1093,7 +1093,7 @@
 			<add order="0x40" stat="paralyzePower" val="9"/>
 		</for>
 	</skill>
-	<skill id="3381" levels="1" name="Traits Strengthen Ring">
+	<skill id="3381" levels="1" name="Stat Enhancing Ring">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1103,7 +1103,7 @@
 			<add order="0x40" stat="paralyzePower" val="4"/>
 		</for>
 	</skill>
-	<skill id="3382" levels="1" name="Traits Strengthen Earring">
+	<skill id="3382" levels="1" name="Stat Enhancing Earring">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1143,7 +1143,7 @@
 			<add order="0x40" stat="paralyzeResist" val="6"/>
 		</for>
 	</skill>
-	<skill id="3386" levels="1" name="Traits Strengthen Necklace">
+	<skill id="3386" levels="1" name="Stat Enhancing Necklace">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1153,7 +1153,7 @@
 			<add order="0x40" stat="rootPower" val="18"/>
 		</for>
 	</skill>
-	<skill id="3387" levels="1" name="Traits Strengthen Ring">
+	<skill id="3387" levels="1" name="Stat Enhancing Ring">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1163,7 +1163,7 @@
 			<add order="0x40" stat="rootPower" val="8"/>
 		</for>
 	</skill>
-	<skill id="3388" levels="1" name="Traits Strengthen Earring">
+	<skill id="3388" levels="1" name="Stat Enhancing Earring">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1203,7 +1203,7 @@
 			<add order="0x40" stat="rootResist" val="12"/>
 		</for>
 	</skill>
-	<skill id="3392" levels="1" name="Traits Strengthen Necklace">
+	<skill id="3392" levels="1" name="Stat Enhancing Necklace">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1213,7 +1213,7 @@
 			<add order="0x40" stat="sleepPower" val="18"/>
 		</for>
 	</skill>
-	<skill id="3393" levels="1" name="Traits Strengthen Ring">
+	<skill id="3393" levels="1" name="Stat Enhancing Ring">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1223,7 +1223,7 @@
 			<add order="0x40" stat="sleepPower" val="8"/>
 		</for>
 	</skill>
-	<skill id="3394" levels="1" name="Traits Strengthen Earring">
+	<skill id="3394" levels="1" name="Stat Enhancing Earring">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1263,7 +1263,7 @@
 			<add order="0x40" stat="sleepResist" val="12"/>
 		</for>
 	</skill>
-	<skill id="3398" levels="1" name="Traits Strengthen Necklace">
+	<skill id="3398" levels="1" name="Stat Enhancing Necklace">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1273,7 +1273,7 @@
 			<add order="0x40" stat="mentalPower" val="9"/>
 		</for>
 	</skill>
-	<skill id="3399" levels="1" name="Traits Strengthen Ring">
+	<skill id="3399" levels="1" name="Stat Enhancing Ring">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>

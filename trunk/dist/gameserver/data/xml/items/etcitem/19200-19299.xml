@@ -161,7 +161,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_cuirass_piece_I00"/>
 	</etcitem>
-	<etcitem id="19219" name="Unidentified Twilight Gaiters Ingredient">
+	<etcitem id="19219" name="Unidentified Twilight Gaiter Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -171,7 +171,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_gaiter_piece_I00"/>
 	</etcitem>
-	<etcitem id="19220" name="Unidentified Twilight Gauntlets Ingredient">
+	<etcitem id="19220" name="Unidentified Twilight Gauntlet Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -181,7 +181,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_gauntlet_piece_I00"/>
 	</etcitem>
-	<etcitem id="19221" name="Unidentified Twilight Boots Ingredient">
+	<etcitem id="19221" name="Unidentified Twilight Boot Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -221,7 +221,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_houberk_piece_I00"/>
 	</etcitem>
-	<etcitem id="19225" name="Unidentified Twilight Leather Leggings Ingredient">
+	<etcitem id="19225" name="Unidentified Twilight Leather Legging Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -231,7 +231,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_leather_legging_piece_I00"/>
 	</etcitem>
-	<etcitem id="19226" name="Unidentified Twilight Leather Gloves Ingredient">
+	<etcitem id="19226" name="Unidentified Twilight Leather Glove Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -241,7 +241,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_leather_gloves_piece_I00"/>
 	</etcitem>
-	<etcitem id="19227" name="Unidentified Twilight Leather Boots Ingredient">
+	<etcitem id="19227" name="Unidentified Twilight Leather Boot Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -271,7 +271,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_jaket_piece_I00"/>
 	</etcitem>
-	<etcitem id="19230" name="Unidentified Twilight Stockings Ingredient">
+	<etcitem id="19230" name="Unidentified Twilight Stocking Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -281,7 +281,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_hose_piece_I00"/>
 	</etcitem>
-	<etcitem id="19231" name="Unidentified Twilight Gloves Ingredient">
+	<etcitem id="19231" name="Unidentified Twilight Glove Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -291,7 +291,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_gloves_piece_I00"/>
 	</etcitem>
-	<etcitem id="19232" name="Unidentified Twilight Shoes Ingredient">
+	<etcitem id="19232" name="Unidentified Twilight Shoe Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -471,7 +471,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_cuirass_piece_I00"/>
 	</etcitem>
-	<etcitem id="19253" name="Unidentified Seraph Gaiters Ingredient">
+	<etcitem id="19253" name="Unidentified Seraph Gaiter Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -481,7 +481,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_gaiter_piece_I00"/>
 	</etcitem>
-	<etcitem id="19254" name="Unidentified Seraph Gauntlets Ingredient">
+	<etcitem id="19254" name="Unidentified Seraph Gauntlet Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -491,7 +491,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_gauntlet_piece_I00"/>
 	</etcitem>
-	<etcitem id="19255" name="Unidentified Seraph Boots Ingredient">
+	<etcitem id="19255" name="Unidentified Seraph Boot Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -531,7 +531,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_houberk_piece_I00"/>
 	</etcitem>
-	<etcitem id="19259" name="Unidentified Seraph Leather Leggings Ingredient">
+	<etcitem id="19259" name="Unidentified Seraph Leather Legging Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -541,7 +541,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_leather_legging_piece_I00"/>
 	</etcitem>
-	<etcitem id="19260" name="Unidentified Seraph Leather Gloves Ingredient">
+	<etcitem id="19260" name="Unidentified Seraph Leather Glove Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -551,7 +551,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_leather_gloves_piece_I00"/>
 	</etcitem>
-	<etcitem id="19261" name="Unidentified Seraph Leather Boots Ingredient">
+	<etcitem id="19261" name="Unidentified Seraph Leather Boot Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -581,7 +581,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_jaket_piece_I00"/>
 	</etcitem>
-	<etcitem id="19264" name="Unidentified Seraph Stockings Ingredient">
+	<etcitem id="19264" name="Unidentified Seraph Stocking Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -591,7 +591,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_hose_piece_I00"/>
 	</etcitem>
-	<etcitem id="19265" name="Unidentified Seraph Gloves Ingredient">
+	<etcitem id="19265" name="Unidentified Seraph Glove Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -601,7 +601,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_gloves_piece_I00"/>
 	</etcitem>
-	<etcitem id="19266" name="Unidentified Seraph Shoes Ingredient">
+	<etcitem id="19266" name="Unidentified Seraph Shoe Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -781,7 +781,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_cuirass_piece_I00"/>
 	</etcitem>
-	<etcitem id="19287" name="Unidentified Eternal Gaiters Ingredient">
+	<etcitem id="19287" name="Unidentified Eternal Gaiter Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -791,7 +791,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_gaiter_piece_I00"/>
 	</etcitem>
-	<etcitem id="19288" name="Unidentified Eternal Gauntlets Ingredient">
+	<etcitem id="19288" name="Unidentified Eternal Gauntlet Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -801,7 +801,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_gauntlet_piece_I00"/>
 	</etcitem>
-	<etcitem id="19289" name="Unidentified Eternal Boots Ingredient">
+	<etcitem id="19289" name="Unidentified Eternal Boot Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -841,7 +841,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_houberk_piece_I00"/>
 	</etcitem>
-	<etcitem id="19293" name="Unidentified Eternal Leather Leggings Ingredient">
+	<etcitem id="19293" name="Unidentified Eternal Leather Legging Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -851,7 +851,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_leather_legging_piece_I00"/>
 	</etcitem>
-	<etcitem id="19294" name="Unidentified Eternal Leather Gloves Ingredient">
+	<etcitem id="19294" name="Unidentified Eternal Leather Glove Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -861,7 +861,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_leather_gloves_piece_I00"/>
 	</etcitem>
-	<etcitem id="19295" name="Unidentified Eternal Leather Boots Ingredient">
+	<etcitem id="19295" name="Unidentified Eternal Leather Boot Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -891,7 +891,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_jaket_piece_I00"/>
 	</etcitem>
-	<etcitem id="19298" name="Unidentified Eternal Stockings Ingredient">
+	<etcitem id="19298" name="Unidentified Eternal Stocking Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -901,7 +901,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sealed_vesper_hose_piece_I00"/>
 	</etcitem>
-	<etcitem id="19299" name="Unidentified Eternal Gloves Ingredient">
+	<etcitem id="19299" name="Unidentified Eternal Glove Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

@@ -211,7 +211,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11007" name="Wizard's Tear - Cleverness" add_name="Magic Power">
+	<weapon id="11007" name="Wizard's Tear - Cleverness" add_name="M. Atk.">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -670,7 +670,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11022" name="Doomchanter - Concentration" add_name="Light">
+	<weapon id="11022" name="Doomchanter - Concentration" add_name="Light Armor">
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
@@ -1272,7 +1272,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11042" name="Elemental Sword - Hail" add_name="Magic Power">
+	<weapon id="11042" name="Elemental Sword - Hail" add_name="M. Atk.">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
@@ -1630,7 +1630,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11054" name="Carnage Bow - Concentration" add_name="Light">
+	<weapon id="11054" name="Carnage Bow - Concentration" add_name="Light Armor">
 		<set name="atk_reuse" value="1500"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
@@ -2415,7 +2415,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11080" name="Dark Legion - Thunder">
+	<weapon id="11080" name="Dark Legion's Edge - Thunder">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="false"/>
@@ -2443,7 +2443,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11081" name="Dark Legion - Thunder" add_name="Critical Damage">
+	<weapon id="11081" name="Dark Legion's Edge - Thunder" add_name="Critical Damage">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="false"/>
@@ -2472,7 +2472,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11082" name="Dark Legion - Thunder" add_name="Health">
+	<weapon id="11082" name="Dark Legion's Edge - Thunder" add_name="Health">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="false"/>
@@ -2501,7 +2501,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11083" name="Dark Legion - Thunder" add_name="Rsk. Focus">
+	<weapon id="11083" name="Dark Legion's Edge - Thunder" add_name="Rsk. Focus">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="false"/>

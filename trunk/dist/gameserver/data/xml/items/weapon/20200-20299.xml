@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="20255" name="Baguette Sword" add_name="7 Day Expiration Period">
+	<weapon id="20255" name="Baguette Sword" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -36,7 +36,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20256" name="Baguette Dagger" add_name="7 Day Expiration Period">
+	<weapon id="20256" name="Baguette Dagger" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -72,7 +72,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20257" name="Baguette Dual Sword" add_name="7 Day Expiration Period">
+	<weapon id="20257" name="Baguette Dualsword" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -107,7 +107,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20258" name="Baguette Mace" add_name="7 Day Expiration Period">
+	<weapon id="20258" name="Baguette Mace" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -143,7 +143,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20259" name="Baguette Heavy Hammer" add_name="7 Day Expiration Period">
+	<weapon id="20259" name="Baguette Heavy Hammer" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -179,7 +179,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20260" name="Baguette Spear" add_name="7 Day Expiration Period">
+	<weapon id="20260" name="Baguette Spear" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -216,7 +216,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20261" name="Baguette Bow" add_name="7 Day Expiration Period">
+	<weapon id="20261" name="Baguette Bow" add_name="7-day">
 		<set name="atk_reuse" value="820"/>
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
@@ -254,7 +254,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20262" name="Baguette Fist" add_name="7 Day Expiration Period">
+	<weapon id="20262" name="Baguette Fist" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -290,7 +290,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20263" name="Baguette Magic Sword" add_name="7 Day Expiration Period">
+	<weapon id="20263" name="Baguette Magic Sword" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="NONE"/>
@@ -326,7 +326,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20264" name="Baguette Staff" add_name="7 Day Expiration Period">
+	<weapon id="20264" name="Baguette Staff" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="NONE"/>
@@ -363,7 +363,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20265" name="Baguette Great Staff" add_name="7 Day Expiration Period">
+	<weapon id="20265" name="Baguette Great Staff" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="NONE"/>
@@ -400,7 +400,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20266" name="Baguette Shield" add_name="7 Day Expiration Period">
+	<weapon id="20266" name="Baguette Shield" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -433,7 +433,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20267" name="Baguette Rapier" add_name="7 Day Expiration Period">
+	<weapon id="20267" name="Baguette Rapier" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -470,7 +470,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20268" name="Baguette Ancient Sword" add_name="7 Day Expiration Period">
+	<weapon id="20268" name="Baguette Ancient Sword" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -506,7 +506,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20269" name="Baguette Crossbow" add_name="7 Day Expiration Period">
+	<weapon id="20269" name="Baguette Crossbow" add_name="7-day">
 		<set name="atk_reuse" value="400"/>
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
@@ -543,7 +543,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20270" name="Baguette's Dualsword" add_name="7 Day Expiration Period">
+	<weapon id="20270" name="Baguette's Dualsword" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>

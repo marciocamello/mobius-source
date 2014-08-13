@@ -12,19 +12,19 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="1702" levels="1" name="Hold Cancel">
+	<skill id="1702" levels="1" name="Cancel Hold">
 		<set name="icon" val="icon.skill01702"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="1703" levels="1" name="Fear Cancel">
+	<skill id="1703" levels="1" name="Cancel Fear">
 		<set name="icon" val="icon.skill01703"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="1704" levels="1" name="Hate Aura">
+	<skill id="1704" levels="1" name="Aggression Aura">
 		<set name="icon" val="icon.skill0018"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -114,7 +114,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="1720" levels="1" name="Lakcis Blessing">
+	<skill id="1720" levels="1" name="Lakcis' Protection">
 		<set name="icon" val="icon.skill1271"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -204,13 +204,13 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="1735" levels="3" name="PC skill power increase">
+	<skill id="1735" levels="3" name="Increase Skill Power">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="1736" levels="3" name="PC M. Atk. increase">
+	<skill id="1736" levels="3" name="Increase M. Atk.">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -228,7 +228,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="1749" levels="1" name="Slow">
+	<skill id="1749" levels="1" name="Decrease Speed">
 		<set name="icon" val="icon.skill1201"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -330,7 +330,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="1766" levels="1" name="Boss Change Body Resistance">
+	<skill id="1766" levels="1" name="Boss Transform Resistance">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>

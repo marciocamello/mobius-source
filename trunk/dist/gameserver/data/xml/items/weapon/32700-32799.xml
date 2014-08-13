@@ -40,7 +40,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="32772" name="Firework">
+	<weapon id="32772" name="Firecracker">
 		<set name="icon" value="icon.weapon_iron_hammer_i00"/>
 		<set name="weight" value="1850"/>
 		<set name="rnd_dam" value="20"/>
@@ -60,7 +60,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="32773" name="Blacksmith's Hammer">
+	<weapon id="32773" name="Blacksmith' Hammer">
 		<set name="icon" value="icon.weapon_iron_hammer_i00"/>
 		<set name="weight" value="1850"/>
 		<set name="rnd_dam" value="20"/>
@@ -80,7 +80,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="32774" name="Delivery Goods 62">
+	<weapon id="32774" name="Scroll">
 		<set name="icon" value="icon.weapon_iron_hammer_i00"/>
 		<set name="weight" value="1850"/>
 		<set name="rnd_dam" value="20"/>

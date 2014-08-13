@@ -3723,7 +3723,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="36072" name="Foreman" title="Cloud Mountain">
+	<npc id="36072" name="Foreman" title="Cloud Mountain Fortress">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -3769,7 +3769,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="36073" name="Suspicious Merchant" title="Cloud Mountain">
+	<npc id="36073" name="Suspicious Merchant" title="Cloud Mountain Fortress">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="suspiciousmerchant.SuspiciousMerchantCloud"/>
 		<set name="baseAtkRange" value="40"/>
@@ -3815,7 +3815,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="36074" name="Guard Captain" title="Cloud Mountain">
+	<npc id="36074" name="Guard Captain" title="Cloud Mountain Fortress">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -3865,7 +3865,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="36075" name="Archer Captain" title="Cloud Mountain">
+	<npc id="36075" name="Archer Captain" title="Cloud Mountain Fortress">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="1100"/>
@@ -3911,7 +3911,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="36076" name="General" title="Cloud Mountain">
+	<npc id="36076" name="General" title="Cloud Mountain Fortress">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -3961,7 +3961,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="36077" name="Support Unit Captain" title="Cloud Mountain">
+	<npc id="36077" name="Support Unit Captain" title="Cloud Mountain Fortress">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -4007,7 +4007,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="36078" name="Engineering Manager" title="Cloud Mountain">
+	<npc id="36078" name="Engineering Manager" title="Cloud Mountain Fortress">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -4053,7 +4053,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="36079" name="Logistics Officer" title="Cloud Mountain">
+	<npc id="36079" name="Logistics Officer" title="Cloud Mountain Fortress">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -4142,7 +4142,7 @@
 			<defence attribute="unholy" value="120"/>
 		</attributes>
 	</npc>
-	<npc id="36081" name="Detention Camp Warden" title="Cloud Mountain">
+	<npc id="36081" name="Detention Camp Warden" title="Cloud Mountain Fortress">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -4350,7 +4350,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="36085" name="Rebel Commander" title="Cloud Mountain">
+	<npc id="36085" name="Rebel Commander" title="Cloud Mountain Fortress">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="residences.fortress.siege.RebelCommander"/>
 		<set name="baseAtkRange" value="40"/>
@@ -4412,7 +4412,7 @@
 			<defence attribute="unholy" value="120"/>
 		</attributes>
 	</npc>
-	<npc id="36086" name="Rebel Elite Soldier" title="Cloud Mountain">
+	<npc id="36086" name="Rebel Elite Soldier" title="Cloud Mountain Fortress">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="residences.SiegeGuardFighter"/>
 		<set name="baseAtkRange" value="40"/>
@@ -4468,7 +4468,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="36087" name="Rebel Private" title="Cloud Mountain">
+	<npc id="36087" name="Rebel Private" title="Cloud Mountain Fortress">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="residences.SiegeGuardFighter"/>
 		<set name="baseAtkRange" value="80"/>
@@ -4526,7 +4526,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="36088" name="Royal Guard" title="Cloud Mountain">
+	<npc id="36088" name="Royal Guard" title="Cloud Mountain Fortress">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="residences.SiegeGuardFighter"/>
 		<set name="baseAtkRange" value="80"/>
@@ -4584,7 +4584,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="36089" name="Escort" title="Cloud Mountain">
+	<npc id="36089" name="Escort" title="Cloud Mountain Fortress">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="residences.SiegeGuardRanger"/>
 		<set name="baseAtkRange" value="1100"/>

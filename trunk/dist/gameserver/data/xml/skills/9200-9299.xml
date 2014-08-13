@@ -69,7 +69,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9204" levels="1" name="Kukuri">
+	<skill id="9204" levels="1" name="Kukuru">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="reuseDelay" val="2000"/>
@@ -79,7 +79,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9205" levels="1" name="Sturdy Kukuri">
+	<skill id="9205" levels="1" name="Sturdy Kukuru">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0169"/>
 		<set name="reuseDelay" val="2000"/>
@@ -99,7 +99,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9209" levels="1" name="Kookaru">
+	<skill id="9209" levels="1" name="Kukuru">
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="hitTime" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -131,7 +131,7 @@
 		<set name="alterSkillId" val="9212"/>
 		<set name="alterIconTime" val="5"/>
 	</skill>
-	<skill id="9212" levels="1" name="Kukuri Dismount">
+	<skill id="9212" levels="1" name="Kukuru Dismount">
 		<set name="icon" val="icon.skilltransform2"/>
 		<set name="hitTime" val="2500"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -296,7 +296,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="9224" levels="1" name="Escape - Talking Island Village">
+	<skill id="9224" levels="1" name="Scroll of Escape: Talking Island Village">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="townId" val="1"/>

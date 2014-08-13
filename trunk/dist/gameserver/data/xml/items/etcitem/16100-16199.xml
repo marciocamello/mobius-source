@@ -173,7 +173,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="16126" name="Fabric of Refined Shark Hat">
+	<etcitem id="16126" name="Refined Shark Hat Fabric">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -183,7 +183,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="16127" name="Fabric of Chic Gold Horn Cap">
+	<etcitem id="16127" name="Chic Gold Horn Cap Fabric">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -193,7 +193,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="16128" name="Fabric of Chic Silver Horn Cap">
+	<etcitem id="16128" name="Chic Silver Horn Cap Fabric">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -203,7 +203,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="16129" name="Fabric of Refined Penguin Hat">
+	<etcitem id="16129" name="Refined Penguin Hat Fabric">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -213,7 +213,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="16130" name="Fabric of Refined Brown Turban">
+	<etcitem id="16130" name="Refined Brown Turban Fabric">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -223,7 +223,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="16131" name="Fabric of Refined Yellow Turban">
+	<etcitem id="16131" name="Refined Yellow Turban Fabric">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -233,7 +233,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="16132" name="Fabric of Refined Turtle Hat">
+	<etcitem id="16132" name="Refined Turtle Hat Fabric">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -243,7 +243,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="16133" name="Fabric of Refined Cow Hat">
+	<etcitem id="16133" name="Refined Cow Hat Fabric">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -253,7 +253,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="16160" name="Life Stone -  Level 85">
+	<etcitem id="16160" name="Life Stone - Level 85">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i03"/>
@@ -262,7 +262,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="16161" name="Mid-grade Life Stone -  Level 85">
+	<etcitem id="16161" name="Mid-grade Life Stone - Level 85">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_special_i03"/>
@@ -271,7 +271,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="16162" name="High-grade Life Stone -  Level 85">
+	<etcitem id="16162" name="High-grade Life Stone - Level 85">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_rare_i03"/>
@@ -280,7 +280,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="16163" name="Top-grade Life Stone -  Level 85">
+	<etcitem id="16163" name="Top-grade Life Stone - Level 85">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_unique_i03"/>
@@ -289,7 +289,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="16164" name="Life Stone -  Level 86">
+	<etcitem id="16164" name="Life Stone - Level 86">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i03"/>
@@ -298,7 +298,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="16165" name="Mid-grade Life Stone -  Level 86">
+	<etcitem id="16165" name="Mid-grade Life Stone - Level 86">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_special_i03"/>
@@ -307,7 +307,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="16166" name="High-grade Life Stone -  Level 86">
+	<etcitem id="16166" name="High-grade Life Stone - Level 86">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_rare_i03"/>
@@ -316,7 +316,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="16167" name="Top-grade Life Stone -  Level 86">
+	<etcitem id="16167" name="Top-grade Life Stone - Level 86">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_unique_i03"/>
@@ -325,7 +325,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="16177" name="Accessory Life Stone -  Level 85">
+	<etcitem id="16177" name="Accessory Life Stone - Level 85">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i03"/>
@@ -334,7 +334,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="16178" name="Accessory Life Stone -  Level 86">
+	<etcitem id="16178" name="Accessory Life Stone - Level 86">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i03"/>

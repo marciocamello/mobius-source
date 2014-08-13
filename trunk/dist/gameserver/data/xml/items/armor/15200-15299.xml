@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="15208" name="Bracelet of Friendship" add_name="30 day limited period">
+	<armor id="15208" name="Bracelet of Glory: Friendship" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="43200"/>
@@ -14,7 +14,7 @@
 		</equip>
 		<set name="ex_type" value="BRACELET"/>
 	</armor>
-	<armor id="15220" name="Agathion Seal Bracelet - Oink Oink" add_name="10 day limited period">
+	<armor id="15220" name="Agathion - Oink Oink" add_name="10-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="14400"/>
@@ -65,7 +65,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="15283" name="Dion Divinity Royal Guard Necklace">
+	<armor id="15283" name="Dion Holy Royal Guard Necklace">
 		<set name="crystal_type" value="S80"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_nectklace_of_domi_protection_i00"/>
@@ -101,7 +101,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="15285" name="Oren Darkness Royal Guard Necklace">
+	<armor id="15285" name="Oren Dark Royal Guard Necklace">
 		<set name="crystal_type" value="S80"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_nectklace_of_domi_protection_i00"/>
@@ -297,7 +297,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="15295" name="Aden Divinity Royal Guard Ring">
+	<armor id="15295" name="Aden Holy Royal Guard Ring">
 		<set name="crystal_type" value="S80"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_ring_of_domi_protection_i00"/>
@@ -319,7 +319,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="15296" name="Innadril Divinity Royal Guard Ring">
+	<armor id="15296" name="Innadril Holy Royal Guard Ring">
 		<set name="crystal_type" value="S80"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_ring_of_domi_protection_i00"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="16900" name="Full Plate Helmet of Friendship" add_name="90 day limited period">
+	<armor id="16900" name="Full Plate Helmet of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -22,7 +22,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16901" name="Full Plate Armor of Friendship" add_name="90 day limited period">
+	<armor id="16901" name="Full Plate Armor of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -43,7 +43,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16902" name="Full Plate Boots of Friendship" add_name="90 day limited period">
+	<armor id="16902" name="Full Plate Boots of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -64,7 +64,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16903" name="Full Plate Gauntlet of Friendship" add_name="90 day limited period">
+	<armor id="16903" name="Full Plate Gauntlets of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="dropable" value="false"/>
@@ -85,7 +85,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16905" name="Manticore Skin Shirt of Friendship" add_name="90 day limited period">
+	<armor id="16905" name="Manticore Skin Shirt of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -106,7 +106,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16906" name="Manticore Skin Gaiters of Friendship" add_name="90 day limited period">
+	<armor id="16906" name="Manticore Skin Gaiters of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -127,7 +127,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16907" name="Manticore Skin Boots of Friendship" add_name="90 day limited period">
+	<armor id="16907" name="Manticore Skin Boots of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -148,7 +148,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16908" name="Manticore Skin Gloves of Friendship" add_name="90 day limited period">
+	<armor id="16908" name="Manticore Skin Gloves of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -169,7 +169,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16909" name="Brigandine of Friendship" add_name="90 day limited period">
+	<armor id="16909" name="Brigandine of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -190,7 +190,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16910" name="Brigandine Gaiters of Friendship" add_name="90 day limited period">
+	<armor id="16910" name="Brigandine Gaiters of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -211,7 +211,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16911" name="Brigandine Helmet of Friendship" add_name="90 day limited period">
+	<armor id="16911" name="Brigandine Helmet of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -232,7 +232,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16912" name="Brigandine Boots of Friendship" add_name="90 day limited period">
+	<armor id="16912" name="Brigandine Boots of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -253,7 +253,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16913" name="Brigandine Gauntlet of Friendship" add_name="90 day limited period">
+	<armor id="16913" name="Brigandine Gauntlets of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -274,7 +274,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16915" name="Friendship Armor of Nightmare" add_name="90 day limited period">
+	<armor id="16915" name="Armor of Nightmare of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -295,7 +295,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16916" name="Friendship Helm of Nightmare" add_name="90 day limited period">
+	<armor id="16916" name="Helm of Nightmare of Fortune" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -316,7 +316,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16917" name="Friendship Gauntlet of Nightmare - Heavy Armor" add_name="90 day limited period">
+	<armor id="16917" name="Gauntlets of Nightmare of Fortune - Heavy Armor" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -337,7 +337,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16918" name="Friendship Boots of Nightmare - Heavy Armor" add_name="90 day limited period">
+	<armor id="16918" name="Boots of Nightmare of Fortune - Heavy Armor" add_name="90-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>

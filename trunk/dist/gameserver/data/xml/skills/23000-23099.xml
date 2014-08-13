@@ -14,7 +14,7 @@
 			<player agathion="1501"/>
 		</cond>
 	</skill>
-	<skill id="23001" levels="1" name="Gold Crown Majo Agathion Cute Trick">
+	<skill id="23001" levels="1" name="Gold Majo Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -28,7 +28,7 @@
 			<player agathion="1502"/>
 		</cond>
 	</skill>
-	<skill id="23002" levels="1" name="Black Crown Majo Agathion Cute Trick">
+	<skill id="23002" levels="1" name="Black Majo Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -56,7 +56,7 @@
 			<player agathion="1504"/>
 		</cond>
 	</skill>
-	<skill id="23004" levels="1" name="Majo Agathion Special Skill - Mysterious Power">
+	<skill id="23004" levels="1" name="Majo Agathion Special Skill: Mysterious Power">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -79,7 +79,7 @@
 			<effect abnormal="bighead" count="1" name="Buff" stackType="BigHead" time="120" val="0"/>
 		</for>
 	</skill>
-	<skill id="23005" levels="1" name="Gold Majo Agathion Special Skill - Blessed Resurrection">
+	<skill id="23005" levels="1" name="Gold Majo Agathion Special Skill: Blessed Resurrection">
 		<table name="#effectPoint">624</table>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
@@ -106,7 +106,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23006" levels="1" name="Black Majo Agathion Special Skill - Blessed Escape">
+	<skill id="23006" levels="1" name="Black Majo Agathion Special Skill: Blessed Escape">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="43200000"/>
@@ -126,7 +126,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23007" levels="1" name="Plaipitak Agathion Special Skill - Mysterious Power">
+	<skill id="23007" levels="1" name="Plaipitak Agathion Special Skill: Mysterious Power">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -149,7 +149,7 @@
 			<effect abnormal="bighead" count="1" name="Buff" stackType="BigHead" time="120" val="0"/>
 		</for>
 	</skill>
-	<skill id="23008" levels="1" name="Plaipitak Agathion Special Skill - Blessed Escape">
+	<skill id="23008" levels="1" name="Plaipitak Agathion Special Skill: Blessed Escape">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="43200000"/>
@@ -169,7 +169,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23009" levels="1" name="Plaipitak Agathion Special Skill - Blessed Resurrection">
+	<skill id="23009" levels="1" name="Plaipitak Agathion Special Skill: Blessed Resurrection">
 		<table name="#effectPoint">624</table>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
@@ -238,7 +238,7 @@
 			<player agathion="1507"/>
 		</cond>
 	</skill>
-	<skill id="23013" levels="1" name="Baby Panda Agathion Special Skill - Mysterious Power">
+	<skill id="23013" levels="1" name="Baby Panda Agathion Special Skill: Mysterious Power">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -261,7 +261,7 @@
 			<effect abnormal="bighead" count="1" name="Buff" stackType="BigHead" time="120" val="0"/>
 		</for>
 	</skill>
-	<skill id="23014" levels="1" name="Bamboo Panda Agathion Special Skill - Blessed Resurrection">
+	<skill id="23014" levels="1" name="Bamboo Panda Agathion Special Skill: Blessed Resurrection">
 		<table name="#effectPoint">624</table>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
@@ -288,7 +288,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23015" levels="1" name="Sexy Panda Agathion Special Skill - Blessed Escape">
+	<skill id="23015" levels="1" name="Sexy Panda Agathion Special Skill: Blessed Escape">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="43200000"/>
@@ -308,7 +308,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23016" levels="1" name="Rudolph Agathion Special Skill - Ability of Vitality">
+	<skill id="23016" levels="1" name="Rudolph Agathion Special Skill: Ability of Vitality">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="43200000"/>
@@ -329,7 +329,7 @@
 			<effect count="1" name="Vitality" stackType="vitalityRegen" stackOrder="1" time="300" val="0"/>
 		</for>
 	</skill>
-	<skill id="23017" levels="1" name="Holiday Festival">
+	<skill id="23017" levels="1" name="Winter Holiday Festival">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_xmas_reward_buff_i00"/>
 		<set name="castRange" val="400"/>
@@ -375,7 +375,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23019" levels="3" name="Scissors">
+	<skill id="23019" levels="3" name="Paper">
 		<table name="#magicLevel">1 2 3</table>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_xmas_gawi_i00"/>
@@ -390,7 +390,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23020" levels="1" name="Start attacking the Turkey">
+	<skill id="23020" levels="1" name="Attack Turkey">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="500"/>
@@ -406,7 +406,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23021" levels="3" name="Turkey's Attack Scissors">
+	<skill id="23021" levels="3" name="Turkey's Attack Paper">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -419,7 +419,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23022" levels="10" name="First win">
+	<skill id="23022" levels="10" name="10th Consecutive Win">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_xmas_pcwin1_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -447,7 +447,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23024" levels="1" name="Agathion of Love Special Skill - Vitality Recovery Ability">
+	<skill id="23024" levels="1" name="Love Agathion Special Skill: Vitality Recovery Ability">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="43200000"/>
@@ -469,7 +469,7 @@
 			<effect count="1" name="Vitality" stackType="vitalityRegen" stackOrder="1" time="1200" val="0"/>
 		</for>
 	</skill>
-	<skill id="23025" levels="1" name="White Cupid Agathion Cute Trick">
+	<skill id="23025" levels="1" name="Charming Cupid Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -483,7 +483,7 @@
 			<player agathion="1508"/>
 		</cond>
 	</skill>
-	<skill id="23026" levels="1" name="Dark Cupid Agathion Cute Trick">
+	<skill id="23026" levels="1" name="Naughty Cupid Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -539,7 +539,7 @@
 			<player agathion="1512"/>
 		</cond>
 	</skill>
-	<skill id="23030" levels="1" name="White Maneki Neko Agathion Special Skill - Ability of Blessed Resurrection">
+	<skill id="23030" levels="1" name="White Maneki Neko Agathion Special Skill: Ability of Blessed Resurrection">
 		<table name="#effectPoint">624</table>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
@@ -566,7 +566,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23031" levels="1" name="Black Maneki Neko Agathion Special Skill - Ability of Blessed Return">
+	<skill id="23031" levels="1" name="Black Maneki Neko Agathion Special Skill: Ability of Blessed Escape">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="43200000"/>
@@ -586,7 +586,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23032" levels="1" name="Brown Maneki Neko Agathion Special Skill - Ability of Vitality Recovery">
+	<skill id="23032" levels="1" name="Brown Maneki Neko Agathion Special Skill: Ability of Vitality Recovery">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -622,7 +622,7 @@
 			<player agathion="1513"/>
 		</cond>
 	</skill>
-	<skill id="23034" levels="1" name="One-eyed Bat Drove Agathion Special Skill - Ability of Resist Unholy">
+	<skill id="23034" levels="1" name="One-eyed Bat Drove Agathion Special Skill: Ability of Dark Attack Resistance">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -645,7 +645,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23035" levels="1" name="One-eyed Bat Drove Agathion Special Skill - Ability of Vitality Recovery">
+	<skill id="23035" levels="1" name="One-eyed Bat Drove Agathion Special Skill: Ability of Vitality Recovery">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -681,7 +681,7 @@
 			<player agathion="1514"/>
 		</cond>
 	</skill>
-	<skill id="23037" levels="1" name="Pegasus Agathion Special Skill - Ability of Wind Walk">
+	<skill id="23037" levels="1" name="Pegasus Agathion Special Skill: Ability of Wind Walk">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -704,7 +704,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23038" levels="1" name="Pegasus Agathion Special Skill - Ability of Blessed Return">
+	<skill id="23038" levels="1" name="Pegasus Agathion Special Skill: Ability of Blessed Escape">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="43200000"/>
@@ -766,7 +766,7 @@
 			<player agathion="1517"/>
 		</cond>
 	</skill>
-	<skill id="23042" levels="1" name="Yellow-robed Tojigong Agathion Special Skill - Ability of Greater Heal">
+	<skill id="23042" levels="1" name="Yellow-robed Tojigong Agathion Special Skill: Ability of Greater Heal">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -788,7 +788,7 @@
 			<effect count="15" name="HealOverTime" stackOrder="1" stackType="HpRecoverCast" time="1" val="30"/>
 		</for>
 	</skill>
-	<skill id="23043" levels="1" name="Blue-robed Tojigong Agathion Special Skill - Ability of Reflect Damage">
+	<skill id="23043" levels="1" name="Blue-robed Tojigong Agathion Special Skill: Ability of Reflect Damage">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -811,7 +811,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23044" levels="1" name="Green-robed Tojigong Agathion Special Skill - Ability of Mana Regeneration">
+	<skill id="23044" levels="1" name="Green-robed Tojigong Agathion Special Skill: Ability of Mana Regeneration">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -932,7 +932,7 @@
 			<player agathion="1521"/>
 		</cond>
 	</skill>
-	<skill id="23052" levels="1" name="Button-Eyed Bear Doll Agathion Cute Trick">
+	<skill id="23052" levels="1" name="Button-eyed Bear Doll Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -1002,7 +1002,7 @@
 			<player agathion="1526"/>
 		</cond>
 	</skill>
-	<skill id="23057" levels="1" name="Red Sumo Wrestler Agathion Special Skill - Death Whisper Ability">
+	<skill id="23057" levels="1" name="Red Sumo Wrestler Agathion Special Skill: Death Whisper Ability">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1026,7 +1026,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23058" levels="1" name="Blue Sumo Wrestler Agathion Special Skill - Wild Magic Ability">
+	<skill id="23058" levels="1" name="Blue Sumo Wrestler Agathion Special Skill: Wild Magic Ability">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1050,7 +1050,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23059" levels="1" name="Great Sumo Match Agathion Special Skill - Mysterious Power">
+	<skill id="23059" levels="1" name="Great Sumo Match Agathion Special Skill: Mysterious Power">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1070,7 +1070,7 @@
 			<effect abnormal="bighead" count="1" name="Buff" stackType="BigHead" time="300" val="0"/>
 		</for>
 	</skill>
-	<skill id="23060" levels="1" name="Great Sumo Match Agathion Special Skill - Ability of Firework">
+	<skill id="23060" levels="1" name="Great Sumo Match Agathion Special Skill: Firecracker's Power">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="1500"/>
@@ -1088,7 +1088,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23061" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Blessed Return">
+	<skill id="23061" levels="1" name="Button-eyed Bear Doll Agathion Special Skill: Ability of Blessed Escape">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="43200000"/>
@@ -1107,7 +1107,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23062" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Blessed Resurrection">
+	<skill id="23062" levels="1" name="Button-eyed Bear Doll Agathion Special Skill: Ability of Blessed Resurrection">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="43200000"/>
@@ -1132,7 +1132,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23063" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Vitality Recovery">
+	<skill id="23063" levels="1" name="Button-eyed Bear Doll Agathion Special Skill: Ability of Vitality Recovery">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1154,7 +1154,7 @@
 			<effect count="1" name="Vitality" stackType="vitalityRegen" stackOrder="1" time="300" val="0"/>
 		</for>
 	</skill>
-	<skill id="23064" levels="1" name="God of Fortune Agathion Special Skill - Vitality Recovery Ability">
+	<skill id="23064" levels="1" name="God of Fortune Agathion Special Skill: Vitality Recovery Ability">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1176,7 +1176,7 @@
 			<effect count="1" name="Vitality" stackType="vitalityRegen" stackOrder="1" time="300" val="0"/>
 		</for>
 	</skill>
-	<skill id="23065" levels="1" name="Wonboso Agathion Special Skill - Wind Walk Ability">
+	<skill id="23065" levels="1" name="Wonboso Agathion Special Skill: Wind Walk Ability">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1200,7 +1200,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23066" levels="1" name="Daewoonso Agathion Special Skill - New Year's Gift Ability">
+	<skill id="23066" levels="1" name="Daewoonso Agathion Special Skill: New Year's Gift Ability">
 		<set name="reuseDelay" val="3600000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="magicType" val="SPECIAL"/>
@@ -1232,7 +1232,7 @@
 			<player agathion="1527"/>
 		</cond>
 	</skill>
-	<skill id="23068" levels="4" name="Mental Shield">
+	<skill id="23068" levels="4" name="Pomona Agathion Special Skill: Mental Shield">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1313,7 +1313,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23073" levels="1" name="Switch State">
+	<skill id="23073" levels="1" name="Switch Mode">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill1528"/>
 		<set name="castRange" val="600"/>
@@ -1370,7 +1370,7 @@
 			<player agathion="1528"/>
 		</cond>
 	</skill>
-	<skill id="23077" levels="1" name="Weaver Agathion Special Skill - Power of the Golden Calf">
+	<skill id="23077" levels="1" name="Weaver Agathion Special Skill: Power of the Golden Calf">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="300000"/>
@@ -1401,7 +1401,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23078" levels="1" name="Weaver Agathion Special Skill - Flute Sound">
+	<skill id="23078" levels="1" name="Weaver Agathion Special Skill: Flute Sound">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="300000"/>
@@ -1446,7 +1446,7 @@
 			<player agathion="1529"/>
 		</cond>
 	</skill>
-	<skill id="23080" levels="1" name="Lucky Girl Agathion Special Skill - Brave Warrior's Soul Power">
+	<skill id="23080" levels="1" name="Lucky Girl Agathion Special Skill: Brave Warrior's Soul Power">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1485,7 +1485,7 @@
 			<player agathion="1530"/>
 		</cond>
 	</skill>
-	<skill id="23082" levels="1" name="Lucky Boy Agathion Special Skill - Great Magician Soul's Ability">
+	<skill id="23082" levels="1" name="Lucky Boy Agathion Special Skill: Great Magician Soul's Ability">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1522,7 +1522,7 @@
 			<player agathion="1531"/>
 		</cond>
 	</skill>
-	<skill id="23084" levels="1" name="Dancing Child Agathion Special Skill - Prominent Adventurer Soul's Ability">
+	<skill id="23084" levels="1" name="Dancing Child Agathion Special Skill: Prominent Adventurer Soul's Ability">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1583,7 +1583,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23087" levels="1" name="Wutangka Agathion Cute Trick">
+	<skill id="23087" levels="1" name="Uthanka Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -1597,7 +1597,7 @@
 			<player agathion="1533"/>
 		</cond>
 	</skill>
-	<skill id="23088" levels="1" name="Wutangka Agathion Special Skill - Brave Warrior's Soul Power">
+	<skill id="23088" levels="1" name="Uthanka Agathion Special Skill: Brave Warrior's Soul Power">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1634,7 +1634,7 @@
 			<player agathion="1534"/>
 		</cond>
 	</skill>
-	<skill id="23090" levels="1" name="Bonus B Agathion Special Skill - Prominent Adventurer Soul's Ability">
+	<skill id="23090" levels="1" name="Bonus B Agathion Special Skill: Prominent Adventurer Soul's Ability">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>

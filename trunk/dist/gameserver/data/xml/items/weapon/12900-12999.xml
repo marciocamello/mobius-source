@@ -123,7 +123,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12903" name="Draconic Bow - Earth {PvP}" add_name="Crt. Slow">
+	<weapon id="12903" name="Draconic Bow - Earth {PvP}" add_name="Critical Slow">
 		<set name="atk_reuse" value="1500"/>
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
@@ -571,7 +571,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12915" name="Sarunga - Earth {PvP}" add_name="Crt. Slow">
+	<weapon id="12915" name="Sarunga - Earth {PvP}" add_name="Critical Slow">
 		<set name="atk_reuse" value="400"/>
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
@@ -826,7 +826,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12922" name="Angel Slayer - Concentration {PvP}" add_name="Crt. Damage">
+	<weapon id="12922" name="Angel Slayer - Concentration {PvP}" add_name="Critical Damage">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1047,7 +1047,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12928" name="Tallum Blade*Dark Legion - Lightning {PvP}">
+	<weapon id="12928" name="Tallum Blade*Dark Legion's Edge - Lightning {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1187,7 +1187,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12932" name="Heavens Divider - Thunder {PvP}" add_name="Haste">
+	<weapon id="12932" name="Heaven's Divider - Thunder {PvP}" add_name="Haste">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1222,7 +1222,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12933" name="Heavens Divider - Thunder {PvP}" add_name="Health">
+	<weapon id="12933" name="Heaven's Divider - Thunder {PvP}" add_name="Health">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1257,7 +1257,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12934" name="Heavens Divider - Thunder {PvP}" add_name="Focus">
+	<weapon id="12934" name="Heaven's Divider - Thunder {PvP}" add_name="Focus">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1364,7 +1364,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12937" name="Dynasty Ancient Sword - Great Gale {PvP}" add_name="Light">
+	<weapon id="12937" name="Dynasty Ancient Sword - Great Gale {PvP}" add_name="Light Armor">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1509,7 +1509,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12941" name="Dynasty Dual Sword - Earth {PvP}">
+	<weapon id="12941" name="Dynasty Dualsword - Earth {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1618,7 +1618,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12944" name="Dynasty Rapier - Earth {PvP}" add_name="Light">
+	<weapon id="12944" name="Dynasty Rapier - Earth {PvP}" add_name="Light Armor">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -2067,7 +2067,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12956" name="Dynasty Blade - Great Gale {PvP}" add_name="Light">
+	<weapon id="12956" name="Dynasty Blade - Great Gale {PvP}" add_name="Light Armor">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -2172,7 +2172,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12959" name="Dynasty Sword - Earth {PvP}" add_name="Light">
+	<weapon id="12959" name="Dynasty Sword - Earth {PvP}" add_name="Light Armor">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -2836,7 +2836,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12977" name="Dynasty Halberd - Earth {PvP}" add_name="Light">
+	<weapon id="12977" name="Dynasty Halberd - Earth {PvP}" add_name="Light Armor">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>

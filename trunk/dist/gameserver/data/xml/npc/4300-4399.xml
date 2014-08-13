@@ -133,7 +133,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="4304" name="White-Bearded Santa" title="Happy Holidays">
+	<npc id="4304" name="White-Bearded Santa" title="Happy Holidays~">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>

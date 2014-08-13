@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="22650" name="Emerald Weapon - One-Handed Sword">
+	<weapon id="22650" name="Emerald Weapon: One-handed Sword">
 		<set name="icon" value="BranchSys3.Icon.g_beam_sword"/>
 		<set name="weight" value="144"/>
 		<set name="rnd_dam" value="10"/>
@@ -23,7 +23,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22651" name="Emerald Weapon - Dagger">
+	<weapon id="22651" name="Emerald Weapon: Dagger">
 		<set name="icon" value="BranchSys3.Icon.g_beam_sword"/>
 		<set name="weight" value="106"/>
 		<set name="rnd_dam" value="5"/>
@@ -46,7 +46,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22652" name="Emerald Weapon - Two-Handed Sword">
+	<weapon id="22652" name="Emerald Weapon: Two-handed Sword">
 		<set name="icon" value="BranchSys3.Icon.g_beam_twohand_sword"/>
 		<set name="weight" value="209"/>
 		<set name="rnd_dam" value="10"/>
@@ -68,7 +68,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22653" name="Emerald Weapon - Fist Weapon">
+	<weapon id="22653" name="Emerald Weapon: Fist Weapon">
 		<set name="icon" value="BranchSys3.Icon.g_beam_dualfist"/>
 		<set name="weight" value="152"/>
 		<set name="rnd_dam" value="5"/>
@@ -90,7 +90,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22654" name="Emerald Weapon - Spear">
+	<weapon id="22654" name="Emerald Weapon: Spear">
 		<set name="icon" value="BranchSys3.Icon.g_beam_pole"/>
 		<set name="weight" value="205"/>
 		<set name="rnd_dam" value="10"/>
@@ -112,7 +112,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22655" name="Emerald Weapon - Bow">
+	<weapon id="22655" name="Emerald Weapon: Bow">
 		<set name="icon" value="BranchSys3.Icon.g_beam_bow"/>
 		<set name="weight" value="181"/>
 		<set name="rnd_dam" value="5"/>
@@ -135,7 +135,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22656" name="Emerald Weapon - Crossbow">
+	<weapon id="22656" name="Emerald Weapon: Crossbow">
 		<set name="icon" value="BranchSys3.Icon.g_beam_twohand_crossbow"/>
 		<set name="weight" value="181"/>
 		<set name="rnd_dam" value="10"/>
@@ -158,7 +158,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22657" name="Emerald Weapon - One-Handed Blunt">
+	<weapon id="22657" name="Emerald Weapon: One-handed Blunt Weapon">
 		<set name="icon" value="BranchSys3.Icon.g_beam_blunt"/>
 		<set name="weight" value="172"/>
 		<set name="rnd_dam" value="20"/>
@@ -180,7 +180,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22658" name="Emerald Weapon - Two-Handed Blunt">
+	<weapon id="22658" name="Emerald Weapon: Two-handed Blunt Weapon">
 		<set name="icon" value="BranchSys3.Icon.g_beam_twohand_blunt"/>
 		<set name="weight" value="101"/>
 		<set name="rnd_dam" value="20"/>
@@ -202,7 +202,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22659" name="Emerald Weapon - One-Handed Magic Blunt">
+	<weapon id="22659" name="Emerald Weapon: One-handed Magic Blunt Weapon">
 		<set name="icon" value="BranchSys3.Icon.g_beam_magic_twohand_blunt"/>
 		<set name="weight" value="173"/>
 		<set name="rnd_dam" value="20"/>
@@ -224,7 +224,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22660" name="Emerald Weapon - Two-handed Magic Blunt">
+	<weapon id="22660" name="Emerald Weapon: Two-handed Magic Blunt Weapon">
 		<set name="icon" value="BranchSys3.Icon.g_beam_magic_twohand_blunt"/>
 		<set name="weight" value="101"/>
 		<set name="rnd_dam" value="20"/>
@@ -247,7 +247,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22661" name="Emerald Weapon - Dual Sword">
+	<weapon id="22661" name="Emerald Weapon: Dualsword">
 		<set name="icon" value="BranchSys3.Icon.g_beam_dual"/>
 		<set name="weight" value="247"/>
 		<set name="rnd_dam" value="10"/>
@@ -269,7 +269,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22662" name="Emerald Weapon - Dual Dagger">
+	<weapon id="22662" name="Emerald Weapon: Dual Dagger">
 		<set name="icon" value="BranchSys3.Icon.g_beam_dualdagger"/>
 		<set name="weight" value="205"/>
 		<set name="rnd_dam" value="10"/>
@@ -291,7 +291,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22663" name="Emerald Weapon - Dual Blunt">
+	<weapon id="22663" name="Emerald Weapon: Dual Blunt Weapon">
 		<set name="icon" value="BranchSys3.Icon.g_beam_dualblunt"/>
 		<set name="weight" value="250"/>
 		<set name="rnd_dam" value="20"/>
@@ -312,7 +312,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22664" name="Emerald Weapon - Shield">
+	<weapon id="22664" name="Emerald Weapon: Shield">
 		<set name="icon" value="BranchSys3.Icon.g_beam_shield"/>
 		<set name="weight" value="200"/>
 		<equip>

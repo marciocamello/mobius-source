@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="36417" name="Antharas Shaper">
+	<weapon id="36417" name="Antharas Shaper" add_name="Fragment">
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
@@ -32,7 +32,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36418" name="Antharas Slasher">
+	<weapon id="36418" name="Antharas Slasher" add_name="Fragment">
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
@@ -62,7 +62,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36419" name="Antharas Thrower">
+	<weapon id="36419" name="Antharas Thrower" add_name="Fragment">
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
@@ -93,7 +93,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36420" name="Antharas Buster">
+	<weapon id="36420" name="Antharas Buster" add_name="Fragment">
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -123,7 +123,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36421" name="Antharas Cutter">
+	<weapon id="36421" name="Antharas Cutter" add_name="Fragment">
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -153,7 +153,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36422" name="Antharas Stormer">
+	<weapon id="36422" name="Antharas Stormer" add_name="Fragment">
 		<set name="weight" value="2010"/>
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
@@ -184,7 +184,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36423" name="Antharas Fighter">
+	<weapon id="36423" name="Antharas Fighter" add_name="Fragment">
 		<set name="weight" value="1550"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="ex_type" value="HAND_TO_HAND"/>
@@ -215,7 +215,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36424" name="Antharas Avenger">
+	<weapon id="36424" name="Antharas Avenger" add_name="Fragment">
 		<set name="weight" value="1740"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
@@ -246,7 +246,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36425" name="Antharas Dual Blunt Weapon">
+	<weapon id="36425" name="Antharas Dual Blunt Weapon" add_name="Fragment">
 		<set name="weight" value="1740"/>
 		<set name="type" value="DUALBLUNT"/>
 		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>
@@ -277,7 +277,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36426" name="Antharas Dualsword">
+	<weapon id="36426" name="Antharas Dualsword" add_name="Fragment">
 		<set name="weight" value="1520"/>
 		<set name="type" value="DUAL"/>
 		<set name="ex_type" value="DUAL_SWORD"/>
@@ -307,7 +307,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36427" name="Valakas Shaper">
+	<weapon id="36427" name="Valakas Shaper" add_name="Fragment">
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
@@ -338,7 +338,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36428" name="Valakas Cutter">
+	<weapon id="36428" name="Valakas Cutter" add_name="Fragment">
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -368,7 +368,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36429" name="Valakas Slasher">
+	<weapon id="36429" name="Valakas Slasher" add_name="Fragment">
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
@@ -398,7 +398,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36430" name="Valakas Thrower">
+	<weapon id="36430" name="Valakas Thrower" add_name="Fragment">
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
@@ -429,7 +429,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36431" name="Valakas Buster">
+	<weapon id="36431" name="Valakas Buster" add_name="Fragment">
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -459,7 +459,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36432" name="Valakas Caster">
+	<weapon id="36432" name="Valakas Caster" add_name="Fragment">
 		<set name="weight" value="1080"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
@@ -490,7 +490,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36433" name="Valakas Retributer">
+	<weapon id="36433" name="Valakas Retributer" add_name="Fragment">
 		<set name="weight" value="1080"/>
 		<set name="type" value="BIGBLUNT"/>
 		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
@@ -521,7 +521,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36434" name="Lindvior Shaper">
+	<weapon id="36434" name="Lindvior Shaper" add_name="Fragment">
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
@@ -552,7 +552,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36435" name="Lindvior Thrower">
+	<weapon id="36435" name="Lindvior Thrower" add_name="Fragment">
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
@@ -583,7 +583,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36436" name="Lindvior Slasher">
+	<weapon id="36436" name="Lindvior Slasher" add_name="Fragment">
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
@@ -613,7 +613,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36437" name="Lindvior Caster">
+	<weapon id="36437" name="Lindvior Caster" add_name="Fragment">
 		<set name="weight" value="1520"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
@@ -643,7 +643,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36438" name="Lindvior Cutter">
+	<weapon id="36438" name="Lindvior Cutter" add_name="Fragment">
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -673,7 +673,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36439" name="Lindvior Shooter">
+	<weapon id="36439" name="Lindvior Shooter" add_name="Fragment">
 		<set name="weight" value="1580"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="ex_type" value="CROSSBOW"/>
@@ -704,7 +704,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36440" name="Lindvior Dual Dagger">
+	<weapon id="36440" name="Lindvior Dual Dagger" add_name="Fragment">
 		<set name="weight" value="2050"/>
 		<set name="type" value="DUALDAGGER"/>
 		<set name="ex_type" value="DUAL_DAGGER"/>
@@ -735,7 +735,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36441" name="Antharas Shaper">
+	<weapon id="36441" name="Antharas Shaper" add_name="Standard">
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
@@ -772,7 +772,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36442" name="Antharas Slasher">
+	<weapon id="36442" name="Antharas Slasher" add_name="Standard">
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
@@ -808,7 +808,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36443" name="Antharas Thrower">
+	<weapon id="36443" name="Antharas Thrower" add_name="Standard">
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
@@ -845,7 +845,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36444" name="Antharas Buster">
+	<weapon id="36444" name="Antharas Buster" add_name="Standard">
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -881,7 +881,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36445" name="Antharas Cutter">
+	<weapon id="36445" name="Antharas Cutter" add_name="Standard">
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -917,7 +917,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36446" name="Antharas Stormer">
+	<weapon id="36446" name="Antharas Stormer" add_name="Standard">
 		<set name="weight" value="2010"/>
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
@@ -954,7 +954,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36447" name="Antharas Fighter">
+	<weapon id="36447" name="Antharas Fighter" add_name="Standard">
 		<set name="weight" value="1550"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="ex_type" value="HAND_TO_HAND"/>
@@ -991,7 +991,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36448" name="Antharas Avenger">
+	<weapon id="36448" name="Antharas Avenger" add_name="Standard">
 		<set name="weight" value="1740"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
@@ -1028,7 +1028,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36449" name="Antharas Dual Blunt Weapon">
+	<weapon id="36449" name="Antharas Dual Blunt Weapon" add_name="Standard">
 		<set name="weight" value="1740"/>
 		<set name="type" value="DUALBLUNT"/>
 		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>
@@ -1065,7 +1065,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36450" name="Antharas Dualsword">
+	<weapon id="36450" name="Antharas Dualsword" add_name="Standard">
 		<set name="weight" value="1520"/>
 		<set name="type" value="DUAL"/>
 		<set name="ex_type" value="DUAL_SWORD"/>
@@ -1101,7 +1101,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36451" name="Valakas Shaper">
+	<weapon id="36451" name="Valakas Shaper" add_name="Standard">
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
@@ -1138,7 +1138,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36452" name="Valakas Cutter">
+	<weapon id="36452" name="Valakas Cutter" add_name="Standard">
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -1174,7 +1174,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36453" name="Valakas Slasher">
+	<weapon id="36453" name="Valakas Slasher" add_name="Standard">
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
@@ -1210,7 +1210,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36454" name="Valakas Thrower">
+	<weapon id="36454" name="Valakas Thrower" add_name="Standard">
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
@@ -1247,7 +1247,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36455" name="Valakas Buster">
+	<weapon id="36455" name="Valakas Buster" add_name="Standard">
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -1280,7 +1280,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36456" name="Valakas Caster">
+	<weapon id="36456" name="Valakas Caster" add_name="Standard">
 		<set name="weight" value="1080"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
@@ -1317,7 +1317,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36457" name="Valakas Retributer">
+	<weapon id="36457" name="Valakas Retributer" add_name="Standard">
 		<set name="weight" value="1080"/>
 		<set name="type" value="BIGBLUNT"/>
 		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
@@ -1354,7 +1354,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36458" name="Lindvior Shaper">
+	<weapon id="36458" name="Lindvior Shaper" add_name="Standard">
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
@@ -1391,7 +1391,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36459" name="Lindvior Thrower">
+	<weapon id="36459" name="Lindvior Thrower" add_name="Standard">
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
@@ -1428,7 +1428,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36460" name="Lindvior Slasher">
+	<weapon id="36460" name="Lindvior Slasher" add_name="Standard">
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
@@ -1464,7 +1464,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36461" name="Lindvior Caster">
+	<weapon id="36461" name="Lindvior Caster" add_name="Standard">
 		<set name="weight" value="1520"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
@@ -1500,7 +1500,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36462" name="Lindvior Cutter">
+	<weapon id="36462" name="Lindvior Cutter" add_name="Standard">
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -1536,7 +1536,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36463" name="Lindvior Shooter">
+	<weapon id="36463" name="Lindvior Shooter" add_name="Standard">
 		<set name="weight" value="1520"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="ex_type" value="CROSSBOW"/>
@@ -1573,7 +1573,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36464" name="Lindvior Dual Dagger">
+	<weapon id="36464" name="Lindvior Dual Dagger" add_name="Standard">
 		<set name="weight" value="2050"/>
 		<set name="type" value="DUALDAGGER"/>
 		<set name="ex_type" value="DUAL_DAGGER"/>
@@ -1610,7 +1610,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36465" name="Antharas Shaper">
+	<weapon id="36465" name="Antharas Shaper" add_name="High-grade">
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
@@ -1648,7 +1648,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36466" name="Antharas Slasher">
+	<weapon id="36466" name="Antharas Slasher" add_name="High-grade">
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
@@ -1685,7 +1685,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36467" name="Antharas Thrower">
+	<weapon id="36467" name="Antharas Thrower" add_name="High-grade">
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
@@ -1723,7 +1723,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36468" name="Antharas Buster">
+	<weapon id="36468" name="Antharas Buster" add_name="High-grade">
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -1760,7 +1760,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36469" name="Antharas Cutter">
+	<weapon id="36469" name="Antharas Cutter" add_name="High-grade">
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -1797,7 +1797,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36470" name="Antharas Stormer">
+	<weapon id="36470" name="Antharas Stormer" add_name="High-grade">
 		<set name="weight" value="2010"/>
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
@@ -1835,7 +1835,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36471" name="Antharas Fighter">
+	<weapon id="36471" name="Antharas Fighter" add_name="High-grade">
 		<set name="weight" value="1550"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="ex_type" value="HAND_TO_HAND"/>
@@ -1873,7 +1873,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36472" name="Antharas Avenger">
+	<weapon id="36472" name="Antharas Avenger" add_name="High-grade">
 		<set name="weight" value="1740"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
@@ -1911,7 +1911,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36473" name="Antharas Dual Blunt Weapon">
+	<weapon id="36473" name="Antharas Dual Blunt Weapon" add_name="High-grade">
 		<set name="weight" value="1740"/>
 		<set name="type" value="DUALBLUNT"/>
 		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>
@@ -1949,7 +1949,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36474" name="Antharas Dualsword">
+	<weapon id="36474" name="Antharas Dualsword" add_name="High-grade">
 		<set name="weight" value="1520"/>
 		<set name="type" value="DUAL"/>
 		<set name="ex_type" value="DUAL_SWORD"/>
@@ -1986,7 +1986,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36475" name="Valakas Shaper">
+	<weapon id="36475" name="Valakas Shaper" add_name="High-grade">
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
@@ -2024,7 +2024,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36476" name="Valakas Cutter">
+	<weapon id="36476" name="Valakas Cutter" add_name="High-grade">
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -2061,7 +2061,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36477" name="Valakas Slasher">
+	<weapon id="36477" name="Valakas Slasher" add_name="High-grade">
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
@@ -2098,7 +2098,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36478" name="Valakas Thrower">
+	<weapon id="36478" name="Valakas Thrower" add_name="High-grade">
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
@@ -2136,7 +2136,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36479" name="Valakas Buster">
+	<weapon id="36479" name="Valakas Buster" add_name="High-grade">
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -2173,7 +2173,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36480" name="Valakas Caster">
+	<weapon id="36480" name="Valakas Caster" add_name="High-grade">
 		<set name="weight" value="1080"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
@@ -2211,7 +2211,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36481" name="Valakas Retributer">
+	<weapon id="36481" name="Valakas Retributer" add_name="High-grade">
 		<set name="weight" value="1080"/>
 		<set name="type" value="BIGBLUNT"/>
 		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
@@ -2249,7 +2249,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36482" name="Lindvior Shaper">
+	<weapon id="36482" name="Lindvior Shaper" add_name="High-grade">
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
@@ -2287,7 +2287,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36483" name="Lindvior Thrower">
+	<weapon id="36483" name="Lindvior Thrower" add_name="High-grade">
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
@@ -2325,7 +2325,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36484" name="Lindvior Slasher">
+	<weapon id="36484" name="Lindvior Slasher" add_name="High-grade">
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
@@ -2362,7 +2362,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36485" name="Lindvior Caster">
+	<weapon id="36485" name="Lindvior Caster" add_name="High-grade">
 		<set name="weight" value="1520"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
@@ -2399,7 +2399,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36486" name="Lindvior Cutter">
+	<weapon id="36486" name="Lindvior Cutter" add_name="High-grade">
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -2436,7 +2436,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36487" name="Lindvior Shooter">
+	<weapon id="36487" name="Lindvior Shooter" add_name="High-grade">
 		<set name="weight" value="1580"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="ex_type" value="CROSSBOW"/>
@@ -2474,7 +2474,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36488" name="Lindvior Dual Dagger">
+	<weapon id="36488" name="Lindvior Dual Dagger" add_name="High-grade">
 		<set name="weight" value="2050"/>
 		<set name="type" value="DUALDAGGER"/>
 		<set name="ex_type" value="DUAL_DAGGER"/>
@@ -2512,7 +2512,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36489" name="Antharas Shaper">
+	<weapon id="36489" name="Antharas Shaper" add_name="Top-grade">
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
@@ -2552,7 +2552,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36490" name="Antharas Slasher">
+	<weapon id="36490" name="Antharas Slasher" add_name="Top-grade">
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
@@ -2591,7 +2591,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36491" name="Antharas Thrower">
+	<weapon id="36491" name="Antharas Thrower" add_name="Top-grade">
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
@@ -2631,7 +2631,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36492" name="Antharas Buster">
+	<weapon id="36492" name="Antharas Buster" add_name="Top-grade">
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -2670,7 +2670,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36493" name="Antharas Cutter">
+	<weapon id="36493" name="Antharas Cutter" add_name="Top-grade">
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -2709,7 +2709,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36494" name="Antharas Stormer">
+	<weapon id="36494" name="Antharas Stormer" add_name="Top-grade">
 		<set name="weight" value="2010"/>
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
@@ -2749,7 +2749,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36495" name="Antharas Fighter">
+	<weapon id="36495" name="Antharas Fighter" add_name="Top-grade">
 		<set name="weight" value="1550"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="ex_type" value="HAND_TO_HAND"/>
@@ -2789,7 +2789,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36496" name="Antharas Avenger">
+	<weapon id="36496" name="Antharas Avenger" add_name="Top-grade">
 		<set name="weight" value="1740"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
@@ -2829,7 +2829,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36497" name="Antharas Dual Blunt Weapon">
+	<weapon id="36497" name="Antharas Dual Blunt Weapon" add_name="Top-grade">
 		<set name="weight" value="1740"/>
 		<set name="type" value="DUALBLUNT"/>
 		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>
@@ -2869,7 +2869,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36498" name="Antharas Dualsword">
+	<weapon id="36498" name="Antharas Dualsword" add_name="Top-grade">
 		<set name="weight" value="1520"/>
 		<set name="type" value="DUAL"/>
 		<set name="ex_type" value="DUAL_SWORD"/>
@@ -2908,7 +2908,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="36499" name="Valakas Shaper">
+	<weapon id="36499" name="Valakas Shaper" add_name="Top-grade">
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>

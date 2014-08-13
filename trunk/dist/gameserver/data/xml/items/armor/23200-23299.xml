@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="23202" name="Alien Mask">
+	<armor id="23202" name="Shiny Alien Mask">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ev_shiny_alien_mask_i00"/>
 		<set name="price" value="0"/>
@@ -11,7 +11,7 @@
 			<slot id="HAIR_ALL"/>
 		</equip>
 	</armor>
-	<armor id="23203" name="Reanimated Corpse Mask">
+	<armor id="23203" name="Shiny Reanimated Corpse Mask">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ev_shiny_frankenstein_mask_i00"/>
 		<set name="price" value="0"/>
@@ -21,7 +21,7 @@
 			<slot id="HAIR_ALL"/>
 		</equip>
 	</armor>
-	<armor id="23204" name="Shriek Mask">
+	<armor id="23204" name="Shiny Shriek Mask">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ev_shiny_scream_mask_i00"/>
 		<set name="price" value="0"/>
@@ -31,7 +31,7 @@
 			<slot id="HAIR_ALL"/>
 		</equip>
 	</armor>
-	<armor id="23205" name="Red Devil Mask">
+	<armor id="23205" name="Shiny Red Devil Mask">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ev_shiny_doccabi_mask_i00"/>
 		<set name="price" value="0"/>
@@ -41,7 +41,7 @@
 			<slot id="HAIR_ALL"/>
 		</equip>
 	</armor>
-	<armor id="23206" name="Mummy Mask">
+	<armor id="23206" name="Shiny Mummy Mask">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ev_shiny_mummy_mask_i00"/>
 		<set name="price" value="0"/>

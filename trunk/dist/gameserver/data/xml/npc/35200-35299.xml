@@ -1618,7 +1618,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="35232" name="Sherwood" title="Herald">
+	<npc id="35232" name="Sherwood" title="Herald from Oren">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -3983,7 +3983,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="35278" name="Messenger Ruford" title="Herald">
+	<npc id="35278" name="Ruford" title="Herald from Aden">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>

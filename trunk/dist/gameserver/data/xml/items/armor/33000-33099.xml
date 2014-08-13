@@ -46,7 +46,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33077" name="Full Plate Gauntlet of Destiny (Fire, Wind, Dark)">
+	<armor id="33077" name="Full Plate Gauntlets of Destiny (Fire, Wind, Dark)">
 		<set name="crystal_type" value="C"/>
 		<set name="icon" value="icon.armor_t62_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -196,7 +196,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33088" name="Full Plate Gauntlet of Destiny (Water, Earth, Holy)">
+	<armor id="33088" name="Full Plate Gauntlets of Destiny (Water, Earth, Holy)">
 		<set name="crystal_type" value="C"/>
 		<set name="icon" value="icon.armor_t62_g_i00"/>
 		<set name="type" value="NONE"/>

@@ -2294,7 +2294,7 @@
 			<defence attribute="unholy" value="130"/>
 		</attributes>
 	</npc>
-	<npc id="22328" name="Arcane Guardian" title="">
+	<npc id="22328" name="Arcane Guard" title="">
 		<set name="aggroRange" value="500"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>
@@ -5001,7 +5001,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="22365" name="Labyrinth Watchman" title="">
+	<npc id="22365" name="Labyrinth Guard" title="">
 		<set name="aggroRange" value="500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
@@ -5088,7 +5088,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="22366" name="Labyrinth Watchman" title="">
+	<npc id="22366" name="Labyrinth Guard" title="">
 		<set name="aggroRange" value="500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>

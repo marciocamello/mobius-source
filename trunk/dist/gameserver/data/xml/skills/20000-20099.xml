@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="20000" levels="1" name="Treasure Hunter Search">
+	<skill id="20000" levels="1" name="Block Checker Search">
 		<set name="icon" val="BranchSys2.icon.br_s_search_treasure1_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="20001" levels="1" name="Treasure Hunter Hammer Punch">
+	<skill id="20001" levels="1" name="Block Checker Hammer Punch">
 		<set name="icon" val="BranchSys2.icon.br_s_hammerpunch_treasure1_i001"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>

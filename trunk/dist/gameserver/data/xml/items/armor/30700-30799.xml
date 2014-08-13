@@ -210,7 +210,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30725" name="Bound Rip Gauntlet">
+	<armor id="30725" name="Bound Rip Gauntlets">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5"/>
@@ -438,7 +438,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30761" name="Bound Imperial Crusader Gauntlet">
+	<armor id="30761" name="Bound Imperial Crusader Gauntlets">
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="7"/>

@@ -81,7 +81,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12003" name="Common Item - Tallum Blade*Dark Legion">
+	<weapon id="12003" name="Common Item - Tallum Blade*Dark Legion's Edge">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S"/>

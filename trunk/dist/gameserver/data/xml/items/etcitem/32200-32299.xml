@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="32226" name="Teleport Scroll: Talking Island Village">
+	<etcitem id="32226" name="Scroll of Escape: Talking Island Village">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_scroll_of_return_i00"/>
@@ -415,7 +415,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
 	</etcitem>
-	<etcitem id="32272" name="Expedition Volunteer's Reward Chest">
+	<etcitem id="32272" name="Expedition Volunteer's Reward Box">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

@@ -1976,7 +1976,7 @@
 			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
-	<npc id="22931" name="Krakia Bathus" title="Tomb Commander">
+	<npc id="22931" name="Krakia Bathus" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="28.0"/>
@@ -2041,7 +2041,7 @@
 			<reward item_id="19343" min="1" max="1" chance="0.3"/>
 		</rewardlist>
 	</npc>
-	<npc id="22932" name="Krakia Carcass" title="Tomb Sniper">
+	<npc id="22932" name="Krakia Carcass" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="28.0"/>
@@ -2103,7 +2103,7 @@
 			<reward item_id="19326" min="1" max="1" chance="0.075"/>
 		</rewardlist>
 	</npc>
-	<npc id="22933" name="Krakia Lotus" title="Tomb Summoner">
+	<npc id="22933" name="Krakia Lotus" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="28.0"/>
@@ -2169,7 +2169,7 @@
 			<reward item_id="19195" min="1" max="1" chance="0.3"/>
 		</rewardlist>
 	</npc>
-	<npc id="22934" name="Rakzan" title="Tomb Guardian">
+	<npc id="22934" name="Rakzan" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="48.0"/>
@@ -2233,7 +2233,7 @@
 			<reward item_id="19344" min="1" max="1" chance="0.3"/>
 		</rewardlist>
 	</npc>
-	<npc id="22935" name="Weiss Khan" title="Tomb Wizard">
+	<npc id="22935" name="Weiss Khan" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
@@ -2300,7 +2300,7 @@
 			<reward item_id="19319" min="1" max="1" chance="0.03"/>
 		</rewardlist>
 	</npc>
-	<npc id="22936" name="Weiss Ele" title="Tomb Oracle">
+	<npc id="22936" name="Weiss Ele" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="8.0"/>
@@ -2369,7 +2369,7 @@
 			<reward item_id="19313" min="1" max="1" chance="0.3"/>
 		</rewardlist>
 	</npc>
-	<npc id="22937" name="Bamonti" title="Tomb Soldier">
+	<npc id="22937" name="Bamonti" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="12.0"/>
@@ -2436,7 +2436,7 @@
 			<reward item_id="19197" min="1" max="3" chance="0.75"/>
 		</rewardlist>
 	</npc>
-	<npc id="22938" name="Seknus" title="Tomb Illusionist">
+	<npc id="22938" name="Seknus" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="21.0"/>
@@ -2504,7 +2504,7 @@
 			<reward item_id="19343" min="1" max="1" chance="0.3"/>
 		</rewardlist>
 	</npc>
-	<npc id="22939" name="Demonic Bathus" title="Tomb Commander">
+	<npc id="22939" name="Demonic Bathus" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="28.0"/>
@@ -2569,7 +2569,7 @@
 			<reward item_id="19196" min="1" max="1" chance="0.75"/>
 		</rewardlist>
 	</npc>
-	<npc id="22940" name="Demonic Carcass" title="Tomb Sniper">
+	<npc id="22940" name="Demonic Carcass" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="28.0"/>
@@ -2630,7 +2630,7 @@
 			<reward item_id="17526" min="1" max="1" chance="0.003"/>
 		</rewardlist>
 	</npc>
-	<npc id="22941" name="Demonic Lotus" title="Tomb Summoner">
+	<npc id="22941" name="Demonic Lotus" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="28.0"/>
@@ -2696,7 +2696,7 @@
 			<reward item_id="19334" min="1" max="1" chance="0.075"/>
 		</rewardlist>
 	</npc>
-	<npc id="22942" name="Demonic Rakzan" title="Tomb Guardian">
+	<npc id="22942" name="Demonic Rakzan" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="42.0"/>
@@ -2762,7 +2762,7 @@
 			<reward item_id="17527" min="1" max="1" chance="0.03"/>
 		</rewardlist>
 	</npc>
-	<npc id="22943" name="Demonic Weiss Khan" title="Tomb Wizard">
+	<npc id="22943" name="Demonic Weiss Khan" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="16.0"/>
@@ -2829,7 +2829,7 @@
 			<reward item_id="19341" min="1" max="1" chance="0.3"/>
 		</rewardlist>
 	</npc>
-	<npc id="22944" name="Demonic Weiss Ele" title="Tomb Oracle">
+	<npc id="22944" name="Demonic Weiss Ele" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="18.0"/>
@@ -2897,7 +2897,7 @@
 			<reward item_id="19342" min="1" max="1" chance="0.3"/>
 		</rewardlist>
 	</npc>
-	<npc id="22945" name="Demonic Bamonti" title="Tomb Soldier">
+	<npc id="22945" name="Demonic Bamonti" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="19.0"/>
@@ -2963,7 +2963,7 @@
 			<reward item_id="19346" min="1" max="1" chance="0.75"/>
 		</rewardlist>
 	</npc>
-	<npc id="22946" name="Demonic Seknus" title="Tomb Illusionist">
+	<npc id="22946" name="Demonic Seknus" title="">
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="21.0"/>

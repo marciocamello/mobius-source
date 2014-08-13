@@ -216,7 +216,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="1606" name="Release Agathion's Seal - Valakas" title="">
+	<npc id="1606" name="Valakas1" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>

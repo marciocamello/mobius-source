@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="13234" name="Varka Karm (used by Varka Silenos)">
+	<armor id="13234" name="Varka Circlet">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_barka_karm_i00"/>
@@ -14,7 +14,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13235" name="Ketra Karm (used by Ketra Orcs)">
+	<armor id="13235" name="Ketra Circlet">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_ketra_karm_i00"/>
@@ -66,7 +66,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13239" name="Kat the Cat Hat" add_name="7-day Limited Period">
+	<armor id="13239" name="Kat the Cat Hat" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -82,7 +82,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13240" name="Feline Queen Hat" add_name="7-day Limited Period">
+	<armor id="13240" name="Feline Queen Hat" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -98,7 +98,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13241" name="Monster Eye Hat" add_name="7-day Limited Period">
+	<armor id="13241" name="Monster Eye Hat" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -114,7 +114,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13242" name="Brown Bear Hat" add_name="7-day Limited Period">
+	<armor id="13242" name="Brown Bear Hat" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -130,7 +130,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13243" name="Fungus Hat" add_name="7-day Limited Period">
+	<armor id="13243" name="Fungus Hat" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -146,7 +146,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13244" name="Skull Hat" add_name="7-day Limited Period">
+	<armor id="13244" name="Skull Hat" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -162,7 +162,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13245" name="Ornithomimus Hat" add_name="7-day Limited Period">
+	<armor id="13245" name="Ornithomimus Hat" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -178,7 +178,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13246" name="Feline King Hat" add_name="7-day Limited Period">
+	<armor id="13246" name="Feline King Hat" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -194,7 +194,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13247" name="Kai the Cat Hat" add_name="7-day Limited Period">
+	<armor id="13247" name="Kai the Cat Hat" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -210,7 +210,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13254" name="Agathion of Love" add_name="7-day Limited Period">
+	<armor id="13254" name="Agathion - Love" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -231,7 +231,7 @@
 			<skill id="8245" level="1"/>
 		</skills>
 	</armor>
-	<armor id="13260" name="Gran Kain's Squeaking Shoes" add_name="10 hours limited period">
+	<armor id="13260" name="Gran Kain's Squeaking Shoes" add_name="10-hour">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="600"/>

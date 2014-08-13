@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="30902" name="Bound Gauntlet of Nightmare" add_name="Heavy">
+	<armor id="30902" name="Bound Gauntlets of Nightmare" add_name="Heavy Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5"/>
@@ -20,7 +20,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30903" name="Bound Gauntlet of Nightmare" add_name="Tans Armor Use">
+	<armor id="30903" name="Bound Gauntlets of Nightmare" add_name="Light Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5"/>
@@ -39,7 +39,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30904" name="Bound Gauntlet of Nightmare" add_name="Robe">
+	<armor id="30904" name="Bound Gauntlets of Nightmare" add_name="Robe">
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5"/>
@@ -292,7 +292,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30947" name="Bound Avadon Boots" add_name="Heavy">
+	<armor id="30947" name="Bound Avadon Boots" add_name="Heavy Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2"/>
@@ -311,7 +311,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30948" name="Bound Avadon Boots" add_name="Tans Armor Use">
+	<armor id="30948" name="Bound Avadon Boots" add_name="Light Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2"/>
@@ -387,7 +387,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30952" name="Bound Avadon Gloves" add_name="Heavy">
+	<armor id="30952" name="Bound Avadon Gloves" add_name="Heavy Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2"/>
@@ -406,7 +406,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30953" name="Bound Avadon Gloves" add_name="Tans Armor Use">
+	<armor id="30953" name="Bound Avadon Gloves" add_name="Light Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2"/>
@@ -601,7 +601,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30982" name="Binding Divine Stockings">
+	<armor id="30982" name="Bound Divine Stockings">
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="10"/>

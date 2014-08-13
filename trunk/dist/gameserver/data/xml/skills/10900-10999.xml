@@ -96,7 +96,7 @@
 		</triggers>
 		<for/>
 	</skill>
-	<skill id="10999" levels="1" name="Yul Chain Skill Air Blow">
+	<skill id="10999" levels="1" name="">
 		<set name="reuseDelay" val="7000"/>
 		<set name="hitTime" val="2200"/>
 		<set name="castRange" val="1100"/>

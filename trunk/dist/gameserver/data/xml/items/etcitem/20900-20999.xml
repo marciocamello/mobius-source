@@ -85,7 +85,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="20908" name="Desheloph Rose Necklace (Event)" add_name="Summon duration (3-hour)">
+	<etcitem id="20908" name="Desheloph Rose Necklace (Event)" add_name="3-hour Summon Duration">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -101,7 +101,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20909" name="Hyum Rose Necklace (Event)" add_name="Summon duration (3-hour)">
+	<etcitem id="20909" name="Hyum Rose Necklace (Event)" add_name="3-hour Summon Duration">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -117,7 +117,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20910" name="Lekang Rose Necklace (Event)" add_name="Summon duration (3-hour)">
+	<etcitem id="20910" name="Lekang Rose Necklace (Event)" add_name="3-hour Summon Duration">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -133,7 +133,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20911" name="Lilias Rose Necklace (Event)" add_name="Summon duration (3-hour)">
+	<etcitem id="20911" name="Lilias Rose Necklace (Event)" add_name="3-hour Summon Duration">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -149,7 +149,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20912" name="Lapham Rose Necklace (Event)" add_name="Summon duration (3-hour)">
+	<etcitem id="20912" name="Lapham Rose Necklace (Event)" add_name="3-hour Summon Duration">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -165,7 +165,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20913" name="Mafum Rose Necklace (Event)" add_name="Summon duration (3-hour)">
+	<etcitem id="20913" name="Mafum Rose Necklace (Event)" add_name="3-hour Summon Duration">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -194,7 +194,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20915" name="Enhanced Rose Necklace: Desheloph" add_name="5-hour (Event)">
+	<etcitem id="20915" name="Enhanced Rose Necklace: Desheloph" add_name="5-hour Summon Duration">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -211,7 +211,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20916" name="Enhanced Rose Necklace: Hyum" add_name="5-hour (Event)">
+	<etcitem id="20916" name="Enhanced Rose Necklace: Hyum" add_name="5-hour Summon Duration">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -228,7 +228,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20917" name="Enhanced Rose Necklace: Lekang" add_name="5-hour (Event)">
+	<etcitem id="20917" name="Enhanced Rose Necklace: Lekang" add_name="5-hour Summon Duration">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -245,7 +245,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20918" name="Enhanced Rose Necklace: Lilias" add_name="5-hour (Event)">
+	<etcitem id="20918" name="Enhanced Rose Necklace: Lilias" add_name="5-hour Summon Duration">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -262,7 +262,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20919" name="Enhanced Rose Necklace: Lapham" add_name="5-hour (Event)">
+	<etcitem id="20919" name="Enhanced Rose Necklace: Lapham" add_name="5-hour Summon Duration">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -279,7 +279,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20920" name="Enhanced Rose Necklace: Mafum" add_name="5-hour (Event)">
+	<etcitem id="20920" name="Enhanced Rose Necklace: Mafum" add_name="5-hour Summon Duration">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -296,7 +296,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20921" name="Rose Spirit Test Report" add_name="(24-hour)">
+	<etcitem id="20921" name="Rose Spirit Test Report" add_name="24-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -545,7 +545,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="20959" name="Royal Crown of Vesper Pack">
+	<etcitem id="20959" name="Vesper Royal Crown Pack">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -555,7 +555,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20960" name="Royal Circlet of Vesper Pack">
+	<etcitem id="20960" name="Vesper Royal Circlet Pack">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -575,7 +575,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20962" name="Royal Crown of Vesper Pack (30-day)">
+	<etcitem id="20962" name="Vesper Royal Crown Pack (30-day)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -585,7 +585,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20963" name="Royal Circlet of Vesper Pack (30-day)">
+	<etcitem id="20963" name="Vesper Royal Circlet Pack (30-day)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -605,7 +605,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20965" name="Royal Crown of Vesper Pack">
+	<etcitem id="20965" name="Vesper Royal Crown Pack">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -615,7 +615,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20966" name="Royal Circlet of Vesper Pack">
+	<etcitem id="20966" name="Vesper Royal Circlet Pack">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

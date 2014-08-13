@@ -39,7 +39,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30509" name="Bound Half Plate">
+	<armor id="30509" name="Bound Half Plate Armor">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="27"/>
@@ -58,7 +58,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30510" name="Bound Half Plate">
+	<armor id="30510" name="Bound Half Plate Armor">
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -137,7 +137,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30530" name="Bound Plated Gaiters">
+	<armor id="30530" name="Bound Plate Gaiters">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="17"/>
@@ -156,7 +156,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30531" name="Bound Plated Gaiters">
+	<armor id="30531" name="Bound Plate Gaiters">
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -173,7 +173,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30532" name="Bound Plated Helmet">
+	<armor id="30532" name="Bound Plate Helmet">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="10"/>
@@ -192,7 +192,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30533" name="Bound Plated Helmet">
+	<armor id="30533" name="Bound Plate Helmet">
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.armor_leather_helmet_i00"/>
 		<set name="type" value="NONE"/>
@@ -209,7 +209,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30536" name="Bound Plated Boots">
+	<armor id="30536" name="Bound Plate Boots">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="6"/>
@@ -228,7 +228,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30537" name="Bound Plated Boots">
+	<armor id="30537" name="Bound Plate Boots">
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -416,7 +416,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30552" name="Bound Full Plate Gauntlet">
+	<armor id="30552" name="Bound Full Plate Gauntlets">
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5"/>
@@ -530,7 +530,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30558" name="Bound Blue Wolf Gloves" add_name="Heavy">
+	<armor id="30558" name="Bound Blue Wolf Gloves" add_name="Heavy Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>
@@ -549,7 +549,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30559" name="Bound Blue Wolf Gloves" add_name="Tans Armor Use">
+	<armor id="30559" name="Bound Blue Wolf Gloves" add_name="Light Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>
@@ -587,7 +587,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30561" name="Bound Blue Wolf Boots" add_name="Heavy">
+	<armor id="30561" name="Bound Blue Wolf Boots" add_name="Heavy Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>
@@ -606,7 +606,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30562" name="Bound Blue Wolf Boots" add_name="Tans Armor Use">
+	<armor id="30562" name="Bound Blue Wolf Boots" add_name="Light Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="33600" name="Returning hero exclusive - Bound Dynasty Leather Gloves">
+	<armor id="33600" name="Bound Dynasty Leather Gloves" add_name="Event">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t92_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -18,7 +18,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33601" name="Returning hero exclusive - Bound Dynasty Leather Boots">
+	<armor id="33601" name="Bound Dynasty Leather Boots" add_name="Event">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t92_b_i00"/>
 		<set name="type" value="NONE"/>
@@ -35,7 +35,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33602" name="Returning hero exclusive - Bound Dynasty Tunic">
+	<armor id="33602" name="Bound Dynasty Tunic" add_name="Event">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t93_u_i00"/>
 		<set name="type" value="MAGIC"/>
@@ -52,7 +52,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33603" name="Returning hero exclusive - Bound Dynasty Stockings">
+	<armor id="33603" name="Bound Dynasty Stockings" add_name="Event">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t93_l_i00"/>
 		<set name="type" value="MAGIC"/>
@@ -69,7 +69,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33604" name="Returning hero exclusive - Bound Dynasty Circlet">
+	<armor id="33604" name="Bound Dynasty Circlet" add_name="Event">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_circlet_i00"/>
 		<set name="type" value="NONE"/>
@@ -86,7 +86,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33605" name="Returning hero exclusive - Bound Dynasty Gloves">
+	<armor id="33605" name="Bound Dynasty Gloves" add_name="Event">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t93_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -103,7 +103,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33606" name="Returning hero exclusive - Bound Dynasty Shoes">
+	<armor id="33606" name="Bound Dynasty Shoes" add_name="Event">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t93_b_i00"/>
 		<set name="type" value="NONE"/>
@@ -120,7 +120,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33607" name="Returning hero exclusive - Bound Dynasty Sigil">
+	<armor id="33607" name="Bound Dynasty Sigil" add_name="Event">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.dynasty_sigil_i00"/>
 		<set name="type" value="SIGIL"/>

@@ -21,7 +21,7 @@
 			<mul order="0x30" stat="mAtkSpd" val="1.15"/>
 		</for>
 	</skill>
-	<skill id="3502" levels="1" name="Mithril Heavy Armor Set">
+	<skill id="3502" levels="1" name="Mithril Breastplate Heavy Armor Set">
 		<set name="icon" val="icon.armor_t19_u_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -41,7 +41,7 @@
 			<add order="0x40" stat="maxMp" val="80"/>
 		</for>
 	</skill>
-	<skill id="3504" levels="1" name="Knowledge Set">
+	<skill id="3504" levels="1" name="Tunic of Knowledge Set">
 		<set name="icon" val="icon.armor_t41_u_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -73,7 +73,7 @@
 			<add order="0x40" stat="maxHp" val="153"/>
 		</for>
 	</skill>
-	<skill id="3507" levels="1" name="Elven Mithril Robe Set">
+	<skill id="3507" levels="1" name="Mithril Tunic Robe Set">
 		<set name="icon" val="icon.armor_t51_u_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -105,7 +105,7 @@
 			<sub order="0x40" stat="daggerWpnVuln" val="6"/>
 		</for>
 	</skill>
-	<skill id="3510" levels="1" name="Karmian Set">
+	<skill id="3510" levels="1" name="Karmian Tunic Robe Set">
 		<set name="icon" val="icon.armor_t53_u_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -116,7 +116,7 @@
 			<mul order="0x30" stat="pDef" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="3511" levels="1" name="Plated Leather Set">
+	<skill id="3511" levels="1" name="Plated Leather Light Armor Set">
 		<set name="icon" val="icon.armor_t47_u_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -297,7 +297,7 @@
 			<sub order="0x40" stat="WIT" val="1"/>
 		</for>
 	</skill>
-	<skill id="3527" levels="1" name="Light Armor of Doom Set">
+	<skill id="3527" levels="1" name="Leather Armor of Doom Set">
 		<set name="icon" val="icon.armor_t72_ul_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -430,7 +430,7 @@
 			<mul order="0x30" stat="pDef" val="1.08"/>
 		</for>
 	</skill>
-	<skill id="3536" levels="1" name="Nightmare Heavy Armor Set">
+	<skill id="3536" levels="1" name="Heavy Armor of Nightmare Set">
 		<set name="icon" val="icon.armor_t80_ul_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -444,7 +444,7 @@
 			<sub order="0x40" stat="DEX" val="2"/>
 		</for>
 	</skill>
-	<skill id="3537" levels="1" name="Majestic Heavy Armor Set">
+	<skill id="3537" levels="1" name="Majestic Plate Heavy Armor Set">
 		<set name="icon" val="icon.armor_t83_ul_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -458,7 +458,7 @@
 			<add order="0x40" stat="stunResist" val="50"/>
 		</for>
 	</skill>
-	<skill id="3538" levels="1" name="Light Leather Armor of Nightmare Set">
+	<skill id="3538" levels="1" name="Light Armor of Nightmare Set">
 		<set name="icon" val="icon.armor_t81_ul_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -473,7 +473,7 @@
 			<add order="0x40" stat="rootResist" val="70"/>
 		</for>
 	</skill>
-	<skill id="3539" levels="1" name="Majestic Light Armor Set">
+	<skill id="3539" levels="1" name="Majestic Leather Light Armor Set">
 		<set name="icon" val="icon.armor_t84_ul_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -532,7 +532,7 @@
 			<add order="0x40" stat="cAtkStatic" val="#val"/>
 		</for>
 	</skill>
-	<skill id="3543" levels="1" name="Equipped with Shield">
+	<skill id="3543" levels="1" name="Equip Shield">
 		<set name="icon" val="icon.skill0091"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -542,7 +542,7 @@
 			<add order="0x40" stat="maxHp" val="126"/>
 		</for>
 	</skill>
-	<skill id="3544" levels="1" name="Equipped with Shield">
+	<skill id="3544" levels="1" name="Equip Shield">
 		<set name="icon" val="icon.skill0091"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -552,7 +552,7 @@
 			<add order="0x40" stat="maxHp" val="20"/>
 		</for>
 	</skill>
-	<skill id="3545" levels="1" name="Equipped with Shield">
+	<skill id="3545" levels="1" name="Equip Shield">
 		<set name="icon" val="icon.skill0091"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -562,7 +562,7 @@
 			<add order="0x40" stat="maxHp" val="198"/>
 		</for>
 	</skill>
-	<skill id="3546" levels="1" name="Equipped with Shield">
+	<skill id="3546" levels="1" name="Equip Shield">
 		<set name="icon" val="icon.skill0091"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -572,7 +572,7 @@
 			<mul order="0x30" stat="mDef" val="1.0526"/>
 		</for>
 	</skill>
-	<skill id="3547" levels="1" name="Equipped with Shield">
+	<skill id="3547" levels="1" name="Equip Shield">
 		<set name="icon" val="icon.skill0091"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -582,7 +582,7 @@
 			<mul order="0x30" stat="rShld" val="1.0524"/>
 		</for>
 	</skill>
-	<skill id="3548" levels="1" name="Equipped with Shield">
+	<skill id="3548" levels="1" name="Equip Shield">
 		<set name="icon" val="icon.skill0091"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -592,7 +592,7 @@
 			<mul order="0x30" stat="rShld" val="1.24"/>
 		</for>
 	</skill>
-	<skill id="3549" levels="1" name="Equipped with Shield">
+	<skill id="3549" levels="1" name="Equip Shield">
 		<set name="icon" val="icon.skill0091"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -602,7 +602,7 @@
 			<mul order="0x30" stat="rShld" val="1.24"/>
 		</for>
 	</skill>
-	<skill id="3550" levels="1" name="Equipped with Shield">
+	<skill id="3550" levels="1" name="Equip Shield">
 		<set name="icon" val="icon.skill0091"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -612,7 +612,7 @@
 			<mul order="0x30" stat="rShld" val="1.18"/>
 		</for>
 	</skill>
-	<skill id="3551" levels="1" name="Equipped with Shield">
+	<skill id="3551" levels="1" name="Equip Shield">
 		<set name="icon" val="icon.skill0091"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -653,7 +653,7 @@
 			<add order="0x40" stat="rootResist" val="70"/>
 		</for>
 	</skill>
-	<skill id="3554" levels="1" name="Equipped with Shield">
+	<skill id="3554" levels="1" name="Equip Shield">
 		<set name="icon" val="icon.skill0091"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -664,7 +664,7 @@
 			<add order="0x40" stat="bleedResist" val="80"/>
 		</for>
 	</skill>
-	<skill id="3555" levels="1" name="Draconic Light Armor Set">
+	<skill id="3555" levels="1" name="Draconic Leather Armor Set">
 		<set name="icon" val="icon.armor_t89_ul_i00"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -697,7 +697,7 @@
 			<add order="0x40" stat="stunResist" val="50"/>
 		</for>
 	</skill>
-	<skill id="3557" levels="1" name="Necklace of Valakas">
+	<skill id="3557" levels="1" name="Valakas' Necklace">
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -716,7 +716,7 @@
 			<add order="0x40" stat="reflectDam" val="5"/>
 		</for>
 	</skill>
-	<skill id="3558" levels="1" name="Earring of Antharas">
+	<skill id="3558" levels="1" name="Antharas' Earring">
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -735,7 +735,7 @@
 			<mul order="0x30" stat="mpConsum" val="0.95"/>
 		</for>
 	</skill>
-	<skill id="3559" levels="2" name="Earring of Zaken">
+	<skill id="3559" levels="2" name="Blessed Zaken's Earring">
 		<table name="#hpEff">1.1 1.15</table>
 		<table name="#power">20 30</table>
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00"/>
@@ -754,7 +754,7 @@
 			<add order="0x40" stat="mentalPower" val="#power"/>
 		</for>
 	</skill>
-	<skill id="3560" levels="1" name="Earring of Orfen">
+	<skill id="3560" levels="1" name="Orfen's Earring">
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -766,7 +766,7 @@
 			<mul order="0x30" stat="hpEff" val="1.06"/>
 		</for>
 	</skill>
-	<skill id="3561" levels="1" name="Ring of Baium">
+	<skill id="3561" levels="1" name="Baium's Ring">
 		<set name="icon" val="icon.accessory_ring_of_baium_i00"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -783,7 +783,7 @@
 			<mul order="0x30" stat="mAtkSpd" val="1.04"/>
 		</for>
 	</skill>
-	<skill id="3562" levels="1" name="Ring of Ant Queen">
+	<skill id="3562" levels="1" name="Queen Ant's Ring">
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1127,7 +1127,7 @@
 			<add val="10" order="0x40" stat="reflectMagicDebuff"/>
 		</for>
 	</skill>
-	<skill id="3584" levels="1" name="Shock">
+	<skill id="3584" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill0100"/>
 		<set name="magicLevel" val="80"/>
@@ -1159,7 +1159,7 @@
 			<add val="10" order="0x40" stat="reflectMagicDebuff"/>
 		</for>
 	</skill>
-	<skill id="3586" levels="1" name="Physical Skill Restraint">
+	<skill id="3586" levels="1" name="Restrain Physical Skills">
 		<set name="levelModifier" val="2"/>
 		<set name="icon" val="icon.skill1064"/>
 		<set name="magicLevel" val="80"/>
@@ -1189,7 +1189,7 @@
 			<add val="3.15" order="0x40" stat="rEvas"/>
 		</for>
 	</skill>
-	<skill id="3588" levels="1" name="Shock">
+	<skill id="3588" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill0100"/>
 		<set name="magicLevel" val="80"/>
@@ -1223,7 +1223,7 @@
 			<add order="0x40" stat="absorbDam" val="2"/>
 		</for>
 	</skill>
-	<skill id="3590" levels="1" name="Silence">
+	<skill id="3590" levels="1" name="Restrain Magic Skills">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill1064"/>
 		<set name="magicLevel" val="80"/>
@@ -1256,7 +1256,7 @@
 			<add order="0x40" stat="poleTargetCount" val="4"/>
 		</for>
 	</skill>
-	<skill id="3592" levels="1" name="Dispell">
+	<skill id="3592" levels="1" name="Dispel">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -1288,7 +1288,7 @@
 			<set val="26" order="0x08" stat="cheapShotChance"/>
 		</for>
 	</skill>
-	<skill id="3594" levels="1" name="Slow">
+	<skill id="3594" levels="1" name="Decrease Speed">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill1160"/>
 		<set name="magicLevel" val="80"/>
@@ -1319,7 +1319,7 @@
 			<add val="1" order="0x40" stat="mCritRate"/>
 		</for>
 	</skill>
-	<skill id="3596" levels="1" name="Full Recover">
+	<skill id="3596" levels="1" name="Full Recovery">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="100"/>
 		<set name="magicLevel" val="80"/>
@@ -1343,7 +1343,7 @@
 			<add val="0.51" order="0x40" stat="regMp"/>
 		</for>
 	</skill>
-	<skill id="3598" levels="1" name="Full Recover">
+	<skill id="3598" levels="1" name="Full Recovery">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="100"/>
 		<set name="magicLevel" val="80"/>

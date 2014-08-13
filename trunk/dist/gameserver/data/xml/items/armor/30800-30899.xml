@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="30811" name="Bound Omen Beast's Eye">
+	<armor id="30811" name="Bound Onyx Beast's Eye">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="8"/>
@@ -22,7 +22,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30812" name="Bound Ogre Power Gauntlet">
+	<armor id="30812" name="Bound Ogre Power Gauntlets">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="6"/>
@@ -41,7 +41,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30813" name="Bound Ogre Power Gauntlet">
+	<armor id="30813" name="Bound Ogre Power Gauntlets">
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.armor_t45_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -340,7 +340,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="30885" name="Bound Necklace of Darkness">
+	<armor id="30885" name="Bound Dark Necklace">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="11"/>
@@ -379,7 +379,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30893" name="Bound Boots of Nightmare" add_name="Heavy">
+	<armor id="30893" name="Bound Boots of Nightmare" add_name="Heavy Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5"/>
@@ -398,7 +398,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="30894" name="Bound Boots of Nightmare" add_name="Tans Armor Use">
+	<armor id="30894" name="Bound Boots of Nightmare" add_name="Light Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5"/>

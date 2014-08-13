@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="32190" name="R Talisman - P. Atk.">
+	<armor id="32190" name="Talisman (R-grade) - P. Atk.">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -15,7 +15,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="32191" name="R Talisman - P. Atk. Spd.">
+	<armor id="32191" name="Talisman (R-grade) - P. Atk. Spd.">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -29,7 +29,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="32192" name="R Talisman - M. Atk.">
+	<armor id="32192" name="Talisman (R-grade) - M. Atk.">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -43,7 +43,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="32193" name="R Talisman - Casting Spd.">
+	<armor id="32193" name="Talisman (R-grade) - Casting Spd.">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -114,7 +114,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32197" name="Blessed Twilight Gauntlet" add_name="Attack Type">
+	<armor id="32197" name="Blessed Twilight Gauntlets" add_name="Attack Type">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="236"/>

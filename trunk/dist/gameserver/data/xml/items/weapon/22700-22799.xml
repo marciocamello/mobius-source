@@ -90,7 +90,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22715" name="Japanese Long Spear">
+	<weapon id="22715" name="Japanese Great Spear">
 		<set name="icon" value="BranchSys3.Icon.g_japan_pole"/>
 		<set name="weight" value="205"/>
 		<set name="rnd_dam" value="10"/>
@@ -158,7 +158,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22718" name="Japanese Blunt">
+	<weapon id="22718" name="Japanese Blunt Weapon">
 		<set name="icon" value="BranchSys3.Icon.g_japan_blunt"/>
 		<set name="weight" value="172"/>
 		<set name="rnd_dam" value="20"/>
@@ -180,7 +180,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22719" name="Japanese Giant Blunt">
+	<weapon id="22719" name="Japanese Giant Blunt Weapon">
 		<set name="icon" value="BranchSys3.Icon.g_japan_twohand_blunt"/>
 		<set name="weight" value="101"/>
 		<set name="rnd_dam" value="20"/>
@@ -202,7 +202,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22720" name="Japanese Magic Blunt">
+	<weapon id="22720" name="Japanese Magic Blunt Weapon">
 		<set name="icon" value="BranchSys3.Icon.g_japan_magic_blunt"/>
 		<set name="weight" value="173"/>
 		<set name="rnd_dam" value="20"/>
@@ -224,7 +224,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22721" name="Japanese Giant Magic Blunt">
+	<weapon id="22721" name="Japanese Giant Magic Blunt Weapon">
 		<set name="icon" value="BranchSys3.Icon.g_japan_magic_twohand_blunt"/>
 		<set name="weight" value="101"/>
 		<set name="rnd_dam" value="20"/>
@@ -247,7 +247,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22722" name="Japanese Dual Sword">
+	<weapon id="22722" name="Japanese Dualsword">
 		<set name="icon" value="BranchSys3.Icon.g_japan_dual"/>
 		<set name="weight" value="247"/>
 		<set name="rnd_dam" value="10"/>
@@ -269,7 +269,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22723" name="Japanese Twin Dagger">
+	<weapon id="22723" name="Japanese Double Dagger">
 		<set name="icon" value="BranchSys3.Icon.g_japan_dualdagger"/>
 		<set name="weight" value="205"/>
 		<set name="rnd_dam" value="10"/>
@@ -291,7 +291,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22724" name="Japanese Twin Blunt">
+	<weapon id="22724" name="Japanese Double Blunt Weapon">
 		<set name="icon" value="BranchSys3.Icon.g_japan_dualblunt"/>
 		<set name="weight" value="250"/>
 		<set name="rnd_dam" value="20"/>
@@ -406,7 +406,7 @@
 			<add stat="accCombat" order="0x10" value="8"/>
 		</for>
 	</weapon>
-	<weapon id="22779" name="Drake Maul {for adults}">
+	<weapon id="22779" name="Drake Maul (PvP)">
 		<set name="is_pvp" value="true"/>
 		<set name="tradeable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -430,7 +430,7 @@
 			<add stat="accCombat" order="0x10" value="8"/>
 		</for>
 	</weapon>
-	<weapon id="22780" name="Drake Maul {for adults}" add_name="HP Drain">
+	<weapon id="22780" name="Drake Maul (PvP)" add_name="HP Drain">
 		<set name="is_pvp" value="true"/>
 		<set name="tradeable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -454,7 +454,7 @@
 			<add stat="accCombat" order="0x10" value="8"/>
 		</for>
 	</weapon>
-	<weapon id="22781" name="Drake Maul {for adults}" add_name="HP Regeneration">
+	<weapon id="22781" name="Drake Maul (PvP)" add_name="HP Regeneration">
 		<set name="is_pvp" value="true"/>
 		<set name="tradeable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -478,7 +478,7 @@
 			<add stat="accCombat" order="0x10" value="8"/>
 		</for>
 	</weapon>
-	<weapon id="22782" name="Drake Maul {for adults}" add_name="Health">
+	<weapon id="22782" name="Drake Maul (PvP)" add_name="Health">
 		<set name="is_pvp" value="true"/>
 		<set name="tradeable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -582,7 +582,7 @@
 			<add stat="accCombat" order="0x10" value="8"/>
 		</for>
 	</weapon>
-	<weapon id="22787" name="Drake Maul - Evil Spirit {for adults}">
+	<weapon id="22787" name="Drake Maul - Evil Spirit (PvP)">
 		<set name="is_pvp" value="true"/>
 		<set name="tradeable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -606,7 +606,7 @@
 			<add stat="accCombat" order="0x10" value="8"/>
 		</for>
 	</weapon>
-	<weapon id="22788" name="Drake Maul - Evil Spirit {for adults}" add_name="HP Drain">
+	<weapon id="22788" name="Drake Maul - Evil Spirit (PvP)" add_name="HP Drain">
 		<set name="is_pvp" value="true"/>
 		<set name="tradeable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -630,7 +630,7 @@
 			<add stat="accCombat" order="0x10" value="8"/>
 		</for>
 	</weapon>
-	<weapon id="22789" name="Drake Maul - Evil Spirit {for adults}" add_name="HP Regeneration">
+	<weapon id="22789" name="Drake Maul - Evil Spirit (PvP)" add_name="HP Regeneration">
 		<set name="is_pvp" value="true"/>
 		<set name="tradeable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -654,7 +654,7 @@
 			<add stat="accCombat" order="0x10" value="8"/>
 		</for>
 	</weapon>
-	<weapon id="22790" name="Drake Maul - Evil Spirit {for adults}" add_name="Health">
+	<weapon id="22790" name="Drake Maul - Evil Spirit (PvP)" add_name="Health">
 		<set name="is_pvp" value="true"/>
 		<set name="tradeable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -762,7 +762,7 @@
 			<add stat="accCombat" order="0x10" value="8"/>
 		</for>
 	</weapon>
-	<weapon id="22795" name="Freya's Staff {for adults}">
+	<weapon id="22795" name="Freya's Staff (PvP)">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="is_pvp" value="true"/>
 		<set name="tradeable" value="false"/>
@@ -787,7 +787,7 @@
 			<add stat="accCombat" order="0x10" value="8"/>
 		</for>
 	</weapon>
-	<weapon id="22796" name="Freya's Staff {for adults}" add_name="Magic Hold">
+	<weapon id="22796" name="Freya's Staff (PvP)" add_name="Magic Hold">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="is_pvp" value="true"/>
 		<set name="tradeable" value="false"/>
@@ -812,7 +812,7 @@
 			<add stat="accCombat" order="0x10" value="8"/>
 		</for>
 	</weapon>
-	<weapon id="22797" name="Freya's Staff {for adults}" add_name="Empower">
+	<weapon id="22797" name="Freya's Staff (PvP)" add_name="Empower">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="is_pvp" value="true"/>
 		<set name="tradeable" value="false"/>
@@ -837,7 +837,7 @@
 			<add stat="accCombat" order="0x10" value="8"/>
 		</for>
 	</weapon>
-	<weapon id="22798" name="Freya's Staff {for adults}" add_name="MP Regeneration">
+	<weapon id="22798" name="Freya's Staff (PvP)" add_name="MP Regeneration">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="is_pvp" value="true"/>
 		<set name="tradeable" value="false"/>

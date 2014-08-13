@@ -110,7 +110,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15578" name="Elegia Gaiter">
+	<armor id="15578" name="Elegia Gaiters">
 		<set name="crystal_count" value="2009"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -128,7 +128,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15579" name="Elegia Leather Legging">
+	<armor id="15579" name="Elegia Leather Leggings">
 		<set name="crystal_count" value="1506"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -165,7 +165,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15581" name="Elegia Gauntlet">
+	<armor id="15581" name="Elegia Gauntlets">
 		<set name="crystal_count" value="803"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -401,7 +401,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15595" name="Vorpal Gaiter">
+	<armor id="15595" name="Vorpal Gaiters">
 		<set name="crystal_count" value="1675"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -419,7 +419,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15596" name="Vorpal Leather Legging">
+	<armor id="15596" name="Vorpal Leather Leggings">
 		<set name="crystal_count" value="1256"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -456,7 +456,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15598" name="Vorpal Gauntlet">
+	<armor id="15598" name="Vorpal Gauntlets">
 		<set name="crystal_count" value="670"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>

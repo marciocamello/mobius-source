@@ -667,7 +667,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant2>
 	</skill>
-	<skill id="519" levels="1" name="Quiver of Bolts: A Grade">
+	<skill id="519" levels="1" name="Quiver of Bolts (A-grade)">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0519"/>
 		<set name="reuseDelay" val="600000"/>
@@ -684,7 +684,7 @@
 		<set name="SummonMinCount" val="700"/>
 		<set name="SummonMaxCount" val="2800"/>
 	</skill>
-	<skill id="520" levels="1" name="Quiver of Bolts: S Grade">
+	<skill id="520" levels="1" name="Quiver of Bolts (S-grade)">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0520"/>
 		<set name="reuseDelay" val="600000"/>
@@ -1777,7 +1777,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="561" levels="4" name="Bless of Angel">
+	<skill id="561" levels="4" name="Angel's Blessing">
 		<table name="#mpConsume2">61 63 67 70</table>
 		<table name="#magicLevel">60 63 66 69</table>
 		<set name="icon" val="icon.skill_transform_buff"/>

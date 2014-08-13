@@ -1,0 +1,333 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="21300" levels="1" name="Release Agathion's Seal - Velarin">
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21301" levels="1" name="Release Agathion's Seal - Dulcinel">
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21302" levels="1" name="Release Agathion's Seal - Chimeros">
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21303" levels="1" name="Release Agathion's Seal - Niveri">
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21304" levels="1" name="Release Agathion's Seal - Hamell">
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21305" levels="1" name="Release Agathion's Seal - Joriya">
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21306" levels="1" name="Release Agathion's Seal - Ralmak">
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21307" levels="1" name="Release Agathion's Seal - Goras">
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21308" levels="1" name="Release Agathion's Seal - Vensar">
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21309" levels="1" name="Release Agathion's Seal - Kiela">
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21310" levels="1" name="Soul's Shield">
+		<set name="icon" val="BranchSys2.icon.br_soulavatar_active_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21311" levels="1" name="Reinforced Authority">
+		<set name="icon" val="BranchSys2.icon.br_soulavatar_stat_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21312" levels="1" name="Indomitable Spirit">
+		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21313" levels="1" name="Soul Shroud">
+		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21314" levels="1" name="Soul Seduction">
+		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21315" levels="1" name="Soul Protection">
+		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21316" levels="1" name="Intelligent Soul">
+		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21317" levels="1" name="Sagacious Soul">
+		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21320" levels="1" name="Desperate Exorcism">
+		<set name="icon" val="icon.skill1551"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21321" levels="1" name="Desperate Exorcism - Trigger">
+		<set name="icon" val="icon.skill1551"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21322" levels="1" name="Cancel Transformation">
+		<set name="icon" val="icon.skilltransform2"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21323" levels="1" name="Restore the Crystal of Protection">
+		<set name="icon" val="icon.skill1425"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21324" levels="1" name="Einhasad's Authority">
+		<set name="icon" val="icon.skill6288"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21325" levels="1" name="Release Agathion's Seal - Uthanka">
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21326" levels="1" name="Basic Effect: Elemental Shirt">
+		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i01"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21327" levels="10" name="Enchant Effect: Elemental Shirt">
+		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21328" levels="1" name="Adenian Underwear: Speed">
+		<set name="icon" val="BranchSys3.icon1.g_co_military_undwrwear"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21329" levels="1" name="Adenian Underwear: Speed">
+		<set name="icon" val="BranchSys3.icon1.g_co_premium_underwear"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21330" levels="1" name="Adenian Underwear: Speed">
+		<set name="icon" val="BranchSys3.icon1.g_co_sexy_underwear"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21331" levels="1" name="Adenian Underwear: Speed">
+		<set name="icon" val="BranchSys3.icon1.g_co_sf_underwear_01"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21332" levels="1" name="Adenian Underwear: Speed">
+		<set name="icon" val="BranchSys3.icon1.g_co_maid_underwear_f01"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21333" levels="2" name="Adenia's Vampiric Rage">
+		<set name="icon" val="icon.skill3080"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21334" levels="2" name="Adenia's Vampiric Rage">
+		<set name="icon" val="icon.skill3123"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21335" levels="2" name="Adenia's Damage Reflect">
+		<set name="icon" val="icon.skill3080"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21336" levels="2" name="Adenia's Damage Reflect">
+		<set name="icon" val="icon.skill3123"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21337" levels="1" name="Adenia's Duel Might">
+		<set name="icon" val="icon.skill3238"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21338" levels="1" name="Adenia's Duel Might">
+		<set name="icon" val="icon.skill3238"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21339" levels="1" name="Adenia's Doom">
+		<set name="icon" val="icon.skill3080"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21340" levels="2" name="Adenia's Instant Recovery">
+		<set name="icon" val="icon.skill3123"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21341" levels="1" name="Adenia's Shield">
+		<set name="icon" val="icon.skill3123"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21342" levels="1" name="Adenia's Magic Barrier">
+		<set name="icon" val="icon.skill3123"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21343" levels="1" name="Adenia's Barrier">
+		<set name="icon" val="icon.skill3123"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21344" levels="2" name="Adenia's Invincibility">
+		<set name="icon" val="icon.skill3123"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21345" levels="2" name="Adenia's Party Return">
+		<set name="icon" val="icon.skill3123"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21346" levels="1" name="Adenia's Weight Limit">
+		<set name="icon" val="icon.skill3238"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21347" levels="1" name="Release Agathion's Seal - Griffin">
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21348" levels="1" name="Parade Firecracker">
+		<set name="icon" val="icon.etc_small_ultra_bomb_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21349" levels="1" name="Memory Shot">
+		<set name="icon" val="BranchSys.icon.br_firecracker_white_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21350" levels="5" name="Modified Set Effect Test">
+		<set name="icon" val="BranchSys3.icon1.g_co_sf_b"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21351" levels="2" name="Modified Set Effect Test">
+		<set name="icon" val="BranchSys3.Icon.g_beam_sword"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21352" levels="1" name="Release Agathion's Seal - Hussar">
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21353" levels="1" name="Vitality Recovery">
+		<set name="icon" val="BranchSys.icon.br_black_gem_mask_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21354" levels="1" name="Vitality Recovery">
+		<set name="icon" val="icon.accessory_dwarf_goggle_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21355" levels="1" name="Erupting Vitality XP Potion">
+		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="21356" levels="1" name="Erupting Vitality Replenishing Potion">
+		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+</list>

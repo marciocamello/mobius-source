@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="17004" name="Agathion Seal Bracelet - Kid Rudolph" add_name="Event">
+	<armor id="17004" name="Agathion - Kid Rudolph" add_name="Event">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>
@@ -91,7 +91,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17010" name="Sealed Vesper Noble Gauntlet">
+	<armor id="17010" name="Sealed Vesper Noble Gauntlets">
 		<set name="crystal_count" value="670"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -236,7 +236,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17033" name="Circlet of Freeze - For Events" add_name="30 day limited period">
+	<armor id="17033" name="Circlet of Ice (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="destroyable" value="false"/>
@@ -491,7 +491,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="17060" name="Talisman - Paralyze Resistance">
+	<armor id="17060" name="Talisman - Paralysis Resistance">
 		<set name="crystal_type" value="NONE"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -512,7 +512,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="17061" name="Talisman - ALL STAT">
+	<armor id="17061" name="Talisman - ALL STATS">
 		<set name="crystal_type" value="NONE"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>

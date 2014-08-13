@@ -1,97 +1,97 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="4500" levels="1" name="Treasure Chest - Level 27">
+	<skill id="4500" levels="1" name="Treasure Chest (Lv. 27)">
 		<set name="icon" val="icon.skill0042"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4501" levels="1" name="Treasure Chest - Level 29">
+	<skill id="4501" levels="1" name="Treasure Chest (Lv. 29)">
 		<set name="icon" val="icon.skill0042"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4502" levels="1" name="Treasure Chest - Level 31">
+	<skill id="4502" levels="1" name="Treasure Chest (Lv. 31)">
 		<set name="icon" val="icon.skill0042"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4503" levels="1" name="Treasure Chest - Level 32">
+	<skill id="4503" levels="1" name="Treasure Chest (Lv. 32)">
 		<set name="icon" val="icon.skill0042"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4504" levels="1" name="Treasure Chest - Level 33">
+	<skill id="4504" levels="1" name="Treasure Chest (Lv. 33)">
 		<set name="icon" val="icon.skill0042"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4505" levels="1" name="Treasure Chest - Level 35">
+	<skill id="4505" levels="1" name="Treasure Chest (Lv. 35)">
 		<set name="icon" val="icon.skill0042"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4506" levels="1" name="Treasure Chest - Level 39">
+	<skill id="4506" levels="1" name="Treasure Chest (Lv. 39)">
 		<set name="icon" val="icon.skill0042"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4507" levels="1" name="Treasure Chest - Level 42">
+	<skill id="4507" levels="1" name="Treasure Chest (Lv. 42)">
 		<set name="icon" val="icon.skill0042"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4508" levels="1" name="Treasure Chest - Level 43">
+	<skill id="4508" levels="1" name="Treasure Chest (Lv. 43)">
 		<set name="icon" val="icon.skill0042"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4509" levels="1" name="Treasure Chest - Level 45">
+	<skill id="4509" levels="1" name="Treasure Chest (Lv. 45)">
 		<set name="icon" val="icon.skill0042"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4510" levels="1" name="Treasure Chest - Level 47">
+	<skill id="4510" levels="1" name="Treasure Chest (Lv. 47)">
 		<set name="icon" val="icon.skill0042"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4511" levels="1" name="Treasure Chest - Level 49">
+	<skill id="4511" levels="1" name="Treasure Chest (Lv. 49)">
 		<set name="icon" val="icon.skill0042"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4512" levels="1" name="Treasure Chest - Level 52">
+	<skill id="4512" levels="1" name="Treasure Chest (Lv. 52)">
 		<set name="icon" val="icon.skill0042"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4513" levels="1" name="Squash - Level up">
+	<skill id="4513" levels="1" name="Squash (Lv. )up">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -192,7 +192,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4521" levels="1" name="Resist Bow Attack">
+	<skill id="4521" levels="1" name="Bow Resistance">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="76"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -504,7 +504,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4542" levels="1" name="Resist Sleep/Shock">
+	<skill id="4542" levels="1" name="Sleep/Stun Resistance">
 		<table name="#Tab-stunResist">90</table>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="76"/>
@@ -516,7 +516,7 @@
 			<sub order="0x40" stat="sleepResist" val="#Tab-stunResist"/>
 		</for>
 	</skill>
-	<skill id="4543" levels="1" name="Weakened Shock">
+	<skill id="4543" levels="1" name="Weakened Stun">
 		<table name="#Tab-stunResist">20</table>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="76"/>
@@ -564,7 +564,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="4547" levels="1" name="Gaze of Watcher">
+	<skill id="4547" levels="1" name="Watchman's Gaze">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0131"/>
 		<set name="castRange" val="1000"/>
@@ -681,7 +681,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4555" levels="1" name="Resist Mutation">
+	<skill id="4555" levels="1" name="Mutation Resistance">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1119,7 +1119,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4578" levels="1" name="Petrification">
+	<skill id="4578" levels="1" name="Petrify">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill4111"/>
 		<set name="magicLevel" val="80"/>
@@ -1248,7 +1248,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4584" levels="12" name="Reducing P. Def Stun">
+	<skill id="4584" levels="12" name="P. Def.-decreasing Stun">
 		<table name="#pDef">0.83 0.8 0.8 0.77</table>
 		<table name="#mpConsume2">24 39 54 73 94 116 136 144 152 157 161 163</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>

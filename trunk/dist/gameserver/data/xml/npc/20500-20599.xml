@@ -2294,7 +2294,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="20527" name="Great Snow Wolf" title="">
+	<npc id="20527" name="Snow Wolf" title="">
 		<set name="aggroRange" value="500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
@@ -7701,7 +7701,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="20576" name="Oel Mahum Witch Doctor" title="">
+	<npc id="20576" name="Oel Mahum Shaman" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>

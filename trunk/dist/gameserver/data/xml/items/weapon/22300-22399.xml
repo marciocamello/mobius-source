@@ -37,7 +37,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22365" name="Black Bear Claw">
+	<weapon id="22365" name="Black Bear Claw" add_name="7-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="DUAL"/>
 		<set name="ex_type" value="DUAL_SWORD"/>
@@ -73,7 +73,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22387" name="Halloween Scythe">
+	<weapon id="22387" name="Halloween Scythe" add_name="7-day (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
@@ -91,7 +91,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="22388" name="Halloween Scythe">
+	<weapon id="22388" name="Halloween Scythe" add_name="Event">
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>

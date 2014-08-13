@@ -660,7 +660,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="35513" name="Sherman" title="Herald">
+	<npc id="35513" name="Sherman" title="Herald from Rune">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -2991,7 +2991,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="35559" name="Daguerre" title="Herald">
+	<npc id="35559" name="Daguerre" title="Herald from Schuttgart">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>

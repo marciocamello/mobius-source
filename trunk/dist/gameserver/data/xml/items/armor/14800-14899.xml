@@ -6,7 +6,7 @@
 		<set name="icon" value="icon.accessory_captain_cap_i00"/>
 		<set name="type" value="NONE"/>
 	</armor>
-	<armor id="14801" name="Gludio Guard Earring">
+	<armor id="14801" name="Gludio Royal Guard Earring">
 		<set name="crystal_type" value="S80"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_earring_of_domi_protection_i00"/>
@@ -238,7 +238,7 @@
 			<skill id="8332" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14812" name="Red Talisman - Territory Guard">
+	<armor id="14812" name="Red Talisman - Territory Royal Guard">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="66"/>
@@ -272,7 +272,7 @@
 			<skill id="8334" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14814" name="White Talisman -  All Resistance">
+	<armor id="14814" name="White Talisman - Attribute Resistance">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="65"/>

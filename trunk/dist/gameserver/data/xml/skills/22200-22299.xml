@@ -56,7 +56,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22202" levels="1" name="Transformation Scroll: Ol Mahum">
+	<skill id="22202" levels="1" name="Transformation Scroll: Oel Mahum">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="hitTime" val="500"/>
@@ -314,13 +314,13 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22212" levels="1" name="Highest Power Quick Healing Potion">
+	<skill id="22212" levels="1" name="Superior Quick Healing Potion">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22213" levels="1" name="Mysterious Scroll - Drum Melody">
+	<skill id="22213" levels="1" name="Mysterious Scroll: Drum Melody">
 		<set name="icon" val="icon.skill1357"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -524,13 +524,13 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22247" levels="1" name="Power Shirt Enchant Scroll">
+	<skill id="22247" levels="1" name="Scroll: Enchant Power Shirt">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22248" levels="1" name="Blessed Power Shirt Enchant Scroll">
+	<skill id="22248" levels="1" name="Blessed Scroll: Enchant Power Shirt">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -566,7 +566,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22254" levels="1" name="Blessed Power Shirt Enchant Scroll">
+	<skill id="22254" levels="1" name="Blessed Scroll: Enchant Power Shirt">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -707,7 +707,7 @@
 			</or>
 		</cond>
 	</skill>
-	<skill id="22272" levels="1" name="Beginner Adventurer's Treasure Sack">
+	<skill id="22272" levels="1" name="Novice Explorer's Treasure Sack">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -794,37 +794,37 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22284" levels="1" name="Player Commendation - Energy">
+	<skill id="22284" levels="1" name="PC Vitality">
 		<set name="icon" val="icon.etc_pccafe_point_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22285" levels="1" name="Player Commendation - Energy">
+	<skill id="22285" levels="1" name="PC Vitality">
 		<set name="icon" val="icon.etc_pccafe_point_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22286" levels="1" name="Player Commendation - Energy">
+	<skill id="22286" levels="1" name="PC Vitality">
 		<set name="icon" val="icon.etc_pccafe_point_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22287" levels="1" name="Player Commendation - Energy">
+	<skill id="22287" levels="1" name="PC Vitality">
 		<set name="icon" val="icon.etc_pccafe_point_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22288" levels="1" name="Player Commendation - Energy Pack">
+	<skill id="22288" levels="1" name="Player Commendation - Vitality Pack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22289" levels="1" name="Santa Claus's Treasure Box">
+	<skill id="22289" levels="1" name="Santa Claus' Gift Box">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>

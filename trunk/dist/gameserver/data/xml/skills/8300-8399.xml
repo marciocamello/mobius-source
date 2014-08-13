@@ -11,7 +11,7 @@
 			<add order="0x40" stat="defenceUnholy" val="2"/>
 		</for>
 	</skill>
-	<skill id="8301" levels="1" name="Vesper Heavy Armor Set for Adults">
+	<skill id="8301" levels="1" name="Vesper Heavy Armor Set - PvP">
 		<set name="icon" val="icon.armor_t94_u_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -35,7 +35,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8302" levels="1" name="Vesper Noble Heavy Armor Set for Adults">
+	<skill id="8302" levels="1" name="Vesper Noble Heavy Armor Set - PvP">
 		<set name="icon" val="icon.armor_t94_u_i01"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -63,7 +63,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8303" levels="1" name="Vesper Light Armor Set for Adults">
+	<skill id="8303" levels="1" name="Vesper Light Armor Set - PvP">
 		<set name="icon" val="icon.armor_t95_u_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -87,7 +87,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8304" levels="1" name="Vesper Noble Light Armor Set for Adults">
+	<skill id="8304" levels="1" name="Vesper Noble Light Armor Set - PvP">
 		<set name="icon" val="icon.armor_t95_u_i01"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -115,7 +115,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8305" levels="1" name="Vesper Robe Set for Adults">
+	<skill id="8305" levels="1" name="Vesper Robe Set - PvP">
 		<set name="icon" val="icon.armor_t96_u_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -140,7 +140,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8306" levels="1" name="Vesper Noble Robe Set for Adults">
+	<skill id="8306" levels="1" name="Vesper Noble Robe Set - PvP">
 		<set name="icon" val="icon.armor_t96_u_i01"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -168,7 +168,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8307" levels="1" name="Boing Hammer's Effect of Doubt">
+	<skill id="8307" levels="1" name="Boing Hammer's Mysterious Effect">
 		<set name="icon" val="icon.weapon_bbyong_hammer_a_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -179,7 +179,7 @@
 		</triggers>
 		<for/>
 	</skill>
-	<skill id="8308" levels="1" name="Red Talisman of Territory Guardian">
+	<skill id="8308" levels="1" name="Red Talisman - Territory Guardian">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i00"/>
 		<set name="reuseDelay" val="360000"/>
@@ -201,7 +201,7 @@
 			<effect count="1" name="CombatPointHealOverTime" time="0" val="100"/>
 		</for>
 	</skill>
-	<skill id="8309" levels="1" name="Red Talisman of Territory Convoy">
+	<skill id="8309" levels="1" name="Red Talisman - Territory Escort">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i00"/>
 		<set name="reuseDelay" val="360000"/>
@@ -456,7 +456,7 @@
 		<set name="npcId" val="16066"/>
 		<set name="summonType" val="agathion"/>
 	</skill>
-	<skill id="8331" levels="1" name="Blue Talisman of Buff Cancel">
+	<skill id="8331" levels="1" name="Blue Talisman - Buff Cancel">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="affectLimit" val="5;5"/>
 		<set name="icon" val="icon.etc_talisman_i01"/>
@@ -481,7 +481,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="8332" levels="1" name="Blue Talisman of Buff Steal">
+	<skill id="8332" levels="1" name="Blue Talisman - Buff Steal">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i01"/>
 		<set name="reuseDelay" val="360000"/>
@@ -499,7 +499,7 @@
 		<set name="referenceItemId" val="14811"/>
 		<set name="referenceItemMpConsume" val="6"/>
 	</skill>
-	<skill id="8333" levels="1" name="Red Talisman of Territory Guard">
+	<skill id="8333" levels="1" name="Red Talisman - Territory Royal Guard">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i00"/>
 		<set name="reuseDelay" val="300000"/>
@@ -520,7 +520,7 @@
 			<effect count="1" name="CombatPointHealOverTime" time="0" val="1500"/>
 		</for>
 	</skill>
-	<skill id="8334" levels="1" name="Blue Talisman of Lord's Divine Protection">
+	<skill id="8334" levels="1" name="Blue Talisman - Lord's Divine Protection">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i01"/>
 		<set name="reuseDelay" val="360000"/>
@@ -541,7 +541,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="8335" levels="1" name="White Talisman of Attribute Resistance">
+	<skill id="8335" levels="1" name="White Talisman - Attribute Resistance">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i06"/>
 		<set name="reuseDelay" val="360000"/>
@@ -567,7 +567,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="8336" levels="1" name="Guardian's Strider Mount">
+	<skill id="8336" levels="1" name="Ride Guardian's Strider">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -584,7 +584,7 @@
 			<add order="0x40" stat="maxLoad" val="5000"/>
 		</for>
 	</skill>
-	<skill id="8338" levels="4" name="Low-Grade Magic Rune Clip Iron Belt">
+	<skill id="8338" levels="4" name="Top-grade Magic Rune Clip Iron Belt">
 		<table name="#rate">0.4 1 1.4 2</table>
 		<set name="icon" val="icon.skill0332"/>
 		<set name="magicLevel" val="1"/>
@@ -595,7 +595,7 @@
 			<add order="0x40" stat="regHp" val="#rate"/>
 		</for>
 	</skill>
-	<skill id="8339" levels="4" name="Low-Grade Magic Rune Clip Mithril Belt">
+	<skill id="8339" levels="4" name="Top-grade Magic Rune Clip Mithril Belt">
 		<table name="#rate">0.78 1.95 2.73 3.9</table>
 		<set name="icon" val="icon.skill0332"/>
 		<set name="magicLevel" val="1"/>
@@ -606,7 +606,7 @@
 			<add order="0x40" stat="regHp" val="#rate"/>
 		</for>
 	</skill>
-	<skill id="8340" levels="4" name="Low-Grade Magic Rune Clip Iron Belt">
+	<skill id="8340" levels="4" name="Top-grade Magic Rune Clip Iron Belt">
 		<table name="#rate">0.14 0.35 0.49 0.7</table>
 		<set name="icon" val="icon.skill0332"/>
 		<set name="magicLevel" val="1"/>
@@ -617,7 +617,7 @@
 			<add order="0x40" stat="regMp" val="#rate"/>
 		</for>
 	</skill>
-	<skill id="8341" levels="4" name="Low-Grade Magic Rune Clip Mithril Belt">
+	<skill id="8341" levels="4" name="Top-grade Magic Rune Clip Mithril Belt">
 		<table name="#rate">0.3 0.75 1.05 1.5</table>
 		<set name="icon" val="icon.skill0332"/>
 		<set name="magicLevel" val="1"/>
@@ -628,7 +628,7 @@
 			<add order="0x40" stat="regMp" val="#rate"/>
 		</for>
 	</skill>
-	<skill id="8342" levels="4" name="Low-Grade Magic Ornament Iron Belt">
+	<skill id="8342" levels="4" name="Top-grade Magic Ornament Iron Belt">
 		<table name="#pvpDam">1.006 1.015 1.021 1.03</table>
 		<set name="icon" val="icon.skill0332"/>
 		<set name="magicLevel" val="1"/>
@@ -639,7 +639,7 @@
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="#pvpDam"/>
 		</for>
 	</skill>
-	<skill id="8343" levels="4" name="Low-Grade Magic Ornament Iron Belt">
+	<skill id="8343" levels="4" name="Top-grade Magic Ornament Iron Belt">
 		<table name="#pvpDam">1.006 1.015 1.021 1.03</table>
 		<set name="icon" val="icon.skill0332"/>
 		<set name="magicLevel" val="1"/>
@@ -651,7 +651,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="#pvpDam"/>
 		</for>
 	</skill>
-	<skill id="8344" levels="4" name="Low-Grade Magic Ornament Iron Belt">
+	<skill id="8344" levels="4" name="Top-grade Magic Ornament Iron Belt">
 		<table name="#PvPDefence">1.006 1.015 1.021 1.03</table>
 		<set name="icon" val="icon.skill0332"/>
 		<set name="magicLevel" val="1"/>
@@ -664,7 +664,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="#PvPDefence"/>
 		</for>
 	</skill>
-	<skill id="8345" levels="4" name="Low-Grade Magic Ornament Mithril Belt">
+	<skill id="8345" levels="4" name="Top-grade Magic Ornament Mithril Belt">
 		<table name="#pvpDam">1.01 1.025 1.035 1.05</table>
 		<set name="icon" val="icon.skill0332"/>
 		<set name="magicLevel" val="1"/>
@@ -675,7 +675,7 @@
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="#pvpDam"/>
 		</for>
 	</skill>
-	<skill id="8346" levels="4" name="Low-Grade Magic Ornament Mithril Belt">
+	<skill id="8346" levels="4" name="Top-grade Magic Ornament Mithril Belt">
 		<table name="#pvpDam">1.01 1.025 1.035 1.05</table>
 		<set name="icon" val="icon.skill0332"/>
 		<set name="magicLevel" val="1"/>
@@ -687,7 +687,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="#pvpDam"/>
 		</for>
 	</skill>
-	<skill id="8347" levels="4" name="Low-Grade Magic Ornament Mithril Belt">
+	<skill id="8347" levels="4" name="Top-grade Magic Ornament Mithril Belt">
 		<table name="#PvPDefence">1.012 1.03 1.042 1.06</table>
 		<set name="icon" val="icon.skill0332"/>
 		<set name="magicLevel" val="1"/>
@@ -881,7 +881,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="8361" levels="1" name="Sixth Anniversary Party Earring">
+	<skill id="8361" levels="1" name="6th Anniversary Party Earring">
 		<set name="icon" val="icon.event_six_party_earing_i00"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -1007,7 +1007,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="8373" levels="1" name="Silent Scream's Mask">
+	<skill id="8373" levels="1" name="Shriek Mask">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.ev_scream_mask_i00"/>
 		<set name="reuseDelay" val="7200000"/>
@@ -1023,7 +1023,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="8374" levels="1" name="Wrathful Spirit's Mask">
+	<skill id="8374" levels="1" name="Red Devil Mask">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.ev_doccabi_mask_i00"/>
 		<set name="reuseDelay" val="7200000"/>
@@ -1039,7 +1039,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="8375" levels="1" name="Unrotten Corpse's Mask">
+	<skill id="8375" levels="1" name="Mummy Mask">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.ev_mummy_mask_i00"/>
 		<set name="reuseDelay" val="7200000"/>
@@ -1318,7 +1318,7 @@
 			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</skill>
-	<skill id="8398" levels="1" name="Moirai Leather Armor Set">
+	<skill id="8398" levels="1" name="Moirai Light Armor Set">
 		<set name="icon" val="icon.armor_t101_u_i00"/>
 		<set name="magicLevel" val="82"/>
 		<set name="target" val="TARGET_SELF"/>

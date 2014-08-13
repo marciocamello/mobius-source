@@ -370,7 +370,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14510" name="Vesper Thrower {PvP}" add_name="Crt. Slow">
+	<weapon id="14510" name="Vesper Thrower {PvP}" add_name="Critical Slow">
 		<set name="atk_reuse" value="1500"/>
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
@@ -517,7 +517,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14514" name="Vesper Sheutjeh {PvP}" add_name="Cheap Shot">
+	<weapon id="14514" name="Vesper Shooter {PvP}" add_name="Cheap Shot">
 		<set name="atk_reuse" value="400"/>
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
@@ -560,7 +560,7 @@
 			</mul>
 		</for>
 	</weapon>
-	<weapon id="14515" name="Vesper Sheutjeh {PvP}" add_name="Focus">
+	<weapon id="14515" name="Vesper Shooter {PvP}" add_name="Focus">
 		<set name="atk_reuse" value="400"/>
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
@@ -596,7 +596,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14516" name="Vesper Sheutjeh {PvP}" add_name="Crt. Slow">
+	<weapon id="14516" name="Vesper Shooter {PvP}" add_name="Critical Slow">
 		<set name="atk_reuse" value="400"/>
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
@@ -739,7 +739,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14526" name="Dynasty Dual Daggers - Great Gale">
+	<weapon id="14526" name="Dynasty Dual Dagger - Great Gale">
 		<set name="crystal_count" value="4219"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -799,7 +799,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14528" name="Dynasty Dual Daggers - Great Gale {PvP}">
+	<weapon id="14528" name="Dynasty Dual Dagger - Great Gale {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -873,7 +873,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14558" name="Dynasty Dual Daggers {PvP}">
+	<weapon id="14558" name="Dynasty Dual Dagger {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1164,7 +1164,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14570" name="Dual Sword of Hunter Family">
+	<weapon id="14570" name="Dualsword of Hunter Family">
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>

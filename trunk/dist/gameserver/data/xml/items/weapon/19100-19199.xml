@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="19100" name="Blessed Celestial Thrower" add_name="Damage">
+	<weapon id="19100" name="Blessed Kaliel Thrower" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_vesper_thrower_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -29,7 +29,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19101" name="Blessed Celestial Thrower" add_name="Focus">
+	<weapon id="19101" name="Blessed Kaliel Thrower" add_name="Focus">
 		<set name="icon" value="icon.weapon_vesper_thrower_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -57,7 +57,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19102" name="Blessed Celestial Thrower" add_name="Long Blow">
+	<weapon id="19102" name="Blessed Kaliel Thrower" add_name="Long Blow">
 		<set name="icon" value="icon.weapon_vesper_thrower_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -85,7 +85,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19103" name="Blessed Celestial Shooter" add_name="Focus">
+	<weapon id="19103" name="Blessed Kaliel Shooter" add_name="Focus">
 		<set name="icon" value="icon.weapon_vesper_schutze_i01"/>
 		<set name="weight" value="1580"/>
 		<set name="rnd_dam" value="10"/>
@@ -113,7 +113,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19104" name="Blessed Celestial Shooter" add_name="Critical Slow">
+	<weapon id="19104" name="Blessed Kaliel Shooter" add_name="Critical Slow">
 		<set name="icon" value="icon.weapon_vesper_schutze_i01"/>
 		<set name="weight" value="1580"/>
 		<set name="rnd_dam" value="10"/>
@@ -141,7 +141,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19105" name="Blessed Celestial Shooter" add_name="Haste">
+	<weapon id="19105" name="Blessed Kaliel Shooter" add_name="Haste">
 		<set name="icon" value="icon.weapon_vesper_schutze_i01"/>
 		<set name="weight" value="1580"/>
 		<set name="rnd_dam" value="10"/>
@@ -169,7 +169,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19106" name="Blessed Celestial Buster" add_name="Acumen">
+	<weapon id="19106" name="Blessed Kaliel Buster" add_name="Acumen">
 		<set name="icon" value="icon.weapon_vesper_burster_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -196,7 +196,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19107" name="Blessed Celestial Buster" add_name="Magic Hold">
+	<weapon id="19107" name="Blessed Kaliel Buster" add_name="Magic Hold">
 		<set name="icon" value="icon.weapon_vesper_burster_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -223,7 +223,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19108" name="Blessed Celestial Buster" add_name="Mana Up">
+	<weapon id="19108" name="Blessed Kaliel Buster" add_name="Mana Up">
 		<set name="icon" value="icon.weapon_vesper_burster_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -250,7 +250,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19109" name="Blessed Celestial Caster" add_name="Empower">
+	<weapon id="19109" name="Blessed Kaliel Caster" add_name="Empower">
 		<set name="icon" value="icon.weapon_vesper_caster_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -277,7 +277,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19110" name="Blessed Celestial Caster" add_name="Acumen">
+	<weapon id="19110" name="Blessed Kaliel Caster" add_name="Acumen">
 		<set name="icon" value="icon.weapon_vesper_caster_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -304,7 +304,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19111" name="Blessed Celestial Caster" add_name="Magic Hold">
+	<weapon id="19111" name="Blessed Kaliel Caster" add_name="Magic Hold">
 		<set name="icon" value="icon.weapon_vesper_caster_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -331,7 +331,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19112" name="Blessed Celestial Retributer" add_name="MP Regeneration">
+	<weapon id="19112" name="Blessed Kaliel Retributer" add_name="MP Regeneration">
 		<set name="icon" value="icon.weapon_vesper_singer_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -358,7 +358,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19113" name="Blessed Celestial Retributer" add_name="Acumen">
+	<weapon id="19113" name="Blessed Kaliel Retributer" add_name="Acumen">
 		<set name="icon" value="icon.weapon_vesper_singer_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -385,7 +385,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19114" name="Blessed Celestial Retributer" add_name="Empower">
+	<weapon id="19114" name="Blessed Kaliel Retributer" add_name="Empower">
 		<set name="icon" value="icon.weapon_vesper_singer_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -412,7 +412,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19115" name="Blessed Celestial Dual Sword" add_name="Haste">
+	<weapon id="19115" name="Blessed Kaliel Dualsword" add_name="Haste">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -439,7 +439,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19116" name="Blessed Celestial Dual Sword" add_name="Damage">
+	<weapon id="19116" name="Blessed Kaliel Dualsword" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -466,7 +466,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19117" name="Blessed Celestial Dual Sword" add_name="Health">
+	<weapon id="19117" name="Blessed Kaliel Dualsword" add_name="Health">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -493,7 +493,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19118" name="Blessed Celestial Dual Dagger" add_name="Damage">
+	<weapon id="19118" name="Blessed Kaliel Dual Dagger" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -520,7 +520,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19119" name="Blessed Celestial Dual Dagger" add_name="Focus">
+	<weapon id="19119" name="Blessed Kaliel Dual Dagger" add_name="Focus">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -547,7 +547,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19120" name="Blessed Celestial Dual Dagger" add_name="Guidance">
+	<weapon id="19120" name="Blessed Kaliel Dual Dagger" add_name="Guidance">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -574,7 +574,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19121" name="Blessed Celestial Dual Blunt Weapon" add_name="Focus">
+	<weapon id="19121" name="Blessed Kaliel Dual Blunt Weapon" add_name="Focus">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -600,7 +600,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19122" name="Blessed Celestial Dual Blunt Weapon" add_name="Guidance">
+	<weapon id="19122" name="Blessed Kaliel Dual Blunt Weapon" add_name="Guidance">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -626,7 +626,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19123" name="Blessed Celestial Dual Blunt Weapon" add_name="Damage">
+	<weapon id="19123" name="Blessed Kaliel Dual Blunt Weapon" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -652,7 +652,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19124" name="Blessed Celestial Shaper" add_name="Guidance + Haste">
+	<weapon id="19124" name="Blessed Kaliel Shaper" add_name="Guidance + Haste">
 		<set name="icon" value="icon.weapon_vesper_shaper_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -681,7 +681,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19125" name="Blessed Celestial Shaper" add_name="Haste + Focus">
+	<weapon id="19125" name="Blessed Kaliel Shaper" add_name="Haste + Focus">
 		<set name="icon" value="icon.weapon_vesper_shaper_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -710,7 +710,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19126" name="Blessed Celestial Shaper" add_name="Focus + Guidance">
+	<weapon id="19126" name="Blessed Kaliel Shaper" add_name="Focus + Guidance">
 		<set name="icon" value="icon.weapon_vesper_shaper_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -739,7 +739,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19127" name="Blessed Celestial Cutter" add_name="Haste + Focus">
+	<weapon id="19127" name="Blessed Kaliel Cutter" add_name="Haste + Focus">
 		<set name="icon" value="icon.weapon_vesper_cutter_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -767,7 +767,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19128" name="Blessed Celestial Cutter" add_name="Focus + Health">
+	<weapon id="19128" name="Blessed Kaliel Cutter" add_name="Focus + Health">
 		<set name="icon" value="icon.weapon_vesper_cutter_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -795,7 +795,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19129" name="Blessed Celestial Cutter" add_name="Health + Haste">
+	<weapon id="19129" name="Blessed Kaliel Cutter" add_name="Health + Haste">
 		<set name="icon" value="icon.weapon_vesper_cutter_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -823,7 +823,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19130" name="Blessed Celestial Slasher" add_name="Focus + Damage Up">
+	<weapon id="19130" name="Blessed Kaliel Slasher" add_name="Focus + Damage">
 		<set name="icon" value="icon.weapon_vesper_slasher_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -851,7 +851,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19131" name="Blessed Celestial Slasher" add_name="Damage + Haste">
+	<weapon id="19131" name="Blessed Kaliel Slasher" add_name="Damage Up + Haste">
 		<set name="icon" value="icon.weapon_vesper_slasher_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -879,7 +879,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19132" name="Blessed Celestial Slasher" add_name="Haste + Focus">
+	<weapon id="19132" name="Blessed Kaliel Slasher" add_name="Haste + Focus">
 		<set name="icon" value="icon.weapon_vesper_slasher_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -907,7 +907,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19133" name="Blessed Celestial Avenger" add_name="Haste + Critical Damage">
+	<weapon id="19133" name="Blessed Kaliel Avenger" add_name="Haste + Critical Damage">
 		<set name="icon" value="icon.weapon_vesper_avenger_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -935,7 +935,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19134" name="Blessed Celestial Avenger" add_name="Critical Damage + Focus">
+	<weapon id="19134" name="Blessed Kaliel Avenger" add_name="Critical Damage + Focus">
 		<set name="icon" value="icon.weapon_vesper_avenger_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -963,7 +963,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19135" name="Blessed Celestial Avenger" add_name="Focus + Haste">
+	<weapon id="19135" name="Blessed Kaliel Avenger" add_name="Focus + Haste">
 		<set name="icon" value="icon.weapon_vesper_avenger_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -991,7 +991,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19136" name="Blessed Celestial Fighter" add_name="Focus + Damage Up">
+	<weapon id="19136" name="Blessed Kaliel Fighter" add_name="Focus + Damage">
 		<set name="icon" value="icon.weapon_octoclaw_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -1019,7 +1019,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19137" name="Blessed Celestial Fighter" add_name="Damage + Haste">
+	<weapon id="19137" name="Blessed Kaliel Fighter" add_name="Damage Up + Haste">
 		<set name="icon" value="icon.weapon_octoclaw_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -1047,7 +1047,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19138" name="Blessed Celestial Fighter" add_name="Haste + Focus">
+	<weapon id="19138" name="Blessed Kaliel Fighter" add_name="Haste + Focus">
 		<set name="icon" value="icon.weapon_octoclaw_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -1075,7 +1075,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19139" name="Blessed Celestial Stormer" add_name="HP Drain + Guidance">
+	<weapon id="19139" name="Blessed Kaliel Stormer" add_name="HP Drain + Guidance">
 		<set name="icon" value="icon.weapon_vesper_stormer_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -1103,7 +1103,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19140" name="Blessed Celestial Stormer" add_name="Guidance + Damage">
+	<weapon id="19140" name="Blessed Kaliel Stormer" add_name="Guidance + Damage Up">
 		<set name="icon" value="icon.weapon_vesper_stormer_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -1131,7 +1131,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19141" name="Blessed Celestial Stormer" add_name="Damage + HP Drain">
+	<weapon id="19141" name="Blessed Kaliel Stormer" add_name="Damage Up + HP Drain">
 		<set name="icon" value="icon.weapon_vesper_stormer_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -1159,7 +1159,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19142" name="Blessed Celestial Thrower" add_name="Damage + Focus">
+	<weapon id="19142" name="Blessed Kaliel Thrower" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_vesper_thrower_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -1188,7 +1188,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19143" name="Blessed Celestial Thrower" add_name="Focus + Long Blow">
+	<weapon id="19143" name="Blessed Kaliel Thrower" add_name="Focus + Long Blow">
 		<set name="icon" value="icon.weapon_vesper_thrower_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -1217,7 +1217,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19144" name="Blessed Celestial Thrower" add_name="Long Blow + Damage">
+	<weapon id="19144" name="Blessed Kaliel Thrower" add_name="Long Blow + Damage Up">
 		<set name="icon" value="icon.weapon_vesper_thrower_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -1246,7 +1246,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19145" name="Blessed Celestial Shooter" add_name="Focus + Critical Slow">
+	<weapon id="19145" name="Blessed Kaliel Shooter" add_name="Focus + Critical Slow">
 		<set name="icon" value="icon.weapon_vesper_schutze_i01"/>
 		<set name="weight" value="1580"/>
 		<set name="rnd_dam" value="10"/>
@@ -1275,7 +1275,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19146" name="Blessed Celestial Shooter" add_name="Critical Slow + Haste">
+	<weapon id="19146" name="Blessed Kaliel Shooter" add_name="Critical Slow + Haste">
 		<set name="icon" value="icon.weapon_vesper_schutze_i01"/>
 		<set name="weight" value="1580"/>
 		<set name="rnd_dam" value="10"/>
@@ -1304,7 +1304,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19147" name="Blessed Celestial Shooter" add_name="Haste + Focus">
+	<weapon id="19147" name="Blessed Kaliel Shooter" add_name="Haste + Focus">
 		<set name="icon" value="icon.weapon_vesper_schutze_i01"/>
 		<set name="weight" value="1580"/>
 		<set name="rnd_dam" value="10"/>
@@ -1333,7 +1333,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19148" name="Blessed Celestial Buster" add_name="Acumen + Magic Hold">
+	<weapon id="19148" name="Blessed Kaliel Buster" add_name="Acumen + Magic Hold">
 		<set name="icon" value="icon.weapon_vesper_burster_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1361,7 +1361,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19149" name="Blessed Celestial Buster" add_name="Magic Hold + Mana Up">
+	<weapon id="19149" name="Blessed Kaliel Buster" add_name="Magic Hold + Mana Up">
 		<set name="icon" value="icon.weapon_vesper_burster_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1389,7 +1389,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19150" name="Blessed Celestial Buster" add_name="Mana Up + Acumen">
+	<weapon id="19150" name="Blessed Kaliel Buster" add_name="Mana Up + Acumen">
 		<set name="icon" value="icon.weapon_vesper_burster_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1417,7 +1417,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19151" name="Blessed Celestial Caster" add_name="Empower + Acumen">
+	<weapon id="19151" name="Blessed Kaliel Caster" add_name="Empower + Acumen">
 		<set name="icon" value="icon.weapon_vesper_caster_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -1445,7 +1445,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19152" name="Blessed Celestial Caster" add_name="Acumen + Magic Hold">
+	<weapon id="19152" name="Blessed Kaliel Caster" add_name="Acumen + Magic Hold">
 		<set name="icon" value="icon.weapon_vesper_caster_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -1473,7 +1473,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19153" name="Blessed Celestial Caster" add_name="Magic Hold + Empower">
+	<weapon id="19153" name="Blessed Kaliel Caster" add_name="Magic Hold + Empower">
 		<set name="icon" value="icon.weapon_vesper_caster_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -1501,7 +1501,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19154" name="Blessed Celestial Retributer" add_name="MP Regeneration + Acumen">
+	<weapon id="19154" name="Blessed Kaliel Retributer" add_name="MP Regeneration + Acumen">
 		<set name="icon" value="icon.weapon_vesper_singer_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -1529,7 +1529,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19155" name="Blessed Celestial Retributer" add_name="Acumen + Empower">
+	<weapon id="19155" name="Blessed Kaliel Retributer" add_name="Acumen + Empower">
 		<set name="icon" value="icon.weapon_vesper_singer_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -1557,7 +1557,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19156" name="Blessed Celestial Retributer" add_name="Empower + MP Regeneration">
+	<weapon id="19156" name="Blessed Kaliel Retributer" add_name="Empower + MP Regeneration">
 		<set name="icon" value="icon.weapon_vesper_singer_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -1585,7 +1585,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19157" name="Blessed Celestial Dual Sword" add_name="Haste + Damage">
+	<weapon id="19157" name="Blessed Kaliel Dualsword" add_name="Haste + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1613,7 +1613,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19158" name="Blessed Celestial Dual Sword" add_name="Damage + Health">
+	<weapon id="19158" name="Blessed Kaliel Dualsword" add_name="Damage Up + Health">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1641,7 +1641,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19159" name="Blessed Celestial Dual Sword" add_name="Health + Haste">
+	<weapon id="19159" name="Blessed Kaliel Dualsword" add_name="Health + Haste">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1669,7 +1669,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19160" name="Blessed Celestial Dual Dagger" add_name="Damage + Focus">
+	<weapon id="19160" name="Blessed Kaliel Dual Dagger" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -1697,7 +1697,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19161" name="Blessed Celestial Dual Dagger" add_name="Focus + Guidance">
+	<weapon id="19161" name="Blessed Kaliel Dual Dagger" add_name="Focus + Guidance">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -1725,7 +1725,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19162" name="Blessed Celestial Dual Dagger" add_name="Guidance + Damage">
+	<weapon id="19162" name="Blessed Kaliel Dual Dagger" add_name="Guidance + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -1753,7 +1753,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19163" name="Blessed Celestial Dual Blunt Weapon" add_name="Focus + Guidance">
+	<weapon id="19163" name="Blessed Kaliel Dual Blunt Weapon" add_name="Focus + Guidance">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -1780,7 +1780,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19164" name="Blessed Celestial Dual Blunt Weapon" add_name="Guidance + Damage">
+	<weapon id="19164" name="Blessed Kaliel Dual Blunt Weapon" add_name="Guidance + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -1807,7 +1807,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19165" name="Blessed Celestial Dual Blunt Weapon" add_name="Damage + Focus ">
+	<weapon id="19165" name="Blessed Kaliel Dual Blunt Weapon" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="2100" levels="1" name="Escape: 1 second">
+	<skill id="2100" levels="1" name="Escape (1-second)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -15,7 +15,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="2101" levels="1" name="Feed: General Strider">
+	<skill id="2101" levels="1" name="General Strider Food">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -23,7 +23,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2102" levels="1" name="Feed: Clan Hall Strider">
+	<skill id="2102" levels="1" name="Clan Hall Strider Food">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -31,7 +31,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2103" levels="1" name="Mystery Potion">
+	<skill id="2103" levels="1" name="Mysterious Potion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -47,7 +47,7 @@
 			<effect abnormal="bighead" count="1" name="Buff" stackType="BigHead" time="600" val="0"/>
 		</for>
 	</skill>
-	<skill id="2104" levels="1" name="Greater Compressed Package of Soulshots: No-grade">
+	<skill id="2104" levels="1" name="Greater Soulshot Compressed Package (No-grade)">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -56,7 +56,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2105" levels="1" name="Greater Compressed Package of Soulshots:  D-grade">
+	<skill id="2105" levels="1" name="Greater Soulshot Compressed Package (D-grade)">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -65,7 +65,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2106" levels="1" name="Greater Compressed Package of Soulshots:  C-grade">
+	<skill id="2106" levels="1" name="Greater Soulshot Compressed Package (C-grade)">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -74,7 +74,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2107" levels="1" name="Greater Compressed Package of Soulshots:  B-grade">
+	<skill id="2107" levels="1" name="Greater Soulshot Compressed Package (B-grade)">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -83,7 +83,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2108" levels="1" name="Greater Compressed Package of Soulshots:  A-grade">
+	<skill id="2108" levels="1" name="Greater Soulshot Compressed Package (A-grade)">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -92,7 +92,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2109" levels="1" name="Greater Compressed Package of Soulshots: S-grade">
+	<skill id="2109" levels="1" name="Greater Soulshot Compressed Package (S-grade)">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -101,7 +101,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2110" levels="1" name="Greater Compressed Package of Spiritshots:  No-grade">
+	<skill id="2110" levels="1" name="Greater Spiritshot Compressed Package (No-grade)">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -110,7 +110,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2111" levels="1" name="Greater Compressed Package of Spiritshots:  D-grade">
+	<skill id="2111" levels="1" name="Greater Spiritshot Compressed Package (D-grade)">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -119,7 +119,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2112" levels="1" name="Greater Compressed Package of Spiritshots:  C-grade">
+	<skill id="2112" levels="1" name="Greater Spiritshot Compressed Package (C-grade)">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -128,7 +128,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2113" levels="1" name="Greater Compressed Package of Spiritshots:  B-grade">
+	<skill id="2113" levels="1" name="Greater Spiritshot Compressed Package (B-grade)">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -137,7 +137,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2114" levels="1" name="Greater Compressed Package of Spiritshots: A-grade">
+	<skill id="2114" levels="1" name="Greater Spiritshot Compressed Package (A-grade)">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -146,7 +146,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2115" levels="1" name="Greater Compressed Package of Spiritshots: S-grade">
+	<skill id="2115" levels="1" name="Greater Spiritshot Compressed Package (S-grade)">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -155,7 +155,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2116" levels="1" name="Greater Compressed Package of Blessed Spiritshots:  No-grade">
+	<skill id="2116" levels="1" name="Greater Blessed Spiritshot Compressed Package (No-grade)">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -164,7 +164,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2117" levels="1" name="Greater Compressed Package of Blessed Spiritshots:  D-grade">
+	<skill id="2117" levels="1" name="Greater Blessed Spiritshot Compressed Package (D-grade)">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -173,7 +173,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2118" levels="1" name="Greater Compressed Package of Blessed Spiritshots:  C-grade">
+	<skill id="2118" levels="1" name="Greater Blessed Spiritshot Compressed Package (C-grade)">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -182,7 +182,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2119" levels="1" name="Greater Compressed Package of Blessed Spiritshots:  B-grade">
+	<skill id="2119" levels="1" name="Greater Blessed Spiritshot Compressed Package (B-grade)">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -191,7 +191,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2120" levels="1" name="Greater Compressed Package of Blessed Spiritshots: A-grade">
+	<skill id="2120" levels="1" name="Greater Blessed Spiritshot Compressed Package (A-grade)">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -200,7 +200,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2121" levels="1" name="Greater Compressed Package of Blessed Spiritshots: S-grade">
+	<skill id="2121" levels="1" name="Greater Blessed Spiritshot Compressed Package (S-grade)">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -510,7 +510,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="altUse" val="true"/>
 	</skill>
-	<skill id="2150" levels="1" name="Soulshot: D-Grade">
+	<skill id="2150" levels="1" name="Soulshot (D-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -519,7 +519,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2151" levels="1" name="Soulshot: C-Grade">
+	<skill id="2151" levels="1" name="Soulshot (C-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -528,7 +528,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2152" levels="1" name="Soulshot: B-Grade">
+	<skill id="2152" levels="1" name="Soulshot (B-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -537,7 +537,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2153" levels="1" name="Soulshot: A-Grade">
+	<skill id="2153" levels="1" name="Soulshot (A-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -546,7 +546,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2154" levels="1" name="Soulshot: S-Grade">
+	<skill id="2154" levels="1" name="Soulshot (S-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -555,7 +555,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2155" levels="1" name="Spiritshot: D-Grade">
+	<skill id="2155" levels="1" name="Spiritshot (D-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -564,7 +564,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2156" levels="1" name="Spiritshot: C-Grade">
+	<skill id="2156" levels="1" name="Spiritshot (C-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -573,7 +573,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2157" levels="1" name="Spiritshot: B-Grade">
+	<skill id="2157" levels="1" name="Spiritshot (B-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -582,7 +582,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2158" levels="1" name="Spiritshot: A-Grade">
+	<skill id="2158" levels="1" name="Spiritshot (A-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -591,7 +591,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2159" levels="1" name="Spiritshot: S-Grade">
+	<skill id="2159" levels="1" name="Spiritshot (S-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -600,7 +600,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2160" levels="1" name="Blessed Spiritshot: D-Grade">
+	<skill id="2160" levels="1" name="Blessed Spiritshot (D-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -609,7 +609,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2161" levels="1" name="Blessed Spiritshot: C-Grade">
+	<skill id="2161" levels="1" name="Blessed Spiritshot (C-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -618,7 +618,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2162" levels="1" name="Blessed Spiritshot: B-Grade">
+	<skill id="2162" levels="1" name="Blessed Spiritshot (B-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -627,7 +627,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2163" levels="1" name="Blessed Spiritshot: A-Grade">
+	<skill id="2163" levels="1" name="Blessed Spiritshot (A-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -636,7 +636,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2164" levels="1" name="Blessed Spiritshot: S-Grade">
+	<skill id="2164" levels="1" name="Blessed Spiritshot (S-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -658,7 +658,7 @@
 		<set name="altUse" val="true"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2166" levels="2" name="CP Gauge Potion">
+	<skill id="2166" levels="2" name="Greater CP Potion">
 		<table name="#item">5591 5592</table>
 		<table name="#power">50 200</table>
 		<set name="magicType" val="SPECIAL"/>
@@ -673,7 +673,7 @@
 		<set name="altUse" val="true"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2167" levels="10" name="Scroll of SP">
+	<skill id="2167" levels="10" name="SP Scroll">
 		<table name="#item">5593 5594 5595 9898 15439 17184 17185 17276 17277 30275</table>
 		<table name="#power">500 5000 100000 500000 100000 500000 1000000 5000000 100000000 100000000</table>
 		<set name="magicType" val="SPECIAL"/>
@@ -689,7 +689,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2168" levels="6" name="Raid Blessing">
+	<skill id="2168" levels="6" name="Lucky Charm">
 		<table name="#itemConsumeId">5703 5803 5804 5805 5806 5807</table>
 		<table name="#levelMin">1 20 40 52 61 76</table>
 		<table name="#levelMax">19 39 51 60 75 80</table>
@@ -714,7 +714,7 @@
 			<effect count="1" name="Buff" stackOrder="1" stackType="CharmOfLuck" time="3600" val="0"/>
 		</for>
 	</skill>
-	<skill id="2169" levels="2" name="Magic Haste Potion">
+	<skill id="2169" levels="2" name="Greater Magic Haste Potion">
 		<table name="#Tab-mAtkSpd">1.23 1.3</table>
 		<table name="#stack">2 3</table>
 		<table name="#item">6035 6036</table>
@@ -829,7 +829,7 @@
 		<set name="skillType" val="RECALL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2179" levels="1" name="Blessed Scroll of Resurrection: Pet">
+	<skill id="2179" levels="1" name="Blessed Scroll of Resurrection (Pet)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="100"/>
@@ -846,7 +846,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="canPet" val="true"/>
 	</skill>
-	<skill id="2180" levels="1" name="Feed: Castle Strider">
+	<skill id="2180" levels="1" name="Wyvern Food">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -940,7 +940,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2190" levels="9" name="Item - Green Fish">
+	<skill id="2190" levels="9" name="Large Green Fat Fish">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -949,7 +949,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2191" levels="9" name="Item - Jade Fish">
+	<skill id="2191" levels="9" name="Large Jade Fat Fish">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -958,7 +958,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2192" levels="9" name="Item - Blue Fish">
+	<skill id="2192" levels="9" name="Large Blue Fat Fish">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -967,7 +967,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2193" levels="9" name="Item - Yellow Fish">
+	<skill id="2193" levels="9" name="Large Yellow Fat Fish">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -976,7 +976,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2194" levels="9" name="Item - Orange Fish">
+	<skill id="2194" levels="9" name="Large Orange Fat Fish">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -985,7 +985,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2195" levels="9" name="Item - Violet Fish">
+	<skill id="2195" levels="9" name="Large Purple Fat Fish">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -994,7 +994,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2196" levels="9" name="Item - Red Fish">
+	<skill id="2196" levels="9" name="Large Red Fat Fish">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -1003,7 +1003,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2197" levels="9" name="Item - White Fish">
+	<skill id="2197" levels="9" name="Large White Fat Fish">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -1012,7 +1012,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2198" levels="9" name="Item - Black Fish">
+	<skill id="2198" levels="9" name="Large Black Fat Fish">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -1021,7 +1021,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2199" levels="9" name="Item - Green Treasue Box">
+	<skill id="2199" levels="9" name="Large Green Treasure Chest">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>

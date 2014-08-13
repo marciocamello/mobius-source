@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="2400" levels="1" name="Red Coral Treasure Chest Key">
+	<skill id="2400" levels="1" name="Coral Treasure Chest Key">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="3000"/>
@@ -11,7 +11,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2401" levels="1" name="Lesser Battleground Mana Potion">
+	<skill id="2401" levels="1" name="Mana Recovery Potion (Battleground)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="600000"/>
@@ -29,7 +29,7 @@
 			<zone type="SIEGE"/>
 		</cond>
 	</skill>
-	<skill id="2402" levels="1" name="Lesser Battleground CP Potion">
+	<skill id="2402" levels="1" name="CP Recovery Potion (Battleground)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="600000"/>
@@ -47,7 +47,7 @@
 			<zone type="SIEGE"/>
 		</cond>
 	</skill>
-	<skill id="2403" levels="1" name="Spring CP Potion">
+	<skill id="2403" levels="1" name="Hot Springs CP Potion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="600000"/>
@@ -151,7 +151,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2410" levels="1" name="Bless Shield">
+	<skill id="2410" levels="1" name="Blessed Shield">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
 		<set name="magicLevel" val="48"/>
@@ -373,7 +373,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2428" levels="1" name="Scroll of Transformation - Rabbit">
+	<skill id="2428" levels="1" name="Transformation Scroll: Rabbit">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0298"/>
 		<set name="itemConsumeId" val="10274"/>
@@ -387,7 +387,7 @@
 			<effect count="1" name="Transformation" time="600" val="105"/>
 		</for>
 	</skill>
-	<skill id="2429" levels="1" name="Haste Juice">
+	<skill id="2429" levels="1" name="Haste Potion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -441,7 +441,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2432" levels="1" name="Critical Attack Juice">
+	<skill id="2432" levels="1" name="Critical Rate Juice">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i03"/>
 		<set name="magicLevel" val="1"/>
@@ -459,7 +459,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2433" levels="1" name="Casting Speed Juice">
+	<skill id="2433" levels="1" name="Casting Spd. Juice">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i04"/>
 		<set name="magicLevel" val="1"/>
@@ -495,7 +495,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2435" levels="1" name="Magic Power Juice">
+	<skill id="2435" levels="1" name="M. Atk. Juice">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i06"/>
 		<set name="magicLevel" val="1"/>
@@ -513,7 +513,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2436" levels="1" name="Power Juice">
+	<skill id="2436" levels="1" name="P. Atk. Potion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i07"/>
 		<set name="magicLevel" val="1"/>
@@ -531,7 +531,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2437" levels="1" name="Speed Juice">
+	<skill id="2437" levels="1" name="Wind Walk Juice">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i08"/>
 		<set name="magicLevel" val="1"/>
@@ -549,7 +549,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2438" levels="1" name="Defense Juice">
+	<skill id="2438" levels="1" name="P. Def. Juice">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i09"/>
 		<set name="magicLevel" val="1"/>
@@ -645,7 +645,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2446" levels="1" name="Anti-magic Armor">
+	<skill id="2446" levels="1" name="Anti Magic Armor">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -675,7 +675,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2449" levels="1" name="Song of Wind Storm">
+	<skill id="2449" levels="1" name="Song of Windstorm">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -685,7 +685,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2450" levels="1" name="Dance of Blade Storm">
+	<skill id="2450" levels="1" name="Blade Storm">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -705,7 +705,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2452" levels="1" name="Expose Weak Point">
+	<skill id="2452" levels="1" name="Expose Vulnerability">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -925,7 +925,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2474" levels="1" name="Improve Critical">
+	<skill id="2474" levels="1" name="Improve Critical Attack">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -975,7 +975,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2479" levels="1" name="Lord of Vampire">
+	<skill id="2479" levels="1" name="Lord of Vampires">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1005,7 +1005,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2482" levels="1" name="Spirit of Phoenix">
+	<skill id="2482" levels="1" name="Spirit of the Phoenix">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1025,7 +1025,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2484" levels="1" name="Pain of Shillien">
+	<skill id="2484" levels="1" name="Pain of Shilen">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1085,7 +1085,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2490" levels="1" name="Magic Defense Toolkit for beginners">
+	<skill id="2490" levels="1" name="M. Def. Toolkit (Novice)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1179,7 +1179,7 @@
 		<set name="isHandler" val="true"/>
 		<set name="altUse" val="true"/>
 	</skill>
-	<skill id="2499" levels="1" name="Bottle of Full Soul">
+	<skill id="2499" levels="1" name="Full Bottle of Souls">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>

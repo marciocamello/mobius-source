@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="10900" name="Spell Breaker - Hail" add_name="Magic Mental Shield">
+	<weapon id="10900" name="Spell Breaker - Tidal Wave" add_name="Magic Mental Shield">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -33,7 +33,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10901" name="Spell Breaker - Hail" add_name="Magic Hold">
+	<weapon id="10901" name="Spell Breaker - Tidal Wave" add_name="Magic Hold">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -478,7 +478,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10916" name="Sprite's Staff - Hail">
+	<weapon id="10916" name="Spirit's Staff - Hail">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -507,7 +507,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10917" name="Sprite's Staff - Hail" add_name="Magic Regeneration">
+	<weapon id="10917" name="Spirit's Staff - Hail" add_name="Magic Regeneration">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -539,7 +539,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10918" name="Sprite's Staff - Hail" add_name="Magic Mental Shield">
+	<weapon id="10918" name="Spirit's Staff - Hail" add_name="Magic Mental Shield">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -571,7 +571,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10919" name="Sprite's Staff - Hail" add_name="Magic Hold">
+	<weapon id="10919" name="Spirit's Staff - Hail" add_name="Magic Hold">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -631,7 +631,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10921" name="Caliburs*Sword of Limit - Destruction">
+	<weapon id="10921" name="Caliburs*Ultimate Sword - Destruction">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -1242,7 +1242,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10942" name="Hell Knife - Confusion">
+	<weapon id="10942" name="Twilight Knife - Confusion">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -1271,7 +1271,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10943" name="Hell Knife - Confusion" add_name="Magic Regeneration">
+	<weapon id="10943" name="Twilight Knife - Confusion" add_name="Magic Regeneration">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -1303,7 +1303,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10944" name="Hell Knife - Confusion" add_name="Magic Mental Shield">
+	<weapon id="10944" name="Twilight Knife - Confusion" add_name="Magic Mental Shield">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -1335,7 +1335,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10945" name="Hell Knife - Confusion" add_name="Magic Weakness">
+	<weapon id="10945" name="Twilight Knife - Confusion" add_name="Magic Weakness">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -1479,7 +1479,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10950" name="Sword of Limit*Samurai Long Sword - Destruction">
+	<weapon id="10950" name="Ultimate Sword*Samurai Long Sword - Destruction">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -1619,7 +1619,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10955" name="Guardian Sword - Great Gale">
+	<weapon id="10955" name="Guardian's Sword - Great Gale">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -1647,7 +1647,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10956" name="Guardian Sword - Great Gale" add_name="Critical Drain">
+	<weapon id="10956" name="Guardian's Sword - Great Gale" add_name="Critical Drain">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -1678,7 +1678,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10957" name="Guardian Sword - Great Gale" add_name="Health">
+	<weapon id="10957" name="Guardian's Sword - Great Gale" add_name="Health">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -1707,7 +1707,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10958" name="Guardian Sword - Great Gale" add_name="Critical Bleed">
+	<weapon id="10958" name="Guardian's Sword - Great Gale" add_name="Critical Bleed">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -1738,7 +1738,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10959" name="Sword of Damascus - Earth">
+	<weapon id="10959" name="Damascus Sword (Earth)">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -1766,7 +1766,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10960" name="Sword of Damascus - Earth" add_name="Focus">
+	<weapon id="10960" name="Damascus Sword (Earth)" add_name="Focus">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -1795,7 +1795,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10961" name="Sword of Damascus - Earth" add_name="Critical Damage">
+	<weapon id="10961" name="Damascus Sword (Earth)" add_name="Critical Damage">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -1824,7 +1824,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10962" name="Sword of Damascus - Earth" add_name="Haste">
+	<weapon id="10962" name="Damascus Sword (Earth)" add_name="Haste">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -1976,7 +1976,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10967" name="Lance - Earth">
+	<weapon id="10967" name="Lance (Earth)">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -2005,7 +2005,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10968" name="Lance - Earth" add_name="Anger">
+	<weapon id="10968" name="Lance (Earth)" add_name="Anger">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -2034,7 +2034,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10969" name="Lance - Earth" add_name="Critical Stun">
+	<weapon id="10969" name="Lance (Earth)" add_name="Critical Stun">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -2066,7 +2066,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10970" name="Lance - Earth" add_name="Long Blow">
+	<weapon id="10970" name="Lance (Earth)" add_name="Long Blow">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -2719,7 +2719,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10992" name="Demon Dagger - Great Gale">
+	<weapon id="10992" name="Demon's Dagger - Great Gale">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -2747,7 +2747,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10993" name="Demon Dagger - Great Gale" add_name="Critical Bleed">
+	<weapon id="10993" name="Demon's Dagger - Great Gale" add_name="Critical Bleed">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -2778,7 +2778,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10994" name="Demon Dagger - Great Gale" add_name="Critical Poison">
+	<weapon id="10994" name="Demon's Dagger - Great Gale" add_name="Critical Poison">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -2809,7 +2809,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10995" name="Demon Dagger - Great Gale" add_name="Mortal Strike">
+	<weapon id="10995" name="Demon's Dagger - Great Gale" add_name="Mortal Strike">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -2838,7 +2838,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10996" name="Demon Dagger - Great Gale" add_name="Critical Damage">
+	<weapon id="10996" name="Demon's Dagger - Great Gale" add_name="Critical Damage">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>

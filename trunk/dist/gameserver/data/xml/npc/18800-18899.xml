@@ -433,7 +433,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="18806" name="Brazier of Purity" title="">
+	<npc id="18806" name="Purifying Magic Circle" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Heine.FieldOfSelenceAndWhispers.BrazierOfPurity"/>
 		<set name="baseAtkRange" value="40"/>
@@ -806,7 +806,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="18812" name="Kasha's Eye" title="">
+	<npc id="18812" name="Kasha's Eye" title="Atk. Spd. Boost">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="KashasEye"/>
 		<set name="baseAtkRange" value="40"/>
@@ -849,7 +849,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="18813" name="Kasha's Eye" title="">
+	<npc id="18813" name="Kasha's Eye" title="P. Atk. Boost">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="KashasEye"/>
 		<set name="baseAtkRange" value="40"/>
@@ -892,7 +892,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="18814" name="Kasha's Eye" title="">
+	<npc id="18814" name="Kasha's Eye" title="Critical Rate Boost">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="KashasEye"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1429,7 +1429,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="18826" name="Shilen's Evil Thoughts For Presentation" title="">
+	<npc id="18826" name="Shilen's Evil Thoughts (Presentation)" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1472,7 +1472,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="18827" name="Priest Cain for Presentation" title="">
+	<npc id="18827" name="Priest Cain (Presentation)" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1558,7 +1558,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="18829" name="Shilen's Evil Thoughts Captain For Presentation" title="">
+	<npc id="18829" name="Shilen's Evil Thoughts Captain (Presentation)" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1601,7 +1601,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="18830" name="Boz's Energy" title="">
+	<npc id="18830" name="Boz' Energy" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1644,7 +1644,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="18831" name="ssq For Presentation Camera Dummy 2" title="">
+	<npc id="18831" name="Camera Dummy 2 (ssq Presentation)" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1687,7 +1687,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="18832" name="ssq For Presentation Camera Dummy 3" title="">
+	<npc id="18832" name="Camera Dummy 3 (ssq Presentation)" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -2697,7 +2697,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="18854" name="Archer's Breath" title="">
+	<npc id="18854" name="Icy Breath" title="">
 		<set name="aggroRange" value="1200"/>
 		<set name="ai_type" value="freya.IceCastleBreath"/>
 		<set name="baseAtkRange" value="40"/>
@@ -2747,7 +2747,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="18855" name="Archery Knight" title="">
+	<npc id="18855" name="Ice Knight" title="">
 		<set name="aggroRange" value="1200"/>
 		<set name="ai_type" value="freya.IceKnightNormal"/>
 		<set name="baseAtkRange" value="40"/>
@@ -2807,7 +2807,7 @@
 			<defence attribute="unholy" value="200"/>
 		</attributes>
 	</npc>
-	<npc id="18856" name="Archery Knight" title="">
+	<npc id="18856" name="Ice Knight" title="">
 		<set name="aggroRange" value="600"/>
 		<set name="ai_type" value="freya.IceKnightNormal"/>
 		<set name="baseAtkRange" value="40"/>

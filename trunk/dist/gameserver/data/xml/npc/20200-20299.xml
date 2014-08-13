@@ -235,7 +235,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 	</npc>
-	<npc id="20202" name="Corpse Seeker" title="">
+	<npc id="20202" name="Corpse Tracker" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>

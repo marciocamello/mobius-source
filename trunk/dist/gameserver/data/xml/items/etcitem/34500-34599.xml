@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE list SYSTEM "item.dtd">
+
+<list>
+    <etcitem id="34575" name="Player Commendation - Scroll: Enchant Weapon (A-grade)" add_name="PC-exclusive">
+        <set name="class" value="CONSUMABLE"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="100"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="34576" name="Player Commendation - Scroll: Enchant Weapon (B-grade)" add_name="PC-exclusive">
+        <set name="class" value="CONSUMABLE"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="100"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="34577" name="Player Commendation - Scroll: Enchant Weapon (C-grade)" add_name="PC-exclusive">
+        <set name="class" value="CONSUMABLE"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="100"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="34578" name="Player Commendation - Scroll: Enchant Weapon (D-grade)" add_name="PC-exclusive">
+        <set name="class" value="CONSUMABLE"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="100"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="34579" name="Player Commendation - Scroll: Enchant Weapon (R-grade)" add_name="PC-exclusive">
+        <set name="class" value="CONSUMABLE"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="100"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="34580" name="Player Commendation - Scroll: Enchant Weapon (S-grade)" add_name="PC-exclusive">
+        <set name="class" value="CONSUMABLE"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="100"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+</list>

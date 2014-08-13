@@ -268,7 +268,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11710" name="Common Item - Titan Sword">
+	<weapon id="11710" name="Common Item - Lesser Giant's Sword">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
@@ -294,7 +294,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11711" name="Common Item - Titan Hammer">
+	<weapon id="11711" name="Common Item - Lesser Giant's Hammer">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
@@ -401,7 +401,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11715" name="Common Item - Demon Fangs">
+	<weapon id="11715" name="Common Item - Demon's Fangs">
 		<set name="enchantable" value="false"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="104"/>
@@ -1205,7 +1205,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11746" name="Common Item - Wolverine Needle">
+	<weapon id="11746" name="Common Item - Needle Wolverine">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="33"/>
 		<set name="crystal_type" value="C"/>
@@ -1473,7 +1473,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11756" name="Common Item - Stormbringer">
+	<weapon id="11756" name="Common Item - StormBringer">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="33"/>
 		<set name="crystal_type" value="C"/>
@@ -1973,7 +1973,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11775" name="Common Item - Elven Bow of Nobility">
+	<weapon id="11775" name="Common Item - Noble Elven Bow">
 		<set name="enchantable" value="false"/>
 		<set name="atk_reuse" value="1500"/>
 		<set name="crystal_count" value="0"/>

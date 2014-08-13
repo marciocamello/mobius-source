@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="22882" name="Hair Accessory Appearance Restoration Stone">
+	<etcitem id="22882" name="Hair Accessory Restoration Stone">
 		<set name="icon" value="BranchSys3.icon.g_bless_wp_processing_stone_r"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -18,21 +18,21 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22883" name="Vitality Replenishing Scroll">
+	<etcitem id="22883" name="Scroll: Replenish Vitality">
 		<set name="icon" value="BranchSys3.lcon.g_scrl_vitality_point_up"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22884" name="Vitality Replenishing High-grade Scroll">
+	<etcitem id="22884" name="Scroll: Replenish Vitality (High-grade)">
 		<set name="icon" value="BranchSys3.lcon.g_scrl_vitality_point_up_2"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22885" name="Vitality Replenishing Top-grade Scroll">
+	<etcitem id="22885" name="Scroll: Replenish Vitality (Top-grade)">
 		<set name="icon" value="BranchSys3.lcon.g_scrl_vitality_point_up_3"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
@@ -57,28 +57,28 @@
 		<set name="crystal_type" value="R"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22890" name="Mysterious Soulshot Large Pack (R-grade) 10000">
+	<etcitem id="22890" name="Mysterious Soulshot Large Pack (R-grade)">
 		<set name="icon" value="icon.br_cash_pack_of_soulshot_r_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22891" name="Mysterious Soulshot Pack (R-grade) 5000 ??.">
+	<etcitem id="22891" name="Mysterious Soulshot Pack (R-grade)">
 		<set name="icon" value="icon.br_cash_pack_of_soulshot_r_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22892" name="Mysterious Spiritshot Large Pack (R-grade) 10 000 ??.">
+	<etcitem id="22892" name="Mysterious Spiritshot Large Pack (R-grade)">
 		<set name="icon" value="icon.br_cash_pack_of_spiritshot_r_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22893" name="Mysterious Spiritshot Pack (R-grade) 5000 ??.">
+	<etcitem id="22893" name="Mysterious Spiritshot Pack (R-grade)">
 		<set name="icon" value="icon.br_cash_pack_of_spiritshot_r_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
@@ -118,7 +118,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22899" name="Vitality Decrease Scroll">
+	<etcitem id="22899" name="Scroll: Decrease Vitality">
 		<set name="icon" value="icon.etc_penalty_recovery_i02"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>

@@ -430,7 +430,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33340" name="Vesper Dual Sword of Destiny (Fire)">
+	<weapon id="33340" name="Vesper Dualsword of Destiny (Fire)">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="weight" value="152"/>
 		<set name="rnd_dam" value="10"/>
@@ -844,7 +844,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33356" name="Vesper Dual Sword of Destiny (Water)">
+	<weapon id="33356" name="Vesper Dualsword of Destiny (Water)">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="weight" value="152"/>
 		<set name="rnd_dam" value="10"/>
@@ -1258,7 +1258,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33372" name="Vesper Dual Sword of Destiny (Wind)">
+	<weapon id="33372" name="Vesper Dualsword of Destiny (Wind)">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="weight" value="152"/>
 		<set name="rnd_dam" value="10"/>

@@ -49,7 +49,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="30502" name="Bound Hazard Bow">
+	<weapon id="30502" name="Bound Bow of Peril">
 		<set name="icon" value="icon.weapon_hazard_bow_i00"/>
 		<set name="weight" value="1700"/>
 		<set name="rnd_dam" value="5"/>
@@ -74,7 +74,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30503" name="Bound Hazard Bow" add_name="Guidance">
+	<weapon id="30503" name="Bound Bow of Peril" add_name="Guidance">
 		<set name="icon" value="icon.weapon_hazard_bow_i00"/>
 		<set name="weight" value="1700"/>
 		<set name="rnd_dam" value="5"/>
@@ -102,7 +102,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30504" name="Bound Hazard Bow" add_name="Quick Recovery">
+	<weapon id="30504" name="Bound Bow of Peril" add_name="Quick Recovery">
 		<set name="icon" value="icon.weapon_hazard_bow_i00"/>
 		<set name="weight" value="1700"/>
 		<set name="rnd_dam" value="5"/>
@@ -127,7 +127,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30505" name="Bound Hazard Bow" add_name="Cheap Shot">
+	<weapon id="30505" name="Bound Bow of Peril" add_name="Cheap Shot">
 		<set name="icon" value="icon.weapon_hazard_bow_i00"/>
 		<set name="weight" value="1700"/>
 		<set name="rnd_dam" value="5"/>
@@ -548,7 +548,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30534" name="Bound Plated Shield">
+	<weapon id="30534" name="Bound Plate Shield">
 		<set name="icon" value="icon.shield_plate_shield_i00"/>
 		<set name="weight" value="1310"/>
 		<equip>
@@ -566,7 +566,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="30535" name="Bound Plated Shield">
+	<weapon id="30535" name="Bound Plate Shield">
 		<set name="icon" value="icon.shield_plate_shield_i00"/>
 		<equip>
 			<slot id="LEFT_HAND"/>
@@ -658,7 +658,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30545" name="Bound Flamberge" add_name="Light">
+	<weapon id="30545" name="Bound Flamberge" add_name="Light Armor">
 		<set name="icon" value="icon.weapon_flamberge_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -1039,7 +1039,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30580" name="Bound Paradia Staff" add_name="Mental Shield">
+	<weapon id="30580" name="Bound Paradia Staff" add_name="Magic Mental Shield">
 		<set name="icon" value="icon.weapon_paradia_staff_i01"/>
 		<set name="weight" value="1010"/>
 		<set name="rnd_dam" value="20"/>

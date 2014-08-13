@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="800" levels="3" name="Master Ability - Magic Defense">
+	<skill id="800" levels="3" name="Master Ability: M. Def.">
 		<table name="#mDef">50 100 150</table>
 		<set name="icon" val="icon.skill0142"/>
 		<set name="magicLevel" val="75"/>
@@ -11,7 +11,7 @@
 			<add order="0x60" val="#mDef" stat="mDef"/>
 		</for>
 	</skill>
-	<skill id="801" levels="1" name="Warrior Ability - Boost CP">
+	<skill id="801" levels="1" name="Warrior Ability: Boost CP">
 		<set name="icon" val="icon.skill0440"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -21,7 +21,7 @@
 			<add order="0x60" val="738" stat="maxCp"/>
 		</for>
 	</skill>
-	<skill id="802" levels="1" name="Wizard Ability - Anti-magic">
+	<skill id="802" levels="1" name="Wizard Ability: Anti-magic">
 		<set name="icon" val="icon.skill0146"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -31,7 +31,7 @@
 			<add order="0x60" val="100" stat="mDef"/>
 		</for>
 	</skill>
-	<skill id="803" levels="1" name="Healer Ability - Divine Protection">
+	<skill id="803" levels="1" name="Healer Ability: Divine Protection">
 		<set name="icon" val="icon.skill1353"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -42,7 +42,7 @@
 			<add order="0x60" stat="defenceHoly" val="5"/>
 		</for>
 	</skill>
-	<skill id="804" levels="1" name="Knight Ability - Resist Critical">
+	<skill id="804" levels="1" name="Knight Ability: Critical Damage Resistance">
 		<set name="icon" val="icon.skill0232"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -52,7 +52,7 @@
 			<mul order="0x30" stat="critDamRcpt" val="0.95"/>
 		</for>
 	</skill>
-	<skill id="805" levels="1" name="not used">
+	<skill id="805" levels="1" name="Not in Use">
 		<set name="icon" val="icon.skill0142"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -301,7 +301,7 @@
 			<using kind="Big Sword, Big Blunt"/>
 		</cond>
 	</skill>
-	<skill id="817" levels="43" name="Double Strike">
+	<skill id="817" levels="43" name="Double Attack">
 		<table name="#mpConsume2">41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83</table>
 		<table name="#magicLevel">43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85</table>
 		<table name="#power">992 1049 1109 1171 1236 1302 1371 1443 1516 1592 1670 1750 1832 1917 2003 2091 2181 2272 2366 2460 2556 2653 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640</table>
@@ -451,7 +451,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="825" levels="1" name="Sharp Edge">
+	<skill id="825" levels="1" name="Sharpen Edge">
 		<set name="icon" val="icon.skill0825"/>
 		<set name="coolTime" val="500"/>
 		<set name="reuseDelay" val="2000"/>
@@ -503,7 +503,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="827" levels="1" name="Restring">
+	<skill id="827" levels="1" name="Bowstring">
 		<set name="icon" val="icon.skill0827"/>
 		<set name="coolTime" val="500"/>
 		<set name="reuseDelay" val="2000"/>
@@ -527,7 +527,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="828" levels="1" name="Case Harden">
+	<skill id="828" levels="1" name="Face Harden">
 		<set name="icon" val="icon.skill0828"/>
 		<set name="coolTime" val="500"/>
 		<set name="reuseDelay" val="2000"/>
@@ -1059,7 +1059,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="863" levels="1" name="Knight Mercenary">
+	<skill id="863" levels="1" name="Royal Guard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1069,7 +1069,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="864" levels="1" name="Archer Mercenary">
+	<skill id="864" levels="1" name="Archer Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1079,7 +1079,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="865" levels="1" name="Wizard Mercenary">
+	<skill id="865" levels="1" name="Wizard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1089,7 +1089,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="866" levels="1" name="White Captain">
+	<skill id="866" levels="1" name="Centurion">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1131,7 +1131,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="870" levels="1" name="Knight Mercenary Power Strike">
+	<skill id="870" levels="1" name="Royal Guard Captain Power Strike">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="coolTime" val="720"/>
 		<set name="reuseDelay" val="3000"/>
@@ -1157,7 +1157,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="872" levels="1" name="Archer Mercenary Power Shot">
+	<skill id="872" levels="1" name="Archer Captain Power Shot">
 		<set name="icon" val="icon.skill0056"/>
 		<set name="coolTime" val="800"/>
 		<set name="reuseDelay" val="6000"/>
@@ -1182,7 +1182,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="874" levels="1" name="Wizard Mercenary Flame Strike">
+	<skill id="874" levels="1" name="Wizard Captain Flame Strike">
 		<set name="magicType" val="MAGIC"/>
 		<set name="affectLimit" val="5;12"/>
 		<set name="icon" val="icon.skill1181"/>
@@ -1212,7 +1212,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="876" levels="1" name="White Captain Enuma Elish">
+	<skill id="876" levels="1" name="Centurion Enuma Elish">
 		<set name="affectLimit" val="5;12"/>
 		<set name="icon" val="icon.skill0526"/>
 		<set name="coolTime" val="720"/>
@@ -1225,7 +1225,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="877" levels="1" name="White Captain Disarm">
+	<skill id="877" levels="1" name="Centurion Disarm">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill0485"/>
 		<set name="reuseDelay" val="8000"/>

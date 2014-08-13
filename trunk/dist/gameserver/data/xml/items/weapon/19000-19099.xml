@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="19000" name="Bound Amaranthine Shaper" add_name="Focus ">
+	<weapon id="19000" name="Bound Amaranthine Shaper" add_name="Focus">
 		<set name="icon" value="icon.weapon_stanpid_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -142,7 +142,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19005" name="Bound Amaranthine Slasher" add_name="Damage">
+	<weapon id="19005" name="Bound Amaranthine Slasher" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_bauen_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -310,7 +310,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19011" name="Bound Amaranthine Fighter" add_name="Damage">
+	<weapon id="19011" name="Bound Amaranthine Fighter" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_octoclaw_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -419,7 +419,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19015" name="Bound Amaranthine Stormer" add_name="Damage">
+	<weapon id="19015" name="Bound Amaranthine Stormer" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_crabel_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -447,7 +447,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19016" name="Bound Amaranthine Thrower" add_name="Damage">
+	<weapon id="19016" name="Bound Amaranthine Thrower" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_castron_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -864,7 +864,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19031" name="Bound Amaranthine Dual Sword" add_name="Haste">
+	<weapon id="19031" name="Bound Amaranthine Dualsword" add_name="Haste">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -892,7 +892,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19032" name="Bound Amaranthine Dual Sword" add_name="Damage">
+	<weapon id="19032" name="Bound Amaranthine Dualsword" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -920,7 +920,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19033" name="Bound Amaranthine Dual Sword" add_name="Health">
+	<weapon id="19033" name="Bound Amaranthine Dualsword" add_name="Health">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -948,7 +948,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19034" name="Bound Amaranthine Dual Dagger" add_name="Damage">
+	<weapon id="19034" name="Bound Amaranthine Dual Dagger" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1086,7 +1086,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19039" name="Bound Amaranthine Dual Blunt Weapon" add_name="Damage">
+	<weapon id="19039" name="Bound Amaranthine Dual Blunt Weapon" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1113,7 +1113,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19040" name="Blessed Seraph Shaper" add_name="Guidance">
+	<weapon id="19040" name="Blessed Amaranthine Shaper" add_name="Guidance">
 		<set name="icon" value="icon.weapon_stanpid_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -1141,7 +1141,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19041" name="Blessed Seraph Shaper" add_name="Haste">
+	<weapon id="19041" name="Blessed Amaranthine Shaper" add_name="Haste">
 		<set name="icon" value="icon.weapon_stanpid_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -1169,7 +1169,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19042" name="Blessed Seraph Shaper" add_name="Focus ">
+	<weapon id="19042" name="Blessed Amaranthine Shaper" add_name="Focus">
 		<set name="icon" value="icon.weapon_stanpid_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -1309,7 +1309,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19047" name="Blessed Amaranthine Slasher" add_name="Damage">
+	<weapon id="19047" name="Blessed Amaranthine Slasher" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_bauen_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -1477,7 +1477,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19053" name="Blessed Amaranthine Fighter" add_name="Damage">
+	<weapon id="19053" name="Blessed Amaranthine Fighter" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_octoclaw_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -1589,7 +1589,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19057" name="Blessed Amaranthine Stormer" add_name="Damage">
+	<weapon id="19057" name="Blessed Amaranthine Stormer" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_crabel_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -1617,7 +1617,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19058" name="Blessed Amaranthine Thrower" add_name="Damage">
+	<weapon id="19058" name="Blessed Amaranthine Thrower" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_castron_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -2046,7 +2046,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19073" name="Blessed Amaranthine Dual Sword" add_name="Haste">
+	<weapon id="19073" name="Blessed Amaranthine Dualsword" add_name="Haste">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -2074,7 +2074,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19074" name="Blessed Amaranthine Dual Sword" add_name="Damage">
+	<weapon id="19074" name="Blessed Amaranthine Dualsword" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -2102,7 +2102,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19075" name="Blessed Amaranthine Dual Sword" add_name="Health">
+	<weapon id="19075" name="Blessed Amaranthine Dualsword" add_name="Health">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -2130,7 +2130,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19076" name="Blessed Amaranthine Dual Dagger" add_name="Damage">
+	<weapon id="19076" name="Blessed Amaranthine Dual Dagger" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -2268,7 +2268,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19081" name="Blessed Amaranthine Dual Blunt Weapon" add_name="Damage">
+	<weapon id="19081" name="Blessed Amaranthine Dual Blunt Weapon" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -2295,7 +2295,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="19082" name="Blessed Celestial Shaper" add_name="Guidance">
+	<weapon id="19082" name="Blessed Kaliel Shaper" add_name="Guidance">
 		<set name="icon" value="icon.weapon_vesper_shaper_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -2323,7 +2323,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19083" name="Blessed Celestial Shaper" add_name="Haste">
+	<weapon id="19083" name="Blessed Kaliel Shaper" add_name="Haste">
 		<set name="icon" value="icon.weapon_vesper_shaper_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -2351,7 +2351,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19084" name="Blessed Celestial Shaper" add_name="Focus ">
+	<weapon id="19084" name="Blessed Kaliel Shaper" add_name="Focus">
 		<set name="icon" value="icon.weapon_vesper_shaper_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -2379,7 +2379,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19085" name="Blessed Celestial Cutter" add_name="Haste">
+	<weapon id="19085" name="Blessed Kaliel Cutter" add_name="Haste">
 		<set name="icon" value="icon.weapon_vesper_cutter_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -2406,7 +2406,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19086" name="Blessed Celestial Cutter" add_name="Focus">
+	<weapon id="19086" name="Blessed Kaliel Cutter" add_name="Focus">
 		<set name="icon" value="icon.weapon_vesper_cutter_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -2433,7 +2433,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19087" name="Blessed Celestial Cutter" add_name="Health">
+	<weapon id="19087" name="Blessed Kaliel Cutter" add_name="Health">
 		<set name="icon" value="icon.weapon_vesper_cutter_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -2460,7 +2460,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19088" name="Blessed Celestial Slasher" add_name="Focus">
+	<weapon id="19088" name="Blessed Kaliel Slasher" add_name="Focus">
 		<set name="icon" value="icon.weapon_vesper_slasher_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -2487,7 +2487,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19089" name="Blessed Celestial Slasher" add_name="Damage">
+	<weapon id="19089" name="Blessed Kaliel Slasher" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_vesper_slasher_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -2514,7 +2514,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19090" name="Blessed Celestial Slasher" add_name="Haste">
+	<weapon id="19090" name="Blessed Kaliel Slasher" add_name="Haste">
 		<set name="icon" value="icon.weapon_vesper_slasher_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -2541,7 +2541,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19091" name="Blessed Celestial Avenger" add_name="Haste">
+	<weapon id="19091" name="Blessed Kaliel Avenger" add_name="Haste">
 		<set name="icon" value="icon.weapon_vesper_avenger_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -2568,7 +2568,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19092" name="Blessed Celestial Avenger" add_name="Critical Damage">
+	<weapon id="19092" name="Blessed Kaliel Avenger" add_name="Critical Damage">
 		<set name="icon" value="icon.weapon_vesper_avenger_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -2595,7 +2595,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19093" name="Blessed Celestial Avenger" add_name="Focus">
+	<weapon id="19093" name="Blessed Kaliel Avenger" add_name="Focus">
 		<set name="icon" value="icon.weapon_vesper_avenger_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -2622,7 +2622,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19094" name="Blessed Celestial Fighter" add_name="Focus">
+	<weapon id="19094" name="Blessed Kaliel Fighter" add_name="Focus">
 		<set name="icon" value="icon.weapon_octoclaw_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -2649,7 +2649,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19095" name="Blessed Celestial Fighter" add_name="Damage">
+	<weapon id="19095" name="Blessed Kaliel Fighter" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_octoclaw_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -2676,7 +2676,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19096" name="Blessed Celestial Fighter" add_name="Haste">
+	<weapon id="19096" name="Blessed Kaliel Fighter" add_name="Haste">
 		<set name="icon" value="icon.weapon_octoclaw_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -2703,7 +2703,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19097" name="Blessed Celestial Stormer" add_name="HP Drain">
+	<weapon id="19097" name="Blessed Kaliel Stormer" add_name="HP Drain">
 		<set name="icon" value="icon.weapon_vesper_stormer_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -2730,7 +2730,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19098" name="Blessed Celestial Stormer" add_name="Guidance">
+	<weapon id="19098" name="Blessed Kaliel Stormer" add_name="Guidance">
 		<set name="icon" value="icon.weapon_vesper_stormer_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -2757,7 +2757,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="19099" name="Blessed Celestial Stormer" add_name="Damage">
+	<weapon id="19099" name="Blessed Kaliel Stormer" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_vesper_stormer_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>

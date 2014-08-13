@@ -63,7 +63,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 	</etcitem>
-	<etcitem id="30425" name="Recipe: Blessed Spiritshot R">
+	<etcitem id="30425" name="Recipe: Blessed Spiritshot (R-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

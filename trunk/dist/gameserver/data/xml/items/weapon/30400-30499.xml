@@ -109,7 +109,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="30403" name="Infinity Dual Sword">
+	<weapon id="30403" name="Infinity Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
 		<set name="weight" value="1300"/>
 		<set name="rnd_dam" value="10"/>
@@ -218,7 +218,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="30440" name="Staff of the Bound Spirit">
+	<weapon id="30440" name="Bound Ghost Staff">
 		<set name="icon" value="icon.weapon_ghost_staff_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -243,7 +243,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30441" name="Staff of the Bound Spirit">
+	<weapon id="30441" name="Bound Ghost Staff">
 		<set name="icon" value="icon.weapon_ghost_staff_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -288,7 +288,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="30445" name="Bound Homunkulus's Sword">
+	<weapon id="30445" name="Bound Homunkulus' Sword">
 		<set name="icon" value="icon.weapon_homunkuluss_sword_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -313,7 +313,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30446" name="Bound Homunkulus's Sword" add_name="Acumen">
+	<weapon id="30446" name="Bound Homunkulus' Sword" add_name="Acumen">
 		<set name="icon" value="icon.weapon_homunkuluss_sword_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -341,7 +341,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30447" name="Bound Homunkulus's Sword" add_name="Conversion">
+	<weapon id="30447" name="Bound Homunkulus' Sword" add_name="Conversion">
 		<set name="icon" value="icon.weapon_homunkuluss_sword_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -366,7 +366,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30448" name="Bound Homunkulus's Sword" add_name="Magic Paralyze">
+	<weapon id="30448" name="Bound Homunkulus' Sword" add_name="Magic Paralyze">
 		<set name="icon" value="icon.weapon_homunkuluss_sword_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -391,7 +391,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30449" name="Blood of the Bound Sage">
+	<weapon id="30449" name="Bound Sage's Blood">
 		<set name="icon" value="icon.weapon_blood_of_saints_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -415,7 +415,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30450" name="Staff of the Bound Sage">
+	<weapon id="30450" name="Bound Sage's Staff">
 		<set name="icon" value="icon.weapon_sages_staff_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -440,7 +440,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30451" name="Staff of the Bound Sage" add_name="Magic Hold">
+	<weapon id="30451" name="Bound Sage's Staff" add_name="Magic Hold">
 		<set name="icon" value="icon.weapon_sages_staff_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -465,7 +465,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30452" name="Staff of the Bound Sage" add_name="Magic Poison">
+	<weapon id="30452" name="Bound Sage's Staff" add_name="Magic Poison">
 		<set name="icon" value="icon.weapon_sages_staff_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -490,7 +490,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30453" name="Staff of the Bound Sage" add_name="Magic Weakness">
+	<weapon id="30453" name="Bound Sage's Staff" add_name="Magic Weakness">
 		<set name="icon" value="icon.weapon_sages_staff_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -642,7 +642,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30465" name="Bound Twilight Knife" add_name="Mental Shield">
+	<weapon id="30465" name="Bound Twilight Knife" add_name="Magic Mental Shield">
 		<set name="icon" value="icon.weapon_hell_knife_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -694,7 +694,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30467" name="Bound Twilight Hound">
+	<weapon id="30467" name="Bound Hell Hound">
 		<set name="icon" value="icon.weapon_hell_hound_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -720,7 +720,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="30468" name="Bound Twilight Hound" add_name="Guidance">
+	<weapon id="30468" name="Bound Hell Hound" add_name="Guidance">
 		<set name="icon" value="icon.weapon_hell_hound_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -749,7 +749,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="30469" name="Bound Twilight Hound" add_name="Quick Recovery">
+	<weapon id="30469" name="Bound Hell Hound" add_name="Quick Recovery">
 		<set name="icon" value="icon.weapon_hell_hound_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -775,7 +775,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="30470" name="Bound Twilight Hound" add_name="Cheap Shot">
+	<weapon id="30470" name="Bound Hell Hound" add_name="Cheap Shot">
 		<set name="icon" value="icon.weapon_hell_hound_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1029,7 +1029,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30480" name="Bound Heavy Doom Hammer" add_name="Mental Shield">
+	<weapon id="30480" name="Bound Heavy Doom Hammer" add_name="Magic Mental Shield">
 		<set name="icon" value="icon.weapon_heavy_doom_hammer_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>

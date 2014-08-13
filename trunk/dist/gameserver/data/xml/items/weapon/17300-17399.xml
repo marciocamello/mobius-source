@@ -26,7 +26,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="17301" name="Requiem Dual Sword">
+	<weapon id="17301" name="Requiem Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -97,7 +97,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="17309" name="Immortal Shield" add_name="Heavy">
+	<weapon id="17309" name="Immortal Shield" add_name="Heavy Armor">
 		<set name="icon" value="icon.weapon_sacon_i00"/>
 		<set name="weight" value="1130"/>
 		<equip>
@@ -371,7 +371,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="17335" name="Apocalypse Dual sword">
+	<weapon id="17335" name="Apocalypse Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -439,7 +439,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="17343" name="Twilight Shield" add_name="Heavy">
+	<weapon id="17343" name="Twilight Shield" add_name="Heavy Armor">
 		<set name="icon" value="icon.kratere_i00"/>
 		<set name="weight" value="1130"/>
 		<equip>
@@ -738,7 +738,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="17393" name="Specter Dual Sword">
+	<weapon id="17393" name="Specter Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>

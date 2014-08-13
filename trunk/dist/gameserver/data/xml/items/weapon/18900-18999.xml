@@ -135,7 +135,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18905" name="Bound Specter Dual Sword" add_name="Haste">
+	<weapon id="18905" name="Bound Specter Dualsword" add_name="Haste">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -163,7 +163,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18906" name="Bound Specter Dual Sword" add_name="Damage">
+	<weapon id="18906" name="Bound Specter Dualsword" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -191,7 +191,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18907" name="Bound Specter Dual Sword" add_name="Health">
+	<weapon id="18907" name="Bound Specter Dualsword" add_name="Health">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -219,7 +219,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18908" name="Bound Specter Dual Dagger" add_name="Damage">
+	<weapon id="18908" name="Bound Specter Dual Dagger" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -357,7 +357,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18913" name="Bound Specter Dual Blunt Weapon" add_name="Damage">
+	<weapon id="18913" name="Bound Specter Dual Blunt Weapon" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -442,7 +442,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18916" name="Blessed Specter Shaper" add_name="Focus ">
+	<weapon id="18916" name="Blessed Specter Shaper" add_name="Focus">
 		<set name="icon" value="icon.weapon_ignicion_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -579,7 +579,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18921" name="Blessed Specter Slasher" add_name="Damage">
+	<weapon id="18921" name="Blessed Specter Slasher" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_skia_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -741,7 +741,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18927" name="Blessed Specter Fighter" add_name="Damage">
+	<weapon id="18927" name="Blessed Specter Fighter" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_deodos_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -846,7 +846,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18931" name="Blessed Specter Stormer" add_name="Damage">
+	<weapon id="18931" name="Blessed Specter Stormer" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_transgredi_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -873,7 +873,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18932" name="Blessed Specter Thrower" add_name="Damage">
+	<weapon id="18932" name="Blessed Specter Thrower" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_solenas_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -1272,7 +1272,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18947" name="Blessed Specter Dual Sword" add_name="Haste">
+	<weapon id="18947" name="Blessed Specter Dualsword" add_name="Haste">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1299,7 +1299,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18948" name="Blessed Specter Dual Sword" add_name="Damage">
+	<weapon id="18948" name="Blessed Specter Dualsword" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1326,7 +1326,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18949" name="Blessed Specter Dual Sword" add_name="Health">
+	<weapon id="18949" name="Blessed Specter Dualsword" add_name="Health">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1353,7 +1353,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18950" name="Blessed Specter Dual Dagger" add_name="Damage">
+	<weapon id="18950" name="Blessed Specter Dual Dagger" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -1486,7 +1486,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18955" name="Blessed Specter Dual Blunt Weapon" add_name="Damage">
+	<weapon id="18955" name="Blessed Specter Dual Blunt Weapon" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -1568,7 +1568,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18958" name="Amaranthine Shaper" add_name="Focus ">
+	<weapon id="18958" name="Amaranthine Shaper" add_name="Focus">
 		<set name="icon" value="icon.weapon_stanpid_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -1704,7 +1704,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18963" name="Amaranthine Slasher" add_name="Damage">
+	<weapon id="18963" name="Amaranthine Slasher" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_bauen_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -1866,7 +1866,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18969" name="Amaranthine Fighter" add_name="Damage">
+	<weapon id="18969" name="Amaranthine Fighter" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_octoclaw_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -1974,7 +1974,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18973" name="Amaranthine Stormer" add_name="Damage">
+	<weapon id="18973" name="Amaranthine Stormer" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_crabel_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -2001,7 +2001,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18974" name="Amaranthine Thrower" add_name="Damage">
+	<weapon id="18974" name="Amaranthine Thrower" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_castron_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -2418,7 +2418,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18989" name="Amaranthine Dual Sword" add_name="Haste">
+	<weapon id="18989" name="Amaranthine Dualsword" add_name="Haste">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -2445,7 +2445,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18990" name="Amaranthine Dual Sword" add_name="Damage">
+	<weapon id="18990" name="Amaranthine Dualsword" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -2472,7 +2472,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18991" name="Amaranthine Dual Sword" add_name="Health">
+	<weapon id="18991" name="Amaranthine Dualsword" add_name="Health">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -2499,7 +2499,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18992" name="Amaranthine Dual Dagger" add_name="Damage">
+	<weapon id="18992" name="Amaranthine Dual Dagger" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -2632,7 +2632,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18997" name="Amaranthine Dual Blunt Weapon" add_name="Damage">
+	<weapon id="18997" name="Amaranthine Dual Blunt Weapon" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>

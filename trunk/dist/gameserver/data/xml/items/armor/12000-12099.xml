@@ -20,7 +20,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12007" name="Common Item - Crafted Leather Gloves">
+	<armor id="12007" name="Common Item - Quality Leather Gloves">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="2"/>
 		<set name="crystal_type" value="D"/>
@@ -39,7 +39,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12008" name="Common Item - Ring Mail Breastplate">
+	<armor id="12008" name="Common Item - Ring Breastplate">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="7"/>
 		<set name="crystal_type" value="D"/>
@@ -174,7 +174,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12016" name="Common Item - Leather Gauntlet">
+	<armor id="12016" name="Common Item - Leather Gauntlets">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="2"/>
 		<set name="crystal_type" value="D"/>
@@ -213,7 +213,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12018" name="Common Item - Mystic's Tunic">
+	<armor id="12018" name="Common Item - Wizard Tunic">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="7"/>
 		<set name="crystal_type" value="D"/>
@@ -233,7 +233,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12019" name="Common Item - Mystic's Stockings">
+	<armor id="12019" name="Common Item - Wizard Stockings">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="D"/>
@@ -579,7 +579,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12038" name="Common Item - Gauntlet">
+	<armor id="12038" name="Common Item - Gauntlets">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="D"/>
@@ -693,7 +693,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12044" name="Common Item - Blast Plate">
+	<armor id="12044" name="Common Item - Breastplate">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="15"/>
 		<set name="crystal_type" value="D"/>
@@ -1001,7 +1001,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12061" name="Common Item - Brigandine Gauntlet">
+	<armor id="12061" name="Common Item - Brigandine Gauntlets">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="D"/>
@@ -1115,7 +1115,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12068" name="Common Item - Rip Gauntlet">
+	<armor id="12068" name="Common Item - Rip Gauntlets">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="D"/>
@@ -1134,7 +1134,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12070" name="Common Item - Boots of Power">
+	<armor id="12070" name="Common Item - Boots of Strength">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="D"/>
@@ -1229,7 +1229,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12076" name="Common Item - Ogre Power Gauntlet">
+	<armor id="12076" name="Common Item - Ogre Power Gauntlets">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="7"/>
 		<set name="crystal_type" value="D"/>
@@ -1343,7 +1343,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12083" name="Common Item - Sage's Rag">
+	<armor id="12083" name="Common Item - Sage's Rags">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
@@ -1363,7 +1363,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12084" name="Common Item - Tempered Mithril Gaiters">
+	<armor id="12084" name="Common Item - Reinforced Mithril Gaiters">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="C"/>
@@ -1382,7 +1382,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12085" name="Common Item - Tempered Mithril Boots">
+	<armor id="12085" name="Common Item - Reinforced Mithril Boots">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="2"/>
 		<set name="crystal_type" value="C"/>
@@ -1401,7 +1401,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12086" name="Common Item - Tempered Mithril Shirt">
+	<armor id="12086" name="Common Item - Reinforced Mithril Shirt">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="C"/>

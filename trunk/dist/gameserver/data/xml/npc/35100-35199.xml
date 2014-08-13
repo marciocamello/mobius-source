@@ -189,7 +189,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="35104" name="Tyron" title="Herald">
+	<npc id="35104" name="Tyron" title="Herald from Gludio">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -2302,7 +2302,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="35146" name="Gibbson" title="Herald">
+	<npc id="35146" name="Gibbson" title="Herald from Dion">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -4421,7 +4421,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="35188" name="Holmes" title="Herald">
+	<npc id="35188" name="Holmes" title="Herald from Giran">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>

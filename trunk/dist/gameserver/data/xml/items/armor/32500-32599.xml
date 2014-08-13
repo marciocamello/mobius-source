@@ -136,7 +136,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32534" name="Fantasy Dynasty Gauntlet" add_name="Not in Use">
+	<armor id="32534" name="Fantasy Dynasty Gauntlets" add_name="Not in Use">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t91_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -271,7 +271,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32557" name="Fantasy Moirai Gaiter" add_name="Not in Use">
+	<armor id="32557" name="Fantasy Moirai Gaiters" add_name="Not in Use">
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.armor_t100_l_i00"/>
 		<set name="type" value="HEAVY"/>
@@ -301,7 +301,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32559" name="Fantasy Moirai Leather Legging" add_name="Not in Use">
+	<armor id="32559" name="Fantasy Moirai Leather Leggings" add_name="Not in Use">
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.armor_t101_l_i00"/>
 		<set name="type" value="LIGHT"/>
@@ -316,7 +316,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32560" name="Fantasy Moirai Jacket" add_name="Not in Use">
+	<armor id="32560" name="Fantasy Moirai Tunic" add_name="Not in Use">
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.armor_t102_u_i00"/>
 		<set name="type" value="MAGIC"/>
@@ -376,7 +376,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32564" name="Fantasy Moirai Gauntlet" add_name="Not in Use">
+	<armor id="32564" name="Fantasy Moirai Gauntlets" add_name="Not in Use">
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.armor_t100_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -601,7 +601,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32595" name="Fantasy Vesper Gauntlet" add_name="Not in Use">
+	<armor id="32595" name="Fantasy Vesper Gauntlets" add_name="Not in Use">
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.armor_t94_g_i00"/>
 		<set name="type" value="NONE"/>

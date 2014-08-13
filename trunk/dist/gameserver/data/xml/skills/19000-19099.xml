@@ -5,7 +5,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="19002" levels="1" name="Anger">
+	<skill id="19002" levels="1" name="Anchor">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -274,7 +274,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="19037" levels="1" name="Radiant Cloak of Light">
+	<skill id="19037" levels="1" name="Cloak of Radiant Light">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="icon" val="icon.skill19037"/>
@@ -292,7 +292,7 @@
 			<mul stat="pvpMagicSkillDefenceBonus" order="0x30" val="1.15"/>
 		</for>
 	</skill>
-	<skill id="19038" levels="1" name="Cold Cloak of Darkness">
+	<skill id="19038" levels="1" name="Cloak of Cold Darkness">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="icon" val="icon.skill19038"/>
@@ -346,7 +346,7 @@
 			<mul stat="pvpMagicSkillDefenceBonus" order="0x30" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="19041" levels="1" name="Castle Return">
+	<skill id="19041" levels="1" name="Escape: Castle">
 		<set name="icon" val="icon.skill19041"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="magicLevel" val="1"/>
@@ -562,7 +562,7 @@
 			<player summon_siege_golem=""/>
 		</cond>
 	</skill>
-	<skill id="19092" levels="1" name="Mass Return">
+	<skill id="19092" levels="1" name="Chat Prohibited">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -582,7 +582,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="19096" levels="1" name="Added Target">
+	<skill id="19096" levels="1" name="Added Blow">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>

@@ -222,7 +222,7 @@
 			<add order="0x40" stat="poleTargetCount" val="5"/>
 		</for>
 	</skill>
-	<skill id="13264" levels="3" name="fist Weapon Special Ability">
+	<skill id="13264" levels="3" name="Fist Weapon Special Ability">
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -232,7 +232,7 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.304"/>
 		</for>
 	</skill>
-	<skill id="13265" levels="3" name="fist Weapon Special Ability">
+	<skill id="13265" levels="3" name="Fist Weapon Special Ability">
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -242,7 +242,7 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.304"/>
 		</for>
 	</skill>
-	<skill id="13266" levels="3" name="fist Weapon Special Ability">
+	<skill id="13266" levels="3" name="Fist Weapon Special Ability">
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -252,7 +252,7 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.304"/>
 		</for>
 	</skill>
-	<skill id="13267" levels="3" name="fist Weapon Special Ability">
+	<skill id="13267" levels="3" name="Fist Weapon Special Ability">
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -262,7 +262,7 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.304"/>
 		</for>
 	</skill>
-	<skill id="13268" levels="3" name="fist Weapon Special Ability">
+	<skill id="13268" levels="3" name="Fist Weapon Special Ability">
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -322,7 +322,7 @@
 			<add order="0x40" stat="PhysSkillDmgStatic" val="118"/>
 		</for>
 	</skill>
-	<skill id="13274" levels="3" name="Dual Sword Special Ability">
+	<skill id="13274" levels="3" name="Dualsword Special Ability">
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -332,7 +332,7 @@
 			<add order="0x30" stat="rCrit" val="27"/>
 		</for>
 	</skill>
-	<skill id="13275" levels="3" name="Dual Sword Special Ability">
+	<skill id="13275" levels="3" name="Dualsword Special Ability">
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -342,7 +342,7 @@
 			<add order="0x30" stat="rCrit" val="27"/>
 		</for>
 	</skill>
-	<skill id="13276" levels="3" name="Dual Sword Special Ability">
+	<skill id="13276" levels="3" name="Dualsword Special Ability">
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -352,7 +352,7 @@
 			<add order="0x30" stat="rCrit" val="27"/>
 		</for>
 	</skill>
-	<skill id="13277" levels="3" name="Dual Sword Special Ability">
+	<skill id="13277" levels="3" name="Dualsword Special Ability">
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -362,7 +362,7 @@
 			<add order="0x30" stat="rCrit" val="27"/>
 		</for>
 	</skill>
-	<skill id="13278" levels="3" name="Dual Sword Special Ability">
+	<skill id="13278" levels="3" name="Dualsword Special Ability">
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>

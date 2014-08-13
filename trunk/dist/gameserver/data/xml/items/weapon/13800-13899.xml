@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="13809" name="Court Magician's Magic Staff">
+	<weapon id="13809" name="Court Wizard's Magic Staff">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.weapon_apprentices_rod_i00"/>
@@ -15,7 +15,7 @@
 			<skill id="2634" level="1"/>
 		</skills>
 	</weapon>
-	<weapon id="13842" name="Tiat Two-Handed Weapon">
+	<weapon id="13842" name="Tiat Two-handed Weapon">
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.weapon_monster_i00"/>
 		<set name="rnd_dam" value="10"/>
@@ -121,7 +121,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13882" name="Dynasty Dual Daggers">
+	<weapon id="13882" name="Dynasty Dual Dagger">
 		<set name="crystal_count" value="4219"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>

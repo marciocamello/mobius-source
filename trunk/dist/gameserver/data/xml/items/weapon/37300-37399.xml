@@ -218,7 +218,7 @@
 			<add stat="accCombat" order="0x10" value="-3.75"/>
 		</for>
 	</weapon>
-	<weapon id="37311" name="Steel Requiem Avenger (30-day)" >
+	<weapon id="37311" name="Steel Requiem Avenger (30-day)">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.weapon_batista_i00"/>
 		<set name="price" value="0"/>

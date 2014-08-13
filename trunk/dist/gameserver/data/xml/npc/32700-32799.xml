@@ -603,7 +603,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="32714" name="Asher " title="Gatekeeper">
+	<npc id="32714" name="Asher" title="Gatekeeper">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -2767,7 +2767,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="32763" name="Sirra " title="Ice Fairy">
+	<npc id="32763" name="Sirra" title="Ice Fairy">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>

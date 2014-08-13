@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="34705" name="Pirate's eyepatch" add_name="Str">
+	<armor id="34705" name="Pirate's Eyepatch" add_name="Str">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_eye_bandage_i00"/>
 		<set name="type" value="NONE"/>
@@ -14,7 +14,7 @@
 			<add stat="STR" order="0x10" value="3"/>
 		</for>
 	</armor>
-	<armor id="34706" name="Pirate's eyepatch" add_name="DEX">
+	<armor id="34706" name="Pirate's Eyepatch" add_name="DEX">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_eye_bandage_i00"/>
 		<set name="type" value="NONE"/>
@@ -53,7 +53,7 @@
 			<add stat="MEN" order="0x10" value="3"/>
 		</for>
 	</armor>
-	<armor id="34709" name="Eye Patch" add_name="Int">
+	<armor id="34709" name="Eyepatch" add_name="Int">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.Accessary_one_eye_i00"/>
 		<set name="type" value="NONE"/>
@@ -66,7 +66,7 @@
 			<add stat="INT" order="0x10" value="3"/>
 		</for>
 	</armor>
-	<armor id="34710" name="Eye Patch" add_name="WIT">
+	<armor id="34710" name="Eyepatch" add_name="WIT">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.Accessary_one_eye_i00"/>
 		<set name="type" value="NONE"/>
@@ -79,7 +79,7 @@
 			<add stat="WIT" order="0x10" value="3"/>
 		</for>
 	</armor>
-	<armor id="34711" name="Party Hat" add_name="P. Critical Rate">
+	<armor id="34711" name="Party Hat" add_name="Critical Rate">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_party_hat_i00"/>
 		<set name="type" value="NONE"/>
@@ -209,7 +209,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="34743" name="XP Bottle Agathion (10 hours)">
+	<armor id="34743" name="Agathion - XP Bottle (10-hour)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -223,7 +223,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="34744" name="XP Bottle Agathion (20 hours)">
+	<armor id="34744" name="Agathion - XP Bottle (20-hour)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -237,7 +237,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="34745" name="XP Bottle Agathion (30 hours)">
+	<armor id="34745" name="Agathion - XP Bottle (30-hour)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -251,7 +251,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="34746" name="XP Bottle Agathion (40 hours)">
+	<armor id="34746" name="Agathion - XP Bottle (40-hour)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -265,7 +265,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="34747" name="XP Bottle Agathion (50 hours)">
+	<armor id="34747" name="Agathion - XP Bottle (50-hour)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -279,7 +279,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="34748" name="XP Bottle Agathion (60 hours)">
+	<armor id="34748" name="Agathion - XP Bottle (60-hour)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -293,7 +293,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="34749" name="XP Bottle Agathion (70 hours)">
+	<armor id="34749" name="Agathion - XP Bottle (70-hour)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -307,7 +307,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="34750" name="XP Bottle Agathion (80 hours)">
+	<armor id="34750" name="Agathion - XP Bottle (80-hour)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -335,7 +335,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="34770" name="Pa'agrio's T-shirt" add_name="Event">
+	<armor id="34770" name="Pa'agrio's Shirt" add_name="Event">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.pi_shirt_of_wolf_2nd_fire"/>
 		<set name="type" value="NONE"/>
@@ -350,7 +350,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="34771" name="Shyeed's T-shirt" add_name="Event">
+	<armor id="34771" name="Sayha's Shirt" add_name="Event">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.pi_shirt_of_wolf_2nd_wind"/>
 		<set name="type" value="NONE"/>
@@ -365,7 +365,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="34772" name="Eva's T-shirt" add_name="Event">
+	<armor id="34772" name="Eva's Shirt" add_name="Event">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.pi_shirt_of_wolf_2nd_water"/>
 		<set name="type" value="NONE"/>
@@ -380,7 +380,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="34773" name="Maphr's T-shirt" add_name="Event">
+	<armor id="34773" name="Maphr's Shirt" add_name="Event">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.pi_shirt_of_wolf_2nd_earth"/>
 		<set name="type" value="NONE"/>
@@ -395,7 +395,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="34778" name="Squash Ring - Warrior" add_name="Event">
+	<armor id="34778" name="Squash Ring (Warrior)" add_name="Event">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessory_ring_of_gourd_i00"/>
 		<set name="type" value="NONE"/>
@@ -412,7 +412,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="34779" name="Squash Earring - Warrior" add_name="Event">
+	<armor id="34779" name="Squash Earring (Warrior)" add_name="Event">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessory_earring_of_gourd_i00"/>
 		<set name="type" value="NONE"/>

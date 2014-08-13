@@ -729,7 +729,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="323" levels="1" name="Quiver of Arrow: Grade A">
+	<skill id="323" levels="1" name="Quiver of Arrow (A-grade)">
 		<set name="reuseDelay" val="600000"/>
 		<set name="hitTime" val="3000"/>
 		<set name="magicLevel" val="66"/>
@@ -743,7 +743,7 @@
 		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="324" levels="1" name="Quiver of Arrow: Grade S">
+	<skill id="324" levels="1" name="Quiver of Arrow (S-grade)">
 		<set name="reuseDelay" val="600000"/>
 		<set name="hitTime" val="3000"/>
 		<set name="magicLevel" val="72"/>
@@ -1784,7 +1784,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="361" levels="1" name="Shock Blast">
+	<skill id="361" levels="1" name="Stun Blast">
 		<table name="#activateRate">40</table>
 		<table name="#mpConsume2">53</table>
 		<table name="#hpConsume">507</table>
@@ -2363,7 +2363,7 @@
 			<add order="0x40" stat="defenceEarth" val="#resist"/>
 		</for>
 	</skill>
-	<skill id="386" levels="3" name="Clan Resist Shock">
+	<skill id="386" levels="3" name="Clan Stun Resistance">
 		<table name="#resist">12 20 24</table>
 		<set name="icon" val="icon.skill0386"/>
 		<set name="magicLevel" val="1"/>
@@ -2376,7 +2376,7 @@
 			<add order="0x40" stat="stunResist" val="#resist"/>
 		</for>
 	</skill>
-	<skill id="387" levels="3" name="Clan Resist Hold">
+	<skill id="387" levels="3" name="Clan Hold Resistance">
 		<table name="#resist">12 20 24</table>
 		<set name="icon" val="icon.skill0387"/>
 		<set name="magicLevel" val="1"/>
@@ -2389,7 +2389,7 @@
 			<add order="0x40" stat="rootResist" val="#resist"/>
 		</for>
 	</skill>
-	<skill id="388" levels="3" name="Clan Resist Sleep">
+	<skill id="388" levels="3" name="Clan Sleep Resistance">
 		<table name="#resist">12 20 24</table>
 		<set name="icon" val="icon.skill0388"/>
 		<set name="magicLevel" val="1"/>

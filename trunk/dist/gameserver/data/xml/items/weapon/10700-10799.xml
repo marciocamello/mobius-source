@@ -37,7 +37,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10701" name="Eclair Bijou - PvP" add_name="Health">
+	<weapon id="10701" name="Eclair Bijou {PvP}" add_name="Health">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -73,7 +73,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10702" name="Eclair Bijou - PvP" add_name="Critical Poison">
+	<weapon id="10702" name="Eclair Bijou {PvP}" add_name="Critical Poison">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -473,7 +473,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10713" name="Heavens Divider {PvP}" add_name="Haste">
+	<weapon id="10713" name="Heaven's Divider {PvP}" add_name="Haste">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -507,7 +507,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10714" name="Heavens Divider {PvP}" add_name="Health">
+	<weapon id="10714" name="Heaven's Divider {PvP}" add_name="Health">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -541,7 +541,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10715" name="Heavens Divider {PvP}" add_name="Focus">
+	<weapon id="10715" name="Heaven's Divider {PvP}" add_name="Focus">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1702,7 +1702,7 @@
 			</mul>
 		</for>
 	</weapon>
-	<weapon id="10747" name="Sarunga - PvP" add_name="Focus">
+	<weapon id="10747" name="Sarunga {PvP}" add_name="Focus">
 		<set name="atk_reuse" value="400"/>
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
@@ -1738,7 +1738,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10748" name="Sarunga - PvP" add_name="Critical Slow">
+	<weapon id="10748" name="Sarunga {PvP}" add_name="Critical Slow">
 		<set name="atk_reuse" value="400"/>
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
@@ -1773,7 +1773,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10749" name="Tallum Blade*Dark Legion {PvP}">
+	<weapon id="10749" name="Tallum Blade*Dark Legion's Edge {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1841,7 +1841,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10751" name="Dynasty Sword - PvP" add_name="Health">
+	<weapon id="10751" name="Dynasty Sword {PvP}" add_name="Health">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1875,7 +1875,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10752" name="Dynasty Sword - PvP" add_name="Light">
+	<weapon id="10752" name="Dynasty Sword {PvP}" add_name="Light Armor">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1943,7 +1943,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10754" name="Dynasty Blade - PvP" add_name="Health">
+	<weapon id="10754" name="Dynasty Blade {PvP}" add_name="Health">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -1977,7 +1977,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10755" name="Dynasty Blade - PvP" add_name="Light">
+	<weapon id="10755" name="Dynasty Blade {PvP}" add_name="Light Armor">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -2401,7 +2401,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10767" name="Dynasty Halberd {PvP}" add_name="Light">
+	<weapon id="10767" name="Dynasty Halberd {PvP}" add_name="Light Armor">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -3058,7 +3058,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10785" name="Dynasty Rapier {PvP}" add_name="Light">
+	<weapon id="10785" name="Dynasty Rapier {PvP}" add_name="Light Armor">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -3164,7 +3164,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10788" name="Dynasty Ancient Sword {PvP}" add_name="Light">
+	<weapon id="10788" name="Dynasty Ancient Sword {PvP}" add_name="Light Armor">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -3242,7 +3242,7 @@
 			</mul>
 		</for>
 	</weapon>
-	<weapon id="10790" name="Dynasty Crossbow - PvP" add_name="Guidance">
+	<weapon id="10790" name="Dynasty Crossbow {PvP}" add_name="Guidance">
 		<set name="atk_reuse" value="400"/>
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
@@ -3278,7 +3278,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10791" name="Dynasty Crossbow - PvP" add_name="Focus">
+	<weapon id="10791" name="Dynasty Crossbow {PvP}" add_name="Focus">
 		<set name="atk_reuse" value="400"/>
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
@@ -3314,7 +3314,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10792" name="Dynasty Dual Sword {PvP}">
+	<weapon id="10792" name="Dynasty Dualsword {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>

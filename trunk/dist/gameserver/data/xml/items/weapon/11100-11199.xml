@@ -60,7 +60,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11102" name="Flaming Dragon Skull - Wisdom" add_name="Magic Power">
+	<weapon id="11102" name="Flaming Dragon Skull - Wisdom" add_name="M. Atk.">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
@@ -273,7 +273,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11109" name="Sword of Miracles - Holy Spirit" add_name="Magic Power">
+	<weapon id="11109" name="Sword of Miracles - Holy Spirit" add_name="M. Atk.">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
@@ -1005,7 +1005,7 @@
 			</mul>
 		</for>
 	</weapon>
-	<weapon id="11132" name="Enchanted Cerberus Fang">
+	<weapon id="11132" name="Reinforced Cerberus Fang">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_wolf_r_d_01"/>
 		<set name="price" value="21159000"/>
@@ -1263,7 +1263,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11141" name="Barakiel's Axe - On Fire">
+	<weapon id="11141" name="Barakiel's Axe - Mild">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="false"/>
@@ -1291,7 +1291,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11142" name="Barakiel's Axe - On Fire" add_name="Health">
+	<weapon id="11142" name="Barakiel's Axe - Mild" add_name="Health">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="false"/>
@@ -1320,7 +1320,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11143" name="Barakiel's Axe - On Fire" add_name="Haste">
+	<weapon id="11143" name="Barakiel's Axe - Mild" add_name="Haste">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="false"/>
@@ -1349,7 +1349,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11144" name="Barakiel's Axe - On Fire" add_name="Focus">
+	<weapon id="11144" name="Barakiel's Axe - Mild" add_name="Focus">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="false"/>
@@ -1516,7 +1516,7 @@
 			</mul>
 		</for>
 	</weapon>
-	<weapon id="11149" name="Behemoth's Tuning Fork - Destruction">
+	<weapon id="11149" name="Behemoth' Tuning Fork - Destruction">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="false"/>
@@ -1544,7 +1544,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11150" name="Behemoth's Tuning Fork - Destruction" add_name="Focus">
+	<weapon id="11150" name="Behemoth' Tuning Fork - Destruction" add_name="Focus">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="false"/>
@@ -1573,7 +1573,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11151" name="Behemoth's Tuning Fork - Destruction" add_name="Health">
+	<weapon id="11151" name="Behemoth' Tuning Fork - Destruction" add_name="Health">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="false"/>
@@ -1602,7 +1602,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11152" name="Behemoth's Tuning Fork - Destruction" add_name="Anger">
+	<weapon id="11152" name="Behemoth' Tuning Fork - Destruction" add_name="Anger">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="false"/>
@@ -1631,7 +1631,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11153" name="Bultgang - Earth">
+	<weapon id="11153" name="Durendal - Earth">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="false"/>
@@ -1660,7 +1660,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11154" name="Bultgang - Earth" add_name="Focus">
+	<weapon id="11154" name="Durendal - Earth" add_name="Focus">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="false"/>
@@ -1690,7 +1690,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11155" name="Bultgang - Earth" add_name="Haste">
+	<weapon id="11155" name="Durendal - Earth" add_name="Haste">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="false"/>
@@ -1720,7 +1720,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11156" name="Bultgang - Earth" add_name="Health">
+	<weapon id="11156" name="Durendal - Earth" add_name="Health">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="false"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="20900" name="Santa Hat" add_name="14 day limited period">
+	<armor id="20900" name="Santa Hat" add_name="14-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="20160"/>
@@ -27,7 +27,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="20929" name="Royal Crown of Vesper">
+	<armor id="20929" name="Vesper Royal Crown">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_royal_crown_of_vesper_i00"/>
@@ -39,7 +39,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="20930" name="Royal Circlet of Vesper">
+	<armor id="20930" name="Vesper Royal Circlet">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_royal_circlet_of_vesper_i00"/>
@@ -51,7 +51,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="20931" name="Noblesse Oblige">
+	<armor id="20931" name="Vesper Noble Mask">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -70,7 +70,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20932" name="Royal Crown of Vesper" add_name="30 day limited period">
+	<armor id="20932" name="Vesper Royal Crown" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_royal_crown_of_vesper_i00"/>
@@ -84,7 +84,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="20933" name="Royal Circlet of Vesper" add_name="30 day limited period">
+	<armor id="20933" name="Vesper Royal Circlet" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_royal_circlet_of_vesper_i00"/>
@@ -98,7 +98,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="20934" name="Noblesse Oblige" add_name="30 day limited period">
+	<armor id="20934" name="Vesper Noble Mask" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_noblesse_oblige_of_vesper_i00"/>
@@ -112,7 +112,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="20935" name="Royal Crown of Vesper">
+	<armor id="20935" name="Vesper Royal Crown">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -131,7 +131,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20936" name="Royal Circlet of Vesper">
+	<armor id="20936" name="Vesper Royal Circlet">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -150,7 +150,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20937" name="Noblesse Oblige">
+	<armor id="20937" name="Vesper Noble Mask">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -169,7 +169,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20938" name="Jet Bike Mounting Bracelet" add_name="7 day limited period">
+	<armor id="20938" name="Mount - Jet Bike" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -193,7 +193,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20939" name="Jet Bike Mounting Bracelet" add_name="30 day limited period">
+	<armor id="20939" name="Mount - Jet Bike" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -217,7 +217,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20940" name="Phoenix Agthion Seal Bracelet" add_name="Nirvana Rebirth - 7 day limited period">
+	<armor id="20940" name="Agathion - Phoenix" add_name="Nirvana Rebirth (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_china_phoenix_i00"/>
@@ -237,7 +237,7 @@
 			<skill id="21191" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20941" name="Phoenix Agthion Seal Bracelet" add_name="Oriental Phoenix - 7 day limited period">
+	<armor id="20941" name="Agathion - Phoenix" add_name="Mountain Echoes (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_china_phoenix_i00"/>
@@ -276,7 +276,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20943" name="Fox Mask" add_name="Silent Move - 7 day limited period">
+	<armor id="20943" name="Fox Mask" add_name="Silent Move (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_fox_japan_cap_i00"/>
@@ -312,7 +312,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20945" name="Paiwan Hat" add_name="Power of Guardian Deity - 7 day limited period">
+	<armor id="20945" name="Paiwan Hat" add_name="Power of Guardian Deity (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_paiwan_cap_i00"/>
@@ -329,7 +329,7 @@
 			<skill id="21193" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20956" name="Agathion Seal Bracelet - Frozen Corpse" add_name="Soul Stealth - 7 day limited period">
+	<armor id="20956" name="Agathion - Zombie" add_name="Soul Stealth (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_aga_gangsi_i00"/>
@@ -349,7 +349,7 @@
 			<skill id="21133" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20968" name="Agathion Seal Bracelet - Guangong">
+	<armor id="20968" name="Agathion - Guangong">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_aga_warriorgod_i00"/>
@@ -361,7 +361,7 @@
 		</equip>
 		<set name="ex_type" value="BRACELET"/>
 	</armor>
-	<armor id="20970" name="Agathion Seal Bracelet - Three-headed Dragon" add_name="Wind Walk">
+	<armor id="20970" name="Agathion - Three-headed Dragon" add_name="Wind Walk">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_threehead_i00"/>
@@ -439,7 +439,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="20982" name="Dragon Boat" add_name="Haste - 7 day limited period">
+	<armor id="20982" name="Dragon Boat" add_name="Haste (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_dragonboat_cap_i00"/>
@@ -456,7 +456,7 @@
 			<skill id="21201" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20983" name="Agathion Seal Bracelet - Ball Trapping Gnosian" add_name="Soccer Ball of Cheers, Buff of Cheers">
+	<armor id="20983" name="Agathion - Ball Trapping Gnosian" add_name="Soccer Ball of Cheers, Buff of Cheers">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_ball_male_i00"/>
@@ -476,7 +476,7 @@
 			<skill id="23201" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20984" name="Agathion Seal Bracelet - Ball Trapping Orodriel" add_name="Soccer Ball of Cheers, Buff of Cheers">
+	<armor id="20984" name="Agathion - Ball Trapping Orodriel" add_name="Soccer Ball of Cheers, Buff of Cheers">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_ball_female_i00"/>
@@ -495,7 +495,7 @@
 			<skill id="23202" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20985" name="Agathion Seal Bracelet - Penalty Kick" add_name="Soccer Ball of Cheers, Buff of Cheers">
+	<armor id="20985" name="Agathion - Penalty Kick" add_name="Soccer Ball of Cheers, Buff of Cheers">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_ball_kick_i00"/>
@@ -514,7 +514,7 @@
 			<skill id="23203" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20986" name="Agathion Seal Bracelet - Ball Trapping Gnosian" add_name="Soccer Ball of Cheers, Buff of Cheers">
+	<armor id="20986" name="Agathion - Ball Trapping Gnosian" add_name="Soccer Ball of Cheers, Buff of Cheers">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_jball_male_i00"/>
@@ -533,7 +533,7 @@
 			<skill id="23204" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20987" name="Agathion Seal Bracelet - Ball Trapping Orodriel" add_name="Soccer Ball of Cheers, Buff of Cheers">
+	<armor id="20987" name="Agathion - Ball Trapping Orodriel" add_name="Soccer Ball of Cheers, Buff of Cheers">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_jball_female_i00"/>
@@ -552,7 +552,7 @@
 			<skill id="23205" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20988" name="Agathion Seal Bracelet - Penalty Kick" add_name="Soccer Ball of Cheers, Buff of Cheers">
+	<armor id="20988" name="Agathion - Penalty Kick" add_name="Soccer Ball of Cheers, Buff of Cheers">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_jball_kick_i00"/>
@@ -571,7 +571,7 @@
 			<skill id="23206" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20989" name="Agathion Seal Bracelet - Ball Trapping Gnosian" add_name="Soccer Ball of Cheers, Buff of Cheers">
+	<armor id="20989" name="Agathion - Ball Trapping Gnosian" add_name="Soccer Ball of Cheers, Buff of Cheers">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_kball_male_i00"/>
@@ -590,7 +590,7 @@
 			<skill id="23207" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20990" name="Agathion Seal Bracelet - Ball Trapping Orodriel" add_name="Soccer Ball of Cheers, Buff of Cheers">
+	<armor id="20990" name="Agathion - Ball Trapping Orodriel" add_name="Soccer Ball of Cheers, Buff of Cheers">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_kball_female_i00"/>
@@ -609,7 +609,7 @@
 			<skill id="23208" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20991" name="Agathion Seal Bracelet - Penalty Kick" add_name="Soccer Ball of Cheers, Buff of Cheers">
+	<armor id="20991" name="Agathion - Penalty Kick" add_name="Soccer Ball of Cheers, Buff of Cheers">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_kball_kick_i00"/>

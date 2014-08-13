@@ -92,7 +92,7 @@
 			<skill id="3665" level="2"/>
 		</skills>
 	</armor>
-	<armor id="12817" name="Yellow Talisman - Increase Force">
+	<armor id="12817" name="Yellow Talisman - Increase Momentum">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="65"/>
@@ -126,7 +126,7 @@
 			<skill id="3667" level="1"/>
 		</skills>
 	</armor>
-	<armor id="12835" name="Shadow Item - Teddy Bear Hat">
+	<armor id="12835" name="Shadow Item: Teddy Bear Hat">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="300"/>
@@ -140,7 +140,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="12836" name="Shadow Item - Piggy Hat">
+	<armor id="12836" name="Shadow Item: Piggy Hat">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="300"/>
@@ -154,7 +154,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="12837" name="Shadow Item - Jester Hat">
+	<armor id="12837" name="Shadow Item: Jester Hat">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="300"/>
@@ -181,7 +181,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="12839" name="Medieval Style Party Mask (Event)">
+	<armor id="12839" name="Medieval Party Mask (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_middle_age_party_mask_i00"/>

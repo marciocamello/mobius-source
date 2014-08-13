@@ -385,7 +385,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30013" name="Blessed Requiem Dual Sword" add_name="Haste + Damage">
+	<weapon id="30013" name="Blessed Requiem Dualsword" add_name="Haste + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -414,7 +414,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30014" name="Blessed Requiem Dual Sword" add_name="Damage + Health">
+	<weapon id="30014" name="Blessed Requiem Dualsword" add_name="Damage Up + Health">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -443,7 +443,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30015" name="Blessed Requiem Dual Sword" add_name="Health + Haste">
+	<weapon id="30015" name="Blessed Requiem Dualsword" add_name="Health + Haste">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -472,7 +472,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30016" name="Blessed Requiem Dual Dagger" add_name="Damage + Focus">
+	<weapon id="30016" name="Blessed Requiem Dual Dagger" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -530,7 +530,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30018" name="Blessed Requiem Dual Dagger" add_name="Guidance + Damage">
+	<weapon id="30018" name="Blessed Requiem Dual Dagger" add_name="Guidance + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -587,7 +587,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30020" name="Blessed Requiem Dual Blunt Weapon" add_name="Guidance + Damage">
+	<weapon id="30020" name="Blessed Requiem Dual Blunt Weapon" add_name="Guidance + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -615,7 +615,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30021" name="Blessed Requiem Dual Blunt Weapon" add_name="Damage + Focus ">
+	<weapon id="30021" name="Blessed Requiem Dual Blunt Weapon" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -834,7 +834,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30029" name="Apocalypse Slasher" add_name="Damage + Haste">
+	<weapon id="30029" name="Apocalypse Slasher" add_name="Damage Up + Haste">
 		<set name="icon" value="icon.weapon_volver_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -996,7 +996,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30035" name="Apocalypse Fighter" add_name="Damage + Haste">
+	<weapon id="30035" name="Apocalypse Fighter" add_name="Damage Up + Haste">
 		<set name="icon" value="icon.weapon_kirche_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -1076,7 +1076,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30038" name="Apocalypse Stormer" add_name="Guidance + Damage">
+	<weapon id="30038" name="Apocalypse Stormer" add_name="Guidance + Damage Up">
 		<set name="icon" value="icon.weapon_grave_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -1103,7 +1103,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30039" name="Apocalypse Stormer" add_name="Damage + HP Drain">
+	<weapon id="30039" name="Apocalypse Stormer" add_name="Damage Up + HP Drain">
 		<set name="icon" value="icon.weapon_grave_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -1130,7 +1130,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30040" name="Apocalypse Thrower" add_name="Damage + Focus">
+	<weapon id="30040" name="Apocalypse Thrower" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_spina_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -1185,7 +1185,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30042" name="Apocalypse Thrower" add_name="Long Blow + Damage">
+	<weapon id="30042" name="Apocalypse Thrower" add_name="Long Blow + Damage Up">
 		<set name="icon" value="icon.weapon_spina_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -1534,7 +1534,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30055" name="Apocalypse Dual sword" add_name="Haste + Damage">
+	<weapon id="30055" name="Apocalypse Dualsword" add_name="Haste + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1560,7 +1560,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30056" name="Apocalypse Dual sword" add_name="Damage + Health">
+	<weapon id="30056" name="Apocalypse Dualsword" add_name="Damage Up + Health">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1587,7 +1587,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30057" name="Apocalypse Dual sword" add_name="Health + Haste">
+	<weapon id="30057" name="Apocalypse Dualsword" add_name="Health + Haste">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1614,7 +1614,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30058" name="Apocalypse Dual Dagger" add_name="Damage + Focus">
+	<weapon id="30058" name="Apocalypse Dual Dagger" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -1668,7 +1668,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30060" name="Apocalypse Dual Dagger" add_name="Guidance + Damage">
+	<weapon id="30060" name="Apocalypse Dual Dagger" add_name="Guidance + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -1721,7 +1721,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30062" name="Apocalypse Dual Blunt Weapon" add_name="Guidance + Damage">
+	<weapon id="30062" name="Apocalypse Dual Blunt Weapon" add_name="Guidance + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -1747,7 +1747,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30063" name="Apocalypse Dual Blunt Weapon" add_name="Damage + Focus ">
+	<weapon id="30063" name="Apocalypse Dual Blunt Weapon" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -1972,7 +1972,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30071" name="Blessed Apocalypse Slasher" add_name="Damage + Haste">
+	<weapon id="30071" name="Blessed Apocalypse Slasher" add_name="Damage Up + Haste">
 		<set name="icon" value="icon.weapon_volver_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -2140,7 +2140,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30077" name="Blessed Apocalypse Fighter" add_name="Damage + Haste">
+	<weapon id="30077" name="Blessed Apocalypse Fighter" add_name="Damage Up + Haste">
 		<set name="icon" value="icon.weapon_kirche_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -2223,7 +2223,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30080" name="Blessed Apocalypse Stormer" add_name="Guidance + Damage">
+	<weapon id="30080" name="Blessed Apocalypse Stormer" add_name="Guidance + Damage Up">
 		<set name="icon" value="icon.weapon_grave_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -2251,7 +2251,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30081" name="Blessed Apocalypse Stormer" add_name="Damage + HP Drain">
+	<weapon id="30081" name="Blessed Apocalypse Stormer" add_name="Damage Up + HP Drain">
 		<set name="icon" value="icon.weapon_grave_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -2279,7 +2279,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30082" name="Blessed Apocalypse Thrower" add_name="Damage + Focus">
+	<weapon id="30082" name="Blessed Apocalypse Thrower" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_spina_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -2336,7 +2336,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30084" name="Blessed Apocalypse Thrower" add_name="Long Blow + Damage">
+	<weapon id="30084" name="Blessed Apocalypse Thrower" add_name="Long Blow + Damage Up">
 		<set name="icon" value="icon.weapon_spina_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -2698,7 +2698,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30097" name="Blessed Apocalypse Dual Sword" add_name="Haste + Damage">
+	<weapon id="30097" name="Blessed Apocalypse Dualsword" add_name="Haste + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -2726,7 +2726,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30098" name="Blessed Apocalypse Dual Sword" add_name="Damage + Health">
+	<weapon id="30098" name="Blessed Apocalypse Dualsword" add_name="Damage Up + Health">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -2754,7 +2754,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30099" name="Blessed Apocalypse Dual Sword" add_name="Health + Haste">
+	<weapon id="30099" name="Blessed Apocalypse Dualsword" add_name="Health + Haste">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
