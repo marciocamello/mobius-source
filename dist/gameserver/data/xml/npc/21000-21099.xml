@@ -374,7 +374,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 	</npc>
-	<npc id="21003" name="Graveuard Lich" title="">
+	<npc id="21003" name="Graveyard Lich" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>

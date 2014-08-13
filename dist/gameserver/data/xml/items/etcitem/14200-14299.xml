@@ -367,7 +367,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14234" name="Snow Kung Transformation Stick Pack (30-day)">
+	<etcitem id="14234" name="Snow Man Transformation Stick Pack (30-day)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -475,7 +475,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14243" name="Snow Kung Transformation Stick Pack (30-day) (Event)">
+	<etcitem id="14243" name="Snow Man Transformation Stick Pack (30-day) (Event)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -583,7 +583,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14252" name="Lucky Enchant Stone: Enchant Weapon (D-grade) Pack (Event)">
+	<etcitem id="14252" name="Lucky Enchant Stone: Weapon Pack (D-grade) (Event)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -595,7 +595,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14253" name="Lucky Enchant Stone: Enchant Weapon (C-grade) Pack (Event)">
+	<etcitem id="14253" name="Lucky Enchant Stone: Weapon Pack (C-grade) (Event)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -607,7 +607,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14254" name="Lucky Enchant Stone: Enchant Weapon (B-grade) Pack (Event)">
+	<etcitem id="14254" name="Lucky Enchant Stone: Weapon Pack (B-grade) (Event)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -619,7 +619,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14255" name="Lucky Enchant Stone: Enchant Weapon (A-grade) Pack (Event)">
+	<etcitem id="14255" name="Lucky Enchant Stone: Weapon Pack (A-grade) (Event)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -631,7 +631,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14256" name="Lucky Enchant Stone: Enchant Weapon (S-grade) Pack (Event)">
+	<etcitem id="14256" name="Lucky Enchant Stone: Weapon Pack (S-grade) (Event)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -643,7 +643,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14257" name="Lucky Enchant Stone: Enchant Armor (D-grade) Pack (Event)">
+	<etcitem id="14257" name="Lucky Enchant Stone: Armor Pack (D-grade) (Event)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -655,7 +655,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14258" name="Lucky Enchant Stone: Enchant Armor (C-grade) Pack (Event)">
+	<etcitem id="14258" name="Lucky Enchant Stone: Armor Pack (C-grade) (Event)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -667,7 +667,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14259" name="Lucky Enchant Stone: Enchant Armor (B-grade) Pack (Event)">
+	<etcitem id="14259" name="Lucky Enchant Stone: Armor Pack (B-grade) (Event)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -679,7 +679,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14260" name="Lucky Enchant Stone: Enchant Armor (A-grade) Pack (Event)">
+	<etcitem id="14260" name="Lucky Enchant Stone: Armor Pack (A-grade) (Event)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -691,7 +691,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14261" name="Lucky Enchant Stone: Enchant Armor (S-grade) Pack (Event)">
+	<etcitem id="14261" name="Lucky Enchant Stone: Armor Pack (S-grade) (Event)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -703,7 +703,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14262" name="Snow Kung Transformation Stick Pack (7-day)">
+	<etcitem id="14262" name="Snow Man Transformation Stick Pack (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -799,7 +799,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14270" name="Snow Kung Transformation Stick Pack (7-day) (Event)">
+	<etcitem id="14270" name="Snow Man Transformation Stick Pack (7-day) (Event)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -895,7 +895,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14278" name="Lucky Enchant Stone: Enchant Weapon (D-grade) Pack">
+	<etcitem id="14278" name="Lucky Enchant Stone: Weapon Pack (D-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -906,7 +906,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14279" name="Lucky Enchant Stone: Enchant Weapon (C-grade) Pack">
+	<etcitem id="14279" name="Lucky Enchant Stone: Weapon Pack (C-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -917,7 +917,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14280" name="Lucky Enchant Stone: Enchant Weapon (B-grade) Pack">
+	<etcitem id="14280" name="Lucky Enchant Stone: Weapon Pack (B-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -928,7 +928,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14281" name="Lucky Enchant Stone: Enchant Weapon (A-grade) Pack">
+	<etcitem id="14281" name="Lucky Enchant Stone: Weapon Pack (A-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -939,7 +939,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14282" name="Lucky Enchant Stone: Enchant Weapon (S-grade) Pack">
+	<etcitem id="14282" name="Lucky Enchant Stone: Weapon Pack (S-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -950,7 +950,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14283" name="Lucky Enchant Stone: Enchant Armor (D-grade) Pack">
+	<etcitem id="14283" name="Lucky Enchant Stone: Armor Pack (D-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -961,7 +961,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14284" name="Lucky Enchant Stone: Enchant Armor (C-grade) Pack">
+	<etcitem id="14284" name="Lucky Enchant Stone: Armor Pack (C-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -972,7 +972,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14285" name="Lucky Enchant Stone: Enchant Armor (B-grade) Pack">
+	<etcitem id="14285" name="Lucky Enchant Stone: Armor Pack (B-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -983,7 +983,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14286" name="Lucky Enchant Stone: Enchant Armor (A-grade) Pack">
+	<etcitem id="14286" name="Lucky Enchant Stone: Armor Pack (A-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -994,7 +994,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14287" name="Lucky Enchant Stone: Enchant Armor (S-grade) Pack">
+	<etcitem id="14287" name="Lucky Enchant Stone: Armor Pack (S-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1076,7 +1076,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1010"/>
 	</etcitem>
-	<etcitem id="14294" name="Ghoul's Staff">
+	<etcitem id="14294" name="Corroded Ghoul's Staff">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="1885"/>
 		<set name="class" value="OTHER"/>

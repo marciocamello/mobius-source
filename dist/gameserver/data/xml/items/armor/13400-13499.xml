@@ -194,7 +194,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13439" name="Vesper Gauntlet">
+	<armor id="13439" name="Vesper Gauntlets">
 		<set name="crystal_count" value="560"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -357,7 +357,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13449" name="Vesper Noble Gauntlet">
+	<armor id="13449" name="Vesper Noble Gauntlets">
 		<set name="crystal_count" value="670"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -628,7 +628,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13481" name="Circlet of Goddard Combat">
+	<armor id="13481" name="Goddard Circlet of Combat">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_pledge_hair10_i00"/>
@@ -656,7 +656,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13483" name="Circlet of Oren Combat">
+	<armor id="13483" name="Circlet of Combat">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_pledge_hair12_i00"/>
@@ -670,7 +670,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13484" name="Circlet of Gludio Silence">
+	<armor id="13484" name="Gludio Circlet of Silence">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_pledge_hair13_i00"/>
@@ -684,7 +684,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13485" name="Circlet of Schuttgart Silence">
+	<armor id="13485" name="Schuttgart Circlet of Silence">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_pledge_hair14_i00"/>
@@ -698,7 +698,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13486" name="Circlet of Aden Unity">
+	<armor id="13486" name="Aden Circlet of Silence">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_pledge_hair15_i00"/>
@@ -712,7 +712,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13487" name="Circlet of Rune Silence">
+	<armor id="13487" name="Rune Circlet of Silence">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_pledge_hair16_i00"/>

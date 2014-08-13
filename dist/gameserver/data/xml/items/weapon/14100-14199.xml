@@ -1072,7 +1072,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14154" name="Vesper Sheutjeh" add_name="Cheap Shot">
+	<weapon id="14154" name="Vesper Shooter" add_name="Cheap Shot">
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
@@ -1110,7 +1110,7 @@
 			</mul>
 		</for>
 	</weapon>
-	<weapon id="14155" name="Vesper Sheutjeh" add_name="Focus">
+	<weapon id="14155" name="Vesper Shooter" add_name="Focus">
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
@@ -1140,7 +1140,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14156" name="Vesper Sheutjeh" add_name="Critical Slow">
+	<weapon id="14156" name="Vesper Shooter" add_name="Critical Slow">
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>

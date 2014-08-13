@@ -373,7 +373,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="150"/>
 	</etcitem>
-	<etcitem id="12753" name="Teleport Scroll: Kamael Village">
+	<etcitem id="12753" name="Scroll of Escape: Kamael Village">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -389,7 +389,7 @@
 			<skill id="2525" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="12754" name="Accessory Life Stone -  Level 46">
+	<etcitem id="12754" name="Accessory Life Stone - Level 46">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i00"/>
@@ -398,7 +398,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12755" name="Accessory Life Stone -  Level 49">
+	<etcitem id="12755" name="Accessory Life Stone - Level 49">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i00"/>
@@ -407,7 +407,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12756" name="Accessory Life Stone -  Level 52">
+	<etcitem id="12756" name="Accessory Life Stone - Level 52">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i00"/>
@@ -416,7 +416,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12757" name="Accessory Life Stone -  Level 55">
+	<etcitem id="12757" name="Accessory Life Stone - Level 55">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i00"/>
@@ -425,7 +425,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12758" name="Accessory Life Stone -  Level 58">
+	<etcitem id="12758" name="Accessory Life Stone - Level 58">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i01"/>
@@ -434,7 +434,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12759" name="Accessory Life Stone -  Level 61">
+	<etcitem id="12759" name="Accessory Life Stone - Level 61">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i01"/>
@@ -443,7 +443,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12760" name="Accessory Life Stone -  Level 64">
+	<etcitem id="12760" name="Accessory Life Stone - Level 64">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i02"/>
@@ -452,7 +452,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12761" name="Accessory Life Stone -  Level 67">
+	<etcitem id="12761" name="Accessory Life Stone - Level 67">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i02"/>
@@ -461,7 +461,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12762" name="Accessory Life Stone -  Level 70">
+	<etcitem id="12762" name="Corroded Accessory Life Stone (Lv. 70)">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i02"/>
@@ -470,7 +470,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12763" name="Accessory Life Stone -  Level 76">
+	<etcitem id="12763" name="Accessory Life Stone - Level 76">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i03"/>

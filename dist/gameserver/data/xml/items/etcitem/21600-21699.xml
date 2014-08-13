@@ -9,7 +9,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21601" name="XP Rune III (Lv1-99) 30% Pack (5-hour)">
+	<etcitem id="21601" name="XP Rune III (Lv. 1-99) 30% Pack (5-hour)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -19,7 +19,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21602" name="XP Rune III (Lv1-99) 50% Pack (5-hour)">
+	<etcitem id="21602" name="XP Rune III (Lv. 1-99) 50% Pack (5-hour)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -29,7 +29,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21603" name="XP Rune III (Lv1-99) 30% Pack (10-hour)">
+	<etcitem id="21603" name="XP Rune III (Lv. 1-99) 30% Pack (10-hour)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -39,7 +39,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21604" name="XP Rune III (Lv1-99) 50% Pack (10-hour)">
+	<etcitem id="21604" name="XP Rune III (Lv. 1-99) 50% Pack (10-hour)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -49,7 +49,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21605" name="XP Rune III (Lv1-99) 30% Pack (7-day)">
+	<etcitem id="21605" name="XP Rune III (Lv. 1-99) 30% Pack (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -59,7 +59,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21606" name="XP Rune III (Lv1-99) 50% Pack (7-day)">
+	<etcitem id="21606" name="XP Rune III (Lv. 1-99) 50% Pack (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -129,7 +129,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21613" name="Rune of Crystal Level 3 5-hour Pack">
+	<etcitem id="21613" name="Rune of Crystal (Lv. 3) Pack (5-hour)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -139,7 +139,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21614" name="Rune of Crystal Level 5 5-hour Pack">
+	<etcitem id="21614" name="Rune of Crystal (Lv. 5) Pack (5-hour)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -149,7 +149,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21615" name="Rune of Crystal Level 3 10-hour Pack">
+	<etcitem id="21615" name="Rune of Crystal (Lv. 3) Pack (10-hour)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -159,7 +159,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21616" name="Rune of Crystal Level 5 10-hour Pack">
+	<etcitem id="21616" name="Rune of Crystal (Lv. 5) Pack (10-hour)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -169,7 +169,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21617" name="Rune of Crystal Level 3 Pack (7-day)">
+	<etcitem id="21617" name="Rune of Crystal (Lv. 3) Pack (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -179,7 +179,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21618" name="Rune of Crystal Level 5 Pack (7-day)">
+	<etcitem id="21618" name="Rune of Crystal (Lv. 5) Pack (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -189,7 +189,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21619" name="Rune of Feather 24-hour Pack">
+	<etcitem id="21619" name="Rune of Feather Pack (24-hour)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -199,7 +199,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21620" name="Lucky Enchant Stone: Enchant Weapon (D-grade) Pack">
+	<etcitem id="21620" name="Lucky Enchant Stone: Weapon Pack (D-grade)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -209,7 +209,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21621" name="Lucky Enchant Stone: Enchant Weapon (C-grade) Pack">
+	<etcitem id="21621" name="Lucky Enchant Stone: Weapon Pack (C-grade)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -219,7 +219,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21622" name="Lucky Enchant Stone: Enchant Weapon (B-grade) Pack">
+	<etcitem id="21622" name="Lucky Enchant Stone: Weapon Pack (B-grade)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -229,7 +229,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21623" name="Lucky Enchant Stone: Enchant Weapon (A-grade) Pack">
+	<etcitem id="21623" name="Lucky Enchant Stone: Weapon Pack (A-grade)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -239,7 +239,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21624" name="Lucky Enchant Stone: Enchant Weapon (S-grade) Pack">
+	<etcitem id="21624" name="Lucky Enchant Stone: Weapon Pack (S-grade)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -249,7 +249,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21625" name="Lucky Enchant Stone: Enchant Armor (D-grade) Pack">
+	<etcitem id="21625" name="Lucky Enchant Stone: Armor Pack (D-grade)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -259,7 +259,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21626" name="Lucky Enchant Stone: Enchant Armor (C-grade) Pack">
+	<etcitem id="21626" name="Lucky Enchant Stone: Armor Pack (C-grade)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -269,7 +269,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21627" name="Lucky Enchant Stone: Enchant Armor (B-grade) Pack">
+	<etcitem id="21627" name="Lucky Enchant Stone: Armor Pack (B-grade)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -279,7 +279,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21628" name="Lucky Enchant Stone: Enchant Armor (A-grade) Pack">
+	<etcitem id="21628" name="Lucky Enchant Stone: Armor Pack (A-grade)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -289,7 +289,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21629" name="Lucky Enchant Stone: Enchant Armor (S-grade) Pack">
+	<etcitem id="21629" name="Lucky Enchant Stone: Armor Pack (S-grade)">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -509,7 +509,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21651" name="Plastic Hair Pack (7-day)" add_name="Blessed Scroll of Escape">
+	<etcitem id="21651" name="Plastic Hair Pack (7-day)" add_name="Blessed Escape">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>

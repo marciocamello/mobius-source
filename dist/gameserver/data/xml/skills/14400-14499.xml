@@ -42,13 +42,13 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14407" levels="1" name="Lavasaurus Firstborn Attack">
+	<skill id="14407" levels="1" name="Lavasaurus Alpha Attack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14408" levels="1" name="Lavasaurus Firstborn Heal">
+	<skill id="14408" levels="1" name="Lavasaurus Alpha Heal">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -72,13 +72,13 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14412" levels="1" name="Hatching">
+	<skill id="14412" levels="1" name="Incubatioin">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14413" levels="1" name="Hatching">
+	<skill id="14413" levels="1" name="Incubatioin">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -126,7 +126,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14421" levels="1" name="Lajuus's Attack">
+	<skill id="14421" levels="1" name="Lazearth' Attack">
 		<set name="icon" val="icon.skill14421"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -138,7 +138,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14423" levels="1" name="Barpn's Darkness Attack">
+	<skill id="14423" levels="1" name="Byron's Darkness Attack">
 		<set name="icon" val="icon.skill0476"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -192,7 +192,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14432" levels="1" name="Shock">
+	<skill id="14432" levels="1" name="Stun">
 		<set name="icon" val="icon.skill0048"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -258,7 +258,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14443" levels="1" name="Method Summoner's Yoke">
+	<skill id="14443" levels="1" name="Consciousness Summoner's Yoke">
 		<set name="icon" val="icon.skill14443"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -294,19 +294,19 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14449" levels="1" name="Full Effort Strike">
+	<skill id="14449" levels="1" name="Dedicated Blow">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14450" levels="1" name="Full Effort Shoot">
+	<skill id="14450" levels="1" name="Dedicated Shot">
 		<set name="icon" val="icon.skill0056"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14451" levels="1" name="Multi Shoot">
+	<skill id="14451" levels="1" name="Multi Shot">
 		<set name="icon" val="icon.skill0987"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -390,7 +390,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14465" levels="1" name="Apherus's Binding">
+	<skill id="14465" levels="1" name="Apherus' Binding">
 		<set name="icon" val="icon.skill0006"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -510,7 +510,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14485" levels="1" name="High-speed Shoot">
+	<skill id="14485" levels="1" name="High-speed Shot">
 		<set name="icon" val="icon.skill1086"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -534,7 +534,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14489" levels="1" name="Replenish">
+	<skill id="14489" levels="1" name="Recharge">
 		<set name="icon" val="icon.skill1147"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>

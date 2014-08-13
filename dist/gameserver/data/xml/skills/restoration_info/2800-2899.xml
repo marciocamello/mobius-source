@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "restoration_info.dtd">
 <list>
-	<restoration skill_id="2832" skill_level="1" name="S80 Weapon Chest">
+	<restoration skill_id="2832" skill_level="1" name="Weapon Pack (S80-grade)">
 		<group chance="8.3333">
 			<item id="9442" min_count="1" max_count="1"/>
 		</group>
@@ -39,7 +39,7 @@
 			<item id="10253" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2833" skill_level="1" name="S80 Armor Chest">
+	<restoration skill_id="2833" skill_level="1" name="Armor Pack (S80-grade)">
 		<group chance="6.25">
 			<item id="9514" min_count="1" max_count="1"/>
 		</group>
@@ -89,7 +89,7 @@
 			<item id="9529" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2834" skill_level="1" name="S Weapon Chest">
+	<restoration skill_id="2834" skill_level="1" name="Weapon Pack (S-grade)">
 		<group chance="9.0909">
 			<item id="7575" min_count="1" max_count="1"/>
 		</group>
@@ -124,7 +124,7 @@
 			<item id="6580" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2835" skill_level="1" name="S Armor Chest">
+	<restoration skill_id="2835" skill_level="1" name="Armor Pack (S-grade)">
 		<group chance="7.142857">
 			<item id="6674" min_count="1" max_count="1"/>
 		</group>
@@ -168,7 +168,7 @@
 			<item id="6687" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2836" skill_level="1" name="S Accessory Chest">
+	<restoration skill_id="2836" skill_level="1" name="Accessory Pack (S-grade)">
 		<group chance="33.3333">
 			<item id="6724" min_count="1" max_count="1"/>
 		</group>
@@ -179,7 +179,7 @@
 			<item id="6726" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2838" skill_level="1" name="Treasure Sack of the Ancient Giants">
+	<restoration skill_id="2838" skill_level="1" name="Treasure Sack of Ancient Times">
 		<group chance="35.0">
 			<item id="9628" min_count="1" max_count="1"/>
 		</group>
@@ -394,7 +394,7 @@
 			<item id="9629" min_count="2" max_count="2"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2858" skill_level="1" name="Christmas Red Sock">
+	<restoration skill_id="2858" skill_level="1" name="Holiday Red Sock">
 		<group chance="17.665">
 			<item id="14611" min_count="1" max_count="1"/>
 			<item id="14619" min_count="1" max_count="1"/>
@@ -552,7 +552,7 @@
 			<item id="14730" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2895" skill_level="1" name="Special White Day Candy Basket">
+	<restoration skill_id="2895" skill_level="1" name="Valentine's Day Candy Basket">
 		<group chance="10.0">
 			<item id="14769" min_count="5" max_count="5"/>
 			<item id="14772" min_count="1" max_count="1"/>
@@ -566,7 +566,7 @@
 			<item id="14776" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2896" skill_level="1" name="White Day Candy Basket">
+	<restoration skill_id="2896" skill_level="1" name="White Valentine's Day Candy Basket">
 		<group chance="50.0">
 			<item id="14769" min_count="1" max_count="1"/>
 			<item id="14771" min_count="1" max_count="1"/>

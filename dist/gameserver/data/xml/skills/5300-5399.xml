@@ -597,7 +597,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="holy"/>
 	</skill>
-	<skill id="5331" levels="9" name="Drain Health">
+	<skill id="5331" levels="9" name="Drain Energy">
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -689,7 +689,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5336" levels="9" name="Whirlwind">
+	<skill id="5336" levels="9" name="Spinning Slasher">
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -754,7 +754,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="fire"/>
 	</skill>
-	<skill id="5340" levels="9" name="Whirlwind">
+	<skill id="5340" levels="9" name="Spinning Slasher">
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -819,7 +819,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="water"/>
 	</skill>
-	<skill id="5344" levels="9" name="Whirlwind">
+	<skill id="5344" levels="9" name="Spinning Slasher">
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -884,7 +884,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="wind"/>
 	</skill>
-	<skill id="5348" levels="9" name="Whirlwind">
+	<skill id="5348" levels="9" name="Spinning Slasher">
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -949,7 +949,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="earth"/>
 	</skill>
-	<skill id="5352" levels="9" name="Whirlwind">
+	<skill id="5352" levels="9" name="Spinning Slasher">
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -1014,7 +1014,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="holy"/>
 	</skill>
-	<skill id="5356" levels="9" name="Whirlwind">
+	<skill id="5356" levels="9" name="Spinning Slasher">
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -1079,7 +1079,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="unholy"/>
 	</skill>
-	<skill id="5360" levels="9" name="Whirlwind">
+	<skill id="5360" levels="9" name="Spinning Slasher">
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
 		<table name="#power">4000 4500 5000 5500 6000 6500 7000 7500 8000</table>
@@ -1689,7 +1689,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="holy"/>
 	</skill>
-	<skill id="5392" levels="9" name="Drain Health">
+	<skill id="5392" levels="9" name="Drain Energy">
 		<table name="#mpConsume2">55 57 58 60 61 61 62 62 63</table>
 		<table name="#mpConsume1">14 15 15 15 16 16 16 16 16</table>
 		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
@@ -1767,7 +1767,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5396" levels="1" name="Spell Force">
+	<skill id="5396" levels="1" name="Spell Stance">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="77"/>

@@ -45,7 +45,7 @@
 			<item id="22025" min_count="5" max_count="5"/>
 		</group>
 	</restoration>
-	<restoration skill_id="26001" skill_level="1" name="Middle Fortuna Box">
+	<restoration skill_id="26001" skill_level="1" name="Medium Fortuna Box">
 		<group chance="27.27272">
 			<item id="22007" min_count="3" max_count="3"/>
 		</group>
@@ -186,7 +186,7 @@
 			<item id="22025" min_count="5" max_count="5"/>
 		</group>
 	</restoration>
-	<restoration skill_id="26004" skill_level="1" name="Middle Fortuna Cube">
+	<restoration skill_id="26004" skill_level="1" name="Medium Fortuna Cube">
 		<group chance="26.51515">
 			<item id="22011" min_count="3" max_count="3"/>
 		</group>

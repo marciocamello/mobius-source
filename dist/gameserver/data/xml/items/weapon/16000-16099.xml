@@ -467,7 +467,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16013" name="Recurve Thorne Bow {PvP}" add_name="Crt. Slow">
+	<weapon id="16013" name="Recurve Thorne Bow {PvP}" add_name="Critical Slow">
 		<set name="atk_reuse" value="1500"/>
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
@@ -790,7 +790,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16022" name="Thorne Crossbow {PvP}" add_name="Crt. Slow">
+	<weapon id="16022" name="Thorne Crossbow {PvP}" add_name="Critical Slow">
 		<set name="atk_reuse" value="400"/>
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
@@ -925,7 +925,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16043" name="Vesper Slasher - Gale">
+	<weapon id="16043" name="Vesper Slasher - Great Gale">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -981,7 +981,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16045" name="Vesper Shaper - Gale">
+	<weapon id="16045" name="Vesper Shaper - Great Gale">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -1009,7 +1009,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16046" name="Vesper Fighter - Gale">
+	<weapon id="16046" name="Vesper Fighter - Great Gale">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -1094,7 +1094,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16049" name="Vesper Retributer - Gale">
+	<weapon id="16049" name="Vesper Retributer - Great Gale">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -1151,7 +1151,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16051" name="Vesper Singer - Tidal Wave">
+	<weapon id="16051" name="Vesper Singer - Hail">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
@@ -1241,7 +1241,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16054" name="Vesper Schutze - Clairvoyance">
+	<weapon id="16054" name="Vesper Shooter - Clairvoyance">
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
@@ -1271,7 +1271,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16055" name="Vesper Nagan - Gale">
+	<weapon id="16055" name="Vesper Nagan - Great Gale">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -1387,7 +1387,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16059" name="Vesper Slasher - Gale" add_name="Haste">
+	<weapon id="16059" name="Vesper Slasher - Great Gale" add_name="Haste">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -1416,7 +1416,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16060" name="Vesper Slasher - Gale" add_name="Health">
+	<weapon id="16060" name="Vesper Slasher - Great Gale" add_name="Health">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -1445,7 +1445,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16061" name="Vesper Slasher - Gale" add_name="Focus">
+	<weapon id="16061" name="Vesper Slasher - Great Gale" add_name="Focus">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -1564,7 +1564,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16065" name="Vesper Shaper - Gale" add_name="Crt. Damage">
+	<weapon id="16065" name="Vesper Shaper - Great Gale" add_name="Critical Damage">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -1593,7 +1593,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16066" name="Vesper Shaper - Gale" add_name="HP Drain">
+	<weapon id="16066" name="Vesper Shaper - Great Gale" add_name="HP Drain">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -1622,7 +1622,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16067" name="Vesper Shaper - Gale" add_name="Haste">
+	<weapon id="16067" name="Vesper Shaper - Great Gale" add_name="Haste">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -1651,7 +1651,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16068" name="Vesper Fighter - Gale" add_name="Focus">
+	<weapon id="16068" name="Vesper Fighter - Great Gale" add_name="Focus">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -1680,7 +1680,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16069" name="Vesper Fighter - Gale" add_name="Health">
+	<weapon id="16069" name="Vesper Fighter - Great Gale" add_name="Health">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -1709,7 +1709,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16070" name="Vesper Fighter - Gale" add_name="Crt. Stun">
+	<weapon id="16070" name="Vesper Fighter - Great Gale" add_name="Critical Stun">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -1912,7 +1912,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16077" name="Vesper Retributer - Gale" add_name="HP Regeneration">
+	<weapon id="16077" name="Vesper Retributer - Great Gale" add_name="HP Regeneration">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -1941,7 +1941,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16078" name="Vesper Retributer - Gale" add_name="Health">
+	<weapon id="16078" name="Vesper Retributer - Great Gale" add_name="Health">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -1970,7 +1970,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16079" name="Vesper Retributer - Gale" add_name="HP Drain">
+	<weapon id="16079" name="Vesper Retributer - Great Gale" add_name="HP Drain">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -2089,7 +2089,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16083" name="Vesper Singer - Tidal Wave" add_name="Empower">
+	<weapon id="16083" name="Vesper Singer - Hail" add_name="Empower">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
@@ -2119,7 +2119,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16084" name="Vesper Singer - Tidal Wave" add_name="MP Regeneration">
+	<weapon id="16084" name="Vesper Singer - Hail" add_name="MP Regeneration">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
@@ -2149,7 +2149,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16085" name="Vesper Singer - Tidal Wave" add_name="Magic Hold">
+	<weapon id="16085" name="Vesper Singer - Hail" add_name="Magic Hold">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
@@ -2247,7 +2247,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16088" name="Vesper Thrower - Clairvoyance" add_name="Crt. Slow">
+	<weapon id="16088" name="Vesper Thrower - Clairvoyance" add_name="Critical Slow">
 		<set name="atk_reuse" value="1500"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
@@ -2372,7 +2372,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16092" name="Vesper Schutze - Clairvoyance" add_name="Cheap Shot">
+	<weapon id="16092" name="Vesper Shooter - Clairvoyance" add_name="Cheap Shot">
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
@@ -2404,7 +2404,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16093" name="Vesper Schutze - Clairvoyance" add_name="Focus">
+	<weapon id="16093" name="Vesper Shooter - Clairvoyance" add_name="Focus">
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
@@ -2435,7 +2435,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16094" name="Vesper Schutze - Clairvoyance" add_name="Crt. Slow">
+	<weapon id="16094" name="Vesper Shooter - Clairvoyance" add_name="Critical Slow">
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
@@ -2466,7 +2466,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16095" name="Vesper Nagan - Gale" add_name="Haste">
+	<weapon id="16095" name="Vesper Nagan - Great Gale" add_name="Haste">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -2496,7 +2496,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16096" name="Vesper Nagan - Gale" add_name="Health">
+	<weapon id="16096" name="Vesper Nagan - Great Gale" add_name="Health">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -2526,7 +2526,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="16097" name="Vesper Nagan - Gale" add_name="Focus">
+	<weapon id="16097" name="Vesper Nagan - Great Gale" add_name="Focus">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>

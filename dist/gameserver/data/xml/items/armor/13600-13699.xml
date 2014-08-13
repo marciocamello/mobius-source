@@ -24,7 +24,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13688" name="Knight's Cloak - Light Armor exclusive">
+	<armor id="13688" name="Knight's Cloak (Light Armor)">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="dropable" value="false"/>
@@ -47,7 +47,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13689" name="Knight's Cloak - Robe exclusive">
+	<armor id="13689" name="Knight's Cloak (Robe)">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="dropable" value="false"/>
@@ -70,7 +70,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13690" name="Knight's Cloak - Kamael exclusive">
+	<armor id="13690" name="Knight's Cloak (Kamael)">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="dropable" value="false"/>

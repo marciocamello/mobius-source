@@ -49,7 +49,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.mentee_graduate_proof"/>
 	</etcitem>
-	<etcitem id="33806" name="Scroll: Enchant Giant's Weapon (D-grade)" add_name="Event">
+	<etcitem id="33806" name="Giant's Scroll: Enchant Weapon (D-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -58,7 +58,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.giant_scrl_of_ench_wp_d"/>
 	</etcitem>
-	<etcitem id="33807" name="Scroll: Enchant Giant's Weapon (C-grade)" add_name="Event">
+	<etcitem id="33807" name="Giant's Scroll: Enchant Weapon (C-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -67,7 +67,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.giant_scrl_of_ench_wp_c"/>
 	</etcitem>
-	<etcitem id="33808" name="Scroll: Enchant Giant's Weapon (B-grade)" add_name="Event">
+	<etcitem id="33808" name="Giant's Scroll: Enchant Weapon (B-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -76,7 +76,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.giant_scrl_of_ench_wp_b"/>
 	</etcitem>
-	<etcitem id="33809" name="Scroll: Enchant Giant's Weapon (A-grade)" add_name="Event">
+	<etcitem id="33809" name="Giant's Scroll: Enchant Weapon (A-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -85,7 +85,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.giant_scrl_of_ench_wp_a"/>
 	</etcitem>
-	<etcitem id="33810" name="Scroll: Enchant Giant's Weapon (S-grade)" add_name="Event">
+	<etcitem id="33810" name="Giant's Scroll: Enchant Weapon (S-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -94,7 +94,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.giant_scrl_of_ench_wp_s"/>
 	</etcitem>
-	<etcitem id="33811" name="Scroll: Enchant Giant's Weapon (R-grade)" add_name="Event">
+	<etcitem id="33811" name="Giant's Scroll: Enchant Weapon (R-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -103,7 +103,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.giant_scrl_of_ench_wp_r"/>
 	</etcitem>
-	<etcitem id="33812" name="Scroll: Enchant Giant's Armor (D-grade)" add_name="Event">
+	<etcitem id="33812" name="Giant's Scroll: Enchant Armor (D-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -112,7 +112,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.giant_scrl_of_ench_am_d"/>
 	</etcitem>
-	<etcitem id="33813" name="Scroll: Enchant Giant's Armor (C-grade)" add_name="Event">
+	<etcitem id="33813" name="Giant's Scroll: Enchant Armor (C-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -121,7 +121,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.giant_scrl_of_ench_am_c"/>
 	</etcitem>
-	<etcitem id="33814" name="Scroll: Enchant Giant's Armor (B-grade)" add_name="Event">
+	<etcitem id="33814" name="Giant's Scroll: Enchant Armor (B-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -130,7 +130,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.giant_scrl_of_ench_am_b"/>
 	</etcitem>
-	<etcitem id="33815" name="Scroll: Enchant Giant's Armor (A-grade)" add_name="Event">
+	<etcitem id="33815" name="Giant's Scroll: Enchant Armor (A-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -139,7 +139,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.giant_scrl_of_ench_am_a"/>
 	</etcitem>
-	<etcitem id="33816" name="Scroll: Enchant Giant's Armor (S-grade)" add_name="Event">
+	<etcitem id="33816" name="Giant's Scroll: Enchant Armor (S-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -148,7 +148,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.giant_scrl_of_ench_am_s"/>
 	</etcitem>
-	<etcitem id="33817" name="Scroll: Enchant Giant's Armor (R-grade)" add_name="Event">
+	<etcitem id="33817" name="Giant's Scroll: Enchant Armor (R-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -166,7 +166,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_scroll_of_enchant_armor_i05"/>
 	</etcitem>
-	<etcitem id="33819" name="Life Stone - Hair Accessory" add_name="Event">
+	<etcitem id="33819" name="Life Stone: Hair Accessory" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -247,7 +247,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.cursed_free_r95"/>
 	</etcitem>
-	<etcitem id="33828" name="Soul Crystal Change Stone - A" add_name="Event">
+	<etcitem id="33828" name="Soul Crystal Change Stone (A-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -256,7 +256,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_bead_red_i00"/>
 	</etcitem>
-	<etcitem id="33829" name="Soul Crystal Change Stone - S" add_name="Event">
+	<etcitem id="33829" name="Soul Crystal Change Stone (S-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -265,7 +265,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_bead_silver_i00"/>
 	</etcitem>
-	<etcitem id="33830" name="Soul Crystal Change Stone - S80" add_name="Event">
+	<etcitem id="33830" name="Soul Crystal Change Stone (S80-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -274,7 +274,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_bead_silver_i00"/>
 	</etcitem>
-	<etcitem id="33831" name="Soul Crystal Change Stone - R" add_name="Event">
+	<etcitem id="33831" name="Soul Crystal Change Stone (R-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -283,7 +283,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_bead_gold_i00"/>
 	</etcitem>
-	<etcitem id="33832" name="Soul Crystal Change Stone - R95" add_name="Event">
+	<etcitem id="33832" name="Soul Crystal Change Stone (R95-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -332,7 +332,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.change_elemental_crystal"/>
 	</etcitem>
-	<etcitem id="33838" name="Scroll: Enchant Weapon of Destruction (D-grade)" add_name="Event">
+	<etcitem id="33838" name="Destruction Scroll: Enchant Weapon (D-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -340,7 +340,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blessed_scrl_of_ench_wp_d_i01"/>
 	</etcitem>
-	<etcitem id="33839" name="Scroll: Enchant Weapon of Destruction (C-grade)" add_name="Event">
+	<etcitem id="33839" name="Destruction Scroll: Enchant Weapon (C-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -348,7 +348,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blessed_scrl_of_ench_wp_c_i02"/>
 	</etcitem>
-	<etcitem id="33840" name="Scroll: Enchant Weapon of Destruction (B-grade)" add_name="Event">
+	<etcitem id="33840" name="Destruction Scroll: Enchant Weapon (B-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -356,7 +356,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blessed_scrl_of_ench_wp_b_i03"/>
 	</etcitem>
-	<etcitem id="33841" name="Scroll: Enchant Weapon of Destruction (A-grade)" add_name="Event">
+	<etcitem id="33841" name="Destruction Scroll: Enchant Weapon (A-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -364,7 +364,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blessed_scrl_of_ench_wp_a_i04"/>
 	</etcitem>
-	<etcitem id="33842" name="Scroll: Enchant Weapon of Destruction (S-grade)" add_name="Event">
+	<etcitem id="33842" name="Destruction Scroll: Enchant Weapon (S-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -372,7 +372,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blessed_scrl_of_ench_wp_s_i05"/>
 	</etcitem>
-	<etcitem id="33843" name="Scroll: Enchant Weapon of Destruction (R-grade)" add_name="Event">
+	<etcitem id="33843" name="Destruction Scroll: Enchant Weapon (R-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -380,7 +380,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.scroll_of_enchant_weapon_i06"/>
 	</etcitem>
-	<etcitem id="33844" name="Scroll: Enchant Armor of Destruction (D-grade)" add_name="Event">
+	<etcitem id="33844" name="Destruction Scroll: Enchant Armor (D-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -388,7 +388,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blessed_scrl_of_ench_am_d_i01"/>
 	</etcitem>
-	<etcitem id="33845" name="Scroll: Enchant Armor of Destruction (C-grade)" add_name="Event">
+	<etcitem id="33845" name="Destruction Scroll: Enchant Armor (C-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -396,7 +396,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blessed_scrl_of_ench_am_c_i02"/>
 	</etcitem>
-	<etcitem id="33846" name="Scroll: Enchant Armor of Destruction (B-grade)" add_name="Event">
+	<etcitem id="33846" name="Destruction Scroll: Enchant Armor (B-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -404,7 +404,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blessed_scrl_of_ench_am_b_i03"/>
 	</etcitem>
-	<etcitem id="33847" name="Scroll: Enchant Armor of Destruction (A-grade)" add_name="Event">
+	<etcitem id="33847" name="Destruction Scroll: Enchant Armor (A-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -412,7 +412,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blessed_scrl_of_ench_am_a_i04"/>
 	</etcitem>
-	<etcitem id="33848" name="Scroll: Enchant Armor of Destruction (S-grade)" add_name="Event">
+	<etcitem id="33848" name="Destruction Scroll: Enchant Armor (S-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -420,7 +420,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blessed_scrl_of_ench_am_s_i05"/>
 	</etcitem>
-	<etcitem id="33849" name="Scroll: Enchant Armor of Destruction (R-grade)" add_name="Event">
+	<etcitem id="33849" name="Destruction Scroll: Enchant Armor (R-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -428,7 +428,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.scroll_of_enchant_armor_i06"/>
 	</etcitem>
-	<etcitem id="33850" name="Lucky Enchant Stone: Enchant Weapon (D-grade)" add_name="Event">
+	<etcitem id="33850" name="Lucky Enchant Stone: Weapon (D-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -437,7 +437,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.ench_wp_stone_i00"/>
 	</etcitem>
-	<etcitem id="33851" name="Lucky Enchant Stone: Enchant Weapon (C-grade)" add_name="Event">
+	<etcitem id="33851" name="Lucky Enchant Stone: Weapon (C-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -446,7 +446,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.ench_wp_stone_i01"/>
 	</etcitem>
-	<etcitem id="33852" name="Lucky Enchant Stone: Enchant Weapon (B-grade)" add_name="Event">
+	<etcitem id="33852" name="Lucky Enchant Stone: Weapon (B-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -455,7 +455,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.ench_wp_stone_i02"/>
 	</etcitem>
-	<etcitem id="33853" name="Lucky Enchant Stone: Enchant Weapon (A-grade)" add_name="Event">
+	<etcitem id="33853" name="Lucky Enchant Stone: Weapon (A-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -464,7 +464,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.ench_wp_stone_i03"/>
 	</etcitem>
-	<etcitem id="33854" name="Lucky Enchant Stone: Enchant Weapon (S-grade)" add_name="Event">
+	<etcitem id="33854" name="Lucky Enchant Stone: Weapon (S-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -473,7 +473,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.ench_wp_stone_i04"/>
 	</etcitem>
-	<etcitem id="33855" name="Lucky Enchant Stone: Enchant Weapon (R-grade)" add_name="Event">
+	<etcitem id="33855" name="Lucky Enchant Stone: Weapon (R-grade)" add_name="Event">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -486,7 +486,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="33856" name="Lucky Enchant Stone: Enchant Armor (D-grade)" add_name="Event">
+	<etcitem id="33856" name="Lucky Enchant Stone: Armor (D-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -495,7 +495,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.ench_am_stone_i00"/>
 	</etcitem>
-	<etcitem id="33857" name="Lucky Enchant Stone: Enchant Armor (C-grade)" add_name="Event">
+	<etcitem id="33857" name="Lucky Enchant Stone: Armor (C-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -504,7 +504,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.ench_am_stone_i01"/>
 	</etcitem>
-	<etcitem id="33858" name="Lucky Enchant Stone: Enchant Armor (B-grade)" add_name="Event">
+	<etcitem id="33858" name="Lucky Enchant Stone: Armor (B-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -513,7 +513,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.ench_am_stone_i02"/>
 	</etcitem>
-	<etcitem id="33859" name="Lucky Enchant Stone: Enchant Armor (A-grade)" add_name="Event">
+	<etcitem id="33859" name="Lucky Enchant Stone: Armor (A-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -522,7 +522,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.ench_am_stone_i03"/>
 	</etcitem>
-	<etcitem id="33860" name="Lucky Enchant Stone: Enchant Armor (S-grade)" add_name="Event">
+	<etcitem id="33860" name="Lucky Enchant Stone: Armor (S-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -531,7 +531,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.ench_am_stone_i04"/>
 	</etcitem>
-	<etcitem id="33861" name="Lucky Enchant Stone: Enchant Armor (R-grade)" add_name="Event">
+	<etcitem id="33861" name="Lucky Enchant Stone: Armor (R-grade)" add_name="Event">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

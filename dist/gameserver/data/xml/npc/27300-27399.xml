@@ -1296,7 +1296,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="27323" name="God's Emissary" title="Quest Monster">
+	<npc id="27323" name="Divine Emissary" title="Quest Monster">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
@@ -2148,7 +2148,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="27340" name="Pursuer" title="">
+	<npc id="27340" name="Tracker" title="">
 		<set name="aggroRange" value="150"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>

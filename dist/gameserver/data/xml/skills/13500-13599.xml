@@ -1,0 +1,354 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="13500" levels="1" name="Monster Weapon Appearance Stone: Glakias' Hammer">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13501" levels="1" name="Monster Weapon Appearance Stone: Tebot's Dual Blunt Weapon">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13502" levels="1" name="Monster Weapon Appearance Stone: Drakos' Dagger">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13503" levels="1" name="Monster Weapon Appearance Stone: Drakos' Dual Dagger">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13504" levels="1" name="Monster Weapon Appearance Stone: Guillotine's Greatsword">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13505" levels="1" name="Monster Weapon Appearance Stone: Thesakar's Axe">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13506" levels="1" name="Monster Weapon Appearance Stone: Mimilead's Staff">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13507" levels="1" name="Monster Weapon Appearance Stone: Satyr's Staff">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13508" levels="1" name="Monster Weapon Appearance Stone: Kanadis' Hand">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13509" levels="1" name="Monster Weapon Appearance Stone: Kanadis' Bow">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13510" levels="1" name="Monster Weapon Appearance Stone: Centaur's Bow">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13511" levels="1" name="Monster Weapon Appearance Stone: Spicula's Crossbow">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13512" levels="1" name="Monster Weapon Appearance Stone: Theor's Shield">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13513" levels="1" name="Monster Weapon Appearance Stone: Shield of Corruption">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13514" levels="1" name="Giant's Damage Reflect">
+		<set name="icon" val="icon.skill0086"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13515" levels="1" name="Giant's Critical Damage">
+		<set name="icon" val="icon.skill0482"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13516" levels="1" name="Giant's Damage Reflect Shield">
+		<set name="icon" val="icon.active_damage_shield1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13517" levels="1" name="Giant's Battle Roar">
+		<set name="icon" val="icon.skill3123"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13518" levels="1" name="Giant's Celestial Shield">
+		<set name="icon" val="icon.skill11758"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13519" levels="1" name="Giant's Undying Will">
+		<set name="icon" val="icon.race_orc_immortality"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13520" levels="1" name="Giant's Silence">
+		<set name="icon" val="icon.skill1064"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13521" levels="1" name="Giant's Sleep">
+		<set name="icon" val="icon.skill1069"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13522" levels="1" name="Giant's Winter">
+		<set name="icon" val="icon.skill1454"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13523" levels="1" name="Giant's Critical Weakness">
+		<set name="icon" val="icon.skill1222"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13524" levels="1" name="Lindvior's Earring">
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="runSpd" val="5"/>
+			<add order="0x10" stat="DEX" val="3"/>
+			<add order="0x10" stat="WIT" val="3"/>
+			<add order="0x40" stat="defenceWind" val="100"/>
+			<add order="0x40" stat="defenceUnholy" val="100"/>
+			<mul order="0x30" stat="rCrit" val="1.10"/>
+			<mul order="0x30" stat="mCritRate" val="1.10"/>
+		</for>
+	</skill>
+	<skill id="13525" levels="1" name="Blessed Lindvior's Earring">
+		<set name="icon" val="icon.accessory_earring_of_lind_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13526" levels="1" name="Blessed Lindvior's Earring">
+		<set name="icon" val="icon.accessory_earring_of_lind_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13527" levels="1" name="Enhanced Octavis' Ring (Warrior)">
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" val="1.03"/>
+			<mul order="0x30" stat="baseCrit" val="1.10"/>
+			<mul order="0x30" stat="cAtk" val="1.15"/>
+		</for>
+	</skill>
+	<skill id="13528" levels="1" name="Enhanced Octavis' Earring (Warrior)">
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" val="1.03"/>
+			<mul order="0x30" stat="mpConsumePhysical" val="0.95"/>
+			<mul order="0x30" stat="hpEff" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="13529" levels="1" name="Enhanced Octavis' Necklace (Warrior)">
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" val="1.03"/>
+			<mul order="0x30" stat="mpConsumePhysical" val="0.90"/>
+			<mul order="0x30" stat="reflectDam" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="13530" levels="1" name="Enhanced Istina's Ring (Warrior)">
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" val="1.02"/>
+			<mul order="0x30" stat="baseCrit" val="1.10"/>
+			<mul order="0x30" stat="cAtk" val="1.10"/>
+		</for>
+	</skill>
+	<skill id="13531" levels="1" name="Enhanced Istina's Earring (Warrior)">
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" val="1.02"/>
+			<mul order="0x30" stat="mpConsumePhysical" val="0.97"/>
+			<mul order="0x30" stat="hpEff" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="13532" levels="1" name="Enhanced Istina's Necklace (Warrior)">
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" val="1.02"/>
+			<mul order="0x30" stat="mpConsumePhysical" val="0.95"/>
+			<mul order="0x30" stat="reflectDam" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="13533" levels="1" name="Enhanced Octavis' Ring (Wizard)">
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtkSpd" val="1.03"/>
+			<mul order="0x30" stat="mCritDamage" val="1.10"/>
+			<mul order="0x30" stat="mCritRate" val="1.10"/>
+		</for>
+	</skill>
+	<skill id="13534" levels="1" name="Enhanced Octavis' Earring (Wizard)">
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mDef" val="1.02"/>
+			<mul order="0x30" stat="mpConsum" val="0.97"/>
+			<mul order="0x30" stat="hpEff" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="13535" levels="1" name="Enhanced Octavis' Necklace (Wizard)">
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" val="1.03"/>
+			<mul order="0x30" stat="mpConsumePhysical" val="0.95"/>
+			<mul order="0x30" stat="reflectDam" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="13536" levels="1" name="Enhanced Istina's Ring (Wizard)">
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" val="1.02"/>
+			<mul order="0x30" stat="baseCrit" val="1.10"/>
+			<mul order="0x30" stat="cAtk" val="1.10"/>
+		</for>
+	</skill>
+	<skill id="13537" levels="1" name="Enhanced Istina's Earring (Wizard)">
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" val="1.02"/>
+			<mul order="0x30" stat="mpConsumePhysical" val="0.97"/>
+			<mul order="0x30" stat="hpEff" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="13538" levels="1" name="Enhanced Istina's Necklace (Wizard)">
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" val="1.02"/>
+			<mul order="0x30" stat="mpConsumePhysical" val="0.95"/>
+			<mul order="0x30" stat="reflectDam" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="13539" levels="1" name="Baium's Soul Ring">
+		<set name="icon" val="icon.accessory_ring_of_baium_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13540" levels="1" name="Frintezza's Soul Necklace">
+		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13541" levels="1" name="Octavis' Shirt">
+		<set name="icon" val="icon.istina_shirt_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13542" levels="1" name="Lindvior's Earring">
+		<set name="icon" val="icon.accessory_earring_of_lind_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13543" levels="1" name="NC Messenger's Hat">
+		<set name="icon" val="icon.accessory_archer_hat2_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13544" levels="1" name="Kisung's Mysterious Power">
+		<set name="icon" val="icon.skill17085"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13545" levels="1" name="Kisung's Great Power">
+		<set name="icon" val="icon.skill17085"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="13546" levels="1" name="Kisung's Balanced Power">
+		<set name="icon" val="icon.skill17085"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+</list>

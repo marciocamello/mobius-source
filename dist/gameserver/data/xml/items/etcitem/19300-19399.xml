@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="19300" name="Unidentified Eternal Shoes Ingredient">
+	<etcitem id="19300" name="Unidentified Eternal Shoe Ingredient">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -51,7 +51,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_r991_ring_piece"/>
 	</etcitem>
-	<etcitem id="19305" name="Giant's Warsmith' Holder">
+	<etcitem id="19305" name="Corroded Giant's Warsmith' Holder">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -61,7 +61,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blacksmiths_frame_i01"/>
 	</etcitem>
-	<etcitem id="19306" name="Giant's Reorin's Mold">
+	<etcitem id="19306" name="Corroded Giant's Reorin's Mold">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -71,7 +71,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blacksmiths_frame_i01"/>
 	</etcitem>
-	<etcitem id="19307" name="Giant's Arcsmith' Anvil">
+	<etcitem id="19307" name="Corroded Giant's Arcsmith' Anvil">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -81,7 +81,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blacksmiths_frame_i01"/>
 	</etcitem>
-	<etcitem id="19308" name="Giant's Warsmith' Mold">
+	<etcitem id="19308" name="Corroded Giant's Warsmith' Mold">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -91,7 +91,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blacksmiths_frame_i01"/>
 	</etcitem>
-	<etcitem id="19309" name="Durandil Temper">
+	<etcitem id="19309" name="Corroded Durandil Temper">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -101,7 +101,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_lump_silver_i00"/>
 	</etcitem>
-	<etcitem id="19310" name="High-grade Synthetic Cokes">
+	<etcitem id="19310" name="Corroded Greater Synthetic Cokes">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -111,7 +111,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_synthetic_cokes_i01"/>
 	</etcitem>
-	<etcitem id="19311" name="Laktorarium">
+	<etcitem id="19311" name="Corroded Laktorarium">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -121,7 +121,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_sardonyx_i00_32"/>
 	</etcitem>
-	<etcitem id="19312" name="Itenium Temper">
+	<etcitem id="19312" name="Corroded Itenium Temper">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -131,7 +131,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_lump_gold_i00"/>
 	</etcitem>
-	<etcitem id="19313" name="Ertel">
+	<etcitem id="19313" name="Corroded Ertel">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -141,7 +141,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_gem_violet_i00"/>
 	</etcitem>
-	<etcitem id="19314" name="Dark Ion">
+	<etcitem id="19314" name="Corroded Dark Ion">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

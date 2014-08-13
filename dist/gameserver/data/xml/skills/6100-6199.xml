@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="6100" levels="3" name="Turkey's Choice - Scissors">
+	<skill id="6100" levels="3" name="Turkey's Choice - Paper">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -9,7 +9,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6103" levels="5" name="Showdown with the Turkey - 1 Win">
+	<skill id="6103" levels="5" name="Showdown with the Turkey - 5 Consecutive Wins">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.xmas_pcwin1_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -137,7 +137,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6117" levels="3" name="Choice - Scissors">
+	<skill id="6117" levels="3" name="Choice - Paper">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.xmas_gawi_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -240,7 +240,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6129" levels="1" name="Shock">
+	<skill id="6129" levels="1" name="Stun">
 		<set name="levelModifier" val="2"/>
 		<set name="icon" val="icon.skill0092"/>
 		<set name="coolTime" val="800"/>
@@ -255,7 +255,7 @@
 		<set name="trait" val="SHOCK"/>
 		<set name="saveVs" val="CON"/>
 	</skill>
-	<skill id="6130" levels="1" name="Curse of the Mutant Animal">
+	<skill id="6130" levels="1" name="Mutant Curse">
 		<set name="levelModifier" val="1"/>
 		<set name="affectLimit" val="10;10"/>
 		<set name="icon" val="icon.skill0092"/>
@@ -272,7 +272,7 @@
 		<set name="trait" val="SHOCK"/>
 		<set name="saveVs" val="CON"/>
 	</skill>
-	<skill id="6131" levels="1" name="Decrease Spd">
+	<skill id="6131" levels="1" name="Decrease Speed">
 		<set name="levelModifier" val="2"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1160"/>
@@ -294,7 +294,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6132" levels="1" name="Decrease Atk. Spd">
+	<skill id="6132" levels="1" name="Decrease Atk. Spd.">
 		<set name="levelModifier" val="1"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill4038"/>
@@ -310,7 +310,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="saveVs" val="MEN"/>
 	</skill>
-	<skill id="6133" levels="1" name="Effect of Doubt">
+	<skill id="6133" levels="1" name="Mysterious Effect">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill2513"/>
 		<set name="magicLevel" val="95"/>
@@ -320,7 +320,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="trait" val="ETC"/>
 	</skill>
-	<skill id="6134" levels="1" name="Curse of the Mutant Animal">
+	<skill id="6134" levels="1" name="Mutant Curse">
 		<set name="levelModifier" val="1"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill4038"/>
@@ -366,7 +366,7 @@
 			<player agathion="16064"/>
 		</cond>
 	</skill>
-	<skill id="6137" levels="1" name="Agathion Juju - Effect of Doubt">
+	<skill id="6137" levels="1" name="Agathion Juju - Mysterious Effect">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill2513"/>
 		<set name="reuseDelay" val="10000"/>
@@ -384,7 +384,7 @@
 			<effect abnormal="bighead" count="1" name="Buff" stackType="BigHead" time="300" val="0"/>
 		</for>
 	</skill>
-	<skill id="6138" levels="1" name="Agathion Juju - Large Firework">
+	<skill id="6138" levels="1" name="Agathion Juju - Large Firecracker">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="reuseDelay" val="20000"/>
@@ -415,7 +415,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6141" levels="1" name="Swamp's Wish">
+	<skill id="6141" levels="1" name="Source of Marsh">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -482,7 +482,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6149" levels="1" name="Kasha's Betrayal">
+	<skill id="6149" levels="1" name="Kasha's Brand">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0122"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -595,7 +595,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6167" levels="12" name="Shock">
+	<skill id="6167" levels="12" name="Stun">
 		<table name="#mpConsume2">13 20 28 38 50 61 71 76 80 83 84 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="levelModifier" val="1"/>
@@ -611,7 +611,7 @@
 		<set name="trait" val="SHOCK"/>
 		<set name="saveVs" val="CON"/>
 	</skill>
-	<skill id="6168" levels="12" name="Shock">
+	<skill id="6168" levels="12" name="Stun">
 		<table name="#mpConsume2">13 20 28 38 50 61 71 76 80 83 84 85</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="levelModifier" val="1"/>
@@ -821,7 +821,7 @@
 		<set name="skillType" val="MDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6188" levels="1" name="Presentation - Lilith's Steward Battle1">
+	<skill id="6188" levels="1" name="Presentation - Lilith' Steward Battle1">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="1000"/>
@@ -833,7 +833,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6189" levels="1" name="Presentation - Lilith's Steward Battle2">
+	<skill id="6189" levels="1" name="Presentation - Lilith' Steward Battle2">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="1000"/>
@@ -846,7 +846,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="trait" val="POISON"/>
 	</skill>
-	<skill id="6190" levels="1" name="Presentation - Lilith's Bodyguards Battle1">
+	<skill id="6190" levels="1" name="Presentation - Lilith' Bodyguards Battle1">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="1000"/>
@@ -897,7 +897,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6194" levels="1" name="Presentation - Anakim's Guard Battle">
+	<skill id="6194" levels="1" name="Presentation - Anakim's Royal Guard Battle">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="8000"/>

@@ -16,7 +16,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33301" name="Majestic Gauntlet of Destiny (Fire, Wind, Dark)" add_name="Heavy">
+	<armor id="33301" name="Majestic Gauntlets of Destiny (Fire, Wind, Dark)" add_name="Heavy Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.armor_t83_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -31,7 +31,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33302" name="Majestic Boots of Destiny (Fire, Wind, Dark)" add_name="Heavy">
+	<armor id="33302" name="Majestic Boots of Destiny (Fire, Wind, Dark)" add_name="Heavy Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.armor_t83_b_i00"/>
 		<set name="type" value="NONE"/>
@@ -76,7 +76,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33306" name="Majestic Gauntlet of Destiny (Fire, Wind, Dark)" add_name="Light">
+	<armor id="33306" name="Majestic Gauntlets of Destiny (Fire, Wind, Dark)" add_name="Light Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.armor_t84_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -91,7 +91,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33307" name="Majestic Boots of Destiny (Fire, Wind, Dark)" add_name="Light">
+	<armor id="33307" name="Majestic Boots of Destiny (Fire, Wind, Dark)" add_name="Light Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.armor_t84_b_i00"/>
 		<set name="type" value="NONE"/>
@@ -136,7 +136,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33310" name="Majestic Gauntlet of Destiny (Fire, Wind, Dark)" add_name="Robe">
+	<armor id="33310" name="Majestic Gauntlets of Destiny (Fire, Wind, Dark)" add_name="Robe">
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.armor_t85_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -196,7 +196,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33314" name="Majestic Gauntlet of Destiny (Water, Earth, Holy)" add_name="Heavy">
+	<armor id="33314" name="Majestic Gauntlets of Destiny (Water, Earth, Holy)" add_name="Heavy Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.armor_t83_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -211,7 +211,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33315" name="Majestic Boots of Destiny (Water, Earth, Holy)" add_name="Heavy">
+	<armor id="33315" name="Majestic Boots of Destiny (Water, Earth, Holy)" add_name="Heavy Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.armor_t83_b_i00"/>
 		<set name="type" value="NONE"/>
@@ -256,7 +256,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33319" name="Majestic Gauntlet of Destiny (Water, Earth, Holy)" add_name="Light">
+	<armor id="33319" name="Majestic Gauntlets of Destiny (Water, Earth, Holy)" add_name="Light Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.armor_t84_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -271,7 +271,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33320" name="Majestic Boots of Destiny (Water, Earth, Holy)" add_name="Light">
+	<armor id="33320" name="Majestic Boots of Destiny (Water, Earth, Holy)" add_name="Light Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.armor_t84_b_i00"/>
 		<set name="type" value="NONE"/>
@@ -316,7 +316,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33323" name="Majestic Gauntlet of Destiny (Water, Earth, Holy)" add_name="Robe">
+	<armor id="33323" name="Majestic Gauntlets of Destiny (Water, Earth, Holy)" add_name="Robe">
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.armor_t85_g_i00"/>
 		<set name="type" value="NONE"/>

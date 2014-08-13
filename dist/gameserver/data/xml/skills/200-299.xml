@@ -665,7 +665,7 @@
 			</mul>
 		</for>
 	</skill>
-	<skill id="239" levels="10" name="Expertise D">
+	<skill id="239" levels="10" name="Expertise R99">
 		<table name="#magicLevel">20 40 52 61 76 80 84 85 95 99</table>
 		<set name="icon" val="icon.skill0239"/>
 		<set name="magicLevel" val="#magicLevel"/>

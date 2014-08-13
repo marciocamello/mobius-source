@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="21800" name="Dynasty Leather Armor of Friendship" add_name="90 day limited period">
+	<armor id="21800" name="Dynasty Leather Armor of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t92_u_i00"/>
 		<set name="price" value="0"/>
@@ -17,7 +17,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="21801" name="Dynasty Leather Leggings of Friendship" add_name="90 day limited period">
+	<armor id="21801" name="Dynasty Leather Leggings of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t92_l_i00"/>
 		<set name="price" value="0"/>
@@ -33,7 +33,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="21802" name="Dynasty Leather Helmet of Friendship" add_name="90 day limited period">
+	<armor id="21802" name="Dynasty Leather Helmet of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_leather_helmet_i00"/>
 		<set name="price" value="0"/>
@@ -49,7 +49,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="21803" name="Dynasty Leather Gloves of Friendship" add_name="90 day limited period">
+	<armor id="21803" name="Dynasty Leather Gloves of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t92_g_i00"/>
 		<set name="price" value="0"/>
@@ -65,7 +65,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="21804" name="Dynasty Leather Boots of Friendship" add_name="90 day limited period">
+	<armor id="21804" name="Dynasty Leather Boots of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t92_b_i00"/>
 		<set name="price" value="0"/>
@@ -81,7 +81,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="21806" name="Dynasty Tunic of Friendship" add_name="90 day limited period">
+	<armor id="21806" name="Dynasty Tunic of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t93_u_i00"/>
 		<set name="price" value="0"/>
@@ -98,7 +98,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="21807" name="Dynasty Stockings of Friendship" add_name="90 day limited period">
+	<armor id="21807" name="Dynasty Stockings of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t93_l_i00"/>
 		<set name="price" value="0"/>
@@ -115,7 +115,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="21808" name="Dynasty Circlet of Friendship" add_name="90 day limited period">
+	<armor id="21808" name="Dynasty Circlet of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_circlet_i00"/>
 		<set name="price" value="0"/>
@@ -131,7 +131,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="21809" name="Dynasty Gloves of Friendship" add_name="90 day limited period">
+	<armor id="21809" name="Dynasty Gloves of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t93_g_i00"/>
 		<set name="price" value="0"/>
@@ -147,7 +147,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="21810" name="Dynasty Shoes of Friendship" add_name="90 day limited period">
+	<armor id="21810" name="Dynasty Shoes of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t93_b_i00"/>
 		<set name="price" value="0"/>
@@ -163,7 +163,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="21811" name="Dynasty Sickle of Friendship" add_name="90 day limited period">
+	<armor id="21811" name="Dynasty Sigil of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.dynasty_sigil_i00"/>
 		<set name="price" value="0"/>
@@ -180,7 +180,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="21813" name="Tateossian Earring of Friendship" add_name="90 day limited period">
+	<armor id="21813" name="Tateossian Earring of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessory_tateossian_earring_i00"/>
 		<set name="price" value="0"/>
@@ -197,7 +197,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="21814" name="Tateossian Ring of Friendship" add_name="90 day limited period">
+	<armor id="21814" name="Tateossian Ring of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessory_tateossian_ring_i00"/>
 		<set name="price" value="0"/>
@@ -214,7 +214,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="21815" name="Tateossian Necklace of Friendship" add_name="90 day limited period">
+	<armor id="21815" name="Tateossian Necklace of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessory_tateossian_necklace_i00"/>
 		<set name="price" value="0"/>
@@ -230,7 +230,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="21817" name="Dynasty Earrings of Friendship" add_name="90 day limited period">
+	<armor id="21817" name="Dynasty Earring of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_dynasty_earing_i00"/>
 		<set name="price" value="0"/>
@@ -247,7 +247,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="21818" name="Dynasty Necklace of Friendship" add_name="90 day limited period">
+	<armor id="21818" name="Dynasty Necklace of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_dynasty_necklace_i00"/>
 		<set name="price" value="0"/>
@@ -263,7 +263,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="21819" name="Dynasty Ring of Friendship" add_name="90 day limited period">
+	<armor id="21819" name="Dynasty Ring of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_dynasty_ring_i00"/>
 		<set name="price" value="0"/>
@@ -280,7 +280,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="21870" name="Agathion Seal Bracelet - Neolithica" add_name="14-day limited period">
+	<armor id="21870" name="Agathion - Neolithica" add_name="14-day">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -307,7 +307,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="21882" name="Shiny Party Hat" add_name="Blessed Body - 90 day limited period">
+	<armor id="21882" name="Shiny Party Hat" add_name="Blessed Body (90-day)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_party_hat_gold_i00"/>
 		<set name="price" value="0"/>

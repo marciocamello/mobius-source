@@ -142,7 +142,7 @@
 			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</skill>
-	<skill id="8406" levels="1" name="Moirai Heavy Armor Set - PVP">
+	<skill id="8406" levels="1" name="Moirai Heavy Armor Set - PvP">
 		<set name="icon" val="icon.armor_t100_u_i00"/>
 		<set name="magicLevel" val="82"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -170,7 +170,7 @@
 			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</skill>
-	<skill id="8407" levels="1" name="Moirai Light Armor Set - PVP">
+	<skill id="8407" levels="1" name="Moirai Light Armor Set - PvP">
 		<set name="icon" val="icon.armor_t101_u_i00"/>
 		<set name="magicLevel" val="82"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -198,7 +198,7 @@
 			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</skill>
-	<skill id="8408" levels="1" name="Moirai Robe Set - PVP">
+	<skill id="8408" levels="1" name="Moirai Robe Set - PvP">
 		<set name="icon" val="icon.armor_t102_u_i00"/>
 		<set name="magicLevel" val="82"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -225,7 +225,7 @@
 			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</skill>
-	<skill id="8409" levels="1" name="Vorpal Heavy Armor Set - PVP">
+	<skill id="8409" levels="1" name="Vorpal Heavy Armor Set - PvP">
 		<set name="icon" val="icon.armor_t94_u_i03"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -258,7 +258,7 @@
 			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</skill>
-	<skill id="8410" levels="1" name="Vorpal Leather Armor Set - PVP">
+	<skill id="8410" levels="1" name="Vorpal Leather Armor Set - PvP">
 		<set name="icon" val="icon.armor_t95_u_i03"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -290,7 +290,7 @@
 			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</skill>
-	<skill id="8411" levels="1" name="Vorpal Robe Set - PVP">
+	<skill id="8411" levels="1" name="Vorpal Robe Set - PvP">
 		<set name="icon" val="icon.armor_t96_u_i03"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -321,7 +321,7 @@
 			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</skill>
-	<skill id="8412" levels="1" name="Elegia Heavy Armor Set - PVP">
+	<skill id="8412" levels="1" name="Elegia Heavy Armor Set - PvP">
 		<set name="icon" val="icon.armor_t97_u_i00"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -353,7 +353,7 @@
 			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</skill>
-	<skill id="8413" levels="1" name="Elegia Leather Armor Set - PVP">
+	<skill id="8413" levels="1" name="Elegia Leather Armor Set - PvP">
 		<set name="icon" val="icon.armor_t98_u_i00"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -383,7 +383,7 @@
 			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</skill>
-	<skill id="8414" levels="1" name="Elegia Robe Set - PVP">
+	<skill id="8414" levels="1" name="Elegia Robe Set - PvP">
 		<set name="icon" val="icon.armor_t99_u_i00"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -415,21 +415,21 @@
 			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</skill>
-	<skill id="8415" levels="5" name="Ring Ability - Drop Rate Up">
+	<skill id="8415" levels="5" name="Ring Ability: Drop Rate Up">
 		<set name="icon" val="icon.skill3080"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="8416" levels="5" name="Earring Ability - Drop Rate Up">
+	<skill id="8416" levels="5" name="Earring Ability: Increase Drop Rate">
 		<set name="icon" val="icon.skill3080"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="8417" levels="5" name="Necklace Ability - Drop Rate Up">
+	<skill id="8417" levels="5" name="Necklace Ability: Drop Rate Up">
 		<set name="icon" val="icon.skill3080"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -449,7 +449,7 @@
 			<add order="0x40" stat="defenceFire" val="3"/>
 		</for>
 	</skill>
-	<skill id="8419" levels="1" name="Moirai Cuirass">
+	<skill id="8419" levels="1" name="Moirai Breastplate">
 		<set name="icon" val="icon.armor_t100_u_i00"/>
 		<set name="magicLevel" val="82"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -465,7 +465,7 @@
 			<add order="0x40" stat="defenceEarth" val="1"/>
 		</for>
 	</skill>
-	<skill id="8420" levels="1" name="Moirai Gaiter">
+	<skill id="8420" levels="1" name="Moirai Gaiters">
 		<set name="icon" val="icon.armor_t100_l_i00"/>
 		<set name="magicLevel" val="82"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -478,7 +478,7 @@
 			<add order="0x40" stat="defenceWater" val="3"/>
 		</for>
 	</skill>
-	<skill id="8421" levels="1" name="Moirai Gauntlet">
+	<skill id="8421" levels="1" name="Moirai Gauntlets">
 		<set name="icon" val="icon.armor_t100_g_i00"/>
 		<set name="magicLevel" val="82"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -527,7 +527,7 @@
 			<add order="0x40" stat="defenceFire" val="3"/>
 		</for>
 	</skill>
-	<skill id="8425" levels="1" name="Moirai Leather Hauberk">
+	<skill id="8425" levels="1" name="Moirai Leather Breastplate">
 		<set name="icon" val="icon.armor_t101_u_i00"/>
 		<set name="magicLevel" val="82"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -540,7 +540,7 @@
 			<add order="0x40" stat="defenceWater" val="3"/>
 		</for>
 	</skill>
-	<skill id="8426" levels="1" name="Moirai Leather Legging">
+	<skill id="8426" levels="1" name="Moirai Leather Leggings">
 		<set name="icon" val="icon.armor_t101_l_i00"/>
 		<set name="magicLevel" val="82"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -591,7 +591,7 @@
 			<add order="0x40" stat="defenceFire" val="5"/>
 		</for>
 	</skill>
-	<skill id="8430" levels="1" name="Moirai Jacket">
+	<skill id="8430" levels="1" name="Moirai Tunic">
 		<set name="icon" val="icon.armor_t102_u_i00"/>
 		<set name="magicLevel" val="82"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -607,7 +607,7 @@
 			<add order="0x40" stat="defenceEarth" val="1"/>
 		</for>
 	</skill>
-	<skill id="8431" levels="1" name="Moirai Hose">
+	<skill id="8431" levels="1" name="Moirai Stockings">
 		<set name="icon" val="icon.armor_t102_l_i00"/>
 		<set name="magicLevel" val="82"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -667,7 +667,7 @@
 			<add order="0x40" stat="rootResist" val="10.5"/>
 		</for>
 	</skill>
-	<skill id="8436" levels="1" name="Vesper Cuirass">
+	<skill id="8436" levels="1" name="Vesper Breastplate">
 		<set name="icon" val="icon.armor_t94_u_i00"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -681,7 +681,7 @@
 			<add order="0x40" stat="rootResist" val="28"/>
 		</for>
 	</skill>
-	<skill id="8437" levels="1" name="Vesper Gaiter">
+	<skill id="8437" levels="1" name="Vesper Gaiters">
 		<set name="icon" val="icon.armor_t94_l_i00"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -695,7 +695,7 @@
 			<add order="0x40" stat="rootResist" val="18"/>
 		</for>
 	</skill>
-	<skill id="8438" levels="1" name="Vesper Gauntlet">
+	<skill id="8438" levels="1" name="Vesper Gauntlets">
 		<set name="icon" val="icon.armor_t94_g_i00"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -723,7 +723,7 @@
 			<add order="0x40" stat="rootResist" val="7"/>
 		</for>
 	</skill>
-	<skill id="8440" levels="1" name="Vesper Verteidiger">
+	<skill id="8440" levels="1" name="Vesper Shield">
 		<set name="icon" val="icon.weapon_vesper_verteidiger_i01"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -746,7 +746,7 @@
 			<add order="0x40" stat="maxMp" val="87"/>
 		</for>
 	</skill>
-	<skill id="8442" levels="1" name="Vesper Leather Hauberk">
+	<skill id="8442" levels="1" name="Vesper Leather Breastplate">
 		<set name="icon" val="icon.armor_t95_u_i00"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -759,7 +759,7 @@
 			<add order="0x40" stat="maxMp" val="347"/>
 		</for>
 	</skill>
-	<skill id="8443" levels="1" name="Vesper Leather Legging">
+	<skill id="8443" levels="1" name="Vesper Leather Leggings">
 		<set name="icon" val="icon.armor_t95_l_i00"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -811,7 +811,7 @@
 			<sub order="0x40" stat="concentration" val="4.5"/>
 		</for>
 	</skill>
-	<skill id="8447" levels="1" name="Vesper Jacket">
+	<skill id="8447" levels="1" name="Vesper Tunic">
 		<set name="icon" val="icon.armor_t96_u_i00"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -825,7 +825,7 @@
 			<add order="0x40" stat="concentration" val="12"/>
 		</for>
 	</skill>
-	<skill id="8448" levels="1" name="Vesper Hose">
+	<skill id="8448" levels="1" name="Vesper Stockings">
 		<set name="icon" val="icon.armor_t96_l_i00"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -942,7 +942,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="8459" levels="1" name="Necklace of Freya">
+	<skill id="8459" levels="1" name="Freya's Necklace">
 		<set name="icon" val="icon.accessary_queen_of_ice_necklace_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -962,7 +962,7 @@
 			<add order="0x40" stat="reflectDam" val="4"/>
 		</for>
 	</skill>
-	<skill id="8460" levels="1" name="Blessed Necklace of Freya">
+	<skill id="8460" levels="1" name="Blessed Freya's Necklace">
 		<set name="icon" val="icon.accessary_queen_of_ice_necklace_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -986,21 +986,21 @@
 			<add order="0x40" stat="CON" val="1"/>
 		</for>
 	</skill>
-	<skill id="8461" levels="1" name="Enchant Heavy Armor (S Grade)">
+	<skill id="8461" levels="1" name="Enchant Heavy Armor (S-grade)">
 		<set name="icon" val="icon.skill0231"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="8462" levels="1" name="Enchant Light Armor (S Grade)">
+	<skill id="8462" levels="1" name="Enchant Light Armor (S-grade)">
 		<set name="icon" val="icon.skill0233"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="8463" levels="1" name="Enchant Robe (S Grade)">
+	<skill id="8463" levels="1" name="Enchant Robe (S-grade)">
 		<set name="icon" val="icon.skill0234"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -1041,7 +1041,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="8468" levels="2" name="Magic Sword of Mana Regeneration">
+	<skill id="8468" levels="2" name="Sword of Mana Regeneration">
 		<table name="#magicLevel">85 86</table>
 		<set name="icon" val="icon.skill1047"/>
 		<set name="magicLevel" val="#magicLevel"/>
@@ -1081,7 +1081,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="8473" levels="2" name="Two-handed Blunt of Death Whisper">
+	<skill id="8473" levels="2" name="Two-handed Blunt Weapon of Death Whisper">
 		<table name="#magicLevel">85 86</table>
 		<set name="icon" val="icon.skill1242"/>
 		<set name="magicLevel" val="#magicLevel"/>
@@ -1137,7 +1137,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="8480" levels="2" name="Dual-Blade Weapon of Guidance">
+	<skill id="8480" levels="2" name="Dual-blade Weapon of Guidance">
 		<table name="#magicLevel">85 86</table>
 		<set name="icon" val="icon.skill1240"/>
 		<set name="magicLevel" val="#magicLevel"/>
@@ -1159,7 +1159,7 @@
 			<add order="0x40" stat="rootResist" val="11"/>
 		</for>
 	</skill>
-	<skill id="8482" levels="1" name="Vesper Noble Gaiter">
+	<skill id="8482" levels="1" name="Vesper Noble Gaiters">
 		<set name="icon" val="icon.armor_t94_l_i01"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1173,7 +1173,7 @@
 			<add order="0x40" stat="rootResist" val="18"/>
 		</for>
 	</skill>
-	<skill id="8483" levels="1" name="Vesper Noble Gauntlet">
+	<skill id="8483" levels="1" name="Vesper Noble Gauntlets">
 		<set name="icon" val="icon.armor_t94_g_i01"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1214,7 +1214,7 @@
 			<add order="0x40" stat="maxMp" val="87"/>
 		</for>
 	</skill>
-	<skill id="8486" levels="1" name="Vesper Noble Leather Legging">
+	<skill id="8486" levels="1" name="Vesper Noble Leather Leggings">
 		<set name="icon" val="icon.armor_t95_l_i01"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1266,7 +1266,7 @@
 			<sub order="0x40" stat="concentration" val="4.5"/>
 		</for>
 	</skill>
-	<skill id="8490" levels="1" name="Vesper Noble Hose">
+	<skill id="8490" levels="1" name="Vesper Noble Stockings">
 		<set name="icon" val="icon.armor_t96_l_i01"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1305,7 +1305,7 @@
 			<sub order="0x40" stat="concentration" val="3"/>
 		</for>
 	</skill>
-	<skill id="8493" levels="1" name="Moirai Shield">
+	<skill id="8493" levels="1" name="Equip Shield">
 		<set name="icon" val="icon.weapon_tysandy_shield_i01"/>
 		<set name="magicLevel" val="82"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1315,7 +1315,7 @@
 			<mul order="0x30" stat="rShld" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8494" levels="1" name="Vesper Verteidiger">
+	<skill id="8494" levels="1" name="Equip Shield">
 		<set name="icon" val="icon.weapon_vesper_verteidiger_i01"/>
 		<set name="magicLevel" val="84"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1325,7 +1325,7 @@
 			<mul order="0x30" stat="rShld" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8495" levels="1" name="Vorpal Shield">
+	<skill id="8495" levels="1" name="Equip Shield">
 		<set name="icon" val="icon.Evilgate_Shield_i00"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1335,7 +1335,7 @@
 			<mul order="0x30" stat="rShld" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8496" levels="1" name="Elegia Shield">
+	<skill id="8496" levels="1" name="Equip Shield">
 		<set name="icon" val="icon.heavengate_shield_i00"/>
 		<set name="magicLevel" val="86"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1345,21 +1345,21 @@
 			<mul order="0x30" stat="rShld" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8497" levels="1" name="Ice Hair Circlet">
+	<skill id="8497" levels="1" name="Circlet of Ice">
 		<set name="icon" val="icon.accessory_ice_circlet_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="8498" levels="1" name="Pink Talisman of STR">
+	<skill id="8498" levels="1" name="Pink Talisman - STR">
 		<set name="icon" val="icon.etc_talisman_event_i00"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="8499" levels="1" name="Pink Talisman of DEX">
+	<skill id="8499" levels="1" name="Pink Talisman - DEX">
 		<set name="icon" val="icon.etc_talisman_event_i00"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_NONE"/>

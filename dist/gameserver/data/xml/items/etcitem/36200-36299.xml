@@ -9,7 +9,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_kalie_hero_scroll"/>
 	</etcitem>
-	<etcitem id="36234" name="Boss Accessory Pack" add_name="(1-day)">
+	<etcitem id="36234" name="Boss Accessory Pack" add_name="1-day">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
@@ -23,21 +23,21 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_kalie_cube"/>
 	</etcitem>
-	<etcitem id="36223" name="Extra Pass - Kartia's Labyrinth Level 85 Solo">
+	<etcitem id="36223" name="Entrance Pass: Kartia's Labyrinth Level 85 Solo">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
 	</etcitem>
-	<etcitem id="36224" name="Extra Pass - Kartia's Labyrinth Level 90 Solo">
+	<etcitem id="36224" name="Entrance Pass: Kartia's Labyrinth Level 90 Solo">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
 	</etcitem>
-	<etcitem id="36225" name="Extra Pass - Kartia's Labyrinth Level 95 Solo">
+	<etcitem id="36225" name="Entrance Pass: Kartia's Labyrinth Level 95 Solo">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
@@ -65,7 +65,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_old_key_i01"/>
 	</etcitem>
-	<etcitem id="36226" name="Extra Pass - Kartia's Labyrinth Level 85 Party">
+	<etcitem id="36226" name="Entrance Pass: Kartia's Labyrinth Level 85 Party">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
@@ -204,70 +204,70 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_broken_crystal_blue_i00"/>
 	</etcitem>
-	<etcitem id="36268" name="Extra Pass - Kartia's Labyrinth Level 90 Party">
+	<etcitem id="36268" name="Entrance Pass: Kartia's Labyrinth Level 90 Party">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
 	</etcitem>
-	<etcitem id="36269" name="Extra Pass - Kartia's Labyrinth Level 95 Party">
+	<etcitem id="36269" name="Entrance Pass: Kartia's Labyrinth Level 95 Party">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
 	</etcitem>
-	<etcitem id="36270" name="Teredor Entrance Pass">
+	<etcitem id="36270" name="Entrance Pass: Teredor">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
 	</etcitem>
-	<etcitem id="36271" name="Spezion Entrance Pass - Normal">
+	<etcitem id="36271" name="Entrance Pass: Spezion (Normal)">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
 	</etcitem>
-	<etcitem id="36272" name="Spezion Entrance Pass - Extreme">
+	<etcitem id="36272" name="Entrance Pass: Spezion (Epic)">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
 	</etcitem>
-	<etcitem id="36273" name="Fortuna Entrance Pass">
+	<etcitem id="36273" name="Entrance Pass: Fortuna">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
 	</etcitem>
-	<etcitem id="36274" name="Nornil's Garden Entrance Pass">
+	<etcitem id="36274" name="Entrance Pass: Nornil's Garden">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
 	</etcitem>
-	<etcitem id="36275" name="Istina Entrance Pass - Normal">
+	<etcitem id="36275" name="Entrance Pass: Istina (Normal)">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
 	</etcitem>
-	<etcitem id="36276" name="Octavis Entrance Pass - Normal">
+	<etcitem id="36276" name="Entrance Pass: Octavis (Normal)">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_kalie_instantzone_re"/>
 	</etcitem>
-	<etcitem id="36277" name="Baylor Entrance Pass">
+	<etcitem id="36277" name="Entrance Pass: Baylor">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>

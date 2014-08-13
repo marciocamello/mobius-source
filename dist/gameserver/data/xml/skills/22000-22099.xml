@@ -48,7 +48,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22003" levels="1" name="Sour Sweet White Kimchi">
+	<skill id="22003" levels="1" name="Sweet-and-Sour White Kimchi">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.etc_kimchi_time_i00"/>
 		<set name="reuseDelay" val="2000"/>
@@ -95,7 +95,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22006" levels="1" name="Halloween Candy">
+	<skill id="22006" levels="1" name="Revita-Pop">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="100"/>
@@ -108,7 +108,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="altUse" val="true"/>
 	</skill>
-	<skill id="22007" levels="1" name="Good Luck Lucky Bag">
+	<skill id="22007" levels="1" name="Good Luck Bag">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -140,7 +140,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22010" levels="1" name="Mysterious Formal Dress">
+	<skill id="22010" levels="1" name="Mysterious Formal Wear">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -167,7 +167,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="22013" levels="1" name="Holiday Festival">
+	<skill id="22013" levels="1" name="Winter Holiday Festival">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -182,7 +182,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22014" levels="1" name="Holiday Festival">
+	<skill id="22014" levels="1" name="Winter Holiday Festival">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -197,7 +197,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22015" levels="1" name="Holiday Festival">
+	<skill id="22015" levels="1" name="Winter Holiday Festival">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -212,7 +212,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22016" levels="1" name="Holiday Festival">
+	<skill id="22016" levels="1" name="Winter Holiday Festival">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -245,7 +245,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="22019" levels="1" name="Extra Pass - Kamaloka (Hall of the Abyss)">
+	<skill id="22019" levels="1" name="Extra Pass: Kamaloka (Hall of the Abyss)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -253,7 +253,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22020" levels="1" name="Extra Pass - Near Kamaloka">
+	<skill id="22020" levels="1" name="Extra Pass: Near Kamaloka">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -261,7 +261,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22021" levels="1" name="Extra Pass - Kamaloka (Labyrinth of the Abyss)">
+	<skill id="22021" levels="1" name="Extra Pass: Kamaloka (Labyrinth of the Abyss)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -269,7 +269,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22022" levels="1" name="Premium Valentine Decoration">
+	<skill id="22022" levels="1" name="Miraculous Valentine Cake: Special Ingredient">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="itemConsumeId" val="20198"/>
@@ -298,7 +298,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="22025" levels="1" name="Delectable Valentine Cake">
+	<skill id="22025" levels="1" name="Delicious Valentine Cake">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -349,7 +349,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22030" levels="1" name="Fresh Cream Herb">
+	<skill id="22030" levels="1" name="Cream Puff Herb">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_herb_of_cream_i00"/>
 		<set name="reuseDelay" val="2000"/>
@@ -465,7 +465,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22039" levels="4" name="Rune of XP 30%">
+	<skill id="22039" levels="4" name="XP Rune III (Lv. 1-99) 50%">
 		<table name="#power">0.3 0.5 1 2</table>
 		<set name="icon" val="br_cashtex.skill.br_cash_rune_of_exp_buff_3"/>
 		<set name="magicLevel" val="1"/>
@@ -476,7 +476,7 @@
 			<add order="0x40" stat="ExpMultiplier" val="#power"/>
 		</for>
 	</skill>
-	<skill id="22040" levels="4" name="Rune of SP 30%">
+	<skill id="22040" levels="4" name="SP Rune 50%">
 		<table name="#power">0.3 0.5 1 2</table>
 		<set name="icon" val="br_cashtex.skill.br_cash_rune_of_sp_buff_3"/>
 		<set name="magicLevel" val="1"/>
@@ -487,7 +487,7 @@
 			<add order="0x40" stat="SpMultiplier" val="#power"/>
 		</for>
 	</skill>
-	<skill id="22041" levels="2" name="Rune of Crystal Level 3">
+	<skill id="22041" levels="2" name="Rune of Crystal (Lv. 5)">
 		<table name="#power">3 5</table>
 		<set name="icon" val="br_cashtex.skill.br_cash_rune_of_rp_buff_3"/>
 		<set name="magicLevel" val="1"/>
@@ -498,7 +498,7 @@
 			<add order="0x40" stat="gradeExpertiseLevel" val="#power"/>
 		</for>
 	</skill>
-	<skill id="22042" levels="1" name="High Grade Potion of Will">
+	<skill id="22042" levels="1" name="Greater CP Potion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="100"/>
@@ -516,7 +516,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22043" levels="6" name="Secret Medicine of Will (D-Grade)">
+	<skill id="22043" levels="6" name="Elixir of CP (S-grade)">
 		<table name="#itemConsumeId">0 20354 20355 20356 20357 20358</table>
 		<table name="#levelMin">1 20 40 52 61 76</table>
 		<table name="#levelMax">19 39 51 60 75 84</table>
@@ -544,7 +544,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22044" levels="6" name="Secret Medicine of Life (D-Grade)">
+	<skill id="22044" levels="6" name="Elixir of Life (Novice)">
 		<table name="#itemConsumeId">0 20359 20360 20361 20362 20363</table>
 		<table name="#levelMin">1 20 40 52 61 76</table>
 		<table name="#levelMax">19 39 51 60 75 84</table>
@@ -571,7 +571,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22045" levels="1" name="Onyx Beast Transformation Scroll">
+	<skill id="22045" levels="1" name="Transformation Scroll: Onyx Beast">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -583,7 +583,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22046" levels="1" name="Death Blader Transformation Scroll">
+	<skill id="22046" levels="1" name="Transformation Scroll: Doom Wraith">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -595,7 +595,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22047" levels="1" name="Grail Apostle Transformation Scroll">
+	<skill id="22047" levels="1" name="Transformation Scroll: Grail Apostle">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform2"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -607,7 +607,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22048" levels="1" name="Unicorn Transformation Scroll">
+	<skill id="22048" levels="1" name="Transformation Scroll: Unicorn">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform2"/>
 		<set name="itemConsumeId" val="20367"/>
@@ -634,7 +634,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22049" levels="1" name="Lilim Knight Transformation Scroll">
+	<skill id="22049" levels="1" name="Transformation Scroll: Lilim Knight">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform2"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -646,7 +646,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22050" levels="1" name="Golem Guardian Transformation Scroll">
+	<skill id="22050" levels="1" name="Transformation Scroll: Golem Guardian">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform2"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -658,7 +658,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22051" levels="1" name="Inferno Drake Transformation Scroll">
+	<skill id="22051" levels="1" name="Transformation Scroll: Inferno Drake">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform2"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -670,7 +670,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22052" levels="1" name="Dragon Bomber Transformation Scroll">
+	<skill id="22052" levels="1" name="Transformation Scroll: Dragon Bomber">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform2"/>
 		<set name="itemConsumeId" val="20371"/>
@@ -697,7 +697,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22053" levels="19" name="Escape - Talking Island Village">
+	<skill id="22053" levels="19" name="Scroll of Escape: Town of Schuttgart">
 		<table name="#itemConsumeId">20372 20373 20374 20375 20376 20377 20378 20379 20380 20381 20382 20383 20384 20385 20386 20387 20388 20389 20390</table>
 		<table name="#townId">1 2 3 4 5 7 6 8 19 9 9 13 10 10 12 11 15 14 16</table>
 		<set name="magicType" val="SPECIAL"/>
@@ -968,7 +968,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="22073" levels="1" name="Weapon Enchant Scroll (S-Grade)">
+	<skill id="22073" levels="1" name="Scroll: Enchant Weapon (S-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -976,7 +976,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22074" levels="1" name="Armor Enchant Scroll (S-Grade)">
+	<skill id="22074" levels="1" name="Scroll: Enchant Armor (S-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -984,7 +984,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22075" levels="1" name="Ancient Weapon Enchant Crystal (S-Grade)">
+	<skill id="22075" levels="1" name="Ancient Scroll: Enchant Weapon (S-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -992,7 +992,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22076" levels="1" name="Ancient Armor Enchant Crystal (S-Grade)">
+	<skill id="22076" levels="1" name="Ancient Scroll: Enchant Armor (S-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1000,7 +1000,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22077" levels="1" name="Holy Weapon Enchant Crystal (S-Grade)">
+	<skill id="22077" levels="1" name="Divine Scroll: Enchant Weapon (S-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1008,7 +1008,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22078" levels="1" name="Divine Armor Enchant Crystal (S-Grade)">
+	<skill id="22078" levels="1" name="Divine Scroll: Enchant Armor (S-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1016,7 +1016,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22079" levels="1" name="Resist Aqua">
+	<skill id="22079" levels="1" name="Water Resistance">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wind_walk_i00"/>
 		<set name="hitTime" val="4000"/>
@@ -1038,7 +1038,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22080" levels="1" name="Resist Wind">
+	<skill id="22080" levels="1" name="Wind Resistance">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wind_walk_i00"/>
 		<set name="hitTime" val="4000"/>
@@ -1060,7 +1060,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22081" levels="1" name="Resist Fire">
+	<skill id="22081" levels="1" name="Fire Resistance">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wind_walk_i00"/>
 		<set name="hitTime" val="4000"/>
@@ -1082,7 +1082,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22082" levels="1" name="Resist Holy">
+	<skill id="22082" levels="1" name="Holy Attack Resistance">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wind_walk_i00"/>
 		<set name="hitTime" val="4000"/>
@@ -1104,7 +1104,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22083" levels="1" name="Resist Dark">
+	<skill id="22083" levels="1" name="Dark Attack Resistance">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wind_walk_i00"/>
 		<set name="hitTime" val="4000"/>
@@ -1196,7 +1196,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="22087" levels="1" name="Bless Shield">
+	<skill id="22087" levels="1" name="Blessed Shield">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wind_walk_i00"/>
 		<set name="hitTime" val="4000"/>
@@ -1293,7 +1293,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="22092" levels="1" name="Scroll Master 1">
+	<skill id="22092" levels="1" name="Small Scroll Chest">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -1307,7 +1307,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22093" levels="1" name="Scroll Master 2">
+	<skill id="22093" levels="1" name="Large Scroll Chest">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -1321,7 +1321,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22094" levels="1" name="Exp. Master">
+	<skill id="22094" levels="1" name="Chest of Experience">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -1335,7 +1335,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22095" levels="1" name="Summon Spirit of Fire">
+	<skill id="22095" levels="1" name="Summon Fire Spirit">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1349,7 +1349,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="22096" levels="1" name="Summon Reckless Spirit of Fire">
+	<skill id="22096" levels="1" name="Summon Reckless Fire Spirit">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>

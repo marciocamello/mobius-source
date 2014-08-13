@@ -107,7 +107,7 @@
 		<set name="target" val="TARGET_AURA"/>
 		<for/>
 	</skill>
-	<skill id="11247" levels="1" name="Feoh Wizard Chain Air Blow">
+	<skill id="11247" levels="1" name="">
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="2000"/>
 		<set name="mpConsume2" val="40"/>
@@ -148,7 +148,7 @@
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="#time" val="0"/>
 		</for>
 	</skill>
-	<skill id="11249" levels="1" name="Feoh Chain Knock Blow">
+	<skill id="11249" levels="1" name="">
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="2000"/>
 		<set name="mpConsume2" val="40"/>
@@ -654,7 +654,7 @@
 		<set name="addSkills" val="11289;1"/>
 		<set name="npcId" val="14927"/>
 	</skill>
-	<skill id="11267" levels="3" name="Spirit of Nabiarov">
+	<skill id="11267" levels="3" name="Spirit of Naviarope">
 		<set name="magicType" val="SPECIAL"/>
 		<table name="#magicLevel">85 86 87</table>
 		<table name="#npc">14926 14926 14926</table>
@@ -1014,7 +1014,7 @@
 			<table name="#magicLevel">93 93 94 94 95 95 96 97 98 99</table>
 		</enchant1>
 	</skill>
-	<skill id="11281" levels="9" name="Cougar Jumping Attack">
+	<skill id="11281" levels="9" name="Cougar Pounce">
 		<table name="#pwr">194 197 204 210 217 224 231 238 242</table>
 		<table name="#magicLevel">85 86 87 88 89 90 91</table>
 		<table name="#mpConsume2">111 114 118 122 126 130 134</table>
@@ -1111,7 +1111,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<for/>
 	</skill>
-	<skill id="11286" levels="1" name="Forceful Summon">
+	<skill id="11286" levels="1" name="Forced Summon">
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="target" val="TARGET_SELF"/>

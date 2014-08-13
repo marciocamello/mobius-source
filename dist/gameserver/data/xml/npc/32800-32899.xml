@@ -3993,7 +3993,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="32892" name="Lydia" title="God's Messenger">
+	<npc id="32892" name="Lydia" title="Divine Messenger">
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>

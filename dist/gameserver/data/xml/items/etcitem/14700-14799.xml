@@ -37,7 +37,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="14702" name="Lucky Enchant Stone: Enchant Weapon (D-grade)">
+	<etcitem id="14702" name="Lucky Enchant Stone: Weapon (D-grade)">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ench_wp_stone_i00"/>
@@ -50,7 +50,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="14703" name="Lucky Enchant Stone: Enchant Weapon (C-grade)">
+	<etcitem id="14703" name="Lucky Enchant Stone: Weapon (C-grade)">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ench_wp_stone_i01"/>
@@ -63,7 +63,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="14704" name="Lucky Enchant Stone: Enchant Weapon (B-grade)">
+	<etcitem id="14704" name="Lucky Enchant Stone: Weapon (B-grade)">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ench_wp_stone_i02"/>
@@ -76,7 +76,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="14705" name="Lucky Enchant Stone: Enchant Weapon (A-grade)">
+	<etcitem id="14705" name="Lucky Enchant Stone: Weapon (A-grade)">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ench_wp_stone_i03"/>
@@ -89,7 +89,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="14706" name="Lucky Enchant Stone: Enchant Weapon (S-grade)">
+	<etcitem id="14706" name="Lucky Enchant Stone: Weapon (S-grade)">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ench_wp_stone_i04"/>
@@ -102,7 +102,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="14707" name="Lucky Enchant Stone: Enchant Armor (D-grade)">
+	<etcitem id="14707" name="Lucky Enchant Stone: Armor (D-grade)">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ench_am_stone_i00"/>
@@ -115,7 +115,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="14708" name="Lucky Enchant Stone: Enchant Armor (C-grade)">
+	<etcitem id="14708" name="Lucky Enchant Stone: Armor (C-grade)">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ench_am_stone_i01"/>
@@ -128,7 +128,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="14709" name="Lucky Enchant Stone: Enchant Armor (B-grade)">
+	<etcitem id="14709" name="Lucky Enchant Stone: Armor (B-grade)">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ench_am_stone_i02"/>
@@ -141,7 +141,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="14710" name="Lucky Enchant Stone: Enchant Armor (A-grade)">
+	<etcitem id="14710" name="Lucky Enchant Stone: Armor (A-grade)">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ench_am_stone_i03"/>
@@ -154,7 +154,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="14711" name="Lucky Enchant Stone: Enchant Armor (S-grade)">
+	<etcitem id="14711" name="Lucky Enchant Stone: Armor (S-grade)">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ench_am_stone_i04"/>
@@ -511,7 +511,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="14765" name="For Events - Extra Pass - Rim Kamaloka">
+	<etcitem id="14765" name="Event - Extra Pass: Rim Kamaloka">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

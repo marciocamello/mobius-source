@@ -226,7 +226,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="10232" name="Dynasty Jewel Leather Mail">
+	<armor id="10232" name="Dynasty Jewel Leather Armor">
 		<set name="crystal_count" value="1212"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -244,7 +244,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="10233" name="Dynasty Jewel Leather Mail" add_name="Dagger Master">
+	<armor id="10233" name="Dynasty Jewel Leather Armor" add_name="Dagger Master">
 		<set name="crystal_count" value="1212"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -265,7 +265,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="10234" name="Dynasty Jewel Leather Mail" add_name="Bow Master">
+	<armor id="10234" name="Dynasty Jewel Leather Armor" add_name="Bow Master">
 		<set name="crystal_count" value="1212"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>

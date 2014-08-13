@@ -62,7 +62,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2306" levels="3" name="Blue Primeval Crystal">
+	<skill id="2306" levels="3" name="Red Primeval Crystal">
 		<table name="#item">8954 8955 8956</table>
 		<table name="#power">50000 100000 200000</table>
 		<set name="magicType" val="SPECIAL"/>
@@ -84,7 +84,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2307" levels="1" name="Remove Petrification Scroll">
+	<skill id="2307" levels="1" name="Scroll: Cancel Petrification">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -110,7 +110,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2310" levels="1" name="Scroll of Guidance - Event Use">
+	<skill id="2310" levels="1" name="Scroll: Guidance (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_white_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -128,7 +128,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2311" levels="1" name="Scroll of Death Whisper - Event Use">
+	<skill id="2311" levels="1" name="Scroll: Death Whisper (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_white_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -146,7 +146,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2312" levels="1" name="Scroll of Focus - Event Use">
+	<skill id="2312" levels="1" name="Scroll: Focus (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_white_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -164,7 +164,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2313" levels="1" name="Scroll of Acumen - Event Use">
+	<skill id="2313" levels="1" name="Scroll: Acumen (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_white_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -182,7 +182,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2314" levels="1" name="Scroll of Haste - Event Use">
+	<skill id="2314" levels="1" name="Scroll: Haste (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_white_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -200,7 +200,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2315" levels="1" name="Scroll of Agility - Event Use">
+	<skill id="2315" levels="1" name="Scroll: Agility (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_white_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -218,7 +218,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2316" levels="1" name="Scroll of Empower - Event Use">
+	<skill id="2316" levels="1" name="Scroll: Empower (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_white_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -236,7 +236,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2317" levels="1" name="Scroll of Might - Event Use">
+	<skill id="2317" levels="1" name="Scroll: Might (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_white_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -254,7 +254,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2318" levels="1" name="Scroll of Wind Walk - Event Use">
+	<skill id="2318" levels="1" name="Scroll: Wind Walk (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_white_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -272,7 +272,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2319" levels="1" name="Scroll of Shield - Event Use">
+	<skill id="2319" levels="1" name="Scroll: Shield (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_white_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -290,7 +290,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2320" levels="1" name="Blessed Scroll of Escape - Event Use">
+	<skill id="2320" levels="1" name="Blessed Scroll of Escape (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -302,7 +302,7 @@
 		<set name="skillType" val="RECALL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2321" levels="1" name="Blessed Scroll of Resurrection - Event Use">
+	<skill id="2321" levels="1" name="Blessed Scroll of Resurrection (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="100"/>
@@ -318,7 +318,7 @@
 		<set name="skillType" val="RESURRECT"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2322" levels="1" name="Chest Key - For Events Only">
+	<skill id="2322" levels="1" name="Chest Key (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="3000"/>
@@ -329,7 +329,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="2323" levels="1" name="Red Sage's Stone">
+	<skill id="2323" levels="1" name="Red Philosopher's Stone">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="itemConsumeId" val="9171"/>
@@ -340,7 +340,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2324" levels="1" name="Blue Sage's Stone">
+	<skill id="2324" levels="1" name="Blue Philosopher's Stone">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="itemConsumeId" val="9172"/>
@@ -351,7 +351,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2325" levels="1" name="Orange Sage's Stone">
+	<skill id="2325" levels="1" name="Orange Philosopher's Stone">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="itemConsumeId" val="9173"/>
@@ -362,7 +362,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2326" levels="1" name="Black Sage's Stone">
+	<skill id="2326" levels="1" name="Black Philosopher's Stone">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="itemConsumeId" val="9174"/>
@@ -373,7 +373,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2327" levels="1" name="White Sage's Stone">
+	<skill id="2327" levels="1" name="White Philosopher's Stone">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="itemConsumeId" val="9175"/>
@@ -384,7 +384,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2328" levels="1" name="Green Sage's Stone">
+	<skill id="2328" levels="1" name="Green Philosopher's Stone">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="itemConsumeId" val="9176"/>
@@ -395,7 +395,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2329" levels="4" name="Fire Stone">
+	<skill id="2329" levels="4" name="Energy of Fire">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -403,7 +403,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="2330" levels="4" name="Water Stone">
+	<skill id="2330" levels="4" name="Energy of Water">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -411,7 +411,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="2331" levels="4" name="Wind Stone">
+	<skill id="2331" levels="4" name="Energy of Wind">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -419,7 +419,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="2332" levels="4" name="Earth Stone">
+	<skill id="2332" levels="4" name="Energy of Earth">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -427,7 +427,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="2333" levels="4" name="Holy Stone">
+	<skill id="2333" levels="4" name="Holy Energy">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -435,7 +435,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="2334" levels="4" name="Dark Stone">
+	<skill id="2334" levels="4" name="Dark Energy">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -443,7 +443,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="2335" levels="1" name="Fire Resist Potion">
+	<skill id="2335" levels="1" name="Fire Resistance Potion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_fire_potion_i00"/>
 		<set name="reuseDelay" val="6000"/>
@@ -461,7 +461,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2336" levels="1" name="Water Resist Potion">
+	<skill id="2336" levels="1" name="Water Resistance Potion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_water_potion_i00"/>
 		<set name="reuseDelay" val="6000"/>
@@ -479,7 +479,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2337" levels="1" name="Wind Resist Potion">
+	<skill id="2337" levels="1" name="Wind Resistance Potion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_wind_potion_i00"/>
 		<set name="reuseDelay" val="6000"/>
@@ -495,7 +495,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2338" levels="1" name="Earth Resist Potion">
+	<skill id="2338" levels="1" name="Earth Resistance Potion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_earth_potion_i00"/>
 		<set name="reuseDelay" val="6000"/>
@@ -511,7 +511,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2339" levels="1" name="Holy Resist Potion">
+	<skill id="2339" levels="1" name="Holy Attack Resistance Potion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_holy_potion_i00"/>
 		<set name="reuseDelay" val="6000"/>
@@ -527,7 +527,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2340" levels="1" name="Dark Resist Potion">
+	<skill id="2340" levels="1" name="Dark Attack Resistance Potion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_unholy_potion_i00"/>
 		<set name="reuseDelay" val="6000"/>
@@ -545,7 +545,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2341" levels="1" name="Caravan's Secret Medicine">
+	<skill id="2341" levels="1" name="Caravaner's Remedy">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_lesser_potion_red_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -576,7 +576,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="none"/>
 	</skill>
-	<skill id="2343" levels="1" name="Gate Key of Kamael">
+	<skill id="2343" levels="1" name="Gate Key: Kamael">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="8000"/>
@@ -587,7 +587,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="2344" levels="1" name="Gate Key of Records">
+	<skill id="2344" levels="1" name="Gate Key: Archives">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="8000"/>
@@ -598,7 +598,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="2345" levels="1" name="Gate Key of Observation">
+	<skill id="2345" levels="1" name="Gate Key: Observation">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="8000"/>
@@ -609,7 +609,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="2346" levels="1" name="Gate Key of Specula">
+	<skill id="2346" levels="1" name="Gate Key: Spicula">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="8000"/>
@@ -642,7 +642,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="2349" levels="1" name="Gate Key of Arvitaire">
+	<skill id="2349" levels="1" name="Gate Key: Arviterre">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="8000"/>
@@ -664,7 +664,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="2351" levels="1" name="Gate Key of Prediction">
+	<skill id="2351" levels="1" name="Gate Key: Prediction">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="8000"/>
@@ -675,7 +675,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="2352" levels="1" name="Gate Key of Nornil">
+	<skill id="2352" levels="1" name="Gate Key: Nornil">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="8000"/>
@@ -695,7 +695,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="2354" levels="1" name="Gate Key of Darkness">
+	<skill id="2354" levels="1" name="Gate Key: Darkness">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="8000"/>
@@ -706,7 +706,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="2355" levels="1" name="Gate Key of Destruction">
+	<skill id="2355" levels="1" name="Gate Key: Destruction">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="8000"/>
@@ -717,7 +717,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="2356" levels="1" name="Gate Key of Blood">
+	<skill id="2356" levels="1" name="Gate Key: Blood">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="8000"/>
@@ -783,7 +783,7 @@
 		<set name="skillType" val="DEBUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2361" levels="1" name="Evolving Wolf's Food">
+	<skill id="2361" levels="1" name="Evolving Wolf Food">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -813,7 +813,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="2364" levels="1" name="Blessed Scroll of Fortress Return">
+	<skill id="2364" levels="1" name="Blessed Scroll of Escape: Fortress">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -826,7 +826,7 @@
 		<set name="skillType" val="RECALL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2365" levels="1" name="Scroll of Fortress Return">
+	<skill id="2365" levels="1" name="Scroll of Escape: Fortress">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -891,7 +891,7 @@
 		<set name="skillType" val="DEBUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2370" levels="1" name="Scroll of Transformation - Pig">
+	<skill id="2370" levels="1" name="Transformation Scroll: Pig">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="itemConsumeId" val="9897"/>
@@ -906,7 +906,7 @@
 			<effect count="1" name="Transformation" time="1800" val="104"/>
 		</for>
 	</skill>
-	<skill id="2371" levels="1" name="Transformation Sealbook: Onyx Beast">
+	<skill id="2371" levels="1" name="Transformation Scroll: Onyx Beast">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="itemConsumeId" val="10131"/>
@@ -928,7 +928,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2372" levels="1" name="Transformation Sealbook: Death Blader">
+	<skill id="2372" levels="1" name="Transformation Scroll: Doom Wraith">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="itemConsumeId" val="10132"/>
@@ -950,7 +950,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2373" levels="1" name="Transformation Sealbook: Grail Apostle">
+	<skill id="2373" levels="1" name="Transformation Scroll: Grail Apostle">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform2"/>
 		<set name="itemConsumeId" val="10133"/>
@@ -972,7 +972,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2374" levels="1" name="Transformation Sealbook: Unicorn">
+	<skill id="2374" levels="1" name="Transformation Scroll: Unicorn">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform2"/>
 		<set name="itemConsumeId" val="10134"/>
@@ -994,7 +994,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2375" levels="1" name="Transformation Sealbook: Lilim Knight">
+	<skill id="2375" levels="1" name="Transformation Scroll: Lilim Knight">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform2"/>
 		<set name="itemConsumeId" val="10135"/>
@@ -1016,7 +1016,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2376" levels="1" name="Transformation Sealbook: Golem Guardian">
+	<skill id="2376" levels="1" name="Transformation Scroll: Golem Guardian">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform2"/>
 		<set name="itemConsumeId" val="10136"/>
@@ -1038,7 +1038,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2377" levels="1" name="Transformation Sealbook: Inferno Drake">
+	<skill id="2377" levels="1" name="Transformation Scroll: Inferno Drake">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform2"/>
 		<set name="itemConsumeId" val="10137"/>
@@ -1060,7 +1060,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2378" levels="1" name="Transformation Sealbook: Dragon Bomber">
+	<skill id="2378" levels="1" name="Transformation Scroll: Dragon Bomber">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform2"/>
 		<set name="itemConsumeId" val="10138"/>
@@ -1121,7 +1121,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2382" levels="1" name="Bless Shield">
+	<skill id="2382" levels="1" name="Blessed Shield">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_white_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -1260,7 +1260,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2392" levels="1" name="Blessed Scroll of Battleground Escape">
+	<skill id="2392" levels="1" name="Blessed Scroll of Escape (Battleground)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1275,7 +1275,7 @@
 			<zone type="SIEGE"/>
 		</cond>
 	</skill>
-	<skill id="2393" levels="1" name="Blessed Scroll of Battleground Resurrection">
+	<skill id="2393" levels="1" name="Blessed Scroll of Resurrection (Battleground)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="100"/>
@@ -1294,7 +1294,7 @@
 			<zone type="SIEGE"/>
 		</cond>
 	</skill>
-	<skill id="2394" levels="1" name="Scroll of Battleground Transformation">
+	<skill id="2394" levels="1" name="Transformation Scroll (Battleground)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_trans_4f_s_b_01"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1306,7 +1306,7 @@
 			<effect count="1" name="Transformation" time="120" val="304"/>
 		</for>
 	</skill>
-	<skill id="2395" levels="1" name="Lesser Battleground Healing Potion">
+	<skill id="2395" levels="1" name="Healing Potion (Battleground)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="600000"/>
@@ -1365,7 +1365,7 @@
 			<effect count="1" name="Petrification" stackOrder="-1" stackType="paralyze" time="10" val="0"/>
 		</for>
 	</skill>
-	<skill id="2398" levels="1" name="Instant Haste Potion">
+	<skill id="2398" levels="1" name="Quick Haste Potion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_lesser_potion_yellow_i00"/>
 		<set name="magicLevel" val="1"/>

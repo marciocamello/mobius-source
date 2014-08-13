@@ -2,7 +2,7 @@
 <!DOCTYPE list SYSTEM "restoration_info.dtd">
 <list>
 	<restoration skill_id="2913" skill_level="1" name="Soul Extraction"/>
-	<restoration skill_id="2917" skill_level="1" name="Big Staccato Silk Cocoon">
+	<restoration skill_id="2917" skill_level="1" name="Large Stakato Cocoon">
 		<group chance="2.77">
 			<item id="9575" min_count="1" max_count="1"/>
 		</group>
@@ -61,7 +61,7 @@
 			<item id="10381" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2918" skill_level="1" name="Small Staccato Silk Cocoon">
+	<restoration skill_id="2918" skill_level="1" name="Small Stakato Cocoon">
 		<group chance="2.36">
 			<item id="9575" min_count="1" max_count="1"/>
 		</group>
@@ -143,7 +143,7 @@
 			<item id="14840" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2920" skill_level="1" name="Titan's Ancient Book">
+	<restoration skill_id="2920" skill_level="1" name="Lesser Giant's Ancient Book">
 		<group chance="40.0">
 			<item id="5942" min_count="1" max_count="1"/>
 		</group>
@@ -214,7 +214,7 @@
 			<item id="13899" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2927" skill_level="1" name="Goddard supply box - magic pin">
+	<restoration skill_id="2927" skill_level="1" name="Goddard Supply Box: magic pin">
 		<group chance="30.0">
 			<item id="13898" min_count="1" max_count="1"/>
 		</group>
@@ -286,7 +286,7 @@
 			<item id="13919" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2936" skill_level="1" name="Goddard supply box - magic pouch">
+	<restoration skill_id="2936" skill_level="1" name="Goddard Supply Box: magic pouch">
 		<group chance="30.0">
 			<item id="13918" min_count="1" max_count="1"/>
 		</group>
@@ -358,7 +358,7 @@
 			<item id="13895" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2945" skill_level="1" name="Goddard supply box - belt">
+	<restoration skill_id="2945" skill_level="1" name="Goddard Supply Box: belt">
 		<group chance="30.0">
 			<item id="13894" min_count="1" max_count="1"/>
 		</group>
@@ -430,7 +430,7 @@
 			<item id="13901" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2954" skill_level="1" name="Goddard supply box - magic pin">
+	<restoration skill_id="2954" skill_level="1" name="Goddard Supply Box: magic pin">
 		<group chance="30.0">
 			<item id="13900" min_count="1" max_count="1"/>
 		</group>
@@ -502,7 +502,7 @@
 			<item id="13921" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2963" skill_level="1" name="Goddard supply box - magic pouch">
+	<restoration skill_id="2963" skill_level="1" name="Goddard Supply Box: magic pouch">
 		<group chance="30.0">
 			<item id="13920" min_count="1" max_count="1"/>
 		</group>
@@ -574,7 +574,7 @@
 			<item id="13897" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2972" skill_level="1" name="Goddard supply box - belt">
+	<restoration skill_id="2972" skill_level="1" name="Goddard Supply Box: belt">
 		<group chance="30.0">
 			<item id="13896" min_count="1" max_count="1"/>
 		</group>
@@ -646,7 +646,7 @@
 			<item id="14903" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2981" skill_level="1" name="Goddard supply box - magic rune clip">
+	<restoration skill_id="2981" skill_level="1" name="Goddard Supply Box: magic rune clip">
 		<group chance="21.0">
 			<item id="14902" min_count="1" max_count="1"/>
 		</group>
@@ -718,7 +718,7 @@
 			<item id="14905" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2990" skill_level="1" name="Goddard supply box - magic ornament">
+	<restoration skill_id="2990" skill_level="1" name="Goddard Supply Box: magic ornament">
 		<group chance="21.0">
 			<item id="14904" min_count="1" max_count="1"/>
 		</group>

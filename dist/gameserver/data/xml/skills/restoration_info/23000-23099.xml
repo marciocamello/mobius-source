@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "restoration_info.dtd">
 <list>
-	<restoration skill_id="23066" skill_level="1" name="Daewoonso Agathion Special Skill - New Year's Gift Ability">
+	<restoration skill_id="23066" skill_level="1" name="Daewoonso Agathion Special Skill: New Year's Gift Ability">
 		<group chance="99.0">
 			<item id="57" min_count="2009" max_count="2009"/>
 		</group>

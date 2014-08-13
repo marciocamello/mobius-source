@@ -409,28 +409,28 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21781" name="Imperial Crusader of Fortune Set Pack (S-grade)" add_name="(90-day)">
+	<etcitem id="21781" name="Imperial Crusader of Fortune Set Pack (S-grade)" add_name="90-day">
 		<set name="icon" value="icon.etc_equip_item_box_i02"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21786" name="Draconic Leather of Fortune Set Pack (S-grade)" add_name="(90-day)">
+	<etcitem id="21786" name="Draconic Leather of Fortune Set Pack (S-grade)" add_name="90-day">
 		<set name="icon" value="icon.etc_equip_item_box_i02"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21792" name="Major Arcana Robe of Fortune Set Pack (S-grade)" add_name="(90-day)">
+	<etcitem id="21792" name="Major Arcana Robe of Fortune Set Pack (S-grade)" add_name="90-day">
 		<set name="icon" value="icon.etc_equip_item_box_i02"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21799" name="Dynasty Breastplate of Fortune Set Pack (S-grade)" add_name="(90-day)">
+	<etcitem id="21799" name="Dynasty Breastplate of Fortune Set Pack (S-grade)" add_name="90-day">
 		<set name="icon" value="icon.etc_equip_item_box_i02"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

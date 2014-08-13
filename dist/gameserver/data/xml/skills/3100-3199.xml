@@ -97,7 +97,7 @@
 			<effect abnormal="poison" count="10" name="Poison" stackOrder="#abnormal_lv" time="3" val="0"/>
 		</for>
 	</skill>
-	<skill id="3105" levels="10" name="Item Skill: Bleed Magic Active)">
+	<skill id="3105" levels="10" name="Item Skill: Bleed (Magic Active)">
 		<table name="#abnormal_lv">5 5 6 6 6 7 7 7 8 8</table>
 		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="levelModifier" val="1"/>
@@ -879,7 +879,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3143" levels="10" name="Item Skill: Kiss of Eva">
+	<skill id="3143" levels="10" name="Item Skill: Eva's Kiss">
 		<table name="#rate">4 4 4 4 4 6 6 6 6 6</table>
 		<table name="#mpConsume2">38 42 44 47 51 52 55 58 61 65</table>
 		<table name="#mpConsume1">10 11 11 12 13 13 14 15 16 17</table>
@@ -945,7 +945,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3146" levels="1" name="Item Skill: Recall">
+	<skill id="3146" levels="1" name="Item Skill: Return">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill3123"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -964,7 +964,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="3147" levels="1" name="Item Skill: Recall">
+	<skill id="3147" levels="1" name="Item Skill: Quick Return">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill3123"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1158,7 +1158,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 	</skill>
-	<skill id="3156" levels="1" name="Item Skill: Firework">
+	<skill id="3156" levels="1" name="Item Skill: Firecracker">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill3123"/>
 		<set name="reuseDelay" val="300000"/>
@@ -1169,7 +1169,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 	</skill>
-	<skill id="3157" levels="1" name="Item Skill: Large Firework">
+	<skill id="3157" levels="1" name="Item Skill: Large Firecracker">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill3123"/>
 		<set name="reuseDelay" val="300000"/>
@@ -1180,7 +1180,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 	</skill>
-	<skill id="3158" levels="1" name="Item Skill: Lesser Celestial Shield">
+	<skill id="3158" levels="1" name="Item Skill: Celestial Shield">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill3123"/>
 		<set name="reuseDelay" val="1800000"/>
@@ -1394,7 +1394,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 	</skill>
-	<skill id="3168" levels="10" name="Item Skill: Tempest">
+	<skill id="3168" levels="10" name="Item Skill: Hurricane">
 		<table name="#effectPoint">360 418 477 532 558 582 604 624 641 655</table>
 		<table name="#mpConsume2">33 35 38 40 43 45 48 50 52 55</table>
 		<table name="#mpConsume1">9 9 10 10 11 12 12 13 13 14</table>

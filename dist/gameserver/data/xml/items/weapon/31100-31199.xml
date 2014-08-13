@@ -979,7 +979,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31138" name="Bound SharpShooter">
+	<weapon id="31138" name="Bound Sharpshooter">
 		<set name="icon" value="icon.weapon_taslam_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1005,7 +1005,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="31139" name="Bound SharpShooter" add_name="Guidance">
+	<weapon id="31139" name="Bound Sharpshooter" add_name="Guidance">
 		<set name="icon" value="icon.weapon_taslam_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1034,7 +1034,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="31140" name="Bound SharpShooter" add_name="Miser">
+	<weapon id="31140" name="Bound Sharpshooter" add_name="Miser">
 		<set name="icon" value="icon.weapon_taslam_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1060,7 +1060,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="31141" name="Bound SharpShooter" add_name="Cheap Shot">
+	<weapon id="31141" name="Bound Sharpshooter" add_name="Cheap Shot">
 		<set name="icon" value="icon.weapon_taslam_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1442,7 +1442,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31163" name="Bound Side" add_name="Light">
+	<weapon id="31163" name="Bound Side" add_name="Light Armor">
 		<set name="icon" value="icon.weapon_scythe_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1722,7 +1722,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31175" name="Bound Bich'hwa">
+	<weapon id="31175" name="Bound Bich'Hwa">
 		<set name="icon" value="icon.weapon_bichhwa_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -2177,7 +2177,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="31193" name="Bound Blinzlasher" add_name="Light">
+	<weapon id="31193" name="Bound Blinzlasher" add_name="Light Armor">
 		<set name="icon" value="icon.weapon_blink_slasher_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -2230,7 +2230,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="31195" name="Bound Blinzlasher" add_name="Critical Drain Drawin">
+	<weapon id="31195" name="Bound Blinzlasher" add_name="Critical Drain">
 		<set name="icon" value="icon.weapon_blink_slasher_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>

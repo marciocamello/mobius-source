@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="17400" name="Seraph Boots" add_name="Heavy">
+	<armor id="17400" name="Seraph Boots" add_name="Heavy Armor">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="408"/>
@@ -19,7 +19,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17402" name="Seraph Leather Helmet" add_name="Light">
+	<armor id="17402" name="Seraph Leather Helmet" add_name="Light Armor">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="613"/>
@@ -38,7 +38,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17403" name="Seraph Leather Armor" add_name="Light">
+	<armor id="17403" name="Seraph Leather Armor" add_name="Light Armor">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="1635"/>
@@ -57,7 +57,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17404" name="Seraph Leather Legging" add_name="Light">
+	<armor id="17404" name="Seraph Leather Leggings" add_name="Light Armor">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="1022"/>
@@ -76,7 +76,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17405" name="Seraph Leather Gloves" add_name="Light">
+	<armor id="17405" name="Seraph Leather Gloves" add_name="Light Armor">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="408"/>
@@ -95,7 +95,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17406" name="Seraph Leather Boots" add_name="Light">
+	<armor id="17406" name="Seraph Leather Boots" add_name="Light Armor">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="408"/>
@@ -280,7 +280,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17430" name="Eternal Helmet" add_name="Heavy">
+	<armor id="17430" name="Eternal Helmet" add_name="Heavy Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="1351"/>
@@ -299,7 +299,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17431" name="Eternal Breastplate" add_name="Heavy">
+	<armor id="17431" name="Eternal Breastplate" add_name="Heavy Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="3603"/>
@@ -318,7 +318,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17432" name="Eternal Gaiters" add_name="Heavy">
+	<armor id="17432" name="Eternal Gaiters" add_name="Heavy Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2252"/>
@@ -337,7 +337,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17433" name="Eternal Gauntlet" add_name="Heavy">
+	<armor id="17433" name="Eternal Gauntlets" add_name="Heavy Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="900"/>
@@ -356,7 +356,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17434" name="Eternal Boots" add_name="Heavy">
+	<armor id="17434" name="Eternal Boots" add_name="Heavy Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="900"/>
@@ -374,7 +374,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17436" name="Eternal Leather Helmet" add_name="Light">
+	<armor id="17436" name="Eternal Leather Helmet" add_name="Light Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="1351"/>
@@ -393,7 +393,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17437" name="Eternal Leather Armor" add_name="Light">
+	<armor id="17437" name="Eternal Leather Armor" add_name="Light Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="3603"/>
@@ -412,7 +412,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17438" name="Eternal Leather Legging" add_name="Light">
+	<armor id="17438" name="Eternal Leather Leggings" add_name="Light Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2252"/>
@@ -431,7 +431,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17439" name="Eternal Leather Gloves" add_name="Light">
+	<armor id="17439" name="Eternal Leather Gloves" add_name="Light Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="900"/>
@@ -450,7 +450,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17440" name="Eternal Leather Boots" add_name="Light">
+	<armor id="17440" name="Eternal Leather Boots" add_name="Light Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="900"/>
@@ -635,7 +635,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17464" name="Blessed Celestial Helmet" add_name="Heavy">
+	<armor id="17464" name="Blessed Durandia Helmet" add_name="Heavy Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="NONE"/>
@@ -650,7 +650,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17465" name="Blessed Celestial Breastplate" add_name="Heavy">
+	<armor id="17465" name="Blessed Durandia Breastplate" add_name="Heavy Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="icon" value="icon.armor_t97_u_i00"/>
 		<set name="type" value="HEAVY"/>
@@ -665,7 +665,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17466" name="Blessed Celestial Gaiters" add_name="Heavy">
+	<armor id="17466" name="Blessed Durandia Gaiters" add_name="Heavy Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="icon" value="icon.armor_t97_l_i00"/>
 		<set name="type" value="HEAVY"/>
@@ -680,7 +680,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17467" name="Blessed Celestial Gauntlet" add_name="Heavy">
+	<armor id="17467" name="Blessed Durandia Gauntlets" add_name="Heavy Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="icon" value="icon.armor_t97_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -696,7 +696,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17468" name="Blessed Celestial Boots" add_name="Heavy">
+	<armor id="17468" name="Blessed Durandia Boots" add_name="Heavy Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="icon" value="icon.armor_t97_b_i00"/>
 		<set name="type" value="NONE"/>
@@ -712,7 +712,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17470" name="Blessed Celestial Leather Helmet" add_name="Light">
+	<armor id="17470" name="Blessed Durandia Leather Helmet" add_name="Light Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="icon" value="icon.armor_leather_helmet_i00"/>
 		<set name="type" value="NONE"/>
@@ -727,7 +727,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17471" name="Blessed Celestial Leather Armor" add_name="Light">
+	<armor id="17471" name="Blessed Durandia Leather Armor" add_name="Light Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="icon" value="icon.armor_t98_u_i00"/>
 		<set name="type" value="LIGHT"/>
@@ -742,7 +742,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17472" name="Blessed Celestial Leather Legging" add_name="Light">
+	<armor id="17472" name="Blessed Durandia Leather Leggings" add_name="Light Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="icon" value="icon.armor_t98_l_i00"/>
 		<set name="type" value="LIGHT"/>
@@ -757,7 +757,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17473" name="Blessed Celestial Leather Gloves" add_name="Light">
+	<armor id="17473" name="Blessed Durandia Leather Gloves" add_name="Light Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="icon" value="icon.armor_t98_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -773,7 +773,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17474" name="Blessed Celestial Leather Boots" add_name="Light">
+	<armor id="17474" name="Blessed Durandia Leather Boots" add_name="Light Armor">
 		<set name="crystal_type" value="R99"/>
 		<set name="icon" value="icon.armor_t98_b_i00"/>
 		<set name="type" value="NONE"/>
@@ -788,7 +788,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17475" name="Blessed Celestial Circlet" add_name="Robe">
+	<armor id="17475" name="Blessed Durandia Circlet" add_name="Robe">
 		<set name="crystal_type" value="R99"/>
 		<set name="icon" value="icon.armor_circlet_i00"/>
 		<set name="type" value="NONE"/>
@@ -803,7 +803,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17476" name="Blessed Celestial Tunic" add_name="Robe">
+	<armor id="17476" name="Blessed Durandia Tunic" add_name="Robe">
 		<set name="crystal_type" value="R99"/>
 		<set name="icon" value="icon.armor_t99_u_i00"/>
 		<set name="type" value="MAGIC"/>
@@ -818,7 +818,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17477" name="Blessed Celestial Stockings" add_name="Robe">
+	<armor id="17477" name="Blessed Durandia Stockings" add_name="Robe">
 		<set name="crystal_type" value="R99"/>
 		<set name="icon" value="icon.armor_t99_l_i00"/>
 		<set name="type" value="MAGIC"/>
@@ -833,7 +833,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17478" name="Blessed Celestial Gloves" add_name="Robe">
+	<armor id="17478" name="Blessed Durandia Gloves" add_name="Robe">
 		<set name="crystal_type" value="R99"/>
 		<set name="icon" value="icon.armor_t99_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -848,7 +848,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17479" name="Blessed Celestial Shoes" add_name="Robe">
+	<armor id="17479" name="Blessed Durandia Shoes" add_name="Robe">
 		<set name="crystal_type" value="R99"/>
 		<set name="icon" value="icon.armor_t99_b_i00"/>
 		<set name="type" value="NONE"/>
@@ -863,7 +863,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17480" name="Blessed Celestial Sigil" add_name="Robe">
+	<armor id="17480" name="Blessed Durandia Sigil" add_name="Robe">
 		<set name="crystal_type" value="R99"/>
 		<set name="icon" value="icon.verper_sigil_i00"/>
 		<set name="type" value="SIGIL"/>
@@ -878,7 +878,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17481" name="Blessed Celestial Necklace">
+	<armor id="17481" name="Blessed Durandia Necklace">
 		<set name="crystal_type" value="R99"/>
 		<set name="icon" value="icon.vesper_necklace_i00"/>
 		<set name="type" value="NONE"/>
@@ -894,7 +894,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17482" name="Blessed Celestial Earring">
+	<armor id="17482" name="Blessed Durandia Earring">
 		<set name="crystal_type" value="R99"/>
 		<set name="icon" value="icon.vesper_earring_i00"/>
 		<set name="type" value="NONE"/>
@@ -911,7 +911,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17483" name="Blessed Celestial Ring">
+	<armor id="17483" name="Blessed Durandia Ring">
 		<set name="crystal_type" value="R99"/>
 		<set name="icon" value="icon.vesper_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -928,7 +928,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17484" name="Cry of Fate">
+	<armor id="17484" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -938,7 +938,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17485" name="Cry of Fate">
+	<armor id="17485" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -948,7 +948,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17486" name="Cry of Fate">
+	<armor id="17486" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -958,7 +958,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17487" name="Cry of Fate">
+	<armor id="17487" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -968,7 +968,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17488" name="Cry of Fate">
+	<armor id="17488" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -978,7 +978,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17489" name="Cry of Fate">
+	<armor id="17489" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -988,7 +988,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17490" name="Cry of Fate">
+	<armor id="17490" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -998,7 +998,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17491" name="Cry of Fate">
+	<armor id="17491" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -1008,7 +1008,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17492" name="Cry of Fate">
+	<armor id="17492" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -1018,7 +1018,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17493" name="Cry of Fate">
+	<armor id="17493" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -1028,7 +1028,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17494" name="Cry of Fate">
+	<armor id="17494" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -1038,7 +1038,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17495" name="Cry of Fate">
+	<armor id="17495" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -1048,7 +1048,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17496" name="Cry of Fate">
+	<armor id="17496" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -1058,7 +1058,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17497" name="Cry of Fate">
+	<armor id="17497" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -1068,7 +1068,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17498" name="Cry of Fate">
+	<armor id="17498" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -1078,7 +1078,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17499" name="Cry of Fate">
+	<armor id="17499" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>

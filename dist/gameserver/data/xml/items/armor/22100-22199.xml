@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="22154" name="Shadow Weapon - Wolf Hat " add_name="Blessed Escape">
+	<armor id="22154" name="Shadow Item: Wolf Hat" add_name="Blessed Escape">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="1440"/>
@@ -20,7 +20,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="22155" name="Shadow Weapon - Wolf Hat " add_name="Blessed Resurrection">
+	<armor id="22155" name="Shadow Item: Wolf Hat" add_name="Blessed Resurrection">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="1440"/>
@@ -156,7 +156,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22165" name="Cat Ear">
+	<armor id="22165" name="Cat Ears">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_cat_ear_i00"/>
@@ -169,7 +169,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22166" name="Noblewoman's Hairpin">
+	<armor id="22166" name="Lady's Hair Pin">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_hairpin_i00"/>
@@ -182,7 +182,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22167" name="Raccoon Ear">
+	<armor id="22167" name="Raccoon Ears">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_racoon_ear_i00"/>
@@ -195,7 +195,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22168" name="Rabbit Ear">
+	<armor id="22168" name="Rabbit Ears">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_rabbit_ear_i00"/>
@@ -221,7 +221,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22170" name="Fairy's Tentacle">
+	<armor id="22170" name="Fairy Antennae">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_hair_feeler_i00"/>
@@ -234,7 +234,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22171" name="Dandy's Chapeau">
+	<armor id="22171" name="Chapeau">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_archer_hat_i00"/>
@@ -260,7 +260,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22173" name="Greater Baium's Ring">
+	<armor id="22173" name="Reinforced Baium's Ring">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessory_ring_of_baium_i00"/>
 		<set name="price" value="1730000"/>
@@ -283,7 +283,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="22174" name="Greater Queen Ant's Ring">
+	<armor id="22174" name="Reinforced Queen Ant's Ring">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="false"/>
@@ -306,7 +306,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="22175" name="Greater Blessed Earring of Zaken">
+	<armor id="22175" name="Reinforced Blessed Zaken's Earring">
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.accessory_earring_of_zaken_i00"/>
 		<set name="price" value="0"/>
@@ -337,7 +337,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22184" name="Admiral's Hat">
+	<armor id="22184" name="First Mate Hat">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.Accessary_middle_ages_i01"/>
 		<set name="price" value="0"/>
@@ -370,7 +370,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22191" name="Rocking Horse Mounting Bracelet" add_name="7 day limited period">
+	<armor id="22191" name="Mount - Rocking Horse" add_name="7-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="branchsys2.icon.g_wooen_house"/>
 		<set name="price" value="0"/>
@@ -381,7 +381,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="22192" name="Rocking Horse Mounting Bracelet" add_name="30 day limited period">
+	<armor id="22192" name="Mount - Rocking Horse" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="branchsys2.icon.g_wooen_house"/>
 		<set name="price" value="0"/>
@@ -392,7 +392,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="22193" name="Rocking Horse Mounting Bracelet">
+	<armor id="22193" name="Mount - Rocking Horse">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="branchsys2.icon.g_wooen_house"/>
 		<set name="price" value="0"/>

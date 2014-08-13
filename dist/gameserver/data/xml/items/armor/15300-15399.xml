@@ -43,7 +43,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="15383" name="Weaver's Multi-colored Clothes" add_name="7-day limited period">
+	<armor id="15383" name="Weaver's Colorful Dress" add_name="7-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_vega_rainbow_shirt_i00"/>
 		<set name="price" value="0"/>
@@ -305,7 +305,7 @@
 			</level>
 		</enchant_options>
 	</armor>
-	<armor id="15384" name="Weaver's Multi-colored Clothes" add_name="30-day limited period">
+	<armor id="15384" name="Weaver's Colorful Dress" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_vega_rainbow_shirt_i00"/>
 		<set name="price" value="0"/>
@@ -567,7 +567,7 @@
 			</level>
 		</enchant_options>
 	</armor>
-	<armor id="15385" name="Weaver's Multi-colored Clothes" add_name="60-day limited period">
+	<armor id="15385" name="Weaver's Colorful Dress" add_name="60-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_vega_rainbow_shirt_i00"/>
 		<set name="price" value="0"/>
@@ -829,7 +829,7 @@
 			</level>
 		</enchant_options>
 	</armor>
-	<armor id="15386" name="Weaver's Multi-colored Clothes" add_name="90-day limited period">
+	<armor id="15386" name="Weaver's Colorful Dress" add_name="90-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_vega_rainbow_shirt_i00"/>
 		<set name="price" value="0"/>
@@ -1091,7 +1091,7 @@
 			</level>
 		</enchant_options>
 	</armor>
-	<armor id="15387" name="Weaver's Multi-colored Clothes" add_name="Permanent Use">
+	<armor id="15387" name="Weaver's Colorful Dress" add_name="Permanent">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_vega_rainbow_shirt_i00"/>
 		<set name="price" value="0"/>
@@ -1351,7 +1351,7 @@
 			</level>
 		</enchant_options>
 	</armor>
-	<armor id="15388" name="Weaver's Multi-colored Clothes (Event)" add_name="7-day limited period">
+	<armor id="15388" name="Weaver's Colorful Dress (Event)" add_name="7-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_vega_rainbow_shirt_i00"/>
 		<set name="price" value="0"/>
@@ -1613,7 +1613,7 @@
 			</level>
 		</enchant_options>
 	</armor>
-	<armor id="15389" name="Weaver's Multi-colored Clothes (Event)" add_name="30-day limited period">
+	<armor id="15389" name="Weaver's Colorful Dress (Event)" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_vega_rainbow_shirt_i00"/>
 		<set name="price" value="0"/>
@@ -1875,7 +1875,7 @@
 			</level>
 		</enchant_options>
 	</armor>
-	<armor id="15390" name="Weaver's Multi-colored Clothes (Event)" add_name="60-day limited period">
+	<armor id="15390" name="Weaver's Colorful Dress (Event)" add_name="60-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_vega_rainbow_shirt_i00"/>
 		<set name="price" value="0"/>
@@ -2137,7 +2137,7 @@
 			</level>
 		</enchant_options>
 	</armor>
-	<armor id="15391" name="Weaver's Multi-colored Clothes (Event)" add_name="90-day limited period">
+	<armor id="15391" name="Weaver's Colorful Dress (Event)" add_name="90-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_vega_rainbow_shirt_i00"/>
 		<set name="price" value="0"/>
@@ -2399,7 +2399,7 @@
 		</equip>
 		<set name="ex_type" value="UNDERWEAR"/>
 	</armor>
-	<armor id="15392" name="Weaver's Multi-colored Clothes (Event)" add_name="Permanent Use">
+	<armor id="15392" name="Weaver's Colorful Dress (Event)" add_name="Permanent">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_vega_rainbow_shirt_i00"/>
 		<set name="price" value="0"/>
@@ -2659,7 +2659,7 @@
 		</equip>
 		<set name="ex_type" value="UNDERWEAR"/>
 	</armor>
-	<armor id="15393" name="Vitality Belt" add_name="7-day limited period">
+	<armor id="15393" name="Vitality Belt" add_name="7-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_energy_belt_i00"/>
 		<set name="price" value="0"/>
@@ -2672,7 +2672,7 @@
 		</equip>
 		<set name="ex_type" value="BELT"/>
 	</armor>
-	<armor id="15394" name="Vitality Belt" add_name="30-day limited period">
+	<armor id="15394" name="Vitality Belt" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_energy_belt_i00"/>
 		<set name="price" value="0"/>
@@ -2685,7 +2685,7 @@
 		</equip>
 		<set name="ex_type" value="BELT"/>
 	</armor>
-	<armor id="15395" name="Vitality Belt" add_name="60-day limited period">
+	<armor id="15395" name="Vitality Belt" add_name="60-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_energy_belt_i00"/>
 		<set name="price" value="0"/>
@@ -2698,7 +2698,7 @@
 		</equip>
 		<set name="ex_type" value="BELT"/>
 	</armor>
-	<armor id="15396" name="Vitality Belt" add_name="90-day limited period">
+	<armor id="15396" name="Vitality Belt" add_name="90-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_energy_belt_i00"/>
 		<set name="price" value="0"/>
@@ -2711,7 +2711,7 @@
 		</equip>
 		<set name="ex_type" value="BELT"/>
 	</armor>
-	<armor id="15397" name="Vitality Belt" add_name="Permanent Use">
+	<armor id="15397" name="Vitality Belt" add_name="Permanent">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_energy_belt_i00"/>
 		<set name="price" value="0"/>
@@ -2722,7 +2722,7 @@
 		</equip>
 		<set name="ex_type" value="BELT"/>
 	</armor>
-	<armor id="15398" name="Vitality Belt (Event)" add_name="7-day limited period">
+	<armor id="15398" name="Vitality Belt (Event)" add_name="7-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_energy_belt_i00"/>
 		<set name="price" value="0"/>
@@ -2735,7 +2735,7 @@
 		</equip>
 		<set name="ex_type" value="BELT"/>
 	</armor>
-	<armor id="15399" name="Vitality Belt (Event)" add_name="30-day limited period">
+	<armor id="15399" name="Vitality Belt (Event)" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_energy_belt_i00"/>
 		<set name="price" value="0"/>

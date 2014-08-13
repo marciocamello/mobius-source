@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="14027" name="Collection Agathion Summon Bracelet">
+	<armor id="14027" name="Agathion - Essence Collector">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>
@@ -20,7 +20,7 @@
 			<skill id="8251" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14053" name="Gold-Maned Lion Mounting Bracelet" add_name="7-day Limited Period">
+	<armor id="14053" name="Mount - Gold Maned Lion" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -44,7 +44,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="14054" name="Steam Beatle Mounting Bracelet" add_name="7-day Limited Period">
+	<armor id="14054" name="Mount - Steam Beetle" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -68,7 +68,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="14059" name="Teddy Boy Agathion Bracelet" add_name="30-day limited period">
+	<armor id="14059" name="Agathion - Teddy Boy" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -89,7 +89,7 @@
 			<skill id="8259" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14060" name="Teddy Girl Agathion Bracelet" add_name="30-day limited period">
+	<armor id="14060" name="Agathion - Teddy Girl" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -110,7 +110,7 @@
 			<skill id="8260" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14066" name="Gold Maned Lion Mounting Bracelet (event)" add_name="7-day Limited Period">
+	<armor id="14066" name="Mount - Gold Maned Lion (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -134,7 +134,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="14067" name="Steam Beatle Mounting Bracelet (event)" add_name="7-day Limited Period">
+	<armor id="14067" name="Mount - Steam Beetle (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -158,7 +158,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="14072" name="Teddy Boy Agathion Bracelet (event)" add_name="30-day limited period">
+	<armor id="14072" name="Agathion - Teddy Boy (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -179,7 +179,7 @@
 			<skill id="8259" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14073" name="Teddy Girl Agathion Bracelet (event)" add_name="30-day limited period">
+	<armor id="14073" name="Agathion - Teddy Girl (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -200,7 +200,7 @@
 			<skill id="8260" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14075" name="Sudden Agathion (Event)" add_name="30-day limited period">
+	<armor id="14075" name="Agathion - Angry Devil (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -221,7 +221,7 @@
 			<skill id="8257" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14076" name="Shiny Agathion (Event)" add_name="30-day limited period">
+	<armor id="14076" name="Agathion - Shiny (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -242,7 +242,7 @@
 			<skill id="8256" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14077" name="Sobbing Agathion (Event)" add_name="30-day limited period">
+	<armor id="14077" name="Agathion - Sobbing (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -263,7 +263,7 @@
 			<skill id="8258" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14091" name="Teddy Boy Agathion Bracelet" add_name="7-day Limited Period">
+	<armor id="14091" name="Agathion - Teddy Boy" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -284,7 +284,7 @@
 			<skill id="8259" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14092" name="Teddy Girl Agathion Bracelet" add_name="7-day Limited Period">
+	<armor id="14092" name="Agathion - Teddy Girl" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -305,7 +305,7 @@
 			<skill id="8260" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14093" name="Sudden Agathion" add_name="7-day Limited Period">
+	<armor id="14093" name="Agathion - Angry Devil" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -326,7 +326,7 @@
 			<skill id="8257" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14094" name="Shiny Agathion" add_name="7-day Limited Period">
+	<armor id="14094" name="Agathion - Shiny" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -347,7 +347,7 @@
 			<skill id="8256" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14095" name="Sobbing Agathion " add_name="7-day Limited Period">
+	<armor id="14095" name="Agathion - Sobbing" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -368,7 +368,7 @@
 			<skill id="8258" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14099" name="Teddy Boy Agathion Bracelet (event)" add_name="7-day Limited Period">
+	<armor id="14099" name="Agathion - Teddy Boy (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>

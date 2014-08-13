@@ -1440,7 +1440,7 @@
 			<skill id="4416" level="1"/>
 		</skills>
 	</npc>
-	<npc id="27432" name="Pursuer" title="Resurrected">
+	<npc id="27432" name="Tracker" title="Resurrected">
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
@@ -1539,7 +1539,7 @@
 			<skill id="4414" level="3"/>
 		</skills>
 	</npc>
-	<npc id="27434" name="Guardian of Darkness " title="Resurrected">
+	<npc id="27434" name="Guardian of Darkness" title="Resurrected">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="incubatorOfEvil.MonsterWarrior"/>
 		<set name="collision_radius" value="12.0"/>
@@ -3727,7 +3727,7 @@
 			<skill id="4416" level="11"/>
 		</skills>
 	</npc>
-	<npc id="27477" name="Death lord Hallate" title="Quest Monster">
+	<npc id="27477" name="Death Lord Hallate" title="Quest Monster">
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>

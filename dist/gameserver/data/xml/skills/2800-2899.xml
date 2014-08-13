@@ -319,7 +319,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2832" levels="1" name="S80 Weapon Chest">
+	<skill id="2832" levels="1" name="Weapon Pack (S80-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -327,7 +327,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2833" levels="1" name="S80 Armor Chest">
+	<skill id="2833" levels="1" name="Armor Pack (S80-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -335,7 +335,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2834" levels="1" name="S Weapon Chest">
+	<skill id="2834" levels="1" name="Weapon Pack (S-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -343,7 +343,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2835" levels="1" name="S Armor Chest">
+	<skill id="2835" levels="1" name="Armor Pack (S-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -351,7 +351,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2836" levels="1" name="S Accessory Chest">
+	<skill id="2836" levels="1" name="Accessory Pack (S-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -368,7 +368,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2838" levels="1" name="Treasure Sack of the Ancient Giants">
+	<skill id="2838" levels="1" name="Treasure Sack of Ancient Times">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="600000"/>
@@ -377,7 +377,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2839" levels="1" name="Holy Light Fragment">
+	<skill id="2839" levels="1" name="Sacred Light Fragment">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_piece_holy_light"/>
 		<set name="reuseDelay" val="10000"/>
@@ -546,7 +546,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2857" levels="1" name="Holiday Event - Magic Use Enhancement Scroll">
+	<skill id="2857" levels="1" name="Holiday Event - Enchant Scroll (Wizard)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_white_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -574,7 +574,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2860" levels="6" name="Highest Power No-Grade Secret Medicine of Life">
+	<skill id="2860" levels="6" name="Superior Elixir of Life (R-grade)">
 		<table name="#itemConsumeId">14682 14683 14684 14685 14686 14687</table>
 		<table name="#levelMin">1 20 40 52 61 76</table>
 		<table name="#levelMax">19 39 51 60 75 84</table>
@@ -598,7 +598,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2861" levels="6" name="Highest Power No-Grade Secret Medicine of Mind">
+	<skill id="2861" levels="6" name="Superior Elixir of Mind (R-grade)">
 		<table name="#itemConsumeId">14688 14689 14690 14691 14692 14693</table>
 		<table name="#levelMin">1 20 40 52 61 76</table>
 		<table name="#levelMax">19 39 51 60 75 84</table>
@@ -622,7 +622,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2862" levels="6" name="Highest Power No-Grade Secret Medicine of Will">
+	<skill id="2862" levels="6" name="Superior Elixir of CP (R-grade)">
 		<table name="#itemConsumeId">14694 14695 14696 14697 14698 14699</table>
 		<table name="#levelMin">1 20 40 52 61 76</table>
 		<table name="#levelMax">19 39 51 60 75 84</table>
@@ -646,7 +646,7 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="2863" levels="1" name="Highest Power Healing Potion">
+	<skill id="2863" levels="1" name="Superior Healing Potion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_reagent_white_i00"/>
 		<set name="power" val="6"/>
@@ -662,7 +662,7 @@
 			<effect count="5" name="HealOverTime" stackOrder="19" stackType="HpRecoverCast" time="3" val="360"/>
 		</for>
 	</skill>
-	<skill id="2864" levels="1" name="Highest Power Quick Healing Potion">
+	<skill id="2864" levels="1" name="Superior Quick Healing Potion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="435"/>
@@ -717,7 +717,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2869" levels="1" name="Event - Milk Cow Summon Scroll">
+	<skill id="2869" levels="1" name="Event - Scroll: Summon Milk Cow">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
 		<set name="reuseDelay" val="10000"/>
@@ -728,7 +728,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2870" levels="1" name="Event - Head Milk Cow Summon Scroll">
+	<skill id="2870" levels="1" name="Event - Scroll: Summon Milk Cow Captain">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
 		<set name="reuseDelay" val="10000"/>
@@ -748,7 +748,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2872" levels="1" name="Summon Head Gloomy Milk Cow">
+	<skill id="2872" levels="1" name="Summon Gloomy Milk Cow Captain">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -869,7 +869,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2880" levels="1" name="Event - Gloomy Milk Cow Summon Scroll">
+	<skill id="2880" levels="1" name="Event - Scroll: Summon Gloomy Milk Cow">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
 		<set name="reuseDelay" val="10000"/>
@@ -880,7 +880,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2881" levels="1" name="Event - Gloomy Head Milk Cow Summon Scroll">
+	<skill id="2881" levels="1" name="Event - Scroll: Summon Gloomy Milk Cow Captain">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
 		<set name="reuseDelay" val="10000"/>
@@ -900,7 +900,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2883" levels="1" name="Vitality Replenishing Herb Tea">
+	<skill id="2883" levels="1" name="Vitality Recovering Potion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
 		<set name="reuseDelay" val="10000"/>
@@ -913,7 +913,7 @@
 			<effect count="1" name="Vitality" stackType="vitalityRegen" stackOrder="1" time="600" val="0"/>
 		</for>
 	</skill>
-	<skill id="2884" levels="1" name="Vitality Replenishing Herb Tea">
+	<skill id="2884" levels="1" name="Vitality Recovering Potion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
 		<set name="reuseDelay" val="10000"/>
@@ -1033,7 +1033,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2892" levels="1" name="Event - Extra Pass - Rim Kamaloka">
+	<skill id="2892" levels="1" name="Event - Extra Pass: Rim Kamaloka">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1052,7 +1052,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2894" levels="1" name="White Day Candy">
+	<skill id="2894" levels="1" name="Valentine's Day Candy">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1061,7 +1061,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2895" levels="1" name="Special White Day Candy Basket">
+	<skill id="2895" levels="1" name="Valentine's Day Candy Basket">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1069,7 +1069,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2896" levels="1" name="White Day Candy Basket">
+	<skill id="2896" levels="1" name="White Valentine's Day Candy Basket">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1088,7 +1088,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2898" levels="1" name="Fresh Cream Herb">
+	<skill id="2898" levels="1" name="Cream Puff Herb">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_herb_of_cream"/>
 		<set name="reuseDelay" val="2000"/>

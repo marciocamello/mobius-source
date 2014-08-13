@@ -1372,7 +1372,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11246" name="Dynasty Ancient Sword - Great Gale" add_name="Light">
+	<weapon id="11246" name="Dynasty Ancient Sword - Great Gale" add_name="Light Armor">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="false"/>
@@ -1519,7 +1519,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11251" name="Dynasty Dual Sword - Earth">
+	<weapon id="11251" name="Dynasty Dualsword - Earth">
 		<set name="crystal_count" value="3597"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -1640,7 +1640,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11255" name="Dynasty Rapier - Earth" add_name="Light">
+	<weapon id="11255" name="Dynasty Rapier - Earth" add_name="Light Armor">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="false"/>
@@ -2128,7 +2128,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11271" name="Dynasty Blade - Great Gale" add_name="Light">
+	<weapon id="11271" name="Dynasty Blade - Great Gale" add_name="Light Armor">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="false"/>
@@ -2244,7 +2244,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11275" name="Dynasty Sword - Earth" add_name="Light">
+	<weapon id="11275" name="Dynasty Sword - Earth" add_name="Light Armor">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="false"/>
@@ -2959,7 +2959,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11299" name="Dynasty Halberd - Earth" add_name="Light">
+	<weapon id="11299" name="Dynasty Halberd - Earth" add_name="Light Armor">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="false"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="17716" name="Agninoa dual sword">
+	<weapon id="17716" name="Agninoa Dualsword">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="weight" value="1"/>
 		<set name="rnd_dam" value="10"/>
@@ -24,7 +24,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="17717" name="Agninoa dual sword {PvP}">
+	<weapon id="17717" name="Agninoa Dualsword {PvP}">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="weight" value="1"/>
 		<set name="rnd_dam" value="10"/>

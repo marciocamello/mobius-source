@@ -59,7 +59,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="19525" name="Immortal Gauntlet" add_name="Attack Type / Heavy">
+	<armor id="19525" name="Immortal Gauntlets" add_name="Attack Type / Heavy">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="78"/>
@@ -344,7 +344,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="19541" name="Twilight Gauntlet" add_name="Attack Type / Heavy">
+	<armor id="19541" name="Twilight Gauntlets" add_name="Attack Type / Heavy">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="189"/>
@@ -420,7 +420,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="19546" name="Twilight Leather Legging" add_name="Assassin Type / Light">
+	<armor id="19546" name="Twilight Leather Leggings" add_name="Assassin Type / Light">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="473"/>
@@ -629,7 +629,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="19557" name="Seraph Gauntlet" add_name="Attack Type / Heavy">
+	<armor id="19557" name="Seraph Gauntlets" add_name="Attack Type / Heavy">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="408"/>
@@ -913,7 +913,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="19573" name="Eternal Gauntlet" add_name="Attack Type / Heavy">
+	<armor id="19573" name="Eternal Gauntlets" add_name="Attack Type / Heavy">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="900"/>
@@ -1204,7 +1204,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="19589" name="Bound Immortal Gauntlet" add_name="Attack Type / Heavy">
+	<armor id="19589" name="Bound Immortal Gauntlets" add_name="Attack Type / Heavy">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>

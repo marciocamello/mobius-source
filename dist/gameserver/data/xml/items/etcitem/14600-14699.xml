@@ -48,7 +48,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="14615" name="Holiday Scroll: Wizard">
+	<etcitem id="14615" name="Holiday Scroll (Wizard)">
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -63,7 +63,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="14616" name="Gift from Santa Claus">
+	<etcitem id="14616" name="Santa Claus' Gift">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -110,7 +110,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="14635" name="Low-grade Battle Reward Chest">
+	<etcitem id="14635" name="Battle Reward Box (Low-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -123,7 +123,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14636" name="Mid-grade Battle Reward Chest">
+	<etcitem id="14636" name="Battle Reward Box (Mid-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -136,7 +136,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14637" name="Greater Battle Reward Chest">
+	<etcitem id="14637" name="Battle Reward Box (High-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -149,7 +149,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14638" name="Top-grade Battle Reward Chest">
+	<etcitem id="14638" name="Battle Reward Box (Top-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -421,7 +421,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14678" name="Neolithic Crystal - B">
+	<etcitem id="14678" name="Neolithic Crystal (B-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -430,7 +430,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="14679" name="Neolithic Crystal - A">
+	<etcitem id="14679" name="Neolithic Crystal (A-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -439,7 +439,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="14680" name="Neolithic Crystal - S">
+	<etcitem id="14680" name="Neolithic Crystal (S-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -448,7 +448,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="14681" name="Neolithic Crystal - S80">
+	<etcitem id="14681" name="Neolithic Crystal (S80-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

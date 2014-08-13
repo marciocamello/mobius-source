@@ -45,7 +45,7 @@
 		<set name="icon" value="icon.etc_royal_membership_i00"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="20606" name="High-class Certificate (Event)" add_name="(8-hour)">
+	<etcitem id="20606" name="High-class Certificate (Event)" add_name="8-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -88,7 +88,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20610" name="Headphone Pack (7-day)" add_name="Town Theme : Great Adventurer's Soul Power">
+	<etcitem id="20610" name="Headphone Pack (7-day)" add_name="Town Theme: Great Adventurer's Soul Power">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -100,7 +100,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20611" name="Headphone Pack (7-day)" add_name="Hero Theme : Brave Warrior's Soul Power">
+	<etcitem id="20611" name="Headphone Pack (7-day)" add_name="Hero Theme: Brave Warrior's Soul Power">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -112,7 +112,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20612" name="Headphone Pack (7-day)" add_name="Theme Park : Great Wizard's Soul Power">
+	<etcitem id="20612" name="Headphone Pack (7-day)" add_name="Theme Park: Great Wizard's Soul Power">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -124,7 +124,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20619" name="Agathion - Weaver 24-hour Pack" add_name="Flute Sound">
+	<etcitem id="20619" name="Agathion - Weaver Pack (24-hour)" add_name="Flute Sound">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -239,7 +239,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20635" name="No-grade Beginner's Adventurer Support Pack">
+	<etcitem id="20635" name="Beginner's Adventurer Support Pack (No-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -344,7 +344,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20685" name="Agathion - Dancing Lucky Kid Pack (7 day)" add_name="Great Adventurer's Soul Power">
+	<etcitem id="20685" name="Agathion - Dancing Lucky Kid Pack (7-day)" add_name="Great Adventurer's Soul Power">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

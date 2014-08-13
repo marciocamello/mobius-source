@@ -88,7 +88,7 @@
 			<set order="0x10" stat="shldAngle" val="360"/>
 		</for>
 	</skill>
-	<skill id="10004" levels="1" name="Superior Magic Resistance">
+	<skill id="10004" levels="1" name="Superior M. Def.">
 		<table name="#mDef">158</table>
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" val="#magicLevel"/>
@@ -1431,7 +1431,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10034" levels="1" name="Resistance Aura">
+	<skill id="10034" levels="1" name="Aura Resistance">
 		<table name="#magicLevel">85</table>
 		<set name="effectPoint" val="467"/>
 		<set name="magicLevel" val="#magicLevel"/>
@@ -1456,7 +1456,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10035" levels="1" name="Resistance Aura">
+	<skill id="10035" levels="1" name="Aura Resistance">
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="target" val="TARGET_PARTY_WITHOUT_ME"/>
@@ -1855,7 +1855,7 @@
 		<set name="nextAction" val="attack"/>
 		<for/>
 	</skill>
-	<skill id="10053" levels="6" name="Lion Rush">
+	<skill id="10053" levels="6" name="Lion Dash">
 		<table name="#power">88 94 101 115 123 131</table>
 		<table name="#effectPoint">145 150 154 164 169 173</table>
 		<table name="#magicLevel">85 86 87 88 89 90</table>

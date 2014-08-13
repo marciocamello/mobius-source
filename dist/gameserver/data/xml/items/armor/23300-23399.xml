@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="23301" name="Sayha's Shirt">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.pi_shirt_of_wolf_2nd_wind"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="130"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="23304" name="Eva's Shirt">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.pi_shirt_of_wolf_2nd_water"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="130"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="23307" name="Maphr's Shirt">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.pi_shirt_of_wolf_2nd_earth"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="130"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="28"/>
+		</for>
+	</armor>
+	<armor id="23380" name="Adenian Military Underwear">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_co_military_undwrwear"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="130"/>
+		<equip>
+			<slot id="NONE"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="35"/>
+			<add stat="mDef" order="0x10" value="15"/>
+		</for>
+	</armor>
+	<armor id="23381" name="Adenian Premium Underwear">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_co_premium_underwear"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="130"/>
+		<equip>
+			<slot id="NONE"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="35"/>
+			<add stat="mDef" order="0x10" value="15"/>
+		</for>
+	</armor>
+	<armor id="23382" name="Adenian Temptation Underwear">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_co_sexy_underwear"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="130"/>
+		<equip>
+			<slot id="NONE"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="35"/>
+			<add stat="mDef" order="0x10" value="15"/>
+		</for>
+	</armor>
+	<armor id="23383" name="Adenian Cyber Underwear">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_co_sf_underwear_01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="130"/>
+		<equip>
+			<slot id="NONE"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="35"/>
+			<add stat="mDef" order="0x10" value="15"/>
+		</for>
+	</armor>
+	<armor id="23384" name="Adenian Cute Underwear">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.icon1.g_co_maid_underwear_f01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="130"/>
+		<equip>
+			<slot id="NONE"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="35"/>
+			<add stat="mDef" order="0x10" value="15"/>
+		</for>
+	</armor>
+	<armor id="23386" name="Agathion - Griffin" add_name="Wind Walk">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="NONE"/>
+		</equip>
+	</armor>
+</list>

@@ -227,7 +227,7 @@
 			<add stat="pDef" order="0x10" value="77"/>
 		</for>
 	</armor>
-	<armor id="37218" name="Steel Immortal Tunic (30-day)	">
+	<armor id="37218" name="Steel Immortal Tunic (30-day)">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.armor_t503_u_i00"/>
 		<set name="price" value="0"/>

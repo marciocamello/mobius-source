@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="35002" name="Dark Eternal Helmet">
+	<armor id="35002" name="Dark Eternal Helmet" add_name="Attack Type / Heavy">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -20,7 +20,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35003" name="Dark Eternal Breastplate">
+	<armor id="35003" name="Dark Eternal Breastplate" add_name="Attack Type / Heavy">
 		<set name="icon" value="icon.armor_t701_u_i00"/>
 		<set name="type" value="HEAVY"/>
 		<equip>
@@ -39,7 +39,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35004" name="Dark Eternal Gaiters">
+	<armor id="35004" name="Dark Eternal Gaiters" add_name="Attack Type / Heavy">
 		<set name="icon" value="icon.armor_t701_l_i00"/>
 		<set name="type" value="HEAVY"/>
 		<equip>
@@ -58,7 +58,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35005" name="Dark Eternal Gauntlets">
+	<armor id="35005" name="Dark Eternal Gauntlets" add_name="Attack Type / Heavy">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -78,7 +78,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35006" name="Dark Eternal Boots">
+	<armor id="35006" name="Dark Eternal Boots" add_name="Attack Type / Heavy">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -98,7 +98,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35008" name="Dark Eternal Leather Helmet">
+	<armor id="35008" name="Dark Eternal Leather Helmet" add_name="Assassin Type / Light">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -117,7 +117,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35009" name="Dark Eternal Leather Armor">
+	<armor id="35009" name="Dark Eternal Leather Armor" add_name="Assassin Type / Light">
 		<set name="icon" value="icon.armor_t702_u_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -138,7 +138,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35010" name="Dark Eternal Leather Leggings">
+	<armor id="35010" name="Dark Eternal Leather Leggings" add_name="Assassin Type / Light">
 		<set name="icon" value="icon.armor_t702_l_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -159,7 +159,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35011" name="Dark Eternal Leather Gloves">
+	<armor id="35011" name="Dark Eternal Leather Gloves" add_name="Assassin Type / Light">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -179,7 +179,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35012" name="Dark Eternal Leather Boots">
+	<armor id="35012" name="Dark Eternal Leather Boots" add_name="Assassin Type / Light">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -199,7 +199,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35013" name="Dark Eternal Circlet">
+	<armor id="35013" name="Dark Eternal Circlet" add_name="Magic Type / Robe">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -218,7 +218,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35014" name="Dark Eternal Tunic">
+	<armor id="35014" name="Dark Eternal Tunic" add_name="Magic Type / Robe">
 		<set name="icon" value="icon.armor_t703_u_i00"/>
 		<set name="type" value="MAGIC"/>
 		<equip>
@@ -239,7 +239,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35015" name="Dark Eternal Stockings">
+	<armor id="35015" name="Dark Eternal Stockings" add_name="Magic Type / Robe">
 		<set name="icon" value="icon.armor_t703_l_i00"/>
 		<set name="type" value="MAGIC"/>
 		<equip>
@@ -260,7 +260,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35016" name="Dark Eternal Gloves">
+	<armor id="35016" name="Dark Eternal Gloves" add_name="Magic Type / Robe">
 		<set name="icon" value="icon.armor_t703_g_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -279,7 +279,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35017" name="Dark Eternal Shoes">
+	<armor id="35017" name="Dark Eternal Shoes" add_name="Magic Type / Robe">
 		<set name="icon" value="icon.armor_t703_b_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -298,7 +298,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35018" name="Dark Eternal Helmet">
+	<armor id="35018" name="Dark Eternal Helmet" add_name="Defense Type / Heavy">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -317,7 +317,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35019" name="Dark Eternal Breastplate">
+	<armor id="35019" name="Dark Eternal Breastplate" add_name="Defense Type / Heavy">
 		<set name="icon" value="icon.armor_t701_u_i00"/>
 		<set name="type" value="HEAVY"/>
 		<equip>
@@ -336,7 +336,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35020" name="Dark Eternal Gaiters">
+	<armor id="35020" name="Dark Eternal Gaiters" add_name="Defense Type / Heavy">
 		<set name="icon" value="icon.armor_t701_l_i00"/>
 		<set name="type" value="HEAVY"/>
 		<equip>
@@ -355,7 +355,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35021" name="Dark Eternal Gauntlets">
+	<armor id="35021" name="Dark Eternal Gauntlets" add_name="Defense Type / Heavy">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -375,7 +375,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35022" name="Dark Eternal Boots">
+	<armor id="35022" name="Dark Eternal Boots" add_name="Defense Type / Heavy">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -395,7 +395,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35023" name="Dark Eternal Leather Helmet">
+	<armor id="35023" name="Dark Eternal Leather Helmet" add_name="Enchant Type / Light">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -414,7 +414,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35024" name="Dark Eternal Leather Armor">
+	<armor id="35024" name="Dark Eternal Leather Armor" add_name="Enchant Type / Light">
 		<set name="icon" value="icon.armor_t702_u_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -435,7 +435,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35025" name="Dark Eternal Leather Leggings">
+	<armor id="35025" name="Dark Eternal Leather Leggings" add_name="Enchant Type / Light">
 		<set name="icon" value="icon.armor_t702_l_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -456,7 +456,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35026" name="Dark Eternal Leather Gloves">
+	<armor id="35026" name="Dark Eternal Leather Gloves" add_name="Enchant Type / Light">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -476,7 +476,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35027" name="Dark Eternal Leather Boots">
+	<armor id="35027" name="Dark Eternal Leather Boots" add_name="Enchant Type / Light">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -496,7 +496,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35028" name="Dark Eternal Circlet">
+	<armor id="35028" name="Dark Eternal Circlet" add_name="Recovery Type / Robe">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -515,7 +515,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35029" name="Dark Eternal Tunic">
+	<armor id="35029" name="Dark Eternal Tunic" add_name="Recovery Type / Robe">
 		<set name="icon" value="icon.armor_t703_u_i00"/>
 		<set name="type" value="MAGIC"/>
 		<equip>
@@ -536,7 +536,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35030" name="Dark Eternal Stockings">
+	<armor id="35030" name="Dark Eternal Stockings" add_name="Recovery Type / Robe">
 		<set name="icon" value="icon.armor_t703_l_i00"/>
 		<set name="type" value="MAGIC"/>
 		<equip>
@@ -557,7 +557,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35031" name="Dark Eternal Gloves">
+	<armor id="35031" name="Dark Eternal Gloves" add_name="Recovery Type / Robe">
 		<set name="icon" value="icon.armor_t703_g_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -576,7 +576,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35032" name="Dark Eternal Shoes">
+	<armor id="35032" name="Dark Eternal Shoes" add_name="Recovery Type / Robe">
 		<set name="icon" value="icon.armor_t703_b_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -595,7 +595,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35033" name="Bloody Eternal Helmet">
+	<armor id="35033" name="Bloody Eternal Helmet" add_name="Attack Type / Heavy">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -614,7 +614,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35034" name="Bloody Eternal Breastplate">
+	<armor id="35034" name="Bloody Eternal Breastplate" add_name="Attack Type / Heavy">
 		<set name="icon" value="icon.armor_t701_u_i00"/>
 		<set name="type" value="HEAVY"/>
 		<equip>
@@ -633,7 +633,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35035" name="Bloody Eternal Gaiters">
+	<armor id="35035" name="Bloody Eternal Gaiters" add_name="Attack Type / Heavy">
 		<set name="icon" value="icon.armor_t701_l_i00"/>
 		<set name="type" value="HEAVY"/>
 		<equip>
@@ -652,7 +652,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35036" name="Bloody Eternal Gauntlets">
+	<armor id="35036" name="Bloody Eternal Gauntlets" add_name="Attack Type / Heavy">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -672,7 +672,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35037" name="Bloody Eternal Boots">
+	<armor id="35037" name="Bloody Eternal Boots" add_name="Attack Type / Heavy">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -692,7 +692,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35038" name="Bloody Eternal Leather Helmet">
+	<armor id="35038" name="Bloody Eternal Leather Helmet" add_name="Assassin Type / Light">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -711,7 +711,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35039" name="Bloody Eternal Leather Armor">
+	<armor id="35039" name="Bloody Eternal Leather Armor" add_name="Assassin Type / Light">
 		<set name="icon" value="icon.armor_t702_u_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -732,7 +732,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35040" name="Bloody Eternal Leather Leggings">
+	<armor id="35040" name="Bloody Eternal Leather Leggings" add_name="Assassin Type / Light">
 		<set name="icon" value="icon.armor_t702_l_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -753,7 +753,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35041" name="Bloody Eternal Leather Gloves">
+	<armor id="35041" name="Bloody Eternal Leather Gloves" add_name="Assassin Type / Light">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -773,7 +773,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35042" name="Bloody Eternal Leather Boots">
+	<armor id="35042" name="Bloody Eternal Leather Boots" add_name="Assassin Type / Light">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -793,7 +793,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35043" name="Bloody Eternal Circlet">
+	<armor id="35043" name="Bloody Eternal Circlet" add_name="Magic Type / Robe">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -812,7 +812,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35044" name="Bloody Eternal Tunic">
+	<armor id="35044" name="Bloody Eternal Tunic" add_name="Magic Type / Robe">
 		<set name="icon" value="icon.armor_t703_u_i00"/>
 		<set name="type" value="MAGIC"/>
 		<equip>
@@ -833,7 +833,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35045" name="Bloody Eternal Stockings">
+	<armor id="35045" name="Bloody Eternal Stockings" add_name="Magic Type / Robe">
 		<set name="icon" value="icon.armor_t703_l_i00"/>
 		<set name="type" value="MAGIC"/>
 		<equip>
@@ -854,7 +854,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35046" name="Bloody Eternal Gloves">
+	<armor id="35046" name="Bloody Eternal Gloves" add_name="Magic Type / Robe">
 		<set name="icon" value="icon.armor_t703_g_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -873,7 +873,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35047" name="Bloody Eternal Shoes">
+	<armor id="35047" name="Bloody Eternal Shoes" add_name="Magic Type / Robe">
 		<set name="icon" value="icon.armor_t703_b_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -892,7 +892,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35048" name="Bloody Eternal Helmet">
+	<armor id="35048" name="Bloody Eternal Helmet" add_name="Defense Type / Heavy">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -911,7 +911,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35049" name="Bloody Eternal Breastplate">
+	<armor id="35049" name="Bloody Eternal Breastplate" add_name="Defense Type / Heavy">
 		<set name="icon" value="icon.armor_t701_u_i00"/>
 		<set name="type" value="HEAVY"/>
 		<equip>
@@ -930,7 +930,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35050" name="Bloody Eternal Gaiters">
+	<armor id="35050" name="Bloody Eternal Gaiters" add_name="Defense Type / Heavy">
 		<set name="icon" value="icon.armor_t701_l_i00"/>
 		<set name="type" value="HEAVY"/>
 		<equip>
@@ -949,7 +949,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35051" name="Bloody Eternal Gauntlets">
+	<armor id="35051" name="Bloody Eternal Gauntlets" add_name="Defense Type / Heavy">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -969,7 +969,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35052" name="Bloody Eternal Boots">
+	<armor id="35052" name="Bloody Eternal Boots" add_name="Defense Type / Heavy">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -989,7 +989,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35053" name="Bloody Eternal Leather Helmet">
+	<armor id="35053" name="Bloody Eternal Leather Helmet" add_name="Enchant Type / Light">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -1008,7 +1008,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35054" name="Bloody Eternal Leather Armor">
+	<armor id="35054" name="Bloody Eternal Leather Armor" add_name="Enchant Type / Light">
 		<set name="icon" value="icon.armor_t702_u_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -1029,7 +1029,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35055" name="Bloody Eternal Leather Leggings">
+	<armor id="35055" name="Bloody Eternal Leather Leggings" add_name="Enchant Type / Light">
 		<set name="icon" value="icon.armor_t702_l_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -1050,7 +1050,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35056" name="Bloody Eternal Leather Gloves">
+	<armor id="35056" name="Bloody Eternal Leather Gloves" add_name="Enchant Type / Light">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -1070,7 +1070,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35057" name="Bloody Eternal Leather Boots">
+	<armor id="35057" name="Bloody Eternal Leather Boots" add_name="Enchant Type / Light">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -1090,7 +1090,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35058" name="Bloody Eternal Circlet">
+	<armor id="35058" name="Bloody Eternal Circlet" add_name="Recovery Type / Robe">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -1109,7 +1109,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35059" name="Bloody Eternal Tunic">
+	<armor id="35059" name="Bloody Eternal Tunic" add_name="Recovery Type / Robe">
 		<set name="icon" value="icon.armor_t703_u_i00"/>
 		<set name="type" value="MAGIC"/>
 		<equip>
@@ -1130,7 +1130,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35060" name="Bloody Eternal Stockings">
+	<armor id="35060" name="Bloody Eternal Stockings" add_name="Recovery Type / Robe">
 		<set name="icon" value="icon.armor_t703_l_i00"/>
 		<set name="type" value="MAGIC"/>
 		<equip>
@@ -1151,7 +1151,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35061" name="Bloody Eternal Gloves">
+	<armor id="35061" name="Bloody Eternal Gloves" add_name="Recovery Type / Robe">
 		<set name="icon" value="icon.armor_t703_g_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -1170,7 +1170,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35062" name="Bloody Eternal Shoes">
+	<armor id="35062" name="Bloody Eternal Shoes" add_name="Recovery Type / Robe">
 		<set name="icon" value="icon.armor_t703_b_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -1189,7 +1189,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35063" name="Dark Eternal Helmet">
+	<armor id="35063" name="Dark Eternal Helmet" add_name="Heavy Armor">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -1208,7 +1208,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35064" name="Dark Eternal Breastplate">
+	<armor id="35064" name="Dark Eternal Breastplate" add_name="Heavy Armor">
 		<set name="icon" value="icon.armor_t701_u_i00"/>
 		<set name="type" value="HEAVY"/>
 		<equip>
@@ -1227,7 +1227,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35065" name="Dark Eternal Gaiters">
+	<armor id="35065" name="Dark Eternal Gaiters" add_name="Heavy Armor">
 		<set name="icon" value="icon.armor_t701_l_i00"/>
 		<set name="type" value="HEAVY"/>
 		<equip>
@@ -1246,7 +1246,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35066" name="Dark Eternal Gauntlets">
+	<armor id="35066" name="Dark Eternal Gauntlets" add_name="Heavy Armor">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -1266,7 +1266,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35067" name="Dark Eternal Boots">
+	<armor id="35067" name="Dark Eternal Boots" add_name="Heavy Armor">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -1286,7 +1286,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35069" name="Dark Eternal Leather Helmet">
+	<armor id="35069" name="Dark Eternal Leather Helmet" add_name="Light Armor">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -1305,7 +1305,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35070" name="Dark Eternal Leather Armor">
+	<armor id="35070" name="Dark Eternal Leather Armor" add_name="Light Armor">
 		<set name="icon" value="icon.armor_t702_u_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -1326,7 +1326,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35071" name="Dark Eternal Leather Leggings">
+	<armor id="35071" name="Dark Eternal Leather Leggings" add_name="Light Armor">
 		<set name="icon" value="icon.armor_t702_l_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -1347,7 +1347,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35072" name="Dark Eternal Leather Gloves">
+	<armor id="35072" name="Dark Eternal Leather Gloves" add_name="Light Armor">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -1367,7 +1367,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35073" name="Dark Eternal Leather Boots">
+	<armor id="35073" name="Dark Eternal Leather Boots" add_name="Light Armor">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -1387,7 +1387,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35074" name="Dark Eternal Circlet">
+	<armor id="35074" name="Dark Eternal Circlet" add_name="Robe">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -1406,7 +1406,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35075" name="Dark Eternal Tunic">
+	<armor id="35075" name="Dark Eternal Tunic" add_name="Robe">
 		<set name="icon" value="icon.armor_t703_u_i00"/>
 		<set name="type" value="MAGIC"/>
 		<equip>
@@ -1427,7 +1427,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35076" name="Dark Eternal Stockings">
+	<armor id="35076" name="Dark Eternal Stockings" add_name="Robe">
 		<set name="icon" value="icon.armor_t703_l_i00"/>
 		<set name="type" value="MAGIC"/>
 		<equip>
@@ -1448,7 +1448,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35077" name="Dark Eternal Gloves">
+	<armor id="35077" name="Dark Eternal Gloves" add_name="Robe">
 		<set name="icon" value="icon.armor_t703_g_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -1467,7 +1467,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35078" name="Dark Eternal Shoes">
+	<armor id="35078" name="Dark Eternal Shoes" add_name="Robe">
 		<set name="icon" value="icon.armor_t703_b_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -1486,7 +1486,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35079" name="Bloody Eternal Helmet">
+	<armor id="35079" name="Bloody Eternal Helmet" add_name="Heavy Armor">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -1505,7 +1505,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35080" name="Bloody Eternal Breastplate">
+	<armor id="35080" name="Bloody Eternal Breastplate" add_name="Heavy Armor">
 		<set name="icon" value="icon.armor_t701_u_i00"/>
 		<set name="type" value="HEAVY"/>
 		<equip>
@@ -1525,7 +1525,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</armor>
-	<armor id="35081" name="Bloody Eternal Gaiters">
+	<armor id="35081" name="Bloody Eternal Gaiters" add_name="Heavy Armor">
 		<set name="icon" value="icon.armor_t701_l_i00"/>
 		<set name="type" value="HEAVY"/>
 		<equip>
@@ -1544,7 +1544,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35082" name="Bloody Eternal Gauntlets">
+	<armor id="35082" name="Bloody Eternal Gauntlets" add_name="Heavy Armor">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -1564,7 +1564,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35083" name="Bloody Eternal Boots">
+	<armor id="35083" name="Bloody Eternal Boots" add_name="Heavy Armor">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -1584,7 +1584,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35085" name="Bloody Eternal Leather Helmet">
+	<armor id="35085" name="Bloody Eternal Leather Helmet" add_name="Light Armor">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -1603,7 +1603,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35086" name="Bloody Eternal Leather Armor">
+	<armor id="35086" name="Bloody Eternal Leather Armor" add_name="Light Armor">
 		<set name="icon" value="icon.armor_t702_u_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -1624,7 +1624,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35087" name="Bloody Eternal Leather Leggings">
+	<armor id="35087" name="Bloody Eternal Leather Leggings" add_name="Light Armor">
 		<set name="icon" value="icon.armor_t702_l_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -1645,7 +1645,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35088" name="Bloody Eternal Leather Gloves">
+	<armor id="35088" name="Bloody Eternal Leather Gloves" add_name="Light Armor">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -1665,7 +1665,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35089" name="Bloody Eternal Leather Boots">
+	<armor id="35089" name="Bloody Eternal Leather Boots" add_name="Light Armor">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="type" value="LIGHT"/>
@@ -1685,7 +1685,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35090" name="Bloody Eternal Circlet">
+	<armor id="35090" name="Bloody Eternal Circlet" add_name="Robe">
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -1704,7 +1704,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35091" name="Bloody Eternal Tunic">
+	<armor id="35091" name="Bloody Eternal Tunic" add_name="Robe">
 		<set name="icon" value="icon.armor_t703_u_i00"/>
 		<set name="type" value="MAGIC"/>
 		<equip>
@@ -1725,7 +1725,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35092" name="Bloody Eternal Stockings">
+	<armor id="35092" name="Bloody Eternal Stockings" add_name="Robe">
 		<set name="icon" value="icon.armor_t703_l_i00"/>
 		<set name="type" value="MAGIC"/>
 		<equip>
@@ -1746,7 +1746,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35093" name="Bloody Eternal Gloves">
+	<armor id="35093" name="Bloody Eternal Gloves" add_name="Robe">
 		<set name="icon" value="icon.armor_t703_g_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>
@@ -1765,7 +1765,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="35094" name="Bloody Eternal Shoes">
+	<armor id="35094" name="Bloody Eternal Shoes" add_name="Robe">
 		<set name="icon" value="icon.armor_t703_b_i00"/>
 		<set name="type" value="LIGHT"/>
 		<equip>

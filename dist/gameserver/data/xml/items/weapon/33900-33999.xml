@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="33909" name="Requiem Shaper" add_name="Guidance / Event">
+	<weapon id="33909" name="Requiem Shaper" add_name="Guidance (Event)">
 		<set name="icon" value="icon.weapon_aspeda_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -29,7 +29,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33910" name="Requiem Shaper" add_name="Haste / Event">
+	<weapon id="33910" name="Requiem Shaper" add_name="Haste (Event)">
 		<set name="icon" value="icon.weapon_aspeda_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -57,7 +57,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33911" name="Requiem Shaper" add_name="Focus / Event">
+	<weapon id="33911" name="Requiem Shaper" add_name="Focus (Event)">
 		<set name="icon" value="icon.weapon_aspeda_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -85,7 +85,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33912" name="Requiem Cutter" add_name="Haste / Event">
+	<weapon id="33912" name="Requiem Cutter" add_name="Haste (Event)">
 		<set name="icon" value="icon.weapon_estia_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -112,7 +112,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33913" name="Requiem Cutter" add_name="Focus / Event">
+	<weapon id="33913" name="Requiem Cutter" add_name="Focus (Event)">
 		<set name="icon" value="icon.weapon_estia_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -139,7 +139,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33914" name="Requiem Cutter" add_name="Health / Event">
+	<weapon id="33914" name="Requiem Cutter" add_name="Health (Event)">
 		<set name="icon" value="icon.weapon_estia_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -166,7 +166,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33915" name="Requiem Slasher" add_name="Focus / Event">
+	<weapon id="33915" name="Requiem Slasher" add_name="Focus (Event)">
 		<set name="icon" value="icon.weapon_polion_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -192,7 +192,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33916" name="Requiem Slasher" add_name="Damage Up / Event">
+	<weapon id="33916" name="Requiem Slasher" add_name="Damage Up (Event)">
 		<set name="icon" value="icon.weapon_polion_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -215,7 +215,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33917" name="Requiem Slasher" add_name="Haste / Event">
+	<weapon id="33917" name="Requiem Slasher" add_name="Haste (Event)">
 		<set name="icon" value="icon.weapon_polion_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -241,7 +241,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33918" name="Requiem Avenger" add_name="Haste / Event">
+	<weapon id="33918" name="Requiem Avenger" add_name="Haste (Event)">
 		<set name="icon" value="icon.weapon_batista_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -267,7 +267,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33919" name="Requiem Avenger" add_name="Critical Damage / Event">
+	<weapon id="33919" name="Requiem Avenger" add_name="Critical Damage (Event)">
 		<set name="icon" value="icon.weapon_batista_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -293,7 +293,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33920" name="Requiem Avenger" add_name="Focus / Event">
+	<weapon id="33920" name="Requiem Avenger" add_name="Focus (Event)">
 		<set name="icon" value="icon.weapon_batista_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -319,7 +319,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33921" name="Requiem Fighter" add_name="Focus / Event">
+	<weapon id="33921" name="Requiem Fighter" add_name="Focus (Event)">
 		<set name="icon" value="icon.weapon_fantasma_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -345,7 +345,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33922" name="Requiem Fighter" add_name="Damage Up / Event">
+	<weapon id="33922" name="Requiem Fighter" add_name="Damage Up (Event)">
 		<set name="icon" value="icon.weapon_fantasma_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -368,7 +368,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33923" name="Requiem Fighter" add_name="Haste / Event">
+	<weapon id="33923" name="Requiem Fighter" add_name="Haste (Event)">
 		<set name="icon" value="icon.weapon_fantasma_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -394,7 +394,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33924" name="Requiem Stormer" add_name="HP Drain / Event">
+	<weapon id="33924" name="Requiem Stormer" add_name="HP Drain (Event)">
 		<set name="icon" value="icon.weapon_soryu_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -417,7 +417,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33925" name="Requiem Stormer" add_name="Guidance / Event">
+	<weapon id="33925" name="Requiem Stormer" add_name="Guidance (Event)">
 		<set name="icon" value="icon.weapon_soryu_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -443,7 +443,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33926" name="Requiem Stormer" add_name="Damage Up / Event">
+	<weapon id="33926" name="Requiem Stormer" add_name="Damage Up (Event)">
 		<set name="icon" value="icon.weapon_soryu_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -466,7 +466,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33927" name="Requiem Thrower" add_name="Damage Up / Event">
+	<weapon id="33927" name="Requiem Thrower" add_name="Damage Up (Event)">
 		<set name="icon" value="icon.weapon_grabathus_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -490,7 +490,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33928" name="Requiem Thrower" add_name="Focus / Event">
+	<weapon id="33928" name="Requiem Thrower" add_name="Focus (Event)">
 		<set name="icon" value="icon.weapon_grabathus_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -517,7 +517,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33929" name="Requiem Thrower" add_name="Long Blow/ Event">
+	<weapon id="33929" name="Requiem Thrower" add_name="Long Blow (Event)">
 		<set name="icon" value="icon.weapon_grabathus_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -541,7 +541,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33930" name="Requiem Shooter" add_name="Focus / Event">
+	<weapon id="33930" name="Requiem Shooter" add_name="Focus (Event)">
 		<set name="icon" value="icon.weapon_shyayaka_i01"/>
 		<set name="weight" value="1580"/>
 		<set name="rnd_dam" value="10"/>
@@ -568,7 +568,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33931" name="Requiem Shooter" add_name="Critical Slow / Event">
+	<weapon id="33931" name="Requiem Shooter" add_name="Critical Slow (Event)">
 		<set name="icon" value="icon.weapon_shyayaka_i01"/>
 		<set name="weight" value="1580"/>
 		<set name="rnd_dam" value="10"/>
@@ -595,7 +595,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33932" name="Requiem Shooter" add_name="Haste / Event">
+	<weapon id="33932" name="Requiem Shooter" add_name="Haste (Event)">
 		<set name="icon" value="icon.weapon_shyayaka_i01"/>
 		<set name="weight" value="1580"/>
 		<set name="rnd_dam" value="10"/>
@@ -622,7 +622,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33933" name="Requiem Buster" add_name="Acumen / Event">
+	<weapon id="33933" name="Requiem Buster" add_name="Acumen (Event)">
 		<set name="icon" value="icon.weapon_kaynon_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -648,7 +648,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33934" name="Requiem Buster" add_name="Magic Hold / Event">
+	<weapon id="33934" name="Requiem Buster" add_name="Magic Hold (Event)">
 		<set name="icon" value="icon.weapon_kaynon_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -671,7 +671,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33935" name="Requiem Buster" add_name="Mana Up / Event">
+	<weapon id="33935" name="Requiem Buster" add_name="Mana Up (Event)">
 		<set name="icon" value="icon.weapon_kaynon_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -697,7 +697,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33936" name="Requiem Caster" add_name="Empower / Event">
+	<weapon id="33936" name="Requiem Caster" add_name="Empower (Event)">
 		<set name="icon" value="icon.weapon_anatrian_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -723,7 +723,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33937" name="Requiem Caster" add_name="Acumen / Event">
+	<weapon id="33937" name="Requiem Caster" add_name="Acumen (Event)">
 		<set name="icon" value="icon.weapon_anatrian_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -749,7 +749,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33938" name="Requiem Caster" add_name="Magic Hold / Event">
+	<weapon id="33938" name="Requiem Caster" add_name="Magic Hold (Event)">
 		<set name="icon" value="icon.weapon_anatrian_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -772,7 +772,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33939" name="Requiem Retributer" add_name="MP Regeneration / Event">
+	<weapon id="33939" name="Requiem Retributer" add_name="MP Regeneration (Event)">
 		<set name="icon" value="icon.weapon_grangkaz_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -795,7 +795,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33940" name="Requiem Retributer" add_name="Acumen / Event">
+	<weapon id="33940" name="Requiem Retributer" add_name="Acumen (Event)">
 		<set name="icon" value="icon.weapon_grangkaz_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -821,7 +821,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33941" name="Requiem Retributer" add_name="Empower / Event">
+	<weapon id="33941" name="Requiem Retributer" add_name="Empower (Event)">
 		<set name="icon" value="icon.weapon_grangkaz_i01"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -847,7 +847,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33942" name="Requiem Dual Sword" add_name="Haste / Event">
+	<weapon id="33942" name="Requiem Dualsword" add_name="Haste (Event)">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -873,7 +873,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33943" name="Requiem Dual Sword" add_name="Damage Up / Event">
+	<weapon id="33943" name="Requiem Dualsword" add_name="Damage Up (Event)">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -896,7 +896,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33944" name="Requiem Dual Sword" add_name="Health / Event">
+	<weapon id="33944" name="Requiem Dualsword" add_name="Health (Event)">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -922,7 +922,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33945" name="Requiem Dual Dagger" add_name="Damage Up / Event">
+	<weapon id="33945" name="Requiem Dual Dagger" add_name="Damage Up (Event)">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -945,7 +945,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33946" name="Requiem Dual Dagger" add_name="Focus / Event">
+	<weapon id="33946" name="Requiem Dual Dagger" add_name="Focus (Event)">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -971,7 +971,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33947" name="Requiem Dual Dagger" add_name="Guidance / Event">
+	<weapon id="33947" name="Requiem Dual Dagger" add_name="Guidance (Event)">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -997,7 +997,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33948" name="Requiem Dual Blunt Weapon" add_name="Focus / Event">
+	<weapon id="33948" name="Requiem Dual Blunt Weapon" add_name="Focus (Event)">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -1022,7 +1022,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33949" name="Requiem Dual Blunt Weapon" add_name="Guidance / Event">
+	<weapon id="33949" name="Requiem Dual Blunt Weapon" add_name="Guidance (Event)">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -1047,7 +1047,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33950" name="Requiem Dual Blunt Weapon" add_name="Damage Up / Event">
+	<weapon id="33950" name="Requiem Dual Blunt Weapon" add_name="Damage Up (Event)">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -1069,7 +1069,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33956" name="Immortal Shield">
+	<weapon id="33956" name="Immortal Shield" add_name="Attack Type / Heavy (Event)">
 		<set name="icon" value="icon.weapon_sacon_i00"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="R"/>
@@ -1084,7 +1084,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</weapon>
-	<weapon id="33972" name="Immortal Shield">
+	<weapon id="33972" name="Immortal Shield" add_name="Defense Type / Heavy (Event)">
 		<set name="icon" value="icon.weapon_sacon_i00"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="R"/>

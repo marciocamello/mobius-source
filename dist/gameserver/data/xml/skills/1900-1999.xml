@@ -53,7 +53,7 @@
 			<add order="0x40" stat="runSpd" val="13"/>
 		</for>
 	</skill>
-	<skill id="1906" levels="1" name="Water Blessing">
+	<skill id="1906" levels="1" name="Blessing of Water">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="magicLevel" val="85"/>
@@ -110,7 +110,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="1911" levels="1" name="Wind Blessing">
+	<skill id="1911" levels="1" name="Blessing of Wind">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="magicLevel" val="85"/>
@@ -160,7 +160,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1915" levels="1" name="Fire Blessing">
+	<skill id="1915" levels="1" name="Blessing of Fire">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="magicLevel" val="85"/>
@@ -226,7 +226,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1921" levels="1" name="Earth Blessing">
+	<skill id="1921" levels="1" name="Blessing of Earth">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="magicLevel" val="85"/>
@@ -260,7 +260,7 @@
 			<mul order="0x30" stat="mpConsum" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="1924" levels="1" name="Dark Blessing">
+	<skill id="1924" levels="1" name="Dark Silence">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="magicLevel" val="85"/>
@@ -552,7 +552,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
 	</skill>
-	<skill id="1942" levels="1" name="Wing storm">
+	<skill id="1942" levels="1" name="Wing Storm">
 		<set name="affectLimit" val="5;12"/>
 		<set name="icon" val="icon.skill0492"/>
 		<set name="coolTime" val="720"/>
@@ -570,7 +570,7 @@
 		<set name="overHit" val="true"/>
 		<set name="behind" val="true"/>
 	</skill>
-	<skill id="1943" levels="1" name="Wind Rush">
+	<skill id="1943" levels="1" name="Wing Rush">
 		<set name="affectLimit" val="5;12"/>
 		<set name="icon" val="icon.skill0540"/>
 		<set name="coolTime" val="200"/>
@@ -687,7 +687,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1956" levels="4" name="Sub - P.Atk/M.Atk Increase">
+	<skill id="1956" levels="4" name="Sub - P. Atk./M. Atk. Increase">
 		<table name="#Atk">1.01 1.02 1.03 1.04</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -698,7 +698,7 @@
 			<mul order="0x30" stat="mAtk" val="#Atk"/>
 		</for>
 	</skill>
-	<skill id="1957" levels="4" name="Sub - P.Def/M.Def Increase">
+	<skill id="1957" levels="4" name="Sub - P. Def./M. Def. Increase">
 		<table name="#Def">1.01 1.02 1.03 1.04</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -709,7 +709,7 @@
 			<mul order="0x30" stat="mDef" val="#Def"/>
 		</for>
 	</skill>
-	<skill id="1958" levels="4" name="Sub - Atk. Speed/Casting Speed Increase">
+	<skill id="1958" levels="4" name="Sub - Atk. Spd./Casting Spd. Increase">
 		<table name="#AtkSpd">1.01 1.02 1.03 1.04</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -731,7 +731,7 @@
 			<add order="0x40" stat="mCritRate" val="#critRate"/>
 		</for>
 	</skill>
-	<skill id="1960" levels="4" name="Sub - Accuracy Increase">
+	<skill id="1960" levels="4" name="Sub - P. Accuracy/ M. Accuracy Increase">
 		<table name="#accCombat">2 4 6 8</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -742,7 +742,7 @@
 			<add order="0x40" stat="maccCombat" val="#accCombat"/>
 		</for>
 	</skill>
-	<skill id="1961" levels="4" name="Sub - Evasion Increase">
+	<skill id="1961" levels="4" name="Sub - P. Evasion/ M. Evasion Increase">
 		<table name="#evasion">2 4 6 8</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -753,7 +753,7 @@
 			<add order="0x40" stat="mEvas" val="#evasion"/>
 		</for>
 	</skill>
-	<skill id="1962" levels="4" name="Dual - P.Atk/M.Atk Increase">
+	<skill id="1962" levels="4" name="Dual - P. Atk./M. Atk. Increase">
 		<table name="#pAtk">1.03 1.06 1.09 1.12</table>
 		<table name="#mAtk">1.04 1.09 1.13 1.18</table>
 		<set name="target" val="TARGET_SELF"/>
@@ -765,7 +765,7 @@
 			<mul order="0x30" stat="mAtk" val="#mAtk"/>
 		</for>
 	</skill>
-	<skill id="1963" levels="4" name="Dual - P.Def/M.Def Increase">
+	<skill id="1963" levels="4" name="Dual - P. Def./M. Def. Increase">
 		<table name="#Def">1.03 1.06 1.09 1.12</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -776,7 +776,7 @@
 			<mul order="0x30" stat="mDef" val="#Def"/>
 		</for>
 	</skill>
-	<skill id="1964" levels="4" name="Dual - Atk. Speed/Casting Speed Increase">
+	<skill id="1964" levels="4" name="Dual - Atk. Spd./Casting Spd. Increase">
 		<table name="#AtkSpd">1.03 1.06 1.09 1.12</table>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -835,7 +835,7 @@
 			<trigger id="1995" level="1" type="ATTACK" chance="40"/>
 		</triggers>
 	</skill>
-	<skill id="1970" levels="1" name="Dual - Specialized for P.Atk">
+	<skill id="1970" levels="1" name="Dual - Specialized for P. Atk.">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="magicLevel" val="85"/>
@@ -846,7 +846,7 @@
 			<div order="0x30" stat="mDef" val="1.09"/>
 		</for>
 	</skill>
-	<skill id="1971" levels="1" name="Dual - Specialized for M.Atk">
+	<skill id="1971" levels="1" name="Dual - Specialized for M. Atk.">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="magicLevel" val="85"/>
@@ -893,7 +893,7 @@
 			<add order="0x40" stat="airjokePower" val="20"/>
 		</for>
 	</skill>
-	<skill id="1974" levels="1" name="Dual - Beserker's Rage">
+	<skill id="1974" levels="1" name="Dual - Berserker's Rage">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="magicLevel" val="85"/>
@@ -902,7 +902,7 @@
 			<trigger id="1975" level="1" type="ATTACK" chance="30"/>
 		</triggers>
 	</skill>
-	<skill id="1975" levels="1" name="Dual - Beserker's Rage">
+	<skill id="1975" levels="1" name="Dual - Berserker's Rage">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="magicLevel" val="85"/>
@@ -994,7 +994,7 @@
 			<effect count="1" name="MutePhisycal" time="5" val="0"/>
 		</for>
 	</skill>
-	<skill id="1983" levels="1" name="Dual - Silence of The Giants">
+	<skill id="1983" levels="1" name="Dual - Silence of the Giants">
 		<set name="magicType" val="MAGIC"/>
 		<set name="magicLevel" val="99"/>
 		<set name="castRange" val="900"/>
@@ -1012,7 +1012,7 @@
 			<effect count="1" name="Mute" time="5" val="0"/>
 		</for>
 	</skill>
-	<skill id="1984" levels="1" name="Dual - Yoke of The Giants">
+	<skill id="1984" levels="1" name="Dual - Yoke of the Giants">
 		<set name="magicType" val="MAGIC"/>
 		<set name="magicLevel" val="99"/>
 		<set name="castRange" val="900"/>
@@ -1031,7 +1031,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1985" levels="1" name="Dual - Shield of The Giants">
+	<skill id="1985" levels="1" name="Dual - Shield of the Giants">
 		<set name="magicType" val="MAGIC"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -1142,7 +1142,7 @@
 		<set name="magicLevel" val="85"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="1994" levels="1" name="Aerore Armor Limit">
+	<skill id="1994" levels="1" name="Aeore Armor Limit">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="magicLevel" val="85"/>

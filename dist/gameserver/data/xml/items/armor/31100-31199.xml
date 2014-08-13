@@ -168,7 +168,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31197" name="Bound Blast Plate">
+	<armor id="31197" name="Bound Breastplate">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="14"/>

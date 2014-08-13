@@ -1450,7 +1450,7 @@
 			<defence attribute="unholy" value="184"/>
 		</attributes>
 	</npc>
-	<npc id="20422" name="Akaste Bone Prefect" title="">
+	<npc id="20422" name="Akaste Skeleton Prefect" title="">
 		<set name="aggroRange" value="500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1533,7 +1533,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 	</npc>
-	<npc id="20423" name="Akaste Bone Archer" title="">
+	<npc id="20423" name="Akaste Skeleton Archer" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Ranger"/>
 		<set name="baseAtkRange" value="1100"/>
@@ -1611,7 +1611,7 @@
 			<defence attribute="unholy" value="53"/>
 		</attributes>
 	</npc>
-	<npc id="20424" name="Akaste Bone Lord" title="">
+	<npc id="20424" name="Akaste Skeleton Lord" title="">
 		<set name="aggroRange" value="500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>

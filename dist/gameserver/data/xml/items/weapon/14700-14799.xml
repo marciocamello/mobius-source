@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="14774" name="Wild Rose Pig Candy" add_name="14 day limited period">
+	<weapon id="14774" name="Wild Rose Pig Candy" add_name="14-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="20160"/>

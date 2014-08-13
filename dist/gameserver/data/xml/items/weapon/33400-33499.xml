@@ -93,7 +93,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33404" name="Vesper Dual Sword of Destiny (Holy)">
+	<weapon id="33404" name="Vesper Dualsword of Destiny (Holy)">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="weight" value="152"/>
 		<set name="rnd_dam" value="10"/>
@@ -465,7 +465,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="33420" name="Vesper Dual Sword of Destiny (Dark)">
+	<weapon id="33420" name="Vesper Dualsword of Destiny (Dark)">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="weight" value="152"/>
 		<set name="rnd_dam" value="10"/>

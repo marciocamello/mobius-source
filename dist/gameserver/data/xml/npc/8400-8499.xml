@@ -529,7 +529,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="8413" name="Buff of the Gods" title="Iss Enchanter">
+	<npc id="8413" name="Divine Buff" title="Iss Enchanter">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1233,7 +1233,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="8429" name="Thunder Heel" title="Aeore Healer">
+	<npc id="8429" name="Thunder Heal" title="Aeore Healer">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>

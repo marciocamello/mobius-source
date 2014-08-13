@@ -336,7 +336,7 @@
 			<effect count="1" name="Interrupt" time="1" val="0"/>
 		</for>
 	</skill>
-	<skill id="1413" levels="1" name="Magnus' Chant">
+	<skill id="1413" levels="1" name="Chant of Magnus">
 		<table name="#abnormal_time">300</table>
 		<table name="#mpConsume2">229</table>
 		<table name="#mpConsume1">58</table>
@@ -388,7 +388,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1414" levels="1" name="Victory of Pa'agrio">
+	<skill id="1414" levels="1" name="Victories of Pa'agrio">
 		<table name="#abnormal_time">300</table>
 		<table name="#speed">0.8</table>
 		<table name="#mpConsume2">227</table>
@@ -720,7 +720,7 @@
 			<effect count="6" name="Symbol" time="2" val="0" applyOnSummon="false"/>
 		</for>
 	</skill>
-	<skill id="1424" levels="1" name="Anti-Summoning Field">
+	<skill id="1424" levels="1" name="Anti-summoning Field">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1424"/>
 		<set name="reuseDelay" val="1800000"/>
@@ -846,7 +846,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="1429" levels="1" name="Gate Chant">
+	<skill id="1429" levels="1" name="Chant of Gate">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1429"/>
 		<set name="reuseDelay" val="600000"/>
@@ -1239,7 +1239,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1442" levels="3" name="Protection from Darkness">
+	<skill id="1442" levels="3" name="Darkness Protection">
 		<table name="#Res">15 23 30</table>
 		<table name="#order">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
@@ -2849,7 +2849,7 @@
 		</enchant1>
 		<for/>
 	</skill>
-	<skill id="1489" levels="1" name="Summoner Ability - Resist Attribute">
+	<skill id="1489" levels="1" name="Summoner Ability: Attribute Resistance">
 		<set name="icon" val="icon.skill0433"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2862,7 +2862,7 @@
 			<add order="0x60" stat="defenceWind" val="5"/>
 		</for>
 	</skill>
-	<skill id="1490" levels="1" name="Healer Ability - Heal">
+	<skill id="1490" levels="1" name="Healer Ability: Heal">
 		<set name="icon" val="icon.skill1011"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2874,7 +2874,7 @@
 			</trigger>
 		</triggers>
 	</skill>
-	<skill id="1491" levels="1" name="Summoner Ability - Spirit">
+	<skill id="1491" levels="1" name="Summoner Ability: Spirit">
 		<set name="icon" val="icon.skill1349"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -3029,7 +3029,7 @@
 			</trigger>
 		</triggers>
 	</skill>
-	<skill id="1499" levels="1" name="Improved Combat">
+	<skill id="1499" levels="1" name="Improve Combat">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1499"/>
 		<set name="reuseDelay" val="2000"/>

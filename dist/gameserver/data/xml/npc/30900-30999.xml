@@ -1312,7 +1312,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="30925" name="Morelyn" title="High Priestess">
+	<npc id="30925" name="Morelyn" title="Eva's High Priestess">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1359,7 +1359,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="30926" name="Restina" title="Priestess">
+	<npc id="30926" name="Restina" title="Eva's Priestess">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1406,7 +1406,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="30927" name="Alicia" title="Priestess">
+	<npc id="30927" name="Alicia" title="Eva's Priestess">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>

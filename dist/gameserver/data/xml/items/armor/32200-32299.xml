@@ -39,7 +39,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32202" name="Blessed Twilight Leather Legging" add_name="Assassin Type">
+	<armor id="32202" name="Blessed Twilight Leather Leggings" add_name="Assassin Type">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="592"/>
@@ -245,7 +245,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32213" name="Blessed Twilight Gauntlet" add_name="Defense Type">
+	<armor id="32213" name="Blessed Twilight Gauntlets" add_name="Defense Type">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="236"/>
@@ -282,7 +282,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32216" name="Blessed Twilight Leather Helmet" add_name="Enhance Type">
+	<armor id="32216" name="Blessed Twilight Leather Helmet" add_name="Enchant Type">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="355"/>
@@ -301,7 +301,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32217" name="Blessed Twilight Leather Armor" add_name="Enhance Type">
+	<armor id="32217" name="Blessed Twilight Leather Armor" add_name="Enchant Type">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="947"/>
@@ -320,7 +320,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32218" name="Blessed Twilight Leather Legging" add_name="Enhance Type">
+	<armor id="32218" name="Blessed Twilight Leather Leggings" add_name="Enchant Type">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="592"/>
@@ -339,7 +339,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32219" name="Blessed Twilight Leather Gloves" add_name="Enhance Type">
+	<armor id="32219" name="Blessed Twilight Leather Gloves" add_name="Enchant Type">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="236"/>
@@ -358,7 +358,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32220" name="Blessed Twilight Leather Boots" add_name="Enhance Type">
+	<armor id="32220" name="Blessed Twilight Leather Boots" add_name="Enchant Type">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="236"/>
@@ -469,7 +469,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32243" name="R Talisman - P. Atk.">
+	<armor id="32243" name="Talisman (R-grade) - P. Atk. (Passive)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -486,7 +486,7 @@
 			<skill id="13139" level="1"/>
 		</skills>
 	</armor>
-	<armor id="32244" name="R Talisman - P. Atk. Spd.">
+	<armor id="32244" name="Talisman (R-grade) - Atk. Spd. (Passive)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -503,7 +503,7 @@
 			<skill id="13138" level="1"/>
 		</skills>
 	</armor>
-	<armor id="32245" name="R Talisman - M. Atk.">
+	<armor id="32245" name="Talisman (R-grade) - M. Atk. (Passive)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -520,7 +520,7 @@
 			<skill id="13143" level="1"/>
 		</skills>
 	</armor>
-	<armor id="32246" name="R Talisman - Casting Spd.">
+	<armor id="32246" name="Talisman (R-grade) - Casting Spd. (Passive)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -537,7 +537,7 @@
 			<skill id="13141" level="1"/>
 		</skills>
 	</armor>
-	<armor id="32247" name="R Talisman - Remove Debuff">
+	<armor id="32247" name="Talisman (R-grade) - Remove Debuff (Active)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -554,7 +554,7 @@
 			<skill id="8774" level="1"/>
 		</skills>
 	</armor>
-	<armor id="32248" name="R Talisman - Remove Debuff">
+	<armor id="32248" name="Talisman (R-grade) - Remove Debuff (Active)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="600"/>

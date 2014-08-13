@@ -303,7 +303,7 @@
 			<skill id="3429" level="1"/>
 		</skills>
 	</armor>
-	<armor id="10519" name="White Talisman -  Earth">
+	<armor id="10519" name="White Talisman - Earth">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="80"/>
@@ -320,7 +320,7 @@
 			<skill id="3434" level="1"/>
 		</skills>
 	</armor>
-	<armor id="10533" name="Blue Talisman - Attack Power">
+	<armor id="10533" name="Blue Talisman - P. Atk.">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="65"/>
@@ -354,7 +354,7 @@
 			<skill id="3488" level="1"/>
 		</skills>
 	</armor>
-	<armor id="10535" name="Yellow Talisman - Defense Power">
+	<armor id="10535" name="Yellow Talisman - P. Def.">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -371,7 +371,7 @@
 			<skill id="3490" level="1"/>
 		</skills>
 	</armor>
-	<armor id="10536" name="Yellow Talisman - Magic Power">
+	<armor id="10536" name="Yellow Talisman - M. Atk.">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -422,7 +422,7 @@
 			<skill id="3495" level="1"/>
 		</skills>
 	</armor>
-	<armor id="10539" name="Yellow Talisman - CP Recovery Rate">
+	<armor id="10539" name="Yellow Talisman - CP Regeneration">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -439,7 +439,7 @@
 			<skill id="3494" level="1"/>
 		</skills>
 	</armor>
-	<armor id="10540" name="Yellow Talisman - HP Recovery Rate">
+	<armor id="10540" name="Yellow Talisman - HP Regeneration">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -456,7 +456,7 @@
 			<skill id="3493" level="1"/>
 		</skills>
 	</armor>
-	<armor id="10541" name="Yellow Talisman - Low Grade MP regeneration rate">
+	<armor id="10541" name="Yellow Talisman - MP Regeneration (Low-grade)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>

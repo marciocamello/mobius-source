@@ -238,7 +238,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23117" levels="1" name="Frozen Corpse Agathion Cute Trick">
+	<skill id="23117" levels="1" name="Zombie Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -252,7 +252,7 @@
 			<player agathion="1535"/>
 		</cond>
 	</skill>
-	<skill id="23118" levels="1" name="Frozen Corpse Agathion Special Skill - Narrow Escape">
+	<skill id="23118" levels="1" name="Zombie Agathion Special Skill: Soul Stealth">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -328,7 +328,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23123" levels="1" name="Gwangong Agathion Cute Trick">
+	<skill id="23123" levels="1" name="Guangong Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -342,7 +342,7 @@
 			<player agathion="1551"/>
 		</cond>
 	</skill>
-	<skill id="23124" levels="1" name="Gwangong Agathion Special Skill - Aura of Fury">
+	<skill id="23124" levels="1" name="Guangong Agathion Special Skill: Aura of Fury">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="coolTime" val="200"/>
@@ -369,7 +369,7 @@
 			<player agathion="1552"/>
 		</cond>
 	</skill>
-	<skill id="23126" levels="1" name="Gwanseum Nyang Nyang Agathion Special Skill - Blessing of Mercy">
+	<skill id="23126" levels="1" name="Gwanseum Nyang Nyang Agathion Special Skill: Blessing of Mercy">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
@@ -397,7 +397,7 @@
 			<player agathion="1553"/>
 		</cond>
 	</skill>
-	<skill id="23128" levels="1" name="Blue Opera Agathion Special Skill - Sword of Recovery">
+	<skill id="23128" levels="1" name="Blue Opera Agathion Special Skill: Sword of Recovery">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
@@ -411,7 +411,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23129" levels="1" name="Blue Opera Agathion Special Skill - Sword of Water">
+	<skill id="23129" levels="1" name="Blue Opera Agathion Special Skill: Sword of Water">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -437,7 +437,7 @@
 			<player agathion="1554"/>
 		</cond>
 	</skill>
-	<skill id="23131" levels="1" name="Red Opera Agathion Special Skill - Spear of Flames">
+	<skill id="23131" levels="1" name="Red Opera Agathion Special Skill: Spear of Flames">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -477,7 +477,7 @@
 			<player agathion="1556"/>
 		</cond>
 	</skill>
-	<skill id="23134" levels="1" name="Miss Chipao Agathion Special Skill - Decrease Weight">
+	<skill id="23134" levels="1" name="Miss Chipao Agathion Special Skill: Decrease Weight">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -511,7 +511,7 @@
 			<player agathion="1557"/>
 		</cond>
 	</skill>
-	<skill id="23136" levels="1" name="Nepal Snow Agathion Special Skill - Snow's Haste">
+	<skill id="23136" levels="1" name="Nepal Snow Agathion Special Skill: Snow's Haste">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -544,7 +544,7 @@
 			<player agathion="1558"/>
 		</cond>
 	</skill>
-	<skill id="23138" levels="1" name="Round Ball Snow Agathion Special Skill - Snow's Acumen">
+	<skill id="23138" levels="1" name="Round Ball Snow Agathion Special Skill: Snow's Acumen">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -577,7 +577,7 @@
 			<player agathion="1559"/>
 		</cond>
 	</skill>
-	<skill id="23140" levels="1" name="Ladder Snow Agathion Special Skill - Snow's Wind Walk">
+	<skill id="23140" levels="1" name="Ladder Snow Agathion Special Skill: Snow's Wind Walk">
 		<table name="#Tab-runSpd">20</table>
 		<table name="#abnormal_time">1200</table>
 		<set name="magicType" val="SPECIAL"/>
@@ -599,7 +599,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23141" levels="1" name="Iken Agathion Cute Trick">
+	<skill id="23141" levels="1" name="Lancet Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -613,7 +613,7 @@
 			<player agathion="1539"/>
 		</cond>
 	</skill>
-	<skill id="23142" levels="1" name="Lana Agathion Cute Trick">
+	<skill id="23142" levels="1" name="Liposa Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -627,7 +627,7 @@
 			<player agathion="1540"/>
 		</cond>
 	</skill>
-	<skill id="23143" levels="1" name="Gnocian Agathion Cute Trick">
+	<skill id="23143" levels="1" name="Velarin Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -641,7 +641,7 @@
 			<player agathion="1541"/>
 		</cond>
 	</skill>
-	<skill id="23144" levels="1" name="Orodriel Agathion Cute Trick">
+	<skill id="23144" levels="1" name="Dulcinel Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -655,7 +655,7 @@
 			<player agathion="1542"/>
 		</cond>
 	</skill>
-	<skill id="23145" levels="1" name="Lakinos Agathion Cute Trick">
+	<skill id="23145" levels="1" name="Chimeros Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -669,7 +669,7 @@
 			<player agathion="1543"/>
 		</cond>
 	</skill>
-	<skill id="23146" levels="1" name="Mortia Agathion Cute Trick">
+	<skill id="23146" levels="1" name="Niveri Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -683,7 +683,7 @@
 			<player agathion="1544"/>
 		</cond>
 	</skill>
-	<skill id="23147" levels="1" name="Heintz Agathion Cute Trick">
+	<skill id="23147" levels="1" name="Hamell Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -697,7 +697,7 @@
 			<player agathion="1545"/>
 		</cond>
 	</skill>
-	<skill id="23148" levels="1" name="Meruril Agathion Cute Trick">
+	<skill id="23148" levels="1" name="Joriya Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -711,7 +711,7 @@
 			<player agathion="1546"/>
 		</cond>
 	</skill>
-	<skill id="23149" levels="1" name="Taman Zu Rapatui Agathion Cute Trick">
+	<skill id="23149" levels="1" name="Ralmak Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -725,7 +725,7 @@
 			<player agathion="1547"/>
 		</cond>
 	</skill>
-	<skill id="23150" levels="1" name="Kaurin Agathion Cute Trick">
+	<skill id="23150" levels="1" name="Goras Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -739,7 +739,7 @@
 			<player agathion="1548"/>
 		</cond>
 	</skill>
-	<skill id="23151" levels="1" name="Ahertbein Agathion Cute Trick">
+	<skill id="23151" levels="1" name="Vensar Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -753,7 +753,7 @@
 			<player agathion="1549"/>
 		</cond>
 	</skill>
-	<skill id="23152" levels="1" name="Naonin Agathion Cute Trick">
+	<skill id="23152" levels="1" name="Kiela Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicLevel" val="85"/>
@@ -792,7 +792,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23154" levels="1" name="Kadomas Special Skill - Fireworks">
+	<skill id="23154" levels="1" name="Kadomas Special Skill: Fireworks">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_kadomatsu_i00"/>
 		<set name="reuseDelay" val="60000"/>
@@ -889,7 +889,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23161" levels="1" name="Rudolph Girl's Blessing - Maintain Vitality">
+	<skill id="23161" levels="1" name="Rudolphina's Blessing - Maintain Vitality">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00"/>
 		<set name="castRange" val="600"/>
@@ -903,7 +903,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23162" levels="1" name="Rudolph Girl's Blessing - Replenish Energy">
+	<skill id="23162" levels="1" name="Rudolphina's Blessing - Replenish Vitality">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -932,7 +932,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="23164" levels="1" name="Opera Agathion Special Skill - Sword of Life">
+	<skill id="23164" levels="1" name="Opera Agathion Special Skill: Sword of Life">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="43200000"/>
@@ -1041,7 +1041,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="trait" val="ETC"/>
 	</skill>
-	<skill id="23170" levels="1" name="Mesmerization">
+	<skill id="23170" levels="1" name="Mesmerized">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="BranchSys2.icon.br_rosalia_rose_white_i00"/>
 		<set name="castRange" val="900"/>
@@ -1064,7 +1064,7 @@
 			<player agathion="1574"/>
 		</cond>
 	</skill>
-	<skill id="23172" levels="1" name="Phoenix Agathion Special Skill - Nirvana Cycle">
+	<skill id="23172" levels="1" name="Phoenix Agathion Special Skill: Nirvana Cycle">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="43200000"/>
@@ -1076,7 +1076,7 @@
 			<player agathion="1574"/>
 		</cond>
 	</skill>
-	<skill id="23173" levels="1" name="Mountain Echoes">
+	<skill id="23173" levels="1" name="Phoenix Agathion Special Skill: Mountain Echoes">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1089,7 +1089,7 @@
 			<player agathion="1574"/>
 		</cond>
 	</skill>
-	<skill id="23174" levels="1" name="Narrow Escape">
+	<skill id="23174" levels="1" name="Soul Stealth">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="43200000"/>
@@ -1151,7 +1151,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="23179" levels="1" name="Bless of Vitality">
+	<skill id="23179" levels="1" name="Blessing of Vitality">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys2.icon.br_vitality_day_i00"/>
 		<set name="castRange" val="600"/>
@@ -1189,7 +1189,7 @@
 			<player agathion="1575"/>
 		</cond>
 	</skill>
-	<skill id="23182" levels="1" name="Three-headed Dragon Agathion Special Skill - Wind Walk">
+	<skill id="23182" levels="1" name="Three-headed Dragon Agathion Special Skill: Wind Walk">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1212,7 +1212,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="23183" levels="1" name="Ball Trapping Gnocian Agathion Special Skill - Buff of Cheering">
+	<skill id="23183" levels="1" name="Ball Trapping Gnosian Agathion Special Skill: Buff of Cheering">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1222,7 +1222,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="23184" levels="1" name="Ball Trapping Gnocian Agathion Special Skill - Soccer Ball of Cheering">
+	<skill id="23184" levels="1" name="Ball Trapping Gnosian Agathion Special Skill: Soccer Ball of Cheering">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="10000"/>
@@ -1231,7 +1231,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="23185" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Buff of Cheering">
+	<skill id="23185" levels="1" name="Ball Trapping Orodriel Agathion Special Skill: Buff of Cheering">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1241,7 +1241,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="23186" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Soccer Ball of Cheering">
+	<skill id="23186" levels="1" name="Ball Trapping Orodriel Agathion Special Skill: Soccer Ball of Cheering">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="10000"/>
@@ -1250,7 +1250,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="23187" levels="1" name="Penalty Kick Agathion Special Skill - Buff of Cheering">
+	<skill id="23187" levels="1" name="Penalty Kick Agathion Special Skill: Buff of Cheering">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1260,7 +1260,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="23188" levels="1" name="Penalty Kick Agathion Special Skill - Soccer Ball of Cheering">
+	<skill id="23188" levels="1" name="Penalty Kick Agathion Special Skill: Soccer Ball of Cheering">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="10000"/>
@@ -1269,7 +1269,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="23189" levels="1" name="Ball Trapping Gnocian Agathion Special Skill - Buff of Cheering">
+	<skill id="23189" levels="1" name="Ball Trapping Gnosian Agathion Special Skill: Buff of Cheering">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1279,7 +1279,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="23190" levels="1" name="Ball Trapping Gnocian Agathion Special Skill - Soccer Ball of Cheering">
+	<skill id="23190" levels="1" name="Ball Trapping Gnosian Agathion Special Skill: Soccer Ball of Cheering">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="10000"/>
@@ -1288,7 +1288,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="23191" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Buff of Cheering">
+	<skill id="23191" levels="1" name="Ball Trapping Orodriel Agathion Special Skill: Buff of Cheering">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1298,7 +1298,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="23192" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Soccer Ball of Cheering">
+	<skill id="23192" levels="1" name="Ball Trapping Orodriel Agathion Special Skill: Soccer Ball of Cheering">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="10000"/>
@@ -1307,7 +1307,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="23193" levels="1" name="Penalty Kick Agathion Special Skill - Buff of Cheering">
+	<skill id="23193" levels="1" name="Penalty Kick Agathion Special Skill: Buff of Cheering">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1317,7 +1317,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="23194" levels="1" name="Penalty Kick Agathion Special Skill - Soccer Ball of Cheering">
+	<skill id="23194" levels="1" name="Penalty Kick Agathion Special Skill: Soccer Ball of Cheering">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="10000"/>
@@ -1326,7 +1326,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="23195" levels="1" name="Ball Trapping Gnocian Agathion Special Skill - Buff of Cheering">
+	<skill id="23195" levels="1" name="Ball Trapping Gnosian Agathion Special Skill: Buff of Cheering">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1336,7 +1336,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="23196" levels="1" name="Ball Trapping Gnocian Agathion Special Skill - Soccer Ball of Cheering">
+	<skill id="23196" levels="1" name="Ball Trapping Gnosian Agathion Special Skill: Soccer Ball of Cheering">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="10000"/>
@@ -1345,7 +1345,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="23197" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Buff of Cheering">
+	<skill id="23197" levels="1" name="Ball Trapping Orodriel Agathion Special Skill: Buff of Cheering">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1355,7 +1355,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="23198" levels="1" name="Ball Trapping Orodriel Agathion Special Skill - Soccer Ball of Cheering">
+	<skill id="23198" levels="1" name="Ball Trapping Orodriel Agathion Special Skill: Soccer Ball of Cheering">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="10000"/>
@@ -1364,7 +1364,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="23199" levels="1" name="Penalty Kick Agathion Special Skill - Buff of Cheering">
+	<skill id="23199" levels="1" name="Penalty Kick Agathion Special Skill: Buff of Cheering">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="reuseDelay" val="3600000"/>

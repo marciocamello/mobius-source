@@ -136,7 +136,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31315" name="Bound Majestic Boots" add_name="Heavy">
+	<armor id="31315" name="Bound Majestic Boots" add_name="Heavy Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5"/>
@@ -155,7 +155,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31316" name="Bound Majestic Boots" add_name="Tans Armor Use">
+	<armor id="31316" name="Bound Majestic Boots" add_name="Light Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5"/>
@@ -272,7 +272,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="31322" name="Bound Majestic Gauntlet" add_name="Heavy">
+	<armor id="31322" name="Bound Majestic Gauntlets" add_name="Heavy Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5"/>
@@ -291,7 +291,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31323" name="Bound Majestic Gauntlet" add_name="Tans Armor Use">
+	<armor id="31323" name="Bound Majestic Gauntlets" add_name="Light Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5"/>
@@ -310,7 +310,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31324" name="Bound Majestic Gauntlet" add_name="Robe">
+	<armor id="31324" name="Bound Majestic Gauntlets" add_name="Robe">
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5"/>
@@ -329,7 +329,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31329" name="Bound Mystic's Stockings">
+	<armor id="31329" name="Bound Wizard Stockings">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>
@@ -348,7 +348,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31330" name="Bound Mystic's Tunic">
+	<armor id="31330" name="Bound Wizard Tunic">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="7"/>
@@ -367,7 +367,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31332" name="Bound Enchanted Ring">
+	<armor id="31332" name="Bound Ring of Magic">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2"/>
@@ -388,7 +388,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="31333" name="Bound Enchanted Ring">
+	<armor id="31333" name="Bound Ring of Magic">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2"/>
@@ -409,7 +409,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="31334" name="Bound Enchanted Necklace">
+	<armor id="31334" name="Bound Magic Necklace">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>
@@ -429,7 +429,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="31335" name="Bound Enchanted Necklace">
+	<armor id="31335" name="Bound Magic Necklace">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>
@@ -449,7 +449,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="31336" name="Bound Enchanted Earring">
+	<armor id="31336" name="Bound Earring of Magic">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="3"/>
@@ -470,7 +470,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="31337" name="Bound Enchanted Earring">
+	<armor id="31337" name="Bound Earring of Magic">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="3"/>
@@ -491,7 +491,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="31340" name="Bound Ring Mail Breastplate">
+	<armor id="31340" name="Bound Ring Breastplate">
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="33889" name="Immortal Helmet" add_name="Heavy / Event">
+	<armor id="33889" name="Immortal Helmet" add_name="Heavy (Event)">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="NONE"/>
@@ -16,7 +16,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33890" name="Immortal Breastplate" add_name="Heavy / Event">
+	<armor id="33890" name="Immortal Breastplate" add_name="Heavy (Event)">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.armor_t501_u_i00"/>
 		<set name="type" value="HEAVY"/>
@@ -33,7 +33,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33891" name="Immortal Gaiters" add_name="Heavy / Event">
+	<armor id="33891" name="Immortal Gaiters" add_name="Heavy (Event)">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.armor_t501_l_i00"/>
 		<set name="type" value="HEAVY"/>
@@ -50,7 +50,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33892" name="Immortal Gauntlet" add_name="Heavy / Event">
+	<armor id="33892" name="Immortal Gauntlets" add_name="Heavy (Event)">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.armor_t501_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -67,7 +67,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33893" name="Immortal Boots" add_name="Heavy / Event">
+	<armor id="33893" name="Immortal Boots" add_name="Heavy (Event)">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.armor_t501_b_i00"/>
 		<set name="type" value="NONE"/>
@@ -83,7 +83,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33895" name="Immortal Leather Helmet" add_name="Light / Event">
+	<armor id="33895" name="Immortal Leather Helmet" add_name="Light Armor (Event)">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.armor_leather_helmet_i00"/>
 		<set name="type" value="NONE"/>
@@ -100,7 +100,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33896" name="Immortal Leather Armor" add_name="Light / Event">
+	<armor id="33896" name="Immortal Leather Armor" add_name="Light Armor (Event)">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.armor_t502_u_i00"/>
 		<set name="type" value="LIGHT"/>
@@ -117,7 +117,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33897" name="Immortal Leather Legging" add_name="Light / Event">
+	<armor id="33897" name="Immortal Leather Leggings" add_name="Light Armor (Event)">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.armor_t502_l_i00"/>
 		<set name="type" value="LIGHT"/>
@@ -132,7 +132,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33898" name="Immortal Leather Gloves" add_name="Light / Event">
+	<armor id="33898" name="Immortal Leather Gloves" add_name="Light Armor (Event)">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.armor_t502_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -149,7 +149,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33899" name="Immortal Leather Boots" add_name="Light / Event">
+	<armor id="33899" name="Immortal Leather Boots" add_name="Light Armor (Event)">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.armor_t502_b_i00"/>
 		<set name="type" value="NONE"/>

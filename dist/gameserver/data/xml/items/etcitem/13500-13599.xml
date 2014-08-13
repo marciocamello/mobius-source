@@ -274,7 +274,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="13578" name="Transformation Scroll: Gludio White Captain Mercenary">
+	<etcitem id="13578" name="Transformation Scroll: Gludio Centurion Mercenary">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -478,7 +478,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="13590" name="Transformation Scroll: Dion White Captain Mercenary">
+	<etcitem id="13590" name="Transformation Scroll: Dion Centurion Mercenary">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

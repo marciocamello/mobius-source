@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="10500" levels="1" name="Tyrr Warrior Chain Air Blow">
+	<skill id="10500" levels="1" name="">
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="0"/>
 		<set name="mpConsume1" val="40"/>

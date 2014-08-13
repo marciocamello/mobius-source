@@ -649,7 +649,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="32014" name="Ivan " title="Runaway Youth">
+	<npc id="32014" name="Ivan" title="Runaway Youth">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>

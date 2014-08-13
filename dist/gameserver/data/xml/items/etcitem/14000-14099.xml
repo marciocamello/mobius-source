@@ -81,7 +81,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14008" name="Accessory Life Stone -  Level 84">
+	<etcitem id="14008" name="Accessory Life Stone - Level 84">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i03"/>
@@ -612,7 +612,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="14065" name="Superior Minion Coupon" add_name="5 Hours">
+	<etcitem id="14065" name="Superior Minion Coupon" add_name="5-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -637,7 +637,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="0"/>
 	</etcitem>
-	<etcitem id="14074" name="Superior Minion Coupon (Event)" add_name="5 Hours">
+	<etcitem id="14074" name="Superior Minion Coupon (Event)" add_name="5-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -648,7 +648,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14078" name="Lucky Enchant Stone: Enchant Weapon (D-grade) (Event)">
+	<etcitem id="14078" name="Lucky Enchant Stone: Weapon (D-grade) (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -659,7 +659,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="14079" name="Lucky Enchant Stone: Enchant Weapon (C-grade) (Event)">
+	<etcitem id="14079" name="Lucky Enchant Stone: Weapon (C-grade) (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -670,7 +670,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="14080" name="Lucky Enchant Stone: Enchant Weapon (B-grade) (Event)">
+	<etcitem id="14080" name="Lucky Enchant Stone: Weapon (B-grade) (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -681,7 +681,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="14081" name="Lucky Enchant Stone: Enchant Weapon (A-grade) (Event)">
+	<etcitem id="14081" name="Lucky Enchant Stone: Weapon (A-grade) (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -692,7 +692,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="14082" name="Lucky Enchant Stone: Enchant Weapon (S-grade) (Event)">
+	<etcitem id="14082" name="Lucky Enchant Stone: Weapon (S-grade) (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -703,7 +703,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="14083" name="Lucky Enchant Stone: Enchant Armor (D-grade) (Event)">
+	<etcitem id="14083" name="Lucky Enchant Stone: Armor (D-grade) (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -714,7 +714,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="14084" name="Lucky Enchant Stone: Enchant Armor (C-grade) (Event)">
+	<etcitem id="14084" name="Lucky Enchant Stone: Armor (C-grade) (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -725,7 +725,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="14085" name="Lucky Enchant Stone: Enchant Armor (B-grade) (Event)">
+	<etcitem id="14085" name="Lucky Enchant Stone: Armor (B-grade) (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -736,7 +736,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="14086" name="Lucky Enchant Stone: Enchant Armor (A-grade) (Event)">
+	<etcitem id="14086" name="Lucky Enchant Stone: Armor (A-grade) (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -747,7 +747,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="14087" name="Lucky Enchant Stone: Enchant Armor (S-grade) (Event)">
+	<etcitem id="14087" name="Lucky Enchant Stone: Armor (S-grade) (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

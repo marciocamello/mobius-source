@@ -74,7 +74,7 @@
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
 	</skill>
-	<skill id="5005" levels="1" name="Frintessa Pose">
+	<skill id="5005" levels="1" name="Frintezza Pose">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
@@ -83,7 +83,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5006" levels="1" name="Frintessa Music">
+	<skill id="5006" levels="1" name="Frintezza Music">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
@@ -93,7 +93,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5007" levels="5" name="Frintessa Heal Music">
+	<skill id="5007" levels="5" name="Frintezza Psycho Music">
 		<table name="#hitCancelTime">32000 32000 32000 31000 35000</table>
 		<table name="#hitTime">32000 32000 32000 31000 35000</table>
 		<set name="magicType" val="SPECIAL"/>
@@ -105,7 +105,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5008" levels="5" name="Frintessa Heal Music">
+	<skill id="5008" levels="5" name="Hypnotic Mazurka">
 		<table name="#lvl1">3 0 0 0 0</table>
 		<table name="#lvl2">0 1 0 0 0</table>
 		<table name="#lvl3">0 0 1 0 0</table>
@@ -142,7 +142,7 @@
 			<effect count="#lvl5" abnormal="dancestun" name="Stun" stackOrder="-1" stackType="Stun" time="15" val="0"/>
 		</for>
 	</skill>
-	<skill id="5009" levels="1" name="Frintessa Ghost Fighter">
+	<skill id="5009" levels="1" name="Frintezza Ghost Fighter">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="10000"/>
 		<set name="magicLevel" val="85"/>
@@ -153,7 +153,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5010" levels="1" name="Frintessa Ghost Mage">
+	<skill id="5010" levels="1" name="Frintezza Ghost Mage">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="1000"/>
@@ -165,7 +165,7 @@
 		<set name="skillType" val="MDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5011" levels="1" name="Frintessa Ghost Bomb">
+	<skill id="5011" levels="1" name="Frintezza Ghost Bomb">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="1500"/>
 		<set name="magicLevel" val="85"/>
@@ -195,7 +195,7 @@
 			<effect count="1" name="Root" stackOrder="-1" stackType="Root" time="30" val="0"/>
 		</for>
 	</skill>
-	<skill id="5013" levels="1" name="Frintessa Energy Drain">
+	<skill id="5013" levels="1" name="Frintezza Energy Drain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="1000"/>
@@ -206,7 +206,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="absorbPart" val="0.1"/>
 	</skill>
-	<skill id="5014" levels="3" name="Frintessa Demon Attack">
+	<skill id="5014" levels="3" name="Frintezza Demon Attack">
 		<table name="#magicLevel">85 85 90</table>
 		<table name="#power">15835 19096 16176</table>
 		<set name="icon" val="icon.skill0000"/>
@@ -221,7 +221,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="unholy"/>
 	</skill>
-	<skill id="5015" levels="6" name="Frintessa Charge">
+	<skill id="5015" levels="6" name="Frintezza Charge">
 		<table name="#radius">300 400 500 600 700 800</table>
 		<table name="#power">48671 52970 68074 48671 52970 68074</table>
 		<table name="#coolTime">0 0 0 1500 1500 1500</table>
@@ -283,7 +283,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5018" levels="2" name="Frintessa Demon Field">
+	<skill id="5018" levels="2" name="Frintezza Demon Field">
 		<table name="#power">607 754</table>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="1000"/>
@@ -298,7 +298,7 @@
 		<set name="element" val="unholy"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 	</skill>
-	<skill id="5019" levels="1" name="Frintessa Demon Energy Drain">
+	<skill id="5019" levels="1" name="Frintezza Demon Energy Drain">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="4000"/>
 		<set name="power" val="32864"/>
@@ -391,7 +391,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5025" levels="1" name="Raid Boss - Level 30">
+	<skill id="5025" levels="1" name="Raid Boss (Lv. 30)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -403,7 +403,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5026" levels="1" name="Raid Boss - Level 39">
+	<skill id="5026" levels="1" name="Raid Boss (Lv. 39)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -415,7 +415,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5027" levels="1" name="Raid Boss - Level 37">
+	<skill id="5027" levels="1" name="Raid Boss (Lv. 37)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -427,7 +427,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5028" levels="1" name="Raid Boss - Level 53">
+	<skill id="5028" levels="1" name="Raid Boss (Lv. 53)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -439,7 +439,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5029" levels="1" name="Raid Boss - Level 52">
+	<skill id="5029" levels="1" name="Raid Boss (Lv. 52)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -451,7 +451,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5030" levels="1" name="Raid Boss - Level 59">
+	<skill id="5030" levels="1" name="Raid Boss (Lv. 59)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -463,7 +463,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5031" levels="1" name="Raid Boss - Level 80">
+	<skill id="5031" levels="1" name="Raid Boss (Lv. 80)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -475,7 +475,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5032" levels="1" name="Raid Boss - Level 80">
+	<skill id="5032" levels="1" name="Raid Boss (Lv. 80)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -487,7 +487,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5033" levels="1" name="Raid Boss - Level 80">
+	<skill id="5033" levels="1" name="Raid Boss (Lv. 99)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -499,7 +499,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5034" levels="1" name="Raid Boss - Level 73">
+	<skill id="5034" levels="1" name="Raid Boss (Lv. 73)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -511,7 +511,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5035" levels="1" name="Raid Boss - Level 76">
+	<skill id="5035" levels="1" name="Raid Boss (Lv. 76)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -523,7 +523,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5036" levels="1" name="Raid Boss - Level 60">
+	<skill id="5036" levels="1" name="Raid Boss (Lv. 60)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -535,7 +535,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="5037" levels="3" name="Decrease Casting Spd">
+	<skill id="5037" levels="3" name="Decrease Casting Spd.">
 		<table name="#Tab-mAtkSpd">0.85 0.75 0.7</table>
 		<table name="#abnormal_lv">1 2 3</table>
 		<set name="levelModifier" val="1"/>
@@ -631,7 +631,7 @@
 			<effect count="1" name="CharmOfCourage" time="1200" val="0" displayId="-1"/>
 		</for>
 	</skill>
-	<skill id="5042" levels="12" name="Bomb Dispell">
+	<skill id="5042" levels="12" name="Bomb Dispel">
 		<table name="#mpConsume2">19 30 42 57 74 91 106 114 119 124 126 128</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="icon" val="icon.skill0000"/>
@@ -641,7 +641,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5043" levels="12" name="Super Sonic Blaster">
+	<skill id="5043" levels="12" name="Supersonic Blaster">
 		<table name="#mpConsume2">7 10 14 19 25 31 36 38 40 42 42 43</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="icon" val="icon.skill0000"/>
@@ -714,7 +714,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5047" levels="12" name="Whirlwind">
+	<skill id="5047" levels="12" name="Spinning Slasher">
 		<table name="#mpConsume2">19 22 25 28 31 33 36 38 40 42 42 43</table>
 		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
 		<table name="#power">56 145 319 517 822 1236 1726 1976 2312 2420 2587 2717</table>
@@ -1125,7 +1125,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5070" levels="12" name="Decrease Casting Spd">
+	<skill id="5070" levels="12" name="Decrease Casting Spd.">
 		<table name="#spd">0.9 0.8 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7</table>
 		<table name="#mpConsume2">5 8 11 14 18 22 26 28 29 30 31 31</table>
 		<table name="#mpConsume1">2 2 3 4 5 6 7 7 8 8 8 8</table>
@@ -1279,7 +1279,7 @@
 		<set name="skillType" val="DEATH_PENALTY"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5078" levels="1" name="Frintessa Critical Damage">
+	<skill id="5078" levels="1" name="Frintezza Critical Damage">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -1343,7 +1343,7 @@
 			<effect count="1" name="MutePhisycal" time="30" val="0"/>
 		</for>
 	</skill>
-	<skill id="5082" levels="4" name="Whirlwind">
+	<skill id="5082" levels="4" name="Spinning Slasher">
 		<table name="#mpConsume2">60 60 60 5</table>
 		<table name="#power">5686 8732 10131 11622</table>
 		<set name="icon" val="icon.skill0000"/>
@@ -1472,7 +1472,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 	</skill>
-	<skill id="5089" levels="1" name="Representation - Enter the Sailren Nest Quest">
+	<skill id="5089" levels="1" name="Presentation -  Enter the Sailren Nest Quest">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="castRange" val="600"/>
@@ -1497,7 +1497,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5092" levels="1" name="Antharas Terror">
+	<skill id="5092" levels="1" name="Antharas Fear">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill4108"/>
 		<set name="coolTime" val="2700"/>

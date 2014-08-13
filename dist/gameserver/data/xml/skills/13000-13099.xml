@@ -158,7 +158,7 @@
 			<add order="0x10" stat="openCloakSlot" val="#openCloakSlot"/>
 		</for>
 	</skill>
-	<skill id="13007" levels="1" name="Vesper Heavy Armor Set for Adults">
+	<skill id="13007" levels="1" name="Vesper Heavy Armor Set - PvP">
 		<set name="icon" val="icon.armor_t94_u_i00"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -175,7 +175,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="13008" levels="1" name="Vesper Noble Heavy Armor Set for Adults">
+	<skill id="13008" levels="1" name="Vesper Noble Heavy Armor Set - PvP">
 		<set name="icon" val="icon.armor_t94_u_i01"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -192,7 +192,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="13009" levels="1" name="Vesper Light Armor Set for Adults">
+	<skill id="13009" levels="1" name="Vesper Light Armor Set - PvP">
 		<set name="icon" val="icon.armor_t95_u_i00"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -209,7 +209,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="13010" levels="1" name="Vesper Noble Light Armor Set for Adults">
+	<skill id="13010" levels="1" name="Vesper Noble Light Armor Set - PvP">
 		<set name="icon" val="icon.armor_t95_u_i01"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -226,7 +226,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="13011" levels="1" name="Vesper Robe Set for Adults">
+	<skill id="13011" levels="1" name="Vesper Robe Set - PvP">
 		<set name="icon" val="icon.armor_t96_u_i00"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -243,7 +243,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="13012" levels="1" name="Vesper Noble Robe Set for Adults">
+	<skill id="13012" levels="1" name="Vesper Noble Robe Set - PvP">
 		<set name="icon" val="icon.armor_t96_u_i01"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -289,7 +289,7 @@
 			<add order="0x10" stat="openCloakSlot" val="#openCloakSlot"/>
 		</for>
 	</skill>
-	<skill id="13014" levels="4" name="Moirai Leather Armor Set">
+	<skill id="13014" levels="4" name="Moirai Light Armor Set">
 		<table name="#parametrs">0 0 0 2</table>
 		<table name="#pAtk">1 1.0426 1.0426 1.0426</table>
 		<table name="#pAtkSpd">1 1 1.04 1.04</table>
@@ -562,7 +562,7 @@
 			<add order="0x10" stat="openCloakSlot" val="#openCloakSlot"/>
 		</for>
 	</skill>
-	<skill id="13022" levels="1" name="Moirai Heavy Armor Set - PVP">
+	<skill id="13022" levels="1" name="Moirai Heavy Armor Set - PvP">
 		<set name="icon" val="icon.armor_t100_u_i00"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -579,7 +579,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="13023" levels="1" name="Moirai Light Armor Set - PVP">
+	<skill id="13023" levels="1" name="Moirai Light Armor Set - PvP">
 		<set name="icon" val="icon.armor_t101_u_i00"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -596,7 +596,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="13024" levels="1" name="Moirai Robe Set - PVP">
+	<skill id="13024" levels="1" name="Moirai Robe Set - PvP">
 		<set name="icon" val="icon.armor_t102_u_i00"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -613,7 +613,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="13025" levels="1" name="Vorpal Heavy Armor Set - PVP">
+	<skill id="13025" levels="1" name="Vorpal Heavy Armor Set - PvP">
 		<set name="icon" val="icon.armor_t94_u_i03"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -630,7 +630,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="13026" levels="1" name="Vorpal Leather Armor Set - PVP">
+	<skill id="13026" levels="1" name="Vorpal Leather Armor Set - PvP">
 		<set name="icon" val="icon.armor_t95_u_i03"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -647,7 +647,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="13027" levels="1" name="Vorpal Robe Set - PVP">
+	<skill id="13027" levels="1" name="Vorpal Robe Set - PvP">
 		<set name="icon" val="icon.armor_t96_u_i03"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -664,7 +664,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="13028" levels="1" name="Elegia Heavy Armor Set - PVP">
+	<skill id="13028" levels="1" name="Elegia Heavy Armor Set - PvP">
 		<set name="icon" val="icon.armor_t97_u_i00"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -681,7 +681,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="13029" levels="1" name="Elegia Leather Armor Set - PVP">
+	<skill id="13029" levels="1" name="Elegia Leather Armor Set - PvP">
 		<set name="icon" val="icon.armor_t98_u_i00"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -698,7 +698,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="13030" levels="1" name="Elegia Robe Set - PVP">
+	<skill id="13030" levels="1" name="Elegia Robe Set - PvP">
 		<set name="icon" val="icon.armor_t99_u_i00"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -733,7 +733,7 @@
 			<add order="0x40" stat="defenceEarth" val="5"/>
 		</for>
 	</skill>
-	<skill id="13033" levels="1" name="Darkness Resistance">
+	<skill id="13033" levels="1" name="Dark Attack Resistance">
 		<set name="icon" val="icon.skill4333"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -787,7 +787,7 @@
 			<add order="0x40" stat="defenceEarth" val="10"/>
 		</for>
 	</skill>
-	<skill id="13039" levels="1" name="Darkness Resistance">
+	<skill id="13039" levels="1" name="Dark Attack Resistance">
 		<set name="icon" val="icon.skill4333"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -841,7 +841,7 @@
 			<add order="0x40" stat="defenceEarth" val="15"/>
 		</for>
 	</skill>
-	<skill id="13045" levels="1" name="Darkness Resistance">
+	<skill id="13045" levels="1" name="Dark Attack Resistance">
 		<set name="icon" val="icon.skill4333"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -895,7 +895,7 @@
 			<add order="0x40" stat="defenceEarth" val="20"/>
 		</for>
 	</skill>
-	<skill id="13051" levels="1" name="Darkness Resistance">
+	<skill id="13051" levels="1" name="Dark Attack Resistance">
 		<set name="icon" val="icon.skill4333"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -949,7 +949,7 @@
 			<add order="0x40" stat="defenceEarth" val="25"/>
 		</for>
 	</skill>
-	<skill id="13057" levels="1" name="Darkness Resistance">
+	<skill id="13057" levels="1" name="Dark Attack Resistance">
 		<set name="icon" val="icon.skill4333"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -1011,7 +1011,7 @@
 			<mul order="0x30" stat="pvpPhysDmgBonus" val="#attack"/>
 		</for>
 	</skill>
-	<skill id="13063" levels="4" name="R Grade Cloak Slot Completion">
+	<skill id="13063" levels="4" name="Cloak Slot Activation (R-grade)">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1019,7 +1019,7 @@
 			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</skill>
-	<skill id="13064" levels="4" name="Set Effect - Immortal Heavy Armor 2 Piece (defense)">
+	<skill id="13064" levels="4" name="Set Effect - Immortal Heavy Armor 5 Piece (Defense Type)">
 		<table name="#critChanceRcpt">1 0.967 0.967 0.967</table>
 		<table name="#stunResist">0 5 5 5</table>
 		<table name="#mDef">0 0 38 38</table>
@@ -1048,7 +1048,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13065" levels="4" name="Set Effect - Immortal Heavy Armor 2 Piece (attack)">
+	<skill id="13065" levels="4" name="Set Effect - Immortal Heavy Armor 5 Piece (Attack Type)">
 		<table name="#cAtkStatic">0 209 209 209</table>
 		<table name="#rootResist">0 5 5 5</table>
 		<table name="#maxHp">0 0 463 463</table>
@@ -1076,7 +1076,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13066" levels="4" name="Set Effect - Twilight Heavy Armor 2 Piece (defense)">
+	<skill id="13066" levels="4" name="Set Effect - Twilight Heavy Armor 5 Piece (Defense Type)">
 		<table name="#maxMp">0 202 202 202</table>
 		<table name="#stunResist">0 7 7 7</table>
 		<table name="#mDef">0 0 44 44</table>
@@ -1106,7 +1106,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13067" levels="4" name="Set Effect - Twilight Heavy Armor 2 Piece (attack)">
+	<skill id="13067" levels="4" name="Set Effect - Twilight Heavy Armor 5 Piece (Attack Type)">
 		<table name="#cAtkStatic">0 242 242 242</table>
 		<table name="#rootResist">0 7 7 7</table>
 		<table name="#mpConsum">1 1 0.96 0.96</table>
@@ -1135,7 +1135,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13068" levels="4" name="Set Effect - Seraph Heavy Armor 2 Piece (defense)">
+	<skill id="13068" levels="4" name="Set Effect - Seraph Heavy Armor 5 Piece (Defense Type)">
 		<table name="#critChanceRcpt">1 0.967 0.967 0.967</table>
 		<table name="#critDamRcpt">0 0 281 281</table>
 		<table name="#stunResist">0 10 10 10</table>
@@ -1167,7 +1167,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13069" levels="4" name="Set Effect - Seraph Heavy Armor 2 Piece (attack)">
+	<skill id="13069" levels="4" name="Set Effect - Seraph Heavy Armor 5 Piece (Attack Type)">
 		<table name="#cAtkStatic">0 281 281 281</table>
 		<table name="#rootResist">0 10 10 10</table>
 		<table name="#maxHp">0 0 511 511</table>
@@ -1197,7 +1197,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13070" levels="4" name="Set Effect - Eternal Heavy Armor 2 Piece (defense)">
+	<skill id="13070" levels="4" name="Set Effect - Eternal Heavy Armor 5 Piece (Defense Type)">
 		<table name="#critChanceRcpt">1 0.967 0.967 0.967</table>
 		<table name="#stunResist">0 10 10 10</table>
 		<table name="#hpEff">0 0 108 108</table>
@@ -1229,7 +1229,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13071" levels="4" name="Set Effect - Eternal Heavy Armor 2 Piece (attack)">
+	<skill id="13071" levels="4" name="Set Effect - Eternal Heavy Armor 5 Piece (Attack Type)">
 		<table name="#cAtkStatic">0 298 298 298</table>
 		<table name="#rootResist">0 10 10 10</table>
 		<table name="#maxHp">0 0 521 521</table>
@@ -1260,7 +1260,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13072" levels="4" name="Set Effect - R99 Rare Heavy Armor 2 Piece (defense)">
+	<skill id="13072" levels="4" name="Set Effect - R99 Rare Heavy Armor 5 Piece (Defense Type)">
 		<table name="#critChanceRcpt">1 0.967 0.967 0.967</table>
 		<table name="#stunResist">0 15 15 15</table>
 		<table name="#reflectDam">0 0 20 20</table>
@@ -1292,7 +1292,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13073" levels="4" name="Set Effect - R99 Rare Heavy Armor 2 Piece (attack)">
+	<skill id="13073" levels="4" name="Set Effect - R99 Rare Heavy Armor 5 Piece (Attack Type)">
 		<table name="#pAtkSpd">1.03 1.03 1.0298 1.08</table>
 		<table name="#cAtkStatic">0 325 325 325</table>
 		<table name="#rootResist">0 15 15 15</table>
@@ -1325,7 +1325,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13074" levels="4" name="Set Effect - Immortal Light Armor 2 Piece (assassin)">
+	<skill id="13074" levels="4" name="Set Effect - Immortal Light Armor 5 Piece (Assassin Type)">
 		<table name="#pAtk">1 1 1 1.07</table>
 		<table name="#pAtkSpd">1 1 1 1.03</table>
 		<table name="#rCrit">0 2.3 2.3 2.3</table>
@@ -1355,7 +1355,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13075" levels="4" name="Set Effect - Immortal Light Armor 2 Piece (strong)">
+	<skill id="13075" levels="4" name="Set Effect - Immortal Light Armor 5 Piece (Enchant Type)">
 		<table name="#rootResist">0 5 5 5</table>
 		<table name="#mpConsum">1 0.96 0.96 0.96</table>
 		<table name="#maxHp">0 0 463 463</table>
@@ -1384,7 +1384,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13076" levels="4" name="Set Effect - Twilight Light Armor 2 Piece (assassin)">
+	<skill id="13076" levels="4" name="Set Effect - Twilight Light Armor 5 Piece (Assassin Type)">
 		<table name="#rCrit">0 2.3 2.3 2.3</table>
 		<table name="#rootResist">0 7 7 7</table>
 		<table name="#mpConsum">1 0.96 0.96 0.96</table>
@@ -1416,7 +1416,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13077" levels="4" name="Set Effect - Twilight Light Armor 2 Piece (strong)">
+	<skill id="13077" levels="4" name="Set Effect - Twilight Light Armor 5 Piece (Enchant Type)">
 		<table name="#pAtk">1 1 1 1.07</table>
 		<table name="#pAtkSpd">1 1 1 1.03</table>
 		<table name="#cAtkStatic">0 0 0 242</table>
@@ -1449,7 +1449,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13078" levels="4" name="Set Effect - Seraph Light Armor 2 Piece (assassin)">
+	<skill id="13078" levels="4" name="Set Effect - Seraph Light Armor 5 Piece (Assassin Type)">
 		<table name="#pAtk">1 1 1 1.07</table>
 		<table name="#pAtkSpd">1 1 1 1.03</table>
 		<table name="#rCrit">0 2.3 2.3 2.3</table>
@@ -1482,7 +1482,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13079" levels="4" name="Set Effect - Seraph Light Armor 2 Piece (strong)">
+	<skill id="13079" levels="4" name="Set Effect - Seraph Light Armor 5 Piece (Enchant Type)">
 		<table name="#pAtk">1 1 1 1.07</table>
 		<table name="#pAtkSpd">1 1 1 1.03</table>
 		<table name="#maxHp">0 0 511 511</table>
@@ -1514,7 +1514,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13080" levels="4" name="Set Effect - Eternal Light Armor 2 Piece (assassin)">
+	<skill id="13080" levels="4" name="Set Effect - Eternal Light Armor 5 Piece (Assassin Type)">
 		<table name="#pAtk">1 1 1 1.07</table>
 		<table name="#pAtkSpd">1 1 1 1.03</table>
 		<table name="#rCrit">0 2.3 2.3 2.3</table>
@@ -1547,7 +1547,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13081" levels="4" name="Set Effect - Eternal Light Armor 2 Piece (strong)">
+	<skill id="13081" levels="4" name="Set Effect - Eternal Light Armor 5 Piece (Enchant Type)">
 		<table name="#pAtk">1 1 1 1.07</table>
 		<table name="#pAtkSpd">1 1 1 1.03</table>
 		<table name="#maxHp">0 0 521 521</table>
@@ -1579,7 +1579,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13082" levels="4" name="Set Effect - R99 Rare Light Armor 2 Piece (assassin)">
+	<skill id="13082" levels="4" name="Set Effect - R99 Rare Light Armor 5 Piece (Assassin Type)">
 		<table name="#pAtk">1 1 1 1.07</table>
 		<table name="#rCrit">0 2.3 2.3 2.3</table>
 		<table name="#rootResist">0 15 15 15</table>
@@ -1611,7 +1611,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13083" levels="4" name="Set Effect - R99 Rare Light Armor 2 Piece (strong)">
+	<skill id="13083" levels="4" name="Set Effect - R99 Rare Light Armor 5 Piece (Enchant Type)">
 		<table name="#pAtk">1 1 1 1.07</table>
 		<table name="#pAtkSpd">1 1 1.03 1.03</table>
 		<table name="#maxHp">0 0 536 536</table>
@@ -1641,7 +1641,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13084" levels="4" name="Set Effect - Immortal Robe 2 Piece (magic)">
+	<skill id="13084" levels="4" name="Set Effect - Immortal Robe 5 Piece (Magic Type)">
 		<table name="#mAtkSpd">1.03 1.03 1.03 1.15</table>
 		<table name="#mAtk">1 1 1 1.12</table>
 		<table name="#maxMp">0 185 185 185</table>
@@ -1671,7 +1671,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13085" levels="4" name="Set Effect - Immortal Robe 2 Piece (recovery)">
+	<skill id="13085" levels="4" name="Set Effect - Immortal Robe 5 Piece (Recovery Type)">
 		<table name="#mAtkSpd">1.03 1.03 1.03 1.15</table>
 		<table name="#mAtk">1 1 1 1.12</table>
 		<table name="#maxMp">0 185 185 185</table>
@@ -1701,7 +1701,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13086" levels="4" name="Set Effect - Twilight Robe 2 Piece (magic)">
+	<skill id="13086" levels="4" name="Set Effect - Twilight Robe 5 Piece (Magic Type)">
 		<table name="#mAtkSpd">1.03 1.03 1.03 1.15</table>
 		<table name="#mAtk">1 1 1 1.15</table>
 		<table name="#mAtkAdd">0 0 184 184</table>
@@ -1732,7 +1732,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13087" levels="4" name="Set Effect - Twilight Robe 2 Piece (recovery)">
+	<skill id="13087" levels="4" name="Set Effect - Twilight Robe 5 Piece (Recovery Type)">
 		<table name="#mAtkSpd">1.03 1.03 1.03 1.15</table>
 		<table name="#mAtk">1 1 1 1.15</table>
 		<table name="#maxMp">0 202 202 202</table>
@@ -1763,7 +1763,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13088" levels="4" name="Set Effect - Seraph Robe 2 Piece (magic)">
+	<skill id="13088" levels="4" name="Set Effect - Seraph Robe 5 Piece (Magic Type)">
 		<table name="#mAtkSpd">1.03 1.03 1.03 1.15</table>
 		<table name="#mAtk">1 1 1 1.15</table>
 		<table name="#mAtkAdd">0 0 222 222</table>
@@ -1796,7 +1796,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13089" levels="4" name="Set Effect - Seraph Robe 2 Piece (recovery)">
+	<skill id="13089" levels="4" name="Set Effect - Seraph Robe 5 Piece (Recovery Type)">
 		<table name="#mAtkSpd">1.03 1.03 1.03 1.15</table>
 		<table name="#mAtk">1 1 1 1.15</table>
 		<table name="#maxMp">0 221 221 221</table>
@@ -1829,7 +1829,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13090" levels="4" name="Set Effect - Eternal Robe 2 Piece (magic)">
+	<skill id="13090" levels="4" name="Set Effect - Eternal Robe 5 Piece (Magic Type)">
 		<table name="#mAtkSpd">1.03 1.03 1.03 1.15</table>
 		<table name="#mAtk">1 1 1 1.15</table>
 		<table name="#mAtkAdd">0 0 256 256</table>
@@ -1862,7 +1862,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13091" levels="4" name="Set Effect - Eternal Robe 2 Piece (recovery)">
+	<skill id="13091" levels="4" name="Set Effect - Eternal Robe 5 Piece (Recovery Type)">
 		<table name="#mAtkSpd">1.03 1.03 1.03 1.15</table>
 		<table name="#mAtk">1 1 1 1.15</table>
 		<table name="#maxMp">0 228 228 228</table>
@@ -1895,7 +1895,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13092" levels="4" name="Set Effect - R99 Rare Robe 2 Piece (magic)">
+	<skill id="13092" levels="4" name="Set Effect - R99 Rare Robe 5 Piece (Magic Type)">
 		<table name="#mAtk">1 1 1 1.15</table>
 		<table name="#mAtkAdd">0 0 267 267</table>
 		<table name="#mAtkSpd">1.15 1.15 1.15 1.25</table>
@@ -1928,7 +1928,7 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13093" levels="4" name="Set Effect - R99 Rare Robe 2 Piece (recovery)">
+	<skill id="13093" levels="4" name="Set Effect - R99 Rare Robe 5 Piece (Recovery Type)">
 		<table name="#mAtk">1 1 1 1.15</table>
 		<table name="#mAtkAdd">0 0 276 276</table>
 		<table name="#mAtkSpd">1.15 1.15 1.15 1.25</table>
@@ -1961,37 +1961,37 @@
 			<add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
 		</for>
 	</skill>
-	<skill id="13094" levels="4" name="R1 2 set">
+	<skill id="13094" levels="4" name="R1 5 set">
 		<set name="icon" val="icon.armor_t501_u_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="13095" levels="4" name="R1 2 set">
+	<skill id="13095" levels="4" name="R1 5 set">
 		<set name="icon" val="icon.armor_t502_u_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="13096" levels="4" name="R1 2 set">
+	<skill id="13096" levels="4" name="R1 5 set">
 		<set name="icon" val="icon.armor_t503_u_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="13097" levels="4" name="R2 2 set">
+	<skill id="13097" levels="4" name="R2 5 set">
 		<set name="icon" val="icon.armor_t601_u_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="13098" levels="4" name="R2 2 set">
+	<skill id="13098" levels="4" name="R2 5 set">
 		<set name="icon" val="icon.armor_t602_u_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="13099" levels="4" name="R2 2 set">
+	<skill id="13099" levels="4" name="R2 5 set">
 		<set name="icon" val="icon.armor_t603_u_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>

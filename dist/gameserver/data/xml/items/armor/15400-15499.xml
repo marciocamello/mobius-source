@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="15400" name="Vitality Belt (Event)" add_name="60-day limited period">
+	<armor id="15400" name="Vitality Belt (Event)" add_name="60-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_energy_belt_i00"/>
 		<set name="price" value="0"/>
@@ -14,7 +14,7 @@
 		</equip>
 		<set name="ex_type" value="BELT"/>
 	</armor>
-	<armor id="15401" name="Vitality Belt (Event)" add_name="90-day limited period">
+	<armor id="15401" name="Vitality Belt (Event)" add_name="90-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_energy_belt_i00"/>
 		<set name="price" value="0"/>
@@ -27,7 +27,7 @@
 		</equip>
 		<set name="ex_type" value="BELT"/>
 	</armor>
-	<armor id="15402" name="Vitality Belt (Event)" add_name="Permanent Use">
+	<armor id="15402" name="Vitality Belt (Event)" add_name="Permanent">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_energy_belt_i00"/>
 		<set name="price" value="0"/>
@@ -38,7 +38,7 @@
 		</equip>
 		<set name="ex_type" value="BELT"/>
 	</armor>
-	<armor id="15428" name="6th Anniversary Party Earring (Event)" add_name="30-day limited period">
+	<armor id="15428" name="6th Anniversary Party Earring (Event)" add_name="30-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.event_six_party_earing_i00"/>
@@ -58,7 +58,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="15429" name="6th Anniversary Party Belt (Event)" add_name="7-day limited period">
+	<armor id="15429" name="6th Anniversary Party Belt (Event)" add_name="7-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_energy_belt_i00"/>
 		<set name="price" value="0"/>
@@ -71,7 +71,7 @@
 		</equip>
 		<set name="ex_type" value="BELT"/>
 	</armor>
-	<armor id="15441" name="Red Flare Valakas Hair Accessory">
+	<armor id="15441" name="Red Flame Valakas Hair Accessory">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ev_valakas_the_flame_i00"/>
 		<set name="price" value="0"/>
@@ -104,7 +104,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="15444" name="Silent Scream's Mask">
+	<armor id="15444" name="Shriek Mask">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ev_scream_mask_i00"/>
 		<set name="price" value="0"/>
@@ -115,7 +115,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="15445" name="Wrathful Spirit's Mask">
+	<armor id="15445" name="Red Devil Mask">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ev_doccabi_mask_i00"/>
 		<set name="price" value="0"/>
@@ -126,7 +126,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="15446" name="Unrotten Corpse's Mask">
+	<armor id="15446" name="Mummy Mask">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ev_mummy_mask_i00"/>
 		<set name="price" value="0"/>
@@ -137,7 +137,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="15447" name="Planet X235 Alien's Mask">
+	<armor id="15447" name="Alien Mask">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ev_alien_mask_i00"/>
 		<set name="price" value="0"/>
@@ -148,7 +148,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="15448" name="Golden Jack O'Lantern Mask" add_name="Permanent Use">
+	<armor id="15448" name="Golden Jack O'Lantern Mask" add_name="Permanent">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ev_golden_jack0_mask_i00"/>
 		<set name="price" value="0"/>
@@ -159,7 +159,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="15449" name="Shiny Planet X235 Alien's Mask">
+	<armor id="15449" name="Shiny Alien Mask">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.ev_shiny_alien_mask_i00"/>
@@ -177,7 +177,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="15450" name="Shiny Super Strong Giant's Mask">
+	<armor id="15450" name="Shiny Reanimated Corpse Mask">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.ev_shiny_frankenstein_mask_i00"/>
@@ -195,7 +195,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="15451" name="Shiny Silent Scream's Mask">
+	<armor id="15451" name="Shiny Shriek Mask">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.ev_shiny_scream_mask_i00"/>
@@ -213,7 +213,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="15452" name="Shiny Wrathful Spirit's Mask">
+	<armor id="15452" name="Shiny Red Devil Mask">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.ev_shiny_doccabi_mask_i00"/>
@@ -231,7 +231,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="15453" name="Shiny Unrotten Corpse's Mask">
+	<armor id="15453" name="Shiny Mummy Mask">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.ev_shiny_mummy_mask_i00"/>
@@ -249,7 +249,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="15464" name="Golden Jack O'Lantern Mask" add_name="7-day limited period">
+	<armor id="15464" name="Golden Jack O'Lantern Mask" add_name="7-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.ev_golden_jack0_mask_i00"/>
 		<set name="price" value="0"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="11300" name="Icarus Dual Sword - Destruction">
+	<weapon id="11300" name="Icarus Dualsword - Destruction">
 		<set name="crystal_count" value="4965"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -232,7 +232,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11308" name="Icarus Sawsword - Destruction" add_name="Light">
+	<weapon id="11308" name="Icarus Sawsword - Destruction" add_name="Light Armor">
 		<set name="crystal_count" value="4965"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -484,7 +484,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11316" name="Icarus Stinger - Destruction" add_name="Light">
+	<weapon id="11316" name="Icarus Stinger - Destruction" add_name="Light Armor">
 		<set name="crystal_count" value="4965"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -855,7 +855,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11328" name="Icarus Wingblade - Lightning" add_name="Light">
+	<weapon id="11328" name="Icarus Wingblade - Lightning" add_name="Light Armor">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -976,7 +976,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11332" name="Icarus Trident - Thunder" add_name="Light">
+	<weapon id="11332" name="Icarus Trident - Thunder" add_name="Light Armor">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -1323,7 +1323,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11344" name="Icarus Heavy Arms - Lightning" add_name="Light">
+	<weapon id="11344" name="Icarus Heavy Arms - Lightning" add_name="Light Armor">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>

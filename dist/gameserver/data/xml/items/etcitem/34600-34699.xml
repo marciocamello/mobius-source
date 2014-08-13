@@ -195,7 +195,7 @@
 		</skills>
 		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
 	</etcitem>
-	<etcitem id="34697" name="Hero's Unbind ScrollPack">
+	<etcitem id="34697" name="Hero's Unbind Scroll Pack">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

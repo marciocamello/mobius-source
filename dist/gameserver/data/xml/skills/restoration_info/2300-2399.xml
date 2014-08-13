@@ -283,7 +283,7 @@
 			<item id="9143" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2323" skill_level="1" name="Red Sage's Stone">
+	<restoration skill_id="2323" skill_level="1" name="Red Philosopher's Stone">
 		<group chance="2.5">
 			<item id="9177" min_count="1" max_count="1"/>
 		</group>
@@ -324,7 +324,7 @@
 			<item id="8682" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2324" skill_level="1" name="Blue Sage's Stone">
+	<restoration skill_id="2324" skill_level="1" name="Blue Philosopher's Stone">
 		<group chance="2.5">
 			<item id="9178" min_count="1" max_count="1"/>
 		</group>
@@ -365,7 +365,7 @@
 			<item id="8679" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2325" skill_level="1" name="Orange Sage's Stone">
+	<restoration skill_id="2325" skill_level="1" name="Orange Philosopher's Stone">
 		<group chance="2.5">
 			<item id="9180" min_count="1" max_count="1"/>
 		</group>
@@ -406,7 +406,7 @@
 			<item id="8680" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2326" skill_level="1" name="Black Sage's Stone">
+	<restoration skill_id="2326" skill_level="1" name="Black Philosopher's Stone">
 		<group chance="2.5">
 			<item id="9182" min_count="1" max_count="1"/>
 		</group>
@@ -447,7 +447,7 @@
 			<item id="8687" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2327" skill_level="1" name="White Sage's Stone">
+	<restoration skill_id="2327" skill_level="1" name="White Philosopher's Stone">
 		<group chance="2.5">
 			<item id="9183" min_count="1" max_count="1"/>
 		</group>
@@ -488,7 +488,7 @@
 			<item id="8683" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="2328" skill_level="1" name="Green Sage's Stone">
+	<restoration skill_id="2328" skill_level="1" name="Green Philosopher's Stone">
 		<group chance="2.5">
 			<item id="9179" min_count="1" max_count="1"/>
 		</group>

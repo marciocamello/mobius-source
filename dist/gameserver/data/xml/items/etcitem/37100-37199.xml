@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+    <etcitem id="37100" name="Elixir of Protection">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="5"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37101" name="Elixir of Magic">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="5"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37102" name="Elixir of Aggression">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="5"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37103" name="Recipe: High-grade Elixir of Life (R-grade)">
+        <set name="type" value="RECIPE"/>
+        <set name="class" value="RECIPIES"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+    </etcitem>
+    <etcitem id="37104" name="Recipe: High-grade Elixir of Mind (R-grade)">
+        <set name="type" value="RECIPE"/>
+        <set name="class" value="RECIPIES"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+    </etcitem>
+    <etcitem id="37105" name="Recipe: High-grade Elixir of CP (R-grade)">
+        <set name="type" value="RECIPE"/>
+        <set name="class" value="RECIPIES"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+    </etcitem>
+    <etcitem id="37106" name="Recipe: High-grade Elixir of Life (R-grade)">
+        <set name="type" value="RECIPE"/>
+        <set name="class" value="RECIPIES"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+    </etcitem>
+    <etcitem id="37107" name="Recipe: High-grade Elixir of Mind (R-grade)">
+        <set name="type" value="RECIPE"/>
+        <set name="class" value="RECIPIES"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+    </etcitem>
+    <etcitem id="37108" name="Recipe: High-grade Elixir of CP (R-grade)">
+        <set name="type" value="RECIPE"/>
+        <set name="class" value="RECIPIES"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+    </etcitem>
+    <etcitem id="37109" name="Recipe: Elixir of Protection">
+        <set name="type" value="RECIPE"/>
+        <set name="class" value="RECIPIES"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+    </etcitem>
+    <etcitem id="37110" name="Recipe: Elixir of Magic">
+        <set name="type" value="RECIPE"/>
+        <set name="class" value="RECIPIES"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+    </etcitem>
+    <etcitem id="37111" name="Recipe: Elixir of Aggression">
+        <set name="type" value="RECIPE"/>
+        <set name="class" value="RECIPIES"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+    </etcitem>
+    <etcitem id="37112" name="Scroll of Escape: Heine">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37113" name="Scroll of Escape: Town of Oren">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37114" name="Scroll of Escape: Town of Oren">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37115" name="Scroll of Escape: Town of Aden">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37116" name="Scroll of Escape: Town of Aden">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37117" name="Scroll of Escape: Town of Rune">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37118" name="Scroll of Escape: Town of Rune">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37119" name="Scroll of Escape: Town of Goddard">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37120" name="Scroll of Escape: Town of Goddard">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37121" name="Scroll of Escape: Town of Goddard">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37122" name="Scroll of Escape: Town of Goddard">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37123" name="Scroll of Escape: Town of Schuttgart">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37124" name="Scroll of Escape: Town of Oren">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37125" name="Scroll of Escape: Town of Oren">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37127" name="Scroll of Escape: Heine">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37128" name="Lindvior Support Box" add_name="Event">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37129" name="Bloody Amaranthine Pack" add_name="Event">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37130" name="Bloody Eternal Pack" add_name="Event">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37131" name="Istina/ Octavis Accessory Pack" add_name="Event">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37132" name="Top-grade Enchantment Pack" add_name="Event">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37133" name="Hair Accessory/ Pendant Pack" add_name="Event">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+    <etcitem id="37134" name="Lv. 5 Legendary Dye Pack" add_name="Event">
+        <set name="class" value="OTHER"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="stackable" value="true"/>
+        <set name="type" value="OTHER"/>
+    </etcitem>
+</list>

@@ -4781,7 +4781,7 @@
 			<defence attribute="unholy" value="80"/>
 		</attributes>
 	</npc>
-	<npc id="35891" name="Minister " title="Officer's Barracks">
+	<npc id="35891" name="Minister" title="Officer's Barracks">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="residences.SiegeGuardFighter"/>
 		<set name="baseAtkRange" value="40"/>

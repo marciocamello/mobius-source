@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="32602" name="Fantasy Vesper Shield">
+	<weapon id="32602" name="Fantasy Vesper Shield" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_vesper_verteidiger_i01"/>
 		<set name="weight" value="1130"/>
 		<equip>

@@ -1019,7 +1019,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="29015" name="Richard" title="">
+	<npc id="29015" name="Laikel" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>
@@ -1080,7 +1080,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="29016" name="Richard Leos" title="">
+	<npc id="29016" name="Laikel Leos" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
@@ -2862,7 +2862,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="29038" name="Kinaz's Ifrit" title="">
+	<npc id="29038" name="Kinaz' Ifrit" title="">
 		<set name="aggroRange" value="1500"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>
@@ -2920,7 +2920,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="29039" name="Kinaz's Ifrit" title="">
+	<npc id="29039" name="Kinaz' Ifrit" title="">
 		<set name="aggroRange" value="1500"/>
 		<set name="ai_type" value="Priest"/>
 		<set name="baseAtkRange" value="40"/>
@@ -5310,7 +5310,7 @@
 			<defence attribute="unholy" value="50"/>
 		</attributes>
 	</npc>
-	<npc id="29068" name="Antharas" title="Earth Dragon">
+	<npc id="29068" name="Antharas" title="Land Dragon">
 		<set name="aggroRange" value="10000"/>
 		<set name="ai_type" value="Antharas"/>
 		<set name="baseAtkRange" value="40"/>
@@ -7023,7 +7023,7 @@
 			<defence attribute="holy" value="71"/>
 		</attributes>
 	</npc>
-	<npc id="29097" name="Disciple of Splendor " title="Raid Fighter">
+	<npc id="29097" name="Disciple of Splendor" title="Raid Fighter">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>

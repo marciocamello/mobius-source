@@ -24,7 +24,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32901" name="Bastard Sword*Crimson Sword (Fire)">
+	<weapon id="32901" name="Bastard Sword of Destiny*Crimson Sword (Fire)">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="weight" value="247"/>
 		<set name="rnd_dam" value="10"/>
@@ -327,7 +327,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32914" name="Bastard Sword*Crimson Sword (Water)">
+	<weapon id="32914" name="Bastard Sword of Destiny*Crimson Sword (Water)">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="weight" value="247"/>
 		<set name="rnd_dam" value="10"/>
@@ -630,7 +630,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32927" name="Bastard Sword*Crimson Sword (Wind)">
+	<weapon id="32927" name="Bastard Sword of Destiny*Crimson Sword (Wind)">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="weight" value="247"/>
 		<set name="rnd_dam" value="10"/>
@@ -933,7 +933,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32940" name="Bastard Sword*Crimson Sword (Earth)">
+	<weapon id="32940" name="Bastard Sword of Destiny*Crimson Sword (Earth)">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="weight" value="247"/>
 		<set name="rnd_dam" value="10"/>
@@ -1236,7 +1236,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32953" name="Bastard Sword*Crimson Sword (Holy)">
+	<weapon id="32953" name="Bastard Sword of Destiny*Crimson Sword (Holy)">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="weight" value="247"/>
 		<set name="rnd_dam" value="10"/>
@@ -1539,7 +1539,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32966" name="Bastard Sword*Crimson Sword (Dark)">
+	<weapon id="32966" name="Bastard Sword of Destiny*Crimson Sword (Dark)">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="weight" value="247"/>
 		<set name="rnd_dam" value="10"/>
@@ -1598,7 +1598,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32995" name="Crystal Dagger of Destiny (fire)" add_name="Critical Damage">
+	<weapon id="32995" name="Crystal Dagger of Destiny (Fire)" add_name="Critical Damage">
 		<set name="icon" value="icon.weapon_crystal_dagger_i01"/>
 		<set name="weight" value="100"/>
 		<set name="rnd_dam" value="5"/>
@@ -1625,7 +1625,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32996" name="Samurai Long Sword (fire)" add_name="Focus">
+	<weapon id="32996" name="Samurai Long Sword of Destiny (Fire)" add_name="Focus">
 		<set name="icon" value="icon.weapon_samurai_longsword_i01"/>
 		<set name="weight" value="138"/>
 		<set name="rnd_dam" value="10"/>
@@ -1651,7 +1651,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32997" name="Admiral's Estoc of Destiny (fire)" add_name="Focus">
+	<weapon id="32997" name="Admiral's Estoc of Destiny (Fire)" add_name="Focus">
 		<set name="icon" value="icon.weapon_blink_slasher_i01"/>
 		<set name="weight" value="138"/>
 		<set name="rnd_dam" value="40"/>
@@ -1677,7 +1677,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32998" name="Berserker Blade of Destiny (fire)" add_name="Focus">
+	<weapon id="32998" name="Berserker Blade of Destiny (Fire)" add_name="Focus">
 		<set name="icon" value="icon.weapon_berserker_blade_i01"/>
 		<set name="weight" value="138"/>
 		<set name="rnd_dam" value="10"/>
@@ -1703,7 +1703,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32999" name="Saber Tooth of Destiny (fire)" add_name="Focus">
+	<weapon id="32999" name="Saber Tooth of Destiny (Fire)" add_name="Focus">
 		<set name="icon" value="icon.weapon_invincible_blade_i01"/>
 		<set name="weight" value="195"/>
 		<set name="rnd_dam" value="15"/>

@@ -115,7 +115,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31427" name="Bound Doom Boots" add_name="Heavy">
+	<armor id="31427" name="Bound Doom Boots" add_name="Heavy Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>
@@ -134,7 +134,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31428" name="Bound Doom Boots" add_name="Tans Armor Use">
+	<armor id="31428" name="Bound Doom Boots" add_name="Light Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>
@@ -172,7 +172,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31430" name="Bound Doom Gloves" add_name="Heavy">
+	<armor id="31430" name="Bound Doom Gloves" add_name="Heavy Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>
@@ -191,7 +191,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31431" name="Bound Doom Gloves" add_name="Tans Armor Use">
+	<armor id="31431" name="Bound Doom Gloves" add_name="Light Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>
@@ -267,7 +267,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31465" name="Bound Dark Crystal Boots" add_name="Heavy">
+	<armor id="31465" name="Bound Dark Crystal Boots" add_name="Heavy Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="3"/>
@@ -286,7 +286,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31466" name="Bound Dark Crystal Boots" add_name="Tans Armor Use">
+	<armor id="31466" name="Bound Dark Crystal Boots" add_name="Light Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="3"/>
@@ -362,7 +362,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31470" name="Bound Dark Crystal Gloves" add_name="Heavy">
+	<armor id="31470" name="Bound Dark Crystal Gloves" add_name="Heavy Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="3"/>
@@ -381,7 +381,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31471" name="Bound Dark Crystal Gloves" add_name="Tans Armor Use">
+	<armor id="31471" name="Bound Dark Crystal Gloves" add_name="Light Armor">
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="3"/>

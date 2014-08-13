@@ -401,7 +401,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19110" name="Antharas Transparent 15" title="">
+	<npc id="19110" name="Antharas" title="Check Drops">
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="85"/>
@@ -441,7 +441,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19111" name="Antharas Transparent 16" title="">
+	<npc id="19111" name="Valakas" title="Check Drops">
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="85"/>
@@ -481,7 +481,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19112" name="Antharas Transparent 17" title="">
+	<npc id="19112" name="Lindvior" title="Check Drops">
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="85"/>
@@ -521,7 +521,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19113" name="Antharas Transparent 18" title="">
+	<npc id="19113" name="Inactive Player Supplies" title="">
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="85"/>
@@ -601,7 +601,7 @@
 		</attributes>
 		<skills/>
 	</npc>
-	<npc id="19115" name="Poison Cloud" title="">
+	<npc id="19115" name="Corrupted Poison Cloud" title="">
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="level" value="94"/>

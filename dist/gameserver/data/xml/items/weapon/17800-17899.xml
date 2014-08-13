@@ -296,7 +296,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="17842" name="Bound Requiem Dual Sword">
+	<weapon id="17842" name="Bound Requiem Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -373,7 +373,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="17850" name="Bound Immortal Shield" add_name="Heavy">
+	<weapon id="17850" name="Bound Immortal Shield" add_name="Heavy Armor">
 		<set name="icon" value="icon.weapon_sacon_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -683,7 +683,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="17876" name="Bound Apocalypse Dual sword">
+	<weapon id="17876" name="Bound Apocalypse Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -760,7 +760,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="17884" name="Bound Twilight Shield" add_name="Heavy">
+	<weapon id="17884" name="Bound Twilight Shield" add_name="Heavy Armor">
 		<set name="icon" value="icon.kratere_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>

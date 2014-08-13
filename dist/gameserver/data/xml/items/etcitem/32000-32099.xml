@@ -859,7 +859,7 @@
 		</skills>
 		<set name="icon" value="icon.accessary_enchanted_ring_i00"/>
 	</etcitem>
-	<etcitem id="32078" name="Unidentified Necklace of Magic">
+	<etcitem id="32078" name="Unidentified Magic Necklace">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -870,7 +870,7 @@
 		</skills>
 		<set name="icon" value="icon.accessary_enchanted_necklace_i00"/>
 	</etcitem>
-	<etcitem id="32079" name="Unidentified Necklace of Magic">
+	<etcitem id="32079" name="Unidentified Magic Necklace">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

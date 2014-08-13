@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="22281" name="Sujin Transformation Stick">
+	<weapon id="22281" name="Sujin Transformation Stick" add_name="7-day (Event)">
 		<set name="icon" value="BranchSys2.icon.br_blessed_taigirl_i00"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="S80"/>
@@ -19,7 +19,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="22283" name="Trejuo Transformation Stick">
+	<weapon id="22283" name="Trejuo Transformation Stick" add_name="7-day (Event)">
 		<set name="icon" value="BranchSys2.icon.br_blessed_taiboy_i00"/>
 		<set name="type" value="SWORD"/>
 		<set name="crystal_type" value="S80"/>

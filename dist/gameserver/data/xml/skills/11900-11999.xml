@@ -20,7 +20,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11999" levels="1" name="Aerore Chain Skill Air Blow">
+	<skill id="11999" levels="1" name="">
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="2000"/>
 		<set name="mpConsume2" val="40"/>

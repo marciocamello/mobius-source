@@ -8,7 +8,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2601" levels="1" name="Gran Kain's Echo Crystal - Theme of the Feast">
+	<skill id="2601" levels="1" name="Gran Kain's Echo Crystal - Theme of Festival">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -32,7 +32,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2604" levels="1" name="Gran Kain's Firework">
+	<skill id="2604" levels="1" name="Gran Kain's Firecracker">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="1500"/>
@@ -41,7 +41,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2605" levels="1" name="Gran Kain's Large Firework">
+	<skill id="2605" levels="1" name="Gran Kain's Large Firecracker">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="3000"/>
@@ -70,7 +70,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2608" levels="3" name="Blue Crystal of Fantasy">
+	<skill id="2608" levels="3" name="Fantasy Red Crystal">
 		<table name="#item">13386 13387 13388</table>
 		<table name="#power">50000 100000 200000</table>
 		<set name="magicType" val="SPECIAL"/>
@@ -86,7 +86,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2609" levels="20" name="Escape - Talking Island Village">
+	<skill id="2609" levels="20" name="Scroll of Escape: Kamael Village">
 		<table name="#itemConsumeId">13395 13396 13397 13398 13399 13400 13401 13402 13403 13404 13405 13406 13407 13408 13409 13410 13411 13412 13413 13414</table>
 		<table name="#townId">1 2 3 4 5 7 6 8 19 9 9 13 10 10 12 11 15 14 16 17</table>
 		<set name="magicType" val="SPECIAL"/>
@@ -110,7 +110,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2611" levels="1" name="Large Firework">
+	<skill id="2611" levels="1" name="Large Firecracker">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="3000"/>
@@ -119,7 +119,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2612" levels="1" name="Large Firework">
+	<skill id="2612" levels="1" name="Large Firecracker">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="3000"/>
@@ -128,7 +128,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2613" levels="1" name="Large Firework">
+	<skill id="2613" levels="1" name="Large Firecracker">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="3000"/>
@@ -137,7 +137,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2614" levels="1" name="Large Firework">
+	<skill id="2614" levels="1" name="Large Firecracker">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="3000"/>
@@ -191,7 +191,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2619" levels="1" name="Extra Pass - Kamaloka (Hall of the Abyss) (Event)">
+	<skill id="2619" levels="1" name="Extra Pass: Kamaloka (Hall of the Abyss) (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -199,7 +199,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2620" levels="1" name="Extra Pass - Near Kamaloka (Event)">
+	<skill id="2620" levels="1" name="Extra Pass: Near Kamaloka (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -207,7 +207,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2621" levels="1" name="Extra Pass - Kamaloka (Labyrinth of the Abyss) (Event)">
+	<skill id="2621" levels="1" name="Extra Pass: Kamaloka (Labyrinth of the Abyss) (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -302,21 +302,21 @@
 		<set name="flyingTransformUsage" val="true"/>
 		<set name="npcIds" val="18684;18685;18686;18687;18688;18689;18690;18691;18692"/>
 	</skill>
-	<skill id="2631" levels="1" name="Scroll of Transformation - Frog">
+	<skill id="2631" levels="1" name="Transformation Scroll: Frog">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2632" levels="1" name="Scroll of Transformation - Young Child">
+	<skill id="2632" levels="1" name="Transformation Scroll: Young Child">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2633" levels="1" name="Elmore-Aden's Holy Water">
+	<skill id="2633" levels="1" name="Elmoreden's Holy Water">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="3000"/>
@@ -327,7 +327,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2634" levels="1" name="Court Magician's Blessing">
+	<skill id="2634" levels="1" name="Court Wizard's Blessing">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="3000"/>
@@ -374,7 +374,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2638" levels="1" name="Five-year anniversary event box">
+	<skill id="2638" levels="1" name="5th Anniversary Event Box">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -382,7 +382,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2639" levels="1" name="Five-year anniversary event box">
+	<skill id="2639" levels="1" name="5th Anniversary Event Box">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -390,7 +390,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2640" levels="1" name="Five-year anniversary event box">
+	<skill id="2640" levels="1" name="5th Anniversary Event Box">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -398,7 +398,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2641" levels="1" name="Five-Year Anniversary Event Box">
+	<skill id="2641" levels="1" name="5th Anniversary Event Box">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -406,7 +406,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2642" levels="1" name="Five-Year Anniversary Event Box">
+	<skill id="2642" levels="1" name="5th Anniversary Event Box">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -414,7 +414,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2643" levels="1" name="Five-Year Anniversary Event Box">
+	<skill id="2643" levels="1" name="5th Anniversary Event Box">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -422,7 +422,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2644" levels="1" name="Five-Year Anniversary Event Box">
+	<skill id="2644" levels="1" name="5th Anniversary Event Box">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -459,7 +459,7 @@
 		<set name="skillType" val="REFILL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2648" levels="1" name="High Quality Energy Star Stone">
+	<skill id="2648" levels="1" name="High-quality Energy Star Stone">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -467,7 +467,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2649" levels="9" name="Escape - Gludin Village">
+	<skill id="2649" levels="9" name="Scroll of Escape: Town of Schuttgart">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -516,7 +516,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2654" levels="1" name="Final Circlet">
+	<skill id="2654" levels="1" name="Final Secret">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="81"/>
@@ -683,14 +683,14 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2670" levels="1" name="Scroll of Transformation - Red">
+	<skill id="2670" levels="1" name="Transformation Scroll: Red">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2671" levels="1" name="Scroll of Transformation - Blue">
+	<skill id="2671" levels="1" name="Transformation Scroll: Blue">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -823,7 +823,7 @@
 			<effect count="1" name="Transformation" time="1800" val="15"/>
 		</for>
 	</skill>
-	<skill id="2678" levels="1" name="Gludio Knight Mercenary">
+	<skill id="2678" levels="1" name="Gludio Royal Guard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -844,7 +844,7 @@
 			<effect count="1" name="Transformation" time="1800" val="16"/>
 		</for>
 	</skill>
-	<skill id="2679" levels="1" name="Gludio Archer Mercenary">
+	<skill id="2679" levels="1" name="Gludio Archer Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -865,7 +865,7 @@
 			<effect count="1" name="Transformation" time="1800" val="17"/>
 		</for>
 	</skill>
-	<skill id="2680" levels="1" name="Gludio Wizard Mercenary">
+	<skill id="2680" levels="1" name="Gludio Wizard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -886,7 +886,7 @@
 			<effect count="1" name="Transformation" time="1800" val="18"/>
 		</for>
 	</skill>
-	<skill id="2681" levels="1" name="Gludio Kamael Captain Mercenary">
+	<skill id="2681" levels="1" name="Gludio Kamael Guard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -907,7 +907,7 @@
 			<effect count="1" name="Transformation" time="1800" val="19"/>
 		</for>
 	</skill>
-	<skill id="2682" levels="1" name="Gludio Knight Captain Mercenary">
+	<skill id="2682" levels="1" name="Gludio Knight of Dawn">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -928,7 +928,7 @@
 			<effect count="1" name="Transformation" time="1800" val="20"/>
 		</for>
 	</skill>
-	<skill id="2683" levels="1" name="Gludio Commander Mercenary">
+	<skill id="2683" levels="1" name="Gludio Fortress Commander">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1075,7 +1075,7 @@
 			<effect count="1" name="Transformation" time="1800" val="15"/>
 		</for>
 	</skill>
-	<skill id="2690" levels="1" name="Dion Knight Mercenary">
+	<skill id="2690" levels="1" name="Dion Royal Guard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1096,7 +1096,7 @@
 			<effect count="1" name="Transformation" time="1800" val="16"/>
 		</for>
 	</skill>
-	<skill id="2691" levels="1" name="Dion Archer Mercenary">
+	<skill id="2691" levels="1" name="Dion Archer Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1117,7 +1117,7 @@
 			<effect count="1" name="Transformation" time="1800" val="17"/>
 		</for>
 	</skill>
-	<skill id="2692" levels="1" name="Dion Wizard Mercenary">
+	<skill id="2692" levels="1" name="Dion Wizard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1138,7 +1138,7 @@
 			<effect count="1" name="Transformation" time="1800" val="18"/>
 		</for>
 	</skill>
-	<skill id="2693" levels="1" name="Dion Kamael Captain Mercenary">
+	<skill id="2693" levels="1" name="Dion Kamael Guard Captain">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1159,7 +1159,7 @@
 			<effect count="1" name="Transformation" time="1800" val="19"/>
 		</for>
 	</skill>
-	<skill id="2694" levels="1" name="Dion Knight Captain Mercenary">
+	<skill id="2694" levels="1" name="Dion Knight of Dawn">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>
@@ -1180,7 +1180,7 @@
 			<effect count="1" name="Transformation" time="1800" val="20"/>
 		</for>
 	</skill>
-	<skill id="2695" levels="1" name="Dion Commander Mercenary">
+	<skill id="2695" levels="1" name="Dion Fortress Commander">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="14400000"/>

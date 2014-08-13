@@ -102,7 +102,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2510" levels="1" name="Mysterious Cube">
+	<skill id="2510" levels="1" name="Wondrous Cubic">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -111,14 +111,14 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="2511" levels="1" name="Scroll of Transformation - Gatekeeper">
+	<skill id="2511" levels="1" name="Transformation Scroll: Gatekeeper">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2512" levels="1" name="Herb of Vampiric Rage">
+	<skill id="2512" levels="1" name="Herb of HP Drain">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys2.icon.etc_vampiric_rage_herb_i01"/>
 		<set name="reuseDelay" val="2000"/>
@@ -137,7 +137,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2513" levels="1" name="Herb of Doubt">
+	<skill id="2513" levels="1" name="Mysterious Herb">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill2513"/>
 		<set name="reuseDelay" val="2000"/>
@@ -154,7 +154,7 @@
 			<effect abnormal="bighead" count="1" name="Buff" stackType="BigHead" time="300" val="0"/>
 		</for>
 	</skill>
-	<skill id="2514" levels="1" name="Herb of Critical Attack - Power">
+	<skill id="2514" levels="1" name="Herb of Critical Attack - Damage">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="BranchSys2.icon.etc_crt_force_herb_i01"/>
 		<set name="reuseDelay" val="2000"/>
@@ -173,7 +173,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2515" levels="1" name="Lucky Clover (D-Grade)">
+	<skill id="2515" levels="1" name="Lucky Clover (D-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -181,7 +181,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2516" levels="1" name="Lucky Clover (C-Grade)">
+	<skill id="2516" levels="1" name="Lucky Clover (C-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -189,7 +189,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2517" levels="1" name="Lucky Clover (B-Grade)">
+	<skill id="2517" levels="1" name="Lucky Clover (B-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -197,7 +197,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2518" levels="1" name="Lucky Clover (A-Grade)">
+	<skill id="2518" levels="1" name="Lucky Clover (A-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -205,7 +205,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2519" levels="1" name="Lucky Clover (S-Grade)">
+	<skill id="2519" levels="1" name="Lucky Clover (S-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -213,7 +213,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2520" levels="1" name="Lucky Clover (D-Grade)">
+	<skill id="2520" levels="1" name="Lucky Clover (D-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -221,7 +221,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2521" levels="1" name="Lucky Clover (C-Grade)">
+	<skill id="2521" levels="1" name="Lucky Clover (C-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -229,7 +229,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2522" levels="1" name="Lucky Clover (B-Grade)">
+	<skill id="2522" levels="1" name="Lucky Clover (B-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -237,7 +237,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2523" levels="1" name="Lucky Clover (A-Grade)">
+	<skill id="2523" levels="1" name="Lucky Clover (A-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -245,7 +245,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2524" levels="1" name="Lucky Clover (S-Grade)">
+	<skill id="2524" levels="1" name="Lucky Clover (S-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -253,7 +253,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2525" levels="1" name="Scroll to move to Kamael Village">
+	<skill id="2525" levels="1" name="Scroll of Escape: Kamael Village">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -303,7 +303,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2530" levels="1" name="Recovery Item for Battleground Use">
+	<skill id="2530" levels="1" name="Recovery Item (Battleground)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -820,7 +820,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2589" levels="1" name="Extra Pass - Kamaloka (Hall of the Abyss)">
+	<skill id="2589" levels="1" name="Extra Pass: Kamaloka (Hall of the Abyss)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -828,7 +828,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2590" levels="1" name="Extra Pass - Near Kamaloka">
+	<skill id="2590" levels="1" name="Extra Pass: Near Kamaloka">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -836,7 +836,7 @@
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2591" levels="1" name="Extra Pass - Kamaloka (Labyrinth of the Abyss)">
+	<skill id="2591" levels="1" name="Extra Pass: Kamaloka (Labyrinth of the Abyss)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -878,7 +878,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="2594" levels="1" name="Pailaka Scroll of Escape">
+	<skill id="2594" levels="1" name="Scroll of Escape: Pailaka">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>

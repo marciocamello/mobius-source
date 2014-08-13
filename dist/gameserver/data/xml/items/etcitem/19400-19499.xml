@@ -615,7 +615,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_jewel_green_i00"/>
 	</etcitem>
-	<etcitem id="19485" name="Witch Doctor's Mark">
+	<etcitem id="19485" name="Shaman's Mark">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -739,7 +739,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_parasite_i00"/>
 	</etcitem>
-	<etcitem id="19499" name="Dancer Goods">
+	<etcitem id="19499" name="Clue Item">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

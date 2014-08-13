@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="13447" name="(not used) Vesper Shield">
+	<weapon id="13447" name="(Not in Use) Vesper Shield">
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.shield_vesper_verteidiger_i00"/>
 		<set name="price" value="845000"/>
@@ -331,7 +331,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13469" name="Vesper Sheutjeh">
+	<weapon id="13469" name="Vesper Shooter">
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>

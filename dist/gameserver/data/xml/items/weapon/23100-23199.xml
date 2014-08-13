@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="23100" name="Vesper Retributer of Fortune	90-day">
+	<weapon id="23100" name="Vesper Retributer of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_vesper_retributer_i01"/>
 		<set name="price" value="0"/>
@@ -21,7 +21,7 @@
 			<add stat="accCombat" order="0x10" value="8"/>
 		</for>
 	</weapon>
-	<weapon id="23101" name="Vesper Caster of Fortune	90-day">
+	<weapon id="23101" name="Vesper Caster of Fortune" add_name="90-day">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_vesper_caster_i01"/>
@@ -42,7 +42,7 @@
 			<add stat="accCombat" order="0x10" value="8"/>
 		</for>
 	</weapon>
-	<weapon id="23102" name="Vesper Singer of Fortune	90-day">
+	<weapon id="23102" name="Vesper Singer of Fortune" add_name="90-day">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_vesper_singer_i01"/>
@@ -63,7 +63,7 @@
 			<add stat="accCombat" order="0x10" value="8"/>
 		</for>
 	</weapon>
-	<weapon id="23103" name="Vesper Thrower of Fortune	90-day">
+	<weapon id="23103" name="Vesper Thrower of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_vesper_thrower_i01"/>
 		<set name="price" value="0"/>
@@ -84,7 +84,7 @@
 			<add stat="accCombat" order="0x10" value="-3.75"/>
 		</for>
 	</weapon>
-	<weapon id="23104" name="Vesper Pincer of Fortune	90-day">
+	<weapon id="23104" name="Vesper Pincer of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_vesper_pincer_i01"/>
 		<set name="price" value="0"/>
@@ -104,7 +104,7 @@
 			<add stat="accCombat" order="0x10" value="-1.5"/>
 		</for>
 	</weapon>
-	<weapon id="23105" name="Vesper Shooter of Fortune	90-day">
+	<weapon id="23105" name="Vesper Shooter of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_vesper_schutze_i01"/>
 		<set name="price" value="0"/>
@@ -124,7 +124,7 @@
 			<add stat="accCombat" order="0x10" value="-1.5"/>
 		</for>
 	</weapon>
-	<weapon id="23106" name="Vesper Nagan of Fortune	90-day">
+	<weapon id="23106" name="Vesper Nagan of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_vesper_nagen_i01"/>
 		<set name="price" value="0"/>
@@ -144,7 +144,7 @@
 			<add stat="accCombat" order="0x10" value="2"/>
 		</for>
 	</weapon>
-	<weapon id="23122" name="Vorpal Shield of Fortune	90-day">
+	<weapon id="23122" name="Vorpal Shield of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.Evilgate_Shield_i01"/>
 		<set name="price" value="0"/>
@@ -158,7 +158,7 @@
 			<add stat="rShld" order="0x10" value="20"/>
 		</for>
 	</weapon>
-	<weapon id="23138" name="Vesper Dualsword of Fortune	90-day">
+	<weapon id="23138" name="Vesper Dualsword of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="0"/>
@@ -177,7 +177,7 @@
 			<set stat="baseCrit" order="0x08" value="80"/>
 		</for>
 	</weapon>
-	<weapon id="23139" name="Vesper Dual Dagger of Fortune	90-day">
+	<weapon id="23139" name="Vesper Dual Dagger of Fortune" add_name="90-day">
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.dual_dagger_i00"/>
 		<set name="price" value="0"/>

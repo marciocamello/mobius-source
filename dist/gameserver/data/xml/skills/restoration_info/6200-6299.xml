@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "restoration_info.dtd">
 <list>
-	<restoration skill_id="6239" skill_level="1" name="Proof of Space and Time">
+	<restoration skill_id="6239" skill_level="1" name="Proof of Time and Space">
 		<group chance="100.0">
 			<item id="15352" min_count="1" max_count="1"/>
 		</group>

@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="14800" levels="1" name="Master's Blessing - Resist Elemental (Range)">
+	<skill id="14800" levels="1" name="Master's Blessing - Elemental Resistance">
 		<set name="icon" val="icon.skill11565"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14801" levels="1" name="Master's Blessing - Resist Divine (Range)">
+	<skill id="14801" levels="1" name="Master's Blessing - Holy Attack Resistance">
 		<set name="icon" val="icon.skill11567"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14802" levels="1" name="Master's Blessing - Resist Mental (Range)">
+	<skill id="14802" levels="1" name="Master's Blessing - Mental Attack Resistance">
 		<set name="icon" val="icon.skill11824"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -24,7 +24,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14804" levels="1" name="Reflect Damage Resistance">
+	<skill id="14804" levels="1" name="Damage Reflect Resistance">
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="120000"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -36,7 +36,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14805" levels="1" name="Reflect Damage Resistance">
+	<skill id="14805" levels="1" name="Damage Reflect Resistance">
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="120000"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -48,7 +48,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14806" levels="1" name="Reflect Damage Resistance">
+	<skill id="14806" levels="1" name="Damage Reflect Resistance">
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="120000"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -60,7 +60,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14807" levels="1" name="Reflect Damage Resistance">
+	<skill id="14807" levels="1" name="Damage Reflect Resistance">
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="120000"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -72,7 +72,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14808" levels="1" name="Reflect Damage Resistance">
+	<skill id="14808" levels="1" name="Damage Reflect Resistance">
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="120000"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -84,7 +84,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14809" levels="1" name="Reflect Damage Resistance">
+	<skill id="14809" levels="1" name="Damage Reflect Resistance">
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="120000"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -96,7 +96,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14810" levels="1" name="Reflect Damage Resistance">
+	<skill id="14810" levels="1" name="Damage Reflect Resistance">
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="120000"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -108,7 +108,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14811" levels="1" name="Reflect Damage Resistance">
+	<skill id="14811" levels="1" name="Damage Reflect Resistance">
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="120000"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -120,7 +120,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14812" levels="1" name="Reflect Damage Resistance">
+	<skill id="14812" levels="1" name="Damage Reflect Resistance">
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="120000"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -132,7 +132,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14813" levels="1" name="Reflect Damage Resistance">
+	<skill id="14813" levels="1" name="Damage Reflect Resistance">
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="120000"/>
 		<set name="target" val="TARGET_SELF"/>

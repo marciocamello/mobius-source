@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="15710" name="Sealed Moirai Shield ">
+	<weapon id="15710" name="Sealed Moirai Shield">
 		<set name="crystal_count" value="424"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>

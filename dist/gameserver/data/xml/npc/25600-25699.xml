@@ -2014,7 +2014,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="25629" name="Floating Skull" title="Enira's Evil Spirit">
+	<npc id="25629" name="Floating Skeleton" title="Enira's Evil Spirit">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -7318,7 +7318,7 @@
 			<defence attribute="unholy" value="250"/>
 		</attributes>
 	</npc>
-	<npc id="25699" name="Glakias" title="Archery Knight Captain">
+	<npc id="25699" name="Glakias" title="Ice Knight Captain">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="freya.IceCaptainKnight"/>
 		<set name="baseAtkRange" value="40"/>

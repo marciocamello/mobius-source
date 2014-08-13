@@ -10,43 +10,43 @@
 			<effect count="10" name="DamOverTime" time="1" val="300"/>
 		</for>
 	</skill>
-	<skill id="23301" levels="1" name="Dimensional Gate A">
+	<skill id="23301" levels="1" name="Dimensional Door A">
 		<set name="icon" val="icon.skill1050"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23302" levels="1" name="Dimensional Gate B">
+	<skill id="23302" levels="1" name="Dimensional Door B">
 		<set name="icon" val="icon.skill1050"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23303" levels="1" name="Move">
+	<skill id="23303" levels="1" name="Teleport">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23304" levels="1" name="Move">
+	<skill id="23304" levels="1" name="Teleport">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23305" levels="1" name="Zinenze Agathion - Yunbokhwan">
+	<skill id="23305" levels="1" name="Zinyanzi Agathion - Yunbokhwan">
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23306" levels="1" name="Zinenze Agathion Cute Trick">
+	<skill id="23306" levels="1" name="Zinyanzi Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23307" levels="1" name="Enze Agathion Cute Trick">
+	<skill id="23307" levels="1" name="Yanzi Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -142,7 +142,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23316" levels="5" name="Petrification Immunity Enhance">
+	<skill id="23316" levels="5" name="Enhance Petrification Immunity">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -154,7 +154,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23318" levels="1" name="Cat the Ranger Boots">
+	<skill id="23318" levels="1" name="Cat the Ranger Boost">
 		<set name="icon" val="BranchSys2.icon.action5016"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -351,7 +351,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23346" levels="1" name="Valakas">
+	<skill id="23346" levels="1" name="Valakas Agathion Cute Trick">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="magicLevel" val="85"/>

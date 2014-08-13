@@ -24,7 +24,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="21111" name="Warm Bear Paws" add_name="7-day limited period">
+	<weapon id="21111" name="Warm Bear Paws" add_name="7-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_polar_bear_wp_i00"/>
 		<set name="price" value="0"/>

@@ -1384,7 +1384,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="21962" name="Blood Brother" add_name="Light">
+	<weapon id="21962" name="Blood Brother" add_name="Light Armor">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="BranchSys2.icon.br_wp_tirbing_i01"/>
 		<set name="price" value="74946000"/>
@@ -1483,7 +1483,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="21965" name="Blood Brother {PvP}" add_name="Light">
+	<weapon id="21965" name="Blood Brother {PvP}" add_name="Light Armor">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="BranchSys2.icon.br_wp_tirbing_i01"/>
 		<set name="price" value="74946000"/>
@@ -1604,7 +1604,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="21969" name="Blood Brother - Great Gale" add_name="Light">
+	<weapon id="21969" name="Blood Brother - Great Gale" add_name="Light Armor">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="BranchSys2.icon.br_wp_tirbing_i01"/>
 		<set name="price" value="74946000"/>
@@ -1706,7 +1706,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="21972" name="Blood Brother - Great Gale {PvP}" add_name="Light">
+	<weapon id="21972" name="Blood Brother - Great Gale {PvP}" add_name="Light Armor">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="BranchSys2.icon.br_wp_tirbing_i01"/>
 		<set name="price" value="74946000"/>

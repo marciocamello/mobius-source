@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="8900" levels="1" name="Dragon's Sealed Power - Fighter">
+	<skill id="8900" levels="1" name="Dragon's Sealed Power- Fighter">
 		<set name="magicType" val="MAGIC"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -36,7 +36,7 @@
 			</mul>
 		</for>
 	</skill>
-	<skill id="8902" levels="1" name="Dragon's Sealed Power - Mage">
+	<skill id="8902" levels="1" name="Dragon's Sealed Power- Mage">
 		<set name="magicType" val="MAGIC"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>

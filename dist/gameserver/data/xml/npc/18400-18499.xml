@@ -3206,7 +3206,7 @@
 			<defence attribute="unholy" value="140"/>
 		</attributes>
 	</npc>
-	<npc id="18468" name="Gatekeeper" title="">
+	<npc id="18468" name="Tester" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -4562,7 +4562,7 @@
 			<defence attribute="unholy" value="500"/>
 		</attributes>
 	</npc>
-	<npc id="18492" name="Controller" title="Tower of Naia">
+	<npc id="18492" name="Control Unit" title="Tower of Naia">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>

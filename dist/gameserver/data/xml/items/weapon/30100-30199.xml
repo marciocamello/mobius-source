@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="30100" name="Blessed Apocalypse Dual Dagger" add_name="Damage + Focus">
+	<weapon id="30100" name="Blessed Apocalypse Dual Dagger" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -57,7 +57,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30102" name="Blessed Apocalypse Dual Dagger" add_name="Guidance + Damage">
+	<weapon id="30102" name="Blessed Apocalypse Dual Dagger" add_name="Guidance + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -112,7 +112,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30104" name="Blessed Apocalypse Dual Blunt Weapon" add_name="Guidance + Damage">
+	<weapon id="30104" name="Blessed Apocalypse Dual Blunt Weapon" add_name="Guidance + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -139,7 +139,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30105" name="Blessed Apocalypse Dual Blunt Weapon" add_name="Damage + Focus ">
+	<weapon id="30105" name="Blessed Apocalypse Dual Blunt Weapon" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -361,7 +361,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30113" name="Specter Slasher" add_name="Damage + Haste">
+	<weapon id="30113" name="Specter Slasher" add_name="Damage Up + Haste">
 		<set name="icon" value="icon.weapon_skia_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -523,7 +523,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30119" name="Specter Fighter" add_name="Damage + Haste">
+	<weapon id="30119" name="Specter Fighter" add_name="Damage Up + Haste">
 		<set name="icon" value="icon.weapon_deodos_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -603,7 +603,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30122" name="Specter Stormer" add_name="Guidance + Damage">
+	<weapon id="30122" name="Specter Stormer" add_name="Guidance + Damage Up">
 		<set name="icon" value="icon.weapon_transgredi_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -630,7 +630,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30123" name="Specter Stormer" add_name="Damage + HP Drain">
+	<weapon id="30123" name="Specter Stormer" add_name="Damage Up + HP Drain">
 		<set name="icon" value="icon.weapon_transgredi_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -657,7 +657,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30124" name="Specter Thrower" add_name="Damage + Focus">
+	<weapon id="30124" name="Specter Thrower" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_solenas_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -711,7 +711,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30126" name="Specter Thrower" add_name="Long Blow + Damage">
+	<weapon id="30126" name="Specter Thrower" add_name="Long Blow + Damage Up">
 		<set name="icon" value="icon.weapon_solenas_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -1056,7 +1056,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30139" name="Specter Dual Sword" add_name="Haste + Damage">
+	<weapon id="30139" name="Specter Dualsword" add_name="Haste + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1082,7 +1082,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30140" name="Specter Dual Sword" add_name="Damage + Health">
+	<weapon id="30140" name="Specter Dualsword" add_name="Damage Up + Health">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1108,7 +1108,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30141" name="Specter Dual Sword" add_name="Health + Haste">
+	<weapon id="30141" name="Specter Dualsword" add_name="Health + Haste">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1135,7 +1135,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30142" name="Specter Dual Dagger" add_name="Damage + Focus">
+	<weapon id="30142" name="Specter Dual Dagger" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -1189,7 +1189,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30144" name="Specter Dual Dagger" add_name="Guidance + Damage">
+	<weapon id="30144" name="Specter Dual Dagger" add_name="Guidance + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -1242,7 +1242,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30146" name="Specter Dual Blunt Weapon" add_name="Guidance + Damage">
+	<weapon id="30146" name="Specter Dual Blunt Weapon" add_name="Guidance + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -1268,7 +1268,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30147" name="Specter Dual Blunt Weapon" add_name="Damage + Focus ">
+	<weapon id="30147" name="Specter Dual Blunt Weapon" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -1493,7 +1493,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30155" name="Blessed Specter Slasher" add_name="Damage + Haste">
+	<weapon id="30155" name="Blessed Specter Slasher" add_name="Damage Up + Haste">
 		<set name="icon" value="icon.weapon_skia_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -1661,7 +1661,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30161" name="Blessed Specter Fighter" add_name="Damage + Haste">
+	<weapon id="30161" name="Blessed Specter Fighter" add_name="Damage Up + Haste">
 		<set name="icon" value="icon.weapon_deodos_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -1744,7 +1744,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30164" name="Blessed Specter Stormer" add_name="Guidance + Damage">
+	<weapon id="30164" name="Blessed Specter Stormer" add_name="Guidance + Damage Up">
 		<set name="icon" value="icon.weapon_transgredi_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -1772,7 +1772,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30165" name="Blessed Specter Stormer" add_name="Damage + HP Drain">
+	<weapon id="30165" name="Blessed Specter Stormer" add_name="Damage Up + HP Drain">
 		<set name="icon" value="icon.weapon_transgredi_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -1800,7 +1800,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30166" name="Blessed Specter Thrower" add_name="Damage + Focus">
+	<weapon id="30166" name="Blessed Specter Thrower" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_solenas_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -1857,7 +1857,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30168" name="Blessed Specter Thrower" add_name="Long Blow + Damage">
+	<weapon id="30168" name="Blessed Specter Thrower" add_name="Long Blow + Damage Up">
 		<set name="icon" value="icon.weapon_solenas_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -2219,7 +2219,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30181" name="Blessed Specter Dual Sword" add_name="Haste + Damage">
+	<weapon id="30181" name="Blessed Specter Dualsword" add_name="Haste + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -2247,7 +2247,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30182" name="Blessed Specter Dual Sword" add_name="Damage + Health">
+	<weapon id="30182" name="Blessed Specter Dualsword" add_name="Damage Up + Health">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -2275,7 +2275,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30183" name="Blessed Specter Dual Sword" add_name="Health + Haste">
+	<weapon id="30183" name="Blessed Specter Dualsword" add_name="Health + Haste">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -2303,7 +2303,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30184" name="Blessed Specter Dual Dagger" add_name="Damage + Focus">
+	<weapon id="30184" name="Blessed Specter Dual Dagger" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -2359,7 +2359,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30186" name="Blessed Specter Dual Dagger" add_name="Guidance + Damage">
+	<weapon id="30186" name="Blessed Specter Dual Dagger" add_name="Guidance + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -2414,7 +2414,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30188" name="Blessed Specter Dual Blunt Weapon" add_name="Guidance + Damage">
+	<weapon id="30188" name="Blessed Specter Dual Blunt Weapon" add_name="Guidance + Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -2441,7 +2441,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30189" name="Blessed Specter Dual Blunt Weapon" add_name="Damage + Focus ">
+	<weapon id="30189" name="Blessed Specter Dual Blunt Weapon" add_name="Damage Up + Focus">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -2667,7 +2667,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30197" name="Amaranthine Slasher" add_name="Damage + Haste">
+	<weapon id="30197" name="Amaranthine Slasher" add_name="Damage Up + Haste">
 		<set name="icon" value="icon.weapon_bauen_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>

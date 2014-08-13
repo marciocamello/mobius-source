@@ -61,7 +61,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 	</etcitem>
-	<etcitem id="33507" name="Scroll: Mount Kukuri">
+	<etcitem id="33507" name="Scroll: Mount Kukuru">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -70,7 +70,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.scroll_of_kukur_event"/>
 	</etcitem>
-	<etcitem id="33508" name="Scroll: Mount Kukuri 30-unit Pack">
+	<etcitem id="33508" name="Scroll: Mount Kukuru 30-unit Pack">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

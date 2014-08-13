@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="8200" levels="1" name="Light Draconic Leather Armor Set - PVP">
+	<skill id="8200" levels="1" name="Draconic Leather Armor Set - PvP">
 		<set name="icon" val="icon.armor_t89_ul_i00"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -24,7 +24,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8201" levels="1" name="Major Arcana Robe Set - PVP">
+	<skill id="8201" levels="1" name="Major Arcana Robe Set - PvP">
 		<set name="icon" val="icon.armor_t90_ul_i00"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -49,7 +49,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8202" levels="1" name="Dynasty Breastplate - PVP">
+	<skill id="8202" levels="1" name="Dynasty Breastplate - PvP">
 		<set name="icon" val="icon.armor_t91_u_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -72,7 +72,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8203" levels="1" name="Dynasty Breastplate - PVP">
+	<skill id="8203" levels="1" name="Dynasty Breastplate - PvP">
 		<set name="icon" val="icon.armor_t91_uk_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -97,7 +97,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8204" levels="1" name="Dynasty Breastplate - PVP">
+	<skill id="8204" levels="1" name="Dynasty Breastplate - PvP">
 		<set name="icon" val="icon.armor_t91_uw_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -122,7 +122,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8205" levels="1" name="Dynasty Breastplate - PVP">
+	<skill id="8205" levels="1" name="Dynasty Breastplate - PvP">
 		<set name="icon" val="icon.armor_t91_uf_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -146,7 +146,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8206" levels="1" name="Dynasty Breastplate - PVP">
+	<skill id="8206" levels="1" name="Dynasty Breastplate - PvP">
 		<set name="icon" val="icon.armor_t91_uke_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -170,7 +170,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8207" levels="1" name="Dynasty Leather Armor - PVP">
+	<skill id="8207" levels="1" name="Dynasty Leather Armor - PvP">
 		<set name="icon" val="icon.armor_t92_u_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -194,7 +194,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8208" levels="1" name="Dynasty Leather Armor - PVP">
+	<skill id="8208" levels="1" name="Dynasty Leather Armor - PvP">
 		<set name="icon" val="icon.armor_t92_ud_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -219,7 +219,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8209" levels="1" name="Dynasty Leather Armor - PVP">
+	<skill id="8209" levels="1" name="Dynasty Leather Armor - PvP">
 		<set name="icon" val="icon.armor_t92_ub_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -244,7 +244,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8210" levels="1" name="Dynasty Tunic - PVP">
+	<skill id="8210" levels="1" name="Dynasty Tunic - PvP">
 		<set name="icon" val="icon.armor_t93_u_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -267,7 +267,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8211" levels="1" name="Dynasty Tunic - PVP">
+	<skill id="8211" levels="1" name="Dynasty Tunic - PvP">
 		<set name="icon" val="icon.armor_t93_uh_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -292,7 +292,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8212" levels="1" name="Dynasty Tunic - PVP">
+	<skill id="8212" levels="1" name="Dynasty Tunic - PvP">
 		<set name="icon" val="icon.armor_t93_ue_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -317,7 +317,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8213" levels="1" name="Dynasty Tunic - PVP">
+	<skill id="8213" levels="1" name="Dynasty Tunic - PvP">
 		<set name="icon" val="icon.armor_t93_us_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -342,7 +342,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8214" levels="1" name="Dynasty Tunic - PVP">
+	<skill id="8214" levels="1" name="Dynasty Tunic - PvP">
 		<set name="icon" val="icon.armor_t93_uw_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -367,7 +367,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8215" levels="1" name="Dynasty Leather Armor - PVP">
+	<skill id="8215" levels="1" name="Dynasty Leather Armor - PvP">
 		<set name="icon" val="icon.armor_t92_ud_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -392,7 +392,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8216" levels="1" name="Dynasty Leather Armor - PVP">
+	<skill id="8216" levels="1" name="Dynasty Leather Armor - PvP">
 		<set name="icon" val="icon.armor_t92_ub_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -418,7 +418,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8217" levels="1" name="Dynasty Leather Armor - PVP">
+	<skill id="8217" levels="1" name="Dynasty Leather Armor - PvP">
 		<set name="icon" val="icon.armor_t93_ue_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -444,7 +444,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8218" levels="1" name="Dynasty Leather Armor - PVP">
+	<skill id="8218" levels="1" name="Dynasty Leather Armor - PvP">
 		<set name="icon" val="icon.armor_t92_u_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -469,7 +469,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8219" levels="1" name="Dynasty Platinum Plate - PVP">
+	<skill id="8219" levels="1" name="Dynasty Platinum Plate - PvP">
 		<set name="icon" val="icon.armor_t91_uk_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -494,7 +494,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8220" levels="1" name="Dynasty Platinum Plate - PVP">
+	<skill id="8220" levels="1" name="Dynasty Platinum Plate - PvP">
 		<set name="icon" val="icon.armor_t91_uw_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -519,7 +519,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8221" levels="1" name="Dynasty Platinum Plate - PVP">
+	<skill id="8221" levels="1" name="Dynasty Platinum Plate - PvP">
 		<set name="icon" val="icon.armor_t91_uke_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -543,7 +543,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8222" levels="1" name="Dynasty Platinum Plate - PVP">
+	<skill id="8222" levels="1" name="Dynasty Platinum Plate - PvP">
 		<set name="icon" val="icon.armor_t91_uf_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -567,7 +567,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8223" levels="1" name="Dynasty Jewel Leather Armor - PVP">
+	<skill id="8223" levels="1" name="Dynasty Jewel Leather Armor - PvP">
 		<set name="icon" val="icon.armor_t92_ud_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -592,7 +592,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8224" levels="1" name="Dynasty Jewel Leather Armor - PVP">
+	<skill id="8224" levels="1" name="Dynasty Jewel Leather Armor - PvP">
 		<set name="icon" val="icon.armor_t92_ub_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -617,7 +617,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8225" levels="1" name="Dynasty Jewel Leather Armor - PVP">
+	<skill id="8225" levels="1" name="Dynasty Jewel Leather Armor - PvP">
 		<set name="icon" val="icon.armor_t92_ud_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -642,7 +642,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8226" levels="1" name="Dynasty Jewel Leather Armor - PVP">
+	<skill id="8226" levels="1" name="Dynasty Jewel Leather Armor - PvP">
 		<set name="icon" val="icon.armor_t92_ub_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -668,7 +668,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8227" levels="1" name="Dynasty Jewel Leather Armor - PVP">
+	<skill id="8227" levels="1" name="Dynasty Jewel Leather Armor - PvP">
 		<set name="icon" val="icon.armor_t92_ub_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -693,7 +693,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8228" levels="1" name="Dynasty Jewel Leather Armor - PVP">
+	<skill id="8228" levels="1" name="Dynasty Jewel Leather Armor - PvP">
 		<set name="icon" val="icon.armor_t92_ub_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -718,7 +718,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8229" levels="1" name="Dynasty Silver Satin Tunic - PVP">
+	<skill id="8229" levels="1" name="Dynasty Silver Satin Tunic - PvP">
 		<set name="icon" val="icon.armor_t93_uh_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -743,7 +743,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8230" levels="1" name="Dynasty Silver Satin Tunic - PVP">
+	<skill id="8230" levels="1" name="Dynasty Silver Satin Tunic - PvP">
 		<set name="icon" val="icon.armor_t93_ue_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -768,7 +768,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8231" levels="1" name="Dynasty Silver Satin Tunic - PVP">
+	<skill id="8231" levels="1" name="Dynasty Silver Satin Tunic - PvP">
 		<set name="icon" val="icon.armor_t93_us_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -793,7 +793,7 @@
 			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="8232" levels="1" name="Dynasty Silver Satin Tunic - PVP">
+	<skill id="8232" levels="1" name="Dynasty Silver Satin Tunic - PvP">
 		<set name="icon" val="icon.armor_t93_uw_i00"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1086,7 +1086,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="8249" levels="1" name="Cancels Critical Hit">
+	<skill id="8249" levels="1" name="Cancel Critical Hit">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="99"/>
@@ -1231,7 +1231,7 @@
 		<set name="npcId" val="16060"/>
 		<set name="summonType" val="agathion"/>
 	</skill>
-	<skill id="8261" levels="1" name="Steam Beetle Mount">
+	<skill id="8261" levels="1" name="Ride Steam Beetle">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1256,7 +1256,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="8262" levels="1" name="Ride Gold-Maned Lion">
+	<skill id="8262" levels="1" name="Ride Gold Maned Lion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1386,7 +1386,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="8275" levels="1" name="Release Agathion's Seal - PVP">
+	<skill id="8275" levels="1" name="Release Agathion's Seal - PvP">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="magicLevel" val="75"/>

@@ -29,7 +29,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30901" name="Bound Sword of Nightmare" add_name="Light">
+	<weapon id="30901" name="Bound Sword of Nightmare" add_name="Light Armor">
 		<set name="icon" value="icon.weapon_sword_of_nightmare_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -467,7 +467,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30930" name="Bound Akat Long Bow">
+	<weapon id="30930" name="Bound Akat Longbow">
 		<set name="icon" value="icon.weapon_akat_long_bow_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -494,7 +494,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30931" name="Bound Akat Long Bow" add_name="Guidance">
+	<weapon id="30931" name="Bound Akat Longbow" add_name="Guidance">
 		<set name="icon" value="icon.weapon_akat_long_bow_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -524,7 +524,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30932" name="Bound Akat Long Bow" add_name="Evasion">
+	<weapon id="30932" name="Bound Akat Longbow" add_name="Evasion">
 		<set name="icon" value="icon.weapon_akat_long_bow_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -551,7 +551,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30933" name="Bound Akat Long Bow" add_name="Miser">
+	<weapon id="30933" name="Bound Akat Longbow" add_name="Miser">
 		<set name="icon" value="icon.weapon_akat_long_bow_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1029,7 +1029,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30971" name="Bound Samurai Longsword">
+	<weapon id="30971" name="Bound Samurai Long Sword">
 		<set name="icon" value="icon.weapon_samurai_longsword_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1054,7 +1054,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30972" name="Bound Samurai Longsword" add_name="Focus">
+	<weapon id="30972" name="Bound Samurai Long Sword" add_name="Focus">
 		<set name="icon" value="icon.weapon_samurai_longsword_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1082,7 +1082,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30973" name="Bound Samurai Longsword" add_name="Critical Damage">
+	<weapon id="30973" name="Bound Samurai Long Sword" add_name="Critical Damage">
 		<set name="icon" value="icon.weapon_samurai_longsword_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1110,7 +1110,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30974" name="Bound Samurai Longsword" add_name="Haste">
+	<weapon id="30974" name="Bound Samurai Long Sword" add_name="Haste">
 		<set name="icon" value="icon.weapon_samurai_longsword_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1265,7 +1265,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30980" name="Bound Stick of Faith" add_name="Mental Shield">
+	<weapon id="30980" name="Bound Stick of Faith" add_name="Magic Mental Shield">
 		<set name="icon" value="icon.weapon_stick_of_faith_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1523,7 +1523,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="30993" name="Bound Spell Breaker" add_name="Mental Shield">
+	<weapon id="30993" name="Bound Spell Breaker" add_name="Magic Mental Shield">
 		<set name="icon" value="icon.weapon_spell_breaker_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>

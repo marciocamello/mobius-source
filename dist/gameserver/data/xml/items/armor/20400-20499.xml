@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="20400" name="Laborer Hat" add_name="Blessed Soul - 7 day limited period">
+	<armor id="20400" name="Laborer Hat" add_name="Blessed Soul (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -39,7 +39,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="20405" name="Agathion Seal Bracelet - Majo" add_name="Big Head - 7 day limited period">
+	<armor id="20405" name="Agathion - Majo" add_name="Big Head (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -66,7 +66,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20406" name="Agathion Seal Bracelet - Gold Crown Majo" add_name="Resurrection - 7 day limited period">
+	<armor id="20406" name="Agathion - Gold Majo" add_name="Resurrection (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -93,7 +93,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20407" name="Agathion Seal Bracelet - Black Crown Majo" add_name="Escape - 7 day limited period">
+	<armor id="20407" name="Agathion - Black Majo" add_name="Escape (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -120,7 +120,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20408" name="Agathion Seal Bracelet - Plaipitak" add_name="Big Head - 7 day limited period">
+	<armor id="20408" name="Agathion - Plaipitak" add_name="Big Head (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -147,7 +147,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20409" name="Agathion Seal Bracelet - Plaipitak" add_name="Resurrection - 7 day limited period">
+	<armor id="20409" name="Agathion - Plaipitak" add_name="Resurrection (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -174,7 +174,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20410" name="Agathion Seal Bracelet - Plaipitak" add_name="Escape - 7 day limited period">
+	<armor id="20410" name="Agathion - Plaipitak" add_name="Escape (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -201,7 +201,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20411" name="Agathion Seal Bracelet - Baby Panda" add_name="Big Head - 7 day limited period">
+	<armor id="20411" name="Agathion - Baby Panda" add_name="Big Head (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -227,7 +227,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20412" name="Agathion Seal Bracelet - Bamboo Panda" add_name="Resurrection - 7 day limited period">
+	<armor id="20412" name="Agathion - Bamboo Panda" add_name="Resurrection (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -253,7 +253,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20413" name="Agathion Seal Bracelet - Sexy Panda" add_name="Escape - 7 day limited period">
+	<armor id="20413" name="Agathion - Sexy Panda" add_name="Escape (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -279,7 +279,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20414" name="Horn Rimmed Glasses" add_name="Agility - 7 day limited period">
+	<armor id="20414" name="Horn-rimmed Glasses" add_name="Agility (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -303,7 +303,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20415" name="Afro Hair" add_name="Big Head, Firework - 7 day limited period">
+	<armor id="20415" name="Afro Hair" add_name="Big Head, Firework (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -328,7 +328,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20416" name="Afro Hair" add_name="Wind Walk - 7 day limited period">
+	<armor id="20416" name="Afro Hair" add_name="Wind Walk (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -352,7 +352,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20417" name="Uniform Hat" add_name="Blessed Resurrection - 7 day limited period">
+	<armor id="20417" name="Uniform Hat" add_name="Blessed Resurrection (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -376,7 +376,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20418" name="Assassin's Bamboo Hat" add_name="Wind Walk - 7 day limited period">
+	<armor id="20418" name="Assassin's Bamboo Hat" add_name="Wind Walk (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -400,7 +400,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20419" name="Ruthless Tribe Mask" add_name="Agility - 7 day limited period">
+	<armor id="20419" name="Ruthless Tribe Mask" add_name="Agility (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -424,7 +424,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20420" name="Ribbon Hairband" add_name="Reflect Damage - 7 day limited period">
+	<armor id="20420" name="Ribbon Hairband" add_name="Reflect Damage (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -448,7 +448,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20421" name="Visor" add_name="Mana Regeneration - 7 day limited period">
+	<armor id="20421" name="Visor" add_name="Mana Regeneration (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -472,7 +472,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20422" name="Kat the Cat Hat" add_name="Greater Heal - 7 day limited period">
+	<armor id="20422" name="Kat the Cat Hat" add_name="Greater Heal (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -496,7 +496,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20423" name="Skull Hat" add_name="Death Whisper - 7 day limited period">
+	<armor id="20423" name="Skull Hat" add_name="Death Whisper (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -520,7 +520,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20424" name="Afro Hair - Gold" add_name="Agility - 7 day limited period">
+	<armor id="20424" name="Gold Afro" add_name="Agility (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -544,7 +544,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20425" name="Afro Hair - Pink" add_name="Wild Magic - 7 day limited period">
+	<armor id="20425" name="Pink Afro" add_name="Wild Magic (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -568,7 +568,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20426" name="Goggles" add_name="Wind Walk - 7 day limited period">
+	<armor id="20426" name="Goggles" add_name="Wind Walk (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -592,7 +592,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20427" name="Napoleon Hat" add_name="Mana Regeneration - 7 day limited period">
+	<armor id="20427" name="Napoleon Hat" add_name="Mana Regeneration (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -616,7 +616,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20428" name="Horn Hairband" add_name="Reflect Damage - 7 day limited period">
+	<armor id="20428" name="Horn Hairband" add_name="Reflect Damage (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -640,7 +640,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20429" name="Black Gem Mask" add_name="Energy - 7 days limited time">
+	<armor id="20429" name="Black Gem Mask" add_name="Vitality (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -664,7 +664,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20430" name="Plastic Hair" add_name="Blessed Escape - 7 day limited period">
+	<armor id="20430" name="Plastic Hair" add_name="Blessed Escape (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -688,7 +688,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20431" name="Daisy Hairpin" add_name="Resist Unholy - 7 day limited period">
+	<armor id="20431" name="Daisy Hairpin" add_name="Dark Attack Resistance (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -712,7 +712,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20432" name="Forget-me-not Hairpin" add_name="Wind Walk - 7 day limited period">
+	<armor id="20432" name="Forget-me-not Hairpin" add_name="Wind Walk (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -736,7 +736,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20433" name="Outlaw's Eyepatch" add_name="Death Whisper - 7 day limited period">
+	<armor id="20433" name="Outlaw's Eyepatch" add_name="Death Whisper (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -760,7 +760,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20434" name="Pirate's eyepatch" add_name="Agility - 7 day limited period">
+	<armor id="20434" name="Pirate's Eyepatch" add_name="Agility (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -784,7 +784,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20435" name="Monocle" add_name="Wild Magic - 7 day limited period">
+	<armor id="20435" name="Monocle" add_name="Wild Magic (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -808,7 +808,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20436" name="Red Mask of Victory" add_name="Mana Regeneration - 7 day limited period">
+	<armor id="20436" name="Red Mask of Victory" add_name="Mana Regeneration (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -832,7 +832,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20437" name="Red Horn of Victory" add_name="Reflect Damage - 7 day limited period">
+	<armor id="20437" name="Red Horn of Victory" add_name="Reflect Damage (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -856,7 +856,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20438" name="Party Mask" add_name="Greater Heal - 7 day limited period">
+	<armor id="20438" name="Party Mask" add_name="Greater Heal (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -880,7 +880,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20439" name="Red Party Mask" add_name="Resist Unholy - 7 day limited period">
+	<armor id="20439" name="Red Party Mask" add_name="Dark Attack Resistance (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -904,7 +904,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20440" name="Cat Ear" add_name="Wind Walk - 7 day limited period">
+	<armor id="20440" name="Cat Ears" add_name="Wind Walk (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -928,7 +928,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20441" name="Noblewoman's hairpin" add_name="Death Whisper - 7 day limited period">
+	<armor id="20441" name="Lady's Hair Pin" add_name="Death Whisper (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -952,7 +952,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20442" name="Raccoon Ear" add_name="Agility - 7 day limited period">
+	<armor id="20442" name="Raccoon Ears" add_name="Agility (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -976,7 +976,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20443" name="Rabbit Ear" add_name="Wild Magic - 7 day limited period">
+	<armor id="20443" name="Rabbit Ears" add_name="Wild Magic (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1000,7 +1000,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20444" name="Little Angel Wings" add_name="Mana Regeneration - 7 day limited period">
+	<armor id="20444" name="Little Angel Wings" add_name="Mana Regeneration (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1024,7 +1024,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20445" name="Fairy's Tentacle" add_name="Reflect Damage - 7 day limited period">
+	<armor id="20445" name="Fairy Antennae" add_name="Reflect Damage (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1048,7 +1048,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20446" name="Dandy's Chapeau" add_name="Greater Heal - 7 day limited period">
+	<armor id="20446" name="Chapeau" add_name="Greater Heal (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1072,7 +1072,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20447" name="Artisan's Goggles" add_name="Energy - 7 days limited time">
+	<armor id="20447" name="Artisan's Goggles" add_name="Vitality (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1096,7 +1096,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20448" name="Light Purple Maned Horse Mounting Bracelet" add_name="7 day limited period">
+	<armor id="20448" name="Mount - Darkmane Pacer" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1120,7 +1120,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20449" name="Steam Beatle Mounting Bracelet" add_name="7 day limited period">
+	<armor id="20449" name="Mount - Steam Beetle" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1144,7 +1144,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20495" name="Agathion Seal Bracelet - Pomona">
+	<armor id="20495" name="Agathion - Pomona">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1169,7 +1169,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20496" name="Agathion Seal Bracelet - Pomona" add_name="Mental Shield - 7 day limited period">
+	<armor id="20496" name="Agathion - Pomona" add_name="Mental Shield (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>

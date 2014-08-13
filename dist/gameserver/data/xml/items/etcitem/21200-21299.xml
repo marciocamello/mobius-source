@@ -653,7 +653,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21287" name="Extra Pass - Near Kamaloka Pack">
+	<etcitem id="21287" name="Extra Pass: Near Kamaloka Pack">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -661,7 +661,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21288" name="Extra Pass - Near Kamaloka Pack" add_name="Event">
+	<etcitem id="21288" name="Extra Pass: Near Kamaloka Pack" add_name="Event">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -669,7 +669,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21289" name="Extra Pass - Kamaloka (Hall of the Abyss) Pack">
+	<etcitem id="21289" name="Extra Pass: Kamaloka (Hall of the Abyss) Pack">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -677,7 +677,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21290" name="Extra Pass - Kamaloka (Hall of the Abyss) Pack" add_name="Event">
+	<etcitem id="21290" name="Extra Pass: Kamaloka (Hall of the Abyss) Pack" add_name="Event">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -685,7 +685,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21291" name="Extra Pass - Kamaloka (Labyrinth of the Abyss) Pack">
+	<etcitem id="21291" name="Extra Pass: Kamaloka (Labyrinth of the Abyss) Pack">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -693,7 +693,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21292" name="Extra Pass - Kamaloka (Labyrinth of the Abyss) Pack" add_name="Event">
+	<etcitem id="21292" name="Extra Pass: Kamaloka (Labyrinth of the Abyss) Pack" add_name="Event">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -701,7 +701,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21293" name="Lucky Enchant Stone: Enchant Weapon (A-grade) Pack">
+	<etcitem id="21293" name="Lucky Enchant Stone: Weapon Pack (A-grade)">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -709,7 +709,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21294" name="Lucky Enchant Stone: Enchant Weapon (A-grade) Pack" add_name="Event">
+	<etcitem id="21294" name="Lucky Enchant Stone: Weapon Pack (A-grade)" add_name="Event">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -717,7 +717,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21295" name="Lucky Enchant Stone: Enchant Weapon (S-grade) Pack">
+	<etcitem id="21295" name="Lucky Enchant Stone: Weapon Pack (S-grade)">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -725,7 +725,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21296" name="Lucky Enchant Stone: Enchant Weapon (S-grade) Pack" add_name="Event">
+	<etcitem id="21296" name="Lucky Enchant Stone: Weapon Pack (S-grade)" add_name="Event">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -733,7 +733,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21297" name="Lucky Enchant Stone: Enchant Armor (A-grade) Pack">
+	<etcitem id="21297" name="Lucky Enchant Stone: Armor Pack (A-grade)">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -741,7 +741,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21298" name="Lucky Enchant Stone: Enchant Armor (A-grade) Pack" add_name="Event">
+	<etcitem id="21298" name="Lucky Enchant Stone: Armor Pack (A-grade)" add_name="Event">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -749,7 +749,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21299" name="Lucky Enchant Stone: Enchant Armor (S-grade) Pack">
+	<etcitem id="21299" name="Lucky Enchant Stone: Armor Pack (S-grade)">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>

@@ -83,7 +83,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18703" name="Blessed Requiem Dual Blunt Weapon" add_name="Damage">
+	<weapon id="18703" name="Blessed Requiem Dual Blunt Weapon" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -164,7 +164,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18706" name="Apocalypse Shaper" add_name="Focus ">
+	<weapon id="18706" name="Apocalypse Shaper" add_name="Focus">
 		<set name="icon" value="icon.weapon_phasian_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -295,7 +295,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18711" name="Apocalypse Slasher" add_name="Damage">
+	<weapon id="18711" name="Apocalypse Slasher" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_volver_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -451,7 +451,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18717" name="Apocalypse Fighter" add_name="Damage">
+	<weapon id="18717" name="Apocalypse Fighter" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_kirche_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -552,7 +552,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18721" name="Apocalypse Stormer" add_name="Damage">
+	<weapon id="18721" name="Apocalypse Stormer" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_grave_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -578,7 +578,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18722" name="Apocalypse Thrower" add_name="Damage">
+	<weapon id="18722" name="Apocalypse Thrower" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_spina_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -959,7 +959,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18737" name="Apocalypse Dual sword" add_name="Haste">
+	<weapon id="18737" name="Apocalypse Dualsword" add_name="Haste">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -985,7 +985,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18738" name="Apocalypse Dual sword" add_name="Damage">
+	<weapon id="18738" name="Apocalypse Dualsword" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1011,7 +1011,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18739" name="Apocalypse Dual sword" add_name="Health">
+	<weapon id="18739" name="Apocalypse Dualsword" add_name="Health">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1037,7 +1037,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18740" name="Apocalypse Dual Dagger" add_name="Damage">
+	<weapon id="18740" name="Apocalypse Dual Dagger" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -1165,7 +1165,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18745" name="Apocalypse Dual Blunt Weapon" add_name="Damage">
+	<weapon id="18745" name="Apocalypse Dual Blunt Weapon" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -1248,7 +1248,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18748" name="Bound Apocalypse Shaper" add_name="Focus ">
+	<weapon id="18748" name="Bound Apocalypse Shaper" add_name="Focus">
 		<set name="icon" value="icon.weapon_phasian_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1389,7 +1389,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18753" name="Bound Apocalypse Slasher" add_name="Damage">
+	<weapon id="18753" name="Bound Apocalypse Slasher" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_volver_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1557,7 +1557,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18759" name="Bound Apocalypse Fighter" add_name="Damage">
+	<weapon id="18759" name="Bound Apocalypse Fighter" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_kirche_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1666,7 +1666,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18763" name="Bound Apocalypse Stormer" add_name="Damage">
+	<weapon id="18763" name="Bound Apocalypse Stormer" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_grave_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1694,7 +1694,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18764" name="Bound Apocalypse Thrower" add_name="Damage">
+	<weapon id="18764" name="Bound Apocalypse Thrower" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_spina_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -2108,7 +2108,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18779" name="Bound Apocalypse Dual sword" add_name="Haste">
+	<weapon id="18779" name="Bound Apocalypse Dualsword" add_name="Haste">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -2136,7 +2136,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18780" name="Bound Apocalypse Dual sword" add_name="Damage">
+	<weapon id="18780" name="Bound Apocalypse Dualsword" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -2164,7 +2164,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18781" name="Bound Apocalypse Dual sword" add_name="Health">
+	<weapon id="18781" name="Bound Apocalypse Dualsword" add_name="Health">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -2192,7 +2192,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18782" name="Bound Apocalypse Dual Dagger" add_name="Damage">
+	<weapon id="18782" name="Bound Apocalypse Dual Dagger" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -2330,7 +2330,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18787" name="Bound Apocalypse Dual Blunt Weapon" add_name="Damage">
+	<weapon id="18787" name="Bound Apocalypse Dual Blunt Weapon" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -2413,7 +2413,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18790" name="Blessed Apocalypse Shaper" add_name="Focus ">
+	<weapon id="18790" name="Blessed Apocalypse Shaper" add_name="Focus">
 		<set name="icon" value="icon.weapon_phasian_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -2549,7 +2549,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18795" name="Blessed Apocalypse Slasher" add_name="Damage">
+	<weapon id="18795" name="Blessed Apocalypse Slasher" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_volver_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>

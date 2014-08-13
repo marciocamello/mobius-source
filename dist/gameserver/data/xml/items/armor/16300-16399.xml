@@ -234,7 +234,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16312" name="Vesper Gaiter">
+	<armor id="16312" name="Vesper Gaiters">
 		<set name="crystal_count" value="1400"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -255,7 +255,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16313" name="Vesper Leather Legging">
+	<armor id="16313" name="Vesper Leather Leggings">
 		<set name="crystal_count" value="1050"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -298,7 +298,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16315" name="Vesper Gauntlet">
+	<armor id="16315" name="Vesper Gauntlets">
 		<set name="crystal_count" value="560"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -555,7 +555,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16329" name="Sealed Moirai Gaiter">
+	<armor id="16329" name="Sealed Moirai Gaiters">
 		<set name="crystal_count" value="1010"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -573,7 +573,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16330" name="Sealed Moirai Leather Legging">
+	<armor id="16330" name="Sealed Moirai Leather Leggings">
 		<set name="crystal_count" value="758"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -610,7 +610,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16332" name="Sealed Moirai Gauntlet">
+	<armor id="16332" name="Sealed Moirai Gauntlets">
 		<set name="crystal_count" value="404"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -809,7 +809,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16344" name="Sealed Vesper Leather Leather Breastplate">
+	<armor id="16344" name="Sealed Vesper Leather Breastplate">
 		<set name="crystal_count" value="1680"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -846,7 +846,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16346" name="Sealed Vesper Gaiter">
+	<armor id="16346" name="Sealed Vesper Gaiters">
 		<set name="crystal_count" value="1400"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -864,7 +864,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16347" name="Sealed Vesper Leather Legging">
+	<armor id="16347" name="Sealed Vesper Leather Leggings">
 		<set name="crystal_count" value="1050"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -901,7 +901,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16349" name="Sealed Vesper Gauntlet">
+	<armor id="16349" name="Sealed Vesper Gauntlets">
 		<set name="crystal_count" value="560"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>

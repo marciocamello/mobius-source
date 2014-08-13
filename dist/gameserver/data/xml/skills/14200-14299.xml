@@ -36,7 +36,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14206" levels="2" name="Rachiq Evolution">
+	<skill id="14206" levels="2" name="Lachik Evolution">
 		<set name="icon" val="icon.skill1068"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -192,7 +192,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14225" levels="8" name="Control Stage 1">
+	<skill id="14225" levels="8" name="Control Stage 8">
 		<set name="icon" val="icon.skill14225_1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -300,7 +300,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14243" levels="1" name="Octavis's Influence">
+	<skill id="14243" levels="1" name="Hero's Influence">
 		<set name="icon" val="icon.skill0024"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -378,13 +378,13 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14256" levels="2" name="Powerful Cutting">
+	<skill id="14256" levels="2" name="Powerful Slash">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14257" levels="2" name="Nearby Cutting">
+	<skill id="14257" levels="2" name="Nearby Slash">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -396,13 +396,13 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14259" levels="2" name="Double Cutting">
+	<skill id="14259" levels="2" name="Double Slash">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14260" levels="2" name="Life Force Absorb">
+	<skill id="14260" levels="2" name="HP Drain">
 		<set name="icon" val="icon.skill1147"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -459,7 +459,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="target" val="TARGET_ONE"/>
 	</skill>
-	<skill id="14268" levels="1" name="Shock and Terror">
+	<skill id="14268" levels="1" name="Stun and Fear">
 		<set name="icon" val="icon.skill1092"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -525,25 +525,25 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14279" levels="1" name="Octavis's Influence">
+	<skill id="14279" levels="1" name="Octavis' Influence">
 		<set name="icon" val="icon.skill14279"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14280" levels="1" name="Octavis's Influence">
+	<skill id="14280" levels="1" name="Octavis' Influence">
 		<set name="icon" val="icon.skill14279"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14281" levels="1" name="Octavis's Influence">
+	<skill id="14281" levels="1" name="Octavis' Influence">
 		<set name="icon" val="icon.skill14279"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14282" levels="1" name="Octavis's Obedience">
+	<skill id="14282" levels="1" name="Octavis' Obedience">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -561,7 +561,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14285" levels="1" name="Octavis's Arrow Shaft">
+	<skill id="14285" levels="1" name="Octavis' Arrow Shaft">
 		<set name="castRange" val="1000"/>
 		<set name="power" val="50000"/>
 		<set name="coolTime" val="10"/>
@@ -638,7 +638,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14294" levels="7" name="Shock Strike">
+	<skill id="14294" levels="7" name="Stun Strike">
 		<table name="#mpConsume">186 186 197 212 232 244 255</table>
 		<table name="#magicLevel">85</table>
 		<table name="#reuseDelay">120000</table>
@@ -659,19 +659,19 @@
 			<effect name="Stun" abnormalTime="4" val="0" effectPower="135" effectType="STUN" abnormalLvl="1" abnormalType="stun"/>
 		</for>
 	</skill>
-	<skill id="14295" levels="7" name="Range Shock Strike">
+	<skill id="14295" levels="7" name="Range Stun Strike">
 		<set name="icon" val="icon.skill0048"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14296" levels="7" name="Shoot">
+	<skill id="14296" levels="7" name="Shot">
 		<set name="icon" val="icon.skill0056"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14297" levels="7" name="Shock Shot">
+	<skill id="14297" levels="7" name="Stun Shot">
 		<set name="icon" val="icon.skill0101"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="4001" levels="12" name="Windstrike">
+	<skill id="4001" levels="12" name="Gust">
 		<table name="#mpConsume2">10 16 21 28 36 44 52 55 58 60 61 62</table>
 		<table name="#mpConsume1">3 4 6 7 9 11 13 14 15 15 16 16</table>
 		<table name="#hitTime">4000 4000 4000 4000 4000 4000 4000 1000 1000 1000 1000 1000</table>
@@ -21,7 +21,7 @@
 		<set name="skillType" val="MDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="4002" levels="12" name="HP Drain">
+	<skill id="4002" levels="12" name="Blood Siphon">
 		<table name="#mpConsume2">13 22 30 39 50 62 73 77 81 84 86 87</table>
 		<table name="#mpConsume1">4 6 8 10 13 16 19 20 21 21 22 22</table>
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -112,7 +112,7 @@
 			<add order="0x40" stat="defenceWater" val="25"/>
 		</for>
 	</skill>
-	<skill id="4009" levels="5" name="Resist Fire">
+	<skill id="4009" levels="5" name="Fire Resistance">
 		<table name="#Res">25 50 75 100 125</table>
 		<set name="icon" val="icon.skill4009"/>
 		<set name="magicLevel" val="1"/>
@@ -123,7 +123,7 @@
 			<add order="0x40" stat="defenceFire" val="#Res"/>
 		</for>
 	</skill>
-	<skill id="4010" levels="5" name="Resist Water">
+	<skill id="4010" levels="5" name="Water Resistance">
 		<table name="#Res">25 50 75 100 125</table>
 		<set name="icon" val="icon.skill4010"/>
 		<set name="magicLevel" val="1"/>
@@ -134,7 +134,7 @@
 			<add order="0x40" stat="defenceWater" val="#Res"/>
 		</for>
 	</skill>
-	<skill id="4011" levels="5" name="Resist Wind">
+	<skill id="4011" levels="5" name="Wind Resistance">
 		<table name="#Res">25 50 75 100 125</table>
 		<set name="icon" val="icon.skill4011"/>
 		<set name="magicLevel" val="1"/>
@@ -145,7 +145,7 @@
 			<add order="0x40" stat="defenceWind" val="#Res"/>
 		</for>
 	</skill>
-	<skill id="4012" levels="5" name="Resist Earth">
+	<skill id="4012" levels="5" name="Earth Resistance">
 		<table name="#Res">25 50 75 100 125</table>
 		<set name="icon" val="icon.skill4012"/>
 		<set name="magicLevel" val="1"/>
@@ -156,7 +156,7 @@
 			<add order="0x40" stat="defenceEarth" val="#Res"/>
 		</for>
 	</skill>
-	<skill id="4013" levels="1" name="Resistance to Fire, Vulnerable to Water">
+	<skill id="4013" levels="1" name="Fire Resistance, Water Vulnerability">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -167,7 +167,7 @@
 			<sub order="0x40" stat="defenceWater" val="50"/>
 		</for>
 	</skill>
-	<skill id="4014" levels="1" name="Resistance to Water, Vulnerable to Fire">
+	<skill id="4014" levels="1" name="Water Resistance, Fire Vulnerability">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -178,7 +178,7 @@
 			<sub order="0x40" stat="defenceFire" val="50"/>
 		</for>
 	</skill>
-	<skill id="4015" levels="1" name="Resistance to Wind, Vulnerable to Earth">
+	<skill id="4015" levels="1" name="Wind Resistance, Earth Vulnerability">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -189,7 +189,7 @@
 			<sub order="0x40" stat="defenceEarth" val="50"/>
 		</for>
 	</skill>
-	<skill id="4016" levels="1" name="Resistance to Earth, Vulnerable to Wind">
+	<skill id="4016" levels="1" name="Earth Resistance, Wind Vulnerability">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -200,7 +200,7 @@
 			<sub order="0x40" stat="defenceWind" val="50"/>
 		</for>
 	</skill>
-	<skill id="4017" levels="1" name="Queen Ant Brandish">
+	<skill id="4017" levels="1" name="Queen Ant's Blow">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="500"/>
 		<set name="power" val="271"/>
@@ -254,7 +254,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4020" levels="1" name="Heal">
+	<skill id="4020" levels="1" name="Recovery">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="10845"/>
@@ -292,7 +292,7 @@
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4024" levels="1" name="Heal">
+	<skill id="4024" levels="1" name="Recovery">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="10845"/>
@@ -586,7 +586,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4038" levels="5" name="Decrease Atk. Spd.">
+	<skill id="4038" levels="5" name="Shackle">
 		<table name="#Tab-pAtkSpd">0.83 0.83 0.8 0.8 0.77</table>
 		<table name="#mpConsume2">10 16 21 36 52</table>
 		<table name="#mpConsume1">3 4 6 9 13</table>
@@ -713,7 +713,7 @@
 		<set name="skillType" val="HEAL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="4045" levels="1" name="Resist Full Magic Attack">
+	<skill id="4045" levels="1" name="Full Magic Attack Resistance">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="50"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -952,7 +952,7 @@
 		<set name="skillType" val="PASSIVE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4057" levels="1" name="Insect Weak Point">
+	<skill id="4057" levels="1" name="Insect Vulnerability">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -964,7 +964,7 @@
 			</mul>
 		</for>
 	</skill>
-	<skill id="4058" levels="1" name="Plant Weak Point">
+	<skill id="4058" levels="1" name="Animal Vulnerability">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -976,7 +976,7 @@
 			</mul>
 		</for>
 	</skill>
-	<skill id="4059" levels="1" name="Animal Weak Point">
+	<skill id="4059" levels="1" name="Plant Vulnerability">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -988,7 +988,7 @@
 			</mul>
 		</for>
 	</skill>
-	<skill id="4060" levels="1" name="Beast Weak Point">
+	<skill id="4060" levels="1" name="Beast Vulnerability">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1000,7 +1000,7 @@
 			</mul>
 		</for>
 	</skill>
-	<skill id="4061" levels="1" name="Dragon Weak Point">
+	<skill id="4061" levels="1" name="Dragon Vulnerability">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1170,7 +1170,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4071" levels="6" name="Resist Bow/Crossbow Weapons">
+	<skill id="4071" levels="6" name="Bow/Crossbow Resistance">
 		<table name="#bowRcpt">5 10 15 20 25 30</table>
 		<set name="icon" val="icon.skill4071"/>
 		<set name="magicLevel" val="1"/>
@@ -1273,7 +1273,7 @@
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
 	</skill>
-	<skill id="4076" levels="3" name="Slow">
+	<skill id="4076" levels="3" name="Decrease Speed">
 		<table name="#Tab-runSpd">0.85 0.7 0.5</table>
 		<table name="#stack">1 2 3</table>
 		<table name="#mpConsume2">16 28 52</table>
@@ -1394,7 +1394,7 @@
 			<effect abnormal="poison" count="4200" name="PoisonLethal" time="5" val="100"/>
 		</for>
 	</skill>
-	<skill id="4083" levels="1" name="Kalis's Poison">
+	<skill id="4083" levels="1" name="Kalis' Poison">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="800"/>
@@ -1407,7 +1407,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="4084" levels="11" name="Resist Physical Attack">
+	<skill id="4084" levels="11" name="Physical Attack Resistance">
 		<table name="#Tab-pDef">1.05 1.11 1.17 1.25 1.33 1.43 1.67 2.00 3.33 4.12 5.17</table>
 		<set name="icon" val="icon.skill4084"/>
 		<set name="magicLevel" val="1"/>

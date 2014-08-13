@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="34200" name="Player Commendation - Samurai Long Sword (Fire)">
+	<weapon id="34200" name="Player Commendation - Samurai Long Sword (Fire)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_samurai_longsword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="138"/>
@@ -21,7 +21,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34201" name="Player Commendation - Samurai Long Sword (Holy)">
+	<weapon id="34201" name="Player Commendation - Samurai Long Sword (Holy)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_samurai_longsword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="138"/>
@@ -41,7 +41,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34202" name="Player Commendation - Samurai Long Sword (Dark)">
+	<weapon id="34202" name="Player Commendation - Samurai Long Sword (Dark)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_samurai_longsword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="138"/>
@@ -61,7 +61,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34203" name="Player Commendation - Admiral's Estoc (Earth)">
+	<weapon id="34203" name="Player Commendation - Admiral's Estoc (Earth)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_blink_slasher_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="138"/>
@@ -81,7 +81,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34204" name="Player Commendation - Admiral's Estoc (Water)">
+	<weapon id="34204" name="Player Commendation - Admiral's Estoc (Water)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_blink_slasher_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="138"/>
@@ -101,7 +101,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34205" name="Player Commendation - Admiral's Estoc (Wind)">
+	<weapon id="34205" name="Player Commendation - Admiral's Estoc (Wind)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_blink_slasher_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="138"/>
@@ -121,7 +121,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34206" name="Player Commendation - Admiral's Estoc (Fire)">
+	<weapon id="34206" name="Player Commendation - Admiral's Estoc (Fire)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_blink_slasher_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="138"/>
@@ -141,7 +141,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34207" name="Player Commendation - Admiral's Estoc (Holy)">
+	<weapon id="34207" name="Player Commendation - Admiral's Estoc (Holy)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_blink_slasher_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="138"/>
@@ -161,7 +161,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34208" name="Player Commendation - Admiral's Estoc (Dark)">
+	<weapon id="34208" name="Player Commendation - Admiral's Estoc (Dark)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_blink_slasher_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="138"/>
@@ -181,7 +181,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34209" name="Player Commendation - Yaksa Mace (Earth)">
+	<weapon id="34209" name="Player Commendation - Yaksa Mace (Earth)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_yaksa_mace_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="164"/>
@@ -201,7 +201,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34210" name="Player Commendation - Yaksa Mace (Water)">
+	<weapon id="34210" name="Player Commendation - Yaksa Mace (Water)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_yaksa_mace_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="164"/>
@@ -221,7 +221,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34211" name="Player Commendation - Yaksa Mace (Wind)">
+	<weapon id="34211" name="Player Commendation - Yaksa Mace (Wind)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_yaksa_mace_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="164"/>
@@ -241,7 +241,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34212" name="Player Commendation - Yaksa Mace (Fire)">
+	<weapon id="34212" name="Player Commendation - Yaksa Mace (Fire)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_yaksa_mace_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="164"/>
@@ -261,7 +261,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34213" name="Player Commendation - Yaksa Mace (Holy)">
+	<weapon id="34213" name="Player Commendation - Yaksa Mace (Holy)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_yaksa_mace_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="164"/>
@@ -281,7 +281,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34214" name="Player Commendation - Yaksa Mace (Dark)">
+	<weapon id="34214" name="Player Commendation - Yaksa Mace (Dark)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_yaksa_mace_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="164"/>
@@ -301,7 +301,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34215" name="Player Commendation - Eminence Bow (Earth)">
+	<weapon id="34215" name="Player Commendation - Eminence Bow (Earth)" add_name="Guidance (PC-exclusive)">
 		<set name="icon" value="icon.weapon_eminence_bow_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="172"/>
@@ -321,7 +321,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34216" name="Player Commendation - Eminence Bow (Water)">
+	<weapon id="34216" name="Player Commendation - Eminence Bow (Water)" add_name="Guidance (PC-exclusive)">
 		<set name="icon" value="icon.weapon_eminence_bow_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="172"/>
@@ -341,7 +341,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34217" name="Player Commendation - Eminence Bow (Wind)">
+	<weapon id="34217" name="Player Commendation - Eminence Bow (Wind)" add_name="Guidance (PC-exclusive)">
 		<set name="icon" value="icon.weapon_eminence_bow_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="172"/>
@@ -361,7 +361,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34218" name="Player Commendation - Eminence Bow (Fire)">
+	<weapon id="34218" name="Player Commendation - Eminence Bow (Fire)" add_name="Guidance (PC-exclusive)">
 		<set name="icon" value="icon.weapon_eminence_bow_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="172"/>
@@ -381,7 +381,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34219" name="Player Commendation - Eminence Bow (Holy)">
+	<weapon id="34219" name="Player Commendation - Eminence Bow (Holy)" add_name="Guidance (PC-exclusive)">
 		<set name="icon" value="icon.weapon_eminence_bow_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="172"/>
@@ -401,7 +401,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34220" name="Player Commendation - Eminence Bow (Dark)">
+	<weapon id="34220" name="Player Commendation - Eminence Bow (Dark)" add_name="Guidance (PC-exclusive)">
 		<set name="icon" value="icon.weapon_eminence_bow_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="172"/>
@@ -421,7 +421,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34221" name="Player Commendation - Orcish Poleaxe (Earth)">
+	<weapon id="34221" name="Player Commendation - Orcish Poleaxe (Earth)" add_name="Critical Stun (PC-exclusive)">
 		<set name="icon" value="icon.weapon_orcish_poleaxe_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="195"/>
@@ -441,7 +441,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34222" name="Player Commendation - Orcish Poleaxe (Water)">
+	<weapon id="34222" name="Player Commendation - Orcish Poleaxe (Water)" add_name="Critical Stun (PC-exclusive)">
 		<set name="icon" value="icon.weapon_orcish_poleaxe_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="195"/>
@@ -461,7 +461,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34223" name="Player Commendation - Orcish Poleaxe (Wind)">
+	<weapon id="34223" name="Player Commendation - Orcish Poleaxe (Wind)" add_name="Critical Stun (PC-exclusive)">
 		<set name="icon" value="icon.weapon_orcish_poleaxe_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="195"/>
@@ -481,7 +481,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34224" name="Player Commendation - Orcish Poleaxe (Fire)">
+	<weapon id="34224" name="Player Commendation - Orcish Poleaxe (Fire)" add_name="Critical Stun (PC-exclusive)">
 		<set name="icon" value="icon.weapon_orcish_poleaxe_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="195"/>
@@ -501,7 +501,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34225" name="Player Commendation - Orcish Poleaxe (Holy)">
+	<weapon id="34225" name="Player Commendation - Orcish Poleaxe (Holy)" add_name="Critical Stun (PC-exclusive)">
 		<set name="icon" value="icon.weapon_orcish_poleaxe_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="195"/>
@@ -521,7 +521,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34226" name="Player Commendation - Orcish Poleaxe (Dark)">
+	<weapon id="34226" name="Player Commendation - Orcish Poleaxe (Dark)" add_name="Critical Stun (PC-exclusive)">
 		<set name="icon" value="icon.weapon_orcish_poleaxe_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="195"/>
@@ -541,7 +541,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34227" name="Player Commendation - Ecliptic Axe (Earth)">
+	<weapon id="34227" name="Player Commendation - Ecliptic Axe (Earth)" add_name="M. Atk. (PC-exclusive)">
 		<set name="icon" value="icon.weapon_eclipse_axe_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="164"/>
@@ -561,7 +561,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34228" name="Player Commendation - Ecliptic Axe (Water)">
+	<weapon id="34228" name="Player Commendation - Ecliptic Axe (Water)" add_name="M. Atk. (PC-exclusive)">
 		<set name="icon" value="icon.weapon_eclipse_axe_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="164"/>
@@ -581,7 +581,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34229" name="Player Commendation - Ecliptic Axe (Wind)">
+	<weapon id="34229" name="Player Commendation - Ecliptic Axe (Wind)" add_name="M. Atk. (PC-exclusive)">
 		<set name="icon" value="icon.weapon_eclipse_axe_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="164"/>
@@ -601,7 +601,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34230" name="Player Commendation - Ecliptic Axe (Fire)">
+	<weapon id="34230" name="Player Commendation - Ecliptic Axe (Fire)" add_name="M. Atk. (PC-exclusive)">
 		<set name="icon" value="icon.weapon_eclipse_axe_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="164"/>
@@ -621,7 +621,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34231" name="Player Commendation - Ecliptic Axe (Holy)">
+	<weapon id="34231" name="Player Commendation - Ecliptic Axe (Holy)" add_name="M. Atk. (PC-exclusive)">
 		<set name="icon" value="icon.weapon_eclipse_axe_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="164"/>
@@ -641,7 +641,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34232" name="Player Commendation - Ecliptic Axe (Dark)">
+	<weapon id="34232" name="Player Commendation - Ecliptic Axe (Dark)" add_name="M. Atk. (PC-exclusive)">
 		<set name="icon" value="icon.weapon_eclipse_axe_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="164"/>
@@ -661,7 +661,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34233" name="Player Commendation - Crystal Dagger (Earth)">
+	<weapon id="34233" name="Player Commendation - Crystal Dagger (Earth)" add_name="Critical Damage (PC-exclusive)">
 		<set name="icon" value="icon.weapon_crystal_dagger_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="100"/>
@@ -681,7 +681,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34234" name="Player Commendation - Crystal Dagger (Water)">
+	<weapon id="34234" name="Player Commendation - Crystal Dagger (Water)" add_name="Critical Damage (PC-exclusive)">
 		<set name="icon" value="icon.weapon_crystal_dagger_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="100"/>
@@ -701,7 +701,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34235" name="Player Commendation - Crystal Dagger (Wind)">
+	<weapon id="34235" name="Player Commendation - Crystal Dagger (Wind)" add_name="Critical Damage (PC-exclusive)">
 		<set name="icon" value="icon.weapon_crystal_dagger_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="100"/>
@@ -721,7 +721,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34236" name="Player Commendation - Crystal Dagger (Fire)">
+	<weapon id="34236" name="Player Commendation - Crystal Dagger (Fire)" add_name="Critical Damage (PC-exclusive)">
 		<set name="icon" value="icon.weapon_crystal_dagger_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="100"/>
@@ -741,7 +741,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34237" name="Player Commendation - Crystal Dagger (Holy)">
+	<weapon id="34237" name="Player Commendation - Crystal Dagger (Holy)" add_name="Critical Damage (PC-exclusive)">
 		<set name="icon" value="icon.weapon_crystal_dagger_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="100"/>
@@ -761,7 +761,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34238" name="Player Commendation - Crystal Dagger (Dark)">
+	<weapon id="34238" name="Player Commendation - Crystal Dagger (Dark)" add_name="Critical Damage (PC-exclusive)">
 		<set name="icon" value="icon.weapon_crystal_dagger_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="100"/>
@@ -781,7 +781,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34239" name="Player Commendation - Guardian's Sword (Earth)">
+	<weapon id="34239" name="Player Commendation - Guardian's Sword (Earth)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_guardians_sword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="193"/>
@@ -801,7 +801,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34240" name="Player Commendation - Guardian's Sword (Water)">
+	<weapon id="34240" name="Player Commendation - Guardian's Sword (Water)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_guardians_sword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="193"/>
@@ -821,7 +821,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34241" name="Player Commendation - Guardian's Sword (Wind)">
+	<weapon id="34241" name="Player Commendation - Guardian's Sword (Wind)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_guardians_sword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="193"/>
@@ -841,7 +841,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34242" name="Player Commendation - Guardian's Sword (Fire)">
+	<weapon id="34242" name="Player Commendation - Guardian's Sword (Fire)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_guardians_sword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="193"/>
@@ -861,7 +861,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34243" name="Player Commendation - Guardian's Sword (Holy)">
+	<weapon id="34243" name="Player Commendation - Guardian's Sword (Holy)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_guardians_sword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="193"/>
@@ -881,7 +881,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34244" name="Player Commendation - Guardian's Sword (Dark)">
+	<weapon id="34244" name="Player Commendation - Guardian's Sword (Dark)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_guardians_sword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="193"/>
@@ -901,7 +901,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34245" name="Player Commendation - Damascus Sword (Earth)">
+	<weapon id="34245" name="Player Commendation - Damascus Sword (Earth)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_sword_of_damascus_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="135"/>
@@ -921,7 +921,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34246" name="Player Commendation - Damascus Sword (Water)">
+	<weapon id="34246" name="Player Commendation - Damascus Sword (Water)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_sword_of_damascus_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="135"/>
@@ -941,7 +941,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34247" name="Player Commendation - Damascus Sword (Wind)">
+	<weapon id="34247" name="Player Commendation - Damascus Sword (Wind)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_sword_of_damascus_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="135"/>
@@ -961,7 +961,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34248" name="Player Commendation - Damascus Sword (Fire)">
+	<weapon id="34248" name="Player Commendation - Damascus Sword (Fire)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_sword_of_damascus_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="135"/>
@@ -981,7 +981,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34249" name="Player Commendation - Damascus Sword (Holy)">
+	<weapon id="34249" name="Player Commendation - Damascus Sword (Holy)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_sword_of_damascus_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="135"/>
@@ -1001,7 +1001,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34250" name="Player Commendation - Damascus Sword (Dark)">
+	<weapon id="34250" name="Player Commendation - Damascus Sword (Dark)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_sword_of_damascus_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="135"/>
@@ -1021,7 +1021,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34251" name="Player Commendation - Dismantler (Earth)">
+	<weapon id="34251" name="Player Commendation - Dismantler (Earth)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_dismantler_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="193"/>
@@ -1041,7 +1041,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34252" name="Player Commendation - Dismantler (Water)">
+	<weapon id="34252" name="Player Commendation - Dismantler (Water)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_dismantler_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="193"/>
@@ -1061,7 +1061,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34253" name="Player Commendation - Dismantler (Wind)">
+	<weapon id="34253" name="Player Commendation - Dismantler (Wind)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_dismantler_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="193"/>
@@ -1081,7 +1081,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34254" name="Player Commendation - Dismantler (Fire)">
+	<weapon id="34254" name="Player Commendation - Dismantler (Fire)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_dismantler_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="193"/>
@@ -1101,7 +1101,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34255" name="Player Commendation - Dismantler (Holy)">
+	<weapon id="34255" name="Player Commendation - Dismantler (Holy)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_dismantler_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="193"/>
@@ -1121,7 +1121,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34256" name="Player Commendation - Dismantler (Dark)">
+	<weapon id="34256" name="Player Commendation - Dismantler (Dark)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_dismantler_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="193"/>
@@ -1141,7 +1141,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34257" name="Player Commendation - Lance (Earth)">
+	<weapon id="34257" name="Player Commendation - Lance (Earth)" add_name="Critical Stun (PC-exclusive)">
 		<set name="icon" value="icon.weapon_lancia_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="192"/>
@@ -1161,7 +1161,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34258" name="Player Commendation - Lance (Water)">
+	<weapon id="34258" name="Player Commendation - Lance (Water)" add_name="Critical Stun (PC-exclusive)">
 		<set name="icon" value="icon.weapon_lancia_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="192"/>
@@ -1181,7 +1181,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34259" name="Player Commendation - Lance (Wind)">
+	<weapon id="34259" name="Player Commendation - Lance (Wind)" add_name="Critical Stun (PC-exclusive)">
 		<set name="icon" value="icon.weapon_lancia_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="192"/>
@@ -1201,7 +1201,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34260" name="Player Commendation - Lance (Fire)">
+	<weapon id="34260" name="Player Commendation - Lance (Fire)" add_name="Critical Stun (PC-exclusive)">
 		<set name="icon" value="icon.weapon_lancia_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="192"/>
@@ -1221,7 +1221,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34261" name="Player Commendation - Lance (Holy)">
+	<weapon id="34261" name="Player Commendation - Lance (Holy)" add_name="Critical Stun (PC-exclusive)">
 		<set name="icon" value="icon.weapon_lancia_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="192"/>
@@ -1241,7 +1241,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34262" name="Player Commendation - Lance (Dark)">
+	<weapon id="34262" name="Player Commendation - Lance (Dark)" add_name="Critical Stun (PC-exclusive)">
 		<set name="icon" value="icon.weapon_lancia_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="192"/>
@@ -1261,7 +1261,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34263" name="Player Commendation - Bellion Cestus (Earth)">
+	<weapon id="34263" name="Player Commendation - Bellion Cestus (Earth)" add_name="Rsk. Haste (PC-exclusive)">
 		<set name="icon" value="icon.weapon_bellion_cestus_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="139"/>
@@ -1281,7 +1281,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34264" name="Player Commendation - Bellion Cestus (Water)">
+	<weapon id="34264" name="Player Commendation - Bellion Cestus (Water)" add_name="Rsk. Haste (PC-exclusive)">
 		<set name="icon" value="icon.weapon_bellion_cestus_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="139"/>
@@ -1301,7 +1301,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34265" name="Player Commendation - Bellion Cestus (Wind)">
+	<weapon id="34265" name="Player Commendation - Bellion Cestus (Wind)" add_name="Rsk. Haste (PC-exclusive)">
 		<set name="icon" value="icon.weapon_bellion_cestus_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="139"/>
@@ -1321,7 +1321,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34266" name="Player Commendation - Bellion Cestus (Fire)">
+	<weapon id="34266" name="Player Commendation - Bellion Cestus (Fire)" add_name="Rsk. Haste (PC-exclusive)">
 		<set name="icon" value="icon.weapon_bellion_cestus_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="139"/>
@@ -1341,7 +1341,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34267" name="Player Commendation - Bellion Cestus (Holy)">
+	<weapon id="34267" name="Player Commendation - Bellion Cestus (Holy)" add_name="Rsk. Haste (PC-exclusive)">
 		<set name="icon" value="icon.weapon_bellion_cestus_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="139"/>
@@ -1361,7 +1361,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34268" name="Player Commendation - Bellion Cestus (Dark)">
+	<weapon id="34268" name="Player Commendation - Bellion Cestus (Dark)" add_name="Rsk. Haste (PC-exclusive)">
 		<set name="icon" value="icon.weapon_bellion_cestus_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="139"/>
@@ -1381,7 +1381,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34269" name="Player Commendation - Staff of Evil Spirits (Earth)">
+	<weapon id="34269" name="Player Commendation - Staff of Evil Spirits (Earth)" add_name="Blessed Body (PC-exclusive)">
 		<set name="icon" value="icon.weapon_staff_of_evil_sprit_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="93"/>
@@ -1401,7 +1401,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34270" name="Player Commendation - Staff of Evil Spirits (Water)">
+	<weapon id="34270" name="Player Commendation - Staff of Evil Spirits (Water)" add_name="Blessed Body (PC-exclusive)">
 		<set name="icon" value="icon.weapon_staff_of_evil_sprit_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="93"/>
@@ -1421,7 +1421,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34271" name="Player Commendation - Staff of Evil Spirits (Wind)">
+	<weapon id="34271" name="Player Commendation - Staff of Evil Spirits (Wind)" add_name="Blessed Body (PC-exclusive)">
 		<set name="icon" value="icon.weapon_staff_of_evil_sprit_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="93"/>
@@ -1441,7 +1441,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34272" name="Player Commendation - Staff of Evil Spirits (Fire)">
+	<weapon id="34272" name="Player Commendation - Staff of Evil Spirits (Fire)" add_name="Blessed Body (PC-exclusive)">
 		<set name="icon" value="icon.weapon_staff_of_evil_sprit_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="93"/>
@@ -1461,7 +1461,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34273" name="Player Commendation - Staff of Evil Spirits (Holy)">
+	<weapon id="34273" name="Player Commendation - Staff of Evil Spirits (Holy)" add_name="Blessed Body (PC-exclusive)">
 		<set name="icon" value="icon.weapon_staff_of_evil_sprit_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="93"/>
@@ -1481,7 +1481,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34274" name="Player Commendation - Staff of Evil Spirits (Dark)">
+	<weapon id="34274" name="Player Commendation - Staff of Evil Spirits (Dark)" add_name="Blessed Body (PC-exclusive)">
 		<set name="icon" value="icon.weapon_staff_of_evil_sprit_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="93"/>
@@ -1501,7 +1501,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34275" name="Player Commendation - Deadman's Glory (Earth)">
+	<weapon id="34275" name="Player Commendation - Deadman's Glory (Earth)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_deadmans_glory_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="160"/>
@@ -1521,7 +1521,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34276" name="Player Commendation - Deadman's Glory (Water)">
+	<weapon id="34276" name="Player Commendation - Deadman's Glory (Water)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_deadmans_glory_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="160"/>
@@ -1541,7 +1541,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34277" name="Player Commendation - Deadman's Glory (Wind)">
+	<weapon id="34277" name="Player Commendation - Deadman's Glory (Wind)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_deadmans_glory_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="160"/>
@@ -1561,7 +1561,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34278" name="Player Commendation - Deadman's Glory (Fire)">
+	<weapon id="34278" name="Player Commendation - Deadman's Glory (Fire)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_deadmans_glory_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="160"/>
@@ -1581,7 +1581,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34279" name="Player Commendation - Deadman's Glory (Holy)">
+	<weapon id="34279" name="Player Commendation - Deadman's Glory (Holy)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_deadmans_glory_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="160"/>
@@ -1601,7 +1601,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34280" name="Player Commendation - Deadman's Glory (Dark)">
+	<weapon id="34280" name="Player Commendation - Deadman's Glory (Dark)" add_name="Health (PC-exclusive)">
 		<set name="icon" value="icon.weapon_deadmans_glory_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="160"/>
@@ -1621,7 +1621,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34281" name="Player Commendation - Samurai Long Sword*Samurai Long Sword (Earth)">
+	<weapon id="34281" name="Player Commendation - Samurai Long Sword*Samurai Long Sword (Earth)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="208"/>
@@ -1641,7 +1641,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34282" name="Player Commendation - Samurai Long Sword*Samurai Long Sword (Water)">
+	<weapon id="34282" name="Player Commendation - Samurai Long Sword*Samurai Long Sword (Water)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="208"/>
@@ -1661,7 +1661,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34283" name="Player Commendation - Samurai Long Sword*Samurai Long Sword (Wind)">
+	<weapon id="34283" name="Player Commendation - Samurai Long Sword*Samurai Long Sword (Wind)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="208"/>
@@ -1681,7 +1681,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34284" name="Player Commendation - Samurai Long Sword*Samurai Long Sword (Fire)">
+	<weapon id="34284" name="Player Commendation - Samurai Long Sword*Samurai Long Sword (Fire)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="208"/>
@@ -1701,7 +1701,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34285" name="Player Commendation - Samurai Long Sword*Samurai Long Sword (Holy)">
+	<weapon id="34285" name="Player Commendation - Samurai Long Sword*Samurai Long Sword (Holy)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="208"/>
@@ -1721,7 +1721,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34286" name="Player Commendation - Samurai Long Sword*Samurai Long Sword (Dark)">
+	<weapon id="34286" name="Player Commendation - Samurai Long Sword*Samurai Long Sword (Dark)" add_name="PC-exclusive">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="208"/>
@@ -1741,7 +1741,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34287" name="Player Commendation - Demon's Dagger (Earth)">
+	<weapon id="34287" name="Player Commendation - Demon's Dagger (Earth)" add_name="Critical Damage (PC-exclusive)">
 		<set name="icon" value="icon.weapon_demons_sword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="97"/>
@@ -1761,7 +1761,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34288" name="Player Commendation - Demon's Dagger (Water)">
+	<weapon id="34288" name="Player Commendation - Demon's Dagger (Water)" add_name="Critical Damage (PC-exclusive)">
 		<set name="icon" value="icon.weapon_demons_sword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="97"/>
@@ -1781,7 +1781,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34289" name="Player Commendation - Demon's Dagger (Wind)">
+	<weapon id="34289" name="Player Commendation - Demon's Dagger (Wind)" add_name="Critical Damage (PC-exclusive)">
 		<set name="icon" value="icon.weapon_demons_sword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="97"/>
@@ -1801,7 +1801,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34290" name="Player Commendation - Demon's Dagger (Fire)">
+	<weapon id="34290" name="Player Commendation - Demon's Dagger (Fire)" add_name="Critical Damage (PC-exclusive)">
 		<set name="icon" value="icon.weapon_demons_sword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="97"/>
@@ -1821,7 +1821,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34291" name="Player Commendation - Demon's Dagger (Holy)">
+	<weapon id="34291" name="Player Commendation - Demon's Dagger (Holy)" add_name="Critical Damage (PC-exclusive)">
 		<set name="icon" value="icon.weapon_demons_sword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="97"/>
@@ -1841,7 +1841,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34292" name="Player Commendation - Demon's Dagger (Dark)">
+	<weapon id="34292" name="Player Commendation - Demon's Dagger (Dark)" add_name="Critical Damage (PC-exclusive)">
 		<set name="icon" value="icon.weapon_demons_sword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="97"/>
@@ -1861,7 +1861,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34293" name="Player Commendation - Kaim Vanul's Bones (Earth)">
+	<weapon id="34293" name="Player Commendation - Kaim Vanul's Bones (Earth)" add_name="Mana Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_bone_of_kaim_vanul_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="157"/>
@@ -1881,7 +1881,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34294" name="Player Commendation - Kaim Vanul's Bones (Water)">
+	<weapon id="34294" name="Player Commendation - Kaim Vanul's Bones (Water)" add_name="Mana Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_bone_of_kaim_vanul_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="157"/>
@@ -1901,7 +1901,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34295" name="Player Commendation - Kaim Vanul's Bones (Wind)">
+	<weapon id="34295" name="Player Commendation - Kaim Vanul's Bones (Wind)" add_name="Mana Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_bone_of_kaim_vanul_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="157"/>
@@ -1921,7 +1921,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34296" name="Player Commendation - Kaim Vanul's Bones (Fire)">
+	<weapon id="34296" name="Player Commendation - Kaim Vanul's Bones (Fire)" add_name="Mana Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_bone_of_kaim_vanul_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="157"/>
@@ -1941,7 +1941,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34297" name="Player Commendation - Kaim Vanul's Bones (Holy)">
+	<weapon id="34297" name="Player Commendation - Kaim Vanul's Bones (Holy)" add_name="Mana Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_bone_of_kaim_vanul_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="157"/>
@@ -1961,7 +1961,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34298" name="Player Commendation - Kaim Vanul's Bones (Dark)">
+	<weapon id="34298" name="Player Commendation - Kaim Vanul's Bones (Dark)" add_name="Mana Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_bone_of_kaim_vanul_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="157"/>
@@ -1981,7 +1981,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34299" name="Player Commendation - Colichemarde (Earth)">
+	<weapon id="34299" name="Player Commendation - Colichemarde (Earth)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_colichemarde_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="135"/>

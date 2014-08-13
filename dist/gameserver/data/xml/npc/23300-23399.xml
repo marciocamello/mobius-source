@@ -409,7 +409,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="23324" name="Captain" title="">
+	<npc id="23324" name="Captain" title="Nerva Bloodlust">
 		<set name="aggroRange" value="1"/>
 		<set name="collision_height" value="42.0"/>
 		<set name="collision_radius" value="20.0"/>
@@ -460,7 +460,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="23325" name="Archer" title="">
+	<npc id="23325" name="Archer" title="Nerva Bloodlust">
 		<set name="aggroRange" value="1"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="collision_radius" value="14.0"/>
@@ -511,7 +511,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="23326" name="Wizard" title="">
+	<npc id="23326" name="Wizard" title="Nerva Bloodlust">
 		<set name="aggroRange" value="1"/>
 		<set name="collision_height" value="36.0"/>
 		<set name="collision_radius" value="14.0"/>
@@ -562,7 +562,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="23327" name="Soldier" title="">
+	<npc id="23327" name="Soldier" title="Nerva Bloodlust">
 		<set name="aggroRange" value="1"/>
 		<set name="collision_height" value="38.0"/>
 		<set name="collision_radius" value="14.0"/>
@@ -613,7 +613,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="23328" name="Assassin" title="">
+	<npc id="23328" name="Assassin" title="Nerva Bloodlust">
 		<set name="aggroRange" value="1"/>
 		<set name="collision_height" value="32.0"/>
 		<set name="collision_radius" value="13.0"/>

@@ -227,7 +227,7 @@
 		<for/>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="35678" name="Test Shaper">
+	<weapon id="35678" name="Test Shaper" add_name="test">
 		<set name="icon" value="icon.weapon_stanpid_i10"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
@@ -248,7 +248,7 @@
 		<set name="enchant_enabled" value="1"/>
 		<for/>
 	</weapon>
-	<weapon id="35679" name="Test Cutter">
+	<weapon id="35679" name="Test Cutter" add_name="test">
 		<set name="icon" value="icon.weapon_plenitas_i10"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -269,7 +269,7 @@
 		<set name="enchant_enabled" value="1"/>
 		<for/>
 	</weapon>
-	<weapon id="35680" name="Test Slasher">
+	<weapon id="35680" name="Test Slasher" add_name="test">
 		<set name="icon" value="icon.weapon_bauen_i10"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
@@ -290,7 +290,7 @@
 		<set name="enchant_enabled" value="1"/>
 		<for/>
 	</weapon>
-	<weapon id="35681" name="Test Avenger">
+	<weapon id="35681" name="Test Avenger" add_name="test">
 		<set name="icon" value="icon.weapon_qutram_i10"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
@@ -312,7 +312,7 @@
 		<set name="is_magic_weapon" value="true"/>
 		<for/>
 	</weapon>
-	<weapon id="35682" name="Test Fighter">
+	<weapon id="35682" name="Test Fighter" add_name="test">
 		<set name="icon" value="icon.weapon_durga_i10"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="ex_type" value="HAND_TO_HAND"/>
@@ -333,7 +333,7 @@
 		<set name="enchant_enabled" value="1"/>
 		<for/>
 	</weapon>
-	<weapon id="35683" name="Test Stormer">
+	<weapon id="35683" name="Test Stormer" add_name="test">
 		<set name="icon" value="icon.weapon_crabel_i10"/>
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
@@ -354,7 +354,7 @@
 		<set name="enchant_enabled" value="1"/>
 		<for/>
 	</weapon>
-	<weapon id="35684" name="Test Thrower">
+	<weapon id="35684" name="Test Thrower" add_name="test">
 		<set name="icon" value="icon.weapon_castron_i10"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
@@ -375,7 +375,7 @@
 		<set name="enchant_enabled" value="1"/>
 		<for/>
 	</weapon>
-	<weapon id="35685" name="Test Shooter">
+	<weapon id="35685" name="Test Shooter" add_name="test">
 		<set name="icon" value="icon.weapon_stilla_i10"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="ex_type" value="CROSSBOW"/>
@@ -396,7 +396,7 @@
 		<set name="enchant_enabled" value="1"/>
 		<for/>
 	</weapon>
-	<weapon id="35686" name="Test Buster">
+	<weapon id="35686" name="Test Buster" add_name="test">
 		<set name="icon" value="icon.weaon_serapear_i10"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -417,7 +417,7 @@
 		<set name="enchant_enabled" value="1"/>
 		<for/>
 	</weapon>
-	<weapon id="35687" name="Test Caster">
+	<weapon id="35687" name="Test Caster" add_name="test">
 		<set name="icon" value="icon.weapon_pilia_i10"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
@@ -440,7 +440,7 @@
 		<set name="is_magic_weapon" value="true"/>
 		<for/>
 	</weapon>
-	<weapon id="35688" name="Test Retributer">
+	<weapon id="35688" name="Test Retributer" add_name="test">
 		<set name="icon" value="icon.weapon_shaelon_i10"/>
 		<set name="type" value="BIGBLUNT"/>
 		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
@@ -463,7 +463,7 @@
 		<set name="is_magic_weapon" value="true"/>
 		<for/>
 	</weapon>
-	<weapon id="35689" name="Test Dualsword">
+	<weapon id="35689" name="Test Dualsword" add_name="test">
 		<set name="icon" value="icon.weapon_r_dualsword_i10"/>
 		<set name="type" value="DUAL"/>
 		<set name="ex_type" value="DUAL_SWORD"/>
@@ -484,7 +484,7 @@
 		<set name="enchant_enabled" value="1"/>
 		<for/>
 	</weapon>
-	<weapon id="35690" name="Test Dual Dagger">
+	<weapon id="35690" name="Test Dual Dagger" add_name="test">
 		<set name="icon" value="icon.weapon_r_dualdagger_i10"/>
 		<set name="type" value="DUALDAGGER"/>
 		<set name="ex_type" value="DUAL_DAGGER"/>
@@ -505,7 +505,7 @@
 		<set name="enchant_enabled" value="1"/>
 		<for/>
 	</weapon>
-	<weapon id="35691" name="Test Dual Blunt Weapon">
+	<weapon id="35691" name="Test Dual Blunt Weapon" add_name="test">
 		<set name="icon" value="icon.weapon_r_dualblunt_i10"/>
 		<set name="type" value="DUALBLUNT"/>
 		<equip>
@@ -526,7 +526,7 @@
 		<set name="is_magic_weapon" value="true"/>
 		<for/>
 	</weapon>
-	<weapon id="35692" name="Monster's Weapon">
+	<weapon id="35692" name="Monster's Weapon" add_name="test">
 		<set name="icon" value="BranchSys2.icon.br_wp_Caladbulg_i00"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>

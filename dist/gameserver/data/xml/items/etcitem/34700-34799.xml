@@ -10,7 +10,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
 	</etcitem>
-	<etcitem id="34701" name="Giant's Unbind ScrollPack">
+	<etcitem id="34701" name="Giant's Unbind Scroll Pack">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -75,7 +75,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="34736" name="Eva's Box	">
+	<etcitem id="34736" name="Eva's Box">
 		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
@@ -199,7 +199,7 @@
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="34761" name="Firecracker of Fear" add_name="Campaign">
+	<etcitem id="34761" name="Fearsome Firecracker" add_name="Campaign">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

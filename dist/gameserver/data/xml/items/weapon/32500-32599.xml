@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="32500" name="Fantasy Angel Slayer">
+	<weapon id="32500" name="Fantasy Angel Slayer" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_angel_slayer_i00"/>
 		<set name="weight" value="950"/>
 		<set name="rnd_dam" value="5"/>
@@ -25,7 +25,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32501" name="Fantasy Dynasty Knife">
+	<weapon id="32501" name="Fantasy Dynasty Knife" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_dynasty_dagger_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -49,7 +49,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32502" name="Fantasy Dynasty Dual Daggers">
+	<weapon id="32502" name="Fantasy Dynasty Dual Dagger" add_name="Not in Use">
 		<set name="icon" value="icon.dual_dagger_i00"/>
 		<set name="weight" value="2150"/>
 		<set name="rnd_dam" value="10"/>
@@ -72,7 +72,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32503" name="Fantasy Dynasty Phantom">
+	<weapon id="32503" name="Fantasy Dynasty Phantom" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_dynasty_magic_sword_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -95,7 +95,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32504" name="Fantasy Forgotten Blade">
+	<weapon id="32504" name="Fantasy Forgotten Blade" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_forgotten_blade_i00"/>
 		<set name="weight" value="1300"/>
 		<set name="rnd_dam" value="10"/>
@@ -118,7 +118,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32505" name="Fantasy Laevateinn">
+	<weapon id="32505" name="Fantasy Laevateinn" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_leavatein_i00"/>
 		<set name="weight" value="1300"/>
 		<set name="rnd_dam" value="40"/>
@@ -141,7 +141,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32506" name="Fantasy Dynasty Rapier">
+	<weapon id="32506" name="Fantasy Dynasty Rapier" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_dynasty_rapier_i00"/>
 		<set name="weight" value="1280"/>
 		<set name="rnd_dam" value="40"/>
@@ -164,7 +164,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32507" name="Fantasy Heavens Divider">
+	<weapon id="32507" name="Fantasy Heaven's Divider" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_heavens_divider_i00"/>
 		<set name="weight" value="1380"/>
 		<set name="rnd_dam" value="10"/>
@@ -187,7 +187,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32508" name="Fantasy Dynasty Blade">
+	<weapon id="32508" name="Fantasy Dynasty Blade" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_dynasty_twohand_sword_i00"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -210,7 +210,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32509" name="Fantasy Gram">
+	<weapon id="32509" name="Fantasy Gram" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_gram_i00"/>
 		<set name="weight" value="1800"/>
 		<set name="rnd_dam" value="15"/>
@@ -233,7 +233,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32510" name="Fantasy Dynasty Ancient Sword">
+	<weapon id="32510" name="Fantasy Dynasty Ancient Sword" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_dynasty_ancient_sword_i00"/>
 		<set name="weight" value="1800"/>
 		<set name="rnd_dam" value="15"/>
@@ -256,7 +256,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32511" name="Fantasy Draconic Bow">
+	<weapon id="32511" name="Fantasy Draconic Bow" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_draconic_bow_i00"/>
 		<set name="weight" value="1650"/>
 		<set name="rnd_dam" value="5"/>
@@ -281,7 +281,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32512" name="Fantasy Dynasty Bow">
+	<weapon id="32512" name="Fantasy Dynasty Bow" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_dynasty_bow_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -306,7 +306,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32513" name="Fantasy Sarunga">
+	<weapon id="32513" name="Fantasy Sarunga" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_sarnga_i00"/>
 		<set name="weight" value="1600"/>
 		<set name="rnd_dam" value="10"/>
@@ -330,7 +330,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32514" name="Fantasy Dynasty Crossbow">
+	<weapon id="32514" name="Fantasy Dynasty Crossbow" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_dynasty_crossbow_i00"/>
 		<set name="weight" value="1580"/>
 		<set name="rnd_dam" value="10"/>
@@ -354,7 +354,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32515" name="Fantasy Arcana Mace">
+	<weapon id="32515" name="Fantasy Arcana Mace" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_arcana_mace_i00"/>
 		<set name="weight" value="1300"/>
 		<set name="rnd_dam" value="20"/>
@@ -377,7 +377,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32516" name="Fantasy Dynasty Mace">
+	<weapon id="32516" name="Fantasy Dynasty Mace" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_dynasty_staff_i00"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -400,7 +400,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32517" name="Fantasy Imperial Staff">
+	<weapon id="32517" name="Fantasy Imperial Staff" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_imperial_staff_i00"/>
 		<set name="weight" value="910"/>
 		<set name="rnd_dam" value="20"/>
@@ -423,7 +423,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32518" name="Fantasy Dynasty Staff">
+	<weapon id="32518" name="Fantasy Dynasty Staff" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_dynasty_twohand_staff_i00"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -446,7 +446,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32519" name="Fantasy Saint Spear">
+	<weapon id="32519" name="Fantasy Saint Spear" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_saint_spear_i00"/>
 		<set name="weight" value="1800"/>
 		<set name="rnd_dam" value="10"/>
@@ -469,7 +469,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32520" name="Dynasty Halberd">
+	<weapon id="32520" name="Fantasy Dynasty Halberd" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_dynasty_spear_i00"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -492,7 +492,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="32521" name="Fantasy Demon Splinter">
+	<weapon id="32521" name="Fantasy Demon Splinter" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_demon_splinter_i00"/>
 		<set name="weight" value="1350"/>
 		<set name="rnd_dam" value="5"/>
@@ -515,7 +515,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32522" name="Fantasy Dynasty Bagh-Nakh">
+	<weapon id="32522" name="Fantasy Dynasty Bagh-Nakh" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_dynasty_jamadhr_i00"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -538,7 +538,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32523" name="Fantasy Tallum Blade">
+	<weapon id="32523" name="Fantasy Tallum Blade" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_tallum_blade_i00"/>
 		<set name="weight" value="1330"/>
 		<set name="rnd_dam" value="10"/>
@@ -561,7 +561,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32524" name="Fantasy Dynasty Dual Sword">
+	<weapon id="32524" name="Fantasy Dynasty Dualsword" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -584,7 +584,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32541" name="Fantasy Dynasty Shield">
+	<weapon id="32541" name="Fantasy Dynasty Shield" add_name="Not in Use">
 		<set name="icon" value="icon.shield_dynasty_shield_i00"/>
 		<set name="weight" value="1150"/>
 		<equip>
@@ -602,7 +602,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32543" name="Fantasy Icarus Disperser">
+	<weapon id="32543" name="Fantasy Icarus Disperser" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_icarus_disperser_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -626,7 +626,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32544" name="Fantasy Icarus Dual Daggers">
+	<weapon id="32544" name="Fantasy Icarus Dual Daggers" add_name="Not in Use">
 		<set name="icon" value="icon.dual_dagger_i00"/>
 		<set name="weight" value="2100"/>
 		<set name="rnd_dam" value="10"/>
@@ -649,7 +649,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32545" name="Fantasy Icarus Spirit">
+	<weapon id="32545" name="Fantasy Icarus Spirit" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_icarus_spirits_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -672,7 +672,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32546" name="Fantasy Icarus Sawsword">
+	<weapon id="32546" name="Fantasy Icarus Sawsword" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_icarus_sowsword_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -695,7 +695,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32547" name="Fantasy Icarus Stinger">
+	<weapon id="32547" name="Fantasy Icarus Stinger" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_icarus_stinger_i00"/>
 		<set name="weight" value="1280"/>
 		<set name="rnd_dam" value="40"/>
@@ -718,7 +718,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32548" name="Fantasy Icarus Heavy Arms">
+	<weapon id="32548" name="Fantasy Icarus Heavy Arms" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_icarus_heavy_arms_i00"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -741,7 +741,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32549" name="Fantasy Icarus Wingblade">
+	<weapon id="32549" name="Fantasy Icarus Wingblade" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_icarus_wing_blade_i00"/>
 		<set name="weight" value="1800"/>
 		<set name="rnd_dam" value="15"/>
@@ -764,7 +764,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32550" name="Fantasy Icarus Spitter">
+	<weapon id="32550" name="Fantasy Icarus Spitter" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_icarus_spiter_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -789,7 +789,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32551" name="Fantasy Icarus Shooter">
+	<weapon id="32551" name="Fantasy Icarus Shooter" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_icarus_shooter_i00"/>
 		<set name="weight" value="1580"/>
 		<set name="rnd_dam" value="10"/>
@@ -813,7 +813,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32552" name="Fantasy Icarus Hall">
+	<weapon id="32552" name="Fantasy Icarus Hall" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_icarus_stick_i00"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -836,7 +836,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32553" name="Fantasy Icarus Trident">
+	<weapon id="32553" name="Fantasy Icarus Trident" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_icarus_trident_i00"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -859,7 +859,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32554" name="Fantasy Icarus Hand">
+	<weapon id="32554" name="Fantasy Icarus Hand" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_icarus_knuckle_i00"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -882,7 +882,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32555" name="Fantasy Icarus Dual Sword">
+	<weapon id="32555" name="Fantasy Icarus Dualsword" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -905,7 +905,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32572" name="Fantasy Vesper Shaper">
+	<weapon id="32572" name="Fantasy Vesper Shaper" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_vesper_shaper_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -929,7 +929,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32573" name="Fantasy Dual Daggers">
+	<weapon id="32573" name="Fantasy Vesper Dual Daggers" add_name="Not in Use">
 		<set name="icon" value="icon.dual_dagger_i00"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -952,7 +952,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32574" name="Fantasy Vesper Buster">
+	<weapon id="32574" name="Fantasy Vesper Buster" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_vesper_burster_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -975,7 +975,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32575" name="Fantasy Vesper Cutter">
+	<weapon id="32575" name="Fantasy Vesper Cutter" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_vesper_cutter_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -998,7 +998,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32576" name="Fantasy Vesper Pincer">
+	<weapon id="32576" name="Fantasy Vesper Pincer" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_vesper_pincer_i00"/>
 		<set name="weight" value="1280"/>
 		<set name="rnd_dam" value="40"/>
@@ -1021,7 +1021,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32577" name="Fantasy Vesper Slasher">
+	<weapon id="32577" name="Fantasy Vesper Slasher" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_vesper_slasher_i00"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -1044,7 +1044,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32578" name="Fantasy Vesper Nagan">
+	<weapon id="32578" name="Fantasy Vesper Nagan" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_vesper_nagen_i00"/>
 		<set name="weight" value="1800"/>
 		<set name="rnd_dam" value="15"/>
@@ -1067,7 +1067,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32579" name="Fantasy Vesper Thrower">
+	<weapon id="32579" name="Fantasy Vesper Thrower" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_vesper_thrower_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -1092,7 +1092,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32580" name="Fantasy Vesper Shooter">
+	<weapon id="32580" name="Fantasy Vesper Shooter" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_vesper_schutze_i00"/>
 		<set name="weight" value="1580"/>
 		<set name="rnd_dam" value="10"/>
@@ -1116,7 +1116,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32581" name="Fantasy Vesper Caster">
+	<weapon id="32581" name="Fantasy Vesper Caster" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_vesper_caster_i00"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -1139,7 +1139,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32582" name="Fantasy Vesper Avenger">
+	<weapon id="32582" name="Fantasy Vesper Avenger" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_vesper_avenger_i00"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -1162,7 +1162,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32583" name="Fantasy Vesper Singer">
+	<weapon id="32583" name="Fantasy Vesper Singer" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_vesper_singer_i00"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -1185,7 +1185,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32584" name="Fantasy Vesper Retributer">
+	<weapon id="32584" name="Fantasy Vesper Retributer" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_vesper_retributer_i00"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -1208,7 +1208,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32585" name="Fantasy Vesper Stormer">
+	<weapon id="32585" name="Fantasy Vesper Stormer" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_vesper_stormer_i00"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -1231,7 +1231,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32586" name="Fantasy Vesper Fighter">
+	<weapon id="32586" name="Fantasy Vesper Fighter" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_vesper_fighter_i00"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -1254,7 +1254,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="32587" name="Fantasy Vesper Dual Sword">
+	<weapon id="32587" name="Fantasy Vesper Dualsword" add_name="Not in Use">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>

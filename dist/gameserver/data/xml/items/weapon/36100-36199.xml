@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="36119" name="Elegia Shield: Ceremony of Chaos">
+	<weapon id="36119" name="Elegia Shield - Ceremony of Chaos">
 		<set name="icon" value="icon.heavengate_shield_i01"/>
 		<set name="weight" value="1190"/>
 		<set name="type" value="NONE"/>
@@ -21,7 +21,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36193" name="NoItemName">
+	<weapon id="36193" name="Shaper Sealed with Heroes' Power">
 		<set name="icon" value="icon.weapon_the_dagger_of_hero_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="DAGGER"/>
@@ -40,7 +40,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36194" name="NoItemName">
+	<weapon id="36194" name="Cutter Sealed with Heroes' Power">
 		<set name="icon" value="icon.weapon_the_sword_of_hero_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="SWORD"/>
@@ -59,7 +59,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36195" name="NoItemName">
+	<weapon id="36195" name="Slasher Sealed with Heroes' Power">
 		<set name="icon" value="icon.weapon_the_two_handed_sword_of_hero_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="SWORD"/>
@@ -78,7 +78,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36196" name="NoItemName">
+	<weapon id="36196" name="Avenger Sealed with Heroes' Power">
 		<set name="icon" value="icon.weapon_the_axe_of_hero_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="BLUNT"/>
@@ -97,7 +97,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36197" name="NoItemName">
+	<weapon id="36197" name="Fighter Sealed with Heroes' Power">
 		<set name="icon" value="icon.weapon_the_fist_of_hero_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="DUALFIST"/>
@@ -116,7 +116,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36198" name="NoItemName">
+	<weapon id="36198" name="Stormer Sealed with Heroes' Power">
 		<set name="icon" value="icon.weapon_the_pole_of_hero_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="POLE"/>
@@ -135,7 +135,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="36199" name="NoItemName">
+	<weapon id="36199" name="Thrower Sealed with Heroes' Power">
 		<set name="icon" value="icon.weapon_the_bow_of_hero_i01"/>
 		<set name="weight" value="500"/>
 		<set name="type" value="BOW"/>

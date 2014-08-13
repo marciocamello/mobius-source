@@ -4384,7 +4384,7 @@
 			</group>
 		</rewardlist>
 	</npc>
-	<npc id="25885" name="Guillotine of Death" title="">
+	<npc id="25885" name="Guillotine of Death" title="Raid Boss">
 		<set name="type" value="RaidBoss"/>
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
@@ -4717,7 +4717,7 @@
 			<defence attribute="unholy" value="200"/>
 		</attributes>
 	</npc>
-	<npc id="25889" name="Revenant of Sir Calibus" title="">
+	<npc id="25889" name="Revenant of Sir Calibus" title="Raid Fighter">
 		<set name="baseSTR" value="98"/>
 		<set name="baseCON" value="87"/>
 		<set name="baseDEX" value="83"/>
@@ -4766,7 +4766,7 @@
 			<defence attribute="unholy" value="200"/>
 		</attributes>
 	</npc>
-	<npc id="25890" name="Soul Collector Acheron" title="">
+	<npc id="25890" name="Soul Collector Acheron" title="Raid Fighter">
 		<set name="baseSTR" value="98"/>
 		<set name="baseCON" value="87"/>
 		<set name="baseDEX" value="83"/>
@@ -4815,7 +4815,7 @@
 			<defence attribute="unholy" value="200"/>
 		</attributes>
 	</npc>
-	<npc id="25891" name="Evil Spirit Tempest" title="">
+	<npc id="25891" name="Evil Spirit Tempest" title="Raid Fighter">
 		<set name="baseSTR" value="98"/>
 		<set name="baseCON" value="87"/>
 		<set name="baseDEX" value="83"/>
@@ -5026,7 +5026,7 @@
 			<defence attribute="unholy" value="200"/>
 		</attributes>
 	</npc>
-	<npc id="25894" name="Enraged Master Kinen" title="">
+	<npc id="25894" name="Enraged Master Kinen" title="Raid Boss">
 		<set name="baseSTR" value="98"/>
 		<set name="baseCON" value="87"/>
 		<set name="baseDEX" value="83"/>
@@ -5075,7 +5075,7 @@
 			<defence attribute="unholy" value="200"/>
 		</attributes>
 	</npc>
-	<npc id="25895" name="Weak Minion" title="">
+	<npc id="25895" name="Lyn Draco" title="">
 		<set name="baseSTR" value="98"/>
 		<set name="baseCON" value="87"/>
 		<set name="baseDEX" value="83"/>
@@ -5124,7 +5124,7 @@
 			<defence attribute="unholy" value="200"/>
 		</attributes>
 	</npc>
-	<npc id="25896" name="Magic Minion" title="">
+	<npc id="25896" name="Lyn Draco" title="">
 		<set name="baseSTR" value="98"/>
 		<set name="baseCON" value="87"/>
 		<set name="baseDEX" value="83"/>
@@ -5173,7 +5173,7 @@
 			<defence attribute="unholy" value="200"/>
 		</attributes>
 	</npc>
-	<npc id="25897" name="Magic Minion" title="">
+	<npc id="25897" name="Lyn Draco" title="">
 		<set name="baseSTR" value="98"/>
 		<set name="baseCON" value="87"/>
 		<set name="baseDEX" value="83"/>
@@ -5271,7 +5271,7 @@
 			<defence attribute="unholy" value="200"/>
 		</attributes>
 	</npc>
-	<npc id="25899" name="For Falling" title="">
+	<npc id="25899" name="Lindvior" title="Wind Dragon">
 		<set name="baseSTR" value="98"/>
 		<set name="baseCON" value="87"/>
 		<set name="baseDEX" value="83"/>

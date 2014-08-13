@@ -46,7 +46,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33425" name="Vesper Gauntlet of Destiny (Fire, Wind, Dark)">
+	<armor id="33425" name="Vesper Gauntlets of Destiny (Fire, Wind, Dark)">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t94_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -286,7 +286,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33442" name="Vesper Gauntlet of Destiny (Water, Earth, Holy)">
+	<armor id="33442" name="Vesper Gauntlets of Destiny (Water, Earth, Holy)">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.armor_t94_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -481,7 +481,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33470" name="Special Magic Defense Talisman">
+	<armor id="33470" name="Special M. Def. Talisman (Active)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -495,7 +495,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="33471" name="Special Long-range Resistance Talisman">
+	<armor id="33471" name="Special Ranged Attack Resistance Talisman (Active)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -509,7 +509,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="33472" name="Special Magic Defense Talisman">
+	<armor id="33472" name="Special M. Def. Talisman (Active)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -523,7 +523,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="33473" name="Special Long-range Resistance Talisman">
+	<armor id="33473" name="Special Ranged Attack Resistance Talisman (Active)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="13200" name="For PC Cafe Use - Bellion Cestus" add_name="Weapons for PC Cafe Use">
+	<weapon id="13200" name="Player Commendation - Bellion Cestus" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -31,7 +31,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13201" name="For PC cafe use - Hazard Bow" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13201" name="Player Commendation - Bow of Peril" add_name="PC-exclusive Weapon">
 		<set name="atk_reuse" value="1310"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -60,7 +60,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13202" name="For PC Cafe Use - Samurai*Samurai" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13202" name="Player Commendation - Samurai Long Sword*Samurai Long Sword" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -87,7 +87,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13203" name="For PC Cafe Use - Guardian's Sword" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13203" name="Player Commendation - Guardian's Sword" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -116,7 +116,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13204" name="For PC Cafe Use - Wizard's Tear" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13204" name="Player Commendation - Wizard's Tear" add_name="PC-exclusive Weapon">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -146,7 +146,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13205" name="For PC Cafe Use - Kaim Vanul's Bones" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13205" name="Player Commendation - Kaim Vanul's Bones" add_name="PC-exclusive Weapon">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -177,7 +177,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13206" name="For PC Cafe Use - Star Buster" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13206" name="Player Commendation - Star Buster" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -207,7 +207,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13207" name="For PC cafe use - Colichemarde" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13207" name="Player Commendation - Colichemarde" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -238,7 +238,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13208" name="For PC cafe use - Dismantler" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13208" name="Player Commendation - Dismantler" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -265,7 +265,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13209" name="For PC Cafe Use - Hell Hound" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13209" name="Player Commendation - Hell Hound" add_name="PC-exclusive Weapon">
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -296,7 +296,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13210" name="PC cafe' exclusive - Sirra's Blade" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13210" name="Player Commendation - Sirra's Blade" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -325,7 +325,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13211" name="For PC Cafe Use - Sword of Ipos" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13211" name="Player Commendation - Sword of Ipos" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -354,7 +354,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13212" name="For PC Cafe Use - Barakiel's Axe" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13212" name="Player Commendation - Barakiel's Axe" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -384,7 +384,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13213" name="For PC Cafe Use - Behemoth Tuning Fork" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13213" name="Player Commendation - Behemoth' Tuning Fork" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -414,7 +414,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13214" name="For PC Cafe Use - Naga Storm" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13214" name="Player Commendation - Naga Storm" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -444,7 +444,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13215" name="For PC cafe use - Tiphon's Spear" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13215" name="Player Commendation - Tiphon's Spear" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -474,7 +474,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13216" name="For PC cafe use - Shyeed's Bow" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13216" name="Player Commendation - Shyeed's Bow" add_name="PC-exclusive Weapon">
 		<set name="atk_reuse" value="820"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -506,7 +506,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13217" name="For PC Cafe Use - Sobekk's Hurricane" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13217" name="Player Commendation - Sobekk's Hurricane" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -536,7 +536,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13218" name="For PC Cafe Use - Themis' Tongue" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13218" name="Player Commendation - Themis' Tongue" add_name="PC-exclusive Weapon">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -566,7 +566,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13219" name="For PC Cafe Use - Cabrio's Hand" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13219" name="Player Commendation - Cabrio's Hand" add_name="PC-exclusive Weapon">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -597,7 +597,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13220" name="For PC Cafe Use - Daimon Crystal" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13220" name="Player Commendation - Daimon Crystal" add_name="PC-exclusive Weapon">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -628,7 +628,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13221" name="For PC cafe use - Tallum Blade*Damascus" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13221" name="Player Commendation - Tallum Blade*Damascus" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -655,7 +655,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13222" name="For PC Cafe Use - Eclair Bijou" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13222" name="Player Commendation - Eclair Bijou" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -686,7 +686,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13223" name="For PC cafe use - Durendal" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13223" name="Player Commendation - Durendal" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="60"/>
@@ -716,7 +716,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13224" name="For PC Cafe Use - Screaming Vengeance" add_name="Weapons for PC Cafe Use ">
+	<weapon id="13224" name="Player Commendation - Screaming Vengeance" add_name="PC-exclusive Weapon">
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
@@ -747,7 +747,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13248" name="O-type Stick" add_name="7-day Limited Period">
+	<weapon id="13248" name="O Stick" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -773,7 +773,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13249" name="X-type Stick" add_name="7-day Limited Period">
+	<weapon id="13249" name="X Stick" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -799,7 +799,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13250" name="Scissors-type Stick" add_name="7-day Limited Period">
+	<weapon id="13250" name="Scissors Stick" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -825,7 +825,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13251" name="Rock-type Stick" add_name="7-day Limited Period">
+	<weapon id="13251" name="Rock Stick" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -851,7 +851,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13252" name="Paper-type Stick" add_name="7-day Limited Period">
+	<weapon id="13252" name="Paper Stick" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -877,7 +877,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13253" name="Pumpkin Transformation Stick" add_name="7-day Limited Period">
+	<weapon id="13253" name="Pumpkin Transformation Stick" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>

@@ -8983,7 +8983,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="21299" name="Buffalo Slave" title="">
+	<npc id="21299" name="Valley Buffalo Slave" title="">
 		<set name="aggroRange" value="150"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="9100" levels="1" name="Vesper Weapon Box">
+	<skill id="9100" levels="1" name="Vesper Weapon Pack">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -9,7 +9,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9101" levels="1" name="Icarus Weapon Box">
+	<skill id="9101" levels="1" name="Icarus Weapon Pack">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -18,7 +18,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9102" levels="1" name="Dynasty Weapon Box">
+	<skill id="9102" levels="1" name="Dynasty Weapon Pack">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -27,7 +27,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9103" levels="1" name="Box of Vesper Armor">
+	<skill id="9103" levels="1" name="Vesper Armor Pack">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -36,7 +36,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9104" levels="1" name="Box of Moirai Armor">
+	<skill id="9104" levels="1" name="Moirai Armor Pack">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -45,7 +45,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9105" levels="1" name="Box of Dynasty Armor">
+	<skill id="9105" levels="1" name="Dynasty Armor Pack">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -54,7 +54,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9106" levels="1" name="Soul Crystal Box - Level 14">
+	<skill id="9106" levels="1" name="Soul Crystal - Step 14 Box">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -63,7 +63,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9107" levels="1" name="Soul Crystal Box - Level 15">
+	<skill id="9107" levels="1" name="Soul Crystal - Step 15 Box">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -72,7 +72,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9108" levels="1" name="Soul Crystal Box - Level 16">
+	<skill id="9108" levels="1" name="Soul Crystal - Step 16 Box">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -81,7 +81,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9109" levels="1" name="Box of Facelift Potions">
+	<skill id="9109" levels="1" name="Facelifting Potion Pack">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -90,7 +90,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9110" levels="1" name="Box of Haircolor Change Potions">
+	<skill id="9110" levels="1" name="Dye Potion Pack">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -99,7 +99,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9111" levels="1" name="Box of Hairstyle Change Potions">
+	<skill id="9111" levels="1" name="Hairstyle Change Potion Pack">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -108,7 +108,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9112" levels="1" name="Box of Gold Apiga">
+	<skill id="9112" levels="1" name="Golden Apigas Box">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
@@ -117,7 +117,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9113" levels="1" name="Vitality Potion">
+	<skill id="9113" levels="1" name="Vitality Maintaining Potion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_lesser_potion_blue_i00"/>
 		<set name="reuseDelay" val="1800000"/>
@@ -134,7 +134,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9115" levels="1" name="Nevit's Hourglass - 1 hour">
+	<skill id="9115" levels="1" name="XP Buff 50% (1-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -155,7 +155,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="3600" val="0"/>
 		</for>
 	</skill>
-	<skill id="9116" levels="1" name="Nevit's Hourglass - 1.5 hour">
+	<skill id="9116" levels="1" name="XP Buff 50% (1.5-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -176,7 +176,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="5400" val="0"/>
 		</for>
 	</skill>
-	<skill id="9117" levels="1" name="Nevit's Hourglass - 2 hour">
+	<skill id="9117" levels="1" name="XP Buff 50% (2-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -197,7 +197,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="7200" val="0"/>
 		</for>
 	</skill>
-	<skill id="9118" levels="1" name="Nevit's Hourglass - 2.5 hour">
+	<skill id="9118" levels="1" name="XP Buff 50% (2.5-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -218,7 +218,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="9000" val="0"/>
 		</for>
 	</skill>
-	<skill id="9119" levels="1" name="Nevit's Hourglass - 3 hour">
+	<skill id="9119" levels="1" name="XP Buff 50% (3-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -239,7 +239,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="10800" val="0"/>
 		</for>
 	</skill>
-	<skill id="9120" levels="1" name="Nevit's Hourglass - 1 hour">
+	<skill id="9120" levels="1" name="XP Buff 50% (1-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -260,7 +260,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="3600" val="0"/>
 		</for>
 	</skill>
-	<skill id="9121" levels="1" name="Nevit's Hourglass - 1.5 hour">
+	<skill id="9121" levels="1" name="XP Buff 50% (1.5-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -281,7 +281,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="5400" val="0"/>
 		</for>
 	</skill>
-	<skill id="9122" levels="1" name="Nevit's Hourglass - 2 hour">
+	<skill id="9122" levels="1" name="XP Buff 50% (2-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -302,7 +302,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="7200" val="0"/>
 		</for>
 	</skill>
-	<skill id="9123" levels="1" name="Nevit's Hourglass - 2.5 hour">
+	<skill id="9123" levels="1" name="XP Buff 50% (2.5-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -323,7 +323,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="9000" val="0"/>
 		</for>
 	</skill>
-	<skill id="9124" levels="1" name="Nevit's Hourglass - 3 hour">
+	<skill id="9124" levels="1" name="XP Buff 50% (3-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -344,7 +344,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="10800" val="0"/>
 		</for>
 	</skill>
-	<skill id="9125" levels="1" name="Nevit's Hourglass - 1 hour">
+	<skill id="9125" levels="1" name="XP Buff 50% (1-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -365,7 +365,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="3600" val="0"/>
 		</for>
 	</skill>
-	<skill id="9126" levels="1" name="Nevit's Hourglass - 1.5 hour">
+	<skill id="9126" levels="1" name="XP Buff 50% (1.5-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -386,7 +386,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="5400" val="0"/>
 		</for>
 	</skill>
-	<skill id="9127" levels="1" name="Nevit's Hourglass - 2 hour">
+	<skill id="9127" levels="1" name="XP Buff 50% (2-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -407,7 +407,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="7200" val="0"/>
 		</for>
 	</skill>
-	<skill id="9128" levels="1" name="Nevit's Hourglass - 2.5 hour">
+	<skill id="9128" levels="1" name="XP Buff 50% (2.5-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -428,7 +428,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="9000" val="0"/>
 		</for>
 	</skill>
-	<skill id="9129" levels="1" name="Nevit's Hourglass - 3 hour">
+	<skill id="9129" levels="1" name="XP Buff 50% (3-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -449,7 +449,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="10800" val="0"/>
 		</for>
 	</skill>
-	<skill id="9130" levels="1" name="Nevit's Hourglass - 1 hour">
+	<skill id="9130" levels="1" name="XP Buff 50% (1-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -470,7 +470,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="3600" val="0"/>
 		</for>
 	</skill>
-	<skill id="9131" levels="1" name="Nevit's Hourglass - 1.5 hour">
+	<skill id="9131" levels="1" name="XP Buff 50% (1.5-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -491,7 +491,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="5400" val="0"/>
 		</for>
 	</skill>
-	<skill id="9132" levels="1" name="Nevit's Hourglass - 2 hour">
+	<skill id="9132" levels="1" name="XP Buff 50% (2-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -512,7 +512,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="7200" val="0"/>
 		</for>
 	</skill>
-	<skill id="9133" levels="1" name="Nevit's Hourglass - 2.5 hour">
+	<skill id="9133" levels="1" name="XP Buff 50% (2.5-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -533,7 +533,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="9000" val="0"/>
 		</for>
 	</skill>
-	<skill id="9134" levels="1" name="Nevit's Hourglass - 3 hour">
+	<skill id="9134" levels="1" name="XP Buff 50% (3-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -554,7 +554,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="10800" val="0"/>
 		</for>
 	</skill>
-	<skill id="9135" levels="1" name="Nevit's Hourglass - 1 hour">
+	<skill id="9135" levels="1" name="XP Buff 50% (1-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -575,7 +575,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="3600" val="0"/>
 		</for>
 	</skill>
-	<skill id="9136" levels="1" name="Nevit's Hourglass - 1.5 hour">
+	<skill id="9136" levels="1" name="XP Buff 50% (1.5-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -596,7 +596,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="5400" val="0"/>
 		</for>
 	</skill>
-	<skill id="9137" levels="1" name="Nevit's Hourglass - 2 hour">
+	<skill id="9137" levels="1" name="XP Buff 50% (2-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -617,7 +617,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="7200" val="0"/>
 		</for>
 	</skill>
-	<skill id="9138" levels="1" name="Nevit's Hourglass - 2.5 hour">
+	<skill id="9138" levels="1" name="XP Buff 50% (2.5-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -638,7 +638,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="9000" val="0"/>
 		</for>
 	</skill>
-	<skill id="9139" levels="1" name="Nevit's Hourglass - 3 hour">
+	<skill id="9139" levels="1" name="XP Buff 50% (3-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -659,7 +659,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="10800" val="0"/>
 		</for>
 	</skill>
-	<skill id="9140" levels="1" name="Nevit's Hourglass - 1 hour">
+	<skill id="9140" levels="1" name="XP Buff 50% (1-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -680,7 +680,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="3600" val="0"/>
 		</for>
 	</skill>
-	<skill id="9141" levels="1" name="Nevit's Hourglass - 1.5 hour">
+	<skill id="9141" levels="1" name="XP Buff 50% (1.5-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -701,7 +701,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="5400" val="0"/>
 		</for>
 	</skill>
-	<skill id="9142" levels="1" name="Nevit's Hourglass - 2 hour">
+	<skill id="9142" levels="1" name="XP Buff 50% (2-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -722,7 +722,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="7200" val="0"/>
 		</for>
 	</skill>
-	<skill id="9143" levels="1" name="Nevit's Hourglass - 2.5 hour">
+	<skill id="9143" levels="1" name="XP Buff 50% (2.5-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -743,7 +743,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="9000" val="0"/>
 		</for>
 	</skill>
-	<skill id="9144" levels="1" name="Nevit's Hourglass - 3 hour">
+	<skill id="9144" levels="1" name="XP Buff 50% (3-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -764,7 +764,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="10800" val="0"/>
 		</for>
 	</skill>
-	<skill id="9145" levels="1" name="Nevit's Hourglass - 1 hour">
+	<skill id="9145" levels="1" name="XP Buff 50% (1-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -785,7 +785,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="3600" val="0"/>
 		</for>
 	</skill>
-	<skill id="9146" levels="1" name="Nevit's Hourglass - 1.5 hour">
+	<skill id="9146" levels="1" name="XP Buff 50% (1.5-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -806,7 +806,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="5400" val="0"/>
 		</for>
 	</skill>
-	<skill id="9147" levels="1" name="Nevit's Hourglass - 2 hour">
+	<skill id="9147" levels="1" name="XP Buff 50% (2-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -827,7 +827,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="7200" val="0"/>
 		</for>
 	</skill>
-	<skill id="9148" levels="1" name="Nevit's Hourglass - 2.5 hour">
+	<skill id="9148" levels="1" name="XP Buff 50% (2.5-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -848,7 +848,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="9000" val="0"/>
 		</for>
 	</skill>
-	<skill id="9149" levels="1" name="Nevit's Hourglass - 3 hour">
+	<skill id="9149" levels="1" name="XP Buff 50% (3-hour)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="hitCancelTime" val="500"/>
@@ -869,7 +869,7 @@
 			<effect count="1" name="Hourglass" stackOrder="1" stackType="Hourglass" time="10800" val="0"/>
 		</for>
 	</skill>
-	<skill id="9150" levels="1" name="Freesia Bouquet - Event">
+	<skill id="9150" levels="1" name="Freesia Bouquet (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_flower_bouquet_i02"/>
 		<set name="reuseDelay" val="1000"/>
@@ -885,7 +885,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 	</skill>
-	<skill id="9151" levels="1" name="Baby's Breath Bouquet - Event">
+	<skill id="9151" levels="1" name="Baby's Breath Bouquet (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_flower_bouquet_i03"/>
 		<set name="reuseDelay" val="1000"/>
@@ -901,7 +901,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 	</skill>
-	<skill id="9152" levels="1" name="Pink Lady - Event">
+	<skill id="9152" levels="1" name="Pink Lady (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_fruit_cocktail_i02"/>
 		<set name="reuseDelay" val="1000"/>
@@ -917,7 +917,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 	</skill>
-	<skill id="9153" levels="1" name="June Bug - Event">
+	<skill id="9153" levels="1" name="June Bug (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_fruit_cocktail_i03"/>
 		<set name="reuseDelay" val="1000"/>
@@ -933,7 +933,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 	</skill>
-	<skill id="9154" levels="1" name="Soft Cheese Cake - Event">
+	<skill id="9154" levels="1" name="Soft Cheesecake (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_herb_of_cheesecake"/>
 		<set name="reuseDelay" val="1000"/>
@@ -949,7 +949,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 	</skill>
-	<skill id="9155" levels="1" name="Freshly-Baked Baguette - Event">
+	<skill id="9155" levels="1" name="Freshly-Baked Baguette (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_herb_of_baguette"/>
 		<set name="reuseDelay" val="1000"/>
@@ -965,7 +965,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 	</skill>
-	<skill id="9156" levels="1" name="Sweet Cream-filled Bread - Event">
+	<skill id="9156" levels="1" name="Sweet Cream Bun (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_herb_of_cream"/>
 		<set name="reuseDelay" val="1000"/>
@@ -981,7 +981,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 	</skill>
-	<skill id="9157" levels="1" name="White Day Candy - Event">
+	<skill id="9157" levels="1" name="Valentine's Day Candy (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_whiteday_candy_i00"/>
 		<set name="reuseDelay" val="1000"/>
@@ -1060,7 +1060,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9162" levels="1" name="Vesper's Critical P. Atk.">
+	<skill id="9162" levels="1" name="Vesper's Critical Damage">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.weapon_vesper_caster_i00"/>
 		<set name="reuseDelay" val="2000"/>
@@ -1082,7 +1082,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9164" levels="1" name="Special Gift of April Fool's Day - Event">
+	<skill id="9164" levels="1" name="April Fools' Day Special Gift (Event)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="reuseDelay" val="2000"/>
@@ -1091,7 +1091,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9165" levels="1" name="Energy of Sprout">
+	<skill id="9165" levels="1" name="Leaf of Appreciation">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_leaf_green_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -1101,7 +1101,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9166" levels="1" name="Vitality Replenishing Herb Tea">
+	<skill id="9166" levels="1" name="Vitality Recovering Potion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
 		<set name="reuseDelay" val="10000"/>
@@ -1111,37 +1111,37 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="9167" levels="1" name="Nevit's Hourglass - 1 Hour">
+	<skill id="9167" levels="1" name="XP Buff 50% (1-hour)">
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9168" levels="1" name="Nevit's Hourglass - 1.5 hour">
+	<skill id="9168" levels="1" name="XP Buff 50% (1.5-hour)">
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9169" levels="1" name="Nevit's Hourglass - 2 Hour">
+	<skill id="9169" levels="1" name="XP Buff 50% (2-hour)">
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9170" levels="1" name="Nevit's Hourglass - 2.5 hour">
+	<skill id="9170" levels="1" name="XP Buff 50% (2.5-hour)">
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9171" levels="1" name="Nevit's Hourglass - 3 hour">
+	<skill id="9171" levels="1" name="XP Buff 50% (3-hour)">
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9172" levels="1" name="Nevit's Hourglass - 4 hour">
+	<skill id="9172" levels="1" name="XP Buff 50% (4-hour)">
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -1153,13 +1153,13 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9174" levels="1" name="500,000 SP scroll">
+	<skill id="9174" levels="1" name="Scroll: 50,000 SP">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9175" levels="1" name="1,000,000 SP scroll">
+	<skill id="9175" levels="1" name="Scroll: 100,000 SP">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -1183,7 +1183,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9179" levels="1" name="Antharas's Blood Crystal">
+	<skill id="9179" levels="1" name="Antharas' Blood Crystal">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="castRange" val="4000"/>
@@ -1195,31 +1195,31 @@
 		<set name="skillType" val="RESURRECT"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9180" levels="2" name="5,000,000 SP scroll">
+	<skill id="9180" levels="2" name="Scroll: 1,000,000 SP">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9181" levels="1" name="Nevit's Hourglass - 4 hour">
+	<skill id="9181" levels="1" name="XP Buff 50% (4-hour)">
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9182" levels="1" name="Nevit's Hourglass - 4 hour">
+	<skill id="9182" levels="1" name="XP Buff 50% (4-hour)">
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9183" levels="1" name="Freya's Refreshing Breeze - 4 hour(s)">
+	<skill id="9183" levels="1" name="Freya's Refreshing Breeze (4-hour)">
 		<set name="icon" val="icon.etc_I.etc_hot_spring_mineral_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="9184" levels="1" name="Freya's Refreshing Breeze - 4 hour(s)">
+	<skill id="9184" levels="1" name="Freya's Refreshing Breeze (4-hour) (Event)">
 		<set name="icon" val="icon.etc_I.etc_hot_spring_mineral_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -1333,7 +1333,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 	</skill>
-	<skill id="9197" levels="1" name="Scroll: 100,000,000 SP">
+	<skill id="9197" levels="1" name="Scroll: 10,000,000 SP">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="hitTime" val="200"/>

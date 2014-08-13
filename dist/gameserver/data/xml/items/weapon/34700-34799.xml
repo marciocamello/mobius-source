@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="34719" name="Player Commendation - Apocalypse Dualsword (Earth)">
+	<weapon id="34719" name="Player Commendation - Apocalypse Dualsword (Earth)" add_name="Damage Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="155"/>
@@ -21,7 +21,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34720" name="Player Commendation - Apocalypse Dualsword (Water)">
+	<weapon id="34720" name="Player Commendation - Apocalypse Dualsword (Water)" add_name="Damage Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="155"/>
@@ -41,7 +41,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34721" name="Player Commendation - Apocalypse Dualsword (Wind)">
+	<weapon id="34721" name="Player Commendation - Apocalypse Dualsword (Wind)" add_name="Damage Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="155"/>
@@ -61,7 +61,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34722" name="Player Commendation - Apocalypse Dualsword (Fire)">
+	<weapon id="34722" name="Player Commendation - Apocalypse Dualsword (Fire)" add_name="Damage Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="155"/>
@@ -81,7 +81,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34723" name="Player Commendation - Apocalypse Dualsword (Holy)">
+	<weapon id="34723" name="Player Commendation - Apocalypse Dualsword (Holy)" add_name="Damage Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="155"/>
@@ -101,7 +101,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34724" name="Player Commendation - Apocalypse Dualsword (Dark)">
+	<weapon id="34724" name="Player Commendation - Apocalypse Dualsword (Dark)" add_name="Damage Up (PC-exclusive)">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="155"/>
@@ -121,7 +121,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34725" name="Player Commendation - Apocalypse Dual Dagger (Earth)">
+	<weapon id="34725" name="Player Commendation - Apocalypse Dual Dagger (Earth)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="205"/>
@@ -141,7 +141,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34726" name="Player Commendation - Apocalypse Dual Dagger (Water)">
+	<weapon id="34726" name="Player Commendation - Apocalypse Dual Dagger (Water)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="205"/>
@@ -161,7 +161,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34727" name="Player Commendation - Apocalypse Dual Dagger (Wind)">
+	<weapon id="34727" name="Player Commendation - Apocalypse Dual Dagger (Wind)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="205"/>
@@ -181,7 +181,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34728" name="Player Commendation - Apocalypse Dual Dagger (Fire)">
+	<weapon id="34728" name="Player Commendation - Apocalypse Dual Dagger (Fire)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="205"/>
@@ -201,7 +201,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34729" name="Player Commendation - Apocalypse Dual Dagger (Holy)">
+	<weapon id="34729" name="Player Commendation - Apocalypse Dual Dagger (Holy)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="205"/>
@@ -221,7 +221,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="34730" name="Player Commendation - Apocalypse Dual Dagger (Dark)">
+	<weapon id="34730" name="Player Commendation - Apocalypse Dual Dagger (Dark)" add_name="Focus (PC-exclusive)">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="durability" value="180"/>
 		<set name="weight" value="205"/>

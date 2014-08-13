@@ -3226,7 +3226,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="27078" name="Trimden Lord " title="Quest Monster">
+	<npc id="27078" name="Trimden Lord" title="Quest Monster">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>

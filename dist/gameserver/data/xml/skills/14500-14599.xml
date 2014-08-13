@@ -32,7 +32,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14590" levels="1" name="Cry of Fate - Dark Paralyze">
+	<skill id="14590" levels="1" name="Cry of Destiny - Dark Paralysis">
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="DEBUFF"/>
 		<set name="magicLevel" val="85"/>

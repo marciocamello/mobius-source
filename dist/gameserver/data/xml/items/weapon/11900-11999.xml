@@ -27,7 +27,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11901" name="Common Item - Stormbringer*Samurai Long Sword">
+	<weapon id="11901" name="Common Item - StormBringer*Samurai Long Sword">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -212,7 +212,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11908" name="Common Item - Sprite's Staff">
+	<weapon id="11908" name="Common Item - Spirit's Staff">
 		<set name="enchantable" value="false"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="47"/>
@@ -265,7 +265,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11910" name="Common Item - Caliburs*Sword of Limit">
+	<weapon id="11910" name="Common Item - Caliburs*Ultimate Sword">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -501,7 +501,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11919" name="Common Item - Hell Knife">
+	<weapon id="11919" name="Common Item - Twilight Knife">
 		<set name="enchantable" value="false"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="47"/>
@@ -632,7 +632,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11924" name="Common Item - Sword of Limit*Samurai Long Sword">
+	<weapon id="11924" name="Common Item - Ultimate Sword*Samurai Long Sword">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -762,7 +762,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11929" name="Common Item - Guardian Sword">
+	<weapon id="11929" name="Common Item - Guardian's Sword">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="82"/>
 		<set name="crystal_type" value="B"/>
@@ -788,7 +788,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11930" name="Common Item - Sword of Damascus">
+	<weapon id="11930" name="Common Item - Damascus Sword">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="82"/>
 		<set name="crystal_type" value="B"/>
@@ -1027,7 +1027,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11939" name="Common Item - Demon Dagger">
+	<weapon id="11939" name="Common Item - Demon's Dagger">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -1053,7 +1053,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11940" name="Common Item - Demon Dagger">
+	<weapon id="11940" name="Common Item - Demon's Dagger">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
@@ -1189,7 +1189,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11945" name="Common Item - Hellbound">
+	<weapon id="11945" name="Common Item - Hell Hound">
 		<set name="enchantable" value="false"/>
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_count" value="0"/>
@@ -1431,7 +1431,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11954" name="Common Item - Inferno Master">
+	<weapon id="11954" name="Common Item - Infernal Master">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
@@ -1700,7 +1700,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11964" name="Common Item - Dark Legion">
+	<weapon id="11964" name="Common Item - Dark Legion's Edge">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
@@ -2156,7 +2156,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11981" name="Common Item - Behemoth's Tuning Fork">
+	<weapon id="11981" name="Common Item - Behemoth' Tuning Fork">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
@@ -2614,7 +2614,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="11998" name="Common Item - Sarnga">
+	<weapon id="11998" name="Common Item - Sarunga">
 		<set name="enchantable" value="false"/>
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_count" value="0"/>

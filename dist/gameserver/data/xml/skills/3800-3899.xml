@@ -119,7 +119,7 @@
 			<mul order="0x30" stat="regMp" val="1.071"/>
 		</for>
 	</skill>
-	<skill id="3810" levels="1" name="Earring of Black Ore">
+	<skill id="3810" levels="1" name="Black Ore Earring">
 		<set name="icon" val="icon.accessary_earing_of_black_ore_i00"/>
 		<set name="magicLevel" val="61"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -129,7 +129,7 @@
 			<add order="0x60" stat="defenceUnholy" val="5"/>
 		</for>
 	</skill>
-	<skill id="3811" levels="1" name="Necklace of Black Ore">
+	<skill id="3811" levels="1" name="Black Ore Necklace">
 		<set name="icon" val="icon.accessary_necklace_of_black_ore_i00"/>
 		<set name="magicLevel" val="61"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -139,7 +139,7 @@
 			<add order="0x60" stat="stunResist" val="7"/>
 		</for>
 	</skill>
-	<skill id="3812" levels="1" name="Ring of Black Ore">
+	<skill id="3812" levels="1" name="Black Ore Ring">
 		<set name="icon" val="icon.accessary_ring_of_black_ore_i00"/>
 		<set name="magicLevel" val="61"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -377,7 +377,7 @@
 			<trigger id="5666" level="1" type="ATTACK" chance="6"/>
 		</triggers>
 	</skill>
-	<skill id="3835" levels="3" name="Dual-Blade Weapon of Might">
+	<skill id="3835" levels="3" name="Dual-blade Weapon of Might">
 		<table name="#patak">21.2 26.9 51.26</table>
 		<table name="#magicLevel">58 64 82</table>
 		<set name="icon" val="icon.skill1068"/>
@@ -389,7 +389,7 @@
 			<add order="0x60" stat="pAtk" val="#patak"/>
 		</for>
 	</skill>
-	<skill id="3836" levels="2" name="Dual-Blade Weapon of Boost HP">
+	<skill id="3836" levels="2" name="Dual-blade Weapon of Boost HP">
 		<table name="#maxHp">319 492</table>
 		<table name="#magicLevel">61 80</table>
 		<set name="icon" val="icon.skill0211"/>
@@ -401,7 +401,7 @@
 			<add order="0x60" stat="maxHp" val="#maxHp"/>
 		</for>
 	</skill>
-	<skill id="3837" levels="1" name="Dual-Blade Weapon of Critical Damage">
+	<skill id="3837" levels="1" name="Dual-blade Weapon of Critical Damage">
 		<set name="icon" val="icon.skill0193"/>
 		<set name="magicLevel" val="67"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -411,7 +411,7 @@
 			<add order="0x60" stat="cAtkStatic" val="268"/>
 		</for>
 	</skill>
-	<skill id="3838" levels="1" name="Dual-Blade Weapon of Critical Chance">
+	<skill id="3838" levels="1" name="Dual-blade Weapon of Critical Chance">
 		<set name="icon" val="icon.skill1077"/>
 		<set name="magicLevel" val="75"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -421,7 +421,7 @@
 			<add order="0x60" stat="baseCrit" val="54.4"/>
 		</for>
 	</skill>
-	<skill id="3839" levels="1" name="Dual-Blade Weapon of Stun">
+	<skill id="3839" levels="1" name="Dual-blade Weapon of Stun">
 		<set name="icon" val="icon.skill0100"/>
 		<set name="magicLevel" val="70"/>
 		<set name="target" val="TARGET_SELF"/>

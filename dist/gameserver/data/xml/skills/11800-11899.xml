@@ -181,12 +181,12 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant5>
 	</skill>
-	<skill id="11818" levels="1" name="Summoning Price">
+	<skill id="11818" levels="1" name="Price of Summoning">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="11819" levels="1" name="Party Recall">
+	<skill id="11819" levels="1" name="Party Return">
 		<table name="#mpConsume2">90</table>
 		<set name="reuseDelay" val="150000"/>
 		<set name="hitTime" val="3500"/>
@@ -389,7 +389,7 @@
 		<set name="relationSkillsId" val="1553;"/>
 		<enchant1 levels="10" name="Cost"/>
 	</skill>
-	<skill id="11830" levels="1" name="Saha the Blessing">
+	<skill id="11830" levels="1" name="Blessing of Saha">
 		<table name="#mpConsume2">70</table>
 		<table name="#time">1800</table>
 		<set name="magicType" val="MAGIC"/>

@@ -92,7 +92,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="21301" name="Gaze of Nightmare" title="">
+	<npc id="21301" name="Gaze of Nightmares" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
@@ -363,7 +363,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="21304" name="Grendel Slave" title="">
+	<npc id="21304" name="Valley Grendel Slave" title="">
 		<set name="aggroRange" value="150"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
@@ -547,7 +547,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="21306" name="Disciples of Protection" title="">
+	<npc id="21306" name="Disciple of Protection" title="">
 		<set name="aggroRange" value="150"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
@@ -3998,7 +3998,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="21336" name="Ketra Orc White Captain" title="">
+	<npc id="21336" name="Ketra Orc Centurion" title="">
 		<set name="aggroRange" value="150"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
@@ -4867,7 +4867,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="21343" name="Ketra Commander" title="">
+	<npc id="21343" name="Ketra's Commander" title="">
 		<set name="aggroRange" value="150"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
@@ -4956,7 +4956,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="21344" name="Ketra Elite Royal Guard" title="">
+	<npc id="21344" name="Ketra's Elite Royal Guard" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
@@ -5216,7 +5216,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="21347" name="Ketra Prophet" title="">
+	<npc id="21347" name="Ketra's Prophet" title="">
 		<set name="aggroRange" value="150"/>
 		<set name="ai_type" value="Priest"/>
 		<set name="baseAtkRange" value="40"/>

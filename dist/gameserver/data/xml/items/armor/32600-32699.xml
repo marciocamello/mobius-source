@@ -534,7 +534,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32636" name="Low-grade Magic Ornament Immortal Belt" add_name="PVP Defense">
+	<armor id="32636" name="Low-grade Magic Ornament Immortal Belt" add_name="PvP Defense">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="21"/>
@@ -551,7 +551,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32637" name="Standard Magic Ornament Immortal Belt" add_name="PVP Defense">
+	<armor id="32637" name="Standard Magic Ornament Immortal Belt" add_name="PvP Defense">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="21"/>
@@ -568,7 +568,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32638" name="High-grade Magic Ornament Immortal Belt" add_name="PVP Defense">
+	<armor id="32638" name="High-grade Magic Ornament Immortal Belt" add_name="PvP Defense">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="21"/>
@@ -585,7 +585,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32639" name="Top-grade Magic Ornament Immortal Belt" add_name="PVP Defense">
+	<armor id="32639" name="Top-grade Magic Ornament Immortal Belt" add_name="PvP Defense">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="21"/>
@@ -619,7 +619,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32641" name="Ordinary Magic Rune Clip Twilight Belt" add_name="HP Recovery">
+	<armor id="32641" name="Standard Magic Rune Clip Twilight Belt" add_name="HP Recovery">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="64"/>
@@ -687,7 +687,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32645" name="Ordinary Magic Rune Clip Twilight Belt" add_name="MP Recovery">
+	<armor id="32645" name="Standard Magic Rune Clip Twilight Belt" add_name="MP Recovery">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="64"/>
@@ -755,7 +755,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32649" name="Ordinary Magic Ornament Twilight Belt" add_name="PvP Physical Attack">
+	<armor id="32649" name="Standard Magic Ornament Twilight Belt" add_name="PvP Physical Attack">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="64"/>
@@ -823,7 +823,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32653" name="Ordinary Magic Ornament Twilight Belt" add_name="PvP Skill Attack">
+	<armor id="32653" name="Standard Magic Ornament Twilight Belt" add_name="PvP Skill Attack">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="64"/>
@@ -874,7 +874,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32656" name="Low-grade Magic Ornament Twilight Belt" add_name="PVP Defense">
+	<armor id="32656" name="Low-grade Magic Ornament Twilight Belt" add_name="PvP Defense">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="64"/>
@@ -891,7 +891,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32657" name="Ordinary Magic Ornament Twilight Belt" add_name="PVP Defense">
+	<armor id="32657" name="Standard Magic Ornament Twilight Belt" add_name="PvP Defense">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="64"/>
@@ -908,7 +908,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32658" name="High-grade Magic Ornament Twilight Belt" add_name="PVP Defense">
+	<armor id="32658" name="High-grade Magic Ornament Twilight Belt" add_name="PvP Defense">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="64"/>
@@ -925,7 +925,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32659" name="Top-grade Magic Ornament Twilight Belt" add_name="PVP Defense">
+	<armor id="32659" name="Top-grade Magic Ornament Twilight Belt" add_name="PvP Defense">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="64"/>
@@ -1214,7 +1214,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32676" name="Low-grade Magic Ornament Seraph Belt" add_name="PVP Defense">
+	<armor id="32676" name="Low-grade Magic Ornament Seraph Belt" add_name="PvP Defense">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="146"/>
@@ -1231,7 +1231,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32677" name="Standard Magic Ornament Seraph Belt" add_name="PVP Defense">
+	<armor id="32677" name="Standard Magic Ornament Seraph Belt" add_name="PvP Defense">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="146"/>
@@ -1248,7 +1248,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32678" name="High-grade Magic Ornament Seraph Belt" add_name="PVP Defense">
+	<armor id="32678" name="High-grade Magic Ornament Seraph Belt" add_name="PvP Defense">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="146"/>
@@ -1265,7 +1265,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32679" name="Top-grade Magic Ornament Seraph Belt" add_name="PVP Defense">
+	<armor id="32679" name="Top-grade Magic Ornament Seraph Belt" add_name="PvP Defense">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="146"/>
@@ -1554,7 +1554,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32696" name="Low-grade Magic Ornament Eternal Belt" add_name="PVP Defense">
+	<armor id="32696" name="Low-grade Magic Ornament Eternal Belt" add_name="PvP Defense">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="379"/>
@@ -1571,7 +1571,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32697" name="Standard Magic Ornament Eternal Belt" add_name="PVP Defense">
+	<armor id="32697" name="Standard Magic Ornament Eternal Belt" add_name="PvP Defense">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="379"/>
@@ -1588,7 +1588,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32698" name="High-grade Magic Ornament Eternal Belt" add_name="PVP Defense">
+	<armor id="32698" name="High-grade Magic Ornament Eternal Belt" add_name="PvP Defense">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="379"/>
@@ -1605,7 +1605,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32699" name="Top-grade Magic Ornament Eternal Belt" add_name="PVP Defense">
+	<armor id="32699" name="Top-grade Magic Ornament Eternal Belt" add_name="PvP Defense">
 		<set name="crystal_type" value="R99"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="379"/>

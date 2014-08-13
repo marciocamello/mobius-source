@@ -154,7 +154,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31310" name="Bound Deadman's Staff" add_name="Mental Shield">
+	<weapon id="31310" name="Bound Deadman's Staff" add_name="Magic Mental Shield">
 		<set name="icon" value="icon.weapon_deadmans_staff_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -387,7 +387,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31341" name="Bound Long Bow">
+	<weapon id="31341" name="Bound Longbow">
 		<set name="icon" value="icon.weapon_long_bow_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1364,7 +1364,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31395" name="Bound Dragon Flame Skull">
+	<weapon id="31395" name="Bound Flaming Dragon Skull">
 		<set name="icon" value="icon.weapon_dragon_flame_head_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1389,7 +1389,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31396" name="Bound Dragon Flame Skull" add_name="Acumen">
+	<weapon id="31396" name="Bound Flaming Dragon Skull" add_name="Acumen">
 		<set name="icon" value="icon.weapon_dragon_flame_head_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1417,7 +1417,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31397" name="Bound Dragon Flame Skull" add_name="M. Atk.">
+	<weapon id="31397" name="Bound Flaming Dragon Skull" add_name="M. Atk.">
 		<set name="icon" value="icon.weapon_dragon_flame_head_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1442,7 +1442,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31398" name="Bound Dragon Flame Skull" add_name="Magic Silence">
+	<weapon id="31398" name="Bound Flaming Dragon Skull" add_name="Magic Silence">
 		<set name="icon" value="icon.weapon_dragon_flame_head_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>

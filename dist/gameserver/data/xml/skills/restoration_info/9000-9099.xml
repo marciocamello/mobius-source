@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "restoration_info.dtd">
 <list>
-	<restoration skill_id="9027" skill_level="1" name="PC cafe personal instant lottery">
+	<restoration skill_id="9027" skill_level="1" name="Player Commendation Instant Lottery Ticket">
 		<group chance="0.0010">
 			<item id="15359" min_count="1" max_count="1"/>
 		</group>
@@ -2677,7 +2677,7 @@
 			<item id="15479" min_count="5" max_count="5"/>
 		</group>
 	</restoration>
-	<restoration skill_id="9064" skill_level="1" name="Halloween Toy Chest">
+	<restoration skill_id="9064" skill_level="1" name="Halloween Toy Box">
 		<group chance="20.0">
 			<item id="15443" min_count="1" max_count="1"/>
 		</group>
@@ -2694,7 +2694,7 @@
 			<item id="15447" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="9065" skill_level="1" name="Shiny Halloween Toy Chest">
+	<restoration skill_id="9065" skill_level="1" name="Shiny Halloween Toy Box">
 		<group chance="20.0">
 			<item id="15450" min_count="1" max_count="1"/>
 		</group>
@@ -2711,7 +2711,7 @@
 			<item id="15449" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="9066" skill_level="1" name="Scroll of Transformation Box">
+	<restoration skill_id="9066" skill_level="1" name="Transformation Scroll Pack">
 		<group chance="33.0">
 			<item id="10131" min_count="1" max_count="1"/>
 		</group>
@@ -2732,7 +2732,7 @@
 			<item id="10649" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="9071" skill_level="1" name="Halloween Pumpkin - event">
+	<restoration skill_id="9071" skill_level="1" name="Halloween Pumpkin (Event)">
 		<group chance="50.0">
 			<item id="15463" min_count="1" max_count="1"/>
 			<item id="14055" min_count="1" max_count="1"/>
@@ -2785,7 +2785,7 @@
 			<item id="15715" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="9080" skill_level="1" name="Santa's Sock">
+	<restoration skill_id="9080" skill_level="1" name="Santa's Stockings">
 		<group chance="82.9">
 			<item id="16408" min_count="1" max_count="1"/>
 			<item id="14739" min_count="1" max_count="1"/>
@@ -2804,7 +2804,7 @@
 			<item id="14681" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="9085" skill_level="1" name="Santa Claus's Gift">
+	<restoration skill_id="9085" skill_level="1" name="Santa' Gift">
 		<group chance="4.98E-5">
 			<item id="13457" min_count="1" max_count="1"/>
 		</group>

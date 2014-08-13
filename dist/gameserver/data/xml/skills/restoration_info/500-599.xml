@@ -6,7 +6,7 @@
 			<item id="10112" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="519" skill_level="1" name="Quiver of Bolts: A Grade">
+	<restoration skill_id="519" skill_level="1" name="Quiver of Bolts (A-grade)">
 		<group chance="30.0">
 			<item id="9636" min_count="700" max_count="700"/>
 		</group>
@@ -17,7 +17,7 @@
 			<item id="9636" min_count="2800" max_count="2800"/>
 		</group>
 	</restoration>
-	<restoration skill_id="520" skill_level="1" name="Quiver of Bolts: S Grade">
+	<restoration skill_id="520" skill_level="1" name="Quiver of Bolts (S-grade)">
 		<group chance="30.0">
 			<item id="9637" min_count="900" max_count="900"/>
 		</group>

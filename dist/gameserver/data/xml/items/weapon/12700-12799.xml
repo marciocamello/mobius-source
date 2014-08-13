@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="12793" name="O Stick" add_name="30 day limited period">
+	<weapon id="12793" name="O Stick" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -27,7 +27,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12794" name="X Stick" add_name="30 day limited period">
+	<weapon id="12794" name="X Stick" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -53,7 +53,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12795" name="Scissors Stick" add_name="30 day limited period">
+	<weapon id="12795" name="Scissors Stick" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -79,7 +79,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12796" name="Rock Stick" add_name="30 day limited period">
+	<weapon id="12796" name="Rock Stick" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -105,7 +105,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="12797" name="Paper Stick" add_name="30 day limited period">
+	<weapon id="12797" name="Paper Stick" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>

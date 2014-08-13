@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="6200" levels="1" name="NPC Transform Dispel">
+	<skill id="6200" levels="1" name="Dispel NPC Transformation">
 		<set name="icon" val="icon.skilltransform2"/>
 		<set name="magicLevel" val="56"/>
 		<set name="castRange" val="900"/>
@@ -9,7 +9,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6201" levels="1" name="Transformation Condition - Frog">
+	<skill id="6201" levels="1" name="Transformed: Frog">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="castRange" val="900"/>
@@ -25,7 +25,7 @@
 			<effect count="1" name="Transformation" time="520" val="111" stackOrder="100" stackType="SpeedUp"/>
 		</for>
 	</skill>
-	<skill id="6202" levels="1" name="Transformation Condition - Young Child">
+	<skill id="6202" levels="1" name="Transformed: Young Child">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="castRange" val="900"/>
@@ -41,7 +41,7 @@
 			<effect count="1" name="Transformation" time="460" val="112" stackOrder="100" stackType="SpeedUp"/>
 		</for>
 	</skill>
-	<skill id="6203" levels="1" name="Transformed Condition - Native">
+	<skill id="6203" levels="1" name="Transformed: Native">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="castRange" val="900"/>
@@ -57,7 +57,7 @@
 			<effect count="1" name="Transformation" time="215" val="101" stackOrder="100" stackType="SpeedUp"/>
 		</for>
 	</skill>
-	<skill id="6204" levels="1" name="Transformed Condition - Guards of the Dawn">
+	<skill id="6204" levels="1" name="Transformed: Guards of the Dawn">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="castRange" val="900"/>
@@ -186,126 +186,126 @@
 			<mul order="0x70" stat="runSpd" val="#rate"/>
 		</for>
 	</skill>
-	<skill id="6217" levels="1" name="Raid Boss - Level 81">
+	<skill id="6217" levels="1" name="Raid Boss (Lv. 81)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6218" levels="1" name="Raid Boss - Level 81">
+	<skill id="6218" levels="1" name="Raid Boss (Lv. 81)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6219" levels="1" name="Raid Boss - Level 81">
+	<skill id="6219" levels="1" name="Raid Boss (Lv. 81)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6220" levels="1" name="Raid Boss - Level 81">
+	<skill id="6220" levels="1" name="Raid Boss (Lv. 81)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6221" levels="1" name="Raid Boss - Level 82">
+	<skill id="6221" levels="1" name="Raid Boss (Lv. 82)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6222" levels="1" name="Raid Boss - Level 84">
+	<skill id="6222" levels="1" name="Raid Boss (Lv. 84)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6223" levels="1" name="Raid Boss - Level 84">
+	<skill id="6223" levels="1" name="Raid Boss (Lv. 84)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6224" levels="1" name="Raid Boss - Level 84">
+	<skill id="6224" levels="1" name="Raid Boss (Lv. 84)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6225" levels="1" name="Raid Boss - Level 84">
+	<skill id="6225" levels="1" name="Raid Boss (Lv. 84)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6226" levels="1" name="Raid Boss - Level 84">
+	<skill id="6226" levels="1" name="Raid Boss (Lv. 84)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6227" levels="1" name="Raid Boss - Level 84">
+	<skill id="6227" levels="1" name="Raid Boss (Lv. 84)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6228" levels="1" name="Raid Boss - Level 83">
+	<skill id="6228" levels="1" name="Raid Boss (Lv. 83)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6229" levels="1" name="Raid Boss - Level 84">
+	<skill id="6229" levels="1" name="Raid Boss (Lv. 84)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6230" levels="1" name="Raid Boss - Level 82">
+	<skill id="6230" levels="1" name="Raid Boss (Lv. 82)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6231" levels="1" name="Raid Boss - Level 82">
+	<skill id="6231" levels="1" name="Raid Boss (Lv. 82)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6232" levels="1" name="Raid Boss - Level 83">
+	<skill id="6232" levels="1" name="Raid Boss (Lv. 83)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6233" levels="1" name="Raid Boss - Level 83">
+	<skill id="6233" levels="1" name="Raid Boss (Lv. 83)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6234" levels="1" name="Presentation - Adena Firework">
+	<skill id="6234" levels="1" name="Presentation - Adena Firecracker">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="80"/>
@@ -320,7 +320,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6236" levels="1" name="Presentation - Party Recall">
+	<skill id="6236" levels="1" name="Presentation - Party Return">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -329,7 +329,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6237" levels="1" name="Speed Decrease">
+	<skill id="6237" levels="1" name="Decrease Speed">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill1160"/>
 		<set name="magicLevel" val="84"/>
@@ -339,7 +339,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="saveVs" val="MEN"/>
 	</skill>
-	<skill id="6238" levels="1" name="Speed Decrease">
+	<skill id="6238" levels="1" name="Decrease Speed">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill1160"/>
 		<set name="magicLevel" val="84"/>
@@ -350,7 +350,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="saveVs" val="MEN"/>
 	</skill>
-	<skill id="6239" levels="1" name="Proof of Space and Time">
+	<skill id="6239" levels="1" name="Proof of Time and Space">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="1000"/>
@@ -455,14 +455,14 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="saveVs" val="MEN"/>
 	</skill>
-	<skill id="6251" levels="1" name="Summon Humidity">
+	<skill id="6251" levels="1" name="Summon Sultriness">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6252" levels="1" name="Humidity Attack">
+	<skill id="6252" levels="1" name="Sultriness Attack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="1000"/>
 		<set name="magicLevel" val="85"/>
@@ -598,7 +598,7 @@
 		<set name="skillType" val="MDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6265" levels="1" name="Smoke">
+	<skill id="6265" levels="1" name="Smokescreen">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="500"/>
 		<set name="reuseDelay" val="3000"/>
@@ -612,7 +612,7 @@
 		<set name="skillType" val="MDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6266" levels="1" name="Shock">
+	<skill id="6266" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill0100"/>
 		<set name="coolTime" val="500"/>
@@ -631,7 +631,7 @@
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="3" val="0"/>
 		</for>
 	</skill>
-	<skill id="6267" levels="1" name="Soul Absorb">
+	<skill id="6267" levels="1" name="Soul Drain">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="2617"/>
 		<set name="magicLevel" val="84"/>
@@ -655,7 +655,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6269" levels="1" name="Poison Gas">
+	<skill id="6269" levels="1" name="Trojan Poison">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill4036"/>
 		<set name="castRange" val="1100"/>
@@ -669,7 +669,7 @@
 		<set name="trait" val="POISON"/>
 		<set name="saveVs" val="CON"/>
 	</skill>
-	<skill id="6270" levels="1" name="Grima Power Up">
+	<skill id="6270" levels="1" name="Poison Gas">
 		<set name="icon" val="icon.skill4036"/>
 		<set name="magicLevel" val="84"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -822,7 +822,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="water"/>
 	</skill>
-	<skill id="6280" levels="1" name="Death Clack">
+	<skill id="6280" levels="1" name="Announcement of Death">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill6280"/>
 		<set name="coolTime" val="800"/>
@@ -878,7 +878,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="water"/>
 	</skill>
-	<skill id="6284" levels="1" name="Freya's Bless">
+	<skill id="6284" levels="1" name="Freya's Blessing">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="500"/>
@@ -903,7 +903,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6286" levels="1" name="Bless of Sword">
+	<skill id="6286" levels="1" name="Divine Protection of Sword">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill6286"/>
 		<set name="reuseDelay" val="2000"/>
@@ -915,7 +915,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6287" levels="1" name="Bless of Sword">
+	<skill id="6287" levels="1" name="Divine Protection of Sword">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill6286"/>
 		<set name="magicLevel" val="85"/>
@@ -1071,7 +1071,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="water"/>
 	</skill>
-	<skill id="6298" levels="1" name="Summon Follower Knight">
+	<skill id="6298" levels="1" name="Summon Subordinate Knight">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="500"/>
 		<set name="magicLevel" val="85"/>
@@ -1082,7 +1082,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="6299" levels="1" name="Breath of Ice Palace - Ice Storm">
+	<skill id="6299" levels="1" name="Icy Breath - Ice Storm">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="coolTime" val="500"/>
 		<set name="reuseDelay" val="15000"/>

@@ -1,62 +1,62 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="8500" levels="1" name="Pink Talisman of CON">
+	<skill id="8500" levels="1" name="Pink Talisman - CON">
 		<set name="icon" val="icon.etc_talisman_event_i00"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="8501" levels="1" name="Pink Talisman of INT">
+	<skill id="8501" levels="1" name="Pink Talisman - INT">
 		<set name="icon" val="icon.etc_talisman_event_i00"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="8502" levels="1" name="Pink Talisman of WIT">
+	<skill id="8502" levels="1" name="Pink Talisman - WIT">
 		<set name="icon" val="icon.etc_talisman_event_i00"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="8503" levels="1" name="Pink Talisman of MEN">
+	<skill id="8503" levels="1" name="Pink Talisman - MEN">
 		<set name="icon" val="icon.etc_talisman_event_i00"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="8504" levels="1" name="Pink Talisman of Stun Resistance">
+	<skill id="8504" levels="1" name="Pink Talisman - Stun Resistance">
 		<set name="icon" val="icon.etc_talisman_event_i01"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="8505" levels="1" name="Pink Talisman of Sleep Resistance">
+	<skill id="8505" levels="1" name="Pink Talisman - Sleep Resistance">
 		<set name="icon" val="icon.etc_talisman_event_i01"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="8506" levels="1" name="Pink Talisman of Hold Resistance">
+	<skill id="8506" levels="1" name="Pink Talisman - Hold Resistance">
 		<set name="icon" val="icon.etc_talisman_event_i01"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="8507" levels="1" name="Pink Talisman of Paralyze Resistance">
+	<skill id="8507" levels="1" name="Pink Talisman - Paralysis Resistance">
 		<set name="icon" val="icon.etc_talisman_event_i01"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="8508" levels="1" name="Pink Talisman of All STAT">
+	<skill id="8508" levels="1" name="Pink Talisman - All STAT">
 		<set name="icon" val="icon.etc_talisman_event_i02"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -90,19 +90,19 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="8512" levels="1" name="National Representative Warrior's Tenacity">
+	<skill id="8512" levels="1" name="Olympic Athlete's Tenacity">
 		<set name="icon" val="BranchSys2.icon.br_spirit_of_brave_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="8513" levels="1" name="National Representative Spell of Blessing">
+	<skill id="8513" levels="1" name="Olympic Athlete's Spell of Blessing">
 		<set name="icon" val="BranchSys2.icon.br_spell_of_blessing_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="8514" levels="1" name="National Representative Energy of Victory">
+	<skill id="8514" levels="1" name="Olympic Athlete's Energy of Victory">
 		<set name="icon" val="BranchSys2.icon.br_obsession_of_winning_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -168,7 +168,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="8523" levels="1" name="Release Agathion's Seal - Guardian of the Dawn Kallesin">
+	<skill id="8523" levels="1" name="Release Agathion's Seal - Guardian of Dawn Kallesin">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>

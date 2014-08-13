@@ -77,7 +77,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31057" name="Bound Zubei's Boots" add_name="Heavy">
+	<armor id="31057" name="Bound Zubei's Boots" add_name="Heavy Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2"/>
@@ -96,7 +96,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31058" name="Bound Zubei's Boots" add_name="Tans Armor Use">
+	<armor id="31058" name="Bound Zubei's Boots" add_name="Light Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2"/>
@@ -134,7 +134,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31060" name="Bound Zubei's Gauntlet" add_name="Heavy">
+	<armor id="31060" name="Bound Zubei's Gauntlets" add_name="Heavy Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2"/>
@@ -153,7 +153,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31061" name="Bound Zubei's Gauntlet" add_name="Tans Armor Use">
+	<armor id="31061" name="Bound Zubei's Gauntlets" add_name="Light Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2"/>
@@ -172,7 +172,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="31062" name="Bound Zubei's Gauntlet" add_name="Robe">
+	<armor id="31062" name="Bound Zubei's Gauntlets" add_name="Robe">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2"/>

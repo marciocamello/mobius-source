@@ -1005,7 +1005,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="35320" name="Raybell" title="Herald">
+	<npc id="35320" name="Raybell" title="Herald from Innadril">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -3338,7 +3338,7 @@
 			<defence attribute="unholy" value="40"/>
 		</attributes>
 	</npc>
-	<npc id="35367" name="Daven" title="Herald">
+	<npc id="35367" name="Daven" title="Herald from Goddard">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="13938" name="Low-Grade Magic Pouch Cloth Belt">
+	<armor id="13938" name="Low-grade Magic Pouch Cloth Belt">
 		<set name="crystal_count" value="18"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -22,7 +22,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13939" name="Regular Magic Pouch Cloth Belt">
+	<armor id="13939" name="Standard Magic Pouch Cloth Belt">
 		<set name="crystal_count" value="18"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -43,7 +43,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13940" name="High-Grade Magic Pouch Cloth Belt">
+	<armor id="13940" name="High-grade Magic Pouch Cloth Belt">
 		<set name="crystal_count" value="18"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -64,7 +64,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13941" name="Top-Grade Magic Pouch Cloth Belt">
+	<armor id="13941" name="Top-grade Magic Pouch Cloth Belt">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="false"/>
@@ -85,7 +85,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13942" name="Low-Grade Magic Pouch Leather Belt">
+	<armor id="13942" name="Low-grade Magic Pouch Leather Belt">
 		<set name="crystal_count" value="22"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -106,7 +106,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13943" name="Regular Magic Pouch Leather Belt">
+	<armor id="13943" name="Standard Magic Pouch Leather Belt">
 		<set name="crystal_count" value="22"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -127,7 +127,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13944" name="High-Grade Magic Pouch Leather Belt">
+	<armor id="13944" name="High-grade Magic Pouch Leather Belt">
 		<set name="crystal_count" value="22"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -148,7 +148,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13945" name="Top-Grade Magic Pouch Leather Belt">
+	<armor id="13945" name="Top-grade Magic Pouch Leather Belt">
 		<set name="crystal_count" value="22"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -169,7 +169,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13946" name="Low-Grade Magic Pouch Iron Belt">
+	<armor id="13946" name="Low-grade Magic Pouch Iron Belt">
 		<set name="crystal_count" value="30"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
@@ -190,7 +190,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13947" name="Regular Magic Pouch Iron Belt">
+	<armor id="13947" name="Standard Magic Pouch Iron Belt">
 		<set name="crystal_count" value="30"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
@@ -211,7 +211,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13948" name="High-Grade Magic Pouch Iron Belt">
+	<armor id="13948" name="High-grade Magic Pouch Iron Belt">
 		<set name="crystal_count" value="30"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
@@ -232,7 +232,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13949" name="Top-Grade Magic Pouch Iron Belt">
+	<armor id="13949" name="Top-grade Magic Pouch Iron Belt">
 		<set name="crystal_count" value="30"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
@@ -253,7 +253,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13950" name="Low-Grade Magic Pouch Mithril Belt">
+	<armor id="13950" name="Low-grade Magic Pouch Mithril Belt">
 		<set name="crystal_count" value="92"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -274,7 +274,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13951" name="Regular Magic Pouch Mithril Belt">
+	<armor id="13951" name="Standard Magic Pouch Mithril Belt">
 		<set name="crystal_count" value="92"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -295,7 +295,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13952" name="High-Grade Magic Pouch Mithril Belt">
+	<armor id="13952" name="High-grade Magic Pouch Mithril Belt">
 		<set name="crystal_count" value="92"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -316,7 +316,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13953" name="Top-Grade Magic Pouch Mithril Belt">
+	<armor id="13953" name="Top-grade Magic Pouch Mithril Belt">
 		<set name="crystal_count" value="92"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -337,7 +337,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13954" name="Low-Grade Magic Pin Cloth Belt">
+	<armor id="13954" name="Low-grade Magic Pin Cloth Belt">
 		<set name="crystal_count" value="18"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -358,7 +358,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13955" name="Regular Magic Pin Cloth Belt">
+	<armor id="13955" name="Standard Magic Pin Cloth Belt">
 		<set name="crystal_count" value="18"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -379,7 +379,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13956" name="High-Grade Magic Pin Cloth Belt">
+	<armor id="13956" name="High-grade Magic Pin Cloth Belt">
 		<set name="crystal_count" value="18"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -400,7 +400,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13957" name="Top-Grade Magic Pin Cloth Belt">
+	<armor id="13957" name="Top-grade Magic Pin Cloth Belt">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="false"/>
@@ -421,7 +421,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13958" name="Low-Grade Magic Pin Leather Belt">
+	<armor id="13958" name="Low-grade Magic Pin Leather Belt">
 		<set name="crystal_count" value="22"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -442,7 +442,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13959" name="Regular Magic Pin Leather Belt">
+	<armor id="13959" name="Standard Magic Pin Leather Belt">
 		<set name="crystal_count" value="22"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -463,7 +463,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13960" name="High-Grade Magic Pin Leather Belt">
+	<armor id="13960" name="High-grade Magic Pin Leather Belt">
 		<set name="crystal_count" value="22"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -484,7 +484,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13961" name="Top-Grade Magic Pin Leather Belt">
+	<armor id="13961" name="Top-grade Magic Pin Leather Belt">
 		<set name="crystal_count" value="22"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -505,7 +505,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13962" name="Low-Grade Magic Pin Iron Belt">
+	<armor id="13962" name="Low-grade Magic Pin Iron Belt">
 		<set name="crystal_count" value="30"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
@@ -526,7 +526,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13963" name="Regular Magic Pin Iron Belt">
+	<armor id="13963" name="Standard Magic Pin Iron Belt">
 		<set name="crystal_count" value="30"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
@@ -547,7 +547,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13964" name="High-Grade Magic Pin Iron Belt">
+	<armor id="13964" name="High-grade Magic Pin Iron Belt">
 		<set name="crystal_count" value="30"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
@@ -568,7 +568,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13965" name="Top-Grade Magic Pin Iron Belt">
+	<armor id="13965" name="Top-grade Magic Pin Iron Belt">
 		<set name="crystal_count" value="30"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
@@ -589,7 +589,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13966" name="Low-Grade Magic Pin Mithril Belt">
+	<armor id="13966" name="Low-grade Magic Pin Mithril Belt">
 		<set name="crystal_count" value="92"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -610,7 +610,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13967" name="Regular Magic Pin Mithril Belt">
+	<armor id="13967" name="Standard Magic Pin Mithril Belt">
 		<set name="crystal_count" value="92"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -631,7 +631,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13968" name="High-Grade Magic Pin Mithril Belt">
+	<armor id="13968" name="High-grade Magic Pin Mithril Belt">
 		<set name="crystal_count" value="92"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -652,7 +652,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13969" name="Top-Grade Magic Pin Mithril Belt">
+	<armor id="13969" name="Top-grade Magic Pin Mithril Belt">
 		<set name="crystal_count" value="92"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>

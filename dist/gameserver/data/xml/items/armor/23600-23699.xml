@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+<armor id="23636" name="Cloak (Poland)">
+        <set name="type" value="NONE"/>
+        <set name="weight" value="220"/>
+		<equip>
+            <slot id="BACK"/>
+        </equip>
+        <set name="ex_type" value="CLOAK"/>
+        <for>
+            <add stat="pDef" order="0x10" value="50"/>
+            <add stat="mDef" order="0x10" value="40"/>
+            <enchant stat="pDef" order="0x0C" value="0"/>
+            <enchant stat="maxHp" order="0x80" value="0"/>
+            <enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	
+	<armor id="23637" name="Blessed Antharas' Earring" add_name="3-day">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_earring_of_antaras_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="item_quality" value="BLESSED"/>
+		<set name="durability" value="4320"/>
+		<set name="temporal" value="true"/>
+	  <equip>
+            <slot id="RIGHT_EAR"/>
+            <slot id="LEFT_EAR"/>
+        </equip>
+        <set name="ex_type" value="EARRING"/>
+        <skills>
+            <skill id="13313" level="1"/>
+			<skill id="13314" level="1"/>
+        </skills>
+        <for>
+			<add stat="maxMp" order="0x10" value="59"/>
+            <add stat="mDef" order="0x10" value="170"/>
+            <enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="23638" name="Blessed Antharas' Earring" add_name="7-day">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_earring_of_antaras_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="item_quality" value="BLESSED"/>
+		<set name="durability" value="4320"/>
+		<set name="temporal" value="true"/>
+  <equip>
+            <slot id="RIGHT_EAR"/>
+            <slot id="LEFT_EAR"/>
+        </equip>
+        <set name="ex_type" value="EARRING"/>
+        <skills>
+            <skill id="13313" level="1"/>
+			<skill id="13314" level="1"/>
+        </skills>
+        <for>
+			<add stat="maxMp" order="0x10" value="59"/>
+            <add stat="mDef" order="0x10" value="170"/>
+            <enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="23639" name="Blessed Valakas' Necklace" add_name="3-day">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_necklace_of_valakas_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="item_quality" value="BLESSED"/>
+		<set name="durability" value="4320"/>
+		<set name="temporal" value="true"/>
+	 <equip>
+            <slot id="NECKLACE"/>
+        </equip>
+        <set name="ex_type" value="NECKLACE"/>
+        <skills>
+            <skill id="13315" level="1"/>
+			<skill id="13316" level="1"/>
+        </skills>
+        <for>
+			<add stat="maxMp" order="0x10" value="79"/>
+			<add stat="maxHp" order="0x10" value="625"/>
+            <add stat="mDef" order="0x10" value="226"/>
+            <enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+    </armor>
+	<armor id="23640" name="Blessed Valakas' Necklace" add_name="7-day">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_necklace_of_valakas_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="item_quality" value="BLESSED"/>
+		<set name="durability" value="4320"/>
+		<set name="temporal" value="true"/>
+		 <equip>
+            <slot id="NECKLACE"/>
+        </equip>
+        <set name="ex_type" value="NECKLACE"/>
+        <skills>
+            <skill id="13315" level="1"/>
+			<skill id="13316" level="1"/>
+        </skills>
+        <for>
+			<add stat="maxMp" order="0x10" value="79"/>
+			<add stat="maxHp" order="0x10" value="625"/>
+            <add stat="mDef" order="0x10" value="226"/>
+            <enchant stat="mDef" order="0x0C" value="0"/>
+        </for>
+	</armor>
+</list>

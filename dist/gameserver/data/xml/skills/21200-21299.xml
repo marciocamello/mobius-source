@@ -12,7 +12,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21202" levels="1" name="Release Agathion's Seal - Ball Trapping Gnocian">
+	<skill id="21202" levels="1" name="Release Agathion's Seal - Ball Trapping Gnosian">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="magicLevel" val="85"/>
 		<set name="hitTime" val="3000"/>
@@ -63,7 +63,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="21205" levels="1" name="Release Agathion's Seal - Ball Trapping Gnocian">
+	<skill id="21205" levels="1" name="Release Agathion's Seal - Ball Trapping Gnosian">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="magicLevel" val="85"/>
 		<set name="hitTime" val="3000"/>
@@ -114,7 +114,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="21208" levels="1" name="Release Agathion's Seal - Ball Trapping Gnocian">
+	<skill id="21208" levels="1" name="Release Agathion's Seal - Ball Trapping Gnosian">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="magicLevel" val="85"/>
 		<set name="hitTime" val="3000"/>
@@ -222,7 +222,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="21215" levels="1" name="Release Agathion's Seal - Cheerleader Lana">
+	<skill id="21215" levels="1" name="Release Agathion's Seal - Cheerleader Lanya">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="magicLevel" val="85"/>
 		<set name="hitTime" val="3000"/>
@@ -342,25 +342,25 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21224" levels="1" name="Soul of an Adventurer of Immortality's Ability">
+	<skill id="21224" levels="1" name="Great Adventurer's Soul Power">
 		<set name="icon" val="BranchSys2.icon.br_stagbeetle_cap_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21225" levels="1" name="Soul of a Strong Warrior's Ability">
+	<skill id="21225" levels="1" name="Brave Warrior's Soul Power">
 		<set name="icon" val="BranchSys2.icon.br_hornbeetle_cap_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21226" levels="1" name="Soul of a Wise Magician's Ability">
+	<skill id="21226" levels="1" name="Great Wizard's Soul Power">
 		<set name="icon" val="BranchSys2.icon.br_ladybug_cap_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21227" levels="1" name="Ability of Prominent Adventure's Soul">
+	<skill id="21227" levels="1" name="Great Adventurer's Soul Power">
 		<set name="icon" val="BranchSys2.icon.br_mantis_cap_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -372,19 +372,19 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21229" levels="1" name="Vampiric Rage">
+	<skill id="21229" levels="1" name="Blood Awakening">
 		<set name="icon" val="BranchSys2.icon.br_close_helmet_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21230" levels="1" name="Improved Magic">
+	<skill id="21230" levels="1" name="Improve Magic">
 		<set name="icon" val="BranchSys2.icon.br_navy_cap_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21231" levels="1" name="Improved Critical Attack">
+	<skill id="21231" levels="1" name="Improve Critical Attack">
 		<set name="icon" val="BranchSys2.icon.br_gold_eyeglass_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -396,7 +396,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21233" levels="1" name="Release Agathion's Seal - Singer Dancer">
+	<skill id="21233" levels="1" name="Release Agathion's Seal - Singer and Dancer">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -524,19 +524,19 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21247" levels="1" name="Gift from Santa Claus">
+	<skill id="21247" levels="1" name="Santa Claus' Gift">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21248" levels="1" name="Release Agathion's Seal - Zinenze">
+	<skill id="21248" levels="1" name="Release Agathion's Seal - Zinyanzi">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="21249" levels="1" name="Release Agathion's Seal - Enze">
+	<skill id="21249" levels="1" name="Release Agathion's Seal - Yanzi">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -626,7 +626,7 @@
 			</trigger>
 		</triggers>
 	</skill>
-	<skill id="21258" levels="1" name="Rocking Horse Mount">
+	<skill id="21258" levels="1" name="Ride Rocking Horse">
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="TRANSFORMATION"/>
@@ -638,7 +638,7 @@
 			<effect count="1" name="Transformation" time="1800" val="20007"/>
 		</for>
 	</skill>
-	<skill id="21259" levels="1" name="Release Agathion's Seal - Chorong">
+	<skill id="21259" levels="1" name="Release Agathion's Seal - Lantern">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -735,7 +735,7 @@
 			<effect count="1" name="Transformation" time="1800" val="20009"/>
 		</for>
 	</skill>
-	<skill id="21272" levels="1" name="Halloween Witch's Broomstick Mount">
+	<skill id="21272" levels="1" name="Ride Halloween Witch's Broomstick">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="TRANSFORMATION"/>
 		<set name="isReuseDelayPermanent" val="true"/>

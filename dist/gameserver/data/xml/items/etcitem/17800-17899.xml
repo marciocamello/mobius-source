@@ -35,7 +35,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.item_normal52"/>
 	</etcitem>
-	<etcitem id="17823" name="Life Stone - Hair Accessory" add_name="Fighter">
+	<etcitem id="17823" name="Life Stone: Hair Accessory" add_name="Fighter">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -44,7 +44,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_mineral_general_i00"/>
 	</etcitem>
-	<etcitem id="17824" name="Life Stone - Hair Accessory" add_name="Mystic">
+	<etcitem id="17824" name="Life Stone: Hair Accessory" add_name="Mystic">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

@@ -45,7 +45,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13804" name="Native's Trousers">
+	<armor id="13804" name="Native's Pants">
 		<set name="crystal_type" value="NONE"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -111,7 +111,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13807" name="Guards of the Dawn Trousers">
+	<armor id="13807" name="Guards of the Dawn Pants">
 		<set name="crystal_type" value="NONE"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -207,7 +207,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13889" name="Holy Spirit's Cloak - Kamael exclusive">
+	<armor id="13889" name="Holy Spirit's Cloak (Kamael)">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.vesper_cloack_i00"/>
@@ -247,7 +247,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13891" name="Holy Spirit's Cloak - Light Armor exclusive">
+	<armor id="13891" name="Holy Spirit's Cloak (Light Armor)">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.vesper_cloack_i00"/>
@@ -267,7 +267,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="13892" name="Holy Spirit's Cloak - Robe exclusive">
+	<armor id="13892" name="Holy Spirit's Cloak (Robe)">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.vesper_cloack_i00"/>

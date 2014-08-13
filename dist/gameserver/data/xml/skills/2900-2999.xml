@@ -91,7 +91,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2907" levels="5" name="Battleground Use Secret Medicine of Life">
+	<skill id="2907" levels="5" name="Elixir of Life (Battleground)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="600000"/>
@@ -100,7 +100,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2908" levels="5" name="Battleground Use Secret Medicine of Mind">
+	<skill id="2908" levels="5" name="Elixir of Mind (Battleground)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="600000"/>
@@ -109,7 +109,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2909" levels="5" name="Battleground Use Secret Medicine of Will">
+	<skill id="2909" levels="5" name="Elixir of CP (Battleground)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="600000"/>
@@ -118,7 +118,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2910" levels="1" name="Skull Key of Pain">
+	<skill id="2910" levels="1" name="Skull Key of Suffering">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -153,7 +153,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2914" levels="2" name="Equipment Set 10 Day Pack">
+	<skill id="2914" levels="2" name="Equipment Set Pack (90-day)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="reuseDelay" val="10000"/>
@@ -162,7 +162,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2915" levels="1" name="Clear Five-Colored Crystal">
+	<skill id="2915" levels="1" name="Multi-colored Jewel">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="10000"/>
@@ -173,7 +173,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2916" levels="1" name="Feed for Enriched Enhanced Pets">
+	<skill id="2916" levels="1" name="Enriched Pet Food">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -186,7 +186,7 @@
 			</not>
 		</cond>
 	</skill>
-	<skill id="2917" levels="1" name="Big Staccato Silk Cocoon">
+	<skill id="2917" levels="1" name="Large Stakato Cocoon">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -194,7 +194,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2918" levels="1" name="Small Staccato Silk Cocoon">
+	<skill id="2918" levels="1" name="Small Stakato Cocoon">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -266,7 +266,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2927" levels="1" name="Goddard supply box - magic pin">
+	<skill id="2927" levels="1" name="Goddard Supply Box: magic pin">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -338,7 +338,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2936" levels="1" name="Goddard supply box - magic pouch">
+	<skill id="2936" levels="1" name="Goddard Supply Box: magic pouch">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -410,7 +410,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2945" levels="1" name="Goddard supply box - belt">
+	<skill id="2945" levels="1" name="Goddard Supply Box: belt">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -482,7 +482,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2954" levels="1" name="Goddard supply box - magic pin">
+	<skill id="2954" levels="1" name="Goddard Supply Box: magic pin">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -554,7 +554,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2963" levels="1" name="Goddard supply box - magic pouch">
+	<skill id="2963" levels="1" name="Goddard Supply Box: magic pouch">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -626,7 +626,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2972" levels="1" name="Goddard supply box - belt">
+	<skill id="2972" levels="1" name="Goddard Supply Box: belt">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -698,7 +698,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2981" levels="1" name="Goddard supply box - magic rune clip">
+	<skill id="2981" levels="1" name="Goddard Supply Box: magic rune clip">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -770,7 +770,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2990" levels="1" name="Goddard supply box - magic ornament">
+	<skill id="2990" levels="1" name="Goddard Supply Box: magic ornament">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -804,14 +804,14 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2994" levels="1" name="Disguised Half - Aqua Elf">
+	<skill id="2994" levels="1" name="Transformation Harp: Aqua Elf">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2995" levels="1" name="PC room private weapon strengthening order sheet (D-Grade)">
+	<skill id="2995" levels="1" name="Player Commendation - Scroll: Enchant Weapon (D-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -819,7 +819,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2996" levels="1" name="PC room private weapon strengthening order sheet (C-Grade)">
+	<skill id="2996" levels="1" name="Player Commendation - Scroll: Enchant Weapon (C-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -827,7 +827,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2997" levels="1" name="PC room private weapon strengthening order sheet (B-Grade)">
+	<skill id="2997" levels="1" name="Player Commendation - Scroll: Enchant Weapon (B-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -835,7 +835,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2998" levels="1" name="PC room private weapon strengthening order sheet (A-Grade)">
+	<skill id="2998" levels="1" name="Player Commendation - Scroll: Enchant Weapon (A-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -843,7 +843,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="2999" levels="1" name="PC room private weapon strengthening order sheet (S-Grade)">
+	<skill id="2999" levels="1" name="Player Commendation - Scroll: Enchant Weapon (S-grade)">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>

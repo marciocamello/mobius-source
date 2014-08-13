@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="14900" name="Rune Supply Box - Magic Ornament" add_name="S-grade , A">
+	<etcitem id="14900" name="Rune Supply Box - Magic Ornament" add_name="S-/A-grade">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -14,7 +14,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="14901" name="Schuttgart Supply Box - Magic Ornament" add_name="S-grade , A">
+	<etcitem id="14901" name="Schuttgart Supply Box - Magic Ornament" add_name="S-/A-grade">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

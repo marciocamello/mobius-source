@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="21367" name="Aqua Elf Transformation Harp" add_name="7-day limited period">
+	<weapon id="21367" name="Aqua Elf Transformation Harp" add_name="7-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.harp_of_transform_i00"/>
 		<set name="price" value="0"/>
@@ -20,7 +20,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="21368" name="Aqua Elf Transformation Harp" add_name="7-day limited period (event)">
+	<weapon id="21368" name="Aqua Elf Transformation Harp" add_name="7-day (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.harp_of_transform_i00"/>
 		<set name="price" value="0"/>
@@ -39,7 +39,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="21369" name="Aqua Elf Transformation Harp" add_name="30-day limited period">
+	<weapon id="21369" name="Aqua Elf Transformation Harp" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.harp_of_transform_i00"/>
 		<set name="price" value="0"/>
@@ -58,7 +58,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="21370" name="Aqua Elf Transformation Harp" add_name="30-day limited period (event)">
+	<weapon id="21370" name="Aqua Elf Transformation Harp" add_name="30-day (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.harp_of_transform_i00"/>
 		<set name="price" value="0"/>

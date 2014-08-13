@@ -172,7 +172,7 @@
 			<slot id="LEFT_BRACELET"/>
 		</equip>
 	</armor>
-	<armor id="35938" name="Star Agathion - Soo-ro Kim" add_name="15-day">
+	<armor id="35938" name="Star Agathion - Sooro Kim" add_name="15-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.bracelet_agathion_bm_i01"/>
 		<set name="price" value="0"/>
@@ -222,7 +222,7 @@
 			<slot id="LEFT_BRACELET"/>
 		</equip>
 	</armor>
-	<armor id="35943" name="Star Agathion - Soo-ro Kim" add_name="30-day">
+	<armor id="35943" name="Star Agathion - Sooro Kim" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.bracelet_agathion_bm_i01"/>
 		<set name="price" value="0"/>
@@ -252,7 +252,7 @@
 			<slot id="LEFT_BRACELET"/>
 		</equip>
 	</armor>
-	<armor id="35978" name="Mysterious Ring: 7-day" add_name="Event">
+	<armor id="35978" name="Mysterious Ring (7-day)" add_name="Event">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_shiny_couple_ring"/>
 		<set name="price" value="0"/>
@@ -263,7 +263,7 @@
 			<slot id="LEFT_FINGER"/>
 		</equip>
 	</armor>
-	<armor id="35980" name="Talisman of Annihilation" add_name="3-day (Event)">
+	<armor id="35980" name="Talisman - Annihilation" add_name="3-day (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_extermination_talisman_i01"/>
 		<set name="price" value="0"/>
@@ -273,7 +273,7 @@
 			<slot id="TALISMAN"/>
 		</equip>
 	</armor>
-	<armor id="35981" name="Talisman of Annihilation" add_name="7-day (Event)">
+	<armor id="35981" name="Talisman - Annihilation" add_name="7-day (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_extermination_talisman_i01"/>
 		<set name="price" value="0"/>

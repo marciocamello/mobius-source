@@ -34,7 +34,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14704" levels="1" name="Forceful Yoke">
+	<skill id="14704" levels="1" name="Forced Yoke">
 		<set name="icon" val="icon.skill10015"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -70,43 +70,43 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14710" levels="1" name="Raid Boss - Level 97">
+	<skill id="14710" levels="1" name="Raid Boss (Lv. 97)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14711" levels="1" name="Raid Boss - Level 97">
+	<skill id="14711" levels="1" name="Raid Boss (Lv. 97)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14712" levels="1" name="Raid Boss - Level 96">
+	<skill id="14712" levels="1" name="Raid Boss (Lv. 96)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14713" levels="1" name="Raid Boss - Level 96">
+	<skill id="14713" levels="1" name="Raid Boss (Lv. 96)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14714" levels="1" name="Raid Boss - Level 98">
+	<skill id="14714" levels="1" name="Raid Boss (Lv. 98)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14715" levels="1" name="Raid Boss - Level 98">
+	<skill id="14715" levels="1" name="Raid Boss (Lv. 98)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14716" levels="1" name="Raid Boss - Level 98">
+	<skill id="14716" levels="1" name="Raid Boss (Lv. 98)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -118,49 +118,49 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14718" levels="1" name="Raid Boss - Level 92">
+	<skill id="14718" levels="1" name="Raid Boss (Lv. 92)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14719" levels="1" name="Raid Boss - Level 95">
+	<skill id="14719" levels="1" name="Raid Boss (Lv. 95)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14720" levels="1" name="Raid Boss - Level 88">
+	<skill id="14720" levels="1" name="Raid Boss (Lv. 88)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14721" levels="1" name="Raid Boss - Level 94">
+	<skill id="14721" levels="1" name="Raid Boss (Lv. 94)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14722" levels="1" name="Raid Boss - Level 98">
+	<skill id="14722" levels="1" name="Raid Boss (Lv. 98)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14723" levels="1" name="Raid Boss - Level 94">
+	<skill id="14723" levels="1" name="Raid Boss (Lv. 94)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14724" levels="1" name="Raid Boss - Level 43">
+	<skill id="14724" levels="1" name="Raid Boss (Lv. 43)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14725" levels="1" name="Raid Boss - Level 43">
+	<skill id="14725" levels="1" name="Raid Boss (Lv. 43)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -178,49 +178,49 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14728" levels="1" name="Raid Boss - Level 97">
+	<skill id="14728" levels="1" name="Raid Boss (Lv. 97)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14729" levels="1" name="Raid Boss - Level 92">
+	<skill id="14729" levels="1" name="Raid Boss (Lv. 92)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14730" levels="1" name="Raid Boss - Level 94">
+	<skill id="14730" levels="1" name="Raid Boss (Lv. 94)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14731" levels="1" name="Raid Boss - Level 95">
+	<skill id="14731" levels="1" name="Raid Boss (Lv. 95)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14732" levels="1" name="Raid Boss - Level 96">
+	<skill id="14732" levels="1" name="Raid Boss (Lv. 96)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14733" levels="1" name="Raid Boss - Level 93">
+	<skill id="14733" levels="1" name="Raid Boss (Lv. 93)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14734" levels="1" name="Raid Boss - Level 96">
+	<skill id="14734" levels="1" name="Raid Boss (Lv. 96)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14735" levels="1" name="Raid Boss - Level 96">
+	<skill id="14735" levels="1" name="Raid Boss (Lv. 96)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -279,133 +279,133 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14744" levels="1" name="Olympiad - Guardian's Harmony">
+	<skill id="14744" levels="1" name="Olympiad - Knight's Harmony">
 		<set name="icon" val="icon.skill11523"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14745" levels="1" name="Olympiad - Berserker's Harmony">
+	<skill id="14745" levels="1" name="Olympiad - Warrior's Harmony">
 		<set name="icon" val="icon.skill11524"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14746" levels="1" name="Olympiad - Magician's Harmony">
+	<skill id="14746" levels="1" name="Olympiad - Wizard's Harmony">
 		<set name="icon" val="icon.skill11525"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14747" levels="1" name="Raid Boss - Level 88">
+	<skill id="14747" levels="1" name="Raid Boss (Lv. 88)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14748" levels="1" name="Raid Boss - Level 98">
+	<skill id="14748" levels="1" name="Raid Boss (Lv. 98)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14749" levels="1" name="Raid Boss - Level 97">
+	<skill id="14749" levels="1" name="Raid Boss (Lv. 97)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14750" levels="1" name="Raid Boss - Level 97">
+	<skill id="14750" levels="1" name="Raid Boss (Lv. 97)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14751" levels="1" name="Raid Boss - Level 97">
+	<skill id="14751" levels="1" name="Raid Boss (Lv. 97)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14752" levels="1" name="Raid Boss - Level 97">
+	<skill id="14752" levels="1" name="Raid Boss (Lv. 97)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14753" levels="1" name="Raid Boss - Level 97">
+	<skill id="14753" levels="1" name="Raid Boss (Lv. 97)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14754" levels="1" name="Raid Boss - Level 97">
+	<skill id="14754" levels="1" name="Raid Boss (Lv. 97)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14755" levels="1" name="Raid Boss - Level 97">
+	<skill id="14755" levels="1" name="Raid Boss (Lv. 97)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14756" levels="1" name="Raid Boss - Level 97">
+	<skill id="14756" levels="1" name="Raid Boss (Lv. 97)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14757" levels="1" name="Raid Boss - Level 97">
+	<skill id="14757" levels="1" name="Raid Boss (Lv. 97)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14758" levels="1" name="Raid Boss - Level 59">
+	<skill id="14758" levels="1" name="Raid Boss (Lv. 59)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14759" levels="1" name="Raid Boss - Level 62">
+	<skill id="14759" levels="1" name="Raid Boss (Lv. 62)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14760" levels="1" name="Raid Boss - Level 66">
+	<skill id="14760" levels="1" name="Raid Boss (Lv. 66)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14761" levels="1" name="Raid Boss - Level 70">
+	<skill id="14761" levels="1" name="Raid Boss (Lv. 70)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14762" levels="1" name="Raid Boss - Level 72">
+	<skill id="14762" levels="1" name="Raid Boss (Lv. 72)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14763" levels="1" name="Raid Boss - Level 75">
+	<skill id="14763" levels="1" name="Raid Boss (Lv. 75)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14764" levels="1" name="Raid Boss - Level 75">
+	<skill id="14764" levels="1" name="Raid Boss (Lv. 75)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14765" levels="5" name="Absorb Attribute">
+	<skill id="14765" levels="5" name="Blood Siphon Resistance">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -423,67 +423,67 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14768" levels="1" name="Raid Boss - Level 85">
+	<skill id="14768" levels="1" name="Raid Boss (Lv. 85)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14769" levels="1" name="Raid Boss - Level 82">
+	<skill id="14769" levels="1" name="Raid Boss (Lv. 82)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14770" levels="1" name="Raid Boss - Level 75">
+	<skill id="14770" levels="1" name="Raid Boss (Lv. 99)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14771" levels="1" name="Raid Boss - Level 29">
+	<skill id="14771" levels="1" name="Raid Boss (Lv. 29)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14772" levels="1" name="Raid Boss - Level 39">
+	<skill id="14772" levels="1" name="Raid Boss (Lv. 39)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14773" levels="1" name="Raid Boss - Level 49">
+	<skill id="14773" levels="1" name="Raid Boss (Lv. 49)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14774" levels="1" name="Raid Boss - Level 59">
+	<skill id="14774" levels="1" name="Raid Boss (Lv. 59)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14775" levels="1" name="Raid Boss - Level 69">
+	<skill id="14775" levels="1" name="Raid Boss (Lv. 69)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14776" levels="1" name="Raid Boss - Level 78">
+	<skill id="14776" levels="1" name="Raid Boss (Lv. 78)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14777" levels="1" name="Raid Boss - Level 81">
+	<skill id="14777" levels="1" name="Raid Boss (Lv. 81)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14778" levels="1" name="Raid Boss - Level 83">
+	<skill id="14778" levels="1" name="Raid Boss (Lv. 83)">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -606,7 +606,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14785" levels="1" name="Master's Blessing - Guardian's Harmony">
+	<skill id="14785" levels="1" name="Master's Blessing - Knight's Harmony">
 		<set name="icon" val="icon.skill11523"/>
 		<set name="target" val="TARGET_PARTY"/>
 		<set name="skillType" val="BUFF"/>
@@ -626,7 +626,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14786" levels="1" name="Master's Blessing - Berserker's Harmony">
+	<skill id="14786" levels="1" name="Master's Blessing - Warrior's Harmony">
 		<set name="icon" val="icon.skill11524"/>
 		<set name="target" val="TARGET_PARTY"/>
 		<set name="skillType" val="BUFF"/>
@@ -650,7 +650,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14787" levels="1" name="Master's Blessing - Magician's Harmony">
+	<skill id="14787" levels="1" name="Master's Blessing - Wizard's Harmony">
 		<set name="icon" val="icon.skill11525"/>
 		<set name="target" val="TARGET_PARTY"/>
 		<set name="skillType" val="BUFF"/>
@@ -677,7 +677,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14788" levels="1" name="Master's Blessing - Resist Elemental">
+	<skill id="14788" levels="1" name="Master's Blessing - Elemental Resistance">
 		<set name="icon" val="icon.skill11565"/>
 		<set name="target" val="TARGET_PARTY"/>
 		<set name="skillType" val="BUFF"/>
@@ -695,7 +695,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14789" levels="1" name="Master's Blessing - Resist Divine">
+	<skill id="14789" levels="1" name="Master's Blessing - Holy Attack Resistance">
 		<set name="icon" val="icon.skill11567"/>
 		<set name="target" val="TARGET_PARTY"/>
 		<set name="skillType" val="BUFF"/>
@@ -713,7 +713,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14790" levels="1" name="Master's Blessing - Resist Mental">
+	<skill id="14790" levels="1" name="Master's Blessing - Mental Attack Resistance">
 		<set name="icon" val="icon.skill11824"/>
 		<set name="target" val="TARGET_PARTY"/>
 		<set name="skillType" val="BUFF"/>
@@ -732,55 +732,55 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="14791" levels="1" name="Master's Blessing - Horn Melody (Range)">
+	<skill id="14791" levels="1" name="Master's Blessing - Horn Melody">
 		<set name="icon" val="icon.skill11517"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14792" levels="1" name="Master's Blessing - Drum Melody (Range)">
+	<skill id="14792" levels="1" name="Master's Blessing - Drum Melody">
 		<set name="icon" val="icon.skill11522"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14793" levels="1" name="Master's Blessing - Pipe Organ Melody (Range)">
+	<skill id="14793" levels="1" name="Master's Blessing - Pipe Organ Melody">
 		<set name="icon" val="icon.skill11519"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14794" levels="1" name="Master's Blessing - Guitar Melody (Range)">
+	<skill id="14794" levels="1" name="Master's Blessing - Guitar Melody">
 		<set name="icon" val="icon.skill11520"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14795" levels="1" name="Master's Blessing - Harp Melody (Range)">
+	<skill id="14795" levels="1" name="Master's Blessing - Harp Melody">
 		<set name="icon" val="icon.skill11521"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14796" levels="1" name="Master's Blessing - Lute Melody (Range)">
+	<skill id="14796" levels="1" name="Master's Blessing - Lute Melody">
 		<set name="icon" val="icon.skill11518"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14797" levels="1" name="Master's Blessing - Guardian's Harmony (Range)">
+	<skill id="14797" levels="1" name="Master's Blessing - Knight's Harmony">
 		<set name="icon" val="icon.skill11523"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14798" levels="1" name="Master's Blessing - Berserker's Harmony (Range)">
+	<skill id="14798" levels="1" name="Master's Blessing - Warrior's Harmony">
 		<set name="icon" val="icon.skill11524"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14799" levels="1" name="Master's Blessing - Magician's Harmony (Range)">
+	<skill id="14799" levels="1" name="Master's Blessing - Wizard's Harmony">
 		<set name="icon" val="icon.skill11525"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>

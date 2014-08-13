@@ -364,7 +364,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="918" levels="1" name="Maximum Focus Force">
+	<skill id="918" levels="1" name="Maximum Force Focus">
 		<set name="icon" val="icon.skill0918"/>
 		<set name="reuseDelay" val="75000"/>
 		<set name="magicLevel" val="81"/>
@@ -379,7 +379,7 @@
 		<set name="fullCharge" val="true"/>
 		<set name="charges" val="999"/>
 	</skill>
-	<skill id="919" levels="1" name="Maximum Focus Sonic">
+	<skill id="919" levels="1" name="Maximum Sonic Focus">
 		<set name="icon" val="icon.skill0919"/>
 		<set name="reuseDelay" val="75000"/>
 		<set name="magicLevel" val="81"/>
@@ -595,7 +595,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="930" levels="1" name="Spirit of the Demon">
+	<skill id="930" levels="1" name="Spirit of the Phantom">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="reuseDelay" val="3600000"/>
@@ -1373,7 +1373,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="980" levels="6" name="Hate Aura">
+	<skill id="980" levels="6" name="Aggression Aura">
 		<table name="#mpConsume2">108 109 110 111 112 112</table>
 		<table name="#magicLevel">80 81 82 83 84 85</table>
 		<set name="affectLimit" val="10;10"/>
@@ -1573,7 +1573,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="990" levels="1" name="Death Shot">
+	<skill id="990" levels="1" name="Death Sting">
 		<set name="icon" val="icon.skill0990"/>
 		<set name="reuseDelay" val="12000"/>
 		<set name="power" val="24306"/>
@@ -1593,7 +1593,7 @@
 			<using kind="Crossbow, Bow"/>
 		</cond>
 	</skill>
-	<skill id="991" levels="1" name="Throw Dagger">
+	<skill id="991" levels="1" name="Throwing Dagger">
 		<set name="icon" val="icon.skill0991"/>
 		<set name="reuseDelay" val="45000"/>
 		<set name="power" val="3488"/>

@@ -25,7 +25,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13770" name="Shadow Item - Shield of Yehan Miakesh">
+	<weapon id="13770" name="Shadow Item: Shield of Yehan Miakesh">
 		<set name="reuse_delay" value="500"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -52,7 +52,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13789" name="Red Boing Hammer ">
+	<weapon id="13789" name="Red Boing Hammer">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="false"/>

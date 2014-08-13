@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="20711" name="Jack O'Lantern Mask - Event">
+	<armor id="20711" name="Jack O'Lantern Mask (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="BranchSys.icon.br_jack0_mask_i00"/>
@@ -24,7 +24,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20712" name="Mask of Giant Hercules - Event" add_name="Blessing of Skooldy : Protection of Darkness - 2 Hour Limited Period">
+	<armor id="20712" name="Reanimated Corpse Mask (Event)" add_name="Skooldie's Blessing: Protection of Darkness (2-hour)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="120"/>
@@ -50,7 +50,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20713" name="Mask of Silent Scream - Event" add_name="Blessing of Skooldy : Protection of Darkness - 2 Hour Limited Period">
+	<armor id="20713" name="Shriek Mask (Event)" add_name="Skooldie's Blessing: Protection of Darkness (2-hour)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="120"/>
@@ -76,7 +76,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20714" name="Spirit of Wrath Mask - Event" add_name="Blessing of Skooldy : Protection of Darkness - 2 Hour Limited Period">
+	<armor id="20714" name="Red Devil Mask (Event)" add_name="Skooldie's Blessing: Protection of Darkness (2-hour)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="120"/>
@@ -102,7 +102,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20715" name="Undecaying Corpse Mask - Event" add_name="Blessing of Skooldy : Protection of Darkness - 2 Hour Limited Period">
+	<armor id="20715" name="Mummy Mask (Event)" add_name="Skooldie's Blessing: Protection of Darkness (2-hour)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="120"/>
@@ -128,7 +128,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20716" name="Planet X235 Alien Mask - Event" add_name="Blessing of Skooldy : Protection of Darkness - 2 Hour Limited Period">
+	<armor id="20716" name="Alien Mask (Event)" add_name="Skooldie's Blessing: Protection of Darkness (2-hour)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="120"/>
@@ -154,7 +154,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20718" name="Shiny Mask of Giant Hercules - Event" add_name="Blessing of Halloween - 4 hours Limited Period">
+	<armor id="20718" name="Shiny Reanimated Corpse Mask (Event)" add_name="Blessing of Halloween (4-hour)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="240"/>
@@ -180,7 +180,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20719" name="Shiny Mask of Silent Scream - Event" add_name="Blessing of Halloween - 4 hours Limited Period">
+	<armor id="20719" name="Shiny Shriek Mask (Event)" add_name="Blessing of Halloween (4-hour)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="240"/>
@@ -206,7 +206,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20720" name="Shiny Spirit of Wrath Mask - Event" add_name="Blessing of Halloween - 4 hours Limited Period">
+	<armor id="20720" name="Shiny Red Devil Mask (Event)" add_name="Blessing of Halloween (4-hour)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="240"/>
@@ -232,7 +232,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20721" name="Shiny Undecaying Corpse Mask - Event" add_name="Blessing of Halloween - 4 hours Limited Period">
+	<armor id="20721" name="Shiny Mummy Mask (Event)" add_name="Blessing of Halloween (4-hour)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="240"/>
@@ -258,7 +258,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20722" name="Shiny Planet X235 Alien Mask - Event" add_name="Blessing of Halloween - 4 hours Limited Period">
+	<armor id="20722" name="Shiny Alien Mask (Event)" add_name="Blessing of Halloween (4-hour)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="240"/>
@@ -284,7 +284,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20723" name="Golden Jack O'Lantern Mask. ">
+	<armor id="20723" name="Golden Jack O'Lantern Mask">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="BranchSys.icon.br_golden_jack0_mask_i00"/>
@@ -302,7 +302,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20724" name="Golden Jack O'Lantern Mask." add_name="Authority of Golden Jack O'Lantern - 7 Days Limited Period">
+	<armor id="20724" name="Golden Jack O'Lantern Mask" add_name="Golden Jack O'Lantern's Authority (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -326,7 +326,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20725" name="Red Flame of Valakas">
+	<armor id="20725" name="Red Flame Valakas">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -345,7 +345,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20726" name="Agathion Seal Bracelet - Zombie">
+	<armor id="20726" name="Agathion - Zombie">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -369,7 +369,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20727" name="Agathion Seal Bracelet - Zombie" add_name="Escape from Death - 7 day limited period">
+	<armor id="20727" name="Agathion - Zombie" add_name="Soul Stealth (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -396,7 +396,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20732" name="Agathion Seal Bracelet - Baekyi Hwamae">
+	<armor id="20732" name="Agathion - Bluebird">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -420,7 +420,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20733" name="Agathion Seal Bracelet - Kwanwoo Hwamae">
+	<armor id="20733" name="Agathion - Hatbird">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -444,7 +444,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20743" name="Shiny Mask of Giant Hercules. " add_name="Blessing of Halloween - 7 day limited period">
+	<armor id="20743" name="Shiny Reanimated Corpse Mask" add_name="Blessing of Halloween (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -469,7 +469,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20744" name="Shiny Mask of Silent Scream. " add_name="Blessing of Halloween - 7 day limited period">
+	<armor id="20744" name="Shiny Shriek Mask" add_name="Blessing of Halloween (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -494,7 +494,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20745" name="Shiny Spirit of Wrath Mast. " add_name="Blessing of Halloween - 7 day limited period">
+	<armor id="20745" name="Shiny Red Devil Mask" add_name="Blessing of Halloween (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -519,7 +519,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20746" name="Shiny Undecaying Corpse Mask. " add_name="Blessing of Halloween - 7 day limited period">
+	<armor id="20746" name="Shiny Mummy Mask" add_name="Blessing of Halloween (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -544,7 +544,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20747" name="Shiny Planet X235 Alien Mask. " add_name="Blessing of Halloween - 7 day limited period">
+	<armor id="20747" name="Shiny Alien Mask" add_name="Blessing of Halloween (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -569,7 +569,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20759" name="Christmas Shirt" add_name="24 hours limited period">
+	<armor id="20759" name="Holiday Shirt" add_name="24-hour">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.br_xmas_shirts_i00"/>
 		<set name="price" value="0"/>
@@ -831,7 +831,7 @@
 			</level>
 		</enchant_options>
 	</armor>
-	<armor id="20774" name="Agathion Seal Bracelet - Guangong" add_name="Aura of Fury - 7 day limited period">
+	<armor id="20774" name="Agathion - Guangong" add_name="Aura of Fury (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -858,7 +858,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20775" name="Agathion Seal Bracelet - Gwanseum Nyang Nyang" add_name="Blessing of Mercy - 7 day limited period">
+	<armor id="20775" name="Agathion - Gwanseum Nyang Nyang" add_name="Blessing of Mercy (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -884,7 +884,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20776" name="Agathion Seal Bracelet - Blue Opera" add_name="Sword of Recovery - 7 day limited period">
+	<armor id="20776" name="Agathion - Blue Opera" add_name="Sword of Recovery (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -910,7 +910,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20777" name="Agathion Seal Bracelet - Blue Opera" add_name="Sword of Lightning - 7 day limited period">
+	<armor id="20777" name="Agathion - Blue Opera" add_name="Sword of Lightning (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -936,7 +936,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20778" name="Agathion Seal Bracelet - Red Opera" add_name="Spear of Flames - 7 day limited period">
+	<armor id="20778" name="Agathion - Red Opera" add_name="Spear of Flames (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -962,7 +962,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20779" name="Agathion Seal Bracelet - Opera">
+	<armor id="20779" name="Agathion - Opera">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -986,7 +986,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20780" name="Agathion Seal Bracelet - Opera" add_name="Sword of Life - 30 day limited period">
+	<armor id="20780" name="Agathion - Opera" add_name="Sword of Life (30-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1013,7 +1013,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20781" name="Agathion Seal Bracelet - Miss Chipao" add_name="Miss Chipao's Blessing - 7 day limited period">
+	<armor id="20781" name="Agathion - Miss Chipao" add_name="Decrease Weight (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1040,7 +1040,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20782" name="Agathion Seal Bracelet - Nepal Snow">
+	<armor id="20782" name="Agathion - Nepal Snow">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1064,7 +1064,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20783" name="Agathion Seal Bracelet - Round Ball Snow">
+	<armor id="20783" name="Agathion - Round Ball Snow">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1088,7 +1088,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20784" name="Agathion Seal Bracelet - Ladder Snow">
+	<armor id="20784" name="Agathion - Ladder Snow">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1112,7 +1112,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20785" name="Agathion Seal Bracelet - Nepal Snow" add_name="Snow's Haste - 7 day limited period">
+	<armor id="20785" name="Agathion - Nepal Snow" add_name="Snow's Haste (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1139,7 +1139,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20786" name="Agathion Seal Bracelet - Round Ball Snow" add_name="Snow's Acumen - 7 day limited period">
+	<armor id="20786" name="Agathion - Round Ball Snow" add_name="Snow's Acumen (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1166,7 +1166,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20787" name="Agathion Seal Bracelet - Ladder Snow" add_name="Snow's Wind Walk - 7 day limited period">
+	<armor id="20787" name="Agathion - Ladder Snow" add_name="Snow's Wind Walk (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1193,7 +1193,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20789" name="Rocket Gun Hat" add_name="Continuous Fireworks">
+	<armor id="20789" name="Rocket Gun Hat" add_name="Chain Fireworks">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1215,7 +1215,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20790" name="Yellow Paper Hat" add_name="Blessed Body - 7 day limited period">
+	<armor id="20790" name="Yellow Paper Hat" add_name="Blessed Body (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1239,7 +1239,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20791" name="Pink Paper Mask Set" add_name="Blessed Soul - 7 day limited period">
+	<armor id="20791" name="Pink Paper Mask Set" add_name="Blessed Soul (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1301,7 +1301,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20794" name="Flavorful Cheese Hat" add_name="Scent of Flavorful Cheese - 7 day limited period">
+	<armor id="20794" name="Flavorful Cheese Hat" add_name="Scent of Flavorful Cheese (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1325,7 +1325,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20795" name="Sweet Cheese Hat" add_name="Scent of Sweet Cheese - 7 day limited period">
+	<armor id="20795" name="Sweet Cheese Hat" add_name="Scent of Sweet Cheese (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>

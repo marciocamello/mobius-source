@@ -182,7 +182,7 @@
 			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23004" name="Male Lachikion " title="Successor's Escort">
+	<npc id="23004" name="Male Lachikion" title="Successor's Escort">
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
@@ -226,7 +226,7 @@
 			<skill id="5464" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23005" name="Male Lachikion " title="Successor's Escort">
+	<npc id="23005" name="Male Lachikion" title="Successor's Escort">
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="20.0"/>
 		<set name="level" value="85"/>
@@ -4523,7 +4523,7 @@
 			<skill id="5462" level="1"/>
 		</skills>
 	</npc>
-	<npc id="23080" name="Poison Cloud" title="">
+	<npc id="23080" name="Corrupted Poison Cloud" title="">
 		<set name="collision_radius" value="13.0"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="level" value="94"/>

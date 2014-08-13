@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="15300" name="NPC exclusive transparent dual">
+	<weapon id="15300" name="Transparent Dual (NPC)">
 		<set name="crystal_type" value="S80"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -26,7 +26,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15301" name="NPC exclusive transparent pole">
+	<weapon id="15301" name="Transparent Pole (NPC)">
 		<set name="crystal_type" value="S80"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -52,7 +52,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15302" name="NPC exclusive transparent bow">
+	<weapon id="15302" name="Transparent Bow (NPC)">
 		<set name="atk_reuse" value="820"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="destroyable" value="false"/>
@@ -80,7 +80,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15303" name="NPC exclusive transparent claw">
+	<weapon id="15303" name="Transparent Claw (NPC)">
 		<set name="crystal_type" value="S80"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -106,7 +106,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15304" name="NPC exclusive transparent bowgun">
+	<weapon id="15304" name="Transparent Crossbow (NPC)">
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="destroyable" value="false"/>
@@ -133,7 +133,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15305" name="NPC exclusive transparent rapier">
+	<weapon id="15305" name="Transparent Rapier (NPC)">
 		<set name="crystal_type" value="S80"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -160,7 +160,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15306" name="NPC exclusive transparent dual dagger">
+	<weapon id="15306" name="Transparent Dual Dagger (NPC)">
 		<set name="crystal_type" value="S80"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -186,7 +186,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15310" name="Sacred Sword of Einhasad">
+	<weapon id="15310" name="Einhasad's Sacred Sword">
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.weapon_the_sword_of_hero_i00"/>
@@ -213,7 +213,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15313" name="PC cafe' exclusive - Forgotten Blade" add_name="Weapons for PC Cafe Use">
+	<weapon id="15313" name="Player Commendation - Forgotten Blade" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.weapon_forgotten_blade_i00"/>
@@ -240,7 +240,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15314" name="For PC cafe use -  Basalt Battlehammer" add_name="Weapons for PC Cafe Use">
+	<weapon id="15314" name="Player Commendation - Basalt Battlehammer" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.weapon_basalt_battlehammer_i00"/>
@@ -268,7 +268,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15315" name="For PC cafe use - Imperial Staff" add_name="Weapons for PC Cafe Use">
+	<weapon id="15315" name="Player Commendation - Imperial Staff" add_name="PC-exclusive Weapon">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
@@ -297,7 +297,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15316" name="For PC cafe use - Angel Slayer" add_name="Weapons for PC Cafe Use">
+	<weapon id="15316" name="Player Commendation - Angel Slayer" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.weapon_angel_slayer_i00"/>
@@ -325,7 +325,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15317" name="For PC cafe use - Dragon Hunter Axe" add_name="Weapons for PC Cafe Use">
+	<weapon id="15317" name="Player Commendation - Dragon Hunter Axe" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.weapon_dragon_hunter_axe_i00"/>
@@ -353,7 +353,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15318" name="For PC cafe use - Saint Spear " add_name="Weapons for PC Cafe Use">
+	<weapon id="15318" name="Player Commendation - Saint Spear" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.weapon_saint_spear_i00"/>
@@ -381,7 +381,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15319" name="For PC cafe use - Demon Splinter" add_name="Weapons for PC Cafe Use">
+	<weapon id="15319" name="Player Commendation - Demon Splinter" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.weapon_demon_splinter_i00"/>
@@ -409,7 +409,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15320" name="For PC cafe use - Heaven's Divider " add_name="Weapons for PC Cafe Use">
+	<weapon id="15320" name="Player Commendation - Heaven's Divider" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.weapon_heavens_divider_i00"/>
@@ -436,7 +436,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15321" name="For PC cafe use - Arcana Macw" add_name="Weapons for PC Cafe Use">
+	<weapon id="15321" name="Player Commendation - Arcana Mace" add_name="PC-exclusive Weapon">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
@@ -465,7 +465,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15322" name="For PC cafe use - Draconic Bow" add_name="Weapons for PC Cafe Use">
+	<weapon id="15322" name="Player Commendation - Draconic Bow" add_name="PC-exclusive Weapon">
 		<set name="atk_reuse" value="1500"/>
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
@@ -495,7 +495,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15323" name="For PC cafe use - Laevateinn" add_name="Weapons for PC Cafe Use">
+	<weapon id="15323" name="Player Commendation - Laevateinn" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.weapon_leavatein_i00"/>
@@ -524,7 +524,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15324" name="For PC cafe use - Gram" add_name="Weapons for PC Cafe Use">
+	<weapon id="15324" name="Player Commendation - Gram" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.weapon_gram_i01"/>
@@ -552,7 +552,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15325" name="For PC cafe use - Sarnga" add_name="Weapons for PC Cafe Use">
+	<weapon id="15325" name="Player Commendation - Sarunga" add_name="PC-exclusive Weapon">
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
@@ -581,7 +581,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15326" name="For PC cafe use - Tallum Blade *Dark Legion" add_name="Weapons for PC Cafe Use">
+	<weapon id="15326" name="Player Commendation - Tallum Blade*Dark Legion's Edge" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
@@ -606,7 +606,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15342" name="Aqua Elf Transforming Harp" add_name="60 day limited period">
+	<weapon id="15342" name="Aqua Elf Transformation Harp" add_name="60-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -632,7 +632,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="15344" name="Aqua Elf Transforming Harp - Event " add_name="60 day limited period">
+	<weapon id="15344" name="Aqua Elf Transformation Harp (Event)" add_name="60-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>

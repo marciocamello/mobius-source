@@ -144,7 +144,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="13346" name="Kamaloka Entrance Pass 3-unit Pack (Event)">
+	<etcitem id="13346" name="Entrance Pass: Kamaloka 3-unit Pack (Event)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

@@ -6229,7 +6229,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="25389" name="Red Eye Archer " title="Raid Fighter">
+	<npc id="25389" name="Red Eye Archer" title="Raid Fighter">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Ranger"/>
 		<set name="baseAtkRange" value="1100"/>

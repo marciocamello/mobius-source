@@ -57,7 +57,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18580" name="Requiem Shaper" add_name="Focus ">
+	<weapon id="18580" name="Requiem Shaper" add_name="Focus">
 		<set name="icon" value="icon.weapon_aspeda_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -193,7 +193,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18585" name="Requiem Slasher" add_name="Damage">
+	<weapon id="18585" name="Requiem Slasher" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_polion_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -355,7 +355,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18591" name="Requiem Fighter" add_name="Damage">
+	<weapon id="18591" name="Requiem Fighter" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_fantasma_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -463,7 +463,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18595" name="Requiem Stormer" add_name="Damage">
+	<weapon id="18595" name="Requiem Stormer" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_soryu_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -490,7 +490,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18596" name="Requiem Thrower" add_name="Damage">
+	<weapon id="18596" name="Requiem Thrower" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_grabathus_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>

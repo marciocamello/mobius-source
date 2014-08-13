@@ -286,7 +286,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32441" name="Fantasy Zubei's Gauntlet" add_name="Not in Use">
+	<armor id="32441" name="Fantasy Zubei's Gauntlets" add_name="Not in Use">
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.armor_t64_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -301,7 +301,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32442" name="Fantasy Zubei's Gauntlet" add_name="Not in Use">
+	<armor id="32442" name="Fantasy Zubei's Gauntlets" add_name="Not in Use">
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.armor_t65_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -316,7 +316,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32443" name="Fantasy Zubei's Gauntlet" add_name="Not in Use">
+	<armor id="32443" name="Fantasy Zubei's Gauntlets" add_name="Not in Use">
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.armor_t56_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -586,7 +586,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32487" name="Fantasy Majestic Gauntlet" add_name="Not in Use">
+	<armor id="32487" name="Fantasy Majestic Gauntlets" add_name="Not in Use">
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.armor_t83_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -601,7 +601,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32488" name="Fantasy Majestic Gauntlet" add_name="Not in Use">
+	<armor id="32488" name="Fantasy Majestic Gauntlets" add_name="Not in Use">
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.armor_t84_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -616,7 +616,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="32489" name="Fantasy Majestic Gauntlet" add_name="Not in Use">
+	<armor id="32489" name="Fantasy Majestic Gauntlets" add_name="Not in Use">
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.armor_t85_g_i00"/>
 		<set name="type" value="NONE"/>

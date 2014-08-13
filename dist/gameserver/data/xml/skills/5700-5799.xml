@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="5700" levels="7" name="Magic Resistance Decrease">
+	<skill id="5700" levels="7" name="Decrease M. Def.">
 		<table name="#magicLevel">29 39 49 59 69 78 81</table>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1263"/>
@@ -16,7 +16,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5701" levels="7" name="Decrease P. Atk">
+	<skill id="5701" levels="7" name="Decrease P. Atk.">
 		<table name="#magicLevel">29 39 49 59 69 78 81</table>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill4037"/>
@@ -382,7 +382,7 @@
 		<set name="castRange" val="40"/>
 		<set name="effectRange" val="400"/>
 	</skill>
-	<skill id="5725" levels="6" name="Broom Trusting">
+	<skill id="5725" levels="6" name="Broom Thrust">
 		<table name="#mpConsume2">121 142 151 159 165 168</table>
 		<table name="#magicLevel">60 70 75 80 85 90</table>
 		<table name="#power">2757 2846 2934 3022 3109 3196</table>
@@ -675,7 +675,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5739" levels="1" name="Invincible">
+	<skill id="5739" levels="1" name="Invincibility">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill5739"/>
 		<set name="magicLevel" val="99"/>
@@ -688,7 +688,7 @@
 			<effect count="1" name="Invulnerable" abnormal="invul2" stackOrder="-1" stackType="invul" time="7" val="0"/>
 		</for>
 	</skill>
-	<skill id="5740" levels="1" name="Recovery Pet">
+	<skill id="5740" levels="1" name="Recovery Pot">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="99"/>
@@ -721,7 +721,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5744" levels="1" name="Invincible">
+	<skill id="5744" levels="1" name="Invincibility">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill1418"/>
 		<set name="magicLevel" val="99"/>
@@ -941,7 +941,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5758" levels="1" name="Presentation - Large Firework">
+	<skill id="5758" levels="1" name="Presentation - Large Firecracker">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="3000"/>
@@ -1126,7 +1126,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5774" levels="2" name="Pailaka Reward Vitality Replenishing">
+	<skill id="5774" levels="2" name="Replenish Pailaka Reward Vitality">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -1135,7 +1135,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5775" levels="1" name="Great Blessing of Pathfinder">
+	<skill id="5775" levels="1" name="Greater Blessing of Pathfinder">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill5762"/>
 		<set name="magicLevel" val="99"/>
@@ -1234,7 +1234,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5785" levels="1" name="Presentation - Dimensional Gate">
+	<skill id="5785" levels="1" name="Presentation - Dimensional Door">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1309,7 +1309,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5794" levels="1" name="Decrease Spd.">
+	<skill id="5794" levels="1" name="Decrease Speed">
 		<set name="levelModifier" val="2"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="affectLimit" val="5;12"/>
@@ -1353,7 +1353,7 @@
 			<effect abnormal="poison" count="30" name="Poison" time="1" val="66"/>
 		</for>
 	</skill>
-	<skill id="5796" levels="1" name="Decrease Spd.">
+	<skill id="5796" levels="1" name="Decrease Speed">
 		<set name="levelModifier" val="2"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="affectLimit" val="5;12"/>

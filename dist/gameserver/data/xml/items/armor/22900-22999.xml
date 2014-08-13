@@ -21,7 +21,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="22909" name="Ruthless Tribe Mask	">
+	<armor id="22909" name="Ruthless Tribe Mask">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_mask_i00"/>
 		<set name="type" value="NONE"/>
@@ -231,7 +231,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="22954" name="Agathion - Cheerleader Orodrie" add_name="30-day">
+	<armor id="22954" name="Agathion - Cheerleader Orodriel" add_name="30-day">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_cheer_FElf_i00"/>
 		<set name="type" value="NONE"/>

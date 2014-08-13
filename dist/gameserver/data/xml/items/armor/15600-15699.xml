@@ -201,7 +201,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15612" name="Moirai Gaiter">
+	<armor id="15612" name="Moirai Gaiters">
 		<set name="crystal_count" value="1010"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -219,7 +219,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15613" name="Moirai Leather Legging">
+	<armor id="15613" name="Moirai Leather Leggings">
 		<set name="crystal_count" value="758"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -256,7 +256,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15615" name="Moirai Gauntlet">
+	<armor id="15615" name="Moirai Gauntlets">
 		<set name="crystal_count" value="404"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -383,7 +383,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15694" name="Sealed Moirai Helmet ">
+	<armor id="15694" name="Sealed Moirai Helmet">
 		<set name="crystal_count" value="606"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -401,7 +401,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15695" name="Sealed Moirai Leather Helmet ">
+	<armor id="15695" name="Sealed Moirai Leather Helmet">
 		<set name="crystal_count" value="606"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -419,7 +419,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15696" name="Sealed Moirai Circlet ">
+	<armor id="15696" name="Sealed Moirai Circlet">
 		<set name="crystal_count" value="606"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -437,7 +437,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15697" name="Sealed Moirai Breastplate ">
+	<armor id="15697" name="Sealed Moirai Breastplate">
 		<set name="crystal_count" value="1616"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -455,7 +455,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15698" name="Sealed Moirai Leather Breastplate ">
+	<armor id="15698" name="Sealed Moirai Leather Breastplate">
 		<set name="crystal_count" value="1212"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -473,7 +473,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15699" name="Sealed Moirai Tunic ">
+	<armor id="15699" name="Sealed Moirai Tunic">
 		<set name="crystal_count" value="1212"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>

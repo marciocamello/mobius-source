@@ -1781,7 +1781,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="3436" name="Ketra Commander Atis" title="Lord of Destruction">
+	<npc id="3436" name="Ketra's Commander Atis" title="Lord of Destruction">
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>

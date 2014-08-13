@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="12200" name="Common Item - Blue Wolf Gloves" add_name="Robe Use">
+	<armor id="12200" name="Common Item - Blue Wolf Gloves" add_name="Robe">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="B"/>
@@ -137,7 +137,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12207" name="Common Item - Dark Crystal Gloves" add_name="Heavy Armor Use">
+	<armor id="12207" name="Common Item - Dark Crystal Gloves" add_name="Heavy Armor">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="A"/>
@@ -156,7 +156,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12208" name="Common Item - Dark Crystal Gloves" add_name="Tans Armor Use">
+	<armor id="12208" name="Common Item - Dark Crystal Gloves" add_name="Light Armor">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="A"/>
@@ -175,7 +175,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12209" name="Common Item - Dark Crystal Gloves" add_name="Robe Use">
+	<armor id="12209" name="Common Item - Dark Crystal Gloves" add_name="Robe">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="A"/>
@@ -233,7 +233,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12212" name="Common Item - Dark Crystal Boots" add_name="Heavy Armor Use">
+	<armor id="12212" name="Common Item - Dark Crystal Boots" add_name="Heavy Armor">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="A"/>
@@ -252,7 +252,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12213" name="Common Item - Dark Crystal Boots" add_name="Tans Armor Use">
+	<armor id="12213" name="Common Item - Dark Crystal Boots" add_name="Light Armor">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="A"/>
@@ -271,7 +271,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12214" name="Common Item - Dark Crystal Boots" add_name="Robe Use">
+	<armor id="12214" name="Common Item - Dark Crystal Boots" add_name="Robe">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="A"/>
@@ -347,7 +347,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12219" name="Common Item - Barbed Shirt">
+	<armor id="12219" name="Common Item - Scale Shirt">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="39"/>
 		<set name="crystal_type" value="A"/>
@@ -654,7 +654,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12236" name="Common Item - Tallum Gloves" add_name="Heavy Armor Use">
+	<armor id="12236" name="Common Item - Tallum Gloves" add_name="Heavy Armor">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="A"/>
@@ -673,7 +673,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12237" name="Common Item - Tallum Gloves" add_name="Tans Armor Use">
+	<armor id="12237" name="Common Item - Tallum Gloves" add_name="Light Armor">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="A"/>
@@ -692,7 +692,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12238" name="Common Item - Tallum Gloves" add_name="Robe Use">
+	<armor id="12238" name="Common Item - Tallum Gloves" add_name="Robe">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="A"/>
@@ -730,7 +730,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12240" name="Common Item - Tallum Boots" add_name="Heavy Armor Use">
+	<armor id="12240" name="Common Item - Tallum Boots" add_name="Heavy Armor">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="A"/>
@@ -749,7 +749,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12241" name="Common Item - Tallum Boots" add_name="Tans Armor Use">
+	<armor id="12241" name="Common Item - Tallum Boots" add_name="Light Armor">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="A"/>
@@ -768,7 +768,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12242" name="Common Item - Tallum Boots" add_name="Robe Use">
+	<armor id="12242" name="Common Item - Tallum Boots" add_name="Robe">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="A"/>
@@ -865,7 +865,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12247" name="Common Item - Majestic Gauntlet" add_name="Heavy Armor Use">
+	<armor id="12247" name="Common Item - Majestic Gauntlets" add_name="Heavy Armor">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="A"/>
@@ -884,7 +884,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12248" name="Common Item - Majestic Gauntlet" add_name="Tans Armor Use">
+	<armor id="12248" name="Common Item - Majestic Gauntlets" add_name="Light Armor">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="A"/>
@@ -903,7 +903,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12249" name="Common Item - Majestic Gauntlet" add_name="Robe Use">
+	<armor id="12249" name="Common Item - Majestic Gauntlets" add_name="Robe">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="A"/>
@@ -961,7 +961,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12252" name="Common Item - Majestic Boots" add_name="Heavy Armor Use">
+	<armor id="12252" name="Common Item - Majestic Boots" add_name="Heavy Armor">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="A"/>
@@ -980,7 +980,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12253" name="Common Item - Majestic Boots" add_name="Tans Armor Use">
+	<armor id="12253" name="Common Item - Majestic Boots" add_name="Light Armor">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="A"/>
@@ -999,7 +999,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12254" name="Common Item - Majestic Boots" add_name="Robe Use">
+	<armor id="12254" name="Common Item - Majestic Boots" add_name="Robe">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="A"/>
@@ -1056,7 +1056,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12257" name="Common Item - Sealed Majestic Gauntlet">
+	<armor id="12257" name="Common Item - Sealed Majestic Gauntlets">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="A"/>
@@ -1190,7 +1190,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12264" name="Common Item - Sealed Gauntlet of Nightmare">
+	<armor id="12264" name="Common Item - Sealed Gauntlets of Nightmare">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="A"/>
@@ -1228,7 +1228,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12266" name="Common Item - Sealed Nightmare Robe">
+	<armor id="12266" name="Common Item - Sealed Robe of Nightmare">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="29"/>
 		<set name="crystal_type" value="A"/>
@@ -1305,7 +1305,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12271" name="Common Item - Gauntlet of Nightmare" add_name="Heavy Armor Use">
+	<armor id="12271" name="Common Item - Gauntlets of Nightmare" add_name="Heavy Armor">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="A"/>
@@ -1324,7 +1324,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12272" name="Common Item - Gauntlet of Nightmare" add_name="Tans Armor Use">
+	<armor id="12272" name="Common Item - Gauntlets of Nightmare" add_name="Light Armor">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="A"/>
@@ -1343,7 +1343,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12273" name="Common Item - Gauntlet of Nightmare" add_name="Robe Use">
+	<armor id="12273" name="Common Item - Gauntlets of Nightmare" add_name="Robe">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="A"/>
@@ -1362,7 +1362,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12274" name="Common Item - Nightmarish Leather Armor">
+	<armor id="12274" name="Common Item - Leather Armor of Nightmare">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="29"/>
 		<set name="crystal_type" value="A"/>
@@ -1381,7 +1381,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12275" name="Common Item - Nightmare Robe">
+	<armor id="12275" name="Common Item - Robe of Nightmare">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="29"/>
 		<set name="crystal_type" value="A"/>
@@ -1401,7 +1401,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12276" name="Common Item - Boots of Nightmare" add_name="Heavy Armor Use">
+	<armor id="12276" name="Common Item - Boots of Nightmare" add_name="Heavy Armor">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="A"/>
@@ -1420,7 +1420,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12277" name="Common Item - Boots of Nightmare" add_name="Tans Armor Use">
+	<armor id="12277" name="Common Item - Boots of Nightmare" add_name="Light Armor">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="A"/>
@@ -1439,7 +1439,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12278" name="Common Item - Boots of Nightmare" add_name="Robe Use">
+	<armor id="12278" name="Common Item - Boots of Nightmare" add_name="Robe">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="A"/>
@@ -1477,7 +1477,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="12281" name="Common Item - Stripe Barbed Shirt">
+	<armor id="12281" name="Common Item - Striped Scale Shirt">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_count" value="59"/>
 		<set name="crystal_type" value="A"/>

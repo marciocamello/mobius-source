@@ -244,7 +244,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35109" name="Dark Amaranthine Shaper" add_name="Guindance">
+	<weapon id="35109" name="Dark Amaranthine Shaper" add_name="Guidance">
 		<set name="icon" value="icon.weapon_stanpid_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
@@ -440,7 +440,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35116" name="Dark Amaranthine Slasher" add_name="Damage">
+	<weapon id="35116" name="Dark Amaranthine Slasher" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_bauen_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
@@ -608,7 +608,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35122" name="Dark Amaranthine Fighter" add_name="Damage">
+	<weapon id="35122" name="Dark Amaranthine Fighter" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_durga_i11"/>
 		<set name="weight" value="1550"/>
 		<set name="type" value="DUALFIST"/>
@@ -720,7 +720,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35126" name="Dark Amaranthine Stormer" add_name="Damage">
+	<weapon id="35126" name="Dark Amaranthine Stormer" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_crabel_i11"/>
 		<set name="weight" value="2010"/>
 		<set name="type" value="POLE"/>
@@ -748,7 +748,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35127" name="Dark Amaranthine Thrower" add_name="Damage">
+	<weapon id="35127" name="Dark Amaranthine Thrower" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_castron_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
@@ -804,7 +804,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35129" name="Dark Amaranthine Thrower" add_name="Long Bow">
+	<weapon id="35129" name="Dark Amaranthine Thrower" add_name="Long Blow">
 		<set name="icon" value="icon.weapon_castron_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
@@ -1196,7 +1196,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35143" name="Dark Amaranthine Dualsword" add_name="Damage">
+	<weapon id="35143" name="Dark Amaranthine Dualsword" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="DUAL"/>
@@ -1252,7 +1252,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35145" name="Dark Amaranthine Dual Dagger" add_name="Damage">
+	<weapon id="35145" name="Dark Amaranthine Dual Dagger" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i11"/>
 		<set name="weight" value="2050"/>
 		<set name="type" value="DUALDAGGER"/>
@@ -1391,7 +1391,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35150" name="Dark Amaranthine Dual Blunt Weapon" add_name="Damage">
+	<weapon id="35150" name="Dark Amaranthine Dual Blunt Weapon" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="DUALBLUNT"/>
@@ -1593,7 +1593,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35157" name="Dark Amaranthine Slasher" add_name="Focus + Damage Up">
+	<weapon id="35157" name="Dark Amaranthine Slasher" add_name="Focus + Damage">
 		<set name="icon" value="icon.weapon_bauen_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
@@ -1680,7 +1680,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35160" name="Dark Amaranthine Avenger" add_name="Guidance + Critical Damage">
+	<weapon id="35160" name="Dark Amaranthine Avenger" add_name="Haste + Critical Damage">
 		<set name="icon" value="icon.weapon_qutram_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BLUNT"/>
@@ -1767,7 +1767,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35163" name="Dark Amaranthine Fighter" add_name="Focus + Damage Up">
+	<weapon id="35163" name="Dark Amaranthine Fighter" add_name="Focus + Damage">
 		<set name="icon" value="icon.weapon_durga_i11"/>
 		<set name="weight" value="1550"/>
 		<set name="type" value="DUALFIST"/>
@@ -1970,7 +1970,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35170" name="Dark Amaranthine Thrower" add_name="Focus + Long Bow">
+	<weapon id="35170" name="Dark Amaranthine Thrower" add_name="Focus + Long Blow">
 		<set name="icon" value="icon.weapon_castron_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
@@ -1999,7 +1999,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35171" name="Dark Amaranthine Thrower" add_name="Long Bow + Damage Up">
+	<weapon id="35171" name="Dark Amaranthine Thrower" add_name="Long Blow + Damage Up">
 		<set name="icon" value="icon.weapon_castron_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
@@ -2691,7 +2691,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35195" name="Dark Amaranthine Slasher">
+	<weapon id="35195" name="Bloody Amaranthine Slasher">
 		<set name="icon" value="icon.weapon_bauen_i20"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="SWORD"/>

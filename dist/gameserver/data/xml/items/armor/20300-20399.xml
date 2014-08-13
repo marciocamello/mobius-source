@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="20300" name="Agathion Seal Bracelet - Blue Sumo Wrestler" add_name="Wild Magic - 7 Day Expiration Period">
+	<armor id="20300" name="Agathion - Blue Sumo Wrestler" add_name="Wild Magic (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -27,7 +27,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20301" name="Agathion Seal Bracelet - Great Sumo Match">
+	<armor id="20301" name="Agathion - Great Sumo Match">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -51,7 +51,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20302" name="Agathion Seal Bracelet - Great Sumo Match" add_name="Big Head / Firework - 7 Day Expiration Period">
+	<armor id="20302" name="Agathion - Great Sumo Match" add_name="Big Head / Firework (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -78,7 +78,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20303" name="Agathion Seal Bracelet - Button-Eyed Bear Doll">
+	<armor id="20303" name="Agathion - Button-eyed Bear Doll">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -102,7 +102,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20304" name="Agathion Seal Bracelet - Button-Eyed Bear Doll" add_name="Escape - 7 Day Expiration Period">
+	<armor id="20304" name="Agathion - Button-eyed Bear Doll" add_name="Escape (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -128,7 +128,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20305" name="Agathion Seal Bracelet - Button-Eyed Bear Doll" add_name="Resurrection - 7 Day Expiration Period">
+	<armor id="20305" name="Agathion - Button-eyed Bear Doll" add_name="Resurrection (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -154,7 +154,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20306" name="Agathion Seal Bracelet - Button-Eyed Bear Doll" add_name="Energy - 7 Day Expiration Period">
+	<armor id="20306" name="Agathion - Button-eyed Bear Doll" add_name="Vitality (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -180,7 +180,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20307" name="Agathion Seal Bracelet - God of Fortune">
+	<armor id="20307" name="Agathion - God of Fortune">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -204,7 +204,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20308" name="Agathion Seal Bracelet - God of Fortune" add_name="Energy - 7 Day Expiration Period">
+	<armor id="20308" name="Agathion - God of Fortune" add_name="Vitality (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -230,7 +230,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20309" name="Agathion Seal Bracelet - Dryad">
+	<armor id="20309" name="Agathion - Dryad">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -254,7 +254,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20310" name="Agathion Seal Bracelet - Wonboso">
+	<armor id="20310" name="Agathion - Wonboso">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -278,7 +278,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20311" name="Agathion Seal Bracelet - Wonboso" add_name="Wind Walk - 7 Day Expiration Period">
+	<armor id="20311" name="Agathion - Wonboso" add_name="Wind Walk (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -304,7 +304,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20312" name="Agathion Seal Bracelet - Daewoonso">
+	<armor id="20312" name="Agathion - Daewoonso">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -328,7 +328,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20313" name="Agathion Seal Bracelet - Daewoonso" add_name="New Year's Gift - 7 Day Expiration Period">
+	<armor id="20313" name="Agathion - Daewoonso" add_name="New Year's Gift (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -354,7 +354,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20321" name="Goggle">
+	<armor id="20321" name="Goggles">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -424,7 +424,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="20396" name="Steam Beatle Mounting Bracelet">
+	<armor id="20396" name="Mount - Steam Beetle">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -441,7 +441,7 @@
 			<skill id="21051" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20399" name="Laborer Hat" add_name="Blessed Body - 7 day limited period">
+	<armor id="20399" name="Laborer Hat" add_name="Blessed Body (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>

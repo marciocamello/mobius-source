@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="14600" name="Schuttgart Dark Protection Ring">
+	<armor id="14600" name="Schuttgart Dark Attack Resistance Ring">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
@@ -23,7 +23,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="14601" name="Ancient Cloak - Kamael exclusive" add_name="Kamael Use">
+	<armor id="14601" name="Ancient Cloak" add_name="Kamaels Only">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="dropable" value="false"/>
@@ -78,7 +78,7 @@
 			<skill id="8308" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14605" name="Red Talisman - Territory Guard">
+	<armor id="14605" name="Red Talisman - Territory Escort">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="66"/>
@@ -95,7 +95,7 @@
 			<skill id="8309" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14608" name="Ancient Cloak - Light Armor exclusive">
+	<armor id="14608" name="Ancient Cloak (Light Armor)">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="dropable" value="false"/>
@@ -133,7 +133,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="14610" name="Ancient Cloak - Robe exclusive">
+	<armor id="14610" name="Ancient Cloak (Robe)">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="dropable" value="false"/>
@@ -185,7 +185,7 @@
 			<skill id="6099" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14617" name="Agathion Seal Bracelet - Rudolph">
+	<armor id="14617" name="Agathion - Rudolph">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="20160"/>
@@ -205,7 +205,7 @@
 			<skill id="5537" level="1"/>
 		</skills>
 	</armor>
-	<armor id="14664" name="Gludio Protection Earring">
+	<armor id="14664" name="Gludio Resistance Earring">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
@@ -227,7 +227,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="14665" name="Dion Protection Earring">
+	<armor id="14665" name="Dion Resistance Earring">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
@@ -249,7 +249,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="14666" name="Giran Protection Earring">
+	<armor id="14666" name="Giran Resistance Earring">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
@@ -271,7 +271,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="14667" name="Oren Protection Earring">
+	<armor id="14667" name="Oren Resistance Earring">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
@@ -293,7 +293,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="14668" name="Aden Protection Earring">
+	<armor id="14668" name="Aden Resistance Earring">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
@@ -315,7 +315,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="14669" name="Innadril Protection Earring">
+	<armor id="14669" name="Innadril Resistance Earring">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
@@ -337,7 +337,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="14670" name="Goddard Protection Earring">
+	<armor id="14670" name="Goddard Resistance Earring">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
@@ -359,7 +359,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="14671" name="Rune Protection Earring">
+	<armor id="14671" name="Rune Resistance Earring">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
@@ -381,7 +381,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="14672" name="Schuttgart Protection Earring">
+	<armor id="14672" name="Schuttgart Resistance Earring">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
@@ -403,7 +403,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="14675" name="Agathion Seal Bracelet - Saerom">
+	<armor id="14675" name="Agathion - Neolithica">
 		<set name="crystal_type" value="NONE"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>

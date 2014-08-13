@@ -46,7 +46,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33182" name="Blue Wolf Gloves of Destiny (Fire, Wind, Dark)" add_name="Heavy">
+	<armor id="33182" name="Blue Wolf Gloves of Destiny (Fire, Wind, Dark)" add_name="Heavy Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.armor_t68_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -61,7 +61,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33183" name="Blue Wolf Boots of Destiny (Fire, Wind, Dark)" add_name="Heavy">
+	<armor id="33183" name="Blue Wolf Boots of Destiny (Fire, Wind, Dark)" add_name="Heavy Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.armor_t68_b_i00"/>
 		<set name="type" value="NONE"/>
@@ -106,7 +106,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33187" name="Blue Wolf Gloves of Destiny (Fire, Wind, Dark)" add_name="Light">
+	<armor id="33187" name="Blue Wolf Gloves of Destiny (Fire, Wind, Dark)" add_name="Light Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.armor_t69_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -121,7 +121,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33188" name="Blue Wolf Boots of Destiny (Fire, Wind, Dark)" add_name="Light">
+	<armor id="33188" name="Blue Wolf Boots of Destiny (Fire, Wind, Dark)" add_name="Light Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.armor_t69_b_i00"/>
 		<set name="type" value="NONE"/>
@@ -256,7 +256,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33197" name="Blue Wolf Gloves of Destiny (Water, Earth, Holy)" add_name="Heavy">
+	<armor id="33197" name="Blue Wolf Gloves of Destiny (Water, Earth, Holy)" add_name="Heavy Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.armor_t68_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -271,7 +271,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="33198" name="Blue Wolf Boots of Destiny (Water, Earth, Holy)" add_name="Heavy">
+	<armor id="33198" name="Blue Wolf Boots of Destiny (Water, Earth, Holy)" add_name="Heavy Armor">
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.armor_t68_b_i00"/>
 		<set name="type" value="NONE"/>

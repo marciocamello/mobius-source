@@ -34,7 +34,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13503" name="Refined Medieval Style Party Mask">
+	<armor id="13503" name="Refined Medieval Party Mask">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_middle_age_party_mask2_i00"/>
 		<set name="price" value="6000000"/>
@@ -67,7 +67,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13506" name="Improved Lord's Crown">
+	<armor id="13506" name="Enhanced Lord's Crown">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_pig_cap_i00"/>
@@ -91,7 +91,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13508" name="Circlet of Freeze">
+	<armor id="13508" name="Circlet of Ice">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_ice_circlet_i00"/>
 		<set name="price" value="2000000"/>
@@ -157,7 +157,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13514" name="Improved Mining Hat">
+	<armor id="13514" name="Enhanced Mining Hat">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_advence_mining_cap_i00"/>
 		<set name="price" value="2000000"/>
@@ -179,7 +179,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13516" name="Improved Search Hat">
+	<armor id="13516" name="Enhanced Search Hat">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_advence_mine_search_cap_i00"/>
 		<set name="price" value="2000000"/>
@@ -190,7 +190,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13517" name="Event - Raccoon Hat ">
+	<armor id="13517" name="Event - Raccoon Hat">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_raccoon_cap_i00"/>
@@ -204,7 +204,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13518" name="Event - Top Hat">
+	<armor id="13518" name="Top Hat">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_magicial_cap_i00"/>
@@ -218,7 +218,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13519" name="Event - Black Mask ">
+	<armor id="13519" name="Event - Black Mask">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_jjoro_masj_i00"/>
@@ -333,7 +333,7 @@
 			<add stat="rEvas" order="0x10" value="-8"/>
 		</for>
 	</armor>
-	<armor id="13543" name="Agathion Summon Bracelet - Collection">
+	<armor id="13543" name="Agathion - Collection">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.pi_high_agathion_bracelet_i00"/>
@@ -352,7 +352,7 @@
 			<skill id="5414" level="1"/>
 		</skills>
 	</armor>
-	<armor id="13544" name="Agathion Summon Bracelet - Boy Teddy Bear">
+	<armor id="13544" name="Agathion - Teddy Boy">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -372,7 +372,7 @@
 			<skill id="8259" level="1"/>
 		</skills>
 	</armor>
-	<armor id="13545" name="Agathion Summon Bracelet - Girl Teddy Bear">
+	<armor id="13545" name="Agathion - Teddy Girl">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -392,7 +392,7 @@
 			<skill id="8260" level="1"/>
 		</skills>
 	</armor>
-	<armor id="13546" name="Steam Sledge Mounting Bracelet">
+	<armor id="13546" name="Mount - Steam Sledge">
 		<set name="freightable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="NONE"/>
@@ -414,7 +414,7 @@
 			<skill id="8261" level="1"/>
 		</skills>
 	</armor>
-	<armor id="13547" name="Tawny-Maned Lion Mounting Bracelet">
+	<armor id="13547" name="Mount - Tawny-maned Lion">
 		<set name="freightable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="NONE"/>

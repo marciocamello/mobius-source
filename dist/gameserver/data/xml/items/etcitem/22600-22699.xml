@@ -100,7 +100,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_fruit_cocktail_i00"/>
 	</etcitem>
-	<etcitem id="22612" name="XP Rune III (Lv1-99) 30% Pack (3-hour)">
+	<etcitem id="22612" name="XP Rune III (Lv. 1-99) 30% Pack (3-hour)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -109,7 +109,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 	</etcitem>
-	<etcitem id="22613" name="XP Rune III (Lv1-99) 30% Pack (1-hour)">
+	<etcitem id="22613" name="XP Rune III (Lv. 1-99) 30% Pack (1-hour)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -118,7 +118,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 	</etcitem>
-	<etcitem id="22614" name="XP Rune III (Lv1-99) 50% Pack (1-hour)">
+	<etcitem id="22614" name="XP Rune III (Lv. 1-99) 50% Pack (1-hour)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -127,7 +127,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 	</etcitem>
-	<etcitem id="22615" name="Extra Pass - Rim Kamaloka">
+	<etcitem id="22615" name="Extra Pass: Rim Kamaloka">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -200,7 +200,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.blessed_scroll_of_enchant_armor_i06"/>
 	</etcitem>
-	<etcitem id="22649" name="Blessed Three-headed Dragon's Egg" add_name="(1-day)">
+	<etcitem id="22649" name="Blessed Three-headed Dragon's Egg" add_name="1-day">
 		<set name="icon" value="BranchSys3.Icon.g_threehead_source"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -213,7 +213,7 @@
 		<set name="durability" value="1440"/>
 		<set name="temporal" value="true"/>
 	</etcitem>
-	<etcitem id="22666" name="Emerald Weapon Appearance Stone">
+	<etcitem id="22666" name="Emerald Weapon Appearance Stone: Sword">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_sword"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -230,7 +230,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22667" name="Emerald Weapon Dagger Appearance Stone">
+	<etcitem id="22667" name="Emerald Weapon Appearance Stone: Dagger">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_dagger"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -247,7 +247,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22668" name="Emerald Weapon Two-handed Sword Appearance Stone">
+	<etcitem id="22668" name="Emerald Weapon Appearance Stone: Two-handed Sword">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_twohand_sword"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -264,7 +264,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22669" name="Emerald Weapon Fist Weapon Appearance Stone">
+	<etcitem id="22669" name="Emerald Weapon Appearance Stone: Fist Weapon">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_dualfist"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -281,7 +281,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22670" name="Emerald Weapon Spear Appearance Stone">
+	<etcitem id="22670" name="Emerald Weapon Appearance Stone: Spear">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_pole"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -298,7 +298,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22671" name="Emerald Weapon Bow Appearance Stone">
+	<etcitem id="22671" name="Emerald Weapon Appearance Stone: Bow">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_bow"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -315,7 +315,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22672" name="Emerald Weapon Crossbow Appearance Stone">
+	<etcitem id="22672" name="Emerald Weapon Appearance Stone: Crossbow">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_twohand_crossbow"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -332,7 +332,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22673" name="Emerald Weapon One-handed Blunt Appearance Stone">
+	<etcitem id="22673" name="Emerald Weapon Appearance Stone: One-handed Blunt Weapon">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_blunt"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -349,7 +349,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22674" name="Emerald Weapon Two-handed Blunt Appearance Stone">
+	<etcitem id="22674" name="Emerald Weapon Appearance Stone: Two-handed Blunt Weapon">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_twohand_blunt"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -366,7 +366,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22675" name="Emerald Weapon One-handed Magic Blunt Appearance Stone">
+	<etcitem id="22675" name="Emerald Weapon Appearance Stone: One-handed Magic Blunt Weapon">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_magic_blunt"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -383,7 +383,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22676" name="Emerald Weapon Two-handed Magic Blunt Appearance Stone">
+	<etcitem id="22676" name="Emerald Weapon Appearance Stone: Two-handed Magic Blunt Weapon">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -400,7 +400,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22677" name="Emerald Weapon Dualsword Appearance Stone">
+	<etcitem id="22677" name="Emerald Weapon Appearance Stone: Dualsword">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_dual"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -417,7 +417,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22678" name="Emerald Weapon Dual Dagger Appearance Stone">
+	<etcitem id="22678" name="Emerald Weapon Appearance Stone: Dual Dagger">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_dualdagger"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -434,7 +434,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22679" name="Emerald Weapon Dual Blunt Appearance Stone">
+	<etcitem id="22679" name="Emerald Weapon Appearance Stone: Dual Blunt Weapon">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_dualblunt"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -451,7 +451,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22680" name="Emerald Weapon Shield Appearance Stone">
+	<etcitem id="22680" name="Emerald Weapon Appearance Stone: Shield">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_shield"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -468,7 +468,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22681" name="Emerald Weapon Sigil Appearance Stone">
+	<etcitem id="22681" name="Emerald Weapon Appearance Stone: Sigil">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_sigil"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -689,7 +689,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22694" name="Armor Appearance Restoration Stone (R-grade)">
+	<etcitem id="22694" name="Armor Restoration Stone (R-grade)">
 		<set name="icon" value="BranchSys3.icon.g_wp_processing_stone_r"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -706,7 +706,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22695" name="Armor Appearance Restoration Stone (S-grade)">
+	<etcitem id="22695" name="Armor Restoration Stone (S-grade)">
 		<set name="icon" value="BranchSys3.icon.g_wp_processing_stone_s"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -723,7 +723,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22696" name="Armor Appearance Restoration Stone (A-grade)">
+	<etcitem id="22696" name="Armor Restoration Stone (A-grade)">
 		<set name="icon" value="BranchSys3.icon.g_wp_processing_stone_a"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -740,7 +740,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22697" name="Armor Appearance Restoration Stone (B-grade)">
+	<etcitem id="22697" name="Armor Restoration Stone (B-grade)">
 		<set name="icon" value="BranchSys3.icon.g_wp_processing_stone_b"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -757,7 +757,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22698" name="Armor Appearance Restoration Stone (C-grade)">
+	<etcitem id="22698" name="Armor Restoration Stone (C-grade)">
 		<set name="icon" value="BranchSys3.icon.g_wp_processing_stone_c"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -774,7 +774,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="22699" name="Armor Appearance Restoration Stone (D-grade)">
+	<etcitem id="22699" name="Armor Restoration Stone (D-grade)">
 		<set name="icon" value="BranchSys3.icon.g_wp_processing_stone_d"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>

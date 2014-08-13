@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "restoration_info.dtd">
 <list>
-	<restoration skill_id="22007" skill_level="1" name="Good Luck Lucky Bag">
+	<restoration skill_id="22007" skill_level="1" name="Good Luck Bag">
 		<group chance="20.0">
 			<item id="20083" min_count="1" max_count="1"/>
 		</group>
@@ -59,7 +59,7 @@
 			<item id="20091" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="22009" skill_level="1" name="Miracle of Christmas">
+	<restoration skill_id="22009" skill_level="1" name="Holiday Miracle">
 		<group chance="20.0">
 			<item id="20094" min_count="1" max_count="1"/>
 		</group>
@@ -67,7 +67,7 @@
 			<item id="20095" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="22010" skill_level="1" name="Mysterious Formal Dress">
+	<restoration skill_id="22010" skill_level="1" name="Mysterious Formal Wear">
 		<group chance="20.0">
 			<item id="20098" min_count="1" max_count="1"/>
 		</group>
@@ -104,12 +104,12 @@
 			<item id="20108" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="22022" skill_level="1" name="Premium Valentine Decoration">
+	<restoration skill_id="22022" skill_level="1" name="Miraculous Valentine Cake: Special Ingredient">
 		<group chance="100.0">
 			<item id="20199" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="22023" skill_level="1" name="Shabby Valentine Cake">
+	<restoration skill_id="22023" skill_level="1" name="Simple Valentine Cake">
 		<group chance="9.0">
 			<item id="10134" min_count="1" max_count="1"/>
 		</group>
@@ -126,7 +126,7 @@
 			<item id="20196" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="22024" skill_level="1" name="Ordinary Valentine Cake">
+	<restoration skill_id="22024" skill_level="1" name="Velvety Valentine Cake">
 		<group chance="14.0">
 			<item id="948" min_count="2" max_count="2"/>
 		</group>
@@ -160,7 +160,7 @@
 			<item id="20198" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="22026" skill_level="1" name="Perfect Valentine Cake">
+	<restoration skill_id="22026" skill_level="1" name="Decadent Valentine Cake">
 		<group chance="14.0">
 			<item id="959" min_count="1" max_count="1"/>
 		</group>
@@ -174,7 +174,7 @@
 			<item id="20203" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="22027" skill_level="1" name="Fantasy Valentine Cake">
+	<restoration skill_id="22027" skill_level="1" name="Heavenly Valentine Cake">
 		<group chance="0.00661">
 			<item id="6659" min_count="1" max_count="1"/>
 		</group>
@@ -194,7 +194,7 @@
 			<item id="20204" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="22032" skill_level="1" name="Legacy of Baguette">
+	<restoration skill_id="22032" skill_level="1" name="Baguette Legacy">
 		<group chance="8.34">
 			<item id="20255" min_count="1" max_count="1"/>
 		</group>
@@ -232,7 +232,7 @@
 			<item id="20270" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="22033" skill_level="1" name="Legacy of Baguette-Kamael">
+	<restoration skill_id="22033" skill_level="1" name="Baguette Legacy - Kamael">
 		<group chance="33.0">
 			<item id="20268" min_count="1" max_count="1"/>
 		</group>
@@ -343,7 +343,7 @@
 			<item id="22024" min_count="15" max_count="15"/>
 		</group>
 	</restoration>
-	<restoration skill_id="22092" skill_level="1" name="Scroll Master 1">
+	<restoration skill_id="22092" skill_level="1" name="Small Scroll Chest">
 		<group chance="20.0">
 			<item id="20365" min_count="1" max_count="1"/>
 		</group>
@@ -360,7 +360,7 @@
 			<item id="20368" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="22093" skill_level="1" name="Scroll Master 2">
+	<restoration skill_id="22093" skill_level="1" name="Large Scroll Chest">
 		<group chance="15.0">
 			<item id="20554" min_count="1" max_count="1"/>
 		</group>
@@ -374,7 +374,7 @@
 			<item id="20394" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
-	<restoration skill_id="22094" skill_level="1" name="Exp. Master">
+	<restoration skill_id="22094" skill_level="1" name="Chest of Experience">
 		<group chance="70.0">
 			<item id="20581" min_count="1" max_count="1"/>
 		</group>

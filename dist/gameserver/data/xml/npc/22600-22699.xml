@@ -337,7 +337,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="22606" name="Floating Skull" title="">
+	<npc id="22606" name="Floating Skeleton" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
@@ -399,7 +399,7 @@
 			<defence attribute="unholy" value="180"/>
 		</attributes>
 	</npc>
-	<npc id="22607" name="Floating Skull" title="">
+	<npc id="22607" name="Floating Skeleton" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
@@ -6124,7 +6124,7 @@
 			<defence attribute="unholy" value="130"/>
 		</attributes>
 	</npc>
-	<npc id="22670" name="Cursed Lord" title="">
+	<npc id="22670" name="Beastial Lord" title="">
 		<set name="aggroRange" value="500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
@@ -6216,7 +6216,7 @@
 			<defence attribute="unholy" value="130"/>
 		</attributes>
 	</npc>
-	<npc id="22671" name="Cursed Guardian!" title="">
+	<npc id="22671" name="Beastial Guardian" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
@@ -6301,7 +6301,7 @@
 			<defence attribute="unholy" value="130"/>
 		</attributes>
 	</npc>
-	<npc id="22672" name="Cursed Seer" title="">
+	<npc id="22672" name="Beastial Seer" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
@@ -6927,7 +6927,7 @@
 			<defence attribute="unholy" value="130"/>
 		</attributes>
 	</npc>
-	<npc id="22679" name="Grave Robber Wizard " title="Lunatic">
+	<npc id="22679" name="Grave Robber Wizard" title="Lunatic">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="GraveRobberSummoner"/>
 		<set name="baseAtkRange" value="40"/>

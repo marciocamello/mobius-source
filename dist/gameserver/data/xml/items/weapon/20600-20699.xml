@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="20600" name="Twilight Staff" add_name="Dance of Shadow - 7 day limited period">
+	<weapon id="20600" name="Twilight Staff" add_name="Dance of Shadow (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -35,7 +35,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20639" name="Standard Item - Elven Long Sword">
+	<weapon id="20639" name="Common Item - Elven Long Sword">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -60,7 +60,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20640" name="Standard Item - Light Crossbow">
+	<weapon id="20640" name="Common Item - Light Crossbow">
 		<set name="enchantable" value="false"/>
 		<set name="atk_reuse" value="1500"/>
 		<set name="crystal_type" value="D"/>
@@ -88,7 +88,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20641" name="Standard Item - Knight's Sword*Elven Sword">
+	<weapon id="20641" name="Common Item - Knight's Sword*Elven Sword">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -113,7 +113,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20644" name="Standard Item - Plate Shield">
+	<weapon id="20644" name="Common Item - Plate Shield">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="dropable" value="false"/>
@@ -136,7 +136,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="20649" name="Standard Item - Ghost Staff">
+	<weapon id="20649" name="Common Item - Ghost Staff">
 		<set name="enchantable" value="false"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="D"/>

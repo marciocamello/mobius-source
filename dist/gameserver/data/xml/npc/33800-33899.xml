@@ -3261,7 +3261,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="33865" name="Novain" title="Geographer">
+	<npc id="33865" name="Eblune" title="Giant's Minion">
 		<set name="aggroRange" value="0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="8.0"/>

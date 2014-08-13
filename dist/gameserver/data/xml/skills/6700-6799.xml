@@ -294,7 +294,7 @@
 			<effect count="15" name="HealOverTime" stackOrder="1" stackType="GreatHeal" time="1" val="30"/>
 		</for>
 	</skill>
-	<skill id="6725" levels="1" name="Bless the Blood of Elcadia">
+	<skill id="6725" levels="1" name="Blessed Blood of Elcadia">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1218"/>
 		<set name="reuseDelay" val="20000"/>
@@ -315,7 +315,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="6726" levels="1" name="Bless the Blood">
+	<skill id="6726" levels="1" name="Blessed Blood">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill3080"/>
 		<set name="reuseDelay" val="4000"/>
@@ -356,7 +356,7 @@
 		<set name="skillType" val="MANAHEAL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6729" levels="1" name="Resist Holy of Elcadia">
+	<skill id="6729" levels="1" name="Holy Attack Resistance of Elcadia">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1392"/>
 		<set name="magicLevel" val="60"/>
@@ -397,7 +397,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6733" levels="1" name="Antharas's Stigma">
+	<skill id="6733" levels="1" name="Antharas' Stigma">
 		<set name="icon" val="icon.skill5860"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -457,7 +457,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6743" levels="1" name="Dark Wind">
+	<skill id="6743" levels="1" name="Dark Wound">
 		<set name="icon" val="icon.skill6876"/>
 		<set name="coolTime" val="300"/>
 		<set name="reuseDelay" val="10000"/>
@@ -637,7 +637,7 @@
 		<set name="skillType" val="MDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6757" levels="1" name="Slow">
+	<skill id="6757" levels="1" name="Decrease Speed">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill6873"/>
 		<set name="reuseDelay" val="25000"/>
@@ -763,7 +763,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6765" levels="1" name="Complete Recovery">
+	<skill id="6765" levels="1" name="Full Recovery">
 		<set name="icon" val="icon.skill6861"/>
 		<set name="coolTime" val="300"/>
 		<set name="reuseDelay" val="180000"/>
@@ -1042,7 +1042,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="6789" levels="1" name="Presentation - Etis's Defeat">
+	<skill id="6789" levels="1" name="Presentation - Etis' Defeat">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>

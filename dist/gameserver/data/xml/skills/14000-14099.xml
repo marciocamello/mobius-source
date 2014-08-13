@@ -192,25 +192,25 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14033" levels="1" name="Vital Point Strike">
+	<skill id="14033" levels="1" name="Vital Spot Attack">
 		<set name="icon" val="icon.skill0016"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14034" levels="1" name="Waist Cutting">
+	<skill id="14034" levels="1" name="Waist Slash">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14035" levels="1" name="Octavis's Obedience">
+	<skill id="14035" levels="1" name="Octavis' Obedience">
 		<set name="icon" val="icon.skill0045"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14036" levels="1" name="Weak Point Attack">
+	<skill id="14036" levels="1" name="Vulnerability Attack">
 		<set name="icon" val="icon.skill0484"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -272,7 +272,7 @@
 		<set name="effectRange" val="20"/>
 		<set name="ignoreShield" val="true"/>
 	</skill>
-	<skill id="14041" levels="1" name="Instant Move">
+	<skill id="14041" levels="1" name="Teleport">
 		<set name="icon" val="icon.skill1448"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -290,7 +290,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14044" levels="1" name="Instant Move">
+	<skill id="14044" levels="1" name="Teleport">
 		<set name="icon" val="icon.skill1448"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -332,7 +332,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14051" levels="4" name="P. Def. Decrease">
+	<skill id="14051" levels="4" name="Decrease P. Def.">
 		<set name="icon" val="icon.skill0116"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -477,19 +477,19 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14072" levels="6" name="Gardener Strike">
+	<skill id="14072" levels="6" name="Gardener Blow">
 		<set name="icon" val="icon.skill4037"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14073" levels="6" name="Garden Destroyer Cutting">
+	<skill id="14073" levels="6" name="Garden Destroyer Slash">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14074" levels="1" name="Garden Destroyer Cutting">
+	<skill id="14074" levels="1" name="Garden Destroyer Slash">
 		<set name="icon" val="icon.skill0048"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -531,7 +531,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14081" levels="6" name="Garden Judgement">
+	<skill id="14081" levels="6" name="Garden Judgment">
 		<set name="mpConsume" val="324"/>
 		<set name="magicLvl" val="85"/>
 		<set name="power" val="22179"/>
@@ -585,7 +585,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14087" levels="6" name="Apherus's Binding">
+	<skill id="14087" levels="6" name="Apherus' Binding">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -624,7 +624,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14092" levels="6" name="Plants Tying">
+	<skill id="14092" levels="6" name="Entangle">
 		<set name="icon" val="icon.skill1201"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -692,7 +692,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="14099" levels="6" name="Rachiq Front Foot Attack">
+	<skill id="14099" levels="6" name="Lachik Front Foot Attack">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>

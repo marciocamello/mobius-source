@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "restoration_info.dtd">
 <list>
-	<restoration skill_id="23200" skill_level="1" name="Penalty Kick Agathion Special Skill - Soccer Ball of Cheering">
+	<restoration skill_id="23200" skill_level="1" name="Penalty Kick Agathion Special Skill: Soccer Ball of Cheering">
 		<group chance="100.0">
 			<item id="20993" min_count="1" max_count="1"/>
 		</group>

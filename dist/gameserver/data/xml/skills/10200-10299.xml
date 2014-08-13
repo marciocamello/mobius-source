@@ -76,7 +76,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10249" levels="1" name="Sigel Chain Air Blow">
+	<skill id="10249" levels="1" name="">
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="2000"/>
 		<set name="mpConsume2" val="40"/>
@@ -91,7 +91,7 @@
 		<set name="isSkillTimePermanent" val="true"/>
 		<set name="isAlterSkill" val="true"/>
 	</skill>
-	<skill id="10250" levels="1" name="Sigel Chain Knock Blow">
+	<skill id="10250" levels="1" name="">
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="0"/>
 		<set name="mpConsume1" val="40"/>
@@ -977,7 +977,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10274" levels="4" name="Berserker Rage">
+	<skill id="10274" levels="4" name="Berserker">
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#time">60</table>
 		<table name="#hpperc">60</table>
@@ -1236,7 +1236,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10285" levels="1" name="HP Absorb">
+	<skill id="10285" levels="1" name="HP Drain">
 		<table name="#effectPoint">313</table>
 		<table name="#heal">20</table>
 		<table name="#magicLevel">85</table>
@@ -1567,7 +1567,7 @@
 		<set name="skillType" val="HEAL_PERCENT"/>
 		<set name="target" val="TARGET_SELF"/>
 	</skill>
-	<skill id="10299" levels="1" name="Shock Spear">
+	<skill id="10299" levels="1" name="Stun Spear">
 		<set name="magicLevel" val="85"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="skillType" val="BUFF"/>

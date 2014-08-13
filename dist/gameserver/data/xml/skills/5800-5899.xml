@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="5800" levels="1" name="Self-Destruction">
+	<skill id="5800" levels="1" name="Self-destruction">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
 		<set name="magicLevel" val="85"/>
@@ -163,7 +163,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="effectRange" val="1400"/>
 	</skill>
-	<skill id="5810" levels="1" name="Decrease Spd.">
+	<skill id="5810" levels="1" name="Decrease Speed">
 		<set name="levelModifier" val="2"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="affectLimit" val="5;12"/>
@@ -234,7 +234,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="effectRange" val="1400"/>
 	</skill>
-	<skill id="5814" levels="3" name="Self-Destruction">
+	<skill id="5814" levels="3" name="Self-destruction">
 		<table name="#mpConsume2">142 151 159</table>
 		<table name="#magicLevel">70 75 80</table>
 		<set name="icon" val="icon.skill0000"/>
@@ -293,7 +293,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5820" levels="1" name="Presentation - Removal">
+	<skill id="5820" levels="1" name="Presentation - Cancel">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
@@ -311,7 +311,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5822" levels="1" name="Drake Bait">
+	<skill id="5822" levels="1" name="Bait for Drakes">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="600000"/>
 		<set name="magicLevel" val="85"/>
@@ -461,7 +461,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5832" levels="1" name="Hate Aura">
+	<skill id="5832" levels="1" name="Aggression Aura">
 		<set name="levelModifier" val="2"/>
 		<set name="affectLimit" val="10;10"/>
 		<set name="icon" val="icon.skill0018"/>
@@ -552,7 +552,7 @@
 			<effect count="15" name="HealOverTime" stackType="HpRecoverCast" time="1" val="#power2"/>
 		</for>
 	</skill>
-	<skill id="5837" levels="1" name="Double Throwing Javelin">
+	<skill id="5837" levels="1" name="Double Throw Javelin">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
 		<set name="power" val="4870"/>
@@ -566,7 +566,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5838" levels="1" name="Throwing Javelin">
+	<skill id="5838" levels="1" name="Throw Javelin">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
 		<set name="power" val="3500"/>
@@ -646,7 +646,7 @@
 		<set name="element" val="fire"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="5843" levels="1" name="Terror">
+	<skill id="5843" levels="1" name="Fear">
 		<set name="magicType" val="MAGIC"/>
 		<set name="affectLimit" val="10;10"/>
 		<set name="icon" val="icon.skill1092"/>
@@ -755,7 +755,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="5851" levels="1" name="Shock">
+	<skill id="5851" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill0100"/>
 		<set name="power" val="80"/>
@@ -814,7 +814,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="5855" levels="2" name="Shock">
+	<skill id="5855" levels="2" name="Weakened Sweep">
 		<table name="#mpConsume2">0 165</table>
 		<table name="#hitCancelTime">0 500</table>
 		<table name="#castRange">600 40</table>

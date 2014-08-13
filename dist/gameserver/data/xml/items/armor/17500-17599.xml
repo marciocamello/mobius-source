@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="17500" name="Cry of Fate">
+	<armor id="17500" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -11,7 +11,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17501" name="Cry of Fate">
+	<armor id="17501" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -21,7 +21,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17502" name="Cry of Fate">
+	<armor id="17502" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -31,7 +31,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17503" name="Cry of Fate">
+	<armor id="17503" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -41,7 +41,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17504" name="Cry of Fate">
+	<armor id="17504" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -51,7 +51,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17505" name="Cry of Fate">
+	<armor id="17505" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -61,7 +61,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17506" name="Cry of Fate">
+	<armor id="17506" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -71,7 +71,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17507" name="Cry of Fate">
+	<armor id="17507" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -81,7 +81,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17508" name="Cry of Fate">
+	<armor id="17508" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -91,7 +91,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17509" name="Cry of Fate">
+	<armor id="17509" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -101,7 +101,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17510" name="Cry of Fate">
+	<armor id="17510" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -111,7 +111,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17511" name="Cry of Fate">
+	<armor id="17511" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -121,7 +121,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17512" name="Cry of Fate">
+	<armor id="17512" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -131,7 +131,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17513" name="Cry of Fate">
+	<armor id="17513" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -141,7 +141,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17514" name="Cry of Fate">
+	<armor id="17514" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -151,7 +151,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17515" name="Cry of Fate">
+	<armor id="17515" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -161,7 +161,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17516" name="Cry of Fate">
+	<armor id="17516" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -171,7 +171,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17517" name="Cry of Fate">
+	<armor id="17517" name="Cry of Destiny">
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.accessary_blessed_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -181,7 +181,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="17525" name="Shadow Item - Fortuna Viking Circlet">
+	<armor id="17525" name="Shadow Item: Fortuna Viking Circlet">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_animal_warrior_skeleton_circlet_i00"/>
 		<set name="type" value="NONE"/>

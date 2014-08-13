@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="23200" levels="1" name="Penalty Kick Agathion Special Skill - Soccer Ball of Cheering">
+	<skill id="23200" levels="1" name="Penalty Kick Agathion Special Skill: Soccer Ball of Cheering">
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23201" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
+	<skill id="23201" levels="1" name="Ball Trapping Gnosian Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="magicLevel" val="85"/>
@@ -48,7 +48,7 @@
 			<player agathion="1578"/>
 		</cond>
 	</skill>
-	<skill id="23204" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
+	<skill id="23204" levels="1" name="Ball Trapping Gnosian Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="magicLevel" val="85"/>
@@ -90,7 +90,7 @@
 			<player agathion="1581"/>
 		</cond>
 	</skill>
-	<skill id="23207" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
+	<skill id="23207" levels="1" name="Ball Trapping Gnosian Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="magicLevel" val="85"/>
@@ -162,7 +162,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23215" levels="1" name="Good/Bad of Mind">
+	<skill id="23215" levels="1" name="State of the Mind">
 		<set name="icon" val="icon.skill0001"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -182,7 +182,7 @@
 			<player agathion="1585"/>
 		</cond>
 	</skill>
-	<skill id="23217" levels="1" name="Granny Tiger Agathion Special Skill - Fundamentals">
+	<skill id="23217" levels="1" name="Granny Tiger Agathion Special Skill: Fundamentals">
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -202,7 +202,7 @@
 			<player agathion="1586"/>
 		</cond>
 	</skill>
-	<skill id="23219" levels="1" name="Flower Fairy Spirit Agathion Special Skill - Fairy's Blessing">
+	<skill id="23219" levels="1" name="Flower Fairy Spirit Agathion Special Skill: Fairy's Blessing">
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -222,13 +222,13 @@
 			<player agathion="1587"/>
 		</cond>
 	</skill>
-	<skill id="23221" levels="1" name="Cheerleader Orodriel Agathion Special Skill - Joy of Cheering">
+	<skill id="23221" levels="1" name="Cheerleader Orodriel Agathion Special Skill: Joy of Cheering">
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23222" levels="1" name="Cheerleader Lana Agathion Cute Trick">
+	<skill id="23222" levels="1" name="Cheerleader Lanya Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="magicLevel" val="85"/>
@@ -242,7 +242,7 @@
 			<player agathion="1588"/>
 		</cond>
 	</skill>
-	<skill id="23223" levels="1" name="Cheerleader Lana Agathion Special Skill - Joy of Cheering">
+	<skill id="23223" levels="1" name="Cheerleader Lanya Agathion Special Skill: Joy of Cheering">
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -262,7 +262,7 @@
 			<player agathion="1589"/>
 		</cond>
 	</skill>
-	<skill id="23225" levels="1" name="Cheerleader Naonin Agathion Special Skill - Joy of Cheering">
+	<skill id="23225" levels="1" name="Cheerleader Naonin Agathion Special Skill: Joy of Cheering">
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -282,7 +282,7 @@
 			<player agathion="1590"/>
 		</cond>
 	</skill>
-	<skill id="23227" levels="1" name="Cheerleader Mortia Agathion Special Skill - Joy of Cheering">
+	<skill id="23227" levels="1" name="Cheerleader Mortia Agathion Special Skill: Joy of Cheering">
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -302,7 +302,7 @@
 			<player agathion="1591"/>
 		</cond>
 	</skill>
-	<skill id="23229" levels="1" name="Cheerleader Kaurin Agathion Special Skill - Joy of Cheering">
+	<skill id="23229" levels="1" name="Cheerleader Kaurin Agathion Special Skill: Joy of Cheering">
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -322,7 +322,7 @@
 			<player agathion="1592"/>
 		</cond>
 	</skill>
-	<skill id="23231" levels="1" name="Cheerleader Meruril Agathion Special Skill - Joy of Cheering">
+	<skill id="23231" levels="1" name="Cheerleader Meruril Agathion Special Skill: Joy of Cheering">
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -342,19 +342,19 @@
 			<player agathion="1593"/>
 		</cond>
 	</skill>
-	<skill id="23233" levels="1" name="Handy Agathion Special Skill - Halloween's Blessing">
+	<skill id="23233" levels="1" name="Handy Agathion Special Skill: Halloween's Blessing">
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23234" levels="1" name="Singer Dancer Agathion Cute Trick">
+	<skill id="23234" levels="1" name="Singer and Dancer Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23235" levels="1" name="Singer Dancer Agathion Special Skill - Song of Hunter">
+	<skill id="23235" levels="1" name="Singer and Dancer Agathion Special Skill: Song of Hunter">
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -379,13 +379,13 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23238" levels="1" name="Master's Blessing - Eye of Pa'agrio">
+	<skill id="23238" levels="1" name="Master's Blessing - Pa'agrio's Eye">
 		<set name="icon" val="icon.skill1364"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23239" levels="1" name="Master's Blessing - Soul of Pa'agrio">
+	<skill id="23239" levels="1" name="Master's Blessing - Pa'agrio's Soul">
 		<set name="icon" val="icon.skill1365"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -433,7 +433,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23247" levels="1" name="Master's Blessing - Elemental Protection">
+	<skill id="23247" levels="1" name="Master's Blessing - Elemental Resistance">
 		<set name="icon" val="icon.skill1352"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -631,7 +631,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23280" levels="1" name="Master's Blessing - Improve Critical">
+	<skill id="23280" levels="1" name="Master's Blessing - Improve Critical Attack">
 		<set name="icon" val="icon.skill1502"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -661,19 +661,19 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23285" levels="1" name="Master's Blessing - Blessing of Noblesse">
+	<skill id="23285" levels="1" name="Master's Blessing - Noblesse Blessing">
 		<set name="icon" val="icon.skill1323"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23286" levels="1" name="Master's Blessing - Eye of Pa'agrio">
+	<skill id="23286" levels="1" name="Master's Blessing - Pa'agrio's Eye">
 		<set name="icon" val="icon.skill1364"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23287" levels="1" name="Master's Blessing - Soul of Pa'agrio">
+	<skill id="23287" levels="1" name="Master's Blessing - Pa'agrio's Soul">
 		<set name="icon" val="icon.skill1365"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -721,7 +721,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23295" levels="1" name="Master's Blessing - Elemental Protection">
+	<skill id="23295" levels="1" name="Master's Blessing - Elemental Resistance">
 		<set name="icon" val="icon.skill1352"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -733,7 +733,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="23297" levels="1" name="Santa Claus's Blessing">
+	<skill id="23297" levels="1" name="Rudolph's Blessing">
 		<set name="icon" val="BranchSys.icon.br_xmas_weapon_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>

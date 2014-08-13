@@ -448,7 +448,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="15669" name="Sealed Vesper Shield Piece">
+	<etcitem id="15669" name="Sealed Vesper Shield Fragment">
 		<set name="price" value="29500"/>
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>

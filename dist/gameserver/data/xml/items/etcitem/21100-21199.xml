@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="21100" name="Shiny Cube Fragment Armor - S">
+	<etcitem id="21100" name="Shiny Cube Fragment Armor (S-grade)">
 		<set name="icon" value="Branchsys2.icon.shine_cubic_a_piece_i04"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -9,7 +9,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21101" name="Shiny Cube Fragment Weapon - D">
+	<etcitem id="21101" name="Shiny Cube Fragment Weapon (D-grade)">
 		<set name="icon" value="icon.event_cubic_piece_i02"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -17,7 +17,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21102" name="Shiny Cube Fragment Weapon - C">
+	<etcitem id="21102" name="Shiny Cube Fragment Weapon (C-grade)">
 		<set name="icon" value="icon.event_cubic_piece_i03"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -25,7 +25,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21103" name="Shiny Cube Fragment Weapon - B">
+	<etcitem id="21103" name="Shiny Cube Fragment Weapon (B-grade)">
 		<set name="icon" value="Branchsys2.icon.shine_cubic_w_piece_i02"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -33,7 +33,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21104" name="Shiny Cube Fragment Weapon - A">
+	<etcitem id="21104" name="Shiny Cube Fragment Weapon (A-grade)">
 		<set name="icon" value="Branchsys2.icon.shine_cubic_w_piece_i03"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -41,7 +41,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21105" name="Shiny Cube Fragment Weapon - S">
+	<etcitem id="21105" name="Shiny Cube Fragment Weapon (S-grade)">
 		<set name="icon" value="Branchsys2.icon.shine_cubic_w_piece_i04"/>
 		<set name="stackable" value="true"/>
 		<set name="class" value="OTHER"/>
@@ -155,7 +155,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21138" name="Preying Mantis Hat Pack">
+	<etcitem id="21138" name="Praying Mantis Hat Pack">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
@@ -164,7 +164,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21139" name="Preying Mantis Hat Pack (7-day)">
+	<etcitem id="21139" name="Praying Mantis Hat Pack (7-day)">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
@@ -288,7 +288,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21154" name="Agathion - Singer &amp; Dancer Pack">
+	<etcitem id="21154" name="Agathion - Singer and Dancer Pack">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
@@ -297,7 +297,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21155" name="Agathion - Singer &amp; Dancer Pack">
+	<etcitem id="21155" name="Agathion - Singer and Dancer Pack">
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
@@ -332,7 +332,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21161" name="Wedding Pack">
+	<etcitem id="21161" name="Wedding Cake Pack">
 		<set name="icon" value="BranchSys2.Icon.br_wedding_box_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
@@ -341,7 +341,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21164" name="Honeymoon Ticket" add_name="(7-day)">
+	<etcitem id="21164" name="Honeymoon Ticket" add_name="7-day">
 		<set name="icon" value="BranchSys2.Icon.br_weddin_ticket_i00"/>
 		<set name="weight" value="20"/>
 		<set name="class" value="OTHER"/>

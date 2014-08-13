@@ -86,7 +86,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="5"/>
 	</etcitem>
-	<etcitem id="20026" name="Extra Pass - Kamaloka (Hall of the Abyss)">
+	<etcitem id="20026" name="Extra Pass: Kamaloka (Hall of the Abyss)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -96,7 +96,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="5"/>
 	</etcitem>
-	<etcitem id="20027" name="Extra Pass - Near Kamaloka">
+	<etcitem id="20027" name="Extra Pass: Near Kamaloka">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -106,7 +106,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="5"/>
 	</etcitem>
-	<etcitem id="20028" name="Extra Pass - Kamaloka (Labyrinth of the Abyss)">
+	<etcitem id="20028" name="Extra Pass: Kamaloka (Labyrinth of the Abyss)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -363,7 +363,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20055" name="Extra Pass - Kamaloka (Hall of the Abyss) Pack">
+	<etcitem id="20055" name="Extra Pass: Kamaloka (Hall of the Abyss) Pack">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -373,7 +373,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20056" name="Extra Pass - Near Kamaloka Pack">
+	<etcitem id="20056" name="Extra Pass: Near Kamaloka Pack">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -383,7 +383,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20057" name="Extra Pass - Kamaloka (Labyrinth of the Abyss) Pack">
+	<etcitem id="20057" name="Extra Pass: Kamaloka (Labyrinth of the Abyss) Pack">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -519,7 +519,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20075" name="Santa Claus' Gift - Joy" add_name="(4-hour)">
+	<etcitem id="20075" name="Santa Claus' Gift - Joy" add_name="4-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -540,7 +540,7 @@
 		</cond>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="20076" name="Santa Claus' Gift - Enjoyment" add_name="(4-hour)">
+	<etcitem id="20076" name="Santa Claus' Gift - Enjoyment" add_name="4-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -561,7 +561,7 @@
 		</cond>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="20077" name="Santa Claus' Gift - Luck" add_name="(4-hour)">
+	<etcitem id="20077" name="Santa Claus' Gift - Luck" add_name="4-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -582,7 +582,7 @@
 		</cond>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="20078" name="Santa Claus' Gift - Luck" add_name="(4-hour)">
+	<etcitem id="20078" name="Santa Claus' Gift - Luck" add_name="4-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

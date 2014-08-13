@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="10415" name="Icarus Dual Sword">
+	<weapon id="10415" name="Icarus Dualsword">
 		<set name="crystal_count" value="4965"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -85,7 +85,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10436" name="Icarus Sawsword" add_name="Light">
+	<weapon id="10436" name="Icarus Sawsword" add_name="Light Armor">
 		<set name="crystal_count" value="4965"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -170,7 +170,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10439" name="Icarus Heavy Arms" add_name="Light">
+	<weapon id="10439" name="Icarus Heavy Arms" add_name="Light Armor">
 		<set name="crystal_count" value="4965"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -528,7 +528,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10451" name="Icarus Trident" add_name="Light">
+	<weapon id="10451" name="Icarus Trident" add_name="Light Armor">
 		<set name="crystal_count" value="4965"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -813,7 +813,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10461" name="Icarus Stinger " add_name="Focus">
+	<weapon id="10461" name="Icarus Stinger" add_name="Focus">
 		<set name="crystal_count" value="4965"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -843,7 +843,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10462" name="Icarus Stinger " add_name="Health">
+	<weapon id="10462" name="Icarus Stinger" add_name="Health">
 		<set name="crystal_count" value="4965"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -873,7 +873,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10463" name="Icarus Stinger " add_name="Light">
+	<weapon id="10463" name="Icarus Stinger" add_name="Light Armor">
 		<set name="crystal_count" value="4965"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -962,7 +962,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10466" name="Icarus Wingblade" add_name="Light">
+	<weapon id="10466" name="Icarus Wingblade" add_name="Light Armor">
 		<set name="crystal_count" value="4965"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -1090,7 +1090,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10474" name="Shadow Item - Apprentice's Staff">
+	<weapon id="10474" name="Shadow Item: Apprentice's Staff">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1117,7 +1117,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10475" name="Shadow Item - Bone Club">
+	<weapon id="10475" name="Shadow Item: Bone Club">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="180"/>
@@ -1143,7 +1143,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10476" name="Shadow Item - Shining Knife">
+	<weapon id="10476" name="Shadow Item: Shining Knife">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="180"/>
@@ -1169,7 +1169,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10477" name="Shadow Item - Cestus">
+	<weapon id="10477" name="Shadow Item: Cestus">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="180"/>
@@ -1195,7 +1195,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10478" name="Shadow Item - Forest Bow">
+	<weapon id="10478" name="Shadow Item: Forest Bow">
 		<set name="atk_reuse" value="1500"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1223,7 +1223,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="10479" name="Shadow Item - Long Sword">
+	<weapon id="10479" name="Shadow Item: Long Sword">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="180"/>

@@ -386,7 +386,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35214" name="Bloody Amaranthine Slasher" add_name="Damage">
+	<weapon id="35214" name="Bloody Amaranthine Slasher" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_bauen_i21"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
@@ -554,7 +554,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35220" name="Bloody Amaranthine Fighter" add_name="Damage">
+	<weapon id="35220" name="Bloody Amaranthine Fighter" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_durga_i21"/>
 		<set name="weight" value="1550"/>
 		<set name="type" value="DUALFIST"/>
@@ -665,7 +665,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35224" name="Bloody Amaranthine Stormer" add_name="Damage">
+	<weapon id="35224" name="Bloody Amaranthine Stormer" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_crabel_i21"/>
 		<set name="weight" value="2010"/>
 		<set name="type" value="POLE"/>
@@ -693,7 +693,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35225" name="Bloody Amaranthine Thrower" add_name="Damage">
+	<weapon id="35225" name="Bloody Amaranthine Thrower" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_castron_i21"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
@@ -1141,7 +1141,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35241" name="Bloody Amaranthine Dualsword" add_name="Damage">
+	<weapon id="35241" name="Bloody Amaranthine Dualsword" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i21"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="DUAL"/>
@@ -1197,7 +1197,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35243" name="Bloody Amaranthine Dual Dagger" add_name="Damage">
+	<weapon id="35243" name="Bloody Amaranthine Dual Dagger" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i21"/>
 		<set name="weight" value="2050"/>
 		<set name="type" value="DUALDAGGER"/>
@@ -1337,7 +1337,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35248" name="Bloody Amaranthine Dual Blunt Weapon" add_name="Damage">
+	<weapon id="35248" name="Bloody Amaranthine Dual Blunt Weapon" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i21"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="DUALBLUNT"/>
@@ -1539,7 +1539,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35255" name="Bloody Amaranthine Slasher" add_name="Focus + Damage Up">
+	<weapon id="35255" name="Bloody Amaranthine Slasher" add_name="Focus + Damage">
 		<set name="icon" value="icon.weapon_bauen_i21"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
@@ -1626,7 +1626,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35258" name="Bloody Amaranthine Avenger" add_name="Guidance + Critical Damage">
+	<weapon id="35258" name="Bloody Amaranthine Avenger" add_name="Haste + Critical Damage">
 		<set name="icon" value="icon.weapon_qutram_i21"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BLUNT"/>
@@ -1713,7 +1713,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="35261" name="Bloody Amaranthine Fighter" add_name="Focus + Damage Up">
+	<weapon id="35261" name="Bloody Amaranthine Fighter" add_name="Focus + Damage">
 		<set name="icon" value="icon.weapon_durga_i21"/>
 		<set name="weight" value="1550"/>
 		<set name="type" value="DUALFIST"/>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<weapon id="36951" name="9th Anniversary Instrument">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.ev_9th_celebration_bonus_gift"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="1"/>
+			<add stat="mAtk" order="0x10" value="1"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="60"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+</list>

@@ -31,7 +31,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17803" name="Shaman Male Wig - A">
+	<armor id="17803" name="Orc Mage Male Wig - A">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -41,7 +41,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17804" name="Shaman Male Wig - B">
+	<armor id="17804" name="Orc Mage Male Wig - B">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -51,7 +51,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17805" name="Shaman Male Wig - C">
+	<armor id="17805" name="Orc Mage Male Wig - C">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -61,7 +61,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17806" name="Shaman Male Wig - D">
+	<armor id="17806" name="Orc Mage Male Wig - D">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -71,7 +71,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17807" name="Shaman Female Wig - A">
+	<armor id="17807" name="Orc Mage Female Wig - A">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -81,7 +81,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17808" name="Shaman Female Wig - B">
+	<armor id="17808" name="Orc Mage Female Wig - B">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -91,7 +91,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17809" name="Shaman Female Wig - C">
+	<armor id="17809" name="Orc Mage Female Wig - C">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -101,7 +101,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17810" name="Shaman Female Wig - D">
+	<armor id="17810" name="Orc Mage Female Wig - D">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -111,7 +111,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17811" name="Shaman Male Wig - A">
+	<armor id="17811" name="Kamael Male Wig - A">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -121,7 +121,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17812" name="Shaman Male Wig - B">
+	<armor id="17812" name="Kamael Male Wig - B">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -131,7 +131,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17813" name="Shaman Male Wig - C">
+	<armor id="17813" name="Kamael Male Wig - C">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -141,7 +141,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17814" name="Shaman Male Wig - D">
+	<armor id="17814" name="Kamael Male Wig - D">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -151,7 +151,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17815" name="Shaman Female Wig - A">
+	<armor id="17815" name="Kamael Female Wig - A">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -161,7 +161,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17816" name="Shaman Female Wig - B">
+	<armor id="17816" name="Kamael Female Wig - B">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -171,7 +171,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17817" name="Shaman Female Wig - C">
+	<armor id="17817" name="Kamael Female Wig - C">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -181,7 +181,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17818" name="Shaman Female Wig - D">
+	<armor id="17818" name="Kamael Female Wig - D">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -191,7 +191,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17845" name="Bound Immortal Helmet" add_name="Heavy">
+	<armor id="17845" name="Bound Immortal Helmet" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="7"/>
@@ -212,7 +212,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17846" name="Bound Immortal Breastplate" add_name="Heavy">
+	<armor id="17846" name="Bound Immortal Breastplate" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="19"/>
@@ -233,7 +233,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17847" name="Bound Immortal Gaiters" add_name="Heavy">
+	<armor id="17847" name="Bound Immortal Gaiters" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="12"/>
@@ -254,7 +254,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17848" name="Bound Immortal Gauntlet" add_name="Heavy">
+	<armor id="17848" name="Bound Immortal Gauntlets" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>
@@ -275,7 +275,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17849" name="Bound Immortal Boots" add_name="Heavy">
+	<armor id="17849" name="Bound Immortal Boots" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>
@@ -295,7 +295,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17851" name="Bound Immortal Leather Helmet" add_name="Light">
+	<armor id="17851" name="Bound Immortal Leather Helmet" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="7"/>
@@ -316,7 +316,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17852" name="Bound Immortal Leather Armor" add_name="Light">
+	<armor id="17852" name="Bound Immortal Leather Armor" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="19"/>
@@ -337,7 +337,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17853" name="Bound Immortal Leather Leggings" add_name="Light">
+	<armor id="17853" name="Bound Immortal Leather Leggings" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="12"/>
@@ -358,7 +358,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17854" name="Bound Immortal Leather Gloves" add_name="Light">
+	<armor id="17854" name="Bound Immortal Leather Gloves" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>
@@ -379,7 +379,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17855" name="Bound Immortal Leather Boots" add_name="Light">
+	<armor id="17855" name="Bound Immortal Leather Boots" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>
@@ -582,7 +582,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17879" name="Bound Twilight Helmet" add_name="Heavy">
+	<armor id="17879" name="Bound Twilight Helmet" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="17"/>
@@ -603,7 +603,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17880" name="Bound Twilight Breastplate" add_name="Heavy">
+	<armor id="17880" name="Bound Twilight Breastplate" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="47"/>
@@ -624,7 +624,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17881" name="Bound Twilight Gaiters" add_name="Heavy">
+	<armor id="17881" name="Bound Twilight Gaiters" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="29"/>
@@ -645,7 +645,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17882" name="Bound Twilight Gauntlet" add_name="Heavy">
+	<armor id="17882" name="Bound Twilight Gauntlets" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="11"/>
@@ -666,7 +666,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17883" name="Bound Twilight Boots" add_name="Heavy">
+	<armor id="17883" name="Bound Twilight Boots" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="11"/>
@@ -686,7 +686,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17885" name="Bound Twilight Leather Helmet" add_name="Light">
+	<armor id="17885" name="Bound Twilight Leather Helmet" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="17"/>
@@ -707,7 +707,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17886" name="Bound Twilight Leather Armor" add_name="Light">
+	<armor id="17886" name="Bound Twilight Leather Armor" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="47"/>
@@ -728,7 +728,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17887" name="Bound Twilight Leather Legging" add_name="Light">
+	<armor id="17887" name="Bound Twilight Leather Leggings" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="29"/>
@@ -749,7 +749,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17888" name="Bound Twilight Leather Gloves" add_name="Light">
+	<armor id="17888" name="Bound Twilight Leather Gloves" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="11"/>
@@ -770,7 +770,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17889" name="Bound Twilight Leather Boots" add_name="Light">
+	<armor id="17889" name="Bound Twilight Leather Boots" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="11"/>

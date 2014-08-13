@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="17401" name="Seraph Shield" add_name="Heavy">
+	<weapon id="17401" name="Seraph Shield" add_name="Heavy Armor">
 		<set name="icon" value="icon.beranka_i00"/>
 		<set name="weight" value="1130"/>
 		<equip>
@@ -287,7 +287,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="17427" name="Amaranthine Dual Sword">
+	<weapon id="17427" name="Amaranthine Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -358,7 +358,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="17435" name="Eternal Shield" add_name="Heavy">
+	<weapon id="17435" name="Eternal Shield" add_name="Heavy Armor">
 		<set name="icon" value="icon.weapon_akra_i00"/>
 		<set name="weight" value="1130"/>
 		<equip>
@@ -376,7 +376,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="17450" name="Blessed Celestial Shaper">
+	<weapon id="17450" name="Blessed Kaliel Shaper">
 		<set name="icon" value="icon.weapon_vesper_shaper_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -401,7 +401,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="17451" name="Blessed Celestial Cutter">
+	<weapon id="17451" name="Blessed Kaliel Cutter">
 		<set name="icon" value="icon.weapon_vesper_cutter_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -425,7 +425,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="17452" name="Blessed Celestial Slasher">
+	<weapon id="17452" name="Blessed Kaliel Slasher">
 		<set name="icon" value="icon.weapon_vesper_slasher_i00"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -449,7 +449,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="17453" name="Blessed Celestial Avenger">
+	<weapon id="17453" name="Blessed Kaliel Avenger">
 		<set name="icon" value="icon.weapon_vesper_avenger_i00"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -473,7 +473,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="17454" name="Blessed Celestial Fighter">
+	<weapon id="17454" name="Blessed Kaliel Fighter">
 		<set name="icon" value="icon.weapon_octoclaw_i00"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -497,7 +497,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="17455" name="Blessed Celestial Stormer">
+	<weapon id="17455" name="Blessed Kaliel Stormer">
 		<set name="icon" value="icon.weapon_vesper_stormer_i00"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -521,7 +521,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="17456" name="Blessed Celestial Thrower">
+	<weapon id="17456" name="Blessed Kaliel Thrower">
 		<set name="icon" value="icon.weapon_vesper_thrower_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -546,7 +546,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="17457" name="Blessed Celestial Shooter">
+	<weapon id="17457" name="Blessed Kaliel Shooter">
 		<set name="icon" value="icon.weapon_vesper_schutze_i00"/>
 		<set name="weight" value="1580"/>
 		<set name="rnd_dam" value="10"/>
@@ -571,7 +571,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="17458" name="Blessed Celestial Buster">
+	<weapon id="17458" name="Blessed Kaliel Buster">
 		<set name="icon" value="icon.weapon_vesper_burster_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -595,7 +595,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="17459" name="Blessed Celestial Caster">
+	<weapon id="17459" name="Blessed Kaliel Caster">
 		<set name="icon" value="icon.weapon_vesper_caster_i00"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -619,7 +619,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="17460" name="Blessed Celestial Retributer">
+	<weapon id="17460" name="Blessed Kaliel Retributer">
 		<set name="icon" value="icon.weapon_vesper_singer_i00"/>
 		<set name="weight" value="1080"/>
 		<set name="rnd_dam" value="20"/>
@@ -643,7 +643,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="17461" name="Blessed Celestial Dual Sword">
+	<weapon id="17461" name="Blessed Kaliel Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -667,7 +667,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="17462" name="Blessed Celestial Dual Dagger">
+	<weapon id="17462" name="Blessed Kaliel Dual Dagger">
 		<set name="icon" value="icon.weapon_r_dualdagger_i00"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -691,7 +691,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="17463" name="Blessed Celestial Dual Blunt Weapon">
+	<weapon id="17463" name="Blessed Kaliel Dual Blunt Weapon">
 		<set name="icon" value="icon.weapon_r_dualblunt_i00"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -714,7 +714,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="17469" name="Blessed Celestial Shield" add_name="Heavy">
+	<weapon id="17469" name="Blessed Durandia Shield" add_name="Heavy Armor">
 		<set name="icon" value="icon.weapon_vesper_verteidiger_i01"/>
 		<set name="weight" value="1130"/>
 		<equip>

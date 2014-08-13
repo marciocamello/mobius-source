@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="15700" name="Sealed Moirai Gaiter ">
+	<armor id="15700" name="Sealed Moirai Gaiters">
 		<set name="crystal_count" value="1010"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -19,7 +19,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15701" name="Sealed Moirai Leather Legging ">
+	<armor id="15701" name="Sealed Moirai Leather Leggings">
 		<set name="crystal_count" value="758"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -37,7 +37,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15702" name="Sealed Moirai Stockings ">
+	<armor id="15702" name="Sealed Moirai Stockings">
 		<set name="crystal_count" value="758"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -56,7 +56,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15703" name="Sealed Moirai Gauntlet ">
+	<armor id="15703" name="Sealed Moirai Gauntlets">
 		<set name="crystal_count" value="404"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -74,7 +74,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15704" name="Sealed Moirai Leather Gloves ">
+	<armor id="15704" name="Sealed Moirai Leather Gloves">
 		<set name="crystal_count" value="404"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -92,7 +92,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15705" name="Sealed Moirai Gloves ">
+	<armor id="15705" name="Sealed Moirai Gloves">
 		<set name="crystal_count" value="404"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -110,7 +110,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15706" name="Sealed Moirai Boots ">
+	<armor id="15706" name="Sealed Moirai Boots">
 		<set name="crystal_count" value="404"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -128,7 +128,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15707" name="Sealed Moirai Leather Boots ">
+	<armor id="15707" name="Sealed Moirai Leather Boots">
 		<set name="crystal_count" value="404"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -146,7 +146,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15708" name="Sealed Moirai Shoes ">
+	<armor id="15708" name="Sealed Moirai Shoes">
 		<set name="crystal_count" value="404"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -164,7 +164,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15709" name="Sealed Moirai Sigil ">
+	<armor id="15709" name="Sealed Moirai Sigil">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="false"/>
@@ -460,7 +460,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15732" name="Sealed Elegia Gaiter">
+	<armor id="15732" name="Sealed Elegia Gaiters">
 		<set name="crystal_count" value="2009"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -478,7 +478,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15733" name="Sealed Elegia Leather Legging">
+	<armor id="15733" name="Sealed Elegia Leather Leggings">
 		<set name="crystal_count" value="1506"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -515,7 +515,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15735" name="Sealed Elegia Gauntlet">
+	<armor id="15735" name="Sealed Elegia Gauntlets">
 		<set name="crystal_count" value="803"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -751,7 +751,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15749" name="Sealed Vorpal Gaiter">
+	<armor id="15749" name="Sealed Vorpal Gaiters">
 		<set name="crystal_count" value="1675"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -769,7 +769,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15750" name="Sealed Vorpal Leather Legging">
+	<armor id="15750" name="Sealed Vorpal Leather Leggings">
 		<set name="crystal_count" value="1256"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
@@ -806,7 +806,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="15752" name="Sealed Vorpal Gauntlet">
+	<armor id="15752" name="Sealed Vorpal Gauntlets">
 		<set name="crystal_count" value="670"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>

@@ -246,7 +246,7 @@
 			<effect count="1" name="UnAggro" stackOrder="1" stackType="UnAggro" time="120" val="0"/>
 		</for>
 	</skill>
-	<skill id="107" levels="9" name="Divine Aura">
+	<skill id="107" levels="9" name="Holy Aura">
 		<table name="#effectPoint">549 566 582 597 611 624 635 646 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655</table>
 		<table name="#critChanceRcpt">0</table>
 		<table name="#activateRate">40</table>
@@ -1046,7 +1046,7 @@
 			</mul>
 		</for>
 	</skill>
-	<skill id="164" levels="3" name="Quick Recycle">
+	<skill id="164" levels="3" name="Quick Recovery">
 		<table name="#reuse">0.90 0.85 0.80</table>
 		<table name="#magicLevel">20 30 48</table>
 		<set name="icon" val="icon.skill0164"/>
@@ -1313,7 +1313,7 @@
 			<add order="0x40" stat="breath" val="#breath"/>
 		</for>
 	</skill>
-	<skill id="196" levels="1" name="Divine Blade">
+	<skill id="196" levels="1" name="Holy Blade">
 		<set name="icon" val="icon.skill0196"/>
 		<set name="magicLevel" val="43"/>
 		<set name="mpConsume1" val="8"/>
@@ -1326,7 +1326,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="197" levels="2" name="Divine Armor">
+	<skill id="197" levels="2" name="Holy Armor">
 		<table name="#def">7 10</table>
 		<table name="#mpConsume1">7 9</table>
 		<table name="#magicLevel">40 46</table>

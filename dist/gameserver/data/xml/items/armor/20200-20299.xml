@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="20200" name="Agathion of Love" add_name="3 Day Expiration Period">
+	<armor id="20200" name="Agathion - Love" add_name="Vitality (3-day)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="4320"/>
@@ -26,7 +26,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20201" name="Agathion of Love" add_name="7 Day Expiration Period">
+	<armor id="20201" name="Agathion - Love" add_name="Vitality (7-day)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="10080"/>
@@ -51,7 +51,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20202" name="Agathion of Love" add_name="15 Day Expiration Period">
+	<armor id="20202" name="Agathion - Love" add_name="Vitality (15-day)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="21600"/>
@@ -76,7 +76,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20203" name="Agathion of Love" add_name="30 Day Expiration Period">
+	<armor id="20203" name="Agathion - Love" add_name="Vitality (30-day)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="durability" value="43200"/>
@@ -101,7 +101,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20204" name="Queen Ant's Ring (Event)" add_name="3 Day Expiration Period">
+	<armor id="20204" name="Queen Ant's Ring (Event)" add_name="3-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -131,7 +131,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="20205" name="Queen Ant's Ring (Event)" add_name="7 Day Expiration Period">
+	<armor id="20205" name="Queen Ant's Ring (Event)" add_name="7-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -161,7 +161,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="20206" name="Queen Ant's Ring (Event)" add_name="15 Day Expiration Period">
+	<armor id="20206" name="Queen Ant's Ring (Event)" add_name="15-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="false"/>
@@ -191,7 +191,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="20207" name="Zaken's Earring (Event)" add_name="3 Day Expiration Period">
+	<armor id="20207" name="Zaken's Earring (Event)" add_name="3-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
@@ -221,7 +221,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="20208" name="Zaken's Earring (Event)" add_name="7 Day Expiration Period">
+	<armor id="20208" name="Zaken's Earring (Event)" add_name="7-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
@@ -251,7 +251,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="20209" name="Zaken's Earring (Event)" add_name="15 Day Expiration Period">
+	<armor id="20209" name="Zaken's Earring (Event)" add_name="15-day">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S"/>
 		<set name="dropable" value="false"/>
@@ -281,7 +281,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="20212" name="Agathion Seal Bracelet - Charming Cupid">
+	<armor id="20212" name="Agathion - Charming Cupid">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -300,7 +300,7 @@
 			<skill id="23025" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20213" name="Agathion Seal Bracelet - Naughty Cupid">
+	<armor id="20213" name="Agathion - Naughty Cupid">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -319,7 +319,7 @@
 			<skill id="23026" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20221" name="Agathion Seal Bracelet - White Maneki Neko">
+	<armor id="20221" name="Agathion - White Maneki Neko">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -339,7 +339,7 @@
 			<skill id="23046" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20222" name="Agathion Seal Bracelet - Black Maneki Neko">
+	<armor id="20222" name="Agathion - Black Maneki Neko">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -359,7 +359,7 @@
 			<skill id="23047" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20223" name="Agathion Seal Bracelet - Brown Maneki Neko">
+	<armor id="20223" name="Agathion - Brown Maneki Neko">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -379,7 +379,7 @@
 			<skill id="23048" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20224" name="Agathion Seal Bracelet - White Maneki Neko" add_name="Resurrection - 7 Day Expiration Period">
+	<armor id="20224" name="Agathion - White Maneki Neko" add_name="Resurrection (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -405,7 +405,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20225" name="Agathion Seal Bracelet - Black Maneki Neko" add_name="Escape - 7 Day Expiration Period">
+	<armor id="20225" name="Agathion - Black Maneki Neko" add_name="Escape (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -431,7 +431,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20226" name="Agathion Seal Bracelet - Brown Maneki Neko" add_name="Vitality - 7-day limited time">
+	<armor id="20226" name="Agathion - Brown Maneki Neko" add_name="Vitality (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -457,7 +457,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20230" name="Agathion Seal Bracelet - One-Eyed Bat Drove">
+	<armor id="20230" name="Agathion - One-eyed Bat Drove">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -476,7 +476,7 @@
 			<skill id="23033" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20231" name="Agathion Seal Bracelet - One-Eyed Bat Drove" add_name="Resist Unholy - 7 Day Expiration Period">
+	<armor id="20231" name="Agathion - One-eyed Bat Drove" add_name="Dark Attack Resistance (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -502,7 +502,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20232" name="Agathion Seal Bracelet - One-Eyed Bat Drove" add_name="Vitality - 7 Day Expiration Period">
+	<armor id="20232" name="Agathion - One-eyed Bat Drove" add_name="Vitality (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -528,7 +528,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20236" name="Agathion Seal Bracelet - Pegasus">
+	<armor id="20236" name="Agathion - Pegasus">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -547,7 +547,7 @@
 			<skill id="23036" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20237" name="Agathion Seal Bracelet - Pegasus" add_name="Wind Walk - 7 Day Expiration Period">
+	<armor id="20237" name="Agathion - Pegasus" add_name="Wind Walk (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -573,7 +573,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20238" name="Agathion Seal Bracelet - Pegasus" add_name="Escape - 7 Day Expiration Period">
+	<armor id="20238" name="Agathion - Pegasus" add_name="Escape (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -599,7 +599,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20245" name="Agathion Seal Bracelet - Yellow-Robed Tojigong">
+	<armor id="20245" name="Agathion - Yellow-robed Tojigong">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -618,7 +618,7 @@
 			<skill id="23039" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20246" name="Agathion Seal Bracelet - Blue-Robed Tojigong">
+	<armor id="20246" name="Agathion - Blue-robed Tojigong">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -637,7 +637,7 @@
 			<skill id="23040" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20247" name="Agathion Seal Bracelet - Green-Robed Tojigong">
+	<armor id="20247" name="Agathion - Green-robed Tojigong">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -656,7 +656,7 @@
 			<skill id="23041" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20248" name="Agathion Seal Bracelet - Yellow-Robed Tojigong" add_name="Greater Heal - 7 Day Expiration Period">
+	<armor id="20248" name="Agathion - Yellow-robed Tojigong" add_name="Greater Heal (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -682,7 +682,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20249" name="Agathion Seal Bracelet - Blue-Robed Tojigong" add_name="Reflect Damage - 7 Day Expiration Period">
+	<armor id="20249" name="Agathion - Blue-robed Tojigong" add_name="Reflect Damage (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -708,7 +708,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20250" name="Agathion Seal Bracelet - Green-Robed Tojigong" add_name="Mana Regeneration - 7 Day Expiration Period">
+	<armor id="20250" name="Agathion - Green-robed Tojigong" add_name="Mana Regeneration (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -734,7 +734,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20252" name="Agathion Seal Bracelet - Bugbear">
+	<armor id="20252" name="Agathion - Bugbear">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -753,7 +753,7 @@
 			<skill id="23045" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20253" name="Agathion of Love (Event)">
+	<armor id="20253" name="Agathion - Love (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>
@@ -809,7 +809,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20297" name="Agathion Seal Bracelet - Red Sumo Wrestler">
+	<armor id="20297" name="Agathion - Red Sumo Wrestler">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -833,7 +833,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20298" name="Agathion Seal Bracelet - Red Sumo Wrestler" add_name="Death Whisper - 7 Day Expiration Period">
+	<armor id="20298" name="Agathion - Red Sumo Wrestler" add_name="Death Whisper (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -859,7 +859,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20299" name="Agathion Seal Bracelet - Blue Sumo Wrestler">
+	<armor id="20299" name="Agathion - Blue Sumo Wrestler">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>

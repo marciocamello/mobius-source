@@ -108,7 +108,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3205" levels="2" name="Item Skill: Party Recall">
+	<skill id="3205" levels="2" name="Item Skill: Party Return">
 		<table name="#mpConsume2">171 244</table>
 		<table name="#mpConsume1">43 61</table>
 		<table name="#hitTime">20000 3500</table>
@@ -878,7 +878,7 @@
 			<mul order="0x30" stat="maxLoad" val="2"/>
 		</for>
 	</skill>
-	<skill id="3252" levels="10" name="Item Skill: Kiss of Eva">
+	<skill id="3252" levels="10" name="Item Skill: Eva's Kiss">
 		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
 		<set name="icon" val="icon.skill3238"/>
 		<set name="magicLevel" val="#magicLevel"/>
@@ -1081,7 +1081,7 @@
 			<effect abnormal="bighead" count="1" name="Buff" stackType="BigHead" time="300" val="0"/>
 		</for>
 	</skill>
-	<skill id="3266" levels="1" name="Large Fireworks Ability">
+	<skill id="3266" levels="1" name="Large Firecracker's Ability">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="300000"/>
@@ -1091,7 +1091,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 	</skill>
-	<skill id="3267" levels="1" name="Dismiss Agathion">
+	<skill id="3267" levels="1" name="Seal Agathion">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_unsummon_aga_agit_i01"/>
 		<set name="magicLevel" val="65"/>
@@ -1145,7 +1145,7 @@
 		<set name="npcId" val="16026"/>
 		<set name="summonType" val="agathion"/>
 	</skill>
-	<skill id="3271" levels="1" name="Blue Talisman of Power">
+	<skill id="3271" levels="1" name="Blue Talisman - P. Atk.">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i01"/>
 		<set name="reuseDelay" val="360000"/>
@@ -1166,7 +1166,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3272" levels="1" name="Blue Talisman of Defense">
+	<skill id="3272" levels="1" name="Blue Talisman - P. Def.">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i01"/>
 		<set name="reuseDelay" val="360000"/>
@@ -1187,7 +1187,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3273" levels="1" name="Red Talisman of Recovery">
+	<skill id="3273" levels="1" name="Red Talisman - HP/CP Recovery">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i00"/>
 		<set name="reuseDelay" val="300000"/>
@@ -1207,7 +1207,7 @@
 			<effect count="1" name="Heal" time="0" val="200"/>
 		</for>
 	</skill>
-	<skill id="3274" levels="1" name="Blue Talisman of Protection">
+	<skill id="3274" levels="1" name="Blue Talisman - Shield Defense">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i01"/>
 		<set name="reuseDelay" val="360000"/>
@@ -1228,7 +1228,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3275" levels="1" name="Blue Talisman of Protection">
+	<skill id="3275" levels="1" name="Blue Talisman - Shield Defense">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i01"/>
 		<set name="reuseDelay" val="360000"/>
@@ -1249,7 +1249,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3276" levels="1" name="Blue Talisman of M. Def.">
+	<skill id="3276" levels="1" name="Blue Talisman - M. Def.">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i01"/>
 		<set name="reuseDelay" val="360000"/>
@@ -1270,7 +1270,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3277" levels="1" name="Blue Talisman of Wild Magic">
+	<skill id="3277" levels="1" name="Blue Talisman - M. Critical Rate">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i01"/>
 		<set name="reuseDelay" val="360000"/>
@@ -1291,7 +1291,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3278" levels="1" name="Red Talisman of Mental Regeneration">
+	<skill id="3278" levels="1" name="Red Talisman - Mental Regeneration">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i00"/>
 		<set name="reuseDelay" val="360000"/>
@@ -1312,7 +1312,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3279" levels="1" name="Red Talisman of Meditation">
+	<skill id="3279" levels="1" name="Red Talisman - Meditation">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i00"/>
 		<set name="reuseDelay" val="900000"/>
@@ -1334,7 +1334,7 @@
 			<effect count="30" name="ManaHealOverTime" time="1" val="27"/>
 		</for>
 	</skill>
-	<skill id="3280" levels="1" name="Blue Talisman of Invisibility">
+	<skill id="3280" levels="1" name="Blue Talisman - Invisibility">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i01"/>
 		<set name="reuseDelay" val="240000"/>
@@ -1355,7 +1355,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3281" levels="1" name="Red Talisman of Minimum Clarity">
+	<skill id="3281" levels="1" name="Red Talisman - Clarity">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i00"/>
 		<set name="reuseDelay" val="360000"/>
@@ -1378,7 +1378,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3282" levels="1" name="Red Talisman of Maximum Clarity">
+	<skill id="3282" levels="1" name="Red Talisman - Maximum Clarity">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i00"/>
 		<set name="reuseDelay" val="900000"/>
@@ -1401,7 +1401,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3283" levels="1" name="Blue Talisman of Healing">
+	<skill id="3283" levels="1" name="Blue Talisman - Healing">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i01"/>
 		<set name="reuseDelay" val="300000"/>
@@ -1422,7 +1422,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3284" levels="1" name="Blue Talisman of Divine Protection">
+	<skill id="3284" levels="1" name="Blue Talisman - Divine Protection">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i01"/>
 		<set name="reuseDelay" val="900000"/>
@@ -1444,7 +1444,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3285" levels="1" name="Blue Talisman of Defense">
+	<skill id="3285" levels="1" name="Blue Talisman - Berserker">
 		<table name="#Tab-mAtk">1.1</table>
 		<table name="#Tab-rate">1.05</table>
 		<table name="#pDef">0.95</table>
@@ -1479,7 +1479,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="3286" levels="1" name="Black Talisman of Mending">
+	<skill id="3286" levels="1" name="Black Talisman - Mending">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i05"/>
 		<set name="reuseDelay" val="360000"/>
@@ -1496,7 +1496,7 @@
 		<set name="referenceItemId" val="9922"/>
 		<set name="referenceItemMpConsume" val="6"/>
 	</skill>
-	<skill id="3287" levels="1" name="Black Talisman of Physical Freedom">
+	<skill id="3287" levels="1" name="Black Talisman - Physical Freedom">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i05"/>
 		<set name="reuseDelay" val="360000"/>
@@ -1514,7 +1514,7 @@
 		<set name="referenceItemId" val="9957"/>
 		<set name="referenceItemMpConsume" val="6"/>
 	</skill>
-	<skill id="3288" levels="1" name="Black Talisman of Arcane Freedom">
+	<skill id="3288" levels="1" name="Black Talisman - Arcane Freedom">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i05"/>
 		<set name="reuseDelay" val="360000"/>
@@ -1532,7 +1532,7 @@
 		<set name="referenceItemId" val="9956"/>
 		<set name="referenceItemMpConsume" val="6"/>
 	</skill>
-	<skill id="3289" levels="1" name="Black Talisman of Escape">
+	<skill id="3289" levels="1" name="Black Talisman - Escape">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i05"/>
 		<set name="reuseDelay" val="360000"/>
@@ -1550,7 +1550,7 @@
 		<set name="referenceItemId" val="9923"/>
 		<set name="referenceItemMpConsume" val="6"/>
 	</skill>
-	<skill id="3290" levels="1" name="Black Talisman of Rescue">
+	<skill id="3290" levels="1" name="Black Talisman - Rescue">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i05"/>
 		<set name="reuseDelay" val="360000"/>
@@ -1568,7 +1568,7 @@
 		<set name="referenceItemId" val="9958"/>
 		<set name="referenceItemMpConsume" val="6"/>
 	</skill>
-	<skill id="3291" levels="1" name="Black Talisman of Vocalization">
+	<skill id="3291" levels="1" name="Black Talisman - Vocalization">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i05"/>
 		<set name="reuseDelay" val="360000"/>
@@ -1586,7 +1586,7 @@
 		<set name="referenceItemId" val="9955"/>
 		<set name="referenceItemMpConsume" val="6"/>
 	</skill>
-	<skill id="3292" levels="1" name="Black Talisman of Free Speech">
+	<skill id="3292" levels="1" name="Black Talisman - Free Speech">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.etc_talisman_i05"/>
 		<set name="reuseDelay" val="360000"/>
@@ -1604,7 +1604,7 @@
 		<set name="referenceItemId" val="9959"/>
 		<set name="referenceItemMpConsume" val="6"/>
 	</skill>
-	<skill id="3293" levels="1" name="Yellow Talisman of Power">
+	<skill id="3293" levels="1" name="Yellow Talisman - P. Atk.">
 		<set name="icon" val="icon.etc_talisman_i02"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1614,7 +1614,7 @@
 			<add order="0x40" stat="pAtk" val="12"/>
 		</for>
 	</skill>
-	<skill id="3294" levels="1" name="Yellow Talisman of Arcane Power">
+	<skill id="3294" levels="1" name="Yellow Talisman - M. Atk.">
 		<set name="icon" val="icon.etc_talisman_i02"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1624,7 +1624,7 @@
 			<add order="0x60" stat="mAtk" val="12"/>
 		</for>
 	</skill>
-	<skill id="3295" levels="1" name="Yellow Talisman of Defense">
+	<skill id="3295" levels="1" name="Yellow Talisman - P. Def.">
 		<set name="icon" val="icon.etc_talisman_i02"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1634,7 +1634,7 @@
 			<add order="0x60" stat="pDef" val="19"/>
 		</for>
 	</skill>
-	<skill id="3296" levels="1" name="Yellow Talisman of M. Def.">
+	<skill id="3296" levels="1" name="Yellow Talisman - M. Def.">
 		<set name="icon" val="icon.etc_talisman_i02"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1644,7 +1644,7 @@
 			<add order="0x40" stat="mDef" val="27"/>
 		</for>
 	</skill>
-	<skill id="3297" levels="1" name="Yellow Talisman of Accuracy">
+	<skill id="3297" levels="1" name="Yellow Talisman - Accuracy">
 		<set name="icon" val="icon.etc_talisman_i02"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1654,7 +1654,7 @@
 			<add order="0x40" stat="accCombat" val="2.3"/>
 		</for>
 	</skill>
-	<skill id="3298" levels="1" name="Yellow Talisman of Evasion">
+	<skill id="3298" levels="1" name="Yellow Talisman - Evasion">
 		<set name="icon" val="icon.etc_talisman_i02"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1664,7 +1664,7 @@
 			<add order="0x60" stat="rEvas" val="2"/>
 		</for>
 	</skill>
-	<skill id="3299" levels="1" name="Yellow Talisman of Critical Damage">
+	<skill id="3299" levels="1" name="Yellow Talisman - Critical Damage">
 		<set name="icon" val="icon.etc_talisman_i02"/>
 		<set name="magicLevel" val="55"/>
 		<set name="target" val="TARGET_SELF"/>

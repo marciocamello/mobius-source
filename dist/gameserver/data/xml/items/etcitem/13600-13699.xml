@@ -35,7 +35,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="13602" name="Transformation Scroll: Giran White Captain Mercenary">
+	<etcitem id="13602" name="Transformation Scroll: Giran Centurion Mercenary">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -239,7 +239,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="13614" name="Transformation Scroll: Oren White Captain Mercenary">
+	<etcitem id="13614" name="Transformation Scroll: Oren Centurion Mercenary">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -443,7 +443,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="13626" name="Transformation Scroll: Aden White Captain Mercenary">
+	<etcitem id="13626" name="Transformation Scroll: Aden Centurion Mercenary">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -647,7 +647,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="13638" name="Transformation Scroll: Innadril White Captain Mercenary">
+	<etcitem id="13638" name="Transformation Scroll: Innadril Centurion Mercenary">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -851,7 +851,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="13650" name="Transformation Scroll: Goddard White Captain Mercenary">
+	<etcitem id="13650" name="Transformation Scroll: Goddard Centurion Mercenary">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1055,7 +1055,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="13662" name="Transformation Scroll: Rune White Captain Mercenary">
+	<etcitem id="13662" name="Transformation Scroll: Rune Centurion Mercenary">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1259,7 +1259,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="13674" name="Transformation Scroll: Schuttgart White Captain Mercenary">
+	<etcitem id="13674" name="Transformation Scroll: Schuttgart Centurion Mercenary">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

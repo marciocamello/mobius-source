@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="22900" levels="1" name="Ninja Top Appearance Stone">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="22901" levels="1" name="Ninja Pants Appearance Stone">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="22902" levels="1" name="Ninja Gloves Appearance Stone">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="22903" levels="1" name="Ninja Shoes Appearance Stone">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="22904" levels="1" name="Traditional Taiwanese Top Appearance Stone">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="22905" levels="1" name="Traditional Taiwanese Pants Appearance Stone">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="22906" levels="1" name="Traditional Taiwanese Gloves Appearance Stone">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="22907" levels="1" name="Traditional Taiwanese Shoes Appearance Stone">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="22908" levels="1" name="Metal Suit Top Appearance Stone">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="22909" levels="1" name="Metal Suit Pants Appearance Stone">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="22910" levels="1" name="Metal Suit Gloves Appearance Stone">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="22911" levels="1" name="Metal Suit Shoes Appearance Stone">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="22912" levels="1" name="Military Top Appearance Stone">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="22913" levels="1" name="Military Pants Appearance Stone">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="22914" levels="1" name="Military Gloves Appearance Stone">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="22915" levels="1" name="Military Shoes Appearance Stone">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="22916" levels="4" name="Ninja's Hide">
+		<set name="icon" val="BranchSys3.icon1.g_co_ninja_u"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="22917" levels="4" name="Rainbow Warrior's Recovery">
+		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_u"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="22918" levels="4" name="Resistance Device">
+		<set name="icon" val="BranchSys3.icon1.g_co_sf_u"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="22919" levels="4" name="Special Ops' Experience">
+		<set name="icon" val="BranchSys3.icon1.g_co_military_u"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+</list>

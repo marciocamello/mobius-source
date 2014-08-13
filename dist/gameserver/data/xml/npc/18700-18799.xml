@@ -87,7 +87,7 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="18702" name="Dimension Moving Device" title="">
+	<npc id="18702" name="Dimensional Teleport Device" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>

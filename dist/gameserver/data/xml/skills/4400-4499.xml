@@ -112,7 +112,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4407" levels="2" name="Ordinary Monster">
+	<skill id="4407" levels="2" name="Enchant Type Monster">
 		<table name="#hp">10 50</table>
 		<table name="#Tab-mAtk">1.3 2</table>
 		<table name="#Tab-pAtk">1.15 1.5</table>
@@ -133,7 +133,7 @@
 			<mul order="0x30" stat="DropMultiplier" val="#drop"/>
 		</for>
 	</skill>
-	<skill id="4408" levels="20" name="HP Increase (1x)">
+	<skill id="4408" levels="20" name="HP Increase (12x)">
 		<table name="#value">1 1.1 1.21 1.33 1.46 1.61 1.77 0.25 0.50 2 3 4 5 6 7 8 9 10 11 12</table>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -145,7 +145,7 @@
 			<mul order="0x30" stat="regHp" val="#value"/>
 		</for>
 	</skill>
-	<skill id="4409" levels="20" name="MP Increase (1x)">
+	<skill id="4409" levels="20" name="MP Increase (12x)">
 		<table name="#value">1 1.1 1.21 1.33 1.46 1.61 1.77 0.25 0.50 2 3 4 5 6 7 8 9 10 11 12</table>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
@@ -157,7 +157,7 @@
 			<mul order="0x30" stat="regMp" val="#value"/>
 		</for>
 	</skill>
-	<skill id="4410" levels="22" name="Extremely Weak P. Atk.">
+	<skill id="4410" levels="22" name="Ultra Strong P. Atk.">
 		<table name="#patk">0.39 0.43 0.47 0.52 0.57 0.63 0.69 0.76 0.83 0.91 1 1.1 1.21 1.33 1.46 1.61 1.77 1.91 2.14 2.35 2.59 9</table>
 		<set name="icon" val="icon.skill0141"/>
 		<set name="magicLevel" val="1"/>
@@ -168,7 +168,7 @@
 			<mul order="0x30" stat="pAtk" val="#patk"/>
 		</for>
 	</skill>
-	<skill id="4411" levels="22" name="Extremely Weak M. Atk.">
+	<skill id="4411" levels="22" name="Ultra Strong M. Atk.">
 		<table name="#matk">0.15 0.18 0.22 0.27 0.32 0.39 0.47 0.57 0.69 0.83 1 1.21 1.46 1.77 2.14 2.59 3.13 3.79 4.59 5.55 6.72 9.9</table>
 		<set name="icon" val="icon.skill4411_normal"/>
 		<set name="magicLevel" val="1"/>
@@ -179,7 +179,7 @@
 			<mul order="0x30" stat="mAtk" val="#matk"/>
 		</for>
 	</skill>
-	<skill id="4412" levels="22" name="Extremely Weak P. Def.">
+	<skill id="4412" levels="22" name="Ultra Strong P. Def.">
 		<table name="#pdef">0.39 0.43 0.47 0.52 0.57 0.63 0.69 0.76 0.83 0.91 1 1.1 1.21 1.33 1.46 1.61 1.77 1.91 2.14 2.35 2.59 9</table>
 		<set name="icon" val="icon.skill0142"/>
 		<set name="magicLevel" val="1"/>
@@ -190,7 +190,7 @@
 			<mul order="0x30" stat="pDef" val="#pdef"/>
 		</for>
 	</skill>
-	<skill id="4413" levels="22" name="Extremely Weak M. Def.">
+	<skill id="4413" levels="22" name="Ultra Strong M. Def.">
 		<table name="#mdef">0.39 0.43 0.47 0.52 0.57 0.63 0.69 0.76 0.83 0.91 1 1.1 1.21 1.33 1.46 1.61 1.77 1.91 2.14 2.35 2.59 9</table>
 		<set name="icon" val="icon.skill4413_normal"/>
 		<set name="magicLevel" val="1"/>
@@ -201,7 +201,7 @@
 			<mul order="0x30" stat="mDef" val="#mdef"/>
 		</for>
 	</skill>
-	<skill id="4414" levels="3" name="Heavy Armor Type">
+	<skill id="4414" levels="3" name="Light Armor Type">
 		<table name="#pdef">1.2 1 0.8</table>
 		<table name="#Tab-rEvas">-4 0 4</table>
 		<set name="icon" val="icon.skill4312"/>
@@ -214,21 +214,21 @@
 			<add order="0x40" stat="rEvas" val="#Tab-rEvas"/>
 		</for>
 	</skill>
-	<skill id="4415" levels="20" name="Bare Hands">
+	<skill id="4415" levels="20" name="Crossbow">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4416" levels="25" name="Undead">
+	<skill id="4416" levels="25" name="Kamael">
 		<set name="icon" val="icon.skill4290"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4417" levels="12" name="Animals">
+	<skill id="4417" levels="12" name="Undead">
 		<table name="#Bow">0 0 15 15 15 0 0 15 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15 0 0</table>
 		<table name="#Blunt">0 0 0 0 0 0 0 0 0 15 0 0 0 0 0 0 -15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 0 0</table>
 		<table name="#Dagger">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15 0 0</table>
@@ -251,7 +251,7 @@
 			<add order="0x40" stat="rootResist" val="#Root"/>
 		</for>
 	</skill>
-	<skill id="4418" levels="5" name="Fire Attacks">
+	<skill id="4418" levels="5" name="Fire Attack">
 		<table name="#Res">25 50 75 100 125</table>
 		<set name="icon" val="icon.etc_fire_crystal_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -263,7 +263,7 @@
 			<set order="0x10" stat="attackFire" val="#Res"/>
 		</for>
 	</skill>
-	<skill id="4419" levels="5" name="Water Attacks">
+	<skill id="4419" levels="5" name="Water Attack">
 		<table name="#Res">25 50 75 100 125</table>
 		<set name="icon" val="icon.etc_water_crystal_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -275,7 +275,7 @@
 			<set order="0x10" stat="attackWater" val="#Res"/>
 		</for>
 	</skill>
-	<skill id="4420" levels="5" name="Wind Attacks">
+	<skill id="4420" levels="5" name="Wind Attack">
 		<table name="#Res">25 50 75 100 125</table>
 		<set name="icon" val="icon.etc_wind_crystal_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -287,7 +287,7 @@
 			<set order="0x10" stat="attackWind" val="#Res"/>
 		</for>
 	</skill>
-	<skill id="4421" levels="5" name="Earth Attacks">
+	<skill id="4421" levels="5" name="Earth Attack">
 		<table name="#Res">25 50 75 100 125</table>
 		<set name="icon" val="icon.etc_earth_crystal_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -299,7 +299,7 @@
 			<set order="0x10" stat="attackEarth" val="#Res"/>
 		</for>
 	</skill>
-	<skill id="4422" levels="5" name="Dark Attacks">
+	<skill id="4422" levels="5" name="Dark Attack">
 		<table name="#Res">25 50 75 100 125</table>
 		<set name="icon" val="icon.etc_unholy_crystal_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -311,7 +311,7 @@
 			<set order="0x10" stat="attackUnholy" val="#Res"/>
 		</for>
 	</skill>
-	<skill id="4423" levels="5" name="Holy Attacks">
+	<skill id="4423" levels="5" name="Holy Attack">
 		<table name="#Res">25 50 75 100 125</table>
 		<set name="icon" val="icon.etc_holy_crystal_i00"/>
 		<set name="magicLevel" val="1"/>
@@ -323,14 +323,14 @@
 			<set order="0x10" stat="attackHoly" val="#Res"/>
 		</for>
 	</skill>
-	<skill id="4424" levels="5" name="Resist fist Weapons">
+	<skill id="4424" levels="5" name="Fist Weapon Resistance">
 		<set name="icon" val="icon.skill4424"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4425" levels="5" name="Resist Blunt Weapons">
+	<skill id="4425" levels="5" name="Blunt Weapon Resistance">
 		<table name="#Tab-bluntRcpt">15 20 25 30 35</table>
 		<set name="icon" val="icon.skill4425"/>
 		<set name="magicLevel" val="1"/>
@@ -341,7 +341,7 @@
 			<sub order="0x40" stat="bluntWpnVuln" val="#Tab-bluntRcpt"/>
 		</for>
 	</skill>
-	<skill id="4426" levels="5" name="Resist Dual-Sword Weapons">
+	<skill id="4426" levels="5" name="Dualsword Resistance">
 		<table name="#Tab-dualRcpt">5 10 15 20 25</table>
 		<set name="icon" val="icon.skill4426"/>
 		<set name="magicLevel" val="1"/>
@@ -352,7 +352,7 @@
 			<sub order="0x40" stat="dualWpnVuln" val="#Tab-dualRcpt"/>
 		</for>
 	</skill>
-	<skill id="4427" levels="5" name="Resist Swords">
+	<skill id="4427" levels="5" name="Sword Resistance">
 		<table name="#Tab-swordRcpt">10 15 20 25 30</table>
 		<set name="icon" val="icon.skill4427"/>
 		<set name="magicLevel" val="1"/>
@@ -363,14 +363,14 @@
 			<sub order="0x40" stat="swordWpnVuln" val="#Tab-swordRcpt"/>
 		</for>
 	</skill>
-	<skill id="4428" levels="5" name="Resist Two-handed Weapons">
+	<skill id="4428" levels="5" name="Two-handed Weapon Resistance">
 		<set name="icon" val="icon.skill4428"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4429" levels="5" name="Greater Resist Fire Attacks">
+	<skill id="4429" levels="5" name="Greater Fire Resistance">
 		<table name="#Res">150 175 200 225 250</table>
 		<set name="icon" val="icon.skill4429"/>
 		<set name="magicLevel" val="1"/>
@@ -381,7 +381,7 @@
 			<add order="0x40" stat="defenceFire" val="#Res"/>
 		</for>
 	</skill>
-	<skill id="4430" levels="5" name="Greater Resist Water Attacks">
+	<skill id="4430" levels="5" name="Greater Water Resistance">
 		<table name="#Res">150 175 200 225 250</table>
 		<set name="icon" val="icon.skill4430"/>
 		<set name="magicLevel" val="1"/>
@@ -392,7 +392,7 @@
 			<add order="0x40" stat="defenceWater" val="#Res"/>
 		</for>
 	</skill>
-	<skill id="4431" levels="5" name="Greater Resist Wind Attacks">
+	<skill id="4431" levels="5" name="Greater Wind Resistance">
 		<table name="#Res">150 175 200 225 250</table>
 		<set name="icon" val="icon.skill4431"/>
 		<set name="magicLevel" val="1"/>
@@ -403,7 +403,7 @@
 			<add order="0x40" stat="defenceWind" val="#Res"/>
 		</for>
 	</skill>
-	<skill id="4432" levels="5" name="Greater Resist Earth Attacks">
+	<skill id="4432" levels="5" name="Greater Earth Resistance">
 		<table name="#Res">150 175 200 225 250</table>
 		<set name="icon" val="icon.skill4432"/>
 		<set name="magicLevel" val="1"/>
@@ -414,7 +414,7 @@
 			<add order="0x40" stat="defenceEarth" val="#Res"/>
 		</for>
 	</skill>
-	<skill id="4433" levels="5" name="Greater Resist Holy Attacks">
+	<skill id="4433" levels="5" name="Greater Holy Attack Resistance">
 		<table name="#Res">150 175 200 225 250</table>
 		<set name="icon" val="icon.skill4433"/>
 		<set name="magicLevel" val="1"/>
@@ -425,7 +425,7 @@
 			<add order="0x40" stat="defenceHoly" val="#Res"/>
 		</for>
 	</skill>
-	<skill id="4434" levels="5" name="Greater Resist Dark Attacks">
+	<skill id="4434" levels="5" name="Greater Dark Attack Resistance">
 		<table name="#Res">150 175 200 225 250</table>
 		<set name="icon" val="icon.skill4434"/>
 		<set name="magicLevel" val="1"/>
@@ -436,7 +436,7 @@
 			<add order="0x40" stat="defenceUnholy" val="#Res"/>
 		</for>
 	</skill>
-	<skill id="4435" levels="5" name="Greater Resist Stun">
+	<skill id="4435" levels="5" name="Greater Stun Resistance">
 		<table name="#Tab-stunResist">70 80 90 95 100</table>
 		<set name="icon" val="icon.skill4435"/>
 		<set name="magicLevel" val="1"/>
@@ -447,7 +447,7 @@
 			<add order="0x40" stat="stunResist" val="#Tab-stunResist"/>
 		</for>
 	</skill>
-	<skill id="4436" levels="5" name="Greater Resist Poison">
+	<skill id="4436" levels="5" name="Greater Poison Resistance">
 		<table name="#Tab-poisonResist">70 80 90 95 100</table>
 		<set name="icon" val="icon.skill4436"/>
 		<set name="magicLevel" val="1"/>
@@ -458,7 +458,7 @@
 			<add order="0x40" stat="poisonResist" val="#Tab-poisonResist"/>
 		</for>
 	</skill>
-	<skill id="4437" levels="5" name="Greater Resist Bleeding">
+	<skill id="4437" levels="5" name="Greater Bleed Resistance">
 		<table name="#Tab-bleedResist">70 80 90 95 100</table>
 		<set name="icon" val="icon.skill4437"/>
 		<set name="magicLevel" val="1"/>
@@ -469,7 +469,7 @@
 			<add order="0x40" stat="bleedResist" val="#Tab-bleedResist"/>
 		</for>
 	</skill>
-	<skill id="4438" levels="5" name="Greater Resist Sleep">
+	<skill id="4438" levels="5" name="Greater Sleep Resistance">
 		<table name="#Tab-sleepResist">70 80 90 95 100</table>
 		<set name="icon" val="icon.skill4286"/>
 		<set name="magicLevel" val="1"/>
@@ -480,7 +480,7 @@
 			<add order="0x40" stat="sleepResist" val="#Tab-sleepResist"/>
 		</for>
 	</skill>
-	<skill id="4439" levels="5" name="Greater Resist Hold">
+	<skill id="4439" levels="5" name="Greater Hold Resistance">
 		<table name="#Tab-rootResist">70 80 90 95 100</table>
 		<set name="icon" val="icon.skill4288"/>
 		<set name="magicLevel" val="1"/>
@@ -491,7 +491,7 @@
 			<add order="0x40" stat="rootResist" val="#Tab-rootResist"/>
 		</for>
 	</skill>
-	<skill id="4440" levels="5" name="Greater Resist Paralysis">
+	<skill id="4440" levels="5" name="Greater Paralysis Resistance">
 		<table name="#Tab-paralyzeResist">70 80 90 95 100</table>
 		<set name="icon" val="icon.skill4440"/>
 		<set name="magicLevel" val="1"/>
@@ -502,7 +502,7 @@
 			<add order="0x40" stat="paralyzeResist" val="#Tab-paralyzeResist"/>
 		</for>
 	</skill>
-	<skill id="4441" levels="5" name="Greater Resist Mental Derangement">
+	<skill id="4441" levels="5" name="Greater Mental Attack Resistance">
 		<table name="#Tab-debuffResist">70 80 90 95 100</table>
 		<set name="icon" val="icon.skill4441"/>
 		<set name="magicLevel" val="1"/>
@@ -513,14 +513,14 @@
 			<add order="0x40" stat="mentalResist" val="#Tab-debuffResist"/>
 		</for>
 	</skill>
-	<skill id="4442" levels="5" name="Greater Resist fist Weapons">
+	<skill id="4442" levels="5" name="Greater Fist Weapon Resistance">
 		<set name="icon" val="icon.skill4442"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4443" levels="5" name="Greater Resist Blunt Weapons">
+	<skill id="4443" levels="5" name="Greater Blunt Weapon Resistance">
 		<table name="#Tab-bluntRcpt">30 35 40 45 50</table>
 		<set name="icon" val="icon.skill4443"/>
 		<set name="magicLevel" val="1"/>
@@ -531,7 +531,7 @@
 			<sub order="0x40" stat="bluntWpnVuln" val="#Tab-bluntRcpt"/>
 		</for>
 	</skill>
-	<skill id="4444" levels="5" name="Higher Resist Bow/Crossbow Weapons">
+	<skill id="4444" levels="5" name="Greater Bow/Crossbow Resistance">
 		<table name="#bowRcpt">30 35 40 45 50</table>
 		<set name="icon" val="icon.skill4444"/>
 		<set name="magicLevel" val="1"/>
@@ -543,7 +543,7 @@
 			<sub order="0x40" stat="crossbowWpnVuln" val="#bowRcpt"/>
 		</for>
 	</skill>
-	<skill id="4445" levels="5" name="Greater Resist Spear Weapons">
+	<skill id="4445" levels="5" name="Greater Spear Resistance">
 		<table name="#Tab-poleRcpt">30 35 40 45 50</table>
 		<set name="icon" val="icon.skill4445"/>
 		<set name="magicLevel" val="1"/>
@@ -554,7 +554,7 @@
 			<sub order="0x40" stat="poleWpnVuln" val="#Tab-poleRcpt"/>
 		</for>
 	</skill>
-	<skill id="4446" levels="5" name="Greater Resist Dual-Sword Weapons">
+	<skill id="4446" levels="5" name="Greater Dualsword Resistance">
 		<table name="#Tab-dualRcpt">30 35 40 45 50</table>
 		<set name="icon" val="icon.skill4446"/>
 		<set name="magicLevel" val="1"/>
@@ -565,7 +565,7 @@
 			<sub order="0x40" stat="dualWpnVuln" val="#Tab-dualRcpt"/>
 		</for>
 	</skill>
-	<skill id="4447" levels="5" name="Greater Resist Swords">
+	<skill id="4447" levels="5" name="Greater Sword Resistance">
 		<table name="#Tab-swordRcpt">30 35 40 45 50</table>
 		<set name="icon" val="icon.skill4447"/>
 		<set name="magicLevel" val="1"/>
@@ -576,7 +576,7 @@
 			<sub order="0x40" stat="swordWpnVuln" val="#Tab-swordRcpt"/>
 		</for>
 	</skill>
-	<skill id="4448" levels="5" name="Higher resist Daggers/Rapier Weapon">
+	<skill id="4448" levels="5" name="Greater Dagger/Rapier Resistance">
 		<table name="#Tab-daggerRcpt">30 35 40 45 50</table>
 		<set name="icon" val="icon.skill4448"/>
 		<set name="magicLevel" val="1"/>
@@ -587,7 +587,7 @@
 			<sub order="0x40" stat="daggerWpnVuln" val="#Tab-daggerRcpt"/>
 		</for>
 	</skill>
-	<skill id="4449" levels="5" name="Greater Resist Two-handed Weapons">
+	<skill id="4449" levels="5" name="Greater Two-handed Weapon Resistance">
 		<table name="#vuln">0.5 0.4 0.3 0.2 0.1</table>
 		<set name="icon" val="icon.skill4449"/>
 		<set name="magicLevel" val="1"/>
@@ -600,7 +600,7 @@
 			<mul order="0x30" stat="bluntWpnVuln" val="#vuln"/>
 		</for>
 	</skill>
-	<skill id="4450" levels="5" name="Stun Attack Weak Point">
+	<skill id="4450" levels="5" name="Stun Vulnerability">
 		<table name="#Tab-stunResist">10 15 20 25 30</table>
 		<set name="icon" val="icon.skill4450"/>
 		<set name="magicLevel" val="1"/>
@@ -611,7 +611,7 @@
 			<sub order="0x40" stat="stunResist" val="#Tab-stunResist"/>
 		</for>
 	</skill>
-	<skill id="4451" levels="5" name="Poison Attack Weak Point">
+	<skill id="4451" levels="5" name="Poison Vulnerability">
 		<table name="#Tab-poisonResist">10 15 20 25 30</table>
 		<set name="icon" val="icon.skill4451"/>
 		<set name="magicLevel" val="1"/>
@@ -622,7 +622,7 @@
 			<sub order="0x40" stat="poisonResist" val="#Tab-poisonResist"/>
 		</for>
 	</skill>
-	<skill id="4452" levels="5" name="Bleed Attack Weak Point">
+	<skill id="4452" levels="5" name="Bleed Vulnerability">
 		<table name="#Tab-bleedResist">10 15 20 25 30</table>
 		<set name="icon" val="icon.skill4452"/>
 		<set name="magicLevel" val="1"/>
@@ -633,7 +633,7 @@
 			<sub order="0x40" stat="bleedResist" val="#Tab-bleedResist"/>
 		</for>
 	</skill>
-	<skill id="4453" levels="5" name="Sleep Attack Weak Point">
+	<skill id="4453" levels="5" name="Sleep Vulnerability">
 		<table name="#Tab-sleepResist">10 15 20 25 30</table>
 		<set name="icon" val="icon.skill4453"/>
 		<set name="magicLevel" val="1"/>
@@ -644,7 +644,7 @@
 			<sub order="0x40" stat="sleepResist" val="#Tab-sleepResist"/>
 		</for>
 	</skill>
-	<skill id="4454" levels="5" name="Hold Attack Weak Point">
+	<skill id="4454" levels="5" name="Hold Vulnerability">
 		<table name="#Tab-rootResist">10 15 20 25 30</table>
 		<set name="icon" val="icon.skill4454"/>
 		<set name="magicLevel" val="1"/>
@@ -655,7 +655,7 @@
 			<sub order="0x40" stat="rootResist" val="#Tab-rootResist"/>
 		</for>
 	</skill>
-	<skill id="4455" levels="5" name="Paralysis Attack Weak Point">
+	<skill id="4455" levels="5" name="Paralysis Vulnerability">
 		<table name="#Tab-paralyzeResist">10 15 20 25 30</table>
 		<set name="icon" val="icon.skill4455"/>
 		<set name="magicLevel" val="1"/>
@@ -666,7 +666,7 @@
 			<sub order="0x40" stat="paralyzeResist" val="#Tab-paralyzeResist"/>
 		</for>
 	</skill>
-	<skill id="4456" levels="5" name="Mental Attack Weak Point">
+	<skill id="4456" levels="5" name="Mental Attack Vulnerability">
 		<table name="#Tab-debuffResist">10 15 20 25 30</table>
 		<set name="icon" val="icon.skill4456"/>
 		<set name="magicLevel" val="1"/>
@@ -677,7 +677,7 @@
 			<sub order="0x40" stat="mentalResist" val="#Tab-debuffResist"/>
 		</for>
 	</skill>
-	<skill id="4457" levels="5" name="fist Weapon Weak Point">
+	<skill id="4457" levels="5" name="Fist Weapon Vulnerability">
 		<table name="#Tab-fistRcpt">10 15 20 25 30</table>
 		<set name="icon" val="icon.skill4457"/>
 		<set name="magicLevel" val="1"/>
@@ -688,7 +688,7 @@
 			<add order="0x40" stat="fistWpnVuln" val="#Tab-fistRcpt"/>
 		</for>
 	</skill>
-	<skill id="4458" levels="5" name="Spear Weapon Weak Point">
+	<skill id="4458" levels="5" name="Spear Vulnerability">
 		<table name="#Tab-poleRcpt">10 15 20 25 30</table>
 		<set name="icon" val="icon.skill4458"/>
 		<set name="magicLevel" val="1"/>
@@ -699,7 +699,7 @@
 			<add order="0x40" stat="poleWpnVuln" val="#Tab-poleRcpt"/>
 		</for>
 	</skill>
-	<skill id="4459" levels="5" name="Dual-Sword Weapon Weak Point">
+	<skill id="4459" levels="5" name="Dualsword Vulnerability">
 		<table name="#Tab-dualRcpt">10 15 20 25 30</table>
 		<set name="icon" val="icon.skill4459"/>
 		<set name="magicLevel" val="1"/>
@@ -710,7 +710,7 @@
 			<add order="0x40" stat="dualWpnVuln" val="#Tab-dualRcpt"/>
 		</for>
 	</skill>
-	<skill id="4460" levels="5" name="Sword Weak Point">
+	<skill id="4460" levels="5" name="Sword Vulnerability">
 		<table name="#Tab-swordRcpt">10 15 20 25 30</table>
 		<set name="icon" val="icon.skill4460"/>
 		<set name="magicLevel" val="1"/>
@@ -721,7 +721,7 @@
 			<add order="0x40" stat="swordWpnVuln" val="#Tab-swordRcpt"/>
 		</for>
 	</skill>
-	<skill id="4461" levels="5" name="Weak Point against Daggers/Rapier Weapon">
+	<skill id="4461" levels="5" name="Dagger/Rapier Vulnerability">
 		<table name="#Tab-daggerRcpt">10 15 20 25 30</table>
 		<set name="icon" val="icon.skill4461"/>
 		<set name="magicLevel" val="1"/>
@@ -732,14 +732,14 @@
 			<add order="0x40" stat="daggerWpnVuln" val="#Tab-daggerRcpt"/>
 		</for>
 	</skill>
-	<skill id="4462" levels="5" name="Two-handed Weapon Weak Point">
+	<skill id="4462" levels="5" name="Two-handed Weapon Vulnerability">
 		<set name="icon" val="icon.skill4462"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4463" levels="3" name="Surrender To Water">
+	<skill id="4463" levels="3" name="Surrender to Water">
 		<table name="#Tab-waterRcpt">20 25 30</table>
 		<table name="#Tab-fireRcpt">10 12 15</table>
 		<table name="#mpConsume2">16 28 52</table>
@@ -766,7 +766,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4464" levels="3" name="Surrender To Wind">
+	<skill id="4464" levels="3" name="Surrender to Wind">
 		<table name="#Tab-windRcpt">20 25 30</table>
 		<table name="#Tab-earthRcpt">10 12 15</table>
 		<table name="#mpConsume2">16 28 52</table>
@@ -793,7 +793,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4465" levels="3" name="Surrender To Earth">
+	<skill id="4465" levels="3" name="Surrender to Earth">
 		<table name="#Tab-earthRcpt">20 25 30</table>
 		<table name="#Tab-windRcpt">10 12 15</table>
 		<table name="#mpConsume2">16 28 52</table>
@@ -820,7 +820,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4466" levels="3" name="Surrender To Darkness">
+	<skill id="4466" levels="3" name="Surrender to Dark">
 		<table name="#Tab-unholyRcpt">15 25 30</table>
 		<table name="#Tab-holyRcpt">7 12 15</table>
 		<table name="#mpConsume2">16 28 52</table>
@@ -847,7 +847,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="4467" levels="3" name="Surrender To Light">
+	<skill id="4467" levels="3" name="Surrender to Holy">
 		<table name="#Tab-holyRcpt">20 25 30</table>
 		<table name="#Tab-unholyRcpt">10 12 15</table>
 		<table name="#mpConsume2">16 28 52</table>
@@ -971,7 +971,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4475" levels="1" name="Perfect Resist Bleeding">
+	<skill id="4475" levels="1" name="Complete Bleed Resistance">
 		<table name="#Tab-bleedResist">95</table>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill0000"/>
@@ -1038,7 +1038,7 @@
 		<set name="element" val="water"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="4479" levels="1" name="Ice Fairy Resist Cold">
+	<skill id="4479" levels="1" name="Ice Fairy's Blessing">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1182"/>
 		<set name="reuseDelay" val="6000"/>
@@ -1126,7 +1126,7 @@
 			<effect count="1" name="Root" stackOrder="-1" stackType="Root" time="30" val="0"/>
 		</for>
 	</skill>
-	<skill id="4484" levels="1" name="Follower Devouring">
+	<skill id="4484" levels="1" name="Devour Subordinate">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="75"/>
 		<set name="castRange" val="600"/>
@@ -1135,7 +1135,7 @@
 		<set name="skillType" val="HEAL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="4485" levels="1" name="Follower Devouring">
+	<skill id="4485" levels="1" name="Devour Subordinate">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="75"/>
 		<set name="hitTime" val="3000"/>
@@ -1296,7 +1296,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4494" levels="2" name="Raid Boss">
+	<skill id="4494" levels="2" name="Underground Prisoner">
 		<set name="icon" val="icon.skillraid"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
@@ -1340,21 +1340,21 @@
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
 	</skill>
-	<skill id="4497" levels="1" name="Treasure Chest - Level 21">
+	<skill id="4497" levels="1" name="Treasure Chest (Lv. 21)">
 		<set name="icon" val="icon.skill0042"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4498" levels="1" name="Treasure Chest - Level 22">
+	<skill id="4498" levels="1" name="Treasure Chest (Lv. 22)">
 		<set name="icon" val="icon.skill0042"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4499" levels="1" name="Treasure Chest - Level 25">
+	<skill id="4499" levels="1" name="Treasure Chest (Lv. 25)">
 		<set name="icon" val="icon.skill0042"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>

@@ -125,7 +125,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20811" name="Rocket Gun Hat Pack" add_name="Continuous Fireworks">
+	<etcitem id="20811" name="Rocket Gun Hat Pack" add_name="Chain Fireworks">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -293,7 +293,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20849" name="Agathion - Orodriel Pack (7-day)" add_name="Prominent Outsider Adventurer's Ability">
+	<etcitem id="20849" name="Agathion - Cheerleader Orodriel Pack (7-day)" add_name="Prominent Outsider Adventurer's Ability">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -754,7 +754,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20882" name="Fire Stamp" add_name="Wind Walk, Agility Blessed Body">
+	<etcitem id="20882" name="Fire Stamp" add_name="Wind Walk, Agility, Blessed Body">
 		<set name="freightable" value="true"/>
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>

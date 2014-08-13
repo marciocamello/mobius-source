@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="17304" name="Immortal Helmet" add_name="Heavy">
+	<armor id="17304" name="Immortal Helmet" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="117"/>
@@ -20,7 +20,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17305" name="Immortal Breastplate" add_name="Heavy">
+	<armor id="17305" name="Immortal Breastplate" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="313"/>
@@ -39,7 +39,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17306" name="Immortal Gaiters" add_name="Heavy">
+	<armor id="17306" name="Immortal Gaiters" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="195"/>
@@ -58,7 +58,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17307" name="Immortal Gauntlet" add_name="Heavy">
+	<armor id="17307" name="Immortal Gauntlets" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="78"/>
@@ -77,7 +77,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17308" name="Immortal Boots" add_name="Heavy">
+	<armor id="17308" name="Immortal Boots" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="78"/>
@@ -95,7 +95,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17310" name="Immortal Leather Helmet" add_name="Light">
+	<armor id="17310" name="Immortal Leather Helmet" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="117"/>
@@ -114,7 +114,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17311" name="Immortal Leather Armor" add_name="Light">
+	<armor id="17311" name="Immortal Leather Armor" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="313"/>
@@ -133,7 +133,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17312" name="Immortal Leather Legging" add_name="Light">
+	<armor id="17312" name="Immortal Leather Leggings" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="195"/>
@@ -150,7 +150,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17313" name="Immortal Leather Gloves" add_name="Light">
+	<armor id="17313" name="Immortal Leather Gloves" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="78"/>
@@ -169,7 +169,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17314" name="Immortal Leather Boots" add_name="Light">
+	<armor id="17314" name="Immortal Leather Boots" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="78"/>
@@ -352,7 +352,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17338" name="Twilight Helmet" add_name="Heavy">
+	<armor id="17338" name="Twilight Helmet" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="284"/>
@@ -371,7 +371,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17339" name="Twilight Breastplate" add_name="Heavy">
+	<armor id="17339" name="Twilight Breastplate" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="758"/>
@@ -390,7 +390,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17340" name="Twilight Gaiters" add_name="Heavy">
+	<armor id="17340" name="Twilight Gaiters" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="473"/>
@@ -409,7 +409,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17341" name="Twilight Gauntlet" add_name="Heavy">
+	<armor id="17341" name="Twilight Gauntlets" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="189"/>
@@ -428,7 +428,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17342" name="Twilight Boots" add_name="Heavy">
+	<armor id="17342" name="Twilight Boots" add_name="Heavy Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="189"/>
@@ -446,7 +446,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17344" name="Twilight Leather Helmet" add_name="Light">
+	<armor id="17344" name="Twilight Leather Helmet" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="284"/>
@@ -465,7 +465,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17345" name="Twilight Leather Armor" add_name="Light">
+	<armor id="17345" name="Twilight Leather Armor" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="758"/>
@@ -484,7 +484,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17346" name="Twilight Leather Legging" add_name="Light">
+	<armor id="17346" name="Twilight Leather Leggings" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="473"/>
@@ -503,7 +503,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17347" name="Twilight Leather Gloves" add_name="Light">
+	<armor id="17347" name="Twilight Leather Gloves" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="189"/>
@@ -522,7 +522,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17348" name="Twilight Leather Boots" add_name="Light">
+	<armor id="17348" name="Twilight Leather Boots" add_name="Light Armor">
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="189"/>
@@ -722,7 +722,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17359" name="T-shirt of Insolence ">
+	<armor id="17359" name="T-shirt of Insolence">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="122"/>
@@ -739,7 +739,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17360" name="Bracelet of Insolence ">
+	<armor id="17360" name="Bracelet of Insolence">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="171"/>
@@ -751,7 +751,7 @@
 		</equip>
 		<set name="ex_type" value="BRACELET"/>
 	</armor>
-	<armor id="17361" name="Necklace of Insolence ">
+	<armor id="17361" name="Necklace of Insolence">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="209"/>
@@ -883,7 +883,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17368" name="Ring of Insolence VIII">
+	<armor id="17368" name="Ring of Insolence VII">
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="83"/>
@@ -940,7 +940,7 @@
 			<enchant stat="mDef" order="0x40" value="0"/>
 		</for>
 	</armor>
-	<armor id="17380" name="Fairy Agathion Bracelet ">
+	<armor id="17380" name="Agathion - Fairy">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.agathion_magmeld_teleport"/>
 		<set name="type" value="NONE"/>
@@ -958,7 +958,7 @@
 			<skill id="3261" level="1"/>
 		</skills>
 	</armor>
-	<armor id="17396" name="Seraph Helmet" add_name="Heavy">
+	<armor id="17396" name="Seraph Helmet" add_name="Heavy Armor">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="613"/>
@@ -977,7 +977,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17397" name="Seraph Breastplate" add_name="Heavy">
+	<armor id="17397" name="Seraph Breastplate" add_name="Heavy Armor">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="1635"/>
@@ -996,7 +996,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17398" name="Seraph Gaiters" add_name="Heavy">
+	<armor id="17398" name="Seraph Gaiters" add_name="Heavy Armor">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="1022"/>
@@ -1015,7 +1015,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="17399" name="Seraph Gauntlet" add_name="Heavy">
+	<armor id="17399" name="Seraph Gauntlets" add_name="Heavy Armor">
 		<set name="crystal_type" value="R95"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="408"/>

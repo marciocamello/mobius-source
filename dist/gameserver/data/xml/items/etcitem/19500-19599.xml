@@ -127,7 +127,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.r95_soul_stone_piece_i05"/>
 	</etcitem>
-	<etcitem id="19514" name="Ancient Warsmith' Holder">
+	<etcitem id="19514" name="Corroded Ancient Warsmith' Holder">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -136,7 +136,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blacksmiths_frame_i02"/>
 	</etcitem>
-	<etcitem id="19515" name="Ancient Reorin's Mold">
+	<etcitem id="19515" name="Corroded Ancient Reorin's Mold">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -145,7 +145,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blacksmiths_frame_i02"/>
 	</etcitem>
-	<etcitem id="19516" name="Ancient Arcsmith' Anvil">
+	<etcitem id="19516" name="Corroded Ancient Arcsmith' Anvil">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -154,7 +154,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blacksmiths_frame_i02"/>
 	</etcitem>
-	<etcitem id="19517" name="Ancient Warsmith' Mold">
+	<etcitem id="19517" name="Corroded Ancient Warsmith' Mold">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -163,7 +163,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blacksmiths_frame_i02"/>
 	</etcitem>
-	<etcitem id="19518" name="Legendary Warsmith' Holder">
+	<etcitem id="19518" name="Corroded Legendary Warsmith' Holder">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -172,7 +172,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blacksmiths_frame_i03"/>
 	</etcitem>
-	<etcitem id="19519" name="Legendary Reorin's Mold">
+	<etcitem id="19519" name="Corroded Legendary Reorin's Mold">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -181,7 +181,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blacksmiths_frame_i03"/>
 	</etcitem>
-	<etcitem id="19520" name="Legendary Arcsmith' Anvil">
+	<etcitem id="19520" name="Corroded Legendary Arcsmith' Anvil">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -190,7 +190,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_blacksmiths_frame_i03"/>
 	</etcitem>
-	<etcitem id="19521" name="Legendary Warsmith' Mold">
+	<etcitem id="19521" name="Corroded Legendary Warsmith' Mold">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

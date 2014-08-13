@@ -28,7 +28,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18801" name="Blessed Apocalypse Fighter" add_name="Damage">
+	<weapon id="18801" name="Blessed Apocalypse Fighter" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_kirche_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -133,7 +133,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18805" name="Blessed Apocalypse Stormer" add_name="Damage">
+	<weapon id="18805" name="Blessed Apocalypse Stormer" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_grave_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -160,7 +160,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18806" name="Blessed Apocalypse Thrower" add_name="Damage">
+	<weapon id="18806" name="Blessed Apocalypse Thrower" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_spina_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -559,7 +559,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18821" name="Blessed Apocalypse Dual Sword" add_name="Haste">
+	<weapon id="18821" name="Blessed Apocalypse Dualsword" add_name="Haste">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -586,7 +586,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18822" name="Blessed Apocalypse Dual Sword" add_name="Damage">
+	<weapon id="18822" name="Blessed Apocalypse Dualsword" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -613,7 +613,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18823" name="Blessed Apocalypse Dual Sword" add_name="Health">
+	<weapon id="18823" name="Blessed Apocalypse Dualsword" add_name="Health">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -640,7 +640,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18824" name="Blessed Apocalypse Dual Dagger" add_name="Damage">
+	<weapon id="18824" name="Blessed Apocalypse Dual Dagger" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -773,7 +773,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18829" name="Blessed Apocalypse Dual Blunt Weapon" add_name="Damage">
+	<weapon id="18829" name="Blessed Apocalypse Dual Blunt Weapon" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -855,7 +855,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18832" name="Specter Shaper" add_name="Focus ">
+	<weapon id="18832" name="Specter Shaper" add_name="Focus">
 		<set name="icon" value="icon.weapon_ignicion_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -987,7 +987,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18837" name="Specter Slasher" add_name="Damage">
+	<weapon id="18837" name="Specter Slasher" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_skia_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="10"/>
@@ -1143,7 +1143,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18843" name="Specter Fighter" add_name="Damage">
+	<weapon id="18843" name="Specter Fighter" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_deodos_i01"/>
 		<set name="weight" value="1550"/>
 		<set name="rnd_dam" value="5"/>
@@ -1244,7 +1244,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18847" name="Specter Stormer" add_name="Damage">
+	<weapon id="18847" name="Specter Stormer" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_transgredi_i01"/>
 		<set name="weight" value="2010"/>
 		<set name="rnd_dam" value="10"/>
@@ -1270,7 +1270,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18848" name="Specter Thrower" add_name="Damage">
+	<weapon id="18848" name="Specter Thrower" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_solenas_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -1654,7 +1654,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18863" name="Specter Dual Sword" add_name="Haste">
+	<weapon id="18863" name="Specter Dualsword" add_name="Haste">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1680,7 +1680,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18864" name="Specter Dual Sword" add_name="Damage">
+	<weapon id="18864" name="Specter Dualsword" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1706,7 +1706,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18865" name="Specter Dual Sword" add_name="Health">
+	<weapon id="18865" name="Specter Dualsword" add_name="Health">
 		<set name="icon" value="icon.weapon_r_dualsword_i01"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -1732,7 +1732,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18866" name="Specter Dual Dagger" add_name="Damage">
+	<weapon id="18866" name="Specter Dual Dagger" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualdagger_i01"/>
 		<set name="weight" value="2050"/>
 		<set name="rnd_dam" value="10"/>
@@ -1860,7 +1860,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18871" name="Specter Dual Blunt Weapon" add_name="Damage">
+	<weapon id="18871" name="Specter Dual Blunt Weapon" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_r_dualblunt_i01"/>
 		<set name="weight" value="1740"/>
 		<set name="rnd_dam" value="20"/>
@@ -1945,7 +1945,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18874" name="Bound Specter Shaper" add_name="Focus ">
+	<weapon id="18874" name="Bound Specter Shaper" add_name="Focus">
 		<set name="icon" value="icon.weapon_ignicion_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -2087,7 +2087,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18879" name="Bound Specter Slasher" add_name="Damage">
+	<weapon id="18879" name="Bound Specter Slasher" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_skia_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -2255,7 +2255,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18885" name="Bound Specter Fighter" add_name="Damage">
+	<weapon id="18885" name="Bound Specter Fighter" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_deodos_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -2364,7 +2364,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18889" name="Bound Specter Stormer" add_name="Damage">
+	<weapon id="18889" name="Bound Specter Stormer" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_transgredi_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -2392,7 +2392,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18890" name="Bound Specter Thrower" add_name="Damage">
+	<weapon id="18890" name="Bound Specter Thrower" add_name="Damage Up">
 		<set name="icon" value="icon.weapon_solenas_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>

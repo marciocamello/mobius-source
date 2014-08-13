@@ -56,7 +56,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="21986" name="Agathion Seal Bracelet - Antharas">
+	<armor id="21986" name="Agathion - Antharas">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -91,7 +91,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="21988" name="Shiny Lit Platform Summon Bracelet">
+	<armor id="21988" name="Shiny Platform Summon Bracelet">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.Icon.br_shiny_platform_i00"/>
 		<set name="price" value="0"/>

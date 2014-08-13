@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="1500" levels="1" name="Improved Magic">
+	<skill id="1500" levels="1" name="Improve Magic">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1500"/>
 		<set name="reuseDelay" val="2000"/>
@@ -21,7 +21,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1501" levels="1" name="Improved Condition">
+	<skill id="1501" levels="1" name="Improve Condition">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1501"/>
 		<set name="reuseDelay" val="2000"/>
@@ -42,7 +42,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1502" levels="1" name="Improved Critical Attack">
+	<skill id="1502" levels="1" name="Improve Critical Attack">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1502"/>
 		<set name="reuseDelay" val="2000"/>
@@ -63,7 +63,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1503" levels="1" name="Improved Shield Defense">
+	<skill id="1503" levels="1" name="Improve Shield Defense">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1503"/>
 		<set name="reuseDelay" val="2000"/>
@@ -84,7 +84,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1504" levels="1" name="Improved Movement">
+	<skill id="1504" levels="1" name="Improve Movement">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1504"/>
 		<set name="reuseDelay" val="2000"/>
@@ -154,7 +154,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1507" levels="1" name="Lord of Vampire">
+	<skill id="1507" levels="1" name="Lord of Vampires">
 		<table name="#Tab-absorbDam">80</table>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1507"/>
@@ -502,7 +502,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1518" levels="1" name="Chant of Critical Attack">
+	<skill id="1518" levels="1" name="Chant of Critical">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1502"/>
 		<set name="reuseDelay" val="2000"/>
@@ -623,7 +623,7 @@
 			</mul>
 		</for>
 	</skill>
-	<skill id="1524" levels="42" name="Surrender to the Divine">
+	<skill id="1524" levels="42" name="Surrender to Holy">
 		<table name="#effectPoint">243 285 331 379 418 457 495 532 549 566 582 597 611 624 635 646 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655 655</table>
 		<table name="#activateRate">80</table>
 		<table name="#mpConsume2">31 31 32 33 34 35 35 36 37 38 39 39 40 41 42 43 44 44 45 46 47 48 48 49 50 51 51 52 53 53 54 55 55 56 56 57 58 58 58 59 59 60</table>
@@ -1191,7 +1191,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1548" levels="3" name="Resist Earth">
+	<skill id="1548" levels="3" name="Earth Resistance">
 		<table name="#res">10 15 20</table>
 		<table name="#effectPoint">285 379 418</table>
 		<table name="#abnormal_lv">1 2 3</table>
@@ -1569,7 +1569,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1564" levels="1" name="Piercing Attack">
+	<skill id="1564" levels="1" name="Penetrating Attack">
 		<set name="icon" val="icon.skill1564"/>
 		<set name="magicLevel" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1799,7 +1799,7 @@
 			<add order="0x40" stat="maxHp" val="#Cp"/>
 		</for>
 	</skill>
-	<skill id="1581" levels="3" name="Sub - MP Consumption/Re-use Time Decrease">
+	<skill id="1581" levels="3" name="Sub - MP Consumption/Cooldown Decrease">
 		<table name="#mReuse">0.99 0.98 0.97</table>
 		<table name="#magicLevel">70 75 80</table>
 		<set name="icon" val="icon.skill0141"/>
@@ -2062,7 +2062,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1597" levels="1" name="Each Class Weight Increase">
+	<skill id="1597" levels="1" name="Awakened Class Weight Increase">
 		<set name="icon" val="icon.skill0150"/>
 		<set name="class_level" val="5"/>
 		<set name="operateType" val="OP_PASSIVE"/>

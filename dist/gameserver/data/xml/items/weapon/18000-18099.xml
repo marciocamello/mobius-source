@@ -279,7 +279,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18012" name="Blessed Apocalypse Dual Sword">
+	<weapon id="18012" name="Blessed Apocalypse Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -354,7 +354,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18020" name="Blessed Twilight Shield" add_name="Heavy">
+	<weapon id="18020" name="Blessed Twilight Shield" add_name="Heavy Armor">
 		<set name="icon" value="icon.kratere_i00"/>
 		<set name="weight" value="1130"/>
 		<set name="price" value="20000000"/>
@@ -653,7 +653,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18046" name="Blessed Specter Dual Sword">
+	<weapon id="18046" name="Blessed Specter Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -728,7 +728,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18054" name="Blessed Seraph Shield" add_name="Heavy">
+	<weapon id="18054" name="Blessed Seraph Shield" add_name="Heavy Armor">
 		<set name="icon" value="icon.beranka_i00"/>
 		<set name="weight" value="1130"/>
 		<set name="price" value="20000000"/>
@@ -748,7 +748,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<weapon id="18069" name="Blessed Seraph Shaper">
+	<weapon id="18069" name="Blessed Amaranthine Shaper">
 		<set name="icon" value="icon.weapon_stanpid_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="5"/>
@@ -1039,7 +1039,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18080" name="Blessed Amaranthine Dual Sword">
+	<weapon id="18080" name="Blessed Amaranthine Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="price" value="50000000"/>
@@ -1117,7 +1117,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="18088" name="Blessed Eternal Shield" add_name="Heavy">
+	<weapon id="18088" name="Blessed Eternal Shield" add_name="Heavy Armor">
 		<set name="icon" value="icon.weapon_akra_i00"/>
 		<set name="weight" value="1130"/>
 		<set name="price" value="30000000"/>

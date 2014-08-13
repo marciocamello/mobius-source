@@ -111,7 +111,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="16168" name="Vesper Breastplate {PvP} ">
+	<armor id="16168" name="Elegia Breastplate {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -134,7 +134,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16169" name="Elegia Leather Breastplate {PvP} ">
+	<armor id="16169" name="Elegia Leather Breastplate {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -157,7 +157,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16170" name="Elegia Tunic {PvP} ">
+	<armor id="16170" name="Elegia Tunic {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -181,7 +181,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16171" name="Vesper Breastplate {PvP} ">
+	<armor id="16171" name="Vorpal Breastplate {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -204,7 +204,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16172" name="Vesper Leather Breastplate {PvP} ">
+	<armor id="16172" name="Vorpal Leather Breastplate {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -227,7 +227,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16173" name="Vesper Tunic {PvP} ">
+	<armor id="16173" name="Vorpal Tunic {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -251,7 +251,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16174" name="Moirai Breastplate {PvP} ">
+	<armor id="16174" name="Moirai Breastplate {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -274,7 +274,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16175" name="Moirai Leather Breastplate {PvP} ">
+	<armor id="16175" name="Moirai Leather Breastplate {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>
@@ -297,7 +297,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<armor id="16176" name="Moirai Tunic {PvP} ">
+	<armor id="16176" name="Moirai Tunic {PvP}">
 		<set name="attributable" value="false"/>
 		<set name="augmentable" value="false"/>
 		<set name="crystal_count" value="0"/>

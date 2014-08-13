@@ -259,7 +259,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33886" name="Requiem Dual Sword" add_name="Event">
+	<weapon id="33886" name="Requiem Dualsword" add_name="Event">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
 		<set name="weight" value="1520"/>
 		<set name="rnd_dam" value="10"/>
@@ -327,7 +327,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="33894" name="Immortal Shield" add_name="Heavy / Event">
+	<weapon id="33894" name="Immortal Shield" add_name="Heavy (Event)">
 		<set name="icon" value="icon.weapon_sacon_i00"/>
 		<set name="weight" value="1130"/>
 		<equip>

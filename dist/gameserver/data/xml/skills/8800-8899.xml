@@ -786,7 +786,7 @@
 			<add order="0x40" stat="talismansLimit" val="#values"/>
 		</for>
 	</skill>
-	<skill id="8864" levels="6" name="Talisman - Infinity">
+	<skill id="8864" levels="6" name="Talisman - Longing">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>

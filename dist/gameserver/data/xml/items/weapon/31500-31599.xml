@@ -319,7 +319,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31514" name="Bound Sword of Limit">
+	<weapon id="31514" name="Bound Ultimate Sword">
 		<set name="icon" value="icon.weapon_sword_of_limit_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -344,7 +344,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31515" name="Bound Sword of Limit" add_name="Guidance">
+	<weapon id="31515" name="Bound Ultimate Sword" add_name="Guidance">
 		<set name="icon" value="icon.weapon_sword_of_limit_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -372,7 +372,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31516" name="Bound Sword of Limit" add_name="Critical Drain">
+	<weapon id="31516" name="Bound Ultimate Sword" add_name="Critical Drain">
 		<set name="icon" value="icon.weapon_sword_of_limit_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -397,7 +397,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31517" name="Bound Sword of Limit" add_name="Health">
+	<weapon id="31517" name="Bound Ultimate Sword" add_name="Health">
 		<set name="icon" value="icon.weapon_sword_of_limit_i01"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -706,7 +706,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31530" name="Bound Great Axe" add_name="Light">
+	<weapon id="31530" name="Bound Great Axe" add_name="Light Armor">
 		<set name="icon" value="icon.weapon_great_axe_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1395,7 +1395,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31559" name="Bound Reinforced Long Bow">
+	<weapon id="31559" name="Bound Reinforced Longbow">
 		<set name="icon" value="icon.weapon_strengthening_long_bow_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1501,7 +1501,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31575" name="Bound Guardian Sword">
+	<weapon id="31575" name="Bound Guardian's Sword">
 		<set name="icon" value="icon.weapon_guardians_sword_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1526,7 +1526,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31576" name="Bound Guardian Sword" add_name="Critical Drain">
+	<weapon id="31576" name="Bound Guardian's Sword" add_name="Critical Drain">
 		<set name="icon" value="icon.weapon_guardians_sword_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1551,7 +1551,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31577" name="Bound Guardian Sword" add_name="Health">
+	<weapon id="31577" name="Bound Guardian's Sword" add_name="Health">
 		<set name="icon" value="icon.weapon_guardians_sword_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1579,7 +1579,7 @@
 		</for>
 		<set name="crystallizable" value="true"/>
 	</weapon>
-	<weapon id="31578" name="Bound Guardian Sword" add_name="Critical Bleed">
+	<weapon id="31578" name="Bound Guardian's Sword" add_name="Critical Bleed">
 		<set name="icon" value="icon.weapon_guardians_sword_i00"/>
 		<set name="dropable" value="false"/>
 		<set name="tradeable" value="false"/>
