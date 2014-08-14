@@ -13,11 +13,11 @@
 package lineage2.gameserver.utils;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.Warehouse;
 import lineage2.gameserver.model.items.Warehouse.WarehouseType;
 import lineage2.gameserver.model.pledge.Clan;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.WareHouseDepositList;
 import lineage2.gameserver.network.serverpackets.WareHouseWithdrawList;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
@@ -99,7 +99,7 @@ public final class WarehouseFunctions
 		
 		if (!(player.isClanLeader() || ((Config.ALT_ALLOW_OTHERS_WITHDRAW_FROM_CLAN_WAREHOUSE || player.getVarB("canWhWithdraw")) && ((player.getClanPrivileges() & Clan.CP_CL_WAREHOUSE_SEARCH) == Clan.CP_CL_WAREHOUSE_SEARCH))))
 		{
-			player.sendPacket(Msg.ITEMS_LEFT_AT_THE_CLAN_HALL_WAREHOUSE_CAN_ONLY_BE_RETRIEVED_BY_THE_CLAN_LEADER_DO_YOU_WANT_TO_CONTINUE);
+			player.sendPacket(new SystemMessage(SystemMessage.ITEMS_LEFT_AT_THE_CLAN_HALL_WAREHOUSE_CAN_ONLY_BE_RETRIEVED_BY_THE_CLAN_LEADER_DO_YOU_WANT_TO_CONTINUE));
 		}
 		
 		player.setUsingWarehouseType(WarehouseType.CLAN);
@@ -152,7 +152,7 @@ public final class WarehouseFunctions
 			case CASTLE:
 				if ((player.getClan() == null) || (player.getClan().getLevel() == 0))
 				{
-					player.sendPacket(Msg.ONLY_CLANS_OF_CLAN_LEVEL_1_OR_HIGHER_CAN_USE_A_CLAN_WAREHOUSE);
+					player.sendPacket(new SystemMessage(SystemMessage.ONLY_CLANS_OF_CLAN_LEVEL_1_OR_HIGHER_CAN_USE_A_CLAN_WAREHOUSE));
 					return false;
 				}
 				
@@ -168,7 +168,7 @@ public final class WarehouseFunctions
 				
 				if (!canWithdrawCWH)
 				{
-					player.sendPacket(Msg.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_THE_CLAN_WAREHOUSE);
+					player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_THE_CLAN_WAREHOUSE));
 					return false;
 				}
 				
@@ -181,7 +181,7 @@ public final class WarehouseFunctions
 		
 		if (warehouse.getSize() == 0)
 		{
-			player.sendPacket(type == WarehouseType.FREIGHT ? SystemMsg.NO_PACKAGES_HAVE_ARRIVED : Msg.YOU_HAVE_NOT_DEPOSITED_ANY_ITEMS_IN_YOUR_WAREHOUSE);
+			player.sendPacket(type == WarehouseType.FREIGHT ? SystemMsg.NO_PACKAGES_HAVE_ARRIVED : new SystemMessage(SystemMessage.YOU_HAVE_NOT_DEPOSITED_ANY_ITEMS_IN_YOUR_WAREHOUSE));
 			return false;
 		}
 		
@@ -210,7 +210,7 @@ public final class WarehouseFunctions
 			case CASTLE:
 				if ((player.getClan() == null) || (player.getClan().getLevel() == 0))
 				{
-					player.sendPacket(Msg.ONLY_CLANS_OF_CLAN_LEVEL_1_OR_HIGHER_CAN_USE_A_CLAN_WAREHOUSE);
+					player.sendPacket(new SystemMessage(SystemMessage.ONLY_CLANS_OF_CLAN_LEVEL_1_OR_HIGHER_CAN_USE_A_CLAN_WAREHOUSE));
 					return false;
 				}
 				
@@ -226,7 +226,7 @@ public final class WarehouseFunctions
 				
 				if (!canWithdrawCWH)
 				{
-					player.sendPacket(Msg.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_THE_CLAN_WAREHOUSE);
+					player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_THE_RIGHT_TO_USE_THE_CLAN_WAREHOUSE));
 					return false;
 				}
 				

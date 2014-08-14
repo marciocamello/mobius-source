@@ -13,9 +13,9 @@
 package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.cache.CrestCache;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Clan;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 
 public class RequestSetPledgeCrestLarge extends L2GameClientPacket
 {
@@ -87,13 +87,13 @@ public class RequestSetPledgeCrestLarge extends L2GameClientPacket
 			{
 				if ((clan.getCastle() == 0) && (clan.getHasHideout() == 0))
 				{
-					activeChar.sendPacket(Msg.THE_CLANS_EMBLEM_WAS_SUCCESSFULLY_REGISTERED__ONLY_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_A_CASTLE_CAN_GET_THEIR_EMBLEM_DISPLAYED_ON_CLAN_RELATED_ITEMS);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.THE_CLANS_EMBLEM_WAS_SUCCESSFULLY_REGISTERED__ONLY_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_A_CASTLE_CAN_GET_THEIR_EMBLEM_DISPLAYED_ON_CLAN_RELATED_ITEMS));
 					return;
 				}
 				
 				int crestId = 0;
 				crestId = CrestCache.getInstance().savePledgeCrestLarge(clan.getClanId(), CrestCache.getInstance().crestLargeTmp);
-				activeChar.sendPacket(Msg.THE_CLANS_EMBLEM_WAS_SUCCESSFULLY_REGISTERED__ONLY_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_A_CASTLE_CAN_GET_THEIR_EMBLEM_DISPLAYED_ON_CLAN_RELATED_ITEMS);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.THE_CLANS_EMBLEM_WAS_SUCCESSFULLY_REGISTERED__ONLY_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_A_CASTLE_CAN_GET_THEIR_EMBLEM_DISPLAYED_ON_CLAN_RELATED_ITEMS));
 				clan.setCrestLargeId(crestId);
 				clan.broadcastClanStatus(false, true, false);
 			}
@@ -118,7 +118,7 @@ public class RequestSetPledgeCrestLarge extends L2GameClientPacket
 			{
 				if ((clan.getCastle() == 0) && (clan.getHasHideout() == 0))
 				{
-					activeChar.sendPacket(Msg.THE_CLANS_EMBLEM_WAS_SUCCESSFULLY_REGISTERED__ONLY_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_A_CASTLE_CAN_GET_THEIR_EMBLEM_DISPLAYED_ON_CLAN_RELATED_ITEMS);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.THE_CLANS_EMBLEM_WAS_SUCCESSFULLY_REGISTERED__ONLY_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_A_CASTLE_CAN_GET_THEIR_EMBLEM_DISPLAYED_ON_CLAN_RELATED_ITEMS));
 					return;
 				}
 				

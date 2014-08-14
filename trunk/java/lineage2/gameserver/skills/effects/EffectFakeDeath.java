@@ -13,7 +13,6 @@
 package lineage2.gameserver.skills.effects;
 
 import lineage2.gameserver.ai.CtrlEvent;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ChangeWaitType;
@@ -84,7 +83,7 @@ public final class EffectFakeDeath extends Effect
 		{
 			if (getSkill().isToggle())
 			{
-				getEffected().sendPacket(Msg.NOT_ENOUGH_MP);
+				getEffected().sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP));
 				getEffected().sendPacket(new SystemMessage(SystemMessage.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED).addSkillName(getSkill().getId(), getSkill().getDisplayLevel()));
 				return false;
 			}

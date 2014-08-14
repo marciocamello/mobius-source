@@ -12,7 +12,6 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.base.EnchantSkillLearn;
@@ -108,7 +107,7 @@ public final class RequestExEnchantSkillUntrain extends L2GameClientPacket
 		{
 			if (Functions.getItemCount(activeChar, SkillTreeTable.UNTRAIN_ENCHANT_BOOK) == 0)
 			{
-				activeChar.sendPacket(Msg.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
 				return;
 			}
 			
@@ -118,7 +117,7 @@ public final class RequestExEnchantSkillUntrain extends L2GameClientPacket
 		{
 			if (Functions.getItemCount(activeChar, SkillTreeTable.UNTRAIN_NEW_ENCHANT_BOOK) == 0)
 			{
-				activeChar.sendPacket(Msg.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
 				return;
 			}
 			

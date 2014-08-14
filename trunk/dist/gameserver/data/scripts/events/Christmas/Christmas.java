@@ -18,7 +18,6 @@ import java.util.List;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.listener.actor.OnDeathListener;
 import lineage2.gameserver.listener.actor.player.OnPlayerEnterListener;
 import lineage2.gameserver.model.Creature;
@@ -26,6 +25,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SimpleSpawner;
 import lineage2.gameserver.model.actor.listener.CharListenerList;
 import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 
@@ -393,7 +393,7 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 				return;
 			}
 			
-			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 		}
 		
 		if (var[0].equalsIgnoreCase("1"))
@@ -405,7 +405,7 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 				return;
 			}
 			
-			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 		}
 		
 		if (var[0].equalsIgnoreCase("2"))
@@ -417,7 +417,7 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 				return;
 			}
 			
-			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 		}
 		
 		if (var[0].equalsIgnoreCase("3"))
@@ -429,7 +429,7 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 				return;
 			}
 			
-			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 		}
 		
 		if (var[0].equalsIgnoreCase("4"))
@@ -441,7 +441,7 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 				return;
 			}
 			
-			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 		}
 	}
 	

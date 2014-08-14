@@ -13,9 +13,9 @@
 package lineage2.gameserver.skills.effects;
 
 import lineage2.gameserver.ai.CtrlIntention;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
 
@@ -110,7 +110,7 @@ public class EffectDamOverTime extends Effect
 		{
 			if (!getSkill().isOffensive())
 			{
-				_effected.sendPacket(Msg.NOT_ENOUGH_HP);
+				_effected.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_HP));
 			}
 			
 			return false;

@@ -22,7 +22,6 @@ import java.util.StringTokenizer;
 
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.handler.bbs.CommunityBoardManager;
@@ -30,6 +29,7 @@ import lineage2.gameserver.handler.bbs.ICommunityBoardHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExMailArrived;
 import lineage2.gameserver.network.serverpackets.ShowBoard;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 
@@ -422,7 +422,7 @@ public final class PrivateMail extends Functions implements ScriptFile, ICommuni
 			
 			if (rset.next())
 			{
-				player.sendPacket(Msg.YOUVE_GOT_MAIL);
+				player.sendPacket(new SystemMessage(SystemMessage.YOUVE_GOT_MAIL));
 				player.sendPacket(ExMailArrived.STATIC);
 			}
 		}

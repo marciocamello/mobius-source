@@ -12,9 +12,9 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.HennaHolder;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.Henna;
 
@@ -52,7 +52,7 @@ public class RequestHennaEquip extends L2GameClientPacket
 		
 		if ((temp == null) || !temp.isForThisClass(player))
 		{
-			player.sendPacket(Msg.THE_SYMBOL_CANNOT_BE_DRAWN);
+			player.sendPacket(new SystemMessage(SystemMessage.THE_SYMBOL_CANNOT_BE_DRAWN));
 			return;
 		}
 		

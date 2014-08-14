@@ -15,7 +15,6 @@ package lineage2.gameserver.handler.admincommands.impl;
 import java.util.Collection;
 import java.util.List;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.Creature;
@@ -29,6 +28,7 @@ import lineage2.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SkillCoolTime;
 import lineage2.gameserver.network.serverpackets.SkillList;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.stats.Calculator;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.funcs.Func;
@@ -166,7 +166,7 @@ public class AdminSkill implements IAdminCommandHandler
 		
 		if (!target_obj.isCreature())
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		
@@ -224,7 +224,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		
@@ -286,7 +286,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		
@@ -333,7 +333,7 @@ public class AdminSkill implements IAdminCommandHandler
 		
 		if (!(target.isPlayer() && ((activeChar == target) || activeChar.getPlayerAccess().CanEditCharAll)))
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		
@@ -351,7 +351,7 @@ public class AdminSkill implements IAdminCommandHandler
 			player.sendPacket(new SkillList(player), new ExAcquirableSkillListByClass(player));
 		}
 		
-		activeChar.sendMessage("You removed all skills from target: " + player.getName() + ".");
+		activeChar.sendMessage("You removed all skills from " + player.getName() + ".");
 		showSkillsPage(activeChar);
 	}
 	
@@ -370,7 +370,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		
@@ -412,7 +412,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		
@@ -459,7 +459,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		
@@ -503,7 +503,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		
@@ -532,7 +532,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		
@@ -574,7 +574,7 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		

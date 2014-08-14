@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener;
 import lineage2.gameserver.model.Creature;
@@ -24,6 +23,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SimpleSpawner;
 import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
@@ -172,7 +172,7 @@ public final class TeleToParnassus extends Functions implements ScriptFile
 		
 		if (player.getAdena() < Config.SERVICES_PARNASSUS_PRICE)
 		{
-			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			return;
 		}
 		

@@ -14,7 +14,6 @@ package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
@@ -121,7 +120,7 @@ public class Recall extends Skill
 			
 			if (p.isInOlympiadMode())
 			{
-				activeChar.sendPacket(Msg.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
 				return false;
 			}
 		}
@@ -165,13 +164,13 @@ public class Recall extends Skill
 				
 				if (pcTarget.getActiveWeaponFlagAttachment() != null)
 				{
-					activeChar.sendPacket(Msg.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD));
 					continue;
 				}
 				
 				if (pcTarget.isInOlympiadMode())
 				{
-					activeChar.sendPacket(Msg.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_CURRENTLY_PARTICIPATING_IN_THE_GRAND_OLYMPIAD);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_CURRENTLY_PARTICIPATING_IN_THE_GRAND_OLYMPIAD));
 					return;
 				}
 				

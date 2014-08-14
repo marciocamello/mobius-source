@@ -16,13 +16,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lineage2.commons.math.SafeMath;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.instancemanager.WorldStatisticsManager;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.TradeItem;
 import lineage2.gameserver.model.worldstatistics.CategoryType;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.TradeHelper;
@@ -95,7 +95,7 @@ public class RequestPrivateStoreBuy extends L2GameClientPacket
 		
 		if (buyer.isInStoreMode())
 		{
-			buyer.sendPacket(Msg.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+			buyer.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
@@ -107,13 +107,13 @@ public class RequestPrivateStoreBuy extends L2GameClientPacket
 		
 		if (buyer.isFishing())
 		{
-			buyer.sendPacket(Msg.YOU_CANNOT_DO_ANYTHING_ELSE_WHILE_FISHING);
+			buyer.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DO_ANYTHING_ELSE_WHILE_FISHING));
 			return;
 		}
 		
 		if (!buyer.getPlayerAccess().UseTrade)
 		{
-			buyer.sendPacket(Msg.THIS_ACCOUNT_CANOT_USE_PRIVATE_STORES);
+			buyer.sendPacket(new SystemMessage(SystemMessage.THIS_ACCOUNT_CANOT_USE_PRIVATE_STORES));
 			return;
 		}
 		
@@ -121,7 +121,7 @@ public class RequestPrivateStoreBuy extends L2GameClientPacket
 		
 		if ((seller == null) || ((seller.getPrivateStoreType() != Player.STORE_PRIVATE_SELL) && (seller.getPrivateStoreType() != Player.STORE_PRIVATE_SELL_PACKAGE)) || !seller.isInRangeZ(buyer, Creature.INTERACTION_DISTANCE))
 		{
-			buyer.sendPacket(Msg.THE_ATTEMPT_TO_TRADE_HAS_FAILED);
+			buyer.sendPacket(new SystemMessage(SystemMessage.THE_ATTEMPT_TO_TRADE_HAS_FAILED));
 			buyer.sendActionFailed();
 			return;
 		}
@@ -130,7 +130,7 @@ public class RequestPrivateStoreBuy extends L2GameClientPacket
 		
 		if (sellList.isEmpty())
 		{
-			buyer.sendPacket(Msg.THE_ATTEMPT_TO_TRADE_HAS_FAILED);
+			buyer.sendPacket(new SystemMessage(SystemMessage.THE_ATTEMPT_TO_TRADE_HAS_FAILED));
 			buyer.sendActionFailed();
 			return;
 		}
@@ -194,7 +194,7 @@ public class RequestPrivateStoreBuy extends L2GameClientPacket
 		catch (ArithmeticException ae)
 		{
 			buyList.clear();
-			sendPacket(Msg.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
+			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 			return;
 		}
 		finally
@@ -203,28 +203,28 @@ public class RequestPrivateStoreBuy extends L2GameClientPacket
 			{
 				if ((buyList.size() != _count) || ((seller.getPrivateStoreType() == Player.STORE_PRIVATE_SELL_PACKAGE) && (buyList.size() != sellList.size())))
 				{
-					buyer.sendPacket(Msg.THE_ATTEMPT_TO_TRADE_HAS_FAILED);
+					buyer.sendPacket(new SystemMessage(SystemMessage.THE_ATTEMPT_TO_TRADE_HAS_FAILED));
 					buyer.sendActionFailed();
 					return;
 				}
 				
 				if (!buyer.getInventory().validateWeight(weight))
 				{
-					buyer.sendPacket(Msg.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
+					buyer.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
 					buyer.sendActionFailed();
 					return;
 				}
 				
 				if (!buyer.getInventory().validateCapacity(slots))
 				{
-					buyer.sendPacket(Msg.YOUR_INVENTORY_IS_FULL);
+					buyer.sendPacket(new SystemMessage(SystemMessage.YOUR_INVENTORY_IS_FULL));
 					buyer.sendActionFailed();
 					return;
 				}
 				
 				if (!buyer.reduceAdena(totalCost))
 				{
-					buyer.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+					buyer.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 					buyer.sendActionFailed();
 					return;
 				}

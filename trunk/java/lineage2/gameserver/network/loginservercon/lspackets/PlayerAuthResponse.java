@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.loginservercon.lspackets;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.dao.AccountBonusDAO;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.actor.instances.player.Bonus;
@@ -26,6 +25,7 @@ import lineage2.gameserver.network.serverpackets.CharacterSelectionInfo;
 import lineage2.gameserver.network.serverpackets.ExLoginVitalityEffectInfo;
 import lineage2.gameserver.network.serverpackets.LoginFail;
 import lineage2.gameserver.network.serverpackets.ServerClose;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.utils.SecondaryPasswordAuth;
 
 /**
@@ -119,7 +119,7 @@ public class PlayerAuthResponse extends ReceivablePacket
 				
 				if (activeChar != null)
 				{
-					activeChar.sendPacket(Msg.ANOTHER_PERSON_HAS_LOGGED_IN_WITH_THE_SAME_ACCOUNT);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.ANOTHER_PERSON_HAS_LOGGED_IN_WITH_THE_SAME_ACCOUNT));
 					activeChar.logout();
 				}
 				else

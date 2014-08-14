@@ -21,7 +21,6 @@ import lineage2.commons.lang.reference.HardReferences;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.instancemanager.ServerVariables;
@@ -38,6 +37,7 @@ import lineage2.gameserver.model.mail.Mail;
 import lineage2.gameserver.network.serverpackets.ExNoticePostArrived;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.NpcSay;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
@@ -524,7 +524,7 @@ public class Functions
 		
 		if (player.getSummonList().getPet() != null)
 		{
-			player.sendPacket(Msg.YOU_ALREADY_HAVE_A_PET);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_HAVE_A_PET));
 			return false;
 		}
 		
@@ -774,7 +774,7 @@ public class Functions
 		mail.setExpireTime((720 * 3600) + (int) (System.currentTimeMillis() / 1000L));
 		mail.save();
 		receiver.sendPacket(ExNoticePostArrived.STATIC_TRUE);
-		receiver.sendPacket(Msg.THE_MAIL_HAS_ARRIVED);
+		receiver.sendPacket(new SystemMessage(SystemMessage.THE_MAIL_HAS_ARRIVED));
 	}
 	
 	/**

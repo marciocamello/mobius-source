@@ -12,7 +12,6 @@
  */
 package lineage2.gameserver.skills.effects;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
@@ -117,7 +116,7 @@ public class EffectRelax extends Effect
 		
 		if (player.isCurrentHpFull() && getSkill().isToggle())
 		{
-			getEffected().sendPacket(Msg.HP_WAS_FULLY_RECOVERED_AND_SKILL_WAS_REMOVED);
+			getEffected().sendPacket(new SystemMessage(SystemMessage.HP_WAS_FULLY_RECOVERED_AND_SKILL_WAS_REMOVED));
 			return false;
 		}
 		
@@ -127,7 +126,7 @@ public class EffectRelax extends Effect
 		{
 			if (getSkill().isToggle())
 			{
-				player.sendPacket(Msg.NOT_ENOUGH_MP, new SystemMessage(SystemMessage.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED).addSkillName(getSkill().getId(), getSkill().getDisplayLevel()));
+				player.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP), new SystemMessage(SystemMessage.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED).addSkillName(getSkill().getId(), getSkill().getDisplayLevel()));
 				return false;
 			}
 		}

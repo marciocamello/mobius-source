@@ -23,7 +23,6 @@ import java.util.concurrent.ScheduledFuture;
 
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.model.ClonePlayer;
 import lineage2.gameserver.model.Creature;
@@ -34,6 +33,7 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Skill.NextAction;
 import lineage2.gameserver.model.Skill.SkillType;
 import lineage2.gameserver.model.Summon;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Location;
 
@@ -878,7 +878,7 @@ public class PlayableAI extends CharacterAI
 		}
 		else
 		{
-			actor.sendPacket(Msg.YOUR_TARGET_IS_OUT_OF_RANGE);
+			actor.sendPacket(new SystemMessage(SystemMessage.YOUR_TARGET_IS_OUT_OF_RANGE));
 			setIntention(AI_INTENTION_ACTIVE);
 			actor.sendActionFailed();
 		}

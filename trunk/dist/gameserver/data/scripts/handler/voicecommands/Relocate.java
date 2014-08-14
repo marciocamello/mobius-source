@@ -14,7 +14,6 @@ package handler.voicecommands;
 
 import java.util.List;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler;
 import lineage2.gameserver.handler.voicecommands.VoicedCommandHandler;
 import lineage2.gameserver.model.Player;
@@ -45,7 +44,7 @@ public final class Relocate implements IVoicedCommandHandler, ScriptFile
 		{
 			if (!activeChar.isClanLeader())
 			{
-				activeChar.sendPacket(Msg.ONLY_THE_CLAN_LEADER_IS_ENABLED);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.ONLY_THE_CLAN_LEADER_IS_ENABLED));
 				return false;
 			}
 			

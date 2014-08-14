@@ -12,12 +12,12 @@
  */
 package handler.items;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Mobius
@@ -63,7 +63,7 @@ public final class BeastShot extends ScriptItemHandler
 		{
 			if (!isAutoSoulShot)
 			{
-				player.sendPacket(Msg.PETS_AND_SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME);
+				player.sendPacket(new SystemMessage(SystemMessage.PETS_AND_SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME));
 			}
 			
 			return false;
@@ -83,7 +83,7 @@ public final class BeastShot extends ScriptItemHandler
 		{
 			if (!isAutoSoulShot)
 			{
-				player.sendPacket(Msg.WHEN_PET_OR_SERVITOR_IS_DEAD_SOULSHOTS_OR_SPIRITSHOTS_FOR_PET_OR_SERVITOR_ARE_NOT_AVAILABLE);
+				player.sendPacket(new SystemMessage(SystemMessage.WHEN_PET_OR_SERVITOR_IS_DEAD_SOULSHOTS_OR_SPIRITSHOTS_FOR_PET_OR_SERVITOR_ARE_NOT_AVAILABLE));
 			}
 			
 			return false;
@@ -107,7 +107,7 @@ public final class BeastShot extends ScriptItemHandler
 					
 					if (!player.getInventory().destroyItem(item, consumption))
 					{
-						player.sendPacket(Msg.YOU_DONT_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
+						player.sendPacket(new SystemMessage(SystemMessage.YOU_DONT_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR));
 						return false;
 					}
 					
@@ -126,7 +126,7 @@ public final class BeastShot extends ScriptItemHandler
 					
 					if (!player.getInventory().destroyItem(item, consumption))
 					{
-						player.sendPacket(Msg.YOU_DONT_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_PET_SERVITOR);
+						player.sendPacket(new SystemMessage(SystemMessage.YOU_DONT_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_PET_SERVITOR));
 						return false;
 					}
 					
@@ -145,7 +145,7 @@ public final class BeastShot extends ScriptItemHandler
 					
 					if (!player.getInventory().destroyItem(item, consumption))
 					{
-						player.sendPacket(Msg.YOU_DONT_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_PET_SERVITOR);
+						player.sendPacket(new SystemMessage(SystemMessage.YOU_DONT_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_PET_SERVITOR));
 						return false;
 					}
 					

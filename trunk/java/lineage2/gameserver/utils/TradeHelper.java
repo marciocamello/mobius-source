@@ -13,7 +13,6 @@
 package lineage2.gameserver.utils;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
@@ -45,7 +44,7 @@ public final class TradeHelper
 	{
 		if (!player.getPlayerAccess().UseTrade)
 		{
-			player.sendPacket(Msg.THIS_ACCOUNT_CANOT_USE_PRIVATE_STORES);
+			player.sendPacket(new SystemMessage(SystemMessage.THIS_ACCOUNT_CANOT_USE_PRIVATE_STORES));
 			return false;
 		}
 		
@@ -59,7 +58,7 @@ public final class TradeHelper
 		
 		if ((tradeBan != null) && (tradeBan.equals("-1") || (Long.parseLong(tradeBan) >= System.currentTimeMillis())))
 		{
-			player.sendPacket(Msg.YOU_ARE_CURRENTLY_BANNED_FROM_ACTIVITIES_RELATED_TO_THE_PRIVATE_STORE_AND_PRIVATE_WORKSHOP);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_CURRENTLY_BANNED_FROM_ACTIVITIES_RELATED_TO_THE_PRIVATE_STORE_AND_PRIVATE_WORKSHOP));
 			return false;
 		}
 		
@@ -69,20 +68,20 @@ public final class TradeHelper
 		{
 			if (!Config.SERVICES_NO_TRADE_ONLY_OFFLINE || (Config.SERVICES_NO_TRADE_ONLY_OFFLINE && player.isInOfflineMode()))
 			{
-				player.sendPacket(storeType == Player.STORE_PRIVATE_MANUFACTURE ? new SystemMessage(SystemMessage.A_PRIVATE_WORKSHOP_MAY_NOT_BE_OPENED_IN_THIS_AREA) : Msg.A_PRIVATE_STORE_MAY_NOT_BE_OPENED_IN_THIS_AREA);
+				player.sendPacket(storeType == Player.STORE_PRIVATE_MANUFACTURE ? new SystemMessage(SystemMessage.A_PRIVATE_WORKSHOP_MAY_NOT_BE_OPENED_IN_THIS_AREA) : new SystemMessage(SystemMessage.A_PRIVATE_STORE_MAY_NOT_BE_OPENED_IN_THIS_AREA));
 				return false;
 			}
 		}
 		
 		if (player.isCastingNow())
 		{
-			player.sendPacket(Msg.A_PRIVATE_STORE_MAY_NOT_BE_OPENED_WHILE_USING_A_SKILL);
+			player.sendPacket(new SystemMessage(SystemMessage.A_PRIVATE_STORE_MAY_NOT_BE_OPENED_WHILE_USING_A_SKILL));
 			return false;
 		}
 		
 		if (player.isInCombat())
 		{
-			player.sendPacket(Msg.WHILE_YOU_ARE_ENGAGED_IN_COMBAT_YOU_CANNOT_OPERATE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
+			player.sendPacket(new SystemMessage(SystemMessage.WHILE_YOU_ARE_ENGAGED_IN_COMBAT_YOU_CANNOT_OPERATE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP));
 			return false;
 		}
 		

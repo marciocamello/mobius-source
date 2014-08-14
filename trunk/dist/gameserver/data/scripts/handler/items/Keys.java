@@ -12,13 +12,13 @@
  */
 package handler.items;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.DoorHolder;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.DoorInstance;
 import lineage2.gameserver.model.items.ItemInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
@@ -80,19 +80,19 @@ public final class Keys extends ScriptItemHandler
 		
 		if (door.isOpen())
 		{
-			player.sendPacket(Msg.IT_IS_NOT_LOCKED);
+			player.sendPacket(new SystemMessage(SystemMessage.IT_IS_NOT_LOCKED));
 			return false;
 		}
 		
 		if ((door.getKey() <= 0) || (item.getItemId() != door.getKey()))
 		{
-			player.sendPacket(Msg.YOU_ARE_UNABLE_TO_UNLOCK_THE_DOOR);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_UNABLE_TO_UNLOCK_THE_DOOR));
 			return false;
 		}
 		
 		if (player.getDistance(door) > 300)
 		{
-			player.sendPacket(Msg.YOU_CANNOT_CONTROL_BECAUSE_YOU_ARE_TOO_FAR);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_CONTROL_BECAUSE_YOU_ARE_TOO_FAR));
 			return false;
 		}
 		
@@ -110,7 +110,8 @@ public final class Keys extends ScriptItemHandler
 	
 	/**
 	 * Method getItemIds.
-	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 * @return int[]
+	 * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
 	 */
 	@Override
 	public int[] getItemIds()

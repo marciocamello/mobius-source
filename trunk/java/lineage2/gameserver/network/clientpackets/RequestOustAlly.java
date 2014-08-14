@@ -12,7 +12,6 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
@@ -62,7 +61,7 @@ public class RequestOustAlly extends L2GameClientPacket
 		
 		if (alliance == null)
 		{
-			activeChar.sendPacket(Msg.YOU_ARE_NOT_CURRENTLY_ALLIED_WITH_ANY_CLANS);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_CURRENTLY_ALLIED_WITH_ANY_CLANS));
 			return;
 		}
 		
@@ -70,7 +69,7 @@ public class RequestOustAlly extends L2GameClientPacket
 		
 		if (!activeChar.isAllyLeader())
 		{
-			activeChar.sendPacket(Msg.FEATURE_AVAILABLE_TO_ALLIANCE_LEADERS_ONLY);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.FEATURE_AVAILABLE_TO_ALLIANCE_LEADERS_ONLY));
 			return;
 		}
 		
@@ -91,7 +90,7 @@ public class RequestOustAlly extends L2GameClientPacket
 			
 			if (alliance.getLeader().equals(clan))
 			{
-				activeChar.sendPacket(Msg.YOU_HAVE_FAILED_TO_WITHDRAW_FROM_THE_ALLIANCE);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_WITHDRAW_FROM_THE_ALLIANCE));
 				return;
 			}
 			

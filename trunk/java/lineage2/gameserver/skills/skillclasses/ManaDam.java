@@ -15,7 +15,6 @@ package lineage2.gameserver.skills.skillclasses;
 import java.util.List;
 
 import lineage2.commons.util.Rnd;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
@@ -91,7 +90,7 @@ public class ManaDam extends Skill
 					
 					if (crit)
 					{
-						activeChar.sendPacket(Msg.MAGIC_CRITICAL_HIT);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.MAGIC_CRITICAL_HIT));
 						damage *= 2.0;
 						damage += activeChar.getMagicCriticalDmg(target, this);
 					}

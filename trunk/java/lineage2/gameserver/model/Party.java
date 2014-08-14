@@ -28,7 +28,6 @@ import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.instancemanager.WorldStatisticsManager;
 import lineage2.gameserver.model.base.Experience;
@@ -462,11 +461,11 @@ public class Party implements PlayerGroup
 		
 		if (kick)
 		{
-			pplayer.add(Msg.YOU_HAVE_BEEN_EXPELLED_FROM_THE_PARTY);
+			pplayer.add(new SystemMessage(SystemMessage.YOU_HAVE_BEEN_EXPELLED_FROM_THE_PARTY));
 		}
 		else
 		{
-			pplayer.add(Msg.YOU_HAVE_WITHDRAWN_FROM_THE_PARTY);
+			pplayer.add(new SystemMessage(SystemMessage.YOU_HAVE_WITHDRAWN_FROM_THE_PARTY));
 		}
 		
 		pplayer.add(PartySmallWindowDeleteAll.STATIC);

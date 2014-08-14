@@ -17,12 +17,12 @@ import java.util.List;
 
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.CtrlIntention;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.instances.SummonInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.stats.Env;
 
@@ -100,7 +100,7 @@ public class EffectDiscord extends Effect
 		{
 			if (!multitargets)
 			{
-				getEffector().sendPacket(Msg.YOU_MAY_NOT_ATTACK_IN_A_PEACEFUL_ZONE);
+				getEffector().sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_ATTACK_IN_A_PEACEFUL_ZONE));
 			}
 			
 			return false;

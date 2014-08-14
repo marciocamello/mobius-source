@@ -15,12 +15,12 @@ package lineage2.gameserver.taskmanager.actionrunner.tasks;
 import java.util.List;
 
 import lineage2.commons.dao.JdbcEntityState;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.dao.MailDAO;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.mail.Mail;
 import lineage2.gameserver.network.serverpackets.ExNoticePostArrived;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Mobius
@@ -60,7 +60,7 @@ public class DeleteExpiredMailTask extends AutomaticTask
 					if (player != null)
 					{
 						player.sendPacket(ExNoticePostArrived.STATIC_TRUE);
-						player.sendPacket(Msg.THE_MAIL_HAS_ARRIVED);
+						player.sendPacket(new SystemMessage(SystemMessage.THE_MAIL_HAS_ARRIVED));
 					}
 				}
 				else

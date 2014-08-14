@@ -19,7 +19,6 @@ import java.util.List;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.MultiSellHolder;
 import lineage2.gameserver.listener.actor.OnDeathListener;
 import lineage2.gameserver.listener.actor.player.OnPlayerEnterListener;
@@ -28,6 +27,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SimpleSpawner;
 import lineage2.gameserver.model.actor.listener.CharListenerList;
 import lineage2.gameserver.model.instances.MonsterInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Util;
@@ -458,7 +458,7 @@ public final class glitmedal extends Functions implements ScriptFile, OnDeathLis
 			return;
 		}
 		
-		player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
+		player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 	}
 	
 	/**

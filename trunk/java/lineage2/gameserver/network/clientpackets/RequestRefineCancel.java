@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.clientpackets;
 
 import lineage2.commons.dao.JdbcEntityState;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.actor.instances.player.ShortCut;
 import lineage2.gameserver.model.items.ItemInstance;
@@ -76,7 +75,7 @@ public final class RequestRefineCancel extends L2GameClientPacket
 		
 		if ((targetItem == null) || !targetItem.isAugmented())
 		{
-			activeChar.sendPacket(new ExVariationCancelResult(0), Msg.AUGMENTATION_REMOVAL_CAN_ONLY_BE_DONE_ON_AN_AUGMENTED_ITEM);
+			activeChar.sendPacket(new ExVariationCancelResult(0), new SystemMessage(SystemMessage.AUGMENTATION_REMOVAL_CAN_ONLY_BE_DONE_ON_AN_AUGMENTED_ITEM));
 			return;
 		}
 		
@@ -89,7 +88,7 @@ public final class RequestRefineCancel extends L2GameClientPacket
 		
 		if (!activeChar.reduceAdena(price, true))
 		{
-			activeChar.sendPacket(new ExVariationCancelResult(0), Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			activeChar.sendPacket(new ExVariationCancelResult(0), new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			return;
 		}
 		

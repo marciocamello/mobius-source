@@ -12,11 +12,11 @@
  */
 package lineage2.gameserver.handler.usercommands.impl;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.handler.usercommands.IUserCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.base.TeamType;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.tables.SkillTable;
 
@@ -35,7 +35,8 @@ public class Escape implements IUserCommandHandler
 	 * Method useUserCommand.
 	 * @param id int
 	 * @param activeChar Player
-	 * @return boolean * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#useUserCommand(int, Player)
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#useUserCommand(int, Player)
 	 */
 	@Override
 	public boolean useUserCommand(int id, Player activeChar)
@@ -58,7 +59,7 @@ public class Escape implements IUserCommandHandler
 		
 		if (activeChar.isTerritoryFlagEquipped())
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD));
 			return false;
 		}
 		
@@ -92,7 +93,8 @@ public class Escape implements IUserCommandHandler
 	
 	/**
 	 * Method getUserCommandList.
-	 * @return int[] * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#getUserCommandList()
+	 * @return int[]
+	 * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#getUserCommandList()
 	 */
 	@Override
 	public final int[] getUserCommandList()

@@ -12,7 +12,6 @@
  */
 package handler.items;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
@@ -85,7 +84,7 @@ public final class BlessedSpiritShot extends ScriptItemHandler
 		{
 			if (!isAutoSoulShot)
 			{
-				player.sendPacket(Msg.CANNOT_USE_SPIRITSHOTS);
+				player.sendPacket(new SystemMessage(SystemMessage.CANNOT_USE_SPIRITSHOTS));
 			}
 			
 			return false;
@@ -109,7 +108,7 @@ public final class BlessedSpiritShot extends ScriptItemHandler
 				return false;
 			}
 			
-			player.sendPacket(Msg.CANNOT_USE_SPIRITSHOTS);
+			player.sendPacket(new SystemMessage(SystemMessage.CANNOT_USE_SPIRITSHOTS));
 			return false;
 		}
 		
@@ -120,7 +119,7 @@ public final class BlessedSpiritShot extends ScriptItemHandler
 				return false;
 			}
 			
-			player.sendPacket(Msg.SPIRITSHOT_DOES_NOT_MATCH_WEAPON_GRADE);
+			player.sendPacket(new SystemMessage(SystemMessage.SPIRITSHOT_DOES_NOT_MATCH_WEAPON_GRADE));
 			return false;
 		}
 		
@@ -133,12 +132,12 @@ public final class BlessedSpiritShot extends ScriptItemHandler
 				return false;
 			}
 			
-			player.sendPacket(Msg.NOT_ENOUGH_SPIRITSHOTS);
+			player.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_SPIRITSHOTS));
 			return false;
 		}
 		
 		weaponInst.setChargedSpiritshot(ItemInstance.CHARGED_BLESSED_SPIRITSHOT);
-		player.sendPacket(Msg.POWER_OF_MANA_ENABLED);
+		player.sendPacket(new SystemMessage(SystemMessage.POWER_OF_MANA_ENABLED));
 		player.broadcastPacket(new MagicSkillUse(player, player, _skillIds[grade], 1, 0, 0));
 		return true;
 	}

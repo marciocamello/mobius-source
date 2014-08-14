@@ -14,8 +14,8 @@ package lineage2.gameserver.network.clientpackets;
 
 import java.util.Collection;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -77,27 +77,27 @@ public class RequestBlock extends L2GameClientPacket
 				
 				if (blockList != null)
 				{
-					activeChar.sendPacket(Msg._IGNORE_LIST_);
+					activeChar.sendPacket(new SystemMessage(SystemMessage._IGNORE_LIST_));
 					
 					for (String name : blockList)
 					{
 						activeChar.sendMessage(name);
 					}
 					
-					activeChar.sendPacket(Msg.__EQUALS__);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.__EQUALS__));
 				}
 				
 				break;
 			
 			case ALLBLOCK:
 				activeChar.setBlockAll(true);
-				activeChar.sendPacket(Msg.YOU_ARE_NOW_BLOCKING_EVERYTHING);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOW_BLOCKING_EVERYTHING));
 				activeChar.sendEtcStatusUpdate();
 				break;
 			
 			case ALLUNBLOCK:
 				activeChar.setBlockAll(false);
-				activeChar.sendPacket(Msg.YOU_ARE_NO_LONGER_BLOCKING_EVERYTHING);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NO_LONGER_BLOCKING_EVERYTHING));
 				activeChar.sendEtcStatusUpdate();
 				break;
 			

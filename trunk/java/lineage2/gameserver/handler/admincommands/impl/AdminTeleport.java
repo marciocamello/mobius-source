@@ -18,7 +18,6 @@ import java.sql.PreparedStatement;
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.gameserver.ai.CtrlIntention;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.dao.CharacterDAO;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
@@ -28,6 +27,7 @@ import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Util;
 
@@ -446,7 +446,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		
@@ -523,7 +523,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		
 		if ((target == null) || !target.isPlayer())
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		

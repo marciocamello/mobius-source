@@ -15,7 +15,6 @@ package lineage2.gameserver.skills.skillclasses;
 import java.util.List;
 
 import lineage2.gameserver.ai.CtrlEvent;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
@@ -63,7 +62,7 @@ public class Plunder extends Skill
 		
 		if (!target.isMonster())
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return false;
 		}
 		

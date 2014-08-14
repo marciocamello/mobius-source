@@ -18,7 +18,6 @@ import java.util.List;
 import java.util.Queue;
 
 import lineage2.commons.math.SafeMath;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.dao.CommissionShopDAO;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
@@ -33,6 +32,7 @@ import lineage2.gameserver.network.serverpackets.ExResponseCommissionInfo;
 import lineage2.gameserver.network.serverpackets.ExResponseCommissionItemList;
 import lineage2.gameserver.network.serverpackets.ExResponseCommissionList;
 import lineage2.gameserver.network.serverpackets.ExShowCommission;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.item.ExItemType;
@@ -427,7 +427,7 @@ public class CommissionShopManager
 			if (receiver != null)
 			{
 				receiver.sendPacket(ExNoticePostArrived.STATIC_TRUE);
-				receiver.sendPacket(Msg.THE_MAIL_HAS_ARRIVED);
+				receiver.sendPacket(new SystemMessage(SystemMessage.THE_MAIL_HAS_ARRIVED));
 			}
 			
 			Log.LogItem(player, Log.CommissionItemSold, itemInfo.getItem());
@@ -478,7 +478,7 @@ public class CommissionShopManager
 				if (receiver != null)
 				{
 					receiver.sendPacket(ExNoticePostArrived.STATIC_TRUE);
-					receiver.sendPacket(Msg.THE_MAIL_HAS_ARRIVED);
+					receiver.sendPacket(new SystemMessage(SystemMessage.THE_MAIL_HAS_ARRIVED));
 				}
 			}
 		}

@@ -15,7 +15,6 @@ package lineage2.gameserver.handler.usercommands.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.handler.usercommands.IUserCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Alliance;
@@ -39,7 +38,8 @@ public class ClanWarsList implements IUserCommandHandler
 	 * Method useUserCommand.
 	 * @param id int
 	 * @param activeChar Player
-	 * @return boolean * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#useUserCommand(int, Player)
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#useUserCommand(int, Player)
 	 */
 	@Override
 	public boolean useUserCommand(int id, Player activeChar)
@@ -53,7 +53,7 @@ public class ClanWarsList implements IUserCommandHandler
 		
 		if (clan == null)
 		{
-			activeChar.sendPacket(Msg.NOT_JOINED_IN_ANY_CLAN);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.NOT_JOINED_IN_ANY_CLAN));
 			return false;
 		}
 		
@@ -62,17 +62,17 @@ public class ClanWarsList implements IUserCommandHandler
 		
 		if (id == 88)
 		{
-			activeChar.sendPacket(Msg._ATTACK_LIST_);
+			activeChar.sendPacket(new SystemMessage(SystemMessage._ATTACK_LIST_));
 			data = clan.getEnemyClans();
 		}
 		else if (id == 89)
 		{
-			activeChar.sendPacket(Msg._UNDER_ATTACK_LIST_);
+			activeChar.sendPacket(new SystemMessage(SystemMessage._UNDER_ATTACK_LIST_));
 			data = clan.getAttackerClans();
 		}
 		else
 		{
-			activeChar.sendPacket(Msg._WAR_LIST_);
+			activeChar.sendPacket(new SystemMessage(SystemMessage._WAR_LIST_));
 			
 			for (Clan c : clan.getEnemyClans())
 			{
@@ -100,13 +100,14 @@ public class ClanWarsList implements IUserCommandHandler
 			activeChar.sendPacket(sm);
 		}
 		
-		activeChar.sendPacket(Msg.__EQUALS__);
+		activeChar.sendPacket(new SystemMessage(SystemMessage.__EQUALS__));
 		return true;
 	}
 	
 	/**
 	 * Method getUserCommandList.
-	 * @return int[] * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#getUserCommandList()
+	 * @return int[]
+	 * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#getUserCommandList()
 	 */
 	@Override
 	public int[] getUserCommandList()

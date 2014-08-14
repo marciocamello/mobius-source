@@ -24,7 +24,6 @@ import java.util.Set;
 import java.util.StringTokenizer;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.instancemanager.AwakingManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SubClass;
@@ -35,6 +34,7 @@ import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.model.base.ClassLevel;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.tables.DualClassTable;
 import lineage2.gameserver.tables.SubClassTable;
@@ -345,7 +345,7 @@ public final class SubClassManagerInstance extends NpcInstance
 					
 					if (player.getInventory().getAdena() < reawakeningCost)
 					{
-						player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+						player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 						return;
 					}
 					

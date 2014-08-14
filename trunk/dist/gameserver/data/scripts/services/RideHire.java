@@ -12,10 +12,10 @@
  */
 package services;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.SetupGauge;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.utils.SiegeUtils;
@@ -84,7 +84,7 @@ public final class RideHire extends Functions
 		
 		if (player.getActiveWeaponFlagAttachment() != null)
 		{
-			player.sendPacket(Msg.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 			return;
 		}
 		
@@ -96,7 +96,7 @@ public final class RideHire extends Functions
 		
 		if ((player.getSummonList() != null) || player.isMounted())
 		{
-			player.sendPacket(Msg.YOU_ALREADY_HAVE_A_PET);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_HAVE_A_PET));
 			return;
 		}
 		
@@ -142,7 +142,7 @@ public final class RideHire extends Functions
 		
 		if (player.getAdena() < price)
 		{
-			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			return;
 		}
 		

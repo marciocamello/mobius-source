@@ -12,7 +12,6 @@
  */
 package handler.items;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.instancemanager.MapRegionManager;
 import lineage2.gameserver.model.Manor;
 import lineage2.gameserver.model.Playable;
@@ -23,6 +22,7 @@ import lineage2.gameserver.model.instances.MinionInstance;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.model.instances.RaidBossInstance;
 import lineage2.gameserver.model.items.ItemInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.mapregion.DomainArea;
@@ -83,13 +83,13 @@ public final class Seed extends ScriptItemHandler
 		
 		if (target == null)
 		{
-			player.sendPacket(Msg.INVALID_TARGET);
+			player.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return false;
 		}
 		
 		if (target.isDead())
 		{
-			player.sendPacket(Msg.INVALID_TARGET);
+			player.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return false;
 		}
 		

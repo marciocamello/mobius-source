@@ -20,7 +20,6 @@ import java.util.Map;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.listener.actor.OnDeathListener;
 import lineage2.gameserver.listener.actor.player.OnPlayerEnterListener;
 import lineage2.gameserver.model.Creature;
@@ -29,6 +28,7 @@ import lineage2.gameserver.model.SimpleSpawner;
 import lineage2.gameserver.model.actor.listener.CharListenerList;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.reward.RewardData;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.npc.NpcTemplate;
@@ -234,7 +234,7 @@ public class LettersCollection extends Functions implements ScriptFile, OnDeathL
 		{
 			if (getItemCount(player, l[0]) < l[1])
 			{
-				player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 				return;
 			}
 		}

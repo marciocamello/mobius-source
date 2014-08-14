@@ -16,10 +16,10 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ManufactureItem;
 import lineage2.gameserver.network.serverpackets.RecipeShopMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.utils.TradeHelper;
 
 /**
@@ -83,7 +83,7 @@ public class RequestRecipeShopListSet extends L2GameClientPacket
 		
 		if (_count > Config.MAX_PVTCRAFT_SLOTS)
 		{
-			sendPacket(Msg.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
+			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 			return;
 		}
 		

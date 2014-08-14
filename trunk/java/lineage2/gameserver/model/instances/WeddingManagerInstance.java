@@ -14,7 +14,6 @@ package lineage2.gameserver.model.instances;
 
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.instancemanager.CoupleManager;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
@@ -22,6 +21,7 @@ import lineage2.gameserver.model.entity.Couple;
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.npc.NpcTemplate;
@@ -150,7 +150,7 @@ public class WeddingManagerInstance extends NpcInstance
 			}
 			else if (player.getAdena() < Config.WEDDING_PRICE)
 			{
-				player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 				return;
 			}
 			else

@@ -12,7 +12,6 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
@@ -51,7 +50,7 @@ public class RequestExOustFromMPCC extends L2GameClientPacket
 		
 		if (target == null)
 		{
-			activeChar.sendPacket(Msg.THAT_PLAYER_IS_NOT_CURRENTLY_ONLINE);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.THAT_PLAYER_IS_NOT_CURRENTLY_ONLINE));
 			return;
 		}
 		
@@ -62,18 +61,18 @@ public class RequestExOustFromMPCC extends L2GameClientPacket
 		
 		if (!target.isInParty() || !target.getParty().isInCommandChannel() || (activeChar.getParty().getCommandChannel() != target.getParty().getCommandChannel()))
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		
 		if (activeChar.getParty().getCommandChannel().getChannelLeader() != activeChar)
 		{
-			activeChar.sendPacket(Msg.ONLY_THE_CREATOR_OF_A_CHANNEL_CAN_ISSUE_A_GLOBAL_COMMAND);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.ONLY_THE_CREATOR_OF_A_CHANNEL_CAN_ISSUE_A_GLOBAL_COMMAND));
 			return;
 		}
 		
 		target.getParty().getCommandChannel().getChannelLeader().sendPacket(new SystemMessage(SystemMessage.S1_PARTY_HAS_BEEN_DISMISSED_FROM_THE_COMMAND_CHANNEL).addString(target.getName()));
 		target.getParty().getCommandChannel().removeParty(target.getParty());
-		target.getParty().broadCast(Msg.YOU_WERE_DISMISSED_FROM_THE_COMMAND_CHANNEL);
+		target.getParty().broadCast(new SystemMessage(SystemMessage.YOU_WERE_DISMISSED_FROM_THE_COMMAND_CHANNEL));
 	}
 }

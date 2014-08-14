@@ -20,7 +20,6 @@ import java.util.Map.Entry;
 
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.dao.CharacterDAO;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.database.mysql;
@@ -424,7 +423,7 @@ public final class Rename extends Functions
 		{
 			if (Config.SERVICES_CHANGE_NICK_ITEM == 57)
 			{
-				player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			}
 			else
 			{
@@ -475,7 +474,7 @@ public final class Rename extends Functions
 		{
 			if (Config.SERVICES_CHANGE_SEX_ITEM == 57)
 			{
-				player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			}
 			else
 			{
@@ -572,13 +571,13 @@ public final class Rename extends Functions
 		
 		if (!Util.isMatchingRegexp(param[0], Config.CLAN_NAME_TEMPLATE))
 		{
-			player.sendPacket(Msg.CLAN_NAME_IS_INCORRECT);
+			player.sendPacket(new SystemMessage(SystemMessage.CLAN_NAME_IS_INCORRECT));
 			return;
 		}
 		
 		if (ClanTable.getInstance().getClanByName(param[0]) != null)
 		{
-			player.sendPacket(Msg.THIS_NAME_ALREADY_EXISTS);
+			player.sendPacket(new SystemMessage(SystemMessage.THIS_NAME_ALREADY_EXISTS));
 			return;
 		}
 		
@@ -586,7 +585,7 @@ public final class Rename extends Functions
 		{
 			if (Config.SERVICES_CHANGE_CLAN_NAME_ITEM == 57)
 			{
-				player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			}
 			else
 			{

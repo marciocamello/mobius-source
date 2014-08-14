@@ -15,13 +15,13 @@ package lineage2.gameserver.network.clientpackets;
 import java.util.List;
 
 import lineage2.commons.math.SafeMath;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Request;
 import lineage2.gameserver.model.Request.L2RequestType;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.TradeItem;
 import lineage2.gameserver.network.serverpackets.SendTradeDone;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.TradeOtherAdd;
 import lineage2.gameserver.network.serverpackets.TradeOwnAdd;
 import lineage2.gameserver.network.serverpackets.TradeUpdate;
@@ -92,7 +92,7 @@ public class AddTradeItem extends L2GameClientPacket
 		{
 			request.cancel();
 			parthner1.sendPacket(SendTradeDone.FAIL);
-			parthner1.sendPacket(Msg.THAT_PLAYER_IS_NOT_ONLINE);
+			parthner1.sendPacket(new SystemMessage(SystemMessage.THAT_PLAYER_IS_NOT_ONLINE));
 			parthner1.sendActionFailed();
 			return;
 		}

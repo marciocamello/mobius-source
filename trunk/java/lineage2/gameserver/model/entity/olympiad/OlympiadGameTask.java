@@ -16,7 +16,6 @@ import java.util.concurrent.ScheduledFuture;
 
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.utils.Log;
 
@@ -225,7 +224,7 @@ class OlympiadGameTask extends RunnableImpl
 					if (_count == 36)
 					{
 						_game.setState(2);
-						_game.broadcastPacket(Msg.STARTS_THE_GAME, true, true);
+						_game.broadcastPacket(new SystemMessage(SystemMessage.STARTS_THE_GAME), true, true);
 						_game.broadcastInfo(null, null, false);
 					}
 					

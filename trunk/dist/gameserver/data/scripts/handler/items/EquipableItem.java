@@ -12,7 +12,6 @@
  */
 package handler.items;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
@@ -74,7 +73,7 @@ public final class EquipableItem extends ScriptItemHandler
 		
 		if (player.isCastingNow())
 		{
-			player.sendPacket(Msg.YOU_MAY_NOT_EQUIP_ITEMS_WHILE_CASTING_OR_PERFORMING_A_SKILL);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_EQUIP_ITEMS_WHILE_CASTING_OR_PERFORMING_A_SKILL));
 			return false;
 		}
 		

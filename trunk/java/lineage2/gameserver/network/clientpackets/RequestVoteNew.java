@@ -12,7 +12,6 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
@@ -63,7 +62,7 @@ public class RequestVoteNew extends L2GameClientPacket
 		
 		if (target.getObjectId() == activeChar.getObjectId())
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_RECOMMEND_YOURSELF);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_RECOMMEND_YOURSELF));
 			return;
 		}
 		
@@ -71,13 +70,13 @@ public class RequestVoteNew extends L2GameClientPacket
 		
 		if (activeChar.getRecomLeft() <= 0)
 		{
-			activeChar.sendPacket(Msg.NO_MORE_RECOMMENDATIONS_TO_HAVE);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_AUTHORIZED_TO_MAKE_FURTHER_RECOMMENDATIONS_AT_THIS_TIME_YOU_WILL_RECEIVE_MORE_RECOMMENDATION_CREDITS_EACH_DAY_AT_1_PM));
 			return;
 		}
 		
 		if (targetPlayer.getRecomHave() >= 255)
 		{
-			activeChar.sendPacket(Msg.YOU_NO_LONGER_RECIVE_A_RECOMMENDATION);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOUR_SELECTED_TARGET_CAN_NO_LONGER_RECEIVE_A_RECOMMENDATION));
 			return;
 		}
 		

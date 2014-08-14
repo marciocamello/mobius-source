@@ -46,7 +46,6 @@ import lineage2.gameserver.ai.CharacterAI;
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.ai.PlayableAI.nextAction;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.geodata.GeoMove;
 import lineage2.gameserver.instancemanager.ReflectionManager;
@@ -574,7 +573,7 @@ public abstract class Creature extends GameObject
 			
 			if (isPlayer() && message)
 			{
-				sendPacket(Msg.CASTING_HAS_BEEN_INTERRUPTED);
+				sendPacket(new SystemMessage(SystemMessage.YOUR_CASTING_HAS_BEEN_INTERRUPTED));
 			}
 		}
 	}
@@ -981,7 +980,7 @@ public abstract class Creature extends GameObject
 		{
 			if (_currentMp < mpConsume2)
 			{
-				sendPacket(Msg.NOT_ENOUGH_MP);
+				sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP));
 				return;
 			}
 			
@@ -1058,7 +1057,7 @@ public abstract class Creature extends GameObject
 		
 		if (skill.getSoulsConsume() > getConsumedSouls())
 		{
-			sendPacket(Msg.THERE_IS_NOT_ENOUGHT_SOUL);
+			sendPacket(new SystemMessage(SystemMessage.THERE_IS_NOT_ENOUGHT_SOUL));
 			return;
 		}
 		
@@ -2049,7 +2048,7 @@ public abstract class Creature extends GameObject
 		{
 			if (skill.getSkillType() == SkillType.PET_SUMMON)
 			{
-				sendPacket(Msg.SUMMON_A_PET);
+				sendPacket(new SystemMessage(SystemMessage.SUMMON_A_PET));
 			}
 			else if (!skill.isHandler())
 			{
@@ -2075,7 +2074,7 @@ public abstract class Creature extends GameObject
 		{
 			if (_currentMp < mpConsume1)
 			{
-				sendPacket(Msg.NOT_ENOUGH_MP);
+				sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP));
 				onCastEndTime(false);
 				return;
 			}
@@ -4356,7 +4355,7 @@ public abstract class Creature extends GameObject
 			
 			if (player != null)
 			{
-				player.sendPacket(Msg.INVALID_TARGET);
+				player.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 				player.sendActionFailed();
 			}
 			
@@ -4509,7 +4508,7 @@ public abstract class Creature extends GameObject
 			
 			if ((_currentMp < mpConsume2) && isPlayable())
 			{
-				sendPacket(Msg.NOT_ENOUGH_MP);
+				sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP));
 				onCastEndTime(false);
 				return;
 			}
@@ -4736,7 +4735,7 @@ public abstract class Creature extends GameObject
 		{
 			if (sendMessage)
 			{
-				attacker.sendPacket(Msg.THE_ATTACK_HAS_BEEN_BLOCKED);
+				attacker.sendPacket(new SystemMessage(SystemMessage.THE_ATTACK_HAS_BEEN_BLOCKED));
 			}
 			
 			return;
@@ -4881,7 +4880,7 @@ public abstract class Creature extends GameObject
 		
 		if (isDamageBlocked() && (attacker != null) && (attacker != this))
 		{
-			attacker.sendPacket(Msg.THE_ATTACK_HAS_BEEN_BLOCKED);
+			attacker.sendPacket(new SystemMessage(SystemMessage.THE_ATTACK_HAS_BEEN_BLOCKED));
 			return;
 		}
 		

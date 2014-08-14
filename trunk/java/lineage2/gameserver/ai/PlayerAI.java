@@ -17,7 +17,6 @@ import static lineage2.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import java.util.List;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
@@ -29,6 +28,7 @@ import lineage2.gameserver.model.items.attachment.FlagItemAttachment;
 import lineage2.gameserver.network.serverpackets.ActionFail;
 import lineage2.gameserver.network.serverpackets.ExRotation;
 import lineage2.gameserver.network.serverpackets.SocialAction;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
 /**
@@ -83,7 +83,7 @@ public class PlayerAI extends PlayableAI
 		}
 		else if (actor.isSitting())
 		{
-			actor.sendPacket(Msg.YOU_CANNOT_MOVE_WHILE_SITTING);
+			actor.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOVE_WHILE_SITTING));
 			clientActionFailed();
 			return;
 		}
@@ -107,7 +107,7 @@ public class PlayerAI extends PlayableAI
 		}
 		else if (actor.isSitting())
 		{
-			actor.sendPacket(Msg.YOU_CANNOT_MOVE_WHILE_SITTING);
+			actor.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOVE_WHILE_SITTING));
 			clientActionFailed();
 			return;
 		}
@@ -209,14 +209,14 @@ public class PlayerAI extends PlayableAI
 		
 		if ((target == null) || !target.isOnline())
 		{
-			actor.sendPacket(Msg.COUPLE_ACTION_WAS_CANCELED);
+			actor.sendPacket(new SystemMessage(SystemMessage.COUPLE_ACTION_WAS_CANCELED));
 			return;
 		}
 		
 		if (cancel || !actor.isInRange(target, 50) || actor.isInRange(target, 20) || (actor.getReflection() != target.getReflection()) || !GeoEngine.canSeeTarget(actor, target, false))
 		{
-			target.sendPacket(Msg.COUPLE_ACTION_WAS_CANCELED);
-			actor.sendPacket(Msg.COUPLE_ACTION_WAS_CANCELED);
+			target.sendPacket(new SystemMessage(SystemMessage.COUPLE_ACTION_WAS_CANCELED));
+			actor.sendPacket(new SystemMessage(SystemMessage.COUPLE_ACTION_WAS_CANCELED));
 			return;
 		}
 		
@@ -263,7 +263,7 @@ public class PlayerAI extends PlayableAI
 		}
 		else if (actor.isSitting())
 		{
-			actor.sendPacket(Msg.YOU_CANNOT_MOVE_WHILE_SITTING);
+			actor.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOVE_WHILE_SITTING));
 			clientActionFailed();
 			return;
 		}
@@ -293,7 +293,7 @@ public class PlayerAI extends PlayableAI
 			}
 			else if ((skill.getSkillType() == SkillType.SUMMON) && (actor.getPrivateStoreType() != Player.STORE_PRIVATE_NONE))
 			{
-				actor.sendPacket(Msg.YOU_CANNOT_SUMMON_DURING_A_TRADE_OR_WHILE_USING_THE_PRIVATE_SHOPS);
+				actor.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_SUMMON_DURING_A_TRADE_OR_WHILE_USING_THE_PRIVATE_SHOPS));
 				clientActionFailed();
 				return;
 			}
@@ -301,11 +301,11 @@ public class PlayerAI extends PlayableAI
 			{
 				if (skill.getSkillType() == SkillType.TRANSFORMATION)
 				{
-					actor.sendPacket(Msg.YOU_CANNOT_TRANSFORM_WHILE_SITTING);
+					actor.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_TRANSFORM_WHILE_SITTING));
 				}
 				else
 				{
-					actor.sendPacket(Msg.YOU_CANNOT_MOVE_WHILE_SITTING);
+					actor.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOVE_WHILE_SITTING));
 				}
 				
 				clientActionFailed();

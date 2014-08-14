@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.clientpackets;
 
 import lineage2.commons.util.Rnd;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.actor.instances.player.ShortCut;
@@ -115,13 +114,13 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				
 				if (activeChar.getSp() < requiredSp)
 				{
-					sendPacket(Msg.SP_REQUIRED_FOR_SKILL_ENCHANT_IS_INSUFFICIENT);
+					sendPacket(new SystemMessage(SystemMessage.SP_REQUIRED_FOR_SKILL_ENCHANT_IS_INSUFFICIENT));
 					return;
 				}
 				
 				if (activeChar.getAdena() < requiredAdena)
 				{
-					sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+					sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 					return;
 				}
 				
@@ -129,7 +128,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				{
 					if (Functions.getItemCount(activeChar, SkillTreeTable.NORMAL_ENCHANT_BOOK) == 0)
 					{
-						activeChar.sendPacket(Msg.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
 						return;
 					}
 					
@@ -139,7 +138,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				{
 					if (Functions.getItemCount(activeChar, SkillTreeTable.NEW_ENCHANT_BOOK) == 0)
 					{
-						activeChar.sendPacket(Msg.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
 						return;
 					}
 					
@@ -229,13 +228,13 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				
 				if (activeChar.getSp() < requiredSp)
 				{
-					sendPacket(Msg.SP_REQUIRED_FOR_SKILL_ENCHANT_IS_INSUFFICIENT);
+					sendPacket(new SystemMessage(SystemMessage.SP_REQUIRED_FOR_SKILL_ENCHANT_IS_INSUFFICIENT));
 					return;
 				}
 				
 				if (activeChar.getAdena() < requiredAdena)
 				{
-					sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+					sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 					return;
 				}
 				
@@ -243,7 +242,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				{
 					if (Functions.getItemCount(activeChar, SkillTreeTable.SAFE_ENCHANT_BOOK) == 0)
 					{
-						activeChar.sendPacket(Msg.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
 						return;
 					}
 					
@@ -253,7 +252,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				{
 					if (Functions.getItemCount(activeChar, SkillTreeTable.NEW_SAFE_ENCHANT_BOOK) == 0)
 					{
-						activeChar.sendPacket(Msg.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
 						return;
 					}
 					
@@ -339,7 +338,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				
 				if (Functions.getItemCount(activeChar, SkillTreeTable.UNTRAIN_ENCHANT_BOOK) == 0)
 				{
-					activeChar.sendPacket(Msg.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
 					return;
 				}
 				
@@ -412,19 +411,19 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				
 				if (activeChar.getSp() < requiredSp)
 				{
-					sendPacket(Msg.SP_REQUIRED_FOR_SKILL_ENCHANT_IS_INSUFFICIENT);
+					sendPacket(new SystemMessage(SystemMessage.SP_REQUIRED_FOR_SKILL_ENCHANT_IS_INSUFFICIENT));
 					return;
 				}
 				
 				if (activeChar.getAdena() < requiredAdena)
 				{
-					sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+					sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 					return;
 				}
 				
 				if (Functions.getItemCount(activeChar, SkillTreeTable.CHANGE_ENCHANT_BOOK) == 0)
 				{
-					activeChar.sendPacket(Msg.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
 					return;
 				}
 				
@@ -530,13 +529,13 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				
 				if (activeChar.getSp() < requiredSp)
 				{
-					sendPacket(Msg.SP_REQUIRED_FOR_SKILL_ENCHANT_IS_INSUFFICIENT);
+					sendPacket(new SystemMessage(SystemMessage.SP_REQUIRED_FOR_SKILL_ENCHANT_IS_INSUFFICIENT));
 					return;
 				}
 				
 				if (activeChar.getAdena() < requiredAdena)
 				{
-					sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+					sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 					return;
 				}
 				
@@ -544,7 +543,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				{
 					if (Functions.getItemCount(activeChar, SkillTreeTable.ENCHANT_BOOK_LINDVIOR) == 0)
 					{
-						activeChar.sendPacket(Msg.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
 						return;
 					}
 					
@@ -554,7 +553,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				{
 					if (Functions.getItemCount(activeChar, SkillTreeTable.ENCHANT_BOOK_LINDVIOR) == 0)
 					{
-						activeChar.sendPacket(Msg.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
 						return;
 					}
 					

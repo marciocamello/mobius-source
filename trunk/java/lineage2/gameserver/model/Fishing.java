@@ -20,7 +20,6 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.GameTimeController;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.ai.CtrlEvent;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.idfactory.IdFactory;
 import lineage2.gameserver.instancemanager.games.FishingChampionShipManager;
@@ -129,7 +128,7 @@ public class Fishing
 		_fisher.setFishing(true);
 		_fisher.broadcastCharInfo();
 		_fisher.broadcastPacket(new ExFishingStart(_fisher, _fish.getType(), _fisher.getFishLoc(), isNightLure(_lureId)));
-		_fisher.sendPacket(Msg.STARTS_FISHING);
+		_fisher.sendPacket(new SystemMessage(SystemMessage.STARTS_FISHING));
 		startLookingForFishTask();
 	}
 	
@@ -147,7 +146,7 @@ public class Fishing
 		_fisher.setFishing(false);
 		_fisher.broadcastPacket(new ExFishingEnd(_fisher, false));
 		_fisher.broadcastCharInfo();
-		_fisher.sendPacket(Msg.CANCELS_FISHING);
+		_fisher.sendPacket(new SystemMessage(SystemMessage.CANCELS_FISHING));
 	}
 	
 	/**
@@ -165,7 +164,7 @@ public class Fishing
 		_fisher.setFishing(false);
 		_fisher.broadcastPacket(new ExFishingEnd(_fisher, win));
 		_fisher.broadcastCharInfo();
-		_fisher.sendPacket(Msg.ENDS_FISHING);
+		_fisher.sendPacket(new SystemMessage(SystemMessage.ENDS_FISHING));
 	}
 	
 	/**
@@ -203,7 +202,7 @@ public class Fishing
 		{
 			if (System.currentTimeMillis() >= _endTaskTime)
 			{
-				_fisher.sendPacket(Msg.BAITS_HAVE_BEEN_LOST_BECAUSE_THE_FISH_GOT_AWAY);
+				_fisher.sendPacket(new SystemMessage(SystemMessage.BAITS_HAVE_BEEN_LOST_BECAUSE_THE_FISH_GOT_AWAY));
 				stopFishingTask();
 				endFishing(false);
 				return;
@@ -211,7 +210,7 @@ public class Fishing
 			
 			if (!GameTimeController.getInstance().isNowNight() && isNightLure(_lureId))
 			{
-				_fisher.sendPacket(Msg.BAITS_HAVE_BEEN_LOST_BECAUSE_THE_FISH_GOT_AWAY);
+				_fisher.sendPacket(new SystemMessage(SystemMessage.BAITS_HAVE_BEEN_LOST_BECAUSE_THE_FISH_GOT_AWAY));
 				stopFishingTask();
 				endFishing(false);
 				return;
@@ -277,12 +276,12 @@ public class Fishing
 		{
 			if (_fishCurHP >= (_fish.getHP() * 2))
 			{
-				_fisher.sendPacket(Msg.THE_FISH_GOT_AWAY);
+				_fisher.sendPacket(new SystemMessage(SystemMessage.THE_FISH_GOT_AWAY));
 				doDie(false);
 			}
 			else if (_time <= 0)
 			{
-				_fisher.sendPacket(Msg.TIME_IS_UP_SO_THAT_FISH_GOT_AWAY);
+				_fisher.sendPacket(new SystemMessage(SystemMessage.TIME_IS_UP_SO_THAT_FISH_GOT_AWAY));
 				doDie(false);
 			}
 			else
@@ -370,7 +369,7 @@ public class Fishing
 		
 		ExFishingStartCombat efsc = new ExFishingStartCombat(_fisher, _time, _fish.getHP(), _combatMode, _fish.getGroup(), _deceptiveMode);
 		_fisher.broadcastPacket(efsc);
-		_fisher.sendPacket(Msg.SUCCEEDED_IN_GETTING_A_BITE);
+		_fisher.sendPacket(new SystemMessage(SystemMessage.SUCCEEDED_IN_GETTING_A_BITE));
 		_fishingTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new FishCombatTask(), 1000L, 1000L);
 	}
 	
@@ -416,12 +415,12 @@ public class Fishing
 			if (!_fisher.isInPeaceZone() && Rnd.chance(5))
 			{
 				win = false;
-				_fisher.sendPacket(Msg.YOU_HAVE_CAUGHT_A_MONSTER);
+				_fisher.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_CAUGHT_A_MONSTER));
 				spawnPenaltyMonster(_fisher);
 			}
 			else
 			{
-				_fisher.sendPacket(Msg.SUCCEEDED_IN_FISHING);
+				_fisher.sendPacket(new SystemMessage(SystemMessage.SUCCEEDED_IN_FISHING));
 				ItemFunctions.addItem(_fisher, _fish.getId(), 1, true);
 				FishingChampionShipManager.getInstance().newFish(_fisher, _lureId);
 			}
@@ -462,7 +461,7 @@ public class Fishing
 		
 		if (Rnd.chance(10))
 		{
-			_fisher.sendPacket(Msg.FISH_HAS_RESISTED);
+			_fisher.sendPacket(new SystemMessage(SystemMessage.FISH_HAS_RESISTED));
 			_gooduse = 0;
 			changeHp(0, pen);
 			return;

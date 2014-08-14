@@ -15,7 +15,7 @@ package lineage2.gameserver.model.entity.olympiad;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -51,7 +51,7 @@ class CompEndTask extends RunnableImpl
 				return;
 			}
 			
-			Announcements.getInstance().announceToAll(Msg.THE_OLYMPIAD_GAME_HAS_ENDED);
+			Announcements.getInstance().announceToAll(new SystemMessage(SystemMessage.THE_OLYMPIAD_GAME_HAS_ENDED));
 			_log.info("Olympiad System: Olympiad Game Ended");
 			OlympiadDatabase.save();
 		}

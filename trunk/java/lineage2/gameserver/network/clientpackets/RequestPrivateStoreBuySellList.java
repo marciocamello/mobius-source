@@ -16,11 +16,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lineage2.commons.math.SafeMath;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.TradeItem;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.TradeHelper;
@@ -99,7 +99,7 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 		
 		if (seller.isInStoreMode())
 		{
-			seller.sendPacket(Msg.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+			seller.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
@@ -111,13 +111,13 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 		
 		if (seller.isFishing())
 		{
-			seller.sendPacket(Msg.YOU_CANNOT_DO_ANYTHING_ELSE_WHILE_FISHING);
+			seller.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DO_ANYTHING_ELSE_WHILE_FISHING));
 			return;
 		}
 		
 		if (!seller.getPlayerAccess().UseTrade)
 		{
-			seller.sendPacket(Msg.THIS_ACCOUNT_CANOT_USE_PRIVATE_STORES);
+			seller.sendPacket(new SystemMessage(SystemMessage.THIS_ACCOUNT_CANOT_USE_PRIVATE_STORES));
 			return;
 		}
 		
@@ -125,7 +125,7 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 		
 		if ((buyer == null) || (buyer.getPrivateStoreType() != Player.STORE_PRIVATE_BUY) || !seller.isInRangeZ(buyer, Creature.INTERACTION_DISTANCE))
 		{
-			seller.sendPacket(Msg.THE_ATTEMPT_TO_SELL_HAS_FAILED);
+			seller.sendPacket(new SystemMessage(SystemMessage.THE_ATTEMPT_TO_SELL_HAS_FAILED));
 			seller.sendActionFailed();
 			return;
 		}
@@ -134,7 +134,7 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 		
 		if (buyList.isEmpty())
 		{
-			seller.sendPacket(Msg.THE_ATTEMPT_TO_SELL_HAS_FAILED);
+			seller.sendPacket(new SystemMessage(SystemMessage.THE_ATTEMPT_TO_SELL_HAS_FAILED));
 			seller.sendActionFailed();
 			return;
 		}
@@ -198,7 +198,7 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 		catch (ArithmeticException ae)
 		{
 			sellList.clear();
-			sendPacket(Msg.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
+			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 			return;
 		}
 		finally
@@ -207,31 +207,31 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 			{
 				if (sellList.size() != _count)
 				{
-					seller.sendPacket(Msg.THE_ATTEMPT_TO_SELL_HAS_FAILED);
+					seller.sendPacket(new SystemMessage(SystemMessage.THE_ATTEMPT_TO_SELL_HAS_FAILED));
 					seller.sendActionFailed();
 					return;
 				}
 				
 				if (!buyer.getInventory().validateWeight(weight))
 				{
-					buyer.sendPacket(Msg.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
-					seller.sendPacket(Msg.THE_ATTEMPT_TO_SELL_HAS_FAILED);
+					buyer.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
+					seller.sendPacket(new SystemMessage(SystemMessage.THE_ATTEMPT_TO_SELL_HAS_FAILED));
 					seller.sendActionFailed();
 					return;
 				}
 				
 				if (!buyer.getInventory().validateCapacity(slots))
 				{
-					buyer.sendPacket(Msg.YOUR_INVENTORY_IS_FULL);
-					seller.sendPacket(Msg.THE_ATTEMPT_TO_SELL_HAS_FAILED);
+					buyer.sendPacket(new SystemMessage(SystemMessage.YOUR_INVENTORY_IS_FULL));
+					seller.sendPacket(new SystemMessage(SystemMessage.THE_ATTEMPT_TO_SELL_HAS_FAILED));
 					seller.sendActionFailed();
 					return;
 				}
 				
 				if (!buyer.reduceAdena(totalCost))
 				{
-					buyer.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
-					seller.sendPacket(Msg.THE_ATTEMPT_TO_SELL_HAS_FAILED);
+					buyer.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+					seller.sendPacket(new SystemMessage(SystemMessage.THE_ATTEMPT_TO_SELL_HAS_FAILED));
 					seller.sendActionFailed();
 					return;
 				}

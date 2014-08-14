@@ -24,7 +24,6 @@ import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.instancemanager.CursedWeaponsManager;
 import lineage2.gameserver.model.AggroList.HateInfo;
 import lineage2.gameserver.model.Creature;
@@ -1133,7 +1132,7 @@ public class MonsterInstance extends NpcInstance
 		if ((xp > 0) && (killer.getObjectId() == overhitAttackerId))
 		{
 			int overHitExp = calculateOverhitExp(xp);
-			killer.sendPacket(Msg.OVER_HIT, new SystemMessage(SystemMessage.ACQUIRED_S1_BONUS_EXPERIENCE_THROUGH_OVER_HIT).addNumber(overHitExp));
+			killer.sendPacket(new SystemMessage(SystemMessage.OVER_HIT), new SystemMessage(SystemMessage.ACQUIRED_S1_BONUS_EXPERIENCE_THROUGH_OVER_HIT).addNumber(overHitExp));
 			xp += overHitExp;
 		}
 		

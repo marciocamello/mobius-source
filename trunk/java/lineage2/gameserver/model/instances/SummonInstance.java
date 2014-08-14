@@ -17,7 +17,6 @@ import java.util.concurrent.Future;
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
@@ -163,7 +162,7 @@ public class SummonInstance extends Summon
 			
 			if (_lifetimeCountdown <= 0)
 			{
-				owner.sendPacket(Msg.SERVITOR_DISAPPEASR_BECAUSE_THE_SUMMONING_TIME_IS_OVER);
+				owner.sendPacket(new SystemMessage(SystemMessage.SERVITOR_DISAPPEASR_BECAUSE_THE_SUMMONING_TIME_IS_OVER));
 				_disappearTask = null;
 				unSummon();
 				return;

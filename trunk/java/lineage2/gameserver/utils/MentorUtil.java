@@ -15,7 +15,6 @@ package lineage2.gameserver.utils;
 import java.util.HashMap;
 import java.util.Map;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.database.mysql;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.MenteeInfo;
@@ -25,6 +24,7 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.mail.Mail;
 import lineage2.gameserver.network.serverpackets.ExNoticePostArrived;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.skills.effects.EffectTemplate;
 import lineage2.gameserver.stats.Env;
@@ -305,7 +305,7 @@ public class MentorUtil
 		mail.setExpireTime((720 * 3600) + (int) (System.currentTimeMillis() / 1000L));
 		mail.save();
 		newMentee.sendPacket(ExNoticePostArrived.STATIC_TRUE);
-		newMentee.sendPacket(Msg.THE_MAIL_HAS_ARRIVED);
+		newMentee.sendPacket(new SystemMessage(SystemMessage.THE_MAIL_HAS_ARRIVED));
 	}
 	
 	public static void sendMentorMail(Player receiver, String mentee, Map<Integer, Long> items)
@@ -351,7 +351,7 @@ public class MentorUtil
 		mail.setExpireTime((720 * 3600) + (int) (System.currentTimeMillis() / 1000L));
 		mail.save();
 		receiver.sendPacket(ExNoticePostArrived.STATIC_TRUE);
-		receiver.sendPacket(Msg.THE_MAIL_HAS_ARRIVED);
+		receiver.sendPacket(new SystemMessage(SystemMessage.THE_MAIL_HAS_ARRIVED));
 	}
 	
 	public static void graduateMenteeMail(Player newMentee)
@@ -378,6 +378,6 @@ public class MentorUtil
 		mail.setExpireTime((720 * 3600) + (int) (System.currentTimeMillis() / 1000L));
 		mail.save();
 		newMentee.sendPacket(ExNoticePostArrived.STATIC_TRUE);
-		newMentee.sendPacket(Msg.THE_MAIL_HAS_ARRIVED);
+		newMentee.sendPacket(new SystemMessage(SystemMessage.THE_MAIL_HAS_ARRIVED));
 	}
 }

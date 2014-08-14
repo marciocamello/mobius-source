@@ -13,9 +13,9 @@
 package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.utils.Location;
 
@@ -73,7 +73,7 @@ public class RequestDropItem extends L2GameClientPacket
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(Msg.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
@@ -91,13 +91,13 @@ public class RequestDropItem extends L2GameClientPacket
 		
 		if (activeChar.isFishing())
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_DO_THAT_WHILE_FISHING);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DO_THAT_WHILE_FISHING));
 			return;
 		}
 		
 		if (!activeChar.isInRangeSq(_loc, 22500) || (Math.abs(_loc.z - activeChar.getZ()) > 50))
 		{
-			activeChar.sendPacket(Msg.THAT_IS_TOO_FAR_FROM_YOU_TO_DISCARD);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.THAT_IS_TOO_FAR_FROM_YOU_TO_DISCARD));
 			return;
 		}
 		
@@ -111,7 +111,7 @@ public class RequestDropItem extends L2GameClientPacket
 		
 		if (!item.canBeDropped(activeChar, false))
 		{
-			activeChar.sendPacket(Msg.THAT_ITEM_CANNOT_BE_DISCARDED);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.THAT_ITEM_CANNOT_BE_DISCARDED));
 			return;
 		}
 		

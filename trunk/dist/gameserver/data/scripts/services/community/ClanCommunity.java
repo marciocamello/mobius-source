@@ -24,7 +24,6 @@ import java.util.StringTokenizer;
 
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.handler.bbs.CommunityBoardManager;
@@ -577,7 +576,7 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 			
 			if ((arg3 == null) || (arg4 == null))
 			{
-				player.sendPacket(Msg.THE_MESSAGE_WAS_NOT_SENT);
+				player.sendPacket(new SystemMessage(SystemMessage.THE_MESSAGE_WAS_NOT_SENT));
 				onBypassCommand(player, "_clbbsclan_" + player.getClanId());
 				return;
 			}
@@ -593,7 +592,7 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 			
 			if (arg3.isEmpty() || arg4.isEmpty())
 			{
-				player.sendPacket(Msg.THE_MESSAGE_WAS_NOT_SENT);
+				player.sendPacket(new SystemMessage(SystemMessage.THE_MESSAGE_WAS_NOT_SENT));
 				onBypassCommand(player, "_clbbsclan_" + player.getClanId());
 				return;
 			}
@@ -641,7 +640,7 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 			}
 			catch (Exception e)
 			{
-				player.sendPacket(Msg.THE_MESSAGE_WAS_NOT_SENT);
+				player.sendPacket(new SystemMessage(SystemMessage.THE_MESSAGE_WAS_NOT_SENT));
 				onBypassCommand(player, "_clbbsclan_" + player.getClanId());
 				return;
 			}
@@ -649,11 +648,11 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 			{
 				DbUtils.closeQuietly(con, statement);
 			}
-			player.sendPacket(Msg.YOUVE_SENT_MAIL);
+			player.sendPacket(new SystemMessage(SystemMessage.YOUVE_SENT_MAIL));
 			
 			for (Player member : clan.getOnlineMembers(0))
 			{
-				member.sendPacket(Msg.YOUVE_GOT_MAIL);
+				member.sendPacket(new SystemMessage(SystemMessage.YOUVE_GOT_MAIL));
 				member.sendPacket(ExMailArrived.STATIC);
 			}
 			
@@ -724,7 +723,7 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 				clan.setNotice("");
 			}
 			
-			player.sendPacket(Msg.NOTICE_HAS_BEEN_SAVED);
+			player.sendPacket(new SystemMessage(SystemMessage.NOTICE_HAS_BEEN_SAVED));
 			onBypassCommand(player, "_announcepledgewriteform");
 		}
 	}

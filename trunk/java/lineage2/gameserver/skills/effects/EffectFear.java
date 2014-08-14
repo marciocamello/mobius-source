@@ -13,12 +13,12 @@
 package lineage2.gameserver.skills.effects;
 
 import lineage2.gameserver.ai.CtrlIntention;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.instances.SummonInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.utils.PositionUtils;
@@ -69,7 +69,7 @@ public final class EffectFear extends Effect
 		
 		if (_effected.isInZonePeace())
 		{
-			getEffector().sendPacket(Msg.YOU_MAY_NOT_ATTACK_IN_A_PEACEFUL_ZONE);
+			getEffector().sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_ATTACK_IN_A_PEACEFUL_ZONE));
 			return false;
 		}
 		

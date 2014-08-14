@@ -14,7 +14,6 @@ package lineage2.gameserver.stats;
 
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
@@ -179,14 +178,14 @@ public class Formulas
 					{
 						info.lethal = true;
 						info.lethal_dmg = target.getCurrentCp();
-						target.sendPacket(Msg.CP_DISAPPEARS_WHEN_HIT_WITH_A_HALF_KILL_SKILL);
+						target.sendPacket(new SystemMessage(SystemMessage.CP_DISAPPEARS_WHEN_HIT_WITH_A_HALF_KILL_SKILL));
 					}
 					else
 					{
 						info.lethal_dmg = target.getCurrentHp() / 2;
 					}
 					
-					attacker.sendPacket(Msg.HALF_KILL);
+					attacker.sendPacket(new SystemMessage(SystemMessage.HALF_KILL));
 				}
 				else if (Rnd.chance(info.lethal2))
 				{
@@ -393,7 +392,7 @@ public class Formulas
 					{
 						info.lethal = true;
 						info.lethal_dmg = target.getCurrentCp();
-						target.sendPacket(Msg.CP_DISAPPEARS_WHEN_HIT_WITH_A_HALF_KILL_SKILL);
+						target.sendPacket(new SystemMessage(SystemMessage.CP_DISAPPEARS_WHEN_HIT_WITH_A_HALF_KILL_SKILL));
 					}
 					else if (target.isLethalImmune())
 					{
@@ -404,7 +403,7 @@ public class Formulas
 						info.lethal_dmg = target.getCurrentHp() / 2;
 					}
 					
-					attacker.sendPacket(Msg.HALF_KILL);
+					attacker.sendPacket(new SystemMessage(SystemMessage.HALF_KILL));
 				}
 				else if (Rnd.chance(info.lethal2))
 				{
@@ -508,7 +507,7 @@ public class Formulas
 			{
 				info.lethal = true;
 				info.lethal_dmg = target.getCurrentCp();
-				target.sendPacket(Msg.CP_DISAPPEARS_WHEN_HIT_WITH_A_HALF_KILL_SKILL);
+				target.sendPacket(new SystemMessage(SystemMessage.CP_DISAPPEARS_WHEN_HIT_WITH_A_HALF_KILL_SKILL));
 			}
 			else if (!target.isLethalImmune())
 			{
@@ -520,7 +519,7 @@ public class Formulas
 				power *= 2;
 			}
 			
-			attacker.sendPacket(Msg.HALF_KILL);
+			attacker.sendPacket(new SystemMessage(SystemMessage.HALF_KILL));
 		}
 		else if (Rnd.chance(skill.getLethal2()))
 		{

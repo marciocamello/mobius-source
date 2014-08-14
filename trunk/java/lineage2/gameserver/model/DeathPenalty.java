@@ -15,7 +15,6 @@ package lineage2.gameserver.model;
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.tables.SkillTable;
@@ -261,7 +260,7 @@ public class DeathPenalty
 		}
 		else
 		{
-			player.sendPacket(Msg.THE_DEATH_PENALTY_HAS_BEEN_LIFTED);
+			player.sendPacket(new SystemMessage(SystemMessage.THE_SHILENS_BREATH_HAS_BEEN_LIFTED));
 		}
 		
 		player.updateStats();

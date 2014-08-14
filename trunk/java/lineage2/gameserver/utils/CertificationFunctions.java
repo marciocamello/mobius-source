@@ -18,7 +18,6 @@ import java.util.HashMap;
 import java.util.List;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.dao.CharacterSubclassDAO;
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
 import lineage2.gameserver.model.Player;
@@ -28,6 +27,7 @@ import lineage2.gameserver.model.SubClass;
 import lineage2.gameserver.model.base.AcquireType;
 import lineage2.gameserver.model.base.SubClassType;
 import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 
@@ -180,7 +180,7 @@ public class CertificationFunctions
 		
 		if (player.getInventory().getAdena() < adenaCost)
 		{
-			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			return;
 		}
 		

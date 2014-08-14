@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lineage2.commons.dao.JdbcEntityState;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.dao.CharacterDAO;
 import lineage2.gameserver.data.xml.holder.ProductHolder;
 import lineage2.gameserver.database.mysql;
@@ -132,7 +131,7 @@ public class RequestBR_PresentBuyProduct extends L2GameClientPacket
 		
 		if (recieverId == 0)
 		{
-			activeChar.sendPacket(Msg.WHEN_THE_RECIPIENT_DOESN_T_EXIST_OR_THE_CHARACTER_HAS_BEEN_DELETED_SENDING_MAIL_IS_NOT_POSSIBLE);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.WHEN_THE_RECIPIENT_DOESN_T_EXIST_OR_THE_CHARACTER_HAS_BEEN_DELETED_SENDING_MAIL_IS_NOT_POSSIBLE));
 			return;
 		}
 		
@@ -184,7 +183,7 @@ public class RequestBR_PresentBuyProduct extends L2GameClientPacket
 		if (target != null)
 		{
 			target.sendPacket(ExNoticePostArrived.STATIC_TRUE);
-			target.sendPacket(Msg.THE_MAIL_HAS_ARRIVED);
+			target.sendPacket(new SystemMessage(SystemMessage.THE_MAIL_HAS_ARRIVED));
 		}
 	}
 }

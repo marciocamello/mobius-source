@@ -21,7 +21,6 @@ import java.util.Set;
 import java.util.StringTokenizer;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.database.mysql;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.GameObject;
@@ -33,6 +32,7 @@ import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExPCCafePointInfo;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.HtmlUtils;
@@ -506,7 +506,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				
 				if ((transformId != 0) && (activeChar.getTransformation() != 0))
 				{
-					activeChar.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
 					return false;
 				}
 				
@@ -524,7 +524,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			
 			if ((target == null) || !target.isPlayer())
 			{
-				activeChar.sendPacket(Msg.SELECT_TARGET);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.SELECT_TARGET));
 				return false;
 			}
 			
@@ -542,7 +542,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					return false;
 				}
 				
-				player.sendPacket(Msg.CONGRATULATIONS_YOU_HAVE_TRANSFERRED_TO_A_NEW_CLASS);
+				player.sendPacket(new SystemMessage(SystemMessage.CONGRATULATIONS_YOU_HAVE_TRANSFERRED_TO_A_NEW_CLASS));
 			}
 			else
 			{
@@ -861,7 +861,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		if (target == null)
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		
@@ -900,7 +900,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		if (target == null)
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		
@@ -939,7 +939,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		if ((target == null) || !target.isPlayer())
 		{
-			activeChar.sendPacket(Msg.SELECT_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.SELECT_TARGET));
 			return;
 		}
 		
@@ -999,7 +999,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		if ((target == null) || !target.isPlayer())
 		{
-			activeChar.sendPacket(Msg.SELECT_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.SELECT_TARGET));
 			return;
 		}
 		
@@ -1145,7 +1145,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		
@@ -1196,13 +1196,13 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		if (target == null)
 		{
-			activeChar.sendPacket(Msg.SELECT_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.SELECT_TARGET));
 			return;
 		}
 		
 		if (!target.isPlayable())
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		

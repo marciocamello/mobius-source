@@ -12,11 +12,11 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.model.items.ItemInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.templates.item.ItemTemplate;
@@ -63,7 +63,7 @@ public class RequestDestroyItem extends L2GameClientPacket
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(Msg.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
@@ -75,7 +75,7 @@ public class RequestDestroyItem extends L2GameClientPacket
 		
 		if (activeChar.isFishing())
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_DO_THAT_WHILE_FISHING);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DO_THAT_WHILE_FISHING));
 			return;
 		}
 		
@@ -90,13 +90,13 @@ public class RequestDestroyItem extends L2GameClientPacket
 		
 		if (count < 1)
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_DESTROY_IT_BECAUSE_THE_NUMBER_IS_INCORRECT);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DESTROY_IT_BECAUSE_THE_NUMBER_IS_INCORRECT));
 			return;
 		}
 		
 		if (!activeChar.isGM() && item.isHeroWeapon())
 		{
-			activeChar.sendPacket(Msg.HERO_WEAPONS_CANNOT_BE_DESTROYED);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.HERO_WEAPONS_CANNOT_BE_DESTROYED));
 			return;
 		}
 		
@@ -104,13 +104,13 @@ public class RequestDestroyItem extends L2GameClientPacket
 		
 		if ((pet != null) && (pet.getControlItemObjId() == item.getObjectId()))
 		{
-			activeChar.sendPacket(Msg.THE_PET_HAS_BEEN_SUMMONED_AND_CANNOT_BE_DELETED);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.THE_PET_HAS_BEEN_SUMMONED_AND_CANNOT_BE_DELETED));
 			return;
 		}
 		
 		if (!activeChar.isGM() && !item.canBeDestroyed(activeChar))
 		{
-			activeChar.sendPacket(Msg.THIS_ITEM_CANNOT_BE_DISCARDED);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_ITEM_CANNOT_BE_DISCARDED));
 			return;
 		}
 		
@@ -148,7 +148,7 @@ public class RequestDestroyItem extends L2GameClientPacket
 		
 		if (crystallize)
 		{
-			activeChar.sendPacket(Msg.THE_ITEM_HAS_BEEN_SUCCESSFULLY_CRYSTALLIZED);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.THE_ITEM_HAS_BEEN_SUCCESSFULLY_CRYSTALLIZED));
 			ItemFunctions.addItem(activeChar, crystalId, crystalAmount, true);
 		}
 		else

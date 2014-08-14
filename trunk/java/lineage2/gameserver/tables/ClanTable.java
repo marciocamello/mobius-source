@@ -23,7 +23,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.idfactory.IdFactory;
 import lineage2.gameserver.model.GameObjectsStorage;
@@ -381,7 +380,7 @@ public class ClanTable
 		{
 			clanMember.setClan(null);
 			clanMember.setTitle(null);
-			clanMember.sendPacket(PledgeShowMemberListDeleteAll.STATIC, Msg.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS);
+			clanMember.sendPacket(PledgeShowMemberListDeleteAll.STATIC, new SystemMessage(SystemMessage.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS));
 			clanMember.broadcastCharInfo();
 			clanMember.setLeaveClanTime(curtime);
 		}
@@ -389,7 +388,7 @@ public class ClanTable
 		clan.flush();
 		deleteClanFromDb(clan.getClanId());
 		_clans.remove(clan.getClanId());
-		player.sendPacket(Msg.CLAN_HAS_DISPERSED);
+		player.sendPacket(new SystemMessage(SystemMessage.CLAN_HAS_DISPERSED));
 		player.setDeleteClanTime(curtime);
 	}
 	
@@ -476,13 +475,13 @@ public class ClanTable
 		{
 			member.setAllyId(0);
 			member.broadcastClanStatus(false, true, false);
-			member.broadcastToOnlineMembers(Msg.YOU_HAVE_WITHDRAWN_FROM_THE_ALLIANCE);
+			member.broadcastToOnlineMembers(new SystemMessage(SystemMessage.YOU_HAVE_WITHDRAWN_FROM_THE_ALLIANCE));
 			member.setLeavedAlly();
 		}
 		
 		deleteAllyFromDb(allyId);
 		_alliances.remove(allyId);
-		player.sendPacket(Msg.THE_ALLIANCE_HAS_BEEN_DISSOLVED);
+		player.sendPacket(new SystemMessage(SystemMessage.THE_ALLIANCE_HAS_BEEN_DISSOLVED));
 		player.getClan().setDissolvedAlly();
 	}
 	

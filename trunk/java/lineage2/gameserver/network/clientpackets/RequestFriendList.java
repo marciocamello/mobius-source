@@ -14,7 +14,6 @@ package lineage2.gameserver.network.clientpackets;
 
 import java.util.Map;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.actor.instances.player.Friend;
@@ -47,7 +46,7 @@ public class RequestFriendList extends L2GameClientPacket
 			return;
 		}
 		
-		activeChar.sendPacket(Msg._FRIENDS_LIST_);
+		activeChar.sendPacket(new SystemMessage(SystemMessage._FRIENDS_LIST_));
 		Map<Integer, Friend> _list = activeChar.getFriendList().getList();
 		
 		for (Map.Entry<Integer, Friend> entry : _list.entrySet())
@@ -64,6 +63,6 @@ public class RequestFriendList extends L2GameClientPacket
 			}
 		}
 		
-		activeChar.sendPacket(Msg.__EQUALS__);
+		activeChar.sendPacket(new SystemMessage(SystemMessage.__EQUALS__));
 	}
 }

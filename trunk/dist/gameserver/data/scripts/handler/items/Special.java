@@ -12,7 +12,6 @@
  */
 package handler.items;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.instancemanager.QuestManager;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.GameObject;
@@ -191,7 +190,7 @@ public final class Special extends SimpleItemHandler
 	{
 		if (!player.isInZone(ZoneType.mother_tree))
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 			return false;
 		}
 		
@@ -237,7 +236,7 @@ public final class Special extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.INVALID_TARGET);
+			player.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return false;
 		}
 		
@@ -274,7 +273,7 @@ public final class Special extends SimpleItemHandler
 			return false;
 		}
 		
-		player.sendPacket(Msg.INVALID_TARGET);
+		player.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 		return false;
 	}
 	

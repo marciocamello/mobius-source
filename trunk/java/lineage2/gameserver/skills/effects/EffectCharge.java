@@ -12,9 +12,9 @@
  */
 package lineage2.gameserver.skills.effects;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.stats.Env;
 
 /**
@@ -47,7 +47,7 @@ public final class EffectCharge extends Effect
 			
 			if (player.getIncreasedForce() >= calc())
 			{
-				player.sendPacket(Msg.YOUR_FORCE_HAS_REACHED_MAXIMUM_CAPACITY_);
+				player.sendPacket(new SystemMessage(SystemMessage.YOUR_FORCE_HAS_REACHED_MAXIMUM_CAPACITY_));
 			}
 			else
 			{

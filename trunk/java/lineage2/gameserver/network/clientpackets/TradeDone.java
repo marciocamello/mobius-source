@@ -15,7 +15,6 @@ package lineage2.gameserver.network.clientpackets;
 import java.util.List;
 
 import lineage2.commons.math.SafeMath;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Request;
@@ -87,7 +86,7 @@ public class TradeDone extends L2GameClientPacket
 		{
 			request.cancel();
 			parthner1.sendPacket(SendTradeDone.FAIL);
-			parthner1.sendPacket(Msg.THAT_PLAYER_IS_NOT_ONLINE);
+			parthner1.sendPacket(new SystemMessage(SystemMessage.THAT_PLAYER_IS_NOT_ONLINE));
 			parthner1.sendActionFailed();
 			return;
 		}
@@ -110,7 +109,7 @@ public class TradeDone extends L2GameClientPacket
 		
 		if (!parthner1.isInRangeZ(parthner2, Creature.INTERACTION_DISTANCE))
 		{
-			parthner1.sendPacket(Msg.YOUR_TARGET_IS_OUT_OF_RANGE);
+			parthner1.sendPacket(new SystemMessage(SystemMessage.YOUR_TARGET_IS_OUT_OF_RANGE));
 			return;
 		}
 		
@@ -155,13 +154,13 @@ public class TradeDone extends L2GameClientPacket
 			
 			if (!parthner2.getInventory().validateWeight(weight))
 			{
-				parthner2.sendPacket(Msg.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
+				parthner2.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
 				return;
 			}
 			
 			if (!parthner2.getInventory().validateCapacity(slots))
 			{
-				parthner2.sendPacket(Msg.YOUR_INVENTORY_IS_FULL);
+				parthner2.sendPacket(new SystemMessage(SystemMessage.YOUR_INVENTORY_IS_FULL));
 				return;
 			}
 			
@@ -187,13 +186,13 @@ public class TradeDone extends L2GameClientPacket
 			
 			if (!parthner1.getInventory().validateWeight(weight))
 			{
-				parthner1.sendPacket(Msg.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
+				parthner1.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
 				return;
 			}
 			
 			if (!parthner1.getInventory().validateCapacity(slots))
 			{
-				parthner1.sendPacket(Msg.YOUR_INVENTORY_IS_FULL);
+				parthner1.sendPacket(new SystemMessage(SystemMessage.YOUR_INVENTORY_IS_FULL));
 				return;
 			}
 			
@@ -213,8 +212,8 @@ public class TradeDone extends L2GameClientPacket
 				parthner1.getInventory().addItem(item);
 			}
 			
-			parthner1.sendPacket(Msg.YOUR_TRADE_IS_SUCCESSFUL);
-			parthner2.sendPacket(Msg.YOUR_TRADE_IS_SUCCESSFUL);
+			parthner1.sendPacket(new SystemMessage(SystemMessage.YOUR_TRADE_IS_SUCCESSFUL));
+			parthner2.sendPacket(new SystemMessage(SystemMessage.YOUR_TRADE_IS_SUCCESSFUL));
 			success = true;
 		}
 		finally

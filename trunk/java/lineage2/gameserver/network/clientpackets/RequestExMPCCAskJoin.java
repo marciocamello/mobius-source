@@ -12,7 +12,6 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.CommandChannel;
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
@@ -60,13 +59,13 @@ public class RequestExMPCCAskJoin extends L2GameClientPacket
 		
 		if (activeChar.isProcessingRequest())
 		{
-			activeChar.sendPacket(Msg.WAITING_FOR_ANOTHER_REPLY);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.WAITING_FOR_ANOTHER_REPLY));
 			return;
 		}
 		
 		if (!activeChar.isInParty())
 		{
-			activeChar.sendPacket(Msg.YOU_DO_NOT_HAVE_AUTHORITY_TO_INVITE_SOMEONE_TO_THE_COMMAND_CHANNEL);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_AUTHORITY_TO_INVITE_SOMEONE_TO_THE_COMMAND_CHANNEL));
 			return;
 		}
 		
@@ -74,13 +73,13 @@ public class RequestExMPCCAskJoin extends L2GameClientPacket
 		
 		if (target == null)
 		{
-			activeChar.sendPacket(Msg.THAT_PLAYER_IS_NOT_CURRENTLY_ONLINE);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.THAT_PLAYER_IS_NOT_CURRENTLY_ONLINE));
 			return;
 		}
 		
 		if ((activeChar == target) || !target.isInParty() || (activeChar.getParty() == target.getParty()))
 		{
-			activeChar.sendPacket(Msg.YOU_HAVE_INVITED_WRONG_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_INVITED_WRONG_TARGET));
 			return;
 		}
 		
@@ -91,7 +90,7 @@ public class RequestExMPCCAskJoin extends L2GameClientPacket
 		
 		if (target == null)
 		{
-			activeChar.sendPacket(Msg.THAT_PLAYER_IS_NOT_CURRENTLY_ONLINE);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.THAT_PLAYER_IS_NOT_CURRENTLY_ONLINE));
 			return;
 		}
 		
@@ -113,7 +112,7 @@ public class RequestExMPCCAskJoin extends L2GameClientPacket
 		{
 			if (activeParty.getCommandChannel().getChannelLeader() != activeChar)
 			{
-				activeChar.sendPacket(Msg.YOU_DO_NOT_HAVE_AUTHORITY_TO_INVITE_SOMEONE_TO_THE_COMMAND_CHANNEL);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_AUTHORITY_TO_INVITE_SOMEONE_TO_THE_COMMAND_CHANNEL));
 				return;
 			}
 			

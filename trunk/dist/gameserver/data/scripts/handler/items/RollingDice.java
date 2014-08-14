@@ -13,7 +13,6 @@
 package handler.items;
 
 import lineage2.commons.util.Rnd;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
@@ -55,13 +54,13 @@ public final class RollingDice extends ScriptItemHandler
 		
 		if (player.isInOlympiadMode())
 		{
-			player.sendPacket(Msg.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+			player.sendPacket(new SystemMessage(SystemMessage.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
 			return false;
 		}
 		
 		if (player.isSitting())
 		{
-			player.sendPacket(Msg.YOU_CANNOT_MOVE_WHILE_SITTING);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOVE_WHILE_SITTING));
 			return false;
 		}
 		
@@ -69,7 +68,7 @@ public final class RollingDice extends ScriptItemHandler
 		
 		if (number == 0)
 		{
-			player.sendPacket(Msg.YOU_MAY_NOT_THROW_THE_DICE_AT_THIS_TIMETRY_AGAIN_LATER);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_THROW_THE_DICE_AT_THIS_TIMETRY_AGAIN_LATER));
 			return false;
 		}
 		

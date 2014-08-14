@@ -18,7 +18,6 @@ import java.util.List;
 import lineage2.commons.math.SafeMath;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.data.xml.holder.MultiSellHolder;
 import lineage2.gameserver.data.xml.holder.MultiSellHolder.MultiSellListContainer;
@@ -162,7 +161,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(Msg.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
@@ -174,7 +173,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 		
 		if (activeChar.isFishing())
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_DO_THAT_WHILE_FISHING);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DO_THAT_WHILE_FISHING));
 			return;
 		}
 		
@@ -240,14 +239,14 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 			
 			if (!inventory.validateWeight(weight))
 			{
-				activeChar.sendPacket(Msg.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
 				activeChar.sendActionFailed();
 				return;
 			}
 			
 			if (!inventory.validateCapacity(slots))
 			{
-				activeChar.sendPacket(Msg.YOUR_INVENTORY_IS_FULL);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.YOUR_INVENTORY_IS_FULL));
 				activeChar.sendActionFailed();
 				return;
 			}
@@ -270,13 +269,13 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 				{
 					if (activeChar.getClan() == null)
 					{
-						activeChar.sendPacket(Msg.YOU_ARE_NOT_A_CLAN_MEMBER);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_A_CLAN_MEMBER));
 						return;
 					}
 					
 					if (activeChar.getClan().getReputationScore() < totalAmount)
 					{
-						activeChar.sendPacket(Msg.THE_CLAN_REPUTATION_SCORE_IS_TOO_LOW);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.THE_CLAN_REPUTATION_SCORE_IS_TOO_LOW));
 						return;
 					}
 					
@@ -295,7 +294,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 				{
 					if (activeChar.getPcBangPoints() < totalAmount)
 					{
-						activeChar.sendPacket(Msg.YOU_ARE_SHORT_OF_ACCUMULATED_POINTS);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_SHORT_OF_ACCUMULATED_POINTS));
 						return;
 					}
 					
@@ -308,7 +307,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 				{
 					if (activeChar.getFame() < totalAmount)
 					{
-						activeChar.sendPacket(Msg.NOT_ENOUGH_FAME_POINTS);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_FAME_POINTS));
 						return;
 					}
 					
@@ -344,7 +343,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 								
 								if (itemToTake == null)
 								{
-									activeChar.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
+									activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 									return;
 								}
 								
@@ -372,7 +371,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 								
 								if (itemToTake == null)
 								{
-									activeChar.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
+									activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 									return;
 								}
 								
@@ -394,7 +393,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 						
 						if ((item == null) || (item.getCount() < totalAmount))
 						{
-							activeChar.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
+							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 							return;
 						}
 						
@@ -407,7 +406,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 				
 				if (activeChar.getAdena() < totalPrice)
 				{
-					activeChar.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 					return;
 				}
 			}
@@ -593,7 +592,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 		}
 		catch (ArithmeticException ae)
 		{
-			sendPacket(Msg.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
+			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 			return;
 		}
 		finally

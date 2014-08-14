@@ -14,10 +14,10 @@ package lineage2.gameserver.model.instances;
 
 import java.util.StringTokenizer;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.PledgeShowInfoUpdate;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
 /**
@@ -93,7 +93,7 @@ public class FameManagerInstance extends NpcInstance
 				player.setFame(player.getFame() - 1000, "CRP");
 				player.getClan().incReputation(50, false, "FameManager from " + player.getName());
 				player.getClan().broadcastToOnlineMembers(new PledgeShowInfoUpdate(player.getClan()));
-				player.sendPacket(Msg.ACQUIRED_50_CLAN_FAME_POINTS);
+				player.sendPacket(new SystemMessage(SystemMessage.ACQUIRED_50_CLAN_FAME_POINTS));
 				html.setFile("default/" + getNpcId() + "-okclancrp.htm");
 			}
 			

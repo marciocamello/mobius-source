@@ -12,13 +12,13 @@
  */
 package lineage2.gameserver.handler.admincommands.impl;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Spawner;
 import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.tables.CustomSpawnTable;
 
 import org.apache.commons.lang3.math.NumberUtils;
@@ -43,7 +43,7 @@ public class AdminDelete implements IAdminCommandHandler
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
-	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 * @return boolean
 	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
@@ -75,7 +75,7 @@ public class AdminDelete implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendPacket(Msg.INVALID_TARGET);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 				}
 				
 				break;
@@ -86,7 +86,8 @@ public class AdminDelete implements IAdminCommandHandler
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return Enum[]
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
 	 */
 	@Override
 	public Enum<?>[] getAdminCommandEnum()

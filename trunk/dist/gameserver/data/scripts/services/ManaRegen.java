@@ -12,7 +12,6 @@
  */
 package services;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.Functions;
@@ -37,7 +36,7 @@ public final class ManaRegen extends Functions
 		
 		if (fullCost <= 0)
 		{
-			player.sendPacket(Msg.NOTHING_HAPPENED);
+			player.sendPacket(new SystemMessage(SystemMessage.NOTHING_HAPPENED));
 			return;
 		}
 		
@@ -49,7 +48,7 @@ public final class ManaRegen extends Functions
 		}
 		else
 		{
-			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 		}
 	}
 }

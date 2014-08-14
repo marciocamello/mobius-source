@@ -21,7 +21,6 @@ import java.util.concurrent.Future;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Effect;
@@ -36,6 +35,7 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.NpcInfo;
 import lineage2.gameserver.network.serverpackets.StatusUpdate;
 import lineage2.gameserver.network.serverpackets.StatusUpdate.StatusUpdateField;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.ReflectionUtils;
@@ -232,11 +232,11 @@ public final class KashaNegate implements ScriptFile
 			switch (message)
 			{
 				case 0:
-					c.sendPacket(Msg.I_CAN_FEEL_THAT_THE_ENERGY_BEING_FLOWN_IN_THE_KASHA_S_EYE_IS_GETTING_STRONGER_RAPIDLY);
+					c.sendPacket(new SystemMessage(SystemMessage.I_CAN_FEEL_THAT_THE_ENERGY_BEING_FLOWN_IN_THE_KASHA_S_EYE_IS_GETTING_STRONGER_RAPIDLY));
 					break;
 				
 				case 1:
-					c.sendPacket(Msg.KASHA_S_EYE_PITCHES_AND_TOSSES_LIKE_IT_S_ABOUT_TO_EXPLODE);
+					c.sendPacket(new SystemMessage(SystemMessage.KASHA_S_EYE_PITCHES_AND_TOSSES_LIKE_IT_S_ABOUT_TO_EXPLODE));
 					break;
 			}
 		}
@@ -461,7 +461,7 @@ public final class KashaNegate implements ScriptFile
 							
 							if (casted && Rnd.chance(10))
 							{
-								cha.sendPacket(Msg.THE_KASHA_S_EYE_GIVES_YOU_A_STRANGE_FEELING);
+								cha.sendPacket(new SystemMessage(SystemMessage.THE_KASHA_S_EYE_GIVES_YOU_A_STRANGE_FEELING));
 							}
 						}
 					}

@@ -16,7 +16,6 @@ import java.util.List;
 
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
@@ -71,13 +70,13 @@ public class Harvesting extends Skill
 				
 				if (!monster.isSeeded())
 				{
-					activeChar.sendPacket(Msg.THE_HARVEST_FAILED_BECAUSE_THE_SEED_WAS_NOT_SOWN);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.THE_HARVEST_FAILED_BECAUSE_THE_SEED_WAS_NOT_SOWN));
 					continue;
 				}
 				
 				if (!monster.isSeeded(player))
 				{
-					activeChar.sendPacket(Msg.YOU_ARE_NOT_AUTHORIZED_TO_HARVEST);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_AUTHORIZED_TO_HARVEST));
 					continue;
 				}
 				
@@ -101,7 +100,7 @@ public class Harvesting extends Skill
 				
 				if (!Rnd.chance(SuccessRate))
 				{
-					activeChar.sendPacket(Msg.THE_HARVEST_HAS_FAILED);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.THE_HARVEST_HAS_FAILED));
 					monster.clearHarvest();
 					continue;
 				}
