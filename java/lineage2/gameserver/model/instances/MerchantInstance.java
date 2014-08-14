@@ -15,7 +15,6 @@ package lineage2.gameserver.model.instances;
 import java.util.StringTokenizer;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.data.xml.holder.BuyListHolder;
 import lineage2.gameserver.data.xml.holder.BuyListHolder.NpcTradeList;
@@ -28,6 +27,7 @@ import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.network.serverpackets.ExBuySellList;
 import lineage2.gameserver.network.serverpackets.ExGetPremiumItemList;
 import lineage2.gameserver.network.serverpackets.ShopPreviewList;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.mapregion.DomainArea;
@@ -232,7 +232,7 @@ public class MerchantInstance extends NpcInstance
 		{
 			if (player.getPremiumItemList().isEmpty())
 			{
-				player.sendPacket(Msg.THERE_ARE_NO_MORE_VITAMIN_ITEMS_TO_BE_FOUND);
+				player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_MORE_VITAMIN_ITEMS_TO_BE_FOUND));
 				return;
 			}
 			

@@ -15,7 +15,6 @@ package lineage2.gameserver.network.clientpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
@@ -73,12 +72,12 @@ public class RequestAllyInfo extends L2GameClientPacket
 		}
 		
 		List<L2GameServerPacket> packets = new ArrayList<>(7 + (5 * clancount));
-		packets.add(Msg._ALLIANCE_INFORMATION_);
+		packets.add(new SystemMessage(SystemMessage._ALLIANCE_INFORMATION_));
 		packets.add(new SystemMessage(SystemMessage.ALLIANCE_NAME_S1).addString(player.getClan().getAlliance().getAllyName()));
 		packets.add(new SystemMessage(SystemMessage.CONNECTION_S1_TOTAL_S2).addNumber(online[0]).addNumber(count[0]));
 		packets.add(new SystemMessage(SystemMessage.ALLIANCE_LEADER_S2_OF_S1).addString(leaderclan.getName()).addString(leaderclan.getLeaderName()));
 		packets.add(new SystemMessage(SystemMessage.AFFILIATED_CLANS_TOTAL_S1_CLAN_S).addNumber(clancount));
-		packets.add(Msg._CLAN_INFORMATION_);
+		packets.add(new SystemMessage(SystemMessage._CLAN_INFORMATION_));
 		
 		for (int i = 0; i < clancount; i++)
 		{
@@ -86,10 +85,10 @@ public class RequestAllyInfo extends L2GameClientPacket
 			packets.add(new SystemMessage(SystemMessage.CLAN_LEADER_S1).addString(clans[i].getLeaderName()));
 			packets.add(new SystemMessage(SystemMessage.CLAN_LEVEL_S1).addNumber(clans[i].getLevel()));
 			packets.add(new SystemMessage(SystemMessage.CONNECTION_S1_TOTAL_S2).addNumber(online[i + 1]).addNumber(count[i + 1]));
-			packets.add(Msg.__DASHES__);
+			packets.add(new SystemMessage(SystemMessage.__DASHES__));
 		}
 		
-		packets.add(Msg.__EQUALS__);
+		packets.add(new SystemMessage(SystemMessage.__EQUALS__));
 		player.sendPacket(packets);
 	}
 }

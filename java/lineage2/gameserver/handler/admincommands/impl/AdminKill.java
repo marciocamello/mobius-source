@@ -12,12 +12,12 @@
  */
 package lineage2.gameserver.handler.admincommands.impl;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 
 import org.apache.commons.lang3.math.NumberUtils;
 
@@ -42,7 +42,7 @@ public class AdminKill implements IAdminCommandHandler
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
-	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 * @return boolean
 	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
@@ -78,7 +78,8 @@ public class AdminKill implements IAdminCommandHandler
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return Enum[]
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
 	 */
 	@Override
 	public Enum<?>[] getAdminCommandEnum()
@@ -136,7 +137,7 @@ public class AdminKill implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 		}
 	}
 	
@@ -151,13 +152,13 @@ public class AdminKill implements IAdminCommandHandler
 		
 		if (obj == null)
 		{
-			activeChar.sendPacket(Msg.SELECT_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.SELECT_TARGET));
 			return;
 		}
 		
 		if (!obj.isCreature())
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		

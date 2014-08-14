@@ -15,7 +15,6 @@ package lineage2.gameserver.skills.effects;
 import java.util.ArrayList;
 import java.util.List;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.idfactory.IdFactory;
@@ -27,6 +26,7 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.instances.SymbolInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillLaunched;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
@@ -150,7 +150,7 @@ public final class EffectSymbol extends Effect
 		
 		if (mpConsume > effector.getCurrentMp())
 		{
-			effector.sendPacket(Msg.NOT_ENOUGH_MP);
+			effector.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP));
 			return false;
 		}
 		

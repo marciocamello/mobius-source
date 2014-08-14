@@ -14,9 +14,9 @@ package services;
 
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.GameStats;
@@ -407,7 +407,7 @@ public final class Roulette extends Functions
 		
 		if (player.getAdena() < bet)
 		{
-			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			show("You do not have enough adena!<br><a action=\"bypass -h scripts_services.Roulette:dialog\">Back</a>", player);
 			return;
 		}

@@ -20,7 +20,6 @@ import java.util.concurrent.ScheduledFuture;
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.InstantZoneHolder;
 import lineage2.gameserver.instancemanager.OlympiadHistoryManager;
 import lineage2.gameserver.model.Party;
@@ -33,6 +32,7 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExOlympiadUserInfo;
 import lineage2.gameserver.network.serverpackets.ExReceiveOlympiad;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
@@ -234,7 +234,7 @@ public class OlympiadGame
 		{
 			_team1.takePointsForCrash();
 			_team2.takePointsForCrash();
-			broadcastPacket(Msg.THE_GAME_HAS_BEEN_CANCELLED_BECAUSE_THE_OTHER_PARTY_ENDS_THE_GAME, true, false);
+			broadcastPacket(new SystemMessage(SystemMessage.THE_GAME_HAS_BEEN_CANCELLED_BECAUSE_THE_OTHER_PARTY_ENDS_THE_GAME), true, false);
 			return;
 		}
 		

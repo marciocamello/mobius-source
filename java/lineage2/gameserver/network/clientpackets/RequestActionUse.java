@@ -18,7 +18,6 @@ import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.ai.CtrlIntention;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
@@ -41,6 +40,7 @@ import lineage2.gameserver.network.serverpackets.PrivateStoreManageListBuy;
 import lineage2.gameserver.network.serverpackets.PrivateStoreManageListSell;
 import lineage2.gameserver.network.serverpackets.RecipeShopManageList;
 import lineage2.gameserver.network.serverpackets.SocialAction;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.tables.PetDataTable;
@@ -489,7 +489,7 @@ public class RequestActionUse extends L2GameClientPacket
 						{
 							if (activeChar.isFlying() && !activeChar.checkLandingState())
 							{
-								activeChar.sendPacket(Msg.YOU_ARE_NOT_ALLOWED_TO_DISMOUNT_AT_THIS_LOCATION, ActionFail.STATIC);
+								activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_ALLOWED_TO_DISMOUNT_AT_THIS_LOCATION), ActionFail.STATIC);
 								activeChar.sendActionFailed();
 								return;
 							}
@@ -498,47 +498,47 @@ public class RequestActionUse extends L2GameClientPacket
 						}
 						else if (activeChar.isMounted() || activeChar.isInBoat())
 						{
-							activeChar.sendPacket(Msg.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
+							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if (activeChar.isDead())
 						{
-							activeChar.sendPacket(Msg.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
+							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if (activeChar.isInDuel())
 						{
-							activeChar.sendPacket(Msg.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
+							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if (activeChar.isFishing())
 						{
-							activeChar.sendPacket(Msg.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
+							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if (activeChar.isSitting())
 						{
-							activeChar.sendPacket(Msg.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
+							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if (activeChar.isCursedWeaponEquipped())
 						{
-							activeChar.sendPacket(Msg.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
+							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if (activeChar.getActiveWeaponFlagAttachment() != null)
 						{
-							activeChar.sendPacket(Msg.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
+							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if (activeChar.isCastingNow())
 						{
-							activeChar.sendPacket(Msg.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
+							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if (activeChar.isParalyzed())
 						{
-							activeChar.sendPacket(Msg.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
+							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if ((pet == null) || activeChar.isInCombat() || pet.isInCombat())
 						{
-							activeChar.sendPacket(Msg.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
+							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if (pet.isDead())
 						{
-							activeChar.sendPacket(Msg.A_DEAD_PET_CANNOT_BE_RIDDEN);
+							activeChar.sendPacket(new SystemMessage(SystemMessage.A_DEAD_PET_CANNOT_BE_RIDDEN));
 						}
 						else if (pet.isMountable())
 						{

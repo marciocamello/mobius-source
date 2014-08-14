@@ -11,11 +11,11 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
@@ -55,7 +55,7 @@ public final class Util extends Functions
 		
 		if ((price > 0) && (player.getAdena() < price))
 		{
-			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
 		
@@ -108,7 +108,7 @@ public final class Util extends Functions
 			
 			if ((castle != null) && castle.getSiegeEvent().isInProgress())
 			{
-				player.sendPacket(Msg.YOU_CANNOT_TELEPORT_TO_A_VILLAGE_THAT_IS_IN_A_SIEGE);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_TELEPORT_TO_A_VILLAGE_THAT_IS_IN_A_SIEGE));
 				return;
 			}
 		}
@@ -153,7 +153,7 @@ public final class Util extends Functions
 		{
 			if (!player.getInventory().destroyItemByItemId(item, count))
 			{
-				player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
+				player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
 				return;
 			}
 			
@@ -258,7 +258,7 @@ public final class Util extends Functions
 		
 		if (getItemCount(player, item) < price)
 		{
-			player.sendPacket((item == 57) ? Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA : SystemMsg.INCORRECT_ITEM_COUNT);
+			player.sendPacket((item == 57) ? SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA : SystemMsg.INCORRECT_ITEM_COUNT);
 			return;
 		}
 		

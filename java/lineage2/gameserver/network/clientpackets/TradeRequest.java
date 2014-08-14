@@ -12,7 +12,6 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
@@ -62,32 +61,32 @@ public class TradeRequest extends L2GameClientPacket
 		
 		if (!activeChar.getPlayerAccess().UseTrade)
 		{
-			activeChar.sendPacket(Msg.THIS_ACCOUNT_CANOT_TRADE_ITEMS);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_ACCOUNT_CANOT_TRADE_ITEMS));
 			activeChar.sendActionFailed();
 			return;
 		}
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(Msg.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
 		if (activeChar.isFishing())
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_DO_THAT_WHILE_FISHING);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DO_THAT_WHILE_FISHING));
 			return;
 		}
 		
 		if (activeChar.isInTrade())
 		{
-			activeChar.sendPacket(Msg.YOU_ARE_ALREADY_TRADING_WITH_SOMEONE);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_ALREADY_TRADING_WITH_SOMEONE));
 			return;
 		}
 		
 		if (activeChar.isProcessingRequest())
 		{
-			activeChar.sendPacket(Msg.WAITING_FOR_ANOTHER_REPLY);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.WAITING_FOR_ANOTHER_REPLY));
 			return;
 		}
 		
@@ -117,7 +116,7 @@ public class TradeRequest extends L2GameClientPacket
 		
 		if (!activeChar.isInRangeZ(target, Creature.INTERACTION_DISTANCE))
 		{
-			activeChar.sendPacket(Msg.YOUR_TARGET_IS_OUT_OF_RANGE);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOUR_TARGET_IS_OUT_OF_RANGE));
 			return;
 		}
 		
@@ -139,7 +138,7 @@ public class TradeRequest extends L2GameClientPacket
 		
 		if (reciever.isInBlockList(activeChar))
 		{
-			activeChar.sendPacket(Msg.YOU_HAVE_BEEN_BLOCKED_FROM_THE_CONTACT_YOU_SELECTED);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_BEEN_BLOCKED_FROM_THE_CONTACT_YOU_SELECTED));
 			return;
 		}
 		

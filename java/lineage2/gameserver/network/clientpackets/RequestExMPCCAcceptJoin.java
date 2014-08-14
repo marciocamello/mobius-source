@@ -12,7 +12,6 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.CommandChannel;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Request;
@@ -78,7 +77,7 @@ public class RequestExMPCCAcceptJoin extends L2GameClientPacket
 		if (requestor == null)
 		{
 			request.cancel();
-			activeChar.sendPacket(Msg.THAT_PLAYER_IS_NOT_ONLINE);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.THAT_PLAYER_IS_NOT_ONLINE));
 			activeChar.sendActionFailed();
 			return;
 		}
@@ -100,15 +99,15 @@ public class RequestExMPCCAcceptJoin extends L2GameClientPacket
 		if (!requestor.isInParty() || !activeChar.isInParty() || activeChar.getParty().isInCommandChannel())
 		{
 			request.cancel();
-			requestor.sendPacket(Msg.NO_USER_HAS_BEEN_INVITED_TO_THE_COMMAND_CHANNEL);
+			requestor.sendPacket(new SystemMessage(SystemMessage.NO_USER_HAS_BEEN_INVITED_TO_THE_COMMAND_CHANNEL));
 			return;
 		}
 		
 		if (activeChar.isTeleporting())
 		{
 			request.cancel();
-			activeChar.sendPacket(Msg.YOU_CANNOT_JOIN_A_COMMAND_CHANNEL_WHILE_TELEPORTING);
-			requestor.sendPacket(Msg.NO_USER_HAS_BEEN_INVITED_TO_THE_COMMAND_CHANNEL);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_JOIN_A_COMMAND_CHANNEL_WHILE_TELEPORTING));
+			requestor.sendPacket(new SystemMessage(SystemMessage.NO_USER_HAS_BEEN_INVITED_TO_THE_COMMAND_CHANNEL));
 			return;
 		}
 		
@@ -139,7 +138,7 @@ public class RequestExMPCCAcceptJoin extends L2GameClientPacket
 				}
 				
 				CommandChannel channel = new CommandChannel(requestor);
-				requestor.sendPacket(Msg.THE_COMMAND_CHANNEL_HAS_BEEN_FORMED);
+				requestor.sendPacket(new SystemMessage(SystemMessage.THE_COMMAND_CHANNEL_HAS_BEEN_FORMED));
 				channel.addParty(activeChar.getParty());
 			}
 		}

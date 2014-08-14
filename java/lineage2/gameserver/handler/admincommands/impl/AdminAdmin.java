@@ -19,7 +19,6 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.instancemanager.SoDManager;
 import lineage2.gameserver.instancemanager.SoIManager;
@@ -31,6 +30,7 @@ import lineage2.gameserver.network.serverpackets.ExChangeClientEffectInfo;
 import lineage2.gameserver.network.serverpackets.ExSendUIEvent;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.PlaySound;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.stats.Stats;
 
@@ -130,7 +130,7 @@ public class AdminAdmin implements IAdminCommandHandler
 					{
 						activeChar.unsetVar("gm_silence");
 						activeChar.setMessageRefusal(false);
-						activeChar.sendPacket(Msg.MESSAGE_ACCEPTANCE_MODE);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.MESSAGE_ACCEPTANCE_MODE));
 						activeChar.sendEtcStatusUpdate();
 					}
 					else
@@ -141,7 +141,7 @@ public class AdminAdmin implements IAdminCommandHandler
 						}
 						
 						activeChar.setMessageRefusal(true);
-						activeChar.sendPacket(Msg.MESSAGE_REFUSAL_MODE);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.MESSAGE_REFUSAL_MODE));
 						activeChar.sendEtcStatusUpdate();
 					}
 					

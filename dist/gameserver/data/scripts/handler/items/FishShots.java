@@ -12,7 +12,6 @@
  */
 package handler.items;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
@@ -79,7 +78,7 @@ public final class FishShots extends ScriptItemHandler
 		{
 			if (!isAutoSoulShot)
 			{
-				player.sendPacket(Msg.CANNOT_USE_SOULSHOTS);
+				player.sendPacket(new SystemMessage(SystemMessage.CANNOT_USE_SOULSHOTS));
 			}
 			
 			return false;
@@ -99,7 +98,7 @@ public final class FishShots extends ScriptItemHandler
 				return false;
 			}
 			
-			player.sendPacket(Msg.NOT_ENOUGH_SPIRITSHOTS);
+			player.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_SPIRITSHOTS));
 			return false;
 		}
 		
@@ -112,14 +111,14 @@ public final class FishShots extends ScriptItemHandler
 				return false;
 			}
 			
-			player.sendPacket(Msg.THIS_FISHING_SHOT_IS_NOT_FIT_FOR_THE_FISHING_POLE_CRYSTAL);
+			player.sendPacket(new SystemMessage(SystemMessage.THIS_FISHING_SHOT_IS_NOT_FIT_FOR_THE_FISHING_POLE_CRYSTAL));
 			return false;
 		}
 		
 		if (player.getInventory().destroyItem(item, 1L))
 		{
 			weaponInst.setChargedFishshot(true);
-			player.sendPacket(Msg.POWER_OF_MANA_ENABLED);
+			player.sendPacket(new SystemMessage(SystemMessage.POWER_OF_MANA_ENABLED));
 			player.broadcastPacket(new MagicSkillUse(player, player, _skillIds[grade], 1, 0, 0));
 		}
 		

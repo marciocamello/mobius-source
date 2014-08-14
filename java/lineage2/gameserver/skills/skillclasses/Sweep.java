@@ -14,7 +14,6 @@ package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
@@ -64,19 +63,19 @@ public class Sweep extends Skill
 		
 		if (!target.isMonster() || !target.isDead())
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return false;
 		}
 		
 		if (!((MonsterInstance) target).isSpoiled())
 		{
-			activeChar.sendPacket(Msg.SWEEPER_FAILED_TARGET_NOT_SPOILED);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.SWEEPER_FAILED_TARGET_NOT_SPOILED));
 			return false;
 		}
 		
 		if (!((MonsterInstance) target).isSpoiled((Player) activeChar))
 		{
-			activeChar.sendPacket(Msg.THERE_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER));
 			return false;
 		}
 		
@@ -109,7 +108,7 @@ public class Sweep extends Skill
 			
 			if (!target.isSpoiled(player))
 			{
-				activeChar.sendPacket(Msg.THERE_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER));
 				continue;
 			}
 			

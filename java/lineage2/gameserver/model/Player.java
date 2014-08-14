@@ -63,7 +63,6 @@ import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.ai.PlayableAI.nextAction;
 import lineage2.gameserver.ai.PlayerAI;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.dao.AccountBonusDAO;
 import lineage2.gameserver.dao.CharacterDAO;
 import lineage2.gameserver.dao.CharacterGroupReuseDAO;
@@ -1409,7 +1408,7 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			if (msg)
 			{
-				sendPacket(Msg.PROGRESS_IN_A_QUEST_IS_POSSIBLE_ONLY_WHEN_YOUR_INVENTORYS_WEIGHT_AND_VOLUME_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
+				sendPacket(new SystemMessage(SystemMessage.PROGRESS_IN_A_QUEST_IS_POSSIBLE_ONLY_WHEN_YOUR_INVENTORYS_WEIGHT_AND_VOLUME_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY));
 			}
 			
 			return false;
@@ -2721,7 +2720,7 @@ public final class Player extends Playable implements PlayerGroup
 			_clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListDelete(getName()), this);
 			setClan(null);
 			setTitle("");
-			sendPacket(Msg.CONGRATULATIONS_YOU_WILL_NOW_GRADUATE_FROM_THE_CLAN_ACADEMY_AND_LEAVE_YOUR_CURRENT_CLAN_AS_A_GRADUATE_OF_THE_ACADEMY_YOU_CAN_IMMEDIATELY_JOIN_A_CLAN_AS_A_REGULAR_MEMBER_WITHOUT_BEING_SUBJECT_TO_ANY_PENALTIES);
+			sendPacket(new SystemMessage(SystemMessage.CONGRATULATIONS_YOU_WILL_NOW_GRADUATE_FROM_THE_CLAN_ACADEMY_AND_LEAVE_YOUR_CURRENT_CLAN_AS_A_GRADUATE_OF_THE_ACADEMY_YOU_CAN_IMMEDIATELY_JOIN_A_CLAN_AS_A_REGULAR_MEMBER_WITHOUT_BEING_SUBJECT_TO_ANY_PENALTIES));
 			setLeaveClanTime(0);
 			broadcastCharInfo();
 			sendPacket(PledgeShowMemberListDeleteAll.STATIC);
@@ -5199,7 +5198,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		if (levels > 0)
 		{
-			sendPacket(Msg.YOU_HAVE_INCREASED_YOUR_LEVEL);
+			sendPacket(new SystemMessage(SystemMessage.YOUR_LEVEL_HAS_INCREASED));
 			broadcastPacket(new SocialAction(getObjectId(), SocialAction.LEVEL_UP));
 			setCurrentHpMp(getMaxHp(), getMaxMp());
 			setCurrentCp(getMaxCp());
@@ -8708,7 +8707,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		if ((charName == null) || charName.equalsIgnoreCase(getName()) || isInBlockList(charName))
 		{
-			sendPacket(Msg.YOU_HAVE_FAILED_TO_REGISTER_THE_USER_TO_YOUR_IGNORE_LIST);
+			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_REGISTER_THE_USER_TO_YOUR_IGNORE_LIST));
 			return;
 		}
 		
@@ -8718,7 +8717,7 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			if (block_target.isGM())
 			{
-				sendPacket(Msg.YOU_MAY_NOT_IMPOSE_A_BLOCK_ON_A_GM);
+				sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_IMPOSE_A_BLOCK_ON_A_GM));
 				return;
 			}
 			
@@ -8732,13 +8731,13 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if (charId == 0)
 		{
-			sendPacket(Msg.YOU_HAVE_FAILED_TO_REGISTER_THE_USER_TO_YOUR_IGNORE_LIST);
+			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_REGISTER_THE_USER_TO_YOUR_IGNORE_LIST));
 			return;
 		}
 		
 		if (Config.gmlist.containsKey(charId) && Config.gmlist.get(charId).IsGM)
 		{
-			sendPacket(Msg.YOU_MAY_NOT_IMPOSE_A_BLOCK_ON_A_GM);
+			sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_IMPOSE_A_BLOCK_ON_A_GM));
 			return;
 		}
 		
@@ -8765,7 +8764,7 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if (charId == 0)
 		{
-			sendPacket(Msg.YOU_HAVE_FAILED_TO_DELETE_THE_CHARACTER_FROM_IGNORE_LIST);
+			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_DELETE_THE_CHARACTER_FROM_IGNORE_LIST));
 			return;
 		}
 		
@@ -9915,19 +9914,19 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			if ((reviveAsk.isForPet() == pet) && (reviveAsk.getPower() >= percent))
 			{
-				reviver.sendPacket(Msg.BETTER_RESURRECTION_HAS_BEEN_ALREADY_PROPOSED);
+				reviver.sendPacket(new SystemMessage(SystemMessage.BETTER_RESURRECTION_HAS_BEEN_ALREADY_PROPOSED));
 				return;
 			}
 			
 			if (pet && !reviveAsk.isForPet())
 			{
-				reviver.sendPacket(Msg.SINCE_THE_MASTER_WAS_IN_THE_PROCESS_OF_BEING_RESURRECTED_THE_ATTEMPT_TO_RESURRECT_THE_PET_HAS_BEEN_CANCELLED);
+				reviver.sendPacket(new SystemMessage(SystemMessage.SINCE_THE_MASTER_WAS_IN_THE_PROCESS_OF_BEING_RESURRECTED_THE_ATTEMPT_TO_RESURRECT_THE_PET_HAS_BEEN_CANCELLED));
 				return;
 			}
 			
 			if (pet && isDead())
 			{
-				reviver.sendPacket(Msg.WHILE_A_PET_IS_ATTEMPTING_TO_RESURRECT_IT_CANNOT_HELP_IN_RESURRECTING_ITS_MASTER);
+				reviver.sendPacket(new SystemMessage(SystemMessage.WHILE_A_PET_IS_ATTEMPTING_TO_RESURRECT_IT_CANNOT_HELP_IN_RESURRECTING_ITS_MASTER));
 				return;
 			}
 		}
@@ -11263,7 +11262,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		else if (max == i)
 		{
-			sendPacket(Msg.SOUL_CANNOT_BE_ABSORBED_ANY_MORE);
+			sendPacket(new SystemMessage(SystemMessage.SOUL_CANNOT_BE_ABSORBED_ANY_MORE));
 			return;
 		}
 		
@@ -11516,11 +11515,11 @@ public final class Player extends Playable implements PlayerGroup
 			
 			if (isOnSiegeField)
 			{
-				sendPacket(Msg.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
+				sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_ENTERED_A_COMBAT_ZONE));
 			}
 			else
 			{
-				sendPacket(Msg.YOU_HAVE_LEFT_A_COMBAT_ZONE);
+				sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_LEFT_A_COMBAT_ZONE));
 				
 				if (!isTeleporting() && (getPvpFlag() == 0))
 				{
@@ -12926,11 +12925,11 @@ public final class Player extends Playable implements PlayerGroup
 			{
 				if (newVitality == 0)
 				{
-					sendPacket(Msg.VITALITY_IS_FULLY_EXHAUSTED);
+					sendPacket(new SystemMessage(SystemMessage.VITALITY_IS_FULLY_EXHAUSTED));
 				}
 				else if (newVitality == Config.MAX_VITALITY)
 				{
-					sendPacket(Msg.YOUR_VITALITY_IS_AT_MAXIMUM);
+					sendPacket(new SystemMessage(SystemMessage.YOUR_VITALITY_IS_AT_MAXIMUM));
 				}
 			}
 			
@@ -13457,7 +13456,7 @@ public final class Player extends Playable implements PlayerGroup
 	private void onActive()
 	{
 		setNonAggroTime(0);
-		sendPacket(Msg.YOU_ARE_PROTECTED_AGGRESSIVE_MONSTERS);
+		sendPacket(new SystemMessage(SystemMessage.YOU_ARE_PROTECTED_AGGRESSIVE_MONSTERS));
 		ThreadPoolManager.getInstance().execute(new RunnableImpl()
 		{
 			@Override

@@ -21,7 +21,6 @@ import java.util.concurrent.ScheduledFuture;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.idfactory.IdFactory;
 import lineage2.gameserver.instancemanager.QuestManager;
@@ -171,7 +170,7 @@ public class RaidBossInstance extends MonsterInstance
 					}
 				}
 				
-				player.getParty().broadCast(Msg.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL);
+				player.getParty().broadCast(new SystemMessage(SystemMessage.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
 			}
 			else
 			{
@@ -180,7 +179,7 @@ public class RaidBossInstance extends MonsterInstance
 					Hero.getInstance().addHeroDiary(player.getObjectId(), HeroDiary.ACTION_RAID_KILLED, getNpcId());
 				}
 				
-				player.sendPacket(Msg.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL);
+				player.sendPacket(new SystemMessage(SystemMessage.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
 			}
 			
 			Quest q = QuestManager.getQuest(508);

@@ -14,7 +14,6 @@ package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
@@ -135,7 +134,7 @@ public class HealWithCp extends Skill
 				
 				if (getId() == 4051)
 				{
-					target.sendPacket(Msg.REJUVENATING_HP);
+					target.sendPacket(new SystemMessage(SystemMessage.REJUVENATING_HP));
 				}
 				else if (target.isPlayer())
 				{

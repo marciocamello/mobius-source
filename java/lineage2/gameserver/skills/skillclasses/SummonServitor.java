@@ -15,7 +15,6 @@ package lineage2.gameserver.skills.skillclasses;
 import java.util.List;
 
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.idfactory.IdFactory;
 import lineage2.gameserver.model.Creature;
@@ -33,6 +32,7 @@ import lineage2.gameserver.model.instances.SummonInstance;
 import lineage2.gameserver.model.instances.SymbolInstance;
 import lineage2.gameserver.model.instances.TrapInstance;
 import lineage2.gameserver.model.instances.TreeInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.stats.Stats;
@@ -87,7 +87,7 @@ public class SummonServitor extends Skill
 		
 		if (player.isProcessingRequest())
 		{
-			player.sendPacket(Msg.PETS_AND_SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME);
+			player.sendPacket(new SystemMessage(SystemMessage.PETS_AND_SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME));
 			return false;
 		}
 		
@@ -96,7 +96,7 @@ public class SummonServitor extends Skill
 			case TRAP:
 				if (player.isInZonePeace())
 				{
-					activeChar.sendPacket(Msg.A_MALICIOUS_SKILL_CANNOT_BE_USED_IN_A_PEACE_ZONE);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.A_MALICIOUS_SKILL_CANNOT_BE_USED_IN_A_PEACE_ZONE));
 					return false;
 				}
 				

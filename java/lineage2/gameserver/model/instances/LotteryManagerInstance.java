@@ -15,7 +15,6 @@ package lineage2.gameserver.model.instances;
 import java.text.DateFormat;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.instancemanager.games.LotteryManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
@@ -122,13 +121,13 @@ public class LotteryManagerInstance extends NpcInstance
 		{
 			if (!LotteryManager.getInstance().isStarted())
 			{
-				player.sendPacket(Msg.LOTTERY_TICKETS_ARE_NOT_CURRENTLY_BEING_SOLD);
+				player.sendPacket(new SystemMessage(SystemMessage.LOTTERY_TICKETS_ARE_NOT_CURRENTLY_BEING_SOLD));
 				return;
 			}
 			
 			if (!LotteryManager.getInstance().isSellableTickets())
 			{
-				player.sendPacket(Msg.TICKETS_FOR_THE_CURRENT_LOTTERY_ARE_NO_LONGER_AVAILABLE);
+				player.sendPacket(new SystemMessage(SystemMessage.TICKETS_FOR_THE_CURRENT_LOTTERY_ARE_NO_LONGER_AVAILABLE));
 				return;
 			}
 			
@@ -208,13 +207,13 @@ public class LotteryManagerInstance extends NpcInstance
 		{
 			if (!LotteryManager.getInstance().isStarted())
 			{
-				player.sendPacket(Msg.LOTTERY_TICKETS_ARE_NOT_CURRENTLY_BEING_SOLD);
+				player.sendPacket(new SystemMessage(SystemMessage.LOTTERY_TICKETS_ARE_NOT_CURRENTLY_BEING_SOLD));
 				return;
 			}
 			
 			if (!LotteryManager.getInstance().isSellableTickets())
 			{
-				player.sendPacket(Msg.TICKETS_FOR_THE_CURRENT_LOTTERY_ARE_NO_LONGER_AVAILABLE);
+				player.sendPacket(new SystemMessage(SystemMessage.TICKETS_FOR_THE_CURRENT_LOTTERY_ARE_NO_LONGER_AVAILABLE));
 				return;
 			}
 			
@@ -242,7 +241,7 @@ public class LotteryManagerInstance extends NpcInstance
 			
 			if (player.getAdena() < price)
 			{
-				player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 				return;
 			}
 			

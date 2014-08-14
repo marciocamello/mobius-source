@@ -14,7 +14,6 @@ package events.Christmas;
 
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
@@ -22,6 +21,7 @@ import lineage2.gameserver.model.SimpleSpawner;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.items.ItemInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.npc.NpcTemplate;
@@ -105,7 +105,7 @@ public final class Seed extends ScriptItemHandler
 		
 		if (World.getAroundNpc(activeChar, 100, 200).size() > 0)
 		{
-			activeChar.sendPacket(Msg.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION));
 			return false;
 		}
 		

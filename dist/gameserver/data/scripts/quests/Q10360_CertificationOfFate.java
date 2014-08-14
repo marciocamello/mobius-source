@@ -12,7 +12,6 @@
  */
 package quests;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.data.xml.holder.MultiSellHolder;
 import lineage2.gameserver.model.Player;
@@ -22,6 +21,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExShowUsmVideo;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.HtmlUtils;
 
@@ -276,7 +276,7 @@ public class Q10360_CertificationOfFate extends Quest implements ScriptFile
 				e.printStackTrace();
 			}
 			
-			player.sendPacket(Msg.CONGRATULATIONS_YOU_HAVE_TRANSFERRED_TO_A_NEW_CLASS);
+			player.sendPacket(new SystemMessage(SystemMessage.CONGRATULATIONS_YOU_HAVE_TRANSFERRED_TO_A_NEW_CLASS));
 			player.setClassId(newClassId, false, false);
 			player.broadcastCharInfo();
 			MultiSellHolder.getInstance().SeparateAndSend(85556, st.getPlayer(), 0);

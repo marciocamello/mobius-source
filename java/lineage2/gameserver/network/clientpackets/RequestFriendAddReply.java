@@ -12,7 +12,6 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Request;
 import lineage2.gameserver.model.Request.L2RequestType;
@@ -82,7 +81,7 @@ public class RequestFriendAddReply extends L2GameClientPacket
 		if (requestor == null)
 		{
 			request.cancel();
-			activeChar.sendPacket(Msg.THE_USER_WHO_REQUESTED_TO_BECOME_FRIENDS_IS_NOT_FOUND_IN_THE_GAME);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.THE_USER_WHO_REQUESTED_TO_BECOME_FRIENDS_IS_NOT_FOUND_IN_THE_GAME));
 			activeChar.sendActionFailed();
 			return;
 		}
@@ -97,14 +96,14 @@ public class RequestFriendAddReply extends L2GameClientPacket
 		if (_response == 0)
 		{
 			request.cancel();
-			requestor.sendPacket(Msg.YOU_HAVE_FAILED_TO_INVITE_A_FRIEND);
+			requestor.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_INVITE_A_FRIEND));
 			activeChar.sendActionFailed();
 			return;
 		}
 		
 		requestor.getFriendList().addFriend(activeChar);
 		activeChar.getFriendList().addFriend(requestor);
-		requestor.sendPacket(Msg.YOU_HAVE_SUCCEEDED_IN_INVITING_A_FRIEND, new SystemMessage(SystemMessage.S1_HAS_BEEN_ADDED_TO_YOUR_FRIEND_LIST).addString(activeChar.getName()), new L2Friend(activeChar, true));
+		requestor.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_SUCCEEDED_IN_INVITING_A_FRIEND), new SystemMessage(SystemMessage.S1_HAS_BEEN_ADDED_TO_YOUR_FRIEND_LIST).addString(activeChar.getName()), new L2Friend(activeChar, true));
 		activeChar.sendPacket(new SystemMessage(SystemMessage.S1_HAS_JOINED_AS_A_FRIEND).addString(requestor.getName()), new L2Friend(requestor, true));
 	}
 }

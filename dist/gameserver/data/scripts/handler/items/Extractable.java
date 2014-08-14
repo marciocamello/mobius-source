@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lineage2.commons.util.Rnd;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
@@ -14473,7 +14472,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14490,7 +14489,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14507,7 +14506,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14524,7 +14523,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14541,7 +14540,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14558,7 +14557,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14575,7 +14574,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14592,7 +14591,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14609,7 +14608,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14626,7 +14625,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14643,7 +14642,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14660,7 +14659,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14677,7 +14676,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14694,7 +14693,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14711,7 +14710,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14728,7 +14727,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14745,7 +14744,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14762,7 +14761,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14780,7 +14779,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14797,7 +14796,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14814,7 +14813,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14831,7 +14830,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14848,7 +14847,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14865,7 +14864,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14882,7 +14881,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14899,7 +14898,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14916,7 +14915,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14933,7 +14932,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14950,7 +14949,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14967,7 +14966,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -14984,7 +14983,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15001,7 +15000,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15018,7 +15017,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15035,7 +15034,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15052,7 +15051,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15069,7 +15068,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15087,7 +15086,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15104,7 +15103,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15121,7 +15120,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15138,7 +15137,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15155,7 +15154,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15172,7 +15171,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15189,7 +15188,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15206,7 +15205,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15223,7 +15222,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15240,7 +15239,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15257,7 +15256,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15274,7 +15273,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15291,7 +15290,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15308,7 +15307,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15325,7 +15324,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15342,7 +15341,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15359,7 +15358,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15376,7 +15375,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15394,7 +15393,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15411,7 +15410,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15428,7 +15427,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15445,7 +15444,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15462,7 +15461,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15479,7 +15478,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15496,7 +15495,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15513,7 +15512,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15530,7 +15529,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15548,7 +15547,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15565,7 +15564,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15582,7 +15581,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15599,7 +15598,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15616,7 +15615,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15633,7 +15632,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15650,7 +15649,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15667,7 +15666,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -15684,7 +15683,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -19542,7 +19541,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 	
@@ -19724,7 +19723,7 @@ public final class Extractable extends SimpleItemHandler
 	{
 		if ((player.getWeightPenalty() >= 3) || (player.getInventory().getSize() > (player.getInventoryLimit() - 10)))
 		{
-			player.sendPacket(Msg.YOUR_INVENTORY_IS_FULL, new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getItemId()));
+			player.sendPacket(new SystemMessage(SystemMessage.YOUR_INVENTORY_IS_FULL), new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getItemId()));
 			return false;
 		}
 		
@@ -19796,7 +19795,7 @@ public final class Extractable extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendPacket(Msg.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 		}
 	}
 }

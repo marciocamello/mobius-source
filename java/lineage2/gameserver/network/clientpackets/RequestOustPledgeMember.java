@@ -12,7 +12,6 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.UnitMember;
@@ -99,6 +98,6 @@ public class RequestOustPledgeMember extends L2GameClientPacket
 		memberPlayer.setLeaveClanCurTime();
 		memberPlayer.broadcastCharInfo();
 		memberPlayer.store(true);
-		memberPlayer.sendPacket(Msg.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS, PledgeShowMemberListDeleteAll.STATIC);
+		memberPlayer.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS), PledgeShowMemberListDeleteAll.STATIC);
 	}
 }

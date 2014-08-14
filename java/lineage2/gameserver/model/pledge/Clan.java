@@ -26,7 +26,6 @@ import lineage2.commons.collections.JoinedIterator;
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.CrestCache;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.database.mysql;
@@ -46,6 +45,7 @@ import lineage2.gameserver.network.serverpackets.PledgeShowMemberListAll;
 import lineage2.gameserver.network.serverpackets.PledgeShowMemberListDeleteAll;
 import lineage2.gameserver.network.serverpackets.PledgeSkillList;
 import lineage2.gameserver.network.serverpackets.PledgeSkillListAdd;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 import lineage2.gameserver.skills.effects.EffectTemplate;
 import lineage2.gameserver.stats.Env;
@@ -1194,7 +1194,7 @@ public class Clan implements Iterable<UnitMember>
 	{
 		if ((_reputation >= 0) && (rep < 0))
 		{
-			broadcastToOnlineMembers(Msg.SINCE_THE_CLAN_REPUTATION_SCORE_HAS_DROPPED_TO_0_OR_LOWER_YOUR_CLAN_SKILLS_WILL_BE_DE_ACTIVATED);
+			broadcastToOnlineMembers(new SystemMessage(SystemMessage.SINCE_THE_CLAN_REPUTATION_SCORE_HAS_DROPPED_TO_0_OR_LOWER_YOUR_CLAN_SKILLS_WILL_BE_DE_ACTIVATED));
 			
 			for (UnitMember member : this)
 			{
@@ -1206,7 +1206,7 @@ public class Clan implements Iterable<UnitMember>
 		}
 		else if ((_reputation < 0) && (rep >= 0))
 		{
-			broadcastToOnlineMembers(Msg.THE_CLAN_SKILL_WILL_BE_ACTIVATED_BECAUSE_THE_CLANS_REPUTATION_SCORE_HAS_REACHED_TO_0_OR_HIGHER);
+			broadcastToOnlineMembers(new SystemMessage(SystemMessage.THE_CLAN_SKILL_WILL_BE_ACTIVATED_BECAUSE_THE_CLANS_REPUTATION_SCORE_HAS_REACHED_TO_0_OR_HIGHER));
 			
 			for (UnitMember member : this)
 			{
@@ -1621,7 +1621,7 @@ public class Clan implements Iterable<UnitMember>
 		{
 			if (temp == SUBUNIT_ACADEMY)
 			{
-				player.sendPacket(Msg.YOUR_CLAN_HAS_ALREADY_ESTABLISHED_A_CLAN_ACADEMY);
+				player.sendPacket(new SystemMessage(SystemMessage.YOUR_CLAN_HAS_ALREADY_ESTABLISHED_A_CLAN_ACADEMY));
 			}
 			else
 			{
@@ -1640,7 +1640,7 @@ public class Clan implements Iterable<UnitMember>
 			case SUBUNIT_ROYAL2:
 				if (getReputationScore() < 5000)
 				{
-					player.sendPacket(Msg.THE_CLAN_REPUTATION_SCORE_IS_TOO_LOW);
+					player.sendPacket(new SystemMessage(SystemMessage.THE_CLAN_REPUTATION_SCORE_IS_TOO_LOW));
 					return SUBUNIT_NONE;
 				}
 				
@@ -1653,7 +1653,7 @@ public class Clan implements Iterable<UnitMember>
 			case SUBUNIT_KNIGHT4:
 				if (getReputationScore() < 10000)
 				{
-					player.sendPacket(Msg.THE_CLAN_REPUTATION_SCORE_IS_TOO_LOW);
+					player.sendPacket(new SystemMessage(SystemMessage.THE_CLAN_REPUTATION_SCORE_IS_TOO_LOW));
 					return SUBUNIT_NONE;
 				}
 				

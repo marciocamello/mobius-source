@@ -12,12 +12,12 @@
  */
 package lineage2.gameserver.network.loginservercon.lspackets;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.GameClient;
 import lineage2.gameserver.network.loginservercon.LoginServerCommunication;
 import lineage2.gameserver.network.loginservercon.ReceivablePacket;
 import lineage2.gameserver.network.serverpackets.ServerClose;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Mobius
@@ -58,7 +58,7 @@ public class KickPlayer extends ReceivablePacket
 		
 		if (activeChar != null)
 		{
-			activeChar.sendPacket(Msg.ANOTHER_PERSON_HAS_LOGGED_IN_WITH_THE_SAME_ACCOUNT);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.ANOTHER_PERSON_HAS_LOGGED_IN_WITH_THE_SAME_ACCOUNT));
 			activeChar.kick();
 		}
 		else

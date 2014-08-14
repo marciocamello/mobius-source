@@ -23,7 +23,6 @@ import lineage2.commons.util.concurrent.atomic.AtomicState;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.CtrlIntention;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.model.AggroList.AggroInfo;
 import lineage2.gameserver.model.Skill.SkillTargetType;
@@ -190,19 +189,19 @@ public abstract class Playable extends Creature
 		
 		if ((target == null) || target.isDead())
 		{
-			player.sendPacket(Msg.INVALID_TARGET);
+			player.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return false;
 		}
 		
 		if (!isInRange(target, 2000))
 		{
-			player.sendPacket(Msg.YOUR_TARGET_IS_OUT_OF_RANGE);
+			player.sendPacket(new SystemMessage(SystemMessage.YOUR_TARGET_IS_OUT_OF_RANGE));
 			return false;
 		}
 		
 		if (target.isDoor() && !target.isAttackable(this))
 		{
-			player.sendPacket(Msg.INVALID_TARGET);
+			player.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return false;
 		}
 		
@@ -224,7 +223,7 @@ public abstract class Playable extends Creature
 		
 		if (player.isInZone(ZoneType.epic) != target.isInZone(ZoneType.epic))
 		{
-			player.sendPacket(Msg.INVALID_TARGET);
+			player.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return false;
 		}
 		
@@ -232,13 +231,13 @@ public abstract class Playable extends Creature
 		{
 			if (isInZoneBattle() != target.isInZoneBattle())
 			{
-				player.sendPacket(Msg.INVALID_TARGET);
+				player.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 				return false;
 			}
 			
 			if (isInZonePeace() || target.isInZonePeace())
 			{
-				player.sendPacket(Msg.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE));
 				return false;
 			}
 			
@@ -309,7 +308,7 @@ public abstract class Playable extends Creature
 				if (_currentMp < bowMpConsume)
 				{
 					getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null, null);
-					player.sendPacket(Msg.NOT_ENOUGH_MP);
+					player.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP));
 					player.sendActionFailed();
 					return;
 				}
@@ -320,7 +319,7 @@ public abstract class Playable extends Creature
 			if (!player.checkAndEquipArrows())
 			{
 				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null, null);
-				player.sendPacket(player.getActiveWeaponInstance().getItemType() == WeaponType.BOW ? Msg.YOU_HAVE_RUN_OUT_OF_ARROWS : Msg.NOT_ENOUGH_BOLTS);
+				player.sendPacket(player.getActiveWeaponInstance().getItemType() == WeaponType.BOW ? new SystemMessage(SystemMessage.YOU_HAVE_RUN_OUT_OF_ARROWS) : new SystemMessage(SystemMessage.NOT_ENOUGH_BOLTS));
 				player.sendActionFailed();
 				return;
 			}
@@ -352,13 +351,13 @@ public abstract class Playable extends Creature
 		
 		if (skill.isAoE() && isInPeaceZone())
 		{
-			getPlayer().sendPacket(Msg.A_MALICIOUS_SKILL_CANNOT_BE_USED_IN_A_PEACE_ZONE);
+			getPlayer().sendPacket(new SystemMessage(SystemMessage.A_MALICIOUS_SKILL_CANNOT_BE_USED_IN_A_PEACE_ZONE));
 			return;
 		}
 		
 		if ((skill.getSkillType() == SkillType.DEBUFF) && target.isNpc() && target.isInvul() && !target.isMonster())
 		{
-			getPlayer().sendPacket(Msg.INVALID_TARGET);
+			getPlayer().sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		
@@ -396,7 +395,7 @@ public abstract class Playable extends Creature
 		{
 			if (sendMessage)
 			{
-				attacker.sendPacket(Msg.THE_ATTACK_HAS_BEEN_BLOCKED);
+				attacker.sendPacket(new SystemMessage(SystemMessage.THE_ATTACK_HAS_BEEN_BLOCKED));
 			}
 			
 			return;
@@ -413,7 +412,7 @@ public abstract class Playable extends Creature
 				{
 					if (sendMessage)
 					{
-						pcAttacker.sendPacket(Msg.INVALID_TARGET);
+						pcAttacker.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 					}
 					
 					return;
@@ -424,7 +423,7 @@ public abstract class Playable extends Creature
 			{
 				if (sendMessage)
 				{
-					attacker.getPlayer().sendPacket(Msg.INVALID_TARGET);
+					attacker.getPlayer().sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 				}
 				
 				return;

@@ -12,11 +12,11 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.network.serverpackets.ActionFail;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.tables.ClanTable;
 
@@ -59,7 +59,7 @@ public class RequestStopPledgeWar extends L2GameClientPacket
 		
 		if (!((activeChar.getClanPrivileges() & Clan.CP_CL_CLAN_WAR) == Clan.CP_CL_CLAN_WAR))
 		{
-			activeChar.sendPacket(Msg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT, ActionFail.STATIC);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT), ActionFail.STATIC);
 			return;
 		}
 		
@@ -73,7 +73,7 @@ public class RequestStopPledgeWar extends L2GameClientPacket
 		
 		if (!playerClan.isAtWarWith(clan.getClanId()))
 		{
-			activeChar.sendPacket(Msg.YOU_HAVE_NOT_DECLARED_A_CLAN_WAR_TO_S1_CLAN, ActionFail.STATIC);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_NOT_DECLARED_A_CLAN_WAR_TO_S1_CLAN), ActionFail.STATIC);
 			return;
 		}
 		
@@ -81,7 +81,7 @@ public class RequestStopPledgeWar extends L2GameClientPacket
 		{
 			if (mbr.isOnline() && mbr.getPlayer().isInCombat())
 			{
-				activeChar.sendPacket(Msg.A_CEASE_FIRE_DURING_A_CLAN_WAR_CAN_NOT_BE_CALLED_WHILE_MEMBERS_OF_YOUR_CLAN_ARE_ENGAGED_IN_BATTLE, ActionFail.STATIC);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.A_CEASE_FIRE_DURING_A_CLAN_WAR_CAN_NOT_BE_CALLED_WHILE_MEMBERS_OF_YOUR_CLAN_ARE_ENGAGED_IN_BATTLE), ActionFail.STATIC);
 				return;
 			}
 		}

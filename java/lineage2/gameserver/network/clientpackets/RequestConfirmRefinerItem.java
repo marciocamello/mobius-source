@@ -12,7 +12,6 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.etcitems.LifeStoneInfo;
@@ -58,7 +57,7 @@ public class RequestConfirmRefinerItem extends AbstractRefinePacket
 		
 		if ((targetItem == null) || (refinerItem == null))
 		{
-			activeChar.sendPacket(Msg.THIS_IS_NOT_A_SUITABLE_ITEM);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_IS_NOT_A_SUITABLE_ITEM));
 			return;
 		}
 		
@@ -71,7 +70,7 @@ public class RequestConfirmRefinerItem extends AbstractRefinePacket
 		
 		if (!isValid(activeChar, targetItem, refinerItem))
 		{
-			activeChar.sendPacket(Msg.THIS_IS_NOT_A_SUITABLE_ITEM);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_IS_NOT_A_SUITABLE_ITEM));
 			return;
 		}
 		

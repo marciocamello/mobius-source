@@ -18,7 +18,6 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import lineage2.commons.collections.JoinedIterator;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcFriendInstance;
 import lineage2.gameserver.model.matching.MatchingRoom;
@@ -121,7 +120,7 @@ public class CommandChannel implements PlayerGroup
 	 */
 	public void disbandChannel()
 	{
-		broadCast(Msg.THE_COMMAND_CHANNEL_HAS_BEEN_DISBANDED);
+		broadCast(new SystemMessage(SystemMessage.THE_COMMAND_CHANNEL_HAS_BEEN_DISBANDED));
 		
 		for (Party party : _commandChannelParties)
 		{
@@ -356,7 +355,7 @@ public class CommandChannel implements PlayerGroup
 	{
 		if ((creator.getClan() == null) || !creator.isInParty() || !creator.getParty().isLeader(creator) || (creator.getPledgeClass() < Player.RANK_BARON))
 		{
-			creator.sendPacket(Msg.YOU_DO_NOT_HAVE_AUTHORITY_TO_USE_THE_COMMAND_CHANNEL);
+			creator.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_AUTHORITY_TO_USE_THE_COMMAND_CHANNEL));
 			return false;
 		}
 		
@@ -365,7 +364,7 @@ public class CommandChannel implements PlayerGroup
 		
 		if (!haveSkill && !haveItem)
 		{
-			creator.sendPacket(Msg.YOU_DO_NOT_HAVE_AUTHORITY_TO_USE_THE_COMMAND_CHANNEL);
+			creator.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_AUTHORITY_TO_USE_THE_COMMAND_CHANNEL));
 			return false;
 		}
 		

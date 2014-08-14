@@ -12,11 +12,11 @@
  */
 package lineage2.gameserver.handler.admincommands.impl;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Mobius
@@ -43,7 +43,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
-	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 * @return boolean
 	 */
 	@Override
 	@SuppressWarnings("fallthrough")
@@ -67,7 +67,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 			case admin_poly:
 				if ((target == null) || !target.isPlayer())
 				{
-					activeChar.sendPacket(Msg.INVALID_TARGET);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 					return false;
 				}
 				
@@ -96,7 +96,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 			case admin_unpoly:
 				if ((target == null) || !target.isPlayer())
 				{
-					activeChar.sendPacket(Msg.INVALID_TARGET);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 					return false;
 				}
 				
@@ -110,7 +110,8 @@ public class AdminPolymorph implements IAdminCommandHandler
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return Enum[]
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
 	 */
 	@Override
 	public Enum<?>[] getAdminCommandEnum()

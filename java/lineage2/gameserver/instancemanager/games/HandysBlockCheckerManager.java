@@ -20,7 +20,6 @@ import java.util.Map;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.EventHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.BlockCheckerEngine;
@@ -162,13 +161,13 @@ public final class HandysBlockCheckerManager
 			
 			if (krateis.isRegistered(player))
 			{
-				player.sendPacket(Msg.APPLICANTS_FOR_THE_OLYMPIAD_UNDERGROUND_COLISEUM_OR_KRATEI_S_CUBE_MATCHES_CANNOT_REGISTER);
+				player.sendPacket(new SystemMessage(SystemMessage.APPLICANTS_FOR_THE_OLYMPIAD_UNDERGROUND_COLISEUM_OR_KRATEI_S_CUBE_MATCHES_CANNOT_REGISTER));
 				return false;
 			}
 			
 			if (Olympiad.isRegistered(player))
 			{
-				player.sendPacket(Msg.APPLICANTS_FOR_THE_OLYMPIAD_UNDERGROUND_COLISEUM_OR_KRATEI_S_CUBE_MATCHES_CANNOT_REGISTER);
+				player.sendPacket(new SystemMessage(SystemMessage.APPLICANTS_FOR_THE_OLYMPIAD_UNDERGROUND_COLISEUM_OR_KRATEI_S_CUBE_MATCHES_CANNOT_REGISTER));
 				return false;
 			}
 			

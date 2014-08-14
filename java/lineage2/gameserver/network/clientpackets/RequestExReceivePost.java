@@ -14,7 +14,6 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.math.SafeMath;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.dao.MailDAO;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
@@ -67,25 +66,25 @@ public class RequestExReceivePost extends L2GameClientPacket
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_RECEIVE_BECAUSE_THE_PRIVATE_SHOP_OR_WORKSHOP_IS_IN_PROGRESS);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_RECEIVE_BECAUSE_THE_PRIVATE_SHOP_OR_WORKSHOP_IS_IN_PROGRESS));
 			return;
 		}
 		
 		if (activeChar.isInTrade())
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_RECEIVE_DURING_AN_EXCHANGE);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_RECEIVE_DURING_AN_EXCHANGE));
 			return;
 		}
 		
 		if (activeChar.isFishing())
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_DO_THAT_WHILE_FISHING);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DO_THAT_WHILE_FISHING));
 			return;
 		}
 		
 		if (activeChar.getEnchantScroll() != null)
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_RECEIVE_DURING_AN_ITEM_ENHANCEMENT_OR_ATTRIBUTE_ENHANCEMENT);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_RECEIVE_DURING_AN_ITEM_ENHANCEMENT_OR_ATTRIBUTE_ENHANCEMENT));
 			return;
 		}
 		
@@ -101,7 +100,7 @@ public class RequestExReceivePost extends L2GameClientPacket
 				
 				if ((mail.getAttachments().size() > 0) && !activeChar.isInPeaceZone())
 				{
-					activeChar.sendPacket(Msg.YOU_CANNOT_RECEIVE_IN_A_NON_PEACE_ZONE_LOCATION);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_RECEIVE_IN_A_NON_PEACE_ZONE_LOCATION));
 					return;
 				}
 				
@@ -128,13 +127,13 @@ public class RequestExReceivePost extends L2GameClientPacket
 					
 					if (!activeChar.getInventory().validateWeight(weight))
 					{
-						sendPacket(Msg.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL);
+						sendPacket(new SystemMessage(SystemMessage.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL));
 						return;
 					}
 					
 					if (!activeChar.getInventory().validateCapacity(slots))
 					{
-						sendPacket(Msg.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL);
+						sendPacket(new SystemMessage(SystemMessage.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL));
 						return;
 					}
 					
@@ -142,7 +141,7 @@ public class RequestExReceivePost extends L2GameClientPacket
 					{
 						if (!activeChar.reduceAdena(mail.getPrice(), true))
 						{
-							activeChar.sendPacket(Msg.YOU_CANNOT_RECEIVE_BECAUSE_YOU_DON_T_HAVE_ENOUGH_ADENA);
+							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_RECEIVE_BECAUSE_YOU_DON_T_HAVE_ENOUGH_ADENA));
 							return;
 						}
 						
@@ -189,7 +188,7 @@ public class RequestExReceivePost extends L2GameClientPacket
 					activeChar.getInventory().addItem(item);
 				}
 				
-				activeChar.sendPacket(Msg.MAIL_SUCCESSFULLY_RECEIVED);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.MAIL_SUCCESSFULLY_RECEIVED));
 			}
 			catch (ArithmeticException ae)
 			{

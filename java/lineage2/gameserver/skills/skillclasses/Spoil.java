@@ -17,7 +17,6 @@ import java.util.List;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ai.CtrlEvent;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
@@ -71,7 +70,7 @@ public class Spoil extends Skill
 				{
 					if (((MonsterInstance) target).isSpoiled())
 					{
-						activeChar.sendPacket(Msg.ALREADY_SPOILED);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.ALREADY_SPOILED));
 					}
 					else
 					{
@@ -114,7 +113,7 @@ public class Spoil extends Skill
 						
 						if (success && monster.setSpoiled((Player) activeChar))
 						{
-							activeChar.sendPacket(Msg.THE_SPOIL_CONDITION_HAS_BEEN_ACTIVATED);
+							activeChar.sendPacket(new SystemMessage(SystemMessage.THE_SPOIL_CONDITION_HAS_BEEN_ACTIVATED));
 						}
 						else
 						{

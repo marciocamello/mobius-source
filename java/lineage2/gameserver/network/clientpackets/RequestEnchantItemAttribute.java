@@ -14,7 +14,6 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.util.Rnd;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.items.ItemInstance;
@@ -60,7 +59,7 @@ public class RequestEnchantItemAttribute extends L2GameClientPacket
 		if (_objectId == -1)
 		{
 			activeChar.setEnchantScroll(null);
-			activeChar.sendPacket(Msg.ELEMENTAL_POWER_ENCHANCER_USAGE_HAS_BEEN_CANCELLED);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.ELEMENTAL_POWER_ENCHANCER_USAGE_HAS_BEEN_CANCELLED));
 			return;
 		}
 		
@@ -72,7 +71,7 @@ public class RequestEnchantItemAttribute extends L2GameClientPacket
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_ADD_ELEMENTAL_POWER_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP, ActionFail.STATIC);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_ADD_ELEMENTAL_POWER_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP), ActionFail.STATIC);
 			return;
 		}
 		
@@ -97,13 +96,13 @@ public class RequestEnchantItemAttribute extends L2GameClientPacket
 		
 		if (!itemToEnchant.canBeEnchanted() || (item.getCrystalType().cry < ItemTemplate.CRYSTAL_S))
 		{
-			activeChar.sendPacket(Msg.INAPPROPRIATE_ENCHANT_CONDITIONS, ActionFail.STATIC);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INAPPROPRIATE_ENCHANT_CONDITIONS), ActionFail.STATIC);
 			return;
 		}
 		
 		if ((itemToEnchant.getLocation() != ItemInstance.ItemLocation.INVENTORY) && (itemToEnchant.getLocation() != ItemInstance.ItemLocation.PAPERDOLL))
 		{
-			activeChar.sendPacket(Msg.INAPPROPRIATE_ENCHANT_CONDITIONS, ActionFail.STATIC);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INAPPROPRIATE_ENCHANT_CONDITIONS), ActionFail.STATIC);
 			return;
 		}
 		
@@ -126,7 +125,7 @@ public class RequestEnchantItemAttribute extends L2GameClientPacket
 		{
 			if (itemToEnchant.getAttributeElementValue(Element.getReverseElement(element), false) != 0)
 			{
-				activeChar.sendPacket(Msg.ANOTHER_ELEMENTAL_POWER_HAS_ALREADY_BEEN_ADDED_THIS_ELEMENTAL_POWER_CANNOT_BE_ADDED, ActionFail.STATIC);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.ANOTHER_ELEMENTAL_POWER_HAS_ALREADY_BEEN_ADDED_THIS_ELEMENTAL_POWER_CANNOT_BE_ADDED), ActionFail.STATIC);
 				return;
 			}
 		}
@@ -134,19 +133,19 @@ public class RequestEnchantItemAttribute extends L2GameClientPacket
 		{
 			if ((itemToEnchant.getAttributeElement() != Element.NONE) && (itemToEnchant.getAttributeElement() != element))
 			{
-				activeChar.sendPacket(Msg.ANOTHER_ELEMENTAL_POWER_HAS_ALREADY_BEEN_ADDED_THIS_ELEMENTAL_POWER_CANNOT_BE_ADDED, ActionFail.STATIC);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.ANOTHER_ELEMENTAL_POWER_HAS_ALREADY_BEEN_ADDED_THIS_ELEMENTAL_POWER_CANNOT_BE_ADDED), ActionFail.STATIC);
 				return;
 			}
 		}
 		else
 		{
-			activeChar.sendPacket(Msg.INAPPROPRIATE_ENCHANT_CONDITIONS, ActionFail.STATIC);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INAPPROPRIATE_ENCHANT_CONDITIONS), ActionFail.STATIC);
 			return;
 		}
 		
 		if (item.isUnderwear() || item.isCloak() || item.isBracelet() || item.isBelt() || !item.isAttributable())
 		{
-			activeChar.sendPacket(Msg.INAPPROPRIATE_ENCHANT_CONDITIONS, ActionFail.STATIC);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INAPPROPRIATE_ENCHANT_CONDITIONS), ActionFail.STATIC);
 			return;
 		}
 		
@@ -156,13 +155,13 @@ public class RequestEnchantItemAttribute extends L2GameClientPacket
 		
 		if ((currentValue >= maxValue) || (currentValue < minValue))
 		{
-			activeChar.sendPacket(Msg.ELEMENTAL_POWER_ENCHANCER_USAGE_HAS_BEEN_CANCELLED, ActionFail.STATIC);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.ELEMENTAL_POWER_ENCHANCER_USAGE_HAS_BEEN_CANCELLED), ActionFail.STATIC);
 			return;
 		}
 		
 		if (itemToEnchant.getOwnerId() != activeChar.getObjectId())
 		{
-			activeChar.sendPacket(Msg.INAPPROPRIATE_ENCHANT_CONDITIONS, ActionFail.STATIC);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INAPPROPRIATE_ENCHANT_CONDITIONS), ActionFail.STATIC);
 			return;
 		}
 		
@@ -220,7 +219,7 @@ public class RequestEnchantItemAttribute extends L2GameClientPacket
 		}
 		else
 		{
-			activeChar.sendPacket(Msg.YOU_HAVE_FAILED_TO_ADD_ELEMENTAL_POWER);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_ADD_ELEMENTAL_POWER));
 		}
 		
 		activeChar.setEnchantScroll(null);

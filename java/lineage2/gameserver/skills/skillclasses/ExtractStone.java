@@ -18,12 +18,12 @@ import java.util.StringTokenizer;
 
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.network.serverpackets.PlaySound;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.templates.StatsSet;
 
@@ -92,13 +92,13 @@ public class ExtractStone extends Skill
 	{
 		if ((target == null) || !target.isNpc() || (getItemId(target.getNpcId()) == 0))
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return false;
 		}
 		
 		if (!_npcIds.isEmpty() && !_npcIds.contains(new Integer(target.getNpcId())))
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return false;
 		}
 		
@@ -199,7 +199,7 @@ public class ExtractStone extends Skill
 				}
 				else
 				{
-					player.sendPacket(Msg.THE_COLLECTION_HAS_FAILED);
+					player.sendPacket(new SystemMessage(SystemMessage.THE_COLLECTION_HAS_FAILED));
 				}
 				
 				target.doDie(player);

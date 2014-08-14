@@ -12,9 +12,9 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Mobius
@@ -58,13 +58,13 @@ public class RequestHandOverPartyMaster extends L2GameClientPacket
 		
 		if (member == activeChar)
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_TRANSFER_RIGHTS_TO_YOURSELF);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_TRANSFER_RIGHTS_TO_YOURSELF));
 			return;
 		}
 		
 		if (member == null)
 		{
-			activeChar.sendPacket(Msg.YOU_CAN_TRANSFER_RIGHTS_ONLY_TO_ANOTHER_PARTY_MEMBER);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CAN_TRANSFER_RIGHTS_ONLY_TO_ANOTHER_PARTY_MEMBER));
 			return;
 		}
 		

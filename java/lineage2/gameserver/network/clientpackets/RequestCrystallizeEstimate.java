@@ -15,13 +15,13 @@ package lineage2.gameserver.network.clientpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.items.CrystallizationItem;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.etcitems.CrystallizationManager;
 import lineage2.gameserver.network.serverpackets.ExGetCrystalizingEstimation;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.item.ItemTemplate.Grade;
 
 /**
@@ -63,7 +63,7 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 		
 		if (player.isInStoreMode())
 		{
-			player.sendPacket(Msg.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+			player.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
@@ -83,7 +83,7 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 		
 		if (item.isHeroWeapon())
 		{
-			player.sendPacket(Msg.HERO_WEAPONS_CANNOT_BE_DESTROYED);
+			player.sendPacket(new SystemMessage(SystemMessage.HERO_WEAPONS_CANNOT_BE_DESTROYED));
 			return;
 		}
 		
@@ -95,13 +95,13 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 		
 		if (player.isInStoreMode())
 		{
-			player.sendPacket(Msg.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+			player.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
 		if (player.isFishing())
 		{
-			player.sendPacket(Msg.YOU_CANNOT_DO_THAT_WHILE_FISHING);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DO_THAT_WHILE_FISHING));
 			return;
 		}
 		
@@ -225,7 +225,7 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 		
 		if (!canCrystallize)
 		{
-			player.sendPacket(Msg.CANNOT_CRYSTALLIZE_CRYSTALLIZATION_SKILL_LEVEL_TOO_LOW);
+			player.sendPacket(new SystemMessage(SystemMessage.CANNOT_CRYSTALLIZE_CRYSTALLIZATION_SKILL_LEVEL_TOO_LOW));
 			player.sendActionFailed();
 			return;
 		}

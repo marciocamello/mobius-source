@@ -12,12 +12,12 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.network.serverpackets.PledgeShowMemberListDelete;
 import lineage2.gameserver.network.serverpackets.PledgeShowMemberListDeleteAll;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
@@ -58,7 +58,7 @@ public class RequestWithdrawalPledge extends L2GameClientPacket
 		
 		if (activeChar.isInCombat())
 		{
-			activeChar.sendPacket(Msg.ONE_CANNOT_LEAVE_ONES_CLAN_DURING_COMBAT);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.ONE_CANNOT_LEAVE_ONES_CLAN_DURING_COMBAT));
 			return;
 		}
 		

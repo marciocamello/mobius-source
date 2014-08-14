@@ -14,13 +14,13 @@ package lineage2.gameserver.handler.admincommands.impl;
 
 import java.util.StringTokenizer;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.utils.AdminFunctions;
 import lineage2.gameserver.utils.Location;
 
@@ -128,7 +128,7 @@ public class AdminMenu implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendPacket(Msg.INVALID_TARGET);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			}
 		}
 		else if (fullString.startsWith("admin_kick_menu"))
@@ -191,7 +191,7 @@ public class AdminMenu implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		

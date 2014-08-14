@@ -19,7 +19,6 @@ import java.util.concurrent.TimeUnit;
 
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
@@ -343,7 +342,7 @@ public class ItemAuction
 		
 		if (newBid < getAuctionInitBid())
 		{
-			player.sendPacket(Msg.YOUR_BID_PRICE_MUST_BE_HIGHER_THAN_THE_MINIMUM_PRICE_THAT_CAN_BE_BID);
+			player.sendPacket(new SystemMessage(SystemMessage.YOUR_BID_PRICE_MUST_BE_HIGHER_THAN_THE_MINIMUM_PRICE_THAT_CAN_BE_BID));
 			return;
 		}
 		
@@ -351,7 +350,7 @@ public class ItemAuction
 		{
 			if (Config.ALT_ITEM_AUCTION_MAX_BID == 100000000000L)
 			{
-				player.sendPacket(Msg.YOUR_BID_CANNOT_EXCEED_100_BILLION);
+				player.sendPacket(new SystemMessage(SystemMessage.YOUR_BID_CANNOT_EXCEED_100_BILLION));
 			}
 			else
 			{
@@ -371,7 +370,7 @@ public class ItemAuction
 		{
 			if ((_highestBid != null) && (newBid < _highestBid.getLastBid()))
 			{
-				player.sendPacket(Msg.YOUR_BID_MUST_BE_HIGHER_THAN_THE_CURRENT_HIGHEST_BID);
+				player.sendPacket(new SystemMessage(SystemMessage.YOUR_BID_MUST_BE_HIGHER_THAN_THE_CURRENT_HIGHEST_BID));
 				return;
 			}
 			
@@ -394,13 +393,13 @@ public class ItemAuction
 			
 			if (!Config.ALT_ITEM_AUCTION_CAN_REBID)
 			{
-				player.sendPacket(Msg.SINCE_YOU_HAVE_ALREADY_SUBMITTED_A_BID_YOU_ARE_NOT_ALLOWED_TO_PARTICIPATE_IN_ANOTHER_AUCTION_AT_THIS_TIME);
+				player.sendPacket(new SystemMessage(SystemMessage.SINCE_YOU_HAVE_ALREADY_SUBMITTED_A_BID_YOU_ARE_NOT_ALLOWED_TO_PARTICIPATE_IN_ANOTHER_AUCTION_AT_THIS_TIME));
 				return;
 			}
 			
 			if (bid.getLastBid() >= newBid)
 			{
-				player.sendPacket(Msg.THE_SECOND_BID_AMOUNT_MUST_BE_HIGHER_THAN_THE_ORIGINAL);
+				player.sendPacket(new SystemMessage(SystemMessage.THE_SECOND_BID_AMOUNT_MUST_BE_HIGHER_THAN_THE_ORIGINAL));
 				return;
 			}
 			
@@ -433,7 +432,7 @@ public class ItemAuction
 			
 			if (old != null)
 			{
-				old.sendPacket(Msg.YOU_HAVE_BEEN_OUTBID);
+				old.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_BEEN_OUTBID));
 			}
 			
 			_highestBid = bid;
@@ -444,12 +443,12 @@ public class ItemAuction
 			if (_auctionEndingExtendState == 0)
 			{
 				_auctionEndingExtendState = 1;
-				broadcastToAllBidders(Msg.BIDDER_EXISTS__THE_AUCTION_TIME_HAS_BEEN_EXTENDED_BY_5_MINUTES);
+				broadcastToAllBidders(new SystemMessage(SystemMessage.BIDDER_EXISTS__THE_AUCTION_TIME_HAS_BEEN_EXTENDED_BY_5_MINUTES));
 			}
 			else if ((_auctionEndingExtendState == 1) && (getAndSetLastBidPlayerObjectId(player.getObjectId()) != player.getObjectId()))
 			{
 				_auctionEndingExtendState = 2;
-				broadcastToAllBidders(Msg.BIDDER_EXISTS__AUCTION_TIME_HAS_BEEN_EXTENDED_BY_3_MINUTES);
+				broadcastToAllBidders(new SystemMessage(SystemMessage.BIDDER_EXISTS__AUCTION_TIME_HAS_BEEN_EXTENDED_BY_3_MINUTES));
 			}
 		}
 	}
@@ -490,13 +489,13 @@ public class ItemAuction
 		switch (getAuctionState())
 		{
 			case CREATED:
-				player.sendPacket(Msg.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU);
+				player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU));
 				return;
 				
 			case FINISHED:
 				if (_startingTime < (System.currentTimeMillis() - Config.ALT_ITEM_AUCTION_MAX_CANCEL_TIME_IN_MILLIS))
 				{
-					player.sendPacket(Msg.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU);
+					player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU));
 					return;
 				}
 				
@@ -511,7 +510,7 @@ public class ItemAuction
 		{
 			if (_highestBid == null)
 			{
-				player.sendPacket(Msg.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU);
+				player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU));
 				return;
 			}
 			
@@ -519,7 +518,7 @@ public class ItemAuction
 			
 			if ((bid == null) || bid.isCanceled())
 			{
-				player.sendPacket(Msg.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU);
+				player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU));
 				return;
 			}
 			
@@ -530,7 +529,7 @@ public class ItemAuction
 			}
 			
 			increaseItemCount(player, bid.getLastBid());
-			player.sendPacket(Msg.YOU_HAVE_CANCELED_YOUR_BID);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_CANCELED_YOUR_BID));
 			
 			if (Config.ALT_ITEM_AUCTION_CAN_REBID)
 			{
@@ -557,7 +556,7 @@ public class ItemAuction
 		{
 			if (!player.reduceAdena(count, true))
 			{
-				player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA_FOR_THIS_BID);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA_FOR_THIS_BID));
 				return false;
 			}
 			

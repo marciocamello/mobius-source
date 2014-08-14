@@ -12,7 +12,6 @@
  */
 package quests;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
@@ -376,7 +375,7 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest implements 
 		{
 			if ((player.getTransformation() != 0) || player.isMounted())
 			{
-				player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
 				return null;
 			}
 			
@@ -389,7 +388,7 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest implements 
 		{
 			if ((player.getTransformation() != 0) || player.isMounted())
 			{
-				player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
 				return null;
 			}
 			

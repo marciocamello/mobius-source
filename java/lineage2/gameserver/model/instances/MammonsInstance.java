@@ -12,10 +12,10 @@
  */
 package lineage2.gameserver.model.instances;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
@@ -93,7 +93,7 @@ public class MammonsInstance extends NpcInstance
 					
 					if ((ancientAdenaAmount < ancientAdenaConvert) || (ancientAdenaConvert < 1))
 					{
-						player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+						player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 						return;
 					}
 					

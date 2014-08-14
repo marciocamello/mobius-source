@@ -22,7 +22,6 @@ import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.net.nio.impl.MMOClient;
 import lineage2.commons.net.nio.impl.MMOConnection;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.dao.CharacterDAO;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.CharSelectionInfo;
@@ -33,6 +32,7 @@ import lineage2.gameserver.network.loginservercon.LoginServerCommunication;
 import lineage2.gameserver.network.loginservercon.SessionKey;
 import lineage2.gameserver.network.loginservercon.gspackets.PlayerLogout;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.utils.SecondaryPasswordAuth;
 
 import org.slf4j.Logger;
@@ -250,7 +250,7 @@ public final class GameClient extends MMOClient<MMOConnection<GameClient>>
 				return null;
 			}
 			
-			oldPlayer.sendPacket(Msg.ANOTHER_PERSON_HAS_LOGGED_IN_WITH_THE_SAME_ACCOUNT);
+			oldPlayer.sendPacket(new SystemMessage(SystemMessage.ANOTHER_PERSON_HAS_LOGGED_IN_WITH_THE_SAME_ACCOUNT));
 			GameClient oldClient = oldPlayer.getNetConnection();
 			
 			if (oldClient != null)

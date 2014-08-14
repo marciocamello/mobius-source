@@ -20,7 +20,6 @@ import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.listener.actor.OnDeathListener;
 import lineage2.gameserver.model.CommandChannel;
 import lineage2.gameserver.model.Creature;
@@ -32,6 +31,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.PlaySound;
 import lineage2.gameserver.network.serverpackets.SocialAction;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
@@ -599,7 +599,7 @@ public final class AntharasManager extends Functions implements ScriptFile, OnDe
 		
 		if ((ccleader.getParty() == null) || !ccleader.getParty().isInCommandChannel())
 		{
-			ccleader.sendPacket(Msg.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_IN_A_CURRENT_COMMAND_CHANNEL);
+			ccleader.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_IN_A_CURRENT_COMMAND_CHANNEL));
 			return;
 		}
 		
@@ -607,7 +607,7 @@ public final class AntharasManager extends Functions implements ScriptFile, OnDe
 		
 		if (!cc.getChannelLeader().equals(ccleader))
 		{
-			ccleader.sendPacket(Msg.ONLY_THE_ALLIANCE_CHANNEL_LEADER_CAN_ATTEMPT_ENTRY);
+			ccleader.sendPacket(new SystemMessage(SystemMessage.ONLY_THE_ALLIANCE_CHANNEL_LEADER_CAN_ATTEMPT_ENTRY));
 			return;
 		}
 		

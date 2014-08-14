@@ -19,7 +19,7 @@ import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -177,7 +177,7 @@ public class Request extends MultiValueSet<String>
 		{
 			if (player.getRequest() == this)
 			{
-				player.sendPacket(Msg.TIME_EXPIRED);
+				player.sendPacket(new SystemMessage(SystemMessage.TIME_EXPIRED));
 			}
 		}
 		

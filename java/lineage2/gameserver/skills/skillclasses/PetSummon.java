@@ -14,7 +14,6 @@ package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
@@ -24,6 +23,7 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.base.SummonType;
 import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.model.items.ItemInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.npc.NpcTemplate;
@@ -77,25 +77,25 @@ public class PetSummon extends Skill
 		
 		if (player.isInCombat() || player.getSummonList().isInCombat())
 		{
-			player.sendPacket(Msg.YOU_CANNOT_SUMMON_DURING_COMBAT);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_SUMMON_DURING_COMBAT));
 			return false;
 		}
 		
 		if (player.isProcessingRequest())
 		{
-			player.sendPacket(Msg.PETS_AND_SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME);
+			player.sendPacket(new SystemMessage(SystemMessage.PETS_AND_SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME));
 			return false;
 		}
 		
 		if (player.isMounted() || !player.getSummonList().canSummon(SummonType.PET, 0))
 		{
-			player.sendPacket(Msg.YOU_ALREADY_HAVE_A_PET);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_HAVE_A_PET));
 			return false;
 		}
 		
 		if (player.isInBoat())
 		{
-			player.sendPacket(Msg.YOU_MAY_NOT_CALL_FORTH_A_PET_OR_SUMMONED_CREATURE_FROM_THIS_LOCATION);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_CALL_FORTH_A_PET_OR_SUMMONED_CREATURE_FROM_THIS_LOCATION));
 			return false;
 		}
 		
@@ -106,13 +106,13 @@ public class PetSummon extends Skill
 		
 		if (player.isInOlympiadMode())
 		{
-			player.sendPacket(Msg.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+			player.sendPacket(new SystemMessage(SystemMessage.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
 			return false;
 		}
 		
 		if (player.isCursedWeaponEquipped())
 		{
-			player.sendPacket(Msg.YOU_MAY_NOT_USE_MULTIPLE_PETS_OR_SERVITORS_AT_THE_SAME_TIME);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_USE_MULTIPLE_PETS_OR_SERVITORS_AT_THE_SAME_TIME));
 			return false;
 		}
 		
@@ -120,7 +120,7 @@ public class PetSummon extends Skill
 		{
 			if (o.isDoor())
 			{
-				player.sendPacket(Msg.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION));
 				return false;
 			}
 		}

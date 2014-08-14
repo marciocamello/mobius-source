@@ -14,13 +14,13 @@ package services.petevolve;
 
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.PetDataTable;
@@ -208,7 +208,7 @@ public final class exchange extends Functions
 		}
 		else if (Config.SERVICES_CHANGE_PET_NAME_ITEM == 57)
 		{
-			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 		}
 		else
 		{
@@ -254,7 +254,7 @@ public final class exchange extends Functions
 		}
 		else if (Config.SERVICES_EXCHANGE_BABY_PET_ITEM == 57)
 		{
-			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 		}
 		else
 		{
@@ -309,7 +309,7 @@ public final class exchange extends Functions
 		}
 		else if (Config.SERVICES_EXCHANGE_BABY_PET_ITEM == 57)
 		{
-			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 		}
 		else
 		{
@@ -358,7 +358,7 @@ public final class exchange extends Functions
 		}
 		else if (Config.SERVICES_EXCHANGE_BABY_PET_ITEM == 57)
 		{
-			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 		}
 		else
 		{

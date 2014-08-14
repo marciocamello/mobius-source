@@ -16,7 +16,6 @@ import java.util.List;
 
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Effect;
@@ -29,6 +28,7 @@ import lineage2.gameserver.model.base.InvisibleType;
 import lineage2.gameserver.network.serverpackets.Earthquake;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SocialAction;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.skills.AbnormalEffect;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Util;
@@ -234,7 +234,7 @@ public class AdminEffects implements IAdminCommandHandler
 			case admin_block:
 				if ((target == null) || !target.isCreature())
 				{
-					activeChar.sendPacket(Msg.INVALID_TARGET);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 					return false;
 				}
 				
@@ -252,7 +252,7 @@ public class AdminEffects implements IAdminCommandHandler
 			case admin_unblock:
 				if ((target == null) || !target.isCreature())
 				{
-					activeChar.sendPacket(Msg.INVALID_TARGET);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 					return false;
 				}
 				
@@ -279,7 +279,7 @@ public class AdminEffects implements IAdminCommandHandler
 				
 				if (!target.isCreature())
 				{
-					activeChar.sendPacket(Msg.INVALID_TARGET);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 					return false;
 				}
 				
@@ -293,7 +293,7 @@ public class AdminEffects implements IAdminCommandHandler
 			case admin_setinvul:
 				if ((target == null) || !target.isPlayer())
 				{
-					activeChar.sendPacket(Msg.INVALID_TARGET);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 					return false;
 				}
 				
@@ -411,7 +411,7 @@ public class AdminEffects implements IAdminCommandHandler
 				
 				if (!(target instanceof Creature))
 				{
-					activeChar.sendPacket(Msg.INVALID_TARGET);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 				}
 				else
 				{

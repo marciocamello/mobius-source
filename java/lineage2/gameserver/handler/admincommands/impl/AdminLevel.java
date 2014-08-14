@@ -12,13 +12,13 @@
  */
 package lineage2.gameserver.handler.admincommands.impl;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.Experience;
 import lineage2.gameserver.model.instances.PetInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.tables.PetDataTable;
 
 /**
@@ -48,7 +48,7 @@ public class AdminLevel implements IAdminCommandHandler
 	{
 		if ((target == null) || !(target.isPlayer() || target.isPet()))
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return;
 		}
 		
@@ -94,7 +94,7 @@ public class AdminLevel implements IAdminCommandHandler
 		
 		if ((target == null) || !(target.isPlayer() || target.isPet()))
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return false;
 		}
 		

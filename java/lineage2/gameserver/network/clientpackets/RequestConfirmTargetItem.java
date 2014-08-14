@@ -12,10 +12,10 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ExPutItemResultForVariationMake;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Mobius
@@ -53,14 +53,14 @@ public class RequestConfirmTargetItem extends AbstractRefinePacket
 		{
 			if (item.isAugmented())
 			{
-				activeChar.sendPacket(Msg.ONCE_AN_ITEM_IS_AUGMENTED_IT_CANNOT_BE_AUGMENTED_AGAIN);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.ONCE_AN_ITEM_IS_AUGMENTED_IT_CANNOT_BE_AUGMENTED_AGAIN));
 				return;
 			}
 			
-			activeChar.sendPacket(Msg.THIS_IS_NOT_A_SUITABLE_ITEM);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_IS_NOT_A_SUITABLE_ITEM));
 			return;
 		}
 		
-		activeChar.sendPacket(new ExPutItemResultForVariationMake(_itemObjId), Msg.SELECT_THE_CATALYST_FOR_AUGMENTATION);
+		activeChar.sendPacket(new ExPutItemResultForVariationMake(_itemObjId), new SystemMessage(SystemMessage.SELECT_THE_CATALYST_FOR_AUGMENTATION));
 	}
 }

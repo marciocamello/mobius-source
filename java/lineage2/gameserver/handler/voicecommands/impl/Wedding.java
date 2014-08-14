@@ -25,7 +25,6 @@ import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.ai.CtrlIntention;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler;
 import lineage2.gameserver.handler.voicecommands.VoicedCommandHandler;
@@ -388,13 +387,13 @@ public class Wedding implements IVoicedCommandHandler
 		
 		if (partner.isInZoneBattle() || partner.isInZone(Zone.ZoneType.SIEGE) || partner.isInZone(no_restart) || partner.isInOlympiadMode() || activeChar.isInZoneBattle() || activeChar.isInZone(Zone.ZoneType.SIEGE) || activeChar.isInZone(no_restart) || activeChar.isInOlympiadMode() || (partner.getReflection() != ReflectionManager.DEFAULT) || partner.isInZone(no_summon) || activeChar.isInObserverMode() || partner.isInObserverMode())
 		{
-			activeChar.sendPacket(Msg.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
 			return false;
 		}
 		
 		if (!activeChar.reduceAdena(Config.WEDDING_TELEPORT_PRICE, true))
 		{
-			activeChar.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			return false;
 		}
 		

@@ -15,7 +15,6 @@ package lineage2.gameserver.tables;
 import java.util.ArrayList;
 import java.util.List;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
@@ -75,11 +74,11 @@ public class GmListTable
 		
 		if (gmList.isEmpty())
 		{
-			player.sendPacket(Msg.THERE_ARE_NOT_ANY_GMS_THAT_ARE_PROVIDING_CUSTOMER_SERVICE_CURRENTLY);
+			player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NOT_ANY_GMS_THAT_ARE_PROVIDING_CUSTOMER_SERVICE_CURRENTLY));
 			return;
 		}
 		
-		player.sendPacket(Msg._GM_LIST_);
+		player.sendPacket(new SystemMessage(SystemMessage._GM_LIST_));
 		
 		for (Player gm : gmList)
 		{

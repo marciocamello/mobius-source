@@ -12,7 +12,6 @@
  */
 package npc.model;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.instancemanager.naia.NaiaTowerManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -58,13 +57,13 @@ public final class NaiaControllerInstance extends NpcInstance
 			{
 				if (!player.isInParty())
 				{
-					player.sendPacket(Msg.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
+					player.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER));
 					return;
 				}
 				
 				if (!player.getParty().isLeader(player))
 				{
-					player.sendPacket(Msg.ONLY_A_PARTY_LEADER_CAN_TRY_TO_ENTER);
+					player.sendPacket(new SystemMessage(SystemMessage.ONLY_A_PARTY_LEADER_CAN_TRY_TO_ENTER));
 					return;
 				}
 				

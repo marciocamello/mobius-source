@@ -16,7 +16,6 @@ import java.util.List;
 
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.util.Rnd;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
@@ -26,6 +25,7 @@ import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.Zone.ZoneType;
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.tables.FishTable;
 import lineage2.gameserver.templates.FishTemplate;
 import lineage2.gameserver.templates.StatsSet;
@@ -71,25 +71,25 @@ public class FishingSkill extends Skill
 		if (player.isFishing())
 		{
 			player.stopFishing();
-			player.sendPacket(Msg.CANCELS_FISHING);
+			player.sendPacket(new SystemMessage(SystemMessage.CANCELS_FISHING));
 			return false;
 		}
 		
 		if (player.isInBoat())
 		{
-			activeChar.sendPacket(Msg.YOU_CANT_FISH_WHILE_YOU_ARE_ON_BOARD);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANT_FISH_WHILE_YOU_ARE_ON_BOARD));
 			return false;
 		}
 		
 		if (player.getPrivateStoreType() != Player.STORE_PRIVATE_NONE)
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_FISH_WHILE_USING_A_RECIPE_BOOK_PRIVATE_MANUFACTURE_OR_PRIVATE_STORE);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_FISH_WHILE_USING_A_RECIPE_BOOK_PRIVATE_MANUFACTURE_OR_PRIVATE_STORE));
 			return false;
 		}
 		
 		if (!player.isInZone(ZoneType.FISHING) || player.isInWater())
 		{
-			player.sendPacket(Msg.YOU_CANT_FISH_HERE);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANT_FISH_HERE));
 			return false;
 		}
 		
@@ -97,7 +97,7 @@ public class FishingSkill extends Skill
 		
 		if ((weaponItem == null) || (weaponItem.getItemType() != WeaponType.ROD))
 		{
-			player.sendPacket(Msg.FISHING_POLES_ARE_NOT_INSTALLED);
+			player.sendPacket(new SystemMessage(SystemMessage.FISHING_POLES_ARE_NOT_INSTALLED));
 			return false;
 		}
 		
@@ -105,7 +105,7 @@ public class FishingSkill extends Skill
 		
 		if ((lure == null) || (lure.getCount() < 1))
 		{
-			player.sendPacket(Msg.BAITS_ARE_NOT_PUT_ON_A_HOOK);
+			player.sendPacket(new SystemMessage(SystemMessage.BAITS_ARE_NOT_PUT_ON_A_HOOK));
 			return false;
 		}
 		
@@ -137,7 +137,7 @@ public class FishingSkill extends Skill
 		
 		if (!isInWater)
 		{
-			player.sendPacket(Msg.YOU_CANT_FISH_HERE);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANT_FISH_HERE));
 			return false;
 		}
 		
@@ -163,7 +163,7 @@ public class FishingSkill extends Skill
 		
 		if ((lure == null) || (lure.getCount() < 1))
 		{
-			player.sendPacket(Msg.BAITS_ARE_NOT_PUT_ON_A_HOOK);
+			player.sendPacket(new SystemMessage(SystemMessage.BAITS_ARE_NOT_PUT_ON_A_HOOK));
 			return;
 		}
 		
@@ -183,13 +183,13 @@ public class FishingSkill extends Skill
 		
 		if ((fishs == null) || (fishs.size() == 0))
 		{
-			player.sendPacket(Msg.SYSTEM_ERROR);
+			player.sendPacket(new SystemMessage(SystemMessage.SYSTEM_ERROR));
 			return;
 		}
 		
 		if (!player.getInventory().destroyItemByObjectId(player.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LHAND), 1L))
 		{
-			player.sendPacket(Msg.NOT_ENOUGH_BAIT);
+			player.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_BAIT));
 			return;
 		}
 		

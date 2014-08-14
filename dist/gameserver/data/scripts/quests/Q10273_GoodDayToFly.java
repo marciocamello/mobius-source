@@ -12,11 +12,11 @@
  */
 package quests;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
 
@@ -65,7 +65,7 @@ public class Q10273_GoodDayToFly extends Quest implements ScriptFile
 		{
 			if (player.getTransformation() != 0)
 			{
-				player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
 				return null;
 			}
 			
@@ -76,7 +76,7 @@ public class Q10273_GoodDayToFly extends Quest implements ScriptFile
 		{
 			if (player.getTransformation() != 0)
 			{
-				player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
 				return null;
 			}
 			
@@ -86,7 +86,7 @@ public class Q10273_GoodDayToFly extends Quest implements ScriptFile
 		{
 			if (player.getTransformation() != 0)
 			{
-				player.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
 				return null;
 			}
 			

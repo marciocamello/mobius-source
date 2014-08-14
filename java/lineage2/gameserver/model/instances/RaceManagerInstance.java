@@ -19,7 +19,6 @@ import java.util.concurrent.CopyOnWriteArraySet;
 
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.instancemanager.ServerVariables;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.MonsterRace;
@@ -285,13 +284,13 @@ public class RaceManagerInstance extends NpcInstance
 		
 		if (command.startsWith("BuyTicket") && (state != ACCEPTING_BETS))
 		{
-			player.sendPacket(Msg.MONSTER_RACE_TICKETS_ARE_NO_LONGER_AVAILABLE);
+			player.sendPacket(new SystemMessage(SystemMessage.MONSTER_RACE_TICKETS_ARE_NO_LONGER_AVAILABLE));
 			command = "Chat 0";
 		}
 		
 		if (command.startsWith("ShowOdds") && (state == ACCEPTING_BETS))
 		{
-			player.sendPacket(Msg.MONSTER_RACE_PAYOUT_INFORMATION_IS_NOT_AVAILABLE_WHILE_TICKETS_ARE_BEING_SOLD);
+			player.sendPacket(new SystemMessage(SystemMessage.MONSTER_RACE_PAYOUT_INFORMATION_IS_NOT_AVAILABLE_WHILE_TICKETS_ARE_BEING_SOLD));
 			command = "Chat 0";
 		}
 		
@@ -481,7 +480,7 @@ public class RaceManagerInstance extends NpcInstance
 			
 			if (player.getAdena() < cost[player.getRace(1) - 1])
 			{
-				player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 				return;
 			}
 			

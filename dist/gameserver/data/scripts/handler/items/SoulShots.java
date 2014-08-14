@@ -15,7 +15,6 @@
 package handler.items;
 
 import lineage2.commons.util.Rnd;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
@@ -94,7 +93,7 @@ public final class SoulShots extends ScriptItemHandler
 		{
 			if (!isAutoSoulShot)
 			{
-				player.sendPacket(Msg.CANNOT_USE_SOULSHOTS);
+				player.sendPacket(new SystemMessage(SystemMessage.CANNOT_USE_SOULSHOTS));
 			}
 			
 			return false;
@@ -117,7 +116,7 @@ public final class SoulShots extends ScriptItemHandler
 				return false;
 			}
 			
-			player.sendPacket(Msg.CANNOT_USE_SOULSHOTS);
+			player.sendPacket(new SystemMessage(SystemMessage.CANNOT_USE_SOULSHOTS));
 			return false;
 		}
 		
@@ -128,7 +127,7 @@ public final class SoulShots extends ScriptItemHandler
 				return false;
 			}
 			
-			player.sendPacket(Msg.SOULSHOT_DOES_NOT_MATCH_WEAPON_GRADE);
+			player.sendPacket(new SystemMessage(SystemMessage.SOULSHOT_DOES_NOT_MATCH_WEAPON_GRADE));
 			return false;
 		}
 		
@@ -144,12 +143,12 @@ public final class SoulShots extends ScriptItemHandler
 		
 		if (!player.getInventory().destroyItem(item, soulShotConsumption))
 		{
-			player.sendPacket(Msg.NOT_ENOUGH_SOULSHOTS);
+			player.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_SOULSHOTS));
 			return false;
 		}
 		
 		weaponInst.setChargedSoulshot(ItemInstance.CHARGED_SOULSHOT);
-		player.sendPacket(Msg.POWER_OF_THE_SPIRITS_ENABLED);
+		player.sendPacket(new SystemMessage(SystemMessage.POWER_OF_THE_SPIRITS_ENABLED));
 		player.broadcastPacket(new MagicSkillUse(player, player, _skillIds[grade], 1, 0, 0));
 		return true;
 	}

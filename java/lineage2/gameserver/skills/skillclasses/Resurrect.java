@@ -14,7 +14,6 @@ package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.listener.actor.player.OnAnswerListener;
 import lineage2.gameserver.listener.actor.player.impl.ReviveAnswerListener;
 import lineage2.gameserver.model.Creature;
@@ -23,6 +22,7 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.base.BaseStats;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.model.instances.PetInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.StatsSet;
@@ -105,11 +105,11 @@ public class Resurrect extends Skill
 				{
 					if (reviveAsk.isForPet())
 					{
-						activeChar.sendPacket(Msg.BETTER_RESURRECTION_HAS_BEEN_ALREADY_PROPOSED);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.BETTER_RESURRECTION_HAS_BEEN_ALREADY_PROPOSED));
 					}
 					else
 					{
-						activeChar.sendPacket(Msg.SINCE_THE_MASTER_WAS_IN_THE_PROCESS_OF_BEING_RESURRECTED_THE_ATTEMPT_TO_RESURRECT_THE_PET_HAS_BEEN_CANCELLED);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.SINCE_THE_MASTER_WAS_IN_THE_PROCESS_OF_BEING_RESURRECTED_THE_ATTEMPT_TO_RESURRECT_THE_PET_HAS_BEEN_CANCELLED));
 					}
 					
 					return false;
@@ -130,11 +130,11 @@ public class Resurrect extends Skill
 				{
 					if (reviveAsk.isForPet())
 					{
-						activeChar.sendPacket(Msg.WHILE_A_PET_IS_ATTEMPTING_TO_RESURRECT_IT_CANNOT_HELP_IN_RESURRECTING_ITS_MASTER);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.WHILE_A_PET_IS_ATTEMPTING_TO_RESURRECT_IT_CANNOT_HELP_IN_RESURRECTING_ITS_MASTER));
 					}
 					else
 					{
-						activeChar.sendPacket(Msg.BETTER_RESURRECTION_HAS_BEEN_ALREADY_PROPOSED);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.BETTER_RESURRECTION_HAS_BEEN_ALREADY_PROPOSED));
 					}
 					
 					return false;

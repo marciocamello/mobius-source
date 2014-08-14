@@ -17,12 +17,12 @@ import java.util.List;
 
 import lineage2.commons.math.SafeMath;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ExBuySellList;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Log;
 
@@ -89,7 +89,7 @@ public class RequestExRefundItem extends L2GameClientPacket
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(Msg.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
@@ -101,7 +101,7 @@ public class RequestExRefundItem extends L2GameClientPacket
 		
 		if (activeChar.isFishing())
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_DO_THAT_WHILE_FISHING);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DO_THAT_WHILE_FISHING));
 			return;
 		}
 		
@@ -158,21 +158,21 @@ public class RequestExRefundItem extends L2GameClientPacket
 			
 			if (!activeChar.getInventory().validateWeight(weight))
 			{
-				sendPacket(Msg.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
+				sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
 				activeChar.sendActionFailed();
 				return;
 			}
 			
 			if (!activeChar.getInventory().validateCapacity(slots))
 			{
-				sendPacket(Msg.YOUR_INVENTORY_IS_FULL);
+				sendPacket(new SystemMessage(SystemMessage.YOUR_INVENTORY_IS_FULL));
 				activeChar.sendActionFailed();
 				return;
 			}
 			
 			if (!activeChar.reduceAdena(totalPrice))
 			{
-				activeChar.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 				activeChar.sendActionFailed();
 				return;
 			}
@@ -186,7 +186,7 @@ public class RequestExRefundItem extends L2GameClientPacket
 		}
 		catch (ArithmeticException ae)
 		{
-			sendPacket(Msg.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
+			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 			return;
 		}
 		finally

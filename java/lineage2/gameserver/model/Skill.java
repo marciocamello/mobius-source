@@ -26,7 +26,6 @@ import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.instancemanager.games.HandysBlockCheckerManager;
 import lineage2.gameserver.instancemanager.games.HandysBlockCheckerManager.ArenaParticipantsHolder;
@@ -1098,13 +1097,13 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		
 		if (first && (activeChar.getCurrentMp() < (isMagic() ? _mpConsume1 + activeChar.calcStat(Stats.MP_MAGIC_SKILL_CONSUME, _mpConsume2, target, this) : _mpConsume1 + activeChar.calcStat(Stats.MP_PHYSICAL_SKILL_CONSUME, _mpConsume2, target, this))))
 		{
-			activeChar.sendPacket(Msg.NOT_ENOUGH_MP);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP));
 			return false;
 		}
 		
 		if (activeChar.getCurrentHp() < (_hpConsume + 1))
 		{
-			activeChar.sendPacket(Msg.NOT_ENOUGH_HP);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_HP));
 			return false;
 		}
 		
@@ -1115,13 +1114,13 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		
 		if (_soulsConsume > activeChar.getConsumedSouls())
 		{
-			activeChar.sendPacket(Msg.THERE_IS_NOT_ENOUGHT_SOUL);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.THERE_IS_NOT_ENOUGHT_SOUL));
 			return false;
 		}
 		
 		if ((activeChar.getIncreasedForce() < _condCharges) || (activeChar.getIncreasedForce() < _numCharges))
 		{
-			activeChar.sendPacket(Msg.YOUR_FORCE_HAS_REACHED_MAXIMUM_CAPACITY_);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOUR_FORCE_HAS_REACHED_MAXIMUM_CAPACITY_));
 			return false;
 		}
 		
@@ -1148,7 +1147,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			
 			if (player.isInObserverMode())
 			{
-				activeChar.sendPacket(Msg.OBSERVERS_CANNOT_PARTICIPATE);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.OBSERVERS_CANNOT_PARTICIPATE));
 				return false;
 			}
 			
@@ -1181,7 +1180,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			{
 				if (activeChar == player)
 				{
-					player.sendPacket(Msg.ONLY_FISHING_SKILLS_ARE_AVAILABLE);
+					player.sendPacket(new SystemMessage(SystemMessage.ONLY_FISHING_SKILLS_ARE_AVAILABLE));
 				}
 				
 				return false;
@@ -1190,13 +1189,13 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		
 		if ((getFlyType() != FlyType.NONE) && (getId() != 628) && (getId() != 821) && (activeChar.isImmobilized() || activeChar.isRooted()))
 		{
-			activeChar.getPlayer().sendPacket(Msg.YOUR_TARGET_IS_OUT_OF_RANGE);
+			activeChar.getPlayer().sendPacket(new SystemMessage(SystemMessage.YOUR_TARGET_IS_OUT_OF_RANGE));
 			return false;
 		}
 		
 		if (first && (target != null) && (getFlyType() == FlyType.CHARGE) && activeChar.isInRange(target.getLoc(), Math.min(150, getFlyRadius())))
 		{
-			activeChar.getPlayer().sendPacket(Msg.THERE_IS_NOT_ENOUGH_SPACE_TO_MOVE_THE_SKILL_CANNOT_BE_USED);
+			activeChar.getPlayer().sendPacket(new SystemMessage(SystemMessage.THERE_IS_NOT_ENOUGH_SPACE_TO_MOVE_THE_SKILL_CANNOT_BE_USED));
 			return false;
 		}
 		

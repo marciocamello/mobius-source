@@ -18,7 +18,6 @@ import java.util.Map;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.BuyListHolder;
 import lineage2.gameserver.data.xml.holder.BuyListHolder.NpcTradeList;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
@@ -29,6 +28,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.network.serverpackets.ShopPreviewInfo;
 import lineage2.gameserver.network.serverpackets.ShopPreviewList;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.item.ArmorTemplate.ArmorType;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
@@ -95,7 +95,7 @@ public class RequestPreviewItem extends L2GameClientPacket
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(Msg.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
@@ -179,7 +179,7 @@ public class RequestPreviewItem extends L2GameClientPacket
 				
 				if (itemList.containsKey(paperdoll))
 				{
-					activeChar.sendPacket(Msg.THOSE_ITEMS_MAY_NOT_BE_TRIED_ON_SIMULTANEOUSLY);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.THOSE_ITEMS_MAY_NOT_BE_TRIED_ON_SIMULTANEOUSLY));
 					return;
 				}
 				
@@ -189,13 +189,13 @@ public class RequestPreviewItem extends L2GameClientPacket
 			
 			if (!activeChar.reduceAdena(totalPrice))
 			{
-				activeChar.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 				return;
 			}
 		}
 		catch (ArithmeticException ae)
 		{
-			sendPacket(Msg.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
+			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 			return;
 		}
 		
@@ -228,7 +228,7 @@ public class RequestPreviewItem extends L2GameClientPacket
 		@Override
 		public void runImpl()
 		{
-			_activeChar.sendPacket(Msg.TRYING_ON_MODE_HAS_ENDED);
+			_activeChar.sendPacket(new SystemMessage(SystemMessage.TRYING_ON_MODE_HAS_ENDED));
 			_activeChar.sendUserInfo();
 		}
 	}

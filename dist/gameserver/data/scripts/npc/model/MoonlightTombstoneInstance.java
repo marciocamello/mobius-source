@@ -15,7 +15,6 @@ package npc.model;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
@@ -63,13 +62,13 @@ public final class MoonlightTombstoneInstance extends NpcInstance
 		{
 			if (player.getParty() == null)
 			{
-				player.sendPacket(Msg.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER));
 				return;
 			}
 			
 			if (!player.getParty().isLeader(player))
 			{
-				player.sendPacket(Msg.ONLY_A_PARTY_LEADER_CAN_TRY_TO_ENTER);
+				player.sendPacket(new SystemMessage(SystemMessage.ONLY_A_PARTY_LEADER_CAN_TRY_TO_ENTER));
 				return;
 			}
 			

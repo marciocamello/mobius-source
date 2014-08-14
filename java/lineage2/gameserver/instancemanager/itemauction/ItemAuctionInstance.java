@@ -32,7 +32,6 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
@@ -464,7 +463,7 @@ public class ItemAuctionInstance
 			if (player != null)
 			{
 				player.getWarehouse().addItem(item);
-				player.sendPacket(Msg.YOU_HAVE_BID_THE_HIGHEST_PRICE_AND_HAVE_WON_THE_ITEM_THE_ITEM_CAN_BE_FOUND_IN_YOUR_PERSONAL);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_BID_THE_HIGHEST_PRICE_AND_HAVE_WON_THE_ITEM_THE_ITEM_CAN_BE_FOUND_IN_YOUR_PERSONAL));
 				_log.info("ItemAuction: Auction " + auction.getAuctionId() + " has finished. Highest bid by (name) " + player.getName() + " for instance " + _instanceId);
 			}
 			else

@@ -12,7 +12,6 @@
  */
 package lineage2.gameserver.handler.usercommands.impl;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.handler.usercommands.IUserCommandHandler;
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
@@ -60,34 +59,34 @@ public class PartyInfo implements IUserCommandHandler
 		
 		int memberCount = playerParty.getMemberCount();
 		int lootDistribution = playerParty.getLootDistribution();
-		activeChar.sendPacket(Msg._PARTY_INFORMATION_);
+		activeChar.sendPacket(new SystemMessage(SystemMessage._PARTY_INFORMATION_));
 		
 		switch (lootDistribution)
 		{
 			case Party.ITEM_LOOTER:
-				activeChar.sendPacket(Msg.LOOTING_METHOD_FINDERS_KEEPERS);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.LOOTING_METHOD_FINDERS_KEEPERS));
 				break;
 			
 			case Party.ITEM_ORDER:
-				activeChar.sendPacket(Msg.LOOTING_METHOD_BY_TURN);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.LOOTING_METHOD_BY_TURN));
 				break;
 			
 			case Party.ITEM_ORDER_SPOIL:
-				activeChar.sendPacket(Msg.LOOTING_METHOD_BY_TURN_INCLUDING_SPOIL);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.LOOTING_METHOD_BY_TURN_INCLUDING_SPOIL));
 				break;
 			
 			case Party.ITEM_RANDOM:
-				activeChar.sendPacket(Msg.LOOTING_METHOD_RANDOM);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.LOOTING_METHOD_RANDOM));
 				break;
 			
 			case Party.ITEM_RANDOM_SPOIL:
-				activeChar.sendPacket(Msg.LOOTING_METHOD_RANDOM_INCLUDING_SPOIL);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.LOOTING_METHOD_RANDOM_INCLUDING_SPOIL));
 				break;
 		}
 		
 		activeChar.sendPacket(new SystemMessage(SystemMessage.PARTY_LEADER_S1).addString(partyLeader.getName()));
 		activeChar.sendMessage(new CustomMessage("scripts.commands.user.PartyInfo.Members", activeChar).addNumber(memberCount));
-		activeChar.sendPacket(Msg.__DASHES__);
+		activeChar.sendPacket(new SystemMessage(SystemMessage.__DASHES__));
 		return true;
 	}
 	

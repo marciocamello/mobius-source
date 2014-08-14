@@ -19,7 +19,6 @@ import java.util.Map;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObjectsStorage;
@@ -29,6 +28,7 @@ import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.base.Experience;
 import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.network.serverpackets.Say2;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
@@ -222,7 +222,7 @@ public abstract class ArenaTemplate extends Functions
 		
 		if (player.getAdena() < _price)
 		{
-			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			return;
 		}
 		
@@ -382,7 +382,7 @@ public abstract class ArenaTemplate extends Functions
 		
 		if ((_battleType == 1) && (player.getAdena() < _price))
 		{
-			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			return;
 		}
 		

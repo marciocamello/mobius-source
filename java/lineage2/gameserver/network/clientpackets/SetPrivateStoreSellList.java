@@ -15,12 +15,12 @@ package lineage2.gameserver.network.clientpackets;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.TradeItem;
 import lineage2.gameserver.network.serverpackets.PrivateStoreManageListSell;
 import lineage2.gameserver.network.serverpackets.PrivateStoreMsgSell;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.TradeHelper;
 
@@ -121,7 +121,7 @@ public class SetPrivateStoreSellList extends L2GameClientPacket
 		
 		if (sellList.size() > seller.getTradeLimit())
 		{
-			seller.sendPacket(Msg.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
+			seller.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 			seller.sendPacket(new PrivateStoreManageListSell(seller, _package));
 			return;
 		}

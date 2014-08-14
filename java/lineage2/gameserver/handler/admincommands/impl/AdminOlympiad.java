@@ -17,7 +17,6 @@ import java.util.List;
 
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
@@ -25,6 +24,7 @@ import lineage2.gameserver.model.entity.Hero;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.entity.olympiad.OlympiadDatabase;
 import lineage2.gameserver.model.entity.olympiad.OlympiadManager;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.StatsSet;
 
 /**
@@ -122,14 +122,14 @@ public class AdminOlympiad implements IAdminCommandHandler
 				Olympiad._manager = new OlympiadManager();
 				Olympiad._inCompPeriod = true;
 				new Thread(Olympiad._manager).start();
-				Announcements.getInstance().announceToAll(Msg.THE_OLYMPIAD_GAME_HAS_STARTED);
+				Announcements.getInstance().announceToAll(new SystemMessage(SystemMessage.THE_OLYMPIAD_GAME_HAS_STARTED));
 				break;
 			}
 			
 			case admin_oly_stop:
 			{
 				Olympiad._inCompPeriod = false;
-				Announcements.getInstance().announceToAll(Msg.THE_OLYMPIAD_GAME_HAS_ENDED);
+				Announcements.getInstance().announceToAll(new SystemMessage(SystemMessage.THE_OLYMPIAD_GAME_HAS_ENDED));
 				
 				try
 				{

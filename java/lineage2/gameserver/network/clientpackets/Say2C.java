@@ -18,7 +18,6 @@ import java.util.regex.Pattern;
 
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.ItemInfoCache;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler;
 import lineage2.gameserver.handler.voicecommands.VoicedCommandHandler;
 import lineage2.gameserver.instancemanager.PetitionManager;
@@ -262,7 +261,7 @@ public class Say2C extends L2GameClientPacket
 					}
 					else
 					{
-						activeChar.sendPacket(Msg.THE_PERSON_IS_IN_A_MESSAGE_REFUSAL_MODE);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.THE_PERSON_IS_IN_A_MESSAGE_REFUSAL_MODE));
 					}
 				}
 				else if (receiver == null)
@@ -271,7 +270,7 @@ public class Say2C extends L2GameClientPacket
 				}
 				else
 				{
-					activeChar.sendPacket(Msg.YOU_HAVE_BEEN_BLOCKED_FROM_THE_CONTACT_YOU_SELECTED, ActionFail.STATIC);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_BEEN_BLOCKED_FROM_THE_CONTACT_YOU_SELECTED), ActionFail.STATIC);
 				}
 				
 				break;
@@ -279,13 +278,13 @@ public class Say2C extends L2GameClientPacket
 			case SHOUT:
 				if (activeChar.isCursedWeaponEquipped())
 				{
-					activeChar.sendPacket(Msg.SHOUT_AND_TRADE_CHATING_CANNOT_BE_USED_SHILE_POSSESSING_A_CURSED_WEAPON);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.SHOUT_AND_TRADE_CHATING_CANNOT_BE_USED_SHILE_POSSESSING_A_CURSED_WEAPON));
 					return;
 				}
 				
 				if (activeChar.isInObserverMode())
 				{
-					activeChar.sendPacket(Msg.YOU_CANNOT_CHAT_LOCALLY_WHILE_OBSERVING);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_CHAT_LOCALLY_WHILE_OBSERVING));
 					return;
 				}
 				
@@ -310,13 +309,13 @@ public class Say2C extends L2GameClientPacket
 			case TRADE:
 				if (activeChar.isCursedWeaponEquipped())
 				{
-					activeChar.sendPacket(Msg.SHOUT_AND_TRADE_CHATING_CANNOT_BE_USED_SHILE_POSSESSING_A_CURSED_WEAPON);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.SHOUT_AND_TRADE_CHATING_CANNOT_BE_USED_SHILE_POSSESSING_A_CURSED_WEAPON));
 					return;
 				}
 				
 				if (activeChar.isInObserverMode())
 				{
-					activeChar.sendPacket(Msg.YOU_CANNOT_CHAT_LOCALLY_WHILE_OBSERVING);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_CHAT_LOCALLY_WHILE_OBSERVING));
 					return;
 				}
 				
@@ -422,7 +421,7 @@ public class Say2C extends L2GameClientPacket
 			case COMMANDCHANNEL_ALL:
 				if (!activeChar.isInParty() || !activeChar.getParty().isInCommandChannel())
 				{
-					activeChar.sendPacket(Msg.YOU_DO_NOT_HAVE_AUTHORITY_TO_USE_THE_COMMAND_CHANNEL);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_AUTHORITY_TO_USE_THE_COMMAND_CHANNEL));
 					return;
 				}
 				
@@ -432,7 +431,7 @@ public class Say2C extends L2GameClientPacket
 				}
 				else
 				{
-					activeChar.sendPacket(Msg.ONLY_CHANNEL_OPENER_CAN_GIVE_ALL_COMMAND);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.ONLY_CHANNEL_OPENER_CAN_GIVE_ALL_COMMAND));
 				}
 				
 				break;
@@ -440,7 +439,7 @@ public class Say2C extends L2GameClientPacket
 			case COMMANDCHANNEL_COMMANDER:
 				if (!activeChar.isInParty() || !activeChar.getParty().isInCommandChannel())
 				{
-					activeChar.sendPacket(Msg.YOU_DO_NOT_HAVE_AUTHORITY_TO_USE_THE_COMMAND_CHANNEL);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_AUTHORITY_TO_USE_THE_COMMAND_CHANNEL));
 					return;
 				}
 				
@@ -450,7 +449,7 @@ public class Say2C extends L2GameClientPacket
 				}
 				else
 				{
-					activeChar.sendPacket(Msg.ONLY_A_PARTY_LEADER_CAN_ACCESS_THE_COMMAND_CHANNEL);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.ONLY_A_PARTY_LEADER_CAN_ACCESS_THE_COMMAND_CHANNEL));
 				}
 				
 				break;

@@ -14,7 +14,6 @@ package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.listener.actor.player.impl.MentorAnswerListener;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
@@ -23,6 +22,7 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.network.serverpackets.ConfirmDlg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.StatsSet;
@@ -77,7 +77,7 @@ public class SummonMentor extends Skill
 			
 			if (p.isInOlympiadMode())
 			{
-				activeChar.sendPacket(Msg.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
 				return false;
 			}
 		}

@@ -12,11 +12,11 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.PremiumItem;
 import lineage2.gameserver.network.serverpackets.ExGetPremiumItemList;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 
 /**
@@ -70,13 +70,13 @@ public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 		
 		if ((activeChar.getWeightPenalty() >= 3) || ((activeChar.getInventoryLimit() * 0.8) <= activeChar.getInventory().getSize()))
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_RECEIVE_THE_VITAMIN_ITEM_BECAUSE_YOU_HAVE_EXCEED_YOUR_INVENTORY_WEIGHT_QUANTITY_LIMIT);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_RECEIVE_THE_VITAMIN_ITEM_BECAUSE_YOU_HAVE_EXCEED_YOUR_INVENTORY_WEIGHT_QUANTITY_LIMIT));
 			return;
 		}
 		
 		if (activeChar.isProcessingRequest())
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_RECEIVE_A_VITAMIN_ITEM_DURING_AN_EXCHANGE);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_RECEIVE_A_VITAMIN_ITEM_DURING_AN_EXCHANGE));
 			return;
 		}
 		
@@ -119,7 +119,7 @@ public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 		
 		if (activeChar.getPremiumItemList().isEmpty())
 		{
-			activeChar.sendPacket(Msg.THERE_ARE_NO_MORE_VITAMIN_ITEMS_TO_BE_FOUND);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_MORE_VITAMIN_ITEMS_TO_BE_FOUND));
 		}
 		else
 		{

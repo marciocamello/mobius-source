@@ -12,10 +12,10 @@
  */
 package quests;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
 
@@ -93,7 +93,7 @@ public class Q10272_LightFragment extends Quest implements ScriptFile
 				return null;
 			}
 			
-			st.getPlayer().sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			st.getPlayer().sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			return null;
 		}
 		else if (event.equalsIgnoreCase("lelikia_q10272_2.htm"))

@@ -12,13 +12,13 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.GameClient.GameClientState;
 import lineage2.gameserver.network.serverpackets.ActionFail;
 import lineage2.gameserver.network.serverpackets.CharacterSelectionInfo;
 import lineage2.gameserver.network.serverpackets.ExLoginVitalityEffectInfo;
 import lineage2.gameserver.network.serverpackets.RestartResponse;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
 /**
@@ -50,19 +50,19 @@ public class RequestRestart extends L2GameClientPacket
 		
 		if (activeChar.isInObserverMode())
 		{
-			activeChar.sendPacket(Msg.OBSERVERS_CANNOT_PARTICIPATE, RestartResponse.FAIL, ActionFail.STATIC);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.OBSERVERS_CANNOT_PARTICIPATE), RestartResponse.FAIL, ActionFail.STATIC);
 			return;
 		}
 		
 		if (activeChar.isInCombat())
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_RESTART_WHILE_IN_COMBAT, RestartResponse.FAIL, ActionFail.STATIC);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_RESTART_WHILE_IN_COMBAT), RestartResponse.FAIL, ActionFail.STATIC);
 			return;
 		}
 		
 		if (activeChar.isFishing())
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_DO_ANYTHING_ELSE_WHILE_FISHING, RestartResponse.FAIL, ActionFail.STATIC);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DO_ANYTHING_ELSE_WHILE_FISHING), RestartResponse.FAIL, ActionFail.STATIC);
 			return;
 		}
 		

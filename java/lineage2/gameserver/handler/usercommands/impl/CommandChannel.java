@@ -12,7 +12,6 @@
  */
 package lineage2.gameserver.handler.usercommands.impl;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.handler.usercommands.IUserCommandHandler;
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
@@ -38,7 +37,8 @@ public class CommandChannel implements IUserCommandHandler
 	 * Method useUserCommand.
 	 * @param id int
 	 * @param activeChar Player
-	 * @return boolean * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#useUserCommand(int, Player)
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#useUserCommand(int, Player)
 	 */
 	@Override
 	public boolean useUserCommand(int id, Player activeChar)
@@ -67,7 +67,7 @@ public class CommandChannel implements IUserCommandHandler
 				}
 				else
 				{
-					activeChar.sendPacket(Msg.ONLY_THE_CREATOR_OF_A_CHANNEL_CAN_USE_THE_CHANNEL_DISMISS_COMMAND);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.ONLY_THE_CREATOR_OF_A_CHANNEL_CAN_USE_THE_CHANNEL_DISMISS_COMMAND));
 				}
 				
 				break;
@@ -80,7 +80,7 @@ public class CommandChannel implements IUserCommandHandler
 				
 				if (!activeChar.getParty().isLeader(activeChar))
 				{
-					activeChar.sendPacket(Msg.ONLY_A_PARTY_LEADER_CAN_CHOOSE_THE_OPTION_TO_LEAVE_A_CHANNEL);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.ONLY_A_PARTY_LEADER_CAN_CHOOSE_THE_OPTION_TO_LEAVE_A_CHANNEL));
 					return true;
 				}
 				
@@ -99,7 +99,7 @@ public class CommandChannel implements IUserCommandHandler
 				
 				Party party = activeChar.getParty();
 				channel.removeParty(party);
-				party.broadCast(Msg.YOU_HAVE_QUIT_THE_COMMAND_CHANNEL);
+				party.broadCast(new SystemMessage(SystemMessage.YOU_HAVE_QUIT_THE_COMMAND_CHANNEL));
 				channel.broadCast(new SystemMessage(SystemMessage.S1_PARTY_HAS_LEFT_THE_COMMAND_CHANNEL).addString(activeChar.getName()));
 				break;
 			
@@ -118,7 +118,8 @@ public class CommandChannel implements IUserCommandHandler
 	
 	/**
 	 * Method getUserCommandList.
-	 * @return int[] * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#getUserCommandList()
+	 * @return int[]
+	 * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#getUserCommandList()
 	 */
 	@Override
 	public final int[] getUserCommandList()

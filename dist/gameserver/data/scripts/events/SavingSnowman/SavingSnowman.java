@@ -21,7 +21,6 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.idfactory.IdFactory;
@@ -710,7 +709,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		}
 		else
 		{
-			player.sendPacket(Msg.YOUR_TARGET_CANNOT_BE_FOUND);
+			player.sendPacket(new SystemMessage(SystemMessage.YOUR_TARGET_CANNOT_BE_FOUND));
 		}
 	}
 	
@@ -734,7 +733,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		
 		if (getItemCount(player, 20107) < 1)
 		{
-			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 			return;
 		}
 		
@@ -776,7 +775,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		
 		if (getItemCount(player, 57) < Config.EVENT_SAVING_SNOWMAN_LOTERY_PRICE)
 		{
-			player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			return;
 		}
 		

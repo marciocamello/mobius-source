@@ -14,7 +14,6 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.commons.math.SafeMath;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -23,6 +22,7 @@ import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.model.items.Warehouse;
 import lineage2.gameserver.model.items.Warehouse.WarehouseType;
 import lineage2.gameserver.model.pledge.Clan;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Log;
 
@@ -98,7 +98,7 @@ public class SendWareHouseWithDrawList extends L2GameClientPacket
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(Msg.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
@@ -112,7 +112,7 @@ public class SendWareHouseWithDrawList extends L2GameClientPacket
 		
 		if ((whkeeper == null) || !activeChar.isInRange(whkeeper, Creature.INTERACTION_DISTANCE))
 		{
-			activeChar.sendPacket(Msg.WAREHOUSE_IS_TOO_FAR);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.WAREHOUSE_IS_TOO_FAR));
 			return;
 		}
 		
@@ -184,13 +184,13 @@ public class SendWareHouseWithDrawList extends L2GameClientPacket
 			
 			if (!activeChar.getInventory().validateCapacity(slots))
 			{
-				activeChar.sendPacket(Msg.YOUR_INVENTORY_IS_FULL);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.YOUR_INVENTORY_IS_FULL));
 				return;
 			}
 			
 			if (!activeChar.getInventory().validateWeight(weight))
 			{
-				activeChar.sendPacket(Msg.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
+				activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
 				return;
 			}
 			
@@ -203,7 +203,7 @@ public class SendWareHouseWithDrawList extends L2GameClientPacket
 		}
 		catch (ArithmeticException ae)
 		{
-			sendPacket(Msg.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
+			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 			return;
 		}
 		finally
@@ -212,6 +212,6 @@ public class SendWareHouseWithDrawList extends L2GameClientPacket
 			inventory.writeUnlock();
 		}
 		activeChar.sendChanges();
-		activeChar.sendPacket(Msg.THE_TRANSACTION_IS_COMPLETE);
+		activeChar.sendPacket(new SystemMessage(SystemMessage.THE_TRANSACTION_IS_COMPLETE));
 	}
 }

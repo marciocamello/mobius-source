@@ -15,7 +15,6 @@ package services;
 import java.util.Date;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.dao.AccountBonusDAO;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
@@ -24,6 +23,7 @@ import lineage2.gameserver.model.actor.instances.player.Bonus;
 import lineage2.gameserver.network.loginservercon.LoginServerCommunication;
 import lineage2.gameserver.network.loginservercon.gspackets.BonusRequest;
 import lineage2.gameserver.network.serverpackets.ExBR_PremiumState;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Log;
@@ -98,7 +98,7 @@ public final class RateBonus extends Functions
 		{
 			if (Config.SERVICES_RATE_BONUS_ITEM[i] == 57)
 			{
-				player.sendPacket(Msg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			}
 			else
 			{

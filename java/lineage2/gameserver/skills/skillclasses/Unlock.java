@@ -15,12 +15,12 @@ package lineage2.gameserver.skills.skillclasses;
 import java.util.List;
 
 import lineage2.commons.util.Rnd;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.ChestInstance;
 import lineage2.gameserver.model.instances.DoorInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.StatsSet;
 
 /**
@@ -55,7 +55,7 @@ public class Unlock extends Skill
 	{
 		if ((target == null) || ((target instanceof ChestInstance) && target.isDead()))
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return false;
 		}
 		
@@ -66,7 +66,7 @@ public class Unlock extends Skill
 		
 		if (!target.isDoor() || (_unlockPower == 0))
 		{
-			activeChar.sendPacket(Msg.INVALID_TARGET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return false;
 		}
 		
@@ -74,25 +74,25 @@ public class Unlock extends Skill
 		
 		if (door.isOpen())
 		{
-			activeChar.sendPacket(Msg.IT_IS_NOT_LOCKED);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.IT_IS_NOT_LOCKED));
 			return false;
 		}
 		
 		if (!door.isUnlockable())
 		{
-			activeChar.sendPacket(Msg.YOU_ARE_UNABLE_TO_UNLOCK_THE_DOOR);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_UNABLE_TO_UNLOCK_THE_DOOR));
 			return false;
 		}
 		
 		if (door.getKey() > 0)
 		{
-			activeChar.sendPacket(Msg.YOU_ARE_UNABLE_TO_UNLOCK_THE_DOOR);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_UNABLE_TO_UNLOCK_THE_DOOR));
 			return false;
 		}
 		
 		if ((_unlockPower - (door.getLevel() * 100)) < 0)
 		{
-			activeChar.sendPacket(Msg.YOU_ARE_UNABLE_TO_UNLOCK_THE_DOOR);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_UNABLE_TO_UNLOCK_THE_DOOR));
 			return false;
 		}
 		
@@ -121,7 +121,7 @@ public class Unlock extends Skill
 					}
 					else
 					{
-						activeChar.sendPacket(Msg.YOU_HAVE_FAILED_TO_UNLOCK_THE_DOOR);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_UNLOCK_THE_DOOR));
 					}
 				}
 				else if (targ instanceof ChestInstance)

@@ -16,9 +16,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lineage2.commons.util.Rnd;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -47,7 +47,7 @@ public final class ObtainTalisman extends Functions
 		
 		if (!player.isQuestContinuationPossible(false))
 		{
-			player.sendPacket(Msg.YOUR_INVENTORY_IS_FULL);
+			player.sendPacket(new SystemMessage(SystemMessage.YOUR_INVENTORY_IS_FULL));
 			return;
 		}
 		

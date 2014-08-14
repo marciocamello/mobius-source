@@ -12,7 +12,6 @@
  */
 package lineage2.gameserver.skills.effects;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.stats.Env;
@@ -49,7 +48,7 @@ public class EffectManaDamOverTime extends Effect
 		
 		if ((manaDam > _effected.getCurrentMp()) && getSkill().isToggle())
 		{
-			_effected.sendPacket(Msg.NOT_ENOUGH_MP);
+			_effected.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP));
 			_effected.sendPacket(new SystemMessage(SystemMessage.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED).addSkillName(getSkill().getId(), getSkill().getDisplayLevel()));
 			return false;
 		}

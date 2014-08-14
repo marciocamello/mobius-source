@@ -15,7 +15,6 @@ package lineage2.gameserver.handler.admincommands.impl;
 import java.util.StringTokenizer;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.VillageMasterInstance;
@@ -24,6 +23,7 @@ import lineage2.gameserver.model.pledge.SubUnit;
 import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import lineage2.gameserver.network.serverpackets.PledgeStatusChanged;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.utils.Util;
 
@@ -47,7 +47,7 @@ public class AdminPledge implements IAdminCommandHandler
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
-	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 * @return boolean
 	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
@@ -71,13 +71,13 @@ public class AdminPledge implements IAdminCommandHandler
 				{
 					if (target == null)
 					{
-						activeChar.sendPacket(Msg.INVALID_TARGET);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 						return false;
 					}
 					
 					if (target.getPlayer().getLevel() < 10)
 					{
-						activeChar.sendPacket(Msg.YOU_ARE_NOT_QUALIFIED_TO_CREATE_A_CLAN);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_QUALIFIED_TO_CREATE_A_CLAN));
 						return false;
 					}
 					
@@ -85,13 +85,13 @@ public class AdminPledge implements IAdminCommandHandler
 					
 					if (pledgeName.length() > 16)
 					{
-						activeChar.sendPacket(Msg.CLAN_NAMES_LENGTH_IS_INCORRECT);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.CLAN_NAMES_LENGTH_IS_INCORRECT));
 						return false;
 					}
 					
 					if (!Util.isMatchingRegexp(pledgeName, Config.CLAN_NAME_TEMPLATE))
 					{
-						activeChar.sendPacket(Msg.CLAN_NAME_IS_INCORRECT);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.CLAN_NAME_IS_INCORRECT));
 						return false;
 					}
 					
@@ -100,13 +100,13 @@ public class AdminPledge implements IAdminCommandHandler
 					if (clan != null)
 					{
 						target.sendPacket(clan.listAll());
-						target.sendPacket(new PledgeShowInfoUpdate(clan), Msg.CLAN_HAS_BEEN_CREATED);
+						target.sendPacket(new PledgeShowInfoUpdate(clan), new SystemMessage(SystemMessage.CLAN_HAS_BEEN_CREATED));
 						target.updatePledgeClass();
 						target.sendUserInfo();
 						return true;
 					}
 					
-					activeChar.sendPacket(Msg.THIS_NAME_ALREADY_EXISTS);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_NAME_ALREADY_EXISTS));
 					return false;
 				}
 				catch (Exception e)
@@ -118,7 +118,7 @@ public class AdminPledge implements IAdminCommandHandler
 			{
 				if (target.getClan() == null)
 				{
-					activeChar.sendPacket(Msg.INVALID_TARGET);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 					return false;
 				}
 				
@@ -132,7 +132,7 @@ public class AdminPledge implements IAdminCommandHandler
 					
 					if (level == 5)
 					{
-						target.sendPacket(Msg.NOW_THAT_YOUR_CLAN_LEVEL_IS_ABOVE_LEVEL_5_IT_CAN_ACCUMULATE_CLAN_REPUTATION_POINTS);
+						target.sendPacket(new SystemMessage(SystemMessage.NOW_THAT_YOUR_CLAN_LEVEL_IS_ABOVE_LEVEL_5_IT_CAN_ACCUMULATE_CLAN_REPUTATION_POINTS));
 					}
 					
 					PledgeShowInfoUpdate pu = new PledgeShowInfoUpdate(clan);
@@ -141,7 +141,7 @@ public class AdminPledge implements IAdminCommandHandler
 					for (Player member : clan.getOnlineMembers(0))
 					{
 						member.updatePledgeClass();
-						member.sendPacket(Msg.CLANS_SKILL_LEVEL_HAS_INCREASED, pu, ps);
+						member.sendPacket(new SystemMessage(SystemMessage.CLANS_SKILL_LEVEL_HAS_INCREASED), pu, ps);
 						member.broadcastUserInfo();
 					}
 					
@@ -156,7 +156,7 @@ public class AdminPledge implements IAdminCommandHandler
 			{
 				if (target.getClan() == null)
 				{
-					activeChar.sendPacket(Msg.INVALID_TARGET);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 					return false;
 				}
 				
@@ -176,7 +176,7 @@ public class AdminPledge implements IAdminCommandHandler
 					
 					if ((target.getClan() == null) || (target.getClan().getLevel() < 5))
 					{
-						activeChar.sendPacket(Msg.INVALID_TARGET);
+						activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 						return false;
 					}
 					
@@ -194,7 +194,7 @@ public class AdminPledge implements IAdminCommandHandler
 				
 				if (target.getClan() == null)
 				{
-					activeChar.sendPacket(Msg.INVALID_TARGET);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 					return false;
 				}
 				
@@ -214,7 +214,7 @@ public class AdminPledge implements IAdminCommandHandler
 				
 				if (newLeader == null)
 				{
-					activeChar.sendPacket(Msg.INVALID_TARGET);
+					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 					return false;
 				}
 				

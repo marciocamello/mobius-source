@@ -17,7 +17,6 @@ import static lineage2.gameserver.model.Zone.ZoneType.no_summon;
 
 import java.util.List;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
@@ -165,17 +164,17 @@ public class Call extends Skill
 	{
 		if (activeChar.isAlikeDead() || activeChar.isInOlympiadMode() || activeChar.isInObserverMode() || activeChar.isFlying())
 		{
-			return Msg.NOTHING_HAPPENED;
+			return new SystemMessage(SystemMessage.NOTHING_HAPPENED);
 		}
 		
 		if (activeChar.isInZoneBattle() || activeChar.isInZone(Zone.ZoneType.SIEGE) || activeChar.isInZone(no_restart) || activeChar.isInZone(no_summon) || activeChar.isInBoat() || (activeChar.getReflection() != ReflectionManager.DEFAULT))
 		{
-			return Msg.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION;
+			return new SystemMessage(SystemMessage.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION);
 		}
 		
 		if (activeChar.isInStoreMode() || activeChar.isProcessingRequest())
 		{
-			return Msg.YOU_CANNOT_SUMMON_DURING_A_TRADE_OR_WHILE_USING_THE_PRIVATE_SHOPS;
+			return new SystemMessage(SystemMessage.YOU_CANNOT_SUMMON_DURING_A_TRADE_OR_WHILE_USING_THE_PRIVATE_SHOPS);
 		}
 		
 		return null;
@@ -190,17 +189,17 @@ public class Call extends Skill
 	{
 		if ((target == null) || !target.isPlayer() || target.getPlayer().isTerritoryFlagEquipped() || target.isFlying() || target.isInObserverMode() || !target.getPlayer().getPlayerAccess().UseTeleport)
 		{
-			return Msg.INVALID_TARGET;
+			return new SystemMessage(SystemMessage.INVALID_TARGET);
 		}
 		
 		if (target.isInOlympiadMode())
 		{
-			return Msg.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_CURRENTLY_PARTICIPATING_IN_THE_GRAND_OLYMPIAD;
+			return new SystemMessage(SystemMessage.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_CURRENTLY_PARTICIPATING_IN_THE_GRAND_OLYMPIAD);
 		}
 		
 		if (target.isInZoneBattle() || target.isInZone(Zone.ZoneType.SIEGE) || target.isInZone(no_restart) || target.isInZone(no_summon) || (target.getReflection() != ReflectionManager.DEFAULT) || target.isInBoat())
 		{
-			return Msg.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING;
+			return new SystemMessage(SystemMessage.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING);
 		}
 		
 		if (target.isAlikeDead())

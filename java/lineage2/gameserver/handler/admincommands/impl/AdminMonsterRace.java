@@ -14,7 +14,6 @@ package lineage2.gameserver.handler.admincommands.impl;
 
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.MonsterRace;
@@ -22,6 +21,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.DeleteObject;
 import lineage2.gameserver.network.serverpackets.MonRaceInfo;
 import lineage2.gameserver.network.serverpackets.PlaySound;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.utils.Location;
 
 /**
@@ -112,7 +112,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 		else if (state == 0)
 		{
 			state++;
-			activeChar.sendPacket(Msg.THEYRE_OFF);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.THEYRE_OFF));
 			activeChar.broadcastPacket(new PlaySound("S_Race"));
 			activeChar.broadcastPacket(new PlaySound(PlaySound.Type.SOUND, "ItemSound2.race_start", 1, 121209259, new Location(12125, 182487, -3559)));
 			activeChar.broadcastPacket(new MonRaceInfo(codes[state][0], codes[state][1], race.getMonsters(), race.getSpeeds()));

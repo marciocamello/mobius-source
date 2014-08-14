@@ -12,10 +12,10 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.actor.instances.player.Macro;
 import lineage2.gameserver.model.actor.instances.player.Macro.L2MacroCmd;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Mobius
@@ -73,19 +73,19 @@ public class RequestMakeMacro extends L2GameClientPacket
 		
 		if (activeChar.getMacroses().getAllMacroses().length > 48)
 		{
-			activeChar.sendPacket(Msg.YOU_MAY_CREATE_UP_TO_48_MACROS);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_MAY_CREATE_UP_TO_48_MACROS));
 			return;
 		}
 		
 		if (_macro.name.length() == 0)
 		{
-			activeChar.sendPacket(Msg.ENTER_THE_NAME_OF_THE_MACRO);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.ENTER_THE_NAME_OF_THE_MACRO));
 			return;
 		}
 		
 		if (_macro.descr.length() > 32)
 		{
-			activeChar.sendPacket(Msg.MACRO_DESCRIPTIONS_MAY_CONTAIN_UP_TO_32_CHARACTERS);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.MACRO_DESCRIPTIONS_MAY_CONTAIN_UP_TO_32_CHARACTERS));
 			return;
 		}
 		

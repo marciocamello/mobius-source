@@ -15,7 +15,6 @@ package lineage2.gameserver.skills.skillclasses;
 import java.util.List;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.cache.Msg;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
@@ -66,7 +65,7 @@ public class Transformation extends Skill
 		
 		if ((player.getTransformation() != 0) && (getId() != SKILL_TRANSFORM_DISPEL))
 		{
-			activeChar.sendPacket(Msg.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
 			return false;
 		}
 		
@@ -84,31 +83,31 @@ public class Transformation extends Skill
 		
 		if (player.isInWater())
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_POLYMORPH_INTO_THE_DESIRED_FORM_IN_WATER);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_POLYMORPH_INTO_THE_DESIRED_FORM_IN_WATER));
 			return false;
 		}
 		
 		if (player.isRiding() || (player.getMountType() == 2))
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_POLYMORPH_WHILE_RIDING_A_PET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_POLYMORPH_WHILE_RIDING_A_PET));
 			return false;
 		}
 		
 		if (player.getEffectList().getEffectsBySkillId(Skill.SKILL_MYSTIC_IMMUNITY) != null)
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_POLYMORPH_WHILE_UNDER_THE_EFFECT_OF_A_SPECIAL_SKILL);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_POLYMORPH_WHILE_UNDER_THE_EFFECT_OF_A_SPECIAL_SKILL));
 			return false;
 		}
 		
 		if (player.isInBoat())
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_POLYMORPH_WHILE_RIDING_A_BOAT);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_POLYMORPH_WHILE_RIDING_A_BOAT));
 			return false;
 		}
 		
 		if ((player.getSummonList().getPet() != null) && (getId() != SKILL_TRANSFORM_DISPEL) && !isBaseTransformation())
 		{
-			activeChar.sendPacket(Msg.YOU_CANNOT_POLYMORPH_WHEN_YOU_HAVE_SUMMONED_A_SERVITOR_PET);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_POLYMORPH_WHEN_YOU_HAVE_SUMMONED_A_SERVITOR_PET));
 			return false;
 		}
 		
