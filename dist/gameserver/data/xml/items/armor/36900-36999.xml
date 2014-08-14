@@ -1,766 +1,206 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="37135" name="Steel Plate Helmet (60-day)">
-		<set name="crystal_type" value="C"/>
-		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+    <armor id="36946" name="Lindvior's Earring">
+        <set name="crystal_type" value="R"/><set name="crystallizable" value="true"/>
+        <set name="crystallizable" value="true"/>
+        <set name="crystal_count" value="1205"/>
+        <set name="augmentable" value="false"/>        
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="RIGHT_EAR"/>
+            <slot id="LEFT_EAR"/>
+        </equip>
+        <skills>
+            <skill id="13524" level="1"/>
+        </skills>
+        <set name="ex_type" value="EARRING"/>
+        <for>
+            <add stat="mDef" order="0x10" value="170"/>
+            <add stat="maxMp" order="0x10" value="59"/>		
+            <enchant stat="mDef" order="0x0C" value="0"/>          
+		</for>
+    </armor>
+    <armor id="36948" name="Blessed Lindvior's Earring">
+        <set name="crystal_type" value="R"/><set name="crystallizable" value="true"/>
+        <set name="crystallizable" value="true"/>
+        <set name="crystal_count" value="1205"/>
+        <set name="augmentable" value="false"/>        
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="RIGHT_EAR"/>
+            <slot id="LEFT_EAR"/>
+        </equip>
+        <skills>
+            <skill id="13524" level="1"/>
+        </skills>
+        <set name="ex_type" value="EARRING"/>
+        <for>
+            <add stat="mDef" order="0x10" value="170"/>
+            <add stat="maxMp" order="0x10" value="59"/>		
+            <enchant stat="mDef" order="0x0C" value="0"/>          
+		</for>
+    </armor>
+	<armor id="36980" name="9th Anniversary Rocket Gun Hat: Chain Fireworks">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.icon.br_rocket_cap_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="200"/>
+		<set name="weight" value="10"/>
 		<equip>
-			<slot id="HEAD"/>
+			<slot id="HAIR_ALL"/>
 		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="58"/>
-		</for>
 	</armor>
-	<armor id="37136" name="Steel Plate Armor (60-day)">
-		<set name="crystal_type" value="C"/>
-		<set name="icon" value="icon.armor_t62_ul_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="HEAVY"/>
-		<set name="weight" value="3493"/>
-		<equip>
-			<slot id="FULL_ARMOR"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="239"/>
-		</for>
-	</armor>
-	<armor id="37137" name="Steel Plate Boots (60-day)">
-		<set name="crystal_type" value="C"/>
-		<set name="icon" value="icon.armor_t62_b_i00"/>
+	<armor id="36980" name="9th Anniversary Rocket Gun Hat: Chain Fireworks">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.icon.br_rocket_cap_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="400"/>
+		<set name="weight" value="10"/>
 		<equip>
-			<slot id="FEET"/>
+			<slot id="HAIR_ALL"/>
 		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="39"/>
-		</for>
 	</armor>
-	<armor id="37138" name="Steel Plate Gauntlets (60-day)">
-		<set name="crystal_type" value="C"/>
-		<set name="icon" value="icon.armor_t62_g_i00"/>
+	<armor id="36981" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - STR">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.icon.br_rocket_cap_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="200"/>
+		<set name="weight" value="10"/>
 		<equip>
-			<slot id="GLOVES"/>
+			<slot id="HAIR_ALL"/>
 		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="39"/>
-		</for>
 	</armor>
-	<armor id="37140" name="Steel Karmian Tunic (60-day)">
-		<set name="crystal_type" value="C"/>
-		<set name="icon" value="icon.armor_t53_u_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="MAGIC"/>
-		<set name="weight" value="660"/>
-		<equip>
-			<slot id="CHEST"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="60"/>
-			<add stat="maxMp" order="0x60" value="225"/>
-		</for>
-	</armor>
-	<armor id="37141" name="Steel Karmian Stockings (60-day)">
-		<set name="crystal_type" value="C"/>
-		<set name="icon" value="icon.armor_t53_l_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="MAGIC"/>
-		<set name="weight" value="323"/>
-		<equip>
-			<slot id="LEGS"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="37"/>
-			<add stat="maxMp" order="0x60" value="141"/>
-		</for>
-	</armor>
-	<armor id="37142" name="Steel Karmian Gloves (60-day)">
-		<set name="crystal_type" value="C"/>
-		<set name="icon" value="icon.armor_t53_g_i00"/>
+	<armor id="36982" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - DEX">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.icon.br_rocket_cap_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="207"/>
+		<set name="weight" value="10"/>
 		<equip>
-			<slot id="GLOVES"/>
+			<slot id="HAIR_ALL"/>
 		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="32"/>
-		</for>
 	</armor>
-	<armor id="37143" name="Steel Karmian Boots (60-day)">
-		<set name="crystal_type" value="C"/>
-		<set name="icon" value="icon.armor_t53_b_i00"/>
+	<armor id="36983" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - CON">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.icon.br_rocket_cap_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="410"/>
+		<set name="weight" value="10"/>
 		<equip>
-			<slot id="FEET"/>
+			<slot id="HAIR_ALL"/>
 		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="32"/>
-		</for>
 	</armor>
-	<armor id="37144" name="Steel Plate Leather Armor (60-day)">
-		<set name="crystal_type" value="C"/>
-		<set name="icon" value="icon.armor_t47_u_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="LIGHT"/>
-		<set name="weight" value="1483"/>
-		<equip>
-			<slot id="CHEST"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="94"/>
-		</for>
-	</armor>
-	<armor id="37145" name="Steel Plate Leather Gaiters (60-day)">
-		<set name="crystal_type" value="C"/>
-		<set name="icon" value="icon.armor_t47_l_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="LIGHT"/>
-		<set name="weight" value="520"/>
-		<equip>
-			<slot id="LEGS"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="59"/>
-		</for>
-	</armor>
-	<armor id="37146" name="Steel Plate Leather Boots (60-day)">
-		<set name="crystal_type" value="C"/>
-		<set name="icon" value="icon.armor_t47_b_i00"/>
+	<armor id="36984" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - MEN">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.icon.br_rocket_cap_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="407"/>
+		<set name="weight" value="10"/>
 		<equip>
-			<slot id="FEET"/>
+			<slot id="HAIR_ALL"/>
 		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="32"/>
-		</for>
 	</armor>
-	<armor id="37147" name="Steel Plate Leather Gloves (60-day)">
-		<set name="crystal_type" value="C"/>
-		<set name="icon" value="icon.armor_t47_g_i00"/>
+	<armor id="36985" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - INT">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.icon.br_rocket_cap_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="203"/>
+		<set name="weight" value="10"/>
 		<equip>
-			<slot id="GLOVES"/>
+			<slot id="HAIR_ALL"/>
 		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="33"/>
-		</for>
 	</armor>
-	<armor id="37148" name="Steel Doom Helmet (60-day)">
-		<set name="crystal_type" value="B"/>
-		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+	<armor id="36986" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - WIT">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.icon.br_rocket_cap_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="193"/>
+		<set name="weight" value="10"/>
 		<equip>
-			<slot id="HEAD"/>
+			<slot id="HAIR_ALL"/>
 		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="66"/>
-		</for>
 	</armor>
-	<armor id="37149" name="Steel Doom Gloves (Heavy) (60-day)">
-		<set name="crystal_type" value="B"/>
-		<set name="icon" value="icon.armor_t71_g_i00"/>
+	<armor id="36987" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - Critical Rate">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.icon.br_rocket_cap_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="193"/>
+		<set name="weight" value="10"/>
 		<equip>
-			<slot id="GLOVES"/>
+			<slot id="HAIR_ALL"/>
 		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="44"/>
-		</for>
 	</armor>
-	<armor id="37150" name="Steel Doom Boots (Heavy) (60-day)">
-		<set name="crystal_type" value="B"/>
-		<set name="icon" value="icon.armor_t71_b_i00"/>
+	<armor id="36988" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - Critical Damage">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.icon.br_rocket_cap_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="377"/>
+		<set name="weight" value="10"/>
 		<equip>
-			<slot id="FEET"/>
+			<slot id="HAIR_ALL"/>
 		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="44"/>
-		</for>
 	</armor>
-	<armor id="37151" name="Steel Doom Plate Armor (60-day)">
-		<set name="crystal_type" value="B"/>
-		<set name="icon" value="icon.armor_t71_ul_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="HEAVY"/>
-		<set name="weight" value="3327"/>
-		<equip>
-			<slot id="FULL_ARMOR"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="270"/>
-		</for>
-	</armor>
-	<armor id="37153" name="Steel Avadon Robe (60-day)">
-		<set name="crystal_type" value="B"/>
-		<set name="icon" value="icon.armor_t59_ul_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="MAGIC"/>
-		<set name="weight" value="847"/>
-		<equip>
-			<slot id="FULL_ARMOR"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="127"/>
-			<add stat="maxMp" order="0x60" value="561"/>
-		</for>
-	</armor>
-	<armor id="37154" name="Steel Avadon Circlet (60-day)">
-		<set name="crystal_type" value="B"/>
-		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+	<armor id="36989" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - P. Def.">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.icon.br_rocket_cap_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="197"/>
+		<set name="weight" value="10"/>
 		<equip>
-			<slot id="HEAD"/>
+			<slot id="HAIR_ALL"/>
 		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="62"/>
-		</for>
 	</armor>
-	<armor id="37155" name="Steel Avadon Gloves (Robe) (60-day)">
-		<set name="crystal_type" value="B"/>
-		<set name="icon" value="icon.armor_t59_g_i00"/>
+	<armor id="36990" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - M. Def.">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.icon.br_rocket_cap_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="197"/>
+		<set name="weight" value="10"/>
 		<equip>
-			<slot id="GLOVES"/>
+			<slot id="HAIR_ALL"/>
 		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="41"/>
-		</for>
 	</armor>
-	<armor id="37156" name="Steel Avadon Boots (Robe) (60-day)">
-		<set name="crystal_type" value="B"/>
-		<set name="icon" value="icon.armor_t59_b_i00"/>
+	<armor id="36991" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - Evasion">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.icon.br_rocket_cap_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="393"/>
+		<set name="weight" value="10"/>
 		<equip>
-			<slot id="FEET"/>
+			<slot id="HAIR_ALL"/>
 		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="41"/>
-		</for>
 	</armor>
-	<armor id="37158" name="Steel Leather Armor of Doom (60-day)">
-		<set name="crystal_type" value="B"/>
-		<set name="icon" value="icon.armor_t72_ul_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="LIGHT"/>
-		<set name="weight" value="1833"/>
-		<equip>
-			<slot id="FULL_ARMOR"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="202"/>
-		</for>
-	</armor>
-	<armor id="37159" name="Steel Doom Gloves (Light) (60-day)">
-		<set name="crystal_type" value="B"/>
-		<set name="icon" value="icon.armor_t72_g_i00"/>
+	<armor id="36992" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - P. Atk.">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.icon.br_rocket_cap_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="193"/>
+		<set name="weight" value="10"/>
 		<equip>
-			<slot id="GLOVES"/>
+			<slot id="HAIR_ALL"/>
 		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="44"/>
-		</for>
 	</armor>
-	<armor id="37160" name="Steel Doom Boots (Light) (60-day)">
-		<set name="crystal_type" value="B"/>
-		<set name="icon" value="icon.armor_t72_b_i00"/>
+	<armor id="36993" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - M. Atk.">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.icon.br_rocket_cap_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="377"/>
+		<set name="weight" value="10"/>
 		<equip>
-			<slot id="FEET"/>
+			<slot id="HAIR_ALL"/>
 		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="44"/>
-		</for>
 	</armor>
-	<armor id="37161" name="Steel Armor of Nightmare (60-day)">
-		<set name="crystal_type" value="A"/>
-		<set name="icon" value="icon.armor_t80_ul_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="HEAVY"/>
-		<set name="weight" value="3193"/>
-		<equip>
-			<slot id="FULL_ARMOR"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="293"/>
-		</for>
-	</armor>
-	<armor id="37162" name="Steel Helm of Nightmare (60-day)">
-		<set name="crystal_type" value="A"/>
-		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+	<armor id="36994" name="9th Anniversary Rocket Gun Hat: Chain Fireworks - Accuracy">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.icon.br_rocket_cap_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
-		<set name="weight" value="187"/>
+		<set name="weight" value="10"/>
 		<equip>
-			<slot id="HEAD"/>
+			<slot id="HAIR_ALL"/>
 		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="73"/>
-		</for>
-	</armor>
-	<armor id="37163" name="Steel Gauntlets of Nightmare (Heavy) (60-day)">
-		<set name="crystal_type" value="A"/>
-		<set name="icon" value="icon.armor_t80_g_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="183"/>
-		<equip>
-			<slot id="GLOVES"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="49"/>
-		</for>
-	</armor>
-	<armor id="37164" name="Steel Boots of Nightmare (Heavy) (60-day)">
-		<set name="crystal_type" value="A"/>
-		<set name="icon" value="icon.armor_t80_b_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="370"/>
-		<equip>
-			<slot id="FEET"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="49"/>
-		</for>
-	</armor>
-	<armor id="37166" name="Steel Dark Crystal Robe (60-day)">
-		<set name="crystal_type" value="A"/>
-		<set name="icon" value="icon.armor_t76_ul_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="MAGIC"/>
-		<set name="weight" value="817"/>
-		<equip>
-			<slot id="FULL_ARMOR"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="139"/>
-			<add stat="maxMp" order="0x60" value="665"/>
-		</for>
-	</armor>
-	<armor id="37167" name="Steel Dark Crystal Helmet (60-day)">
-		<set name="crystal_type" value="A"/>
-		<set name="icon" value="icon.armor_helmet_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="190"/>
-		<equip>
-			<slot id="HEAD"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="69"/>
-		</for>
-	</armor>
-	<armor id="37168" name="Steel Dark Crystal Gloves (Robe) (60-day)">
-		<set name="crystal_type" value="A"/>
-		<set name="icon" value="icon.armor_t76_g_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="193"/>
-		<equip>
-			<slot id="GLOVES"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="46"/>
-		</for>
-	</armor>
-	<armor id="37169" name="Steel Dark Crystal Boots (Robe) (60-day)">
-		<set name="crystal_type" value="A"/>
-		<set name="icon" value="icon.armor_t76_b_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="370"/>
-		<equip>
-			<slot id="FEET"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="46"/>
-		</for>
-	</armor>
-	<armor id="37171" name="Steel Dark Crystal Leather Armor (60-day)">
-		<set name="crystal_type" value="A"/>
-		<set name="icon" value="icon.armor_t75_u_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="LIGHT"/>
-		<set name="weight" value="1433"/>
-		<equip>
-			<slot id="CHEST"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="128"/>
-		</for>
-	</armor>
-	<armor id="37172" name="Steel Dark Crystal Leggings (60-day)">
-		<set name="crystal_type" value="A"/>
-		<set name="icon" value="icon.armor_t75_l_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="LIGHT"/>
-		<set name="weight" value="493"/>
-		<equip>
-			<slot id="LEGS"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="80"/>
-		</for>
-	</armor>
-	<armor id="37173" name="Steel Dark Crystal Gloves (Light) (60-day)">
-		<set name="crystal_type" value="A"/>
-		<set name="icon" value="icon.armor_t75_g_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="193"/>
-		<equip>
-			<slot id="GLOVES"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="46"/>
-		</for>
-	</armor>
-	<armor id="37174" name="Steel Dark Crystal Boots (Light) (60-day)">
-		<set name="crystal_type" value="A"/>
-		<set name="icon" value="icon.armor_t75_b_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="370"/>
-		<equip>
-			<slot id="FEET"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="46"/>
-		</for>
-	</armor>
-	<armor id="37175" name="Steel Imperial Crusader Breastplate (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_t88_u_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="HEAVY"/>
-		<set name="weight" value="2540"/>
-		<equip>
-			<slot id="CHEST"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="205"/>
-		</for>
-	</armor>
-	<armor id="37176" name="Steel Imperial Crusader Gaiters (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_t88_l_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="HEAVY"/>
-		<set name="weight" value="1087"/>
-		<equip>
-			<slot id="LEGS"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="128"/>
-		</for>
-	</armor>
-	<armor id="37177" name="Steel Imperial Crusader Gauntlets (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_t88_g_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="180"/>
-		<equip>
-			<slot id="GLOVES"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="55"/>
-		</for>
-	</armor>
-	<armor id="37178" name="Steel Imperial Crusader Boots (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_t88_b_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="370"/>
-		<equip>
-			<slot id="FEET"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="55"/>
-		</for>
-	</armor>
-	<armor id="37179" name="Steel Imperial Crusader Helmet (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_helmet_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="183"/>
-		<equip>
-			<slot id="HEAD"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="83"/>
-		</for>
-	</armor>
-	<armor id="37181" name="Steel Major Arcana Robe (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_t90_ul_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="MAGIC"/>
-		<set name="weight" value="767"/>
-		<equip>
-			<slot id="FULL_ARMOR"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="166"/>
-			<add stat="maxMp" order="0x60" value="866"/>
-		</for>
-	</armor>
-	<armor id="37182" name="Steel Major Arcana Gloves (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_t90_g_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="180"/>
-		<equip>
-			<slot id="GLOVES"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="55"/>
-		</for>
-	</armor>
-	<armor id="37183" name="Steel Major Arcana Boots (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_t90_b_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="370"/>
-		<equip>
-			<slot id="FEET"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="55"/>
-		</for>
-	</armor>
-	<armor id="37184" name="Steel Major Arcana Circlet (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_circlet_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="183"/>
-		<equip>
-			<slot id="HEAD"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="83"/>
-		</for>
-	</armor>
-	<armor id="37185" name="Steel Arcana Sigil (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.arcana_sigil_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="940"/>
-		<equip>
-			<slot id="NONE"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="13"/>
-			<add stat="rEvas" order="0x10" value="-8"/>
-		</for>
-	</armor>
-	<armor id="37186" name="Steel Draconic Leather Armor (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_t89_ul_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="LIGHT"/>
-		<set name="weight" value="1650"/>
-		<equip>
-			<slot id="FULL_ARMOR"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="249"/>
-		</for>
-	</armor>
-	<armor id="37187" name="Steel Draconic Leather Gloves (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_t89_g_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="180"/>
-		<equip>
-			<slot id="GLOVES"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="55"/>
-		</for>
-	</armor>
-	<armor id="37188" name="Steel Draconic Leather Boots (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_t89_b_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="370"/>
-		<equip>
-			<slot id="FEET"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="55"/>
-		</for>
-	</armor>
-	<armor id="37189" name="Steel Draconic Leather Helmet (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_leather_helmet_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="183"/>
-		<equip>
-			<slot id="HEAD"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="83"/>
-		</for>
-	</armor>
-	<armor id="37190" name="Steel Dynasty Breastplate (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_t91_u_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="HEAVY"/>
-		<set name="weight" value="2520"/>
-		<equip>
-			<slot id="CHEST"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="226"/>
-		</for>
-	</armor>
-	<armor id="37191" name="Steel Dynasty Gaiters (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_t91_l_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="HEAVY"/>
-		<set name="weight" value="1070"/>
-		<equip>
-			<slot id="LEGS"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="141"/>
-		</for>
-	</armor>
-	<armor id="37192" name="Steel Dynasty Helmet (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_helmet_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="180"/>
-		<equip>
-			<slot id="HEAD"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="92"/>
-		</for>
-	</armor>
-	<armor id="37193" name="Steel Dynasty Gauntlets (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_t91_g_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="170"/>
-		<equip>
-			<slot id="GLOVES"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="61"/>
-		</for>
-	</armor>
-	<armor id="37194" name="Steel Dynasty Boots (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_t91_b_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="360"/>
-		<equip>
-			<slot id="FEET"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="61"/>
-		</for>
-	</armor>
-	<armor id="37196" name="Steel Dynasty Tunic (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_t93_u_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="MAGIC"/>
-		<set name="weight" value="590"/>
-		<equip>
-			<slot id="CHEST"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="113"/>
-			<add stat="maxMp" order="0x60" value="592"/>
-		</for>
-	</armor>
-	<armor id="37197" name="Steel Dynasty Stockings (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_t93_l_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="MAGIC"/>
-		<set name="weight" value="290"/>
-		<equip>
-			<slot id="LEGS"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="71"/>
-			<add stat="maxMp" order="0x60" value="370"/>
-		</for>
-	</armor>
-	<armor id="37198" name="Steel Dynasty Circlet (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_circlet_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="180"/>
-		<equip>
-			<slot id="HEAD"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="92"/>
-		</for>
-	</armor>
-	<armor id="37199" name="Steel Dynasty Gloves (60-day)">
-		<set name="crystal_type" value="S"/>
-		<set name="icon" value="icon.armor_t93_g_i00"/>
-		<set name="price" value="0"/>
-		<set name="type" value="NONE"/>
-		<set name="weight" value="170"/>
-		<equip>
-			<slot id="GLOVES"/>
-		</equip>
-		<for>
-			<add stat="pDef" order="0x10" value="61"/>
-		</for>
 	</armor>
 </list>
