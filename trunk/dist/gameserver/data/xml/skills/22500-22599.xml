@@ -1,57 +1,68 @@
 <?xml version="1.0"?>
 <list>
 	<skill id="22500" levels="1" name="Blessed Three-headed Dragon's Egg">
-		<set name="magicLevel" val="1"/>
-		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="22501" levels="1" name="Blessed Scroll of Escape">
-		<set name="hitTime" val="200"/>
-		<set name="magicLevel" val="1"/>
-		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="200"/>
 	</skill>
 	<skill id="22502" levels="1" name="Blessed Scroll of Resurrection">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
 		<set name="hitTime" val="3000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="magicType" val="SPECIAL"/>
-		<set name="icon" val="icon.skill0000"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
 	</skill>
-	<skill id="22503" levels="7" name="Superior Elixir of Life (R-grade)">
-		<set name="reuseDelay" val="120000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="magicType" val="SPECIAL"/>
+	<skill id="22503" levels="7" name="Superior Elixir of Life (R-Grade)">
 		<set name="icon" val="icon.skill0000"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="120000"/>
+		<set name="itemConsumeId" val="35675"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="magiclevels" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="HEAL"/>
+		<set name="power" val="3000"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="isHandler" val="true"/>
+		<set name="altUse" val="true"/>
 	</skill>
-	<skill id="22504" levels="7" name="Superior Elixir of Mind (R-grade)">
-		<set name="reuseDelay" val="120000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="magicType" val="SPECIAL"/>
+	<skill id="22504" levels="7" name="Superior Elixir of Mental Strength (R-Grade)">
 		<set name="icon" val="icon.skill0000"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="120000"/>
+		<set name="itemConsumeId" val="35676"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="magiclevels" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="MANAHEAL"/>
+		<set name="power" val="700"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="isHandler" val="true"/>
+		<set name="altUse" val="true"/>
 	</skill>
-	<skill id="22505" levels="7" name="Superior Elixir of CP (R-grade)">
-		<set name="reuseDelay" val="120000"/>
-		<set name="magicLevel" val="1"/>
-		<set name="magicType" val="SPECIAL"/>
+	<skill id="22505" levels="7" name="Superior Elixir of CP (R-Grade)">
 		<set name="icon" val="icon.skill0000"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="120000"/>
+		<set name="itemConsumeId" val="35677"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="magiclevels" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="COMBATPOINTHEAL"/>
+		<set name="power" val="1700"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="isHandler" val="true"/>
+		<set name="altUse" val="true"/>
 	</skill>
 	<skill id="22506" levels="1" name="Scroll: Enchant Weapon (R-grade)">
 		<set name="magicLevel" val="1"/>
@@ -553,13 +564,26 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="22584" levels="3" name="Scroll: Increase Vitality">
-		<set name="reuseDelay" val="259200000"/>
-		<set name="hitTime" val="200"/>
-		<set name="icon" val="icon.skill0000"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+	<skill id="22584" levels="3" name="Potion of Energy Maintenance" >
+		<table name="#items">22745 22747 22749</table>
+		<table name="#points">25 50 100</table>
+		<set name="magicType" val="SPECIAL" />
+		<set name="icon" val="icon.skilltransform4" />
+		<set name="itemConsumeId" val="#items" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="isHandler" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="altUse" val="true" />
+		<cond msgId="1509">
+			<not>
+				<player olympiad="true" />
+			</not>
+		</cond>
+		<for>
+			<effect count="1" name="Vitality" stackType="vitalityRegen" stackOrder="1" time="1800" val="0" />
+		</for>
 	</skill>
 	<skill id="22587" levels="4" name="Drop Rate Rune">
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up"/>

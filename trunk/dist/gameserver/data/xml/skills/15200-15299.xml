@@ -63,16 +63,20 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="15208" levels="9" name="Chaos Shield">
-		<table name="#mpConsume2">16 19 24 26 28 30 32 34 36</table>
-		<table name="#Def">1.2 1.4 1.6 1.8 2 2.3 2.5 2.8 3</table>
-		<set name="abnormal_time" val="86400"/>
+		<table name="#mpConsume"> 16 19 24 26 28 30 32 34 36 </table>
+		<table name="#Def"> 1.2 1.4 1.6 1.8 2 2.3 2.5 2.8 3 </table>
 		<set name="hitTime" val="1500"/>
-		<set name="mpConsume2" val="#mpConsume2"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="mpConsume" val="#mpConsume"/>
+		<set name="operateType" val="OP_TOGGLE"/>
 		<set name="reuseDelay" val="1500"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="icon" val="icon.skill1418"/>
+		<for>
+			<effect name="Buff" time="86400" val="0">
+				<mul order="0x30" stat="pDef" val="#Def"/>
+				<mul order="0x30" stat="mDef" val="#Def"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="15209" levels="1" name="Pa'agrio's Gift 1">
 		<set name="coolTime" val="1000"/>
@@ -396,11 +400,13 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-	<skill id="15261" levels="1" name="Lindvior's Skill 1">
-		<set name="icon" val="icon.skill0000"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+	<skill id="15261" levels="1" name="LV">
+		<set name="hitTime" val="1500"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="1500"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="power" val="1500"/>
+		<set name="target" val="TARGET_ONE"/>
 	</skill>
 	<skill id="15262" levels="1" name="Lindvior's Skill 2">
 		<set name="icon" val="icon.skill0000"/>

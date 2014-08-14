@@ -567,10 +567,18 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="15498" levels="1" name="Dragon Defender">
-		<set name="icon" val="icon.skill4689"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" time="7200" val="0">
+				<mul order="0x30" stat="pAtkSpd" val="1.17"/>
+				<mul order="0x30" stat="mAtkSpd" val="1.17"/>
+				<mul order="0x30" stat="runSpd" val="1.17" />
+				<mul order="0x30" stat="maxHp" val="1.17" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="15499" levels="1" name="Energy of Life">
 		<set name="icon" val="icon.skill0000"/>
