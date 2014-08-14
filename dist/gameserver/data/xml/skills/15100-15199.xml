@@ -351,16 +351,45 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="15145" levels="1" name="Ruler's Authority">
-		<set name="icon" val="icon.skill0332"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="reflectDam" value="1.05"/>
+			<add stat="maxHp" order="0x40" value="1000"/>
+			<add stat="maxMp" order="0x40" value="1000"/>
+			<add stat="maxCp" order="0x40" value="1000"/>
+			<add stat="defenceFire" order="0x40" value="15"/>
+			<add stat="defenceWater" order="0x40" value="15"/>
+			<add stat="defenceWind" order="0x40" value="15"/>
+			<add stat="defenceEarth" order="0x40" value="15"/>
+			<add stat="defenceHoly" order="0x40" value="15"/>
+			<add stat="defenceUnholy" order="0x40" value="15"/>
+			<mul stat="pvpPhysDefenceBonus" order="0x30" value="1.09"/>
+			<mul stat="pvpPhysSkillDefenceBonus" order="0x30" value="1.09"/>
+			<mul stat="pvpMagicSkillDefenceBonus" order="0x30" value="1.09"/>
+			<mul stat="pvpMagicSkillDmgBonus" order="0x30" value="1.08"/>
+			<mul stat="pvpPhysSkillDmgBonus" order="0x30" value="1.05"/>
+			<mul stat="physDamage" order="0x30" value="1.08"/>
+			<mul stat="pvpPhysDmgBonus" order="0x30" value="1.08"/>
+		</for>
 	</skill>
 	<skill id="15146" levels="1" name="Mysterious Belt">
-		<set name="icon" val="icon.skill0332"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="reflectDam" value="1.05"/>
+			<add stat="maxHp" order="0x40" value="500"/>
+			<add stat="maxMp" order="0x40" value="500"/>
+			<add stat="maxCp" order="0x40" value="500"/>
+			<mul stat="pvpPhysDefenceBonus" order="0x30" value="1.07"/>
+			<mul stat="pvpPhysSkillDefenceBonus" order="0x30" value="1.07"/>
+			<mul stat="pvpMagicSkillDefenceBonus" order="0x30" value="1.07"/>
+			<mul stat="pvpMagicSkillDmgBonus" order="0x30" value="1.06"/>
+			<mul stat="pvpPhysSkillDmgBonus" order="0x30" value="1.06"/>
+			<mul stat="pvpPhysDmgBonus" order="0x30" value="1.06"/>
+		</for>
 	</skill>
 	<skill id="15147" levels="1" name="Overheat">
 		<set name="reuseDelay" val="120000"/>
