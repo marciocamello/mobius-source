@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="36664" name="9th Anniversary Hat">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys.icon.br_party_hat_gold_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+</list>

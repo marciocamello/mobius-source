@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<weapon id="36632" name="Emerald Weapon: One-handed Sword">
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="BranchSys3.Icon.g_beam_sword"/>
+		<set name="price" value="0"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="144"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="92"/>
+			<add stat="mAtk" order="0x10" value="54"/>
+			<set stat="atkBaseSpeed" order="0x08" value="379"/>
+			<set stat="baseCrit" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="36633" name="Emerald Weapon: Dagger">
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="BranchSys3.Icon.g_beam_sword"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DAGGER"/>
+		<set name="weight" value="106"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<set name="rnd_dam" value="5"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="80"/>
+			<add stat="mAtk" order="0x10" value="54"/>
+			<set stat="atkBaseSpeed" order="0x08" value="433"/>
+			<set stat="baseCrit" order="0x08" value="120"/>
+			<add stat="accCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="36634" name="Emerald Weapon: Two-handed Sword">
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="BranchSys3.Icon.g_beam_twohand_sword"/>
+		<set name="price" value="0"/>
+		<set name="type" value="SWORD"/>
+		<set name="weight" value="209"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="112"/>
+			<add stat="mAtk" order="0x10" value="54"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="36635" name="Emerald Weapon: Fist Weapon">
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="BranchSys3.Icon.g_beam_dualfist"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="weight" value="152"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<set name="rnd_dam" value="5"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="112"/>
+			<add stat="mAtk" order="0x10" value="54"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="60"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+		</for>
+	</weapon>
+	<weapon id="36636" name="Emerald Weapon: Spear">
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="BranchSys3.Icon.g_beam_pole"/>
+		<set name="price" value="0"/>
+		<set name="type" value="POLE"/>
+		<set name="weight" value="205"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="92"/>
+			<add stat="mAtk" order="0x10" value="54"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="80"/>
+			<add stat="accCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="36637" name="Emerald Weapon: Bow">
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="BranchSys3.Icon.g_beam_bow"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BOW"/>
+		<set name="weight" value="181"/>
+		<set name="soulshots" value="6"/>
+		<set name="spiritshots" value="3"/>
+		<set name="rnd_dam" value="5"/>
+		<set name="mp_consume" value="2"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="191"/>
+			<add stat="mAtk" order="0x10" value="54"/>
+			<set stat="atkBaseSpeed" order="0x08" value="293"/>
+			<set stat="baseCrit" order="0x08" value="120"/>
+			<add stat="accCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="36638" name="Emerald Weapon: Crossbow">
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="BranchSys3.Icon.g_beam_twohand_crossbow"/>
+		<set name="price" value="0"/>
+		<set name="type" value="CROSSBOW"/>
+		<set name="weight" value="181"/>
+		<set name="soulshots" value="6"/>
+		<set name="spiritshots" value="3"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="117"/>
+			<add stat="mAtk" order="0x10" value="54"/>
+			<set stat="atkBaseSpeed" order="0x08" value="303"/>
+			<set stat="baseCrit" order="0x08" value="100"/>
+			<add stat="accCombat" order="0x10" value="-1.5"/>
+		</for>
+	</weapon>
+	<weapon id="36639" name="Emerald Weapon: One-handed Blunt Weapon">
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="BranchSys3.Icon.g_beam_blunt"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="172"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="92"/>
+			<add stat="mAtk" order="0x10" value="54"/>
+			<set stat="atkBaseSpeed" order="0x08" value="379"/>
+			<set stat="baseCrit" order="0x08" value="60"/>
+		</for>
+	</weapon>
+	<weapon id="36640" name="Emerald Weapon: Two-handed Blunt Weapon">
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="BranchSys3.Icon.g_beam_twohand_blunt"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="101"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="90"/>
+			<add stat="mAtk" order="0x10" value="79"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="60"/>
+		</for>
+	</weapon>
+	<weapon id="36641" name="Emerald Weapon: One-handed Magic Blunt Weapon">
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="BranchSys3.Icon.g_beam_magic_twohand_blunt"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="172"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="92"/>
+			<add stat="mAtk" order="0x10" value="54"/>
+			<set stat="atkBaseSpeed" order="0x08" value="379"/>
+			<set stat="baseCrit" order="0x08" value="60"/>
+		</for>
+	</weapon>
+	<weapon id="36642" name="Emerald Weapon: Two-handed Magic Blunt Weapon">
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="BranchSys3.Icon.g_beam_magic_twohand_blunt"/>
+		<set name="price" value="0"/>
+		<set name="type" value="BLUNT"/>
+		<set name="weight" value="101"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="152"/>
+			<add stat="mAtk" order="0x10" value="122"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="60"/>
+		</for>
+	</weapon>
+	<weapon id="36643" name="Emerald Weapon: Dualsword">
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="BranchSys3.Icon.g_beam_dual"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DUAL"/>
+		<set name="weight" value="247"/>
+		<set name="soulshots" value="3"/>
+		<set name="spiritshots" value="3"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="107"/>
+			<add stat="mAtk" order="0x10" value="51"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="60"/>
+		</for>
+	</weapon>
+	<weapon id="36644" name="Emerald Weapon: Dual Dagger">
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="BranchSys3.Icon.g_beam_dualdagger"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DUALDAGGER"/>
+		<set name="weight" value="205"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="107"/>
+			<add stat="mAtk" order="0x10" value="181"/>
+			<set stat="atkBaseSpeed" order="0x08" value="433"/>
+			<set stat="baseCrit" order="0x08" value="120"/>
+			<add stat="accCombat" order="0x10" value="-3.75"/>
+		</for>
+	</weapon>
+	<weapon id="36645" name="Emerald Weapon: Dual Blunt Weapon">
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="BranchSys3.Icon.g_beam_dualblunt"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DUALBLUNT"/>
+		<set name="weight" value="250"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="125"/>
+			<add stat="mAtk" order="0x10" value="186"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="80"/>
+		</for>
+	</weapon>
+	<weapon id="36646" name="Emerald Weapon: Shield">
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="BranchSys3.Icon.g_beam_shield"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="200"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+	</weapon>
+	<weapon id="36647" name="Emerald Weapon: Sigil">
+		<set name="crystal_type" value="D"/>
+		<set name="icon" value="BranchSys3.Icon.g_beam_sigil"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="100"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="rEvas" order="0x10" value="-8.0"/>
+			<add stat="sDef" order="0x10" value="47"/>
+			<add stat="rShld" order="0x10" value="20"/>
+		</for>
+	</weapon>
+</list>

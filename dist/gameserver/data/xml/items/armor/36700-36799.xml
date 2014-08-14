@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="36724" name="Practice Leather Belt">
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_belt_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="500"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="10"/>
+		</for>
+	</armor>
+	<armor id="36726" name="Flutter's Magic Pin Leather Belt (Low-grade)">
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.armor_belt_i01"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="500"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="10"/>
+		</for>
+	</armor>
+</list>

@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<weapon id="37139" name="Steel Plate Shield (60-day)">
+		<set name="crystal_type" value="C"/>
+		<set name="icon" value="icon.shield_full_plate_shield_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="407"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="rEvas" order="0x10" value="-8.0"/>
+			<add stat="sDef" order="0x10" value="203"/>
+			<add stat="rShld" order="0x10" value="20"/>
+		</for>
+	</weapon>
+	<weapon id="37152" name="Steel Doom Shield (60-day)">
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.shield_doom_shield_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="400"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="rEvas" order="0x10" value="-8.0"/>
+			<add stat="sDef" order="0x10" value="230"/>
+			<add stat="rShld" order="0x10" value="20"/>
+		</for>
+	</weapon>
+	<weapon id="37157" name="Steel Avadon Shield (60-day)">
+		<set name="crystal_type" value="B"/>
+		<set name="icon" value="icon.shield_avadon_shield_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="403"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="rEvas" order="0x10" value="-8.0"/>
+			<add stat="sDef" order="0x10" value="216"/>
+			<add stat="rShld" order="0x10" value="20"/>
+		</for>
+	</weapon>
+	<weapon id="37165" name="Steel Shield of Nightmare (60-day)">
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.shield_shield_of_nightmare_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="393"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="rEvas" order="0x10" value="-8.0"/>
+			<add stat="sDef" order="0x10" value="256"/>
+			<add stat="rShld" order="0x10" value="20"/>
+		</for>
+	</weapon>
+	<weapon id="37170" name="Steel Dark Crystal Shield (60-day)">
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.shield_dark_crystal_shield_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="397"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="rEvas" order="0x10" value="-8.0"/>
+			<add stat="sDef" order="0x10" value="243"/>
+			<add stat="rShld" order="0x10" value="20"/>
+		</for>
+	</weapon>
+	<weapon id="37180" name="Steel Imperial Crusader Shield (60-day)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.shield_imperial_crusader_shield_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="390"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="rEvas" order="0x10" value="-8.0"/>
+			<add stat="sDef" order="0x10" value="290"/>
+			<add stat="rShld" order="0x10" value="20"/>
+		</for>
+	</weapon>
+	<weapon id="37195" name="Steel Dynasty Shield (60-day)">
+		<set name="crystal_type" value="S"/>
+		<set name="icon" value="icon.shield_dynasty_shield_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="380"/>
+		<equip>
+			<slot id="LEFT_HAND"/>
+		</equip>
+		<for>
+			<add stat="rEvas" order="0x10" value="-8.0"/>
+			<add stat="sDef" order="0x10" value="321"/>
+			<add stat="rShld" order="0x10" value="20"/>
+		</for>
+	</weapon>
+</list>
