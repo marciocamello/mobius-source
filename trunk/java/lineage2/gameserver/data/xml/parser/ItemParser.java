@@ -26,7 +26,9 @@ import lineage2.gameserver.templates.OptionDataTemplate;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.ArmorTemplate;
 import lineage2.gameserver.templates.item.Bodypart;
+import lineage2.gameserver.templates.item.EtcItemTemplate;
 import lineage2.gameserver.templates.item.ItemTemplate;
+import lineage2.gameserver.templates.item.WeaponTemplate;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -34,23 +36,23 @@ import org.apache.commons.lang3.StringUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public final class ArmorItemParser extends StatParser<ItemHolder>
+public final class ItemParser extends StatParser<ItemHolder>
 {
-	private static final ArmorItemParser _instance = new ArmorItemParser();
+	private static final ItemParser _instance = new ItemParser();
 	
 	/**
 	 * Method getInstance.
-	 * @return ArmorItemParser
+	 * @return ItemParser
 	 */
-	public static ArmorItemParser getInstance()
+	public static ItemParser getInstance()
 	{
 		return _instance;
 	}
 	
 	/**
-	 * Constructor for ArmorItemParser.
+	 * Constructor for ItemParser.
 	 */
-	protected ArmorItemParser()
+	protected ItemParser()
 	{
 		super(ItemHolder.getInstance());
 	}
@@ -62,7 +64,7 @@ public final class ArmorItemParser extends StatParser<ItemHolder>
 	@Override
 	public File getXMLDir()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/xml/items/armor/");
+		return new File(Config.DATAPACK_ROOT, "data/xml/items/");
 	}
 	
 	/**
@@ -156,6 +158,26 @@ public final class ArmorItemParser extends StatParser<ItemHolder>
 					
 					template = new ArmorTemplate(set);
 				}
+				else if (itemElement.getName().equalsIgnoreCase("weapon"))
+				{
+					if (!set.containsKey("class"))
+					{
+						if ((slot & ItemTemplate.SLOT_L_HAND) > 0)
+						{
+							set.set("class", ItemTemplate.ItemClass.ARMOR);
+						}
+						else
+						{
+							set.set("class", ItemTemplate.ItemClass.WEAPON);
+						}
+					}
+					
+					template = new WeaponTemplate(set);
+				}
+				else
+				{
+					template = new EtcItemTemplate(set);
+				}
 			}
 			catch (Exception e)
 			{
@@ -185,7 +207,7 @@ public final class ArmorItemParser extends StatParser<ItemHolder>
 						int level = Integer.parseInt(nextElement.attributeValue("level"));
 						Skill skill = SkillTable.getInstance().getInfo(id, level);
 						
-						if ((skill != null) && (template != null))
+						if (skill != null)
 						{
 							template.attachSkill(skill);
 						}
@@ -201,7 +223,7 @@ public final class ArmorItemParser extends StatParser<ItemHolder>
 					int level = Integer.parseInt(subElement.attributeValue("level"));
 					Skill skill = SkillTable.getInstance().getInfo(id, level);
 					
-					if ((skill != null) && (template != null))
+					if (skill != null)
 					{
 						template.setEnchant4Skill(skill);
 					}
@@ -212,7 +234,7 @@ public final class ArmorItemParser extends StatParser<ItemHolder>
 					int level = Integer.parseInt(subElement.attributeValue("level"));
 					Skill skill = SkillTable.getInstance().getInfo(id, level);
 					
-					if ((skill != null) && (template != null))
+					if (skill != null)
 					{
 						template.setUnequipeSkill(skill);
 					}
@@ -221,14 +243,14 @@ public final class ArmorItemParser extends StatParser<ItemHolder>
 				{
 					Condition condition = parseFirstCond(subElement);
 					
-					if ((condition != null) && (template != null))
+					if (condition != null)
 					{
 						int msgId = parseNumber(subElement.attributeValue("msgId")).intValue();
 						condition.setSystemMsg(msgId);
 						template.setCondition(condition);
 					}
 				}
-				else if (subName.equalsIgnoreCase("attributes") && (template != null))
+				else if (subName.equalsIgnoreCase("attributes"))
 				{
 					int[] attributes = new int[6];
 					
@@ -252,7 +274,7 @@ public final class ArmorItemParser extends StatParser<ItemHolder>
 					{
 						org.dom4j.Element nextElement = nextIterator.next();
 						
-						if (nextElement.getName().equalsIgnoreCase("level") && (template != null))
+						if (nextElement.getName().equalsIgnoreCase("level"))
 						{
 							int val = Integer.parseInt(nextElement.attributeValue("val"));
 							int i = 0;

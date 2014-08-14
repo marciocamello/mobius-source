@@ -12,9 +12,7 @@
  */
 package lineage2.gameserver.handler.admincommands.impl;
 
-import lineage2.gameserver.data.xml.parser.ArmorItemParser;
-import lineage2.gameserver.data.xml.parser.EtcItemParser;
-import lineage2.gameserver.data.xml.parser.WeaponItemParser;
+import lineage2.gameserver.data.xml.parser.ItemParser;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.quest.Quest;
@@ -81,39 +79,15 @@ public class AdminScripts implements IAdminCommandHandler
 				}
 				else if (param.equalsIgnoreCase("items"))
 				{
-					activeChar.sendMessage("EtcItem reload starting...");
+					activeChar.sendMessage("Item reload starting...");
 					
 					try
 					{
-						EtcItemParser.getInstance().reload();
+						ItemParser.getInstance().reload();
 					}
 					catch (Exception e)
 					{
-						activeChar.sendMessage("EtcItem reloaded with errors.");
-						return false;
-					}
-					
-					activeChar.sendMessage("WeaponItem reload starting...");
-					
-					try
-					{
-						WeaponItemParser.getInstance().reload();
-					}
-					catch (Exception e)
-					{
-						activeChar.sendMessage("WeaponItem reloaded with errors.");
-						return false;
-					}
-					
-					activeChar.sendMessage("ArmorItem reload starting...");
-					
-					try
-					{
-						ArmorItemParser.getInstance().reload();
-					}
-					catch (Exception e)
-					{
-						activeChar.sendMessage("ArmorItem reloaded with errors.");
+						activeChar.sendMessage("Item reloaded with errors.");
 						return false;
 					}
 					
