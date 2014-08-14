@@ -25,8 +25,10 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.SkillLearn;
 import lineage2.gameserver.model.base.AcquireType;
+import lineage2.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SkillCoolTime;
+import lineage2.gameserver.network.serverpackets.SkillList;
 import lineage2.gameserver.stats.Calculator;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.funcs.Func;
@@ -51,6 +53,7 @@ public class AdminSkill implements IAdminCommandHandler
 		admin_skill_index,
 		admin_add_skill,
 		admin_remove_skill,
+		admin_remove_all_skills,
 		admin_get_skills,
 		admin_reset_skills,
 		admin_give_all_skills,
@@ -92,6 +95,10 @@ public class AdminSkill implements IAdminCommandHandler
 			
 			case admin_remove_skills:
 				removeSkillsPage(activeChar);
+				break;
+			
+			case admin_remove_all_skills:
+				removeAllSkills(activeChar);
 				break;
 			
 			case admin_skill_list:
@@ -317,6 +324,38 @@ public class AdminSkill implements IAdminCommandHandler
 	}
 	
 	/**
+	 * Method removeAllSkills.
+	 * @param activeChar Player
+	 */
+	private void removeAllSkills(Player activeChar)
+	{
+		GameObject target = activeChar.getTarget();
+		
+		if (!(target.isPlayer() && ((activeChar == target) || activeChar.getPlayerAccess().CanEditCharAll)))
+		{
+			activeChar.sendPacket(Msg.INVALID_TARGET);
+			return;
+		}
+		
+		Player player = (Player) target;
+		Collection<Skill> skills = player.getAllSkills();
+		
+		for (Skill skill : skills)
+		{
+			if (skill == null)
+			{
+				continue;
+			}
+			
+			player.removeSkill(skill, true);
+			player.sendPacket(new SkillList(player), new ExAcquirableSkillListByClass(player));
+		}
+		
+		activeChar.sendMessage("You removed all skills from target: " + player.getName() + ".");
+		showSkillsPage(activeChar);
+	}
+	
+	/**
 	 * Method showSkillsPage.
 	 * @param activeChar Player
 	 */
@@ -346,11 +385,12 @@ public class AdminSkill implements IAdminCommandHandler
 		replyMSG.append("<center>Editing character: " + player.getName() + "</center>");
 		replyMSG.append("<br><table width=270><tr><td>Lv: " + player.getLevel() + " " + HtmlUtils.htmlClassName(player.getClassId().getId()) + "</td></tr></table>");
 		replyMSG.append("<br><center><table>");
-		replyMSG.append("<tr><td><button value=\"Add skills\" action=\"bypass -h admin_skill_list\" width=70 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-		replyMSG.append("<td><button value=\"Get skills\" action=\"bypass -h admin_get_skills\" width=70 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>");
-		replyMSG.append("<tr><td><button value=\"Delete skills\" action=\"bypass -h admin_remove_skills\" width=70 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-		replyMSG.append("<td><button value=\"Reset skills\" action=\"bypass -h admin_reset_skills\" width=70 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>");
-		replyMSG.append("<tr><td><button value=\"Give All Skills\" action=\"bypass -h admin_give_all_skills\" width=70 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>");
+		replyMSG.append("<tr><td><button value=\"Add Skills\" action=\"bypass -h admin_skill_list\" width=110 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td><button value=\"Get Skills\" action=\"bypass -h admin_get_skills\" width=110 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>");
+		replyMSG.append("<tr><td><button value=\"Delete Skills\" action=\"bypass -h admin_remove_skills\" width=110 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td><button value=\"Reset skills\" action=\"bypass -h admin_reset_skills\" width=110 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>");
+		replyMSG.append("<tr><td><button value=\"Give All Skills\" action=\"bypass -h admin_give_all_skills\" width=110 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td><button value=\"Remove All Skills\" action=\"bypass -h admin_remove_all_skills\" width=110 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>");
 		replyMSG.append("</table></center>");
 		replyMSG.append("</body></html>");
 		adminReply.setHtml(replyMSG.toString());
