@@ -348,7 +348,7 @@ public class FeedableBeastInstance extends MonsterInstance
 			feedableBeasts.add(i);
 		}
 	}
-	public static final Map<Integer, Integer> feedInfo = new ConcurrentHashMap<>();
+	public static Map<Integer, Integer> feedInfo = new ConcurrentHashMap<>();
 	
 	/**
 	 * Method isGoldenSpice.

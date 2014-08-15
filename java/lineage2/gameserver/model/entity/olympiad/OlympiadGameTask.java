@@ -26,7 +26,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-class OlympiadGameTask extends RunnableImpl
+public class OlympiadGameTask extends RunnableImpl
 {
 	private static final Logger _log = LoggerFactory.getLogger(OlympiadGameTask.class);
 	private final OlympiadGame _game;
@@ -84,7 +84,7 @@ class OlympiadGameTask extends RunnableImpl
 	 * Method shedule.
 	 * @return ScheduledFuture<?>
 	 */
-	ScheduledFuture<?> shedule()
+	public ScheduledFuture<?> shedule()
 	{
 		return ThreadPoolManager.getInstance().schedule(this, _time);
 	}
@@ -96,7 +96,7 @@ class OlympiadGameTask extends RunnableImpl
 	 * @param count int
 	 * @param time long
 	 */
-	OlympiadGameTask(OlympiadGame game, BattleStatus status, int count, long time)
+	public OlympiadGameTask(OlympiadGame game, BattleStatus status, int count, long time)
 	{
 		_game = game;
 		_status = status;

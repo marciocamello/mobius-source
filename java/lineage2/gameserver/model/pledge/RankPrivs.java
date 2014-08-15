@@ -28,7 +28,7 @@ public class RankPrivs
 	 * @param party int
 	 * @param privs int
 	 */
-	RankPrivs(int rank, int party, int privs)
+	public RankPrivs(int rank, int party, int privs)
 	{
 		_rank = rank;
 		_party = party;

@@ -476,7 +476,7 @@ public class CharacterAI extends AbstractAI
 	 * @param arg2 Object
 	 * @param delay long
 	 */
-	private void addTimer(int timerId, Object arg1, Object arg2, long delay)
+	protected void addTimer(int timerId, Object arg1, Object arg2, long delay)
 	{
 		ThreadPoolManager.getInstance().schedule(new Timer(timerId, arg1, arg2), delay);
 	}
@@ -484,7 +484,7 @@ public class CharacterAI extends AbstractAI
 	/**
 	 * @author Mobius
 	 */
-	private class Timer extends RunnableImpl
+	protected class Timer extends RunnableImpl
 	{
 		private final int _timerId;
 		private final Object _arg1;
@@ -496,7 +496,7 @@ public class CharacterAI extends AbstractAI
 		 * @param arg1 Object
 		 * @param arg2 Object
 		 */
-		Timer(int timerId, Object arg1, Object arg2)
+		public Timer(int timerId, Object arg1, Object arg2)
 		{
 			_timerId = timerId;
 			_arg1 = arg1;
@@ -541,7 +541,7 @@ public class CharacterAI extends AbstractAI
 	 * @param arg2 Object
 	 * @param radius int
 	 */
-	private void broadCastScriptEvent(String event, Object arg1, Object arg2, int radius)
+	protected void broadCastScriptEvent(String event, Object arg1, Object arg2, int radius)
 	{
 		List<NpcInstance> npcs = World.getAroundNpc(getActor(), radius, radius);
 		

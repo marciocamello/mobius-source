@@ -148,7 +148,7 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 	/**
 	 * Method nextStep.
 	 */
-	private void nextStep()
+	public void nextStep()
 	{
 		List<CMGSiegeClanObject> siegeClans = getObjects(ATTACKERS);
 		

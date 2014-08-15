@@ -82,18 +82,18 @@ public class Clan implements Iterable<UnitMember>
 	private ClanAirShip _airship;
 	private boolean _airshipLicense;
 	private int _airshipFuel;
-	private static final long EXPELLED_MEMBER_PENALTY = 24 * 60 * 60 * 1000L;
-	private static final long LEAVED_ALLY_PENALTY = 24 * 60 * 60 * 1000L;
-	private static final long DISSOLVED_ALLY_PENALTY = 24 * 60 * 60 * 1000L;
+	public static long EXPELLED_MEMBER_PENALTY = 24 * 60 * 60 * 1000L;
+	public static long LEAVED_ALLY_PENALTY = 24 * 60 * 60 * 1000L;
+	public static long DISSOLVED_ALLY_PENALTY = 24 * 60 * 60 * 1000L;
 	private final ClanWarehouse _warehouse;
 	private int _whBonus = -1;
 	private String _notice = null;
 	private final List<Clan> _atWarWith = new ArrayList<>();
 	private final List<Clan> _underAttackFrom = new ArrayList<>();
-	private final IntObjectMap<Skill> _skills = new CTreeIntObjectMap<>();
-	private final IntObjectMap<RankPrivs> _privs = new CTreeIntObjectMap<>();
-	private final IntObjectMap<SubUnit> _subUnits = new CTreeIntObjectMap<>();
-	private static Skill _clanLeaderSkill = SkillTable.getInstance().getInfo(19009, 1);
+	protected IntObjectMap<Skill> _skills = new CTreeIntObjectMap<>();
+	protected IntObjectMap<RankPrivs> _privs = new CTreeIntObjectMap<>();
+	protected IntObjectMap<SubUnit> _subUnits = new CTreeIntObjectMap<>();
+	static Skill _clanLeaderSkill = SkillTable.getInstance().getInfo(19009, 1);
 	private int _reputation = 0;
 	public static final int CP_NOTHING = 0;
 	public static final int CP_CL_INVITE_CLAN = 2;
@@ -252,7 +252,7 @@ public class Clan implements Iterable<UnitMember>
 	 * @param unitType int
 	 * @return String
 	 */
-	private String getUnitName(int unitType)
+	public String getUnitName(int unitType)
 	{
 		if ((unitType == SUBUNIT_NONE) || !_subUnits.containsKey(unitType))
 		{
@@ -297,7 +297,7 @@ public class Clan implements Iterable<UnitMember>
 	 * @param unitType int
 	 * @return UnitMember
 	 */
-	private UnitMember getLeader(int unitType)
+	public UnitMember getLeader(int unitType)
 	{
 		if ((unitType == SUBUNIT_NONE) || !_subUnits.containsKey(unitType))
 		{
@@ -1670,7 +1670,7 @@ public class Clan implements Iterable<UnitMember>
 	 * @param pledgeType int
 	 * @return int
 	 */
-	private int getAvailablePledgeTypes(int pledgeType)
+	public int getAvailablePledgeTypes(int pledgeType)
 	{
 		if (pledgeType == SUBUNIT_MAIN_CLAN)
 		{
@@ -1890,7 +1890,7 @@ public class Clan implements Iterable<UnitMember>
 	/**
 	 * Method InitializePrivs.
 	 */
-	private void InitializePrivs()
+	public void InitializePrivs()
 	{
 		for (int i = RANK_FIRST; i <= RANK_LAST; i++)
 		{
@@ -1947,7 +1947,7 @@ public class Clan implements Iterable<UnitMember>
 	 * @param rank int
 	 * @return int
 	 */
-	int countMembersByRank(int rank)
+	public int countMembersByRank(int rank)
 	{
 		int ret = 0;
 		

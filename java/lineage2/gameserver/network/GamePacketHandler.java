@@ -23,6 +23,27 @@ import lineage2.commons.net.nio.impl.ReceivablePacket;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.network.clientpackets.*;
+import lineage2.gameserver.network.clientpackets.PledgeRecruit.RequestPledgeDraftListApply;
+import lineage2.gameserver.network.clientpackets.PledgeRecruit.RequestPledgeDraftListSearch;
+import lineage2.gameserver.network.clientpackets.PledgeRecruit.RequestPledgeJoinSys;
+import lineage2.gameserver.network.clientpackets.PledgeRecruit.RequestPledgeRecruitApplyInfo;
+import lineage2.gameserver.network.clientpackets.PledgeRecruit.RequestPledgeRecruitBoardAccess;
+import lineage2.gameserver.network.clientpackets.PledgeRecruit.RequestPledgeRecruitBoardDetail;
+import lineage2.gameserver.network.clientpackets.PledgeRecruit.RequestPledgeRecruitBoardSearch;
+import lineage2.gameserver.network.clientpackets.PledgeRecruit.RequestPledgeRecruitInfo;
+import lineage2.gameserver.network.clientpackets.PledgeRecruit.RequestPledgeWaitingApplied;
+import lineage2.gameserver.network.clientpackets.PledgeRecruit.RequestPledgeWaitingApply;
+import lineage2.gameserver.network.clientpackets.PledgeRecruit.RequestPledgeWaitingList;
+import lineage2.gameserver.network.clientpackets.PledgeRecruit.RequestPledgeWaitingUser;
+import lineage2.gameserver.network.clientpackets.PledgeRecruit.RequestPledgeWaitingUserAccept;
+import lineage2.gameserver.network.clientpackets.UnionPledge.RequestShowPledgeUnionInfo;
+import lineage2.gameserver.network.clientpackets.UnionPledge.RequestUnionAdjust;
+import lineage2.gameserver.network.clientpackets.UnionPledge.RequestUnionChange;
+import lineage2.gameserver.network.clientpackets.UnionPledge.RequestUnionJoin;
+import lineage2.gameserver.network.clientpackets.UnionPledge.RequestUnionRequest;
+import lineage2.gameserver.network.clientpackets.UnionPledge.RequestUnionStart;
+import lineage2.gameserver.network.clientpackets.UnionPledge.RequestUnionSummon;
+import lineage2.gameserver.network.clientpackets.UnionPledge.RequestUnionWithdraw;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -227,6 +248,7 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 							break;
 						
 						case 0x16:
+							// msg = new RequestUnEquipItem();
 							break;
 						
 						case 0x17:
@@ -1364,11 +1386,11 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 									break;
 								
 								case 0x54:
-									// msg = new RequestExJoinDominionWar();
+									msg = new RequestExJoinDominionWar();
 									break;
 								
 								case 0x55:
-									// msg = new RequestExDominionInfo();
+									msg = new RequestExDominionInfo();
 									break;
 								
 								case 0x56:
@@ -1922,31 +1944,31 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 									break;
 								
 								case 0xCE:
-									// msg = new RequestUnionJoin();
+									msg = new RequestUnionJoin(); // (chd)
 									break;
 								
 								case 0xCF:
-									// msg = new RequestUnionChange();
+									msg = new RequestUnionChange(); // (chd)
 									break;
 								
 								case 0xD0:
-									// msg = new RequestUnionWithdraw();
+									msg = new RequestUnionWithdraw(); // (ch)
 									break;
 								
 								case 0xD1:
-									// msg = new RequestUnionRequest();
+									msg = new RequestUnionRequest(); // (chd)
 									break;
 								
 								case 0xD2:
-									// msg = new RequestUnionAdjust();
+									msg = new RequestUnionAdjust(); // (ch)
 									break;
 								
 								case 0xD3:
-									// msg = new RequestUnionSummon();
+									msg = new RequestUnionSummon(); // (chd)
 									break;
 								
 								case 0xD4:
-									// msg = new RequestUnionStart();
+									msg = new RequestUnionStart(); // (chd)
 									break;
 								
 								case 0xD5:
@@ -1954,7 +1976,7 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 									break;
 								
 								case 0xD6:
-									// msg = new RequestShowPledgeUnionInfo();
+									msg = new RequestShowPledgeUnionInfo(); // (ch)
 									break;
 								
 								case 0xD7:
@@ -1990,55 +2012,55 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 									break;
 								
 								case 0xE0:
-									// msg = new RequestPledgeRecruitInfo();
+									msg = new RequestPledgeRecruitInfo(); // (chd)
 									break;
 								
 								case 0xE1:
-									// msg = new RequestPledgeRecruitBoardSearch();
+									msg = new RequestPledgeRecruitBoardSearch(); // (chdddSddd)
 									break;
 								
 								case 0xE2:
-									// msg = new RequestPledgeRecruitBoardAccess();
+									msg = new RequestPledgeRecruitBoardAccess(); // (chddSS)
 									break;
 								
 								case 0xE3:
-									// msg = new RequestPledgeRecruitBoardDetail();
+									msg = new RequestPledgeRecruitBoardDetail(); // (chd)
 									break;
 								
 								case 0xE4:
-									// msg = new RequestPledgeWaitingApply();
+									msg = new RequestPledgeWaitingApply(); // (chddS)
 									break;
 								
 								case 0xE5:
-									// msg = new RequestPledgeWaitingApplied();
+									msg = new RequestPledgeWaitingApplied(); // (ch)
 									break;
 								
 								case 0xE6:
-									// msg = new RequestPledgeWaitingList();
+									msg = new RequestPledgeWaitingList(); // (chd)
 									break;
 								
 								case 0xE7:
-									// msg = new RequestPledgeWaitingUser();
+									msg = new RequestPledgeWaitingUser(); // (chdd)
 									break;
 								
 								case 0xE8:
-									// msg = new RequestPledgeWaitingUserAccept();
+									msg = new RequestPledgeWaitingUserAccept(); // (chddd)
 									break;
 								
 								case 0xE9:
-									// msg = new RequestPledgeDraftListSearch();
+									msg = new RequestPledgeDraftListSearch(); // (chdddSdd)
 									break;
 								
 								case 0xEA:
-									// msg = new RequestPledgeDraftListApply();
+									msg = new RequestPledgeDraftListApply(); // (chdd)
 									break;
 								
 								case 0xEB:
-									// msg = new RequestPledgeRecruitApplyInfo();
+									msg = new RequestPledgeRecruitApplyInfo(); // (ch)
 									break;
 								
 								case 0xEC:
-									// msg = new RequestPledgeJoinSys();
+									msg = new RequestPledgeJoinSys(); // (ch)
 									break;
 								
 								case 0xED:

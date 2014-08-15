@@ -57,12 +57,8 @@ public abstract class Residence implements JdbcEntity
 	/**
 	 * @author Mobius
 	 */
-	private class ResidenceCycleTask extends RunnableImpl
+	public class ResidenceCycleTask extends RunnableImpl
 	{
-		public ResidenceCycleTask()
-		{
-		}
-		
 		/**
 		 * Method runImpl.
 		 */
@@ -75,32 +71,32 @@ public abstract class Residence implements JdbcEntity
 	}
 	
 	private static final Logger _log = LoggerFactory.getLogger(Residence.class);
-	private static final long CYCLE_TIME = 60 * 60 * 1000L;
+	public static final long CYCLE_TIME = 60 * 60 * 1000L;
 	protected final int _id;
-	private final String _name;
+	protected final String _name;
 	protected Clan _owner;
-	private Zone _zone;
-	private final List<ResidenceFunction> _functions = new ArrayList<>();
-	private final List<Skill> _skills = new ArrayList<>();
-	private SiegeEvent<?, ?> _siegeEvent;
-	private final Calendar _siegeDate = Calendar.getInstance();
-	private final Calendar _lastSiegeDate = Calendar.getInstance();
-	private final Calendar _ownDate = Calendar.getInstance();
-	private ScheduledFuture<?> _cycleTask;
+	protected Zone _zone;
+	protected List<ResidenceFunction> _functions = new ArrayList<>();
+	protected List<Skill> _skills = new ArrayList<>();
+	protected SiegeEvent<?, ?> _siegeEvent;
+	protected Calendar _siegeDate = Calendar.getInstance();
+	protected Calendar _lastSiegeDate = Calendar.getInstance();
+	protected Calendar _ownDate = Calendar.getInstance();
+	protected ScheduledFuture<?> _cycleTask;
 	private int _cycle;
 	private int _rewardCount;
 	private int _paidCycle;
-	private JdbcEntityState _jdbcEntityState = JdbcEntityState.CREATED;
-	private final List<Location> _banishPoints = new ArrayList<>();
-	private final List<Location> _ownerRestartPoints = new ArrayList<>();
-	private final List<Location> _otherRestartPoints = new ArrayList<>();
-	private final List<Location> _chaosRestartPoints = new ArrayList<>();
+	protected JdbcEntityState _jdbcEntityState = JdbcEntityState.CREATED;
+	protected List<Location> _banishPoints = new ArrayList<>();
+	protected List<Location> _ownerRestartPoints = new ArrayList<>();
+	protected List<Location> _otherRestartPoints = new ArrayList<>();
+	protected List<Location> _chaosRestartPoints = new ArrayList<>();
 	
 	/**
 	 * Constructor for Residence.
 	 * @param set StatsSet
 	 */
-	Residence(StatsSet set)
+	public Residence(StatsSet set)
 	{
 		_id = set.getInteger("id");
 		_name = set.getString("name");
@@ -297,7 +293,7 @@ public abstract class Residence implements JdbcEntity
 	/**
 	 * Method rewardSkills.
 	 */
-	void rewardSkills()
+	public void rewardSkills()
 	{
 		Clan owner = getOwner();
 		
@@ -314,7 +310,7 @@ public abstract class Residence implements JdbcEntity
 	/**
 	 * Method removeSkills.
 	 */
-	void removeSkills()
+	public void removeSkills()
 	{
 		Clan owner = getOwner();
 		
@@ -494,7 +490,7 @@ public abstract class Residence implements JdbcEntity
 	 * Method removeFunction.
 	 * @param type int
 	 */
-	private void removeFunction(int type)
+	public void removeFunction(int type)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -629,7 +625,7 @@ public abstract class Residence implements JdbcEntity
 	/**
 	 * Method cancelCycleTask.
 	 */
-	void cancelCycleTask()
+	public void cancelCycleTask()
 	{
 		_cycle = 0;
 		_paidCycle = 0;

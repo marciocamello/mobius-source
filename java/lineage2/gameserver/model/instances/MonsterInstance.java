@@ -64,17 +64,17 @@ public class MonsterInstance extends NpcInstance
 	/**
 	 * @author Mobius
 	 */
-	private static final class RewardInfo
+	protected static final class RewardInfo
 	{
-		private final Creature _attacker;
-		int _dmg = 0;
+		protected Creature _attacker;
+		protected int _dmg = 0;
 		
 		/**
 		 * Constructor for RewardInfo.
 		 * @param attacker Creature
 		 * @param dmg int
 		 */
-		RewardInfo(final Creature attacker, final int dmg)
+		public RewardInfo(final Creature attacker, final int dmg)
 		{
 			_attacker = attacker;
 			_dmg = dmg;
@@ -84,7 +84,7 @@ public class MonsterInstance extends NpcInstance
 		 * Method addDamage.
 		 * @param dmg int
 		 */
-		void addDamage(int dmg)
+		public void addDamage(int dmg)
 		{
 			if (dmg < 0)
 			{
@@ -306,7 +306,7 @@ public class MonsterInstance extends NpcInstance
 	/**
 	 * @author Mobius
 	 */
-	private class MinionMaintainTask extends RunnableImpl
+	public class MinionMaintainTask extends RunnableImpl
 	{
 		public MinionMaintainTask()
 		{
@@ -790,7 +790,7 @@ public class MonsterInstance extends NpcInstance
 	/**
 	 * Method clearAbsorbers.
 	 */
-	private void clearAbsorbers()
+	public void clearAbsorbers()
 	{
 		absorbLock.lock();
 		
@@ -1009,7 +1009,7 @@ public class MonsterInstance extends NpcInstance
 	/**
 	 * Method clearSweep.
 	 */
-	private void clearSweep()
+	public void clearSweep()
 	{
 		sweepLock.lock();
 		
@@ -1031,7 +1031,7 @@ public class MonsterInstance extends NpcInstance
 	 * @param lastAttacker Creature
 	 * @param topDamager Creature
 	 */
-	private void rollRewards(Map.Entry<RewardType, RewardList> entry, final Creature lastAttacker, Creature topDamager)
+	public void rollRewards(Map.Entry<RewardType, RewardList> entry, final Creature lastAttacker, Creature topDamager)
 	{
 		RewardType type = entry.getKey();
 		RewardList list = entry.getValue();
@@ -1173,7 +1173,7 @@ public class MonsterInstance extends NpcInstance
 	 * @param normalExp double
 	 * @return int
 	 */
-	private int calculateOverhitExp(final double normalExp)
+	public int calculateOverhitExp(final double normalExp)
 	{
 		double overhitPercentage = (getOverhitDamage() * 100) / getMaxHp();
 		

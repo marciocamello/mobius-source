@@ -20,6 +20,8 @@ public enum ResidenceType
 {
 	Castle,
 	ClanHall,
-	Fortress;
+	Fortress,
+	Dominion;
+	
 	public static final ResidenceType[] VALUES = values();
 }

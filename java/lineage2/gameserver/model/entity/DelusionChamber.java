@@ -38,13 +38,13 @@ import lineage2.gameserver.utils.Location;
 public class DelusionChamber extends Reflection
 {
 	private Future<?> killChamberTask;
-	private static final int MILLISECONDS_IN_MINUTE = 60000;
-	private final int _roomType;
-	private int _choosenRoom = -1;
-	boolean isBossRoom = false;
-	private final List<Integer> _completedRooms = new ArrayList<>();
-	int jumps_current = 0;
-	private boolean _hasJumped = false;
+	protected static final int MILLISECONDS_IN_MINUTE = 60000;
+	protected int _roomType;
+	protected int _choosenRoom = -1;
+	protected boolean isBossRoom = false;
+	protected List<Integer> _completedRooms = new ArrayList<>();
+	protected int jumps_current = 0;
+	protected boolean _hasJumped = false;
 	private Future<?> teleporterTask;
 	private Future<?> spawnTask;
 	
@@ -86,7 +86,7 @@ public class DelusionChamber extends Reflection
 	 * Method createSpawnTimer.
 	 * @param room int
 	 */
-	private void createSpawnTimer(int room)
+	public void createSpawnTimer(int room)
 	{
 		if (spawnTask != null)
 		{
@@ -125,7 +125,7 @@ public class DelusionChamber extends Reflection
 	/**
 	 * Method createTeleporterTimer.
 	 */
-	void createTeleporterTimer()
+	protected void createTeleporterTimer()
 	{
 		if (teleporterTask != null)
 		{
@@ -156,7 +156,7 @@ public class DelusionChamber extends Reflection
 	 * Method calcTimeToNextJump.
 	 * @return long
 	 */
-	private long calcTimeToNextJump()
+	protected long calcTimeToNextJump()
 	{
 		if (isBossRoom)
 		{
@@ -171,7 +171,7 @@ public class DelusionChamber extends Reflection
 	 * @param room int
 	 * @return Location
 	 */
-	private Location getRoomCoord(int room)
+	public Location getRoomCoord(int room)
 	{
 		return DelusionChamberManager.getInstance().getRoom(_roomType, room).getTeleportCoords();
 	}
@@ -179,7 +179,7 @@ public class DelusionChamber extends Reflection
 	/**
 	 * Method createNewKillChamberTimer.
 	 */
-	synchronized void createNewKillChamberTimer()
+	public synchronized void createNewKillChamberTimer()
 	{
 		if (killChamberTask != null)
 		{
@@ -228,7 +228,7 @@ public class DelusionChamber extends Reflection
 	/**
 	 * Method teleportToNextRoom.
 	 */
-	void teleportToNextRoom()
+	protected void teleportToNextRoom()
 	{
 		_completedRooms.add(_choosenRoom);
 		
@@ -290,7 +290,7 @@ public class DelusionChamber extends Reflection
 	 * @param alive boolean
 	 * @return int
 	 */
-	int getPlayersInside(boolean alive)
+	protected int getPlayersInside(boolean alive)
 	{
 		if (_playerCount == 0)
 		{
@@ -346,7 +346,7 @@ public class DelusionChamber extends Reflection
 	 * Method getManagerId.
 	 * @return int
 	 */
-	int getManagerId()
+	protected int getManagerId()
 	{
 		return 32664;
 	}
@@ -355,7 +355,7 @@ public class DelusionChamber extends Reflection
 	 * Method checkBossRoom.
 	 * @param room int
 	 */
-	private void checkBossRoom(int room)
+	public void checkBossRoom(int room)
 	{
 		isBossRoom = DelusionChamberManager.getInstance().getRoom(_roomType, room).isBossRoom();
 	}

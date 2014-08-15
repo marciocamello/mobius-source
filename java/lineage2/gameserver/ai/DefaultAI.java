@@ -67,7 +67,7 @@ public class DefaultAI extends CharacterAI
 	/**
 	 * @author Mobius
 	 */
-	private static enum TaskType
+	public static enum TaskType
 	{
 		MOVE,
 		ATTACK,
@@ -75,23 +75,19 @@ public class DefaultAI extends CharacterAI
 		BUFF
 	}
 	
-	private static final int TaskDefaultWeight = 10000;
+	public static final int TaskDefaultWeight = 10000;
 	
 	/**
 	 * @author Mobius
 	 */
-	private static class Task
+	public static class Task
 	{
-		public Task()
-		{
-		}
-		
-		TaskType type;
-		Skill skill;
-		HardReference<? extends Creature> target;
-		Location loc;
-		boolean pathfind;
-		int weight = TaskDefaultWeight;
+		public TaskType type;
+		public Skill skill;
+		public HardReference<? extends Creature> target;
+		public Location loc;
+		public boolean pathfind;
+		public int weight = TaskDefaultWeight;
 	}
 	
 	/**
@@ -220,7 +216,7 @@ public class DefaultAI extends CharacterAI
 	 */
 	protected class Teleport extends RunnableImpl
 	{
-		private final Location _destination;
+		Location _destination;
 		
 		/**
 		 * Constructor for Teleport.
@@ -249,12 +245,8 @@ public class DefaultAI extends CharacterAI
 	/**
 	 * @author Mobius
 	 */
-	private class RunningTask extends RunnableImpl
+	protected class RunningTask extends RunnableImpl
 	{
-		public RunningTask()
-		{
-		}
-		
 		/**
 		 * Method runImpl.
 		 */
@@ -275,12 +267,8 @@ public class DefaultAI extends CharacterAI
 	/**
 	 * @author Mobius
 	 */
-	private class MadnessTask extends RunnableImpl
+	protected class MadnessTask extends RunnableImpl
 	{
-		public MadnessTask()
-		{
-		}
-		
 		/**
 		 * Method runImpl.
 		 */
@@ -301,7 +289,7 @@ public class DefaultAI extends CharacterAI
 	/**
 	 * @author Mobius
 	 */
-	private class NearestTargetComparator implements Comparator<Creature>
+	protected class NearestTargetComparator implements Comparator<Creature>
 	{
 		private final Creature actor;
 		
@@ -309,7 +297,7 @@ public class DefaultAI extends CharacterAI
 		 * Constructor for NearestTargetComparator.
 		 * @param actor Creature
 		 */
-		NearestTargetComparator(Creature actor)
+		public NearestTargetComparator(Creature actor)
 		{
 			this.actor = actor;
 		}
@@ -336,22 +324,22 @@ public class DefaultAI extends CharacterAI
 	
 	protected long AI_TASK_ATTACK_DELAY = Config.AI_TASK_ATTACK_DELAY;
 	protected long AI_TASK_ACTIVE_DELAY = Config.AI_TASK_ACTIVE_DELAY;
-	private long AI_TASK_DELAY_CURRENT = AI_TASK_ACTIVE_DELAY;
+	protected long AI_TASK_DELAY_CURRENT = AI_TASK_ACTIVE_DELAY;
 	protected int MAX_PURSUE_RANGE;
-	private ScheduledFuture<?> _aiTask;
-	ScheduledFuture<?> _runningTask;
+	protected ScheduledFuture<?> _aiTask;
+	protected ScheduledFuture<?> _runningTask;
 	public ScheduledFuture<?> _madnessTask;
 	private boolean _thinking = false;
 	protected boolean _def_think = false;
-	private long _globalAggro;
-	private long _randomAnimationEnd;
+	protected long _globalAggro;
+	protected long _randomAnimationEnd;
 	protected int _pathfindFails;
-	private final NavigableSet<Task> _tasks = new ConcurrentSkipListSet<>(TaskComparator.getInstance());
-	public final Skill[] _damSkills, _dotSkills, _debuffSkills, _healSkills, _buffSkills, _stunSkills;
-	private long _lastActiveCheck;
+	protected final NavigableSet<Task> _tasks = new ConcurrentSkipListSet<>(TaskComparator.getInstance());
+	protected final Skill[] _damSkills, _dotSkills, _debuffSkills, _healSkills, _buffSkills, _stunSkills;
+	protected long _lastActiveCheck;
 	protected long _checkAggroTimestamp = 0;
-	private long _attackTimeout;
-	private long _lastFactionNotifyTime = 0;
+	protected long _attackTimeout;
+	protected long _lastFactionNotifyTime = 0;
 	protected long _minFactionNotifyInterval = 10000;
 	protected final Comparator<Creature> _nearestTargetComparator;
 	
@@ -419,7 +407,7 @@ public class DefaultAI extends CharacterAI
 	 * Method switchAITask.
 	 * @param NEW_DELAY long
 	 */
-	private synchronized void switchAITask(long NEW_DELAY)
+	protected synchronized void switchAITask(long NEW_DELAY)
 	{
 		if (_aiTask == null)
 		{
@@ -584,7 +572,7 @@ public class DefaultAI extends CharacterAI
 	 * Method setIsInRandomAnimation.
 	 * @param time long
 	 */
-	private void setIsInRandomAnimation(long time)
+	protected void setIsInRandomAnimation(long time)
 	{
 		_randomAnimationEnd = System.currentTimeMillis() + time;
 	}
@@ -838,7 +826,7 @@ public class DefaultAI extends CharacterAI
 	 * Method getAttackTimeout.
 	 * @return long
 	 */
-	private long getAttackTimeout()
+	protected long getAttackTimeout()
 	{
 		return _attackTimeout;
 	}
@@ -847,7 +835,7 @@ public class DefaultAI extends CharacterAI
 	 * Method thinkAttack.
 	 * @param returnHome boolean
 	 */
-	void thinkAttack(boolean returnHome)
+	protected void thinkAttack(boolean returnHome)
 	{
 		NpcInstance actor = getActor();
 		
@@ -942,7 +930,7 @@ public class DefaultAI extends CharacterAI
 	 * @param target Creature
 	 * @return boolean
 	 */
-	private boolean tryMoveToTarget(Creature target)
+	protected boolean tryMoveToTarget(Creature target)
 	{
 		return tryMoveToTarget(target, 0);
 	}
@@ -953,7 +941,7 @@ public class DefaultAI extends CharacterAI
 	 * @param range int
 	 * @return boolean
 	 */
-	private boolean tryMoveToTarget(Creature target, int range)
+	protected boolean tryMoveToTarget(Creature target, int range)
 	{
 		NpcInstance actor = getActor();
 		
@@ -995,7 +983,7 @@ public class DefaultAI extends CharacterAI
 	 * @param currentTask Task
 	 * @return boolean
 	 */
-	private boolean maybeNextTask(Task currentTask)
+	protected boolean maybeNextTask(Task currentTask)
 	{
 		_tasks.remove(currentTask);
 		
@@ -1443,7 +1431,7 @@ public class DefaultAI extends CharacterAI
 	/**
 	 * Method returnHome.
 	 */
-	private void returnHome()
+	protected void returnHome()
 	{
 		returnHome(true, Config.ALWAYS_TELEPORT_HOME);
 	}
@@ -1615,7 +1603,7 @@ public class DefaultAI extends CharacterAI
 	 * @param target Creature
 	 * @return boolean
 	 */
-	private boolean canUseSkill(Skill sk, Creature target)
+	protected boolean canUseSkill(Skill sk, Creature target)
 	{
 		return canUseSkill(sk, target, 0);
 	}
@@ -1627,7 +1615,7 @@ public class DefaultAI extends CharacterAI
 	 * @param skills Skill[]
 	 * @return Skill[]
 	 */
-	private Skill[] selectUsableSkills(Creature target, double distance, Skill[] skills)
+	protected Skill[] selectUsableSkills(Creature target, double distance, Skill[] skills)
 	{
 		if ((skills == null) || (skills.length == 0) || (target == null))
 		{
@@ -1672,7 +1660,7 @@ public class DefaultAI extends CharacterAI
 	 * @param skills Skill[]
 	 * @return Skill
 	 */
-	private static Skill selectTopSkillByDamage(Creature actor, Creature target, double distance, Skill[] skills)
+	protected static Skill selectTopSkillByDamage(Creature actor, Creature target, double distance, Skill[] skills)
 	{
 		if ((skills == null) || (skills.length == 0))
 		{
@@ -1710,7 +1698,7 @@ public class DefaultAI extends CharacterAI
 	 * @param skills Skill[]
 	 * @return Skill
 	 */
-	private static Skill selectTopSkillByDebuff(Creature actor, Creature target, double distance, Skill[] skills)
+	protected static Skill selectTopSkillByDebuff(Creature actor, Creature target, double distance, Skill[] skills)
 	{
 		if ((skills == null) || (skills.length == 0))
 		{
@@ -1749,7 +1737,7 @@ public class DefaultAI extends CharacterAI
 	 * @param skills Skill[]
 	 * @return Skill
 	 */
-	private static Skill selectTopSkillByBuff(Creature target, Skill[] skills)
+	protected static Skill selectTopSkillByBuff(Creature target, Skill[] skills)
 	{
 		if ((skills == null) || (skills.length == 0))
 		{
@@ -1788,7 +1776,7 @@ public class DefaultAI extends CharacterAI
 	 * @param skills Skill[]
 	 * @return Skill
 	 */
-	private static Skill selectTopSkillByHeal(Creature target, Skill[] skills)
+	protected static Skill selectTopSkillByHeal(Creature target, Skill[] skills)
 	{
 		if ((skills == null) || (skills.length == 0))
 		{
@@ -1830,7 +1818,7 @@ public class DefaultAI extends CharacterAI
 	 * @param distance double
 	 * @param skills Skill[]
 	 */
-	void addDesiredSkill(Map<Skill, Integer> skillMap, Creature target, double distance, Skill[] skills)
+	protected void addDesiredSkill(Map<Skill, Integer> skillMap, Creature target, double distance, Skill[] skills)
 	{
 		if ((skills == null) || (skills.length == 0) || (target == null))
 		{
@@ -1876,7 +1864,7 @@ public class DefaultAI extends CharacterAI
 	 * @param skillMap Map<Skill,Integer>
 	 * @param skills Skill[]
 	 */
-	void addDesiredHeal(Map<Skill, Integer> skillMap, Skill[] skills)
+	protected void addDesiredHeal(Map<Skill, Integer> skillMap, Skill[] skills)
 	{
 		if ((skills == null) || (skills.length == 0))
 		{
@@ -1915,7 +1903,7 @@ public class DefaultAI extends CharacterAI
 	 * @param skillMap Map<Skill,Integer>
 	 * @param skills Skill[]
 	 */
-	void addDesiredBuff(Map<Skill, Integer> skillMap, Skill[] skills)
+	protected void addDesiredBuff(Map<Skill, Integer> skillMap, Skill[] skills)
 	{
 		if ((skills == null) || (skills.length == 0))
 		{
@@ -2207,7 +2195,7 @@ public class DefaultAI extends CharacterAI
 	 * Method activeFactionTargets.
 	 * @return List<NpcInstance>
 	 */
-	private List<NpcInstance> activeFactionTargets()
+	protected List<NpcInstance> activeFactionTargets()
 	{
 		NpcInstance actor = getActor();
 		

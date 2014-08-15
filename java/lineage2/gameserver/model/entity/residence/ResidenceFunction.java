@@ -159,7 +159,7 @@ public class ResidenceFunction
 	 * Method updateRentTime.
 	 * @param inDebt boolean
 	 */
-	void updateRentTime(boolean inDebt)
+	public void updateRentTime(boolean inDebt)
 	{
 		setEndTimeInMillis(System.currentTimeMillis() + 86400000);
 		Connection con = null;
@@ -199,7 +199,7 @@ public class ResidenceFunction
 	 * @param level int
 	 * @return TeleportLocation[]
 	 */
-	private TeleportLocation[] getTeleports(int level)
+	public TeleportLocation[] getTeleports(int level)
 	{
 		return _teleports.get(level);
 	}
@@ -233,7 +233,7 @@ public class ResidenceFunction
 	 * @param level int
 	 * @return int
 	 */
-	int getLease(int level)
+	public int getLease(int level)
 	{
 		return _leases.get(level);
 	}
@@ -262,7 +262,7 @@ public class ResidenceFunction
 	 * @param level int
 	 * @return int[]
 	 */
-	private int[] getBuylist(int level)
+	public int[] getBuylist(int level)
 	{
 		return _buylists.get(level);
 	}
@@ -291,7 +291,7 @@ public class ResidenceFunction
 	 * @param level int
 	 * @return Object[][]
 	 */
-	private Object[][] getBuffs(int level)
+	public Object[][] getBuffs(int level)
 	{
 		return _buffs.get(level);
 	}

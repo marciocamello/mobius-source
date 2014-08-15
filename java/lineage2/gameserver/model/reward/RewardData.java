@@ -238,7 +238,7 @@ public class RewardData implements Cloneable
 	 * @param rate double
 	 * @return List<RewardItem>
 	 */
-	private List<RewardItem> roll(double rate)
+	public List<RewardItem> roll(double rate)
 	{
 		double mult = Math.ceil(rate);
 		List<RewardItem> ret = new ArrayList<>(1);

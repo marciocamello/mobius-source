@@ -99,7 +99,7 @@ public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanOb
 	/**
 	 * Method nextStep.
 	 */
-	private void nextStep()
+	public void nextStep()
 	{
 		broadcastTo(SystemMsg.THE_TRYOUTS_HAVE_BEGUN, ATTACKERS, DEFENDERS);
 		updateParticles(true, ATTACKERS, DEFENDERS);

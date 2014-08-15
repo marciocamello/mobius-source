@@ -105,15 +105,15 @@ public abstract class GlobalEvent extends LoggerObject
 	
 	public static final String EVENT = "event";
 	protected final IntObjectMap<List<EventAction>> _onTimeActions = new TreeIntObjectMap<>();
-	private final List<EventAction> _onStartActions = new ArrayList<>(0);
-	private final List<EventAction> _onStopActions = new ArrayList<>(0);
-	private final List<EventAction> _onInitActions = new ArrayList<>(0);
-	private final Map<String, List<Serializable>> _objects = new HashMap<>(0);
-	private final int _id;
-	private final String _name;
-	private final String _timerName;
-	private final ListenerListImpl _listenerList = new ListenerListImpl();
-	private IntObjectMap<ItemInstance> _banishedItems = Containers.emptyIntObjectMap();
+	protected final List<EventAction> _onStartActions = new ArrayList<>(0);
+	protected final List<EventAction> _onStopActions = new ArrayList<>(0);
+	protected final List<EventAction> _onInitActions = new ArrayList<>(0);
+	protected final Map<String, List<Serializable>> _objects = new HashMap<>(0);
+	protected final int _id;
+	protected final String _name;
+	protected final String _timerName;
+	protected final ListenerListImpl _listenerList = new ListenerListImpl();
+	protected IntObjectMap<ItemInstance> _banishedItems = Containers.emptyIntObjectMap();
 	
 	/**
 	 * Constructor for GlobalEvent.
@@ -186,7 +186,7 @@ public abstract class GlobalEvent extends LoggerObject
 	 * Method callActions.
 	 * @param actions List<EventAction>
 	 */
-	private void callActions(List<EventAction> actions)
+	protected void callActions(List<EventAction> actions)
 	{
 		for (EventAction action : actions)
 		{
@@ -270,7 +270,7 @@ public abstract class GlobalEvent extends LoggerObject
 	 * Method timeActions.
 	 * @param time int
 	 */
-	void timeActions(int time)
+	public void timeActions(int time)
 	{
 		List<EventAction> actions = _onTimeActions.get(time);
 		

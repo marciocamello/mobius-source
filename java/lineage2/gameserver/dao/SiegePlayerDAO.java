@@ -120,7 +120,7 @@ public class SiegePlayerDAO
 	 * @param clanId int
 	 * @param playerId int
 	 */
-	void delete(Residence residence, int clanId, int playerId)
+	public void delete(Residence residence, int clanId, int playerId)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;

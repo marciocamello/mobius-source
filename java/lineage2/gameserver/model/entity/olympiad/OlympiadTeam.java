@@ -48,7 +48,7 @@ public class OlympiadTeam
 	 * @param game OlympiadGame
 	 * @param side int
 	 */
-	OlympiadTeam(OlympiadGame game, int side)
+	public OlympiadTeam(OlympiadGame game, int side)
 	{
 		_game = game;
 		_side = side;
@@ -59,7 +59,7 @@ public class OlympiadTeam
 	 * Method addMember.
 	 * @param obj_id int
 	 */
-	void addMember(int obj_id)
+	public void addMember(int obj_id)
 	{
 		String player_name = "";
 		Player player = GameObjectsStorage.getPlayer(obj_id);
@@ -87,7 +87,7 @@ public class OlympiadTeam
 	 * @param player Player
 	 * @param damage double
 	 */
-	void addDamage(Player player, double damage)
+	public void addDamage(Player player, double damage)
 	{
 		_damage += damage;
 		TeamMember member = _members.get(player.getObjectId());
@@ -115,7 +115,7 @@ public class OlympiadTeam
 	/**
 	 * Method portPlayersToArena.
 	 */
-	void portPlayersToArena()
+	public void portPlayersToArena()
 	{
 		for (TeamMember member : _members.values())
 		{
@@ -126,7 +126,7 @@ public class OlympiadTeam
 	/**
 	 * Method portPlayersBack.
 	 */
-	void portPlayersBack()
+	public void portPlayersBack()
 	{
 		for (TeamMember member : _members.values())
 		{
@@ -137,7 +137,7 @@ public class OlympiadTeam
 	/**
 	 * Method preparePlayers.
 	 */
-	void preparePlayers()
+	public void preparePlayers()
 	{
 		for (TeamMember member : _members.values())
 		{
@@ -189,7 +189,7 @@ public class OlympiadTeam
 	/**
 	 * Method takePointsForCrash.
 	 */
-	void takePointsForCrash()
+	public void takePointsForCrash()
 	{
 		for (TeamMember member : _members.values())
 		{
@@ -201,7 +201,7 @@ public class OlympiadTeam
 	 * Method checkPlayers.
 	 * @return boolean
 	 */
-	boolean checkPlayers()
+	public boolean checkPlayers()
 	{
 		for (TeamMember member : _members.values())
 		{
@@ -275,7 +275,7 @@ public class OlympiadTeam
 	 * Method broadcast.
 	 * @param p L2GameServerPacket
 	 */
-	void broadcast(L2GameServerPacket p)
+	public void broadcast(L2GameServerPacket p)
 	{
 		for (TeamMember member : _members.values())
 		{
@@ -292,7 +292,7 @@ public class OlympiadTeam
 	 * Method broadcast.
 	 * @param p IStaticPacket
 	 */
-	void broadcast(IStaticPacket p)
+	public void broadcast(IStaticPacket p)
 	{
 		for (TeamMember member : _members.values())
 		{
@@ -326,7 +326,7 @@ public class OlympiadTeam
 	 * @param player Player
 	 * @return boolean
 	 */
-	boolean logout(Player player)
+	public boolean logout(Player player)
 	{
 		if (player != null)
 		{
@@ -349,7 +349,7 @@ public class OlympiadTeam
 	 * @param player Player
 	 * @return boolean
 	 */
-	boolean doDie(Player player)
+	public boolean doDie(Player player)
 	{
 		if (player != null)
 		{
@@ -370,7 +370,7 @@ public class OlympiadTeam
 	/**
 	 * Method saveNobleData.
 	 */
-	void saveNobleData()
+	public void saveNobleData()
 	{
 		for (TeamMember member : _members.values())
 		{

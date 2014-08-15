@@ -1,3 +1,15 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package lineage2.gameserver.model.entity.residence;
 
 import java.sql.Connection;
@@ -57,6 +69,7 @@ public class Castle extends Residence
 	private final IntObjectMap<MerchantGuard> _merchantGuards = new HashIntObjectMap<>();
 	@SuppressWarnings("rawtypes")
 	private final IntObjectMap<List> _relatedFortresses = new CTreeIntObjectMap<>();
+	private Dominion _dominion;
 	private List<CropProcure> _procure;
 	private List<SeedProduction> _production;
 	private List<CropProcure> _procureNext;
@@ -146,6 +159,10 @@ public class Castle extends Residence
 		if ((getOwnerId() > 0) && ((newOwner == null) || (newOwner.getClanId() != getOwnerId())))
 		{
 			removeSkills();
+			
+			getDominion().changeOwner(null);
+			getDominion().removeSkills();
+			
 			setTaxPercent(null, 0);
 			cancelCycleTask();
 			oldOwner = getOwner();
@@ -832,6 +849,16 @@ public class Castle extends Residence
 		_isNextPeriodApproved = val;
 	}
 	
+	public Dominion getDominion()
+	{
+		return _dominion;
+	}
+	
+	public void setDominion(Dominion dominion)
+	{
+		_dominion = dominion;
+	}
+	
 	public void addRelatedFortress(int type, int fortress)
 	{
 		List<Integer> fortresses = _relatedFortresses.get(type);
@@ -937,7 +964,7 @@ public class Castle extends Residence
 		// int n = 1;
 	}
 	
-	private void broadcastResidenceSupport()
+	public void broadcastResidenceSupport()
 	{
 		if (getId() == 1)
 		{

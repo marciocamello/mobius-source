@@ -147,7 +147,7 @@ public class RewardGroup implements Cloneable
 	 * @param isSiegeGuard boolean
 	 * @return List<RewardItem>
 	 */
-	List<RewardItem> roll(RewardType type, Player player, double mod, boolean isRaid, boolean isSiegeGuard)
+	public List<RewardItem> roll(RewardType type, Player player, double mod, boolean isRaid, boolean isSiegeGuard)
 	{
 		switch (type)
 		{
@@ -188,7 +188,7 @@ public class RewardGroup implements Cloneable
 	 * @param playerRate double
 	 * @return List<RewardItem>
 	 */
-	private List<RewardItem> rollItems(double mod, double baseRate, double playerRate)
+	public List<RewardItem> rollItems(double mod, double baseRate, double playerRate)
 	{
 		if (mod <= 0)
 		{

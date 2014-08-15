@@ -32,6 +32,7 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.World;
+import lineage2.gameserver.model.entity.events.impl.DominionSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
@@ -87,7 +88,7 @@ public final class DoorInstance extends Creature implements GeoCollision
 	private final Lock _openLock = new ReentrantLock();
 	private int _upgradeHp;
 	private byte[][] _geoAround;
-	private ScheduledFuture<?> _autoActionTask;
+	protected ScheduledFuture<?> _autoActionTask;
 	
 	/**
 	 * Constructor for DoorInstance.
@@ -151,7 +152,7 @@ public final class DoorInstance extends Creature implements GeoCollision
 	 * @param open boolean
 	 * @return boolean
 	 */
-	private boolean setOpen(boolean open)
+	protected boolean setOpen(boolean open)
 	{
 		if (_open == open)
 		{
@@ -167,7 +168,7 @@ public final class DoorInstance extends Creature implements GeoCollision
 	 * @param open boolean
 	 * @param actionDelay long
 	 */
-	private void scheduleAutoAction(boolean open, long actionDelay)
+	public void scheduleAutoAction(boolean open, long actionDelay)
 	{
 		if (_autoActionTask != null)
 		{
@@ -238,8 +239,11 @@ public final class DoorInstance extends Creature implements GeoCollision
 					{
 						return false;
 					}
+					if (siegeEvent.getObjects(DominionSiegeEvent.DEFENDER_PLAYERS).contains(player.getObjectId()))
+					{
+						return false;
+					}
 				}
-				
 				break;
 		}
 		
@@ -607,7 +611,7 @@ public final class DoorInstance extends Creature implements GeoCollision
 	 * @param open boolean
 	 * @return boolean
 	 */
-	private boolean setGeoOpen(boolean open)
+	protected boolean setGeoOpen(boolean open)
 	{
 		if (_geoOpen == open)
 		{

@@ -306,7 +306,7 @@ public class Fortress extends Residence
 	/**
 	 * Method clearFacility.
 	 */
-	private void clearFacility()
+	public void clearFacility()
 	{
 		for (int i = 0; i < _facilities.length; i++)
 		{
@@ -327,7 +327,7 @@ public class Fortress extends Residence
 	 * Method addRelatedCastle.
 	 * @param castle Castle
 	 */
-	void addRelatedCastle(Castle castle)
+	public void addRelatedCastle(Castle castle)
 	{
 		_relatedCastles.add(castle);
 	}

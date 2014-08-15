@@ -98,20 +98,20 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 	}
 	
 	public static final String FLAG_POLE = "flag_pole";
-	private static final String COMBAT_FLAGS = "combat_flags";
+	public static final String COMBAT_FLAGS = "combat_flags";
 	public static final String SIEGE_COMMANDERS = "siege_commanders";
 	public static final String PEACE_COMMANDERS = "peace_commanders";
 	public static final String UPGRADEABLE_DOORS = "upgradeable_doors";
-	private static final String COMMANDER_DOORS = "commander_doors";
+	public static final String COMMANDER_DOORS = "commander_doors";
 	public static final String ENTER_DOORS = "enter_doors";
 	public static final String MACHINE_DOORS = "machine_doors";
 	public static final String OUT_POWER_UNITS = "out_power_units";
 	public static final String IN_POWER_UNITS = "in_power_units";
-	private static final String GUARDS_LIVE_WITH_C_CENTER = "guards_live_with_c_center";
-	private static final String ENVOY = "envoy";
+	public static final String GUARDS_LIVE_WITH_C_CENTER = "guards_live_with_c_center";
+	public static final String ENVOY = "envoy";
 	public static final String MERCENARY_POINTS = "mercenary_points";
-	private static final String MERCENARY = "mercenary";
-	private static final long SIEGE_WAIT_PERIOD = 4 * 60 * 60 * 1000L;
+	public static final String MERCENARY = "mercenary";
+	public static final long SIEGE_WAIT_PERIOD = 4 * 60 * 60 * 1000L;
 	public static final OnSpawnListener RESTORE_BARRACKS_LISTENER = new RestoreBarracksListener();
 	private Future<?> _envoyTask;
 	private boolean[] _barrackStatus;
@@ -306,7 +306,7 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 	/**
 	 * Method spawnEnvoy.
 	 */
-	private void spawnEnvoy()
+	public void spawnEnvoy()
 	{
 		long endTime = getResidence().getOwnDate().getTimeInMillis() + (60 * 60 * 1000L);
 		long diff = endTime - System.currentTimeMillis();
@@ -352,7 +352,7 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 	 * Method flagPoleUpdate.
 	 * @param dis boolean
 	 */
-	private void flagPoleUpdate(boolean dis)
+	public void flagPoleUpdate(boolean dis)
 	{
 		StaticObjectObject object = getFirstObject(FLAG_POLE);
 		

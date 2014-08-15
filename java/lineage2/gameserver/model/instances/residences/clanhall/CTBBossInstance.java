@@ -31,7 +31,7 @@ import org.apache.commons.lang3.StringUtils;
 public abstract class CTBBossInstance extends MonsterInstance
 {
 	private static final long serialVersionUID = 1L;
-	private static final Skill SKILL = SkillTable.getInstance().getInfo(5456, 1);
+	public static final Skill SKILL = SkillTable.getInstance().getInfo(5456, 1);
 	private CTBTeamObject _matchTeamObject;
 	
 	/**

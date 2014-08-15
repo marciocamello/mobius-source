@@ -115,7 +115,7 @@ public class OlympiadDatabase
 	/**
 	 * Method cleanupNobles.
 	 */
-	static synchronized void cleanupNobles()
+	public static synchronized void cleanupNobles()
 	{
 		_log.info("Olympiad: Calculating last period...");
 		Connection con = null;
@@ -205,7 +205,7 @@ public class OlympiadDatabase
 	/**
 	 * Method sortHerosToBe.
 	 */
-	static synchronized void sortHerosToBe()
+	public static synchronized void sortHerosToBe()
 	{
 		if (Olympiad._period != 1)
 		{
@@ -258,7 +258,7 @@ public class OlympiadDatabase
 	 * Method saveNobleData.
 	 * @param nobleId int
 	 */
-	static synchronized void saveNobleData(int nobleId)
+	public static synchronized void saveNobleData(int nobleId)
 	{
 		OlympiadNobleDAO.getInstance().replace(nobleId);
 	}
@@ -266,7 +266,7 @@ public class OlympiadDatabase
 	/**
 	 * Method saveNobleData.
 	 */
-	static synchronized void saveNobleData()
+	public static synchronized void saveNobleData()
 	{
 		if (Olympiad._nobles == null)
 		{
@@ -282,7 +282,7 @@ public class OlympiadDatabase
 	/**
 	 * Method setNewOlympiadEnd.
 	 */
-	static synchronized void setNewOlympiadEnd()
+	public static synchronized void setNewOlympiadEnd()
 	{
 		Announcements.getInstance().announceToAll(new SystemMessage(SystemMessage.OLYMPIAD_PERIOD_S1_HAS_STARTED).addNumber(Olympiad._currentCycle));
 		Calendar currentTime = Calendar.getInstance();

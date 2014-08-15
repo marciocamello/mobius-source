@@ -74,7 +74,7 @@ public class RaidBossInstance extends MonsterInstance
 	 * Method getMinionUnspawnInterval.
 	 * @return int
 	 */
-	private int getMinionUnspawnInterval()
+	protected int getMinionUnspawnInterval()
 	{
 		return MINION_UNSPAWN_INTERVAL;
 	}

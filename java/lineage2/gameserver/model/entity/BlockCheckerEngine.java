@@ -316,7 +316,7 @@ public final class BlockCheckerEngine
 	 * Method clearArena.
 	 * @param zoneName String
 	 */
-	void clearArena(String zoneName)
+	public void clearArena(String zoneName)
 	{
 		Zone zone = ReflectionUtils.getZone(zoneName);
 		
@@ -448,7 +448,7 @@ public final class BlockCheckerEngine
 	/**
 	 * @author Mobius
 	 */
-	private class SpawnRound extends RunnableImpl
+	class SpawnRound extends RunnableImpl
 	{
 		private final int _numOfBoxes;
 		private final int _round;
@@ -609,12 +609,8 @@ public final class BlockCheckerEngine
 	/**
 	 * @author Mobius
 	 */
-	private class EndEvent extends RunnableImpl
+	class EndEvent extends RunnableImpl
 	{
-		public EndEvent()
-		{
-		}
-		
 		/**
 		 * Method clearMe.
 		 */

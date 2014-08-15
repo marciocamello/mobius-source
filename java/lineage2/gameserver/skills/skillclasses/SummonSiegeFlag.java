@@ -20,6 +20,7 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Zone;
+import lineage2.gameserver.model.entity.events.impl.DominionSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.entity.events.objects.SiegeClanObject;
 import lineage2.gameserver.model.entity.events.objects.ZoneObject;
@@ -130,7 +131,7 @@ public class SummonSiegeFlag extends Skill
 					return false;
 				}
 				
-				SiegeClanObject siegeClan = siegeEvent.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
+				SiegeClanObject siegeClan = siegeEvent.getSiegeClan(siegeEvent.getClass() == DominionSiegeEvent.class ? SiegeEvent.DEFENDERS : SiegeEvent.ATTACKERS, player.getClan());
 				
 				if (siegeClan == null)
 				{
@@ -173,7 +174,7 @@ public class SummonSiegeFlag extends Skill
 			return;
 		}
 		
-		SiegeClanObject siegeClan = siegeEvent.getSiegeClan(SiegeEvent.ATTACKERS, clan);
+		SiegeClanObject siegeClan = siegeEvent.getSiegeClan(siegeEvent.getClass() == DominionSiegeEvent.class ? SiegeEvent.DEFENDERS : SiegeEvent.ATTACKERS, clan);
 		
 		if (siegeClan == null)
 		{
