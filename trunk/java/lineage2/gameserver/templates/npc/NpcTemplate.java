@@ -51,14 +51,14 @@ public final class NpcTemplate extends CharTemplate
 {
 	private static final Logger _log = LoggerFactory.getLogger(NpcTemplate.class);
 	@SuppressWarnings("unchecked")
-	private static final Constructor<NpcInstance> DEFAULT_TYPE_CONSTRUCTOR = (Constructor<NpcInstance>) NpcInstance.class.getConstructors()[0];
+	public static final Constructor<NpcInstance> DEFAULT_TYPE_CONSTRUCTOR = (Constructor<NpcInstance>) NpcInstance.class.getConstructors()[0];
 	@SuppressWarnings("unchecked")
-	private static final Constructor<CharacterAI> DEFAULT_AI_CONSTRUCTOR = (Constructor<CharacterAI>) CharacterAI.class.getConstructors()[0];
+	public static final Constructor<CharacterAI> DEFAULT_AI_CONSTRUCTOR = (Constructor<CharacterAI>) CharacterAI.class.getConstructors()[0];
 	
 	/**
 	 * @author Mobius
 	 */
-	private static enum ShotsType
+	public static enum ShotsType
 	{
 		NONE,
 		SOUL,
@@ -80,7 +80,7 @@ public final class NpcTemplate extends CharTemplate
 	public final int lhand;
 	public final double rateHp;
 	private Faction faction = Faction.NONE;
-	private final String jClass;
+	public final String jClass;
 	public final int displayId;
 	public final ShotsType shots;
 	public boolean isRaid = false;

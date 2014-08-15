@@ -40,7 +40,7 @@ public class HeroDiary
 	 * @param time long
 	 * @param param int
 	 */
-	HeroDiary(int id, long time, int param)
+	public HeroDiary(int id, long time, int param)
 	{
 		_id = id;
 		_time = time;
@@ -52,7 +52,7 @@ public class HeroDiary
 	 * @param player Player
 	 * @return Map.Entry<String,String>
 	 */
-	Map.Entry<String, String> toString(Player player)
+	public Map.Entry<String, String> toString(Player player)
 	{
 		CustomMessage message = null;
 		

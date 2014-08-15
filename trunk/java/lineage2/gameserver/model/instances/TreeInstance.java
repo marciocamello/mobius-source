@@ -244,7 +244,7 @@ public class TreeInstance extends Summon
 	/**
 	 * Method stopDisappear.
 	 */
-	private synchronized void stopDisappear()
+	protected synchronized void stopDisappear()
 	{
 		if (_destroyTask != null)
 		{

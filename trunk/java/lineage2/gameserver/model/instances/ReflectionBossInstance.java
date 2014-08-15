@@ -49,7 +49,7 @@ public class ReflectionBossInstance extends RaidBossInstance
 	/**
 	 * Method clearReflection.
 	 */
-	private void clearReflection()
+	protected void clearReflection()
 	{
 		getReflection().clearReflection(COLLAPSE_AFTER_DEATH_TIME, true);
 	}

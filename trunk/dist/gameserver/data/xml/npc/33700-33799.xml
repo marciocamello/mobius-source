@@ -3353,7 +3353,7 @@
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="18.0"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="ClanRequestModerator"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000"/>
 		<set name="baseHpRate" value="1"/>

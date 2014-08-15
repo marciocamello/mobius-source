@@ -55,6 +55,11 @@ public final class ObservationInstance extends NpcInstance
 			return;
 		}
 		
+		if (checkForDominionWard(player))
+		{
+			return;
+		}
+		
 		if (player.getOlympiadGame() != null)
 		{
 			return;

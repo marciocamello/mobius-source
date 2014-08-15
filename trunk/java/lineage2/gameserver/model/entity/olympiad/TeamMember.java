@@ -73,7 +73,7 @@ public class TeamMember
 	/**
 	 * Method doDie.
 	 */
-	void doDie()
+	public void doDie()
 	{
 		_isDead = true;
 	}
@@ -86,7 +86,7 @@ public class TeamMember
 	 * @param game OlympiadGame
 	 * @param side int
 	 */
-	TeamMember(int obj_id, String name, Player player, OlympiadGame game, int side)
+	public TeamMember(int obj_id, String name, Player player, OlympiadGame game, int side)
 	{
 		_objId = obj_id;
 		_name = name;
@@ -118,7 +118,7 @@ public class TeamMember
 	/**
 	 * Method incGameCount.
 	 */
-	void incGameCount()
+	public void incGameCount()
 	{
 		StatsSet set = getStat();
 		
@@ -140,7 +140,7 @@ public class TeamMember
 	/**
 	 * Method takePointsForCrash.
 	 */
-	void takePointsForCrash()
+	public void takePointsForCrash()
 	{
 		if (!checkPlayer())
 		{
@@ -184,7 +184,7 @@ public class TeamMember
 	 * Method checkPlayer.
 	 * @return boolean
 	 */
-	boolean checkPlayer()
+	public boolean checkPlayer()
 	{
 		Player player = _player;
 		
@@ -199,7 +199,7 @@ public class TeamMember
 	/**
 	 * Method portPlayerToArena.
 	 */
-	void portPlayerToArena()
+	public void portPlayerToArena()
 	{
 		Player player = _player;
 		
@@ -248,7 +248,7 @@ public class TeamMember
 	/**
 	 * Method portPlayerBack.
 	 */
-	void portPlayerBack()
+	public void portPlayerBack()
 	{
 		Player player = _player;
 		
@@ -317,7 +317,7 @@ public class TeamMember
 	/**
 	 * Method preparePlayer.
 	 */
-	void preparePlayer()
+	public void preparePlayer()
 	{
 		Player player = _player;
 		
@@ -432,7 +432,7 @@ public class TeamMember
 	/**
 	 * Method saveNobleData.
 	 */
-	void saveNobleData()
+	public void saveNobleData()
 	{
 		OlympiadDatabase.saveNobleData(_objId);
 	}
@@ -440,7 +440,7 @@ public class TeamMember
 	/**
 	 * Method logout.
 	 */
-	void logout()
+	public void logout()
 	{
 		_player = null;
 	}
@@ -467,7 +467,7 @@ public class TeamMember
 	 * Method addDamage.
 	 * @param d double
 	 */
-	void addDamage(double d)
+	public void addDamage(double d)
 	{
 		_damage += d;
 	}

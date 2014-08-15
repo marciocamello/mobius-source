@@ -54,7 +54,7 @@ public class RaceManagerInstance extends NpcInstance
 	private static final int STARTING_RACE = 2;
 	private static final int RACE_END = 3;
 	private static int state = RACE_END;
-	static final int[][] codes =
+	protected static final int[][] codes =
 	{
 		{
 			-1,
@@ -70,8 +70,8 @@ public class RaceManagerInstance extends NpcInstance
 		}
 	};
 	private static boolean notInitialized = true;
-	static MonRaceInfo packet;
-	private static final int cost[] =
+	protected static MonRaceInfo packet;
+	protected static int cost[] =
 	{
 		100,
 		500,
@@ -139,7 +139,7 @@ public class RaceManagerInstance extends NpcInstance
 	/**
 	 * @author Mobius
 	 */
-	private class Announcement extends RunnableImpl
+	class Announcement extends RunnableImpl
 	{
 		private final int type;
 		
@@ -147,7 +147,7 @@ public class RaceManagerInstance extends NpcInstance
 		 * Constructor for Announcement.
 		 * @param type int
 		 */
-		Announcement(int type)
+		public Announcement(int type)
 		{
 			this.type = type;
 		}
@@ -166,7 +166,7 @@ public class RaceManagerInstance extends NpcInstance
 	 * Method makeAnnouncement.
 	 * @param type int
 	 */
-	void makeAnnouncement(int type)
+	public void makeAnnouncement(int type)
 	{
 		SystemMessage sm = new SystemMessage(type);
 		
@@ -224,7 +224,7 @@ public class RaceManagerInstance extends NpcInstance
 	 * Method broadcast.
 	 * @param pkt L2GameServerPacket
 	 */
-	void broadcast(L2GameServerPacket pkt)
+	protected void broadcast(L2GameServerPacket pkt)
 	{
 		for (RaceManagerInstance manager : managers)
 		{
@@ -238,7 +238,7 @@ public class RaceManagerInstance extends NpcInstance
 	/**
 	 * Method sendMonsterInfo.
 	 */
-	void sendMonsterInfo()
+	public void sendMonsterInfo()
 	{
 		broadcast(packet);
 	}
@@ -335,7 +335,7 @@ public class RaceManagerInstance extends NpcInstance
 	 * Method showOdds.
 	 * @param player Player
 	 */
-	private void showOdds(Player player)
+	public void showOdds(Player player)
 	{
 		if (state == ACCEPTING_BETS)
 		{
@@ -364,7 +364,7 @@ public class RaceManagerInstance extends NpcInstance
 	 * Method showMonsterInfo.
 	 * @param player Player
 	 */
-	private void showMonsterInfo(Player player)
+	public void showMonsterInfo(Player player)
 	{
 		int npcId = getTemplate().npcId;
 		String filename, search;
@@ -388,7 +388,7 @@ public class RaceManagerInstance extends NpcInstance
 	 * @param player Player
 	 * @param val int
 	 */
-	private void showBuyTicket(Player player, int val)
+	public void showBuyTicket(Player player, int val)
 	{
 		if (state != ACCEPTING_BETS)
 		{
@@ -509,7 +509,7 @@ public class RaceManagerInstance extends NpcInstance
 	/**
 	 * @author Mobius
 	 */
-	private class Race
+	public class Race
 	{
 		private final Info[] info;
 		
@@ -517,7 +517,6 @@ public class RaceManagerInstance extends NpcInstance
 		 * Constructor for Race.
 		 * @param info Info[]
 		 */
-		@SuppressWarnings("unused")
 		public Race(Info[] info)
 		{
 			this.info = info;
@@ -528,7 +527,6 @@ public class RaceManagerInstance extends NpcInstance
 		 * @param lane int
 		 * @return Info
 		 */
-		@SuppressWarnings("unused")
 		public Info getLaneInfo(int lane)
 		{
 			return info[lane];
@@ -537,7 +535,7 @@ public class RaceManagerInstance extends NpcInstance
 		/**
 		 * @author Mobius
 		 */
-		private class Info
+		public class Info
 		{
 			private final int id;
 			private final int place;
@@ -551,7 +549,6 @@ public class RaceManagerInstance extends NpcInstance
 			 * @param odds int
 			 * @param payout int
 			 */
-			@SuppressWarnings("unused")
 			public Info(int id, int place, int odds, int payout)
 			{
 				this.id = id;
@@ -564,7 +561,6 @@ public class RaceManagerInstance extends NpcInstance
 			 * Method getId.
 			 * @return int
 			 */
-			@SuppressWarnings("unused")
 			public int getId()
 			{
 				return id;
@@ -574,7 +570,6 @@ public class RaceManagerInstance extends NpcInstance
 			 * Method getOdds.
 			 * @return int
 			 */
-			@SuppressWarnings("unused")
 			public int getOdds()
 			{
 				return odds;
@@ -584,7 +579,6 @@ public class RaceManagerInstance extends NpcInstance
 			 * Method getPayout.
 			 * @return int
 			 */
-			@SuppressWarnings("unused")
 			public int getPayout()
 			{
 				return payout;
@@ -594,7 +588,6 @@ public class RaceManagerInstance extends NpcInstance
 			 * Method getPlace.
 			 * @return int
 			 */
-			@SuppressWarnings("unused")
 			public int getPlace()
 			{
 				return place;
@@ -605,12 +598,8 @@ public class RaceManagerInstance extends NpcInstance
 	/**
 	 * @author Mobius
 	 */
-	private class RunRace extends RunnableImpl
+	class RunRace extends RunnableImpl
 	{
-		public RunRace()
-		{
-		}
-		
 		/**
 		 * Method runImpl.
 		 */
@@ -626,12 +615,8 @@ public class RaceManagerInstance extends NpcInstance
 	/**
 	 * @author Mobius
 	 */
-	private class RunEnd extends RunnableImpl
+	class RunEnd extends RunnableImpl
 	{
-		public RunEnd()
-		{
-		}
-		
 		/**
 		 * Method runImpl.
 		 */

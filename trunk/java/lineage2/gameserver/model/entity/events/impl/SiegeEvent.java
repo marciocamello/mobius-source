@@ -59,12 +59,8 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	/**
 	 * @author Mobius
 	 */
-	private class DoorDeathListener implements OnDeathListener
+	public class DoorDeathListener implements OnDeathListener
 	{
-		public DoorDeathListener()
-		{
-		}
-		
 		/**
 		 * Method onDeath.
 		 * @param actor Creature
@@ -93,12 +89,8 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	/**
 	 * @author Mobius
 	 */
-	private class KillListener implements OnKillListener
+	public class KillListener implements OnKillListener
 	{
-		public KillListener()
-		{
-		}
-		
 		/**
 		 * Method onKill.
 		 * @param actor Creature
@@ -129,32 +121,32 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		}
 	}
 	
-	static final String OWNER = "owner";
-	static final String OLD_OWNER = "old_owner";
+	public static final String OWNER = "owner";
+	public static final String OLD_OWNER = "old_owner";
 	public static final String ATTACKERS = "attackers";
 	public static final String DEFENDERS = "defenders";
-	static final String SPECTATORS = "spectators";
-	private static final String SIEGE_ZONES = "siege_zones";
+	public static final String SPECTATORS = "spectators";
+	public static final String SIEGE_ZONES = "siege_zones";
 	public static final String FLAG_ZONES = "flag_zones";
-	private static final String DAY_OF_WEEK = "day_of_week";
-	private static final String HOUR_OF_DAY = "hour_of_day";
-	private static final String REGISTRATION = "registration";
+	public static final String DAY_OF_WEEK = "day_of_week";
+	public static final String HOUR_OF_DAY = "hour_of_day";
+	public static final String REGISTRATION = "registration";
 	public static final String DOORS = "doors";
-	private R _residence;
+	protected R _residence;
 	private boolean _isInProgress;
 	private boolean _isRegistrationOver;
-	private final int _dayOfWeek;
-	private final int _hourOfDay;
+	protected int _dayOfWeek;
+	protected int _hourOfDay;
 	protected Clan _oldOwner;
-	private final OnKillListener _killListener = new KillListener();
-	protected final OnDeathListener _doorDeathListener = new DoorDeathListener();
-	protected final List<HardReference<SummonInstance>> _siegeSummons = new ArrayList<>();
+	protected OnKillListener _killListener = new KillListener();
+	protected OnDeathListener _doorDeathListener = new DoorDeathListener();
+	protected List<HardReference<SummonInstance>> _siegeSummons = new ArrayList<>();
 	
 	/**
 	 * Constructor for SiegeEvent.
 	 * @param set MultiValueSet<String>
 	 */
-	SiegeEvent(MultiValueSet<String> set)
+	public SiegeEvent(MultiValueSet<String> set)
 	{
 		super(set);
 		_dayOfWeek = set.getInteger(DAY_OF_WEEK, 0);
@@ -367,7 +359,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	 * Method broadcastInZone.
 	 * @param packet L2GameServerPacket[]
 	 */
-	void broadcastInZone(L2GameServerPacket... packet)
+	public void broadcastInZone(L2GameServerPacket... packet)
 	{
 		for (Player player : getPlayersInZone())
 		{
@@ -379,7 +371,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	 * Method broadcastInZone.
 	 * @param packet IStaticPacket[]
 	 */
-	void broadcastInZone(IStaticPacket... packet)
+	public void broadcastInZone(IStaticPacket... packet)
 	{
 		for (Player player : getPlayersInZone())
 		{
@@ -392,7 +384,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	 * @param character Creature
 	 * @return boolean
 	 */
-	boolean checkIfInZone(Creature character)
+	public boolean checkIfInZone(Creature character)
 	{
 		List<ZoneObject> zones = getObjects(SIEGE_ZONES);
 		
@@ -411,7 +403,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	 * Method broadcastInZone2.
 	 * @param packet IStaticPacket[]
 	 */
-	void broadcastInZone2(IStaticPacket... packet)
+	public void broadcastInZone2(IStaticPacket... packet)
 	{
 		for (Player player : getResidence().getZone().getInsidePlayers())
 		{
@@ -423,7 +415,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	 * Method broadcastInZone2.
 	 * @param packet L2GameServerPacket[]
 	 */
-	void broadcastInZone2(L2GameServerPacket... packet)
+	public void broadcastInZone2(L2GameServerPacket... packet)
 	{
 		for (Player player : getResidence().getZone().getInsidePlayers())
 		{
@@ -460,7 +452,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	 * @param start boolean
 	 * @param arg String[]
 	 */
-	void updateParticles(boolean start, String... arg)
+	public void updateParticles(boolean start, String... arg)
 	{
 		for (String a : arg)
 		{
@@ -990,7 +982,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	/**
 	 * Method despawnSiegeSummons.
 	 */
-	void despawnSiegeSummons()
+	public void despawnSiegeSummons()
 	{
 		for (HardReference<SummonInstance> ref : _siegeSummons)
 		{

@@ -115,7 +115,7 @@ public class FakePlayerAI extends CharacterAI
 	/**
 	 * Method thinkFollow.
 	 */
-	private void thinkFollow()
+	protected void thinkFollow()
 	{
 		FakePlayer actor = getActor();
 		Creature target = (Creature) _intention_arg0;
@@ -151,7 +151,7 @@ public class FakePlayerAI extends CharacterAI
 	 * Method thinkAttack.
 	 * @param checkRange boolean
 	 */
-	private void thinkAttack(boolean checkRange)
+	protected void thinkAttack(boolean checkRange)
 	{
 		FakePlayer actor = getActor();
 		Player player = actor.getPlayer();
@@ -230,7 +230,7 @@ public class FakePlayerAI extends CharacterAI
 	/**
 	 * @author Mobius
 	 */
-	private class ThinkFollow extends RunnableImpl
+	protected class ThinkFollow extends RunnableImpl
 	{
 		/**
 		 * Constructor for ThinkFollow.

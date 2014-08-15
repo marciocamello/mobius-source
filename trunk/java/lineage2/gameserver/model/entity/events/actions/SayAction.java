@@ -42,7 +42,7 @@ public class SayAction implements EventAction
 	 * @param range int
 	 * @param type ChatType
 	 */
-	private SayAction(int range, ChatType type)
+	protected SayAction(int range, ChatType type)
 	{
 		_range = range;
 		_chatType = type;

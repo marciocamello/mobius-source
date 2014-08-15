@@ -178,11 +178,11 @@ public class KrateisCubeEvent extends GlobalEvent
 		2,
 		1
 	};
-	private static final String PARTICLE_PLAYERS = "particle_players";
+	public static final String PARTICLE_PLAYERS = "particle_players";
 	public static final String REGISTERED_PLAYERS = "registered_players";
 	public static final String WAIT_LOCS = "wait_locs";
 	public static final String TELEPORT_LOCS = "teleport_locs";
-	private static final String PREPARE = "prepare";
+	public static final String PREPARE = "prepare";
 	private final int _minLevel;
 	private final int _maxLevel;
 	private final Calendar _calendar = Calendar.getInstance();
@@ -213,7 +213,7 @@ public class KrateisCubeEvent extends GlobalEvent
 	/**
 	 * Method prepare.
 	 */
-	private void prepare()
+	public void prepare()
 	{
 		NpcInstance npc = _runnerEvent.getNpc();
 		List<KrateisCubePlayerObject> registeredPlayers = removeObjects(REGISTERED_PLAYERS);

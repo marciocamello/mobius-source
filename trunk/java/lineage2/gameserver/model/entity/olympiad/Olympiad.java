@@ -49,10 +49,10 @@ public class Olympiad
 {
 	private static final Logger _log = LoggerFactory.getLogger(Olympiad.class);
 	public static Map<Integer, StatsSet> _nobles;
-	static Map<Integer, Integer> _noblesRank;
-	static List<StatsSet> _heroesToBe;
-	static final List<Integer> _nonClassBasedRegisters = new CopyOnWriteArrayList<>();
-	static final MultiValueIntegerMap _classBasedRegisters = new MultiValueIntegerMap();
+	public static Map<Integer, Integer> _noblesRank;
+	public static List<StatsSet> _heroesToBe;
+	public static List<Integer> _nonClassBasedRegisters = new CopyOnWriteArrayList<>();
+	public static MultiValueIntegerMap _classBasedRegisters = new MultiValueIntegerMap();
 	public static final String OLYMPIAD_HTML_PATH = "olympiad/";
 	public static final String CHAR_ID = "char_id";
 	public static final String CLASS_ID = "class_id";
@@ -65,19 +65,19 @@ public class Olympiad
 	public static final String COMP_LOOSE = "competitions_loose";
 	public static final String GAME_CLASSES_COUNT = "game_classes_count";
 	public static final String GAME_NOCLASSES_COUNT = "game_noclasses_count";
-	static long _olympiadEnd;
-	static long _validationEnd;
-	static int _period;
-	static long _nextWeeklyChange;
-	static int _currentCycle;
+	public static long _olympiadEnd;
+	public static long _validationEnd;
+	public static int _period;
+	public static long _nextWeeklyChange;
+	public static int _currentCycle;
 	private static long _compEnd;
 	private static Calendar _compStart;
 	public static boolean _inCompPeriod;
-	static boolean _isOlympiadEnd;
+	public static boolean _isOlympiadEnd;
 	private static ScheduledFuture<?> _scheduledOlympiadEnd;
-	static ScheduledFuture<?> _scheduledManagerTask;
-	static ScheduledFuture<?> _scheduledWeeklyTask;
-	static ScheduledFuture<?> _scheduledValdationTask;
+	public static ScheduledFuture<?> _scheduledManagerTask;
+	public static ScheduledFuture<?> _scheduledWeeklyTask;
+	public static ScheduledFuture<?> _scheduledValdationTask;
 	public static final Stadia[] STADIUMS = new Stadia[Config.OLYMPIAD_STADIAS_COUNT];
 	public static OlympiadManager _manager;
 	private static final List<NpcInstance> _npcs = new ArrayList<>();
@@ -218,7 +218,7 @@ public class Olympiad
 	/**
 	 * Method init.
 	 */
-	static void init()
+	public static void init()
 	{
 		if (_period == 1)
 		{
@@ -586,7 +586,7 @@ public class Olympiad
 	 * Method getMillisToCompEnd.
 	 * @return long
 	 */
-	static long getMillisToCompEnd()
+	public static long getMillisToCompEnd()
 	{
 		return _compEnd - Calendar.getInstance().getTimeInMillis();
 	}
@@ -608,7 +608,7 @@ public class Olympiad
 	/**
 	 * Method doWeekTasks.
 	 */
-	static synchronized void doWeekTasks()
+	public static synchronized void doWeekTasks()
 	{
 		if (_period == 1)
 		{
@@ -718,7 +718,7 @@ public class Olympiad
 	 * @param gameId int
 	 * @return OlympiadGame
 	 */
-	private static OlympiadGame getOlympiadGame(int gameId)
+	public static OlympiadGame getOlympiadGame(int gameId)
 	{
 		if ((_manager == null) || (gameId < 0))
 		{
@@ -968,7 +968,7 @@ public class Olympiad
 	 * Method getNpcs.
 	 * @return List<NpcInstance>
 	 */
-	static List<NpcInstance> getNpcs()
+	public static List<NpcInstance> getNpcs()
 	{
 		return _npcs;
 	}

@@ -75,12 +75,8 @@ public class Reflection
 	/**
 	 * @author Mobius
 	 */
-	private class ReflectionListenerList extends ListenerList<Reflection>
+	public class ReflectionListenerList extends ListenerList<Reflection>
 	{
-		public ReflectionListenerList()
-		{
-		}
-		
 		/**
 		 * Method onCollapse.
 		 */
@@ -106,16 +102,16 @@ public class Reflection
 	private Location _resetLoc;
 	private Location _returnLoc;
 	private Location _teleportLoc;
-	private final List<Spawner> _spawns = new ArrayList<>();
-	public final List<GameObject> _objects = new ArrayList<>();
-	private IntObjectMap<DoorInstance> _doors = Containers.emptyIntObjectMap();
-	private Map<String, Zone> _zones = Collections.emptyMap();
-	private Map<String, List<Spawner>> _spawners = Collections.emptyMap();
-	private final TIntHashSet _visitors = new TIntHashSet();
+	protected List<Spawner> _spawns = new ArrayList<>();
+	public List<GameObject> _objects = new ArrayList<>();
+	protected IntObjectMap<DoorInstance> _doors = Containers.emptyIntObjectMap();
+	protected Map<String, Zone> _zones = Collections.emptyMap();
+	protected Map<String, List<Spawner>> _spawners = Collections.emptyMap();
+	protected TIntHashSet _visitors = new TIntHashSet();
 	public final Lock lock = new ReentrantLock();
 	protected int _playerCount;
-	private Party _party;
-	private CommandChannel _commandChannel;
+	protected Party _party;
+	protected CommandChannel _commandChannel;
 	private int _collapseIfEmptyTime;
 	private boolean _isCollapseStarted;
 	private Future<?> _collapseTask;
@@ -243,7 +239,7 @@ public class Reflection
 	 * Method setGeoIndex.
 	 * @param geoIndex int
 	 */
-	private void setGeoIndex(int geoIndex)
+	protected void setGeoIndex(int geoIndex)
 	{
 		_geoIndex = geoIndex;
 	}
@@ -398,7 +394,7 @@ public class Reflection
 	/**
 	 * Method stopCollapseTimer.
 	 */
-	private void stopCollapseTimer()
+	public void stopCollapseTimer()
 	{
 		lock.lock();
 		
@@ -425,7 +421,7 @@ public class Reflection
 	/**
 	 * Method minuteBeforeCollapse.
 	 */
-	void minuteBeforeCollapse()
+	public void minuteBeforeCollapse()
 	{
 		if (_isCollapseStarted)
 		{
@@ -823,7 +819,7 @@ public class Reflection
 	 * Method addSpawn.
 	 * @param spawn SimpleSpawner
 	 */
-	void addSpawn(SimpleSpawner spawn)
+	public void addSpawn(SimpleSpawner spawn)
 	{
 		if (spawn != null)
 		{
@@ -835,7 +831,7 @@ public class Reflection
 	 * Method fillSpawns.
 	 * @param si List<InstantZone.SpawnInfo>
 	 */
-	private void fillSpawns(List<InstantZone.SpawnInfo> si)
+	public void fillSpawns(List<InstantZone.SpawnInfo> si)
 	{
 		if (si == null)
 		{

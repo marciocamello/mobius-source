@@ -22,16 +22,25 @@ import lineage2.gameserver.model.pledge.UnitMember;
 
 public class PledgeShowMemberListAll extends L2GameServerPacket
 {
-	private final int _clanObjectId, _clanCrestId, _level, _rank, _reputation;
+	private final int _clanObjectId;
+	private final int _clanCrestId;
+	private final int _level;
+	private final int _rank;
+	private final int _reputation;
 	private int _allianceObjectId;
 	private int _allianceCrestId;
-	private final int _hasCastle, _hasClanHall, _hasFortress, _atClanWar;
-	private final String _unitName, _leaderName;
+	private final int _hasCastle;
+	private final int _hasClanHall;
+	private final int _hasFortress;
+	private final int _atClanWar;
+	private final String _unitName;
+	private final String _leaderName;
 	private String _allianceName;
 	private final int _pledgeType;
+	private final int _territorySide;
 	private final List<PledgePacketMember> _members;
 	
-	public PledgeShowMemberListAll(Clan clan, final SubUnit sub)
+	public PledgeShowMemberListAll(Clan clan, SubUnit sub)
 	{
 		_pledgeType = sub.getType();
 		_clanObjectId = clan.getClanId();
@@ -45,6 +54,7 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 		_rank = clan.getRank();
 		_reputation = clan.getReputationScore();
 		_atClanWar = clan.isAtWarOrUnderAttack();
+		_territorySide = clan.getWarDominion();
 		Alliance ally = clan.getAlliance();
 		
 		if (ally != null)
@@ -85,7 +95,7 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 		writeS(_allianceName);
 		writeD(_allianceCrestId);
 		writeD(_atClanWar);
-		writeD(0x00);
+		writeD(_territorySide);
 		writeD(_members.size());
 		
 		for (PledgePacketMember m : _members)

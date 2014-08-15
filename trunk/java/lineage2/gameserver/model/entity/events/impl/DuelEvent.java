@@ -63,9 +63,9 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 		}
 	}
 	
-	static final String RED_TEAM = TeamType.RED.name();
-	static final String BLUE_TEAM = TeamType.BLUE.name();
-	private final OnPlayerExitListener _playerExitListener = new OnPlayerExitListenerImpl();
+	public static final String RED_TEAM = TeamType.RED.name();
+	public static final String BLUE_TEAM = TeamType.BLUE.name();
+	protected OnPlayerExitListener _playerExitListener = new OnPlayerExitListenerImpl();
 	protected TeamType _winner = TeamType.NONE;
 	protected boolean _aborted;
 	
@@ -73,7 +73,7 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 	 * Constructor for DuelEvent.
 	 * @param set MultiValueSet<String>
 	 */
-	DuelEvent(MultiValueSet<String> set)
+	public DuelEvent(MultiValueSet<String> set)
 	{
 		super(set);
 	}
@@ -163,7 +163,7 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 	 * @param packet IStaticPacket
 	 * @param ar String[]
 	 */
-	void sendPacket(IStaticPacket packet, String... ar)
+	public void sendPacket(IStaticPacket packet, String... ar)
 	{
 		for (String a : ar)
 		{
@@ -180,7 +180,7 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 	 * Method sendPacket.
 	 * @param packet IStaticPacket
 	 */
-	void sendPacket(IStaticPacket packet)
+	public void sendPacket(IStaticPacket packet)
 	{
 		sendPackets(packet);
 	}
@@ -189,7 +189,7 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 	 * Method sendPackets.
 	 * @param packet IStaticPacket[]
 	 */
-	private void sendPackets(IStaticPacket... packet)
+	public void sendPackets(IStaticPacket... packet)
 	{
 		for (DuelSnapshotObject d : this)
 		{

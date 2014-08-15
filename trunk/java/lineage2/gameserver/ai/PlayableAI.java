@@ -44,8 +44,8 @@ import lineage2.gameserver.utils.Location;
 public class PlayableAI extends CharacterAI
 {
 	private volatile int thinking = 0;
-	Object _intention_arg0 = null;
-	Object _intention_arg1 = null;
+	protected Object _intention_arg0 = null;
+	protected Object _intention_arg1 = null;
 	protected Skill _skill;
 	private nextAction _nextAction;
 	private Object _nextAction_arg0;
@@ -60,7 +60,7 @@ public class PlayableAI extends CharacterAI
 	 * Constructor for PlayableAI.
 	 * @param actor Playable
 	 */
-	PlayableAI(Playable actor)
+	public PlayableAI(Playable actor)
 	{
 		super(actor);
 	}
@@ -457,12 +457,8 @@ public class PlayableAI extends CharacterAI
 	/**
 	 * @author Mobius
 	 */
-	private class ThinkFollow extends RunnableImpl
+	protected class ThinkFollow extends RunnableImpl
 	{
-		public ThinkFollow()
-		{
-		}
-		
 		/**
 		 * Method runImpl.
 		 */
@@ -514,7 +510,7 @@ public class PlayableAI extends CharacterAI
 	/**
 	 * @author Mobius
 	 */
-	private class ExecuteFollow extends RunnableImpl
+	protected class ExecuteFollow extends RunnableImpl
 	{
 		private final Creature _target;
 		private final int _range;
@@ -524,7 +520,7 @@ public class PlayableAI extends CharacterAI
 		 * @param target Creature
 		 * @param range int
 		 */
-		ExecuteFollow(Creature target, int range)
+		public ExecuteFollow(Creature target, int range)
 		{
 			_target = target;
 			_range = range;
@@ -584,7 +580,7 @@ public class PlayableAI extends CharacterAI
 	/**
 	 * Method thinkInteract.
 	 */
-	private void thinkInteract()
+	protected void thinkInteract()
 	{
 		Playable actor = getActor();
 		GameObject target = (GameObject) _intention_arg0;
@@ -638,7 +634,7 @@ public class PlayableAI extends CharacterAI
 	/**
 	 * Method thinkPickUp.
 	 */
-	private void thinkPickUp()
+	protected void thinkPickUp()
 	{
 		final Playable actor = getActor();
 		final GameObject target = (GameObject) _intention_arg0;
@@ -897,14 +893,14 @@ public class PlayableAI extends CharacterAI
 	/**
 	 * Method thinkIdle.
 	 */
-	private void thinkIdle()
+	protected void thinkIdle()
 	{
 	}
 	
 	/**
 	 * Method thinkRest.
 	 */
-	private void thinkRest()
+	protected void thinkRest()
 	{
 	}
 	

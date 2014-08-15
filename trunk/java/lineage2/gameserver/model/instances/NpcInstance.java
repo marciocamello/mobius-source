@@ -63,8 +63,10 @@ import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.model.entity.DelusionChamber;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
+import lineage2.gameserver.model.entity.events.objects.TerritoryWardObject;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.entity.residence.ClanHall;
+import lineage2.gameserver.model.entity.residence.Dominion;
 import lineage2.gameserver.model.entity.residence.Fortress;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.pledge.Clan;
@@ -126,13 +128,13 @@ import gnu.trove.iterator.TIntObjectIterator;
 public class NpcInstance extends Creature
 {
 	private static final long serialVersionUID = 1L;
-	private static final String NO_CHAT_WINDOW = "noChatWindow";
-	private static final String NO_RANDOM_WALK = "noRandomWalk";
-	private static final String NO_RANDOM_ANIMATION = "noRandomAnimation";
-	private static final String TARGETABLE = "TargetEnabled";
-	private static final String ATTACKABLE = "attackable";
-	private static final String SHOW_NAME = "showName";
-	private static final String SHOW_TITLE = "showTitle";
+	public static final String NO_CHAT_WINDOW = "noChatWindow";
+	public static final String NO_RANDOM_WALK = "noRandomWalk";
+	public static final String NO_RANDOM_ANIMATION = "noRandomAnimation";
+	public static final String TARGETABLE = "TargetEnabled";
+	public static final String ATTACKABLE = "attackable";
+	public static final String SHOW_NAME = "showName";
+	public static final String SHOW_TITLE = "showTitle";
 	private static final Logger _log = LoggerFactory.getLogger(NpcInstance.class);
 	private int _personalAggroRange = -1;
 	private int _level = 0;
@@ -145,7 +147,7 @@ public class NpcInstance extends Creature
 	private int npcState = 0;
 	protected boolean _hasRandomAnimation;
 	protected boolean _hasRandomWalk;
-	private boolean _hasChatWindow;
+	protected boolean _hasChatWindow;
 	private Future<?> _decayTask;
 	private Future<?> _animationTask;
 	private final AggroList _aggroList;
@@ -156,6 +158,7 @@ public class NpcInstance extends Creature
 	private Castle _nearestCastle;
 	private Fortress _nearestFortress;
 	private ClanHall _nearestClanHall;
+	private Dominion _nearestDominion;
 	private NpcString _nameNpcString = NpcString.NONE;
 	private NpcString _titleNpcString = NpcString.NONE;
 	private Spawner _spawn;
@@ -590,7 +593,7 @@ public class NpcInstance extends Creature
 		return getTemplate().npcId;
 	}
 	
-	private boolean _unAggred = false;
+	protected boolean _unAggred = false;
 	
 	/**
 	 * Method setUnAggred.
@@ -776,7 +779,7 @@ public class NpcInstance extends Creature
 	 * Method startDecay.
 	 * @param delay long
 	 */
-	private void startDecay(long delay)
+	protected void startDecay(long delay)
 	{
 		stopDecay();
 		_decayTask = DecayTaskManager.getInstance().addDecayTask(this, delay);
@@ -1101,6 +1104,26 @@ public class NpcInstance extends Creature
 		return _nearestClanHall;
 	}
 	
+	public Dominion getDominion()
+	{
+		if (getReflection() != ReflectionManager.DEFAULT)
+		{
+			return null;
+		}
+		
+		if (_nearestDominion == null)
+		{
+			if (getTemplate().getCastleId() == 0)
+			{
+				return null;
+			}
+			
+			Castle castle = ResidenceHolder.getInstance().getResidence(getTemplate().getCastleId());
+			_nearestDominion = castle.getDominion();
+		}
+		return _nearestDominion;
+	}
+	
 	protected long _lastSocialAction;
 	
 	@Override
@@ -1159,7 +1182,7 @@ public class NpcInstance extends Creature
 	 * @param player Player
 	 * @param questId String
 	 */
-	private void showQuestWindow(Player player, String questId)
+	public void showQuestWindow(Player player, String questId)
 	{
 		if (!player.isQuestContinuationPossible(true))
 		{
@@ -1257,6 +1280,11 @@ public class NpcInstance extends Creature
 	public void onBypassFeedback(Player player, String command)
 	{
 		if (!canBypassCheck(player, this))
+		{
+			return;
+		}
+		
+		if ((getTemplate().getTeleportList().size() > 0) && checkForDominionWard(player))
 		{
 			return;
 		}
@@ -1465,6 +1493,18 @@ public class NpcInstance extends Creature
 			{
 				CertificationFunctions.cancelCertification(this, player, false, false);
 			}
+			else if (command.equalsIgnoreCase("reduceShilenBreath"))
+			{
+				if (player.getDeathPenalty().getLevel(player) >= 3)
+				{
+					Skill skill = SkillTable.getInstance().getInfo(5077, 1);
+					doCast(skill, player, true);
+				}
+				else
+				{
+					showChatWindow(player, "default/shilen_breath.htm", new Object[0]);
+				}
+			}
 			else if (command.startsWith("RemoveTransferSkill"))
 			{
 				AcquireType type = AcquireType.transferType(player.getActiveClassId());
@@ -1578,7 +1618,7 @@ public class NpcInstance extends Creature
 	 * @param player Player
 	 * @param list TeleportLocation[]
 	 */
-	private void showTeleportList(Player player, TeleportLocation[] list)
+	public void showTeleportList(Player player, TeleportLocation[] list)
 	{
 		StringBuilder sb = new StringBuilder();
 		sb.append("&$556;").append("<br><br>");
@@ -1731,7 +1771,7 @@ public class NpcInstance extends Creature
 	 * Method showQuestWindow.
 	 * @param player Player
 	 */
-	private void showQuestWindow(Player player)
+	public void showQuestWindow(Player player)
 	{
 		Map<Integer, QuestInfo> options = new HashMap<>();
 		Quest[] starts = getTemplate().getEventQuests(QuestEventType.QUEST_START);
@@ -1781,7 +1821,7 @@ public class NpcInstance extends Creature
 	 * @param player Player
 	 * @param quests List<QuestInfo>
 	 */
-	private void showQuestChooseWindow(Player player, List<QuestInfo> quests)
+	public void showQuestChooseWindow(Player player, List<QuestInfo> quests)
 	{
 		StringBuilder sb = new StringBuilder();
 		sb.append("<html><body>");
@@ -1812,6 +1852,11 @@ public class NpcInstance extends Creature
 	 */
 	public void showChatWindow(Player player, int val, Object... replace)
 	{
+		if ((getTemplate().getTeleportList().size() > 0) && checkForDominionWard(player))
+		{
+			return;
+		}
+		
 		String filename;
 		int npcId = getNpcId();
 		
@@ -1953,7 +1998,7 @@ public class NpcInstance extends Creature
 	 * Method showBusyWindow.
 	 * @param player Player
 	 */
-	private void showBusyWindow(Player player)
+	public void showBusyWindow(Player player)
 	{
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		html.setFile("npcbusy.htm");
@@ -2113,7 +2158,7 @@ public class NpcInstance extends Creature
 	 * Method showTransformationMultisell.
 	 * @param player Player
 	 */
-	private void showTransformationMultisell(Player player)
+	public void showTransformationMultisell(Player player)
 	{
 		if (!Config.ALLOW_LEARN_TRANS_SKILLS_WO_QUEST)
 		{
@@ -2548,24 +2593,13 @@ public class NpcInstance extends Creature
 	@Override
 	public Clan getClan()
 	{
-		if (getTemplate().getCastleId() == 0)
+		Dominion dominion = getDominion();
+		if (dominion == null)
 		{
 			return null;
 		}
-		
-		Castle castle = ResidenceHolder.getInstance().getResidence(getTemplate().getCastleId());
-		
-		if (castle.getOwner() == null)
-		{
-			return null;
-		}
-		
-		if (castle.getOwner().getLevel() > 6)
-		{
-			return castle.getOwner();
-		}
-		
-		return null;
+		int lordObjectId = dominion.getLordObjectId();
+		return lordObjectId == 0 ? null : dominion.getOwner();
 	}
 	
 	/**
@@ -2629,6 +2663,17 @@ public class NpcInstance extends Creature
 	public void setSpawnRange(SpawnRange spawnRange)
 	{
 		_spawnRange = spawnRange;
+	}
+	
+	public boolean checkForDominionWard(Player player)
+	{
+		ItemInstance item = getActiveWeaponInstance();
+		if ((item != null) && (item.getAttachment() instanceof TerritoryWardObject))
+		{
+			showChatWindow(player, "flagman.htm");
+			return true;
+		}
+		return false;
 	}
 	
 	/**

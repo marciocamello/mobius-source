@@ -19,6 +19,8 @@ import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.impl.CastleSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
+import lineage2.gameserver.model.entity.residence.Castle;
+import lineage2.gameserver.model.entity.residence.Dominion;
 import lineage2.gameserver.model.entity.residence.Residence;
 import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
@@ -189,7 +191,7 @@ public final class VillageMasterInstance extends NpcInstance
 	 * @param player Player
 	 * @param clanName String
 	 */
-	private void createClan(Player player, String clanName)
+	public void createClan(Player player, String clanName)
 	{
 		if (player.getLevel() < 10)
 		{
@@ -240,7 +242,7 @@ public final class VillageMasterInstance extends NpcInstance
 	 * @param leader Player
 	 * @param newLeader String
 	 */
-	private void setLeader(Player leader, String newLeader)
+	public void setLeader(Player leader, String newLeader)
 	{
 		if (!leader.isClanLeader())
 		{
@@ -295,7 +297,7 @@ public final class VillageMasterInstance extends NpcInstance
 	 * @param minClanLvl int
 	 * @param leaderName String
 	 */
-	private void createSubPledge(Player player, String clanName, int pledgeType, int minClanLvl, String leaderName)
+	public void createSubPledge(Player player, String clanName, int pledgeType, int minClanLvl, String leaderName)
 	{
 		UnitMember subLeader = null;
 		Clan clan = player.getClan();
@@ -403,7 +405,7 @@ public final class VillageMasterInstance extends NpcInstance
 	 * @param clanName String
 	 * @param leaderName String
 	 */
-	private void assignSubPledgeLeader(Player player, String clanName, String leaderName)
+	public void assignSubPledgeLeader(Player player, String clanName, String leaderName)
 	{
 		Clan clan = player.getClan();
 		
@@ -521,7 +523,7 @@ public final class VillageMasterInstance extends NpcInstance
 	 * Method levelUpClan.
 	 * @param player Player
 	 */
-	private void levelUpClan(Player player)
+	public void levelUpClan(Player player)
 	{
 		Clan clan = player.getClan();
 		
@@ -641,8 +643,10 @@ public final class VillageMasterInstance extends NpcInstance
 			case 10:
 				if ((clan.getReputationScore() >= Config.ALT_CLAN_REP_COUNT_11LVL) && (clan.getAllSize() >= Config.ALT_CLAN_PLAYER_COUNT_11LVL) && (clan.getCastle() > 0))
 				{
+					Castle castle = ResidenceHolder.getInstance().getResidence(clan.getCastle());
+					Dominion dominion = castle.getDominion();
 					// Radian Cloak of Light
-					if (player.getInventory().destroyItemByItemId(34996, 1))
+					if ((dominion.getLordObjectId() == player.getObjectId()) && player.getInventory().destroyItemByItemId(34996, 1))
 					{
 						clan.incReputation(-Config.ALT_CLAN_REP_COUNT_11LVL, false, "LvlUpClan");
 						increaseClanLevel = true;
@@ -693,7 +697,7 @@ public final class VillageMasterInstance extends NpcInstance
 	 * @param player Player
 	 * @param allyName String
 	 */
-	private void createAlly(Player player, String allyName)
+	public void createAlly(Player player, String allyName)
 	{
 		if (!player.isClanLeader())
 		{

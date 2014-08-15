@@ -37,7 +37,7 @@ public class OlympiadManager extends RunnableImpl
 	 * Method sleep.
 	 * @param time long
 	 */
-	private void sleep(long time)
+	public void sleep(long time)
 	{
 		try
 		{
@@ -153,7 +153,7 @@ public class OlympiadManager extends RunnableImpl
 	 * Method freeOlympiadInstance.
 	 * @param index int
 	 */
-	void freeOlympiadInstance(int index)
+	public void freeOlympiadInstance(int index)
 	{
 		_olympiadInstances.remove(index);
 		Olympiad.STADIUMS[index].setStadiaFree();

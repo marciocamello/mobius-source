@@ -68,7 +68,7 @@ public class SubUnit
 	 * @param leader int
 	 * @param name String
 	 */
-	SubUnit(Clan c, int type, int leader, String name)
+	public SubUnit(Clan c, int type, int leader, String name)
 	{
 		_clan = c;
 		_type = type;
@@ -108,7 +108,7 @@ public class SubUnit
 	 * @param obj int
 	 * @return boolean
 	 */
-	boolean isUnitMember(int obj)
+	public boolean isUnitMember(int obj)
 	{
 		return _members.containsKey(obj);
 	}
@@ -159,7 +159,7 @@ public class SubUnit
 	 * Method removeUnitMember.
 	 * @param objectId int
 	 */
-	void removeUnitMember(int objectId)
+	public void removeUnitMember(int objectId)
 	{
 		UnitMember m = _members.remove(objectId);
 		
@@ -409,7 +409,7 @@ public class SubUnit
 	 * Method addSkillsQuietly.
 	 * @param player Player
 	 */
-	void addSkillsQuietly(Player player)
+	public void addSkillsQuietly(Player player)
 	{
 		for (Skill skill : _skills.values())
 		{
@@ -421,7 +421,7 @@ public class SubUnit
 	 * Method enableSkills.
 	 * @param player Player
 	 */
-	void enableSkills(Player player)
+	public void enableSkills(Player player)
 	{
 		for (Skill skill : _skills.values())
 		{
@@ -436,7 +436,7 @@ public class SubUnit
 	 * Method disableSkills.
 	 * @param player Player
 	 */
-	void disableSkills(Player player)
+	public void disableSkills(Player player)
 	{
 		for (Skill skill : _skills.values())
 		{
@@ -502,7 +502,7 @@ public class SubUnit
 	/**
 	 * Method restore.
 	 */
-	void restore()
+	public void restore()
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -550,7 +550,7 @@ public class SubUnit
 	/**
 	 * Method restoreSkills.
 	 */
-	void restoreSkills()
+	public void restoreSkills()
 	{
 		Connection con = null;
 		PreparedStatement statement = null;

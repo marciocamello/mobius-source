@@ -41,7 +41,7 @@ public class Alliance
 	private final Map<Integer, Clan> _members = new ConcurrentHashMap<>();
 	private int _allyCrestId;
 	private long _expelledMemberTime;
-	private static final long EXPELLED_MEMBER_PENALTY = 24 * 60 * 60 * 1000L;
+	public static long EXPELLED_MEMBER_PENALTY = 24 * 60 * 60 * 1000L;
 	
 	/**
 	 * Constructor for Alliance.
@@ -271,7 +271,7 @@ public class Alliance
 	/**
 	 * Method updateAllyInDB.
 	 */
-	private void updateAllyInDB()
+	public void updateAllyInDB()
 	{
 		if (getLeaderId() == 0)
 		{

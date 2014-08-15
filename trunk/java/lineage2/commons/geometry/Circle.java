@@ -26,7 +26,7 @@ public class Circle extends AbstractShape
 	 * @param center Point2D
 	 * @param radius int
 	 */
-	private Circle(Point2D center, int radius)
+	public Circle(Point2D center, int radius)
 	{
 		c = center;
 		r = radius;

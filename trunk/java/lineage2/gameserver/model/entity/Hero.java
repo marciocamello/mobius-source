@@ -282,7 +282,7 @@ public class Hero
 	 * Method updateHeroes.
 	 * @param id int
 	 */
-	private void updateHeroes(int id)
+	public void updateHeroes(int id)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -424,7 +424,7 @@ public class Hero
 	 * Method loadDiary.
 	 * @param charId int
 	 */
-	private void loadDiary(int charId)
+	public void loadDiary(int charId)
 	{
 		List<HeroDiary> diary = new ArrayList<>();
 		Connection con = null;
@@ -597,7 +597,7 @@ public class Hero
 	 * Method loadMessage.
 	 * @param charId int
 	 */
-	private void loadMessage(int charId)
+	public void loadMessage(int charId)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -638,7 +638,7 @@ public class Hero
 	 * Method saveHeroMessage.
 	 * @param charId int
 	 */
-	private void saveHeroMessage(int charId)
+	public void saveHeroMessage(int charId)
 	{
 		if (_heroMessage.get(charId) == null)
 		{

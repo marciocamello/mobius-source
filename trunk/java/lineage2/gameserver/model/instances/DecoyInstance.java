@@ -85,12 +85,8 @@ public class DecoyInstance extends NpcInstance
 	/**
 	 * @author Mobius
 	 */
-	private class DecoyLifetime extends RunnableImpl
+	class DecoyLifetime extends RunnableImpl
 	{
-		public DecoyLifetime()
-		{
-		}
-		
 		/**
 		 * Method runImpl.
 		 */
@@ -118,7 +114,7 @@ public class DecoyInstance extends NpcInstance
 	/**
 	 * @author Mobius
 	 */
-	private class HateSpam extends RunnableImpl
+	class HateSpam extends RunnableImpl
 	{
 		private final Skill _skill;
 		
@@ -173,7 +169,7 @@ public class DecoyInstance extends NpcInstance
 	 * Method decTimeRemaining.
 	 * @param value int
 	 */
-	void decTimeRemaining(int value)
+	public void decTimeRemaining(int value)
 	{
 		_timeRemaining -= value;
 	}

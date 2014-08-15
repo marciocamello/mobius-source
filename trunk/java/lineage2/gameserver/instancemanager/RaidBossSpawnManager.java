@@ -55,9 +55,9 @@ public class RaidBossSpawnManager
 {
 	private static final Logger _log = LoggerFactory.getLogger(RaidBossSpawnManager.class);
 	private static RaidBossSpawnManager _instance;
-	private static final Map<Integer, Spawner> _spawntable = new ConcurrentHashMap<>();
-	private static Map<Integer, StatsSet> _storedInfo;
-	private static Map<Integer, Map<Integer, Integer>> _points;
+	protected static Map<Integer, Spawner> _spawntable = new ConcurrentHashMap<>();
+	protected static Map<Integer, StatsSet> _storedInfo;
+	protected static Map<Integer, Map<Integer, Integer>> _points;
 	
 	/**
 	 * @author Mobius
@@ -85,7 +85,7 @@ public class RaidBossSpawnManager
 	/**
 	 * Method reloadBosses.
 	 */
-	void reloadBosses()
+	public void reloadBosses()
 	{
 		loadStatus();
 		restorePointsTable();
@@ -95,7 +95,7 @@ public class RaidBossSpawnManager
 	/**
 	 * Method cleanUp.
 	 */
-	void cleanUp()
+	public void cleanUp()
 	{
 		updateAllStatusDb();
 		updatePointsDb();
@@ -233,7 +233,7 @@ public class RaidBossSpawnManager
 	 * @param npcId int
 	 * @param spawnDat Spawner
 	 */
-	void addNewSpawn(int npcId, Spawner spawnDat)
+	public void addNewSpawn(int npcId, Spawner spawnDat)
 	{
 		if (_spawntable.containsKey(npcId))
 		{
@@ -319,8 +319,8 @@ public class RaidBossSpawnManager
 		return _spawntable;
 	}
 	
-	private static final Integer KEY_RANK = new Integer(-1);
-	private static final Integer KEY_TOTAL_POINTS = new Integer(0);
+	public static final Integer KEY_RANK = new Integer(-1);
+	public static final Integer KEY_TOTAL_POINTS = new Integer(0);
 	private final Lock pointsLock = new ReentrantLock();
 	
 	/**

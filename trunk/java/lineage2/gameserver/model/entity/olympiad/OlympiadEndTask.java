@@ -26,7 +26,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-class OlympiadEndTask extends RunnableImpl
+public class OlympiadEndTask extends RunnableImpl
 {
 	private static final Logger _log = LoggerFactory.getLogger(OlympiadEndTask.class);
 	

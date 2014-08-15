@@ -34,8 +34,8 @@ import lineage2.gameserver.scripts.Functions;
 public class KrateisCubeRunnerEvent extends GlobalEvent
 {
 	private static final SchedulingPattern DATE_PATTERN = new SchedulingPattern("0,30 * * * *");
-	private static final String MANAGER = "manager";
-	private static final String REGISTRATION = "registration";
+	public static final String MANAGER = "manager";
+	public static final String REGISTRATION = "registration";
 	private boolean _isInProgress;
 	private boolean _isRegistrationOver;
 	private final List<KrateisCubeEvent> _cubes = new ArrayList<>(3);

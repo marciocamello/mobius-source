@@ -28,7 +28,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-abstract class AbstractAI extends RunnableImpl
+public abstract class AbstractAI extends RunnableImpl
 {
 	protected static final Logger _log = LoggerFactory.getLogger(AbstractAI.class);
 	protected final Creature _actor;
@@ -216,7 +216,7 @@ abstract class AbstractAI extends RunnableImpl
 	 * @param evt CtrlEvent
 	 * @param args Object[]
 	 */
-	private void notifyEvent(CtrlEvent evt, Object[] args)
+	public void notifyEvent(CtrlEvent evt, Object[] args)
 	{
 		Creature actor = getActor();
 		
@@ -328,7 +328,7 @@ abstract class AbstractAI extends RunnableImpl
 	 * Method clientStopMoving.
 	 * @param validate boolean
 	 */
-	void clientStopMoving(boolean validate)
+	public void clientStopMoving(boolean validate)
 	{
 		Creature actor = getActor();
 		actor.stopMove(validate);

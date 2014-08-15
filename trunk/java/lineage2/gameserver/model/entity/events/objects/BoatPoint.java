@@ -39,7 +39,7 @@ public class BoatPoint extends Location
 	 * @param fuel int
 	 * @param teleport boolean
 	 */
-	private BoatPoint(int x, int y, int z, int h, int speed1, int speed2, int fuel, boolean teleport)
+	public BoatPoint(int x, int y, int z, int h, int speed1, int speed2, int fuel, boolean teleport)
 	{
 		super(x, y, z, h);
 		_speed1 = speed1;

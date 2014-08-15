@@ -32,6 +32,8 @@ public class UndergroundColiseumEvent extends GlobalEvent
 	private final List<Player> _registeredPlayers = new CopyOnWriteArrayList<>();
 	private final int _minLevel;
 	private final int _maxLevel;
+	@SuppressWarnings("unused")
+	private UndergroundColiseumBattleEvent _battleEvent;
 	
 	/**
 	 * Constructor for UndergroundColiseumEvent.
