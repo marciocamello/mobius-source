@@ -239,7 +239,7 @@ public class Reflection
 	 * Method setGeoIndex.
 	 * @param geoIndex int
 	 */
-	protected void setGeoIndex(int geoIndex)
+	public void setGeoIndex(int geoIndex)
 	{
 		_geoIndex = geoIndex;
 	}

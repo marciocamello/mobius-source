@@ -15,659 +15,220 @@ package events.CTF;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 
-import lineage2.commons.collections.LazyArrayList;
+import lineage2.commons.geometry.Polygon;
+import lineage2.commons.threading.RunnableImpl;
+import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
+import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
+import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
+import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.instancemanager.ServerVariables;
 import lineage2.gameserver.listener.actor.OnDeathListener;
 import lineage2.gameserver.listener.actor.player.OnPlayerExitListener;
-import lineage2.gameserver.listener.actor.player.OnTeleportListener;
 import lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener;
 import lineage2.gameserver.model.Creature;
-import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.SimpleSpawner;
 import lineage2.gameserver.model.Skill;
+import lineage2.gameserver.model.Territory;
 import lineage2.gameserver.model.Zone;
+import lineage2.gameserver.model.Zone.ZoneType;
 import lineage2.gameserver.model.actor.listener.CharListenerList;
 import lineage2.gameserver.model.base.TeamType;
-import lineage2.gameserver.model.entity.Hero;
 import lineage2.gameserver.model.entity.Reflection;
+import lineage2.gameserver.model.entity.events.impl.DuelEvent;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.entity.residence.Residence;
-import lineage2.gameserver.model.instances.MonsterInstance;
+import lineage2.gameserver.model.instances.DoorInstance;
+import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.items.ItemInstance;
-import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.Revive;
-import lineage2.gameserver.network.serverpackets.SkillList;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
-import lineage2.gameserver.skills.effects.EffectTemplate;
-import lineage2.gameserver.stats.Env;
+import lineage2.gameserver.skills.EffectType;
 import lineage2.gameserver.tables.SkillTable;
+import lineage2.gameserver.templates.DoorTemplate;
+import lineage2.gameserver.templates.ZoneTemplate;
+import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
-public final class CTF extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
+public class CTF extends Functions implements ScriptFile, OnDeathListener, OnPlayerExitListener
 {
-	static final Logger _log = LoggerFactory.getLogger(CTF.class.getName());
-	private static final boolean REMOVE_BUFFS = false;
-	private static final int[][] BUFFS_TO_REMOVE =
-	{
-		{
-			1,
-			1
-		},
-		{
-			2
-		},
-		{
-			3,
-			1
-		}
-	};
-	private static final int[] REWARD =
-	{
-		57,
-		2000000000
-	};
-	private static final String[][] startTime =
-	{
-		{
-			"2:35",
-			"2:56"
-		},
-		{
-			"5:35",
-			"5:56"
-		},
-		{
-			"8:35",
-			"8:56"
-		},
-		{
-			"11:35",
-			"11:56"
-		},
-		{
-			"14:30",
-			"14:46"
-		},
-		{
-			"17:30",
-			"17:46"
-		},
-		{
-			"19:45",
-			"19:56"
-		},
-		{
-			"20:45",
-			"20:56"
-		},
-		{
-			"23:30",
-			"23:46"
-		}
-	};
-	private static final int MIN_PLAYERS = 0;
-	private static final int[] _listAllowSaveBuffs =
-	{
-		1388,
-		1389,
-		1068,
-		1040,
-		1086,
-		1085,
-		1242,
-		1059,
-		1240,
-		1078,
-		1077,
-		1303,
-		1204,
-		1062,
-		1542,
-		1397,
-		1045,
-		1048,
-		1087,
-		1043,
-		1268,
-		1259,
-		1243,
-		1035,
-		1304,
-		1036,
-		1191,
-		1182,
-		1189,
-		1352,
-		1354,
-		1353,
-		1393,
-		1392,
-		1499,
-		1501,
-		1502,
-		1500,
-		1519,
-		1503,
-		1504,
-		1251,
-		1252,
-		1253,
-		1002,
-		1284,
-		1308,
-		1309,
-		1391,
-		1007,
-		1009,
-		1006,
-		1461,
-		1010,
-		1390,
-		1310,
-		1362,
-		1413,
-		1535,
-		275,
-		276,
-		274,
-		273,
-		271,
-		365,
-		272,
-		277,
-		310,
-		307,
-		311,
-		309,
-		915,
-		530,
-		269,
-		266,
-		264,
-		267,
-		268,
-		265,
-		349,
-		364,
-		764,
-		529,
-		304,
-		270,
-		306,
-		305,
-		308,
-		363,
-		914,
-		4700,
-		4703,
-		4699,
-		4702,
-		825,
-		828,
-		827,
-		829,
-		826,
-		830,
-		1356,
-		1355,
-		1357,
-		1363
-	};
-	static final int[][][] _listBuff =
-	{
-		{
-			{
-				1086,
-				2
-			},
-			{
-				4342,
-				2
-			},
-			{
-				1068,
-				3
-			},
-			{
-				1240,
-				3
-			},
-			{
-				1077,
-				3
-			},
-			{
-				1242,
-				3
-			}
-		},
-		{
-			{
-				4342,
-				2
-			},
-			{
-				1059,
-				3
-			},
-			{
-				1085,
-				3
-			},
-			{
-				1078,
-				6
-			},
-			{
-				1062,
-				2
-			}
-		}
-	};
-	private static final boolean ALLOW_RESTRICT_SKILLS = false;
-	private static final int[][] RESTRICT_SKILLS =
-	{
-		{
-			1218,
-			0
-		},
-		{
-			1234,
-			1
-		},
-		{
-			1410,
-			2
-		}
-	};
-	public static final String[] colors =
-	{
-		"00ff00",
-		"ffffff",
-		"00ffff"
-	};
-	private static final List<Long> players_list = new CopyOnWriteArrayList<>();
-	static List<Long> live_list = new CopyOnWriteArrayList<>();
-	private static final boolean ALLOW_RESTRICT_ITEMS = false;
-	private static final int[] RESTRICT_ITEMS =
-	{
-		725,
-		727
-	};
-	private static final boolean PROTECT_IP_ACTIVE = false;
+	private static final Logger _log = LoggerFactory.getLogger(CTF.class);
+	
 	private static ScheduledFuture<?> _startTask;
-	static final HashMap<Long, LazyArrayList<Effect>> _saveBuffList = new HashMap<>();
-	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
-	private static final int EVENT_MANAGER_ID = 31143;
 	
-	/**
-	 * Method spawnNpcs.
-	 */
-	private static void spawnNpcs()
+	private static final int[] doors = new int[]
 	{
-		final int[][] EVENT_MANAGERS =
-		{
-			{
-				10000,
-				10676,
-				-3455,
-				0
-			},
-			{
-				10000,
-				10676,
-				-3455,
-				0
-			},
-			{
-				10000,
-				10676,
-				-3455,
-				0
-			}
-		};
-		SpawnNPCs(EVENT_MANAGER_ID, EVENT_MANAGERS, _spawns);
-	}
+		24190001,
+		24190002,
+		24190003,
+		24190004
+	};
 	
-	/**
-	 * Method despawnNpcs.
-	 */
-	private static void despawnNpcs()
-	{
-		deSpawnNPCs(_spawns);
-	}
+	/** <font color=blue>Blue</font> */
+	static List<Long> players_list1 = new CopyOnWriteArrayList<>();
+	/** <font color=red>Red</font> */
+	static List<Long> players_list2 = new CopyOnWriteArrayList<>();
 	
-	/**
-	 * Method onPlayerExit.
-	 * @param player Player
-	 * @see lineage2.gameserver.listener.actor.player.OnPlayerExitListener#onPlayerExit(Player)
-	 */
-	@Override
-	public void onPlayerExit(Player player)
-	{
-		if (player.getTeam() == TeamType.NONE)
-		{
-			return;
-		}
-		
-		if ((_status == 0) && _isRegistrationActive && live_list.contains(player.getStoredId()))
-		{
-			removePlayer(player);
-			return;
-		}
-		
-		if ((_status == 1) && live_list.contains(player.getStoredId()))
-		{
-			removePlayer(player);
-			
-			try
-			{
-				String var = player.getVar("CTF_backCoords");
-				
-				if ((var == null) || var.equals(""))
-				{
-					return;
-				}
-				
-				String[] coords = var.split(" ");
-				
-				if (coords.length != 4)
-				{
-					return;
-				}
-				
-				player.teleToLocation(Integer.parseInt(coords[0]), Integer.parseInt(coords[1]), Integer.parseInt(coords[2]), Integer.parseInt(coords[3]));
-				player.unsetVar("CTF_backCoords");
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
-			
-			return;
-		}
-		
-		if ((_status > 1) && (player.getTeam() != TeamType.NONE) && live_list.contains(player.getStoredId()))
-		{
-			removePlayer(player);
-			checkLive();
-		}
-	}
+	private static NpcInstance redFlag = null;
+	private static NpcInstance blueFlag = null;
 	
-	/**
-	 * Method checkLive.
-	 */
-	public static void checkLive()
-	{
-		List<Long> new_live_list = new CopyOnWriteArrayList<>();
-		
-		for (Long storeId : live_list)
-		{
-			Player player = GameObjectsStorage.getAsPlayer(storeId);
-			
-			if (player != null)
-			{
-				new_live_list.add(storeId);
-			}
-		}
-		
-		live_list = new_live_list;
-		
-		for (Player player : getPlayers(live_list))
-		{
-			if (player.isInZone(_zone) && !player.isDead() && !player.isLogoutStarted())
-			{
-				player.setTeam(TeamType.RED);
-			}
-			else
-			{
-				loosePlayer(player);
-			}
-		}
-		
-		if (live_list.size() <= 1)
-		{
-			endBattle(0);
-		}
-	}
+	private static Skill buff;
 	
-	/**
-	 * Method loosePlayer.
-	 * @param player Player
-	 */
-	private static void loosePlayer(Player player)
-	{
-		if (player != null)
-		{
-			live_list.remove(player.getStoredId());
-			player.setTeam(TeamType.NONE);
-			show(new CustomMessage("scripts.events.LastHero.YouLose", player), player);
-		}
-	}
+	private static int[][] rewards = new int[Config.EVENT_CtFRewards.length][2];
 	
-	/**
-	 * Method onDeath.
-	 * @param self Creature
-	 * @param killer Creature
-	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
-	 */
-	@SuppressWarnings("unused")
-	@Override
-	public void onDeath(Creature self, Creature killer)
-	{
-		if ((_status > 1) && self.isPlayer() && (self.getTeam() != TeamType.NONE) && live_list.contains(self.getStoredId()))
-		{
-			Player player = (Player) self;
-			loosePlayer(player);
-			checkLive();
-			
-			if ((killer != null) && killer.isPlayer() && ((killer.getPlayer().expertiseIndex - player.expertiseIndex) > 2) && !killer.getPlayer().getIP().equals(player.getIP()))
-			{
-				addItem((Player) killer, 4657, Math.round(false ? player.getLevel() * 150 : 1 * 150));
-			}
-		}
-	}
+	private static int[][] mage_buffs;
+	private static int[][] fighter_buffs;
 	
-	/**
-	 * Method onTeleport.
-	 * @param player Player
-	 * @param x int
-	 * @param y int
-	 * @param z int
-	 * @param reflection Reflection
-	 * @see lineage2.gameserver.listener.actor.player.OnTeleportListener#onTeleport(Player, int, int, int, Reflection)
-	 */
-	@Override
-	public void onTeleport(Player player, int x, int y, int z, Reflection reflection)
-	{
-		if (_zone.checkIfInZone(x, y, z, reflection))
-		{
-			return;
-		}
-		
-		if ((_status > 1) && (player.getTeam() != TeamType.NONE) && live_list.contains(player.getStoredId()))
-		{
-			removePlayer(player);
-			checkLive();
-		}
-	}
-	
-	/**
-	 * @author Mobius
-	 */
-	private final class StartTask implements Runnable
-	{
-		private final String endTime;
-		
-		/**
-		 * Constructor for StartTask.
-		 * @param endTime String
-		 */
-		StartTask(String endTime)
-		{
-			this.endTime = endTime;
-		}
-		
-		/**
-		 * Method run.
-		 * @see java.lang.Runnable#run()
-		 */
-		@Override
-		public void run()
-		{
-			if (!_active)
-			{
-				_log.info("CTF: is not Active");
-				return;
-			}
-			
-			if (isPvPEventStarted())
-			{
-				_log.info("CTF not started: another event is already running");
-				return;
-			}
-			
-			for (Residence c : ResidenceHolder.getInstance().getResidenceList(Castle.class))
-			{
-				if ((c.getSiegeEvent() != null) && c.getSiegeEvent().isInProgress())
-				{
-					_log.debug("LastHero not started: CastleSiege in progress");
-					return;
-				}
-			}
-			
-			_log.info("CTF: started, end Time: " + endTime);
-			start(new String[]
-			{
-				"-1",
-				"-1",
-				endTime
-			});
-		}
-	}
-	
-	private static final List<ScheduledFuture<?>> startTasks = new ArrayList<>();
-	static LazyArrayList<Long> players_list1 = new LazyArrayList<>();
-	static LazyArrayList<Long> players_list2 = new LazyArrayList<>();
-	static final LazyArrayList<Long> players_list3 = new LazyArrayList<>();
-	private static final LazyArrayList<Long> players_list4 = new LazyArrayList<>();
-	static MonsterInstance whiteFlag = null;
-	static MonsterInstance greenFlag = null;
-	static MonsterInstance yellowFlag = null;
-	static MonsterInstance blackFlag = null;
 	private static boolean _isRegistrationActive = false;
-	public static int _status = 0;
+	static int _status = 0;
 	private static int _time_to_start;
 	private static int _category;
 	private static int _minLevel;
 	private static int _maxLevel;
 	private static int _autoContinue = 0;
-	private static final boolean ALLOW_BUFFS = true;
-	private static final boolean ALLOW_CLAN_SKILL = true;
-	private static final boolean ALLOW_HERO_SKILL = true;
-	private static final boolean EVENT_CTF_rate = false;
-	private static final boolean ALLOW_PETS = true;
-	private static final int TIME_FOR_RES = 5;
-	private static final Zone _zone = ReflectionUtils.getZone("[colosseum_battle]");
-	private static final ZoneListener _zoneListener = new ZoneListener();
-	private static final Location team1loc = new Location(-82952, -44344, -11496, -11396);
-	private static final Location team2loc = new Location(-82536, -47016, -11504, -11404);
-	private static final Location team3loc = new Location(-80680, -44296, -11496, -11396);
-	private static final Location team4loc = new Location(-78680, -41296, -11496, -11204);
-	private static final HashMap<Long, ScheduledFuture<?>> _resurrectionList = new HashMap<>();
 	
-	/**
-	 * Method canSpawnPet.
-	 * @param player Player
-	 * @return boolean
-	 */
-	public static boolean canSpawnPet(Player player)
-	{
-		if (players_list1.contains(player.getObjectId()) || players_list2.contains(player.getObjectId()))
-		{
-			if (!ALLOW_PETS)
-			{
-				return false;
-			}
-		}
-		
-		return true;
-	}
+	private static ScheduledFuture<?> _endTask;
 	
-	/**
-	 * Method onLoad.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
-	 */
+	static Reflection _reflection = ReflectionManager.CTF_EVENT;
+	
+	private static Map<String, ZoneTemplate> _zones = new HashMap<>();
+	private static IntObjectMap<DoorTemplate> _doors = new HashIntObjectMap<>();
+	private static Zone _zone;
+	private static Zone _blueBaseZone;
+	private static Zone _redBaseZone;
+	
+	private static BlueBaseZoneListener _blueBaseZoneListener = new BlueBaseZoneListener();
+	private static RedBaseZoneListener _redBaseZoneListener = new RedBaseZoneListener();
+	
+	private static ZoneListener _zoneListener = new ZoneListener();
+	
+	private static Map<Long, Location> _savedCoord = new LinkedHashMap<>();
+	
+	private static Map<Long, String> boxes = new LinkedHashMap<>();
+	
+	private static Territory team1spawn = new Territory().add(new Polygon().add(149878, 47505).add(150262, 47513).add(150502, 47233).add(150507, 46300).add(150256, 46002).add(149903, 46005).setZmin(-3408).setZmax(-3308));
+	
+	private static Territory team2spawn = new Territory().add(new Polygon().add(149027, 46005).add(148686, 46003).add(148448, 46302).add(148449, 47231).add(148712, 47516).add(149014, 47527).setZmin(-3408).setZmax(-3308));
+	
+	private static Location blueFlagLoc = new Location(150760, 45848, -3408);
+	private static Location redFlagLoc = new Location(148232, 47688, -3408);
+	
 	@Override
 	public void onLoad()
 	{
 		CharListenerList.addGlobal(this);
-		_zone.addListener(_zoneListener);
 		
-		for (String[] s : startTime)
+		_zones.put("[colosseum_battle]", ReflectionUtils.getZone("[colosseum_battle]").getTemplate());
+		_zones.put("[colosseum_ctf_blue_base]", ReflectionUtils.getZone("[colosseum_ctf_blue_base]").getTemplate());
+		_zones.put("[colosseum_ctf_red_base]", ReflectionUtils.getZone("[colosseum_ctf_red_base]").getTemplate());
+		for (final int doorId : doors)
 		{
-			Calendar cal = Calendar.getInstance();
-			cal.set(Calendar.HOUR_OF_DAY, Integer.valueOf(s[0].split(":")[0]));
-			cal.set(Calendar.MINUTE, Integer.valueOf(s[0].split(":")[1]));
-			cal.set(Calendar.SECOND, 0);
-			
-			while (cal.getTimeInMillis() < System.currentTimeMillis())
-			{
-				cal.add(Calendar.DAY_OF_YEAR, 1);
-			}
-			
-			ScheduledFuture<?> startTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new StartTask(s[1]), cal.getTimeInMillis() - System.currentTimeMillis(), 86400000);
-			startTasks.add(startTask);
-			spawnNpcs();
+			_doors.put(doorId, ReflectionUtils.getDoor(doorId).getTemplate());
+		}
+		_reflection.init(_doors, _zones);
+		
+		_zone = _reflection.getZone("[colosseum_battle]");
+		_blueBaseZone = _reflection.getZone("[colosseum_ctf_blue_base]");
+		_redBaseZone = _reflection.getZone("[colosseum_ctf_red_base]");
+		
+		_zone.addListener(_zoneListener);
+		_blueBaseZone.addListener(_blueBaseZoneListener);
+		_redBaseZone.addListener(_redBaseZoneListener);
+		
+		// for(final int doorId : doors)
+		// _reflection.getDoor(doorId).closeMe();
+		
+		_active = ServerVariables.getString("CtF", "off").equalsIgnoreCase("on");
+		
+		if (isActive())
+		{
+			scheduleEventStart();
 		}
 		
-		_active = ServerVariables.getString("CTF", "off").equalsIgnoreCase("on");
-		_log.info("Loaded Event: CTF");
+		if (Config.EVENT_CtFBuffPlayers && (Config.EVENT_CtFMageBuffs.length > 0))
+		{
+			mage_buffs = new int[Config.EVENT_CtFMageBuffs.length][2];
+		}
+		
+		if (Config.EVENT_CtFBuffPlayers && (Config.EVENT_CtFFighterBuffs.length > 0))
+		{
+			fighter_buffs = new int[Config.EVENT_CtFFighterBuffs.length][2];
+		}
+		
+		int i = 0;
+		
+		if (Config.EVENT_CtFBuffPlayers && (Config.EVENT_CtFMageBuffs.length > 0))
+		{
+			for (String skill : Config.EVENT_CtFMageBuffs)
+			{
+				String[] splitSkill = skill.split(",");
+				mage_buffs[i][0] = Integer.parseInt(splitSkill[0]);
+				mage_buffs[i][1] = Integer.parseInt(splitSkill[1]);
+				i++;
+			}
+		}
+		
+		i = 0;
+		
+		if (Config.EVENT_CtFBuffPlayers && (Config.EVENT_CtFMageBuffs.length != 0))
+		{
+			for (String skill : Config.EVENT_CtFFighterBuffs)
+			{
+				String[] splitSkill = skill.split(",");
+				fighter_buffs[i][0] = Integer.parseInt(splitSkill[0]);
+				fighter_buffs[i][1] = Integer.parseInt(splitSkill[1]);
+				i++;
+			}
+		}
+		
+		i = 0;
+		if (Config.EVENT_CtFRewards.length != 0)
+		{
+			for (String reward : Config.EVENT_CtFRewards)
+			{
+				String[] splitReward = reward.split(",");
+				rewards[i][0] = Integer.parseInt(splitReward[0]);
+				rewards[i][1] = Integer.parseInt(splitReward[1]);
+				i++;
+			}
+		}
+		
+		_log.info("Loaded Event: CtF [" + _active + "]");
 	}
 	
-	/**
-	 * Method onReload.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
-	 */
 	@Override
 	public void onReload()
 	{
 		_zone.removeListener(_zoneListener);
-		
+		_redBaseZone.removeListener(_redBaseZoneListener);
+		_blueBaseZone.removeListener(_blueBaseZoneListener);
 		if (_startTask != null)
 		{
-			_startTask.cancel(false);
-			_startTask = null;
+			_startTask.cancel(true);
 		}
 	}
 	
-	/**
-	 * Method onShutdown.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
-	 */
 	@Override
 	public void onShutdown()
 	{
@@ -676,22 +237,14 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 	
 	static boolean _active = false;
 	
-	/**
-	 * Method isActive.
-	 * @return boolean
-	 */
 	private static boolean isActive()
 	{
 		return _active;
 	}
 	
-	/**
-	 * Method activateEvent.
-	 */
 	public void activateEvent()
 	{
 		Player player = getSelf();
-		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -699,42 +252,28 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 		
 		if (!isActive())
 		{
-			for (String[] s : startTime)
+			if (_startTask == null)
 			{
-				Calendar cal = Calendar.getInstance();
-				cal.set(Calendar.HOUR_OF_DAY, Integer.valueOf(s[0].split(":")[0]));
-				cal.set(Calendar.MINUTE, Integer.valueOf(s[0].split(":")[1]));
-				cal.set(Calendar.SECOND, 0);
-				
-				while (cal.getTimeInMillis() < System.currentTimeMillis())
-				{
-					cal.add(Calendar.DAY_OF_YEAR, 1);
-				}
-				
-				ScheduledFuture<?> startTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new StartTask(s[1]), cal.getTimeInMillis() - System.currentTimeMillis(), 86400000);
-				startTasks.add(startTask);
+				scheduleEventStart();
 			}
 			
-			ServerVariables.set("CTF", "on");
-			_log.info("Event 'CTF' activated.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.CTF.AnnounceEventStarted", null);
+			ServerVariables.set("CtF", "on");
+			_log.info("Event 'CtF' activated.");
+			Announcements.getInstance().announceByCustomMessage("scripts.events.CtF.AnnounceEventStarted", null);
 		}
 		else
 		{
-			player.sendMessage("Event 'CTF' already active.");
+			player.sendMessage("Event 'CtF' already active.");
 		}
 		
 		_active = true;
+		
 		show("admin/events.htm", player);
 	}
 	
-	/**
-	 * Method deactivateEvent.
-	 */
 	public void deactivateEvent()
 	{
 		Player player = getSelf();
-		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -742,157 +281,214 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 		
 		if (isActive())
 		{
-			startTasks.clear();
-			ServerVariables.unset("CTF");
-			_log.info("Event 'CTF' deactivated.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.CTF.AnnounceEventStoped", null);
+			if (_startTask != null)
+			{
+				_startTask.cancel(true);
+				_startTask = null;
+			}
+			ServerVariables.unset("CtF");
+			_log.info("Event 'CtF' deactivated.");
+			Announcements.getInstance().announceByCustomMessage("scripts.events.CtF.AnnounceEventStoped", null);
 		}
 		else
 		{
-			player.sendMessage("Event 'CTF' not active.");
+			player.sendMessage("Event 'CtF' not active.");
 		}
 		
 		_active = false;
+		
 		show("admin/events.htm", player);
 	}
 	
-	/**
-	 * Method isRunned.
-	 * @return boolean
-	 */
-	public static boolean isRunned()
+	public boolean isRunned()
 	{
 		return _isRegistrationActive || (_status > 0);
 	}
 	
-	/**
-	 * Method DialogAppend_31225.
-	 * @param val Integer
-	 * @return String
-	 */
 	public String DialogAppend_31225(Integer val)
 	{
 		if (val == 0)
 		{
 			Player player = getSelf();
-			show("data/scripts/events/CTF/31225.html", player);
+			return HtmCache.getInstance().getNotNull("events/ctf/31225.htm", player);
 		}
-		
 		return "";
 	}
 	
-	/**
-	 * Method getMinLevelForCategory.
-	 * @param category int
-	 * @return int
-	 */
+	public String DialogAppend_35423(Integer val)
+	{
+		Player player = getSelf();
+		if (player.getTeam() != TeamType.BLUE)
+		{
+			return "";
+		}
+		if (val == 0)
+		{
+			return HtmCache.getInstance().getNotNull("events/ctf/35423.htm", player).replaceAll("n1", "" + Rnd.get(100, 999)).replaceAll("n2", "" + Rnd.get(100, 999));
+		}
+		return "";
+	}
+	
+	// Blue flag
+	public String DialogAppend_35426(Integer val)
+	{
+		Player player = getSelf();
+		if (player.getTeam() != TeamType.RED)
+		{
+			return "";
+		}
+		if (val == 0)
+		{
+			return HtmCache.getInstance().getNotNull("events/ctf/35426.htm", player).replaceAll("n1", "" + Rnd.get(100, 999)).replaceAll("n2", "" + Rnd.get(100, 999));
+		}
+		return "";
+	}
+	
+	public void capture(String[] var)
+	{
+		Player player = getSelf();
+		if (var.length != 4)
+		{
+			show(new CustomMessage("common.Error", player), player);
+			return;
+		}
+		
+		NpcInstance npc = getNpc();
+		
+		if (player.isDead() || (npc == null) || !player.isInRange(npc, 200))
+		{
+			show(new CustomMessage("common.Error", player), player);
+			return;
+		}
+		
+		Integer base;
+		Integer add1;
+		Integer add2;
+		Integer summ;
+		try
+		{
+			base = Integer.valueOf(var[0]);
+			add1 = Integer.valueOf(var[1]);
+			add2 = Integer.valueOf(var[2]);
+			summ = Integer.valueOf(var[3]);
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+			show(new CustomMessage("common.Error", player), player);
+			return;
+		}
+		
+		if ((add1.intValue() + add2.intValue()) != summ.intValue())
+		{
+			show(new CustomMessage("common.Error", player), player);
+			return;
+		}
+		
+		if ((base == 1) && blueFlag.isVisible())
+		{
+			blueFlag.decayMe();
+			addFlag(player, 13561);
+		}
+		
+		if ((base == 2) && redFlag.isVisible())
+		{
+			redFlag.decayMe();
+			addFlag(player, 13560);
+		}
+		
+		if (player.isInvisible())
+		{
+			player.getEffectList().stopEffects(EffectType.Invisible);
+		}
+	}
+	
 	public static int getMinLevelForCategory(int category)
 	{
 		switch (category)
 		{
 			case 1:
-				return 30;
-				
+				return 20;
 			case 2:
-				return 40;
-				
+				return 30;
 			case 3:
-				return 50;
-				
+				return 40;
 			case 4:
-				return 62;
-				
+				return 52;
 			case 5:
-				return 72;
-				
+				return 62;
 			case 6:
-				return 86;
+				return 76;
 		}
-		
 		return 0;
 	}
 	
-	/**
-	 * Method getMaxLevelForCategory.
-	 * @param category int
-	 * @return int
-	 */
 	public static int getMaxLevelForCategory(int category)
 	{
 		switch (category)
 		{
 			case 1:
-				return 39;
-				
+				return 29;
 			case 2:
-				return 49;
-				
+				return 39;
 			case 3:
-				return 61;
-				
+				return 51;
 			case 4:
-				return 71;
-				
+				return 61;
 			case 5:
-				return 85;
-				
+				return 75;
 			case 6:
 				return 99;
 		}
-		
 		return 0;
 	}
 	
-	/**
-	 * Method getCategory.
-	 * @param level int
-	 * @return int
-	 */
 	public static int getCategory(int level)
 	{
-		if ((level >= 30) && (level <= 39))
+		if ((level >= 20) && (level <= 29))
 		{
 			return 1;
 		}
-		else if ((level >= 40) && (level <= 49))
+		else if ((level >= 30) && (level <= 39))
 		{
 			return 2;
 		}
-		else if ((level >= 50) && (level <= 61))
+		else if ((level >= 40) && (level <= 51))
 		{
 			return 3;
 		}
-		else if ((level >= 62) && (level <= 71))
+		else if ((level >= 52) && (level <= 61))
 		{
 			return 4;
 		}
-		else if ((level >= 72) && (level <= 85))
+		else if ((level >= 62) && (level <= 75))
 		{
 			return 5;
 		}
-		else if (level >= 99)
+		else if (level >= 76)
 		{
 			return 6;
 		}
-		
 		return 0;
 	}
 	
-	/**
-	 * Method start.
-	 * @param var String[]
-	 */
 	public void start(String[] var)
 	{
-		if (var.length != 3)
+		if (isRunned())
 		{
-			_log.info("Destruction of Flag: Error start, var length: " + var.length);
+			_log.info("CtF: start task already running!");
+			return;
+		}
+		
+		Player player = getSelf();
+		if (var.length != 2)
+		{
+			show(new CustomMessage("common.Error", player), player);
 			return;
 		}
 		
 		Integer category;
 		Integer autoContinue;
-		
 		try
 		{
 			category = Integer.valueOf(var[0]);
@@ -900,7 +496,7 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			show(new CustomMessage("common.Error", player), player);
 			return;
 		}
 		
@@ -918,101 +514,67 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 			_maxLevel = getMaxLevelForCategory(_category);
 		}
 		
+		if (_endTask != null)
+		{
+			show(new CustomMessage("common.TryLater", player), player);
+			return;
+		}
+		
 		_status = 0;
 		_isRegistrationActive = true;
-		_time_to_start = 3;
-		players_list1 = new LazyArrayList<>();
-		players_list2 = new LazyArrayList<>();
+		_time_to_start = Config.EVENT_CtfTime;
 		
-		if (whiteFlag != null)
+		players_list1 = new CopyOnWriteArrayList<>();
+		players_list2 = new CopyOnWriteArrayList<>();
+		
+		if (redFlag != null)
 		{
-			whiteFlag.deleteMe();
+			redFlag.deleteMe();
+		}
+		if (blueFlag != null)
+		{
+			blueFlag.deleteMe();
 		}
 		
-		if (greenFlag != null)
-		{
-			greenFlag.deleteMe();
-		}
+		redFlag = spawn(redFlagLoc, 35423, _reflection);
+		blueFlag = spawn(blueFlagLoc, 35426, _reflection);
+		redFlag.decayMe();
+		blueFlag.decayMe();
 		
-		try
-		{
-			greenFlag = (MonsterInstance) spawn(team1loc, 35426);
-			greenFlag.setName("White Flag");
-			greenFlag.setLevel(99);
-			greenFlag.isParalyzed();
-			greenFlag.setCurrentHp(greenFlag.getMaxHp(), true);
-			whiteFlag = (MonsterInstance) spawn(team2loc, 35426);
-			whiteFlag.setName("Green Flag");
-			whiteFlag.setLevel(99);
-			whiteFlag.isParalyzed();
-			whiteFlag.setCurrentHp(whiteFlag.getMaxHp(), true);
-			yellowFlag = (MonsterInstance) spawn(team3loc, 35426);
-			yellowFlag.setName("Yellow Flag");
-			yellowFlag.setLevel(99);
-			yellowFlag.isParalyzed();
-			yellowFlag.setCurrentHp(yellowFlag.getMaxHp(), true);
-			blackFlag = (MonsterInstance) spawn(team4loc, 35426);
-			blackFlag.setName("Black Flag");
-			blackFlag.setLevel(99);
-			blackFlag.isParalyzed();
-			blackFlag.setCurrentHp(blackFlag.getMaxHp(), true);
-		}
-		catch (Exception e)
-		{
-			e.printStackTrace();
-		}
-		
-		whiteFlag.decayMe();
-		greenFlag.decayMe();
-		yellowFlag.decayMe();
-		blackFlag.decayMe();
 		String[] param =
 		{
 			String.valueOf(_time_to_start),
 			String.valueOf(_minLevel),
 			String.valueOf(_maxLevel)
 		};
-		sayToAll("scripts.events.CTF.AnnouncePreStart", param);
+		sayToAll("scripts.events.CtF.AnnouncePreStart", param);
+		
 		executeTask("events.CTF.CTF", "question", new Object[0], 10000);
-		executeTask("events.CTF.CTF", "announce", new Object[]
-		{
-			var[2]
-		}, 60000);
+		executeTask("events.CTF.CTF", "announce", new Object[0], 60000);
+		_log.info("CtF: start event [" + _category + "-" + _autoContinue + "]");
 	}
 	
-	/**
-	 * Method sayToAll.
-	 * @param address String
-	 * @param replacements String[]
-	 */
 	public static void sayToAll(String address, String[] replacements)
 	{
 		Announcements.getInstance().announceByCustomMessage(address, replacements, ChatType.CRITICAL_ANNOUNCE);
 	}
 	
-	/**
-	 * Method question.
-	 */
 	public static void question()
 	{
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
-			if ((player != null) && (player.getLevel() >= _minLevel) && (player.getLevel() <= _maxLevel) && (player.getReflection().getId() <= 0) && !player.isInOlympiadMode())
+			if ((player != null) && !player.isDead() && (player.getLevel() >= _minLevel) && (player.getLevel() <= _maxLevel) && player.getReflection().isDefault() && !player.isInOlympiadMode() && !player.isInObserverMode())
 			{
-				player.scriptRequest(new CustomMessage("scripts.events.CTF.AskPlayer", player).toString(), "events.CTF.CTF:addPlayer", new Object[0]);
+				player.scriptRequest(new CustomMessage("scripts.events.CtF.AskPlayer", player).toString(), "events.CTF.CTF:addPlayer", new Object[0]);
 			}
 		}
 	}
 	
-	/**
-	 * Method announce.
-	 * @param s String
-	 */
-	public static void announce(String s)
+	public static void announce()
 	{
 		if (players_list1.isEmpty() || players_list2.isEmpty())
 		{
-			sayToAll("scripts.events.CTF.AnnounceEventCancelled", null);
+			sayToAll("scripts.events.CtF.AnnounceEventCancelled", null);
 			_isRegistrationActive = false;
 			_status = 0;
 			executeTask("events.CTF.CTF", "autoContinue", new Object[0], 10000);
@@ -1028,118 +590,71 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 				String.valueOf(_minLevel),
 				String.valueOf(_maxLevel)
 			};
-			sayToAll("scripts.events.CTF.AnnouncePreStart", param);
-			executeTask("events.CTF.CTF", "announce", new Object[]
-			{
-				s
-			}, 60000);
+			sayToAll("scripts.events.CtF.AnnouncePreStart", param);
+			executeTask("events.CTF.CTF", "announce", new Object[0], 60000);
 		}
 		else
 		{
 			_status = 1;
 			_isRegistrationActive = false;
-			sayToAll("scripts.events.CTF.AnnounceEventStarting", null);
-			executeTask("events.CTF.CTF", "prepare", new Object[]
-			{
-				s
-			}, 5000);
+			sayToAll("scripts.events.CtF.AnnounceEventStarting", null);
+			executeTask("events.CTF.CTF", "prepare", new Object[0], 5000);
 		}
 	}
 	
-	/**
-	 * Method addPlayer.
-	 */
 	public void addPlayer()
 	{
 		Player player = getSelf();
-		
-		if ((player == null) || !checkPlayer(player, true))
+		if ((player == null) || !checkPlayer(player, true) || !checkDualBox(player))
 		{
 			return;
 		}
 		
-		int min = Math.min(Math.min(players_list1.size(), players_list2.size()), players_list3.size());
+		int team = 0, size1 = players_list1.size(), size2 = players_list2.size();
 		
-		if (min == players_list1.size())
+		if (size1 > size2)
 		{
-			players_list1.add(player.getStoredId());
+			team = 2;
 		}
-		else if (min == players_list2.size())
+		else if (size1 < size2)
 		{
-			players_list2.add(player.getStoredId());
+			team = 1;
 		}
 		else
 		{
-			players_list3.add(player.getStoredId());
+			team = Rnd.get(1, 2);
 		}
 		
-		show(new CustomMessage("scripts.events.CTF.Registered", player), player);
+		if (!checkCountTeam(team))
+		{
+			show(new CustomMessage("scripts.events.CtF.MaxCountTeam", player), player);
+			return;
+		}
+		
+		if (team == 1)
+		{
+			players_list1.add(player.getStoredId());
+			show(new CustomMessage("scripts.events.CtF.Registered", player), player);
+		}
+		else if (team == 2)
+		{
+			players_list2.add(player.getStoredId());
+			show(new CustomMessage("scripts.events.CtF.Registered", player), player);
+		}
+		else
+		{
+			_log.info("WTF??? Command id 0 in CtF...");
+		}
+		player.setRegisteredInEvent(true);
 	}
 	
-	/**
-	 * Method checkPlayer.
-	 * @param player Player
-	 * @param first boolean
-	 * @return boolean
-	 */
-	@SuppressWarnings("unused")
-	public static boolean checkPlayer(Player player, boolean first)
+	private static boolean checkCountTeam(int team)
 	{
-		if (first && (!_isRegistrationActive || player.isDead()))
+		if ((team == 1) && (players_list1.size() >= Config.EVENT_CtFMaxPlayerInTeam))
 		{
-			show(new CustomMessage("scripts.events.Late", player), player);
 			return false;
 		}
-		
-		if (first && players_list.contains(player.getStoredId()))
-		{
-			show(new CustomMessage("scripts.events.LastHero.Cancelled", player), player);
-			return false;
-		}
-		
-		if ((player.getLevel() < _minLevel) || (player.getLevel() > _maxLevel))
-		{
-			show(new CustomMessage("scripts.events.LastHero.CancelledLevel", player), player);
-			return false;
-		}
-		
-		if (player.isMounted())
-		{
-			show(new CustomMessage("scripts.events.LastHero.Cancelled", player), player);
-			return false;
-		}
-		
-		if (player.isInDuel())
-		{
-			show(new CustomMessage("scripts.events.LastHero.CancelledDuel", player), player);
-			return false;
-		}
-		
-		if (player.getTeam() != TeamType.NONE)
-		{
-			show(new CustomMessage("scripts.events.LastHero.CancelledOtherEvent", player), player);
-			return false;
-		}
-		
-		if ((player.getOlympiadGame() != null) || (first && Olympiad.isRegistered(player)))
-		{
-			show(new CustomMessage("scripts.events.LastHero.CancelledOlympiad", player), player);
-			return false;
-		}
-		
-		if (player.isTeleporting())
-		{
-			show(new CustomMessage("scripts.events.LastHero.CancelledTeleport", player), player);
-			return false;
-		}
-		
-		if (first && PROTECT_IP_ACTIVE && sameIp(player))
-		{
-			show("You can not participate on the same IP someone already registered newly registered.", player, null);
-			return false;
-		}
-		
-		if (player.getObserverMode() != 0)
+		else if ((team == 2) && (players_list2.size() >= Config.EVENT_CtFMaxPlayerInTeam))
 		{
 			return false;
 		}
@@ -1147,165 +662,200 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 		return true;
 	}
 	
-	/**
-	 * Method prepare.
-	 * @param s String
-	 */
-	public static void prepare(String s)
+	public static boolean checkPlayer(Player player, boolean first)
 	{
-		ReflectionUtils.getDoor(17160024).openMe();
-		ReflectionUtils.getDoor(17160023).openMe();
-		ReflectionUtils.getDoor(17160020).openMe();
-		ReflectionUtils.getDoor(17160019).openMe();
-		ReflectionUtils.getDoor(17160022).openMe();
-		ReflectionUtils.getDoor(17160021).openMe();
-		whiteFlag.spawnMe();
-		greenFlag.spawnMe();
-		yellowFlag.spawnMe();
-		blackFlag.spawnMe();
-		executeTask("events.CTF.CTF", "ressurectPlayers", new Object[0], 1000);
-		executeTask("events.CTF.CTF", "healPlayers", new Object[0], 2000);
-		executeTask("events.CTF.CTF", "saveBackCoords", new Object[0], 3000);
-		executeTask("events.CTF.CTF", "paralyzePlayers", new Object[0], 4000);
-		executeTask("events.CTF.CTF", "teleportPlayersToColiseum", new Object[0], 5000);
-		executeTask("events.CTF.CTF", "go", new Object[]
+		if (first && !_isRegistrationActive)
 		{
-			s
-		}, 60000);
-		sayToAll("scripts.events.CTF.AnnounceFinalCountdown", null);
-	}
-	
-	/**
-	 * Method go.
-	 * @param s String
-	 */
-	public static void go(String s)
-	{
-		if ((players_list1.size() < MIN_PLAYERS) || (players_list2.size() < MIN_PLAYERS) || (players_list3.size() < MIN_PLAYERS))
-		{
-			Announcements.getInstance().announceToAll("CTF: reg completed, was not attained the minimum number of players.");
-			executeTask("events.CTF.CTF", "autoContinue", new Object[0], 1000);
-			return;
+			show(new CustomMessage("scripts.events.Late", player), player);
+			return false;
 		}
 		
+		if (first && (players_list1.contains(player.getStoredId()) || players_list2.contains(player.getStoredId())))
+		{
+			player.setRegisteredInEvent(false);
+			show(new CustomMessage("scripts.events.CtF.Cancelled", player), player);
+			if (players_list1.contains(player.getStoredId()))
+			{
+				players_list1.remove(player.getStoredId());
+			}
+			if (players_list2.contains(player.getStoredId()))
+			{
+				players_list2.remove(player.getStoredId());
+			}
+			if (boxes.containsKey(player.getStoredId()))
+			{
+				boxes.remove(player.getStoredId());
+			}
+			return false;
+		}
+		
+		if (first && player.isDead())
+		{
+			return false;
+		}
+		
+		if (first && (players_list1.contains(player.getStoredId()) || players_list2.contains(player.getStoredId())))
+		{
+			show(new CustomMessage("scripts.events.CtF.Cancelled", player), player);
+			return false;
+		}
+		
+		if (player.isCursedWeaponEquipped())
+		{
+			show(new CustomMessage("scripts.events.CtF.Cancelled", player), player);
+			return false;
+		}
+		
+		if ((player.getLevel() < _minLevel) || (player.getLevel() > _maxLevel))
+		{
+			show(new CustomMessage("scripts.events.CtF.CancelledLevel", player), player);
+			return false;
+		}
+		
+		if (player.isMounted())
+		{
+			show(new CustomMessage("scripts.events.CtF.Cancelled", player), player);
+			return false;
+		}
+		
+		if (player.isInDuel())
+		{
+			show(new CustomMessage("scripts.events.CtF.CancelledDuel", player), player);
+			return false;
+		}
+		
+		if (player.getTeam() != TeamType.NONE)
+		{
+			show(new CustomMessage("scripts.events.CtF.CancelledOtherEvent", player), player);
+			return false;
+		}
+		
+		if (player.isInOlympiadMode() || (first && Olympiad.isRegistered(player)))
+		{
+			show(new CustomMessage("scripts.events.CtF.CancelledOlympiad", player), player);
+			return false;
+		}
+		
+		if (player.isTeleporting())
+		{
+			show(new CustomMessage("scripts.events.CtF.CancelledTeleport", player), player);
+			return false;
+		}
+		
+		return true;
+	}
+	
+	public static void prepare()
+	{
+		closeColiseumDoors();
+		
+		for (Zone z : _reflection.getZones())
+		{
+			z.setType(ZoneType.peace_zone);
+		}
+		
+		cleanPlayers();
+		clearArena();
+		
+		redFlag.spawnMe();
+		blueFlag.spawnMe();
+		
+		executeTask("events.CTF.CTF", "ressurectPlayers", new Object[0], 1000);
+		executeTask("events.CTF.CTF", "healPlayers", new Object[0], 2000);
+		executeTask("events.CTF.CTF", "teleportPlayersToColiseum", new Object[0], 4000);
+		executeTask("events.CTF.CTF", "paralyzePlayers", new Object[0], 5000);
+		if (Config.EVENT_CtFBuffPlayers && (Config.EVENT_CtFFighterBuffs.length > 0) && (Config.EVENT_CtFMageBuffs.length > 0))
+		{
+			executeTask("events.CTF.CTF", "buffPlayers", new Object[0], 6000);
+		}
+		executeTask("events.CTF.CTF", "go", new Object[0], 60000);
+		
+		sayToAll("scripts.events.CtF.AnnounceFinalCountdown", null);
+	}
+	
+	public static void go()
+	{
 		_status = 2;
 		upParalyzePlayers();
 		clearArena();
-		sayToAll("scripts.events.CTF.AnnounceFight", null);
-		Calendar cal = Calendar.getInstance();
-		cal.set(Calendar.HOUR_OF_DAY, Integer.valueOf(s.split(":")[0]));
-		cal.set(Calendar.MINUTE, Integer.valueOf(s.split(":")[1]));
-		cal.set(Calendar.SECOND, 0);
-		
-		while (cal.getTimeInMillis() < System.currentTimeMillis())
+		sayToAll("scripts.events.CtF.AnnounceFight", null);
+		for (Zone z : _reflection.getZones())
 		{
-			cal.add(Calendar.DAY_OF_YEAR, 1);
+			z.setType(ZoneType.battle_zone);
 		}
-		
-		ThreadPoolManager.getInstance().schedule(new timer((int) (cal.getTimeInMillis() - System.currentTimeMillis()) / 1000), 0);
+		_endTask = executeTask("events.CTF.CTF", "endOfTime", new Object[0], 300000);
 	}
 	
-	/**
-	 * Method endBattle.
-	 * @param win int
-	 */
+	public static void endOfTime()
+	{
+		endBattle(3); // ?????
+	}
+	
 	public static void endBattle(int win)
 	{
-		if (_status == 0)
+		for (Zone z : _reflection.getZones())
 		{
-			return;
+			z.setType(ZoneType.peace_zone);
+		}
+		
+		if (_endTask != null)
+		{
+			_endTask.cancel(false);
+			_endTask = null;
+		}
+		
+		removeFlags();
+		
+		if (redFlag != null)
+		{
+			redFlag.deleteMe();
+			redFlag = null;
+		}
+		
+		if (blueFlag != null)
+		{
+			blueFlag.deleteMe();
+			blueFlag = null;
 		}
 		
 		_status = 0;
+		removeAura();
 		
-		if (whiteFlag != null)
+		openColiseumDoors();
+		
+		switch (win)
 		{
-			whiteFlag.deleteMe();
-			whiteFlag = null;
+			case 1:
+				sayToAll("scripts.events.CtF.AnnounceFinishedRedWins", null);
+				giveItemsToWinner(false, true, 1);
+				break;
+			case 2:
+				sayToAll("scripts.events.CtF.AnnounceFinishedBlueWins", null);
+				giveItemsToWinner(true, false, 1);
+				break;
+			case 3:
+				sayToAll("scripts.events.CtF.AnnounceFinishedDraw", null);
+				giveItemsToWinner(true, true, 0);
+				break;
 		}
 		
-		if (greenFlag != null)
-		{
-			greenFlag.deleteMe();
-			greenFlag = null;
-		}
-		
-		if (yellowFlag != null)
-		{
-			yellowFlag.deleteMe();
-			yellowFlag = null;
-		}
-		
-		if (blackFlag != null)
-		{
-			blackFlag.deleteMe();
-			blackFlag = null;
-		}
-		
-		ReflectionUtils.getDoor(17160024).closeMe();
-		ReflectionUtils.getDoor(17160023).closeMe();
-		ReflectionUtils.getDoor(17160020).closeMe();
-		ReflectionUtils.getDoor(17160019).closeMe();
-		ReflectionUtils.getDoor(17160022).closeMe();
-		ReflectionUtils.getDoor(17160021).closeMe();
-		
-		if (win != 0)
-		{
-			if (win == 1)
-			{
-				Announcements.getInstance().announceToAll("The White Team Won!");
-				giveItemsToWinner(win, 1);
-			}
-			else if (win == 2)
-			{
-				Announcements.getInstance().announceToAll("The Green Team Won!");
-				giveItemsToWinner(win, 1);
-			}
-			else if (win == 3)
-			{
-				Announcements.getInstance().announceToAll("The Yellow Team Won!");
-				giveItemsToWinner(win, 1);
-			}
-			else if (win == 4)
-			{
-				Announcements.getInstance().announceToAll("The Black Team Won!");
-				giveItemsToWinner(win, 1);
-			}
-		}
-		else
-		{
-			Announcements.getInstance().announceToAll("You Did Not Win");
-		}
-		
-		sayToAll("scripts.events.CTF.AnnounceEnd", null);
-		end();
+		sayToAll("scripts.events.CtF.AnnounceEnd", null);
+		executeTask("events.CTF.CTF", "end", new Object[0], 30000);
 		_isRegistrationActive = false;
 	}
 	
-	/**
-	 * Method end.
-	 */
 	public static void end()
 	{
-		executeTask("events.CTF.CTF", "removeAura", new Object[0], 1000);
-		executeTask("events.CTF.CTF", "ressurectPlayers", new Object[0], 2000);
-		executeTask("events.CTF.CTF", "healPlayers", new Object[0], 3000);
-		executeTask("events.CTF.CTF", "teleportPlayersToSavedCoordsAll", new Object[0], 4000);
+		executeTask("events.CTF.CTF", "ressurectPlayers", new Object[0], 1000);
+		executeTask("events.CTF.CTF", "healPlayers", new Object[0], 2000);
+		executeTask("events.CTF.CTF", "teleportPlayersToSavedCoords", new Object[0], 3000);
 		executeTask("events.CTF.CTF", "autoContinue", new Object[0], 10000);
-		backBuff();
-		despawnNpcs();
 	}
 	
-	/**
-	 * Method autoContinue.
-	 */
 	public void autoContinue()
 	{
 		players_list1.clear();
 		players_list2.clear();
-		players_list3.clear();
-		players_list4.clear();
-		_saveBuffList.clear();
 		
 		if (_autoContinue > 0)
 		{
@@ -1314,684 +864,200 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 				_autoContinue = 0;
 				return;
 			}
-			
 			start(new String[]
 			{
 				"" + (_autoContinue + 1),
 				"" + (_autoContinue + 1)
 			});
 		}
+		else
+		{
+			scheduleEventStart();
+		}
 	}
 	
-	/**
-	 * Method giveItemsToWinner.
-	 * @param win int
-	 * @param rate double
-	 */
-	public static void giveItemsToWinner(int win, double rate)
+	public void scheduleEventStart()
 	{
-		if (win == 1)
+		try
+		{
+			Calendar currentTime = Calendar.getInstance();
+			Calendar nextStartTime = null;
+			Calendar testStartTime = null;
+			
+			for (String timeOfDay : Config.EVENT_CtFStartTime)
+			{
+				testStartTime = Calendar.getInstance();
+				testStartTime.setLenient(true);
+				
+				String[] splitTimeOfDay = timeOfDay.split(":");
+				
+				testStartTime.set(Calendar.HOUR_OF_DAY, Integer.parseInt(splitTimeOfDay[0]));
+				testStartTime.set(Calendar.MINUTE, Integer.parseInt(splitTimeOfDay[1]));
+				
+				if (testStartTime.getTimeInMillis() < currentTime.getTimeInMillis())
+				{
+					testStartTime.add(Calendar.DAY_OF_MONTH, 1);
+				}
+				
+				if ((nextStartTime == null) || (testStartTime.getTimeInMillis() < nextStartTime.getTimeInMillis()))
+				{
+					nextStartTime = testStartTime;
+				}
+				
+				if (_startTask != null)
+				{
+					_startTask.cancel(false);
+					_startTask = null;
+				}
+				_startTask = ThreadPoolManager.getInstance().schedule(new StartTask(), nextStartTime.getTimeInMillis() - System.currentTimeMillis());
+			}
+			currentTime = null;
+			nextStartTime = null;
+			testStartTime = null;
+		}
+		catch (Exception e)
+		{
+			_log.info("CtF: Error figuring out a start time. Check CtFEventInterval in config file.");
+		}
+	}
+	
+	public static void giveItemsToWinner(boolean team1, boolean team2, double rate)
+	{
+		if (team1)
 		{
 			for (Player player : getPlayers(players_list1))
 			{
-				for (int i = 0; i < REWARD.length; i += 2)
+				for (int[] reward : rewards)
 				{
-					addItem(player, REWARD[i], Math.round((EVENT_CTF_rate ? player.getLevel() : 1) * REWARD[i + 1] * rate));
+					addItem(player, reward[0], Math.round((Config.EVENT_CtFrate ? player.getLevel() : 1) * reward[1] * rate));
 				}
 			}
 		}
-		
-		if (win == 2)
+		if (team2)
 		{
 			for (Player player : getPlayers(players_list2))
 			{
-				for (int i = 0; i < REWARD.length; i += 2)
+				for (int[] reward : rewards)
 				{
-					addItem(player, REWARD[i], Math.round((EVENT_CTF_rate ? player.getLevel() : 1) * REWARD[i + 1] * rate));
-				}
-			}
-		}
-		
-		if (win == 3)
-		{
-			for (Player player : getPlayers(players_list3))
-			{
-				for (int i = 0; i < REWARD.length; i += 2)
-				{
-					addItem(player, REWARD[i], Math.round((EVENT_CTF_rate ? player.getLevel() : 1) * REWARD[i + 1] * rate));
+					addItem(player, reward[0], Math.round((Config.EVENT_CtFrate ? player.getLevel() : 1) * reward[1] * rate));
 				}
 			}
 		}
 	}
 	
-	/**
-	 * Method saveBackCoords.
-	 */
-	public static void saveBackCoords()
-	{
-		for (Player player : getPlayers(players_list1))
-		{
-			player.setVar("CTF_backCoords", player.getX() + " " + player.getY() + " " + player.getZ() + " " + player.getReflection().getId(), 0);
-			player.setVar("CTF_nameColor", Integer.toHexString(player.getNameColor()), 0);
-		}
-		
-		for (Player player : getPlayers(players_list2))
-		{
-			player.setVar("CTF_backCoords", player.getX() + " " + player.getY() + " " + player.getZ() + " " + player.getReflection().getId(), 0);
-			player.setVar("CTF_nameColor", Integer.toHexString(player.getNameColor()), 0);
-		}
-		
-		for (Player player : getPlayers(players_list3))
-		{
-			player.setVar("CTF_backCoords", player.getX() + " " + player.getY() + " " + player.getZ() + " " + player.getReflection().getId(), 0);
-			player.setVar("CTF_nameColor", Integer.toHexString(player.getNameColor()), 0);
-		}
-		
-		for (Player player : getPlayers(players_list4))
-		{
-			player.setVar("CTF_backCoords", player.getX() + " " + player.getY() + " " + player.getZ() + " " + player.getReflection().getId(), 0);
-			player.setVar("CTF_nameColor", Integer.toHexString(player.getNameColor()), 0);
-		}
-		
-		cleanPlayers();
-		clearArena();
-	}
-	
-	/**
-	 * Method teleportPlayersToColiseum.
-	 */
 	public static void teleportPlayersToColiseum()
 	{
 		for (Player player : getPlayers(players_list1))
 		{
 			unRide(player);
-			unSummonPet(player, true);
 			
-			if (REMOVE_BUFFS)
+			if (!Config.EVENT_CtFAllowSummons)
 			{
-				for (int buff[] : BUFFS_TO_REMOVE)
-				{
-					List<Effect> effects;
-					
-					if ((effects = player.getEffectList().getEffectsBySkillId(buff[0])) != null)
-					{
-						if (buff.length == 2)
-						{
-							for (Effect effect : effects)
-							{
-								if (effect.getSkill().getLevel() == buff[1])
-								{
-									player.getEffectList().stopEffect(buff[0]);
-								}
-							}
-						}
-						else if (buff.length == 1)
-						{
-							for (Effect effect : effects)
-							{
-								player.getEffectList().stopEffect(buff[0]);
-							}
-						}
-					}
-				}
+				unSummonPet(player, true);
 			}
 			
-			Location pos = getLocForPlayer(player.getStoredId());
-			
-			if (pos != null)
+			DuelEvent duel = player.getEvent(DuelEvent.class);
+			if (duel != null)
 			{
-				player.teleToLocation(pos);
+				duel.abortDuel(player);
 			}
-			else
+			
+			_savedCoord.put(player.getStoredId(), new Location(player.getX(), player.getY(), player.getZ()));
+			long count1 = player.getInventory().getCountOf(13560);
+			long count2 = player.getInventory().getCountOf(13561);
+			player.getInventory().destroyItemByItemId(13560, count1);
+			player.getInventory().destroyItemByItemId(13561, count2);
+			player.teleToLocation(Territory.getRandomLoc(team1spawn), _reflection);
+			player.setIsInCtF(true);
+			
+			if (!Config.EVENT_CtFAllowBuffs)
 			{
-				removePlayer(player);
+				player.getEffectList().stopAllEffects();
 			}
 		}
 		
 		for (Player player : getPlayers(players_list2))
 		{
 			unRide(player);
-			unSummonPet(player, true);
 			
-			if (REMOVE_BUFFS)
+			if (!Config.EVENT_CtFAllowSummons)
 			{
-				for (int buff[] : BUFFS_TO_REMOVE)
-				{
-					List<Effect> effects;
-					
-					if ((effects = player.getEffectList().getEffectsBySkillId(buff[0])) != null)
-					{
-						if (buff.length == 2)
-						{
-							for (Effect effect : effects)
-							{
-								if (effect.getSkill().getLevel() == buff[1])
-								{
-									player.getEffectList().stopEffect(buff[0]);
-								}
-							}
-						}
-						else if (buff.length == 1)
-						{
-							for (Effect effect : effects)
-							{
-								player.getEffectList().stopEffect(buff[0]);
-							}
-						}
-					}
-				}
+				unSummonPet(player, true);
 			}
 			
-			Location pos = getLocForPlayer(player.getStoredId());
+			_savedCoord.put(player.getStoredId(), new Location(player.getX(), player.getY(), player.getZ()));
+			long count1 = player.getInventory().getCountOf(13560);
+			long count2 = player.getInventory().getCountOf(13561);
+			player.getInventory().destroyItemByItemId(13560, count1);
+			player.getInventory().destroyItemByItemId(13561, count2);
+			player.teleToLocation(Territory.getRandomLoc(team2spawn), _reflection);
+			player.setIsInCtF(true);
 			
-			if (pos != null)
+			if (!Config.EVENT_CtFAllowBuffs)
 			{
-				player.teleToLocation(pos);
-			}
-			else
-			{
-				removePlayer(player);
-			}
-		}
-		
-		for (Player player : getPlayers(players_list3))
-		{
-			unRide(player);
-			unSummonPet(player, true);
-			
-			if (REMOVE_BUFFS)
-			{
-				for (int buff[] : BUFFS_TO_REMOVE)
-				{
-					List<Effect> effects;
-					
-					if ((effects = player.getEffectList().getEffectsBySkillId(buff[0])) != null)
-					{
-						if (buff.length == 2)
-						{
-							for (Effect effect : effects)
-							{
-								if (effect.getSkill().getLevel() == buff[1])
-								{
-									player.getEffectList().stopEffect(buff[0]);
-								}
-							}
-						}
-						else if (buff.length == 1)
-						{
-							for (Effect effect : effects)
-							{
-								player.getEffectList().stopEffect(buff[0]);
-							}
-						}
-					}
-				}
-			}
-			
-			Location pos = getLocForPlayer(player.getStoredId());
-			
-			if (pos != null)
-			{
-				player.teleToLocation(pos);
-			}
-			else
-			{
-				removePlayer(player);
+				player.getEffectList().stopAllEffects();
 			}
 		}
 	}
 	
-	/**
-	 * Method teleportPlayersToSavedCoords.
-	 * @param command int
-	 */
-	public static void teleportPlayersToSavedCoords(int command)
-	{
-		switch (command)
-		{
-			case 1:
-				for (Player player : getPlayers(players_list1))
-				{
-					teleportPlayerToSavedCoords(player);
-				}
-				
-				break;
-			
-			case 2:
-				for (Player player : getPlayers(players_list2))
-				{
-					teleportPlayerToSavedCoords(player);
-				}
-				
-				break;
-			
-			case 3:
-				for (Player player : getPlayers(players_list3))
-				{
-					teleportPlayerToSavedCoords(player);
-				}
-				
-				break;
-			
-			case 4:
-				for (Player player : getPlayers(players_list4))
-				{
-					teleportPlayerToSavedCoords(player);
-				}
-				
-				break;
-		}
-	}
-	
-	/**
-	 * Method teleportPlayersToSavedCoordsAll.
-	 */
-	public static void teleportPlayersToSavedCoordsAll()
-	{
-		for (Player player : getPlayers(players_list1))
-		{
-			teleportPlayerToSavedCoords(player);
-		}
-		
-		for (Player player : getPlayers(players_list2))
-		{
-			teleportPlayerToSavedCoords(player);
-		}
-		
-		for (Player player : getPlayers(players_list3))
-		{
-			teleportPlayerToSavedCoords(player);
-		}
-		
-		for (Player player : getPlayers(players_list4))
-		{
-			teleportPlayerToSavedCoords(player);
-		}
-	}
-	
-	/**
-	 * Method teleportPlayerToSavedCoords.
-	 * @param player Player
-	 */
-	public static void teleportPlayerToSavedCoords(Player player)
-	{
-		try
-		{
-			String var = player.getVar("CTF_backCoords");
-			String color = player.getVar("CTF_nameColor");
-			
-			if (!color.isEmpty())
-			{
-				player.setNameColor(Integer.decode("0x" + color));
-			}
-			
-			if ((var == null) || var.equals(""))
-			{
-				return;
-			}
-			
-			String[] coords = var.split(" ");
-			
-			if (coords.length != 4)
-			{
-				return;
-			}
-			
-			player.teleToLocation(Integer.parseInt(coords[0]), Integer.parseInt(coords[1]), Integer.parseInt(coords[2]), Integer.parseInt(coords[3]));
-			player.unsetVar("CTF_backCoords");
-			player.unsetVar("CTF_nameColor");
-		}
-		catch (Exception e)
-		{
-			e.printStackTrace();
-		}
-	}
-	
-	/**
-	 * Method paralyzePlayers.
-	 */
 	public static void paralyzePlayers()
 	{
 		Skill revengeSkill = SkillTable.getInstance().getInfo(Skill.SKILL_RAID_CURSE, 1);
 		
-		for (Player player : getPlayers(players_list))
+		for (Player player : getPlayers(players_list1))
+		{
+			player.getEffectList().stopEffect(Skill.SKILL_MYSTIC_IMMUNITY);
+			revengeSkill.getEffects(player, player, false, false);
+		}
+		
+		for (Player player : getPlayers(players_list2))
 		{
 			player.getEffectList().stopEffect(Skill.SKILL_MYSTIC_IMMUNITY);
 			revengeSkill.getEffects(player, player, false, false);
 		}
 	}
 	
-	/**
-	 * Method upParalyzePlayers.
-	 */
 	public static void upParalyzePlayers()
 	{
-		for (Player player : getPlayers(players_list))
+		for (Player player : getPlayers(players_list1))
+		{
+			player.getEffectList().stopEffect(Skill.SKILL_RAID_CURSE);
+			player.leaveParty();
+		}
+		
+		for (Player player : getPlayers(players_list2))
 		{
 			player.getEffectList().stopEffect(Skill.SKILL_RAID_CURSE);
 			player.leaveParty();
 		}
 	}
 	
-	/**
-	 * Method removeBuff.
-	 */
-	public static void removeBuff()
-	{
-		saveBuffList();
-		
-		for (Player player : getPlayers(players_list1))
-		{
-			if (player != null)
-			{
-				try
-				{
-					if (player.isCastingNow())
-					{
-						player.abortCast(true, true);
-					}
-					
-					if (!ALLOW_CLAN_SKILL)
-					{
-						if (player.getClan() != null)
-						{
-							for (Skill skill : player.getClan().getAllSkills())
-							{
-								player.removeSkill(skill, false);
-							}
-						}
-					}
-					
-					if (!ALLOW_HERO_SKILL)
-					{
-						if (player.isHero())
-						{
-							Hero.removeSkills(player);
-						}
-					}
-					
-					if (!ALLOW_BUFFS)
-					{
-						player.getEffectList().stopAllEffects();
-						ThreadPoolManager.getInstance().schedule(new buffPlayer(player), 0);
-					}
-					
-					player.sendPacket(new SkillList(player));
-				}
-				catch (Exception e)
-				{
-					e.printStackTrace();
-				}
-			}
-		}
-		
-		for (Player player : getPlayers(players_list2))
-		{
-			if (player != null)
-			{
-				try
-				{
-					if (player.isCastingNow())
-					{
-						player.abortCast(true, true);
-					}
-					
-					if (!ALLOW_CLAN_SKILL)
-					{
-						if (player.getClan() != null)
-						{
-							for (Skill skill : player.getClan().getAllSkills())
-							{
-								player.removeSkill(skill, false);
-							}
-						}
-					}
-					
-					if (!ALLOW_HERO_SKILL)
-					{
-						if (player.isHero())
-						{
-							Hero.removeSkills(player);
-						}
-					}
-					
-					if (!ALLOW_BUFFS)
-					{
-						player.getEffectList().stopAllEffects();
-						ThreadPoolManager.getInstance().schedule(new buffPlayer(player), 0);
-					}
-					
-					player.sendPacket(new SkillList(player));
-				}
-				catch (Exception e)
-				{
-					e.printStackTrace();
-				}
-			}
-		}
-		
-		for (Player player : getPlayers(players_list3))
-		{
-			if (player != null)
-			{
-				try
-				{
-					if (player.isCastingNow())
-					{
-						player.abortCast(true, true);
-					}
-					
-					if (!ALLOW_CLAN_SKILL)
-					{
-						if (player.getClan() != null)
-						{
-							for (Skill skill : player.getClan().getAllSkills())
-							{
-								player.removeSkill(skill, false);
-							}
-						}
-					}
-					
-					if (!ALLOW_HERO_SKILL)
-					{
-						if (player.isHero())
-						{
-							Hero.removeSkills(player);
-						}
-					}
-					
-					if (!ALLOW_BUFFS)
-					{
-						player.getEffectList().stopAllEffects();
-						ThreadPoolManager.getInstance().schedule(new buffPlayer(player), 0);
-					}
-					
-					player.sendPacket(new SkillList(player));
-				}
-				catch (Exception e)
-				{
-					e.printStackTrace();
-				}
-			}
-		}
-	}
-	
-	/**
-	 * Method backBuff.
-	 */
-	public static void backBuff()
-	{
-		for (Player player : getPlayers(players_list1))
-		{
-			if (player == null)
-			{
-				continue;
-			}
-			
-			try
-			{
-				player.getEffectList().stopAllEffects();
-				
-				if (!ALLOW_CLAN_SKILL)
-				{
-					if (player.getClan() != null)
-					{
-						for (Skill skill : player.getClan().getAllSkills())
-						{
-							if (skill.getMinPledgeClass() <= player.getPledgeClass())
-							{
-								player.addSkill(skill, false);
-							}
-						}
-					}
-				}
-				
-				if (!ALLOW_HERO_SKILL)
-				{
-					if (player.isHero())
-					{
-						Hero.addSkills(player);
-					}
-				}
-				
-				player.sendPacket(new SkillList(player));
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
-		}
-		
-		for (Player player : getPlayers(players_list2))
-		{
-			if (player == null)
-			{
-				continue;
-			}
-			
-			try
-			{
-				player.getEffectList().stopAllEffects();
-				
-				if (!ALLOW_CLAN_SKILL)
-				{
-					if (player.getClan() != null)
-					{
-						for (Skill skill : player.getClan().getAllSkills())
-						{
-							if (skill.getMinPledgeClass() <= player.getPledgeClass())
-							{
-								player.addSkill(skill, false);
-							}
-						}
-					}
-				}
-				
-				if (!ALLOW_HERO_SKILL)
-				{
-					if (player.isHero())
-					{
-						Hero.addSkills(player);
-					}
-				}
-				
-				player.sendPacket(new SkillList(player));
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
-		}
-		
-		for (Player player : getPlayers(players_list3))
-		{
-			if (player == null)
-			{
-				continue;
-			}
-			
-			try
-			{
-				player.getEffectList().stopAllEffects();
-				
-				if (!ALLOW_CLAN_SKILL)
-				{
-					if (player.getClan() != null)
-					{
-						for (Skill skill : player.getClan().getAllSkills())
-						{
-							if (skill.getMinPledgeClass() <= player.getPledgeClass())
-							{
-								player.addSkill(skill, false);
-							}
-						}
-					}
-				}
-				
-				if (!ALLOW_HERO_SKILL)
-				{
-					if (player.isHero())
-					{
-						Hero.addSkills(player);
-					}
-				}
-				
-				player.sendPacket(new SkillList(player));
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
-		}
-		
-		restoreBuffList();
-	}
-	
-	/**
-	 * Method ressurectPlayers.
-	 */
 	public static void ressurectPlayers()
 	{
 		for (Player player : getPlayers(players_list1))
 		{
-			ressurectPlayer(player);
+			if (player.isDead())
+			{
+				player.restoreExp();
+				player.setCurrentCp(player.getMaxCp());
+				player.setCurrentHp(player.getMaxHp(), true);
+				player.setCurrentMp(player.getMaxMp());
+				player.broadcastPacket(new Revive(player));
+			}
 		}
-		
 		for (Player player : getPlayers(players_list2))
 		{
-			ressurectPlayer(player);
-		}
-		
-		for (Player player : getPlayers(players_list3))
-		{
-			ressurectPlayer(player);
-		}
-		
-		for (Player player : getPlayers(players_list4))
-		{
-			ressurectPlayer(player);
+			if (player.isDead())
+			{
+				player.restoreExp();
+				player.setCurrentCp(player.getMaxCp());
+				player.setCurrentHp(player.getMaxHp(), true);
+				player.setCurrentMp(player.getMaxMp());
+				player.broadcastPacket(new Revive(player));
+			}
 		}
 	}
 	
-	/**
-	 * Method ressurectPlayer.
-	 * @param player Player
-	 */
-	public static void ressurectPlayer(Player player)
-	{
-		if (player.isDead())
-		{
-			player.restoreExp();
-			player.setCurrentCp(player.getMaxCp());
-			player.setCurrentHp(player.getMaxHp(), true);
-			player.setCurrentMp(player.getMaxMp());
-			player.broadcastPacket(new Revive(player));
-		}
-	}
-	
-	/**
-	 * Method healPlayers.
-	 */
 	public static void healPlayers()
 	{
 		for (Player player : getPlayers(players_list1))
@@ -1999,29 +1065,13 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 			player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
 			player.setCurrentCp(player.getMaxCp());
 		}
-		
 		for (Player player : getPlayers(players_list2))
-		{
-			player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
-			player.setCurrentCp(player.getMaxCp());
-		}
-		
-		for (Player player : getPlayers(players_list3))
-		{
-			player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
-			player.setCurrentCp(player.getMaxCp());
-		}
-		
-		for (Player player : getPlayers(players_list4))
 		{
 			player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
 			player.setCurrentCp(player.getMaxCp());
 		}
 	}
 	
-	/**
-	 * Method cleanPlayers.
-	 */
 	public static void cleanPlayers()
 	{
 		for (Player player : getPlayers(players_list1))
@@ -2032,10 +1082,9 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 			}
 			else
 			{
-				setTeam(player);
+				player.setTeam(TeamType.BLUE);
 			}
 		}
-		
 		for (Player player : getPlayers(players_list2))
 		{
 			if (!checkPlayer(player, false))
@@ -2044,38 +1093,25 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 			}
 			else
 			{
-				setTeam(player);
-			}
-		}
-		
-		for (Player player : getPlayers(players_list3))
-		{
-			if (!checkPlayer(player, false))
-			{
-				removePlayer(player);
-			}
-			else
-			{
-				setTeam(player);
-			}
-		}
-		
-		for (Player player : getPlayers(players_list4))
-		{
-			if (!checkPlayer(player, false))
-			{
-				removePlayer(player);
-			}
-			else
-			{
-				setTeam(player);
+				player.setTeam(TeamType.RED);
 			}
 		}
 	}
 	
-	/**
-	 * Method clearArena.
-	 */
+	public static void removeAura()
+	{
+		for (Player player : getPlayers(players_list1))
+		{
+			player.setTeam(TeamType.NONE);
+			player.setIsInCtF(false);
+		}
+		for (Player player : getPlayers(players_list2))
+		{
+			player.setTeam(TeamType.NONE);
+			player.setIsInCtF(false);
+		}
+	}
+	
 	public static void clearArena()
 	{
 		for (GameObject obj : _zone.getObjects())
@@ -2083,1092 +1119,53 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 			if (obj != null)
 			{
 				Player player = obj.getPlayer();
-				
-				if ((player != null) && (playerInCommand(player.getStoredId()) == 0))
+				if ((player != null) && !players_list1.contains(player.getStoredId()) && !players_list2.contains(player.getStoredId()))
 				{
-					player.teleToLocation(147451, 46728, -3410);
+					player.teleToLocation(147451, 46728, -3410, _reflection);
 				}
 			}
 		}
 	}
 	
-	/**
-	 * Method doDie.
-	 * @param self Creature
-	 * @param killer Creature
-	 */
-	public static void doDie(Creature self, Creature killer)
-	{
-		if ((_status <= 1) || (self == null))
-		{
-			return;
-		}
-		
-		if (self.isPlayer() && (playerInCommand(self.getStoredId()) > 0))
-		{
-			self.sendMessage("Wait " + TIME_FOR_RES + " seconds you can resurrect at base.");
-			_resurrectionList.put(self.getStoredId(), executeTask("events.CTF.CTF", "resurrectAtBase", new Object[]
-			{
-				(Player) self
-			}, TIME_FOR_RES * 100));
-		}
-		
-		if ((self instanceof MonsterInstance) && ((self == greenFlag) || (self == whiteFlag) || (self == yellowFlag) || (self == blackFlag)))
-		{
-			lossTeam((MonsterInstance) self);
-		}
-	}
-	
-	/**
-	 * Method resurrectAtBase.
-	 * @param player Player
-	 */
 	public static void resurrectAtBase(Player player)
 	{
-		if (playerInCommand(player.getStoredId()) <= 0)
+		if (player.getTeam() == TeamType.NONE)
 		{
 			return;
 		}
-		
 		if (player.isDead())
 		{
-			ressurectPlayer(player);
+			player.setCurrentCp(player.getMaxCp());
+			player.setCurrentHp(player.getMaxHp(), true);
+			player.setCurrentMp(player.getMaxMp());
+			player.broadcastPacket(new Revive(player));
+			buffPlayer(player);
 		}
-		
-		Location pos = getLocForPlayer(player.getStoredId());
-		
-		if (pos != null)
+		if (player.getTeam() == TeamType.BLUE)
 		{
-			player.teleToLocation(pos);
+			player.teleToLocation(Territory.getRandomLoc(team1spawn), _reflection);
 		}
-		else
+		else if (player.getTeam() == TeamType.RED)
 		{
-			removePlayer(player);
-		}
-		
-		if (!ALLOW_BUFFS)
-		{
-			ThreadPoolManager.getInstance().schedule(new buffPlayer(player), 0);
-		}
-		else
-		{
-			ThreadPoolManager.getInstance().schedule(new restoreBuffListForPlayer(player), 0);
+			player.teleToLocation(Territory.getRandomLoc(team2spawn), _reflection);
 		}
 	}
 	
-	/**
-	 * Method OnEscape.
-	 * @param player Player
-	 * @return Location
-	 */
 	public static Location OnEscape(Player player)
 	{
-		if ((_status > 1) && (player != null) && (playerInCommand(player.getStoredId()) > 0))
+		if ((_status > 1) && (player != null) && (player.getTeam() != TeamType.NONE) && (players_list1.contains(player.getStoredId()) || players_list2.contains(player.getStoredId())))
 		{
 			removePlayer(player);
 		}
-		
 		return null;
-	}
-	
-	/**
-	 * Method OnPlayerExit.
-	 * @param player Player
-	 */
-	public static void OnPlayerExit(Player player)
-	{
-		if ((player == null) || (playerInCommand(player.getStoredId()) < 1))
-		{
-			return;
-		}
-		
-		if ((_status == 0) && _isRegistrationActive && (playerInCommand(player.getStoredId()) > 0))
-		{
-			removePlayer(player);
-			return;
-		}
-		
-		if ((_status == 1) && (playerInCommand(player.getStoredId()) > 0))
-		{
-			removePlayer(player);
-			return;
-		}
-		
-		OnEscape(player);
-	}
-	
-	private static class TeleportTask implements Runnable
-	{
-		private final Location loc;
-		private final Creature target;
-		
-		/**
-		 * Constructor for TeleportTask.
-		 * @param target Creature
-		 * @param loc Location
-		 */
-		TeleportTask(Creature target, Location loc)
-		{
-			this.target = target;
-			this.loc = loc;
-			target.startStunning();
-		}
-		
-		/**
-		 * Method run.
-		 * @see java.lang.Runnable#run()
-		 */
-		@Override
-		public void run()
-		{
-			target.stopStunning();
-			target.teleToLocation(loc);
-		}
-	}
-	
-	/**
-	 * Method removePlayer.
-	 * @param player Player
-	 */
-	private static void removePlayer(Player player)
-	{
-		players_list1.remove(player.getStoredId());
-		players_list2.remove(player.getStoredId());
-		players_list3.remove(player.getStoredId());
-		players_list4.remove(player.getStoredId());
-		teleportPlayerToSavedCoords(player);
-	}
-	
-	/**
-	 * Method getPlayers.
-	 * @param list List<Long>
-	 * @return LazyArrayList<Player>
-	 */
-	static LazyArrayList<Player> getPlayers(List<Long> list)
-	{
-		LazyArrayList<Player> result = new LazyArrayList<>();
-		
-		for (Long storeId : list)
-		{
-			Player player = GameObjectsStorage.getAsPlayer(storeId);
-			
-			if (player != null)
-			{
-				result.add(player);
-			}
-		}
-		
-		return result;
-	}
-	
-	/**
-	 * Method saveBuffList.
-	 */
-	public static void saveBuffList()
-	{
-		Effect skill[];
-		
-		for (Player player : getPlayers(players_list1))
-		{
-			if (player != null)
-			{
-				skill = player.getEffectList().getAllFirstEffects();
-				
-				if (skill.length == 0)
-				{
-					continue;
-				}
-				
-				for (Effect effect : skill)
-				{
-					if (!_saveBuffList.containsKey(player.getStoredId()))
-					{
-						_saveBuffList.put(player.getStoredId(), new LazyArrayList<Effect>());
-					}
-					
-					for (int id : _listAllowSaveBuffs)
-					{
-						if (effect.getSkill().getId() == id)
-						{
-							_saveBuffList.get(player.getStoredId()).add(effect);
-						}
-					}
-				}
-			}
-		}
-		
-		for (Player player : getPlayers(players_list2))
-		{
-			if (player != null)
-			{
-				skill = player.getEffectList().getAllFirstEffects();
-				
-				if (skill.length == 0)
-				{
-					continue;
-				}
-				
-				for (Effect effect : skill)
-				{
-					if (!_saveBuffList.containsKey(player.getStoredId()))
-					{
-						_saveBuffList.put(player.getStoredId(), new LazyArrayList<Effect>());
-					}
-					
-					for (int id : _listAllowSaveBuffs)
-					{
-						if (effect.getSkill().getId() == id)
-						{
-							_saveBuffList.get(player.getStoredId()).add(effect);
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	/**
-	 * Method restoreBuffList.
-	 */
-	public static void restoreBuffList()
-	{
-		Player player;
-		
-		for (long objId : _saveBuffList.keySet())
-		{
-			player = GameObjectsStorage.getAsPlayer(objId);
-			ThreadPoolManager.getInstance().schedule(new restoreBuffListForPlayer(player), 100);
-		}
-	}
-	
-	private static class restoreBuffListForPlayer implements Runnable
-	{
-		private final Player player;
-		
-		/**
-		 * Constructor for restoreBuffListForPlayer.
-		 * @param player Player
-		 */
-		restoreBuffListForPlayer(Player player)
-		{
-			this.player = player;
-		}
-		
-		/**
-		 * Method run.
-		 * @see java.lang.Runnable#run()
-		 */
-		@Override
-		public void run()
-		{
-			if (player == null)
-			{
-				return;
-			}
-			
-			player.getEffectList().stopAllEffects();
-			LazyArrayList<Effect> effects = _saveBuffList.get(player.getStoredId());
-			
-			if ((effects != null) && (effects.size() > 0))
-			{
-				for (Effect effect : effects)
-				{
-					for (EffectTemplate et : effect.getSkill().getEffectTemplates())
-					{
-						Env env = new Env(player, player, effect.getSkill());
-						env.value = Integer.MAX_VALUE;
-						Effect e = et.getEffect(env);
-						e.setPeriod(effect.getPeriod());
-						e.getEffected().getEffectList().addEffect(e);
-					}
-					
-					try
-					{
-						Thread.sleep(150);
-					}
-					catch (Exception e)
-					{
-						// empty catch clause
-					}
-				}
-			}
-			
-			player.setCurrentCp(player.getMaxCp());
-			player.setCurrentHp(player.getMaxHp(), true);
-			player.setCurrentMp(player.getMaxMp());
-		}
-	}
-	
-	private static class buffPlayer implements Runnable
-	{
-		private final Player player;
-		
-		/**
-		 * Constructor for buffPlayer.
-		 * @param player Player
-		 */
-		private buffPlayer(Player player)
-		{
-			this.player = player;
-		}
-		
-		/**
-		 * Method run.
-		 * @see java.lang.Runnable#run()
-		 */
-		@Override
-		public void run()
-		{
-			if (player == null)
-			{
-				return;
-			}
-			
-			Skill skill;
-			
-			for (int[] buff : _listBuff[player.isMageClass() ? 1 : 0])
-			{
-				skill = SkillTable.getInstance().getInfo(buff[0], buff[1]);
-				
-				for (EffectTemplate et : skill.getEffectTemplates())
-				{
-					Env env = new Env(player, player, skill);
-					env.value = Integer.MAX_VALUE;
-					Effect e = et.getEffect(env);
-					e.setPeriod(600000);
-					e.getEffected().getEffectList().addEffect(e);
-				}
-				
-				try
-				{
-					Thread.sleep(150);
-				}
-				catch (Exception e)
-				{
-					// empty catch clause
-				}
-			}
-			
-			player.setCurrentCp(player.getMaxCp());
-			player.setCurrentHp(player.getMaxHp(), true);
-			player.setCurrentMp(player.getMaxMp());
-		}
-	}
-	
-	private static class timer implements Runnable
-	{
-		private int time;
-		
-		/**
-		 * Constructor for timer.
-		 * @param time int
-		 */
-		timer(int time)
-		{
-			this.time = time;
-		}
-		
-		/**
-		 * Method run.
-		 * @see java.lang.Runnable#run()
-		 */
-		@Override
-		public void run()
-		{
-			int sec;
-			String message;
-			
-			while ((time > 0) && (_status == 2))
-			{
-				sec = time - ((time / 60) * 60);
-				
-				for (Player player : getPlayers(players_list1))
-				{
-					if (sec < 10)
-					{
-						message = " Ending in Minutes: " + Integer.toString(time / 60) + ":0" + Integer.toString(sec) + " ";
-					}
-					else
-					{
-						message = " Ending in Minutes: " + Integer.toString(time / 60) + ":" + Integer.toString(sec) + " ";
-					}
-					
-					if (greenFlag != null)
-					{
-						message += "\n Green Flag: " + greenFlag.getCurrentHp() + " Hp ";
-					}
-					
-					if (whiteFlag != null)
-					{
-						message += "\n White Flag: " + whiteFlag.getCurrentHp() + " Hp ";
-					}
-					
-					if (yellowFlag != null)
-					{
-						message += "\n Yellow Flag: " + yellowFlag.getCurrentHp() + " Hp ";
-					}
-					
-					if (blackFlag != null)
-					{
-						message += "\n Black Flag: " + blackFlag.getCurrentHp() + " Hp ";
-					}
-					
-					player.sendPacket(new ExShowScreenMessage(message, 2000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, false));
-				}
-				
-				for (Player player : getPlayers(players_list2))
-				{
-					if (sec < 10)
-					{
-						message = " Ending in Minutes: " + Integer.toString(time / 60) + ":0" + Integer.toString(sec) + " ";
-					}
-					else
-					{
-						message = " Ending in Minutes: " + Integer.toString(time / 60) + ":" + Integer.toString(sec) + " ";
-					}
-					
-					if (whiteFlag != null)
-					{
-						message += "\n White Flag: " + whiteFlag.getCurrentHp() + " Hp ";
-					}
-					
-					if (greenFlag != null)
-					{
-						message += "\n Green Flag: " + greenFlag.getCurrentHp() + " Hp ";
-					}
-					
-					if (yellowFlag != null)
-					{
-						message += "\n Yellow Flag: " + yellowFlag.getCurrentHp() + " Hp ";
-					}
-					
-					if (blackFlag != null)
-					{
-						message += "\n Black Flag: " + blackFlag.getCurrentHp() + " Hp ";
-					}
-					
-					player.sendPacket(new ExShowScreenMessage(message, 2000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, false));
-				}
-				
-				for (Player player : getPlayers(players_list3))
-				{
-					if (sec < 10)
-					{
-						message = " Ending in Minutes: " + Integer.toString(time / 60) + ":0" + Integer.toString(sec) + " ";
-					}
-					else
-					{
-						message = " Ending in Minutes: " + Integer.toString(time / 60) + ":" + Integer.toString(sec) + " ";
-					}
-					
-					if (blackFlag != null)
-					{
-						message += "\n Black Flag: " + blackFlag.getCurrentHp() + " Hp ";
-					}
-					
-					if (yellowFlag != null)
-					{
-						message += "\n Yellow Flag: " + yellowFlag.getCurrentHp() + " Hp ";
-					}
-					
-					if (greenFlag != null)
-					{
-						message += "\n Green Flag: " + greenFlag.getCurrentHp() + " Hp ";
-					}
-					
-					if (whiteFlag != null)
-					{
-						message += "\n White Flag: " + whiteFlag.getCurrentHp() + " Hp ";
-					}
-					
-					player.sendPacket(new ExShowScreenMessage(message, 2000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, false));
-				}
-				
-				try
-				{
-					Thread.sleep(1000);
-				}
-				catch (Exception e)
-				{
-					e.printStackTrace();
-				}
-				
-				time--;
-			}
-			
-			endBattle(0);
-		}
-	}
-	
-	/**
-	 * Method playerInCommand.
-	 * @param objectId long
-	 * @return int
-	 */
-	public static int playerInCommand(long objectId)
-	{
-		return players_list1.contains(objectId) ? 1 : players_list2.contains(objectId) ? 2 : players_list3.contains(objectId) ? 3 : 0;
-	}
-	
-	/**
-	 * Method getLocForPlayer.
-	 * @param objectId long
-	 * @return Location
-	 */
-	public static Location getLocForPlayer(long objectId)
-	{
-		switch (playerInCommand(objectId))
-		{
-			case 1:
-				return (Location.coordsRandomize(team1loc, 50, 200));
-				
-			case 2:
-				return (Location.coordsRandomize(team2loc, 50, 200));
-				
-			case 3:
-				return (Location.coordsRandomize(team3loc, 50, 200));
-				
-			case 4:
-				return (Location.coordsRandomize(team4loc, 50, 200));
-				
-			default:
-				return null;
-		}
-	}
-	
-	/**
-	 * Method setTeam.
-	 * @param player Player
-	 */
-	public static void setTeam(Player player)
-	{
-		int command = playerInCommand(player.getStoredId());
-		
-		if ((command < 1) || (command > 3))
-		{
-			removePlayer(player);
-			return;
-		}
-		
-		player.setNameColor(Integer.decode("0x" + colors[playerInCommand(player.getStoredId()) - 1]));
-	}
-	
-	/**
-	 * Method lossTeam.
-	 * @param flag MonsterInstance
-	 */
-	public static void lossTeam(MonsterInstance flag)
-	{
-		if (flag == greenFlag)
-		{
-			lossTeam(players_list1);
-			greenFlag.deleteMe();
-			
-			if (players_list2.isEmpty())
-			{
-				endBattle(2);
-			}
-			else if (players_list2.isEmpty())
-			{
-				endBattle(3);
-			}
-			else if (players_list2.isEmpty())
-			{
-				endBattle(4);
-			}
-			else if (players_list3.isEmpty())
-			{
-				endBattle(2);
-			}
-			else if (players_list3.isEmpty())
-			{
-				endBattle(3);
-			}
-			else if (players_list3.isEmpty())
-			{
-				endBattle(4);
-			}
-			else if (players_list4.isEmpty())
-			{
-				endBattle(2);
-			}
-			else if (players_list4.isEmpty())
-			{
-				endBattle(3);
-			}
-			else if (players_list4.isEmpty())
-			{
-				endBattle(4);
-			}
-		}
-		
-		if (flag == whiteFlag)
-		{
-			lossTeam(players_list2);
-			whiteFlag.deleteMe();
-			
-			if (players_list1.isEmpty())
-			{
-				endBattle(1);
-			}
-			else if (players_list1.isEmpty())
-			{
-				endBattle(3);
-			}
-			else if (players_list1.isEmpty())
-			{
-				endBattle(4);
-			}
-			else if (players_list3.isEmpty())
-			{
-				endBattle(1);
-			}
-			else if (players_list3.isEmpty())
-			{
-				endBattle(3);
-			}
-			else if (players_list3.isEmpty())
-			{
-				endBattle(4);
-			}
-			else if (players_list4.isEmpty())
-			{
-				endBattle(1);
-			}
-			else if (players_list4.isEmpty())
-			{
-				endBattle(3);
-			}
-			else if (players_list4.isEmpty())
-			{
-				endBattle(4);
-			}
-		}
-		
-		if (flag == yellowFlag)
-		{
-			lossTeam(players_list3);
-			yellowFlag.deleteMe();
-			
-			if (players_list1.isEmpty())
-			{
-				endBattle(1);
-			}
-			else if (players_list1.isEmpty())
-			{
-				endBattle(2);
-			}
-			else if (players_list1.isEmpty())
-			{
-				endBattle(4);
-			}
-			else if (players_list2.isEmpty())
-			{
-				endBattle(1);
-			}
-			else if (players_list2.isEmpty())
-			{
-				endBattle(2);
-			}
-			else if (players_list2.isEmpty())
-			{
-				endBattle(4);
-			}
-			else if (players_list4.isEmpty())
-			{
-				endBattle(1);
-			}
-			else if (players_list4.isEmpty())
-			{
-				endBattle(2);
-			}
-			else if (players_list4.isEmpty())
-			{
-				endBattle(4);
-			}
-		}
-		
-		if (flag == blackFlag)
-		{
-			lossTeam(players_list4);
-			blackFlag.deleteMe();
-			
-			if (players_list1.isEmpty())
-			{
-				endBattle(1);
-			}
-			else if (players_list1.isEmpty())
-			{
-				endBattle(2);
-			}
-			else if (players_list1.isEmpty())
-			{
-				endBattle(3);
-			}
-			else if (players_list2.isEmpty())
-			{
-				endBattle(1);
-			}
-			else if (players_list2.isEmpty())
-			{
-				endBattle(2);
-			}
-			else if (players_list2.isEmpty())
-			{
-				endBattle(3);
-			}
-			else if (players_list3.isEmpty())
-			{
-				endBattle(1);
-			}
-			else if (players_list3.isEmpty())
-			{
-				endBattle(2);
-			}
-			else if (players_list3.isEmpty())
-			{
-				endBattle(3);
-			}
-		}
-		
-		flag.deleteMe();
-	}
-	
-	/**
-	 * Method lossTeam.
-	 * @param team LazyArrayList<Long>
-	 */
-	public static void lossTeam(LazyArrayList<Long> team)
-	{
-		Player player;
-		
-		for (long objId : team)
-		{
-			player = GameObjectsStorage.getAsPlayer(objId);
-			
-			if (player != null)
-			{
-				removePlayer(player);
-				player.sendMessage("flag - destroyed. You lose.");
-			}
-		}
-		
-		team.clear();
-	}
-	
-	/**
-	 * Method canJoinParty.
-	 * @param player Player
-	 * @param target Player
-	 * @return boolean
-	 */
-	public static boolean canJoinParty(Player player, Player target)
-	{
-		return !((playerInCommand(player.getStoredId()) > 0) || (playerInCommand(target.getStoredId()) > 0)) || (playerInCommand(player.getStoredId()) == playerInCommand(target.getStoredId()));
-	}
-	
-	/**
-	 * Method canUseItem.
-	 * @param player Player
-	 * @param item ItemInstance
-	 * @return boolean
-	 */
-	@SuppressWarnings("unused")
-	public static boolean canUseItem(Player player, ItemInstance item)
-	{
-		if (ALLOW_RESTRICT_ITEMS && (playerInCommand(player.getStoredId()) > 0))
-		{
-			for (int restrict_id : RESTRICT_ITEMS)
-			{
-				if (item.getItemId() == restrict_id)
-				{
-					return false;
-				}
-			}
-		}
-		
-		return true;
-	}
-	
-	/**
-	 * Method useSkill.
-	 * @param player Creature
-	 * @param target Creature
-	 * @param skill Skill
-	 * @return boolean
-	 */
-	public static boolean useSkill(Creature player, Creature target, Skill skill)
-	{
-		return checkTarget(player, target, skill);
-	}
-	
-	/**
-	 * Method checkTarget.
-	 * @param player Player
-	 * @param target Creature
-	 * @return boolean
-	 */
-	public static boolean checkTarget(Player player, Creature target)
-	{
-		return checkTarget(player, target, null);
-	}
-	
-	/**
-	 * Method checkTarget.
-	 * @param character Creature
-	 * @param target Creature
-	 * @param skill Skill
-	 * @return boolean
-	 */
-	public static boolean checkTarget(Creature character, Creature target, Skill skill)
-	{
-		if (_status < 2)
-		{
-			return true;
-		}
-		
-		if ((character instanceof Player) && (target != null) && (target != character))
-		{
-			if (playerInCommand(character.getStoredId()) > 0)
-			{
-				if (target instanceof MonsterInstance)
-				{
-					if (getMonsterTeam(target) == playerInCommand(character.getObjectId()))
-					{
-						_log.info("Monster Team: " + getMonsterTeam(target) + " | Player Team: " + playerInCommand(character.getObjectId()));
-						return false;
-					}
-					
-					return true;
-				}
-				
-				if (skill != null)
-				{
-					if (ALLOW_RESTRICT_SKILLS)
-					{
-						for (int[] restrict : RESTRICT_SKILLS)
-						{
-							if (skill.getId() == restrict[0])
-							{
-								if (restrict[1] == 0)
-								{
-									return character.getStoredId().equals(target.getStoredId());
-								}
-								
-								if (restrict[1] == 1)
-								{
-									return playerInCommand(character.getStoredId()) == playerInCommand(target.getStoredId());
-								}
-							}
-						}
-					}
-					
-					if (playerInCommand(target.getStoredId()) > 0)
-					{
-						switch (skill.getSkillType())
-						{
-							case BUFF:
-							case HEAL:
-							case HEAL_PERCENT:
-							case BALANCE:
-							case COMBATPOINTHEAL:
-							case MANAHEAL:
-							case MANAHEAL_PERCENT:
-								return playerInCommand(character.getStoredId()) == playerInCommand(target.getStoredId());
-								
-							default:
-								for (Creature targ : skill.getTargets(character, target, true))
-								{
-									if (targ instanceof Player)
-									{
-										if (playerInCommand(character.getStoredId()) == playerInCommand(targ.getStoredId()))
-										{
-											return false;
-										}
-									}
-									else if (getMonsterTeam(targ) == playerInCommand(character.getObjectId()))
-									{
-										return false;
-									}
-								}
-						}
-					}
-					
-					if (playerInCommand(target.getStoredId()) == 0)
-					{
-						switch (skill.getSkillType())
-						{
-							case MDAM:
-							case PDAM:
-							case DISCORD:
-							case AGGRESSION:
-							case BLEED:
-							case STUN:
-							case DEBUFF:
-								return playerInCommand(character.getStoredId()) != playerInCommand(target.getStoredId());
-								
-							default:
-								for (Creature targ : skill.getTargets(character, target, true))
-								{
-									if (targ instanceof Player)
-									{
-										if (playerInCommand(character.getStoredId()) != playerInCommand(targ.getStoredId()))
-										{
-											return false;
-										}
-									}
-									else if (getMonsterTeam(targ) == playerInCommand(character.getObjectId()))
-									{
-										return false;
-									}
-								}
-						}
-					}
-					
-					for (Creature targ : skill.getTargets(character, target, true))
-					{
-						if (targ instanceof Player)
-						{
-							if (playerInCommand(character.getStoredId()) == playerInCommand(targ.getStoredId()))
-							{
-								return false;
-							}
-						}
-						else if (getMonsterTeam(targ) == playerInCommand(character.getObjectId()))
-						{
-							return false;
-						}
-					}
-				}
-				
-				return playerInCommand(character.getStoredId()) != playerInCommand(target.getStoredId());
-			}
-			
-			if ((playerInCommand(target.getStoredId()) > 0) || (getMonsterTeam(target) > 0))
-			{
-				return false;
-			}
-		}
-		
-		return true;
-	}
-	
-	/**
-	 * Method getMonsterTeam.
-	 * @param monster Creature
-	 * @return int
-	 */
-	private static int getMonsterTeam(Creature monster)
-	{
-		if (monster.getStoredId().equals(greenFlag.getStoredId()))
-		{
-			return 1;
-		}
-		else if (monster.getStoredId().equals(whiteFlag.getStoredId()))
-		{
-			return 2;
-		}
-		else if (monster.getStoredId().equals(yellowFlag.getStoredId()))
-		{
-			return 3;
-		}
-		else if (monster.getStoredId().equals(blackFlag.getStoredId()))
-		{
-			return 4;
-		}
-		else
-		{
-			return 0;
-		}
-	}
-	
-	/**
-	 * Method sameIp.
-	 * @param player Player
-	 * @return boolean
-	 */
-	public static boolean sameIp(Player player)
-	{
-		Player part;
-		
-		for (long objId : players_list1)
-		{
-			part = GameObjectsStorage.getAsPlayer(objId);
-			
-			if (part == null)
-			{
-				continue;
-			}
-			
-			if (player.getNetConnection().getIpAddr().equals(part.getNetConnection().getIpAddr()))
-			{
-				return true;
-			}
-		}
-		
-		for (long objId : players_list2)
-		{
-			part = GameObjectsStorage.getAsPlayer(objId);
-			
-			if (part == null)
-			{
-				continue;
-			}
-			
-			if (player.getNetConnection().getIpAddr().startsWith(part.getNetConnection().getIpAddr()))
-			{
-				return true;
-			}
-		}
-		
-		for (long objId : players_list3)
-		{
-			part = GameObjectsStorage.getAsPlayer(objId);
-			
-			if (part == null)
-			{
-				continue;
-			}
-			
-			if (player.getNetConnection().getIpAddr().startsWith(part.getNetConnection().getIpAddr()))
-			{
-				return true;
-			}
-		}
-		
-		for (long objId : players_list4)
-		{
-			part = GameObjectsStorage.getAsPlayer(objId);
-			
-			if (part == null)
-			{
-				continue;
-			}
-			
-			if (player.getNetConnection().getIpAddr().startsWith(part.getNetConnection().getIpAddr()))
-			{
-				return true;
-			}
-		}
-		
-		return false;
 	}
 	
 	private static class ZoneListener implements OnZoneEnterLeaveListener
 	{
-		/**
-		 * Constructor for ZoneListener.
-		 */
 		public ZoneListener()
 		{
 		}
 		
-		/**
-		 * Method onZoneEnter.
-		 * @param zone Zone
-		 * @param cha Creature
-		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
-		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
@@ -3176,21 +1173,13 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 			{
 				return;
 			}
-			
 			Player player = cha.getPlayer();
-			
-			if ((_status > 0) && (player != null) && !live_list.contains(player.getStoredId()))
+			if ((_status > 0) && (player != null) && !players_list1.contains(player.getStoredId()) && !players_list2.contains(player.getStoredId()))
 			{
-				ThreadPoolManager.getInstance().schedule(new TeleportTask(cha, new Location(147451, 46728, -3410)), 3000);
+				player.teleToLocation(147451, 46728, -3410, ReflectionManager.DEFAULT);
 			}
 		}
 		
-		/**
-		 * Method onZoneLeave.
-		 * @param zone Zone
-		 * @param cha Creature
-		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
-		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
@@ -3198,18 +1187,382 @@ public final class CTF extends Functions implements ScriptFile, OnDeathListener,
 			{
 				return;
 			}
-			
 			Player player = cha.getPlayer();
-			
-			if ((_status > 1) && (player != null) && (player.getTeam() != TeamType.NONE) && live_list.contains(player.getStoredId()))
+			if ((_status > 1) && (player != null) && (player.getTeam() != TeamType.NONE) && (players_list1.contains(player.getStoredId()) || players_list2.contains(player.getStoredId())))
 			{
 				double angle = PositionUtils.convertHeadingToDegree(cha.getHeading());
 				double radian = Math.toRadians(angle - 90);
-				int x = (int) (cha.getX() + (50 * Math.sin(radian)));
-				int y = (int) (cha.getY() - (50 * Math.cos(radian)));
+				int x = (int) (cha.getX() + (250 * Math.sin(radian)));
+				int y = (int) (cha.getY() - (250 * Math.cos(radian)));
 				int z = cha.getZ();
-				ThreadPoolManager.getInstance().schedule(new TeleportTask(cha, new Location(x, y, z)), 3000);
+				player.teleToLocation(x, y, z, _reflection);
 			}
 		}
+	}
+	
+	private static class RedBaseZoneListener implements OnZoneEnterLeaveListener
+	{
+		public RedBaseZoneListener()
+		{
+		}
+		
+		@Override
+		public void onZoneEnter(Zone zone, Creature actor)
+		{
+			if (actor == null)
+			{
+				return;
+			}
+			Player player = actor.getPlayer();
+			if ((_status > 0) && (player != null) && players_list2.contains(player.getStoredId()) && player.isTerritoryFlagEquipped())
+			{
+				endBattle(1);
+			}
+			
+		}
+		
+		@Override
+		public void onZoneLeave(Zone zone, Creature actor)
+		{
+		}
+		
+	}
+	
+	private static class BlueBaseZoneListener implements OnZoneEnterLeaveListener
+	{
+		public BlueBaseZoneListener()
+		{
+		}
+		
+		@Override
+		public void onZoneEnter(Zone zone, Creature actor)
+		{
+			if (actor == null)
+			{
+				return;
+			}
+			Player player = actor.getPlayer();
+			if ((_status > 0) && (player != null) && players_list1.contains(player.getStoredId()) && player.isTerritoryFlagEquipped())
+			{
+				endBattle(2);
+			}
+		}
+		
+		@Override
+		public void onZoneLeave(Zone zone, Creature actor)
+		{
+		}
+		
+	}
+	
+	private static void removePlayer(Player player)
+	{
+		if (player != null)
+		{
+			players_list1.remove(player.getStoredId());
+			players_list2.remove(player.getStoredId());
+			player.setTeam(TeamType.NONE);
+			player.setIsInCtF(false);
+			dropFlag(player);
+			
+			if (!Config.EVENT_CtFAllowMultiReg)
+			{
+				boxes.remove(player.getStoredId());
+			}
+		}
+	}
+	
+	private static void addFlag(Player player, int flagId)
+	{
+		ItemInstance item = ItemFunctions.createItem(flagId);
+		item.setCustomType1(77);
+		item.setCustomFlags(ItemInstance.FLAG_NO_DESTROY | ItemInstance.FLAG_NO_TRADE | ItemInstance.FLAG_NO_DROP | ItemInstance.FLAG_NO_TRANSFER);
+		player.getInventory().addItem(item);
+		player.getInventory().equipItem(item);
+		player.sendChanges();
+		// player.sendPacket(SystemMsg.YOU_VE_ACQUIRED_THE_WARD_MOVE_QUICKLY_TO_YOUR_FORCES__OUTPOST);
+		player.setCTFflag(true);
+	}
+	
+	private static void removeFlags()
+	{
+		for (Player player : getPlayers(players_list1))
+		{
+			removeFlag(player);
+		}
+		for (Player player : getPlayers(players_list2))
+		{
+			removeFlag(player);
+		}
+	}
+	
+	private static void removeFlag(Player player)
+	{
+		if ((player != null) && player.isTerritoryFlagEquipped())
+		{
+			ItemInstance flag = player.getActiveWeaponInstance();
+			if ((flag != null) && (flag.getCustomType1() == 77))
+			{
+				flag.setCustomFlags(0);
+				player.getInventory().destroyItem(flag, 1);
+				player.setCTFflag(false);
+				player.broadcastUserInfo();
+			}
+		}
+	}
+	
+	private static void dropFlag(Player player)
+	{
+		if ((player != null) && player.isTerritoryFlagEquipped())
+		{
+			ItemInstance flag = player.getActiveWeaponInstance();
+			if ((flag != null) && (flag.getCustomType1() == 77))
+			{
+				flag.setCustomFlags(0);
+				player.getInventory().destroyItem(flag, 1);
+				player.setCTFflag(false);
+				player.broadcastUserInfo();
+				if (flag.getItemId() == 13560)
+				{
+					redFlag.setXYZ(player.getLoc().getX(), player.getLoc().getY(), player.getLoc().getZ());
+					redFlag.setReflection(_reflection);
+					redFlag.spawnMe();
+				}
+				else if (flag.getItemId() == 13561)
+				{
+					blueFlag.setXYZ(player.getLoc().getX(), player.getLoc().getY(), player.getLoc().getZ());
+					blueFlag.setReflection(_reflection);
+					blueFlag.spawnMe();
+				}
+			}
+		}
+	}
+	
+	private static List<Player> getPlayers(List<Long> list)
+	{
+		List<Player> result = new ArrayList<>();
+		for (Long storeId : list)
+		{
+			Player player = GameObjectsStorage.getAsPlayer(storeId);
+			if (player != null)
+			{
+				result.add(player);
+			}
+		}
+		return result;
+	}
+	
+	private static void openColiseumDoors()
+	{
+		for (DoorInstance door : _reflection.getDoors())
+		{
+			door.openMe();
+		}
+	}
+	
+	private static void closeColiseumDoors()
+	{
+		for (DoorInstance door : _reflection.getDoors())
+		{
+			door.openMe();
+		}
+	}
+	
+	@Override
+	public void onDeath(Creature self, Creature killer)
+	{
+		if ((_status > 1) && (self != null) && self.isPlayer() && (self.getTeam() != TeamType.NONE) && (players_list1.contains(self.getStoredId()) || players_list2.contains(self.getStoredId())))
+		{
+			dropFlag((Player) self);
+			executeTask("events.CTF.CTF", "resurrectAtBase", new Object[]
+			{
+				(Player) self
+			}, 10 * 1000);
+		}
+	}
+	
+	@Override
+	public void onPlayerExit(Player player)
+	{
+		if ((player == null) || (player.getTeam() == TeamType.NONE))
+		{
+			return;
+		}
+		
+		if ((_status == 0) && _isRegistrationActive && (player.getTeam() != TeamType.NONE) && (players_list1.contains(player.getStoredId()) || players_list2.contains(player.getStoredId())))
+		{
+			removePlayer(player);
+			return;
+		}
+		
+		if ((_status == 1) && (players_list1.contains(player.getStoredId()) || players_list2.contains(player.getStoredId())))
+		{
+			removePlayer(player);
+			
+			player.teleToLocation(_savedCoord.get(player.getStoredId()), ReflectionManager.DEFAULT);
+			
+			return;
+		}
+		
+		OnEscape(player);
+	}
+	
+	public static void mageBuff(Player player)
+	{
+		if (mage_buffs == null)
+		{
+			return;
+		}
+		
+		for (int[] mage_buff : mage_buffs)
+		{
+			buff = SkillTable.getInstance().getInfo(mage_buff[0], mage_buff[1]);
+			buff.getEffects(player, player, false, false);
+		}
+	}
+	
+	public static void fighterBuff(Player player)
+	{
+		if (fighter_buffs == null)
+		{
+			return;
+		}
+		
+		for (int[] fighter_buff : fighter_buffs)
+		{
+			buff = SkillTable.getInstance().getInfo(fighter_buff[0], fighter_buff[1]);
+			buff.getEffects(player, player, false, false);
+		}
+	}
+	
+	private static boolean checkDualBox(Player player)
+	{
+		if (!Config.EVENT_CtFAllowMultiReg)
+		{
+			if ("IP".equalsIgnoreCase(Config.EVENT_CtFCheckWindowMethod))
+			{
+				if (boxes.containsValue(player.getIP()))
+				{
+					show(new CustomMessage("scripts.events.CtF.CancelledBox", player), player);
+					return false;
+				}
+			}
+			// else if("HWid".equalsIgnoreCase(Config.EVENT_CtFCheckWindowMethod)) {
+			// if(boxes.containsValue(player.getNetConnection().getHWID())) {
+			// show(new CustomMessage("scripts.events.CtF.CancelledBox", player), player);
+			// return false;
+			// }
+			// }
+		}
+		return true;
+	}
+	
+	public static void buffPlayers()
+	{
+		
+		for (Player player : getPlayers(players_list1))
+		{
+			if (player.isMageClass())
+			{
+				mageBuff(player);
+			}
+			else
+			{
+				fighterBuff(player);
+			}
+		}
+		
+		for (Player player : getPlayers(players_list2))
+		{
+			if (player.isMageClass())
+			{
+				mageBuff(player);
+			}
+			else
+			{
+				fighterBuff(player);
+			}
+		}
+	}
+	
+	public static void buffPlayer(Player player)
+	{
+		if (player.isMageClass())
+		{
+			mageBuff(player);
+		}
+		else
+		{
+			fighterBuff(player);
+		}
+	}
+	
+	public class StartTask extends RunnableImpl
+	{
+		
+		@Override
+		public void runImpl()
+		{
+			if (!_active)
+			{
+				return;
+			}
+			
+			if (isPvPEventStarted())
+			{
+				_log.info("CtF not started: another event is already running");
+				return;
+			}
+			
+			for (Residence c : ResidenceHolder.getInstance().getResidenceList(Castle.class))
+			{
+				if ((c.getSiegeEvent() != null) && c.getSiegeEvent().isInProgress())
+				{
+					_log.debug("CtF not started: CastleSiege in progress");
+					return;
+				}
+			}
+			
+			if (Config.EVENT_CtFCategories)
+			{
+				start(new String[]
+				{
+					"1",
+					"1"
+				});
+			}
+			else
+			{
+				start(new String[]
+				{
+					"-1",
+					"-1"
+				});
+			}
+		}
+	}
+	
+	public static void teleportPlayersToSavedCoords()
+	{
+		for (Player player : getPlayers(players_list1))
+		{
+			if ((player == null) || !_savedCoord.containsKey(player.getStoredId()))
+			{
+				continue;
+			}
+			player.setRegisteredInEvent(false);
+			player.teleToLocation(_savedCoord.get(player.getStoredId()), ReflectionManager.DEFAULT);
+		}
+		for (Player player : getPlayers(players_list2))
+		{
+			if ((player == null) || !_savedCoord.containsKey(player.getStoredId()))
+			{
+				continue;
+			}
+			player.setRegisteredInEvent(false);
+			player.teleToLocation(_savedCoord.get(player.getStoredId()), ReflectionManager.DEFAULT);
+		}
+		
+		_savedCoord.clear();
 	}
 }

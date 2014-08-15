@@ -13,12 +13,15 @@
 package events.lastHero;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 
 import lineage2.commons.threading.RunnableImpl;
-import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
@@ -34,90 +37,56 @@ import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
-import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.Zone;
+import lineage2.gameserver.model.Zone.ZoneType;
 import lineage2.gameserver.model.actor.listener.CharListenerList;
 import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.model.entity.Reflection;
+import lineage2.gameserver.model.entity.events.impl.DuelEvent;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.entity.residence.Residence;
+import lineage2.gameserver.model.instances.DoorInstance;
 import lineage2.gameserver.network.serverpackets.Revive;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
+import lineage2.gameserver.skills.AbnormalEffect;
 import lineage2.gameserver.tables.SkillTable;
+import lineage2.gameserver.templates.DoorTemplate;
+import lineage2.gameserver.templates.ZoneTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
-public final class LastHero extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
+public class LastHero extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
 {
 	private static final Logger _log = LoggerFactory.getLogger(LastHero.class);
 	
-	/**
-	 * @author Mobius
-	 */
-	private final class StartTask extends RunnableImpl
+	private static final int[] doors = new int[]
 	{
-		/**
-		 * 
-		 */
-		public StartTask()
-		{
-		}
-		
-		/**
-		 * Method runImpl.
-		 */
-		@Override
-		public void runImpl()
-		{
-			if (!_active)
-			{
-				return;
-			}
-			
-			if (isPvPEventStarted())
-			{
-				_log.info("Last Hero not started: another event is already running");
-				return;
-			}
-			
-			if (!Rnd.chance(Config.EVENT_LastHeroChanceToStart))
-			{
-				_log.debug("LastHero not started: chance");
-				return;
-			}
-			
-			for (Residence c : ResidenceHolder.getInstance().getResidenceList(Castle.class))
-			{
-				if ((c.getSiegeEvent() != null) && c.getSiegeEvent().isInProgress())
-				{
-					_log.debug("LastHero not started: CastleSiege in progress");
-					return;
-				}
-			}
-			
-			start(new String[]
-			{
-				"1",
-				"1"
-			});
-		}
-	}
+		24190001,
+		24190002,
+		24190003,
+		24190004
+	};
 	
 	private static ScheduledFuture<?> _startTask;
+	
 	private static List<Long> players_list = new CopyOnWriteArrayList<>();
 	static List<Long> live_list = new CopyOnWriteArrayList<>();
+	private static int[][] mage_buffs = new int[Config.EVENT_LHMageBuffs.length][2];
+	private static int[][] fighter_buffs = new int[Config.EVENT_LHFighterBuffs.length][2];
+	
+	private static Map<Long, Location> playerRestoreCoord = new LinkedHashMap<>();
+	
+	private static Map<Long, String> boxes = new LinkedHashMap<>();
 	private static boolean _isRegistrationActive = false;
 	static int _status = 0;
 	private static int _time_to_start;
@@ -125,34 +94,73 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 	private static int _minLevel;
 	private static int _maxLevel;
 	private static int _autoContinue = 0;
+	static boolean _active = false;
+	private static Skill buff;
 	private static ScheduledFuture<?> _endTask;
-	private static final Zone _zone = ReflectionUtils.getZone("[colosseum_battle]");
-	private static final ZoneListener _zoneListener = new ZoneListener();
+	
+	static Reflection reflection = ReflectionManager.LAST_HERO;
+	private static Map<String, ZoneTemplate> _zones = new HashMap<>();
+	private static IntObjectMap<DoorTemplate> _doors = new HashIntObjectMap<>();
+	
+	private static Zone _zone;
+	private static ZoneListener _zoneListener = new ZoneListener();
+	
 	private static final Location _enter = new Location(149505, 46719, -3417);
 	
-	/**
-	 * Method onLoad.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
-	 */
 	@Override
 	public void onLoad()
 	{
 		CharListenerList.addGlobal(this);
+		
+		_zones.put("[colosseum_battle]", ReflectionUtils.getZone("[colosseum_battle]").getTemplate());
+		for (final int doorId : doors)
+		{
+			_doors.put(doorId, ReflectionUtils.getDoor(doorId).getTemplate());
+		}
+		reflection.init(_doors, _zones);
+		_zone = reflection.getZone("[colosseum_battle]");
 		_zone.addListener(_zoneListener);
-		_startTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new StartTask(), 3600000, 3600000);
+		
 		_active = ServerVariables.getString("LastHero", "off").equalsIgnoreCase("on");
+		
+		if (isActive())
+		{
+			scheduleEventStart();
+		}
+		
+		int i = 0;
+		
+		if (Config.EVENT_LHBuffPlayers && (Config.EVENT_LHMageBuffs.length != 0))
+		{
+			for (String skill : Config.EVENT_LHMageBuffs)
+			{
+				String[] splitSkill = skill.split(",");
+				mage_buffs[i][0] = Integer.parseInt(splitSkill[0]);
+				mage_buffs[i][1] = Integer.parseInt(splitSkill[1]);
+				i++;
+			}
+		}
+		
+		i = 0;
+		
+		if (Config.EVENT_LHBuffPlayers && (Config.EVENT_LHFighterBuffs.length != 0))
+		{
+			for (String skill : Config.EVENT_LHFighterBuffs)
+			{
+				String[] splitSkill = skill.split(",");
+				fighter_buffs[i][0] = Integer.parseInt(splitSkill[0]);
+				fighter_buffs[i][1] = Integer.parseInt(splitSkill[1]);
+				i++;
+			}
+		}
+		
 		_log.info("Loaded Event: Last Hero");
 	}
 	
-	/**
-	 * Method onReload.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
-	 */
 	@Override
 	public void onReload()
 	{
 		_zone.removeListener(_zoneListener);
-		
 		if (_startTask != null)
 		{
 			_startTask.cancel(false);
@@ -160,34 +168,20 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
-	/**
-	 * Method onShutdown.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
-	 */
 	@Override
 	public void onShutdown()
 	{
 		onReload();
 	}
 	
-	static boolean _active = false;
-	
-	/**
-	 * Method isActive.
-	 * @return boolean
-	 */
 	private static boolean isActive()
 	{
 		return _active;
 	}
 	
-	/**
-	 * Method activateEvent.
-	 */
 	public void activateEvent()
 	{
 		Player player = getSelf();
-		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -197,9 +191,8 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		{
 			if (_startTask == null)
 			{
-				_startTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new StartTask(), 3600000, 3600000);
+				scheduleEventStart();
 			}
-			
 			ServerVariables.set("LastHero", "on");
 			_log.info("Event 'Last Hero' activated.");
 			Announcements.getInstance().announceByCustomMessage("scripts.events.LastHero.AnnounceEventStarted", null);
@@ -210,16 +203,27 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		}
 		
 		_active = true;
+		
 		show("admin/events.htm", player);
 	}
 	
-	/**
-	 * Method deactivateEvent.
-	 */
+	public void teleportPlayers()
+	{
+		for (Player player : getPlayers(players_list))
+		{
+			if ((player == null) || !playerRestoreCoord.containsKey(player.getStoredId()))
+			{
+				continue;
+			}
+			player.teleToLocation(playerRestoreCoord.get(player.getStoredId()), ReflectionManager.DEFAULT);
+			player.setRegisteredInEvent(false);
+		}
+		playerRestoreCoord.clear();
+	}
+	
 	public void deactivateEvent()
 	{
 		Player player = getSelf();
-		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -232,7 +236,6 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 				_startTask.cancel(false);
 				_startTask = null;
 			}
-			
 			ServerVariables.unset("LastHero");
 			_log.info("Event 'Last Hero' deactivated.");
 			Announcements.getInstance().announceByCustomMessage("scripts.events.LastHero.AnnounceEventStoped", null);
@@ -243,91 +246,55 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		}
 		
 		_active = false;
+		
 		show("admin/events.htm", player);
 	}
 	
-	/**
-	 * Method isRunned.
-	 * @return boolean
-	 */
 	public static boolean isRunned()
 	{
 		return _isRegistrationActive || (_status > 0);
 	}
 	
-	/**
-	 * Method getMinLevelForCategory.
-	 * @param category int
-	 * @return int
-	 */
 	public static int getMinLevelForCategory(int category)
 	{
 		switch (category)
 		{
 			case 1:
 				return 20;
-				
 			case 2:
 				return 30;
-				
 			case 3:
 				return 40;
-				
 			case 4:
 				return 52;
-				
 			case 5:
 				return 62;
-				
 			case 6:
 				return 76;
-				
-			case 7:
-				return 86;
 		}
-		
 		return 0;
 	}
 	
-	/**
-	 * Method getMaxLevelForCategory.
-	 * @param category int
-	 * @return int
-	 */
 	public static int getMaxLevelForCategory(int category)
 	{
 		switch (category)
 		{
 			case 1:
 				return 29;
-				
 			case 2:
 				return 39;
-				
 			case 3:
 				return 51;
-				
 			case 4:
 				return 61;
-				
 			case 5:
 				return 75;
-				
 			case 6:
-				return 85;
-				
-			case 7:
 				return 99;
 		}
-		
 		return 0;
 	}
 	
-	/**
-	 * Method getCategory.
-	 * @param level int
-	 * @return int
-	 */
 	public static int getCategory(int level)
 	{
 		if ((level >= 20) && (level <= 29))
@@ -350,35 +317,23 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		{
 			return 5;
 		}
-		else if ((level >= 76) && (level <= 85))
+		else if (level >= 76)
 		{
 			return 6;
 		}
-		else if (level >= 86)
-		{
-			return 7;
-		}
-		
 		return 0;
 	}
 	
-	/**
-	 * Method start.
-	 * @param var String[]
-	 */
 	public void start(String[] var)
 	{
 		Player player = getSelf();
-		
 		if (var.length != 2)
 		{
 			show(new CustomMessage("common.Error", player), player);
 			return;
 		}
-		
 		Integer category;
 		Integer autoContinue;
-		
 		try
 		{
 			category = Integer.valueOf(var[0]);
@@ -412,9 +367,11 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		
 		_status = 0;
 		_isRegistrationActive = true;
-		_time_to_start = Config.EVENT_LastHeroTime;
+		_time_to_start = Config.EVENT_LHTime;
+		
 		players_list = new CopyOnWriteArrayList<>();
 		live_list = new CopyOnWriteArrayList<>();
+		playerRestoreCoord = new LinkedHashMap<>();
 		String[] param =
 		{
 			String.valueOf(_time_to_start),
@@ -422,23 +379,16 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 			String.valueOf(_maxLevel)
 		};
 		sayToAll("scripts.events.LastHero.AnnouncePreStart", param);
+		
 		executeTask("events.lastHero.LastHero", "question", new Object[0], 10000);
 		executeTask("events.lastHero.LastHero", "announce", new Object[0], 60000);
 	}
 	
-	/**
-	 * Method sayToAll.
-	 * @param address String
-	 * @param replacements String[]
-	 */
 	public static void sayToAll(String address, String[] replacements)
 	{
 		Announcements.getInstance().announceByCustomMessage(address, replacements, ChatType.CRITICAL_ANNOUNCE);
 	}
 	
-	/**
-	 * Method question.
-	 */
 	public static void question()
 	{
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
@@ -450,9 +400,6 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
-	/**
-	 * Method announce.
-	 */
 	public static void announce()
 	{
 		if (players_list.size() < 2)
@@ -485,29 +432,21 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
-	/**
-	 * Method addPlayer.
-	 */
 	public void addPlayer()
 	{
 		Player player = getSelf();
-		
-		if ((player == null) || !checkPlayer(player, true))
+		if ((player == null) || !checkPlayer(player, true) || !checkDualBox(player))
 		{
 			return;
 		}
 		
 		players_list.add(player.getStoredId());
 		live_list.add(player.getStoredId());
+		
 		show(new CustomMessage("scripts.events.LastHero.Registered", player), player);
+		player.setRegisteredInEvent(true);
 	}
 	
-	/**
-	 * Method checkPlayer.
-	 * @param player Player
-	 * @param first boolean
-	 * @return boolean
-	 */
 	public static boolean checkPlayer(Player player, boolean first)
 	{
 		if (first && (!_isRegistrationActive || player.isDead()))
@@ -518,7 +457,20 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		
 		if (first && players_list.contains(player.getStoredId()))
 		{
+			player.setRegisteredInEvent(false);
 			show(new CustomMessage("scripts.events.LastHero.Cancelled", player), player);
+			if (players_list.contains(player.getStoredId()))
+			{
+				players_list.remove(player.getStoredId());
+			}
+			if (live_list.contains(player.getStoredId()))
+			{
+				live_list.remove(player.getStoredId());
+			}
+			if (boxes.containsKey(player.getStoredId()))
+			{
+				boxes.remove(player.getStoredId());
+			}
 			return false;
 		}
 		
@@ -534,6 +486,12 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 			return false;
 		}
 		
+		if (player.isCursedWeaponEquipped())
+		{
+			show(new CustomMessage("scripts.events.CtF.Cancelled", player), player);
+			return false;
+		}
+		
 		if (player.isInDuel())
 		{
 			show(new CustomMessage("scripts.events.LastHero.CancelledDuel", player), player);
@@ -542,7 +500,7 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		
 		if (player.getTeam() != TeamType.NONE)
 		{
-			show(new CustomMessage("scripts.events.LastHero.CancelledOtherEvent", player), player);
+			show(new CustomMessage("scripts.events.CtF.CancelledOtherEvent", player), player);
 			return false;
 		}
 		
@@ -558,30 +516,46 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 			return false;
 		}
 		
+		if (player.isInObserverMode())
+		{
+			show(new CustomMessage("scripts.event.LastHero.CancelledObserver", player), player);
+			return false;
+		}
+		if (!Config.ALLOW_HEROES_LASTHERO && player.isHero())
+		{
+			show(new CustomMessage("scripts.event.LastHero.CancelledHero", player), player);
+			return false;
+		}
+		
 		return true;
 	}
 	
-	/**
-	 * Method prepare.
-	 */
 	public static void prepare()
 	{
-		ReflectionUtils.getDoor(24190002).closeMe();
-		ReflectionUtils.getDoor(24190003).closeMe();
+		
+		for (DoorInstance door : reflection.getDoors())
+		{
+			door.openMe();
+		}
+		
+		for (Zone z : reflection.getZones())
+		{
+			z.setType(ZoneType.peace_zone);
+		}
+		
 		cleanPlayers();
 		clearArena();
+		
 		executeTask("events.lastHero.LastHero", "ressurectPlayers", new Object[0], 1000);
 		executeTask("events.lastHero.LastHero", "healPlayers", new Object[0], 2000);
-		executeTask("events.lastHero.LastHero", "saveBackCoords", new Object[0], 3000);
 		executeTask("events.lastHero.LastHero", "paralyzePlayers", new Object[0], 4000);
-		executeTask("events.lastHero.LastHero", "teleportPlayersToColiseum", new Object[0], 5000);
+		executeTask("events.lastHero.LastHero", "teleportPlayersToColiseum", new Object[0], 3000);
+		executeTask("events.lastHero.LastHero", "buffPlayers", new Object[0], 5000);
 		executeTask("events.lastHero.LastHero", "go", new Object[0], 60000);
+		
 		sayToAll("scripts.events.LastHero.AnnounceFinalCountdown", null);
 	}
 	
-	/**
-	 * Method go.
-	 */
 	public static void go()
 	{
 		_status = 2;
@@ -589,19 +563,23 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		checkLive();
 		clearArena();
 		sayToAll("scripts.events.LastHero.AnnounceFight", null);
+		for (Zone z : reflection.getZones())
+		{
+			z.setType(ZoneType.battle_zone);
+		}
 		_endTask = executeTask("events.lastHero.LastHero", "endBattle", new Object[0], 300000);
 	}
 	
-	/**
-	 * Method endBattle.
-	 */
 	public static void endBattle()
 	{
-		ReflectionUtils.getDoor(24190002).openMe();
-		ReflectionUtils.getDoor(24190003).openMe();
 		_status = 0;
 		removeAura();
 		
+		for (Zone z : reflection.getZones())
+		{
+			z.setType(ZoneType.peace_zone);
+		}
+		boxes.clear();
 		if (live_list.size() == 1)
 		{
 			for (Player player : getPlayers(live_list))
@@ -612,14 +590,13 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 				};
 				sayToAll("scripts.events.LastHero.AnnounceWiner", repl);
 				addItem(player, Config.EVENT_LastHeroItemID, Math.round(Config.EVENT_LastHeroRateFinal ? player.getLevel() * Config.EVENT_LastHeroItemCOUNTFinal : 1 * Config.EVENT_LastHeroItemCOUNTFinal));
+				player.setHero(true);
 				break;
 			}
 		}
-		
 		sayToAll("scripts.events.LastHero.AnnounceEnd", null);
 		executeTask("events.lastHero.LastHero", "end", new Object[0], 30000);
 		_isRegistrationActive = false;
-		
 		if (_endTask != null)
 		{
 			_endTask.cancel(false);
@@ -627,135 +604,91 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
-	/**
-	 * Method end.
-	 */
 	public static void end()
 	{
 		executeTask("events.lastHero.LastHero", "ressurectPlayers", new Object[0], 1000);
 		executeTask("events.lastHero.LastHero", "healPlayers", new Object[0], 2000);
-		executeTask("events.lastHero.LastHero", "teleportPlayersToSavedCoords", new Object[0], 3000);
+		executeTask("events.lastHero.LastHero", "teleportPlayers", new Object[0], 3000);
 		executeTask("events.lastHero.LastHero", "autoContinue", new Object[0], 10000);
 	}
 	
-	/**
-	 * Method autoContinue.
-	 */
 	public void autoContinue()
 	{
 		if (_autoContinue > 0)
 		{
-			if (_autoContinue >= 7)
+			if (_autoContinue >= 6)
 			{
 				_autoContinue = 0;
 				return;
 			}
-			
 			start(new String[]
 			{
 				"" + (_autoContinue + 1),
 				"" + (_autoContinue + 1)
 			});
 		}
-	}
-	
-	/**
-	 * Method saveBackCoords.
-	 */
-	public static void saveBackCoords()
-	{
-		for (Player player : getPlayers(players_list))
+		else
 		{
-			player.setVar("LastHero_backCoords", player.getX() + " " + player.getY() + " " + player.getZ() + " " + player.getReflectionId(), -1);
+			scheduleEventStart();
 		}
 	}
 	
-	/**
-	 * Method teleportPlayersToColiseum.
-	 */
 	public static void teleportPlayersToColiseum()
 	{
 		for (Player player : getPlayers(players_list))
 		{
+			
 			unRide(player);
-			unSummonPet(player, true);
-			player.teleToLocation(Location.findPointToStay(_enter, 150, 500, ReflectionManager.DEFAULT.getGeoIndex()), ReflectionManager.DEFAULT);
-		}
-	}
-	
-	/**
-	 * Method teleportPlayersToSavedCoords.
-	 */
-	public static void teleportPlayersToSavedCoords()
-	{
-		for (Player player : getPlayers(players_list))
-		{
-			try
+			if (!Config.EVENT_LHAllowSummons)
 			{
-				String var = player.getVar("LastHero_backCoords");
-				
-				if ((var == null) || var.equals(""))
-				{
-					continue;
-				}
-				
-				String[] coords = var.split(" ");
-				
-				if (coords.length != 4)
-				{
-					continue;
-				}
-				
-				player.teleToLocation(Integer.parseInt(coords[0]), Integer.parseInt(coords[1]), Integer.parseInt(coords[2]), Integer.parseInt(coords[3]));
-				player.unsetVar("LastHero_backCoords");
+				unSummonPet(player, true);
 			}
-			catch (Exception e)
+			
+			DuelEvent duel = player.getEvent(DuelEvent.class);
+			if (duel != null)
 			{
-				e.printStackTrace();
+				duel.abortDuel(player);
+			}
+			
+			playerRestoreCoord.put(player.getStoredId(), new Location(player.getX(), player.getY(), player.getZ()));
+			player.teleToLocation(Location.findPointToStay(_enter, 150, 500, ReflectionManager.DEFAULT.getGeoIndex()), reflection);
+			player.setIsInLastHero(true);
+			if (!Config.EVENT_LHAllowBuffs)
+			{
+				player.getEffectList().stopAllEffects();
 			}
 		}
 	}
 	
-	/**
-	 * Method paralyzePlayers.
-	 */
 	public static void paralyzePlayers()
 	{
-		Skill revengeSkill = SkillTable.getInstance().getInfo(Skill.SKILL_RAID_CURSE, 1);
-		
 		for (Player player : getPlayers(players_list))
 		{
-			player.getEffectList().stopEffect(Skill.SKILL_MYSTIC_IMMUNITY);
-			revengeSkill.getEffects(player, player, false, false);
-			
-			for (Summon summon : player.getSummonList())
+			if (player == null)
 			{
-				revengeSkill.getEffects(player, summon, false, false);
+				continue;
+			}
+			
+			if (!player.isRooted())
+			{
+				player.startRooted();
+				player.startAbnormalEffect(AbnormalEffect.ROOT);
 			}
 		}
 	}
 	
-	/**
-	 * Method upParalyzePlayers.
-	 */
 	public static void upParalyzePlayers()
 	{
 		for (Player player : getPlayers(players_list))
 		{
-			player.getEffectList().stopEffect(Skill.SKILL_RAID_CURSE);
-			
-			for (Summon summon : player.getSummonList())
+			if (player.isRooted())
 			{
-				summon.getEffectList().stopEffect(Skill.SKILL_RAID_CURSE);
+				player.stopRooted();
+				player.stopAbnormalEffect(AbnormalEffect.ROOT);
 			}
-			
-			player.leaveParty();
 		}
 	}
 	
-	/**
-	 * Method ressurectPlayers.
-	 */
 	public static void ressurectPlayers()
 	{
 		for (Player player : getPlayers(players_list))
@@ -771,9 +704,6 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
-	/**
-	 * Method healPlayers.
-	 */
 	public static void healPlayers()
 	{
 		for (Player player : getPlayers(players_list))
@@ -783,9 +713,6 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
-	/**
-	 * Method cleanPlayers.
-	 */
 	public static void cleanPlayers()
 	{
 		for (Player player : getPlayers(players_list))
@@ -797,9 +724,6 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
-	/**
-	 * Method checkLive.
-	 */
 	public static void checkLive()
 	{
 		List<Long> new_live_list = new CopyOnWriteArrayList<>();
@@ -807,7 +731,6 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		for (Long storeId : live_list)
 		{
 			Player player = GameObjectsStorage.getAsPlayer(storeId);
-			
 			if (player != null)
 			{
 				new_live_list.add(storeId);
@@ -834,20 +757,15 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
-	/**
-	 * Method removeAura.
-	 */
 	public static void removeAura()
 	{
 		for (Player player : getPlayers(live_list))
 		{
 			player.setTeam(TeamType.NONE);
+			player.setIsInLastHero(false);
 		}
 	}
 	
-	/**
-	 * Method clearArena.
-	 */
 	public static void clearArena()
 	{
 		for (GameObject obj : _zone.getObjects())
@@ -855,21 +773,14 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 			if (obj != null)
 			{
 				Player player = obj.getPlayer();
-				
 				if ((player != null) && !live_list.contains(player.getStoredId()))
 				{
-					player.teleToLocation(147451, 46728, -3410);
+					player.teleToLocation(147451, 46728, -3410, ReflectionManager.DEFAULT);
 				}
 			}
 		}
 	}
 	
-	/**
-	 * Method onDeath.
-	 * @param self Creature
-	 * @param killer Creature
-	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
-	 */
 	@Override
 	public void onDeath(Creature self, Creature killer)
 	{
@@ -878,23 +789,14 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 			Player player = (Player) self;
 			loosePlayer(player);
 			checkLive();
-			
 			if ((killer != null) && killer.isPlayer() && ((killer.getPlayer().expertiseIndex - player.expertiseIndex) > 2) && !killer.getPlayer().getIP().equals(player.getIP()))
 			{
 				addItem((Player) killer, Config.EVENT_LastHeroItemID, Math.round(Config.EVENT_LastHeroRate ? player.getLevel() * Config.EVENT_LastHeroItemCOUNT : 1 * Config.EVENT_LastHeroItemCOUNT));
 			}
+			self.getPlayer().setIsInLastHero(false);
 		}
 	}
 	
-	/**
-	 * Method onTeleport.
-	 * @param player Player
-	 * @param x int
-	 * @param y int
-	 * @param z int
-	 * @param reflection Reflection
-	 * @see lineage2.gameserver.listener.actor.player.OnTeleportListener#onTeleport(Player, int, int, int, Reflection)
-	 */
 	@Override
 	public void onTeleport(Player player, int x, int y, int z, Reflection reflection)
 	{
@@ -910,11 +812,6 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
-	/**
-	 * Method onPlayerExit.
-	 * @param player Player
-	 * @see lineage2.gameserver.listener.actor.player.OnPlayerExitListener#onPlayerExit(Player)
-	 */
 	@Override
 	public void onPlayerExit(Player player)
 	{
@@ -931,31 +828,8 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		
 		if ((_status == 1) && live_list.contains(player.getStoredId()))
 		{
+			player.teleToLocation(playerRestoreCoord.get(player.getStoredId()), ReflectionManager.DEFAULT);
 			removePlayer(player);
-			
-			try
-			{
-				String var = player.getVar("LastHero_backCoords");
-				
-				if ((var == null) || var.equals(""))
-				{
-					return;
-				}
-				
-				String[] coords = var.split(" ");
-				
-				if (coords.length != 4)
-				{
-					return;
-				}
-				
-				player.teleToLocation(Integer.parseInt(coords[0]), Integer.parseInt(coords[1]), Integer.parseInt(coords[2]), Integer.parseInt(coords[3]));
-				player.unsetVar("LastHero_backCoords");
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
 			
 			return;
 		}
@@ -967,24 +841,12 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private static class ZoneListener implements OnZoneEnterLeaveListener
 	{
-		/**
-		 * Constructor for ZoneListener.
-		 */
 		public ZoneListener()
 		{
 		}
 		
-		/**
-		 * Method onZoneEnter.
-		 * @param zone Zone
-		 * @param cha Creature
-		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
-		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
@@ -992,21 +854,13 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 			{
 				return;
 			}
-			
 			Player player = cha.getPlayer();
-			
 			if ((_status > 0) && (player != null) && !live_list.contains(player.getStoredId()))
 			{
-				ThreadPoolManager.getInstance().schedule(new TeleportTask(cha, new Location(147451, 46728, -3410)), 3000);
+				player.teleToLocation(147451, 46728, -3410, ReflectionManager.DEFAULT);
 			}
 		}
 		
-		/**
-		 * Method onZoneLeave.
-		 * @param zone Zone
-		 * @param cha Creature
-		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
-		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
@@ -1014,56 +868,19 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 			{
 				return;
 			}
-			
 			Player player = cha.getPlayer();
-			
 			if ((_status > 1) && (player != null) && (player.getTeam() != TeamType.NONE) && live_list.contains(player.getStoredId()))
 			{
-				double angle = PositionUtils.convertHeadingToDegree(cha.getHeading());
-				double radian = Math.toRadians(angle - 90);
-				int x = (int) (cha.getX() + (50 * Math.sin(radian)));
-				int y = (int) (cha.getY() - (50 * Math.cos(radian)));
+				double angle = PositionUtils.convertHeadingToDegree(cha.getHeading()); // ???? ? ????????
+				double radian = Math.toRadians(angle - 90); // ???? ? ????????
+				int x = (int) (cha.getX() + (250 * Math.sin(radian)));
+				int y = (int) (cha.getY() - (250 * Math.cos(radian)));
 				int z = cha.getZ();
-				ThreadPoolManager.getInstance().schedule(new TeleportTask(cha, new Location(x, y, z)), 3000);
+				player.teleToLocation(x, y, z, reflection);
 			}
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
-	private static class TeleportTask extends RunnableImpl
-	{
-		Location loc;
-		Creature target;
-		
-		/**
-		 * Constructor for TeleportTask.
-		 * @param target Creature
-		 * @param loc Location
-		 */
-		public TeleportTask(Creature target, Location loc)
-		{
-			this.target = target;
-			this.loc = loc;
-			target.block();
-		}
-		
-		/**
-		 * Method runImpl.
-		 */
-		@Override
-		public void runImpl()
-		{
-			target.unblock();
-			target.teleToLocation(loc);
-		}
-	}
-	
-	/**
-	 * Method loosePlayer.
-	 * @param player Player
-	 */
 	private static void loosePlayer(Player player)
 	{
 		if (player != null)
@@ -1074,39 +891,213 @@ public final class LastHero extends Functions implements ScriptFile, OnDeathList
 		}
 	}
 	
-	/**
-	 * Method removePlayer.
-	 * @param player Player
-	 */
 	private static void removePlayer(Player player)
 	{
 		if (player != null)
 		{
 			live_list.remove(player.getStoredId());
 			players_list.remove(player.getStoredId());
+			playerRestoreCoord.remove(player.getStoredId());
+			player.setIsInLastHero(false);
+			
+			if (!Config.EVENT_LHAllowMultiReg)
+			{
+				boxes.remove(player.getStoredId());
+			}
 			player.setTeam(TeamType.NONE);
 		}
 	}
 	
-	/**
-	 * Method getPlayers.
-	 * @param list List<Long>
-	 * @return List<Player>
-	 */
 	private static List<Player> getPlayers(List<Long> list)
 	{
 		List<Player> result = new ArrayList<>(list.size());
-		
 		for (Long storeId : list)
 		{
 			Player player = GameObjectsStorage.getAsPlayer(storeId);
-			
 			if (player != null)
 			{
 				result.add(player);
 			}
 		}
-		
 		return result;
+	}
+	
+	public static void buffPlayers()
+	{
+		
+		for (Player player : getPlayers(players_list))
+		{
+			if (player.isMageClass())
+			{
+				mageBuff(player);
+			}
+			else
+			{
+				fighterBuff(player);
+			}
+		}
+		
+		for (Player player : getPlayers(live_list))
+		{
+			if (player.isMageClass())
+			{
+				mageBuff(player);
+			}
+			else
+			{
+				fighterBuff(player);
+			}
+		}
+	}
+	
+	public void scheduleEventStart()
+	{
+		try
+		{
+			Calendar currentTime = Calendar.getInstance();
+			Calendar nextStartTime = null;
+			Calendar testStartTime = null;
+			
+			for (String timeOfDay : Config.EVENT_LHStartTime)
+			{
+				testStartTime = Calendar.getInstance();
+				testStartTime.setLenient(true);
+				
+				String[] splitTimeOfDay = timeOfDay.split(":");
+				
+				testStartTime.set(Calendar.HOUR_OF_DAY, Integer.parseInt(splitTimeOfDay[0]));
+				testStartTime.set(Calendar.MINUTE, Integer.parseInt(splitTimeOfDay[1]));
+				
+				if (testStartTime.getTimeInMillis() < currentTime.getTimeInMillis())
+				{
+					testStartTime.add(Calendar.DAY_OF_MONTH, 1);
+				}
+				
+				if ((nextStartTime == null) || (testStartTime.getTimeInMillis() < nextStartTime.getTimeInMillis()))
+				{
+					nextStartTime = testStartTime;
+				}
+				
+				if (_startTask != null)
+				{
+					_startTask.cancel(false);
+					_startTask = null;
+				}
+				_startTask = ThreadPoolManager.getInstance().schedule(new StartTask(), nextStartTime.getTimeInMillis() - System.currentTimeMillis());
+				
+			}
+			
+			currentTime = null;
+			nextStartTime = null;
+			testStartTime = null;
+			
+		}
+		catch (Exception e)
+		{
+			_log.warn("LH: Error figuring out a start time. Check TvTEventInterval in config file.");
+		}
+	}
+	
+	public static void mageBuff(Player player)
+	{
+		for (int[] mage_buff : mage_buffs)
+		{
+			buff = SkillTable.getInstance().getInfo(mage_buff[0], mage_buff[1]);
+			/*
+			 * for(EffectTemplate et : buff.getEffectTemplates()) { Env env = new Env(player, player, buff); Effect effect = et.getEffect(env); effect.setPeriod(1200000); //20 ????? player. getEffectList ().addEffect(effect); }
+			 */
+			if ((player != null) && (buff != null))
+			{
+				buff.getEffects(player, player, false, false);
+			}
+		}
+	}
+	
+	public static void fighterBuff(Player player)
+	{
+		for (int[] fighter_buff : fighter_buffs)
+		{
+			buff = SkillTable.getInstance().getInfo(fighter_buff[0], fighter_buff[1]);
+			/*
+			 * for(EffectTemplate et : buff.getEffectTemplates()) { Env env = new Env(player, player, buff); Effect effect = et.getEffect(env); effect.setPeriod(1200000); //20 ????? player. getEffectList ().addEffect(effect); }
+			 */
+			if ((player != null) && (buff != null))
+			{
+				buff.getEffects(player, player, false, false);
+			}
+		}
+	}
+	
+	private static boolean checkDualBox(Player player)
+	{
+		if (!Config.EVENT_LHAllowMultiReg)
+		{
+			if ("IP".equalsIgnoreCase(Config.EVENT_LHCheckWindowMethod))
+			{
+				if (boxes.containsValue(player.getIP()))
+				{
+					show(new CustomMessage("scripts.events.LH.CancelledBox", player), player);
+					return false;
+				}
+			}
+			
+			// else if ("HWid".equalsIgnoreCase(Config.EVENT_LHCheckWindowMethod)) {
+			// if (boxes.containsValue(player.getNetConnection().getHWID())) {
+			// show(new CustomMessage("scripts.events.TvT.CancelledBox",
+			// player), player);
+			// return false;
+			// }
+			// }
+		}
+		return true;
+	}
+	
+	public class StartTask extends RunnableImpl
+	{
+		
+		@Override
+		public void runImpl()
+		{
+			if (!_active)
+			{
+				return;
+			}
+			
+			if (isPvPEventStarted())
+			{
+				_log.info("LH not started: another event is already running");
+				return;
+			}
+			
+			for (Residence c : ResidenceHolder.getInstance().getResidenceList(Castle.class))
+			{
+				if ((c.getSiegeEvent() != null) && c.getSiegeEvent().isInProgress())
+				{
+					_log.debug("LH not started: CastleSiege in progress");
+					return;
+				}
+			}
+			
+			/*
+			 * if(TerritorySiege.isInProgress()) { _log.debug("TvT not started: TerritorySiege in progress"); return; }
+			 */
+			
+			if (Config.EVENT_LHCategories)
+			{
+				start(new String[]
+				{
+					"1",
+					"1"
+				});
+			}
+			else
+			{
+				start(new String[]
+				{
+					"-1",
+					"-1"
+				});
+			}
+		}
 	}
 }

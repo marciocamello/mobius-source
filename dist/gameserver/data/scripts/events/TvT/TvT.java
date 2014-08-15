@@ -13,107 +13,100 @@
 package events.TvT;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 
-import lineage2.commons.geometry.Polygon;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
+import lineage2.gameserver.geodata.GeoEngine;
+import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.instancemanager.ServerVariables;
 import lineage2.gameserver.listener.actor.OnDeathListener;
 import lineage2.gameserver.listener.actor.player.OnPlayerExitListener;
 import lineage2.gameserver.listener.actor.player.OnTeleportListener;
 import lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener;
 import lineage2.gameserver.model.Creature;
-import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
-import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.Territory;
 import lineage2.gameserver.model.Zone;
+import lineage2.gameserver.model.Zone.ZoneType;
 import lineage2.gameserver.model.actor.listener.CharListenerList;
 import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.model.entity.Reflection;
+import lineage2.gameserver.model.entity.events.impl.DuelEvent;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.entity.residence.Residence;
+import lineage2.gameserver.model.instances.DoorInstance;
+import lineage2.gameserver.network.serverpackets.ExCubeGameAddPlayer;
+import lineage2.gameserver.network.serverpackets.ExCubeGameChangePoints;
+import lineage2.gameserver.network.serverpackets.ExCubeGameCloseUI;
+import lineage2.gameserver.network.serverpackets.ExCubeGameEnd;
+import lineage2.gameserver.network.serverpackets.ExCubeGameExtendedChangePoints;
+import lineage2.gameserver.network.serverpackets.ExCubeGameRemovePlayer;
+import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
+import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import lineage2.gameserver.network.serverpackets.Revive;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
+import lineage2.gameserver.templates.DoorTemplate;
+import lineage2.gameserver.templates.ZoneTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+import org.apache.commons.lang3.mutable.MutableInt;
+import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
-public final class TvT extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
+import gnu.trove.map.hash.TIntObjectHashMap;
+
+public class TvT extends Functions implements ScriptFile, OnDeathListener, OnTeleportListener, OnPlayerExitListener
 {
+	
 	private static final Logger _log = LoggerFactory.getLogger(TvT.class);
 	
-	/**
-	 * @author Mobius
-	 */
-	public final class StartTask extends RunnableImpl
-	{
-		/**
-		 * Method runImpl.
-		 */
-		@Override
-		public void runImpl()
-		{
-			if (!_active)
-			{
-				return;
-			}
-			
-			if (isPvPEventStarted())
-			{
-				_log.info("TvT not started: another event is already running");
-				return;
-			}
-			
-			if (!Rnd.chance(Config.EVENT_TvTChanceToStart))
-			{
-				_log.debug("TvT not started: chance");
-				return;
-			}
-			
-			for (Residence c : ResidenceHolder.getInstance().getResidenceList(Castle.class))
-			{
-				if ((c.getSiegeEvent() != null) && c.getSiegeEvent().isInProgress())
-				{
-					_log.debug("TvT not started: CastleSiege in progress");
-					return;
-				}
-			}
-			
-			start(new String[]
-			{
-				"1",
-				"1"
-			});
-		}
-	}
-	
 	private static ScheduledFuture<?> _startTask;
+	
+	private static final int[] doors = new int[]
+	{
+		24190001,
+		24190002,
+		24190003,
+		24190004
+	};
+	
 	private static List<Long> players_list1 = new CopyOnWriteArrayList<>();
 	private static List<Long> players_list2 = new CopyOnWriteArrayList<>();
 	static List<Long> live_list1 = new CopyOnWriteArrayList<>();
 	static List<Long> live_list2 = new CopyOnWriteArrayList<>();
+	
+	private static int[][] mage_buffs = new int[Config.EVENT_TvTMageBuffs.length][2];
+	private static int[][] fighter_buffs = new int[Config.EVENT_TvTFighterBuffs.length][2];
+	private static long _startedTime = 0;
+	
+	private static int[][] rewards = new int[Config.EVENT_TvTRewards.length][2];
+	
+	private static Map<Long, Location> playerRestoreCoord = new LinkedHashMap<>();
+	
+	private static Map<Long, String> boxes = new LinkedHashMap<>();
+	
 	private static boolean _isRegistrationActive = false;
 	static int _status = 0;
 	private static int _time_to_start;
@@ -121,35 +114,99 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 	private static int _minLevel;
 	private static int _maxLevel;
 	private static int _autoContinue = 0;
-	private static ScheduledFuture<?> _endTask;
-	private static final Zone _zone = ReflectionUtils.getZone("[colosseum_battle]");
-	private static final ZoneListener _zoneListener = new ZoneListener();
-	private static final Territory team1spawn = new Territory().add(new Polygon().add(149878, 47505).add(150262, 47513).add(150502, 47233).add(150507, 46300).add(150256, 46002).add(149903, 46005).setZmin(-3408).setZmax(-3308));
-	private static final Territory team2spawn = new Territory().add(new Polygon().add(149027, 46005).add(148686, 46003).add(148448, 46302).add(148449, 47231).add(148712, 47516).add(149014, 47527).setZmin(-3408).setZmax(-3308));
+	static boolean _active = false;
+	private static Skill buff;
 	
-	/**
-	 * Method onLoad.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
-	 */
+	static Reflection reflection = ReflectionManager.TVT_EVENT;
+	
+	private static ScheduledFuture<?> _endTask;
+	
+	private static Zone _zone;
+	private static Zone _zone1;
+	private static Zone _myZone = null;
+	private static Territory territory = null;
+	private static Map<Integer, Integer> _pScore = new HashMap<>();
+	private static Map<String, ZoneTemplate> _zones = new HashMap<>();
+	private static IntObjectMap<DoorTemplate> _doors = new HashIntObjectMap<>();
+	private static ZoneListener _zoneListener = new ZoneListener();
+	
+	private static int bluePoints = 0;
+	private static int redPoints = 0;
+	private static TIntObjectHashMap<MutableInt> score = new TIntObjectHashMap<>();
+	
 	@Override
 	public void onLoad()
 	{
 		CharListenerList.addGlobal(this);
-		_zone.addListener(_zoneListener);
-		_startTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new StartTask(), 3600000, 3600000);
+		
+		_zones.put("[colosseum_battle]", ReflectionUtils.getZone("[colosseum_battle]").getTemplate());
+		_zones.put("[cleft_tvt]", ReflectionUtils.getZone("[cleft_tvt]").getTemplate());
+		_zones.put("[cleft_tvt]", ReflectionUtils.getZone("[cleft_tvt]").getTemplate());
+		
+		for (final int doorId : doors)
+		{
+			_doors.put(doorId, ReflectionUtils.getDoor(doorId).getTemplate());
+		}
+		
+		int geoIndex = GeoEngine.NextGeoIndex(24, 19, reflection.getId());
+		reflection.setGeoIndex(geoIndex);
+		reflection.init(_doors, _zones);
+		
+		_zone = reflection.getZone("[cleft_tvt]");
+		_zone1 = reflection.getZone("[cleft_tvt]");
 		_active = ServerVariables.getString("TvT", "off").equalsIgnoreCase("on");
+		if (isActive())
+		{
+			scheduleEventStart();
+		}
+		
+		_zone.addListener(_zoneListener);
+		_zone1.addListener(_zoneListener);
+		
+		int i = 0;
+		
+		if (Config.EVENT_TvTBuffPlayers && (Config.EVENT_TvTMageBuffs.length != 0))
+		{
+			for (String skill : Config.EVENT_TvTMageBuffs)
+			{
+				String[] splitSkill = skill.split(",");
+				mage_buffs[i][0] = Integer.parseInt(splitSkill[0]);
+				mage_buffs[i][1] = Integer.parseInt(splitSkill[1]);
+				i++;
+			}
+		}
+		
+		i = 0;
+		
+		if (Config.EVENT_TvTBuffPlayers && (Config.EVENT_TvTMageBuffs.length != 0))
+		{
+			for (String skill : Config.EVENT_TvTFighterBuffs)
+			{
+				String[] splitSkill = skill.split(",");
+				fighter_buffs[i][0] = Integer.parseInt(splitSkill[0]);
+				fighter_buffs[i][1] = Integer.parseInt(splitSkill[1]);
+				i++;
+			}
+		}
+		
+		i = 0;
+		if (Config.EVENT_TvTRewards.length != 0)
+		{
+			for (String reward : Config.EVENT_TvTRewards)
+			{
+				String[] splitReward = reward.split(",");
+				rewards[i][0] = Integer.parseInt(splitReward[0]);
+				rewards[i][1] = Integer.parseInt(splitReward[1]);
+				i++;
+			}
+		}
+		
 		_log.info("Loaded Event: TvT");
 	}
 	
-	/**
-	 * Method onReload.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
-	 */
 	@Override
 	public void onReload()
 	{
-		_zone.removeListener(_zoneListener);
-		
 		if (_startTask != null)
 		{
 			_startTask.cancel(false);
@@ -157,34 +214,25 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
-	/**
-	 * Method onShutdown.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
-	 */
 	@Override
 	public void onShutdown()
 	{
 		onReload();
 	}
 	
-	static boolean _active = false;
+	private static long getStarterTime()
+	{
+		return _startedTime;
+	}
 	
-	/**
-	 * Method isActive.
-	 * @return boolean
-	 */
 	private static boolean isActive()
 	{
 		return _active;
 	}
 	
-	/**
-	 * Method activateEvent.
-	 */
 	public void activateEvent()
 	{
 		Player player = getSelf();
-		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -194,7 +242,7 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		{
 			if (_startTask == null)
 			{
-				_startTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new StartTask(), 3600000, 3600000);
+				scheduleEventStart();
 			}
 			
 			ServerVariables.set("TvT", "on");
@@ -207,16 +255,13 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		}
 		
 		_active = true;
+		
 		show("admin/events.htm", player);
 	}
 	
-	/**
-	 * Method deactivateEvent.
-	 */
 	public void deactivateEvent()
 	{
 		Player player = getSelf();
-		
 		if (!player.getPlayerAccess().IsEventGm)
 		{
 			return;
@@ -229,7 +274,6 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 				_startTask.cancel(false);
 				_startTask = null;
 			}
-			
 			ServerVariables.unset("TvT");
 			_log.info("Event 'TvT' deactivated.");
 			Announcements.getInstance().announceByCustomMessage("scripts.events.TvT.AnnounceEventStoped", null);
@@ -240,91 +284,55 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		}
 		
 		_active = false;
+		
 		show("admin/events.htm", player);
 	}
 	
-	/**
-	 * Method isRunned.
-	 * @return boolean
-	 */
 	public static boolean isRunned()
 	{
 		return _isRegistrationActive || (_status > 0);
 	}
 	
-	/**
-	 * Method getMinLevelForCategory.
-	 * @param category int
-	 * @return int
-	 */
 	public static int getMinLevelForCategory(int category)
 	{
 		switch (category)
 		{
 			case 1:
 				return 20;
-				
 			case 2:
 				return 30;
-				
 			case 3:
 				return 40;
-				
 			case 4:
 				return 52;
-				
 			case 5:
 				return 62;
-				
 			case 6:
 				return 76;
-				
-			case 7:
-				return 86;
 		}
-		
 		return 0;
 	}
 	
-	/**
-	 * Method getMaxLevelForCategory.
-	 * @param category int
-	 * @return int
-	 */
 	public static int getMaxLevelForCategory(int category)
 	{
 		switch (category)
 		{
 			case 1:
 				return 29;
-				
 			case 2:
 				return 39;
-				
 			case 3:
 				return 51;
-				
 			case 4:
 				return 61;
-				
 			case 5:
 				return 75;
-				
 			case 6:
-				return 85;
-				
-			case 7:
 				return 99;
 		}
-		
 		return 0;
 	}
 	
-	/**
-	 * Method getCategory.
-	 * @param level int
-	 * @return int
-	 */
 	public static int getCategory(int level)
 	{
 		if ((level >= 20) && (level <= 29))
@@ -347,26 +355,16 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		{
 			return 5;
 		}
-		else if ((level >= 76) && (level <= 85))
+		else if (level >= 76)
 		{
 			return 6;
 		}
-		else if (level >= 86)
-		{
-			return 7;
-		}
-		
 		return 0;
 	}
 	
-	/**
-	 * Method start.
-	 * @param var String[]
-	 */
 	public void start(String[] var)
 	{
 		Player player = getSelf();
-		
 		if (var.length != 2)
 		{
 			show(new CustomMessage("common.Error", player), player);
@@ -375,7 +373,6 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		
 		Integer category;
 		Integer autoContinue;
-		
 		try
 		{
 			category = Integer.valueOf(var[0]);
@@ -410,10 +407,14 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		_status = 0;
 		_isRegistrationActive = true;
 		_time_to_start = Config.EVENT_TvTTime;
+		
 		players_list1 = new CopyOnWriteArrayList<>();
 		players_list2 = new CopyOnWriteArrayList<>();
 		live_list1 = new CopyOnWriteArrayList<>();
 		live_list2 = new CopyOnWriteArrayList<>();
+		
+		playerRestoreCoord = new LinkedHashMap<>();
+		
 		String[] param =
 		{
 			String.valueOf(_time_to_start),
@@ -421,23 +422,16 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 			String.valueOf(_maxLevel)
 		};
 		sayToAll("scripts.events.TvT.AnnouncePreStart", param);
+		
 		executeTask("events.TvT.TvT", "question", new Object[0], 10000);
 		executeTask("events.TvT.TvT", "announce", new Object[0], 60000);
 	}
 	
-	/**
-	 * Method sayToAll.
-	 * @param address String
-	 * @param replacements String[]
-	 */
 	public static void sayToAll(String address, String[] replacements)
 	{
 		Announcements.getInstance().announceByCustomMessage(address, replacements, ChatType.CRITICAL_ANNOUNCE);
 	}
 	
-	/**
-	 * Method question.
-	 */
 	public static void question()
 	{
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
@@ -449,20 +443,8 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
-	/**
-	 * Method announce.
-	 */
 	public static void announce()
 	{
-		if (players_list1.isEmpty() || players_list2.isEmpty())
-		{
-			sayToAll("scripts.events.TvT.AnnounceEventCancelled", null);
-			_isRegistrationActive = false;
-			_status = 0;
-			executeTask("events.TvT.TvT", "autoContinue", new Object[0], 10000);
-			return;
-		}
-		
 		if (_time_to_start > 1)
 		{
 			_time_to_start--;
@@ -477,6 +459,15 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		}
 		else
 		{
+			if (players_list1.isEmpty() || players_list2.isEmpty() || (players_list1.size() < Config.EVENT_TvTMinPlayerInTeam) || (players_list2.size() < Config.EVENT_TvTMinPlayerInTeam))
+			{
+				sayToAll("scripts.events.TvT.AnnounceEventCancelled", null);
+				_isRegistrationActive = false;
+				_status = 0;
+				executeTask("events.TvT.TvT", "autoContinue", new Object[0], 10000);
+				boxes.clear();
+				return;
+			}
 			_status = 1;
 			_isRegistrationActive = false;
 			sayToAll("scripts.events.TvT.AnnounceEventStarting", null);
@@ -484,19 +475,32 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
-	/**
-	 * Method addPlayer.
-	 */
 	public void addPlayer()
 	{
 		Player player = getSelf();
-		
-		if ((player == null) || !checkPlayer(player, true))
+		if ((player == null) || !checkPlayer(player, true) || !checkDualBox(player))
 		{
 			return;
 		}
 		
 		int team = 0, size1 = players_list1.size(), size2 = players_list2.size();
+		
+		if ((size1 == Config.EVENT_TvTMaxPlayerInTeam) && (size2 == Config.EVENT_TvTMaxPlayerInTeam))
+		{
+			show(new CustomMessage("scripts.events.TvT.CancelledCount", player), player);
+			_isRegistrationActive = false;
+			return;
+		}
+		
+		if (!Config.EVENT_TvTAllowMultiReg)
+		{
+			if ("IP".equalsIgnoreCase(Config.EVENT_TvTCheckWindowMethod))
+			{
+				boxes.put(player.getStoredId(), player.getIP());
+				// if("HWid".equalsIgnoreCase(Config.EVENT_TvTCheckWindowMethod))
+				// boxes.put(player.getStoredId(), player.getNetConnection().getHWID());
+			}
+		}
 		
 		if (size1 > size2)
 		{
@@ -527,16 +531,12 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		{
 			_log.info("WTF??? Command id 0 in TvT...");
 		}
+		player.setRegisteredInEvent(true);
 	}
 	
-	/**
-	 * Method checkPlayer.
-	 * @param player Player
-	 * @param first boolean
-	 * @return boolean
-	 */
 	public static boolean checkPlayer(Player player, boolean first)
 	{
+		
 		if (first && (!_isRegistrationActive || player.isDead()))
 		{
 			show(new CustomMessage("scripts.events.Late", player), player);
@@ -545,7 +545,28 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		
 		if (first && (players_list1.contains(player.getStoredId()) || players_list2.contains(player.getStoredId())))
 		{
+			player.setRegisteredInEvent(false);
 			show(new CustomMessage("scripts.events.TvT.Cancelled", player), player);
+			if (players_list1.contains(player.getStoredId()))
+			{
+				players_list1.remove(player.getStoredId());
+			}
+			if (players_list2.contains(player.getStoredId()))
+			{
+				players_list2.remove(player.getStoredId());
+			}
+			if (live_list1.contains(player.getStoredId()))
+			{
+				live_list1.remove(player.getStoredId());
+			}
+			if (live_list2.contains(player.getStoredId()))
+			{
+				live_list2.remove(player.getStoredId());
+			}
+			if (boxes.containsKey(player.getStoredId()))
+			{
+				boxes.remove(player.getStoredId());
+			}
 			return false;
 		}
 		
@@ -558,6 +579,12 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		if (player.isMounted())
 		{
 			show(new CustomMessage("scripts.events.TvT.Cancelled", player), player);
+			return false;
+		}
+		
+		if (player.isCursedWeaponEquipped())
+		{
+			show(new CustomMessage("scripts.events.CtF.Cancelled", player), player);
 			return false;
 		}
 		
@@ -579,76 +606,138 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 			return false;
 		}
 		
+		if (player.isInObserverMode())
+		{
+			show(new CustomMessage("scripts.event.TvT.CancelledObserver", player), player);
+			return false;
+		}
+		
 		if (player.isTeleporting())
 		{
 			show(new CustomMessage("scripts.events.TvT.CancelledTeleport", player), player);
 			return false;
 		}
-		
 		return true;
 	}
 	
-	/**
-	 * Method prepare.
-	 */
 	public static void prepare()
 	{
-		ReflectionUtils.getDoor(24190002).closeMe();
-		ReflectionUtils.getDoor(24190003).closeMe();
+		for (DoorInstance door : reflection.getDoors())
+		{
+			door.openMe();
+		}
+		
+		for (Zone z : reflection.getZones())
+		{
+			z.setType(ZoneType.peace_zone);
+		}
+		
 		cleanPlayers();
-		clearArena();
 		executeTask("events.TvT.TvT", "ressurectPlayers", new Object[0], 1000);
 		executeTask("events.TvT.TvT", "healPlayers", new Object[0], 2000);
+		executeTask("events.TvT.TvT", "teleportPlayersToColiseum", new Object[0], 3000);
 		executeTask("events.TvT.TvT", "paralyzePlayers", new Object[0], 4000);
-		executeTask("events.TvT.TvT", "teleportPlayersToColiseum", new Object[0], 5000);
+		executeTask("events.TvT.TvT", "buffPlayers", new Object[0], 5000);
 		executeTask("events.TvT.TvT", "go", new Object[0], 60000);
+		
 		sayToAll("scripts.events.TvT.AnnounceFinalCountdown", null);
 	}
 	
-	/**
-	 * Method go.
-	 */
 	public static void go()
 	{
 		_status = 2;
 		upParalyzePlayers();
 		checkLive();
-		clearArena();
 		sayToAll("scripts.events.TvT.AnnounceFight", null);
-		_endTask = executeTask("events.TvT.TvT", "endBattle", new Object[0], 300000);
+		for (Zone z : reflection.getZones())
+		{
+			z.setType(ZoneType.battle_zone);
+		}
+		_endTask = executeTask("events.TvT.TvT", "endBattle", new Object[0], 600000);
+		_startedTime = System.currentTimeMillis() + 600000;
+		
+		final ExCubeGameChangePoints initialPoints = new ExCubeGameChangePoints(600, bluePoints, redPoints);
+		final ExCubeGameCloseUI cui = new ExCubeGameCloseUI();
+		ExCubeGameExtendedChangePoints clientSetUp;
+		
+		for (Player player : getPlayers(players_list1))
+		{
+			if (player == null)
+			{
+				continue;
+			}
+			
+			score.put(player.getObjectId(), new MutableInt());
+			
+			player.setCurrentCp(player.getMaxCp());
+			player.setCurrentHp(player.getMaxHp(), false);
+			player.setCurrentMp(player.getMaxMp());
+			
+			clientSetUp = new ExCubeGameExtendedChangePoints(600, bluePoints, redPoints, isRedTeam(player), player, 0);
+			player.sendPacket(clientSetUp);
+			player.sendActionFailed();
+			player.sendPacket(initialPoints);
+			player.sendPacket(cui);
+			player.broadcastCharInfo();
+			for (Player player1 : getPlayers(players_list1))
+			{
+				player1.sendPacket(new ExCubeGameAddPlayer(player, isRedTeam(player)));
+			}
+			for (Player player2 : getPlayers(players_list2))
+			{
+				player2.sendPacket(new ExCubeGameAddPlayer(player, isRedTeam(player)));
+			}
+		}
+		
+		for (Player player2 : getPlayers(players_list2))
+		{
+			if (player2 == null)
+			{
+				continue;
+			}
+			
+			score.put(player2.getObjectId(), new MutableInt());
+			
+			player2.setCurrentCp(player2.getMaxCp());
+			player2.setCurrentHp(player2.getMaxHp(), false);
+			player2.setCurrentMp(player2.getMaxMp());
+			
+			clientSetUp = new ExCubeGameExtendedChangePoints(600, bluePoints, redPoints, isRedTeam(player2), player2, 0);
+			player2.sendPacket(clientSetUp);
+			player2.sendActionFailed();
+			player2.sendPacket(initialPoints);
+			player2.sendPacket(cui);
+			player2.broadcastCharInfo();
+			player2.sendPacket(new ExCubeGameAddPlayer(player2, isRedTeam(player2)));
+			for (@SuppressWarnings("unused")
+			Player player : getPlayers(players_list1))
+			{
+				player2.sendPacket(new ExCubeGameAddPlayer(player2, isRedTeam(player2)));
+			}
+		}
 	}
 	
-	/**
-	 * Method endBattle.
-	 */
 	public static void endBattle()
 	{
-		ReflectionUtils.getDoor(24190002).openMe();
-		ReflectionUtils.getDoor(24190003).openMe();
 		_status = 0;
 		removeAura();
+		for (Zone z : reflection.getZones())
+		{
+			z.setType(ZoneType.peace_zone);
+		}
+		boxes.clear();
 		
-		if (live_list1.isEmpty())
+		if (bluePoints > redPoints)
 		{
 			sayToAll("scripts.events.TvT.AnnounceFinishedBlueWins", null);
 			giveItemsToWinner(false, true, 1);
 		}
-		else if (live_list2.isEmpty())
+		else if (bluePoints < redPoints)
 		{
 			sayToAll("scripts.events.TvT.AnnounceFinishedRedWins", null);
 			giveItemsToWinner(true, false, 1);
 		}
-		else if (live_list1.size() < live_list2.size())
-		{
-			sayToAll("scripts.events.TvT.AnnounceFinishedBlueWins", null);
-			giveItemsToWinner(false, true, 1);
-		}
-		else if (live_list1.size() > live_list2.size())
-		{
-			sayToAll("scripts.events.TvT.AnnounceFinishedRedWins", null);
-			giveItemsToWinner(true, false, 1);
-		}
-		else if (live_list1.size() == live_list2.size())
+		else if (bluePoints == redPoints)
 		{
 			sayToAll("scripts.events.TvT.AnnounceFinishedDraw", null);
 			giveItemsToWinner(true, true, 0.5);
@@ -657,17 +746,31 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		sayToAll("scripts.events.TvT.AnnounceEnd", null);
 		executeTask("events.TvT.TvT", "end", new Object[0], 30000);
 		_isRegistrationActive = false;
-		
 		if (_endTask != null)
 		{
 			_endTask.cancel(false);
 			_endTask = null;
 		}
+		boolean _isRedWinner = bluePoints < redPoints ? true : false;
+		final ExCubeGameEnd end = new ExCubeGameEnd(_isRedWinner);
+		
+		for (Player player : getPlayers(players_list1))
+		{
+			player.sendPacket(end);
+		}
+		
+		for (Player player : getPlayers(players_list2))
+		{
+			player.sendPacket(end);
+		}
+		bluePoints = 0;
+		redPoints = 0;
+		_startedTime = 0;
+		_myZone = null;
+		territory = null;
+		score.clear();
 	}
 	
-	/**
-	 * Method end.
-	 */
 	public static void end()
 	{
 		executeTask("events.TvT.TvT", "ressurectPlayers", new Object[0], 1000);
@@ -676,9 +779,6 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		executeTask("events.TvT.TvT", "autoContinue", new Object[0], 10000);
 	}
 	
-	/**
-	 * Method autoContinue.
-	 */
 	public void autoContinue()
 	{
 		live_list1.clear();
@@ -688,84 +788,134 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		
 		if (_autoContinue > 0)
 		{
-			if (_autoContinue >= 7)
+			if (_autoContinue >= 6)
 			{
 				_autoContinue = 0;
 				return;
 			}
-			
 			start(new String[]
 			{
 				"" + (_autoContinue + 1),
 				"" + (_autoContinue + 1)
 			});
 		}
+		else
+		{
+			scheduleEventStart();
+		}
 	}
 	
-	/**
-	 * Method giveItemsToWinner.
-	 * @param team1 boolean
-	 * @param team2 boolean
-	 * @param rate double
-	 */
 	public static void giveItemsToWinner(boolean team1, boolean team2, double rate)
 	{
 		if (team1)
 		{
 			for (Player player : getPlayers(players_list1))
 			{
-				addItem(player, Config.EVENT_TvTItemID, Math.round((Config.EVENT_TvT_rate ? player.getLevel() : 1) * Config.EVENT_TvTItemCOUNT * rate));
+				for (int[] reward : rewards)
+				{
+					addItem(player, reward[0], Math.round((Config.EVENT_TvTrate ? player.getLevel() : 1) * reward[1] * rate));
+				}
 			}
 		}
-		
 		if (team2)
 		{
 			for (Player player : getPlayers(players_list2))
 			{
-				addItem(player, Config.EVENT_TvTItemID, Math.round((Config.EVENT_TvT_rate ? player.getLevel() : 1) * Config.EVENT_TvTItemCOUNT * rate));
+				for (int[] reward : rewards)
+				{
+					addItem(player, reward[0], Math.round((Config.EVENT_TvTrate ? player.getLevel() : 1) * reward[1] * rate));
+				}
 			}
 		}
 	}
 	
-	/**
-	 * Method teleportPlayersToColiseum.
-	 */
 	public static void teleportPlayersToColiseum()
 	{
+		switch (2)
+		{
+			case 1:
+				_myZone = _zone;
+				break;
+			case 2:
+				_myZone = _zone1;
+				break;
+			default:
+				_myZone = _zone;
+		}
+		territory = _myZone.getTerritory();
+		
 		for (Player player : getPlayers(players_list1))
 		{
 			unRide(player);
-			unSummonPet(player, true);
-			player.teleToLocation(Territory.getRandomLoc(team1spawn));
+			
+			if (!Config.EVENT_TvTAllowSummons)
+			{
+				unSummonPet(player, true);
+			}
+			
+			DuelEvent duel = player.getEvent(DuelEvent.class);
+			if (duel != null)
+			{
+				duel.abortDuel(player);
+			}
+			
+			playerRestoreCoord.put(player.getStoredId(), new Location(player.getX(), player.getY(), player.getZ()));
+			
+			player.teleToLocation(Territory.getRandomLoc(territory), reflection);
+			player.setIsInTvT(true);
+			
+			if (!Config.EVENT_TvTAllowBuffs)
+			{
+				player.getEffectList().stopAllEffects();
+			}
 		}
 		
 		for (Player player : getPlayers(players_list2))
 		{
 			unRide(player);
-			unSummonPet(player, true);
-			player.teleToLocation(Territory.getRandomLoc(team2spawn));
+			
+			if (!Config.EVENT_TvTAllowSummons)
+			{
+				unSummonPet(player, true);
+			}
+			
+			playerRestoreCoord.put(player.getStoredId(), new Location(player.getX(), player.getY(), player.getZ()));
+			
+			player.teleToLocation(Territory.getRandomLoc(territory), reflection);
+			player.setIsInTvT(true);
+			
+			if (!Config.EVENT_TvTAllowBuffs)
+			{
+				player.getEffectList().stopAllEffects();
+			}
 		}
 	}
 	
-	/**
-	 * Method teleportPlayers.
-	 */
 	public static void teleportPlayers()
 	{
 		for (Player player : getPlayers(players_list1))
 		{
-			player.teleToLocation(151480, 46712, -3400);
+			if ((player == null) || !playerRestoreCoord.containsKey(player.getStoredId()))
+			{
+				continue;
+			}
+			player.teleToLocation(playerRestoreCoord.get(player.getStoredId()), ReflectionManager.DEFAULT);
+			player.setRegisteredInEvent(false);
 		}
 		
 		for (Player player : getPlayers(players_list2))
 		{
-			player.teleToLocation(147640, 46712, -3400);
+			if ((player == null) || !playerRestoreCoord.containsKey(player.getStoredId()))
+			{
+				continue;
+			}
+			player.teleToLocation(playerRestoreCoord.get(player.getStoredId()), ReflectionManager.DEFAULT);
+			player.setRegisteredInEvent(false);
 		}
+		
+		playerRestoreCoord.clear();
 	}
 	
-	/**
-	 * Method paralyzePlayers.
-	 */
 	public static void paralyzePlayers()
 	{
 		Skill revengeSkill = SkillTable.getInstance().getInfo(Skill.SKILL_RAID_CURSE, 1);
@@ -774,58 +924,30 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		{
 			player.getEffectList().stopEffect(Skill.SKILL_MYSTIC_IMMUNITY);
 			revengeSkill.getEffects(player, player, false, false);
-			
-			for (Summon summon : player.getSummonList())
-			{
-				revengeSkill.getEffects(player, summon, false, false);
-			}
 		}
 		
 		for (Player player : getPlayers(players_list2))
 		{
 			player.getEffectList().stopEffect(Skill.SKILL_MYSTIC_IMMUNITY);
 			revengeSkill.getEffects(player, player, false, false);
-			
-			for (Summon summon : player.getSummonList())
-			{
-				revengeSkill.getEffects(player, summon, false, false);
-			}
 		}
 	}
 	
-	/**
-	 * Method upParalyzePlayers.
-	 */
 	public static void upParalyzePlayers()
 	{
 		for (Player player : getPlayers(players_list1))
 		{
 			player.getEffectList().stopEffect(Skill.SKILL_RAID_CURSE);
-			
-			for (Summon summon : player.getSummonList())
-			{
-				summon.getEffectList().stopEffect(Skill.SKILL_RAID_CURSE);
-			}
-			
 			player.leaveParty();
 		}
 		
 		for (Player player : getPlayers(players_list2))
 		{
 			player.getEffectList().stopEffect(Skill.SKILL_RAID_CURSE);
-			
-			for (Summon summon : player.getSummonList())
-			{
-				summon.getEffectList().stopEffect(Skill.SKILL_RAID_CURSE);
-			}
-			
 			player.leaveParty();
 		}
 	}
 	
-	/**
-	 * Method ressurectPlayers.
-	 */
 	public static void ressurectPlayers()
 	{
 		for (Player player : getPlayers(players_list1))
@@ -839,7 +961,6 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 				player.broadcastPacket(new Revive(player));
 			}
 		}
-		
 		for (Player player : getPlayers(players_list2))
 		{
 			if (player.isDead())
@@ -853,9 +974,6 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
-	/**
-	 * Method healPlayers.
-	 */
 	public static void healPlayers()
 	{
 		for (Player player : getPlayers(players_list1))
@@ -863,7 +981,6 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 			player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
 			player.setCurrentCp(player.getMaxCp());
 		}
-		
 		for (Player player : getPlayers(players_list2))
 		{
 			player.setCurrentHpMp(player.getMaxHp(), player.getMaxMp());
@@ -871,9 +988,6 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
-	/**
-	 * Method cleanPlayers.
-	 */
 	public static void cleanPlayers()
 	{
 		for (Player player : getPlayers(players_list1))
@@ -883,7 +997,6 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 				removePlayer(player);
 			}
 		}
-		
 		for (Player player : getPlayers(players_list2))
 		{
 			if (!checkPlayer(player, false))
@@ -893,9 +1006,6 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
-	/**
-	 * Method checkLive.
-	 */
 	public static void checkLive()
 	{
 		List<Long> new_live_list1 = new CopyOnWriteArrayList<>();
@@ -904,7 +1014,6 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		for (Long storeId : live_list1)
 		{
 			Player player = GameObjectsStorage.getAsPlayer(storeId);
-			
 			if (player != null)
 			{
 				new_live_list1.add(storeId);
@@ -914,7 +1023,6 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		for (Long storeId : live_list2)
 		{
 			Player player = GameObjectsStorage.getAsPlayer(storeId);
-			
 			if (player != null)
 			{
 				new_live_list2.add(storeId);
@@ -926,25 +1034,25 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		
 		for (Player player : getPlayers(live_list1))
 		{
-			if (player.isInZone(_zone) && !player.isDead() && !player.isLogoutStarted())
+			if (!player.isDead() && !player.isLogoutStarted())
 			{
 				player.setTeam(TeamType.RED);
 			}
 			else
 			{
-				loosePlayer(player);
+				removePlayer(player);
 			}
 		}
 		
 		for (Player player : getPlayers(live_list2))
 		{
-			if (player.isInZone(_zone) && !player.isDead() && !player.isLogoutStarted())
+			if (!player.isDead() && !player.isLogoutStarted())
 			{
 				player.setTeam(TeamType.BLUE);
 			}
 			else
 			{
-				loosePlayer(player);
+				removePlayer(player);
 			}
 		}
 		
@@ -954,86 +1062,191 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
-	/**
-	 * Method removeAura.
-	 */
 	public static void removeAura()
 	{
 		for (Player player : getPlayers(live_list1))
 		{
 			player.setTeam(TeamType.NONE);
+			player.setIsInTvT(false);
 		}
-		
 		for (Player player : getPlayers(live_list2))
 		{
 			player.setTeam(TeamType.NONE);
+			player.setIsInTvT(false);
 		}
 	}
 	
-	/**
-	 * Method clearArena.
-	 */
-	public static void clearArena()
-	{
-		for (GameObject obj : _zone.getObjects())
-		{
-			if (obj != null)
-			{
-				Player player = obj.getPlayer();
-				
-				if ((player != null) && !live_list1.contains(player.getStoredId()) && !live_list2.contains(player.getStoredId()))
-				{
-					player.teleToLocation(147451, 46728, -3410);
-				}
-			}
-		}
-	}
-	
-	/**
-	 * Method onDeath.
-	 * @param self Creature
-	 * @param killer Creature
-	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
-	 */
 	@Override
 	public void onDeath(Creature self, Creature killer)
 	{
 		if ((_status > 1) && self.isPlayer() && (self.getTeam() != TeamType.NONE) && (live_list1.contains(self.getStoredId()) || live_list2.contains(self.getStoredId())))
 		{
-			loosePlayer((Player) self);
-			checkLive();
+			checkKillsAndAnnounce(killer.getPlayer());
+			increasePoints(killer);
+			resurrectAtBase(self);
+			_pScore.remove(self.getPlayer().getObjectId());
 		}
+		
 	}
 	
-	/**
-	 * Method onTeleport.
-	 * @param player Player
-	 * @param x int
-	 * @param y int
-	 * @param z int
-	 * @param reflection Reflection
-	 * @see lineage2.gameserver.listener.actor.player.OnTeleportListener#onTeleport(Player, int, int, int, Reflection)
-	 */
-	@Override
-	public void onTeleport(Player player, int x, int y, int z, Reflection reflection)
+	private static void checkKillsAndAnnounce(Player player)
 	{
-		if (_zone.checkIfInZone(x, y, z, reflection))
+		if ((player == null) || (_pScore == null))
 		{
 			return;
 		}
-		
-		if ((_status > 1) && (player != null) && (player.getTeam() != TeamType.NONE) && (live_list1.contains(player.getStoredId()) || live_list2.contains(player.getStoredId())))
+		int score1 = 0;
+		if (_pScore.get(player.getObjectId()) != null)
 		{
-			removePlayer(player);
-			checkLive();
+			score1 = _pScore.get(player.getObjectId());
+		}
+		_pScore.put(player.getObjectId(), score1 + 1);
+		
+		MutableInt points = score.get(player.getObjectId());
+		points.increment();
+		
+		String text = "";
+		
+		switch (_pScore.get(player.getObjectId()))
+		{
+			case 0:
+			case 1:
+				return;
+			case 10:
+				text = "" + player.getName() + ": Killing Spree";
+				break;
+			case 20:
+				text = "" + player.getName() + ": Rampage";
+				break;
+			case 30:
+				text = "" + player.getName() + ": Unstoppable";
+				break;
+			case 40:
+				text = "" + player.getName() + ": Dominating";
+				break;
+			case 50:
+				text = "" + player.getName() + ": Godlike";
+				break;
+			case 60:
+				text = "" + player.getName() + ": Legendary";
+				break;
+			case 70:
+				text = "" + player.getName() + ": Arena Master";
+				break;
+			case 80:
+				text = "" + player.getName() + ": Best Player";
+				break;
+			default:
+				return;
+		}
+		for (Player player1 : getPlayers(players_list1))
+		{
+			player1.sendPacket(new ExShowScreenMessage(text, 3000, ScreenMessageAlign.TOP_CENTER, true));
+		}
+		
+		for (Player player2 : getPlayers(players_list2))
+		{
+			player2.sendPacket(new ExShowScreenMessage(text, 3000, ScreenMessageAlign.TOP_CENTER, true));
 		}
 	}
 	
-	/**
-	 * Method onPlayerExit.
-	 * @param player Player
-	 * @see lineage2.gameserver.listener.actor.player.OnPlayerExitListener#onPlayerExit(Player)
-	 */
+	public static void resurrectAtBase(Creature self)
+	{
+		Player player = self.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		if (player.getTeam() == TeamType.NONE)
+		{
+			return;
+		}
+		if (player.isDead())
+		{
+			player.setCurrentCp(player.getMaxCp());
+			player.setCurrentHp(player.getMaxHp(), true);
+			player.setCurrentMp(player.getMaxMp());
+			player.broadcastPacket(new Revive(player));
+			buffPlayer(player);
+		}
+		player.teleToLocation(Territory.getRandomLoc(territory), reflection);
+	}
+	
+	public static void buffPlayer(Player player)
+	{
+		if (player.isMageClass())
+		{
+			mageBuff(player);
+		}
+		else
+		{
+			fighterBuff(player);
+		}
+	}
+	
+	private static void increasePoints(Creature killer)
+	{
+		Player player = killer.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		if (player.getTeam() == TeamType.BLUE)
+		{
+			bluePoints++;
+		}
+		else
+		{
+			redPoints++;
+		}
+		
+		int timeLeft = (int) ((getStarterTime() - System.currentTimeMillis()) / 1000);
+		
+		if (player.getTeam() == TeamType.RED)
+		{
+			for (Player player1 : getPlayers(players_list1))
+			{
+				player1.sendPacket(new ExCubeGameExtendedChangePoints(timeLeft, bluePoints, redPoints, true, player, getPlayerScore(player)));
+			}
+			for (Player player2 : getPlayers(players_list2))
+			{
+				player2.sendPacket(new ExCubeGameExtendedChangePoints(timeLeft, bluePoints, redPoints, true, player, getPlayerScore(player)));
+			}
+			for (Player player1 : getPlayers(players_list1))
+			{
+				player1.sendPacket(new ExCubeGameExtendedChangePoints(timeLeft, bluePoints, redPoints, false, player, getPlayerScore(player)));
+			}
+			for (Player player2 : getPlayers(players_list2))
+			{
+				player2.sendPacket(new ExCubeGameExtendedChangePoints(timeLeft, bluePoints, redPoints, false, player, getPlayerScore(player)));
+			}
+		}
+		else
+		{
+			for (Player player1 : getPlayers(players_list1))
+			{
+				player1.sendPacket(new ExCubeGameExtendedChangePoints(timeLeft, bluePoints, redPoints, false, player, getPlayerScore(player)));
+			}
+			for (Player player2 : getPlayers(players_list2))
+			{
+				player2.sendPacket(new ExCubeGameExtendedChangePoints(timeLeft, bluePoints, redPoints, false, player, getPlayerScore(player)));
+			}
+			for (Player player1 : getPlayers(players_list1))
+			{
+				player1.sendPacket(new ExCubeGameExtendedChangePoints(timeLeft, bluePoints, redPoints, true, player, getPlayerScore(player)));
+			}
+			for (Player player2 : getPlayers(players_list2))
+			{
+				player2.sendPacket(new ExCubeGameExtendedChangePoints(timeLeft, bluePoints, redPoints, true, player, getPlayerScore(player)));
+			}
+		}
+	}
+	
+	@Override
+	public void onTeleport(Player player, int x, int y, int z, Reflection reflection)
+	{
+	}
+	
 	@Override
 	public void onPlayerExit(Player player)
 	{
@@ -1050,32 +1263,8 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		
 		if ((_status == 1) && (live_list1.contains(player.getStoredId()) || live_list2.contains(player.getStoredId())))
 		{
+			player.teleToLocation(playerRestoreCoord.get(player.getStoredId()), ReflectionManager.DEFAULT);
 			removePlayer(player);
-			
-			try
-			{
-				String var = player.getVar("TvT_backCoords");
-				
-				if ((var == null) || var.equals(""))
-				{
-					return;
-				}
-				
-				String[] coords = var.split(" ");
-				
-				if (coords.length != 4)
-				{
-					return;
-				}
-				
-				player.teleToLocation(Integer.parseInt(coords[0]), Integer.parseInt(coords[1]), Integer.parseInt(coords[2]), Integer.parseInt(coords[3]));
-				player.unsetVar("TvT_backCoords");
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
-			
 			return;
 		}
 		
@@ -1086,46 +1275,17 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
 	private static class ZoneListener implements OnZoneEnterLeaveListener
 	{
-		/**
-		 * Constructor for ZoneListener.
-		 */
 		public ZoneListener()
 		{
 		}
 		
-		/**
-		 * Method onZoneEnter.
-		 * @param zone Zone
-		 * @param cha Creature
-		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneEnter(Zone, Creature)
-		 */
 		@Override
 		public void onZoneEnter(Zone zone, Creature cha)
 		{
-			if (cha == null)
-			{
-				return;
-			}
-			
-			Player player = cha.getPlayer();
-			
-			if ((_status > 0) && (player != null) && !live_list1.contains(player.getStoredId()) && !live_list2.contains(player.getStoredId()))
-			{
-				ThreadPoolManager.getInstance().schedule(new TeleportTask(cha, new Location(147451, 46728, -3410)), 3000);
-			}
 		}
 		
-		/**
-		 * Method onZoneLeave.
-		 * @param zone Zone
-		 * @param cha Creature
-		 * @see lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener#onZoneLeave(Zone, Creature)
-		 */
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
@@ -1133,71 +1293,19 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 			{
 				return;
 			}
-			
 			Player player = cha.getPlayer();
-			
 			if ((_status > 1) && (player != null) && (player.getTeam() != TeamType.NONE) && (live_list1.contains(player.getStoredId()) || live_list2.contains(player.getStoredId())))
 			{
 				double angle = PositionUtils.convertHeadingToDegree(cha.getHeading());
 				double radian = Math.toRadians(angle - 90);
-				int x = (int) (cha.getX() + (50 * Math.sin(radian)));
-				int y = (int) (cha.getY() - (50 * Math.cos(radian)));
+				int x = (int) (cha.getX() + (250 * Math.sin(radian)));
+				int y = (int) (cha.getY() - (250 * Math.cos(radian)));
 				int z = cha.getZ();
-				ThreadPoolManager.getInstance().schedule(new TeleportTask(cha, new Location(x, y, z)), 3000);
+				player.teleToLocation(x, y, z, reflection);
 			}
 		}
 	}
 	
-	/**
-	 * @author Mobius
-	 */
-	private static class TeleportTask extends RunnableImpl
-	{
-		Location loc;
-		Creature target;
-		
-		/**
-		 * Constructor for TeleportTask.
-		 * @param target Creature
-		 * @param loc Location
-		 */
-		public TeleportTask(Creature target, Location loc)
-		{
-			this.target = target;
-			this.loc = loc;
-			target.block();
-		}
-		
-		/**
-		 * Method runImpl.
-		 */
-		@Override
-		public void runImpl()
-		{
-			target.unblock();
-			target.teleToLocation(loc);
-		}
-	}
-	
-	/**
-	 * Method loosePlayer.
-	 * @param player Player
-	 */
-	private static void loosePlayer(Player player)
-	{
-		if (player != null)
-		{
-			live_list1.remove(player.getStoredId());
-			live_list2.remove(player.getStoredId());
-			player.setTeam(TeamType.NONE);
-			show(new CustomMessage("scripts.events.TvT.YouLose", player), player);
-		}
-	}
-	
-	/**
-	 * Method removePlayer.
-	 * @param player Player
-	 */
 	private static void removePlayer(Player player)
 	{
 		if (player != null)
@@ -1206,29 +1314,231 @@ public final class TvT extends Functions implements ScriptFile, OnDeathListener,
 			live_list2.remove(player.getStoredId());
 			players_list1.remove(player.getStoredId());
 			players_list2.remove(player.getStoredId());
+			// playerRestoreCoord.remove(player.getStoredId());
+			player.setIsInTvT(false);
+			
+			if (!Config.EVENT_TvTAllowMultiReg)
+			{
+				boxes.remove(player.getStoredId());
+			}
+			
+			for (Player player1 : getPlayers(players_list1))
+			{
+				player1.sendPacket(new ExCubeGameRemovePlayer(player, player.getTeam() == TeamType.RED ? true : false));
+			}
+			
+			for (Player player2 : getPlayers(players_list2))
+			{
+				player2.sendPacket(new ExCubeGameRemovePlayer(player, player.getTeam() == TeamType.RED ? true : false));
+			}
+			
+			player.sendPacket(new ExCubeGameEnd(false));
 			player.setTeam(TeamType.NONE);
+			player.teleToLocation(147451, 46728, -3410, ReflectionManager.DEFAULT);
 		}
 	}
 	
-	/**
-	 * Method getPlayers.
-	 * @param list List<Long>
-	 * @return List<Player>
-	 */
 	private static List<Player> getPlayers(List<Long> list)
 	{
 		List<Player> result = new ArrayList<>();
-		
 		for (Long storeId : list)
 		{
 			Player player = GameObjectsStorage.getAsPlayer(storeId);
-			
 			if (player != null)
 			{
 				result.add(player);
 			}
 		}
-		
 		return result;
+	}
+	
+	public static void buffPlayers()
+	{
+		
+		for (Player player : getPlayers(players_list1))
+		{
+			if (player.isMageClass())
+			{
+				mageBuff(player);
+			}
+			else
+			{
+				fighterBuff(player);
+			}
+		}
+		
+		for (Player player : getPlayers(players_list2))
+		{
+			if (player.isMageClass())
+			{
+				mageBuff(player);
+			}
+			else
+			{
+				fighterBuff(player);
+			}
+		}
+	}
+	
+	public void scheduleEventStart()
+	{
+		try
+		{
+			Calendar currentTime = Calendar.getInstance();
+			Calendar nextStartTime = null;
+			Calendar testStartTime = null;
+			
+			for (String timeOfDay : Config.EVENT_TvTStartTime)
+			{
+				testStartTime = Calendar.getInstance();
+				testStartTime.setLenient(true);
+				
+				String[] splitTimeOfDay = timeOfDay.split(":");
+				
+				testStartTime.set(Calendar.HOUR_OF_DAY, Integer.parseInt(splitTimeOfDay[0]));
+				testStartTime.set(Calendar.MINUTE, Integer.parseInt(splitTimeOfDay[1]));
+				
+				if (testStartTime.getTimeInMillis() < currentTime.getTimeInMillis())
+				{
+					testStartTime.add(Calendar.DAY_OF_MONTH, 1);
+				}
+				
+				if ((nextStartTime == null) || (testStartTime.getTimeInMillis() < nextStartTime.getTimeInMillis()))
+				{
+					nextStartTime = testStartTime;
+				}
+				
+				if (_startTask != null)
+				{
+					_startTask.cancel(false);
+					_startTask = null;
+				}
+				_startTask = ThreadPoolManager.getInstance().schedule(new StartTask(), nextStartTime.getTimeInMillis() - System.currentTimeMillis());
+				
+			}
+			
+			currentTime = null;
+			nextStartTime = null;
+			testStartTime = null;
+			
+		}
+		catch (Exception e)
+		{
+			_log.warn("TvT: Error figuring out a start time. Check TvT_StartTime in config file.");
+		}
+	}
+	
+	public static void mageBuff(Player player)
+	{
+		for (int[] mage_buff : mage_buffs)
+		{
+			buff = SkillTable.getInstance().getInfo(mage_buff[0], mage_buff[1]);
+			if (buff == null)
+			{
+				return;
+			}
+			buff.getEffects(player, player, false, false);
+		}
+	}
+	
+	public static void fighterBuff(Player player)
+	{
+		for (int[] fighter_buff : fighter_buffs)
+		{
+			buff = SkillTable.getInstance().getInfo(fighter_buff[0], fighter_buff[1]);
+			if (buff == null)
+			{
+				return;
+			}
+			buff.getEffects(player, player, false, false);
+		}
+	}
+	
+	private static boolean checkDualBox(Player player)
+	{
+		if (!Config.EVENT_TvTAllowMultiReg)
+		{
+			if ("IP".equalsIgnoreCase(Config.EVENT_TvTCheckWindowMethod))
+			{
+				if (boxes.containsValue(player.getIP()))
+				{
+					show(new CustomMessage("scripts.events.TvT.CancelledBox", player), player);
+					return false;
+				}
+			}
+			// else if ("HWid".equalsIgnoreCase(Config.EVENT_TvTCheckWindowMethod))
+			// {
+			// if (boxes.containsValue(player.getNetConnection().getHWID()))
+			// {
+			// show(new CustomMessage("scripts.events.TvT.CancelledBox", player), player);
+			// return false;
+			// }
+			// }
+		}
+		return true;
+	}
+	
+	public class StartTask extends RunnableImpl
+	{
+		
+		@Override
+		public void runImpl()
+		{
+			if (!_active)
+			{
+				return;
+			}
+			
+			if (isPvPEventStarted())
+			{
+				_log.info("TvT not started: another event is already running");
+				return;
+			}
+			
+			for (Residence c : ResidenceHolder.getInstance().getResidenceList(Castle.class))
+			{
+				if ((c.getSiegeEvent() != null) && c.getSiegeEvent().isInProgress())
+				{
+					_log.debug("TvT not started: CastleSiege in progress");
+					return;
+				}
+			}
+			
+			if (Config.EVENT_TvTCategories)
+			{
+				start(new String[]
+				{
+					"1",
+					"1"
+				});
+			}
+			else
+			{
+				start(new String[]
+				{
+					"-1",
+					"-1"
+				});
+			}
+		}
+	}
+	
+	/**
+	 * @param player
+	 * @return Returns personal player score
+	 */
+	public static int getPlayerScore(Player player)
+	{
+		MutableInt points = score.get(player.getObjectId());
+		return points.intValue();
+	}
+	
+	private static boolean isRedTeam(Player player)
+	{
+		if (player.getTeam() == TeamType.RED)
+		{
+			return true;
+		}
+		return false;
 	}
 }

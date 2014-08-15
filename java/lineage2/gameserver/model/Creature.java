@@ -6507,6 +6507,33 @@ public abstract class Creature extends GameObject
 	}
 	
 	/**
+	 * Method isInTvT.
+	 * @return boolean
+	 */
+	public boolean isInTvT()
+	{
+		return false;
+	}
+	
+	/**
+	 * Method isInCtF.
+	 * @return boolean
+	 */
+	public boolean isInCtF()
+	{
+		return false;
+	}
+	
+	/**
+	 * Method isInLastHero.
+	 * @return boolean
+	 */
+	public boolean isInLastHero()
+	{
+		return false;
+	}
+	
+	/**
 	 * Method isTargetable.
 	 * @return boolean
 	 */

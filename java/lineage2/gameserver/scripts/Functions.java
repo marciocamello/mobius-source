@@ -579,7 +579,6 @@ public class Functions
 	 * @param reflection Reflection
 	 * @return NpcInstance
 	 */
-	@Deprecated
 	public static NpcInstance spawn(Location loc, int npcId, Reflection reflection)
 	{
 		return NpcUtils.spawnSingle(npcId, loc, reflection, 0);

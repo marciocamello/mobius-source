@@ -429,6 +429,10 @@ public final class Player extends Playable implements PlayerGroup
 	private PlayerAccess _playerAccess = new PlayerAccess();
 	private boolean _messageRefusal = false, _tradeRefusal = false, _blockAll = false;
 	private boolean _riding;
+	private boolean _inTvT;
+	private boolean _inCtF;
+	private boolean _hasFlagCTF = false;
+	private boolean _inLastHero;
 	private DecoyInstance _decoy = null;
 	private Map<Integer, EffectCubic> _cubics = null;
 	private int _agathionId = 0;
@@ -484,6 +488,7 @@ public final class Player extends Playable implements PlayerGroup
 	private final Lock _subClassOperationLock = new ReentrantLock();
 	private int _zoneMask;
 	private boolean _offline = false;
+	private boolean _registeredInEvent;
 	private int _pcBangPoints;
 	final Map<Integer, Skill> _transformationSkills = new HashMap<>();
 	private int _expandInventory = 0;
@@ -15337,5 +15342,63 @@ public final class Player extends Playable implements PlayerGroup
 	public boolean isMentor()
 	{
 		return (isAwaking()) && (getLevel() > 84);
+	}
+	
+	public void setRegisteredInEvent(boolean inEvent)
+	{
+		_registeredInEvent = inEvent;
+	}
+	
+	public boolean isRegisteredInEvent()
+	{
+		return _registeredInEvent;
+	}
+	
+	public boolean hasCTFflag()
+	{
+		return _hasFlagCTF;
+	}
+	
+	public void setCTFflag(boolean set)
+	{
+		_hasFlagCTF = set;
+	}
+	
+	@Override
+	public boolean isInTvT()
+	{
+		return this._inTvT;
+	}
+	
+	@Override
+	public boolean isInCtF()
+	{
+		return this._inCtF;
+	}
+	
+	@Override
+	public boolean isInLastHero()
+	{
+		return this._inLastHero;
+	}
+	
+	public boolean isInPvPEvent()
+	{
+		return _inTvT || _inCtF || _inLastHero;
+	}
+	
+	public void setIsInTvT(boolean param)
+	{
+		_inTvT = param;
+	}
+	
+	public void setIsInCtF(boolean param)
+	{
+		_inCtF = param;
+	}
+	
+	public void setIsInLastHero(boolean param)
+	{
+		_inLastHero = param;
 	}
 }

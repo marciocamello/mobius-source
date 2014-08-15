@@ -12,6 +12,7 @@
  */
 package lineage2.gameserver.instancemanager;
 
+import java.util.HashMap;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
@@ -19,6 +20,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 import lineage2.gameserver.data.xml.holder.DoorHolder;
 import lineage2.gameserver.data.xml.holder.ZoneHolder;
 import lineage2.gameserver.model.entity.Reflection;
+import lineage2.gameserver.templates.ZoneTemplate;
 import lineage2.gameserver.utils.Location;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
@@ -32,7 +34,14 @@ public class ReflectionManager
 	public static final Reflection PARNASSUS = Reflection.createReflection(-1);
 	public static final Reflection GIRAN_HARBOR = Reflection.createReflection(-2);
 	public static final Reflection JAIL = Reflection.createReflection(-3);
+	public static final Reflection CTF_EVENT = Reflection.createReflection(-4);
+	public static final Reflection TVT_EVENT = Reflection.createReflection(-5);
+	public static final Reflection LAST_HERO = Reflection.createReflection(-6);
 	private static final ReflectionManager _instance = new ReflectionManager();
+	private final TIntObjectHashMap<Reflection> _reflections = new TIntObjectHashMap<>();
+	private final ReadWriteLock lock = new ReentrantReadWriteLock();
+	private final Lock readLock = lock.readLock();
+	private final Lock writeLock = lock.writeLock();
 	
 	/**
 	 * Method getInstance.
@@ -43,11 +52,6 @@ public class ReflectionManager
 		return _instance;
 	}
 	
-	private final TIntObjectHashMap<Reflection> _reflections = new TIntObjectHashMap<>();
-	private final ReadWriteLock lock = new ReentrantReadWriteLock();
-	private final Lock readLock = lock.readLock();
-	private final Lock writeLock = lock.writeLock();
-	
 	/**
 	 * Constructor for ReflectionManager.
 	 */
@@ -57,7 +61,14 @@ public class ReflectionManager
 		add(PARNASSUS);
 		add(GIRAN_HARBOR);
 		add(JAIL);
+		add(ReflectionManager.TVT_EVENT);
+		add(ReflectionManager.CTF_EVENT);
+		add(ReflectionManager.LAST_HERO);
 		DEFAULT.init(DoorHolder.getInstance().getDoors(), ZoneHolder.getInstance().getZones());
+		HashMap<String, ZoneTemplate> _dummy = new HashMap<>();
+		TVT_EVENT.init(DoorHolder.getInstance().getDoors(), _dummy);
+		CTF_EVENT.init(DoorHolder.getInstance().getDoors(), _dummy);
+		LAST_HERO.init(DoorHolder.getInstance().getDoors(), _dummy);
 		JAIL.setCoreLoc(new Location(-114648, -249384, -2984));
 	}
 	
