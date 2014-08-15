@@ -1,0 +1,1067 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+    <armor id="35600" name="Wind Royal Guard Necklace">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="NECK"/>
+        <set name="icon" value="icon.accessory_nectklace_of_domi_protection_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="106"/>
+        </for>
+    </armor>
+    <armor id="35601" name="Water Royal Guard Ring">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LRFINGER"/>
+        <set name="icon" value="icon.accessory_ring_of_domi_protection_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="60"/>
+        </for>
+    </armor>
+    <armor id="35602" name="Earth Royal Guard Ring">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LRFINGER"/>
+        <set name="icon" value="icon.accessory_ring_of_domi_protection_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="60"/>
+        </for>
+    </armor>
+    <armor id="35603" name="Fire Royal Guard Ring">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LRFINGER"/>
+        <set name="icon" value="icon.accessory_ring_of_domi_protection_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="60"/>
+        </for>
+    </armor>
+    <armor id="35604" name="Holy Royal Guard Ring">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LRFINGER"/>
+        <set name="icon" value="icon.accessory_ring_of_domi_protection_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="60"/>
+        </for>
+    </armor>
+    <armor id="35605" name="Dark Royal Guard Ring">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LRFINGER"/>
+        <set name="icon" value="icon.accessory_ring_of_domi_protection_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="60"/>
+        </for>
+    </armor>
+    <armor id="35606" name="Wind Royal Guard Ring">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LRFINGER"/>
+        <set name="icon" value="icon.accessory_ring_of_domi_protection_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="60"/>
+        </for>
+    </armor>
+    <armor id="35607" name="Resistance Earring A">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessary_inferno_earing_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="63"/>
+        </for>
+    </armor>
+    <armor id="35608" name="Resistance Earring B">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessary_inferno_earing_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="63"/>
+        </for>
+    </armor>
+    <armor id="35609" name="Resistance Earring C">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessary_inferno_earing_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="63"/>
+        </for>
+    </armor>
+    <armor id="35610" name="Resistance Earring D">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessary_inferno_earing_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="63"/>
+        </for>
+    </armor>
+    <armor id="35611" name="Resistance Earring E">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessary_inferno_earing_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="63"/>
+        </for>
+    </armor>
+    <armor id="35612" name="Resistance Earring F">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessary_inferno_earing_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="63"/>
+        </for>
+    </armor>
+    <armor id="35613" name="Resistance Earring G">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessary_inferno_earing_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="63"/>
+        </for>
+    </armor>
+    <armor id="35614" name="Resistance Earring H">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessary_inferno_earing_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="63"/>
+        </for>
+    </armor>
+    <armor id="35615" name="Resistance Earring I">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessary_inferno_earing_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="63"/>
+        </for>
+    </armor>
+    <armor id="35616" name="Top-grade Resistance Earring - Stun">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessary_inferno_earing_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="118"/>
+        </for>
+    </armor>
+    <armor id="35617" name="Top-grade Resistance Earring - Hold">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessary_inferno_earing_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="118"/>
+        </for>
+    </armor>
+    <armor id="35618" name="Top-grade Resistance Earring - Bleed">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessary_inferno_earing_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="118"/>
+        </for>
+    </armor>
+    <armor id="35619" name="Top-grade Resistance Earring - Paralyze">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessary_inferno_earing_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="118"/>
+        </for>
+    </armor>
+    <armor id="35620" name="Top-grade Resistance Earring - Mental Attack">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessary_inferno_earing_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="118"/>
+        </for>
+    </armor>
+    <armor id="35621" name="Top-grade Resistance Earring - Sleep">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessary_inferno_earing_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="118"/>
+        </for>
+    </armor>
+    <armor id="35622" name="Top-grade Resistance Earring - Poison">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessary_inferno_earing_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="118"/>
+        </for>
+    </armor>
+    <armor id="35623" name="Top-grade Resistance Earring - Knock Back/Knock Down">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessary_inferno_earing_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="118"/>
+        </for>
+    </armor>
+    <armor id="35624" name="Top-grade Resistance Earring - Aerial Yoke">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessary_inferno_earing_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="118"/>
+        </for>
+    </armor>
+    <armor id="35625" name="Royal Guard Earring A">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessory_earring_of_domi_protection_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="79"/>
+        </for>
+    </armor>
+    <armor id="35626" name="Royal Guard Earring B">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessory_earring_of_domi_protection_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="79"/>
+        </for>
+    </armor>
+    <armor id="35627" name="Royal Guard Earring C">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessory_earring_of_domi_protection_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="79"/>
+        </for>
+    </armor>
+    <armor id="35628" name="Royal Guard Earring D">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessory_earring_of_domi_protection_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="79"/>
+        </for>
+    </armor>
+    <armor id="35629" name="Royal Guard Earring E">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessory_earring_of_domi_protection_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="79"/>
+        </for>
+    </armor>
+    <armor id="35630" name="Royal Guard Earring F">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessory_earring_of_domi_protection_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="79"/>
+        </for>
+    </armor>
+    <armor id="35631" name="Royal Guard Earring G">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessory_earring_of_domi_protection_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="79"/>
+        </for>
+    </armor>
+    <armor id="35632" name="Royal Guard Earring H">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessory_earring_of_domi_protection_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="79"/>
+        </for>
+    </armor>
+    <armor id="35633" name="Royal Guard Earring I">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="LREAR"/>
+        <set name="icon" value="icon.accessory_earring_of_domi_protection_i00"/>
+        <set name="weight" value="150"/>
+        <for>
+            <add stat="mDef" order="0x10" value="79"/>
+        </for>
+    </armor>
+	<weapon id="35634" name="Sword of Protection">
+		<set name="icon" value="icon.weapon_dynasty_blade_i00"/>
+		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="10"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="C"/>
+		<set name="weight" value="1520"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<for>
+			<set order="0x08" stat="pAtk" value="333.0"/>
+			<set order="0x08" stat="mAtk" value="151.0"/>
+			<set stat="baseCrit" order="0x08" value="80"/>
+			<set order="0x08" stat="pAtkSpd" value="379.0"/>
+			<enchant value="0" order="0x0C" stat="pAtk"/>
+			<enchant value="0" order="0x0C" stat="mAtk"/>
+		</for>
+	</weapon>
+	<weapon id="35635" name="Bow of Protection">
+		<set name="icon" value="icon.weapon_dynasty_bow_i00"/>
+		<set name="type" value="BOW"/>
+		<set name="ex_type" value="BOW"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="5"/>
+		<set name="damage_range" value="0;0;10;0"/>
+		<set name="attack_range" value="500"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="C"/>
+		<set name="weight" value="1520"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<for>
+			<set order="0x08" stat="pAtk" value="654.0"/>
+			<set order="0x08" stat="mAtk" value="151.0"/>
+			<set stat="baseCrit" order="0x08" value="120"/>
+			<set order="0x08" stat="pAtkSpd" value="293.0"/>
+			<enchant value="0" order="0x0C" stat="pAtk"/>
+			<enchant value="0" order="0x0C" stat="mAtk"/>
+		</for>
+	</weapon>
+	<weapon id="35636" name="Magic Sword of Protection">
+		<set name="icon" value="icon.weapon_dynasty_magic_sword_i00"/>
+		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="10"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="C"/>
+		<set name="weight" value="1520"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<for>
+			<set order="0x08" stat="pAtk" value="267.0"/>
+			<set order="0x08" stat="mAtk" value="202.0"/>
+			<set stat="baseCrit" order="0x08" value="80"/>
+			<set order="0x08" stat="pAtkSpd" value="379.0"/>
+			<enchant value="0" order="0x0C" stat="pAtk"/>
+			<enchant value="0" order="0x0C" stat="mAtk"/>
+		</for>
+	</weapon>
+	<weapon id="35637" name="Dagger of Protection">
+		<set name="icon" value="icon.weapon_dynasty_dagger_i00"/>
+		<set name="type" value="DAGGER"/>
+		<set name="ex_type" value="DAGGER"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="5"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="C"/>
+		<set name="weight" value="1520"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<for>
+			<set order="0x08" stat="pAtk" value="291.0"/>
+			<set order="0x08" stat="mAtk" value="151.0"/>
+			<set stat="baseCrit" order="0x08" value="120"/>
+			<set order="0x08" stat="pAtkSpd" value="433.0"/>
+			<enchant value="0" order="0x0C" stat="pAtk"/>
+			<enchant value="0" order="0x0C" stat="mAtk"/>
+		</for>
+	</weapon>
+	<weapon id="35638" name="Dual Weapon of Protection">
+		<set name="icon" value="icon.weapon_dual_sword_i00"/>
+		<set name="type" value="DUAL"/>
+		<set name="ex_type" value="DUAL_SWORD"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="10"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="C"/>
+		<set name="weight" value="1520"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<for>
+			<set order="0x08" stat="pAtk" value="405.0"/>
+			<set order="0x08" stat="mAtk" value="151.0"/>
+			<set stat="baseCrit" order="0x08" value="80"/>
+			<set order="0x08" stat="pAtkSpd" value="325.0"/>
+			<enchant value="0" order="0x0C" stat="pAtk"/>
+			<enchant value="0" order="0x0C" stat="mAtk"/>
+		</for>
+	</weapon>
+	<weapon id="35639" name="Two-handed Sword of Protection">
+		<set name="icon" value="icon.weapon_dynasty_twohand_sword_i00"/>
+		<set name="type" value="BIGSWORD"/>
+		<set name="ex_type" value="BIG_SWORD"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="10"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="C"/>
+		<set name="weight" value="1740"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<for>
+			<set order="0x08" stat="pAtk" value="405.0"/>
+			<set order="0x08" stat="mAtk" value="151.0"/>
+			<set stat="baseCrit" order="0x08" value="80"/>
+			<set order="0x08" stat="pAtkSpd" value="325.0"/>
+			<enchant value="0" order="0x0C" stat="pAtk"/>
+			<enchant value="0" order="0x0C" stat="mAtk"/>
+		</for>
+	</weapon>
+	<etcitem id="35640" name="Nucleus of Darkness">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.tiat_seal_i00"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="35641" name="Mysterious Supply Box - Magic Pin (B, C-grade)">
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="100"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35642" name="Mysterious Supply Box - Magic Pouch (B, C-grade)">
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="100"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35643" name="Mysterious Supply Box - Belt (B, C-grade)">
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="100"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35644" name="Mysterious Supply Box - Magic Pin (S, A-grade)">
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="100"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35645" name="Mysterious Supply Box - Magic Pouch (S, A-grade)">
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="100"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35646" name="Mysterious Supply Box - Belt (S, A-grade)">
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="100"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35647" name="Mysterious Supply Box - Magic Rune Clip (S, A-grade)">
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="100"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35648" name="Mysterious Supply Box - Magic Ornament (S, A-grade)">
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="100"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35649" name="Sealed Talisman - Longing">
+		<set name="icon" value="icon.accessory_longing_talisman_i01"/>
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="100"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="stackable" value="true"/>
+		<skills>
+			<skill id="12902" level="1"/>
+		</skills>
+		<set name="capsuled" value="true"/>
+	</etcitem>
+	<etcitem id="35650" name="Scroll: Summon Bratty Angma">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35651" name="Scroll: Summon Bratty Angma">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35652" name="Scroll: Summon Bratty Angma">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35653" name="Scroll: Summon Bratty Angma">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35668" name="Core of Twisted Magic">
+		<set name="icon" value="icon.etc_fruit_juice_glass_bottle_i07"/>
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35669" name="Angel Cat's Blessing">
+		<set name="icon" value="icon.skilltransform4"/>
+		<set name="class" value="CONSUMABLE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="stackable" value="false"/>
+		<set name="weight" value="5"/>
+		<set name="temporal" value="true"/>
+		<set name="durability" value="43200"/>
+		<skills>
+			<skill id="9487" level="1"/>
+		</skills>
+	</etcitem>
+	<weapon id="35672" name="Pata of Protection">
+		<set name="icon" value="icon.weapon_dynasty_jamadhr_i00"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="ex_type" value="HAND_TO_HAND"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="5"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="C"/>
+		<set name="weight" value="1520"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<for/>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="35673" name="Rapier of Protection">
+		<set name="icon" value="icon.weapon_dynasty_rapier_i00"/>
+		<set name="type" value="RAPIER"/>
+		<set name="ex_type" value="RAPIER"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="40"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="C"/>
+		<set name="weight" value="1520"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<for/>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="35674" name="Mace of Protection">
+		<set name="icon" value="icon.weapon_dynasty_hammer_i00"/>
+		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BLUNT_WEAPON"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="20"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="C"/>
+		<set name="weight" value="1520"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<set name="is_magic_weapon" value="true"/>
+		<for/>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="35678" name="Test Shaper" add_name="test">
+		<set name="icon" value="icon.weapon_stanpid_i10"/>
+		<set name="type" value="DAGGER"/>
+		<set name="ex_type" value="DAGGER"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="5"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="R99"/>
+		<set name="weight" value="1520"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="element_enabled" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<for/>
+	</weapon>
+	<weapon id="35679" name="Test Cutter" add_name="test">
+		<set name="icon" value="icon.weapon_plenitas_i10"/>
+		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="10"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="R99"/>
+		<set name="weight" value="1520"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="element_enabled" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<for/>
+	</weapon>
+	<weapon id="35680" name="Test Slasher" add_name="test">
+		<set name="icon" value="icon.weapon_bauen_i10"/>
+		<set name="type" value="BIGSWORD"/>
+		<set name="ex_type" value="BIG_SWORD"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="10"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="R99"/>
+		<set name="weight" value="1740"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="element_enabled" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<for/>
+	</weapon>
+	<weapon id="35681" name="Test Avenger" add_name="test">
+		<set name="icon" value="icon.weapon_qutram_i10"/>
+		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BLUNT_WEAPON"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="20"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="R99"/>
+		<set name="weight" value="1740"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="element_enabled" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<set name="is_magic_weapon" value="true"/>
+		<for/>
+	</weapon>
+	<weapon id="35682" name="Test Fighter" add_name="test">
+		<set name="icon" value="icon.weapon_durga_i10"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="ex_type" value="HAND_TO_HAND"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="5"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="R99"/>
+		<set name="weight" value="1550"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="element_enabled" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<for/>
+	</weapon>
+	<weapon id="35683" name="Test Stormer" add_name="test">
+		<set name="icon" value="icon.weapon_crabel_i10"/>
+		<set name="type" value="POLE"/>
+		<set name="ex_type" value="POLE"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="10"/>
+		<set name="attack_range" value="80"/>
+		<set name="damage_range" value="0;0;66;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="R99"/>
+		<set name="weight" value="2010"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="element_enabled" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<for/>
+	</weapon>
+	<weapon id="35684" name="Test Thrower" add_name="test">
+		<set name="icon" value="icon.weapon_castron_i10"/>
+		<set name="type" value="BOW"/>
+		<set name="ex_type" value="BOW"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="5"/>
+		<set name="damage_range" value="0;0;10;0"/>
+		<set name="attack_range" value="500"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="R99"/>
+		<set name="weight" value="1520"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="element_enabled" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<for/>
+	</weapon>
+	<weapon id="35685" name="Test Shooter" add_name="test">
+		<set name="icon" value="icon.weapon_stilla_i10"/>
+		<set name="type" value="CROSSBOW"/>
+		<set name="ex_type" value="CROSSBOW"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="10"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="R99"/>
+		<set name="weight" value="1580"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="element_enabled" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<for/>
+	</weapon>
+	<weapon id="35686" name="Test Buster" add_name="test">
+		<set name="icon" value="icon.weaon_serapear_i10"/>
+		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="10"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="R99"/>
+		<set name="weight" value="1520"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="element_enabled" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<for/>
+	</weapon>
+	<weapon id="35687" name="Test Caster" add_name="test">
+		<set name="icon" value="icon.weapon_pilia_i10"/>
+		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BLUNT_WEAPON"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="20"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="R99"/>
+		<set name="material" value="wood"/>
+		<set name="weight" value="1080"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="element_enabled" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<set name="is_magic_weapon" value="true"/>
+		<for/>
+	</weapon>
+	<weapon id="35688" name="Test Retributer" add_name="test">
+		<set name="icon" value="icon.weapon_shaelon_i10"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="20"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="R99"/>
+		<set name="material" value="wood"/>
+		<set name="weight" value="1080"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="element_enabled" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<set name="is_magic_weapon" value="true"/>
+		<for/>
+	</weapon>
+	<weapon id="35689" name="Test Dualsword" add_name="test">
+		<set name="icon" value="icon.weapon_r_dualsword_i10"/>
+		<set name="type" value="DUAL"/>
+		<set name="ex_type" value="DUAL_SWORD"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="10"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="R99"/>
+		<set name="weight" value="1520"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="element_enabled" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<for/>
+	</weapon>
+	<weapon id="35690" name="Test Dual Dagger" add_name="test">
+		<set name="icon" value="icon.weapon_r_dualdagger_i10"/>
+		<set name="type" value="DUALDAGGER"/>
+		<set name="ex_type" value="DUAL_DAGGER"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="10"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="R99"/>
+		<set name="weight" value="2050"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="element_enabled" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<for/>
+	</weapon>
+	<weapon id="35691" name="Test Dual Blunt Weapon" add_name="test">
+		<set name="icon" value="icon.weapon_r_dualblunt_i10"/>
+		<set name="type" value="DUALBLUNT"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="20"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="R99"/>
+		<set name="weight" value="1740"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="element_enabled" value="1"/>
+		<set name="enchant_enabled" value="1"/>
+		<set name="is_magic_weapon" value="true"/>
+		<for/>
+	</weapon>
+	<weapon id="35692" name="Monster's Weapon" add_name="test">
+		<set name="icon" value="BranchSys2.icon.br_wp_Caladbulg_i00"/>
+		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="10"/>
+		<set name="attack_range" value="40"/>
+		<set name="damage_range" value="0;0;40;120"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="1520"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<for/>
+	</weapon>
+    <armor id="35693" name="Santa Girl's Cloak" add_name="1-day (Event)">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="BACK"/>
+        <set name="icon" value="BranchSys3.icon.g_christmas_cloak"/>
+        <set name="weight" value="220"/>
+        <set name="durability" value="180"/>
+        <skills>
+            <skill id="9498" level="1"/>
+        </skills>
+        <for>
+            <enchant stat="pDef" order="0x0C" value="0"/>
+            <enchant stat="maxHp" order="0x80" value="0"/>
+        </for>
+    </armor>
+    <armor id="35694" name="Santa Girl's Cloak" add_name="3-day (Event)">
+        <set name="type" value="NONE"/>
+        <!--Copyright Mazaffaka Project (c) 2012-->
+        <set name="bodypart" value="BACK"/>
+        <set name="icon" value="BranchSys3.icon.g_christmas_cloak"/>
+        <set name="weight" value="220"/>
+        <set name="durability" value="540"/>
+        <skills>
+            <skill id="9498" level="1"/>
+        </skills>
+        <for>
+            <enchant stat="pDef" order="0x0C" value="0"/>
+            <enchant stat="maxHp" order="0x80" value="0"/>
+        </for>
+    </armor>
+</list>
