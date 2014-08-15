@@ -1,0 +1,1449 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="30300" name="Superior Giant's Codex - Oblivion">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.codex_of_incuse_forgetting"/>
+	</etcitem>
+	<etcitem id="30301" name="Superior Giant's Codex Manuscript�">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.codex_of_incuse"/>
+	</etcitem>
+	<etcitem id="30302" name="Superior Giant's Codex Manuscript - Mastery">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.codex_of_incuse_dexterity"/>
+	</etcitem>
+	<etcitem id="30303" name="Superior Giant's Codex Manuscript - Discipline">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.codex_of_incuse_training"/>
+	</etcitem>
+	<etcitem id="30304" name="Superior Giant's Codex Manuscript - Oblivion">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.codex_of_incuse_forgetting"/>
+	</etcitem>
+	<etcitem id="30305" name="Check Test Item">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.weapon_vesper_shaper_i00"/>
+	</etcitem>
+	<etcitem id="30306" name="Essence of the Lesser Giants">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.essence_of_giant"/>
+	</etcitem>
+	<armor id="30307" name="R99 (Rare) Belt">
+		<set name="crystal_type" value="R99"/>
+		<set name="crystallizable" value="true"/>
+		<set name="crystal_count" value="92"/>
+		<set name="icon" value="icon.armor_belt_i03"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="440"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<set name="ex_type" value="BELT"/>
+		<for>
+			<add stat="pDef" order="0x10" value="25"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	</armor>
+	<armor id="30308" name="R99 (Rare) Bracelet">
+		<set name="crystal_type" value="R99"/>
+		<set name="crystallizable" value="true"/>
+		<set name="crystal_count" value="171"/>
+		<set name="icon" value="icon.etc_rbracelet_s_i03"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_BRACELET"/>
+		</equip>
+		<set name="ex_type" value="BRACELET"/>
+	</armor>
+	<armor id="30309" name="R99 (Rare) Shirt">
+		<set name="crystal_type" value="R99"/>
+		<set name="crystallizable" value="true"/>
+		<set name="crystal_count" value="122"/>
+		<set name="icon" value="icon.etc_stripe_shirts_s_i05"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="130"/>
+		<equip>
+			<slot id="UNDERWEAR"/>
+		</equip>
+		<set name="ex_type" value="UNDERWEAR"/>
+		<for>
+			<add stat="pDef" order="0x10" value="50"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	</armor>
+	<armor id="30310" name="Abelius Cloak" add_name="Sigel Knight">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="220"/>
+		<equip>
+			<slot id="BACK"/>
+		</equip>
+		<set name="ex_type" value="CLOAK"/>
+		<for>
+			<add stat="pDef" order="0x10" value="50"/>
+			<add stat="mDef" order="0x10" value="40"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30311" name="Sapyros Cloak" add_name="Tyrr Warrior">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="220"/>
+		<equip>
+			<slot id="BACK"/>
+		</equip>
+		<set name="ex_type" value="CLOAK"/>
+		<for>
+			<add stat="pDef" order="0x10" value="50"/>
+			<add stat="mDef" order="0x10" value="40"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30312" name="Ashagen Cloak" add_name="Othell Rogue">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="220"/>
+		<equip>
+			<slot id="BACK"/>
+		</equip>
+		<set name="ex_type" value="CLOAK"/>
+		<for>
+			<add stat="pDef" order="0x10" value="50"/>
+			<add stat="mDef" order="0x10" value="40"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30313" name="Cranigg Cloak" add_name="Yul Archer">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="220"/>
+		<equip>
+			<slot id="BACK"/>
+		</equip>
+		<set name="ex_type" value="CLOAK"/>
+		<for>
+			<add stat="pDef" order="0x10" value="50"/>
+			<add stat="mDef" order="0x10" value="40"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30314" name="Soltkreig Cloak" add_name="Feoh Wizard">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="220"/>
+		<equip>
+			<slot id="BACK"/>
+		</equip>
+		<set name="ex_type" value="CLOAK"/>
+		<for>
+			<add stat="pDef" order="0x10" value="50"/>
+			<add stat="mDef" order="0x10" value="40"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30315" name="Naviarope Cloak" add_name="Wynn Summoner">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="220"/>
+		<equip>
+			<slot id="BACK"/>
+		</equip>
+		<set name="ex_type" value="CLOAK"/>
+		<for>
+			<add stat="pDef" order="0x10" value="50"/>
+			<add stat="mDef" order="0x10" value="40"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30316" name="Leister Cloak" add_name="Iss Enchanter">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="220"/>
+		<equip>
+			<slot id="BACK"/>
+		</equip>
+		<set name="ex_type" value="CLOAK"/>
+		<for>
+			<add stat="pDef" order="0x10" value="50"/>
+			<add stat="mDef" order="0x10" value="40"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30317" name="Lakcis Cloak" add_name="Aeore Healer">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="220"/>
+		<equip>
+			<slot id="BACK"/>
+		</equip>
+		<set name="ex_type" value="CLOAK"/>
+		<for>
+			<add stat="pDef" order="0x10" value="50"/>
+			<add stat="mDef" order="0x10" value="40"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<etcitem id="30318" name="Dusk Report">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_old_evil_book_i00"/>
+	</etcitem>
+	<etcitem id="30319" name="Mark of Effort">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.armor_soul_i00"/>
+	</etcitem>
+	<etcitem id="30320" name="Tamlin Orc's Badge">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_badge_silver_i00"/>
+	</etcitem>
+	<etcitem id="30321" name="Memorial Crystal">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_crystal_cave_crystal_i02"/>
+	</etcitem>
+	<etcitem id="30322" name="Flame Ashes">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_fire_crystal_i00"/>
+	</etcitem>
+	<etcitem id="30323" name="Crystals of Experience">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_crystal_cave_crystal_i03"/>
+	</etcitem>
+	<etcitem id="30324" name="Enhanced Pailaka Ring">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.accessary_mithril_ring_i00"/>
+	</etcitem>
+	<etcitem id="30325" name="Returning Adventurer's Mark">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_permit_card_i00"/>
+	</etcitem>
+	<etcitem id="30326" name="Antharas' Symbol Dye">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_str_hena_i02"/>
+	</etcitem>
+	<etcitem id="30327" name="Valakas' Symbol Dye">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_str_hena_i02"/>
+	</etcitem>
+	<etcitem id="30328" name="Earth Wyrm's Symbol Dye">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_str_hena_i02"/>
+	</etcitem>
+	<armor id="30330" name="Top-grade Gludio Water Resistance Necklace">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<set name="ex_type" value="NECKLACE"/>
+		<for>
+			<add stat="mDef" order="0x10" value="158"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30331" name="Top-grade Dion Holy Attack Resistance Necklace">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<set name="ex_type" value="NECKLACE"/>
+		<for>
+			<add stat="mDef" order="0x10" value="158"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30332" name="Top-grade Giran Wind Resistance Necklace">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<set name="ex_type" value="NECKLACE"/>
+		<for>
+			<add stat="mDef" order="0x10" value="158"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30333" name="Top-grade Oren Dark Attack Resistance Necklace">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<set name="ex_type" value="NECKLACE"/>
+		<for>
+			<add stat="mDef" order="0x10" value="158"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30334" name="Top-grade Aden Earth Resistance Necklace">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<set name="ex_type" value="NECKLACE"/>
+		<for>
+			<add stat="mDef" order="0x10" value="158"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30335" name="Top-grade Innadril Water Resistance Necklace">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<set name="ex_type" value="NECKLACE"/>
+		<for>
+			<add stat="mDef" order="0x10" value="158"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30336" name="Top-grade Goddard Fire Resistance Necklace">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<set name="ex_type" value="NECKLACE"/>
+		<for>
+			<add stat="mDef" order="0x10" value="158"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30337" name="Top-grade Rune Fire Resistance Necklace">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<set name="ex_type" value="NECKLACE"/>
+		<for>
+			<add stat="mDef" order="0x10" value="158"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30338" name="Top-grade Schuttgart Wind Resistance Necklace">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<set name="ex_type" value="NECKLACE"/>
+		<for>
+			<add stat="mDef" order="0x10" value="158"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30339" name="Top-grade Gludio Water Resistance Earring">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<set name="ex_type" value="RING"/>
+		<for>
+			<add stat="mDef" order="0x10" value="118"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30340" name="Top-grade Dion Holy Attack Resistance Earring">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<set name="ex_type" value="RING"/>
+		<for>
+			<add stat="mDef" order="0x10" value="118"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30341" name="Top-grade Giran Wind Resistance Earring">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<set name="ex_type" value="RING"/>
+		<for>
+			<add stat="mDef" order="0x10" value="118"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30342" name="Top-grade Oren Dark Attack Resistance Earring">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<set name="ex_type" value="RING"/>
+		<for>
+			<add stat="mDef" order="0x10" value="118"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30343" name="Top-grade Aden Earth Resistance Earring">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<set name="ex_type" value="RING"/>
+		<for>
+			<add stat="mDef" order="0x10" value="118"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30344" name="Top-grade Innadril Water Resistance Earring">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<set name="ex_type" value="RING"/>
+		<for>
+			<add stat="mDef" order="0x10" value="118"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30345" name="Top-grade Goddard Fire Resistance Earring">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<set name="ex_type" value="RING"/>
+		<for>
+			<add stat="mDef" order="0x10" value="118"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30346" name="Top-grade Rune Fire Resistance Earring">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<set name="ex_type" value="RING"/>
+		<for>
+			<add stat="mDef" order="0x10" value="118"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30347" name="Top-grade Schuttgart Wind Resistance Earring">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<set name="ex_type" value="RING"/>
+		<for>
+			<add stat="mDef" order="0x10" value="118"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30348" name="Top-grade Gludio Earth Resistance Earring">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<set name="ex_type" value="EARRING"/>
+		<for>
+			<add stat="mDef" order="0x10" value="79"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30349" name="Top-grade Dion Water Resistance Ring">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<set name="ex_type" value="EARRING"/>
+		<for>
+			<add stat="mDef" order="0x10" value="79"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30350" name="Top-grade Giran Fire Resistance Ring">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<set name="ex_type" value="EARRING"/>
+		<for>
+			<add stat="mDef" order="0x10" value="79"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30351" name="Top-grade Oren Earth Resistance Ring">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<set name="ex_type" value="EARRING"/>
+		<for>
+			<add stat="mDef" order="0x10" value="79"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30352" name="Top-grade Aden Holy Attack Resistance Ring">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<set name="ex_type" value="EARRING"/>
+		<for>
+			<add stat="mDef" order="0x10" value="79"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30353" name="Top-grade Innadril Holy Attack Resistance Ring">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<set name="ex_type" value="EARRING"/>
+		<for>
+			<add stat="mDef" order="0x10" value="79"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30354" name="Top-grade Goddard Dark Attack Resistance Ring">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<set name="ex_type" value="EARRING"/>
+		<for>
+			<add stat="mDef" order="0x10" value="79"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30355" name="Top-grade Rune Wind Resistance Ring">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<set name="ex_type" value="EARRING"/>
+		<for>
+			<add stat="mDef" order="0x10" value="79"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30356" name="Top-grade Schuttgart Dark Attack Resistance Ring">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<set name="ex_type" value="EARRING"/>
+		<for>
+			<add stat="mDef" order="0x10" value="79"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<etcitem id="30357" name="Elixir of Life (R-grade)">
+		<set name="reuse_delay" value="120000"/>
+		<set name="delay_share_group" value="7"/>
+		<set name="class" value="CONSUMABLE"/>
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.etc_super_potion_i02"/>
+		<set name="price" value="8750"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="POTION"/>
+		<set name="ex_type" value="POTION"/>
+		<set name="weight" value="5"/>
+		<skills>
+			<skill id="2287" level="7"/>
+		</skills>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="30358" name="Elixir of Mind (R-grade)">
+		<set name="reuse_delay" value="120000"/>
+		<set name="delay_share_group" value="7"/>
+		<set name="class" value="CONSUMABLE"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_super_potion_i00"/>
+		<set name="price" value="9400"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="POTION"/>
+		<set name="ex_type" value="POTION"/>
+		<set name="weight" value="5"/>
+		<skills>
+			<skill id="2288" level="7"/>
+		</skills>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="30359" name="Elixir of CP (R-grade)">
+		<set name="reuse_delay" value="120000"/>
+		<set name="delay_share_group" value="7"/>
+		<set name="class" value="CONSUMABLE"/>
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.etc_super_potion_i01"/>
+		<set name="price" value="3500"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="POTION"/>
+		<set name="ex_type" value="POTION"/>
+		<set name="weight" value="5"/>
+		<skills>
+			<skill id="2287" level="7"/>
+		</skills>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="30360" name="Superior Elixir of Life (R-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_super_potion_i02"/>
+	</etcitem>
+	<etcitem id="30361" name="Superior Elixir of Mind (R-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_super_potion_i00"/>
+	</etcitem>
+	<etcitem id="30362" name="Superior Elixir of CP (R-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="5"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_super_potion_i01"/>
+	</etcitem>
+	<etcitem id="30363" name="Soul Crystal">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="20"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_soul_stone_i00"/>
+	</etcitem>
+	<etcitem id="30364" name="Life Stone">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_mineral_general_i00"/>
+	</etcitem>
+	<armor id="30365" name="Headgear">
+		<set name="crystal_type" value="R"/>
+		<set name="crystallizable" value="true"/>
+		<set name="crystal_count" value="108"/>
+		<set name="icon" value="icon.armor_helmet_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="530"/>
+		<equip>
+			<slot id="HEAD"/>
+		</equip>
+		<set name="ex_type" value="HELMET"/>
+		<for>
+			<add stat="pDef" order="0x10" value="114"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	</armor>
+	<armor id="30366" name="Boots">
+		<set name="crystal_type" value="R"/>
+		<set name="crystallizable" value="false"/>
+		<set name="crystal_count" value="0"/>
+		<set name="icon" value="icon.armor_t97_b_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="1070"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+		<set name="ex_type" value="FEET"/>
+		<for>
+			<add stat="pDef" order="0x10" value="76"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	</armor>
+	<armor id="30367" name="Gloves">
+		<set name="crystal_type" value="R"/>
+		<set name="crystallizable" value="false"/>
+		<set name="crystal_count" value="0"/>
+		<set name="icon" value="icon.armor_t97_g_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="510"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+		<set name="ex_type" value="GLOVES"/>
+		<for>
+			<add stat="pDef" order="0x10" value="76"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	</armor>
+	<armor id="30368" name="T-shirt">
+		<set name="crystal_type" value="R"/>
+		<set name="crystallizable" value="true"/>
+		<set name="crystal_count" value="122"/>
+		<set name="icon" value="icon.etc_stripe_shirts_s_i05"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="130"/>
+		<equip>
+			<slot id="NONE"/>
+		</equip>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<for>
+			<add stat="pDef" order="0x10" value="38"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	</armor>
+	<armor id="30369" name="Belt">
+		<set name="crystal_type" value="R"/>
+		<set name="crystallizable" value="true"/>
+		<set name="crystal_count" value="92"/>
+		<set name="icon" value="icon.armor_belt_i03"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="440"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<set name="ex_type" value="BELT"/>
+		<for>
+			<add stat="pDef" order="0x10" value="19"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+		</for>
+	</armor>
+	<armor id="30370" name="Bracelet">
+		<set name="crystal_type" value="R"/>
+		<set name="crystallizable" value="true"/>
+		<set name="crystal_count" value="171"/>
+		<set name="icon" value="icon.etc_rbracelet_s_i03"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_BRACELET"/>
+		</equip>
+		<set name="ex_type" value="BRACELET"/>
+	</armor>
+	<etcitem id="30371" name="Box Containing Magic Power">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<armor id="30372" name="Hero's Cloak">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="220"/>
+		<equip>
+			<slot id="BACK"/>
+		</equip>
+		<set name="ex_type" value="CLOAK"/>
+		<for>
+			<add stat="pDef" order="0x10" value="60"/>
+			<add stat="mDef" order="0x10" value="50"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<armor id="30373" name="Glorious Cloak">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="220"/>
+		<equip>
+			<slot id="BACK"/>
+		</equip>
+		<set name="ex_type" value="CLOAK"/>
+		<for>
+			<add stat="pDef" order="0x10" value="60"/>
+			<add stat="mDef" order="0x10" value="50"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<etcitem id="30374" name="Magic Filled Box">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="30375" name="Infinite Orichalcum Quiver" add_name="Additional Hit">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00"/>
+	</etcitem>
+	<etcitem id="30376" name="Infinite Orichalcum Quiver" add_name="Critical Hit">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00"/>
+	</etcitem>
+	<etcitem id="30377" name="Infinite Orichalcum Quiver" add_name="Bleed Hit">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00"/>
+	</etcitem>
+	<etcitem id="30378" name="Infinite Orichalcum Bolt Container" add_name="Additional Hit">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00"/>
+	</etcitem>
+	<etcitem id="30379" name="Infinite Orichalcum Bolt Container" add_name="Critical Hit">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00"/>
+	</etcitem>
+	<etcitem id="30380" name="Infinite Orichalcum Bolt Container" add_name="Bleed Hit">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00"/>
+	</etcitem>
+	<etcitem id="30381" name="Lucky Enchant Stone: Weapon (R-grade)">
+		<set name="freightable" value="true"/>
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.ench_wp_potion_violet_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="120"/>
+	</etcitem>
+	<etcitem id="30382" name="Lucky Enchant Stone: Armor (R-grade)">
+		<set name="freightable" value="true"/>
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.ench_am_potion_violet_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="120"/>
+	</etcitem>
+	<armor id="30383" name="Mentor Ring">
+		<set name="crystal_type" value="A"/>
+		<set name="icon" value="icon.accessary_enchanted_ring_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<set name="ex_type" value="RING"/>
+		<for>
+			<add stat="mDef" order="0x10" value="55"/>
+			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
+			<enchant stat="mDef" order="0x40" value="0"/>
+		</for>
+	</armor>
+	<etcitem id="30384" name="Certificate of Promise">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.item_normal52"/>
+	</etcitem>
+	<etcitem id="30385" name="Certificate of Life">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.item_normal52"/>
+	</etcitem>
+	<etcitem id="30386" name="Certificate of Hero">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.item_normal52"/>
+	</etcitem>
+	<etcitem id="30387" name="Certificate of Hell">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.item_normal52"/>
+	</etcitem>
+	<etcitem id="30388" name="Returning Adventurer's Support Box (S-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="30389" name="Returning Adventurer's Support Box (A-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="30390" name="Returning Adventurer's Support Box (B-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<etcitem id="30391" name="Returning Adventurer's Support Box (C-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+	</etcitem>
+	<weapon id="30392" name="Infinity Shaper">
+		<set name="icon" value="icon.weapon_the_dagger_of_hero_i00"/>
+		<set name="weight" value="1300"/>
+		<set name="rnd_dam" value="5"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<set name="type" value="DAGGER"/>
+		<set name="ex_type" value="DAGGER"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="storeable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<for>
+			<add stat="pAtk" order="0x10" value="640"/>
+			<add stat="mAtk" order="0x10" value="399"/>
+			<add stat="accCombat" order="0x10" value="-4.0"/>
+			<set stat="baseCrit" order="0x08" value="120"/>
+			<set stat="atkBaseSpeed" order="0x08" value="433"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="mAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="30393" name="Infinity Cutter">
+		<set name="icon" value="icon.weapon_the_sword_of_hero_i00"/>
+		<set name="weight" value="1300"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="storeable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<for>
+			<add stat="pAtk" order="0x10" value="720"/>
+			<add stat="mAtk" order="0x10" value="399"/>
+			<set stat="baseCrit" order="0x08" value="80"/>
+			<set stat="atkBaseSpeed" order="0x08" value="379"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="mAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="30394" name="Infinity Slasher">
+		<set name="icon" value="icon.weapon_the_two_handed_sword_of_hero_i00"/>
+		<set name="weight" value="1300"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<set name="type" value="BIGSWORD"/>
+		<set name="ex_type" value="BIG_SWORD"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="storeable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<for>
+			<add stat="pAtk" order="0x10" value="877"/>
+			<add stat="mAtk" order="0x10" value="399"/>
+			<set stat="baseCrit" order="0x08" value="80"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="mAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="30395" name="Infinity Avenger">
+		<set name="icon" value="icon.weapon_the_axe_of_hero_i00"/>
+		<set name="weight" value="1300"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BLUNT_WEAPON"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="storeable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<for>
+			<add stat="pAtk" order="0x10" value="720"/>
+			<add stat="mAtk" order="0x10" value="399"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<set stat="atkBaseSpeed" order="0x08" value="379"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="mAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="30396" name="Infinity Fighter">
+		<set name="icon" value="icon.weapon_the_fist_of_hero_i00"/>
+		<set name="weight" value="1300"/>
+		<set name="rnd_dam" value="5"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<set name="type" value="DUALFIST"/>
+		<set name="ex_type" value="HAND_TO_HAND"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="storeable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<for>
+			<add stat="pAtk" order="0x10" value="877"/>
+			<add stat="mAtk" order="0x10" value="399"/>
+			<set stat="baseCrit" order="0x08" value="40"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="mAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="30397" name="Infinity Stormer">
+		<set name="icon" value="icon.weapon_the_pole_of_hero_i00"/>
+		<set name="weight" value="1300"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<set name="type" value="POLE"/>
+		<set name="ex_type" value="POLE"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="storeable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<for>
+			<add stat="pAtk" order="0x10" value="720"/>
+			<add stat="mAtk" order="0x10" value="399"/>
+			<set stat="baseCrit" order="0x08" value="80"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="mAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="30398" name="Infinity Thrower">
+		<set name="icon" value="icon.weapon_the_bow_of_hero_i00"/>
+		<set name="weight" value="1300"/>
+		<set name="rnd_dam" value="5"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<set name="type" value="BOW"/>
+		<set name="ex_type" value="BOW"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="storeable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<for>
+			<add stat="pAtk" order="0x10" value="1419"/>
+			<add stat="mAtk" order="0x10" value="399"/>
+			<add stat="accCombat" order="0x10" value="-4.0"/>
+			<set stat="baseCrit" order="0x08" value="120"/>
+			<set stat="atkBaseSpeed" order="0x08" value="293"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="mAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<weapon id="30399" name="Infinity Shooter">
+		<set name="icon" value="icon.weapon_infinity_shooter_i00"/>
+		<set name="weight" value="1300"/>
+		<set name="rnd_dam" value="10"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<set name="type" value="CROSSBOW"/>
+		<set name="ex_type" value="CROSSBOW"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="storeable" value="false"/>
+		<set name="destroyable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="crystal_type" value="R"/>
+		<set name="crystal_count" value="0"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<for>
+			<add stat="pAtk" order="0x10" value="908"/>
+			<add stat="mAtk" order="0x10" value="399"/>
+			<add stat="accCombat" order="0x10" value="-2.0"/>
+			<set stat="baseCrit" order="0x08" value="100"/>
+			<set stat="atkBaseSpeed" order="0x08" value="303"/>
+			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="mAtk" order="0x40" value="0"/>
+		</for>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+</list>

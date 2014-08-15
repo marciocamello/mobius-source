@@ -1,0 +1,438 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="35700" name="Santa Girl's Golden Gift Box" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="type" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35701" name="Santa Girl's Red Stockings" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.xmas_present_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35702" name="Zahak's Petra">
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_torch_on_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35703" name="Top Quality Petra">
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_torch_on_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+	</etcitem>
+	<etcitem id="35704" name="Expedition Volunteer's Crystal Pouch">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="0"/>
+		<set name="icon" value="icon.etc_pouch_gold_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35705" name="Echo Crystal - Eternal Adventures (5th Fan Pic Award)">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="icon" value="icon.etc_echo_crystal_i03"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35706" name="Echo Crystal - The Stirrings of War (5th Fan Pick Award)">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="icon" value="icon.etc_echo_crystal_i04"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35707" name="Echo Crystal - Reload (5th Fan Pick Award)">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="icon" value="icon.etc_echo_crystal_i01"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<weapon id="35708" name="Lumi Exclusive Weapon">
+		<set name="icon" value="icon.weapon_monster_i00"/>
+		<set name="type" value="BOW"/>
+		<set name="ex_type" value="BOW"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<set name="rnd_dam" value="5"/>
+		<set name="damage_range" value="0;0;10;0"/>
+		<set name="attack_range" value="500"/>
+		<set name="immediate_effect" value="1"/>
+		<set name="crystal_count" value="0"/>
+		<set name="crystal_type" value="D"/>
+		<set name="weight" value="300"/>
+		<set name="price" value="3000000"/>
+		<set name="soulshots" value="2"/>
+		<set name="spiritshots" value="2"/>
+		<set name="enchant_enabled" value="1"/>
+		<for/>
+		<set name="crystallizable" value="false"/>
+	</weapon>
+	<etcitem id="35709" name="Zofan's Supply Box">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<armor id="35712" name="Refined Romantic Chapeau containing the GM's Sincerity" add_name="Warriors Only">
+		<!-- ChipWar -->
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessory_archer_hat2_i00"/>
+        <set name="weight" value="10"/>
+		<set name="durability" value="4320"/>
+		<equip>
+            <slot id="HAIR_ALL"/>
+        </equip>
+		<skills>
+            <skill id="8872" level="1"/>
+		</skills>
+        <set name="ex_type" value="HAIR_ACCESSORY"/>
+    </armor>
+	<armor id="35713" name="Refined Romantic Chapeau containing the GM's Sincerity" add_name="Magic Use">
+		<!-- ChipWar -->
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessory_archer_hat2_i00"/>
+        <set name="weight" value="10"/>
+		<set name="durability" value="4320"/>
+		<equip>
+            <slot id="HAIR_ALL"/>
+        </equip>
+		<skills>
+            <skill id="8873" level="1"/>
+		</skills>
+        <set name="ex_type" value="HAIR_ACCESSORY"/>
+    </armor>
+	<armor id="35714" name="Refined Romantic Chapeau containing the GM's Sincerity" add_name="Healers Only">
+		<!-- ChipWar -->
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessory_archer_hat2_i00"/>
+        <set name="weight" value="10"/>
+		<set name="durability" value="4320"/>
+		<equip>
+            <slot id="HAIR_ALL"/>
+        </equip>
+		<skills>
+            <skill id="8874" level="1"/>
+		</skills>
+        <set name="ex_type" value="HAIR_ACCESSORY"/>
+    </armor>
+	<armor id="35715" name="Refined Romantic Chapeau containing the GM's Blessing" add_name="Warriors Only">
+		<!-- ChipWar -->
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessory_archer_hat2_i00"/>
+        <set name="weight" value="10"/>
+		<set name="durability" value="4320"/>
+		<equip>
+            <slot id="HAIR_ALL"/>
+        </equip>
+		<skills>
+            <skill id="8875" level="1"/>
+		</skills>
+        <set name="ex_type" value="HAIR_ACCESSORY"/>
+    </armor>
+	<armor id="35716" name="Refined Romantic Chapeau containing the GM's Blessing" add_name="Magic Use">
+		<!-- ChipWar -->
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessory_archer_hat2_i00"/>
+        <set name="weight" value="10"/>
+		<set name="durability" value="4320"/>
+		<equip>
+            <slot id="HAIR_ALL"/>
+        </equip>
+		<skills>
+            <skill id="8876" level="1"/>
+		</skills>
+        <set name="ex_type" value="HAIR_ACCESSORY"/>
+    </armor>
+	<armor id="35717" name="Refined Romantic Chapeau containing the GM's Blessing" add_name="Healers Only">
+		<!-- ChipWar -->
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessory_archer_hat2_i00"/>
+        <set name="weight" value="10"/>
+		<set name="durability" value="4320"/>
+		<equip>
+            <slot id="HAIR_ALL"/>
+        </equip>
+		<skills>
+            <skill id="8877" level="1"/>
+		</skills>
+        <set name="ex_type" value="HAIR_ACCESSORY"/>
+    </armor>
+	<armor id="35718" name="Santa Hat" add_name="1-day (Event)">
+		<!-- gorodetskiy -->
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessory_santas_cap_i00"/>
+        <set name="weight" value="10"/>
+		<set name="durability" value="1440"/>
+		<equip>
+            <slot id="HAIR_ALL"/>
+        </equip>
+        <set name="ex_type" value="HAIR_ACCESSORY"/>
+    </armor>
+	<armor id="35719" name="Santa Hat" add_name="3-day (Event)">
+		<!-- gorodetskiy -->
+		<set name="type" value="NONE"/>
+		<set name="icon" value="icon.accessory_santas_cap_i00"/>
+        <set name="weight" value="10"/>
+		<set name="durability" value="4320"/>
+		<equip>
+            <slot id="HAIR_ALL"/>
+        </equip>
+        <set name="ex_type" value="HAIR_ACCESSORY"/>
+    </armor>
+	<etcitem id="35720" name="Santa Girl's Hat Box" add_name="1-day (Event)">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35721" name="Santa Girl's Hat Box" add_name="3-day (Event)">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35723" name="Specter Weapon Pack">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35724" name="Seraph Armor Pack">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35725" name="Seraph Accessory Pack">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35726" name="Enchantment Pack (R-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35727" name="Seed Talisman Ingredient Box">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35728" name="Hero's Support Box">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35741" name="Scroll: PK (Low-grade)" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="2060000"/>
+		<set name="weight" value="10"/>
+		<set name="icon" value="icon.etc_ev_draco_pk_count_down"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35742" name="Scroll: Reputation (Low-grade)" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="1900000"/>
+		<set name="weight" value="10"/>
+		<set name="icon" value="icon.etc_ev_draco_karma_down"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35743" name="Draco's Health Potion" add_name="Event">
+		<set name="class" value="CONSUMABLE"/>
+		<set name="type" value="POTION"/>
+		<set name="ex_type" value="POTION"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="238000"/>
+		<set name="weight" value="10"/>
+		<set name="icon" value="icon.etc_ev_draco_hp_bottle"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="35744" name="Draco's Mana Potion" add_name="Event">
+		<set name="class" value="CONSUMABLE"/>
+		<set name="type" value="POTION"/>
+		<set name="ex_type" value="POTION"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="238000"/>
+		<set name="weight" value="10"/>
+		<set name="icon" value="icon.etc_ev_draco_mp_bottle"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="35745" name="Draco's Hat Box" add_name="Event (Not in Use)">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35749" name="Weapon Attribute Change Crystal (R-grade)" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="R"/>
+		<set name="price" value="20000000"/>
+		<set name="icon" value="icon.change_elemental_crystal"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35750" name="Draco's Blessing (30-minute)" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_exp_up"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35751" name="Draco's Shiny Accessory Pack" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_gift_box"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35752" name="Scroll: PK (Mid-grade)" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_pk_count_down"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35753" name="Scroll: PK (High-grade)" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_pk_count_down"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35754" name="Scroll: PK (Top-grade)" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_pk_count_down"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35755" name="Scroll: Reputation (Mid-grade)" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_karma_down"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35756" name="Scroll: Reputation (High-grade)" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_karma_down"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35757" name="Scroll: Reputation (Top-grade)" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_karma_down"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35758" name="Draco's Blessing (1-hour)" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_exp_up"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35759" name="Draco's Blessing (1-hour)" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_exp_up"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+	<etcitem id="35760" name="Draco's Blessing (3-hour)" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_ev_draco_exp_up"/>
+		<set name="stackable" value="true"/>
+	</etcitem>
+</list>

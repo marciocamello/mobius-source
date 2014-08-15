@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="36308" name="Beauty Shop Ticket">
+		<!-- Item required to purchase a certain style at the Beauty Workshop. Can be purchased at the Lineage II Shop. -->
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.royal_beauty_item"/>
+	</etcitem>
+	<etcitem id="36314" name="Small Draco Egg x 10">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_ev_small_egg"/>
+	</etcitem>
+	<etcitem id="36315" name="Small Draco Egg x 50">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_ev_small_egg"/>
+	</etcitem>
+	<etcitem id="36316" name="Draco's Hat: STR Pendant">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_hairacc_pandent_i00"/>
+	</etcitem>
+	<etcitem id="36317" name="Draco's Hat: DEX Pendant">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_hairacc_pandent_i00"/>
+	</etcitem>
+	<etcitem id="36318" name="Draco's Hat: CON Pendant">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_hairacc_pandent_i00"/>
+	</etcitem>
+	<etcitem id="36319" name="Draco's Hat: MEN Pendant">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_hairacc_pandent_i00"/>
+	</etcitem>
+	<etcitem id="36320" name="Draco's Hat: INT Pendant">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_hairacc_pandent_i00"/>
+	</etcitem>
+	<etcitem id="36321" name="Draco's Hat: WIT Pendant">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_hairacc_pandent_i00"/>
+	</etcitem>
+	<etcitem id="36322" name="Lyn Draco's Accessory Pack" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_ev_draco_gift_box"/>
+	</etcitem>
+	<etcitem id="36323" name="Lyn Draco's Gift">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_treasure_box_i03"/>
+	</etcitem>
+	<etcitem id="36324" name="Draco's Shiny Accessory Pack" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_ev_draco_gift_box"/>
+	</etcitem>
+	<etcitem id="36325" name="Draco's Gift" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_treasure_box_i03"/>
+	</etcitem>
+	<etcitem id="36326" name="Draco's Shiny Gift" add_name="Event">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.etc_treasure_box_i08"/>
+	</etcitem>
+</list>
