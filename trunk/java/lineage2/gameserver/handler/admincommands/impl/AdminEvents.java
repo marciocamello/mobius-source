@@ -53,7 +53,7 @@ public class AdminEvents implements IAdminCommandHandler
 			case admin_events:
 				if (wordList.length == 1)
 				{
-					activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/events/events.htm"));
+					activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/events.htm"));
 				}
 				else
 				{
