@@ -50,6 +50,11 @@ public final class KamalokaGuardInstance extends NpcInstance
 			return;
 		}
 		
+		if (checkForDominionWard(player))
+		{
+			return;
+		}
+		
 		if (command.startsWith("kamaloka"))
 		{
 			int val = Integer.parseInt(command.substring(9));
@@ -94,6 +99,17 @@ public final class KamalokaGuardInstance extends NpcInstance
 		{
 			super.onBypassFeedback(player, command);
 		}
+	}
+	
+	@Override
+	public void showChatWindow(Player player, int val, Object... arg)
+	{
+		if (checkForDominionWard(player))
+		{
+			return;
+		}
+		
+		super.showChatWindow(player, val);
 	}
 	
 	/**

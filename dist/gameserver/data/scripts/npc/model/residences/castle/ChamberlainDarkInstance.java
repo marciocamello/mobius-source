@@ -34,6 +34,7 @@ import lineage2.gameserver.model.pledge.Privilege;
 import lineage2.gameserver.network.serverpackets.CastleSiegeInfo;
 import lineage2.gameserver.network.serverpackets.ExShowCropInfo;
 import lineage2.gameserver.network.serverpackets.ExShowCropSetting;
+import lineage2.gameserver.network.serverpackets.ExShowDominionRegistry;
 import lineage2.gameserver.network.serverpackets.ExShowManorDefaultInfo;
 import lineage2.gameserver.network.serverpackets.ExShowSeedInfo;
 import lineage2.gameserver.network.serverpackets.ExShowSeedSetting;
@@ -327,7 +328,7 @@ public final class ChamberlainDarkInstance extends ResidenceManager
 				return;
 			}
 			
-			if (castle.getSiegeEvent().isInProgress())
+			if (castle.getSiegeEvent().isInProgress() || castle.getDominion().getSiegeEvent().isInProgress())
 			{
 				showChatWindow(player, "residence2/castle/chamberlain_saius021.htm");
 				return;
@@ -461,7 +462,7 @@ public final class ChamberlainDarkInstance extends ResidenceManager
 				return;
 			}
 			
-			if (castle.getSiegeEvent().isInProgress())
+			if (castle.getSiegeEvent().isInProgress() || castle.getDominion().getSiegeEvent().isInProgress())
 			{
 				showChatWindow(player, "residence2/castle/chamberlain_saius021.htm");
 				return;
@@ -645,6 +646,10 @@ public final class ChamberlainDarkInstance extends ResidenceManager
 				html.setFile("castle/chamberlain/alreadyhavecrown.htm");
 				player.sendPacket(html);
 			}
+		}
+		else if (actualCommand.equalsIgnoreCase("viewTerritoryWarInfo"))
+		{
+			player.sendPacket(new ExShowDominionRegistry(player, castle.getDominion()));
 		}
 		else if (actualCommand.equalsIgnoreCase("Cloak")) // Give Cold Cloak of Dark to Castle Owner
 		{
@@ -869,7 +874,7 @@ public final class ChamberlainDarkInstance extends ResidenceManager
 			return false;
 		}
 		
-		if (castle.getSiegeEvent().isInProgress())
+		if (castle.getSiegeEvent().isInProgress() || castle.getDominion().getSiegeEvent().isInProgress())
 		{
 			showChatWindow(player, "residence2/castle/chamberlain_saius021.htm");
 			return false;
