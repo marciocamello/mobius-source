@@ -71,7 +71,8 @@ public class AdminSkill implements IAdminCommandHandler
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
-	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
 	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
@@ -263,7 +264,8 @@ public class AdminSkill implements IAdminCommandHandler
 	}
 	
 	/**
-	 * Methodnur# * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()getAdminCommandEnum()
+	 * Method Enum
+	 * @return Enum[]
 	 */
 	@Override
 	public Enum<?>[] getAdminCommandEnum()
@@ -388,7 +390,7 @@ public class AdminSkill implements IAdminCommandHandler
 		replyMSG.append("<tr><td><button value=\"Add Skills\" action=\"bypass -h admin_skill_list\" width=110 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
 		replyMSG.append("<td><button value=\"Get Skills\" action=\"bypass -h admin_get_skills\" width=110 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>");
 		replyMSG.append("<tr><td><button value=\"Delete Skills\" action=\"bypass -h admin_remove_skills\" width=110 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-		replyMSG.append("<td><button value=\"Reset skills\" action=\"bypass -h admin_reset_skills\" width=110 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>");
+		replyMSG.append("<td><button value=\"Reset Skills\" action=\"bypass -h admin_reset_skills\" width=110 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>");
 		replyMSG.append("<tr><td><button value=\"Give All Skills\" action=\"bypass -h admin_give_all_skills\" width=110 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
 		replyMSG.append("<td><button value=\"Remove All Skills\" action=\"bypass -h admin_remove_all_skills\" width=110 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>");
 		replyMSG.append("</table></center>");
