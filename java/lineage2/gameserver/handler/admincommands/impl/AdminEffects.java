@@ -134,7 +134,7 @@ public class AdminEffects implements IAdminCommandHandler
 				{
 					if (sh_level != 0)
 					{
-						activeChar.doCast(SkillTable.getInstance().getInfo(7029, sh_level), activeChar, true);
+						activeChar.getEffectList().stopEffect(SkillTable.getInstance().getInfo(7029, sh_level));
 					}
 					
 					activeChar.unsetVar("gm_gmspeed");
