@@ -827,6 +827,8 @@ public class AdminEditChar implements IAdminCommandHandler
 		replyMSG.append("</tr></table><br>");
 		replyMSG.append("<table width=240 bgcolor=\"666666\">");
 		replyMSG.append("<tr><td>Name:</td><td>" + player.getName() + "</td></tr>");
+		replyMSG.append("<tr><td>Account:</td><td>" + player.getAccountName() + "</td></tr>");
+		replyMSG.append("<tr><td>IP:</td><td>" + player.getIP() + "</td></tr>");
 		replyMSG.append("<tr><td>Clan:</td><td>" + (player.getClan() != null ? player.getClan().getName() + " (Level " + player.getClan().getLevel() + ")" : "None") + "</td></tr>");
 		replyMSG.append("<tr><td>Level:</td><td>" + player.getLevel() + "</td></tr>");
 		replyMSG.append("<tr><td>Class:</td><td>" + HtmlUtils.htmlClassName(player.getClassId().getId()) + "</td></tr>");
