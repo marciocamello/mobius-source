@@ -39,7 +39,6 @@ import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.MentorUtil;
-import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.Util;
 
 /**
@@ -698,7 +697,8 @@ public class AdminEditChar implements IAdminCommandHandler
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return Enum[]
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
 	 */
 	@Override
 	public Enum<?>[] getAdminCommandEnum()
@@ -799,53 +799,60 @@ public class AdminEditChar implements IAdminCommandHandler
 			activeChar.setTarget(player);
 		}
 		
-		String clanName = "No Clan";
-		
-		if (player.getClan() != null)
-		{
-			clanName = player.getClan().getName() + "/" + player.getClan().getLevel();
-		}
-		
 		NumberFormat df = NumberFormat.getNumberInstance(Locale.ENGLISH);
 		df.setMaximumFractionDigits(4);
 		df.setMinimumFractionDigits(1);
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		StringBuilder replyMSG = new StringBuilder("<html><body>");
+		StringBuilder replyMSG = new StringBuilder("<html><body><center>");
 		replyMSG.append("<table width=260><tr>");
 		replyMSG.append("<td width=40><button value=\"Main\" action=\"bypass -h admin_admin\" width=40 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
 		replyMSG.append("<td width=180><center>Character Selection Menu</center></td>");
 		replyMSG.append("<td width=40><button value=\"Back\" action=\"bypass -h admin_show_characters 0\" width=40 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
 		replyMSG.append("</tr></table><br>");
-		replyMSG.append("<table width=270>");
-		replyMSG.append("<tr><td width=100>Account/IP:</td><td>" + player.getAccountName() + "/" + player.getIP() + "</td></tr>");
-		replyMSG.append("<tr><td width=100>Name/Level:</td><td>" + player.getName() + "/" + player.getLevel() + "</td></tr>");
-		replyMSG.append("<tr><td width=100>Class/Id:</td><td>" + HtmlUtils.htmlClassName(player.getClassId().getId()) + "/" + player.getClassId().getId() + "</td></tr>");
-		replyMSG.append("<tr><td width=100>Clan/Level:</td><td>" + clanName + "</td></tr>");
-		replyMSG.append("<tr><td width=100>Exp/Sp:</td><td>" + player.getExp() + "/" + player.getSp() + "</td></tr>");
-		replyMSG.append("<tr><td width=100>Cur/Max Hp:</td><td>" + (int) player.getCurrentHp() + "/" + player.getMaxHp() + "</td></tr>");
-		replyMSG.append("<tr><td width=100>Cur/Max Mp:</td><td>" + (int) player.getCurrentMp() + "/" + player.getMaxMp() + "</td></tr>");
-		replyMSG.append("<tr><td width=100>Cur/Max Load:</td><td>" + player.getCurrentLoad() + "/" + player.getMaxLoad() + "</td></tr>");
-		replyMSG.append("<tr><td width=100>Patk/Matk:</td><td>" + player.getPAtk(null) + "/" + player.getMAtk(null, null) + "</td></tr>");
-		replyMSG.append("<tr><td width=100>Pdef/Mdef:</td><td>" + player.getPDef(null) + "/" + player.getMDef(null, null) + "</td></tr>");
-		replyMSG.append("<tr><td width=100>PAtkSpd/MAtkSpd:</td><td>" + player.getPAtkSpd() + "/" + player.getMAtkSpd() + "</td></tr>");
-		replyMSG.append("<tr><td width=100>Acc/Evas:</td><td>" + player.getAccuracy() + "/" + player.getEvasionRate(null) + "</td></tr>");
-		replyMSG.append("<tr><td width=100>Crit/MCrit:</td><td>" + player.getCriticalHit(null, null) + "/" + df.format(player.getMagicCriticalRate(null, null)) + "%</td></tr>");
-		replyMSG.append("<tr><td width=100>CritDmg/MCritDmg:</td><td>" + player.getCriticalDmg(null, null) + "/" + player.getMagicCriticalDmg(null, null) + "</td></tr>");
-		replyMSG.append("<tr><td width=100>Walk/Run:</td><td>" + player.getWalkSpeed() + "/" + player.getRunSpeed() + "</td></tr>");
-		replyMSG.append("<tr><td width=100>Karma/Fame:</td><td>" + player.getKarma() + "/" + player.getFame() + "</td></tr>");
-		replyMSG.append("<tr><td width=100>PvP/PK:</td><td>" + player.getPvpKills() + "/" + player.getPkKills() + "</td></tr>");
-		replyMSG.append("<tr><td width=100>Coordinates:</td><td>" + player.getX() + "," + player.getY() + "," + player.getZ() + "</td></tr>");
-		replyMSG.append("<tr><td width=100>Direction:</td><td>" + PositionUtils.getDirectionTo(player, activeChar) + "</td></tr>");
-		replyMSG.append("</table><br>");
-		replyMSG.append("<table<tr>");
-		replyMSG.append("<td><button value=\"Skills\" action=\"bypass -h admin_show_skills\" width=80 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-		replyMSG.append("<td><button value=\"Effects\" action=\"bypass -h admin_show_effects\" width=80 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-		replyMSG.append("<td><button value=\"Actions\" action=\"bypass -h admin_character_actions\" width=80 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<table width=240><tr>");
+		replyMSG.append("<td><button value=\"Go To\" action=\"bypass -h admin_teleport_to_character " + player.getName() + "\" width=65 height=18 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td><button value=\"Kick\" action=\"bypass -h admin_kick " + player.getName() + "\" width=65 height=18 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td><button value=\"Ban Acc\" action=\"bypass -h admin_accban " + player.getAccountName() + "\" width=65 height=18 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td><button value=\"Ban Chr\" action=\"bypass -h admin_ban " + player.getName() + "\" width=65 height=18 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
 		replyMSG.append("</tr><tr>");
-		replyMSG.append("<td><button value=\"Stats\" action=\"bypass -h admin_edit_character\" width=80 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-		replyMSG.append("<td><button value=\"Exp & Sp\" action=\"bypass -h admin_add_exp_sp_to_character\" width=80 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-		replyMSG.append("<td></td>");
-		replyMSG.append("</tr></table></body></html>");
+		replyMSG.append("<td><button value=\"Recall\" action=\"bypass -h admin_recall " + player.getName() + "\" width=65 height=18 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td><button value=\"Skills\" action=\"bypass -h admin_show_skills\" width=65 height=18 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td><button value=\"Edit\" action=\"bypass -h admin_edit_character\" width=65 height=18 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td><button value=\"Class\" action=\"bypass -h admin_show_html setclass.htm\" width=65 height=18 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("</tr><tr>");
+		replyMSG.append("<td><button value=\"Lv/Exp/Sp\" action=\"bypass -h admin_add_exp_sp_to_character\" width=65 height=18 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td><button value=\"Instance\" action=\"bypass -h admin_instance " + player.getName() + "\" width=65 height=18 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td><button value=\"Effects\" action=\"bypass -h admin_show_effects\" width=65 height=18 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td><button value=\"Quests\" action=\"bypass -h admin_quests\" width=65 height=18 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("</tr></table><br>");
+		replyMSG.append("<table width=240 bgcolor=\"666666\">");
+		replyMSG.append("<tr><td>Name:</td><td>" + player.getName() + "</td></tr>");
+		replyMSG.append("<tr><td>Clan:</td><td>" + (player.getClan() != null ? player.getClan().getName() + " (Level " + player.getClan().getLevel() + ")" : "None") + "</td></tr>");
+		replyMSG.append("<tr><td>Level:</td><td>" + player.getLevel() + "</td></tr>");
+		replyMSG.append("<tr><td>Class:</td><td>" + HtmlUtils.htmlClassName(player.getClassId().getId()) + "</td></tr>");
+		replyMSG.append("<tr><td>BaseClass:</td><td>" + HtmlUtils.htmlClassName(player.getBaseClassId()) + "</td></tr>");
+		replyMSG.append("<tr><td>CP:</td><td> <font color=\"LEVEL\">" + (int) player.getCurrentCp() + "</font> / " + player.getMaxCp() + "</td></tr>");
+		replyMSG.append("<tr><td>HP:</td><td> <font color=\"LEVEL\">" + (int) player.getCurrentHp() + "</font> / " + player.getMaxHp() + "</td></tr>");
+		replyMSG.append("<tr><td>MP:</td><td><font color=\"LEVEL\">" + (int) player.getCurrentMp() + "</font> / " + player.getMaxMp() + "</td></tr>");
+		replyMSG.append("<tr><td>Weight:</td><td>" + player.getCurrentLoad() + " / " + player.getMaxLoad() + "</td></tr>");
+		replyMSG.append("<tr><td>EXP:</td><td>" + player.getExp() + "</td></tr>");
+		replyMSG.append("<tr><td>SP:</td><td>" + player.getSp() + "</td></tr>");
+		replyMSG.append("<tr><td>Noblesse:</td><td>" + (player.isNoble() ? "Yes" : "No") + "</td></tr>");
+		replyMSG.append("%inst%</table><br>");
+		replyMSG.append("<table width=240>");
+		replyMSG.append("<tr><td>PvP Kills: </td><td>" + player.getPvpKills() + "</td><td>Karma: </td><td>" + player.getKarma() + "</td></tr>");
+		replyMSG.append("<tr><td>PK Kills: </td><td>" + player.getPkKills() + "</td><td>PvP Flag: </td><td>" + player.getPvpFlag() + "</td></tr>");
+		replyMSG.append("</table><br>");
+		replyMSG.append("<table width=240 bgcolor=\"666666\">");
+		replyMSG.append("<tr><td>P. Atk:</td><td>" + player.getPAtk(null) + "</td><td>M. Atk:</td><td>" + player.getMAtk(null, null) + "</td></tr>");
+		replyMSG.append("<tr><td>P. Def:</td><td>" + player.getPDef(null) + "</td><td>M. Def:</td><td>" + player.getMDef(null, null) + "</td></tr>");
+		replyMSG.append("<tr><td>Accuracy:</td><td>" + player.getAccuracy() + "</td><td>Evasion:</td><td>" + player.getEvasionRate(null) + "</td></tr>");
+		replyMSG.append("<tr><td>Crit Rate:</td><td>" + (player.isMageClass() ? player.getMagicCriticalRate(null, null) : player.getCriticalHit(null, null)) + "</td><td>Speed:</td><td>" + player.getRunSpeed() + "</td></tr>");
+		replyMSG.append("<tr><td>Atk. Spd.:</td><td>" + player.getPAtkSpd() + "</td><td>Casting Spd.:</td><td>" + player.getMAtkSpd() + "</td></tr>");
+		replyMSG.append("</table><br>");
+		replyMSG.append("Player Coordinates: " + player.getX() + " " + player.getY() + " " + player.getZ() + "<br1>");
+		replyMSG.append("AI: " + player.getAI().getIntention().name());
+		replyMSG.append("</center></body></html>");
 		adminReply.setHtml(replyMSG.toString());
 		activeChar.sendPacket(adminReply);
 	}
@@ -1019,14 +1026,14 @@ public class AdminEditChar implements IAdminCommandHandler
 		replyMSG.append("<tr><td width=40>MP:</td><td width=70>" + player.getCurrentMp() + "</td><td width=70>" + player.getMaxMp() + "</td><td width=70>Pvp Kills: " + player.getPvpKills() + "</td></tr>");
 		replyMSG.append("<tr><td width=40>Load:</td><td width=70>" + player.getCurrentLoad() + "</td><td width=70>" + player.getMaxLoad() + "</td><td width=70>Pvp Flag: " + player.getPvpFlag() + "</td></tr>");
 		replyMSG.append("</table>");
-		replyMSG.append("<table width=270><tr><td>Class<?> Template Id: " + player.getClassId() + "/" + player.getClassId().getId() + "</td></tr></table><br>");
+		replyMSG.append("<table width=270><tr><td>Class Template/Id: " + player.getClassId() + "/" + player.getClassId().getId() + "</td></tr></table><br>");
 		replyMSG.append("<table width=270>");
 		replyMSG.append("<tr><td>Note: Fill all values before saving the modifications.</td></tr>");
 		replyMSG.append("</table><br>");
 		replyMSG.append("<table width=270>");
 		replyMSG.append("<tr><td width=50>Hp:</td><td><edit var=\"hp\" width=50></td><td width=50>Mp:</td><td><edit var=\"mp\" width=50></td></tr>");
 		replyMSG.append("<tr><td width=50>Pvp Flag:</td><td><edit var=\"pvpflag\" width=50></td><td width=50>Karma:</td><td><edit var=\"karma\" width=50></td></tr>");
-		replyMSG.append("<tr><td width=50>Class<?> Id:</td><td><edit var=\"classid\" width=50></td><td width=50>Pvp Kills:</td><td><edit var=\"pvpkills\" width=50></td></tr>");
+		replyMSG.append("<tr><td width=50>Class Id:</td><td><edit var=\"classid\" width=50></td><td width=50>Pvp Kills:</td><td><edit var=\"pvpkills\" width=50></td></tr>");
 		replyMSG.append("</table><br>");
 		replyMSG.append("<center><button value=\"Save Changes\" action=\"bypass -h admin_save_modifications $hp & $mp & $karma & $pvpflag & $pvpkills & $classid &\" width=80 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></center><br>");
 		replyMSG.append("</body></html>");
@@ -1161,10 +1168,8 @@ public class AdminEditChar implements IAdminCommandHandler
 		replyMSG.append("<tr><td>Lv: " + player.getLevel() + " " + HtmlUtils.htmlClassName(player.getClassId().getId()) + "</td></tr>");
 		replyMSG.append("<tr><td>Exp: " + player.getExp() + "</td></tr>");
 		replyMSG.append("<tr><td>Sp: " + player.getSp() + "</td></tr></table>");
-		replyMSG.append("<br><table width=270><tr><td>Note: Dont forget that modifying players skills can</td></tr>");
-		replyMSG.append("<tr><td>ruin the game...</td></tr></table><br>");
-		replyMSG.append("<table width=270><tr><td>Note: Fill all values before saving the modifications.,</td></tr>");
-		replyMSG.append("<tr><td>Note: Use 0 if no changes are needed.</td></tr></table><br>");
+		replyMSG.append("<br><table width=270><tr><td>Note: Dont forget that modifying players skills can ruin the game...</td></tr></table><br>");
+		replyMSG.append("<table width=270><tr><td>Note: Fill all values before saving the modifications, use 0 if no changes are needed.</td></tr></table><br>");
 		replyMSG.append("<center><table><tr>");
 		replyMSG.append("<td>Exp: <edit var=\"exp_to_add\" width=50></td>");
 		replyMSG.append("<td>Sp:  <edit var=\"sp_to_add\" width=50></td>");
