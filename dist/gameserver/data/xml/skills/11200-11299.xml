@@ -1149,7 +1149,7 @@
 		<table name="#matk">1.3 1.35 1.4</table>
 		<table name="#hp">1.15 1.15 1.15</table>
 		<table name="#crit">1.3 1.3 1.3</table>
-		<table name="#atkspd">1.03 1.03 1.03</table>
+		<table name="#atkspd">1.1 1.1 1.1</table>
 		<table name="#matkspd">1.03 1.03 1.03</table>
 		<table name="#mpConsume2">77</table>
 		<set name="reuseDelay" val="60000"/>
