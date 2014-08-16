@@ -2839,7 +2839,7 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="1434" max="3348" chance="100.0"/>
+				<reward item_id="57" min="14340" max="33480" chance="100.0"/>
 			</group>
 			<group chance="4.166">
 				<reward item_id="18196" min="1" max="1" chance="0.13204"/>
@@ -2908,7 +2908,7 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="1540" max="3594" chance="100.0"/>
+				<reward item_id="57" min="15400" max="35940" chance="100.0"/>
 			</group>
 			<group chance="2.336">
 				<reward item_id="18199" min="1" max="1" chance="1.28425"/>
@@ -2981,7 +2981,7 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="1954" max="4561" chance="100.0"/>
+				<reward item_id="57" min="19540" max="45610" chance="100.0"/>
 			</group>
 			<group chance="4.375">
 				<reward item_id="18185" min="1" max="1" chance="0.12571"/>
@@ -3057,7 +3057,7 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="2098" max="4899" chance="100.0"/>
+				<reward item_id="57" min="20980" max="48990" chance="100.0"/>
 			</group>
 			<group chance="4.866">
 				<reward item_id="18188" min="1" max="1" chance="0.11303"/>
@@ -3133,7 +3133,7 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="1602" max="3741" chance="100.0"/>
+				<reward item_id="57" min="16020" max="37410" chance="100.0"/>
 			</group>
 			<group chance="2.349">
 				<reward item_id="18189" min="1" max="1" chance="1.27714"/>
@@ -3242,7 +3242,7 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="1358" max="3171" chance="100.0"/>
+				<reward item_id="57" min="13580" max="31710" chance="100.0"/>
 			</group>
 			<group chance="0.33">
 				<reward item_id="632" min="1" max="1" chance="90.90909"/>
@@ -3308,7 +3308,7 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="1414" max="3297" chance="100.0"/>
+				<reward item_id="57" min="14140" max="32970" chance="100.0"/>
 			</group>
 			<group chance="2.527">
 				<reward item_id="5312" min="1" max="1" chance="1.18718"/>
@@ -3776,7 +3776,7 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="2308" max="5384" chance="100.0"/>
+				<reward item_id="57" min="23080" max="53840" chance="100.0"/>
 			</group>
 			<group chance="20.089">
 				<reward item_id="18170" min="1" max="1" chance="0.37334"/>
@@ -3840,7 +3840,7 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="1074" max="2506" chance="100.0"/>
+				<reward item_id="57" min="10740" max="25060" chance="100.0"/>
 			</group>
 			<group chance="0.3">
 				<reward item_id="18117" min="1" max="1" chance="100.0"/>
@@ -3899,7 +3899,7 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="1074" max="2506" chance="100.0"/>
+				<reward item_id="57" min="10740" max="25060" chance="100.0"/>
 			</group>
 			<group chance="0.3">
 				<reward item_id="18131" min="1" max="1" chance="100.0"/>
@@ -3964,7 +3964,7 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="1162" max="2711" chance="100.0"/>
+				<reward item_id="57" min="11620" max="27110" chance="100.0"/>
 			</group>
 			<group chance="0.3">
 				<reward item_id="18126" min="1" max="1" chance="100.0"/>
@@ -4026,7 +4026,7 @@
 		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="123" max="286" chance="100.0"/>
+				<reward item_id="57" min="1230" max="2860" chance="100.0"/>
 			</group>
 			<group chance="0.03">
 				<reward item_id="18121" min="1" max="1" chance="100.0"/>
