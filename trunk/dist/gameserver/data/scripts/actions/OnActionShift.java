@@ -66,19 +66,19 @@ public final class OnActionShift extends Functions
 		
 		if (!Config.ALLOW_NPC_SHIFTCLICK && !player.isGM())
 		{
-			if (Config.ALT_GAME_SHOW_DROPLIST && object.isNpc())
+			return false;
+		}
+		
+		if (Config.ALT_GAME_SHOW_DROPLIST && object.isNpc())
+		{
+			NpcInstance npc = (NpcInstance) object;
+			
+			if (npc.isDead())
 			{
-				NpcInstance npc = (NpcInstance) object;
-				
-				if (npc.isDead())
-				{
-					return false;
-				}
-				
-				droplist(player, npc);
+				return false;
 			}
 			
-			return false;
+			droplist(player, npc);
 		}
 		
 		if (object.isNpc())
