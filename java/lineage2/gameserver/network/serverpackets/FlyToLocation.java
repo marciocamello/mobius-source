@@ -35,9 +35,7 @@ public class FlyToLocation extends L2GameServerPacket
 		PUSH_DOWN_HORIZONTAL,
 		WARP_BACK,
 		WARP_FORWARD,
-		NONE;// для
-		// скилов
-		// надо...
+		NONE;
 	}
 	
 	public FlyToLocation(Creature cha, Location destLoc, FlyType type, int speed)

@@ -16,6 +16,7 @@ import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.network.serverpackets.FlyToLocation;
 import lineage2.gameserver.network.serverpackets.ValidateLocation;
+import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.utils.Location;
 
@@ -57,11 +58,14 @@ public class EffectTargetToMe extends Effect
 			Location flyLoc = _effected.getFlyLocation(getEffector(), getSkill());
 			_effected.abortCast(true, true);
 			
-			if (flyLoc == null)
+			// if (flyLoc == null)
+			if ((flyLoc == null) || getEffector().isInWater())
 			{
-				_log.info("EffectTargetToMe Loc null check this!");
+				// _log.info("EffectTargetToMe Loc null check this!");
+				_effected.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
 				return;
 			}
+			
 			_effected.broadcastPacket(new FlyToLocation(_effected, flyLoc, getSkill().getFlyType(), getSkill().getFlySpeed()));
 			_x = flyLoc.getX();
 			_y = flyLoc.getY();
