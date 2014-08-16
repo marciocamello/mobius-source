@@ -1451,7 +1451,7 @@ public class Config
 		ALT_ALLOW_DROP_AUGMENTED = altSettings.getProperty("AlowDropAugmented", false);
 		ALT_GAME_UNREGISTER_RECIPE = altSettings.getProperty("AltUnregisterRecipe", true);
 		ALT_GAME_SHOW_DROPLIST = altSettings.getProperty("AltShowDroplist", true);
-		ALLOW_NPC_SHIFTCLICK = altSettings.getProperty("AllowShiftClick", true);
+		ALLOW_NPC_SHIFTCLICK = altSettings.getProperty("AllowShiftClick", false);
 		ALT_FULL_NPC_STATS_PAGE = altSettings.getProperty("AltFullStatsPage", false);
 		// ALT_GAME_SUBCLASS_WITHOUT_QUESTS = altSettings.getProperty("AltAllowSubClassWithoutQuest", false);
 		ALT_ALLOW_SUBCLASS_WITHOUT_BAIUM = altSettings.getProperty("AltAllowSubClassWithoutBaium", true);

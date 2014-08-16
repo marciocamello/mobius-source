@@ -59,7 +59,7 @@ public final class RewardListInfo
 		final NpcHtmlMessage htmlMessage = new NpcHtmlMessage(5);
 		htmlMessage.replace("%npc_name%", HtmlUtils.htmlNpcName(npc.getNpcId()));
 		
-		if (mod <= 0)
+		if ((mod <= 0) && !player.isGM())
 		{
 			htmlMessage.setFile("actions/rewardlist_to_weak.htm");
 			player.sendPacket(htmlMessage);
