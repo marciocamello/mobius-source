@@ -1880,7 +1880,7 @@
 		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="50"/>
 		<set name="castle_id" value="5"/>
-		<set name="collision_height" value="22.0"/>
+		<set name="collision_height" value="18.0"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="level" value="70"/>
 		<set name="rewardExp" value="0"/>
