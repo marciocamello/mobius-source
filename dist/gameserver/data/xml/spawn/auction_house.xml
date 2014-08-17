@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<list>
+	<!-- Giran -->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="81083" y="149459" z="-3464" h="64382"/>
+		<npc id="33417"/>
+	</spawn>
+	<!-- Aden -->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="147199" y="28579" z="-2274" h="49151"/>
+		<npc id="33418"/>
+	</spawn>
+	<!-- Gludin -->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-81320" y="151720" z="-3154" h="49151"/>
+		<npc id="33528"/>
+	</spawn>
+	<!-- Dion -->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="18808" y="145944" z="-3096" h="49151"/>
+		<npc id="33529"/>
+	</spawn>
+	<!-- Talking Island -->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-114383" y="253554" z="-1536" h="41219"/>
+		<npc id="33530"/>
+	</spawn>
+	<!-- Heine -->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="110072" y="220616" z="-3504" h="16383"/>
+		<npc id="33531"/>
+	</spawn>
+	<!-- Oren -->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="81416" y="55384" z="-1550" h="16383"/>
+		<npc id="33532"/>
+	</spawn>
+	<!-- Schuttgart -->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="85871" y="-142828" z="-1368" h="16383"/>
+		<npc id="33533"/>
+	</spawn>
+	<!-- Goddard -->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="149190" y="-55874" z="-2807" h="49151"/>
+		<npc id="33551"/>
+	</spawn>
+	<!-- Rune -->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="44232" y="-47624" z="-822" h="49151"/>
+		<npc id="33447"/>
+	</spawn>
+	<!-- Arcan -->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="208486" y="89741" z="-1024" h="37604"/>
+		<npc id="33534"/>
+	</spawn>
+	<!-- Gludio -->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-14744" y="122888" z="-3143" h="0"/>
+		<npc id="33552"/>
+	</spawn>
+</list>

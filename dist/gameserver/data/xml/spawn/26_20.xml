@@ -451,10 +451,6 @@
 		<point x="206194" y="91883" z="-544" h="0"/>
 		<npc id="32908"/>
 	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="208486" y="89741" z="-1024" h="0"/>
-		<npc id="33534"/>
-	</spawn>
 	<spawn count="1" group="arcan" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="206640" y="88112" z="-1120" h="0"/>
 		<npc id="33093"/>
