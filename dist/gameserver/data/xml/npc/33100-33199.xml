@@ -2213,8 +2213,8 @@
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseRunSpd" value="120"/>
 		<set name="baseWalkSpd" value="50"/>
-		<set name="collision_height" value="9.0"/>
-		<set name="collision_radius" value="6.0"/>
+		<set name="collision_height" value="20.0"/>
+		<set name="collision_radius" value="10.0"/>
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
