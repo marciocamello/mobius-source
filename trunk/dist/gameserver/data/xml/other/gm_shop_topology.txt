@@ -1,0 +1,73 @@
+ID		Item	Grade Type	Item Name
+
+9913	Shirts	X	Normal	<!-- Updated Awakening Shirts -->
+9909	Cloaks	X	Normal	<!-- Updated Awakening Cloaks -->
+9938	Consum	X	Normal	<!-- Updated Consulables with Shots R Grade -->	
+11007	Weapons	R	Normal <!-- Requem -->
+11008	Weapons	R	Blessed <!-- Requem -->
+11009	Weapons	R	Normal+SA <!-- Requem -->
+11010	Weapons	R	Blessed+SA <!-- Requem -->
+11011	Weapons	R	Blessed+SA+SA <!-- Requem -->
+11012	Weapons	R2	Normal <!-- Apocalypse -->
+11013	Weapons	R2	Blessed <!-- Apocalypse -->
+11014	Weapons	R2	Normal+SA <!-- Apocalypse -->
+11015	Weapons	R2	Blessed+SA <!-- Apocalypse -->
+11016	Weapons	R2	Blessed+SA+SA <!-- Apocalypse -->
+11017	Weapons	R95	Normal <!-- Specter -->
+11018	Weapons	R95	Blessed <!-- Specter -->
+11019	Weapons	R95	Normal+SA <!-- Specter -->
+11020	Weapons	R95	Blessed+SA <!-- Specter -->
+11021	Weapons	R95	Blessed+SA+SA <!-- Specter -->
+11022	Weapons	R99	Normal <!-- Amaranthine -->
+11023	Weapons	R99	Blessed <!-- Amaranthine -->
+11024	Weapons	R99	Normal+SA <!-- Amaranthine -->
+11025	Weapons	R99	Blessed+SA <!-- Amaranthine -->
+11026	Weapons	R99	Blessed+SA+SA <!-- Amaranthine -->
+11027	Weapons	R	Normal+SA+SA	<!-- Requem -->
+11028	Weapons	R2	Normal+SA+SA	<!-- Apocalypse -->
+11029	Weapons	R95	Normal+SA+SA	<!-- Specter -->
+11030	Weapons	R99	Normal+SA+SA	<!-- Amaranthine -->
+11031	Armors	R	Normal	<!-- Immortal -->
+11032	Armors	R	Blessed	<!-- Immortal -->
+11033	Armors	R2	Normal	<!-- Twilight -->
+11034	Armors	R2	Blessed	<!-- Twilight -->
+11035	Armors	R95	Normal	<!-- Seraph -->
+11036	Armors	R95	Blessed	<!-- Seraph -->
+11037	Armors	R99	Normal	<!-- Eternal -->
+11038	Armors	R99	Blessed	<!-- Eternal -->
+11039	Jewels	R	Normal	<!-- Immortal -->
+11040	Jewels	R2	Normal	<!-- Twilight -->
+11041	Jewels	R95	Normal	<!-- Seraph -->
+11042	Jewels	R99	Normal	<!-- Eternal -->
+11043	Jewels	R	Blessed	<!-- Immortal -->
+11044	Jewels	R2	Blessed	<!-- Twilight -->
+11045	Jewels	R95	Blessed	<!-- Seraph -->
+11046	Jewels	R99	Blessed	<!-- Eternal -->
+11047	Weapons	R	Fragment	<!-- Antharas -->
+11048	Weapons	R	Fragment	<!-- Valakas -->
+11049	Weapons	R	Fragment	<!-- Lindvior -->
+11050	Weapons	R	Standard	<!-- Antharas -->
+11051	Weapons	R	Standard	<!-- Valakas -->
+11052	Weapons	R	Standard	<!-- Lindvior -->
+11053	Weapons	R	High-Grade	<!-- Antharas -->
+11054	Weapons	R	High-Grade	<!-- Valakas -->
+11055	Weapons	R	High-Grade	<!-- Lindvior -->
+11056	Weapons	R	Top-Grade	<!-- Antharas -->
+11057	Weapons	R	Top-Grade	<!-- Valakas -->
+11058	Weapons	R	Top-Grade	<!-- Lindvior -->
+11059	Weapons	R	Infinity	<!-- Awaken Infinity Weapons -->
+11060	Weapons	S	Infinity	<!-- Normal Infinity Weapons -->
+11061	Armors	R	Normal	<!-- Immortal Improved -->
+11062	Armors	R	Blessed	<!-- Immortal Improved -->
+11063	Armors	R2	Normal	<!-- Twilight Improved -->
+11064	Armors	R2	Blessed	<!-- Twilight Improved -->
+11065	Armors	R95	Normal	<!-- Seraph Improved -->
+11066	Armors	R95	Blessed	<!-- Seraph Improved -->
+11067	Armors	R99	Normal	<!-- Eternal Improved -->
+11068	Armors	R99	Blessed	<!-- Eternal Improved -->
+11069	Etc	X	Normal	<!-- Awakening Bracelets -->
+11070	Etc	X	Normal	<!-- Awakening Belts -->
+11071	Etc	X	Style	<!-- Appearance Stones -->
+11072	Etc	X	Talisman	<!-- Awakening Talisman -->
+11073	Etc	X	Scrolls	<!-- Superior Giant's Codexes -->
+++
