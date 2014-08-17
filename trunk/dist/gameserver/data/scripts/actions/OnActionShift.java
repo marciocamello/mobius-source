@@ -145,7 +145,7 @@ public final class OnActionShift extends Functions
 			
 			if (player.isGM())
 			{
-				dialog = dialog.replaceFirst("%AI%", String.valueOf(npc.getAI()) + ",<br1>active: " + npc.getAI().isActive() + ",<br1>intention: " + npc.getAI().getIntention());
+				dialog = dialog.replaceFirst("%AI%", String.valueOf(npc.getAI()) + ",<br1>active: " + npc.getAI().isActive() + ",<br1>intention: " + npc.getAI().getIntention() + "<br>Spawn Location: " + npc.getSpawnedLoc().x + " " + npc.getSpawnedLoc().y + " " + npc.getSpawnedLoc().z + " (" + npc.getSpawnedLoc().h + ")");
 			}
 			else
 			{
