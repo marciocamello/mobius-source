@@ -12,13 +12,17 @@
  */
 package lineage2.gameserver.handler.admincommands.impl;
 
+import java.util.StringTokenizer;
+
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
+import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
@@ -37,6 +41,8 @@ public class AdminCreateItem implements IAdminCommandHandler
 	{
 		admin_itemcreate,
 		admin_create_item,
+		admin_create_coin,
+		admin_give_item_target,
 		admin_ci,
 		admin_spreaditem,
 		admin_create_item_element
@@ -48,7 +54,8 @@ public class AdminCreateItem implements IAdminCommandHandler
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
-	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
 	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
@@ -85,6 +92,81 @@ public class AdminCreateItem implements IAdminCommandHandler
 					activeChar.sendMessage("USAGE: create_item id [count]");
 				}
 				
+				activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/itemcreation.htm"));
+				break;
+			
+			case admin_create_coin:
+				try
+				{
+					String val = fullString.substring(17);
+					StringTokenizer st = new StringTokenizer(val);
+					if (st.countTokens() == 2)
+					{
+						String name = st.nextToken();
+						int idval = getCoinId(name);
+						if (idval > 0)
+						{
+							String num = st.nextToken();
+							long numval = Long.parseLong(num);
+							createItem(activeChar, idval, numval);
+						}
+					}
+					else if (st.countTokens() == 1)
+					{
+						String name = st.nextToken();
+						int idval = getCoinId(name);
+						createItem(activeChar, idval, 1);
+					}
+				}
+				catch (StringIndexOutOfBoundsException e)
+				{
+					activeChar.sendMessage("Usage: //create_coin <name> [amount]");
+				}
+				catch (NumberFormatException nfe)
+				{
+					activeChar.sendMessage("Specify a valid number.");
+				}
+				activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/itemcreation.htm"));
+				break;
+			
+			case admin_give_item_target:
+				try
+				{
+					GameObject target = activeChar.getTarget();
+					if ((target == null) || !target.isPlayer())
+					{
+						activeChar.sendPacket(new SystemMessage(SystemMessage.SELECT_TARGET));
+						return false;
+					}
+					Player player = (Player) target;
+					
+					String val = fullString.substring(22);
+					StringTokenizer st = new StringTokenizer(val);
+					if (st.countTokens() == 2)
+					{
+						String id = st.nextToken();
+						int idval = Integer.parseInt(id);
+						String num = st.nextToken();
+						long numval = Long.parseLong(num);
+						createItem(player, idval, numval);
+						activeChar.sendMessage("You gave " + numval + " of itemId:" + idval + " to " + player.getName() + ".");
+					}
+					else if (st.countTokens() == 1)
+					{
+						String id = st.nextToken();
+						int idval = Integer.parseInt(id);
+						createItem(player, idval, 1);
+						activeChar.sendMessage("You gave 1 of itemId:" + idval + " to " + player.getName() + ".");
+					}
+				}
+				catch (StringIndexOutOfBoundsException e)
+				{
+					activeChar.sendMessage("Usage: //give_item_target <itemId> [amount]");
+				}
+				catch (NumberFormatException nfe)
+				{
+					activeChar.sendMessage("Specify a valid number.");
+				}
 				activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/itemcreation.htm"));
 				break;
 			
@@ -159,7 +241,8 @@ public class AdminCreateItem implements IAdminCommandHandler
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return Enum[]
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
 	 */
 	@Override
 	public Enum<?>[] getAdminCommandEnum()
@@ -193,5 +276,53 @@ public class AdminCreateItem implements IAdminCommandHandler
 		
 		activeChar.sendPacket(SystemMessage2.obtainItems(itemId, count, 0));
 		return createditem;
+	}
+	
+	/**
+	 * Method getCoinId.
+	 * @param name
+	 * @return coinId
+	 */
+	private int getCoinId(String name)
+	{
+		int id;
+		if (name.equalsIgnoreCase("adena"))
+		{
+			id = 57;
+		}
+		else if (name.equalsIgnoreCase("ancientadena"))
+		{
+			id = 5575;
+		}
+		else if (name.equalsIgnoreCase("festivaladena"))
+		{
+			id = 6673;
+		}
+		else if (name.equalsIgnoreCase("blueeva"))
+		{
+			id = 4355;
+		}
+		else if (name.equalsIgnoreCase("goldeinhasad"))
+		{
+			id = 4356;
+		}
+		else if (name.equalsIgnoreCase("silvershilen"))
+		{
+			id = 4357;
+		}
+		else if (name.equalsIgnoreCase("bloodypaagrio"))
+		{
+			id = 4358;
+		}
+		else if (name.equalsIgnoreCase("fantasyislecoin"))
+		{
+			id = 13067;
+		}
+		else
+		{
+			id = 0;
+		}
+		
+		return id;
 	}
 }
