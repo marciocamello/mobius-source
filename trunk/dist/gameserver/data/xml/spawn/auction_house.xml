@@ -53,7 +53,7 @@
 	</spawn>
 	<!-- Arcan -->
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="208486" y="89741" z="-1024" h="37604"/>
+		<point x="208486" y="89741" z="-1024" h="45796"/>
 		<npc id="33534"/>
 	</spawn>
 	<!-- Gludio -->
