@@ -166,10 +166,11 @@ $MYL < ls_cleanup.sql
 loginupgrade(){
 clear
 echo "Installling new loginserver content."
-for login in $(ls ../sql/login/*.sql);do
+for login in $(ls ./sql/login/*.sql);do
 	echo "Installing loginserver table : $login"
 	$MYL < $login
 done
+gsbackup
 }
 
 gsbackup(){
@@ -192,6 +193,7 @@ while :
      break
    fi
   done 
+  asktype
 }
 
 lsbackup(){
@@ -245,7 +247,7 @@ else
 echo "Upgrading gameserver content"
 fi
 
-for gs in $(ls ../sql/server/*.sql);do
+for gs in $(ls ./sql/server/*.sql);do
 	echo "Installing GameServer table : $gs"
 	$MYG < $gs
 done
