@@ -30,6 +30,7 @@ import lineage2.gameserver.model.actor.instances.player.SubClassInfo;
 import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.network.serverpackets.ExPCCafePointInfo;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
@@ -78,7 +79,8 @@ public class AdminEditChar implements IAdminCommandHandler
 		admin_give_item,
 		admin_add_bang,
 		admin_set_bang,
-		admin_reset_mentor_penalty
+		admin_reset_mentor_penalty,
+		admin_fullfood
 	}
 	
 	/**
@@ -689,6 +691,26 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				activeChar.sendMessage("The selected character has no penalty.");
 				return false;
+			}
+		}
+		else if (fullString.startsWith("admin_fullfood"))
+		{
+			if (activeChar.getTarget().getPlayer() == null)
+			{
+				activeChar.sendMessage("You have no target selected.");
+				return false;
+			}
+			
+			GameObject target = activeChar.getTarget();
+			if (target instanceof PetInstance)
+			{
+				PetInstance targetPet = (PetInstance) target;
+				targetPet.setCurrentFed(targetPet.getMaxFed());
+				targetPet.broadcastStatusUpdate();
+			}
+			else
+			{
+				activeChar.sendMessage("Target is not a pet.");
 			}
 		}
 		
