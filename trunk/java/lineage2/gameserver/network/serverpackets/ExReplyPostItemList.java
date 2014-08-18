@@ -18,11 +18,7 @@ import java.util.List;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInfo;
 import lineage2.gameserver.model.items.ItemInstance;
-import lineage2.gameserver.network.clientpackets.RequestExPostItemList;
 
-/**
- * Ответ на запрос создания нового письма. Отсылается при получении {@link RequestExPostItemList} Содержит список вещей, которые можно приложить к письму.
- */
 public class ExReplyPostItemList extends L2GameServerPacket
 {
 	private final List<ItemInfo> _itemsList = new ArrayList<>();

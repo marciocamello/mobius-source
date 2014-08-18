@@ -14,11 +14,7 @@ package lineage2.gameserver.network.clientpackets.PledgeRecruit;
 
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.clientpackets.L2GameClientPacket;
-import lineage2.gameserver.network.serverpackets.PledgeRecruit.ExPledgeRecruitInfo;
 
-/**
- * @author Smo
- */
 public class RequestPledgeRecruitInfo extends L2GameClientPacket
 {
 	@Override
@@ -30,11 +26,11 @@ public class RequestPledgeRecruitInfo extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = (getClient()).getActiveChar();
+		
 		if (activeChar == null)
 		{
-			return;
+			// empty if block
 		}
-		activeChar.sendPacket(new ExPledgeRecruitInfo(activeChar));
 	}
 }

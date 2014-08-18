@@ -14,7 +14,10 @@ package lineage2.gameserver.network.serverpackets;
 
 public class ExPutIntensiveResultForVariationMake extends L2GameServerPacket
 {
-	private final int _refinerItemObjId, _lifestoneItemId, _gemstoneItemId, _unk;
+	private final int _refinerItemObjId;
+	private final int _lifestoneItemId;
+	private final int _gemstoneItemId;
+	private final int _unk;
 	private final long _gemstoneCount;
 	
 	public ExPutIntensiveResultForVariationMake(int refinerItemObjId, int lifeStoneId, int gemstoneItemId, long gemstoneCount)

@@ -42,8 +42,7 @@ public class ExNpcQuestHtmlMessage extends NpcHtmlMessage
 			return;
 		}
 		
-		if (_file != null) // TODO может быть не очень хорошо здесь это
-		// делать...
+		if (_file != null)
 		{
 			if (player.isGM())
 			{

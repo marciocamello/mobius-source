@@ -27,7 +27,8 @@ import lineage2.gameserver.model.party.PartySubstitute;
  */
 public class PartySmallWindowAll extends L2GameServerPacket
 {
-	private final int leaderId, loot;
+	private final int leaderId;
+	private final int loot;
 	private final List<PartySmallWindowMemberInfo> members = new ArrayList<>();
 	
 	public PartySmallWindowAll(Party party, Player exclude)
@@ -89,11 +90,21 @@ public class PartySmallWindowAll extends L2GameServerPacket
 	
 	static class PartySmallWindowMemberInfo
 	{
-		String _name, pet_Name;
-		int _id, curCp, maxCp, curHp, maxHp, curMp, maxMp, level, class_id, race_id;
+		String _name;
+		String pet_Name;
+		int _id;
+		int curCp;
+		int maxCp;
+		int curHp;
+		int maxHp;
+		int curMp;
+		int maxMp;
+		int level;
+		int class_id;
+		int race_id;
 		int vitality;
-		final Collection<Summon> _pets;
-		final int replace;
+		Collection<Summon> _pets;
+		int replace;
 		
 		PartySmallWindowMemberInfo(Player member)
 		{

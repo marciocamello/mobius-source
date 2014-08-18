@@ -18,8 +18,10 @@ import lineage2.gameserver.utils.Location;
 
 public class MoveToLocationInVehicle extends L2GameServerPacket
 {
-	private final int _playerObjectId, _boatObjectId;
-	private final Location _origin, _destination;
+	private final int _playerObjectId;
+	private final int _boatObjectId;
+	private final Location _origin;
+	private final Location _destination;
 	
 	public MoveToLocationInVehicle(Player cha, Boat boat, Location origin, Location destination)
 	{

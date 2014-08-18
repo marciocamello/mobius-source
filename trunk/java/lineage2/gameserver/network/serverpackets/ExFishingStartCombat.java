@@ -19,8 +19,11 @@ import lineage2.gameserver.model.Creature;
  */
 public class ExFishingStartCombat extends L2GameServerPacket
 {
-	private final int _time, _hp;
-	private final int _lureType, _deceptiveMode, _mode;
+	int _time;
+	int _hp;
+	int _lureType;
+	int _deceptiveMode;
+	int _mode;
 	private final int char_obj_id;
 	
 	public ExFishingStartCombat(Creature character, int time, int hp, int mode, int lureType, int deceptiveMode)

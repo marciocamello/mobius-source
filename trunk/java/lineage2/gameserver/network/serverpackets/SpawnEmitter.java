@@ -15,10 +15,6 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 
-/**
- * Этот пакет отвечает за анимацию высасывания душ из трупов
- * @author SYS
- */
 public class SpawnEmitter extends L2GameServerPacket
 {
 	private final int _monsterObjId;

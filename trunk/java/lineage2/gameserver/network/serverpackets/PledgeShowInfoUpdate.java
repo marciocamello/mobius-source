@@ -19,12 +19,19 @@ import org.apache.commons.lang3.StringUtils;
 
 public class PledgeShowInfoUpdate extends L2GameServerPacket
 {
-	private final int clan_id, clan_level, clan_rank, clan_rep, crest_id, ally_id;
+	private final int clan_id;
+	private final int clan_level;
+	private final int clan_rank;
+	private final int clan_rep;
+	private final int crest_id;
+	private final int ally_id;
 	private int ally_crest;
 	private final int _territorySide;
 	private final int atwar;
 	private String ally_name = StringUtils.EMPTY;
-	private final int HasCastle, HasHideout, HasFortress;
+	private final int HasCastle;
+	private final int HasHideout;
+	private final int HasFortress;
 	
 	public PledgeShowInfoUpdate(final Clan clan)
 	{

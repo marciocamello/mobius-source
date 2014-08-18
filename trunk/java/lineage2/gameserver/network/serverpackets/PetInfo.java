@@ -21,21 +21,56 @@ import lineage2.gameserver.utils.Location;
 
 public class PetInfo extends L2GameServerPacket
 {
-	private final int _runSpd, _walkSpd, MAtkSpd, PAtkSpd, pvp_flag, karma;
+	private final int _runSpd;
+	private final int _walkSpd;
+	private final int MAtkSpd;
+	private final int PAtkSpd;
+	private final int pvp_flag;
+	private final int karma;
 	private int rideable;
-	private final int _type, obj_id, npc_id, runing, incombat, dead, _sp, level;
-	private final int curFed, maxFed, curHp, maxHp, curMp, maxMp, curLoad, maxLoad;
-	private final int PAtk, PDef, MAtk, MDef, Accuracy, Evasion, Crit, sps, ss, type;
+	private final int _type;
+	private final int obj_id;
+	private final int npc_id;
+	private final int runing;
+	private final int incombat;
+	private final int dead;
+	private final int _sp;
+	private final int level;
+	private final int curFed;
+	private final int maxFed;
+	private final int curHp;
+	private final int maxHp;
+	private final int curMp;
+	private final int maxMp;
+	private final int curLoad;
+	private final int maxLoad;
+	private final int PAtk;
+	private final int PDef;
+	private final int MAtk;
+	private final int MDef;
+	private final int Accuracy;
+	private final int Evasion;
+	private final int Crit;
+	private final int sps;
+	private final int ss;
+	private final int type;
 	private int _showSpawnAnimation;
 	private final Location _loc;
-	private final double col_redius, col_height;
-	private final long exp, exp_this_lvl, exp_next_lvl;
-	private final String _name, title;
+	private final double col_redius;
+	private final double col_height;
+	private final long exp;
+	private final long exp_this_lvl;
+	private final long exp_next_lvl;
+	private final String _name;
+	private final String title;
 	private final TeamType _team;
-	private final int sumPoint, maxSumPoint;
+	private final int sumPoint;
+	private final int maxSumPoint;
 	private final int _ownerId;
 	private final List<Integer> _aveList;
-	private final int _mevasion, _maccuracy, _mCritRate;
+	private final int _mevasion;
+	private final int _maccuracy;
+	private final int _mCritRate;
 	
 	public PetInfo(Summon summon)
 	{

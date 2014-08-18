@@ -19,7 +19,9 @@ import lineage2.gameserver.model.items.ManufactureItem;
 
 public class RecipeShopSellList extends L2GameServerPacket
 {
-	private final int objId, curMp, maxMp;
+	private final int objId;
+	private final int curMp;
+	private final int maxMp;
 	private final long adena;
 	private final List<ManufactureItem> createList;
 	

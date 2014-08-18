@@ -14,7 +14,8 @@ package lineage2.gameserver.network.serverpackets;
 
 public class ExNeedToChangeName extends L2GameServerPacket
 {
-	private final int _type, _reason;
+	private final int _type;
+	private final int _reason;
 	private final String _origName;
 	
 	public ExNeedToChangeName(int type, int reason, String origName)

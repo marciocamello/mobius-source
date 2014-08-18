@@ -20,7 +20,9 @@ import lineage2.gameserver.utils.Location;
  */
 public class ExStopMoveInShuttlePacket extends L2GameServerPacket
 {
-	private final int _playerObjectId, _shuttleId, _playerHeading;
+	private final int _playerObjectId;
+	private final int _shuttleId;
+	private final int _playerHeading;
 	private final Location _loc;
 	
 	public ExStopMoveInShuttlePacket(Player cha)

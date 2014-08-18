@@ -56,8 +56,7 @@ public class StaticObject extends L2GameServerPacket
 		_isEnemy = door.isAutoAttackable(player) ? 1 : 0;
 		_currentHp = (int) door.getCurrentHp();
 		_maxHp = door.getMaxHp();
-		_showHp = door.isHPVisible() ? 1 : 0; // TODO [G1ta0] статус двери для
-		// осаждающих
+		_showHp = door.isHPVisible() ? 1 : 0;
 		_damageGrade = door.getDamage();
 	}
 	

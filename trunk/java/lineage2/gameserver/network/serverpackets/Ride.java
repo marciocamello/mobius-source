@@ -17,7 +17,9 @@ import lineage2.gameserver.utils.Location;
 
 public class Ride extends L2GameServerPacket
 {
-	private final int _mountType, _id, _rideClassID;
+	private final int _mountType;
+	private final int _id;
+	private final int _rideClassID;
 	private final Location _loc;
 	
 	public Ride(Player cha)

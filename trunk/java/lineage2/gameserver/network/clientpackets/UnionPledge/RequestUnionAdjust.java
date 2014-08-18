@@ -15,9 +15,6 @@ package lineage2.gameserver.network.clientpackets.UnionPledge;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.clientpackets.L2GameClientPacket;
 
-/**
- * @author Smo
- */
 public class RequestUnionAdjust extends L2GameClientPacket
 {
 	private int unk1;
@@ -31,11 +28,13 @@ public class RequestUnionAdjust extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = (getClient()).getActiveChar();
 		
 		if (activeChar != null)
 		{
+			// empty if block
 		}
+		
 		System.out.println("RequestUnionAdjust: unk1 = " + unk1);
 	}
 }

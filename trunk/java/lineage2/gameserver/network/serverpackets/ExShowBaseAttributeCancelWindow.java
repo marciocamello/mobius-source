@@ -63,7 +63,6 @@ public class ExShowBaseAttributeCancelWindow extends L2GameServerPacket
 			case S80:
 				return item.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON ? 100000 : 80000;
 				
-				// S84 По идеи теперь весь как s80... Инфа не точна...
 			case S84:
 				return item.getTemplate().getType2() == ItemTemplate.TYPE2_WEAPON ? 200000 : 160000;
 				

@@ -15,41 +15,25 @@ package lineage2.gameserver.network.clientpackets.PledgeRecruit;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.clientpackets.L2GameClientPacket;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-/**
- * @author Smo
- */
 public class RequestPledgeRecruitBoardAccess extends L2GameClientPacket
 {
-	public static final Logger _log = LoggerFactory.getLogger(RequestPledgeRecruitBoardAccess.class);
-	public int test1, test2;
-	public String test3, test4;
-	
 	@Override
 	protected void readImpl()
 	{
-		test1 = readD();
-		test2 = readD(); // Karma
-		test3 = readS(); // Short Description
-		test4 = readS(); // Description
+		readD();
+		readD();
+		readS();
+		readS();
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = (getClient()).getActiveChar();
+		
 		if (activeChar == null)
 		{
-			return;
+			// empty if block
 		}
-		_log.info("______________________________________");
-		_log.info("RequestPledgeRecruitBoardAccess");
-		_log.info("test1: " + test1);
-		_log.info("Karma: " + test2);
-		_log.info("Introduction: " + test3);
-		_log.info("Detailed Introduction: " + test4);
-		_log.info("______________________________________");
 	}
 }

@@ -17,7 +17,9 @@ import lineage2.gameserver.model.pledge.RankPrivs;
 
 public class ManagePledgePower extends L2GameServerPacket
 {
-	private final int _action, _clanId, privs;
+	private final int _action;
+	private final int _clanId;
+	private final int privs;
 	
 	public ManagePledgePower(Player player, int action, int rank)
 	{

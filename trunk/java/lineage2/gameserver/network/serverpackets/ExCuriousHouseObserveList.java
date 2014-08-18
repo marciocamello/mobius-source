@@ -23,13 +23,14 @@ public class ExCuriousHouseObserveList extends L2GameServerPacket
 		writeEx(0x12B);
 		writeD(0);
 		
-		for (;;)
+		do
 		{
 			writeD(0);
 			writeS("");
 			writeH(0);
 			writeD(0);
 		}
+		while (true);
 	}
 	
 	@Override

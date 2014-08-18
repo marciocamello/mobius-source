@@ -14,7 +14,8 @@ package lineage2.gameserver.network.serverpackets;
 
 public class ExAskCoupleAction extends L2GameServerPacket
 {
-	private final int _objectId, _socialId;
+	private final int _objectId;
+	private final int _socialId;
 	
 	public ExAskCoupleAction(int objectId, int socialId)
 	{

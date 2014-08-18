@@ -20,7 +20,8 @@ import lineage2.gameserver.utils.Location;
  */
 public class ExValidateLocationInShuttlePacket extends L2GameServerPacket
 {
-	private final int _playerObjectId, _shuttleId;
+	private final int _playerObjectId;
+	private final int _shuttleId;
 	private final Location _loc;
 	
 	public ExValidateLocationInShuttlePacket(Player cha)

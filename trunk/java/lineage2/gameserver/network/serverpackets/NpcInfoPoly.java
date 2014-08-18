@@ -21,20 +21,32 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 
 public class NpcInfoPoly extends L2GameServerPacket
 {
-	// ddddddddddddddddddffffdddcccccSSddd dddddccffddddccd
 	private final Creature _obj;
-	private final int _x, _y, _z, _heading;
+	private final int _x;
+	private final int _y;
+	private final int _z;
+	private final int _heading;
 	private final int _npcId;
-	private final boolean _isSummoned, _isRunning, _isInCombat, _isAlikeDead;
-	private final int _mAtkSpd, _pAtkSpd;
-	private final int _runSpd, _walkSpd, _swimRunSpd, _swimWalkSpd;
+	private final boolean _isSummoned;
+	private final boolean _isRunning;
+	private final boolean _isInCombat;
+	private final boolean _isAlikeDead;
+	private final int _mAtkSpd;
+	private final int _pAtkSpd;
+	private final int _runSpd;
+	private final int _walkSpd;
+	private final int _swimRunSpd;
+	private final int _swimWalkSpd;
 	private int _flRunSpd;
 	private int _flWalkSpd;
 	private int _flyRunSpd;
 	private int _flyWalkSpd;
-	private int _rhand, _lhand;
-	private final String _name, _title;
-	private final double colRadius, colHeight;
+	private int _rhand;
+	private int _lhand;
+	private final String _name;
+	private final String _title;
+	private final double colRadius;
+	private final double colHeight;
 	private final TeamType _team;
 	private final FastList<Integer> _aveList;
 	

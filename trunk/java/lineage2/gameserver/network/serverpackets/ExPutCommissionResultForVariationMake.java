@@ -14,8 +14,11 @@ package lineage2.gameserver.network.serverpackets;
 
 public class ExPutCommissionResultForVariationMake extends L2GameServerPacket
 {
-	private final int _gemstoneObjId, _unk1, _unk3;
-	private final long _gemstoneCount, _unk2;
+	private final int _gemstoneObjId;
+	private final int _unk1;
+	private final int _unk3;
+	private final long _gemstoneCount;
+	private final long _unk2;
 	
 	public ExPutCommissionResultForVariationMake(int gemstoneObjId, long count)
 	{

@@ -16,7 +16,8 @@ import lineage2.gameserver.model.Player;
 
 public class L2Friend extends L2GameServerPacket
 {
-	private final boolean _add, _online;
+	private final boolean _add;
+	private final boolean _online;
 	private final String _name;
 	private final int _object_id;
 	

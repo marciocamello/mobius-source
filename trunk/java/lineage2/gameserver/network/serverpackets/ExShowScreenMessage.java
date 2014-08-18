@@ -30,8 +30,10 @@ public class ExShowScreenMessage extends NpcStringContainer
 	
 	public static final int SYSMSG_TYPE = 0;
 	public static final int STRING_TYPE = 1;
-	private final int _type, _sysMessageId;
-	private final boolean _big_font, _effect;
+	private final int _type;
+	private final int _sysMessageId;
+	private final boolean _big_font;
+	private final boolean _effect;
 	private final ScreenMessageAlign _text_align;
 	private final int _time;
 	private final int _unk;

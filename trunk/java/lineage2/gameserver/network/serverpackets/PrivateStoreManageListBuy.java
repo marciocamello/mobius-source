@@ -29,10 +29,6 @@ public class PrivateStoreManageListBuy extends L2GameServerPacket
 	private final List<TradeItem> _buyList0;
 	private final List<TradeItem> _buyList;
 	
-	/**
-	 * Окно управления личным магазином покупки
-	 * @param buyer
-	 */
 	public PrivateStoreManageListBuy(Player buyer)
 	{
 		_buyerId = buyer.getObjectId();

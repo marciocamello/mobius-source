@@ -14,42 +14,29 @@ package lineage2.gameserver.network.clientpackets.PledgeRecruit;
 
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.clientpackets.L2GameClientPacket;
-import lineage2.gameserver.network.serverpackets.PledgeRecruit.ExPledgeRecruitBoardSearch;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-/**
- * @author Smo
- */
 public class RequestPledgeRecruitBoardSearch extends L2GameClientPacket
 {
-	public static final Logger _log = LoggerFactory.getLogger(RequestPledgeRecruitBoardSearch.class);
-	public int t1, t2, t3;
-	public String t4;
-	public int t5, t6, t7;
-	
 	@Override
 	protected void readImpl()
 	{
-		t1 = readD();
-		t2 = readD();
-		t3 = readD();
-		t4 = readS();
-		t5 = readD();
-		t6 = readD();
-		t7 = readD();
+		readD();
+		readD();
+		readD();
+		readS();
+		readD();
+		readD();
+		readD();
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = (getClient()).getActiveChar();
+		
 		if (activeChar == null)
 		{
-			return;
+			// empty if block
 		}
-		_log.info("RequestPledgeRecruitBoardSearch--> " + t1 + "|" + t2 + "|" + t3 + "|" + t4);
-		activeChar.sendPacket(new ExPledgeRecruitBoardSearch(activeChar));
 	}
 }

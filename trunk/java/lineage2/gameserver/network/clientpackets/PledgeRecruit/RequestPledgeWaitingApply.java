@@ -15,9 +15,6 @@ package lineage2.gameserver.network.clientpackets.PledgeRecruit;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.clientpackets.L2GameClientPacket;
 
-/**
- * @author Smo
- */
 public class RequestPledgeWaitingApply extends L2GameClientPacket
 {
 	@Override
@@ -25,16 +22,17 @@ public class RequestPledgeWaitingApply extends L2GameClientPacket
 	{
 		readD();
 		readD();
-		readS();
+		this.readS();
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = (getClient()).getActiveChar();
+		
 		if (activeChar == null)
 		{
-			return;
+			// empty if block
 		}
 	}
 }

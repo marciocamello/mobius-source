@@ -21,8 +21,10 @@ import lineage2.gameserver.utils.Location;
  */
 public class ExMTLInShuttlePacket extends L2GameServerPacket
 {
-	private final int _playableObjectId, _shuttleId;
-	private final Location _origin, _destination;
+	private final int _playableObjectId;
+	private final int _shuttleId;
+	private final Location _origin;
+	private final Location _destination;
 	
 	public ExMTLInShuttlePacket(Player player, Shuttle shuttle, Location origin, Location destination)
 	{

@@ -22,7 +22,8 @@ public class ExMPCCPartyInfoUpdate extends L2GameServerPacket
 {
 	private final Party _party;
 	private final Player _leader;
-	private final int _mode, _count;
+	private final int _mode;
+	private final int _count;
 	
 	/**
 	 * @param party

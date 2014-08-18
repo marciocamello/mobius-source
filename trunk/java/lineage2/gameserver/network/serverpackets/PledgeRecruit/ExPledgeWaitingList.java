@@ -24,12 +24,13 @@ public class ExPledgeWaitingList extends L2GameServerPacket
 	{
 		writeEx(0x14E);
 		writeD(0);
-		for (;;)
+		do
 		{
 			writeD(0);
 			writeS("test");
 			writeD(0);
 			writeD(0);
 		}
+		while (true);
 	}
 }

@@ -17,7 +17,12 @@ import lineage2.gameserver.model.Player;
 public class HennaInfo extends L2GameServerPacket
 {
 	private final Henna[] _hennas = new Henna[3];
-	private final int _str, _con, _dex, _int, _wit, _men;
+	private final int _str;
+	private final int _con;
+	private final int _dex;
+	private final int _int;
+	private final int _wit;
+	private final int _men;
 	private int _count;
 	
 	public HennaInfo(Player player)

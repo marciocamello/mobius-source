@@ -21,10 +21,6 @@ public class PrivateStoreMsgBuy extends L2GameServerPacket
 	private final int _objId;
 	private final String _name;
 	
-	/**
-	 * Название личного магазина покупки
-	 * @param player
-	 */
 	public PrivateStoreMsgBuy(Player player)
 	{
 		_objId = player.getObjectId();

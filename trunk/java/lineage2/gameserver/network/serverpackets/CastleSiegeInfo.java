@@ -46,7 +46,8 @@ import org.apache.commons.lang3.StringUtils;
 public class CastleSiegeInfo extends L2GameServerPacket
 {
 	private long _startTime;
-	private final int _id, _ownerObjectId;
+	private final int _id;
+	private final int _ownerObjectId;
 	private int _allyId;
 	private boolean _isLeader;
 	private String _ownerName = "NPC";

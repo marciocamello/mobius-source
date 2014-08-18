@@ -16,7 +16,10 @@ import lineage2.gameserver.skills.TimeStamp;
 
 public class ExUseSharedGroupItem extends L2GameServerPacket
 {
-	private final int _itemId, _grpId, _remainedTime, _totalTime;
+	private final int _itemId;
+	private final int _grpId;
+	private final int _remainedTime;
+	private final int _totalTime;
 	
 	public ExUseSharedGroupItem(int grpId, TimeStamp timeStamp)
 	{

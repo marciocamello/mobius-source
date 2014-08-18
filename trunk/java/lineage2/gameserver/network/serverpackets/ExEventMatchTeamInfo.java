@@ -48,11 +48,43 @@ public class ExEventMatchTeamInfo extends L2GameServerPacket
 	private static class EventMatchTeamInfo
 	{
 		@SuppressWarnings("unused")
-		public String _name, pet_Name;
+		public String _name;
 		@SuppressWarnings("unused")
-		public int _id, curCp, maxCp, curHp, maxHp, curMp, maxMp, level, class_id, race_id;
+		public String pet_Name;
 		@SuppressWarnings("unused")
-		public int pet_id, pet_NpcId, pet_curHp, pet_maxHp, pet_curMp, pet_maxMp, pet_level;
+		public int _id;
+		@SuppressWarnings("unused")
+		public int curCp;
+		@SuppressWarnings("unused")
+		public int maxCp;
+		@SuppressWarnings("unused")
+		public int curHp;
+		@SuppressWarnings("unused")
+		public int maxHp;
+		@SuppressWarnings("unused")
+		public int curMp;
+		@SuppressWarnings("unused")
+		public int maxMp;
+		@SuppressWarnings("unused")
+		public int level;
+		@SuppressWarnings("unused")
+		public int class_id;
+		@SuppressWarnings("unused")
+		public int race_id;
+		@SuppressWarnings("unused")
+		public int pet_id;
+		@SuppressWarnings("unused")
+		public int pet_NpcId;
+		@SuppressWarnings("unused")
+		public int pet_curHp;
+		@SuppressWarnings("unused")
+		public int pet_maxHp;
+		@SuppressWarnings("unused")
+		public int pet_curMp;
+		@SuppressWarnings("unused")
+		public int pet_maxMp;
+		@SuppressWarnings("unused")
+		public int pet_level;
 		
 		EventMatchTeamInfo(Player member)
 		{

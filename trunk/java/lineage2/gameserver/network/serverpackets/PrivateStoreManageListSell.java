@@ -28,11 +28,6 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 	private final List<TradeItem> _sellList;
 	private final List<TradeItem> _sellList0;
 	
-	/**
-	 * Окно управления личным магазином продажи
-	 * @param seller
-	 * @param pkg
-	 */
 	public PrivateStoreManageListSell(Player seller, boolean pkg)
 	{
 		_sellerId = seller.getObjectId();
@@ -41,8 +36,6 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 		_sellList0 = seller.getSellList(_package);
 		_sellList = new ArrayList<>();
 		
-		// Проверяем список вещей в инвентаре, если вещь остутствует - убираем
-		// из списка продажи
 		for (TradeItem si : _sellList0)
 		{
 			if (si.getCount() <= 0)
@@ -55,7 +48,6 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 			
 			if (item == null)
 			{
-				// вещь недоступна, пробуем найти такую же по itemId
 				item = seller.getInventory().getItemByItemId(si.getItemId());
 			}
 			
@@ -65,13 +57,10 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 				continue;
 			}
 			
-			// корректируем количество
 			si.setCount(Math.min(item.getCount(), si.getCount()));
 		}
 		
 		ItemInstance[] items = seller.getInventory().getItems();
-		// Проверяем список вещей в инвентаре, если вещь остутствует в списке
-		// продажи, добавляем в список доступных для продажи
 		loop:
 		
 		for (ItemInstance item : items)
@@ -87,7 +76,6 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 							continue loop;
 						}
 						
-						// Показывает остаток вещей для продажи
 						TradeItem ti = new TradeItem(item);
 						ti.setCount(item.getCount() - si.getCount());
 						_sellList.add(ti);
@@ -108,7 +96,6 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 		writeD(_sellerId);
 		writeD(_package ? 1 : 0);
 		writeQ(_adena);
-		// Список имеющихся вещей
 		writeD(_sellList.size());
 		
 		for (TradeItem si : _sellList)
@@ -117,7 +104,6 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 			writeQ(si.getStorePrice());
 		}
 		
-		// Список вещей уже поставленых на продажу
 		writeD(_sellList0.size());
 		
 		for (TradeItem si : _sellList0)

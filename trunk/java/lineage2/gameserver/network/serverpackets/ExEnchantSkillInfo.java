@@ -21,7 +21,8 @@ import lineage2.gameserver.tables.SkillTreeTable;
 public class ExEnchantSkillInfo extends L2GameServerPacket
 {
 	private final List<Integer> _routes;
-	private final int _id, _level;
+	private final int _id;
+	private final int _level;
 	private int _canAdd;
 	private int canDecrease;
 	

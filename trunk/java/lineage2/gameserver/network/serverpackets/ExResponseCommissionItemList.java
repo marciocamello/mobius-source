@@ -18,7 +18,6 @@ import lineage2.gameserver.model.items.TradeItem;
 
 /**
  * @author : Ragnarok
- * @date : 09.02.12 12:36 Уходит в ответ на {@link lineage2.gameserver.network.clientpackets.RequestCommissionRegistrableItemList} Отсылает список вещей, которые можно продать в коммисионном магазине.
  */
 public class ExResponseCommissionItemList extends L2GameServerPacket
 {

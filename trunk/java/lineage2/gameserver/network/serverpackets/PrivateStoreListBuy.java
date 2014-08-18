@@ -25,11 +25,6 @@ public class PrivateStoreListBuy extends L2GameServerPacket
 	private final long _adena;
 	private final List<TradeItem> _sellList;
 	
-	/**
-	 * Список вещей в личном магазине покупки, показываемый продающему
-	 * @param seller
-	 * @param buyer
-	 */
 	public PrivateStoreListBuy(Player seller, Player buyer)
 	{
 		_adena = seller.getAdena();

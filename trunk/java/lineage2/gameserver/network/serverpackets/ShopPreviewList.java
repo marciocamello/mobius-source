@@ -74,8 +74,6 @@ public class ShopPreviewList extends L2GameServerPacket
 			case C:
 				return 100;
 				
-				// TODO: Не известно сколько на оффе стоит примерка B - S84
-				// ранга.
 			case B:
 				return 200;
 				

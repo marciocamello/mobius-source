@@ -17,7 +17,8 @@ import lineage2.gameserver.utils.Location;
 
 public class VehicleDeparture extends L2GameServerPacket
 {
-	private final int _moveSpeed, _rotationSpeed;
+	private final int _moveSpeed;
+	private final int _rotationSpeed;
 	private final int _boatObjId;
 	private final Location _loc;
 	

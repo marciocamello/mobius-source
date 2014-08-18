@@ -14,32 +14,41 @@ package lineage2.gameserver.network.clientpackets.PledgeRecruit;
 
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.clientpackets.L2GameClientPacket;
-import lineage2.gameserver.network.serverpackets.PledgeRecruit.ExPledgeDraftListSearch;
 
-/**
- * @author Smo
- */
 public class RequestPledgeDraftListSearch extends L2GameClientPacket
 {
+	@SuppressWarnings("unused")
+	private int _minLevel;
+	@SuppressWarnings("unused")
+	private int _maxLevel;
+	@SuppressWarnings("unused")
+	private int _role;
+	@SuppressWarnings("unused")
+	private String _charName;
+	@SuppressWarnings("unused")
+	private int _sortType;
+	@SuppressWarnings("unused")
+	private int _sortOrder;
+	
 	@Override
 	protected void readImpl()
 	{
-		readD();
-		readD();
-		readD();
-		readS();
-		readD();
-		readD();
+		_minLevel = readD();
+		_maxLevel = readD();
+		_role = readD();
+		_charName = readS();
+		_sortType = readD();
+		_sortOrder = readD();
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = (getClient()).getActiveChar();
+		
 		if (activeChar == null)
 		{
-			return;
+			// empty if block
 		}
-		activeChar.sendPacket(new ExPledgeDraftListSearch());
 	}
 }

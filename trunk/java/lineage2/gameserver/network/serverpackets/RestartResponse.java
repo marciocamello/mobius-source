@@ -14,7 +14,8 @@ package lineage2.gameserver.network.serverpackets;
 
 public class RestartResponse extends L2GameServerPacket
 {
-	public static final RestartResponse OK = new RestartResponse(1), FAIL = new RestartResponse(0);
+	public static final RestartResponse OK = new RestartResponse(1);
+	public static final RestartResponse FAIL = new RestartResponse(0);
 	private final String _message;
 	private final int _param;
 	

@@ -17,8 +17,16 @@ import lineage2.gameserver.model.party.PartySubstitute;
 
 public class PartySmallWindowUpdate extends L2GameServerPacket
 {
-	private final int obj_id, class_id, level;
-	private final int curCp, maxCp, curHp, maxHp, curMp, maxMp, vitality;
+	private final int obj_id;
+	private final int class_id;
+	private final int level;
+	private final int curCp;
+	private final int maxCp;
+	private final int curHp;
+	private final int maxHp;
+	private final int curMp;
+	private final int maxMp;
+	private final int vitality;
 	private final String obj_name;
 	private final int replace;
 	

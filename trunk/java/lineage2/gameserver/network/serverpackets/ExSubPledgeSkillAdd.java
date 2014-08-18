@@ -17,7 +17,9 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class ExSubPledgeSkillAdd extends L2GameServerPacket
 {
-	private final int _type, _id, _level;
+	private final int _type;
+	private final int _id;
+	private final int _level;
 	
 	public ExSubPledgeSkillAdd(int type, int id, int level)
 	{

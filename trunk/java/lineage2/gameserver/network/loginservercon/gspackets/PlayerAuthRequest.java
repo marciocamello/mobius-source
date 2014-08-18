@@ -22,7 +22,10 @@ import lineage2.gameserver.network.loginservercon.SendablePacket;
 public class PlayerAuthRequest extends SendablePacket
 {
 	private final String account;
-	private final int playOkID1, playOkID2, loginOkID1, loginOkID2;
+	private final int playOkID1;
+	private final int playOkID2;
+	private final int loginOkID1;
+	private final int loginOkID2;
 	
 	/**
 	 * Constructor for PlayerAuthRequest.

@@ -19,7 +19,9 @@ import lineage2.gameserver.utils.Location;
 
 public class ExAirShipInfo extends L2GameServerPacket
 {
-	private final int _objId, _speed1, _speed2;
+	private final int _objId;
+	private final int _speed1;
+	private final int _speed2;
 	private int _fuel;
 	private int _maxFuel;
 	private int _driverObjId;

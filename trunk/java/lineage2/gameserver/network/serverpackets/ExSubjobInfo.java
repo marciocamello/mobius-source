@@ -25,7 +25,8 @@ import lineage2.gameserver.model.SubClass;
 public class ExSubjobInfo extends L2GameServerPacket
 {
 	private final Collection<SubClass> _subClasses;
-	private final int _raceId, _classId;
+	private final int _raceId;
+	private final int _classId;
 	private final boolean _openStatus;
 	
 	public ExSubjobInfo(Player player, boolean openStatus)

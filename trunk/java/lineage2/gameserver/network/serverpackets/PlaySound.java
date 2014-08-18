@@ -31,7 +31,9 @@ public class PlaySound extends L2GameServerPacket
 	private final String _soundFile;
 	private final int _hasCenterObject;
 	private final int _objectId;
-	private final int _x, _y, _z;
+	private final int _x;
+	private final int _y;
+	private final int _z;
 	
 	public PlaySound(String soundFile)
 	{
