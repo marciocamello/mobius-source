@@ -24,8 +24,10 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.SkillLearn;
 import lineage2.gameserver.model.base.AcquireType;
+import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
+import lineage2.gameserver.network.serverpackets.PledgeSkillList;
 import lineage2.gameserver.network.serverpackets.SkillCoolTime;
 import lineage2.gameserver.network.serverpackets.SkillList;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
@@ -57,6 +59,8 @@ public class AdminSkill implements IAdminCommandHandler
 		admin_get_skills,
 		admin_reset_skills,
 		admin_give_all_skills,
+		admin_give_clan_skills,
+		admin_give_all_clan_skills,
 		admin_show_effects,
 		admin_debug_stats,
 		admin_remove_cooldown,
@@ -132,6 +136,14 @@ public class AdminSkill implements IAdminCommandHandler
 			
 			case admin_give_all_skills:
 				adminGiveAllSkills(activeChar);
+				break;
+			
+			case admin_give_clan_skills:
+				adminGiveClanSkills(activeChar, false);
+				break;
+			
+			case admin_give_all_clan_skills:
+				adminGiveClanSkills(activeChar, true);
 				break;
 			
 			case admin_debug_stats:
@@ -264,6 +276,59 @@ public class AdminSkill implements IAdminCommandHandler
 	}
 	
 	/**
+	 * This function will give all the skills that the target's clan can learn at it's level.<br>
+	 * If the target is not the clan leader, a system message will be sent to the Game Master.
+	 * @param activeChar the active char, probably a Game Master.
+	 * @param includeSquad if Squad skills is included
+	 */
+	private void adminGiveClanSkills(Player activeChar, boolean includeSquad)
+	{
+		final GameObject target = activeChar.getTarget();
+		if ((target == null) || !target.isPlayer())
+		{
+			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			return;
+		}
+		
+		final Player player = target.getPlayer();
+		final Clan clan = player.getClan();
+		
+		if (clan == null)
+		{
+			activeChar.sendPacket(new SystemMessage(SystemMessage.THE_TARGET_MUST_BE_A_CLAN_MEMBER));
+			return;
+		}
+		
+		if (!player.isClanLeader())
+		{
+			activeChar.sendPacket(new SystemMessage(SystemMessage.S1_IS_NOT_A_CLAN_LEADER).addName(player));
+		}
+		
+		Collection<SkillLearn> skills = SkillAcquireHolder.getInstance().getAvailableSkills(player, AcquireType.CLAN);
+		if ((includeSquad) && (clan.getSubUnit(0) != null))
+		{
+			Collection<SkillLearn> skillsSub;
+			skillsSub = SkillAcquireHolder.getInstance().getAvailableSkills(player, AcquireType.SUB_UNIT, clan.getSubUnit(0));
+			skills.addAll(skillsSub);
+		}
+		
+		for (SkillLearn s : skills)
+		{
+			clan.addSkill(SkillTable.getInstance().getInfo(s.getId(), s.getLevel()), true);
+		}
+		
+		// Notify target and active char
+		clan.broadcastToOnlineMembers(new PledgeSkillList(clan));
+		for (Player member : clan.getOnlineMembers(0))
+		{
+			member.sendSkillList();
+		}
+		
+		activeChar.sendMessage("You gave " + skills.size() + " skills to " + player.getName() + "'s clan " + clan.getName() + ".");
+		player.sendMessage("Your clan received " + skills.size() + " skills.");
+	}
+	
+	/**
 	 * Method Enum
 	 * @return Enum[]
 	 */
@@ -380,21 +445,32 @@ public class AdminSkill implements IAdminCommandHandler
 		StringBuilder replyMSG = new StringBuilder("<html><body>");
 		replyMSG.append("<table width=260><tr>");
 		replyMSG.append("<td width=40><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-		replyMSG.append("<td width=180><center>Character Selection Menu</center></td>");
-		replyMSG.append("<td width=40><button value=\"Back\" action=\"bypass -h admin_current_player\" width=45 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-		replyMSG.append("</tr></table>");
-		replyMSG.append("<br><br>");
-		replyMSG.append("<center>Editing character: " + player.getName() + "</center>");
-		replyMSG.append("<br><table width=270><tr><td>Lv: " + player.getLevel() + " " + HtmlUtils.htmlClassName(player.getClassId().getId()) + "</td></tr></table>");
-		replyMSG.append("<br><center><table>");
-		replyMSG.append("<tr><td><button value=\"Add Skills\" action=\"bypass -h admin_skill_list\" width=110 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-		replyMSG.append("<td><button value=\"Get Skills\" action=\"bypass -h admin_get_skills\" width=110 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>");
-		replyMSG.append("<tr><td><button value=\"Delete Skills\" action=\"bypass -h admin_remove_skills\" width=110 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-		replyMSG.append("<td><button value=\"Reset Skills\" action=\"bypass -h admin_reset_skills\" width=110 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>");
-		replyMSG.append("<tr><td><button value=\"Give All Skills\" action=\"bypass -h admin_give_all_skills\" width=110 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-		replyMSG.append("<td><button value=\"Remove All Skills\" action=\"bypass -h admin_remove_all_skills\" width=110 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>");
-		replyMSG.append("</table></center>");
-		replyMSG.append("</body></html>");
+		replyMSG.append("<td width=180><center>Player/Clan Skills Editor</center></td>");
+		replyMSG.append("<td width=40><button value=\"Back\" action=\"bypass -h admin_current_player\" width=45 height=21 back=\")L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("</tr></table><br><br>");
+		replyMSG.append("<center>Editing <font color=\"LEVEL\">" + player.getName() + "</font><br>");
+		replyMSG.append("<table width=270><tr>");
+		replyMSG.append("<td width=50>Class:</td>");
+		replyMSG.append("<td width=160><font color=\"LEVEL\">" + HtmlUtils.htmlClassName(player.getClassId().getId()) + "</font></td>");
+		replyMSG.append("<td width=20>Lv:</td>");
+		replyMSG.append("<td width=40><font color=\"LEVEL\">" + player.getLevel() + "</font></td>");
+		replyMSG.append("</tr></table><br>");
+		replyMSG.append("============ Player ============<br>");
+		replyMSG.append("<table width=270><tr>");
+		replyMSG.append("<td><button value=\"Add skills\" action=\"bypass -h admin_skill_list\" width=130 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td><button value=\"Take skills\" action=\"bypass -h admin_get_skills\" width=130 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("</tr><tr>");
+		replyMSG.append("<td><button value=\"Delete skills\" action=\"bypass -h admin_remove_skills 0\" width=130 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td><button value=\"Give taken skills\" action=\"bypass -h admin_reset_skills\" width=130 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("</tr><tr>");
+		replyMSG.append("<td><button value=\"Give All Skills\" action=\"bypass -h admin_give_all_skills\" width=130 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td><button value=\"Remove All Skills\" action=\"bypass -h admin_remove_all_skills\" width=130 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("</tr></table><br>");
+		replyMSG.append("============ Clan ============<br>");
+		replyMSG.append("<table width=270><tr>");
+		replyMSG.append("<td><button value=\"Give Clan Skills\" action=\"bypass -h admin_give_clan_skills\" width=130 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td><button value=\"Give All Clan Skills\" action=\"bypass -h admin_give_all_clan_skills\" width=130 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("</tr></table></center></body></html>");
 		adminReply.setHtml(replyMSG.toString());
 		activeChar.sendPacket(adminReply);
 	}
