@@ -19,7 +19,10 @@ import lineage2.gameserver.utils.Location;
 public class DropItem extends L2GameServerPacket
 {
 	private final Location _loc;
-	private final int _playerId, item_obj_id, item_id, _stackable;
+	private final int _playerId;
+	private final int item_obj_id;
+	private final int item_id;
+	private final int _stackable;
 	private final long _count;
 	
 	/**

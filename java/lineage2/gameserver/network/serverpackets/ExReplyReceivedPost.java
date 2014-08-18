@@ -14,14 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.mail.Mail;
-import lineage2.gameserver.network.clientpackets.RequestExReceivePost;
-import lineage2.gameserver.network.clientpackets.RequestExRejectPost;
-import lineage2.gameserver.network.clientpackets.RequestExRequestReceivedPost;
 
-/**
- * Просмотр полученного письма. Шлется в ответ на {@link RequestExRequestReceivedPost}. При попытке забрать приложенные вещи клиент шлет {@link RequestExReceivePost}. При возврате письма клиент шлет {@link RequestExRejectPost}.
- * @see ExReplySentPost
- */
 public class ExReplyReceivedPost extends L2GameServerPacket
 {
 	private final Mail mail;
@@ -56,10 +49,10 @@ public class ExReplyReceivedPost extends L2GameServerPacket
 		writeD(mail.getMessageId());
 		writeD(0x00);// unknown2
 		writeD(0x00);// unknown3
-		writeS(mail.getSenderName()); // от кого
-		writeS(mail.getTopic()); // топик
-		writeS(mail.getBody()); // тело
-		writeD(mail.getAttachments().size()); // количество приложенных вещей
+		writeS(mail.getSenderName());
+		writeS(mail.getTopic());
+		writeS(mail.getBody());
+		writeD(mail.getAttachments().size());
 		
 		for (ItemInstance item : mail.getAttachments())
 		{
@@ -67,7 +60,7 @@ public class ExReplyReceivedPost extends L2GameServerPacket
 			writeD(item.getObjectId());
 		}
 		
-		writeQ(mail.getPrice()); // для писем с оплатой - цена
+		writeQ(mail.getPrice());
 		writeD(0x00); // unk
 		writeD(mail.isReturnable());
 		writeD(mail.getReceiverId());

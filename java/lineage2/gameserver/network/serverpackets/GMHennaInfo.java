@@ -18,7 +18,13 @@ import lineage2.gameserver.templates.Henna;
 //ccccccdd[dd]
 public class GMHennaInfo extends L2GameServerPacket
 {
-	private final int _count, _str, _con, _dex, _int, _wit, _men;
+	private final int _count;
+	private final int _str;
+	private final int _con;
+	private final int _dex;
+	private final int _int;
+	private final int _wit;
+	private final int _men;
 	private final Henna[] _hennas = new Henna[3];
 	
 	public GMHennaInfo(final Player cha)

@@ -33,7 +33,7 @@ public class ExGetBookMarkInfo extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0x85);
-		writeD(0x00); // должно быть 0
+		writeD(0x00);
 		writeD(bookmarksCapacity);
 		writeD(bookmarks.length);
 		int slotId = 0;

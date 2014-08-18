@@ -25,12 +25,17 @@ public class GMViewPledgeInfo extends L2GameServerPacket
 	private final String clan_name;
 	private final String leader_name;
 	private String ally_name;
-	private int clan_id, clan_crest_id, clan_level;
+	private int clan_id;
+	private int clan_crest_id;
+	private int clan_level;
 	private final int rank;
 	private int rep;
 	private final int ally_id;
 	private int ally_crest_id;
-	private final int hasCastle, hasHideout, hasFortress, atWar;
+	private final int hasCastle;
+	private final int hasHideout;
+	private final int hasFortress;
+	private final int atWar;
 	private final List<PledgeMemberInfo> infos = new ArrayList<>();
 	
 	public GMViewPledgeInfo(Player activeChar)

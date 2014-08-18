@@ -56,7 +56,8 @@ public class CastleSiegeDefenderList extends L2GameServerPacket
 	private static final int WAITING = 2;
 	private static final int ACCEPTED = 3;
 	private static final int REFUSE = 4;
-	private final int _id, _registrationValid;
+	private final int _id;
+	private final int _registrationValid;
 	private List<DefenderClan> _defenderClans = Collections.emptyList();
 	
 	public CastleSiegeDefenderList(Castle castle)

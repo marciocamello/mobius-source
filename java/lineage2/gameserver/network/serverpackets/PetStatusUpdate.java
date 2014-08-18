@@ -17,9 +17,18 @@ import lineage2.gameserver.utils.Location;
 
 public class PetStatusUpdate extends L2GameServerPacket
 {
-	private final int type, obj_id, level;
-	private final int maxFed, curFed, maxHp, curHp, maxMp, curMp;
-	private final long exp, exp_this_lvl, exp_next_lvl;
+	private final int type;
+	private final int obj_id;
+	private final int level;
+	private final int maxFed;
+	private final int curFed;
+	private final int maxHp;
+	private final int curHp;
+	private final int maxMp;
+	private final int curMp;
+	private final long exp;
+	private final long exp_this_lvl;
+	private final long exp_next_lvl;
 	private final Location _loc;
 	private final String title;
 	

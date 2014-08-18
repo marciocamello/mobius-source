@@ -16,8 +16,12 @@ import lineage2.gameserver.model.Player;
 
 public class ExOlympiadUserInfo extends L2GameServerPacket
 {
-	// cdSddddd
-	private final int _side, class_id, curHp, maxHp, curCp, maxCp;
+	private final int _side;
+	private final int class_id;
+	private final int curHp;
+	private final int maxHp;
+	private final int curCp;
+	private final int maxCp;
 	private int obj_id = 0;
 	private final String _name;
 	

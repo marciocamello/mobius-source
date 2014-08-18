@@ -21,7 +21,9 @@ import lineage2.gameserver.model.Player;
  */
 public class ExRegistWaitingSubstituteOk extends L2GameServerPacket
 {
-	private final int x, y, z;
+	private final int x;
+	private final int y;
+	private final int z;
 	private final int classId;
 	
 	public ExRegistWaitingSubstituteOk(Party _party, Player _player)

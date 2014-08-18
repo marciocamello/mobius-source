@@ -18,7 +18,10 @@ import lineage2.gameserver.utils.Location;
 
 public class ExMoveToTargetInAirShip extends L2GameServerPacket
 {
-	private final int char_id, boat_id, target_id, _dist;
+	private final int char_id;
+	private final int boat_id;
+	private final int target_id;
+	private final int _dist;
 	private final Location _loc;
 	
 	public ExMoveToTargetInAirShip(Player cha, Boat boat, int targetId, int dist, Location origin)

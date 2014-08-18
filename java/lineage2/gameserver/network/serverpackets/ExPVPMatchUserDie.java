@@ -17,11 +17,8 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class ExPVPMatchUserDie extends L2GameServerPacket
 {
-	private int _blueKills, _redKills;
-	
-	public ExPVPMatchUserDie()
-	{
-	}
+	private int _blueKills;
+	private int _redKills;
 	
 	@Override
 	protected final void writeImpl()

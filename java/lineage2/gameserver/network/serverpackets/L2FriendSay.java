@@ -21,7 +21,9 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class L2FriendSay extends L2GameServerPacket
 {
-	private final String _sender, _receiver, _message;
+	private final String _sender;
+	private final String _receiver;
+	private final String _message;
 	
 	public L2FriendSay(String sender, String reciever, String message)
 	{

@@ -15,25 +15,30 @@ package lineage2.gameserver.network.clientpackets.PledgeRecruit;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.clientpackets.L2GameClientPacket;
 
-/**
- * @author Smo
- */
 public class RequestPledgeDraftListApply extends L2GameClientPacket
 {
+	private int _applyType;
+	@SuppressWarnings("unused")
+	private int _searchType;
+	
 	@Override
 	protected void readImpl()
 	{
-		readD();
-		readD();
+		_applyType = readD();
+		_searchType = readD();
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = (getClient()).getActiveChar();
+		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
+		@SuppressWarnings("unused")
+		int n = this._applyType;
 	}
 }

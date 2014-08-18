@@ -46,9 +46,8 @@ public class ExResponseCommissionList extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0xF7);
-		writeD(type); // List type. -2 при пустов листе, 02 - итемы,
+		writeD(type); // List type.
 		
-		// выставленные персонажем, 03 - все итемы
 		if (type == EMPTY_LIST)
 		{
 			return;
@@ -62,17 +61,14 @@ public class ExResponseCommissionList extends L2GameServerPacket
 		{
 			writeQ(itemInfo.getAuctionId()); // auctionId
 			writeQ(itemInfo.getRegisteredPrice()); // item price
-			writeD(itemInfo.getExItemType().ordinal()); // Тип продаваемой вещи
-			writeD(itemInfo.getSaleDays()); // sale days, 0 - 1 день, 1 - 3 дня,
-			// 2 - 5 дней, 3 - 7 дней.
+			writeD(itemInfo.getExItemType().ordinal());
+			writeD(itemInfo.getSaleDays());
 			writeD((int) (itemInfo.getSaleEndTime() / 1000)); // Sale end time
 			writeS(itemInfo.getSellerName()); // seller name
-			writeD(0); // unknown (вероятно objectId итема), на евро всегда 0
+			writeD(0);
 			writeD(itemInfo.getItem().getItemId()); // item_id
 			writeQ(itemInfo.getItem().getCount()); // count
 			writeH(itemInfo.getItem().getTemplate().getType2ForPackets()); // itemType2
-			// or
-			// equipSlot
 			writeD(itemInfo.getItem().getBodyPart()); // bodypart
 			writeH(itemInfo.getItem().getEnchantLevel()); // enchant_lvl
 			writeH(itemInfo.getItem().getCustomType2()); // custom_type2

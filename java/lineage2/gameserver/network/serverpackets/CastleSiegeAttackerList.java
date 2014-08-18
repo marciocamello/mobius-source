@@ -50,7 +50,8 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class CastleSiegeAttackerList extends L2GameServerPacket
 {
-	private final int _id, _registrationValid;
+	private final int _id;
+	private final int _registrationValid;
 	private List<SiegeClanObject> _clans = Collections.emptyList();
 	
 	public CastleSiegeAttackerList(Residence residence)

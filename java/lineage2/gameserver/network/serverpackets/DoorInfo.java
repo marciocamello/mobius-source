@@ -21,7 +21,9 @@ import lineage2.gameserver.model.instances.DoorInstance;
  */
 public class DoorInfo extends L2GameServerPacket
 {
-	private final int obj_id, door_id, view_hp;
+	private final int obj_id;
+	private final int door_id;
+	private final int view_hp;
 	
 	@Deprecated
 	public DoorInfo(DoorInstance door)

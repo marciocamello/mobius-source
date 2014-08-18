@@ -17,6 +17,9 @@ public class ExRegenMax extends L2GameServerPacket
 	private final double _max;
 	private final int _count;
 	private final int _time;
+	public static final int POTION_HEALING_GREATER = 16457;
+	public static final int POTION_HEALING_MEDIUM = 16440;
+	public static final int POTION_HEALING_LESSER = 16416;
 	
 	public ExRegenMax(double max, int count, int time)
 	{
@@ -24,10 +27,6 @@ public class ExRegenMax extends L2GameServerPacket
 		_count = count;
 		_time = time;
 	}
-	
-	public static final int POTION_HEALING_GREATER = 16457;
-	public static final int POTION_HEALING_MEDIUM = 16440;
-	public static final int POTION_HEALING_LESSER = 16416;
 	
 	@Override
 	protected void writeImpl()

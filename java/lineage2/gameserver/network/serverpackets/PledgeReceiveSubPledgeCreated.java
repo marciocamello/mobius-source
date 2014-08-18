@@ -17,7 +17,8 @@ import lineage2.gameserver.model.pledge.SubUnit;
 public class PledgeReceiveSubPledgeCreated extends L2GameServerPacket
 {
 	private final int type;
-	private final String _name, leader_name;
+	private final String _name;
+	private final String leader_name;
 	
 	public PledgeReceiveSubPledgeCreated(SubUnit subPledge)
 	{

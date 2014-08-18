@@ -16,9 +16,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.clientpackets.L2GameClientPacket;
 import lineage2.gameserver.network.serverpackets.UnionPledge.ExPledgeUnionState;
 
-/**
- * @author Smo
- */
 public class RequestShowPledgeUnionInfo extends L2GameClientPacket
 {
 	@Override
@@ -29,12 +26,13 @@ public class RequestShowPledgeUnionInfo extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
+		Player activeChar = (this.getClient()).getActiveChar();
 		
 		if (activeChar == null)
 		{
 			return;
 		}
+		
 		activeChar.sendPacket(new ExPledgeUnionState(0, 0));
 	}
 }

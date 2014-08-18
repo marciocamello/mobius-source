@@ -16,8 +16,15 @@ import lineage2.gameserver.model.Creature;
 
 public class MoveToPawn extends L2GameServerPacket
 {
-	private final int _chaId, _targetId, _distance;
-	private final int _x, _y, _z, _tx, _ty, _tz;
+	private final int _chaId;
+	private final int _targetId;
+	private final int _distance;
+	private final int _x;
+	private final int _y;
+	private final int _z;
+	private final int _tx;
+	private final int _ty;
+	private final int _tz;
 	
 	public MoveToPawn(Creature cha, Creature target, int distance)
 	{

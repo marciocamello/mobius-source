@@ -24,11 +24,6 @@ public class PrivateStoreListSell extends L2GameServerPacket
 	private final boolean _package;
 	private final List<TradeItem> _sellList;
 	
-	/**
-	 * Список вещей в личном магазине продажи, показываемый покупателю
-	 * @param buyer
-	 * @param seller
-	 */
 	public PrivateStoreListSell(Player buyer, Player seller)
 	{
 		_sellerId = seller.getObjectId();

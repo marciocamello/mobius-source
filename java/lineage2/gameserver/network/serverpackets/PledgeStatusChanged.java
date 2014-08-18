@@ -21,8 +21,14 @@ import lineage2.gameserver.model.pledge.Clan;
  */
 public class PledgeStatusChanged extends L2GameServerPacket
 {
+	private final int leader_id;
+	private final int clan_id;
 	@SuppressWarnings("unused")
-	private final int leader_id, clan_id, level, type, crestId, allyId;
+	private final int level;
+	@SuppressWarnings("unused")
+	private final int type;
+	private final int crestId;
+	private final int allyId;
 	
 	public PledgeStatusChanged(Clan clan)
 	{

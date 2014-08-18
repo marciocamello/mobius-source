@@ -16,7 +16,8 @@ import lineage2.gameserver.model.entity.boat.Boat;
 
 public class VehicleStart extends L2GameServerPacket
 {
-	private final int _objectId, _state;
+	private final int _objectId;
+	private final int _state;
 	
 	public VehicleStart(Boat boat)
 	{

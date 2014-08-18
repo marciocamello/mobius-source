@@ -16,23 +16,15 @@ import lineage2.gameserver.model.Player;
 
 public class EtcStatusUpdate extends L2GameServerPacket
 {
-	/**
-	 * Packet for lvl 3 client buff line
-	 * <p/>
-	 * Example:(C4) F9 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 - empty statusbar F9 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 - increased force lvl 1 F9 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 - weight penalty lvl 1 F9 00 00 00 00 00 00 00 00
-	 * 01 00 00 00 00 00 00 00 00 00 00 00 - chat banned F9 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 - Danger Area lvl 1 F9 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 - lvl 1 grade penalty
-	 * <p/>
-	 * packet format: cdd //and last three are ddd???
-	 * <p/>
-	 * Some test results: F9 07 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 - lvl 7 increased force lvl 4 weight penalty
-	 * <p/>
-	 * Example:(C5 709) F9 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 0F 00 00 00 - lvl 1 charm of courage lvl 15 Death Penalty
-	 * <p/>
-	 * <p/>
-	 * NOTE: End of buff: You must send empty packet F9 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 to remove the statusbar or just empty value to remove some icon.
-	 */
-	private final int IncreasedForce, WeightPenalty, MessageRefusal, DangerArea;
-	private final int armorExpertisePenalty, weaponExpertisePenalty, CharmOfCourage, DeathPenaltyLevel, ConsumedSouls;
+	private final int IncreasedForce;
+	private final int WeightPenalty;
+	private final int MessageRefusal;
+	private final int DangerArea;
+	private final int armorExpertisePenalty;
+	private final int weaponExpertisePenalty;
+	private final int CharmOfCourage;
+	private final int DeathPenaltyLevel;
+	private final int ConsumedSouls;
 	
 	public EtcStatusUpdate(Player player)
 	{

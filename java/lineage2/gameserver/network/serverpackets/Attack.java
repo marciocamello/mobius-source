@@ -61,7 +61,12 @@ public class Attack extends L2GameServerPacket
 	private final int _attackerId;
 	public final boolean _soulshot;
 	private final int _grade;
-	private final int _x, _y, _z, _tx, _ty, _tz;
+	private final int _x;
+	private final int _y;
+	private final int _z;
+	private final int _tx;
+	private final int _ty;
+	private final int _tz;
 	private Hit[] hits;
 	
 	public Attack(Creature attacker, Creature target, boolean ss, int grade)
@@ -115,7 +120,7 @@ public class Attack extends L2GameServerPacket
 		writeC(0x33);
 		writeD(_attackerId);
 		writeD(hits[0]._targetId);
-		writeC(0x00); // L2WT GOD
+		writeC(0x00);
 		writeD(hits[0]._damage);
 		writeD(hits[0]._flags);
 		writeD(_grade);

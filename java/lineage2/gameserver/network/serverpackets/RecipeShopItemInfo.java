@@ -19,7 +19,10 @@ import lineage2.gameserver.model.Player;
  */
 public class RecipeShopItemInfo extends L2GameServerPacket
 {
-	private final int _recipeId, _shopId, _curMp, _maxMp;
+	private final int _recipeId;
+	private final int _shopId;
+	private final int _curMp;
+	private final int _maxMp;
 	private int _success = 0xFFFFFFFF;
 	private final long _price;
 	

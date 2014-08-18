@@ -21,8 +21,12 @@ import lineage2.gameserver.model.entity.residence.Dominion;
  */
 public class ExReplyRegisterDominion extends L2GameServerPacket
 {
-	private final int _dominionId, _clanCount, _playerCount;
-	private final boolean _success, _join, _asClan;
+	private final int _dominionId;
+	private final int _clanCount;
+	private final int _playerCount;
+	private final boolean _success;
+	private final boolean _join;
+	private final boolean _asClan;
 	
 	public ExReplyRegisterDominion(Dominion dominion, boolean success, boolean join, boolean asClan)
 	{

@@ -14,13 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.mail.Mail;
-import lineage2.gameserver.network.clientpackets.RequestExCancelSentPost;
-import lineage2.gameserver.network.clientpackets.RequestExRequestSentPost;
 
-/**
- * Просмотр собственного отправленного письма. Шлется в ответ на {@link RequestExRequestSentPost}. При нажатии на кнопку Cancel клиент шлет {@link RequestExCancelSentPost}.
- * @see ExReplyReceivedPost
- */
 public class ExReplySentPost extends L2GameServerPacket
 {
 	private final Mail mail;
@@ -39,10 +33,10 @@ public class ExReplySentPost extends L2GameServerPacket
 		// Type = Normal
 		writeD(mail.getMessageId());
 		writeD(0x00);// unknown1
-		writeS(mail.getSenderName()); // от кого
-		writeS(mail.getTopic()); // топик
-		writeS(mail.getBody()); // тело
-		writeD(mail.getAttachments().size()); // количество приложенных вещей
+		writeS(mail.getSenderName());
+		writeS(mail.getTopic());
+		writeS(mail.getBody());
+		writeD(mail.getAttachments().size());
 		
 		for (ItemInstance item : mail.getAttachments())
 		{
@@ -50,7 +44,7 @@ public class ExReplySentPost extends L2GameServerPacket
 			writeD(item.getObjectId());
 		}
 		
-		writeQ(mail.getPrice()); // для писем с оплатой - цена
+		writeQ(mail.getPrice());
 		writeD(0x00); // unk
 		writeD(mail.isReturnable());
 		writeD(mail.getReceiverId());

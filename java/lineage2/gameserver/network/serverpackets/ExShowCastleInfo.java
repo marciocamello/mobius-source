@@ -27,7 +27,9 @@ public class ExShowCastleInfo extends L2GameServerPacket
 	public ExShowCastleInfo()
 	{
 		String ownerName;
-		int id, tax, nextSiege;
+		int id;
+		int tax;
+		int nextSiege;
 		List<Castle> castles = ResidenceHolder.getInstance().getResidenceList(Castle.class);
 		_infos = new ArrayList<>(castles.size());
 		
@@ -61,7 +63,9 @@ public class ExShowCastleInfo extends L2GameServerPacket
 	private static class CastleInfo
 	{
 		public String _ownerName;
-		public int _id, _tax, _nextSiege;
+		public int _id;
+		public int _tax;
+		public int _nextSiege;
 		
 		public CastleInfo(String ownerName, int id, int tax, int nextSiege)
 		{

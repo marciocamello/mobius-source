@@ -14,14 +14,13 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.utils.Location;
 
-/**
- * Примеры пакетов:
- * <p/>
- * Ставит флажок на карте и показывает стрелку на компасе: EB 00 00 00 00 01 00 00 00 40 2B FF FF 8C 3C 02 00 A0 F6 FF FF Убирает флажок и стрелку EB 02 00 00 00 02 00 00 00 40 2B FF FF 8C 3C 02 00 A0 F6 FF FF
- */
 public class RadarControl extends L2GameServerPacket
 {
-	private final int _x, _y, _z, _type, _showRadar;
+	private final int _x;
+	private final int _y;
+	private final int _z;
+	private final int _type;
+	private final int _showRadar;
 	
 	public RadarControl(int showRadar, int type, Location loc)
 	{
@@ -31,7 +30,7 @@ public class RadarControl extends L2GameServerPacket
 	public RadarControl(int showRadar, int type, int x, int y, int z)
 	{
 		_showRadar = showRadar; // showRadar?? 0 = showRadar; 1 = delete radar;
-		_type = type; // 1 - только стрелка над головой, 2 - флажок на карте
+		_type = type;
 		_x = x;
 		_y = y;
 		_z = z;

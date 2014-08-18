@@ -21,7 +21,13 @@ public class MagicSkillUse extends L2GameServerPacket
 	private final int _skillLevel;
 	private final int _hitTime;
 	private final int _reuseDelay;
-	private final int _chaId, _x, _y, _z, _tx, _ty, _tz;
+	private final int _chaId;
+	private final int _x;
+	private final int _y;
+	private final int _z;
+	private final int _tx;
+	private final int _ty;
+	private final int _tz;
 	private final boolean _isDoubleCasting;
 	
 	public MagicSkillUse(Creature cha, Creature target, int skillId, int skillLevel, int hitTime, long reuseDelay, boolean isDoubleCastingNow)

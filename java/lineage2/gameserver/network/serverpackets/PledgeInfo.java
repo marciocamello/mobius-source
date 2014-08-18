@@ -17,7 +17,8 @@ import lineage2.gameserver.model.pledge.Clan;
 public class PledgeInfo extends L2GameServerPacket
 {
 	private final int clan_id;
-	private final String clan_name, ally_name;
+	private final String clan_name;
+	private final String ally_name;
 	
 	public PledgeInfo(Clan clan)
 	{

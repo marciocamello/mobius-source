@@ -19,7 +19,13 @@ import lineage2.gameserver.model.Creature;
  */
 public class ExFishingHpRegen extends L2GameServerPacket
 {
-	private final int _time, _fishHP, _HPmode, _Anim, _GoodUse, _Penalty, _hpBarColor;
+	private final int _time;
+	private final int _fishHP;
+	private final int _HPmode;
+	private final int _Anim;
+	private final int _GoodUse;
+	private final int _Penalty;
+	private final int _hpBarColor;
 	private final int char_obj_id;
 	
 	public ExFishingHpRegen(Creature character, int time, int fishHP, int HPmode, int GoodUse, int anim, int penalty, int hpBarColor)

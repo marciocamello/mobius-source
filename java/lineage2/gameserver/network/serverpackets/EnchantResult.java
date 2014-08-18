@@ -14,7 +14,8 @@ package lineage2.gameserver.network.serverpackets;
 
 public class EnchantResult extends L2GameServerPacket
 {
-	private final int _resultId, _crystalId;
+	private final int _resultId;
+	private final int _crystalId;
 	private final long _count;
 	private final int _enchantValue;
 	public static final EnchantResult SUCESS = new EnchantResult(0, 0, 0);

@@ -21,7 +21,11 @@ import lineage2.gameserver.model.Player;
  */
 public class ExPCCafePointInfo extends L2GameServerPacket
 {
-	private final int _mAddPoint, _mPeriodType, _pointType, _pcBangPoints, _remainTime;
+	private final int _mAddPoint;
+	private final int _mPeriodType;
+	private final int _pointType;
+	private final int _pcBangPoints;
+	private final int _remainTime;
 	
 	public ExPCCafePointInfo(Player player, int mAddPoint, int mPeriodType, int pointType, int remainTime)
 	{

@@ -18,12 +18,27 @@ import lineage2.gameserver.utils.Location;
 
 public class CharSelected extends L2GameServerPacket
 {
-	// SdSddddddddddffddddddddddddddddddddddddddddddddddddddddd d
-	private final int _sessionId, char_id, clan_id, sex, race, class_id;
-	private final String _name, _title;
+	private final int _sessionId;
+	private final int char_id;
+	private final int clan_id;
+	private final int sex;
+	private final int race;
+	private final int class_id;
+	private final String _name;
+	private final String _title;
 	private final Location _loc;
-	private final double curHp, curMp;
-	private final int _sp, level, karma, _int, _str, _con, _men, _dex, _wit, _pk;
+	private final double curHp;
+	private final double curMp;
+	private final int _sp;
+	private final int level;
+	private final int karma;
+	private final int _int;
+	private final int _str;
+	private final int _con;
+	private final int _men;
+	private final int _dex;
+	private final int _wit;
+	private final int _pk;
 	private final long _exp;
 	
 	public CharSelected(final Player cha, final int sessionId)

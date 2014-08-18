@@ -20,7 +20,15 @@ import lineage2.gameserver.model.Player;
 public class ExDuelUpdateUserInfo extends L2GameServerPacket
 {
 	private final String _name;
-	private final int obj_id, class_id, level, curHp, maxHp, curMp, maxMp, curCp, maxCp;
+	private final int obj_id;
+	private final int class_id;
+	private final int level;
+	private final int curHp;
+	private final int maxHp;
+	private final int curMp;
+	private final int maxMp;
+	private final int curCp;
+	private final int maxCp;
 	
 	public ExDuelUpdateUserInfo(Player attacker)
 	{

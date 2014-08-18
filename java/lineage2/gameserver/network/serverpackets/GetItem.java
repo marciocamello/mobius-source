@@ -20,7 +20,8 @@ import lineage2.gameserver.utils.Location;
  */
 public class GetItem extends L2GameServerPacket
 {
-	private final int _playerId, _itemObjId;
+	private final int _playerId;
+	private final int _itemObjId;
 	private final Location _loc;
 	
 	public GetItem(ItemInstance item, int playerId)

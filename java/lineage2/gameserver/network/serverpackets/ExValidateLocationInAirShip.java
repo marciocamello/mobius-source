@@ -17,7 +17,8 @@ import lineage2.gameserver.utils.Location;
 
 public class ExValidateLocationInAirShip extends L2GameServerPacket
 {
-	private final int _playerObjectId, _boatObjectId;
+	private final int _playerObjectId;
+	private final int _boatObjectId;
 	private final Location _loc;
 	
 	public ExValidateLocationInAirShip(Player cha)

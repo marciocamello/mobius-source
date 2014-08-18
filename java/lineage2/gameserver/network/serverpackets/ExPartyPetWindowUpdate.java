@@ -16,7 +16,14 @@ import lineage2.gameserver.model.Summon;
 
 public class ExPartyPetWindowUpdate extends L2GameServerPacket
 {
-	private final int owner_obj_id, npc_id, _type, curHp, maxHp, curMp, maxMp, level;
+	private final int owner_obj_id;
+	private final int npc_id;
+	private final int _type;
+	private final int curHp;
+	private final int maxHp;
+	private final int curMp;
+	private final int maxMp;
+	private final int level;
 	private int obj_id = 0;
 	private final String _name;
 	

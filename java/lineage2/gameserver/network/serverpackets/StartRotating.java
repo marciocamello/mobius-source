@@ -16,7 +16,10 @@ import lineage2.gameserver.model.Creature;
 
 public class StartRotating extends L2GameServerPacket
 {
-	private final int _charId, _degree, _side, _speed;
+	private final int _charId;
+	private final int _degree;
+	private final int _side;
+	private final int _speed;
 	
 	public StartRotating(Creature cha, int degree, int side, int speed)
 	{
