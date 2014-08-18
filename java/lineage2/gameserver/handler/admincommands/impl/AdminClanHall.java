@@ -125,9 +125,9 @@ public class AdminClanHall implements IAdminCommandHandler
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		StringBuilder replyMSG = new StringBuilder("<html><body>");
 		replyMSG.append("<table width=268><tr>");
-		replyMSG.append("<td width=40><button value=\"Main\" action=\"bypass -h admin_admin\" width=40 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td width=40><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
 		replyMSG.append("<td width=180><center><font color=\"LEVEL\">Clan Halls:</font></center></td>");
-		replyMSG.append("<td width=40><button value=\"Back\" action=\"bypass -h admin_admin\" width=40 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td width=40><button value=\"Back\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
 		replyMSG.append("</tr></table><br>");
 		replyMSG.append("<table width=268>");
 		replyMSG.append("<tr><td width=130>ClanHall Name</td><td width=58>Town</td><td width=80>Owner</td></tr>");
@@ -147,9 +147,9 @@ public class AdminClanHall implements IAdminCommandHandler
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		StringBuilder replyMSG = new StringBuilder("<html><body>");
 		replyMSG.append("<table width=260><tr>");
-		replyMSG.append("<td width=40><button value=\"Main\" action=\"bypass -h admin_admin\" width=40 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td width=40><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
 		replyMSG.append("<td width=180><center>ClanHall Name</center></td>");
-		replyMSG.append("<td width=40><button value=\"Back\" action=\"bypass -h admin_clanhall\" width=40 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td width=40><button value=\"Back\" action=\"bypass -h admin_clanhall\" width=45 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
 		replyMSG.append("</tr></table>");
 		replyMSG.append("<center>");
 		replyMSG.append("<br><br><br>ClanHall: " + clanhall.getName() + "<br>");
