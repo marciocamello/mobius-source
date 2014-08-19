@@ -3395,6 +3395,10 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
+		<equip>
+			<rhand item_id="8211"/>
+			<lhand item_id="8210"/>
+		</equip>
 		<skills>
 			<skill id="4416" level="14"/>
 		</skills>
@@ -3434,6 +3438,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
+		<equip>
+			<rhand item_id="8688"/>
+		</equip>
 		<skills>
 			<skill id="4416" level="14"/>
 		</skills>
@@ -3482,6 +3489,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
+		<equip>
+			<rhand item_id="2624"/>
+		</equip>
 		<skills>
 			<skill id="4416" level="17"/>
 		</skills>
