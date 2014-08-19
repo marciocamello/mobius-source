@@ -2,7 +2,7 @@ ID		Item	Grade Type	Item Name
 
 9913	Shirts	X	Normal	<!-- Updated Awakening Shirts -->
 9909	Cloaks	X	Normal	<!-- Updated Awakening Cloaks -->
-9938	Consum	X	Normal	<!-- Updated Consulables with Shots R Grade -->	
+9938	Consume	X	Normal	<!-- Updated Consulables with Shots R Grade -->	
 11007	Weapons	R	Normal <!-- Requem -->
 11008	Weapons	R	Blessed <!-- Requem -->
 11009	Weapons	R	Normal+SA <!-- Requem -->
@@ -65,9 +65,10 @@ ID		Item	Grade Type	Item Name
 11066	Armors	R95	Blessed	<!-- Seraph Improved -->
 11067	Armors	R99	Normal	<!-- Eternal Improved -->
 11068	Armors	R99	Blessed	<!-- Eternal Improved -->
-11069	Etc	X	Normal	<!-- Awakening Bracelets -->
-11070	Etc	X	Normal	<!-- Awakening Belts -->
-11071	Etc	X	Style	<!-- Appearance Stones -->
-11072	Etc	X	Talisman	<!-- Awakening Talisman -->
-11073	Etc	X	Scrolls	<!-- Superior Giant's Codexes -->
+11069	EtcItem	X	Normal	<!-- Awakening Bracelets -->
+11070	EtcItem	X	Normal	<!-- Awakening Belts -->
+11071	EtcItem	X	Style	<!-- Appearance Stones -->
+11072	EtcItem	X	Talisman	<!-- Awakening Talisman -->
+11073	EtcItem	X	Scrolls	<!-- Superior Giant's Codexes -->
+11074	EtcItem	X	LifeStones	<!-- Awakening Life Stones -->
 ++

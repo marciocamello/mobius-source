@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<tradelist npc="-1" shop="9001">
+	<tradelist npc="-1" shop="9001"> <!-- Single Handed Swords -->
 		<item id="1"/>
 		<item id="2"/>
 		<item id="3"/>
@@ -29,13 +29,13 @@
 		<item id="6717"/>
 		<item id="7821"/>
 	</tradelist>
-	<tradelist npc="-1" shop="9002">
+	<tradelist npc="-1" shop="9002"> <!-- Double Handed Swords -->
 		<item id="981"/>
 		<item id="1333"/>
 		<item id="3027"/>
 		<item id="5284"/>
 	</tradelist>
-	<tradelist npc="-1" shop="9003">
+	<tradelist npc="-1" shop="9003"> <!-- Daggers -->
 		<item id="10"/>
 		<item id="11"/>
 		<item id="12"/>
@@ -56,7 +56,7 @@
 		<item id="4665"/>
 		<item id="7818"/>
 	</tradelist>
-	<tradelist npc="-1" shop="9004">
+	<tradelist npc="-1" shop="9004"> <!-- Bows -->
 		<item id="13"/>
 		<item id="14"/>
 		<item id="271"/>
@@ -71,7 +71,7 @@
 		<item id="7820"/>
 		<item id="17"/>
 	</tradelist>
-	<tradelist npc="-1" shop="9005">
+	<tradelist npc="-1" shop="9005"> <!-- Fists -->
 		<item id="253"/>
 		<item id="254"/>
 		<item id="255"/>
@@ -3157,7 +3157,7 @@
 		<item id="14226"/>
 		<item id="14227"/>
 	</tradelist>
-	<tradelist npc="-1" shop="9902">
+	<tradelist npc="-1" shop="9902"> <!-- Life Stones -->
 		<item id="8723"/>
 		<item id="8724"/>
 		<item id="8725"/>
@@ -3748,6 +3748,11 @@
 		<item id="13068"/>
 		<item id="10639"/>
 		<item id="3470"/>
+		<item id="4037"/>
+		<item id="4355"/>		
+		<item id="4356"/>
+		<item id="4357"/>
+		<item id="4358"/>
 	</tradelist>
 	<tradelist npc="-1" shop="9917">
 		<item id="6656"/>
@@ -11173,11 +11178,6 @@
 		<item id="19473"/>
 		<item id="19476"/>
 		<item id="19479"/>
-		<item id="19480"/>
-		<item id="34859"/>
-		<item id="34860"/>
-		<item id="35293"/>
-		<item id="35294"/>
 	</tradelist>
 	<tradelist npc="-1" shop="11071"> <!-- Awakening Appearance Stones -->
 		<item id="22402"/>
@@ -11306,5 +11306,36 @@
 		<item id="30302"/>
 		<item id="30303"/>
 		<item id="30304"/>
+	</tradelist>
+	<tradelist npc="-1" shop="11074"> <!-- Awakening Life Stones -->
+		<item id="16160"/>
+		<item id="16161"/>
+		<item id="16162"/>
+		<item id="16163"/>
+		<item id="16164"/>
+		<item id="16165"/>
+		<item id="16166"/>
+		<item id="16167"/>
+		<item id="18563"/>
+		<item id="18564"/>
+		<item id="18565"/>
+		<item id="18566"/>
+		<item id="18567"/>
+		<item id="18568"/>
+		<item id="18569"/>
+		<item id="18570"/>
+		<item id="18571"/>
+		<item id="18572"/>
+		<item id="18573"/>
+		<item id="18574"/>
+		<item id="18575"/>
+		<item id="18576"/>
+		<item id="18577"/>
+		<item id="22629"/>
+		<item id="22630"/>
+		<item id="22631"/>
+		<item id="22632"/>
+		<item id="22633"/>
+		<item id="22634"/>
 	</tradelist>
 </list>
