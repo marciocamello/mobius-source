@@ -199,6 +199,72 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.scroll_of_enchant_armor_i06"/>
 	</etcitem>
+	<etcitem id="22629" name="High-grade Life Stone (R-grade)">
+		<set name="class" value="MISC"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_mineral_general_i03"/>
+		<set name="price" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="2"/>
+	</etcitem>
+	<etcitem id="22630" name="Top-grade Life Stone (R-grade)">
+		<set name="class" value="MISC"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_mineral_general_i03"/>
+		<set name="price" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="2"/>
+	</etcitem>
+	<etcitem id="22631" name="High-grade Life Stone (R95-grade)">
+		<set name="class" value="MISC"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_mineral_general_i03"/>
+		<set name="price" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="2"/>
+	</etcitem>
+	<etcitem id="22632" name="Top-grade Life Stone (R95-grade)">
+		<set name="class" value="MISC"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_mineral_general_i03"/>
+		<set name="price" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="2"/>
+	</etcitem>
+	<etcitem id="22633" name="High-grade Life Stone (R99-grade)">
+		<set name="class" value="MISC"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_mineral_general_i03"/>
+		<set name="price" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="2"/>
+	</etcitem>
+	<etcitem id="22634" name="Top-grade Life Stone (R99-grade)">
+		<set name="class" value="MISC"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_mineral_general_i03"/>
+		<set name="price" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="MATERIAL"/>
+		<set name="weight" value="2"/>
+	</etcitem>
 	<etcitem id="22647" name="Blessed Scroll: Enchant Weapon (R-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
