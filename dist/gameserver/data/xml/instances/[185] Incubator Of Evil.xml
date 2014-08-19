@@ -5,7 +5,7 @@
 		<collapse on-party-dismiss="true" timer="60"/>
 		<level min="76" max="99"/>
 		<teleport loc="56168 -172952 -7980 0"/>
-		<return loc="172328 31080 -3725 0"/>
+		<return loc="185976 20360 -3377 0"/>
 		<remove itemId="0" count="0" necessary="false"/>
 		<give itemId="0" count="0"/>
 		<reuse resetReuse="* * * * *" setUponEntry="true" sharedReuseGroup="0"/>

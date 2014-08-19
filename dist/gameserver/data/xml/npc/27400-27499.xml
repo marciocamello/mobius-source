@@ -1200,6 +1200,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Monster"/>
+		<equip>
+			<rhand item_id="8211"/>
+		</equip>
 		<skills>
 			<skill id="4416" level="1"/>
 			<skill id="5467" level="1"/>

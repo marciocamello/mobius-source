@@ -1466,7 +1466,7 @@
 		<npc id="23147"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="172333" y="31219" z="-3696" h="0"/>
+		<point x="185752" y="20392" z="-3371" h="62180"/>
 		<npc id="33165"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
