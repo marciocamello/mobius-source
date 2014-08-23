@@ -203,7 +203,7 @@ public final class ManageProf implements ScriptFile, ICommunityBoardHandler
 			jobLevel = 5;
 		}
 		
-		if (((level >= 20) && (jobLevel == 1)) || ((level >= 40) && (jobLevel == 2)) || ((level >= 76) && (jobLevel == 3)) || ((level >= 85) && (jobLevel == 4) && Config.ALLOW_CLASS_MASTERS_LIST.contains(jobLevel)))
+		if (((level >= 20) && (jobLevel == 1)) || ((level >= 40) && (jobLevel == 2)) || ((level >= 76) && (jobLevel == 3) && Config.ALLOW_CLASS_MASTERS_LIST.contains(jobLevel)))
 		{
 			ItemTemplate item = ItemHolder.getInstance().getTemplate(Config.CLASS_MASTERS_PRICE_ITEM_LIST[jobLevel]);
 			html.append("You have to pay: <font color=\"LEVEL\">");

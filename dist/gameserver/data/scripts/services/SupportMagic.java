@@ -31,197 +31,13 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class SupportMagic extends Functions
 {
-	private final static int[][] _mageBuff = new int[][]
-	{
-		{
-			1,
-			75,
-			14779,
-			1
-		},
-		{
-			1,
-			75,
-			14780,
-			1
-		},
-		{
-			1,
-			75,
-			14781,
-			1
-		},
-		{
-			1,
-			75,
-			14782,
-			1
-		},
-		{
-			1,
-			75,
-			14783,
-			1
-		},
-		{
-			1,
-			75,
-			14784,
-			1
-		},
-		{
-			16,
-			34,
-			14788,
-			1
-		},
-		{
-			16,
-			34,
-			14789,
-			1
-		},
-		{
-			16,
-			34,
-			14787,
-			1
-		},
-	};
-	private final static int[][] _warrBuff = new int[][]
-	{
-		{
-			1,
-			75,
-			14779,
-			1
-		},
-		{
-			1,
-			75,
-			14780,
-			1
-		},
-		{
-			1,
-			75,
-			14781,
-			1
-		},
-		{
-			1,
-			75,
-			14782,
-			1
-		},
-		{
-			1,
-			75,
-			14783,
-			1
-		},
-		{
-			1,
-			75,
-			14784,
-			1
-		},
-		{
-			16,
-			34,
-			14788,
-			1
-		},
-		{
-			16,
-			34,
-			14789,
-			1
-		},
-		{
-			16,
-			34,
-			14786,
-			1
-		},
-	};
-	private final static int[][] _summonBuff = new int[][]
-	{
-		{
-			1,
-			75,
-			4322,
-			1
-		},
-		{
-			1,
-			75,
-			4323,
-			1
-		},
-		{
-			1,
-			75,
-			5637,
-			1
-		},
-		{
-			1,
-			75,
-			4324,
-			1
-		},
-		{
-			1,
-			75,
-			4325,
-			1
-		},
-		{
-			1,
-			75,
-			4326,
-			1
-		},
-		{
-			1,
-			75,
-			4328,
-			1
-		},
-		{
-			1,
-			75,
-			4329,
-			1
-		},
-		{
-			1,
-			75,
-			4330,
-			1
-		},
-		{
-			1,
-			75,
-			4331,
-			1
-		},
-		{
-			1,
-			39,
-			4327,
-			1
-		},
-		{
-			40,
-			75,
-			5632,
-			1
-		},
-	};
+	// @formatter:off
+	private static final int[][] _mageBuff = new int[][] {{1, 81, 15642, 1}, {1, 81, 15643, 1}, {1, 81, 15644, 1}, {1, 81, 15645, 1}, {1, 81, 15646, 1}, {1, 81, 15647, 1}, {1, 81, 15651, 1}, {16, 81, 15652, 1}, {16, 81, 15653, 1}};
+	private static final int[][] _warrBuff = new int[][] {{1, 81, 15642, 1}, {1, 81, 15643, 1}, {1, 81, 15644, 1}, {1, 81, 15645, 1}, {1, 81, 15646, 1}, {1, 81, 15647, 1}, {1, 81, 15651, 1}, {16, 81, 15652, 1}, {16, 81, 15653, 1}};
+	private static final int[][] _summonBuff = new int[][] {{1, 81, 15642, 1}, {1, 81, 15643, 1}, {1, 81, 15644, 1}, {1, 81, 15645, 1}, {1, 81, 15646, 1}, {1, 81, 15647, 1}, {1, 81, 15651, 1}, {16, 81, 15652, 1}, {16, 81, 15653, 1}};
+	// @formatter:on
 	private final static int minSupLvl = 1;
-	private final static int maxSupLvl = 91;
+	private final static int maxSupLvl = 81;
 	
 	/**
 	 * Method getSupportMagic.
@@ -256,7 +72,7 @@ public final class SupportMagic extends Functions
 			return;
 		}
 		
-		if ((player.getLevel() > 39) || player.getClassId().isOfLevel(ClassLevel.Second))
+		if ((player.getLevel() > maxSupLvl) || player.getClassId().isOfLevel(ClassLevel.Second))
 		{
 			show("default/newbie_blessing_no.htm", player, npc);
 			return;

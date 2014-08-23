@@ -63,7 +63,7 @@ public final class Newbie extends DefaultAI
 				return true;
 			}
 			
-			for (Player player : World.getAroundPlayers(npc, 200, 200))
+			for (Player player : World.getAroundPlayers(npc, 0, 0))
 			{
 				if ((player.getLevel() <= 40) && (player.getEffectList().getEffectsBySkillId(4322) == null))
 				{
