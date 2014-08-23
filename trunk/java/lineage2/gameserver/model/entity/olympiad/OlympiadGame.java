@@ -25,6 +25,7 @@ import lineage2.gameserver.instancemanager.OlympiadHistoryManager;
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
+import lineage2.gameserver.model.entity.olympiad.tasks.OlympiadGameTask;
 import lineage2.gameserver.model.instances.DoorInstance;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.items.ItemInstance;
