@@ -23,7 +23,7 @@ import lineage2.gameserver.scripts.Functions;
 
 import org.apache.commons.lang3.ArrayUtils;
 
-public class Extractable extends SimpleItemHandler
+public final class Extractable extends SimpleItemHandler
 {
 	// @formatter:off
 	private static final int[] ITEM_IDS = new int[] {14841, 14847, 10408, 10473, 9599, 20069, 20070, 20071, 20072, 20073, 20074, 20210, 20211, 20215, 20216, 20217, 20218, 20219, 20220, 20227, 20228, 20229, 20233, 20234, 20235, 20239, 20240, 20241, 20242, 20243, 20244, 20251, 20254, 20278, 20279, 20041, 20042, 20043, 20044, 20035, 20036, 20037, 20038, 20039, 20040, 20060, 20061, 22000, 22001, 22002, 22003, 22004, 22005, 20326, 20327, 20329, 20330, 20059, 20494, 20493, 20395, 21000, 13281, 13282, 13283, 13284, 13285, 13286, 13287, 13288, 13289, 13290, 14267, 14268, 14269, 13280, 13713, 13714, 13715, 13716, 13717, 13718, 13719, 13720, 13721, 14549, 14550, 14551, 14552, 14553, 14554, 14555, 14556, 14557, 13695, 13696, 13697, 13698, 13699, 13700, 13701, 13702, 13703, 14531, 14532, 14533, 14534, 14535, 14536, 14537, 14538, 14539, 13704, 13705, 13706, 13707, 13708, 13709, 13710, 13711, 13712, 14540, 14541, 14542, 14543, 14544, 14545, 14546, 14547, 14548, 14884, 14885, 14886, 14887, 14888, 14889, 14890, 14891, 14892, 14893, 14894, 14895, 14896, 14897, 14898, 14899, 14900, 14901, 14616, 20575, 20804, 20807, 20805, 20808, 20806, 20809, 20842, 20843, 20844, 20845, 20846, 20847, 20848, 20849, 20850, 20851, 20852, 20853, 20854, 20855, 20856, 20857, 20858, 20859, 20860, 20861, 20862, 20863, 20864, 20811, 20812, 20813, 20814, 20815, 20816, 20817, 20810, 20865, 20748, 20749, 20750, 20751, 20752, 13777, 13778, 13779, 13780, 13781, 13782, 13783, 13784, 13785, 13786, 14849, 14834, 14833, 13988, 13989, 13003, 13004, 13005, 13006, 13007, 13990, 13991, 13992, 14850, 14713, 14714, 14715, 14716, 14717, 14718, 17138, 15482, 15483, 13270, 13271, 13272, 14231, 14232, 17169, 21169, 21092, 21091, 10254, 10206, 10205, 5909, 5910, 5912, 5913, 5907, 5906, 170, 163, 141, 140, 137, 138, 139, 136, 53, 54, 55, 56, 13079, 13080, 13082, 13083, 13084, 13085, 13086, 13087, 13088, 13089, 13090, 13091, 13092, 13093, 13094, 13095, 13096, 13097, 13098, 22187, 21601, 21602, 21603, 21604, 21605, 21606, 21607, 21608, 21609, 21610, 21611, 21612, 21613, 21614, 21615, 21616, 21617, 21618, 21619, 15343, 15345, 15370, 15371, 15372, 15373, 15374, 15375, 15376, 15377, 15378, 20101, 20102, 20179, 20180, 20181, 20182, 20183, 20184, 20185, 20186, 20187, 20188, 20189, 15194, 15195, 15196, 15197, 15198, 15199, 10255, 10256, 10257, 10258, 10259, 13103, 13104, 13105, 13106, 13107, 13108, 13109, 13110, 13111, 13112, 13113, 13114, 13115, 13116, 13117, 13118, 13119, 13120, 13121, 13122, 13124, 13125, 13126, 13225, 13226, 13227, 13228, 13229, 13230, 13231, 13232, 13233, 13256, 13257, 13275, 13276, 13279, 13291, 13292, 21620, 21621, 21622, 21623, 21624, 21625, 21626, 21627, 21628, 21629, 21630, 21631, 21632, 21633, 21634, 21635, 21636, 21637, 21638, 21639, 21640, 21641, 21642, 21643, 21644, 21645, 21646, 21647, 21648, 21649, 21650, 21651, 21652, 21653, 21654, 21655, 21656, 21657, 21658, 21659, 21660, 21661, 21662, 21663, 21664, 21665, 21666, 21667, 21668, 21669, 21670, 21671, 21672, 21673, 21674, 21675, 21676, 21677, 21678, 21679, 21680, 21681, 21682, 21683, 21684, 21685, 21686, 21001, 21002, 21003, 21004, 21005, 21006, 21007, 21008, 21024, 21025, 21026, 21027, 21028, 21029, 21063, 21064, 21065, 21066, 21067, 21068, 21069, 21070, 21071, 21072, 21073, 21074, 21075, 21076, 21077, 21078, 21079, 21080, 21081, 21082, 21083, 21085, 21087, 21089, 21095, 20314, 20315, 20316, 20317, 20318, 20319, 20328, 20331, 20397, 20398, 16383, 16384, 16385, 16386, 16387, 16388, 16389, 16390, 16391, 16392, 16393, 16394, 16395, 16396, 16397, 16398, 16852, 16968, 16969, 16970, 16971, 16972, 16973, 16974, 16975, 16976, 16977, 16978, 16979, 16980, 16981, 16982, 16983, 16984, 16985, 16986, 16987, 16988, 16989, 16990, 16991, 16992, 16993, 16994, 16995, 16996, 16997, 16998, 16999, 13341, 13342, 13343, 13344, 13345, 13346, 13347, 13348, 13349, 13350, 13351, 13352, 13353, 13354, 13355, 13356, 13357, 13358, 13359, 13360, 13361, 13362, 13363, 13364, 13365, 13366, 13367, 13368, 13369, 13370, 13371, 13372, 13373, 13374, 13375, 13376, 13377, 13378, 13379, 13380, 13381, 13384, 13385, 13422, 13423, 13424, 13425, 13426, 13427, 13428, 13799, 14530, 20700, 20701, 20702, 20703, 20704, 20705, 20734, 20735, 20736, 20737, 20738, 20740, 20753, 20754, 20773, 20796, 20797, 20798, 20799, 15200, 15201, 15202, 15203, 15204, 15205, 15206, 15207, 15209, 15212, 15213, 15214, 15215, 15216, 15217, 15218, 15219, 15222, 15223, 15224, 15225, 15226, 15227, 15228, 15229, 15230, 15231, 15232, 15233, 15234, 15235, 15236, 15237, 15238, 15239, 15240, 15241, 15242, 15243, 15244, 15245, 15246, 15247, 15248, 15249, 15250, 15251, 15252, 15253, 15254, 15255, 15256, 15257, 15258, 15259, 15260, 15261, 15262, 15263, 15264, 15265, 15266, 15267, 15268, 15269, 15270, 15271, 15272, 15273, 15274, 15275, 15276, 15277, 15278, 20277, 20280, 20281, 20282, 20283, 20284, 20285, 20286, 20287, 20288, 20289, 20290, 20291, 20292, 20293, 20294, 20295, 20296, 14639, 14640, 14641, 14642, 14643, 14644, 14645, 14646, 14647, 14648, 14649, 14650, 14651, 14652, 14653, 14654, 14655, 14656, 14657, 14658, 14659, 14660, 14661, 14662, 14663, 14676, 14677, 20402, 20403, 20404, 20450, 20451, 20452, 20453, 20454, 20455, 20456, 20457, 20458, 20459, 20460, 20461, 20462, 20463, 20464, 20465, 20466, 20467, 20468, 20469, 20470, 20471, 20472, 20473, 20474, 20475, 20476, 20477, 20478, 20479, 20480, 20481, 20482, 20483, 20484, 20485, 20486, 20487, 20488, 20489, 20490, 20491, 20492, 14635, 14636, 14637, 14638, 20607, 20608, 20609, 20610, 20611, 20612, 20619, 20620, 20623, 20624, 20625, 20627, 20631, 20632, 20680, 20681, 20682, 20683, 20684, 20685, 20686, 20687, 20688, 20689, 20690, 20691, 20692, 20693, 20694, 20695, 20696, 20697, 20698, 20699, 20800, 20801, 20802, 20803, 20869, 20898, 20505, 20506, 20507, 20508, 20509, 20510, 20511, 20512, 20513, 20514, 20540, 20541, 20542, 20543, 20544, 20548, 20549, 20550, 20551, 20552, 20553, 20554, 20555, 20556, 20557, 20558, 20559, 20560, 20561, 20562, 20563, 20564, 20565, 20566, 20574, 20576, 20577, 20578, 20579, 20580, 20581, 20587, 20588, 20589, 20590, 20598, 20599, 20045, 20046, 20047, 20048, 20049, 20050, 20051, 20052, 20053, 20054, 20055, 20056, 20057, 20058, 20062, 20079, 20080, 20092, 20096, 20097, 17164, 17165, 17166, 17167, 17168, 20901, 20902, 20946, 20947, 20948, 20949, 20950, 20951, 20952, 20953, 20957, 20959, 20960, 20961, 20962, 20963, 20964, 20965, 20966, 20967, 20969, 20994, 20995, 20996, 20997, 20998, 20999, 14228, 14229, 14230, 14233, 14234, 14235, 14236, 14237, 14238, 14239, 14240, 14241, 14242, 14243, 14244, 14245, 14246, 14247, 14248, 14249, 14250, 14251, 14252, 14253, 14254, 14255, 14256, 14257, 14258, 14259, 14260, 14261, 14262, 14263, 14264, 14265, 14266, 14270, 14271, 14272, 14273, 14274, 14275, 14276, 14277, 14278, 14279, 14280, 14281, 14282, 14283, 14284, 14285, 14286, 14287, 14288, 14289, 14290, 14291, 14719, 14729, 14740, 14766, 14767, 14768, 17000, 17001, 17002, 17019, 17020, 17021, 17022, 17023, 17024, 17025, 17026, 17027, 17028, 17029, 17031, 17032, 17040, 17041, 17042, 17043, 17044, 17045, 17046, 17047, 17048, 17066, 17082, 17083, 17084, 17085, 17086, 21225, 21226, 21229, 21230, 21233, 21234, 21237, 21238, 15404, 15405, 15406, 15407, 15408, 15409, 15410, 15411, 15412, 15413, 15414, 15415, 15416, 15417, 15425, 15434, 15435, 15437, 15454, 15455, 15456, 15457, 15458, 15459, 15460, 15462, 15465, 15466, 15468, 21421, 21422, 21241, 20635, 20636, 20637, 20638, 30276, 30277, 30278, 30279, 30280, 30281, 30282, 30283, 30284, 30285, 30286, 30287, 30288, 30289, 30290, 30291, 30292, 30293, 33465, 34927, 34928, 34929, 34930, 34931, 34932, 34855, 37607, 37608, 37609, 37610, 37611, 37612, 37613, 37614, 37615, 37616, 37617, 37618, 37619, 37620, 37621, 37622, 37623, 37624};
@@ -11048,11 +11048,11 @@ public class Extractable extends SimpleItemHandler
 		int[] list = new int[] {14836, 14837, 14838, 14839, 14840};
 		int[] counts = new int[] {1, 1, 1, 1, 1};
 		
-		if(ctrl)
+		if (ctrl)
 		{
 			long item_count = 1 + Functions.removeItem(player, 14841, Functions.getItemCount(player, 14841));
 			
-for(int[] res : mass_extract_item(item_count, list, counts, player))
+			for(int[] res : mass_extract_item(item_count, list, counts, player))
 			{
 				Functions.addItem(player, res[0], res[1]);
 			}
@@ -11068,11 +11068,11 @@ for(int[] res : mass_extract_item(item_count, list, counts, player))
 		int[] list = new int[] {14842, 14843, 14844, 14845, 14846};
 		int[] counts = new int[] {1, 1, 1, 1, 1};
 		
-		if(ctrl)
+		if (ctrl)
 		{
 			long item_count = 1 + Functions.removeItem(player, 14847, Functions.getItemCount(player, 14847));
 			
-for(int[] res : mass_extract_item(item_count, list, counts, player))
+			for(int[] res : mass_extract_item(item_count, list, counts, player))
 			{
 				Functions.addItem(player, res[0], res[1]);
 			}
@@ -11108,11 +11108,11 @@ for(int[] res : mass_extract_item(item_count, list, counts, player))
 		int[] count_max = new int[] {2, 2, 1};
 		int[] chances = new int[] {4, 10, 1};
 		
-		if(ctrl)
+		if (ctrl)
 		{
 			long item_count = 1 + Functions.removeItem(player, 9599, Functions.getItemCount(player, 9599));
 			
-for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chances, player))
+			for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chances, player))
 			{
 				Functions.addItem(player, res[0], res[1]);
 			}
@@ -11618,11 +11618,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13713(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13894, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13895, 1);
 		}
@@ -11634,11 +11634,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13714(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13894, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13895, 1);
 		}
@@ -11650,11 +11650,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13715(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13894, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13895, 1);
 		}
@@ -11666,11 +11666,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13716(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13894, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13895, 1);
 		}
@@ -11682,11 +11682,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13717(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13894, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13895, 1);
 		}
@@ -11698,11 +11698,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13718(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13894, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13895, 1);
 		}
@@ -11714,11 +11714,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13719(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13894, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13895, 1);
 		}
@@ -11730,11 +11730,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13720(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13894, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13895, 1);
 		}
@@ -11746,11 +11746,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13721(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13894, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13895, 1);
 		}
@@ -11762,11 +11762,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14549(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13896, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13897, 1);
 		}
@@ -11778,11 +11778,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14550(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13896, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13897, 1);
 		}
@@ -11794,11 +11794,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14551(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13896, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13897, 1);
 		}
@@ -11810,11 +11810,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14552(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13896, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13897, 1);
 		}
@@ -11826,11 +11826,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14553(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13896, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13897, 1);
 		}
@@ -11842,11 +11842,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14554(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13896, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13897, 1);
 		}
@@ -11858,11 +11858,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14555(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13896, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13897, 1);
 		}
@@ -11874,11 +11874,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14556(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13896, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13897, 1);
 		}
@@ -11890,11 +11890,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14557(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13896, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13897, 1);
 		}
@@ -11906,11 +11906,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13695(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13898, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13899, 1);
 		}
@@ -11922,11 +11922,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13696(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13898, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13899, 1);
 		}
@@ -11938,11 +11938,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13697(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13898, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13899, 1);
 		}
@@ -11954,11 +11954,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13698(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13898, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13899, 1);
 		}
@@ -11970,11 +11970,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13699(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13898, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13899, 1);
 		}
@@ -11986,11 +11986,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13700(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13898, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13899, 1);
 		}
@@ -12002,11 +12002,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13701(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13898, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13899, 1);
 		}
@@ -12018,11 +12018,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13702(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13898, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13899, 1);
 		}
@@ -12034,11 +12034,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13703(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13898, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13899, 1);
 		}
@@ -12050,11 +12050,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14531(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13900, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13901, 1);
 		}
@@ -12066,11 +12066,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14532(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13900, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13901, 1);
 		}
@@ -12082,11 +12082,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14533(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13900, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13901, 1);
 		}
@@ -12098,11 +12098,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14534(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13900, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13901, 1);
 		}
@@ -12114,11 +12114,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14535(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13900, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13901, 1);
 		}
@@ -12130,11 +12130,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14536(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13900, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13901, 1);
 		}
@@ -12146,11 +12146,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14537(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13900, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13901, 1);
 		}
@@ -12162,11 +12162,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14538(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13900, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13901, 1);
 		}
@@ -12178,11 +12178,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14539(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13900, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13901, 1);
 		}
@@ -12194,11 +12194,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13704(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13918, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13919, 1);
 		}
@@ -12210,11 +12210,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13705(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13918, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13919, 1);
 		}
@@ -12226,11 +12226,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13706(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13918, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13919, 1);
 		}
@@ -12242,11 +12242,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13707(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13918, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13919, 1);
 		}
@@ -12258,11 +12258,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13708(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13918, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13919, 1);
 		}
@@ -12274,11 +12274,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13709(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13918, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13919, 1);
 		}
@@ -12290,11 +12290,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13710(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13918, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13919, 1);
 		}
@@ -12306,11 +12306,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13711(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13918, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13919, 1);
 		}
@@ -12322,11 +12322,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13712(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13918, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13919, 1);
 		}
@@ -12338,11 +12338,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14540(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13920, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13921, 1);
 		}
@@ -12354,11 +12354,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14541(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13920, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13921, 1);
 		}
@@ -12370,11 +12370,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14542(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13920, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13921, 1);
 		}
@@ -12386,11 +12386,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14543(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13920, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13921, 1);
 		}
@@ -12402,11 +12402,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14544(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13920, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13921, 1);
 		}
@@ -12418,11 +12418,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14545(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13920, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13921, 1);
 		}
@@ -12434,11 +12434,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14546(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13920, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13921, 1);
 		}
@@ -12450,11 +12450,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14547(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13920, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13921, 1);
 		}
@@ -12466,11 +12466,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14548(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13920, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 13921, 1);
 		}
@@ -12482,11 +12482,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14884(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 14902, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 14903, 1);
 		}
@@ -12498,11 +12498,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14885(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 14902, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 14903, 1);
 		}
@@ -12514,11 +12514,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14886(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 14902, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 14903, 1);
 		}
@@ -12530,11 +12530,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14887(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 14902, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 14903, 1);
 		}
@@ -12546,11 +12546,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14888(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 14902, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 14903, 1);
 		}
@@ -12562,11 +12562,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14889(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 14902, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 14903, 1);
 		}
@@ -12578,11 +12578,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14890(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 14902, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 14903, 1);
 		}
@@ -12594,11 +12594,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14891(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 14902, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 14903, 1);
 		}
@@ -12610,11 +12610,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14892(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 14902, 1);
 		}
-		else if(Rnd.chance(50))
+		else if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 14903, 1);
 		}
@@ -12626,11 +12626,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14893(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(20))
+		if (Rnd.chance(20))
 		{
 			Functions.addItem(player, 14904, 1);
 		}
-		else if(Rnd.chance(20))
+		else if (Rnd.chance(20))
 		{
 			Functions.addItem(player, 14905, 1);
 		}
@@ -12642,11 +12642,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14894(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(20))
+		if (Rnd.chance(20))
 		{
 			Functions.addItem(player, 14904, 1);
 		}
-		else if(Rnd.chance(20))
+		else if (Rnd.chance(20))
 		{
 			Functions.addItem(player, 14905, 1);
 		}
@@ -12658,11 +12658,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14895(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(20))
+		if (Rnd.chance(20))
 		{
 			Functions.addItem(player, 14904, 1);
 		}
-		else if(Rnd.chance(20))
+		else if (Rnd.chance(20))
 		{
 			Functions.addItem(player, 14905, 1);
 		}
@@ -12674,11 +12674,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14896(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(20))
+		if (Rnd.chance(20))
 		{
 			Functions.addItem(player, 14904, 1);
 		}
-		else if(Rnd.chance(20))
+		else if (Rnd.chance(20))
 		{
 			Functions.addItem(player, 14905, 1);
 		}
@@ -12690,11 +12690,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14897(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(20))
+		if (Rnd.chance(20))
 		{
 			Functions.addItem(player, 14904, 1);
 		}
-		else if(Rnd.chance(20))
+		else if (Rnd.chance(20))
 		{
 			Functions.addItem(player, 14905, 1);
 		}
@@ -12706,11 +12706,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14898(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(20))
+		if (Rnd.chance(20))
 		{
 			Functions.addItem(player, 14904, 1);
 		}
-		else if(Rnd.chance(20))
+		else if (Rnd.chance(20))
 		{
 			Functions.addItem(player, 14905, 1);
 		}
@@ -12722,11 +12722,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14899(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(20))
+		if (Rnd.chance(20))
 		{
 			Functions.addItem(player, 14904, 1);
 		}
-		else if(Rnd.chance(20))
+		else if (Rnd.chance(20))
 		{
 			Functions.addItem(player, 14905, 1);
 		}
@@ -12738,11 +12738,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14900(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(20))
+		if (Rnd.chance(20))
 		{
 			Functions.addItem(player, 14904, 1);
 		}
-		else if(Rnd.chance(20))
+		else if (Rnd.chance(20))
 		{
 			Functions.addItem(player, 14905, 1);
 		}
@@ -12754,11 +12754,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use14901(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(20))
+		if (Rnd.chance(20))
 		{
 			Functions.addItem(player, 14904, 1);
 		}
-		else if(Rnd.chance(20))
+		else if (Rnd.chance(20))
 		{
 			Functions.addItem(player, 14905, 1);
 		}
@@ -12773,27 +12773,27 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 		Functions.addItem(player, 20107, 1);
 		Functions.addItem(player, 14612, 1);
 		
-		if(Rnd.chance(30))
+		if (Rnd.chance(30))
 		{
 			Functions.addItem(player, 5561, 1);
 		}
 		
-		if(Rnd.chance(50))
+		if (Rnd.chance(50))
 		{
 			Functions.addItem(player, 5560, 1);
 		}
 		
-		if((Functions.getItemCount(player, 10606) == 0) && Rnd.chance(5))
+		if ((Functions.getItemCount(player, 10606) == 0) && Rnd.chance(5))
 		{
 			Functions.addItem(player, 10606, 1);
 		}
 		
-		if((Functions.getItemCount(player, 20094) == 0) && Rnd.chance(3))
+		if ((Functions.getItemCount(player, 20094) == 0) && Rnd.chance(3))
 		{
 			Functions.addItem(player, 20094, 1);
 		}
 		
-		if(Rnd.chance(30))
+		if (Rnd.chance(30))
 		{
 			Functions.addItem(player, 20575, 1);
 		}
@@ -13024,7 +13024,7 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	{
 		int rnd = Rnd.get(100);
 		
-		if(rnd <= 65)
+		if (rnd <= 65)
 		{
 			Functions.addItem(player, 9630, 3);
 			Functions.addItem(player, 9629, 3);
@@ -13033,7 +13033,7 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 			Functions.addItem(player, 8627, 6);
 			Functions.addItem(player, 8633, 6);
 		}
-		else if(rnd <= 95)
+		else if (rnd <= 95)
 		{
 			Functions.addItem(player, SOI_books[Rnd.get(SOI_books.length)], 1);
 		}
@@ -13047,7 +13047,7 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	{
 		int rnd = Rnd.get(100);
 		
-		if(rnd <= 65)
+		if (rnd <= 65)
 		{
 			Functions.addItem(player, 9630, 2);
 			Functions.addItem(player, 9629, 2);
@@ -13056,7 +13056,7 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 			Functions.addItem(player, 8627, 5);
 			Functions.addItem(player, 8633, 5);
 		}
-		else if(rnd <= 95)
+		else if (rnd <= 95)
 		{
 			Functions.addItem(player, SOI_books[Rnd.get(SOI_books.length)], 1);
 		}
@@ -13070,7 +13070,7 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	{
 		int rnd = Rnd.get(100);
 		
-		if(rnd <= 65)
+		if (rnd <= 65)
 		{
 			Functions.addItem(player, 9630, 1);
 			Functions.addItem(player, 9629, 1);
@@ -13079,7 +13079,7 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 			Functions.addItem(player, 8627, 4);
 			Functions.addItem(player, 8633, 4);
 		}
-		else if(rnd <= 95)
+		else if (rnd <= 95)
 		{
 			Functions.addItem(player, SOI_books[Rnd.get(SOI_books.length)], 1);
 		}
@@ -13178,7 +13178,7 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13003(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(3.2))
+		if (Rnd.chance(3.2))
 		{
 			Functions.addItem(player, 947, 1);
 		}
@@ -13186,7 +13186,7 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13004(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(1.6111))
+		if (Rnd.chance(1.6111))
 		{
 			Functions.addItem(player, 729, 1);
 		}
@@ -13194,7 +13194,7 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13005(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(1.14))
+		if (Rnd.chance(1.14))
 		{
 			Functions.addItem(player, 959, 1);
 		}
@@ -13216,7 +13216,7 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13270(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(30))
+		if (Rnd.chance(30))
 		{
 			Functions.addItem(player, 13236, 1);
 		}
@@ -13224,7 +13224,7 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13271(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(30))
+		if (Rnd.chance(30))
 		{
 			Functions.addItem(player, 13237, 1);
 		}
@@ -13232,7 +13232,7 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use13272(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(30))
+		if (Rnd.chance(30))
 		{
 			Functions.addItem(player, 13238, 1);
 		}
@@ -13322,11 +13322,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 		int group = Rnd.get(7);
 		int[] items = new int[] {};
 		
-		if(group < 4)
+		if (group < 4)
 		{
 			items = new int[] {312, 167, 220, 258, 178, 221, 123, 156, 291, 166, 274};
 		}
-		else if(group >= 4)
+		else if (group >= 4)
 		{
 			items = new int[] {160, 298, 72, 193, 192, 281, 7887, 226, 2524, 191, 71, 263};
 		}
@@ -13339,15 +13339,15 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 		int group = Rnd.get(10);
 		int[] items = new int[] {};
 		
-		if(group < 4)
+		if (group < 4)
 		{
 			items = new int[] {78, 2571, 300, 284, 142, 267, 229, 148, 243, 92, 7892, 91};
 		}
-		else if((group >= 7) && (group < 9))
+		else if ((group >= 7) && (group < 9))
 		{
 			items = new int[] {98, 5233, 80, 235, 269, 288, 7884, 2504, 150, 7899, 212};
 		}
-		else if(group == 9)
+		else if (group == 9)
 		{
 			items = new int[] {6365, 6371, 6364, 6366, 6580, 7575, 6579, 6372, 6370, 6369, 6367};
 		}
@@ -13360,15 +13360,15 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 		int group = Rnd.get(9);
 		int[] items = new int[] {};
 		
-		if(group < 5)
+		if (group < 5)
 		{
 			items = new int[] {9447, 9384, 9449, 9380, 9448, 9443, 9450, 10253, 9445, 9442, 9446, 10004, 10252, 9376, 9444};
 		}
-		else if((group >= 5) && (group < 8))
+		else if ((group >= 5) && (group < 8))
 		{
 			items = new int[] {10226, 10217, 10224, 10215, 10225, 10223, 10220, 10415, 10216, 10221, 10219, 10218, 10222};
 		}
-		else if(group == 8)
+		else if (group == 8)
 		{
 			items = new int[] {13467, 13462, 13464, 13461, 13465, 13468, 13463, 13470, 13460, 52, 13466, 13459, 13457, 13469, 13458};
 		}
@@ -13378,11 +13378,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use15482(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(10))
+		if (Rnd.chance(10))
 		{
 			Functions.addItem(player, 15474, 40);
 			
-			if(Rnd.chance(50))
+			if (Rnd.chance(50))
 			{
 				Functions.addItem(player, 15476, 5);
 			}
@@ -13399,11 +13399,11 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use15483(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(10))
+		if (Rnd.chance(10))
 		{
 			Functions.addItem(player, 15475, 40);
 			
-			if(Rnd.chance(50))
+			if (Rnd.chance(50))
 			{
 				Functions.addItem(player, 15477, 5);
 			}
@@ -13433,7 +13433,7 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 		int[][] items = new int[][] {{13750, 1}, {13751, 1}, {13754, 1}, {13753, 1}, {13752, 1}, {6622, 1}, {8621, 1}};
 		double[] chances = new double[] {34.7, 12.3, 2.65, 1.2, 1.98, 46.5, 5.4};
 		
-		if(Rnd.chance(60))
+		if (Rnd.chance(60))
 		{
 			extractRandomOneItem(player, items, chances);
 		}
@@ -14178,7 +14178,7 @@ for(int[] res : mass_extract_item_r(item_count, list, count_min, count_max, chan
 	
 	private void use34855(Player player, boolean ctrl)
 	{
-		if(Rnd.chance(15))
+		if (Rnd.chance(15))
 		{
 			Functions.addItem(player, 34742, 1);
 		}
