@@ -829,7 +829,7 @@ public abstract class ItemTemplate extends StatTemplate
 	 */
 	public boolean isHeroWeapon()
 	{
-		return ((_itemId >= 6611) && (_itemId <= 6621)) || ((_itemId >= 9388) && (_itemId <= 9390));
+		return ((_itemId >= 6611) && (_itemId <= 6621)) || ((_itemId >= 9388) && (_itemId <= 9390)) || ((_itemId >= 30392) && (_itemId <= 30405));
 	}
 	
 	/**
