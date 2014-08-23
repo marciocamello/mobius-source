@@ -10,13 +10,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.gameserver.model.entity.olympiad;
+package lineage2.gameserver.model.entity.olympiad.tasks;
 
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.entity.Hero;
+import lineage2.gameserver.model.entity.olympiad.Olympiad;
+import lineage2.gameserver.model.entity.olympiad.OlympiadDatabase;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 
 import org.slf4j.Logger;

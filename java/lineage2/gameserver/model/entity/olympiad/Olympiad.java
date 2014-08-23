@@ -30,6 +30,10 @@ import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.entity.Hero;
+import lineage2.gameserver.model.entity.olympiad.tasks.CompStartTask;
+import lineage2.gameserver.model.entity.olympiad.tasks.OlympiadEndTask;
+import lineage2.gameserver.model.entity.olympiad.tasks.ValidationTask;
+import lineage2.gameserver.model.entity.olympiad.tasks.WeeklyTask;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
@@ -520,7 +524,7 @@ public class Olympiad
 	 * Method getMillisToValidationEnd.
 	 * @return long
 	 */
-	static long getMillisToValidationEnd()
+	public static long getMillisToValidationEnd()
 	{
 		if (_validationEnd > System.currentTimeMillis())
 		{

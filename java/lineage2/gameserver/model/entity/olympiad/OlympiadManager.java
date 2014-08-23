@@ -20,6 +20,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
+import lineage2.gameserver.model.entity.olympiad.tasks.OlympiadGameTask;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

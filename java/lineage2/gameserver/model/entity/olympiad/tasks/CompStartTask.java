@@ -10,11 +10,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.gameserver.model.entity.olympiad;
+package lineage2.gameserver.model.entity.olympiad.tasks;
 
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.ThreadPoolManager;
+import lineage2.gameserver.model.entity.olympiad.Olympiad;
+import lineage2.gameserver.model.entity.olympiad.OlympiadManager;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 
 import org.slf4j.Logger;
@@ -24,7 +26,7 @@ import org.slf4j.LoggerFactory;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-class CompStartTask extends RunnableImpl
+public class CompStartTask extends RunnableImpl
 {
 	private static final Logger _log = LoggerFactory.getLogger(CompStartTask.class);
 	
