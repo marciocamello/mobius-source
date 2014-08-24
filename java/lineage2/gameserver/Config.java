@@ -199,8 +199,8 @@ public class Config
 	public static int CHAT_RANGE;
 	public static int SHOUT_OFFSET;
 	public static boolean PREMIUM_HEROCHAT;
-	public static boolean EVERYBODY_HAS_ADMIN_RIGHTS;
-	public static int EVERYBODY_ACCESS_LEVEL;
+	public static boolean EVERYONE_HAS_ADMIN_RIGHTS;
+	public static int DEFAULT_ACCESS_FOR_EVERYONE;
 	public static boolean SECOND_AUTH_ENABLED;
 	public static int SECOND_AUTH_MAX_ATTEMPTS;
 	public static int SECOND_AUTH_BAN_TIME;
@@ -504,7 +504,7 @@ public class Config
 	public static List<Integer> KARMA_LIST_NONDROPPABLE_ITEMS = new ArrayList<>();
 	public static int PVP_TIME;
 	public static int REPUTATION_COUNT;
-	public static int PK_KILLER_NAME_COLOUR;
+	public static int PK_KILLER_NAME_COLOR;
 	public static boolean ALT_GAME_KARMA_PLAYER_CAN_SHOP;
 	public static int OVERENCHANT_LIMIT1;
 	public static int OVERENCHANT_LIMIT2;
@@ -568,10 +568,10 @@ public class Config
 	public static boolean ACCEPT_ALTERNATE_ID;
 	public static int REQUEST_ID;
 	// public static boolean ANNOUNCE_MAMMON_SPAWN;
-	public static int GM_NAME_COLOUR;
+	public static int GM_NAME_COLOR;
 	public static boolean GM_HERO_AURA;
-	public static int NORMAL_NAME_COLOUR;
-	public static int CLANLEADER_NAME_COLOUR;
+	public static int NORMAL_NAME_COLOR;
+	public static int CLANLEADER_NAME_COLOR;
 	public static int AI_TASK_MANAGER_COUNT;
 	public static long AI_TASK_ATTACK_DELAY;
 	public static long AI_TASK_ACTIVE_DELAY;
@@ -873,8 +873,8 @@ public class Config
 		{
 			7777
 		});
-		EVERYBODY_HAS_ADMIN_RIGHTS = serverSettings.getProperty("EverybodyHasAdminRights", false);
-		EVERYBODY_ACCESS_LEVEL = serverSettings.getProperty("EverybodyAccessLevel", 100);
+		EVERYONE_HAS_ADMIN_RIGHTS = serverSettings.getProperty("EveryoneHasAdminRights", false);
+		DEFAULT_ACCESS_FOR_EVERYONE = serverSettings.getProperty("DefaultAccessLevelForEveryone", 100);
 		SECOND_AUTH_ENABLED = serverSettings.getProperty("SecondAuth", false);
 		SECOND_AUTH_MAX_ATTEMPTS = serverSettings.getProperty("SecondAuthMaxEnter", 5);
 		SECOND_AUTH_BAN_TIME = serverSettings.getProperty("SecondAuthBanTime", 480);
@@ -1303,10 +1303,10 @@ public class Config
 		SENDSTATUS_TRADE_JUST_OFFLINE = otherSettings.getProperty("SendStatusTradeJustOffline", false);
 		SENDSTATUS_TRADE_MOD = otherSettings.getProperty("SendStatusTradeMod", 1.);
 		// ANNOUNCE_MAMMON_SPAWN = otherSettings.getProperty("AnnounceMammonSpawn", true);
-		GM_NAME_COLOUR = Integer.decode("0x" + otherSettings.getProperty("GMNameColour", "00CCFF"));
+		GM_NAME_COLOR = Integer.decode("0x" + otherSettings.getProperty("GMNameColor", "00CCFF"));
 		GM_HERO_AURA = otherSettings.getProperty("GMHeroAura", false);
-		NORMAL_NAME_COLOUR = Integer.decode("0x" + otherSettings.getProperty("NormalNameColour", "FFFFFF"));
-		CLANLEADER_NAME_COLOUR = Integer.decode("0x" + otherSettings.getProperty("ClanleaderNameColour", "FFFFFF"));
+		NORMAL_NAME_COLOR = Integer.decode("0x" + otherSettings.getProperty("NormalNameColor", "FFFFFF"));
+		CLANLEADER_NAME_COLOR = Integer.decode("0x" + otherSettings.getProperty("ClanleaderNameColor", "FFFFFF"));
 		GAME_POINT_ITEM_ID = otherSettings.getProperty("GamePointItemId", -1);
 		// SAFE_ENCHANT_LVL = otherSettings.getProperty("SafeEnchant", 0);
 		REMOVE_UNKNOWN_QUEST = otherSettings.getProperty("RemoveUnknownQuest", false);
@@ -1880,7 +1880,7 @@ public class Config
 		}
 		PVP_TIME = pvpSettings.getProperty("PvPTime", 40000);
 		REPUTATION_COUNT = pvpSettings.getProperty("CountReputation", 360);
-		PK_KILLER_NAME_COLOUR = Integer.decode("0x" + pvpSettings.getProperty("PKKillerNameColour", "00FF00"));
+		PK_KILLER_NAME_COLOR = Integer.decode("0x" + pvpSettings.getProperty("PKKillerNameColor", "00FF00"));
 	}
 	
 	/**

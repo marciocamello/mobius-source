@@ -577,9 +577,9 @@ public final class Player extends Playable implements PlayerGroup
 		this(objectId, template, null);
 		_ai = new PlayerAI(this);
 		
-		if (Config.EVERYBODY_HAS_ADMIN_RIGHTS)
+		if (Config.EVERYONE_HAS_ADMIN_RIGHTS)
 		{
-			setPlayerAccess(Config.GM_ACCESS.get(Config.EVERYBODY_ACCESS_LEVEL));
+			setPlayerAccess(Config.GM_ACCESS.get(Config.DEFAULT_ACCESS_FOR_EVERYONE));
 		}
 		else
 		{
@@ -2773,7 +2773,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		ClassId classId = ClassId.VALUES[id];
 		
-		if (!noban && !classId.equalsOrChildOf(ClassId.VALUES[getActiveClassId()]) && !getVarB("awakenByStoneOfDestiny", false) && !(getPlayerAccess().CanChangeClass || Config.EVERYBODY_HAS_ADMIN_RIGHTS))
+		if (!noban && !classId.equalsOrChildOf(ClassId.VALUES[getActiveClassId()]) && !getVarB("awakenByStoneOfDestiny", false) && !(getPlayerAccess().CanChangeClass || Config.EVERYONE_HAS_ADMIN_RIGHTS))
 		{
 			Thread.dumpStack();
 			return;
@@ -4590,7 +4590,7 @@ public final class Player extends Playable implements PlayerGroup
 				killer.increaseKarma(Config.REPUTATION_COUNT);
 			}
 			
-			killer.setNameColor(Config.PK_KILLER_NAME_COLOUR);
+			killer.setNameColor(Config.PK_KILLER_NAME_COLOR);
 			WorldStatisticsManager.getInstance().updateStat(killer, CategoryType.PVP_COUNT, 1);
 		}
 	}
@@ -6273,15 +6273,15 @@ public final class Player extends Playable implements PlayerGroup
 				{
 					if (player.isGM())
 					{
-						player.setNameColor(Config.GM_NAME_COLOUR);
+						player.setNameColor(Config.GM_NAME_COLOR);
 					}
 					else if ((player.getClan() != null) && (player.getClan().getLeaderId() == player.getObjectId()))
 					{
-						player.setNameColor(Config.CLANLEADER_NAME_COLOUR);
+						player.setNameColor(Config.CLANLEADER_NAME_COLOR);
 					}
 					else
 					{
-						player.setNameColor(Config.NORMAL_NAME_COLOUR);
+						player.setNameColor(Config.NORMAL_NAME_COLOR);
 					}
 				}
 				else
@@ -9588,11 +9588,11 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	public void setNameColor(final int nameColor)
 	{
-		if ((nameColor != Config.NORMAL_NAME_COLOUR) && (nameColor != Config.CLANLEADER_NAME_COLOUR) && (nameColor != Config.GM_NAME_COLOUR) && (nameColor != Config.SERVICES_OFFLINE_TRADE_NAME_COLOR))
+		if ((nameColor != Config.NORMAL_NAME_COLOR) && (nameColor != Config.CLANLEADER_NAME_COLOR) && (nameColor != Config.GM_NAME_COLOR) && (nameColor != Config.SERVICES_OFFLINE_TRADE_NAME_COLOR))
 		{
 			setVar("namecolor", Integer.toHexString(nameColor), -1);
 		}
-		else if (nameColor == Config.NORMAL_NAME_COLOUR)
+		else if (nameColor == Config.NORMAL_NAME_COLOR)
 		{
 			unsetVar("namecolor");
 		}
@@ -9610,7 +9610,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		_nameColor = (red & 0xFF) + ((green & 0xFF) << 8) + ((blue & 0xFF) << 16);
 		
-		if ((_nameColor != Config.NORMAL_NAME_COLOUR) && (_nameColor != Config.CLANLEADER_NAME_COLOUR) && (_nameColor != Config.GM_NAME_COLOUR) && (_nameColor != Config.SERVICES_OFFLINE_TRADE_NAME_COLOR))
+		if ((_nameColor != Config.NORMAL_NAME_COLOR) && (_nameColor != Config.CLANLEADER_NAME_COLOR) && (_nameColor != Config.GM_NAME_COLOR) && (_nameColor != Config.SERVICES_OFFLINE_TRADE_NAME_COLOR))
 		{
 			setVar("namecolor", Integer.toHexString(_nameColor), -1);
 		}
