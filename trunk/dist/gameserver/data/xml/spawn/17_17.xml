@@ -650,16 +650,8 @@
 		<npc id="32881"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="88248" y="-139608" z="-1559" h="45000"/>
-		<npc id="32882"/>
-	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="45560" y="-48472" z="-882" h="22000"/>
 		<npc id="32883"/>
-	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="117176" y="75208" z="-2675" h="10000"/>
-		<npc id="32887"/>
 	</spawn>
 	<spawn group="krateis_cube_70_75_room_0" count="1" respawn="0" respawn_random="0" period_of_day="none">
 		<point x="-85984" y="-20400" z="-8352" h="0"/>

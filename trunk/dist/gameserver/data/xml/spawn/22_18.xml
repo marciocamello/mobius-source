@@ -1191,18 +1191,6 @@
 		</territory>
 		<npc id="25431"/>
 	</spawn>
-	<spawn count="1" respawn="0" respawn_random="0" period_of_day="none">
-		<point x="77552" y="-152208" z="1226" h="48792"/>
-		<npc id="35556"/>
-	</spawn>
-	<spawn group="schuttgart_castle_mass_gatekeeper" count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="77564" y="-150504" z="771" h="45000"/>
-		<npc id="35547"/>
-	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="77502" y="-152695" z="1225" h="9673"/>
-		<npc id="35556"/>
-	</spawn>
 	<spawn group="ivory_fortress_peace_merchant" count="1" respawn="15000" respawn_random="0" period_of_day="none">
 		<point x="75280" y="1387" z="-3268" h="24564"/>
 		<npc id="35797"/>

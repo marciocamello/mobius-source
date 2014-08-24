@@ -90,10 +90,6 @@
 		<npc id="33676"/>
 	</spawn>
 	<spawn count="1" group="soh_all1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-185775" y="246408" z="1280" h="35999"/>
-		<npc id="32517"/>
-	</spawn>
-	<spawn count="1" group="soh_all1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-148976" y="151730" z="-12216" h="19702"/>
 		<npc id="23225"/>
 	</spawn>
@@ -3838,24 +3834,8 @@
 		<npc id="23234"/>
 	</spawn>
 	<spawn count="1" group="soh_all1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-149360" y="252936" z="-136" h="16384"/>
-		<npc id="32609"/>
-	</spawn>
-	<spawn count="1" group="soh_all1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-149473" y="253347" z="-120" h="5460"/>
 		<npc id="33535"/>
-	</spawn>
-	<spawn count="1" group="soh_all1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-148656" y="253841" z="-184" h="24576"/>
-		<npc id="32616"/>
-	</spawn>
-	<spawn count="1" group="soh_all1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-149484" y="253680" z="-184" h="16384"/>
-		<npc id="32564"/>
-	</spawn>
-	<spawn count="1" group="soh_all1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-149235" y="253680" z="-184" h="16384"/>
-		<npc id="32565"/>
 	</spawn>
 	<spawn count="1" group="soh_all1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-146080" y="249808" z="-12184" h="14661"/>

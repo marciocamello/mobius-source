@@ -214,10 +214,6 @@
 		</npc>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-114685" y="252350" z="-1560" h="15879"/>
-		<npc id="33587"/>
-	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-117912" y="255880" z="-1352" h="27931"/>
 		<npc id="33207">
 			<set name="walker_route_id" value="1"/>
@@ -1826,23 +1822,11 @@
 		<npc id="33203"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-107006" y="239985" z="-2088" h="19577"/>
-		<npc id="33198"/>
-	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-107006" y="239985" z="-2088" h="19043"/>
 		<npc id="33198"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-107021" y="239958" z="-2088" h="18262"/>
-		<npc id="33198"/>
-	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-107021" y="239958" z="-2088" h="20838"/>
-		<npc id="33198"/>
-	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-107158" y="240259" z="-2088" h="17751"/>
 		<npc id="33198"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
