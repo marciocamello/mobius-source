@@ -1818,17 +1818,17 @@
 		</for>
 	</skill>
 	<skill id="11066" levels="1" name="Unleash Hell">
-		<table name="#mpConsume2">452</table>
+		<table name="#mpConsume2">1655</table>
 		<table name="#runspd">1</table>
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="600000"/>
 		<set name="hitTime" val="6700"/>
-		<set name="castRange" val="900"/>
+		<set name="castRange" val="1100"/>
 		<set name="relationSkillsId" val="1290;1291;1289;"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="mpInitialConsume" val="5"/>
 		<set name="magicLevel" val="95"/>
-		<set name="power" val="1212"/>
+		<set name="power" val="620"/>
 		<set name="saveVs" val="MEN"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="element" val="Fire"/>
@@ -1838,9 +1838,12 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="skillRadius" val="500"/>
 		<set name="activateRate" val="60"/>
+		<set name="power" val="#power"/>
 		<enchant1 levels="10" name="Cost"/>
+		<table name="#power">628 636 642 650 657 664 673 681 688 695</table>
 		<enchant2 levels="10" name="Entangle">
-			<table name="#runspd">.99 .98 .97 .96 .95 .94 .93 .92 .91 .9</table>
+			<table name="#power">628 636 642 650 657 664 673 681 688 695</table>
+			<table name="#runspd">.99 .98 .97 .96 .95 .94 .93 .92 .91 .90</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant2>
 		<for>
@@ -1850,25 +1853,28 @@
 		</for>
 	</skill>
 	<skill id="11067" levels="1" name="Death Mass Unleash Hell">
-		<table name="#mpConsume2">1652</table>
+		<table name="#mpConsume2">1767</table>
 		<table name="#runspd">1</table>
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="600000"/>
 		<set name="hitTime" val="6750"/>
-		<set name="castRange" val="900"/>
+		<set name="castRange" val="1100"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="mpInitialConsume" val="5"/>
 		<set name="relationSkillsId" val="1294;1292;1293;"/>
 		<set name="magicLevel" val="99"/>
-		<set name="power" val="956"/>
+		<set name="power" val="620"/>
 		<set name="target" val="TARGET_AREA"/>
 		<set name="skillType" val="MDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="skillRadius" val="900"/>
 		<set name="activateRate" val="40"/>
+		<set name="power" val="#power"/>
 		<enchant1 levels="10" name="Cost"/>
+		<table name="#power">628 636 642 650 657 664 673 681 688 695</table>
 		<enchant2 levels="10" name="Entangle">
-			<table name="#runspd">.99 .98 .97 .96 .95 .94 .93 .92 .91 .9</table>
+			<table name="#power">628 636 642 650 657 664 673 681 688 695</table>
+			<table name="#runspd">.99 .98 .97 .96 .95 .94 .93 .92 .91 .90</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant2>
 		<for>
