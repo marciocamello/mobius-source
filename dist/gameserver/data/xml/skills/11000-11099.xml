@@ -187,7 +187,7 @@
 	</skill>
 	<skill id="11011" levels="8" name="Elemental Spike">
 		<table name="#powerPvP">0</table>
-		<table name="#power">121 122 126 129 133 136 140 143</table>
+		<table name="#power">133 134 139 142 146 150 154 157</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<set name="relationSkillsId" val="1148;1265;1267;1288;1436;1231;"/>
 		<set name="magicType" val="MAGIC"/>
@@ -199,18 +199,18 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="overHit" val="true"/>
 		<enchant1 levels="10" name="Cost">
-			<table name="#power">147 148 150 152 154 155 157 159 161 162</table>
+			<table name="#power">162 163 165 167 170 171 173 175 177 178</table>
 			<table name="#mpConsume1">17 16 15 15 14 13 12 12 11 10</table>
 			<table name="#mpConsume2">70 67 64 61 58 55 52 49 46 43</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant1>
 		<enchant2 name="Duel">
-			<table name="#powerPvP">147 148 150 152 154 155 157 159 161 162</table>
-			<table name="#power">147 148 150 152 154 155 157 159 161 162</table>
+			<table name="#powerPvP">162 163 165 167 170 171 173 175 177 178</table>
+			<table name="#power">162 163 165 167 170 171 173 175 177 178</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant2>
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
-			<table name="#power">147 148 150 152 154 155 157 159 161 162</table>
+			<table name="#power">162 163 165 167 170 171 173 175 177 178</table>
 			<table name="#reuseDelay">1900 1800 1800 1700 1700 1600 1500 1500 1400 1400</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
