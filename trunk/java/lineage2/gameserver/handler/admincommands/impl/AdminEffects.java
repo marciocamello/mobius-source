@@ -13,6 +13,7 @@
 package lineage2.gameserver.handler.admincommands.impl;
 
 import java.util.List;
+import java.util.StringTokenizer;
 
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -22,11 +23,13 @@ import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.base.InvisibleType;
 import lineage2.gameserver.network.serverpackets.Earthquake;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
+import lineage2.gameserver.network.serverpackets.SkillCoolTime;
 import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.skills.AbnormalEffect;
@@ -59,6 +62,7 @@ public class AdminEffects implements IAdminCommandHandler
 		admin_social,
 		admin_abnormal,
 		admin_effect,
+		admin_removereuse,
 		admin_transform,
 		admin_showmovie
 	}
@@ -69,7 +73,8 @@ public class AdminEffects implements IAdminCommandHandler
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
-	 * @return boolean * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum<?>, String[], String, Player)
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
 	 */
 	@Override
 	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
@@ -421,6 +426,56 @@ public class AdminEffects implements IAdminCommandHandler
 				
 				break;
 			
+			case admin_removereuse:
+				StringTokenizer st = new StringTokenizer(fullString, " ");
+				fullString = st.nextToken();
+				
+				Player player = null;
+				if (st.hasMoreTokens())
+				{
+					String playername = st.nextToken();
+					
+					try
+					{
+						player = GameObjectsStorage.getPlayer(playername);
+					}
+					catch (Exception e)
+					{
+					}
+					
+					if (player == null)
+					{
+						activeChar.sendMessage("The player " + playername + " is not online.");
+						return false;
+					}
+				}
+				else if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
+				{
+					player = activeChar.getPlayer();
+				}
+				else
+				{
+					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+					return false;
+				}
+				
+				try
+				{
+					player.resetReuse();
+					for (Skill skill : player.getAllSkills())
+					{
+						player.enableSkill(skill);
+					}
+					
+					player.sendPacket(new SkillCoolTime(player));
+					activeChar.sendMessage("Skill reuse was removed from " + player.getName() + ".");
+					return true;
+				}
+				catch (NullPointerException e)
+				{
+				}
+				break;
+			
 			case admin_transform:
 				try
 				{
@@ -501,7 +556,8 @@ public class AdminEffects implements IAdminCommandHandler
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return Enum[]
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
 	 */
 	@Override
 	public Enum<?>[] getAdminCommandEnum()
