@@ -130,13 +130,13 @@ public class AdminReload implements IAdminCommandHandler
 					
 					for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 					{
-						if (!Config.EVERYBODY_HAS_ADMIN_RIGHTS)
+						if (Config.EVERYBODY_HAS_ADMIN_RIGHTS)
 						{
-							player.setPlayerAccess(Config.gmlist.get(player.getObjectId()));
+							player.setPlayerAccess(Config.GM_ACCESS.get(Config.EVERYBODY_ACCESS_LEVEL));
 						}
 						else
 						{
-							player.setPlayerAccess(Config.gmlist.get(new Integer(0)));
+							player.setPlayerAccess(Config.GM_ACCESS.get(player.getAccessLevel()));
 						}
 					}
 				}

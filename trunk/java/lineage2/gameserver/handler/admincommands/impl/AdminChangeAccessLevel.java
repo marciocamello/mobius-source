@@ -12,9 +12,7 @@
  */
 package lineage2.gameserver.handler.admincommands.impl;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -29,7 +27,6 @@ import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.utils.Files;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -49,8 +46,6 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 	{
 		admin_changelvl,
 		admin_moders,
-		admin_moders_add,
-		admin_moders_del,
 		admin_penalty
 	}
 	
@@ -98,127 +93,6 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 				break;
 			
 			case admin_moders:
-				showModersPannel(activeChar);
-				break;
-			
-			case admin_moders_add:
-				if ((activeChar.getTarget() == null) || !activeChar.getTarget().isPlayer())
-				{
-					activeChar.sendMessage("Incorrect target. Please select a player.");
-					showModersPannel(activeChar);
-					return false;
-				}
-				
-				Player modAdd = activeChar.getTarget().getPlayer();
-				
-				if (Config.gmlist.containsKey(modAdd.getObjectId()))
-				{
-					activeChar.sendMessage("Error: Moderator " + modAdd.getName() + " already in server access list.");
-					showModersPannel(activeChar);
-					return false;
-				}
-				
-				String newFName = "m" + modAdd.getObjectId() + ".xml";
-				
-				if (!Files.copyFile(Config.GM_ACCESS_FILES_DIR + "template/moderator.xml", Config.GM_ACCESS_FILES_DIR + newFName))
-				{
-					activeChar.sendMessage("Error: Failed to copy access-file.");
-					showModersPannel(activeChar);
-					return false;
-				}
-				
-				String res = "";
-				
-				try
-				{
-					BufferedReader in = new BufferedReader(new FileReader(Config.GM_ACCESS_FILES_DIR + newFName));
-					String str;
-					
-					while ((str = in.readLine()) != null)
-					{
-						res += str + "\n";
-					}
-					
-					in.close();
-					res = res.replaceFirst("ObjIdPlayer", "" + modAdd.getObjectId());
-					Files.writeFile(Config.GM_ACCESS_FILES_DIR + newFName, res);
-				}
-				catch (Exception e)
-				{
-					activeChar.sendMessage("Error: Failed to modify object ID in access-file.");
-					File fDel = new File(Config.GM_ACCESS_FILES_DIR + newFName);
-					
-					if (fDel.exists())
-					{
-						fDel.delete();
-					}
-					
-					showModersPannel(activeChar);
-					return false;
-				}
-				
-				File af = new File(Config.GM_ACCESS_FILES_DIR + newFName);
-				
-				if (!af.exists())
-				{
-					activeChar.sendMessage("Error: Failed to read access-file for " + modAdd.getName());
-					showModersPannel(activeChar);
-					return false;
-				}
-				
-				Config.loadGMAccess(af);
-				modAdd.setPlayerAccess(Config.gmlist.get(modAdd.getObjectId()));
-				activeChar.sendMessage("Moderator " + modAdd.getName() + " added.");
-				showModersPannel(activeChar);
-				break;
-			
-			case admin_moders_del:
-				if (wordList.length < 2)
-				{
-					activeChar.sendMessage("Please specify moderator object ID to delete moderator.");
-					showModersPannel(activeChar);
-					return false;
-				}
-				
-				int oid = Integer.parseInt(wordList[1]);
-				
-				if (Config.gmlist.containsKey(oid))
-				{
-					Config.gmlist.remove(oid);
-				}
-				else
-				{
-					activeChar.sendMessage("Error: Moderator with object ID " + oid + " not found in server access lits.");
-					showModersPannel(activeChar);
-					return false;
-				}
-				
-				Player modDel = GameObjectsStorage.getPlayer(oid);
-				
-				if (modDel != null)
-				{
-					modDel.setPlayerAccess(null);
-				}
-				
-				String fname = "m" + oid + ".xml";
-				File f = new File(Config.GM_ACCESS_FILES_DIR + fname);
-				
-				if (!f.exists() || !f.isFile() || !f.delete())
-				{
-					activeChar.sendMessage("Error: Can't delete access-file: " + fname);
-					showModersPannel(activeChar);
-					return false;
-				}
-				
-				if (modDel != null)
-				{
-					activeChar.sendMessage("Moderator " + modDel.getName() + " deleted.");
-				}
-				else
-				{
-					activeChar.sendMessage("Moderator with object ID " + oid + " deleted.");
-				}
-				
 				showModersPannel(activeChar);
 				break;
 			

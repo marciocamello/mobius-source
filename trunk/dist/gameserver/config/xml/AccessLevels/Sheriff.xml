@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
-    <char>
-        <PlayerID set="-1"/>
+    <access>
+        <AccessLevel set="80"/>
         <IsGM set="true"/>
         <CanUseGMCommand set="true"/>
         <CanAnnounce set="true"/>
@@ -24,5 +24,5 @@
         <BlockInventory set="true"/>
         <CanRename set="true"/>
         <CanJail set="true"/>
-    </char>
+    </access>
 </list>
