@@ -71,11 +71,10 @@ public class Config
 	private static final String TOP_FILE = "config/Tops.ini";
 	private static final String PAYMENT_CONFIG_FILE = "config/payment.ini";
 	private static final String ANUSEWORDS_CONFIG_FILE = "config/abusewords.txt";
-	private static final String GM_PERSONAL_ACCESS_FILE = "config/xml/GMAccess.xml";
 	private static final String COMMUNITY_CONFIGURATION_FILE = "config/CommunityBoard.ini";
 	public static final String FAKE_PLAYERS_LIST = "config/fake_players.list";
 	public static final String OLYMPIAD_DATA_FILE = "config/olympiad.ini";
-	public static final String GM_ACCESS_FILES_DIR = "config/xml/GMAccess.d/";
+	public static final String GM_ACCESS_FILES_DIR = "config/xml/AccessLevels/";
 	public static int HTM_CACHE_MODE;
 	public static int[] PORTS_GAME;
 	static String GAMESERVER_HOSTNAME;
@@ -201,6 +200,7 @@ public class Config
 	public static int SHOUT_OFFSET;
 	public static boolean PREMIUM_HEROCHAT;
 	public static boolean EVERYBODY_HAS_ADMIN_RIGHTS;
+	public static int EVERYBODY_ACCESS_LEVEL;
 	public static boolean SECOND_AUTH_ENABLED;
 	public static int SECOND_AUTH_MAX_ATTEMPTS;
 	public static int SECOND_AUTH_BAN_TIME;
@@ -395,7 +395,7 @@ public class Config
 	public static boolean OLYMPIAD_OLDSTYLE_STAT;
 	public static long NONOWNER_ITEM_PICKUP_DELAY;
 	public static boolean LOG_CHAT;
-	public static final Map<Integer, PlayerAccess> gmlist = new HashMap<>();
+	public static final Map<Integer, PlayerAccess> GM_ACCESS = new HashMap<>();
 	public static double RATE_XP;
 	public static double RATE_SP;
 	public static double RATE_QUESTS_REWARD;
@@ -874,6 +874,7 @@ public class Config
 			7777
 		});
 		EVERYBODY_HAS_ADMIN_RIGHTS = serverSettings.getProperty("EverybodyHasAdminRights", false);
+		EVERYBODY_ACCESS_LEVEL = serverSettings.getProperty("EverybodyAccessLevel", 100);
 		SECOND_AUTH_ENABLED = serverSettings.getProperty("SecondAuth", false);
 		SECOND_AUTH_MAX_ATTEMPTS = serverSettings.getProperty("SecondAuthMaxEnter", 5);
 		SECOND_AUTH_BAN_TIME = serverSettings.getProperty("SecondAuthBanTime", 480);
@@ -2131,8 +2132,7 @@ public class Config
 	 */
 	public static void loadGMAccess()
 	{
-		gmlist.clear();
-		loadGMAccess(new File(GM_PERSONAL_ACCESS_FILE));
+		GM_ACCESS.clear();
 		File dir = new File(GM_ACCESS_FILES_DIR);
 		
 		if (!dir.exists() || !dir.isDirectory())
@@ -2141,11 +2141,11 @@ public class Config
 			return;
 		}
 		
-		for (File f : dir.listFiles())
+		for (File file : dir.listFiles())
 		{
-			if (!f.isDirectory() && f.getName().endsWith(".xml"))
+			if (!file.isDirectory() && file.getName().endsWith(".xml"))
 			{
-				loadGMAccess(f);
+				loadGMAccess(file);
 			}
 		}
 	}
@@ -2158,26 +2158,26 @@ public class Config
 	{
 		try
 		{
-			Field fld;
+			Field field;
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			factory.setValidating(false);
 			factory.setIgnoringComments(true);
 			Document doc = factory.newDocumentBuilder().parse(file);
 			
-			for (Node z = doc.getFirstChild(); z != null; z = z.getNextSibling())
+			for (Node nod = doc.getFirstChild(); nod != null; nod = nod.getNextSibling())
 			{
-				for (Node n = z.getFirstChild(); n != null; n = n.getNextSibling())
+				for (Node n = nod.getFirstChild(); n != null; n = n.getNextSibling())
 				{
-					if (!n.getNodeName().equalsIgnoreCase("char"))
+					if (!n.getNodeName().equalsIgnoreCase("access"))
 					{
 						continue;
 					}
 					
-					PlayerAccess pa = new PlayerAccess();
+					PlayerAccess access = new PlayerAccess();
 					
 					for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 					{
-						Class<?> cls = pa.getClass();
+						Class<?> cls = access.getClass();
 						String node = d.getNodeName();
 						
 						if (node.equalsIgnoreCase("#text"))
@@ -2187,25 +2187,25 @@ public class Config
 						
 						try
 						{
-							fld = cls.getField(node);
+							field = cls.getField(node);
 						}
 						catch (NoSuchFieldException e)
 						{
-							_log.info("Not found desclarate ACCESS name: " + node + " in XML Player access Object");
+							_log.info("Not found desclarate Access: " + node + " in XML Player access Object");
 							continue;
 						}
 						
-						if (fld.getType().getName().equalsIgnoreCase("boolean"))
+						if (field.getType().getName().equalsIgnoreCase("boolean"))
 						{
-							fld.setBoolean(pa, Boolean.parseBoolean(d.getAttributes().getNamedItem("set").getNodeValue()));
+							field.setBoolean(access, Boolean.parseBoolean(d.getAttributes().getNamedItem("set").getNodeValue()));
 						}
-						else if (fld.getType().getName().equalsIgnoreCase("int"))
+						else if (field.getType().getName().equalsIgnoreCase("int"))
 						{
-							fld.setInt(pa, Integer.valueOf(d.getAttributes().getNamedItem("set").getNodeValue()));
+							field.setInt(access, Integer.valueOf(d.getAttributes().getNamedItem("set").getNodeValue()));
 						}
 					}
 					
-					gmlist.put(pa.PlayerID, pa);
+					GM_ACCESS.put(access.AccessLevel, access);
 				}
 			}
 		}

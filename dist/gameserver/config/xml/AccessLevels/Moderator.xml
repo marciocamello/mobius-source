@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
-    <char>
-        <PlayerID set="-1"/>
+    <access>
+        <AccessLevel set="20"/>
         <CanBanChat set="true"/>
         <CanUnBanChat set="true"/>
         <BanChatDelay set="-1"/>
@@ -10,5 +10,5 @@
         <BanChatBonusId set="-1"/>
         <BanChatBonusCount set="-1"/>
         <CanUseGMCommand set="true"/>
-    </char>
+    </access>
 </list>

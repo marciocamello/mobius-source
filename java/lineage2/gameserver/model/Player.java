@@ -377,27 +377,45 @@ public final class Player extends Playable implements PlayerGroup
 	};
 	private GameClient _connection;
 	private String _login;
-	private int _karma, _pkKills, _pvpKills;
-	private int _face, _hairStyle, _hairColor, _faceB, _hairStyleB, _hairColorB;
-	private int _recomHave, _recomLeftToday, _fame;
+	private int _karma;
+	private int _pkKills;
+	private int _pvpKills;
+	private int _face;
+	private int _hairStyle;
+	private int _hairColor;
+	private int _faceB;
+	private int _hairStyleB;
+	private int _hairColorB;
+	private int _recomHave;
+	private int _recomLeftToday;
+	private int _fame;
 	private int _recomLeft = 20;
 	private int _recomBonusTime = 3600;
-	private boolean _isHourglassEffected, _isRecomTimerActive;
+	private boolean _isHourglassEffected;
+	private boolean _isRecomTimerActive;
 	private boolean _isUndying = false;
 	private int _deleteTimer;
 	private long _startingTimeInFullParty = 0L;
 	private long _startingTimeInParty = 0L;
 	private int _ping = -1;
-	private long _createTime, _onlineTime, _onlineBeginTime, _leaveClanTime, _deleteClanTime, _NoChannel, _NoChannelBegin;
+	private long _createTime;
+	private long _onlineTime;
+	private long _onlineBeginTime;
+	private long _leaveClanTime;
+	private long _deleteClanTime;
+	private long _NoChannel;
+	private long _NoChannelBegin;
 	private long _uptime;
 	private long _lastAccess;
-	private int _nameColor, _titlecolor;
+	private int _nameColor;
+	private int _titlecolor;
 	private int _vitality;
 	private boolean _overloaded;
 	public final boolean _identItem = false;
 	boolean sittingTaskLaunched;
 	private int _waitTimeWhenSit;
-	private boolean _autoLoot = Config.AUTO_LOOT, AutoLootHerbs = Config.AUTO_LOOT_HERBS;
+	private boolean _autoLoot = Config.AUTO_LOOT;
+	private boolean AutoLootHerbs = Config.AUTO_LOOT_HERBS;
 	private final PcInventory _inventory = new PcInventory(this);
 	private final Warehouse _warehouse = new PcWarehouse(this);
 	private final ItemContainer _refund = new PcRefund(this);
@@ -420,14 +438,25 @@ public final class Player extends Playable implements PlayerGroup
 	private List<TradeItem> _buyList = Collections.emptyList();
 	private List<TradeItem> _tradeList = Collections.emptyList();
 	private final Henna[] _henna = new Henna[3];
-	private int _hennaSTR, _hennaINT, _hennaDEX, _hennaMEN, _hennaWIT, _hennaCON;
+	private int _hennaSTR;
+	private int _hennaINT;
+	private int _hennaDEX;
+	private int _hennaMEN;
+	private int _hennaWIT;
+	private int _hennaCON;
 	private Party _party;
 	private Location _lastPartyPosition;
 	private Clan _clan;
-	private int _pledgeClass = 0, _pledgeType = Clan.SUBUNIT_NONE, _powerGrade = 0, _lvlJoinedAcademy = 0, _apprentice = 0;
+	private int _pledgeClass = 0;
+	private int _pledgeType = Clan.SUBUNIT_NONE;
+	private int _powerGrade = 0;
+	private int _lvlJoinedAcademy = 0;
+	private int _apprentice = 0;
 	private int _accessLevel;
-	private PlayerAccess _playerAccess = new PlayerAccess();
-	private boolean _messageRefusal = false, _tradeRefusal = false, _blockAll = false;
+	private static PlayerAccess _playerAccess = new PlayerAccess();
+	private boolean _messageRefusal = false;
+	private boolean _tradeRefusal = false;
+	private boolean _blockAll = false;
 	private boolean _riding;
 	private boolean _inTvT;
 	private boolean _inCtF;
@@ -527,7 +556,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * @param template PlayerTemplate
 	 * @param accountName String
 	 */
-	private Player(final int objectId, final PlayerTemplate template, final String accountName)
+	private Player(int objectId, PlayerTemplate template, String accountName)
 	{
 		super(objectId, template);
 		mentorSystem = new MentoringSystem(this);
@@ -543,18 +572,18 @@ public final class Player extends Playable implements PlayerGroup
 	 * @param objectId int
 	 * @param template PlayerTemplate
 	 */
-	private Player(final int objectId, final PlayerTemplate template)
+	private Player(int objectId, PlayerTemplate template)
 	{
 		this(objectId, template, null);
 		_ai = new PlayerAI(this);
 		
-		if (!Config.EVERYBODY_HAS_ADMIN_RIGHTS)
+		if (Config.EVERYBODY_HAS_ADMIN_RIGHTS)
 		{
-			setPlayerAccess(Config.gmlist.get(objectId));
+			setPlayerAccess(Config.GM_ACCESS.get(Config.EVERYBODY_ACCESS_LEVEL));
 		}
 		else
 		{
-			setPlayerAccess(Config.gmlist.get(0));
+			setPlayerAccess(Config.GM_ACCESS.get(getAccessLevel()));
 		}
 	}
 	
@@ -5889,14 +5918,18 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	public boolean isGM()
 	{
-		return _playerAccess == null ? false : _playerAccess.IsGM;
+		if (Config.GM_ACCESS.get(_accessLevel) != null)
+		{
+			return Config.GM_ACCESS.get(_accessLevel).IsGM;
+		}
+		return (_playerAccess == null ? false : _playerAccess.IsGM);
 	}
 	
 	/**
 	 * Method setAccessLevel.
 	 * @param level int
 	 */
-	public void setAccessLevel(final int level)
+	public void setAccessLevel(int level)
 	{
 		_accessLevel = level;
 	}
@@ -5913,20 +5946,20 @@ public final class Player extends Playable implements PlayerGroup
 	
 	/**
 	 * Method setPlayerAccess.
-	 * @param pa PlayerAccess
+	 * @param access PlayerAccess
 	 */
-	public void setPlayerAccess(final PlayerAccess pa)
+	public void setPlayerAccess(PlayerAccess access)
 	{
-		if (pa != null)
+		if (access != null)
 		{
-			_playerAccess = pa;
+			_playerAccess = access;
+			setAccessLevel(access.AccessLevel);
 		}
 		else
 		{
 			_playerAccess = new PlayerAccess();
+			setAccessLevel(0);
 		}
-		
-		setAccessLevel(isGM() || _playerAccess.Menu ? 100 : 0);
 	}
 	
 	/**
@@ -6214,6 +6247,7 @@ public final class Player extends Playable implements PlayerGroup
 					player.setNoChannel(0);
 				}
 				
+				player.setAccessLevel(rset.getInt("accesslevel"));
 				player.setOnlineTime(rset.getLong("onlinetime") * 1000L);
 				final int clanId = rset.getInt("clanid");
 				
@@ -8754,7 +8788,7 @@ public final class Player extends Playable implements PlayerGroup
 			return;
 		}
 		
-		if (Config.gmlist.containsKey(charId) && Config.gmlist.get(charId).IsGM)
+		if (Config.GM_ACCESS.containsKey(getAccessLevel()) && Config.GM_ACCESS.get(getAccessLevel()).IsGM)
 		{
 			sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_IMPOSE_A_BLOCK_ON_A_GM));
 			return;
