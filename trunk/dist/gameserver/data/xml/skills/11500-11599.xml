@@ -244,7 +244,7 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant9>
 		<for>
-			<effect name="Debuff" time="10" val="0">
+			<effect name="Debuff" time="20" val="0"	stackType="iss_debuff_crippling" stackOrder="1">
 				<mul order="0x30" stat="pDef" val="0.7"/>
 				<mul order="0x30" stat="mDef" val="0.7"/>
 				<sub order="0x40" stat="rEvas" val="10"/>
@@ -325,7 +325,7 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant9>
 		<for>
-			<effect name="Debuff" time="10" val="0">
+			<effect name="Debuff" time="12" val="0"	stackType="iss_debuff_shadow" stackOrder="1">
 				<mul order="0x30" stat="mAtk" val="0.7"/>
 				<mul order="0x30" stat="pAtk" val="0.7"/>
 				<sub order="0x40" stat="debuffResist" val="10">
@@ -481,7 +481,7 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant9>
 		<for>
-			<effect name="Debuff" time="10" val="0">
+			<effect name="Debuff" time="20" val="0"	stackType="iss_debuff_crippling" stackOrder="1">
 				<mul order="0x30" stat="mDef" val="0.7"/>
 				<mul order="0x30" stat="pDef" val="0.7"/>
 				<sub order="0x40" stat="rEvas" val="10"/>
@@ -565,7 +565,7 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant9>
 		<for>
-			<effect name="Debuff" time="10" val="0">
+			<effect name="Debuff" time="20" val="0"	stackType="iss_debuff_shadow" stackOrder="1">
 				<mul order="0x30" stat="mDef" val="0.7"/>
 				<mul order="0x30" stat="pDef" val="0.7"/>
 				<sub order="0x40" stat="debuffResist" val="10">
@@ -991,7 +991,7 @@
 		<enchant1 levels="10" name="Cost"/>
 		<enchant2 levels="10" name="Chance"/>
 		<for>
-			<effect count="1" name="Buff" stackOrder="4" stackType="vampRage" time="15" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="iss_vampiric" time="15" val="0">
 				<add order="0x40" stat="absorbDam" val="80"/>
 			</effect>
 		</for>
@@ -1325,7 +1325,7 @@
 		<table name="#mpConsume2">1010</table>
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
-		<set name="reuseDelay" val="600000"/>
+		<set name="reuseDelay" val="30000"/>
 		<set name="hitTime" val="2000"/>
 		<set name="castRange" val="900"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
