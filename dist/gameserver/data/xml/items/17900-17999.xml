@@ -1958,7 +1958,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="17983" name="Blessed Immortal Gaiters" add_name="Heavy Armor">
@@ -2078,7 +2078,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="17989" name="Blessed Immortal Leather Leggings" add_name="Light Armor">
@@ -2178,7 +2178,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="17994" name="Blessed Immortal Stockings" add_name="Robe">
