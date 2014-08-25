@@ -58,7 +58,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="19903" name="Blessed Seraph Stockings" add_name="Recovery Type / Robe">
@@ -158,7 +158,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="19908" name="Blessed Eternal Gaiters" add_name="Defense Type / Heavy">
@@ -277,7 +277,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="19914" name="Blessed Eternal Leather Leggings" add_name="Enchant Type / Light">
@@ -377,7 +377,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="19919" name="Blessed Eternal Stockings" add_name="Recovery Type / Robe">
@@ -473,7 +473,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="19924" name="Blessed Durandia Gaiters" add_name="Defense Type / Heavy">
@@ -574,7 +574,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="19930" name="Blessed Durandia Leather Leggings" add_name="Enchant Type / Light">
@@ -662,7 +662,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="19935" name="Blessed Durandia Stockings" add_name="Recovery Type / Robe">

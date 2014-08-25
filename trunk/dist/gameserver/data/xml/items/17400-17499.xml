@@ -73,7 +73,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="17404" name="Seraph Leather Leggings" add_name="Light Armor">
@@ -168,7 +168,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="17409" name="Seraph Stockings" add_name="Robe">
@@ -675,7 +675,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="17432" name="Eternal Gaiters" add_name="Heavy Armor">
@@ -788,7 +788,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="17438" name="Eternal Leather Leggings" add_name="Light Armor">
@@ -883,7 +883,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="17443" name="Eternal Stockings" add_name="Robe">
@@ -1381,7 +1381,7 @@
 			<add stat="pDef" order="0x10" value="401"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="17466" name="Blessed Durandia Gaiters" add_name="Heavy Armor">
@@ -1477,7 +1477,7 @@
 			<add stat="pDef" order="0x10" value="301"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="17472" name="Blessed Durandia Leather Leggings" add_name="Light Armor">
@@ -1554,7 +1554,7 @@
 			<add stat="pDef" order="0x10" value="201"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="17477" name="Blessed Durandia Stockings" add_name="Robe">

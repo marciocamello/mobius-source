@@ -412,7 +412,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="18017" name="Blessed Twilight Gaiters" add_name="Heavy Armor">
@@ -532,7 +532,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="18023" name="Blessed Twilight Leather Leggings" add_name="Light Armor">
@@ -632,7 +632,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="18028" name="Blessed Twilight Stockings" add_name="Robe">
@@ -1163,7 +1163,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="18051" name="Blessed Seraph Gaiters" add_name="Heavy Armor">
@@ -1283,7 +1283,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="18057" name="Blessed Seraph Leather Leggings" add_name="Light Armor">
@@ -1383,7 +1383,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="18062" name="Blessed Seraph Stockings" add_name="Robe">

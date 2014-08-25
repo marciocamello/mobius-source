@@ -101,7 +101,7 @@
 			<add order="0x10" stat="pDef" value="385"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="35004" name="Dark Eternal Gaiters" add_name="Attack Type / Heavy">
@@ -201,7 +201,7 @@
 			<add stat="mEvas" order="0x10" value="5"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="35010" name="Dark Eternal Leather Leggings" add_name="Assassin Type / Light">
@@ -303,7 +303,7 @@
 			<add order="0x40" stat="maxMp" value="649"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="35015" name="Dark Eternal Stockings" add_name="Magic Type / Robe">
@@ -401,7 +401,7 @@
 			<add order="0x10" stat="pDef" value="385"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="35020" name="Dark Eternal Gaiters" add_name="Defense Type / Heavy">
@@ -501,7 +501,7 @@
 			<add stat="mEvas" order="0x10" value="5"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="35025" name="Dark Eternal Leather Leggings" add_name="Enchant Type / Light">
@@ -603,7 +603,7 @@
 			<add order="0x40" stat="maxMp" value="649"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="35030" name="Dark Eternal Stockings" add_name="Recovery Type / Robe">
@@ -701,7 +701,7 @@
 			<add order="0x10" stat="pDef" value="385"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="35035" name="Bloody Eternal Gaiters" add_name="Attack Type / Heavy">
@@ -801,7 +801,7 @@
 			<add stat="mEvas" order="0x10" value="5"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="35040" name="Bloody Eternal Leather Leggings" add_name="Assassin Type / Light">
@@ -903,7 +903,7 @@
 			<add order="0x40" stat="maxMp" value="649"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="35045" name="Bloody Eternal Stockings" add_name="Magic Type / Robe">
@@ -1001,7 +1001,7 @@
 			<add order="0x10" stat="pDef" value="385"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="35050" name="Bloody Eternal Gaiters" add_name="Defense Type / Heavy">
@@ -1101,7 +1101,7 @@
 			<add stat="mEvas" order="0x10" value="5"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="35055" name="Bloody Eternal Leather Leggings" add_name="Enchant Type / Light">
@@ -1203,7 +1203,7 @@
 			<add order="0x40" stat="maxMp" value="649"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="35060" name="Bloody Eternal Stockings" add_name="Recovery Type / Robe">
@@ -1301,7 +1301,7 @@
 			<add order="0x10" stat="pDef" value="385"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="35065" name="Dark Eternal Gaiters" add_name="Heavy Armor">
@@ -1401,7 +1401,7 @@
 			<add stat="mEvas" order="0x10" value="5"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="35071" name="Dark Eternal Leather Leggings" add_name="Light Armor">
@@ -1503,7 +1503,7 @@
 			<add order="0x40" stat="maxMp" value="649"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="35076" name="Dark Eternal Stockings" add_name="Robe">
@@ -1601,7 +1601,7 @@
 			<add order="0x10" stat="pDef" value="385"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 		<set name="crystallizable" value="true"/>
 	</armor>
@@ -1702,7 +1702,7 @@
 			<add stat="mEvas" order="0x10" value="5"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="35087" name="Bloody Eternal Leather Leggings" add_name="Light Armor">
@@ -1804,7 +1804,7 @@
 			<add order="0x40" stat="maxMp" value="649"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<add order="0x10" stat="openCloakSlot" val="1"/>
+			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
 	</armor>
 	<armor id="35092" name="Bloody Eternal Stockings" add_name="Robe">
