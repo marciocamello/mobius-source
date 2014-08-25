@@ -1953,6 +1953,27 @@ public final class Player extends Playable implements PlayerGroup
 			return;
 		}
 		
+		if ((_karma == 0) && (karma > 0))
+		{
+			Collection<NpcInstance> objs = getReflection().getNpcs();
+			
+			for (NpcInstance object : objs)
+			{
+				if (!(object instanceof GuardInstance))
+				{
+					continue;
+				}
+				
+				if (((GuardInstance) object).getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)
+				{
+					((GuardInstance) object).getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
+				}
+			}
+		}
+		else if ((_karma > 0) && (karma == 0))
+		{
+			startPvPFlag(this);
+		}
 		_karma = karma;
 		sendChanges();
 		
@@ -3099,6 +3120,7 @@ public final class Player extends Playable implements PlayerGroup
 			if (!isCursedWeaponEquipped() && (addToSp > 0L) && (_karma < 0))
 			{
 				_karma = (int) (_karma + (addToSp / (Config.KARMA_SP_DIVIDER * Config.RATE_SP)));
+				sendPacket(new SystemMessage(SystemMessage.YOUR_KARMA_HAS_BEEN_CHANGED_TO_S1).addNumber(_karma));
 				addToExp = 0;
 				addToSp = 0;
 			}
