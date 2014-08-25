@@ -669,12 +669,12 @@
 		<set name="baseHpMax" value="680.0"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="30"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="groups.TalkinIslandGuides"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -701,7 +701,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<ai_params>
+			<set name="targetable" value="false"/>
+		</ai_params>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -747,7 +749,9 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<ai_params>
+			<set name="targetable" value="false"/>
+		</ai_params>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -761,12 +765,12 @@
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="160"/>
-		<set name="baseWalkSpd" value="70"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="30"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="groups.TalkinIslandGuides"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

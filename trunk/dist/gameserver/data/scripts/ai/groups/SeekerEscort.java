@@ -31,198 +31,60 @@ import quests.Q10365_SeekerEscort;
  */
 public final class SeekerEscort extends DefaultAI
 {
+	// private final static NpcString SeekerEscort_STRING = NpcString.RUFF_RUFF_RRRRRR;
+	
 	private static final int SAY_INTERVAL = 3000;
 	private static final int SAY_RAFF = 50000;
+	// @formatter:off
 	private final static int[][] SMP_COORDS =
 	{
-		{
-			-110648,
-			238936,
-			-2950
-		},
-		{
-			-110840,
-			239240,
-			-2951
-		},
-		{
-			-111000,
-			239512,
-			-2950
-		},
-		{
-			-111096,
-			239800,
-			-2950
-		},
-		{
-			-110728,
-			240248,
-			-2950
-		},
-		{
-			-110776,
-			240584,
-			-2951
-		},
-		{
-			-111064,
-			240616,
-			-2950
-		},
-		{
-			-111304,
-			240360,
-			-2950
-		},
-		{
-			-111672,
-			239848,
-			-2950
-		},
-		{
-			-111944,
-			239736,
-			-2950
-		},
-		{
-			-112296,
-			239816,
-			-2950
-		},
-		{
-			-112616,
-			239928,
-			-2950
-		},
-		{
-			-112696,
-			240264,
-			-2950
-		},
-		{
-			-112456,
-			240536,
-			-2950
-		},
-		{
-			-112120,
-			240536,
-			-2950
-		},
-		{
-			-112024,
-			240264,
-			-2950
-		},
-		{
-			-112216,
-			240168,
-			-2950
-		},
-		{
-			-112328,
-			240232,
-			-2950
-		},
+			{-110648, 238936, -2950},
+			{-110840, 239240, -2951},
+			{-111000, 239512, -2950},
+			{-111096, 239800, -2950},
+			{-110728, 240248, -2950},
+			{-110776, 240584, -2951},
+			{-111064, 240616, -2950},
+			{-111304, 240360, -2950},
+			{-111672, 239848, -2950},
+			{-111944, 239736, -2950},
+			{-112296, 239816, -2950},
+			{-112616, 239928, -2950},
+			{-112696, 240264, -2950},
+			{-112456, 240536, -2950},
+			{-112120, 240536, -2950},
+			{-112024, 240264, -2950},
+			{-112216, 240168, -2950},
+			{-112328, 240232, -2950}, // 4th zone coordinates
 	};
+
 	private final static int[][] SMP_COORDS2 =
 	{
-		{
-			-112776,
-			234072,
-			-3097
-		},
-		{
-			-112376,
-			233656,
-			-3137
-		},
-		{
-			-112184,
-			233480,
-			-3156
-		},
-		{
-			-112152,
-			233112,
-			-3159
-		},
-		{
-			-112472,
-			232920,
-			-3128
-		},
-		{
-			-112712,
-			232536,
-			-3104
-		},
-		{
-			-112504,
-			232040,
-			-3125
-		},
-		{
-			-112248,
-			232072,
-			-3149
-		},
-		{
-			-112088,
-			232360,
-			-3165
-		},
-		{
-			-111720,
-			232584,
-			-3202
-		},
-		{
-			-111240,
-			232728,
-			-3250
-		},
-		{
-			-110792,
-			232424,
-			-3294
-		},
-		{
-			-110776,
-			232072,
-			-3295
-		},
-		{
-			-111144,
-			231864,
-			-3259
-		},
-		{
-			-111512,
-			231992,
-			-3223
-		},
-		{
-			-111784,
-			231976,
-			-3196
-		},
-		{
-			-111736,
-			231816,
-			-3200
-		},
+			{-112776, 234072, -3097},
+			{-112376, 233656, -3137},
+			{-112184, 233480, -3156},
+			{-112152, 233112, -3159},
+			{-112472, 232920, -3128},
+			{-112712, 232536, -3104},
+			{-112504, 232040, -3125},
+			{-112248, 232072, -3149},
+			{-112088, 232360, -3165},
+			{-111720, 232584, -3202},
+			{-111240, 232728, -3250},
+			{-110792, 232424, -3294},
+			{-110776, 232072, -3295},
+			{-111144, 231864, -3259},
+			{-111512, 231992, -3223},
+			{-111784, 231976, -3196},
+			{-111736, 231816, -3200}, // 5th zone coordinates
 	};
+	// @formatter:on
+	
 	private int currentState;
 	private long lastSayTime = 0;
 	private long lastSayTimer = 0;
 	private int currentState1;
 	
-	/**
-	 * Constructor for SeekerEscort.
-	 * @param actor NpcInstance
-	 */
 	public SeekerEscort(NpcInstance actor)
 	{
 		super(actor);
@@ -232,10 +94,6 @@ public final class SeekerEscort extends DefaultAI
 		currentState1 = 0;
 	}
 	
-	/**
-	 * Method thinkActive.
-	 * @return boolean
-	 */
 	@Override
 	protected boolean thinkActive()
 	{
@@ -251,9 +109,16 @@ public final class SeekerEscort extends DefaultAI
 		
 		final Player player = target.getPlayer();
 		final QuestState st = player.getQuestState(Q10365_SeekerEscort.class);
+		
+		if (st == null)
+		{
+			return false;
+		}
+		
 		final int zone = st.getInt("zone");
 		int saytimes = st.getInt("saytimes");
 		final int cond = st.getCond();
+		
 		actor.setRunning();
 		
 		if ((saytimes == 9) || (cond == 0))
@@ -358,10 +223,6 @@ public final class SeekerEscort extends DefaultAI
 		return true;
 	}
 	
-	/**
-	 * Method randomWalk.
-	 * @return boolean
-	 */
 	@Override
 	protected boolean randomWalk()
 	{
