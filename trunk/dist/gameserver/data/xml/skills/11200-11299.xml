@@ -359,7 +359,7 @@
 		<table name="#mpConsume2">54 58 62 66 70 74 78 82</table>
 		<table name="#activateRate">80 81 82 83 84 85 86 87</table>
 		<set name="activateRate" val="#activateRate"/>
-		<set name="reuseDelay" val="30000"/>
+		<set name="reuseDelay" val="3000"/>
 		<set name="hitTime" val="1200"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
@@ -404,7 +404,7 @@
 		<table name="#mpConsume2">65</table>
 		<table name="#activateRate">80 81 82 83 84</table>
 		<set name="activateRate" val="#activateRate"/>
-		<set name="reuseDelay" val="60000"/>
+		<set name="reuseDelay" val="3000"/>
 		<set name="hitTime" val="1200"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="relationSkillsId" val="1168;"/>
@@ -448,7 +448,7 @@
 		<table name="#mpConsume2">65</table>
 		<table name="#activateRate">80 81 82 83 84 85</table>
 		<set name="activateRate" val="#activateRate"/>
-		<set name="reuseDelay" val="30000"/>
+		<set name="reuseDelay" val="3000"/>
 		<set name="hitTime" val="1500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
@@ -490,7 +490,7 @@
 		<table name="#mpConsume2">65</table>
 		<table name="#activateRate">80 81 82 83 84 85</table>
 		<set name="activateRate" val="#activateRate"/>
-		<set name="reuseDelay" val="30000"/>
+		<set name="reuseDelay" val="3000"/>
 		<set name="hitTime" val="1500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
