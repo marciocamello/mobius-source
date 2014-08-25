@@ -21,6 +21,7 @@ import java.util.Set;
 import java.util.StringTokenizer;
 
 import lineage2.gameserver.Config;
+import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.database.mysql;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.GameObject;
@@ -28,6 +29,7 @@ import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.actor.instances.player.SubClassInfo;
 import lineage2.gameserver.model.base.ClassId;
+import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.instances.PetInstance;
@@ -151,8 +153,23 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					
 					Player player = target.getPlayer();
+					
+					Race race = player.getRace();
+					boolean isMage = player.isMageClass();
 					player.setClassId(id, true, false);
-					player.sendMessage("Your class has been changed by a GM");
+					
+					// If necessary transform-untransform player quickly to force the client to reload the character textures
+					if ((race != player.getRace()) || (((race == Race.human) || (race == Race.orc)) && (isMage != player.isMageClass())))
+					{
+						player.setTransformation(105);
+						ThreadPoolManager.getInstance().schedule(new Untransform(player), 200);
+					}
+					
+					if (activeChar != player)
+					{
+						player.sendMessage("Your class has been changed by a GM");
+					}
+					
 					player.broadcastCharInfo();
 					return true;
 				}
@@ -1299,5 +1316,24 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		
 		return classNameStr;
+	}
+	
+	/**
+	 * Method Untransform player.
+	 */
+	private final class Untransform implements Runnable
+	{
+		private final Player _player;
+		
+		protected Untransform(Player player)
+		{
+			_player = player;
+		}
+		
+		@Override
+		public void run()
+		{
+			_player.setTransformation(0);
+		}
 	}
 }

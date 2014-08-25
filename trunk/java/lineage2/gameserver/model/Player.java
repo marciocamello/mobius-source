@@ -2786,7 +2786,15 @@ public final class Player extends Playable implements PlayerGroup
 			final SubClass cclass = getActiveSubClass();
 			final int oldClass = cclass.getClassId();
 			_subClassList.changeSubClassId(oldClass, id);
-			changeClassInDb(oldClass, id, cclass.getDefaultClassId() == 0 ? getSubClassList().getBaseSubClass().getDefaultClassId() : cclass.getDefaultClassId());
+			
+			if ((classId.getRace() != null) && (oldClassId.getRace() == null))
+			{
+				changeClassInDb(oldClass, id, classId.getParentId() != null ? classId.getParentId() : id);
+			}
+			else
+			{
+				changeClassInDb(oldClass, id, cclass.getDefaultClassId() == 0 ? getSubClassList().getBaseSubClass().getDefaultClassId() : cclass.getDefaultClassId());
+			}
 			
 			if (cclass.isBase())
 			{
