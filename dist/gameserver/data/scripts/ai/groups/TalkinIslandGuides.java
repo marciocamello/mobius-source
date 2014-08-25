@@ -23,137 +23,63 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 
 /**
- * @author Mobius
- * @version $Revision: 1.0 $
+ * This AI is used in GoD starting village quests for NPCs that are spawned when player takes quest. These NPCs shows path to next NPC by quest. Because of these NPCs not so much, we can implement their movement statically
  */
 public final class TalkinIslandGuides extends DefaultAI
 {
-	private final static int SEARCHING_MYST_POWER_SOLDIER = 33016;
-	private final static int GOING_INTO_REAL_WAR_SOLDIER = 33014;
-	private final static int BACKUP_SEEKERS_ASSASSIN = 33204;
+	private final static int SEARCHING_MYST_POWER_SOLDIER = 33016; // By quest "Searching for the Mysterious Power
+	private final static int GOING_INTO_REAL_WAR_SOLDIER = 33014; // By quest "Going into the Real War"
+	private final static int BACKUP_SEEKERS_ASSASSIN = 33204; // By quest "Backup Seekers"
+	
 	private final static NpcString SEARCHING_MYST_POWER_STRING = NpcString.S1_COME_FOLLOW_ME;
 	private final static NpcString GOING_INTO_REAL_WAR_STRING = NpcString.S1_COME_FOLLOW_ME;
-	private final static NpcString BACKUP_SEEKERS_STRING = NpcString.HEY_KID_HARRY_UP_AND_FOLLOW_ME;
+	private final static NpcString BACKUP_SEEKERS_STRING = NpcString.HEY_KID_HURRY_UP_AND_FOLLOW_ME;
+	
 	private static final int SAY_INTERVAL = 6000;
+	
+	// @formatter:off
+	// "Searching for the Mysterious Power" soldier coords
 	private final static int[][] SMP_COORDS =
 	{
-		{
-			-111979,
-			255327,
-			-1432
-		},
-		{
-			-112442,
-			254703,
-			-1528
-		},
-		{
-			-112188,
-			254235,
-			-1536
-		},
-		{
-			-111471,
-			253984,
-			-1712
-		},
-		{
-			-110689,
-			253733,
-			-1792
-		}
+			{-111979, 255327, -1432},
+			{-112442, 254703, -1528},
+			{-112188, 254235, -1536},
+			{-111471, 253984, -1712},
+			{-110689, 253733, -1792}
 	};
+	// In "Going into the Real War" quest guides can move by left or by right side
+	// Side is choosen by distance between player location and first coord in set
 	private final static int[][] GRW_COORDS_LEFT =
 	{
-		{
-			-110885,
-			253533,
-			-1776
-		},
-		{
-			-111050,
-			253183,
-			-1776
-		},
-		{
-			-111007,
-			252706,
-			-1832
-		},
-		{
-			-110957,
-			252400,
-			-1928
-		},
-		{
-			-110643,
-			252365,
-			-1976
-		}
+			{-110885, 253533, -1776},
+			{-111050, 253183, -1776},
+			{-111007, 252706, -1832},
+			{-110957, 252400, -1928},
+			{-110643, 252365, -1976}
 	};
 	private final static int[][] GRW_COORDS_RIGHT =
 	{
-		{
-			-110618,
-			253655,
-			-1792
-		},
-		{
-			-110296,
-			253160,
-			-1848
-		},
-		{
-			-110271,
-			253163,
-			-1816
-		},
-		{
-			-110156,
-			252874,
-			-1888
-		},
-		{
-			-110206,
-			252422,
-			-1984
-		}
+			{-110618, 253655, -1792},
+			{-110296, 253160, -1848},
+			{-110271, 253163, -1816},
+			{-110156, 252874, -1888},
+			{-110206, 252422, -1984}
 	};
+	
+	// "Backup Seekers" assassin coords
 	private final static int[][] BS_COORDS =
 	{
-		{
-			-117996,
-			255845,
-			-1320
-		},
-		{
-			-117103,
-			255538,
-			-1296
-		},
-		{
-			-115719,
-			254792,
-			-1504
-		},
-		{
-			-114695,
-			254741,
-			-1528
-		},
-		{
-			-114589,
-			253517,
-			-1528
-		}
+			{-117996, 255845, -1320},
+			{-117103, 255538, -1296},
+			{-115719, 254792, -1504},
+			{-114695, 254741, -1528},
+			{-114589, 253517, -1528}
 	};
-	private int currentState;
+	// @formatter:on
+	
+	private int currentState; // This npc state identifies what coords to use
 	private long lastSayTime = 0;
 	
-	/**
-	 * Constructor for TalkinIslandGuides.
-	 * @param actor NpcInstance
-	 */
 	public TalkinIslandGuides(NpcInstance actor)
 	{
 		super(actor);
@@ -161,15 +87,11 @@ public final class TalkinIslandGuides extends DefaultAI
 		lastSayTime = 0;
 	}
 	
-	/**
-	 * Method thinkActive.
-	 * @return boolean
-	 */
 	@Override
 	protected boolean thinkActive()
 	{
-		final NpcInstance actor = getActor();
-		final Creature target = actor.getFollowTarget();
+		NpcInstance actor = getActor();
+		Creature target = actor.getFollowTarget();
 		
 		if ((target == null) || !(target instanceof Player))
 		{
@@ -181,7 +103,7 @@ public final class TalkinIslandGuides extends DefaultAI
 		int[][] coords;
 		NpcString string;
 		NpcString end_String;
-		
+		// Select coords
 		switch (npcId)
 		{
 			case SEARCHING_MYST_POWER_SOLDIER:
@@ -217,6 +139,7 @@ public final class TalkinIslandGuides extends DefaultAI
 				return false;
 		}
 		
+		// This NPC is running
 		actor.setRunning();
 		
 		if ((actor.getDistance(target) < 100) || (currentState == 0) || (currentState >= coords.length))
@@ -249,8 +172,7 @@ public final class TalkinIslandGuides extends DefaultAI
 	}
 	
 	/**
-	 * Method randomWalk.
-	 * @return boolean
+	 * These NPC does not have random walk
 	 */
 	@Override
 	protected boolean randomWalk()

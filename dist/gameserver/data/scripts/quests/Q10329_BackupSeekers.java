@@ -27,7 +27,7 @@ public class Q10329_BackupSeekers extends Quest implements ScriptFile
 {
 	private static final int atran = 33448;
 	private static final int kakai = 30565;
-	private static final int solder = 33204;
+	private static final int soldier = 33204;
 	private NpcInstance solderg = null;
 	private static final int[] SOLDER_START_POINT =
 	{
@@ -63,7 +63,7 @@ public class Q10329_BackupSeekers extends Quest implements ScriptFile
 	
 	private void spawnsolder(QuestState st)
 	{
-		solderg = NpcUtils.spawnSingle(solder, Location.findPointToStay(SOLDER_START_POINT[0], SOLDER_START_POINT[1], SOLDER_START_POINT[2], 50, 100, st.getPlayer().getGeoIndex()));
+		solderg = NpcUtils.spawnSingle(soldier, Location.findPointToStay(SOLDER_START_POINT[0], SOLDER_START_POINT[1], SOLDER_START_POINT[2], 50, 100, st.getPlayer().getGeoIndex()));
 		solderg.setFollowTarget(st.getPlayer());
 	}
 	
