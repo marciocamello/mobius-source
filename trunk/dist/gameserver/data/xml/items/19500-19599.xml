@@ -236,6 +236,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19524" name="Immortal Gaiters" add_name="Attack Type / Heavy">
@@ -349,6 +350,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19530" name="Immortal Leather Leggings" add_name="Assassin Type / Light">
@@ -444,6 +446,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19535" name="Immortal Stockings" add_name="Magic Type / Robe">
@@ -539,6 +542,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19540" name="Twilight Gaiters" add_name="Attack Type / Heavy">
@@ -652,6 +656,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19546" name="Twilight Leather Leggings" add_name="Assassin Type / Light">
@@ -747,6 +752,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19551" name="Twilight Stockings" add_name="Magic Type / Robe">
@@ -842,6 +848,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19556" name="Seraph Gaiters" add_name="Attack Type / Heavy">
@@ -955,6 +962,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19562" name="Seraph Leather Leggings" add_name="Assassin Type / Light">
@@ -1050,6 +1058,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19567" name="Seraph Stockings" add_name="Magic Type / Robe">
@@ -1144,6 +1153,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19572" name="Eternal Gaiters" add_name="Attack Type / Heavy">
@@ -1258,6 +1268,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19578" name="Eternal Leather Leggings" add_name="Assassin Type / Light">
@@ -1353,6 +1364,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19583" name="Eternal Stockings" add_name="Magic Type / Robe">
@@ -1451,6 +1463,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19588" name="Bound Immortal Gaiters" add_name="Attack Type / Heavy">
@@ -1575,6 +1588,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19594" name="Bound Immortal Leather Leggings" add_name="Assassin Type / Light">
@@ -1677,6 +1691,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19599" name="Bound Immortal Stockings" add_name="Magic Type / Robe">

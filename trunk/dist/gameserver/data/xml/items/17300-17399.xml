@@ -133,6 +133,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="17306" name="Immortal Gaiters" add_name="Heavy Armor">
@@ -245,6 +246,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="17312" name="Immortal Leather Leggings" add_name="Light Armor">
@@ -335,6 +337,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="17317" name="Immortal Stockings" add_name="Robe">
@@ -826,6 +829,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="17340" name="Twilight Gaiters" add_name="Heavy Armor">
@@ -938,6 +942,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="17346" name="Twilight Leather Leggings" add_name="Light Armor">
@@ -1031,6 +1036,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="17351" name="Twilight Stockings" add_name="Robe">
@@ -1875,6 +1881,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="17398" name="Seraph Gaiters" add_name="Heavy Armor">

@@ -709,6 +709,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="17847" name="Bound Immortal Gaiters" add_name="Heavy Armor">
@@ -834,6 +835,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="17853" name="Bound Immortal Leather Leggings" add_name="Light Armor">
@@ -936,6 +938,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="17858" name="Bound Immortal Stockings" add_name="Robe">
@@ -1487,6 +1490,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="17881" name="Bound Twilight Gaiters" add_name="Heavy Armor">
@@ -1612,6 +1616,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="17887" name="Bound Twilight Leather Leggings" add_name="Light Armor">
@@ -1716,6 +1721,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="17892" name="Bound Twilight Stockings" add_name="Robe">

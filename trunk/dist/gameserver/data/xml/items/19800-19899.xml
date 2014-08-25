@@ -41,6 +41,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19802" name="Bound Immortal Leather Leggings" add_name="Enchant Type / Light">
@@ -143,6 +144,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19807" name="Bound Immortal Stockings" add_name="Recovery Type / Robe">
@@ -247,6 +249,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19812" name="Bound Twilight Gaiters" add_name="Defense Type / Heavy">
@@ -371,6 +374,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19818" name="Bound Twilight Leather Leggings" add_name="Enchant Type / Light">
@@ -475,6 +479,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19823" name="Bound Twilight Stockings" add_name="Recovery Type / Robe">
@@ -578,6 +583,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19828" name="Bound Seraph Gaiters" add_name="Defense Type / Heavy">
@@ -702,6 +708,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19834" name="Bound Seraph Leather Leggings" add_name="Enchant Type / Light">
@@ -806,6 +813,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19839" name="Bound Seraph Stockings" add_name="Recovery Type / Robe">
@@ -910,6 +918,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19844" name="Bound Eternal Gaiters" add_name="Defense Type / Heavy">
@@ -1034,6 +1043,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19850" name="Bound Eternal Leather Leggings" add_name="Enchant Type / Light">
@@ -1138,6 +1148,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19855" name="Bound Eternal Stockings" add_name="Recovery Type / Robe">
@@ -1240,6 +1251,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19860" name="Blessed Immortal Gaiters" add_name="Defense Type / Heavy">
@@ -1358,6 +1370,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19866" name="Blessed Immortal Leather Leggings" add_name="Enchant Type / Light">
@@ -1457,6 +1470,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19871" name="Blessed Immortal Stockings" add_name="Recovery Type / Robe">
@@ -1556,6 +1570,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19876" name="Blessed Twilight Gaiters" add_name="Defense Type / Heavy">
@@ -1674,6 +1689,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19882" name="Blessed Twilight Leather Leggings" add_name="Enchant Type / Light">
@@ -1773,6 +1789,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19887" name="Blessed Twilight Stockings" add_name="Recovery Type / Robe">
@@ -1872,6 +1889,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19892" name="Blessed Seraph Gaiters" add_name="Defense Type / Heavy">
@@ -1990,6 +2008,7 @@
 			<enchant stat="mAtk" order="0x40" value="0"/>
 			<enchant stat="pDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
+			<add order="0x10" stat="openCloakSlot" val="1"/>
 		</for>
 	</armor>
 	<armor id="19898" name="Blessed Seraph Leather Leggings" add_name="Enchant Type / Light">
