@@ -452,8 +452,9 @@ public final class Player extends Playable implements PlayerGroup
 	private int _powerGrade = 0;
 	private int _lvlJoinedAcademy = 0;
 	private int _apprentice = 0;
-	private int _accessLevel;
-	private static PlayerAccess _playerAccess = new PlayerAccess();
+	private int _accessLevel = 0;
+	private PlayerAccess _playerAccess;
+	private boolean _isGM = false;
 	private boolean _messageRefusal = false;
 	private boolean _tradeRefusal = false;
 	private boolean _blockAll = false;
@@ -576,15 +577,6 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		this(objectId, template, null);
 		_ai = new PlayerAI(this);
-		
-		if (Config.EVERYONE_HAS_ADMIN_RIGHTS)
-		{
-			setPlayerAccess(Config.GM_ACCESS.get(Config.DEFAULT_ACCESS_FOR_EVERYONE));
-		}
-		else
-		{
-			setPlayerAccess(Config.GM_ACCESS.get(getAccessLevel()));
-		}
 	}
 	
 	/**
@@ -5948,11 +5940,7 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	public boolean isGM()
 	{
-		if (Config.GM_ACCESS.get(_accessLevel) != null)
-		{
-			return Config.GM_ACCESS.get(_accessLevel).IsGM;
-		}
-		return (_playerAccess == null ? false : _playerAccess.IsGM);
+		return _isGM;
 	}
 	
 	/**
@@ -5962,34 +5950,21 @@ public final class Player extends Playable implements PlayerGroup
 	public void setAccessLevel(int level)
 	{
 		_accessLevel = level;
-	}
-	
-	/**
-	 * Method getAccessLevel.
-	 * @return int
-	 */
-	@Override
-	public int getAccessLevel()
-	{
-		return _accessLevel;
-	}
-	
-	/**
-	 * Method setPlayerAccess.
-	 * @param access PlayerAccess
-	 */
-	public void setPlayerAccess(PlayerAccess access)
-	{
-		if (access != null)
+		
+		if (Config.EVERYONE_HAS_ADMIN_RIGHTS)
 		{
-			_playerAccess = access;
-			setAccessLevel(access.AccessLevel);
+			_playerAccess = Config.GM_ACCESS.get(Config.DEFAULT_ACCESS_FOR_EVERYONE);
+		}
+		else if (Config.GM_ACCESS.get(_accessLevel) != null)
+		{
+			_playerAccess = Config.GM_ACCESS.get(_accessLevel);
 		}
 		else
 		{
-			_playerAccess = new PlayerAccess();
-			setAccessLevel(0);
+			_playerAccess = Config.GM_ACCESS.get(0);
 		}
+		
+		_isGM = _playerAccess.IsGM;
 	}
 	
 	/**

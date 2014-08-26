@@ -18,7 +18,7 @@ package lineage2.gameserver.model.base;
  */
 public class PlayerAccess
 {
-	public int AccessLevel;
+	public int AccessLevel = 0;
 	public boolean IsGM = false;
 	public boolean CanUseGMCommand = false;
 	public boolean CanAnnounce = false;

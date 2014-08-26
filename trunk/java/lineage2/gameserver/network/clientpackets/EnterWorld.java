@@ -137,15 +137,6 @@ public class EnterWorld extends L2GameClientPacket
 			return;
 		}
 		
-		if (Config.EVERYONE_HAS_ADMIN_RIGHTS)
-		{
-			activeChar.setPlayerAccess(Config.GM_ACCESS.get(Config.DEFAULT_ACCESS_FOR_EVERYONE));
-		}
-		else
-		{
-			activeChar.setPlayerAccess(Config.GM_ACCESS.get(activeChar.getAccessLevel()));
-		}
-		
 		int MyObjectId = activeChar.getObjectId();
 		Long MyStoreId = activeChar.getStoredId();
 		
