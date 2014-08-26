@@ -5,7 +5,7 @@
 		<collapse on-party-dismiss="true" timer="60"/>
 		<level min="85" max="99"/>
 		<party min="1" max="1"/>
-		<return loc="119667 -181970 -1864 52800"/>
+		<return loc="114376 260088 -1224 0"/>
 		<teleport loc="119667 -181970 -1864 52800"/>
 		<remove itemId="0" count="0" necessary="false"/>
 		<give itemId="0" count="0"/>

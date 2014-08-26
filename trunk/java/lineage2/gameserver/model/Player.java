@@ -2760,7 +2760,7 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	private void addClanPointsOnProfession(final int id)
 	{
-		if ((getLvlJoinedAcademy() != 0) && (_clan != null) && (_clan.getLevel() >= 5) && ClassId.VALUES[id].isOfLevel(ClassLevel.Second))
+		if ((getLvlJoinedAcademy() != 0) && (_clan != null) && (_clan.getLevel() >= 5) && ClassId.VALUES[id].isOfLevel(ClassLevel.First))
 		{
 			int earnedPoints = ((76 - getLvlJoinedAcademy()) * 45) + 200;
 			
@@ -5353,7 +5353,7 @@ public final class Player extends Playable implements PlayerGroup
 				
 				final SubClass cclass = getActiveSubClass();
 				
-				if ((getLevel() > 84) && cclass.isBase() && getClassId().isOfLevel(ClassLevel.Awaking))
+				if ((getLevel() > 84) && cclass.isBase() && getClassId().isOfLevel(ClassLevel.Fourth))
 				{
 					getMentorSystem().remove(mentorName, false, true);
 					sendPacket(new SystemMessage2(SystemMsg.YOU_REACHED_LEVEL_86_RELATIONSHIP_WITH_S1_CAME_TO_AN_END).addString(mentorName));
@@ -7111,7 +7111,7 @@ public final class Player extends Playable implements PlayerGroup
 	/**
 	 * Method restoreSkills.
 	 */
-	private void restoreSkills()
+	public void restoreSkills()
 	{
 		// ----------------------------------------------
 		List<Integer> keepskill = new ArrayList<>();

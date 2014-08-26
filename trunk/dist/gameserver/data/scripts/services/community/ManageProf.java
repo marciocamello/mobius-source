@@ -153,7 +153,7 @@ public final class ManageProf implements ScriptFile, ICommunityBoardHandler
 			
 			for (SubClass s : player.getSubClassList().values())
 			{
-				if (s.isDouble())
+				if (s.isDual())
 				{
 					player.sendMessage("You already have a Dual-Class!");
 					return;
@@ -316,7 +316,7 @@ public final class ManageProf implements ScriptFile, ICommunityBoardHandler
 	 */
 	private void changeClass(Player player, int val)
 	{
-		if (player.getClassId().isOfLevel(ClassLevel.Third))
+		if (player.getClassId().isOfLevel(ClassLevel.Second))
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_COMPLETED_THE_QUEST_FOR_3RD_OCCUPATION_CHANGE_AND_MOVED_TO_ANOTHER_CLASS_CONGRATULATIONS));
 		}

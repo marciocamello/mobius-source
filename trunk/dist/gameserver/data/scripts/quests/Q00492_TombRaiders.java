@@ -90,7 +90,7 @@ public class Q00492_TombRaiders extends Quest implements ScriptFile
 				return "32140-lvl.htm";
 			}
 			
-			if (!player.getClassId().isOfLevel(ClassLevel.Third))
+			if (!player.getClassId().isOfLevel(ClassLevel.Second))
 			{
 				return "32140-class.htm";
 			}

@@ -126,7 +126,7 @@ public class Q00177_SplitDestiny extends Quest implements ScriptFile
 				{
 					if (cond == 0)
 					{
-						if ((player.getLevel() >= 80) && ClassId.VALUES[player.getSubClassList().getBaseSubClass().getClassId()].isOfLevel(ClassLevel.Awaking) && ClassId.VALUES[player.getActiveSubClass().getClassId()].isOfLevel(ClassLevel.Fourth))
+						if ((player.getLevel() >= 80) && ClassId.VALUES[player.getSubClassList().getBaseSubClass().getClassId()].isOfLevel(ClassLevel.Fourth) && ClassId.VALUES[player.getActiveSubClass().getClassId()].isOfLevel(ClassLevel.Third))
 						{
 							htmltext = "33344_01.htm";
 						}

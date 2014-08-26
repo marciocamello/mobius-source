@@ -865,7 +865,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 		
 		for (ClassId classId : ClassId.VALUES) // Check all classes on the game
 		{
-			if (classId.getClassLevel() != ClassLevel.Awaking) // Only Loads classes on Third Profession Change (The delete not are only on 3rd class)
+			if (classId.getClassLevel() != ClassLevel.Fourth) // Only Loads classes on Third Profession Change (The delete not are only on 3rd class)
 			{
 				continue;
 			}

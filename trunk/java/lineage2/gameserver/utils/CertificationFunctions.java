@@ -211,7 +211,7 @@ public class CertificationFunctions
 		{
 			if (isDualCertification)
 			{
-				if (subClass.isDouble())
+				if (subClass.isDual())
 				{
 					subClass.setDualCertification(0);
 				}
@@ -291,7 +291,7 @@ public class CertificationFunctions
 				return false;
 			}
 			
-			if (!player.getActiveSubClass().isDouble())
+			if (!player.getActiveSubClass().isDual())
 			{
 				Functions.show(PATH + typeCertificate + "-nodual.htm", player, npc);
 				return false;

@@ -179,7 +179,7 @@ public final class ClassMasterInstance extends MerchantInstance
 	 */
 	private void changeClass(Player player, int val)
 	{
-		if (player.getClassId().isOfLevel(ClassLevel.Second))
+		if (player.getClassId().isOfLevel(ClassLevel.First))
 		{
 			player.sendPacket(SystemMsg.CONGRATULATIONS__YOUVE_COMPLETED_YOUR_THIRDCLASS_TRANSFER_QUEST);
 		}

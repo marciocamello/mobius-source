@@ -1044,7 +1044,7 @@ public abstract class SagasSuperclass extends Quest
 			return false;
 		}
 		
-		if (!player.getClassId().isOfLevel(ClassLevel.Third))
+		if (!player.getClassId().isOfLevel(ClassLevel.Second))
 		{
 			return false;
 		}

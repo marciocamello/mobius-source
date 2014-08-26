@@ -89,9 +89,6 @@ public class Quest
 	private static final String FONT_QUEST_AVAILABLE = "<font color=\"6699ff\">";
 	private static final String FONT_QUEST_DONE = "<font color=\"787878\">";
 	private static final String FONT_QUEST_NOT_AVAILABLE = "<font color=\"a62f31\">";
-	/**
-	 * Find this dialog"")
-	 */
 	protected static final String TODO_FIND_HTML = "<font color=\"6699ff\">TODO:<br>Find this dialog";
 	public static final int ADENA_ID = 57;
 	public static final int PARTY_NONE = 0;
@@ -100,7 +97,14 @@ public class Quest
 	private final Map<Integer, Map<String, QuestTimer>> _pausedQuestTimers = new ConcurrentHashMap<>();
 	private final TIntHashSet _questItems = new TIntHashSet();
 	private TIntObjectHashMap<List<QuestNpcLogInfo>> _npcLogList = TroveUtils.emptyIntObjectMap();
-	private final List<ICheckStartCondition> startConditionList = new ArrayList<>();
+	private final List<ICheckStartCondition> _startConditionList = new ArrayList<>();
+	protected final String _name;
+	protected final int _party;
+	protected final int _questId;
+	public final static int CREATED = 1;
+	public final static int STARTED = 2;
+	public final static int COMPLETED = 3;
+	public final static int DELAYED = 4;
 	
 	/**
 	 * Method addQuestItem.
@@ -337,14 +341,6 @@ public class Quest
 			DbUtils.closeQuietly(con, statement, rset);
 		}
 	}
-	
-	protected final String _name;
-	protected final int _party;
-	protected final int _questId;
-	public final static int CREATED = 1;
-	public final static int STARTED = 2;
-	public final static int COMPLETED = 3;
-	public final static int DELAYED = 4;
 	
 	/**
 	 * Method getStateName.
@@ -647,7 +643,7 @@ public class Quest
 	 */
 	public void addLevelCheck(int min, int max)
 	{
-		startConditionList.add(new PlayerLevelCondition(min, max));
+		_startConditionList.add(new PlayerLevelCondition(min, max));
 	}
 	
 	/**
@@ -656,7 +652,7 @@ public class Quest
 	 */
 	public void addQuestCompletedCheck(Class<?> clazz)
 	{
-		startConditionList.add(new QuestCompletedCondition(clazz.getSimpleName()));
+		_startConditionList.add(new QuestCompletedCondition(clazz.getSimpleName()));
 	}
 	
 	/**
@@ -665,7 +661,7 @@ public class Quest
 	 */
 	public void addClassLevelCheck(int... classLevels)
 	{
-		startConditionList.add(new ClassLevelCondition(classLevels));
+		_startConditionList.add(new ClassLevelCondition(classLevels));
 	}
 	
 	/**
@@ -673,7 +669,47 @@ public class Quest
 	 */
 	public void addSubClassCheck()
 	{
-		startConditionList.add(new SubClassCondition());
+		_startConditionList.add(new SubClassCondition());
+	}
+	
+	/**
+	 * Method checkPlayerLevel.
+	 * @param player
+	 * @return
+	 */
+	public boolean checkPlayerLevel(Player player)
+	{
+		for (ICheckStartCondition startCondition : _startConditionList)
+		{
+			if (startCondition.checkCondition(player))
+			{
+				continue;
+			}
+			
+			return false;
+		}
+		
+		return true;
+	}
+	
+	/**
+	 * Method checkStartCondition.
+	 * @param player
+	 * @return
+	 */
+	public boolean checkStartCondition(Player player)
+	{
+		for (ICheckStartCondition startCondition : _startConditionList)
+		{
+			if (startCondition.checkCondition(player))
+			{
+				continue;
+			}
+			
+			return false;
+		}
+		
+		return true;
 	}
 	
 	/**
@@ -1485,7 +1521,7 @@ public class Quest
 	 */
 	public final boolean isAvailableFor(Player player)
 	{
-		for (ICheckStartCondition startCondition : startConditionList)
+		for (ICheckStartCondition startCondition : _startConditionList)
 		{
 			if (!startCondition.checkCondition(player))
 			{

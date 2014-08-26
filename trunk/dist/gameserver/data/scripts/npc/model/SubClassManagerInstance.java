@@ -235,7 +235,7 @@ public final class SubClassManagerInstance extends NpcInstance
 							continue;
 						}
 						
-						if (sub.isDouble())
+						if (sub.isDual())
 						{
 							continue;
 						}
@@ -292,7 +292,7 @@ public final class SubClassManagerInstance extends NpcInstance
 			}
 			else if (cmd2.equalsIgnoreCase("reawakendualclass"))
 			{
-				if (!player.getActiveSubClass().isDouble() || !player.isAwaking() || !(player.getLevel() > 84))
+				if (!player.getActiveSubClass().isDual() || !player.isAwaking() || !(player.getLevel() > 84))
 				{
 					showChatWindow(player, "default/" + getNpcId() + "-reawaken_nodual.htm");
 					return;
@@ -522,7 +522,7 @@ public final class SubClassManagerInstance extends NpcInstance
 		
 		for (ClassId clid : ClassId.values())
 		{
-			if (!clid.isOfLevel(ClassLevel.Fourth))
+			if (!clid.isOfLevel(ClassLevel.Third))
 			{
 				continue;
 			}
