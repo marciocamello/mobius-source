@@ -2991,7 +2991,7 @@ public final class Player extends Playable implements PlayerGroup
 			return;
 		}
 		
-		double neededExp = calcStat(Stats.SOULS_CONSUME_EXP, 0, mob, null);
+		final double neededExp = calcStat(Stats.SOULS_CONSUME_EXP, 0, mob, null);
 		
 		if ((neededExp > 0) && (noRateExp > neededExp))
 		{
@@ -2999,7 +2999,7 @@ public final class Player extends Playable implements PlayerGroup
 			ThreadPoolManager.getInstance().schedule(new GameObjectTasks.SoulConsumeTask(this), 1000);
 		}
 		
-		int npcLevel = mob.getLevel();
+		final int npcLevel = mob.getLevel();
 		
 		if (Config.ALT_VITALITY_ENABLED)
 		{
@@ -3027,7 +3027,15 @@ public final class Player extends Playable implements PlayerGroup
 		long normalSp = (long) (noRateSp * ((Config.RATE_SP * getRateSp()) + getVitalityBonus()));
 		long expWithoutBonus = (long) (noRateExp * Config.RATE_XP * getRateExp());
 		long spWithoutBonus = (long) (noRateSp * Config.RATE_SP * getRateSp());
-		addExpAndSp(normalExp, normalSp, normalExp - expWithoutBonus, normalSp - spWithoutBonus, false, true, false);
+		
+		if (Config.ENABLE_DYNAMIC_RATES)
+		{
+			calculateDynamicRates(normalExp, normalSp, expWithoutBonus, spWithoutBonus);
+		}
+		else
+		{
+			addExpAndSp(normalExp, normalSp, normalExp - expWithoutBonus, normalSp - spWithoutBonus, false, true, false);
+		}
 	}
 	
 	/**
@@ -3160,6 +3168,91 @@ public final class Player extends Playable implements PlayerGroup
 		
 		WorldStatisticsManager.getInstance().updateStat(this, CategoryType.EXP_ADDED, addToExp);
 		updateStats();
+	}
+	
+	/**
+	 * Method calculateDynamicRates.
+	 * @param normalExp
+	 * @param normalSp
+	 * @param expWithoutBonus
+	 * @param spWithoutBonus
+	 */
+	private void calculateDynamicRates(long normalExp, long normalSp, long expWithoutBonus, long spWithoutBonus)
+	{
+		final int level = getLevel();
+		
+		if ((level >= 1) && (level <= 9))
+		{
+			normalExp = (long) (normalExp / Config.DYN_RATE_XP9);
+			normalSp = (long) (normalSp / Config.DYN_RATE_SP9);
+			expWithoutBonus = (long) (expWithoutBonus / Config.DYN_RATE_XP9);
+			spWithoutBonus = (long) (spWithoutBonus / Config.DYN_RATE_XP9);
+		}
+		else if ((level >= 10) && (level <= 19))
+		{
+			normalExp = (long) (normalExp / Config.DYN_RATE_XP19);
+			normalSp = (long) (normalSp / Config.DYN_RATE_SP19);
+			expWithoutBonus = (long) (expWithoutBonus / Config.DYN_RATE_XP19);
+			spWithoutBonus = (long) (spWithoutBonus / Config.DYN_RATE_XP19);
+		}
+		else if ((level >= 20) && (level <= 29))
+		{
+			normalExp = (long) (normalExp / Config.DYN_RATE_XP29);
+			normalSp = (long) (normalSp / Config.DYN_RATE_SP29);
+			expWithoutBonus = (long) (expWithoutBonus / Config.DYN_RATE_XP29);
+			spWithoutBonus = (long) (spWithoutBonus / Config.DYN_RATE_XP29);
+		}
+		else if ((level >= 30) && (level <= 39))
+		{
+			normalExp = (long) (normalExp / Config.DYN_RATE_XP39);
+			normalSp = (long) (normalSp / Config.DYN_RATE_SP39);
+			expWithoutBonus = (long) (expWithoutBonus / Config.DYN_RATE_XP39);
+			spWithoutBonus = (long) (spWithoutBonus / Config.DYN_RATE_XP39);
+		}
+		else if ((level >= 40) && (level <= 49))
+		{
+			normalExp = (long) (normalExp / Config.DYN_RATE_XP49);
+			normalSp = (long) (normalSp / Config.DYN_RATE_SP49);
+			expWithoutBonus = (long) (expWithoutBonus / Config.DYN_RATE_XP49);
+			spWithoutBonus = (long) (spWithoutBonus / Config.DYN_RATE_XP49);
+		}
+		else if ((level >= 50) && (level <= 59))
+		{
+			normalExp = (long) (normalExp / Config.DYN_RATE_XP59);
+			normalSp = (long) (normalSp / Config.DYN_RATE_SP59);
+			expWithoutBonus = (long) (expWithoutBonus / Config.DYN_RATE_XP59);
+			spWithoutBonus = (long) (spWithoutBonus / Config.DYN_RATE_XP59);
+		}
+		else if ((level >= 60) && (level <= 69))
+		{
+			normalExp = (long) (normalExp / Config.DYN_RATE_XP69);
+			normalSp = (long) (normalSp / Config.DYN_RATE_SP69);
+			expWithoutBonus = (long) (expWithoutBonus / Config.DYN_RATE_XP69);
+			spWithoutBonus = (long) (spWithoutBonus / Config.DYN_RATE_XP69);
+		}
+		else if ((level >= 70) && (level <= 79))
+		{
+			normalExp = (long) (normalExp / Config.DYN_RATE_XP79);
+			normalSp = (long) (normalSp / Config.DYN_RATE_SP79);
+			expWithoutBonus = (long) (expWithoutBonus / Config.DYN_RATE_XP69);
+			spWithoutBonus = (long) (spWithoutBonus / Config.DYN_RATE_XP79);
+		}
+		else if ((level >= 80) && (level <= 89))
+		{
+			normalExp = (long) (normalExp / Config.DYN_RATE_XP89);
+			normalSp = (long) (normalSp / Config.DYN_RATE_SP89);
+			expWithoutBonus = (long) (expWithoutBonus / Config.DYN_RATE_XP89);
+			spWithoutBonus = (long) (spWithoutBonus / Config.DYN_RATE_XP89);
+		}
+		else if ((level >= 90) && (level <= 99))
+		{
+			normalExp = (long) (normalExp / Config.DYN_RATE_XP99);
+			normalSp = (long) (normalSp / Config.DYN_RATE_SP99);
+			expWithoutBonus = (long) (expWithoutBonus / Config.DYN_RATE_XP99);
+			spWithoutBonus = (long) (spWithoutBonus / Config.DYN_RATE_XP99);
+		}
+		
+		addExpAndSp(normalExp, normalSp, normalExp - expWithoutBonus, normalSp - spWithoutBonus, false, true, false);
 	}
 	
 	/**

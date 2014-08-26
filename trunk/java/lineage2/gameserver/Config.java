@@ -61,6 +61,7 @@ public class Config
 	private static final String FORMULAS_CONFIGURATION_FILE = "config/formulas.ini";
 	private static final String PVP_CONFIG_FILE = "config/pvp.ini";
 	private static final String CONFIGURATION_FILE = "config/server.ini";
+	private static final String RATES_FILE = "config/rates.ini";
 	private static final String AI_CONFIG_FILE = "config/ai.ini";
 	private static final String GEODATA_CONFIG_FILE = "config/geodata.ini";
 	private static final String EVENTS_CONFIG_FILE = "config/events.ini";
@@ -70,10 +71,10 @@ public class Config
 	private static final String EXT_FILE = "config/ext.ini";
 	private static final String TOP_FILE = "config/Tops.ini";
 	private static final String PAYMENT_CONFIG_FILE = "config/payment.ini";
-	private static final String ANUSEWORDS_CONFIG_FILE = "config/abusewords.txt";
 	private static final String COMMUNITY_CONFIGURATION_FILE = "config/CommunityBoard.ini";
-	public static final String FAKE_PLAYERS_LIST = "config/fake_players.list";
 	public static final String OLYMPIAD_DATA_FILE = "config/olympiad.ini";
+	private static final String ANUSEWORDS_CONFIG_FILE = "config/abusewords.txt";
+	public static final String FAKE_PLAYERS_LIST = "config/fake_players.list";
 	public static final String GM_ACCESS_FILES_DIR = "config/xml/AccessLevels/";
 	public static int HTM_CACHE_MODE;
 	public static int[] PORTS_GAME;
@@ -413,7 +414,6 @@ public class Config
 	public static boolean NO_RATE_RECIPES;
 	public static double RATE_DROP_SIEGE_GUARD;
 	public static double RATE_MANOR;
-	// public static double RATE_FISH_DROP_COUNT;
 	public static boolean RATE_PARTY_MIN;
 	public static double RATE_HELLBOUND_CONFIDENCE;
 	public static int RATE_MOB_SPAWN;
@@ -429,6 +429,27 @@ public class Config
 	public static int DROPCHANCE_EQUIPMENT;
 	public static int DROPCHANCE_EQUIPPED_WEAPON;
 	public static int DROPCHANCE_ITEM;
+	public static boolean ENABLE_DYNAMIC_RATES;
+	public static double DYN_RATE_XP9;
+	public static double DYN_RATE_SP9;
+	public static double DYN_RATE_XP19;
+	public static double DYN_RATE_SP19;
+	public static double DYN_RATE_XP29;
+	public static double DYN_RATE_SP29;
+	public static double DYN_RATE_XP39;
+	public static double DYN_RATE_SP39;
+	public static double DYN_RATE_XP49;
+	public static double DYN_RATE_SP49;
+	public static double DYN_RATE_XP59;
+	public static double DYN_RATE_SP59;
+	public static double DYN_RATE_XP69;
+	public static double DYN_RATE_SP69;
+	public static double DYN_RATE_XP79;
+	public static double DYN_RATE_SP79;
+	public static double DYN_RATE_XP89;
+	public static double DYN_RATE_SP89;
+	public static double DYN_RATE_XP99;
+	public static double DYN_RATE_SP99;
 	public static int AUTODESTROY_ITEM_AFTER;
 	// public static int AUTODESTROY_PLAYER_ITEM_AFTER;
 	public static int DELETE_DAYS;
@@ -891,50 +912,6 @@ public class Config
 		SHOUT_OFFSET = serverSettings.getProperty("ShoutOffset", 0);
 		PREMIUM_HEROCHAT = serverSettings.getProperty("PremiumHeroChat", true);
 		LOG_CHAT = serverSettings.getProperty("LogChat", false);
-		RATE_XP = serverSettings.getProperty("RateXp", 1.);
-		RATE_SP = serverSettings.getProperty("RateSp", 1.);
-		RATE_QUESTS_REWARD = serverSettings.getProperty("RateQuestsReward", 1.);
-		RATE_QUESTS_DROP = serverSettings.getProperty("RateQuestsDrop", 1.);
-		RATE_CLAN_REP_SCORE = serverSettings.getProperty("RateClanRepScore", 1.);
-		RATE_CLAN_REP_SCORE_MAX_AFFECTED = serverSettings.getProperty("RateClanRepScoreMaxAffected", 2);
-		RATE_DROP_ADENA = serverSettings.getProperty("RateDropAdena", 1.);
-		RATE_DROP_ITEMS = serverSettings.getProperty("RateDropItems", 1.);
-		RATE_DROP_COMMON_ITEMS = serverSettings.getProperty("RateDropCommonItems", 1.);
-		RATE_DROP_RAIDBOSS = serverSettings.getProperty("RateRaidBoss", 1.);
-		RATE_DROP_SPOIL = serverSettings.getProperty("RateDropSpoil", 1.);
-		NO_RATE_ITEMS = serverSettings.getProperty("NoRateItemIds", new int[]
-		{
-			6660,
-			6662,
-			6661,
-			6659,
-			6656,
-			6658,
-			8191,
-			6657,
-			10170,
-			10314,
-			16025,
-			16026
-		});
-		NO_RATE_EQUIPMENT = serverSettings.getProperty("NoRateEquipment", true);
-		NO_RATE_KEY_MATERIAL = serverSettings.getProperty("NoRateKeyMaterial", true);
-		NO_RATE_RECIPES = serverSettings.getProperty("NoRateRecipes", true);
-		RATE_DROP_SIEGE_GUARD = serverSettings.getProperty("RateSiegeGuard", 1.);
-		RATE_MANOR = serverSettings.getProperty("RateManor", 1.);
-		// RATE_FISH_DROP_COUNT = serverSettings.getProperty("RateFishDropCount", 1.);
-		RATE_PARTY_MIN = serverSettings.getProperty("RatePartyMin", false);
-		RATE_HELLBOUND_CONFIDENCE = serverSettings.getProperty("RateHellboundConfidence", 1.);
-		RATE_MOB_SPAWN = serverSettings.getProperty("RateMobSpawn", 1);
-		RATE_MOB_SPAWN_MIN_LEVEL = serverSettings.getProperty("RateMobMinLevel", 1);
-		RATE_MOB_SPAWN_MAX_LEVEL = serverSettings.getProperty("RateMobMaxLevel", 100);
-		RATE_RAID_REGEN = serverSettings.getProperty("RateRaidRegen", 1.);
-		RATE_RAID_DEFENSE = serverSettings.getProperty("RateRaidDefense", 1.);
-		RATE_RAID_ATTACK = serverSettings.getProperty("RateRaidAttack", 1.);
-		RATE_EPIC_DEFENSE = serverSettings.getProperty("RateEpicDefense", RATE_RAID_DEFENSE);
-		RATE_EPIC_ATTACK = serverSettings.getProperty("RateEpicAttack", RATE_RAID_ATTACK);
-		RAID_MAX_LEVEL_DIFF = serverSettings.getProperty("RaidMaxLevelDiff", 8);
-		PARALIZE_ON_RAID_DIFF = serverSettings.getProperty("ParalizeOnRaidLevelDiff", true);
 		AUTODESTROY_ITEM_AFTER = serverSettings.getProperty("AutoDestroyDroppedItemAfter", 0);
 		// AUTODESTROY_PLAYER_ITEM_AFTER = serverSettings.getProperty("AutoDestroyPlayerDroppedItemAfter", 0);
 		DELETE_DAYS = serverSettings.getProperty("DeleteCharAfterDays", 7);
@@ -1074,6 +1051,79 @@ public class Config
 		// RWHO_ONLINE_INCREMENT = Integer.parseInt(serverSettings.getProperty("RemoteOnlineIncrement", "0"));
 		// RWHO_PRIV_STORE_FACTOR = Float.parseFloat(serverSettings.getProperty("RemotePrivStoreFactor", "0"));
 		// RWHO_FORCE_INC = Integer.parseInt(serverSettings.getProperty("RemoteWhoForceInc", "0"));
+	}
+	
+	/**
+	 * Method loadRatesConfig.
+	 */
+	private static void loadRatesConfig()
+	{
+		ExProperties rateSettings = load(RATES_FILE);
+		
+		RATE_XP = rateSettings.getProperty("RateXp", 1.);
+		RATE_SP = rateSettings.getProperty("RateSp", 1.);
+		RATE_DROP_ADENA = rateSettings.getProperty("RateDropAdena", 1.);
+		RATE_DROP_ITEMS = rateSettings.getProperty("RateDropItems", 1.);
+		RATE_DROP_COMMON_ITEMS = rateSettings.getProperty("RateDropCommonItems", 1.);
+		RATE_DROP_SPOIL = rateSettings.getProperty("RateDropSpoil", 1.);
+		RATE_QUESTS_DROP = rateSettings.getProperty("RateQuestsDrop", 1.);
+		RATE_QUESTS_REWARD = rateSettings.getProperty("RateQuestsReward", 1.);
+		RATE_DROP_RAIDBOSS = rateSettings.getProperty("RateRaidBoss", 1.);
+		NO_RATE_ITEMS = rateSettings.getProperty("NoRateItemIds", new int[]
+		{
+			6660,
+			6662,
+			6661,
+			6659,
+			6656,
+			6658,
+			8191,
+			6657,
+			10170,
+			10314,
+			16025,
+			16026
+		});
+		RATE_MANOR = rateSettings.getProperty("RateManor", 1.);
+		RATE_CLAN_REP_SCORE = rateSettings.getProperty("RateClanRepScore", 1.);
+		RATE_CLAN_REP_SCORE_MAX_AFFECTED = rateSettings.getProperty("RateClanRepScoreMaxAffected", 2);
+		RATE_DROP_SIEGE_GUARD = rateSettings.getProperty("RateSiegeGuard", 1.);
+		NO_RATE_EQUIPMENT = rateSettings.getProperty("NoRateEquipment", true);
+		NO_RATE_KEY_MATERIAL = rateSettings.getProperty("NoRateKeyMaterial", true);
+		NO_RATE_RECIPES = rateSettings.getProperty("NoRateRecipes", true);
+		RATE_PARTY_MIN = rateSettings.getProperty("RatePartyMin", false);
+		RATE_HELLBOUND_CONFIDENCE = rateSettings.getProperty("RateHellboundConfidence", 1.);
+		RATE_MOB_SPAWN = rateSettings.getProperty("RateMobSpawn", 1);
+		RATE_MOB_SPAWN_MIN_LEVEL = rateSettings.getProperty("RateMobMinLevel", 1);
+		RATE_MOB_SPAWN_MAX_LEVEL = rateSettings.getProperty("RateMobMaxLevel", 100);
+		RATE_RAID_REGEN = rateSettings.getProperty("RateRaidRegen", 1.);
+		RATE_RAID_DEFENSE = rateSettings.getProperty("RateRaidDefense", 1.);
+		RATE_RAID_ATTACK = rateSettings.getProperty("RateRaidAttack", 1.);
+		RATE_EPIC_DEFENSE = rateSettings.getProperty("RateEpicDefense", RATE_RAID_DEFENSE);
+		RATE_EPIC_ATTACK = rateSettings.getProperty("RateEpicAttack", RATE_RAID_ATTACK);
+		RAID_MAX_LEVEL_DIFF = rateSettings.getProperty("RaidMaxLevelDiff", 8);
+		PARALIZE_ON_RAID_DIFF = rateSettings.getProperty("ParalizeOnRaidLevelDiff", true);
+		ENABLE_DYNAMIC_RATES = rateSettings.getProperty("EnableDynamicRates", false);
+		DYN_RATE_XP9 = rateSettings.getProperty("DynRateXp9", 1.);
+		DYN_RATE_SP9 = rateSettings.getProperty("DynRateSp9", 1.);
+		DYN_RATE_XP19 = rateSettings.getProperty("DynRateXp19", 1.);
+		DYN_RATE_SP19 = rateSettings.getProperty("DynRateSp19", 1.);
+		DYN_RATE_XP29 = rateSettings.getProperty("DynRateXp29", 1.);
+		DYN_RATE_SP29 = rateSettings.getProperty("DynRateSp29", 1.);
+		DYN_RATE_XP39 = rateSettings.getProperty("DynRateXp39", 1.);
+		DYN_RATE_SP39 = rateSettings.getProperty("DynRateSp39", 1.);
+		DYN_RATE_XP49 = rateSettings.getProperty("DynRateXp49", 1.);
+		DYN_RATE_SP49 = rateSettings.getProperty("DynRateSp49", 1.);
+		DYN_RATE_XP59 = rateSettings.getProperty("DynRateXp59", 1.);
+		DYN_RATE_SP59 = rateSettings.getProperty("DynRateSp59", 1.);
+		DYN_RATE_XP69 = rateSettings.getProperty("DynRateXp69", 1.);
+		DYN_RATE_SP69 = rateSettings.getProperty("DynRateSp69", 1.);
+		DYN_RATE_XP79 = rateSettings.getProperty("DynRateXp79", 1.);
+		DYN_RATE_SP79 = rateSettings.getProperty("DynRateSp79", 1.);
+		DYN_RATE_XP89 = rateSettings.getProperty("DynRateXp89", 1.);
+		DYN_RATE_SP89 = rateSettings.getProperty("DynRateSp89", 1.);
+		DYN_RATE_XP99 = rateSettings.getProperty("DynRateXp99", 1.);
+		DYN_RATE_SP99 = rateSettings.getProperty("DynRateSp99", 1.);
 	}
 	
 	/**
@@ -2053,6 +2103,7 @@ public class Config
 	public static void load()
 	{
 		loadServerConfig();
+		loadRatesConfig();
 		loadResidenceConfig();
 		loadOtherConfig();
 		loadTopSettings();
