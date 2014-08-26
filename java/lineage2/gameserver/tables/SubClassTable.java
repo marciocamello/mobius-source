@@ -65,7 +65,7 @@ public final class SubClassTable
 		
 		for (ClassId baseClassId : ClassId.VALUES)
 		{
-			if (baseClassId.isOfLevel(ClassLevel.First) || baseClassId.isOfLevel(ClassLevel.Second))
+			if (baseClassId.isOfLevel(ClassLevel.Initial) || baseClassId.isOfLevel(ClassLevel.First))
 			{
 				continue;
 			}
@@ -74,7 +74,7 @@ public final class SubClassTable
 			
 			for (ClassId subClassId : ClassId.VALUES)
 			{
-				if (!subClassId.isOfLevel(ClassLevel.Third))
+				if (!subClassId.isOfLevel(ClassLevel.Second))
 				{
 					continue;
 				}
@@ -164,7 +164,7 @@ public final class SubClassTable
 			return false;
 		}
 		
-		if ((baseClassId.isOfRace(Race.kamael) != subClassId.isOfRace(Race.kamael)) && !baseClassId.isOfLevel(ClassLevel.Awaking))
+		if ((baseClassId.isOfRace(Race.kamael) != subClassId.isOfRace(Race.kamael)) && !baseClassId.isOfLevel(ClassLevel.Fourth))
 		{
 			return false;
 		}

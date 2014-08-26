@@ -72,7 +72,7 @@ public final class SupportMagic extends Functions
 			return;
 		}
 		
-		if ((player.getLevel() > maxSupLvl) || player.getClassId().isOfLevel(ClassLevel.Second))
+		if ((player.getLevel() > maxSupLvl) || player.getClassId().isOfLevel(ClassLevel.First))
 		{
 			show("default/newbie_blessing_no.htm", player, npc);
 			return;

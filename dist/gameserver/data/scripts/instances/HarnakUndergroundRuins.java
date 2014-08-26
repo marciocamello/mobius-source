@@ -88,7 +88,7 @@ public final class HarnakUndergroundRuins extends Reflection
 				
 				for (ClassId classId1 : ClassId.VALUES)
 				{
-					if ((classId1.getClassLevel() == ClassLevel.Awaking) && classId1.childOf(player.getClassId()))
+					if ((classId1.getClassLevel() == ClassLevel.Fourth) && classId1.childOf(player.getClassId()))
 					{
 						classId = classId1.getId();
 						break;

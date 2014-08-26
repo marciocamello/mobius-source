@@ -74,7 +74,7 @@ public class CharacterCreate extends L2GameClientPacket
 	{
 		for (ClassId cid : ClassId.VALUES)
 		{
-			if ((cid.getId() == _classId) && !cid.isOfLevel(ClassLevel.First))
+			if ((cid.getId() == _classId) && !cid.isOfLevel(ClassLevel.Initial))
 			{
 				return;
 			}

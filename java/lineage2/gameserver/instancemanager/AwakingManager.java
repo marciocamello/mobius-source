@@ -510,7 +510,7 @@ public class AwakingManager implements OnPlayerEnterListener
 		int race = player.getRace().ordinal();
 		Skill skill = null;
 		
-		if (player.getClassId().isOfLevel(ClassLevel.Awaking))
+		if (player.getClassId().isOfLevel(ClassLevel.Fourth))
 		{
 			switch (race)
 			{
@@ -561,7 +561,7 @@ public class AwakingManager implements OnPlayerEnterListener
 	 */
 	public void giveItems(Player player, Integer previousClassId, Integer newClassId)
 	{
-		if (!player.getSubClassList().isDoubleClassActive())
+		if (!player.getSubClassList().isDualClassActive())
 		{
 			ItemFunctions.addItem(player, _AwakenPower.get(newClassId), 1, true);
 			ItemFunctions.addItem(player, _LegacyWeapon.get(previousClassId), 1, true);
@@ -783,7 +783,7 @@ public class AwakingManager implements OnPlayerEnterListener
 			return;
 		}
 		
-		if (player.getActiveSubClass().isBase() || player.getActiveSubClass().isDouble())
+		if (player.getActiveSubClass().isBase() || player.getActiveSubClass().isDual())
 		{
 			player.sendPacket(new ExShowUsmVideo(ExShowUsmVideo.Q010));
 			player.sendPacket(new ExCallToChangeClass(_CA.get(player.getClassId().getId()), true));

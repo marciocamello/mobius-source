@@ -78,7 +78,7 @@ public final class PlayerTemplateHolder extends AbstractHolder
 	{
 		ClassType type = classId.getType();
 		
-		if (!classId.isOfLevel(ClassLevel.Awaking))
+		if (!classId.isOfLevel(ClassLevel.Fourth))
 		{
 			race = classId.getRace();
 		}

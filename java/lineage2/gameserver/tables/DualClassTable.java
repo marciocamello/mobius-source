@@ -65,7 +65,7 @@ public final class DualClassTable
 		
 		for (ClassId baseClassId : ClassId.VALUES)
 		{
-			if (!baseClassId.isOfLevel(ClassLevel.Awaking))
+			if (!baseClassId.isOfLevel(ClassLevel.Fourth))
 			{
 				continue;
 			}
@@ -74,7 +74,7 @@ public final class DualClassTable
 			
 			for (ClassId subClassId : ClassId.VALUES)
 			{
-				if (!subClassId.isOfLevel(ClassLevel.Awaking))
+				if (!subClassId.isOfLevel(ClassLevel.Fourth))
 				{
 					continue;
 				}
@@ -107,7 +107,7 @@ public final class DualClassTable
 		
 		for (SubClass sc : player.getSubClassList().values())
 		{
-			if (sc.isDouble())
+			if (sc.isDual())
 			{
 				haveDouble = sc.getType();
 			}

@@ -436,7 +436,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 			
 			if (cond == 0)
 			{
-				if (checkStartCondition(st.getPlayer()))
+				if (checkSC(st.getPlayer()))
 				{
 					htmltext = prefix + "_q10331_1.htm";
 				}
@@ -671,7 +671,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 		clearInstanceVariables(st);
 	}
 	
-	public boolean checkStartCondition(Player player)
+	public boolean checkSC(Player player)
 	{
 		return (player.getLevel() >= 18) && (player.getClassLevel() <= 1);
 	}
@@ -831,7 +831,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 		
 		for (ClassId firstClassId : ClassId.VALUES)
 		{
-			if (!firstClassId.isOfLevel(ClassLevel.Second))
+			if (!firstClassId.isOfLevel(ClassLevel.First))
 			{
 				continue;
 			}

@@ -185,9 +185,9 @@ public class SubClassList
 	 * Method isBaseClassActive.
 	 * @return boolean
 	 */
-	public boolean isDoubleClassActive()
+	public boolean isDualClassActive()
 	{
-		return _activeSubClass.isDouble();
+		return _activeSubClass.isDual();
 	}
 	
 	/**
@@ -207,7 +207,7 @@ public class SubClassList
 	{
 		for (SubClass sc : _listByClassId.values())
 		{
-			if (sc.isDouble())
+			if (sc.isDual())
 			{
 				return true;
 			}

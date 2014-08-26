@@ -19,10 +19,10 @@ package lineage2.gameserver.model.base;
 public enum ClassLevel
 {
 	NONE,
+	Initial,
 	First,
 	Second,
 	Third,
-	Fourth,
-	Awaking;
+	Fourth;
 	public static final ClassLevel[] VALUES = values();
 }

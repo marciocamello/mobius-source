@@ -65,7 +65,7 @@ public final class SubClassInfo
 		{
 			ClassId classId = player.getClassId();
 			
-			if ((classId.isOfLevel(ClassLevel.Third)) || (classId.isOfLevel(ClassLevel.Fourth)) || (classId.isOfLevel(ClassLevel.Awaking)))
+			if ((classId.isOfLevel(ClassLevel.Second)) || (classId.isOfLevel(ClassLevel.Third)) || (classId.isOfLevel(ClassLevel.Fourth)))
 			{
 				availSubs = EnumSet.copyOf(MAIN_SUBCLASS_SET);
 				availSubs1 = EnumSet.copyOf(MAIN_SUBCLASS_SET1);
@@ -77,22 +77,22 @@ public final class SubClassInfo
 				switch (race.ordinal())
 				{
 					case 1:
-						availSubs.removeAll(getSet(Race.darkelf, ClassLevel.Third));
+						availSubs.removeAll(getSet(Race.darkelf, ClassLevel.Second));
 						break;
 					
 					case 2:
-						availSubs.removeAll(getSet(Race.elf, ClassLevel.Third));
+						availSubs.removeAll(getSet(Race.elf, ClassLevel.Second));
 						break;
 				}
 				
 				switch (race.ordinal())
 				{
 					case 1:
-						availSubs1.removeAll(getSet(Race.darkelf, ClassLevel.Awaking));
+						availSubs1.removeAll(getSet(Race.darkelf, ClassLevel.Fourth));
 						break;
 					
 					case 2:
-						availSubs1.removeAll(getSet(Race.elf, ClassLevel.Awaking));
+						availSubs1.removeAll(getSet(Race.elf, ClassLevel.Fourth));
 						break;
 				}
 				
@@ -226,9 +226,9 @@ public final class SubClassInfo
 	
 	static
 	{
-		KAMAEL_SUBCLASS_SET = getSet(Race.kamael, ClassLevel.Third);
-		MAIN_SUBCLASS_SET = getSet(null, ClassLevel.Third);
-		MAIN_SUBCLASS_SET1 = getSet(null, ClassLevel.Awaking);
+		KAMAEL_SUBCLASS_SET = getSet(Race.kamael, ClassLevel.Second);
+		MAIN_SUBCLASS_SET = getSet(null, ClassLevel.Second);
+		MAIN_SUBCLASS_SET1 = getSet(null, ClassLevel.Fourth);
 		MAIN_SUBCLASS_SET.removeAll(BANNED_SUBCLASSES);
 		MAIN_SUBCLASS_SET.removeAll(KAMAEL_SUBCLASS_SET);
 		SUBCLASS_SET_MAP.put(ClassId.DARK_AVENGER, SUBCLASS_SET_1);

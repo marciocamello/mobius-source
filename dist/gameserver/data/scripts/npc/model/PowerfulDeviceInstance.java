@@ -688,7 +688,7 @@ public final class PowerfulDeviceInstance extends NpcInstance
 			{
 				for (ClassId classId1 : ClassId.VALUES)
 				{
-					if ((player.getClassId().getClassLevel() == ClassLevel.Fourth) && classId1.childOf(player.getClassId()))
+					if ((player.getClassId().getClassLevel() == ClassLevel.Third) && classId1.childOf(player.getClassId()))
 					{
 						classId1.getId();
 						break;

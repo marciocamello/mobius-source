@@ -348,7 +348,7 @@ public class SubClass
 	 * Method isDouble.
 	 * @return boolean
 	 */
-	public boolean isDouble()
+	public boolean isDual()
 	{
 		return _type == SubClassType.DOUBLE_SUBCLASS;
 	}
@@ -511,7 +511,7 @@ public class SubClass
 		}
 		else
 		{
-			if (ClassId.VALUES[_classId].isOfLevel(ClassLevel.Awaking))
+			if (ClassId.VALUES[_classId].isOfLevel(ClassLevel.Fourth))
 			{
 				_maxLvl = Experience.getMaxDualLevel();
 			}
