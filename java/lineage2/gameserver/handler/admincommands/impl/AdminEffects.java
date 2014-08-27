@@ -551,12 +551,10 @@ public class AdminEffects implements IAdminCommandHandler
 		if (target.isInvul())
 		{
 			target.setIsInvul(false);
-			// target.stopAbnormalEffect(AbnormalEffect.S_INVINCIBLE);
 			
 			for (Summon summon : activeChar.getSummonList())
 			{
 				summon.setIsInvul(false);
-				// summon.stopAbnormalEffect(AbnormalEffect.S_INVINCIBLE);
 			}
 			
 			activeChar.sendMessage(target.getName() + " is now mortal.");
@@ -564,12 +562,10 @@ public class AdminEffects implements IAdminCommandHandler
 		else
 		{
 			target.setIsInvul(true);
-			// target.startAbnormalEffect(AbnormalEffect.S_INVINCIBLE);
 			
 			for (Summon summon : activeChar.getSummonList())
 			{
 				summon.setIsInvul(true);
-				// summon.startAbnormalEffect(AbnormalEffect.S_INVINCIBLE);
 			}
 			
 			activeChar.sendMessage(target.getName() + " is now immortal.");
