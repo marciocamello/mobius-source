@@ -358,6 +358,18 @@ public class EnterWorld extends L2GameClientPacket
 		activeChar.unsetVar("offline");
 		activeChar.sendActionFailed();
 		
+		if (activeChar.isGM() && activeChar.isInvisible())
+		{
+			activeChar.startAbnormalEffect(AbnormalEffect.STEALTH);
+			World.removeObjectFromPlayers(activeChar);
+			
+			for (Summon summon : activeChar.getSummonList())
+			{
+				summon.startAbnormalEffect(AbnormalEffect.STEALTH);
+				World.removeObjectFromPlayers(summon);
+			}
+		}
+		
 		if (first && activeChar.isGM() && Config.SAVE_GM_EFFECTS && activeChar.getPlayerAccess().CanUseGMCommand)
 		{
 			if (activeChar.getVarB("gm_silence"))
@@ -369,8 +381,32 @@ public class EnterWorld extends L2GameClientPacket
 			if (activeChar.getVarB("gm_invul"))
 			{
 				activeChar.setIsInvul(true);
-				activeChar.startAbnormalEffect(AbnormalEffect.S_INVINCIBLE);
+				// activeChar.startAbnormalEffect(AbnormalEffect.S_INVINCIBLE);
 				activeChar.sendMessage(activeChar.getName() + " is now immortal.");
+			}
+			
+			if (activeChar.getVarB("gm_invis"))
+			{
+				activeChar.setInvisibleType(InvisibleType.NORMAL);
+				activeChar.startAbnormalEffect(AbnormalEffect.STEALTH);
+				World.removeObjectFromPlayers(activeChar);
+				
+				for (Summon summon : activeChar.getSummonList())
+				{
+					summon.startAbnormalEffect(AbnormalEffect.STEALTH);
+					World.removeObjectFromPlayers(summon);
+				}
+				activeChar.sendMessage(activeChar.getName() + " is now invisible.");
+			}
+			else
+			{
+				activeChar.setInvisibleType(InvisibleType.NONE);
+				activeChar.stopAbnormalEffect(AbnormalEffect.STEALTH);
+				
+				for (Summon summon : activeChar.getSummonList())
+				{
+					summon.stopAbnormalEffect(AbnormalEffect.STEALTH);
+				}
 			}
 			
 			try

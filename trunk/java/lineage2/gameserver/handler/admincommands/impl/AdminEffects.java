@@ -98,18 +98,40 @@ public class AdminEffects implements IAdminCommandHandler
 				if (activeChar.isInvisible())
 				{
 					activeChar.setInvisibleType(InvisibleType.NONE);
+					activeChar.stopAbnormalEffect(AbnormalEffect.STEALTH);
 					activeChar.broadcastCharInfo();
 					
 					for (Summon summon : activeChar.getSummonList())
 					{
+						summon.stopAbnormalEffect(AbnormalEffect.STEALTH);
 						summon.broadcastCharInfo();
 					}
+					
+					if (Config.SAVE_GM_EFFECTS)
+					{
+						activeChar.unsetVar("gm_invis");
+					}
+					activeChar.sendMessage(activeChar.getName() + " is now visible.");
 				}
 				else
 				{
 					activeChar.setInvisibleType(InvisibleType.NORMAL);
+					activeChar.startAbnormalEffect(AbnormalEffect.STEALTH);
 					activeChar.sendUserInfo();
 					World.removeObjectFromPlayers(activeChar);
+					
+					for (Summon summon : activeChar.getSummonList())
+					{
+						summon.startAbnormalEffect(AbnormalEffect.STEALTH);
+						summon.broadcastCharInfo();
+						World.removeObjectFromPlayers(summon);
+					}
+					
+					if (Config.SAVE_GM_EFFECTS)
+					{
+						activeChar.setVar("gm_invis", "true", -1);
+					}
+					activeChar.sendMessage(activeChar.getName() + " is now invisible.");
 				}
 				
 				break;
@@ -529,12 +551,12 @@ public class AdminEffects implements IAdminCommandHandler
 		if (target.isInvul())
 		{
 			target.setIsInvul(false);
-			target.stopAbnormalEffect(AbnormalEffect.S_INVINCIBLE);
+			// target.stopAbnormalEffect(AbnormalEffect.S_INVINCIBLE);
 			
 			for (Summon summon : activeChar.getSummonList())
 			{
 				summon.setIsInvul(false);
-				summon.stopAbnormalEffect(AbnormalEffect.S_INVINCIBLE);
+				// summon.stopAbnormalEffect(AbnormalEffect.S_INVINCIBLE);
 			}
 			
 			activeChar.sendMessage(target.getName() + " is now mortal.");
@@ -542,12 +564,12 @@ public class AdminEffects implements IAdminCommandHandler
 		else
 		{
 			target.setIsInvul(true);
-			target.startAbnormalEffect(AbnormalEffect.S_INVINCIBLE);
+			// target.startAbnormalEffect(AbnormalEffect.S_INVINCIBLE);
 			
 			for (Summon summon : activeChar.getSummonList())
 			{
 				summon.setIsInvul(true);
-				summon.startAbnormalEffect(AbnormalEffect.S_INVINCIBLE);
+				// summon.startAbnormalEffect(AbnormalEffect.S_INVINCIBLE);
 			}
 			
 			activeChar.sendMessage(target.getName() + " is now immortal.");
