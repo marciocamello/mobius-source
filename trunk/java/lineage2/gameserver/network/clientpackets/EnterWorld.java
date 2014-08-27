@@ -381,7 +381,6 @@ public class EnterWorld extends L2GameClientPacket
 			if (activeChar.getVarB("gm_invul"))
 			{
 				activeChar.setIsInvul(true);
-				// activeChar.startAbnormalEffect(AbnormalEffect.S_INVINCIBLE);
 				activeChar.sendMessage(activeChar.getName() + " is now immortal.");
 			}
 			
