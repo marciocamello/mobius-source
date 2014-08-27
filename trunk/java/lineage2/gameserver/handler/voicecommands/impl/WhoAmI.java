@@ -56,7 +56,8 @@ public class WhoAmI implements IVoicedCommandHandler
 	 * @param command String
 	 * @param player Player
 	 * @param args String
-	 * @return boolean * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
 	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player player, String args)

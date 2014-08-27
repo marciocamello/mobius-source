@@ -112,7 +112,8 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		
 		/**
 		 * Method ignorePetOrSummon.
-		 * @return boolean * @see lineage2.gameserver.listener.actor.OnKillListener#ignorePetOrSummon()
+		 * @return boolean
+		 * @see lineage2.gameserver.listener.actor.OnKillListener#ignorePetOrSummon()
 		 */
 		@Override
 		public boolean ignorePetOrSummon()

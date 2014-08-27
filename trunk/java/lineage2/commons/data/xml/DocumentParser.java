@@ -309,7 +309,8 @@ public abstract class DocumentParser
 		/**
 		 * Method fatalError.
 		 * @param e SAXParseException
-		 * @throws SAXParseException * @see org.xml.sax.ErrorHandler#fatalError(SAXParseException)
+		 * @throws SAXParseException
+		 * @see org.xml.sax.ErrorHandler#fatalError(SAXParseException)
 		 */
 		@Override
 		public void fatalError(SAXParseException e) throws SAXParseException

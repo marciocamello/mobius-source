@@ -36,7 +36,8 @@ public class ClanPenalty implements IUserCommandHandler
 	 * Method useUserCommand.
 	 * @param id int
 	 * @param activeChar Player
-	 * @return boolean * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#useUserCommand(int, Player)
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.usercommands.IUserCommandHandler#useUserCommand(int, Player)
 	 */
 	@Override
 	public boolean useUserCommand(int id, Player activeChar)

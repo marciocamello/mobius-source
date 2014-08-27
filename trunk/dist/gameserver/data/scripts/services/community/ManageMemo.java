@@ -351,7 +351,7 @@ public final class ManageMemo implements ScriptFile, ICommunityBoardHandler
 	 * @param arg1 String
 	 * @param arg2 String
 	 * @param arg3 String
-	 * @paratr * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#onWriteCommand(Player, String, String, String, String, String, String)ing, String, String, String, String)
+	 * @paratr
 	 */
 	@Override
 	public void onWriteCommand(Player player, String bypass, String arg1, String arg2, String arg3, String arg4, String arg5)

@@ -103,7 +103,8 @@ public class Territory implements Shape, SpawnRange
 	 * Method isInside.
 	 * @param x int
 	 * @param y int
-	 * @return boolean * @see lineage2.commons.geometry.Shape#isInside(int, int)
+	 * @return boolean
+	 * @see lineage2.commons.geometry.Shape#isInside(int, int)
 	 */
 	@Override
 	public boolean isInside(int x, int y)
@@ -128,7 +129,8 @@ public class Territory implements Shape, SpawnRange
 	 * @param x int
 	 * @param y int
 	 * @param z int
-	 * @return boolean * @see lineage2.commons.geometry.Shape#isInside(int, int, int)
+	 * @return boolean
+	 * @see lineage2.commons.geometry.Shape#isInside(int, int, int)
 	 */
 	@Override
 	public boolean isInside(int x, int y, int z)
@@ -330,7 +332,8 @@ public class Territory implements Shape, SpawnRange
 	/**
 	 * Method getRandomLoc.
 	 * @param geoIndex int
-	 * @return Location * @see lineage2.gameserver.templates.spawn.SpawnRange#getRandomLoc(int)
+	 * @return Location
+	 * @see lineage2.gameserver.templates.spawn.SpawnRange#getRandomLoc(int)
 	 */
 	@Override
 	public Location getRandomLoc(int geoIndex)

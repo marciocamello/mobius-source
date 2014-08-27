@@ -64,7 +64,8 @@ public abstract class _34BossMinionInstance extends SiegeGuardInstance implement
 	
 	/**
 	 * Method teleChatSay.
-	 * @return NpcString * @see npc.model.residences.clanhall._34SiegeGuard#teleChatSay()
+	 * @return NpcString
+	 * @see npc.model.residences.clanhall._34SiegeGuard#teleChatSay()
 	 */
 	@Override
 	public abstract NpcString teleChatSay();

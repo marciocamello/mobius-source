@@ -60,7 +60,8 @@ class MemoryByteCode extends SimpleJavaFileObject
 	
 	/**
 	 * Method getName.
-	 * @return String * @see javax.tools.FileObject#getName()
+	 * @return String
+	 * @see javax.tools.FileObject#getName()
 	 */
 	@Override
 	public String getName()

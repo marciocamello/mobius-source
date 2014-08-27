@@ -85,7 +85,8 @@ public class GCSArray<E> implements Collection<E>
 	
 	/**
 	 * Method isEmpty.
-	 * @return boolean * @see java.util.Collection#isEmpty()
+	 * @return boolean
+	 * @see java.util.Collection#isEmpty()
 	 */
 	@Override
 	public boolean isEmpty()
@@ -150,7 +151,7 @@ public class GCSArray<E> implements Collection<E>
 	/**
 	 * Method add.
 	 * @param e E
-	 * @return boolean * @see java.util.Collection#add(E)
+	 * @return boolean
 	 */
 	@Override
 	public synchronized boolean add(E e)
@@ -163,7 +164,8 @@ public class GCSArray<E> implements Collection<E>
 	/**
 	 * Method remove.
 	 * @param o Object
-	 * @return boolean * @see java.util.Collection#remove(Object)
+	 * @return boolean
+	 * @see java.util.Collection#remove(Object)
 	 */
 	@Override
 	public synchronized boolean remove(Object o)
@@ -256,7 +258,8 @@ public class GCSArray<E> implements Collection<E>
 	/**
 	 * Method contains.
 	 * @param o Object
-	 * @return boolean * @see java.util.Collection#contains(Object)
+	 * @return boolean
+	 * @see java.util.Collection#contains(Object)
 	 */
 	@Override
 	public synchronized boolean contains(Object o)
@@ -288,7 +291,8 @@ public class GCSArray<E> implements Collection<E>
 	/**
 	 * Method addAll.
 	 * @param c Collection<? extends E>
-	 * @return boolean * @see java.util.Collection#addAll(Collection<? extends E>)
+	 * @return boolean
+	 * @see java.util.Collection#addAll(Collection)
 	 */
 	@Override
 	public synchronized boolean addAll(Collection<? extends E> c)
@@ -310,7 +314,8 @@ public class GCSArray<E> implements Collection<E>
 	/**
 	 * Method removeAll.
 	 * @param c Collection<?>
-	 * @return boolean * @see java.util.Collection#removeAll(Collection<?>)
+	 * @return boolean
+	 * @see java.util.Collection#removeAll(Collection)
 	 */
 	@Override
 	public synchronized boolean removeAll(Collection<?> c)
@@ -333,7 +338,8 @@ public class GCSArray<E> implements Collection<E>
 	/**
 	 * Method retainAll.
 	 * @param c Collection<?>
-	 * @return boolean * @see java.util.Collection#retainAll(Collection<?>)
+	 * @return boolean
+	 * @see java.util.Collection#retainAll(Collection)
 	 */
 	@Override
 	public synchronized boolean retainAll(Collection<?> c)
@@ -356,7 +362,8 @@ public class GCSArray<E> implements Collection<E>
 	/**
 	 * Method containsAll.
 	 * @param c Collection<?>
-	 * @return boolean * @see java.util.Collection#containsAll(Collection<?>)
+	 * @return boolean
+	 * @see java.util.Collection#containsAll(Collection)
 	 */
 	@Override
 	public synchronized boolean containsAll(Collection<?> c)
@@ -446,7 +453,8 @@ public class GCSArray<E> implements Collection<E>
 		
 		/**
 		 * Method hasNext.
-		 * @return boolean * @see java.util.Iterator#hasNext()
+		 * @return boolean
+		 * @see java.util.Iterator#hasNext()
 		 */
 		@Override
 		public boolean hasNext()

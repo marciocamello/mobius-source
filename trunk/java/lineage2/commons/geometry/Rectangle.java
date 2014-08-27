@@ -61,7 +61,8 @@ public class Rectangle extends AbstractShape
 	 * Method isInside.
 	 * @param x int
 	 * @param y int
-	 * @return boolean * @see lineage2.commons.geometry.Shape#isInside(int, int)
+	 * @return boolean
+	 * @see lineage2.commons.geometry.Shape#isInside(int, int)
 	 */
 	@Override
 	public boolean isInside(int x, int y)

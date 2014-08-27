@@ -350,7 +350,8 @@ class GameObjectArray<E extends GameObject> implements Iterable<E>
 		
 		/**
 		 * Method hasNext.
-		 * @return boolean * @see java.util.Iterator#hasNext()
+		 * @return boolean
+		 * @see java.util.Iterator#hasNext()
 		 */
 		@Override
 		public boolean hasNext()

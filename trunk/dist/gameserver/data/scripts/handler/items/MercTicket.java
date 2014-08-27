@@ -130,7 +130,8 @@ public final class MercTicket extends ScriptItemHandler
 	 * Method pickupItem.
 	 * @param playable Playable
 	 * @param item ItemInstance
-	 * @return boolean * @see lineage2.gameserver.handler.items.IItemHandler#pickupItem(Playable, ItemInstance)
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.items.IItemHandler#pickupItem(Playable, ItemInstance)
 	 */
 	@Override
 	public boolean pickupItem(Playable playable, ItemInstance item)

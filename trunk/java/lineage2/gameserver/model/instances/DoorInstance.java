@@ -687,7 +687,8 @@ public final class DoorInstance extends Creature implements GeoCollision
 	
 	/**
 	 * Method isConcrete.
-	 * @return boolean * @see lineage2.gameserver.geodata.GeoCollision#isConcrete()
+	 * @return boolean
+	 * @see lineage2.gameserver.geodata.GeoCollision#isConcrete()
 	 */
 	@Override
 	public boolean isConcrete()

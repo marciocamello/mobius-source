@@ -85,7 +85,8 @@ class MMOExecutableQueue<T extends MMOClient> implements Queue<ReceivablePacket<
 	
 	/**
 	 * Method isEmpty.
-	 * @return boolean * @see java.util.Collection#isEmpty()
+	 * @return boolean
+	 * @see java.util.Collection#isEmpty()
 	 */
 	@Override
 	public boolean isEmpty()
@@ -96,7 +97,8 @@ class MMOExecutableQueue<T extends MMOClient> implements Queue<ReceivablePacket<
 	/**
 	 * Method contains.
 	 * @param o Object
-	 * @return boolean * @see java.util.Collection#contains(Object)
+	 * @return boolean
+	 * @see java.util.Collection#contains(Object)
 	 */
 	@Override
 	public boolean contains(Object o)
@@ -138,7 +140,8 @@ class MMOExecutableQueue<T extends MMOClient> implements Queue<ReceivablePacket<
 	/**
 	 * Method remove.
 	 * @param o Object
-	 * @return boolean * @see java.util.Collection#remove(Object)
+	 * @return boolean
+	 * @see java.util.Collection#remove(Object)
 	 */
 	@Override
 	public boolean remove(Object o)
@@ -149,7 +152,8 @@ class MMOExecutableQueue<T extends MMOClient> implements Queue<ReceivablePacket<
 	/**
 	 * Method containsAll.
 	 * @param c Collection<?>
-	 * @return boolean * @see java.util.Collection#containsAll(Collection<?>)
+	 * @return boolean
+	 * @see java.util.Collection#containsAll(Collection)
 	 */
 	@Override
 	public boolean containsAll(Collection<?> c)
@@ -160,7 +164,8 @@ class MMOExecutableQueue<T extends MMOClient> implements Queue<ReceivablePacket<
 	/**
 	 * Method addAll.
 	 * @param c Collection<? extends ReceivablePacket<T>>
-	 * @return boolean * @see java.util.Collection#addAll(Collection<? extends ReceivablePacket<T>>)
+	 * @return boolean
+	 * @see java.util.Collection#addAll(Collection)
 	 */
 	@Override
 	public boolean addAll(Collection<? extends ReceivablePacket<T>> c)
@@ -171,7 +176,8 @@ class MMOExecutableQueue<T extends MMOClient> implements Queue<ReceivablePacket<
 	/**
 	 * Method removeAll.
 	 * @param c Collection<?>
-	 * @return boolean * @see java.util.Collection#removeAll(Collection<?>)
+	 * @return boolean
+	 * @see java.util.Collection#removeAll(Collection)
 	 */
 	@Override
 	public boolean removeAll(Collection<?> c)
@@ -182,7 +188,8 @@ class MMOExecutableQueue<T extends MMOClient> implements Queue<ReceivablePacket<
 	/**
 	 * Method retainAll.
 	 * @param c Collection<?>
-	 * @return boolean * @see java.util.Collection#retainAll(Collection<?>)
+	 * @return boolean
+	 * @see java.util.Collection#retainAll(Collection)
 	 */
 	@Override
 	public boolean retainAll(Collection<?> c)

@@ -58,7 +58,8 @@ class MemoryJavaFileManager extends ForwardingJavaFileManager<StandardJavaFileMa
 	/**
 	 * Method getClassLoader.
 	 * @param location Location
-	 * @return ClassLoader * @see javax.tools.JavaFileManager#getClassLoader(Location)
+	 * @return ClassLoader
+	 * @see javax.tools.JavaFileManager#getClassLoader(Location)
 	 */
 	@Override
 	public ClassLoader getClassLoader(Location location)

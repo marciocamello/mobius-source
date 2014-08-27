@@ -117,7 +117,8 @@ public class HardReferences
 			
 			/**
 			 * Method hasNext.
-			 * @return boolean * @see java.util.Iterator#hasNext()
+			 * @return boolean
+			 * @see java.util.Iterator#hasNext()
 			 */
 			@Override
 			public boolean hasNext()
