@@ -45,7 +45,8 @@ public class L2DatabaseFactory extends BasicDataSource
 	
 	/**
 	 * Method getConnection.
-	 * @return Connection * @throws SQLException * @see javax.sql.DataSource#getConnection()
+	 * @return Connection * @throws SQLException
+	 * @see javax.sql.DataSource#getConnection()
 	 */
 	@Override
 	public Connection getConnection() throws SQLException

@@ -144,7 +144,8 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 	/**
 	 * Method canPickUp.
 	 * @param player Player
-	 * @return boolean * @see lineage2.gameserver.model.items.attachment.PickableAttachment#canPickUp(Player)
+	 * @return boolean
+	 * @see lineage2.gameserver.model.items.attachment.PickableAttachment#canPickUp(Player)
 	 */
 	@Override
 	public boolean canPickUp(Player player)
@@ -187,7 +188,8 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 	/**
 	 * Method canAttack.
 	 * @param player Player
-	 * @return boolean * @see lineage2.gameserver.model.items.attachment.FlagItemAttachment#canAttack(Player)
+	 * @return boolean
+	 * @see lineage2.gameserver.model.items.attachment.FlagItemAttachment#canAttack(Player)
 	 */
 	@Override
 	public boolean canAttack(Player player)
@@ -200,7 +202,8 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 	 * Method canCast.
 	 * @param player Player
 	 * @param skill Skill
-	 * @return boolean * @see lineage2.gameserver.model.items.attachment.FlagItemAttachment#canCast(Player, Skill)
+	 * @return boolean
+	 * @see lineage2.gameserver.model.items.attachment.FlagItemAttachment#canCast(Player, Skill)
 	 */
 	@Override
 	public boolean canCast(Player player, Skill skill)

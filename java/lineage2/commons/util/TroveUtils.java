@@ -91,7 +91,8 @@ public class TroveUtils
 		/**
 		 * Method add.
 		 * @param val int
-		 * @return boolean * @see gnu.trove.list.TIntList#add(int)
+		 * @return boolean
+		 * @see gnu.trove.list.TIntList#add(int)
 		 */
 		@Override
 		public boolean add(int val)

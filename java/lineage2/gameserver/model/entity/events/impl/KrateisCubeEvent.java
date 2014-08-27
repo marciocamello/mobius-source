@@ -93,7 +93,8 @@ public class KrateisCubeEvent extends GlobalEvent
 		
 		/**
 		 * Method ignorePetOrSummon.
-		 * @return boolean * @see lineage2.gameserver.listener.actor.OnKillListener#ignorePetOrSummon()
+		 * @return boolean
+		 * @see lineage2.gameserver.listener.actor.OnKillListener#ignorePetOrSummon()
 		 */
 		@Override
 		public boolean ignorePetOrSummon()

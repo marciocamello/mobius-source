@@ -103,7 +103,8 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 		
 		/**
 		 * Method isDone.
-		 * @return boolean * @see java.util.concurrent.Future#isDone()
+		 * @return boolean
+		 * @see java.util.concurrent.Future#isDone()
 		 */
 		@Override
 		public boolean isDone()
@@ -113,7 +114,8 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 		
 		/**
 		 * Method isCancelled.
-		 * @return boolean * @see java.util.concurrent.Future#isCancelled()
+		 * @return boolean
+		 * @see java.util.concurrent.Future#isCancelled()
 		 */
 		@Override
 		public boolean isCancelled()
@@ -124,7 +126,8 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 		/**
 		 * Method cancel.
 		 * @param mayInterruptIfRunning boolean
-		 * @return boolean * @see java.util.concurrent.Future#cancel(boolean)
+		 * @return boolean
+		 * @see java.util.concurrent.Future#cancel(boolean)
 		 */
 		@Override
 		public boolean cancel(boolean mayInterruptIfRunning)
@@ -157,7 +160,8 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 		/**
 		 * Method getDelay.
 		 * @param unit TimeUnit
-		 * @return long * @see java.util.concurrent.Delayed#getDelay(TimeUnit)
+		 * @return long
+		 * @see java.util.concurrent.Delayed#getDelay(TimeUnit)
 		 */
 		@Override
 		public long getDelay(TimeUnit unit)
@@ -178,7 +182,8 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 		
 		/**
 		 * Method isPeriodic.
-		 * @return boolean * @see java.util.concurrent.RunnableScheduledFuture#isPeriodic()
+		 * @return boolean
+		 * @see java.util.concurrent.RunnableScheduledFuture#isPeriodic()
 		 */
 		@Override
 		public boolean isPeriodic()

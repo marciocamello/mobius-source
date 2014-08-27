@@ -449,7 +449,6 @@ public final class heart extends Functions implements ScriptFile, OnDeathListene
 	/**
 	 * Method onDeath.
 	 * @param cha Creature
-	 * @pth * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)(Creature, Creature)
 	 */
 	@Override
 	public void onDeath(Creature cha, Creature killer)
@@ -461,7 +460,7 @@ public final class heart extends Functions implements ScriptFile, OnDeathListene
 	}
 	
 	/**
-	 * Method onPlayerEnter. #o * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)nPlayerEnter(Player)
+	 * Method onPlayerEnter.
 	 */
 	@Override
 	public void onPlayerEnter(Player player)
@@ -473,8 +472,8 @@ public final class heart extends Functions implements ScriptFile, OnDeathListene
 	}
 	
 	/**
-	 * e. * @return boolean
-	 * @return boolean
+	 * Method isActive.
+	 * @return
 	 */
 	private static boolean isActive()
 	{
@@ -554,9 +553,6 @@ public final class heart extends Functions implements ScriptFile, OnDeathListene
 		deSpawnNPCs(_spawns);
 	}
 	
-	/*
-	 * ts * @see lineage2.gameserver.scripts.ScriptFile#onLoad().ScriptFile#onLoad()
-	 */
 	@Override
 	public void onLoad()
 	{
@@ -574,18 +570,12 @@ public final class heart extends Functions implements ScriptFile, OnDeathListene
 		}
 	}
 	
-	/**
-	 * .S * @see lineage2.gameserver.scripts.ScriptFile#onReload()criptFile#onReload()
-	 */
 	@Override
 	public void onReload()
 	{
 		unSpawnEventManagers();
 	}
 	
-	/**
-	 * cr * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()iptFile#onShutdown()
-	 */
 	@Override
 	public void onShutdown()
 	{

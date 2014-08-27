@@ -120,7 +120,8 @@ public class BasicDataSource implements DataSource
 	
 	/**
 	 * Method getLogWriter.
-	 * @return PrintWriter * @see javax.sql.CommonDataSource#getLogWriter()
+	 * @return PrintWriter
+	 * @see javax.sql.CommonDataSource#getLogWriter()
 	 */
 	@Override
 	public PrintWriter getLogWriter()
@@ -162,7 +163,8 @@ public class BasicDataSource implements DataSource
 	
 	/**
 	 * Method getParentLogger.
-	 * @return Logger * @see javax.sql.CommonDataSource#getParentLogger()
+	 * @return Logger
+	 * @see javax.sql.CommonDataSource#getParentLogger()
 	 */
 	@Override
 	public Logger getParentLogger()
@@ -184,7 +186,8 @@ public class BasicDataSource implements DataSource
 	/**
 	 * Method isWrapperFor.
 	 * @param iface Class<?>
-	 * @return boolean * @see java.sql.Wrapper#isWrapperFor(Class<?>)
+	 * @return boolean
+	 * @see java.sql.Wrapper#isWrapperFor(Class)
 	 */
 	@Override
 	public boolean isWrapperFor(Class<?> iface)
@@ -194,7 +197,8 @@ public class BasicDataSource implements DataSource
 	
 	/**
 	 * Method getConnection.
-	 * @return Connection * @throws SQLException * @see javax.sql.DataSource#getConnection()
+	 * @return Connection * @throws SQLException
+	 * @see javax.sql.DataSource#getConnection()
 	 */
 	@Override
 	public Connection getConnection() throws SQLException
@@ -206,7 +210,8 @@ public class BasicDataSource implements DataSource
 	 * Method getConnection.
 	 * @param username String
 	 * @param password String
-	 * @return Connection * @see javax.sql.DataSource#getConnection(String, String)
+	 * @return Connection
+	 * @see javax.sql.DataSource#getConnection(String, String)
 	 */
 	@Override
 	public Connection getConnection(String username, String password)

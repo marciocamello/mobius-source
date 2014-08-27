@@ -60,7 +60,8 @@ public class Repair extends Functions implements IVoicedCommandHandler
 	 * @param command String
 	 * @param activeChar Player
 	 * @param target String
-	 * @return boolean * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
 	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String target)

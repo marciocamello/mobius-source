@@ -24,7 +24,8 @@ public class XMLFilter implements FileFilter
 	/**
 	 * Method accept.
 	 * @param pathname File
-	 * @return boolean * @see java.io.FileFilter#accept(File)
+	 * @return boolean
+	 * @see java.io.FileFilter#accept(File)
 	 */
 	@Override
 	public boolean accept(File pathname)

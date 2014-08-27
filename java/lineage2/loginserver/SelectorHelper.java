@@ -62,7 +62,8 @@ public class SelectorHelper implements IMMOExecutor<L2LoginClient>, IClientFacto
 	/**
 	 * Method accept.
 	 * @param sc SocketChannel
-	 * @return boolean * @see lineage2.commons.net.nio.impl.IAcceptFilter#accept(SocketChannel)
+	 * @return boolean
+	 * @see lineage2.commons.net.nio.impl.IAcceptFilter#accept(SocketChannel)
 	 */
 	@Override
 	public boolean accept(SocketChannel sc)

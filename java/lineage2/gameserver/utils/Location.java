@@ -612,7 +612,8 @@ public class Location extends Point3D implements SpawnRange, Serializable
 	/**
 	 * Method getRandomLoc.
 	 * @param ref int
-	 * @return Location * @see lineage2.gameserver.templates.spawn.SpawnRange#getRandomLoc(int)
+	 * @return Location
+	 * @see lineage2.gameserver.templates.spawn.SpawnRange#getRandomLoc(int)
 	 */
 	@Override
 	public Location getRandomLoc(int ref)

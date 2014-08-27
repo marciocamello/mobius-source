@@ -296,17 +296,8 @@ public class UserInfo extends L2GameServerPacket
 		maxCp = player.getMaxCp();
 		curCp = (int) player.getCurrentCp();
 		_team = player.getTeam();
-		noble = player.isNoble() || (player.isGM() && Config.GM_HERO_AURA) ? 1 : 0; // 0x01:
-		// symbol
-		// on
-		// char
-		// menu
-		// ctrl+I
-		hero = player.isHero() || (player.isGM() && Config.GM_HERO_AURA) ? 1 : 0; // 0x01:
-		// Hero
-		// Aura
-		// and
-		// symbol
+		noble = player.isNoble() || (player.isGM() && Config.GM_HERO_AURA) ? 1 : 0;
+		hero = player.isHero() || (player.isGM() && Config.GM_HERO_AURA) ? 1 : 0;
 		fishing = player.isFishing() ? 1 : 0; // Fishing Mode
 		_fishLoc = player.getFishLoc();
 		name_color = player.getNameColor();
@@ -436,9 +427,6 @@ public class UserInfo extends L2GameServerPacket
 		writeD(clan_crest_id);
 		writeD(ally_id);
 		writeD(ally_crest_id);
-		// 0x40 leader rights
-		// siege flags: attacker - 0x180 sword over name, defender - 0x80
-		// shield, 0xC0 crown (|leader), 0x1C0 flag (|leader)
 		writeD(_relation);
 		writeC(mount_type); // mount type
 		writeC(private_store);
@@ -479,9 +467,7 @@ public class UserInfo extends L2GameServerPacket
 		writeD(title_color);
 		writeD(cw_level);
 		writeD(transformation); // Transformation id
-		// AttackElement (0 - Fire, 1 - Water, 2 - Wind, 3 - Earth, 4 - Holy, 5
-		// - Dark, -2 - None)
-		writeH(attackElement.getId());
+		writeH(attackElement.getId()); // AttackElement (0 - Fire, 1 - Water, 2 - Wind, 3 - Earth, 4 - Holy, 5 - Dark, -2 - None)
 		writeH(attackElementValue); // AttackElementValue
 		writeH(defenceFire); // DefAttrFire
 		writeH(defenceWater); // DefAttrWater

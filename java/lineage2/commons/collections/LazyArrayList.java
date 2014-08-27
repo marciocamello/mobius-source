@@ -171,7 +171,7 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	/**
 	 * Method add.
 	 * @param element E
-	 * @return boolean * @see java.util.List#add(E)
+	 * @return boolean
 	 */
 	@Override
 	public boolean add(E element)
@@ -222,7 +222,8 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	 * Method addAll.
 	 * @param index int
 	 * @param c Collection<? extends E>
-	 * @return boolean * @see java.util.List#addAll(int, Collection<? extends E>)
+	 * @return boolean
+	 * @see java.util.List#addAll(int, Collection)
 	 */
 	@Override
 	public boolean addAll(int index, Collection<? extends E> c)
@@ -315,7 +316,8 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	/**
 	 * Method remove.
 	 * @param o Object
-	 * @return boolean * @see java.util.List#remove(Object)
+	 * @return boolean
+	 * @see java.util.List#remove(Object)
 	 */
 	@Override
 	public boolean remove(Object o)
@@ -351,7 +353,8 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	/**
 	 * Method contains.
 	 * @param o Object
-	 * @return boolean * @see java.util.List#contains(Object)
+	 * @return boolean
+	 * @see java.util.List#contains(Object)
 	 */
 	@Override
 	public boolean contains(Object o)
@@ -500,7 +503,8 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	
 	/**
 	 * Method isEmpty.
-	 * @return boolean * @see java.util.List#isEmpty()
+	 * @return boolean
+	 * @see java.util.List#isEmpty()
 	 */
 	@Override
 	public boolean isEmpty()
@@ -520,7 +524,8 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	/**
 	 * Method addAll.
 	 * @param c Collection<? extends E>
-	 * @return boolean * @see java.util.List#addAll(Collection<? extends E>)
+	 * @return boolean
+	 * @see java.util.List#addAll(Collection)
 	 */
 	@Override
 	public boolean addAll(Collection<? extends E> c)
@@ -541,7 +546,8 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	/**
 	 * Method containsAll.
 	 * @param c Collection<?>
-	 * @return boolean * @see java.util.List#containsAll(Collection<?>)
+	 * @return boolean
+	 * @see java.util.List#containsAll(Collection)
 	 */
 	@Override
 	public boolean containsAll(Collection<?> c)
@@ -572,7 +578,8 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	/**
 	 * Method retainAll.
 	 * @param c Collection<?>
-	 * @return boolean * @see java.util.List#retainAll(Collection<?>)
+	 * @return boolean
+	 * @see java.util.List#retainAll(Collection)
 	 */
 	@Override
 	public boolean retainAll(Collection<?> c)
@@ -600,7 +607,8 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	/**
 	 * Method removeAll.
 	 * @param c Collection<?>
-	 * @return boolean * @see java.util.List#removeAll(Collection<?>)
+	 * @return boolean
+	 * @see java.util.List#removeAll(Collection)
 	 */
 	@Override
 	public boolean removeAll(Collection<?> c)
@@ -713,7 +721,8 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		
 		/**
 		 * Method hasNext.
-		 * @return boolean * @see java.util.Iterator#hasNext()
+		 * @return boolean
+		 * @see java.util.Iterator#hasNext()
 		 */
 		@Override
 		public boolean hasNext()
@@ -772,7 +781,8 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		
 		/**
 		 * Method hasPrevious.
-		 * @return boolean * @see java.util.ListIterator#hasPrevious()
+		 * @return boolean
+		 * @see java.util.ListIterator#hasPrevious()
 		 */
 		@Override
 		public boolean hasPrevious()

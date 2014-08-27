@@ -75,7 +75,8 @@ public final class WeaponTemplate extends ItemTemplate
 		
 		/**
 		 * Method mask.
-		 * @return long * @see lineage2.gameserver.templates.item.ItemType#mask()
+		 * @return long
+		 * @see lineage2.gameserver.templates.item.ItemType#mask()
 		 */
 		@Override
 		public long mask()

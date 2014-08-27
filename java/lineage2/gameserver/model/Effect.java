@@ -970,7 +970,8 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	
 	/**
 	 * Method isFuncEnabled.
-	 * @return boolean * @see lineage2.gameserver.stats.funcs.FuncOwner#isFuncEnabled()
+	 * @return boolean
+	 * @see lineage2.gameserver.stats.funcs.FuncOwner#isFuncEnabled()
 	 */
 	@Override
 	public boolean isFuncEnabled()
@@ -980,7 +981,8 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	
 	/**
 	 * Method overrideLimits.
-	 * @return boolean * @see lineage2.gameserver.stats.funcs.FuncOwner#overrideLimits()
+	 * @return boolean
+	 * @see lineage2.gameserver.stats.funcs.FuncOwner#overrideLimits()
 	 */
 	@Override
 	public boolean overrideLimits()

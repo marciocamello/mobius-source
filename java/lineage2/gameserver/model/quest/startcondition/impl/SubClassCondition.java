@@ -31,7 +31,8 @@ public class SubClassCondition implements ICheckStartCondition
 	/**
 	 * Method checkCondition.
 	 * @param player Player
-	 * @return boolean * @see lineage2.gameserver.model.quest.startcondition.ICheckStartCondition#checkCondition(Player)
+	 * @return boolean
+	 * @see lineage2.gameserver.model.quest.startcondition.ICheckStartCondition#checkCondition(Player)
 	 */
 	@Override
 	public boolean checkCondition(Player player)

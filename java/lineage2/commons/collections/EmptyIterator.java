@@ -44,7 +44,8 @@ public class EmptyIterator<E> implements Iterator<E>
 	
 	/**
 	 * Method hasNext.
-	 * @return boolean * @see java.util.Iterator#hasNext()
+	 * @return boolean
+	 * @see java.util.Iterator#hasNext()
 	 */
 	@Override
 	public boolean hasNext()

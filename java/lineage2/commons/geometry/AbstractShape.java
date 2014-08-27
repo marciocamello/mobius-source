@@ -26,7 +26,8 @@ abstract class AbstractShape implements Shape
 	 * @param x int
 	 * @param y int
 	 * @param z int
-	 * @return boolean * @see lineage2.commons.geometry.Shape#isInside(int, int, int)
+	 * @return boolean
+	 * @see lineage2.commons.geometry.Shape#isInside(int, int, int)
 	 */
 	@Override
 	public boolean isInside(int x, int y, int z)

@@ -95,7 +95,8 @@ public class GArray<E> implements Collection<E>
 	
 	/**
 	 * Method isEmpty.
-	 * @return boolean * @see java.util.Collection#isEmpty()
+	 * @return boolean
+	 * @see java.util.Collection#isEmpty()
 	 */
 	@Override
 	public boolean isEmpty()
@@ -160,7 +161,7 @@ public class GArray<E> implements Collection<E>
 	/**
 	 * Method add.
 	 * @param e E
-	 * @return boolean * @see java.util.Collection#add(E)
+	 * @return boolean
 	 */
 	@Override
 	public boolean add(E e)
@@ -173,7 +174,8 @@ public class GArray<E> implements Collection<E>
 	/**
 	 * Method remove.
 	 * @param o Object
-	 * @return boolean * @see java.util.Collection#remove(Object)
+	 * @return boolean
+	 * @see java.util.Collection#remove(Object)
 	 */
 	@Override
 	public boolean remove(Object o)
@@ -294,7 +296,8 @@ public class GArray<E> implements Collection<E>
 	/**
 	 * Method contains.
 	 * @param o Object
-	 * @return boolean * @see java.util.Collection#contains(Object)
+	 * @return boolean
+	 * @see java.util.Collection#contains(Object)
 	 */
 	@Override
 	public boolean contains(Object o)
@@ -326,7 +329,8 @@ public class GArray<E> implements Collection<E>
 	/**
 	 * Method addAll.
 	 * @param c Collection<? extends E>
-	 * @return boolean * @see java.util.Collection#addAll(Collection<? extends E>)
+	 * @return boolean
+	 * @see java.util.Collection#addAll(Collection)
 	 */
 	@Override
 	public boolean addAll(Collection<? extends E> c)
@@ -353,7 +357,8 @@ public class GArray<E> implements Collection<E>
 	/**
 	 * Method removeAll.
 	 * @param c Collection<?>
-	 * @return boolean * @see java.util.Collection#removeAll(Collection<?>)
+	 * @return boolean
+	 * @see java.util.Collection#removeAll(Collection)
 	 */
 	@Override
 	public boolean removeAll(Collection<?> c)
@@ -377,7 +382,8 @@ public class GArray<E> implements Collection<E>
 	/**
 	 * Method retainAll.
 	 * @param c Collection<?>
-	 * @return boolean * @see java.util.Collection#retainAll(Collection<?>)
+	 * @return boolean
+	 * @see java.util.Collection#retainAll(Collection)
 	 */
 	@Override
 	public boolean retainAll(Collection<?> c)
@@ -401,7 +407,8 @@ public class GArray<E> implements Collection<E>
 	/**
 	 * Method containsAll.
 	 * @param c Collection<?>
-	 * @return boolean * @see java.util.Collection#containsAll(Collection<?>)
+	 * @return boolean
+	 * @see java.util.Collection#containsAll(Collection)
 	 */
 	@Override
 	public boolean containsAll(Collection<?> c)
@@ -493,7 +500,8 @@ public class GArray<E> implements Collection<E>
 		
 		/**
 		 * Method hasNext.
-		 * @return boolean * @see java.util.Iterator#hasNext()
+		 * @return boolean
+		 * @see java.util.Iterator#hasNext()
 		 */
 		@Override
 		public boolean hasNext()

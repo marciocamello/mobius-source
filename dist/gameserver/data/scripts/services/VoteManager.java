@@ -302,7 +302,8 @@ public final class VoteManager extends Functions implements IVoicedCommandHandle
 	 * @param command String
 	 * @param activeChar Player
 	 * @param args String
-	 * @return boolean * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 * @return boolean
+	 * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
 	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String args)

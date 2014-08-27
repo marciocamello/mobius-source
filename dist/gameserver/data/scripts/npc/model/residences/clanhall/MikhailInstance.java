@@ -45,7 +45,8 @@ public final class MikhailInstance extends _34BossMinionInstance
 	
 	/**
 	 * Method teleChatSay.
-	 * @return NpcString * @see npc.model.residences.clanhall._34SiegeGuard#teleChatSay()
+	 * @return NpcString
+	 * @see npc.model.residences.clanhall._34SiegeGuard#teleChatSay()
 	 */
 	@Override
 	public NpcString teleChatSay()

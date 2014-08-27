@@ -600,7 +600,8 @@ public class SchedulingPattern
 		/**
 		 * Method parse.
 		 * @param value String
-		 * @return int * @throws Exception * @see lineage2.commons.time.cron.SchedulingPattern$ValueParser#parse(String)
+		 * @return int
+		 * @throws Exception
 		 */
 		@Override
 		public int parse(String value) throws Exception
@@ -626,7 +627,7 @@ public class SchedulingPattern
 		
 		/**
 		 * Method getMinValue.
-		 * @return int * @see lineage2.commons.time.cron.SchedulingPattern$ValueParser#getMinValue()
+		 * @return int
 		 */
 		@Override
 		public int getMinValue()
@@ -636,7 +637,7 @@ public class SchedulingPattern
 		
 		/**
 		 * Method getMaxValue.
-		 * @return int * @see lineage2.commons.time.cron.SchedulingPattern$ValueParser#getMaxValue()
+		 * @return int
 		 */
 		@Override
 		public int getMaxValue()
@@ -689,7 +690,8 @@ public class SchedulingPattern
 		/**
 		 * Method parse.
 		 * @param value String
-		 * @return int * @throws Exception * @see lineage2.commons.time.cron.SchedulingPattern$ValueParser#parse(String)
+		 * @return int
+		 * @throws Exception
 		 */
 		@Override
 		public int parse(String value) throws Exception
@@ -735,7 +737,8 @@ public class SchedulingPattern
 		/**
 		 * Method parse.
 		 * @param value String
-		 * @return int * @throws Exception * @see lineage2.commons.time.cron.SchedulingPattern$ValueParser#parse(String)
+		 * @return int
+		 * @throws Exception
 		 */
 		@Override
 		public int parse(String value) throws Exception
@@ -778,7 +781,8 @@ public class SchedulingPattern
 		/**
 		 * Method parse.
 		 * @param value String
-		 * @return int * @throws Exception * @see lineage2.commons.time.cron.SchedulingPattern$ValueParser#parse(String)
+		 * @return int
+		 * @throws Exception
 		 */
 		@Override
 		public int parse(String value) throws Exception
@@ -822,7 +826,7 @@ public class SchedulingPattern
 		/**
 		 * Method match.
 		 * @param value int
-		 * @return boolean * @see lineage2.commons.time.cron.SchedulingPattern$ValueMatcher#match(int)
+		 * @return boolean
 		 */
 		@Override
 		public boolean match(int value)
@@ -863,7 +867,7 @@ public class SchedulingPattern
 		/**
 		 * Method match.
 		 * @param value int
-		 * @return boolean * @see lineage2.commons.time.cron.SchedulingPattern$ValueMatcher#match(int)
+		 * @return boolean
 		 */
 		@Override
 		public boolean match(int value)
