@@ -37,7 +37,7 @@ public final class SupportMagic extends Functions
 	private static final int[][] _summonBuff = new int[][] {{1, 81, 15642, 1}, {1, 81, 15643, 1}, {1, 81, 15644, 1}, {1, 81, 15645, 1}, {1, 81, 15646, 1}, {1, 81, 15647, 1}, {1, 81, 15651, 1}, {16, 81, 15652, 1}, {16, 81, 15653, 1}};
 	// @formatter:on
 	private final static int minSupLvl = 1;
-	private final static int maxSupLvl = 81;
+	private final static int maxSupLvl = 85;
 	
 	/**
 	 * Method getSupportMagic.

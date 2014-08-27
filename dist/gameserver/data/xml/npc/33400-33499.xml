@@ -2553,7 +2553,7 @@
 		<set name="collision_height" value="23.0"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="TI.Newbie"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
