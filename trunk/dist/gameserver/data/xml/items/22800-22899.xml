@@ -1,6 +1,48 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
+	<weapon id="22807" name="Spezion's Claw" >
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="BranchSys3.Icon.g_spacia_claw_i00"/>
+		<set name="price" value="68020500"/>
+		<set name="type" value="DUALFIST"/>
+		<set name="ex_type" value="HAND_TO_HAND"/>
+		<set name="weight" value="1550"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="595"/>
+			<add stat="mAtk" order="0x10" value="226"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="4.0"/>
+			<add stat="accCombat" order="0x10" value="4.0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="22828" name="Ron's Dual Blunt Weapon">
+		<set name="crystal_type" value="R"/>
+		<set name="icon" value="BranchSys3.Icon.g_beam_dualblunt"/>
+		<set name="price" value="0"/>
+		<set name="type" value="DUALBLUNT"/>
+		<set name="weight" value="1740"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="rnd_dam" value="20"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="690"/>
+			<add stat="mAtk" order="0x10" value="275"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<set stat="baseCrit" order="0x08" value="80"/>
+		</for>
+	</weapon>
 	<etcitem id="22882" name="Hair Accessory Restoration Stone">
 		<set name="icon" value="BranchSys3.icon.g_bless_wp_processing_stone_r"/>
 		<set name="type" value="OTHER"/>
