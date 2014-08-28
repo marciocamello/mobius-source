@@ -92,6 +92,60 @@ public final class OnActionShift extends Functions
 			
 			String dialog;
 			
+			if (player.isGM())
+			{
+				dialog = HtmCache.getInstance().getNotNull("scripts/actions/admin.L2NpcInstance.onActionShift.htm", player);
+				dialog = dialog.replaceFirst("%name%", npc.getName());
+				dialog = dialog.replaceFirst("%id%", String.valueOf(npc.getNpcId()));
+				dialog = dialog.replaceFirst("%lvl%", String.valueOf(npc.getLevel()));
+				dialog = dialog.replaceFirst("%objid%", String.valueOf(npc.getObjectId()));
+				dialog = dialog.replaceFirst("%class%", String.valueOf(npc.getClass().getSimpleName().replaceFirst("L2", "").replaceFirst("Instance", "")));
+				dialog = dialog.replaceFirst("%race%", getNpcRaceById(npc.getTemplate().getRace()));
+				dialog = dialog.replaceFirst("%territory%", npc.getCastle() != null ? HtmlUtils.htmlResidenceName(npc.getCastle().getId()) : "None");
+				dialog = dialog.replaceFirst("%spawn%", npc.getSpawnedLoc().x + " " + npc.getSpawnedLoc().y + " " + npc.getSpawnedLoc().z);
+				dialog = dialog.replaceFirst("%loc%", npc.getLoc().x + " " + npc.getLoc().y + " " + npc.getLoc().z);
+				dialog = dialog.replaceFirst("%heading%", String.valueOf(npc.getLoc().h));
+				dialog = dialog.replaceFirst("%collision_radius%", String.valueOf(npc.getTemplate().getCollisionRadius()));
+				dialog = dialog.replaceFirst("%collision_height%", String.valueOf(npc.getTemplate().getCollisionHeight()));
+				dialog = dialog.replaceFirst("%loc2d%", String.valueOf((long) npc.getDistance(player)));
+				dialog = dialog.replaceFirst("%loc3d%", String.valueOf((long) npc.getDistance3D(player)));
+				dialog = dialog.replaceFirst("%resp%", String.valueOf((npc.getSpawn() != null) ? Util.formatTime(npc.getSpawn().getRespawnDelay()) : "0"));
+				dialog = dialog.replaceFirst("%aggro%", String.valueOf(String.valueOf(npc.getAggroRange())));
+				dialog = dialog.replaceFirst("%hp%", String.valueOf(npc.getCurrentHp()));
+				dialog = dialog.replaceFirst("%hpmax%", String.valueOf(npc.getTemplate().getBaseHpMax()));
+				dialog = dialog.replaceFirst("%mp%", String.valueOf(npc.getCurrentMp()));
+				dialog = dialog.replaceFirst("%mpmax%", String.valueOf(npc.getTemplate().getBaseMpMax()));
+				dialog = dialog.replaceFirst("%ai_intention%", npc.getAI().getIntention().name());
+				dialog = dialog.replaceFirst("%ai_clan%", npc.getClan() != null ? npc.getClan().getName() : "None");
+				dialog = dialog.replaceFirst("%patk%", String.valueOf(npc.getPAtk(null)));
+				dialog = dialog.replaceFirst("%matk%", String.valueOf(npc.getMAtk(null, null)));
+				dialog = dialog.replaceFirst("%pdef%", String.valueOf(npc.getPDef(null)));
+				dialog = dialog.replaceFirst("%mdef%", String.valueOf(npc.getMDef(null, null)));
+				dialog = dialog.replaceFirst("%accu%", String.valueOf(npc.getAccuracy()));
+				dialog = dialog.replaceFirst("%evas%", String.valueOf(npc.getEvasionRate(null)));
+				dialog = dialog.replaceFirst("%crit%", String.valueOf(npc.isMageClass() ? (int) npc.getMagicCriticalRate(null, null) : (int) npc.getCriticalHit(null, null)));
+				dialog = dialog.replaceFirst("%rspd%", String.valueOf(npc.getRunSpeed()));
+				dialog = dialog.replaceFirst("%aspd%", String.valueOf((int) npc.getAttackSpeedMultiplier()));
+				dialog = dialog.replaceFirst("%cspd%", String.valueOf(npc.getMAtkSpd()));
+				dialog = dialog.replaceFirst("%atkType%", String.valueOf(npc.getTemplate().getBaseAttackType().name()));
+				dialog = dialog.replaceFirst("%atkRng%", String.valueOf(npc.getTemplate().getBaseAtkRange()));
+				dialog = dialog.replaceFirst("%str%", String.valueOf(npc.getSTR()));
+				dialog = dialog.replaceFirst("%dex%", String.valueOf(npc.getDEX()));
+				dialog = dialog.replaceFirst("%con%", String.valueOf(npc.getCON()));
+				dialog = dialog.replaceFirst("%int%", String.valueOf(npc.getINT()));
+				dialog = dialog.replaceFirst("%wit%", String.valueOf(npc.getWIT()));
+				dialog = dialog.replaceFirst("%men%", String.valueOf(npc.getMEN()));
+				dialog = dialog.replaceFirst("%ele_dfire%", String.valueOf((int) npc.calcStat(Stats.DEFENCE_FIRE, 0, null, null)));
+				dialog = dialog.replaceFirst("%ele_dwater%", String.valueOf((int) npc.calcStat(Stats.DEFENCE_WATER, 0, null, null)));
+				dialog = dialog.replaceFirst("%ele_dwind%", String.valueOf((int) npc.calcStat(Stats.DEFENCE_WIND, 0, null, null)));
+				dialog = dialog.replaceFirst("%ele_dearth%", String.valueOf((int) npc.calcStat(Stats.DEFENCE_EARTH, 0, null, null)));
+				dialog = dialog.replaceFirst("%ele_dholy%", String.valueOf((int) npc.calcStat(Stats.DEFENCE_HOLY, 0, null, null)));
+				dialog = dialog.replaceFirst("%ele_ddark%", String.valueOf((int) npc.calcStat(Stats.DEFENCE_UNHOLY, 0, null, null)));
+				
+				show(dialog, player, npc);
+				return true;
+			}
+			
 			if (Config.ALT_FULL_NPC_STATS_PAGE)
 			{
 				dialog = HtmCache.getInstance().getNotNull("scripts/actions/player.L2NpcInstance.onActionShift.full.htm", player);
@@ -142,15 +196,7 @@ public final class OnActionShift extends Functions
 			dialog = dialog.replaceFirst("%expReward%", String.valueOf(npc.getExpReward()));
 			dialog = dialog.replaceFirst("%spReward%", String.valueOf(npc.getSpReward()));
 			dialog = dialog.replaceFirst("%runSpeed%", String.valueOf(npc.getRunSpeed()));
-			
-			if (player.isGM())
-			{
-				dialog = dialog.replaceFirst("%AI%", String.valueOf(npc.getAI()) + ",<br1>active: " + npc.getAI().isActive() + ",<br1>intention: " + npc.getAI().getIntention() + "<br>Spawn Location: " + npc.getSpawnedLoc().x + " " + npc.getSpawnedLoc().y + " " + npc.getSpawnedLoc().z + " (" + npc.getSpawnedLoc().h + ")");
-			}
-			else
-			{
-				dialog = dialog.replaceFirst("%AI%", "");
-			}
+			dialog = dialog.replaceFirst("%AI%", "");
 			
 			show(dialog, player, npc);
 		}
@@ -381,7 +427,7 @@ public final class OnActionShift extends Functions
 		
 		dialog.append("<br><center><button value=\"");
 		dialog.append("Refresh");
-		dialog.append("\" action=\"bypass -h scripts_actions.OnActionShift:effects\" width=100 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\" /></center></body></html>");
+		dialog.append("\" action=\"bypass -h scripts_actions.OnActionShift:effects\" width=100 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\" /></center></body></html>");
 		show(dialog.toString(), player, npc);
 	}
 	
@@ -531,7 +577,7 @@ public final class OnActionShift extends Functions
 		
 		dialog.append("</table><br><center><button value=\"");
 		dialog.append("Refresh");
-		dialog.append("\" action=\"bypass -h scripts_actions.OnActionShift:aggro\" width=100 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\" /></center></body></html>");
+		dialog.append("\" action=\"bypass -h scripts_actions.OnActionShift:aggro\" width=100 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\" /></center></body></html>");
 		show(dialog.toString(), player, npc);
 	}
 	
