@@ -231,7 +231,6 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -277,7 +276,6 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -323,7 +321,6 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -369,7 +366,6 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -415,7 +411,6 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>

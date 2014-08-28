@@ -3304,7 +3304,6 @@
 			<defence attribute="holy" value="120"/>
 			<defence attribute="unholy" value="120"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15067" name="Wynn Kai the Cat" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -3345,7 +3344,6 @@
 			<defence attribute="holy" value="140"/>
 			<defence attribute="unholy" value="140"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15068" name="Wynn Kai the Cat" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -3386,7 +3384,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15069" name="Wynn Kai the Cat" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -3427,7 +3424,6 @@
 			<defence attribute="holy" value="180"/>
 			<defence attribute="unholy" value="180"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15070" name="Wynn Kai the Cat" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -3468,7 +3464,6 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15071" name="Wynn Kai the Cat" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -3509,7 +3504,6 @@
 			<defence attribute="holy" value="240"/>
 			<defence attribute="unholy" value="240"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15072" name="Wynn Kai the Cat" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -3550,7 +3544,6 @@
 			<defence attribute="holy" value="260"/>
 			<defence attribute="unholy" value="260"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15073" name="Wynn Kai the Cat" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -3591,7 +3584,6 @@
 			<defence attribute="holy" value="280"/>
 			<defence attribute="unholy" value="280"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15074" name="Wynn Feline King" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -3632,7 +3624,6 @@
 			<defence attribute="holy" value="120"/>
 			<defence attribute="unholy" value="120"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15075" name="Wynn Feline King" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -3673,7 +3664,6 @@
 			<defence attribute="holy" value="140"/>
 			<defence attribute="unholy" value="140"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15076" name="Wynn Feline King" title="">
 		<set name="collision_radius" value="7.5"/>
@@ -3714,7 +3704,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15077" name="Wynn Feline King" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -3755,7 +3744,6 @@
 			<defence attribute="holy" value="180"/>
 			<defence attribute="unholy" value="180"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15078" name="Wynn Feline King" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -3796,7 +3784,6 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15079" name="Wynn Feline King" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -3837,7 +3824,6 @@
 			<defence attribute="holy" value="240"/>
 			<defence attribute="unholy" value="240"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15080" name="Wynn Feline King" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -3878,7 +3864,6 @@
 			<defence attribute="holy" value="260"/>
 			<defence attribute="unholy" value="260"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15081" name="Wynn Feline King" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -3919,7 +3904,6 @@
 			<defence attribute="holy" value="280"/>
 			<defence attribute="unholy" value="280"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15082" name="Wynn Feline Queen" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -3960,7 +3944,6 @@
 			<defence attribute="holy" value="120"/>
 			<defence attribute="unholy" value="120"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15083" name="Wynn Feline Queen" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -4001,7 +3984,6 @@
 			<defence attribute="holy" value="140"/>
 			<defence attribute="unholy" value="140"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15084" name="Wynn Feline Queen" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -4042,7 +4024,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15085" name="Wynn Feline Queen" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -4083,7 +4064,6 @@
 			<defence attribute="holy" value="180"/>
 			<defence attribute="unholy" value="180"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15086" name="Wynn Feline Queen" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -4124,7 +4104,6 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15087" name="Wynn Feline Queen" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -4165,7 +4144,6 @@
 			<defence attribute="holy" value="240"/>
 			<defence attribute="unholy" value="240"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15088" name="Wynn Feline Queen" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -4206,7 +4184,6 @@
 			<defence attribute="holy" value="260"/>
 			<defence attribute="unholy" value="260"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15089" name="Wynn Feline Queen" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -4247,7 +4224,6 @@
 			<defence attribute="holy" value="280"/>
 			<defence attribute="unholy" value="280"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15090" name="Wynn Nightshade" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -4288,7 +4264,6 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15091" name="Wynn Nightshade" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -4329,7 +4304,6 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15092" name="Wynn Nightshade" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -4370,7 +4344,6 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15093" name="Wynn Nightshade" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -4411,7 +4384,6 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15094" name="Wynn Nightshade" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -4452,7 +4424,6 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15095" name="Wynn Nightshade" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -4493,7 +4464,6 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15096" name="Wynn Nightshade" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -4534,7 +4504,6 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15097" name="Wynn Nightshade" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -4575,7 +4544,6 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15098" name="Wynn Spectral Lord" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -4616,7 +4584,6 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="15099" name="Wynn Spectral Lord" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -4657,6 +4624,5 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
-		<skills/>
 	</npc>
 </list>

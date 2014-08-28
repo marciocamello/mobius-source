@@ -91,7 +91,6 @@
 			<defence attribute="holy" value="120"/>
 			<defence attribute="unholy" value="120"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="33102" name="" title="">
 		<set name="aggroRange" value="0"/>
@@ -134,7 +133,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="33103" name="" title="">
 		<set name="aggroRange" value="0"/>
@@ -177,7 +175,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="33104" name="" title="">
 		<set name="aggroRange" value="0"/>
@@ -220,7 +217,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="33105" name="Guard" title="">
 		<set name="aggroRange" value="0"/>
@@ -267,7 +263,6 @@
 			<defence attribute="holy" value="120"/>
 			<defence attribute="unholy" value="120"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="33106" name="Guard" title="">
 		<set name="aggroRange" value="0"/>
@@ -314,7 +309,6 @@
 			<defence attribute="holy" value="120"/>
 			<defence attribute="unholy" value="120"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="33107" name="" title="">
 		<set name="baseHpMax" value="7324"/>
@@ -356,7 +350,6 @@
 			<set name="TargetEnabled" value="false"/>
 			<set name="showName" value="false"/>
 		</ai_params>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -406,7 +399,6 @@
 			<set name="TargetEnabled" value="false"/>
 			<set name="showName" value="false"/>
 		</ai_params>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -456,7 +448,6 @@
 			<set name="TargetEnabled" value="false"/>
 			<set name="showName" value="false"/>
 		</ai_params>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -506,7 +497,6 @@
 			<set name="TargetEnabled" value="false"/>
 			<set name="showName" value="false"/>
 		</ai_params>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -556,7 +546,6 @@
 			<rhand item_id="15304"/>
 			<lhand item_id="15304"/>
 		</equip>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -606,7 +595,6 @@
 			<set name="TargetEnabled" value="false"/>
 			<set name="showName" value="false"/>
 		</ai_params>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -652,7 +640,6 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -702,7 +689,6 @@
 			<set name="TargetEnabled" value="false"/>
 			<set name="showName" value="false"/>
 		</ai_params>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -752,7 +738,6 @@
 			<set name="TargetEnabled" value="false"/>
 			<set name="showName" value="false"/>
 		</ai_params>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -805,7 +790,6 @@
 		<equip>
 			<rhand item_id="32772"/>
 		</equip>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -851,7 +835,6 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -897,7 +880,6 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -943,7 +925,6 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -997,7 +978,6 @@
 			<set name="TargetEnabled" value="false"/>
 			<set name="showName" value="false"/>
 		</ai_params>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1047,7 +1027,6 @@
 			<set name="TargetEnabled" value="false"/>
 			<set name="showName" value="false"/>
 		</ai_params>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1097,7 +1076,6 @@
 			<set name="TargetEnabled" value="false"/>
 			<set name="showName" value="false"/>
 		</ai_params>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1143,7 +1121,6 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1189,7 +1166,6 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Kukuru"/>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1239,7 +1215,6 @@
 			<set name="TargetEnabled" value="false"/>
 			<set name="showName" value="false"/>
 		</ai_params>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -1285,7 +1260,6 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -2625,7 +2599,6 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -4643,7 +4616,6 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -4689,7 +4661,6 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -4735,7 +4706,6 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
@@ -4784,7 +4754,6 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>

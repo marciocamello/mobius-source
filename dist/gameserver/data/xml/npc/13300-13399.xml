@@ -39,7 +39,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13301" name="Symbol of Lakcis" title="">
 		<set name="collision_radius" value="30.0"/>
@@ -79,7 +78,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13302" name="Incarnation" title="">
 		<set name="collision_radius" value="8.5"/>
@@ -119,7 +117,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13303" name="Incarnation" title="">
 		<set name="collision_radius" value="8.5"/>
@@ -159,7 +156,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13304" name="Incarnation" title="">
 		<set name="collision_radius" value="8.5"/>
@@ -199,7 +195,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13305" name="Incarnation" title="">
 		<set name="collision_radius" value="8.5"/>
@@ -239,7 +234,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13306" name="Damaged Area" title="">
 		<set name="collision_radius" value="10.0"/>
@@ -280,7 +274,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13307" name="Ant Hell" title="">
 		<set name="collision_radius" value="10.0"/>
@@ -321,7 +314,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13308" name="Ring of Yoke" title="">
 		<set name="collision_radius" value="10.0"/>
@@ -362,7 +354,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13309" name="Stealth Detector" title="">
 		<set name="collision_radius" value="10.0"/>
@@ -403,7 +394,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13310" name="Solo Dance" title="">
 		<set name="collision_radius" value="10.0"/>
@@ -443,7 +433,6 @@
 			<defence attribute="holy" value="120"/>
 			<defence attribute="unholy" value="120"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13311" name="Awakened Knight's Mount" title="">
 		<set name="collision_radius" value="31.0"/>
@@ -484,7 +473,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13312" name="Awakened Warrior's Mount" title="">
 		<set name="collision_radius" value="31.0"/>
@@ -525,7 +513,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13313" name="Awakened Rogue's Mount" title="">
 		<set name="collision_radius" value="31.0"/>
@@ -566,7 +553,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13314" name="Awakened Archer's Mount" title="">
 		<set name="collision_radius" value="31.0"/>
@@ -607,7 +593,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13315" name="Awakened Wizard's Mount" title="">
 		<set name="collision_radius" value="31.0"/>
@@ -648,7 +633,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13316" name="Awakened Summoner's Mount" title="">
 		<set name="collision_radius" value="31.0"/>
@@ -689,7 +673,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13317" name="Awakened Enchanter's Mount" title="">
 		<set name="collision_radius" value="31.0"/>
@@ -730,7 +713,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13318" name="Awakened Healer's Mount" title="">
 		<set name="collision_radius" value="31.0"/>
@@ -771,7 +753,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13319" name="Shadow of Hell" title="">
 		<set name="collision_radius" value="10.0"/>
@@ -811,7 +792,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13320" name="Shadow of Hell" title="">
 		<set name="collision_radius" value="10.0"/>
@@ -851,7 +831,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13321" name="Shadow of Hell" title="">
 		<set name="collision_radius" value="10.0"/>
@@ -891,7 +870,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13322" name="Shadow of Hell" title="">
 		<set name="collision_radius" value="10.0"/>
@@ -931,7 +909,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13323" name="Whisper of Fear" title="">
 		<set name="collision_radius" value="10.0"/>
@@ -971,7 +948,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13324" name="Whisper of Fear" title="">
 		<set name="collision_radius" value="10.0"/>
@@ -1011,7 +987,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13325" name="Whisper of Fear" title="">
 		<set name="collision_radius" value="10.0"/>
@@ -1051,7 +1026,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13326" name="Severe Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -1091,7 +1065,6 @@
 			<defence attribute="holy" value="120"/>
 			<defence attribute="unholy" value="120"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13327" name="Yoke Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -1131,7 +1104,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13328" name="Decoy" title="">
 		<set name="collision_radius" value="8.5"/>
@@ -1171,7 +1143,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13329" name="Illusion" title="">
 		<set name="collision_radius" value="8.5"/>
@@ -1211,7 +1182,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13330" name="Kukuru" title="">
 		<set name="collision_radius" value="20.0"/>
@@ -1251,7 +1221,6 @@
 			<defence attribute="holy" value="260"/>
 			<defence attribute="unholy" value="260"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13331" name="Guitar Fairy" title="">
 		<set name="collision_radius" value="3.0"/>
@@ -1292,7 +1261,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13332" name="Maracas Fairy" title="">
 		<set name="collision_radius" value="3.0"/>
@@ -1333,7 +1301,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13333" name="Cymbal Fairy" title="">
 		<set name="collision_radius" value="3.0"/>
@@ -1374,7 +1341,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13334" name="Drums Fairy" title="">
 		<set name="collision_radius" value="3.0"/>
@@ -1415,7 +1381,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13335" name="Pipe Organ Fairy" title="">
 		<set name="collision_radius" value="3.0"/>
@@ -1456,7 +1421,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13336" name="Bugle Fairy" title="">
 		<set name="collision_radius" value="3.0"/>
@@ -1497,7 +1461,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13337" name="Vampiric Fairy" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -1538,7 +1501,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13338" name="Enchanting Stone" title="">
 		<set name="collision_radius" value="13.0"/>
@@ -1579,7 +1541,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13339" name="Illusion" title="">
 		<set name="collision_radius" value="8.5"/>
@@ -1619,7 +1580,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13340" name="Kukurin" title="">
 		<set name="collision_radius" value="20.0"/>
@@ -1659,7 +1619,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13341" name="Vitality Recovering Cake" title="">
 		<set name="collision_radius" value="0.01"/>
@@ -1699,7 +1658,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13342" name="Specter of Light" title="">
 		<set name="collision_radius" value="125.0"/>
@@ -1739,7 +1697,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13343" name="Specter of Mysterious Light" title="">
 		<set name="collision_radius" value="125.0"/>
@@ -1779,7 +1736,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13344" name="Specter of Mysterious Light" title="">
 		<set name="collision_radius" value="125.0"/>
@@ -1819,7 +1775,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13345" name="Specter of Mysterious Light" title="">
 		<set name="collision_radius" value="125.0"/>
@@ -1859,7 +1814,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13346" name="Specter of Light" title="">
 		<set name="collision_radius" value="125.0"/>
@@ -1899,7 +1853,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13347" name="Specter of Light" title="">
 		<set name="collision_radius" value="125.0"/>
@@ -1939,7 +1892,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13348" name="Specter of Light" title="">
 		<set name="collision_radius" value="125.0"/>
@@ -1979,7 +1931,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13349" name="Shard of Light" title="">
 		<set name="collision_radius" value="125.0"/>
@@ -2019,7 +1970,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13350" name="Black Bear Mount" title="">
 		<set name="collision_radius" value="28.0"/>
@@ -2059,7 +2009,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13351" name="Rosy Rose" title="">
 		<set name="collision_radius" value="22.7"/>
@@ -2099,7 +2048,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13352" name="Deadly Rose" title="">
 		<set name="collision_radius" value="24.3"/>
@@ -2139,7 +2087,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13353" name="Knight of Chaos" title="">
 		<set name="collision_radius" value="19.0"/>
@@ -2179,7 +2126,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13354" name="T-shirt Portal" title="">
 		<set name="collision_radius" value="10.0"/>
@@ -2345,7 +2291,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13358" name="Severe Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -2385,7 +2330,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13359" name="Severe Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -2425,7 +2369,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13360" name="Severe Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -2465,7 +2408,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13361" name="Severe Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -2505,7 +2447,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13362" name="Severe Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -2545,7 +2486,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13363" name="Severe Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -2585,7 +2525,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13364" name="Severe Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -2625,7 +2564,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13365" name="Severe Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -2665,7 +2603,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13366" name="Severe Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -2705,7 +2642,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13367" name="Yoke Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -2745,7 +2681,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13368" name="Yoke Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -2785,7 +2720,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13369" name="Yoke Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -2825,7 +2759,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13370" name="Yoke Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -2865,7 +2798,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13371" name="Yoke Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -2905,7 +2837,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13372" name="Yoke Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -2945,7 +2876,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13373" name="Yoke Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -2985,7 +2915,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13374" name="Yoke Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -3025,7 +2954,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13375" name="Yoke Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -3065,7 +2993,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13376" name="Yoke Trap" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -3105,7 +3032,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13377" name="Solo Dance" title="">
 		<set name="collision_radius" value="10.0"/>
@@ -3146,7 +3072,6 @@
 			<defence attribute="holy" value="0"/>
 			<defence attribute="unholy" value="0"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13378" name="Solo Dance" title="">
 		<set name="collision_radius" value="10.0"/>
@@ -3187,7 +3112,6 @@
 			<defence attribute="holy" value="0"/>
 			<defence attribute="unholy" value="0"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13379" name="Solo Dance" title="">
 		<set name="collision_radius" value="10.0"/>
@@ -3228,7 +3152,6 @@
 			<defence attribute="holy" value="0"/>
 			<defence attribute="unholy" value="0"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13380" name="Solo Dance" title="">
 		<set name="collision_radius" value="10.0"/>
@@ -3269,7 +3192,6 @@
 			<defence attribute="holy" value="0"/>
 			<defence attribute="unholy" value="0"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13381" name="Solo Dance" title="">
 		<set name="collision_radius" value="10.0"/>
@@ -3310,7 +3232,6 @@
 			<defence attribute="holy" value="0"/>
 			<defence attribute="unholy" value="0"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="13390" name="Lyn Draco" title="">
 		<set name="collision_radius" value="46.0"/>
@@ -3351,6 +3272,5 @@
 			<defence attribute="holy" value="0"/>
 			<defence attribute="unholy" value="0"/>
 		</attributes>
-		<skills/>
 	</npc>
 </list>
