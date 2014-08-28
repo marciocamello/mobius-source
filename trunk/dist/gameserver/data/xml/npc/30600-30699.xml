@@ -35,7 +35,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="NewbieGuide"/>
+		<set name="type" value="Npc"/>
 		<skills>
 			<skill id="4416" level="16"/>
 		</skills>
@@ -81,7 +81,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="NewbieGuide"/>
+		<set name="type" value="Npc"/>
 		<skills>
 			<skill id="4416" level="18"/>
 		</skills>
@@ -127,7 +127,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="NewbieGuide"/>
+		<set name="type" value="Npc"/>
 		<skills>
 			<skill id="4416" level="17"/>
 		</skills>

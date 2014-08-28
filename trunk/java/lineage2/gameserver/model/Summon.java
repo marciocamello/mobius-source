@@ -17,10 +17,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Future;
 
-import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.ai.SummonAI;
 import lineage2.gameserver.dao.EffectsDAO;
@@ -47,7 +45,6 @@ import lineage2.gameserver.network.serverpackets.PetStatusShow;
 import lineage2.gameserver.network.serverpackets.PetStatusUpdate;
 import lineage2.gameserver.network.serverpackets.RelationChanged;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
-import lineage2.gameserver.skills.EffectType;
 import lineage2.gameserver.skills.effects.EffectTemplate;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
@@ -112,43 +109,46 @@ public abstract class Summon extends Playable
 			party.broadcastToPartyMembers(owner, new ExPartyPetWindowAdd(this));
 		}
 		
-		if (owner.getEffectList().getEffectByStackType("ServitorShare") != null)
+		if (owner.getEffectList().getAllEffects() != null)
 		{
-			final Creature SummonEffect = this;
-			ThreadPoolManager.getInstance().execute(new RunnableImpl()
+			for (Effect ef : owner.getEffectList().getAllEffects())
 			{
-				@Override
-				public void runImpl()
-				{
-					final Player owner = getPlayer();
-					final Skill skl = owner.getEffectList().getEffectByStackType("ServitorShare").getSkill();
-					long currenttime = owner.getEffectList().getEffectByStackType("ServitorShare").getTime();
-					long duration = owner.getEffectList().getEffectByStackType("ServitorShare").getDuration();
-					
-					for (EffectTemplate et : skl.getEffectTemplates())
-					{
-						if ((et == null) || (et.getEffectType() != EffectType.ServitorShare))
-						{
-							continue;
-						}
-						
-						Env env = new Env(owner, SummonEffect, skl);
-						final Effect effect = et.getEffect(env);
-						
-						if (effect == null)
-						{
-							continue;
-						}
-						
-						effect.setCount(1);
-						effect.setPeriod(duration - currenttime);
-						effect.schedule();
-					}
-				}
-			});
+				cloneOwnerEffect(ef);
+			}
 		}
 		
 		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+	}
+	
+	/**
+	 * Method cloneOwnerEffect.
+	 * @param ef Effect
+	 */
+	private void cloneOwnerEffect(Effect ef)
+	{
+		Skill skill = ef.getSkill();
+		
+		if (skill.isOffensive() || skill.isToggle() || skill.isCubicSkill())
+		{
+			return;
+		}
+		
+		for (EffectTemplate et : skill.getEffectTemplates())
+		{
+			if (!et._applyOnSummon || et._applyOnCaster || et.isOffensive(skill.isOffensive()))
+			{
+				continue;
+			}
+			
+			Effect effect = et.getEffect(new Env(this, this, skill));
+			
+			if (effect != null)
+			{
+				effect.setCount(ef.getCount());
+				effect.setPeriod(ef.getCount() == 1 ? ef.getPeriod() - ef.getTime() : ef.getPeriod());
+				getEffectList().addEffect(effect);
+			}
+		}
 	}
 	
 	/**
