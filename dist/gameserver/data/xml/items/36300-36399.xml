@@ -106,4 +106,32 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_treasure_box_i08"/>
 	</etcitem>
+	<etcitem id="36386" name="Giant's Scroll: Enchant Weapon (R-grade)">
+		<set name="class" value="MISC"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.scroll_of_enchant_weapon_i06"/>
+		<set name="price" value="5000000"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="SCROLL"/>
+		<set name="weight" value="120"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
+	<etcitem id="36389" name="Giant's Scroll: Enchant Armor (R-grade)">
+		<set name="class" value="MISC"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.scroll_of_enchant_armor_i06"/>
+		<set name="price" value="500000"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="SCROLL"/>
+		<set name="weight" value="120"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</etcitem>
 </list>

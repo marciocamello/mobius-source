@@ -763,4 +763,76 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.blessed_scroll_of_enchant_armor_i06"/>
 	</etcitem>
+	<etcitem id="36285" name="Unbind Scroll: Armor (R-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.cursed_free_r99"/>
+	</etcitem>
+	<etcitem id="36286" name="Unbind Scroll: Armor (R95-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.cursed_free_r99"/>
+	</etcitem>
+	<etcitem id="36287" name="Unbind Scroll: Armor (R99-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.cursed_free_r99"/>
+	</etcitem>
+	<etcitem id="36288" name="Unbind Scroll: Weapon (R-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.cursed_free_r99"/>
+	</etcitem>
+		<etcitem id="36289" name="Unbind Scroll: Weapon (R95-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.cursed_free_r99"/>
+	</etcitem>
+	<etcitem id="36290" name="Unbind Scroll: Weapon (R99-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.cursed_free_r99"/>
+	</etcitem>
+	<etcitem id="36291" name="Unbind Scroll: Weapon (R-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.cursed_free_r99"/>
+	</etcitem>
+	<etcitem id="36292" name="Unbind Scroll: Weapon (R95-grade)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="weight" value="100"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="icon" value="icon.cursed_free_r99"/>
+	</etcitem>
 </list>
