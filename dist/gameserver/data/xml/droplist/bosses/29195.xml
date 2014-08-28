@@ -2,79 +2,46 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../DropListData.xsd">
 	<npc id="29195">
 		<droplist>
-			<category id="1" chance="43.28528">
-				<item id="18147" min="1" max="1" chance="9.15669"/>
-				<item id="18142" min="1" max="1" chance="9.13167"/>
-				<item id="18137" min="1" max="1" chance="9.12866"/>
-				<item id="18138" min="1" max="1" chance="9.12566"/>
-				<item id="18143" min="1" max="1" chance="9.09764"/>
-				<item id="18145" min="1" max="1" chance="9.09664"/>
-				<item id="18144" min="1" max="1" chance="9.08763"/>
-				<item id="18141" min="1" max="1" chance="9.05559"/>
-				<item id="18146" min="1" max="1" chance="9.04159"/>
-				<item id="18140" min="1" max="1" chance="9.03958"/>
-				<item id="18139" min="1" max="1" chance="9.03859"/>
+			<category id="1" chance="100">
+				<item id="19456" min="1" max="1" chance="9.26928"/>
+				<item id="17348" min="1" max="1" chance="1.21786"/>
+				<item id="17343" min="1" max="1" chance="1.21786"/>
+				<item id="17347" min="1" max="1" chance="1.08254"/>
+				<item id="17352" min="1" max="1" chance="1.08254"/>
+				<item id="17340" min="1" max="1" chance="1.01488"/>
+				<item id="17345" min="1" max="1" chance="1.01488"/>
+				<item id="17338" min="1" max="1" chance="0.94722"/>
+				<item id="17349" min="1" max="1" chance="0.94722"/>
+				<item id="17339" min="1" max="1" chance="0.87956"/>
+				<item id="17353" min="1" max="1" chance="0.87956"/>
+				<item id="17341" min="1" max="1" chance="0.87956"/>
+				<item id="17344" min="1" max="1" chance="0.81190"/>
+				<item id="17350" min="1" max="1" chance="0.81190"/>
+				<item id="17342" min="1" max="1" chance="0.74424"/>
+				<item id="17351" min="1" max="1" chance="0.74424"/>
+				<item id="17354" min="1" max="1" chance="0.74424"/>
+				<item id="17346" min="1" max="1" chance="0.60893"/>
+				<item id="17324" min="1" max="1" chance="0.54127"/>
+				<item id="17330" min="1" max="1" chance="0.54127"/>
+				<item id="17333" min="1" max="1" chance="0.47361"/>
+				<item id="17334" min="1" max="1" chance="0.40595"/>
+				<item id="17327" min="1" max="1" chance="0.40595"/>
+				<item id="17329" min="1" max="1" chance="0.33829"/>
+				<item id="17325" min="1" max="1" chance="0.33829"/>
+				<item id="19451" min="1" max="1" chance="0.33829"/>
+				<item id="17326" min="1" max="1" chance="0.27063"/>
+				<item id="17331" min="1" max="1" chance="0.27063"/>
+				<item id="19452" min="1" max="1" chance="0.27063"/>
+				<item id="17328" min="1" max="1" chance="0.13531"/>
+				<item id="19453" min="1" max="1" chance="0.06765"/>
+				<item id="17332" min="1" max="1" chance="0.06765"/>
+				<item id="19448" min="1" max="1" chance="80.98782"/>
+				<item id="36285" min="1" max="1" chance="38.49797"/>
+				<item id="19444" min="1" max="1" chance="25.43978"/>
+				<item id="36286" min="1" max="1" chance="11.43437"/>
+				<item id="19445" min="1" max="1" chance="4.73612"/>
 			</category>
-			<category id="2" chance="3.57445">
-				<item id="17325" min="1" max="1" chance="9.0909"/>
-				<item id="17334" min="1" max="1" chance="9.0909"/>
-				<item id="17333" min="1" max="1" chance="9.0909"/>
-				<item id="17332" min="1" max="1" chance="9.0909"/>
-				<item id="17330" min="1" max="1" chance="9.0909"/>
-				<item id="17329" min="1" max="1" chance="9.0909"/>
-				<item id="17324" min="1" max="1" chance="9.0909"/>
-				<item id="17328" min="1" max="1" chance="9.0909"/>
-				<item id="17331" min="1" max="1" chance="9.0909"/>
-				<item id="17327" min="1" max="1" chance="9.0909"/>
-				<item id="17326" min="1" max="1" chance="9.0909"/>
-			</category>
-			<category id="3" chance="43.31906">
-				<item id="18167" min="1" max="1" chance="5.94602"/>
-				<item id="18154" min="1" max="1" chance="5.93900"/>
-				<item id="18164" min="1" max="1" chance="5.93800"/>
-				<item id="18156" min="1" max="1" chance="5.91799"/>
-				<item id="18157" min="1" max="1" chance="5.90799"/>
-				<item id="18165" min="1" max="1" chance="5.90499"/>
-				<item id="18158" min="1" max="1" chance="5.89800"/>
-				<item id="18159" min="1" max="1" chance="5.88200"/>
-				<item id="18153" min="1" max="1" chance="5.87999"/>
-				<item id="18155" min="1" max="1" chance="5.86898"/>
-				<item id="18162" min="1" max="1" chance="5.86700"/>
-				<item id="18160" min="1" max="1" chance="5.85499"/>
-				<item id="18166" min="1" max="1" chance="5.84800"/>
-				<item id="18163" min="1" max="1" chance="5.84500"/>
-				<item id="18152" min="1" max="1" chance="5.84398"/>
-				<item id="18161" min="1" max="1" chance="5.82999"/>
-				<item id="18151" min="1" max="1" chance="5.82798"/>
-			</category>
-			<category id="4" chance="5.52415">
-				<item id="17338" min="1" max="1" chance="5.88235"/>
-				<item id="17339" min="1" max="1" chance="5.88235"/>
-				<item id="17353" min="1" max="1" chance="5.88235"/>
-				<item id="17354" min="1" max="1" chance="5.88235"/>
-				<item id="17351" min="1" max="1" chance="5.88235"/>
-				<item id="17350" min="1" max="1" chance="5.88235"/>
-				<item id="17348" min="1" max="1" chance="5.88235"/>
-				<item id="17347" min="1" max="1" chance="5.88235"/>
-				<item id="17346" min="1" max="1" chance="5.88235"/>
-				<item id="17345" min="1" max="1" chance="5.88235"/>
-				<item id="17344" min="1" max="1" chance="5.88235"/>
-				<item id="17343" min="1" max="1" chance="5.88235"/>
-				<item id="17349" min="1" max="1" chance="5.88235"/>
-				<item id="17342" min="1" max="1" chance="5.88235"/>
-				<item id="17341" min="1" max="1" chance="5.88235"/>
-				<item id="17340" min="1" max="1" chance="5.88235"/>
-				<item id="17352" min="1" max="1" chance="5.88235"/>
-			</category>
-			<category id="5" chance="4.29712">
-				<item id="19453" min="1" max="1" chance="33.6257"/>
-				<item id="19452" min="1" max="1" chance="33.2929"/>
-				<item id="19451" min="1" max="1" chance="33.0812"/>
-			</category>
-			<category id="6" chance="34.242">
-				<item id="19448" min="1" max="1" chance="85.47982"/>
-				<item id="19444" min="1" max="1" chance="14.52018"/>
-			</category>
+
 		</droplist>
 	</npc>
 </list>
