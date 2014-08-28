@@ -3657,12 +3657,12 @@
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="334"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="baseRunSpd" value="20"/>
-		<set name="baseWalkSpd" value="20"/>
+		<set name="baseRunSpd" value="130"/>
+		<set name="baseWalkSpd" value="30"/>
 		<set name="collision_height" value="13.0"/>
 		<set name="collision_radius" value="10.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="DefaultAI"/>
+		<set name="ai_type" value="talkingisland.OldManAndBoy"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3689,7 +3689,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
-		<skills/>
+		<ai_params>
+			<set name="TargetEnabled" value="false"/>
+			<set name="showName" value="false"/>
+		</ai_params>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>
