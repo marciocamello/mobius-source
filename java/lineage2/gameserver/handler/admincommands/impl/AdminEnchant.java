@@ -12,9 +12,11 @@
  */
 package lineage2.gameserver.handler.admincommands.impl;
 
+import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
@@ -50,7 +52,14 @@ public class AdminEnchant implements IAdminCommandHandler
 		admin_setlbr,
 		admin_setrbr,
 		admin_setbelt,
-		admin_enchant
+		admin_enchant,
+		admin_setlh, // elements
+		admin_setlc,
+		admin_setll,
+		admin_setlg,
+		admin_setlb,
+		admin_setlw,
+		admin_setls
 	}
 	
 	/**
@@ -73,6 +82,7 @@ public class AdminEnchant implements IAdminCommandHandler
 		}
 		
 		int armorType = -1;
+		boolean isElement = false;
 		
 		switch (command)
 		{
@@ -155,6 +165,41 @@ public class AdminEnchant implements IAdminCommandHandler
 			case admin_setbelt:
 				armorType = Inventory.PAPERDOLL_BELT;
 				break;
+			
+			case admin_setlh:
+				isElement = true;
+				armorType = Inventory.PAPERDOLL_HEAD;
+				break;
+			
+			case admin_setlc:
+				isElement = true;
+				armorType = Inventory.PAPERDOLL_CHEST;
+				break;
+			
+			case admin_setlg:
+				isElement = true;
+				armorType = Inventory.PAPERDOLL_GLOVES;
+				break;
+			
+			case admin_setlb:
+				isElement = true;
+				armorType = Inventory.PAPERDOLL_FEET;
+				break;
+			
+			case admin_setll:
+				isElement = true;
+				armorType = Inventory.PAPERDOLL_LEGS;
+				break;
+			
+			case admin_setlw:
+				isElement = true;
+				armorType = Inventory.PAPERDOLL_RHAND;
+				break;
+			
+			case admin_setls:
+				isElement = true;
+				armorType = Inventory.PAPERDOLL_LHAND;
+				break;
 		}
 		
 		if ((armorType == -1) || (wordList.length < 2))
@@ -163,26 +208,49 @@ public class AdminEnchant implements IAdminCommandHandler
 			return true;
 		}
 		
-		try
+		if (!isElement)
 		{
-			int ench = Integer.parseInt(wordList[1]);
-			
-			if ((ench < 0) || (ench > 65535))
+			try
 			{
-				activeChar.sendMessage("You must set the enchant level to be between 0-65535.");
+				int ench = Integer.parseInt(wordList[1]);
+				
+				if ((ench < 0) || (ench > 65535))
+				{
+					activeChar.sendMessage("You must set the enchant level to be between 0-65535.");
+				}
+				else
+				{
+					setEnchant(activeChar, ench, armorType);
+				}
 			}
-			else
+			catch (StringIndexOutOfBoundsException e)
 			{
-				setEnchant(activeChar, ench, armorType);
+				activeChar.sendMessage("Please specify a new enchant value.");
+			}
+			catch (NumberFormatException e)
+			{
+				activeChar.sendMessage("Please specify a valid new enchant value.");
 			}
 		}
-		catch (StringIndexOutOfBoundsException e)
+		else
 		{
-			activeChar.sendMessage("Please specify a new enchant value.");
-		}
-		catch (NumberFormatException e)
-		{
-			activeChar.sendMessage("Please specify a valid new enchant value.");
+			try
+			{
+				Element element = Element.getElementByName(wordList[1]);
+				int value = Integer.parseInt(wordList[2]);
+				if ((element == null) || (value < 0) || (value > 450))
+				{
+					activeChar.sendMessage("Usage: //setlh/setlc/setlg/setlb/setll/setlw/setls <element> <value>[0-450]");
+					return false;
+				}
+				
+				setElement(activeChar, element, value, armorType);
+			}
+			catch (Exception e)
+			{
+				activeChar.sendMessage("Usage: //setlh/setlc/setlg/setlb/setll/setlw/setls <element>[0-5] <value>[0-450]");
+				return false;
+			}
 		}
 		
 		showMainPage(activeChar);
@@ -228,6 +296,60 @@ public class AdminEnchant implements IAdminCommandHandler
 	}
 	
 	/**
+	 * Method setElement.
+	 * @param activeChar
+	 * @param element
+	 * @param value
+	 * @param armorType
+	 */
+	private void setElement(Player activeChar, Element element, int value, int armorType)
+	{
+		// get the target
+		GameObject target = activeChar.getTarget();
+		
+		if (target == null)
+		{
+			target = activeChar;
+		}
+		
+		if (!target.isPlayer())
+		{
+			activeChar.sendMessage("Wrong target type.");
+			return;
+		}
+		
+		Player player = (Player) target;
+		ItemInstance itemInstance = null;
+		
+		// only attempt to enchant if there is a weapon equipped
+		ItemInstance parmorInstance = player.getInventory().getPaperdollItem(armorType);
+		if ((parmorInstance != null) && (parmorInstance.isArmor() || parmorInstance.isWeapon()))
+		{
+			itemInstance = parmorInstance;
+		}
+		
+		if (itemInstance != null)
+		{
+			// set enchant value
+			player.getInventory().unEquipItem(itemInstance);
+			if (element.name() == "NONE")
+			{
+				itemInstance.setAttributeElement(element, 0);
+			}
+			else
+			{
+				itemInstance.setAttributeElement(element, value);
+			}
+			player.getInventory().equipItem(itemInstance);
+			
+			// send packets
+			InventoryUpdate iu = new InventoryUpdate();
+			iu.addModifiedItem(itemInstance);
+			player.sendPacket(iu);
+		}
+	}
+	
+	/**
 	 * Method showMainPage.
 	 * @param activeChar Player
 	 */
@@ -247,48 +369,16 @@ public class AdminEnchant implements IAdminCommandHandler
 			player = (Player) target;
 		}
 		
+		String dialog = HtmCache.getInstance().getNotNull("admin/enchant.htm", player);
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		StringBuilder replyMSG = new StringBuilder("<html><body>");
-		replyMSG.append("<center><table width=260><tr><td width=40>");
-		replyMSG.append("<button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\">");
-		replyMSG.append("</td><td width=180>");
-		replyMSG.append("<center>Enchant Equip for player: " + player.getName() + "</center>");
-		replyMSG.append("</td><td width=40>");
-		replyMSG.append("</td></tr></table></center><br>");
-		replyMSG.append("<center><table width=270><tr><td>");
-		replyMSG.append("<button value=\"Shirt\" action=\"bypass -h admin_setun $menu_command\" width=50 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
-		replyMSG.append("<button value=\"Helmet\" action=\"bypass -h admin_seteh $menu_command\" width=50 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
-		replyMSG.append("<button value=\"Cloak\" action=\"bypass -h admin_setba $menu_command\" width=50 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
-		replyMSG.append("<button value=\"Mask\" action=\"bypass -h admin_setha $menu_command\" width=50 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
-		replyMSG.append("<button value=\"Necklace\" action=\"bypass -h admin_seten $menu_command\" width=50 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr></table>");
-		replyMSG.append("</center><center><table width=270><tr><td>");
-		replyMSG.append("<button value=\"Weapon\" action=\"bypass -h admin_setew $menu_command\" width=50 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
-		replyMSG.append("<button value=\"Chest\" action=\"bypass -h admin_setec $menu_command\" width=50 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
-		replyMSG.append("<button value=\"Shield\" action=\"bypass -h admin_setes $menu_command\" width=50 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
-		replyMSG.append("<button value=\"Earring\" action=\"bypass -h admin_setre $menu_command\" width=50 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
-		replyMSG.append("<button value=\"Earring\" action=\"bypass -h admin_setle $menu_command\" width=50 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr></table>");
-		replyMSG.append("</center><center><table width=270><tr><td>");
-		replyMSG.append("<button value=\"Gloves\" action=\"bypass -h admin_seteg $menu_command\" width=50 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
-		replyMSG.append("<button value=\"Leggings\" action=\"bypass -h admin_setel $menu_command\" width=50 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
-		replyMSG.append("<button value=\"Boots\" action=\"bypass -h admin_seteb $menu_command\" width=50 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
-		replyMSG.append("<button value=\"Ring\" action=\"bypass -h admin_setrf $menu_command\" width=50 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
-		replyMSG.append("<button value=\"Ring\" action=\"bypass -h admin_setlf $menu_command\" width=50 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr></table>");
-		replyMSG.append("</center><center><table width=270><tr><td>");
-		replyMSG.append("<button value=\"Hair\" action=\"bypass -h admin_setdha $menu_command\" width=50 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
-		replyMSG.append("<button value=\"R-Bracelet\" action=\"bypass -h admin_setrbr $menu_command\" width=50 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
-		replyMSG.append("<button value=\"L-Bracelet\" action=\"bypass -h admin_setlbr $menu_command\" width=50 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
-		replyMSG.append("<button value=\"Belt\" action=\"bypass -h admin_setbelt $menu_command\" width=50 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr></table>");
-		replyMSG.append("</center><br>");
-		replyMSG.append("<center>[Enchant 0-65535]</center>");
-		replyMSG.append("<center><edit var=\"menu_command\" width=100 height=15></center><br>");
-		replyMSG.append("</body></html>");
-		adminReply.setHtml(replyMSG.toString());
+		adminReply.setHtml(dialog);
 		activeChar.sendPacket(adminReply);
 	}
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return Enum[]
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
 	 */
 	@Override
 	public Enum<?>[] getAdminCommandEnum()
