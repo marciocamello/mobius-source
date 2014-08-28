@@ -1302,8 +1302,8 @@
 		<set name="baseHpMax" value="7324"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="basePAtkSpd" value="299"/>
-		<set name="baseRunSpd" value="150"/>
-		<set name="baseWalkSpd" value="150"/>
+		<set name="baseRunSpd" value="130"/>
+		<set name="baseWalkSpd" value="30"/>
 		<set name="collision_height" value="22.25"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="aggroRange" value="0"/>
@@ -1340,9 +1340,7 @@
 		</ai_params>
 		<equip>
 			<rhand item_id="15304"/>
-			<lhand item_id="15304"/>
 		</equip>
-		<skills/>
 		<attributes>
 			<defence attribute="fire" value="150"/>
 			<defence attribute="water" value="150"/>

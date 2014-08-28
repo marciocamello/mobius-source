@@ -590,16 +590,12 @@
 		</npc>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-116649" y="255569" z="-1424" h="0"/>
-		<npc id="33578">
-			<set name="walker_route_id" value="1"/>
-		</npc>
+		<point x="-116712" y="255592" z="-1454" h="0"/>
+		<npc id="33578"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-116872" y="255624" z="-1454" h="15048"/>
-		<npc id="33027">
-			<set name="walker_route_id" value="1"/>
-		</npc>
+		<point x="-116493" y="257062" z="-1512" h="15048"/>
+		<npc id="33027"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-115865" y="257543" z="-1408" h="33704"/>
