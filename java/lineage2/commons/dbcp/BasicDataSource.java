@@ -83,7 +83,8 @@ public class BasicDataSource implements DataSource
 	/**
 	 * Method getConnection.
 	 * @param con Connection
-	 * @return Connection * @throws SQLException
+	 * @return Connection
+	 * @throws SQLException
 	 * @throws SQLException
 	 */
 	public Connection getConnection(Connection con) throws SQLException
@@ -153,7 +154,8 @@ public class BasicDataSource implements DataSource
 	
 	/**
 	 * Method getLoginTimeout.
-	 * @return int * @see javax.sql.CommonDataSource#getLoginTimeout()
+	 * @return int
+	 * @see javax.sql.CommonDataSource#getLoginTimeout()
 	 */
 	@Override
 	public int getLoginTimeout()
@@ -175,7 +177,8 @@ public class BasicDataSource implements DataSource
 	/**
 	 * Method unwrap.
 	 * @param iface Class<T>
-	 * @return T * @see java.sql.Wrapper#unwrap(Class<T>)
+	 * @return t
+	 * @see java.sql.Wrapper#unwrap(Class)
 	 */
 	@Override
 	public <T> T unwrap(Class<T> iface)
@@ -197,7 +200,8 @@ public class BasicDataSource implements DataSource
 	
 	/**
 	 * Method getConnection.
-	 * @return Connection * @throws SQLException
+	 * @return Connection
+	 * @throws SQLException
 	 * @see javax.sql.DataSource#getConnection()
 	 */
 	@Override

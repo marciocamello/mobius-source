@@ -40,8 +40,8 @@ public final class SubClassInfo
 	private static final Set<ClassId> SUBCLASS_SET_4 = EnumSet.of(ClassId.WARLOCK, ClassId.ELEMENTAL_SUMMONER, ClassId.PHANTOM_SUMMONER);
 	private static final Set<ClassId> SUBCLASS_SET_5 = EnumSet.of(ClassId.SORCERER, ClassId.SPELLSINGER, ClassId.SPELLHOWLER);
 	private static final Set<ClassId> SUBCLASS_SET_6 = EnumSet.of(ClassId.INSPECTOR);
-	@SuppressWarnings("rawtypes")
-	private static final EnumMap<ClassId, Set> SUBCLASS_SET_MAP = new EnumMap<>(ClassId.class);
+	
+	private static final EnumMap<ClassId, Set<ClassId>> SUBCLASS_SET_MAP = new EnumMap<>(ClassId.class);
 	
 	/**
 	 * Method getAvailableSubClasses.

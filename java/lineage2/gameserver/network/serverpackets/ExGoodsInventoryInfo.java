@@ -13,6 +13,7 @@
 package lineage2.gameserver.network.serverpackets;
 
 import java.util.Map;
+import java.util.Map.Entry;
 
 import lineage2.gameserver.model.PremiumItem;
 
@@ -29,7 +30,6 @@ public class ExGoodsInventoryInfo extends L2GameServerPacket
 		_premiumItemMap = premiumItemMap;
 	}
 	
-	@SuppressWarnings("rawtypes")
 	@Override
 	protected void writeImpl()
 	{
@@ -39,21 +39,21 @@ public class ExGoodsInventoryInfo extends L2GameServerPacket
 		{
 			writeH(_premiumItemMap.size());
 			
-			for (Map.Entry entry : _premiumItemMap.entrySet())
+			for (Entry<Integer, PremiumItem> entry : _premiumItemMap.entrySet())
 			{
-				writeQ((Integer) entry.getKey());
+				writeQ(entry.getKey());
 				writeC(0);
 				writeD(10003);
-				writeS(((PremiumItem) entry.getValue()).getSender());
-				writeS(((PremiumItem) entry.getValue()).getSender());// ((PremiumItem)entry.getValue()).getSenderMessage());
+				writeS(entry.getValue().getSender());
+				writeS(entry.getValue().getSender());// ((PremiumItem)entry.getValue()).getSenderMessage());
 				writeQ(0);
 				writeC(2);
 				writeC(0);
 				writeS(null);
 				writeS(null);
 				writeH(1);
-				writeD(((PremiumItem) entry.getValue()).getItemId());
-				writeD((int) ((PremiumItem) entry.getValue()).getCount());
+				writeD(entry.getValue().getItemId());
+				writeD((int) entry.getValue().getCount());
 			}
 		}
 		else

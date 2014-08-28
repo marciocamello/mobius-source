@@ -21,13 +21,10 @@ public class PledgeReceiveWarList extends L2GameServerPacket
 {
 	private final List<WarInfo> infos = new ArrayList<>();
 	private final int _updateType;
-	@SuppressWarnings("unused")
-	private final int _page;
 	
 	public PledgeReceiveWarList(Clan clan, int type, int page)
 	{
 		_updateType = type;
-		_page = page;
 		List<Clan> clans = _updateType == 1 ? clan.getAttackerClans() : clan.getEnemyClans();
 		
 		for (Clan _clan : clans)

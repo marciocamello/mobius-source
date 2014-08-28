@@ -2118,7 +2118,8 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 	/**
 	 * Method create.
 	 * @param con MMOConnection<GameClient>
-	 * @return GameClient * @see lineage2.commons.net.nio.impl.IClientFactory#create(MMOConnection<GameClient>)
+	 * @return GameClient
+	 * @see lineage2.commons.net.nio.impl.IClientFactory#create(MMOConnection)
 	 */
 	@Override
 	public GameClient create(MMOConnection<GameClient> con)

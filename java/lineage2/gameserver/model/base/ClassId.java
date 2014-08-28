@@ -363,6 +363,7 @@ public enum ClassId
 	public static final Map<ClassId, EnumSet<ClassId>> _childClasses = new HashMap<ClassId, EnumSet<ClassId>>()
 	{
 		private static final long serialVersionUID = 1L;
+		
 		{
 			put(ClassId.sigelPhoenixKnight, EnumSet.of(ClassId.PHOENIX_KNIGHT));
 			put(ClassId.sigelHellKnight, EnumSet.of(ClassId.HELL_KNIGHT));

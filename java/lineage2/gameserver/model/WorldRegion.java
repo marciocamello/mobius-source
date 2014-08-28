@@ -482,7 +482,8 @@ public final class WorldRegion implements Iterable<GameObject>
 		
 		/**
 		 * Method next.
-		 * @return GameObject * @see java.util.Iterator#next()
+		 * @return GameObject
+		 * @see java.util.Iterator#next()
 		 */
 		@Override
 		public GameObject next()

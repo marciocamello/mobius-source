@@ -31,7 +31,7 @@ import lineage2.gameserver.utils.Location;
 
 public class AgathionInstance extends NpcInstance
 {
-	private static final long serialVersionUID = -3990686488577795700L;
+	private static final long serialVersionUID = 1L;
 	private final Player _owner;
 	final Skill _skill;
 	private final int _lifetimeCountdown;

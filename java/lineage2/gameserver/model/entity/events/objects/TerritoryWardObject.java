@@ -41,7 +41,7 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public class TerritoryWardObject implements SpawnableObject, FlagItemAttachment
 {
-	private static final long serialVersionUID = -3179325927406629031L;
+	private static final long serialVersionUID = 1L;
 	private final int _itemId;
 	private final NpcTemplate _template;
 	private final Location _location;

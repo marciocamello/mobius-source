@@ -42,9 +42,6 @@ public final class MeleonAI extends Fighter
 	 */
 	private final class PolimorphTask extends RunnableImpl
 	{
-		/**
-		 * 
-		 */
 		public PolimorphTask()
 		{
 		}

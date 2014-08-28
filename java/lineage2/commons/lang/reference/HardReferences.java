@@ -128,7 +128,8 @@ public class HardReferences
 			
 			/**
 			 * Method next.
-			 * @return T * @see java.util.Iterator#next()
+			 * @return t
+			 * @see java.util.Iterator#next()
 			 */
 			@Override
 			public T next()

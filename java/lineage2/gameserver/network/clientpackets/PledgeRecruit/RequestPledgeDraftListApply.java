@@ -17,6 +17,7 @@ import lineage2.gameserver.network.clientpackets.L2GameClientPacket;
 
 public class RequestPledgeDraftListApply extends L2GameClientPacket
 {
+	@SuppressWarnings("unused")
 	private int _applyType;
 	@SuppressWarnings("unused")
 	private int _searchType;
@@ -37,8 +38,5 @@ public class RequestPledgeDraftListApply extends L2GameClientPacket
 		{
 			return;
 		}
-		
-		@SuppressWarnings("unused")
-		int n = this._applyType;
 	}
 }

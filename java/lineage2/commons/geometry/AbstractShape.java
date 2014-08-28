@@ -37,7 +37,8 @@ abstract class AbstractShape implements Shape
 	
 	/**
 	 * Method getXmax.
-	 * @return int * @see lineage2.commons.geometry.Shape#getXmax()
+	 * @return int
+	 * @see lineage2.commons.geometry.Shape#getXmax()
 	 */
 	@Override
 	public int getXmax()
@@ -47,7 +48,8 @@ abstract class AbstractShape implements Shape
 	
 	/**
 	 * Method getXmin.
-	 * @return int * @see lineage2.commons.geometry.Shape#getXmin()
+	 * @return int
+	 * @see lineage2.commons.geometry.Shape#getXmin()
 	 */
 	@Override
 	public int getXmin()
@@ -57,7 +59,8 @@ abstract class AbstractShape implements Shape
 	
 	/**
 	 * Method getYmax.
-	 * @return int * @see lineage2.commons.geometry.Shape#getYmax()
+	 * @return int
+	 * @see lineage2.commons.geometry.Shape#getYmax()
 	 */
 	@Override
 	public int getYmax()
@@ -67,7 +70,8 @@ abstract class AbstractShape implements Shape
 	
 	/**
 	 * Method getYmin.
-	 * @return int * @see lineage2.commons.geometry.Shape#getYmin()
+	 * @return int
+	 * @see lineage2.commons.geometry.Shape#getYmin()
 	 */
 	@Override
 	public int getYmin()
@@ -99,7 +103,8 @@ abstract class AbstractShape implements Shape
 	
 	/**
 	 * Method getZmax.
-	 * @return int * @see lineage2.commons.geometry.Shape#getZmax()
+	 * @return int
+	 * @see lineage2.commons.geometry.Shape#getZmax()
 	 */
 	@Override
 	public int getZmax()
@@ -109,7 +114,8 @@ abstract class AbstractShape implements Shape
 	
 	/**
 	 * Method getZmin.
-	 * @return int * @see lineage2.commons.geometry.Shape#getZmin()
+	 * @return int
+	 * @see lineage2.commons.geometry.Shape#getZmin()
 	 */
 	@Override
 	public int getZmin()

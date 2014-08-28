@@ -53,11 +53,11 @@ import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.ReflectionUtils;
 import npc.model.residences.ResidenceManager;
 
-import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.IntObjectMap.Entry;
 
 public final class ChamberlainDarkInstance extends ResidenceManager
 {
-	private static final long serialVersionUID = 7889598664307011523L;
+	private static final long serialVersionUID = 1L;
 	
 	public ChamberlainDarkInstance(int objectId, NpcTemplate template)
 	{
@@ -72,7 +72,6 @@ public final class ChamberlainDarkInstance extends ResidenceManager
 		_siegeDialog = _mainDialog;
 	}
 	
-	@SuppressWarnings("rawtypes")
 	@Override
 	public void onBypassFeedback(Player player, String command)
 	{
@@ -572,7 +571,7 @@ public final class ChamberlainDarkInstance extends ResidenceManager
 			html.setFile("castle/chamberlain/chamberlain-fortress-status.htm");
 			StringBuilder b = new StringBuilder(100);
 			
-			for (IntObjectMap.Entry<List> entry : castle.getRelatedFortresses().entrySet())
+			for (Entry<List<Fortress>> entry : castle.getRelatedFortresses().entrySet())
 			{
 				NpcString type;
 				
@@ -590,7 +589,6 @@ public final class ChamberlainDarkInstance extends ResidenceManager
 						continue;
 				}
 				
-				@SuppressWarnings("unchecked")
 				List<Fortress> fortresses = entry.getValue();
 				
 				for (Fortress fort : fortresses)

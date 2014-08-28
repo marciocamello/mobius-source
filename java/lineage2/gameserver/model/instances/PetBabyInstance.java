@@ -377,13 +377,9 @@ public final class PetBabyInstance extends PetInstance
 	
 	private static final int Pet_Haste = 5186;
 	private static final int Pet_Vampiric_Rage = 5187;
-	@SuppressWarnings("unused")
-	private static final int Pet_Regeneration = 5188;
 	private static final int Pet_Blessed_Body = 5189;
 	private static final int Pet_Blessed_Soul = 5190;
 	private static final int Pet_Guidance = 5191;
-	@SuppressWarnings("unused")
-	private static final int Pet_Wind_Walk = 5192;
 	private static final int Pet_Acumen = 5193;
 	private static final int Pet_Empower = 5194;
 	private static final int Pet_Concentration = 5201;
@@ -391,8 +387,6 @@ public final class PetBabyInstance extends PetInstance
 	private static final int Pet_Shield = 5587;
 	private static final int Pet_Focus = 5588;
 	private static final int Pet_Death_Wisper = 5589;
-	@SuppressWarnings("unused")
-	private static final int WindShackle = 5196, Hex = 5197, Slow = 5198, CurseGloom = 5199;
 	private static final Skill[][] COUGAR_BUFFS =
 	{
 		{

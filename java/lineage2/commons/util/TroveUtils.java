@@ -25,11 +25,6 @@ public class TroveUtils
 	private static final TIntObjectHashMap EMPTY_INT_OBJECT_MAP = new TIntObjectHashMapEmpty();
 	public static final TIntArrayList EMPTY_INT_ARRAY_LIST = new TIntArrayListEmpty();
 	
-	/**
-	 * Method emptyIntObjectMap.
-	 * @param <V>
-	 * @return TIntObjectHashMap<V>
-	 */
 	@SuppressWarnings("unchecked")
 	public static <V> TIntObjectHashMap<V> emptyIntObjectMap()
 	{
@@ -54,7 +49,7 @@ public class TroveUtils
 		 * Method put.
 		 * @param key int
 		 * @param value V
-		 * @return V * @see gnu.trove.map.TIntObjectMap#put(int, V)
+		 * @return V
 		 */
 		@Override
 		public V put(int key, V value)
@@ -66,7 +61,7 @@ public class TroveUtils
 		 * Method putIfAbsent.
 		 * @param key int
 		 * @param value V
-		 * @return V * @see gnu.trove.map.TIntObjectMap#putIfAbsent(int, V)
+		 * @return V
 		 */
 		@Override
 		public V putIfAbsent(int key, V value)

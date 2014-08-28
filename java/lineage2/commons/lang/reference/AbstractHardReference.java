@@ -32,7 +32,8 @@ public class AbstractHardReference<T> implements HardReference<T>
 	
 	/**
 	 * Method get.
-	 * @return T * @see lineage2.commons.lang.reference.HardReference#get()
+	 * @return t
+	 * @see lineage2.commons.lang.reference.HardReference#get()
 	 */
 	@Override
 	public T get()

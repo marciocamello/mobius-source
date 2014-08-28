@@ -1278,9 +1278,6 @@ public final class ItemBroker extends Functions
 	 */
 	private final class NpcInfo
 	{
-		/**
-		 * 
-		 */
 		public NpcInfo()
 		{
 		}

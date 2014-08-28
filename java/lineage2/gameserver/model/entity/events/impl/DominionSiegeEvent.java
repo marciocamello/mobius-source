@@ -156,7 +156,6 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		_doorDeathListener = new DoorDeathListener();
 	}
 	
-	@SuppressWarnings("rawtypes")
 	@Override
 	public void initEvent()
 	{
@@ -164,7 +163,7 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		
 		super.initEvent();
 		
-		SiegeEvent castleSiegeEvent = getResidence().getCastle().getSiegeEvent();
+		SiegeEvent<?, ?> castleSiegeEvent = getResidence().getCastle().getSiegeEvent();
 		
 		addObjects("mass_gatekeeper", castleSiegeEvent.getObjects("mass_gatekeeper"));
 		addObjects(CastleSiegeEvent.CONTROL_TOWERS, castleSiegeEvent.getObjects(CastleSiegeEvent.CONTROL_TOWERS));

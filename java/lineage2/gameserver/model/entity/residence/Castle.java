@@ -50,12 +50,15 @@ import lineage2.gameserver.utils.GameStats;
 import lineage2.gameserver.utils.Log;
 
 import org.napile.primitive.maps.IntObjectMap;
+import org.napile.primitive.maps.IntObjectMap.Entry;
 import org.napile.primitive.maps.impl.CTreeIntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@SuppressWarnings("unchecked")
+import gnu.trove.set.TIntSet;
+import gnu.trove.set.hash.TIntHashSet;
+
 public class Castle extends Residence
 {
 	private static final long serialVersionUID = 1L;
@@ -67,8 +70,8 @@ public class Castle extends Residence
 	private static final String CASTLE_UPDATE_CROP = "UPDATE castle_manor_procure SET can_buy=? WHERE crop_id=? AND castle_id=? AND period=?";
 	private static final String CASTLE_UPDATE_SEED = "UPDATE castle_manor_production SET can_produce=? WHERE seed_id=? AND castle_id=? AND period=?";
 	private final IntObjectMap<MerchantGuard> _merchantGuards = new HashIntObjectMap<>();
-	@SuppressWarnings("rawtypes")
-	private final IntObjectMap<List> _relatedFortresses = new CTreeIntObjectMap<>();
+	private final IntObjectMap<List<Fortress>> _relatedFortresses = new CTreeIntObjectMap<>();
+	private final IntObjectMap<TIntSet> _relatedFortressesIds = new CTreeIntObjectMap<>();
 	private Dominion _dominion;
 	private List<CropProcure> _procure;
 	private List<SeedProduction> _production;
@@ -90,19 +93,18 @@ public class Castle extends Residence
 		_npcStringName = NpcString.valueOf(1001000 + _id);
 	}
 	
-	@SuppressWarnings("rawtypes")
 	@Override
 	public void init()
 	{
 		super.init();
 		
-		for (IntObjectMap.Entry<List> entry : _relatedFortresses.entrySet())
+		for (Entry<TIntSet> entry : _relatedFortressesIds.entrySet())
 		{
 			_relatedFortresses.remove(entry.getKey());
-			List<Integer> list = entry.getValue();
+			TIntSet list = entry.getValue();
 			List<Fortress> list2 = new ArrayList<>(list.size());
 			
-			for (int i : list)
+			for (int i : list.toArray())
 			{
 				Fortress fortress = ResidenceHolder.getInstance().getResidence(Fortress.class, i);
 				
@@ -861,11 +863,11 @@ public class Castle extends Residence
 	
 	public void addRelatedFortress(int type, int fortress)
 	{
-		List<Integer> fortresses = _relatedFortresses.get(type);
+		TIntSet fortresses = _relatedFortressesIds.get(type);
 		
 		if (fortresses == null)
 		{
-			_relatedFortresses.put(type, fortresses = new ArrayList<>());
+			_relatedFortressesIds.put(type, fortresses = new TIntHashSet());
 		}
 		
 		fortresses.add(fortress);
@@ -902,8 +904,7 @@ public class Castle extends Residence
 		return _npcStringName;
 	}
 	
-	@SuppressWarnings("rawtypes")
-	public IntObjectMap<List> getRelatedFortresses()
+	public IntObjectMap<List<Fortress>> getRelatedFortresses()
 	{
 		return _relatedFortresses;
 	}

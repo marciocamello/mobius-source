@@ -54,7 +54,7 @@ public final class ProclaimerInstance extends NpcInstance
 		
 		if (command.equalsIgnoreCase("gift"))
 		{
-			this.target.add(player);
+			target.add(player);
 			Skill skill = SkillTable.getInstance().getInfo(19036, 1);
 			
 			if (skill != null)

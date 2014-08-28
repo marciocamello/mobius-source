@@ -42,9 +42,6 @@ public class DominionSiegeRunnerEvent extends GlobalEvent
 {
 	private class BattlefieldChatTask extends RunnableImpl
 	{
-		/**
-		 * 
-		 */
 		public BattlefieldChatTask()
 		{
 			// TODO Auto-generated constructor stub

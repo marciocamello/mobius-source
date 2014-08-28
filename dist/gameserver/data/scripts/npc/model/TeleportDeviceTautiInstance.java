@@ -25,7 +25,7 @@ import lineage2.gameserver.utils.Location;
  */
 public final class TeleportDeviceTautiInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 8347875591381814256L;
+	private static final long serialVersionUID = 1L;
 	private boolean accepted = false;
 	private static final int KEY_OF_DARKNESS = 34899;
 	private static final Location TAUTI_ROOM_HALL = new Location(-149244, 209882, -10199);

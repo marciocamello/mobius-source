@@ -75,7 +75,8 @@ public class GCSArray<E> implements Collection<E>
 	
 	/**
 	 * Method size.
-	 * @return int * @see java.util.Collection#size()
+	 * @return int
+	 * @see java.util.Collection#size()
 	 */
 	@Override
 	public int size()

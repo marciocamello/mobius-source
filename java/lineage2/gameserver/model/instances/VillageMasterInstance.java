@@ -47,7 +47,7 @@ import lineage2.gameserver.utils.Util;
  */
 public final class VillageMasterInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 5239866251261965991L;
+	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for VillageMasterInstance.

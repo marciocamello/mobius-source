@@ -79,9 +79,6 @@ public final class GvG extends Functions implements ScriptFile
 	 */
 	private static class RegTask extends RunnableImpl
 	{
-		/**
-		 * 
-		 */
 		public RegTask()
 		{
 		}
@@ -183,9 +180,6 @@ public final class GvG extends Functions implements ScriptFile
 	 */
 	private static class Launch extends RunnableImpl
 	{
-		/**
-		 * 
-		 */
 		public Launch()
 		{
 		}
