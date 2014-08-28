@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -95,7 +96,6 @@ public class NpcHtmlMessage extends L2GameServerPacket
 	{
 		this(player, npc.getNpcId(), filename, val);
 		_npcObjId = npc.getObjectId();
-		// FIXME [G1ta0] is not true, correct
 		player.setLastNpc(npc);
 		replace("%npcId%", String.valueOf(npc.getNpcId()));
 		replace("%npcname%", npc.getName());
@@ -187,7 +187,7 @@ public class NpcHtmlMessage extends L2GameServerPacket
 		
 		if (_file != null) // TODO may not be very good to do it here...
 		{
-			if (player.isGM())
+			if (Config.HTM_DEBUG_MODE && player.isGM())
 			{
 				Functions.sendDebugMessage(player, "HTML: " + _file);
 			}

@@ -77,6 +77,7 @@ public class Config
 	public static final String FAKE_PLAYERS_LIST = "config/fake_players.list";
 	public static final String GM_ACCESS_FILES_DIR = "config/xml/AccessLevels/";
 	public static int HTM_CACHE_MODE;
+	public static boolean HTM_DEBUG_MODE;
 	public static int[] PORTS_GAME;
 	static String GAMESERVER_HOSTNAME;
 	public static String DATABASE_DRIVER;
@@ -1016,6 +1017,7 @@ public class Config
 		WEAR_DELAY = serverSettings.getProperty("WearDelay", 5);
 		GARBAGE_COLLECTOR_INTERVAL = serverSettings.getProperty("GarbageCollectorInterval", 30) * 60000;
 		HTM_CACHE_MODE = serverSettings.getProperty("HtmCacheMode", HtmCache.LAZY);
+		HTM_DEBUG_MODE = serverSettings.getProperty("DebugHtmlMessage", false);
 		SERVER_SIDE_NPC_TITLE_ETC = serverSettings.getProperty("ServerSideNpcTitleEtc", false);
 		ALLOW_PACKET_FAIL = serverSettings.getProperty("AllowPacketFail", false);
 		Random ppc = new Random();
