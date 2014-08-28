@@ -31,13 +31,14 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class SupportMagic extends Functions
 {
-	// @formatter:off
-	private static final int[][] _mageBuff = new int[][] {{1, 81, 15642, 1}, {1, 81, 15643, 1}, {1, 81, 15644, 1}, {1, 81, 15645, 1}, {1, 81, 15646, 1}, {1, 81, 15647, 1}, {1, 81, 15651, 1}, {16, 81, 15652, 1}, {16, 81, 15653, 1}};
-	private static final int[][] _warrBuff = new int[][] {{1, 81, 15642, 1}, {1, 81, 15643, 1}, {1, 81, 15644, 1}, {1, 81, 15645, 1}, {1, 81, 15646, 1}, {1, 81, 15647, 1}, {1, 81, 15651, 1}, {16, 81, 15652, 1}, {16, 81, 15653, 1}};
-	private static final int[][] _summonBuff = new int[][] {{1, 81, 15642, 1}, {1, 81, 15643, 1}, {1, 81, 15644, 1}, {1, 81, 15645, 1}, {1, 81, 15646, 1}, {1, 81, 15647, 1}, {1, 81, 15651, 1}, {16, 81, 15652, 1}, {16, 81, 15653, 1}};
-	// @formatter:on
 	private final static int minSupLvl = 1;
 	private final static int maxSupLvl = 85;
+	
+	// @formatter:off
+	private static final int[][] _mageBuff = new int[][] {{minSupLvl, maxSupLvl, 15642, 1}, {minSupLvl, maxSupLvl, 15643, 1}, {minSupLvl, maxSupLvl, 15644, 1}, {minSupLvl, maxSupLvl, 15645, 1}, {minSupLvl, maxSupLvl, 15646, 1}, {minSupLvl, maxSupLvl, 15647, 1}, {minSupLvl, maxSupLvl, 15651, 1}, {minSupLvl, maxSupLvl, 15652, 1}, {minSupLvl, maxSupLvl, 15653, 1}};
+	private static final int[][] _warrBuff = new int[][] {{minSupLvl, maxSupLvl, 15642, 1}, {minSupLvl, maxSupLvl, 15643, 1}, {minSupLvl, maxSupLvl, 15644, 1}, {minSupLvl, maxSupLvl, 15645, 1}, {minSupLvl, maxSupLvl, 15646, 1}, {minSupLvl, maxSupLvl, 15647, 1}, {minSupLvl, maxSupLvl, 15651, 1}, {minSupLvl, maxSupLvl, 15652, 1}, {minSupLvl, maxSupLvl, 15653, 1}};
+	private static final int[][] _summonBuff = new int[][] {{minSupLvl, maxSupLvl, 15642, 1}, {minSupLvl, maxSupLvl, 15643, 1}, {minSupLvl, maxSupLvl, 15644, 1}, {minSupLvl, maxSupLvl, 15645, 1}, {minSupLvl, maxSupLvl, 15646, 1}, {minSupLvl, maxSupLvl, 15647, 1}, {minSupLvl, maxSupLvl, 15651, 1}, {minSupLvl, maxSupLvl, 15652, 1}, {minSupLvl, maxSupLvl, 15653, 1}};
+	// @formatter:on
 	
 	/**
 	 * Method getSupportMagic.
