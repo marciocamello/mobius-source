@@ -18,7 +18,7 @@ import lineage2.gameserver.utils.Location;
 /**
  * @author Mobius
  */
-public final class OldManAndBoy extends DevnoSubAI
+public final class OldManAndBoy extends OldManAndBoySubAI
 {
 	/**
 	 * Constructor for OldManAndBoy.
@@ -29,17 +29,16 @@ public final class OldManAndBoy extends DevnoSubAI
 		super(actor);
 		_points = new Location[]
 		{
-			new Location(-116649, 255593, -1424),
+			new Location(-116649, 255593, -1424), // start point
 			new Location(-116646, 256790, -1496),
 			new Location(-116450, 257751, -1542),
 			new Location(-114925, 257783, -1136),
 			new Location(-114380, 257208, -1136),
-			new Location(-113908, 257329, -1136),
+			new Location(-113908, 257329, -1136), // mid point
 			new Location(-114380, 257208, -1136),
 			new Location(-114925, 257783, -1136),
 			new Location(-116450, 257751, -1542),
-			new Location(-116646, 256790, -1496),
-			new Location(-116649, 255593, -1424)
+			new Location(-116646, 256790, -1496)
 		};
 	}
 }

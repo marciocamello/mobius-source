@@ -1867,7 +1867,6 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="14933" name="Tree of Life" title="">
 		<set name="baseSTR" value="78"/>
@@ -2260,7 +2259,6 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="14941" name="Thunder Hawk" title="">
 		<set name="baseSTR" value="78"/>
@@ -2310,7 +2308,6 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="14942" name="Thunder Hawk" title="">
 		<set name="baseSTR" value="78"/>
@@ -2360,7 +2357,6 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="14943" name="Tree of Life" title="">
 		<set name="baseSTR" value="78"/>
@@ -4541,7 +4537,6 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="14987" name="Thunder Hawk" title="">
 		<set name="baseSTR" value="78"/>
@@ -4591,7 +4586,6 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="14988" name="Thunder Hawk" title="">
 		<set name="baseSTR" value="78"/>
@@ -4641,7 +4635,6 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="14989" name="Thunder Hawk" title="">
 		<set name="baseSTR" value="78"/>
@@ -4691,7 +4684,6 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="14990" name="Thunder Hawk" title="">
 		<set name="baseSTR" value="78"/>
@@ -4741,7 +4733,6 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="14991" name="Thunder Hawk" title="">
 		<set name="baseSTR" value="78"/>
@@ -4791,7 +4782,6 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="14992" name="Thunder Hawk" title="">
 		<set name="baseSTR" value="78"/>
@@ -4841,7 +4831,6 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="14993" name="Thunder Hawk" title="">
 		<set name="baseSTR" value="78"/>
@@ -4891,7 +4880,6 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="14994" name="Thunder Hawk" title="">
 		<set name="baseSTR" value="78"/>
@@ -4941,7 +4929,6 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="14995" name="Thunder Hawk" title="">
 		<set name="baseSTR" value="78"/>
@@ -4991,7 +4978,6 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="14996" name="Thunder Hawk" title="">
 		<set name="baseSTR" value="78"/>
@@ -5041,7 +5027,6 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="14997" name="Thunder Hawk" title="">
 		<set name="baseSTR" value="78"/>
@@ -5091,7 +5076,6 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="14998" name="Thunder Hawk" title="">
 		<set name="baseSTR" value="78"/>
@@ -5141,7 +5125,6 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="14999" name="Thunder Hawk" title="">
 		<set name="baseSTR" value="78"/>
@@ -5191,6 +5174,5 @@
 			<defence attribute="holy" value="200"/>
 			<defence attribute="unholy" value="200"/>
 		</attributes>
-		<skills/>
 	</npc>
 </list>

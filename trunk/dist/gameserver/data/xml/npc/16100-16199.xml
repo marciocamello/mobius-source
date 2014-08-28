@@ -40,7 +40,6 @@
 			<defence attribute="holy" value="0"/>
 			<defence attribute="unholy" value="0"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="16101" name="Sin Eater" title="">
 		<set name="collision_radius" value="6.0"/>
@@ -81,7 +80,6 @@
 			<defence attribute="holy" value="0"/>
 			<defence attribute="unholy" value="0"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="16102" name="Sin Eater" title="">
 		<set name="collision_radius" value="6.0"/>
@@ -122,6 +120,5 @@
 			<defence attribute="holy" value="0"/>
 			<defence attribute="unholy" value="0"/>
 		</attributes>
-		<skills/>
 	</npc>
 </list>

@@ -836,7 +836,6 @@
 			<defence attribute="holy" value="120"/>
 			<defence attribute="unholy" value="120"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19219" name="" title="">
 		<set name="collision_radius" value="3.0"/>
@@ -876,7 +875,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19220" name="Kartia Guard" title="">
 		<set name="collision_radius" value="8.0"/>
@@ -1744,7 +1742,6 @@
 			<defence attribute="holy" value="20"/>
 			<defence attribute="unholy" value="20"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19239" name="Daemon Angma" title="Aggressive">
 		<set name="collision_radius" value="8.0"/>
@@ -1784,7 +1781,6 @@
 			<defence attribute="holy" value="20"/>
 			<defence attribute="unholy" value="20"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19240" name="Daemon Angma" title="Distracted">
 		<set name="collision_radius" value="8.0"/>
@@ -1824,7 +1820,6 @@
 			<defence attribute="holy" value="20"/>
 			<defence attribute="unholy" value="20"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19241" name="Daemon Angma" title="Mastermind">
 		<set name="collision_radius" value="8.0"/>
@@ -1864,7 +1859,6 @@
 			<defence attribute="holy" value="20"/>
 			<defence attribute="unholy" value="20"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19242" name="Sound Clam" title="">
 		<set name="collision_radius" value="16.0"/>
@@ -1904,7 +1898,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19243" name="Campaign Presentation 1" title="">
 		<set name="collision_radius" value="13.0"/>
@@ -1944,7 +1937,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19244" name="Red Tama Plant" title="">
 		<set name="collision_radius" value="14.0"/>
@@ -1984,7 +1976,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19245" name="Blue Tama Plant" title="">
 		<set name="collision_radius" value="14.0"/>
@@ -2024,7 +2015,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19246" name="Tanima" title="">
 		<set name="collision_radius" value="8.0"/>
@@ -2107,7 +2097,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19248" name="Kartia's Altar" title="">
 		<set name="collision_radius" value="0.0"/>
@@ -2147,7 +2136,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19249" name="Kartia's Altar" title="">
 		<set name="collision_radius" value="0.0"/>
@@ -2187,7 +2175,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19250" name="Kartia's Altar" title="">
 		<set name="collision_radius" value="25.0"/>
@@ -2227,7 +2214,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19251" name="Kartia's Altar" title="">
 		<set name="collision_radius" value="25.0"/>
@@ -2267,7 +2253,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19252" name="Kartia's Altar" title="">
 		<set name="collision_radius" value="25.0"/>
@@ -2307,7 +2292,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19253" name="Zellaka" title="Lord of Kartia">
 		<set name="collision_radius" value="30.0"/>
@@ -2479,7 +2463,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19257" name="Small Draco Egg" title="">
 		<set name="collision_radius" value="8.0"/>
@@ -2519,7 +2502,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19258" name="Large Draco Egg" title="">
 		<set name="collision_radius" value="5.0"/>
@@ -2559,7 +2541,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19259" name="Smelting Furnace" title="">
 		<set name="aggroRange" value="0"/>
@@ -2601,7 +2582,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19260" name="Weapon Stand" title="">
 		<set name="collision_radius" value="80.0"/>
@@ -2958,7 +2938,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19268" name="Mysterious Guard" title="">
 		<set name="collision_radius" value="12.0"/>
@@ -2999,7 +2978,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19269" name="Clan Flag" title="">
 		<set name="collision_radius" value="15.0"/>
@@ -3039,7 +3017,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19270" name="Lesser Zahak" title="">
 		<set name="collision_radius" value="16.0"/>
@@ -3339,7 +3316,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19277" name="Tauti's Axe (Presentation)" title="">
 		<set name="collision_radius" value="15.0"/>
@@ -3380,7 +3356,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19278" name="Tauti (Presentation)" title="">
 		<set name="collision_radius" value="15.0"/>
@@ -3421,7 +3396,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19279" name="Cooling Device" title="">
 		<set name="aggroRange" value="0"/>
@@ -3463,7 +3437,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19280" name="Weapon Molding Device" title="">
 		<set name="aggroRange" value="0"/>
@@ -3505,7 +3478,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19281" name="Armor Molding Device" title="">
 		<set name="aggroRange" value="0"/>
@@ -3547,7 +3519,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19282" name="Exclusive to Noblesse Quests" title="">
 		<set name="collision_radius" value="15.0"/>
@@ -3588,7 +3559,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19283" name="Tauti Spotlight" title="">
 		<set name="collision_radius" value="10.0"/>
@@ -3629,7 +3599,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19284" name="Explosive Orc Barrel" title="">
 		<set name="collision_radius" value="22.0"/>
@@ -3669,7 +3638,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19285" name="Verdof's Treasure Chest - Decoration Only" title="">
 		<set name="collision_radius" value="0.0"/>
@@ -3710,7 +3678,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19286" name="Possessed Pilgrim" title="">
 		<set name="collision_radius" value="11.0"/>
@@ -3751,7 +3718,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19287" name="Zahak" title="">
 		<set name="collision_radius" value="24.0"/>
@@ -3792,7 +3758,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19288" name="" title="">
 		<set name="collision_radius" value="0.1"/>
@@ -3832,7 +3797,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19289" name="" title="">
 		<set name="collision_radius" value="0.1"/>
@@ -3872,7 +3836,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19290" name="" title="">
 		<set name="collision_radius" value="0.1"/>
@@ -3912,7 +3875,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19291" name="" title="">
 		<set name="collision_radius" value="0.1"/>
@@ -3952,7 +3914,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19292" name="Herb Chest" title="">
 		<set name="collision_radius" value="8.5"/>
@@ -3993,7 +3954,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19293" name="Helping Tree Summon Device" title="">
 		<set name="collision_radius" value="57.0"/>
@@ -4033,7 +3993,6 @@
 			<defence attribute="holy" value="0"/>
 			<defence attribute="unholy" value="0"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19294" name="Cocoon Destroyer" title="Violent">
 		<set name="collision_radius" value="15.0"/>
@@ -4074,7 +4033,6 @@
 			<defence attribute="holy" value="0"/>
 			<defence attribute="unholy" value="0"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19295" name="Wisp" title="">
 		<set name="collision_radius" value="10.0"/>
@@ -4114,7 +4072,6 @@
 			<defence attribute="holy" value="0"/>
 			<defence attribute="unholy" value="0"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19296" name="Golem Generator" title="Virus-Infected">
 		<set name="collision_radius" value="33.0"/>
@@ -4155,7 +4112,6 @@
 			<defence attribute="holy" value="0"/>
 			<defence attribute="unholy" value="0"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19297" name="Alarm" title="">
 		<set name="collision_radius" value="9.0"/>
@@ -4195,7 +4151,6 @@
 			<defence attribute="holy" value="0"/>
 			<defence attribute="unholy" value="0"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19298" name="Boz" title="Spicula Clone Generator">
 		<set name="collision_radius" value="20.0"/>
@@ -4236,7 +4191,6 @@
 			<defence attribute="holy" value="0"/>
 			<defence attribute="unholy" value="0"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19299" name="Spicula Elite Captain" title="">
 		<set name="collision_radius" value="12.0"/>
@@ -4277,7 +4231,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="40.0">
 				<reward item_id="57" min="437001" max="10158492" chance="40.0"/>

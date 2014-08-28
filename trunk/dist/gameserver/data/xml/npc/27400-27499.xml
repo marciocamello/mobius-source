@@ -3968,7 +3968,6 @@
 			<defence attribute="holy" value="140"/>
 			<defence attribute="unholy" value="140"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="27481" name="Blood Thirst" title="Succubus Lord">
 		<set name="collision_radius" value="25.0"/>
@@ -4056,7 +4055,6 @@
 			<defence attribute="holy" value="20"/>
 			<defence attribute="unholy" value="20"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="27483" name="Flame Flower" title="">
 		<set name="collision_radius" value="12.0"/>
@@ -4096,7 +4094,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="27484" name="" title="">
 		<set name="collision_radius" value="0.0"/>
@@ -4136,7 +4133,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="27485" name="" title="">
 		<set name="collision_radius" value="0.0"/>
@@ -4176,7 +4172,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="27486" name="Helping Tree" title="">
 		<set name="collision_radius" value="51.0"/>
@@ -4216,7 +4211,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="27487" name="" title="">
 		<set name="collision_radius" value="0.0"/>
@@ -4256,7 +4250,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="27488" name="" title="">
 		<set name="collision_radius" value="0.0"/>
@@ -4296,7 +4289,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="27489" name="" title="">
 		<set name="collision_radius" value="0.0"/>
@@ -4336,7 +4328,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="27490" name="" title="">
 		<set name="collision_radius" value="0.0"/>
@@ -4376,7 +4367,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="27491" name="Corpse of the Chamberlain of Darkness" title="">
 		<set name="collision_radius" value="9.0"/>
@@ -4416,7 +4406,6 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="27492" name="Shilen's Messenger" title="">
 		<set name="collision_radius" value="22.88"/>
@@ -4456,6 +4445,5 @@
 			<defence attribute="holy" value="0"/>
 			<defence attribute="unholy" value="0"/>
 		</attributes>
-		<skills/>
 	</npc>
 </list>

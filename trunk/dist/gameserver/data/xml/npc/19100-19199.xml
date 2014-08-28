@@ -39,7 +39,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19101" name="Antharas Transparent 6" title="">
 		<set name="collision_radius" value="0.1"/>
@@ -79,7 +78,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19102" name="Antharas Transparent 7" title="">
 		<set name="collision_radius" value="0.1"/>
@@ -119,7 +117,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19103" name="Antharas Transparent 8" title="">
 		<set name="collision_radius" value="0.1"/>
@@ -159,7 +156,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19104" name="Antharas Transparent 9" title="">
 		<set name="collision_radius" value="0.1"/>
@@ -199,7 +195,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19105" name="Antharas Transparent 10" title="">
 		<set name="collision_radius" value="0.1"/>
@@ -239,7 +234,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19106" name="Antharas Transparent 11" title="">
 		<set name="collision_radius" value="0.1"/>
@@ -279,7 +273,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19107" name="Antharas Transparent 12" title="">
 		<set name="collision_radius" value="0.1"/>
@@ -319,7 +312,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19108" name="Antharas Transparent 13" title="">
 		<set name="collision_radius" value="0.1"/>
@@ -359,7 +351,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19109" name="Antharas Transparent 14" title="">
 		<set name="collision_radius" value="0.1"/>
@@ -399,7 +390,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19110" name="Antharas" title="Check Drops">
 		<set name="collision_radius" value="0.1"/>
@@ -439,7 +429,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19111" name="Valakas" title="Check Drops">
 		<set name="collision_radius" value="0.1"/>
@@ -479,7 +468,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19112" name="Lindvior" title="Check Drops">
 		<set name="collision_radius" value="0.1"/>
@@ -519,7 +507,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19113" name="Inactive Player Supplies" title="">
 		<set name="collision_radius" value="0.1"/>
@@ -559,7 +546,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19114" name="Jewel Transparent 3" title="">
 		<set name="collision_radius" value="0.1"/>
@@ -599,7 +585,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19115" name="Corrupted Poison Cloud" title="">
 		<set name="collision_radius" value="0.1"/>
@@ -685,7 +670,6 @@
 			<defence attribute="holy" value="160"/>
 			<defence attribute="unholy" value="160"/>
 		</attributes>
-		<skills/>
 	</npc>
 	<npc id="19117" name="Rotting Corpse" title="">
 		<set name="collision_radius" value="12.0"/>
