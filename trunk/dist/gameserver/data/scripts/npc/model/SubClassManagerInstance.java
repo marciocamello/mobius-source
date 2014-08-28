@@ -500,7 +500,8 @@ public final class SubClassManagerInstance extends NpcInstance
 	@SuppressWarnings(
 	{
 		"unchecked",
-		"rawtypes"
+		"rawtypes",
+	
 	})
 	private static <K extends Comparable, V extends Comparable> Map<K, V> sortByLevels(Map<K, V> map)
 	{

@@ -46,7 +46,7 @@ import lineage2.gameserver.utils.Location;
  */
 public class ClonePlayer extends Playable
 {
-	private static final long serialVersionUID = -7275714049223105460L;
+	private static final long serialVersionUID = 1L;
 	private static final int SUMMON_DISAPPEAR_RANGE = 2500;
 	private final Player _owner;
 	private int _spsCharged;

@@ -75,7 +75,8 @@ class MMOExecutableQueue<T extends MMOClient> implements Queue<ReceivablePacket<
 	
 	/**
 	 * Method size.
-	 * @return int * @see java.util.Collection#size()
+	 * @return int
+	 * @see java.util.Collection#size()
 	 */
 	@Override
 	public int size()

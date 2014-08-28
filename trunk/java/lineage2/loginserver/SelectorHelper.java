@@ -41,7 +41,8 @@ public class SelectorHelper implements IMMOExecutor<L2LoginClient>, IClientFacto
 	/**
 	 * Method create.
 	 * @param con MMOConnection<L2LoginClient>
-	 * @return L2LoginClient * @see lineage2.commons.net.nio.impl.IClientFactory#create(MMOConnection<L2LoginClient>)
+	 * @return L2LoginClient
+	 * @see lineage2.commons.net.nio.impl.IClientFactory#create(MMOConnection)
 	 */
 	@Override
 	public L2LoginClient create(MMOConnection<L2LoginClient> con)

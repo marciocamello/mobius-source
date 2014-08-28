@@ -62,7 +62,8 @@ public class DatabaseFactory extends BasicDataSource
 	
 	/**
 	 * Method getConnection.
-	 * @return Connection * @throws SQLException
+	 * @return Connection
+	 * @throws SQLException
 	 * @see javax.sql.DataSource#getConnection()
 	 */
 	@Override

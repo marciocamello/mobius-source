@@ -40,7 +40,8 @@ import org.slf4j.LoggerFactory;
 @SuppressWarnings(
 {
 	"unchecked",
-	"rawtypes"
+	"rawtypes",
+
 })
 public class SelectorThread<T extends MMOClient> extends Thread
 {

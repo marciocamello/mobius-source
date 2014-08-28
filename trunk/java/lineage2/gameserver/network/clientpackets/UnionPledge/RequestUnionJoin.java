@@ -22,19 +22,19 @@ public class RequestUnionJoin extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		this.unk1 = this.readD();
+		unk1 = readD();
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = (this.getClient()).getActiveChar();
+		Player activeChar = (getClient()).getActiveChar();
 		
 		if (activeChar != null)
 		{
 			// empty if block
 		}
 		
-		System.out.println("RequestUnionJoin: unk1 = " + this.unk1);
+		System.out.println("RequestUnionJoin: unk1 = " + unk1);
 	}
 }

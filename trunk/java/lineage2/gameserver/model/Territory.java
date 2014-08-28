@@ -204,7 +204,8 @@ public class Territory implements Shape, SpawnRange
 	
 	/**
 	 * Method getXmax.
-	 * @return int * @see lineage2.commons.geometry.Shape#getXmax()
+	 * @return int
+	 * @see lineage2.commons.geometry.Shape#getXmax()
 	 */
 	@Override
 	public int getXmax()
@@ -214,7 +215,8 @@ public class Territory implements Shape, SpawnRange
 	
 	/**
 	 * Method getXmin.
-	 * @return int * @see lineage2.commons.geometry.Shape#getXmin()
+	 * @return int
+	 * @see lineage2.commons.geometry.Shape#getXmin()
 	 */
 	@Override
 	public int getXmin()
@@ -224,7 +226,8 @@ public class Territory implements Shape, SpawnRange
 	
 	/**
 	 * Method getYmax.
-	 * @return int * @see lineage2.commons.geometry.Shape#getYmax()
+	 * @return int
+	 * @see lineage2.commons.geometry.Shape#getYmax()
 	 */
 	@Override
 	public int getYmax()
@@ -234,7 +237,8 @@ public class Territory implements Shape, SpawnRange
 	
 	/**
 	 * Method getYmin.
-	 * @return int * @see lineage2.commons.geometry.Shape#getYmin()
+	 * @return int
+	 * @see lineage2.commons.geometry.Shape#getYmin()
 	 */
 	@Override
 	public int getYmin()
@@ -244,7 +248,8 @@ public class Territory implements Shape, SpawnRange
 	
 	/**
 	 * Method getZmax.
-	 * @return int * @see lineage2.commons.geometry.Shape#getZmax()
+	 * @return int
+	 * @see lineage2.commons.geometry.Shape#getZmax()
 	 */
 	@Override
 	public int getZmax()
@@ -254,7 +259,8 @@ public class Territory implements Shape, SpawnRange
 	
 	/**
 	 * Method getZmin.
-	 * @return int * @see lineage2.commons.geometry.Shape#getZmin()
+	 * @return int
+	 * @see lineage2.commons.geometry.Shape#getZmin()
 	 */
 	@Override
 	public int getZmin()

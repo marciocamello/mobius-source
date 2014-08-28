@@ -137,7 +137,8 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 		
 		/**
 		 * Method get.
-		 * @return V * @see java.util.concurrent.Future#get()
+		 * @return V
+		 * @see java.util.concurrent.Future#get()
 		 */
 		@Override
 		public V get()
@@ -149,7 +150,8 @@ public abstract class SteppingRunnableQueueManager implements Runnable
 		 * Method get.
 		 * @param timeout long
 		 * @param unit TimeUnit
-		 * @return V * @see java.util.concurrent.Future#get(long, TimeUnit)
+		 * @return V
+		 * @see java.util.concurrent.Future#get(long, TimeUnit)
 		 */
 		@Override
 		public V get(long timeout, TimeUnit unit)

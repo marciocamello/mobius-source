@@ -108,7 +108,7 @@ public final class Frintezza extends Reflection
 	
 	public static class NpcLocation extends Location
 	{
-		private static final long serialVersionUID = -4688915115513862819L;
+		private static final long serialVersionUID = 1L;
 		public int npcId;
 		
 		public NpcLocation()

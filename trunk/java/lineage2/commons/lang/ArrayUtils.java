@@ -56,7 +56,8 @@ public final class ArrayUtils
 	@SuppressWarnings(
 	{
 		"unchecked",
-		"rawtypes"
+		"rawtypes",
+	
 	})
 	public static <T> T[] add(T[] array, T element)
 	{

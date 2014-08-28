@@ -26,6 +26,8 @@ import lineage2.gameserver.model.items.ItemInstance;
  */
 public class Mail implements JdbcEntity, Comparable<Mail>
 {
+	private static final long serialVersionUID = 1L;
+	
 	/**
 	 * Method getSystemMsg1.
 	 * @return int
@@ -78,7 +80,6 @@ public class Mail implements JdbcEntity, Comparable<Mail>
 		public static SenderType[] VALUES = values();
 	}
 	
-	private static final long serialVersionUID = -8704970972611917153L;
 	public static final int DELETED = 0;
 	public static final int READED = 1;
 	public static final int REJECTED = 2;

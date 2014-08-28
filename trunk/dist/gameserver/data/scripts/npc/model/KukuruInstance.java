@@ -25,7 +25,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class KukuruInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 2769307524084003609L;
+	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for KukuruInstance.

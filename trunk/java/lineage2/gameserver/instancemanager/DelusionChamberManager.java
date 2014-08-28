@@ -254,8 +254,6 @@ public class DelusionChamberManager
 	 */
 	public class DelusionChamberRoom
 	{
-		@SuppressWarnings("unused")
-		private final Territory _territory;
 		private final Location _teleportCoords;
 		private final boolean _isBossRoom;
 		private final List<SimpleSpawner> _roomSpawns;
@@ -268,7 +266,6 @@ public class DelusionChamberManager
 		 */
 		DelusionChamberRoom(Territory territory, Location tele, boolean isBossRoom)
 		{
-			_territory = territory;
 			_teleportCoords = tele;
 			_isBossRoom = isBossRoom;
 			_roomSpawns = new ArrayList<>();

@@ -82,7 +82,8 @@ public abstract class Func implements Comparable<Func>
 	/**
 	 * Method compareTo.
 	 * @param f Func
-	 * @return int * @throws NullPointerException
+	 * @return int
+	 * @throws NullPointerException
 	 */
 	@Override
 	public int compareTo(Func f) throws NullPointerException

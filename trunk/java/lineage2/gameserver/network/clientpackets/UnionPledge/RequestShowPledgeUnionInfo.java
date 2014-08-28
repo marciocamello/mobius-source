@@ -26,7 +26,7 @@ public class RequestShowPledgeUnionInfo extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = (this.getClient()).getActiveChar();
+		Player activeChar = (getClient()).getActiveChar();
 		
 		if (activeChar == null)
 		{

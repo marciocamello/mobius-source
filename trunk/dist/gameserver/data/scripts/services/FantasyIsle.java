@@ -238,9 +238,6 @@ public final class FantasyIsle extends Functions implements ScriptFile
 	 */
 	private final class StartTask extends RunnableImpl
 	{
-		/**
-		 * 
-		 */
 		public StartTask()
 		{
 		}

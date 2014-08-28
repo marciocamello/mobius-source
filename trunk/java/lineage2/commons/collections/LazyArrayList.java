@@ -30,7 +30,7 @@ import org.apache.commons.pool.impl.GenericObjectPool;
 @SuppressWarnings("unchecked")
 public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.io.Serializable
 {
-	private static final long serialVersionUID = 8683452581122892189L;
+	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * @author Mobius
@@ -47,7 +47,8 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		
 		/**
 		 * Method makeObject.
-		 * @return Object * @see org.apache.commons.pool.PoolableObjectFactory#makeObject()
+		 * @return Object
+		 * @see org.apache.commons.pool.PoolableObjectFactory#makeObject()
 		 */
 		@Override
 		public Object makeObject()
@@ -300,7 +301,6 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	public E remove(int index)
 	{
 		E e = null;
-		
 		if ((index >= 0) && (index < size))
 		{
 			size--;
@@ -378,7 +378,8 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	/**
 	 * Method indexOf.
 	 * @param o Object
-	 * @return int * @see java.util.List#indexOf(Object)
+	 * @return int
+	 * @see java.util.List#indexOf(Object)
 	 */
 	@Override
 	public int indexOf(Object o)
@@ -405,7 +406,8 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	/**
 	 * Method lastIndexOf.
 	 * @param o Object
-	 * @return int * @see java.util.List#lastIndexOf(Object)
+	 * @return int
+	 * @see java.util.List#lastIndexOf(Object)
 	 */
 	@Override
 	public int lastIndexOf(Object o)
@@ -493,7 +495,8 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 	
 	/**
 	 * Method size.
-	 * @return int * @see java.util.List#size()
+	 * @return int
+	 * @see java.util.List#size()
 	 */
 	@Override
 	public int size()
@@ -805,7 +808,8 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		
 		/**
 		 * Method nextIndex.
-		 * @return int * @see java.util.ListIterator#nextIndex()
+		 * @return int
+		 * @see java.util.ListIterator#nextIndex()
 		 */
 		@Override
 		public int nextIndex()
@@ -815,7 +819,8 @@ public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.
 		
 		/**
 		 * Method previousIndex.
-		 * @return int * @see java.util.ListIterator#previousIndex()
+		 * @return int
+		 * @see java.util.ListIterator#previousIndex()
 		 */
 		@Override
 		public int previousIndex()

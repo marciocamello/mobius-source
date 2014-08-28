@@ -365,9 +365,6 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 	
 	private class World
 	{
-		/**
-		 * 
-		 */
 		public World()
 		{
 		}
@@ -386,9 +383,6 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 	
 	private class Room
 	{
-		/**
-		 * 
-		 */
 		public Room()
 		{
 		}

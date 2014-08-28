@@ -5429,6 +5429,7 @@ public final class Player extends Playable implements PlayerGroup
 					Map<Integer, Long> signOfTutor = new HashMap<Integer, Long>()
 					{
 						private static final long serialVersionUID = 1L;
+						
 						{
 							put(33804, (long) MentorUtil.SIGN_OF_TUTOR.get(getLevel()));
 						}
@@ -15499,19 +15500,19 @@ public final class Player extends Playable implements PlayerGroup
 	@Override
 	public boolean isInTvT()
 	{
-		return this._inTvT;
+		return _inTvT;
 	}
 	
 	@Override
 	public boolean isInCtF()
 	{
-		return this._inCtF;
+		return _inCtF;
 	}
 	
 	@Override
 	public boolean isInLastHero()
 	{
-		return this._inLastHero;
+		return _inLastHero;
 	}
 	
 	public boolean isInPvPEvent()

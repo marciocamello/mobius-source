@@ -1027,9 +1027,6 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 	
 	private final class SayTask extends RunnableImpl
 	{
-		/**
-		 * 
-		 */
 		public SayTask()
 		{
 		}
@@ -1057,9 +1054,6 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 	
 	private final class ShoutTask extends RunnableImpl
 	{
-		/**
-		 * 
-		 */
 		public ShoutTask()
 		{
 		}
@@ -1081,9 +1075,6 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 	
 	private final class SaveTask extends RunnableImpl
 	{
-		/**
-		 * 
-		 */
 		public SaveTask()
 		{
 		}

@@ -36,7 +36,7 @@ import lineage2.gameserver.utils.NpcUtils;
  */
 public final class HarnakUndegroundTeleportInstance extends NpcInstance
 {
-	private static final long serialVersionUID = -3733574033243896045L;
+	private static final long serialVersionUID = 1L;
 	private static final Map<Integer, Location> teleCoords = new HashMap<>();
 	private static final int[] cycleStartTeleports =
 	{

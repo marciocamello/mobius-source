@@ -23,7 +23,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 
 public final class MammonsInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1796248576314922526L;
+	private static final long serialVersionUID = 1L;
 	private static final int ANCIENT_ADENA_ID = 5575;
 	private static final int ADENA = 57;
 	public static final String MAMMONS_HTML_PATH = "ssmammons/";

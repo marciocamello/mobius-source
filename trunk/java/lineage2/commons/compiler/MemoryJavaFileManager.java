@@ -45,7 +45,8 @@ class MemoryJavaFileManager extends ForwardingJavaFileManager<StandardJavaFileMa
 	 * @param className String
 	 * @param kind Kind
 	 * @param sibling FileObject
-	 * @return JavaFileObject * @see javax.tools.JavaFileManager#getJavaFileForOutput(Location, String, Kind, FileObject)
+	 * @return JavaFileObject
+	 * @see javax.tools.JavaFileManager#getJavaFileForOutput(Location, String, Kind, FileObject)
 	 */
 	@Override
 	public JavaFileObject getJavaFileForOutput(Location location, String className, Kind kind, FileObject sibling)
