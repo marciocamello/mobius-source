@@ -30,6 +30,7 @@ import lineage2.gameserver.network.serverpackets.ExChangeClientEffectInfo;
 import lineage2.gameserver.network.serverpackets.ExSendUIEvent;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.PlaySound;
+import lineage2.gameserver.network.serverpackets.PlaySound.Type;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.stats.Stats;
@@ -570,7 +571,8 @@ public class AdminAdmin implements IAdminCommandHandler
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[] * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return Enum[]
+	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
 	 */
 	@Override
 	public Enum<?>[] getAdminCommandEnum()
@@ -585,7 +587,7 @@ public class AdminAdmin implements IAdminCommandHandler
 	 */
 	private void playAdminSound(Player activeChar, String sound)
 	{
-		activeChar.broadcastPacket(new PlaySound(sound));
+		activeChar.broadcastPacket(new PlaySound(Type.MUSIC, sound, 0, 0, 0, 0, 0));
 		activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/admin.htm"));
 		activeChar.sendMessage("Playing " + sound + ".");
 	}
