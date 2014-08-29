@@ -111,10 +111,10 @@ public final class OnActionShift extends Functions
 				dialog = dialog.replaceFirst("%loc3d%", String.valueOf((long) npc.getDistance3D(player)));
 				dialog = dialog.replaceFirst("%resp%", String.valueOf((npc.getSpawn() != null) ? Util.formatTime(npc.getSpawn().getRespawnDelay()) : "0"));
 				dialog = dialog.replaceFirst("%aggro%", String.valueOf(String.valueOf(npc.getAggroRange())));
-				dialog = dialog.replaceFirst("%hp%", String.valueOf(npc.getCurrentHp()));
-				dialog = dialog.replaceFirst("%hpmax%", String.valueOf(npc.getTemplate().getBaseHpMax()));
-				dialog = dialog.replaceFirst("%mp%", String.valueOf(npc.getCurrentMp()));
-				dialog = dialog.replaceFirst("%mpmax%", String.valueOf(npc.getTemplate().getBaseMpMax()));
+				dialog = dialog.replaceFirst("%hp%", String.valueOf((int) npc.getCurrentHp()));
+				dialog = dialog.replaceFirst("%hpmax%", String.valueOf(npc.getMaxHp()));
+				dialog = dialog.replaceFirst("%mp%", String.valueOf((int) npc.getCurrentMp()));
+				dialog = dialog.replaceFirst("%mpmax%", String.valueOf(npc.getMaxMp()));
 				dialog = dialog.replaceFirst("%ai_intention%", npc.getAI().getIntention().name());
 				dialog = dialog.replaceFirst("%ai_clan%", npc.getClan() != null ? npc.getClan().getName() : "None");
 				dialog = dialog.replaceFirst("%patk%", String.valueOf(npc.getPAtk(null)));
