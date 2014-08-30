@@ -45,8 +45,8 @@ public class NpcInfoPoly extends L2GameServerPacket
 	private int _lhand;
 	private final String _name;
 	private final String _title;
-	private final double colRadius;
-	private final double colHeight;
+	private final double _colRadius;
+	private final double _colHeight;
 	private final TeamType _team;
 	private final FastList<Integer> _aveList;
 	
@@ -58,8 +58,8 @@ public class NpcInfoPoly extends L2GameServerPacket
 		_rhand = 0;
 		_lhand = 0;
 		_isSummoned = false;
-		colRadius = template.getCollisionRadius();
-		colHeight = template.getCollisionHeight();
+		_colRadius = template.getCollisionRadius();
+		_colHeight = template.getCollisionHeight();
 		_x = _obj.getX();
 		_y = _obj.getY();
 		_z = _obj.getZ();
@@ -105,8 +105,8 @@ public class NpcInfoPoly extends L2GameServerPacket
 		writeD(_flyWalkSpd);
 		writeF(1/* _cha.getProperMultiplier() */);
 		writeF(1/* _cha.getAttackSpeedMultiplier() */);
-		writeF(colRadius);
-		writeF(colHeight);
+		writeF(_colRadius);
+		writeF(_colHeight);
 		writeD(_rhand); // right hand weapon
 		writeD(0);
 		writeD(_lhand); // left hand weapon
@@ -128,8 +128,8 @@ public class NpcInfoPoly extends L2GameServerPacket
 		writeD(0000); // C2
 		writeC(0000); // C2
 		writeC(_team.ordinal());
-		writeF(colRadius);
-		writeF(colHeight);
+		writeF(_colRadius);
+		writeF(_colHeight);
 		writeD(0x00); // C4
 		writeD(0x00);
 		writeD(0x00);

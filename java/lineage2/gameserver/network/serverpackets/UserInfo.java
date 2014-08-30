@@ -33,8 +33,8 @@ import lineage2.gameserver.utils.Location;
 
 public class UserInfo extends L2GameServerPacket
 {
-	private boolean can_writeImpl = false;
-	private final boolean partyRoom;
+	private boolean _canWriteImpl = false;
+	private final boolean _partyRoom;
 	private final int _runSpd;
 	private final int _walkSpd;
 	private final int _swimRunSpd;
@@ -44,32 +44,32 @@ public class UserInfo extends L2GameServerPacket
 	private int _flyRunSpd;
 	private int _flyWalkSpd;
 	private int _relation;
-	private final double move_speed;
-	private final double attack_speed;
-	private final double col_radius;
-	private final double col_height;
+	private final double _movementSpeedMultiplier;
+	private final double _attackSpeedMultiplier;
+	private final double _colRadius;
+	private final double _colHeight;
 	private final int[][] _inv;
 	private final Location _loc;
 	private final Location _fishLoc;
-	private final int obj_id;
-	private final int vehicle_obj_id;
+	private final int _objectId;
+	private final int _vehicleObjId;
 	private final int _race;
-	private final int sex;
-	private final int base_class;
-	private final int level;
-	private final int curCp;
-	private final int maxCp;
-	private int _enchant;
+	private final int _sex;
+	private final int _baseClassId;
+	private final int _level;
+	private final int _curCp;
+	private final int _maxCp;
+	private int _enchantEffect;
 	private final int _weaponFlag;
 	private final long _exp;
-	private final int curHp;
-	private final int maxHp;
-	private final int curMp;
-	private final int maxMp;
-	private final int curLoad;
-	private final int maxLoad;
-	private final int rec_left;
-	private final int rec_have;
+	private final int _curHp;
+	private final int _maxHp;
+	private final int _curMp;
+	private final int _maxMp;
+	private final int _curLoad;
+	private final int _maxLoad;
+	private final int _recomLeft;
+	private final int _recomHave;
 	private final int _str;
 	private final int _con;
 	private final int _dex;
@@ -77,128 +77,128 @@ public class UserInfo extends L2GameServerPacket
 	private final int _wit;
 	private final int _men;
 	private final int _sp;
-	private final int ClanPrivs;
-	private final int InventoryLimit;
+	private final int _clanPrivileges;
+	private final int _inventoryLimit;
 	private final int _patk;
 	private final int _patkspd;
 	private final int _pdef;
-	private final int evasion;
-	private final int accuracy;
-	private final int crit;
+	private final int _evasion;
+	private final int _accuracy;
+	private final int _criticalHit;
 	private final int _matk;
 	private final int _matkspd;
 	private final int _mevasion;
 	private final int _maccuracy;
 	private final int _mCritRate;
 	private final int _mdef;
-	private final int pvp_flag;
-	private final int karma;
-	private final int hair_style;
-	private final int hair_color;
-	private final int face;
-	private final int gm_commands;
-	private final int fame;
-	private final int vitality;
-	private int clan_id;
-	private int clan_crest_id;
-	private int ally_id;
-	private int ally_crest_id;
-	private int large_clan_crest_id;
-	private final int private_store;
-	private final int can_crystalize;
-	private final int pk_kills;
-	private final int pvp_kills;
-	private final int class_id;
-	private final int agathion;
+	private final int _PvpFlag;
+	private final int _karma;
+	private final int _hairStyle;
+	private final int _hairColor;
+	private final int _face;
+	private final int _gmCommands;
+	private final int _fame;
+	private final int _vitality;
+	private int _clanId;
+	private int _clanCrestId;
+	private int _allyId;
+	private int _allyCrestId;
+	private int _largeClanCrestId;
+	private final int _privateStoreType;
+	private final int _canCrystalize;
+	private final int _pkKills;
+	private final int _pvpKills;
+	private final int _classId;
+	private final int _agathionId;
 	private final int _partySubstitute;
-	private final int noble;
-	private final int hero;
-	private int mount_id;
-	private int cw_level;
-	private final int name_color;
-	private final int running;
-	private final int pledge_class;
-	private final int pledge_type;
-	private final int title_color;
-	private final int transformation;
-	private int fishing;
-	private final int defenceFire;
-	private final int defenceWater;
-	private final int defenceWind;
-	private final int defenceEarth;
-	private final int defenceHoly;
-	private final int defenceUnholy;
-	private int mount_type;
+	private final int _noble;
+	private final int _hero;
+	private int _mountNpcId;
+	private int _cwLevel;
+	private final int _nameColor;
+	private final int _running;
+	private final int _pledgeClass;
+	private final int _pledgeType;
+	private final int _titleColor;
+	private final int _transformation;
+	private int _fishing;
+	private final int _defenceFire;
+	private final int _defenceWater;
+	private final int _defenceWind;
+	private final int _defenceEarth;
+	private final int _defenceHoly;
+	private final int _defenceUnholy;
+	private int _mountType;
 	private String _name;
-	private String title;
-	private final EffectCubic[] cubics;
-	private final Element attackElement;
-	private final int attackElementValue;
-	private final boolean isFlying;
+	private String _title;
+	private final EffectCubic[] _cubics;
+	private final Element _attackElement;
+	private final int _attackElementValue;
+	private final boolean _flying;
 	private final boolean _allowMap;
-	private final int talismans;
-	private final boolean openCloak;
+	private final int _talismanCount;
+	private final boolean _openCloak;
 	private final double _expPercent;
 	private final TeamType _team;
 	private final FastList<Integer> _aveList;
-	private final PcInventory inv;
+	private final PcInventory _inventory;
 	
 	public UserInfo(Player player)
 	{
 		if (player.getTransformationName() != null)
 		{
 			_name = player.getTransformationName();
-			title = "";
-			clan_crest_id = 0;
-			ally_crest_id = 0;
-			large_clan_crest_id = 0;
-			cw_level = CursedWeaponsManager.getInstance().getLevel(player.getCursedWeaponEquippedId());
+			_title = "";
+			_clanCrestId = 0;
+			_allyCrestId = 0;
+			_largeClanCrestId = 0;
+			_cwLevel = CursedWeaponsManager.getInstance().getLevel(player.getCursedWeaponEquippedId());
 		}
 		else
 		{
 			_name = player.getName();
 			Clan clan = player.getClan();
 			Alliance alliance = clan == null ? null : clan.getAlliance();
-			//
-			clan_id = clan == null ? 0 : clan.getClanId();
-			clan_crest_id = clan == null ? 0 : clan.getCrestId();
-			large_clan_crest_id = clan == null ? 0 : clan.getCrestLargeId();
-			//
-			ally_id = alliance == null ? 0 : alliance.getAllyId();
-			ally_crest_id = alliance == null ? 0 : alliance.getAllyCrestId();
-			cw_level = 0;
-			title = player.getTitle();
+			
+			_clanId = clan == null ? 0 : clan.getClanId();
+			_clanCrestId = clan == null ? 0 : clan.getCrestId();
+			_largeClanCrestId = clan == null ? 0 : clan.getCrestLargeId();
+			
+			_allyId = alliance == null ? 0 : alliance.getAllyId();
+			_allyCrestId = alliance == null ? 0 : alliance.getAllyCrestId();
+			_cwLevel = 0;
+			_title = player.getTitle();
 		}
 		
 		if (player.isPolymorphed())
 		{
 			if (NpcHolder.getInstance().getTemplate(player.getPolyId()) != null)
 			{
-				title += " - " + NpcHolder.getInstance().getTemplate(player.getPolyId()).name;
+				_title += " - " + NpcHolder.getInstance().getTemplate(player.getPolyId()).name;
 			}
 			else
 			{
-				title += " - Polymorphed";
+				_title += " - Polymorphed";
 			}
 		}
 		
 		if (player.isMounted())
 		{
-			_enchant = 0;
-			mount_id = player.getMountNpcId() + 1000000;
-			mount_type = player.getMountType();
+			_enchantEffect = 0;
+			_mountNpcId = player.getMountNpcId() + 1000000;
+			_mountType = player.getMountType();
 		}
 		else
 		{
-			_enchant = player.getEnchantEffect();
-			mount_id = 0;
-			mount_type = 0;
+			_enchantEffect = player.getEnchantEffect();
+			_mountNpcId = 0;
+			_mountType = 0;
 		}
 		
 		_weaponFlag = player.getActiveWeaponInstance() == null ? 0x14 : 0x28;
-		move_speed = player.getMovementSpeedMultiplier();
-		_runSpd = (int) (player.getRunSpeed() / move_speed);
-		_walkSpd = (int) (player.getWalkSpeed() / move_speed);
+		_movementSpeedMultiplier = player.getMovementSpeedMultiplier();
+		_runSpd = (int) (player.getRunSpeed() / _movementSpeedMultiplier);
+		_walkSpd = (int) (player.getWalkSpeed() / _movementSpeedMultiplier);
 		_flRunSpd = (int) player.getTemplate().getBaseFlyRunSpd();
 		_flWalkSpd = (int) player.getTemplate().getBaseFlyWalkSpd();
 		
@@ -232,12 +232,12 @@ public class UserInfo extends L2GameServerPacket
 		}
 		
 		_loc = player.getLoc();
-		obj_id = player.getObjectId();
-		vehicle_obj_id = player.isInBoat() ? player.getBoat().getObjectId() : 0x00;
+		_objectId = player.getObjectId();
+		_vehicleObjId = player.isInBoat() ? player.getBoat().getObjectId() : 0x00;
 		_race = player.getRace().ordinal();
-		sex = player.getSex();
-		base_class = player.getBaseClassId();
-		level = player.getLevel();
+		_sex = player.getSex();
+		_baseClassId = player.getBaseClassId();
+		_level = player.getLevel();
 		_exp = player.getExp();
 		_expPercent = Experience.getExpPercent(player.getLevel(), player.getExp());
 		_str = player.getSTR();
@@ -246,88 +246,86 @@ public class UserInfo extends L2GameServerPacket
 		_int = player.getINT();
 		_wit = player.getWIT();
 		_men = player.getMEN();
-		curHp = (int) player.getCurrentHp();
-		maxHp = player.getMaxHp();
-		curMp = (int) player.getCurrentMp();
-		maxMp = player.getMaxMp();
-		curLoad = player.getCurrentLoad();
-		maxLoad = player.getMaxLoad();
+		_curHp = (int) player.getCurrentHp();
+		_maxHp = player.getMaxHp();
+		_curMp = (int) player.getCurrentMp();
+		_maxMp = player.getMaxMp();
+		_curLoad = player.getCurrentLoad();
+		_maxLoad = player.getMaxLoad();
 		_sp = player.getIntSp();
 		_patk = player.getPAtk(null);
 		_patkspd = player.getPAtkSpd();
 		_pdef = player.getPDef(null);
-		evasion = player.getEvasionRate(null);
+		_evasion = player.getEvasionRate(null);
 		_mevasion = player.getMEvasionRate(null);
 		_maccuracy = player.getMAccuracy();
 		_mCritRate = (int) player.getMagicCriticalRate(null, null);
-		accuracy = player.getAccuracy();
-		crit = player.getCriticalHit(null, null);
+		_accuracy = player.getAccuracy();
+		_criticalHit = player.getCriticalHit(null, null);
 		_matk = player.getMAtk(null, null);
 		_matkspd = player.getMAtkSpd();
 		_mdef = player.getMDef(null, null);
-		pvp_flag = player.getPvpFlag(); // 0=white, 1=purple, 2=purpleblink
-		karma = player.getKarma();
-		attack_speed = player.getAttackSpeedMultiplier();
-		col_radius = player.getColRadius();
-		col_height = player.getColHeight();
-		hair_style = player.getHairStyle();
-		hair_color = player.getHairColor();
-		face = player.getFace();
-		gm_commands = player.isGM() || player.getPlayerAccess().CanUseGMCommand ? 1 : 0;
-		// builder level
-		clan_id = player.getClanId();
-		ally_id = player.getAllyId();
-		private_store = player.getPrivateStoreType();
-		can_crystalize = player.getSkillLevel(Skill.SKILL_CRYSTALLIZE) > 0 ? 1 : 0;
-		pk_kills = player.getPkKills();
-		pvp_kills = player.getPvpKills();
-		cubics = player.getCubics().toArray(new EffectCubic[player.getCubics().size()]);
+		_PvpFlag = player.getPvpFlag(); // 0=white, 1=purple, 2=purpleblink
+		_karma = player.getKarma();
+		_attackSpeedMultiplier = player.getAttackSpeedMultiplier();
+		_colRadius = player.getColRadius();
+		_colHeight = player.getColHeight();
+		_hairStyle = player.getHairStyle();
+		_hairColor = player.getHairColor();
+		_face = player.getFace();
+		_gmCommands = player.isGM() || player.getPlayerAccess().CanUseGMCommand ? 1 : 0;
+		_clanId = player.getClanId();
+		_allyId = player.getAllyId();
+		_privateStoreType = player.getPrivateStoreType();
+		_canCrystalize = player.getSkillLevel(Skill.SKILL_CRYSTALLIZE) > 0 ? 1 : 0;
+		_pkKills = player.getPkKills();
+		_pvpKills = player.getPvpKills();
+		_cubics = player.getCubics().toArray(new EffectCubic[player.getCubics().size()]);
 		_aveList = player.getAveList();
-		ClanPrivs = player.getClanPrivileges();
-		rec_left = player.getRecomLeft(); // c2 recommendations remaining
-		rec_have = player.getRecomHave(); // c2 recommendations received
-		InventoryLimit = player.getInventoryLimit();
-		class_id = player.getClassId().getId();
-		maxCp = player.getMaxCp();
-		curCp = (int) player.getCurrentCp();
+		_clanPrivileges = player.getClanPrivileges();
+		_recomLeft = player.getRecomLeft(); // c2 recommendations remaining
+		_recomHave = player.getRecomHave(); // c2 recommendations received
+		_inventoryLimit = player.getInventoryLimit();
+		_classId = player.getClassId().getId();
+		_maxCp = player.getMaxCp();
+		_curCp = (int) player.getCurrentCp();
 		_team = player.getTeam();
-		noble = player.isNoble() || (player.isGM() && Config.GM_HERO_AURA) ? 1 : 0;
-		hero = player.isHero() || (player.isGM() && Config.GM_HERO_AURA) ? 1 : 0;
-		fishing = player.isFishing() ? 1 : 0; // Fishing Mode
+		_noble = player.isNoble() || (player.isGM() && Config.GM_HERO_AURA) ? 1 : 0;
+		_hero = player.isHero() || (player.isGM() && Config.GM_HERO_AURA) ? 1 : 0;
+		_fishing = player.isFishing() ? 1 : 0; // Fishing Mode
 		_fishLoc = player.getFishLoc();
-		name_color = player.getNameColor();
-		running = player.isRunning() ? 0x01 : 0x00; // changes the Speed display
-		// on Status Window
-		pledge_class = player.getPledgeClass();
-		pledge_type = player.getPledgeType();
-		title_color = player.getTitleColor();
-		transformation = player.getTransformation();
-		attackElement = player.getAttackElement();
-		attackElementValue = player.getAttack(attackElement);
-		defenceFire = player.getDefence(Element.FIRE);
-		defenceWater = player.getDefence(Element.WATER);
-		defenceWind = player.getDefence(Element.WIND);
-		defenceEarth = player.getDefence(Element.EARTH);
-		defenceHoly = player.getDefence(Element.HOLY);
-		defenceUnholy = player.getDefence(Element.UNHOLY);
-		agathion = player.getAgathionId();
-		fame = player.getFame();
-		vitality = player.getVitality();
-		partyRoom = (player.getMatchingRoom() != null) && (player.getMatchingRoom().getType() == MatchingRoom.PARTY_MATCHING) && (player.getMatchingRoom().getLeader() == player);
-		isFlying = player.isInFlyingTransform();
-		talismans = player.getTalismanCount();
-		openCloak = player.getOpenCloak();
+		_nameColor = player.getNameColor();
+		_running = player.isRunning() ? 0x01 : 0x00; // changes the Speed display on Status Window
+		_pledgeClass = player.getPledgeClass();
+		_pledgeType = player.getPledgeType();
+		_titleColor = player.getTitleColor();
+		_transformation = player.getTransformation();
+		_attackElement = player.getAttackElement();
+		_attackElementValue = player.getAttack(_attackElement);
+		_defenceFire = player.getDefence(Element.FIRE);
+		_defenceWater = player.getDefence(Element.WATER);
+		_defenceWind = player.getDefence(Element.WIND);
+		_defenceEarth = player.getDefence(Element.EARTH);
+		_defenceHoly = player.getDefence(Element.HOLY);
+		_defenceUnholy = player.getDefence(Element.UNHOLY);
+		_agathionId = player.getAgathionId();
+		_fame = player.getFame();
+		_vitality = player.getVitality();
+		_partyRoom = (player.getMatchingRoom() != null) && (player.getMatchingRoom().getType() == MatchingRoom.PARTY_MATCHING) && (player.getMatchingRoom().getLeader() == player);
+		_flying = player.isInFlyingTransform();
+		_talismanCount = player.getTalismanCount();
+		_openCloak = player.getOpenCloak();
 		_allowMap = player.isActionBlocked(Zone.BLOCKED_ACTION_MINIMAP);
-		fishing = player.isFishing() ? 1 : 0; // Fishing Mode
+		_fishing = player.isFishing() ? 1 : 0;
 		_partySubstitute = 0;
-		inv = player.getInventory();
-		can_writeImpl = true;
+		_inventory = player.getInventory();
+		_canWriteImpl = true;
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
-		if (!can_writeImpl)
+		if (!_canWriteImpl)
 		{
 			return;
 		}
@@ -336,13 +334,13 @@ public class UserInfo extends L2GameServerPacket
 		writeD(_loc.x);
 		writeD(_loc.y);
 		writeD(_loc.z + Config.CLIENT_Z_SHIFT);
-		writeD(vehicle_obj_id);
-		writeD(obj_id);
+		writeD(_vehicleObjId);
+		writeD(_objectId);
 		writeS(_name);
 		writeD(_race);
-		writeD(sex);
-		writeD(base_class);
-		writeD(level);
+		writeD(_sex);
+		writeD(_baseClassId);
+		writeD(_level);
 		writeQ(_exp);
 		writeF(_expPercent);
 		writeD(_str);
@@ -351,13 +349,13 @@ public class UserInfo extends L2GameServerPacket
 		writeD(_int);
 		writeD(_wit);
 		writeD(_men);
-		writeD(maxHp);
-		writeD(curHp);
-		writeD(maxMp);
-		writeD(curMp);
+		writeD(_maxHp);
+		writeD(_curHp);
+		writeD(_maxMp);
+		writeD(_curMp);
 		writeD(_sp);
-		writeD(curLoad);
-		writeD(maxLoad);
+		writeD(_curLoad);
+		writeD(_maxLoad);
 		writeD(_weaponFlag);
 		
 		for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
@@ -375,23 +373,23 @@ public class UserInfo extends L2GameServerPacket
 			writeD(_inv[PAPERDOLL_ID][2]);
 		}
 		
-		writeD(talismans);
-		writeD(openCloak ? 0x01 : 0x00);
-		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_RHAND)); // Tauti
-		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_LHAND)); // Tauti
-		writeD(0); // Tauti
-		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_GLOVES)); // Tauti
-		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_CHEST)); // Tauti
-		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_LEGS)); // Tauti
-		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_FEET)); // Tauti
-		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_HAIR)); // Tauti
-		writeD(inv.getVisualItemId(Inventory.PAPERDOLL_DHAIR)); // Tauti
+		writeD(_talismanCount);
+		writeD(_openCloak ? 0x01 : 0x00);
+		writeD(_inventory.getVisualItemId(Inventory.PAPERDOLL_RHAND));
+		writeD(_inventory.getVisualItemId(Inventory.PAPERDOLL_LHAND));
+		writeD(0x00);
+		writeD(_inventory.getVisualItemId(Inventory.PAPERDOLL_GLOVES));
+		writeD(_inventory.getVisualItemId(Inventory.PAPERDOLL_CHEST));
+		writeD(_inventory.getVisualItemId(Inventory.PAPERDOLL_LEGS));
+		writeD(_inventory.getVisualItemId(Inventory.PAPERDOLL_FEET));
+		writeD(_inventory.getVisualItemId(Inventory.PAPERDOLL_HAIR));
+		writeD(_inventory.getVisualItemId(Inventory.PAPERDOLL_DHAIR));
 		writeD(_patk);
 		writeD(_patkspd);
 		writeD(_pdef);
-		writeD(evasion);
-		writeD(accuracy);
-		writeD(crit);
+		writeD(_evasion);
+		writeD(_accuracy);
+		writeD(_criticalHit);
 		writeD(_matk);
 		writeD(_matkspd);
 		writeD(_patkspd);
@@ -399,82 +397,82 @@ public class UserInfo extends L2GameServerPacket
 		writeD(_mevasion);
 		writeD(_maccuracy);
 		writeD(_mCritRate);
-		writeD(pvp_flag);
-		writeD(karma);
+		writeD(_PvpFlag);
+		writeD(_karma);
 		writeD(_runSpd);
 		writeD(_walkSpd);
-		writeD(_swimRunSpd); // swimspeed
-		writeD(_swimWalkSpd); // swimspeed
+		writeD(_swimRunSpd);
+		writeD(_swimWalkSpd);
 		writeD(_flRunSpd);
 		writeD(_flWalkSpd);
 		writeD(_flyRunSpd);
 		writeD(_flyWalkSpd);
-		writeF(move_speed);
-		writeF(attack_speed);
-		writeF(col_radius);
-		writeF(col_height);
-		writeD(hair_style);
-		writeD(hair_color);
-		writeD(face);
-		writeD(gm_commands);
-		writeS(title);
-		writeD(clan_id);
-		writeD(clan_crest_id);
-		writeD(ally_id);
-		writeD(ally_crest_id);
+		writeF(_movementSpeedMultiplier);
+		writeF(_attackSpeedMultiplier);
+		writeF(_colRadius);
+		writeF(_colHeight);
+		writeD(_hairStyle);
+		writeD(_hairColor);
+		writeD(_face);
+		writeD(_gmCommands);
+		writeS(_title);
+		writeD(_clanId);
+		writeD(_clanCrestId);
+		writeD(_allyId);
+		writeD(_allyCrestId);
 		writeD(_relation);
-		writeC(mount_type); // mount type
-		writeC(private_store);
-		writeC(can_crystalize);
-		writeD(pk_kills);
-		writeD(pvp_kills);
-		writeH(cubics.length);
+		writeC(_mountType); // mount type
+		writeC(_privateStoreType);
+		writeC(_canCrystalize);
+		writeD(_pkKills);
+		writeD(_pvpKills);
+		writeH(_cubics.length);
 		
-		for (EffectCubic cubic : cubics)
+		for (EffectCubic cubic : _cubics)
 		{
 			writeH(cubic == null ? 0 : cubic.getId());
 		}
 		
-		writeC(partyRoom ? 0x01 : 0x00); // 1-find party members
-		writeC(isFlying ? 0x02 : 0x00);
-		writeD(ClanPrivs);
-		writeH(rec_left);
-		writeH(rec_have);
-		writeD(mount_id);
-		writeH(InventoryLimit);
-		writeD(class_id);
+		writeC(_partyRoom ? 0x01 : 0x00); // 1-find party members
+		writeC(_flying ? 0x02 : 0x00);
+		writeD(_clanPrivileges);
+		writeH(_recomLeft);
+		writeH(_recomHave);
+		writeD(_mountNpcId);
+		writeH(_inventoryLimit);
+		writeD(_classId);
 		writeD(0x00); // special effects? circles around player...
-		writeD(maxCp);
-		writeD(curCp);
-		writeC(_enchant);
+		writeD(_maxCp);
+		writeD(_curCp);
+		writeC(_enchantEffect);
 		writeC(_team.ordinal());
-		writeD(large_clan_crest_id);
-		writeC(noble);
-		writeC(hero);
-		writeC(fishing);
+		writeD(_largeClanCrestId);
+		writeC(_noble);
+		writeC(_hero);
+		writeC(_fishing);
 		writeD(_fishLoc.x);
 		writeD(_fishLoc.y);
 		writeD(_fishLoc.z);
-		writeD(name_color);
-		writeC(running);
-		writeD(pledge_class);
-		writeD(pledge_type);
-		writeD(title_color);
-		writeD(cw_level);
-		writeD(transformation); // Transformation id
-		writeH(attackElement.getId()); // AttackElement (0 - Fire, 1 - Water, 2 - Wind, 3 - Earth, 4 - Holy, 5 - Dark, -2 - None)
-		writeH(attackElementValue); // AttackElementValue
-		writeH(defenceFire); // DefAttrFire
-		writeH(defenceWater); // DefAttrWater
-		writeH(defenceWind); // DefAttrWind
-		writeH(defenceEarth); // DefAttrEarth
-		writeH(defenceHoly); // DefAttrHoly
-		writeH(defenceUnholy); // DefAttrUnholy
-		writeD(agathion);
+		writeD(_nameColor);
+		writeC(_running);
+		writeD(_pledgeClass);
+		writeD(_pledgeType);
+		writeD(_titleColor);
+		writeD(_cwLevel);
+		writeD(_transformation); // Transformation id
+		writeH(_attackElement.getId()); // AttackElement (0 - Fire, 1 - Water, 2 - Wind, 3 - Earth, 4 - Holy, 5 - Dark, -2 - None)
+		writeH(_attackElementValue); // AttackElementValue
+		writeH(_defenceFire); // DefAttrFire
+		writeH(_defenceWater); // DefAttrWater
+		writeH(_defenceWind); // DefAttrWind
+		writeH(_defenceEarth); // DefAttrEarth
+		writeH(_defenceHoly); // DefAttrHoly
+		writeH(_defenceUnholy); // DefAttrUnholy
+		writeD(_agathionId);
 		// T2 Starts
-		writeD(fame); // Fame
+		writeD(_fame); // Fame
 		writeD(_allowMap ? 1 : 0); // Minimap on Hellbound
-		writeD(vitality); // Vitality Points
+		writeD(_vitality); // Vitality Points
 		writeD(0x00);// Unknown GOD
 		writeD(0x00);// Unknown GOD (1 - Party searching?)
 		writeC(_partySubstitute);
