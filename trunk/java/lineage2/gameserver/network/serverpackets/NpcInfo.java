@@ -30,12 +30,12 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class NpcInfo extends L2GameServerPacket
 {
-	private boolean can_writeImpl = false;
+	private boolean _canWriteImpl = false;
 	private int _npcObjId;
 	private int _npcId;
-	private int running;
-	private int incombat;
-	private int dead;
+	private int _running;
+	private int _incombat;
+	private int _dead;
 	private int _showSpawnAnimation;
 	private int _runSpd;
 	private int _walkSpd;
@@ -44,12 +44,12 @@ public class NpcInfo extends L2GameServerPacket
 	private int _rhand;
 	private int _lhand;
 	private final int _enchantEffect = 0;
-	private int karma;
-	private int pvp_flag;
-	private int clan_id;
-	private int clan_crest_id;
-	private int ally_id;
-	private int ally_crest_id;
+	private int _karma;
+	private int _pvpFlag;
+	private int _clanId;
+	private int _clanCrestId;
+	private int _allyId;
+	private int _allyCrestId;
 	private int _formId;
 	private int _titleColor;
 	private int _HP;
@@ -58,13 +58,13 @@ public class NpcInfo extends L2GameServerPacket
 	private int _maxMP;
 	private int _CP;
 	private int _maxCP;
-	private double colHeight;
-	private double colRadius;
-	private double currentColHeight;
-	private double currentColRadius;
+	private double _colHeight;
+	private double _colRadius;
+	private double _currentColHeight;
+	private double _currentColRadius;
 	private boolean _isAttackable;
 	private boolean _isNameAbove;
-	private boolean isFlying;
+	private boolean _flying;
 	private Location _loc;
 	private String _name = StringUtils.EMPTY;
 	private String _title = StringUtils.EMPTY;
@@ -145,37 +145,38 @@ public class NpcInfo extends L2GameServerPacket
 	
 	private void common(Creature cha)
 	{
-		colHeight = cha.getTemplate().getCollisionHeight();
-		colRadius = cha.getTemplate().getCollisionRadius();
-		currentColHeight = cha.getColHeight();
-		currentColRadius = cha.getColRadius();
+		_colHeight = cha.getTemplate().getCollisionHeight();
+		_colRadius = cha.getTemplate().getCollisionRadius();
+		_currentColHeight = cha.getColHeight();
+		_currentColRadius = cha.getColRadius();
 		_npcObjId = cha.getObjectId();
 		_loc = cha.getLoc();
 		_mAtkSpd = cha.getMAtkSpd();
-		//
+		
 		Clan clan = cha.getClan();
 		Alliance alliance = clan == null ? null : clan.getAlliance();
-		//
-		clan_id = clan == null ? 0 : clan.getClanId();
-		clan_crest_id = clan == null ? 0 : clan.getCrestId();
-		//
-		ally_id = alliance == null ? 0 : alliance.getAllyId();
-		ally_crest_id = alliance == null ? 0 : alliance.getAllyCrestId();
+		
+		_clanId = clan == null ? 0 : clan.getClanId();
+		_clanCrestId = clan == null ? 0 : clan.getCrestId();
+		
+		_allyId = alliance == null ? 0 : alliance.getAllyId();
+		_allyCrestId = alliance == null ? 0 : alliance.getAllyCrestId();
+		
 		_runSpd = cha.getRunSpeed();
 		_walkSpd = cha.getWalkSpeed();
-		karma = cha.getKarma();
-		pvp_flag = cha.getPvpFlag();
+		_karma = cha.getKarma();
+		_pvpFlag = cha.getPvpFlag();
 		_pAtkSpd = cha.getPAtkSpd();
-		running = cha.isRunning() ? 1 : 0;
-		incombat = cha.isInCombat() ? 1 : 0;
-		dead = cha.isAlikeDead() ? 1 : 0;
+		_running = cha.isRunning() ? 1 : 0;
+		_incombat = cha.isInCombat() ? 1 : 0;
+		_dead = cha.isAlikeDead() ? 1 : 0;
 		_aveList = cha.getAveList();
-		isFlying = cha.isFlying();
+		_flying = cha.isFlying();
 		_team = cha.getTeam();
 		_formId = cha.getFormId();
 		_isNameAbove = cha.isNameAbove();
 		_titleColor = cha.isServitor() || cha.isPet() ? 1 : 0;
-		can_writeImpl = true;
+		_canWriteImpl = true;
 	}
 	
 	public NpcInfo update()
@@ -187,7 +188,7 @@ public class NpcInfo extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		if (!can_writeImpl)
+		if (!_canWriteImpl)
 		{
 			return;
 		}
@@ -205,45 +206,42 @@ public class NpcInfo extends L2GameServerPacket
 		writeD(_pAtkSpd);
 		writeD(_runSpd);
 		writeD(_walkSpd);
-		writeD(_runSpd /* _swimRunSpd *//* 0x32 */); // swimspeed
-		writeD(_walkSpd/* _swimWalkSpd *//* 0x32 */); // swimspeed
-		writeD(_runSpd/* _flRunSpd */);
-		writeD(_walkSpd/* _flWalkSpd */);
-		writeD(_runSpd/* _flyRunSpd */);
-		writeD(_walkSpd/* _flyWalkSpd */);
+		writeD(_runSpd);
+		writeD(_walkSpd);
+		writeD(_runSpd);
+		writeD(_walkSpd);
+		writeD(_runSpd);
+		writeD(_walkSpd);
 		writeF(1.100000023841858);
 		writeF(_pAtkSpd / 277.478340719);
-		writeF(colRadius);
-		writeF(colHeight);
+		writeF(_colRadius);
+		writeF(_colHeight);
 		writeD(_rhand); // right hand weapon
-		writeD(0); // TODO chest
+		writeD(0x00); // TODO: chest
 		writeD(_lhand); // left hand weapon
-		writeC(_isNameAbove ? 1 : 0); // 2.2: name above char 1=true ... ??;
-		// 2.3: 1 - normal, 2 - dead
-		writeC(running);
-		writeC(incombat);
-		writeC(dead);
-		writeC(_showSpawnAnimation); // invisible ?? 0=false 1=true 2=summoned
-		// (only works if model has a summon
-		// animation)
+		writeC(_isNameAbove ? 1 : 0); // 2.2: name above char 1=true ... ?? 2.3: 1 - normal, 2 - dead
+		writeC(_running);
+		writeC(_incombat);
+		writeC(_dead);
+		writeC(_showSpawnAnimation); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
 		writeD(_nameNpcString.getId());
 		writeS(_name);
 		writeD(_titleNpcString.getId());
 		writeS(_title);
 		writeD(_titleColor);
-		writeD(pvp_flag);
-		writeD(karma); // hmm karma ??
-		writeD(clan_id);
-		writeD(clan_crest_id);
-		writeD(ally_id);
-		writeD(ally_crest_id);
+		writeD(_pvpFlag);
+		writeD(_karma);
+		writeD(_clanId);
+		writeD(_clanCrestId);
+		writeD(_allyId);
+		writeD(_allyCrestId);
 		writeD(0x00);
-		writeC(isFlying ? 2 : 0); // C2
+		writeC(_flying ? 2 : 0); // C2
 		writeC(_team.ordinal()); // team aura 1-blue, 2-red
-		writeF(currentColRadius);
-		writeF(currentColHeight);
+		writeF(_currentColRadius);
+		writeF(_currentColHeight);
 		writeD(_enchantEffect); // C4
-		writeD(isFlying ? 1 : 0);
+		writeD(_flying ? 1 : 0);
 		writeD(0x00);
 		writeD(_formId);
 		writeC(_canTarget ? 0x01 : 0x00); // show name

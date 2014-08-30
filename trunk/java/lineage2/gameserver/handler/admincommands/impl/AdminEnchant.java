@@ -51,7 +51,7 @@ public class AdminEnchant implements IAdminCommandHandler
 		admin_setdha,
 		admin_setlbr,
 		admin_setrbr,
-		admin_setbelt,
+		admin_setbe,
 		admin_enchant,
 		admin_setlh, // elements
 		admin_setlc,
@@ -162,7 +162,7 @@ public class AdminEnchant implements IAdminCommandHandler
 				armorType = Inventory.PAPERDOLL_RBRACELET;
 				break;
 			
-			case admin_setbelt:
+			case admin_setbe:
 				armorType = Inventory.PAPERDOLL_BELT;
 				break;
 			
