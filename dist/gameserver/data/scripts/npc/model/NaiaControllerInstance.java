@@ -26,7 +26,6 @@ import ai.hellbound.NaiaLock;
  */
 public final class NaiaControllerInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for NaiaControllerInstance.

@@ -33,7 +33,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class QueenAntInstance extends BossInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final int Queen_Ant_Larva = 29002;
 	private final List<SimpleSpawner> _spawns = new ArrayList<>();
 	private NpcInstance Larva = null;

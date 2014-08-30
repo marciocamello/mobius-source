@@ -26,7 +26,6 @@ import lineage2.gameserver.utils.Location;
  */
 public class CTBTeamObject implements SpawnableObject
 {
-	private static final long serialVersionUID = 1L;
 	private CTBSiegeClanObject _siegeClan;
 	private final NpcTemplate _mobTemplate;
 	private final NpcTemplate _flagTemplate;

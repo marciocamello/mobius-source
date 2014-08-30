@@ -27,7 +27,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class RumieseNpcInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final int normalIsthinaInstId = 169;
 	private static final int hardIsthinaInstId = 170;
 	

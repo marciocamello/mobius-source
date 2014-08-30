@@ -21,7 +21,6 @@ import lineage2.gameserver.templates.StatuesSpawnTemplate;
 
 public final class WinnerStatueInstance extends GameObject
 {
-	private static final long serialVersionUID = 1L;
 	private final StatuesSpawnTemplate template;
 	
 	public WinnerStatueInstance(int objectId, StatuesSpawnTemplate template)

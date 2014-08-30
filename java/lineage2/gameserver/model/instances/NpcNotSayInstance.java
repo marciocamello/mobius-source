@@ -20,7 +20,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public class NpcNotSayInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for NpcNotSayInstance.

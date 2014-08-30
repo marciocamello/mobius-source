@@ -44,7 +44,6 @@ import npc.model.residences.SiegeGuardInstance;
  */
 public final class GustavInstance extends SiegeGuardInstance implements _34SiegeGuard
 {
-	private static final long serialVersionUID = 1L;
 	private final AtomicBoolean _canDead = new AtomicBoolean();
 	private Future<?> _teleportTask;
 	

@@ -21,7 +21,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class HermunkusInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	public HermunkusInstance(int objectId, NpcTemplate template)
 	{

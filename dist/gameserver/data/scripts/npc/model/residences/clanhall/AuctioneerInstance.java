@@ -47,7 +47,6 @@ import org.apache.commons.lang3.StringUtils;
  */
 public final class AuctioneerInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yy");
 	private static final NumberFormat NUMBER_FORMAT = NumberFormat.getIntegerInstance(Locale.KOREA);
 	private final static long WEEK = 7 * 24 * 60 * 60 * 1000L;

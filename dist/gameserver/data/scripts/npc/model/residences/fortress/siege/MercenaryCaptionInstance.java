@@ -33,7 +33,6 @@ import ai.residences.fortress.siege.MercenaryCaption;
  */
 public final class MercenaryCaptionInstance extends MonsterInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * @author Mobius

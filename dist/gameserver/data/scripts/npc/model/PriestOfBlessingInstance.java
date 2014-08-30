@@ -31,7 +31,6 @@ import lineage2.gameserver.utils.Util;
  */
 public final class PriestOfBlessingInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * @author Mobius

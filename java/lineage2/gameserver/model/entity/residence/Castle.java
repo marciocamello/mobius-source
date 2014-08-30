@@ -61,7 +61,6 @@ import gnu.trove.set.hash.TIntHashSet;
 
 public class Castle extends Residence
 {
-	private static final long serialVersionUID = 1L;
 	private static final Logger _log = LoggerFactory.getLogger(Castle.class);
 	private static final String CASTLE_MANOR_DELETE_PRODUCTION = "DELETE FROM castle_manor_production WHERE castle_id=?;";
 	private static final String CASTLE_MANOR_DELETE_PRODUCTION_PERIOD = "DELETE FROM castle_manor_production WHERE castle_id=? AND period=?;";

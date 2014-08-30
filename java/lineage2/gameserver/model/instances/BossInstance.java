@@ -24,7 +24,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public class BossInstance extends RaidBossInstance
 {
-	private static final long serialVersionUID = 1L;
 	private boolean _teleportedToNest;
 	
 	/**

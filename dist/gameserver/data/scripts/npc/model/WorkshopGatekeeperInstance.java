@@ -34,7 +34,6 @@ import org.napile.primitive.sets.impl.HashIntSet;
  */
 public final class WorkshopGatekeeperInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static long doorRecharge = 0;
 	private static final IntObjectMap<IntSet> doors = new HashIntObjectMap<>();
 	static

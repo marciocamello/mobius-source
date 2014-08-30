@@ -57,7 +57,6 @@ import org.napile.primitive.maps.IntObjectMap.Entry;
 
 public final class ChamberlainLightInstance extends ResidenceManager
 {
-	private static final long serialVersionUID = 1L;
 	
 	public ChamberlainLightInstance(int objectId, NpcTemplate template)
 	{

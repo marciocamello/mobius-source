@@ -30,7 +30,6 @@ import org.slf4j.LoggerFactory;
  */
 public class AdventurerInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final Logger _log = LoggerFactory.getLogger(AdventurerInstance.class);
 	
 	/**

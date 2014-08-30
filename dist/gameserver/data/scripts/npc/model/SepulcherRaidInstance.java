@@ -31,7 +31,6 @@ import bosses.FourSepulchersSpawn;
  */
 public final class SepulcherRaidInstance extends RaidBossInstance
 {
-	private static final long serialVersionUID = 1L;
 	public int mysteriousBoxId = 0;
 	private Future<?> _onDeadEventTask = null;
 	

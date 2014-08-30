@@ -27,7 +27,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class NativePrisonerInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for NativePrisonerInstance.

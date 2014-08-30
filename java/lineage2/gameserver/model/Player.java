@@ -324,7 +324,6 @@ import org.slf4j.LoggerFactory;
  */
 public final class Player extends Playable implements PlayerGroup
 {
-	private static final long serialVersionUID = 1L;
 	public static final int DEFAULT_TITLE_COLOR = 0xFFFF77;
 	public static final int MAX_POST_FRIEND_SIZE = 100;
 	public static final int MAX_FRIEND_SIZE = 128;
@@ -5428,8 +5427,6 @@ public final class Player extends Playable implements PlayerGroup
 				{
 					Map<Integer, Long> signOfTutor = new HashMap<Integer, Long>()
 					{
-						private static final long serialVersionUID = 1L;
-						
 						{
 							put(33804, (long) MentorUtil.SIGN_OF_TUTOR.get(getLevel()));
 						}

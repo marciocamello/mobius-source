@@ -60,7 +60,6 @@ import org.napile.primitive.sets.impl.HashIntSet;
 
 public final class ItemInstance extends GameObject implements JdbcEntity
 {
-	private static final long serialVersionUID = 1L;
 	public static final int[] EMPTY_ENCHANT_OPTIONS = new int[3];
 	private static final ItemsDAO _itemsDAO = ItemsDAO.getInstance();
 	

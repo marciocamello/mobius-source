@@ -21,7 +21,6 @@ import java.util.Iterator;
  */
 public final class NetList extends ArrayList<Net>
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Method isInRange.

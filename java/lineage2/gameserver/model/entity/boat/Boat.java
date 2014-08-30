@@ -42,7 +42,6 @@ import lineage2.gameserver.utils.PositionUtils;
  */
 public abstract class Boat extends Creature
 {
-	private static final long serialVersionUID = 1L;
 	private int _moveSpeed;
 	private int _rotationSpeed;
 	protected int _fromHome;

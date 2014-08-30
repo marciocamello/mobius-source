@@ -25,7 +25,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class CellphineInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final int INSTANCE_ID = 200;
 	
 	/**

@@ -27,7 +27,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
 
 public final class KartiaManagerInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final Location TELEPORT_POSITION = new Location(-109032, -10440, -11949);
 	private static final int Adolph88 = 33609;
 	private static final int Barton88 = 33611;

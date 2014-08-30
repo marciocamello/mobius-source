@@ -43,7 +43,6 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public abstract class ResidenceManager extends MerchantInstance
 {
-	private static final long serialVersionUID = 1L;
 	protected static final int COND_FAIL = 0;
 	protected static final int COND_SIEGE = 1;
 	protected static final int COND_OWNER = 2;

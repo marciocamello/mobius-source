@@ -25,7 +25,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class BatracosInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final int urogosIzId = 505;
 	
 	/**

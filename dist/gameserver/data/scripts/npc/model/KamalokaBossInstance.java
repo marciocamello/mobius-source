@@ -30,7 +30,6 @@ import org.slf4j.LoggerFactory;
  */
 public class KamalokaBossInstance extends LostCaptainInstance
 {
-	private static final long serialVersionUID = 1L;
 	static final Logger _log = LoggerFactory.getLogger(KamalokaBossInstance.class);
 	private ScheduledFuture<?> _manaRegen;
 	

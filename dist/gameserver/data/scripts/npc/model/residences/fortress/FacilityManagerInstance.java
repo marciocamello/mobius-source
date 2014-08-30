@@ -26,7 +26,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public abstract class FacilityManagerInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for FacilityManagerInstance.

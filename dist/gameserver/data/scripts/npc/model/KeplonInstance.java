@@ -24,7 +24,6 @@ import lineage2.gameserver.utils.ItemFunctions;
  */
 public final class KeplonInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for KeplonInstance.

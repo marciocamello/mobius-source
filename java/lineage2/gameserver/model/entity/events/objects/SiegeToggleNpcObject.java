@@ -25,7 +25,6 @@ import lineage2.gameserver.utils.Location;
  */
 public class SiegeToggleNpcObject implements SpawnableObject
 {
-	private static final long serialVersionUID = 1L;
 	private final SiegeToggleNpcInstance _toggleNpc;
 	private final Location _location;
 	

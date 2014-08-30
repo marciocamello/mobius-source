@@ -28,7 +28,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class SizrakInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final int normalTautiInstanceId = 218;
 	private static final Location TAUTI_ROOM_TELEPORT = new Location(-147262, 211318, -10040);
 	

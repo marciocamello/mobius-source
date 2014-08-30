@@ -59,7 +59,6 @@ import gnu.trove.set.hash.TIntHashSet;
  */
 public class MonsterInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * @author Mobius

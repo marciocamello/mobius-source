@@ -37,7 +37,6 @@ import org.slf4j.LoggerFactory;
  */
 public class Fortress extends Residence
 {
-	private static final long serialVersionUID = 1L;
 	private static final Logger _log = LoggerFactory.getLogger(Fortress.class);
 	private static final long REMOVE_CYCLE = 7 * 24;
 	private static final long REWARD_CYCLE = 6;

@@ -43,7 +43,6 @@ import quests.Q00504_CompetitionForTheBanditStronghold;
  */
 public final class BanditMessagerInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for BanditMessagerInstance.

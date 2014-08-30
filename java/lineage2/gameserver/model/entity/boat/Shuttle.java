@@ -38,7 +38,6 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public class Shuttle extends Boat
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * @author Mobius

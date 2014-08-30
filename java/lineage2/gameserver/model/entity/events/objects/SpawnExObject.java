@@ -30,7 +30,6 @@ import org.slf4j.LoggerFactory;
  */
 public class SpawnExObject implements SpawnableObject
 {
-	private static final long serialVersionUID = 1L;
 	private static final Logger _log = LoggerFactory.getLogger(SpawnExObject.class);
 	private final List<Spawner> _spawns;
 	private boolean _spawned;

@@ -27,7 +27,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public class MercenaryCaptainInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	public MercenaryCaptainInstance(int objectId, NpcTemplate template)
 	{

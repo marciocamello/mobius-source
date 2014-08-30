@@ -30,7 +30,6 @@ import gnu.trove.set.hash.TIntHashSet;
  */
 public class OlympiadBufferInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private final TIntHashSet buffs = new TIntHashSet();
 	
 	/**

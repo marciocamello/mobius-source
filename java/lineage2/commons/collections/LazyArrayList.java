@@ -30,7 +30,6 @@ import org.apache.commons.pool.impl.GenericObjectPool;
 @SuppressWarnings("unchecked")
 public class LazyArrayList<E> implements List<E>, RandomAccess, Cloneable, java.io.Serializable
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * @author Mobius

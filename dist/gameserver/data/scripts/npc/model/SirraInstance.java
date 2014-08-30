@@ -27,7 +27,6 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public final class SirraInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final int[] questInstances =
 	{
 		140,

@@ -23,7 +23,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class NihilInvaderChestInstance extends MonsterInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for NihilInvaderChestInstance.

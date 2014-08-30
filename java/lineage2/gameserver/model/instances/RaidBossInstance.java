@@ -46,7 +46,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public class RaidBossInstance extends MonsterInstance
 {
-	private static final long serialVersionUID = 1L;
 	private ScheduledFuture<?> minionMaintainTask;
 	private static final int MINION_UNSPAWN_INTERVAL = 5000;
 	

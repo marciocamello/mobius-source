@@ -22,7 +22,6 @@ import lineage2.gameserver.model.base.Element;
  */
 public class ItemAttributes implements Serializable
 {
-	private static final long serialVersionUID = 1L;
 	private int fire;
 	private int water;
 	private int wind;

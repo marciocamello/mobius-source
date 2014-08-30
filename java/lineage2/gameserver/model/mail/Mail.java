@@ -26,7 +26,6 @@ import lineage2.gameserver.model.items.ItemInstance;
  */
 public class Mail implements JdbcEntity, Comparable<Mail>
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Method getSystemMsg1.

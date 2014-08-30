@@ -31,7 +31,6 @@ import npc.model.residences.SiegeGuardInstance;
  */
 public final class LidiaVonHellmannInstance extends SiegeGuardInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for LidiaVonHellmannInstance.

@@ -27,7 +27,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class CannibalisticStakatoChiefInstance extends RaidBossInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final int ITEMS[] =
 	{
 		14833,

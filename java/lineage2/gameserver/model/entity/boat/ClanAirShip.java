@@ -41,7 +41,6 @@ import lineage2.gameserver.utils.Location;
  */
 public class ClanAirShip extends AirShip
 {
-	private static final long serialVersionUID = 1L;
 	private static final long MAINTENANCE_DELAY = 60 * 1000L;
 	public static final int MAX_FUEL = 600;
 	private int _currentFuel;

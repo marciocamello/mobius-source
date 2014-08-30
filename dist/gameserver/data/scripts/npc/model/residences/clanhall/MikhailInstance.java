@@ -21,7 +21,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class MikhailInstance extends _34BossMinionInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for MikhailInstance.

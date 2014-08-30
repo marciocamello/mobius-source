@@ -30,7 +30,6 @@ import org.dom4j.Element;
  */
 public class Location extends Point3D implements SpawnRange, Serializable
 {
-	private static final long serialVersionUID = 1L;
 	public int h;
 	
 	/**

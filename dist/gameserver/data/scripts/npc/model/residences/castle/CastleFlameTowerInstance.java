@@ -27,7 +27,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class CastleFlameTowerInstance extends SiegeToggleNpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private Set<String> _zoneList;
 	
 	/**

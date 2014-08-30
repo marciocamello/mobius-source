@@ -136,7 +136,6 @@ import gnu.trove.set.hash.TIntHashSet;
  */
 public abstract class Creature extends GameObject
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * @author Mobius

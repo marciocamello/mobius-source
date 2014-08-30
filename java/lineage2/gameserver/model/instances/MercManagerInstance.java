@@ -25,7 +25,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class MercManagerInstance extends MerchantInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final int COND_ALL_FALSE = 0;
 	private static final int COND_BUSY_BECAUSE_OF_SIEGE = 1;
 	private static final int COND_OWNER = 2;

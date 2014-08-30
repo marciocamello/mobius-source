@@ -22,7 +22,6 @@ import lineage2.gameserver.model.Skill;
  */
 public class SkillEntry extends AbstractMap.SimpleImmutableEntry<SkillEntryType, Skill>
 {
-	private static final long serialVersionUID = 1L;
 	private boolean _disabled;
 	
 	/**

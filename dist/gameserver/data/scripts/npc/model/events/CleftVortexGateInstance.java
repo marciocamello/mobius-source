@@ -21,7 +21,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class CleftVortexGateInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for CleftVortexGateInstance.

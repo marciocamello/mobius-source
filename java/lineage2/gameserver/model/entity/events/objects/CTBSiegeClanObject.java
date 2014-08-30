@@ -28,7 +28,6 @@ import lineage2.gameserver.model.pledge.Clan;
  */
 public class CTBSiegeClanObject extends SiegeClanObject
 {
-	private static final long serialVersionUID = 1L;
 	private final List<Integer> _players = new ArrayList<>();
 	private long _npcId;
 	

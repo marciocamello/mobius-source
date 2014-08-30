@@ -27,7 +27,6 @@ import lineage2.gameserver.utils.WarehouseFunctions;
  */
 public final class NpcFriendInstance extends MerchantInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for NpcFriendInstance.

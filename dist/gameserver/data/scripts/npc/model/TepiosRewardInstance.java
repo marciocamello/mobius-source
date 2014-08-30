@@ -29,7 +29,6 @@ import quests.Q00695_DefendTheHallOfSuffering;
  */
 public final class TepiosRewardInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final int MARK_OF_KEUCEREUS_STAGE_1 = 13691;
 	private static final int MARK_OF_KEUCEREUS_STAGE_2 = 13692;
 	private static final int SOE = 736;

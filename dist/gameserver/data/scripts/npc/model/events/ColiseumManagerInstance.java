@@ -31,7 +31,6 @@ import org.apache.commons.lang3.StringUtils;
  */
 public final class ColiseumManagerInstance extends ColiseumHelperInstance
 {
-	private static final long serialVersionUID = 1L;
 	private final String _startHtm;
 	private final int _coliseumId;
 	

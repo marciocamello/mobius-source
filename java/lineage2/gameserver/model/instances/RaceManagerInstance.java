@@ -39,7 +39,6 @@ import lineage2.gameserver.utils.Location;
  */
 public class RaceManagerInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	public static final int LANES = 8;
 	public static final int WINDOW_START = 0;
 	@SuppressWarnings("unused")
