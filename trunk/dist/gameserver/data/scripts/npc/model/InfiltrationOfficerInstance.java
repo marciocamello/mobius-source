@@ -20,7 +20,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 
 public final class InfiltrationOfficerInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	public InfiltrationOfficerInstance(int objectId, NpcTemplate template)
 	{

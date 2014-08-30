@@ -26,7 +26,6 @@ import org.napile.primitive.sets.impl.HashIntSet;
  */
 public class CMGSiegeClanObject extends SiegeClanObject
 {
-	private static final long serialVersionUID = 1L;
 	private final IntSet _players = new HashIntSet();
 	private long _param;
 	

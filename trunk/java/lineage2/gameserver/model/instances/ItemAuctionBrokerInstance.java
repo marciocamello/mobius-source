@@ -30,7 +30,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class ItemAuctionBrokerInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final SimpleDateFormat fmt = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
 	private ItemAuctionInstance _instance;
 	

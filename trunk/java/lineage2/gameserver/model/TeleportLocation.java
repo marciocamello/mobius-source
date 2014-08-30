@@ -22,7 +22,6 @@ import lineage2.gameserver.utils.Location;
  */
 public class TeleportLocation extends Location
 {
-	private static final long serialVersionUID = 1L;
 	private final long _price;
 	private final ItemTemplate _item;
 	private final int _name;

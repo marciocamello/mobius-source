@@ -34,7 +34,6 @@ import lineage2.gameserver.utils.Location;
  */
 public class Vehicle extends Boat
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for Vehicle.

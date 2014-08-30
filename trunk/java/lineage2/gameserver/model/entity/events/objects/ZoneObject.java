@@ -26,7 +26,6 @@ import lineage2.gameserver.model.entity.events.GlobalEvent;
  */
 public class ZoneObject implements InitableObject
 {
-	private static final long serialVersionUID = 1L;
 	private final String _name;
 	private Zone _zone;
 	

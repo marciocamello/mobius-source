@@ -31,7 +31,6 @@ import lineage2.gameserver.utils.Location;
  */
 public class CloneInstance extends ClonePlayer
 {
-	private static final long serialVersionUID = 1L;
 	private final Player _owner;
 	private final int _lifetimeCountdown;
 	private ScheduledFuture<?> _targetTask;

@@ -30,7 +30,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class Kama26BossInstance extends KamalokaBossInstance
 {
-	private static final long serialVersionUID = 1L;
 	ScheduledFuture<?> _spawner;
 	private final ReflectionCollapseListener _refCollapseListener = new ReflectionCollapseListener();
 	

@@ -30,7 +30,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class MainMachineInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private int _powerUnits = 3;
 	
 	/**

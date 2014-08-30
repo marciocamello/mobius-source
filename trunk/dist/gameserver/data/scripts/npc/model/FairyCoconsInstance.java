@@ -26,7 +26,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class FairyCoconsInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final int[] little_simpleAttackMobs =
 	{
 		22863,

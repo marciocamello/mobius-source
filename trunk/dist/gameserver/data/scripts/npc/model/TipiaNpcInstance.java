@@ -24,7 +24,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class TipiaNpcInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final int normalOctavisInstId = 180;
 	private static final int hardOctavisInstId = 181;
 	

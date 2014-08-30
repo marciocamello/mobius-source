@@ -29,7 +29,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class MatchMassTeleporterInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private final int _flagId;
 	private long _timeout;
 	

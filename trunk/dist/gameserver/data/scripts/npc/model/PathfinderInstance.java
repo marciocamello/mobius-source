@@ -32,7 +32,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class PathfinderInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final int INSTANCE_75LVL_ID = 56;
 	private int _rank = -1;
 	private boolean _rewarded = false;

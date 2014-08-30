@@ -23,7 +23,6 @@ import bosses.AntharasManager;
  */
 public final class HeartOfWardingInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for HeartOfWardingInstance.

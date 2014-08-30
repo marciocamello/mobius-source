@@ -33,7 +33,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public class SummonInstance extends Summon
 {
-	private static final long serialVersionUID = 1L;
 	public final int CYCLE = 5000;
 	private final int _summonSkillId;
 	private final int _summonSkillLvl;

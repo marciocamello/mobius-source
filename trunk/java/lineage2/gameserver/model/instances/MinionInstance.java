@@ -22,7 +22,6 @@ import lineage2.gameserver.utils.Location;
  */
 public class MinionInstance extends MonsterInstance
 {
-	private static final long serialVersionUID = 1L;
 	private MonsterInstance _master;
 	
 	/**

@@ -29,7 +29,6 @@ import org.slf4j.LoggerFactory;
  */
 public class MammonsInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(MammonsInstance.class);
 	private static final int ANCIENT_ADENA_ID = 5575;

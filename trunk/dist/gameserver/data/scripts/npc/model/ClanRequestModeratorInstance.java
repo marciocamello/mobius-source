@@ -22,7 +22,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public class ClanRequestModeratorInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	public ClanRequestModeratorInstance(int objectId, NpcTemplate template)
 	{

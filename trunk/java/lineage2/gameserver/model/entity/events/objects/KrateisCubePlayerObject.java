@@ -31,7 +31,6 @@ import lineage2.gameserver.utils.Location;
  */
 public class KrateisCubePlayerObject implements Serializable, Comparable<KrateisCubePlayerObject>
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * @author Mobius

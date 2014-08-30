@@ -33,7 +33,6 @@ import bosses.FourSepulchersSpawn;
  */
 public final class SepulcherMonsterInstance extends MonsterInstance
 {
-	private static final long serialVersionUID = 1L;
 	public int mysteriousBoxId = 0;
 	Future<?> _victimShout = null;
 	private Future<?> _victimSpawnKeyBoxTask = null;

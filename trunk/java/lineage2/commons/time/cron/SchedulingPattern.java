@@ -533,8 +533,6 @@ public class SchedulingPattern
 	 */
 	public class InvalidPatternException extends RuntimeException
 	{
-		private static final long serialVersionUID = 1L;
-		
 		/**
 		 * Constructor for InvalidPatternException.
 		 */

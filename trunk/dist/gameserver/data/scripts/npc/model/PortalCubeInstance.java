@@ -26,7 +26,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class PortalCubeInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	final Map<Integer, Integer> players = new HashMap<>();
 	
 	public PortalCubeInstance(int objectId, NpcTemplate template)

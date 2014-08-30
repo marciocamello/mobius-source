@@ -24,7 +24,6 @@ import quests.Q00250_WatchWhatYouEat;
  */
 public final class SallyInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for SallyInstance.

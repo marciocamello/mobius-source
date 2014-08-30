@@ -32,7 +32,6 @@ import npc.model.residences.SiegeGuardInstance;
  */
 public final class NurkaInstance extends SiegeGuardInstance
 {
-	private static final long serialVersionUID = 1L;
 	public static final Skill SKILL = SkillTable.getInstance().getInfo(5456, 1);
 	
 	/**

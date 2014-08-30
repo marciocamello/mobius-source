@@ -68,7 +68,6 @@ public final class FourSepulchersSpawn extends Functions implements ScriptFile
 	 */
 	public static class NpcLocation extends Location
 	{
-		private static final long serialVersionUID = 1L;
 		public int npcId;
 		
 		/**
@@ -859,7 +858,6 @@ public final class FourSepulchersSpawn extends Functions implements ScriptFile
 	 */
 	public static class GateKeeper extends Location
 	{
-		private static final long serialVersionUID = 1L;
 		public final DoorInstance door;
 		public final NpcTemplate template;
 		

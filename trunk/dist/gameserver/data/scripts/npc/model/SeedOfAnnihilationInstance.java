@@ -26,7 +26,6 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public final class SeedOfAnnihilationInstance extends MonsterInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final int[] BISTAKON_MOBS = new int[]
 	{
 		22750,

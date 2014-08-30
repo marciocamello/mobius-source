@@ -42,7 +42,6 @@ import quests.Q00655_AGrandPlanForTamingWildBeasts;
  */
 public final class FarmMessengerInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for FarmMessengerInstance.

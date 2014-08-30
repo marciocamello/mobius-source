@@ -26,7 +26,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class CastleControlTowerInstance extends SiegeToggleNpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private final Set<Spawner> _spawnList = new HashSet<>();
 	
 	/**

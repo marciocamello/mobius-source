@@ -37,7 +37,6 @@ import org.slf4j.LoggerFactory;
  */
 public class ClanHall extends Residence
 {
-	private static final long serialVersionUID = 1L;
 	private static final Logger _log = LoggerFactory.getLogger(ClanHall.class);
 	private static final int REWARD_CYCLE = 168;
 	private int _auctionLength;

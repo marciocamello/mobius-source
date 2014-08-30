@@ -36,7 +36,6 @@ import lineage2.gameserver.utils.Util;
  */
 public final class CaravanTraderInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final int NativeTreasure = 9684;
 	private static final int HolyWater = 9673;
 	private static final int DarionsBadge = 9674;

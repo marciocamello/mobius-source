@@ -30,7 +30,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class SealDeviceInstance extends MonsterInstance
 {
-	private static final long serialVersionUID = 1L;
 	private boolean _gaveItem = false;
 	
 	/**

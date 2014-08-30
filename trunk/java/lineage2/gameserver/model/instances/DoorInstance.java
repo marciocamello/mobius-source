@@ -42,7 +42,6 @@ import lineage2.gameserver.templates.item.WeaponTemplate;
 
 public final class DoorInstance extends Creature implements GeoCollision
 {
-	private static final long serialVersionUID = 1L;
 	
 	@Override
 	public void onInteract(final Player player)

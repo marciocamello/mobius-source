@@ -22,7 +22,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class ArcherCaptionInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for ArcherCaptionInstance.

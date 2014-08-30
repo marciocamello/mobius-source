@@ -29,7 +29,6 @@ import npc.model.residences.fortress.FacilityManagerInstance;
  */
 public final class GuardCaptionInstance extends FacilityManagerInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for GuardCaptionInstance.

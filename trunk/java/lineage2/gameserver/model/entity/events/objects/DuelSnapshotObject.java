@@ -31,7 +31,6 @@ import lineage2.gameserver.utils.Location;
  */
 public class DuelSnapshotObject implements Serializable
 {
-	private static final long serialVersionUID = 1L;
 	private final TeamType _team;
 	final Player _player;
 	private final List<Effect> _effects;

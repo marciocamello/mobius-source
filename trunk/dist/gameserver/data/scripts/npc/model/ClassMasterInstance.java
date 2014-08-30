@@ -34,7 +34,6 @@ import lineage2.gameserver.utils.Util;
  */
 public final class ClassMasterInstance extends MerchantInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for ClassMasterInstance.

@@ -40,7 +40,6 @@ import bosses.FourSepulchersSpawn.GateKeeper;
  */
 public final class SepulcherNpcInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	protected static final Map<Integer, Integer> _hallGateKeepers = new HashMap<>();
 	protected Future<?> _closeTask = null, _spawnMonsterTask = null;
 	private final static String HTML_FILE_PATH = "SepulcherNpc/";

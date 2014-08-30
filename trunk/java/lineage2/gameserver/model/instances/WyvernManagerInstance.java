@@ -29,7 +29,6 @@ import org.slf4j.LoggerFactory;
  */
 public final class WyvernManagerInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(WyvernManagerInstance.class);
 	

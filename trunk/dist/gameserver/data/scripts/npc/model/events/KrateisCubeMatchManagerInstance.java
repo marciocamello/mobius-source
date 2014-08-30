@@ -28,7 +28,6 @@ import lineage2.gameserver.utils.Location;
  */
 public final class KrateisCubeMatchManagerInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for KrateisCubeMatchManagerInstance.

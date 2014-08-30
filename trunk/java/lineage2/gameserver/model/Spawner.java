@@ -40,7 +40,6 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class Spawner extends EventOwner implements Cloneable
 {
-	private static final long serialVersionUID = 1L;
 	protected static final Logger _log = LoggerFactory.getLogger(Spawner.class);
 	private static final int MIN_RESPAWN_DELAY = 20;
 	protected int _maximumCount;

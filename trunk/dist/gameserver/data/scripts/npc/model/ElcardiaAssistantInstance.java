@@ -27,7 +27,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class ElcardiaAssistantInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private final static int[][] _elcardiaBuff = new int[][]
 	{
 		{

@@ -35,7 +35,6 @@ import org.slf4j.LoggerFactory;
 
 public final class ProclaimerInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	public static final Logger _log = LoggerFactory.getLogger(ProclaimerInstance.class);
 	private final List<Creature> target = new ArrayList<>();
 	

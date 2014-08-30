@@ -33,7 +33,6 @@ import org.apache.commons.lang3.ArrayUtils;
  */
 public final class PowerControlUnitInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	public static final int LIMIT = 3;
 	public static final int COND_NO_ENTERED = 0;
 	public static final int COND_ENTERED = 1;

@@ -27,7 +27,6 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class FrintezzaGatekeeperInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final int frintezzaIzId = 136;
 	
 	/**

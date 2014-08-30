@@ -56,7 +56,6 @@ import org.slf4j.LoggerFactory;
  */
 public class PetInstance extends Summon
 {
-	private static final long serialVersionUID = 1L;
 	private static final Logger _log = LoggerFactory.getLogger(PetInstance.class);
 	private static final int DELUXE_FOOD_FOR_STRIDER = 5169;
 	

@@ -28,7 +28,6 @@ import lineage2.gameserver.templates.spawn.SpawnTemplate;
  */
 public class HardSpawner extends Spawner
 {
-	private static final long serialVersionUID = 1L;
 	private final SpawnTemplate _template;
 	private int _pointIndex;
 	private int _npcIndex;

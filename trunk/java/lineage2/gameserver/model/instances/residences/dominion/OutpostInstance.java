@@ -34,7 +34,6 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class OutpostInstance extends SiegeFlagInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	private class OnZoneEnterLeaveListenerImpl implements OnZoneEnterLeaveListener
 	{

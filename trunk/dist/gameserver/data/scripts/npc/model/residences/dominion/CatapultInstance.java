@@ -37,7 +37,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public class CatapultInstance extends SiegeToggleNpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	public CatapultInstance(int objectId, NpcTemplate template)
 	{

@@ -37,8 +37,6 @@ public class MentorUtil
 {
 	public static final Map<Integer, Integer> SIGN_OF_TUTOR = new HashMap<Integer, Integer>()
 	{
-		private static final long serialVersionUID = 1L;
-		
 		{
 			put(10, 2);
 			put(20, 25);

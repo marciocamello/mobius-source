@@ -41,7 +41,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class TamedBeastInstance extends FeedableBeastInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final int MAX_DISTANCE_FROM_OWNER = 2000;
 	private static final int MAX_DISTANCE_FOR_BUFF = 200;
 	private static final int MAX_DURATION = 1200000;

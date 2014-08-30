@@ -33,7 +33,6 @@ import lineage2.gameserver.utils.Log;
  */
 public class LotteryManagerInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for LotteryManagerInstance.

@@ -41,7 +41,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public class ManorManagerInstance extends MerchantInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for ManorManagerInstance.

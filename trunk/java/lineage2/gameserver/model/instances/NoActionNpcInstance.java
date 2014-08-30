@@ -22,7 +22,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 @Deprecated
 public class NoActionNpcInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for NoActionNpcInstance.

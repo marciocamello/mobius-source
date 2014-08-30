@@ -29,7 +29,6 @@ import lineage2.gameserver.utils.ItemFunctions;
  */
 public final class AngelCatInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final String VAR_DATA = "angelCat_buff";
 	private static final String SELECT_DATA = "SELECT var, value FROM account_gsdata WHERE account_name=? AND var LIKE 'angelCat_buff'";
 	private static final String INSERT_DATA = "INSERT INTO account_gsdata VALUES (?, ?, ?)";

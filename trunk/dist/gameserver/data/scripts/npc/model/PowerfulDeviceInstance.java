@@ -32,7 +32,6 @@ import gnu.trove.map.hash.TIntIntHashMap;
 
 public final class PowerfulDeviceInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final TIntIntHashMap _NPC = new TIntIntHashMap(34);
 	private static final TIntIntHashMap _DESTINYCHANGECLASSES = new TIntIntHashMap(35);
 	private static final HashMap<Integer, String> _NAMECLASSES = new HashMap<>();

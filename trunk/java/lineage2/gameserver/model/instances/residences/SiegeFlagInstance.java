@@ -29,7 +29,6 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class SiegeFlagInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private SiegeClanObject _owner;
 	private long _lastAnnouncedAttackedTime = 0;
 	

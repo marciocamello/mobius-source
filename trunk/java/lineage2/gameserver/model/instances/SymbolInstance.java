@@ -33,7 +33,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public class SymbolInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	final Creature _owner;
 	final Skill _skill;
 	private ScheduledFuture<?> _targetTask;

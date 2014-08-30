@@ -50,7 +50,6 @@ import lineage2.gameserver.utils.Location;
 
 public abstract class Playable extends Creature
 {
-	private static final long serialVersionUID = 1L;
 	private final AtomicState _isSilentMoving = new AtomicState();
 	private boolean _isPendingRevive;
 	private final ReadWriteLock questLock = new ReentrantReadWriteLock();

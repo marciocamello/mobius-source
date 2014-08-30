@@ -127,7 +127,6 @@ import gnu.trove.iterator.TIntObjectIterator;
  */
 public class NpcInstance extends Creature
 {
-	private static final long serialVersionUID = 1L;
 	public static final String NO_CHAT_WINDOW = "noChatWindow";
 	public static final String NO_RANDOM_WALK = "noRandomWalk";
 	public static final String NO_RANDOM_ANIMATION = "noRandomAnimation";

@@ -60,7 +60,6 @@ import gnu.trove.iterator.TIntObjectIterator;
  */
 public abstract class Summon extends Playable
 {
-	private static final long serialVersionUID = 1L;
 	private static final int SUMMON_DISAPPEAR_RANGE = 2500;
 	private final Player _owner;
 	private int _spawnAnimation = 2;

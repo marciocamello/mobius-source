@@ -18,8 +18,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 
 public class DefenderInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
-	
 	public DefenderInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);

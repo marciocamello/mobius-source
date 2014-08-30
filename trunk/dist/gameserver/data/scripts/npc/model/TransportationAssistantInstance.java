@@ -22,7 +22,6 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public final class TransportationAssistantInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	
 	public TransportationAssistantInstance(int objectId, NpcTemplate template)
 	{

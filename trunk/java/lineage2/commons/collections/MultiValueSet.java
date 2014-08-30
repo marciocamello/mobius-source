@@ -21,7 +21,6 @@ import java.util.HashMap;
  */
 public class MultiValueSet<T> extends HashMap<T, Object>
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * Constructor for MultiValueSet.

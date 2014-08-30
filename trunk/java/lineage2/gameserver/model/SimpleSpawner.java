@@ -32,7 +32,6 @@ import org.slf4j.LoggerFactory;
  */
 public class SimpleSpawner extends Spawner
 {
-	private static final long serialVersionUID = 1L;
 	@SuppressWarnings("unused")
 	private static final Logger _log = LoggerFactory.getLogger(SimpleSpawner.class);
 	private final NpcTemplate _npcTemplate;

@@ -37,7 +37,6 @@ import org.slf4j.LoggerFactory;
  */
 public final class PetBabyInstance extends PetInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final Logger _log = LoggerFactory.getLogger(PetBabyInstance.class);
 	Future<?> _actionTask;
 	private boolean _buffEnabled = true;

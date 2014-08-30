@@ -26,7 +26,6 @@ import org.apache.commons.io.IOUtils;
  */
 public class ExProperties extends Properties
 {
-	private static final long serialVersionUID = 1L;
 	public static final String defaultDelimiter = "[\\s,;]+";
 	
 	/**

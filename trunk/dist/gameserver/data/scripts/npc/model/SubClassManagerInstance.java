@@ -50,7 +50,6 @@ import gnu.trove.map.hash.TIntIntHashMap;
 
 public final class SubClassManagerInstance extends NpcInstance
 {
-	private static final long serialVersionUID = 1L;
 	private static final int CERTIFICATE_ID = 30433;
 	private static final TIntIntHashMap _DESTINYCHANGECLASSES = new TIntIntHashMap(8);
 	private static Map<Integer, Double> _REAWAKENINGCOST = new HashMap<>();

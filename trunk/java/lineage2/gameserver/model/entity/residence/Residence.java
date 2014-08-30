@@ -52,7 +52,6 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class Residence implements JdbcEntity
 {
-	private static final long serialVersionUID = 1L;
 	
 	/**
 	 * @author Mobius
