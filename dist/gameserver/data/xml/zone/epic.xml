@@ -59,6 +59,24 @@
 			<coords loc="203374 -107683 -2572 5428"/>
 		</polygon>
 	</zone>
+	<zone name="[lindvior_epic]" type="epic">
+		<polygon>
+			<coords loc="45289 -20235 -1428 -500"/>
+			<coords loc="47424 -21669 -1428 -500"/>
+			<coords loc="49240 -24295 -1428 -500"/>
+			<coords loc="50407 -27819 -1428 -500"/>
+			<coords loc="49225 -29555 -1428 -500"/>
+			<coords loc="47608 -29118 -1428 -500"/>
+			<coords loc="47295 -29490 -1428 -500"/>
+			<coords loc="47290 -32112 -1428 -500"/>
+			<coords loc="44730 -33003 -1428 -500"/>
+			<coords loc="42082 -30964 -1428 -500"/>
+			<coords loc="40648 -29443 -1428 -500"/>
+			<coords loc="40019 -27205 -1428 -500"/>
+			<coords loc="40766 -25387 -1428 -500"/>
+			<coords loc="41791 -23365 -1428 -500"/>
+		</polygon>
+	</zone>
 	<zone name="[sailren_epic]" type="epic">
 		<polygon>
 			<coords loc="26248 -7992 -5000 5000"/>
