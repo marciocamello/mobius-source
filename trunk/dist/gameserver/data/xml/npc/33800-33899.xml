@@ -4114,7 +4114,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="texture" value=""/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="KatoSicanus"/>
 		<ai_params>
 			<set name="showName" value="true"/>
 			<set name="show Title" value="true"/>

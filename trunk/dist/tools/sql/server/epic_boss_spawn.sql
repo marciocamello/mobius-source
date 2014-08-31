@@ -11,4 +11,5 @@ REPLACE INTO `epic_boss_spawn` (`bossId`, `respawnDate`, `state`) VALUES
 (29028,'0',0),
 (29062,'0',0),
 (29065,'0',0),
-(29099,'0',0);
+(29099,'0',0),
+(25899,'0',0);

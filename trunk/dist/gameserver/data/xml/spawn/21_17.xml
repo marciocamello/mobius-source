@@ -847,6 +847,10 @@
 		<point x="57077" y="-81356" z="-3016" h="39362"/>
 		<npc id="18894"/>
 	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="48319" y="-30204" z="-1706" h="57343"/>
+		<npc id="33881"/>
+	</spawn>
 	<spawn group="bloodaltar_alive_npc" count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="40280" y="53784" z="-3328" h="0"/>
 		<npc id="4325"/>
