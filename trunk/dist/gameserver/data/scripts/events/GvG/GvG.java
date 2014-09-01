@@ -21,7 +21,6 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 
-import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.lang.reference.HardReferences;
 import lineage2.commons.threading.RunnableImpl;
@@ -600,24 +599,20 @@ public final class GvG extends Functions implements ScriptFile
 	 */
 	public static void updateWinner(Player winner)
 	{
-		Connection con = null;
-		PreparedStatement statement = null;
 		
-		try
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("INSERT INTO event_data(charId, score) VALUES (?,1) ON DUPLICATE KEY UPDATE score=score+1");
+			
+			PreparedStatement statement = con.prepareStatement("INSERT INTO event_data(charId, score) VALUES (?,1) ON DUPLICATE KEY UPDATE score=score+1");
 			statement.setInt(1, winner.getObjectId());
 			statement.execute();
+			statement.close();
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement);
-		}
+		
 	}
 	
 	/**

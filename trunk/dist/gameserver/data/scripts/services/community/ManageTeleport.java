@@ -17,7 +17,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.StringTokenizer;
 
-import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.database.DatabaseFactory;
@@ -170,28 +169,24 @@ public final class ManageTeleport extends Functions implements ScriptFile, IComm
 			
 			if (name.length() > 0)
 			{
-				Connection con = null;
-				PreparedStatement stmt = null;
 				
-				try
+				try (Connection con = DatabaseFactory.getInstance().getConnection();)
 				{
-					con = DatabaseFactory.getInstance().getConnection();
-					stmt = con.prepareStatement("INSERT INTO bbs_pointsave (charId,name,xPos,yPos,zPos) VALUES(?,?,?,?,?)");
+					
+					PreparedStatement stmt = con.prepareStatement("INSERT INTO bbs_pointsave (charId,name,xPos,yPos,zPos) VALUES(?,?,?,?,?)");
 					stmt.setInt(1, player.getObjectId());
 					stmt.setString(2, name);
 					stmt.setInt(3, player.getX());
 					stmt.setInt(4, player.getY());
 					stmt.setInt(5, player.getZ());
 					stmt.execute();
+					stmt.close();
 				}
 				catch (Exception e)
 				{
 					// empty catch clause
 				}
-				finally
-				{
-					DbUtils.closeQuietly(con, stmt);
-				}
+				
 			}
 			
 			player.reduceAdena(pice);
@@ -201,25 +196,21 @@ public final class ManageTeleport extends Functions implements ScriptFile, IComm
 		{
 			StringTokenizer st2 = new StringTokenizer(bypass, ";");
 			String[] mBypass = st2.nextToken().split(":");
-			Connection con = null;
-			PreparedStatement statement = null;
 			
-			try
+			try (Connection con = DatabaseFactory.getInstance().getConnection();)
 			{
-				con = DatabaseFactory.getInstance().getConnection();
-				statement = con.prepareStatement("DELETE FROM bbs_pointsave WHERE charId=? AND TpId=?;");
+				
+				PreparedStatement statement = con.prepareStatement("DELETE FROM bbs_pointsave WHERE charId=? AND TpId=?;");
 				statement.setInt(1, player.getObjectId());
 				statement.setInt(2, Integer.parseInt(mBypass[2]));
 				statement.execute();
+				statement.close();
 			}
 			catch (Exception e)
 			{
 				// empty catch clause
 			}
-			finally
-			{
-				DbUtils.closeQuietly(con, statement);
-			}
+			
 			ShowHtml(mBypass[1], player);
 		}
 	}
@@ -247,31 +238,28 @@ public final class ManageTeleport extends Functions implements ScriptFile, IComm
 	 */
 	private static int getTeleCount(Player player)
 	{
-		Connection con = null;
-		PreparedStatement statement = null;
-		ResultSet rset = null;
+		
 		int count = 0;
 		
-		try
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("SELECT count(*) as cnt FROM bbs_pointsave WHERE `charId` = ?");
+			
+			PreparedStatement statement = con.prepareStatement("SELECT count(*) as cnt FROM bbs_pointsave WHERE `charId` = ?");
 			statement.setInt(1, player.getObjectId());
-			rset = statement.executeQuery();
+			ResultSet rset = statement.executeQuery();
 			
 			if (rset.next())
 			{
 				count = rset.getInt("cnt");
 			}
+			rset.close();
+			statement.close();
 		}
 		catch (Exception e)
 		{
 			// empty catch clause
 		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement, rset);
-		}
+		
 		return count;
 	}
 	
@@ -283,31 +271,29 @@ public final class ManageTeleport extends Functions implements ScriptFile, IComm
 	 */
 	private static boolean CheckTeleName(Player player, String name)
 	{
-		Connection con = null;
-		PreparedStatement statement = null;
-		ResultSet rset = null;
 		
-		try
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("SELECT count(*) as cnt FROM bbs_pointsave WHERE `charId` = ? AND `name` = ?");
+			
+			PreparedStatement statement = con.prepareStatement("SELECT count(*) as cnt FROM bbs_pointsave WHERE `charId` = ? AND `name` = ?");
 			statement.setInt(1, player.getObjectId());
 			statement.setString(2, name);
-			rset = statement.executeQuery();
+			ResultSet rset = statement.executeQuery();
 			
 			if (rset.next() && (rset.getInt("cnt") == 0))
 			{
+				rset.close();
+				statement.close();
 				return true;
 			}
+			rset.close();
+			statement.close();
 		}
 		catch (Exception e)
 		{
 			// empty catch clause
 		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement, rset);
-		}
+		
 		return false;
 	}
 	
@@ -321,16 +307,13 @@ public final class ManageTeleport extends Functions implements ScriptFile, IComm
 		String html = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/teleport/" + name + ".htm", player);
 		html = html.replace("%pice%", GetStringCount(Config.COMMUNITYBOARD_TELE_PICE));
 		html = html.replace("%save_pice%", GetStringCount(Config.COMMUNITYBOARD_SAVE_TELE_PICE));
-		Connection con = null;
-		PreparedStatement statement = null;
-		ResultSet rs = null;
 		
-		try
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("SELECT * FROM bbs_pointsave WHERE charId=?;");
+			
+			PreparedStatement statement = con.prepareStatement("SELECT * FROM bbs_pointsave WHERE charId=?;");
 			statement.setLong(1, player.getObjectId());
-			rs = statement.executeQuery();
+			ResultSet rs = statement.executeQuery();
 			StringBuilder content = new StringBuilder("");
 			content.append("<table width=220>");
 			
@@ -345,7 +328,8 @@ public final class ManageTeleport extends Functions implements ScriptFile, IComm
 				content.append("</td>");
 				content.append("</tr>");
 			}
-			
+			rs.close();
+			statement.close();
 			content.append("</table>");
 			html = html.replace("%list_teleport%", content.toString());
 			ShowBoard.separateAndSend(BbsUtil.htmlBuff(html, player), player);
@@ -354,10 +338,7 @@ public final class ManageTeleport extends Functions implements ScriptFile, IComm
 		{
 			// empty catch clause
 		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement, rs);
-		}
+		
 	}
 	
 	private static boolean CheckCondition(Player player)

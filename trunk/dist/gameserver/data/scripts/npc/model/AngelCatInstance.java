@@ -16,7 +16,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -68,13 +67,12 @@ public final class AngelCatInstance extends NpcInstance
 	private boolean loadInfo(Player player)
 	{
 		String value = null;
-		ResultSet rs = null;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement(SELECT_DATA);)
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
+			PreparedStatement statement = con.prepareStatement(SELECT_DATA);
 			statement.setString(1, player.getAccountName());
-			rs = statement.executeQuery();
+			ResultSet rs = statement.executeQuery();
 			
 			while (rs.next())
 			{
@@ -88,64 +86,52 @@ public final class AngelCatInstance extends NpcInstance
 				
 				deleteInfo(player.getAccountName());
 			}
+			rs.close();
+			statement.close();
 		}
 		catch (Exception e)
 		{
 			return false;
 		}
-		finally
-		{
-			// DbUtils.closeQuietly(rs); //FIXME: creating error while compiling the scripts on server start (see below).
-			/**
-			 * ERROR server\gameserver\data\scripts\npc\model\AngelCatInstance.java:0,0: Internal compiler error: java.lang.ArrayIndexOutOfBoundsException: 4 at org.eclipse.jdt.internal.compiler.codegen.ExceptionLabel.placeEnd(ExceptionLabel.java:41)
-			 */
-		}
+		
 		return true;
 	}
 	
 	private void addInfo(Player player)
 	{
-		Connection con = null;
-		PreparedStatement statement = null;
 		
-		try
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement(INSERT_DATA);
+			
+			PreparedStatement statement = con.prepareStatement(INSERT_DATA);
 			statement.setString(1, player.getAccountName());
 			statement.setString(2, VAR_DATA);
 			statement.setString(3, Long.toString(System.currentTimeMillis()));
 			statement.execute();
+			statement.close();
 		}
 		catch (Exception e)
 		{
 			return;
 		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement);
-		}
+		
 	}
 	
 	public void deleteInfo(String account)
 	{
-		Connection con = null;
-		PreparedStatement statement = null;
 		
-		try
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement(DELETE_DATA);
+			
+			PreparedStatement statement = con.prepareStatement(DELETE_DATA);
 			statement.setString(1, account);
 			statement.execute();
+			statement.close();
 		}
 		catch (Exception e)
 		{
 			// empty catch clause
 		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement);
-		}
+		
 	}
 }

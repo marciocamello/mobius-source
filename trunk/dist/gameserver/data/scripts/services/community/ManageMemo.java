@@ -20,7 +20,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.database.DatabaseFactory;
@@ -222,17 +221,14 @@ public final class ManageMemo implements ScriptFile, ICommunityBoardHandler
 		{
 			int memoId = Integer.parseInt(st.nextToken());
 			String page = st.nextToken();
-			Connection con = null;
-			PreparedStatement statement = null;
-			ResultSet rset = null;
 			
-			try
+			try (Connection con = DatabaseFactory.getInstance().getConnection();)
 			{
-				con = DatabaseFactory.getInstance().getConnection();
-				statement = con.prepareStatement("SELECT * FROM `bbs_memo` WHERE `account_name` = ? and memo_id = ?");
+				
+				PreparedStatement statement = con.prepareStatement("SELECT * FROM `bbs_memo` WHERE `account_name` = ? and memo_id = ?");
 				statement.setString(1, player.getAccountName());
 				statement.setInt(2, memoId);
-				rset = statement.executeQuery();
+				ResultSet rset = statement.executeQuery();
 				
 				if (rset.next())
 				{
@@ -246,40 +242,35 @@ public final class ManageMemo implements ScriptFile, ICommunityBoardHandler
 					ShowBoard.separateAndSend(post, player);
 					return;
 				}
+				rset.close();
+				statement.close();
 			}
 			catch (Exception e)
 			{
 				// empty catch clause
 			}
-			finally
-			{
-				DbUtils.closeQuietly(con, statement, rset);
-			}
+			
 			onBypassCommand(player, "_bbsmemo");
 			return;
 		}
 		else if ("mmdele".equals(cmd))
 		{
 			int memoId = Integer.parseInt(st.nextToken());
-			Connection con = null;
-			PreparedStatement statement = null;
 			
-			try
+			try (Connection con = DatabaseFactory.getInstance().getConnection();)
 			{
-				con = DatabaseFactory.getInstance().getConnection();
-				statement = con.prepareStatement("DELETE FROM `bbs_memo` WHERE `account_name` = ? and memo_id = ?");
+				
+				PreparedStatement statement = con.prepareStatement("DELETE FROM `bbs_memo` WHERE `account_name` = ? and memo_id = ?");
 				statement.setString(1, player.getAccountName());
 				statement.setInt(2, memoId);
 				statement.execute();
+				statement.close();
 			}
 			catch (Exception e)
 			{
 				// empty catch clause
 			}
-			finally
-			{
-				DbUtils.closeQuietly(con, statement);
-			}
+			
 			onBypassCommand(player, "_mmlist_1");
 			return;
 		}
@@ -287,17 +278,14 @@ public final class ManageMemo implements ScriptFile, ICommunityBoardHandler
 		{
 			int memoId = Integer.parseInt(st.nextToken());
 			String page = st.nextToken();
-			Connection con = null;
-			PreparedStatement statement = null;
-			ResultSet rset = null;
 			
-			try
+			try (Connection con = DatabaseFactory.getInstance().getConnection();)
 			{
-				con = DatabaseFactory.getInstance().getConnection();
-				statement = con.prepareStatement("SELECT * FROM `bbs_memo` WHERE `account_name` = ? and memo_id = ?");
+				
+				PreparedStatement statement = con.prepareStatement("SELECT * FROM `bbs_memo` WHERE `account_name` = ? and memo_id = ?");
 				statement.setString(1, player.getAccountName());
 				statement.setInt(2, memoId);
-				rset = statement.executeQuery();
+				ResultSet rset = statement.executeQuery();
 				
 				if (rset.next())
 				{
@@ -328,15 +316,14 @@ public final class ManageMemo implements ScriptFile, ICommunityBoardHandler
 					player.sendPacket(new ShowBoard(args));
 					return;
 				}
+				rset.close();
+				statement.close();
 			}
 			catch (Exception e)
 			{
 				// empty catch clause
 			}
-			finally
-			{
-				DbUtils.closeQuietly(con, statement, rset);
-			}
+			
 			onBypassCommand(player, "_mmlist_" + page);
 			return;
 		}
@@ -399,25 +386,23 @@ public final class ManageMemo implements ScriptFile, ICommunityBoardHandler
 				
 				if ((title.length() > 0) && (memo.length() > 0))
 				{
-					Connection con = null;
-					PreparedStatement stmt = null;
 					
-					try
+					try (Connection con = DatabaseFactory.getInstance().getConnection();)
 					{
-						con = DatabaseFactory.getInstance().getConnection();
 						
 						if (memoId > 0)
 						{
-							stmt = con.prepareStatement("UPDATE bbs_memo SET title = ?, memo = ? WHERE memo_id = ? AND account_name = ?");
+							PreparedStatement stmt = con.prepareStatement("UPDATE bbs_memo SET title = ?, memo = ? WHERE memo_id = ? AND account_name = ?");
 							stmt.setString(1, title);
 							stmt.setString(2, memo);
 							stmt.setInt(3, memoId);
 							stmt.setString(4, player.getAccountName());
 							stmt.execute();
+							stmt.close();
 						}
 						else
 						{
-							stmt = con.prepareStatement("INSERT INTO bbs_memo(account_name, char_name, ip, title, memo, post_date) VALUES(?, ?, ?, ?, ?, ?)");
+							PreparedStatement stmt = con.prepareStatement("INSERT INTO bbs_memo(account_name, char_name, ip, title, memo, post_date) VALUES(?, ?, ?, ?, ?, ?)");
 							stmt.setString(1, player.getAccountName());
 							stmt.setString(2, player.getName());
 							stmt.setString(3, player.getNetConnection().getIpAddr());
@@ -425,16 +410,14 @@ public final class ManageMemo implements ScriptFile, ICommunityBoardHandler
 							stmt.setString(5, memo);
 							stmt.setInt(6, (int) (System.currentTimeMillis() / 1000));
 							stmt.execute();
+							stmt.close();
 						}
 					}
 					catch (Exception e)
 					{
 						// empty catch clause
 					}
-					finally
-					{
-						DbUtils.closeQuietly(con, stmt);
-					}
+					
 				}
 			}
 		}
@@ -452,20 +435,17 @@ public final class ManageMemo implements ScriptFile, ICommunityBoardHandler
 	private static String getMemoList(Player player, int page, int count)
 	{
 		StringBuilder memoList = new StringBuilder("");
-		Connection con = null;
-		PreparedStatement statement = null;
-		ResultSet rset = null;
 		
-		try
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
 			if (count > 0)
 			{
 				int start = (page - 1) * MEMO_PER_PAGE;
 				int end = page * MEMO_PER_PAGE;
-				con = DatabaseFactory.getInstance().getConnection();
-				statement = con.prepareStatement("SELECT memo_id,title,post_date FROM `bbs_memo` WHERE `account_name` = ? ORDER BY post_date DESC LIMIT " + start + "," + end);
+				
+				PreparedStatement statement = con.prepareStatement("SELECT memo_id,title,post_date FROM `bbs_memo` WHERE `account_name` = ? ORDER BY post_date DESC LIMIT " + start + "," + end);
 				statement.setString(1, player.getAccountName());
-				rset = statement.executeQuery();
+				ResultSet rset = statement.executeQuery();
 				String tpl = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_memo_post.htm", player);
 				
 				while (rset.next())
@@ -477,16 +457,15 @@ public final class ManageMemo implements ScriptFile, ICommunityBoardHandler
 					post = post.replace("%memo_date%", String.format("%1$te-%1$tm-%1$tY", new Date(rset.getInt("post_date") * 1000L)));
 					memoList.append(post);
 				}
+				rset.close();
+				statement.close();
 			}
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement, rset);
-		}
+		
 		return memoList.toString();
 	}
 	
@@ -497,31 +476,28 @@ public final class ManageMemo implements ScriptFile, ICommunityBoardHandler
 	 */
 	private static int getMemoCount(Player player)
 	{
-		Connection con = null;
-		PreparedStatement statement = null;
-		ResultSet rset = null;
+		
 		int count = 0;
 		
-		try
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("SELECT count(*) as cnt FROM bbs_memo WHERE `account_name` = ?");
+			
+			PreparedStatement statement = con.prepareStatement("SELECT count(*) as cnt FROM bbs_memo WHERE `account_name` = ?");
 			statement.setString(1, player.getAccountName());
-			rset = statement.executeQuery();
+			ResultSet rset = statement.executeQuery();
 			
 			if (rset.next())
 			{
 				count = rset.getInt("cnt");
 			}
+			rset.close();
+			statement.close();
 		}
 		catch (Exception e)
 		{
 			// empty catch clause
 		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement, rset);
-		}
+		
 		return count;
 	}
 }
