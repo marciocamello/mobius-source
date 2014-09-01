@@ -3087,7 +3087,7 @@
 	</npc>
 	<npc id="18466" name="Outpost Guard Captain" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.OutpostCaptain"/>
+		<set name="ai_type" value="Hellbound.OutpostCaptain"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4035,7 +4035,7 @@
 	</npc>
 	<npc id="18482" name="Fafurion Kindred" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="isle_of_prayer.FafurionKindred"/>
+		<set name="ai_type" value="IsleOfPrayer.FafurionKindred"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4149,7 +4149,7 @@
 	</npc>
 	<npc id="18484" name="Naia Failan" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.Pylon"/>
+		<set name="ai_type" value="Hellbound.Pylon"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4505,7 +4505,7 @@
 	</npc>
 	<npc id="18491" name="Lock" title="Tower of Naia">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.NaiaLock"/>
+		<set name="ai_type" value="Hellbound.NaiaLock"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4678,7 +4678,7 @@
 	</npc>
 	<npc id="18494" name="Ingenious Contraption" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.NaiaRoomController"/>
+		<set name="ai_type" value="Hellbound.NaiaRoomController"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4733,7 +4733,7 @@
 	</npc>
 	<npc id="18495" name="Ingenious Contraption" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.NaiaRoomController"/>
+		<set name="ai_type" value="Hellbound.NaiaRoomController"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4788,7 +4788,7 @@
 	</npc>
 	<npc id="18496" name="Ingenious Contraption" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.NaiaRoomController"/>
+		<set name="ai_type" value="Hellbound.NaiaRoomController"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4843,7 +4843,7 @@
 	</npc>
 	<npc id="18497" name="Ingenious Contraption" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.NaiaRoomController"/>
+		<set name="ai_type" value="Hellbound.NaiaRoomController"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4898,7 +4898,7 @@
 	</npc>
 	<npc id="18498" name="Ingenious Contraption" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.NaiaRoomController"/>
+		<set name="ai_type" value="Hellbound.NaiaRoomController"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4953,7 +4953,7 @@
 	</npc>
 	<npc id="18499" name="Ingenious Contraption" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.NaiaRoomController"/>
+		<set name="ai_type" value="Hellbound.NaiaRoomController"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

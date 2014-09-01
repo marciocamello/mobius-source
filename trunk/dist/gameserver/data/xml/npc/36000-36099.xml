@@ -198,7 +198,7 @@
 	</npc>
 	<npc id="36004" name="Suspicious Merchant" title="Archaic Fortress">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="suspiciousmerchant.SuspiciousMerchantArchaic"/>
+		<set name="ai_type" value="SuspiciousMerchant.SuspiciousMerchantArchaic"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -1815,7 +1815,7 @@
 	</npc>
 	<npc id="36035" name="Suspicious Merchant" title="Floran Fortress">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="suspiciousmerchant.SuspiciousMerchantFloran"/>
+		<set name="ai_type" value="SuspiciousMerchant.SuspiciousMerchantFloran"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3771,7 +3771,7 @@
 	</npc>
 	<npc id="36073" name="Suspicious Merchant" title="Cloud Mountain Fortress">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="suspiciousmerchant.SuspiciousMerchantCloud"/>
+		<set name="ai_type" value="SuspiciousMerchant.SuspiciousMerchantCloud"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

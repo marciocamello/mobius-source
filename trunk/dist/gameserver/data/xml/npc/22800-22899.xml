@@ -1927,7 +1927,7 @@
 	</npc>
 	<npc id="22821" name="Immortal Necromancer" title="Scout">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="dragonvalley.Necromancer"/>
+		<set name="ai_type" value="DragonValley.Necromancer"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2854,7 +2854,7 @@
 	</npc>
 	<npc id="22831" name="Dragon Tracker of the Valley" title="Tracker">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="dragonvalley.DragonTracker"/>
+		<set name="ai_type" value="DragonValley.DragonTracker"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2950,7 +2950,7 @@
 	</npc>
 	<npc id="22832" name="Dragon Scout of the Valley" title="Scout">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="dragonvalley.DragonScout"/>
+		<set name="ai_type" value="DragonValley.DragonScout"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="40"/>
@@ -3042,7 +3042,7 @@
 	</npc>
 	<npc id="22833" name="Sand Drake Tracker" title="Tracker">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="dragonvalley.SandTracker"/>
+		<set name="ai_type" value="DragonValley.SandTracker"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="40"/>
@@ -3139,7 +3139,7 @@
 	</npc>
 	<npc id="22834" name="Dust Dragon Tracker" title="Tracker">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="dragonvalley.DustTracker"/>
+		<set name="ai_type" value="DragonValley.DustTracker"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="40"/>
@@ -3942,7 +3942,7 @@
 	</npc>
 	<npc id="22844" name="Dragon Knight" title="">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="dragonvalley.DragonKnight"/>
+		<set name="ai_type" value="DragonValley.DragonKnight"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4040,7 +4040,7 @@
 	</npc>
 	<npc id="22845" name="Dragon Knight" title="">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="dragonvalley.DragonKnight"/>
+		<set name="ai_type" value="DragonValley.DragonKnight"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4333,7 +4333,7 @@
 	</npc>
 	<npc id="22848" name="Drake Leader" title="">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="dragonvalley.DrakeRunners"/>
+		<set name="ai_type" value="DragonValley.DrakeRunners"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4428,7 +4428,7 @@
 	</npc>
 	<npc id="22849" name="Drake Warrior" title="">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="dragonvalley.DrakeRunners"/>
+		<set name="ai_type" value="DragonValley.DrakeRunners"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4525,7 +4525,7 @@
 	</npc>
 	<npc id="22850" name="Drake Scout" title="">
 		<set name="aggroRange" value="600"/>
-		<set name="ai_type" value="dragonvalley.DrakeRunners"/>
+		<set name="ai_type" value="DragonValley.DrakeRunners"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4622,7 +4622,7 @@
 	</npc>
 	<npc id="22851" name="Drake Mage" title="">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="dragonvalley.DrakeRunners"/>
+		<set name="ai_type" value="DragonValley.DrakeRunners"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -5185,7 +5185,7 @@
 	</npc>
 	<npc id="22857" name="Knoriks" title="Land Dragon's Patrol">
 		<set name="aggroRange" value="600"/>
-		<set name="ai_type" value="dragonvalley.Knoriks"/>
+		<set name="ai_type" value="DragonValley.Knoriks"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -5291,7 +5291,7 @@
 	</npc>
 	<npc id="22858" name="Necromancer of the Valley" title="">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="dragonvalley.Necromancer"/>
+		<set name="ai_type" value="DragonValley.Necromancer"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -5403,7 +5403,7 @@
 	</npc>
 	<npc id="22859" name="Howl" title="Tracker">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="dragonvalley.Howl"/>
+		<set name="ai_type" value="DragonValley.Howl"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="40"/>

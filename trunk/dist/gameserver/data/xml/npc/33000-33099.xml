@@ -1284,7 +1284,7 @@
 		<set name="collision_height" value="22.25"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="talkingisland.Rotina"/>
+		<set name="ai_type" value="TalkingIsland.Rotina"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

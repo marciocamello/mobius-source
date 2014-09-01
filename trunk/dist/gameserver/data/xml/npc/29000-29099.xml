@@ -2294,7 +2294,7 @@
 	</npc>
 	<npc id="29029" name="Lavasaurus Alpha" title="">
 		<set name="aggroRange" value="1200"/>
-		<set name="ai_type" value="freya.ValakasMinion"/>
+		<set name="ai_type" value="Freya.ValakasMinion"/>
 		<set name="baseAtkRange" value="1100"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="80"/>
@@ -5472,7 +5472,7 @@
 	</npc>
 	<npc id="29069" name="Behemoth Dragon" title="">
 		<set name="aggroRange" value="10000"/>
-		<set name="ai_type" value="freya.AntharasMinion"/>
+		<set name="ai_type" value="Freya.AntharasMinion"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

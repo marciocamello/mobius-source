@@ -3002,7 +3002,7 @@
 	</npc>
 	<npc id="19171" name="Tentacle" title="">
 		<set name="aggroRange" value="100"/>
-		<set name="ai_type" value="hermunkus_message.Tentacle_19171"/>
+		<set name="ai_type" value="DwarvenVillageAttack.Tentacle"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="4"/>
@@ -3042,7 +3042,7 @@
 	</npc>
 	<npc id="19172" name="Teredor" title="">
 		<set name="aggroRange" value="350"/>
-		<set name="ai_type" value="hermunkus_message.Teredor_19172"/>
+		<set name="ai_type" value="DwarvenVillageAttack.TeredorSecond"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="4"/>
@@ -3757,7 +3757,7 @@
 	</npc>
 	<npc id="19189" name="Siege Golem" title="">
 		<set name="aggroRange" value="800"/>
-		<set name="ai_type" value="hermunkus_message.SiegeGolem_19189"/>
+		<set name="ai_type" value="DwarvenVillageAttack.SiegeGolem"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="4"/>
@@ -3804,7 +3804,7 @@
 	</npc>
 	<npc id="19190" name="Swoop Cannon" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hermunkus_message.SwoopCannon_19190"/>
+		<set name="ai_type" value="DwarvenVillageAttack.SwoopCannon"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="4"/>
@@ -3851,7 +3851,7 @@
 	</npc>
 	<npc id="19191" name="Croto" title="Captain">
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="hermunkus_message.Dwarvs"/>
+		<set name="ai_type" value="DwarvenVillageAttack.Dwarvs"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="4"/>
@@ -3895,7 +3895,7 @@
 	</npc>
 	<npc id="19192" name="Bronk" title="Head Blacksmith">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hermunkus_message.Bronk_19192"/>
+		<set name="ai_type" value="DwarvenVillageAttack.Bronk"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="4"/>
@@ -3939,7 +3939,7 @@
 	</npc>
 	<npc id="19193" name="Rogin" title="Deliveryman">
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="hermunkus_message.Rogin_19193"/>
+		<set name="ai_type" value="DwarvenVillageAttack.Rogin"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="4"/>
@@ -4068,7 +4068,7 @@
 	</npc>
 	<npc id="19196" name="Soldier" title="">
 		<set name="aggroRange" value="150"/>
-		<set name="ai_type" value="hermunkus_message.Soldiers"/>
+		<set name="ai_type" value="DwarvenVillageAttack.Soldiers"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="4"/>
@@ -4113,7 +4113,7 @@
 	</npc>
 	<npc id="19197" name="Soldier" title="">
 		<set name="aggroRange" value="150"/>
-		<set name="ai_type" value="hermunkus_message.Soldiers"/>
+		<set name="ai_type" value="DwarvenVillageAttack.Soldiers"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="4"/>
@@ -4158,7 +4158,7 @@
 	</npc>
 	<npc id="19198" name="Torocco" title="Carrier">
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="hermunkus_message.Torocco_19198"/>
+		<set name="ai_type" value="DwarvenVillageAttack.Torocco"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="4"/>
@@ -4203,7 +4203,7 @@
 	</npc>
 	<npc id="19199" name="Murdoc" title="Warehouse Keeper">
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="hermunkus_message.Dwarvs"/>
+		<set name="ai_type" value="DwarvenVillageAttack.Dwarvs"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="4"/>

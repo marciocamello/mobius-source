@@ -952,7 +952,7 @@
 	</npc>
 	<npc id="29118" name="Beleth" title="">
 		<set name="aggroRange" value="800"/>
-		<set name="ai_type" value="hellbound.Beleth"/>
+		<set name="ai_type" value="Hellbound.Beleth"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -1065,7 +1065,7 @@
 	</npc>
 	<npc id="29119" name="Beleth" title="">
 		<set name="aggroRange" value="800"/>
-		<set name="ai_type" value="hellbound.BelethClone"/>
+		<set name="ai_type" value="Hellbound.BelethClone"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2970,7 +2970,7 @@
 	</npc>
 	<npc id="29150" name="Ekimus" title="Immortal Lord">
 		<set name="aggroRange" value="900"/>
-		<set name="ai_type" value="seedofinfinity.Ekimus"/>
+		<set name="ai_type" value="SeedOfInfinity.Ekimus"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3091,7 +3091,7 @@
 	</npc>
 	<npc id="29151" name="Feral Hound of the Netherworld" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="seedofinfinity.FeralHound"/>
+		<set name="ai_type" value="SeedOfInfinity.FeralHound"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3151,7 +3151,7 @@
 	</npc>
 	<npc id="29152" name="Feral Hound of the Netherworld" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="seedofinfinity.FeralHound"/>
+		<set name="ai_type" value="SeedOfInfinity.FeralHound"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3663,7 +3663,7 @@
 	</npc>
 	<npc id="29163" name="Tiat" title="Witch of the Dragon of Darkness">
 		<set name="aggroRange" value="450"/>
-		<set name="ai_type" value="seedofdestruction.Tiat"/>
+		<set name="ai_type" value="SeedOfDestruction.Tiat"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3778,7 +3778,7 @@
 	</npc>
 	<npc id="29164" name="" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="seedofdestruction.TiatCamera"/>
+		<set name="ai_type" value="SeedOfDestruction.TiatCamera"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4432,7 +4432,7 @@
 	</npc>
 	<npc id="29177" name="Freya" title="Ice Queen">
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="freya.FreyaThrone"/>
+		<set name="ai_type" value="Freya.FreyaThrone"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4537,7 +4537,7 @@
 	</npc>
 	<npc id="29179" name="Freya" title="Ice Queen">
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="freya.FreyaStandNormal"/>
+		<set name="ai_type" value="Freya.FreyaStandNormal"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4681,7 +4681,7 @@
 	</npc>
 	<npc id="29180" name="Freya" title="Ice Queen">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="freya.FreyaStandHard"/>
+		<set name="ai_type" value="Freya.FreyaStandHard"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="57"/>
 		<set name="baseCritRate" value="40"/>
@@ -5403,7 +5403,7 @@
 	</npc>
 	<npc id="29190" name="Tarask Dragon" title="">
 		<set name="aggroRange" value="10000"/>
-		<set name="ai_type" value="freya.AntharasMinion"/>
+		<set name="ai_type" value="Freya.AntharasMinion"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -5465,7 +5465,7 @@
 	</npc>
 	<npc id="29191" name="Octavis" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="octavis.OctavisFollower"/>
+		<set name="ai_type" value="Octavis.OctavisFollower"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="57"/>
 		<set name="baseCritRate" value="40"/>
@@ -5554,7 +5554,7 @@
 		<set name="collision_radius" value="66.0"/>
 		<set name="collision_height" value="56.0"/>
 		<set name="type" value="Monster"/>
-		<set name="ai_type" value="octavis.OctavisRider"/>
+		<set name="ai_type" value="Octavis.OctavisRider"/>
 		<set name="level" value="98"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>

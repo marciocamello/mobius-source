@@ -585,7 +585,7 @@
 	</npc>
 	<npc id="36111" name="Suspicious Merchant" title="Tanor Fortress">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="suspiciousmerchant.SuspiciousMerchantTanor"/>
+		<set name="ai_type" value="SuspiciousMerchant.SuspiciousMerchantTanor"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2203,7 +2203,7 @@
 	</npc>
 	<npc id="36142" name="Suspicious Merchant" title="Dragonspine Fortress">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="suspiciousmerchant.SuspiciousMerchantDragonspine"/>
+		<set name="ai_type" value="SuspiciousMerchant.SuspiciousMerchantDragonspine"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3819,7 +3819,7 @@
 	</npc>
 	<npc id="36173" name="Suspicious Merchant" title="Antharas' Fortress">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="suspiciousmerchant.SuspiciousMerchantAntharas"/>
+		<set name="ai_type" value="SuspiciousMerchant.SuspiciousMerchantAntharas"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

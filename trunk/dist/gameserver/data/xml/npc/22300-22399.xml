@@ -3730,7 +3730,7 @@
 	</npc>
 	<npc id="22349" name="Chimera of Earth" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.Chimera"/>
+		<set name="ai_type" value="Hellbound.Chimera"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3819,7 +3819,7 @@
 	</npc>
 	<npc id="22350" name="Chimera of Darkness" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.Chimera"/>
+		<set name="ai_type" value="Hellbound.Chimera"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3908,7 +3908,7 @@
 	</npc>
 	<npc id="22351" name="Chimera of Wind" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.Chimera"/>
+		<set name="ai_type" value="Hellbound.Chimera"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4003,7 +4003,7 @@
 	</npc>
 	<npc id="22352" name="Chimera of Fire" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.Chimera"/>
+		<set name="ai_type" value="Hellbound.Chimera"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4093,7 +4093,7 @@
 	</npc>
 	<npc id="22353" name="Celtus" title="Chimera">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.Chimera"/>
+		<set name="ai_type" value="Hellbound.Chimera"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4333,7 +4333,7 @@
 	</npc>
 	<npc id="22357" name="Enceinte Guard" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.OutpostGuards"/>
+		<set name="ai_type" value="Hellbound.OutpostGuards"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4394,7 +4394,7 @@
 	</npc>
 	<npc id="22358" name="Enceinte Guard" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.OutpostGuards"/>
+		<set name="ai_type" value="Hellbound.OutpostGuards"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4456,7 +4456,7 @@
 	</npc>
 	<npc id="22359" name="Town Guard" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.TownGuard"/>
+		<set name="ai_type" value="Hellbound.TownGuard"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4635,7 +4635,7 @@
 	</npc>
 	<npc id="22361" name="Steel Citadel Keymaster" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.SteelCitadelKeymaster"/>
+		<set name="ai_type" value="Hellbound.SteelCitadelKeymaster"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -6128,7 +6128,7 @@
 	</npc>
 	<npc id="22377" name="Master Zelos" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.MasterZelos"/>
+		<set name="ai_type" value="Hellbound.MasterZelos"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -6407,7 +6407,7 @@
 	</npc>
 	<npc id="22380" name="Master Festina" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.MasterFestina"/>
+		<set name="ai_type" value="Hellbound.MasterFestina"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -7904,7 +7904,7 @@
 	</npc>
 	<npc id="22396" name="Foundry Laborer" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.FoundryWorker"/>
+		<set name="ai_type" value="Hellbound.FoundryWorker"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -8166,7 +8166,7 @@
 	</npc>
 	<npc id="22399" name="Greater Evil" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.GreaterEvil"/>
+		<set name="ai_type" value="Hellbound.GreaterEvil"/>
 		<set name="baseAtkRange" value="80"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

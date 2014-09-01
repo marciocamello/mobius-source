@@ -3,7 +3,7 @@
 <list>
 	<npc id="18800" name="Fledgling Lavasaurus" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -82,7 +82,7 @@
 	</npc>
 	<npc id="18801" name="Adult Lavasaurus" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -161,7 +161,7 @@
 	</npc>
 	<npc id="18802" name="Elderly Lavasaurus" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -242,7 +242,7 @@
 	</npc>
 	<npc id="18803" name="Ancient Lavasaurus" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -323,7 +323,7 @@
 	</npc>
 	<npc id="18804" name="Tar Beetle" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -381,7 +381,7 @@
 	</npc>
 	<npc id="18805" name="Waste Landfill Machine" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Heine.FieldOfSelenceAndWhispers.WastLandfillMachine"/>
+		<set name="ai_type" value="FieldOfSilenceAndWhispers.WastLandfillMachine"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -435,7 +435,7 @@
 	</npc>
 	<npc id="18806" name="Purifying Magic Circle" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Heine.FieldOfSelenceAndWhispers.BrazierOfPurity"/>
+		<set name="ai_type" value="FieldOfSilenceAndWhispers.BrazierOfPurity"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2008,7 +2008,7 @@
 	</npc>
 	<npc id="18839" name="Wild Maguen" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="freya.Maguen"/>
+		<set name="ai_type" value="Freya.Maguen"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2368,7 +2368,7 @@
 	</npc>
 	<npc id="18847" name="Freya" title="Ice Queen">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="freya.FreyaQuest"/>
+		<set name="ai_type" value="Freya.FreyaQuest"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2415,7 +2415,7 @@
 	</npc>
 	<npc id="18848" name="Battalion Leader" title="Jinia Guild">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="freya.JiniaKnight"/>
+		<set name="ai_type" value="Freya.JiniaKnight"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2463,7 +2463,7 @@
 	</npc>
 	<npc id="18849" name="Legionnaire" title="Jinia Guild">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="freya.JiniaKnight"/>
+		<set name="ai_type" value="Freya.JiniaKnight"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2511,7 +2511,7 @@
 	</npc>
 	<npc id="18850" name="Jinia" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="freya.JiniaGuild"/>
+		<set name="ai_type" value="Freya.JiniaGuild"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2559,7 +2559,7 @@
 	</npc>
 	<npc id="18851" name="Kegor" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="freya.JiniaGuild"/>
+		<set name="ai_type" value="Freya.JiniaGuild"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2650,7 +2650,7 @@
 	</npc>
 	<npc id="18853" name="Glacier" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="freya.Glacier"/>
+		<set name="ai_type" value="Freya.Glacier"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2699,7 +2699,7 @@
 	</npc>
 	<npc id="18854" name="Icy Breath" title="">
 		<set name="aggroRange" value="1200"/>
-		<set name="ai_type" value="freya.IceCastleBreath"/>
+		<set name="ai_type" value="Freya.IceCastleBreath"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2749,7 +2749,7 @@
 	</npc>
 	<npc id="18855" name="Ice Knight" title="">
 		<set name="aggroRange" value="1200"/>
-		<set name="ai_type" value="freya.IceKnightNormal"/>
+		<set name="ai_type" value="Freya.IceKnightNormal"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2809,7 +2809,7 @@
 	</npc>
 	<npc id="18856" name="Ice Knight" title="">
 		<set name="aggroRange" value="600"/>
-		<set name="ai_type" value="freya.IceKnightNormal"/>
+		<set name="ai_type" value="Freya.IceKnightNormal"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="40"/>
@@ -3136,7 +3136,7 @@
 	</npc>
 	<npc id="18863" name="Priest Ugoros" title="Tanta Lizardmen">
 		<set name="aggroRange" value="2000"/>
-		<set name="ai_type" value="freya.SeerUgoros"/>
+		<set name="ai_type" value="Freya.SeerUgoros"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

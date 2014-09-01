@@ -7,7 +7,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan0"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan0"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -82,7 +82,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan1"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan1"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -157,7 +157,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan2"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan2"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -232,7 +232,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan3"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan3"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -307,7 +307,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan4"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan4"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -382,7 +382,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan5"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan5"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -457,7 +457,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan6"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan6"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -532,7 +532,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan7"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan7"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -607,7 +607,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan8"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan8"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -682,7 +682,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan9"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan9"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -757,7 +757,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan10"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan10"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -832,7 +832,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan11"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan11"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -907,7 +907,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan12"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan12"/>
 		<set name="baseAtkRange" value="99"/>
 		<set name="baseHpMax" value="867545.468"/>
 		<set name="baseHpRate" value="1.0"/>
@@ -982,7 +982,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan13"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan13"/>
 		<set name="baseAtkRange" value="99"/>
 		<set name="baseHpMax" value="654322.468"/>
 		<set name="baseHpRate" value="1.0"/>
@@ -1057,7 +1057,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan14"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan14"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="654322.468"/>
 		<set name="baseHpRate" value="1.0"/>
@@ -1132,7 +1132,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan15"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan15"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -1207,7 +1207,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan16"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan16"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -1282,7 +1282,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan17"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan17"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -1357,7 +1357,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan18"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan18"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -1432,7 +1432,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan19"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan19"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -1507,7 +1507,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan20"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan20"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -1582,7 +1582,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan21"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan21"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -1657,7 +1657,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan22"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan22"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -1732,7 +1732,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan23"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan23"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -1807,7 +1807,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan24"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan24"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -1882,7 +1882,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan25"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan25"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -1957,7 +1957,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan26"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan26"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -2032,7 +2032,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan27"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan27"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -2107,7 +2107,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan28"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan28"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -2182,7 +2182,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan29"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan29"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -2257,7 +2257,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan30"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan30"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -2332,7 +2332,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan31"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan31"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -2407,7 +2407,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan32"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan32"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -2482,7 +2482,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan33"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan33"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -2557,7 +2557,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan34"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan34"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -2632,7 +2632,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan35"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan35"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -2707,7 +2707,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan36"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan36"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -2782,7 +2782,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan37"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan37"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -2857,7 +2857,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan38"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan38"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -2932,7 +2932,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan39"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan39"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -3007,7 +3007,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan40"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan40"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>
@@ -3082,7 +3082,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="seedofhellfire.Zofan41"/>
+		<set name="ai_type" value="SeedOfHellfire.Zofan41"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="621600000.0"/>
 		<set name="baseHpRate" value="1"/>

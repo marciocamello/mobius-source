@@ -10,7 +10,7 @@
 		<set name="collision_height" value="43.5"/>
 		<set name="collision_radius" value="20.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="talkingisland.SecondGuard"/>
+		<set name="ai_type" value="TalkingIsland.SecondGuard"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="40"/>
@@ -59,7 +59,7 @@
 		<set name="collision_height" value="43.5"/>
 		<set name="collision_radius" value="20.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="talkingisland.ThirdGuard"/>
+		<set name="ai_type" value="TalkingIsland.ThirdGuard"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="40"/>
@@ -108,7 +108,7 @@
 		<set name="collision_height" value="43.5"/>
 		<set name="collision_radius" value="20.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="talkingisland.FourthGuard"/>
+		<set name="ai_type" value="TalkingIsland.FourthGuard"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="40"/>

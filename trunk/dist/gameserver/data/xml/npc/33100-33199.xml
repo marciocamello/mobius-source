@@ -48,7 +48,7 @@
 	</npc>
 	<npc id="33101" name="Nevou" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="talkingisland.Inside"/>
+		<set name="ai_type" value="TalkingIsland.Inside"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="collision_height" value="17.3"/>
 		<set name="level" value="80"/>
@@ -267,7 +267,7 @@
 	<npc id="33106" name="Guard" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="type" value="Npc"/>
-		<set name="ai_type" value="talkingisland.Guardian"/>
+		<set name="ai_type" value="TalkingIsland.Guardian"/>
 		<set name="collision_radius" value="12.0"/>
 		<set name="collision_height" value="25.0"/>
 		<set name="level" value="80"/>
@@ -417,7 +417,7 @@
 		<set name="collision_height" value="20.5"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="talkingisland.Marsha"/>
+		<set name="ai_type" value="TalkingIsland.Marsha"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -466,7 +466,7 @@
 		<set name="collision_height" value="23.5"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="talkingisland.Darrygon"/>
+		<set name="ai_type" value="TalkingIsland.Darrygon"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -947,7 +947,7 @@
 		<set name="collision_height" value="21.5"/>
 		<set name="collision_radius" value="7.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="talkingisland.Rubentis"/>
+		<set name="ai_type" value="TalkingIsland.Rubentis"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -996,7 +996,7 @@
 		<set name="collision_height" value="24.5"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="talkingisland.Morgan"/>
+		<set name="ai_type" value="TalkingIsland.Morgan"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -1139,7 +1139,7 @@
 		<set name="collision_height" value="17.5"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="talkingisland.Apprentice"/>
+		<set name="ai_type" value="TalkingIsland.Apprentice"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3378,7 +3378,7 @@
 	</npc>
 	<npc id="33171" name="Priest Alice" title="Aden Vanguard">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="incubatorOfEvil.Avanguard_Ellis"/>
+		<set name="ai_type" value="IncubatorOfEvil.VanguardEllis"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3435,7 +3435,7 @@
 		<set name="collision_height" value="30.0"/>
 		<set name="collision_radius" value="14.5"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="incubatorOfEvil.Avanguard_Barton"/>
+		<set name="ai_type" value="IncubatorOfEvil.VanguardBarton"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3486,7 +3486,7 @@
 		<set name="collision_height" value="23.5"/>
 		<set name="collision_radius" value="10.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="incubatorOfEvil.Avanguard_Xaok"/>
+		<set name="ai_type" value="IncubatorOfEvil.VanguardXaok"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3534,7 +3534,7 @@
 		<set name="collision_height" value="23.5"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="incubatorOfEvil.Avanguard_Ellia"/>
+		<set name="ai_type" value="IncubatorOfEvil.VanguardEllia"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

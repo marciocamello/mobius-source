@@ -570,7 +570,7 @@
 	</npc>
 	<npc id="18908" name="Sel Mahum Chef" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="selmahum.SelChef"/>
+		<set name="ai_type" value="SelMahum.SelChef"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -623,7 +623,7 @@
 	</npc>
 	<npc id="18909" name="Solina Knights" title="">
 		<set name="aggroRange" value="200"/>
-		<set name="ai_type" value="freya.SolinaKnight"/>
+		<set name="ai_type" value="Freya.SolinaKnight"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -1244,7 +1244,7 @@
 	</npc>
 	<npc id="18919" name="" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hermunkus_message.Transparent_18919"/>
+		<set name="ai_type" value="DwarvenVillageAttack.Transparent"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -1555,7 +1555,7 @@
 	</npc>
 	<npc id="18926" name="Mercenary Archer" title="Jinia Guild">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="freya.JiniaKnight"/>
+		<set name="ai_type" value="Freya.JiniaKnight"/>
 		<set name="baseAtkRange" value="1100"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -1599,7 +1599,7 @@
 	</npc>
 	<npc id="18927" name="Campfire" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="selmahum.Fireplace"/>
+		<set name="ai_type" value="SelMahum.Fireplace"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -5158,7 +5158,7 @@
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="type" value="Monster"/>
-		<set name="ai_type" value="teredor.TeredorEggs"/>
+		<set name="ai_type" value="Teredor.TeredorEggs"/>
 		<set name="level" value="88"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
@@ -5207,7 +5207,7 @@
 		<set name="collision_radius" value="10.0"/>
 		<set name="collision_height" value="22.5"/>
 		<set name="type" value="Npc"/>
-		<set name="ai_type" value="hermunkus_message.Teredor_18998"/>
+		<set name="ai_type" value="DwarvenVillageAttack.TeredorFirst"/>
 		<set name="level" value="85"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>

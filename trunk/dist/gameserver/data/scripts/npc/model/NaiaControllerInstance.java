@@ -18,7 +18,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
-import ai.hellbound.NaiaLock;
+import ai.Hellbound.NaiaLock;
 
 /**
  * @author Mobius

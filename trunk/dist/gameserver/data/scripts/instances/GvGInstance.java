@@ -47,7 +47,7 @@ import lineage2.gameserver.utils.Location;
 
 import org.apache.commons.lang3.mutable.MutableInt;
 
-import events.GvG.GvG;
+import events.GroupVsGroup.GroupVsGroup;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
@@ -235,7 +235,7 @@ public final class GvGInstance extends Reflection
 		final ExCubeGameEnd end = new ExCubeGameEnd(isRedWinner);
 		broadCastPacketToBothTeams(end);
 		reward(isRedWinner ? team2 : team1);
-		GvG.updateWinner(isRedWinner ? team2.getPartyLeader() : team1.getPartyLeader());
+		GroupVsGroup.updateWinner(isRedWinner ? team2.getPartyLeader() : team1.getPartyLeader());
 		zonepvp.setActive(false);
 		peace1.setActive(false);
 		peace2.setActive(false);
@@ -496,11 +496,11 @@ public final class GvGInstance extends Reflection
 		
 		if (team1.containsMember(player))
 		{
-			pos = Location.findPointToStay(GvG.TEAM1_LOC, 0, 150, getGeoIndex());
+			pos = Location.findPointToStay(GroupVsGroup.TEAM1_LOC, 0, 150, getGeoIndex());
 		}
 		else
 		{
-			pos = Location.findPointToStay(GvG.TEAM2_LOC, 0, 150, getGeoIndex());
+			pos = Location.findPointToStay(GroupVsGroup.TEAM2_LOC, 0, 150, getGeoIndex());
 		}
 		
 		player.teleToLocation(pos, this);
@@ -524,7 +524,7 @@ public final class GvGInstance extends Reflection
 			player.sendPacket(new ExCubeGameEnd(false));
 		}
 		
-		player.teleToLocation(Location.findPointToStay(GvG.RETURN_LOC, 0, 150, ReflectionManager.DEFAULT.getGeoIndex()), 0);
+		player.teleToLocation(Location.findPointToStay(GroupVsGroup.RETURN_LOC, 0, 150, ReflectionManager.DEFAULT.getGeoIndex()), 0);
 	}
 	
 	/**
