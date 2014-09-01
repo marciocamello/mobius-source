@@ -4621,7 +4621,7 @@
 	</npc>
 	<npc id="22750" name="Elite Bgurent" title="Bistakon">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="freya.AnnihilationFighter"/>
+		<set name="ai_type" value="Freya.AnnihilationFighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4716,7 +4716,7 @@
 	</npc>
 	<npc id="22751" name="Elite Brakian" title="Bistakon">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="freya.AnnihilationFighter"/>
+		<set name="ai_type" value="Freya.AnnihilationFighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4815,7 +4815,7 @@
 	</npc>
 	<npc id="22752" name="Elite Groikan" title="Bistakon">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="freya.AnnihilationFighter"/>
+		<set name="ai_type" value="Freya.AnnihilationFighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4902,7 +4902,7 @@
 	</npc>
 	<npc id="22753" name="Elite Treykan" title="Bistakon">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="freya.AnnihilationFighter"/>
+		<set name="ai_type" value="Freya.AnnihilationFighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -5287,7 +5287,7 @@
 	</npc>
 	<npc id="22757" name="Elite Turtlelian" title="Reptilikon">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="freya.AnnihilationFighter"/>
+		<set name="ai_type" value="Freya.AnnihilationFighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="40"/>
@@ -5378,7 +5378,7 @@
 	</npc>
 	<npc id="22758" name="Elite Krajian" title="Reptilikon">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="freya.AnnihilationFighter"/>
+		<set name="ai_type" value="Freya.AnnihilationFighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="40"/>
@@ -5468,7 +5468,7 @@
 	</npc>
 	<npc id="22759" name="Elite Tardyon" title="Reptilikon">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="freya.AnnihilationFighter"/>
+		<set name="ai_type" value="Freya.AnnihilationFighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="40"/>
@@ -5861,7 +5861,7 @@
 	</npc>
 	<npc id="22763" name="Elite Kanibi" title="Kokracon">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="freya.AnnihilationFighter"/>
+		<set name="ai_type" value="Freya.AnnihilationFighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -5957,7 +5957,7 @@
 	</npc>
 	<npc id="22764" name="Elite Kiriona" title="Kokracon">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="freya.AnnihilationFighter"/>
+		<set name="ai_type" value="Freya.AnnihilationFighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -6057,7 +6057,7 @@
 	</npc>
 	<npc id="22765" name="Elite Kaiona" title="Kokracon">
 		<set name="aggroRange" value="400"/>
-		<set name="ai_type" value="freya.AnnihilationFighter"/>
+		<set name="ai_type" value="Freya.AnnihilationFighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -6970,7 +6970,7 @@
 	</npc>
 	<npc id="22775" name="Sel Mahum Drill Sergeant" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="selmahum.DrillSergeant"/>
+		<set name="ai_type" value="SelMahum.DrillSergeant"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -7102,7 +7102,7 @@
 	</npc>
 	<npc id="22776" name="Sel Mahum Training Officer" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="selmahum.DrillSergeant"/>
+		<set name="ai_type" value="SelMahum.DrillSergeant"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -7235,7 +7235,7 @@
 	</npc>
 	<npc id="22777" name="Sel Mahum Drill Sergeant" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="selmahum.DrillSergeant"/>
+		<set name="ai_type" value="SelMahum.DrillSergeant"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -7367,7 +7367,7 @@
 	</npc>
 	<npc id="22778" name="Sel Mahum Drill Sergeant" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="selmahum.DrillSergeant"/>
+		<set name="ai_type" value="SelMahum.DrillSergeant"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -8279,7 +8279,7 @@
 	</npc>
 	<npc id="22786" name="Sel Mahum Squad Leader" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="selmahum.SelSquadLeader"/>
+		<set name="ai_type" value="SelMahum.SelSquadLeader"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -8403,7 +8403,7 @@
 	</npc>
 	<npc id="22787" name="Sel Mahum Squad Leader" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="selmahum.SelSquadLeader"/>
+		<set name="ai_type" value="SelMahum.SelSquadLeader"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -8553,7 +8553,7 @@
 	</npc>
 	<npc id="22788" name="Sel Mahum Squad Leader" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="selmahum.SelSquadLeader"/>
+		<set name="ai_type" value="SelMahum.SelSquadLeader"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

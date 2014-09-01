@@ -350,7 +350,7 @@
 	</npc>
 	<npc id="4309" name="Follower" title="Sinister">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="adept.AdeptGludio"/>
+		<set name="ai_type" value="Adept.AdeptGludio"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -393,7 +393,7 @@
 	</npc>
 	<npc id="4310" name="Follower" title="Sinister">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="adept.AdeptGiran"/>
+		<set name="ai_type" value="Adept.AdeptGiran"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -436,7 +436,7 @@
 	</npc>
 	<npc id="4311" name="Follower" title="Sinister">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="adept.AdeptAden"/>
+		<set name="ai_type" value="Adept.AdeptAden"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -479,7 +479,7 @@
 	</npc>
 	<npc id="4312" name="Follower" title="Sinister">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="adept.AdeptRune"/>
+		<set name="ai_type" value="Adept.AdeptRune"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

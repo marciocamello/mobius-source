@@ -1733,7 +1733,7 @@
 	</npc>
 	<npc id="22523" name="Soul Devourer" title="Food of Ekimus">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="seedofinfinity.EkimusFood"/>
+		<set name="ai_type" value="SeedOfInfinity.EkimusFood"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

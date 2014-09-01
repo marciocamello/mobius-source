@@ -53,7 +53,7 @@
 	</npc>
 	<npc id="19401" name="Soldier" title="">
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="isle_of_soul.GolemDefender"/>
+		<set name="ai_type" value="IsleOfSouls.GolemDefender"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="66"/>
 		<set name="baseCritRate" value="40"/>
@@ -101,7 +101,7 @@
 	</npc>
 	<npc id="19402" name="Soldier" title="">
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="isle_of_soul.GolemDefender"/>
+		<set name="ai_type" value="IsleOfSouls.GolemDefender"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="66"/>
 		<set name="baseCritRate" value="40"/>

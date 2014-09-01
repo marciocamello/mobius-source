@@ -337,7 +337,7 @@
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="talkingisland.Ruks"/>
+		<set name="ai_type" value="TalkingIsland.Ruks"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -386,7 +386,7 @@
 		<set name="collision_height" value="23.0"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="talkingisland.Hera"/>
+		<set name="ai_type" value="TalkingIsland.Hera"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -844,7 +844,7 @@
 		<set name="collision_height" value="25.0"/>
 		<set name="collision_radius" value="13.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="talkingisland.Soros"/>
+		<set name="ai_type" value="TalkingIsland.Soros"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -934,7 +934,7 @@
 		<set name="collision_height" value="23.0"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="talkingisland.Allada"/>
+		<set name="ai_type" value="TalkingIsland.Allada"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -1626,7 +1626,7 @@
 		<set name="collision_height" value="24.5"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="talkingisland.Rinne"/>
+		<set name="ai_type" value="TalkingIsland.Rinne"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -1960,7 +1960,7 @@
 		<set name="collision_height" value="17.5"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="talkingisland.Devno"/>
+		<set name="ai_type" value="TalkingIsland.Devno"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2008,7 +2008,7 @@
 		<set name="collision_height" value="23.0"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="talkingisland.Karonf"/>
+		<set name="ai_type" value="TalkingIsland.Karonf"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2200,7 +2200,7 @@
 		<set name="collision_height" value="25.0"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="talkingisland.Eleve"/>
+		<set name="ai_type" value="TalkingIsland.Eleve"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3833,7 +3833,7 @@
 		<set name="collision_height" value="22.5"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="talkingisland.Mei"/>
+		<set name="ai_type" value="TalkingIsland.Mei"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

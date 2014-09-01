@@ -585,7 +585,7 @@
 	</npc>
 	<npc id="36211" name="Suspicious Merchant" title="Western Fortress">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="suspiciousmerchant.SuspiciousMerchantWestern"/>
+		<set name="ai_type" value="SuspiciousMerchant.SuspiciousMerchantWestern"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2546,7 +2546,7 @@
 	</npc>
 	<npc id="36249" name="Suspicious Merchant" title="Hunter's Fortress">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="suspiciousmerchant.SuspiciousMerchantHunters"/>
+		<set name="ai_type" value="SuspiciousMerchant.SuspiciousMerchantHunters"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4502,7 +4502,7 @@
 	</npc>
 	<npc id="36287" name="Suspicious Merchant" title="Aaru Fortress">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="suspiciousmerchant.SuspiciousMerchantAaru"/>
+		<set name="ai_type" value="SuspiciousMerchant.SuspiciousMerchantAaru"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

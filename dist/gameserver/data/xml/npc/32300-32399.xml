@@ -230,7 +230,7 @@
 	</npc>
 	<npc id="32305" name="Ranku's Scapegoat" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.RankuScapegoat"/>
+		<set name="ai_type" value="Hellbound.RankuScapegoat"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2111,7 +2111,7 @@
 	</npc>
 	<npc id="32350" name="Sandblast" title="">
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="hellbound.Sandstorm"/>
+		<set name="ai_type" value="Hellbound.Sandstorm"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3285,7 +3285,7 @@
 	</npc>
 	<npc id="32376" name="Teleportation Cubic" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.NaiaCube"/>
+		<set name="ai_type" value="Hellbound.NaiaCube"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

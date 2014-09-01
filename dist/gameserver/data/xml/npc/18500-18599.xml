@@ -3,7 +3,7 @@
 <list>
 	<npc id="18500" name="Ingenious Contraption" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.NaiaRoomController"/>
+		<set name="ai_type" value="Hellbound.NaiaRoomController"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -58,7 +58,7 @@
 	</npc>
 	<npc id="18501" name="Ingenious Contraption" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.NaiaRoomController"/>
+		<set name="ai_type" value="Hellbound.NaiaRoomController"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -113,7 +113,7 @@
 	</npc>
 	<npc id="18502" name="Ingenious Contraption" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.NaiaRoomController"/>
+		<set name="ai_type" value="Hellbound.NaiaRoomController"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -168,7 +168,7 @@
 	</npc>
 	<npc id="18503" name="Ingenious Contraption" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.NaiaRoomController"/>
+		<set name="ai_type" value="Hellbound.NaiaRoomController"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -223,7 +223,7 @@
 	</npc>
 	<npc id="18504" name="Ingenious Contraption" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.NaiaRoomController"/>
+		<set name="ai_type" value="Hellbound.NaiaRoomController"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -278,7 +278,7 @@
 	</npc>
 	<npc id="18505" name="Ingenious Contraption" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.NaiaRoomController"/>
+		<set name="ai_type" value="Hellbound.NaiaRoomController"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

@@ -2893,7 +2893,7 @@
 	</npc>
 	<npc id="18345" name="Sprigant" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="primeval_isle.SprigantStun"/>
+		<set name="ai_type" value="PrimevalIsle.SprigantStun"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="10"/>
@@ -2961,7 +2961,7 @@
 	</npc>
 	<npc id="18346" name="Sprigant" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="primeval_isle.SprigantPoison"/>
+		<set name="ai_type" value="PrimevalIsle.SprigantPoison"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="10"/>

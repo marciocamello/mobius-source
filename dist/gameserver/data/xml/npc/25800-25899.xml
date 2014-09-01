@@ -3345,7 +3345,7 @@
 	</npc>
 	<npc id="25866" name="Apherus" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="gardenofgenesis.Apherus"/>
+		<set name="ai_type" value="GardenOfGenesis.Apherus"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="57"/>
 		<set name="baseCritRate" value="40"/>

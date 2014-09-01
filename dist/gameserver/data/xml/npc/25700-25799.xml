@@ -33,7 +33,7 @@
 		<set name="collision_radius" value="28.0"/>
 		<set name="collision_height" value="67.5"/>
 		<set name="type" value="RaidBoss"/>
-		<set name="ai_type" value="freya.IceCaptainKnight"/>
+		<set name="ai_type" value="Freya.IceCaptainKnight"/>
 		<set name="level" value="88"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
@@ -1369,7 +1369,7 @@
 		<set name="collision_radius" value="60.0"/>
 		<set name="collision_height" value="77.0"/>
 		<set name="type" value="RaidBoss"/>
-		<set name="ai_type" value="dragonvalley.DragonRaid"/>
+		<set name="ai_type" value="DragonValley.DragonRaid"/>
 		<set name="level" value="84"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="14073897"/>
@@ -1446,7 +1446,7 @@
 		<set name="collision_radius" value="48.0"/>
 		<set name="collision_height" value="53.5"/>
 		<set name="type" value="RaidBoss"/>
-		<set name="ai_type" value="dragonvalley.DragonRaid"/>
+		<set name="ai_type" value="DragonValley.DragonRaid"/>
 		<set name="level" value="84"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="17240524"/>
@@ -1518,7 +1518,7 @@
 		<set name="collision_radius" value="70.0"/>
 		<set name="collision_height" value="150.0"/>
 		<set name="type" value="RaidBoss"/>
-		<set name="ai_type" value="dragonvalley.DragonRaid"/>
+		<set name="ai_type" value="DragonValley.DragonRaid"/>
 		<set name="level" value="84"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="19351609"/>
@@ -1596,7 +1596,7 @@
 		<set name="collision_radius" value="112.0"/>
 		<set name="collision_height" value="150.0"/>
 		<set name="type" value="RaidBoss"/>
-		<set name="ai_type" value="dragonvalley.DragonRaid"/>
+		<set name="ai_type" value="DragonValley.DragonRaid"/>
 		<set name="level" value="84"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="21110846"/>
@@ -1674,7 +1674,7 @@
 		<set name="collision_radius" value="60.0"/>
 		<set name="collision_height" value="80.0"/>
 		<set name="type" value="RaidBoss"/>
-		<set name="ai_type" value="dragonvalley.DragonRaid"/>
+		<set name="ai_type" value="DragonValley.DragonRaid"/>
 		<set name="level" value="84"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="22870083"/>
@@ -1752,7 +1752,7 @@
 		<set name="collision_radius" value="55.0"/>
 		<set name="collision_height" value="55.0"/>
 		<set name="type" value="RaidBoss"/>
-		<set name="ai_type" value="dragonvalley.DragonRaid"/>
+		<set name="ai_type" value="DragonValley.DragonRaid"/>
 		<set name="level" value="84"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="rewardExp" value="24629320"/>
@@ -1830,7 +1830,7 @@
 		<set name="collision_radius" value="60.0"/>
 		<set name="collision_height" value="80.0"/>
 		<set name="type" value="RaidBoss"/>
-		<set name="ai_type" value="dragonvalley.DragonRaid"/>
+		<set name="ai_type" value="DragonValley.DragonRaid"/>
 		<set name="level" value="84"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="rewardExp" value="26388558"/>
@@ -1902,7 +1902,7 @@
 		<set name="collision_radius" value="20.0"/>
 		<set name="collision_height" value="51.0"/>
 		<set name="type" value="RaidBoss"/>
-		<set name="ai_type" value="dragonvalley.DrakeBosses"/>
+		<set name="ai_type" value="DragonValley.DrakeBosses"/>
 		<set name="level" value="85"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
@@ -1963,7 +1963,7 @@
 		<set name="collision_radius" value="63.0"/>
 		<set name="collision_height" value="54.0"/>
 		<set name="type" value="RaidBoss"/>
-		<set name="ai_type" value="dragonvalley.DrakeBosses"/>
+		<set name="ai_type" value="DragonValley.DrakeBosses"/>
 		<set name="level" value="85"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
@@ -2024,7 +2024,7 @@
 		<set name="collision_radius" value="50.0"/>
 		<set name="collision_height" value="84.0"/>
 		<set name="type" value="RaidBoss"/>
-		<set name="ai_type" value="dragonvalley.DrakeBosses"/>
+		<set name="ai_type" value="DragonValley.DrakeBosses"/>
 		<set name="level" value="85"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
@@ -5121,7 +5121,7 @@
 		<set name="collision_radius" value="35.0"/>
 		<set name="collision_height" value="93.0"/>
 		<set name="type" value="RaidBoss"/>
-		<set name="ai_type" value="gardenofgenesis.Apherus"/>
+		<set name="ai_type" value="GardenOfGenesis.Apherus"/>
 		<set name="level" value="94"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="198916032"/>
@@ -5754,7 +5754,7 @@
 		<set name="collision_radius" value="90.0"/>
 		<set name="collision_height" value="190.0"/>
 		<set name="type" value="ReflectionBoss"/>
-		<set name="ai_type" value="teredor.Teredor"/>
+		<set name="ai_type" value="Teredor.Teredor"/>
 		<set name="level" value="88"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="305082624"/>

@@ -642,7 +642,7 @@
 		<set name="collision_height" value="23.5"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="incubatorOfEvil.NpcArcherAI"/>
+		<set name="ai_type" value="IncubatorOfEvil.NpcArcherAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -693,7 +693,7 @@
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="incubatorOfEvil.NpcWarriorAI"/>
+		<set name="ai_type" value="IncubatorOfEvil.NpcWarriorAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

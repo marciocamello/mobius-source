@@ -3,7 +3,7 @@
 <list>
 	<npc id="25600" name="Temenir" title="Darion's Challenger">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.DarionChallenger"/>
+		<set name="ai_type" value="Hellbound.DarionChallenger"/>
 		<set name="baseAtkRange" value="80"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="40"/>
@@ -86,7 +86,7 @@
 	</npc>
 	<npc id="25601" name="Draksius" title="Darion's Challenger">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.DarionChallenger"/>
+		<set name="ai_type" value="Hellbound.DarionChallenger"/>
 		<set name="baseAtkRange" value="80"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="40"/>
@@ -169,7 +169,7 @@
 	</npc>
 	<npc id="25602" name="Kiretcenah" title="Darion's Challenger">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.DarionChallenger"/>
+		<set name="ai_type" value="Hellbound.DarionChallenger"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="40"/>
@@ -255,7 +255,7 @@
 	</npc>
 	<npc id="25603" name="Darion" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.Darion"/>
+		<set name="ai_type" value="Hellbound.Darion"/>
 		<set name="baseAtkRange" value="80"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -342,7 +342,7 @@
 	</npc>
 	<npc id="25604" name="Mutated Elpy" title="Naia's Creature">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.MutatedElpy"/>
+		<set name="ai_type" value="Hellbound.MutatedElpy"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -397,7 +397,7 @@
 	</npc>
 	<npc id="25605" name="Naia Spore" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.NaiaSpore"/>
+		<set name="ai_type" value="Hellbound.NaiaSpore"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -459,7 +459,7 @@
 	</npc>
 	<npc id="25606" name="Naia Spore" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.NaiaSpore"/>
+		<set name="ai_type" value="Hellbound.NaiaSpore"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -521,7 +521,7 @@
 	</npc>
 	<npc id="25607" name="Naia Spore" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.NaiaSpore"/>
+		<set name="ai_type" value="Hellbound.NaiaSpore"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -583,7 +583,7 @@
 	</npc>
 	<npc id="25608" name="Naia Spore" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.NaiaSpore"/>
+		<set name="ai_type" value="Hellbound.NaiaSpore"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -645,7 +645,7 @@
 	</npc>
 	<npc id="25609" name="Epidos" title="Naia Shambler">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.Epidos"/>
+		<set name="ai_type" value="Hellbound.Epidos"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="57"/>
 		<set name="baseCritRate" value="40"/>
@@ -738,7 +738,7 @@
 	</npc>
 	<npc id="25610" name="Epidos" title="Naia Shambler">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.Epidos"/>
+		<set name="ai_type" value="Hellbound.Epidos"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -834,7 +834,7 @@
 	</npc>
 	<npc id="25611" name="Epidos" title="Naia Shambler">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.Epidos"/>
+		<set name="ai_type" value="Hellbound.Epidos"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -921,7 +921,7 @@
 	</npc>
 	<npc id="25612" name="Epidos" title="Naia Shambler">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.Epidos"/>
+		<set name="ai_type" value="Hellbound.Epidos"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -1062,7 +1062,7 @@
 	</npc>
 	<npc id="25614" name="Floating Ghost" title="">
 		<set name="aggroRange" value="100"/>
-		<set name="ai_type" value="hellbound.FloatingGhost"/>
+		<set name="ai_type" value="Hellbound.FloatingGhost"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -1118,7 +1118,7 @@
 	</npc>
 	<npc id="25615" name="Floating Ghost" title="">
 		<set name="aggroRange" value="100"/>
-		<set name="ai_type" value="hellbound.FloatingGhost"/>
+		<set name="ai_type" value="Hellbound.FloatingGhost"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4679,7 +4679,7 @@
 	</npc>
 	<npc id="25665" name="Yehan Klodekus" title="Soul Destroyer">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="seedofinfinity.YehanBrother"/>
+		<set name="ai_type" value="SeedOfInfinity.YehanBrother"/>
 		<set name="baseAtkRange" value="80"/>
 		<set name="baseCON" value="57"/>
 		<set name="baseCritRate" value="40"/>
@@ -4769,7 +4769,7 @@
 	</npc>
 	<npc id="25666" name="Yehan Klanikus" title="Guide of Darkness">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="seedofinfinity.YehanBrother"/>
+		<set name="ai_type" value="SeedOfInfinity.YehanBrother"/>
 		<set name="baseAtkRange" value="80"/>
 		<set name="baseCON" value="57"/>
 		<set name="baseCritRate" value="40"/>
@@ -7320,7 +7320,7 @@
 	</npc>
 	<npc id="25699" name="Glakias" title="Ice Knight Captain">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="freya.IceCaptainKnight"/>
+		<set name="ai_type" value="Freya.IceCaptainKnight"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

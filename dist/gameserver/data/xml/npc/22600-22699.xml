@@ -2648,7 +2648,7 @@
 	</npc>
 	<npc id="22634" name="Scarlet Stakato Worker" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2731,7 +2731,7 @@
 	</npc>
 	<npc id="22635" name="Scarlet Stakato Soldier" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2816,7 +2816,7 @@
 	</npc>
 	<npc id="22636" name="Scarlet Stakato Noble" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2905,7 +2905,7 @@
 	</npc>
 	<npc id="22637" name="Tepra Scorpion" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2990,7 +2990,7 @@
 	</npc>
 	<npc id="22638" name="Tepra Scarab" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3076,7 +3076,7 @@
 	</npc>
 	<npc id="22639" name="Assassin Beetle" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3166,7 +3166,7 @@
 	</npc>
 	<npc id="22640" name="Mercenary of Destruction" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="80"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3254,7 +3254,7 @@
 	</npc>
 	<npc id="22641" name="Knight of Destruction" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3342,7 +3342,7 @@
 	</npc>
 	<npc id="22642" name="Lavastone Golem" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3426,7 +3426,7 @@
 	</npc>
 	<npc id="22643" name="Magma Golem" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3511,7 +3511,7 @@
 	</npc>
 	<npc id="22644" name="Arimanes of Destruction" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3601,7 +3601,7 @@
 	</npc>
 	<npc id="22645" name="Balor of Destruction" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="80"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3688,7 +3688,7 @@
 	</npc>
 	<npc id="22646" name="Ashuras of Destruction" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3773,7 +3773,7 @@
 	</npc>
 	<npc id="22647" name="Lavasillisk" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3858,7 +3858,7 @@
 	</npc>
 	<npc id="22648" name="Blazing Ifrit" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3942,7 +3942,7 @@
 	</npc>
 	<npc id="22649" name="Magma Drake" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="groups.ForgeoftheGods"/>
+		<set name="ai_type" value="groups.ForgeOfTheGods"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4030,7 +4030,7 @@
 	</npc>
 	<npc id="22650" name="Mucrokian Fanatic" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Heine.FieldOfSelenceAndWhispers.Mucrokian"/>
+		<set name="ai_type" value="FieldOfSilenceAndWhispers.Mucrokian"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4145,7 +4145,7 @@
 	</npc>
 	<npc id="22651" name="Mucrokian Ascetic" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Heine.FieldOfSelenceAndWhispers.Mucrokian"/>
+		<set name="ai_type" value="FieldOfSilenceAndWhispers.Mucrokian"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4265,7 +4265,7 @@
 	</npc>
 	<npc id="22652" name="Mucrokian Savior" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Heine.FieldOfSelenceAndWhispers.Mucrokian"/>
+		<set name="ai_type" value="FieldOfSilenceAndWhispers.Mucrokian"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4387,7 +4387,7 @@
 	</npc>
 	<npc id="22653" name="Mucrokian Prophet" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Heine.FieldOfSelenceAndWhispers.Mucrokian"/>
+		<set name="ai_type" value="FieldOfSilenceAndWhispers.Mucrokian"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4507,7 +4507,7 @@
 	</npc>
 	<npc id="22654" name="Contaminated Mucrokian" title="">
 		<set name="aggroRange" value="150"/>
-		<set name="ai_type" value="Heine.FieldOfSelenceAndWhispers.ContaminatedMucrokian"/>
+		<set name="ai_type" value="FieldOfSilenceAndWhispers.ContaminatedMucrokian"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4628,7 +4628,7 @@
 	</npc>
 	<npc id="22655" name="Awakened Mucrokian" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Heine.FieldOfSelenceAndWhispers.AwakenedMucrokian"/>
+		<set name="ai_type" value="FieldOfSilenceAndWhispers.AwakenedMucrokian"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4750,7 +4750,7 @@
 	</npc>
 	<npc id="22656" name="Suppressor" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Heine.FieldOfSelenceAndWhispers.Suppressor"/>
+		<set name="ai_type" value="FieldOfSilenceAndWhispers.Suppressor"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4871,7 +4871,7 @@
 	</npc>
 	<npc id="22657" name="Executioner" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Heine.FieldOfSelenceAndWhispers.Exterminator"/>
+		<set name="ai_type" value="FieldOfSilenceAndWhispers.Exterminator"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4994,7 +4994,7 @@
 	</npc>
 	<npc id="22658" name="Sentinel Waterspirit" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Heine.FieldOfSelenceAndWhispers.EvilSpiritsMagicForce"/>
+		<set name="ai_type" value="FieldOfSilenceAndWhispers.EvilSpiritsMagicForce"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -5114,7 +5114,7 @@
 	</npc>
 	<npc id="22659" name="Guardian Waterspirit" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Heine.FieldOfSelenceAndWhispers.GuardianWaterspirit"/>
+		<set name="ai_type" value="FieldOfSilenceAndWhispers.GuardianWaterspirit"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

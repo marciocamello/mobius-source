@@ -968,7 +968,7 @@
 	</npc>
 	<npc id="36318" name="Suspicious Merchant" title="Demon Fortress">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="suspiciousmerchant.SuspiciousMerchantDemon"/>
+		<set name="ai_type" value="SuspiciousMerchant.SuspiciousMerchantDemon"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2924,7 +2924,7 @@
 	</npc>
 	<npc id="36356" name="Suspicious Merchant" title="Monastic Fortress">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="suspiciousmerchant.SuspiciousMerchantMonastic"/>
+		<set name="ai_type" value="SuspiciousMerchant.SuspiciousMerchantMonastic"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

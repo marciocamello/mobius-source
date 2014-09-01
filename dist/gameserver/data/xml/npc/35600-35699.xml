@@ -2926,7 +2926,7 @@
 	</npc>
 	<npc id="35659" name="Suspicious Merchant" title="Camp Fortress">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="suspiciousmerchant.SuspiciousMerchantShanty"/>
+		<set name="ai_type" value="SuspiciousMerchant.SuspiciousMerchantShanty"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4552,7 +4552,7 @@
 	</npc>
 	<npc id="35690" name="Suspicious Merchant" title="Gludio Southern Fortress">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="suspiciousmerchant.SuspiciousMerchantSGludio"/>
+		<set name="ai_type" value="SuspiciousMerchant.SuspiciousMerchantSGludio"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

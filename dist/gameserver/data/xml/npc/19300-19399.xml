@@ -406,7 +406,7 @@
 	</npc>
 	<npc id="19308" name="Yin Fragment" title="Spicula Clone Generator">
 		<set name="aggroRange" value="600"/>
-		<set name="ai_type" value="isle_of_soul.GolemDefender"/>
+		<set name="ai_type" value="IsleOfSouls.GolemDefender"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="66"/>
 		<set name="baseCritRate" value="40"/>
@@ -462,7 +462,7 @@
 	</npc>
 	<npc id="19309" name="Golem of Repairs" title="Black Anvil Guild">
 		<set name="aggroRange" value="600"/>
-		<set name="ai_type" value="isle_of_soul.GolemDefender"/>
+		<set name="ai_type" value="IsleOfSouls.GolemDefender"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="66"/>
 		<set name="baseCritRate" value="40"/>
@@ -509,7 +509,7 @@
 	</npc>
 	<npc id="19310" name="Drill Golem" title="Black Anvil Guild">
 		<set name="aggroRange" value="600"/>
-		<set name="ai_type" value="isle_of_soul.GolemDefender"/>
+		<set name="ai_type" value="IsleOfSouls.GolemDefender"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="66"/>
 		<set name="baseCritRate" value="40"/>
@@ -564,7 +564,7 @@
 	</npc>
 	<npc id="19311" name="Drill Golem" title="Black Anvil Guild">
 		<set name="aggroRange" value="600"/>
-		<set name="ai_type" value="isle_of_soul.GolemDefender"/>
+		<set name="ai_type" value="IsleOfSouls.GolemDefender"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="66"/>
 		<set name="baseCritRate" value="40"/>
@@ -611,7 +611,7 @@
 	</npc>
 	<npc id="19312" name="Excavator Golem" title="Black Anvil Guild">
 		<set name="aggroRange" value="600"/>
-		<set name="ai_type" value="isle_of_soul.GolemDefender"/>
+		<set name="ai_type" value="IsleOfSouls.GolemDefender"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="66"/>
 		<set name="baseCritRate" value="40"/>
@@ -666,7 +666,7 @@
 	</npc>
 	<npc id="19313" name="Excavator Golem" title="Black Anvil Guild">
 		<set name="aggroRange" value="600"/>
-		<set name="ai_type" value="isle_of_soul.GolemDefender"/>
+		<set name="ai_type" value="IsleOfSouls.GolemDefender"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="66"/>
 		<set name="baseCritRate" value="40"/>
@@ -713,7 +713,7 @@
 	</npc>
 	<npc id="19314" name="Pincer Golem" title="Black Anvil Guild">
 		<set name="aggroRange" value="600"/>
-		<set name="ai_type" value="isle_of_soul.GolemDefender"/>
+		<set name="ai_type" value="IsleOfSouls.GolemDefender"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="66"/>
 		<set name="baseCritRate" value="40"/>
@@ -768,7 +768,7 @@
 	</npc>
 	<npc id="19315" name="Pincer Golem" title="Black Anvil Guild">
 		<set name="aggroRange" value="600"/>
-		<set name="ai_type" value="isle_of_soul.GolemDefender"/>
+		<set name="ai_type" value="IsleOfSouls.GolemDefender"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="66"/>
 		<set name="baseCritRate" value="40"/>
@@ -815,7 +815,7 @@
 	</npc>
 	<npc id="19316" name="Screw Golem" title="Black Anvil Guild">
 		<set name="aggroRange" value="600"/>
-		<set name="ai_type" value="isle_of_soul.GolemDefender"/>
+		<set name="ai_type" value="IsleOfSouls.GolemDefender"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="66"/>
 		<set name="baseCritRate" value="40"/>
@@ -870,7 +870,7 @@
 	</npc>
 	<npc id="19317" name="Screw Golem" title="Black Anvil Guild">
 		<set name="aggroRange" value="600"/>
-		<set name="ai_type" value="isle_of_soul.GolemDefender"/>
+		<set name="ai_type" value="IsleOfSouls.GolemDefender"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="66"/>
 		<set name="baseCritRate" value="40"/>
@@ -917,7 +917,7 @@
 	</npc>
 	<npc id="19318" name="Cannon Golem" title="Black Anvil Guild">
 		<set name="aggroRange" value="600"/>
-		<set name="ai_type" value="isle_of_soul.GolemDefender"/>
+		<set name="ai_type" value="IsleOfSouls.GolemDefender"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="66"/>
 		<set name="baseCritRate" value="40"/>
@@ -972,7 +972,7 @@
 	</npc>
 	<npc id="19319" name="Cannon Golem" title="Black Anvil Guild">
 		<set name="aggroRange" value="600"/>
-		<set name="ai_type" value="isle_of_soul.GolemDefender"/>
+		<set name="ai_type" value="IsleOfSouls.GolemDefender"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="66"/>
 		<set name="baseCritRate" value="40"/>

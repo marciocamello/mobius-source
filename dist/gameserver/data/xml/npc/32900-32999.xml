@@ -769,7 +769,7 @@
 	</npc>
 	<npc id="32915" name="Wisp" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="TI.SwampSpirit"/>
+		<set name="ai_type" value="TalkingIsland.SwampSpirit"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -819,7 +819,7 @@
 	</npc>
 	<npc id="32916" name="Large Wisp" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="TI.SwampSpirit"/>
+		<set name="ai_type" value="TalkingIsland.SwampSpirit"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -1865,7 +1865,7 @@
 	</npc>
 	<npc id="32938" name="Wisp" title="Weak">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="TI.SwampSpirit"/>
+		<set name="ai_type" value="TalkingIsland.SwampSpirit"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

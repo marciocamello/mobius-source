@@ -445,7 +445,7 @@
 	</npc>
 	<npc id="22405" name="Darion's Faithful Servant" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.DarionFaithfulServant"/>
+		<set name="ai_type" value="Hellbound.DarionFaithfulServant"/>
 		<set name="baseAtkRange" value="80"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -532,7 +532,7 @@
 	</npc>
 	<npc id="22406" name="Darion's Faithful Servant" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.DarionFaithfulServant"/>
+		<set name="ai_type" value="Hellbound.DarionFaithfulServant"/>
 		<set name="baseAtkRange" value="80"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -619,7 +619,7 @@
 	</npc>
 	<npc id="22407" name="Darion's Faithful Servant" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.DarionFaithfulServant"/>
+		<set name="ai_type" value="Hellbound.DarionFaithfulServant"/>
 		<set name="baseAtkRange" value="80"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -707,7 +707,7 @@
 	</npc>
 	<npc id="22408" name="Darion's Faithful Servant" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.DarionFaithfulServant"/>
+		<set name="ai_type" value="Hellbound.DarionFaithfulServant"/>
 		<set name="baseAtkRange" value="80"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -813,7 +813,7 @@
 	</npc>
 	<npc id="22409" name="Darion's Faithful Servant" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.DarionFaithfulServant"/>
+		<set name="ai_type" value="Hellbound.DarionFaithfulServant"/>
 		<set name="baseAtkRange" value="80"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -919,7 +919,7 @@
 	</npc>
 	<npc id="22410" name="Darion's Faithful Servant" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.DarionFaithfulServant"/>
+		<set name="ai_type" value="Hellbound.DarionFaithfulServant"/>
 		<set name="baseAtkRange" value="80"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2010,7 +2010,7 @@
 	</npc>
 	<npc id="22423" name="Original Sin Warden" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.OriginalSinWarden"/>
+		<set name="ai_type" value="Hellbound.OriginalSinWarden"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2743,7 +2743,7 @@
 	</npc>
 	<npc id="22431" name="Original Sin Warden" title="">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.OriginalSinWarden"/>
+		<set name="ai_type" value="Hellbound.OriginalSinWarden"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4230,7 +4230,7 @@
 	</npc>
 	<npc id="22448" name="Leodas" title="Resistance Commander">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.Leodas"/>
+		<set name="ai_type" value="Hellbound.Leodas"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4416,7 +4416,7 @@
 	</npc>
 	<npc id="22450" name="Tortured Native" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="hellbound.TorturedNative"/>
+		<set name="ai_type" value="Hellbound.TorturedNative"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

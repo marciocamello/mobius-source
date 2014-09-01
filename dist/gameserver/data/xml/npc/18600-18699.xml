@@ -4462,7 +4462,7 @@
 	</npc>
 	<npc id="18667" name="Ward of Death" title="">
 		<set name="aggroRange" value="150"/>
-		<set name="ai_type" value="seedofinfinity.WardofDeath"/>
+		<set name="ai_type" value="SeedOfInfinity.WardOfDeath"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4509,7 +4509,7 @@
 	</npc>
 	<npc id="18668" name="Ward of Death" title="">
 		<set name="aggroRange" value="150"/>
-		<set name="ai_type" value="seedofinfinity.WardofDeath"/>
+		<set name="ai_type" value="SeedOfInfinity.WardOfDeath"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -5835,7 +5835,7 @@
 	</npc>
 	<npc id="18696" name="Dimensional Teleport Device" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="seedofdestruction.DimensionMovingDevice"/>
+		<set name="ai_type" value="SeedOfDestruction.DimensionMovingDevice"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

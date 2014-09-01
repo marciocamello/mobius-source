@@ -1487,7 +1487,7 @@
 	</npc>
 	<npc id="35728" name="Suspicious Merchant" title="Hive Fortress">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="suspiciousmerchant.SuspiciousMerchantHive"/>
+		<set name="ai_type" value="SuspiciousMerchant.SuspiciousMerchantHive"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3112,7 +3112,7 @@
 	</npc>
 	<npc id="35759" name="Suspicious Merchant" title="Valley Fortress">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="suspiciousmerchant.SuspiciousMerchantValley"/>
+		<set name="ai_type" value="SuspiciousMerchant.SuspiciousMerchantValley"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -5080,7 +5080,7 @@
 	</npc>
 	<npc id="35797" name="Suspicious Merchant" title="Ivory Fortress">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="suspiciousmerchant.SuspiciousMerchantIvoryTower"/>
+		<set name="ai_type" value="SuspiciousMerchant.SuspiciousMerchantIvoryTower"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

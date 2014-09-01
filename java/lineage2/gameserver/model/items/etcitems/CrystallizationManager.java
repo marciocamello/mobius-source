@@ -139,7 +139,7 @@ public class CrystallizationManager
 			}
 		}
 		
-		_log.info("CrystallizationManager: Loaded " + data.size() + " variable...");
+		_log.info("CrystallizationManager: Loaded " + data.size() + " variables...");
 	}
 	
 	/**

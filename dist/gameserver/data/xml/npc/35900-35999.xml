@@ -1478,7 +1478,7 @@
 	</npc>
 	<npc id="35928" name="Suspicious Merchant" title="Borderland Fortress">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="suspiciousmerchant.SuspiciousMerchantBorderland"/>
+		<set name="ai_type" value="SuspiciousMerchant.SuspiciousMerchantBorderland"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3437,7 +3437,7 @@
 	</npc>
 	<npc id="35966" name="Suspicious Merchant" title="Swamp Fortress">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="suspiciousmerchant.SuspiciousMerchantMarshland"/>
+		<set name="ai_type" value="SuspiciousMerchant.SuspiciousMerchantMarshland"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

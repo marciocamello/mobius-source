@@ -1714,7 +1714,7 @@
 	</npc>
 	<npc id="25531" name="Darnel" title="Torture Maiden">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.Darnel"/>
+		<set name="ai_type" value="Hellbound.Darnel"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -1808,7 +1808,7 @@
 	</npc>
 	<npc id="25532" name="Kechi" title="Flaming">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.Kechi"/>
+		<set name="ai_type" value="Hellbound.Kechi"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2328,7 +2328,7 @@
 	</npc>
 	<npc id="25539" name="Typhoon" title="Raid Boss">
 		<set name="aggroRange" value="1500"/>
-		<set name="ai_type" value="hellbound.Typhoon"/>
+		<set name="ai_type" value="Hellbound.Typhoon"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2416,7 +2416,7 @@
 	</npc>
 	<npc id="25540" name="Demon Prince" title="Raid Boss">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.DemonPrince"/>
+		<set name="ai_type" value="Hellbound.DemonPrince"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2567,7 +2567,7 @@
 	</npc>
 	<npc id="25542" name="Ranku" title="Raid Boss">
 		<set name="aggroRange" value="500"/>
-		<set name="ai_type" value="hellbound.Ranku"/>
+		<set name="ai_type" value="Hellbound.Ranku"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2709,7 +2709,7 @@
 	</npc>
 	<npc id="25544" name="Tully" title="Steel Citadel">
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="hellbound.Tully"/>
+		<set name="ai_type" value="Hellbound.Tully"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
