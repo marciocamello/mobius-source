@@ -22,7 +22,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.database.DatabaseFactory;
@@ -256,31 +255,27 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 				return;
 			}
 			
-			Connection con = null;
-			PreparedStatement statement = null;
-			ResultSet rset = null;
 			String intro = "";
 			
-			try
+			try (Connection con = DatabaseFactory.getInstance().getConnection();)
 			{
-				con = DatabaseFactory.getInstance().getConnection();
-				statement = con.prepareStatement("SELECT * FROM `bbs_clannotice` WHERE `clan_id` = ? and type = 2");
+				
+				PreparedStatement statement = con.prepareStatement("SELECT * FROM `bbs_clannotice` WHERE `clan_id` = ? and type = 2");
 				statement.setInt(1, clanId);
-				rset = statement.executeQuery();
+				ResultSet rset = statement.executeQuery();
 				
 				if (rset.next())
 				{
 					intro = rset.getString("notice");
 				}
+				rset.close();
+				statement.close();
 			}
 			catch (Exception e)
 			{
 				// empty catch clause
 			}
-			finally
-			{
-				DbUtils.closeQuietly(con, statement, rset);
-			}
+			
 			HashMap<Integer, String> tpls = Util.parseTemplate(HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "bbs_clan.htm", player));
 			String html = tpls.get(0);
 			html = html.replace("%PLEDGE_ID%", String.valueOf(clanId));
@@ -322,31 +317,28 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 			html = html.replace("%ACTION_FREE%", "");
 			html = html.replace("%CLAN_NAME%", clan.getName());
 			html = html.replace("%per_list%", "");
-			Connection con = null;
-			PreparedStatement statement = null;
-			ResultSet rset = null;
+			
 			String intro = "";
 			
-			try
+			try (Connection con = DatabaseFactory.getInstance().getConnection();)
 			{
-				con = DatabaseFactory.getInstance().getConnection();
-				statement = con.prepareStatement("SELECT * FROM `bbs_clannotice` WHERE `clan_id` = ? and type = 2");
+				
+				PreparedStatement statement = con.prepareStatement("SELECT * FROM `bbs_clannotice` WHERE `clan_id` = ? and type = 2");
 				statement.setInt(1, clan.getClanId());
-				rset = statement.executeQuery();
+				ResultSet rset = statement.executeQuery();
 				
 				if (rset.next())
 				{
 					intro = rset.getString("notice");
 				}
+				rset.close();
+				statement.close();
 			}
 			catch (Exception e)
 			{
 				// empty catch clause
 			}
-			finally
-			{
-				DbUtils.closeQuietly(con, statement, rset);
-			}
+			
 			List<String> args = new ArrayList<>();
 			args.add("0");
 			args.add("0");
@@ -400,32 +392,28 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 			html = html.replace("%PLEDGE_ID%", String.valueOf(clan.getClanId()));
 			html = html.replace("%ACTION_ANN%", "");
 			html = html.replace("%ACTION_FREE%", "");
-			Connection con = null;
-			PreparedStatement statement = null;
-			ResultSet rset = null;
+			
 			String notice = "";
 			int type = 0;
 			
-			try
+			try (Connection con = DatabaseFactory.getInstance().getConnection();)
 			{
-				con = DatabaseFactory.getInstance().getConnection();
-				statement = con.prepareStatement("SELECT * FROM `bbs_clannotice` WHERE `clan_id` = ? and type != 2");
+				
+				PreparedStatement statement = con.prepareStatement("SELECT * FROM `bbs_clannotice` WHERE `clan_id` = ? and type != 2");
 				statement.setInt(1, clan.getClanId());
-				rset = statement.executeQuery();
+				ResultSet rset = statement.executeQuery();
 				
 				if (rset.next())
 				{
 					notice = rset.getString("notice");
 					type = rset.getInt("type");
 				}
+				rset.close();
+				statement.close();
 			}
 			catch (Exception e)
 			{
 				// empty catch clause
-			}
-			finally
-			{
-				DbUtils.closeQuietly(con, statement, rset);
 			}
 			
 			if (type == 0)
@@ -471,26 +459,22 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 			}
 			
 			int type = Integer.parseInt(st.nextToken());
-			Connection con = null;
-			PreparedStatement statement = null;
 			
-			try
+			try (Connection con = DatabaseFactory.getInstance().getConnection();)
 			{
-				con = DatabaseFactory.getInstance().getConnection();
-				statement = con.prepareStatement("UPDATE `bbs_clannotice` SET type = ? WHERE `clan_id` = ? and type = ?");
+				
+				PreparedStatement statement = con.prepareStatement("UPDATE `bbs_clannotice` SET type = ? WHERE `clan_id` = ? and type = ?");
 				statement.setInt(1, type);
 				statement.setInt(2, clan.getClanId());
 				statement.setInt(3, type == 1 ? 0 : 1);
 				statement.execute();
+				statement.close();
 			}
 			catch (Exception e)
 			{
 				// empty catch clause
 			}
-			finally
-			{
-				DbUtils.closeQuietly(con, statement);
-			}
+			
 			clan.setNotice(type == 0 ? "" : null);
 			onBypassCommand(player, "_announcepledgewriteform");
 		}
@@ -542,26 +526,21 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 				arg3 = arg3.substring(0, 3000);
 			}
 			
-			Connection con = null;
-			PreparedStatement statement = null;
-			
-			try
+			try (Connection con = DatabaseFactory.getInstance().getConnection();)
 			{
-				con = DatabaseFactory.getInstance().getConnection();
-				statement = con.prepareStatement("REPLACE INTO `bbs_clannotice`(clan_id, type, notice) VALUES(?, ?, ?)");
+				
+				PreparedStatement statement = con.prepareStatement("REPLACE INTO `bbs_clannotice`(clan_id, type, notice) VALUES(?, ?, ?)");
 				statement.setInt(1, clan.getClanId());
 				statement.setInt(2, 2);
 				statement.setString(3, arg3);
 				statement.execute();
+				statement.close();
 			}
 			catch (Exception e)
 			{
 				// empty catch clause
 			}
-			finally
-			{
-				DbUtils.closeQuietly(con, statement);
-			}
+			
 			onBypassCommand(player, "_clbbsclan_" + player.getClanId());
 		}
 		else if ("clwritemail".equals(cmd))
@@ -607,13 +586,10 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 				arg5 = arg5.substring(0, 3000);
 			}
 			
-			Connection con = null;
-			PreparedStatement statement = null;
-			
-			try
+			try (Connection con = DatabaseFactory.getInstance().getConnection();)
 			{
-				con = DatabaseFactory.getInstance().getConnection();
-				statement = con.prepareStatement("INSERT INTO `bbs_mail`(to_name, to_object_id, from_name, from_object_id, title, message, post_date, box_type) VALUES(?, ?, ?, ?, ?, ?, ?, 0)");
+				
+				PreparedStatement statement = con.prepareStatement("INSERT INTO `bbs_mail`(to_name, to_object_id, from_name, from_object_id, title, message, post_date, box_type) VALUES(?, ?, ?, ?, ?, ?, ?, 0)");
 				
 				for (UnitMember clm : clan)
 				{
@@ -637,6 +613,7 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 				statement.setString(6, arg5);
 				statement.setInt(7, (int) (System.currentTimeMillis() / 1000));
 				statement.execute();
+				statement.close();
 			}
 			catch (Exception e)
 			{
@@ -644,10 +621,7 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 				onBypassCommand(player, "_clbbsclan_" + player.getClanId());
 				return;
 			}
-			finally
-			{
-				DbUtils.closeQuietly(con, statement);
-			}
+			
 			player.sendPacket(new SystemMessage(SystemMessage.YOUVE_SENT_MAIL));
 			
 			for (Player member : clan.getOnlineMembers(0))
@@ -691,27 +665,22 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 			}
 			
 			int type = Integer.parseInt(st.nextToken());
-			Connection con = null;
-			PreparedStatement statement = null;
 			
-			try
+			try (Connection con = DatabaseFactory.getInstance().getConnection();)
 			{
-				con = DatabaseFactory.getInstance().getConnection();
-				statement = con.prepareStatement("REPLACE INTO `bbs_clannotice`(clan_id, type, notice) VALUES(?, ?, ?)");
+				
+				PreparedStatement statement = con.prepareStatement("REPLACE INTO `bbs_clannotice`(clan_id, type, notice) VALUES(?, ?, ?)");
 				statement.setInt(1, clan.getClanId());
 				statement.setInt(2, type);
 				statement.setString(3, arg3);
 				statement.execute();
+				statement.close();
 			}
 			catch (Exception e)
 			{
 				e.printStackTrace();
 				onBypassCommand(player, "_announcepledgewriteform");
 				return;
-			}
-			finally
-			{
-				DbUtils.closeQuietly(con, statement);
 			}
 			
 			if (type == 1)
@@ -757,33 +726,30 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 			
 			if (clan.getNotice() == null)
 			{
-				Connection con = null;
-				PreparedStatement statement = null;
-				ResultSet rset = null;
+				
 				String notice = "";
 				int type = 0;
 				
-				try
+				try (Connection con = DatabaseFactory.getInstance().getConnection();)
 				{
-					con = DatabaseFactory.getInstance().getConnection();
-					statement = con.prepareStatement("SELECT * FROM `bbs_clannotice` WHERE `clan_id` = ? and type != 2");
+					
+					PreparedStatement statement = con.prepareStatement("SELECT * FROM `bbs_clannotice` WHERE `clan_id` = ? and type != 2");
 					statement.setInt(1, clan.getClanId());
-					rset = statement.executeQuery();
+					ResultSet rset = statement.executeQuery();
 					
 					if (rset.next())
 					{
 						notice = rset.getString("notice");
 						type = rset.getInt("type");
 					}
+					rset.close();
+					statement.close();
 				}
 				catch (Exception e)
 				{
 					// empty catch clause
 				}
-				finally
-				{
-					DbUtils.closeQuietly(con, statement, rset);
-				}
+				
 				clan.setNotice(type == 1 ? notice.replace("\n", "<br1>\n") : "");
 			}
 			

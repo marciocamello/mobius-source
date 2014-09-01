@@ -20,7 +20,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.database.DatabaseFactory;
@@ -119,21 +118,20 @@ public final class PrivateMail extends Functions implements ScriptFile, ICommuni
 			String html = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_mail_list.htm", player);
 			int inbox = 0;
 			int send = 0;
-			ResultSet rset = null;
 			
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement statement = con.prepareStatement("SELECT count(*) as cnt FROM `bbs_mail` WHERE `box_type` = 0 and `to_object_id` = ?");)
+			try (Connection con = DatabaseFactory.getInstance().getConnection();)
 			{
+				PreparedStatement statement = con.prepareStatement("SELECT count(*) as cnt FROM `bbs_mail` WHERE `box_type` = 0 and `to_object_id` = ?");
+				
 				statement.setInt(1, player.getObjectId());
-				rset = statement.executeQuery();
+				ResultSet rset = statement.executeQuery();
 				
 				if (rset.next())
 				{
 					inbox = rset.getInt("cnt");
 				}
-				
-				statement.close();
 				rset.close();
+				statement.close();
 				
 				try (PreparedStatement statement2 = con.prepareStatement("SELECT count(*) as cnt FROM `bbs_mail` WHERE `box_type` = 1 and `from_object_id` = ?");)
 				{
@@ -144,16 +142,15 @@ public final class PrivateMail extends Functions implements ScriptFile, ICommuni
 					{
 						send = rset.getInt("cnt");
 					}
+					rset.close();
+					statement2.close();
 				}
 			}
 			catch (Exception e)
 			{
 				// empty catch clause
 			}
-			finally
-			{
-				DbUtils.closeQuietly(rset);
-			}
+			
 			List<MailData> mailList = null;
 			
 			switch (type)
@@ -288,18 +285,15 @@ public final class PrivateMail extends Functions implements ScriptFile, ICommuni
 			int page = Integer.parseInt(st.nextToken());
 			int byTitle = Integer.parseInt(st.nextToken());
 			String search = st.hasMoreTokens() ? st.nextToken() : "";
-			Connection con = null;
-			PreparedStatement statement = null;
-			ResultSet rset = null;
 			
-			try
+			try (Connection con = DatabaseFactory.getInstance().getConnection();)
 			{
-				con = DatabaseFactory.getInstance().getConnection();
-				statement = con.prepareStatement("SELECT * FROM `bbs_mail` WHERE `message_id` = ? and `box_type` = ? and `to_object_id` = ?");
+				
+				PreparedStatement statement = con.prepareStatement("SELECT * FROM `bbs_mail` WHERE `message_id` = ? and `box_type` = ? and `to_object_id` = ?");
 				statement.setInt(1, messageId);
 				statement.setInt(2, type);
 				statement.setInt(3, player.getObjectId());
-				rset = statement.executeQuery();
+				ResultSet rset = statement.executeQuery();
 				
 				if (rset.next())
 				{
@@ -334,48 +328,44 @@ public final class PrivateMail extends Functions implements ScriptFile, ICommuni
 					html = html.replace("%message_id%", String.valueOf(messageId));
 					html = html.replace("%mailbox_type%", String.valueOf(type));
 					player.setSessionVar("add_fav", bypass + "&" + rset.getString("title"));
+					
 					statement.close();
 					statement = con.prepareStatement("UPDATE `bbs_mail` SET `read` = `read` + 1 WHERE message_id = ?");
 					statement.setInt(1, messageId);
 					statement.execute();
+					statement.close();
 					ShowBoard.separateAndSend(html, player);
 					return;
 				}
+				rset.close();
 			}
 			catch (Exception e)
 			{
 				e.printStackTrace();
 			}
-			finally
-			{
-				DbUtils.closeQuietly(con, statement, rset);
-			}
+			
 			onBypassCommand(player, "_maillist_" + type + "_" + page + "_" + byTitle + "_" + search);
 		}
 		else if ("maildelete".equals(cmd))
 		{
 			int type = Integer.parseInt(st.nextToken());
 			int messageId = Integer.parseInt(st.nextToken());
-			Connection con = null;
-			PreparedStatement statement = null;
 			
-			try
+			try (Connection con = DatabaseFactory.getInstance().getConnection();)
 			{
-				con = DatabaseFactory.getInstance().getConnection();
-				statement = con.prepareStatement("DELETE FROM `bbs_mail` WHERE `box_type` = ? and `message_id` = ? and `to_object_id` = ?");
+				
+				PreparedStatement statement = con.prepareStatement("DELETE FROM `bbs_mail` WHERE `box_type` = ? and `message_id` = ? and `to_object_id` = ?");
 				statement.setInt(1, type);
 				statement.setInt(2, messageId);
 				statement.setInt(3, player.getObjectId());
 				statement.execute();
+				statement.close();
 			}
 			catch (Exception e)
 			{
 				// empty catch clause
 			}
-			finally
-			{
-				DbUtils.closeQuietly(con, statement);
-			}
+			
 			onBypassCommand(player, "_maillist_" + type + "_1_0_");
 		}
 	}
@@ -409,31 +399,27 @@ public final class PrivateMail extends Functions implements ScriptFile, ICommuni
 	 */
 	public static void OnPlayerEnter(Player player)
 	{
-		Connection con = null;
-		PreparedStatement statement = null;
-		ResultSet rset = null;
 		
-		try
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("SELECT * FROM `bbs_mail` WHERE `box_type` = 0 and `read` = 0 and `to_object_id` = ?");
+			
+			PreparedStatement statement = con.prepareStatement("SELECT * FROM `bbs_mail` WHERE `box_type` = 0 and `read` = 0 and `to_object_id` = ?");
 			statement.setInt(1, player.getObjectId());
-			rset = statement.executeQuery();
+			ResultSet rset = statement.executeQuery();
 			
 			if (rset.next())
 			{
 				player.sendPacket(new SystemMessage(SystemMessage.YOUVE_GOT_MAIL));
 				player.sendPacket(ExMailArrived.STATIC);
 			}
+			rset.close();
+			statement.close();
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement, rset);
-		}
+		
 	}
 	
 	/**
@@ -447,14 +433,11 @@ public final class PrivateMail extends Functions implements ScriptFile, ICommuni
 	private static List<MailData> getMailList(Player player, int type, String search, boolean byTitle)
 	{
 		List<MailData> list = new ArrayList<>();
-		Connection con = null;
-		PreparedStatement statement = null;
-		ResultSet rset = null;
 		
-		try
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("DELETE FROM `bbs_mail` WHERE `to_object_id` = ? and `post_date` < ?");
+			
+			PreparedStatement statement = con.prepareStatement("DELETE FROM `bbs_mail` WHERE `to_object_id` = ? and `post_date` < ?");
 			statement.setInt(1, player.getObjectId());
 			statement.setInt(2, (int) (System.currentTimeMillis() / 1000) - (90 * 24 * 60 * 60));
 			statement.execute();
@@ -463,7 +446,7 @@ public final class PrivateMail extends Functions implements ScriptFile, ICommuni
 			statement = con.prepareStatement("SELECT * FROM `bbs_mail` WHERE `box_type` = ? and `to_object_id` = ? ORDER BY post_date DESC");
 			statement.setInt(1, type);
 			statement.setInt(2, player.getObjectId());
-			rset = statement.executeQuery();
+			ResultSet rset = statement.executeQuery();
 			
 			while (rset.next())
 			{
@@ -480,15 +463,14 @@ public final class PrivateMail extends Functions implements ScriptFile, ICommuni
 					list.add(new MailData(rset.getString(column_name), rset.getString("title"), rset.getInt("post_date"), rset.getInt("message_id")));
 				}
 			}
+			rset.close();
+			statement.close();
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement, rset);
-		}
+		
 		return list;
 	}
 	

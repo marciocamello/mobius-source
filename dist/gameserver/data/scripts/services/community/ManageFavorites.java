@@ -18,7 +18,6 @@ import java.sql.ResultSet;
 import java.util.Date;
 import java.util.StringTokenizer;
 
-import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.database.DatabaseFactory;
@@ -104,17 +103,15 @@ public final class ManageFavorites implements ScriptFile, ICommunityBoardHandler
 		
 		if ("bbsgetfav".equals(cmd))
 		{
-			Connection con = null;
-			PreparedStatement statement = null;
-			ResultSet rset = null;
+			
 			StringBuilder fl = new StringBuilder("");
 			
-			try
+			try (Connection con = DatabaseFactory.getInstance().getConnection();)
 			{
-				con = DatabaseFactory.getInstance().getConnection();
-				statement = con.prepareStatement("SELECT * FROM `bbs_favorites` WHERE `object_id` = ? ORDER BY `add_date` DESC");
+				
+				PreparedStatement statement = con.prepareStatement("SELECT * FROM `bbs_favorites` WHERE `object_id` = ? ORDER BY `add_date` DESC");
 				statement.setInt(1, player.getObjectId());
-				rset = statement.executeQuery();
+				ResultSet rset = statement.executeQuery();
 				String tpl = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_favoritetpl.htm", player);
 				
 				while (rset.next())
@@ -124,16 +121,16 @@ public final class ManageFavorites implements ScriptFile, ICommunityBoardHandler
 					fav = fav.replace("%add_date%", String.format("%1$te.%1$tm.%1$tY %1$tH:%1tM", new Date(rset.getInt("add_date") * 1000L)));
 					fav = fav.replace("%fav_id%", String.valueOf(rset.getInt("fav_id")));
 					fl.append(fav);
+					
 				}
+				rset.close();
+				statement.close();
 			}
 			catch (Exception e)
 			{
 				// empty catch clause
 			}
-			finally
-			{
-				DbUtils.closeQuietly(con, statement, rset);
-			}
+			
 			String html = HtmCache.getInstance().getNotNull("scripts/services/community/bbs_getfavorite.htm", player);
 			html = html.replace("%FAV_LIST%", fl.toString());
 			ShowBoard.separateAndSend(html, player);
@@ -149,27 +146,23 @@ public final class ManageFavorites implements ScriptFile, ICommunityBoardHandler
 				
 				if (favs.length > 1)
 				{
-					Connection con = null;
-					PreparedStatement statement = null;
 					
-					try
+					try (Connection con = DatabaseFactory.getInstance().getConnection();)
 					{
-						con = DatabaseFactory.getInstance().getConnection();
-						statement = con.prepareStatement("REPLACE INTO `bbs_favorites`(`object_id`, `fav_bypass`, `fav_title`, `add_date`) VALUES(?, ?, ?, ?)");
+						
+						PreparedStatement statement = con.prepareStatement("REPLACE INTO `bbs_favorites`(`object_id`, `fav_bypass`, `fav_title`, `add_date`) VALUES(?, ?, ?, ?)");
 						statement.setInt(1, player.getObjectId());
 						statement.setString(2, favs[0]);
 						statement.setString(3, favs[1]);
 						statement.setInt(4, (int) (System.currentTimeMillis() / 1000));
 						statement.execute();
+						statement.close();
 					}
 					catch (Exception e)
 					{
 						e.printStackTrace();
 					}
-					finally
-					{
-						DbUtils.closeQuietly(con, statement);
-					}
+					
 				}
 			}
 			
@@ -178,25 +171,21 @@ public final class ManageFavorites implements ScriptFile, ICommunityBoardHandler
 		else if ("bbsdelfav".equals(cmd))
 		{
 			int fav_id = Integer.parseInt(st.nextToken());
-			Connection con = null;
-			PreparedStatement statement = null;
 			
-			try
+			try (Connection con = DatabaseFactory.getInstance().getConnection();)
 			{
-				con = DatabaseFactory.getInstance().getConnection();
-				statement = con.prepareStatement("DELETE FROM `bbs_favorites` WHERE `fav_id` = ? and `object_id` = ?");
+				
+				PreparedStatement statement = con.prepareStatement("DELETE FROM `bbs_favorites` WHERE `fav_id` = ? and `object_id` = ?");
 				statement.setInt(1, fav_id);
 				statement.setInt(2, player.getObjectId());
 				statement.execute();
+				statement.close();
 			}
 			catch (Exception e)
 			{
 				// empty catch clause
 			}
-			finally
-			{
-				DbUtils.closeQuietly(con, statement);
-			}
+			
 			onBypassCommand(player, "_bbsgetfav");
 		}
 	}

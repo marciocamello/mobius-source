@@ -18,7 +18,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;
 
-import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.dao.CharacterDAO;
 import lineage2.gameserver.database.DatabaseFactory;
@@ -492,16 +491,16 @@ public final class Rename extends Functions
 		int sex = player.getSex() == 1 ? 0 : 1;
 		int ObjectId = player.getObjectId();
 		player.logout();
-		Connection con = null;
-		PreparedStatement offline = null;
 		
-		try
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			offline = con.prepareStatement("UPDATE characters SET sex = ? WHERE obj_Id = ?");
+			
+			PreparedStatement offline = con.prepareStatement("UPDATE characters SET sex = ? WHERE obj_Id = ?");
 			offline.setInt(1, sex);
 			offline.setInt(2, ObjectId);
 			offline.executeUpdate();
+			offline.close();
+			
 		}
 		catch (Exception e)
 		{
@@ -509,10 +508,7 @@ public final class Rename extends Functions
 			show(new CustomMessage("common.Error", player), player);
 			return;
 		}
-		finally
-		{
-			DbUtils.closeQuietly(con, offline);
-		}
+		
 	}
 	
 	/**

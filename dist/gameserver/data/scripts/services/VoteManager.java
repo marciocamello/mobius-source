@@ -23,7 +23,6 @@ import java.util.TreeMap;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 
-import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
@@ -250,15 +249,11 @@ public final class VoteManager extends Functions implements IVoicedCommandHandle
 			e.printStackTrace();
 		}
 		
-		Connection con = null;
-		PreparedStatement st = null;
-		ResultSet rs = null;
-		
-		try
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			st = con.prepareStatement("SELECT * FROM vote");
-			rs = st.executeQuery();
+			
+			PreparedStatement st = con.prepareStatement("SELECT * FROM vote");
+			ResultSet rs = st.executeQuery();
 			
 			while (rs.next())
 			{
@@ -271,15 +266,14 @@ public final class VoteManager extends Functions implements IVoicedCommandHandle
 					v.results.put(HWID, ArrayUtils.add(rez, rs.getInt("vote")));
 				}
 			}
+			rs.close();
+			st.close();
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
-		finally
-		{
-			DbUtils.closeQuietly(con, st, rs);
-		}
+		
 	}
 	
 	private final String[] _commandList = new String[]

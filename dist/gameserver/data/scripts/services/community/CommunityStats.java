@@ -18,7 +18,6 @@ import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.database.DatabaseFactory;
@@ -161,15 +160,12 @@ public final class CommunityStats implements ScriptFile, ICommunityBoardHandler
 	 */
 	private void showPvp(Player player)
 	{
-		Connection con = null;
-		PreparedStatement statement = null;
-		ResultSet rs = null;
 		
-		try
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("SELECT * FROM characters WHERE accesslevel = '0' ORDER BY pvpkills DESC LIMIT 10;");
-			rs = statement.executeQuery();
+			
+			PreparedStatement statement = con.prepareStatement("SELECT * FROM characters WHERE accesslevel = '0' ORDER BY pvpkills DESC LIMIT 10;");
+			ResultSet rs = statement.executeQuery();
 			StringBuilder html = new StringBuilder();
 			html.append("<table width=570>");
 			
@@ -207,7 +203,8 @@ public final class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				html.append("<td width=100><font color=" + color + ">" + OnOff + "</font></td>");
 				html.append("</tr>");
 			}
-			
+			rs.close();
+			statement.close();
 			html.append("</table>");
 			String content = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/stats/stats_top_pvp.htm", player);
 			content = content.replace("%stats_top_pvp%", html.toString());
@@ -219,10 +216,7 @@ public final class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		{
 			e.printStackTrace();
 		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement, rs);
-		}
+		
 	}
 	
 	/**
@@ -231,15 +225,12 @@ public final class CommunityStats implements ScriptFile, ICommunityBoardHandler
 	 */
 	private void showPK(Player player)
 	{
-		Connection con = null;
-		PreparedStatement statement = null;
-		ResultSet rs = null;
 		
-		try
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("SELECT * FROM characters WHERE accesslevel = '0' ORDER BY pkkills DESC LIMIT 10;");
-			rs = statement.executeQuery();
+			
+			PreparedStatement statement = con.prepareStatement("SELECT * FROM characters WHERE accesslevel = '0' ORDER BY pkkills DESC LIMIT 10;");
+			ResultSet rs = statement.executeQuery();
 			StringBuilder html = new StringBuilder();
 			html.append("<table width=570>");
 			
@@ -277,7 +268,8 @@ public final class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				html.append("<td width=100><font color=" + color + ">" + OnOff + "</font></td>");
 				html.append("</tr>");
 			}
-			
+			rs.close();
+			statement.close();
 			html.append("</table>");
 			String content = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/stats/stats_top_pk.htm", player);
 			content = content.replace("%stats_top_pk%", html.toString());
@@ -289,10 +281,7 @@ public final class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		{
 			e.printStackTrace();
 		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement, rs);
-		}
+		
 	}
 	
 	/**
@@ -301,15 +290,12 @@ public final class CommunityStats implements ScriptFile, ICommunityBoardHandler
 	 */
 	private void showOnline(Player player)
 	{
-		Connection con = null;
-		PreparedStatement statement = null;
-		ResultSet rs = null;
 		
-		try
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("SELECT * FROM characters WHERE accesslevel = '0' ORDER BY onlinetime DESC LIMIT 10;");
-			rs = statement.executeQuery();
+			
+			PreparedStatement statement = con.prepareStatement("SELECT * FROM characters WHERE accesslevel = '0' ORDER BY onlinetime DESC LIMIT 10;");
+			ResultSet rs = statement.executeQuery();
 			StringBuilder html = new StringBuilder();
 			html.append("<table width=570>");
 			
@@ -348,6 +334,8 @@ public final class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				html.append("</tr>");
 			}
 			
+			rs.close();
+			statement.close();
 			html.append("</table>");
 			String content = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/stats/stats_online.htm", player);
 			content = content.replace("%stats_online%", html.toString());
@@ -359,10 +347,7 @@ public final class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		{
 			e.printStackTrace();
 		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement, rs);
-		}
+		
 	}
 	
 	/**
@@ -372,15 +357,12 @@ public final class CommunityStats implements ScriptFile, ICommunityBoardHandler
 	private void showCastle(Player player)
 	{
 		SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
-		Connection con = null;
-		PreparedStatement statement = null;
-		ResultSet rs = null;
 		
-		try
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("SELECT * FROM castle ORDER BY id DESC LIMIT 10;");
-			rs = statement.executeQuery();
+			
+			PreparedStatement statement = con.prepareStatement("SELECT * FROM castle ORDER BY id DESC LIMIT 10;");
+			ResultSet rs = statement.executeQuery();
 			StringBuilder html = new StringBuilder();
 			html.append("<table width=570>");
 			String Owner = null;
@@ -424,10 +406,7 @@ public final class CommunityStats implements ScriptFile, ICommunityBoardHandler
 		{
 			e.printStackTrace();
 		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement, rs);
-		}
+		
 	}
 	
 	/**
@@ -436,15 +415,12 @@ public final class CommunityStats implements ScriptFile, ICommunityBoardHandler
 	 */
 	private void showClan(Player player)
 	{
-		Connection con = null;
-		PreparedStatement statement = null;
-		ResultSet rs = null;
 		
-		try
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("SELECT clan_subpledges.name,clan_data.clan_level,clan_data.reputation_score,clan_data.hasCastle,ally_data.ally_name FROM clan_data LEFT JOIN ally_data ON clan_data.ally_id = ally_data.ally_id LEFT JOIN `clan_subpledges` ON clan_data.clan_id = clan_subpledges.clan_id WHERE clan_data.clan_level>0 AND clan_subpledges.leader_id != '' order by clan_data.clan_level desc limit 10;");
-			rs = statement.executeQuery();
+			
+			PreparedStatement statement = con.prepareStatement("SELECT clan_subpledges.name,clan_data.clan_level,clan_data.reputation_score,clan_data.hasCastle,ally_data.ally_name FROM clan_data LEFT JOIN ally_data ON clan_data.ally_id = ally_data.ally_id LEFT JOIN `clan_subpledges` ON clan_data.clan_id = clan_subpledges.clan_id WHERE clan_data.clan_level>0 AND clan_subpledges.leader_id != '' order by clan_data.clan_level desc limit 10;");
+			ResultSet rs = statement.executeQuery();
 			StringBuilder html = new StringBuilder();
 			html.append("<table width=570>");
 			
@@ -529,22 +505,21 @@ public final class CommunityStats implements ScriptFile, ICommunityBoardHandler
 				html.append("<td width=100><font color=" + castleColor + ">" + hasCastle + "</font></td>");
 				html.append("</tr>");
 			}
-			
+			rs.close();
+			statement.close();
 			html.append("</table>");
 			String content = HtmCache.getInstance().getNotNull(Config.BBS_HOME_DIR + "pages/stats/stats_clan.htm", player);
 			content = content.replace("%stats_clan%", html.toString());
 			content = BbsUtil.htmlBuff(content, player);
 			ShowBoard.separateAndSend(content, player);
 			return;
+			
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
-		finally
-		{
-			DbUtils.closeQuietly(con, statement, rs);
-		}
+		
 	}
 	
 	/**

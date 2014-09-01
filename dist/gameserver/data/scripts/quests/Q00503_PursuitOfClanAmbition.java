@@ -17,7 +17,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.List;
 
-import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.database.DatabaseFactory;
@@ -126,17 +125,14 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 	public void suscribe_members(QuestState st)
 	{
 		int clan = st.getPlayer().getClan().getClanId();
-		Connection con = null;
-		PreparedStatement offline = null, insertion = null;
-		ResultSet rs = null;
 		
-		try
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			offline = con.prepareStatement("SELECT obj_Id FROM characters WHERE clanid=? AND online=0");
-			insertion = con.prepareStatement("REPLACE INTO character_quests (char_id,name,var,value) VALUES (?,?,?,?)");
+			
+			PreparedStatement offline = con.prepareStatement("SELECT obj_Id FROM characters WHERE clanid=? AND online=0");
+			PreparedStatement insertion = con.prepareStatement("REPLACE INTO character_quests (char_id,name,var,value) VALUES (?,?,?,?)");
 			offline.setInt(1, clan);
-			rs = offline.executeQuery();
+			ResultSet rs = offline.executeQuery();
 			
 			while (rs.next())
 			{
@@ -155,40 +151,34 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 					e.printStackTrace();
 				}
 			}
+			offline.close();
+			insertion.close();
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
-		finally
-		{
-			DbUtils.closeQuietly(insertion);
-			DbUtils.closeQuietly(con, offline, rs);
-		}
+		
 	}
 	
 	public void offlineMemberExit(QuestState st)
 	{
 		int clan = st.getPlayer().getClan().getClanId();
-		Connection con = null;
-		PreparedStatement offline = null;
 		
-		try
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			offline = con.prepareStatement("DELETE FROM character_quests WHERE name=? AND char_id IN (SELECT obj_id FROM characters WHERE clanId=? AND online=0)");
+			
+			PreparedStatement offline = con.prepareStatement("DELETE FROM character_quests WHERE name=? AND char_id IN (SELECT obj_id FROM characters WHERE clanId=? AND online=0)");
 			offline.setString(1, getName());
 			offline.setInt(2, clan);
 			offline.executeUpdate();
+			offline.close();
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
-		finally
-		{
-			DbUtils.closeQuietly(con, offline);
-		}
+		
 	}
 	
 	public Player getLeader(QuestState st)
@@ -241,16 +231,15 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 		}
 		
 		int leaderId = clan.getLeaderId();
-		ResultSet rs = null;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement offline = con.prepareStatement("SELECT value FROM character_quests WHERE char_id=? AND var=? AND name=?");)
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
+			PreparedStatement offline = con.prepareStatement("SELECT value FROM character_quests WHERE char_id=? AND var=? AND name=?");
 			offline.setInt(1, leaderId);
 			offline.setString(2, var);
 			offline.setString(3, getName());
 			int val = -1;
-			rs = offline.executeQuery();
+			ResultSet rs = offline.executeQuery();
 			
 			if (rs.next())
 			{
@@ -271,6 +260,8 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 					}
 				}
 			}
+			rs.close();
+			offline.close();
 			
 			return val;
 		}
@@ -279,13 +270,7 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 			e.printStackTrace();
 			return -1;
 		}
-		finally
-		{
-			// DbUtils.closeQuietly(rs); //FIXME: creating error while compiling the scripts on server start (see below).
-			/**
-			 * ERROR server\gameserver\data\scripts\quests\Q00503_PursuitOfClanAmbition.java:0,0: Internal compiler error: java.lang.IllegalArgumentException: info cannot be null at org.eclipse.jdt.internal.compiler.codegen.StackMapFrame.addStackItem(StackMapFrame.java:81)
-			 */
-		}
+		
 	}
 	
 	public void setLeaderVar(QuestState st, String var, String value)
@@ -313,27 +298,22 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 		else
 		{
 			int leaderId = st.getPlayer().getClan().getLeaderId();
-			Connection con = null;
-			PreparedStatement offline = null;
 			
-			try
+			try (Connection con = DatabaseFactory.getInstance().getConnection();)
 			{
-				con = DatabaseFactory.getInstance().getConnection();
-				offline = con.prepareStatement("UPDATE character_quests SET value=? WHERE char_id=? AND var=? AND name=?");
+				PreparedStatement offline = con.prepareStatement("UPDATE character_quests SET value=? WHERE char_id=? AND var=? AND name=?");
 				offline.setString(1, value);
 				offline.setInt(2, leaderId);
 				offline.setString(3, var);
 				offline.setString(4, getName());
 				offline.executeUpdate();
+				offline.close();
 			}
 			catch (Exception e)
 			{
 				e.printStackTrace();
 			}
-			finally
-			{
-				DbUtils.closeQuietly(con, offline);
-			}
+			
 		}
 	}
 	

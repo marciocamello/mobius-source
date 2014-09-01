@@ -18,7 +18,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Creature;
@@ -138,25 +137,21 @@ public class Q00501_ProofOfClanAlliance extends Quest implements ScriptFile
 		}
 		
 		int clan = st.getPlayer().getClan().getClanId();
-		Connection con = null;
-		PreparedStatement offline = null;
 		
-		try
+		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
-			con = DatabaseFactory.getInstance().getConnection();
-			offline = con.prepareStatement("DELETE FROM character_quests WHERE name = ? AND char_id IN (SELECT obj_id FROM characters WHERE clanId = ? AND online = 0)");
+			
+			PreparedStatement offline = con.prepareStatement("DELETE FROM character_quests WHERE name = ? AND char_id IN (SELECT obj_id FROM characters WHERE clanId = ? AND online = 0)");
 			offline.setString(1, getName());
 			offline.setInt(2, clan);
 			offline.executeUpdate();
+			offline.close();
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
-		finally
-		{
-			DbUtils.closeQuietly(con, offline);
-		}
+		
 	}
 	
 	public void removeQuestFromOnlineMembers(QuestState st, boolean leader)
