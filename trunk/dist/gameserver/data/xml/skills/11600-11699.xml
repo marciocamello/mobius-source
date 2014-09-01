@@ -14,10 +14,12 @@
 		<set name="isDance" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1001;304;363;276;275"/>
+		<!-- Valid only for Valiance Client
 		<enchant1 levels="10" name="Cost"/>
 		<enchant2 levels="10" name="Time">
 			<table name="#time">550 580 610 640 670 700 730 760 790 820</table>
 		</enchant2>
+		-->
 		<for>
 			<effect name="Buff" time="#time" val="0" stackOrder="1" stackType="BattleSonata">
 				<mul order="0x30" stat="mAtkSpd" val="1.30"/>
@@ -42,10 +44,12 @@
 		<set name="isDance" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1284;305;310"/>
+		<!-- Valid only for Valiance Client
 		<enchant1 levels="10" name="Cost"/>
 		<enchant2 levels="10" name="Time">
 			<table name="#time">550 580 610 640 670 700 730 760 790 820</table>
 		</enchant2>
+		-->
 		<for>
 			<effect name="Buff" time="#time" val="0" stackOrder="1" stackType="MoveSonata">
 				<mul order="0x30" stat="pAtk" val="1.08"/>
@@ -74,14 +78,15 @@
 		<set name="isDance" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="268;266;265;364;1073;272"/>
+		<!-- Valid only for Valiance Client
 		<enchant1 levels="10" name="Cost"/>
 		<enchant2 levels="10" name="Time">
 			<table name="#time">550 580 610 640 670 700 730 760 790 820</table>
 		</enchant2>
+		-->
 		<for>
 			<effect name="Buff" time="#time" val="0" stackOrder="1" stackType="RelaxSonata">
-				<mul order="0x30" stat="regHp" val="1.20"/>
-				<mul order="0x30" stat="mpConsum" val="0.80"/>
+				<mul order="0x30" stat="regHp" val="1.20"/>				<mul order="0x30" stat="mpConsum" val="0.80"/>
 				<add order="0x30" stat="accCombat" val="4"/>
 				<add order="0x40" stat="runSpd" val="20"/>
 				<mul order="0x30" stat="pReuse" val="0.90"/>
