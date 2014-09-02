@@ -7232,7 +7232,7 @@ public final class Player extends Playable implements PlayerGroup
 						_SkillToRemove.add(skill.getId());
 						// removeSkill(skill, true);
 						removeSkillFromShortCut(skill.getId());
-						_log.info("SkillTree: Removed skill: " + skill.getId() + " - " + skill.getName() + " to the player " + getName());
+						_log.info("SkillTree: Removed skill: " + skill.getId() + " - " + skill.getName() + " from player " + getName());
 						continue;
 					}
 				}
@@ -7244,7 +7244,7 @@ public final class Player extends Playable implements PlayerGroup
 				{
 					_SkillToRemove.add(skill.getId());
 					// removeSkill(skill, true);
-					_log.info("Race Skill Removed: " + skill.getId() + " - " + skill.getName() + " to the player " + getName());
+					_log.info("Race Skill Removed: " + skill.getId() + " - " + skill.getName() + " from player " + getName());
 					continue;
 				}
 				
@@ -7259,7 +7259,7 @@ public final class Player extends Playable implements PlayerGroup
 						{
 							_SkillToRemove.add(skill.getId());
 							// removeSkill(skill, true);
-							_log.info("Removed Skill: " + skill.getId() + " - " + skill.getName() + " to the player " + getName());
+							_log.info("Removed Skill: " + skill.getId() + " - " + skill.getName() + " from player " + getName());
 							continue;
 						}
 					}
@@ -7326,7 +7326,7 @@ public final class Player extends Playable implements PlayerGroup
 					{
 						removeSkill(s, true);
 						removeSkillFromShortCut(s.getId());
-						_log.info("SkillRelation: Removed skill: " + s.getId() + " - " + s.getName() + " to the player " + getName());
+						_log.info("SkillRelation: Removed skill: " + s.getId() + " - " + s.getName() + " from player " + getName());
 					}
 				}
 			}
