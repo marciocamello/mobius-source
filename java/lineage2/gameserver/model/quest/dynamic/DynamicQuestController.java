@@ -72,7 +72,7 @@ public class DynamicQuestController
 			quest.start(new QuestEnder(questId));
 		}
 		
-		System.out.println("Condition == " + quest.isStartCondition());
+		// System.out.println("Condition == " + quest.isStartCondition());
 	}
 	
 	/**
