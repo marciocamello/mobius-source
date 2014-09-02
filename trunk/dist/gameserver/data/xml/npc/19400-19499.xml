@@ -2492,47 +2492,69 @@
 	</npc>
 	<npc id="19455" name="Aden Raider" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="2880.376"/>
+		<set name="baseHpMax" value="54535"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseHpReg" value="8.5"/>
 		<set name="baseINT" value="74"/>
 		<set name="baseMAtk" value="1145"/>
 		<set name="baseMAtkSpd" value="253"/>
-		<set name="baseMDef" value="469"/>
+		<set name="baseMDef" value="2500"/>
 		<set name="baseMEN" value="72"/>
-		<set name="baseMpMax" value="1674.8"/>
+		<set name="baseMpMax" value="3510"/>
 		<set name="baseMpReg" value="3"/>
-		<set name="basePAtk" value="1799"/>
+		<set name="basePAtk" value="21000"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="577"/>
+		<set name="basePDef" value="2500"/>
 		<set name="baseRunSpd" value="120"/>
 		<set name="baseSTR" value="109"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="64"/>
-		<set name="baseWalkSpd" value="30"/>
-		<set name="collision_height" value="0.1"/>
-		<set name="collision_radius" value="0.1"/>
-		<set name="level" value="80"/>
-		<set name="rewardExp" value="0"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="34.0"/>
+		<set name="collision_radius" value="14.0"/>
+		<set name="level" value="98"/>
+		<set name="rewardExp" value="2887843"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
+		<set name="rewardSp" value="693"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
-		</attributes>
+		<set name="type" value="Monster"/>
+		<skills>
+			<skill id="4416" level="8"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="17444" min="1" max="1" chance="0.0009"/>
+			</group>
+			<group chance="100.0">
+				<reward item_id="57" min="1262" max="2944" chance="70"/>
+				<reward item_id="9554" min="1" max="1" chance="0.005"/>
+				<reward item_id="36519" min="1" max="1" chance="0.05"/>
+				<reward item_id="35337" min="1" max="1" chance="0.01"/>
+				<reward item_id="35336" min="1" max="1" chance="0.01"/>
+				<reward item_id="35335" min="1" max="1" chance="0.01"/>
+				<reward item_id="9552" min="1" max="1" chance="0.005"/>
+				<reward item_id="17527" min="1" max="1" chance="0.01"/>
+				<reward item_id="9556" min="1" max="1" chance="0.005"/>
+				<reward item_id="19447" min="1" max="1" chance="0.0009"/>
+				<reward item_id="17526" min="1" max="1" chance="0.0009"/>
+				<reward item_id="35459" min="1" max="1" chance="0.0009"/>
+				<reward item_id="35460" min="1" max="1" chance="0.0009"/>
+				<reward item_id="35461" min="1" max="1" chance="0.0009"/>
+				<reward item_id="19448" min="1" max="1" chance="0.0009"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="36534" min="1" max="1" chance="0.1"/>
+			<reward item_id="36885" min="1" max="1" chance="0.005"/>
+			<reward item_id="36886" min="1" max="1" chance="0.0009"/>
+		</rewardlist>
 	</npc>
 	<npc id="19456" name="Te Ochdumann" title="Commander">
 		<set name="type" value="Monster"/>

@@ -1,6 +1,72 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
+	<npc id="23300" name="Comander of Operations" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="82"/>
+		<set name="baseCritRate" value="50"/>
+		<set name="baseDEX" value="55"/>
+		<set name="baseHpMax" value="54535"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseMAtk" value="148028"/>
+		<set name="baseMAtkSpd" value="253"/>
+		<set name="baseMDef" value="1322"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseMpMax" value="2827"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="basePAtk" value="92020"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="basePDef" value="5346"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="78"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="collision_radius" value="30"/>
+		<set name="collision_height" value="33"/>
+		<set name="level" value="98"/>
+		<set name="rewardExp" value="2799200"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="12263"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Monster"/>             
+		<skills>
+			<skill id="4416" level="8"/>
+			<skill id="5467" level="1"/>
+			<skill id="4410" level="19"/>
+			<skill id="4411" level="19"/>
+			<skill id="4412" level="21"/>
+			<skill id="4413" level="8"/>
+			<skill id="4414" level="1"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="57" min="825" max="1926" chance="70"/>
+				<reward item_id="19448" min="1" max="1" chance="0.0009"/>
+				<reward item_id="19447" min="1" max="1" chance="0.0009"/>
+				<reward item_id="9554" min="1" max="1" chance="0.005"/>
+				<reward item_id="9556" min="1" max="1" chance="0.005"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="36528" min="1" max="1" chance="4.985"/>
+			<reward item_id="36529" min="1" max="1" chance="0.5"/>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
 	<npc id="23314" name="Nerva Orc Raider" title="">
 		<set name="aggroRange" value="1"/>
 		<set name="collision_height" value="38.0"/>
