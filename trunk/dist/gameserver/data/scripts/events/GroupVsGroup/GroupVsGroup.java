@@ -284,8 +284,8 @@ public final class GroupVsGroup extends Functions implements ScriptFile
 		}
 		
 		final StringBuilder string = new StringBuilder(32);
-		final String refresh = "<button value=\"Refresh\" action=\"bypass -h scripts_events.GvG.GvG:showStats\" width=60 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">";
-		final String start = "<button value=\"Start Now\" action=\"bypass -h scripts_events.GvG.GvG:startNow\" width=60 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">";
+		final String refresh = "<button value=\"Refresh\" action=\"bypass -h scripts_events.GroupVsGroup.GroupVsGroup:showStats\" width=60 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">";
+		final String start = "<button value=\"Start Now\" action=\"bypass -h scripts_events.GroupVsGroup.GroupVsGroup:startNow\" width=60 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">";
 		int i = 0;
 		
 		if (!leaderList.isEmpty())

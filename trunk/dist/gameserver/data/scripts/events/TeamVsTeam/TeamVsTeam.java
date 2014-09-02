@@ -423,8 +423,8 @@ public class TeamVsTeam extends Functions implements ScriptFile, OnDeathListener
 		};
 		sayToAll("scripts.events.TvT.AnnouncePreStart", param);
 		
-		executeTask("events.TvT.TvT", "question", new Object[0], 10000);
-		executeTask("events.TvT.TvT", "announce", new Object[0], 60000);
+		executeTask("events.TeamVsTeam.TeamVsTeam", "question", new Object[0], 10000);
+		executeTask("events.TeamVsTeam.TeamVsTeam", "announce", new Object[0], 60000);
 	}
 	
 	public static void sayToAll(String address, String[] replacements)
@@ -438,7 +438,7 @@ public class TeamVsTeam extends Functions implements ScriptFile, OnDeathListener
 		{
 			if ((player != null) && !player.isDead() && (player.getLevel() >= _minLevel) && (player.getLevel() <= _maxLevel) && player.getReflection().isDefault() && !player.isInOlympiadMode() && !player.isInObserverMode())
 			{
-				player.scriptRequest(new CustomMessage("scripts.events.TvT.AskPlayer", player).toString(), "events.TvT.TvT:addPlayer", new Object[0]);
+				player.scriptRequest(new CustomMessage("scripts.events.TvT.AskPlayer", player).toString(), "events.TeamVsTeam.TeamVsTeam:addPlayer", new Object[0]);
 			}
 		}
 	}
@@ -455,7 +455,7 @@ public class TeamVsTeam extends Functions implements ScriptFile, OnDeathListener
 				String.valueOf(_maxLevel)
 			};
 			sayToAll("scripts.events.TvT.AnnouncePreStart", param);
-			executeTask("events.TvT.TvT", "announce", new Object[0], 60000);
+			executeTask("events.TeamVsTeam.TeamVsTeam", "announce", new Object[0], 60000);
 		}
 		else
 		{
@@ -464,14 +464,14 @@ public class TeamVsTeam extends Functions implements ScriptFile, OnDeathListener
 				sayToAll("scripts.events.TvT.AnnounceEventCancelled", null);
 				_isRegistrationActive = false;
 				_status = 0;
-				executeTask("events.TvT.TvT", "autoContinue", new Object[0], 10000);
+				executeTask("events.TeamVsTeam.TeamVsTeam", "autoContinue", new Object[0], 10000);
 				boxes.clear();
 				return;
 			}
 			_status = 1;
 			_isRegistrationActive = false;
 			sayToAll("scripts.events.TvT.AnnounceEventStarting", null);
-			executeTask("events.TvT.TvT", "prepare", new Object[0], 5000);
+			executeTask("events.TeamVsTeam.TeamVsTeam", "prepare", new Object[0], 5000);
 		}
 	}
 	
@@ -633,12 +633,12 @@ public class TeamVsTeam extends Functions implements ScriptFile, OnDeathListener
 		}
 		
 		cleanPlayers();
-		executeTask("events.TvT.TvT", "ressurectPlayers", new Object[0], 1000);
-		executeTask("events.TvT.TvT", "healPlayers", new Object[0], 2000);
-		executeTask("events.TvT.TvT", "teleportPlayersToColiseum", new Object[0], 3000);
-		executeTask("events.TvT.TvT", "paralyzePlayers", new Object[0], 4000);
-		executeTask("events.TvT.TvT", "buffPlayers", new Object[0], 5000);
-		executeTask("events.TvT.TvT", "go", new Object[0], 60000);
+		executeTask("events.TeamVsTeam.TeamVsTeam", "ressurectPlayers", new Object[0], 1000);
+		executeTask("events.TeamVsTeam.TeamVsTeam", "healPlayers", new Object[0], 2000);
+		executeTask("events.TeamVsTeam.TeamVsTeam", "teleportPlayersToColiseum", new Object[0], 3000);
+		executeTask("events.TeamVsTeam.TeamVsTeam", "paralyzePlayers", new Object[0], 4000);
+		executeTask("events.TeamVsTeam.TeamVsTeam", "buffPlayers", new Object[0], 5000);
+		executeTask("events.TeamVsTeam.TeamVsTeam", "go", new Object[0], 60000);
 		
 		sayToAll("scripts.events.TvT.AnnounceFinalCountdown", null);
 	}
@@ -653,7 +653,7 @@ public class TeamVsTeam extends Functions implements ScriptFile, OnDeathListener
 		{
 			z.setType(ZoneType.battle_zone);
 		}
-		_endTask = executeTask("events.TvT.TvT", "endBattle", new Object[0], 600000);
+		_endTask = executeTask("events.TeamVsTeam.TeamVsTeam", "endBattle", new Object[0], 600000);
 		_startedTime = System.currentTimeMillis() + 600000;
 		
 		final ExCubeGameChangePoints initialPoints = new ExCubeGameChangePoints(600, bluePoints, redPoints);
@@ -744,7 +744,7 @@ public class TeamVsTeam extends Functions implements ScriptFile, OnDeathListener
 		}
 		
 		sayToAll("scripts.events.TvT.AnnounceEnd", null);
-		executeTask("events.TvT.TvT", "end", new Object[0], 30000);
+		executeTask("events.TeamVsTeam.TeamVsTeam", "end", new Object[0], 30000);
 		_isRegistrationActive = false;
 		if (_endTask != null)
 		{
@@ -773,10 +773,10 @@ public class TeamVsTeam extends Functions implements ScriptFile, OnDeathListener
 	
 	public static void end()
 	{
-		executeTask("events.TvT.TvT", "ressurectPlayers", new Object[0], 1000);
-		executeTask("events.TvT.TvT", "healPlayers", new Object[0], 2000);
-		executeTask("events.TvT.TvT", "teleportPlayers", new Object[0], 3000);
-		executeTask("events.TvT.TvT", "autoContinue", new Object[0], 10000);
+		executeTask("events.TeamVsTeam.TeamVsTeam", "ressurectPlayers", new Object[0], 1000);
+		executeTask("events.TeamVsTeam.TeamVsTeam", "healPlayers", new Object[0], 2000);
+		executeTask("events.TeamVsTeam.TeamVsTeam", "teleportPlayers", new Object[0], 3000);
+		executeTask("events.TeamVsTeam.TeamVsTeam", "autoContinue", new Object[0], 10000);
 	}
 	
 	public void autoContinue()

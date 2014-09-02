@@ -65,7 +65,7 @@ public final class ChangeOfHeart extends Functions implements ScriptFile, OnDeat
 	};
 	static
 	{
-		final PrintfFormat fmt = new PrintfFormat("<br><a action=\"bypass -h scripts_events.heart.heart:play %d\">\"%s!\"</a>");
+		final PrintfFormat fmt = new PrintfFormat("<br><a action=\"bypass -h scripts_events.ChangeOfHeart.ChangeOfHeart:play %d\">\"%s!\"</a>");
 		
 		for (int i = 0; i < variants.length; i++)
 		{
