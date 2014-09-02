@@ -380,8 +380,8 @@ public class LastHero extends Functions implements ScriptFile, OnDeathListener, 
 		};
 		sayToAll("scripts.events.LastHero.AnnouncePreStart", param);
 		
-		executeTask("events.lastHero.LastHero", "question", new Object[0], 10000);
-		executeTask("events.lastHero.LastHero", "announce", new Object[0], 60000);
+		executeTask("events.LastHero.LastHero", "question", new Object[0], 10000);
+		executeTask("events.LastHero.LastHero", "announce", new Object[0], 60000);
 	}
 	
 	public static void sayToAll(String address, String[] replacements)
@@ -395,7 +395,7 @@ public class LastHero extends Functions implements ScriptFile, OnDeathListener, 
 		{
 			if ((player != null) && !player.isDead() && (player.getLevel() >= _minLevel) && (player.getLevel() <= _maxLevel) && player.getReflection().isDefault() && !player.isInOlympiadMode() && !player.isInObserverMode())
 			{
-				player.scriptRequest(new CustomMessage("scripts.events.LastHero.AskPlayer", player).toString(), "events.lastHero.LastHero:addPlayer", new Object[0]);
+				player.scriptRequest(new CustomMessage("scripts.events.LastHero.AskPlayer", player).toString(), "events.LastHero.LastHero:addPlayer", new Object[0]);
 			}
 		}
 	}
@@ -407,7 +407,7 @@ public class LastHero extends Functions implements ScriptFile, OnDeathListener, 
 			sayToAll("scripts.events.LastHero.AnnounceEventCancelled", null);
 			_isRegistrationActive = false;
 			_status = 0;
-			executeTask("events.lastHero.LastHero", "autoContinue", new Object[0], 10000);
+			executeTask("events.LastHero.LastHero", "autoContinue", new Object[0], 10000);
 			return;
 		}
 		
@@ -421,14 +421,14 @@ public class LastHero extends Functions implements ScriptFile, OnDeathListener, 
 				String.valueOf(_maxLevel)
 			};
 			sayToAll("scripts.events.LastHero.AnnouncePreStart", param);
-			executeTask("events.lastHero.LastHero", "announce", new Object[0], 60000);
+			executeTask("events.LastHero.LastHero", "announce", new Object[0], 60000);
 		}
 		else
 		{
 			_status = 1;
 			_isRegistrationActive = false;
 			sayToAll("scripts.events.LastHero.AnnounceEventStarting", null);
-			executeTask("events.lastHero.LastHero", "prepare", new Object[0], 5000);
+			executeTask("events.LastHero.LastHero", "prepare", new Object[0], 5000);
 		}
 	}
 	
@@ -546,12 +546,12 @@ public class LastHero extends Functions implements ScriptFile, OnDeathListener, 
 		cleanPlayers();
 		clearArena();
 		
-		executeTask("events.lastHero.LastHero", "ressurectPlayers", new Object[0], 1000);
-		executeTask("events.lastHero.LastHero", "healPlayers", new Object[0], 2000);
-		executeTask("events.lastHero.LastHero", "paralyzePlayers", new Object[0], 4000);
-		executeTask("events.lastHero.LastHero", "teleportPlayersToColiseum", new Object[0], 3000);
-		executeTask("events.lastHero.LastHero", "buffPlayers", new Object[0], 5000);
-		executeTask("events.lastHero.LastHero", "go", new Object[0], 60000);
+		executeTask("events.LastHero.LastHero", "ressurectPlayers", new Object[0], 1000);
+		executeTask("events.LastHero.LastHero", "healPlayers", new Object[0], 2000);
+		executeTask("events.LastHero.LastHero", "paralyzePlayers", new Object[0], 4000);
+		executeTask("events.LastHero.LastHero", "teleportPlayersToColiseum", new Object[0], 3000);
+		executeTask("events.LastHero.LastHero", "buffPlayers", new Object[0], 5000);
+		executeTask("events.LastHero.LastHero", "go", new Object[0], 60000);
 		
 		sayToAll("scripts.events.LastHero.AnnounceFinalCountdown", null);
 	}
@@ -567,7 +567,7 @@ public class LastHero extends Functions implements ScriptFile, OnDeathListener, 
 		{
 			z.setType(ZoneType.battle_zone);
 		}
-		_endTask = executeTask("events.lastHero.LastHero", "endBattle", new Object[0], 300000);
+		_endTask = executeTask("events.LastHero.LastHero", "endBattle", new Object[0], 300000);
 	}
 	
 	public static void endBattle()
@@ -595,7 +595,7 @@ public class LastHero extends Functions implements ScriptFile, OnDeathListener, 
 			}
 		}
 		sayToAll("scripts.events.LastHero.AnnounceEnd", null);
-		executeTask("events.lastHero.LastHero", "end", new Object[0], 30000);
+		executeTask("events.LastHero.LastHero", "end", new Object[0], 30000);
 		_isRegistrationActive = false;
 		if (_endTask != null)
 		{
@@ -606,10 +606,10 @@ public class LastHero extends Functions implements ScriptFile, OnDeathListener, 
 	
 	public static void end()
 	{
-		executeTask("events.lastHero.LastHero", "ressurectPlayers", new Object[0], 1000);
-		executeTask("events.lastHero.LastHero", "healPlayers", new Object[0], 2000);
-		executeTask("events.lastHero.LastHero", "teleportPlayers", new Object[0], 3000);
-		executeTask("events.lastHero.LastHero", "autoContinue", new Object[0], 10000);
+		executeTask("events.LastHero.LastHero", "ressurectPlayers", new Object[0], 1000);
+		executeTask("events.LastHero.LastHero", "healPlayers", new Object[0], 2000);
+		executeTask("events.LastHero.LastHero", "teleportPlayers", new Object[0], 3000);
+		executeTask("events.LastHero.LastHero", "autoContinue", new Object[0], 10000);
 	}
 	
 	public void autoContinue()

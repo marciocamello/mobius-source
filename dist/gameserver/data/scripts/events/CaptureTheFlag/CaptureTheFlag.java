@@ -549,8 +549,8 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		};
 		sayToAll("scripts.events.CtF.AnnouncePreStart", param);
 		
-		executeTask("events.CTF.CTF", "question", new Object[0], 10000);
-		executeTask("events.CTF.CTF", "announce", new Object[0], 60000);
+		executeTask("events.CaptureTheFlag.CaptureTheFlag", "question", new Object[0], 10000);
+		executeTask("events.CaptureTheFlag.CaptureTheFlag", "announce", new Object[0], 60000);
 		_log.info("CtF: start event [" + _category + "-" + _autoContinue + "]");
 	}
 	
@@ -565,7 +565,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		{
 			if ((player != null) && !player.isDead() && (player.getLevel() >= _minLevel) && (player.getLevel() <= _maxLevel) && player.getReflection().isDefault() && !player.isInOlympiadMode() && !player.isInObserverMode())
 			{
-				player.scriptRequest(new CustomMessage("scripts.events.CtF.AskPlayer", player).toString(), "events.CTF.CTF:addPlayer", new Object[0]);
+				player.scriptRequest(new CustomMessage("scripts.events.CtF.AskPlayer", player).toString(), "events.CaptureTheFlag.CaptureTheFlag:addPlayer", new Object[0]);
 			}
 		}
 	}
@@ -577,7 +577,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 			sayToAll("scripts.events.CtF.AnnounceEventCancelled", null);
 			_isRegistrationActive = false;
 			_status = 0;
-			executeTask("events.CTF.CTF", "autoContinue", new Object[0], 10000);
+			executeTask("events.CaptureTheFlag.CaptureTheFlag", "autoContinue", new Object[0], 10000);
 			return;
 		}
 		
@@ -591,14 +591,14 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 				String.valueOf(_maxLevel)
 			};
 			sayToAll("scripts.events.CtF.AnnouncePreStart", param);
-			executeTask("events.CTF.CTF", "announce", new Object[0], 60000);
+			executeTask("events.CaptureTheFlag.CaptureTheFlag", "announce", new Object[0], 60000);
 		}
 		else
 		{
 			_status = 1;
 			_isRegistrationActive = false;
 			sayToAll("scripts.events.CtF.AnnounceEventStarting", null);
-			executeTask("events.CTF.CTF", "prepare", new Object[0], 5000);
+			executeTask("events.CaptureTheFlag.CaptureTheFlag", "prepare", new Object[0], 5000);
 		}
 	}
 	
@@ -760,15 +760,15 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		redFlag.spawnMe();
 		blueFlag.spawnMe();
 		
-		executeTask("events.CTF.CTF", "ressurectPlayers", new Object[0], 1000);
-		executeTask("events.CTF.CTF", "healPlayers", new Object[0], 2000);
-		executeTask("events.CTF.CTF", "teleportPlayersToColiseum", new Object[0], 4000);
-		executeTask("events.CTF.CTF", "paralyzePlayers", new Object[0], 5000);
+		executeTask("events.CaptureTheFlag.CaptureTheFlag", "ressurectPlayers", new Object[0], 1000);
+		executeTask("events.CaptureTheFlag.CaptureTheFlag", "healPlayers", new Object[0], 2000);
+		executeTask("events.CaptureTheFlag.CaptureTheFlag", "teleportPlayersToColiseum", new Object[0], 4000);
+		executeTask("events.CaptureTheFlag.CaptureTheFlag", "paralyzePlayers", new Object[0], 5000);
 		if (Config.EVENT_CtFBuffPlayers && (Config.EVENT_CtFFighterBuffs.length > 0) && (Config.EVENT_CtFMageBuffs.length > 0))
 		{
-			executeTask("events.CTF.CTF", "buffPlayers", new Object[0], 6000);
+			executeTask("events.CaptureTheFlag.CaptureTheFlag", "buffPlayers", new Object[0], 6000);
 		}
-		executeTask("events.CTF.CTF", "go", new Object[0], 60000);
+		executeTask("events.CaptureTheFlag.CaptureTheFlag", "go", new Object[0], 60000);
 		
 		sayToAll("scripts.events.CtF.AnnounceFinalCountdown", null);
 	}
@@ -783,7 +783,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		{
 			z.setType(ZoneType.battle_zone);
 		}
-		_endTask = executeTask("events.CTF.CTF", "endOfTime", new Object[0], 300000);
+		_endTask = executeTask("events.CaptureTheFlag.CaptureTheFlag", "endOfTime", new Object[0], 300000);
 	}
 	
 	public static void endOfTime()
@@ -840,16 +840,16 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		}
 		
 		sayToAll("scripts.events.CtF.AnnounceEnd", null);
-		executeTask("events.CTF.CTF", "end", new Object[0], 30000);
+		executeTask("events.CaptureTheFlag.CaptureTheFlag", "end", new Object[0], 30000);
 		_isRegistrationActive = false;
 	}
 	
 	public static void end()
 	{
-		executeTask("events.CTF.CTF", "ressurectPlayers", new Object[0], 1000);
-		executeTask("events.CTF.CTF", "healPlayers", new Object[0], 2000);
-		executeTask("events.CTF.CTF", "teleportPlayersToSavedCoords", new Object[0], 3000);
-		executeTask("events.CTF.CTF", "autoContinue", new Object[0], 10000);
+		executeTask("events.CaptureTheFlag.CaptureTheFlag", "ressurectPlayers", new Object[0], 1000);
+		executeTask("events.CaptureTheFlag.CaptureTheFlag", "healPlayers", new Object[0], 2000);
+		executeTask("events.CaptureTheFlag.CaptureTheFlag", "teleportPlayersToSavedCoords", new Object[0], 3000);
+		executeTask("events.CaptureTheFlag.CaptureTheFlag", "autoContinue", new Object[0], 10000);
 	}
 	
 	public void autoContinue()
@@ -1374,7 +1374,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		if ((_status > 1) && (self != null) && self.isPlayer() && (self.getTeam() != TeamType.NONE) && (players_list1.contains(self.getStoredId()) || players_list2.contains(self.getStoredId())))
 		{
 			dropFlag((Player) self);
-			executeTask("events.CTF.CTF", "resurrectAtBase", new Object[]
+			executeTask("events.CaptureTheFlag.CaptureTheFlag", "resurrectAtBase", new Object[]
 			{
 				(Player) self
 			}, 10 * 1000);

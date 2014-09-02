@@ -700,12 +700,12 @@ public class Functions
 	 */
 	public static boolean isPvPEventStarted()
 	{
-		if ((Boolean) callScripts("events.TvT.TvT", "isRunned", new Object[] {}))
+		if ((Boolean) callScripts("events.TeamVsTeam.TeamVsTeam", "isRunned", new Object[] {}))
 		{
 			return true;
 		}
 		
-		if ((Boolean) callScripts("events.lastHero.LastHero", "isRunned", new Object[] {}))
+		if ((Boolean) callScripts("events.LastHero.LastHero", "isRunned", new Object[] {}))
 		{
 			return true;
 		}
