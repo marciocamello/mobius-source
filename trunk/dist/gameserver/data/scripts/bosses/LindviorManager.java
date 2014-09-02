@@ -430,7 +430,7 @@ public final class LindviorManager extends Functions implements ScriptFile, OnDe
 			cc = player.getParty().getCommandChannel();
 		}
 		
-		if ((!DEBUG && !player.isGM()) && ((cc != null) && !cc.getChannelLeader().equals(player)))
+		if ((!DEBUG && !player.isGM()) && (((cc != null) && !cc.getChannelLeader().equals(player)) || (cc == null)))
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.ONLY_THE_ALLIANCE_CHANNEL_LEADER_CAN_ATTEMPT_ENTRY));
 			return;
