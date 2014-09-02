@@ -1105,7 +1105,7 @@
 			<table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
 		</enchant9>
 		<for>
-			<effect name="KnockDown" abnormalTime="1" val="0" abnormalLvl="1" effectPower="85" effectType="KNOCK_DOWN" abnormalVisualEffect="sknockdown" />
+			<effect name="KnockDown" abnormalTime="1" val="0" abnormalLvl="1" effectPower="85" effectType="KNOCK_DOWN" abnormalVisualEffect="sknockdown"/>
 		</for>
 	</skill>
 	<skill id="10024" levels="1" name="Party Rescue">
@@ -2009,18 +2009,15 @@
 		</for>
 	</skill>
 	<skill id="10062" levels="4" name="Phoenix Spirit">
-		<!--
-			P. Def./ M. Def. + 2%. Has a 30% chance of doing the same to all party members for 10 sec. when attacked.
-		-->
 		<table name="#pDef">1.02 1.03 1.04 1.06</table>
 		<table name="#mDef">1.02 1.03 1.04 1.06</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="target" val="TARGET_PARTY"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="icon" val="icon.skill10062" />
+		<set name="icon" val="icon.skill10062"/>
 		<set name="reuseDelay" val="1000"/>
-		<set name="saveVs" val="STR"/> 
+		<set name="saveVs" val="STR"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<mul order="0x30" stat="pDef" val="#pDef"/>
@@ -2033,9 +2030,6 @@
 		</triggers>
 	</skill>
 	<skill id="10063" levels="4" name="Phoenix Spirit">
-		<!--
-			For 10 sec., all party members' P. Def./ M. Def. + 2%.
-		-->
 		<table name="#pDef">1.02 1.03 1.04 1.06</table>
 		<table name="#mDef">1.02 1.03 1.04 1.06</table>
 		<table name="#magicLevel">85 90 95 99</table>
@@ -2043,7 +2037,7 @@
 		<set name="target" val="TARGET_PARTY"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="reuseDelay" val="1000"/>
-		<set name="saveVs" val="STR"/> 
+		<set name="saveVs" val="STR"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<mul order="0x30" stat="pDef" val="#pDef"/>
@@ -2051,37 +2045,28 @@
 		</for>
 	</skill>
 	<skill id="10064" levels="4" name="Holy Sacrifice">
-		<!--
-			Consumes your HP to restore target's HP by 1000. Requires a shield.
-		-->
 		<table name="#hpConsume">1000 1300 1500 2000</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#power">1000 1300 1500 2000</table>
-		<set name="magicType" val="MAGIC" />
-		<set name="icon" val="icon.skill10064" />
-		<set name="reuseDelay" val="2000" />
-		<set name="power" val="#power" />
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1500" />
-		<set name="hitCancelTime" val="500" />
-		<set name="hpConsume" val="#hpConsume" />
-		<set name="useSS" val="true" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="HEAL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.skill10064"/>
+		<set name="reuseDelay" val="2000"/>
+		<set name="power" val="#power"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="hpConsume" val="#hpConsume"/>
+		<set name="useSS" val="true"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="HEAL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="10065" levels="4" name="Fortress Shield">
-		<!--
-		Shield Defense +5%
-		Shield Defense +7%
-		Shield Defense +10%
-		Shield Defense +15%
-		-->
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#sDef">1.05 1.07 1.10 1.15</table>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="icon" val="icon.skill10065" />
+		<set name="icon" val="icon.skill10065"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2089,20 +2074,16 @@
 			<mul order="0x30" stat="sDef" val="#sDef"/>
 		</for>
 	</skill>
-
 	<skill id="10066" levels="4" name="Spirit of Revenge">
-	<!--
-		P. Atk./ M. Atk. + 2%. Has a 30% chance of doing the same to all party members for 10 sec. when attacked.
-	-->
 		<table name="#pDef">1.02 1.03 1.04 1.06</table>
 		<table name="#mDef">1.02 1.03 1.04 1.06</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="target" val="TARGET_PARTY"/>
-		<set name="icon" val="icon.skill10066" />
+		<set name="icon" val="icon.skill10066"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="reuseDelay" val="1000"/>
-		<set name="saveVs" val="STR"/> 
+		<set name="saveVs" val="STR"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<mul order="0x30" stat="pDef" val="#pDef"/>
@@ -2115,9 +2096,6 @@
 		</triggers>
 	</skill>
 	<skill id="10067" levels="4" name="Spirit of Revenge">
-	<!--
-		For 10 sec., all party members' P. Atk./ M. Atk. + 2%.
-	-->
 		<table name="#pDef">1.02 1.03 1.04 1.06</table>
 		<table name="#mDef">1.02 1.03 1.04 1.06</table>
 		<table name="#magicLevel">85 90 95 99</table>
@@ -2125,7 +2103,7 @@
 		<set name="target" val="TARGET_PARTY"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="reuseDelay" val="1000"/>
-		<set name="saveVs" val="STR"/> 
+		<set name="saveVs" val="STR"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<mul order="0x30" stat="pDef" val="#pDef"/>
@@ -2138,65 +2116,58 @@
 		<set name="summonTimeLostIdle" val="500"/>
 		<set name="summonTimeLostActive" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="icon" val="icon.skill10068" />
+		<set name="icon" val="icon.skill10068"/>
 		<set name="skillType" val="SUMMON"/>
 		<set name="summonType" val="PET"/>
 		<set name="hitTime" val="4500"/>
-		<set name="magicType" val="MAGIC" />
+		<set name="magicType" val="MAGIC"/>
 		<table name="#magicLevel">85 90 95 99</table>
-		<set name="magicLevel" val="#magicLevel" />
+		<set name="magicLevel" val="#magicLevel"/>
 		<set name="relationSkillsId" val="283"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="npcId" val="#npcIds"/>
 	</skill>
 	<skill id="10069" levels="4" name="Vampirism">
-		<set name="icon" val="icon.skill10069" />
-		<set name="magicType" val="MAGIC" />
-		<set name="reuseDelay" val="2000" />
+		<set name="icon" val="icon.skill10069"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="2000"/>
 		<table name="#magicLevel">85 90 95 99</table>
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="hitTime" val="4000" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="hitTime" val="4000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<triggers>
 			<trigger id="10070" level="1" type="ATTACK" chance="30"/>
 		</triggers>
 	</skill>
 	<skill id="10070" levels="4" name="Vampirism">
-		<!--
-		HP Recovery
-		-->
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#power">100 130 150 200</table>
-		<set name="magicType" val="MAGIC" />
-		<set name="icon" val="icon.skill10070" />
-		<set name="reuseDelay" val="2000" />
-		<set name="power" val="#power" />
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="1500" />
-		<set name="hitCancelTime" val="500" />
-		<set name="useSS" val="true" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="HEAL" />
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.skill10070"/>
+		<set name="reuseDelay" val="2000"/>
+		<set name="power" val="#power"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="useSS" val="true"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="HEAL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
-
 	<skill id="10071" levels="4" name="Eva's Presence">
-	<!--
-		P. Def./ M. Def. + 2%. Has a 30% chance of increasing all party members' P. Def./ M. Def. and heal amount by 1% for 10 sec. when attacked.
-	-->
 		<table name="#pDef">1.02 1.03 1.04 1.06</table>
 		<table name="#mDef">1.02 1.03 1.04 1.06</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="icon" val="icon.skill10066" />
-		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill10066"/>
+		<set name="hitTime" val="1000"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="reuseDelay" val="1000"/>
-		<set name="saveVs" val="STR"/> 
+		<set name="saveVs" val="STR"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<mul order="0x30" stat="pDef" val="#pDef"/>
@@ -2209,9 +2180,6 @@
 		</triggers>
 	</skill>
 	<skill id="10072" levels="4" name="Eva's Presence">
-	<!--
-		For 10 sec., all party members' P. Def./ M. Def. and heal amount by 1%.
-	-->
 		<table name="#pDef">1.01 1.02 1.03 1.04</table>
 		<table name="#mDef">1.01 1.02 1.03 1.04</table>
 		<table name="#magicLevel">85 90 95 99</table>
@@ -2227,9 +2195,6 @@
 		</for>
 	</skill>
 	<skill id="10073" levels="4" name="Summon Buff Cubic">
-	<!--
-		Summons the Buff Cubic. The Life Cubic uses magic to restore the owner's HP.
-	-->
 		<table name="#cubicLevel">1 2 3 4</table>
 		<table name="#mpConsume2">88 97 115 132</table>
 		<table name="#mpConsume1">41 48 59 80</table>
@@ -2255,9 +2220,6 @@
 		</for>
 	</skill>
 	<skill id="10074" levels="4" name="Summon Mind Cubic">
-	<!--
-		Summons the Mind Cubic. The Sigel Mind Cubic uses magic to restore the owner's MP.
-	-->
 		<table name="#cubicLevel">1 2 3 4</table>
 		<table name="#mpConsume2">88 97 115 132</table>
 		<table name="#mpConsume1">41 48 59 80</table>
@@ -2284,42 +2246,39 @@
 	</skill>
 	<skill id="10075" levels="1" name="Superior Cubic Mastery">
 		<table name="#magicLevel">85</table>
-		<set name="icon" val="icon.skill10075" />
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="icon" val="icon.skill10075"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x40" stat="cubicsLimit" val="3" />
+			<add order="0x40" stat="cubicsLimit" val="3"/>
 		</for>
 	</skill>
 	<skill id="10076" levels="4" name="Superior Guard Stance">
-		<set name="icon" val="icon.skill10076" />
+		<set name="icon" val="icon.skill10076"/>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#shield">1.05 1.07 1.10 1.15</table>
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="OP_PASSIVE" />
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="rShld" val="#shield" />
+			<mul order="0x30" stat="rShld" val="#shield"/>
 		</for>
 	</skill>
 	<skill id="10077" levels="4" name="Shilen's Presence">
-	<!--
-		P. Atk./ M. Atk. + 2%. Has a 30% chance of doing the same to all party members for 10 sec. when attacked.
-	-->
 		<table name="#pDef">1.02 1.03 1.04 1.06</table>
 		<table name="#mDef">1.02 1.03 1.04 1.06</table>
 		<table name="#LVL">1 2 3 4</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="icon" val="icon.skill10066" />
-		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill10066"/>
+		<set name="hitTime" val="1000"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="reuseDelay" val="1000"/>
-		<set name="saveVs" val="STR"/> 
+		<set name="saveVs" val="STR"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<mul order="0x30" stat="pDef" val="#pDef"/>
@@ -2332,9 +2291,6 @@
 		</triggers>
 	</skill>
 	<skill id="10078" levels="4" name="Shilen's Presence">
-	<!--
-		For 10 sec., all party members' P. Atk./ M. Atk. + 2%.
-	-->
 		<table name="#pDef">1.02 1.03 1.04 1.06</table>
 		<table name="#mDef">1.02 1.03 1.04 1.06</table>
 		<table name="#magicLevel">85 90 95 99</table>
@@ -2350,9 +2306,6 @@
 		</for>
 	</skill>
 	<skill id="10079" levels="4" name="Summon Phantom Cubic">
-	<!--
-		Summons the Phantom Cubic, which uses magic to decrease the enemy's Atk. Spd./ Casting Spd.
-	-->
 		<table name="#cubicLevel">1 2 3 4</table>
 		<table name="#mpConsume2">88 97 115 132</table>
 		<table name="#mpConsume1">41 48 59 80</table>
@@ -2378,9 +2331,6 @@
 		</for>
 	</skill>
 	<skill id="10080" levels="4" name="Summon Hex Cubic">
-	<!--
-		Summons the Hex Cubic, which uses magic to decrease the enemy's P. Def.
-	-->
 		<table name="#cubicLevel">1 2 3 4</table>
 		<table name="#mpConsume2">88 97 115 132</table>
 		<table name="#mpConsume1">41 48 59 80</table>
@@ -2408,70 +2358,68 @@
 	<skill id="10081" levels="4" name="Lightning Root">
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#magic">15574 18556 20701 22848</table>
-		<set name="magicType" val="MAGIC" />
-		<set name="icon" val="icon.skill1170" />
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="useSS" val="false" />
-		<set name="power" val="#magic" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="PDAM" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="delayedEffect" val="6125" />
-		<set name="castRange" val="1000" />
-		<set name="hitTime" val="3000" />
-		<set name="trait" val="PARALYZE" />
-		<set name="saveVs" val="STR" />
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.skill1170"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="useSS" val="false"/>
+		<set name="power" val="#magic"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="delayedEffect" val="6125"/>
+		<set name="castRange" val="1000"/>
+		<set name="hitTime" val="3000"/>
+		<set name="trait" val="PARALYZE"/>
+		<set name="saveVs" val="STR"/>
 		<set name="reuseDelay" val="5000"/>
 		<for>
 			<effect count="1" name="Paralyze" time="5" val="0"/>
 		</for>
 	</skill>
 	<skill id="10085" levels="4" name="Cubic Falter">
-		<!-- For 5 sec., Atk. Spd./ Casting Spd. - 5%. -->
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#p">0.95 0.93 0.90 0.95</table>
 		<table name="#m">0.95 0.93 0.90 0.95</table>
-		<set name="levelModifier" val="1" />
-		<set name="magicType" val="MAGIC" />
-		<set name="icon" val="icon.skill1170" />
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="useSS" val="false" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="delayedEffect" val="6125" />
-		<set name="isHideUseMessage" val="true" />
-		<set name="castRange" val="1000" />
-		<set name="hitTime" val="3000" />
+		<set name="levelModifier" val="1"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.skill1170"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="delayedEffect" val="6125"/>
+		<set name="isHideUseMessage" val="true"/>
+		<set name="castRange" val="1000"/>
+		<set name="hitTime" val="3000"/>
 		<for>
 			<effect count="1" name="Debuff" time="5" val="0">
-				<mul order="0x30" stat="pAtkSpd" val="#p" />
-				<mul order="0x30" stat="mAtkSpd" val="#m" />
+				<mul order="0x30" stat="pAtkSpd" val="#p"/>
+				<mul order="0x30" stat="mAtkSpd" val="#m"/>
 			</effect>
 		</for>
 	</skill>
 	<skill id="10086" levels="4" name="Cubic Hex">
-		<!-- For 5 sec., P. Def./ M. Def. - 5%. -->
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#p">0.95 0.93 0.90 0.95</table>
 		<table name="#m">0.95 0.93 0.90 0.95</table>
-		<set name="levelModifier" val="1" />
-		<set name="magicType" val="MAGIC" />
-		<set name="icon" val="icon.skill1170" />
-		<set name="magicLevel" val="#magicLevel" />
-		<set name="useSS" val="false" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="delayedEffect" val="6125" />
-		<set name="isHideUseMessage" val="true" />
-		<set name="castRange" val="1000" />
-		<set name="hitTime" val="3000" />
+		<set name="levelModifier" val="1"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.skill1170"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="useSS" val="false"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="delayedEffect" val="6125"/>
+		<set name="isHideUseMessage" val="true"/>
+		<set name="castRange" val="1000"/>
+		<set name="hitTime" val="3000"/>
 		<for>
 			<effect count="1" name="Debuff" time="5" val="0">
-				<mul order="0x30" stat="pDef" val="#p" />
-				<mul order="0x30" stat="mDef" val="#m" />
+				<mul order="0x30" stat="pDef" val="#p"/>
+				<mul order="0x30" stat="mDef" val="#m"/>
 			</effect>
 		</for>
-	</skill>	
+	</skill>
 </list>
