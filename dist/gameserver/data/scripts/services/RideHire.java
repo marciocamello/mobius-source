@@ -26,14 +26,17 @@ import lineage2.gameserver.utils.SiegeUtils;
  */
 public final class RideHire extends Functions
 {
+	private final boolean ENABLED = false;
+	
 	/**
 	 * Method DialogAppend_30827.
 	 * @param val Integer
 	 * @return String
 	 */
+	@SuppressWarnings("unused")
 	public String DialogAppend_30827(Integer val)
 	{
-		if (val == 0)
+		if ((val == 0) && ENABLED)
 		{
 			return "<br>[scripts_services.RideHire:ride_prices|Ride hire mountable pet.]";
 		}
