@@ -3484,7 +3484,7 @@
 		<npc id="33872"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="43541" y="-47510" z="-792" h="33783" />
-		<npc id="33715" /><!--Seed Talisman Manager-->
+		<point x="43541" y="-47510" z="-792" h="33783"/>
+		<npc id="33715"/>
 	</spawn>
 </list>

@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="36308" name="Beauty Shop Ticket">
-		<!-- Item required to purchase a certain style at the Beauty Workshop. Can be purchased at the Lineage II Shop. -->
+	<etcitem id="36308" name="Beauty Shop Ticket"> <!-- Item required to purchase a certain style at the Beauty Workshop. Can be purchased at the Lineage II Shop. -->
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>

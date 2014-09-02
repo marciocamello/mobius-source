@@ -884,7 +884,6 @@
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<armor id="23179" name="Ninja Top">
-		<!-- Ninja Top. Part of a costume. -->
 		<equip>
 			<slot id="CHEST"/>
 		</equip>
@@ -892,7 +891,6 @@
 		<set name="type" value="NONE"/>
 	</armor>
 	<armor id="23180" name="Ninja Pants">
-		<!-- Ninja Pants. Part of a costume. -->
 		<equip>
 			<slot id="LEGS"/>
 		</equip>
@@ -900,7 +898,6 @@
 		<set name="type" value="NONE"/>
 	</armor>
 	<armor id="23181" name="Ninja Gloves">
-		<!-- Ninja Gloves. Part of a costume. -->
 		<equip>
 			<slot id="GLOVES"/>
 		</equip>
@@ -908,7 +905,6 @@
 		<set name="type" value="NONE"/>
 	</armor>
 	<armor id="23182" name="Ninja Shoes">
-		<!-- Ninja Shoes. Part of a costume. -->
 		<equip>
 			<slot id="FEET"/>
 		</equip>
@@ -916,7 +912,6 @@
 		<set name="type" value="NONE"/>
 	</armor>
 	<armor id="23183" name="Ninja Hair Accessory">
-		<!-- Ninja Hair Accessory. Mask form. Part of a costume. -->
 		<equip>
 			<slot id="HEAD"/>
 		</equip>
@@ -924,7 +919,6 @@
 		<set name="type" value="NONE"/>
 	</armor>
 	<armor id="23184" name="Traditional Taiwanese Top">
-		<!-- Traditional Taiwanese Top. Part of a costume. -->
 		<equip>
 			<slot id="CHEST"/>
 		</equip>
@@ -934,7 +928,6 @@
 		<set name="crystal_count" value="6"/>
 	</armor>
 	<armor id="23185" name="Traditional Taiwanese Pants">
-		<!-- Traditional Taiwanese Pants. Part of a costume. -->
 		<equip>
 			<slot id="LEGS"/>
 		</equip>
@@ -942,7 +935,6 @@
 		<set name="type" value="NONE"/>
 	</armor>
 	<armor id="23186" name="Traditional Taiwanese Gloves">
-		<!-- Traditional Taiwanese Gloves. Part of a costume. -->
 		<equip>
 			<slot id="GLOVES"/>
 		</equip>
@@ -952,7 +944,6 @@
 		<set name="crystal_count" value="0"/>
 	</armor>
 	<armor id="23187" name="Traditional Taiwanese Shoes">
-		<!-- Traditional Taiwanese Shoes. Part of a costume. -->
 		<equip>
 			<slot id="FEET"/>
 		</equip>
@@ -960,7 +951,6 @@
 		<set name="type" value="NONE"/>
 	</armor>
 	<armor id="23188" name="Traditional Taiwanese Hair Accessory">
-		<!-- Traditional Taiwanese Hair Accessory. Hat form. Part of a costume. -->
 		<equip>
 			<slot id="HEAD"/>
 		</equip>
