@@ -204,6 +204,7 @@ import lineage2.gameserver.network.serverpackets.ExBR_ExtraUserInfo;
 import lineage2.gameserver.network.serverpackets.ExBasicActionList;
 import lineage2.gameserver.network.serverpackets.ExDominionWarStart;
 import lineage2.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp;
+import lineage2.gameserver.network.serverpackets.ExNotifyPremiumItem;
 import lineage2.gameserver.network.serverpackets.ExOlympiadMatchEnd;
 import lineage2.gameserver.network.serverpackets.ExOlympiadMode;
 import lineage2.gameserver.network.serverpackets.ExOlympiadSpelledInfo;
@@ -6653,6 +6654,42 @@ public final class Player extends Playable implements PlayerGroup
 		finally
 		{
 			DbUtils.closeQuietly(con, statement, rs);
+		}
+	}
+	
+	/**
+	 * Method addPremiumItem.
+	 * @param itemId int
+	 * @param itemCount long
+	 * @param itemSender String
+	 */
+	public void addPremiumItem(int itemId, long itemCount, String itemSender)
+	{
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			PreparedStatement statement = con.prepareStatement("INSERT INTO character_premium_items (`charId`, `itemNum`, `itemId`, `itemCount`, `itemSender`) VALUES (?, ?, ?, ?, ?)"))
+		{
+			int itemNum;
+			for (itemNum = 1; itemNum <= _premiumItems.size(); ++itemNum)
+			{
+				if (!_premiumItems.containsKey(itemNum))
+				{
+					break;
+				}
+			}
+			
+			statement.setInt(1, getObjectId());
+			statement.setInt(2, itemNum);
+			statement.setInt(3, itemId);
+			statement.setLong(4, itemCount);
+			statement.setString(5, itemSender);
+			statement.execute();
+			
+			_premiumItems.put(itemNum, new PremiumItem(itemId, itemCount, itemSender));
+			sendPacket(ExNotifyPremiumItem.STATIC);
+		}
+		catch (Exception e)
+		{
+			_log.error("Could not add premium item: " + e.getMessage(), e);
 		}
 	}
 	
