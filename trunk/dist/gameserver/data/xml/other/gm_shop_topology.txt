@@ -3,6 +3,7 @@ ID		Item	Grade Type	Item Name
 9913	Shirts	X	Normal	<!-- Updated Awakening Shirts -->
 9909	Cloaks	X	Normal	<!-- Updated Awakening Cloaks -->
 9938	Consume	X	Normal	<!-- Updated Consulables with Shots R Grade -->	
+9916	Consume	X	Beauty	<!-- Update Currency with Beauty Shop Tickets -->
 11007	Weapons	R	Normal <!-- Requem -->
 11008	Weapons	R	Blessed <!-- Requem -->
 11009	Weapons	R	Normal+SA <!-- Requem -->
@@ -71,4 +72,12 @@ ID		Item	Grade Type	Item Name
 11072	EtcItem	X	Talisman	<!-- Awakening Talisman -->
 11073	EtcItem	X	Scrolls	<!-- Superior Giant's Codexes -->
 11074	EtcItem	X	LifeStones	<!-- Awakening Life Stones -->
-++
+11075	Weapons	R99	Bloody	<!-- Bloody Amaranthine Weapons -->
+11076	Weapons	R99	Dark	<!-- Dark Amaranthine Weapons -->
+// HTML Support Needed
+11077	Armors	R99	Bloody	<!-- Bloody Eternal Armors (Normal) -->
+11078	Armors	R99	Bloody	<!-- Bloody Eternal Armors (Improved Attack) -->
+11079	Armors	R99	Bloody	<!-- Bloody Eternal Armors (Improved Defense) -->
+11080	Armors	R99	Dark	<!-- Dark Eternal Armors (Normal) -->
+11081	Armors	R99	Dark	<!-- Dark Eternal Armors (Improved Attack) -->
+11082	Armors	R99	Dark	<!-- Dark Eternal Armors (Improved Defense) -->
