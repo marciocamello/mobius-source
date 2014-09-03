@@ -5,7 +5,6 @@
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
-		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="2352"/>
 		<set name="dropable" value="true"/>
 		<set name="sellable" value="true"/>
@@ -44,7 +43,6 @@
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
-		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="2352"/>
 		<set name="dropable" value="true"/>
 		<set name="sellable" value="true"/>
@@ -83,7 +81,6 @@
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
-		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="2352"/>
 		<set name="dropable" value="true"/>
 		<set name="sellable" value="true"/>
@@ -123,7 +120,6 @@
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
-		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="2352"/>
 		<set name="dropable" value="true"/>
 		<set name="sellable" value="true"/>
@@ -162,7 +158,6 @@
 		<set name="weight" value="1080"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
-		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="2352"/>
 		<set name="dropable" value="true"/>
 		<set name="sellable" value="true"/>
@@ -202,7 +197,6 @@
 		<set name="weight" value="1080"/>
 		<set name="type" value="BIGBLUNT"/>
 		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
-		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="2352"/>
 		<set name="dropable" value="true"/>
 		<set name="sellable" value="true"/>
@@ -242,7 +236,6 @@
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
-		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="2352"/>
 		<set name="dropable" value="true"/>
 		<set name="sellable" value="true"/>
@@ -282,7 +275,6 @@
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
-		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="2352"/>
 		<set name="dropable" value="true"/>
 		<set name="sellable" value="true"/>
@@ -322,7 +314,6 @@
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
-		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="2352"/>
 		<set name="dropable" value="true"/>
 		<set name="sellable" value="true"/>
@@ -361,7 +352,6 @@
 		<set name="weight" value="1520"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
-		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="2352"/>
 		<set name="dropable" value="true"/>
 		<set name="sellable" value="true"/>
@@ -400,7 +390,6 @@
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
-		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="2352"/>
 		<set name="dropable" value="true"/>
 		<set name="sellable" value="true"/>
@@ -439,7 +428,6 @@
 		<set name="weight" value="1580"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="ex_type" value="CROSSBOW"/>
-		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="2352"/>
 		<set name="dropable" value="true"/>
 		<set name="sellable" value="true"/>
@@ -479,11 +467,9 @@
 		<set name="weight" value="2050"/>
 		<set name="type" value="DUALDAGGER"/>
 		<set name="ex_type" value="DUAL_DAGGER"/>
-		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="2352"/>
 		<set name="dropable" value="true"/>
-		<set name="sellable" value="true"/>
-		<set name="tradeable" value="true"/>
+		<set name="sellable" value="true"/>		<set name="tradeable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="crystal_count" value="2352"/>
 		<set name="spiritshots" value="1"/>
