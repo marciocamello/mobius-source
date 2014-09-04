@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "multisell.dtd">
+<list>
+	<item>
+		<ingredient count="2" id="17624" />		<!-- Token of Insolence Tower -->
+		<production count="1" id="17358" />		<!-- Belt Of Insolence -->
+	</item>
+	<item>
+		<ingredient count="2" id="17624" />		<!-- Token of Insolence Tower -->
+		<production count="1" id="17359" />		<!-- T-Shirt of Insolence -->
+	</item>
+	<item>
+		<ingredient count="2" id="17624" />		<!-- Token of Insolence Tower -->
+		<production count="1" id="17360" />		<!-- Bracelet Of Insolence -->
+	</item>
+	<item>
+		<ingredient count="2" id="17624" />		<!-- Token of Insolence Tower -->
+		<production count="1" id="17361" />		<!-- Necklace Of Insolence -->
+	</item>
+	<item>
+		<ingredient count="2" id="17624" />		<!-- Token of Insolence Tower -->
+		<production count="1" id="17362" />		<!-- Ring Of Insolence I -->
+	</item>
+	<item>
+		<ingredient count="2" id="17624" />		<!-- Token of Insolence Tower -->
+		<ingredient count="1" id="17362" />		<!-- Ring Of Insolence I -->
+		<production count="1" id="17363" />		<!-- Ring Of Insolence II -->
+	</item>
+	<item>
+		<ingredient count="2" id="17624" />		<!-- Token of Insolence Tower -->
+		<ingredient count="1" id="17363" />		<!-- Ring Of Insolence II -->
+		<production count="1" id="17364" />		<!-- Ring Of Insolence III -->
+	</item>
+	<item>
+		<ingredient count="2" id="17624" />		<!-- Token of Insolence Tower -->
+		<ingredient count="1" id="17364" />		<!-- Ring Of Insolence III -->
+		<production count="1" id="17365" />		<!-- Ring Of Insolence IV -->
+	</item>
+	<item>
+		<ingredient count="2" id="17624" />		<!-- Token of Insolence Tower -->
+		<ingredient count="1" id="17365" />		<!-- Ring Of Insolence IV -->
+		<production count="1" id="17366" />		<!-- Ring Of Insolence V -->
+	</item>
+	<item>
+		<ingredient count="2" id="17624" />		<!-- Token of Insolence Tower -->
+		<ingredient count="1" id="17366" />		<!-- Ring Of Insolence V -->
+		<production count="1" id="17367" />		<!-- Ring Of Insolence VI -->
+	</item>
+	<item>
+		<ingredient count="2" id="17624" />		<!-- Token of Insolence Tower -->
+		<ingredient count="1" id="17367" />		<!-- Ring Of Insolence VI -->
+		<production count="1" id="17368" />		<!-- Ring Of Insolence VII -->
+	</item>
+	<item>
+		<ingredient count="2" id="17624" />		<!-- Token of Insolence Tower -->
+		<ingredient count="1" id="17368" />		<!-- Ring Of Insolence VII -->
+		<production count="1" id="17369" />		<!-- Ring Of Insolence VIII -->
+	</item>
+	<item>
+		<ingredient count="2" id="17624" />		<!-- Token of Insolence Tower -->
+		<ingredient count="1" id="17369" />		<!-- Ring Of Insolence VIII -->
+		<production count="1" id="17370" />		<!-- Ring Of Insolence IX -->
+	</item>
+</list>
