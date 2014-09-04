@@ -46,6 +46,11 @@ public class RequestFlyMoveStart extends L2GameClientPacket
 			return;
 		}
 		
+		if (activeChar.isMounted() || (activeChar.getTransformation() > 0))
+		{
+			return;
+		}
+		
 		Zone zone = activeChar.getZone(ZoneType.JUMPING);
 		
 		if (zone == null)

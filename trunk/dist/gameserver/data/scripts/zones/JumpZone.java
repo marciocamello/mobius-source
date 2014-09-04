@@ -86,6 +86,11 @@ public final class JumpZone implements ScriptFile
 			{
 				for (Player player : zone.getInsidePlayers())
 				{
+					if (player.isMounted() || (player.getTransformation() > 0))
+					{
+						continue;
+					}
+					
 					if (player.isAwaking() || Config.FREE_JUMPS_FOR_ALL)
 					{
 						player.sendPacket(ExNotifyFlyMoveStart.STATIC);
