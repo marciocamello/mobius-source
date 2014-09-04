@@ -73,4 +73,8 @@
 		</territory>
 		<npc id="20310"/>
 	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-84817" y="151093" z="-3120" h="64246" />
+		<npc id="33685" />
+	</spawn>
 </list>
