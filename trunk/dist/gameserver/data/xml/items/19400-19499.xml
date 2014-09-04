@@ -792,6 +792,9 @@
 			<slot id="UNDERWEAR"/>
 		</equip>
 		<set name="ex_type" value="UNDERWEAR"/>
+		<skills>
+			<skill id="13541" level="1"/>
+		</skills>
 		<for>
 			<add stat="pDef" order="0x10" value="60"/>
 			<add stat="maxMp" order="0x40" value="247"/>

@@ -1383,6 +1383,9 @@
 		<equip>
 			<slot id="BACK"/>
 		</equip>
+		<skills>
+			<skill id="19037" level="1"/>
+		</skills>
 		<for>
 			<add stat="pDef" order="0x10" value="50"/>
 			<add stat="mDef" order="0x10" value="40"/>
@@ -1401,6 +1404,9 @@
 		<equip>
 			<slot id="BACK"/>
 		</equip>
+		<skills>
+			<skill id="19037" level="1"/>
+		</skills>
 		<for>
 			<add stat="pDef" order="0x10" value="50"/>
 			<add stat="mDef" order="0x10" value="40"/>
