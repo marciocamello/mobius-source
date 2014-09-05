@@ -38,6 +38,7 @@ import lineage2.gameserver.data.xml.holder.MultiSellHolder;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
 import lineage2.gameserver.geodata.GeoEngine;
+import lineage2.gameserver.handlers.BypassHandler;
 import lineage2.gameserver.idfactory.IdFactory;
 import lineage2.gameserver.instancemanager.DelusionChamberManager;
 import lineage2.gameserver.instancemanager.QuestManager;
@@ -60,7 +61,6 @@ import lineage2.gameserver.model.actor.listener.NpcListenerList;
 import lineage2.gameserver.model.actor.recorder.NpcStatsChangeRecorder;
 import lineage2.gameserver.model.base.AcquireType;
 import lineage2.gameserver.model.base.ClassId;
-import lineage2.gameserver.model.base.InvisibleType;
 import lineage2.gameserver.model.entity.DelusionChamber;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
@@ -79,10 +79,7 @@ import lineage2.gameserver.network.serverpackets.AcquireSkillDone;
 import lineage2.gameserver.network.serverpackets.AcquireSkillList;
 import lineage2.gameserver.network.serverpackets.AutoAttackStart;
 import lineage2.gameserver.network.serverpackets.ExChangeNpcState;
-import lineage2.gameserver.network.serverpackets.ExResponseBeautyListPacket;
-import lineage2.gameserver.network.serverpackets.ExResponseResetList;
 import lineage2.gameserver.network.serverpackets.ExShowBaseAttributeCancelWindow;
-import lineage2.gameserver.network.serverpackets.ExShowBeautyMenuPacket;
 import lineage2.gameserver.network.serverpackets.ExShowCommission;
 import lineage2.gameserver.network.serverpackets.ExShowUsmVideo;
 import lineage2.gameserver.network.serverpackets.ExShowVariationCancelWindow;
@@ -99,7 +96,6 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.network.serverpackets.components.SceneMovie;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
-import lineage2.gameserver.skills.AbnormalEffect;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.tables.SkillTable;
@@ -1285,6 +1281,12 @@ public class NpcInstance extends Creature
 			return;
 		}
 		
+		if (BypassHandler.getInstance().getBypasses(command) != null)
+		{
+			BypassHandler.getInstance().getBypasses(command).onBypassFeedback(this, player, command);
+			return;
+		}
+		
 		if ((getTemplate().getTeleportList().size() > 0) && checkForDominionWard(player))
 		{
 			return;
@@ -1592,26 +1594,6 @@ public class NpcInstance extends Creature
 			else if (command.startsWith("show_usm_video_b"))
 			{
 				player.sendPacket(new ExShowUsmVideo(11));
-			}
-			else if (command.startsWith("Beautyshop"))
-			{
-				if (player.isInvisible())
-				{
-					player.setInvisibleType(InvisibleType.NONE);
-					player.stopAbnormalEffect(AbnormalEffect.STEALTH);
-				}
-				player.sendPacket(new ExShowBeautyMenuPacket(0));
-				player.sendPacket(new ExResponseBeautyListPacket(player, 1));
-			}
-			else if (command.startsWith("ResetBeautyshop"))
-			{
-				if (player.isInvisible())
-				{
-					player.setInvisibleType(InvisibleType.NONE);
-					player.stopAbnormalEffect(AbnormalEffect.STEALTH);
-				}
-				player.sendPacket(new ExShowBeautyMenuPacket(1));
-				player.sendPacket(new ExResponseResetList(player));
 			}
 		}
 		catch (StringIndexOutOfBoundsException sioobe)
