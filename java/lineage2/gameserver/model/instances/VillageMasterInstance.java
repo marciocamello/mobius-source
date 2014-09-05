@@ -16,6 +16,7 @@ import java.util.Collection;
 
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
+import lineage2.gameserver.handlers.BypassHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.impl.CastleSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
@@ -133,7 +134,7 @@ public final class VillageMasterInstance extends NpcInstance
 		}
 		else if (command.startsWith("learn_clan_skills"))
 		{
-			showClanSkillList(player);
+			BypassHandler.getInstance().getBypass("ClanSkillList").onBypassFeedback(this, player, command);
 		}
 		else if (command.startsWith("ShowCouponExchange"))
 		{

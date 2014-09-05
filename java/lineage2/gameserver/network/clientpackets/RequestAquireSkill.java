@@ -15,6 +15,7 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
+import lineage2.gameserver.handlers.BypassHandler;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
@@ -124,7 +125,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 				
 				if (trainer != null)
 				{
-					NpcInstance.showCollectionSkillList(player);
+					BypassHandler.getInstance().getBypass("CollectionSkillList").onBypassFeedback(trainer, player, "CollectionSkillList");
 				}
 				
 				break;
@@ -136,7 +137,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 				
 				if (trainer != null)
 				{
-					trainer.showTransferSkillList(player);
+					BypassHandler.getInstance().getBypass("TransferSkillList").onBypassFeedback(trainer, player, "TransferSkillList");
 				}
 				
 				break;
@@ -328,7 +329,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 		clan.incReputation(-skillLearn.getCost(), false, "AquireSkill: " + skillLearn.getId() + ", lvl " + skillLearn.getLevel());
 		clan.addSkill(skill, true);
 		clan.broadcastToOnlineMembers(new SystemMessage2(SystemMsg.THE_CLAN_SKILL_S1_HAS_BEEN_ADDED).addSkillName(skill));
-		NpcInstance.showClanSkillList(player);
+		BypassHandler.getInstance().getBypass("ClanSkillList").onBypassFeedback(trainer, player, "ClanSkillList");
 	}
 	
 	/**
@@ -395,7 +396,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 		
 		if (trainer != null)
 		{
-			NpcInstance.showSubUnitSkillList(player);
+			BypassHandler.getInstance().getBypass("SubUnitSkillList").onBypassFeedback(trainer, player, "SubUnitSkillList");
 		}
 	}
 	

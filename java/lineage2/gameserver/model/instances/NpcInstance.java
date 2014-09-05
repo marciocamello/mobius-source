@@ -19,8 +19,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
 
@@ -34,13 +32,11 @@ import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
-import lineage2.gameserver.data.xml.holder.MultiSellHolder;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
 import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.handlers.BypassHandler;
 import lineage2.gameserver.idfactory.IdFactory;
-import lineage2.gameserver.instancemanager.DelusionChamberManager;
 import lineage2.gameserver.instancemanager.QuestManager;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.listener.NpcListener;
@@ -61,8 +57,6 @@ import lineage2.gameserver.model.actor.listener.NpcListenerList;
 import lineage2.gameserver.model.actor.recorder.NpcStatsChangeRecorder;
 import lineage2.gameserver.model.base.AcquireType;
 import lineage2.gameserver.model.base.ClassId;
-import lineage2.gameserver.model.entity.DelusionChamber;
-import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.model.entity.events.objects.TerritoryWardObject;
 import lineage2.gameserver.model.entity.residence.Castle;
@@ -71,7 +65,6 @@ import lineage2.gameserver.model.entity.residence.Dominion;
 import lineage2.gameserver.model.entity.residence.Fortress;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.pledge.Clan;
-import lineage2.gameserver.model.pledge.SubUnit;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestEventType;
 import lineage2.gameserver.model.quest.QuestState;
@@ -79,25 +72,15 @@ import lineage2.gameserver.network.serverpackets.AcquireSkillDone;
 import lineage2.gameserver.network.serverpackets.AcquireSkillList;
 import lineage2.gameserver.network.serverpackets.AutoAttackStart;
 import lineage2.gameserver.network.serverpackets.ExChangeNpcState;
-import lineage2.gameserver.network.serverpackets.ExShowBaseAttributeCancelWindow;
-import lineage2.gameserver.network.serverpackets.ExShowCommission;
-import lineage2.gameserver.network.serverpackets.ExShowUsmVideo;
-import lineage2.gameserver.network.serverpackets.ExShowVariationCancelWindow;
-import lineage2.gameserver.network.serverpackets.ExShowVariationMakeWindow;
-import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.NpcInfo;
-import lineage2.gameserver.network.serverpackets.RadarControl;
 import lineage2.gameserver.network.serverpackets.SocialAction;
-import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
-import lineage2.gameserver.network.serverpackets.components.SceneMovie;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.stats.Stats;
-import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.taskmanager.DecayTaskManager;
 import lineage2.gameserver.taskmanager.LazyPrecisionTaskManager;
@@ -107,11 +90,9 @@ import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.templates.npc.Faction;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.templates.spawn.SpawnRange;
-import lineage2.gameserver.utils.CertificationFunctions;
 import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
-import lineage2.gameserver.utils.ReflectionUtils;
 import lineage2.gameserver.utils.Strings;
 
 import org.slf4j.Logger;
@@ -1281,329 +1262,14 @@ public class NpcInstance extends Creature
 			return;
 		}
 		
-		if (BypassHandler.getInstance().getBypass(command) != null)
+		final String[] buypass = command.split(" ");
+		if (BypassHandler.getInstance().getBypass(buypass[0]) != null)
 		{
-			BypassHandler.getInstance().getBypass(command).onBypassFeedback(this, player, command);
+			BypassHandler.getInstance().getBypass(buypass[0]).onBypassFeedback(this, player, command);
 			return;
 		}
 		
-		if ((getTemplate().getTeleportList().size() > 0) && checkForDominionWard(player))
-		{
-			return;
-		}
-		
-		try
-		{
-			if (command.equalsIgnoreCase("TerritoryStatus"))
-			{
-				NpcHtmlMessage html = new NpcHtmlMessage(player, this);
-				html.setFile("merchant/territorystatus.htm");
-				html.replace("%npcname%", getName());
-				Castle castle = getCastle(player);
-				
-				if ((castle != null) && (castle.getId() > 0))
-				{
-					html.replace("%castlename%", HtmlUtils.htmlResidenceName(castle.getId()));
-					html.replace("%taxpercent%", String.valueOf(castle.getTaxPercent()));
-					
-					if (castle.getOwnerId() > 0)
-					{
-						Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
-						
-						if (clan != null)
-						{
-							html.replace("%clanname%", clan.getName());
-							html.replace("%clanleadername%", clan.getLeaderName());
-						}
-						else
-						{
-							html.replace("%clanname%", "unexistant clan");
-							html.replace("%clanleadername%", "None");
-						}
-					}
-					else
-					{
-						html.replace("%clanname%", "NPC");
-						html.replace("%clanleadername%", "None");
-					}
-				}
-				else
-				{
-					html.replace("%castlename%", "Open");
-					html.replace("%taxpercent%", "0");
-					html.replace("%clanname%", "No");
-					html.replace("%clanleadername%", getName());
-				}
-				
-				player.sendPacket(html);
-			}
-			else if (command.startsWith("Quest"))
-			{
-				String quest = command.substring(5).trim();
-				
-				if (quest.length() == 0)
-				{
-					showQuestWindow(player);
-				}
-				else
-				{
-					showQuestWindow(player, quest);
-				}
-			}
-			else if (command.startsWith("Chat"))
-			{
-				try
-				{
-					int val = Integer.parseInt(command.substring(5));
-					showChatWindow(player, val);
-				}
-				catch (NumberFormatException nfe)
-				{
-					String filename = command.substring(5).trim();
-					
-					if (filename.length() == 0)
-					{
-						showChatWindow(player, "npcdefault.htm");
-					}
-					else
-					{
-						showChatWindow(player, filename);
-					}
-				}
-			}
-			else if (command.startsWith("AttributeCancel"))
-			{
-				player.sendPacket(new ExShowBaseAttributeCancelWindow(player));
-			}
-			else if (command.startsWith("NpcLocationInfo"))
-			{
-				int val = Integer.parseInt(command.substring(16));
-				NpcInstance npc = GameObjectsStorage.getByNpcId(val);
-				
-				if (npc != null)
-				{
-					player.sendPacket(new RadarControl(2, 2, npc.getLoc()));
-					player.sendPacket(new RadarControl(0, 1, npc.getLoc()));
-				}
-			}
-			else if (command.startsWith("Multisell") || command.startsWith("multisell"))
-			{
-				String listId = command.substring(9).trim();
-				Castle castle = getCastle(player);
-				MultiSellHolder.getInstance().SeparateAndSend(Integer.parseInt(listId), player, castle != null ? castle.getTaxRate() : 0);
-			}
-			else if (command.startsWith("ChangeDCRoom"))
-			{
-				if (player.isInParty() && player.getParty().isInReflection() && (player.getParty().getReflection() instanceof DelusionChamber))
-				{
-					((DelusionChamber) player.getParty().getReflection()).manualTeleport(player, this);
-				}
-				else
-				{
-					DelusionChamberManager.getInstance().teleportToWaitingRoom(player);
-				}
-			}
-			else if (command.startsWith("ExitDCWaitingRoom"))
-			{
-				if (player.isInParty() && player.getParty().isInReflection() && (player.getParty().getReflection() instanceof DelusionChamber))
-				{
-					((DelusionChamber) player.getParty().getReflection()).manualExitChamber(player, this);
-				}
-			}
-			else if (command.equalsIgnoreCase("SkillList"))
-			{
-			}
-			else if (command.equalsIgnoreCase("ClanSkillList"))
-			{
-				showClanSkillList(player);
-			}
-			else if (command.startsWith("SubUnitSkillList"))
-			{
-				showSubUnitSkillList(player);
-			}
-			else if (command.equalsIgnoreCase("TransformationSkillList"))
-			{
-				showTransformationSkillList(player, AcquireType.TRANSFORMATION);
-			}
-			else if (command.equalsIgnoreCase("CollectionSkillList"))
-			{
-				showCollectionSkillList(player);
-			}
-			else if (command.equalsIgnoreCase("BuyTransformation"))
-			{
-				showTransformationMultisell(player);
-			}
-			else if (command.startsWith("Augment"))
-			{
-				int cmdChoice = Integer.parseInt(command.substring(8, 9).trim());
-				
-				if (cmdChoice == 1)
-				{
-					player.sendPacket(new SystemMessage(SystemMessage.SELECT_THE_ITEM_TO_BE_AUGMENTED), ExShowVariationMakeWindow.STATIC);
-				}
-				else if (cmdChoice == 2)
-				{
-					player.sendPacket(new SystemMessage(SystemMessage.SELECT_THE_ITEM_FROM_WHICH_YOU_WISH_TO_REMOVE_AUGMENTATION), ExShowVariationCancelWindow.STATIC);
-				}
-			}
-			else if (command.startsWith("Link"))
-			{
-				showChatWindow(player, command.substring(5));
-			}
-			else if (command.startsWith("Teleport"))
-			{
-				int cmdChoice = Integer.parseInt(command.substring(9, 10).trim());
-				TeleportLocation[] list = getTemplate().getTeleportList(cmdChoice);
-				
-				if (list != null)
-				{
-					showTeleportList(player, list);
-				}
-				else
-				{
-					player.sendMessage("Link is faulty, contact an administrator.");
-				}
-			}
-			else if (command.startsWith("Tele20Lvl"))
-			{
-				int cmdChoice = Integer.parseInt(command.substring(10, 11).trim());
-				TeleportLocation[] list = getTemplate().getTeleportList(cmdChoice);
-				
-				if (player.getLevel() > 20)
-				{
-					showChatWindow(player, "teleporter/" + getNpcId() + "-no.htm");
-				}
-				else if (list != null)
-				{
-					showTeleportList(player, list);
-				}
-				else
-				{
-					player.sendMessage("Link is faulty, contact an administrator.");
-				}
-			}
-			else if (command.startsWith("open_gate"))
-			{
-				int val = Integer.parseInt(command.substring(10));
-				ReflectionUtils.getDoor(val).openMe();
-				player.sendActionFailed();
-			}
-			else if (command.equalsIgnoreCase("TransferSkillList"))
-			{
-				showTransferSkillList(player);
-			}
-			else if (command.equalsIgnoreCase("CertificationCancel"))
-			{
-				CertificationFunctions.cancelCertification(this, player, false, false);
-			}
-			else if (command.equalsIgnoreCase("reduceShilenBreath"))
-			{
-				if (player.getDeathPenalty().getLevel(player) >= 3)
-				{
-					Skill skill = SkillTable.getInstance().getInfo(5077, 1);
-					doCast(skill, player, true);
-				}
-				else
-				{
-					showChatWindow(player, "default/shilen_breath.htm", new Object[0]);
-				}
-			}
-			else if (command.startsWith("RemoveTransferSkill"))
-			{
-				AcquireType type = AcquireType.transferType(player.getActiveClassId());
-				
-				if (type == null)
-				{
-					return;
-				}
-				
-				Collection<SkillLearn> skills = SkillAcquireHolder.getInstance().getAvailableSkills(null, type);
-				
-				if (skills.isEmpty())
-				{
-					player.sendActionFailed();
-					return;
-				}
-				
-				boolean reset = false;
-				
-				for (SkillLearn skill : skills)
-				{
-					if (player.getKnownSkill(skill.getId()) != null)
-					{
-						reset = true;
-						break;
-					}
-				}
-				
-				if (!reset)
-				{
-					player.sendActionFailed();
-					return;
-				}
-				
-				if (!player.reduceAdena(10000000L, true))
-				{
-					showChatWindow(player, "common/skill_share_healer_no_adena.htm");
-					return;
-				}
-				
-				for (SkillLearn skill : skills)
-				{
-					if (player.removeSkill(skill.getId(), true) != null)
-					{
-						for (int itemId : skill.getRequiredItems().keySet())
-						{
-							ItemFunctions.addItem(player, itemId, skill.getRequiredItems().get(itemId), true);
-						}
-					}
-				}
-			}
-			else if (command.startsWith("ExitFromQuestInstance"))
-			{
-				Reflection r = player.getReflection();
-				r.startCollapseTimer(60000);
-				player.teleToLocation(r.getReturnLoc(), 0);
-				
-				if (command.length() > 22)
-				{
-					try
-					{
-						int val = Integer.parseInt(command.substring(22));
-						showChatWindow(player, val);
-					}
-					catch (NumberFormatException nfe)
-					{
-						String filename = command.substring(22).trim();
-						
-						if (filename.length() > 0)
-						{
-							showChatWindow(player, filename);
-						}
-					}
-				}
-			}
-			else if (command.startsWith("commission"))
-			{
-				player.sendPacket(new ExShowCommission());
-			}
-			else if (command.startsWith("show_scene_magmeld"))
-			{
-				player.sendPacket(new ExStartScenePlayer(SceneMovie.si_arkan_enter));
-			}
-			else if (command.startsWith("show_usm_video_b"))
-			{
-				player.sendPacket(new ExShowUsmVideo(11));
-			}
-		}
-		catch (StringIndexOutOfBoundsException sioobe)
-		{
-			_log.info("Incorrect htm bypass! npcId=" + getTemplate().npcId + " command=[" + command + "]");
-		}
-		catch (NumberFormatException nfe)
-		{
-			_log.info("Invalid bypass to Server command parameter! npcId=" + getTemplate().npcId + " command=[" + command + "]");
-		}
+		_log.info("Incorrect htm bypass! npcId=" + getTemplate().npcId + " command=[" + command + "]");
 	}
 	
 	/**
@@ -2104,70 +1770,6 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Method showTransferSkillList.
-	 * @param player Player
-	 */
-	public void showTransferSkillList(Player player)
-	{
-		ClassId classId = player.getClassId();
-		
-		if (classId == null)
-		{
-			return;
-		}
-		
-		if ((player.getLevel() < 76) || (classId.getClassLevel().ordinal() < 4))
-		{
-			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
-			StringBuilder sb = new StringBuilder();
-			sb.append("<html><head><body>");
-			sb.append("You must have 3rd class change quest completed.");
-			sb.append("</body></html>");
-			html.setHtml(sb.toString());
-			player.sendPacket(html);
-			return;
-		}
-		
-		AcquireType type = AcquireType.transferType(player.getActiveClassId());
-		
-		if (type == null)
-		{
-			return;
-		}
-		
-		showAcquireList(type, player);
-	}
-	
-	/**
-	 * Method showCollectionSkillList.
-	 * @param player Player
-	 */
-	public static void showCollectionSkillList(Player player)
-	{
-		showAcquireList(AcquireType.COLLECTION, player);
-	}
-	
-	/**
-	 * Method showTransformationMultisell.
-	 * @param player Player
-	 */
-	public void showTransformationMultisell(Player player)
-	{
-		if (!Config.ALLOW_LEARN_TRANS_SKILLS_WO_QUEST)
-		{
-			if (!player.isQuestCompleted("Q00136_MoreThanMeetsTheEye"))
-			{
-				showChatWindow(player, "trainer/" + getNpcId() + "-nobuy.htm");
-				return;
-			}
-		}
-		
-		Castle castle = getCastle(player);
-		MultiSellHolder.getInstance().SeparateAndSend(32323, player, castle != null ? castle.getTaxRate() : 0);
-		player.sendActionFailed();
-	}
-	
-	/**
 	 * Method showTransformationSkillList.
 	 * @param player Player
 	 * @param type AcquireType
@@ -2196,22 +1798,6 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Method showClanSkillList.
-	 * @param player Player
-	 */
-	public static void showClanSkillList(Player player)
-	{
-		if ((player.getClan() == null) || !player.isClanLeader())
-		{
-			player.sendPacket(SystemMsg.ONLY_THE_CLAN_LEADER_IS_ENABLED);
-			player.sendActionFailed();
-			return;
-		}
-		
-		showAcquireList(AcquireType.CLAN, player);
-	}
-	
-	/**
 	 * Method showAcquireList.
 	 * @param t AcquireType
 	 * @param player Player
@@ -2227,52 +1813,6 @@ public class NpcInstance extends Creature
 		}
 		
 		if (skills.size() == 0)
-		{
-			player.sendPacket(AcquireSkillDone.STATIC);
-			player.sendPacket(SystemMsg.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
-		}
-		else
-		{
-			player.sendPacket(asl);
-		}
-		
-		player.sendActionFailed();
-	}
-	
-	/**
-	 * Method showSubUnitSkillList.
-	 * @param player Player
-	 */
-	public static void showSubUnitSkillList(Player player)
-	{
-		Clan clan = player.getClan();
-		
-		if (clan == null)
-		{
-			return;
-		}
-		
-		if ((player.getClanPrivileges() & Clan.CP_CL_TROOPS_FAME) != Clan.CP_CL_TROOPS_FAME)
-		{
-			player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
-			return;
-		}
-		
-		Set<SkillLearn> learns = new TreeSet<>();
-		
-		for (SubUnit sub : player.getClan().getAllSubUnits())
-		{
-			learns.addAll(SkillAcquireHolder.getInstance().getAvailableSkills(player, AcquireType.SUB_UNIT, sub));
-		}
-		
-		final AcquireSkillList asl = new AcquireSkillList(AcquireType.SUB_UNIT, learns.size());
-		
-		for (SkillLearn s : learns)
-		{
-			asl.addSkill(s.getId(), s.getLevel(), s.getLevel(), s.getCost(), 1, Clan.SUBUNIT_KNIGHT4);
-		}
-		
-		if (learns.size() == 0)
 		{
 			player.sendPacket(AcquireSkillDone.STATIC);
 			player.sendPacket(SystemMsg.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
