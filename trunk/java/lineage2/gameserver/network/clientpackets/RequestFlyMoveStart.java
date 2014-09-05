@@ -46,7 +46,7 @@ public class RequestFlyMoveStart extends L2GameClientPacket
 			return;
 		}
 		
-		if (activeChar.isMounted() || (activeChar.getTransformation() > 0))
+		if (activeChar.isMounted() || (activeChar.getTransformation() > 0) || activeChar.isCastingNow() || (activeChar.getVar("@safe_jump_loc") != null))
 		{
 			return;
 		}
@@ -64,6 +64,8 @@ public class RequestFlyMoveStart extends L2GameClientPacket
 		{
 			return;
 		}
+		
+		activeChar.block();
 		
 		Location destLoc = track.getStartLocation();
 		activeChar.sendPacket(new FlyToLocation(activeChar, destLoc, FlyToLocation.FlyType.DUMMY, 0));

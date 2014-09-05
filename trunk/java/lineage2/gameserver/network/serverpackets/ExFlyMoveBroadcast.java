@@ -22,14 +22,14 @@ import lineage2.gameserver.utils.Location;
 public class ExFlyMoveBroadcast extends L2GameServerPacket
 {
 	private final int _objId;
-	private final int flyType;
+	private final int _flyType;
 	private final Location _loc;
 	private final Location _destLoc;
 	
 	public ExFlyMoveBroadcast(Player player, int flyType, Location destLoc)
 	{
 		_objId = player.getObjectId();
-		this.flyType = flyType;
+		_flyType = flyType;
 		_loc = player.getLoc();
 		_destLoc = destLoc;
 	}
@@ -39,12 +39,12 @@ public class ExFlyMoveBroadcast extends L2GameServerPacket
 	{
 		writeEx(0x10D);
 		writeD(_objId);
-		writeD(flyType);
-		writeD(0x00); // TODO: [K1mel]
+		writeD(_flyType);
+		writeD(0x00);
 		writeD(_loc.getX());
 		writeD(_loc.getY());
 		writeD(_loc.getZ());
-		writeD(0x00); // TODO: [K1mel]
+		writeD(0x00);
 		writeD(_destLoc.getX());
 		writeD(_destLoc.getY());
 		writeD(_destLoc.getZ());

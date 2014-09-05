@@ -32,6 +32,40 @@ public final class JumpZone implements ScriptFile
 	private static ScheduledFuture<?> zoneTask;
 	static List<Zone> jumpZones;
 	
+	private class ZoneTask implements Runnable
+	{
+		/**
+		 * Constructor for ZoneTask.
+		 */
+		public ZoneTask()
+		{
+		}
+		
+		/**
+		 * Method run.
+		 * @see java.lang.Runnable#run()
+		 */
+		@Override
+		public void run()
+		{
+			for (Zone zone : jumpZones)
+			{
+				for (Player player : zone.getInsidePlayers())
+				{
+					if (player.isMounted() || (player.getTransformation() > 0) || player.isCastingNow() || (player.getVar("@safe_jump_loc") != null))
+					{
+						continue;
+					}
+					
+					if ((player.isAwaking() || Config.FREE_JUMPS_FOR_ALL))
+					{
+						player.sendPacket(new ExNotifyFlyMoveStart());
+					}
+				}
+			}
+		}
+	}
+	
 	/**
 	 * Method onLoad.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
@@ -61,42 +95,5 @@ public final class JumpZone implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	/**
-	 * @author Mobius
-	 */
-	private class ZoneTask implements Runnable
-	{
-		/**
-		 * Constructor for ZoneTask.
-		 */
-		public ZoneTask()
-		{
-		}
-		
-		/**
-		 * Method run.
-		 * @see java.lang.Runnable#run()
-		 */
-		@Override
-		public void run()
-		{
-			for (Zone zone : jumpZones)
-			{
-				for (Player player : zone.getInsidePlayers())
-				{
-					if (player.isMounted() || (player.getTransformation() > 0))
-					{
-						continue;
-					}
-					
-					if (player.isAwaking() || Config.FREE_JUMPS_FOR_ALL)
-					{
-						player.sendPacket(ExNotifyFlyMoveStart.STATIC);
-					}
-				}
-			}
-		}
 	}
 }
