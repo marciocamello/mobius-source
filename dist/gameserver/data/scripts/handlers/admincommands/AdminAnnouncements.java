@@ -73,7 +73,10 @@ public class AdminAnnouncements implements IAdminCommandHandler, ScriptFile
 				break;
 			
 			case admin_announce_menu:
-				Announcements.getInstance().announceToAll(fullString.substring(20));
+				if ((fullString.length() > 20) && (fullString.length() <= 3020))
+				{
+					Announcements.getInstance().announceToAll(fullString.substring(20));
+				}
 				listAnnouncements(activeChar);
 				break;
 			
@@ -180,18 +183,18 @@ public class AdminAnnouncements implements IAdminCommandHandler, ScriptFile
 		StringBuilder replyMSG = new StringBuilder("<html><body>");
 		replyMSG.append("<table width=260><tr>");
 		replyMSG.append("<td width=40><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-		replyMSG.append("<td width=180><center>Announcement Menu</center></td>");
+		replyMSG.append("<td width=180><center>Announcements Menu</center></td>");
 		replyMSG.append("<td width=40><button value=\"Back\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
 		replyMSG.append("</tr></table>");
 		replyMSG.append("<br><br>");
-		replyMSG.append("<center>Add or announce a new announcement:</center>");
-		replyMSG.append("<center><multiedit var=\"new_announcement\" width=240 height=30></center><br>");
-		replyMSG.append("<center>Time(in seconds, 0 - only for start)<edit var=\"time\" width=45 height=21></center><br>");
+		replyMSG.append("<center>New announcement (1-3000 characters)</center>");
+		replyMSG.append("<center><multiedit var=\"new_announcement\" width=260 height=80></center><br>");
+		replyMSG.append("<center>Time (in seconds, 0 for permanent)<edit var=\"time\" width=45 height=18></center><br>");
 		replyMSG.append("<center><table><tr><td>");
-		replyMSG.append("<button value=\"Add\" action=\"bypass -h admin_add_announcement $time $new_announcement\" width=60 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
-		replyMSG.append("<button value=\"Announce\" action=\"bypass -h admin_announce_menu $new_announcement\" width=64 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
-		replyMSG.append("<button value=\"Reload\" action=\"bypass -h admin_reload_announcements\" width=60 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
-		replyMSG.append("<button value=\"Broadcast\" action=\"bypass -h admin_announce_announcements\" width=70 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\">");
+		replyMSG.append("<button value=\"Add\" action=\"bypass -h admin_add_announcement $time $new_announcement\" width=60 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
+		replyMSG.append("<button value=\"Announce\" action=\"bypass -h admin_announce_menu $new_announcement\" width=64 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
+		replyMSG.append("<button value=\"Reload\" action=\"bypass -h admin_reload_announcements\" width=60 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td><td>");
+		replyMSG.append("<button value=\"Broadcast\" action=\"bypass -h admin_announce_announcements\" width=70 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\">");
 		replyMSG.append("</td></tr></table></center>");
 		replyMSG.append("<br>");
 		
@@ -199,7 +202,7 @@ public class AdminAnnouncements implements IAdminCommandHandler, ScriptFile
 		{
 			Announcements.Announce announce = announcements.get(i);
 			replyMSG.append("<table width=260><tr><td width=180>" + announce.getAnnounce() + "</td><td width=40>" + announce.getTime() + "</td><<td width=40>");
-			replyMSG.append("<button value=\"Delete\" action=\"bypass -h admin_del_announcement " + i + "\" width=60 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr></table>");
+			replyMSG.append("<button value=\"Delete\" action=\"bypass -h admin_del_announcement " + i + "\" width=60 height=21 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr></table>");
 		}
 		
 		replyMSG.append("</body></html>");
