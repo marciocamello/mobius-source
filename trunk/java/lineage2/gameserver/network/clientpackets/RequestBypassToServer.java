@@ -18,9 +18,9 @@ import java.util.StringTokenizer;
 
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.MultiSellHolder;
-import lineage2.gameserver.handler.admincommands.AdminCommandHandler;
-import lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler;
-import lineage2.gameserver.handler.voicecommands.VoicedCommandHandler;
+import lineage2.gameserver.handlers.AdminCommandHandler;
+import lineage2.gameserver.handlers.IVoicedCommandHandler;
+import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.instancemanager.BypassManager.DecodedBypass;
 import lineage2.gameserver.instancemanager.OlympiadHistoryManager;
 import lineage2.gameserver.model.Creature;

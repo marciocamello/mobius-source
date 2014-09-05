@@ -12,7 +12,7 @@
  */
 package lineage2.gameserver.model.petition;
 
-import lineage2.gameserver.handler.petition.IPetitionHandler;
+import lineage2.gameserver.handlers.IPetitionHandler;
 import lineage2.gameserver.scripts.Scripts;
 
 /**
@@ -31,7 +31,7 @@ public class PetitionSubGroup extends PetitionGroup
 	public PetitionSubGroup(int id, String handler)
 	{
 		super(id);
-		Class<?> clazz = Scripts.getInstance().getClasses().get("handler.petition." + handler);
+		Class<?> clazz = Scripts.getInstance().getClasses().get("handlers.petition." + handler);
 		
 		try
 		{

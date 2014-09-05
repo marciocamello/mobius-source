@@ -21,7 +21,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.handler.petition.IPetitionHandler;
+import lineage2.gameserver.handlers.IPetitionHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
@@ -782,7 +782,7 @@ public final class PetitionManager implements IPetitionHandler
 	 * @param player Player
 	 * @param id int
 	 * @param txt String
-	 * @see lineage2.gameserver.handler.petition.IPetitionHandler#handle(Player, int, String)
+	 * @see lineage2.gameserver.handlers.IPetitionHandler#handle(Player, int, String)
 	 */
 	@Override
 	public void handle(Player player, int id, String txt)
