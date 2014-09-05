@@ -369,6 +369,14 @@
 		<equip>
 			<slot id="BACK"/>
 		</equip>
+		<attributes>
+			<attribute element="fire" value="10"/>
+			<attribute element="water" value="10"/>
+			<attribute element="wind" value="10"/>
+			<attribute element="earth" value="10"/>
+			<attribute element="holy" value="10"/>
+			<attribute element="unholy" value="10"/>
+		</attributes>
 		<skills>
 			<skill id="19039" level="1"/>
 			<skill id="19041" level="1"/>
@@ -392,6 +400,14 @@
 		<equip>
 			<slot id="BACK"/>
 		</equip>
+		<attributes>
+			<attribute element="fire" value="10"/>
+			<attribute element="water" value="10"/>
+			<attribute element="wind" value="10"/>
+			<attribute element="earth" value="10"/>
+			<attribute element="holy" value="10"/>
+			<attribute element="unholy" value="10"/>
+		</attributes>
 		<skills>
 			<skill id="19040" level="1"/>
 			<skill id="19041" level="1"/>
@@ -1391,6 +1407,14 @@
 		<equip>
 			<slot id="BACK"/>
 		</equip>
+		<attributes>
+			<attribute element="fire" value="15"/>
+			<attribute element="water" value="15"/>
+			<attribute element="wind" value="15"/>
+			<attribute element="earth" value="15"/>
+			<attribute element="holy" value="15"/>
+			<attribute element="unholy" value="15"/>
+		</attributes>
 		<skills>
 			<skill id="19037" level="1"/>
 			<skill id="19042" level="1"/>
@@ -1413,6 +1437,14 @@
 		<equip>
 			<slot id="BACK"/>
 		</equip>
+		<attributes>
+			<attribute element="fire" value="15"/>
+			<attribute element="water" value="15"/>
+			<attribute element="wind" value="15"/>
+			<attribute element="earth" value="15"/>
+			<attribute element="holy" value="15"/>
+			<attribute element="unholy" value="15"/>
+		</attributes>
 		<skills>
 			<skill id="19038" level="1"/>
 			<skill id="19042" level="1"/>
