@@ -60,6 +60,7 @@ import lineage2.gameserver.model.actor.listener.NpcListenerList;
 import lineage2.gameserver.model.actor.recorder.NpcStatsChangeRecorder;
 import lineage2.gameserver.model.base.AcquireType;
 import lineage2.gameserver.model.base.ClassId;
+import lineage2.gameserver.model.base.InvisibleType;
 import lineage2.gameserver.model.entity.DelusionChamber;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
@@ -98,6 +99,7 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.network.serverpackets.components.SceneMovie;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.skills.AbnormalEffect;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.tables.SkillTable;
@@ -1593,11 +1595,21 @@ public class NpcInstance extends Creature
 			}
 			else if (command.startsWith("Beautyshop"))
 			{
+				if (player.isInvisible())
+				{
+					player.setInvisibleType(InvisibleType.NONE);
+					player.stopAbnormalEffect(AbnormalEffect.STEALTH);
+				}
 				player.sendPacket(new ExShowBeautyMenuPacket(0));
 				player.sendPacket(new ExResponseBeautyListPacket(player, 1));
 			}
 			else if (command.startsWith("ResetBeautyshop"))
 			{
+				if (player.isInvisible())
+				{
+					player.setInvisibleType(InvisibleType.NONE);
+					player.stopAbnormalEffect(AbnormalEffect.STEALTH);
+				}
 				player.sendPacket(new ExShowBeautyMenuPacket(1));
 				player.sendPacket(new ExResponseResetList(player));
 			}
