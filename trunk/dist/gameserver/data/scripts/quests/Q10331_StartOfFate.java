@@ -67,7 +67,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 	private static final int INSTANCED_ZONE_ID = 178;
 	private static final int NEED_BELIS_MARKS_COUNT = 3;
 	private static final int NEED_OPERATIVES_KILLS_COUNT = 6;
-	private static final int NEED_DEFENDERS_KILLS_COUNT = 6;
+	private static final int NEED_DEFENDERS_KILLS_COUNT = 3;
 	private static final int BELISE_MARK_DROP_CHANCE = 45;
 	private static final int PROOF_OF_COURAGE_MULTISELL_ID = 717;
 	
