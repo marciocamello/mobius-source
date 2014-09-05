@@ -1697,6 +1697,15 @@ public abstract class Creature extends GameObject
 	}
 	
 	/**
+	 * Method disableSkill.
+	 * @param skill Skill
+	 */
+	public void disableSkill(Skill skill)
+	{
+		_skillReuses.put(skill.hashCode(), new TimeStamp(skill, -1));
+	}
+	
+	/**
 	 * Method isAutoAttackable.
 	 * @param attacker Creature
 	 * @return boolean
@@ -3261,6 +3270,11 @@ public abstract class Creature extends GameObject
 		}
 		
 		if (sts.hasNotPassed())
+		{
+			return true;
+		}
+		
+		if (sts.getReuseBasic() == -1)
 		{
 			return true;
 		}

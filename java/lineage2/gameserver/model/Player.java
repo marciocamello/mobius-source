@@ -14884,6 +14884,7 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	public void onJumpingBreak()
 	{
+		unblock();
 		sendActionFailed();
 		unsetVar("@safe_jump_loc");
 		setCurrentJumpTrack(null);
