@@ -26,8 +26,8 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
-import lineage2.gameserver.handler.admincommands.AdminCommandHandler;
-import lineage2.gameserver.handler.admincommands.IAdminCommandHandler;
+import lineage2.gameserver.handlers.AdminCommandHandler;
+import lineage2.gameserver.handlers.IAdminCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
@@ -400,7 +400,7 @@ public final class Bash extends Functions implements IAdminCommandHandler, Scrip
 	/**
 	 * Method getAdminCommandEnum.
 	 * @return Enum[]
-	 * @see lineage2.gameserver.handler.admincommands.IAdminCommandHandler#getAdminCommandEnum()
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
 	 */
 	@Override
 	public Enum<?>[] getAdminCommandEnum()

@@ -24,7 +24,7 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 import npc.model.MeleonInstance;
-import handler.items.ScriptItemHandler;
+import handlers.items.ScriptItemHandler;
 
 /**
  * @author Mobius
@@ -75,7 +75,7 @@ public final class MeleonSeed extends ScriptItemHandler
 	 * @param item ItemInstance
 	 * @param ctrl boolean
 	 * @return boolean
-	 * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 * @see lineage2.gameserver.handlers.IItemHandler#useItem(Playable, ItemInstance, boolean)
 	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
@@ -133,7 +133,7 @@ public final class MeleonSeed extends ScriptItemHandler
 	/**
 	 * Method getItemIds.
 	 * @return int[]
-	 * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 * @see lineage2.gameserver.handlers.IItemHandler#getItemIds()
 	 */
 	@Override
 	public int[] getItemIds()

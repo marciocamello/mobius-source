@@ -17,8 +17,8 @@ import java.util.StringTokenizer;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
-import lineage2.gameserver.handler.bbs.CommunityBoardManager;
-import lineage2.gameserver.handler.bbs.ICommunityBoardHandler;
+import lineage2.gameserver.handlers.CommunityBoardManager;
+import lineage2.gameserver.handlers.ICommunityBoardHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.items.ItemInstance;
@@ -96,7 +96,7 @@ public final class EnchantCommunity extends Functions implements ScriptFile, ICo
 	/**
 	 * Method getBypassCommands.
 	 * @return String[]
-	 * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#getBypassCommands()
+	 * @see lineage2.gameserver.handlers.ICommunityBoardHandler#getBypassCommands()
 	 */
 	@Override
 	public String[] getBypassCommands()
@@ -111,7 +111,7 @@ public final class EnchantCommunity extends Functions implements ScriptFile, ICo
 	 * Method onBypassCommand.
 	 * @param activeChar Player
 	 * @param command String
-	 * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#onBypassCommand(Player, String)
+	 * @see lineage2.gameserver.handlers.ICommunityBoardHandler#onBypassCommand(Player, String)
 	 */
 	@Override
 	public void onBypassCommand(Player activeChar, String command)
@@ -428,7 +428,7 @@ public final class EnchantCommunity extends Functions implements ScriptFile, ICo
 	 * @param arg3 String
 	 * @param arg4 String
 	 * @param arg5 String
-	 * @see lineage2.gameserver.handler.bbs.ICommunityBoardHandler#onWriteCommand(Player, String, String, String, String, String, String)
+	 * @see lineage2.gameserver.handlers.ICommunityBoardHandler#onWriteCommand(Player, String, String, String, String, String, String)
 	 */
 	@Override
 	public void onWriteCommand(Player player, String bypass, String arg1, String arg2, String arg3, String arg4, String arg5)

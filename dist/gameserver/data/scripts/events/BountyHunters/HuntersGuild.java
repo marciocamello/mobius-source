@@ -19,8 +19,8 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
-import lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler;
-import lineage2.gameserver.handler.voicecommands.VoicedCommandHandler;
+import lineage2.gameserver.handlers.IVoicedCommandHandler;
+import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.listener.actor.OnDeathListener;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObjectsStorage;
@@ -330,7 +330,7 @@ public final class HuntersGuild extends Functions implements ScriptFile, IVoiced
 	
 	/**
 	 * Method getVoicedCommandList.
-	 * @return String[] * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#getVoicedCommandList()
+	 * @return String[] * @see lineage2.gameserver.handlers.voicedcommands.IVoicedCommandHandler#getVoicedCommandList()
 	 */
 	@Override
 	public String[] getVoicedCommandList()
@@ -344,7 +344,7 @@ public final class HuntersGuild extends Functions implements ScriptFile, IVoiced
 	 * @param activeChar Player
 	 * @param target String
 	 * @return boolean
-	 * @see lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 * @see lineage2.gameserver.handlers.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
 	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String target)

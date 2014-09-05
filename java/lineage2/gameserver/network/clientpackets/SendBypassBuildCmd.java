@@ -12,7 +12,7 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.handler.admincommands.AdminCommandHandler;
+import lineage2.gameserver.handlers.AdminCommandHandler;
 import lineage2.gameserver.model.Player;
 
 /**

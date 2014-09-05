@@ -25,7 +25,7 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.npc.NpcTemplate;
-import handler.items.ScriptItemHandler;
+import handlers.items.ScriptItemHandler;
 
 /**
  * @author Mobius
@@ -77,7 +77,7 @@ public final class Seed extends ScriptItemHandler
 	 * @param item ItemInstance
 	 * @param ctrl boolean
 	 * @return boolean
-	 * @see lineage2.gameserver.handler.items.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 * @see lineage2.gameserver.handlers.IItemHandler#useItem(Playable, ItemInstance, boolean)
 	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
@@ -137,7 +137,7 @@ public final class Seed extends ScriptItemHandler
 	
 	/**
 	 * Method getItemIds.
-	 * @return int[] * @see lineage2.gameserver.handler.items.IItemHandler#getItemIds()
+	 * @return int[] * @see lineage2.gameserver.handlers.items.IItemHandler#getItemIds()
 	 */
 	@Override
 	public int[] getItemIds()

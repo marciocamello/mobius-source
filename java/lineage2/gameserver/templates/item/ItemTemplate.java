@@ -14,7 +14,7 @@ package lineage2.gameserver.templates.item;
 
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.commons.time.cron.SchedulingPattern;
-import lineage2.gameserver.handler.items.IItemHandler;
+import lineage2.gameserver.handlers.IItemHandler;
 import lineage2.gameserver.instancemanager.CursedWeaponsManager;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Skill;

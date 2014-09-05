@@ -18,8 +18,8 @@ import java.util.regex.Pattern;
 
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.ItemInfoCache;
-import lineage2.gameserver.handler.voicecommands.IVoicedCommandHandler;
-import lineage2.gameserver.handler.voicecommands.VoicedCommandHandler;
+import lineage2.gameserver.handlers.IVoicedCommandHandler;
+import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.instancemanager.PetitionManager;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
