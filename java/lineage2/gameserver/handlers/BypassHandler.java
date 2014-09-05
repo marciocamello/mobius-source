@@ -15,10 +15,12 @@ package lineage2.gameserver.handlers;
 import java.util.HashMap;
 import java.util.Map;
 
+import lineage2.commons.data.xml.AbstractHolder;
+
 /**
  * @author Mobius
  */
-public class BypassHandler
+public class BypassHandler extends AbstractHolder
 {
 	private static final BypassHandler _instance = new BypassHandler();
 	
@@ -32,6 +34,13 @@ public class BypassHandler
 	}
 	
 	private final Map<String, IBypassHandler> _datatable = new HashMap<>();
+	
+	/**
+	 * Constructor for BypassHandler.
+	 */
+	private BypassHandler()
+	{
+	}
 	
 	/**
 	 * Method registerBypass.
@@ -52,8 +61,27 @@ public class BypassHandler
 	 * @param bypass String
 	 * @return IBypassHandler
 	 */
-	public IBypassHandler getBypasses(String bypass)
+	public IBypassHandler getBypass(String bypass)
 	{
 		return _datatable.get(bypass);
+	}
+	
+	/**
+	 * Method size.
+	 * @return int
+	 */
+	@Override
+	public int size()
+	{
+		return _datatable.size();
+	}
+	
+	/**
+	 * Method clear.
+	 */
+	@Override
+	public void clear()
+	{
+		_datatable.clear();
 	}
 }
