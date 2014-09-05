@@ -2154,7 +2154,7 @@
 		</for>
 	</skill>
 	<skill id="370" levels="5" name="Clan Body">
-		<table name="#maxHp">1.03 1.05 1.06 1.07 1.08</table>
+		<table name="#maxHp">1.03 1.04 1.05 1.06 1.07</table>
 		<set name="icon" val="icon.skill0370"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2167,7 +2167,7 @@
 		</for>
 	</skill>
 	<skill id="371" levels="5" name="Clan Spirituality">
-		<table name="#maxCp">1.06 1.10 1.12 1.14 1.16</table>
+		<table name="#maxCp">1.06 1.08 1.10 1.12 1.14</table>
 		<set name="icon" val="icon.skill0371"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2180,7 +2180,7 @@
 		</for>
 	</skill>
 	<skill id="372" levels="5" name="Clan Soul">
-		<table name="#maxMp">1.03 1.05 1.06 1.07 1.08</table>
+		<table name="#maxMp">1.03 1.05 1.05 1.06 1.07</table>
 		<set name="icon" val="icon.skill0372"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2193,7 +2193,7 @@
 		</for>
 	</skill>
 	<skill id="373" levels="5" name="Clan Regeneration">
-		<table name="#regHp">1.03 1.05 1.06 1.07 1.08</table>
+		<table name="#regHp">1.03 1.04 1.05 1.06 1.07</table>
 		<set name="icon" val="icon.skill0373"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2206,7 +2206,7 @@
 		</for>
 	</skill>
 	<skill id="374" levels="5" name="Clan Morale">
-		<table name="#regCp">1.06 1.10 1.12 1.14 1.16</table>
+		<table name="#regCp">1.06 1.08 1.10 1.12 1.14</table>
 		<set name="icon" val="icon.skill0374"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2219,7 +2219,7 @@
 		</for>
 	</skill>
 	<skill id="375" levels="5" name="Clan Clarity">
-		<table name="#regMp">1.03 1.05 1.06 1.07 1.08</table>
+		<table name="#regMp">1.03 1.04 1.05 1.06 1.07</table>
 		<set name="icon" val="icon.skill0375"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2232,7 +2232,7 @@
 		</for>
 	</skill>
 	<skill id="376" levels="5" name="Clan Might">
-		<table name="#patak">1.03 1.05 1.06 1.07 1.08</table>
+		<table name="#patak">1.03 1.04 1.05 1.06 1.07</table>
 		<set name="icon" val="icon.skill0376"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2245,7 +2245,7 @@
 		</for>
 	</skill>
 	<skill id="377" levels="5" name="Clan Shield">
-		<table name="#pdef">1.03 1.05 1.06 1.07 1.08</table>
+		<table name="#pdef">1.03 1.04 1.05 1.06 1.07</table>
 		<set name="icon" val="icon.skill0377"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2258,7 +2258,7 @@
 		</for>
 	</skill>
 	<skill id="378" levels="5" name="Clan Empower">
-		<table name="#matak">1.06 1.10 1.12 1.14 1.16</table>
+		<table name="#matak">1.06 1.08 1.10 1.12 1.14</table>
 		<set name="icon" val="icon.skill0378"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2271,7 +2271,7 @@
 		</for>
 	</skill>
 	<skill id="379" levels="5" name="Clan M. Def.">
-		<table name="#mdef">1.06 1.10 1.12 1.14 1.16</table>
+		<table name="#mdef">1.06 1.08 1.10 1.12 1.14</table>
 		<set name="icon" val="icon.skill0379"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2283,8 +2283,8 @@
 			<mul order="0x30" stat="mDef" val="#mdef"/>
 		</for>
 	</skill>
-	<skill id="380" levels="3" name="Clan Guidance">
-		<table name="#accCombat">1 2 3</table>
+	<skill id="380" levels="5" name="Clan Guidance">
+		<table name="#accCombat">1 2 3 4 5</table>
 		<set name="icon" val="icon.skill0380"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2296,8 +2296,8 @@
 			<add order="0x40" stat="accCombat" val="#accCombat"/>
 		</for>
 	</skill>
-	<skill id="381" levels="3" name="Clan Agility">
-		<table name="#rEvas">1 2 3</table>
+	<skill id="381" levels="5" name="Clan Agility">
+		<table name="#rEvas">1 2 3 4 5</table>
 		<set name="icon" val="icon.skill0381"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2309,8 +2309,8 @@
 			<add order="0x40" stat="rEvas" val="#rEvas"/>
 		</for>
 	</skill>
-	<skill id="382" levels="3" name="Clan Shield Defense">
-		<table name="#rShld">1.12 1.20 1.24</table>
+	<skill id="382" levels="5" name="Clan Shield Defense">
+		<table name="#rShld">1.12 1.16 1.20 1.24 1.28</table>
 		<set name="icon" val="icon.skill0382"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2322,8 +2322,8 @@
 			<mul order="0x30" stat="rShld" val="#rShld"/>
 		</for>
 	</skill>
-	<skill id="383" levels="3" name="Clan Shield Block">
-		<table name="#sDef">1.24 1.40 1.48</table>
+	<skill id="383" levels="5" name="Clan Shield Block">
+		<table name="#sDef">1.24 1.32 1.40 1.48 1.56</table>
 		<set name="icon" val="icon.skill0383"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2335,8 +2335,8 @@
 			<mul order="0x30" stat="sDef" val="#sDef"/>
 		</for>
 	</skill>
-	<skill id="384" levels="3" name="Clan Cyclonic Resistance">
-		<table name="#resist">3 5 6</table>
+	<skill id="384" levels="5" name="Clan Cyclonic Resistance">
+		<table name="#resist">3 5 6 7 8</table>
 		<set name="icon" val="icon.skill0384"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2349,8 +2349,8 @@
 			<add order="0x40" stat="defenceWater" val="#resist"/>
 		</for>
 	</skill>
-	<skill id="385" levels="3" name="Clan Magmatic Resistance">
-		<table name="#resist">3 5 6</table>
+	<skill id="385" levels="5" name="Clan Magmatic Resistance">
+		<table name="#resist">3 5 6 7 8</table>
 		<set name="icon" val="icon.skill0385"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2363,8 +2363,8 @@
 			<add order="0x40" stat="defenceEarth" val="#resist"/>
 		</for>
 	</skill>
-	<skill id="386" levels="3" name="Clan Stun Resistance">
-		<table name="#resist">12 20 24</table>
+	<skill id="386" levels="5" name="Clan Stun Resistance">
+		<table name="#resist">12 13 14 15 16</table>
 		<set name="icon" val="icon.skill0386"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2376,8 +2376,8 @@
 			<add order="0x40" stat="stunResist" val="#resist"/>
 		</for>
 	</skill>
-	<skill id="387" levels="3" name="Clan Hold Resistance">
-		<table name="#resist">12 20 24</table>
+	<skill id="387" levels="5" name="Clan Hold Resistance">
+		<table name="#resist">12 13 14 15 16</table>
 		<set name="icon" val="icon.skill0387"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2389,8 +2389,8 @@
 			<add order="0x40" stat="rootResist" val="#resist"/>
 		</for>
 	</skill>
-	<skill id="388" levels="3" name="Clan Sleep Resistance">
-		<table name="#resist">12 20 24</table>
+	<skill id="388" levels="5" name="Clan Sleep Resistance">
+		<table name="#resist">12 13 14 15 16</table>
 		<set name="icon" val="icon.skill0388"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
