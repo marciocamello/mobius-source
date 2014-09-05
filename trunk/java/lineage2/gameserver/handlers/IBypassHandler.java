@@ -25,7 +25,7 @@ public interface IBypassHandler
 	 * Method getBypasses.
 	 * @return String[]
 	 */
-	String[] getBypasses();
+	public String[] getBypasses();
 	
 	/**
 	 * Method onBypassFeedback.

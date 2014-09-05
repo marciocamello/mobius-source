@@ -12,9 +12,11 @@
  */
 package lineage2.gameserver.handlers;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public class BypassHandler
 {
@@ -29,11 +31,29 @@ public class BypassHandler
 		return _instance;
 	}
 	
+	private final Map<String, IBypassHandler> _datatable = new HashMap<>();
+	
 	/**
 	 * Method registerBypass.
 	 * @param bypass IBypassHandler
 	 */
 	public void registerBypass(IBypassHandler bypass)
 	{
+		String[] ids = bypass.getBypasses();
+		
+		for (String element : ids)
+		{
+			_datatable.put(element, bypass);
+		}
+	}
+	
+	/**
+	 * Method getBypasses.
+	 * @param bypass String
+	 * @return IBypassHandler
+	 */
+	public IBypassHandler getBypasses(String bypass)
+	{
+		return _datatable.get(bypass);
 	}
 }
