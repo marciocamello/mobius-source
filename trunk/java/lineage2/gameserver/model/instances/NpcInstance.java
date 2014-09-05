@@ -1281,9 +1281,9 @@ public class NpcInstance extends Creature
 			return;
 		}
 		
-		if (BypassHandler.getInstance().getBypasses(command) != null)
+		if (BypassHandler.getInstance().getBypass(command) != null)
 		{
-			BypassHandler.getInstance().getBypasses(command).onBypassFeedback(this, player, command);
+			BypassHandler.getInstance().getBypass(command).onBypassFeedback(this, player, command);
 			return;
 		}
 		
