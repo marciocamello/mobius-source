@@ -19459,7 +19459,8 @@
 			<skill id="11832" level="5" cost="50000000" name="Mass Fatal Sleep" min_level="95"/>
 			<skill id="11832" level="6" cost="50000000" name="Mass Fatal Sleep" min_level="98"/>
 		</class>
-		<class id="148"> <!-- Sigel Phoenix Knight -->
+		<class id="148">
+			<!-- Sigel Phoenix Knight -->
 			<!-- Lvl 85 -->
 			<skill id="10249" level="1" name="Sigel Knight Air Chain Skill" min_level="85"/>
 			<skill id="10250" level="1" name="Sigel Knight Knock Chain Skill" min_level="85"/>
@@ -19475,9 +19476,9 @@
 			<skill id="10038" level="1" cost="10000" name="Spirit Aura" min_level="85" />
 			<skill id="10034" level="1" cost="10000" name="Resistance Aura" min_level="85" />
 			<skill id="10032" level="1" cost="10000" name="Iron Aura" min_level="85" />
- 			<skill id="10027" level="1" cost="10000" name="Superior Aggression Aura" min_level="85" />
+			<skill id="10027" level="1" cost="10000" name="Superior Aggression Aura" min_level="85" />
 			<skill id="10065" level="1" cost="10000" name="Fortress Shield" min_level="85" />
- 			<skill id="10026" level="1" cost="10000" name="Superior Aggression" min_level="85" />
+			<skill id="10026" level="1" cost="10000" name="Superior Aggression" min_level="85" />
 			<skill id="10001" level="1" cost="10000" name="Superior Sword/Blunt Weapon Mastery" min_level="85" />
 			<skill id="10044" level="1" cost="10000" name="Superior Elemental Mastery" min_level="85" />
 			<skill id="10002" level="1" cost="10000" name="Superior Heavy Armor Mastery" min_level="85" />
@@ -19487,40 +19488,40 @@
 			<skill id="10062" level="1" cost="10000" name="Phoenix Spirit" min_level="85" />
 			<skill id="10008" level="1" cost="10000" name="Shield Charge" min_level="85" />
 			<skill id="10019" level="1" cost="10000" name="Protection of Faith" min_level="85" />
- 			<skill id="10011" level="1" cost="10000" name="Shield Impact" min_level="85" />
- 			<skill id="10244" level="1" cost="10000" name="True Vanguard" min_level="85" />
+			<skill id="10011" level="1" cost="10000" name="Shield Impact" min_level="85" />
+			<skill id="10244" level="1" cost="10000" name="True Vanguard" min_level="85" />
 			<skill id="10010" level="1" cost="10000" name="Justice Punishment" min_level="85" />
 			<skill id="10025" level="1" cost="10000" name="Knight Frenzy" min_level="85" />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
 			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
 			<skill id="10017" level="1" cost="10000" name="Final Ultimate Defense" min_level="85" />
 			<skill id="10013" level="1" cost="10000" name="Gust Blade" min_level="85" />
- 			<skill id="10006" level="1" cost="10000" name="Last Patience" min_level="85" />
+			<skill id="10006" level="1" cost="10000" name="Last Patience" min_level="85" />
 			<skill id="10043" level="1" cost="10000" name="Summon Knight Cubic" min_level="85" />
- 			<skill id="10040" level="1" cost="10000" name="Summon Golden Lion" min_level="85" />
+			<skill id="10040" level="1" cost="10000" name="Summon Golden Lion" min_level="85" />
 			<skill id="10009" level="1" cost="10000" name="Last Judgment" min_level="85" />
 			<skill id="10020" level="1" cost="10000" name="Focus Shield" min_level="85" />
 			<skill id="10015" level="1" cost="10000" name="Chain Strike" min_level="85" />
 			<skill id="10014" level="1" cost="10000" name="Chain Galaxy" min_level="85" />
 			<skill id="10021" level="1" cost="10000" name="Spike Shield" min_level="85" />
 			<!-- Lvl 86 -->
- 			<skill id="10008" level="2" cost="50000" name="Shield Charge" min_level="86" />
- 			<skill id="10010" level="2" cost="50000" name="Justice Punishment" min_level="86" />
- 			<skill id="10043" level="2" cost="50000" name="Summon Knight Cubic" min_level="86" />
+			<skill id="10008" level="2" cost="50000" name="Shield Charge" min_level="86" />
+			<skill id="10010" level="2" cost="50000" name="Justice Punishment" min_level="86" />
+			<skill id="10043" level="2" cost="50000" name="Summon Knight Cubic" min_level="86" />
 			<skill id="10040" level="2" cost="50000" name="Summon Golden Lion" min_level="86" />
 			<skill id="10009" level="2" cost="50000" name="Last Judgment" min_level="86" />
 			<skill id="10014" level="2" cost="50000" name="Chain Galaxy" min_level="86" />
 			<!-- Lvl 87 -->
- 			<skill id="10026" level="2" cost="60000" name="Superior Aggression" min_level="87" />
+			<skill id="10026" level="2" cost="60000" name="Superior Aggression" min_level="87" />
 			<skill id="10012" level="1" cost="60000" name="Shield Wave" min_level="87" />
 			<skill id="10013" level="2" cost="60000" name="Gust Blade" min_level="87" />
 			<skill id="10015" level="2" cost="60000" name="Chain Strike" min_level="87" />
 			<!-- Lvl 88 -->
- 			<skill id="10027" level="2" cost="80000" name="Superior Aggression Aura" min_level="88" />
- 			<skill id="10008" level="3" cost="80000" name="Shield Charge" min_level="88" />
- 			<skill id="10011" level="2" cost="80000" name="Shield Impact" min_level="88" />
- 			<skill id="10010" level="3" cost="80000" name="Justice Punishment" min_level="88" />
- 			<skill id="10043" level="3" cost="80000" name="Summon Knight Cubic" min_level="88" />
+			<skill id="10027" level="2" cost="80000" name="Superior Aggression Aura" min_level="88" />
+			<skill id="10008" level="3" cost="80000" name="Shield Charge" min_level="88" />
+			<skill id="10011" level="2" cost="80000" name="Shield Impact" min_level="88" />
+			<skill id="10010" level="3" cost="80000" name="Justice Punishment" min_level="88" />
+			<skill id="10043" level="3" cost="80000" name="Summon Knight Cubic" min_level="88" />
 			<skill id="10009" level="3" cost="80000" name="Last Judgment" min_level="88" />
 			<skill id="10014" level="3" cost="50000" name="Chain Galaxy" min_level="88" />
 			<!-- Lvl 89 -->
@@ -19529,12 +19530,12 @@
 			<skill id="10040" level="3" cost="100000" name="Summon Golden Lion" min_level="89" />
 			<skill id="10016" level="1" cost="100000" name="Chain Hydra" min_level="89" />
 			<!-- Lvl 90 -->
- 			<skill id="10026" level="3" cost="370000" name="Superior Aggression" min_level="90" />
+			<skill id="10026" level="3" cost="370000" name="Superior Aggression" min_level="90" />
 			<skill id="10062" level="2" cost="370000" name="Phoenix Spirit" min_level="90" />
- 			<skill id="10008" level="4" cost="370000" name="Shield Charge" min_level="90" />
+			<skill id="10008" level="4" cost="370000" name="Shield Charge" min_level="90" />
 			<skill id="10065" level="2" cost="370000" name="Fortress Shield" min_level="90" />
- 			<skill id="10244" level="2" cost="370000" name="True Vanguard" min_level="90" />
- 			<skill id="10010" level="4" cost="370000" name="Justice Punishment" min_level="90" />
+			<skill id="10244" level="2" cost="370000" name="True Vanguard" min_level="90" />
+			<skill id="10010" level="4" cost="370000" name="Justice Punishment" min_level="90" />
 			<skill id="10025" level="2" cost="370000" name="Knight Frenzy" min_level="90" />
 			<skill id="10017" level="2" cost="370000" name="Final Ultimate Defense" min_level="90" />
 			<skill id="10043" level="4" cost="370000" name="Summon Knight Cubic" min_level="90" />
@@ -19545,30 +19546,30 @@
 			<skill id="10014" level="4" cost="370000" name="Chain Galaxy" min_level="90" />
 			<skill id="10021" level="2" cost="370000" name="Spike Shield" min_level="90" />
 			<!-- Lvl 91 -->
- 			<skill id="10018" level="1" cost="400000" name="Noble Sacrifice" min_level="91" />
- 			<skill id="10027" level="3" cost="400000" name="Superior Aggression Aura" min_level="91" />
+			<skill id="10018" level="1" cost="400000" name="Noble Sacrifice" min_level="91" />
+			<skill id="10027" level="3" cost="400000" name="Superior Aggression Aura" min_level="91" />
 			<skill id="10012" level="3" cost="400000" name="Shield Wave" min_level="91" />
- 			<skill id="10011" level="3" cost="400000" name="Shield Impact" min_level="91" />
+			<skill id="10011" level="3" cost="400000" name="Shield Impact" min_level="91" />
 			<skill id="10013" level="4" cost="400000" name="Gust Blade" min_level="91" />
 			<skill id="10016" level="2" cost="400000" name="Chain Hydra" min_level="91" />
 			<!-- Lvl 92 -->
- 			<skill id="10008" level="5" cost="420000" name="Shield Charge" min_level="92" />
- 			<skill id="10010" level="5" cost="420000" name="Justice Punishment" min_level="92" />
+			<skill id="10008" level="5" cost="420000" name="Shield Charge" min_level="92" />
+			<skill id="10010" level="5" cost="420000" name="Justice Punishment" min_level="92" />
 			<skill id="10043" level="5" cost="420000" name="Summon Knight Cubic" min_level="92" />
 			<skill id="10040" level="4" cost="420000" name="Summon Golden Lion" min_level="92" />
 			<skill id="10009" level="5" cost="420000" name="Last Judgment" min_level="92" />
 			<skill id="10014" level="5" cost="420000" name="Chain Galaxy" min_level="92" />
 			<!-- Lvl 93 -->
- 			<skill id="10026" level="4" cost="440000" name="Superior Aggression" min_level="93" />
+			<skill id="10026" level="4" cost="440000" name="Superior Aggression" min_level="93" />
 			<skill id="10012" level="4" cost="440000" name="Shield Wave" min_level="93" />
 			<skill id="10013" level="5" cost="440000" name="Gust Blade" min_level="93" />
 			<skill id="10016" level="3" cost="440000" name="Chain Hydra" min_level="93" />
 			<skill id="10015" level="4" cost="440000" name="Chain Strike" min_level="93" />
 			<!-- Lvl 94 -->
- 			<skill id="10027" level="4" cost="480000" name="Superior Aggression Aura" min_level="94" />
- 			<skill id="10008" level="6" cost="480000" name="Shield Charge" min_level="94" />
- 			<skill id="10011" level="4" cost="480000" name="Shield Impact" min_level="94" />
- 			<skill id="10010" level="6" cost="480000" name="Justice Punishment" min_level="94" />
+			<skill id="10027" level="4" cost="480000" name="Superior Aggression Aura" min_level="94" />
+			<skill id="10008" level="6" cost="480000" name="Shield Charge" min_level="94" />
+			<skill id="10011" level="4" cost="480000" name="Shield Impact" min_level="94" />
+			<skill id="10010" level="6" cost="480000" name="Justice Punishment" min_level="94" />
 			<skill id="10043" level="6" cost="480000" name="Summon Knight Cubic" min_level="94" />
 			<skill id="10009" level="6" cost="480000" name="Last Judgment" min_level="94" />
 			<skill id="10014" level="6" cost="480000" name="Chain Galaxy" min_level="94" />
@@ -19576,8 +19577,8 @@
 			<skill id="239" level="9" name="Expertise R95" min_level="95"/>
 			<skill id="10012" level="5" cost="1000000" name="Shield Wave" min_level="95" />
 			<skill id="10062" level="3" cost="1000000" name="Phoenix Spirit" min_level="95" />
- 			<skill id="10065" level="3" cost="1000000" name="Fortress Shield" min_level="95" />
- 			<skill id="10244" level="3" cost="1000000" name="True Vanguard" min_level="95" />
+			<skill id="10065" level="3" cost="1000000" name="Fortress Shield" min_level="95" />
+			<skill id="10244" level="3" cost="1000000" name="True Vanguard" min_level="95" />
 			<skill id="10025" level="3" cost="1000000" name="Knight Frenzy" min_level="95" />
 			<skill id="10023" level="1" cost="1000000" name="King of Beasts" min_level="95" />
 			<skill id="10017" level="3" cost="1000000" name="Final Ultimate Defense" min_level="95" />
@@ -19588,39 +19589,39 @@
 			<skill id="10016" level="4" cost="1000000" name="Chain Hydra" min_level="95" />
 			<skill id="10021" level="3" cost="1000000" name="Spike Shield" min_level="95" />
 			<!-- Lvl 96 -->
- 			<skill id="10018" level="2" cost="4970000" name="Noble Sacrifice" min_level="96" />
- 			<skill id="10026" level="5" cost="4970000" name="Superior Aggression" min_level="96" />
- 			<skill id="10008" level="7" cost="4970000" name="Shield Charge" min_level="96" />
- 			<skill id="10010" level="7" cost="4970000" name="Justice Punishment" min_level="96" />
+			<skill id="10018" level="2" cost="4970000" name="Noble Sacrifice" min_level="96" />
+			<skill id="10026" level="5" cost="4970000" name="Superior Aggression" min_level="96" />
+			<skill id="10008" level="7" cost="4970000" name="Shield Charge" min_level="96" />
+			<skill id="10010" level="7" cost="4970000" name="Justice Punishment" min_level="96" />
 			<skill id="10043" level="7" cost="4970000" name="Summon Knight Cubic" min_level="96" />
 			<skill id="10009" level="7" cost="4970000" name="Last Judgment" min_level="96" />
 			<skill id="10015" level="5" cost="4970000" name="Chain Strike" min_level="96" />
 			<skill id="10014" level="7" cost="4970000" name="Chain Galaxy" min_level="96" />
 			<!-- Lvl 97 -->
- 			<skill id="10027" level="5" cost="4980000" name="Superior Aggression Aura" min_level="97" />
+			<skill id="10027" level="5" cost="4980000" name="Superior Aggression Aura" min_level="97" />
 			<skill id="10012" level="6" cost="4980000" name="Shield Wave" min_level="97" />
 			<skill id="10019" level="2" cost="4980000" name="Protection of Faith" min_level="97" />
- 			<skill id="10011" level="5" cost="4980000" name="Shield Impact" min_level="97" />
+			<skill id="10011" level="5" cost="4980000" name="Shield Impact" min_level="97" />
 			<skill id="10013" level="7" cost="4980000" name="Gust Blade" min_level="97" />
 			<skill id="10022" level="1" cost="4980000" name="Ignore Death" min_level="97" />
 			<skill id="10016" level="5" cost="4980000" name="Chain Hydra" min_level="97" />
 			<!-- Lvl 98 -->
- 			<skill id="10008" level="8" cost="4990000" name="Shield Charge" min_level="98" />
- 			<skill id="10010" level="8" cost="4990000" name="Justice Punishment" min_level="98" />
+			<skill id="10008" level="8" cost="4990000" name="Shield Charge" min_level="98" />
+			<skill id="10010" level="8" cost="4990000" name="Justice Punishment" min_level="98" />
 			<skill id="10023" level="2" cost="4990000" name="King of Beasts" min_level="98" />
 			<skill id="10043" level="8" cost="4990000" name="Summon Knight Cubic" min_level="98" />
 			<skill id="10040" level="6" cost="4990000" name="Summon Golden Lion" min_level="98" />
 			<skill id="10009" level="8" cost="4990000" name="Last Judgment" min_level="98" />
- 			<skill id="10014" level="8" cost="4990000" name="Chain Galaxy" min_level="98" />
+			<skill id="10014" level="8" cost="4990000" name="Chain Galaxy" min_level="98" />
 			<!-- Lvl 99 -->
 			<skill id="239" level="10" name="Expertise R99" min_level="99"/>
- 			<skill id="10026" level="6" cost="5000000" name="Superior Aggression" min_level="99" />
+			<skill id="10026" level="6" cost="5000000" name="Superior Aggression" min_level="99" />
 			<skill id="10012" level="7" cost="5000000" name="Shield Wave" min_level="99" />
 			<skill id="10062" level="4" cost="5000000" name="Phoenix Spirit" min_level="99" />
 			<skill id="10024" level="1" cost="5000000" name="Party Rescue" min_level="99" />
- 			<skill id="10065" level="4" cost="5000000" name="Fortress Shield" min_level="99" />
+			<skill id="10065" level="4" cost="5000000" name="Fortress Shield" min_level="99" />
 			<skill id="10025" level="4" cost="5000000" name="Knight Frenzy" min_level="99" />
- 			<skill id="10017" level="4" cost="5000000" name="Final Ultimate Defense" min_level="99" />
+			<skill id="10017" level="4" cost="5000000" name="Final Ultimate Defense" min_level="99" />
 			<skill id="10013" level="8" cost="5000000" name="Gust Blade" min_level="99" />
 			<skill id="172" level="14" cost="0" name="Create Item" min_level="99" />
 			<skill id="10020" level="4" cost="5000000" name="Focus Shield" min_level="99" />
@@ -19628,7 +19629,8 @@
 			<skill id="10015" level="6" cost="5000000" name="Chain Strike" min_level="99" />
 			<skill id="10021" level="4" cost="5000000" name="Spike Shield" min_level="99" />
 		</class>
-		<class id="149"> <!-- Sigel Hell Knight -->
+		<class id="149">
+			<!-- Sigel Hell Knight -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="10001" level="1" cost="10000000" name="Superior Sword/Blunt Weapon Mastery" min_level="85" />
 			<skill id="10002" level="1" cost="10000000" name="Superior Heavy Armor Mastery" min_level="85" />
@@ -19775,7 +19777,8 @@
 			<skill id="8600" level="1" cost="10000000" name="Summon Royal Aegis" min_level="85" />
 			<skill id="10244" level="1" cost="50000000" name="True Vanguard" min_level="85" />
 		</class>
-		<class id="150"> <!-- Sigel Eva Templar -->
+		<class id="150">
+			<!-- Sigel Eva Templar -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="10001" level="1" cost="10000000" name="Superior Sword/Blunt Weapon Mastery" min_level="85" />
 			<skill id="10002" level="1" cost="10000000" name="Superior Heavy Armor Mastery" min_level="85" />
@@ -19927,7 +19930,8 @@
 			<skill id="8600" level="1" cost="10000000" name="Summon Royal Aegis" min_level="85" />
 			<skill id="10244" level="1" cost="50000000" name="True Vanguard" min_level="85" />
 		</class>
-		<class id="151"> <!-- Sigel Shillien Templar -->
+		<class id="151">
+			<!-- Sigel Shillien Templar -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="10001" level="1" cost="10000000" name="Superior Sword/Blunt Weapon Mastery" min_level="85" />
 			<skill id="10002" level="1" cost="10000000" name="Superior Heavy Armor Mastery" min_level="85" />
@@ -20079,7 +20083,8 @@
 			<skill id="8600" level="1" cost="10000000" name="Summon Royal Aegis" min_level="85" />
 			<skill id="10244" level="1" cost="50000000" name="True Vanguard" min_level="85" />
 		</class>
-		<class id="152"> <!--  Tyrr Duelist -->
+		<class id="152">
+			<!--  Tyrr Duelist -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="10251" level="1" cost="10000000" name="Superior Weapon Mastery" min_level="85" />
 			<skill id="10252" level="1" cost="10000000" name="Superior Dual Weapon Mastery" min_level="85" />
@@ -20222,7 +20227,8 @@
 			<skill id="1929" level="1" cost="0" name="Tyrr Aura" min_level="85" />
 			<skill id="8601" level="1" cost="10000000" name="Summon Battle Scar" min_level="85" />
 		</class>
-		<class id="153"> <!-- Tyrr Dreadnought -->
+		<class id="153">
+			<!-- Tyrr Dreadnought -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="10251" level="1" cost="10000000" name="Superior Weapon Mastery" min_level="85" />
 			<skill id="10252" level="1" cost="10000000" name="Superior Dual Weapon Mastery" min_level="85" />
@@ -20360,8 +20366,9 @@
 			<skill id="1929" level="1" cost="0" name="Tyrr Aura" min_level="85" />
 			<skill id="8601" level="1" cost="10000000" name="Summon Battle Scar" min_level="85" />
 		</class>
-		<class id="154"> <!-- Tyrr Titan -->
-		   <skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
+		<class id="154">
+			<!-- Tyrr Titan -->
+			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="10251" level="1" cost="10000000" name="Superior Weapon Mastery" min_level="85" />
 			<skill id="10252" level="1" cost="10000000" name="Superior Dual Weapon Mastery" min_level="85" />
 			<skill id="10253" level="1" cost="10000000" name="Superior Heavy Armor Mastery" min_level="85" />
@@ -20495,7 +20502,8 @@
 			<skill id="1929" level="1" cost="0" name="Tyrr Aura" min_level="85" />
 			<skill id="8601" level="1" cost="10000000" name="Summon Battle Scar" min_level="85" />
 		</class>
-		<class id="155"> <!-- Tyrr Grand Khavatari -->
+		<class id="155">
+			<!-- Tyrr Grand Khavatari -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="10251" level="1" cost="10000000" name="Superior Weapon Mastery" min_level="85" />
 			<skill id="10252" level="1" cost="10000000" name="Superior Dual Weapon Mastery" min_level="85" />
@@ -20628,7 +20636,8 @@
 			<skill id="1929" level="1" cost="0" name="Tyrr Aura" min_level="85" />
 			<skill id="8601" level="1" cost="10000000" name="Summon Battle Scar" min_level="85" />
 		</class>
-		<class id="156"><!-- Tyrr Maestro -->
+		<class id="156">
+			<!-- Tyrr Maestro -->
 			<skill id="1321" level="1" min_level="1" cost="0" name="Dwarven Craft"/>
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="10251" level="1" cost="10000000" name="Superior Weapon Mastery" min_level="85" />
@@ -20768,7 +20777,8 @@
 			<skill id="172" level="13" cost="0" name="Create Item" min_level="95"/>
 			<skill id="172" level="14" cost="0" name="Create Item" min_level="99"/>			
 		</class>
-		<class id="157"> <!-- Tyrr Doombringer -->
+		<class id="157">
+			<!-- Tyrr Doombringer -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="10251" level="1" cost="10000000" name="Superior Weapon Mastery" min_level="85" />
 			<skill id="10252" level="1" cost="10000000" name="Superior Dual Weapon Mastery" min_level="85" />
@@ -20907,7 +20917,8 @@
 			<skill id="1929" level="1" cost="0" name="Tyrr Aura" min_level="85" />
 			<skill id="8601" level="1" cost="10000000" name="Summon Battle Scar" min_level="85" />
 		</class>
-		<class id="158"> <!-- Othell Adventure -->
+		<class id="158">
+			<!-- Othell Adventure -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="10501" level="1" cost="10000000" name="Superior Dagger Mastery" min_level="85" />
 			<skill id="10502" level="1" cost="10000000" name="Superior Dual Dagger Mastery" min_level="85" />
@@ -21049,7 +21060,8 @@
 			<skill id="239" level="10" cost="0" name="Expertise R99" min_level="99" />
 			<skill id="8602" level="1" cost="10000000" name="Summon Blood Tail" min_level="85" />
 		</class>
-		<class id="159"> <!-- Othell Wind Rider -->
+		<class id="159">
+			<!-- Othell Wind Rider -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="10501" level="1" cost="10000000" name="Superior Dagger Mastery" min_level="85" />
 			<skill id="10502" level="1" cost="10000000" name="Superior Dual Dagger Mastery" min_level="85" />
@@ -21191,7 +21203,8 @@
 			<skill id="239" level="10" cost="0" name="Expertise R99" min_level="99" />
 			<skill id="8602" level="1" cost="10000000" name="Summon Blood Tail" min_level="85" />
 		</class>
-		<class id="160"> <!-- Othell Ghost Hunter -->
+		<class id="160">
+			<!-- Othell Ghost Hunter -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="10501" level="1" cost="10000000" name="Superior Dagger Mastery" min_level="85" />
 			<skill id="10502" level="1" cost="10000000" name="Superior Dual Dagger Mastery" min_level="85" />
@@ -21333,7 +21346,8 @@
 			<skill id="239" level="10" cost="0" name="Expertise R99" min_level="99" />
 			<skill id="8602" level="1" cost="10000000" name="Summon Blood Tail" min_level="85" />
 		</class>
-		<class id="161"> <!-- Othell Fortune Seeker -->
+		<class id="161">
+			<!-- Othell Fortune Seeker -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="10501" level="1" cost="10000000" name="Superior Dagger Mastery" min_level="85" />
 			<skill id="10502" level="1" cost="10000000" name="Superior Dual Dagger Mastery" min_level="85" />
@@ -21489,7 +21503,8 @@
 			<skill id="239" level="10" cost="0" name="Expertise R99" min_level="99" />
 			<skill id="8602" level="1" cost="10000000" name="Summon Blood Tail" min_level="85" />
 		</class>
-		<class id="162"> <!-- Yul Saggitarius -->
+		<class id="162">
+			<!-- Yul Saggitarius -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="10751" level="1" cost="10000000" name="Superior Bow/Crossbow Mastery" min_level="85" />
 			<skill id="10752" level="1" cost="10000000" name="Superior Light Armor Mastery" min_level="85" />
@@ -21644,7 +21659,8 @@
 			<skill id="1933" level="1" cost="0" name="Yul Aura" min_level="85" />
 			<skill id="8603" level="1" cost="10000000" name="Summon Tempest Arrow" min_level="85" />
 		</class>
-		<class id="163"> <!-- Yul Moonlight Sentinel -->
+		<class id="163">
+			<!-- Yul Moonlight Sentinel -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="10751" level="1" cost="10000000" name="Superior Bow/Crossbow Mastery" min_level="85" />
 			<skill id="10752" level="1" cost="10000000" name="Superior Light Armor Mastery" min_level="85" />
@@ -21799,7 +21815,8 @@
 			<skill id="1933" level="1" cost="0" name="Yul Aura" min_level="85" />
 			<skill id="8603" level="1" cost="10000000" name="Summon Tempest Arrow" min_level="85" />
 		</class>
-		<class id="164"> <!-- Yul Ghost Sentinel -->
+		<class id="164">
+			<!-- Yul Ghost Sentinel -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="10751" level="1" cost="10000000" name="Superior Bow/Crossbow Mastery" min_level="85" />
 			<skill id="10752" level="1" cost="10000000" name="Superior Light Armor Mastery" min_level="85" />
@@ -21954,7 +21971,8 @@
 			<skill id="1933" level="1" cost="0" name="Yul Aura" min_level="85" />
 			<skill id="8603" level="1" cost="10000000" name="Summon Tempest Arrow" min_level="85" />
 		</class>
-		<class id="165"> <!-- Yul Trickster -->
+		<class id="165">
+			<!-- Yul Trickster -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="10751" level="1" cost="10000000" name="Superior Bow/Crossbow Mastery" min_level="85" />
 			<skill id="10752" level="1" cost="10000000" name="Superior Light Armor Mastery" min_level="85" />
@@ -22109,7 +22127,8 @@
 			<skill id="1933" level="1" cost="0" name="Yul Aura" min_level="85" />
 			<skill id="8603" level="1" cost="10000000" name="Summon Tempest Arrow" min_level="85" />
 		</class>
-		<class id="166"> <!-- Feoh Archmage -->
+		<class id="166">
+			<!-- Feoh Archmage -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />		
 			<skill id="11001" level="1" cost="10000000" name="Superior Weapon Mastery" min_level="85" />
 			<skill id="11002" level="1" cost="10000000" name="Superior Robe Mastery" min_level="85" />
@@ -22268,7 +22287,8 @@
 			<skill id="1935" level="1" cost="0" name="Feoh Aura" min_level="85" />
 			<skill id="8604" level="1" cost="10000000" name="Summon Blue Phantom" min_level="85" />
 		</class>
-		<class id="167"> <!-- Feoh Soultaker -->
+		<class id="167">
+			<!-- Feoh Soultaker -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />		
 			<skill id="11001" level="1" cost="10000000" name="Superior Weapon Mastery" min_level="85" />
 			<skill id="11002" level="1" cost="10000000" name="Superior Robe Mastery" min_level="85" />
@@ -22424,7 +22444,8 @@
 			<skill id="1935" level="1" cost="0" name="Feoh Aura" min_level="85" />
 			<skill id="8604" level="1" cost="10000000" name="Summon Blue Phantom" min_level="85" />
 		</class>
-		<class id="168"> <!-- Feoh Mystic Muse -->
+		<class id="168">
+			<!-- Feoh Mystic Muse -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />		
 			<skill id="11001" level="1" cost="10000000" name="Superior Weapon Mastery" min_level="85" />
 			<skill id="11002" level="1" cost="10000000" name="Superior Robe Mastery" min_level="85" />
@@ -22583,7 +22604,8 @@
 			<skill id="1935" level="1" cost="0" name="Feoh Aura" min_level="85" />
 			<skill id="8604" level="1" cost="10000000" name="Summon Blue Phantom" min_level="85" />
 		</class>
-		<class id="169"> <!-- Feoh Storm Screamer -->
+		<class id="169">
+			<!-- Feoh Storm Screamer -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />		
 			<skill id="11001" level="1" cost="10000000" name="Superior Weapon Mastery" min_level="85" />
 			<skill id="11002" level="1" cost="10000000" name="Superior Robe Mastery" min_level="85" />
@@ -22742,7 +22764,8 @@
 			<skill id="1935" level="1" cost="0" name="Feoh Aura" min_level="85" />
 			<skill id="8604" level="1" cost="10000000" name="Summon Blue Phantom" min_level="85" />
 		</class>
-		<class id="170"> <!-- Feoh SOUL HOUND -->
+		<class id="170">
+			<!-- Feoh SOUL HOUND -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />		
 			<skill id="11001" level="1" cost="10000000" name="Superior Weapon Mastery" min_level="85" />
 			<skill id="11002" level="1" cost="10000000" name="Superior Robe Mastery" min_level="85" />
@@ -22902,7 +22925,8 @@
 			<skill id="1935" level="1" cost="0" name="Feoh Aura" min_level="85" />
 			<skill id="8604" level="1" cost="10000000" name="Summon Blue Phantom" min_level="85" />
 		</class>
-		<class id="171"> <!-- Iss Hierophant -->
+		<class id="171">
+			<!-- Iss Hierophant -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="11501" level="1" cost="10000000" name="Superior Dual Weapon Mastery" min_level="85" />
 			<skill id="11502" level="1" cost="10000000" name="Superior Robe Mastery" min_level="85" />
@@ -23068,7 +23092,8 @@
 			<skill id="239" level="10" cost="0" name="Expertise R99" min_level="99" />
 			<skill id="8606" level="1" cost="10000000" name="Summon Swift Melody" min_level="85" />
 		</class>
-		<class id="172"> <!-- Iss Sword Muse -->
+		<class id="172">
+			<!-- Iss Sword Muse -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="11501" level="1" cost="10000000" name="Superior Dual Weapon Mastery" min_level="85" />
 			<skill id="11502" level="1" cost="10000000" name="Superior Robe Mastery" min_level="85" />
@@ -23234,7 +23259,8 @@
 			<skill id="239" level="10" cost="0" name="Expertise R99" min_level="99" />
 			<skill id="8606" level="1" cost="10000000" name="Summon Swift Melody" min_level="85" />
 		</class>
-		<class id="173"> <!-- Iss Spectral Dancer -->
+		<class id="173">
+			<!-- Iss Spectral Dancer -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="11501" level="1" cost="10000000" name="Superior Dual Weapon Mastery" min_level="85" />
 			<skill id="11502" level="1" cost="10000000" name="Superior Robe Mastery" min_level="85" />
@@ -23412,7 +23438,8 @@
 			<skill id="239" level="10" cost="0" name="Expertise R99" min_level="99" />
 			<skill id="8606" level="1" cost="10000000" name="Summon Swift Melody" min_level="85" />
 		</class>
-		<class id="174"> <!-- Iss Dominator -->
+		<class id="174">
+			<!-- Iss Dominator -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="11501" level="1" cost="10000000" name="Superior Dual Weapon Mastery" min_level="85" />
 			<skill id="11502" level="1" cost="10000000" name="Superior Robe Mastery" min_level="85" />
@@ -23579,7 +23606,8 @@
 			<skill id="239" level="10" cost="0" name="Expertise R99" min_level="99" />
 			<skill id="8606" level="1" cost="10000000" name="Summon Swift Melody" min_level="85" />
 		</class>
-		<class id="175"> <!-- Iss Doomcryer -->
+		<class id="175">
+			<!-- Iss Doomcryer -->
 			<skill id="248" level="6" cost="0" name="Crystallize" min_level="85" />
 			<skill id="11501" level="1" cost="10000000" name="Superior Dual Weapon Mastery" min_level="85" />
 			<skill id="11502" level="1" cost="10000000" name="Superior Robe Mastery" min_level="85" />
@@ -23746,7 +23774,8 @@
 			<skill id="239" level="10" cost="0" name="Expertise R99" min_level="99" />
 			<skill id="8606" level="1" cost="10000000" name="Summon Swift Melody" min_level="85" />
 		</class>
-		<class id="176"> <!-- Wynn Arcana Lord -->
+		<class id="176">
+			<!-- Wynn Arcana Lord -->
 			<skill id="248" level="6" name="Crystallize" min_level="85"/>
 			<skill id="239" level="8" min_level="85" name="Expertise R"/>
 			<skill id="239" level="9" min_level="95" name="Expertise R95"/>
@@ -23936,7 +23965,8 @@
 			<skill id="11322" level="7" cost="5000000" name="Summon Wynn Feline Queen" min_level="97"/>
 			<skill id="11322" level="8" cost="5000000" name="Summon Wynn Feline Queen" min_level="99"/>			
 		</class>
-		<class id="177"> <!-- Wynn Elemental Master -->
+		<class id="177">
+			<!-- Wynn Elemental Master -->
 			<skill id="11330" level="1" cost="0" name="Summon Wynn Magnus" min_level="85"/>
 			<skill id="11330" level="2" cost="5000000" name="Summon Wynn Magnus" min_level="87"/>
 			<skill id="11330" level="3" cost="5000000" name="Summon Wynn Magnus" min_level="89"/>
@@ -24128,7 +24158,8 @@
 			<skill id="11296" level="6" cost="50000000" name="Mass Exile" min_level="99"/>
 			<skill id="11297" level="4" cost="50000000" name="Blessing of the Giants" min_level="99"/>
 		</class>
-		<class id="178"> <!-- Wynn Spectral Master -->
+		<class id="178">
+			<!-- Wynn Spectral Master -->
 			<skill id="11338" level="1" cost="0" name="Summon Wynn Nightshade" min_level="85"/>
 			<skill id="11338" level="2" cost="5000000" name="Summon Wynn Nightshade" min_level="87"/>
 			<skill id="11338" level="3" cost="5000000" name="Summon Wynn Nightshade" min_level="89"/>
@@ -24198,7 +24229,6 @@
 			<skill id="11309" level="1" cost="10000000" name="Mass Servitor Cleanse" min_level="85"/>
 			<skill id="11310" level="1" cost="10000000" name="Mass Servitor Ultimate Defense" min_level="85"/>
 			<skill id="11316" level="1" cost="10000000" name="Summon Soulshots" min_level="85"/>
-			<skill id="19086" level="1" cost="10000000" name="Wynn Ixion" min_level="85"/>
 			<skill id="11499" level="1" cost="0" name="Wynn Chain Air Blow" min_level="85"/>
 			<skill id="11500" level="1" cost="0" name="Wynn Chain Air Blow" min_level="85"/>
 			<skill id="11349" level="1" cost="10000000" name="Greater Servitor Might" min_level="85"/>
@@ -24304,7 +24334,6 @@
 			<skill id="11271" level="8" cost="50000000" name="Mark Retriever" min_level="98"/>
 			<skill id="11298" level="8" cost="50000000" name="Mark of Fire" min_level="98"/>
 			<skill id="11302" level="8" cost="50000000" name="Servitor Major Heal" min_level="98"/>
-			<skill id="11241" level="1" cost="50000000" name="Shadow Snare" min_level="99"/>
 			<skill id="11254" level="4" cost="50000000" name="Superior Summon Mastery" min_level="99"/>
 			<skill id="11256" level="8" cost="50000000" name="Summon Cute Bear" min_level="99"/>
 			<skill id="11257" level="8" cost="50000000" name="Summon Saber Tooth Cougar" min_level="99"/>
@@ -24320,7 +24349,8 @@
 			<skill id="11296" level="6" cost="50000000" name="Mass Exile" min_level="99"/>
 			<skill id="11297" level="4" cost="50000000" name="Blessing of the Giants" min_level="99"/>
 		</class>
-		<class id="179"> <!-- Aeore Cardinal -->
+		<class id="179">
+			<!-- Aeore Cardinal -->
 			<skill id="248" level="6" name="Crystallize" min_level="85"/>
 			<skill id="239" level="8" min_level="85" name="Expertise R"/>
 			<skill id="239" level="9" min_level="95" name="Expertise R95"/>
@@ -24514,7 +24544,8 @@
 			<skill id="11831" level="8" cost="50000000" name="Erase Impact" min_level="99"/>
 			<skill id="11746" level="1" cost="50000000" name="Superior Inquisition" min_level="85"/>
 		</class>
-		<class id="180"> <!-- Aeore Eva Saint -->
+		<class id="180">
+			<!-- Aeore Eva Saint -->
 			<skill id="248" level="6" name="Crystallize" min_level="85"/>
 			<skill id="239" level="8" min_level="85" name="Expertise R"/>
 			<skill id="239" level="9" min_level="95" name="Expertise R95"/>
@@ -24708,7 +24739,8 @@
 			<skill id="11831" level="8" cost="50000000" name="Erase Impact" min_level="99"/>
 			<skill id="11746" level="1" cost="50000000" name="Superior Inquisition" min_level="85"/>
 		</class>
-		<class id="181"> <!-- Aeore Shillen Saint -->
+		<class id="181">
+			<!-- Aeore Shillen Saint -->
 			<skill id="248" level="6" name="Crystallize" min_level="85"/>
 			<skill id="239" level="8" min_level="85" name="Expertise R"/>
 			<skill id="239" level="9" min_level="95" name="Expertise R95"/>

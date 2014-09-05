@@ -369,6 +369,10 @@
 		<equip>
 			<slot id="BACK"/>
 		</equip>
+		<skills>
+			<skill id="19039" level="1"/>
+			<skill id="19041" level="1"/>
+		</skills>
 		<for>
 			<add stat="pDef" order="0x10" value="50"/>
 			<add stat="mDef" order="0x10" value="40"/>
@@ -388,6 +392,10 @@
 		<equip>
 			<slot id="BACK"/>
 		</equip>
+		<skills>
+			<skill id="19040" level="1"/>
+			<skill id="19041" level="1"/>
+		</skills>
 		<for>
 			<add stat="pDef" order="0x10" value="50"/>
 			<add stat="mDef" order="0x10" value="40"/>
@@ -1385,6 +1393,7 @@
 		</equip>
 		<skills>
 			<skill id="19037" level="1"/>
+			<skill id="19042" level="1"/>
 		</skills>
 		<for>
 			<add stat="pDef" order="0x10" value="50"/>
@@ -1405,7 +1414,8 @@
 			<slot id="BACK"/>
 		</equip>
 		<skills>
-			<skill id="19037" level="1"/>
+			<skill id="19038" level="1"/>
+			<skill id="19042" level="1"/>
 		</skills>
 		<for>
 			<add stat="pDef" order="0x10" value="50"/>
