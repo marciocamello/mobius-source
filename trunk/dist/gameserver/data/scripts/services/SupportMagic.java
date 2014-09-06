@@ -27,7 +27,6 @@ import lineage2.gameserver.tables.SkillTable;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public final class SupportMagic extends Functions
 {
@@ -35,34 +34,50 @@ public final class SupportMagic extends Functions
 	private final static int maxSupLvl = 85;
 	
 	// @formatter:off
-	private static final int[][] _mageBuff = new int[][] {{minSupLvl, maxSupLvl, 15642, 1}, {minSupLvl, maxSupLvl, 15643, 1}, {minSupLvl, maxSupLvl, 15644, 1}, {minSupLvl, maxSupLvl, 15645, 1}, {minSupLvl, maxSupLvl, 15646, 1}, {minSupLvl, maxSupLvl, 15647, 1}, {minSupLvl, maxSupLvl, 15651, 1}, {minSupLvl, maxSupLvl, 15652, 1}, {minSupLvl, maxSupLvl, 15653, 1}};
-	private static final int[][] _warrBuff = new int[][] {{minSupLvl, maxSupLvl, 15642, 1}, {minSupLvl, maxSupLvl, 15643, 1}, {minSupLvl, maxSupLvl, 15644, 1}, {minSupLvl, maxSupLvl, 15645, 1}, {minSupLvl, maxSupLvl, 15646, 1}, {minSupLvl, maxSupLvl, 15647, 1}, {minSupLvl, maxSupLvl, 15651, 1}, {minSupLvl, maxSupLvl, 15652, 1}, {minSupLvl, maxSupLvl, 15653, 1}};
-	private static final int[][] _summonBuff = new int[][] {{minSupLvl, maxSupLvl, 15642, 1}, {minSupLvl, maxSupLvl, 15643, 1}, {minSupLvl, maxSupLvl, 15644, 1}, {minSupLvl, maxSupLvl, 15645, 1}, {minSupLvl, maxSupLvl, 15646, 1}, {minSupLvl, maxSupLvl, 15647, 1}, {minSupLvl, maxSupLvl, 15651, 1}, {minSupLvl, maxSupLvl, 15652, 1}, {minSupLvl, maxSupLvl, 15653, 1}};
+	private static final int[][] _buffList = new int[][] {{minSupLvl, maxSupLvl, 15642, 1}, {minSupLvl, maxSupLvl, 15643, 1}, {minSupLvl, maxSupLvl, 15644, 1}, {minSupLvl, maxSupLvl, 15645, 1}, {minSupLvl, maxSupLvl, 15646, 1}, {minSupLvl, maxSupLvl, 15647, 1}, {minSupLvl, maxSupLvl, 15651, 1}, {minSupLvl, maxSupLvl, 15652, 1}, {minSupLvl, maxSupLvl, 15653, 1}};
+	private static final int[] _mageBuff = new int[] {minSupLvl, maxSupLvl, 15650, 1};
+	private static final int[] _warrBuff = new int[] {minSupLvl, maxSupLvl, 15649, 1};
+	private static final int[] _knightBuff = new int[] {minSupLvl, maxSupLvl, 15648, 1};
 	// @formatter:on
 	
-	/**
-	 * Method getSupportMagic.
-	 */
-	public void getSupportMagic()
+	public static void getSupportMagic(NpcInstance npc, Player player)
+	{
+		if (!player.isMageClass() || (player.getTemplate().getRace() == Race.orc))
+		{
+			castSupportMagic(npc, player, _warrBuff, false);
+		}
+		else
+		{
+			castSupportMagic(npc, player, _mageBuff, false);
+		}
+	}
+	
+	public void getSupportMagicWizard()
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
-		doSupportMagic(npc, player, false);
+		castSupportMagic(npc, player, _mageBuff, false);
 	}
 	
-	/**
-	 * Method getSupportServitorMagic.
-	 */
-	public void getSupportServitorMagic()
+	public void getSupportMagicWarrior()
 	{
 		Player player = getSelf();
 		NpcInstance npc = getNpc();
-		doSupportMagic(npc, player, true);
+		castSupportMagic(npc, player, _warrBuff, false);
 	}
 	
-	/**
-	 * Method getProtectionBlessing.
-	 */
+	public void getSupportMagicKnight()
+	{
+		Player player = getSelf();
+		NpcInstance npc = getNpc();
+		castSupportMagic(npc, player, _knightBuff, false);
+	}
+	
+	public static void getSupportServitorMagic(NpcInstance npc, Player player)
+	{
+		castSupportMagic(npc, player, null, true);
+	}
+	
 	public void getProtectionBlessing()
 	{
 		Player player = getSelf();
@@ -82,13 +97,7 @@ public final class SupportMagic extends Functions
 		npc.doCast(SkillTable.getInstance().getInfo(5182, 1), player, true);
 	}
 	
-	/**
-	 * Method doSupportMagic.
-	 * @param npc NpcInstance
-	 * @param player Player
-	 * @param servitor boolean
-	 */
-	public static void doSupportMagic(NpcInstance npc, Player player, boolean servitor)
+	private static void castSupportMagic(NpcInstance npc, Player player, int[] extraBuff, Boolean isServitor)
 	{
 		if (player.isCursedWeaponEquipped())
 		{
@@ -96,12 +105,6 @@ public final class SupportMagic extends Functions
 		}
 		
 		int lvl = player.getLevel();
-		
-		if (servitor && (player.getSummonList().getFirstServitor() == null))
-		{
-			show("default/newbie_nosupport_servitor.htm", player, npc);
-			return;
-		}
 		
 		if (lvl < minSupLvl)
 		{
@@ -117,13 +120,19 @@ public final class SupportMagic extends Functions
 		
 		List<Creature> target = new ArrayList<>();
 		
-		if (servitor)
+		if (isServitor)
 		{
+			if (player.getSummonList().getFirstServitor() == null)
+			{
+				show("default/newbie_nosupport_servitor.htm", player, npc);
+				return;
+			}
+			
 			for (Summon summon : player.getSummonList())
 			{
 				target.add(summon);
 				
-				for (int[] buff : _summonBuff)
+				for (int[] buff : _buffList)
 				{
 					if ((lvl >= buff[0]) && (lvl <= buff[1]))
 					{
@@ -137,27 +146,19 @@ public final class SupportMagic extends Functions
 		{
 			target.add(player);
 			
-			if (!player.isMageClass() || (player.getTemplate().getRace() == Race.orc))
+			for (int[] buff : _buffList)
 			{
-				for (int[] buff : _warrBuff)
+				if ((lvl >= buff[0]) && (lvl <= buff[1]))
 				{
-					if ((lvl >= buff[0]) && (lvl <= buff[1]))
-					{
-						npc.broadcastPacket(new MagicSkillUse(npc, player, buff[2], buff[3], 0, 0));
-						npc.callSkill(SkillTable.getInstance().getInfo(buff[2], buff[3]), target, true);
-					}
+					npc.broadcastPacket(new MagicSkillUse(npc, player, buff[2], buff[3], 0, 0));
+					npc.callSkill(SkillTable.getInstance().getInfo(buff[2], buff[3]), target, true);
 				}
 			}
-			else
+			
+			if ((lvl >= extraBuff[0]) && (lvl <= extraBuff[1]))
 			{
-				for (int[] buff : _mageBuff)
-				{
-					if ((lvl >= buff[0]) && (lvl <= buff[1]))
-					{
-						npc.broadcastPacket(new MagicSkillUse(npc, player, buff[2], buff[3], 0, 0));
-						npc.callSkill(SkillTable.getInstance().getInfo(buff[2], buff[3]), target, true);
-					}
-				}
+				npc.broadcastPacket(new MagicSkillUse(npc, player, extraBuff[2], extraBuff[3], 0, 0));
+				npc.callSkill(SkillTable.getInstance().getInfo(extraBuff[2], extraBuff[3]), target, true);
 			}
 		}
 	}

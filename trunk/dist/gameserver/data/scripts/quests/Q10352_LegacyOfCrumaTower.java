@@ -67,12 +67,12 @@ public class Q10352_LegacyOfCrumaTower extends Quest implements ScriptFile
 		
 		if (event.equalsIgnoreCase("33155-9.htm"))
 		{
-			SupportMagic.doSupportMagic(npc, player, false);
+			SupportMagic.getSupportMagic(npc, player);
 		}
 		
 		if (event.equalsIgnoreCase("33155-10.htm"))
 		{
-			SupportMagic.doSupportMagic(npc, player, true);
+			SupportMagic.getSupportServitorMagic(npc, player);
 		}
 		
 		if (event.equalsIgnoreCase("advanceCond3"))
