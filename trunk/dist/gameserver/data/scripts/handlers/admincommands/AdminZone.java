@@ -33,29 +33,27 @@ import lineage2.gameserver.templates.mapregion.DomainArea;
  */
 public class AdminZone implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_zone_check,
-		admin_region,
-		admin_pos,
-		admin_vis_count,
-		admin_domain
-	}
+		"admin_zone_check",
+		"admin_region",
+		"admin_pos",
+		"admin_vis_count",
+		"admin_domain"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if ((activeChar == null) || !activeChar.getPlayerAccess().CanTeleport)
 		{
 			return false;
@@ -63,7 +61,7 @@ public class AdminZone implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_zone_check:
+			case "admin_zone_check":
 			{
 				activeChar.sendMessage("Current region: " + activeChar.getCurrentRegion());
 				activeChar.sendMessage("Zone list:");
@@ -78,7 +76,7 @@ public class AdminZone implements IAdminCommandHandler, ScriptFile
 				break;
 			}
 			
-			case admin_region:
+			case "admin_region":
 			{
 				activeChar.sendMessage("Current region: " + activeChar.getCurrentRegion());
 				activeChar.sendMessage("Objects list:");
@@ -94,21 +92,21 @@ public class AdminZone implements IAdminCommandHandler, ScriptFile
 				break;
 			}
 			
-			case admin_vis_count:
+			case "admin_vis_count":
 			{
 				activeChar.sendMessage("Current region: " + activeChar.getCurrentRegion());
 				activeChar.sendMessage("Players count: " + World.getAroundPlayers(activeChar).size());
 				break;
 			}
 			
-			case admin_pos:
+			case "admin_pos":
 			{
 				String pos = activeChar.getX() + ", " + activeChar.getY() + ", " + activeChar.getZ() + ", " + activeChar.getHeading() + " Geo [" + ((activeChar.getX() - World.MAP_MIN_X) >> 4) + ", " + ((activeChar.getY() - World.MAP_MIN_Y) >> 4) + "] Ref " + activeChar.getReflectionId();
 				activeChar.sendMessage("Pos: " + pos);
 				break;
 			}
 			
-			case admin_domain:
+			case "admin_domain":
 			{
 				DomainArea domain = MapRegionManager.getInstance().getRegionData(DomainArea.class, activeChar);
 				Castle castle = domain != null ? ResidenceHolder.getInstance().getResidence(Castle.class, domain.getId()) : null;
@@ -129,13 +127,13 @@ public class AdminZone implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

@@ -33,24 +33,24 @@ import lineage2.gameserver.utils.Location;
 @SuppressWarnings("unused")
 public class AdminMonsterRace implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_mons
-	}
+		"admin_mons"
+	};
 	
 	static int state = -1;
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
 		if (fullString.equalsIgnoreCase("admin_mons"))
 		{
@@ -63,16 +63,6 @@ public class AdminMonsterRace implements IAdminCommandHandler, ScriptFile
 		}
 		
 		return true;
-	}
-	
-	/**
-	 * Method getAdminCommandEnum.
-	 * @return Enum[] * @see lineage2.gameserver.handlers.admincommands.IAdminCommandHandler#getAdminCommandEnum()
-	 */
-	@Override
-	public Enum<?>[] getAdminCommandEnum()
-	{
-		return Commands.values();
 	}
 	
 	/**
@@ -178,6 +168,17 @@ public class AdminMonsterRace implements IAdminCommandHandler, ScriptFile
 			
 			state = -1;
 		}
+	}
+	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
+	 */
+	@Override
+	public String[] getAdminCommandList()
+	{
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

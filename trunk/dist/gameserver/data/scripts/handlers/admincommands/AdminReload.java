@@ -44,43 +44,41 @@ import lineage2.gameserver.utils.Strings;
  */
 public class AdminReload implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_reload,
-		admin_reload_config,
-		admin_reload_multisell,
-		admin_reload_gmaccess,
-		admin_reload_htm,
-		admin_reload_qs,
-		admin_reload_qs_help,
-		admin_reload_skills,
-		admin_reload_npc,
-		admin_reload_spawn,
-		admin_reload_fish,
-		admin_reload_abuse,
-		admin_reload_translit,
-		admin_reload_shops,
-		admin_reload_static,
-		admin_reload_pets,
-		admin_reload_locale,
-		admin_reload_nobles,
-		admin_reload_im
-	}
+		"admin_reload",
+		"admin_reload_config",
+		"admin_reload_multisell",
+		"admin_reload_gmaccess",
+		"admin_reload_htm",
+		"admin_reload_qs",
+		"admin_reload_qs_help",
+		"admin_reload_skills",
+		"admin_reload_npc",
+		"admin_reload_spawn",
+		"admin_reload_fish",
+		"admin_reload_abuse",
+		"admin_reload_translit",
+		"admin_reload_shops",
+		"admin_reload_static",
+		"admin_reload_pets",
+		"admin_reload_locale",
+		"admin_reload_nobles",
+		"admin_reload_im"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().CanReload)
 		{
 			return false;
@@ -88,10 +86,10 @@ public class AdminReload implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_reload:
+			case "admin_reload":
 				break;
 			
-			case admin_reload_config:
+			case "admin_reload_config":
 			{
 				try
 				{
@@ -107,7 +105,7 @@ public class AdminReload implements IAdminCommandHandler, ScriptFile
 				break;
 			}
 			
-			case admin_reload_multisell:
+			case "admin_reload_multisell":
 			{
 				try
 				{
@@ -122,7 +120,7 @@ public class AdminReload implements IAdminCommandHandler, ScriptFile
 				break;
 			}
 			
-			case admin_reload_gmaccess:
+			case "admin_reload_gmaccess":
 			{
 				try
 				{
@@ -149,14 +147,14 @@ public class AdminReload implements IAdminCommandHandler, ScriptFile
 				break;
 			}
 			
-			case admin_reload_htm:
+			case "admin_reload_htm":
 			{
 				HtmCache.getInstance().clear();
 				activeChar.sendMessage("HTML cache clearned.");
 				break;
 			}
 			
-			case admin_reload_qs:
+			case "admin_reload_qs":
 			{
 				if (fullString.endsWith("all"))
 				{
@@ -183,7 +181,7 @@ public class AdminReload implements IAdminCommandHandler, ScriptFile
 				break;
 			}
 			
-			case admin_reload_qs_help:
+			case "admin_reload_qs_help":
 			{
 				activeChar.sendMessage("");
 				activeChar.sendMessage("Quest Help:");
@@ -195,19 +193,19 @@ public class AdminReload implements IAdminCommandHandler, ScriptFile
 				break;
 			}
 			
-			case admin_reload_skills:
+			case "admin_reload_skills":
 			{
 				SkillTable.getInstance().reload();
 				break;
 			}
 			
-			case admin_reload_npc:
+			case "admin_reload_npc":
 			{
 				NpcParser.getInstance().reload();
 				break;
 			}
 			
-			case admin_reload_spawn:
+			case "admin_reload_spawn":
 			{
 				ThreadPoolManager.getInstance().execute(new RunnableImpl()
 				{
@@ -220,55 +218,55 @@ public class AdminReload implements IAdminCommandHandler, ScriptFile
 				break;
 			}
 			
-			case admin_reload_fish:
+			case "admin_reload_fish":
 			{
 				FishTable.getInstance().reload();
 				break;
 			}
 			
-			case admin_reload_abuse:
+			case "admin_reload_abuse":
 			{
 				Config.abuseLoad();
 				break;
 			}
 			
-			case admin_reload_translit:
+			case "admin_reload_translit":
 			{
 				Strings.reload();
 				break;
 			}
 			
-			case admin_reload_shops:
+			case "admin_reload_shops":
 			{
 				BuyListHolder.reload();
 				break;
 			}
 			
-			case admin_reload_static:
+			case "admin_reload_static":
 			{
 				break;
 			}
 			
-			case admin_reload_pets:
+			case "admin_reload_pets":
 			{
 				PetDataTable.getInstance().reload();
 				break;
 			}
 			
-			case admin_reload_locale:
+			case "admin_reload_locale":
 			{
 				StringHolder.getInstance().reload();
 				break;
 			}
 			
-			case admin_reload_nobles:
+			case "admin_reload_nobles":
 			{
 				OlympiadNobleDAO.getInstance().select();
 				OlympiadDatabase.loadNoblesRank();
 				break;
 			}
 			
-			case admin_reload_im:
+			case "admin_reload_im":
 			{
 				ProductHolder.getInstance().reload();
 				break;
@@ -295,13 +293,13 @@ public class AdminReload implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

@@ -31,24 +31,23 @@ import org.apache.commons.lang3.math.NumberUtils;
  */
 public class AdminDelete implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_delete
-	}
+		"admin_delete"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().CanEditNPC)
 		{
 			return false;
@@ -56,7 +55,7 @@ public class AdminDelete implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_delete:
+			case "admin_delete":
 				GameObject obj = wordList.length == 1 ? activeChar.getTarget() : GameObjectsStorage.getNpc(NumberUtils.toInt(wordList[1]));
 				
 				if ((obj != null) && obj.isNpc())
@@ -85,13 +84,13 @@ public class AdminDelete implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

@@ -28,30 +28,28 @@ import lineage2.gameserver.utils.ItemFunctions;
  */
 public class AdminCursedWeapons implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_cw_info,
-		admin_cw_remove,
-		admin_cw_goto,
-		admin_cw_reload,
-		admin_cw_add,
-		admin_cw_drop
-	}
+		"admin_cw_info",
+		"admin_cw_remove",
+		"admin_cw_goto",
+		"admin_cw_reload",
+		"admin_cw_add",
+		"admin_cw_drop"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().Menu)
 		{
 			return false;
@@ -62,10 +60,10 @@ public class AdminCursedWeapons implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_cw_remove:
-			case admin_cw_goto:
-			case admin_cw_add:
-			case admin_cw_drop:
+			case "admin_cw_remove":
+			case "admin_cw_goto":
+			case "admin_cw_add":
+			case "admin_cw_drop":
 				if (wordList.length < 2)
 				{
 					activeChar.sendMessage("Вы не указали id");
@@ -94,7 +92,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_cw_info:
+			case "admin_cw_info":
 				activeChar.sendMessage("======= Cursed Weapons: =======");
 				
 				for (CursedWeapon c : cwm.getCursedWeapons())
@@ -123,11 +121,11 @@ public class AdminCursedWeapons implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_cw_reload:
+			case "admin_cw_reload":
 				activeChar.sendMessage("Cursed weapons can't be reloaded.");
 				break;
 			
-			case admin_cw_remove:
+			case "admin_cw_remove":
 				if (cw == null)
 				{
 					return false;
@@ -136,7 +134,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler, ScriptFile
 				CursedWeaponsManager.getInstance().endOfLife(cw);
 				break;
 			
-			case admin_cw_goto:
+			case "admin_cw_goto":
 				if (cw == null)
 				{
 					return false;
@@ -145,7 +143,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler, ScriptFile
 				activeChar.teleToLocation(cw.getLoc());
 				break;
 			
-			case admin_cw_add:
+			case "admin_cw_add":
 				if (cw == null)
 				{
 					return false;
@@ -170,7 +168,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_cw_drop:
+			case "admin_cw_drop":
 				if (cw == null)
 				{
 					return false;
@@ -194,23 +192,18 @@ public class AdminCursedWeapons implements IAdminCommandHandler, ScriptFile
 				break;
 		}
 		
-		/**
-		 * Method getAdminCommandEnum.
-		 * @return Enum[]
-		 * @see lineage2.gameserver.handlers.admincommands.IAdminCommandHandler#getAdminCommandEnum()
-		 */
-		/**
-		 * Method getAdminCommandEnum.
-		 * @return Enum[]
-		 * @see lineage2.gameserver.handlers.admincommands.IAdminCommandHandler#getAdminCommandEnum()
-		 */
 		return true;
 	}
 	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
+	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

@@ -43,43 +43,44 @@ import lineage2.gameserver.utils.Log;
  */
 public class AdminBan implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_ban,
-		admin_unban,
-		admin_cban,
-		admin_chatban,
-		admin_chatunban,
-		admin_accban,
-		admin_accunban,
-		admin_trade_ban,
-		admin_trade_unban,
-		admin_jail,
-		admin_unjail,
-		admin_permaban
-	}
+		"admin_ban",
+		"admin_unban",
+		"admin_cban",
+		"admin_chatban",
+		"admin_chatunban",
+		"admin_accban",
+		"admin_accunban",
+		"admin_trade_ban",
+		"admin_trade_unban",
+		"admin_jail",
+		"admin_unjail",
+		"admin_permaban"
+	};
 	
 	/**
 	 * Method useAdminCommand.
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
 		StringTokenizer st = new StringTokenizer(fullString);
 		
 		if (activeChar.getPlayerAccess().CanTradeBanUnban)
 		{
 			switch (command)
 			{
-				case admin_trade_ban:
+				case "admin_trade_ban":
 					return tradeBan(st, activeChar);
 					
-				case admin_trade_unban:
+				case "admin_trade_unban":
 					return tradeUnban(st, activeChar);
 					
 				default:
@@ -91,11 +92,11 @@ public class AdminBan implements IAdminCommandHandler, ScriptFile
 		{
 			switch (command)
 			{
-				case admin_ban:
+				case "admin_ban":
 					ban(st, activeChar);
 					break;
 				
-				case admin_accban:
+				case "admin_accban":
 				{
 					st.nextToken();
 					int level = 0;
@@ -128,7 +129,7 @@ public class AdminBan implements IAdminCommandHandler, ScriptFile
 					break;
 				}
 				
-				case admin_accunban:
+				case "admin_accunban":
 				{
 					st.nextToken();
 					String account = st.nextToken();
@@ -136,13 +137,13 @@ public class AdminBan implements IAdminCommandHandler, ScriptFile
 					break;
 				}
 				
-				case admin_trade_ban:
+				case "admin_trade_ban":
 					return tradeBan(st, activeChar);
 					
-				case admin_trade_unban:
+				case "admin_trade_unban":
 					return tradeUnban(st, activeChar);
 					
-				case admin_chatban:
+				case "admin_chatban":
 					try
 					{
 						st.nextToken();
@@ -167,7 +168,7 @@ public class AdminBan implements IAdminCommandHandler, ScriptFile
 					
 					break;
 				
-				case admin_chatunban:
+				case "admin_chatunban":
 					try
 					{
 						st.nextToken();
@@ -189,7 +190,7 @@ public class AdminBan implements IAdminCommandHandler, ScriptFile
 					
 					break;
 				
-				case admin_jail:
+				case "admin_jail":
 					try
 					{
 						st.nextToken();
@@ -227,7 +228,7 @@ public class AdminBan implements IAdminCommandHandler, ScriptFile
 					
 					break;
 				
-				case admin_unjail:
+				case "admin_unjail":
 					try
 					{
 						st.nextToken();
@@ -258,11 +259,11 @@ public class AdminBan implements IAdminCommandHandler, ScriptFile
 					
 					break;
 				
-				case admin_cban:
+				case "admin_cban":
 					activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/cban.htm"));
 					break;
 				
-				case admin_permaban:
+				case "admin_permaban":
 					if ((activeChar.getTarget() == null) || !activeChar.getTarget().isPlayer())
 					{
 						Functions.sendDebugMessage(activeChar, "Target should be set and be a player instance");
@@ -505,13 +506,13 @@ public class AdminBan implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

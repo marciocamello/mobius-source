@@ -28,25 +28,24 @@ import lineage2.gameserver.utils.Util;
  */
 public class AdminNochannel implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_nochannel,
-		admin_nc
-	}
+		"admin_nochannel",
+		"admin_nc"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().CanBanChat)
 		{
 			return false;
@@ -128,8 +127,8 @@ public class AdminNochannel implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_nochannel:
-			case admin_nc:
+			case "admin_nochannel":
+			case "admin_nc":
 			{
 				if (wordList.length < 2)
 				{
@@ -168,13 +167,13 @@ public class AdminNochannel implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

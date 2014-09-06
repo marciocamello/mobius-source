@@ -26,27 +26,25 @@ import org.apache.commons.lang3.math.NumberUtils;
  */
 public class AdminHellbound implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_hbadd,
-		admin_hbsub,
-		admin_hbset,
-	}
+		"admin_hbadd",
+		"admin_hbsub",
+		"admin_hbset",
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().Menu)
 		{
 			return false;
@@ -54,19 +52,19 @@ public class AdminHellbound implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_hbadd:
+			case "admin_hbadd":
 				HellboundManager.addConfidence(Long.parseLong(wordList[1]));
 				activeChar.sendMessage("Added " + NumberUtils.toInt(wordList[1], 1) + " to Hellbound confidence");
 				activeChar.sendMessage("Hellbound confidence is now " + HellboundManager.getConfidence());
 				break;
 			
-			case admin_hbsub:
+			case "admin_hbsub":
 				HellboundManager.reduceConfidence(Long.parseLong(wordList[1]));
 				activeChar.sendMessage("Reduced confidence by " + NumberUtils.toInt(wordList[1], 1));
 				activeChar.sendMessage("Hellbound confidence is now " + HellboundManager.getConfidence());
 				break;
 			
-			case admin_hbset:
+			case "admin_hbset":
 				HellboundManager.setConfidence(Long.parseLong(wordList[1]));
 				activeChar.sendMessage("Hellbound confidence is now " + HellboundManager.getConfidence());
 				break;
@@ -77,13 +75,13 @@ public class AdminHellbound implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

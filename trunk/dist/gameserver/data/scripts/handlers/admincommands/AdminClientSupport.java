@@ -40,30 +40,29 @@ public final class AdminClientSupport implements IAdminCommandHandler, ScriptFil
 {
 	private static final Logger _log = LoggerFactory.getLogger(AdminClientSupport.class);
 	
-	private enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_setskill,
-		admin_summon
-	}
+		"admin_setskill",
+		"admin_summon"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param player Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player player)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player player)
 	{
-		final Commands c = (Commands) comm;
 		GameObject target = player.getTarget();
 		
-		switch (c)
+		switch (command)
 		{
-			case admin_setskill:
+			case "admin_setskill":
 				if (wordList.length != 3)
 				{
 					return false;
@@ -93,7 +92,7 @@ public final class AdminClientSupport implements IAdminCommandHandler, ScriptFil
 				
 				break;
 			
-			case admin_summon:
+			case "admin_summon":
 				if (wordList.length != 3)
 				{
 					return false;
@@ -177,13 +176,13 @@ public final class AdminClientSupport implements IAdminCommandHandler, ScriptFil
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

@@ -28,28 +28,26 @@ import lineage2.gameserver.utils.GameStats;
  */
 public class AdminShop implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_buy,
-		admin_gmshop,
-		admin_tax,
-		admin_taxclear
-	}
+		"admin_buy",
+		"admin_gmshop",
+		"admin_tax",
+		"admin_taxclear"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().UseGMShop)
 		{
 			return false;
@@ -57,7 +55,7 @@ public class AdminShop implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_buy:
+			case "admin_buy":
 				try
 				{
 					handleBuyRequest(activeChar, fullString.substring(10));
@@ -69,31 +67,21 @@ public class AdminShop implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_gmshop:
+			case "admin_gmshop":
 				activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/gmshops.htm"));
 				break;
 			
-			case admin_tax:
+			case "admin_tax":
 				activeChar.sendMessage("TaxSum: " + GameStats.getTaxSum());
 				break;
 			
-			case admin_taxclear:
+			case "admin_taxclear":
 				GameStats.addTax(-GameStats.getTaxSum());
 				activeChar.sendMessage("TaxSum: " + GameStats.getTaxSum());
 				break;
 		}
 		
 		return true;
-	}
-	
-	/**
-	 * Method getAdminCommandEnum.
-	 * @return Enum[] * @see lineage2.gameserver.handlers.admincommands.IAdminCommandHandler#getAdminCommandEnum()
-	 */
-	@Override
-	public Enum<?>[] getAdminCommandEnum()
-	{
-		return Commands.values();
 	}
 	
 	/**
@@ -122,6 +110,17 @@ public class AdminShop implements IAdminCommandHandler, ScriptFile
 		}
 		
 		activeChar.sendActionFailed();
+	}
+	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
+	 */
+	@Override
+	public String[] getAdminCommandList()
+	{
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

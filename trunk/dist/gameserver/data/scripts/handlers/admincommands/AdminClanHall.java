@@ -31,28 +31,26 @@ import lineage2.gameserver.tables.ClanTable;
  */
 public class AdminClanHall implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_clanhall,
-		admin_clanhallset,
-		admin_clanhalldel,
-		admin_clanhallteleportself
-	}
+		"admin_clanhall",
+		"admin_clanhallset",
+		"admin_clanhalldel",
+		"admin_clanhallteleportself"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().CanEditNPC)
 		{
 			return false;
@@ -73,11 +71,11 @@ public class AdminClanHall implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_clanhall:
+			case "admin_clanhall":
 				showClanHallSelectPage(activeChar);
 				break;
 			
-			case admin_clanhallset:
+			case "admin_clanhallset":
 				GameObject target = activeChar.getTarget();
 				Player player = activeChar;
 				
@@ -97,11 +95,11 @@ public class AdminClanHall implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_clanhalldel:
+			case "admin_clanhalldel":
 				clanhall.changeOwner(null);
 				break;
 			
-			case admin_clanhallteleportself:
+			case "admin_clanhallteleportself":
 				Zone zone = clanhall.getZone();
 				
 				if (zone != null)
@@ -188,13 +186,13 @@ public class AdminClanHall implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

@@ -52,48 +52,48 @@ import lineage2.gameserver.utils.Util;
  */
 public class AdminEditChar implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_edit_character,
-		admin_character_actions,
-		admin_current_player,
-		admin_nokarma,
-		admin_setkarma,
-		admin_character_list,
-		admin_show_characters,
-		admin_find_character,
-		admin_save_modifications,
-		admin_rec,
-		admin_settitle,
-		admin_setclass,
-		admin_setname,
-		admin_setsex,
-		admin_setcolor,
-		admin_add_exp_sp_to_character,
-		admin_add_exp_sp,
-		admin_sethero,
-		admin_setnoble,
-		admin_trans,
-		admin_setsubclass,
-		admin_setfame,
-		admin_setbday,
-		admin_give_item,
-		admin_add_bang,
-		admin_set_bang,
-		admin_reset_mentor_penalty,
-		admin_fullfood
-	}
+		"admin_edit_character",
+		"admin_character_actions",
+		"admin_current_player",
+		"admin_nokarma",
+		"admin_setkarma",
+		"admin_character_list",
+		"admin_show_characters",
+		"admin_find_character",
+		"admin_save_modifications",
+		"admin_rec",
+		"admin_settitle",
+		"admin_setclass",
+		"admin_setname",
+		"admin_setsex",
+		"admin_setcolor",
+		"admin_add_exp_sp_to_character",
+		"admin_add_exp_sp",
+		"admin_sethero",
+		"admin_setnoble",
+		"admin_trans",
+		"admin_setsubclass",
+		"admin_setfame",
+		"admin_setbday",
+		"admin_give_item",
+		"admin_add_bang",
+		"admin_set_bang",
+		"admin_reset_mentor_penalty",
+		"admin_fullfood"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
 		if (activeChar.getPlayerAccess().CanRename)
 		{
@@ -734,17 +734,6 @@ public class AdminEditChar implements IAdminCommandHandler, ScriptFile
 	}
 	
 	/**
-	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
-	 */
-	@Override
-	public Enum<?>[] getAdminCommandEnum()
-	{
-		return Commands.values();
-	}
-	
-	/**
 	 * Method listCharacters.
 	 * @param activeChar Player
 	 * @param page int
@@ -1334,6 +1323,17 @@ public class AdminEditChar implements IAdminCommandHandler, ScriptFile
 		{
 			_player.setTransformation(0);
 		}
+	}
+	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
+	 */
+	@Override
+	public String[] getAdminCommandList()
+	{
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

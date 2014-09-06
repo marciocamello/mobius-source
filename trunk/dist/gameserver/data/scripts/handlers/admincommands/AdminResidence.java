@@ -46,32 +46,30 @@ import npc.model.residences.fortress.siege.PowerControlUnitInstance;
  */
 public final class AdminResidence implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_residence_list,
-		admin_residence,
-		admin_set_owner,
-		admin_set_siege_time,
-		admin_quick_siege_start,
-		admin_quick_siege_stop,
-		admin_backup_unit_info,
-		admin_fortress_spawn_flags
-	}
+		"admin_residence_list",
+		"admin_residence",
+		"admin_set_owner",
+		"admin_set_siege_time",
+		"admin_quick_siege_start",
+		"admin_quick_siege_stop",
+		"admin_backup_unit_info",
+		"admin_fortress_spawn_flags"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		final Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().CanEditNPC)
 		{
 			return false;
@@ -84,7 +82,7 @@ public final class AdminResidence implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_residence_list:
+			case "admin_residence_list":
 				msg = new NpcHtmlMessage(5);
 				msg.setFile("admin/residence/residence_list.htm");
 				final StringBuilder replyMSG = new StringBuilder(200);
@@ -115,7 +113,7 @@ public final class AdminResidence implements IAdminCommandHandler, ScriptFile
 				activeChar.sendPacket(msg);
 				break;
 			
-			case admin_residence:
+			case "admin_residence":
 				if (wordList.length != 2)
 				{
 					return false;
@@ -161,7 +159,7 @@ public final class AdminResidence implements IAdminCommandHandler, ScriptFile
 				activeChar.sendPacket(msg);
 				break;
 			
-			case admin_set_owner:
+			case "admin_set_owner":
 				if (wordList.length != 3)
 				{
 					return false;
@@ -197,7 +195,7 @@ public final class AdminResidence implements IAdminCommandHandler, ScriptFile
 				event.reCalcNextTime(false);
 				break;
 			
-			case admin_set_siege_time:
+			case "admin_set_siege_time":
 				r = ResidenceHolder.getInstance().getResidence(Integer.parseInt(wordList[1]));
 				
 				if (r == null)
@@ -251,7 +249,7 @@ public final class AdminResidence implements IAdminCommandHandler, ScriptFile
 				AdminCommandHandler.getInstance().useAdminCommandHandler(activeChar, "admin_residence " + r.getId());
 				break;
 			
-			case admin_quick_siege_start:
+			case "admin_quick_siege_start":
 				r = ResidenceHolder.getInstance().getResidence(Integer.parseInt(wordList[1]));
 				
 				if (r == null)
@@ -275,7 +273,7 @@ public final class AdminResidence implements IAdminCommandHandler, ScriptFile
 				AdminCommandHandler.getInstance().useAdminCommandHandler(activeChar, "admin_residence " + r.getId());
 				break;
 			
-			case admin_quick_siege_stop:
+			case "admin_quick_siege_stop":
 				r = ResidenceHolder.getInstance().getResidence(Integer.parseInt(wordList[1]));
 				
 				if (r == null)
@@ -296,7 +294,7 @@ public final class AdminResidence implements IAdminCommandHandler, ScriptFile
 				AdminCommandHandler.getInstance().useAdminCommandHandler(activeChar, "admin_residence " + r.getId());
 				break;
 			
-			case admin_backup_unit_info:
+			case "admin_backup_unit_info":
 				final GameObject target = activeChar.getTarget();
 				
 				if (!(target instanceof PowerControlUnitInstance) && !(target instanceof BackupPowerUnitInstance))
@@ -324,7 +322,7 @@ public final class AdminResidence implements IAdminCommandHandler, ScriptFile
 				activeChar.sendMessage("Password: " + t.toString());
 				return true;
 				
-			case admin_fortress_spawn_flags:
+			case "admin_fortress_spawn_flags":
 				if (wordList.length != 2)
 				{
 					return false;
@@ -360,13 +358,13 @@ public final class AdminResidence implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

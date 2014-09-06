@@ -31,36 +31,34 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public class AdminAnnouncements implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_list_announcements,
-		admin_announce_announcements,
-		admin_add_announcement,
-		admin_del_announcement,
-		admin_announce,
-		admin_a,
-		admin_announce_menu,
-		admin_crit_announce,
-		admin_c,
-		admin_toscreen,
-		admin_s,
-		admin_reload_announcements
-	}
+		"admin_list_announcements",
+		"admin_announce_announcements",
+		"admin_add_announcement",
+		"admin_del_announcement",
+		"admin_announce",
+		"admin_a",
+		"admin_announce_menu",
+		"admin_crit_announce",
+		"admin_c",
+		"admin_toscreen",
+		"admin_s",
+		"admin_reload_announcements"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().CanAnnounce)
 		{
 			return false;
@@ -68,11 +66,11 @@ public class AdminAnnouncements implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_list_announcements:
+			case "admin_list_announcements":
 				listAnnouncements(activeChar);
 				break;
 			
-			case admin_announce_menu:
+			case "admin_announce_menu":
 				if ((fullString.length() > 20) && (fullString.length() <= 3020))
 				{
 					Announcements.getInstance().announceToAll(fullString.substring(20));
@@ -80,7 +78,7 @@ public class AdminAnnouncements implements IAdminCommandHandler, ScriptFile
 				listAnnouncements(activeChar);
 				break;
 			
-			case admin_announce_announcements:
+			case "admin_announce_announcements":
 				for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 				{
 					Announcements.getInstance().showAnnouncements(player);
@@ -89,7 +87,7 @@ public class AdminAnnouncements implements IAdminCommandHandler, ScriptFile
 				listAnnouncements(activeChar);
 				break;
 			
-			case admin_add_announcement:
+			case "admin_add_announcement":
 				if (wordList.length < 3)
 				{
 					return false;
@@ -115,7 +113,7 @@ public class AdminAnnouncements implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_del_announcement:
+			case "admin_del_announcement":
 				if (wordList.length != 2)
 				{
 					return false;
@@ -126,16 +124,16 @@ public class AdminAnnouncements implements IAdminCommandHandler, ScriptFile
 				listAnnouncements(activeChar);
 				break;
 			
-			case admin_announce:
+			case "admin_announce":
 				Announcements.getInstance().announceToAll(fullString.substring(15));
 				break;
 			
-			case admin_a:
+			case "dmin_a":
 				Announcements.getInstance().announceToAll(fullString.substring(8));
 				break;
 			
-			case admin_crit_announce:
-			case admin_c:
+			case "admin_crit_announce":
+			case "admin_c":
 				if (wordList.length < 2)
 				{
 					return false;
@@ -144,8 +142,8 @@ public class AdminAnnouncements implements IAdminCommandHandler, ScriptFile
 				Announcements.getInstance().announceToAll(activeChar.getName() + ": " + fullString.replaceFirst("admin_crit_announce ", "").replaceFirst("admin_c ", ""), ChatType.CRITICAL_ANNOUNCE);
 				break;
 			
-			case admin_toscreen:
-			case admin_s:
+			case "admin_toscreen":
+			case "admin_s":
 				if (wordList.length < 2)
 				{
 					return false;
@@ -162,7 +160,7 @@ public class AdminAnnouncements implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_reload_announcements:
+			case "admin_reload_announcements":
 				Announcements.getInstance().loadAnnouncements();
 				listAnnouncements(activeChar);
 				activeChar.sendMessage("Announcements reloaded.");
@@ -212,13 +210,13 @@ public class AdminAnnouncements implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

@@ -32,29 +32,29 @@ import lineage2.gameserver.utils.Location;
  */
 public class AdminMenu implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_char_manage,
-		admin_teleport_character_to_menu,
-		admin_recall_char_menu,
-		admin_goto_char_menu,
-		admin_kick_menu,
-		admin_kill_menu,
-		admin_ban_menu,
-		admin_unban_menu
-	}
+		"admin_char_manage",
+		"admin_teleport_character_to_menu",
+		"admin_recall_char_menu",
+		"admin_goto_char_menu",
+		"admin_kick_menu",
+		"admin_kill_menu",
+		"admin_ban_menu",
+		"admin_unban_menu"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
 		if (!activeChar.getPlayerAccess().Menu)
 		{
@@ -152,17 +152,6 @@ public class AdminMenu implements IAdminCommandHandler, ScriptFile
 	}
 	
 	/**
-	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
-	 */
-	@Override
-	public Enum<?>[] getAdminCommandEnum()
-	{
-		return Commands.values();
-	}
-	
-	/**
 	 * Method teleportCharacter.
 	 * @param player Player
 	 * @param loc Location
@@ -205,6 +194,17 @@ public class AdminMenu implements IAdminCommandHandler, ScriptFile
 			activeChar.teleToLocation(player.getLoc());
 			activeChar.sendMessage("You have teleported to character " + player.getName() + ".");
 		}
+	}
+	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
+	 */
+	@Override
+	public String[] getAdminCommandList()
+	{
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

@@ -39,52 +39,50 @@ import lineage2.gameserver.utils.Util;
  */
 public class AdminTeleport implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_show_moves,
-		admin_show_moves_other,
-		admin_show_teleport,
-		admin_teleport_to_character,
-		admin_teleportto,
-		admin_teleport_to,
-		admin_move_to,
-		admin_moveto,
-		admin_teleport,
-		admin_teleport_character,
-		admin_recall,
-		admin_walk,
-		admin_recall_npc,
-		admin_gonorth,
-		admin_gosouth,
-		admin_goeast,
-		admin_gowest,
-		admin_goup,
-		admin_godown,
-		admin_tele,
-		admin_teleto,
-		admin_tele_to,
-		admin_instant_move,
-		admin_tonpc,
-		admin_to_npc,
-		admin_toobject,
-		admin_setref,
-		admin_getref
-	}
+		"admin_show_moves",
+		"admin_show_moves_other",
+		"admin_show_teleport",
+		"admin_teleport_to_character",
+		"admin_teleportto",
+		"admin_teleport_to",
+		"admin_move_to",
+		"admin_moveto",
+		"admin_teleport",
+		"admin_teleport_character",
+		"admin_recall",
+		"admin_walk",
+		"admin_recall_npc",
+		"admin_gonorth",
+		"admin_gosouth",
+		"admin_goeast",
+		"admin_gowest",
+		"admin_goup",
+		"admin_godown",
+		"admin_tele",
+		"admin_teleto",
+		"admin_tele_to",
+		"admin_instant_move",
+		"admin_tonpc",
+		"admin_to_npc",
+		"admin_toobject",
+		"admin_setref",
+		"admin_getref"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().CanTeleport)
 		{
 			return false;
@@ -92,24 +90,24 @@ public class AdminTeleport implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_show_moves:
+			case "admin_show_moves":
 				activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/teleports.htm"));
 				break;
 			
-			case admin_show_moves_other:
+			case "admin_show_moves_other":
 				activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/tele/other.htm"));
 				break;
 			
-			case admin_show_teleport:
+			case "admin_show_teleport":
 				showTeleportCharWindow(activeChar);
 				break;
 			
-			case admin_teleport_to_character:
+			case "admin_teleport_to_character":
 				teleportToCharacter(activeChar, activeChar.getTarget());
 				break;
 			
-			case admin_teleport_to:
-			case admin_teleportto:
+			case "admin_teleport_to":
+			case "admin_teleportto":
 				if (wordList.length < 2)
 				{
 					activeChar.sendMessage("USAGE: //teleportto charName");
@@ -128,9 +126,9 @@ public class AdminTeleport implements IAdminCommandHandler, ScriptFile
 				teleportToCharacter(activeChar, cha);
 				break;
 			
-			case admin_move_to:
-			case admin_moveto:
-			case admin_teleport:
+			case "admin_move_to":
+			case "admin_moveto":
+			case "admin_teleport":
 				if (wordList.length < 2)
 				{
 					activeChar.sendMessage("USAGE: //teleport x y z [ref]");
@@ -140,7 +138,7 @@ public class AdminTeleport implements IAdminCommandHandler, ScriptFile
 				teleportTo(activeChar, activeChar, Util.joinStrings(" ", wordList, 1, 3), ((ArrayUtils.valid(wordList, 4) != null) && !ArrayUtils.valid(wordList, 4).isEmpty() ? Integer.parseInt(wordList[4]) : 0));
 				break;
 			
-			case admin_walk:
+			case "admin_walk":
 				if (wordList.length < 2)
 				{
 					activeChar.sendMessage("USAGE: //walk x y z");
@@ -159,53 +157,55 @@ public class AdminTeleport implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_gonorth:
-			case admin_gosouth:
-			case admin_goeast:
-			case admin_gowest:
-			case admin_goup:
-			case admin_godown:
+			case "admin_gonorth":
+			case "admin_gosouth":
+			case "admin_goeast":
+			case "admin_gowest":
+			case "admin_goup":
+			case "admin_godown":
 				int val = wordList.length < 2 ? 150 : Integer.parseInt(wordList[1]);
 				int x = activeChar.getX();
 				int y = activeChar.getY();
 				int z = activeChar.getZ();
 				
-				if (command == Commands.admin_goup)
+				switch (command)
 				{
-					z += val;
-				}
-				else if (command == Commands.admin_godown)
-				{
-					z -= val;
-				}
-				else if (command == Commands.admin_goeast)
-				{
-					x += val;
-				}
-				else if (command == Commands.admin_gowest)
-				{
-					x -= val;
-				}
-				else if (command == Commands.admin_gosouth)
-				{
-					y += val;
-				}
-				else if (command == Commands.admin_gonorth)
-				{
-					y -= val;
+					case "admin_gonorth":
+						y -= val;
+						break;
+					
+					case "admin_gosouth":
+						y += val;
+						break;
+					
+					case "admin_goeast":
+						x += val;
+						break;
+					
+					case "admin_gowest":
+						x -= val;
+						break;
+					
+					case "admin_goup":
+						z += val;
+						break;
+					
+					case "admin_godown":
+						z -= val;
+						break;
 				}
 				
 				activeChar.teleToLocation(x, y, z);
 				showTeleportWindow(activeChar);
 				break;
 			
-			case admin_tele:
+			case "admin_tele":
 				showTeleportWindow(activeChar);
 				break;
 			
-			case admin_teleto:
-			case admin_tele_to:
-			case admin_instant_move:
+			case "admin_teleto":
+			case "admin_tele_to":
+			case "admin_instant_move":
 				if ((wordList.length > 1) && wordList[1].equalsIgnoreCase("r"))
 				{
 					activeChar.setTeleMode(2);
@@ -221,8 +221,8 @@ public class AdminTeleport implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_tonpc:
-			case admin_to_npc:
+			case "admin_tonpc":
+			case "admin_to_npc":
 				if (wordList.length < 2)
 				{
 					activeChar.sendMessage("USAGE: //tonpc npcId|npcName");
@@ -254,7 +254,7 @@ public class AdminTeleport implements IAdminCommandHandler, ScriptFile
 				activeChar.sendMessage("Npc " + npcName + " not found");
 				break;
 			
-			case admin_toobject:
+			case "admin_toobject":
 				if (wordList.length < 2)
 				{
 					activeChar.sendMessage("USAGE: //toobject objectId");
@@ -284,7 +284,7 @@ public class AdminTeleport implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_teleport_character:
+			case "admin_teleport_character":
 				if (wordList.length < 2)
 				{
 					activeChar.sendMessage("USAGE: //teleport_character x y z");
@@ -295,7 +295,7 @@ public class AdminTeleport implements IAdminCommandHandler, ScriptFile
 				showTeleportCharWindow(activeChar);
 				break;
 			
-			case admin_recall:
+			case "admin_recall":
 				if (wordList.length < 2)
 				{
 					activeChar.sendMessage("USAGE: //recall charName");
@@ -325,7 +325,7 @@ public class AdminTeleport implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_setref:
+			case "admin_setref":
 			{
 				if (wordList.length < 2)
 				{
@@ -355,7 +355,7 @@ public class AdminTeleport implements IAdminCommandHandler, ScriptFile
 				break;
 			}
 			
-			case admin_getref:
+			case "admin_getref":
 				if (wordList.length < 2)
 				{
 					activeChar.sendMessage("Usage: //getref <char_name>");
@@ -384,7 +384,7 @@ public class AdminTeleport implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_recall_npc:
+			case "admin_recall_npc":
 				recallNPC(activeChar);
 				break;
 			
@@ -393,17 +393,6 @@ public class AdminTeleport implements IAdminCommandHandler, ScriptFile
 		}
 		
 		return true;
-	}
-	
-	/**
-	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
-	 */
-	@Override
-	public Enum<?>[] getAdminCommandEnum()
-	{
-		return Commands.values();
 	}
 	
 	/**
@@ -630,6 +619,17 @@ public class AdminTeleport implements IAdminCommandHandler, ScriptFile
 		{
 			activeChar.sendMessage("Target is't npc.");
 		}
+	}
+	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
+	 */
+	@Override
+	public String[] getAdminCommandList()
+	{
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

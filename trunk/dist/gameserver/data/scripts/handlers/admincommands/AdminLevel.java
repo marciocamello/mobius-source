@@ -29,13 +29,13 @@ import lineage2.gameserver.tables.PetDataTable;
  */
 public class AdminLevel implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_add_level,
-		admin_addLevel,
-		admin_set_level,
-		admin_setLevel,
-	}
+		"admin_add_level",
+		"admin_addLevel",
+		"admin_set_level",
+		"admin_setLevel"
+	};
 	
 	/**
 	 * Method setLevel.
@@ -73,17 +73,16 @@ public class AdminLevel implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().CanEditChar)
 		{
 			return false;
@@ -101,8 +100,8 @@ public class AdminLevel implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_add_level:
-			case admin_addLevel:
+			case "admin_add_level":
+			case "admin_addLevel":
 				if (wordList.length < 2)
 				{
 					activeChar.sendMessage("USAGE: //addLevel level");
@@ -122,8 +121,8 @@ public class AdminLevel implements IAdminCommandHandler, ScriptFile
 				setLevel(activeChar, target, level + ((Creature) target).getLevel());
 				break;
 			
-			case admin_set_level:
-			case admin_setLevel:
+			case "admin_set_level":
+			case "admin_setLevel":
 				if (wordList.length < 2)
 				{
 					activeChar.sendMessage("USAGE: //setlevel level");
@@ -149,13 +148,13 @@ public class AdminLevel implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

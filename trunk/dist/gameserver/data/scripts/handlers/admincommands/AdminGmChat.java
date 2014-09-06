@@ -26,26 +26,24 @@ import lineage2.gameserver.tables.GmListTable;
  */
 public class AdminGmChat implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_gmchat,
-		admin_snoop
-	}
+		"admin_gmchat",
+		"admin_snoop"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().CanAnnounce)
 		{
 			return false;
@@ -53,10 +51,10 @@ public class AdminGmChat implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_gmchat:
+			case "admin_gmchat":
 				try
 				{
-					String text = fullString.replaceFirst(Commands.admin_gmchat.name(), "");
+					String text = fullString.replaceFirst("admin_gmchat ", "");
 					Say2 cs = new Say2(0, ChatType.ALLIANCE, activeChar.getName(), text);
 					GmListTable.broadcastToGMs(cs);
 				}
@@ -67,7 +65,7 @@ public class AdminGmChat implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_snoop:
+			case "admin_snoop":
 			{
 			}
 		}
@@ -77,13 +75,13 @@ public class AdminGmChat implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

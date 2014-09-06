@@ -36,31 +36,29 @@ import lineage2.gameserver.utils.Log;
  */
 public class AdminCreateItem implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_itemcreate,
-		admin_create_item,
-		admin_create_coin,
-		admin_give_item_target,
-		admin_ci,
-		admin_spreaditem,
-		admin_create_item_element
-	}
+		"admin_itemcreate",
+		"admin_create_item",
+		"admin_create_coin",
+		"admin_give_item_target",
+		"admin_ci",
+		"admin_spreaditem",
+		"admin_create_item_element"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().UseGMShop)
 		{
 			return false;
@@ -68,12 +66,12 @@ public class AdminCreateItem implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_itemcreate:
+			case "admin_itemcreate":
 				activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/itemcreation.htm"));
 				break;
 			
-			case admin_ci:
-			case admin_create_item:
+			case "admin_ci":
+			case "admin_create_item":
 				try
 				{
 					if (wordList.length < 2)
@@ -94,7 +92,7 @@ public class AdminCreateItem implements IAdminCommandHandler, ScriptFile
 				activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/itemcreation.htm"));
 				break;
 			
-			case admin_create_coin:
+			case "admin_create_coin":
 				try
 				{
 					String val = fullString.substring(17);
@@ -128,7 +126,7 @@ public class AdminCreateItem implements IAdminCommandHandler, ScriptFile
 				activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/itemcreation.htm"));
 				break;
 			
-			case admin_give_item_target:
+			case "admin_give_item_target":
 				try
 				{
 					GameObject target = activeChar.getTarget();
@@ -169,7 +167,7 @@ public class AdminCreateItem implements IAdminCommandHandler, ScriptFile
 				activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/itemcreation.htm"));
 				break;
 			
-			case admin_spreaditem:
+			case "admin_spreaditem":
 				try
 				{
 					int id = Integer.parseInt(wordList[1]);
@@ -194,7 +192,7 @@ public class AdminCreateItem implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_create_item_element:
+			case "admin_create_item_element":
 				try
 				{
 					if (wordList.length < 4)
@@ -236,17 +234,6 @@ public class AdminCreateItem implements IAdminCommandHandler, ScriptFile
 		}
 		
 		return true;
-	}
-	
-	/**
-	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
-	 */
-	@Override
-	public Enum<?>[] getAdminCommandEnum()
-	{
-		return Commands.values();
 	}
 	
 	/**
@@ -323,6 +310,17 @@ public class AdminCreateItem implements IAdminCommandHandler, ScriptFile
 		}
 		
 		return id;
+	}
+	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
+	 */
+	@Override
+	public String[] getAdminCommandList()
+	{
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

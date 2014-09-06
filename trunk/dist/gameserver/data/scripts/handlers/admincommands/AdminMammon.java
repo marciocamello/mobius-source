@@ -30,27 +30,27 @@ import lineage2.gameserver.scripts.ScriptFile;
 @SuppressWarnings("unused")
 public class AdminMammon implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_find_mammon,
-		admin_show_mammon,
-		admin_hide_mammon,
-		admin_list_spawns
-	}
+		"admin_find_mammon",
+		"admin_show_mammon",
+		"admin_hide_mammon",
+		"admin_list_spawns"
+	};
 	
 	private final List<Integer> npcIds = new ArrayList<Integer>();
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
 		npcIds.clear();
 		
@@ -116,16 +116,6 @@ public class AdminMammon implements IAdminCommandHandler, ScriptFile
 	}
 	
 	/**
-	 * Method getAdminCommandEnum.
-	 * @return Enum[] * @see lineage2.gameserver.handlers.admincommands.IAdminCommandHandler#getAdminCommandEnum()
-	 */
-	@Override
-	public Enum<?>[] getAdminCommandEnum()
-	{
-		return Commands.values();
-	}
-	
-	/**
 	 * Method findAdminNPCs.
 	 * @param activeChar Player
 	 * @param npcIdList List<Integer>
@@ -169,6 +159,17 @@ public class AdminMammon implements IAdminCommandHandler, ScriptFile
 				}
 			}
 		}
+	}
+	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
+	 */
+	@Override
+	public String[] getAdminCommandList()
+	{
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

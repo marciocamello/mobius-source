@@ -22,17 +22,17 @@ public interface IAdminCommandHandler
 {
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
 	 */
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar);
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar);
 	
 	/**
-	 * Method getAdminCommandEnum.
-	 * @return Enum[]
+	 * Method getAdminCommandList.
+	 * @return String
 	 */
-	public Enum<?>[] getAdminCommandEnum();
+	public String[] getAdminCommandList();
 }
