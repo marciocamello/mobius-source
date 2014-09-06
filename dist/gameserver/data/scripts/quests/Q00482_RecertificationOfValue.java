@@ -58,12 +58,12 @@ public class Q00482_RecertificationOfValue extends Quest implements ScriptFile
 		
 		if (event.equalsIgnoreCase("SupportPlayer"))
 		{
-			SupportMagic.doSupportMagic(npc, player, false);
+			SupportMagic.getSupportMagic(npc, player);
 			return "33155-6.htm";
 		}
 		else if (event.equalsIgnoreCase("SupportPet"))
 		{
-			SupportMagic.doSupportMagic(npc, player, true);
+			SupportMagic.getSupportServitorMagic(npc, player);
 			return "33155-6.htm";
 		}
 		else if (event.equalsIgnoreCase("Goto"))
