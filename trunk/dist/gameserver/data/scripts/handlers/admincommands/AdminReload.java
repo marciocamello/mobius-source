@@ -150,7 +150,11 @@ public class AdminReload implements IAdminCommandHandler, ScriptFile
 			case "admin_reload_htm":
 			{
 				HtmCache.getInstance().clear();
-				activeChar.sendMessage("HTML cache clearned.");
+				if (Config.HTM_CACHE_MODE == 2)
+				{
+					HtmCache.getInstance().reload();
+				}
+				activeChar.sendMessage("HtmCache reloaded!");
 				break;
 			}
 			
