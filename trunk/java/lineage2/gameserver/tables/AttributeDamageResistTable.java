@@ -30,7 +30,6 @@ import org.w3c.dom.Node;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public class AttributeDamageResistTable
 {
@@ -95,99 +94,90 @@ public class AttributeDamageResistTable
 			
 			for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 			{
-				if ("list".equalsIgnoreCase(n.getNodeName()))
+				if (!"list".equalsIgnoreCase(n.getNodeName()))
 				{
-					for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
+					continue;
+				}
+				
+				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
+				{
+					Integer cap;
+					Double atk;
+					Double def;
+					NamedNodeMap attrs = d.getAttributes();
+					Node att;
+					
+					if ("attribute".equalsIgnoreCase(d.getNodeName()))
 					{
-						Integer cap;
-						Double atk;
-						Double def;
-						NamedNodeMap attrs = d.getAttributes();
-						Node att;
+						att = attrs.getNamedItem("cap");
 						
-						if ("attribute".equalsIgnoreCase(d.getNodeName()))
+						if (att == null)
 						{
-							att = attrs.getNamedItem("cap");
-							
-							if (att == null)
-							{
-								_log.info("AttributeDamageResistTable: no cap difference has been specified. skipping");
-								continue;
-							}
-							
-							cap = Integer.parseInt(att.getNodeValue());
-							
-							if (((cap % 10) != 0) && (cap > 2000))
-							{
-								_log.info("AttributeDamageResistTable: the cap value is incorrect. rest of division by 10 may give 0. the value can't be up of 2000");
-								continue;
-							}
-							
-							att = attrs.getNamedItem("atk");
-							
-							if (att == null)
-							{
-								_log.info("AttributeDamageResistTable: no atk difference has been specified. skipping");
-								continue;
-							}
-							
-							atk = Double.parseDouble(att.getNodeValue());
-							att = attrs.getNamedItem("def");
-							
-							if (att == null)
-							{
-								_log.info("AttributeDamageResistTable: no def difference has been specified. skipping");
-								continue;
-							}
-							
-							def = Double.parseDouble(att.getNodeValue());
-							_cappedAttributeList.add(new AttributeCap(cap, atk, def));
+							_log.info("AttributeDamageResistTable: no cap difference has been specified. skipping");
+							continue;
 						}
-						else if ("baseattribute".equalsIgnoreCase(d.getNodeName()))
+						
+						cap = Integer.parseInt(att.getNodeValue());
+						
+						if (((cap % 10) != 0) && (cap > 2000))
 						{
-							att = attrs.getNamedItem("atk");
-							
-							if (att == null)
-							{
-								_log.info("AttributeDamageResistTable: no base atk difference has been specified. giving a official value");
-								atk = 0.1;
-							}
-							else
-							{
-								atk = Double.parseDouble(att.getNodeValue());
-							}
-							
-							att = attrs.getNamedItem("def");
-							
-							if (att == null)
-							{
-								_log.info("AttributeDamageResistTable: no base def difference has been specified. giving a official value");
-								def = 0.1;
-							}
-							else
-							{
-								def = Double.parseDouble(att.getNodeValue());
-							}
-							
-							if (atk < 1)
-							{
-								_baseAtk = 1D;
-							}
-							else
-							{
-								_baseAtk = ((atk + 100) / 100);
-							}
-							
-							if (def < 1)
-							{
-								_baseDef = 1D;
-							}
-							else
-							{
-								_baseDef = ((def + 100) / 100);
-							}
+							_log.info("AttributeDamageResistTable: the cap value is incorrect. rest of division by 10 may give 0. the value can't be up of 2000");
+							continue;
 						}
+						
+						att = attrs.getNamedItem("atk");
+						
+						if (att == null)
+						{
+							_log.info("AttributeDamageResistTable: no atk difference has been specified. skipping");
+							continue;
+						}
+						
+						atk = Double.parseDouble(att.getNodeValue());
+						att = attrs.getNamedItem("def");
+						
+						if (att == null)
+						{
+							_log.info("AttributeDamageResistTable: no def difference has been specified. skipping");
+							continue;
+						}
+						
+						def = Double.parseDouble(att.getNodeValue());
+						_cappedAttributeList.add(new AttributeCap(cap, atk, def));
+						continue;
 					}
+					
+					if (!"baseattribute".equalsIgnoreCase(d.getNodeName()))
+					{
+						continue;
+					}
+					
+					att = attrs.getNamedItem("atk");
+					
+					if (att == null)
+					{
+						_log.info("AttributeDamageResistTable: no base atk difference has been specified. giving a official value");
+						atk = 0.1;
+					}
+					else
+					{
+						atk = Double.parseDouble(att.getNodeValue());
+					}
+					
+					att = attrs.getNamedItem("def");
+					
+					if (att == null)
+					{
+						_log.info("AttributeDamageResistTable: no base def difference has been specified. giving a official value");
+						def = 0.1;
+					}
+					else
+					{
+						def = Double.parseDouble(att.getNodeValue());
+					}
+					
+					_baseAtk = atk < 1.0 ? Double.valueOf(1.0) : Double.valueOf((atk + 100.0) / 100.0);
+					_baseDef = def < 1.0 ? Double.valueOf(1.0) : Double.valueOf((def + 100.0) / 100.0);
 				}
 			}
 			
@@ -205,21 +195,21 @@ public class AttributeDamageResistTable
 	
 	public double getAttributeBonus(double difference)
 	{
-		double finalDifference = 1D;
+		double finalDifference = 1.0;
 		boolean isAttackBonus = true;
 		
-		if (difference < 0)
+		if (difference < 0.0)
 		{
 			isAttackBonus = false;
 		}
 		
 		finalDifference = Math.abs(difference);
 		
-		if (finalDifference == 0)
+		if (finalDifference == 0.0)
 		{
-			return 1D;
+			return 1.0;
 		}
-		else if (finalDifference < _baseCap)
+		else if (finalDifference < _baseCap.intValue())
 		{
 			if (isAttackBonus)
 			{
@@ -228,31 +218,31 @@ public class AttributeDamageResistTable
 			
 			return _baseDef;
 		}
-		else if (finalDifference >= _overCap)
+		else if (finalDifference >= _overCap.intValue())
 		{
 			if (isAttackBonus)
 			{
-				return ((_cappedAttributeList.get(_cappedAttributeList.size() - 1).getAttackBonus() + 100) / 100);
+				return (_cappedAttributeList.get(_cappedAttributeList.size() - 1).getAttackBonus() + 100.0) / 100.0;
 			}
 			
-			return ((_cappedAttributeList.get(_cappedAttributeList.size() - 1).getDefenseBonus() + 100) / 100);
+			return (_cappedAttributeList.get(_cappedAttributeList.size() - 1).getDefenseBonus() + 100.0) / 100.0;
 		}
 		else
 		{
 			for (int i = 0; i < _cappedAttributeList.size(); i++)
 			{
-				if ((finalDifference >= _cappedAttributeList.get(i).getCap()) && (finalDifference < _cappedAttributeList.get(i + 1).getCap()))
+				if ((finalDifference >= _cappedAttributeList.get(i).getCap().intValue()) && (finalDifference < _cappedAttributeList.get(i + 1).getCap().intValue()))
 				{
 					if (isAttackBonus)
 					{
-						return ((_cappedAttributeList.get(i).getAttackBonus() + 100) / 100);
+						return (_cappedAttributeList.get(i).getAttackBonus() + 100.0) / 100.0;
 					}
 					
-					return ((_cappedAttributeList.get(i).getDefenseBonus() + 100) / 100);
+					return (_cappedAttributeList.get(i).getDefenseBonus() + 100.0) / 100.0;
 				}
 			}
 		}
 		
-		return 1D;
+		return 1.0;
 	}
 }
