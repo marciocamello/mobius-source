@@ -27,25 +27,23 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public class AdminHeal implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_heal
-	}
+		"admin_heal"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().Heal)
 		{
 			return false;
@@ -53,7 +51,7 @@ public class AdminHeal implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_heal:
+			case "admin_heal":
 				if (wordList.length == 1)
 				{
 					handleRes(activeChar);
@@ -67,17 +65,6 @@ public class AdminHeal implements IAdminCommandHandler, ScriptFile
 		}
 		
 		return true;
-	}
-	
-	/**
-	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
-	 */
-	@Override
-	public Commands[] getAdminCommandEnum()
-	{
-		return Commands.values();
 	}
 	
 	/**
@@ -144,6 +131,17 @@ public class AdminHeal implements IAdminCommandHandler, ScriptFile
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 		}
+	}
+	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
+	 */
+	@Override
+	public String[] getAdminCommandList()
+	{
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

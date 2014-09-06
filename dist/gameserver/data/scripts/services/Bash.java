@@ -47,13 +47,10 @@ public final class Bash extends Functions implements IAdminCommandHandler, Scrip
 {
 	private static final Logger _log = LoggerFactory.getLogger(Bash.class);
 	
-	/**
-	 * @author Mobius
-	 */
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_bashreload
-	}
+		"admin_bashreload"
+	};
 	
 	private static final String wrongPage = "scripts/services/Bash-wrongPage.htm";
 	private static final String notPage = "scripts/services/Bash-notPage.htm";
@@ -63,14 +60,15 @@ public final class Bash extends Functions implements IAdminCommandHandler, Scrip
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
 		if (!activeChar.getPlayerAccess().IsEventGm)
 		{
@@ -399,12 +397,12 @@ public final class Bash extends Functions implements IAdminCommandHandler, Scrip
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 }

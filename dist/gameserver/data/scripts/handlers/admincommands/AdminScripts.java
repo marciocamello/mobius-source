@@ -27,27 +27,25 @@ import lineage2.gameserver.scripts.Scripts;
  */
 public class AdminScripts implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_scripts_reload,
-		admin_sreload,
-		admin_sqreload
-	}
+		"admin_scripts_reload",
+		"admin_sreload",
+		"admin_sqreload"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.isGM())
 		{
 			return false;
@@ -55,8 +53,8 @@ public class AdminScripts implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_scripts_reload:
-			case admin_sreload:
+			case "admin_scripts_reload":
+			case "admin_sreload":
 				if (wordList.length < 2)
 				{
 					return false;
@@ -105,7 +103,7 @@ public class AdminScripts implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_sqreload:
+			case "admin_sqreload":
 				if (wordList.length < 2)
 				{
 					return false;
@@ -145,13 +143,13 @@ public class AdminScripts implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

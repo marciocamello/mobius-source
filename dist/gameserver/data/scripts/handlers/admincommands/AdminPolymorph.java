@@ -26,19 +26,19 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public class AdminPolymorph implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_polyself,
-		admin_polymorph,
-		admin_poly,
-		admin_unpolyself,
-		admin_unpolymorph,
-		admin_unpoly
-	}
+		"admin_polyself",
+		"admin_polymorph",
+		"admin_poly",
+		"admin_unpolyself",
+		"admin_unpolymorph",
+		"admin_unpoly"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
@@ -46,10 +46,8 @@ public class AdminPolymorph implements IAdminCommandHandler, ScriptFile
 	 */
 	@Override
 	@SuppressWarnings("fallthrough")
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().CanPolymorph)
 		{
 			return false;
@@ -59,11 +57,11 @@ public class AdminPolymorph implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_polyself:
+			case "admin_polyself":
 				target = activeChar;
 				
-			case admin_polymorph:
-			case admin_poly:
+			case "admin_polymorph":
+			case "admin_poly":
 				if ((target == null) || !target.isPlayer())
 				{
 					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
@@ -88,11 +86,11 @@ public class AdminPolymorph implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_unpolyself:
+			case "admin_unpolyself":
 				target = activeChar;
 				
-			case admin_unpolymorph:
-			case admin_unpoly:
+			case "admin_unpolymorph":
+			case "admin_unpoly":
 				if ((target == null) || !target.isPlayer())
 				{
 					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
@@ -109,13 +107,13 @@ public class AdminPolymorph implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

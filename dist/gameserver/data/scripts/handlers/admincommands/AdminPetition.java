@@ -28,27 +28,27 @@ import org.apache.commons.lang3.math.NumberUtils;
  */
 public class AdminPetition implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_view_petitions,
-		admin_view_petition,
-		admin_accept_petition,
-		admin_reject_petition,
-		admin_reset_petitions,
-		admin_force_peti
-	}
+		"admin_view_petitions",
+		"admin_view_petition",
+		"admin_accept_petition",
+		"admin_reject_petition",
+		"admin_reset_petitions",
+		"admin_force_peti"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
 		if (!activeChar.getPlayerAccess().CanEditChar)
 		{
@@ -56,19 +56,17 @@ public class AdminPetition implements IAdminCommandHandler, ScriptFile
 		}
 		
 		int petitionId = NumberUtils.toInt(wordList.length > 1 ? wordList[1] : "-1", -1);
-		Commands command = (Commands) comm;
-		
 		switch (command)
 		{
-			case admin_view_petitions:
+			case "admin_view_petitions":
 				PetitionManager.getInstance().sendPendingPetitionList(activeChar);
 				break;
 			
-			case admin_view_petition:
+			case "admin_view_petition":
 				PetitionManager.getInstance().viewPetition(activeChar, petitionId);
 				break;
 			
-			case admin_accept_petition:
+			case "admin_accept_petition":
 				if (petitionId < 0)
 				{
 					activeChar.sendMessage("Usage: //accept_petition id");
@@ -94,7 +92,7 @@ public class AdminPetition implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_reject_petition:
+			case "admin_reject_petition":
 				if (petitionId < 0)
 				{
 					activeChar.sendMessage("Usage: //accept_petition id");
@@ -109,7 +107,7 @@ public class AdminPetition implements IAdminCommandHandler, ScriptFile
 				PetitionManager.getInstance().sendPendingPetitionList(activeChar);
 				break;
 			
-			case admin_reset_petitions:
+			case "admin_reset_petitions":
 				if (PetitionManager.getInstance().isPetitionInProcess())
 				{
 					activeChar.sendPacket(new SystemMessage(SystemMessage.PETITION_UNDER_PROCESS));
@@ -120,7 +118,7 @@ public class AdminPetition implements IAdminCommandHandler, ScriptFile
 				PetitionManager.getInstance().sendPendingPetitionList(activeChar);
 				break;
 			
-			case admin_force_peti:
+			case "admin_force_peti":
 				if (fullString.length() < 11)
 				{
 					activeChar.sendMessage("Usage: //force_peti text");
@@ -155,13 +153,13 @@ public class AdminPetition implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

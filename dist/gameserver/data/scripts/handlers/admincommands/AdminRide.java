@@ -24,31 +24,29 @@ import lineage2.gameserver.tables.PetDataTable;
  */
 public class AdminRide implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_ride,
-		admin_ride_wyvern,
-		admin_ride_strider,
-		admin_unride,
-		admin_wr,
-		admin_sr,
-		admin_ur
-	}
+		"admin_ride",
+		"admin_ride_wyvern",
+		"admin_ride_strider",
+		"admin_unride",
+		"admin_wr",
+		"admin_sr",
+		"admin_ur"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().Rider)
 		{
 			return false;
@@ -56,7 +54,7 @@ public class AdminRide implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_ride:
+			case "admin_ride":
 				if (activeChar.isMounted() || (activeChar.getSummonList().getPet() != null))
 				{
 					activeChar.sendMessage("Already Have a Pet or Mounted.");
@@ -72,8 +70,8 @@ public class AdminRide implements IAdminCommandHandler, ScriptFile
 				activeChar.setMount(Integer.parseInt(wordList[1]), 0, 85);
 				break;
 			
-			case admin_ride_wyvern:
-			case admin_wr:
+			case "admin_ride_wyvern":
+			case "admin_wr":
 				if (activeChar.isMounted() || (activeChar.getSummonList().getPet() != null))
 				{
 					activeChar.sendMessage("Already Have a Pet or Mounted.");
@@ -83,8 +81,8 @@ public class AdminRide implements IAdminCommandHandler, ScriptFile
 				activeChar.setMount(PetDataTable.WYVERN_ID, 0, 85);
 				break;
 			
-			case admin_ride_strider:
-			case admin_sr:
+			case "admin_ride_strider":
+			case "admin_sr":
 				if (activeChar.isMounted() || (activeChar.getSummonList().getPet() != null))
 				{
 					activeChar.sendMessage("Already Have a Pet or Mounted.");
@@ -94,8 +92,8 @@ public class AdminRide implements IAdminCommandHandler, ScriptFile
 				activeChar.setMount(PetDataTable.STRIDER_WIND_ID, 0, 85);
 				break;
 			
-			case admin_unride:
-			case admin_ur:
+			case "admin_unride":
+			case "admin_ur":
 				activeChar.setMount(0, 0, 0);
 				break;
 		}
@@ -105,13 +103,13 @@ public class AdminRide implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

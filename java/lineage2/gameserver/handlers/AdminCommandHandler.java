@@ -53,7 +53,7 @@ public class AdminCommandHandler extends AbstractHolder
 	 */
 	public void registerAdminCommandHandler(IAdminCommandHandler handler)
 	{
-		for (Enum<?> e : handler.getAdminCommandEnum())
+		for (String e : handler.getAdminCommandList())
 		{
 			_datatable.put(e.toString().toLowerCase(), handler);
 		}
@@ -98,7 +98,7 @@ public class AdminCommandHandler extends AbstractHolder
 			
 			try
 			{
-				for (Enum<?> e : handler.getAdminCommandEnum())
+				for (String e : handler.getAdminCommandList())
 				{
 					if (e.toString().equalsIgnoreCase(wordList[0]))
 					{

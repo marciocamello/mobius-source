@@ -27,32 +27,30 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public class AdminGeodata implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_geo_z,
-		admin_geo_type,
-		admin_geo_nswe,
-		admin_geo_los,
-		admin_geo_load,
-		admin_geo_dump,
-		admin_geo_trace,
-		admin_geo_map
-	}
+		"admin_geo_z",
+		"admin_geo_type",
+		"admin_geo_nswe",
+		"admin_geo_los",
+		"admin_geo_load",
+		"admin_geo_dump",
+		"admin_geo_trace",
+		"admin_geo_map"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().CanReload)
 		{
 			return false;
@@ -60,16 +58,16 @@ public class AdminGeodata implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_geo_z:
+			case "admin_geo_z":
 				activeChar.sendMessage("GeoEngine: Geo_Z = " + GeoEngine.getHeight(activeChar.getLoc(), activeChar.getReflectionId()) + " Loc_Z = " + activeChar.getZ());
 				break;
 			
-			case admin_geo_type:
+			case "admin_geo_type":
 				int type = GeoEngine.getType(activeChar.getX(), activeChar.getY(), activeChar.getReflectionId());
 				activeChar.sendMessage("GeoEngine: Geo_Type = " + type);
 				break;
 			
-			case admin_geo_nswe:
+			case "admin_geo_nswe":
 				String result = "";
 				byte nswe = GeoEngine.getNSWE(activeChar.getX(), activeChar.getY(), activeChar.getZ(), activeChar.getReflectionId());
 				
@@ -96,7 +94,7 @@ public class AdminGeodata implements IAdminCommandHandler, ScriptFile
 				activeChar.sendMessage("GeoEngine: Geo_NSWE -> " + nswe + "->" + result);
 				break;
 			
-			case admin_geo_los:
+			case "admin_geo_los":
 				if (activeChar.getTarget() != null)
 				{
 					if (GeoEngine.canSeeTarget(activeChar, activeChar.getTarget(), false))
@@ -115,7 +113,7 @@ public class AdminGeodata implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_geo_load:
+			case "admin_geo_load":
 				if (wordList.length != 3)
 				{
 					activeChar.sendMessage("Usage: //geo_load <regionX> <regionY>");
@@ -145,7 +143,7 @@ public class AdminGeodata implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_geo_dump:
+			case "admin_geo_dump":
 				if (wordList.length > 2)
 				{
 					GeoEngine.DumpGeodataFileMap(Byte.parseByte(wordList[1]), Byte.parseByte(wordList[2]));
@@ -156,7 +154,7 @@ public class AdminGeodata implements IAdminCommandHandler, ScriptFile
 				activeChar.sendMessage("Actual geo square saved.");
 				break;
 			
-			case admin_geo_trace:
+			case "admin_geo_trace":
 				if (wordList.length < 2)
 				{
 					activeChar.sendMessage("Usage: //geo_trace on|off");
@@ -178,7 +176,7 @@ public class AdminGeodata implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_geo_map:
+			case "admin_geo_map":
 				int x = ((activeChar.getX() - World.MAP_MIN_X) >> 15) + Config.GEO_X_FIRST;
 				int y = ((activeChar.getY() - World.MAP_MIN_Y) >> 15) + Config.GEO_Y_FIRST;
 				activeChar.sendMessage("GeoMap: " + x + "_" + y);
@@ -190,13 +188,13 @@ public class AdminGeodata implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

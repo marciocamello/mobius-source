@@ -35,31 +35,30 @@ import lineage2.gameserver.templates.StatsSet;
  */
 public class AdminOlympiad implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_oly_save,
-		admin_add_oly_points,
-		admin_oly_start,
-		admin_add_hero,
-		admin_oly_stop
-	}
+		"admin_oly_save",
+		"admin_add_oly_points",
+		"admin_oly_start",
+		"admin_add_hero",
+		"admin_oly_stop"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		switch (command)
 		{
-			case admin_oly_save:
+			case "admin_oly_save":
 			{
 				if (!Config.ENABLE_OLYMPIAD)
 				{
@@ -79,7 +78,7 @@ public class AdminOlympiad implements IAdminCommandHandler, ScriptFile
 				break;
 			}
 			
-			case admin_add_oly_points:
+			case "admin_add_oly_points":
 			{
 				if (wordList.length < 3)
 				{
@@ -116,7 +115,7 @@ public class AdminOlympiad implements IAdminCommandHandler, ScriptFile
 				break;
 			}
 			
-			case admin_oly_start:
+			case "admin_oly_start":
 			{
 				Olympiad._manager = new OlympiadManager();
 				Olympiad._inCompPeriod = true;
@@ -125,7 +124,7 @@ public class AdminOlympiad implements IAdminCommandHandler, ScriptFile
 				break;
 			}
 			
-			case admin_oly_stop:
+			case "admin_oly_stop":
 			{
 				Olympiad._inCompPeriod = false;
 				Announcements.getInstance().announceToAll(new SystemMessage(SystemMessage.THE_OLYMPIAD_GAME_HAS_ENDED));
@@ -142,7 +141,7 @@ public class AdminOlympiad implements IAdminCommandHandler, ScriptFile
 				break;
 			}
 			
-			case admin_add_hero:
+			case "admin_add_hero":
 			{
 				if (wordList.length < 2)
 				{
@@ -176,13 +175,13 @@ public class AdminOlympiad implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

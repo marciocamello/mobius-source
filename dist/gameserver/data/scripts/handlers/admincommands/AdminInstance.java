@@ -28,31 +28,29 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public class AdminInstance implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_instance,
-		admin_instance_id,
-		admin_collapse,
-		admin_reset_reuse,
-		admin_reset_reuse_all,
-		admin_set_reuse,
-		admin_addtiatkill
-	}
+		"admin_instance",
+		"admin_instance_id",
+		"admin_collapse",
+		"admin_reset_reuse",
+		"admin_reset_reuse_all",
+		"admin_set_reuse",
+		"admin_addtiatkill"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().CanTeleport)
 		{
 			return false;
@@ -60,11 +58,11 @@ public class AdminInstance implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_instance:
+			case "admin_instance":
 				listOfInstances(activeChar);
 				break;
 			
-			case admin_instance_id:
+			case "admin_instance_id":
 				if (wordList.length > 1)
 				{
 					listOfCharsForInstance(activeChar, wordList[1]);
@@ -72,7 +70,7 @@ public class AdminInstance implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_collapse:
+			case "admin_collapse":
 				if (!activeChar.getReflection().isDefault())
 				{
 					activeChar.getReflection().collapse();
@@ -84,7 +82,7 @@ public class AdminInstance implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_reset_reuse:
+			case "admin_reset_reuse":
 				if ((wordList.length > 1) && (activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
 				{
 					Player p = activeChar.getTarget().getPlayer();
@@ -94,7 +92,7 @@ public class AdminInstance implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_reset_reuse_all:
+			case "admin_reset_reuse_all":
 				if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
 				{
 					Player p = activeChar.getTarget().getPlayer();
@@ -104,7 +102,7 @@ public class AdminInstance implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_set_reuse:
+			case "admin_set_reuse":
 				if (activeChar.getReflection() != null)
 				{
 					activeChar.getReflection().setReenterTime(System.currentTimeMillis());
@@ -112,23 +110,12 @@ public class AdminInstance implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_addtiatkill:
+			case "admin_addtiatkill":
 				SoDManager.addTiatKill();
 				break;
 		}
 		
 		return true;
-	}
-	
-	/**
-	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
-	 */
-	@Override
-	public Enum<?>[] getAdminCommandEnum()
-	{
-		return Commands.values();
 	}
 	
 	/**
@@ -201,6 +188,17 @@ public class AdminInstance implements IAdminCommandHandler, ScriptFile
 		replyMSG.append("</body></html>");
 		adminReply.setHtml(replyMSG.toString());
 		activeChar.sendPacket(adminReply);
+	}
+	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
+	 */
+	@Override
+	public String[] getAdminCommandList()
+	{
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

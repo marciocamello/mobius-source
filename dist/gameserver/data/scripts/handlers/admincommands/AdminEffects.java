@@ -44,42 +44,40 @@ import lineage2.gameserver.utils.Util;
  */
 public class AdminEffects implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_invis,
-		admin_vis,
-		admin_offline_vis,
-		admin_offline_invis,
-		admin_earthquake,
-		admin_block,
-		admin_unblock,
-		admin_changename,
-		admin_gmspeed,
-		admin_invul,
-		admin_setinvul,
-		admin_getinvul,
-		admin_social,
-		admin_abnormal,
-		admin_effect,
-		admin_removereuse,
-		admin_transform,
-		admin_showmovie
-	}
+		"admin_invis",
+		"admin_vis",
+		"admin_offline_vis",
+		"admin_offline_invis",
+		"admin_earthquake",
+		"admin_block",
+		"admin_unblock",
+		"admin_changename",
+		"admin_gmspeed",
+		"admin_invul",
+		"admin_setinvul",
+		"admin_getinvul",
+		"admin_social",
+		"admin_abnormal",
+		"admin_effect",
+		"admin_removereuse",
+		"admin_transform",
+		"admin_showmovie"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().GodMode)
 		{
 			return false;
@@ -92,8 +90,8 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_invis:
-			case admin_vis:
+			case "admin_invis":
+			case "admin_vis":
 				if (activeChar.isInvisible())
 				{
 					activeChar.setInvisibleType(InvisibleType.NONE);
@@ -135,7 +133,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_gmspeed:
+			case "admin_gmspeed":
 				if (wordList.length < 2)
 				{
 					val = 0;
@@ -189,7 +187,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_invul:
+			case "admin_invul":
 				handleInvul(activeChar, activeChar);
 				
 				if (activeChar.isInvul())
@@ -217,7 +215,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_offline_vis:
+			case "admin_offline_vis":
 				for (Player player : GameObjectsStorage.getAllPlayers())
 				{
 					if ((player != null) && player.isInOfflineMode())
@@ -230,7 +228,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_offline_invis:
+			case "admin_offline_invis":
 				for (Player player : GameObjectsStorage.getAllPlayers())
 				{
 					if ((player != null) && player.isInOfflineMode())
@@ -242,7 +240,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_earthquake:
+			case "admin_earthquake":
 				try
 				{
 					int intensity = Integer.parseInt(wordList[1]);
@@ -257,7 +255,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_block:
+			case "admin_block":
 				if ((target == null) || !target.isCreature())
 				{
 					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
@@ -275,7 +273,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				activeChar.sendMessage("Target blocked.");
 				break;
 			
-			case admin_unblock:
+			case "admin_unblock":
 				if ((target == null) || !target.isCreature())
 				{
 					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
@@ -291,7 +289,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				activeChar.sendMessage("Target unblocked.");
 				break;
 			
-			case admin_changename:
+			case "admin_changename":
 				if (wordList.length < 2)
 				{
 					activeChar.sendMessage("USAGE: //changename newName");
@@ -316,7 +314,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				activeChar.sendMessage("Changed name from " + oldName + " to " + newName + ".");
 				break;
 			
-			case admin_setinvul:
+			case "admin_setinvul":
 				if ((target == null) || !target.isPlayer())
 				{
 					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
@@ -326,7 +324,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				handleInvul(activeChar, (Player) target);
 				break;
 			
-			case admin_getinvul:
+			case "admin_getinvul":
 				if ((target != null) && target.isCreature())
 				{
 					activeChar.sendMessage("Target " + target.getName() + "(object ID: " + target.getObjectId() + ") is " + (!((Creature) target).isInvul() ? "NOT " : "") + "invul");
@@ -334,7 +332,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_social:
+			case "admin_social":
 				if (wordList.length < 2)
 				{
 					val = Rnd.get(1, 7);
@@ -363,7 +361,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_abnormal:
+			case "admin_abnormal":
 				try
 				{
 					if (wordList.length > 1)
@@ -403,7 +401,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_effect:
+			case "admin_effect":
 				try
 				{
 					if ((wordList.length > 1) && (wordList[1] != null))
@@ -447,7 +445,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_removereuse:
+			case "admin_removereuse":
 				StringTokenizer st = new StringTokenizer(fullString, " ");
 				fullString = st.nextToken();
 				
@@ -497,7 +495,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				}
 				break;
 			
-			case admin_transform:
+			case "admin_transform":
 				try
 				{
 					val = Integer.parseInt(wordList[1]);
@@ -511,7 +509,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				activeChar.setTransformation(val);
 				break;
 			
-			case admin_showmovie:
+			case "admin_showmovie":
 				if (wordList.length < 2)
 				{
 					activeChar.sendMessage("USAGE: //showmovie id");
@@ -573,13 +571,13 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

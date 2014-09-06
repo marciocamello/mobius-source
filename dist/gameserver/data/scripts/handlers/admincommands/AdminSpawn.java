@@ -44,34 +44,33 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_show_spawns,
-		admin_spawn,
-		admin_spawn_monster,
-		admin_spawn_index,
-		admin_spawn1,
-		admin_setheading,
-		admin_setai,
-		admin_setaiparam,
-		admin_dumpparams,
-		admin_generate_loc,
-		admin_dumpspawn
-	}
+		"admin_show_spawns",
+		"admin_spawn",
+		"admin_spawn_monster",
+		"admin_spawn_index",
+		"admin_spawn1",
+		"admin_setheading",
+		"admin_setai",
+		"admin_setaiparam",
+		"admin_dumpparams",
+		"admin_generate_loc",
+		"admin_dumpspawn"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().CanEditNPC)
 		{
 			return false;
@@ -84,11 +83,11 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_show_spawns:
+			case "admin_show_spawns":
 				activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/spawns.htm"));
 				break;
 			
-			case admin_spawn_index:
+			case "admin_spawn_index":
 				try
 				{
 					String val = fullString.substring(18);
@@ -101,7 +100,7 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_spawn1:
+			case "admin_spawn1":
 				st = new StringTokenizer(fullString, " ");
 				
 				try
@@ -124,8 +123,8 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_spawn:
-			case admin_spawn_monster:
+			case "admin_spawn":
+			case "admin_spawn_monster":
 				st = new StringTokenizer(fullString, " ");
 				
 				try
@@ -154,7 +153,7 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_setai:
+			case "admin_setai":
 				if ((activeChar.getTarget() == null) || !activeChar.getTarget().isNpc())
 				{
 					activeChar.sendMessage("Please select target NPC or mob.");
@@ -213,7 +212,7 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_setaiparam:
+			case "admin_setaiparam":
 				if ((activeChar.getTarget() == null) || !activeChar.getTarget().isNpc())
 				{
 					activeChar.sendMessage("Please select target NPC or mob.");
@@ -247,7 +246,7 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 				activeChar.sendMessage("AI parameter " + paramName + " succesfully setted to " + paramValue);
 				break;
 			
-			case admin_dumpparams:
+			case "admin_dumpparams":
 				if ((activeChar.getTarget() == null) || !activeChar.getTarget().isNpc())
 				{
 					activeChar.sendMessage("Please select target NPC or mob.");
@@ -268,7 +267,7 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_setheading:
+			case "admin_setheading":
 				GameObject obj = activeChar.getTarget();
 				
 				if (!obj.isNpc())
@@ -292,7 +291,7 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_generate_loc:
+			case "admin_generate_loc":
 				if (wordList.length < 2)
 				{
 					activeChar.sendMessage("Incorrect argument count!");
@@ -340,7 +339,7 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 				System.out.println("delete from spawnlist where npc_templateid in (" + id + ", " + id2 + ")" + " and locx <= " + min_x + " and locy <= " + min_y + " and locz <= " + min_z + " and locx >= " + max_x + " and locy >= " + max_y + " and locz >= " + max_z + ";");
 				break;
 			
-			case admin_dumpspawn:
+			case "admin_dumpspawn":
 				st = new StringTokenizer(fullString, " ");
 				
 				try
@@ -379,17 +378,6 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 		}
 		
 		return true;
-	}
-	
-	/**
-	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
-	 */
-	@Override
-	public Enum<?>[] getAdminCommandEnum()
-	{
-		return Commands.values();
 	}
 	
 	/**
@@ -463,6 +451,17 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 		{
 			activeChar.sendMessage("Target is not ingame.");
 		}
+	}
+	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
+	 */
+	@Override
+	public String[] getAdminCommandList()
+	{
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

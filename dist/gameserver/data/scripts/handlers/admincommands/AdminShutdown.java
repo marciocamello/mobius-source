@@ -34,27 +34,25 @@ import org.apache.commons.lang3.math.NumberUtils;
  */
 public class AdminShutdown implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_server_shutdown,
-		admin_server_restart,
-		admin_server_abort
-	}
+		"admin_server_shutdown",
+		"admin_server_restart",
+		"admin_server_abort"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().CanRestart)
 		{
 			return false;
@@ -64,15 +62,15 @@ public class AdminShutdown implements IAdminCommandHandler, ScriptFile
 		{
 			switch (command)
 			{
-				case admin_server_shutdown:
+				case "admin_server_shutdown":
 					Shutdown.getInstance().schedule(NumberUtils.toInt(wordList[1], -1), Shutdown.SHUTDOWN);
 					break;
 				
-				case admin_server_restart:
+				case "admin_server_restart":
 					Shutdown.getInstance().schedule(NumberUtils.toInt(wordList[1], -1), Shutdown.RESTART);
 					break;
 				
-				case admin_server_abort:
+				case "admin_server_abort":
 					Shutdown.getInstance().cancel();
 					break;
 			}
@@ -83,17 +81,6 @@ public class AdminShutdown implements IAdminCommandHandler, ScriptFile
 		}
 		
 		return true;
-	}
-	
-	/**
-	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
-	 */
-	@Override
-	public Enum<?>[] getAdminCommandEnum()
-	{
-		return Commands.values();
 	}
 	
 	/**
@@ -136,6 +123,17 @@ public class AdminShutdown implements IAdminCommandHandler, ScriptFile
 		replyMSG.append("</body></html>");
 		adminReply.setHtml(replyMSG.toString());
 		activeChar.sendPacket(adminReply);
+	}
+	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
+	 */
+	@Override
+	public String[] getAdminCommandList()
+	{
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

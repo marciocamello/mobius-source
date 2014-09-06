@@ -45,57 +45,56 @@ import org.apache.commons.lang3.math.NumberUtils;
  */
 public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_admin,
-		admin_play_sounds,
-		admin_play_sound,
-		admin_silence,
-		admin_tradeoff,
-		admin_cfg,
-		admin_config,
-		admin_show_html,
-		admin_setnpcstate,
-		admin_setareanpcstate,
-		admin_showmovie,
-		admin_setzoneinfo,
-		admin_eventtrigger,
-		admin_debug,
-		admin_uievent,
-		admin_opensod,
-		admin_closesod,
-		admin_setsoistage,
-		admin_soinotify,
-		admin_forcenpcinfo,
-		admin_loc,
-		admin_locdump,
-		admin_undying
-	}
+		"admin_admin",
+		"admin_play_sounds",
+		"admin_play_sound",
+		"admin_silence",
+		"admin_tradeoff",
+		"admin_cfg",
+		"admin_config",
+		"admin_show_html",
+		"admin_setnpcstate",
+		"admin_setareanpcstate",
+		"admin_showmovie",
+		"admin_setzoneinfo",
+		"admin_eventtrigger",
+		"admin_debug",
+		"admin_uievent",
+		"admin_opensod",
+		"admin_closesod",
+		"admin_setsoistage",
+		"admin_soinotify",
+		"admin_forcenpcinfo",
+		"admin_loc",
+		"admin_locdump",
+		"admin_undying"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
 		StringTokenizer st;
 		
 		if (activeChar.getPlayerAccess().Menu)
 		{
 			switch (command)
 			{
-				case admin_admin:
+				case "admin_admin":
 					activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/admin.htm"));
 					break;
 				
-				case admin_play_sounds:
+				case "admin_play_sounds":
 					if (wordList.length == 1)
 					{
 						activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/songs/songs.htm"));
@@ -114,7 +113,7 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					
 					break;
 				
-				case admin_play_sound:
+				case "admin_play_sound":
 					try
 					{
 						playAdminSound(activeChar, wordList[1]);
@@ -126,7 +125,7 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					
 					break;
 				
-				case admin_silence:
+				case "admin_silence":
 					if (activeChar.getMessageRefusal())
 					{
 						activeChar.unsetVar("gm_silence");
@@ -148,7 +147,7 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					
 					break;
 				
-				case admin_tradeoff:
+				case "admin_tradeoff":
 					try
 					{
 						if (wordList[1].equalsIgnoreCase("on"))
@@ -176,7 +175,7 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					
 					break;
 				
-				case admin_show_html:
+				case "admin_show_html":
 					String html = wordList[1];
 					
 					try
@@ -197,7 +196,7 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					
 					break;
 				
-				case admin_setnpcstate:
+				case "admin_setnpcstate":
 					if (wordList.length < 2)
 					{
 						Functions.sendDebugMessage(activeChar, "USAGE: //setnpcstate state");
@@ -227,7 +226,7 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					npc.setNpcState(state);
 					break;
 				
-				case admin_setareanpcstate:
+				case "admin_setareanpcstate":
 					try
 					{
 						final String val = fullString.substring(15).trim();
@@ -247,7 +246,7 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					
 					break;
 				
-				case admin_showmovie:
+				case "admin_showmovie":
 					if (wordList.length < 2)
 					{
 						Functions.sendDebugMessage(activeChar, "USAGE: //showmovie id");
@@ -269,7 +268,7 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					activeChar.showQuestMovie(id);
 					break;
 				
-				case admin_setzoneinfo:
+				case "admin_setzoneinfo":
 					if (wordList.length < 2)
 					{
 						Functions.sendDebugMessage(activeChar, "USAGE: //setzoneinfo id");
@@ -291,7 +290,7 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					activeChar.broadcastPacket(new ExChangeClientEffectInfo(stateid));
 					break;
 				
-				case admin_eventtrigger:
+				case "admin_eventtrigger":
 					if (wordList.length < 2)
 					{
 						Functions.sendDebugMessage(activeChar, "USAGE: //eventtrigger id");
@@ -313,7 +312,7 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					activeChar.broadcastPacket(new EventTrigger(triggerid, true));
 					break;
 				
-				case admin_debug:
+				case "admin_debug":
 					GameObject ob = activeChar.getTarget();
 					
 					if (!ob.isPlayer())
@@ -376,7 +375,7 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					
 					break;
 				
-				case admin_uievent:
+				case "admin_uievent":
 					if (wordList.length < 5)
 					{
 						Functions.sendDebugMessage(activeChar, "USAGE: //uievent isHide doIncrease startTime endTime Text");
@@ -406,7 +405,7 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					activeChar.broadcastPacket(new ExSendUIEvent(activeChar, hide, increase, startTime, endTime, text));
 					break;
 				
-				case admin_opensod:
+				case "admin_opensod":
 					if (wordList.length < 1)
 					{
 						Functions.sendDebugMessage(activeChar, "USAGE: //opensod minutes");
@@ -416,11 +415,11 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					SoDManager.openSeed(Integer.parseInt(wordList[1]) * 60 * 1000L);
 					break;
 				
-				case admin_closesod:
+				case "admin_closesod":
 					SoDManager.closeSeed();
 					break;
 				
-				case admin_setsoistage:
+				case "admin_setsoistage":
 					if (wordList.length < 1)
 					{
 						Functions.sendDebugMessage(activeChar, "USAGE: //setsoistage stage[1-5]");
@@ -430,7 +429,7 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					SoIManager.setCurrentStage(Integer.parseInt(wordList[1]));
 					break;
 				
-				case admin_soinotify:
+				case "admin_soinotify":
 					if (wordList.length < 1)
 					{
 						Functions.sendDebugMessage(activeChar, "USAGE: //soinotify [1-3]");
@@ -454,7 +453,7 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					
 					break;
 				
-				case admin_forcenpcinfo:
+				case "admin_forcenpcinfo":
 					GameObject obj2 = activeChar.getTarget();
 					
 					if (!obj2.isNpc())
@@ -466,11 +465,11 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					((NpcInstance) obj2).broadcastCharInfo();
 					break;
 				
-				case admin_loc:
+				case "admin_loc":
 					Functions.sendDebugMessage(activeChar, "Coords: X:" + activeChar.getLoc().x + " Y:" + activeChar.getLoc().y + " Z:" + activeChar.getLoc().z + " H:" + activeChar.getLoc().h);
 					break;
 				
-				case admin_locdump:
+				case "admin_locdump":
 					st = new StringTokenizer(fullString, " ");
 					
 					try
@@ -504,7 +503,7 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					
 					break;
 				
-				case admin_undying:
+				case "admin_undying":
 					if (activeChar.isUndying())
 					{
 						activeChar.setUndying(false);
@@ -530,7 +529,7 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 		{
 			switch (command)
 			{
-				case admin_show_html:
+				case "admin_show_html":
 					String html = wordList[1];
 					
 					try
@@ -569,17 +568,6 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 	}
 	
 	/**
-	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
-	 */
-	@Override
-	public Enum<?>[] getAdminCommandEnum()
-	{
-		return Commands.values();
-	}
-	
-	/**
 	 * Method playAdminSound.
 	 * @param activeChar Player
 	 * @param sound String
@@ -589,6 +577,17 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 		activeChar.broadcastPacket(new PlaySound(Type.MUSIC, sound, 0, 0, 0, 0, 0));
 		activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/admin.htm"));
 		activeChar.sendMessage("Playing " + sound + ".");
+	}
+	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
+	 */
+	@Override
+	public String[] getAdminCommandList()
+	{
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

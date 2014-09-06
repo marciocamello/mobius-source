@@ -40,29 +40,27 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
  */
 public class AdminServer implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_server,
-		admin_check_actor,
-		admin_setvar,
-		admin_set_ai_interval,
-		admin_spawn2
-	}
+		"admin_server",
+		"admin_check_actor",
+		"admin_setvar",
+		"admin_set_ai_interval",
+		"admin_spawn2"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().Menu)
 		{
 			return false;
@@ -70,7 +68,7 @@ public class AdminServer implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_server:
+			case "admin_server":
 				try
 				{
 					String val = fullString.substring(13);
@@ -83,7 +81,7 @@ public class AdminServer implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_check_actor:
+			case "admin_check_actor":
 				GameObject obj = activeChar.getTarget();
 				
 				if (obj == null)
@@ -118,7 +116,7 @@ public class AdminServer implements IAdminCommandHandler, ScriptFile
 				activeChar.sendMessage("actor: " + actor);
 				break;
 			
-			case admin_setvar:
+			case "admin_setvar":
 				if (wordList.length != 3)
 				{
 					activeChar.sendMessage("Incorrect argument count!!!");
@@ -129,7 +127,7 @@ public class AdminServer implements IAdminCommandHandler, ScriptFile
 				activeChar.sendMessage("Value changed.");
 				break;
 			
-			case admin_set_ai_interval:
+			case "admin_set_ai_interval":
 				if (wordList.length != 2)
 				{
 					activeChar.sendMessage("Incorrect argument count!!!");
@@ -180,7 +178,7 @@ public class AdminServer implements IAdminCommandHandler, ScriptFile
 				activeChar.sendMessage(count + " AI stopped, " + count2 + " AI started");
 				break;
 			
-			case admin_spawn2:
+			case "admin_spawn2":
 				StringTokenizer st = new StringTokenizer(fullString, " ");
 				
 				try
@@ -211,17 +209,6 @@ public class AdminServer implements IAdminCommandHandler, ScriptFile
 		}
 		
 		return true;
-	}
-	
-	/**
-	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
-	 */
-	@Override
-	public Enum<?>[] getAdminCommandEnum()
-	{
-		return Commands.values();
 	}
 	
 	/**
@@ -294,6 +281,17 @@ public class AdminServer implements IAdminCommandHandler, ScriptFile
 		{
 			activeChar.sendMessage("Target is not ingame.");
 		}
+	}
+	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
+	 */
+	@Override
+	public String[] getAdminCommandList()
+	{
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

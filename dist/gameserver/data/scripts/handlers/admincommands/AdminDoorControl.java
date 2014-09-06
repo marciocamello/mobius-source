@@ -27,26 +27,24 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public class AdminDoorControl implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_open,
-		admin_close,
-	}
+		"admin_open",
+		"admin_close"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().Door)
 		{
 			return false;
@@ -56,7 +54,7 @@ public class AdminDoorControl implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_open:
+			case "admin_open":
 				if (wordList.length > 1)
 				{
 					target = World.getAroundObjectById(activeChar, Integer.parseInt(wordList[1]));
@@ -77,7 +75,7 @@ public class AdminDoorControl implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_close:
+			case "admin_close":
 				if (wordList.length > 1)
 				{
 					target = World.getAroundObjectById(activeChar, Integer.parseInt(wordList[1]));
@@ -104,13 +102,13 @@ public class AdminDoorControl implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum<?>[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

@@ -41,26 +41,25 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler, ScriptFile
 {
 	private static final Logger _log = LoggerFactory.getLogger(AdminChangeAccessLevel.class);
 	
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_changelvl,
-		admin_moders,
-		admin_penalty
-	}
+		"admin_changelvl",
+		"admin_moders",
+		"admin_penalty"
+	};
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().CanGmEdit)
 		{
 			return false;
@@ -68,7 +67,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_changelvl:
+			case "admin_changelvl":
 				if (wordList.length == 2)
 				{
 					int lvl = Integer.parseInt(wordList[1]);
@@ -91,11 +90,11 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_moders:
+			case "admin_moders":
 				showModersPannel(activeChar);
 				break;
 			
-			case admin_penalty:
+			case "admin_penalty":
 				if (wordList.length < 2)
 				{
 					activeChar.sendMessage("USAGE: //penalty charName [count] [reason]");
@@ -256,13 +255,13 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler, ScriptFile
 	
 	/**
 	 * Method getAdminCommandEnum.
-	 * @return Enum[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandEnum()
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
-	public Enum<?>[] getAdminCommandEnum()
+	public String[] getAdminCommandList()
 	{
-		return Commands.values();
+		return ADMIN_COMMANDS;
 	}
 	
 	/**

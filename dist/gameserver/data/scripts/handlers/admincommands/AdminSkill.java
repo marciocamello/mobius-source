@@ -46,42 +46,40 @@ import lineage2.gameserver.utils.Log;
  */
 public class AdminSkill implements IAdminCommandHandler, ScriptFile
 {
-	private static enum Commands
+	private static final String[] ADMIN_COMMANDS =
 	{
-		admin_show_skills,
-		admin_remove_skills,
-		admin_skill_list,
-		admin_skill_index,
-		admin_add_skill,
-		admin_remove_skill,
-		admin_remove_all_skills,
-		admin_get_skills,
-		admin_reset_skills,
-		admin_give_all_skills,
-		admin_give_clan_skills,
-		admin_give_all_clan_skills,
-		admin_show_effects,
-		admin_debug_stats,
-		admin_remove_cooldown,
-		admin_buff
-	}
+		"admin_show_skills",
+		"admin_remove_skills",
+		"admin_skill_list",
+		"admin_skill_index",
+		"admin_add_skill",
+		"admin_remove_skill",
+		"admin_remove_all_skills",
+		"admin_get_skills",
+		"admin_reset_skills",
+		"admin_give_all_skills",
+		"admin_give_clan_skills",
+		"admin_give_all_clan_skills",
+		"admin_show_effects",
+		"admin_debug_stats",
+		"admin_remove_cooldown",
+		"admin_buff"
+	};
 	
 	private static Skill[] adminSkills;
 	
 	/**
 	 * Method useAdminCommand.
-	 * @param comm Enum<?>
+	 * @param command String
 	 * @param wordList String[]
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(Enum, String[], String, Player)
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
-	public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar)
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		Commands command = (Commands) comm;
-		
 		if (!activeChar.getPlayerAccess().CanEditChar)
 		{
 			return false;
@@ -89,27 +87,27 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 		
 		switch (command)
 		{
-			case admin_show_skills:
+			case "admin_show_skills":
 				showSkillsPage(activeChar);
 				break;
 			
-			case admin_show_effects:
+			case "admin_show_effects":
 				showEffects(activeChar);
 				break;
 			
-			case admin_remove_skills:
+			case "admin_remove_skills":
 				removeSkillsPage(activeChar);
 				break;
 			
-			case admin_remove_all_skills:
+			case "admin_remove_all_skills":
 				removeAllSkills(activeChar);
 				break;
 			
-			case admin_skill_list:
+			case "admin_skill_list":
 				activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/skills.htm"));
 				break;
 			
-			case admin_skill_index:
+			case "admin_skill_index":
 				if (wordList.length > 1)
 				{
 					activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/skills/" + wordList[1] + ".htm"));
@@ -117,45 +115,45 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 				
 				break;
 			
-			case admin_add_skill:
+			case "admin_add_skill":
 				adminAddSkill(activeChar, wordList);
 				break;
 			
-			case admin_remove_skill:
+			case "admin_remove_skill":
 				adminRemoveSkill(activeChar, wordList);
 				break;
 			
-			case admin_get_skills:
+			case "admin_get_skills":
 				adminGetSkills(activeChar);
 				break;
 			
-			case admin_reset_skills:
+			case "admin_reset_skills":
 				adminResetSkills(activeChar);
 				break;
 			
-			case admin_give_all_skills:
+			case "admin_give_all_skills":
 				adminGiveAllSkills(activeChar);
 				break;
 			
-			case admin_give_clan_skills:
+			case "admin_give_clan_skills":
 				adminGiveClanSkills(activeChar, false);
 				break;
 			
-			case admin_give_all_clan_skills:
+			case "admin_give_all_clan_skills":
 				adminGiveClanSkills(activeChar, true);
 				break;
 			
-			case admin_debug_stats:
+			case "admin_debug_stats":
 				debug_stats(activeChar);
 				break;
 			
-			case admin_remove_cooldown:
+			case "admin_remove_cooldown":
 				activeChar.resetReuse();
 				activeChar.sendPacket(new SkillCoolTime(activeChar));
 				activeChar.sendMessage("Oткат в�?ех �?килов обнулен.");
 				break;
 			
-			case admin_buff:
+			case "admin_buff":
 				for (int i = 7041; i <= 7064; i++)
 				{
 					activeChar.addSkill(SkillTable.getInstance().getInfo(i, 1));
@@ -325,16 +323,6 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 		
 		activeChar.sendMessage("You gave " + skills.size() + " skills to " + player.getName() + "'s clan " + clan.getName() + ".");
 		player.sendMessage("Your clan received " + skills.size() + " skills.");
-	}
-	
-	/**
-	 * Method Enum
-	 * @return Enum[]
-	 */
-	@Override
-	public Enum<?>[] getAdminCommandEnum()
-	{
-		return Commands.values();
 	}
 	
 	/**
@@ -675,6 +663,17 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 		}
 		
 		removeSkillsPage(activeChar);
+	}
+	
+	/**
+	 * Method getAdminCommandEnum.
+	 * @return String[]
+	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
+	 */
+	@Override
+	public String[] getAdminCommandList()
+	{
+		return ADMIN_COMMANDS;
 	}
 	
 	/**
