@@ -45,7 +45,7 @@ public class GameObjectsStorage
 		storages[STORAGE_PLAYERS] = new GameObjectArray<Player>("PLAYERS", Config.MAXIMUM_ONLINE_USERS, 1);
 		storages[STORAGE_SUMMONS] = new GameObjectArray<Playable>("SUMMONS", Config.MAXIMUM_ONLINE_USERS, 1);
 		storages[STORAGE_NPCS] = new GameObjectArray<NpcInstance>("NPCS", 60000 * Config.RATE_MOB_SPAWN, 5000);
-		storages[STORAGE_OTHER] = new GameObjectArray<>("OTHER", 2000, 1000);
+		storages[STORAGE_OTHER] = new GameObjectArray<>("OTHER", 5000, 1000);
 	}
 	
 	/**
