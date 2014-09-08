@@ -224,6 +224,8 @@ public final class PowerfulDeviceInstance extends NpcInstance
 			if (_NPC.get(getNpcId()) != newClassId)
 			{
 				oldClassId = _DESTINYCHANGECLASSES.get(NextClassId);
+				player.unsetVar("classTarget");
+				player.unsetVar("classKeepSkills");
 				player.unsetVar("awakenByStoneOfDestiny");
 				transferData = "I will ask again... do you wish to Awaken?<br><font color=af9878>(The " + _NAMECLASSES.get(oldClassId) + "'s skills must be present before awakening as an " + _NAMECLASSES.get(NextClassId) + ").</font>";
 			}
@@ -282,6 +284,8 @@ public final class PowerfulDeviceInstance extends NpcInstance
 		}
 		else if (command.equalsIgnoreCase("Awaken2"))
 		{
+			player.setVar("classTarget", String.valueOf(NextClassId), 10000);
+			player.setVar("classKeepSkills", String.valueOf(oldClassId), 10000);
 			player.setVar("awakenByStoneOfDestiny", "true", 10000);
 			player.setVar("AwakenPrepared", "true", -1);
 			player.sendPacket(new ExChangeToAwakenedClass(NextClassId));
