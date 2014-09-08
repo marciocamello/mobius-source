@@ -20,7 +20,6 @@ import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
 import lineage2.gameserver.instancemanager.AwakingManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
-import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.model.base.ClassLevel;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExChangeToAwakenedClass;
@@ -42,49 +41,52 @@ public final class PowerfulDeviceInstance extends NpcInstance
 	public PowerfulDeviceInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
+		
 		_NPC.clear();
-		// sigelKnights
+		// Sigel Knight
 		_NPC.put(33397, 148);
 		_NPC.put(33397, 149);
 		_NPC.put(33397, 150);
 		_NPC.put(33397, 151);
-		// tyrrWarrior
+		// Tyrr Warrior
 		_NPC.put(33398, 152);
 		_NPC.put(33398, 153);
 		_NPC.put(33398, 154);
 		_NPC.put(33398, 155);
 		_NPC.put(33398, 156);
 		_NPC.put(33398, 157);
-		// othellRogue
+		// Othell Rogue
 		_NPC.put(33399, 158);
 		_NPC.put(33399, 159);
 		_NPC.put(33399, 160);
 		_NPC.put(33399, 161);
-		// yulArcher
+		// Yul Archer
 		_NPC.put(33400, 162);
 		_NPC.put(33400, 163);
 		_NPC.put(33400, 164);
 		_NPC.put(33400, 165);
-		// feohWizard
+		// Feoh Wizard
 		_NPC.put(33401, 166);
 		_NPC.put(33401, 167);
 		_NPC.put(33401, 168);
 		_NPC.put(33401, 169);
 		_NPC.put(33401, 170);
-		// issEnchanter
+		// Iss Enchanter
 		_NPC.put(33402, 171);
 		_NPC.put(33402, 172);
 		_NPC.put(33402, 173);
 		_NPC.put(33402, 174);
 		_NPC.put(33402, 175);
-		// wynnSummoner
+		// Wynn Summoner
 		_NPC.put(33403, 176);
 		_NPC.put(33403, 177);
 		_NPC.put(33403, 178);
-		// aeoreHealer
+		// Aeore Healer
 		_NPC.put(33404, 179);
 		_NPC.put(33404, 180);
 		_NPC.put(33404, 181);
+		
+		_DESTINYCHANGECLASSES.clear();
 		// Knights
 		_DESTINYCHANGECLASSES.put(148, 90);
 		_DESTINYCHANGECLASSES.put(149, 91);
@@ -128,6 +130,8 @@ public final class PowerfulDeviceInstance extends NpcInstance
 		_DESTINYCHANGECLASSES.put(179, 97);
 		_DESTINYCHANGECLASSES.put(180, 105);
 		_DESTINYCHANGECLASSES.put(181, 112);
+		
+		_NAMECLASSES.clear();
 		_NAMECLASSES.put(90, "Phoenix Knight");
 		_NAMECLASSES.put(91, "Hell Knight");
 		_NAMECLASSES.put(99, "Eva Templar");
@@ -197,6 +201,233 @@ public final class PowerfulDeviceInstance extends NpcInstance
 		_NAMECLASSES.put(179, "Aeore Cardinal");
 		_NAMECLASSES.put(180, "Aeore Eva Saint");
 		_NAMECLASSES.put(181, "Aeore Shillen Saint");
+	}
+	
+	@Override
+	public void onBypassFeedback(Player player, String command)
+	{
+		calculateNextClass(player);
+		
+		int oldClassId = 0;
+		int newClassId = AwakingManager.getInstance().childOf(player.getClassId());
+		
+		if (!canBypassCheck(player, this))
+		{
+			return;
+		}
+		
+		if (command.equalsIgnoreCase("Awaken"))
+		{
+			int essencesCount = AwakingManager.getInstance().giveGiantEssences(player, true);
+			String transferData = new String();
+			
+			if (_NPC.get(getNpcId()) != newClassId)
+			{
+				oldClassId = _DESTINYCHANGECLASSES.get(NextClassId);
+				player.unsetVar("awakenByStoneOfDestiny");
+				player.unsetVar("classTarget");
+				player.unsetVar("classKeepSkills");
+				transferData = "I will ask again... do you wish to Awaken?<br><font color=af9878>(The " + _NAMECLASSES.get(oldClassId) + "'s skills must be present before awakening as an " + _NAMECLASSES.get(NextClassId) + ").</font>";
+			}
+			else
+			{
+				oldClassId = player.getClassId().getId();
+				transferData = "You are not strong enough to receive the giant's power. You need to choose between the giant's power and the god's power.<br>In other words, you should be in the best shape to obtain all the power from the giant. Come back when you are ready.";
+			}
+			
+			NpcHtmlMessage htmlMessage = new NpcHtmlMessage(getObjectId());
+			htmlMessage.setFile("default/" + getNpcId() + "-4.htm");
+			htmlMessage.replace("%SP%", String.valueOf(sp));
+			htmlMessage.replace("%ESSENCES%", String.valueOf(essencesCount));
+			htmlMessage.replace("%TRANSFERDATA%", transferData);
+			player.sendPacket(htmlMessage);
+		}
+		else if (command.equalsIgnoreCase("Awaken1"))
+		{
+			String skillList = new String();
+			skillList = skillList + "<table border=0 cellpading=8 cellspacing=4>";
+			if (_NPC.get(getNpcId()) != newClassId)
+			{
+				oldClassId = _DESTINYCHANGECLASSES.get(NextClassId);
+				player.setVar("awakenByStoneOfDestiny", "true", 120000);
+				player.setVar("classTarget", String.valueOf(NextClassId), 120000);
+				player.setVar("classKeepSkills", String.valueOf(oldClassId), 120000);
+			}
+			else
+			{
+				oldClassId = player.getClassId().getId();
+			}
+			
+			List<Integer> skillListId = SkillAcquireHolder.getInstance().getMaintainSkillOnAwake(oldClassId, newClassId);
+			
+			for (int sId : skillListId)
+			{
+				String iconData = obtainIcon(sId);
+				String name = new String();
+				Skill skl = SkillTable.getInstance().getInfo(sId, SkillTable.getInstance().getBaseLevel(sId));
+				
+				if (skl != null)
+				{
+					name = skl.getName();
+				}
+				else
+				{
+					continue;
+				}
+				
+				skillList = skillList + "<tr><td width=34 height=34><img src=" + iconData + " width=32 height=32></td><td width=200> " + name + " </td></tr><tr><td colspan=2><br></td></tr>";
+			}
+			
+			skillList = skillList + "</table>";
+			
+			NpcHtmlMessage htmlMessage = new NpcHtmlMessage(getObjectId());
+			htmlMessage.replace("%SKILLIST%", skillList);
+			htmlMessage.setFile("default/" + getNpcId() + "-5.htm");
+			player.sendPacket(htmlMessage);
+		}
+		else if (command.equalsIgnoreCase("Awaken2"))
+		{
+			player.setVar("AwakenPrepared", "true", -1);
+			player.sendPacket(new ExChangeToAwakenedClass(NextClassId));
+			player.addExpAndSp(0, sp);
+			AwakingManager.getInstance().giveGiantEssences(player, false);
+			ItemFunctions.addItem(player, 32778, 1, true);
+		}
+	}
+	
+	@Override
+	public void showChatWindow(Player player, int val, Object... replace)
+	{
+		String htmltext;
+		
+		if (val == 0)
+		{
+			if ((player.getClassId().getClassLevel() == ClassLevel.Third) && (player.getInventory().getCountOf(SCROLL_OF_AFTERLIFE) > 0))
+			{
+				if (player.getPets().size() > 0)
+				{
+					htmltext = getHtmlPath(getNpcId(), 1, player);
+				}
+				else if (!classCheck(player))
+				{
+					htmltext = getHtmlPath(getNpcId(), 2, player);
+				}
+				else if (player.getLevel() < 85)
+				{
+					htmltext = getHtmlPath(getNpcId(), val, player);
+				}
+				else
+				{
+					htmltext = getHtmlPath(getNpcId(), 3, player);
+				}
+				
+				if (player.getVarB("AwakenPrepared", false))
+				{
+					player.sendPacket(new ExChangeToAwakenedClass(NextClassId));
+					return;
+				}
+			}
+			else
+			{
+				htmltext = getHtmlPath(getNpcId(), val, player);
+			}
+		}
+		else
+		{
+			htmltext = getHtmlPath(getNpcId(), val, player);
+		}
+		
+		showChatWindow(player, htmltext, replace);
+	}
+	
+	private boolean classCheck(Player player)
+	{
+		int oldId = player.getActiveClassId();
+		
+		switch (getNpcId())
+		{
+			case 33397:
+			{
+				if ((oldId == 90) || (oldId == 91) || (oldId == 99) || (oldId == 106))
+				{
+					return true;
+				}
+				
+				break;
+			}
+			
+			case 33398:
+			{
+				if ((oldId == 88) || (oldId == 89) || (oldId == 113) || (oldId == 114) || (oldId == 118) || (oldId == 131))
+				{
+					return true;
+				}
+				
+				break;
+			}
+			
+			case 33399:
+			{
+				if ((oldId == 93) || (oldId == 101) || (oldId == 108) || (oldId == 117))
+				{
+					return true;
+				}
+				
+				break;
+			}
+			
+			case 33400:
+			{
+				if ((oldId == 92) || (oldId == 102) || (oldId == 109) || (oldId == 134))
+				{
+					return true;
+				}
+				
+				break;
+			}
+			
+			case 33401:
+			{
+				if ((oldId == 94) || (oldId == 95) || (oldId == 103) || (oldId == 110) || (oldId == 132) || (oldId == 133))
+				{
+					return true;
+				}
+				
+				break;
+			}
+			
+			case 33402:
+			{
+				if ((oldId == 98) || (oldId == 116) || (oldId == 115) || (oldId == 100) || (oldId == 107) || (oldId == 136))
+				{
+					return true;
+				}
+				
+				break;
+			}
+			
+			case 33403:
+			{
+				if ((oldId == 96) || (oldId == 104) || (oldId == 111))
+				{
+					return true;
+				}
+				
+				break;
+			}
+			
+			case 33404:
+			{
+				if ((oldId == 97) || (oldId == 105) || (oldId == 112))
+				{
+					return true;
+				}
+				
+				break;
+			}
+		}
+		
+		return false;
 	}
 	
 	private String obtainIcon(int skillId)
@@ -288,249 +519,6 @@ public final class PowerfulDeviceInstance extends NpcInstance
 		
 		String finalCompose = prefix + format;
 		return finalCompose;
-	}
-	
-	@Override
-	public void onBypassFeedback(Player player, String command)
-	{
-		calculateNextClass(player);
-		
-		int oldClassId = 0;
-		int newClassId = AwakingManager.getInstance().childOf(player.getClassId());
-		
-		if (!canBypassCheck(player, this))
-		{
-			return;
-		}
-		
-		if (command.equalsIgnoreCase("Awaken"))
-		{
-			int essencesCount = AwakingManager.getInstance().giveGiantEssences(player, true);
-			String transferData = new String();
-			
-			if (_NPC.get(getNpcId()) != newClassId)
-			{
-				oldClassId = _DESTINYCHANGECLASSES.get(NextClassId);
-				player.unsetVar("awakenByStoneOfDestiny");
-				player.unsetVar("classTarget");
-				player.unsetVar("classKeepSkills");
-				transferData = "I will ask again... do you wish to Awaken?<br><font color=af9878>(The " + _NAMECLASSES.get(oldClassId) + "'s skills must be present before awakening as an " + _NAMECLASSES.get(NextClassId) + ").</font>";
-			}
-			else
-			{
-				oldClassId = player.getClassId().getId();
-				transferData = "You are not strong enough to receive the giant's power. You need to choose between the giant's power and the god's power.<br>In other words, you should be in the best shape to obtain all the power from the giant. Come back when you are ready.";
-			}
-			
-			NpcHtmlMessage htmlMessage = new NpcHtmlMessage(getObjectId());
-			htmlMessage.setFile("default/" + getNpcId() + "-4.htm");
-			htmlMessage.replace("%SP%", String.valueOf(sp));
-			htmlMessage.replace("%ESSENCES%", String.valueOf(essencesCount));
-			htmlMessage.replace("%TRANSFERDATA%", transferData);
-			player.sendPacket(htmlMessage);
-		}
-		else if (command.equalsIgnoreCase("Awaken1"))
-		{
-			String skillList = new String();
-			skillList = skillList + "<table border=0 cellpading=8 cellspacing=4>";
-			
-			if (_NPC.get(getNpcId()) != newClassId)
-			{
-				oldClassId = _DESTINYCHANGECLASSES.get(NextClassId);
-				player.setVar("awakenByStoneOfDestiny", "true", 120000);
-				player.setVar("classTarget", String.valueOf(NextClassId), 120000);
-				player.setVar("classKeepSkills", String.valueOf(oldClassId), 120000);
-			}
-			else
-			{
-				oldClassId = player.getClassId().getId();
-			}
-			
-			List<Integer> skillListId = SkillAcquireHolder.getInstance().getMaintainSkillOnAwake(oldClassId, newClassId);
-			
-			for (int sId : skillListId)
-			{
-				String iconData = obtainIcon(sId);
-				String name = new String();
-				Skill skl = SkillTable.getInstance().getInfo(sId, SkillTable.getInstance().getBaseLevel(sId));
-				
-				if (skl != null)
-				{
-					name = skl.getName();
-				}
-				else
-				{
-					continue;
-				}
-				
-				skillList = skillList + "<tr><td width=34 height=34><img src=" + iconData + " width=32 height=32></td><td width=200> " + name + " </td></tr><tr><td colspan=2><br></td></tr>";
-			}
-			
-			skillList = skillList + "</table>";
-			
-			NpcHtmlMessage htmlMessage = new NpcHtmlMessage(getObjectId());
-			htmlMessage.replace("%SKILLIST%", skillList);
-			htmlMessage.setFile("default/" + getNpcId() + "-5.htm");
-			player.sendPacket(htmlMessage);
-		}
-		else if (command.equalsIgnoreCase("Awaken2"))
-		{
-			player.setVar("AwakenPrepared", "true", -1);
-			player.setVar("AwakenedID", NextClassId, -1);
-			player.sendPacket(new ExChangeToAwakenedClass(NextClassId));
-			player.addExpAndSp(0, sp);
-			AwakingManager.getInstance().giveGiantEssences(player, false);
-			ItemFunctions.addItem(player, 32778, 1, true);
-		}
-	}
-	
-	@Override
-	public void showChatWindow(Player player, int val, Object... replace)
-	{
-		String htmlpath;
-		
-		if (val == 0)
-		{
-			if ((player.getClassId().getClassLevel() == ClassLevel.Third) && (player.getInventory().getCountOf(SCROLL_OF_AFTERLIFE) > 0))
-			{
-				for (ClassId classId1 : ClassId.VALUES)
-				{
-					if (classId1.childOf(player.getClassId()))
-					{
-						classId1.getId();
-						break;
-					}
-				}
-				
-				if (player.getPets().size() > 0)
-				{
-					htmlpath = getHtmlPath(getNpcId(), 1, player);
-				}
-				else if (!classSynk(player))
-				{
-					htmlpath = getHtmlPath(getNpcId(), 2, player);
-				}
-				else if (player.getLevel() < 85)
-				{
-					htmlpath = getHtmlPath(getNpcId(), val, player);
-				}
-				else
-				{
-					if (player.getVar("AwakenedOldIDClass") == null)
-					{
-						player.setVar("AwakenedOldIDClass", player.getClassId().getId(), -1);
-					}
-					
-					htmlpath = getHtmlPath(getNpcId(), 3, player);
-				}
-				
-				if (player.getVarB("AwakenPrepared", false))
-				{
-					player.sendPacket(new ExChangeToAwakenedClass(NextClassId));
-					return;
-				}
-			}
-			else
-			{
-				htmlpath = getHtmlPath(getNpcId(), val, player);
-			}
-		}
-		else
-		{
-			htmlpath = getHtmlPath(getNpcId(), val, player);
-		}
-		
-		showChatWindow(player, htmlpath, replace);
-	}
-	
-	private boolean classSynk(Player player)
-	{
-		int oldId = player.getClassId().getId();
-		
-		switch (getNpcId())
-		{
-			case 33397:
-			{
-				if ((oldId == 90) || (oldId == 91) || (oldId == 99) || (oldId == 106))
-				{
-					return true;
-				}
-				
-				break;
-			}
-			
-			case 33398:
-			{
-				if ((oldId == 88) || (oldId == 89) || (oldId == 113) || (oldId == 114) || (oldId == 118) || (oldId == 131))
-				{
-					return true;
-				}
-				
-				break;
-			}
-			
-			case 33399:
-			{
-				if ((oldId == 93) || (oldId == 101) || (oldId == 108) || (oldId == 117))
-				{
-					return true;
-				}
-				
-				break;
-			}
-			
-			case 33400:
-			{
-				if ((oldId == 92) || (oldId == 102) || (oldId == 109) || (oldId == 134))
-				{
-					return true;
-				}
-				
-				break;
-			}
-			
-			case 33401:
-			{
-				if ((oldId == 94) || (oldId == 95) || (oldId == 103) || (oldId == 110) || (oldId == 132) || (oldId == 133))
-				{
-					return true;
-				}
-				
-				break;
-			}
-			
-			case 33402:
-			{
-				if ((oldId == 98) || (oldId == 116) || (oldId == 115) || (oldId == 100) || (oldId == 107) || (oldId == 136))
-				{
-					return true;
-				}
-				
-				break;
-			}
-			
-			case 33403:
-			{
-				if ((oldId == 96) || (oldId == 104) || (oldId == 111))
-				{
-					return true;
-				}
-				
-				break;
-			}
-			
-			case 33404:
-			{
-				if ((oldId == 97) || (oldId == 105) || (oldId == 112))
-				{
-					return true;
-				}
-				
-				break;
-			}
-		}
-		
-		return false;
 	}
 	
 	private void calculateNextClass(Player player)
