@@ -224,9 +224,9 @@ public final class PowerfulDeviceInstance extends NpcInstance
 			if (_NPC.get(getNpcId()) != newClassId)
 			{
 				oldClassId = _DESTINYCHANGECLASSES.get(NextClassId);
+				player.unsetVar("awakenByStoneOfDestiny");
 				player.unsetVar("classTarget");
 				player.unsetVar("classKeepSkills");
-				player.unsetVar("awakenByStoneOfDestiny");
 				transferData = "I will ask again... do you wish to Awaken?<br><font color=af9878>(The " + _NAMECLASSES.get(oldClassId) + "'s skills must be present before awakening as an " + _NAMECLASSES.get(NextClassId) + ").</font>";
 			}
 			else
@@ -246,9 +246,13 @@ public final class PowerfulDeviceInstance extends NpcInstance
 		{
 			String skillList = new String();
 			skillList = skillList + "<table border=0 cellpading=8 cellspacing=4>";
+			
 			if (_NPC.get(getNpcId()) != newClassId)
 			{
 				oldClassId = _DESTINYCHANGECLASSES.get(NextClassId);
+				player.setVar("awakenByStoneOfDestiny", "true", 120000);
+				player.setVar("classTarget", String.valueOf(NextClassId), 120000);
+				player.setVar("classKeepSkills", String.valueOf(oldClassId), 120000);
 			}
 			else
 			{
@@ -284,10 +288,8 @@ public final class PowerfulDeviceInstance extends NpcInstance
 		}
 		else if (command.equalsIgnoreCase("Awaken2"))
 		{
-			player.setVar("classTarget", String.valueOf(NextClassId), 10000);
-			player.setVar("classKeepSkills", String.valueOf(oldClassId), 10000);
-			player.setVar("awakenByStoneOfDestiny", "true", 10000);
 			player.setVar("AwakenPrepared", "true", -1);
+			player.setVar("AwakenedID", NextClassId, -1);
 			player.sendPacket(new ExChangeToAwakenedClass(NextClassId));
 			player.addExpAndSp(0, sp);
 			AwakingManager.getInstance().giveGiantEssences(player, false);
@@ -298,7 +300,7 @@ public final class PowerfulDeviceInstance extends NpcInstance
 	@Override
 	public void showChatWindow(Player player, int val, Object... replace)
 	{
-		String htmltext;
+		String htmlpath;
 		
 		if (val == 0)
 		{
@@ -306,19 +308,24 @@ public final class PowerfulDeviceInstance extends NpcInstance
 			{
 				if (player.getPets().size() > 0)
 				{
-					htmltext = getHtmlPath(getNpcId(), 1, player);
+					htmlpath = getHtmlPath(getNpcId(), 1, player);
 				}
-				else if (!classCheck(player))
+				else if (!classSynk(player))
 				{
-					htmltext = getHtmlPath(getNpcId(), 2, player);
+					htmlpath = getHtmlPath(getNpcId(), 2, player);
 				}
 				else if (player.getLevel() < 85)
 				{
-					htmltext = getHtmlPath(getNpcId(), val, player);
+					htmlpath = getHtmlPath(getNpcId(), val, player);
 				}
 				else
 				{
-					htmltext = getHtmlPath(getNpcId(), 3, player);
+					if (player.getVar("AwakenedOldIDClass") == null)
+					{
+						player.setVar("AwakenedOldIDClass", player.getClassId().getId(), -1);
+					}
+					
+					htmlpath = getHtmlPath(getNpcId(), 3, player);
 				}
 				
 				if (player.getVarB("AwakenPrepared", false))
@@ -329,105 +336,15 @@ public final class PowerfulDeviceInstance extends NpcInstance
 			}
 			else
 			{
-				htmltext = getHtmlPath(getNpcId(), val, player);
+				htmlpath = getHtmlPath(getNpcId(), val, player);
 			}
 		}
 		else
 		{
-			htmltext = getHtmlPath(getNpcId(), val, player);
+			htmlpath = getHtmlPath(getNpcId(), val, player);
 		}
 		
-		showChatWindow(player, htmltext, replace);
-	}
-	
-	private boolean classCheck(Player player)
-	{
-		int oldId = player.getActiveClassId();
-		
-		switch (getNpcId())
-		{
-			case 33397:
-			{
-				if ((oldId == 90) || (oldId == 91) || (oldId == 99) || (oldId == 106))
-				{
-					return true;
-				}
-				
-				break;
-			}
-			
-			case 33398:
-			{
-				if ((oldId == 88) || (oldId == 89) || (oldId == 113) || (oldId == 114) || (oldId == 118) || (oldId == 131))
-				{
-					return true;
-				}
-				
-				break;
-			}
-			
-			case 33399:
-			{
-				if ((oldId == 93) || (oldId == 101) || (oldId == 108) || (oldId == 117))
-				{
-					return true;
-				}
-				
-				break;
-			}
-			
-			case 33400:
-			{
-				if ((oldId == 92) || (oldId == 102) || (oldId == 109) || (oldId == 134))
-				{
-					return true;
-				}
-				
-				break;
-			}
-			
-			case 33401:
-			{
-				if ((oldId == 94) || (oldId == 95) || (oldId == 103) || (oldId == 110) || (oldId == 132) || (oldId == 133))
-				{
-					return true;
-				}
-				
-				break;
-			}
-			
-			case 33402:
-			{
-				if ((oldId == 98) || (oldId == 116) || (oldId == 115) || (oldId == 100) || (oldId == 107) || (oldId == 136))
-				{
-					return true;
-				}
-				
-				break;
-			}
-			
-			case 33403:
-			{
-				if ((oldId == 96) || (oldId == 104) || (oldId == 111))
-				{
-					return true;
-				}
-				
-				break;
-			}
-			
-			case 33404:
-			{
-				if ((oldId == 97) || (oldId == 105) || (oldId == 112))
-				{
-					return true;
-				}
-				
-				break;
-			}
-		}
-		
-		return false;
+		showChatWindow(player, htmlpath, replace);
 	}
 	
 	private String obtainIcon(int skillId)
@@ -519,6 +436,96 @@ public final class PowerfulDeviceInstance extends NpcInstance
 		
 		String finalCompose = prefix + format;
 		return finalCompose;
+	}
+	
+	private boolean classSynk(Player player)
+	{
+		int oldId = player.getClassId().getId();
+		
+		switch (getNpcId())
+		{
+			case 33397:
+			{
+				if ((oldId == 90) || (oldId == 91) || (oldId == 99) || (oldId == 106))
+				{
+					return true;
+				}
+				
+				break;
+			}
+			
+			case 33398:
+			{
+				if ((oldId == 88) || (oldId == 89) || (oldId == 113) || (oldId == 114) || (oldId == 118) || (oldId == 131))
+				{
+					return true;
+				}
+				
+				break;
+			}
+			
+			case 33399:
+			{
+				if ((oldId == 93) || (oldId == 101) || (oldId == 108) || (oldId == 117))
+				{
+					return true;
+				}
+				
+				break;
+			}
+			
+			case 33400:
+			{
+				if ((oldId == 92) || (oldId == 102) || (oldId == 109) || (oldId == 134))
+				{
+					return true;
+				}
+				
+				break;
+			}
+			
+			case 33401:
+			{
+				if ((oldId == 94) || (oldId == 95) || (oldId == 103) || (oldId == 110) || (oldId == 132) || (oldId == 133))
+				{
+					return true;
+				}
+				
+				break;
+			}
+			
+			case 33402:
+			{
+				if ((oldId == 98) || (oldId == 116) || (oldId == 115) || (oldId == 100) || (oldId == 107) || (oldId == 136))
+				{
+					return true;
+				}
+				
+				break;
+			}
+			
+			case 33403:
+			{
+				if ((oldId == 96) || (oldId == 104) || (oldId == 111))
+				{
+					return true;
+				}
+				
+				break;
+			}
+			
+			case 33404:
+			{
+				if ((oldId == 97) || (oldId == 105) || (oldId == 112))
+				{
+					return true;
+				}
+				
+				break;
+			}
+		}
+		
+		return false;
 	}
 	
 	private void calculateNextClass(Player player)
