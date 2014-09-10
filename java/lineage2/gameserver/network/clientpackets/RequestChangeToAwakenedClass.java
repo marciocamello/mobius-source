@@ -17,17 +17,13 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.instancemanager.AwakingManager;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.network.serverpackets.ExShowUsmVideo;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public class RequestChangeToAwakenedClass extends L2GameClientPacket
 {
-	private static final int SCROLL_OF_AFTERLIFE = 17600;
-	private static final int STONE_OF_DESTINY = 17722;
 	private int change;
 	
 	/**
@@ -69,41 +65,16 @@ public class RequestChangeToAwakenedClass extends L2GameClientPacket
 				return;
 			}
 			
-			ClassId classId = player.getClassId();
+			AwakingManager.getInstance().SetAwakingId(player);
 			
-			for (ClassId cid : ClassId.VALUES)
+			ThreadPoolManager.getInstance().schedule(new RunnableImpl()
 			{
-				if (cid.childOf(classId) && (cid.getClassLevel().ordinal() == (classId.getClassLevel().ordinal() + 1)))
+				@Override
+				public void runImpl()
 				{
-					if (player.getInventory().getCountOf(SCROLL_OF_AFTERLIFE) > 0)
-					{
-						player.getInventory().destroyItemByItemId(SCROLL_OF_AFTERLIFE, 1);
-						
-						if (player.getVarB("awakenByStoneOfDestiny", false))
-						{
-							int classTarget = player.getVarInt("classTarget");
-							int classKeepSkills = player.getVarInt("classKeepSkills");
-							player.getInventory().destroyItemByItemId(STONE_OF_DESTINY, 1);
-							AwakingManager.getInstance().SetAwakingId(player, classTarget, classKeepSkills);
-						}
-						else
-						{
-							AwakingManager.getInstance().SetAwakingId(player);
-						}
-						
-						ThreadPoolManager.getInstance().schedule(new RunnableImpl()
-						{
-							@Override
-							public void runImpl()
-							{
-								player.sendPacket(new ExShowUsmVideo(ExShowUsmVideo.Q010));
-							}
-						}, 15000);
-					}
-					
-					return;
+					player.sendPacket(new ExShowUsmVideo(ExShowUsmVideo.Q010));
 				}
-			}
+			}, 15000);
 		}
 		else
 		{
@@ -129,17 +100,7 @@ public class RequestChangeToAwakenedClass extends L2GameClientPacket
 				return;
 			}
 			
-			if (player.getVarB("awakenByStoneOfDestiny", false))
-			{
-				int classTarget = player.getVarInt("classTarget");
-				int classKeepSkills = player.getVarInt("classKeepSkills");
-				player.getInventory().removeItemByItemId(STONE_OF_DESTINY, 1);
-				AwakingManager.getInstance().SetAwakingId(player, classTarget, classKeepSkills);
-			}
-			else
-			{
-				AwakingManager.getInstance().SetAwakingId(player);
-			}
+			AwakingManager.getInstance().SetAwakingId(player);
 		}
 	}
 }
