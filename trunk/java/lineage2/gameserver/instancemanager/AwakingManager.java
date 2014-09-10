@@ -41,17 +41,25 @@ import gnu.trove.map.hash.TIntIntHashMap;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public class AwakingManager implements OnPlayerEnterListener
 {
 	private static final Logger _log = LoggerFactory.getLogger(AwakingManager.class);
+	
 	private static AwakingManager _instance;
+	
 	private static final int ESSENCE_OF_THE_LESSER_GIANTS = 30306;
+	
+	public static final int CHAOS_ESSENCE = 36949;
+	public static final int CHAOS_ESSENCE_DUAL_CLASS = 37494;
+	public static final int CHAOS_POMANDER = 37374;
+	public static final int CHAOS_POMANDER_DUAL_CLASS = 37375;
+	
 	private static final TIntIntHashMap _CA = new TIntIntHashMap(69);
-	private static final TIntIntHashMap _LegacyWeapon = new TIntIntHashMap(36);
-	private static final TIntIntHashMap _AwakenPower = new TIntIntHashMap(8);
-	private static final TIntIntHashMap _CloakDualClass = new TIntIntHashMap(8);
+	private static final TIntIntHashMap LEGACY_WEAPONS = new TIntIntHashMap(36);
+	private static final TIntIntHashMap AWAKEN_POWER = new TIntIntHashMap(8);
+	private static final TIntIntHashMap CLOAK_DUAL_CLASS = new TIntIntHashMap(8);
+	
 	private static final Integer[] _AlterSigel =
 	{
 		10250,
@@ -92,7 +100,7 @@ public class AwakingManager implements OnPlayerEnterListener
 		12000,
 		11999
 	};
-	private static final HashMap<Integer, Integer[]> _AlterSkills = new HashMap<>();
+	private static final HashMap<Integer, Integer[]> ALTER_SKILLS = new HashMap<>();
 	private static final int[] count30T =
 	{
 		0,
@@ -158,10 +166,10 @@ public class AwakingManager implements OnPlayerEnterListener
 		}
 		
 		_CA.clear();
-		_AlterSkills.clear();
-		_LegacyWeapon.clear();
-		_AwakenPower.clear();
-		_CloakDualClass.clear();
+		ALTER_SKILLS.clear();
+		LEGACY_WEAPONS.clear();
+		AWAKEN_POWER.clear();
+		CLOAK_DUAL_CLASS.clear();
 		/***************************************************************************************************
 		 * 139 H_PhoenixKnight, H_HellKnight, E_EvaTemplar, DE_ShillienTemplar 140 H_Duelist, H_Dreadnought, O_Titan, O_GrandKhauatari, D_Maestro, K_Male_Doombringer 141 H_Adventurer, E_WindRider, DE_GhostHunter, D_FortuneSeeker, 142 H_Sagittarius, E_MoonlightSentinel, DE_GhostSentinel,
 		 * K_Female_Trickster 143 H_Archmage, H_Soultaker, E_MysticMuse, DE_StormScreamer, K_Male_Soulhound, K_Female_Soulhound 144 H_Hierophant, E_SwordMuse, DE_SpectralDancer, O_Dominator, O_Doomcryer, K_Judicator 145 H_ArcanaLord, E_ElementalMaster, DE_SpectralMaster 146 H_Cardinal, E_EvaSaint,
@@ -234,169 +242,174 @@ public class AwakingManager implements OnPlayerEnterListener
 		_CA.put(146, 180);
 		_CA.put(112, 181);
 		_CA.put(146, 181);
-		_AwakenPower.put(139, 32264);
-		_AwakenPower.put(148, 32264);
-		_AwakenPower.put(149, 32264);
-		_AwakenPower.put(150, 32264);
-		_AwakenPower.put(151, 32264);
-		_AwakenPower.put(140, 32265);
-		_AwakenPower.put(152, 32265);
-		_AwakenPower.put(153, 32265);
-		_AwakenPower.put(154, 32265);
-		_AwakenPower.put(155, 32265);
-		_AwakenPower.put(156, 32265);
-		_AwakenPower.put(157, 32265);
-		_AwakenPower.put(141, 32266);
-		_AwakenPower.put(158, 32266);
-		_AwakenPower.put(159, 32266);
-		_AwakenPower.put(160, 32266);
-		_AwakenPower.put(161, 32266);
-		_AwakenPower.put(142, 32267);
-		_AwakenPower.put(162, 32267);
-		_AwakenPower.put(163, 32267);
-		_AwakenPower.put(164, 32267);
-		_AwakenPower.put(165, 32267);
-		_AwakenPower.put(143, 32268);
-		_AwakenPower.put(166, 32268);
-		_AwakenPower.put(167, 32268);
-		_AwakenPower.put(168, 32268);
-		_AwakenPower.put(169, 32268);
-		_AwakenPower.put(170, 32268);
-		_AwakenPower.put(144, 32269);
-		_AwakenPower.put(171, 32269);
-		_AwakenPower.put(172, 32269);
-		_AwakenPower.put(173, 32269);
-		_AwakenPower.put(174, 32269);
-		_AwakenPower.put(175, 32269);
-		_AwakenPower.put(145, 32270);
-		_AwakenPower.put(176, 32270);
-		_AwakenPower.put(177, 32270);
-		_AwakenPower.put(178, 32270);
-		_AwakenPower.put(146, 32271);
-		_AwakenPower.put(179, 32271);
-		_AwakenPower.put(180, 32271);
-		_AwakenPower.put(181, 32271);
-		_CloakDualClass.put(139, 30310);
-		_CloakDualClass.put(148, 30310);
-		_CloakDualClass.put(149, 30310);
-		_CloakDualClass.put(150, 30310);
-		_CloakDualClass.put(151, 30310);
-		_CloakDualClass.put(140, 30311);
-		_CloakDualClass.put(152, 30311);
-		_CloakDualClass.put(153, 30311);
-		_CloakDualClass.put(154, 30311);
-		_CloakDualClass.put(155, 30311);
-		_CloakDualClass.put(156, 30311);
-		_CloakDualClass.put(157, 30311);
-		_CloakDualClass.put(141, 30312);
-		_CloakDualClass.put(158, 30312);
-		_CloakDualClass.put(159, 30312);
-		_CloakDualClass.put(160, 30312);
-		_CloakDualClass.put(161, 30312);
-		_CloakDualClass.put(142, 30313);
-		_CloakDualClass.put(162, 30313);
-		_CloakDualClass.put(163, 30313);
-		_CloakDualClass.put(164, 30313);
-		_CloakDualClass.put(165, 30313);
-		_CloakDualClass.put(143, 30314);
-		_CloakDualClass.put(166, 30314);
-		_CloakDualClass.put(167, 30314);
-		_CloakDualClass.put(168, 30314);
-		_CloakDualClass.put(169, 30314);
-		_CloakDualClass.put(170, 30314);
-		_CloakDualClass.put(144, 30315);
-		_CloakDualClass.put(171, 30315);
-		_CloakDualClass.put(172, 30315);
-		_CloakDualClass.put(173, 30315);
-		_CloakDualClass.put(174, 30315);
-		_CloakDualClass.put(175, 30315);
-		_CloakDualClass.put(145, 30316);
-		_CloakDualClass.put(176, 30316);
-		_CloakDualClass.put(177, 30316);
-		_CloakDualClass.put(178, 30316);
-		_CloakDualClass.put(146, 30317);
-		_CloakDualClass.put(179, 30317);
-		_CloakDualClass.put(180, 30317);
-		_CloakDualClass.put(181, 30317);
-		_LegacyWeapon.put(88, 33717);
-		_LegacyWeapon.put(89, 33718);
-		_LegacyWeapon.put(90, 33719);
-		_LegacyWeapon.put(91, 33720);
-		_LegacyWeapon.put(92, 33721);
-		_LegacyWeapon.put(93, 33722);
-		_LegacyWeapon.put(94, 33723);
-		_LegacyWeapon.put(95, 33724);
-		_LegacyWeapon.put(96, 33725);
-		_LegacyWeapon.put(97, 33726);
-		_LegacyWeapon.put(98, 33727);
-		_LegacyWeapon.put(99, 33728);
-		_LegacyWeapon.put(100, 33729);
-		_LegacyWeapon.put(101, 33730);
-		_LegacyWeapon.put(102, 33731);
-		_LegacyWeapon.put(103, 33732);
-		_LegacyWeapon.put(104, 33733);
-		_LegacyWeapon.put(105, 33734);
-		_LegacyWeapon.put(106, 33735);
-		_LegacyWeapon.put(107, 33736);
-		_LegacyWeapon.put(108, 33737);
-		_LegacyWeapon.put(109, 33738);
-		_LegacyWeapon.put(110, 33739);
-		_LegacyWeapon.put(111, 33740);
-		_LegacyWeapon.put(112, 33741);
-		_LegacyWeapon.put(113, 33742);
-		_LegacyWeapon.put(114, 33743);
-		_LegacyWeapon.put(115, 33744);
-		_LegacyWeapon.put(116, 33745);
-		_LegacyWeapon.put(117, 33746);
-		_LegacyWeapon.put(118, 33747);
-		_LegacyWeapon.put(131, 33761);
-		_LegacyWeapon.put(132, 33762);
-		_LegacyWeapon.put(133, 33763);
-		_LegacyWeapon.put(134, 33763);
-		_LegacyWeapon.put(136, 33765);
-		_AlterSkills.put(Integer.valueOf(139), _AlterSigel);
-		_AlterSkills.put(Integer.valueOf(148), _AlterSigel);
-		_AlterSkills.put(Integer.valueOf(149), _AlterSigel);
-		_AlterSkills.put(Integer.valueOf(150), _AlterSigel);
-		_AlterSkills.put(Integer.valueOf(151), _AlterSigel);
-		_AlterSkills.put(Integer.valueOf(140), _AlterTyrr);
-		_AlterSkills.put(Integer.valueOf(152), _AlterTyrr);
-		_AlterSkills.put(Integer.valueOf(153), _AlterTyrr);
-		_AlterSkills.put(Integer.valueOf(154), _AlterTyrr);
-		_AlterSkills.put(Integer.valueOf(155), _AlterTyrr);
-		_AlterSkills.put(Integer.valueOf(156), _AlterTyrr);
-		_AlterSkills.put(Integer.valueOf(157), _AlterTyrr);
-		_AlterSkills.put(Integer.valueOf(141), _AlterOthell);
-		_AlterSkills.put(Integer.valueOf(158), _AlterOthell);
-		_AlterSkills.put(Integer.valueOf(159), _AlterOthell);
-		_AlterSkills.put(Integer.valueOf(160), _AlterOthell);
-		_AlterSkills.put(Integer.valueOf(161), _AlterOthell);
-		_AlterSkills.put(Integer.valueOf(142), _AlterYul);
-		_AlterSkills.put(Integer.valueOf(162), _AlterYul);
-		_AlterSkills.put(Integer.valueOf(163), _AlterYul);
-		_AlterSkills.put(Integer.valueOf(164), _AlterYul);
-		_AlterSkills.put(Integer.valueOf(165), _AlterYul);
-		_AlterSkills.put(Integer.valueOf(143), _AlterFeoh);
-		_AlterSkills.put(Integer.valueOf(166), _AlterFeoh);
-		_AlterSkills.put(Integer.valueOf(167), _AlterFeoh);
-		_AlterSkills.put(Integer.valueOf(168), _AlterFeoh);
-		_AlterSkills.put(Integer.valueOf(169), _AlterFeoh);
-		_AlterSkills.put(Integer.valueOf(170), _AlterFeoh);
-		_AlterSkills.put(Integer.valueOf(144), _AlterIss);
-		_AlterSkills.put(Integer.valueOf(171), _AlterIss);
-		_AlterSkills.put(Integer.valueOf(172), _AlterIss);
-		_AlterSkills.put(Integer.valueOf(173), _AlterIss);
-		_AlterSkills.put(Integer.valueOf(174), _AlterIss);
-		_AlterSkills.put(Integer.valueOf(175), _AlterIss);
-		_AlterSkills.put(Integer.valueOf(145), _AlterWynn);
-		_AlterSkills.put(Integer.valueOf(176), _AlterWynn);
-		_AlterSkills.put(Integer.valueOf(177), _AlterWynn);
-		_AlterSkills.put(Integer.valueOf(178), _AlterWynn);
-		_AlterSkills.put(Integer.valueOf(146), _AlterAerore);
-		_AlterSkills.put(Integer.valueOf(179), _AlterAerore);
-		_AlterSkills.put(Integer.valueOf(180), _AlterAerore);
-		_AlterSkills.put(Integer.valueOf(181), _AlterAerore);
-		_log.info("AwakingManager: Loaded 8 Awaking class for " + _CA.size() + " normal class. Loaded " + _LegacyWeapon.size() + " Legacy Weapons.");
+		
+		AWAKEN_POWER.put(139, 32264);
+		AWAKEN_POWER.put(148, 32264);
+		AWAKEN_POWER.put(149, 32264);
+		AWAKEN_POWER.put(150, 32264);
+		AWAKEN_POWER.put(151, 32264);
+		AWAKEN_POWER.put(140, 32265);
+		AWAKEN_POWER.put(152, 32265);
+		AWAKEN_POWER.put(153, 32265);
+		AWAKEN_POWER.put(154, 32265);
+		AWAKEN_POWER.put(155, 32265);
+		AWAKEN_POWER.put(156, 32265);
+		AWAKEN_POWER.put(157, 32265);
+		AWAKEN_POWER.put(141, 32266);
+		AWAKEN_POWER.put(158, 32266);
+		AWAKEN_POWER.put(159, 32266);
+		AWAKEN_POWER.put(160, 32266);
+		AWAKEN_POWER.put(161, 32266);
+		AWAKEN_POWER.put(142, 32267);
+		AWAKEN_POWER.put(162, 32267);
+		AWAKEN_POWER.put(163, 32267);
+		AWAKEN_POWER.put(164, 32267);
+		AWAKEN_POWER.put(165, 32267);
+		AWAKEN_POWER.put(143, 32268);
+		AWAKEN_POWER.put(166, 32268);
+		AWAKEN_POWER.put(167, 32268);
+		AWAKEN_POWER.put(168, 32268);
+		AWAKEN_POWER.put(169, 32268);
+		AWAKEN_POWER.put(170, 32268);
+		AWAKEN_POWER.put(144, 32269);
+		AWAKEN_POWER.put(171, 32269);
+		AWAKEN_POWER.put(172, 32269);
+		AWAKEN_POWER.put(173, 32269);
+		AWAKEN_POWER.put(174, 32269);
+		AWAKEN_POWER.put(175, 32269);
+		AWAKEN_POWER.put(145, 32270);
+		AWAKEN_POWER.put(176, 32270);
+		AWAKEN_POWER.put(177, 32270);
+		AWAKEN_POWER.put(178, 32270);
+		AWAKEN_POWER.put(146, 32271);
+		AWAKEN_POWER.put(179, 32271);
+		AWAKEN_POWER.put(180, 32271);
+		AWAKEN_POWER.put(181, 32271);
+		
+		CLOAK_DUAL_CLASS.put(139, 30310);
+		CLOAK_DUAL_CLASS.put(148, 30310);
+		CLOAK_DUAL_CLASS.put(149, 30310);
+		CLOAK_DUAL_CLASS.put(150, 30310);
+		CLOAK_DUAL_CLASS.put(151, 30310);
+		CLOAK_DUAL_CLASS.put(140, 30311);
+		CLOAK_DUAL_CLASS.put(152, 30311);
+		CLOAK_DUAL_CLASS.put(153, 30311);
+		CLOAK_DUAL_CLASS.put(154, 30311);
+		CLOAK_DUAL_CLASS.put(155, 30311);
+		CLOAK_DUAL_CLASS.put(156, 30311);
+		CLOAK_DUAL_CLASS.put(157, 30311);
+		CLOAK_DUAL_CLASS.put(141, 30312);
+		CLOAK_DUAL_CLASS.put(158, 30312);
+		CLOAK_DUAL_CLASS.put(159, 30312);
+		CLOAK_DUAL_CLASS.put(160, 30312);
+		CLOAK_DUAL_CLASS.put(161, 30312);
+		CLOAK_DUAL_CLASS.put(142, 30313);
+		CLOAK_DUAL_CLASS.put(162, 30313);
+		CLOAK_DUAL_CLASS.put(163, 30313);
+		CLOAK_DUAL_CLASS.put(164, 30313);
+		CLOAK_DUAL_CLASS.put(165, 30313);
+		CLOAK_DUAL_CLASS.put(143, 30314);
+		CLOAK_DUAL_CLASS.put(166, 30314);
+		CLOAK_DUAL_CLASS.put(167, 30314);
+		CLOAK_DUAL_CLASS.put(168, 30314);
+		CLOAK_DUAL_CLASS.put(169, 30314);
+		CLOAK_DUAL_CLASS.put(170, 30314);
+		CLOAK_DUAL_CLASS.put(144, 30315);
+		CLOAK_DUAL_CLASS.put(171, 30315);
+		CLOAK_DUAL_CLASS.put(172, 30315);
+		CLOAK_DUAL_CLASS.put(173, 30315);
+		CLOAK_DUAL_CLASS.put(174, 30315);
+		CLOAK_DUAL_CLASS.put(175, 30315);
+		CLOAK_DUAL_CLASS.put(145, 30316);
+		CLOAK_DUAL_CLASS.put(176, 30316);
+		CLOAK_DUAL_CLASS.put(177, 30316);
+		CLOAK_DUAL_CLASS.put(178, 30316);
+		CLOAK_DUAL_CLASS.put(146, 30317);
+		CLOAK_DUAL_CLASS.put(179, 30317);
+		CLOAK_DUAL_CLASS.put(180, 30317);
+		CLOAK_DUAL_CLASS.put(181, 30317);
+		
+		LEGACY_WEAPONS.put(88, 33717);
+		LEGACY_WEAPONS.put(89, 33718);
+		LEGACY_WEAPONS.put(90, 33719);
+		LEGACY_WEAPONS.put(91, 33720);
+		LEGACY_WEAPONS.put(92, 33721);
+		LEGACY_WEAPONS.put(93, 33722);
+		LEGACY_WEAPONS.put(94, 33723);
+		LEGACY_WEAPONS.put(95, 33724);
+		LEGACY_WEAPONS.put(96, 33725);
+		LEGACY_WEAPONS.put(97, 33726);
+		LEGACY_WEAPONS.put(98, 33727);
+		LEGACY_WEAPONS.put(99, 33728);
+		LEGACY_WEAPONS.put(100, 33729);
+		LEGACY_WEAPONS.put(101, 33730);
+		LEGACY_WEAPONS.put(102, 33731);
+		LEGACY_WEAPONS.put(103, 33732);
+		LEGACY_WEAPONS.put(104, 33733);
+		LEGACY_WEAPONS.put(105, 33734);
+		LEGACY_WEAPONS.put(106, 33735);
+		LEGACY_WEAPONS.put(107, 33736);
+		LEGACY_WEAPONS.put(108, 33737);
+		LEGACY_WEAPONS.put(109, 33738);
+		LEGACY_WEAPONS.put(110, 33739);
+		LEGACY_WEAPONS.put(111, 33740);
+		LEGACY_WEAPONS.put(112, 33741);
+		LEGACY_WEAPONS.put(113, 33742);
+		LEGACY_WEAPONS.put(114, 33743);
+		LEGACY_WEAPONS.put(115, 33744);
+		LEGACY_WEAPONS.put(116, 33745);
+		LEGACY_WEAPONS.put(117, 33746);
+		LEGACY_WEAPONS.put(118, 33747);
+		LEGACY_WEAPONS.put(131, 33761);
+		LEGACY_WEAPONS.put(132, 33762);
+		LEGACY_WEAPONS.put(133, 33763);
+		LEGACY_WEAPONS.put(134, 33763);
+		LEGACY_WEAPONS.put(136, 33765);
+		
+		ALTER_SKILLS.put(Integer.valueOf(139), _AlterSigel);
+		ALTER_SKILLS.put(Integer.valueOf(148), _AlterSigel);
+		ALTER_SKILLS.put(Integer.valueOf(149), _AlterSigel);
+		ALTER_SKILLS.put(Integer.valueOf(150), _AlterSigel);
+		ALTER_SKILLS.put(Integer.valueOf(151), _AlterSigel);
+		ALTER_SKILLS.put(Integer.valueOf(140), _AlterTyrr);
+		ALTER_SKILLS.put(Integer.valueOf(152), _AlterTyrr);
+		ALTER_SKILLS.put(Integer.valueOf(153), _AlterTyrr);
+		ALTER_SKILLS.put(Integer.valueOf(154), _AlterTyrr);
+		ALTER_SKILLS.put(Integer.valueOf(155), _AlterTyrr);
+		ALTER_SKILLS.put(Integer.valueOf(156), _AlterTyrr);
+		ALTER_SKILLS.put(Integer.valueOf(157), _AlterTyrr);
+		ALTER_SKILLS.put(Integer.valueOf(141), _AlterOthell);
+		ALTER_SKILLS.put(Integer.valueOf(158), _AlterOthell);
+		ALTER_SKILLS.put(Integer.valueOf(159), _AlterOthell);
+		ALTER_SKILLS.put(Integer.valueOf(160), _AlterOthell);
+		ALTER_SKILLS.put(Integer.valueOf(161), _AlterOthell);
+		ALTER_SKILLS.put(Integer.valueOf(142), _AlterYul);
+		ALTER_SKILLS.put(Integer.valueOf(162), _AlterYul);
+		ALTER_SKILLS.put(Integer.valueOf(163), _AlterYul);
+		ALTER_SKILLS.put(Integer.valueOf(164), _AlterYul);
+		ALTER_SKILLS.put(Integer.valueOf(165), _AlterYul);
+		ALTER_SKILLS.put(Integer.valueOf(143), _AlterFeoh);
+		ALTER_SKILLS.put(Integer.valueOf(166), _AlterFeoh);
+		ALTER_SKILLS.put(Integer.valueOf(167), _AlterFeoh);
+		ALTER_SKILLS.put(Integer.valueOf(168), _AlterFeoh);
+		ALTER_SKILLS.put(Integer.valueOf(169), _AlterFeoh);
+		ALTER_SKILLS.put(Integer.valueOf(170), _AlterFeoh);
+		ALTER_SKILLS.put(Integer.valueOf(144), _AlterIss);
+		ALTER_SKILLS.put(Integer.valueOf(171), _AlterIss);
+		ALTER_SKILLS.put(Integer.valueOf(172), _AlterIss);
+		ALTER_SKILLS.put(Integer.valueOf(173), _AlterIss);
+		ALTER_SKILLS.put(Integer.valueOf(174), _AlterIss);
+		ALTER_SKILLS.put(Integer.valueOf(175), _AlterIss);
+		ALTER_SKILLS.put(Integer.valueOf(145), _AlterWynn);
+		ALTER_SKILLS.put(Integer.valueOf(176), _AlterWynn);
+		ALTER_SKILLS.put(Integer.valueOf(177), _AlterWynn);
+		ALTER_SKILLS.put(Integer.valueOf(178), _AlterWynn);
+		ALTER_SKILLS.put(Integer.valueOf(146), _AlterAerore);
+		ALTER_SKILLS.put(Integer.valueOf(179), _AlterAerore);
+		ALTER_SKILLS.put(Integer.valueOf(180), _AlterAerore);
+		ALTER_SKILLS.put(Integer.valueOf(181), _AlterAerore);
+		
+		_log.info("AwakingManager: Loaded 34 Awaking class for " + _CA.size() + " normal class. Loaded " + LEGACY_WEAPONS.size() + " Legacy Weapons.");
 	}
 	
 	/**
@@ -471,32 +484,22 @@ public class AwakingManager implements OnPlayerEnterListener
 			onTransferOnlyRemoveSkills(player);
 		}
 		
-		player.setClassId(_CA.get(_oldId), false, false);
-		player.broadcastUserInfo();
-		player.broadcastPacket(new SocialAction(player.getObjectId(), 20));
-		giveItems(player, _oldId, _CA.get(_oldId));
-		getRaceSkill(player);
-	}
-	
-	/**
-	 * Method SetAwakingId.
-	 * @param player Player, int toClass, Int classIdSkills
-	 * @param toClass
-	 * @param classIdSkills
-	 */
-	public void SetAwakingId(Player player, int toClass, int classIdSkills)
-	{
-		giveGiantEssences(player, false);
-		giveItems(player, player.getActiveClassId(), toClass);
-		
-		if (Config.ALT_DELETE_SKILL_PROF) // its important part of correct skill assignment this If sentence, removed from player.java
+		if (player.getActiveSubClass().isBase())
 		{
-			onTransferOnlyRemoveSkills(player, toClass, classIdSkills);
+			ItemFunctions.addItem(player, CHAOS_POMANDER, 2, true);
 		}
 		
-		player.setClassId(toClass, false, false);
+		if (player.getActiveSubClass().isDual())
+		{
+			ItemFunctions.addItem(player, CHAOS_POMANDER_DUAL_CLASS, 2, true);
+		}
+		
+		player.setClassId(_CA.get(_oldId), false, false);
 		player.broadcastUserInfo();
+		player.sendUserInfo();
+		player.updateStats();
 		player.broadcastPacket(new SocialAction(player.getObjectId(), 20));
+		giveItems(player, _oldId, _CA.get(_oldId));
 		getRaceSkill(player);
 	}
 	
@@ -505,7 +508,7 @@ public class AwakingManager implements OnPlayerEnterListener
 	 * @param player Player
 	 * @return null
 	 */
-	private Skill getRaceSkill(Player player)
+	public Skill getRaceSkill(Player player)
 	{
 		int race = player.getRace().ordinal();
 		Skill skill = null;
@@ -563,18 +566,20 @@ public class AwakingManager implements OnPlayerEnterListener
 	{
 		if (!player.getSubClassList().isDualClassActive())
 		{
-			ItemFunctions.addItem(player, _AwakenPower.get(newClassId), 1, true);
-			ItemFunctions.addItem(player, _LegacyWeapon.get(previousClassId), 1, true);
+			ItemFunctions.addItem(player, AWAKEN_POWER.get(newClassId), 1, true);
+			ItemFunctions.addItem(player, LEGACY_WEAPONS.get(previousClassId), 1, true);
+			ItemFunctions.addItem(player, CHAOS_ESSENCE, 1, true);
 		}
 		else
 		{
 			if (previousClassId >= 139)
 			{
-				player.getInventory().destroyItemByItemId(_CloakDualClass.get(previousClassId), 1);
-				player.getWarehouse().destroyItemByItemId(_CloakDualClass.get(previousClassId), 1);
+				player.getInventory().destroyItemByItemId(CLOAK_DUAL_CLASS.get(previousClassId), 1);
+				player.getWarehouse().destroyItemByItemId(CLOAK_DUAL_CLASS.get(previousClassId), 1);
 			}
 			
-			ItemFunctions.addItem(player, _CloakDualClass.get(newClassId), 1, true);
+			ItemFunctions.addItem(player, CLOAK_DUAL_CLASS.get(newClassId), 1, true);
+			ItemFunctions.addItem(player, CHAOS_ESSENCE_DUAL_CLASS, 1, true);
 		}
 	}
 	
@@ -661,7 +666,7 @@ public class AwakingManager implements OnPlayerEnterListener
 			player.addSkill(newSkill, true);
 		}
 		
-		for (int alterSkill : _AlterSkills.get(newClassId))
+		for (int alterSkill : ALTER_SKILLS.get(newClassId))
 		{
 			int skillLv = SkillTable.getInstance().getBaseLevel(alterSkill);
 			Skill newSkillAlter = SkillTable.getInstance().getInfo(alterSkill, skillLv);
@@ -698,7 +703,7 @@ public class AwakingManager implements OnPlayerEnterListener
 			player.addSkill(newSkill, true);
 		}
 		
-		for (int alterSkill : _AlterSkills.get(toFinalClass))
+		for (int alterSkill : ALTER_SKILLS.get(toFinalClass))
 		{
 			int skillLv = SkillTable.getInstance().getBaseLevel(alterSkill);
 			Skill newSkillAlter = SkillTable.getInstance().getInfo(alterSkill, skillLv);
@@ -731,7 +736,6 @@ public class AwakingManager implements OnPlayerEnterListener
 			{
 				if (!SkillsCheck.contains(skl.getId()) && allSkillsId.contains(skl.getId()))
 				{
-					// player.removeSkill(skl,delete);
 					SkillsToRemove.add(skl.getId());
 				}
 			}
@@ -742,7 +746,6 @@ public class AwakingManager implements OnPlayerEnterListener
 			{
 				if (!SkillsCheck.contains(skl.getId()) && SkillsCheck.contains(skl.getId()))
 				{
-					// player.removeSkill(skl,delete);
 					SkillsToRemove.add(skl.getId());
 				}
 			}
@@ -750,7 +753,7 @@ public class AwakingManager implements OnPlayerEnterListener
 		
 		player.removeSkills(SkillsToRemove, delete);
 		
-		for (int alterSkill : _AlterSkills.get(classId))
+		for (int alterSkill : ALTER_SKILLS.get(classId))
 		{
 			int skillLv = SkillTable.getInstance().getBaseLevel(alterSkill);
 			Skill newSkillAlter = SkillTable.getInstance().getInfo(alterSkill, skillLv);
@@ -788,5 +791,10 @@ public class AwakingManager implements OnPlayerEnterListener
 			player.sendPacket(new ExShowUsmVideo(ExShowUsmVideo.Q010));
 			player.sendPacket(new ExCallToChangeClass(_CA.get(player.getClassId().getId()), true));
 		}
+	}
+	
+	public static String getAwakeningRequestVar(ClassId classId)
+	{
+		return "awakening_request_" + classId.getId();
 	}
 }
