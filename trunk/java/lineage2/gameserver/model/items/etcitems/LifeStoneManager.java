@@ -47,7 +47,7 @@ public class LifeStoneManager
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
 		factory.setIgnoringComments(true);
-		File file = new File(Config.DATAPACK_ROOT, "data/xml/asc/model/etcitems/LifeStone.xml");
+		File file = new File(Config.DATAPACK_ROOT, "data/xml/other/LifeStone.xml");
 		Document doc = null;
 		
 		if (file.exists())
@@ -58,7 +58,7 @@ public class LifeStoneManager
 			}
 			catch (Exception e)
 			{
-				_log.warn("Could not parse AttributeStone.xml file: " + e.getMessage(), e);
+				_log.warn("Could not parse LifeStone.xml file: " + e.getMessage(), e);
 				return;
 			}
 			

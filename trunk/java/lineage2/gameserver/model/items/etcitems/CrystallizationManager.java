@@ -51,7 +51,7 @@ public class CrystallizationManager
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
 		factory.setIgnoringComments(true);
-		File file = new File(Config.DATAPACK_ROOT, "data/xml/asc/model/player/CrystallizationData.xml");
+		File file = new File(Config.DATAPACK_ROOT, "data/xml/other/CrystallizationData.xml");
 		Document doc = null;
 		
 		if (file.exists())
