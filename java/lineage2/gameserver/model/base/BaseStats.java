@@ -195,7 +195,7 @@ public enum BaseStats
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
 		factory.setIgnoringComments(true);
-		File file = new File(Config.DATAPACK_ROOT, "data/xml/asc/model/player/BaseStatBonusData.xml");
+		File file = new File(Config.DATAPACK_ROOT, "data/xml/pc_parameters/BaseStatBonusData.xml");
 		Document doc = null;
 		
 		try
