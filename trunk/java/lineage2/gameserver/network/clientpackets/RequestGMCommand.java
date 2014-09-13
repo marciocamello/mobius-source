@@ -23,6 +23,9 @@ import lineage2.gameserver.network.serverpackets.GMViewPledgeInfo;
 import lineage2.gameserver.network.serverpackets.GMViewQuestInfo;
 import lineage2.gameserver.network.serverpackets.GMViewSkillInfo;
 import lineage2.gameserver.network.serverpackets.GMViewWarehouseWithdrawList;
+import lineage2.gameserver.network.serverpackets.ShortCutInit;
+import lineage2.gameserver.network.serverpackets.SkillCoolTime;
+import lineage2.gameserver.network.serverpackets.SkillList;
 
 /**
  * @author Mobius
@@ -100,6 +103,12 @@ public class RequestGMCommand extends L2GameClientPacket
 				player.sendPacket(new GMViewItemList(target));
 				player.sendPacket(new ExGMViewQuestItemList(target, items, questSize));
 				player.sendPacket(new GMHennaInfo(target));
+				
+				// TODO: This is a custom solution for not losing skill bar.
+				// It should be fixed the proper way.
+				player.sendPacket(new ShortCutInit(player));
+				player.sendPacket(new SkillList(player));
+				player.sendPacket(new SkillCoolTime(player));
 				break;
 			
 			case 6:
