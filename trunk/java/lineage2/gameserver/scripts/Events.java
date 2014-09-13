@@ -51,6 +51,11 @@ public final class Events
 				handler = Scripts.onActionShift.get("PetInstance");
 			}
 			
+			if ((handler == null) && obj.isSummon())
+			{
+				handler = Scripts.onActionShift.get("SummonInstance");
+			}
+			
 			if (handler == null)
 			{
 				return false;

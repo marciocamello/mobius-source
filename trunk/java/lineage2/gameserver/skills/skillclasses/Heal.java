@@ -150,7 +150,7 @@ public class Heal extends Skill
 						target.sendPacket(new SystemMessage(SystemMessage.XS2S_HP_HAS_BEEN_RESTORED_BY_S1).addString(activeChar.getName()).addNumber(Math.round(addToHp)));
 					}
 				}
-				else if (target.isServitor() || target.isPet())
+				else if (target.isSummon() || target.isPet())
 				{
 					Player owner = target.getPlayer();
 					

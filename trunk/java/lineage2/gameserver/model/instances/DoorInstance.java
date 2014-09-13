@@ -217,7 +217,7 @@ public final class DoorInstance extends Creature implements GeoCollision
 		switch (getDoorType())
 		{
 			case WALL:
-				if (!attacker.isServitor() || (siegeEvent == null) || !siegeEvent.containsSiegeSummon((SummonInstance) attacker))
+				if (!attacker.isSummon() || (siegeEvent == null) || !siegeEvent.containsSiegeSummon((SummonInstance) attacker))
 				{
 					return false;
 				}

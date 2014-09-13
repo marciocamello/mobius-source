@@ -909,10 +909,10 @@ public abstract class GameObject extends EventOwner
 	}
 	
 	/**
-	 * Method isServitor.
+	 * Method isSummon.
 	 * @return boolean
 	 */
-	public boolean isServitor()
+	public boolean isSummon()
 	{
 		return false;
 	}

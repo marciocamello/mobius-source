@@ -75,7 +75,7 @@ public final class PrisonGuard extends Fighter
 			return;
 		}
 		
-		if (attacker.isServitor() || attacker.isPet())
+		if (attacker.isSummon() || attacker.isPet())
 		{
 			attacker = attacker.getPlayer();
 		}

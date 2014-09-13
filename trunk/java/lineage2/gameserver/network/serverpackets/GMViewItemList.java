@@ -12,32 +12,50 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 
+/**
+ * @author Janiko
+ */
 public class GMViewItemList extends L2GameServerPacket
 {
-	private final int _size;
-	private final ItemInstance[] _items;
+	private final List<ItemInstance> _items = new ArrayList<>();
 	private final int _limit;
-	private final String _name;
+	private final String _playerName;
 	
-	public GMViewItemList(Player cha, ItemInstance[] items, int size)
+	public GMViewItemList(Player cha)
 	{
-		_size = size;
-		_items = items;
-		_name = cha.getName();
+		_playerName = cha.getName();
 		_limit = cha.getInventoryLimit();
+		for (ItemInstance item : cha.getInventory().getItems())
+		{
+			_items.add(item);
+		}
+	}
+	
+	public GMViewItemList(PetInstance cha)
+	{
+		_playerName = cha.getName();
+		_limit = cha.getInventoryLimit();
+		for (ItemInstance item : cha.getInventory().getItems())
+		{
+			_items.add(item);
+		}
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0x9a);
-		writeS(_name);
+		writeS(_playerName);
 		writeD(_limit); // c4?
-		writeH(1); // show window ??
-		writeH(_size);
+		writeH(0x01); // show window ??
+		writeH(_items.size());
 		
 		for (ItemInstance temp : _items)
 		{

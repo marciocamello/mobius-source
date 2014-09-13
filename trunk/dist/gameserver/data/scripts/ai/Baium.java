@@ -85,7 +85,7 @@ public final class Baium extends DefaultAI
 					summon.doDie(actor);
 				}
 			}
-			else if ((attacker.isServitor() || attacker.isPet()) && (attacker.getPlayer() != null))
+			else if ((attacker.isSummon() || attacker.isPet()) && (attacker.getPlayer() != null))
 			{
 				attacker.getPlayer().doDie(actor);
 			}

@@ -150,7 +150,7 @@ public final class GustavInstance extends SiegeGuardInstance implements _34Siege
 			Playable killer = (Playable) info.attacker;
 			int damage = info.damage;
 			
-			if (killer.isPet() || killer.isServitor())
+			if (killer.isPet() || killer.isSummon())
 			{
 				temp = killer.getPlayer();
 			}

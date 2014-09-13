@@ -68,7 +68,7 @@ public final class FrostBuffalo extends Fighter
 					sp.setLoc(Location.findPointToStay(actor, 100, 120));
 					NpcInstance npc = sp.doSpawn(true);
 					
-					if (caster.isPet() || caster.isServitor())
+					if (caster.isPet() || caster.isSummon())
 					{
 						npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, caster, Rnd.get(2, 100));
 					}

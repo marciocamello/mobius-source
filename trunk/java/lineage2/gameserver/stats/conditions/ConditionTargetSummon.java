@@ -41,6 +41,6 @@ public class ConditionTargetSummon extends Condition
 	protected boolean testImpl(Env env)
 	{
 		Creature target = env.target;
-		return (target != null) && (target.isServitor() == _flag);
+		return (target != null) && (target.isSummon() == _flag);
 	}
 }

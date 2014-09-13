@@ -113,7 +113,7 @@ public class SummonList implements Iterable<Summon>
 	 */
 	public void addSummon(Summon summon)
 	{
-		if (summon.isServitor())
+		if (summon.isSummon())
 		{
 			_summonList.put(summon.getObjectId(), summon);
 			_usedPoints += summon.getSummonPoint();
@@ -129,7 +129,7 @@ public class SummonList implements Iterable<Summon>
 	
 	public void removeSummon(Summon summon)
 	{
-		if (summon.isServitor())
+		if (summon.isSummon())
 		{
 			_summonList.remove(summon.getObjectId());
 			_usedPoints -= summon.getSummonPoint();

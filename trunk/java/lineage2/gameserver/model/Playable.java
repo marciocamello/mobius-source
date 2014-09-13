@@ -689,7 +689,7 @@ public abstract class Playable extends Creature
 				}
 				else
 				{
-					if (target.isPlayable() && !(isPlayer() && player.getSummonList().contains(target)) && !((isServitor() || isPet()) && (target == player)))
+					if (target.isPlayable() && !(isPlayer() && player.getSummonList().contains(target)) && !((isSummon() || isPet()) && (target == player)))
 					{
 						int aggro = skill.getEffectPoint() != 0 ? skill.getEffectPoint() : Math.max(1, (int) skill.getPower());
 						List<NpcInstance> npcs = World.getAroundNpc(target);
@@ -731,7 +731,7 @@ public abstract class Playable extends Creature
 						}
 						
 						// Notify Attack also on skill
-						if ((target.isServitor() || target.isPlayer()) && skill.isOffensive())
+						if ((target.isSummon() || target.isPlayer()) && skill.isOffensive())
 						{
 							if (!skill.isAI())
 							{

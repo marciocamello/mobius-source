@@ -381,7 +381,7 @@ public class TreeInstance extends Summon
 	 * @return boolean
 	 */
 	@Override
-	public boolean isServitor()
+	public boolean isSummon()
 	{
 		return true;
 	}

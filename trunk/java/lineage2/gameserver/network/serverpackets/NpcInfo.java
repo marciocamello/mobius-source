@@ -175,7 +175,7 @@ public class NpcInfo extends L2GameServerPacket
 		_team = cha.getTeam();
 		_formId = cha.getFormId();
 		_isNameAbove = cha.isNameAbove();
-		_titleColor = cha.isServitor() || cha.isPet() ? 1 : 0;
+		_titleColor = cha.isSummon() || cha.isPet() ? 1 : 0;
 		_canWriteImpl = true;
 	}
 	

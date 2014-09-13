@@ -78,7 +78,7 @@ public final class ItemFunctions
 		
 		Playable player;
 		
-		if (playable.isServitor())
+		if (playable.isSummon())
 		{
 			player = playable.getPlayer();
 		}

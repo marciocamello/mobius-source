@@ -399,7 +399,7 @@ public class StatFunctions
 			
 			env.value += (Math.sqrt(env.character.getDEX()) * 5.5) + env.character.getLevel();
 			
-			if (env.character.isServitor())
+			if (env.character.isSummon())
 			{
 				env.value += env.character.getLevel() < 60 ? 4 : 5;
 			}
@@ -1850,7 +1850,7 @@ public class StatFunctions
 			cha.addStatFunc(FuncMDefMul.func);
 		}
 		
-		if (cha.isServitor())
+		if (cha.isSummon())
 		{
 			cha.addStatFunc(FuncAttributeAttackSet.getFunc(Element.FIRE));
 			cha.addStatFunc(FuncAttributeAttackSet.getFunc(Element.WATER));
@@ -1874,7 +1874,7 @@ public class StatFunctions
 			cha.addStatFunc(FuncMAccuracyAdd.func);
 		}
 		
-		if (!cha.isPet() && !cha.isServitor())
+		if (!cha.isPet() && !cha.isSummon())
 		{
 			cha.addStatFunc(FuncPAtkSpeedMul.func);
 			cha.addStatFunc(FuncMAtkSpeedMul.func);

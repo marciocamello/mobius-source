@@ -29,7 +29,7 @@ public class PartySpelled extends L2GameServerPacket implements IconEffectPacket
 	public PartySpelled(Playable activeChar, boolean full)
 	{
 		_objId = activeChar.getObjectId();
-		_type = activeChar.isPet() ? 1 : activeChar.isServitor() ? 2 : 0;
+		_type = activeChar.isPet() ? 1 : activeChar.isSummon() ? 2 : 0;
 		_effects = new ArrayList<>();
 		
 		if (full)

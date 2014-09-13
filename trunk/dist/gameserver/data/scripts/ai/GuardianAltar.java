@@ -82,7 +82,7 @@ public final class GuardianAltar extends DefaultAI
 				sp.setLoc(Location.findPointToStay(actor, 400, 420));
 				final NpcInstance npc = sp.doSpawn(true);
 				
-				if (attacker.isPet() || attacker.isServitor())
+				if (attacker.isPet() || attacker.isSummon())
 				{
 					npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, Rnd.get(2, 100));
 				}
@@ -117,7 +117,7 @@ public final class GuardianAltar extends DefaultAI
 					sp.setLoc(Location.findPointToStay(actor, 150, 160));
 					NpcInstance npc = sp.doSpawn(true);
 					
-					if (attacker.isPet() || attacker.isServitor())
+					if (attacker.isPet() || attacker.isSummon())
 					{
 						npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, Rnd.get(2, 100));
 					}

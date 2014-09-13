@@ -1178,7 +1178,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				}
 			}
 			
-			if (player.isFishing() && !isFishingSkill() && !altUse() && !(activeChar.isServitor() || activeChar.isPet()))
+			if (player.isFishing() && !isFishingSkill() && !altUse() && !(activeChar.isSummon() || activeChar.isPet()))
 			{
 				if (activeChar == player)
 				{
@@ -1595,10 +1595,10 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				return (target != null) && (target.isDead() == _isCorpse) ? target : null;
 				
 			case TARGET_SUMMON:
-				return (target != null) && (target.isServitor()) && (target.isDead() == _isCorpse) ? target : null;
+				return (target != null) && (target.isSummon()) && (target.isDead() == _isCorpse) ? target : null;
 				
 			case TARGET_OWNER:
-				if (activeChar.isServitor() || activeChar.isPet())
+				if (activeChar.isSummon() || activeChar.isPet())
 				{
 					target = activeChar.getPlayer();
 				}
@@ -1618,7 +1618,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				return target;
 				
 			case TARGET_ENEMY_SUMMON:
-				if ((target == null) || (target == activeChar.getPlayer().getSummonList().getPet()) || !target.isServitor())
+				if ((target == null) || (target == activeChar.getPlayer().getSummonList().getPet()) || !target.isSummon())
 				{
 					return null;
 				}
@@ -1683,7 +1683,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 					return null;
 				}
 				
-				if (target.isServitor() && (target != activeChar.getPlayer().getSummonList().getPet()))
+				if (target.isSummon() && (target != activeChar.getPlayer().getSummonList().getPet()))
 				{
 					return target;
 				}
@@ -2219,7 +2219,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 					{
 						for (Summon summon : character.getPlayer().getSummonList())
 						{
-							if ((summon != null) && summon.isServitor() && !isOffensive() && !isToggle() && !isCubicSkill())
+							if ((summon != null) && summon.isSummon() && !isOffensive() && !isToggle() && !isCubicSkill())
 							{
 								targets.add(summon);
 							}

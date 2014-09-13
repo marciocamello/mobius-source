@@ -71,7 +71,7 @@ public class EffectsDAO
 			objectId = playable.getObjectId();
 			id = ((Player) playable).getActiveClassId();
 		}
-		else if (playable.isServitor())
+		else if (playable.isSummon())
 		{
 			objectId = playable.getPlayer().getObjectId();
 			id = playable.getObjectId();
@@ -165,7 +165,7 @@ public class EffectsDAO
 			objectId = playable.getObjectId();
 			id = ((Player) playable).getActiveClassId();
 		}
-		else if (playable.isServitor())
+		else if (playable.isSummon())
 		{
 			objectId = playable.getPlayer().getObjectId();
 			id = playable.getObjectId();

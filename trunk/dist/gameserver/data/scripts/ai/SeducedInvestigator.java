@@ -184,7 +184,7 @@ public final class SeducedInvestigator extends Fighter
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
-		if (target.isPlayer() || target.isPet() || target.isServitor())
+		if (target.isPlayer() || target.isPet() || target.isSummon())
 		{
 			return;
 		}

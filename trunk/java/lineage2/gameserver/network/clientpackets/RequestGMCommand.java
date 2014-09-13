@@ -97,7 +97,7 @@ public class RequestGMCommand extends L2GameClientPacket
 					}
 				}
 				
-				player.sendPacket(new GMViewItemList(target, items, items.length - questSize));
+				player.sendPacket(new GMViewItemList(target));
 				player.sendPacket(new ExGMViewQuestItemList(target, items, questSize));
 				player.sendPacket(new GMHennaInfo(target));
 				break;
