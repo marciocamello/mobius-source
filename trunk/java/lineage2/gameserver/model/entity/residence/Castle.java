@@ -26,12 +26,12 @@ import lineage2.gameserver.Announcements;
 import lineage2.gameserver.dao.CastleDAO;
 import lineage2.gameserver.dao.CastleHiredGuardDAO;
 import lineage2.gameserver.dao.ClanDataDAO;
+import lineage2.gameserver.data.xml.holder.ManorDataHolder;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.instancemanager.CastleManorManager;
 import lineage2.gameserver.instancemanager.SpawnManager;
 import lineage2.gameserver.model.GameObjectsStorage;
-import lineage2.gameserver.model.Manor;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.Warehouse;
@@ -511,7 +511,7 @@ public class Castle extends Residence
 		{
 			for (SeedProduction seed : production)
 			{
-				total += Manor.getInstance().getSeedBuyPrice(seed.getId()) * seed.getStartProduce();
+				total += ManorDataHolder.getInstance().getSeedBuyPrice(seed.getId()) * seed.getStartProduce();
 			}
 		}
 		

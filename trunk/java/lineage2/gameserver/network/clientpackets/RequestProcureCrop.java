@@ -18,11 +18,11 @@ import java.util.List;
 import lineage2.commons.math.SafeMath;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
+import lineage2.gameserver.data.xml.holder.ManorDataHolder;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.instancemanager.CastleManorManager;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
-import lineage2.gameserver.model.Manor;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.instances.ManorManagerInstance;
@@ -146,8 +146,8 @@ public class RequestProcureCrop extends L2GameClientPacket
 					return;
 				}
 				
-				int rewradItemId = Manor.getInstance().getRewardItem(itemId, castle.getCrop(itemId, CastleManorManager.PERIOD_CURRENT).getReward());
-				long rewradItemCount = Manor.getInstance().getRewardAmountPerCrop(castle.getId(), itemId, castle.getCropRewardType(itemId));
+				int rewradItemId = ManorDataHolder.getInstance().getRewardItem(itemId, castle.getCrop(itemId, CastleManorManager.PERIOD_CURRENT).getReward());
+				long rewradItemCount = ManorDataHolder.getInstance().getRewardAmountPerCrop(castle.getId(), itemId, castle.getCropRewardType(itemId));
 				rewradItemCount = SafeMath.mulAndCheck(count, rewradItemCount);
 				ItemTemplate template = ItemHolder.getInstance().getTemplate(rewradItemId);
 				
@@ -192,8 +192,8 @@ public class RequestProcureCrop extends L2GameClientPacket
 			{
 				int itemId = _items[i];
 				long count = _itemQ[i];
-				int rewradItemId = Manor.getInstance().getRewardItem(itemId, castle.getCrop(itemId, CastleManorManager.PERIOD_CURRENT).getReward());
-				long rewradItemCount = Manor.getInstance().getRewardAmountPerCrop(castle.getId(), itemId, castle.getCropRewardType(itemId));
+				int rewradItemId = ManorDataHolder.getInstance().getRewardItem(itemId, castle.getCrop(itemId, CastleManorManager.PERIOD_CURRENT).getReward());
+				long rewradItemCount = ManorDataHolder.getInstance().getRewardAmountPerCrop(castle.getId(), itemId, castle.getCropRewardType(itemId));
 				rewradItemCount = SafeMath.mulAndCheck(count, rewradItemCount);
 				
 				if (!activeChar.getInventory().destroyItemByItemId(itemId, count))

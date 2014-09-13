@@ -24,9 +24,9 @@ import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
+import lineage2.gameserver.data.xml.holder.ManorDataHolder;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.database.DatabaseFactory;
-import lineage2.gameserver.model.Manor;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.items.Warehouse;
 import lineage2.gameserver.model.pledge.Clan;
@@ -252,7 +252,7 @@ public class CastleManorManager
 					
 					if (count >= 1)
 					{
-						int id = Manor.getInstance().getMatureCrop(crop.getId());
+						int id = ManorDataHolder.getInstance().getMatureCrop(crop.getId());
 						cwh.addItem(id, count);
 					}
 				}
@@ -353,7 +353,7 @@ public class CastleManorManager
 	private List<SeedProduction> getNewSeedsList(int castleId)
 	{
 		List<SeedProduction> seeds = new ArrayList<>();
-		List<Integer> seedsIds = Manor.getInstance().getSeedsForCastle(castleId);
+		List<Integer> seedsIds = ManorDataHolder.getInstance().getSeedsForCastle(castleId);
 		
 		for (int sd : seedsIds)
 		{
@@ -371,7 +371,7 @@ public class CastleManorManager
 	private List<CropProcure> getNewCropsList(int castleId)
 	{
 		List<CropProcure> crops = new ArrayList<>();
-		List<Integer> cropsIds = Manor.getInstance().getCropsForCastle(castleId);
+		List<Integer> cropsIds = ManorDataHolder.getInstance().getCropsForCastle(castleId);
 		
 		for (int cr : cropsIds)
 		{

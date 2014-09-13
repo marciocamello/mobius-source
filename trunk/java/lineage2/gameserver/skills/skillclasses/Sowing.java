@@ -17,8 +17,8 @@ import java.util.List;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
+import lineage2.gameserver.data.xml.holder.ManorDataHolder;
 import lineage2.gameserver.model.Creature;
-import lineage2.gameserver.model.Manor;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.MonsterInstance;
@@ -80,7 +80,7 @@ public class Sowing extends Skill
 				
 				double SuccessRate = Config.MANOR_SOWING_BASIC_SUCCESS;
 				double diffPlayerTarget = Math.abs(activeChar.getLevel() - target.getLevel());
-				double diffSeedTarget = Math.abs(Manor.getInstance().getSeedLevel(seedId) - target.getLevel());
+				double diffSeedTarget = Math.abs(ManorDataHolder.getInstance().getSeedLevel(seedId) - target.getLevel());
 				
 				if (diffPlayerTarget > Config.MANOR_DIFF_PLAYER_TARGET)
 				{

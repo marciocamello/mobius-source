@@ -14,7 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.List;
 
-import lineage2.gameserver.model.Manor;
+import lineage2.gameserver.data.xml.holder.ManorDataHolder;
 import lineage2.gameserver.templates.manor.CropProcure;
 
 /**
@@ -47,20 +47,12 @@ public class ExShowCropInfo extends L2GameServerPacket
 			writeQ(crop.getStartAmount()); // Buy
 			writeQ(crop.getPrice()); // Buy price
 			writeC(crop.getReward()); // Reward
-			writeD(Manor.getInstance().getSeedLevelByCrop(crop.getId())); // Seed
+			writeD(ManorDataHolder.getInstance().getSeedLevelByCrop(crop.getId())); // Seed
 			// Level
 			writeC(1); // rewrad 1 Type
-			writeD(Manor.getInstance().getRewardItem(crop.getId(), 1)); // Rewrad
-			// 1
-			// Type
-			// Item
-			// Id
+			writeD(ManorDataHolder.getInstance().getRewardItem(crop.getId(), 1));
 			writeC(1); // rewrad 2 Type
-			writeD(Manor.getInstance().getRewardItem(crop.getId(), 2)); // Rewrad
-			// 2
-			// Type
-			// Item
-			// Id
+			writeD(ManorDataHolder.getInstance().getRewardItem(crop.getId(), 2));
 		}
 	}
 }

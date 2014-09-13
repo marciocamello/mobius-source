@@ -14,7 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.List;
 
-import lineage2.gameserver.model.Manor;
+import lineage2.gameserver.data.xml.holder.ManorDataHolder;
 
 /**
  * format(packet 0xFE) ch cd [ddddcdcd] c - id h - sub id
@@ -29,7 +29,7 @@ public class ExShowManorDefaultInfo extends L2GameServerPacket
 	
 	public ExShowManorDefaultInfo()
 	{
-		_crops = Manor.getInstance().getAllCrops();
+		_crops = ManorDataHolder.getInstance().getAllCrops();
 	}
 	
 	@Override
@@ -42,18 +42,13 @@ public class ExShowManorDefaultInfo extends L2GameServerPacket
 		for (int cropId : _crops)
 		{
 			writeD(cropId); // crop Id
-			writeD(Manor.getInstance().getSeedLevelByCrop(cropId)); // level
-			writeD(Manor.getInstance().getSeedBasicPriceByCrop(cropId)); // seed
-			// price
-			writeD(Manor.getInstance().getCropBasicPrice(cropId)); // crop price
+			writeD(ManorDataHolder.getInstance().getSeedLevelByCrop(cropId)); // level
+			writeD(ManorDataHolder.getInstance().getSeedBasicPriceByCrop(cropId)); // seed price
+			writeD(ManorDataHolder.getInstance().getCropBasicPrice(cropId)); // crop price
 			writeC(1); // rewrad 1 Type
-			writeD(Manor.getInstance().getRewardItem(cropId, 1)); // Rewrad 1
-			// Type Item
-			// Id
+			writeD(ManorDataHolder.getInstance().getRewardItem(cropId, 1)); // Reward 1
 			writeC(1); // rewrad 2 Type
-			writeD(Manor.getInstance().getRewardItem(cropId, 2)); // Rewrad 2
-			// Type Item
-			// Id
+			writeD(ManorDataHolder.getInstance().getRewardItem(cropId, 2)); // Reward 2
 		}
 	}
 }

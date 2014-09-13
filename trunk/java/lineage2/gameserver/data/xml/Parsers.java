@@ -15,6 +15,7 @@ package lineage2.gameserver.data.xml;
 import lineage2.gameserver.data.StringHolder;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.data.xml.holder.BuyListHolder;
+import lineage2.gameserver.data.xml.holder.ManorDataHolder;
 import lineage2.gameserver.data.xml.holder.MultiSellHolder;
 import lineage2.gameserver.data.xml.holder.ProductHolder;
 import lineage2.gameserver.data.xml.holder.RecipeHolder;
@@ -96,6 +97,7 @@ public abstract class Parsers
 		RecipeHolder.getInstance();
 		MultiSellHolder.getInstance();
 		ProductHolder.getInstance();
+		ManorDataHolder.getInstance();
 		HennaParser.getInstance().load();
 		JumpTracksParser.getInstance().load();
 		SoulCrystalParser.getInstance().load();

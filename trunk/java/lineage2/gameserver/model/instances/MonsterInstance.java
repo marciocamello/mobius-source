@@ -24,11 +24,11 @@ import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
+import lineage2.gameserver.data.xml.holder.ManorDataHolder;
 import lineage2.gameserver.instancemanager.CursedWeaponsManager;
 import lineage2.gameserver.model.AggroList.HateInfo;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Effect;
-import lineage2.gameserver.model.Manor;
 import lineage2.gameserver.model.MinionList;
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Playable;
@@ -868,7 +868,7 @@ public class MonsterInstance extends NpcInstance
 			_isSeeded = true;
 			_altSeed = altSeed;
 			_seederId = player.getObjectId();
-			_harvestItem = new RewardItem(Manor.getInstance().getCropType(seedId));
+			_harvestItem = new RewardItem(ManorDataHolder.getInstance().getCropType(seedId));
 			
 			if (getTemplate().rateHp > 1)
 			{
