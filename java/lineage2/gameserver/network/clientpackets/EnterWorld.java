@@ -203,7 +203,7 @@ public class EnterWorld extends L2GameClientPacket
 		activeChar.sendPacket(new SSQInfo(), new HennaInfo(activeChar));
 		activeChar.sendItemList(false);
 		activeChar.sendPacket(new ShortCutInit(activeChar));
-		activeChar.sendPacket(new ShortCutInit(activeChar), new SkillList(activeChar), new SkillCoolTime(activeChar));
+		activeChar.sendPacket(new SkillList(activeChar));
 		activeChar.sendPacket(new SkillCoolTime(activeChar));
 		// activeChar.sendPacket(new ExCastleState(_castle));
 		activeChar.sendPacket(new ExVitalityEffectInfo(activeChar));
