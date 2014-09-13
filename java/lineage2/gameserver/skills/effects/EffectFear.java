@@ -60,7 +60,7 @@ public final class EffectFear extends Effect
 		{
 			SiegeEvent<?, ?> siegeEvent = player.getEvent(SiegeEvent.class);
 			
-			if (_effected.isServitor() && (siegeEvent != null) && siegeEvent.containsSiegeSummon((SummonInstance) _effected))
+			if (_effected.isSummon() && (siegeEvent != null) && siegeEvent.containsSiegeSummon((SummonInstance) _effected))
 			{
 				getEffector().sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
 				return false;

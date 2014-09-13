@@ -196,7 +196,7 @@ public class SummonServitor extends Skill
 							{
 								((NpcInstance) target).endDecayTask();
 							}
-							else if (target.isServitor())
+							else if (target.isSummon())
 							{
 								((SummonInstance) target).endDecayTask();
 							}

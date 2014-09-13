@@ -41,7 +41,7 @@ public class EffectBetray extends Effect
 	{
 		super.onStart();
 		
-		if ((_effected != null) && _effected.isServitor())
+		if ((_effected != null) && _effected.isSummon())
 		{
 			Summon summon = (Summon) _effected;
 			summon.setDepressed(true);
@@ -57,7 +57,7 @@ public class EffectBetray extends Effect
 	{
 		super.onExit();
 		
-		if ((_effected != null) && _effected.isServitor())
+		if ((_effected != null) && _effected.isSummon())
 		{
 			Summon summon = (Summon) _effected;
 			summon.setDepressed(false);

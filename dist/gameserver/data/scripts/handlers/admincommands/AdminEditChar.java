@@ -28,6 +28,7 @@ import lineage2.gameserver.handlers.IAdminCommandHandler;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.actor.instances.player.SubClassInfo;
 import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.model.base.Race;
@@ -35,6 +36,7 @@ import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.network.serverpackets.ExPCCafePointInfo;
+import lineage2.gameserver.network.serverpackets.GMViewItemList;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.CustomMessage;
@@ -81,7 +83,9 @@ public class AdminEditChar implements IAdminCommandHandler, ScriptFile
 		"admin_add_bang",
 		"admin_set_bang",
 		"admin_reset_mentor_penalty",
-		"admin_fullfood"
+		"admin_fullfood",
+		"admin_unsummon",
+		"admin_show_pet_inv"
 	};
 	
 	/**
@@ -727,6 +731,41 @@ public class AdminEditChar implements IAdminCommandHandler, ScriptFile
 			else
 			{
 				activeChar.sendMessage("Target is not a pet.");
+			}
+		}
+		else if (fullString.equalsIgnoreCase("admin_unsummon"))
+		{
+			Object target = activeChar.getTarget();
+			if (target == null)
+			{
+				activeChar.sendMessage("You have no target selected.");
+				return false;
+			}
+			if (target instanceof Summon)
+			{
+				((Summon) target).unSummon();
+			}
+			else
+			{
+				activeChar.sendMessage("Usable only with Pets/Summons");
+			}
+		}
+		else if (fullString.equalsIgnoreCase("admin_show_pet_inv"))
+		{
+			Object target = activeChar.getTarget();
+			if (target == null)
+			{
+				activeChar.sendMessage("You have no target selected.");
+				return false;
+			}
+			
+			if (target instanceof PetInstance)
+			{
+				activeChar.sendPacket(new GMViewItemList((PetInstance) target));
+			}
+			else
+			{
+				activeChar.sendMessage("Usable only with Pets");
 			}
 		}
 		

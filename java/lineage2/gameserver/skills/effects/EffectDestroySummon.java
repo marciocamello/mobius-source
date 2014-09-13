@@ -39,7 +39,7 @@ public final class EffectDestroySummon extends Effect
 	@Override
 	public boolean checkCondition()
 	{
-		if (!_effected.isServitor())
+		if (!_effected.isSummon())
 		{
 			return false;
 		}

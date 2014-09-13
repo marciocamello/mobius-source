@@ -103,7 +103,7 @@ public final class NurkaInstance extends SiegeGuardInstance
 			Playable killer = (Playable) info.attacker;
 			int damage = info.damage;
 			
-			if (killer.isPet() || killer.isServitor())
+			if (killer.isPet() || killer.isSummon())
 			{
 				temp = killer.getPlayer();
 			}

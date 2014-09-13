@@ -59,7 +59,7 @@ public class Formulas
 		{
 			init *= BaseStats.CON.calcBonus(cha);
 			
-			if (cha.isServitor())
+			if (cha.isSummon())
 			{
 				init *= 2;
 			}
@@ -90,7 +90,7 @@ public class Formulas
 		{
 			init *= BaseStats.MEN.calcBonus(cha);
 			
-			if (cha.isServitor())
+			if (cha.isSummon())
 			{
 				init *= 2;
 			}

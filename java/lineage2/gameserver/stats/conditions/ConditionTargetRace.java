@@ -145,6 +145,6 @@ public class ConditionTargetRace extends Condition
 	protected boolean testImpl(Env env)
 	{
 		Creature target = env.target;
-		return (target != null) && (target.getTemplate() != null) && (target.isServitor() || target.isNpc()) && (_race == ((NpcTemplate) target.getTemplate()).getRace());
+		return (target != null) && (target.getTemplate() != null) && (target.isSummon() || target.isNpc()) && (_race == ((NpcTemplate) target.getTemplate()).getRace());
 	}
 }

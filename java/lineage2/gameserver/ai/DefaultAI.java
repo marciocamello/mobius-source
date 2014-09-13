@@ -558,7 +558,7 @@ public class DefaultAI extends CharacterAI
 		
 		actor.getAggroList().addDamageHate(target, 0, 2);
 		
-		if ((target.isServitor() || target.isPet()))
+		if ((target.isSummon() || target.isPet()))
 		{
 			actor.getAggroList().addDamageHate(target.getPlayer(), 0, 1);
 		}
@@ -1338,7 +1338,7 @@ public class DefaultAI extends CharacterAI
 		
 		actor.getAggroList().addDamageHate(attacker, 0, damage);
 		
-		if ((damage > 0) && (attacker.isServitor() || attacker.isPet()))
+		if ((damage > 0) && (attacker.isSummon() || attacker.isPet()))
 		{
 			actor.getAggroList().addDamageHate(attacker.getPlayer(), 0, actor.getParameter("searchingMaster", false) ? damage : 1);
 		}
@@ -1373,7 +1373,7 @@ public class DefaultAI extends CharacterAI
 		
 		actor.getAggroList().addDamageHate(attacker, 0, aggro);
 		
-		if ((aggro > 0) && (attacker.isServitor() || attacker.isPet()))
+		if ((aggro > 0) && (attacker.isSummon() || attacker.isPet()))
 		{
 			actor.getAggroList().addDamageHate(attacker.getPlayer(), 0, actor.getParameter("searchingMaster", false) ? aggro : 1);
 		}

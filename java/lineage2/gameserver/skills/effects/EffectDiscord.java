@@ -85,7 +85,7 @@ public class EffectDiscord extends Effect
 		{
 			SiegeEvent<?, ?> siegeEvent = player.getEvent(SiegeEvent.class);
 			
-			if (_effected.isServitor() && (siegeEvent != null) && siegeEvent.containsSiegeSummon((SummonInstance) _effected))
+			if (_effected.isSummon() && (siegeEvent != null) && siegeEvent.containsSiegeSummon((SummonInstance) _effected))
 			{
 				if (!multitargets)
 				{

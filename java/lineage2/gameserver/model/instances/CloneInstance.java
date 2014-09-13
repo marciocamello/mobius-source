@@ -180,7 +180,7 @@ public class CloneInstance extends ClonePlayer
 	 * @return boolean
 	 */
 	@Override
-	public boolean isServitor()
+	public boolean isSummon()
 	{
 		return true;
 	}

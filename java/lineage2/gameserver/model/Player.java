@@ -3110,7 +3110,7 @@ public final class Player extends Playable implements PlayerGroup
 							addToExp *= 1. - (pet.getExpPenalty() / 5.);
 						}
 					}
-					else if (pet.isServitor())
+					else if (pet.isSummon())
 					{
 						addToExp *= 1. - pet.getExpPenalty();
 					}

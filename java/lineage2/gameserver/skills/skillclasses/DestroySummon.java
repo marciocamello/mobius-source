@@ -54,7 +54,7 @@ public class DestroySummon extends Skill
 					continue;
 				}
 				
-				if (target.isServitor())
+				if (target.isSummon())
 				{
 					((Summon) target).saveEffects();
 					((Summon) target).unSummon();

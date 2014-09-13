@@ -32,6 +32,7 @@ import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.model.instances.DoorInstance;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.instances.PetInstance;
+import lineage2.gameserver.model.instances.SummonInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestEventType;
@@ -583,44 +584,6 @@ public final class OnActionShift extends Functions
 	}
 	
 	/**
-	 * Method OnActionShift_DoorInstance.
-	 * @param player Player
-	 * @param object GameObject
-	 * @return boolean
-	 */
-	public boolean OnActionShift_DoorInstance(Player player, GameObject object)
-	{
-		if ((player == null) || (object == null) || !player.getPlayerAccess().Door || !object.isDoor())
-		{
-			return false;
-		}
-		
-		String dialog;
-		DoorInstance door = (DoorInstance) object;
-		dialog = HtmCache.getInstance().getNotNull("actionshift/admin.L2DoorInstance.onActionShift.htm", player);
-		dialog = dialog.replaceFirst("%CurrentHp%", String.valueOf((int) door.getCurrentHp()));
-		dialog = dialog.replaceFirst("%MaxHp%", String.valueOf(door.getMaxHp()));
-		dialog = dialog.replaceAll("%ObjectId%", String.valueOf(door.getObjectId()));
-		dialog = dialog.replaceFirst("%doorId%", String.valueOf(door.getDoorId()));
-		dialog = dialog.replaceFirst("%pdef%", String.valueOf(door.getPDef(null)));
-		dialog = dialog.replaceFirst("%mdef%", String.valueOf(door.getMDef(null, null)));
-		dialog = dialog.replaceFirst("%type%", door.getDoorType().name());
-		dialog = dialog.replaceFirst("%upgradeHP%", String.valueOf(door.getUpgradeHp()));
-		dialog = dialog.replaceFirst("%geoIndex%", String.valueOf(door.getGeoIndex()));
-		StringBuilder b = new StringBuilder("");
-		
-		for (GlobalEvent e : door.getEvents())
-		{
-			b.append(e.toString()).append(';');
-		}
-		
-		dialog = dialog.replaceFirst("%event%", b.toString());
-		show(dialog, player);
-		player.sendActionFailed();
-		return true;
-	}
-	
-	/**
 	 * Method OnActionShift_Player.
 	 * @param player Player
 	 * @param object GameObject
@@ -643,13 +606,14 @@ public final class OnActionShift extends Functions
 	
 	/**
 	 * Method OnActionShift_PetInstance.
+	 * @author Janiko
 	 * @param player Player
 	 * @param object GameObject
 	 * @return boolean
 	 */
 	public boolean OnActionShift_PetInstance(Player player, GameObject object)
 	{
-		if ((player == null) || (object == null) || !player.getPlayerAccess().CanViewChar)
+		if ((player == null) || !player.isGM() || (object == null) || !player.getPlayerAccess().CanViewChar)
 		{
 			return false;
 		}
@@ -657,45 +621,131 @@ public final class OnActionShift extends Functions
 		if (object.isPet())
 		{
 			PetInstance pet = (PetInstance) object;
-			String dialog;
-			dialog = HtmCache.getInstance().getNotNull("actionshift/admin.L2PetInstance.onActionShift.htm", player);
+			
+			String dialog = HtmCache.getInstance().getNotNull("actionshift/admin.L2PetInstance.onActionShift.htm", player);
+			
+			dialog = dialog.replaceFirst("%petId%", Integer.toString(pet.getNpcId()));
+			dialog = dialog.replaceFirst("%controlItemId%", String.valueOf(pet.getControlItem().getItemId()));
+			dialog = dialog.replaceFirst("%type%", pet.getClass().getSimpleName().replaceFirst("Instance", ""));
+			dialog = dialog.replaceFirst("%ai%", pet.hasAI() ? String.valueOf(pet.getAI().getIntention().name()) : "NULL");
+			dialog = dialog.replaceFirst("%dist%", String.valueOf((int) pet.getRealDistance(player)));
+			
 			dialog = dialog.replaceFirst("%name%", HtmlUtils.htmlNpcName(pet.getNpcId()));
 			dialog = dialog.replaceFirst("%title%", String.valueOf(StringUtils.isEmpty(pet.getTitle()) ? "Empty" : pet.getTitle()));
 			dialog = dialog.replaceFirst("%level%", String.valueOf(pet.getLevel()));
-			dialog = dialog.replaceFirst("%class%", String.valueOf(pet.getClass().getSimpleName().replaceFirst("L2", "").replaceFirst("Instance", "")));
-			dialog = dialog.replaceFirst("%xyz%", pet.getLoc().x + " " + pet.getLoc().y + " " + pet.getLoc().z);
-			dialog = dialog.replaceFirst("%heading%", String.valueOf(pet.getLoc().h));
-			dialog = dialog.replaceFirst("%owner%", String.valueOf(pet.getPlayer().getName()));
-			dialog = dialog.replaceFirst("%ownerId%", String.valueOf(pet.getPlayer().getObjectId()));
-			dialog = dialog.replaceFirst("%npcId%", String.valueOf(pet.getNpcId()));
-			dialog = dialog.replaceFirst("%controlItemId%", String.valueOf(pet.getControlItem().getItemId()));
-			dialog = dialog.replaceFirst("%exp%", String.valueOf(pet.getExp()));
-			dialog = dialog.replaceFirst("%sp%", String.valueOf(pet.getSp()));
-			dialog = dialog.replaceFirst("%maxHp%", String.valueOf(pet.getMaxHp()));
-			dialog = dialog.replaceFirst("%maxMp%", String.valueOf(pet.getMaxMp()));
-			dialog = dialog.replaceFirst("%currHp%", String.valueOf((int) pet.getCurrentHp()));
-			dialog = dialog.replaceFirst("%currMp%", String.valueOf((int) pet.getCurrentMp()));
-			dialog = dialog.replaceFirst("%pDef%", String.valueOf(pet.getPDef(null)));
-			dialog = dialog.replaceFirst("%mDef%", String.valueOf(pet.getMDef(null, null)));
-			dialog = dialog.replaceFirst("%pAtk%", String.valueOf(pet.getPAtk(null)));
-			dialog = dialog.replaceFirst("%mAtk%", String.valueOf(pet.getMAtk(null, null)));
-			dialog = dialog.replaceFirst("%accuracy%", String.valueOf(pet.getAccuracy()));
-			dialog = dialog.replaceFirst("%evasionRate%", String.valueOf(pet.getEvasionRate(null)));
-			dialog = dialog.replaceFirst("%crt%", String.valueOf(pet.getCriticalHit(null, null)));
-			dialog = dialog.replaceFirst("%runSpeed%", String.valueOf(pet.getRunSpeed()));
-			dialog = dialog.replaceFirst("%walkSpeed%", String.valueOf(pet.getWalkSpeed()));
-			dialog = dialog.replaceFirst("%pAtkSpd%", String.valueOf(pet.getPAtkSpd()));
-			dialog = dialog.replaceFirst("%mAtkSpd%", String.valueOf(pet.getMAtkSpd()));
-			dialog = dialog.replaceFirst("%dist%", String.valueOf((int) pet.getRealDistance(player)));
+			dialog = dialog.replaceFirst("%exp%", Long.toString(pet.getExp()));
+			dialog = dialog.replaceFirst("%owner%", pet.getPlayer().getName());
+			
+			dialog = dialog.replaceFirst("%hp%", (int) pet.getCurrentHp() + "/" + pet.getMaxHp());
+			dialog = dialog.replaceFirst("%mp%", (int) pet.getCurrentMp() + "/" + pet.getMaxMp());
+			dialog = dialog.replaceFirst("%karma%", Integer.toString(pet.getKarma()));
+			dialog = dialog.replaceFirst("%race%", getNpcRaceById(pet.getTemplate().getRace()));
+			
+			dialog = dialog.replaceFirst("%inv%", " <a action=\"bypass -h admin_show_pet_inv\">view</a>");
+			dialog = dialog.replaceFirst("%food%", pet.getCurrentFed() + "/" + pet.getMaxFed());
+			dialog = dialog.replaceFirst("%load%", pet.getInventory().getTotalWeight() + "/" + pet.getMaxLoad());
+			
 			dialog = dialog.replaceFirst("%STR%", String.valueOf(pet.getSTR()));
 			dialog = dialog.replaceFirst("%DEX%", String.valueOf(pet.getDEX()));
 			dialog = dialog.replaceFirst("%CON%", String.valueOf(pet.getCON()));
 			dialog = dialog.replaceFirst("%INT%", String.valueOf(pet.getINT()));
 			dialog = dialog.replaceFirst("%WIT%", String.valueOf(pet.getWIT()));
 			dialog = dialog.replaceFirst("%MEN%", String.valueOf(pet.getMEN()));
+			
+			show(dialog, player);
+		}
+		return true;
+	}
+	
+	/**
+	 * Method OnActionShift_SummonInstance.
+	 * @author Janiko
+	 * @param player Player
+	 * @param object GameObject
+	 * @return boolean
+	 */
+	public boolean OnActionShift_SummonInstance(Player player, GameObject object)
+	{
+		if ((player == null) || !player.isGM() || (object == null) || !player.getPlayerAccess().CanViewChar)
+		{
+			return false;
+		}
+		
+		if (object.isSummon())
+		{
+			SummonInstance summon = (SummonInstance) object;
+			
+			String dialog = HtmCache.getInstance().getNotNull("actionshift/admin.L2SummonInstance.onActionShift.htm", player);
+			String name = summon.getName();
+			
+			dialog = dialog.replaceFirst("%summonId%", Integer.toString(summon.getNpcId()));
+			dialog = dialog.replaceFirst("%type%", summon.getClass().getSimpleName().replaceFirst("Instance", ""));
+			dialog = dialog.replaceFirst("%ai%", summon.hasAI() ? String.valueOf(summon.getAI().getIntention().name()) : "NULL");
+			
+			dialog = dialog.replaceFirst("%name%", name == null ? "N/A" : name);
+			dialog = dialog.replaceFirst("%level%", Integer.toString(summon.getLevel()));
+			dialog = dialog.replaceFirst("%exp%", Long.toString(summon.getExp()));
+			dialog = dialog.replaceFirst("%owner%", summon.getPlayer().getName());
+			
+			dialog = dialog.replaceFirst("%hp%", (int) summon.getCurrentHp() + "/" + summon.getMaxHp());
+			dialog = dialog.replaceFirst("%mp%", (int) summon.getCurrentMp() + "/" + summon.getMaxMp());
+			dialog = dialog.replaceFirst("%karma%", Integer.toString(summon.getKarma()));
+			dialog = dialog.replaceFirst("%race%", getNpcRaceById(summon.getTemplate().getRace()));
+			
+			dialog = dialog.replaceFirst("%food%", "N/A");
+			dialog = dialog.replaceFirst("%load%", "N/A");
+			
+			dialog = dialog.replaceFirst("%STR%", String.valueOf(summon.getSTR()));
+			dialog = dialog.replaceFirst("%DEX%", String.valueOf(summon.getDEX()));
+			dialog = dialog.replaceFirst("%CON%", String.valueOf(summon.getCON()));
+			dialog = dialog.replaceFirst("%INT%", String.valueOf(summon.getINT()));
+			dialog = dialog.replaceFirst("%WIT%", String.valueOf(summon.getWIT()));
+			dialog = dialog.replaceFirst("%MEN%", String.valueOf(summon.getMEN()));
 			show(dialog, player);
 		}
 		
+		return true;
+	}
+	
+	/**
+	 * Method OnActionShift_DoorInstance.
+	 * @author Janiko
+	 * @param player Player
+	 * @param object GameObject
+	 * @return boolean
+	 */
+	public boolean OnActionShift_DoorInstance(Player player, GameObject object)
+	{
+		if ((player == null) || !player.isGM() || (object == null) || !player.getPlayerAccess().Door || !object.isDoor())
+		{
+			return false;
+		}
+		
+		String dialog;
+		DoorInstance door = (DoorInstance) object;
+		dialog = HtmCache.getInstance().getNotNull("actionshift/admin.L2DoorInstance.onActionShift.htm", player);
+		dialog = dialog.replace("%type%", door.getDoorType().name());
+		dialog = dialog.replace("%doorId%", String.valueOf(door.getDoorId()));
+		dialog = dialog.replaceAll("%objid%", String.valueOf(door.getObjectId()));
+		
+		dialog = dialog.replace("%currentHp%", String.valueOf((int) door.getCurrentHp()));
+		dialog = dialog.replace("%maxHp%", String.valueOf(door.getMaxHp()));
+		
+		dialog = dialog.replace("%x%", String.valueOf(door.getX()));
+		dialog = dialog.replace("%y%", String.valueOf(door.getY()));
+		dialog = dialog.replace("%z%", String.valueOf(door.getZ()));
+		
+		dialog = dialog.replace("%unlock%", door.isUnlockable() ? "<font color=00FF00>YES<font>" : "<font color=FF0000>NO</font>");
+		
+		StringBuilder b = new StringBuilder("");
+		for (GlobalEvent e : door.getEvents())
+		{
+			b.append(e.toString()).append(";");
+		}
+		dialog = dialog.replace("%event%", (b.length() > 0) ? b.toString() : "No Events");
+		
+		show(dialog, player);
+		player.sendActionFailed();
 		return true;
 	}
 	

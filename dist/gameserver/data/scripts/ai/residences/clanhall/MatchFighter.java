@@ -121,7 +121,7 @@ public class MatchFighter extends Fighter
 		
 		actor.getAggroList().addDamageHate(target, 0, 2);
 		
-		if ((target.isServitor() || target.isPet()))
+		if ((target.isSummon() || target.isPet()))
 		{
 			actor.getAggroList().addDamageHate(target.getPlayer(), 0, 1);
 		}

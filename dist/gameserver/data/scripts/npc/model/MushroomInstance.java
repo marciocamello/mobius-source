@@ -86,7 +86,7 @@ public final class MushroomInstance extends MonsterInstance
 		
 		Creature killer = attacker;
 		
-		if (killer.isPet() || killer.isServitor())
+		if (killer.isPet() || killer.isSummon())
 		{
 			killer = killer.getPlayer();
 		}
