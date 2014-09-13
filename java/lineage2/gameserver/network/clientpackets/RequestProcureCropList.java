@@ -16,11 +16,11 @@ import lineage2.commons.math.SafeMath;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
+import lineage2.gameserver.data.xml.holder.ManorDataHolder;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.instancemanager.CastleManorManager;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
-import lineage2.gameserver.model.Manor;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.instances.ManorManagerInstance;
@@ -172,7 +172,7 @@ public class RequestProcureCropList extends L2GameClientPacket
 				}
 				
 				totalFee = SafeMath.addAndCheck(totalFee, fee);
-				int rewardItemId = Manor.getInstance().getRewardItem(cropId, crop.getReward());
+				int rewardItemId = ManorDataHolder.getInstance().getRewardItem(cropId, crop.getReward());
 				ItemTemplate template = ItemHolder.getInstance().getTemplate(rewardItemId);
 				
 				if (template == null)
@@ -248,7 +248,7 @@ public class RequestProcureCropList extends L2GameClientPacket
 					continue;
 				}
 				
-				int rewardItemId = Manor.getInstance().getRewardItem(cropId, crop.getReward());
+				int rewardItemId = ManorDataHolder.getInstance().getRewardItem(cropId, crop.getReward());
 				long sellPrice = count * crop.getPrice();
 				long rewardPrice = ItemHolder.getInstance().getTemplate(rewardItemId).getReferencePrice();
 				

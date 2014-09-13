@@ -14,9 +14,9 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.List;
 
+import lineage2.gameserver.data.xml.holder.ManorDataHolder;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.instancemanager.CastleManorManager;
-import lineage2.gameserver.model.Manor;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.templates.manor.CropProcure;
 
@@ -33,7 +33,7 @@ public class ExShowCropSetting extends L2GameServerPacket
 	{
 		_manorId = manorId;
 		Castle c = ResidenceHolder.getInstance().getResidence(Castle.class, _manorId);
-		List<Integer> crops = Manor.getInstance().getCropsForCastle(_manorId);
+		List<Integer> crops = ManorDataHolder.getInstance().getCropsForCastle(_manorId);
 		_count = crops.size();
 		_cropData = new long[_count * 14];
 		int i = 0;
@@ -41,13 +41,13 @@ public class ExShowCropSetting extends L2GameServerPacket
 		for (int cr : crops)
 		{
 			_cropData[(i * 14) + 0] = cr;
-			_cropData[(i * 14) + 1] = Manor.getInstance().getSeedLevelByCrop(cr);
-			_cropData[(i * 14) + 2] = Manor.getInstance().getRewardItem(cr, 1);
-			_cropData[(i * 14) + 3] = Manor.getInstance().getRewardItem(cr, 2);
-			_cropData[(i * 14) + 4] = Manor.getInstance().getCropPuchaseLimit(cr);
+			_cropData[(i * 14) + 1] = ManorDataHolder.getInstance().getSeedLevelByCrop(cr);
+			_cropData[(i * 14) + 2] = ManorDataHolder.getInstance().getRewardItem(cr, 1);
+			_cropData[(i * 14) + 3] = ManorDataHolder.getInstance().getRewardItem(cr, 2);
+			_cropData[(i * 14) + 4] = ManorDataHolder.getInstance().getCropPuchaseLimit(cr);
 			_cropData[(i * 14) + 5] = 0; // Looks like not used
-			_cropData[(i * 14) + 6] = (Manor.getInstance().getCropBasicPrice(cr) * 60) / 100;
-			_cropData[(i * 14) + 7] = Manor.getInstance().getCropBasicPrice(cr) * 10;
+			_cropData[(i * 14) + 6] = (ManorDataHolder.getInstance().getCropBasicPrice(cr) * 60) / 100;
+			_cropData[(i * 14) + 7] = ManorDataHolder.getInstance().getCropBasicPrice(cr) * 10;
 			CropProcure cropPr = c.getCrop(cr, CastleManorManager.PERIOD_CURRENT);
 			
 			if (cropPr != null)

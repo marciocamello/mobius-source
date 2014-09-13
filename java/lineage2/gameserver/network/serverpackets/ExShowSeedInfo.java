@@ -14,7 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.List;
 
-import lineage2.gameserver.model.Manor;
+import lineage2.gameserver.data.xml.holder.ManorDataHolder;
 import lineage2.gameserver.templates.manor.SeedProduction;
 
 /**
@@ -46,20 +46,11 @@ public class ExShowSeedInfo extends L2GameServerPacket
 			writeQ(seed.getCanProduce()); // Left to buy
 			writeQ(seed.getStartProduce()); // Started amount
 			writeQ(seed.getPrice()); // Sell Price
-			writeD(Manor.getInstance().getSeedLevel(seed.getId())); // Seed
-			// Level
+			writeD(ManorDataHolder.getInstance().getSeedLevel(seed.getId())); // Seed Level
 			writeC(1); // reward 1 Type
-			writeD(Manor.getInstance().getRewardItemBySeed(seed.getId(), 1)); // Reward
-			// 1
-			// Type
-			// Item
-			// Id
+			writeD(ManorDataHolder.getInstance().getRewardItemBySeed(seed.getId(), 1)); // Reward
 			writeC(1); // reward 2 Type
-			writeD(Manor.getInstance().getRewardItemBySeed(seed.getId(), 2)); // Reward
-			// 2
-			// Type
-			// Item
-			// Id
+			writeD(ManorDataHolder.getInstance().getRewardItemBySeed(seed.getId(), 2)); // Reward
 		}
 	}
 }

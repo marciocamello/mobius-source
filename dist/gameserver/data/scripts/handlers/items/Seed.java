@@ -12,8 +12,8 @@
  */
 package handlers.items;
 
+import lineage2.gameserver.data.xml.holder.ManorDataHolder;
 import lineage2.gameserver.instancemanager.MapRegionManager;
-import lineage2.gameserver.model.Manor;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
@@ -40,10 +40,10 @@ public final class Seed extends ScriptItemHandler
 	 */
 	public Seed()
 	{
-		_itemIds = new int[Manor.getInstance().getAllSeeds().size()];
+		_itemIds = new int[ManorDataHolder.getInstance().getAllSeeds().size()];
 		int id = 0;
 		
-		for (Integer s : Manor.getInstance().getAllSeeds().keySet())
+		for (Integer s : ManorDataHolder.getInstance().getAllSeeds().keySet())
 		{
 			_itemIds[id++] = s.shortValue();
 		}
@@ -110,7 +110,7 @@ public final class Seed extends ScriptItemHandler
 		final DomainArea domain = MapRegionManager.getInstance().getRegionData(DomainArea.class, player);
 		final int castleId = domain == null ? 0 : domain.getId();
 		
-		if (Manor.getInstance().getCastleIdForSeed(seedId) != castleId)
+		if (ManorDataHolder.getInstance().getCastleIdForSeed(seedId) != castleId)
 		{
 			player.sendPacket(SystemMsg.THIS_SEED_MAY_NOT_BE_SOWN_HERE);
 			return false;

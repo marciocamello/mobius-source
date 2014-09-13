@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import lineage2.gameserver.model.Manor;
+import lineage2.gameserver.data.xml.holder.ManorDataHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.templates.manor.CropProcure;
@@ -35,7 +35,7 @@ public class ExShowSellCropList extends L2GameServerPacket
 		_manorId = manorId;
 		_castleCrops = new TreeMap<>();
 		_cropsItems = new TreeMap<>();
-		List<Integer> allCrops = Manor.getInstance().getAllCrops();
+		List<Integer> allCrops = ManorDataHolder.getInstance().getAllCrops();
 		
 		for (int cropId : allCrops)
 		{
@@ -67,17 +67,11 @@ public class ExShowSellCropList extends L2GameServerPacket
 		{
 			writeD(item.getObjectId()); // Object id
 			writeD(item.getItemId()); // crop id
-			writeD(Manor.getInstance().getSeedLevelByCrop(item.getItemId())); // seed
-			// level
+			writeD(ManorDataHolder.getInstance().getSeedLevelByCrop(item.getItemId())); // seed level
 			writeC(1);
-			writeD(Manor.getInstance().getRewardItem(item.getItemId(), 1)); // reward
-			// 1
-			// id
+			writeD(ManorDataHolder.getInstance().getRewardItem(item.getItemId(), 1));
 			writeC(1);
-			writeD(Manor.getInstance().getRewardItem(item.getItemId(), 2)); // reward
-			
-			// 2
-			// id
+			writeD(ManorDataHolder.getInstance().getRewardItem(item.getItemId(), 2));
 			if (_castleCrops.containsKey(item.getItemId()))
 			{
 				CropProcure crop = _castleCrops.get(item.getItemId());
