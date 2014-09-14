@@ -46,7 +46,7 @@ public class QuestList extends L2GameServerPacket
 			{
 				questlist.add(new int[]
 				{
-					quest.getQuest().getQuestIntId(),
+					quest.getQuest().getId(),
 					quest.getInt(QuestState.VAR_COND)
 				});
 			}

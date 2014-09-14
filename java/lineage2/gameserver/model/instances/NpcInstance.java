@@ -1381,8 +1381,8 @@ public class NpcInstance extends Creature
 		{
 			int quest1 = quest.getDescrState(player, isStart);
 			int quest2 = info.getQuest().getDescrState(player, isStart);
-			int questId1 = quest.getQuestIntId();
-			int questId2 = info.getQuest().getQuestIntId();
+			int questId1 = quest.getId();
+			int questId2 = info.getQuest().getId();
 			
 			if ((quest1 == 1) && (quest2 == 2))
 			{
@@ -1440,9 +1440,9 @@ public class NpcInstance extends Creature
 		{
 			for (Quest x : starts)
 			{
-				if ((x.getQuestIntId() > 0) && !options.containsKey(x.getQuestIntId()))
+				if ((x.getId() > 0) && !options.containsKey(x.getId()))
 				{
-					options.put(x.getQuestIntId(), new QuestInfo(x, player, true));
+					options.put(x.getId(), new QuestInfo(x, player, true));
 				}
 			}
 		}
@@ -1451,9 +1451,9 @@ public class NpcInstance extends Creature
 		{
 			for (QuestState x : awaits)
 			{
-				if ((x.getQuest().getQuestIntId() > 0) && !options.containsKey(x.getQuest().getQuestIntId()))
+				if ((x.getQuest().getId() > 0) && !options.containsKey(x.getQuest().getId()))
 				{
-					options.put(x.getQuest().getQuestIntId(), new QuestInfo(x.getQuest(), player, false));
+					options.put(x.getQuest().getId(), new QuestInfo(x.getQuest(), player, false));
 				}
 			}
 		}
