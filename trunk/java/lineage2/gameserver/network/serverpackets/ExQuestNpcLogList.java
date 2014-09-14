@@ -30,7 +30,7 @@ public class ExQuestNpcLogList extends L2GameServerPacket
 	
 	public ExQuestNpcLogList(QuestState state)
 	{
-		_questId = state.getQuest().getQuestIntId();
+		_questId = state.getQuest().getId();
 		int cond = state.getCond();
 		List<QuestNpcLogInfo> vars = state.getQuest().getNpcLogList(cond);
 		

@@ -43,7 +43,7 @@ public class GMViewQuestInfo extends L2GameServerPacket
 		
 		for (Quest q : quests)
 		{
-			writeD(q.getQuestIntId());
+			writeD(q.getId());
 			QuestState qs = _cha.getQuestState(q.getName());
 			writeD(qs == null ? 0 : qs.getInt("cond"));
 		}

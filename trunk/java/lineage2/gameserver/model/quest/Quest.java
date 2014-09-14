@@ -89,7 +89,7 @@ public class Quest
 	private static final String FONT_QUEST_AVAILABLE = "<font color=\"6699ff\">";
 	private static final String FONT_QUEST_DONE = "<font color=\"787878\">";
 	private static final String FONT_QUEST_NOT_AVAILABLE = "<font color=\"a62f31\">";
-	protected static final String TODO_FIND_HTML = "<font color=\"6699ff\">TODO:<br>Find this dialog";
+	public static final String TODO_FIND_HTML = "<font color=\"6699ff\">TODO:<br>Find this dialog";
 	public static final int ADENA_ID = 57;
 	public static final int PARTY_NONE = 0;
 	public static final int PARTY_ONE = 1;
@@ -98,9 +98,9 @@ public class Quest
 	private final TIntHashSet _questItems = new TIntHashSet();
 	private TIntObjectHashMap<List<QuestNpcLogInfo>> _npcLogList = TroveUtils.emptyIntObjectMap();
 	private final List<ICheckStartCondition> _startConditionList = new ArrayList<>();
-	protected final String _name;
-	protected final int _party;
-	protected final int _questId;
+	private final String _name;
+	private final int _party;
+	private final int _questId;
 	public final static int CREATED = 1;
 	public final static int STARTED = 2;
 	public final static int COMPLETED = 3;
@@ -739,7 +739,7 @@ public class Quest
 				break;
 		}
 		
-		int fStringId = getQuestIntId();
+		int fStringId = getId();
 		
 		if (fStringId >= 10000)
 		{
@@ -787,10 +787,10 @@ public class Quest
 	}
 	
 	/**
-	 * Method getQuestIntId.
+	 * Method getId.
 	 * @return int
 	 */
-	public int getQuestIntId()
+	public int getId()
 	{
 		return _questId;
 	}
@@ -1219,7 +1219,7 @@ public class Quest
 		}
 		
 		GameObject target = player.getTarget();
-		NpcHtmlMessage npcReply = showQuestInfo ? new ExNpcQuestHtmlMessage(target == null ? 5 : target.getObjectId(), getQuestIntId()) : new NpcHtmlMessage(target == null ? 5 : target.getObjectId());
+		NpcHtmlMessage npcReply = showQuestInfo ? new ExNpcQuestHtmlMessage(target == null ? 5 : target.getObjectId(), getId()) : new NpcHtmlMessage(target == null ? 5 : target.getObjectId());
 		npcReply.setFile("quests/" + getClass().getSimpleName() + "/" + fileName);
 		
 		if ((arg.length % 2) == 0)
@@ -1303,7 +1303,7 @@ public class Quest
 		}
 		else
 		{
-			NpcHtmlMessage npcReply = showQuestInfo ? new ExNpcQuestHtmlMessage(npc == null ? 5 : npc.getObjectId(), getQuestIntId()) : new NpcHtmlMessage(npc == null ? 5 : npc.getObjectId());
+			NpcHtmlMessage npcReply = showQuestInfo ? new ExNpcQuestHtmlMessage(npc == null ? 5 : npc.getObjectId(), getId()) : new NpcHtmlMessage(npc == null ? 5 : npc.getObjectId());
 			npcReply.setHtml(res);
 			player.sendPacket(npcReply);
 		}

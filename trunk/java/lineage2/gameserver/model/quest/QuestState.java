@@ -921,7 +921,7 @@ public final class QuestState
 		}
 		else
 		{
-			_log.warn("Attemp to kill object that is not npc in quest " + getQuest().getQuestIntId());
+			_log.warn("Attemp to kill object that is not npc in quest " + getQuest().getId());
 		}
 	}
 	
@@ -1000,7 +1000,7 @@ public final class QuestState
 		
 		if (getQuest().isVisible(player) && isStarted())
 		{
-			player.sendPacket(new ExShowQuestMark(getQuest().getQuestIntId(), getCond()));
+			player.sendPacket(new ExShowQuestMark(getQuest().getId(), getCond()));
 		}
 		
 		Quest.updateQuestInDb(this);
@@ -1026,7 +1026,7 @@ public final class QuestState
 		
 		if (getQuest().isVisible(player) && isStarted())
 		{
-			player.sendPacket(new ExShowQuestMark(getQuest().getQuestIntId(), getCond()));
+			player.sendPacket(new ExShowQuestMark(getQuest().getId(), getCond()));
 		}
 		
 		player.sendPacket(new QuestList(player));
@@ -1605,7 +1605,7 @@ public final class QuestState
 			
 			if ((newCond != 0) && getQuest().isVisible(player) && isStarted())
 			{
-				player.sendPacket(new ExShowQuestMark(getQuest().getQuestIntId(), getCond()));
+				player.sendPacket(new ExShowQuestMark(getQuest().getId(), getCond()));
 			}
 			
 			player.sendPacket(new QuestList(player));

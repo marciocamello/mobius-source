@@ -158,7 +158,7 @@ public class AdminQuests implements IAdminCommandHandler, ScriptFile
 	private static boolean ShowQuestState(QuestState qs, Player activeChar)
 	{
 		Map<String, String> vars = qs.getVars();
-		int id = qs.getQuest().getQuestIntId();
+		int id = qs.getQuest().getId();
 		String char_name = qs.getPlayer().getName();
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		StringBuilder replyMSG = new StringBuilder("<html><body>");
@@ -251,11 +251,11 @@ public class AdminQuests implements IAdminCommandHandler, ScriptFile
 		
 		for (QuestState qs : targetChar.getAllQuestsStates())
 		{
-			if ((qs != null) && (qs.getQuest().getQuestIntId() != 255))
+			if ((qs != null) && (qs.getQuest().getId() != 255))
 			{
 				replyMSG.append(fmtListRow.sprintf(new Object[]
 				{
-					qs.getQuest().getQuestIntId(),
+					qs.getQuest().getId(),
 					targetChar.getName(),
 					qs.getQuest().getName(),
 					qs.getStateName()
