@@ -115,9 +115,9 @@ public class RequestRecipeItemMakeSelf extends L2GameClientPacket
 					continue;
 				}
 				
-				if (Config.ALT_GAME_UNREGISTER_RECIPE && (ItemHolder.getInstance().getTemplate(material.getItemId()).getItemType() == EtcItemType.RECIPE))
+				if (Config.ALT_GAME_UNREGISTER_RECIPE && (ItemHolder.getInstance().getTemplate(material.getId()).getItemType() == EtcItemType.RECIPE))
 				{
-					RecipeTemplate rp = RecipeHolder.getInstance().getRecipeByRecipeItem(material.getItemId());
+					RecipeTemplate rp = RecipeHolder.getInstance().getRecipeByRecipeItem(material.getId());
 					
 					if (activeChar.hasRecipe(rp))
 					{
@@ -128,7 +128,7 @@ public class RequestRecipeItemMakeSelf extends L2GameClientPacket
 					return;
 				}
 				
-				ItemInstance item = activeChar.getInventory().getItemByItemId(material.getItemId());
+				ItemInstance item = activeChar.getInventory().getItemByItemId(material.getId());
 				
 				if ((item == null) || (item.getCount() < material.getCount()))
 				{
@@ -144,18 +144,18 @@ public class RequestRecipeItemMakeSelf extends L2GameClientPacket
 					continue;
 				}
 				
-				if (Config.ALT_GAME_UNREGISTER_RECIPE && (ItemHolder.getInstance().getTemplate(material.getItemId()).getItemType() == EtcItemType.RECIPE))
+				if (Config.ALT_GAME_UNREGISTER_RECIPE && (ItemHolder.getInstance().getTemplate(material.getId()).getItemType() == EtcItemType.RECIPE))
 				{
-					activeChar.unregisterRecipe(RecipeHolder.getInstance().getRecipeByRecipeItem(material.getItemId()).getId());
+					activeChar.unregisterRecipe(RecipeHolder.getInstance().getRecipeByRecipeItem(material.getId()).getId());
 				}
 				else
 				{
-					if (!activeChar.getInventory().destroyItemByItemId(material.getItemId(), material.getCount()))
+					if (!activeChar.getInventory().destroyItemByItemId(material.getId(), material.getCount()))
 					{
 						continue;
 					}
 					
-					activeChar.sendPacket(SystemMessage2.removeItems(material.getItemId(), material.getCount()));
+					activeChar.sendPacket(SystemMessage2.removeItems(material.getId(), material.getCount()));
 				}
 			}
 		}
@@ -166,7 +166,7 @@ public class RequestRecipeItemMakeSelf extends L2GameClientPacket
 		activeChar.resetWaitSitTime();
 		activeChar.reduceCurrentMp(recipe.getMpConsume(), null);
 		RecipeComponent product = recipe.getRandomProduct();
-		int itemId = product.getItemId();
+		int itemId = product.getId();
 		long itemsCount = product.getCount();
 		int success = 0;
 		

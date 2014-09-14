@@ -83,7 +83,7 @@ public class RequestExTryToPutShapeShiftingEnchantSupportItem extends L2GameClie
 			return;
 		}
 		
-		AppearanceStone appearanceStone = EnchantItemHolder.getInstance().getAppearanceStone(stone.getItemId());
+		AppearanceStone appearanceStone = EnchantItemHolder.getInstance().getAppearanceStone(stone.getId());
 		
 		if (appearanceStone == null)
 		{

@@ -50,7 +50,7 @@ public final class ItemHolder extends AbstractHolder
 	 */
 	public void addItem(ItemTemplate template)
 	{
-		_items.put(template.getItemId(), template);
+		_items.put(template.getId(), template);
 	}
 	
 	/**

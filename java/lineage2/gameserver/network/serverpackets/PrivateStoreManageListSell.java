@@ -48,10 +48,10 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 			
 			if (item == null)
 			{
-				item = seller.getInventory().getItemByItemId(si.getItemId());
+				item = seller.getInventory().getItemByItemId(si.getId());
 			}
 			
-			if ((item == null) || !item.canBeTraded(seller) || (item.getItemId() == ItemTemplate.ITEM_ID_ADENA))
+			if ((item == null) || !item.canBeTraded(seller) || (item.getId() == ItemTemplate.ITEM_ID_ADENA))
 			{
 				_sellList0.remove(si);
 				continue;
@@ -65,7 +65,7 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 		
 		for (ItemInstance item : items)
 		{
-			if (item.canBeTraded(seller) && (item.getItemId() != ItemTemplate.ITEM_ID_ADENA))
+			if (item.canBeTraded(seller) && (item.getId() != ItemTemplate.ITEM_ID_ADENA))
 			{
 				for (TradeItem si : _sellList0)
 				{

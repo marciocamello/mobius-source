@@ -72,7 +72,7 @@ public final class MercTicket extends ScriptItemHandler
 		}
 		
 		final Castle castle = player.getCastle();
-		final MerchantGuard guard = castle.getMerchantGuard(item.getItemId());
+		final MerchantGuard guard = castle.getMerchantGuard(item.getId());
 		
 		if ((guard == null) || !castle.checkIfInZone(loc, ReflectionManager.DEFAULT) || player.isActionBlocked(Zone.BLOCKED_ACTION_DROP_MERCHANT_GUARD))
 		{
@@ -96,7 +96,7 @@ public final class MercTicket extends ScriptItemHandler
 				return;
 			}
 			
-			if ($item.getItemId() == guard.getItemId())
+			if ($item.getId() == guard.getItemId())
 			{
 				countOfGuard++;
 			}
@@ -123,7 +123,7 @@ public final class MercTicket extends ScriptItemHandler
 		item.delete();
 		item.setJdbcState(JdbcEntityState.STORED);
 		castle.getSpawnMerchantTickets().add(item);
-		CastleHiredGuardDAO.getInstance().insert(castle, item.getItemId(), item.getLoc());
+		CastleHiredGuardDAO.getInstance().insert(castle, item.getId(), item.getLoc());
 	}
 	
 	/**

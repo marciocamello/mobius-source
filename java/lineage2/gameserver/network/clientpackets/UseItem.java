@@ -58,7 +58,7 @@ public class UseItem extends L2GameClientPacket
 			return;
 		}
 		
-		int itemId = item.getItemId();
+		int itemId = item.getId();
 		
 		if (activeChar.isInStoreMode())
 		{
@@ -102,13 +102,13 @@ public class UseItem extends L2GameClientPacket
 			return;
 		}
 		
-		if (Config.ALT_IMPROVED_PETS_LIMITED_USE && activeChar.isMageClass() && (item.getItemId() == 10311))
+		if (Config.ALT_IMPROVED_PETS_LIMITED_USE && activeChar.isMageClass() && (item.getId() == 10311))
 		{
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(itemId));
 			return;
 		}
 		
-		if (Config.ALT_IMPROVED_PETS_LIMITED_USE && !activeChar.isMageClass() && (item.getItemId() == 10313))
+		if (Config.ALT_IMPROVED_PETS_LIMITED_USE && !activeChar.isMageClass() && (item.getId() == 10313))
 		{
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(itemId));
 			return;
@@ -140,7 +140,7 @@ public class UseItem extends L2GameClientPacket
 			
 			if (nextTimeUse > System.currentTimeMillis())
 			{
-				TimeStamp timeStamp = new TimeStamp(item.getItemId(), nextTimeUse, item.getTemplate().getReuseDelay());
+				TimeStamp timeStamp = new TimeStamp(item.getId(), nextTimeUse, item.getTemplate().getReuseDelay());
 				activeChar.addSharedGroupReuse(item.getTemplate().getReuseGroup(), timeStamp);
 				
 				if (item.getTemplate().getReuseDelay() > 0)

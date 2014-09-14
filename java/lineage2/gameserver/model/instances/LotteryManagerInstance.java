@@ -276,7 +276,7 @@ public class LotteryManagerInstance extends NpcInstance
 					continue;
 				}
 				
-				if ((item.getItemId() == 4442) && (item.getCustomType1() < lotonumber))
+				if ((item.getId() == 4442) && (item.getCustomType1() < lotonumber))
 				{
 					message += "<a action=\"bypass -h npc_%objectId%_Loto " + item.getObjectId() + "\">" + item.getCustomType1();
 					message += " " + HtmlUtils.htmlNpcString(NpcString.EVENT_NUMBER) + " ";
@@ -336,7 +336,7 @@ public class LotteryManagerInstance extends NpcInstance
 			int lotonumber = LotteryManager.getInstance().getId();
 			ItemInstance item = player.getInventory().getItemByObjectId(val);
 			
-			if ((item == null) || (item.getItemId() != 4442) || (item.getCustomType1() >= lotonumber))
+			if ((item == null) || (item.getId() != 4442) || (item.getCustomType1() >= lotonumber))
 			{
 				return;
 			}

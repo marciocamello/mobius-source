@@ -79,7 +79,7 @@ public class RequestUseGoodsInventoryItem extends L2GameClientPacket
 			return;
 		}
 		
-		ItemFunctions.addItem(activeChar, _item.getItemId(), _itemcount, true);
+		ItemFunctions.addItem(activeChar, _item.getId(), _itemcount, true);
 		long itemsLeft = _item.getCount() - _itemcount;
 		
 		if (_itemcount < _item.getCount())

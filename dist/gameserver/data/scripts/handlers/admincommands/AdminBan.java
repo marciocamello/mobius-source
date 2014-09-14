@@ -371,7 +371,7 @@ public class AdminBan implements IAdminCommandHandler, ScriptFile
 				
 				for (TradeItem i : (Collection<TradeItem>) list)
 				{
-					ret += i.getItemId() + ";" + i.getCount() + ";" + i.getOwnersPrice() + ":";
+					ret += i.getId() + ";" + i.getCount() + ";" + i.getOwnersPrice() + ":";
 				}
 				
 				return ret;
@@ -389,7 +389,7 @@ public class AdminBan implements IAdminCommandHandler, ScriptFile
 				
 				for (TradeItem i : (Collection<TradeItem>) list)
 				{
-					ret += i.getItemId() + ";" + i.getCount() + ";" + i.getOwnersPrice() + ":";
+					ret += i.getId() + ";" + i.getCount() + ";" + i.getOwnersPrice() + ":";
 				}
 				
 				return ret;

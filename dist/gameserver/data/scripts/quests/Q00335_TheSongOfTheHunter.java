@@ -805,7 +805,7 @@ public class Q00335_TheSongOfTheHunter extends Quest implements ScriptFile
 		
 		if ((st.getQuestItemsCount(_1st_Circle_Hunter_License) > 0) || (st.getQuestItemsCount(_2nd_Circle_Hunter_License) > 0))
 		{
-			if ((st.getQuestItemsCount(Cybellins_Request) > 0) && (st.getPlayer().getActiveWeaponItem() != null) && (st.getPlayer().getActiveWeaponItem().getItemId() == Cybellins_Dagger))
+			if ((st.getQuestItemsCount(Cybellins_Request) > 0) && (st.getPlayer().getActiveWeaponItem() != null) && (st.getPlayer().getActiveWeaponItem().getId() == Cybellins_Dagger))
 			{
 				int Blood_Crystal_Level = Get_Blood_Crystal_Level(st);
 				if ((Blood_Crystal_Level > 0) && (Blood_Crystal_Level < 10))

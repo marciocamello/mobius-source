@@ -42,7 +42,7 @@ public class ExBR_AgathionEnergyInfo extends L2GameServerPacket
 			}
 			
 			writeD(item.getObjectId());
-			writeD(item.getItemId());
+			writeD(item.getId());
 			writeD(2097152);
 			writeD(item.getAgathionEnergy());// current energy
 			writeD(item.getTemplate().getAgathionEnergy()); // max energy

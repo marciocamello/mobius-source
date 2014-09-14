@@ -235,7 +235,7 @@ public class RequestCrystallizeItem extends L2GameClientPacket
 			{
 				if (Rnd.chance(itemD.getChance()))
 				{
-					ItemFunctions.addItem(activeChar, itemD.getItemId(), itemD.getCount(), true);
+					ItemFunctions.addItem(activeChar, itemD.getId(), itemD.getCount(), true);
 				}
 			}
 		}

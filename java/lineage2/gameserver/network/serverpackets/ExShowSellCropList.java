@@ -66,15 +66,15 @@ public class ExShowSellCropList extends L2GameServerPacket
 		for (ItemInstance item : _cropsItems.values())
 		{
 			writeD(item.getObjectId()); // Object id
-			writeD(item.getItemId()); // crop id
-			writeD(ManorDataHolder.getInstance().getSeedLevelByCrop(item.getItemId())); // seed level
+			writeD(item.getId()); // crop id
+			writeD(ManorDataHolder.getInstance().getSeedLevelByCrop(item.getId())); // seed level
 			writeC(1);
-			writeD(ManorDataHolder.getInstance().getRewardItem(item.getItemId(), 1));
+			writeD(ManorDataHolder.getInstance().getRewardItem(item.getId(), 1));
 			writeC(1);
-			writeD(ManorDataHolder.getInstance().getRewardItem(item.getItemId(), 2));
-			if (_castleCrops.containsKey(item.getItemId()))
+			writeD(ManorDataHolder.getInstance().getRewardItem(item.getId(), 2));
+			if (_castleCrops.containsKey(item.getId()))
 			{
-				CropProcure crop = _castleCrops.get(item.getItemId());
+				CropProcure crop = _castleCrops.get(item.getId());
 				writeD(_manorId); // manor
 				writeQ(crop.getAmount()); // buy residual
 				writeQ(crop.getPrice()); // buy price

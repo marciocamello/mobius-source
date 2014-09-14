@@ -30,7 +30,7 @@ public class ExResponseCommissionInfo extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0xF4);
-		writeD(_item.getItemId()); // ItemId
+		writeD(_item.getId()); // ItemId
 		writeD(_item.getObjectId());
 		writeQ(_item.getCount()); // TODO
 		writeQ(0/* _item.getCount() */); // TODO

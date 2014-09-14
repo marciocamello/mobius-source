@@ -104,7 +104,7 @@ public class RequestGetItemFromPet extends L2GameClientPacket
 		int slots = 0;
 		long weight = item.getTemplate().getWeight() * _amount;
 		
-		if (!item.getTemplate().isStackable() || (activeChar.getInventory().getItemByItemId(item.getItemId()) == null))
+		if (!item.getTemplate().isStackable() || (activeChar.getInventory().getItemByItemId(item.getId()) == null))
 		{
 			slots = 1;
 		}

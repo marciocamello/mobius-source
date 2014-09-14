@@ -808,7 +808,7 @@ public class MultiSellHolder
 						
 						for (final ItemInstance item : items)
 						{
-							if ((item.getItemId() == ingredient.getItemId()) && item.canBeExchanged(player))
+							if ((item.getId() == ingredient.getItemId()) && item.canBeExchanged(player))
 							{
 								if (itms.contains(enchant ? ingredient.getItemId() + (ingredient.getItemEnchant() * 100000L) : ingredient.getItemId()))
 								{

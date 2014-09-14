@@ -81,7 +81,7 @@ public class RequestChangeNicknameColor extends L2GameClientPacket
 			return;
 		}
 		
-		if (activeChar.consumeItem(item.getItemId(), 1))
+		if (activeChar.consumeItem(item.getId(), 1))
 		{
 			activeChar.setTitleColor(COLORS[_colorNum]);
 			activeChar.setTitle(_title);

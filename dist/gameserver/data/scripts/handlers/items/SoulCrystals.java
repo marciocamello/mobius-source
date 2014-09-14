@@ -44,7 +44,7 @@ public final class SoulCrystals extends ScriptItemHandler
 		
 		for (SoulCrystal crystal : SoulCrystalHolder.getInstance().getCrystals())
 		{
-			set.add(crystal.getItemId());
+			set.add(crystal.getId());
 			set.add(crystal.getNextItemId());
 		}
 		

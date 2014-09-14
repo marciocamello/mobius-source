@@ -176,7 +176,7 @@ public class SendWareHouseWithDrawList extends L2GameClientPacket
 				
 				weight = SafeMath.addAndCheck(weight, SafeMath.mulAndCheck(item.getTemplate().getWeight(), _itemQ[i]));
 				
-				if (!item.isStackable() || (inventory.getItemByItemId(item.getItemId()) == null))
+				if (!item.isStackable() || (inventory.getItemByItemId(item.getId()) == null))
 				{
 					slots++;
 				}

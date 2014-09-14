@@ -174,14 +174,14 @@ public class RequestPrivateStoreBuy extends L2GameClientPacket
 							totalCost = SafeMath.addAndCheck(totalCost, SafeMath.mulAndCheck(count, price));
 							weight = SafeMath.addAndCheck(weight, SafeMath.mulAndCheck(count, item.getTemplate().getWeight()));
 							
-							if (!item.isStackable() || (buyer.getInventory().getItemByItemId(item.getItemId()) == null))
+							if (!item.isStackable() || (buyer.getInventory().getItemByItemId(item.getId()) == null))
 							{
 								slots++;
 							}
 							
 							bi = new TradeItem();
 							bi.setObjectId(objectId);
-							bi.setItemId(item.getItemId());
+							bi.setItemId(item.getId());
 							bi.setCount(count);
 							bi.setOwnersPrice(price);
 							buyList.add(bi);

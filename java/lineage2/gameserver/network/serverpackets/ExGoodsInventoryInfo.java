@@ -52,7 +52,7 @@ public class ExGoodsInventoryInfo extends L2GameServerPacket
 				writeS(null);
 				writeS(null);
 				writeH(1);
-				writeD(entry.getValue().getItemId());
+				writeD(entry.getValue().getId());
 				writeD((int) entry.getValue().getCount());
 			}
 		}

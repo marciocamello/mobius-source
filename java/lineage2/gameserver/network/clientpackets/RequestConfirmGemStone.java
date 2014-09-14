@@ -64,7 +64,7 @@ public class RequestConfirmGemStone extends AbstractRefinePacket
 			return;
 		}
 		
-		LifeStoneInfo lsi = LifeStoneManager.getStoneInfo(refinerItem.getItemId());
+		LifeStoneInfo lsi = LifeStoneManager.getStoneInfo(refinerItem.getId());
 		
 		if (lsi == null)
 		{

@@ -146,7 +146,7 @@ public class TradeDone extends L2GameClientPacket
 				
 				weight = SafeMath.addAndCheck(weight, SafeMath.mulAndCheck(ti.getCount(), ti.getItem().getWeight()));
 				
-				if (!ti.getItem().isStackable() || (parthner2.getInventory().getItemByItemId(ti.getItemId()) == null))
+				if (!ti.getItem().isStackable() || (parthner2.getInventory().getItemByItemId(ti.getId()) == null))
 				{
 					slots++;
 				}
@@ -178,7 +178,7 @@ public class TradeDone extends L2GameClientPacket
 				
 				weight = SafeMath.addAndCheck(weight, SafeMath.mulAndCheck(ti.getCount(), ti.getItem().getWeight()));
 				
-				if (!ti.getItem().isStackable() || (parthner1.getInventory().getItemByItemId(ti.getItemId()) == null))
+				if (!ti.getItem().isStackable() || (parthner1.getInventory().getItemByItemId(ti.getId()) == null))
 				{
 					slots++;
 				}

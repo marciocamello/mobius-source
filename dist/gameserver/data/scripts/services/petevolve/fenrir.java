@@ -73,7 +73,7 @@ public final class fenrir extends Functions
 		int controlItemId = pl_pet.getControlItemObjId();
 		player.getSummonList().unsummonPet(false);
 		ItemInstance control = player.getInventory().getItemByObjectId(controlItemId);
-		control.setItemId(FENRIR_NECKLACE);
+		control.setId(FENRIR_NECKLACE);
 		control.setEnchantLevel(L2Pet.FENRIR_WOLF.getMinLevel());
 		control.setJdbcState(JdbcEntityState.UPDATED);
 		control.update();

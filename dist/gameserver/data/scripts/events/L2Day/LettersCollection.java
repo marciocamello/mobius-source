@@ -261,7 +261,7 @@ public class LettersCollection extends Functions implements ScriptFile, OnDeathL
 			
 			if (sum > random)
 			{
-				addItem(player, r.getItemId(), Rnd.get(r.getMinDrop(), r.getMaxDrop()));
+				addItem(player, r.getId(), Rnd.get(r.getMinDrop(), r.getMaxDrop()));
 				return;
 			}
 		}

@@ -330,7 +330,7 @@ public class OlympiadGame
 		for (Player player : winnerTeam.getPlayers())
 		{
 			ItemInstance item = player.getInventory().addItem(Config.ALT_OLY_BATTLE_REWARD_ITEM, getType().getReward());
-			player.sendPacket(SystemMessage2.obtainItems(item.getItemId(), getType().getReward(), 0));
+			player.sendPacket(SystemMessage2.obtainItems(item.getId(), getType().getReward(), 0));
 			player.sendChanges();
 		}
 		

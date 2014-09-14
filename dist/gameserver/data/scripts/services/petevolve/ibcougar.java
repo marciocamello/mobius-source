@@ -73,7 +73,7 @@ public final class ibcougar extends Functions
 		int controlItemId = pl_pet.getControlItemObjId();
 		player.getSummonList().unsummonPet(false);
 		ItemInstance control = player.getInventory().getItemByObjectId(controlItemId);
-		control.setItemId(IN_COUGAR_CHIME);
+		control.setId(IN_COUGAR_CHIME);
 		control.setEnchantLevel(L2Pet.IMPROVED_BABY_COUGAR.getMinLevel());
 		control.setJdbcState(JdbcEntityState.UPDATED);
 		control.update();

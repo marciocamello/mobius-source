@@ -79,7 +79,7 @@ public final class ibkookaburra extends Functions
 		int controlItemId = pet.getControlItemObjId();
 		player.getSummonList().unsummonPet(false);
 		ItemInstance control = player.getInventory().getItemByObjectId(controlItemId);
-		control.setItemId(IN_KOOKABURRA_OCARINA);
+		control.setId(IN_KOOKABURRA_OCARINA);
 		control.setEnchantLevel(L2Pet.IMPROVED_BABY_KOOKABURRA.getMinLevel());
 		control.setJdbcState(JdbcEntityState.UPDATED);
 		control.update();

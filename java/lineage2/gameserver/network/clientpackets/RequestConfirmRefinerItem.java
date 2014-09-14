@@ -61,7 +61,7 @@ public class RequestConfirmRefinerItem extends AbstractRefinePacket
 			return;
 		}
 		
-		LifeStoneInfo lsi = LifeStoneManager.getStoneInfo(refinerItem.getItemId());
+		LifeStoneInfo lsi = LifeStoneManager.getStoneInfo(refinerItem.getId());
 		
 		if (lsi == null)
 		{
@@ -74,7 +74,7 @@ public class RequestConfirmRefinerItem extends AbstractRefinePacket
 			return;
 		}
 		
-		final int refinerItemId = refinerItem.getItemId();
+		final int refinerItemId = refinerItem.getId();
 		final Grade grade = targetItem.getTemplate().getItemGrade();
 		final int gemStoneId = getGemStoneId(grade);
 		final int gemStoneCount = getGemStoneCount(lsi.getGrade(), grade);

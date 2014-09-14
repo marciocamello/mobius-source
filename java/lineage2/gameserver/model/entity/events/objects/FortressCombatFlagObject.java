@@ -135,7 +135,7 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 		_item.setOwnerId(0);
 		_item.setJdbcState(JdbcEntityState.UPDATED);
 		_item.update();
-		owner.sendPacket(new SystemMessage2(SystemMsg.YOU_HAVE_DROPPED_S1).addItemName(_item.getItemId()));
+		owner.sendPacket(new SystemMessage2(SystemMsg.YOU_HAVE_DROPPED_S1).addItemName(_item.getId()));
 		_item.dropMe(null, _location);
 		_item.setDropTime(0);
 	}

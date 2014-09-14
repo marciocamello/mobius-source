@@ -56,9 +56,9 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 		}
 		
 		final Grade grade = item.getTemplate().getItemGrade();
-		LifeStoneInfo ls = LifeStoneManager.getStoneInfo(refinerItem.getItemId());
+		LifeStoneInfo ls = LifeStoneManager.getStoneInfo(refinerItem.getId());
 		
-		if (getGemStoneId(grade) != gemStones.getItemId())
+		if (getGemStoneId(grade) != gemStones.getId())
 		{
 			return false;
 		}
@@ -90,7 +90,7 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 			return false;
 		}
 		
-		LifeStoneInfo ls = LifeStoneManager.getStoneInfo(refinerItem.getItemId());
+		LifeStoneInfo ls = LifeStoneManager.getStoneInfo(refinerItem.getId());
 		
 		if (player.getLevel() < ls.getLevel())
 		{

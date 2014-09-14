@@ -987,7 +987,7 @@ public final class PathfinderEquipment extends SimpleItemHandler
 	@Override
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
-		int itemId = item.getItemId();
+		int itemId = item.getId();
 		
 		if (!canBeExtracted(itemId, player))
 		{

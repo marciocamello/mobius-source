@@ -40,7 +40,7 @@ public final class Calculator extends ScriptItemHandler
 			return false;
 		}
 		
-		playable.sendPacket(new ShowCalc(item.getItemId()));
+		playable.sendPacket(new ShowCalc(item.getId()));
 		return true;
 	}
 	

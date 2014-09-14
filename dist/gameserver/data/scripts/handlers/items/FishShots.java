@@ -63,7 +63,7 @@ public final class FishShots extends ScriptItemHandler
 		}
 		
 		final Player player = (Player) playable;
-		final int FishshotId = item.getItemId();
+		final int FishshotId = item.getId();
 		boolean isAutoSoulShot = false;
 		
 		if (player.getAutoSoulShot().contains(FishshotId))

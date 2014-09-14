@@ -129,7 +129,7 @@ public final class EnchantCommunity extends Functions implements ScriptFile, ICo
 			{
 				ItemInstance _item = arr[i];
 				
-				if ((_item == null) || (_item.getTemplate() instanceof EtcItemTemplate) || _item.getTemplate().isBelt() || _item.getTemplate().isUnderwear() || !_item.isEquipped() || _item.isHeroWeapon() || _item.getTemplate().isBracelet() || _item.getTemplate().isCloak() || (_item.getTemplate().getCrystalType() == ItemTemplate.Grade.NONE) || ((_item.getItemId() >= 7816) && (_item.getItemId() <= 7831)) || _item.isShadowItem() || _item.isCommonItem() || _item.isTemporalItem() || (_item.getEnchantLevel() >= (Config.MAX_ENCHANT + 1)))
+				if ((_item == null) || (_item.getTemplate() instanceof EtcItemTemplate) || _item.getTemplate().isBelt() || _item.getTemplate().isUnderwear() || !_item.isEquipped() || _item.isHeroWeapon() || _item.getTemplate().isBracelet() || _item.getTemplate().isCloak() || (_item.getTemplate().getCrystalType() == ItemTemplate.Grade.NONE) || ((_item.getId() >= 7816) && (_item.getId() <= 7831)) || _item.isShadowItem() || _item.isCommonItem() || _item.isTemporalItem() || (_item.getEnchantLevel() >= (Config.MAX_ENCHANT + 1)))
 				{
 					continue;
 				}
@@ -328,7 +328,7 @@ public final class EnchantCommunity extends Functions implements ScriptFile, ICo
 			int EchantPrice = Integer.parseInt(st.nextToken());
 			int EchantObjID = Integer.parseInt(st.nextToken());
 			ItemTemplate item = ItemHolder.getInstance().getTemplate(Config.ENCHANTER_ITEM_ID);
-			ItemInstance pay = activeChar.getInventory().getItemByItemId(item.getItemId());
+			ItemInstance pay = activeChar.getInventory().getItemByItemId(item.getId());
 			ItemInstance EhchantItem = activeChar.getInventory().getItemByObjectId(EchantObjID);
 			
 			if ((pay != null) && (pay.getCount() >= EchantPrice))
@@ -364,7 +364,7 @@ public final class EnchantCommunity extends Functions implements ScriptFile, ICo
 			int EchantPrice = Integer.parseInt(st.nextToken());
 			int EchantObjID = Integer.parseInt(st.nextToken());
 			ItemTemplate item = ItemHolder.getInstance().getTemplate(Config.ENCHANTER_ITEM_ID);
-			ItemInstance pay = activeChar.getInventory().getItemByItemId(item.getItemId());
+			ItemInstance pay = activeChar.getInventory().getItemByItemId(item.getId());
 			ItemInstance EhchantItem = activeChar.getInventory().getItemByObjectId(EchantObjID);
 			
 			if (EhchantItem.isWeapon())

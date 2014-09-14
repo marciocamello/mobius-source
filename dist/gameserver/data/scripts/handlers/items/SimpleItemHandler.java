@@ -52,7 +52,7 @@ abstract class SimpleItemHandler extends ScriptItemHandler
 		
 		if (player.isInFlyingTransform())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getItemId()));
+			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
 			return false;
 		}
 		
@@ -79,7 +79,7 @@ abstract class SimpleItemHandler extends ScriptItemHandler
 	{
 		if (player.getInventory().destroyItem(item, count))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_USE_S1).addItemName(item.getItemId()));
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_USE_S1).addItemName(item.getId()));
 			return true;
 		}
 		

@@ -82,7 +82,7 @@ public abstract class Warehouse extends ItemContainer
 			
 			if (diff == 0)
 			{
-				diff = o1.getItemId() - o2.getItemId();
+				diff = o1.getId() - o2.getId();
 			}
 			
 			if (diff == 0)

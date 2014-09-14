@@ -75,7 +75,7 @@ public class RequestPetGetItem extends L2GameClientPacket
 		{
 			SystemMessage sm;
 			
-			if (item.getItemId() == 57)
+			if (item.getId() == 57)
 			{
 				sm = new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
 				sm.addNumber(item.getCount());
@@ -83,7 +83,7 @@ public class RequestPetGetItem extends L2GameClientPacket
 			else
 			{
 				sm = new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_PICK_UP_S1);
-				sm.addItemName(item.getItemId());
+				sm.addItemName(item.getId());
 			}
 			
 			sendPacket(sm);

@@ -65,30 +65,30 @@ public final class CristallChangeAttr extends ScriptItemHandler
 			return false;
 		}
 		
-		switch (item.getItemId())
+		switch (item.getId())
 		{
 			case 33502:
-				sendAttributeItemList(item.getItemId(), player, ItemTemplate.Grade.S, ItemTemplate.Grade.S80);
+				sendAttributeItemList(item.getId(), player, ItemTemplate.Grade.S, ItemTemplate.Grade.S80);
 				break;
 			
 			case 33833:
-				sendAttributeItemList(item.getItemId(), player, ItemTemplate.Grade.S);
+				sendAttributeItemList(item.getId(), player, ItemTemplate.Grade.S);
 				break;
 			
 			case 33834:
-				sendAttributeItemList(item.getItemId(), player, ItemTemplate.Grade.S80);
+				sendAttributeItemList(item.getId(), player, ItemTemplate.Grade.S80);
 				break;
 			
 			case 33835:
-				sendAttributeItemList(item.getItemId(), player, ItemTemplate.Grade.R);
+				sendAttributeItemList(item.getId(), player, ItemTemplate.Grade.R);
 				break;
 			
 			case 33836:
-				sendAttributeItemList(item.getItemId(), player, ItemTemplate.Grade.R95);
+				sendAttributeItemList(item.getId(), player, ItemTemplate.Grade.R95);
 				break;
 			
 			case 33837:
-				sendAttributeItemList(item.getItemId(), player, ItemTemplate.Grade.R99);
+				sendAttributeItemList(item.getId(), player, ItemTemplate.Grade.R99);
 				break;
 		}
 		

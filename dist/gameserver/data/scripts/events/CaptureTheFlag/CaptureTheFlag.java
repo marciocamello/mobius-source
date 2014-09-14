@@ -1322,13 +1322,13 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 				player.getInventory().destroyItem(flag, 1);
 				player.setCTFflag(false);
 				player.broadcastUserInfo();
-				if (flag.getItemId() == 13560)
+				if (flag.getId() == 13560)
 				{
 					redFlag.setXYZ(player.getLoc().getX(), player.getLoc().getY(), player.getLoc().getZ());
 					redFlag.setReflection(_reflection);
 					redFlag.spawnMe();
 				}
-				else if (flag.getItemId() == 13561)
+				else if (flag.getId() == 13561)
 				{
 					blueFlag.setXYZ(player.getLoc().getX(), player.getLoc().getY(), player.getLoc().getZ());
 					blueFlag.setReflection(_reflection);

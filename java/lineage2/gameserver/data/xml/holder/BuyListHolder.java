@@ -226,7 +226,7 @@ public class BuyListHolder
 		{
 			for (int i : Config.ALT_SHOP_UNALLOWED_ITEMS)
 			{
-				if (template.getItemId() == i)
+				if (template.getId() == i)
 				{
 					return false;
 				}
@@ -350,7 +350,7 @@ public class BuyListHolder
 		{
 			for (TradeItem ti : tradeList)
 			{
-				if (ti.getItemId() == itemId)
+				if (ti.getId() == itemId)
 				{
 					return ti;
 				}
@@ -367,7 +367,7 @@ public class BuyListHolder
 		{
 			for (TradeItem ti : buyList)
 			{
-				TradeItem ic = getItemByItemId(ti.getItemId());
+				TradeItem ic = getItemByItemId(ti.getId());
 				
 				if (ic.isCountLimited())
 				{

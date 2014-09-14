@@ -56,7 +56,7 @@ public final class Potions extends SimpleItemHandler
 	@Override
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
-		final int itemId = item.getItemId();
+		final int itemId = item.getId();
 		
 		if (player.isInOlympiadMode())
 		{

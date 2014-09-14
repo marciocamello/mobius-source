@@ -589,7 +589,7 @@ public class PetDataTable
 	{
 		for (L2Pet pet : L2Pet.values())
 		{
-			if (pet.getControlItemId() == item.getItemId())
+			if (pet.getControlItemId() == item.getId())
 			{
 				return pet.getNpcId();
 			}
@@ -624,7 +624,7 @@ public class PetDataTable
 	{
 		for (L2Pet pet : L2Pet.values())
 		{
-			if (pet.getControlItemId() == item.getItemId())
+			if (pet.getControlItemId() == item.getId())
 			{
 				return true;
 			}

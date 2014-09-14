@@ -567,7 +567,7 @@ public class CursedWeaponsManager
 			return;
 		}
 		
-		CursedWeapon cw = _cursedWeaponsMap.get(item.getItemId());
+		CursedWeapon cw = _cursedWeaponsMap.get(item.getId());
 		
 		if (cw == null)
 		{
@@ -598,7 +598,7 @@ public class CursedWeaponsManager
 			return;
 		}
 		
-		CursedWeapon cw = _cursedWeaponsMap.get(item.getItemId());
+		CursedWeapon cw = _cursedWeaponsMap.get(item.getId());
 		
 		if (cw == null)
 		{
@@ -607,7 +607,7 @@ public class CursedWeaponsManager
 		
 		if (player.isCursedWeaponEquipped())
 		{
-			if (player.getCursedWeaponEquippedId() != item.getItemId())
+			if (player.getCursedWeaponEquippedId() != item.getId())
 			{
 				CursedWeapon cw2 = _cursedWeaponsMap.get(player.getCursedWeaponEquippedId());
 				cw2.setNbKills(cw2.getStageKills() - 1);

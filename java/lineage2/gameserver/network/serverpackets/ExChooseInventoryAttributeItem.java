@@ -28,7 +28,7 @@ public class ExChooseInventoryAttributeItem extends L2GameServerPacket
 	
 	public ExChooseInventoryAttributeItem(Player player, ItemInstance item)
 	{
-		if ((item.getItemId() >= 34649) && (item.getItemId() <= 34654))
+		if ((item.getId() >= 34649) && (item.getId() <= 34654))
 		{
 			// TODO BOUND ITEMS CHECK
 		}
@@ -44,7 +44,7 @@ public class ExChooseInventoryAttributeItem extends L2GameServerPacket
 			}
 		}
 		
-		_itemId = item.getItemId();
+		_itemId = item.getId();
 		_att = new int[6];
 		AttributeStoneInfo asi = AttributeStoneManager.getStoneInfo(_itemId);
 		_att[asi.getElement().getId()] = 1;

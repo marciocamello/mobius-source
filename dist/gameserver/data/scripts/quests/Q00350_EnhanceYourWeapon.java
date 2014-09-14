@@ -297,7 +297,7 @@ public class Q00350_EnhanceYourWeapon extends Quest implements ScriptFile
 			
 			for (ItemInstance item : items)
 			{
-				SoulCrystal crystal = SoulCrystalHolder.getInstance().getCrystal(item.getItemId());
+				SoulCrystal crystal = SoulCrystalHolder.getInstance().getCrystal(item.getId());
 				
 				if (crystal == null)
 				{
@@ -349,7 +349,7 @@ public class Q00350_EnhanceYourWeapon extends Quest implements ScriptFile
 				continue;
 			}
 			
-			if (targetPlayer.consumeItem(soulCrystal.getItemId(), 1))
+			if (targetPlayer.consumeItem(soulCrystal.getId(), 1))
 			{
 				targetPlayer.getInventory().addItem(nextItemId, 1);
 				targetPlayer.sendPacket(SystemMessage2.obtainItems(nextItemId, 1, 0));

@@ -85,7 +85,7 @@ public final class SquashInstance extends SpecialMonsterInstance
 			return;
 		}
 		
-		int weaponId = attacker.getActiveWeaponInstance().getItemId();
+		int weaponId = attacker.getActiveWeaponInstance().getId();
 		
 		if ((getId() == Low_Quality_Large_Squash) || (getId() == High_Quality_Large_Squash) || (getId() == Emperor_Squash))
 		{

@@ -437,7 +437,7 @@ public final class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 				
 				for (TradeItem ti : sl)
 				{
-					ItemTemplate item = ItemHolder.getInstance().getTemplate(ti.getItemId());
+					ItemTemplate item = ItemHolder.getInstance().getTemplate(ti.getId());
 					
 					if (item != null)
 					{
@@ -724,7 +724,7 @@ public final class RegionCommunity implements ScriptFile, ICommunityBoardHandler
 						{
 							for (TradeItem ti : sl)
 							{
-								ItemTemplate item = ItemHolder.getInstance().getTemplate(ti.getItemId());
+								ItemTemplate item = ItemHolder.getInstance().getTemplate(ti.getId());
 								
 								if ((item != null) && (item.getName() != null) && item.getName().toLowerCase().contains(search))
 								{

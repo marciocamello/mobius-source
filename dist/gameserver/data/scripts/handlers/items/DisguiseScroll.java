@@ -69,7 +69,7 @@ public class DisguiseScroll extends ScriptItemHandler
 			player.sendPacket(SystemMsg.THE_TERRITORY_WAR_EXCLUSIVE_DISGUISE_AND_TRANSFORMATION_CAN_BE_USED_20_MINUTES_BEFORE_THE_START_OF_THE_TERRITORY_WAR_TO_10_MINUTES_AFTER_ITS_END);
 			return false;
 		}
-		int index = org.apache.commons.lang3.ArrayUtils.indexOf(ITEM_IDS, item.getItemId());
+		int index = org.apache.commons.lang3.ArrayUtils.indexOf(ITEM_IDS, item.getId());
 		DominionSiegeEvent siegeEvent = player.getEvent(DominionSiegeEvent.class);
 		if (siegeEvent == null)
 		{
@@ -96,7 +96,7 @@ public class DisguiseScroll extends ScriptItemHandler
 			player.sendPacket(SystemMsg.A_TERRITORY_OWNING_CLAN_MEMBER_CANNOT_USE_A_DISGUISE_SCROLL);
 			return false;
 		}
-		if (player.consumeItem(item.getItemId(), 1))
+		if (player.consumeItem(item.getId(), 1))
 		{
 			siegeEvent.addObject(DominionSiegeEvent.DISGUISE_PLAYERS, player.getObjectId());
 			player.broadcastCharInfo();

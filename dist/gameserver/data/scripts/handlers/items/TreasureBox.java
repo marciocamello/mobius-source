@@ -67,7 +67,7 @@ public final class TreasureBox extends SimpleItemHandler
 	@Override
 	protected boolean useItemImpl(Player player, ItemInstance item, boolean ctrl)
 	{
-		int itemId = item.getItemId();
+		int itemId = item.getId();
 		
 		if (!canBeExtracted(player, item))
 		{
@@ -1135,7 +1135,7 @@ public final class TreasureBox extends SimpleItemHandler
 	{
 		if ((player.getWeightPenalty() >= 3) || (player.getInventory().getSize() > (player.getInventoryLimit() - 10)))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOUR_INVENTORY_IS_FULL), new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getItemId()));
+			player.sendPacket(new SystemMessage(SystemMessage.YOUR_INVENTORY_IS_FULL), new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
 			return false;
 		}
 		

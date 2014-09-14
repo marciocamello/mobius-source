@@ -95,7 +95,7 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 	{
 		// dddQhhhdhhhhddhhhhhhhhhhhhd
 		writeD(item.getObjectId());
-		writeD(item.getItemId());
+		writeD(item.getId());
 		writeD(item.getEquipSlot());
 		writeQ(count);
 		writeH(item.getTemplate().getType2ForPackets());
@@ -131,7 +131,7 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 	protected void writeItemInfo(ItemInfo item, long count)
 	{
 		writeD(item.getObjectId());
-		writeD(item.getItemId());
+		writeD(item.getId());
 		writeD(item.getEquipSlot());
 		writeQ(count);
 		writeH(item.getItem().getType2ForPackets());

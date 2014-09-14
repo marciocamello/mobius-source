@@ -36,10 +36,10 @@ public final class StartItem
 	}
 	
 	/**
-	 * Method getItemId.
+	 * Method getId.
 	 * @return int
 	 */
-	public int getItemId()
+	public int getId()
 	{
 		return _id;
 	}

@@ -56,6 +56,6 @@ public class SendChangeAttributeTargetItem extends L2GameClientPacket
 			return;
 		}
 		
-		activeChar.sendPacket(new ExChangeAttributeInfo(_crystalItemId, item.getItemId()));
+		activeChar.sendPacket(new ExChangeAttributeInfo(_crystalItemId, item.getId()));
 	}
 }

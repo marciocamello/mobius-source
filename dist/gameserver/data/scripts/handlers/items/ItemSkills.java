@@ -49,7 +49,7 @@ public final class ItemSkills extends ScriptItemHandler
 			{
 				if (skill.isHandler())
 				{
-					set.add(template.getItemId());
+					set.add(template.getId());
 				}
 			}
 		}
@@ -93,7 +93,7 @@ public final class ItemSkills extends ScriptItemHandler
 				return false;
 			}
 			
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_USE_S1).addItemName(item.getItemId()));
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_USE_S1).addItemName(item.getId()));
 		}
 		
 		for (int i = 0; i < skills.length; i++)

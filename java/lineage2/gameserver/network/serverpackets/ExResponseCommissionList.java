@@ -66,7 +66,7 @@ public class ExResponseCommissionList extends L2GameServerPacket
 			writeD((int) (itemInfo.getSaleEndTime() / 1000)); // Sale end time
 			writeS(itemInfo.getSellerName()); // seller name
 			writeD(0);
-			writeD(itemInfo.getItem().getItemId()); // item_id
+			writeD(itemInfo.getItem().getId()); // item_id
 			writeQ(itemInfo.getItem().getCount()); // count
 			writeH(itemInfo.getItem().getTemplate().getType2ForPackets()); // itemType2
 			writeD(itemInfo.getItem().getBodyPart()); // bodypart

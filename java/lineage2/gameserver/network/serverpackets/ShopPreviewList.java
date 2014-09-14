@@ -56,7 +56,7 @@ public class ShopPreviewList extends L2GameServerPacket
 		{
 			if (item.getItem().isEquipable())
 			{
-				writeD(item.getItemId());
+				writeD(item.getId());
 				writeH(item.getItem().getType2ForPackets()); // item type2
 				writeH(item.getItem().isEquipable() ? item.getItem().getBodyPart() : 0x00);
 				writeQ(getWearPrice(item.getItem()));

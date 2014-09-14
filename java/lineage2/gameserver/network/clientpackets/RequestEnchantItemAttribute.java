@@ -112,7 +112,7 @@ public class RequestEnchantItemAttribute extends L2GameClientPacket
 			return;
 		}
 		
-		AttributeStoneInfo asi = AttributeStoneManager.getStoneInfo(stone.getItemId());
+		AttributeStoneInfo asi = AttributeStoneManager.getStoneInfo(stone.getId());
 		
 		if (asi == null)
 		{
@@ -176,16 +176,16 @@ public class RequestEnchantItemAttribute extends L2GameClientPacket
 			if (itemToEnchant.getEnchantLevel() == 0)
 			{
 				SystemMessage sm = new SystemMessage(SystemMessage.S2_ELEMENTAL_POWER_HAS_BEEN_ADDED_SUCCESSFULLY_TO_S1);
-				sm.addItemName(itemToEnchant.getItemId());
-				sm.addItemName(stone.getItemId());
+				sm.addItemName(itemToEnchant.getId());
+				sm.addItemName(stone.getId());
 				activeChar.sendPacket(sm);
 			}
 			else
 			{
 				SystemMessage sm = new SystemMessage(SystemMessage.S3_ELEMENTAL_POWER_HAS_BEEN_ADDED_SUCCESSFULLY_TO__S1S2);
 				sm.addNumber(itemToEnchant.getEnchantLevel());
-				sm.addItemName(itemToEnchant.getItemId());
-				sm.addItemName(stone.getItemId());
+				sm.addItemName(itemToEnchant.getId());
+				sm.addItemName(stone.getId());
 				activeChar.sendPacket(sm);
 			}
 			

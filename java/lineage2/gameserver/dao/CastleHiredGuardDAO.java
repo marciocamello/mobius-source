@@ -132,7 +132,7 @@ public class CastleHiredGuardDAO
 			con = DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement(DELETE_SQL_QUERY2);
 			statement.setInt(1, residence.getId());
-			statement.setInt(2, item.getItemId());
+			statement.setInt(2, item.getId());
 			statement.setInt(3, item.getLoc().getX());
 			statement.setInt(4, item.getLoc().getY());
 			statement.setInt(5, item.getLoc().getZ());

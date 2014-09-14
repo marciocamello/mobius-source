@@ -396,7 +396,7 @@ public class CommissionShopManager
 			inventory.reduceAdena(price);
 			container.removeItem(itemInfo.getItem());
 			inventory.addItem(itemInfo.getItem());
-			player.sendPacket(new ExResponseCommissionBuyItem(1, itemInfo.getItem().getItemId(), itemInfo.getItem().getCount()));
+			player.sendPacket(new ExResponseCommissionBuyItem(1, itemInfo.getItem().getId(), itemInfo.getItem().getCount()));
 			long fee = (long) Math.max(1000, price * SALE_FEE);
 			Mail mail = new Mail();
 			mail.setSenderId(receiverId);

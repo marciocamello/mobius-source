@@ -103,7 +103,7 @@ public class SetPrivateStoreSellList extends L2GameClientPacket
 				long price = _itemP[i];
 				ItemInstance item = seller.getInventory().getItemByObjectId(objectId);
 				
-				if ((item == null) || (item.getCount() < count) || !item.canBeTraded(seller) || (item.getItemId() == ItemTemplate.ITEM_ID_ADENA))
+				if ((item == null) || (item.getCount() < count) || !item.canBeTraded(seller) || (item.getId() == ItemTemplate.ITEM_ID_ADENA))
 				{
 					continue;
 				}

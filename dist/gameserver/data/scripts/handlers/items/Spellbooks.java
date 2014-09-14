@@ -75,11 +75,11 @@ public final class Spellbooks extends ScriptItemHandler
 			return false;
 		}
 		
-		final List<SkillLearn> list = SkillAcquireHolder.getInstance().getSkillLearnListByItemId(player, item.getItemId());
+		final List<SkillLearn> list = SkillAcquireHolder.getInstance().getSkillLearnListByItemId(player, item.getId());
 		
 		if (list.isEmpty())
 		{
-			player.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getItemId()));
+			player.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
 			return false;
 		}
 		
@@ -96,7 +96,7 @@ public final class Spellbooks extends ScriptItemHandler
 		
 		if (alreadyHas)
 		{
-			player.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getItemId()));
+			player.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
 			return false;
 		}
 		
@@ -112,11 +112,11 @@ public final class Spellbooks extends ScriptItemHandler
 		
 		if (wrongLvl)
 		{
-			player.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getItemId()));
+			player.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
 			return false;
 		}
 		
-		if (!player.consumeItem(item.getItemId(), 1L))
+		if (!player.consumeItem(item.getId(), 1L))
 		{
 			return false;
 		}

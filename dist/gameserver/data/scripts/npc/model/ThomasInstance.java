@@ -56,7 +56,7 @@ public final class ThomasInstance extends MonsterInstance
 		
 		if (attacker.getActiveWeaponInstance() != null)
 		{
-			switch (attacker.getActiveWeaponInstance().getItemId())
+			switch (attacker.getActiveWeaponInstance().getId())
 			{
 				case 4202:
 				case 5133:

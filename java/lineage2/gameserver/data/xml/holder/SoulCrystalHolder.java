@@ -41,7 +41,7 @@ public final class SoulCrystalHolder extends AbstractHolder
 	 */
 	public void addCrystal(SoulCrystal crystal)
 	{
-		_crystals.put(crystal.getItemId(), crystal);
+		_crystals.put(crystal.getId(), crystal);
 	}
 	
 	/**

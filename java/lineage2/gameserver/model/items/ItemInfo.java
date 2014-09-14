@@ -65,7 +65,7 @@ public class ItemInfo
 	{
 		setOwnerId(item.getOwnerId());
 		setObjectId(item.getObjectId());
-		setItemId(item.getItemId());
+		setItemId(item.getId());
 		setCount(item.getCount());
 		setCustomType1(item.getCustomType1());
 		setEquipped(item.isEquipped());
@@ -142,7 +142,7 @@ public class ItemInfo
 		
 		if (itemId > 0)
 		{
-			item = ItemHolder.getInstance().getTemplate(getItemId());
+			item = ItemHolder.getInstance().getTemplate(getId());
 		}
 		else
 		{
@@ -365,10 +365,10 @@ public class ItemInfo
 	}
 	
 	/**
-	 * Method getItemId.
+	 * Method getId.
 	 * @return int
 	 */
-	public int getItemId()
+	public int getId()
 	{
 		return itemId;
 	}
@@ -569,7 +569,7 @@ public class ItemInfo
 		
 		if (getObjectId() == 0)
 		{
-			return getItemId() == ((ItemInfo) obj).getItemId();
+			return getId() == ((ItemInfo) obj).getId();
 		}
 		
 		return getObjectId() == ((ItemInfo) obj).getObjectId();
