@@ -196,8 +196,8 @@ public class Location extends Point3D implements SpawnRange, Serializable
 	 */
 	private double distance(int x, int y)
 	{
-		long dx = this.getX() - x;
-		long dy = this.getY() - y;
+		long dx = getX() - x;
+		long dy = getY() - y;
 		return Math.sqrt((dx * dx) + (dy * dy));
 	}
 	
@@ -220,9 +220,9 @@ public class Location extends Point3D implements SpawnRange, Serializable
 	 */
 	private double distance3D(int x, int y, int z)
 	{
-		long dx = this.getX() - x;
-		long dy = this.getY() - y;
-		long dz = this.getZ() - z;
+		long dx = getX() - x;
+		long dy = getY() - y;
+		long dz = getZ() - z;
 		return Math.sqrt((dx * dx) + (dy * dy) + (dz * dz));
 	}
 	
