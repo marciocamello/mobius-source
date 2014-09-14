@@ -1096,7 +1096,7 @@ public class Party implements PlayerGroup
 	 */
 	private static void TeleportParty(List<Player> members, Territory territory, Location dest)
 	{
-		if (!territory.isInside(dest.x, dest.y))
+		if (!territory.isInside(dest.getX(), dest.getY()))
 		{
 			Log.add("TeleportParty: dest is out of territory", "errors");
 			Thread.dumpStack();
@@ -1115,21 +1115,21 @@ public class Party implements PlayerGroup
 			
 			int diff_x = _member.getX() - base_x;
 			int diff_y = _member.getY() - base_y;
-			Location loc = new Location(dest.x + diff_x, dest.y + diff_y, dest.z);
+			Location loc = new Location(dest.getX() + diff_x, dest.getY() + diff_y, dest.getZ());
 			
-			while (!territory.isInside(loc.x, loc.y))
+			while (!territory.isInside(loc.getX(), loc.getY()))
 			{
-				diff_x = loc.x - dest.x;
-				diff_y = loc.y - dest.y;
+				diff_x = loc.getX() - dest.getX();
+				diff_y = loc.getY() - dest.getY();
 				
 				if (diff_x != 0)
 				{
-					loc.x -= diff_x / Math.abs(diff_x);
+					loc.setX(loc.getX() - (diff_x / Math.abs(diff_x)));
 				}
 				
 				if (diff_y != 0)
 				{
-					loc.y -= diff_y / Math.abs(diff_y);
+					loc.setY(loc.getY() - (diff_y / Math.abs(diff_y)));
 				}
 			}
 			

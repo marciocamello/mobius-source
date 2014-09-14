@@ -149,10 +149,10 @@ public class PetInfo extends L2GameServerPacket
 		writeD(obj_id);
 		writeD(npc_id + 1000000);
 		writeD(0); // 1=attackable
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
-		writeD(_loc.h);
+		writeD(_loc.getX());
+		writeD(_loc.getY());
+		writeD(_loc.getZ());
+		writeD(_loc.getHeading());
 		writeD(0);
 		writeD(MAtkSpd);
 		writeD(PAtkSpd);

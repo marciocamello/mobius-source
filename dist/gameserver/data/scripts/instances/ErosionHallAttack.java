@@ -219,7 +219,7 @@ public final class ErosionHallAttack extends Reflection
 			
 			for (int i = 0; i < 4; i++)
 			{
-				addSpawnWithoutRespawn(RegenerationCoffin, new Location(_deadTumor.getLoc().x, _deadTumor.getLoc().y, _deadTumor.getLoc().z, Location.getRandomHeading()), 250);
+				addSpawnWithoutRespawn(RegenerationCoffin, new Location(_deadTumor.getLoc().getX(), _deadTumor.getLoc().getY(), _deadTumor.getLoc().getZ(), Location.getRandomHeading()), 250);
 			}
 		}
 	}

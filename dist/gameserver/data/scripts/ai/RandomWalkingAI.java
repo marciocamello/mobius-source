@@ -84,9 +84,9 @@ public final class RandomWalkingAI extends DefaultAI
 		}
 		
 		final Location sloc = actor.getSpawnedLoc();
-		final int x = (sloc.x + Rnd.get(2 * AI_WALK_RANGE)) - AI_WALK_RANGE;
-		final int y = (sloc.y + Rnd.get(2 * AI_WALK_RANGE)) - AI_WALK_RANGE;
-		final int z = GeoEngine.getHeight(x, y, sloc.z, actor.getGeoIndex());
+		final int x = (sloc.getX() + Rnd.get(2 * AI_WALK_RANGE)) - AI_WALK_RANGE;
+		final int y = (sloc.getY() + Rnd.get(2 * AI_WALK_RANGE)) - AI_WALK_RANGE;
+		final int z = GeoEngine.getHeight(x, y, sloc.getZ(), actor.getGeoIndex());
 		
 		switch (actor.getNpcId())
 		{

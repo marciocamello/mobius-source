@@ -59,11 +59,11 @@ public class CharMoveToLocation extends L2GameServerPacket
 	{
 		writeC(0x2f);
 		writeD(_objectId);
-		writeD(_destination.x);
-		writeD(_destination.y);
-		writeD(_destination.z + _client_z_shift);
-		writeD(_current.x);
-		writeD(_current.y);
-		writeD(_current.z + _client_z_shift);
+		writeD(_destination.getX());
+		writeD(_destination.getY());
+		writeD(_destination.getZ() + _client_z_shift);
+		writeD(_current.getX());
+		writeD(_current.getY());
+		writeD(_current.getZ() + _client_z_shift);
 	}
 }

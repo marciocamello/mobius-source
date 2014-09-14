@@ -820,7 +820,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 			officer.teleToLocation(loc);
 		}
 		
-		officer.setHeading(loc.h);
+		officer.setHeading(loc.getHeading());
 	}
 	
 	private static String getAvailableClassList(Player player, String html, String html2)

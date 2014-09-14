@@ -81,9 +81,9 @@ public class CharSelected extends L2GameServerPacket
 		writeD(race);
 		writeD(class_id);
 		writeD(0x01); // active ??
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
+		writeD(_loc.getX());
+		writeD(_loc.getY());
+		writeD(_loc.getZ());
 		writeF(curHp);
 		writeF(curMp);
 		writeD(_sp);

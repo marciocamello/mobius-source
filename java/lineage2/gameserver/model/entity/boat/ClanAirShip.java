@@ -235,9 +235,9 @@ public class ClanAirShip extends AirShip
 				return;
 			}
 			
-			final int x = player.getInBoatPosition().x - 0x16e;
-			final int y = player.getInBoatPosition().y;
-			final int z = player.getInBoatPosition().z - 0x6b;
+			final int x = player.getInBoatPosition().getX() - 0x16e;
+			final int y = player.getInBoatPosition().getY();
+			final int z = player.getInBoatPosition().getZ() - 0x6b;
 			
 			if (((x * x) + (y * y) + (z * z)) > 2500)
 			{

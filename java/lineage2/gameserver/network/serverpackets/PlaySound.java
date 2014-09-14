@@ -42,7 +42,7 @@ public class PlaySound extends L2GameServerPacket
 	
 	public PlaySound(Type type, String soundFile, int c, int objectId, Location loc)
 	{
-		this(type, soundFile, c, objectId, loc == null ? 0 : loc.x, loc == null ? 0 : loc.y, loc == null ? 0 : loc.z);
+		this(type, soundFile, c, objectId, loc == null ? 0 : loc.getX(), loc == null ? 0 : loc.getY(), loc == null ? 0 : loc.getZ());
 	}
 	
 	public PlaySound(Type type, String soundFile, int c, int objectId, int x, int y, int z)

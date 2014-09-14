@@ -79,9 +79,9 @@ public final class RndWalkAndAnim extends DefaultAI
 		}
 		
 		final Location sloc = actor.getSpawnedLoc();
-		final int x = (sloc.x + Rnd.get(2 * PET_WALK_RANGE)) - PET_WALK_RANGE;
-		final int y = (sloc.y + Rnd.get(2 * PET_WALK_RANGE)) - PET_WALK_RANGE;
-		final int z = GeoEngine.getHeight(x, y, sloc.z, actor.getGeoIndex());
+		final int x = (sloc.getX() + Rnd.get(2 * PET_WALK_RANGE)) - PET_WALK_RANGE;
+		final int y = (sloc.getY() + Rnd.get(2 * PET_WALK_RANGE)) - PET_WALK_RANGE;
+		final int z = GeoEngine.getHeight(x, y, sloc.getZ(), actor.getGeoIndex());
 		actor.setRunning();
 		actor.moveToLocation(x, y, z, 0, true);
 		return true;

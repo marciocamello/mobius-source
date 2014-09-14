@@ -101,9 +101,9 @@ public class Fishing
 	 */
 	public void setFishLoc(Location loc)
 	{
-		_fishLoc.x = loc.x;
-		_fishLoc.y = loc.y;
-		_fishLoc.z = loc.z;
+		_fishLoc.setX(loc.getX());
+		_fishLoc.setY(loc.getY());
+		_fishLoc.setZ(loc.getZ());
 	}
 	
 	/**

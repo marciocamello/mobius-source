@@ -37,9 +37,9 @@ public class ExValidateLocationInShuttlePacket extends L2GameServerPacket
 		writeEx(0xD1);
 		writeD(_playerObjectId); // Player ObjID
 		writeD(_shuttleId); // Shuttle ID (Arkan: 1,2; Cruma: 3)
-		writeD(_loc.x); // X in shuttle
-		writeD(_loc.y); // Y in shuttle
-		writeD(_loc.z); // Z in shuttle
-		writeD(_loc.h); // H in shuttle
+		writeD(_loc.getX()); // X in shuttle
+		writeD(_loc.getY()); // Y in shuttle
+		writeD(_loc.getZ()); // Z in shuttle
+		writeD(_loc.getHeading()); // H in shuttle
 	}
 }

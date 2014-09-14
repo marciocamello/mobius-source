@@ -73,7 +73,7 @@ public class GeoEngine
 	 */
 	public static int getHeight(Location loc, int geoIndex)
 	{
-		return getHeight(loc.x, loc.y, loc.z, geoIndex);
+		return getHeight(loc.getX(), loc.getY(), loc.getZ(), geoIndex);
 	}
 	
 	/**
@@ -206,7 +206,7 @@ public class GeoEngine
 	 */
 	public static Location moveCheckForAI(Location loc1, Location loc2, int geoIndex)
 	{
-		return MoveCheckForAI((loc1.x - World.MAP_MIN_X) >> 4, (loc1.y - World.MAP_MIN_Y) >> 4, loc1.z, (loc2.x - World.MAP_MIN_X) >> 4, (loc2.y - World.MAP_MIN_Y) >> 4, geoIndex);
+		return MoveCheckForAI((loc1.getX() - World.MAP_MIN_X) >> 4, (loc1.getY() - World.MAP_MIN_Y) >> 4, loc1.getZ(), (loc2.getX() - World.MAP_MIN_X) >> 4, (loc2.getY() - World.MAP_MIN_Y) >> 4, geoIndex);
 	}
 	
 	/**
@@ -594,7 +594,7 @@ public class GeoEngine
 			
 			if ((src_nearest_lower_layer = CheckNoOneLayerInRangeAndFindNearestLowerLayer(curr_layers, curr_z, middle_z)) == Short.MIN_VALUE)
 			{
-				return result.setH(-10);
+				return result.setHeading(-10);
 			}
 			
 			NGetLayers(curr_x, curr_y, curr_layers, geoIndex);
@@ -607,21 +607,21 @@ public class GeoEngine
 			
 			if ((dst_nearest_lower_layer = CheckNoOneLayerInRangeAndFindNearestLowerLayer(curr_layers, i_next_z, middle_z)) == Short.MIN_VALUE)
 			{
-				return result.setH(-11);
+				return result.setHeading(-11);
 			}
 			
 			if (curr_x == i_next_x)
 			{
 				if (!canSeeWallCheck(src_nearest_lower_layer, dst_nearest_lower_layer, i_next_y > curr_y ? SOUTH : NORTH, curr_z, air))
 				{
-					return result.setH(-20);
+					return result.setHeading(-20);
 				}
 			}
 			else if (curr_y == i_next_y)
 			{
 				if (!canSeeWallCheck(src_nearest_lower_layer, dst_nearest_lower_layer, i_next_x > curr_x ? EAST : WEST, curr_z, air))
 				{
-					return result.setH(-21);
+					return result.setHeading(-21);
 				}
 			}
 			else
@@ -636,7 +636,7 @@ public class GeoEngine
 				
 				if ((tmp_nearest_lower_layer = CheckNoOneLayerInRangeAndFindNearestLowerLayer(tmp_layers, i_next_z, middle_z)) == Short.MIN_VALUE)
 				{
-					return result.setH(-30);
+					return result.setHeading(-30);
 				}
 				
 				if (!(canSeeWallCheck(src_nearest_lower_layer, tmp_nearest_lower_layer, i_next_y > curr_y ? SOUTH : NORTH, curr_z, air) && canSeeWallCheck(tmp_nearest_lower_layer, dst_nearest_lower_layer, i_next_x > curr_x ? EAST : WEST, curr_z, air)))
@@ -651,17 +651,17 @@ public class GeoEngine
 					
 					if ((tmp_nearest_lower_layer = CheckNoOneLayerInRangeAndFindNearestLowerLayer(tmp_layers, i_next_z, middle_z)) == Short.MIN_VALUE)
 					{
-						return result.setH(-31);
+						return result.setHeading(-31);
 					}
 					
 					if (!canSeeWallCheck(src_nearest_lower_layer, tmp_nearest_lower_layer, i_next_x > curr_x ? EAST : WEST, curr_z, air))
 					{
-						return result.setH(-32);
+						return result.setHeading(-32);
 					}
 					
 					if (!canSeeWallCheck(tmp_nearest_lower_layer, dst_nearest_lower_layer, i_next_x > curr_x ? EAST : WEST, curr_z, air))
 					{
-						return result.setH(-33);
+						return result.setHeading(-33);
 					}
 				}
 			}

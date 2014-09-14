@@ -37,11 +37,11 @@ public class ExMoveToLocationInAirShip extends L2GameServerPacket
 		writeEx(0x6E);
 		writeD(char_id);
 		writeD(boat_id);
-		writeD(_destination.x);
-		writeD(_destination.y);
-		writeD(_destination.z);
-		writeD(_origin.x);
-		writeD(_origin.y);
-		writeD(_origin.z);
+		writeD(_destination.getX());
+		writeD(_destination.getY());
+		writeD(_destination.getZ());
+		writeD(_origin.getX());
+		writeD(_origin.getY());
+		writeD(_origin.getZ());
 	}
 }

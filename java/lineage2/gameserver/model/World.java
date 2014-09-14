@@ -235,7 +235,7 @@ public class World
 	 */
 	static WorldRegion getRegion(Location loc)
 	{
-		return getRegion(validX(regionX(loc.x)), validY(regionY(loc.y)), validZ(regionZ(loc.z)));
+		return getRegion(validX(regionX(loc.getX())), validY(regionY(loc.getY())), validZ(regionZ(loc.getZ())));
 	}
 	
 	/**
@@ -1255,7 +1255,7 @@ public class World
 		
 		for (Zone zone : zones)
 		{
-			if (zone.checkIfInZone(loc.x, loc.y, loc.z, reflection))
+			if (zone.checkIfInZone(loc.getX(), loc.getY(), loc.getZ(), reflection))
 			{
 				inside.add(zone);
 			}
@@ -1291,7 +1291,7 @@ public class World
 		
 		for (Zone zone : zones)
 		{
-			if ((zone != null) && (zone.getType() == ZoneType.water) && zone.checkIfInZone(loc.x, loc.y, loc.z, reflection))
+			if ((zone != null) && (zone.getType() == ZoneType.water) && zone.checkIfInZone(loc.getX(), loc.getY(), loc.getZ(), reflection))
 			{
 				return zone;
 			}
@@ -1407,9 +1407,9 @@ public class World
 		}
 		
 		int rid = reflect;
-		int ox = loc.x;
-		int oy = loc.y;
-		int oz = loc.z;
+		int ox = loc.getX();
+		int oy = loc.getY();
+		int oz = loc.getZ();
 		int sqrad = radius * radius;
 		List<NpcInstance> result = new ArrayList<>(64);
 		

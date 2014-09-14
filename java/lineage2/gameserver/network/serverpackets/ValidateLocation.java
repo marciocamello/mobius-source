@@ -35,9 +35,9 @@ public class ValidateLocation extends L2GameServerPacket
 	{
 		writeC(0x79);
 		writeD(_chaObjId);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
-		writeD(_loc.h);
+		writeD(_loc.getX());
+		writeD(_loc.getY());
+		writeD(_loc.getZ());
+		writeD(_loc.getHeading());
 	}
 }

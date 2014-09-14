@@ -561,7 +561,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		
 		Location spawnLoc = Location.findPointToStay(rewarded, 300, 400);
 		
-		for (int i = 0; (i < 20) && !GeoEngine.canSeeCoord(rewarded, spawnLoc.x, spawnLoc.y, spawnLoc.z, false); i++)
+		for (int i = 0; (i < 20) && !GeoEngine.canSeeCoord(rewarded, spawnLoc.getX(), spawnLoc.getY(), spawnLoc.getZ(), false); i++)
 		{
 			spawnLoc = Location.findPointToStay(rewarded, 300, 400);
 		}
@@ -577,7 +577,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		
 		NpcInstance rewarder = new NpcInstance(IdFactory.getInstance().getNextId(), template);
 		rewarder.setLoc(spawnLoc);
-		rewarder.setHeading((int) (Math.atan2(spawnLoc.y - rewarded.getY(), spawnLoc.x - rewarded.getX()) * Creature.HEADINGS_IN_PI) + 32768);
+		rewarder.setHeading((int) (Math.atan2(spawnLoc.getY() - rewarded.getY(), spawnLoc.getX() - rewarded.getX()) * Creature.HEADINGS_IN_PI) + 32768);
 		rewarder.spawnMe();
 		Functions.npcSayCustomMessage(rewarder, "scripts.events.SavingSnowman.RewarderPhrase1");
 		Location targetLoc = Location.findFrontPosition(rewarded, rewarded, 40, 50);
@@ -624,9 +624,9 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		Functions.npcSayCustomMessage(rewarder, "scripts.events.SavingSnowman.RewarderPhrase3");
 		Location loc = rewarder.getSpawnedLoc();
 		double radian = PositionUtils.convertHeadingToRadian(rewarder.getHeading());
-		int x = loc.x - (int) (Math.sin(radian) * 300);
-		int y = loc.y + (int) (Math.cos(radian) * 300);
-		int z = loc.z;
+		int x = loc.getX() - (int) (Math.sin(radian) * 300);
+		int y = loc.getY() + (int) (Math.cos(radian) * 300);
+		int z = loc.getZ();
 		rewarder.broadcastPacket(new CharMoveToLocation(rewarder.getObjectId(), loc, new Location(x, y, z)));
 		executeTask("events.SavingSnowman.SavingSnowman", "unspawnRewarder", new Object[]
 		{

@@ -26,9 +26,9 @@ public abstract class AbstractTargetAction extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_targetObjectId = readD();
-		_actorPosition.x = readD();
-		_actorPosition.y = readD();
-		_actorPosition.z = readD();
+		_actorPosition.setX(readD());
+		_actorPosition.setY(readD());
+		_actorPosition.setZ(readD());
 		_forced = readC() == 1;
 	}
 	

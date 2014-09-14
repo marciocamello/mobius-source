@@ -33,7 +33,7 @@ public class BookMark
 	 */
 	BookMark(Location loc, int aicon, String aname, String aacronym)
 	{
-		this(loc.x, loc.y, loc.z, aicon, aname, aacronym);
+		this(loc.getX(), loc.getY(), loc.getZ(), aicon, aname, aacronym);
 	}
 	
 	/**
@@ -113,5 +113,32 @@ public class BookMark
 	public String getAcronym()
 	{
 		return acronym;
+	}
+	
+	/**
+	 * Method getX.
+	 * @return x int
+	 */
+	public int getX()
+	{
+		return x;
+	}
+	
+	/**
+	 * Method getY.
+	 * @return y int
+	 */
+	public int getY()
+	{
+		return y;
+	}
+	
+	/**
+	 * Method getY.
+	 * @return z int
+	 */
+	public int getZ()
+	{
+		return z;
 	}
 }

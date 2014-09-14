@@ -33,9 +33,9 @@ public class RequestGetOnShuttle extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_shuttleId = readD();
-		_loc.x = readD();
-		_loc.y = readD();
-		_loc.z = readD();
+		_loc.setX(readD());
+		_loc.setY(readD());
+		_loc.setZ(readD());
 	}
 	
 	/**

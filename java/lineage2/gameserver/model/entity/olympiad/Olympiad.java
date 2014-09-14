@@ -679,7 +679,7 @@ public class Olympiad
 		{
 			Location c1 = spawns.get(0);
 			Location c2 = spawns.get(1);
-			spectator.enterOlympiadObserverMode(new Location((c1.x + c2.x) / 2, (c1.y + c2.y) / 2, (c1.z + c2.z) / 2), game, game.getReflection());
+			spectator.enterOlympiadObserverMode(new Location((c1.getX() + c2.getX()) / 2, (c1.getY() + c2.getY()) / 2, (c1.getZ() + c2.getZ()) / 2), game, game.getReflection());
 		}
 		else
 		{

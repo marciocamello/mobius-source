@@ -40,9 +40,9 @@ public class ExMoveToTargetInAirShip extends L2GameServerPacket
 		writeD(char_id); // ID:%d
 		writeD(target_id); // TargetID:%d
 		writeD(_dist); // Dist:%d
-		writeD(_loc.y); // OriginX:%d
-		writeD(_loc.z); // OriginY:%d
-		writeD(_loc.h); // OriginZ:%d
+		writeD(_loc.getY()); // OriginX:%d
+		writeD(_loc.getZ()); // OriginY:%d
+		writeD(_loc.getHeading()); // OriginZ:%d
 		writeD(boat_id); // AirShipID:%d
 	}
 }

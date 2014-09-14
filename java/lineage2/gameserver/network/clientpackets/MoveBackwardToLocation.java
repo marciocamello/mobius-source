@@ -35,12 +35,12 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_targetLoc.x = readD();
-		_targetLoc.y = readD();
-		_targetLoc.z = readD();
-		_originLoc.x = readD();
-		_originLoc.y = readD();
-		_originLoc.z = readD();
+		_targetLoc.setX(readD());
+		_targetLoc.setY(readD());
+		_targetLoc.setZ(readD());
+		_originLoc.setX(readD());
+		_originLoc.setY(readD());
+		_originLoc.setZ(readD());
 		
 		if (_buf.hasRemaining())
 		{
@@ -117,7 +117,7 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 		
 		if (activeChar.isInFlyingTransform())
 		{
-			_targetLoc.z = Math.min(5950, Math.max(50, _targetLoc.z));
+			_targetLoc.setZ(Math.min(5950, Math.max(50, _targetLoc.getZ())));
 		}
 		
 		activeChar.moveToLocation(_targetLoc, 0, (_moveMovement != 0) && !activeChar.getVarB("no_pf"));

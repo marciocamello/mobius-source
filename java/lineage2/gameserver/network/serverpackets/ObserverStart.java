@@ -28,9 +28,9 @@ public class ObserverStart extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xeb);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
+		writeD(_loc.getX());
+		writeD(_loc.getY());
+		writeD(_loc.getZ());
 		writeC(0x00);
 		writeC(0xc0);
 		writeC(0x00);

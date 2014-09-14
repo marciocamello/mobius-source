@@ -49,21 +49,21 @@ public class Territory implements Shape, SpawnRange
 	{
 		if (include.isEmpty())
 		{
-			max.x = shape.getXmax();
-			max.y = shape.getYmax();
-			max.z = shape.getZmax();
-			min.x = shape.getXmin();
-			min.y = shape.getYmin();
-			min.z = shape.getZmin();
+			max.setX(shape.getXmax());
+			max.setY(shape.getYmax());
+			max.setZ(shape.getZmax());
+			min.setX(shape.getXmin());
+			min.setY(shape.getYmin());
+			min.setZ(shape.getZmin());
 		}
 		else
 		{
-			max.x = Math.max(max.x, shape.getXmax());
-			max.y = Math.max(max.y, shape.getYmax());
-			max.z = Math.max(max.z, shape.getZmax());
-			min.x = Math.min(min.x, shape.getXmin());
-			min.y = Math.min(min.y, shape.getYmin());
-			min.z = Math.min(min.z, shape.getZmin());
+			max.setX(Math.max(max.getX(), shape.getXmax()));
+			max.setY(Math.max(max.getY(), shape.getYmax()));
+			max.setZ(Math.max(max.getZ(), shape.getZmax()));
+			min.setX(Math.min(min.getX(), shape.getXmin()));
+			min.setY(Math.min(min.getY(), shape.getYmin()));
+			min.setZ(Math.min(min.getZ(), shape.getZmin()));
 		}
 		
 		include.add(shape);
@@ -135,7 +135,7 @@ public class Territory implements Shape, SpawnRange
 	@Override
 	public boolean isInside(int x, int y, int z)
 	{
-		if ((x < min.x) || (x > max.x) || (y < min.y) || (y > max.y) || (z < min.z) || (z > max.z))
+		if ((x < min.getX()) || (x > max.getX()) || (y < min.getY()) || (y > max.getY()) || (z < min.getZ()) || (z > max.getZ()))
 		{
 			return false;
 		}
@@ -210,7 +210,7 @@ public class Territory implements Shape, SpawnRange
 	@Override
 	public int getXmax()
 	{
-		return max.x;
+		return max.getX();
 	}
 	
 	/**
@@ -221,7 +221,7 @@ public class Territory implements Shape, SpawnRange
 	@Override
 	public int getXmin()
 	{
-		return min.x;
+		return min.getX();
 	}
 	
 	/**
@@ -232,7 +232,7 @@ public class Territory implements Shape, SpawnRange
 	@Override
 	public int getYmax()
 	{
-		return max.y;
+		return max.getY();
 	}
 	
 	/**
@@ -243,7 +243,7 @@ public class Territory implements Shape, SpawnRange
 	@Override
 	public int getYmin()
 	{
-		return min.y;
+		return min.getY();
 	}
 	
 	/**
@@ -254,7 +254,7 @@ public class Territory implements Shape, SpawnRange
 	@Override
 	public int getZmax()
 	{
-		return max.z;
+		return max.getZ();
 	}
 	
 	/**
@@ -265,7 +265,7 @@ public class Territory implements Shape, SpawnRange
 	@Override
 	public int getZmin()
 	{
-		return min.z;
+		return min.getZ();
 	}
 	
 	/**
@@ -293,11 +293,11 @@ public class Territory implements Shape, SpawnRange
 		for (int i = 0; i < 100; i++)
 		{
 			Shape shape = territories.get(Rnd.get(territories.size()));
-			pos.x = Rnd.get(shape.getXmin(), shape.getXmax());
-			pos.y = Rnd.get(shape.getYmin(), shape.getYmax());
-			pos.z = shape.getZmin() + ((shape.getZmax() - shape.getZmin()) / 2);
+			pos.setX(Rnd.get(shape.getXmin(), shape.getXmax()));
+			pos.setY(Rnd.get(shape.getYmin(), shape.getYmax()));
+			pos.setZ(shape.getZmin() + ((shape.getZmax() - shape.getZmin()) / 2));
 			
-			if (territory.isInside(pos.x, pos.y))
+			if (territory.isInside(pos.getX(), pos.getY()))
 			{
 				int tempz = GeoEngine.getHeight(pos, geoIndex);
 				
@@ -313,9 +313,9 @@ public class Territory implements Shape, SpawnRange
 					continue;
 				}
 				
-				pos.z = tempz;
-				int geoX = (pos.x - World.MAP_MIN_X) >> 4;
-				int geoY = (pos.y - World.MAP_MIN_Y) >> 4;
+				pos.setZ(tempz);
+				int geoX = (pos.getX() - World.MAP_MIN_X) >> 4;
+				int geoY = (pos.getY() - World.MAP_MIN_Y) >> 4;
 				
 				for (int x = geoX - 1; x <= (geoX + 1); x++)
 				{

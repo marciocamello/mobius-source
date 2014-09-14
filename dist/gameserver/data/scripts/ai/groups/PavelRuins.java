@@ -90,9 +90,9 @@ public final class PavelRuins extends Fighter
 				switch (_actor.getNpcId())
 				{
 					case PAVEL_SAFETY_DEVICE:
-						loc = new Location(loc.x + 30, loc.y + -30, loc.z);
+						loc = new Location(loc.getX() + 30, loc.getY() + -30, loc.getZ());
 						spawnNextMob(CRUEL_PINCER_GOLEM_3, _killer, loc);
-						loc = new Location(loc.x + -30, loc.y + 30, loc.z);
+						loc = new Location(loc.getX() + -30, loc.getY() + 30, loc.getZ());
 						spawnNextMob(DRILL_GOLEM_OF_TERROR_3, _killer, loc);
 						break;
 					
@@ -125,9 +125,9 @@ public final class PavelRuins extends Fighter
 	static void spawnNextMob(int npcId, Creature killer, Location loc)
 	{
 		final SimpleSpawner sp = new SimpleSpawner(npcId);
-		sp.setLocx(loc.x);
-		sp.setLocy(loc.y);
-		sp.setLocz(loc.z);
+		sp.setLocx(loc.getX());
+		sp.setLocy(loc.getY());
+		sp.setLocz(loc.getZ());
 		final NpcInstance npc = sp.doSpawn(true);
 		npc.setHeading(PositionUtils.calculateHeadingFrom(npc, killer));
 		npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, killer, 1000);

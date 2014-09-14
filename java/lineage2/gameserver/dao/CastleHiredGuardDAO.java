@@ -102,9 +102,9 @@ public class CastleHiredGuardDAO
 			statement = con.prepareStatement(INSERT_SQL_QUERY);
 			statement.setInt(1, residence.getId());
 			statement.setInt(2, itemId);
-			statement.setInt(3, loc.x);
-			statement.setInt(4, loc.y);
-			statement.setInt(5, loc.z);
+			statement.setInt(3, loc.getX());
+			statement.setInt(4, loc.getY());
+			statement.setInt(5, loc.getZ());
 			statement.execute();
 		}
 		catch (Exception e)
@@ -133,9 +133,9 @@ public class CastleHiredGuardDAO
 			statement = con.prepareStatement(DELETE_SQL_QUERY2);
 			statement.setInt(1, residence.getId());
 			statement.setInt(2, item.getItemId());
-			statement.setInt(3, item.getLoc().x);
-			statement.setInt(4, item.getLoc().y);
-			statement.setInt(5, item.getLoc().z);
+			statement.setInt(3, item.getLoc().getX());
+			statement.setInt(4, item.getLoc().getY());
+			statement.setInt(5, item.getLoc().getZ());
 			statement.execute();
 		}
 		catch (Exception e)

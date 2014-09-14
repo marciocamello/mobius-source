@@ -72,11 +72,11 @@ public final class RndTeleportFighter extends Fighter
 			return false;
 		}
 		
-		final int x = sloc.x + Rnd.get(-Config.MAX_DRIFT_RANGE, Config.MAX_DRIFT_RANGE);
-		final int y = sloc.y + Rnd.get(-Config.MAX_DRIFT_RANGE, Config.MAX_DRIFT_RANGE);
-		final int z = GeoEngine.getHeight(x, y, sloc.z, actor.getGeoIndex());
+		final int x = sloc.getX() + Rnd.get(-Config.MAX_DRIFT_RANGE, Config.MAX_DRIFT_RANGE);
+		final int y = sloc.getY() + Rnd.get(-Config.MAX_DRIFT_RANGE, Config.MAX_DRIFT_RANGE);
+		final int z = GeoEngine.getHeight(x, y, sloc.getZ(), actor.getGeoIndex());
 		
-		if ((sloc.z - z) > 64)
+		if ((sloc.getZ() - z) > 64)
 		{
 			return false;
 		}

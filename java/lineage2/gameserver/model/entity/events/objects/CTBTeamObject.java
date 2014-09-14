@@ -68,8 +68,8 @@ public class CTBTeamObject implements SpawnableObject
 			_mob.setCurrentHpMp(_mob.getMaxHp(), _mob.getMaxMp());
 			_mob.setMatchTeamObject(this);
 			_mob.addEvent(event);
-			int x = (int) (_flagLoc.x + (300 * Math.cos(_mob.headingToRadians(_flag.getHeading() - 32768))));
-			int y = (int) (_flagLoc.y + (300 * Math.sin(_mob.headingToRadians(_flag.getHeading() - 32768))));
+			int x = (int) (_flagLoc.getX() + (300 * Math.cos(_mob.headingToRadians(_flag.getHeading() - 32768))));
+			int y = (int) (_flagLoc.getY() + (300 * Math.sin(_mob.headingToRadians(_flag.getHeading() - 32768))));
 			Location loc = new Location(x, y, _flag.getZ(), _flag.getHeading());
 			_mob.setSpawnedLoc(loc);
 			_mob.spawnMe(loc);

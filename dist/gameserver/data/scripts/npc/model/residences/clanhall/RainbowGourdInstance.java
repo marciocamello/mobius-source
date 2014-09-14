@@ -159,7 +159,7 @@ public final class RainbowGourdInstance extends NpcInstance
 		Spawner spawner = spawnEx.getSpawns().get(0);
 		Location loc = (Location) spawner.getCurrentSpawnRange();
 		miniGameEvent.removeBanishItems();
-		final NpcInstance npc = NpcUtils.spawnSingle(35600, loc.x, loc.y, loc.z, 0);
+		final NpcInstance npc = NpcUtils.spawnSingle(35600, loc.getX(), loc.getY(), loc.getZ(), 0);
 		ThreadPoolManager.getInstance().schedule(new RunnableImpl()
 		{
 			@Override

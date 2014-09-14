@@ -37,11 +37,11 @@ public class MoveToLocationInVehicle extends L2GameServerPacket
 		writeC(0x7e);
 		writeD(_playerObjectId);
 		writeD(_boatObjectId);
-		writeD(_destination.x);
-		writeD(_destination.y);
-		writeD(_destination.z);
-		writeD(_origin.x);
-		writeD(_origin.y);
-		writeD(_origin.z);
+		writeD(_destination.getX());
+		writeD(_destination.getY());
+		writeD(_destination.getZ());
+		writeD(_origin.getX());
+		writeD(_origin.getY());
+		writeD(_origin.getZ());
 	}
 }

@@ -14,13 +14,12 @@ package lineage2.commons.geometry;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 class Point2D implements Cloneable
 {
 	static final Point2D[] EMPTY_ARRAY = new Point2D[0];
-	public int x;
-	public int y;
+	private int _x;
+	private int _y;
 	
 	/**
 	 * Constructor for Point2D.
@@ -36,8 +35,8 @@ class Point2D implements Cloneable
 	 */
 	Point2D(int x, int y)
 	{
-		this.x = x;
-		this.y = y;
+		this._x = x;
+		this._y = y;
 	}
 	
 	/**
@@ -47,7 +46,7 @@ class Point2D implements Cloneable
 	@Override
 	public Point2D clone()
 	{
-		return new Point2D(x, y);
+		return new Point2D(_x, _y);
 	}
 	
 	/**
@@ -83,7 +82,7 @@ class Point2D implements Cloneable
 	 */
 	public boolean equals(Point2D p)
 	{
-		return equals(p.x, p.y);
+		return equals(p._x, p._y);
 	}
 	
 	/**
@@ -94,25 +93,43 @@ class Point2D implements Cloneable
 	 */
 	private boolean equals(int x, int y)
 	{
-		return (this.x == x) && (this.y == y);
+		return (this._x == x) && (this._y == y);
 	}
 	
 	/**
-	 * Method getX.
-	 * @return int
+	 * Get the x coordinate.
+	 * @return the x coordinate
 	 */
 	public int getX()
 	{
-		return x;
+		return _x;
 	}
 	
 	/**
-	 * Method getY.
-	 * @return int
+	 * Set the x coordinate.
+	 * @param x the x coordinate
+	 */
+	public void setX(int x)
+	{
+		_x = x;
+	}
+	
+	/**
+	 * Get the y coordinate.
+	 * @return the y coordinate
 	 */
 	public int getY()
 	{
-		return y;
+		return _y;
+	}
+	
+	/**
+	 * Set the y coordinate.
+	 * @param y the x coordinate
+	 */
+	public void setY(int y)
+	{
+		_y = y;
 	}
 	
 	/**
@@ -122,6 +139,6 @@ class Point2D implements Cloneable
 	@Override
 	public String toString()
 	{
-		return "[x: " + x + " y: " + y + "]";
+		return "[x: " + _x + " y: " + _y + "]";
 	}
 }

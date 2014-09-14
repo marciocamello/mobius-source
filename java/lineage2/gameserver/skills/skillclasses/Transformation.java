@@ -75,7 +75,7 @@ public class Transformation extends Skill
 			return false;
 		}
 		
-		if (player.isInFlyingTransform() && (getId() == SKILL_TRANSFORM_DISPEL) && (Math.abs(player.getZ() - player.getLoc().correctGeoZ().z) > 333))
+		if (player.isInFlyingTransform() && (getId() == SKILL_TRANSFORM_DISPEL) && (Math.abs(player.getZ() - player.getLoc().correctGeoZ().getZ()) > 333))
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(_id, _level));
 			return false;

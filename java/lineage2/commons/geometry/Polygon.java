@@ -43,17 +43,17 @@ public class Polygon extends AbstractShape
 	{
 		if (points.length == 0)
 		{
-			min.y = p.y;
-			min.x = p.x;
-			max.x = p.x;
-			max.y = p.y;
+			min.setY(p.getY());
+			min.setX(p.getX());
+			max.setX(p.getX());
+			max.setY(p.getY());
 		}
 		else
 		{
-			min.y = Math.min(min.y, p.y);
-			min.x = Math.min(min.x, p.x);
-			max.x = Math.max(max.x, p.x);
-			max.y = Math.max(max.y, p.y);
+			min.setY(Math.min(min.getY(), p.getY()));
+			min.setX(Math.min(min.getX(), p.getX()));
+			max.setX(Math.max(max.getX(), p.getX()));
+			max.setY(Math.max(max.getY(), p.getY()));
 		}
 		
 		points = (ArrayUtils.add(points, p));
@@ -68,7 +68,7 @@ public class Polygon extends AbstractShape
 	@Override
 	public Polygon setZmax(int z)
 	{
-		max.z = z;
+		max.setZ(z);
 		return this;
 	}
 	
@@ -80,7 +80,7 @@ public class Polygon extends AbstractShape
 	@Override
 	public Polygon setZmin(int z)
 	{
-		min.z = z;
+		min.setZ(z);
 		return this;
 	}
 	
@@ -94,7 +94,7 @@ public class Polygon extends AbstractShape
 	@Override
 	public boolean isInside(int x, int y)
 	{
-		if ((x < min.x) || (x > max.x) || (y < min.y) || (y > max.y))
+		if ((x < min.getX()) || (x > max.getX()) || (y < min.getY()) || (y > max.getY()))
 		{
 			return false;
 		}
@@ -108,37 +108,37 @@ public class Polygon extends AbstractShape
 		{
 			cur = points[i];
 			
-			if (cur.y == last.y)
+			if (cur.getY() == last.getY())
 			{
 				continue;
 			}
 			
 			int leftx;
 			
-			if (cur.x < last.x)
+			if (cur.getX() < last.getX())
 			{
-				if (x >= last.x)
+				if (x >= last.getX())
 				{
 					continue;
 				}
 				
-				leftx = cur.x;
+				leftx = cur.getX();
 			}
 			else
 			{
-				if (x >= cur.x)
+				if (x >= cur.getX())
 				{
 					continue;
 				}
 				
-				leftx = last.x;
+				leftx = last.getX();
 			}
 			
 			double test1, test2;
 			
-			if (cur.y < last.y)
+			if (cur.getY() < last.getY())
 			{
-				if ((y < cur.y) || (y >= last.y))
+				if ((y < cur.getY()) || (y >= last.getY()))
 				{
 					continue;
 				}
@@ -149,12 +149,12 @@ public class Polygon extends AbstractShape
 					continue;
 				}
 				
-				test1 = x - cur.x;
-				test2 = y - cur.y;
+				test1 = x - cur.getX();
+				test2 = y - cur.getY();
 			}
 			else
 			{
-				if ((y < last.y) || (y >= cur.y))
+				if ((y < last.getY()) || (y >= cur.getY()))
 				{
 					continue;
 				}
@@ -165,11 +165,11 @@ public class Polygon extends AbstractShape
 					continue;
 				}
 				
-				test1 = x - last.x;
-				test2 = y - last.y;
+				test1 = x - last.getX();
+				test2 = y - last.getY();
 			}
 			
-			if (test1 < ((test2 / (last.y - cur.y)) * (last.x - cur.x)))
+			if (test1 < ((test2 / (last.getY() - cur.getY())) * (last.getX() - cur.getX())))
 			{
 				hits++;
 			}

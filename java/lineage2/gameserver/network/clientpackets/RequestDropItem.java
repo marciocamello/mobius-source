@@ -95,7 +95,7 @@ public class RequestDropItem extends L2GameClientPacket
 			return;
 		}
 		
-		if (!activeChar.isInRangeSq(_loc, 22500) || (Math.abs(_loc.z - activeChar.getZ()) > 50))
+		if (!activeChar.isInRangeSq(_loc, 22500) || (Math.abs(_loc.getZ() - activeChar.getZ()) > 50))
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessage.THAT_IS_TOO_FAR_FROM_YOU_TO_DISCARD));
 			return;

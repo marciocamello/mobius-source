@@ -182,7 +182,7 @@ public final class DoorParser extends AbstractDirParser<DoorHolder>
 				doorSet.set("basePDef", doorElement.attributeValue("pdef"));
 				doorSet.set("baseMDef", doorElement.attributeValue("mdef"));
 				doorSet.set("collision_height", (maxz - minz) & 0xfff0);
-				doorSet.set("collision_radius", Math.max(50, Math.min(doorPos.x - shape.getXmin(), doorPos.y - shape.getYmin())));
+				doorSet.set("collision_radius", Math.max(50, Math.min(doorPos.getX() - shape.getXmin(), doorPos.getY() - shape.getYmin())));
 				DoorTemplate template = new DoorTemplate(doorSet);
 				getHolder().addTemplate(template);
 			}

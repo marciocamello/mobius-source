@@ -193,10 +193,10 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x95);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
-		writeD(_loc.h);
+		writeD(_loc.getX());
+		writeD(_loc.getY());
+		writeD(_loc.getZ());
+		writeD(_loc.getHeading());
 		writeD(obj_id);
 		writeS(_name);
 		writeD(_race);

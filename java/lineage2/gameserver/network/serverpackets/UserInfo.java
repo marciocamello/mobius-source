@@ -331,9 +331,9 @@ public class UserInfo extends L2GameServerPacket
 		}
 		
 		writeC(0x32);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z + Config.CLIENT_Z_SHIFT);
+		writeD(_loc.getX());
+		writeD(_loc.getY());
+		writeD(_loc.getZ() + Config.CLIENT_Z_SHIFT);
 		writeD(_vehicleObjId);
 		writeD(_objectId);
 		writeS(_name);
@@ -450,9 +450,9 @@ public class UserInfo extends L2GameServerPacket
 		writeC(_noble);
 		writeC(_hero);
 		writeC(_fishing);
-		writeD(_fishLoc.x);
-		writeD(_fishLoc.y);
-		writeD(_fishLoc.z);
+		writeD(_fishLoc.getX());
+		writeD(_fishLoc.getY());
+		writeD(_fishLoc.getZ());
 		writeD(_nameColor);
 		writeC(_running);
 		writeD(_pledgeClass);

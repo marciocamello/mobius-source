@@ -32,7 +32,7 @@ abstract class AbstractShape implements Shape
 	@Override
 	public boolean isInside(int x, int y, int z)
 	{
-		return (min.z <= z) && (max.z >= z) && (isInside(x, y));
+		return (min.getZ() <= z) && (max.getZ() >= z) && (isInside(x, y));
 	}
 	
 	/**
@@ -43,7 +43,7 @@ abstract class AbstractShape implements Shape
 	@Override
 	public int getXmax()
 	{
-		return max.x;
+		return max.getX();
 	}
 	
 	/**
@@ -54,7 +54,7 @@ abstract class AbstractShape implements Shape
 	@Override
 	public int getXmin()
 	{
-		return min.x;
+		return min.getX();
 	}
 	
 	/**
@@ -65,7 +65,7 @@ abstract class AbstractShape implements Shape
 	@Override
 	public int getYmax()
 	{
-		return max.y;
+		return max.getY();
 	}
 	
 	/**
@@ -76,7 +76,7 @@ abstract class AbstractShape implements Shape
 	@Override
 	public int getYmin()
 	{
-		return min.y;
+		return min.getY();
 	}
 	
 	/**
@@ -86,7 +86,7 @@ abstract class AbstractShape implements Shape
 	 */
 	public AbstractShape setZmax(int z)
 	{
-		max.z = z;
+		max.setZ(z);
 		return this;
 	}
 	
@@ -97,7 +97,7 @@ abstract class AbstractShape implements Shape
 	 */
 	public AbstractShape setZmin(int z)
 	{
-		min.z = z;
+		min.setZ(z);
 		return this;
 	}
 	
@@ -109,7 +109,7 @@ abstract class AbstractShape implements Shape
 	@Override
 	public int getZmax()
 	{
-		return max.z;
+		return max.getZ();
 	}
 	
 	/**
@@ -120,6 +120,6 @@ abstract class AbstractShape implements Shape
 	@Override
 	public int getZmin()
 	{
-		return min.z;
+		return min.getZ();
 	}
 }

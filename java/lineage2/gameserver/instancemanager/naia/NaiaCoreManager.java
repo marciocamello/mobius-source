@@ -277,7 +277,7 @@ public final class NaiaCoreManager
 			try
 			{
 				SimpleSpawner sp = new SimpleSpawner(mobId);
-				sp.setLoc(Territory.getRandomLoc(territory).setH(Rnd.get(65535)));
+				sp.setLoc(Territory.getRandomLoc(territory).setHeading(Rnd.get(65535)));
 				sp.setRespawnDelay(respawnDelay, 30);
 				sp.setAmount(1);
 				sp.doSpawn(true);

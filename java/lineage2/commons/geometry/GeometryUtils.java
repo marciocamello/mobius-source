@@ -51,17 +51,17 @@ class GeometryUtils
 	{
 		double distAB, theCos, theSin, newX, ABpos;
 		
-		if (((a.x == b.x) && (a.y == b.y)) || ((c.x == d.x) && (c.y == d.y)))
+		if (((a.getX() == b.getX()) && (a.getY() == b.getY())) || ((c.getX() == d.getX()) && (c.getY() == d.getY())))
 		{
 			return false;
 		}
 		
-		double Bx = b.x - a.x;
-		double By = b.y - a.y;
-		double Cx = c.x - a.x;
-		double Cy = c.y - a.y;
-		double Dx = d.x - a.x;
-		double Dy = d.y - a.y;
+		double Bx = b.getX() - a.getX();
+		double By = b.getY() - a.getY();
+		double Cx = c.getX() - a.getX();
+		double Cy = c.getY() - a.getY();
+		double Dx = d.getX() - a.getX();
+		double Dy = d.getY() - a.getY();
 		distAB = Math.sqrt((Bx * Bx) + (By * By));
 		theCos = Bx / distAB;
 		theSin = By / distAB;
@@ -81,8 +81,8 @@ class GeometryUtils
 		
 		if (r != null)
 		{
-			r.x = (int) (a.x + (ABpos * theCos));
-			r.y = (int) (a.y + (ABpos * theSin));
+			r.setX((int) (a.getX() + (ABpos * theCos)));
+			r.setY((int) (a.getY() + (ABpos * theSin)));
 		}
 		
 		return true;
@@ -114,22 +114,22 @@ class GeometryUtils
 	{
 		double distAB, theCos, theSin, newX, ABpos;
 		
-		if (((a.x == b.x) && (a.y == b.y)) || ((c.x == d.x) && (c.y == d.y)))
+		if (((a.getX() == b.getX()) && (a.getY() == b.getY())) || ((c.getX() == d.getX()) && (c.getY() == d.getY())))
 		{
 			return false;
 		}
 		
-		if (((a.x == c.x) && (a.y == c.y)) || ((b.x == c.x) && (b.y == c.y)) || ((a.x == d.x) && (a.y == d.y)) || ((b.x == d.x) && (b.y == d.y)))
+		if (((a.getX() == c.getX()) && (a.getY() == c.getY())) || ((b.getX() == c.getX()) && (b.getY() == c.getY())) || ((a.getX() == d.getX()) && (a.getY() == d.getY())) || ((b.getX() == d.getX()) && (b.getY() == d.getY())))
 		{
 			return false;
 		}
 		
-		double Bx = b.x - a.x;
-		double By = b.y - a.y;
-		double Cx = c.x - a.x;
-		double Cy = c.y - a.y;
-		double Dx = d.x - a.x;
-		double Dy = d.y - a.y;
+		double Bx = b.getX() - a.getX();
+		double By = b.getY() - a.getY();
+		double Cx = c.getX() - a.getX();
+		double Cy = c.getY() - a.getY();
+		double Dx = d.getX() - a.getX();
+		double Dy = d.getY() - a.getY();
 		distAB = Math.sqrt((Bx * Bx) + (By * By));
 		theCos = Bx / distAB;
 		theSin = By / distAB;
@@ -154,8 +154,8 @@ class GeometryUtils
 		
 		if (r != null)
 		{
-			r.x = (int) (a.x + (ABpos * theCos));
-			r.y = (int) (a.y + (ABpos * theSin));
+			r.setX((int) (a.getX() + (ABpos * theCos)));
+			r.setY((int) (a.getY() + (ABpos * theSin)));
 		}
 		
 		return true;

@@ -59,7 +59,10 @@ public final class GreatPowerfulDevice extends DefaultAI
 			{
 				for (int mobId : MOBS)
 				{
-					actor.getReflection().addSpawnWithoutRespawn(mobId, Location.findPointToStay(OBELISK_LOC.clone().setZ(-12224), 600, 1200, actor.getGeoIndex()), 0);
+					// actor.getReflection().addSpawnWithoutRespawn(mobId, Location.findPointToStay(OBELISK_LOC.clone().setZ(-12224), 600, 1200, actor.getGeoIndex()), 0);
+					Location loc = OBELISK_LOC.clone();
+					loc.setZ(-12224);
+					actor.getReflection().addSpawnWithoutRespawn(mobId, Location.findPointToStay(loc, 600, 1200, actor.getGeoIndex()), 0);
 				}
 			}
 			

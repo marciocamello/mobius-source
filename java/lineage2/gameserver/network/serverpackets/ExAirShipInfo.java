@@ -50,10 +50,10 @@ public class ExAirShipInfo extends L2GameServerPacket
 	{
 		writeEx(0x61);
 		writeD(_objId);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
-		writeD(_loc.h);
+		writeD(_loc.getX());
+		writeD(_loc.getY());
+		writeD(_loc.getZ());
+		writeD(_loc.getHeading());
 		writeD(_driverObjId); // object id of player who control ship
 		writeD(_speed1);
 		writeD(_speed2);

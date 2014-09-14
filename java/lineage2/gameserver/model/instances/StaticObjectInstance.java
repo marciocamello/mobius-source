@@ -138,7 +138,7 @@ public class StaticObjectInstance extends GameObject
 	@Override
 	public int getGeoZ(Location loc)
 	{
-		return loc.z;
+		return loc.getZ();
 	}
 	
 	/**

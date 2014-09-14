@@ -177,7 +177,7 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 	
 	public T addZoneName(Location loc)
 	{
-		return add(new ZoneArgument(loc.x, loc.y, loc.z));
+		return add(new ZoneArgument(loc.getX(), loc.getY(), loc.getZ()));
 	}
 	
 	public T addZoneName(int x, int y, int z)

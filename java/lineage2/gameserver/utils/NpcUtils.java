@@ -122,7 +122,7 @@ public class NpcUtils
 		}
 		
 		NpcInstance npc = template.getNewInstance();
-		npc.setHeading(loc.h < 0 ? Rnd.get(0xFFFF) : loc.h);
+		npc.setHeading(loc.getHeading() < 0 ? Rnd.get(0xFFFF) : loc.getHeading());
 		npc.setSpawnedLoc(loc);
 		npc.setReflection(reflection);
 		npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp(), true);

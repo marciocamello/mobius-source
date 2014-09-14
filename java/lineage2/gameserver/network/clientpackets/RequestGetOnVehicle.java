@@ -33,9 +33,9 @@ public class RequestGetOnVehicle extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_objectId = readD();
-		_loc.x = readD();
-		_loc.y = readD();
-		_loc.z = readD();
+		_loc.setX(readD());
+		_loc.setY(readD());
+		_loc.setZ(readD());
 	}
 	
 	/**

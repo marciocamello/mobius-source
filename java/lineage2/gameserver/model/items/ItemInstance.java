@@ -1244,7 +1244,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	 */
 	public void dropToTheGround(Creature dropper, Location dropPos)
 	{
-		if (GeoEngine.canMoveToCoord(dropper.getX(), dropper.getY(), dropper.getZ(), dropPos.x, dropPos.y, dropPos.z, dropper.getGeoIndex()))
+		if (GeoEngine.canMoveToCoord(dropper.getX(), dropper.getY(), dropper.getZ(), dropPos.getX(), dropPos.getY(), dropPos.getZ(), dropper.getGeoIndex()))
 		{
 			dropMe(dropper, dropPos);
 		}
@@ -1269,7 +1269,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 			update();
 		}
 		
-		if (GeoEngine.canMoveToCoord(dropper.getX(), dropper.getY(), dropper.getZ(), dropPos.x, dropPos.y, dropPos.z, dropper.getGeoIndex()))
+		if (GeoEngine.canMoveToCoord(dropper.getX(), dropper.getY(), dropper.getZ(), dropPos.getX(), dropPos.getY(), dropPos.getZ(), dropper.getGeoIndex()))
 		{
 			dropMe(dropper, dropPos);
 		}

@@ -257,7 +257,7 @@ public abstract class Residence implements JdbcEntity
 	 */
 	public boolean checkIfInZone(Location loc, Reflection ref)
 	{
-		return checkIfInZone(loc.x, loc.y, loc.z, ref);
+		return checkIfInZone(loc.getX(), loc.getY(), loc.getZ(), ref);
 	}
 	
 	/**

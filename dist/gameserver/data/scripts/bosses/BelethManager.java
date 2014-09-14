@@ -254,7 +254,7 @@ public final class BelethManager extends Functions implements ScriptFile
 			{
 				if (clone.isDead() || clone.isDeleted())
 				{
-					nextclone = (MonsterInstance) spawn(CLONE, _clones.get(clone).x, _clones.get(clone).y, locZ, 49152);
+					nextclone = (MonsterInstance) spawn(CLONE, _clones.get(clone).getX(), _clones.get(clone).getY(), locZ, 49152);
 					_clones.put(nextclone, nextclone.getLoc());
 					_clones.remove(clone);
 				}
@@ -363,7 +363,7 @@ public final class BelethManager extends Functions implements ScriptFile
 					
 					for (int i = 0; i < 32; i++)
 					{
-						clone = (MonsterInstance) spawn(CLONE, _cloneLoc[i].x, _cloneLoc[i].y, locZ, 49152);
+						clone = (MonsterInstance) spawn(CLONE, _cloneLoc[i].getX(), _cloneLoc[i].getY(), locZ, 49152);
 						_clones.put(clone, clone.getLoc());
 					}
 					
@@ -405,7 +405,7 @@ public final class BelethManager extends Functions implements ScriptFile
 						lastSpawnTask = null;
 					}
 					
-					temp = spawn(ELF, _beleth.getLoc().x, _beleth.getLoc().y, locZ, BELSPAWN[3]);
+					temp = spawn(ELF, _beleth.getLoc().getX(), _beleth.getLoc().getY(), locZ, BELSPAWN[3]);
 					_npcList.add(temp);
 					temp = spawn(COFFIN, COFFSPAWN[0], COFFSPAWN[1], COFFSPAWN[2], COFFSPAWN[3]);
 					_npcList.add(temp);
@@ -512,7 +512,7 @@ public final class BelethManager extends Functions implements ScriptFile
 	static void spawnClone(int id)
 	{
 		final MonsterInstance clone;
-		clone = (MonsterInstance) spawn(CLONE, _cloneLoc[id].x, _cloneLoc[id].y, locZ, 49152);
+		clone = (MonsterInstance) spawn(CLONE, _cloneLoc[id].getX(), _cloneLoc[id].getY(), locZ, 49152);
 		_clones.put(clone, clone.getLoc());
 	}
 	
@@ -611,7 +611,7 @@ public final class BelethManager extends Functions implements ScriptFile
 				radius += 70;
 			}
 			
-			_cloneLoc[i + 32] = new Location(centerX + (int) (radius * Math.sin(i * angle)), centerY + (int) (radius * Math.cos(i * angle)), _cloneLoc[i].h);
+			_cloneLoc[i + 32] = new Location(centerX + (int) (radius * Math.sin(i * angle)), centerY + (int) (radius * Math.cos(i * angle)), _cloneLoc[i].getHeading());
 		}
 		
 		int order = 48;
@@ -621,19 +621,19 @@ public final class BelethManager extends Functions implements ScriptFile
 		{
 			if ((i == 1) || (i == 15))
 			{
-				_cloneLoc[order] = new Location(_cloneLoc[i].x, _cloneLoc[i].y + radius, _cloneLoc[i + 16].h);
+				_cloneLoc[order] = new Location(_cloneLoc[i].getX(), _cloneLoc[i].getY() + radius, _cloneLoc[i + 16].getHeading());
 			}
 			else if ((i == 3) || (i == 5))
 			{
-				_cloneLoc[order] = new Location(_cloneLoc[i].x + radius, _cloneLoc[i].y, _cloneLoc[i].h);
+				_cloneLoc[order] = new Location(_cloneLoc[i].getX() + radius, _cloneLoc[i].getY(), _cloneLoc[i].getHeading());
 			}
 			else if ((i == 7) || (i == 9))
 			{
-				_cloneLoc[order] = new Location(_cloneLoc[i].x, _cloneLoc[i].y - radius, _cloneLoc[i + 16].h);
+				_cloneLoc[order] = new Location(_cloneLoc[i].getX(), _cloneLoc[i].getY() - radius, _cloneLoc[i + 16].getHeading());
 			}
 			else if ((i == 11) || (i == 13))
 			{
-				_cloneLoc[order] = new Location(_cloneLoc[i].x - radius, _cloneLoc[i].y, _cloneLoc[i].h);
+				_cloneLoc[order] = new Location(_cloneLoc[i].getX() - radius, _cloneLoc[i].getY(), _cloneLoc[i].getHeading());
 			}
 			
 			order++;
