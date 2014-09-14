@@ -160,7 +160,7 @@ public final class CrystallineGolem extends Fighter
 				{
 					ItemInstance item = (ItemInstance) obj;
 					
-					if (item.getItemId() == Crystal_Fragment)
+					if (item.getId() == Crystal_Fragment)
 					{
 						if (Rnd.chance(50))
 						{

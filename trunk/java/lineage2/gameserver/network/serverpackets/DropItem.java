@@ -34,7 +34,7 @@ public class DropItem extends L2GameServerPacket
 	{
 		_playerId = playerId;
 		item_obj_id = item.getObjectId();
-		item_id = item.getItemId();
+		item_id = item.getId();
 		_loc = item.getLoc();
 		_stackable = item.isStackable() ? 1 : 0;
 		_count = item.getCount();

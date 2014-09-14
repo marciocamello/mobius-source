@@ -85,7 +85,7 @@ public final class MeleonInstance extends SpecialMonsterInstance
 			return;
 		}
 		
-		int weaponId = attacker.getActiveWeaponInstance().getItemId();
+		int weaponId = attacker.getActiveWeaponInstance().getId();
 		
 		if ((getId() == Defective_Honey_Watermelon) || (getId() == Rain_Honey_Watermelon) || (getId() == Large_Rain_Honey_Watermelon))
 		{

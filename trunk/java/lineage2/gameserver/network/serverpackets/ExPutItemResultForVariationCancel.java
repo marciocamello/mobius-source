@@ -29,7 +29,7 @@ public class ExPutItemResultForVariationCancel extends L2GameServerPacket
 	public ExPutItemResultForVariationCancel(ItemInstance item)
 	{
 		_itemObjectId = item.getObjectId();
-		_itemId = item.getItemId();
+		_itemId = item.getId();
 		_aug1 = 0x0000FFFF & item.getAugmentationId();
 		_aug2 = item.getAugmentationId() >> 16;
 		_price = RequestRefineCancel.getRemovalPrice(item.getTemplate());

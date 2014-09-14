@@ -489,7 +489,7 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 			
 			if (item != null)
 			{
-				return item.getItemId();
+				return item.getId();
 			}
 			
 			return 0;

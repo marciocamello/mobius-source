@@ -245,7 +245,7 @@ public final class exchange extends Functions
 		if (player.getInventory().destroyItemByItemId(Config.SERVICES_EXCHANGE_BABY_PET_ITEM, Config.SERVICES_EXCHANGE_BABY_PET_PRICE))
 		{
 			ItemInstance control = player.getInventory().getItemByObjectId(pl_pet.getControlItemObjId());
-			control.setItemId(L2Pet.IMPROVED_BABY_COUGAR.getControlItemId());
+			control.setId(L2Pet.IMPROVED_BABY_COUGAR.getControlItemId());
 			control.setJdbcState(JdbcEntityState.UPDATED);
 			control.update();
 			player.sendPacket(new InventoryUpdate().addModifiedItem(control));
@@ -297,7 +297,7 @@ public final class exchange extends Functions
 		if (player.getInventory().destroyItemByItemId(Config.SERVICES_EXCHANGE_BABY_PET_ITEM, Config.SERVICES_EXCHANGE_BABY_PET_PRICE))
 		{
 			ItemInstance control = player.getInventory().getItemByObjectId(pl_pet.getControlItemObjId());
-			control.setItemId(L2Pet.IMPROVED_BABY_BUFFALO.getControlItemId());
+			control.setId(L2Pet.IMPROVED_BABY_BUFFALO.getControlItemId());
 			control/**
 			 * Method exToKookaburra.
 			 */
@@ -349,7 +349,7 @@ public final class exchange extends Functions
 		if (player.getInventory().destroyItemByItemId(Config.SERVICES_EXCHANGE_BABY_PET_ITEM, Config.SERVICES_EXCHANGE_BABY_PET_PRICE))
 		{
 			ItemInstance control = player.getInventory().getItemByObjectId(pl_pet.getControlItemObjId());
-			control.setItemId(L2Pet.IMPROVED_BABY_KOOKABURRA.getControlItemId());
+			control.setId(L2Pet.IMPROVED_BABY_KOOKABURRA.getControlItemId());
 			control.setJdbcState(JdbcEntityState.UPDATED);
 			control.update();
 			player.sendPacket(new InventoryUpdate().addModifiedItem(control));

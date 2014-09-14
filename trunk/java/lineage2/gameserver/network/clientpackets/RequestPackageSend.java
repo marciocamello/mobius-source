@@ -142,7 +142,7 @@ public class RequestPackageSend extends L2GameClientPacket
 					continue;
 				}
 				
-				if (!item.isStackable() || (freight.getItemByItemId(item.getItemId()) == null))
+				if (!item.isStackable() || (freight.getItemByItemId(item.getId()) == null))
 				{
 					if (slotsleft <= 0)
 					{
@@ -154,7 +154,7 @@ public class RequestPackageSend extends L2GameClientPacket
 					slotsleft--;
 				}
 				
-				if (item.getItemId() == ItemTemplate.ITEM_ID_ADENA)
+				if (item.getId() == ItemTemplate.ITEM_ID_ADENA)
 				{
 					adenaDeposit = _itemQ[i];
 				}

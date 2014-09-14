@@ -36,10 +36,10 @@ public class CrystallizationItem
 	}
 	
 	/**
-	 * Method getItemId.
+	 * Method getId.
 	 * @return int
 	 */
-	public int getItemId()
+	public int getId()
 	{
 		return _itemId;
 	}

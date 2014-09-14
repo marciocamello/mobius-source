@@ -39,7 +39,7 @@ public class PrivateStoreListBuy extends L2GameServerPacket
 			
 			for (ItemInstance item : items)
 			{
-				if ((item.getItemId() == bi.getItemId()) && item.canBeTraded(seller))
+				if ((item.getId() == bi.getId()) && item.canBeTraded(seller))
 				{
 					si = new TradeItem(item);
 					_sellList.add(si);
@@ -52,7 +52,7 @@ public class PrivateStoreListBuy extends L2GameServerPacket
 			if (si == null)
 			{
 				si = new TradeItem();
-				si.setItemId(bi.getItemId());
+				si.setItemId(bi.getId());
 				si.setOwnersPrice(bi.getOwnersPrice());
 				si.setCount(bi.getCount());
 				si.setCurrentValue(0);

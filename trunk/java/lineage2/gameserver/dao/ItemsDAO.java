@@ -158,7 +158,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 			int objectId = rset.getInt(1);
 			item = new ItemInstance(objectId);
 			item.setOwnerId(rset.getInt(2));
-			item.setItemId(rset.getInt(3));
+			item.setId(rset.getInt(3));
 			item.setCount(rset.getLong(4));
 			item.setEnchantLevel(rset.getInt(5));
 			item.setLocName(rset.getString(6));
@@ -191,7 +191,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 	{
 		statement.setInt(1, item.getObjectId());
 		statement.setInt(2, item.getOwnerId());
-		statement.setInt(3, item.getItemId());
+		statement.setInt(3, item.getId());
 		statement.setLong(4, item.getCount());
 		statement.setInt(5, item.getEnchantLevel());
 		statement.setString(6, item.getLocName());
@@ -280,7 +280,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 	{
 		statement.setInt(20, item.getObjectId());
 		statement.setInt(1, item.getOwnerId());
-		statement.setInt(2, item.getItemId());
+		statement.setInt(2, item.getId());
 		statement.setLong(3, item.getCount());
 		statement.setInt(4, item.getEnchantLevel());
 		statement.setString(5, item.getLocName());

@@ -87,7 +87,7 @@ public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 			return;
 		}
 		
-		boolean stackable = ItemHolder.getInstance().getTemplate(_item.getItemId()).isStackable();
+		boolean stackable = ItemHolder.getInstance().getTemplate(_item.getId()).isStackable();
 		
 		if (_item.getCount() < _itemcount)
 		{
@@ -98,12 +98,12 @@ public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 		{
 			for (int i = 0; i < _itemcount; i++)
 			{
-				addItem(activeChar, _item.getItemId(), 1);
+				addItem(activeChar, _item.getId(), 1);
 			}
 		}
 		else
 		{
-			addItem(activeChar, _item.getItemId(), _itemcount);
+			addItem(activeChar, _item.getId(), _itemcount);
 		}
 		
 		if (_itemcount < _item.getCount())

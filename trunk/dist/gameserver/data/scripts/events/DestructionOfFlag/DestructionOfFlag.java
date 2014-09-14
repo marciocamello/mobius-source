@@ -2880,7 +2880,7 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 		{
 			for (int restrict_id : RESTRICT_ITEMS)
 			{
-				if (item.getItemId() == restrict_id)
+				if (item.getId() == restrict_id)
 				{
 					return false;
 				}

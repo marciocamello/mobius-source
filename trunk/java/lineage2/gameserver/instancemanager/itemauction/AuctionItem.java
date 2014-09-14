@@ -81,7 +81,7 @@ final class AuctionItem extends ItemInfo
 	 */
 	final ItemInstance createNewItemInstance()
 	{
-		final ItemInstance item = ItemFunctions.createItem(getItemId());
+		final ItemInstance item = ItemFunctions.createItem(getId());
 		item.setEnchantLevel(getEnchantLevel());
 		
 		if (getAugmentationId() != 0)

@@ -69,8 +69,8 @@ public class RequestExTryToPutEnchantTargetItem extends AbstractEnchantPacket
 			return;
 		}
 		
-		Log.add(player.getName() + "|Trying to put enchant|" + itemToEnchant.getItemId() + "|+" + itemToEnchant.getEnchantLevel() + "|" + itemToEnchant.getObjectId(), "enchants");
-		EnchantScrollInfo esi = EnchantScrollManager.getScrollInfo(scroll.getItemId());
+		Log.add(player.getName() + "|Trying to put enchant|" + itemToEnchant.getId() + "|+" + itemToEnchant.getEnchantLevel() + "|" + itemToEnchant.getObjectId(), "enchants");
+		EnchantScrollInfo esi = EnchantScrollManager.getScrollInfo(scroll.getId());
 		
 		if (esi == null)
 		{

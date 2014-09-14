@@ -125,7 +125,7 @@ public class SetPrivateStoreBuyList extends L2GameClientPacket
 				{
 					for (TradeItem bi : buyList)
 					{
-						if (bi.getItemId() == itemId)
+						if (bi.getId() == itemId)
 						{
 							bi.setOwnersPrice(price);
 							bi.setCount(bi.getCount() + count);

@@ -139,7 +139,7 @@ public class RequestProcureCropList extends L2GameClientPacket
 				long count = _itemQ[i];
 				ItemInstance item = activeChar.getInventory().getItemByObjectId(objId);
 				
-				if ((item == null) || (item.getCount() < count) || (item.getItemId() != cropId))
+				if ((item == null) || (item.getCount() < count) || (item.getId() != cropId))
 				{
 					return;
 				}
@@ -224,7 +224,7 @@ public class RequestProcureCropList extends L2GameClientPacket
 				long count = _itemQ[i];
 				ItemInstance item = activeChar.getInventory().getItemByObjectId(objId);
 				
-				if ((item == null) || (item.getCount() < count) || (item.getItemId() != cropId))
+				if ((item == null) || (item.getCount() < count) || (item.getId() != cropId))
 				{
 					continue;
 				}

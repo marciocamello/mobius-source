@@ -2213,7 +2213,7 @@ public final class ItemBroker extends Functions
 				{
 					for (TradeItem tradeItem : trader.getSellList())
 					{
-						if ((tradeItem.getItemId() == item.itemId) && (tradeItem.getOwnersPrice() == item.price))
+						if ((tradeItem.getId() == item.itemId) && (tradeItem.getOwnersPrice() == item.price))
 						{
 							found = true;
 							break;
@@ -2228,7 +2228,7 @@ public final class ItemBroker extends Functions
 				{
 					for (TradeItem tradeItem : trader.getBuyList())
 					{
-						if ((tradeItem.getItemId() == item.itemId) && (tradeItem.getOwnersPrice() == item.price))
+						if ((tradeItem.getId() == item.itemId) && (tradeItem.getOwnersPrice() == item.price))
 						{
 							found = true;
 							break;
@@ -2325,7 +2325,7 @@ public final class ItemBroker extends Functions
 									items.put(temp.getName(), oldItems);
 								}
 								
-								Item newItem = new Item(item.getItemId(), type, item.getOwnersPrice(), item.getCount(), item.getEnchantLevel(), temp.getName(), pl.getStoredId(), pl.getName(), pl.getLoc(), item.getObjectId(), item);
+								Item newItem = new Item(item.getId(), type, item.getOwnersPrice(), item.getCount(), item.getEnchantLevel(), temp.getName(), pl.getStoredId(), pl.getName(), pl.getLoc(), item.getObjectId(), item);
 								long key = newItem.price * 100;
 								
 								while ((key < ((newItem.price * 100) + 100)) && oldItems.containsKey(key))
@@ -2359,7 +2359,7 @@ public final class ItemBroker extends Functions
 									items.put(temp.getName(), oldItems);
 								}
 								
-								Item newItem = new Item(item.getItemId(), type, item.getOwnersPrice(), item.getCount(), item.getEnchantLevel(), temp.getName(), pl.getStoredId(), pl.getName(), pl.getLoc(), itemObjId++, item);
+								Item newItem = new Item(item.getId(), type, item.getOwnersPrice(), item.getCount(), item.getEnchantLevel(), temp.getName(), pl.getStoredId(), pl.getName(), pl.getLoc(), itemObjId++, item);
 								long key = newItem.price * 100;
 								
 								while ((key < ((newItem.price * 100) + 100)) && oldItems.containsKey(key))
@@ -2392,7 +2392,7 @@ public final class ItemBroker extends Functions
 								}
 								
 								RecipeComponent product = recipe.getProducts()[0];
-								ItemTemplate temp = ItemHolder.getInstance().getTemplate(product.getItemId());
+								ItemTemplate temp = ItemHolder.getInstance().getTemplate(product.getId());
 								
 								if (temp == null)
 								{
@@ -2407,7 +2407,7 @@ public final class ItemBroker extends Functions
 									items.put(temp.getName(), oldItems);
 								}
 								
-								Item newItem = new Item(product.getItemId(), type, mitem.getCost(), product.getCount(), 0, temp.getName(), pl.getStoredId(), pl.getName(), pl.getLoc(), itemObjId++, null);
+								Item newItem = new Item(product.getId(), type, mitem.getCost(), product.getCount(), 0, temp.getName(), pl.getStoredId(), pl.getName(), pl.getLoc(), itemObjId++, null);
 								long key = newItem.price * 100;
 								
 								while ((key < ((newItem.price * 100) + 100)) && oldItems.containsKey(key))

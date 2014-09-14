@@ -120,8 +120,8 @@ public final class Pushkin extends Functions
 			if (itm.canBeCrystallized(player))
 			{
 				final ItemTemplate crystal = ItemHolder.getInstance().getTemplate(itm.getTemplate().getCrystalType().cry);
-				MultiSellEntry possibleEntry = new MultiSellEntry(++entry, crystal.getItemId(), itm.getTemplate().getCrystalCount(), 0);
-				possibleEntry.addIngredient(new MultiSellIngredient(itm.getItemId(), 1, itm.getEnchantLevel()));
+				MultiSellEntry possibleEntry = new MultiSellEntry(++entry, crystal.getId(), itm.getTemplate().getCrystalCount(), 0);
+				possibleEntry.addIngredient(new MultiSellIngredient(itm.getId(), 1, itm.getEnchantLevel()));
 				possibleEntry.addIngredient(new MultiSellIngredient(ItemTemplate.ITEM_ID_ADENA, Math.round(itm.getTemplate().getCrystalCount() * crystal.getReferencePrice() * 0.05), 0));
 				list.addEntry(possibleEntry);
 			}

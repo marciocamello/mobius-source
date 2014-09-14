@@ -165,7 +165,7 @@ public class CharacterCreate extends L2GameClientPacket
 		
 		for (StartItem i : template.getStartItems())
 		{
-			ItemInstance item = ItemFunctions.createItem(i.getItemId());
+			ItemInstance item = ItemFunctions.createItem(i.getId());
 			long count = i.getCount();
 			
 			if (item.isStackable())
@@ -177,7 +177,7 @@ public class CharacterCreate extends L2GameClientPacket
 			{
 				for (long n = 0; n < count; n++)
 				{
-					item = ItemFunctions.createItem(i.getItemId());
+					item = ItemFunctions.createItem(i.getId());
 					newChar.getInventory().addItem(item);
 				}
 				
@@ -187,7 +187,7 @@ public class CharacterCreate extends L2GameClientPacket
 				}
 			}
 			
-			if (item.getItemId() == 5588)
+			if (item.getId() == 5588)
 			{
 				newChar.registerShortCut(new ShortCut(11, 0, ShortCut.TYPE_ITEM, item.getObjectId(), -1, 1));
 			}

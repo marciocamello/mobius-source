@@ -153,7 +153,7 @@ public class RequestDestroyItem extends L2GameClientPacket
 		}
 		else
 		{
-			activeChar.sendPacket(SystemMessage2.removeItems(item.getItemId(), count));
+			activeChar.sendPacket(SystemMessage2.removeItems(item.getId(), count));
 		}
 		
 		activeChar.sendChanges();

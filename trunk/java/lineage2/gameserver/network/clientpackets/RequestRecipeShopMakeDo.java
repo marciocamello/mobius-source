@@ -160,7 +160,7 @@ public class RequestRecipeShopMakeDo extends L2GameClientPacket
 					continue;
 				}
 				
-				ItemInstance item = buyer.getInventory().getItemByItemId(material.getItemId());
+				ItemInstance item = buyer.getInventory().getItemByItemId(material.getId());
 				
 				if ((item == null) || (material.getCount() > item.getCount()))
 				{
@@ -182,8 +182,8 @@ public class RequestRecipeShopMakeDo extends L2GameClientPacket
 					continue;
 				}
 				
-				buyer.getInventory().destroyItemByItemId(material.getItemId(), material.getCount());
-				buyer.sendPacket(SystemMessage2.removeItems(material.getItemId(), material.getCount()));
+				buyer.getInventory().destroyItemByItemId(material.getId(), material.getCount());
+				buyer.sendPacket(SystemMessage2.removeItems(material.getId(), material.getCount()));
 			}
 			
 			long tax = TradeHelper.getTax(manufacturer, _price);
@@ -202,7 +202,7 @@ public class RequestRecipeShopMakeDo extends L2GameClientPacket
 		manufacturer.reduceCurrentMp(recipe.getMpConsume(), null);
 		manufacturer.sendStatusUpdate(false, false, StatusUpdateField.CUR_MP);
 		RecipeTemplate.RecipeComponent product = recipe.getRandomProduct();
-		int itemId = product.getItemId();
+		int itemId = product.getId();
 		long itemsCount = product.getCount();
 		
 		if (Rnd.chance(recipe.getSuccessRate()))

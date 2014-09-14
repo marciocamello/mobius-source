@@ -41,7 +41,7 @@ public class PrivateStoreManageListBuy extends L2GameServerPacket
 		
 		for (ItemInstance item : items)
 		{
-			if (item.canBeTraded(buyer) && (item.getItemId() != ItemTemplate.ITEM_ID_ADENA))
+			if (item.canBeTraded(buyer) && (item.getId() != ItemTemplate.ITEM_ID_ADENA))
 			{
 				_buyList.add(bi = new TradeItem(item));
 				bi.setObjectId(0);

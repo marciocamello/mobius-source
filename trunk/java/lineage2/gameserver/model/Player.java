@@ -2673,7 +2673,7 @@ public final class Player extends Playable implements PlayerGroup
 			
 			if (nextTimeUse > System.currentTimeMillis())
 			{
-				TimeStamp timeStamp = new TimeStamp(item.getItemId(), nextTimeUse, item.getTemplate().getReuseDelay());
+				TimeStamp timeStamp = new TimeStamp(item.getId(), nextTimeUse, item.getTemplate().getReuseDelay());
 				addSharedGroupReuse(item.getTemplate().getReuseGroup(), timeStamp);
 				
 				if (item.getTemplate().getReuseDelay() > 0)
@@ -4268,7 +4268,7 @@ public final class Player extends Playable implements PlayerGroup
 			{
 				SystemMessage sm;
 				
-				if (item.getItemId() == 57)
+				if (item.getId() == 57)
 				{
 					sm = new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
 					sm.addNumber(item.getCount());
@@ -4276,7 +4276,7 @@ public final class Player extends Playable implements PlayerGroup
 				else
 				{
 					sm = new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_PICK_UP_S1);
-					sm.addItemName(item.getItemId());
+					sm.addItemName(item.getId());
 				}
 				
 				sendPacket(sm);
@@ -4333,17 +4333,17 @@ public final class Player extends Playable implements PlayerGroup
 			return false;
 		}
 		
-		if ((item.getItemId() == ItemTemplate.ITEM_ID_ADENA) || (item.getItemId() == 6353))
+		if ((item.getId() == ItemTemplate.ITEM_ID_ADENA) || (item.getId() == 6353))
 		{
 			Quest q = QuestManager.getQuest(255);
 			
 			if (q != null)
 			{
-				processQuestEvent(q.getName(), "CE" + item.getItemId(), null);
+				processQuestEvent(q.getName(), "CE" + item.getId(), null);
 			}
 		}
 		
-		if ((item.getItemId() == ItemTemplate.ITEM_ID_ADENA))
+		if ((item.getId() == ItemTemplate.ITEM_ID_ADENA))
 		{
 			if (item.getOwnerId() == 0)
 			{
@@ -4866,7 +4866,7 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			for (ItemInstance item : getInventory().getItems())
 			{
-				if (!item.canBeDropped(this, true) || Config.KARMA_LIST_NONDROPPABLE_ITEMS.contains(item.getItemId()))
+				if (!item.canBeDropped(this, true) || Config.KARMA_LIST_NONDROPPABLE_ITEMS.contains(item.getId()))
 				{
 					continue;
 				}
@@ -4906,11 +4906,11 @@ public final class Player extends Playable implements PlayerGroup
 				
 				if (item.getEnchantLevel() > 0)
 				{
-					sendPacket(new SystemMessage(SystemMessage.DROPPED__S1_S2).addNumber(item.getEnchantLevel()).addItemName(item.getItemId()));
+					sendPacket(new SystemMessage(SystemMessage.DROPPED__S1_S2).addNumber(item.getEnchantLevel()).addItemName(item.getId()));
 				}
 				else
 				{
-					sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_DROPPED_S1).addItemName(item.getItemId()));
+					sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_DROPPED_S1).addItemName(item.getId()));
 				}
 				
 				if (killer.isPlayable() && ((Config.AUTO_LOOT && Config.AUTO_LOOT_PK) || isInFlyingTransform()))
@@ -7846,7 +7846,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		for (ItemInstance item : getInventory().getPaperdollItems())
 		{
-			if ((item != null) && (item.getItemId() == itemId))
+			if ((item != null) && (item.getId() == itemId))
 			{
 				final int newMp = item.getLifeTime() - mp;
 				
@@ -8108,13 +8108,13 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			SystemMessage sm = new SystemMessage(SystemMessage.EQUIPMENT_OF__S1_S2_HAS_BEEN_REMOVED);
 			sm.addNumber(wpn.getEnchantLevel());
-			sm.addItemName(wpn.getItemId());
+			sm.addItemName(wpn.getId());
 			sendPacket(sm);
 		}
 		else
 		{
 			SystemMessage sm = new SystemMessage(SystemMessage.S1__HAS_BEEN_DISARMED);
-			sm.addItemName(wpn.getItemId());
+			sm.addItemName(wpn.getId());
 			sendPacket(sm);
 		}
 	}
@@ -12572,7 +12572,7 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			for (TradeItem i : _buyList)
 			{
-				val += i.getItemId() + ";" + i.getCount() + ";" + i.getOwnersPrice() + ":";
+				val += i.getId() + ";" + i.getCount() + ";" + i.getOwnersPrice() + ":";
 			}
 			
 			setVar("buylist", val, -1);
@@ -14305,15 +14305,15 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if (hours > 0)
 		{
-			sendPacket(new SystemMessage2(item.getTemplate().getReuseType().getMessages()[2]).addItemName(item.getTemplate().getItemId()).addInteger(hours).addInteger(minutes).addInteger(seconds));
+			sendPacket(new SystemMessage2(item.getTemplate().getReuseType().getMessages()[2]).addItemName(item.getTemplate().getId()).addInteger(hours).addInteger(minutes).addInteger(seconds));
 		}
 		else if (minutes > 0)
 		{
-			sendPacket(new SystemMessage2(item.getTemplate().getReuseType().getMessages()[1]).addItemName(item.getTemplate().getItemId()).addInteger(minutes).addInteger(seconds));
+			sendPacket(new SystemMessage2(item.getTemplate().getReuseType().getMessages()[1]).addItemName(item.getTemplate().getId()).addInteger(minutes).addInteger(seconds));
 		}
 		else
 		{
-			sendPacket(new SystemMessage2(item.getTemplate().getReuseType().getMessages()[0]).addItemName(item.getTemplate().getItemId()).addInteger(seconds));
+			sendPacket(new SystemMessage2(item.getTemplate().getReuseType().getMessages()[0]).addItemName(item.getTemplate().getId()).addInteger(seconds));
 		}
 	}
 	

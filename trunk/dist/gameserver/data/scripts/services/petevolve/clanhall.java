@@ -131,7 +131,7 @@ public final class clanhall extends Functions
 			return;
 		}
 		
-		collar.setItemId(fwd ? WHITE_WOLF_NECKLACE : GREAT_WOLF_NECKLACE);
+		collar.setId(fwd ? WHITE_WOLF_NECKLACE : GREAT_WOLF_NECKLACE);
 		collar.setJdbcState(JdbcEntityState.UPDATED);
 		collar.update();
 		player.sendItemList(false);
@@ -203,7 +203,7 @@ public final class clanhall extends Functions
 			return;
 		}
 		
-		collar.setItemId(fwd ? WHITE_FENRIR_NECKLACE : FENRIR_NECKLACE);
+		collar.setId(fwd ? WHITE_FENRIR_NECKLACE : FENRIR_NECKLACE);
 		collar.setJdbcState(JdbcEntityState.UPDATED);
 		collar.update();
 		player.sendItemList(false);
@@ -275,7 +275,7 @@ public final class clanhall extends Functions
 			return;
 		}
 		
-		collar.setItemId(fwd ? WHITE_FENRIR_NECKLACE : WHITE_WOLF_NECKLACE);
+		collar.setId(fwd ? WHITE_FENRIR_NECKLACE : WHITE_WOLF_NECKLACE);
 		collar.setJdbcState(JdbcEntityState.UPDATED);
 		collar.update();
 		player.sendItemList(false);
@@ -347,7 +347,7 @@ public final class clanhall extends Functions
 			return;
 		}
 		
-		collar.setItemId(fwd ? RED_WS_ITEM : WIND_STRIDER_ITEM);
+		collar.setId(fwd ? RED_WS_ITEM : WIND_STRIDER_ITEM);
 		collar.setJdbcState(JdbcEntityState.UPDATED);
 		collar.update();
 		player.sendItemList(false);
@@ -419,7 +419,7 @@ public final class clanhall extends Functions
 			return;
 		}
 		
-		collar.setItemId(fwd ? RED_SS_ITEM : STAR_STRIDER_ITEM);
+		collar.setId(fwd ? RED_SS_ITEM : STAR_STRIDER_ITEM);
 		collar.setJdbcState(JdbcEntityState.UPDATED);
 		collar.update();
 		player.sendItemList(false);
@@ -491,7 +491,7 @@ public final class clanhall extends Functions
 			return;
 		}
 		
-		collar.setItemId(fwd ? RED_TW_ITEM : TWILING_STRIDER_ITEM);
+		collar.setId(fwd ? RED_TW_ITEM : TWILING_STRIDER_ITEM);
 		collar.setJdbcState(JdbcEntityState.UPDATED);
 		collar.update();
 		player.sendItemList(false);

@@ -81,7 +81,7 @@ public final class SoulShots extends ScriptItemHandler
 		final Player player = (Player) playable;
 		final WeaponTemplate weaponItem = player.getActiveWeaponItem();
 		final ItemInstance weaponInst = player.getActiveWeaponInstance();
-		final int SoulshotId = item.getItemId();
+		final int SoulshotId = item.getId();
 		boolean isAutoSoulShot = false;
 		
 		if (player.getAutoSoulShot().contains(SoulshotId))

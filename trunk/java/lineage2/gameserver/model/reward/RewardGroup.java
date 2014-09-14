@@ -290,7 +290,7 @@ public class RewardGroup implements Cloneable
 				
 				for (RewardItem r : ret)
 				{
-					if (i.getItemId() == r.itemId)
+					if (i.getId() == r.itemId)
 					{
 						t = r;
 						break;
@@ -299,7 +299,7 @@ public class RewardGroup implements Cloneable
 				
 				if (t == null)
 				{
-					ret.add(t = new RewardItem(i.getItemId()));
+					ret.add(t = new RewardItem(i.getId()));
 					t.count = count;
 				}
 				else if (!i.notRate())

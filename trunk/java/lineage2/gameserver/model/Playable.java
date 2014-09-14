@@ -775,12 +775,12 @@ public abstract class Playable extends Creature
 			if (item.getEnchantLevel() > 0)
 			{
 				int msg_id = isPlayer() ? SystemMessage.ATTENTION_S1_PICKED_UP__S2_S3 : SystemMessage.ATTENTION_S1_PET_PICKED_UP__S2_S3;
-				msg = new SystemMessage(msg_id).addString(player_name).addNumber(item.getEnchantLevel()).addItemName(item.getItemId());
+				msg = new SystemMessage(msg_id).addString(player_name).addNumber(item.getEnchantLevel()).addItemName(item.getId());
 			}
 			else
 			{
 				int msg_id = isPlayer() ? SystemMessage.ATTENTION_S1_PICKED_UP_S2 : SystemMessage.ATTENTION_S1_PET_PICKED_UP__S2_S3;
-				msg = new SystemMessage(msg_id).addString(player_name).addItemName(item.getItemId());
+				msg = new SystemMessage(msg_id).addString(player_name).addItemName(item.getId());
 			}
 			
 			player.broadcastPacket(msg);

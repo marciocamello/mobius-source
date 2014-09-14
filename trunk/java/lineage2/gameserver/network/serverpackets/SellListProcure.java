@@ -59,7 +59,7 @@ public class SellListProcure extends L2GameServerPacket
 		{
 			writeH(item.getTemplate().getType1());
 			writeD(item.getObjectId());
-			writeD(item.getItemId());
+			writeD(item.getId());
 			writeQ(_sellList.get(item));
 			writeH(item.getTemplate().getType2ForPackets());
 			writeH(0); // size of [dhhh]

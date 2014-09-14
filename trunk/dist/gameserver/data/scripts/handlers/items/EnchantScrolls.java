@@ -48,7 +48,7 @@ public final class EnchantScrolls extends ScriptItemHandler
 		}
 		
 		player.setEnchantScroll(item);
-		player.sendPacket(new ChooseInventoryItem(item.getItemId()));
+		player.sendPacket(new ChooseInventoryItem(item.getId()));
 		return true;
 	}
 	

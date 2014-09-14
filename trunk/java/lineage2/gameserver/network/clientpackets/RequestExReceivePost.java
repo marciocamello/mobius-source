@@ -119,7 +119,7 @@ public class RequestExReceivePost extends L2GameClientPacket
 					{
 						weight = SafeMath.addAndCheck(weight, SafeMath.mulAndCheck(item.getCount(), item.getTemplate().getWeight()));
 						
-						if (!item.getTemplate().isStackable() || (activeChar.getInventory().getItemByItemId(item.getItemId()) == null))
+						if (!item.getTemplate().isStackable() || (activeChar.getInventory().getItemByItemId(item.getId()) == null))
 						{
 							slots++;
 						}
@@ -183,7 +183,7 @@ public class RequestExReceivePost extends L2GameClientPacket
 				
 				for (ItemInstance item : items)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_ACQUIRED_S2_S1).addItemName(item.getItemId()).addNumber(item.getCount()));
+					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_ACQUIRED_S2_S1).addItemName(item.getId()).addNumber(item.getCount()));
 					Log.LogItem(activeChar, Log.PostRecieve, item);
 					activeChar.getInventory().addItem(item);
 				}

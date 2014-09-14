@@ -475,7 +475,7 @@ public class NpcInstance extends Creature
 		{
 			SystemMessage2 sm;
 			
-			if (item.getItemId() == 57)
+			if (item.getId() == 57)
 			{
 				sm = new SystemMessage2(SystemMsg.C1_HAS_DIED_AND_DROPPED_S2_ADENA);
 				sm.addName(this);
@@ -485,7 +485,7 @@ public class NpcInstance extends Creature
 			{
 				sm = new SystemMessage2(SystemMsg.C1_DIED_AND_DROPPED_S3_S2);
 				sm.addName(this);
-				sm.addItemName(item.getItemId());
+				sm.addItemName(item.getId());
 				sm.addLong(item.getCount());
 			}
 			
@@ -1286,7 +1286,7 @@ public class NpcInstance extends Creature
 		{
 			for (TeleportLocation tl : list)
 			{
-				if (tl.getItem().getItemId() == ItemTemplate.ITEM_ID_ADENA)
+				if (tl.getItem().getId() == ItemTemplate.ITEM_ID_ADENA)
 				{
 					double pricemod = player.getLevel() <= Config.GATEKEEPER_FREE ? 0. : Config.GATEKEEPER_MODIFIER;
 					
@@ -1320,7 +1320,7 @@ public class NpcInstance extends Creature
 				}
 				else
 				{
-					sb.append("[scripts_Util:QuestGatekeeper ").append(tl.getX()).append(' ').append(tl.getY()).append(' ').append(tl.getZ()).append(' ').append(tl.getPrice()).append(' ').append(tl.getItem().getItemId()).append(" @811;F;").append('|').append(HtmlUtils.htmlNpcString(tl.getName())).append(" - ").append(tl.getPrice()).append(' ').append(HtmlUtils.htmlItemName(tl.getItem().getItemId())).append("]<br1>\n");
+					sb.append("[scripts_Util:QuestGatekeeper ").append(tl.getX()).append(' ').append(tl.getY()).append(' ').append(tl.getZ()).append(' ').append(tl.getPrice()).append(' ').append(tl.getItem().getId()).append(" @811;F;").append('|').append(HtmlUtils.htmlNpcString(tl.getName())).append(" - ").append(tl.getPrice()).append(' ').append(HtmlUtils.htmlItemName(tl.getItem().getId())).append("]<br1>\n");
 				}
 			}
 		}

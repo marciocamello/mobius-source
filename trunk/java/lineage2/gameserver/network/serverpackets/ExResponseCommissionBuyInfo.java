@@ -35,7 +35,7 @@ public class ExResponseCommissionBuyInfo extends L2GameServerPacket
 		writeQ(_itemInfo.getAuctionId());
 		writeD(_itemInfo.getExItemType().ordinal());
 		writeD(0x00); // unk maybe objId?
-		writeD(_itemInfo.getItem().getItemId());
+		writeD(_itemInfo.getItem().getId());
 		writeD(_itemInfo.getItem().getEquipSlot());
 		writeQ(_itemInfo.getItem().getCount());
 		writeH(_itemInfo.getItem().getTemplate().getType2ForPackets());

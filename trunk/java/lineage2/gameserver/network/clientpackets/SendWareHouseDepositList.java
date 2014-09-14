@@ -157,7 +157,7 @@ public class SendWareHouseDepositList extends L2GameClientPacket
 					continue;
 				}
 				
-				if (!item.isStackable() || (warehouse.getItemByItemId(item.getItemId()) == null))
+				if (!item.isStackable() || (warehouse.getItemByItemId(item.getId()) == null))
 				{
 					if (slotsleft <= 0)
 					{
@@ -169,7 +169,7 @@ public class SendWareHouseDepositList extends L2GameClientPacket
 					slotsleft--;
 				}
 				
-				if (item.getItemId() == ItemTemplate.ITEM_ID_ADENA)
+				if (item.getId() == ItemTemplate.ITEM_ID_ADENA)
 				{
 					adenaDeposit = _itemQ[i];
 				}

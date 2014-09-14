@@ -84,7 +84,7 @@ public final class Seed extends ScriptItemHandler
 	{
 		final Player activeChar = (Player) playable;
 		NpcTemplate template = null;
-		final int itemId = item.getItemId();
+		final int itemId = item.getId();
 		
 		for (int i = 0; i < _itemIds.length; i++)
 		{

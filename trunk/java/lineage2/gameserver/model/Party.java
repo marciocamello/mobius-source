@@ -650,7 +650,7 @@ public class Party implements PlayerGroup
 	 */
 	public void distributeItem(Player player, ItemInstance item, NpcInstance fromNpc)
 	{
-		switch (item.getItemId())
+		switch (item.getId())
 		{
 			case ItemTemplate.ITEM_ID_ADENA:
 				distributeAdena(player, item, fromNpc);

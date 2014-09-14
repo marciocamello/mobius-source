@@ -110,7 +110,7 @@ public final class RequestRefineCancel extends L2GameClientPacket
 		
 		InventoryUpdate iu = new InventoryUpdate().addModifiedItem(targetItem);
 		SystemMessage sm = new SystemMessage(SystemMessage.AUGMENTATION_HAS_BEEN_SUCCESSFULLY_REMOVED_FROM_YOUR_S1);
-		sm.addItemName(targetItem.getItemId());
+		sm.addItemName(targetItem.getId());
 		activeChar.sendPacket(new ExVariationCancelResult(1), iu, sm);
 		
 		for (ShortCut sc : activeChar.getAllShortCuts())

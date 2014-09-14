@@ -59,7 +59,7 @@ public final class ArmorSetListener implements OnEquipListener
 		}
 		
 		Player player = (Player) actor;
-		ArmorSet armorSet = ArmorSetsHolder.getInstance().getArmorSet(item.getItemId());
+		ArmorSet armorSet = ArmorSetsHolder.getInstance().getArmorSet(item.getId());
 		
 		if (armorSet == null)
 		{
@@ -68,7 +68,7 @@ public final class ArmorSetListener implements OnEquipListener
 		
 		boolean update = false;
 		
-		if (armorSet.containItem(slot, item.getItemId()))
+		if (armorSet.containItem(slot, item.getId()))
 		{
 			List<Skill> skills = armorSet.getSkills(armorSet.getEquipedSetPartsCount(player));
 			
@@ -103,7 +103,7 @@ public final class ArmorSetListener implements OnEquipListener
 				}
 			}
 		}
-		else if (armorSet.containShield(item.getItemId()) && armorSet.containAll(player))
+		else if (armorSet.containShield(item.getId()) && armorSet.containAll(player))
 		{
 			List<Skill> skills = armorSet.getShieldSkills();
 			
@@ -141,21 +141,21 @@ public final class ArmorSetListener implements OnEquipListener
 		List<Skill> removeSkillId1 = new ArrayList<>();
 		List<Skill> removeSkillId2 = new ArrayList<>();
 		List<Skill> removeSkillId3 = new ArrayList<>();
-		ArmorSet armorSet = ArmorSetsHolder.getInstance().getArmorSet(item.getItemId());
+		ArmorSet armorSet = ArmorSetsHolder.getInstance().getArmorSet(item.getId());
 		
 		if (armorSet == null)
 		{
 			return;
 		}
 		
-		if (armorSet.containItem(slot, item.getItemId()))
+		if (armorSet.containItem(slot, item.getId()))
 		{
 			remove = true;
 			removeSkillId1 = armorSet.getSkillsToRemove();
 			removeSkillId2 = armorSet.getShieldSkills();
 			removeSkillId3 = armorSet.getEnchant6skills();
 		}
-		else if (armorSet.containShield(item.getItemId()))
+		else if (armorSet.containShield(item.getId()))
 		{
 			remove = true;
 			removeSkillId2 = armorSet.getShieldSkills();

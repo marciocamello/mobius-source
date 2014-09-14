@@ -91,7 +91,7 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 				return;
 			}
 			
-			EnchantScrollInfo esi = EnchantScrollManager.getScrollInfo(scroll.getItemId());
+			EnchantScrollInfo esi = EnchantScrollManager.getScrollInfo(scroll.getId());
 			
 			if (esi == null)
 			{
@@ -138,7 +138,7 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 			
 			if (catalyst != null)
 			{
-				chance += ItemFunctions.getCatalystPower(catalyst.getItemId());
+				chance += ItemFunctions.getCatalystPower(catalyst.getId());
 			}
 			
 			if ((esi.getType() == EnchantScrollType.ANCIENT) || (esi.getType() == EnchantScrollType.ITEM_MALL))
@@ -197,7 +197,7 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 				{
 					player.broadcastPacket(new L2GameServerPacket[]
 					{
-						new SystemMessage(3013).addName(player).addNumber(item.getEnchantLevel()).addItemName(item.getItemId())
+						new SystemMessage(3013).addName(player).addNumber(item.getEnchantLevel()).addItemName(item.getId())
 					});
 					player.broadcastPacket(new L2GameServerPacket[]
 					{

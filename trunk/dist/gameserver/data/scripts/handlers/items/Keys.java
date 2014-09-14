@@ -84,7 +84,7 @@ public final class Keys extends ScriptItemHandler
 			return false;
 		}
 		
-		if ((door.getKey() <= 0) || (item.getItemId() != door.getKey()))
+		if ((door.getKey() <= 0) || (item.getId() != door.getKey()))
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_UNABLE_TO_UNLOCK_THE_DOOR));
 			return false;
@@ -102,7 +102,7 @@ public final class Keys extends ScriptItemHandler
 			return false;
 		}
 		
-		player.sendPacket(SystemMessage2.removeItems(item.getItemId(), 1));
+		player.sendPacket(SystemMessage2.removeItems(item.getId(), 1));
 		player.sendMessage(new CustomMessage("lineage2.gameserver.skills.skillclasses.Unlock.Success", player));
 		door.openMe(player, true);
 		return true;

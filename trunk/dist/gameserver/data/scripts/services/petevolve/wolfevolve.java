@@ -73,7 +73,7 @@ public final class wolfevolve extends Functions
 		int controlItemId = pl_pet.getControlItemObjId();
 		player.getSummonList().unsummonPet(false);
 		ItemInstance control = player.getInventory().getItemByObjectId(controlItemId);
-		control.setItemId(GREAT_WOLF_NECKLACE);
+		control.setId(GREAT_WOLF_NECKLACE);
 		control.setEnchantLevel(L2Pet.GREAT_WOLF.getMinLevel());
 		control.setJdbcState(JdbcEntityState.UPDATED);
 		control.update();

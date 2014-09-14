@@ -49,7 +49,7 @@ public class SystemMessage2 extends SysMsgContainer<SystemMessage2>
 	
 	public static SystemMessage2 obtainItems(ItemInstance item)
 	{
-		return obtainItems(item.getItemId(), item.getCount(), item.isEquipable() ? item.getEnchantLevel() : 0);
+		return obtainItems(item.getId(), item.getCount(), item.isEquipable() ? item.getEnchantLevel() : 0);
 	}
 	
 	public static SystemMessage2 obtainItemsBy(int itemId, long count, int enchantLevel, Creature target)
@@ -69,7 +69,7 @@ public class SystemMessage2 extends SysMsgContainer<SystemMessage2>
 	
 	public static SystemMessage2 obtainItemsBy(ItemInstance item, Creature target)
 	{
-		return obtainItemsBy(item.getItemId(), item.getCount(), item.isEquipable() ? item.getEnchantLevel() : 0, target);
+		return obtainItemsBy(item.getId(), item.getCount(), item.isEquipable() ? item.getEnchantLevel() : 0, target);
 	}
 	
 	public static SystemMessage2 removeItems(int itemId, long count)
@@ -89,7 +89,7 @@ public class SystemMessage2 extends SysMsgContainer<SystemMessage2>
 	
 	public static SystemMessage2 removeItems(ItemInstance item)
 	{
-		return removeItems(item.getItemId(), item.getCount());
+		return removeItems(item.getId(), item.getCount());
 	}
 	
 	@Override

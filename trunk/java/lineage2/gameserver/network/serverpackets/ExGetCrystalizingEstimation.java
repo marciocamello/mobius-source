@@ -45,7 +45,7 @@ public class ExGetCrystalizingEstimation extends L2GameServerPacket
 		
 		for (CrystallizationItem i : _items)
 		{
-			writeD(i.getItemId());
+			writeD(i.getId());
 			writeQ(i.getCount());
 			writeF(i.getChance());
 		}

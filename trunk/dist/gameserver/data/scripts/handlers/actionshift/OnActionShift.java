@@ -625,7 +625,7 @@ public final class OnActionShift extends Functions
 			String dialog = HtmCache.getInstance().getNotNull("actionshift/admin.L2PetInstance.onActionShift.htm", player);
 			
 			dialog = dialog.replaceFirst("%petId%", Integer.toString(pet.getId()));
-			dialog = dialog.replaceFirst("%controlItemId%", String.valueOf(pet.getControlItem().getItemId()));
+			dialog = dialog.replaceFirst("%controlItemId%", String.valueOf(pet.getControlItem().getId()));
 			dialog = dialog.replaceFirst("%type%", pet.getClass().getSimpleName().replaceFirst("Instance", ""));
 			dialog = dialog.replaceFirst("%ai%", pet.hasAI() ? String.valueOf(pet.getAI().getIntention().name()) : "NULL");
 			dialog = dialog.replaceFirst("%dist%", String.valueOf((int) pet.getRealDistance(player)));
@@ -769,7 +769,7 @@ public final class OnActionShift extends Functions
 			dialog = HtmCache.getInstance().getNotNull("actionshift/admin.L2ItemInstance.onActionShift.htm", player);
 			dialog = dialog.replaceFirst("%name%", String.valueOf(item.getTemplate().getName()));
 			dialog = dialog.replaceFirst("%objId%", String.valueOf(item.getObjectId()));
-			dialog = dialog.replaceFirst("%itemId%", String.valueOf(item.getItemId()));
+			dialog = dialog.replaceFirst("%itemId%", String.valueOf(item.getId()));
 			dialog = dialog.replaceFirst("%grade%", String.valueOf(item.getCrystalType()));
 			dialog = dialog.replaceFirst("%count%", String.valueOf(item.getCount()));
 			Player owner = GameObjectsStorage.getPlayer(item.getOwnerId());

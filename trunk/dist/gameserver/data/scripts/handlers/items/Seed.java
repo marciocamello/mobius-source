@@ -99,9 +99,9 @@ public final class Seed extends ScriptItemHandler
 			return false;
 		}
 		
-		final int seedId = item.getItemId();
+		final int seedId = item.getId();
 		
-		if ((seedId == 0) || (player.getInventory().getItemByItemId(item.getItemId()) == null))
+		if ((seedId == 0) || (player.getInventory().getItemByItemId(item.getId()) == null))
 		{
 			player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
 			return false;

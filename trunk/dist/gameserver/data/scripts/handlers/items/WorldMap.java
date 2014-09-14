@@ -47,7 +47,7 @@ public final class WorldMap extends ScriptItemHandler
 		}
 		
 		Player player = (Player) playable;
-		player.sendPacket(new ShowMiniMap(player, item.getItemId()));
+		player.sendPacket(new ShowMiniMap(player, item.getId()));
 		return true;
 	}
 	

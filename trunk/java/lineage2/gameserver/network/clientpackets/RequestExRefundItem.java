@@ -141,7 +141,7 @@ public class RequestExRefundItem extends L2GameClientPacket
 				totalPrice = SafeMath.addAndCheck(totalPrice, SafeMath.mulAndCheck(item.getCount(), item.getReferencePrice()) / 2);
 				weight = SafeMath.addAndCheck(weight, SafeMath.mulAndCheck(item.getCount(), item.getTemplate().getWeight()));
 				
-				if (!item.isStackable() || (activeChar.getInventory().getItemByItemId(item.getItemId()) == null))
+				if (!item.isStackable() || (activeChar.getInventory().getItemByItemId(item.getId()) == null))
 				{
 					slots++;
 				}

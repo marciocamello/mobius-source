@@ -211,11 +211,11 @@ public final class ItemFunctions
 	 */
 	public final static L2GameServerPacket checkIfCanEquip(Player player, ItemInstance item)
 	{
-		int itemId = item.getItemId();
+		int itemId = item.getId();
 		int targetSlot = item.getTemplate().getBodyPart();
 		Clan clan = player.getClan();
 		
-		if ((item.isHeroWeapon() || (item.getItemId() == 6842)) && !player.isHero())
+		if ((item.isHeroWeapon() || (item.getId() == 6842)) && !player.isHero())
 		{
 			return new SystemMessage(SystemMessage.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 		}
@@ -311,7 +311,7 @@ public final class ItemFunctions
 						return null;
 					}
 					
-					if ((--count <= 0) || (deco.getItemId() == itemId))
+					if ((--count <= 0) || (deco.getId() == itemId))
 					{
 						return new SystemMessage2(SystemMsg.YOU_CANNOT_EQUIP_S1_BECAUSE_YOU_DO_NOT_HAVE_ANY_AVAILABLE_SLOTS).addItemName(itemId);
 					}
@@ -605,7 +605,7 @@ public final class ItemFunctions
 		
 		for (int scrollId : getEnchantScrollId(item))
 		{
-			if (scroll.getItemId() == scrollId)
+			if (scroll.getId() == scrollId)
 			{
 				scrollValid = true;
 				break;
@@ -620,7 +620,7 @@ public final class ItemFunctions
 		{
 			for (int catalystId : getEnchantCatalystId(item))
 			{
-				if (catalystId == catalyst.getItemId())
+				if (catalystId == catalyst.getId())
 				{
 					catalystValid = true;
 					break;
@@ -1026,7 +1026,7 @@ public final class ItemFunctions
 		
 		for (int catalystRequired : getEnchantCatalystId(item))
 		{
-			if (catalystRequired == catalyst.getItemId())
+			if (catalystRequired == catalyst.getId())
 			{
 				return true;
 			}

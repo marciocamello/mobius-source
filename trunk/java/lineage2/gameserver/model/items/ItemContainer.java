@@ -170,7 +170,7 @@ public abstract class ItemContainer
 			{
 				item = _items.get(i);
 				
-				if (item.getItemId() == itemId)
+				if (item.getId() == itemId)
 				{
 					return item;
 				}
@@ -201,7 +201,7 @@ public abstract class ItemContainer
 			{
 				item = _items.get(i);
 				
-				if (item.getItemId() == itemId)
+				if (item.getId() == itemId)
 				{
 					result.add(item);
 				}
@@ -232,7 +232,7 @@ public abstract class ItemContainer
 			{
 				item = _items.get(i);
 				
-				if (item.getItemId() == itemId)
+				if (item.getId() == itemId)
 				{
 					count = SafeMath.addAndLimit(count, item.getCount());
 				}
@@ -317,7 +317,7 @@ public abstract class ItemContainer
 			
 			if (item.isStackable())
 			{
-				int itemId = item.getItemId();
+				int itemId = item.getId();
 				result = getItemByItemId(itemId);
 				
 				if (result != null)
@@ -455,7 +455,7 @@ public abstract class ItemContainer
 			{
 				item.setCount(item.getCount() - count);
 				onModifyItem(item);
-				ItemInstance newItem = new ItemInstance(IdFactory.getInstance().getNextId(), item.getItemId());
+				ItemInstance newItem = new ItemInstance(IdFactory.getInstance().getNextId(), item.getId());
 				newItem.setCount(count);
 				return newItem;
 			}

@@ -272,9 +272,9 @@ public class PetInstance extends Summon
 			return false;
 		}
 		
-		boolean deluxFood = PetDataTable.isStrider(getId()) && (item.getItemId() == DELUXE_FOOD_FOR_STRIDER);
+		boolean deluxFood = PetDataTable.isStrider(getId()) && (item.getId() == DELUXE_FOOD_FOR_STRIDER);
 		
-		if ((getFoodId() != item.getItemId()) && !deluxFood)
+		if ((getFoodId() != item.getId()) && !deluxFood)
 		{
 			return false;
 		}
@@ -285,7 +285,7 @@ public class PetInstance extends Summon
 		{
 			if (getInventory().destroyItem(item, 1L))
 			{
-				getPlayer().sendPacket(new SystemMessage(SystemMessage.PET_TOOK_S1_BECAUSE_HE_WAS_HUNGRY).addItemName(item.getItemId()));
+				getPlayer().sendPacket(new SystemMessage(SystemMessage.PET_TOOK_S1_BECAUSE_HE_WAS_HUNGRY).addItemName(item.getId()));
 				setCurrentFed(newFed);
 				sendStatusUpdate();
 			}
@@ -474,7 +474,7 @@ public class PetInstance extends Summon
 		
 		if (item.isCursed())
 		{
-			owner.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_PICK_UP_S1).addItemName(item.getItemId()));
+			owner.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_PICK_UP_S1).addItemName(item.getId()));
 			return;
 		}
 		

@@ -173,7 +173,7 @@ public class CursedWeapon
 		_loc = oldItem.getLoc();
 		oldItem.setDropTime(0);
 		_item = oldItem;
-		player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_DROPPED_S1).addItemName(oldItem.getItemId()));
+		player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_DROPPED_S1).addItemName(oldItem.getId()));
 		player.broadcastUserInfo();
 		player.broadcastPacket(new Earthquake(player.getLoc(), 30, 12));
 		return true;
@@ -281,7 +281,7 @@ public class CursedWeapon
 		player.getInventory().setPaperdollItem(Inventory.PAPERDOLL_LHAND, null);
 		player.getInventory().setPaperdollItem(Inventory.PAPERDOLL_RHAND, null);
 		player.getInventory().setPaperdollItem(Inventory.PAPERDOLL_RHAND, _item);
-		player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EQUIPPED_YOUR_S1).addItemName(_item.getItemId()));
+		player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EQUIPPED_YOUR_S1).addItemName(_item.getId()));
 		player.setTransformation(0);
 		player.setCursedWeaponEquippedId(_itemId);
 		player.setTransformation(_transformationId);

@@ -222,7 +222,7 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 			{
 				for (ItemInstance item : getResidence().getSpawnMerchantTickets())
 				{
-					MerchantGuard guard = getResidence().getMerchantGuard(item.getItemId());
+					MerchantGuard guard = getResidence().getMerchantGuard(item.getId());
 					addObject(HIRED_GUARDS, new SpawnSimpleObject(guard.getNpcId(), item.getLoc()));
 					item.deleteMe();
 				}

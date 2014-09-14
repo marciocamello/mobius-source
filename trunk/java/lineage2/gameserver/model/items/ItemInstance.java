@@ -135,7 +135,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	public ItemInstance(int objectId, int itemId)
 	{
 		super(objectId);
-		setItemId(itemId);
+		setId(itemId);
 		setLifeTime(getTemplate().isTemporal() ? (int) (System.currentTimeMillis() / 1000L) + (getTemplate().getDurability() * 60) : getTemplate().getDurability());
 		setAgathionEnergy(getTemplate().getAgathionEnergy());
 		setLocData(-1);
@@ -161,19 +161,19 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	}
 	
 	/**
-	 * Method getItemId.
+	 * Method getId.
 	 * @return int
 	 */
-	public int getItemId()
+	public int getId()
 	{
 		return itemId;
 	}
 	
 	/**
-	 * Method setItemId.
+	 * Method setId.
 	 * @param id int
 	 */
-	public void setItemId(int id)
+	public void setId(int id)
 	{
 		itemId = id;
 		template = ItemHolder.getInstance().getTemplate(id);
@@ -934,7 +934,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 			return false;
 		}
 		
-		if (getItemId() == ItemTemplate.ITEM_ID_ADENA)
+		if (getId() == ItemTemplate.ITEM_ID_ADENA)
 		{
 			return false;
 		}
@@ -1535,7 +1535,7 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 	public String toString()
 	{
 		StringBuilder sb = new StringBuilder();
-		sb.append(getTemplate().getItemId());
+		sb.append(getTemplate().getId());
 		sb.append(' ');
 		
 		if (getEnchantLevel() > 0)

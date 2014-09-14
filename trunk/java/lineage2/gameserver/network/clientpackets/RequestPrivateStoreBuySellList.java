@@ -166,7 +166,7 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 				
 				for (TradeItem bi : buyList)
 				{
-					if (bi.getItemId() == item.getItemId())
+					if (bi.getId() == item.getId())
 					{
 						if (bi.getOwnersPrice() == price)
 						{
@@ -178,14 +178,14 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 							totalCost = SafeMath.addAndCheck(totalCost, SafeMath.mulAndCheck(count, price));
 							weight = SafeMath.addAndCheck(weight, SafeMath.mulAndCheck(count, item.getTemplate().getWeight()));
 							
-							if (!item.isStackable() || (buyer.getInventory().getItemByItemId(item.getItemId()) == null))
+							if (!item.isStackable() || (buyer.getInventory().getItemByItemId(item.getId()) == null))
 							{
 								slots++;
 							}
 							
 							si = new TradeItem();
 							si.setObjectId(objectId);
-							si.setItemId(item.getItemId());
+							si.setItemId(item.getId());
 							si.setCount(count);
 							si.setOwnersPrice(price);
 							sellList.add(si);
@@ -244,7 +244,7 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 					
 					for (TradeItem bi : buyList)
 					{
-						if (bi.getItemId() == si.getItemId())
+						if (bi.getId() == si.getId())
 						{
 							if (bi.getOwnersPrice() == si.getOwnersPrice())
 							{

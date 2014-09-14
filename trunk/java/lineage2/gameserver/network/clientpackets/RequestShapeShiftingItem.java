@@ -104,7 +104,7 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 			return;
 		}
 		
-		AppearanceStone appearanceStone = EnchantItemHolder.getInstance().getAppearanceStone(stone.getItemId());
+		AppearanceStone appearanceStone = EnchantItemHolder.getInstance().getAppearanceStone(stone.getId());
 		
 		if (appearanceStone == null)
 		{
@@ -264,7 +264,7 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 				return;
 			}
 			
-			extracItemId = extracItem.getItemId();
+			extracItemId = extracItem.getId();
 		}
 		
 		if (targetItem.getOwnerId() != player.getObjectId())
@@ -329,11 +329,11 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 					break;
 				
 				case NORMAL:
-					targetItem.setVisualId(extracItem.getItemId());
+					targetItem.setVisualId(extracItem.getId());
 					break;
 				
 				case BLESSED:
-					targetItem.setVisualId(extracItem.getItemId());
+					targetItem.setVisualId(extracItem.getId());
 					break;
 				
 				case FIXED:
@@ -364,6 +364,6 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 		// player.sendPacket(new IStaticPacket[] { new ExShapeShiftingResult(targetItem.getItemId(), extracItem.getVisualId()), new UserInfo(player), new ExBR_ExtraUserInfo(player) });
 		player.setAppearanceStone(null);
 		player.setAppearanceExtractItem(null);
-		player.sendPacket(new ExShapeShiftingResult(ExShapeShiftingResult.SUCCESS_RESULT, targetItem.getItemId(), extracItemId));
+		player.sendPacket(new ExShapeShiftingResult(ExShapeShiftingResult.SUCCESS_RESULT, targetItem.getId(), extracItemId));
 	}
 }

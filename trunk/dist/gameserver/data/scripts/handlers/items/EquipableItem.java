@@ -46,7 +46,7 @@ public final class EquipableItem extends ScriptItemHandler
 			
 			if (template.isEquipable())
 			{
-				set.add(template.getItemId());
+				set.add(template.getId());
 			}
 		}
 		
@@ -79,7 +79,7 @@ public final class EquipableItem extends ScriptItemHandler
 		
 		if (player.isStunned() || player.isSleeping() || player.isParalyzed() || player.isAlikeDead() || player.isWeaponEquipBlocked() || player.isAirBinded() || player.isKnockedBack() || player.isKnockedDown() || player.isPulledNow())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getItemId()));
+			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
 			return false;
 		}
 		
@@ -89,14 +89,14 @@ public final class EquipableItem extends ScriptItemHandler
 		{
 			if (player.isMounted() || player.isCursedWeaponEquipped() || (player.getActiveWeaponFlagAttachment() != null) || player.isClanAirShipDriver())
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getItemId()));
+				player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
 				return false;
 			}
 		}
 		
 		if (item.isCursed())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getItemId()));
+			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
 			return false;
 		}
 		
@@ -143,11 +143,11 @@ public final class EquipableItem extends ScriptItemHandler
 		{
 			sm = new SystemMessage(SystemMessage.EQUIPPED__S1_S2);
 			sm.addNumber(item.getEnchantLevel());
-			sm.addItemName(item.getItemId());
+			sm.addItemName(item.getId());
 		}
 		else
 		{
-			sm = new SystemMessage(SystemMessage.YOU_HAVE_EQUIPPED_YOUR_S1).addItemName(item.getItemId());
+			sm = new SystemMessage(SystemMessage.YOU_HAVE_EQUIPPED_YOUR_S1).addItemName(item.getId());
 		}
 		
 		player.sendPacket(sm);

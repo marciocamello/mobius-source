@@ -3115,7 +3115,7 @@ public class SystemMessage extends L2GameServerPacket
 	
 	public static SystemMessage obtainItemsByMail(ItemInstance item)
 	{
-		return new SystemMessage(SystemMessage.YOU_HAVE_ACQUIRED_S2_S1).addItemName(item.getItemId()).addNumber(item.getCount());
+		return new SystemMessage(SystemMessage.YOU_HAVE_ACQUIRED_S2_S1).addItemName(item.getId()).addNumber(item.getCount());
 	}
 	
 	public SystemMessage addString(String text)

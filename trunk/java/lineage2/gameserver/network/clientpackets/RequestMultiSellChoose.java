@@ -332,7 +332,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 								
 								for (ItemInstance item : list)
 								{
-									ItemData itmd = new ItemData(item.getItemId(), item.getCount(), item);
+									ItemData itmd = new ItemData(item.getId(), item.getCount(), item);
 									
 									if (((item.getEnchantLevel() == ingridientEnchant) || !item.getTemplate().isEquipment()) && !items.contains(itmd) && item.canBeExchanged(activeChar))
 									{
@@ -349,7 +349,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 								
 								if (!ingridient.getMantainIngredient())
 								{
-									items.add(new ItemData(itemToTake.getItemId(), 1, itemToTake));
+									items.add(new ItemData(itemToTake.getId(), 1, itemToTake));
 								}
 							}
 							else
@@ -358,7 +358,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 								
 								for (ItemInstance item : list)
 								{
-									if (!items.contains(new ItemData(item.getItemId(), item.getCount(), item)) && ((itemToTake == null) || (item.getEnchantLevel() < itemToTake.getEnchantLevel())) && !item.isShadowItem() && !item.isTemporalItem() && (!item.isAugmented() || Config.ALT_ALLOW_DROP_AUGMENTED) && ItemFunctions.checkIfCanDiscard(activeChar, item))
+									if (!items.contains(new ItemData(item.getId(), item.getCount(), item)) && ((itemToTake == null) || (item.getEnchantLevel() < itemToTake.getEnchantLevel())) && !item.isShadowItem() && !item.isTemporalItem() && (!item.isAugmented() || Config.ALT_ALLOW_DROP_AUGMENTED) && ItemFunctions.checkIfCanDiscard(activeChar, item))
 									{
 										itemToTake = item;
 										
@@ -377,7 +377,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 								
 								if (!ingridient.getMantainIngredient())
 								{
-									items.add(new ItemData(itemToTake.getItemId(), 1, itemToTake));
+									items.add(new ItemData(itemToTake.getId(), 1, itemToTake));
 								}
 							}
 						}
@@ -399,7 +399,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 						
 						if (!ingridient.getMantainIngredient())
 						{
-							items.add(new ItemData(item.getItemId(), totalAmount, item));
+							items.add(new ItemData(item.getId(), totalAmount, item));
 						}
 					}
 				}

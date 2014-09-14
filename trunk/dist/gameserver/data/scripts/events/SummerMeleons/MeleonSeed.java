@@ -100,7 +100,7 @@ public final class MeleonSeed extends ScriptItemHandler
 		}
 		
 		NpcTemplate template = null;
-		final int itemId = item.getItemId();
+		final int itemId = item.getId();
 		
 		for (int i = 0; i < _itemIds.length; i++)
 		{

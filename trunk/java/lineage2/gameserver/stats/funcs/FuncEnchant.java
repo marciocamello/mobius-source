@@ -114,7 +114,7 @@ public class FuncEnchant extends Func
 					
 					if (runSpdBonus == 0)
 					{
-						_log.info("FuncEnchant: Error, item: " + item.getItemId() + " - " + item.getName() + " has no run speed bonus for the body part.");
+						_log.info("FuncEnchant: Error, item: " + item.getId() + " - " + item.getName() + " has no run speed bonus for the body part.");
 						break;
 					}
 					
@@ -130,7 +130,7 @@ public class FuncEnchant extends Func
 					
 					if (critRateBonus == 0)
 					{
-						_log.info("FuncEnchant: Error, item: " + item.getItemId() + " - " + item.getName() + " has no critical rate bonus for the body part.");
+						_log.info("FuncEnchant: Error, item: " + item.getId() + " - " + item.getName() + " has no critical rate bonus for the body part.");
 						break;
 					}
 					
@@ -146,7 +146,7 @@ public class FuncEnchant extends Func
 					
 					if (mcritRateBonus == 0)
 					{
-						_log.info("FuncEnchant: Error, item: " + item.getItemId() + " - " + item.getName() + " has no magic Critical rate bonus for the body part.");
+						_log.info("FuncEnchant: Error, item: " + item.getId() + " - " + item.getName() + " has no magic Critical rate bonus for the body part.");
 						break;
 					}
 					
@@ -162,7 +162,7 @@ public class FuncEnchant extends Func
 					
 					if (accCombatBonus == 0)
 					{
-						_log.info("FuncEnchant: Error, item: " + item.getItemId() + " - " + item.getName() + " has no accuracy bonus for the body part.");
+						_log.info("FuncEnchant: Error, item: " + item.getId() + " - " + item.getName() + " has no accuracy bonus for the body part.");
 						break;
 					}
 					
@@ -178,7 +178,7 @@ public class FuncEnchant extends Func
 					
 					if (maccCombatBonus == 0)
 					{
-						_log.info("FuncEnchant: Error, item: " + item.getItemId() + " - " + item.getName() + " has no Magic Accuracy bonus for the body part.");
+						_log.info("FuncEnchant: Error, item: " + item.getId() + " - " + item.getName() + " has no Magic Accuracy bonus for the body part.");
 						break;
 					}
 					
@@ -194,7 +194,7 @@ public class FuncEnchant extends Func
 					
 					if (evasionBonus == 0)
 					{
-						_log.info("FuncEnchant: Error, item: " + item.getItemId() + " - " + item.getName() + " has no evasion bonus for the body part.");
+						_log.info("FuncEnchant: Error, item: " + item.getId() + " - " + item.getName() + " has no evasion bonus for the body part.");
 						break;
 					}
 					
@@ -210,7 +210,7 @@ public class FuncEnchant extends Func
 					
 					if (mevasionBonus == 0)
 					{
-						_log.info("FuncEnchant: Error, item: " + item.getItemId() + " - " + item.getName() + " has no Magic Evasion bonus for the body part.");
+						_log.info("FuncEnchant: Error, item: " + item.getId() + " - " + item.getName() + " has no Magic Evasion bonus for the body part.");
 						break;
 					}
 					
@@ -232,7 +232,7 @@ public class FuncEnchant extends Func
 					
 					if (mAtkArmorBonus == 0)
 					{
-						_log.info("FuncEnchant: Error, item: " + item.getItemId() + " - " + item.getName() + " has no Magic Attack bonus for the body part.");
+						_log.info("FuncEnchant: Error, item: " + item.getId() + " - " + item.getName() + " has no Magic Attack bonus for the body part.");
 						break;
 					}
 					
@@ -255,7 +255,7 @@ public class FuncEnchant extends Func
 					
 					if (pAtkArmorBonus == 0)
 					{
-						_log.info("FuncEnchant: Error, item: " + item.getItemId() + " - " + item.getName() + " has no Physical Attack bonus for the body part.");
+						_log.info("FuncEnchant: Error, item: " + item.getId() + " - " + item.getName() + " has no Physical Attack bonus for the body part.");
 						break;
 					}
 					

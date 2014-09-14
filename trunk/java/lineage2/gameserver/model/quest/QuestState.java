@@ -682,7 +682,7 @@ public final class QuestState
 			player.getInventory().addItem(item);
 		}
 		
-		player.sendPacket(SystemMessage2.obtainItems(template.getItemId(), count, 0));
+		player.sendPacket(SystemMessage2.obtainItems(template.getId(), count, 0));
 		player.sendChanges();
 	}
 	

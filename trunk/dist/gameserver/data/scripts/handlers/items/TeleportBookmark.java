@@ -61,7 +61,7 @@ public final class TeleportBookmark extends SimpleItemHandler
 		}
 		
 		player.getInventory().destroyItem(item, 1);
-		player.sendPacket(new SystemMessage2(SystemMsg.S1_HAS_DISAPPEARED).addItemName(item.getItemId()));
+		player.sendPacket(new SystemMessage2(SystemMsg.S1_HAS_DISAPPEARED).addItemName(item.getId()));
 		player.bookmarks.setCapacity(player.bookmarks.getCapacity() + 3);
 		player.sendPacket(SystemMsg.THE_NUMBER_OF_MY_TELEPORTS_SLOTS_HAS_BEEN_INCREASED);
 		return true;

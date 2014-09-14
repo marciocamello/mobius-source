@@ -122,7 +122,7 @@ public class RequestExSendPost extends L2GameClientPacket
 				for (int i = 0; i < _items.length; i++)
 				{
 					ItemInstance item = activeChar.getInventory().getItemByObjectId(_items[i]);
-					map.put(item.getItemId(), _itemQ[i]);
+					map.put(item.getId(), _itemQ[i]);
 				}
 			}
 			
@@ -286,7 +286,7 @@ public class RequestExSendPost extends L2GameClientPacket
 				{
 					ItemInstance item = activeChar.getInventory().getItemByObjectId(_items[i]);
 					
-					if ((item == null) || (item.getCount() < _itemQ[i]) || ((item.getItemId() == ItemTemplate.ITEM_ID_ADENA) && (item.getCount() < (_itemQ[i] + serviceCost))) || !item.canBeTraded(activeChar))
+					if ((item == null) || (item.getCount() < _itemQ[i]) || ((item.getId() == ItemTemplate.ITEM_ID_ADENA) && (item.getCount() < (_itemQ[i] + serviceCost))) || !item.canBeTraded(activeChar))
 					{
 						activeChar.sendPacket(new SystemMessage(SystemMessage.THE_ITEM_THAT_YOU_RE_TRYING_TO_SEND_CANNOT_BE_FORWARDED_BECAUSE_IT_ISN_T_PROPER));
 						return;

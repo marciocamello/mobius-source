@@ -85,7 +85,7 @@ public class ItemInfoCache
 			
 			if (item != null)
 			{
-				if (item.getItemId() == info.getItemId())
+				if (item.getId() == info.getId())
 				{
 					cache.put(new Element(item.getObjectId(), info = new ItemInfo(item)));
 				}

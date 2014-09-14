@@ -172,7 +172,7 @@ public class RequestBuyItem extends L2GameClientPacket
 				
 				for (TradeItem ti : tradeList)
 				{
-					if (ti.getItemId() == itemId)
+					if (ti.getId() == itemId)
 					{
 						if (ti.isCountLimited() && (ti.getCurrentValue() < count))
 						{
@@ -227,7 +227,7 @@ public class RequestBuyItem extends L2GameClientPacket
 			
 			for (TradeItem ti : buyList)
 			{
-				activeChar.getInventory().addItem(ti.getItemId(), ti.getCount());
+				activeChar.getInventory().addItem(ti.getId(), ti.getCount());
 			}
 			
 			list.updateItems(buyList);

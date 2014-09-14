@@ -80,7 +80,7 @@ public final class ibbuffalo extends Functions
 		int controlItemId = pl_pet.getControlItemObjId();
 		player.getSummonList().unsummonPet(false);
 		ItemInstance control = player.getInventory().getItemByObjectId(controlItemId);
-		control.setItemId(IN_BABY_BUFFALO_NECKLACE);
+		control.setId(IN_BABY_BUFFALO_NECKLACE);
 		control.setEnchantLevel(L2Pet.IMPROVED_BABY_BUFFALO.getMinLevel());
 		control.setJdbcState(JdbcEntityState.UPDATED);
 		control.update();

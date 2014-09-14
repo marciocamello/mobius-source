@@ -162,27 +162,27 @@ public final class ArmorSet
 		
 		if (chestItem != null)
 		{
-			chest = chestItem.getItemId();
+			chest = chestItem.getId();
 		}
 		
 		if (legsItem != null)
 		{
-			legs = legsItem.getItemId();
+			legs = legsItem.getId();
 		}
 		
 		if (headItem != null)
 		{
-			head = headItem.getItemId();
+			head = headItem.getId();
 		}
 		
 		if (glovesItem != null)
 		{
-			gloves = glovesItem.getItemId();
+			gloves = glovesItem.getId();
 		}
 		
 		if (feetItem != null)
 		{
-			feet = feetItem.getItemId();
+			feet = feetItem.getId();
 		}
 		
 		return containAll(chest, legs, head, gloves, feet);
@@ -278,27 +278,27 @@ public final class ArmorSet
 		
 		if (chestItem != null)
 		{
-			chest = chestItem.getItemId();
+			chest = chestItem.getId();
 		}
 		
 		if (legsItem != null)
 		{
-			legs = legsItem.getItemId();
+			legs = legsItem.getId();
 		}
 		
 		if (headItem != null)
 		{
-			head = headItem.getItemId();
+			head = headItem.getId();
 		}
 		
 		if (glovesItem != null)
 		{
-			gloves = glovesItem.getItemId();
+			gloves = glovesItem.getId();
 		}
 		
 		if (feetItem != null)
 		{
-			feet = feetItem.getItemId();
+			feet = feetItem.getId();
 		}
 		
 		int result = 0;
@@ -398,7 +398,7 @@ public final class ArmorSet
 		Inventory inv = player.getInventory();
 		ItemInstance shieldItem = inv.getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		
-		if ((shieldItem != null) && _shield.contains(shieldItem.getItemId()))
+		if ((shieldItem != null) && _shield.contains(shieldItem.getId()))
 		{
 			return true;
 		}

@@ -36,7 +36,7 @@ public final class AppearanceStones extends ScriptItemHandler
 		}
 		
 		player.setAppearanceStone(item);
-		player.sendPacket(new ExChooseShapeShiftingItem(EnchantItemHolder.getInstance().getAppearanceStone(item.getItemId())));
+		player.sendPacket(new ExChooseShapeShiftingItem(EnchantItemHolder.getInstance().getAppearanceStone(item.getId())));
 		return true;
 	}
 	

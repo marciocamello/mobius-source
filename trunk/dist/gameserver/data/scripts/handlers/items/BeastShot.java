@@ -54,7 +54,7 @@ public final class BeastShot extends ScriptItemHandler
 		final Player player = (Player) playable;
 		boolean isAutoSoulShot = false;
 		
-		if (player.getAutoSoulShot().contains(item.getItemId()))
+		if (player.getAutoSoulShot().contains(item.getId()))
 		{
 			isAutoSoulShot = true;
 		}
@@ -94,7 +94,7 @@ public final class BeastShot extends ScriptItemHandler
 		
 		for (Summon pet : player.getSummonList())
 		{
-			switch (item.getItemId())
+			switch (item.getId())
 			{
 				case 6645:
 				case 20332:

@@ -96,7 +96,7 @@ public class KamaelWeaponExchange extends Skill
 		
 		player.getInventory().unEquipItem(item);
 		player.sendPacket(new InventoryUpdate().addRemovedItem(item));
-		item.setItemId(itemId);
+		item.setId(itemId);
 		player.sendPacket(new ShortCutInit(player));
 		
 		for (int shotId : player.getAutoSoulShot())

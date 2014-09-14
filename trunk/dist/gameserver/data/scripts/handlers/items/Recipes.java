@@ -64,7 +64,7 @@ public final class Recipes extends ScriptItemHandler
 		}
 		
 		final Player player = (Player) playable;
-		final RecipeTemplate rp = RecipeHolder.getInstance().getRecipeByRecipeItem(item.getItemId());
+		final RecipeTemplate rp = RecipeHolder.getInstance().getRecipeByRecipeItem(item.getId());
 		
 		if (rp.isDwarven())
 		{
@@ -95,7 +95,7 @@ public final class Recipes extends ScriptItemHandler
 				}
 				
 				player.registerRecipe(rp, true);
-				player.sendPacket(new SystemMessage(SystemMessage.S1_HAS_BEEN_ADDED).addItemName(item.getItemId()));
+				player.sendPacket(new SystemMessage(SystemMessage.S1_HAS_BEEN_ADDED).addItemName(item.getId()));
 				player.sendPacket(new RecipeBookItemList(player, true));
 				return true;
 			}
@@ -123,7 +123,7 @@ public final class Recipes extends ScriptItemHandler
 			}
 			
 			player.registerRecipe(rp, true);
-			player.sendPacket(new SystemMessage(SystemMessage.S1_HAS_BEEN_ADDED).addItemName(item.getItemId()));
+			player.sendPacket(new SystemMessage(SystemMessage.S1_HAS_BEEN_ADDED).addItemName(item.getId()));
 			player.sendPacket(new RecipeBookItemList(player, false));
 			return true;
 		}

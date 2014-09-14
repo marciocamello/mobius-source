@@ -50,7 +50,7 @@ public final class RollingDice extends ScriptItemHandler
 		}
 		
 		final Player player = (Player) playable;
-		final int itemId = item.getItemId();
+		final int itemId = item.getId();
 		
 		if (player.isInOlympiadMode())
 		{

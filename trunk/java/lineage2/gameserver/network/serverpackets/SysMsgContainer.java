@@ -112,7 +112,7 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		}
 		else if (object.isItem())
 		{
-			return add(new ItemNameArgument(((ItemInstance) object).getItemId()));
+			return add(new ItemNameArgument(((ItemInstance) object).getId()));
 		}
 		else if (object.isPlayer())
 		{
@@ -167,7 +167,7 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 	
 	public T addItemNameWithAugmentation(ItemInstance item)
 	{
-		return add(new ItemNameWithAugmentationArgument(item.getItemId(), item.getAugmentationId()));
+		return add(new ItemNameWithAugmentationArgument(item.getId(), item.getAugmentationId()));
 	}
 	
 	public T addZoneName(Creature c)

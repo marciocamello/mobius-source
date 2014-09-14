@@ -175,8 +175,8 @@ public class FishingSkill extends Skill
 		}
 		
 		zone.getParams().getInteger("distribution_id");
-		int lureId = lure.getItemId();
-		int group = lineage2.gameserver.model.Fishing.getFishGroup(lure.getItemId());
+		int lureId = lure.getId();
+		int group = lineage2.gameserver.model.Fishing.getFishGroup(lure.getId());
 		int type = lineage2.gameserver.model.Fishing.getRandomFishType(lureId);
 		int lvl = lineage2.gameserver.model.Fishing.getRandomFishLvl(player);
 		List<FishTemplate> fishs = FishTable.getInstance().getFish(group, type, lvl);

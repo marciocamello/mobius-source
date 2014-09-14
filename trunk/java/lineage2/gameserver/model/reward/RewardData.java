@@ -85,12 +85,12 @@ public class RewardData implements Cloneable
 	}
 	
 	/**
-	 * Method getItemId.
+	 * Method getId.
 	 * @return int
 	 */
-	public int getItemId()
+	public int getId()
 	{
-		return _item.getItemId();
+		return _item.getId();
 	}
 	
 	/**
@@ -191,7 +191,7 @@ public class RewardData implements Cloneable
 	@Override
 	public RewardData clone()
 	{
-		return new RewardData(getItemId(), getMinDrop(), getMaxDrop(), getChance());
+		return new RewardData(getId(), getMinDrop(), getMaxDrop(), getChance());
 	}
 	
 	/**
@@ -205,7 +205,7 @@ public class RewardData implements Cloneable
 		if (o instanceof RewardData)
 		{
 			RewardData drop = (RewardData) o;
-			return drop.getItemId() == getItemId();
+			return drop.getId() == getId();
 		}
 		
 		return false;
@@ -260,7 +260,7 @@ public class RewardData implements Cloneable
 				
 				if (t == null)
 				{
-					ret.add(t = new RewardItem(_item.getItemId()));
+					ret.add(t = new RewardItem(_item.getId()));
 					t.count = count;
 				}
 				else
