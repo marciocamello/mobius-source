@@ -102,7 +102,7 @@ public class Q00139_ShadowFoxPart1 extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (npcId == MIA)
 		{

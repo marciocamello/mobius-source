@@ -49,7 +49,7 @@ public final class Birthday extends Functions
 		
 		for (NpcInstance n : World.getAroundNpc(npc))
 		{
-			if (n.getNpcId() == NPC_ALEGRIA)
+			if (n.getId() == NPC_ALEGRIA)
 			{
 				show(msgSpawned, player, npc);
 				return;

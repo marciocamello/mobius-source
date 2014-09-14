@@ -75,7 +75,7 @@ public class Q10318_DecayingDarkness extends Quest implements ScriptFile
 		Player player = st.getPlayer();
 		QuestState previous = player.getQuestState(Q10317_OrbisWitch.class);
 		
-		if (npc.getNpcId() == NPC_LYDIA)
+		if (npc.getId() == NPC_LYDIA)
 		{
 			if ((previous == null) || (!previous.isCompleted()) || (player.getLevel() < 95))
 			{
@@ -127,7 +127,7 @@ public class Q10318_DecayingDarkness extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		if ((st.getCond() == 1) && (ArrayUtils.contains(MOB_ANCIENT_HEROES, npc.getNpcId())))
+		if ((st.getCond() == 1) && (ArrayUtils.contains(MOB_ANCIENT_HEROES, npc.getId())))
 		{
 			if (st.rollAndGive(ITEM_CURSE_RESIDUE, 1, 1, 8, 100))
 			{

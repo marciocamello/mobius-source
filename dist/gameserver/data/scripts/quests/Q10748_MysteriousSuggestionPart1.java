@@ -55,7 +55,7 @@ public class Q10748_MysteriousSuggestionPart1 extends Quest implements ScriptFil
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		String htmltext = "noquest";
 		

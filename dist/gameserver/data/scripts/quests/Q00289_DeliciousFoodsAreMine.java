@@ -204,7 +204,7 @@ public class Q00289_DeliciousFoodsAreMine extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		
-		if (npc.getNpcId() == GuardStan)
+		if (npc.getId() == GuardStan)
 		{
 			if (cond == 0)
 			{
@@ -246,7 +246,7 @@ public class Q00289_DeliciousFoodsAreMine extends Quest implements ScriptFile
 		
 		if (cond == 1)
 		{
-			if (ArrayUtils.contains(SelMahums, npc.getNpcId()) || (npc.getNpcId() == SelChef))
+			if (ArrayUtils.contains(SelMahums, npc.getId()) || (npc.getId() == SelChef))
 			{
 				if (!st.rollAndGive(FullBarrelofSoup, 1, 15))
 				{

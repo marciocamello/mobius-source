@@ -137,7 +137,7 @@ public class Q00512_BladeUnderFoot extends Quest implements ScriptFile
 		{
 			if (prison.getReflectionId() == npc.getReflectionId())
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case RhiannaTheTraitor:
 					case TeslaTheDeceiver:

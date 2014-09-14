@@ -34,7 +34,7 @@ public final class SpezionMonster extends Mystic
 	{
 		NpcInstance actor = getActor();
 		
-		if (actor.getNpcId() == 22985)
+		if (actor.getId() == 22985)
 		{
 			Reflection r = actor.getReflection();
 			
@@ -54,7 +54,7 @@ public final class SpezionMonster extends Mystic
 		NpcInstance actor = getActor();
 		Creature randomHated = actor.getAggroList().getRandomHated();
 		
-		if (((randomHated != null) && (actor.getNpcId() == 22971)) || (actor.getNpcId() == 22972))
+		if (((randomHated != null) && (actor.getId() == 22971)) || (actor.getId() == 22972))
 		{
 			actor.doCast(SkillTable.getInstance().getInfo(14139, 1), randomHated, true);
 		}

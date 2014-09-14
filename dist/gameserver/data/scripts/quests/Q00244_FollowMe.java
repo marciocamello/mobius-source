@@ -117,7 +117,7 @@ public class Q00244_FollowMe extends Quest implements ScriptFile
 		Player player = st.getPlayer();
 		String htmltext = "noquest";
 		
-		if (npc.getNpcId() == NPC_ISAEL)
+		if (npc.getId() == NPC_ISAEL)
 		{
 			switch (st.getState())
 			{
@@ -212,7 +212,7 @@ public class Q00244_FollowMe extends Quest implements ScriptFile
 	@Override
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
-		if ((player.getObjectId() == sponsorObjId) && (npc.getNpcId() == NPC_ISAEL))
+		if ((player.getObjectId() == sponsorObjId) && (npc.getId() == NPC_ISAEL))
 		{
 			if ((sponsoredPlayer != null) && sponsoredPlayer.isOnline())
 			{
@@ -235,7 +235,7 @@ public class Q00244_FollowMe extends Quest implements ScriptFile
 		
 		if (st.getCond() == 1)
 		{
-			if ((ArrayUtils.contains(monstersValley, npc.getNpcId())) && (Rnd.chance(50)))
+			if ((ArrayUtils.contains(monstersValley, npc.getId())) && (Rnd.chance(50)))
 			{
 				st.giveItems(ITEM_TAMLIN_ORC_MARK, 1, true);
 				st.playSound("ItemSound.quest_itemget");
@@ -249,7 +249,7 @@ public class Q00244_FollowMe extends Quest implements ScriptFile
 		}
 		else if (st.getCond() == 4)
 		{
-			if (ArrayUtils.contains(monstersValley, npc.getNpcId()))
+			if (ArrayUtils.contains(monstersValley, npc.getId()))
 			{
 				if ((player.getPledgeType() == Clan.SUBUNIT_ACADEMY) && (player.getSponsor() != 0))
 				{

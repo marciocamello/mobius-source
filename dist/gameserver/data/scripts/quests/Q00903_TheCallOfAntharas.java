@@ -63,7 +63,7 @@ public class Q00903_TheCallOfAntharas extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		
-		if (npc.getNpcId() == Theodric)
+		if (npc.getId() == Theodric)
 		{
 			switch (st.getState())
 			{
@@ -118,7 +118,7 @@ public class Q00903_TheCallOfAntharas extends Quest implements ScriptFile
 		
 		if (cond == 1)
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case TaraskDragon:
 					if (st.getQuestItemsCount(TaraskDragonsLeatherFragment) < 1)

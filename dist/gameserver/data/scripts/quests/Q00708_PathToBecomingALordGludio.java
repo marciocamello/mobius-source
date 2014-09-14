@@ -135,7 +135,7 @@ public class Q00708_PathToBecomingALordGludio extends Quest implements ScriptFil
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		Castle castle = ResidenceHolder.getInstance().getResidence(GludioCastle);
 		if (castle.getOwner() == null)

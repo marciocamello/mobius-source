@@ -24,7 +24,7 @@ public class NpcSayNative extends L2GameServerPacket
 	{
 		_msgId = msgId;
 		_objId = npc.getObjectId();
-		_id = npc.getNpcId();
+		_id = npc.getId();
 	}
 	
 	@Override

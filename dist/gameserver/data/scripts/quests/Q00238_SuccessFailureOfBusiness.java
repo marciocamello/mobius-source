@@ -74,7 +74,7 @@ public class Q00238_SuccessFailureOfBusiness extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int id = st.getState();
 		int cond = st.getCond();
 		
@@ -132,7 +132,7 @@ public class Q00238_SuccessFailureOfBusiness extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		
-		if ((cond == 1) && (npc.getNpcId() == BrazierOfPurity))
+		if ((cond == 1) && (npc.getId() == BrazierOfPurity))
 		{
 			st.giveItems(BrokenPieveOfMagicForce, 1);
 			
@@ -141,7 +141,7 @@ public class Q00238_SuccessFailureOfBusiness extends Quest implements ScriptFile
 				st.setCond(2);
 			}
 		}
-		else if ((cond == 3) && ((npc.getNpcId() == EvilSpirit) || (npc.getNpcId() == GuardianSpirit)))
+		else if ((cond == 3) && ((npc.getId() == EvilSpirit) || (npc.getId() == GuardianSpirit)))
 		{
 			st.giveItems(GuardianSpiritFragment, 1);
 			

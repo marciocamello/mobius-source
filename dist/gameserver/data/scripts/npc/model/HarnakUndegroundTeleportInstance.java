@@ -141,13 +141,13 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 		{
 			List<int[]> lst = Arrays.asList(cycleEndTeleports);
 			
-			if (lst.contains(getNpcId()))
+			if (lst.contains(getId()))
 			{
-				player.teleToLocation(teleCoords.get(Integer.valueOf(getNpcId() - 7)));
+				player.teleToLocation(teleCoords.get(Integer.valueOf(getId() - 7)));
 			}
 			else
 			{
-				player.teleToLocation(teleCoords.get(Integer.valueOf(getNpcId() + 1)));
+				player.teleToLocation(teleCoords.get(Integer.valueOf(getId() + 1)));
 			}
 		}
 		
@@ -155,13 +155,13 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 		{
 			List<int[]> lst = Arrays.asList(cycleStartTeleports);
 			
-			if (lst.contains(getNpcId()))
+			if (lst.contains(getId()))
 			{
-				player.teleToLocation(teleCoords.get(Integer.valueOf(getNpcId() + 7)));
+				player.teleToLocation(teleCoords.get(Integer.valueOf(getId() + 7)));
 			}
 			else
 			{
-				player.teleToLocation(teleCoords.get(Integer.valueOf(getNpcId() - 1)));
+				player.teleToLocation(teleCoords.get(Integer.valueOf(getId() - 1)));
 			}
 		}
 		
@@ -169,7 +169,7 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 		{
 			if (player.getInventory().getItemByItemId(SEALED_HARNAK_KEY) != null)
 			{
-				if (HarnakUndegroundManager.getInstance().addSecondStagePoint(getNpcId(), player))
+				if (HarnakUndegroundManager.getInstance().addSecondStagePoint(getId(), player))
 				{
 					showChatWindow(player, "default/altar-ok.htm");
 					player.getInventory().removeItemByItemId(30429, 1);
@@ -196,7 +196,7 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 			}
 			else
 			{
-				showChatWindow(player, "default/" + getNpcId() + "-1.htm");
+				showChatWindow(player, "default/" + getId() + "-1.htm");
 			}
 		}
 		
@@ -204,7 +204,7 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 		{
 			if (player.getInventory().getItemByItemId(HARNAK_KEY) != null)
 			{
-				if (HarnakUndegroundManager.getInstance().addThirdStagePoint(getNpcId(), player))
+				if (HarnakUndegroundManager.getInstance().addThirdStagePoint(getId(), player))
 				{
 					showChatWindow(player, "default/prison-ok.htm");
 					player.getInventory().removeItemByItemId(30430, 1);
@@ -231,7 +231,7 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 			}
 			else
 			{
-				showChatWindow(player, "default/" + getNpcId() + "-1.htm");
+				showChatWindow(player, "default/" + getId() + "-1.htm");
 			}
 		}
 		else
@@ -270,7 +270,7 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 				_stateSecond = 0;
 				setNpcState(9);
 				setNpcState(_stateSecond);
-				HarnakUndegroundManager.getInstance().requestRemoveNpcFromListSecond(getNpcId());
+				HarnakUndegroundManager.getInstance().requestRemoveNpcFromListSecond(getId());
 			}
 		}
 	}
@@ -323,7 +323,7 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 				_stateThird = 0;
 				setNpcState(9);
 				setNpcState(_stateThird);
-				HarnakUndegroundManager.getInstance().requestRemoveNpcFromListThird(getNpcId());
+				HarnakUndegroundManager.getInstance().requestRemoveNpcFromListThird(getId());
 			}
 		}
 	}
@@ -337,13 +337,13 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 		@Override
 		public void onDeath(final Creature self, final Creature killer)
 		{
-			if (self.isNpc() && (self.getNpcId() == NOKTUM))
+			if (self.isNpc() && (self.getId() == NOKTUM))
 			{
 				self.broadcastPacketToOthers(new ExShowScreenMessage(NpcString.GHOST_OF_HARNAK_CAN_ONLY_BE_HIT_NEAR_SOUL_CIRCLE, 5000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
 				self.removeListener(_deathListener);
 			}
 			
-			if (self.isNpc() && (self.getNpcId() == DEMONIC_NOKTUM))
+			if (self.isNpc() && (self.getId() == DEMONIC_NOKTUM))
 			{
 				self.broadcastPacketToOthers(new ExShowScreenMessage(NpcString.GHOST_OF_HARNAK_CAN_ONLY_BE_HIT_NEAR_SOUL_CIRCLE, 5000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
 				self.removeListener(_deathListener);

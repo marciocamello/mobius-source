@@ -520,7 +520,7 @@ public class Q00335_TheSongOfTheHunter extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int _state = st.getState();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (_state == CREATED)
 		{
@@ -663,7 +663,7 @@ public class Q00335_TheSongOfTheHunter extends Quest implements ScriptFile
 		{
 			return null;
 		}
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		int[][][] Items_Circle = null;
 		if (st.getQuestItemsCount(_1st_Test_Instructions) > 0)

@@ -57,7 +57,7 @@ public final class NpcHolder extends AbstractHolder
 	 */
 	public void addTemplate(NpcTemplate template)
 	{
-		_npcs.put(template.npcId, template);
+		_npcs.put(template.getId(), template);
 	}
 	
 	/**

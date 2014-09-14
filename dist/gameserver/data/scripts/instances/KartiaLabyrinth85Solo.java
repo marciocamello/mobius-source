@@ -565,7 +565,7 @@ public final class KartiaLabyrinth85Solo extends Reflection
 			
 			for (NpcInstance n : getNpcs())
 			{
-				if (!ArrayUtils.contains(supporter, n.getNpcId()))
+				if (!ArrayUtils.contains(supporter, n.getId()))
 				{
 					n.deleteMe();
 				}
@@ -769,12 +769,12 @@ public final class KartiaLabyrinth85Solo extends Reflection
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
-			if (self.isNpc() && (self.getNpcId() == DimensionalWatchman))
+			if (self.isNpc() && (self.getId() == DimensionalWatchman))
 			{
 				ThreadPoolManager.getInstance().schedule(new SecondCycle(), 17000);
 				self.deleteMe();
 			}
-			else if (self.isNpc() && (self.getNpcId() == LordOfKartia))
+			else if (self.isNpc() && (self.getId() == LordOfKartia))
 			{
 				ThreadPoolManager.getInstance().schedule(new CloseInstance(), 9000);
 				self.deleteMe();

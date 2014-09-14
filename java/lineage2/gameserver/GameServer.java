@@ -294,9 +294,9 @@ public class GameServer
 		
 		// Uncomment to check for double spawns
 		/*
-		 * for (NpcInstance npcInst : GameObjectsStorage.getAllNpcsForIterate()) { final List<NpcInstance> around = npcInst.getAroundNpc(10, 10); if ((around != null) && !around.isEmpty()) { for (NpcInstance npc : around) { if ((npcInst.getNpcId() == npc.getNpcId()) && !npcInst.isMonster() &&
-		 * !npc.getTitle().equals("Double Spawn") && !npcInst.getName().contains("Star Stone") && !npcInst.getName().contains("Wisp")) { npcInst.setTitle("Double Spawn"); npc.setTitle("Double Spawn"); _log.info("Probable double spawn: NpcId " + npc.getNpcId() + " Location " + npc.getSpawnedLoc().getX() +
-		 * " " + npc.getSpawnedLoc().getY() + " " + npc.getSpawnedLoc().getZ() + " " + npc.getSpawnedLoc().getHeading()); } } } }
+		 * for (NpcInstance npcInst : GameObjectsStorage.getAllNpcsForIterate()) { final List<NpcInstance> around = npcInst.getAroundNpc(10, 10); if ((around != null) && !around.isEmpty()) { for (NpcInstance npc : around) { if ((npcInst.getId() == npc.getId()) && !npcInst.isMonster() &&
+		 * !npc.getTitle().equals("Double Spawn") && !npcInst.getName().contains("Star Stone") && !npcInst.getName().contains("Wisp")) { npcInst.setTitle("Double Spawn"); npc.setTitle("Double Spawn"); _log.info("Probable double spawn: NpcId " + npc.getId() + " Location " + npc.getSpawnedLoc().getX()
+		 * + " " + npc.getSpawnedLoc().getY() + " " + npc.getSpawnedLoc().getZ() + " " + npc.getSpawnedLoc().getHeading()); } } } }
 		 */
 		
 		Shutdown.getInstance().schedule(Config.RESTART_AT_TIME, Shutdown.RESTART);

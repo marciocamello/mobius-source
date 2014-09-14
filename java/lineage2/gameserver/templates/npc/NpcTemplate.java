@@ -68,7 +68,7 @@ public final class NpcTemplate extends CharTemplate
 		SOUL_BSPIRIT
 	}
 	
-	public final int npcId;
+	private final int npcId;
 	public final String name;
 	public final String title;
 	public final int level;
@@ -679,11 +679,11 @@ public final class NpcTemplate extends CharTemplate
 	}
 	
 	/**
-	 * Method getNpcId.
+	 * Method getId.
 	 * @return int
 	 */
 	@Override
-	public int getNpcId()
+	public int getId()
 	{
 		return npcId;
 	}

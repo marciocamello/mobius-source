@@ -203,7 +203,7 @@ public class Q00617_GatherTheFlames extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (npcId == VULCAN)
@@ -245,7 +245,7 @@ public class Q00617_GatherTheFlames extends Quest implements ScriptFile
 	{
 		for (int[] element : DROPLIST)
 		{
-			if (npc.getNpcId() == element[0])
+			if (npc.getId() == element[0])
 			{
 				st.rollAndGive(TORCH, 1, element[1]);
 				return null;

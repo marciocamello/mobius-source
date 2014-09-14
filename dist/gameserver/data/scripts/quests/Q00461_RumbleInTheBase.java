@@ -62,7 +62,7 @@ public class Q00461_RumbleInTheBase extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		
-		if (npc.getNpcId() == Stan)
+		if (npc.getId() == Stan)
 		{
 			switch (st.getState())
 			{
@@ -114,7 +114,7 @@ public class Q00461_RumbleInTheBase extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (cond == 1)
 		{

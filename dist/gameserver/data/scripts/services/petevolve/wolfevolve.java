@@ -58,7 +58,7 @@ public final class wolfevolve extends Functions
 			return;
 		}
 		
-		if (pl_pet.getNpcId() != WOLF)
+		if (pl_pet.getId() != WOLF)
 		{
 			show("scripts/services/petevolve/no_wolf.htm", player, npc);
 			return;

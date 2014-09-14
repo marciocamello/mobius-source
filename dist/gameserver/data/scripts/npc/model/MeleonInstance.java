@@ -87,7 +87,7 @@ public final class MeleonInstance extends SpecialMonsterInstance
 		
 		int weaponId = attacker.getActiveWeaponInstance().getItemId();
 		
-		if ((getNpcId() == Defective_Honey_Watermelon) || (getNpcId() == Rain_Honey_Watermelon) || (getNpcId() == Large_Rain_Honey_Watermelon))
+		if ((getId() == Defective_Honey_Watermelon) || (getId() == Rain_Honey_Watermelon) || (getId() == Large_Rain_Honey_Watermelon))
 		{
 			if ((weaponId != 4202) && (weaponId != 5133) && (weaponId != 5817) && (weaponId != 7058) && (weaponId != 8350))
 			{
@@ -96,7 +96,7 @@ public final class MeleonInstance extends SpecialMonsterInstance
 			
 			i = 1;
 		}
-		else if ((getNpcId() == Rain_Watermelon) || (getNpcId() == Defective_Watermelon) || (getNpcId() == Large_Rain_Watermelon))
+		else if ((getId() == Rain_Watermelon) || (getId() == Defective_Watermelon) || (getId() == Large_Rain_Watermelon))
 		{
 			i = 5;
 		}

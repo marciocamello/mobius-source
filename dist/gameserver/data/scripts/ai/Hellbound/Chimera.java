@@ -54,7 +54,7 @@ public final class Chimera extends Fighter
 			return;
 		}
 		
-		switch (actor.getNpcId())
+		switch (actor.getId())
 		{
 			case 22353:
 				actor.dropItem(caster.getPlayer(), 9682, 1);

@@ -117,7 +117,7 @@ public class Q00299_GatherIngredientsforPie extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int _state = st.getState();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (_state == CREATED)
 		{
 			if (npcId != Emily)
@@ -185,7 +185,7 @@ public class Q00299_GatherIngredientsforPie extends Quest implements ScriptFile
 			return null;
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (((npcId == Wasp_Worker) && Rnd.chance(Wasp_Worker_Chance)) || ((npcId == Wasp_Leader) && Rnd.chance(Wasp_Leader_Chance)))
 		{
 			qs.giveItems(Honey_Pouch, 1);

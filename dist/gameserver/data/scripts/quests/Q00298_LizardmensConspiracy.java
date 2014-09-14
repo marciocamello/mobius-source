@@ -123,7 +123,7 @@ public class Q00298_LizardmensConspiracy extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (npcId == PRAGA)
@@ -173,7 +173,7 @@ public class Q00298_LizardmensConspiracy extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int rand = Rnd.get(10);
 		
 		if (st.getCond() == 2)

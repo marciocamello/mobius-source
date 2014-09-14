@@ -114,7 +114,7 @@ public class Q00360_PlunderTheirSupplies extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (((npcId == TAIK_SEEKER) && Rnd.chance(ITEM_DROP_SEEKER)) || ((npcId == TAIK_LEADER) && Rnd.chance(ITEM_DROP_LEADER)))
 		{

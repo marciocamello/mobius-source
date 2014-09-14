@@ -66,7 +66,7 @@ public class Q10305_UnstoppableFutileEfforts extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		st.getPlayer();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int state = st.getState();
 		int cond = st.getCond();
 		

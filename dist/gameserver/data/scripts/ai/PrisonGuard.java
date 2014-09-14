@@ -47,7 +47,7 @@ public final class PrisonGuard extends Fighter
 	{
 		final NpcInstance actor = getActor();
 		
-		if (actor.isDead() || (actor.getNpcId() == 18367))
+		if (actor.isDead() || (actor.getId() == 18367))
 		{
 			return false;
 		}
@@ -82,11 +82,11 @@ public final class PrisonGuard extends Fighter
 		
 		if (attacker.getEffectList().getEffectsCountForSkill(Skill.SKILL_EVENT_TIMER) == 0)
 		{
-			if (actor.getNpcId() == 18367)
+			if (actor.getId() == 18367)
 			{
 				Functions.npcSay(actor, "It's not easy to obtain.");
 			}
-			else if (actor.getNpcId() == 18368)
+			else if (actor.getId() == 18368)
 			{
 				Functions.npcSay(actor, "You're out of mind comming here...");
 			}
@@ -102,7 +102,7 @@ public final class PrisonGuard extends Fighter
 			return;
 		}
 		
-		if (actor.getNpcId() == 18367)
+		if (actor.getId() == 18367)
 		{
 			notifyFriends(attacker, damage);
 			return;
@@ -125,7 +125,7 @@ public final class PrisonGuard extends Fighter
 			return;
 		}
 		
-		if ((actor.getNpcId() == 18367) && (killer.getPlayer().getEffectList().getEffectsBySkillId(Skill.SKILL_EVENT_TIMER) != null))
+		if ((actor.getId() == 18367) && (killer.getPlayer().getEffectList().getEffectsBySkillId(Skill.SKILL_EVENT_TIMER) != null))
 		{
 			Functions.addItem(killer.getPlayer(), RACE_STAMP, 1);
 		}

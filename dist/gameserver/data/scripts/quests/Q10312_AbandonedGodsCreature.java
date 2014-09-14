@@ -94,7 +94,7 @@ public class Q10312_AbandonedGodsCreature extends Quest implements ScriptFile
 		Player player = st.getPlayer();
 		QuestState previous = player.getQuestState(Q10310_TwistedCreationTree.class);
 		
-		if (npc.getNpcId() == 33031)
+		if (npc.getId() == 33031)
 		{
 			if ((previous == null) || (!previous.isCompleted()) || (player.getLevel() < 90))
 			{

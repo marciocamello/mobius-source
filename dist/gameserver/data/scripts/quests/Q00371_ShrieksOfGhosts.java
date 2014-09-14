@@ -145,7 +145,7 @@ public class Q00371_ShrieksOfGhosts extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int _state = st.getState();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (_state == CREATED)
 		{
@@ -188,7 +188,7 @@ public class Q00371_ShrieksOfGhosts extends Quest implements ScriptFile
 		}
 		
 		QuestState st = player.getQuestState(qs.getQuest().getName());
-		Integer _chance = common_chances.get(npc.getNpcId());
+		Integer _chance = common_chances.get(npc.getId());
 		
 		if (_chance == null)
 		{

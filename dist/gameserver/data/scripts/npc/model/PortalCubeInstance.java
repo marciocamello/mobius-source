@@ -60,15 +60,15 @@ public final class PortalCubeInstance extends NpcInstance
 		}
 		else if (command.equalsIgnoreCase("opengate"))
 		{
-			if (getNpcId() == 32951)
+			if (getId() == 32951)
 			{
 				((SpezionNormal) getReflection()).openGate(26190001);
 			}
-			else if (getNpcId() == 32952)
+			else if (getId() == 32952)
 			{
 				((SpezionNormal) getReflection()).openGate(26190006);
 			}
-			else if (getNpcId() == 32953)
+			else if (getId() == 32953)
 			{
 				((SpezionNormal) getReflection()).openGate(26190005);
 			}

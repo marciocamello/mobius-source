@@ -97,7 +97,7 @@ public final class Seed extends ScriptItemHandler
 		
 		for (NpcInstance npc : World.getAroundNpc(activeChar, 300, 200))
 		{
-			if ((npc.getNpcId() == _npcIds[0]) || (npc.getNpcId() == _npcIds[1]))
+			if ((npc.getId() == _npcIds[0]) || (npc.getId() == _npcIds[1]))
 			{
 				activeChar.sendPacket(new SystemMessage2(SystemMsg.SINCE_S1_ALREADY_EXISTS_NEARBY_YOU_CANNOT_SUMMON_IT_AGAIN).addName(npc));
 				return false;

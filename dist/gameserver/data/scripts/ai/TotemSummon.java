@@ -81,7 +81,7 @@ public final class TotemSummon extends DefaultAI
 			{
 				if (c.isPlayable() && !c.isDead())
 				{
-					c.altOnMagicUseTimer(c, SkillTable.getInstance().getInfo(getBuffId(getActor().getNpcId()), 1));
+					c.altOnMagicUseTimer(c, SkillTable.getInstance().getInfo(getBuffId(getActor().getId()), 1));
 				}
 			}
 		}

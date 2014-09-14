@@ -59,7 +59,7 @@ public class Q10326_RespectYourElders extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getInt("cond");
 		Player player = st.getPlayer();
 		

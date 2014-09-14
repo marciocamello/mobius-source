@@ -127,7 +127,7 @@ public class Q00254_LegendaryTales extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		
-		if (npc.getNpcId() == Gilmore)
+		if (npc.getId() == Gilmore)
 		{
 			if (cond == 0)
 			{
@@ -169,7 +169,7 @@ public class Q00254_LegendaryTales extends Quest implements ScriptFile
 		if (cond == 1)
 		{
 			int mask = 1;
-			int var = npc.getNpcId();
+			int var = npc.getId();
 			
 			for (int raid : raids)
 			{

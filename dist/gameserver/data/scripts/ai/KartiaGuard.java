@@ -74,7 +74,7 @@ public final class KartiaGuard extends Fighter
 		}
 		
 		// Check for Heal
-		if ((actor.getNpcId() == 33639) || (actor.getNpcId() == 33628) || (actor.getNpcId() == 33617))
+		if ((actor.getId() == 33639) || (actor.getId() == 33628) || (actor.getId() == 33617))
 		{
 			if ((master != null) && !master.isDead() && (master.getCurrentHpPercents() < 80))
 			{
@@ -87,7 +87,7 @@ public final class KartiaGuard extends Fighter
 		}
 		
 		// Check for Aggression
-		if ((actor.getNpcId() == 33609) || (actor.getNpcId() == 33620) || (actor.getNpcId() == 33631))
+		if ((actor.getId() == 33609) || (actor.getId() == 33620) || (actor.getId() == 33631))
 		{
 			if ((master != null) && !master.isDead() && (master.getTarget() != null))
 			{

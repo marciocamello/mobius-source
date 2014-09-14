@@ -106,25 +106,25 @@ public final class SubClassManagerInstance extends NpcInstance
 		{
 			if (player.getSummonList().size() > 0)
 			{
-				showChatWindow(player, "default/" + getNpcId() + "-no_servitor.htm");
+				showChatWindow(player, "default/" + getId() + "-no_servitor.htm");
 				return;
 			}
 			
 			if (player.getTransformation() != 0)
 			{
-				showChatWindow(player, "default/" + getNpcId() + "-no_transform.htm");
+				showChatWindow(player, "default/" + getId() + "-no_transform.htm");
 				return;
 			}
 			
 			if ((player.getWeightPenalty() >= 3) || ((player.getInventoryLimit() * 0.8) < player.getInventory().getSize()))
 			{
-				showChatWindow(player, "default/" + getNpcId() + "-no_weight.htm");
+				showChatWindow(player, "default/" + getId() + "-no_weight.htm");
 				return;
 			}
 			
 			if (player.getLevel() < 40)
 			{
-				showChatWindow(player, "default/" + getNpcId() + "-no_level.htm");
+				showChatWindow(player, "default/" + getId() + "-no_level.htm");
 				return;
 			}
 			
@@ -134,7 +134,7 @@ public final class SubClassManagerInstance extends NpcInstance
 			{
 				if (player.getSubClassList().size() >= SubClassList.MAX_SUB_COUNT)
 				{
-					showChatWindow(player, "default/" + getNpcId() + "-add_no_limit.htm");
+					showChatWindow(player, "default/" + getId() + "-add_no_limit.htm");
 					return;
 				}
 				
@@ -144,7 +144,7 @@ public final class SubClassManagerInstance extends NpcInstance
 				{
 					if (subClass.getLevel() < Config.ALT_GAME_LEVEL_TO_GET_SUBCLASS)
 					{
-						showChatWindow(player, "default/" + getNpcId() + "-add_no_level.htm", "<?LEVEL?>", Config.ALT_GAME_LEVEL_TO_GET_SUBCLASS);
+						showChatWindow(player, "default/" + getId() + "-add_no_level.htm", "<?LEVEL?>", Config.ALT_GAME_LEVEL_TO_GET_SUBCLASS);
 						return;
 					}
 				}
@@ -159,7 +159,7 @@ public final class SubClassManagerInstance extends NpcInstance
 						availSubList.append("<a action=\"bypass -h npc_%objectId%_subclass_add_" + subClsId.getId() + "\">" + HtmlUtils.htmlClassName(subClsId.getId()) + "/" + HtmlUtils.htmlClassName(getChildClass(subClsId.getId())) + "</a><br>");
 					}
 					
-					showChatWindow(player, "default/" + getNpcId() + "-add_list.htm", "<?ADD_SUB_LIST?>", availSubList.toString());
+					showChatWindow(player, "default/" + getId() + "-add_list.htm", "<?ADD_SUB_LIST?>", availSubList.toString());
 					return;
 				}
 				
@@ -168,7 +168,7 @@ public final class SubClassManagerInstance extends NpcInstance
 				if (!st.hasMoreTokens())
 				{
 					String addSubConfirm = "<a action=\"bypass -h npc_%objectId%_subclass_add_" + addSubClassId + "_confirm\">" + HtmlUtils.htmlClassName(addSubClassId) + "/" + HtmlUtils.htmlClassName(getChildClass(addSubClassId)) + "</a>";
-					showChatWindow(player, "default/" + getNpcId() + "-add_confirm.htm", "<?ADD_SUB_CONFIRM?>", addSubConfirm);
+					showChatWindow(player, "default/" + getId() + "-add_confirm.htm", "<?ADD_SUB_CONFIRM?>", addSubConfirm);
 					return;
 				}
 				
@@ -187,11 +187,11 @@ public final class SubClassManagerInstance extends NpcInstance
 						player.rewardSkills(false, true);
 						player.sendSkillList();
 						player.sendPacket(SystemMsg.THE_NEW_SUBCLASS_HAS_BEEN_ADDED);
-						showChatWindow(player, "default/" + getNpcId() + "-add_success.htm");
+						showChatWindow(player, "default/" + getId() + "-add_success.htm");
 						return;
 					}
 					
-					showChatWindow(player, "default/" + getNpcId() + "-add_error.htm");
+					showChatWindow(player, "default/" + getId() + "-add_error.htm");
 					return;
 				}
 			}
@@ -199,13 +199,13 @@ public final class SubClassManagerInstance extends NpcInstance
 			{
 				if (!player.getSubClassList().haveSubClasses())
 				{
-					showChatWindow(player, "default/" + getNpcId() + "-no_quest.htm");
+					showChatWindow(player, "default/" + getId() + "-no_quest.htm");
 					return;
 				}
 				
 				if (ItemFunctions.getItemCount(player, CERTIFICATE_ID) == 0)
 				{
-					showChatWindow(player, "default/" + getNpcId() + "-no_certificate.htm");
+					showChatWindow(player, "default/" + getId() + "-no_certificate.htm");
 					return;
 				}
 			}
@@ -213,7 +213,7 @@ public final class SubClassManagerInstance extends NpcInstance
 			{
 				if (!player.getSubClassList().haveSubClasses())
 				{
-					showChatWindow(player, "default/" + getNpcId() + "-cancel_no_subs.htm");
+					showChatWindow(player, "default/" + getId() + "-cancel_no_subs.htm");
 					return;
 				}
 				
@@ -243,7 +243,7 @@ public final class SubClassManagerInstance extends NpcInstance
 						mySubList.append("<a action=\"bypass -h npc_%objectId%_subclass_cancel_" + classId + "\">" + HtmlUtils.htmlClassName(classId) + "/" + HtmlUtils.htmlClassName(getChildClass(classId)) + "</a><br>");
 					}
 					
-					showChatWindow(player, "default/" + getNpcId() + "-cancel_list.htm", "<?CANCEL_SUB_LIST?>", mySubList.toString());
+					showChatWindow(player, "default/" + getId() + "-cancel_list.htm", "<?CANCEL_SUB_LIST?>", mySubList.toString());
 					return;
 				}
 				
@@ -259,7 +259,7 @@ public final class SubClassManagerInstance extends NpcInstance
 						availSubList.append("<a action=\"bypass -h npc_%objectId%_subclass_cancel_" + cancelClassId + "_" + subClsId + "\">" + HtmlUtils.htmlClassName(subClsId) + "/" + HtmlUtils.htmlClassName(getChildClass(subClsId)) + "</a><br>");
 					}
 					
-					showChatWindow(player, "default/" + getNpcId() + "-cancel_change_list.htm", "<?CANCEL_CHANGE_SUB_LIST?>", availSubList.toString());
+					showChatWindow(player, "default/" + getId() + "-cancel_change_list.htm", "<?CANCEL_CHANGE_SUB_LIST?>", availSubList.toString());
 					return;
 				}
 				
@@ -268,7 +268,7 @@ public final class SubClassManagerInstance extends NpcInstance
 				if (!st.hasMoreTokens())
 				{
 					String newSubConfirm = "<a action=\"bypass -h npc_%objectId%_subclass_cancel_" + cancelClassId + "_" + newSubClassId + "_confirm\">" + HtmlUtils.htmlClassName(newSubClassId) + "/" + HtmlUtils.htmlClassName(getChildClass(newSubClassId)) + "</a>";
-					showChatWindow(player, "default/" + getNpcId() + "-cancel_confirm.htm", "<?CANCEL_SUB_CONFIRM?>", newSubConfirm);
+					showChatWindow(player, "default/" + getId() + "-cancel_confirm.htm", "<?CANCEL_SUB_CONFIRM?>", newSubConfirm);
 					return;
 				}
 				
@@ -281,11 +281,11 @@ public final class SubClassManagerInstance extends NpcInstance
 						player.rewardSkills(false, true);
 						player.sendSkillList();
 						player.sendPacket(SystemMsg.THE_NEW_SUBCLASS_HAS_BEEN_ADDED);
-						showChatWindow(player, "default/" + getNpcId() + "-add_success.htm");
+						showChatWindow(player, "default/" + getId() + "-add_success.htm");
 						return;
 					}
 					
-					showChatWindow(player, "default/" + getNpcId() + "-add_error.htm");
+					showChatWindow(player, "default/" + getId() + "-add_error.htm");
 					return;
 				}
 			}
@@ -293,7 +293,7 @@ public final class SubClassManagerInstance extends NpcInstance
 			{
 				if (!player.getActiveSubClass().isDual() || !player.isAwaking() || !(player.getLevel() > 84))
 				{
-					showChatWindow(player, "default/" + getNpcId() + "-reawaken_nodual.htm");
+					showChatWindow(player, "default/" + getId() + "-reawaken_nodual.htm");
 					return;
 				}
 				
@@ -307,7 +307,7 @@ public final class SubClassManagerInstance extends NpcInstance
 						costList.append("<tr><td><center><font color=\"LEVEL\">" + e.getKey() + (e.getKey() == 94 ? "+" : " ") + "</font></center></td><td><center><font color=\"LEVEL\">" + e.getValue() + " Million</font></center></td></tr>");
 					}
 					
-					showChatWindow(player, "default/" + getNpcId() + "-reawaken_cost.htm", "<?COST?>", costList.toString());
+					showChatWindow(player, "default/" + getId() + "-reawaken_cost.htm", "<?COST?>", costList.toString());
 					return;
 				}
 				
@@ -323,7 +323,7 @@ public final class SubClassManagerInstance extends NpcInstance
 						availSubList.append("<a action=\"bypass -h npc_%objectId%_subclass_reawakendualclass_select_" + subClsId + "\">" + HtmlUtils.htmlClassName(subClsId) + "</a><br>");
 					}
 					
-					showChatWindow(player, "default/" + getNpcId() + "-reawaken_list.htm", "<?CANCEL_CHANGE_SUB_LIST?>", availSubList.toString());
+					showChatWindow(player, "default/" + getId() + "-reawaken_list.htm", "<?CANCEL_CHANGE_SUB_LIST?>", availSubList.toString());
 					return;
 				}
 				
@@ -332,7 +332,7 @@ public final class SubClassManagerInstance extends NpcInstance
 				if (!st.hasMoreTokens())
 				{
 					String newSubConfirm = "<a action=\"bypass -h npc_%objectId%_subclass_reawakendualclass_select_" + newSubClassId + "_confirm\">" + HtmlUtils.htmlClassName(newSubClassId) + "</a>";
-					showChatWindow(player, "default/" + getNpcId() + "-reawaken_confirm.htm", "<?CANCEL_SUB_CONFIRM?>", newSubConfirm);
+					showChatWindow(player, "default/" + getId() + "-reawaken_confirm.htm", "<?CANCEL_SUB_CONFIRM?>", newSubConfirm);
 					return;
 				}
 				
@@ -358,13 +358,13 @@ public final class SubClassManagerInstance extends NpcInstance
 						AwakingManager.getInstance().onTransferOnlyRemoveSkills(player, newSubClassId, humanSkillClassId);
 						AwakingManager.getInstance().giveItems(player, previousClassId, newSubClassId);
 						player.sendPacket(SystemMsg.THE_NEW_SUBCLASS_HAS_BEEN_ADDED);
-						showChatWindow(player, "default/" + getNpcId() + "-add_success.htm");
+						showChatWindow(player, "default/" + getId() + "-add_success.htm");
 						player.rewardSkills(false, true);
 						player.sendSkillList();
 						return;
 					}
 					
-					showChatWindow(player, "default/" + getNpcId() + "-add_error.htm");
+					showChatWindow(player, "default/" + getId() + "-add_error.htm");
 					return;
 				}
 			}
@@ -388,7 +388,7 @@ public final class SubClassManagerInstance extends NpcInstance
 			}
 			else if (cmd2.equalsIgnoreCase("CancelRequest"))
 			{
-				showChatWindow(player, "default/" + getNpcId() + "-cancelrequest.htm");
+				showChatWindow(player, "default/" + getId() + "-cancelrequest.htm");
 				return;
 			}
 			else if (cmd2.equalsIgnoreCase("CertificationList"))
@@ -444,7 +444,7 @@ public final class SubClassManagerInstance extends NpcInstance
 			{
 				if (!st.hasMoreTokens())
 				{
-					showChatWindow(player, "default/" + getNpcId() + "-certification_cancel.htm", "<?COST?>", Config.ALT_GAME_RESET_CERTIFICATION_COST / 1000000);
+					showChatWindow(player, "default/" + getId() + "-certification_cancel.htm", "<?COST?>", Config.ALT_GAME_RESET_CERTIFICATION_COST / 1000000);
 					return;
 				}
 				
@@ -459,7 +459,7 @@ public final class SubClassManagerInstance extends NpcInstance
 			{
 				if (!st.hasMoreTokens())
 				{
-					showChatWindow(player, "default/" + getNpcId() + "-dualcertification_cancel.htm", "<?COST?>", Config.ALT_GAME_RESET_DUALCERTIFICATION_COST / 1000000);
+					showChatWindow(player, "default/" + getId() + "-dualcertification_cancel.htm", "<?COST?>", Config.ALT_GAME_RESET_DUALCERTIFICATION_COST / 1000000);
 					return;
 				}
 				
@@ -488,7 +488,7 @@ public final class SubClassManagerInstance extends NpcInstance
 		{
 			if (!player.isQuestCompleted("Q00136_MoreThanMeetsTheEye"))
 			{
-				showChatWindow(player, "trainer/" + getNpcId() + "-noquest.htm");
+				showChatWindow(player, "trainer/" + getId() + "-noquest.htm");
 				return;
 			}
 		}

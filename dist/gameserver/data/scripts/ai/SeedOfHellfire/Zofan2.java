@@ -64,7 +64,7 @@ public final class Zofan2 extends Fighter
 		{
 			for (NpcInstance npc : around)
 			{
-				if (npc.getNpcId() == 51003)
+				if (npc.getId() == 51003)
 				{
 					actor.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, npc, Integer.valueOf(500));
 				}

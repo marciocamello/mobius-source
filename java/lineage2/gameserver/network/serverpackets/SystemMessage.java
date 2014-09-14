@@ -3153,12 +3153,12 @@ public class SystemMessage extends L2GameServerPacket
 			return addDoorName(((DoorInstance) cha).getDoorId());
 		}
 		
-		if (cha.getNpcId() <= 0)
+		if (cha.getId() <= 0)
 		{
 			return addString(cha.getName());
 		}
 		
-		return addNpcName(cha.getNpcId());
+		return addNpcName(cha.getId());
 	}
 	
 	public SystemMessage addDoorName(int id)

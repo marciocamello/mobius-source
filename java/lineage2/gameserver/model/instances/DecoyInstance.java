@@ -58,7 +58,7 @@ public class DecoyInstance extends NpcInstance
 		_playerRef = owner.getRef();
 		_lifeTime = lifeTime;
 		_timeRemaining = _lifeTime;
-		int skilllevel = getNpcId() < 13257 ? getNpcId() - 13070 : getNpcId() - 13250;
+		int skilllevel = getId() < 13257 ? getId() - 13070 : getId() - 13250;
 		_decoyLifeTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new DecoyLifetime(), 1000, 1000);
 		_hateSpam = ThreadPoolManager.getInstance().scheduleAtFixedRate(new HateSpam(SkillTable.getInstance().getInfo(5272, skilllevel)), 1000, 3000);
 	}

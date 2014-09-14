@@ -103,7 +103,7 @@ public final class SirraInstance extends NpcInstance
 		{
 			for (NpcInstance n : getReflection().getNpcs())
 			{
-				if ((n.getNpcId() == 29179) || (n.getNpcId() == 29180))
+				if ((n.getId() == 29179) || (n.getId() == 29180))
 				{
 					player.sendPacket(new ExChangeClientEffectInfo(2));
 				}

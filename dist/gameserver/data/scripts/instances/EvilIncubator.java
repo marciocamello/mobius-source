@@ -362,7 +362,7 @@ public final class EvilIncubator extends Reflection
 				return;
 			}
 			
-			if ((self.getNpcId() == 27430) || (self.getNpcId() == 27431) || (self.getNpcId() == 27432) || (self.getNpcId() == 27433) || (self.getNpcId() == 27434) || (self.getNpcId() == 27429))
+			if ((self.getId() == 27430) || (self.getId() == 27431) || (self.getId() == 27432) || (self.getId() == 27433) || (self.getId() == 27434) || (self.getId() == 27429))
 			{
 				mobKilled++;
 				

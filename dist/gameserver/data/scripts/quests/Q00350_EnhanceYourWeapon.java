@@ -102,7 +102,7 @@ public class Q00350_EnhanceYourWeapon extends Quest implements ScriptFile
 		{
 			if ((template != null) && !template.getAbsorbInfo().isEmpty())
 			{
-				addKillId(template.npcId);
+				addKillId(template.getId());
 			}
 		}
 	}
@@ -143,7 +143,7 @@ public class Q00350_EnhanceYourWeapon extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		String npcId = str(npc.getNpcId());
+		String npcId = str(npc.getId());
 		String htmltext = "noquest";
 		int id = st.getState();
 		

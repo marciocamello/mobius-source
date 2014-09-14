@@ -52,7 +52,7 @@ public class Q10290_LandDragonConqueror extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (npcId == Theodric)
@@ -102,7 +102,7 @@ public class Q10290_LandDragonConqueror extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if ((cond == 1) && (npcId == UltimateAntharas))

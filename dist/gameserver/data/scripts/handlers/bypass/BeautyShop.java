@@ -55,7 +55,7 @@ public final class BeautyShop implements IBypassHandler, ScriptFile
 	@Override
 	public void onBypassFeedback(NpcInstance npc, Player player, String command)
 	{
-		if (npc.getNpcId() != LA_VIE_EN_ROSE)
+		if (npc.getId() != LA_VIE_EN_ROSE)
 		{
 			return;
 		}

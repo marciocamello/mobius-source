@@ -72,7 +72,7 @@ public class Q10315_ToThePrisonOfDarkness extends Quest implements ScriptFile
 		QuestState previous = player.getQuestState(Q10306_TheCorruptedLeader.class);
 		QuestState previous2 = player.getQuestState(Q10311_PeacefulDaysAreOver.class);
 		
-		if (npc.getNpcId() == NPC_SLAKI)
+		if (npc.getId() == NPC_SLAKI)
 		{
 			if ((previous == null) || (!previous.isCompleted()) || (previous2 == null) || (!previous2.isCompleted()) || (player.getLevel() < 90))
 			{
@@ -99,7 +99,7 @@ public class Q10315_ToThePrisonOfDarkness extends Quest implements ScriptFile
 					htmltext = "32893-07.htm";
 			}
 		}
-		else if (npc.getNpcId() == NPC_OPERA)
+		else if (npc.getId() == NPC_OPERA)
 		{
 			if (st.isStarted())
 			{

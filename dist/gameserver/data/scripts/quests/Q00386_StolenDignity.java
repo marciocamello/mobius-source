@@ -405,7 +405,7 @@ public class Q00386_StolenDignity extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		Integer _chance = dropchances.get(npc.getNpcId());
+		Integer _chance = dropchances.get(npc.getId());
 		
 		if (_chance != null)
 		{

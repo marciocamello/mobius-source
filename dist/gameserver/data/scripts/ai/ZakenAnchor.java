@@ -46,7 +46,7 @@ public final class ZakenAnchor extends DefaultAI
 		
 		for (NpcInstance npc : actor.getAroundNpc(1000, 100))
 		{
-			if ((npc.getNpcId() == Candle) && (npc.getRightHandItem() == 15302))
+			if ((npc.getId() == Candle) && (npc.getRightHandItem() == 15302))
 			{
 				i++;
 			}
@@ -71,7 +71,7 @@ public final class ZakenAnchor extends DefaultAI
 			{
 				for (NpcInstance npc : actor.getReflection().getNpcs())
 				{
-					if (npc.getNpcId() == UltraDayZaken)
+					if (npc.getId() == UltraDayZaken)
 					{
 						npc.setIsInvul(false);
 						npc.teleToLocation(actor.getLoc());

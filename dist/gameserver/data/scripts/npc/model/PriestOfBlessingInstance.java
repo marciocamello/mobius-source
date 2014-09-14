@@ -175,7 +175,7 @@ public final class PriestOfBlessingInstance extends NpcInstance
 			if (hg != null)
 			{
 				NpcHtmlMessage html = new NpcHtmlMessage(player, this);
-				html.setFile(getHtmlPath(getNpcId(), val, player));
+				html.setFile(getHtmlPath(getId(), val, player));
 				html.replace("%price%", String.valueOf(hg.itemPrice));
 				html.replace("%priceBreak%", Util.formatAdena(hg.itemPrice));
 				html.replace("%minLvl%", String.valueOf(hg.minLevel));

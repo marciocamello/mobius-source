@@ -70,7 +70,7 @@ public class Q00752_UncoverTheSecret extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		QuestState Mj = st.getPlayer().getQuestState(Q10386_MysteriousJourney.class);
 		

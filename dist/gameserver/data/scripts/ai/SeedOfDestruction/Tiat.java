@@ -131,7 +131,7 @@ public final class Tiat extends Fighter
 			
 			for (NpcInstance npc : World.getAroundNpc(actor))
 			{
-				if (ArrayUtils.contains(TIAT_MINION_IDS, npc.getNpcId()))
+				if (ArrayUtils.contains(TIAT_MINION_IDS, npc.getId()))
 				{
 					npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 30000);
 				}

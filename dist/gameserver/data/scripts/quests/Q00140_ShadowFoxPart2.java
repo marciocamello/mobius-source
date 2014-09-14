@@ -136,7 +136,7 @@ public class Q00140_ShadowFoxPart2 extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		String htmltext = "noquest";
 		

@@ -57,7 +57,7 @@ public final class Kanabion extends Fighter
 			isOverhit = ((MonsterInstance) actor).getOverhitDamage() > 0;
 		}
 		
-		final int npcId = actor.getNpcId();
+		final int npcId = actor.getId();
 		int nextId = 0;
 		int type = 0;
 		

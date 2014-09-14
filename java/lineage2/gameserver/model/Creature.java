@@ -6968,7 +6968,7 @@ public abstract class Creature extends GameObject
 	 * Method getNpcId.
 	 * @return int
 	 */
-	public int getNpcId()
+	public int getId()
 	{
 		return 0;
 	}

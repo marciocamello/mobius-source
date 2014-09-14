@@ -36,7 +36,7 @@ public class Q00698_BlockTheLordsEscape extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		Player player = st.getPlayer();
 		
 		if (npcId == TEPIOS)

@@ -215,7 +215,7 @@ public class Q00025_HidingBehindTheTruth extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		int IntId = st.getInt("id");
 		
@@ -434,7 +434,7 @@ public class Q00025_HidingBehindTheTruth extends Quest implements ScriptFile
 			return null;
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = qs.getCond();
 		
 		if ((npcId == TRIOLS_PAWN) && (cond == 7))

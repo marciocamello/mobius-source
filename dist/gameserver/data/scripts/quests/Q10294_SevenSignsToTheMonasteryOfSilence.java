@@ -230,7 +230,7 @@ public class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest implements S
 		}
 		else if (event.equalsIgnoreCase("teleport_to_guardian"))
 		{
-			if (((npc.getNpcId() == YellowRelicWatcher) && (st.getInt("yellow") != 0)) || ((npc.getNpcId() == GreenRelicWatcher) && (st.getInt("green") != 0)) || ((npc.getNpcId() == BlueRelicWatcher) && (st.getInt("blue") != 0)) || ((npc.getNpcId() == RedRelicWatcher) && (st.getInt("red") != 0)))
+			if (((npc.getId() == YellowRelicWatcher) && (st.getInt("yellow") != 0)) || ((npc.getId() == GreenRelicWatcher) && (st.getInt("green") != 0)) || ((npc.getId() == BlueRelicWatcher) && (st.getInt("blue") != 0)) || ((npc.getId() == RedRelicWatcher) && (st.getInt("red") != 0)))
 			{
 				htmltext = "relicwatcher_q10294_4.htm";
 			}
@@ -243,28 +243,28 @@ public class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest implements S
 		}
 		else if (event.equalsIgnoreCase("take_test"))
 		{
-			if (npc.getNpcId() == YellowRelicWatcher)
+			if (npc.getId() == YellowRelicWatcher)
 			{
 				if (st.getInt("yellow") != 0)
 				{
 					htmltext = "relicwatcher_q10294_yellowtest.htm";
 				}
 			}
-			else if (npc.getNpcId() == GreenRelicWatcher)
+			else if (npc.getId() == GreenRelicWatcher)
 			{
 				if (st.getInt("green") != 0)
 				{
 					htmltext = "relicwatcher_q10294_greentest.htm";
 				}
 			}
-			else if (npc.getNpcId() == BlueRelicWatcher)
+			else if (npc.getId() == BlueRelicWatcher)
 			{
 				if (st.getInt("blue") != 0)
 				{
 					htmltext = "relicwatcher_q10294_bluetest.htm";
 				}
 			}
-			else if (npc.getNpcId() == RedRelicWatcher)
+			else if (npc.getId() == RedRelicWatcher)
 			{
 				if (st.getInt("red") != 0)
 				{
@@ -297,7 +297,7 @@ public class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest implements S
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		
@@ -438,7 +438,7 @@ public class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest implements S
 	{
 		for (NpcInstance n : player.getReflection().getNpcs())
 		{
-			if (n.getNpcId() == ElcardiaInzone1)
+			if (n.getId() == ElcardiaInzone1)
 			{
 				n.teleToLocation(Location.findPointToStay(player, 100));
 			}

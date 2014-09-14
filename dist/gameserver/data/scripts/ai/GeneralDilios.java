@@ -77,7 +77,7 @@ public final class GeneralDilios extends DefaultAI
 					{
 						for (NpcInstance guard : around)
 						{
-							if (!guard.isMonster() && (guard.getNpcId() == GUARD_ID))
+							if (!guard.isMonster() && (guard.getId() == GUARD_ID))
 							{
 								guard.broadcastPacket(new SocialAction(guard.getObjectId(), 4));
 							}

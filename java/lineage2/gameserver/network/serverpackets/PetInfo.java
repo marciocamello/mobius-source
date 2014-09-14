@@ -77,7 +77,7 @@ public class PetInfo extends L2GameServerPacket
 		_type = summon.getSummonType();
 		_ownerId = summon.getPlayer().getObjectId();
 		obj_id = summon.getObjectId();
-		npc_id = summon.getTemplate().npcId;
+		npc_id = summon.getTemplate().getId();
 		_loc = summon.getLoc();
 		MAtkSpd = summon.getMAtkSpd();
 		PAtkSpd = summon.getPAtkSpd();

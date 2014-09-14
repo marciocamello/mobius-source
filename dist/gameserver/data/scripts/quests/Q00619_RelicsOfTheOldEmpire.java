@@ -239,7 +239,7 @@ public class Q00619_RelicsOfTheOldEmpire extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		Integer Broken_Relic_Part_chance = drops.get(npcId);
 		
 		if (Broken_Relic_Part_chance == null)

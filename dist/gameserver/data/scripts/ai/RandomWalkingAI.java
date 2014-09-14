@@ -88,7 +88,7 @@ public final class RandomWalkingAI extends DefaultAI
 		final int y = (sloc.getY() + Rnd.get(2 * AI_WALK_RANGE)) - AI_WALK_RANGE;
 		final int z = GeoEngine.getHeight(x, y, sloc.getZ(), actor.getGeoIndex());
 		
-		switch (actor.getNpcId())
+		switch (actor.getId())
 		{
 			case Boy:
 				actor.setRunning();

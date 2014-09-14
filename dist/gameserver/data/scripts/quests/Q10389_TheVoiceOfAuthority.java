@@ -64,7 +64,7 @@ public class Q10389_TheVoiceOfAuthority extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		QuestState Cb = st.getPlayer().getQuestState(Q10388_ConspiracyBehindDoors.class);
 		

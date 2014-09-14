@@ -168,7 +168,7 @@ public class Q10275_ContainingTheAttributePower extends Quest implements ScriptF
 				
 				if (npc != null)
 				{
-					htmltext = str(npc.getNpcId()) + "-1" + event + ".htm";
+					htmltext = str(npc.getId()) + "-1" + event + ".htm";
 				}
 				else
 				{
@@ -186,7 +186,7 @@ public class Q10275_ContainingTheAttributePower extends Quest implements ScriptF
 		String htmltext = "noquest";
 		int id = st.getState();
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (id == COMPLETED)
 		{
@@ -298,7 +298,7 @@ public class Q10275_ContainingTheAttributePower extends Quest implements ScriptF
 		}
 		
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (npcId == Air)
 		{

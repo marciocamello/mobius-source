@@ -80,7 +80,7 @@ public class Q10306_TheCorruptedLeader extends Quest implements ScriptFile
 		Player player = st.getPlayer();
 		QuestState prevst = player.getQuestState(Q10305_UnstoppableFutileEfforts.class);
 		
-		if (npc.getNpcId() == NPC_NAOMI_KASHERON)
+		if (npc.getId() == NPC_NAOMI_KASHERON)
 		{
 			switch (st.getState())
 			{

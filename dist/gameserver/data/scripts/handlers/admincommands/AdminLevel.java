@@ -66,7 +66,7 @@ public class AdminLevel implements IAdminCommandHandler, ScriptFile
 		
 		if (target.isPet())
 		{
-			Long exp_add = PetDataTable.getInstance().getInfo(((PetInstance) target).getNpcId(), level).getExp() - ((PetInstance) target).getExp();
+			Long exp_add = PetDataTable.getInstance().getInfo(((PetInstance) target).getId(), level).getExp() - ((PetInstance) target).getExp();
 			((PetInstance) target).addExpAndSp(exp_add, 0);
 		}
 	}

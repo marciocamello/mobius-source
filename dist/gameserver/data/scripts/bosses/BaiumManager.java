@@ -495,7 +495,7 @@ public final class BaiumManager extends Functions implements ScriptFile, OnDeath
 		{
 			checkAnnihilated();
 		}
-		else if (self.isNpc() && (self.getNpcId() == BAIUM))
+		else if (self.isNpc() && (self.getId() == BAIUM))
 		{
 			onBaiumDie(self);
 		}

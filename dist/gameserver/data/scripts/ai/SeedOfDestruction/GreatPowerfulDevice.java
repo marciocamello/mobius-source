@@ -53,7 +53,7 @@ public final class GreatPowerfulDevice extends DefaultAI
 	{
 		final NpcInstance actor = getActor();
 		
-		if (checkAllDestroyed(actor.getNpcId()))
+		if (checkAllDestroyed(actor.getId()))
 		{
 			for (int i = 0; i < 6; i++)
 			{
@@ -70,7 +70,7 @@ public final class GreatPowerfulDevice extends DefaultAI
 			
 			for (NpcInstance n : actor.getReflection().getNpcs())
 			{
-				if (n.getNpcId() == 18778)
+				if (n.getId() == 18778)
 				{
 					n.stopDamageBlocked();
 				}
@@ -89,7 +89,7 @@ public final class GreatPowerfulDevice extends DefaultAI
 	{
 		for (NpcInstance n : getActor().getReflection().getNpcs())
 		{
-			if ((n.getNpcId() == mobId) && !n.isDead())
+			if ((n.getId() == mobId) && !n.isDead())
 			{
 				return false;
 			}

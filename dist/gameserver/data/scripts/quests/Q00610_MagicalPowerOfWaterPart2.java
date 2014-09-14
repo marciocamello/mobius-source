@@ -112,7 +112,7 @@ public class Q00610_MagicalPowerOfWaterPart2 extends Quest implements ScriptFile
 	{
 		NpcInstance isQuest = GameObjectsStorage.getByNpcId(SoulOfWaterAshutar);
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (npcId == ASEFA)
@@ -194,7 +194,7 @@ public class Q00610_MagicalPowerOfWaterPart2 extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		if ((st.getQuestItemsCount(ICE_HEART_OF_ASHUTAR) == 0) && (npc.getNpcId() == SoulOfWaterAshutar))
+		if ((st.getQuestItemsCount(ICE_HEART_OF_ASHUTAR) == 0) && (npc.getId() == SoulOfWaterAshutar))
 		{
 			st.giveItems(ICE_HEART_OF_ASHUTAR, 1);
 			st.setCond(3);

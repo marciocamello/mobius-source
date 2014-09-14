@@ -159,14 +159,14 @@ public class MerchantInstance extends NpcInstance
 		
 		NpcTradeList list = BuyListHolder.getInstance().getBuyList(listId);
 		
-		if ((list == null) || (list.getNpcId() == getNpcId()))
+		if ((list == null) || (list.getNpcId() == getId()))
 		{
 			player.sendPacket(new ExBuySellList.BuyList(list, player, taxRate), new ExBuySellList.SellRefundList(player, false));
 		}
 		else
 		{
 			_log.warn("[L2MerchantInstance] possible client hacker: " + player.getName() + " attempting to buy from GM shop! < Ban him!");
-			_log.warn("buylist id:" + listId + " / list_npc = " + list.getNpcId() + " / npc = " + getNpcId());
+			_log.warn("buylist id:" + listId + " / list_npc = " + list.getNpcId() + " / npc = " + getId());
 		}
 	}
 	

@@ -58,7 +58,7 @@ public final class ibkookaburra extends Functions
 			return;
 		}
 		
-		if (pet.getNpcId() != BABY_KOOKABURRA)
+		if (pet.getId() != BABY_KOOKABURRA)
 		{
 			show("scripts/services/petevolve/no_pet.htm", player, npc);
 			return;

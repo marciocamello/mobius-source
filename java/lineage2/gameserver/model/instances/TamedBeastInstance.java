@@ -178,7 +178,7 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 	 */
 	public NpcString getNameNpcStringByNpcId()
 	{
-		switch (getNpcId())
+		switch (getId())
 		{
 			case 18869:
 				return NpcString.ALPEN_KOOKABURRA;

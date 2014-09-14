@@ -76,7 +76,7 @@ public class Q10281_MutatedKaneusRune extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int id = st.getState();
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (id == COMPLETED)
 		{

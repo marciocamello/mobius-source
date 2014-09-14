@@ -64,7 +64,7 @@ public class Q10269_ToTheSeedOfDestruction extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int id = st.getState();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (id == COMPLETED)
 		{

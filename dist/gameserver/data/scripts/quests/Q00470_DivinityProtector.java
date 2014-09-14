@@ -103,7 +103,7 @@ public class Q00470_DivinityProtector extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		st.getPlayer();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int state = st.getState();
 		int cond = st.getCond();
 		
@@ -160,7 +160,7 @@ public class Q00470_DivinityProtector extends Quest implements ScriptFile
 			return null;
 		}
 		
-		if (ArrayUtils.contains(Mobs, npc.getNpcId()) && Rnd.chance(50))
+		if (ArrayUtils.contains(Mobs, npc.getId()) && Rnd.chance(50))
 		{
 			st.giveItems(COLORLESS_SOUL, 1);
 			st.playSound(SOUND_MIDDLE);

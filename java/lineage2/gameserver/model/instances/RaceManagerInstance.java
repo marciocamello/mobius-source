@@ -341,7 +341,7 @@ public class RaceManagerInstance extends NpcInstance
 			return;
 		}
 		
-		int npcId = getTemplate().npcId;
+		int npcId = getTemplate().getId();
 		String filename, search;
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		filename = getHtmlPath(npcId, 5, player);
@@ -365,7 +365,7 @@ public class RaceManagerInstance extends NpcInstance
 	 */
 	public void showMonsterInfo(Player player)
 	{
-		int npcId = getTemplate().npcId;
+		int npcId = getTemplate().getId();
 		String filename, search;
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		filename = getHtmlPath(npcId, 6, player);
@@ -394,7 +394,7 @@ public class RaceManagerInstance extends NpcInstance
 			return;
 		}
 		
-		int npcId = getTemplate().npcId;
+		int npcId = getTemplate().getId();
 		String filename, search, replace;
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		

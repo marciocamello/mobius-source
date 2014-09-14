@@ -72,7 +72,7 @@ public final class GardenDoorInstance extends NpcInstance
 			}
 			else
 			{
-				if ((getNpcId() == 33133) && (System.currentTimeMillis() >= timeRespwn1))
+				if ((getId() == 33133) && (System.currentTimeMillis() >= timeRespwn1))
 				{
 					if (Rnd.chance(50))
 					{

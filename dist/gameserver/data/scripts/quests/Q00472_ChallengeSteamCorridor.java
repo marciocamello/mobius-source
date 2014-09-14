@@ -97,7 +97,7 @@ public class Q00472_ChallengeSteamCorridor extends Quest implements ScriptFile
 	{
 		Player player = st.getPlayer();
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (npcId == CON1)
@@ -135,11 +135,11 @@ public class Q00472_ChallengeSteamCorridor extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		npc.getNpcId();
+		npc.getId();
 		st.getCond();
 		Player player = st.getPlayer();
 		
-		if ((npc.getNpcId() == CON2) && (st.getCond() == 1))
+		if ((npc.getId() == CON2) && (st.getCond() == 1))
 		{
 			TIntIntHashMap moblist = new TIntIntHashMap();
 			moblist.put(CON2, 1);

@@ -49,7 +49,7 @@ public final class PowerfulDeviceInstance extends NpcInstance
 			htmlMessage.replace("%SP%", String.valueOf(sp));
 			htmlMessage.replace("%ESSENCES%", String.valueOf(essencesCount));
 			
-			htmlMessage.setFile("default/" + getNpcId() + "-4.htm");
+			htmlMessage.setFile("default/" + getId() + "-4.htm");
 			player.sendPacket(htmlMessage);
 		}
 		else if (command.equalsIgnoreCase("Awaken1"))
@@ -71,7 +71,7 @@ public final class PowerfulDeviceInstance extends NpcInstance
 	@Override
 	public void showChatWindow(Player player, int val, Object... replace)
 	{
-		final int NpcID = getNpcId();
+		final int NpcID = getId();
 		final ClassType2 currentClassType = player.getClassId().getType2();
 		final ClassId[] classType = getClassIdsByNpc(NpcID);
 		
@@ -110,7 +110,7 @@ public final class PowerfulDeviceInstance extends NpcInstance
 				
 				if (player.getPets().size() > 0)
 				{
-					htmltext = getHtmlPath(getNpcId(), 1, player);
+					htmltext = getHtmlPath(getId(), 1, player);
 				}
 				else
 				{
@@ -118,7 +118,7 @@ public final class PowerfulDeviceInstance extends NpcInstance
 					{
 						player.setVar("AwakenedOldIDClass", player.getClassId().getId(), -1);
 					}
-					htmltext = getHtmlPath(getNpcId(), 3, player);
+					htmltext = getHtmlPath(getId(), 3, player);
 				}
 				if (player.getVarB("AwakenPrepared", false))
 				{
@@ -128,12 +128,12 @@ public final class PowerfulDeviceInstance extends NpcInstance
 			}
 			else
 			{
-				htmltext = getHtmlPath(getNpcId(), val, player);
+				htmltext = getHtmlPath(getId(), val, player);
 			}
 		}
 		else
 		{
-			htmltext = getHtmlPath(getNpcId(), val, player);
+			htmltext = getHtmlPath(getId(), val, player);
 		}
 		
 		showChatWindow(player, htmltext, replace);

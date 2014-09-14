@@ -91,7 +91,7 @@ public class Q01103_OracleTeleport extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		Player player = st.getPlayer();
 		String back = player.getVar("FestivalBackCoords");
 		

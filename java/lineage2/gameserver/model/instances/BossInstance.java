@@ -53,7 +53,7 @@ public class BossInstance extends RaidBossInstance
 	@Override
 	public final boolean isMovementDisabled()
 	{
-		return (getNpcId() == 29006) || super.isMovementDisabled();
+		return (getId() == 29006) || super.isMovementDisabled();
 	}
 	
 	/**
@@ -73,13 +73,13 @@ public class BossInstance extends RaidBossInstance
 				{
 					if (member.isNoble())
 					{
-						Hero.getInstance().addHeroDiary(member.getObjectId(), HeroDiary.ACTION_RAID_KILLED, getNpcId());
+						Hero.getInstance().addHeroDiary(member.getObjectId(), HeroDiary.ACTION_RAID_KILLED, getId());
 					}
 				}
 			}
 			else if (player.isNoble())
 			{
-				Hero.getInstance().addHeroDiary(player.getObjectId(), HeroDiary.ACTION_RAID_KILLED, getNpcId());
+				Hero.getInstance().addHeroDiary(player.getObjectId(), HeroDiary.ACTION_RAID_KILLED, getId());
 			}
 		}
 		

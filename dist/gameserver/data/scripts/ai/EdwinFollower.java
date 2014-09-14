@@ -88,7 +88,7 @@ public final class EdwinFollower extends DefaultAI
 				
 				for (NpcInstance npc : World.getAroundNpc(actor))
 				{
-					if (npc.getNpcId() == EDWIN_ID)
+					if (npc.getId() == EDWIN_ID)
 					{
 						_edwinRef = npc.getRef();
 						return true;

@@ -39,6 +39,6 @@ public class ConditionTargetMobId extends Condition
 	@Override
 	protected boolean testImpl(Env env)
 	{
-		return (env.target != null) && (env.target.getNpcId() == _mobId);
+		return (env.target != null) && (env.target.getId() == _mobId);
 	}
 }

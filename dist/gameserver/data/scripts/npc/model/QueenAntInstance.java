@@ -69,7 +69,7 @@ public final class QueenAntInstance extends BossInstance
 	@Override
 	protected int getKilledInterval(MinionInstance minion)
 	{
-		return minion.getNpcId() == 29003 ? 10000 : 280000 + Rnd.get(40000);
+		return minion.getId() == 29003 ? 10000 : 280000 + Rnd.get(40000);
 	}
 	
 	/**

@@ -543,7 +543,7 @@ public class RequestActionUse extends L2GameClientPacket
 						else if (pet.isMountable())
 						{
 							activeChar.getEffectList().stopEffect(Skill.SKILL_EVENT_TIMER);
-							activeChar.setMount(pet.getTemplate().npcId, pet.getObjectId(), pet.getLevel());
+							activeChar.setMount(pet.getTemplate().getId(), pet.getObjectId(), pet.getLevel());
 							activeChar.getSummonList().unsummonPet(false);
 						}
 						
@@ -693,7 +693,7 @@ public class RequestActionUse extends L2GameClientPacket
 							return;
 						}
 						
-						if (pet.getTemplate().getNpcId() == PetDataTable.SIN_EATER_ID)
+						if (pet.getTemplate().getId() == PetDataTable.SIN_EATER_ID)
 						{
 							activeChar.sendActionFailed();
 							return;
@@ -746,7 +746,7 @@ public class RequestActionUse extends L2GameClientPacket
 							return;
 						}
 						
-						if (!PetDataTable.isVitaminPet(pet.getNpcId()) && pet.isPet() && (pet.getCurrentFed() < (0.55 * pet.getMaxFed())))
+						if (!PetDataTable.isVitaminPet(pet.getId()) && pet.isPet() && (pet.getCurrentFed() < (0.55 * pet.getMaxFed())))
 						{
 							activeChar.sendPacket(SystemMsg.YOU_MAY_NOT_RESTORE_A_HUNGRY_PET, ActionFail.STATIC);
 							return;

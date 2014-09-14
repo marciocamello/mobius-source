@@ -75,7 +75,7 @@ public final class Teleport implements IBypassHandler, ScriptFile
 			
 			if (player.getLevel() > 20)
 			{
-				npc.showChatWindow(player, "teleporter/" + npc.getNpcId() + "-no.htm");
+				npc.showChatWindow(player, "teleporter/" + npc.getId() + "-no.htm");
 			}
 			else if (list != null)
 			{

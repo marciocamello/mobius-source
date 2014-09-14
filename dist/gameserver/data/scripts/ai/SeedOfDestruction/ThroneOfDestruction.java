@@ -56,7 +56,7 @@ public final class ThroneOfDestruction extends DefaultAI
 		final NpcInstance actor = getActor();
 		final Reflection ref = actor.getReflection();
 		
-		if (checkAllDestroyed(actor.getNpcId()))
+		if (checkAllDestroyed(actor.getId()))
 		{
 			ref.openDoor(DOOR);
 			ref.addSpawnWithoutRespawn(TIAT_NPC_ID, TIAT_LOC, 0);
@@ -74,7 +74,7 @@ public final class ThroneOfDestruction extends DefaultAI
 	{
 		for (NpcInstance npc : getActor().getReflection().getNpcs())
 		{
-			if (ArrayUtils.contains(checkNpcs, npc.getNpcId()) && !npc.isDead())
+			if (ArrayUtils.contains(checkNpcs, npc.getId()) && !npc.isDead())
 			{
 				return false;
 			}

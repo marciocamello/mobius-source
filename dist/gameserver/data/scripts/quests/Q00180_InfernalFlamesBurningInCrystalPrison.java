@@ -70,7 +70,7 @@ public class Q00180_InfernalFlamesBurningInCrystalPrison extends Quest implement
 	{
 		Player player = st.getPlayer();
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (npcId == CON1)
@@ -119,7 +119,7 @@ public class Q00180_InfernalFlamesBurningInCrystalPrison extends Quest implement
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		

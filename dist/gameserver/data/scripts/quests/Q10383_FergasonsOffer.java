@@ -109,7 +109,7 @@ public class Q10383_FergasonsOffer extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		
 		if (npcId == SIZRAK)
@@ -166,7 +166,7 @@ public class Q10383_FergasonsOffer extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if ((cond == 2) && (ArrayUtils.contains(COUCH, npcId) & (st.getQuestItemsCount(UNSTABLE_PETRA) <= 20)))

@@ -222,7 +222,7 @@ public final class BatCountry extends DynamicQuest implements ScriptFile
 				NpcInstance npc = (NpcInstance) target;
 				double dist = player.getDistance(npc);
 				
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case NPC_1:
 						if ((action.value == SocialAction.APPLAUD) && (dist < 50) && !npc.isDead())
@@ -273,7 +273,7 @@ public final class BatCountry extends DynamicQuest implements ScriptFile
 				double dist = player.getDistance(npc);
 				item = player.getInventory().getItemByItemId(FIRECRACKER);
 				
-				if ((item != null) && (dist < 70) && (npc.getNpcId() == BAT_COLONY) && !npc.isDead())
+				if ((item != null) && (dist < 70) && (npc.getId() == BAT_COLONY) && !npc.isDead())
 				{
 					increaseTaskPoint(KILL_BAT_MOBS, player, 1);
 					npc.doDie(player);

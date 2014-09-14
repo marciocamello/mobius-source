@@ -55,7 +55,7 @@ public class Q00150_ExtremeChallengePrimalMotherResurrected extends Quest implem
 		Player player = st.getPlayer();
 		QuestState questState = player.getQuestState(Q00149_PrimalMotherIstina.class);
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		int id = st.getState();
 		

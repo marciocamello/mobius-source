@@ -81,7 +81,7 @@ public class Q00432_BirthdayPartySong extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int condition = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (npcId == MELODY_MAESTRO_OCTAVIA)
 		{
@@ -118,7 +118,7 @@ public class Q00432_BirthdayPartySong extends Quest implements ScriptFile
 			return null;
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (npcId == ROUGH_HEWN_ROCK_GOLEMS)
 		{

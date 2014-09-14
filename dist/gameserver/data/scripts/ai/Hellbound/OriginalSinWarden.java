@@ -71,7 +71,7 @@ public final class OriginalSinWarden extends Fighter
 		super.onEvtSpawn();
 		final NpcInstance actor = getActor();
 		
-		switch (actor.getNpcId())
+		switch (actor.getId())
 		{
 			case 22423:
 			{

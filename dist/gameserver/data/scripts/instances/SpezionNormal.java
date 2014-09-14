@@ -204,11 +204,11 @@ public final class SpezionNormal extends Reflection
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
-			if (self.isNpc() && (self.getNpcId() == SPEZION_NORMAL))
+			if (self.isNpc() && (self.getId() == SPEZION_NORMAL))
 			{
 				for (NpcInstance npc : getNpcs())
 				{
-					if (npc.getNpcId() == 25780)
+					if (npc.getId() == 25780)
 					{
 						npc.deleteMe();
 					}

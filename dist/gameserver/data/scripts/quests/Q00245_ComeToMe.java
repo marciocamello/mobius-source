@@ -120,7 +120,7 @@ public class Q00245_ComeToMe extends Quest implements ScriptFile
 		Player player = st.getPlayer();
 		String htmltext = "noquest";
 		
-		if (npc.getNpcId() == NPC_FERRIS)
+		if (npc.getId() == NPC_FERRIS)
 		{
 			switch (st.getState())
 			{
@@ -212,7 +212,7 @@ public class Q00245_ComeToMe extends Quest implements ScriptFile
 	@Override
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
-		if ((player.getObjectId() == sponsorObjId) && (npc.getNpcId() == NPC_FERRIS))
+		if ((player.getObjectId() == sponsorObjId) && (npc.getId() == NPC_FERRIS))
 		{
 			if ((sponsoredPlayer != null) && sponsoredPlayer.isOnline())
 			{
@@ -235,7 +235,7 @@ public class Q00245_ComeToMe extends Quest implements ScriptFile
 		
 		if (st.getCond() == 1)
 		{
-			if ((ArrayUtils.contains(monstersSwamp1, npc.getNpcId())) && (Rnd.chance(50)))
+			if ((ArrayUtils.contains(monstersSwamp1, npc.getId())) && (Rnd.chance(50)))
 			{
 				st.giveItems(ITEM_FLAME_ASHES, 1, true);
 				st.playSound("ItemSound.quest_itemget");
@@ -249,7 +249,7 @@ public class Q00245_ComeToMe extends Quest implements ScriptFile
 		}
 		else if (st.getCond() == 4)
 		{
-			if (ArrayUtils.contains(monstersSwamp2, npc.getNpcId()))
+			if (ArrayUtils.contains(monstersSwamp2, npc.getId()))
 			{
 				if ((player.getPledgeType() == Clan.SUBUNIT_ACADEMY) && (player.getSponsor() != 0))
 				{

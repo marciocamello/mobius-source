@@ -281,7 +281,7 @@ public class Q00458_PerfectForm extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		
-		if (npc.getNpcId() == Kelleyia)
+		if (npc.getId() == Kelleyia)
 		{
 			switch (st.getState())
 			{

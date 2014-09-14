@@ -54,7 +54,7 @@ public final class JiniaGuild extends Fighter
 		{
 			for (NpcInstance npc : around)
 			{
-				if (npc.getNpcId() == 29179)
+				if (npc.getId() == 29179)
 				{
 					actor.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, npc, 3000);
 				}

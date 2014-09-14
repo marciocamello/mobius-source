@@ -92,7 +92,7 @@ public class Q00626_ADarkTwilight extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (npcId == Hierarch)
 		{

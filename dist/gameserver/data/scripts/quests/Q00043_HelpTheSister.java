@@ -98,7 +98,7 @@ public class Q00043_HelpTheSister extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		int id = st.getState();
 		

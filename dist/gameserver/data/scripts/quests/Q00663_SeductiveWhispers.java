@@ -241,7 +241,7 @@ public class Q00663_SeductiveWhispers extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		if (npc.getNpcId() != Wilbert)
+		if (npc.getId() != Wilbert)
 		{
 			return "noquest";
 		}

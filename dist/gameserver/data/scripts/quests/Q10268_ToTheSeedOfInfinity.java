@@ -64,7 +64,7 @@ public class Q10268_ToTheSeedOfInfinity extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int id = st.getState();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		switch (id)
 		{

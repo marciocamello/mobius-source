@@ -134,7 +134,7 @@ public class Q00709_PathToBecomingALordDion extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		Castle castle = ResidenceHolder.getInstance().getResidence(DionCastle);
 		if (castle.getOwner() == null)
@@ -254,7 +254,7 @@ public class Q00709_PathToBecomingALordDion extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		if ((st.getCond() == 6) && ArrayUtils.contains(OlMahums, npc.getNpcId()))
+		if ((st.getCond() == 6) && ArrayUtils.contains(OlMahums, npc.getId()))
 		{
 			if (Rnd.chance(10))
 			{
@@ -262,7 +262,7 @@ public class Q00709_PathToBecomingALordDion extends Quest implements ScriptFile
 				st.setCond(7);
 			}
 		}
-		if ((st.getState() == STARTED) && (st.getCond() == 0) && isLordAvailable(8, st) && ArrayUtils.contains(Manragoras, npc.getNpcId()))
+		if ((st.getState() == STARTED) && (st.getCond() == 0) && isLordAvailable(8, st) && ArrayUtils.contains(Manragoras, npc.getId()))
 		{
 			if (st.getQuestItemsCount(MandragoraRoot) < 100)
 			{

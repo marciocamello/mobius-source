@@ -70,7 +70,7 @@ public class Q10317_OrbisWitch extends Quest implements ScriptFile
 		Player player = st.getPlayer();
 		QuestState previous = player.getQuestState(Q10316_UndecayingMemoryOfThePast.class);
 		
-		if (npc.getNpcId() == NPC_OPERA)
+		if (npc.getId() == NPC_OPERA)
 		{
 			if ((previous == null) || (!previous.isCompleted()) || (player.getLevel() < 95))
 			{
@@ -97,7 +97,7 @@ public class Q10317_OrbisWitch extends Quest implements ScriptFile
 					htmltext = "32946-09.htm";
 			}
 		}
-		else if (npc.getNpcId() == NPC_LYDIA)
+		else if (npc.getId() == NPC_LYDIA)
 		{
 			if (st.isStarted())
 			{

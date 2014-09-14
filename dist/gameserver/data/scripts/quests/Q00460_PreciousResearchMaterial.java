@@ -64,7 +64,7 @@ public class Q00460_PreciousResearchMaterial extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		
-		if (npc.getNpcId() == NPC_AMER)
+		if (npc.getId() == NPC_AMER)
 		{
 			if (st.getPlayer().getLevel() < 85)
 			{
@@ -100,7 +100,7 @@ public class Q00460_PreciousResearchMaterial extends Quest implements ScriptFile
 			}
 			
 		}
-		else if (npc.getNpcId() == NPC_FILAR)
+		else if (npc.getId() == NPC_FILAR)
 		{
 			if (st.isStarted() && (st.getCond() == 2))
 			{

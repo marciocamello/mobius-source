@@ -144,7 +144,7 @@ public class DoorTemplate extends CharTemplate
 	 * @return int
 	 */
 	@Override
-	public int getNpcId()
+	public int getId()
 	{
 		return _id;
 	}

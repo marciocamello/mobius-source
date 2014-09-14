@@ -91,7 +91,7 @@ public final class Exterminator extends Fighter
 			{
 				for (NpcInstance npc : around)
 				{
-					if ((npc.getNpcId() >= 22650) && (npc.getNpcId() <= 22655))
+					if ((npc.getId() >= 22650) && (npc.getId() <= 22655))
 					{
 						if ((mob == null) || (getActor().getDistance3D(npc) < getActor().getDistance3D(mob)))
 						{

@@ -70,7 +70,7 @@ public class Q00753_ReactingToACrisis extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		QuestState Mj = st.getPlayer().getQuestState(Q10386_MysteriousJourney.class);
 		
@@ -133,7 +133,7 @@ public class Q00753_ReactingToACrisis extends Quest implements ScriptFile
 			qs.setCond(2);
 		}
 		
-		if ((npc.getNpcId() == 19296) && !qs.getPlayer().getVarB("q753doneKill"))
+		if ((npc.getId() == 19296) && !qs.getPlayer().getVarB("q753doneKill"))
 		{
 			boolean doneKill = updateKill(npc, qs);
 			

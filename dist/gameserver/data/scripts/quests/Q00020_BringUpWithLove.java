@@ -49,7 +49,7 @@ public class Q00020_BringUpWithLove extends Quest implements ScriptFile
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
-		if (npc.getNpcId() == TUNATUN)
+		if (npc.getId() == TUNATUN)
 		{
 			if (event.equalsIgnoreCase("31537-12.htm"))
 			{
@@ -85,7 +85,7 @@ public class Q00020_BringUpWithLove extends Quest implements ScriptFile
 	{
 		String htmtext = "noquest";
 		
-		if (npc.getNpcId() == TUNATUN)
+		if (npc.getId() == TUNATUN)
 		{
 			switch (st.getState())
 			{

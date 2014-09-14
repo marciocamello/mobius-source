@@ -204,7 +204,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest implements ScriptFil
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		String htmltext = "noquest";

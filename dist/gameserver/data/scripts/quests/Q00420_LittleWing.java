@@ -393,7 +393,7 @@ public class Q00420_LittleWing extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int _state = st.getState();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (_state == CREATED)
 		{
@@ -588,7 +588,7 @@ public class Q00420_LittleWing extends Quest implements ScriptFile
 			return null;
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if ((cond == 2) && (npcId == Toad_Lord))

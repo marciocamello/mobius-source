@@ -111,7 +111,7 @@ public class Q00345_MethodToRaiseTheDead extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		int id = st.getState();
 		int level = st.getPlayer().getLevel();

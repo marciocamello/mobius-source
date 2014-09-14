@@ -53,7 +53,7 @@ public final class NpcWarriorAI extends Fighter
 		
 		if (Rnd.chance(3))
 		{
-			switch (actor.getNpcId())
+			switch (actor.getId())
 			{
 				case 33172:
 					Functions.npcSay(actor, NpcString.THE_ONLY_GOOD_SHILEN_CREATURE_IS_A_DEAD_ONE);
@@ -116,7 +116,7 @@ public final class NpcWarriorAI extends Fighter
 			return false;
 		}
 		
-		int _id = target.getNpcId();
+		int _id = target.getId();
 		
 		if ((_id == 33170) || (_id == 33171) || (_id == 33172) || (_id == 33173) || (_id == 33174) || (_id == 33414) || (_id == 33415) || (_id == 33416))
 		{

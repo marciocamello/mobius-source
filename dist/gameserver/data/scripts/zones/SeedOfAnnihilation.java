@@ -373,7 +373,7 @@ public final class SeedOfAnnihilation implements ScriptFile
 				{
 					for (NpcInstance npc : around)
 					{
-						if ((npc.getNpcId() == 32738) && (npc.getFollowTarget() != null))
+						if ((npc.getId() == 32738) && (npc.getFollowTarget() != null))
 						{
 							if (npc.getFollowTarget().getObjectId() == cha.getObjectId())
 							{

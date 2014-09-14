@@ -61,7 +61,7 @@ public final class RequestInfoItemAuction extends L2GameClientPacket
 		final ItemAuction auction = instance.getCurrentAuction();
 		NpcInstance broker = activeChar.getLastNpc();
 		
-		if ((auction == null) || (broker == null) || (broker.getNpcId() != _instanceId) || (activeChar.getDistance(broker.getX(), broker.getY()) > Creature.INTERACTION_DISTANCE))
+		if ((auction == null) || (broker == null) || (broker.getId() != _instanceId) || (activeChar.getDistance(broker.getX(), broker.getY()) > Creature.INTERACTION_DISTANCE))
 		{
 			return;
 		}

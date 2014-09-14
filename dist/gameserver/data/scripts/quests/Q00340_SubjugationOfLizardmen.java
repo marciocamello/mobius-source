@@ -128,7 +128,7 @@ public class Q00340_SubjugationOfLizardmen extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int _state = st.getState();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (_state == CREATED)
 		{
 			if (npcId != WEITSZ)
@@ -215,7 +215,7 @@ public class Q00340_SubjugationOfLizardmen extends Quest implements ScriptFile
 		{
 			return null;
 		}
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (npcId == SERPENT_DEMON_BIFRONS)
 		{
 			qs.addSpawn(CHEST_OF_BIFRONS);

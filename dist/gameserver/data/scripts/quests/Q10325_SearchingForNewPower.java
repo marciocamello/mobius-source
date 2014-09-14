@@ -101,7 +101,7 @@ public class Q10325_SearchingForNewPower extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		QuestState reqQuest = st.getPlayer().getQuestState("Q10324_FindingMagisterGallint");
 		final Race race = st.getPlayer().getRace();

@@ -45,7 +45,7 @@ public final class NaiaRoomController extends DefaultAI
 	public boolean thinkActive()
 	{
 		final NpcInstance actor = getActor();
-		final int npcId = actor.getNpcId();
+		final int npcId = actor.getId();
 		
 		if (NaiaTowerManager.isLockedRoom(npcId))
 		{

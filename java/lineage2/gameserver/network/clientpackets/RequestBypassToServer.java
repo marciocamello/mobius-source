@@ -277,7 +277,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 			
 			if ((target != null) && target.isNpc())
 			{
-				st = st + " via NPC #" + ((NpcInstance) target).getNpcId();
+				st = st + " via NPC #" + ((NpcInstance) target).getId();
 			}
 			
 			_log.error(st, e);

@@ -179,7 +179,7 @@ public class ManorManagerInstance extends MerchantInstance
 					break;
 				
 				case 6:
-					showShopWindow(player, Integer.parseInt("3" + getNpcId()), false);
+					showShopWindow(player, Integer.parseInt("3" + getId()), false);
 					break;
 				
 				case 9:
@@ -232,7 +232,7 @@ public class ManorManagerInstance extends MerchantInstance
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		html.setFile(getHtmlPath() + filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
-		html.replace("%npcId%", String.valueOf(getNpcId()));
+		html.replace("%npcId%", String.valueOf(getId()));
 		html.replace("%npcname%", getName());
 		player.sendPacket(html);
 	}

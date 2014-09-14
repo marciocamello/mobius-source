@@ -76,7 +76,7 @@ public class PetInstance extends Summon
 			{
 			}
 			
-			if (PetDataTable.isVitaminPet(getNpcId()) && (getCurrentFed() <= 0))
+			if (PetDataTable.isVitaminPet(getId()) && (getCurrentFed() <= 0))
 			{
 				deleteMe();
 			}
@@ -125,7 +125,7 @@ public class PetInstance extends Summon
 			
 			if (!rset.next())
 			{
-				if (PetDataTable.isBabyPet(template.getNpcId()) || PetDataTable.isImprovedBabyPet(template.getNpcId()))
+				if (PetDataTable.isBabyPet(template.getId()) || PetDataTable.isImprovedBabyPet(template.getId()))
 				{
 					pet = new PetBabyInstance(IdFactory.getInstance().getNextId(), template, owner, control);
 				}
@@ -137,7 +137,7 @@ public class PetInstance extends Summon
 				return pet;
 			}
 			
-			if (PetDataTable.isBabyPet(template.getNpcId()) || PetDataTable.isImprovedBabyPet(template.getNpcId()))
+			if (PetDataTable.isBabyPet(template.getId()) || PetDataTable.isImprovedBabyPet(template.getId()))
 			{
 				pet = new PetBabyInstance(rset.getInt("objId"), template, owner, control, rset.getInt("level"), rset.getLong("exp"));
 			}
@@ -196,7 +196,7 @@ public class PetInstance extends Summon
 		
 		if (_level <= 0)
 		{
-			if (template.npcId == PetDataTable.SIN_EATER_ID)
+			if (template.getId() == PetDataTable.SIN_EATER_ID)
 			{
 				_level = owner.getLevel();
 			}
@@ -208,7 +208,7 @@ public class PetInstance extends Summon
 			_exp = getExpForThisLevel();
 		}
 		
-		int minLevel = PetDataTable.getMinLevel(template.npcId);
+		int minLevel = PetDataTable.getMinLevel(template.getId());
 		
 		if (_level < minLevel)
 		{
@@ -230,13 +230,13 @@ public class PetInstance extends Summon
 			_level--;
 		}
 		
-		if (PetDataTable.isVitaminPet(template.npcId))
+		if (PetDataTable.isVitaminPet(template.getId()))
 		{
 			_level = owner.getLevel();
 			_exp = getExpForNextLevel();
 		}
 		
-		_data = PetDataTable.getInstance().getInfo(template.npcId, _level);
+		_data = PetDataTable.getInstance().getInfo(template.getId(), _level);
 		_inventory = new PetInventory(this);
 	}
 	
@@ -272,7 +272,7 @@ public class PetInstance extends Summon
 			return false;
 		}
 		
-		boolean deluxFood = PetDataTable.isStrider(getNpcId()) && (item.getItemId() == DELUXE_FOOD_FOR_STRIDER);
+		boolean deluxFood = PetDataTable.isStrider(getId()) && (item.getItemId() == DELUXE_FOOD_FOR_STRIDER);
 		
 		if ((getFoodId() != item.getItemId()) && !deluxFood)
 		{
@@ -302,7 +302,7 @@ public class PetInstance extends Summon
 	{
 		ItemInstance food = getInventory().getItemByItemId(getFoodId());
 		
-		if ((food == null) && PetDataTable.isStrider(getNpcId()))
+		if ((food == null) && PetDataTable.isStrider(getId()))
 		{
 			food = getInventory().getItemByItemId(DELUXE_FOOD_FOR_STRIDER);
 		}
@@ -320,7 +320,7 @@ public class PetInstance extends Summon
 	{
 		Player owner = getPlayer();
 		
-		if (PetDataTable.isVitaminPet(getNpcId()))
+		if (PetDataTable.isVitaminPet(getId()))
 		{
 			return;
 		}
@@ -446,7 +446,7 @@ public class PetInstance extends Summon
 		owner.sendPacket(new SystemMessage(SystemMessage.THE_PET_HAS_BEEN_KILLED_IF_YOU_DO_NOT_RESURRECT_IT_WITHIN_24_HOURS_THE_PETS_BODY_WILL_DISAPPEAR_ALONG_WITH_ALL_THE_PETS_ITEMS));
 		startDecay(86400000L);
 		
-		if (PetDataTable.isVitaminPet(getNpcId()))
+		if (PetDataTable.isVitaminPet(getId()))
 		{
 			return;
 		}
@@ -666,7 +666,7 @@ public class PetInstance extends Summon
 	@Override
 	public long getExpForNextLevel()
 	{
-		return PetDataTable.getInstance().getInfo(getNpcId(), _level + 1).getExp();
+		return PetDataTable.getInstance().getInfo(getId(), _level + 1).getExp();
 	}
 	
 	/**
@@ -676,7 +676,7 @@ public class PetInstance extends Summon
 	@Override
 	public long getExpForThisLevel()
 	{
-		return PetDataTable.getInstance().getInfo(getNpcId(), _level).getExp();
+		return PetDataTable.getInstance().getInfo(getId(), _level).getExp();
 	}
 	
 	/**
@@ -761,7 +761,7 @@ public class PetInstance extends Summon
 	 */
 	public long getMaxExp()
 	{
-		return PetDataTable.getInstance().getInfo(getNpcId(), Experience.getMaxLevel()).getExp();
+		return PetDataTable.getInstance().getInfo(getId(), Experience.getMaxLevel()).getExp();
 	}
 	
 	/**
@@ -903,7 +903,7 @@ public class PetInstance extends Summon
 	@Override
 	public int getSoulshotConsumeCount()
 	{
-		return PetDataTable.getSoulshots(getNpcId());
+		return PetDataTable.getSoulshots(getId());
 	}
 	
 	/**
@@ -913,7 +913,7 @@ public class PetInstance extends Summon
 	@Override
 	public int getSpiritshotConsumeCount()
 	{
-		return PetDataTable.getSpiritshots(getNpcId());
+		return PetDataTable.getSpiritshots(getId());
 	}
 	
 	/**
@@ -1045,7 +1045,7 @@ public class PetInstance extends Summon
 		{
 			int feedTime;
 			
-			if (PetDataTable.isVitaminPet(getNpcId()))
+			if (PetDataTable.isVitaminPet(getId()))
 			{
 				feedTime = 10000;
 			}
@@ -1187,7 +1187,7 @@ public class PetInstance extends Summon
 	 */
 	private void updateData()
 	{
-		_data = PetDataTable.getInstance().getInfo(getTemplate().npcId, _level);
+		_data = PetDataTable.getInstance().getInfo(getTemplate().getId(), _level);
 	}
 	
 	/**
@@ -1197,7 +1197,7 @@ public class PetInstance extends Summon
 	@Override
 	public double getExpPenalty()
 	{
-		return PetDataTable.getExpPenalty(getTemplate().npcId);
+		return PetDataTable.getExpPenalty(getTemplate().getId());
 	}
 	
 	/**
@@ -1245,7 +1245,7 @@ public class PetInstance extends Summon
 			
 			if (attacker.isNpc())
 			{
-				sm.addNpcName(((NpcInstance) attacker).getTemplate().npcId);
+				sm.addNpcName(((NpcInstance) attacker).getTemplate().getId());
 			}
 			else
 			{
@@ -1264,7 +1264,7 @@ public class PetInstance extends Summon
 	@Override
 	public int getFormId()
 	{
-		switch (getNpcId())
+		switch (getId())
 		{
 			case PetDataTable.GREAT_WOLF_ID:
 			case PetDataTable.WGREAT_WOLF_ID:

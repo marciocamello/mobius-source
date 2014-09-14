@@ -56,7 +56,7 @@ public class Q10288_SecretMission extends Quest implements ScriptFile
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (npcId == _dominic)
 		{
@@ -101,7 +101,7 @@ public class Q10288_SecretMission extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (npcId == _dominic)
 		{
@@ -166,7 +166,7 @@ public class Q10288_SecretMission extends Quest implements ScriptFile
 			st = player.getQuestState(getClass());
 		}
 		
-		if (npc.getNpcId() == _aquilani)
+		if (npc.getId() == _aquilani)
 		{
 			if (st.getState() == COMPLETED)
 			{

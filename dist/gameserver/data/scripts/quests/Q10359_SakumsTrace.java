@@ -155,7 +155,7 @@ public class Q10359_SakumsTrace extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		
 		if (npcId == guild)
@@ -377,7 +377,7 @@ public class Q10359_SakumsTrace extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if ((cond == 2) && (st.getQuestItemsCount(frag) < 20))
 		{

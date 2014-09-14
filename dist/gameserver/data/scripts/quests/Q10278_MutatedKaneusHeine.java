@@ -78,7 +78,7 @@ public class Q10278_MutatedKaneusHeine extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int id = st.getState();
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (id == COMPLETED)
 		{

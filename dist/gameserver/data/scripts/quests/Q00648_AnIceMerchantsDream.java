@@ -145,7 +145,7 @@ public class Q00648_AnIceMerchantsDream extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int _state = st.getState();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (_state == CREATED)
@@ -219,7 +219,7 @@ public class Q00648_AnIceMerchantsDream extends Quest implements ScriptFile
 		
 		if (cond > 0)
 		{
-			qs.rollAndGive(Silver_Ice_Crystal, 1, npc.getNpcId() - 22050);
+			qs.rollAndGive(Silver_Ice_Crystal, 1, npc.getId() - 22050);
 			
 			if (cond == 2)
 			{

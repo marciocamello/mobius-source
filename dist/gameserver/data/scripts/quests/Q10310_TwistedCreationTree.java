@@ -82,7 +82,7 @@ public class Q10310_TwistedCreationTree extends Quest implements ScriptFile
 			return htmltext;
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		Player player = st.getPlayer();
 		QuestState previous = player.getQuestState(Q10302_UnsettlingShadowAndRumors.class);
 		

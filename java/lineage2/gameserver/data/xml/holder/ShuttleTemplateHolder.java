@@ -40,7 +40,7 @@ public final class ShuttleTemplateHolder extends AbstractHolder
 	 */
 	public void addTemplate(ShuttleTemplate template)
 	{
-		_templates.put(template.getId(), template);
+		_templates.put(template.getShuttleId(), template);
 	}
 	
 	/**

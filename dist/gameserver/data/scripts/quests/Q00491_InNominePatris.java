@@ -135,7 +135,7 @@ public class Q00491_InNominePatris extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		Player player = st.getPlayer();
 		int classid = player.getClassId().getId();
@@ -176,7 +176,7 @@ public class Q00491_InNominePatris extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if ((st.getCond() == 1) && ArrayUtils.contains(mobstohunt, npcId) && (st.getQuestItemsCount(Fragment) < 50))
 		{

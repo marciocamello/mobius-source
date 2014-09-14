@@ -142,7 +142,7 @@ public class SpawnManager
 			
 			if (npcTemplate.isRaid && group.equals(PeriodOfDay.NONE.name()))
 			{
-				RaidBossSpawnManager.getInstance().addNewSpawn(npcTemplate.getNpcId(), spawner);
+				RaidBossSpawnManager.getInstance().addNewSpawn(npcTemplate.getId(), spawner);
 			}
 		}
 		

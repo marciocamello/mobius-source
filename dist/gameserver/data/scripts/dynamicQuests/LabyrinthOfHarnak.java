@@ -314,9 +314,9 @@ public final class LabyrinthOfHarnak extends DynamicQuest implements ScriptFile
 				return;
 			}
 			
-			if (victim.isNpc() && isStarted() && ArrayUtils.contains(LOH_MOBS, victim.getNpcId()))
+			if (victim.isNpc() && isStarted() && ArrayUtils.contains(LOH_MOBS, victim.getId()))
 			{
-				switch (victim.getNpcId())
+				switch (victim.getId())
 				{
 					case DEMONIC_BATHUS:
 						increaseTaskPoint(KILL_LOH_MOB, actor.getPlayer(), 1);

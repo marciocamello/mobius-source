@@ -562,13 +562,13 @@ public class NpcInstance extends Creature
 	}
 	
 	/**
-	 * Method getNpcId.
+	 * Method getId.
 	 * @return int
 	 */
 	@Override
-	public int getNpcId()
+	public int getId()
 	{
-		return getTemplate().npcId;
+		return getTemplate().getId();
 	}
 	
 	protected boolean _unAggred = false;
@@ -635,7 +635,7 @@ public class NpcInstance extends Creature
 	 */
 	public boolean isInFaction(NpcInstance npc)
 	{
-		return getFaction().equals(npc.getFaction()) && !getFaction().isIgnoreNpcId(npc.getNpcId());
+		return getFaction().equals(npc.getFaction()) && !getFaction().isIgnoreNpcId(npc.getId());
 	}
 	
 	/**
@@ -1269,7 +1269,7 @@ public class NpcInstance extends Creature
 			return;
 		}
 		
-		_log.info("Incorrect htm bypass! npcId=" + getTemplate().npcId + " command=[" + command + "]");
+		_log.info("Incorrect htm bypass! npcId=" + getTemplate().getId() + " command=[" + command + "]");
 	}
 	
 	/**
@@ -1517,7 +1517,7 @@ public class NpcInstance extends Creature
 		}
 		
 		String filename;
-		int npcId = getNpcId();
+		int npcId = getId();
 		
 		switch (npcId)
 		{
@@ -1680,7 +1680,7 @@ public class NpcInstance extends Creature
 			return;
 		}
 		
-		int npcId = getTemplate().npcId;
+		int npcId = getTemplate().getId();
 		
 		if (getTemplate().getTeachInfo().isEmpty())
 		{
@@ -1707,11 +1707,11 @@ public class NpcInstance extends Creature
 		{
 			if (this instanceof WarehouseInstance)
 			{
-				showChatWindow(player, "warehouse/" + getNpcId() + "-noteach.htm");
+				showChatWindow(player, "warehouse/" + getId() + "-noteach.htm");
 			}
 			else if (this instanceof TrainerInstance)
 			{
-				showChatWindow(player, "trainer/" + getNpcId() + "-noteach.htm");
+				showChatWindow(player, "trainer/" + getId() + "-noteach.htm");
 			}
 			else
 			{
@@ -1780,7 +1780,7 @@ public class NpcInstance extends Creature
 		{
 			if (!player.isQuestCompleted("Q00136_MoreThanMeetsTheEye"))
 			{
-				showChatWindow(player, "trainer/" + getNpcId() + "-noquest.htm");
+				showChatWindow(player, "trainer/" + getId() + "-noquest.htm");
 				return;
 			}
 		}
@@ -1878,7 +1878,7 @@ public class NpcInstance extends Creature
 	@Override
 	public String toString()
 	{
-		return getNpcId() + " " + getName();
+		return getId() + " " + getName();
 	}
 	
 	/**

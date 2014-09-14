@@ -421,7 +421,7 @@ public final class AntharasManager extends Functions implements ScriptFile, OnDe
 		{
 			checkAnnihilated();
 		}
-		else if (self.isNpc() && (self.getNpcId() == ANTHARAS_STRONG))
+		else if (self.isNpc() && (self.getId() == ANTHARAS_STRONG))
 		{
 			ThreadPoolManager.getInstance().schedule(new AntharasSpawn(8), 10);
 		}

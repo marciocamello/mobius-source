@@ -295,14 +295,14 @@ public abstract class SagasSuperclass extends Quest
 		{
 			if (player.getVar("sel1") == null)
 			{
-				player.setVar("sel1", npc.getNpcId(), -1);
+				player.setVar("sel1", npc.getId(), -1);
 				npc.deleteMe();
 				return null;
 			}
 			
 			if (player.getVar("sel2") == null)
 			{
-				player.setVar("sel2", npc.getNpcId(), -1);
+				player.setVar("sel2", npc.getId(), -1);
 				npc.deleteMe();
 				st.setCond(7);
 				return null;
@@ -803,7 +803,7 @@ public abstract class SagasSuperclass extends Quest
 			{
 				NpcInstance npc = (NpcInstance) self;
 				
-				if (_npcWaves.contains(npc) || (npc.getNpcId() == Death_wound))
+				if (_npcWaves.contains(npc) || (npc.getId() == Death_wound))
 				{
 					// we need to find our player in this instance, let's search
 					for (Player p : npc.getReflection().getPlayers())
@@ -828,7 +828,7 @@ public abstract class SagasSuperclass extends Quest
 		Player player = st.getPlayer();
 		int wave = Integer.parseInt(player.getVar("wave"));
 		
-		if (npc.getNpcId() == Death_wound)
+		if (npc.getId() == Death_wound)
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.AGH_HUMANS_HA_IT_DOES_NOT_MATTER_YOUR_WORLD_WILL_END_ANYWAYS, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			st.startQuestTimer("secondStandCompleted", 1000);
@@ -894,7 +894,7 @@ public abstract class SagasSuperclass extends Quest
 	{
 		int cond = st.getCond();
 		int id = st.getState();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		Player player = st.getPlayer();
 		String htmltext = "noquest";
 		

@@ -122,7 +122,7 @@ public class Q00602_ShadowOfLight extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		int id = st.getState();
 		int cond = 0;
@@ -171,7 +171,7 @@ public class Q00602_ShadowOfLight extends Quest implements ScriptFile
 		{
 			long count = st.getQuestItemsCount(EYE_OF_DARKNESS);
 			
-			if ((count < 100) && Rnd.chance(npc.getNpcId() == 21299 ? 35 : 40))
+			if ((count < 100) && Rnd.chance(npc.getId() == 21299 ? 35 : 40))
 			{
 				st.giveItems(EYE_OF_DARKNESS, 1);
 				

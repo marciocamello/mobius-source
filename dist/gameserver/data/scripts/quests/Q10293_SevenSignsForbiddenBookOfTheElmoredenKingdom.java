@@ -120,7 +120,7 @@ public class Q10293_SevenSignsForbiddenBookOfTheElmoredenKingdom extends Quest i
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		
@@ -256,7 +256,7 @@ public class Q10293_SevenSignsForbiddenBookOfTheElmoredenKingdom extends Quest i
 	{
 		for (NpcInstance n : player.getReflection().getNpcs())
 		{
-			if (n.getNpcId() == ElcardiaInzone1)
+			if (n.getId() == ElcardiaInzone1)
 			{
 				n.teleToLocation(Location.findPointToStay(player, 60));
 			}

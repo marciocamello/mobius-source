@@ -81,7 +81,7 @@ public class Q00493_KickingOutUnwelcomeGuests extends Quest implements ScriptFil
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		Player player = st.getPlayer();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int state = st.getState();
 		int cond = st.getCond();
 		

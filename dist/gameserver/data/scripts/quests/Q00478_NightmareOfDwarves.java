@@ -82,7 +82,7 @@ public class Q00478_NightmareOfDwarves extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		Player player = st.getPlayer();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int state = st.getState();
 		int cond = st.getCond();
 		
@@ -205,7 +205,7 @@ public class Q00478_NightmareOfDwarves extends Quest implements ScriptFile
 		}
 		else if (cond == 3)
 		{
-			if (npc.getNpcId() == TRASKEN)
+			if (npc.getId() == TRASKEN)
 			{
 				st.setCond(4);
 			}

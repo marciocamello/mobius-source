@@ -78,7 +78,7 @@ public class Q00499_IncarnationOfGluttonyKaliosSolo extends Quest implements Scr
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (npcId == KARTIA_RESEARCHER)
@@ -129,7 +129,7 @@ public class Q00499_IncarnationOfGluttonyKaliosSolo extends Quest implements Scr
 				
 				if ((qs != null) && qs.isStarted())
 				{
-					if ((qs.getCond() == 1) && (npc.getNpcId() == KARTIA_RB))
+					if ((qs.getCond() == 1) && (npc.getId() == KARTIA_RB))
 					{
 						qs.setCond(2);
 					}
@@ -138,7 +138,7 @@ public class Q00499_IncarnationOfGluttonyKaliosSolo extends Quest implements Scr
 		}
 		else
 		{
-			if ((cond == 1) && (npc.getNpcId() == KARTIA_RB))
+			if ((cond == 1) && (npc.getId() == KARTIA_RB))
 			{
 				st.setCond(2);
 			}

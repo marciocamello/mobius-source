@@ -175,7 +175,7 @@ public class Dwarvs extends Fighter
 			return false;
 		}
 		
-		return ArrayUtils.contains(ATTACK_IDS, target.getNpcId());
+		return ArrayUtils.contains(ATTACK_IDS, target.getId());
 	}
 	
 	/**
@@ -191,7 +191,7 @@ public class Dwarvs extends Fighter
 			return false;
 		}
 		
-		if (target.isNpc() && !ArrayUtils.contains(ATTACK_IDS, target.getNpcId()))
+		if (target.isNpc() && !ArrayUtils.contains(ATTACK_IDS, target.getId()))
 		{
 			return false;
 		}
@@ -230,7 +230,7 @@ public class Dwarvs extends Fighter
 			
 			for (Creature target : list)
 			{
-				if ((target != null) && !target.isDead() && ArrayUtils.contains(ATTACK_IDS, target.getNpcId()))
+				if ((target != null) && !target.isDead() && ArrayUtils.contains(ATTACK_IDS, target.getId()))
 				{
 					clearTasks();
 					actor.setRunning();

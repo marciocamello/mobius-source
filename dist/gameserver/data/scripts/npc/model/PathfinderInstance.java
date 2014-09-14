@@ -101,14 +101,14 @@ public final class PathfinderInstance extends NpcInstance
 		}
 		else if (command.startsWith("ListPossible"))
 		{
-			if ((getNpcId() == 32484) && Config.ALT_KAMALOKA_NIGHTMARES_PREMIUM_ONLY && !player.hasBonus())
+			if ((getId() == 32484) && Config.ALT_KAMALOKA_NIGHTMARES_PREMIUM_ONLY && !player.hasBonus())
 			{
 				showChatWindow(player, "instance/soloKamaloka/32484-no.htm");
 				return;
 			}
 			
 			DomainArea domain = MapRegionManager.getInstance().getRegionData(DomainArea.class, this);
-			String htmlpath = "instance/soloKamaloka/" + getNpcId();
+			String htmlpath = "instance/soloKamaloka/" + getId();
 			
 			if (domain != null)
 			{
@@ -145,7 +145,7 @@ public final class PathfinderInstance extends NpcInstance
 		}
 		else if (command.startsWith("ShowResults"))
 		{
-			String htmlpath = "instance/soloKamaloka/" + getNpcId();
+			String htmlpath = "instance/soloKamaloka/" + getId();
 			
 			switch (getRewardRank())
 			{

@@ -50,7 +50,7 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest implements Script
 	{
 		String htmltext = event;
 		
-		if (npc.getNpcId() == MOUEN)
+		if (npc.getId() == MOUEN)
 		{
 			if (event.equalsIgnoreCase("30196-03.htm"))
 			{
@@ -59,7 +59,7 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest implements Script
 				st.playSound(SOUND_ACCEPT);
 			}
 		}
-		else if ((npc.getNpcId() == JOHNNY) && event.equalsIgnoreCase("32744-03.htm"))
+		else if ((npc.getId() == JOHNNY) && event.equalsIgnoreCase("32744-03.htm"))
 		{
 			st.unset("cond");
 			st.giveItems(57, 83056);
@@ -75,7 +75,7 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest implements Script
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (npcId == MOUEN)

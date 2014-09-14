@@ -99,7 +99,7 @@ public final class TalkinIslandGuides extends DefaultAI
 			return false;
 		}
 		
-		final int npcId = actor.getNpcId();
+		final int npcId = actor.getId();
 		int[][] coords;
 		NpcString string;
 		NpcString end_String;

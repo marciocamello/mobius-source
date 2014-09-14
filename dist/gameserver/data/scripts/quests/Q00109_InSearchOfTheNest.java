@@ -75,7 +75,7 @@ public class Q00109_InSearchOfTheNest extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int id = st.getState();
 		
 		if (id == COMPLETED)

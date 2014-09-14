@@ -103,7 +103,7 @@ public class HardSpawner extends Spawner
 			return 0;
 		}
 		
-		return npcInfo.getTemplate().npcId;
+		return npcInfo.getTemplate().getId();
 	}
 	
 	/**
@@ -164,7 +164,7 @@ public class HardSpawner extends Spawner
 			
 			for (NpcInstance npc : _spawned)
 			{
-				if (npc.getNpcId() == npcInfo.getTemplate().getNpcId())
+				if (npc.getId() == npcInfo.getTemplate().getId())
 				{
 					count++;
 				}

@@ -82,7 +82,7 @@ public class Q00755_InNeedOfPetras extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		String htmltext = "noquest";
 		
@@ -129,7 +129,7 @@ public class Q00755_InNeedOfPetras extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (ArrayUtils.contains(MONSTERS, npcId))

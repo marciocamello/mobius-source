@@ -100,7 +100,7 @@ public class Q00654_JourneyToASettlement extends Quest implements ScriptFile
 		
 		int cond = st.getCond();
 		
-		if (npc.getNpcId() == NamelessSpirit)
+		if (npc.getId() == NamelessSpirit)
 		{
 			if (cond == 0)
 			{

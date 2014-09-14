@@ -161,7 +161,7 @@ public class Q00038_DragonFangs extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		
@@ -234,7 +234,7 @@ public class Q00038_DragonFangs extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		boolean chance = Rnd.chance(CHANCE_FOR_QUEST_ITEMS);
 		int cond = st.getCond();
 		

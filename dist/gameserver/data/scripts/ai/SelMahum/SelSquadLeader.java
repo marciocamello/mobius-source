@@ -70,7 +70,7 @@ public final class SelSquadLeader extends Fighter
 			{
 				for (NpcInstance npc : actor.getAroundNpc(600, 300))
 				{
-					if ((npc.getNpcId() == NPC_ID_FIRE_FEED) && GeoEngine.canSeeTarget(actor, npc, false))
+					if ((npc.getId() == NPC_ID_FIRE_FEED) && GeoEngine.canSeeTarget(actor, npc, false))
 					{
 						isBusy = true;
 						actor.setRunning();
@@ -83,7 +83,7 @@ public final class SelSquadLeader extends Fighter
 							Functions.npcSay(actor, phrase[Rnd.get(2)]);
 						}
 					}
-					else if ((npc.getNpcId() == NPC_ID_FIRE) && (npc.getNpcState() == 1) && GeoEngine.canSeeTarget(actor, npc, false))
+					else if ((npc.getId() == NPC_ID_FIRE) && (npc.getNpcState() == 1) && GeoEngine.canSeeTarget(actor, npc, false))
 					{
 						isBusy = true;
 						actor.setNpcState(2);

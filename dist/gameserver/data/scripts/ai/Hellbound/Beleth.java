@@ -66,7 +66,7 @@ public final class Beleth extends Mystic
 			
 			for (NpcInstance npc : World.getAroundNpc(actor))
 			{
-				if (npc.getNpcId() == CLONE)
+				if (npc.getId() == CLONE)
 				{
 					npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, Rnd.get(1, 100));
 				}

@@ -74,7 +74,7 @@ public class Q10351_OwnerOfHall extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		Player player = st.getPlayer();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (player.getLevel() < 95)

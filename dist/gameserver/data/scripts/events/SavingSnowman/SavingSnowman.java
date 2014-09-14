@@ -553,7 +553,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 	{
 		for (NpcInstance npc : rewarded.getAroundNpc(1500, 300))
 		{
-			if (npc.getNpcId() == EVENT_REWARDER_ID)
+			if (npc.getId() == EVENT_REWARDER_ID)
 			{
 				return;
 			}

@@ -97,7 +97,7 @@ public class Q00471_BreakingThroughTheEmeraldSquare extends Quest implements Scr
 	{
 		Player player = st.getPlayer();
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (npcId == CON1)
@@ -135,7 +135,7 @@ public class Q00471_BreakingThroughTheEmeraldSquare extends Quest implements Scr
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		npc.getNpcId();
+		npc.getId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		

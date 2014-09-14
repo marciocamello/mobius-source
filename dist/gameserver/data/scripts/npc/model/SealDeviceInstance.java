@@ -106,7 +106,7 @@ public final class SealDeviceInstance extends MonsterInstance
 		{
 			for (NpcInstance n : _p.getReflection().getNpcs())
 			{
-				if ((n.getNpcId() != 32586) && (n.getNpcId() != 32587))
+				if ((n.getId() != 32586) && (n.getId() != 32587))
 				{
 					n.deleteMe();
 				}

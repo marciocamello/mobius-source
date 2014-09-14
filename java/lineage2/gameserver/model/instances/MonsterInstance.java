@@ -139,7 +139,7 @@ public class MonsterInstance extends NpcInstance
 	@Override
 	public boolean isMovementDisabled()
 	{
-		return (getNpcId() == 18344) || (getNpcId() == 18345) || super.isMovementDisabled();
+		return (getId() == 18344) || (getId() == 18345) || super.isMovementDisabled();
 	}
 	
 	/**
@@ -149,7 +149,7 @@ public class MonsterInstance extends NpcInstance
 	@Override
 	public boolean isLethalImmune()
 	{
-		return (_isChampion > 0) || (getNpcId() == 22215) || (getNpcId() == 22216) || (getNpcId() == 22217) || super.isLethalImmune();
+		return (_isChampion > 0) || (getId() == 22215) || (getId() == 22216) || (getId() == 22217) || super.isLethalImmune();
 	}
 	
 	/**

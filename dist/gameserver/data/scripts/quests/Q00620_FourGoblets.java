@@ -176,7 +176,7 @@ public class Q00620_FourGoblets extends Quest implements ScriptFile
 				return null;
 			}
 			
-			return "" + str(npc.getNpcId()) + "-0.htm";
+			return "" + str(npc.getId()) + "-0.htm";
 		}
 		else if (event.equalsIgnoreCase("16"))
 		{
@@ -193,7 +193,7 @@ public class Q00620_FourGoblets extends Quest implements ScriptFile
 				return null;
 			}
 			
-			return "" + str(npc.getNpcId()) + "-0.htm";
+			return "" + str(npc.getId()) + "-0.htm";
 		}
 		else if (event.equalsIgnoreCase("17"))
 		{
@@ -266,7 +266,7 @@ public class Q00620_FourGoblets extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int id = st.getState();
 		int cond = st.getCond();
 		
@@ -410,7 +410,7 @@ public class Q00620_FourGoblets extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (((cond == 1) || (cond == 2)) && (npcId >= 18120) && (npcId <= 18256) && Rnd.chance(30))

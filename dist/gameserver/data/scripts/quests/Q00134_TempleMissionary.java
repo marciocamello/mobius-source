@@ -104,7 +104,7 @@ public class Q00134_TempleMissionary extends Quest implements ScriptFile
 			return "completed";
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (_state == CREATED)
 		{
@@ -206,7 +206,7 @@ public class Q00134_TempleMissionary extends Quest implements ScriptFile
 	{
 		if ((qs.getState() == STARTED) && (qs.getCond() == 3))
 		{
-			if (npc.getNpcId() == Cruma_Marshlands_Traitor)
+			if (npc.getId() == Cruma_Marshlands_Traitor)
 			{
 				qs.giveItems(Giants_Technology_Report, 1);
 				

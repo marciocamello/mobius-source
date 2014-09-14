@@ -148,7 +148,7 @@ public final class Teredor extends Fighter
 		@Override
 		public void onCurrentHpDamage(Creature actor, double damage, Creature attacker, Skill skill)
 		{
-			if ((actor == null) || actor.isDead() || (actor.getNpcId() != teredor))
+			if ((actor == null) || actor.isDead() || (actor.getId() != teredor))
 			{
 				return;
 			}

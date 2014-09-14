@@ -132,7 +132,7 @@ public class Q10322_SearchingForTheMysteriousPower extends Quest implements Scri
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		
 		if (npcId == shenon)
@@ -230,7 +230,7 @@ public class Q10322_SearchingForTheMysteriousPower extends Quest implements Scri
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if ((st.getCond() == 2) && (npcId == crow))
 		{

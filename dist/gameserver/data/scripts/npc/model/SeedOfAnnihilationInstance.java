@@ -105,11 +105,11 @@ public final class SeedOfAnnihilationInstance extends MonsterInstance
 	{
 		super(objectId, template);
 		
-		if (ArrayUtils.contains(BISTAKON_MOBS, template.getNpcId()))
+		if (ArrayUtils.contains(BISTAKON_MOBS, template.getId()))
 		{
 			addMinions(BISTAKON_MINIONS[Rnd.get(BISTAKON_MINIONS.length)], template);
 		}
-		else if (ArrayUtils.contains(COKRAKON_MOBS, template.getNpcId()))
+		else if (ArrayUtils.contains(COKRAKON_MOBS, template.getId()))
 		{
 			addMinions(COKRAKON_MINIONS[Rnd.get(COKRAKON_MINIONS.length)], template);
 		}

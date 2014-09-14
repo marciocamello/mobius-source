@@ -250,7 +250,7 @@ public final class LindviorManager extends Functions implements ScriptFile, OnDe
 		{
 			checkAnnihilated();
 		}
-		else if (self.isNpc() && (self.getNpcId() == LINDVIOR))
+		else if (self.isNpc() && (self.getId() == LINDVIOR))
 		{
 			ThreadPoolManager.getInstance().schedule(new LindviorSpawn(3), 10);
 		}

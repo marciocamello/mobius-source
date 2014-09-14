@@ -68,7 +68,7 @@ public class Q00250_WatchWhatYouEat extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		
-		if (npc.getNpcId() == SALLY)
+		if (npc.getId() == SALLY)
 		{
 			if (event.equalsIgnoreCase("32743-03.htm"))
 			{
@@ -95,7 +95,7 @@ public class Q00250_WatchWhatYouEat extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		
-		if (npc.getNpcId() == SALLY)
+		if (npc.getId() == SALLY)
 		{
 			switch (st.getState())
 			{
@@ -151,7 +151,7 @@ public class Q00250_WatchWhatYouEat extends Quest implements ScriptFile
 		{
 			for (int mob[] : MOBS)
 			{
-				if (npc.getNpcId() == mob[0])
+				if (npc.getId() == mob[0])
 				{
 					if (st.getQuestItemsCount(mob[1]) == 0)
 					{

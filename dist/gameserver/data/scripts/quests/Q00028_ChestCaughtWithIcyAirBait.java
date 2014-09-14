@@ -96,7 +96,7 @@ public class Q00028_ChestCaughtWithIcyAirBait extends Quest implements ScriptFil
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		int id = st.getState();
 		int cond = st.getCond();

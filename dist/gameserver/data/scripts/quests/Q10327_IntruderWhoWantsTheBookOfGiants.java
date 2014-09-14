@@ -76,7 +76,7 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest implements Scr
 	@Override
 	public String onAttack(NpcInstance npc, QuestState st) // Fix for Dwarves (no active skill until lv10)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		Functions.npcSayToPlayer(Tairen, st.getPlayer(), NpcString.ENOUGH_OF_THIS_COME_AT_ME, ChatType.NPC_SAY);
 		
 		if (npcId == assasin)
@@ -229,7 +229,7 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest implements Scr
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		
 		if (npcId == panteleon)
@@ -276,7 +276,7 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest implements Scr
 			return htmltext;
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (npcId == table)
 		{

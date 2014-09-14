@@ -67,7 +67,7 @@ public final class Util extends Functions
 		
 		if (player.getLastNpc() != null)
 		{
-			final int npcId = player.getLastNpc().getNpcId();
+			final int npcId = player.getLastNpc().getId();
 			
 			switch (npcId)
 			{

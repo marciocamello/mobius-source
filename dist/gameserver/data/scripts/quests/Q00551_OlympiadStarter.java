@@ -39,7 +39,7 @@ public class Q00551_OlympiadStarter extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		switch (npcId)
 		{

@@ -124,7 +124,7 @@ public class Q00607_ProveYourCourage extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if ((npcId == VARKAS_HERO_SHADITH) && (st.getCond() == 1))
 		{

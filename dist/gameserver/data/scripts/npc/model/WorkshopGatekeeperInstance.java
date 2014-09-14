@@ -130,7 +130,7 @@ public final class WorkshopGatekeeperInstance extends NpcInstance
 		
 		if (command.startsWith("trydoor"))
 		{
-			int npcId = getNpcId();
+			int npcId = getId();
 			
 			if ((doorRecharge == 0) || (doorRecharge <= System.currentTimeMillis()))
 			{

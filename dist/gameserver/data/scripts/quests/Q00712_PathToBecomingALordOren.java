@@ -110,7 +110,7 @@ public class Q00712_PathToBecomingALordOren extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		Castle castle = ResidenceHolder.getInstance().getResidence(OrenCastle);
 		if (castle.getOwner() == null)

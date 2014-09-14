@@ -670,7 +670,7 @@ public final class ValakasManager extends Functions implements ScriptFile, OnDea
 		{
 			checkAnnihilated();
 		}
-		else if (self.isNpc() && (self.getNpcId() == Valakas))
+		else if (self.isNpc() && (self.getId() == Valakas))
 		{
 			ThreadPoolManager.getInstance().schedule(new SpawnDespawn(12), 1);
 		}

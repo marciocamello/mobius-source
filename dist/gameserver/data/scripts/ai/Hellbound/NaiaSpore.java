@@ -52,7 +52,7 @@ public final class NaiaSpore extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		final NpcInstance actor = getActor();
-		final int npcId = actor.getNpcId();
+		final int npcId = actor.getId();
 		
 		switch (npcId)
 		{

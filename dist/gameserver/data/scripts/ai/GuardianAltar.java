@@ -68,7 +68,7 @@ public final class GuardianAltar extends DefaultAI
 			{
 				for (NpcInstance npc : around)
 				{
-					if (npc.getNpcId() == 18808)
+					if (npc.getId() == 18808)
 					{
 						Functions.npcSay(actor, "I can sense the presence of Dark Shaman already!");
 						return;
@@ -102,7 +102,7 @@ public final class GuardianAltar extends DefaultAI
 			{
 				for (NpcInstance npc : around)
 				{
-					if (npc.getNpcId() == 22702)
+					if (npc.getId() == 22702)
 					{
 						return;
 					}

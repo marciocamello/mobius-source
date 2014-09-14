@@ -90,24 +90,24 @@ public final class GunPrisionInstance extends NpcInstance
 				}
 			}, 3100);
 			setTitle("Cannon is loading");
-			Location loc = point_bombs[getNpcId() - 32939];
+			Location loc = point_bombs[getId() - 32939];
 			
 			for (NpcInstance monster : World.getAroundNpcCor(loc, getCurrentRegion(), getReflectionId(), 650, 500))
 			{
-				if ((monster == null) || !monster.isNpc() || ((monster.getNpcId() != 22966) && (monster.getNpcId() != 22965) && (monster.getNpcId() != 22967)))
+				if ((monster == null) || !monster.isNpc() || ((monster.getId() != 22966) && (monster.getId() != 22965) && (monster.getId() != 22967)))
 				{
 					continue;
 				}
 				
-				if (monster.getNpcId() == 22966)
+				if (monster.getId() == 22966)
 				{
 					Functions.spawn(monster.getLoc(), 22980);
 				}
-				else if (monster.getNpcId() == 22965)
+				else if (monster.getId() == 22965)
 				{
 					Functions.spawn(monster.getLoc(), 22979);
 				}
-				else if (monster.getNpcId() == 22967)
+				else if (monster.getId() == 22967)
 				{
 					Functions.spawn(monster.getLoc(), 22981);
 				}
@@ -152,11 +152,11 @@ public final class GunPrisionInstance extends NpcInstance
 				}
 			}, 3100);
 			setTitle("Cannon is loading");
-			Location loc = point_bombs_spezion[getNpcId() - 33288];
+			Location loc = point_bombs_spezion[getId() - 33288];
 			
 			for (NpcInstance monster : World.getAroundNpcCor(loc, getCurrentRegion(), getReflectionId(), 700, 500))
 			{
-				if ((monster == null) || !monster.isNpc() || (monster.getNpcId() != 25779))
+				if ((monster == null) || !monster.isNpc() || (monster.getId() != 25779))
 				{
 					continue;
 				}

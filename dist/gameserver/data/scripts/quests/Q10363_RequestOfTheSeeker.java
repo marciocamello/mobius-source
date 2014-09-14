@@ -73,7 +73,7 @@ public class Q10363_RequestOfTheSeeker extends Quest implements ScriptFile
 			return;
 		}
 		
-		int target = ((NpcInstance) npc1).getNpcId();
+		int target = ((NpcInstance) npc1).getId();
 		double dist = player.getDistance(npc1);
 		int cond = st.getCond();
 		
@@ -182,7 +182,7 @@ public class Q10363_RequestOfTheSeeker extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		
 		if (npcId == nagel)

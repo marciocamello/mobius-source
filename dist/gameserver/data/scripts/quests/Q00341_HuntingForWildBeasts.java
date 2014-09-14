@@ -61,7 +61,7 @@ public class Q00341_HuntingForWildBeasts extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		if (npc.getNpcId() != PANO)
+		if (npc.getId() != PANO)
 		{
 			return htmltext;
 		}

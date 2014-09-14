@@ -79,7 +79,7 @@ public class NpcInfo extends L2GameServerPacket
 	
 	public NpcInfo(NpcInstance cha, Creature attacker)
 	{
-		_npcId = cha.getDisplayId() != 0 ? cha.getDisplayId() : cha.getTemplate().npcId;
+		_npcId = cha.getDisplayId() != 0 ? cha.getDisplayId() : cha.getTemplate().getId();
 		_isAttackable = (attacker != null) && cha.isAutoAttackable(attacker);
 		_rhand = cha.getRightHandItem();
 		_lhand = cha.getLeftHandItem();
@@ -132,7 +132,7 @@ public class NpcInfo extends L2GameServerPacket
 			return;
 		}
 		
-		_npcId = cha.getTemplate().npcId;
+		_npcId = cha.getTemplate().getId();
 		_isAttackable = cha.isAutoAttackable(attacker);
 		_rhand = 0;
 		_lhand = 0;

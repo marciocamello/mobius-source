@@ -54,11 +54,11 @@ public final class ClanTraderInstance extends NpcInstance
 		{
 			if ((player.getClan() != null) && (player.getClan().getLevel() > 4))
 			{
-				html.setFile("default/" + getNpcId() + "-2.htm");
+				html.setFile("default/" + getId() + "-2.htm");
 			}
 			else
 			{
-				html.setFile("default/" + getNpcId() + "-1.htm");
+				html.setFile("default/" + getId() + "-1.htm");
 			}
 			
 			html.replace("%objectId%", String.valueOf(getObjectId()));
@@ -68,7 +68,7 @@ public final class ClanTraderInstance extends NpcInstance
 		{
 			if (!player.isClanLeader())
 			{
-				html.setFile("default/" + getNpcId() + "-no.htm");
+				html.setFile("default/" + getId() + "-no.htm");
 				html.replace("%objectId%", String.valueOf(getObjectId()));
 				player.sendPacket(html);
 				return;
@@ -101,11 +101,11 @@ public final class ClanTraderInstance extends NpcInstance
 				player.getClan().incReputation(reputation, false, "ClanTrader " + itemId + " from " + player.getName());
 				player.getClan().broadcastToOnlineMembers(new PledgeShowInfoUpdate(player.getClan()));
 				player.sendPacket(new SystemMessage(SystemMessage.YOUR_CLAN_HAS_ADDED_1S_POINTS_TO_ITS_CLAN_REPUTATION_SCORE).addNumber(reputation));
-				html.setFile("default/" + getNpcId() + "-ExchangeSuccess.htm");
+				html.setFile("default/" + getId() + "-ExchangeSuccess.htm");
 			}
 			else
 			{
-				html.setFile("default/" + getNpcId() + "-ExchangeFailed.htm");
+				html.setFile("default/" + getId() + "-ExchangeFailed.htm");
 			}
 			
 			html.replace("%objectId%", String.valueOf(getObjectId()));

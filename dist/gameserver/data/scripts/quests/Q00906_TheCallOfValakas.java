@@ -61,7 +61,7 @@ public class Q00906_TheCallOfValakas extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		
-		if (npc.getNpcId() == Klein)
+		if (npc.getId() == Klein)
 		{
 			switch (st.getState())
 			{
@@ -116,7 +116,7 @@ public class Q00906_TheCallOfValakas extends Quest implements ScriptFile
 		
 		if (cond == 1)
 		{
-			if ((npc.getNpcId() == ValakasMinion) && Rnd.chance(40))
+			if ((npc.getId() == ValakasMinion) && Rnd.chance(40))
 			{
 				st.giveItems(LavasaurusAlphaFragment, 1);
 				st.setCond(2);

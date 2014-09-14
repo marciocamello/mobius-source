@@ -202,7 +202,7 @@ public final class MobsAI extends Fighter
 		}
 		else if (ROOM_ID == 2)
 		{
-			if (!NEXT_GROUP.isEmpty() && r.getAllByNpcId(getActor().getNpcId(), true).isEmpty())
+			if (!NEXT_GROUP.isEmpty() && r.getAllByNpcId(getActor().getId(), true).isEmpty())
 			{
 				((HarnakUndergroundRuins) r).increaseSecondRoomGroup();
 				r.spawnByGroup(NEXT_GROUP);

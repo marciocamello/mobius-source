@@ -91,7 +91,7 @@ public class Q00152_ShardsOfGolem extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		if (npcId == 30035)

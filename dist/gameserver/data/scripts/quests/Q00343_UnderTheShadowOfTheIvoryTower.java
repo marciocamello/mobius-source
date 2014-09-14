@@ -344,7 +344,7 @@ public class Q00343_UnderTheShadowOfTheIvoryTower extends Quest implements Scrip
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		int id = st.getState();
 		if (npcId == CEMA)

@@ -285,7 +285,7 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 	{
 		World world = worlds.get(qs.getPlayer().getReflectionId());
 		int skillId = skill.getId();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (((npcId == OG2) || (npcId == OG3) || (npcId == OG4)) && ((skillId == 1217) || (skillId == 1218) || (skillId == 1011) || (skillId == 1015) || (skillId == 1401) || (skillId == 5146)))
 		{
@@ -299,7 +299,7 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
 		World world = worlds.get(player.getReflectionId());
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		Location teleto = null;
 		boolean spawn_captain = false;
 		
@@ -443,7 +443,7 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (npcId == ORACLE_GUIDE3)
 		{
@@ -475,7 +475,7 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		World world = worlds.get(npc.getReflectionId());
 		
 		if (world == null)

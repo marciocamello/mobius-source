@@ -86,7 +86,7 @@ public class Q00623_TheFinestFood extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int id = st.getState();
 		
 		if (id == CREATED)
@@ -132,7 +132,7 @@ public class Q00623_TheFinestFood extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (cond == 1)
 		{

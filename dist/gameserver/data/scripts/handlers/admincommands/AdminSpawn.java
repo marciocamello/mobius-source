@@ -316,7 +316,7 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 				
 				for (NpcInstance _npc : World.getAroundNpc(activeChar))
 				{
-					if ((_npc.getNpcId() == id) || (_npc.getNpcId() == id2))
+					if ((_npc.getId() == id) || (_npc.getId() == id2))
 					{
 						name = _npc.getName();
 						min_x = Math.min(min_x, _npc.getX());
@@ -426,7 +426,7 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 			spawn.setRespawnDelay(respawnTime);
 			spawn.setReflection(activeChar.getReflection());
 			
-			if (RaidBossSpawnManager.getInstance().isDefined(template.getNpcId()))
+			if (RaidBossSpawnManager.getInstance().isDefined(template.getId()))
 			{
 				activeChar.sendMessage("Raid Boss " + template.name + " already spawned.");
 			}

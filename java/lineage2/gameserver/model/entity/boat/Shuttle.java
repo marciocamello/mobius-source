@@ -93,7 +93,7 @@ public class Shuttle extends Boat
 	@Override
 	public int getBoatId()
 	{
-		return getTemplate().getId();
+		return getTemplate().getShuttleId();
 	}
 	
 	/**

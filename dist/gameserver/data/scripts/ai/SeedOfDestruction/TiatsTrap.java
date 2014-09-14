@@ -116,15 +116,15 @@ public final class TiatsTrap extends DefaultAI
 		{
 			Skill skill = null;
 			
-			if (ArrayUtils.contains(holdTraps, actor.getNpcId()))
+			if (ArrayUtils.contains(holdTraps, actor.getId()))
 			{
 				skill = SkillTable.getInstance().getInfo(4186, 9);
 			}
-			else if (ArrayUtils.contains(damageTraps, actor.getNpcId()))
+			else if (ArrayUtils.contains(damageTraps, actor.getId()))
 			{
 				skill = SkillTable.getInstance().getInfo(5311, 9);
 			}
-			else if (ArrayUtils.contains(stunTraps, actor.getNpcId()))
+			else if (ArrayUtils.contains(stunTraps, actor.getId()))
 			{
 				skill = SkillTable.getInstance().getInfo(4072, 10);
 			}

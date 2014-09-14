@@ -97,7 +97,7 @@ public class Q10357_AltarOfBloodThatAwakensDestruction extends Quest implements 
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int state = st.getState();
 		int cond = st.getCond();
 		

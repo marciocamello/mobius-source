@@ -64,7 +64,7 @@ public final class WastLandfillMachine extends CharacterAI
 			{
 				for (NpcInstance npc : around)
 				{
-					if ((npc.isMonster() && (npc.getNpcId() == 22656)) || (npc.getNpcId() == 22657))
+					if ((npc.isMonster() && (npc.getId() == 22656)) || (npc.getId() == 22657))
 					{
 						npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 5000);
 					}

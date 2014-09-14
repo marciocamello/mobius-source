@@ -852,7 +852,7 @@ public final class Frintezza extends Reflection
 	{
 		for (NpcInstance n : getNpcs())
 		{
-			if (ArrayUtils.contains(npcArray, n.getNpcId()))
+			if (ArrayUtils.contains(npcArray, n.getId()))
 			{
 				if (block)
 				{
@@ -915,7 +915,7 @@ public final class Frintezza extends Reflection
 		{
 			if (self.isNpc())
 			{
-				if (self.getNpcId() == HallAlarmDevice)
+				if (self.getId() == HallAlarmDevice)
 				{
 					for (int hallADoor : hallADoors)
 					{
@@ -926,18 +926,18 @@ public final class Frintezza extends Reflection
 					
 					for (NpcInstance n : getNpcs())
 					{
-						if (ArrayUtils.contains(blockANpcs, n.getNpcId()))
+						if (ArrayUtils.contains(blockANpcs, n.getId()))
 						{
 							n.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, getPlayers().get(Rnd.get(getPlayers().size())), 200);
 						}
 					}
 				}
-				else if (ArrayUtils.contains(blockANpcs, self.getNpcId()))
+				else if (ArrayUtils.contains(blockANpcs, self.getId()))
 				{
 					// ToCheck: find easier way
 					for (NpcInstance n : getNpcs())
 					{
-						if (ArrayUtils.contains(blockANpcs, n.getNpcId()) && !n.isDead())
+						if (ArrayUtils.contains(blockANpcs, n.getId()) && !n.isDead())
 						{
 							return;
 						}
@@ -950,11 +950,11 @@ public final class Frintezza extends Reflection
 					
 					blockUnblockNpcs(true, blockBNpcs);
 				}
-				else if (self.getNpcId() == DarkChoirPlayer)
+				else if (self.getId() == DarkChoirPlayer)
 				{
 					for (NpcInstance n : getNpcs())
 					{
-						if ((n.getNpcId() == DarkChoirPlayer) && !n.isDead())
+						if ((n.getId() == DarkChoirPlayer) && !n.isDead())
 						{
 							return;
 						}
@@ -967,7 +967,7 @@ public final class Frintezza extends Reflection
 					
 					blockUnblockNpcs(false, blockBNpcs);
 				}
-				else if (ArrayUtils.contains(blockBNpcs, self.getNpcId()))
+				else if (ArrayUtils.contains(blockBNpcs, self.getId()))
 				{
 					if (Rnd.chance(10))
 					{
@@ -977,7 +977,7 @@ public final class Frintezza extends Reflection
 					// ToCheck: find easier way
 					for (NpcInstance n : getNpcs())
 					{
-						if ((ArrayUtils.contains(blockBNpcs, n.getNpcId()) || ArrayUtils.contains(blockANpcs, n.getNpcId())) && !n.isDead())
+						if ((ArrayUtils.contains(blockBNpcs, n.getId()) || ArrayUtils.contains(blockANpcs, n.getId())) && !n.isDead())
 						{
 							return;
 						}
@@ -990,12 +990,12 @@ public final class Frintezza extends Reflection
 					
 					ThreadPoolManager.getInstance().schedule(new FrintezzaStart(), battleStartDelay);
 				}
-				else if (self.getNpcId() == _weakScarletId)
+				else if (self.getId() == _weakScarletId)
 				{
 					self.decayMe();
 					return;
 				}
-				else if (self.getNpcId() == _strongScarletId)
+				else if (self.getId() == _strongScarletId)
 				{
 					ThreadPoolManager.getInstance().schedule(new Die(1), 10);
 					setReenterTime(System.currentTimeMillis());
@@ -1014,7 +1014,7 @@ public final class Frintezza extends Reflection
 		@Override
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
-			if (cha.isNpc() && ((cha.getNpcId() == _weakScarletId) || (cha.getNpcId() == _strongScarletId)))
+			if (cha.isNpc() && ((cha.getId() == _weakScarletId) || (cha.getId() == _strongScarletId)))
 			{
 				cha.teleToLocation(new Location(-87784, -153304, -9176));
 				((NpcInstance) cha).getAggroList().clear(true);

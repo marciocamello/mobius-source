@@ -107,7 +107,7 @@ public class Q10503_FrintezzaEmbroideredSoulCloak extends Quest implements Scrip
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if ((cond == 1) && (npcId == FRINTEZZA))

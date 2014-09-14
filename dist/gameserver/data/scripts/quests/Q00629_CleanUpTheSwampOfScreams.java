@@ -173,7 +173,7 @@ public class Q00629_CleanUpTheSwampOfScreams extends Quest implements ScriptFile
 	{
 		if (st.getState() == STARTED)
 		{
-			st.rollAndGive(CLAWS, 1, CHANCE[npc.getNpcId() - 21508][1]);
+			st.rollAndGive(CLAWS, 1, CHANCE[npc.getId() - 21508][1]);
 		}
 		
 		return null;

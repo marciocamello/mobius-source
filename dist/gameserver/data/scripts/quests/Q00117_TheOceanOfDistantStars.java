@@ -123,7 +123,7 @@ public class Q00117_TheOceanOfDistantStars extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int id = st.getState();
 		int cond = 0;
 		

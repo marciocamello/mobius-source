@@ -236,7 +236,7 @@ public class Q00022_TragedyInVonHellmannForest extends Quest implements ScriptFi
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		String htmltext = "noquest";
 		
@@ -406,7 +406,7 @@ public class Q00022_TragedyInVonHellmannForest extends Quest implements ScriptFi
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (Mobs.contains(npcId))

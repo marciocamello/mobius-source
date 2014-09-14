@@ -81,7 +81,7 @@ public class Q10336_DividedSakumKanilov extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		
 		if (npcId == jena)
@@ -139,7 +139,7 @@ public class Q10336_DividedSakumKanilov extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if ((npcId == kanilov) && (st.getCond() == 1))
 		{

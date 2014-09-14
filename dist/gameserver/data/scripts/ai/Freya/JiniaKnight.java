@@ -54,7 +54,7 @@ public final class JiniaKnight extends Fighter
 		{
 			for (NpcInstance npc : around)
 			{
-				if (npc.getNpcId() == 22767)
+				if (npc.getId() == 22767)
 				{
 					actor.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, npc, 300);
 				}

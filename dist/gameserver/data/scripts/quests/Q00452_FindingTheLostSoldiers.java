@@ -63,7 +63,7 @@ public class Q00452_FindingTheLostSoldiers extends Quest implements ScriptFile
 			return event;
 		}
 		
-		if (npc.getNpcId() == JAKAN)
+		if (npc.getId() == JAKAN)
 		{
 			if (event.equalsIgnoreCase("32773-3.htm"))
 			{
@@ -72,7 +72,7 @@ public class Q00452_FindingTheLostSoldiers extends Quest implements ScriptFile
 				st.playSound(SOUND_ACCEPT);
 			}
 		}
-		else if (ArrayUtils.contains(SOLDIER_CORPSES, npc.getNpcId()) && (st.getCond() == 1))
+		else if (ArrayUtils.contains(SOLDIER_CORPSES, npc.getId()) && (st.getCond() == 1))
 		{
 			st.giveItems(TAG_ID, 1);
 			st.setCond(2);
@@ -93,7 +93,7 @@ public class Q00452_FindingTheLostSoldiers extends Quest implements ScriptFile
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == JAKAN)
+		if (npc.getId() == JAKAN)
 		{
 			switch (st.getState())
 			{
@@ -135,7 +135,7 @@ public class Q00452_FindingTheLostSoldiers extends Quest implements ScriptFile
 					break;
 			}
 		}
-		else if (ArrayUtils.contains(SOLDIER_CORPSES, npc.getNpcId()))
+		else if (ArrayUtils.contains(SOLDIER_CORPSES, npc.getId()))
 		{
 			if (st.getCond() == 1)
 			{

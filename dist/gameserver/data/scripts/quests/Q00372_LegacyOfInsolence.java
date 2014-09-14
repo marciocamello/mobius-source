@@ -263,7 +263,7 @@ public class Q00372_LegacyOfInsolence extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int _state = st.getState();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (_state == CREATED)
 		{
@@ -298,7 +298,7 @@ public class Q00372_LegacyOfInsolence extends Quest implements ScriptFile
 			return null;
 		}
 		
-		int[] drop = DROPLIST.get(npc.getNpcId());
+		int[] drop = DROPLIST.get(npc.getId());
 		
 		if (drop == null)
 		{

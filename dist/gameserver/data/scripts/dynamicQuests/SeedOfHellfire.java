@@ -232,7 +232,7 @@ public final class SeedOfHellfire extends DynamicQuest implements ScriptFile
 			
 			if (victim.isNpc() && isStarted())
 			{
-				switch (victim.getNpcId())
+				switch (victim.getId())
 				{
 					case SMELTING_FURNACE:
 						increaseTaskPoint(KILL_SOH_MOBS, actor.getPlayer(), 1);

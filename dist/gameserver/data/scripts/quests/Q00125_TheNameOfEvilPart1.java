@@ -118,7 +118,7 @@ public class Q00125_TheNameOfEvilPart1 extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (npcId == Mushika)
@@ -195,7 +195,7 @@ public class Q00125_TheNameOfEvilPart1 extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (st.getCond() == 3)
 		{

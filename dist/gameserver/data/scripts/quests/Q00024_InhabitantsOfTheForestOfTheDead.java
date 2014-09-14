@@ -66,7 +66,7 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest implements Scr
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = qs.getCond();
 		
 		if (npcId == DORIAN)
@@ -261,7 +261,7 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest implements Scr
 			return null;
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = qs.getCond();
 		
 		if (ArrayUtils.contains(MOBS, npcId))

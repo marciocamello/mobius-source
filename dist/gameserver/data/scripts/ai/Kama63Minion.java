@@ -101,7 +101,7 @@ public final class Kama63Minion extends Fighter
 		
 		for (NpcInstance npc : World.getAroundNpc(minion))
 		{
-			if (npc.getNpcId() == npcId)
+			if (npc.getId() == npcId)
 			{
 				return npc;
 			}

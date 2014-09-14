@@ -59,7 +59,7 @@ public final class DeadTumorInstance extends NpcInstance
 		
 		if ((getReflection().getInstancedZoneId() == 119) || (getReflection().getInstancedZoneId() == 120))
 		{
-			List<NpcInstance> deadTumors = getReflection().getAllByNpcId(getNpcId(), true);
+			List<NpcInstance> deadTumors = getReflection().getAllByNpcId(getId(), true);
 			
 			if (deadTumors.contains(this))
 			{
@@ -128,7 +128,7 @@ public final class DeadTumorInstance extends NpcInstance
 		}
 		else if (getReflection().getInstancedZoneId() == 121)
 		{
-			List<NpcInstance> deadTumors = getReflection().getAllByNpcId(getNpcId(), true);
+			List<NpcInstance> deadTumors = getReflection().getAllByNpcId(getId(), true);
 			
 			if (deadTumors.contains(this))
 			{
@@ -137,11 +137,11 @@ public final class DeadTumorInstance extends NpcInstance
 			
 			if (command.equalsIgnoreCase("examine_tumor"))
 			{
-				if (getNpcId() == 32536)
+				if (getId() == 32536)
 				{
 					showChatWindow(player, 1);
 				}
-				else if (getNpcId() == 32535)
+				else if (getId() == 32535)
 				{
 					showChatWindow(player, 7);
 				}

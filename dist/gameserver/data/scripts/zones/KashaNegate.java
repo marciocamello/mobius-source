@@ -535,6 +535,6 @@ public final class KashaNegate implements ScriptFile
 			return npc.getDisplayId();
 		}
 		
-		return npc.getNpcId();
+		return npc.getId();
 	}
 }

@@ -72,10 +72,10 @@ public final class ShuttleTemplate extends CharTemplate
 	}
 	
 	/**
-	 * Method getId.
+	 * Method getShuttleId.
 	 * @return int
 	 */
-	public int getId()
+	public int getShuttleId()
 	{
 		return _id;
 	}

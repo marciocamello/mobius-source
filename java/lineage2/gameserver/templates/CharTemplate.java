@@ -321,7 +321,7 @@ public class CharTemplate
 	 * Method getNpcId.
 	 * @return int
 	 */
-	public int getNpcId()
+	public int getId()
 	{
 		return 0;
 	}

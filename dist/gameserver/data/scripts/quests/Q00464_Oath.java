@@ -94,7 +94,7 @@ public class Q00464_Oath extends Quest implements ScriptFile
 		}
 		else if (event.equalsIgnoreCase("request_reward"))
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case Seresin:
 					htmltext = "seresin_q464_02.htm";
@@ -144,7 +144,7 @@ public class Q00464_Oath extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (npcId == Sophia)
 		{

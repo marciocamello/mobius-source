@@ -86,7 +86,7 @@ public class Q00052_WilliesSpecialBait extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		int id = st.getState();
@@ -130,7 +130,7 @@ public class Q00052_WilliesSpecialBait extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if ((npcId == TarlkBasilisks[0]) || ((npcId == TarlkBasilisks[1]) && (st.getCond() == 1)))
 		{

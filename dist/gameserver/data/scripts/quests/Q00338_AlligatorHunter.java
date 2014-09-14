@@ -165,7 +165,7 @@ public class Q00338_AlligatorHunter extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "<html><body>I have nothing to say you</body></html>";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		if (npcId == Enverun)
 		{
@@ -196,7 +196,7 @@ public class Q00338_AlligatorHunter extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		for (int[] aDROPLIST_COND : DROPLIST_COND)
 		{

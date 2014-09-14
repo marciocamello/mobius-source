@@ -130,7 +130,7 @@ public class Q10371_GraspThyPower extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		Player player = st.getPlayer();
 		int classid = player.getClassId().getId();
 		String htmltext = "noquest";

@@ -31,7 +31,7 @@ public class NpcSay extends NpcStringContainer
 	{
 		super(npcString, params);
 		_objId = npc.getObjectId();
-		_id = npc.getNpcId();
+		_id = npc.getId();
 		_type = chatType.ordinal();
 	}
 	

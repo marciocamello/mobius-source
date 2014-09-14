@@ -64,11 +64,11 @@ public final class VitaminManager extends Functions
 		{
 			removeItem(player, MinionCoupon, 1);
 			addItem(player, WhiteWeasellWhistle, 1);
-			htmltext = npc.getNpcId() + "-ok.htm";
+			htmltext = npc.getId() + "-ok.htm";
 		}
 		else
 		{
-			htmltext = npc.getNpcId() + "-no.htm";
+			htmltext = npc.getId() + "-no.htm";
 		}
 		
 		npc.showChatWindow(player, "default/" + htmltext);
@@ -87,11 +87,11 @@ public final class VitaminManager extends Functions
 		{
 			removeItem(player, MinionCoupon, 1);
 			addItem(player, FairyPrincessWhistle, 1);
-			htmltext = npc.getNpcId() + "-ok.htm";
+			htmltext = npc.getId() + "-ok.htm";
 		}
 		else
 		{
-			htmltext = npc.getNpcId() + "-no.htm";
+			htmltext = npc.getId() + "-no.htm";
 		}
 		
 		npc.showChatWindow(player, "default/" + htmltext);
@@ -110,11 +110,11 @@ public final class VitaminManager extends Functions
 		{
 			removeItem(player, MinionCoupon, 1);
 			addItem(player, WildBeastFighterWhistle, 1);
-			htmltext = npc.getNpcId() + "-ok.htm";
+			htmltext = npc.getId() + "-ok.htm";
 		}
 		else
 		{
-			htmltext = npc.getNpcId() + "-no.htm";
+			htmltext = npc.getId() + "-no.htm";
 		}
 		
 		npc.showChatWindow(player, "default/" + htmltext);
@@ -133,11 +133,11 @@ public final class VitaminManager extends Functions
 		{
 			removeItem(player, MinionCoupon, 1);
 			addItem(player, FoxShamanWhistle, 1);
-			htmltext = npc.getNpcId() + "-ok.htm";
+			htmltext = npc.getId() + "-ok.htm";
 		}
 		else
 		{
-			htmltext = npc.getNpcId() + "-no.htm";
+			htmltext = npc.getId() + "-no.htm";
 		}
 		
 		npc.showChatWindow(player, "default/" + htmltext);
@@ -156,11 +156,11 @@ public final class VitaminManager extends Functions
 		{
 			removeItem(player, SuperiorMinionCoupon, 1);
 			addItem(player, ToyKnightWhistle, 1);
-			htmltext = npc.getNpcId() + "-ok.htm";
+			htmltext = npc.getId() + "-ok.htm";
 		}
 		else
 		{
-			htmltext = npc.getNpcId() + "-no.htm";
+			htmltext = npc.getId() + "-no.htm";
 		}
 		
 		npc.showChatWindow(player, "default/" + htmltext);
@@ -179,11 +179,11 @@ public final class VitaminManager extends Functions
 		{
 			removeItem(player, SuperiorMinionCoupon, 1);
 			addItem(player, SpiritShamanWhistle, 1);
-			htmltext = npc.getNpcId() + "-ok.htm";
+			htmltext = npc.getId() + "-ok.htm";
 		}
 		else
 		{
-			htmltext = npc.getNpcId() + "-no.htm";
+			htmltext = npc.getId() + "-no.htm";
 		}
 		
 		npc.showChatWindow(player, "default/" + htmltext);
@@ -202,11 +202,11 @@ public final class VitaminManager extends Functions
 		{
 			removeItem(player, SuperiorMinionCoupon, 1);
 			addItem(player, TurtleAsceticWhistle, 1);
-			htmltext = npc.getNpcId() + "-ok.htm";
+			htmltext = npc.getId() + "-ok.htm";
 		}
 		else
 		{
-			htmltext = npc.getNpcId() + "-no.htm";
+			htmltext = npc.getId() + "-no.htm";
 		}
 		
 		npc.showChatWindow(player, "default/" + htmltext);
@@ -225,11 +225,11 @@ public final class VitaminManager extends Functions
 		{
 			removeItem(player, EnhancedRoseSpiritCoupon, 1);
 			addItem(player, DeshelophNeck, 1);
-			htmltext = npc.getNpcId() + "-ok.htm";
+			htmltext = npc.getId() + "-ok.htm";
 		}
 		else
 		{
-			htmltext = npc.getNpcId() + "-no2.htm";
+			htmltext = npc.getId() + "-no2.htm";
 		}
 		
 		npc.showChatWindow(player, "default/" + htmltext);
@@ -248,11 +248,11 @@ public final class VitaminManager extends Functions
 		{
 			removeItem(player, EnhancedRoseSpiritCoupon, 1);
 			addItem(player, HyumNeck, 1);
-			htmltext = npc.getNpcId() + "-ok.htm";
+			htmltext = npc.getId() + "-ok.htm";
 		}
 		else
 		{
-			htmltext = npc.getNpcId() + "-no2.htm";
+			htmltext = npc.getId() + "-no2.htm";
 		}
 		
 		npc.showChatWindow(player, "default/" + htmltext);
@@ -271,11 +271,11 @@ public final class VitaminManager extends Functions
 		{
 			removeItem(player, EnhancedRoseSpiritCoupon, 1);
 			addItem(player, LekangNeck, 1);
-			htmltext = npc.getNpcId() + "-ok.htm";
+			htmltext = npc.getId() + "-ok.htm";
 		}
 		else
 		{
-			htmltext = npc.getNpcId() + "-no2.htm";
+			htmltext = npc.getId() + "-no2.htm";
 		}
 		
 		npc.showChatWindow(player, "default/" + htmltext);
@@ -294,11 +294,11 @@ public final class VitaminManager extends Functions
 		{
 			removeItem(player, EnhancedRoseSpiritCoupon, 1);
 			addItem(player, LiliasNeck, 1);
-			htmltext = npc.getNpcId() + "-ok.htm";
+			htmltext = npc.getId() + "-ok.htm";
 		}
 		else
 		{
-			htmltext = npc.getNpcId() + "-no2.htm";
+			htmltext = npc.getId() + "-no2.htm";
 		}
 		
 		npc.showChatWindow(player, "default/" + htmltext);
@@ -317,11 +317,11 @@ public final class VitaminManager extends Functions
 		{
 			removeItem(player, EnhancedRoseSpiritCoupon, 1);
 			addItem(player, LaphamNeck, 1);
-			htmltext = npc.getNpcId() + "-ok.htm";
+			htmltext = npc.getId() + "-ok.htm";
 		}
 		else
 		{
-			htmltext = npc.getNpcId() + "-no2.htm";
+			htmltext = npc.getId() + "-no2.htm";
 		}
 		
 		npc.showChatWindow(player, "default/" + htmltext);
@@ -340,11 +340,11 @@ public final class VitaminManager extends Functions
 		{
 			removeItem(player, EnhancedRoseSpiritCoupon, 1);
 			addItem(player, MafumNeck, 1);
-			htmltext = npc.getNpcId() + "-ok.htm";
+			htmltext = npc.getId() + "-ok.htm";
 		}
 		else
 		{
-			htmltext = npc.getNpcId() + "-no2.htm";
+			htmltext = npc.getId() + "-no2.htm";
 		}
 		
 		npc.showChatWindow(player, "default/" + htmltext);

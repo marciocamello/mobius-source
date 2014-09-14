@@ -103,7 +103,7 @@ public final class SufferingHallDefence extends Reflection
 				return;
 			}
 			
-			if (ArrayUtils.contains(monsters, self.getNpcId()) && !checkAliveMonsters())
+			if (ArrayUtils.contains(monsters, self.getId()) && !checkAliveMonsters())
 			{
 				if (monstersSpawnTask != null)
 				{
@@ -120,14 +120,14 @@ public final class SufferingHallDefence extends Reflection
 				}, 40000L);
 			}
 			
-			if (self.getNpcId() == AliveTumor)
+			if (self.getId() == AliveTumor)
 			{
 				self.deleteMe();
 				addSpawnWithoutRespawn(DeadTumor, roomCenter, 0);
 				tumorIndex = 300;
 				doCountCoffinNotifications = true;
 			}
-			else if (self.getNpcId() == Yehan)
+			else if (self.getId() == Yehan)
 			{
 				ThreadPoolManager.getInstance().schedule(new RunnableImpl()
 				{
@@ -275,7 +275,7 @@ public final class SufferingHallDefence extends Reflection
 		
 		for (NpcInstance n : getNpcs())
 		{
-			if (n.isMonster() && ArrayUtils.contains(monsters, n.getNpcId()))
+			if (n.isMonster() && ArrayUtils.contains(monsters, n.getId()))
 			{
 				n.setRunning();
 				n.moveToLocation(roomCenter, 200, false);
@@ -289,7 +289,7 @@ public final class SufferingHallDefence extends Reflection
 	{
 		for (NpcInstance n : getNpcs())
 		{
-			if (ArrayUtils.contains(monsters, n.getNpcId()) && !n.isDead())
+			if (ArrayUtils.contains(monsters, n.getId()) && !n.isDead())
 			{
 				return true;
 			}
@@ -302,7 +302,7 @@ public final class SufferingHallDefence extends Reflection
 	{
 		for (NpcInstance npc : getNpcs())
 		{
-			if ((npc.getNpcId() == id) && !npc.isDead())
+			if ((npc.getId() == id) && !npc.isDead())
 			{
 				return npc;
 			}

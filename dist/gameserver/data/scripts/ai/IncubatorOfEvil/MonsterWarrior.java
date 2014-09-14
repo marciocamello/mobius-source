@@ -103,7 +103,7 @@ public final class MonsterWarrior extends Fighter
 		if (target.isNpc())
 		{
 			NpcInstance npc = (NpcInstance) target;
-			int _id = npc.getNpcId();
+			int _id = npc.getId();
 			
 			if ((_id == 27430) || (_id == 27431) || (_id == 27432) || (_id == 27433) || (_id == 27434) || (_id == 27425) || (_id == 33416))
 			{

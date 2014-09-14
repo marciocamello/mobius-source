@@ -130,7 +130,7 @@ public class Q00624_TheFinestIngredientsPart1 extends Quest implements ScriptFil
 			return null;
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (st.getCond() == 1)
 		{

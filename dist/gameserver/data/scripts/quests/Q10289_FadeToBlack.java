@@ -183,7 +183,7 @@ public class Q10289_FadeToBlack extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		
-		if (npc.getNpcId() == Greymore)
+		if (npc.getId() == Greymore)
 		{
 			if (cond == 0)
 			{
@@ -219,7 +219,7 @@ public class Q10289_FadeToBlack extends Quest implements ScriptFile
 		
 		if (cond == 1)
 		{
-			if (npc.getNpcId() == Anays)
+			if (npc.getId() == Anays)
 			{
 				if (Rnd.chance(30))
 				{

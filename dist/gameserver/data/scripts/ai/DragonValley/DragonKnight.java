@@ -43,7 +43,7 @@ public final class DragonKnight extends Fighter
 	{
 		super.onEvtDead(killer);
 		
-		switch (getActor().getNpcId())
+		switch (getActor().getId())
 		{
 			case 22844:
 				if (Rnd.chance(50))

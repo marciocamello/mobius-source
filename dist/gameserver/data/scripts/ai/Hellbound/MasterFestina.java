@@ -123,7 +123,7 @@ public final class MasterFestina extends Fighter
 			
 			for (NpcInstance npc : actor.getAroundNpc(3000, 500))
 			{
-				if ((npc.getNpcId() == FOUNDRY_MYSTIC_ID) || (npc.getNpcId() == FOUNDRY_SPIRIT_GUARD_ID))
+				if ((npc.getId() == FOUNDRY_MYSTIC_ID) || (npc.getId() == FOUNDRY_SPIRIT_GUARD_ID))
 				{
 					npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, Rnd.get(1, 100));
 				}
@@ -145,7 +145,7 @@ public final class MasterFestina extends Fighter
 		
 		for (NpcInstance npc : actor.getAroundNpc(3000, 500))
 		{
-			if ((npc.getNpcId() == FOUNDRY_MYSTIC_ID) || (npc.getNpcId() == FOUNDRY_SPIRIT_GUARD_ID))
+			if ((npc.getId() == FOUNDRY_MYSTIC_ID) || (npc.getId() == FOUNDRY_SPIRIT_GUARD_ID))
 			{
 				npc.deleteMe();
 			}

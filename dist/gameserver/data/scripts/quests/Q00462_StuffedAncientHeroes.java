@@ -89,7 +89,7 @@ public class Q00462_StuffedAncientHeroes extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		Player player = st.getPlayer();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int state = st.getState();
 		int cond = st.getCond();
 		
@@ -149,7 +149,7 @@ public class Q00462_StuffedAncientHeroes extends Quest implements ScriptFile
 			return null;
 		}
 		
-		if ((npc != null) && ArrayUtils.contains(Bosses, npc.getNpcId()))
+		if ((npc != null) && ArrayUtils.contains(Bosses, npc.getId()))
 		{
 			if (st.getInt("1bk") == 1)
 			{
