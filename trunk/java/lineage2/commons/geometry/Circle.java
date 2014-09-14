@@ -30,10 +30,10 @@ public class Circle extends AbstractShape
 	{
 		c = center;
 		r = radius;
-		min.x = (c.x - r);
-		max.x = (c.x + r);
-		min.y = (c.y - r);
-		max.y = (c.y + r);
+		min.setX(c.getX() - r);
+		max.setX(c.getX() + r);
+		min.setY(c.getY() - r);
+		max.setY(c.getY() + r);
 	}
 	
 	/**
@@ -55,7 +55,7 @@ public class Circle extends AbstractShape
 	@Override
 	public Circle setZmax(int z)
 	{
-		max.z = z;
+		max.setZ(z);
 		return this;
 	}
 	
@@ -67,7 +67,7 @@ public class Circle extends AbstractShape
 	@Override
 	public Circle setZmin(int z)
 	{
-		min.z = z;
+		min.setZ(z);
 		return this;
 	}
 	
@@ -81,7 +81,7 @@ public class Circle extends AbstractShape
 	@Override
 	public boolean isInside(int x, int y)
 	{
-		return (((x - c.x) * (c.x - x)) + ((y - c.y) * (c.y - y))) <= (r * r);
+		return (((x - c.getX()) * (c.getX() - x)) + ((y - c.getY()) * (c.getY() - y))) <= (r * r);
 	}
 	
 	/**

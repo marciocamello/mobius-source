@@ -32,10 +32,10 @@ public class CannotMoveAnymoreInVehicle extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_boatid = readD();
-		_loc.x = readD();
-		_loc.y = readD();
-		_loc.z = readD();
-		_loc.h = readD();
+		_loc.setX(readD());
+		_loc.setY(readD());
+		_loc.setZ(readD());
+		_loc.setHeading(readD());
 	}
 	
 	/**
@@ -56,7 +56,7 @@ public class CannotMoveAnymoreInVehicle extends L2GameClientPacket
 		if ((boat != null) && (boat.getObjectId() == _boatid))
 		{
 			player.setInBoatPosition(_loc);
-			player.setHeading(_loc.h);
+			player.setHeading(_loc.getHeading());
 			player.broadcastPacket(boat.inStopMovePacket(player));
 		}
 	}

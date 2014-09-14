@@ -131,7 +131,7 @@ public final class HeartInfinityDefence extends Reflection
 	
 	void spawnCoffin(NpcInstance tumor)
 	{
-		addSpawnWithoutRespawn(RegenerationCoffin, new Location(tumor.getLoc().x, tumor.getLoc().y, tumor.getLoc().z, Location.getRandomHeading()), 250);
+		addSpawnWithoutRespawn(RegenerationCoffin, new Location(tumor.getLoc().getX(), tumor.getLoc().getY(), tumor.getLoc().getZ(), Location.getRandomHeading()), 250);
 	}
 	
 	void handleTumorHp(double percent)

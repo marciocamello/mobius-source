@@ -36,9 +36,9 @@ public class RequestExMagicSkillUseGround extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_loc.x = readD();
-		_loc.y = readD();
-		_loc.z = readD();
+		_loc.setX(readD());
+		_loc.setY(readD());
+		_loc.setZ(readD());
 		_skillId = readD();
 		_ctrlPressed = readD() != 0;
 		_shiftPressed = readC() != 0;

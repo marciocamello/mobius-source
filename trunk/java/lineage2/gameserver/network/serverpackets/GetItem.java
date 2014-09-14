@@ -37,8 +37,8 @@ public class GetItem extends L2GameServerPacket
 		writeC(0x17);
 		writeD(_playerId);
 		writeD(_itemObjId);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
+		writeD(_loc.getX());
+		writeD(_loc.getY());
+		writeD(_loc.getZ());
 	}
 }

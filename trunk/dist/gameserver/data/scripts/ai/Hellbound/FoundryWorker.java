@@ -47,7 +47,7 @@ public final class FoundryWorker extends Fighter
 		{
 			final Location pos = Location.findPointToStay(actor, 150, 250);
 			
-			if (GeoEngine.canMoveToCoord(attacker.getX(), attacker.getY(), attacker.getZ(), pos.x, pos.y, pos.z, actor.getGeoIndex()))
+			if (GeoEngine.canMoveToCoord(attacker.getX(), attacker.getY(), attacker.getZ(), pos.getX(), pos.getY(), pos.getZ(), actor.getGeoIndex()))
 			{
 				actor.setRunning();
 				addTaskMove(pos, false);

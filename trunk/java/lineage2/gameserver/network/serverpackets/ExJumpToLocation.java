@@ -32,11 +32,11 @@ public class ExJumpToLocation extends L2GameServerPacket
 	{
 		writeEx(0x89);
 		writeD(_objectId);
-		writeD(_destination.x);
-		writeD(_destination.y);
-		writeD(_destination.z);
-		writeD(_current.x);
-		writeD(_current.y);
-		writeD(_current.z);
+		writeD(_destination.getX());
+		writeD(_destination.getY());
+		writeD(_destination.getZ());
+		writeD(_current.getX());
+		writeD(_current.getY());
+		writeD(_current.getZ());
 	}
 }

@@ -50,11 +50,11 @@ public class ExShowSeedMapInfo extends L2GameServerPacket
 		
 		for (Location loc : ENTRANCES)
 		{
-			writeD(loc.x);
-			writeD(loc.y);
-			writeD(loc.z);
+			writeD(loc.getX());
+			writeD(loc.getY());
+			writeD(loc.getZ());
 			
-			switch (loc.h)
+			switch (loc.getHeading())
 			{
 				case 1: // Seed of Destruction
 					if (SoDManager.isAttackStage())

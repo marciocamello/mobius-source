@@ -199,10 +199,10 @@ public class SimpleSpawner extends Spawner
 	 */
 	public void setLoc(Location loc)
 	{
-		_locx = loc.x;
-		_locy = loc.y;
-		_locz = loc.z;
-		_heading = loc.h;
+		_locx = loc.getX();
+		_locy = loc.getY();
+		_locz = loc.getZ();
+		_heading = loc.getHeading();
 	}
 	
 	/**
@@ -277,12 +277,12 @@ public class SimpleSpawner extends Spawner
 		if (_territory != null)
 		{
 			newLoc = _territory.getRandomLoc(_reflection.getGeoIndex());
-			newLoc.setH(Rnd.get(0xFFFF));
+			newLoc.setHeading(Rnd.get(0xFFFF));
 		}
 		else
 		{
 			newLoc = getLoc();
-			newLoc.h = getHeading() == -1 ? Rnd.get(0xFFFF) : getHeading();
+			newLoc.setHeading(getHeading() == -1 ? Rnd.get(0xFFFF) : getHeading());
 		}
 		
 		return initNpc0(mob, newLoc, spawn, set);

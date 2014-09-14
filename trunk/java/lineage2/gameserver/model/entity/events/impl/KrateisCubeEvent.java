@@ -129,7 +129,7 @@ public class KrateisCubeEvent extends GlobalEvent
 			
 			for (Location loc : waitLocs)
 			{
-				if ((loc.x == x) && (loc.y == y))
+				if ((loc.getX() == x) && (loc.getY() == y))
 				{
 					return;
 				}
@@ -139,7 +139,7 @@ public class KrateisCubeEvent extends GlobalEvent
 			
 			for (Location loc : waitLocs)
 			{
-				if ((loc.x == x) && (loc.y == y))
+				if ((loc.getX() == x) && (loc.getY() == y))
 				{
 					return;
 				}

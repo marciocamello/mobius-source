@@ -41,9 +41,9 @@ public class ExAirShipTeleportList extends L2GameServerPacket
 			BoatPoint point = _airports.get(i);
 			writeD(i - 1); // AirportID
 			writeD(point.getFuel()); // need fuel
-			writeD(point.x); // Airport x
-			writeD(point.y); // Airport y
-			writeD(point.z); // Airport z
+			writeD(point.getX()); // Airport x
+			writeD(point.getY()); // Airport y
+			writeD(point.getZ()); // Airport z
 		}
 	}
 }

@@ -40,11 +40,11 @@ public class ExMTLInShuttlePacket extends L2GameServerPacket
 		writeEx(0xCF);
 		writeD(_playableObjectId); // Player ObjID
 		writeD(_shuttleId); // Shuttle ID (Arkan: 1,2; Cruma: 3)
-		writeD(_destination.x); // Destination X in shuttle
-		writeD(_destination.y); // Destination Y in shuttle
-		writeD(_destination.z); // Destination Z in shuttle
-		writeD(_origin.x); // X in shuttle
-		writeD(_origin.y); // Y in shuttle
-		writeD(_origin.z); // Z in shuttle
+		writeD(_destination.getX()); // Destination X in shuttle
+		writeD(_destination.getY()); // Destination Y in shuttle
+		writeD(_destination.getZ()); // Destination Z in shuttle
+		writeD(_origin.getX()); // X in shuttle
+		writeD(_origin.getY()); // Y in shuttle
+		writeD(_origin.getZ()); // Z in shuttle
 	}
 }

@@ -37,8 +37,8 @@ public class VehicleDeparture extends L2GameServerPacket
 		writeD(_boatObjId);
 		writeD(_moveSpeed);
 		writeD(_rotationSpeed);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
+		writeD(_loc.getX());
+		writeD(_loc.getY());
+		writeD(_loc.getZ());
 	}
 }

@@ -492,10 +492,10 @@ public final class FourSepulchersSpawn extends Functions implements ScriptFile
 		for (int i = 0; i <= 3; i++)
 		{
 			Location loc = _shadowSpawns.get(gateKeeper[i]);
-			loc.x = _shadowSpawnLoc[locNo][i].x;
-			loc.y = _shadowSpawnLoc[locNo][i].y;
-			loc.z = _shadowSpawnLoc[locNo][i].z;
-			loc.h = _shadowSpawnLoc[locNo][i].h;
+			loc.setX(_shadowSpawnLoc[locNo][i].getX());
+			loc.setY(_shadowSpawnLoc[locNo][i].getY());
+			loc.setZ(_shadowSpawnLoc[locNo][i].getZ());
+			loc.setHeading(_shadowSpawnLoc[locNo][i].getHeading());
 		}
 	}
 	

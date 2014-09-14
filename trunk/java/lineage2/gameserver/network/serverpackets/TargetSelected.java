@@ -36,9 +36,9 @@ public class TargetSelected extends L2GameServerPacket
 		writeC(0x23);
 		writeD(_objectId);
 		writeD(_targetId);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
+		writeD(_loc.getX());
+		writeD(_loc.getY());
+		writeD(_loc.getZ());
 		writeD(0x00);
 	}
 }

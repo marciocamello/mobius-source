@@ -38,8 +38,8 @@ public class ExShuttleGetOnPacket extends L2GameServerPacket
 		writeEx(0xCC);
 		writeD(_playerObjectId); // Player ObjID
 		writeD(_shuttleId); // Shuttle ID (Arkan: 1,2; Cruma: 3)
-		writeD(_loc.x); // X in shuttle
-		writeD(_loc.y); // Y in shuttle
-		writeD(_loc.z); // Z in shuttle
+		writeD(_loc.getX()); // X in shuttle
+		writeD(_loc.getY()); // Y in shuttle
+		writeD(_loc.getZ()); // Z in shuttle
 	}
 }

@@ -316,9 +316,9 @@ public class CharInfo extends L2GameServerPacket
 		}
 		
 		writeC(0x31);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z + Config.CLIENT_Z_SHIFT);
+		writeD(_loc.getX());
+		writeD(_loc.getY());
+		writeD(_loc.getZ() + Config.CLIENT_Z_SHIFT);
 		writeD(_clanBoatObjectId);
 		writeD(_objId);
 		writeS(_name);
@@ -398,11 +398,11 @@ public class CharInfo extends L2GameServerPacket
 		writeC(_noble);
 		writeC(_hero);
 		writeC(_fishing);
-		writeD(_fishLoc.x);
-		writeD(_fishLoc.y);
-		writeD(_fishLoc.z);
+		writeD(_fishLoc.getX());
+		writeD(_fishLoc.getY());
+		writeD(_fishLoc.getZ());
 		writeD(_nameColor);
-		writeD(_loc.h);
+		writeD(_loc.getHeading());
 		writeD(_pledgeClass);
 		writeD(_pledgeType);
 		writeD(_title_color);

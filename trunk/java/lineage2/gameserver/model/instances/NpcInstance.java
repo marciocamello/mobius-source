@@ -2103,7 +2103,7 @@ public class NpcInstance extends Creature
 	{
 		if (isFlying() || isInWater() || isInBoat() || isBoat() || isDoor())
 		{
-			return loc.z;
+			return loc.getZ();
 		}
 		
 		if (isNpc())
@@ -2113,7 +2113,7 @@ public class NpcInstance extends Creature
 				return GeoEngine.getHeight(loc, getGeoIndex());
 			}
 			
-			return loc.z;
+			return loc.getZ();
 		}
 		
 		return super.getGeoZ(loc);

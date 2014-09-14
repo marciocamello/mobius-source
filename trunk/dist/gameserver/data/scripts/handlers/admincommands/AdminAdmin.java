@@ -466,7 +466,7 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					break;
 				
 				case "admin_loc":
-					Functions.sendDebugMessage(activeChar, "Coords: X:" + activeChar.getLoc().x + " Y:" + activeChar.getLoc().y + " Z:" + activeChar.getLoc().z + " H:" + activeChar.getLoc().h);
+					Functions.sendDebugMessage(activeChar, "Coords: X:" + activeChar.getLoc().getX() + " Y:" + activeChar.getLoc().getY() + " Z:" + activeChar.getLoc().getZ() + " H:" + activeChar.getLoc().getHeading());
 					break;
 				
 				case "admin_locdump":
@@ -486,9 +486,9 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 								f.createNewFile();
 							}
 							
-							Functions.sendDebugMessage(activeChar, "Coords: X:" + activeChar.getLoc().x + " Y:" + activeChar.getLoc().y + " Z:" + activeChar.getLoc().z + " H:" + activeChar.getLoc().h);
+							Functions.sendDebugMessage(activeChar, "Coords: X:" + activeChar.getLoc().getX() + " Y:" + activeChar.getLoc().getY() + " Z:" + activeChar.getLoc().getZ() + " H:" + activeChar.getLoc().getHeading());
 							FileWriter writer = new FileWriter(f, true);
-							writer.write("Loc: " + activeChar.getLoc().x + ", " + activeChar.getLoc().y + ", " + activeChar.getLoc().z + "\n");
+							writer.write("Loc: " + activeChar.getLoc().getX() + ", " + activeChar.getLoc().getY() + ", " + activeChar.getLoc().getZ() + "\n");
 							writer.close();
 						}
 						catch (Exception e)

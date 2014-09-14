@@ -14,12 +14,11 @@ package lineage2.commons.geometry;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public class Point3D extends Point2D
 {
 	static final Point3D[] EMPTY_ARRAY = new Point3D[0];
-	public int z;
+	private int _z;
 	
 	/**
 	 * Constructor for Point3D.
@@ -37,16 +36,25 @@ public class Point3D extends Point2D
 	public Point3D(int x, int y, int z)
 	{
 		super(x, y);
-		this.z = z;
+		_z = z;
 	}
 	
 	/**
-	 * Method getZ.
-	 * @return int
+	 * Get the z coordinate.
+	 * @return the z coordinate
 	 */
 	public int getZ()
 	{
-		return z;
+		return _z;
+	}
+	
+	/**
+	 * Set the z coordinate.
+	 * @param z the z coordinate
+	 */
+	public void setZ(int z)
+	{
+		_z = z;
 	}
 	
 	/**
@@ -56,7 +64,7 @@ public class Point3D extends Point2D
 	@Override
 	public Point3D clone()
 	{
-		return new Point3D(x, y, z);
+		return new Point3D(getX(), getY(), _z);
 	}
 	
 	/**
@@ -92,7 +100,7 @@ public class Point3D extends Point2D
 	 */
 	public boolean equals(Point3D p)
 	{
-		return equals(p.x, p.y, p.z);
+		return equals(p.getX(), p.getY(), p._z);
 	}
 	
 	/**
@@ -104,7 +112,7 @@ public class Point3D extends Point2D
 	 */
 	public boolean equals(int x, int y, int z)
 	{
-		return (this.x == x) && (this.y == y) && (this.z == z);
+		return (getX() == x) && (getY() == y) && (_z == z);
 	}
 	
 	/**
@@ -114,6 +122,6 @@ public class Point3D extends Point2D
 	@Override
 	public String toString()
 	{
-		return "[x: " + x + " y: " + y + " z: " + z + "]";
+		return "[x: " + getX() + " y: " + getY() + " z: " + _z + "]";
 	}
 }

@@ -6791,9 +6791,9 @@ public final class Player extends Playable implements PlayerGroup
 				}
 				else
 				{
-					statement.setInt(5, _stablePoint.x);
-					statement.setInt(6, _stablePoint.y);
-					statement.setInt(7, _stablePoint.z);
+					statement.setInt(5, _stablePoint.getX());
+					statement.setInt(6, _stablePoint.getY());
+					statement.setInt(7, _stablePoint.getZ());
 				}
 				
 				statement.setInt(8, getKarma());

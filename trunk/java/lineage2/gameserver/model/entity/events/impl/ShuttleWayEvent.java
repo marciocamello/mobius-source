@@ -45,7 +45,7 @@ public class ShuttleWayEvent extends GlobalEvent
 			_shuttle = BoatHolder.getInstance().initShuttle(getName(), shuttleId);
 			Location loc = Location.parseLoc(set.getString("spawn_point"));
 			_shuttle.setLoc(loc, true);
-			_shuttle.setHeading(loc.h);
+			_shuttle.setHeading(loc.getHeading());
 		}
 		else
 		{

@@ -163,7 +163,7 @@ public final class TheFlowOfTheHorror extends Functions implements ScriptFile
 		NpcTemplate template = NpcHolder.getInstance().getTemplate(id);
 		MonsterInstance monster = new MonsterInstance(IdFactory.getInstance().getNextId(), template);
 		monster.setCurrentHpMp(monster.getMaxHp(), monster.getMaxMp(), true);
-		monster.setXYZ(points.get(0).x, points.get(0).y, points.get(0).z);
+		monster.setXYZ(points.get(0).getX(), points.get(0).getY(), points.get(0).getZ());
 		MonstersAI ai = new MonstersAI(monster);
 		ai.setPoints(points);
 		monster.setAI(ai);

@@ -74,7 +74,7 @@ public class AirShipControllerInstance extends NpcInstance
 				return;
 			}
 			
-			player._stablePoint = player.getLoc().setH(0);
+			player._stablePoint = player.getLoc().setHeading(0);
 			boat.addPlayer(player, new Location());
 		}
 		

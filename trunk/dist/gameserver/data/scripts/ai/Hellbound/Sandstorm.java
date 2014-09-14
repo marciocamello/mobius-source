@@ -132,7 +132,7 @@ public final class Sandstorm extends DefaultAI
 		final Location sloc = actor.getSpawnedLoc();
 		final Location pos = Location.findPointToStay(actor, sloc, 150, 300);
 		
-		if (GeoEngine.canMoveToCoord(actor.getX(), actor.getY(), actor.getZ(), pos.x, pos.y, pos.z, actor.getGeoIndex()))
+		if (GeoEngine.canMoveToCoord(actor.getX(), actor.getY(), actor.getZ(), pos.getX(), pos.getY(), pos.getZ(), actor.getGeoIndex()))
 		{
 			actor.setRunning();
 			addTaskMove(pos, false);

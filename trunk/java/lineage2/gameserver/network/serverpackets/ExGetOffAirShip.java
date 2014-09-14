@@ -35,8 +35,8 @@ public class ExGetOffAirShip extends L2GameServerPacket
 		writeEx(0x65);
 		writeD(_playerObjectId);
 		writeD(_boatObjectId);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
+		writeD(_loc.getX());
+		writeD(_loc.getY());
+		writeD(_loc.getZ());
 	}
 }

@@ -434,9 +434,9 @@ public class PositionUtils
 			return -1;
 		}
 		
-		int dx = target.x - actor.x;
-		int dy = target.y - actor.y;
-		int heading = target.h - (int) ((Math.atan2(-dy, -dx) * Creature.HEADINGS_IN_PI) + 32768);
+		int dx = target.getX() - actor.getX();
+		int dy = target.getY() - actor.getY();
+		int heading = target.getHeading() - (int) ((Math.atan2(-dy, -dx) * Creature.HEADINGS_IN_PI) + 32768);
 		
 		if (heading < 0)
 		{

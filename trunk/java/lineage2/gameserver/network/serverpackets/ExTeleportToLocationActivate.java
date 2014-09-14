@@ -32,10 +32,10 @@ public class ExTeleportToLocationActivate extends L2GameServerPacket
 	{
 		writeEx(0x154);
 		writeD(_targetId);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z + Config.CLIENT_Z_SHIFT);
+		writeD(_loc.getX());
+		writeD(_loc.getY());
+		writeD(_loc.getZ() + Config.CLIENT_Z_SHIFT);
 		writeD(0x00); // IsValidation
-		writeD(_loc.h);
+		writeD(_loc.getHeading());
 	}
 }

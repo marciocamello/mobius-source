@@ -42,9 +42,9 @@ public class PartyMemberPosition extends L2GameServerPacket
 		for (Map.Entry<Integer, Location> e : positions.entrySet())
 		{
 			writeD(e.getKey());
-			writeD(e.getValue().x);
-			writeD(e.getValue().y);
-			writeD(e.getValue().z);
+			writeD(e.getValue().getX());
+			writeD(e.getValue().getY());
+			writeD(e.getValue().getZ());
 		}
 	}
 }

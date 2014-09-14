@@ -497,8 +497,8 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 				st.set("Lutz", "2");
 			}
 			
-			st.addSpawn(BlitzWyrm, npc.getLoc().x, npc.getLoc().y, npc.getLoc().z, Location.getRandomHeading(), 300, 120000);
-			st.addSpawn(BlitzWyrm, npc.getLoc().x, npc.getLoc().y, npc.getLoc().z, Location.getRandomHeading(), 300, 120000);
+			st.addSpawn(BlitzWyrm, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), Location.getRandomHeading(), 300, 120000);
+			st.addSpawn(BlitzWyrm, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), Location.getRandomHeading(), 300, 120000);
 		}
 		else if (event.equalsIgnoreCase("30761-03.htm"))
 		{
@@ -511,8 +511,8 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 				st.set("Fritz", "2");
 			}
 			
-			st.addSpawn(BlitzWyrm, npc.getLoc().x, npc.getLoc().y, npc.getLoc().z, Location.getRandomHeading(), 300, 120000);
-			st.addSpawn(BlitzWyrm, npc.getLoc().x, npc.getLoc().y, npc.getLoc().z, Location.getRandomHeading(), 300, 120000);
+			st.addSpawn(BlitzWyrm, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), Location.getRandomHeading(), 300, 120000);
+			st.addSpawn(BlitzWyrm, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), Location.getRandomHeading(), 300, 120000);
 		}
 		else if (event.equalsIgnoreCase("30512-03.htm"))
 		{

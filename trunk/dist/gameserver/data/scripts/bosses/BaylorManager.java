@@ -59,7 +59,7 @@ public final class BaylorManager extends Functions implements ScriptFile
 		final NpcTemplate template = NpcHolder.getInstance().getTemplate(npcId);
 		final NpcInstance npc = template.getNewInstance();
 		npc.setSpawnedLoc(loc);
-		npc.setHeading(loc.h);
+		npc.setHeading(loc.getHeading());
 		npc.setLoc(loc);
 		npc.setReflection(currentReflection);
 		npc.spawnMe();

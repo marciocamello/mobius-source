@@ -28,8 +28,8 @@ public class ObserverEnd extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xec);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
+		writeD(_loc.getX());
+		writeD(_loc.getY());
+		writeD(_loc.getZ());
 	}
 }

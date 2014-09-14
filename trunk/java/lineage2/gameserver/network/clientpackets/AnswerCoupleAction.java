@@ -116,7 +116,7 @@ public class AnswerCoupleAction extends L2GameClientPacket
 					}
 					
 					Location loc = requestor.applyOffset(activeChar.getLoc(), 25);
-					loc = GeoEngine.moveCheck(requestor.getX(), requestor.getY(), requestor.getZ(), loc.x, loc.y, requestor.getGeoIndex());
+					loc = GeoEngine.moveCheck(requestor.getX(), requestor.getY(), requestor.getZ(), loc.getX(), loc.getY(), requestor.getGeoIndex());
 					requestor.moveToLocation(loc, 0, false);
 					requestor.getAI().setNextAction(PlayableAI.nextAction.COUPLE_ACTION, activeChar, _actionId, true, false);
 				}

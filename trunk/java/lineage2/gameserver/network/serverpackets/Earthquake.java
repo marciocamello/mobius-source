@@ -34,9 +34,9 @@ public class Earthquake extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xd3);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
+		writeD(_loc.getX());
+		writeD(_loc.getY());
+		writeD(_loc.getZ());
 		writeD(_intensity);
 		writeD(_duration);
 		writeD(0x00); // Unknown

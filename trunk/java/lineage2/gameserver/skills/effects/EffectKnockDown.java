@@ -93,9 +93,9 @@ public class EffectKnockDown extends Effect
 			return;
 		}
 		
-		double dx = tagetLoc.x - playerLoc.x;
-		double dy = tagetLoc.y - playerLoc.y;
-		double dz = tagetLoc.z - playerLoc.z;
+		double dx = tagetLoc.getX() - playerLoc.getX();
+		double dy = tagetLoc.getY() - playerLoc.getY();
+		double dz = tagetLoc.getZ() - playerLoc.getZ();
 		int offset = Math.min((int) distance + getSkill().getFlyRadius(), 1400);
 		offset = (int) (offset + Math.abs(dz));
 		
@@ -106,11 +106,11 @@ public class EffectKnockDown extends Effect
 		
 		double sin = dy / distance;
 		double cos = dx / distance;
-		_x = (tagetLoc.x - (int) (offset * cos));
-		_y = (tagetLoc.y - (int) (offset * sin));
-		_z = tagetLoc.z;
+		_x = (tagetLoc.getX() - (int) (offset * cos));
+		_y = (tagetLoc.getY() - (int) (offset * sin));
+		_z = tagetLoc.getZ();
 		Location loc = new Location(_x, _y, _z);
-		loc = GeoEngine.moveCheck(tagetLoc.x, tagetLoc.y, tagetLoc.z, _x, _y, _effected.getGeoIndex());
+		loc = GeoEngine.moveCheck(tagetLoc.getX(), tagetLoc.getY(), tagetLoc.getZ(), _x, _y, _effected.getGeoIndex());
 		
 		if (!_effected.isKnockedDown())
 		{

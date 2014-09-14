@@ -967,7 +967,7 @@ public class DefaultAI extends CharacterAI
 			
 			Location loc = GeoEngine.moveCheckForAI(target.getLoc(), actor.getLoc(), actor.getGeoIndex());
 			
-			if (!GeoEngine.canMoveToCoord(actor.getX(), actor.getY(), actor.getZ(), loc.x, loc.y, loc.z, actor.getGeoIndex()))
+			if (!GeoEngine.canMoveToCoord(actor.getX(), actor.getY(), actor.getZ(), loc.getX(), loc.getY(), loc.getZ(), actor.getGeoIndex()))
 			{
 				loc = target.getLoc();
 			}
@@ -1420,7 +1420,7 @@ public class DefaultAI extends CharacterAI
 		Location pos = Location.findPointToStay(actor, sloc, 0, Config.MAX_DRIFT_RANGE);
 		actor.setWalking();
 		
-		if (!actor.moveToLocation(pos.x, pos.y, pos.z, 0, true) && !isInRange)
+		if (!actor.moveToLocation(pos.getX(), pos.getY(), pos.getZ(), 0, true) && !isInRange)
 		{
 			teleportHome();
 		}
@@ -1468,7 +1468,7 @@ public class DefaultAI extends CharacterAI
 		if (teleport)
 		{
 			actor.broadcastPacketToOthers(new MagicSkillUse(actor, actor, 2036, 1, 500, 0));
-			actor.teleToLocation(sloc.x, sloc.y, GeoEngine.getHeight(sloc, actor.getGeoIndex()));
+			actor.teleToLocation(sloc.getX(), sloc.getY(), GeoEngine.getHeight(sloc, actor.getGeoIndex()));
 		}
 		else
 		{

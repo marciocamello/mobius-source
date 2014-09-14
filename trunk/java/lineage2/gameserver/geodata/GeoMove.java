@@ -41,14 +41,14 @@ public class GeoMove
 	 */
 	private static List<Location> findPath(int x, int y, int z, Location target, GameObject obj, boolean showTrace, int geoIndex)
 	{
-		if (Math.abs(z - target.z) > 256)
+		if (Math.abs(z - target.getZ()) > 256)
 		{
 			return Collections.emptyList();
 		}
 		
 		z = GeoEngine.getHeight(x, y, z, geoIndex);
-		target.z = GeoEngine.getHeight(target, geoIndex);
-		PathFind n = new PathFind(x, y, z, target.x, target.y, target.z, obj, geoIndex);
+		target.setZ(GeoEngine.getHeight(target, geoIndex));
+		PathFind n = new PathFind(x, y, z, target.getX(), target.getY(), target.getZ(), obj, geoIndex);
 		
 		if ((n.getPath() == null) || n.getPath().isEmpty())
 		{
@@ -85,7 +85,7 @@ public class GeoMove
 					continue;
 				}
 				
-				trace.addTrace(loc.x, loc.y, loc.z + 15, 30000);
+				trace.addTrace(loc.getX(), loc.getY(), loc.getZ() + 15, 30000);
 			}
 			
 			player.sendPacket(trace);
@@ -131,7 +131,7 @@ public class GeoMove
 		{
 			Location p2 = path.get(i);
 			Location p1 = path.get(i - 1);
-			List<Location> moveList = GeoEngine.MoveList(p1.x, p1.y, p1.z, p2.x, p2.y, geoIndex, true);
+			List<Location> moveList = GeoEngine.MoveList(p1.getX(), p1.getY(), p1.getZ(), p2.getX(), p2.getY(), geoIndex, true);
 			
 			if (moveList == null)
 			{
@@ -157,7 +157,7 @@ public class GeoMove
 	{
 		begin.world2geo();
 		end.world2geo();
-		int diff_x = end.x - begin.x, diff_y = end.y - begin.y, diff_z = end.z - begin.z;
+		int diff_x = end.getX() - begin.getX(), diff_y = end.getY() - begin.getY(), diff_z = end.getZ() - begin.getZ();
 		int dx = Math.abs(diff_x), dy = Math.abs(diff_y), dz = Math.abs(diff_z);
 		float steps = Math.max(Math.max(dx, dy), dz);
 		
@@ -167,9 +167,9 @@ public class GeoMove
 		}
 		
 		float step_x = diff_x / steps, step_y = diff_y / steps, step_z = diff_z / steps;
-		float next_x = begin.x, next_y = begin.y, next_z = begin.z;
+		float next_x = begin.getX(), next_y = begin.getY(), next_z = begin.getZ();
 		List<Location> result = new ArrayList<>((int) steps + 1);
-		result.add(new Location(begin.x, begin.y, begin.z));
+		result.add(new Location(begin.getX(), begin.getY(), begin.getZ()));
 		
 		for (int i = 0; i < steps; i++)
 		{
@@ -220,7 +220,7 @@ public class GeoMove
 			{
 				Location two = path.get(sub);
 				
-				if (one.equals(two) || GeoEngine.canMoveWithCollision(one.x, one.y, one.z, two.x, two.y, two.z, geoIndex))
+				if (one.equals(two) || GeoEngine.canMoveWithCollision(one.getX(), one.getY(), one.getZ(), two.getX(), two.getY(), two.getZ(), geoIndex))
 				{
 					while ((current + 1) < sub)
 					{
@@ -245,12 +245,12 @@ public class GeoMove
 	 */
 	private static boolean IsPointInLine(Location p1, Location p2, Location p3)
 	{
-		if (((p1.x == p3.x) && (p3.x == p2.x)) || ((p1.y == p3.y) && (p3.y == p2.y)))
+		if (((p1.getX() == p3.getX()) && (p3.getX() == p2.getX())) || ((p1.getY() == p3.getY()) && (p3.getY() == p2.getY())))
 		{
 			return true;
 		}
 		
-		if (((p1.x - p2.x) * (p1.y - p2.y)) == ((p2.x - p3.x) * (p2.y - p3.y)))
+		if (((p1.getX() - p2.getX()) * (p1.getY() - p2.getY())) == ((p2.getX() - p3.getX()) * (p2.getY() - p3.getY())))
 		{
 			return true;
 		}

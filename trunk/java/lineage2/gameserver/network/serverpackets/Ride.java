@@ -38,8 +38,8 @@ public class Ride extends L2GameServerPacket
 		writeD(_mountType == 0 ? 0 : 1);
 		writeD(_mountType);
 		writeD(_rideClassID);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
+		writeD(_loc.getX());
+		writeD(_loc.getY());
+		writeD(_loc.getZ());
 	}
 }

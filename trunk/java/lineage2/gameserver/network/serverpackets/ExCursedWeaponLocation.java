@@ -42,9 +42,9 @@ public class ExCursedWeaponLocation extends L2GameServerPacket
 			{
 				writeD(w._id);
 				writeD(w._status);
-				writeD(w._pos.x);
-				writeD(w._pos.y);
-				writeD(w._pos.z);
+				writeD(w._pos.getX());
+				writeD(w._pos.getY());
+				writeD(w._pos.getZ());
 			}
 		}
 	}

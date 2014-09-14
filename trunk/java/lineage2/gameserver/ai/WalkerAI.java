@@ -166,9 +166,9 @@ public class WalkerAI extends DefaultAI
 		}
 		
 		Location sloc = actor.getSpawnedLoc();
-		int x = (sloc.x + Rnd.get(2 * AI_WALK_RANGE)) - AI_WALK_RANGE;
-		int y = (sloc.y + Rnd.get(2 * AI_WALK_RANGE)) - AI_WALK_RANGE;
-		int z = GeoEngine.getHeight(x, y, sloc.z, actor.getGeoIndex());
+		int x = (sloc.getX() + Rnd.get(2 * AI_WALK_RANGE)) - AI_WALK_RANGE;
+		int y = (sloc.getY() + Rnd.get(2 * AI_WALK_RANGE)) - AI_WALK_RANGE;
+		int z = GeoEngine.getHeight(x, y, sloc.getZ(), actor.getGeoIndex());
 		actor.setRunning();
 		actor.moveToLocation(x, y, z, 0, true);
 		return true;

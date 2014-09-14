@@ -104,9 +104,9 @@ public final class OnActionShift extends Functions
 				dialog = dialog.replaceFirst("%class%", String.valueOf(npc.getClass().getSimpleName().replaceFirst("L2", "").replaceFirst("Instance", "")));
 				dialog = dialog.replaceFirst("%race%", getNpcRaceById(npc.getTemplate().getRace()));
 				dialog = dialog.replaceFirst("%territory%", npc.getCastle() != null ? HtmlUtils.htmlResidenceName(npc.getCastle().getId()) : "None");
-				dialog = dialog.replaceFirst("%spawn%", npc.getSpawnedLoc().x + " " + npc.getSpawnedLoc().y + " " + npc.getSpawnedLoc().z);
-				dialog = dialog.replaceFirst("%loc%", npc.getLoc().x + " " + npc.getLoc().y + " " + npc.getLoc().z);
-				dialog = dialog.replaceFirst("%heading%", String.valueOf(npc.getLoc().h));
+				dialog = dialog.replaceFirst("%spawn%", npc.getSpawnedLoc().getX() + " " + npc.getSpawnedLoc().getY() + " " + npc.getSpawnedLoc().getZ());
+				dialog = dialog.replaceFirst("%loc%", npc.getLoc().getX() + " " + npc.getLoc().getY() + " " + npc.getLoc().getZ());
+				dialog = dialog.replaceFirst("%heading%", String.valueOf(npc.getLoc().getHeading()));
 				dialog = dialog.replaceFirst("%collision_radius%", String.valueOf(npc.getTemplate().getCollisionRadius()));
 				dialog = dialog.replaceFirst("%collision_height%", String.valueOf(npc.getTemplate().getCollisionHeight()));
 				dialog = dialog.replaceFirst("%loc2d%", String.valueOf((long) npc.getDistance(player)));
@@ -166,7 +166,7 @@ public final class OnActionShift extends Functions
 				dialog = dialog.replaceFirst("%dist%", String.valueOf((int) npc.getDistance3D(player)));
 				dialog = dialog.replaceFirst("%killed%", String.valueOf(0));
 				dialog = dialog.replaceFirst("%spReward%", String.valueOf(npc.getSpReward()));
-				dialog = dialog.replaceFirst("%xyz%", npc.getLoc().x + " " + npc.getLoc().y + " " + npc.getLoc().z);
+				dialog = dialog.replaceFirst("%xyz%", npc.getLoc().getX() + " " + npc.getLoc().getY() + " " + npc.getLoc().getZ());
 				dialog = dialog.replaceFirst("%ai_type%", npc.getAI().getClass().getSimpleName());
 				dialog = dialog.replaceFirst("%direction%", PositionUtils.getDirectionTo(npc, player).toString().toLowerCase());
 				StringBuilder b = new StringBuilder("");

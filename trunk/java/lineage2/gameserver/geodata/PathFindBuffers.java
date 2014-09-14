@@ -287,10 +287,64 @@ class PathFindBuffers
 		 */
 		GeoNode set(int x, int y, short z)
 		{
-			this.x = x;
-			this.y = y;
-			this.z = z;
+			setX(x);
+			setY(y);
+			setZ(z);
 			return this;
+		}
+		
+		/**
+		 * Method getX.
+		 * @return x int
+		 */
+		int getX()
+		{
+			return x;
+		}
+		
+		/**
+		 * Method getY.
+		 * @return y int
+		 */
+		int getY()
+		{
+			return y;
+		}
+		
+		/**
+		 * Method getZ.
+		 * @return z short
+		 */
+		short getZ()
+		{
+			return z;
+		}
+		
+		/**
+		 * Method setX.
+		 * @param newX int
+		 */
+		void setX(int newX)
+		{
+			x = newX;
+		}
+		
+		/**
+		 * Method setY.
+		 * @param newY int
+		 */
+		void setY(int newY)
+		{
+			y = newY;
+		}
+		
+		/**
+		 * Method setZ.
+		 * @param newZ short
+		 */
+		void setZ(short newZ)
+		{
+			z = newZ;
 		}
 		
 		/**

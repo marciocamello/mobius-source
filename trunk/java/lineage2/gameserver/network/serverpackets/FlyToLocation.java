@@ -52,12 +52,12 @@ public class FlyToLocation extends L2GameServerPacket
 	{
 		writeC(0xd4);
 		writeD(_chaObjId);
-		writeD(_destLoc.x);
-		writeD(_destLoc.y);
-		writeD(_destLoc.z);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
+		writeD(_destLoc.getX());
+		writeD(_destLoc.getY());
+		writeD(_destLoc.getZ());
+		writeD(_loc.getX());
+		writeD(_loc.getY());
+		writeD(_loc.getZ());
 		writeD(_type.ordinal());
 		writeD(_speed);
 		writeD(0x00); // Unknown (GOD)

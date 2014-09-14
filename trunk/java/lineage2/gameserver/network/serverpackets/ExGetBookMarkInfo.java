@@ -41,9 +41,9 @@ public class ExGetBookMarkInfo extends L2GameServerPacket
 		for (BookMark bookmark : bookmarks)
 		{
 			writeD(++slotId);
-			writeD(bookmark.x);
-			writeD(bookmark.y);
-			writeD(bookmark.z);
+			writeD(bookmark.getX());
+			writeD(bookmark.getY());
+			writeD(bookmark.getZ());
 			writeS(bookmark.getName());
 			writeD(bookmark.getIcon());
 			writeS(bookmark.getAcronym());

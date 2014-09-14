@@ -24,7 +24,7 @@ public class RadarControl extends L2GameServerPacket
 	
 	public RadarControl(int showRadar, int type, Location loc)
 	{
-		this(showRadar, type, loc.x, loc.y, loc.z);
+		this(showRadar, type, loc.getX(), loc.getY(), loc.getZ());
 	}
 	
 	public RadarControl(int showRadar, int type, int x, int y, int z)

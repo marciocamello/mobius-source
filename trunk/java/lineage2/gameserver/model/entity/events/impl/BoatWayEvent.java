@@ -69,7 +69,7 @@ public class BoatWayEvent extends GlobalEvent
 			_boat = BoatHolder.getInstance().initBoat(getName(), className);
 			Location loc = Location.parseLoc(set.getString("spawn_point"));
 			_boat.setLoc(loc, true);
-			_boat.setHeading(loc.h);
+			_boat.setHeading(loc.getHeading());
 		}
 		else
 		{

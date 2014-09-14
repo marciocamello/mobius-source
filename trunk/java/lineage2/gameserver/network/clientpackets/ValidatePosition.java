@@ -35,10 +35,10 @@ public class ValidatePosition extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		_loc.x = readD();
-		_loc.y = readD();
-		_loc.z = readD();
-		_loc.h = readD();
+		_loc.setX(readD());
+		_loc.setY(readD());
+		_loc.setZ(readD());
+		_loc.setHeading(readD());
 		_boatObjectId = readD();
 	}
 	
@@ -81,22 +81,25 @@ public class ValidatePosition extends L2GameClientPacket
 		
 		if (activeChar.isInFlyingTransform())
 		{
-			if (_loc.x > -166168)
+			if (_loc.getX() > -166168)
 			{
 				activeChar.setTransformation(0);
 				return;
 			}
 			
-			if ((_loc.z <= 0) || (_loc.z >= 6000))
+			if ((_loc.getZ() <= 0) || (_loc.getZ() >= 6000))
 			{
-				activeChar.teleToLocation(activeChar.getLoc().setZ(Math.min(5950, Math.max(50, _loc.z))));
+				// activeChar.teleToLocation(activeChar.getLoc().setZ(Math.min(5950, Math.max(50, _loc.getZ()))));
+				Location loc = activeChar.getLoc();
+				loc.setZ(Math.min(5950, Math.max(50, _loc.getZ())));
+				activeChar.teleToLocation(loc);
 				return;
 			}
 		}
 		
-		double diff = activeChar.getDistance(_loc.x, _loc.y);
-		int dz = Math.abs(_loc.z - activeChar.getZ());
-		int h = _lastServerPosition.z - activeChar.getZ();
+		double diff = activeChar.getDistance(_loc.getX(), _loc.getY());
+		int dz = Math.abs(_loc.getZ() - activeChar.getZ());
+		int h = _lastServerPosition.getZ() - activeChar.getZ();
 		
 		if (_boatObjectId > 0)
 		{
@@ -104,11 +107,11 @@ public class ValidatePosition extends L2GameClientPacket
 			
 			if ((boat != null) && (activeChar.getBoat() == boat))
 			{
-				activeChar.setHeading(_loc.h);
+				activeChar.setHeading(_loc.getHeading());
 				boat.validateLocationPacket(activeChar);
 			}
 			
-			activeChar.setLastClientPosition(_loc.setH(activeChar.getHeading()));
+			activeChar.setLastClientPosition(_loc.setHeading(activeChar.getHeading()));
 			activeChar.setLastServerPosition(activeChar.getLoc());
 			return;
 		}
@@ -140,7 +143,7 @@ public class ValidatePosition extends L2GameClientPacket
 		{
 			activeChar.validateLocation(0);
 		}
-		else if ((_loc.z < -30000) || (_loc.z > 30000))
+		else if ((_loc.getZ() < -30000) || (_loc.getZ() > 30000))
 		{
 			if (activeChar.getIncorrectValidateCount() >= 3)
 			{
@@ -173,7 +176,7 @@ public class ValidatePosition extends L2GameClientPacket
 			activeChar.setIncorrectValidateCount(0);
 		}
 		
-		activeChar.setLastClientPosition(_loc.setH(activeChar.getHeading()));
+		activeChar.setLastClientPosition(_loc.setHeading(activeChar.getHeading()));
 		activeChar.setLastServerPosition(activeChar.getLoc());
 	}
 	
@@ -189,9 +192,9 @@ public class ValidatePosition extends L2GameClientPacket
 			activeChar.sendMessage("Correcting position...");
 		}
 		
-		if ((_lastServerPosition.x != 0) && (_lastServerPosition.y != 0) && (_lastServerPosition.z != 0))
+		if ((_lastServerPosition.getX() != 0) && (_lastServerPosition.getY() != 0) && (_lastServerPosition.getZ() != 0))
 		{
-			if (GeoEngine.getNSWE(_lastServerPosition.x, _lastServerPosition.y, _lastServerPosition.z, activeChar.getGeoIndex()) == GeoEngine.NSWE_ALL)
+			if (GeoEngine.getNSWE(_lastServerPosition.getX(), _lastServerPosition.getY(), _lastServerPosition.getZ(), activeChar.getGeoIndex()) == GeoEngine.NSWE_ALL)
 			{
 				activeChar.teleToLocation(_lastServerPosition);
 			}
@@ -200,9 +203,9 @@ public class ValidatePosition extends L2GameClientPacket
 				activeChar.teleToClosestTown();
 			}
 		}
-		else if ((_lastClientPosition.x != 0) && (_lastClientPosition.y != 0) && (_lastClientPosition.z != 0))
+		else if ((_lastClientPosition.getX() != 0) && (_lastClientPosition.getY() != 0) && (_lastClientPosition.getZ() != 0))
 		{
-			if (GeoEngine.getNSWE(_lastClientPosition.x, _lastClientPosition.y, _lastClientPosition.z, activeChar.getGeoIndex()) == GeoEngine.NSWE_ALL)
+			if (GeoEngine.getNSWE(_lastClientPosition.getX(), _lastClientPosition.getY(), _lastClientPosition.getZ(), activeChar.getGeoIndex()) == GeoEngine.NSWE_ALL)
 			{
 				activeChar.teleToLocation(_lastClientPosition);
 			}

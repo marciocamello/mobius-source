@@ -568,9 +568,9 @@ public class AdminTeleport implements IAdminCommandHandler, ScriptFile
 		{
 			con = DatabaseFactory.getInstance().getConnection();
 			st = con.prepareStatement("UPDATE characters SET x=?,y=?,z=? WHERE obj_Id=? LIMIT 1");
-			st.setInt(1, loc.x);
-			st.setInt(2, loc.y);
-			st.setInt(3, loc.z);
+			st.setInt(1, loc.getX());
+			st.setInt(2, loc.getY());
+			st.setInt(3, loc.getZ());
 			st.setInt(4, obj_id);
 			st.executeUpdate();
 		}

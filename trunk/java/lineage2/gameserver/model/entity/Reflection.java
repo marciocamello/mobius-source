@@ -1135,7 +1135,7 @@ public class Reflection
 		
 		if (randomOffset > 0)
 		{
-			newLoc = Location.findPointToStay(loc, 0, randomOffset, getGeoIndex()).setH(loc.h);
+			newLoc = Location.findPointToStay(loc, 0, randomOffset, getGeoIndex()).setHeading(loc.getHeading());
 		}
 		else
 		{

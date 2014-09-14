@@ -57,9 +57,9 @@ public class PetStatusUpdate extends L2GameServerPacket
 		// dddddSdddddddQQQd
 		writeD(type);
 		writeD(obj_id);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
+		writeD(_loc.getX());
+		writeD(_loc.getY());
+		writeD(_loc.getZ());
 		writeS(title);
 		writeD(curFed);
 		writeD(maxFed);

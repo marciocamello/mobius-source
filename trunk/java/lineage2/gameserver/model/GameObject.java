@@ -246,7 +246,7 @@ public abstract class GameObject extends EventOwner
 	 */
 	public void setLoc(Location loc)
 	{
-		setXYZ(loc.x, loc.y, loc.z);
+		setXYZ(loc.getX(), loc.getY(), loc.getZ());
 	}
 	
 	/**
@@ -306,8 +306,8 @@ public abstract class GameObject extends EventOwner
 	 */
 	protected void spawnMe0(Location loc, Creature dropper)
 	{
-		_x = loc.x;
-		_y = loc.y;
+		_x = loc.getX();
+		_y = loc.getY();
 		_z = getGeoZ(loc);
 		spawn0(dropper);
 	}
@@ -466,7 +466,7 @@ public abstract class GameObject extends EventOwner
 	 */
 	private final long getXYDeltaSq(Location loc)
 	{
-		return getXYDeltaSq(loc.x, loc.y);
+		return getXYDeltaSq(loc.getX(), loc.getY());
 	}
 	
 	/**
@@ -487,7 +487,7 @@ public abstract class GameObject extends EventOwner
 	 */
 	public final long getZDeltaSq(Location loc)
 	{
-		return getZDeltaSq(loc.z);
+		return getZDeltaSq(loc.getZ());
 	}
 	
 	/**
@@ -509,7 +509,7 @@ public abstract class GameObject extends EventOwner
 	 */
 	private final long getXYZDeltaSq(Location loc)
 	{
-		return getXYDeltaSq(loc.x, loc.y) + getZDeltaSq(loc.z);
+		return getXYDeltaSq(loc.getX(), loc.getY()) + getZDeltaSq(loc.getZ());
 	}
 	
 	/**
@@ -542,7 +542,7 @@ public abstract class GameObject extends EventOwner
 	 */
 	public final double getDistance(Location loc)
 	{
-		return getDistance(loc.x, loc.y, loc.z);
+		return getDistance(loc.getX(), loc.getY(), loc.getZ());
 	}
 	
 	/**

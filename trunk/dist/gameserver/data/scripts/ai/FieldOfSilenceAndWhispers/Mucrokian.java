@@ -63,7 +63,7 @@ public final class Mucrokian extends Fighter
 					{
 						final Location pos = Location.findPointToStay(actor, 200, 300);
 						
-						if (GeoEngine.canMoveToCoord(actor.getX(), actor.getY(), actor.getZ(), pos.x, pos.y, pos.z, actor.getGeoIndex()))
+						if (GeoEngine.canMoveToCoord(actor.getX(), actor.getY(), actor.getZ(), pos.getX(), pos.getY(), pos.getZ(), actor.getGeoIndex()))
 						{
 							actor.setRunning();
 						}

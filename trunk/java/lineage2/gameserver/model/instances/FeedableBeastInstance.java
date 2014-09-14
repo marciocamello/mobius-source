@@ -514,8 +514,8 @@ public class FeedableBeastInstance extends MonsterInstance
 			NpcTemplate template = NpcHolder.getInstance().getTemplate(nextNpcId);
 			TamedBeastInstance nextNpc = new TamedBeastInstance(IdFactory.getInstance().getNextId(), template);
 			Location loc = player.getLoc();
-			loc.x = loc.x + Rnd.get(-50, 50);
-			loc.y = loc.y + Rnd.get(-50, 50);
+			loc.setX(loc.getX() + Rnd.get(-50, 50));
+			loc.setY(loc.getY() + Rnd.get(-50, 50));
 			nextNpc.spawnMe(loc);
 			nextNpc.setTameType();
 			nextNpc.setFoodType(getFoodSpice(skill_id));

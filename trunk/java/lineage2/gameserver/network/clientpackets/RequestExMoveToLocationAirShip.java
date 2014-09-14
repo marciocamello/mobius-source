@@ -14,6 +14,7 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.boat.ClanAirShip;
+import lineage2.gameserver.utils.Location;
 
 /**
  * @author Mobius
@@ -84,7 +85,11 @@ public class RequestExMoveToLocationAirShip extends L2GameClientPacket
 						break;
 					}
 					
-					airship.moveToLocation(airship.getLoc().setX(_param1).setY(_param2), 0, false);
+					// airship.moveToLocation(airship.getLoc().setX(_param1).setY(_param2), 0, false);
+					Location loc = airship.getLoc();
+					loc.setX(_param1);
+					loc.setY(_param2);
+					airship.moveToLocation(loc, 0, false);
 					break;
 				
 				case 2:

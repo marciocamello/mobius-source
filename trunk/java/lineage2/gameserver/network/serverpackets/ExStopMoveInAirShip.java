@@ -34,9 +34,9 @@ public class ExStopMoveInAirShip extends L2GameServerPacket
 		writeEx(0x6F);
 		writeD(char_id);
 		writeD(boat_id);
-		writeD(_loc.x);
-		writeD(_loc.y);
-		writeD(_loc.z);
+		writeD(_loc.getX());
+		writeD(_loc.getY());
+		writeD(_loc.getZ());
 		writeD(char_heading);
 	}
 }

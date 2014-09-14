@@ -3318,9 +3318,9 @@ public class SystemMessage extends L2GameServerPacket
 				case TYPE_ZONE_NAME:
 				{
 					Location coord = (Location) e.obj;
-					writeD(coord.x);
-					writeD(coord.y);
-					writeD(coord.z);
+					writeD(coord.getX());
+					writeD(coord.getY());
+					writeD(coord.getZ());
 					break;
 				}
 				

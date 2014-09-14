@@ -126,7 +126,7 @@ public class Q00423_TakeYourBestShot extends Quest implements ScriptFile
 			if (ArrayUtils.contains(TantaClan, npcId) && Rnd.chance(2))
 			{
 				Location loc = st.getPlayer().getLoc();
-				addSpawn(TantaGuard, loc.x, loc.y, loc.z, 0, 100, 120000);
+				addSpawn(TantaGuard, loc.getX(), loc.getY(), loc.getZ(), 0, 100, 120000);
 			}
 			else if ((npcId == TantaGuard) && (st.getQuestItemsCount(SeerUgorosPass) < 1))
 			{

@@ -45,7 +45,7 @@ public class ExShowTrace extends L2GameServerPacket
 	
 	public void addLine(Location from, Location to, int step, int time)
 	{
-		addLine(from.x, from.y, from.z, to.x, to.y, to.z, step, time);
+		addLine(from.getX(), from.getY(), from.getZ(), to.getX(), to.getY(), to.getZ(), step, time);
 	}
 	
 	private void addLine(int from_x, int from_y, int from_z, int to_x, int to_y, int to_z, int step, int time)

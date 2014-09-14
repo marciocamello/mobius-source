@@ -43,7 +43,7 @@ public class ExShowOwnthingPos extends L2GameServerPacket
 				Location loc = wardObject.getWardLocation();
 				if (loc != null)
 				{
-					_wardList.add(new WardInfo(dominionId, loc.x, loc.y, loc.z));
+					_wardList.add(new WardInfo(dominionId, loc.getX(), loc.getY(), loc.getZ()));
 				}
 			}
 		}

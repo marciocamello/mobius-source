@@ -183,7 +183,7 @@ public abstract class Boat extends Creature
 			player.setBoat(this);
 		}
 		
-		loc.h = PositionUtils.getHeadingTo(ori, loc);
+		loc.setHeading(PositionUtils.getHeadingTo(ori, loc));
 		player.setInBoatPosition(loc);
 		player.broadcastPacket(inMovePacket(player, ori, loc));
 	}

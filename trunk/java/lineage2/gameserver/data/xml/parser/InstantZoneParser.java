@@ -326,7 +326,7 @@ public class InstantZoneParser extends AbstractDirParser<InstantZoneHolder>
 								
 								for (Location loc : coords)
 								{
-									poly.add(loc.x, loc.y).setZmin(loc.z).setZmax(loc.z);
+									poly.add(loc.getX(), loc.getY()).setZmin(loc.getZ()).setZmax(loc.getZ());
 								}
 								
 								if (!poly.validate())

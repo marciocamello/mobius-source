@@ -527,9 +527,9 @@ public class CursedWeaponsManager
 				statement.setInt(3, cw.getPlayerKarma());
 				statement.setInt(4, cw.getPlayerPkKills());
 				statement.setInt(5, cw.getNbKills());
-				statement.setInt(6, cw.getLoc().x);
-				statement.setInt(7, cw.getLoc().y);
-				statement.setInt(8, cw.getLoc().z);
+				statement.setInt(6, cw.getLoc().getX());
+				statement.setInt(7, cw.getLoc().getY());
+				statement.setInt(8, cw.getLoc().getZ());
 				statement.setLong(9, cw.getEndTime() / 1000);
 				statement.executeUpdate();
 			}
