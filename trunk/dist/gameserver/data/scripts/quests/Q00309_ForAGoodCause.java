@@ -121,7 +121,7 @@ public class Q00309_ForAGoodCause extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int id = st.getState();
 		int cond = st.getCond();
 		
@@ -173,7 +173,7 @@ public class Q00309_ForAGoodCause extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		st.rollAndGive(npc.getNpcId() == ContaminatedMucrokian ? FallenMucrokianHide : MucrokianHide, 1, 60);
+		st.rollAndGive(npc.getId() == ContaminatedMucrokian ? FallenMucrokianHide : MucrokianHide, 1, 60);
 		return null;
 	}
 }

@@ -277,7 +277,7 @@ public final class SquashAI extends Fighter
 	SquashAI(NpcInstance actor)
 	{
 		super(actor);
-		_npcId = getActor().getNpcId();
+		_npcId = getActor().getId();
 		Functions.npcSayCustomMessage(getActor(), textOnSpawn[Rnd.get(textOnSpawn.length)]);
 		_timeToUnspawn = System.currentTimeMillis() + 120000;
 	}

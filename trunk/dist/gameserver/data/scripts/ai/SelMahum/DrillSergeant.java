@@ -70,7 +70,7 @@ public final class DrillSergeant extends Fighter
 						
 						for (NpcInstance mob : around)
 						{
-							if (ArrayUtils.contains(recruits, mob.getNpcId()))
+							if (ArrayUtils.contains(recruits, mob.getId()))
 							{
 								mob.broadcastPacket(new SocialAction(mob.getObjectId(), 7));
 							}
@@ -83,7 +83,7 @@ public final class DrillSergeant extends Fighter
 						
 						for (NpcInstance mob : around)
 						{
-							if (ArrayUtils.contains(recruits, mob.getNpcId()))
+							if (ArrayUtils.contains(recruits, mob.getId()))
 							{
 								mob.broadcastPacket(new SocialAction(mob.getObjectId(), 4));
 							}
@@ -96,7 +96,7 @@ public final class DrillSergeant extends Fighter
 						
 						for (NpcInstance mob : around)
 						{
-							if (ArrayUtils.contains(recruits, mob.getNpcId()))
+							if (ArrayUtils.contains(recruits, mob.getId()))
 							{
 								mob.broadcastPacket(new SocialAction(mob.getObjectId(), 5));
 							}

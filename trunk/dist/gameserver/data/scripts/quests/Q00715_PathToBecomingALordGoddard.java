@@ -145,20 +145,20 @@ public class Q00715_PathToBecomingALordGoddard extends Quest implements ScriptFi
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		if ((st.getCond() == 2) && (npc.getNpcId() == FireSpiritNastron))
+		if ((st.getCond() == 2) && (npc.getId() == FireSpiritNastron))
 		{
 			st.setCond(4);
 		}
-		else if ((st.getCond() == 3) && (npc.getNpcId() == WaterSpiritAshutar))
+		else if ((st.getCond() == 3) && (npc.getId() == WaterSpiritAshutar))
 		{
 			st.setCond(5);
 		}
 		
-		if ((st.getCond() == 6) && (npc.getNpcId() == WaterSpiritAshutar))
+		if ((st.getCond() == 6) && (npc.getId() == WaterSpiritAshutar))
 		{
 			st.setCond(9);
 		}
-		else if ((st.getCond() == 7) && (npc.getNpcId() == FireSpiritNastron))
+		else if ((st.getCond() == 7) && (npc.getId() == FireSpiritNastron))
 		{
 			st.setCond(8);
 		}

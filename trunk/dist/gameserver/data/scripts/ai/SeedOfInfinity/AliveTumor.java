@@ -60,7 +60,7 @@ public final class AliveTumor extends DefaultAI
 			
 			for (NpcInstance n : actor.getAroundNpc(400, 300))
 			{
-				if (ArrayUtils.contains(regenCoffins, n.getNpcId()) && !n.isDead())
+				if (ArrayUtils.contains(regenCoffins, n.getId()) && !n.isDead())
 				{
 					i++;
 				}

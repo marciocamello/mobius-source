@@ -291,7 +291,7 @@ public final class GvGInstance extends Reflection
 			}
 			else if (self.isNpc() && killer.isPlayable())
 			{
-				if (self.getNpcId() == BOX_ID)
+				if (self.getId() == BOX_ID)
 				{
 					if (team1.containsMember(killer.getPlayer()))
 					{
@@ -302,7 +302,7 @@ public final class GvGInstance extends Reflection
 						changeScore(2, SCORE_BOX, 0, false, false, killer.getPlayer());
 					}
 				}
-				else if (self.getNpcId() == BOSS_ID)
+				else if (self.getId() == BOSS_ID)
 				{
 					if (team1.containsMember(killer.getPlayer()))
 					{

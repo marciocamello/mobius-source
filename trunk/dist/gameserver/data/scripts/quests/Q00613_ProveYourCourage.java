@@ -125,7 +125,7 @@ public class Q00613_ProveYourCourage extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if ((npcId == KETRAS_HERO_HEKATON) && (st.getCond() == 1))
 		{

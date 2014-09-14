@@ -77,7 +77,7 @@ public class Q00146_TheZeroHour extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		QuestState InSearchOfTheNest = st.getPlayer().getQuestState(Q00109_InSearchOfTheNest.class);
 		

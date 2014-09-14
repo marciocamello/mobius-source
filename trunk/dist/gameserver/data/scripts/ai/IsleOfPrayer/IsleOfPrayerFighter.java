@@ -98,7 +98,7 @@ public final class IsleOfPrayerFighter extends Fighter
 			{
 				final NpcInstance actor = getActor();
 				
-				switch (actor.getNpcId())
+				switch (actor.getId())
 				{
 					case 22259:
 						if (Rnd.chance(26))

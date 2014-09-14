@@ -55,7 +55,7 @@ public class TerritoryManagerInstance extends NpcInstance
 		
 		Dominion dominion = getDominion();
 		DominionSiegeEvent siegeEvent = dominion.getSiegeEvent();
-		int npcId = getNpcId();
+		int npcId = getId();
 		int badgeId = 13676 + dominion.getId();
 		
 		if (command.equalsIgnoreCase("buyspecial"))

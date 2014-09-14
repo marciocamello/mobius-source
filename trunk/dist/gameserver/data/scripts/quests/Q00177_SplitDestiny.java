@@ -115,7 +115,7 @@ public class Q00177_SplitDestiny extends Quest implements ScriptFile
 	{
 		Player player = st.getPlayer();
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (npcId == Hadel)
@@ -234,7 +234,7 @@ public class Q00177_SplitDestiny extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		int subclassId = st.getInt("subClassId");
 		

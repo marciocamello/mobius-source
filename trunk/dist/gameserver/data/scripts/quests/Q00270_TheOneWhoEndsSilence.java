@@ -610,7 +610,7 @@ public class Q00270_TheOneWhoEndsSilence extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		
-		if (npc.getNpcId() == Greymore)
+		if (npc.getId() == Greymore)
 		{
 			if (cond == 0)
 			{
@@ -642,11 +642,11 @@ public class Q00270_TheOneWhoEndsSilence extends Quest implements ScriptFile
 		
 		if (cond == 1)
 		{
-			if (ArrayUtils.contains(LowMobs, npc.getNpcId()) && Rnd.chance(40))
+			if (ArrayUtils.contains(LowMobs, npc.getId()) && Rnd.chance(40))
 			{
 				st.giveItems(TatteredMonkClothes, 1, true);
 			}
-			else if (ArrayUtils.contains(HighMobs, npc.getNpcId()))
+			else if (ArrayUtils.contains(HighMobs, npc.getId()))
 			{
 				st.giveItems(TatteredMonkClothes, 1, true);
 			}

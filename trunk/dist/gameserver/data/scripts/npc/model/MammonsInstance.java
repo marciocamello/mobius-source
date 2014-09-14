@@ -98,7 +98,7 @@ public final class MammonsInstance extends NpcInstance
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
-		int npcId = getTemplate().npcId;
+		int npcId = getTemplate().getId();
 		String filename = MAMMONS_HTML_PATH;
 		
 		switch (npcId)

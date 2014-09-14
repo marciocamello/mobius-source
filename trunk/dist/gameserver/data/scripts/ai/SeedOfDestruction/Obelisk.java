@@ -59,7 +59,7 @@ public final class Obelisk extends DefaultAI
 		
 		for (NpcInstance n : actor.getReflection().getNpcs())
 		{
-			if (n.getNpcId() == 18777)
+			if (n.getId() == 18777)
 			{
 				n.stopDamageBlocked();
 			}

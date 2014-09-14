@@ -535,7 +535,7 @@ public class Quest
 		{
 			int count = st.getInt(info.getVarName());
 			
-			if (!find && ArrayUtils.contains(info.getNpcIds(), npc.getNpcId()))
+			if (!find && ArrayUtils.contains(info.getNpcIds(), npc.getId()))
 			{
 				find = true;
 				

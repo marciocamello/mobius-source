@@ -108,7 +108,7 @@ public final class WorkshopServantInstance extends NpcInstance
 			{
 				challenger.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, player, 5000);
 				
-				switch (challenger.getNpcId())
+				switch (challenger.getId())
 				{
 					case 25600:
 						Functions.npcSay(challenger, phrases[0]);
@@ -193,7 +193,7 @@ public final class WorkshopServantInstance extends NpcInstance
 			pom = npcId + "-" + val;
 		}
 		
-		if (getNpcId() == 32372)
+		if (getId() == 32372)
 		{
 			if (this.isInZone("[tully5]"))
 			{

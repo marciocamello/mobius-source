@@ -73,7 +73,7 @@ public class Q00014_WhereaboutsOfTheArchaeologist extends Quest implements Scrip
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (npcId == 31263)

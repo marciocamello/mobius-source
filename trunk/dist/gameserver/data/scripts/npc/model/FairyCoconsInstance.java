@@ -104,7 +104,7 @@ public final class FairyCoconsInstance extends NpcInstance
 		{
 			if (command.equalsIgnoreCase("1"))
 			{
-				int npdId = getNpcId();
+				int npdId = getId();
 				
 				switch (npdId)
 				{
@@ -133,7 +133,7 @@ public final class FairyCoconsInstance extends NpcInstance
 			}
 			else if (command.equalsIgnoreCase("2"))
 			{
-				int npdId = getNpcId();
+				int npdId = getId();
 				
 				switch (npdId)
 				{
@@ -163,7 +163,7 @@ public final class FairyCoconsInstance extends NpcInstance
 		}
 		else
 		{
-			int npdId = getNpcId();
+			int npdId = getId();
 			
 			switch (npdId)
 			{
@@ -195,7 +195,7 @@ public final class FairyCoconsInstance extends NpcInstance
 	@Override
 	protected void onReduceCurrentHp(double damage, Creature attacker, Skill skill, boolean awake, boolean standUp, boolean directHp)
 	{
-		int npdId = getNpcId();
+		int npdId = getId();
 		
 		if (!GameTimeController.getInstance().isNowNight())
 		{

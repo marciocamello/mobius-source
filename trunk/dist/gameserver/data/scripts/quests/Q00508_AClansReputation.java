@@ -270,7 +270,7 @@ public class Q00508_AClansReputation extends Quest implements ScriptFile
 		int raid = REWARDS_LIST[st.getInt("raid")][0];
 		int item = REWARDS_LIST[st.getInt("raid")][1];
 		
-		if ((npc.getNpcId() == raid) && (st.getQuestItemsCount(item) == 0))
+		if ((npc.getId() == raid) && (st.getQuestItemsCount(item) == 0))
 		{
 			st.giveItems(item, 1);
 			st.playSound(SOUND_MIDDLE);

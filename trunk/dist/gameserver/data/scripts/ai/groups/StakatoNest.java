@@ -77,7 +77,7 @@ public final class StakatoNest extends Fighter
 	{
 		super(actor);
 		
-		if (ArrayUtils.contains(BIZARRE_COCOON, actor.getNpcId()))
+		if (ArrayUtils.contains(BIZARRE_COCOON, actor.getId()))
 		{
 			actor.setIsInvul(true);
 			actor.startImmobilized();
@@ -92,7 +92,7 @@ public final class StakatoNest extends Fighter
 	{
 		final NpcInstance actor = getActor();
 		
-		if (actor.getNpcId() != QUEEN_SHYEED)
+		if (actor.getId() != QUEEN_SHYEED)
 		{
 			super.onEvtSpawn();
 			return;
@@ -128,7 +128,7 @@ public final class StakatoNest extends Fighter
 		final NpcInstance actor = getActor();
 		final MonsterInstance _mob = (MonsterInstance) actor;
 		
-		if ((_mob.getNpcId() == CANNIBALISTIC_STAKATO_LEADER) && Rnd.chance(ABSORB_MINION_CHANCE) && (_mob.getCurrentHpPercents() < 30))
+		if ((_mob.getId() == CANNIBALISTIC_STAKATO_LEADER) && Rnd.chance(ABSORB_MINION_CHANCE) && (_mob.getCurrentHpPercents() < 30))
 		{
 			final MonsterInstance _follower = getAliveMinion(actor);
 			
@@ -158,7 +158,7 @@ public final class StakatoNest extends Fighter
 		final MinionInstance _minion = getAliveMinion(actor);
 		MonsterInstance _leader = null;
 		
-		switch (actor.getNpcId())
+		switch (actor.getId())
 		{
 			case SPIKE_STAKATO_NURSE:
 				if (_minion == null)
@@ -238,7 +238,7 @@ public final class StakatoNest extends Fighter
 	{
 		final NpcInstance actor = getActor();
 		
-		if ((actor == null) || !ArrayUtils.contains(BIZARRE_COCOON, actor.getNpcId()) || (caster == null) || (skill.getId() != SKILL_GROWTH_ACCELERATOR))
+		if ((actor == null) || !ArrayUtils.contains(BIZARRE_COCOON, actor.getId()) || (caster == null) || (skill.getId() != SKILL_GROWTH_ACCELERATOR))
 		{
 			super.onEvtSeeSpell(skill, caster);
 			return;
@@ -356,7 +356,7 @@ public final class StakatoNest extends Fighter
 	@Override
 	protected boolean randomWalk()
 	{
-		return (ArrayUtils.contains(BIZARRE_COCOON, getActor().getNpcId()) || (getActor().getNpcId() == QUEEN_SHYEED)) ? false : true;
+		return (ArrayUtils.contains(BIZARRE_COCOON, getActor().getId()) || (getActor().getId() == QUEEN_SHYEED)) ? false : true;
 	}
 	
 	/**
@@ -366,6 +366,6 @@ public final class StakatoNest extends Fighter
 	@Override
 	protected boolean randomAnimation()
 	{
-		return ArrayUtils.contains(BIZARRE_COCOON, getActor().getNpcId()) ? false : true;
+		return ArrayUtils.contains(BIZARRE_COCOON, getActor().getId()) ? false : true;
 	}
 }

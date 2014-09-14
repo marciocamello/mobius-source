@@ -164,7 +164,7 @@ public final class HeartInfinityDefence extends Reflection
 				return;
 			}
 			
-			if (self.getNpcId() == AliveTumor)
+			if (self.getId() == AliveTumor)
 			{
 				((NpcInstance) self).dropItem(killer.getPlayer(), 13797, Rnd.get(2, 5));
 				final NpcInstance deadTumor = addSpawnWithoutRespawn(DeadTumor, self.getLoc(), 0);

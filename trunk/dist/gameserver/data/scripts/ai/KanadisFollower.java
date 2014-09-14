@@ -49,7 +49,7 @@ public final class KanadisFollower extends Fighter
 		{
 			for (NpcInstance npc : around)
 			{
-				if (npc.getNpcId() == 36562)
+				if (npc.getId() == 36562)
 				{
 					actor.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, npc, 500);
 				}
@@ -67,7 +67,7 @@ public final class KanadisFollower extends Fighter
 	{
 		final NpcInstance actor = getActor();
 		
-		if (attacker.getNpcId() == 36562)
+		if (attacker.getId() == 36562)
 		{
 			actor.getAggroList().addDamageHate(attacker, 0, 100);
 			startRunningTask(2000);

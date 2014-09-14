@@ -60,7 +60,7 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 	public String onSkillUse(NpcInstance npc, Skill skill, QuestState qs)
 	{
 		int skillId = skill.getId();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		// if ((skillId == 12011) && (npcId == LARGE_VERDANT_WILDS) && (_spawned == false))
 		if ((skillId == 12011) && (npcId == LARGE_VERDANT_WILDS))
@@ -229,7 +229,7 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		Player player = st.getPlayer();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int state = st.getState();
 		int cond = st.getCond();
 		

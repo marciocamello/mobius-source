@@ -119,7 +119,7 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (npcId == NATOOLS)
 		{
@@ -200,7 +200,7 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		
-		if (npc.getNpcId() == FallenAngel)
+		if (npc.getId() == FallenAngel)
 		{
 			if (cond == 5)
 			{

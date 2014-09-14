@@ -60,7 +60,7 @@ public final class ZakenCandleInstance extends NpcInstance
 		
 		for (NpcInstance npc : getAroundNpc(1000, 100))
 		{
-			if (npc.getNpcId() == Anchor)
+			if (npc.getId() == Anchor)
 			{
 				setRHandId(BOW_Weapon);
 				startAbnormalEffect(AbnormalEffect.INVULNERABLE);

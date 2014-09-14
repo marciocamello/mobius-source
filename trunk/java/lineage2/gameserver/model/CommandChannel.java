@@ -279,7 +279,7 @@ public class CommandChannel implements PlayerGroup
 			return false;
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		switch (npcId)
 		{

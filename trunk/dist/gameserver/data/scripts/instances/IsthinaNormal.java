@@ -131,7 +131,7 @@ public final class IsthinaNormal extends Reflection
 		@Override
 		public void onCurrentHpDamage(final Creature actor, final double damage, final Creature attacker, Skill skill)
 		{
-			if (actor.getNpcId() == Ballista)
+			if (actor.getId() == Ballista)
 			{
 				if (actor.isDead())
 				{
@@ -197,7 +197,7 @@ public final class IsthinaNormal extends Reflection
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
-			if (self.isNpc() && (self.getNpcId() == Isthina))
+			if (self.isNpc() && (self.getId() == Isthina))
 			{
 				ThreadPoolManager.getInstance().schedule(new IsthinaDeath(), 10);
 			}

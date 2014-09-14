@@ -66,11 +66,11 @@ public class Q10311_PeacefulDaysAreOver extends Quest implements ScriptFile
 			return htmltext;
 		}
 		
-		npc.getNpcId();
+		npc.getId();
 		Player player = st.getPlayer();
 		QuestState previous = player.getQuestState(Q10312_AbandonedGodsCreature.class);
 		
-		if (npc.getNpcId() == NPC_SELINA)
+		if (npc.getId() == NPC_SELINA)
 		{
 			if ((previous == null) || (!previous.isCompleted()) || (player.getLevel() < 90))
 			{
@@ -97,7 +97,7 @@ public class Q10311_PeacefulDaysAreOver extends Quest implements ScriptFile
 					htmltext = "33032-07.htm";
 			}
 		}
-		else if (npc.getNpcId() == NPC_SLAKI)
+		else if (npc.getId() == NPC_SLAKI)
 		{
 			if (st.isStarted())
 			{

@@ -39,7 +39,7 @@ public final class DrakeBosses extends Fighter
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		switch (getActor().getNpcId())
+		switch (getActor().getId())
 		{
 			case 25725:
 				NpcUtils.spawnSingle(32884, getActor().getLoc(), 300000);

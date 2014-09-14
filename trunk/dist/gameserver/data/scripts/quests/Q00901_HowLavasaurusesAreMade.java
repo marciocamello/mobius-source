@@ -96,7 +96,7 @@ public class Q00901_HowLavasaurusesAreMade extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (npcId == ROONEY)
@@ -153,7 +153,7 @@ public class Q00901_HowLavasaurusesAreMade extends Quest implements ScriptFile
 	{
 		if (st.getCond() == 1)
 		{
-			if (!ArrayUtils.contains(KILLING_MONSTERS, npc.getNpcId()))
+			if (!ArrayUtils.contains(KILLING_MONSTERS, npc.getId()))
 			{
 				return null;
 			}

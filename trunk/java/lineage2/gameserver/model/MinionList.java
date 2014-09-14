@@ -166,7 +166,7 @@ public class MinionList
 				
 				for (MinionInstance m : _minions)
 				{
-					if (m.getNpcId() == minionId)
+					if (m.getId() == minionId)
 					{
 						minionCount--;
 					}

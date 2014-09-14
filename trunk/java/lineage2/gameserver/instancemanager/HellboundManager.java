@@ -241,7 +241,7 @@ public class HellboundManager
 				
 				case 1:
 				{
-					switch (cha.getNpcId())
+					switch (cha.getId())
 					{
 						case 22320:
 						case 22321:
@@ -268,7 +268,7 @@ public class HellboundManager
 				
 				case 2:
 				{
-					switch (cha.getNpcId())
+					switch (cha.getId())
 					{
 						case 18463:
 						case 18464:
@@ -287,7 +287,7 @@ public class HellboundManager
 				
 				case 3:
 				{
-					switch (cha.getNpcId())
+					switch (cha.getId())
 					{
 						case 22342:
 						case 22343:
@@ -310,7 +310,7 @@ public class HellboundManager
 				
 				case 4:
 				{
-					switch (cha.getNpcId())
+					switch (cha.getId())
 					{
 						case 18465:
 							addConfidence(10000);
@@ -329,7 +329,7 @@ public class HellboundManager
 				
 				case 5:
 				{
-					switch (cha.getNpcId())
+					switch (cha.getId())
 					{
 						case 22448:
 							reduceConfidence(50);
@@ -341,7 +341,7 @@ public class HellboundManager
 				
 				case 6:
 				{
-					switch (cha.getNpcId())
+					switch (cha.getId())
 					{
 						case 22326:
 							addConfidence(500);
@@ -357,7 +357,7 @@ public class HellboundManager
 				
 				case 8:
 				{
-					switch (cha.getNpcId())
+					switch (cha.getId())
 					{
 						case 18466:
 							addConfidence(10000);

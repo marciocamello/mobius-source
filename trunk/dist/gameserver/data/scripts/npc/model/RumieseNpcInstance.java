@@ -92,12 +92,12 @@ public final class RumieseNpcInstance extends NpcInstance
 		{
 			if (ItemFunctions.getItemCount(player, 17608) > 0)
 			{
-				showChatWindow(player, "default/" + getNpcId() + "-no.htm");
+				showChatWindow(player, "default/" + getId() + "-no.htm");
 				return;
 			}
 			
 			Functions.addItem(player, 17608, 1);
-			showChatWindow(player, "default/" + getNpcId() + "-ok.htm");
+			showChatWindow(player, "default/" + getId() + "-ok.htm");
 		}
 		else
 		{

@@ -78,18 +78,18 @@ public final class YehanBrotherInstance extends RaidBossInstance
 	{
 		int brotherId = 0;
 		
-		if (getNpcId() == 25665)
+		if (getId() == 25665)
 		{
 			brotherId = 25666;
 		}
-		else if (getNpcId() == 25666)
+		else if (getId() == 25666)
 		{
 			brotherId = 25665;
 		}
 		
 		for (NpcInstance npc : getReflection().getNpcs())
 		{
-			if (npc.getNpcId() == brotherId)
+			if (npc.getId() == brotherId)
 			{
 				return npc;
 			}

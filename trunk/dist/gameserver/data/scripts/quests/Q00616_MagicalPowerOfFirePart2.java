@@ -112,7 +112,7 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest implements ScriptFile
 	{
 		NpcInstance isQuest = GameObjectsStorage.getByNpcId(SoulOfFireNastron);
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		switch (npcId)

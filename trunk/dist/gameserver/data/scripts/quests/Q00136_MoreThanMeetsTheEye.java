@@ -164,7 +164,7 @@ public class Q00136_MoreThanMeetsTheEye extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		
@@ -272,7 +272,7 @@ public class Q00136_MoreThanMeetsTheEye extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		for (int[] element : DROPLIST_COND)

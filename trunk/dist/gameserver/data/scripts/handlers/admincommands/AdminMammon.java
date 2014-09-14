@@ -128,7 +128,7 @@ public class AdminMammon implements IAdminCommandHandler, ScriptFile
 		
 		for (NpcInstance npcInst : GameObjectsStorage.getAllNpcsForIterate())
 		{
-			int npcId = npcInst.getNpcId();
+			int npcId = npcInst.getId();
 			
 			if (npcIdList.contains(npcId))
 			{

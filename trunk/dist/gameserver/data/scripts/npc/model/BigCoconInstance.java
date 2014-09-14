@@ -58,7 +58,7 @@ public final class BigCoconInstance extends NpcInstance
 			return;
 		}
 		
-		if (getNpcId() == 32920)
+		if (getId() == 32920)
 		{
 			if (command.startsWith("non_strong_mass_attack"))
 			{

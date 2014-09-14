@@ -160,7 +160,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest implements ScriptFile
 			return "completed";
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (_state == CREATED)
 		{

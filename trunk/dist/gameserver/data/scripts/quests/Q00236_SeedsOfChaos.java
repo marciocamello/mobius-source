@@ -203,7 +203,7 @@ public class Q00236_SeedsOfChaos extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int _state = st.getState();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (_state == COMPLETED)
 		{
 			return "completed";
@@ -373,7 +373,7 @@ public class Q00236_SeedsOfChaos extends Quest implements ScriptFile
 		{
 			return null;
 		}
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = qs.getCond();
 		
 		if (IsInIntArray(npcId, NEEDLE_STAKATO_DRONES))

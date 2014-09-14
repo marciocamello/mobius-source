@@ -236,7 +236,7 @@ public final class exchange extends Functions
 		
 		Summon pl_pet = player.getSummonList().getPet();
 		
-		if ((pl_pet == null) || pl_pet.isDead() || !((pl_pet.getNpcId() == PetDataTable.IMPROVED_BABY_BUFFALO_ID) || (pl_pet.getNpcId() == PetDataTable.IMPROVED_BABY_KOOKABURRA_ID)))
+		if ((pl_pet == null) || pl_pet.isDead() || !((pl_pet.getId() == PetDataTable.IMPROVED_BABY_BUFFALO_ID) || (pl_pet.getId() == PetDataTable.IMPROVED_BABY_KOOKABURRA_ID)))
 		{
 			show("�?ет должен быт�? вызван.", player);
 			return;
@@ -282,7 +282,7 @@ public final class exchange extends Functions
 		
 		Summon pl_pet = player.getSummonList().getPet();
 		
-		if ((pl_pet == null) || pl_pet.isDead() || !((pl_pet.getNpcId() == PetDataTable.IMPROVED_BABY_COUGAR_ID) || (pl_pet.getNpcId() == PetDataTable.IMPROVED_BABY_KOOKABURRA_ID)))
+		if ((pl_pet == null) || pl_pet.isDead() || !((pl_pet.getId() == PetDataTable.IMPROVED_BABY_COUGAR_ID) || (pl_pet.getId() == PetDataTable.IMPROVED_BABY_KOOKABURRA_ID)))
 		{
 			show("�?ет должен быт�? вызван.", player);
 			return;
@@ -334,7 +334,7 @@ public final class exchange extends Functions
 		
 		Summon pl_pet = player.getSummonList().getPet();
 		
-		if ((pl_pet == null) || pl_pet.isDead() || !((pl_pet.getNpcId() == PetDataTable.IMPROVED_BABY_BUFFALO_ID) || (pl_pet.getNpcId() == PetDataTable.IMPROVED_BABY_COUGAR_ID)))
+		if ((pl_pet == null) || pl_pet.isDead() || !((pl_pet.getId() == PetDataTable.IMPROVED_BABY_BUFFALO_ID) || (pl_pet.getId() == PetDataTable.IMPROVED_BABY_COUGAR_ID)))
 		{
 			show("�?ет должен быт�? вызван.", player);
 			return;

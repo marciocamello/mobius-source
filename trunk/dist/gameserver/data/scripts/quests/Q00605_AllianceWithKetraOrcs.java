@@ -307,7 +307,7 @@ public class Q00605_AllianceWithKetraOrcs extends Quest implements ScriptFile
 			st.setCond(0);
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (npcId == 31371)
@@ -360,7 +360,7 @@ public class Q00605_AllianceWithKetraOrcs extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (isKetraNpc(npcId))
 		{

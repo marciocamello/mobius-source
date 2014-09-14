@@ -68,7 +68,7 @@ public final class Soldiers extends Fighter
 			return (ai != null) && (ai.hate > 0);
 		}
 		
-		return ArrayUtils.contains(ATTACK_IDS, target.getNpcId());
+		return ArrayUtils.contains(ATTACK_IDS, target.getId());
 	}
 	
 	/**
@@ -84,7 +84,7 @@ public final class Soldiers extends Fighter
 			return false;
 		}
 		
-		if (target.isNpc() && !ArrayUtils.contains(ATTACK_IDS, target.getNpcId()))
+		if (target.isNpc() && !ArrayUtils.contains(ATTACK_IDS, target.getId()))
 		{
 			return false;
 		}

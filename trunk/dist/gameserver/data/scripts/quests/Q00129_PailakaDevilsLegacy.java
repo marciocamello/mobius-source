@@ -113,7 +113,7 @@ public class Q00129_PailakaDevilsLegacy extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		int id = st.getState();
 		Player player = st.getPlayer();
@@ -250,7 +250,7 @@ public class Q00129_PailakaDevilsLegacy extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		Player player = st.getPlayer();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int refId = player.getReflectionId();
 		
 		if ((npcId == KAMS) && (st.getQuestItemsCount(KDROP) == 0))

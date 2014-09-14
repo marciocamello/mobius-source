@@ -134,7 +134,7 @@ public final class DoorInstance extends Creature implements GeoCollision
 	 */
 	public int getDoorId()
 	{
-		return getTemplate().getNpcId();
+		return getTemplate().getId();
 	}
 	
 	/**

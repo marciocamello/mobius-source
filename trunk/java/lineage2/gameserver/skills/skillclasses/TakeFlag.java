@@ -76,7 +76,7 @@ public class TakeFlag extends Skill
 			return false;
 		}
 		
-		if (!(target instanceof SiegeFlagInstance) || (target.getNpcId() != 36590) || (target.getClan() != player.getClan()))
+		if (!(target instanceof SiegeFlagInstance) || (target.getId() != 36590) || (target.getClan() != player.getClan()))
 		{
 			activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 			return false;
@@ -105,7 +105,7 @@ public class TakeFlag extends Skill
 				{
 					continue;
 				}
-				if (!(target instanceof SiegeFlagInstance) || (target.getNpcId() != 36590) || (target.getClan() != player.getClan()))
+				if (!(target instanceof SiegeFlagInstance) || (target.getId() != 36590) || (target.getClan() != player.getClan()))
 				{
 					continue;
 				}

@@ -66,7 +66,7 @@ public final class OctavisFollower extends DefaultAI
 				
 				for (NpcInstance npc : World.getAroundNpc(actor))
 				{
-					if (npc.getNpcId() == Rider)
+					if (npc.getId() == Rider)
 					{
 						_octavisRef = npc.getRef();
 						return true;

@@ -193,7 +193,7 @@ public class Q00327_ReclaimTheLand extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int _state = st.getState();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (_state == CREATED)
 		{
 			if (npcId != Piotur)
@@ -246,7 +246,7 @@ public class Q00327_ReclaimTheLand extends Quest implements ScriptFile
 		{
 			return null;
 		}
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		Drop _drop = DROPLIST.get(npcId);
 		if (_drop == null)

@@ -64,7 +64,7 @@ public class Q10338_SeizeYourDestiny extends Quest implements ScriptFile
 		String htmltext = null;
 		int cond = qs.getCond();
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case CELLPHINE_ID:
 				if (!isAvailableFor(player))
@@ -167,7 +167,7 @@ public class Q10338_SeizeYourDestiny extends Quest implements ScriptFile
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case CELLPHINE_ID:
 				if (event.equalsIgnoreCase("quest_ac"))
@@ -233,7 +233,7 @@ public class Q10338_SeizeYourDestiny extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if (npc.getNpcId() == HARNAK_ID)
+		if (npc.getId() == HARNAK_ID)
 		{
 			qs.setCond(3);
 			qs.playSound(SOUND_MIDDLE);
@@ -252,7 +252,7 @@ public class Q10338_SeizeYourDestiny extends Quest implements ScriptFile
 			return null;
 		}
 		
-		if (npc.getNpcId() == HERMUNKUS_ID)
+		if (npc.getId() == HERMUNKUS_ID)
 		{
 			if (npc.getNpcState() == 1)
 			{

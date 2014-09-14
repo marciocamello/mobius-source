@@ -57,7 +57,7 @@ public final class RewardListInfo
 		double mod = npc.calcStat(Stats.REWARD_MULTIPLIER, 1., player, null);
 		mod *= Experience.penaltyModifier(diff, 9);
 		final NpcHtmlMessage htmlMessage = new NpcHtmlMessage(5);
-		htmlMessage.replace("%npc_name%", HtmlUtils.htmlNpcName(npc.getNpcId()));
+		htmlMessage.replace("%npc_name%", HtmlUtils.htmlNpcName(npc.getId()));
 		
 		if ((mod <= 0) && !player.isGM())
 		{

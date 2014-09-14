@@ -64,7 +64,7 @@ public final class BrazierOfPurity extends CharacterAI
 			{
 				for (NpcInstance npc : around)
 				{
-					if ((npc.isMonster() && (npc.getNpcId() == 22658)) || (npc.getNpcId() == 22659))
+					if ((npc.isMonster() && (npc.getId() == 22658)) || (npc.getId() == 22659))
 					{
 						npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 5000);
 					}

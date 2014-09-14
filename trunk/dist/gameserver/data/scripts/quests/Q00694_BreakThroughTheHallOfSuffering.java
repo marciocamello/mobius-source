@@ -47,7 +47,7 @@ public class Q00694_BreakThroughTheHallOfSuffering extends Quest implements Scri
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		

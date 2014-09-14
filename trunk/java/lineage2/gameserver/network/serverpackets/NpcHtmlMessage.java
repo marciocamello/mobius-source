@@ -94,10 +94,10 @@ public class NpcHtmlMessage extends L2GameServerPacket
 	
 	public NpcHtmlMessage(Player player, NpcInstance npc, String filename, int val)
 	{
-		this(player, npc.getNpcId(), filename, val);
+		this(player, npc.getId(), filename, val);
 		_npcObjId = npc.getObjectId();
 		player.setLastNpc(npc);
-		replace("%npcId%", String.valueOf(npc.getNpcId()));
+		replace("%npcId%", String.valueOf(npc.getId()));
 		replace("%npcname%", npc.getName());
 	}
 	

@@ -54,22 +54,22 @@ public final class RafortyInstance extends NpcInstance
 		{
 			if (ItemFunctions.getItemCount(player, FREYA_NECKLACE) > 0)
 			{
-				showChatWindow(player, "default/" + getNpcId() + "-ex4.htm");
+				showChatWindow(player, "default/" + getId() + "-ex4.htm");
 			}
 			else
 			{
-				showChatWindow(player, "default/" + getNpcId() + "-ex6.htm");
+				showChatWindow(player, "default/" + getId() + "-ex6.htm");
 			}
 		}
 		else if (command.equalsIgnoreCase("exchange_necklace_2"))
 		{
 			if (ItemFunctions.getItemCount(player, BOTTLE_OF_FREYAS_SOUL) > 0)
 			{
-				showChatWindow(player, "default/" + getNpcId() + "-ex8.htm");
+				showChatWindow(player, "default/" + getId() + "-ex8.htm");
 			}
 			else
 			{
-				showChatWindow(player, "default/" + getNpcId() + "-ex7.htm");
+				showChatWindow(player, "default/" + getId() + "-ex7.htm");
 			}
 		}
 		else if (command.equalsIgnoreCase("exchange_necklace_3"))
@@ -79,11 +79,11 @@ public final class RafortyInstance extends NpcInstance
 				ItemFunctions.removeItem(player, FREYA_NECKLACE, 1, true);
 				ItemFunctions.removeItem(player, BOTTLE_OF_FREYAS_SOUL, 1, true);
 				ItemFunctions.addItem(player, BLESSED_FREYA_NECKLACE, 1, true);
-				showChatWindow(player, "default/" + getNpcId() + "-ex9.htm");
+				showChatWindow(player, "default/" + getId() + "-ex9.htm");
 			}
 			else
 			{
-				showChatWindow(player, "default/" + getNpcId() + "-ex11.htm");
+				showChatWindow(player, "default/" + getId() + "-ex11.htm");
 			}
 		}
 		else

@@ -352,7 +352,7 @@ public final class ChamberlainDarkInstance extends ResidenceManager
 			}
 			
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
-			html.setFile("castle/chamberlain/" + getTemplate().npcId + "-d.htm");
+			html.setFile("castle/chamberlain/" + getTemplate().getId() + "-d.htm");
 			player.sendPacket(html);
 		}
 		else if (actualCommand.equalsIgnoreCase("tax_set")) // tax rates control
@@ -702,7 +702,7 @@ public final class ChamberlainDarkInstance extends ResidenceManager
 		{
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile("residence2/castle/chamberlain_saius064.htm");
-			html.replace("%npcId%", String.valueOf(getNpcId()));
+			html.replace("%npcId%", String.valueOf(getId()));
 			player.sendPacket(html);
 		}
 		else if (actualCommand.equalsIgnoreCase("default"))

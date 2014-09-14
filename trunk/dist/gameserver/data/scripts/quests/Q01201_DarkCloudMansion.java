@@ -455,7 +455,7 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		Player player = st.getPlayer();
 		
 		if (npcId == YIYEN)

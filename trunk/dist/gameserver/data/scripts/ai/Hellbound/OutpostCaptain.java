@@ -51,7 +51,7 @@ public final class OutpostCaptain extends Fighter
 		
 		for (NpcInstance minion : World.getAroundNpc(getActor(), 3000, 2000))
 		{
-			if ((minion.getNpcId() == 22358) || (minion.getNpcId() == 22357))
+			if ((minion.getId() == 22358) || (minion.getId() == 22357))
 			{
 				minion.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 5000);
 			}

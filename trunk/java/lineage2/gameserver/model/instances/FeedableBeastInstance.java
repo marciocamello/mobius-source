@@ -465,7 +465,7 @@ public class FeedableBeastInstance extends MonsterInstance
 	 */
 	private void spawnNext(Player player, int growthLevel, int food, int skill_id)
 	{
-		int npcId = getNpcId();
+		int npcId = getId();
 		int nextNpcId = 0;
 		int tameChance = growthCapableMobs.get(npcId).tameinfo[1];
 		
@@ -620,7 +620,7 @@ public class FeedableBeastInstance extends MonsterInstance
 	 */
 	public void onSkillUse(Player player, int skillId)
 	{
-		int npcId = getNpcId();
+		int npcId = getId();
 		
 		if (!feedableBeasts.contains(npcId))
 		{

@@ -121,7 +121,7 @@ public class Q00456_DontKnowDontCare extends Quest implements ScriptFile
 		{
 			if (st.getCond() == 1)
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case DrakeLordCorpse:
 						if (st.getQuestItemsCount(DrakeLordsEssence) < 1)
@@ -203,7 +203,7 @@ public class Q00456_DontKnowDontCare extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		
-		if (ArrayUtils.contains(SeparatedSoul, npc.getNpcId()))
+		if (ArrayUtils.contains(SeparatedSoul, npc.getId()))
 		{
 			switch (st.getState())
 			{

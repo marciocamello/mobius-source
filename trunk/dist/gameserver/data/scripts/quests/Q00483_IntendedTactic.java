@@ -91,7 +91,7 @@ public class Q00483_IntendedTactic extends Quest implements ScriptFile
 	{
 		Player player = st.getPlayer();
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (npcId == CON1)
@@ -151,12 +151,12 @@ public class Q00483_IntendedTactic extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		npc.getNpcId();
+		npc.getId();
 		int cond = st.getCond();
 		
 		if (cond == 1)
 		{
-			if ((ArrayUtils.contains(CON5, npc.getNpcId())) && (Rnd.chance(25)))
+			if ((ArrayUtils.contains(CON5, npc.getId())) && (Rnd.chance(25)))
 			{
 				st.giveItems(CON2, 1);
 				st.playSound("SOUND_ITEMGET");
@@ -167,7 +167,7 @@ public class Q00483_IntendedTactic extends Quest implements ScriptFile
 					st.playSound("SOUND_MIDDLE");
 				}
 			}
-			else if (ArrayUtils.contains(CON6, npc.getNpcId()))
+			else if (ArrayUtils.contains(CON6, npc.getId()))
 			{
 				if (st.getQuestItemsCount(CON3) <= 0)
 				{
@@ -178,7 +178,7 @@ public class Q00483_IntendedTactic extends Quest implements ScriptFile
 		}
 		else if (cond == 2)
 		{
-			if (ArrayUtils.contains(CON6, npc.getNpcId()))
+			if (ArrayUtils.contains(CON6, npc.getId()))
 			{
 				if (st.getQuestItemsCount(CON3) <= 0)
 				{

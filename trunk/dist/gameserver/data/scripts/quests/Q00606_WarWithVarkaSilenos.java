@@ -152,7 +152,7 @@ public class Q00606_WarWithVarkaSilenos extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		if (isVarkaNpc(npc.getNpcId()) && (st.getCond() == 1))
+		if (isVarkaNpc(npc.getId()) && (st.getCond() == 1))
 		{
 			st.rollAndGive(VARKAS_MANE, 1, VARKAS_MANE_DROP_CHANCE);
 		}

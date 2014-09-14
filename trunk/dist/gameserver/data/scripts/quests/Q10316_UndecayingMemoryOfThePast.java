@@ -93,7 +93,7 @@ public class Q10316_UndecayingMemoryOfThePast extends Quest implements ScriptFil
 		Player player = st.getPlayer();
 		QuestState previous = player.getQuestState(Q10315_ToThePrisonOfDarkness.class);
 		
-		if (npc.getNpcId() == NPC_OPERA)
+		if (npc.getId() == NPC_OPERA)
 		{
 			if ((previous == null) || (!previous.isCompleted()))
 			{
@@ -142,7 +142,7 @@ public class Q10316_UndecayingMemoryOfThePast extends Quest implements ScriptFil
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		if ((st.getCond() == 1) && (npc.getNpcId() == MOB_SPEZION))
+		if ((st.getCond() == 1) && (npc.getId() == MOB_SPEZION))
 		{
 			st.playSound(SOUND_MIDDLE);
 			st.setCond(2);

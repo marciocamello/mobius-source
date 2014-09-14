@@ -106,7 +106,7 @@ public class Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal extends Quest impleme
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		
@@ -210,7 +210,7 @@ public class Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal extends Quest impleme
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (npcId == EtisEtina)
 		{
@@ -218,7 +218,7 @@ public class Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal extends Quest impleme
 			
 			for (NpcInstance n : st.getPlayer().getReflection().getNpcs())
 			{
-				if (n.getNpcId() == ElcardiaInzone1)
+				if (n.getId() == ElcardiaInzone1)
 				{
 					n.teleToLocation(new Location(120664, -86968, -3392));
 				}
@@ -235,7 +235,7 @@ public class Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal extends Quest impleme
 	{
 		for (NpcInstance n : player.getReflection().getNpcs())
 		{
-			if (n.getNpcId() == ElcardiaInzone1)
+			if (n.getId() == ElcardiaInzone1)
 			{
 				n.teleToLocation(Location.findPointToStay(player, 60));
 				
@@ -251,7 +251,7 @@ public class Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal extends Quest impleme
 	{
 		for (NpcInstance n : player.getReflection().getNpcs())
 		{
-			if (n.getNpcId() == ElcardiaInzone1)
+			if (n.getId() == ElcardiaInzone1)
 			{
 				n.teleToLocation(loc);
 				n.block();

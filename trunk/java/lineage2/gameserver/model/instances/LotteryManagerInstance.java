@@ -106,7 +106,7 @@ public class LotteryManagerInstance extends NpcInstance
 	 */
 	public void showLotoWindow(Player player, int val)
 	{
-		int npcId = getTemplate().npcId;
+		int npcId = getTemplate().getId();
 		String filename;
 		SystemMessage sm;
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);

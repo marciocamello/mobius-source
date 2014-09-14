@@ -58,7 +58,7 @@ public final class ibcougar extends Functions
 			return;
 		}
 		
-		if (pl_pet.getNpcId() != BABY_COUGAR)
+		if (pl_pet.getId() != BABY_COUGAR)
 		{
 			show("scripts/services/petevolve/no_pet.htm", player, npc);
 			return;

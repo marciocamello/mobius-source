@@ -215,7 +215,7 @@ public final class FourSepulchersManager extends Functions implements ScriptFile
 	 */
 	public static synchronized void tryEntry(NpcInstance npc, Player player)
 	{
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		
 		switch (npcId)
 		{
@@ -407,7 +407,7 @@ public final class FourSepulchersManager extends Functions implements ScriptFile
 			
 			for (SepulcherNpcInstance npc : FourSepulchersSpawn._managers)
 			{
-				if (!FourSepulchersSpawn._hallInUse.get(npc.getNpcId()))
+				if (!FourSepulchersSpawn._hallInUse.get(npc.getId()))
 				{
 					continue;
 				}
@@ -686,7 +686,7 @@ public final class FourSepulchersManager extends Functions implements ScriptFile
 	{
 		for (GateKeeper gk : FourSepulchersSpawn._GateKeepers)
 		{
-			if (gk.template.npcId == npcId)
+			if (gk.template.getId() == npcId)
 			{
 				return gk;
 			}

@@ -245,7 +245,7 @@ public class Q00144_PailakaInjuredDragon extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		int id = st.getState();
 		Player player = st.getPlayer();
@@ -370,7 +370,7 @@ public class Q00144_PailakaInjuredDragon extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		Player player = st.getPlayer();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int refId = player.getReflectionId();
 		
 		switch (npcId)
@@ -448,7 +448,7 @@ public class Q00144_PailakaInjuredDragon extends Quest implements ScriptFile
 	public String onAttack(NpcInstance npc, QuestState st)
 	{
 		Player player = st.getPlayer();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		switch (npcId)
 		{

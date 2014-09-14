@@ -34,7 +34,7 @@ public final class TeleToGracia extends Functions
 		{
 			if (player.getLevel() < 75)
 			{
-				show("teleporter/" + npc.getNpcId() + "-4.htm", player);
+				show("teleporter/" + npc.getId() + "-4.htm", player);
 			}
 			else if (player.getAdena() >= 150000)
 			{
@@ -43,7 +43,7 @@ public final class TeleToGracia extends Functions
 			}
 			else
 			{
-				show("teleporter/" + npc.getNpcId() + "-2.htm", player);
+				show("teleporter/" + npc.getId() + "-2.htm", player);
 			}
 		}
 	}

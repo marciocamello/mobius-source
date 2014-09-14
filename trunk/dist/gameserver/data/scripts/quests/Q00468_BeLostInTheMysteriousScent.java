@@ -89,7 +89,7 @@ public class Q00468_BeLostInTheMysteriousScent extends Quest implements ScriptFi
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		
 		if (npcId == SELINA)

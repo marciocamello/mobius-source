@@ -192,7 +192,7 @@ public class Q00604_DaimonTheWhiteEyedPart2 extends Quest implements ScriptFile
 	{
 		NpcInstance isQuest = GameObjectsStorage.getByNpcId(DAIMON);
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (cond == 0)

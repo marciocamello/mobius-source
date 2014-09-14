@@ -138,7 +138,7 @@ public class Q00510_AClansPrestige extends Quest implements ScriptFile
 		}
 		else if (st.getState() == STARTED)
 		{
-			int npcId = npc.getNpcId();
+			int npcId = npc.getId();
 			
 			if ((npcId >= 22215) && (npcId <= 22218))
 			{

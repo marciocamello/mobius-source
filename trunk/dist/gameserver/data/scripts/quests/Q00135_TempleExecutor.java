@@ -102,7 +102,7 @@ public class Q00135_TempleExecutor extends Quest implements ScriptFile
 			return "completed";
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (_state == CREATED)
 		{

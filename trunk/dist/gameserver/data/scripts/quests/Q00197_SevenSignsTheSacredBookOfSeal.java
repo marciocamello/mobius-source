@@ -103,7 +103,7 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest implements Scrip
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		String htmltext = "noquest";
@@ -203,7 +203,7 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest implements Scrip
 			return null;
 		}
 		
-		if ((npc.getNpcId() == ShilensEvilThoughts) && (cond == 3))
+		if ((npc.getId() == ShilensEvilThoughts) && (cond == 3))
 		{
 			st.setCond(4);
 			st.playSound(SOUND_ITEMGET);

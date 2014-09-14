@@ -119,7 +119,7 @@ public final class TeredorEggs extends Fighter
 					final Location coords = Location.findPointToStay(actor, 100, 120);
 					final NpcInstance npc = _ref.addSpawnWithoutRespawn(chosenMonster, coords, 0);
 					
-					if (npc.getNpcId() == 18994)
+					if (npc.getId() == 18994)
 					{
 						npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, _player, Rnd.get(1, 100));
 					}

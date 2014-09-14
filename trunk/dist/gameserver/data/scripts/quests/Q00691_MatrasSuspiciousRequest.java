@@ -114,7 +114,7 @@ public class Q00691_MatrasSuspiciousRequest extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		st.rollAndGive(RED_STONE, 1, 1, RED_STONES_COUNT, npc.getNpcId() == LABYRINTH_CAPTAIN ? 50 : 30);
+		st.rollAndGive(RED_STONE, 1, 1, RED_STONES_COUNT, npc.getId() == LABYRINTH_CAPTAIN ? 50 : 30);
 		return null;
 	}
 }

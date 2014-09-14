@@ -145,7 +145,7 @@ public class Q00642_APowerfulPrimevalCreature extends Quest implements ScriptFil
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		if (npc.getNpcId() != Dinn)
+		if (npc.getId() != Dinn)
 		{
 			return "noquest";
 		}
@@ -192,7 +192,7 @@ public class Q00642_APowerfulPrimevalCreature extends Quest implements ScriptFil
 			return null;
 		}
 		
-		if (npc.getNpcId() == Ancient_Egg)
+		if (npc.getId() == Ancient_Egg)
 		{
 			st.rollAndGive(Dinosaur_Egg, 1, Dinosaur_Egg_Chance);
 		}

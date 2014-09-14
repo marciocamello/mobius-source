@@ -154,7 +154,7 @@ public class Q00628_HuntGoldenRam extends Quest implements ScriptFile
 			return null;
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if ((cond >= 1) && (21507 < npcId) && (npcId < 21513))

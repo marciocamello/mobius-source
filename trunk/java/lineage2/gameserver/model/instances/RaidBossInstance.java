@@ -165,7 +165,7 @@ public class RaidBossInstance extends MonsterInstance
 				{
 					if (member.isNoble())
 					{
-						Hero.getInstance().addHeroDiary(member.getObjectId(), HeroDiary.ACTION_RAID_KILLED, getNpcId());
+						Hero.getInstance().addHeroDiary(member.getObjectId(), HeroDiary.ACTION_RAID_KILLED, getId());
 					}
 				}
 				
@@ -175,7 +175,7 @@ public class RaidBossInstance extends MonsterInstance
 			{
 				if (player.isNoble())
 				{
-					Hero.getInstance().addHeroDiary(player.getObjectId(), HeroDiary.ACTION_RAID_KILLED, getNpcId());
+					Hero.getInstance().addHeroDiary(player.getObjectId(), HeroDiary.ACTION_RAID_KILLED, getId());
 				}
 				
 				player.sendPacket(new SystemMessage(SystemMessage.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
@@ -212,7 +212,7 @@ public class RaidBossInstance extends MonsterInstance
 		
 		int boxId = 0;
 		
-		switch (getNpcId())
+		switch (getId())
 		{
 			case 25035:
 				boxId = 31027;
@@ -317,7 +317,7 @@ public class RaidBossInstance extends MonsterInstance
 				}
 				
 				player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EARNED_S1_RAID_POINTS).addNumber(playerReward));
-				RaidBossSpawnManager.getInstance().addPoints(player.getObjectId(), getNpcId(), playerReward);
+				RaidBossSpawnManager.getInstance().addPoints(player.getObjectId(), getId(), playerReward);
 			}
 		}
 		

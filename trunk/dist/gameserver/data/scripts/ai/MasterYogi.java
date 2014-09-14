@@ -67,7 +67,7 @@ public final class MasterYogi extends DefaultAI
 				
 				for (NpcInstance npc : around)
 				{
-					if (npc.getNpcId() == 32599)
+					if (npc.getId() == 32599)
 					{
 						distance = actor.getDistance(npc) * 0.50;
 						

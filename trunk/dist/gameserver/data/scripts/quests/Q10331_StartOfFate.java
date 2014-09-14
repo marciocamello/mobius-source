@@ -86,7 +86,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		
-		if ((npc != null) && event.equalsIgnoreCase(getStartNpcPrefix(npc.getNpcId()) + "_q10331_3.htm"))
+		if ((npc != null) && event.equalsIgnoreCase(getStartNpcPrefix(npc.getId()) + "_q10331_3.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
@@ -427,7 +427,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if ((npcId == FRANCO) || (npcId == RIVIAN) || (npcId == DEVON) || (npcId == TOOK) || (npcId == MOKA) || (npcId == VALFAR))
@@ -514,7 +514,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 		
 		if (reflect.getInstancedZoneId() == INSTANCED_ZONE_ID)
 		{
-			int npcId = npc.getNpcId();
+			int npcId = npc.getId();
 			
 			if (npcId == INFILTRATION_OFFICER)
 			{
@@ -528,7 +528,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 					}
 					
 					int stage = st.getInt("stage");
-					player.sendMessage("npc:" + npc.getNpcId());
+					player.sendMessage("npc:" + npc.getId());
 					
 					if (stage == 0)
 					{
@@ -591,7 +591,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 		
 		if (reflect.getInstancedZoneId() == INSTANCED_ZONE_ID)
 		{
-			int npcId = npc.getNpcId();
+			int npcId = npc.getId();
 			
 			if (npcId == OPERATIVE)
 			{
@@ -678,7 +678,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 	
 	public boolean checkStartNpc(NpcInstance npc, Player player)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		Race race = player.getRace();
 		
 		switch (npcId)

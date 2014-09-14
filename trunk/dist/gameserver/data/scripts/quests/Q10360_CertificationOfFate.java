@@ -338,7 +338,7 @@ public class Q10360_CertificationOfFate extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		Player player = st.getPlayer();
 		int classid = player.getClassId().getId();
@@ -586,7 +586,7 @@ public class Q10360_CertificationOfFate extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if ((npcId == poslov) && (st.getCond() == 4))
 		{

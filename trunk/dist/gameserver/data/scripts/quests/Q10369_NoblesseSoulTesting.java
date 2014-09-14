@@ -133,7 +133,7 @@ public class Q10369_NoblesseSoulTesting extends Quest implements ScriptFile, OnM
 		NpcInstance npc = (NpcInstance) target;
 		Player player = st.getPlayer();
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		switch (skill.getId())
 		{
@@ -169,7 +169,7 @@ public class Q10369_NoblesseSoulTesting extends Quest implements ScriptFile, OnM
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		
@@ -316,7 +316,7 @@ public class Q10369_NoblesseSoulTesting extends Quest implements ScriptFile, OnM
 		String htmltext = "noquest";
 		Player player = st.getPlayer();
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		switch (npcId)
 		{

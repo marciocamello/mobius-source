@@ -121,7 +121,7 @@ public class PetSkillsTable
 	 */
 	public int getAvailableLevel(Summon cha, int skillId)
 	{
-		List<SkillLearn> skills = _skillTrees.get(cha.getNpcId());
+		List<SkillLearn> skills = _skillTrees.get(cha.getId());
 		
 		if (skills == null)
 		{

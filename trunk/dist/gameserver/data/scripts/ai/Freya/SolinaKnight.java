@@ -60,7 +60,7 @@ public final class SolinaKnight extends Fighter
 			{
 				for (NpcInstance npc : around)
 				{
-					if (npc.getNpcId() == 18912)
+					if (npc.getId() == 18912)
 					{
 						if ((scarecrow == null) || (getActor().getDistance3D(npc) < getActor().getDistance3D(scarecrow)))
 						{

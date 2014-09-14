@@ -134,7 +134,7 @@ public class Q00382_KailsMagicCoin extends Quest implements ScriptFile
 			return null;
 		}
 		
-		int[] droplist = MOBS.get(npc.getNpcId());
+		int[] droplist = MOBS.get(npc.getId());
 		st.rollAndGive(droplist[Rnd.get(droplist.length)], 1, 10);
 		return null;
 	}

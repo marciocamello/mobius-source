@@ -243,7 +243,7 @@ public class Q00509_AClansFame extends Quest implements ScriptFile
 		{
 			int raid = REWARDS_LIST[st.getInt("raid")][0];
 			int item = REWARDS_LIST[st.getInt("raid")][1];
-			int npcId = npc.getNpcId();
+			int npcId = npc.getId();
 			
 			if ((npcId == raid) && (st.getQuestItemsCount(item) == 0))
 			{

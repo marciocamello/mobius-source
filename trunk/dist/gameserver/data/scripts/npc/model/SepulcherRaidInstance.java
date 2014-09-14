@@ -92,7 +92,7 @@ public final class SepulcherRaidInstance extends RaidBossInstance
 		int cupId = 0;
 		int oldBrooch = 7262;
 		
-		switch (getNpcId())
+		switch (getId())
 		{
 			case 25339:
 				cupId = 7256;

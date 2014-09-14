@@ -80,7 +80,7 @@ public final class ItemAuctionBrokerInstance extends NpcInstance
 		{
 			if (_instance == null)
 			{
-				_instance = ItemAuctionManager.getInstance().getManagerInstance(getTemplate().npcId);
+				_instance = ItemAuctionManager.getInstance().getManagerInstance(getTemplate().getId());
 				
 				if (_instance == null)
 				{

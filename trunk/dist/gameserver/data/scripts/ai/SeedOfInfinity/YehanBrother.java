@@ -58,18 +58,18 @@ public final class YehanBrother extends Fighter
 		final NpcInstance actor = getActor();
 		int brotherId = 0;
 		
-		if (actor.getNpcId() == 25665)
+		if (actor.getId() == 25665)
 		{
 			brotherId = 25666;
 		}
-		else if (actor.getNpcId() == 25666)
+		else if (actor.getId() == 25666)
 		{
 			brotherId = 25665;
 		}
 		
 		for (NpcInstance npc : actor.getReflection().getNpcs())
 		{
-			if (npc.getNpcId() == brotherId)
+			if (npc.getId() == brotherId)
 			{
 				return npc;
 			}

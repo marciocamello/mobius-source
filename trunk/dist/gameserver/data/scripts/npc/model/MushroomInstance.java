@@ -91,26 +91,26 @@ public final class MushroomInstance extends MonsterInstance
 			killer = killer.getPlayer();
 		}
 		
-		if (getNpcId() == RAINBOW_FROG)
+		if (getId() == RAINBOW_FROG)
 		{
 			ThreadPoolManager.getInstance().schedule(new TaskAfterDead(this, killer, RAINBOW_FROG_SKILL), 3000);
 			doDie(killer);
 		}
-		else if (getNpcId() == STICKY_MUSHROOM)
+		else if (getId() == STICKY_MUSHROOM)
 		{
 			ThreadPoolManager.getInstance().schedule(new TaskAfterDead(this, killer, STICKY_MUSHROOM_SKILL), 3000);
 			doDie(killer);
 		}
-		else if (getNpcId() == ENERGY_PLANT)
+		else if (getId() == ENERGY_PLANT)
 		{
 			ThreadPoolManager.getInstance().schedule(new TaskAfterDead(this, killer, ENERGY_PLANT_SKILL), 3000);
 			doDie(killer);
 		}
-		else if (getNpcId() == ABYSS_WEED)
+		else if (getId() == ABYSS_WEED)
 		{
 			doDie(killer);
 		}
-		else if (getNpcId() == FANTASY_MUSHROOM)
+		else if (getId() == FANTASY_MUSHROOM)
 		{
 			List<NpcInstance> around = getAroundNpc(700, 300);
 			
@@ -118,7 +118,7 @@ public final class MushroomInstance extends MonsterInstance
 			{
 				for (NpcInstance npc : around)
 				{
-					if (npc.isMonster() && (npc.getNpcId() >= 22768) && (npc.getNpcId() <= 22774))
+					if (npc.isMonster() && (npc.getId() >= 22768) && (npc.getId() <= 22774))
 					{
 						npc.setRunning();
 						npc.moveToLocation(Location.findPointToStay(this, 20, 50), 0, true);
@@ -163,7 +163,7 @@ public final class MushroomInstance extends MonsterInstance
 				return;
 			}
 			
-			if ((_actor != null) && (_actor.getNpcId() == FANTASY_MUSHROOM))
+			if ((_actor != null) && (_actor.getId() == FANTASY_MUSHROOM))
 			{
 				_actor.broadcastPacket(new MagicSkillUse(_actor, _actor, _skill.getId(), _skill.getLevel(), 0, 0));
 				List<NpcInstance> around = _actor.getAroundNpc(200, 300);
@@ -172,7 +172,7 @@ public final class MushroomInstance extends MonsterInstance
 				{
 					for (NpcInstance npc : around)
 					{
-						if (npc.isMonster() && (npc.getNpcId() >= 22768) && (npc.getNpcId() <= 22774))
+						if (npc.isMonster() && (npc.getId() >= 22768) && (npc.getId() <= 22774))
 						{
 							_skill.getEffects(npc, npc, false, false);
 						}

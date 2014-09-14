@@ -91,7 +91,7 @@ public final class SepulcherNpcInstance extends NpcInstance
 			return;
 		}
 		
-		switch (getNpcId())
+		switch (getId())
 		{
 			case 31468:
 			case 31469:
@@ -120,7 +120,7 @@ public final class SepulcherNpcInstance extends NpcInstance
 					_spawnMonsterTask.cancel(false);
 				}
 				
-				_spawnMonsterTask = ThreadPoolManager.getInstance().schedule(new SpawnMonster(getNpcId()), 3500);
+				_spawnMonsterTask = ThreadPoolManager.getInstance().schedule(new SpawnMonster(getId()), 3500);
 				return;
 				
 			case 31455:
@@ -190,19 +190,19 @@ public final class SepulcherNpcInstance extends NpcInstance
 			}
 			else if (FourSepulchersManager.isAttackTime())
 			{
-				switch (getNpcId())
+				switch (getId())
 				{
 					case 31929:
 					case 31934:
 					case 31939:
 					case 31944:
-						if (!FourSepulchersSpawn.isShadowAlive(getNpcId()))
+						if (!FourSepulchersSpawn.isShadowAlive(getId()))
 						{
-							FourSepulchersSpawn.spawnShadow(getNpcId());
+							FourSepulchersSpawn.spawnShadow(getId());
 						}
 				}
 				
-				openNextDoor(getNpcId());
+				openNextDoor(getId());
 				
 				if (player.getParty() != null)
 				{
@@ -284,7 +284,7 @@ public final class SepulcherNpcInstance extends NpcInstance
 			}
 			else if (state == 1)
 			{
-				FourSepulchersSpawn.spawnMysteriousBox(_gk.template.npcId);
+				FourSepulchersSpawn.spawnMysteriousBox(_gk.template.getId());
 				_closeTask = null;
 			}
 		}

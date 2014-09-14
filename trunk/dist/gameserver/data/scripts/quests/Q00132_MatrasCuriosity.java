@@ -112,7 +112,7 @@ public class Q00132_MatrasCuriosity extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (npcId == Matras)
@@ -150,14 +150,14 @@ public class Q00132_MatrasCuriosity extends Quest implements ScriptFile
 	{
 		if (st.getCond() == 1)
 		{
-			if ((npc.getNpcId() == Ranku) && (st.getQuestItemsCount(Rankus_Blueprint) < 1))
+			if ((npc.getId() == Ranku) && (st.getQuestItemsCount(Rankus_Blueprint) < 1))
 			{
 				st.playSound(SOUND_ITEMGET);
 				st.playSound(SOUND_MIDDLE);
 				st.giveItems(Rankus_Blueprint, 1, false);
 			}
 			
-			if ((npc.getNpcId() == Demon_Prince) && (st.getQuestItemsCount(Demon_Princes_Blueprint) < 1))
+			if ((npc.getId() == Demon_Prince) && (st.getQuestItemsCount(Demon_Princes_Blueprint) < 1))
 			{
 				st.playSound(SOUND_ITEMGET);
 				st.playSound(SOUND_MIDDLE);

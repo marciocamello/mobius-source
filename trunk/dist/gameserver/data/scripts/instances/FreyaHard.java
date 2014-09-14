@@ -183,7 +183,7 @@ public final class FreyaHard extends Reflection
 		// 1-7 enabled, 8 - disabled
 		for (NpcInstance n : getNpcs())
 		{
-			if (n.getNpcId() == IceCastleController)
+			if (n.getId() == IceCastleController)
 			{
 				n.setNpcState(state);
 			}
@@ -356,7 +356,7 @@ public final class FreyaHard extends Reflection
 			
 			for (NpcInstance n : getNpcs())
 			{
-				if ((n.getNpcId() != Sirra) && (n.getNpcId() != IceCastleController))
+				if ((n.getId() != Sirra) && (n.getId() != IceCastleController))
 				{
 					n.deleteMe();
 				}
@@ -473,7 +473,7 @@ public final class FreyaHard extends Reflection
 			
 			for (NpcInstance n : getNpcs())
 			{
-				if ((n.getNpcId() != Sirra) && (n.getNpcId() != IceCastleController))
+				if ((n.getId() != Sirra) && (n.getId() != IceCastleController))
 				{
 					n.deleteMe();
 				}
@@ -658,16 +658,16 @@ public final class FreyaHard extends Reflection
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
-			if (self.isNpc() && (self.getNpcId() == FreyaThrone))
+			if (self.isNpc() && (self.getId() == FreyaThrone))
 			{
 				ThreadPoolManager.getInstance().schedule(new PreSecondStage(), 10);
 				self.deleteMe();
 			}
-			else if (self.isNpc() && (self.getNpcId() == IceKnightLeaderHard))
+			else if (self.isNpc() && (self.getId() == IceKnightLeaderHard))
 			{
 				ThreadPoolManager.getInstance().schedule(new PreThirdStage(), 10);
 			}
-			else if (self.isNpc() && (self.getNpcId() == FreyaStandHard))
+			else if (self.isNpc() && (self.getId() == FreyaStandHard))
 			{
 				ThreadPoolManager.getInstance().schedule(new FreyaDeathStage(), 10);
 			}
@@ -679,7 +679,7 @@ public final class FreyaHard extends Reflection
 		@Override
 		public void onCurrentHpDamage(Creature actor, double damage, Creature attacker, Skill skill)
 		{
-			if ((actor == null) || actor.isDead() || (actor.getNpcId() != FreyaStandHard))
+			if ((actor == null) || actor.isDead() || (actor.getId() != FreyaStandHard))
 			{
 				return;
 			}

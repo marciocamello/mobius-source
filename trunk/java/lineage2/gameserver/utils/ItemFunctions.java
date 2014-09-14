@@ -193,7 +193,7 @@ public final class ItemFunctions
 			return new SystemMessage(SystemMessage.ITEM_NOT_AVAILABLE_FOR_PETS);
 		}
 		
-		int petId = pet.getNpcId();
+		int petId = pet.getId();
 		
 		if (item.getTemplate().isPendant() || (PetDataTable.isWolf(petId) && item.getTemplate().isForWolf()) || (PetDataTable.isHatchling(petId) && item.getTemplate().isForHatchling()) || (PetDataTable.isStrider(petId) && item.getTemplate().isForStrider()) || (PetDataTable.isGWolf(petId) && item.getTemplate().isForGWolf()) || (PetDataTable.isBabyPet(petId) && item.getTemplate().isForPetBaby()) || (PetDataTable.isImprovedBabyPet(petId) && item.getTemplate().isForPetBaby()))
 		{

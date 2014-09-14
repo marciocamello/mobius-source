@@ -74,7 +74,7 @@ public class Q00239_WontYouJoinUs extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int id = st.getState();
 		int cond = st.getCond();
 		
@@ -130,7 +130,7 @@ public class Q00239_WontYouJoinUs extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		
-		if ((cond == 1) && (npc.getNpcId() == WasteLandfillMachine))
+		if ((cond == 1) && (npc.getId() == WasteLandfillMachine))
 		{
 			st.giveItems(DestroyedMachinePiece, 1);
 			
@@ -139,7 +139,7 @@ public class Q00239_WontYouJoinUs extends Quest implements ScriptFile
 				st.setCond(2);
 			}
 		}
-		else if ((cond == 3) && ((npc.getNpcId() == Suppressor) || (npc.getNpcId() == Exterminator)))
+		else if ((cond == 3) && ((npc.getId() == Suppressor) || (npc.getId() == Exterminator)))
 		{
 			st.giveItems(EnchantedGolemFragment, 1);
 			

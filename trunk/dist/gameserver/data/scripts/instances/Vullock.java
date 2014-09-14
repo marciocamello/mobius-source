@@ -69,7 +69,7 @@ public final class Vullock extends Reflection
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
-			if (self.isNpc() && (self.getNpcId() == Vullock))
+			if (self.isNpc() && (self.getId() == Vullock))
 			{
 				for (Player p : getPlayers())
 				{
@@ -102,7 +102,7 @@ public final class Vullock extends Reflection
 		@Override
 		public void onCurrentHpDamage(Creature actor, double damage, Creature attacker, Skill skill)
 		{
-			if (actor.getNpcId() == Vullock)
+			if (actor.getId() == Vullock)
 			{
 				// _log.info("Target - Vullock");
 				if (actor.isDead())

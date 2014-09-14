@@ -88,7 +88,7 @@ public class Q10377_TheInvadedExecutionGrounds extends Quest implements ScriptFi
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		String htmltext = "noquest";
 		
@@ -159,7 +159,7 @@ public class Q10377_TheInvadedExecutionGrounds extends Quest implements ScriptFi
 		
 		if (cond > 2)
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case HOUPON_THE_WARDEN_OVERSEER:
 					if (cond != 3)

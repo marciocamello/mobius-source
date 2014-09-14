@@ -3090,9 +3090,9 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			if (applyToPet)
 			{
-				if ((pet != null) && !pet.isDead() && !PetDataTable.isVitaminPet(pet.getNpcId()))
+				if ((pet != null) && !pet.isDead() && !PetDataTable.isVitaminPet(pet.getId()))
 				{
-					if (pet.getNpcId() == PetDataTable.SIN_EATER_ID)
+					if (pet.getId() == PetDataTable.SIN_EATER_ID)
 					{
 						pet.addExpAndSp(addToExp, 0);
 						addToExp = 0;
@@ -3158,7 +3158,7 @@ public final class Player extends Playable implements PlayerGroup
 			levelSet(levels);
 		}
 		
-		if ((pet != null) && pet.isPet() && PetDataTable.isVitaminPet(pet.getNpcId()))
+		if ((pet != null) && pet.isPet() && PetDataTable.isVitaminPet(pet.getId()))
 		{
 			PetInstance _pet = (PetInstance) pet;
 			_pet.setLevel(getLevel());
@@ -10616,7 +10616,7 @@ public final class Player extends Playable implements PlayerGroup
 			getSummonList().unsummonAllServitors();
 			PetInstance pet = getSummonList().getPet();
 			
-			if ((pet != null) && (Config.ALT_IMPROVED_PETS_LIMITED_USE && (((pet.getNpcId() == PetDataTable.IMPROVED_BABY_KOOKABURRA_ID) && !isMageClass()) || ((pet.getNpcId() == PetDataTable.IMPROVED_BABY_BUFFALO_ID) && isMageClass()))))
+			if ((pet != null) && (Config.ALT_IMPROVED_PETS_LIMITED_USE && (((pet.getId() == PetDataTable.IMPROVED_BABY_KOOKABURRA_ID) && !isMageClass()) || ((pet.getId() == PetDataTable.IMPROVED_BABY_BUFFALO_ID) && isMageClass()))))
 			{
 				getSummonList().unsummonPet(false);
 			}
@@ -10839,7 +10839,7 @@ public final class Player extends Playable implements PlayerGroup
 	 * @return int
 	 */
 	@Override
-	public int getNpcId()
+	public int getId()
 	{
 		return -2;
 	}
@@ -12986,7 +12986,7 @@ public final class Player extends Playable implements PlayerGroup
 			
 			for (Summon summon : getSummonList())
 			{
-				if ((summon.getNpcId() == 14916) || (summon.getNpcId() == 14917))
+				if ((summon.getId() == 14916) || (summon.getId() == 14917))
 				{
 					summon.unSummon();
 				}

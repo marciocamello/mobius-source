@@ -51,7 +51,7 @@ public class Q00697_DefendTheHallOfErosion extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		Player player = st.getPlayer();
 		int cond = st.getCond();
 		

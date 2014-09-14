@@ -49,7 +49,7 @@ public class Q00696_ConquerTheHallOfErosion extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		Player player = st.getPlayer();
 		int cond = st.getCond();
 		
@@ -102,7 +102,7 @@ public class Q00696_ConquerTheHallOfErosion extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		if (npc.getNpcId() == Cohemenes)
+		if (npc.getId() == Cohemenes)
 		{
 			st.set("cohemenesDone", 1);
 		}

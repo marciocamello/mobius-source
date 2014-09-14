@@ -80,7 +80,7 @@ public class Q00011_SecretMeetingWithKetraOrcs extends Quest implements ScriptFi
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (npcId == CADMON)

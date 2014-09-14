@@ -149,7 +149,7 @@ public class SimpleSpawner extends Spawner
 	@Override
 	public int getCurrentNpcId()
 	{
-		return _npcTemplate.getNpcId();
+		return _npcTemplate.getId();
 	}
 	
 	/**

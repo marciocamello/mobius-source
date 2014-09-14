@@ -125,7 +125,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		Party party = player.getParty();

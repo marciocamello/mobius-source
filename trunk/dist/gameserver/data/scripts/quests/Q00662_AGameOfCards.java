@@ -159,7 +159,7 @@ public class Q00662_AGameOfCards extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		if (npc.getNpcId() != KLUMP)
+		if (npc.getId() != KLUMP)
 		{
 			return "noquest";
 		}

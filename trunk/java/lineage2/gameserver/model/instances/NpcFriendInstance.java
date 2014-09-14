@@ -53,14 +53,14 @@ public final class NpcFriendInstance extends MerchantInstance
 		
 		String filename = "";
 		
-		if (((getNpcId() >= 31370) && (getNpcId() <= 31376) && (player.getVarka() > 0)) || ((getNpcId() >= 31377) && (getNpcId() < 31384) && (player.getKetra() > 0)))
+		if (((getId() >= 31370) && (getId() <= 31376) && (player.getVarka() > 0)) || ((getId() >= 31377) && (getId() < 31384) && (player.getKetra() > 0)))
 		{
-			filename = "npc_friend/" + getNpcId() + "-nofriend.htm";
+			filename = "npc_friend/" + getId() + "-nofriend.htm";
 			showChatWindow(player, filename);
 			return;
 		}
 		
-		switch (getNpcId())
+		switch (getId())
 		{
 			case 31370:
 			case 31371:
@@ -70,17 +70,17 @@ public final class NpcFriendInstance extends MerchantInstance
 			case 31380:
 			case 31553:
 			case 31554:
-				filename = "npc_friend/" + getNpcId() + ".htm";
+				filename = "npc_friend/" + getId() + ".htm";
 				break;
 			
 			case 31372:
 				if (player.getKetra() > 2)
 				{
-					filename = "npc_friend/" + getNpcId() + "-bufflist.htm";
+					filename = "npc_friend/" + getId() + "-bufflist.htm";
 				}
 				else
 				{
-					filename = "npc_friend/" + getNpcId() + ".htm";
+					filename = "npc_friend/" + getId() + ".htm";
 				}
 				
 				break;
@@ -88,11 +88,11 @@ public final class NpcFriendInstance extends MerchantInstance
 			case 31379:
 				if (player.getVarka() > 2)
 				{
-					filename = "npc_friend/" + getNpcId() + "-bufflist.htm";
+					filename = "npc_friend/" + getId() + "-bufflist.htm";
 				}
 				else
 				{
-					filename = "npc_friend/" + getNpcId() + ".htm";
+					filename = "npc_friend/" + getId() + ".htm";
 				}
 				
 				break;
@@ -100,11 +100,11 @@ public final class NpcFriendInstance extends MerchantInstance
 			case 31374:
 				if (player.getKetra() > 1)
 				{
-					filename = "npc_friend/" + getNpcId() + "-warehouse.htm";
+					filename = "npc_friend/" + getId() + "-warehouse.htm";
 				}
 				else
 				{
-					filename = "npc_friend/" + getNpcId() + ".htm";
+					filename = "npc_friend/" + getId() + ".htm";
 				}
 				
 				break;
@@ -112,11 +112,11 @@ public final class NpcFriendInstance extends MerchantInstance
 			case 31381:
 				if (player.getVarka() > 1)
 				{
-					filename = "npc_friend/" + getNpcId() + "-warehouse.htm";
+					filename = "npc_friend/" + getId() + "-warehouse.htm";
 				}
 				else
 				{
-					filename = "npc_friend/" + getNpcId() + ".htm";
+					filename = "npc_friend/" + getId() + ".htm";
 				}
 				
 				break;
@@ -124,15 +124,15 @@ public final class NpcFriendInstance extends MerchantInstance
 			case 31375:
 				if ((player.getKetra() == 3) || (player.getKetra() == 4))
 				{
-					filename = "npc_friend/" + getNpcId() + "-special1.htm";
+					filename = "npc_friend/" + getId() + "-special1.htm";
 				}
 				else if (player.getKetra() == 5)
 				{
-					filename = "npc_friend/" + getNpcId() + "-special2.htm";
+					filename = "npc_friend/" + getId() + "-special2.htm";
 				}
 				else
 				{
-					filename = "npc_friend/" + getNpcId() + ".htm";
+					filename = "npc_friend/" + getId() + ".htm";
 				}
 				
 				break;
@@ -140,15 +140,15 @@ public final class NpcFriendInstance extends MerchantInstance
 			case 31382:
 				if ((player.getVarka() == 3) || (player.getVarka() == 4))
 				{
-					filename = "npc_friend/" + getNpcId() + "-special1.htm";
+					filename = "npc_friend/" + getId() + "-special1.htm";
 				}
 				else if (player.getVarka() == 5)
 				{
-					filename = "npc_friend/" + getNpcId() + "-special2.htm";
+					filename = "npc_friend/" + getId() + "-special2.htm";
 				}
 				else
 				{
-					filename = "npc_friend/" + getNpcId() + ".htm";
+					filename = "npc_friend/" + getId() + ".htm";
 				}
 				
 				break;
@@ -156,15 +156,15 @@ public final class NpcFriendInstance extends MerchantInstance
 			case 31376:
 				if (player.getKetra() == 4)
 				{
-					filename = "npc_friend/" + getNpcId() + "-normal.htm";
+					filename = "npc_friend/" + getId() + "-normal.htm";
 				}
 				else if (player.getKetra() == 5)
 				{
-					filename = "npc_friend/" + getNpcId() + "-special.htm";
+					filename = "npc_friend/" + getId() + "-special.htm";
 				}
 				else
 				{
-					filename = "npc_friend/" + getNpcId() + ".htm";
+					filename = "npc_friend/" + getId() + ".htm";
 				}
 				
 				break;
@@ -172,15 +172,15 @@ public final class NpcFriendInstance extends MerchantInstance
 			case 31383:
 				if (player.getVarka() == 4)
 				{
-					filename = "npc_friend/" + getNpcId() + "-normal.htm";
+					filename = "npc_friend/" + getId() + "-normal.htm";
 				}
 				else if (player.getVarka() == 5)
 				{
-					filename = "npc_friend/" + getNpcId() + "-special.htm";
+					filename = "npc_friend/" + getId() + "-special.htm";
 				}
 				else
 				{
-					filename = "npc_friend/" + getNpcId() + ".htm";
+					filename = "npc_friend/" + getId() + ".htm";
 				}
 				
 				break;
@@ -188,15 +188,15 @@ public final class NpcFriendInstance extends MerchantInstance
 			case 31555:
 				if (player.getRam() == 1)
 				{
-					filename = "npc_friend/" + getNpcId() + "-special1.htm";
+					filename = "npc_friend/" + getId() + "-special1.htm";
 				}
 				else if (player.getRam() == 2)
 				{
-					filename = "npc_friend/" + getNpcId() + "-special2.htm";
+					filename = "npc_friend/" + getId() + "-special2.htm";
 				}
 				else
 				{
-					filename = "npc_friend/" + getNpcId() + ".htm";
+					filename = "npc_friend/" + getId() + ".htm";
 				}
 				
 				break;
@@ -204,11 +204,11 @@ public final class NpcFriendInstance extends MerchantInstance
 			case 31556:
 				if (player.getRam() == 2)
 				{
-					filename = "npc_friend/" + getNpcId() + "-bufflist.htm";
+					filename = "npc_friend/" + getId() + "-bufflist.htm";
 				}
 				else
 				{
-					filename = "npc_friend/" + getNpcId() + ".htm";
+					filename = "npc_friend/" + getId() + ".htm";
 				}
 		}
 		
@@ -241,7 +241,7 @@ public final class NpcFriendInstance extends MerchantInstance
 			int val = Integer.parseInt(st.nextToken());
 			int item = 0;
 			
-			switch (getNpcId())
+			switch (getId())
 			{
 				case 31372:
 					item = 7186;
@@ -317,14 +317,14 @@ public final class NpcFriendInstance extends MerchantInstance
 			}
 			else
 			{
-				showChatWindow(player, "npc_friend/" + getNpcId() + "-havenotitems.htm");
+				showChatWindow(player, "npc_friend/" + getId() + "-havenotitems.htm");
 			}
 		}
 		else if (command.startsWith("Chat"))
 		{
 			int val = Integer.parseInt(command.substring(5));
 			String fname = "";
-			fname = "npc_friend/" + getNpcId() + "-" + val + ".htm";
+			fname = "npc_friend/" + getId() + "-" + val + ".htm";
 			
 			if (!fname.equals(""))
 			{

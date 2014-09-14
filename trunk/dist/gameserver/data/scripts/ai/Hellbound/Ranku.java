@@ -112,7 +112,7 @@ public final class Ranku extends Fighter
 	{
 		for (NpcInstance n : getActor().getReflection().getNpcs())
 		{
-			if ((n.getNpcId() == SCAPEGOAT_ID) && !n.isDead())
+			if ((n.getId() == SCAPEGOAT_ID) && !n.isDead())
 			{
 				return n;
 			}

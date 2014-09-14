@@ -157,7 +157,7 @@ public final class EnvoyInstance extends NpcInstance
 		
 		if (residence == null)
 		{
-			throw new IllegalArgumentException("Not find fortress: " + getNpcId() + "; loc: " + getLoc());
+			throw new IllegalArgumentException("Not find fortress: " + getId() + "; loc: " + getLoc());
 		}
 		
 		Clan residenceOwner = residence.getOwner();

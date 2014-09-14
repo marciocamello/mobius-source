@@ -165,7 +165,7 @@ public final class TreasureChestInstance extends ChestInstance
 	 */
 	private boolean isCommonTreasureChest()
 	{
-		int npcId = getNpcId();
+		int npcId = getId();
 		
 		if ((npcId >= 18265) && (npcId <= 18286))
 		{

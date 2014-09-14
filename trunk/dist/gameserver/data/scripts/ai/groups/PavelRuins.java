@@ -87,7 +87,7 @@ public final class PavelRuins extends Fighter
 			{
 				Location loc = _actor.getLoc();
 				
-				switch (_actor.getNpcId())
+				switch (_actor.getId())
 				{
 					case PAVEL_SAFETY_DEVICE:
 						loc = new Location(loc.getX() + 30, loc.getY() + -30, loc.getZ());

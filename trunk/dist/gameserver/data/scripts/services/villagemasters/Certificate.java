@@ -34,7 +34,7 @@ public final class Certificate extends Functions
 		NpcInstance npc = getNpc();
 		
 		// Grand Master Valfar
-		if (npc.getNpcId() == 32146)
+		if (npc.getId() == 32146)
 		{
 			if ((!pl.isQuestCompleted("Q10331_StartOfFate")) && (pl.getClassLevel() < 2))
 			{
@@ -51,7 +51,7 @@ public final class Certificate extends Functions
 		}
 		
 		// Grand Master Rivan
-		if (npc.getNpcId() == 32147)
+		if (npc.getId() == 32147)
 		{
 			if ((!pl.isQuestCompleted("Q10331_StartOfFate")) && (pl.getClassLevel() < 2))
 			{
@@ -68,7 +68,7 @@ public final class Certificate extends Functions
 		}
 		
 		// High Perfect Took
-		if (npc.getNpcId() == 32150)
+		if (npc.getId() == 32150)
 		{
 			if ((!pl.isQuestCompleted("Q10331_StartOfFate")) && (pl.getClassLevel() < 2))
 			{
@@ -85,7 +85,7 @@ public final class Certificate extends Functions
 		}
 		
 		// High Priest Franco
-		if (npc.getNpcId() == 32153)
+		if (npc.getId() == 32153)
 		{
 			if ((!pl.isQuestCompleted("Q10331_StartOfFate")) && (pl.getClassLevel() < 2))
 			{
@@ -102,7 +102,7 @@ public final class Certificate extends Functions
 		}
 		
 		// Head Blacksmith Moka
-		if (npc.getNpcId() == 32157)
+		if (npc.getId() == 32157)
 		{
 			if ((!pl.isQuestCompleted("Q10331_StartOfFate")) && (pl.getClassLevel() < 2))
 			{
@@ -119,7 +119,7 @@ public final class Certificate extends Functions
 		}
 		
 		// Grand Magister Devon
-		if (npc.getNpcId() == 32160)
+		if (npc.getId() == 32160)
 		{
 			if ((!pl.isQuestCompleted("Q10331_StartOfFate")) && (pl.getClassLevel() < 2))
 			{
@@ -147,7 +147,7 @@ public final class Certificate extends Functions
 		NpcInstance npc = getNpc();
 		
 		// Grand Master Ellenia
-		if (npc.getNpcId() == 30155)
+		if (npc.getId() == 30155)
 		{
 			if ((!pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() < 3))
 			{
@@ -164,7 +164,7 @@ public final class Certificate extends Functions
 		}
 		
 		// Grand Master Rains
-		if (npc.getNpcId() == 30288)
+		if (npc.getId() == 30288)
 		{
 			if ((!pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() < 3))
 			{
@@ -181,7 +181,7 @@ public final class Certificate extends Functions
 		}
 		
 		// High Priest Raymond
-		if (npc.getNpcId() == 30289)
+		if (npc.getId() == 30289)
 		{
 			if ((!pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() < 3))
 			{
@@ -198,7 +198,7 @@ public final class Certificate extends Functions
 		}
 		
 		// Grand Magister Esrandell
-		if (npc.getNpcId() == 30158)
+		if (npc.getId() == 30158)
 		{
 			if ((!pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() < 3))
 			{
@@ -215,7 +215,7 @@ public final class Certificate extends Functions
 		}
 		
 		// Grand Master Tobias
-		if (npc.getNpcId() == 30297)
+		if (npc.getId() == 30297)
 		{
 			if ((!pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() < 3))
 			{
@@ -232,7 +232,7 @@ public final class Certificate extends Functions
 		}
 		
 		// High Prefect Drikus
-		if (npc.getNpcId() == 30505)
+		if (npc.getId() == 30505)
 		{
 			if ((!pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() < 3))
 			{
@@ -249,7 +249,7 @@ public final class Certificate extends Functions
 		}
 		
 		// Grand Master Gershwin
-		if (npc.getNpcId() == 32196)
+		if (npc.getId() == 32196)
 		{
 			if ((!pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() < 3))
 			{
@@ -266,7 +266,7 @@ public final class Certificate extends Functions
 		}
 		
 		// Head Blacksmith Mendio
-		if (npc.getNpcId() == 30504)
+		if (npc.getId() == 30504)
 		{
 			if ((!pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() < 3))
 			{

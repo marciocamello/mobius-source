@@ -331,7 +331,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest implements ScriptFi
 			return "";
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if ((npcId == STONES) && (cond == 17))
@@ -351,7 +351,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest implements ScriptFi
 	{
 		String htmltext = "noquest";
 		int id = st.getState();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		int talk = st.getInt("talk");
 		int talk1 = st.getInt("talk1");
@@ -627,7 +627,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest implements ScriptFi
 			return null;
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (st.getCond() == 10)
 		{

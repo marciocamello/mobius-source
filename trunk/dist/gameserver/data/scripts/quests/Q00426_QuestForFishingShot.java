@@ -398,7 +398,7 @@ public class Q00426_QuestForFishingShot extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (Rnd.chance(30))
 		{

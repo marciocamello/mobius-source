@@ -106,7 +106,7 @@ public final class IsleOfPrayerMystic extends Mystic
 			{
 				final NpcInstance actor = getActor();
 				
-				switch (actor.getNpcId())
+				switch (actor.getId())
 				{
 					case 22261:
 						if (Rnd.chance(12))

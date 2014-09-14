@@ -582,7 +582,7 @@ public final class FourSepulchersSpawn extends Functions implements ScriptFile
 			return;
 		}
 		
-		NpcTemplate template = NpcHolder.getInstance().getTemplate(_victim.get(npc.getNpcId()));
+		NpcTemplate template = NpcHolder.getInstance().getTemplate(_victim.get(npc.getId()));
 		SepulcherMonsterInstance npc2 = new SepulcherMonsterInstance(IdFactory.getInstance().getNextId(), template);
 		npc2.setSpawnedLoc(npc.getLoc());
 		npc2.spawnMe(npc.getLoc());
@@ -600,7 +600,7 @@ public final class FourSepulchersSpawn extends Functions implements ScriptFile
 			return;
 		}
 		
-		NpcTemplate template = NpcHolder.getInstance().getTemplate(_keyBoxNpc.get(npc.getNpcId()));
+		NpcTemplate template = NpcHolder.getInstance().getTemplate(_keyBoxNpc.get(npc.getId()));
 		SepulcherNpcInstance npc2 = new SepulcherNpcInstance(IdFactory.getInstance().getNextId(), template);
 		npc2.setSpawnedLoc(npc.getLoc());
 		npc2.spawnMe(npc.getLoc());
@@ -790,7 +790,7 @@ public final class FourSepulchersSpawn extends Functions implements ScriptFile
 		
 		for (NpcInstance n : _allMobs)
 		{
-			if ((n.getNpcId() == loc.npcId) && !n.isDead())
+			if ((n.getId() == loc.npcId) && !n.isDead())
 			{
 				return true;
 			}
@@ -807,7 +807,7 @@ public final class FourSepulchersSpawn extends Functions implements ScriptFile
 	{
 		for (NpcInstance n : _allMobs)
 		{
-			if (n.getNpcId() == 18149)
+			if (n.getId() == 18149)
 			{
 				return true;
 			}

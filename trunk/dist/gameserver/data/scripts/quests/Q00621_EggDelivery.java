@@ -134,7 +134,7 @@ public class Q00621_EggDelivery extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (st.getState() == CREATED)
 		{

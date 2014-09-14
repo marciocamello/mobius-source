@@ -56,7 +56,7 @@ public final class SepulcherMonsterInstance extends MonsterInstance
 	@Override
 	protected void onSpawn()
 	{
-		switch (getNpcId())
+		switch (getId())
 		{
 			case 18150:
 			case 18151:
@@ -136,7 +136,7 @@ public final class SepulcherMonsterInstance extends MonsterInstance
 	{
 		super.onDeath(killer);
 		
-		switch (getNpcId())
+		switch (getId())
 		{
 			case 18120:
 			case 18121:
@@ -382,7 +382,7 @@ public final class SepulcherMonsterInstance extends MonsterInstance
 		@Override
 		public void runImpl()
 		{
-			switch (_activeChar.getNpcId())
+			switch (_activeChar.getId())
 			{
 				case 18120:
 				case 18121:

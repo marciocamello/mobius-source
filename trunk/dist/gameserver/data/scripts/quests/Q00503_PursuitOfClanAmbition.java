@@ -586,7 +586,7 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int id = st.getState();
 		String htmltext = "noquest";
 		boolean isLeader = st.getPlayer().isClanLeader();
@@ -975,7 +975,7 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = getLeaderVar(st, "cond");
 		
 		switch (cond)

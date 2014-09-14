@@ -104,11 +104,11 @@ public abstract class SysMsgContainer<T extends SysMsgContainer<T>> extends L2Ga
 		
 		if (object.isNpc())
 		{
-			return add(new NpcNameArgument(((NpcInstance) object).getNpcId() + 1000000));
+			return add(new NpcNameArgument(((NpcInstance) object).getId() + 1000000));
 		}
 		else if (object instanceof Summon)
 		{
-			return add(new NpcNameArgument(((Summon) object).getNpcId() + 1000000));
+			return add(new NpcNameArgument(((Summon) object).getId() + 1000000));
 		}
 		else if (object.isItem())
 		{

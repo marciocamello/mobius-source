@@ -104,7 +104,7 @@ public class ExEventMatchTeamInfo extends L2GameServerPacket
 			if (pet != null)
 			{
 				pet_id = pet.getObjectId();
-				pet_NpcId = pet.getNpcId() + 1000000;
+				pet_NpcId = pet.getId() + 1000000;
 				pet_Name = pet.getName();
 				pet_curHp = (int) pet.getCurrentHp();
 				pet_maxHp = pet.getMaxHp();

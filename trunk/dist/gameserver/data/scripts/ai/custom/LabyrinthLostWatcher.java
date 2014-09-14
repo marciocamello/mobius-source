@@ -47,7 +47,7 @@ public final class LabyrinthLostWatcher extends Fighter
 		
 		if (!r.isDefault())
 		{
-			if (checkMates(actor.getNpcId()))
+			if (checkMates(actor.getId()))
 			{
 				if (findLostCaptain() != null)
 				{
@@ -68,7 +68,7 @@ public final class LabyrinthLostWatcher extends Fighter
 	{
 		for (NpcInstance n : getActor().getReflection().getNpcs())
 		{
-			if ((n.getNpcId() == id) && !n.isDead())
+			if ((n.getId() == id) && !n.isDead())
 			{
 				return false;
 			}

@@ -661,7 +661,7 @@ public abstract class ResidenceManager extends MerchantInstance
 	 */
 	private void sendHtmlMessage(Player player, NpcHtmlMessage html)
 	{
-		html.replace("%npcname%", HtmlUtils.htmlNpcName(getNpcId()));
+		html.replace("%npcname%", HtmlUtils.htmlNpcName(getId()));
 		player.sendPacket(html);
 	}
 	

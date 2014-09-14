@@ -61,7 +61,7 @@ public final class AwakenedMucrokian extends Fighter
 			{
 				for (NpcInstance npc : around)
 				{
-					if ((npc.getNpcId() == 18805) || (npc.getNpcId() == 18806))
+					if ((npc.getId() == 18805) || (npc.getId() == 18806))
 					{
 						if ((mob == null) || (getActor().getDistance3D(npc) < getActor().getDistance3D(mob)))
 						{
@@ -97,7 +97,7 @@ public final class AwakenedMucrokian extends Fighter
 		{
 			if (attacker != null)
 			{
-				if ((attacker.getNpcId() >= 22656) && (attacker.getNpcId() <= 22659))
+				if ((attacker.getId() >= 22656) && (attacker.getId() <= 22659))
 				{
 					if (Rnd.chance(25))
 					{

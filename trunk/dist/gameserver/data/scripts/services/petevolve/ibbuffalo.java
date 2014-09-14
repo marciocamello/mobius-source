@@ -59,7 +59,7 @@ public final class ibbuffalo extends Functions
 			return;
 		}
 		
-		if (pl_pet.getNpcId() != BABY_BUFFALO)
+		if (pl_pet.getId() != BABY_BUFFALO)
 		{
 			show("scripts/services/petevolve/no_pet.htm", player, npc);
 			return;

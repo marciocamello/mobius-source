@@ -214,7 +214,7 @@ public final class TautiNormal extends Reflection
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
-			if (self.isNpc() && (self.getNpcId() == TAUTI_NORMAL_AXE))
+			if (self.isNpc() && (self.getId() == TAUTI_NORMAL_AXE))
 			{
 				ThreadPoolManager.getInstance().schedule(new TautiDeath(), 1000L);
 			}
@@ -273,7 +273,7 @@ public final class TautiNormal extends Reflection
 		@Override
 		public void onCurrentHpDamage(final Creature actor, final double damage, final Creature attacker, Skill skill)
 		{
-			if (actor.getNpcId() == TAUTI_NORMAL)
+			if (actor.getId() == TAUTI_NORMAL)
 			{
 				double HpPercent = actor.getCurrentHpPercents();
 				

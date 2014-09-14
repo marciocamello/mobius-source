@@ -113,7 +113,7 @@ public class Q00290_ThreatRemoval extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		
-		if (npc.getNpcId() == GuardPinaps)
+		if (npc.getId() == GuardPinaps)
 		{
 			if (cond == 0)
 			{
@@ -149,11 +149,11 @@ public class Q00290_ThreatRemoval extends Quest implements ScriptFile
 		
 		if (cond == 1)
 		{
-			if (ArrayUtils.contains(SelMahumTrainers, npc.getNpcId()))
+			if (ArrayUtils.contains(SelMahumTrainers, npc.getId()))
 			{
 				st.rollAndGive(SelMahumIDTag, 1, 93.2);
 			}
-			else if (ArrayUtils.contains(SelMahumRecruits, npc.getNpcId()))
+			else if (ArrayUtils.contains(SelMahumRecruits, npc.getId()))
 			{
 				st.rollAndGive(SelMahumIDTag, 1, 36.3);
 			}

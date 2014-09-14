@@ -407,7 +407,7 @@ public class GameObjectsStorage
 		
 		for (NpcInstance temp : getStorageNpcs())
 		{
-			if (npc_id == temp.getNpcId())
+			if (npc_id == temp.getId())
 			{
 				if (!temp.isDead())
 				{
@@ -433,7 +433,7 @@ public class GameObjectsStorage
 		
 		for (NpcInstance temp : getStorageNpcs())
 		{
-			if ((temp.getTemplate() != null) && (npc_id == temp.getTemplate().getNpcId()) && (!justAlive || !temp.isDead()))
+			if ((temp.getTemplate() != null) && (npc_id == temp.getTemplate().getId()) && (!justAlive || !temp.isDead()))
 			{
 				result.add(temp);
 			}
@@ -458,7 +458,7 @@ public class GameObjectsStorage
 			{
 				for (int npc_id : npc_ids)
 				{
-					if (npc_id == temp.getNpcId())
+					if (npc_id == temp.getId())
 					{
 						result.add(temp);
 					}

@@ -40,7 +40,7 @@ public final class SubclassRB extends Fighter
 	{
 		NpcInstance actor = getActor();
 		
-		switch (actor.getNpcId())
+		switch (actor.getId())
 		{
 			case SHILLEN_MESSAGER:
 				chestSelect(actor, CABRIOCOFFER);

@@ -83,7 +83,7 @@ public class Q00051_OFullesSpecialBait extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		int id = st.getState();
@@ -127,7 +127,7 @@ public class Q00051_OFullesSpecialBait extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if ((npcId == FetteredSoul) && (st.getCond() == 1))
 		{

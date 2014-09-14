@@ -71,7 +71,7 @@ public final class RankuScapegoat extends DefaultAI
 		{
 			for (NpcInstance n : r.getNpcs())
 			{
-				if ((n.getNpcId() == 25542) && !n.isDead())
+				if ((n.getId() == 25542) && !n.isDead())
 				{
 					return n;
 				}

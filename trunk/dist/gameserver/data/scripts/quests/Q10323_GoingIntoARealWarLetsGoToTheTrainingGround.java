@@ -187,7 +187,7 @@ public class Q10323_GoingIntoARealWarLetsGoToTheTrainingGround extends Quest imp
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		
 		if (npcId == evain)
@@ -243,7 +243,7 @@ public class Q10323_GoingIntoARealWarLetsGoToTheTrainingGround extends Quest imp
 		QuestState st = player.getQuestState(getClass());
 		String htmltext = "";
 		
-		if (npc.getNpcId() == guard)
+		if (npc.getId() == guard)
 		{
 			if (st.getCond() == 3)
 			{
@@ -290,7 +290,7 @@ public class Q10323_GoingIntoARealWarLetsGoToTheTrainingGround extends Quest imp
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int killedhusk = st.getInt("killedhusk");
 		
 		if ((npcId == husk) && ((st.getCond() == 2) || (st.getCond() == 7)))

@@ -308,7 +308,7 @@ public class Q00611_AllianceWithVarkaSilenos extends Quest implements ScriptFile
 			return "herald_naran_q0611_02.htm";
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		checkMarks(st);
 		
 		if (st.getState() == CREATED)
@@ -368,7 +368,7 @@ public class Q00611_AllianceWithVarkaSilenos extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (isVarkaNpc(npcId))
 		{

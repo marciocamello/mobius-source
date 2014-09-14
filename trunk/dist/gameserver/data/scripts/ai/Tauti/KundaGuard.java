@@ -46,7 +46,7 @@ public final class KundaGuard extends Fighter
 		{
 			for (NpcInstance npc : around)
 			{
-				if ((npc.getNpcId() == 33679) || (npc.getNpcId() == 33680))
+				if ((npc.getId() == 33679) || (npc.getId() == 33680))
 				{
 					actor.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, npc, 300);
 				}

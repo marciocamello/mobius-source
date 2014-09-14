@@ -80,7 +80,7 @@ public class Q10308_NotToBeForgotten extends Quest implements ScriptFile
 		
 		Player player = st.getPlayer();
 		
-		if (npc.getNpcId() == NPC_ADVENTURER_HELPER)
+		if (npc.getId() == NPC_ADVENTURER_HELPER)
 		{
 			if ((player.getLevel() < 55) || (player.getLevel() > 59))
 			{
@@ -99,7 +99,7 @@ public class Q10308_NotToBeForgotten extends Quest implements ScriptFile
 				htmltext = "completed";
 			}
 		}
-		else if (npc.getNpcId() == NPC_KURTIZ)
+		else if (npc.getId() == NPC_KURTIZ)
 		{
 			if (st.isCompleted())
 			{
@@ -131,7 +131,7 @@ public class Q10308_NotToBeForgotten extends Quest implements ScriptFile
 			return null;
 		}
 		
-		if (ArrayUtils.contains(MONSTERS, npc.getNpcId()) && (st.getCond() == 1))
+		if (ArrayUtils.contains(MONSTERS, npc.getId()) && (st.getCond() == 1))
 		{
 			if (st.rollAndGive(ITEM_LEGACY_CORE, 1, 3, 40, DROP_CHANCE))
 			{

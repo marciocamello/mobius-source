@@ -241,9 +241,9 @@ public abstract class Summon extends Playable
 	 * @return int
 	 */
 	@Override
-	public int getNpcId()
+	public int getId()
 	{
-		return getTemplate().npcId;
+		return getTemplate().getId();
 	}
 	
 	/**

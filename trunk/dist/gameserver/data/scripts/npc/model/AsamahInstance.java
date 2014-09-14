@@ -60,18 +60,18 @@ public final class AsamahInstance extends NpcInstance
 			{
 				if (Functions.getItemCount(player, ElrokianTrap) > 0)
 				{
-					htmltext = getNpcId() + "-alreadyhave.htm";
+					htmltext = getId() + "-alreadyhave.htm";
 				}
 				else
 				{
 					Functions.removeItem(player, 57, 1000000);
 					Functions.addItem(player, ElrokianTrap, 1);
-					htmltext = getNpcId() + "-given.htm";
+					htmltext = getId() + "-given.htm";
 				}
 			}
 			else
 			{
-				htmltext = getNpcId() + "-cant.htm";
+				htmltext = getId() + "-cant.htm";
 			}
 			
 			showChatWindow(player, "default/" + htmltext);
@@ -85,11 +85,11 @@ public final class AsamahInstance extends NpcInstance
 			{
 				Functions.removeItem(player, 57, 1000000);
 				Functions.addItem(player, TrapStone, 100);
-				htmltext = getNpcId() + "-given.htm";
+				htmltext = getId() + "-given.htm";
 			}
 			else
 			{
-				htmltext = getNpcId() + "-cant.htm";
+				htmltext = getId() + "-cant.htm";
 			}
 			
 			showChatWindow(player, "default/" + htmltext);

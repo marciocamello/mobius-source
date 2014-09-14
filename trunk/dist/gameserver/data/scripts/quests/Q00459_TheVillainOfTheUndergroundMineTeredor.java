@@ -57,7 +57,7 @@ public class Q00459_TheVillainOfTheUndergroundMineTeredor extends Quest implemen
 	{
 		String htmltext = "noquest";
 		
-		if (npc.getNpcId() == NPC_FILAUR)
+		if (npc.getId() == NPC_FILAUR)
 		{
 			switch (st.getState())
 			{
@@ -109,7 +109,7 @@ public class Q00459_TheVillainOfTheUndergroundMineTeredor extends Quest implemen
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		if ((npc.getNpcId() == MOB_HENCHMAN) && (st.getCond() == 1))
+		if ((npc.getId() == MOB_HENCHMAN) && (st.getCond() == 1))
 		{
 			st.setCond(2);
 		}

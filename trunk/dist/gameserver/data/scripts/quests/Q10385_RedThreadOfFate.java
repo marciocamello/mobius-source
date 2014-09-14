@@ -126,7 +126,7 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 		NpcInstance npc = (NpcInstance) target;
 		Player player = st.getPlayer();
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		switch (skill.getId())
 		{
@@ -184,7 +184,7 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		
@@ -329,7 +329,7 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		
 		if (st.getPlayer().getVar("q10338") == null)
@@ -510,7 +510,7 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 		}
 		
 		GameObject npc1 = st.getPlayer().getTarget();
-		int npcId = ((NpcInstance) npc1).getNpcId();
+		int npcId = ((NpcInstance) npc1).getId();
 		int cond = st.getCond();
 		
 		if ((cond == 3) && (npcId == Lania) && (actionId == SocialAction.BOW))

@@ -60,7 +60,7 @@ public final class RagnaHealer extends Priest
 			{
 				for (NpcInstance npc : around)
 				{
-					if (npc.isMonster() && (npc.getNpcId() >= 22691) && (npc.getNpcId() <= 22702))
+					if (npc.isMonster() && (npc.getId() >= 22691) && (npc.getId() <= 22702))
 					{
 						npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 5000);
 					}

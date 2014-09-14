@@ -105,47 +105,47 @@ public final class FortunaInstance extends Reflection
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
-			if ((self.isNpc()) && (self.getNpcId() == 52000))
+			if ((self.isNpc()) && (self.getId() == 52000))
 			{
 				ThreadPoolManager.getInstance().schedule(new FortunaInstance.SelphinaSpawn(), 10000L);
 				self.deleteMe();
 			}
-			else if ((self.isNpc()) && (self.getNpcId() == 52001))
+			else if ((self.isNpc()) && (self.getId() == 52001))
 			{
 				ThreadPoolManager.getInstance().schedule(new FortunaInstance.FreeStageMain(), 30000L);
 				self.deleteMe();
 			}
-			else if ((self.isNpc()) && (self.getNpcId() == 25837))
+			else if ((self.isNpc()) && (self.getId() == 25837))
 			{
 				ThreadPoolManager.getInstance().schedule(new FortunaInstance.FourStageMain(), 30000L);
 				self.deleteMe();
 			}
-			else if ((self.isNpc()) && (self.getNpcId() == 25840))
+			else if ((self.isNpc()) && (self.getId() == 25840))
 			{
 				ThreadPoolManager.getInstance().schedule(new FortunaInstance.FiveStageMain(), 30000L);
 				self.deleteMe();
 			}
-			else if ((self.isNpc()) && (self.getNpcId() == 25843))
+			else if ((self.isNpc()) && (self.getId() == 25843))
 			{
 				ThreadPoolManager.getInstance().schedule(new FortunaInstance.BonusStageMain(), 30000L);
 				self.deleteMe();
 			}
-			else if ((self.isNpc()) && (self.getNpcId() == 52003))
+			else if ((self.isNpc()) && (self.getId() == 52003))
 			{
 				ThreadPoolManager.getInstance().schedule(new FortunaInstance.SixStageMain(), 30000L);
 				self.deleteMe();
 			}
-			else if ((self.isNpc()) && (self.getNpcId() == 25841))
+			else if ((self.isNpc()) && (self.getId() == 25841))
 			{
 				ThreadPoolManager.getInstance().schedule(new FortunaInstance.SevenStageMain(), 30000L);
 				self.deleteMe();
 			}
-			else if ((self.isNpc()) && (self.getNpcId() == 25839))
+			else if ((self.isNpc()) && (self.getId() == 25839))
 			{
 				ThreadPoolManager.getInstance().schedule(new FortunaInstance.FinalStage(), 32000L);
 				self.deleteMe();
 			}
-			else if ((self.isNpc()) && (self.getNpcId() == 25846))
+			else if ((self.isNpc()) && (self.getId() == 25846))
 			{
 				ThreadPoolManager.getInstance().schedule(new FortunaInstance.CloseFortunaInstance(), 35000L);
 				self.deleteMe();

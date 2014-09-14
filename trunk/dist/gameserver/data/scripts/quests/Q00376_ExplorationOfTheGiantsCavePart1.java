@@ -189,7 +189,7 @@ public class Q00376_ExplorationOfTheGiantsCavePart1 extends Quest implements Scr
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int id = st.getState();
 		int cond = st.getCond();
 		

@@ -95,7 +95,7 @@ public final class PetBabyInstance extends PetInstance
 	 */
 	public Skill[] getBuffs()
 	{
-		switch (getNpcId())
+		switch (getId())
 		{
 			case PetDataTable.IMPROVED_BABY_COUGAR_ID:
 				return COUGAR_BUFFS[getBuffLevel()];
@@ -136,7 +136,7 @@ public final class PetBabyInstance extends PetInstance
 					return null;
 				}
 				
-				boolean improved = PetDataTable.isImprovedBabyPet(getNpcId());
+				boolean improved = PetDataTable.isImprovedBabyPet(getId());
 				Skill skill = null;
 				
 				if (!Config.ALT_PET_HEAL_BATTLE_ONLY || owner.isInCombat())
@@ -149,13 +149,13 @@ public final class PetBabyInstance extends PetInstance
 						{
 							skill = SkillTable.getInstance().getInfo(improved ? BattleHeal : GreaterHealTrick, getHealLevel());
 						}
-						else if (getNpcId() != PetDataTable.IMPROVED_BABY_KOOKABURRA_ID)
+						else if (getId() != PetDataTable.IMPROVED_BABY_KOOKABURRA_ID)
 						{
 							skill = SkillTable.getInstance().getInfo(improved ? GreaterHeal : HealTrick, getHealLevel());
 						}
 					}
 					
-					if ((skill == null) && (getNpcId() == PetDataTable.IMPROVED_BABY_KOOKABURRA_ID))
+					if ((skill == null) && (getId() == PetDataTable.IMPROVED_BABY_KOOKABURRA_ID))
 					{
 						double curMp = owner.getCurrentMpPercents();
 						
@@ -208,7 +208,7 @@ public final class PetBabyInstance extends PetInstance
 		}
 		catch (Throwable e)
 		{
-			_log.warn("Pet [#" + getNpcId() + "] a buff task error has occurred: " + e);
+			_log.warn("Pet [#" + getId() + "] a buff task error has occurred: " + e);
 			_log.error("", e);
 		}
 		
@@ -346,7 +346,7 @@ public final class PetBabyInstance extends PetInstance
 	 */
 	public int getBuffLevel()
 	{
-		if (getNpcId() == PetDataTable.FAIRY_PRINCESS_ID)
+		if (getId() == PetDataTable.FAIRY_PRINCESS_ID)
 		{
 			return Math.min(Math.max((getLevel() - getMinLevel()) / ((80 - getMinLevel()) / 3), 0), 3);
 		}

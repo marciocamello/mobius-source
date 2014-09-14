@@ -54,7 +54,7 @@ public final class BuyTransformation implements IBypassHandler, ScriptFile
 		{
 			if (!player.isQuestCompleted("Q00136_MoreThanMeetsTheEye"))
 			{
-				npc.showChatWindow(player, "trainer/" + npc.getNpcId() + "-nobuy.htm");
+				npc.showChatWindow(player, "trainer/" + npc.getId() + "-nobuy.htm");
 				return;
 			}
 		}

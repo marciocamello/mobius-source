@@ -79,7 +79,7 @@ public class Q00943_FillingTheEnergyOfDestruction extends Quest implements Scrip
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		String htmltext = "noquest";
 		
@@ -122,7 +122,7 @@ public class Q00943_FillingTheEnergyOfDestruction extends Quest implements Scrip
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (ArrayUtils.contains(RAID_BOSSES, npcId))

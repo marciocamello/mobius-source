@@ -95,7 +95,7 @@ public final class SelChef extends Fighter
 		
 		for (NpcInstance npc : actor.getAroundNpc(3000, 600))
 		{
-			if ((npc.getNpcId() == 18927) && GeoEngine.canSeeTarget(actor, npc, false))
+			if ((npc.getId() == 18927) && GeoEngine.canSeeTarget(actor, npc, false))
 			{
 				list.add(npc);
 			}

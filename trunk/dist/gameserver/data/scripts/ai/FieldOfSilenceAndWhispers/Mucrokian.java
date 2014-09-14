@@ -57,7 +57,7 @@ public final class Mucrokian extends Fighter
 		{
 			if (attacker != null)
 			{
-				if ((attacker.getNpcId() >= 22656) && (attacker.getNpcId() <= 22659))
+				if ((attacker.getId() >= 22656) && (attacker.getId() <= 22659))
 				{
 					if (Rnd.chance(25))
 					{

@@ -94,7 +94,7 @@ public class Q10333_DisappearedSakum extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		
 		if (npcId == batis)
@@ -167,7 +167,7 @@ public class Q10333_DisappearedSakum extends Quest implements ScriptFile
 	{
 		boolean doneKill = updateKill(npc, st);
 		
-		if (((npc.getNpcId() == spider) || (npc.getNpcId() == bigspider) || (npc.getNpcId() == arach)) && (st.getQuestItemsCount(mark) < 5) && (st.getCond() == 2))
+		if (((npc.getId() == spider) || (npc.getId() == bigspider) || (npc.getId() == arach)) && (st.getQuestItemsCount(mark) < 5) && (st.getCond() == 2))
 		{
 			st.giveItems(mark, 1, false);
 		}

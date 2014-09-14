@@ -94,7 +94,7 @@ public class Q10358_DividedSakumPoslof extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		
 		if (npcId == lef)
@@ -161,7 +161,7 @@ public class Q10358_DividedSakumPoslof extends Quest implements ScriptFile
 			st.setCond(2);
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if ((npcId == poslov) && (st.getCond() == 3))
 		{

@@ -58,7 +58,7 @@ public final class fenrir extends Functions
 			return;
 		}
 		
-		if (pl_pet.getNpcId() != GREAT_WOLF)
+		if (pl_pet.getId() != GREAT_WOLF)
 		{
 			show("scripts/services/petevolve/no_wolf.htm", player, npc);
 			return;

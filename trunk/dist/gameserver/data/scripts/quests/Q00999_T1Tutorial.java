@@ -432,7 +432,7 @@ public class Q00999_T1Tutorial extends Quest implements ScriptFile
 		}
 		
 		int Ex = qs.getInt("Ex");
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int step = st.getInt("step");
 		int onlyone = st.getInt("onlyone");
 		int level = player.getLevel();

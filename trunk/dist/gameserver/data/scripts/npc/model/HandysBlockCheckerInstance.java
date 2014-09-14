@@ -67,7 +67,7 @@ public final class HandysBlockCheckerInstance extends NpcInstance
 			return;
 		}
 		
-		int npcId = getNpcId();
+		int npcId = getId();
 		int arena = -1;
 		
 		switch (npcId)

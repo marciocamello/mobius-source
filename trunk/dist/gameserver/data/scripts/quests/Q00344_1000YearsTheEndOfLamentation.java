@@ -162,7 +162,7 @@ public class Q00344_1000YearsTheEndOfLamentation extends Quest implements Script
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int id = st.getState();
 		int cond = st.getCond();
 		long amount = st.getQuestItemsCount(ARTICLES_DEAD_HEROES);
@@ -252,7 +252,7 @@ public class Q00344_1000YearsTheEndOfLamentation extends Quest implements Script
 	{
 		if (st.getCond() == 1)
 		{
-			st.rollAndGive(ARTICLES_DEAD_HEROES, 1, CHANCE + ((npc.getNpcId() - 20234) * 2));
+			st.rollAndGive(ARTICLES_DEAD_HEROES, 1, CHANCE + ((npc.getId() - 20234) * 2));
 		}
 		
 		return null;

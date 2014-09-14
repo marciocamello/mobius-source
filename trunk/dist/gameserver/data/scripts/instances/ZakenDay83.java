@@ -74,7 +74,7 @@ public final class ZakenDay83 extends Reflection
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
-			if (self.isNpc() && (self.getNpcId() == UltraDayZaken))
+			if (self.isNpc() && (self.getId() == UltraDayZaken))
 			{
 				long _timePassed = System.currentTimeMillis() - _savedTime;
 				

@@ -105,7 +105,7 @@ public class Q10292_SevenSignsMysteriousGirl extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		st.getState();
 		Player player = st.getPlayer();
@@ -217,7 +217,7 @@ public class Q10292_SevenSignsMysteriousGirl extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if ((cond == 3) && ArrayUtils.contains(MOBS_1, npcId) && Rnd.chance(70))

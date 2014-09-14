@@ -92,56 +92,56 @@ public final class CrystalHall extends Reflection
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
-			if (self.isNpc() && (self.getNpcId() == Cannon1))
+			if (self.isNpc() && (self.getId() == Cannon1))
 			{
 				for (Player p : getPlayers())
 				{
 					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 1));
 				}
 			}
-			else if (self.isNpc() && (self.getNpcId() == Cannon2))
+			else if (self.isNpc() && (self.getId() == Cannon2))
 			{
 				for (Player p : getPlayers())
 				{
 					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 2));
 				}
 			}
-			else if (self.isNpc() && (self.getNpcId() == Cannon3))
+			else if (self.isNpc() && (self.getId() == Cannon3))
 			{
 				for (Player p : getPlayers())
 				{
 					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 3));
 				}
 			}
-			else if (self.isNpc() && (self.getNpcId() == Cannon4))
+			else if (self.isNpc() && (self.getId() == Cannon4))
 			{
 				for (Player p : getPlayers())
 				{
 					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 4));
 				}
 			}
-			else if (self.isNpc() && (self.getNpcId() == Cannon5))
+			else if (self.isNpc() && (self.getId() == Cannon5))
 			{
 				for (Player p : getPlayers())
 				{
 					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 5));
 				}
 			}
-			else if (self.isNpc() && (self.getNpcId() == Cannon6))
+			else if (self.isNpc() && (self.getId() == Cannon6))
 			{
 				for (Player p : getPlayers())
 				{
 					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 6));
 				}
 			}
-			else if (self.isNpc() && (self.getNpcId() == Cannon7))
+			else if (self.isNpc() && (self.getId() == Cannon7))
 			{
 				for (Player p : getPlayers())
 				{
 					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 7));
 				}
 			}
-			else if (self.isNpc() && (self.getNpcId() == Cannon8))
+			else if (self.isNpc() && (self.getId() == Cannon8))
 			{
 				for (Player p : getPlayers())
 				{
@@ -151,7 +151,7 @@ public final class CrystalHall extends Reflection
 				getDoor(DoorOutside).openMe();
 				getDoor(DoorInside).openMe();
 			}
-			else if (self.isNpc() && (self.getNpcId() == RB1) && (self.getNpcId() == RB2))
+			else if (self.isNpc() && (self.getId() == RB1) && (self.getId() == RB2))
 			{
 				for (Player p : getPlayers())
 				{

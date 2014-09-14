@@ -49,7 +49,7 @@ public class OlympiadManagerInstance extends NpcInstance
 	{
 		super(objectId, template);
 		
-		if (Config.ENABLE_OLYMPIAD && (template.npcId == 31688))
+		if (Config.ENABLE_OLYMPIAD && (template.getId() == 31688))
 		{
 			Olympiad.addOlympiadNpc(this);
 		}
@@ -261,7 +261,7 @@ public class OlympiadManagerInstance extends NpcInstance
 		}
 		
 		String fileName = Olympiad.OLYMPIAD_HTML_PATH;
-		int npcId = getNpcId();
+		int npcId = getId();
 		
 		switch (npcId)
 		{

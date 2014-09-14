@@ -241,7 +241,7 @@ public class Q00455_WingsOfSand extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		
-		if (ArrayUtils.contains(SeparatedSoul, npc.getNpcId()))
+		if (ArrayUtils.contains(SeparatedSoul, npc.getId()))
 		{
 			switch (st.getState())
 			{

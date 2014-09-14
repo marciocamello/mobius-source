@@ -128,7 +128,7 @@ public class Patrollers extends Fighter
 		{
 			_lastPoint = 0;
 			
-			if (ArrayUtils.contains(_teleporters, npc.getNpcId()))
+			if (ArrayUtils.contains(_teleporters, npc.getId()))
 			{
 				npc.teleToLocation(_points[_lastPoint]);
 			}

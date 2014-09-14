@@ -83,7 +83,7 @@ public class Q00431_WeddingMarch extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int condition = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int id = st.getState();
 		
 		if (npcId == MELODY_MAESTRO_KANTABILON)
@@ -121,7 +121,7 @@ public class Q00431_WeddingMarch extends Quest implements ScriptFile
 			return null;
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if ((npcId == 20786) || (npcId == 20787))
 		{

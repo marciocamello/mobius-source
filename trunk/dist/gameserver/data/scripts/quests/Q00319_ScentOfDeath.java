@@ -100,7 +100,7 @@ public class Q00319_ScentOfDeath extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		int id = st.getState();
 		int cond = 0;
@@ -147,7 +147,7 @@ public class Q00319_ScentOfDeath extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		for (int[] aDROPLIST_COND : DROPLIST_COND)
 		{

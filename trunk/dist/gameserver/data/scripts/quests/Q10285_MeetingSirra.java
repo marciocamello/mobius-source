@@ -78,7 +78,7 @@ public class Q10285_MeetingSirra extends Quest implements ScriptFile
 			
 			for (NpcInstance sirra : st.getPlayer().getAroundNpc(1000, 100))
 			{
-				if (sirra.getNpcId() == Sirra)
+				if (sirra.getId() == Sirra)
 				{
 					Functions.npcSay(sirra, "Вас послушать, получается, что Вы знаете обо всем на свете. Но я больше не могу слушать Ваши мудрствования");
 				}
@@ -92,7 +92,7 @@ public class Q10285_MeetingSirra extends Quest implements ScriptFile
 			
 			for (NpcInstance sirra : st.getPlayer().getAroundNpc(1000, 100))
 			{
-				if (sirra.getNpcId() == 32762)
+				if (sirra.getId() == 32762)
 				{
 					sirra.deleteMe();
 				}
@@ -127,7 +127,7 @@ public class Q10285_MeetingSirra extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (npcId == Rafforty)

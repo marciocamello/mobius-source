@@ -149,7 +149,7 @@ public class Q00612_WarWithKetraOrcs extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		if (isKetraNpc(npc.getNpcId()) && (st.getCond() == 1))
+		if (isKetraNpc(npc.getId()) && (st.getCond() == 1))
 		{
 			st.rollAndGive(MOLAR_OF_KETRA_ORC, 1, MOLAR_OF_KETRA_ORC_DROP_CHANCE);
 		}

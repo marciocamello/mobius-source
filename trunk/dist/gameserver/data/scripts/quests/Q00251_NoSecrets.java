@@ -70,7 +70,7 @@ public class Q00251_NoSecrets extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		
-		if (npc.getNpcId() == GuardPinaps)
+		if (npc.getId() == GuardPinaps)
 		{
 			if (cond == 0)
 			{
@@ -109,11 +109,11 @@ public class Q00251_NoSecrets extends Quest implements ScriptFile
 		
 		if (cond == 1)
 		{
-			if ((st.getQuestItemsCount(SelMahumTrainingDiary) < 10) && ArrayUtils.contains(SelMahumTrainers, npc.getNpcId()))
+			if ((st.getQuestItemsCount(SelMahumTrainingDiary) < 10) && ArrayUtils.contains(SelMahumTrainers, npc.getId()))
 			{
 				st.rollAndGive(SelMahumTrainingDiary, 1, 40);
 			}
-			else if ((st.getQuestItemsCount(SelMahumTrainingTimetable) < 5) && ArrayUtils.contains(SelMahumRecruits, npc.getNpcId()))
+			else if ((st.getQuestItemsCount(SelMahumTrainingTimetable) < 5) && ArrayUtils.contains(SelMahumRecruits, npc.getId()))
 			{
 				st.rollAndGive(SelMahumTrainingTimetable, 1, 25);
 			}

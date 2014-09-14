@@ -68,13 +68,13 @@ public final class Orfen_RibaIren extends Fighter
 		
 		int heal_chance = 0;
 		
-		if (attacked_member.getNpcId() == actor.getNpcId())
+		if (attacked_member.getId() == actor.getId())
 		{
 			heal_chance = (attacked_member.getObjectId() == actor.getObjectId()) ? 100 : 0;
 		}
 		else
 		{
-			heal_chance = (attacked_member.getNpcId() == Orfen_id) ? 90 : 10;
+			heal_chance = (attacked_member.getId() == Orfen_id) ? 90 : 10;
 		}
 		
 		if (Rnd.chance(heal_chance) && canUseSkill(_healSkills[0], attacked_member, -1))

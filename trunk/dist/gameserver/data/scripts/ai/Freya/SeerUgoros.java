@@ -73,7 +73,7 @@ public final class SeerUgoros extends Mystic
 		{
 			for (NpcInstance n : actor.getAroundNpc(2000, 300))
 			{
-				if ((n.getNpcId() == 18867) && !n.isDead())
+				if ((n.getId() == 18867) && !n.isDead())
 				{
 					actor.doCast(_skill, n, true);
 					actor.setCurrentHp(actor.getMaxHp(), false);

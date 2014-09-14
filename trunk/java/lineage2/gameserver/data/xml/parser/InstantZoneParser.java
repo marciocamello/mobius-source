@@ -222,7 +222,7 @@ public class InstantZoneParser extends AbstractDirParser<InstantZoneHolder>
 						boolean opened = (e.attributeValue("opened") != null) && Boolean.parseBoolean(e.attributeValue("opened"));
 						boolean invul = (e.attributeValue("invul") == null) || Boolean.parseBoolean(e.attributeValue("invul"));
 						DoorTemplate template = DoorHolder.getInstance().getTemplate(Integer.parseInt(e.attributeValue("id")));
-						doors.put(template.getNpcId(), new InstantZone.DoorInfo(template, opened, invul));
+						doors.put(template.getId(), new InstantZone.DoorInfo(template, opened, invul));
 					}
 				}
 				else if ("zones".equalsIgnoreCase(subElement.getName()))

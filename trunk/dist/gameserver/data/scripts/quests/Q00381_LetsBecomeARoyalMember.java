@@ -96,7 +96,7 @@ public class Q00381_LetsBecomeARoyalMember extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		long album = st.getQuestItemsCount(COIN_ALBUM);
 		
 		if (npcId == SORINT)
@@ -164,7 +164,7 @@ public class Q00381_LetsBecomeARoyalMember extends Quest implements ScriptFile
 			return null;
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		long album = st.getQuestItemsCount(COIN_ALBUM);
 		long coin = st.getQuestItemsCount(KAILS_COIN);
 		long clover = st.getQuestItemsCount(CLOVER_COIN);

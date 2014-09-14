@@ -55,14 +55,14 @@ public final class FieldMachine extends DefaultAI
 		if ((System.currentTimeMillis() - _lastAction) > 15000)
 		{
 			_lastAction = System.currentTimeMillis();
-			Functions.npcSayCustomMessage(actor, "scripts.ai.FieldMachine." + actor.getNpcId());
+			Functions.npcSayCustomMessage(actor, "scripts.ai.FieldMachine." + actor.getId());
 			final List<NpcInstance> around = actor.getAroundNpc(1500, 300);
 			
 			if ((around != null) && !around.isEmpty())
 			{
 				for (NpcInstance npc : around)
 				{
-					if (npc.isMonster() && (npc.getNpcId() >= 22656) && (npc.getNpcId() <= 22659))
+					if (npc.isMonster() && (npc.getId() >= 22656) && (npc.getId() <= 22659))
 					{
 						npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 5000);
 					}

@@ -91,11 +91,11 @@ public class Q10340_RevivedPowerOfTheGiant extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		st.getCond();
-		npc.getNpcId();
+		npc.getId();
 		Player player = st.getPlayer();
 		String htmltext = "noquest";
 		
-		if (npc.getNpcId() == NPC_SEBIO)
+		if (npc.getId() == NPC_SEBIO)
 		{
 			switch (st.getState())
 			{
@@ -134,7 +134,7 @@ public class Q10340_RevivedPowerOfTheGiant extends Quest implements ScriptFile
 					}
 			}
 		}
-		else if (npc.getNpcId() == NPC_PANTHEON)
+		else if (npc.getId() == NPC_PANTHEON)
 		{
 			if ((st.isStarted()) && (st.getCond() == 3))
 			{
@@ -148,7 +148,7 @@ public class Q10340_RevivedPowerOfTheGiant extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		if ((npc.getNpcId() == MOB_HARNAKS_WRAITH) && (st.getCond() == 1))
+		if ((npc.getId() == MOB_HARNAKS_WRAITH) && (st.getCond() == 1))
 		{
 			st.setCond(2);
 			st.playSound("ItemSound.quest_middle");

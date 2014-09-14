@@ -108,7 +108,7 @@ public class Q10502_FreyaEmbroideredSoulCloak extends Quest implements ScriptFil
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if ((cond == 1) && ((npcId == FREYA_NORMAL) || (npcId == FREYA_HARD)))

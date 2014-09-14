@@ -111,7 +111,7 @@ public final class NaiaRoomControllerInstance extends NpcInstance
 				return;
 			}
 			
-			int npcId = getNpcId();
+			int npcId = getId();
 			
 			if (NaiaTowerManager.isRoomDone(npcId, player))
 			{

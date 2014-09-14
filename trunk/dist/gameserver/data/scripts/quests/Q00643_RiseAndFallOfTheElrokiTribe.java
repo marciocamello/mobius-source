@@ -125,7 +125,7 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest implements ScriptF
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (st.getCond() == 0)
 		{

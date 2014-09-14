@@ -325,7 +325,7 @@ public class Q00348_AnArrogantSearch extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		int id = st.getState();
 		int cond = st.getCond();
@@ -522,7 +522,7 @@ public class Q00348_AnArrogantSearch extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		Integer[] drop = DROPS.get(npcId);
 		
 		if (drop != null)

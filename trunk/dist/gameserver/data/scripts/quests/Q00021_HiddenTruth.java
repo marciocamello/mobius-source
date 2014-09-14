@@ -161,7 +161,7 @@ public class Q00021_HiddenTruth extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "This person inaccessible and does not want with you to talk!<br>Are they please returned later...";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (npcId == MysteriousWizard)

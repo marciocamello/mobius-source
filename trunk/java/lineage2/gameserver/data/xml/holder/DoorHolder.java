@@ -42,7 +42,7 @@ public final class DoorHolder extends AbstractHolder
 	 */
 	public void addTemplate(DoorTemplate door)
 	{
-		_doors.put(door.getNpcId(), door);
+		_doors.put(door.getId(), door);
 	}
 	
 	/**

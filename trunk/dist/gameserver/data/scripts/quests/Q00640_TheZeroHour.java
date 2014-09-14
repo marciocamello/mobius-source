@@ -81,7 +81,7 @@ public class Q00640_TheZeroHour extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		Player player = st.getPlayer();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int state = st.getState();
 		int cond = st.getCond();
 		
@@ -114,7 +114,7 @@ public class Q00640_TheZeroHour extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if ((npcId == QUEEN) && (st.getQuestItemsCount(QUEEN_FANG) == 0))
 		{

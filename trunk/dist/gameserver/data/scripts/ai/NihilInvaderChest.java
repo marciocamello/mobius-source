@@ -60,7 +60,7 @@ public final class NihilInvaderChest extends DefaultAI
 	{
 		final NpcInstance actor = getActor();
 		
-		if (actor.getNpcId() == 18820)
+		if (actor.getId() == 18820)
 		{
 			if (Rnd.chance(40))
 			{
@@ -69,7 +69,7 @@ public final class NihilInvaderChest extends DefaultAI
 				actor.doDie(null);
 			}
 		}
-		else if (actor.getNpcId() == 18823)
+		else if (actor.getId() == 18823)
 		{
 			if (Rnd.chance(40))
 			{
@@ -81,7 +81,7 @@ public final class NihilInvaderChest extends DefaultAI
 		
 		for (NpcInstance npc : actor.getReflection().getNpcs())
 		{
-			if (npc.getNpcId() == actor.getNpcId())
+			if (npc.getId() == actor.getId())
 			{
 				npc.deleteMe();
 			}

@@ -277,7 +277,7 @@ public final class MeleonAI extends Fighter
 	MeleonAI(NpcInstance actor)
 	{
 		super(actor);
-		_npcId = getActor().getNpcId();
+		_npcId = getActor().getId();
 		Functions.npcSayCustomMessage(getActor(), textOnSpawn[Rnd.get(textOnSpawn.length)]);
 		_timeToUnspawn = System.currentTimeMillis() + 120000;
 	}
@@ -321,7 +321,7 @@ public final class MeleonAI extends Fighter
 			return;
 		}
 		
-		if ((actor.getNpcId() != Young_Watermelon) && (actor.getNpcId() != Young_Honey_Watermelon))
+		if ((actor.getId() != Young_Watermelon) && (actor.getId() != Young_Honey_Watermelon))
 		{
 			return;
 		}

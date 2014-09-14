@@ -202,7 +202,7 @@ public class Q00330_AdeptOfTaste extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int _state = st.getState();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (_state == CREATED)
 		{
@@ -468,7 +468,7 @@ public class Q00330_AdeptOfTaste extends Quest implements ScriptFile
 		{
 			return null;
 		}
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		long ingredients_count = st.getQuestItemsCount(ingredients);
 		long spec_ingredients_count = st.getQuestItemsCount(spec_ingredients);
 		long all_ingredients_count = ingredients_count + spec_ingredients_count;

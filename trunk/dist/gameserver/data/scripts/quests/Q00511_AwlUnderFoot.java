@@ -137,7 +137,7 @@ public class Q00511_AwlUnderFoot extends Quest implements ScriptFile
 		{
 			if (prison.getReflectionId() == npc.getReflectionId())
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case HagerTheOutlaw:
 					case AllSeeingRango:

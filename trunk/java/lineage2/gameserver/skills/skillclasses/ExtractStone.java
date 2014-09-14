@@ -90,13 +90,13 @@ public class ExtractStone extends Skill
 	@Override
 	public boolean checkCondition(Creature activeChar, Creature target, boolean forceUse, boolean dontMove, boolean first)
 	{
-		if ((target == null) || !target.isNpc() || (getItemId(target.getNpcId()) == 0))
+		if ((target == null) || !target.isNpc() || (getItemId(target.getId()) == 0))
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return false;
 		}
 		
-		if (!_npcIds.isEmpty() && !_npcIds.contains(new Integer(target.getNpcId())))
+		if (!_npcIds.isEmpty() && !_npcIds.contains(new Integer(target.getId())))
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 			return false;
@@ -184,11 +184,11 @@ public class ExtractStone extends Skill
 		
 		for (Creature target : targets)
 		{
-			if ((target != null) && (getItemId(target.getNpcId()) != 0))
+			if ((target != null) && (getItemId(target.getId()) != 0))
 			{
 				double rate = Config.RATE_QUESTS_DROP * player.getBonus().getQuestDropRate();
 				long count = _id == ExtractScrollSkill ? 1 : Math.min(10, Rnd.get((int) ((getLevel() * rate) + 1)));
-				int itemId = getItemId(target.getNpcId());
+				int itemId = getItemId(target.getId());
 				
 				if (count > 0)
 				{

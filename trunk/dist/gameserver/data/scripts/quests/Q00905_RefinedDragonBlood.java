@@ -107,7 +107,7 @@ public class Q00905_RefinedDragonBlood extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		
-		if (ArrayUtils.contains(SeparatedSoul, npc.getNpcId()))
+		if (ArrayUtils.contains(SeparatedSoul, npc.getId()))
 		{
 			switch (st.getState())
 			{
@@ -155,14 +155,14 @@ public class Q00905_RefinedDragonBlood extends Quest implements ScriptFile
 		
 		if (cond == 1)
 		{
-			if (ArrayUtils.contains(AntharasDragonsBlue, npc.getNpcId()))
+			if (ArrayUtils.contains(AntharasDragonsBlue, npc.getId()))
 			{
 				if ((st.getQuestItemsCount(UnrefinedBlueDragonBlood) < 10) && Rnd.chance(70))
 				{
 					st.giveItems(UnrefinedBlueDragonBlood, 1);
 				}
 			}
-			else if (ArrayUtils.contains(AntharasDragonsRed, npc.getNpcId()))
+			else if (ArrayUtils.contains(AntharasDragonsRed, npc.getId()))
 			{
 				if ((st.getQuestItemsCount(UnrefinedRedDragonBlood) < 10) && Rnd.chance(70))
 				{

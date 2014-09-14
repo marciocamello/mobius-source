@@ -62,16 +62,16 @@ public class FameManagerInstance extends NpcInstance
 				{
 					player.setFame(player.getFame() - 5000, "PK_Count");
 					player.setPkKills(player.getPkKills() - 1);
-					html.setFile("default/" + getNpcId() + "-okpk.htm");
+					html.setFile("default/" + getId() + "-okpk.htm");
 				}
 				else
 				{
-					html.setFile("default/" + getNpcId() + "-nohavepk.htm");
+					html.setFile("default/" + getId() + "-nohavepk.htm");
 				}
 			}
 			else
 			{
-				html.setFile("default/" + getNpcId() + "-nofame.htm");
+				html.setFile("default/" + getId() + "-nofame.htm");
 			}
 			
 			html.replace("%objectId%", String.valueOf(getObjectId()));
@@ -81,11 +81,11 @@ public class FameManagerInstance extends NpcInstance
 		{
 			if ((player.getClan() == null) || (player.getClassId().level() < 2) || (player.getClan().getLevel() < 5))
 			{
-				html.setFile("default/" + getNpcId() + "-noclancrp.htm");
+				html.setFile("default/" + getId() + "-noclancrp.htm");
 			}
 			else if (player.getFame() < 1000)
 			{
-				html.setFile("default/" + getNpcId() + "-nofame.htm");
+				html.setFile("default/" + getId() + "-nofame.htm");
 			}
 			else
 			{
@@ -93,7 +93,7 @@ public class FameManagerInstance extends NpcInstance
 				player.getClan().incReputation(50, false, "FameManager from " + player.getName());
 				player.getClan().broadcastToOnlineMembers(new PledgeShowInfoUpdate(player.getClan()));
 				player.sendPacket(new SystemMessage(SystemMessage.ACQUIRED_50_CLAN_FAME_POINTS));
-				html.setFile("default/" + getNpcId() + "-okclancrp.htm");
+				html.setFile("default/" + getId() + "-okclancrp.htm");
 			}
 			
 			html.replace("%objectId%", String.valueOf(getObjectId()));

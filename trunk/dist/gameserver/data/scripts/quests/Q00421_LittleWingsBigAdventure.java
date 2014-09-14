@@ -143,7 +143,7 @@ public class Q00421_LittleWingsBigAdventure extends Quest implements ScriptFile
 			return false;
 		}
 		
-		if (PetDataTable.getControlItemId(_pet.getNpcId()) != dragonflute.getItemId())
+		if (PetDataTable.getControlItemId(_pet.getId()) != dragonflute.getItemId())
 		{
 			return false;
 		}
@@ -210,7 +210,7 @@ public class Q00421_LittleWingsBigAdventure extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int _state = st.getState();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		ItemInstance dragonflute = GetDragonflute(st);
 		int dragonflute_id = st.getInt("dragonflute");
@@ -352,10 +352,10 @@ public class Q00421_LittleWingsBigAdventure extends Quest implements ScriptFile
 			return null;
 		}
 		
-		String npcID = String.valueOf(npc.getNpcId());
+		String npcID = String.valueOf(npc.getId());
 		Integer attaked_times = st.getInt(npcID);
 		
-		if (CheckTree(st, npc.getNpcId()))
+		if (CheckTree(st, npc.getId()))
 		{
 			return null;
 		}

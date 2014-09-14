@@ -59,7 +59,7 @@ public final class SteelCitadelKeymaster extends Fighter
 			
 			for (NpcInstance npc : World.getAroundNpc(actor))
 			{
-				if ((npc.getNpcId() == AMASKARI_ID) && (npc.getReflectionId() == actor.getReflectionId()) && !npc.isDead())
+				if ((npc.getId() == AMASKARI_ID) && (npc.getReflectionId() == actor.getReflectionId()) && !npc.isDead())
 				{
 					npc.teleToLocation(Location.findPointToStay(actor, 150, 200));
 					break;

@@ -105,7 +105,7 @@ public class Q00235_MimirsElixir extends Quest implements ScriptFile
 		}
 		
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		if (npcId == LADD)
 		{
@@ -210,7 +210,7 @@ public class Q00235_MimirsElixir extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		if ((npcId == Chimera_Piece) && (cond == 3) && (st.getQuestItemsCount(SAGES_STONE) == 0) && Rnd.chance(chance))
 		{

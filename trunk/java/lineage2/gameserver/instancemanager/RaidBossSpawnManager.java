@@ -255,7 +255,7 @@ public class RaidBossSpawnManager
 	 */
 	public void onBossSpawned(RaidBossInstance raidboss)
 	{
-		int bossId = raidboss.getNpcId();
+		int bossId = raidboss.getId();
 		
 		if (!_spawntable.containsKey(bossId))
 		{
@@ -279,7 +279,7 @@ public class RaidBossSpawnManager
 	 */
 	public void onBossDespawned(RaidBossInstance raidboss)
 	{
-		updateStatusDb(raidboss.getNpcId());
+		updateStatusDb(raidboss.getId());
 	}
 	
 	/**

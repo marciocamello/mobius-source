@@ -211,7 +211,7 @@ public final class GilmoreAI extends Fighter
 		
 		for (NpcInstance npc : World.getAroundNpc(actor, 1000, 200))
 		{
-			if (Rnd.chance(10) && (npc != null) && (npc.getNpcId() == 20235))
+			if (Rnd.chance(10) && (npc != null) && (npc.getId() == 20235))
 			{
 				MonsterInstance monster = (MonsterInstance) npc;
 				

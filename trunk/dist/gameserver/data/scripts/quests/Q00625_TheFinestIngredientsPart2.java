@@ -109,7 +109,7 @@ public class Q00625_TheFinestIngredientsPart2 extends Quest implements ScriptFil
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int _state = st.getState();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (_state == CREATED)
 		{

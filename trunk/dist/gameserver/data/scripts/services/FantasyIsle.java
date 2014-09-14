@@ -368,7 +368,7 @@ public final class FantasyIsle extends Functions implements ScriptFile
 		}
 		else if (event.equals("7") && (temp_npc != null))
 		{
-			if (temp_npc.getNpcId() == MC)
+			if (temp_npc.getId() == MC)
 			{
 				Functions.npcSay(temp_npc, TEXT[7]);
 				temp_npc.moveToLocation(new Location(-56698, -56430, -2008, 32768), 0, true);
@@ -415,7 +415,7 @@ public final class FantasyIsle extends Functions implements ScriptFile
 		}
 		else if (event.equals("11") && (temp_npc != null))
 		{
-			if (temp_npc.getNpcId() == MC)
+			if (temp_npc.getId() == MC)
 			{
 				Functions.npcSay(temp_npc, TEXT[10]);
 				temp_npc.moveToLocation(new Location(-56698, -56430, -2008), 0, true);

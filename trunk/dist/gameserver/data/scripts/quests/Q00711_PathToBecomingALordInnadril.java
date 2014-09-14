@@ -109,7 +109,7 @@ public class Q00711_PathToBecomingALordInnadril extends Quest implements ScriptF
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		Castle castle = ResidenceHolder.getInstance().getResidence(InnadrilCastle);
 		if (castle.getOwner() == null)

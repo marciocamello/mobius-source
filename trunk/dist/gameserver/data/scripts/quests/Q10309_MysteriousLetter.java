@@ -87,7 +87,7 @@ public class Q10309_MysteriousLetter extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		Player player = st.getPlayer();
 		player.getClassId().getId();
 		String htmltext = "noquest";

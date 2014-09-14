@@ -35,16 +35,16 @@ public final class TakeBeastHandler extends Functions
 		
 		if (player.getLevel() < 82)
 		{
-			htmltext = npc.getNpcId() + "-1.htm";
+			htmltext = npc.getId() + "-1.htm";
 		}
 		else if (Functions.getItemCount(player, BEAST_WHIP) > 0)
 		{
-			htmltext = npc.getNpcId() + "-2.htm";
+			htmltext = npc.getId() + "-2.htm";
 		}
 		else
 		{
 			Functions.addItem(player, BEAST_WHIP, 1);
-			htmltext = npc.getNpcId() + "-3.htm";
+			htmltext = npc.getId() + "-3.htm";
 		}
 		
 		npc.showChatWindow(player, "default/" + htmltext);

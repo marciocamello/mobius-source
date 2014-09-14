@@ -118,7 +118,7 @@ public class Q00328_SenseForBusiness extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int n = Rnd.get(1, 100);
 		if (npcId == 20055)
 		{

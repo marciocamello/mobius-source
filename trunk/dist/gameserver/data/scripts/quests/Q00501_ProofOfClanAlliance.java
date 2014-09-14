@@ -318,7 +318,7 @@ public class Q00501_ProofOfClanAlliance extends Quest implements ScriptFile
 			return "Quest Failed";
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (npcId == SIR_KRISTOF_RODEMAI)
 		{
@@ -545,7 +545,7 @@ public class Q00501_ProofOfClanAlliance extends Quest implements ScriptFile
 			return "Quest Failed";
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (!leader.isRunningQuestTimer("poison_timer"))
 		{

@@ -72,10 +72,10 @@ public class Q10350_MotherofMonstrosities extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		st.getCond();
-		npc.getNpcId();
+		npc.getId();
 		String htmltext = "noquest";
 		
-		if (npc.getNpcId() == NPC_CHICHIRIN)
+		if (npc.getId() == NPC_CHICHIRIN)
 		{
 			if (st.getPlayer().getLevel() < 40)
 			{
@@ -119,7 +119,7 @@ public class Q10350_MotherofMonstrosities extends Quest implements ScriptFile
 					}
 			}
 		}
-		else if (npc.getNpcId() == NPC_TRASKEN_BODY)
+		else if (npc.getId() == NPC_TRASKEN_BODY)
 		{
 			if (st.isStarted())
 			{

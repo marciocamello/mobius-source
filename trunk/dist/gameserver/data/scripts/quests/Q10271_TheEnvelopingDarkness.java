@@ -96,7 +96,7 @@ public class Q10271_TheEnvelopingDarkness extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		QuestState ToTheSeedOfDestruction = player.getQuestState(Q10269_ToTheSeedOfDestruction.class);

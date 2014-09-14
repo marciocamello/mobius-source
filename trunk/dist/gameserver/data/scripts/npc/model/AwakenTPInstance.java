@@ -45,7 +45,7 @@ public final class AwakenTPInstance extends NpcInstance
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
-		switch (getNpcId())
+		switch (getId())
 		{
 			case 33563:
 				player.sendPacket(new NpcHtmlMessage(player, this, "default/33563.htm", val));
@@ -221,7 +221,7 @@ public final class AwakenTPInstance extends NpcInstance
 		}
 		else if (command.equalsIgnoreCase("teleport"))
 		{
-			switch (getNpcId())
+			switch (getId())
 			{
 				case 33563:
 					player.sendPacket(new NpcHtmlMessage(player, this, "default/33563-1.htm", val));

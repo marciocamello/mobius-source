@@ -91,7 +91,7 @@ public class Q00751_LiberatingTheSpirits extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		
-		if (npc.getNpcId() == Roderik)
+		if (npc.getId() == Roderik)
 		{
 			switch (st.getState())
 			{
@@ -140,7 +140,7 @@ public class Q00751_LiberatingTheSpirits extends Quest implements ScriptFile
 		
 		if (cond == 1)
 		{
-			if (ArrayUtils.contains(Mobs, npc.getNpcId()))
+			if (ArrayUtils.contains(Mobs, npc.getId()))
 			{
 				Party party = st.getPlayer().getParty();
 				
@@ -180,7 +180,7 @@ public class Q00751_LiberatingTheSpirits extends Quest implements ScriptFile
 				}
 			}
 			
-			if (npc.getNpcId() == Scaldisect)
+			if (npc.getId() == Scaldisect)
 			{
 				Party party = st.getPlayer().getParty();
 				

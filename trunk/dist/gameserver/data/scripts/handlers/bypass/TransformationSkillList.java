@@ -60,7 +60,7 @@ public final class TransformationSkillList implements IBypassHandler, ScriptFile
 		{
 			if (!player.isQuestCompleted("Q00136_MoreThanMeetsTheEye"))
 			{
-				npc.showChatWindow(player, "trainer/" + npc.getNpcId() + "-noquest.htm");
+				npc.showChatWindow(player, "trainer/" + npc.getId() + "-noquest.htm");
 				return;
 			}
 		}

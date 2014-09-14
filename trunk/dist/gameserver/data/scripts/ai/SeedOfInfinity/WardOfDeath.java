@@ -54,12 +54,12 @@ public final class WardOfDeath extends DefaultAI
 		
 		if (target.isInRange(actor, actor.getAggroRange()) && target.isPlayable() && !target.isDead() && !target.isInvisible())
 		{
-			if (actor.getNpcId() == 18667)
+			if (actor.getId() == 18667)
 			{
 				actor.doCast(SkillTable.getInstance().getInfo(Rnd.get(5423, 5424), 9), actor, false);
 				actor.doDie(null);
 			}
-			else if (actor.getNpcId() == 18668)
+			else if (actor.getId() == 18668)
 			{
 				for (int i = 0; i < Rnd.get(1, 4); i++)
 				{

@@ -205,7 +205,7 @@ public class CustomSpawnTable
 			statement.setInt(1, spawn.getLoc().getX());
 			statement.setInt(2, spawn.getLoc().getY());
 			statement.setInt(3, spawn.getLoc().getZ());
-			statement.setInt(4, spawn.getNpcId());
+			statement.setInt(4, spawn.getId());
 			statement.setInt(5, spawn.getHeading());
 			statement.execute();
 		}

@@ -98,7 +98,7 @@ public final class OnActionShift extends Functions
 			{
 				dialog = HtmCache.getInstance().getNotNull("actionshift/admin.L2NpcInstance.onActionShift.htm", player);
 				dialog = dialog.replaceFirst("%name%", npc.getName());
-				dialog = dialog.replaceFirst("%id%", String.valueOf(npc.getNpcId()));
+				dialog = dialog.replaceFirst("%id%", String.valueOf(npc.getId()));
 				dialog = dialog.replaceFirst("%lvl%", String.valueOf(npc.getLevel()));
 				dialog = dialog.replaceFirst("%objid%", String.valueOf(npc.getObjectId()));
 				dialog = dialog.replaceFirst("%class%", String.valueOf(npc.getClass().getSimpleName().replaceFirst("L2", "").replaceFirst("Instance", "")));
@@ -152,7 +152,7 @@ public final class OnActionShift extends Functions
 			{
 				dialog = HtmCache.getInstance().getNotNull("actionshift/player.L2NpcInstance.onActionShift.full.htm", player);
 				dialog = dialog.replaceFirst("%class%", String.valueOf(npc.getClass().getSimpleName().replaceFirst("L2", "").replaceFirst("Instance", "")));
-				dialog = dialog.replaceFirst("%id%", String.valueOf(npc.getNpcId()));
+				dialog = dialog.replaceFirst("%id%", String.valueOf(npc.getId()));
 				dialog = dialog.replaceFirst("%respawn%", String.valueOf((npc.getSpawn() != null) ? Util.formatTime(npc.getSpawn().getRespawnDelay()) : "0"));
 				dialog = dialog.replaceFirst("%walkSpeed%", String.valueOf(npc.getWalkSpeed()));
 				dialog = dialog.replaceFirst("%evs%", String.valueOf(npc.getEvasionRate(null)));
@@ -184,7 +184,7 @@ public final class OnActionShift extends Functions
 			}
 			
 			dialog = dialog.replaceFirst("%name%", nameNpc(npc));
-			dialog = dialog.replaceFirst("%id%", String.valueOf(npc.getNpcId()));
+			dialog = dialog.replaceFirst("%id%", String.valueOf(npc.getId()));
 			dialog = dialog.replaceFirst("%level%", String.valueOf(npc.getLevel()));
 			dialog = dialog.replaceFirst("%respawn%", String.valueOf((npc.getSpawn() != null) ? Util.formatTime(npc.getSpawn().getRespawnDelay()) : "0"));
 			dialog = dialog.replaceFirst("%factionId%", String.valueOf(npc.getFaction()));
@@ -624,13 +624,13 @@ public final class OnActionShift extends Functions
 			
 			String dialog = HtmCache.getInstance().getNotNull("actionshift/admin.L2PetInstance.onActionShift.htm", player);
 			
-			dialog = dialog.replaceFirst("%petId%", Integer.toString(pet.getNpcId()));
+			dialog = dialog.replaceFirst("%petId%", Integer.toString(pet.getId()));
 			dialog = dialog.replaceFirst("%controlItemId%", String.valueOf(pet.getControlItem().getItemId()));
 			dialog = dialog.replaceFirst("%type%", pet.getClass().getSimpleName().replaceFirst("Instance", ""));
 			dialog = dialog.replaceFirst("%ai%", pet.hasAI() ? String.valueOf(pet.getAI().getIntention().name()) : "NULL");
 			dialog = dialog.replaceFirst("%dist%", String.valueOf((int) pet.getRealDistance(player)));
 			
-			dialog = dialog.replaceFirst("%name%", HtmlUtils.htmlNpcName(pet.getNpcId()));
+			dialog = dialog.replaceFirst("%name%", HtmlUtils.htmlNpcName(pet.getId()));
 			dialog = dialog.replaceFirst("%title%", String.valueOf(StringUtils.isEmpty(pet.getTitle()) ? "Empty" : pet.getTitle()));
 			dialog = dialog.replaceFirst("%level%", String.valueOf(pet.getLevel()));
 			dialog = dialog.replaceFirst("%exp%", Long.toString(pet.getExp()));
@@ -678,7 +678,7 @@ public final class OnActionShift extends Functions
 			String dialog = HtmCache.getInstance().getNotNull("actionshift/admin.L2SummonInstance.onActionShift.htm", player);
 			String name = summon.getName();
 			
-			dialog = dialog.replaceFirst("%summonId%", Integer.toString(summon.getNpcId()));
+			dialog = dialog.replaceFirst("%summonId%", Integer.toString(summon.getId()));
 			dialog = dialog.replaceFirst("%type%", summon.getClass().getSimpleName().replaceFirst("Instance", ""));
 			dialog = dialog.replaceFirst("%ai%", summon.hasAI() ? String.valueOf(summon.getAI().getIntention().name()) : "NULL");
 			
@@ -802,7 +802,7 @@ public final class OnActionShift extends Functions
 	{
 		if (npc.getNameNpcString() == NpcString.NONE)
 		{
-			return HtmlUtils.htmlNpcName(npc.getNpcId());
+			return HtmlUtils.htmlNpcName(npc.getId());
 		}
 		
 		return HtmlUtils.htmlNpcString(npc.getNameNpcString().getId(), npc.getName());

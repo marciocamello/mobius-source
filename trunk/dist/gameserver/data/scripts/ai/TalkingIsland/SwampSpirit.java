@@ -62,7 +62,7 @@ public final class SwampSpirit extends DefaultAI
 			
 			for (Player player : World.getAroundPlayers(npc, 200, 200))
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case 32915:
 						if (player.getEffectList().getEffectsBySkillId(healSkill.getId()) == null)

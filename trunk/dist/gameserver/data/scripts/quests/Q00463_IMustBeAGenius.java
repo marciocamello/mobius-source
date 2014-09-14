@@ -71,7 +71,7 @@ public class Q00463_IMustBeAGenius extends Quest implements ScriptFile
 		String htmltext = event;
 		st.getPlayer();
 		
-		if (npc.getNpcId() == GUTENHAGEN)
+		if (npc.getId() == GUTENHAGEN)
 		{
 			if (event.equalsIgnoreCase("collecter_gutenhagen_q0463_05.htm"))
 			{
@@ -179,7 +179,7 @@ public class Q00463_IMustBeAGenius extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		Player player = st.getPlayer();
 		
-		if (npc.getNpcId() == GUTENHAGEN)
+		if (npc.getId() == GUTENHAGEN)
 		{
 			switch (st.getState())
 			{
@@ -233,7 +233,7 @@ public class Q00463_IMustBeAGenius extends Quest implements ScriptFile
 		if ((st.getState() == STARTED) && (st.getCond() == 1))
 		{
 			int _day_number = st.getInt("number");
-			int _number = st.getInt(String.valueOf(npc.getNpcId()));
+			int _number = st.getInt(String.valueOf(npc.getId()));
 			
 			if (_number > 0)
 			{

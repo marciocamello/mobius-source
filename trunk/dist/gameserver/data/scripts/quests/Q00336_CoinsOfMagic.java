@@ -429,7 +429,7 @@ public class Q00336_CoinsOfMagic extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int id = st.getState();
 		int grade = st.getInt("grade");
 		
@@ -508,7 +508,7 @@ public class Q00336_CoinsOfMagic extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int grade = st.getInt("grade");
 		int chance = (npc.getLevel() + (grade * 3)) - 20;
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if ((npcId == HaritLizardmanMatriarch) || (npcId == HaritLizardmanShaman))
 		{

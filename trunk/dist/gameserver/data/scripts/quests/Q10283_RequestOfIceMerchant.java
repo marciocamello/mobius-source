@@ -57,7 +57,7 @@ public class Q10283_RequestOfIceMerchant extends Quest implements ScriptFile
 			return null;
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (npcId == _rafforty)
 		{
@@ -94,7 +94,7 @@ public class Q10283_RequestOfIceMerchant extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (npcId == _rafforty)
 		{
@@ -154,7 +154,7 @@ public class Q10283_RequestOfIceMerchant extends Quest implements ScriptFile
 			return null;
 		}
 		
-		if ((npc.getNpcId() == _jinia) && (st.getCond() == 2))
+		if ((npc.getId() == _jinia) && (st.getCond() == 2))
 		{
 			return "32760-01.htm";
 		}

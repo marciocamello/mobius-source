@@ -210,7 +210,7 @@ public final class MemorialService extends DynamicQuest implements ScriptFile
 			{
 				NpcInstance npc = (NpcInstance) target;
 				
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case PRIEST_KHYBER:
 						if (action.value == SocialAction.SORROW)

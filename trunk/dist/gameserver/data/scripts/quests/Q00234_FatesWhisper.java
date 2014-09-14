@@ -434,7 +434,7 @@ public class Q00234_FatesWhisper extends Quest implements ScriptFile
 		{
 			return "completed";
 		}
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		if (npcId == REORIN)
@@ -555,7 +555,7 @@ public class Q00234_FatesWhisper extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		if ((cond == COND1) && (npcId == SHILLEN_MESSAGER))
 		{
@@ -621,7 +621,7 @@ public class Q00234_FatesWhisper extends Quest implements ScriptFile
 	public String onAttack(NpcInstance npc, QuestState st)
 	{
 		int cond = st.getCond();
-		if (((cond == COND7) || (cond == COND9)) && (npc.getNpcId() == BAIUM) && (st.getQuestItemsCount(PIPETTE_KNIFE) >= 1) && (st.getQuestItemsCount(RED_PIPETTE_KNIFE) == 0) && (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == PIPETTE_KNIFE))
+		if (((cond == COND7) || (cond == COND9)) && (npc.getId() == BAIUM) && (st.getQuestItemsCount(PIPETTE_KNIFE) >= 1) && (st.getQuestItemsCount(RED_PIPETTE_KNIFE) == 0) && (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == PIPETTE_KNIFE))
 		{
 			if (Rnd.chance(50))
 			{

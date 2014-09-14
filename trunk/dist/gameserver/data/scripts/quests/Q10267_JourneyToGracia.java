@@ -81,7 +81,7 @@ public class Q10267_JourneyToGracia extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		int id = st.getState();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int cond = st.getCond();
 		
 		if (id == COMPLETED)

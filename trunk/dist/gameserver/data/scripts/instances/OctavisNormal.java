@@ -121,7 +121,7 @@ public final class OctavisNormal extends Reflection
 		@Override
 		public void onCurrentHpDamage(Creature actor, double damage, Creature attacker, Skill skill)
 		{
-			if (actor.getNpcId() == Octavis1)
+			if (actor.getId() == Octavis1)
 			{
 				if (actor.isDead())
 				{
@@ -143,7 +143,7 @@ public final class OctavisNormal extends Reflection
 				}
 			}
 			
-			if (actor.getNpcId() == Octavis2)
+			if (actor.getId() == Octavis2)
 			{
 				if (actor.isDead())
 				{
@@ -163,7 +163,7 @@ public final class OctavisNormal extends Reflection
 				}
 			}
 			
-			if (actor.getNpcId() == OctavisRider)
+			if (actor.getId() == OctavisRider)
 			{
 				if (actor.isDead())
 				{
@@ -311,7 +311,7 @@ public final class OctavisNormal extends Reflection
 		@Override
 		public void onDeath(Creature self, Creature killer)
 		{
-			if (self.isNpc() && (self.getNpcId() == Octavis3))
+			if (self.isNpc() && (self.getId() == Octavis3))
 			{
 				threeStageGuardSpawn.cancel(true);
 				ThreadPoolManager.getInstance().schedule(new EndingMovie(), 10);

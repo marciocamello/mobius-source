@@ -149,7 +149,7 @@ public final class HuntersGuild extends Functions implements ScriptFile, IVoiced
 			return false;
 		}
 		
-		if (GameObjectsStorage.getByNpcId(npc.getNpcId()) == null)
+		if (GameObjectsStorage.getByNpcId(npc.getId()) == null)
 		{
 			return false;
 		}
@@ -220,7 +220,7 @@ public final class HuntersGuild extends Functions implements ScriptFile, IVoiced
 		}
 		
 		final int mobcount = target.level + Rnd.get(25, 50);
-		player.setVar("bhMonstersId", String.valueOf(target.getNpcId()), -1);
+		player.setVar("bhMonstersId", String.valueOf(target.getId()), -1);
 		player.setVar("bhMonstersNeeded", String.valueOf(mobcount), -1);
 		player.setVar("bhMonstersKilled", "0", -1);
 		final int fails = (player.getVar("bhfails") == null) ? 0 : Integer.parseInt(player.getVar("bhfails")) * 5;
@@ -279,7 +279,7 @@ public final class HuntersGuild extends Functions implements ScriptFile, IVoiced
 			return;
 		}
 		
-		if (cha.isMonster() && !cha.isRaid() && (killer != null) && (killer.getPlayer() != null) && (killer.getPlayer().getVar("bhMonstersId") != null) && (Integer.parseInt(killer.getPlayer().getVar("bhMonstersId")) == cha.getNpcId()))
+		if (cha.isMonster() && !cha.isRaid() && (killer != null) && (killer.getPlayer() != null) && (killer.getPlayer().getVar("bhMonstersId") != null) && (Integer.parseInt(killer.getPlayer().getVar("bhMonstersId")) == cha.getId()))
 		{
 			final int count = Integer.parseInt(killer.getPlayer().getVar("bhMonstersKilled")) + 1;
 			killer.getPlayer().setVar("bhMonstersKilled", String.valueOf(count), -1);

@@ -348,7 +348,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest implements ScriptFil
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int step = st.getInt("step");
 		int cond = st.getCond();
 		
@@ -565,7 +565,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest implements ScriptFil
 	@Override
 	public String onAttack(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int step = st.getInt("step");
 		
 		for (int[] element : SPAWNLIST)
@@ -588,7 +588,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest implements ScriptFil
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int step = st.getInt("step");
 		
 		for (int[] element : DROPLIST)

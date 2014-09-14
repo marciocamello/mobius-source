@@ -116,7 +116,7 @@ public class Q00356_DigUpTheSeaOfSpores extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		long carn = st.getQuestItemsCount(CARNIVORE_SPORE);
 		long herb = st.getQuestItemsCount(HERBIBOROUS_SPORE);
 		

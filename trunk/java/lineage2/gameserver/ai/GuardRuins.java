@@ -52,7 +52,7 @@ public class GuardRuins extends Fighter
 		{
 			for (NpcInstance npc : around)
 			{
-				if (npc.isMonster() && (npc.getNpcId() != 19153) && (npc.getNpcId() != 19152))
+				if (npc.isMonster() && (npc.getId() != 19153) && (npc.getId() != 19152))
 				{
 					actor.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, npc, 300);
 				}

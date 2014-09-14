@@ -58,7 +58,7 @@ public class Q00904_DragonTrophyAntharas extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		
-		if (npc.getNpcId() == Theodric)
+		if (npc.getId() == Theodric)
 		{
 			switch (st.getState())
 			{
@@ -106,7 +106,7 @@ public class Q00904_DragonTrophyAntharas extends Quest implements ScriptFile
 		
 		if (cond == 1)
 		{
-			if (npc.getNpcId() == AntharasMax)
+			if (npc.getId() == AntharasMax)
 			{
 				st.setCond(2);
 			}

@@ -58,7 +58,7 @@ public final class SufferingHallAttack extends Reflection
 				return;
 			}
 			
-			if (self.getNpcId() == AliveTumor)
+			if (self.getId() == AliveTumor)
 			{
 				if (self.isInZone("[soi_hos_attack_1]"))
 				{
@@ -101,7 +101,7 @@ public final class SufferingHallAttack extends Reflection
 					spawnRoom(6);
 				}
 			}
-			else if (self.getNpcId() == Yehan)
+			else if (self.getId() == Yehan)
 			{
 				ThreadPoolManager.getInstance().schedule(new RunnableImpl()
 				{

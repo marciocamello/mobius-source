@@ -70,7 +70,7 @@ public class Q00252_GoodSmell extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		
-		if (npc.getNpcId() == GuardStan)
+		if (npc.getId() == GuardStan)
 		{
 			if (cond == 0)
 			{
@@ -103,12 +103,12 @@ public class Q00252_GoodSmell extends Quest implements ScriptFile
 		
 		if (cond == 1)
 		{
-			if ((st.getQuestItemsCount(SelMahumDiary) < 10) && ArrayUtils.contains(SelMahums, npc.getNpcId()))
+			if ((st.getQuestItemsCount(SelMahumDiary) < 10) && ArrayUtils.contains(SelMahums, npc.getId()))
 			{
 				st.rollAndGive(SelMahumDiary, 1, 15);
 			}
 			
-			if ((st.getQuestItemsCount(SelMahumCookbookPage) < 5) && (npc.getNpcId() == SelChef))
+			if ((st.getQuestItemsCount(SelMahumCookbookPage) < 5) && (npc.getId() == SelChef))
 			{
 				st.rollAndGive(SelMahumCookbookPage, 1, 10);
 			}

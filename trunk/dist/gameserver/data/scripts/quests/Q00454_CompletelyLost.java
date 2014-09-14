@@ -272,7 +272,7 @@ public class Q00454_CompletelyLost extends Quest implements ScriptFile
 	{
 		String htmltext = "noquest";
 		
-		if (npc.getNpcId() == WoundedSoldier)
+		if (npc.getId() == WoundedSoldier)
 		{
 			switch (st.getState())
 			{
@@ -311,7 +311,7 @@ public class Q00454_CompletelyLost extends Quest implements ScriptFile
 					break;
 			}
 		}
-		else if (npc.getNpcId() == Ermian)
+		else if (npc.getId() == Ermian)
 		{
 			if (st.getCond() == 1)
 			{
@@ -344,7 +344,7 @@ public class Q00454_CompletelyLost extends Quest implements ScriptFile
 		{
 			for (NpcInstance n : around)
 			{
-				if ((n.getNpcId() == WoundedSoldier) && (n.getFollowTarget() != null))
+				if ((n.getId() == WoundedSoldier) && (n.getFollowTarget() != null))
 				{
 					if (n.getFollowTarget().getObjectId() == player.getObjectId())
 					{
