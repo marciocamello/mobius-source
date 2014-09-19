@@ -97,7 +97,7 @@ public class Config
 	public static int SHIFT_BY_Z;
 	public static int MAP_MIN_Z;
 	public static int MAP_MAX_Z;
-	public static boolean SERVER_SIDE_NPC_TITLE_ETC;
+	public static boolean SHOW_NPC_LVL;
 	public static boolean ALLOW_PACKET_FAIL;
 	public static boolean RWHO_LOG;
 	// public static int RWHO_FORCE_INC;
@@ -1019,7 +1019,7 @@ public class Config
 		GARBAGE_COLLECTOR_INTERVAL = serverSettings.getProperty("GarbageCollectorInterval", 30) * 60000;
 		HTM_CACHE_MODE = serverSettings.getProperty("HtmCacheMode", HtmCache.LAZY);
 		HTM_DEBUG_MODE = serverSettings.getProperty("DebugHtmlMessage", false);
-		SERVER_SIDE_NPC_TITLE_ETC = serverSettings.getProperty("ServerSideNpcTitleEtc", false);
+		SHOW_NPC_LVL = serverSettings.getProperty("ShowNpcLevel", false);
 		ALLOW_PACKET_FAIL = serverSettings.getProperty("AllowPacketFail", false);
 		Random ppc = new Random();
 		int z = ppc.nextInt(6);
