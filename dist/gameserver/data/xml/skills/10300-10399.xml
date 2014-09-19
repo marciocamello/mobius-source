@@ -22,6 +22,9 @@
 		<for>
 			<effect name="HpToOne"/>
 		</for>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1690"/>
+		<set name="reuseDelay" val="15000"/>
 	</skill>
 	<skill id="10301" levels="1" name="Maximum Force Mastery">
 		<set name="magicLevel" val="85"/>

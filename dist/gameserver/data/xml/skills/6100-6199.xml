@@ -254,6 +254,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="trait" val="SHOCK"/>
 		<set name="saveVs" val="CON"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6130" levels="1" name="Mutant Curse">
 		<set name="levelModifier" val="1"/>
@@ -451,12 +452,18 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="4000"/>
 	</skill>
 	<skill id="6144" levels="1" name="Ancient Beam">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="4000"/>
 	</skill>
 	<skill id="6145" levels="1" name="Earth Wyrm's Evil Aura">
 		<set name="icon" val="icon.skill0000"/>
@@ -469,18 +476,25 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="4000"/>
 	</skill>
 	<skill id="6147" levels="1" name="Kasha's Divine Protection">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="4000"/>
 	</skill>
 	<skill id="6148" levels="1" name="Altar's Curse">
 		<set name="icon" val="icon.skill1064"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="4000"/>
 	</skill>
 	<skill id="6149" levels="1" name="Kasha's Brand">
 		<set name="magicType" val="MAGIC"/>
@@ -594,6 +608,9 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="6167" levels="12" name="Stun">
 		<table name="#mpConsume2">13 20 28 38 50 61 71 76 80 83 84 85</table>
@@ -626,6 +643,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="trait" val="SHOCK"/>
 		<set name="saveVs" val="CON"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6169" levels="1" name="Shyeed's Fury">
 		<set name="icon" val="icon.skill6169"/>
@@ -678,6 +696,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6173" levels="1" name="Presentation - Memorial Service for Repose">
 		<set name="magicType" val="SPECIAL"/>

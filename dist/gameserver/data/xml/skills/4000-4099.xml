@@ -460,6 +460,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4033" levels="12" name="Aura Burn">
 		<table name="#mpConsume2">14 23 32 42 54 66 78 83 87 90 92 93</table>
@@ -1114,6 +1115,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="blow" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4068" levels="12" name="Mechanical Cannon">
 		<table name="#effectPoint">100 100 100 100 100 100 100 100 100 100 100 100</table>
@@ -1228,6 +1230,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4074" levels="2" name="Haste">
 		<table name="#Tab-pAtkSpd">1.15 1.33</table>
@@ -1272,6 +1275,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4076" levels="3" name="Decrease Speed">
 		<table name="#Tab-runSpd">0.85 0.7 0.5</table>
@@ -1481,6 +1485,7 @@
 		<for>
 			<effect abnormal="bleeding" count="10" name="Bleed" stackType="Bleed" stackOrder="#abnormal_lv" time="3" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4089" levels="1" name="Spirit Bear">
 		<table name="#Tab-runSpd">0.85</table>

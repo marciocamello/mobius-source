@@ -268,6 +268,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5120" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
@@ -490,6 +491,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5136" levels="1" name="Spin Slash">
 		<set name="icon" val="icon.skill0000"/>
@@ -550,6 +552,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5139" levels="1" name="Tidal Wave">
 		<set name="magicType" val="MAGIC"/>
@@ -607,6 +610,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="shieldignore" val="true"/>
 		<set name="nextAction" val="attack"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5142" levels="1" name="Corpse Burst">
 		<set name="magicType" val="MAGIC"/>
@@ -639,6 +643,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="blow" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5144" levels="1" name="Mirage">
 		<set name="icon" val="icon.skill0000"/>
@@ -922,6 +927,7 @@
 				<mul order="0x30" stat="pvpPhysDmgBonus" val="0.95"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5161" levels="10" name="Agility">
 		<table name="#rate">1 1 1 2 2 2 3 3 3 4</table>
@@ -1032,6 +1038,7 @@
 				<mul order="0x50" stat="runSpd" val="0.7"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5167" levels="10" name="Winter">
 		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
@@ -1050,6 +1057,7 @@
 				<mul order="0x30" stat="pAtkSpd" val="0.77"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5168" levels="10" name="Stun">
 		<table name="#power">30 35 44 55 64 79 84 96 102 109</table>
@@ -1072,6 +1080,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5169" levels="10" name="Hold">
 		<table name="#effectPoint">457 495 532 549 566 582 597 611 624 646 655</table>
@@ -1091,6 +1100,7 @@
 		<for>
 			<effect count="1" name="Root" stackOrder="-1" stackType="Root" time="15" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5170" levels="10" name="Sleep">
 		<table name="#effectPoint">227 285 369 438 495 549 590 624 650 655</table>
@@ -1110,6 +1120,7 @@
 		<for>
 			<effect count="1" name="Sleep" stackOrder="-1" stackType="Sleep" time="15" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5171" levels="10" name="Paralyze">
 		<table name="#effectPoint">457 495 532 549 566 582 597 611 624 646 655</table>
@@ -1129,6 +1140,7 @@
 		<for>
 			<effect count="1" name="Paralyze" stackOrder="-1" stackType="paralyze" time="10" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5172" levels="10" name="Medusa">
 		<table name="#effectPoint">227 285 369 438 495 549 590 624 650 655</table>
@@ -1149,6 +1161,7 @@
 				<set order="0x80" stat="regHp" val="0"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5173" levels="10" name="Fear">
 		<table name="#effectPoint">227 285 369 438 495 549 590 624 650 655</table>
@@ -1168,6 +1181,7 @@
 		<for>
 			<effect count="1" name="Fear" stackOrder="-1" stackType="Fear" time="10" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5174" levels="10" name="Poison">
 		<table name="#abnormal_lv">5 5 6 6 6 7 7 7 8 8</table>
@@ -1186,6 +1200,7 @@
 		<for>
 			<effect abnormal="poison" count="10" name="Poison" stackOrder="#abnormal_lv" time="3" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5175" levels="10" name="Bleed">
 		<table name="#abnormal_lv">5 5 6 6 6 7 7 7 8 8</table>
@@ -1205,6 +1220,7 @@
 		<for>
 			<effect abnormal="bleeding" count="10" name="Bleed" stackType="Bleed" stackOrder="#abnormal_lv" time="3" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5176" levels="10" name="Silence">
 		<table name="#effectPoint">457 495 532 549 566 582 597 611 624 646 655</table>
@@ -1224,6 +1240,7 @@
 		<for>
 			<effect count="1" name="Mute" stackOrder="-1" stackType="Mute" time="10" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5177" levels="10" name="Doom">
 		<table name="#magicLevel">46 49 52 55 58 61 64 67 70 75</table>
@@ -1241,6 +1258,7 @@
 		<for>
 			<effect count="1" name="MuteAll" time="10" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5178" levels="1" name="NPC Burn">
 		<set name="magicType" val="MAGIC"/>

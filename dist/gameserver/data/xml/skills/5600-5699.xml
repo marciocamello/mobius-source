@@ -1061,6 +1061,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5666" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
@@ -1075,6 +1076,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5667" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
@@ -1089,6 +1091,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5668" levels="1" name="Poison">
 		<set name="levelModifier" val="1"/>
@@ -1104,6 +1107,7 @@
 		<for>
 			<effect abnormal="poison" count="10" name="Poison" stackOrder="8" time="3" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5669" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
@@ -1118,6 +1122,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5670" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
@@ -1132,6 +1137,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5671" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
@@ -1146,6 +1152,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5672" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
@@ -1156,6 +1163,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="trait" val="SHOCK"/>
 		<set name="saveVs" val="CON"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5673" levels="1" name="Evasion Counter">
 		<set name="levelModifier" val="2"/>
@@ -1170,6 +1178,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="5" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5674" levels="1" name="Evasion Chance">
 		<set name="icon" val="icon.skill0819"/>

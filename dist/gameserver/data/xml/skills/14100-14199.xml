@@ -5,42 +5,63 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="14157" levels="1" name="Long Snake">
 		<set name="icon" val="icon.skill0006"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14158" levels="1" name="Crawler Spear">
 		<set name="icon" val="icon.skill0006"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="200"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14164" levels="1" name="Arcane Jet">
 		<set name="icon" val="icon.skill1275"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="300"/>
+		<set name="hitTime" val="2500"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14165" levels="1" name="Arcane Bust">
 		<set name="icon" val="icon.skill1275"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="300"/>
+		<set name="hitTime" val="2500"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14167" levels="1" name="Black Powder">
 		<set name="icon" val="icon.skill0006"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14168" levels="1" name="Throw Grenade">
 		<set name="icon" val="icon.skill1275"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14172" levels="1" name="Ray of Pain">
 		<set name="target" val="TARGET_ONE"/>
@@ -51,6 +72,9 @@
 		<effect name="Debuff" count="1" time="30" val="0">
 			<mul order="0x30" stat="pAtkSpd" val="0.85"/>
 		</effect>
+		<set name="castRange" val="500"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14174" levels="1" name="Black Powder Eruption">
 		<set name="target" val="TARGET_ONE"/>
@@ -58,6 +82,9 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="power" val="50"/>
 		<set name="mpConsume" val="15"/>
+		<set name="castRange" val="300"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14187" levels="1" name="Magmeld Teleport">
 		<set name="magicLevel" val="1"/>

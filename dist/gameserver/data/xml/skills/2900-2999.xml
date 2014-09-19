@@ -152,6 +152,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2914" levels="2" name="Equipment Set Pack (90-day)">
 		<set name="magicType" val="SPECIAL"/>

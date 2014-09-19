@@ -42,6 +42,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="15105" levels="1" name="Mysterious Shadow">
 		<set name="reuseDelay" val="360000"/>
@@ -58,6 +59,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="15107" levels="1" name="Mysterious Sacrifice">
 		<set name="icon" val="icon.skill4036"/>
@@ -97,6 +99,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="15112" levels="1" name="Threat">
 		<set name="coolTime" val="500"/>
@@ -113,6 +116,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="15114" levels="1" name="Massive Blade">
 		<set name="coolTime" val="500"/>
@@ -137,6 +141,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="15117" levels="1" name="Massacre Execution">
 		<set name="coolTime" val="500"/>
@@ -145,6 +150,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="15118" levels="1" name="Induce Mental Illness">
 		<set name="coolTime" val="500"/>
@@ -153,6 +159,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="15119" levels="1" name="Whole Body Recovery">
 		<set name="coolTime" val="500"/>
@@ -169,6 +176,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="15121" levels="1" name="Rage Explosion">
 		<set name="coolTime" val="500"/>
@@ -185,6 +193,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="15123" levels="1" name="Sword Cleave">
 		<set name="coolTime" val="500"/>
@@ -193,6 +202,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="15124" levels="1" name="Axe Strike">
 		<set name="coolTime" val="500"/>
@@ -201,6 +211,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="15125" levels="1" name="Tauti Final Attack">
 		<set name="reuseDelay" val="15000"/>
@@ -210,6 +221,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="15126" levels="1" name="Tauti Final Attack">
 		<set name="reuseDelay" val="15000"/>
@@ -219,11 +231,12 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="15127" levels="1" name="Equip Weapon">
 		<set name="reuseDelay" val="5000"/>
 		<set name="coolTime" val="300"/>
-		<set name="hitTime" val="699"/>
+		<set name="hitTime" val="700"/>
 		<set name="icon" val="icon.skill1068"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -232,7 +245,7 @@
 	<skill id="15128" levels="1" name="Equip Armor">
 		<set name="reuseDelay" val="5000"/>
 		<set name="coolTime" val="300"/>
-		<set name="hitTime" val="699"/>
+		<set name="hitTime" val="700"/>
 		<set name="icon" val="icon.skill1040"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -431,6 +444,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="15152" levels="1" name="Coolant Leak">
 		<set name="hitTime" val="1000"/>
@@ -438,6 +452,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="15153" levels="1" name="Attention to Draco Incubation">
 		<set name="icon" val="icon.skill11507"/>
@@ -531,6 +546,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="15167" levels="1" name="Tauti Leap Attack">
 		<set name="coolTime" val="500"/>
@@ -539,6 +555,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
 	</skill>
 	<skill id="15168" levels="1" name="Tauti Ultimate Chain Strike">
 		<set name="coolTime" val="1000"/>
@@ -577,12 +594,14 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="200"/>
 	</skill>
 	<skill id="15173" levels="1" name="Tauti Air Binding">
 		<set name="icon" val="icon.skill11276"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="200"/>
 	</skill>
 	<skill id="15174" levels="1" name="Petra Injection - Enhance HP Recovery">
 		<set name="hitTime" val="15000"/>
@@ -590,12 +609,14 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2500"/>
 	</skill>
 	<skill id="15175" levels="1" name="Petra Injection - Enhance HP Recovery">
 		<set name="icon" val="icon.skill1434"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2500"/>
 	</skill>
 	<skill id="15176" levels="1" name="Petra Injection - Enhance P. Def.">
 		<set name="hitTime" val="15000"/>
@@ -603,12 +624,14 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2500"/>
 	</skill>
 	<skill id="15177" levels="1" name="Petra Injection - Enhance P. Def.">
 		<set name="icon" val="icon.skill1434"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2500"/>
 	</skill>
 	<skill id="15178" levels="1" name="Petra Injection - Enhance M. Def.">
 		<set name="hitTime" val="15000"/>
@@ -616,12 +639,14 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2500"/>
 	</skill>
 	<skill id="15179" levels="1" name="Petra Injection - Enhance M. Def.">
 		<set name="icon" val="icon.skill1434"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2500"/>
 	</skill>
 	<skill id="15180" levels="1" name="Petra Injection - Enhance P. Atk.">
 		<set name="hitTime" val="15000"/>
@@ -629,12 +654,14 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2500"/>
 	</skill>
 	<skill id="15181" levels="1" name="Petra Injection - Enhance P. Atk.">
 		<set name="icon" val="icon.skill1434"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2500"/>
 	</skill>
 	<skill id="15182" levels="1" name="Adolph's Superior Aggression Aura">
 		<set name="reuseDelay" val="10000"/>
@@ -698,6 +725,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1100"/>
 	</skill>
 	<skill id="15189" levels="1" name="Hayuk's Multiple Arrow">
 		<set name="reuseDelay" val="7000"/>
@@ -707,6 +735,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1100"/>
 	</skill>
 	<skill id="15190" levels="1" name="Hayuk's Multiple Arrow">
 		<set name="reuseDelay" val="7000"/>
@@ -716,6 +745,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1100"/>
 	</skill>
 	<skill id="15191" levels="1" name="Hayuk's Heavy Arrow Rain">
 		<set name="reuseDelay" val="15000"/>
@@ -725,6 +755,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1100"/>
 	</skill>
 	<skill id="15192" levels="1" name="Hayuk's Heavy Arrow Rain">
 		<set name="reuseDelay" val="15000"/>
@@ -734,6 +765,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1100"/>
 	</skill>
 	<skill id="15193" levels="1" name="Hayuk's Heavy Arrow Rain">
 		<set name="reuseDelay" val="15000"/>
@@ -743,6 +775,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1100"/>
 	</skill>
 	<skill id="15194" levels="1" name="Eliyah's Mass Exile">
 		<set name="reuseDelay" val="300000"/>
@@ -752,6 +785,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
 	</skill>
 	<skill id="15195" levels="1" name="Eliyah's Mass Exile">
 		<set name="reuseDelay" val="300000"/>
@@ -761,6 +795,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
 	</skill>
 	<skill id="15196" levels="1" name="Eliyah's Mass Exile">
 		<set name="reuseDelay" val="300000"/>
@@ -770,6 +805,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
 	</skill>
 	<skill id="15197" levels="1" name="Guardian Spirit's Wrath">
 		<set name="reuseDelay" val="20000"/>

@@ -502,6 +502,7 @@
 		<set name="skillRadius" val="200"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4233" levels="1" name="Vampiric Attack">
 		<set name="icon" val="icon.skill4233"/>
@@ -574,6 +575,7 @@
 				<mul order="0x50" stat="runSpd" val="0.5"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4238" levels="1" name="Increase Cooldown">
 		<set name="icon" val="icon.skill1248"/>
@@ -659,6 +661,7 @@
 		<set name="skillRadius" val="200"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4245" levels="1" name="Mimic of Wrath">
 		<set name="icon" val="icon.skill0000"/>

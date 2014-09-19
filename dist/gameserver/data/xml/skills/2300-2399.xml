@@ -328,6 +328,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2323" levels="1" name="Red Philosopher's Stone">
 		<set name="magicLevel" val="1"/>
@@ -586,6 +587,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2344" levels="1" name="Gate Key: Archives">
 		<set name="magicType" val="SPECIAL"/>
@@ -597,6 +599,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2345" levels="1" name="Gate Key: Observation">
 		<set name="magicType" val="SPECIAL"/>
@@ -608,6 +611,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2346" levels="1" name="Gate Key: Spicula">
 		<set name="magicType" val="SPECIAL"/>
@@ -619,6 +623,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2347" levels="1" name="Enuma Elish Key">
 		<set name="magicType" val="SPECIAL"/>
@@ -630,6 +635,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2348" levels="1" name="Prahnah Key">
 		<set name="magicType" val="SPECIAL"/>
@@ -641,6 +647,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2349" levels="1" name="Gate Key: Arviterre">
 		<set name="magicType" val="SPECIAL"/>
@@ -652,6 +659,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2350" levels="1" name="Leopold Key">
 		<set name="magicType" val="SPECIAL"/>
@@ -663,6 +671,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2351" levels="1" name="Gate Key: Prediction">
 		<set name="magicType" val="SPECIAL"/>
@@ -674,6 +683,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2352" levels="1" name="Gate Key: Nornil">
 		<set name="magicType" val="SPECIAL"/>
@@ -685,6 +695,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2353" levels="1" name="Nornil's Power">
 		<set name="icon" val="icon.skill0000"/>
@@ -705,6 +716,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2355" levels="1" name="Gate Key: Destruction">
 		<set name="magicType" val="SPECIAL"/>
@@ -716,6 +728,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2356" levels="1" name="Gate Key: Blood">
 		<set name="magicType" val="SPECIAL"/>
@@ -727,6 +740,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2357" levels="1" name="Fiery Demon Blood">
 		<set name="magicType" val="SPECIAL"/>
@@ -755,6 +769,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="saveVs" val="MEN"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2359" levels="1" name="Magic Bottle">
 		<set name="magicType" val="SPECIAL"/>
@@ -768,6 +783,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 		<set name="saveVs" val="MEN"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2360" levels="1" name="Water Dragon Claw">
 		<set name="icon" val="icon.skill0000"/>
@@ -801,6 +817,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2363" levels="1" name="Underground Warehouse Key">
 		<set name="magicType" val="SPECIAL"/>
@@ -812,6 +829,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2364" levels="1" name="Blessed Scroll of Escape: Fortress">
 		<set name="magicType" val="SPECIAL"/>
@@ -850,6 +868,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2367" levels="1" name="Red Coral Key">
 		<set name="magicType" val="SPECIAL"/>
@@ -861,6 +880,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2368" levels="1" name="Spirit of the Lake">
 		<set name="magicType" val="MAGIC"/>

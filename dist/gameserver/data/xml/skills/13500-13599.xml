@@ -135,7 +135,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="13517" levels="1" name="Giant&#x2019;s Battle Roar">
+	<skill id="13517" levels="1" name="Giant’s Battle Roar">
 		<set name="icon" val="icon.skill3123"/>
 		<table name="#magicLevel">1</table>
 		<set name="reuseDelay" val="5000"/>
@@ -153,7 +153,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="13518" levels="1" name="Giant&#x2019;s Celestial Shield">
+	<skill id="13518" levels="1" name="Giant’s Celestial Shield">
 		<set name="icon" val="icon.skill11758"/>
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="MAGIC"/>
@@ -204,7 +204,7 @@
 			<effect count="1" name="MuteAll" time="5" val="0"/>
 		</for>
 	</skill>
-	<skill id="13521" levels="1" name="Giant&#x2019;s Sleep">
+	<skill id="13521" levels="1" name="Giant’s Sleep">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1069"/>
 		<set name="reuseDelay" val="300000"/>
@@ -224,7 +224,7 @@
 			<effect count="1" name="Sleep" stackOrder="-1" stackType="Sleep" time="5" val="0"/>
 		</for>
 	</skill>
-	<skill id="13522" levels="1" name="Giant&#x2019;s Winter">
+	<skill id="13522" levels="1" name="Giant’s Winter">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1454"/>
 		<set name="reuseDelay" val="300000"/>

@@ -145,7 +145,7 @@
 		<set name="target" val="TARGET_PARTY_ONE"/>
 		<set name="skillType" val="CALL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="32767"/>
+		<set name="castRange" val="-2"/>
 	</skill>
 	<skill id="1404" levels="1" name="Word of Invitation">
 		<set name="magicType" val="MAGIC"/>
@@ -162,7 +162,7 @@
 		<set name="itemConsumeId" val="3031"/>
 		<set name="itemConsumeCount" val="3"/>
 		<set name="skillRadius" val="-2"/>
-		<set name="castRange" val="32767"/>
+		<set name="castRange" val="-2"/>
 	</skill>
 	<skill id="1405" levels="4" name="Divine Inspiration">
 		<table name="#add">1 2 3 4</table>
@@ -263,7 +263,7 @@
 		<set name="reuseDelay" val="8000"/>
 		<set name="magicLevel" val="78"/>
 		<set name="castRange" val="600"/>
-		<set name="hitTime" val="3000"/>
+		<set name="hitTime" val="4000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="12"/>
 		<set name="mpConsume2" val="46"/>
@@ -872,7 +872,7 @@
 		<table name="#magicLevel">56 60 64 68 72</table>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1430"/>
-		<set name="reuseDelay" val="900000"/>
+		<set name="reuseDelay" val="600000"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="hitTime" val="2000"/>
 		<set name="hitCancelTime" val="500"/>
@@ -1081,7 +1081,7 @@
 		<set name="magicType" val="MAGIC"/>
 		<set name="affectLimit" val="5;12"/>
 		<set name="icon" val="icon.skill1437"/>
-		<set name="reuseDelay" val="15000"/>
+		<set name="reuseDelay" val="4000"/>
 		<set name="power" val="#power"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="hitTime" val="1800"/>
@@ -1125,6 +1125,7 @@
 				<mul order="0x50" stat="runSpd" val="0.7"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="1438" levels="9" name="Annihilation Circle">
 		<table name="#elementPower">20</table>

@@ -39,6 +39,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="23505" levels="1" name="(Warrior's Harmony)">
 		<set name="reuseDelay" val="2000"/>
@@ -47,6 +48,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="23506" levels="1" name="(Wizard's Harmony)">
 		<set name="reuseDelay" val="2000"/>
@@ -55,6 +57,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="23507" levels="1" name="(Prevailing Sonata)">
 		<set name="reuseDelay" val="2000"/>
@@ -82,7 +85,7 @@
 	</skill>
 	<skill id="23510" levels="1" name="(Brilliant Heal)">
 		<set name="reuseDelay" val="5000"/>
-		<set name="hitTime" val="699"/>
+		<set name="hitTime" val="700"/>
 		<set name="icon" val="icon.skill11757"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -94,6 +97,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
 	</skill>
 	<skill id="23512" levels="1" name="Zombification">
 		<set name="icon" val="icon.skilltransform3"/>
@@ -147,6 +151,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1000"/>
 	</skill>
 	<skill id="23520" levels="1" name="Weaken Crystal">
 		<set name="icon" val="icon.skill1224"/>

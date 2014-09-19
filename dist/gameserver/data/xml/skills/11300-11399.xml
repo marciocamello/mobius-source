@@ -190,6 +190,9 @@
 				<mul order="0x30" stat="runSpd" val="1.34"/>
 			</effect>
 		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="3500"/>
+		<set name="reuseDelay" val="10000"/>
 	</skill>
 	<skill id="11309" levels="1" name="Mass Servitor Blessing">
 		<table name="#mpConsume2">70</table>

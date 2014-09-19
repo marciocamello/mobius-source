@@ -765,7 +765,7 @@
 		<set name="icon" val="icon.skill1334"/>
 		<set name="reuseDelay" val="5000"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="hitTime" val="6000"/>
+		<set name="hitTime" val="15000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -782,6 +782,7 @@
 			<table name="#exp">0.14 0.13 0.12 0.11 0.10 0.09 0.08 0.07 0.06 0.05 0.04 0.03 0.02 0.01 0</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant1>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="1335" levels="1" name="Balance Life">
 		<set name="magicType" val="MAGIC"/>
@@ -2336,7 +2337,7 @@
 		<set name="reuseDelay" val="75000"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="castRange" val="500"/>
-		<set name="hitTime" val="5000"/>
+		<set name="hitTime" val="1500"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -2377,7 +2378,7 @@
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="power" val="#power"/>
 		<set name="castRange" val="900"/>
-		<set name="hitTime" val="6000"/>
+		<set name="hitTime" val="2000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -2599,6 +2600,8 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="10000"/>
+		<set name="reuseDelay" val="600000"/>
 	</skill>
 	<skill id="1388" levels="3" name="Greater Might">
 		<table name="#pAtk">1.04 1.07 1.10</table>

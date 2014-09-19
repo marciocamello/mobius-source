@@ -56,31 +56,36 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="skillRadius" val="500"/>
 		<set name="power" val="999999"/>
-		<set name="hitTime" val="500"/>
+		<set name="hitTime" val="2500"/>
+		<set name="reuseDelay" val="10000"/>
 	</skill>
 	<skill id="6909" levels="1" name="Charming">
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="2700"/>
 	</skill>
 	<skill id="6910" levels="1" name="Dance">
 		<set name="icon" val="icon.skilltransform2"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4800"/>
 	</skill>
 	<skill id="6911" levels="1" name="Greeting">
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="3200"/>
 	</skill>
 	<skill id="6912" levels="1" name="Stigma Aftermath">
 		<set name="icon" val="icon.skill5860"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="1200"/>
 	</skill>
 	<skill id="6913" levels="1" name="Challenge of Faith">
 		<set name="icon" val="icon.skill0985"/>
@@ -96,6 +101,7 @@
 				<add order="0x40" stat="mDef" val="270"/>
 			</effect>
 		</for>
+		<set name="reuseDelay" val="60000"/>
 	</skill>
 	<skill id="6914" levels="10" name="Haste">
 		<set name="icon" val="icon.skill1086"/>
@@ -108,6 +114,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="1000"/>
 	</skill>
 	<skill id="6916" levels="1" name="Antharas' Cute Tricks">
 		<set name="magicType" val="SPECIAL"/>
@@ -128,12 +135,14 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="6918" levels="1" name="Kallesin's Splendor">
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="6919" levels="1" name="Challenge Acceptance">
 		<set name="icon" val="icon.skill0000"/>
@@ -174,5 +183,6 @@
 				<mul order="0x30" stat="pDef" val="0.77"/>
 			</effect>
 		</for>
+		<set name="castRange" val="500"/>
 	</skill>
 </list>

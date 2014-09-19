@@ -102,6 +102,7 @@
 		<for>
 			<effect abnormal="bleeding" count="20" name="Bleed" stackType="Bleed" stackOrder="6" time="1" val="#dot" chance="80"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6206" levels="19" name="Strider Fear">
 		<table name="#effectPoint">523 566 604 635 646 655 662 669 676 679 681 684 687 689 692 694 696 698 700</table>
@@ -636,24 +637,26 @@
 		<set name="power" val="2617"/>
 		<set name="magicLevel" val="84"/>
 		<set name="castRange" val="900"/>
-		<set name="hitTime" val="2500"/>
+		<set name="hitTime" val="10000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="123"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="30000"/>
 	</skill>
 	<skill id="6268" levels="1" name="Jump Attack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="2617"/>
 		<set name="magicLevel" val="84"/>
 		<set name="castRange" val="250"/>
-		<set name="hitTime" val="5000"/>
+		<set name="hitTime" val="3000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="164"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="6269" levels="1" name="Trojan Poison">
 		<set name="levelModifier" val="1"/>
@@ -1010,6 +1013,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="water"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6294" levels="1" name="Leader's Roar">
 		<set name="magicType" val="MAGIC"/>

@@ -127,6 +127,8 @@
 				<add order="0x40" stat="stunResist" val="100"/>
 			</effect>
 		</for>
+		<set name="hitTime" val="200"/>
+		<set name="reuseDelay" val="7200000"/>
 	</skill>
 	<skill id="13315" levels="1" name="Blessed Valakas' Necklace">
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00"/>
@@ -161,6 +163,8 @@
 				<add order="0x40" stat="rootResist" val="100"/>
 			</effect>
 		</for>
+		<set name="hitTime" val="200"/>
+		<set name="reuseDelay" val="7200000"/>
 	</skill>
 	<skill id="13317" levels="1" name="Earth Wyrm Heart Ring">
 		<set name="magicLvl" val="85"/>
@@ -356,7 +360,7 @@
 		<set name="isHandler" val="true"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="reuseDelay" val="3000"/>
+		<set name="reuseDelay" val="5000"/>
 		<set name="power" val="500000000"/>
 		<set name="magicLevel" val="1"/>
 		<set name="hitTime" val="200"/>

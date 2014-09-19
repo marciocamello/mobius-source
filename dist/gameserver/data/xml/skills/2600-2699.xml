@@ -69,6 +69,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2608" levels="3" name="Fantasy Red Crystal">
 		<table name="#item">13386 13387 13388</table>
@@ -326,6 +327,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2634" levels="1" name="Court Wizard's Blessing">
 		<set name="magicType" val="SPECIAL"/>
@@ -337,6 +339,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2635" levels="1" name="Blessing of Fire">
 		<set name="magicType" val="SPECIAL"/>
@@ -437,6 +440,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="2646" levels="1" name="Honey Wheat Cake">
 		<set name="magicType" val="SPECIAL"/>
@@ -445,6 +449,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="2647" levels="1" name="Energy Star Stone">
 		<set name="magicType" val="SPECIAL"/>

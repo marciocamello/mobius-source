@@ -65,6 +65,7 @@
 				<def name="negateCount" val="1"/>
 			</effect>
 		</for>
+		<set name="castRange" val="600"/>
 	</skill>
 	<skill id="11812" levels="1" name="Mark of Resurrection">
 		<set name="target" val="TARGET_PARTY"/>
@@ -74,6 +75,9 @@
 		<for>
 			<effect count="1" name="Salvation" stackOrder="0" stackType="Salvation" time="600" val="0"/>
 		</for>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="600000"/>
 	</skill>
 	<skill id="11813" levels="1" name="Mark of Total Resurrection">
 		<set name="target" val="TARGET_PARTY"/>
@@ -83,6 +87,8 @@
 		<for>
 			<effect count="1" name="Salvation" stackOrder="0" stackType="Salvation" time="600" val="0"/>
 		</for>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="600000"/>
 	</skill>
 	<skill id="11814" levels="8" name="Dark Force">
 		<table name="#power">95 97 99 102 105 108 110 113</table>
@@ -180,11 +186,15 @@
 			<table name="#power">125 126 127 129 130 132 133 135 136 138</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant5>
+		<set name="hitTime" val="3500"/>
+		<set name="reuseDelay" val="7000"/>
 	</skill>
 	<skill id="11818" levels="1" name="Price of Summoning">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="reuseDelay" val="8000"/>
 	</skill>
 	<skill id="11819" levels="1" name="Party Return">
 		<table name="#mpConsume2">90</table>
@@ -203,7 +213,7 @@
 	<skill id="11820" levels="1" name="Power of Saha">
 		<table name="#mpConsume2">70</table>
 		<table name="#time">1800</table>
-		<set name="reuseDelay" val="4000"/>
+		<set name="reuseDelay" val="2000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
@@ -227,7 +237,7 @@
 	<skill id="11821" levels="1" name="Critical of Saha">
 		<table name="#mpConsume2">70</table>
 		<table name="#time">1800</table>
-		<set name="reuseDelay" val="4000"/>
+		<set name="reuseDelay" val="2000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
@@ -252,7 +262,7 @@
 	<skill id="11822" levels="1" name="Force of Saha">
 		<table name="#mpConsume2">70</table>
 		<table name="#time">1800</table>
-		<set name="reuseDelay" val="4000"/>
+		<set name="reuseDelay" val="2000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
@@ -275,7 +285,7 @@
 	<skill id="11823" levels="1" name="Speed of Saha">
 		<table name="#mpConsume2">70</table>
 		<table name="#time">1800</table>
-		<set name="reuseDelay" val="4000"/>
+		<set name="reuseDelay" val="2000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
@@ -300,7 +310,7 @@
 	<skill id="11824" levels="1" name="Resistance of Saha">
 		<table name="#mpConsume2">70</table>
 		<table name="#time">1800</table>
-		<set name="reuseDelay" val="4000"/>
+		<set name="reuseDelay" val="2000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
@@ -324,7 +334,7 @@
 	<skill id="11825" levels="1" name="Clarity of Saha">
 		<table name="#mpConsume2">70</table>
 		<table name="#time">1800</table>
-		<set name="reuseDelay" val="4000"/>
+		<set name="reuseDelay" val="2000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
@@ -349,8 +359,8 @@
 	<skill id="11826" levels="1" name="Emblem of Salvation">
 		<table name="#mpConsume2">70</table>
 		<table name="#time">3600</table>
-		<set name="reuseDelay" val="4000"/>
-		<set name="hitTime" val="700"/>
+		<set name="reuseDelay" val="3600000"/>
+		<set name="hitTime" val="4000"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -371,6 +381,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for/>
+		<set name="reuseDelay" val="4000"/>
 	</skill>
 	<skill id="11828" levels="1" name="Progressive Heal">
 		<set name="magicType" val="MAGIC"/>

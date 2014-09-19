@@ -33,6 +33,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="902" levels="6" name="Bursting Flame">
 		<table name="#mpConsume2">72 73 74 74 75 75</table>
@@ -246,7 +247,7 @@
 		<set name="icon" val="icon.skill0912"/>
 		<set name="reuseDelay" val="45000"/>
 		<set name="magicLevel" val="81"/>
-		<set name="hitTime" val="6000"/>
+		<set name="hitTime" val="15000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="29"/>
 		<set name="mpConsume2" val="116"/>
@@ -541,6 +542,7 @@
 		<for>
 			<effect count="10" name="DamOverTime" time="1" val="#dmg"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="928" levels="1" name="Dual Blow">
 		<set name="icon" val="icon.skill0928_1"/>
@@ -564,6 +566,7 @@
 		<cond msgId="113" addName="1">
 			<using kind="Dual Dagger"/>
 		</cond>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="929" levels="1" name="Spirit of the Cat">
 		<set name="magicType" val="MAGIC"/>
@@ -850,6 +853,7 @@
 		<cond msgId="113" addName="1">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt"/>
 		</cond>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="948" levels="1" name="Eye for Eye">
 		<set name="icon" val="icon.skill0948"/>
@@ -893,6 +897,7 @@
 		<for>
 			<effect count="15" name="DamOverTime" time="1" val="92"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="950" levels="7" name="Nail Attack">
 		<table name="#mpConsume2">71 72 72 73 74 74 74</table>
@@ -972,12 +977,17 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1080"/>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="955" levels="1" name="Strider Dash">
 		<set name="icon" val="icon.skill000955"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="30000"/>
 	</skill>
 	<skill id="956" levels="3" name="Boost Morale">
 		<table name="#accCombat">4 6 8</table>
@@ -1030,6 +1040,7 @@
 			<using kind="Big Sword,Big Blunt"/>
 		</cond>
 		<for/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="958" levels="37" name="Triple Blade Slash">
 		<table name="#mpConsume2">58 59 59 61 62 64 65 67 69 70 71 73 73 75 76 77 79 80 81 83 84 85 86 88 89 90 91 92 93 94 95 96 96 97 98 99 99</table>
@@ -1054,6 +1065,7 @@
 			<using kind="Dual Sword"/>
 		</cond>
 		<for/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="959" levels="1" name="Frog Jump">
 		<set name="magicType" val="MAGIC"/>
@@ -1264,6 +1276,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="trait" val="SHOCK"/>
 		<set name="saveVs" val="CON"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="974" levels="7" name="Stun Shot">
 		<table name="#mpConsume2">107 111 111 112 112 112 112</table>
@@ -1465,6 +1478,7 @@
 		<for>
 			<effect count="1" name="Hate" time="0" val="#power"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="985" levels="1" name="Challenge for Fate">
 		<set name="icon" val="icon.skill0985"/>
@@ -1506,6 +1520,7 @@
 				<using kind="Bow, Crossbow, Fist, Dual Fist,"/>
 			</not>
 		</cond>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="987" levels="1" name="Multiple Shot">
 		<set name="icon" val="icon.skill0987"/>
@@ -1561,7 +1576,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="reuseDelay" val="5000"/>
+		<set name="reuseDelay" val="3000"/>
 		<set name="hitTime" val="2500"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="30"/>
@@ -1667,6 +1682,8 @@
 				<using kind="Bow, Crossbow"/>
 			</not>
 		</cond>
+		<set name="hitTime" val="800"/>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="995" levels="1" name="Rush Impact">
 		<set name="icon" val="icon.skill0793"/>
@@ -1692,6 +1709,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="hitTime" val="800"/>
 	</skill>
 	<skill id="996" levels="1" name="Disarm">
 		<set name="icon" val="icon.skill0485"/>
@@ -1706,6 +1724,9 @@
 				<mul order="0x90" stat="pAtk" val="0.3"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="8000"/>
 	</skill>
 	<skill id="997" levels="25" name="Crushing Strike">
 		<table name="#power">1041 1240 1464 1714 1990 2290 2614 2840 3075 3316 3563 3813 4065 4316 4566 4689 4811 4931 5050 5166 5280 5390 5498 5603 5704</table>
@@ -1732,6 +1753,7 @@
 				<mul order="0x30" stat="mDef" val="0.9"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="998" levels="1" name="Blazing Boost">
 		<set name="icon" val="icon.skill0998"/>

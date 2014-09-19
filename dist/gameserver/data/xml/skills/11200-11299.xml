@@ -50,10 +50,10 @@
 	<skill id="11241" levels="1" name="Shadow Snare">
 		<table name="#activateRate">100</table>
 		<set name="coolTime" val="733"/>
-		<set name="reuseDelay" val="17000"/>
+		<set name="reuseDelay" val="15000"/>
 		<set name="power" val="3925"/>
 		<set name="magicLevel" val="80"/>
-		<set name="hitTime" val="1067"/>
+		<set name="hitTime" val="1000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="322"/>
 		<set name="target" val="TARGET_AREA"/>
@@ -62,6 +62,7 @@
 		<set name="skillType" val="DEBUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="11242" levels="1" name="Shadow Snare Zone">
 		<table name="#power">126 130 140 146</table>
@@ -108,10 +109,10 @@
 		<for/>
 	</skill>
 	<skill id="11247" levels="1" name="">
-		<set name="reuseDelay" val="10000"/>
-		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="3000"/>
+		<set name="hitTime" val="3380"/>
 		<set name="mpConsume2" val="40"/>
-		<set name="castRange" val="700"/>
+		<set name="castRange" val="900"/>
 		<set name="power" val="230"/>
 		<set name="magicLevel" val="85"/>
 		<set name="coolTime" val="300"/>
@@ -149,10 +150,10 @@
 		</for>
 	</skill>
 	<skill id="11249" levels="1" name="">
-		<set name="reuseDelay" val="10000"/>
-		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="3000"/>
+		<set name="hitTime" val="3700"/>
 		<set name="mpConsume2" val="40"/>
-		<set name="castRange" val="700"/>
+		<set name="castRange" val="900"/>
 		<set name="power" val="230"/>
 		<set name="magicLevel" val="85"/>
 		<set name="coolTime" val="300"/>
@@ -359,7 +360,7 @@
 		<table name="#mpConsume2">54 58 62 66 70 74 78 82</table>
 		<table name="#activateRate">80 81 82 83 84 85 86 87</table>
 		<set name="activateRate" val="#activateRate"/>
-		<set name="reuseDelay" val="3000"/>
+		<set name="reuseDelay" val="30000"/>
 		<set name="hitTime" val="1200"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
@@ -405,7 +406,7 @@
 		<table name="#activateRate">80 81 82 83 84</table>
 		<set name="activateRate" val="#activateRate"/>
 		<set name="reuseDelay" val="3000"/>
-		<set name="hitTime" val="1200"/>
+		<set name="hitTime" val="1490"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="relationSkillsId" val="1168;"/>
 		<set name="castRange" val="600"/>
@@ -535,7 +536,7 @@
 		<table name="#element">none</table>
 		<set name="powerPvP" val="#powerPvP"/>
 		<set name="reuseDelay" val="30000"/>
-		<set name="hitTime" val="1500"/>
+		<set name="hitTime" val="2560"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
 		<set name="magicLevel" val="#magicLevel"/>
@@ -641,6 +642,7 @@
 		<set name="skillRadius" val="-2"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 		<for/>
+		<set name="castRange" val="-2"/>
 	</skill>
 	<skill id="11266" levels="1" name="Summon Death Gate">
 		<set name="lifeTime" val="30"/>
@@ -653,6 +655,8 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="addSkills" val="11289;1"/>
 		<set name="npcId" val="14927"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="5000"/>
 	</skill>
 	<skill id="11267" levels="3" name="Spirit of Naviarope">
 		<set name="magicType" val="SPECIAL"/>
@@ -675,13 +679,15 @@
 		<for>
 			<effect count="1" name="Transformation" time="#time" val="509"/>
 		</for>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="2500"/>
 	</skill>
 	<skill id="11268" levels="8" name="Summon Avenging Cubic">
 		<table name="#magicLevel">85 86 87 89 92 93 95 98</table>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="5000"/>
-		<set name="hitTime" val="6000"/>
+		<set name="hitTime" val="1500"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="15"/>
 		<set name="mpConsume2" val="58"/>
@@ -805,6 +811,8 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant2>
 		<for/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="1200"/>
 	</skill>
 	<skill id="11273" levels="5" name="Exile">
 		<table name="#effectPoint">828 877 921 958 987</table>
@@ -852,7 +860,7 @@
 		<table name="#reuseDelay">300000</table>
 		<table name="#healhp">0</table>
 		<table name="#healmp">0</table>
-		<set name="hitTime" val="1700"/>
+		<set name="hitTime" val="1500"/>
 		<set name="reuseDelay" val="#reuseDelay"/>
 		<set name="magicLvl" val="#magicLevel"/>
 		<set name="mpConsume1" val="8"/>
@@ -897,6 +905,8 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="target" val="TARGET_SELF"/>
 		<for/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="2500"/>
 	</skill>
 	<skill id="11276" levels="3" name="Dimensional Binding">
 		<table name="#magicLevel">85 86 87</table>
@@ -944,6 +954,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="target" val="TARGET_SELF"/>
 		<for/>
+		<set name="castRange" val="400"/>
 	</skill>
 	<skill id="11278" levels="9" name="Bear Claw">
 		<table name="#magicLevel">85 86 87 88 89 90 91 92 93</table>
@@ -1020,7 +1031,7 @@
 		<table name="#mpConsume2">111 114 118 122 126 130 134</table>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="reuseDelay" val="7000"/>
-		<set name="hitTime" val="700"/>
+		<set name="hitTime" val="660"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="coolTime" val="500"/>
 		<set name="flyType" val="DUMMY"/>
@@ -1056,7 +1067,7 @@
 		<set name="reuseDelay" val="5000"/>
 		<set name="power" val="#power"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="castRange" val="500"/>
+		<set name="castRange" val="900"/>
 		<set name="hitTime" val="2560"/>
 		<set name="coolTime" val="500"/>
 		<set name="hitCancelTime" val="500"/>
@@ -1104,18 +1115,22 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="target" val="TARGET_SELF"/>
 		<for/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1760"/>
 	</skill>
 	<skill id="11285" levels="4" name="Naviarope Power">
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="target" val="TARGET_SELF"/>
 		<for/>
+		<set name="hitTime" val="1760"/>
 	</skill>
 	<skill id="11286" levels="1" name="Forced Summon">
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="target" val="TARGET_SELF"/>
 		<for/>
+		<set name="hitTime" val="1000"/>
 	</skill>
 	<skill id="11287" levels="1" name="Superior Resistance">
 		<set name="magicLevel" val="85"/>
@@ -1192,18 +1207,22 @@
 		<for>
 			<effect count="1" name="Root" stackOrder="-1" stackType="Root" time="15" val="0"/>
 		</for>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="11290" levels="1" name="Summon Hodling">
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="target" val="TARGET_SELF"/>
 		<for/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="11291" levels="1" name="Gate Vortex">
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="target" val="TARGET_SELF"/>
 		<for/>
+		<set name="hitTime" val="1200"/>
 	</skill>
 	<skill id="11292" levels="8" name="Cubic Cleanse">
 		<table name="#magicLevel">85 86 87 89 92 93 95 98</table>
@@ -1214,7 +1233,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isOffensive" val="false"/>
 		<set name="effectPoint" val="408"/>
-		<set name="castRange" val="1000"/>
+		<set name="castRange" val="600"/>
 		<set name="hitTime" val="3000"/>
 		<set name="useSS" val="false"/>
 		<set name="isHideUseMessage" val="true"/>
@@ -1234,7 +1253,7 @@
 		<set name="skillType" val="DEBUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isOffensive" val="true"/>
-		<set name="castRange" val="1000"/>
+		<set name="castRange" val="600"/>
 		<set name="hitTime" val="3000"/>
 		<set name="useSS" val="false"/>
 		<set name="isHideUseMessage" val="true"/>
@@ -1255,7 +1274,7 @@
 		<set name="skillType" val="ROOT"/>
 		<set name="trait" val="HOLD"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="1000"/>
+		<set name="castRange" val="600"/>
 		<set name="hitTime" val="3000"/>
 		<set name="useSS" val="false"/>
 		<set name="isHideUseMessage" val="true"/>
@@ -1369,7 +1388,7 @@
 		<set name="reuseDelay" val="5000"/>
 		<set name="hitTime" val="3360"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
-		<set name="castRange" val="600"/>
+		<set name="castRange" val="900"/>
 		<set name="relationSkillsId" val="1148;1530;"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="effectPoint" val="#effectPoint"/>
@@ -1440,7 +1459,7 @@
 		<set name="skillRadius" val="1000"/>
 		<set name="effectPoint" val="398"/>
 		<set name="reuseDelay" val="30000"/>
-		<set name="hitTime" val="5200"/>
+		<set name="hitTime" val="5000"/>
 		<set name="magicLvl" val="91"/>
 		<set name="skillType" val="BALANCE"/>
 		<set name="magicType" val="MAGIC"/>
@@ -1449,5 +1468,6 @@
 		<enchant1 levels="10" name="Cost">
 			<table name="#mpConsume2">60 57 55 52 50 47 45 42 40 37</table>
 		</enchant1>
+		<set name="castRange" val="900"/>
 	</skill>
 </list>

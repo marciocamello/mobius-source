@@ -47,6 +47,8 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="100"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22408" levels="1" name="Enchanting Tool Box">
 		<set name="icon" val="icon.skill0000"/>

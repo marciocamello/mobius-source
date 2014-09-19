@@ -24,6 +24,8 @@
 				<player damage="100;0"/>
 			</trigger>
 		</triggers>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="10499" levels="1" name="">
 		<set name="reuseDelay" val="10000"/>

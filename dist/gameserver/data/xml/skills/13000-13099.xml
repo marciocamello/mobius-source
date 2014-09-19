@@ -7,6 +7,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
 	</skill>
 	<skill id="13001" levels="4" name="Vesper Heavy Armor Set">
 		<table name="#Resist">0 0 0 70</table>

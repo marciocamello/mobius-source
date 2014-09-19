@@ -584,6 +584,8 @@
 		<for>
 			<effect count="1" name="Vitality" stackType="vitalityRegen" stackOrder="1" time="1800" val="0" />
 		</for>
+		<set name="hitTime" val="200"/>
+		<set name="reuseDelay" val="259200000"/>
 	</skill>
 	<skill id="22587" levels="4" name="Drop Rate Rune">
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up"/>

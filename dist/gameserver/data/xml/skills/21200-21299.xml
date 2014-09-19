@@ -5,12 +5,16 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="7200000"/>
 	</skill>
 	<skill id="21201" levels="1" name="Haste">
 		<set name="icon" val="BranchSys2.icon.br_dragonboat_cap_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="21202" levels="1" name="Release Agathion's Seal - Ball Trapping Gnosian">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
@@ -329,66 +333,89 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="43200000"/>
 	</skill>
 	<skill id="21222" levels="1" name="Elemental Resistance">
 		<set name="icon" val="BranchSys2.icon.br_polar_bear_cap_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="14400000"/>
 	</skill>
 	<skill id="21223" levels="1" name="Ultimate Defense">
 		<set name="icon" val="BranchSys2.icon.br_polar_bear_wp_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="21224" levels="1" name="Great Adventurer's Soul Power">
 		<set name="icon" val="BranchSys2.icon.br_stagbeetle_cap_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="21225" levels="1" name="Brave Warrior's Soul Power">
 		<set name="icon" val="BranchSys2.icon.br_hornbeetle_cap_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="21226" levels="1" name="Great Wizard's Soul Power">
 		<set name="icon" val="BranchSys2.icon.br_ladybug_cap_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="21227" levels="1" name="Great Adventurer's Soul Power">
 		<set name="icon" val="BranchSys2.icon.br_mantis_cap_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="21228" levels="1" name="Brave Warrior's Soul Power">
 		<set name="icon" val="BranchSys2.icon.br_locust_cap_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="21229" levels="1" name="Blood Awakening">
 		<set name="icon" val="BranchSys2.icon.br_close_helmet_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="14400000"/>
 	</skill>
 	<skill id="21230" levels="1" name="Improve Magic">
 		<set name="icon" val="BranchSys2.icon.br_navy_cap_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="14400000"/>
 	</skill>
 	<skill id="21231" levels="1" name="Improve Critical Attack">
 		<set name="icon" val="BranchSys2.icon.br_gold_eyeglass_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="14400000"/>
 	</skill>
 	<skill id="21232" levels="1" name="Shiny Platform">
 		<set name="icon" val="icon.skilltransform3"/>
@@ -401,6 +428,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="21234" levels="1" name="Release Agathion's Seal - Zaken's Spirit Swords">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
@@ -441,7 +469,7 @@
 		<set name="icon" val="BranchSys2.icon.7anni_shirt_i00"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="reuseDelay" val="72000000"/>
-		<set name="hitTime" val="200"/>
+		<set name="hitTime" val="1000"/>
 		<set name="magicLevel" val="1"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -460,12 +488,14 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="21240" levels="1" name="Release Agathion's Seal - Makeshift Bat">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="21241" levels="1" name="Magic Glasses">
 		<set name="icon" val="BranchSys.icon.br_Eye_Glasses_i00"/>
@@ -476,7 +506,7 @@
 	<skill id="21242" levels="1" name="Zaken's Call">
 		<set name="icon" val="BranchSys2.Icon.br_zaken_cloak_i00"/>
 		<set name="magicLevel" val="1"/>
-		<set name="hitTime" val="20000"/>
+		<set name="hitTime" val="10000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="RECALL"/>
@@ -489,7 +519,7 @@
 	<skill id="21243" levels="1" name="Freya's Call">
 		<set name="icon" val="BranchSys2.Icon.br_freya_cloak_i00"/>
 		<set name="magicLevel" val="1"/>
-		<set name="hitTime" val="20000"/>
+		<set name="hitTime" val="10000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="RECALL"/>
@@ -502,7 +532,7 @@
 	<skill id="21244" levels="1" name="Frintezza's Call">
 		<set name="icon" val="BranchSys2.Icon.br_frintessa_cloak_i00"/>
 		<set name="magicLevel" val="1"/>
-		<set name="hitTime" val="20000"/>
+		<set name="hitTime" val="10000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="RECALL"/>
@@ -517,30 +547,35 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="21246" levels="1" name="Rudolph's Vitality">
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="1800000"/>
 	</skill>
 	<skill id="21247" levels="1" name="Santa Claus' Gift">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="-1000"/>
 	</skill>
 	<skill id="21248" levels="1" name="Release Agathion's Seal - Zinyanzi">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="21249" levels="1" name="Release Agathion's Seal - Yanzi">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="21250" levels="1" name="Academy Circlet">
 		<set name="icon" val="icon.accessory_academy_i00"/>
@@ -563,6 +598,8 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="1200000"/>
 	</skill>
 	<skill id="21252" levels="1" name="Hellblade">
 		<set name="icon" val="null"/>
@@ -643,12 +680,14 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="21260" levels="1" name="Notifier">
 		<set name="icon" val="icon.skill5239"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="15000"/>
 	</skill>
 	<skill id="21261" levels="1" name="Bad Bunny's Necklace">
 		<set name="icon" val="branchsys2.icon2.g_accessory_event_necklace"/>
@@ -694,24 +733,32 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="-2"/>
+		<set name="hitTime" val="10000"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="21265" levels="1" name="Summon Friend">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="-2"/>
+		<set name="hitTime" val="10000"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="21266" levels="1" name="Release Agathion's Seal - Juju">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="21267" levels="1" name="Notifier">
 		<set name="icon" val="icon.skill5239"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="15000"/>
 	</skill>
 	<skill id="21270" levels="1" name="Ride Tame Princess Ant">
 		<set name="target" val="TARGET_SELF"/>
@@ -757,5 +804,6 @@
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="136"/>
 		</for>
+		<set name="hitTime" val="3000"/>
 	</skill>
 </list>

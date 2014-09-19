@@ -374,12 +374,18 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="2000"/>
+		<set name="hitTime" val="100"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="6627" levels="1" name="Superior Energy of Life">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="2000"/>
+		<set name="hitTime" val="100"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="6628" levels="1" name="Energy of Mana">
 		<set name="magicType" val="SPECIAL"/>
@@ -398,12 +404,18 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="2000"/>
+		<set name="hitTime" val="100"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="6630" levels="1" name="Superior Energy of Mana">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="2000"/>
+		<set name="hitTime" val="100"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="6631" levels="1" name="Energy of Power">
 		<set name="magicType" val="SPECIAL"/>
@@ -1204,6 +1216,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6694" levels="12" name="Power Strike">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -1217,6 +1230,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6695" levels="12" name="Spinning Slasher">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -1267,5 +1281,6 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="7000"/>
 	</skill>
 </list>

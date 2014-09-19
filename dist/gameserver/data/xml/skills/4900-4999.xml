@@ -675,6 +675,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4994" levels="1" name="Venom Storm">
 		<set name="icon" val="icon.skill0000"/>

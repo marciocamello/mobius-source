@@ -1002,6 +1002,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="9159" levels="1" name="Transformation Scroll: Anakim">
 		<set name="magicType" val="SPECIAL"/>
@@ -1100,6 +1101,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="reuseDelay" val="10000"/>
 	</skill>
 	<skill id="9166" levels="1" name="Vitality Recovering Potion">
 		<set name="magicType" val="SPECIAL"/>
@@ -1152,36 +1154,42 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="9174" levels="1" name="Scroll: 50,000 SP">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="9175" levels="1" name="Scroll: 100,000 SP">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="9176" levels="1" name="Provided gift of cheers">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="9177" levels="1" name="Olympiad Reward Box">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="9178" levels="1" name="Theodric's Box">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="9179" levels="1" name="Antharas' Blood Crystal">
 		<set name="magicType" val="MAGIC"/>
@@ -1194,12 +1202,14 @@
 		<set name="target" val="TARGET_COMMCHANNEL"/>
 		<set name="skillType" val="RESURRECT"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="9180" levels="2" name="Scroll: 1,000,000 SP">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="9181" levels="1" name="XP Buff 50% (4-hour)">
 		<set name="icon" val="icon.etc_dragons_blood_i03"/>
@@ -1218,12 +1228,14 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="9184" levels="1" name="Freya's Refreshing Breeze (4-hour) (Event)">
 		<set name="icon" val="icon.etc_I.etc_hot_spring_mineral_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="9185" levels="1" name="Scroll: Enchant Weapon (R-grade)">
 		<set name="magicType" val="SPECIAL"/>
@@ -1287,6 +1299,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
+		<set name="hitTime" val="20000"/>
 	</skill>
 	<skill id="9192" levels="1" name="Scroll of Escape: Tower of Insolence">
 		<set name="magicType" val="SPECIAL"/>
@@ -1296,6 +1309,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
+		<set name="hitTime" val="20000"/>
 	</skill>
 	<skill id="9193" levels="1" name="Soulshot (R-grade)">
 		<set name="magicType" val="SPECIAL"/>

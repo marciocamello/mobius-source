@@ -442,6 +442,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="-2"/>
 	</skill>
 	<skill id="8330" levels="1" name="Release Agathion's Seal - Dawn">
 		<set name="magicType" val="SPECIAL"/>

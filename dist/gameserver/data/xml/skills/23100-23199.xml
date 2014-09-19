@@ -1031,6 +1031,7 @@
 				<mul order="0x30" stat="mpDanceConsume" val="0.85"/>
 			</effect>
 		</for>
+		<set name="reuseDelay" val="2400000"/>
 	</skill>
 	<skill id="23169" levels="1" name="Mesmerized">
 		<set name="magicType" val="MAGIC"/>

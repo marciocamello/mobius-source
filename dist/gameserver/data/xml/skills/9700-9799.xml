@@ -149,6 +149,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="-1000"/>
 	</skill>
 	<skill id="9725" levels="1" name="Extra Pass: Kartia's Labyrinth Level 85 Solo">
 		<set name="icon" val="icon.skill0000"/>

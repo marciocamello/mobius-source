@@ -83,6 +83,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="-2"/>
 	</skill>
 	<skill id="8511" levels="1" name="Blessing of Victory">
 		<set name="icon" val="BranchSys2.icon.br_worldcup_hair_i02"/>
@@ -95,54 +96,63 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="8513" levels="1" name="Olympic Athlete's Spell of Blessing">
 		<set name="icon" val="BranchSys2.icon.br_spell_of_blessing_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="8514" levels="1" name="Olympic Athlete's Energy of Victory">
 		<set name="icon" val="BranchSys2.icon.br_obsession_of_winning_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="8515" levels="1" name="Release Agathion's Seal - Ball Trapping Gnosian">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="8516" levels="1" name="Release Agathion's Seal - Ball Trapping Orodriel">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="8517" levels="1" name="Release Agathion's Seal - Penalty Kick">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="8518" levels="1" name="Notifier">
 		<set name="icon" val="icon.skill5239"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="15000"/>
 	</skill>
 	<skill id="8519" levels="1" name="Notifier">
 		<set name="icon" val="icon.skill5239"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="15000"/>
 	</skill>
 	<skill id="8520" levels="1" name="Notifier">
 		<set name="icon" val="icon.skill5239"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="15000"/>
 	</skill>
 	<skill id="8521" levels="1" name="Release Agathion's Seal - Antharas">
 		<set name="magicType" val="SPECIAL"/>
@@ -167,12 +177,14 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="8523" levels="1" name="Release Agathion's Seal - Guardian of Dawn Kallesin">
 		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="8524" levels="1" name="Hero's Holy Attack">
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00"/>

@@ -103,11 +103,15 @@
 				<mul order="0x30" stat="regCp" val="#regCp"/>
 			</effect>
 		</for>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1800000"/>
 	</skill>
 	<skill id="9367" levels="2" name="Power of Pa'agrio">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1800000"/>
 	</skill>
 	<skill id="9369" levels="2" name="Power of Maphr">
 		<set name="target" val="TARGET_NONE"/>
@@ -118,6 +122,8 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="1800000"/>
 	</skill>
 	<skill id="9372" levels="1" name="Sayha's Portal">
 		<set name="target" val="TARGET_NONE"/>
@@ -128,6 +134,8 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="60000"/>
 	</skill>
 	<skill id="9376" levels="1" name="Mentor's Knight's Harmony">
 		<table name="#abnormal_time">120000</table>
@@ -136,9 +144,9 @@
 		<table name="#magicLevel">1</table>
 		<table name="#abnormal_lvl">2</table>
 		<set name="magicType" val="MAGIC"/>
-		<set name="reuseDelay" val="15000"/>
+		<set name="reuseDelay" val="2000"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="hitTime" val="2500"/>
+		<set name="hitTime" val="700"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -155,6 +163,7 @@
 				<mul order="0x30" stat="rCrit" val="2"/>
 			</effect>
 		</for>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="9377" levels="1" name="Mentor's Wizard's Harmony">
 		<table name="#abnormal_time">120000</table>
@@ -163,9 +172,9 @@
 		<table name="#magicLevel">1</table>
 		<table name="#abnormal_lvl">2</table>
 		<set name="magicType" val="MAGIC"/>
-		<set name="reuseDelay" val="15000"/>
+		<set name="reuseDelay" val="2000"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="hitTime" val="2500"/>
+		<set name="hitTime" val="700"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -190,6 +199,7 @@
 				<mul order="0x30" stat="mReuse" val="0.80"/>
 			</effect>
 		</for>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="9378" levels="1" name="Mentor's Warrior's Harmony">
 		<table name="#abnormal_time">120000</table>
@@ -198,9 +208,9 @@
 		<table name="#magicLevel">1</table>
 		<table name="#abnormal_lvl">2</table>
 		<set name="magicType" val="MAGIC"/>
-		<set name="reuseDelay" val="5000"/>
+		<set name="reuseDelay" val="2000"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="hitTime" val="2500"/>
+		<set name="hitTime" val="700"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -221,22 +231,24 @@
 				<sub order="0x40" stat="pSkillEvasion" val="4"/>
 			</effect>
 		</for>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="9379" levels="1" name="Mentee's Mentor Summon">
-		<set name="reuseDelay" val="36000"/>
+		<set name="reuseDelay" val="600000"/>
 		<set name="magicLevel" val="40"/>
-		<set name="hitTime" val="10000"/>
+		<set name="hitTime" val="15000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SUMMON_MENTOR"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="10000"/>
 		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="castRange" val="-2"/>
 	</skill>
 	<skill id="9399" levels="1" name="Fearsome Firecracker">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="reuseDelay" val="1500"/>
+		<set name="reuseDelay" val="1000"/>
 		<set name="magicLevel" val="1"/>
 		<set name="itemConsumeId" val="34761"/>
 		<set name="itemConsumeCount" val="1"/>
@@ -244,5 +256,6 @@
 		<set name="skillType" val="HOT"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
+		<set name="castRange" val="75"/>
 	</skill>
 </list>

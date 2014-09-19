@@ -121,6 +121,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="809" levels="1" name="Golem Tornado Swing">
 		<set name="icon" val="icon.skill_transform_s_attack"/>
@@ -300,6 +301,7 @@
 		<cond msgId="113" addName="1">
 			<using kind="Big Sword, Big Blunt"/>
 		</cond>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="817" levels="43" name="Double Attack">
 		<table name="#mpConsume2">41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83</table>
@@ -323,6 +325,7 @@
 		<cond msgId="113" addName="1">
 			<using kind="Dual Sword"/>
 		</cond>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="818" levels="1" name="Evasion Counter">
 		<set name="icon" val="icon.skill0818"/>
@@ -394,6 +397,7 @@
 		<cond msgId="144">
 			<target race="MagicCreatures"/>
 		</cond>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="823" levels="3" name="Strengthen Golem">
 		<table name="#Tab-pAtk">1.08 1.12 1.15</table>
@@ -422,6 +426,7 @@
 				<mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="824" levels="3" name="Golem Reinforcement">
 		<table name="#Tab-pDef">1.08 1.12 1.15</table>
@@ -450,6 +455,7 @@
 				<mul order="0x30" stat="pDef" val="#Tab-pDef"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="825" levels="1" name="Sharpen Edge">
 		<set name="icon" val="icon.skill0825"/>
@@ -600,7 +606,7 @@
 		<set name="icon" val="icon.skill0831"/>
 		<set name="reuseDelay" val="75000"/>
 		<set name="magicLevel" val="52"/>
-		<set name="hitTime" val="6000"/>
+		<set name="hitTime" val="15000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="122"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -683,6 +689,7 @@
 		<for>
 			<effect count="10" name="ManaDamOverTime" time="1" val="#dmg"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="836" levels="3" name="Oblivion Trap">
 		<table name="#level">1 2 3</table>
@@ -728,7 +735,7 @@
 	</skill>
 	<skill id="839" levels="1" name="Dismount">
 		<set name="icon" val="icon.skilltransform2"/>
-		<set name="hitTime" val="500"/>
+		<set name="hitTime" val="2500"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="TRANSFORMATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -1130,6 +1137,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="870" levels="1" name="Royal Guard Captain Power Strike">
 		<set name="icon" val="icon.skill0003"/>
@@ -1142,6 +1150,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="871" levels="1" name="Might">
 		<set name="magicType" val="MAGIC"/>
@@ -1224,6 +1233,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="877" levels="1" name="Centurion Disarm">
 		<set name="levelModifier" val="1"/>
@@ -1237,6 +1247,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="saveVs" val="STR"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="878" levels="1" name="Knight Captain Power Strike">
 		<set name="icon" val="icon.skill0003"/>
@@ -1249,6 +1260,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="879" levels="1" name="Knight Captain Curse Fear">
 		<set name="levelModifier" val="1"/>
@@ -1569,6 +1581,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="897" levels="6" name="Double Blast">
 		<table name="#mpConsume2">72 73 74 74 75 75</table>

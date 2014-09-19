@@ -4,11 +4,17 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1080"/>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="19002" levels="1" name="Anchor">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="19003" levels="5" name="Clan Resistance Hall">
 		<table name="#Def">3 4 5 6 7</table>
@@ -72,12 +78,15 @@
 		<set name="isReuseDelayPermanent" val="true"/>
 		<set name="itemConsumeId" val="1785"/>
 		<set name="itemConsumeCount" val="10"/>
+		<set name="castRange" val="-2"/>
 	</skill>
 	<skill id="19008" levels="1" name="Clan Guardian">
 		<set name="isClanSkill" val="true"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="43200000"/>
 	</skill>
 	<skill id="19009" levels="1" name="Clan Advent">
 		<set name="magicType" val="MAGIC"/>
@@ -100,8 +109,8 @@
 	<skill id="19010" levels="1" name="Clan Copy">
 		<set name="isClanSkill" val="true"/>
 		<table name="#mpConsume2">65</table>
-		<set name="reuseDelay" val="14400000"/>
-		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="43200000"/>
+		<set name="hitTime" val="2000"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -125,6 +134,8 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="14400000"/>
 	</skill>
 	<skill id="19013" levels="1" name="Clan Un-debuff">
 		<set name="isClanSkill" val="true"/>
@@ -225,6 +236,8 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="19034" levels="1" name="Imprint of Light">
 		<set name="reuseDelay" val="5000"/>
@@ -355,7 +368,7 @@
 		<set name="skillType" val="RECALL"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="castle" val="true"/>
-		<set name="reuseDelay" val="1800000"/>
+		<set name="reuseDelay" val="3600000"/>
 		<set name="hitTime" val="20000"/>
 		<set name="isHandler" val="true"/>
 		<set name="hitCancelTime" val="500"/>
@@ -369,7 +382,7 @@
 		<set name="skillType" val="RECALL"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="castle" val="true"/>
-		<set name="reuseDelay" val="1800000"/>
+		<set name="reuseDelay" val="3600000"/>
 		<set name="hitTime" val="200"/>
 		<set name="isHandler" val="true"/>
 		<set name="hitCancelTime" val="100"/>
@@ -419,6 +432,7 @@
 		<for>
 			<effect name="Transformation" time="300" val="508" count="1"/>
 		</for>
+		<set name="hitTime" val="1000"/>
 	</skill>
 	<skill id="19081" levels="1" name="Tyrr Ixion">
 		<set name="magicType" val="SPECIAL"/>
@@ -435,6 +449,7 @@
 		<for>
 			<effect name="Transformation" count="1" time="300" val="510"/>
 		</for>
+		<set name="hitTime" val="1000"/>
 	</skill>
 	<skill id="19082" levels="1" name="Othell Ixion">
 		<set name="magicType" val="SPECIAL"/>
@@ -451,6 +466,7 @@
 		<for>
 			<effect name="Transformation" count="1" time="300" val="511"/>
 		</for>
+		<set name="hitTime" val="1000"/>
 	</skill>
 	<skill id="19083" levels="1" name="Yul Ixion">
 		<set name="magicType" val="SPECIAL"/>
@@ -467,6 +483,7 @@
 		<for>
 			<effect name="Transformation" count="1" time="300" val="512"/>
 		</for>
+		<set name="hitTime" val="1000"/>
 	</skill>
 	<skill id="19084" levels="1" name="Feoh Ixion">
 		<set name="magicType" val="SPECIAL"/>
@@ -483,6 +500,7 @@
 		<for>
 			<effect name="Transformation" count="1" time="300" val="513"/>
 		</for>
+		<set name="hitTime" val="1000"/>
 	</skill>
 	<skill id="19085" levels="1" name="Iss Ixion">
 		<set name="magicType" val="SPECIAL"/>
@@ -499,6 +517,7 @@
 		<for>
 			<effect name="Transformation" count="1" time="300" val="514"/>
 		</for>
+		<set name="hitTime" val="1000"/>
 	</skill>
 	<skill id="19086" levels="1" name="Wynn Ixion">
 		<set name="magicType" val="SPECIAL"/>
@@ -515,6 +534,7 @@
 		<for>
 			<effect name="Transformation" count="1" time="300" val="515"/>
 		</for>
+		<set name="hitTime" val="1000"/>
 	</skill>
 	<skill id="19087" levels="1" name="Aeore Ixion">
 		<set name="magicType" val="SPECIAL"/>
@@ -531,6 +551,7 @@
 		<for>
 			<effect name="Transformation" count="1" time="300" val="516"/>
 		</for>
+		<set name="hitTime" val="1000"/>
 	</skill>
 	<skill id="19088" levels="4" name="Summon Siege Golem">
 		<table name="#npcId">15054 15055 15056 15057</table>
@@ -573,7 +594,7 @@
 		<set name="itemConsumeId" val="17371"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="reuseDelay" val="7200000"/>
-		<set name="hitTime" val="180000"/>
+		<set name="hitTime" val="10000"/>
 		<set name="skillType" val="SUMMON"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="lifeTime" val="1200000"/>
@@ -587,36 +608,49 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2000"/>
 	</skill>
 	<skill id="19093" levels="1" name="Added Blow Quiver">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="30000"/>
 	</skill>
 	<skill id="19094" levels="1" name="Increased Damage Quiver">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="30000"/>
 	</skill>
 	<skill id="19095" levels="1" name="Added Bleed Quiver">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="30000"/>
 	</skill>
 	<skill id="19096" levels="1" name="Added Blow">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="19097" levels="1" name="Critical Target">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="reuseDelay" val="10000"/>
 	</skill>
 	<skill id="19098" levels="1" name="Bleed Target">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="reuseDelay" val="10000"/>
 	</skill>
 	<skill id="19099" levels="1" name="GM's Authority">
 		<set name="power" val="99999"/>
@@ -629,5 +663,7 @@
 				<set order="0x80" stat="regHp" val="0"/>
 			</effect>
 		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
 	</skill>
 </list>

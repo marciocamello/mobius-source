@@ -212,7 +212,7 @@
 		</for>
 	</skill>
 	<skill id="11759" levels="1" name="Celestial Party Protection">
-		<set name="reuseDelay" val="1200000"/>
+		<set name="reuseDelay" val="120000"/>
 		<set name="hitTime" val="500"/>
 		<set name="magicLevel" val="87"/>
 		<set name="magicType" val="MAGIC"/>
@@ -385,9 +385,9 @@
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
 		<table name="#powerPvP">0</table>
-		<set name="reuseDelay" val="2000"/>
+		<set name="reuseDelay" val="2400"/>
 		<set name="coolTime" val="500"/>
-		<set name="hitTime" val="2280"/>
+		<set name="hitTime" val="3500"/>
 		<set name="powerPvP" val="#powerPvP"/>
 		<set name="elementPower" val="#elementPower"/>
 		<set name="element" val="#element"/>
@@ -424,6 +424,7 @@
 			<table name="#power">156 158 159 161 163 165 167 169 170 172</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant5>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="11767" levels="8" name="Mass Dark Veil">
 		<table name="#magicLevel">85 86 87 88 89 90 91 92</table>
@@ -431,9 +432,9 @@
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
 		<table name="#powerPvP">0</table>
-		<set name="reuseDelay" val="6700"/>
+		<set name="reuseDelay" val="15000"/>
 		<set name="coolTime" val="500"/>
-		<set name="hitTime" val="3780"/>
+		<set name="hitTime" val="5500"/>
 		<set name="powerPvP" val="#powerPvP"/>
 		<set name="elementPower" val="#elementPower"/>
 		<set name="element" val="#element"/>
@@ -470,12 +471,13 @@
 			<table name="#power">143 144 146 148 150 151 153 155 156 158</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant5>
+		<set name="castRange" val="600"/>
 	</skill>
 	<skill id="11768" levels="1" name="Rebirth">
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="600000"/>
 		<set name="coolTime" val="200"/>
-		<set name="hitTime" val="300"/>
+		<set name="hitTime" val="3000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="13"/>
@@ -505,7 +507,7 @@
 		<table name="#activateRate">50</table>
 		<table name="#patkspd">.8</table>
 		<table name="#matkspd">.8</table>
-		<set name="reuseDelay" val="21000"/>
+		<set name="reuseDelay" val="30000"/>
 		<set name="coolTime" val="500"/>
 		<set name="hitTime" val="1500"/>
 		<set name="levelModifier" val="2"/>
@@ -539,6 +541,7 @@
 				<mul order="0x30" stat="mpConsumePhysical" val="#mpConsum"/>
 			</effect>
 		</for>
+		<set name="castRange" val="600"/>
 	</skill>
 	<skill id="11770" levels="1" name="Dissolve">
 		<table name="#mpConsume2">50</table>
@@ -648,6 +651,7 @@
 			<table name="#skill">101 102 103 104 105 106 107 108 109 110</table>
 		</enchant1>
 		<for/>
+		<set name="castRange" val="600"/>
 	</skill>
 	<skill id="11775" levels="1" name="Return">
 		<set name="target" val="TARGET_NONE"/>
@@ -656,6 +660,7 @@
 		<enchant1 levels="10" name="Cost"/>
 		<enchant2 levels="10" name="Distance"/>
 		<for/>
+		<set name="hitTime" val="1000"/>
 	</skill>
 	<skill id="11776" levels="4" name="Summon Lumi">
 		<table name="#lifeTime">3600 3600 3600 3600</table>
@@ -797,6 +802,7 @@
 				<mul order="0x30" stat="hpEff" val="#hpEff"/>
 			</effect>
 		</for>
+		<set name="castRange" val="600"/>
 	</skill>
 	<skill id="11781" levels="1" name="Dark Devour">
 		<set name="target" val="TARGET_NONE"/>

@@ -441,6 +441,7 @@
 		<set name="skillRadius" val="200"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5831" levels="1" name="Polearm Swing">
 		<table name="#power">150</table>
@@ -709,6 +710,7 @@
 		<for>
 			<effect abnormal="bleeding" count="10" name="Bleed" stackType="Bleed" stackOrder="#stackOrder" time="3" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5847" levels="1" name="Flip Nearby Blocks">
 		<set name="affectLimit" val="10;10"/>

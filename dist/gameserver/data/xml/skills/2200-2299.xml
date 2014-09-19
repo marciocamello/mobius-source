@@ -281,6 +281,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2230" levels="1" name="Item - Fight Song Crystal">
 		<set name="magicType" val="SPECIAL"/>
@@ -394,6 +395,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2236" levels="1" name="Chapel Key">
 		<set name="magicType" val="SPECIAL"/>
@@ -405,6 +407,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2237" levels="1" name="Key of Darkness">
 		<set name="magicType" val="SPECIAL"/>
@@ -416,6 +419,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2238" levels="1" name="Room of Splendor Key">
 		<set name="magicType" val="SPECIAL"/>
@@ -427,6 +431,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HARDCODED"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2239" levels="1" name="Scroll: Petrifaction">
 		<set name="magicType" val="SPECIAL"/>
@@ -444,7 +449,7 @@
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
 		<set name="magicLevel" val="1"/>
-		<set name="castRange" val="50"/>
+		<set name="castRange" val="40"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -461,7 +466,7 @@
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
 		<set name="magicLevel" val="1"/>
-		<set name="castRange" val="50"/>
+		<set name="castRange" val="40"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -478,7 +483,7 @@
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
 		<set name="magicLevel" val="1"/>
-		<set name="castRange" val="50"/>
+		<set name="castRange" val="40"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -495,7 +500,7 @@
 		<set name="icon" val="icon.skill0000"/>
 		<set name="reuseDelay" val="2000"/>
 		<set name="magicLevel" val="1"/>
-		<set name="castRange" val="50"/>
+		<set name="castRange" val="40"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -935,6 +940,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2277" levels="6" name="Event Gift Box">
 		<set name="magicLevel" val="1"/>

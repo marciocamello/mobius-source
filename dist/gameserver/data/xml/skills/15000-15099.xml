@@ -7,18 +7,21 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="15001" levels="1" name="Cancel Transformation">
 		<set name="icon" val="icon.skill01703"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
 	</skill>
 	<skill id="15002" levels="1" name="Progressive Heal - NPC">
 		<set name="icon" val="icon.skill015002"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="350"/>
 	</skill>
 	<skill id="15003" levels="1" name="Summon Tree of Life - NPC">
 		<set name="icon" val="icon.skill1229"/>
@@ -93,6 +96,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="15013" levels="1" name="Goods Strike">
 		<set name="coolTime" val="500"/>
@@ -101,6 +105,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="15014" levels="1" name="Vernier Calipers Strike">
 		<set name="coolTime" val="500"/>
@@ -109,6 +114,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="15015" levels="1" name="Spear Bash">
 		<set name="coolTime" val="500"/>
@@ -117,6 +123,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="60"/>
 	</skill>
 	<skill id="15016" levels="1" name="Powerful Bash">
 		<set name="coolTime" val="500"/>
@@ -125,6 +132,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="15017" levels="1" name="Stone Throw">
 		<set name="coolTime" val="500"/>
@@ -133,6 +141,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="450"/>
 	</skill>
 	<skill id="15018" levels="1" name="Goods Throw">
 		<set name="coolTime" val="500"/>
@@ -141,6 +150,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="450"/>
 	</skill>
 	<skill id="15019" levels="1" name="Goods Throw">
 		<set name="coolTime" val="500"/>
@@ -149,6 +159,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="450"/>
 	</skill>
 	<skill id="15020" levels="1" name="Spanner Throw">
 		<set name="coolTime" val="500"/>
@@ -157,6 +168,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="450"/>
 	</skill>
 	<skill id="15021" levels="1" name="Battle Hammer Throw">
 		<set name="coolTime" val="500"/>
@@ -165,6 +177,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="450"/>
 	</skill>
 	<skill id="15022" levels="1" name="Battle Axe Throw">
 		<set name="coolTime" val="500"/>
@@ -173,6 +186,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="450"/>
 	</skill>
 	<skill id="15023" levels="1" name="Javelin Throw">
 		<set name="coolTime" val="500"/>
@@ -181,6 +195,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="450"/>
 	</skill>
 	<skill id="15024" levels="1" name="Use Petra">
 		<set name="reuseDelay" val="60000"/>
@@ -207,6 +222,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
 	</skill>
 	<skill id="15027" levels="1" name="Use Petra">
 		<set name="reuseDelay" val="60000"/>
@@ -269,6 +285,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="450"/>
 	</skill>
 	<skill id="15034" levels="1" name="Aggression Chain Strike - NPC">
 		<set name="coolTime" val="500"/>
@@ -277,6 +294,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="450"/>
 	</skill>
 	<skill id="15035" levels="1" name="Shield Strike - NPC">
 		<set name="coolTime" val="500"/>
@@ -285,6 +303,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="15036" levels="1" name="Armor Break - NPC">
 		<set name="coolTime" val="500"/>
@@ -293,6 +312,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="15037" levels="1" name="Leg Strike">
 		<set name="coolTime" val="500"/>
@@ -301,6 +321,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="60"/>
 	</skill>
 	<skill id="15038" levels="1" name="Stab">
 		<set name="coolTime" val="500"/>
@@ -309,6 +330,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="80"/>
 	</skill>
 	<skill id="15039" levels="1" name="Flame Blow">
 		<set name="coolTime" val="500"/>
@@ -317,6 +339,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="300"/>
 	</skill>
 	<skill id="15040" levels="1" name="Fire Magic">
 		<set name="coolTime" val="500"/>
@@ -325,6 +348,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="450"/>
 	</skill>
 	<skill id="15041" levels="1" name="Fire Magic">
 		<set name="coolTime" val="500"/>
@@ -333,6 +357,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="450"/>
 	</skill>
 	<skill id="15042" levels="1" name="Tauti Push">
 		<set name="coolTime" val="500"/>
@@ -341,6 +366,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="100"/>
 	</skill>
 	<skill id="15043" levels="1" name="Tauti Push">
 		<set name="coolTime" val="500"/>
@@ -349,6 +375,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="100"/>
 	</skill>
 	<skill id="15044" levels="1" name="Tauti Whirlwind">
 		<set name="coolTime" val="500"/>
@@ -381,6 +408,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="15048" levels="1" name="Tauti Leap Attack">
 		<set name="coolTime" val="500"/>
@@ -389,6 +417,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
 	</skill>
 	<skill id="15049" levels="1" name="Tauti Axe Throw (up/chain)">
 		<set name="coolTime" val="500"/>
@@ -396,6 +425,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
 	</skill>
 	<skill id="15050" levels="1" name="Tauti Shout">
 		<set name="coolTime" val="500"/>
@@ -420,6 +450,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="15053" levels="1" name="Pa'agrio's Hand">
 		<set name="reuseDelay" val="2000"/>
@@ -429,6 +460,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="100"/>
 	</skill>
 	<skill id="15054" levels="1" name="Attempt Incubation">
 		<set name="reuseDelay" val="3000"/>
@@ -438,6 +470,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="100"/>
 	</skill>
 	<skill id="15055" levels="1" name="Attempt Execution">
 		<set name="coolTime" val="500"/>
@@ -462,6 +495,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
 	</skill>
 	<skill id="15058" levels="1" name="3000 Strikes">
 		<set name="coolTime" val="500"/>
@@ -470,6 +504,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
 	</skill>
 	<skill id="15059" levels="1" name="Spill Your Blood">
 		<set name="coolTime" val="500"/>
@@ -478,6 +513,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
 	</skill>
 	<skill id="15060" levels="1" name="Eat Poison">
 		<set name="coolTime" val="500"/>
@@ -486,6 +522,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
 	</skill>
 	<skill id="15061" levels="1" name="Increase Slap Might">
 		<set name="coolTime" val="500"/>
@@ -510,6 +547,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
 	</skill>
 	<skill id="15064" levels="1" name="Check for Escape">
 		<set name="coolTime" val="500"/>
@@ -526,6 +564,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="200"/>
 	</skill>
 	<skill id="15066" levels="1" name="Call Comrade">
 		<set name="coolTime" val="500"/>
@@ -534,6 +573,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
 	</skill>
 	<skill id="15067" levels="1" name="Attack Cancel Spell">
 		<set name="coolTime" val="500"/>
@@ -542,6 +582,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
 	</skill>
 	<skill id="15068" levels="1" name="HP Plunder">
 		<set name="coolTime" val="500"/>
@@ -550,6 +591,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
 	</skill>
 	<skill id="15069" levels="1" name="Limb Yoke">
 		<set name="coolTime" val="500"/>
@@ -558,6 +600,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
 	</skill>
 	<skill id="15070" levels="1" name="Restrain Legs">
 		<set name="coolTime" val="500"/>
@@ -566,6 +609,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="200"/>
 	</skill>
 	<skill id="15071" levels="1" name="Bizarre Arrow">
 		<set name="coolTime" val="500"/>
@@ -574,6 +618,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
 	</skill>
 	<skill id="15072" levels="1" name="Poison Arrow">
 		<set name="coolTime" val="500"/>
@@ -582,6 +627,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
 	</skill>
 	<skill id="15073" levels="1" name="Change All">
 		<set name="coolTime" val="500"/>
@@ -590,6 +636,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
 	</skill>
 	<skill id="15074" levels="1" name="Shaman's Nightmare">
 		<set name="coolTime" val="500"/>
@@ -598,6 +645,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
 	</skill>
 	<skill id="15075" levels="1" name="Half Death">
 		<set name="coolTime" val="500"/>
@@ -606,6 +654,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
 	</skill>
 	<skill id="15076" levels="1" name="Ferocious Fight">
 		<set name="coolTime" val="500"/>
@@ -623,6 +672,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1000"/>
 	</skill>
 	<skill id="15078" levels="1" name="Scream Penetration">
 		<set name="coolTime" val="500"/>
@@ -631,6 +681,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
 	</skill>
 	<skill id="15079" levels="1" name="Mind Collapse">
 		<set name="coolTime" val="500"/>
@@ -639,6 +690,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
 	</skill>
 	<skill id="15080" levels="1" name="Summon Subordinate">
 		<set name="coolTime" val="500"/>
@@ -655,6 +707,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
 	</skill>
 	<skill id="15082" levels="1" name="Thunder Arrow Shaft">
 		<set name="coolTime" val="500"/>
@@ -663,10 +716,11 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1000"/>
 	</skill>
 	<skill id="15083" levels="1" name="Tactical Retreat">
 		<set name="coolTime" val="500"/>
-		<set name="hitTime" val="699"/>
+		<set name="hitTime" val="700"/>
 		<set name="icon" val="icon.skill11057"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -679,6 +733,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
 	</skill>
 	<skill id="15085" levels="1" name="Lunacy">
 		<set name="coolTime" val="500"/>
@@ -695,6 +750,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
 	</skill>
 	<skill id="15087" levels="1" name="Chaos Shield">
 		<set name="coolTime" val="500"/>
@@ -711,6 +767,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1000"/>
 	</skill>
 	<skill id="15089" levels="1" name="Call Subordinate">
 		<set name="coolTime" val="500"/>

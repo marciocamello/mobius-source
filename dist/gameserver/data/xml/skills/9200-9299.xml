@@ -82,7 +82,7 @@
 	<skill id="9205" levels="1" name="Sturdy Kukuru">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0169"/>
-		<set name="reuseDelay" val="2000"/>
+		<set name="reuseDelay" val="45000"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -98,6 +98,7 @@
 				<mul order="0x30" stat="runSpd" val="1.5"/>
 			</effect>
 		</for>
+		<set name="reuseDelay" val="45000"/>
 	</skill>
 	<skill id="9209" levels="1" name="Kukuru">
 		<set name="icon" val="icon.skilltransform3"/>
@@ -311,6 +312,7 @@
 				<player olympiad="true"/>
 			</not>
 		</cond>
+		<set name="hitTime" val="20000"/>
 	</skill>
 	<skill id="9225" levels="1" name="Specter of Light">
 		<set name="icon" val="icon.skill0000"/>

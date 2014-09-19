@@ -313,6 +313,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="4000"/>
 	</skill>
 	<skill id="22212" levels="1" name="Superior Quick Healing Potion">
 		<set name="icon" val="icon.skill0000"/>
@@ -325,204 +326,238 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="10000"/>
 	</skill>
 	<skill id="22214" levels="1" name="MP Recovery Potion">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="300000"/>
 	</skill>
 	<skill id="22215" levels="1" name="Vitality Recovering Potion">
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22216" levels="1" name="Transformation Scroll: Anakim">
 		<set name="icon" val="icon.skilltransform1"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="600000"/>
 	</skill>
 	<skill id="22217" levels="1" name="Super Healthy Juice (HP)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="300000"/>
 	</skill>
 	<skill id="22218" levels="1" name="Super Healthy Juice (HP)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="300000"/>
 	</skill>
 	<skill id="22219" levels="1" name="Super Healthy Juice (CP)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="300000"/>
 	</skill>
 	<skill id="22220" levels="1" name="Super Healthy Juice (CP)">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="300000"/>
 	</skill>
 	<skill id="22221" levels="1" name="Vitality Replenishing Potion">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22222" levels="1" name="Vitality Replenishing Potion">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22223" levels="1" name="Vitality Maintaining Potion">
 		<set name="icon" val="BranchSys2.icon.br_essence_rose_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22224" levels="1" name="Vitality Maintaining Potion">
 		<set name="icon" val="BranchSys2.icon.br_essence_rose_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22225" levels="1" name="Gludio Homemade Cookie">
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22226" levels="1" name="Gludio Homemade Cookie">
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22227" levels="1" name="Dion Homemade Cookie">
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22228" levels="1" name="Dion Homemade Cookie">
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22229" levels="1" name="Aden Homemade Cookie">
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22230" levels="1" name="Aden Homemade Cookie">
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22231" levels="1" name="Giran Homemade Cookie">
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22232" levels="1" name="Giran Homemade Cookie">
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22233" levels="1" name="Rune Homemade Cookie">
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22234" levels="1" name="Rune Homemade Cookie">
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22235" levels="1" name="Crystal of Fortune Treasure Sack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="22236" levels="1" name="Crystal of Fortune Treasure Sack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="22237" levels="1" name="Enchant Scroll of Fortune Treasure Sack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="22238" levels="1" name="Enchant Scroll of Fortune Treasure Sack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="22239" levels="1" name="Bead of Fortune Treasure Sack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="22240" levels="1" name="Bead of Fortune Treasure Sack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="22241" levels="1" name="Rider Pouch">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="22242" levels="1" name="Rider Pouch">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="22243" levels="1" name="Fashion Pouch">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="22244" levels="1" name="Fashion Pouch">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="22245" levels="1" name="Buff Pouch">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="22246" levels="1" name="Buff Pouch">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="22247" levels="1" name="Scroll: Enchant Power Shirt">
 		<set name="icon" val="icon.skill0000"/>
@@ -541,30 +576,35 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="10000"/>
 	</skill>
 	<skill id="22250" levels="1" name="Birthday Cake Vitality Buff">
 		<set name="icon" val="BranchSys.icon.br_birthday_cake_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
 	</skill>
 	<skill id="22251" levels="1" name="Honey Rice Cakes">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="300000"/>
 	</skill>
 	<skill id="22252" levels="1" name="Vitality Replenishing Potion">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22253" levels="1" name="Prophecy of Water">
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22254" levels="1" name="Blessed Scroll: Enchant Power Shirt">
 		<set name="icon" val="icon.skill0000"/>
@@ -577,100 +617,116 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="300000"/>
 	</skill>
 	<skill id="22256" levels="1" name="Might">
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22257" levels="1" name="Wind Walk">
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22258" levels="1" name="Haste">
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22259" levels="1" name="Vampiric Rage">
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22260" levels="1" name="Berserker Spirit">
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22261" levels="1" name="Empower">
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22262" levels="1" name="Acumen">
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22263" levels="1" name="Shield">
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22264" levels="1" name="Focus">
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22265" levels="1" name="Death Whisper">
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22266" levels="1" name="Guidance">
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22267" levels="1" name="Clarity">
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22268" levels="1" name="Wild Magic">
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22269" levels="6" name="Concentration">
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22270" levels="1" name="Letter Collector's Gift">
 		<set name="icon" val="BranchSys.icon.br_shield_bread_i01"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22271" levels="1" name="Maestro's Key">
 		<set name="icon" val="icon.skill0000"/>
-		<set name="reuseDelay" val="3000"/>
+		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="500"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="activateRate" val="25"/>
@@ -706,6 +762,7 @@
 				<target mobId="18286"/>
 			</or>
 		</cond>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="22272" levels="1" name="Novice Explorer's Treasure Sack">
 		<set name="magicLevel" val="1"/>
@@ -793,30 +850,40 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="100"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22284" levels="1" name="PC Vitality">
 		<set name="icon" val="icon.etc_pccafe_point_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="100"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22285" levels="1" name="PC Vitality">
 		<set name="icon" val="icon.etc_pccafe_point_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="100"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22286" levels="1" name="PC Vitality">
 		<set name="icon" val="icon.etc_pccafe_point_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="100"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22287" levels="1" name="PC Vitality">
 		<set name="icon" val="icon.etc_pccafe_point_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="100"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22288" levels="1" name="Player Commendation - Vitality Pack">
 		<set name="icon" val="icon.skill0000"/>
@@ -843,6 +910,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="RECALL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="10000"/>
 	</skill>
 	<skill id="22291" levels="1" name="Jewel of Valakas">
 		<set name="magicType" val="SPECIAL"/>
@@ -870,6 +938,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="RECALL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="10000"/>
 	</skill>
 	<skill id="22293" levels="1" name="Jewel of Antharas">
 		<set name="magicType" val="SPECIAL"/>
@@ -889,24 +958,32 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="600000"/>
 	</skill>
 	<skill id="22295" levels="1" name="Totem of Spirit">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="600000"/>
 	</skill>
 	<skill id="22296" levels="1" name="Totem of Courage">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="600000"/>
 	</skill>
 	<skill id="22297" levels="1" name="Totem of Fortitude">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="600000"/>
 	</skill>
 	<skill id="22298" levels="1" name="Refined Red Dragon Blood">
 		<set name="magicType" val="SPECIAL"/>
@@ -918,6 +995,7 @@
 		<set name="skillRadius" val="1000"/>
 		<set name="skillType" val="HEAL"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="100"/>
 	</skill>
 	<skill id="22299" levels="1" name="Refined Blue Dragon Blood">
 		<set name="magicType" val="SPECIAL"/>
@@ -929,5 +1007,6 @@
 		<set name="skillRadius" val="1000"/>
 		<set name="skillType" val="MANAHEAL"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="100"/>
 	</skill>
 </list>

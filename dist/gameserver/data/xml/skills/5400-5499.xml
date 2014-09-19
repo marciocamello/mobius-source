@@ -356,6 +356,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="saveVs" val="MEN"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5432" levels="2" name="Weapon Supply">
 		<table name="#power">1.2 1.5</table>
@@ -501,6 +502,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5443" levels="4" name="Cry of the Wolf">
 		<table name="#effectPoint">200 400 600 800</table>
@@ -549,6 +551,7 @@
 		<for>
 			<effect abnormal="bleeding" count="10" name="Bleed" stackType="Bleed" stackOrder="3" time="3" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5445" levels="1" name="Awakening">
 		<set name="icon" val="icon.action105"/>
@@ -955,6 +958,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5484" levels="1" name="Endurance Defense Up">
 		<set name="icon" val="icon.skill0000"/>
@@ -991,6 +995,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5489" levels="1" name="Counter Critical Rate Up">
 		<set name="icon" val="icon.skill0000"/>
@@ -998,6 +1003,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5490" levels="1" name="Weakened Life">
 		<set name="magicType" val="MAGIC"/>

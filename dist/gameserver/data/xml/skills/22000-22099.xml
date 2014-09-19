@@ -107,6 +107,7 @@
 		<set name="skillType" val="VITALITY_HEAL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="altUse" val="true"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22007" levels="1" name="Good Luck Bag">
 		<set name="magicLevel" val="1"/>
@@ -332,6 +333,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22029" levels="1" name="Baguette's Herb">
 		<set name="magicType" val="SPECIAL"/>
@@ -754,6 +756,7 @@
 				<player olympiad="true"/>
 			</not>
 		</cond>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22056" levels="1" name="Wind Walk">
 		<set name="magicType" val="SPECIAL"/>

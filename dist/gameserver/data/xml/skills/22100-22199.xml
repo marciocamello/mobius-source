@@ -481,6 +481,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22138" levels="1" name="Mango Dessert">
 		<set name="magicType" val="SPECIAL"/>
@@ -489,6 +490,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22139" levels="1" name="Branding Wind Walk">
 		<set name="magicType" val="SPECIAL"/>
@@ -1059,6 +1061,8 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="100"/>
+		<set name="reuseDelay" val="43200000"/>
 	</skill>
 	<skill id="22183" levels="1" name="Transformation Scroll: Dragon Master Lee">
 		<set name="magicType" val="SPECIAL"/>
@@ -1131,6 +1135,8 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="100"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="22188" levels="1" name="Summon Big Wedding Cake">
 		<set name="icon" val="icon.skill0000"/>

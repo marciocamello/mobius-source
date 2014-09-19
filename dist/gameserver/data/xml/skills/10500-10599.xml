@@ -4,7 +4,7 @@
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="0"/>
 		<set name="mpConsume1" val="40"/>
-		<set name="castRange" val="30"/>
+		<set name="castRange" val="600"/>
 		<set name="power" val="15803"/>
 		<set name="magicLevel" val="85"/>
 		<set name="coolTime" val="1500"/>
@@ -257,6 +257,9 @@
 		<for>
 			<effect abnormal="bleeding" count="10" name="Bleed" stackType="Bleed" stackOrder="6" time="1" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="830"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="10509" levels="8" name="Heart Breaker">
 		<table name="#magicLevel">85 86 87 88 89 90 91 92</table>
@@ -427,6 +430,8 @@
 			<table name="#power">31366 32080 32794 33508 34222 34937 35651 36365 37079 37794</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant9>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1130"/>
 	</skill>
 	<skill id="10511" levels="4" name="Reverse">
 		<table name="#magicLevel">85 86 87 88</table>
@@ -500,6 +505,8 @@
 			<table name="#power">33234 33987 34740 35494 36247 37001 37754 38507 39261 40014</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant8>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="2030"/>
 	</skill>
 	<skill id="10512" levels="8" name="Dagger Explosion">
 		<table name="#power">11903 12313 13135 13957 14779 15601 16423 17244</table>
@@ -572,6 +579,8 @@
 			<table name="#power">22300 22808 23316 23824 24332 24840 25348 25856 26364 26872</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant9>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1430"/>
 	</skill>
 	<skill id="10513" levels="7" name="Razor Rain">
 		<table name="#power">13649 14529 15409 16289 17169 18049 18929</table>
@@ -645,6 +654,7 @@
 			<table name="#power">23862 24405 24948 25491 26034 26577 27120 27663 28206 28749</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant9>
+		<set name="hitTime" val="1530"/>
 	</skill>
 	<skill id="10514" levels="5" name="Dark Paralysis">
 		<table name="#magicLevel">85 88 97 94 98</table>
@@ -653,7 +663,7 @@
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="40"/>
 		<set name="coolTime" val="370"/>
-		<set name="hitTime" val="1130"/>
+		<set name="hitTime" val="1000"/>
 		<table name="#reuseDelay">10000</table>
 		<set name="reuseDelay" val="#reuseDelay"/>
 		<set name="magicLevel" val="#magicLevel"/>
@@ -694,6 +704,7 @@
 			<effect count="1" name="Paralyze" stackOrder="1" stackType="turn_stone" time="15" val="0"/>
 			<effect name="Petrification" time="10" val="0" stackOrder="2" stackType="turn_stone"/>
 		</for>
+		<set name="hitTime" val="1200"/>
 	</skill>
 	<skill id="10516" levels="6" name="Shadow Chase">
 		<table name="#magicLevel">85 87 90 93 96 99</table>
@@ -728,6 +739,7 @@
 				<def name="doStopTarget" val="true"/>
 			</effect>
 		</for>
+		<set name="castRange" val="600"/>
 	</skill>
 	<skill id="10517" levels="1" name="Shadow Hide">
 		<table name="#time">30</table>
@@ -735,7 +747,7 @@
 		<table name="#runSpd">0</table>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="coolTime" val="370"/>
-		<set name="hitTime" val="800"/>
+		<set name="hitTime" val="1000"/>
 		<table name="#reuseDelay">180000</table>
 		<set name="reuseDelay" val="#reuseDelay"/>
 		<set name="magicLevel" val="85"/>
@@ -777,6 +789,7 @@
 				<mul order="0x30" stat="pAtkSpd" val="1.2"/>
 			</effect>
 		</for>
+		<set name="hitTime" val="700"/>
 	</skill>
 	<skill id="10520" levels="4" name="Final Ultimate Evasion">
 		<table name="#magicLevel">85 90 95 99</table>
@@ -841,6 +854,8 @@
 		<set name="npcId" val="19115"/>
 		<set name="relationSkillsId" val="102;115;"/>
 		<enchant1 levels="10" name="Cost"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="800"/>
 	</skill>
 	<skill id="10523" levels="6" name="Poisoned">
 		<table name="#magicLevel">85 86 87 88 89 90</table>
@@ -886,6 +901,7 @@
 				<add order="0x40" stat="counterAttack" val="#reflectDam"/>
 			</effect>
 		</for>
+		<set name="hitTime" val="200"/>
 	</skill>
 	<skill id="10525" levels="4" name="Shadow Dash">
 		<table name="#magicLevel">85 90 95 99</table>
@@ -917,6 +933,7 @@
 				<add order="0x40" stat="stunPower" val="#Stun"/>
 			</effect>
 		</for>
+		<set name="hitTime" val="800"/>
 	</skill>
 	<skill id="10526" levels="6" name="Mischief">
 		<table name="#magicLevel">85 86 87 88 89 90</table>
@@ -946,6 +963,8 @@
 				<mul order="0x30" stat="runSpd" val="0.70"/>
 			</effect>
 		</for>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="10527" levels="1" name="Mass Trick">
 		<table name="#effectPoint">3000</table>
@@ -975,6 +994,8 @@
 		<for>
 			<effect count="1" name="CannotTarget" stackOrder="-1" stackType="CannotTarget" time="3" val="0" chance="#activateRate"/>
 		</for>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="1200"/>
 	</skill>
 	<skill id="10528" levels="1" name="Shadow Fake Death">
 		<table name="#mpConsume2">71</table>
@@ -988,6 +1009,7 @@
 		<for>
 			<effect count="0x7fffffff" name="FakeDeath" time="5" val="10"/>
 		</for>
+		<set name="hitTime" val="800"/>
 	</skill>
 	<skill id="10529" levels="1" name="Shadow Flash">
 		<table name="#magicLevel">85</table>
@@ -1102,6 +1124,7 @@
 		<cond msgId="113" addName="1">
 			<using kind="Dagger,Dual Dagger"/>
 		</cond>
+		<set name="castRange" val="400"/>
 	</skill>
 	<skill id="10534" levels="1" name="Toad Poison">
 		<table name="#effectPoint">655</table>
@@ -1113,7 +1136,7 @@
 		<set name="reuseDelay" val="8000"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="castRange" val="600"/>
-		<set name="hitTime" val="4000"/>
+		<set name="hitTime" val="800"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="effectPoint" val="#effectPoint"/>
 		<set name="isDebuff" val="true"/>
@@ -1136,7 +1159,7 @@
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="reuseDelay" val="300000"/>
-		<set name="hitTime" val="900"/>
+		<set name="hitTime" val="800"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="magicLevel" val="#magicLevel"/>
@@ -1404,13 +1427,14 @@
 				<mul order="0x30" stat="runSpd" val="1.2"/>
 			</effect>
 		</for>
+		<set name="hitTime" val="800"/>
 	</skill>
 	<skill id="10544" levels="4" name="Cancel target">
 		<table name="#magicLevel">85 86 87 88</table>
 		<table name="#mpConsume2">60 62 64 66</table>
 		<set name="reuseDelay" val="5000"/>
 		<set name="hitTime" val="2000"/>
-		<set name="castRange" val="500"/>
+		<set name="castRange" val="900"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -1487,6 +1511,8 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for/>
+		<set name="castRange" val="50"/>
+		<set name="hitTime" val="1200"/>
 	</skill>
 	<skill id="10548" levels="8" name="Plunder">
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
@@ -1673,6 +1699,7 @@
 			<effect count="1" name="Stun" abnormal="stun" stackOrder="-1" stackType="Stun" time="3" val="0"/>
 			<effect count="1" name="RemoveTarget" stackOrder="-1" stackType="RemoveTarget" time="0" val="0" chance="80" isReflectable="false"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="10555" levels="1" name="Impaired">
 		<table name="#mpConsume2">60</table>

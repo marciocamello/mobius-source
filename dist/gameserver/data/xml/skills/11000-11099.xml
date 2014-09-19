@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <list>
 	<skill id="11000" levels="1" name="Yul Chain Skill Knock Blow">
-		<set name="reuseDelay" val="7000"/>
-		<set name="hitTime" val="2200"/>
-		<set name="castRange" val="1100"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="2000"/>
+		<set name="castRange" val="700"/>
 		<set name="mpConsume2" val="10"/>
 		<set name="flyType" val="THROW_HORIZONTAL"/>
 		<set name="flyRadius" val="-200"/>
@@ -214,6 +214,8 @@
 			<table name="#reuseDelay">1900 1800 1800 1700 1700 1600 1500 1500 1400 1400</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2280"/>
 	</skill>
 	<skill id="11012" levels="8" name="Elemental Spike (fire)">
 		<table name="#powerPvP">0</table>
@@ -245,6 +247,8 @@
 				<def name="skillLevels" val="1"/>
 			</effect>
 		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2280"/>
 	</skill>
 	<skill id="11013" levels="8" name="Elemental Spike (water)">
 		<table name="#powerPvP">0</table>
@@ -276,6 +280,8 @@
 				<def name="skillLevels" val="1"/>
 			</effect>
 		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2280"/>
 	</skill>
 	<skill id="11014" levels="8" name="Elemental Spike (wind)">
 		<table name="#powerPvP">0</table>
@@ -307,6 +313,8 @@
 				<def name="skillLevels" val="1"/>
 			</effect>
 		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2280"/>
 	</skill>
 	<skill id="11015" levels="8" name="Elemental Spike (earth)">
 		<table name="#powerPvP">0</table>
@@ -338,6 +346,8 @@
 				<def name="skillLevels" val="1"/>
 			</effect>
 		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2280"/>
 	</skill>
 	<skill id="11016" levels="8" name="Elemental Spike (4 attributes)">
 		<table name="#powerPvP">0</table>
@@ -362,6 +372,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">162 163 165 167 170 171 173 175 177 178</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2280"/>
 	</skill>
 	<skill id="11017" levels="8" name="Elemental Crash">
 		<table name="#powerPvP">0</table>
@@ -394,6 +406,8 @@
 			<table name="#reuseDelay">2300 2200 2100 2100 2000 1900 1800 1800 1700 1600</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2780"/>
 	</skill>
 	<skill id="11018" levels="8" name="Elemental Crash (fire)">
 		<table name="#powerPvP">0</table>
@@ -425,6 +439,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">193 195 197 199 201 205 207 209 211 213</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2780"/>
 	</skill>
 	<skill id="11019" levels="8" name="Elemental Crash (water)">
 		<table name="#powerPvP">0</table>
@@ -456,6 +472,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">193 195 197 199 201 205 207 209 211 213</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2780"/>
 	</skill>
 	<skill id="11020" levels="8" name="Elemental Crash (wind)">
 		<table name="#powerPvP">0</table>
@@ -487,6 +505,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">193 195 197 199 201 205 207 209 211 213</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2780"/>
 	</skill>
 	<skill id="11021" levels="8" name="Elemental Crash (earth)">
 		<table name="#powerPvP">0</table>
@@ -518,6 +538,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">193 195 197 199 201 205 207 209 211 213</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2780"/>
 	</skill>
 	<skill id="11022" levels="8" name="Elemental Crash (4 attributes)">
 		<table name="#powerPvP">0</table>
@@ -542,6 +564,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">193 195 197 199 201 205 207 209 211 213</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2780"/>
 	</skill>
 	<skill id="11023" levels="8" name="Elemental Destruction">
 		<table name="#powerPvP">0</table>
@@ -566,6 +590,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="6080"/>
 	</skill>
 	<skill id="11024" levels="8" name="Elemental Destruction (fire)">
 		<table name="#powerPvP">0</table>
@@ -591,6 +617,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="6080"/>
 	</skill>
 	<skill id="11025" levels="8" name="Elemental Destruction (water)">
 		<table name="#powerPvP">0</table>
@@ -616,6 +644,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="6080"/>
 	</skill>
 	<skill id="11026" levels="8" name="Elemental Destruction (wind)">
 		<table name="#powerPvP">0</table>
@@ -641,6 +671,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="6080"/>
 	</skill>
 	<skill id="11027" levels="8" name="Elemental Destruction (earth)">
 		<table name="#powerPvP">0</table>
@@ -666,6 +698,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="6080"/>
 	</skill>
 	<skill id="11028" levels="8" name="Elemental Destruction (4 attributes)">
 		<table name="#powerPvP">0</table>
@@ -690,6 +724,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="6080"/>
 	</skill>
 	<skill id="11029" levels="5" name="Death Breath">
 		<table name="#dmg">480 494 509 523 537</table>
@@ -720,6 +756,8 @@
 		<for>
 			<effect count="15" name="DamOverTime" time="1" val="#dmg"/>
 		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="1000"/>
 	</skill>
 	<skill id="11030" levels="4" name="Death Lord">
 		<table name="#dot">25 50 75 100</table>
@@ -729,7 +767,7 @@
 		<set name="reuseDelay" val="20000"/>
 		<set name="hitTime" val="10000"/>
 		<set name="relationSkillsId" val="1420;1419;1151;1423;1421;"/>
-		<set name="castRange" val="1100"/>
+		<set name="castRange" val="900"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="power" val="#dot"/>
@@ -832,6 +870,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">255 259 262 264 267 271 274 276 279 283</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="3780"/>
 	</skill>
 	<skill id="11035" levels="8" name="Elemental Blast (fire)">
 		<table name="#powerPvP">0</table>
@@ -858,6 +898,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">232 235 238 240 243 246 249 251 254 257</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="3780"/>
 	</skill>
 	<skill id="11036" levels="8" name="Elemental Blast (water)">
 		<table name="#powerPvP">0</table>
@@ -884,6 +926,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">232 235 238 240 243 246 249 251 254 257</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="3780"/>
 	</skill>
 	<skill id="11037" levels="8" name="Elemental Blast (wind)">
 		<table name="#powerPvP">0</table>
@@ -910,6 +954,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">232 235 238 240 243 246 249 251 254 257</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="3780"/>
 	</skill>
 	<skill id="11038" levels="8" name="Elemental Blast (earth)">
 		<table name="#powerPvP">0</table>
@@ -936,6 +982,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">255 259 262 264 267 271 274 276 279 283</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="3780"/>
 	</skill>
 	<skill id="11039" levels="8" name="Elemental Blast (4 attributes)">
 		<table name="#powerPvP">0</table>
@@ -962,6 +1010,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">255 259 262 264 267 271 274 276 279 283</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="3780"/>
 	</skill>
 	<skill id="11040" levels="8" name="Elemental Storm">
 		<table name="#powerPvP">0</table>
@@ -988,6 +1038,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">318 322 326 329 333 337 341 344 349 352</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="4780"/>
 	</skill>
 	<skill id="11041" levels="8" name="Elemental Storm (Fire)">
 		<table name="#powerPvP">0</table>
@@ -1014,6 +1066,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">318 322 326 329 333 337 341 344 349 352</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="4780"/>
 	</skill>
 	<skill id="11042" levels="8" name="Elemental Storm (water)">
 		<table name="#powerPvP">0</table>
@@ -1040,6 +1094,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">318 322 326 329 333 337 341 344 349 352</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="4780"/>
 	</skill>
 	<skill id="11043" levels="8" name="Elemental Storm (wind)">
 		<table name="#powerPvP">0</table>
@@ -1066,6 +1122,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">318 322 326 329 333 337 341 344 349 352</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="4780"/>
 	</skill>
 	<skill id="11044" levels="8" name="Elemental Storm (earth)">
 		<table name="#powerPvP">0</table>
@@ -1092,6 +1150,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">318 322 326 329 333 337 341 344 349 352</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="4780"/>
 	</skill>
 	<skill id="11045" levels="8" name="Elemental Storm (4 attributes)">
 		<table name="#powerPvP">0</table>
@@ -1118,6 +1178,8 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">318 322 326 329 333 337 341 344 349 352</table>
 		</enchant3>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="4780"/>
 	</skill>
 	<skill id="11046" levels="2" name="Wizard Spirit">
 		<table name="#mAtk">1.20 1.30</table>
@@ -1401,6 +1463,8 @@
 				<mul order="0x30" stat="mDef" val="#mdef"/>
 			</effect>
 		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="11052" levels="4" name="Mass Hell Binding">
 		<table name="#magicLevel">85 86 87 88</table>
@@ -1518,7 +1582,7 @@
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="lvlDepend" val="1"/>
 		<set name="reuseDelay" val="#reuseDelay"/>
-		<set name="hitTime" val="1500"/>
+		<set name="hitTime" val="1200"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="saveVs" val="MEN"/>
 		<set name="skillType" val="DEBUFF"/>
@@ -1822,7 +1886,7 @@
 		<table name="#runspd">1</table>
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="600000"/>
-		<set name="hitTime" val="6700"/>
+		<set name="hitTime" val="6750"/>
 		<set name="castRange" val="900"/>
 		<set name="relationSkillsId" val="1290;1291;1289;"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -1887,7 +1951,7 @@
 		<table name="#time">30</table>
 		<table name="#matk">1</table>
 		<set name="reuseDelay" val="180000"/>
-		<set name="hitTime" val="2000"/>
+		<set name="hitTime" val="1500"/>
 		<set name="relationSkillsId" val="434;1238;1232;1047;1078;1457;1338;"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="magicLevel" val="#magicLevel"/>
@@ -2250,7 +2314,7 @@
 		<set name="flyType" val="DUMMY"/>
 		<set name="flyCourse" val="#flycourse"/>
 		<set name="flyRadius" val="#flyradius"/>
-		<set name="hitTime" val="1000"/>
+		<set name="hitTime" val="800"/>
 		<set name="coolTime" val="200"/>
 		<set name="lvlDepend" val="1"/>
 		<set name="isDebuff" val="true"/>
