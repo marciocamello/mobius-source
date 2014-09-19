@@ -92,21 +92,17 @@ public class NpcInfo extends L2GameServerPacket
 		if (Config.SERVER_SIDE_NPC_TITLE || (cha.getTemplate().displayId != 0) || (!cha.getTitle().equals(cha.getTemplate().title)))
 		{
 			_title = cha.getTitle();
-			
-			if (Config.SERVER_SIDE_NPC_TITLE_ETC)
+		}
+		
+		if (Config.SHOW_NPC_LVL && cha.isMonster())
+		{
+			String t = "Lv " + cha.getLevel() + (cha.isAggressive() ? "*" : "");
+			if (_title != null)
 			{
-				if (cha.isMonster())
-				{
-					if (_title.isEmpty())
-					{
-						_title = "Lv " + cha.getLevel();
-					}
-					else
-					{
-						_title = "Lv " + cha.getLevel() + "|" + _title;
-					}
-				}
+				t += " " + _title;
 			}
+			
+			_title = t;
 		}
 		
 		_HP = (int) cha.getCurrentHp();
