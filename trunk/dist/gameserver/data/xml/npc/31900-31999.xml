@@ -3051,6 +3051,7 @@
 				<target loc="47692 -115745 -3744" item_id="57" price="9600" name="1010571"/>
 				<target loc="91280 -117152 -3928" item_id="57" price="5300" name="1010573"/>
 				<target loc="171946 -173352 3440" item_id="57" price="17000" name="1010594"/>
+				<target loc="16520 -113928 -250" item_id="57" price="11000" name="1010737" />
 			</sublist>
 			<sublist id="2">
 				<target loc="107577 -122392 -3632" item_id="57" price="1000" name="1010620"/>

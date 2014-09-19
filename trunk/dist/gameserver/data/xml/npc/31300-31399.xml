@@ -1044,6 +1044,7 @@
 				<target loc="106414 -87799 -2920" item_id="57" price="14000" name="1010575"/>
 				<target loc="89513 -44800 -2136" item_id="57" price="9100" name="1010577"/>
 				<target loc="11235 -24026 -3640" item_id="57" price="6400" name="1010698"/>
+				<target loc="16365 -114093 -224" item_id="57" price="11000" name="1010737" />
 			</sublist>
 			<sublist id="2">
 				<target loc="-87328 142266 -3640" item_id="57" price="1000" name="1010506"/>
