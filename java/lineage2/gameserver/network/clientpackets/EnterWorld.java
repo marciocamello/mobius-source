@@ -534,7 +534,7 @@ public class EnterWorld extends L2GameClientPacket
 		activeChar.sendPacket(new ExSubjobInfo(activeChar.getPlayer(), false));
 		activeChar.sendPacket(new ExVitalityEffectInfo(activeChar));
 		activeChar.sendPacket(new ExTutorialList());
-		activeChar.sendPacket(new ExWaitWaitingSubStituteInfo(true));
+		activeChar.sendPacket(new ExWaitWaitingSubStituteInfo(Config.PARTY_MATCHMAKING_ON_ENTERWORLD));
 		
 		for (Effect effect : activeChar.getEffectList().getAllEffects())
 		{
@@ -576,7 +576,7 @@ public class EnterWorld extends L2GameClientPacket
 		
 		activeChar.sendPacket(new ExAcquirableSkillListByClass(activeChar));
 		activeChar.setPartySearchStatus(true);
-		activeChar.sendPacket(new ExWaitWaitingSubStituteInfo(true));
+		activeChar.sendPacket(new ExWaitWaitingSubStituteInfo(Config.PARTY_MATCHMAKING_ON_ENTERWORLD));
 		checkNewMail(activeChar);
 		activeChar.sendPacket(new ExChangeMPCost(1, -3));
 		activeChar.sendPacket(new ExChangeMPCost(1, -5));

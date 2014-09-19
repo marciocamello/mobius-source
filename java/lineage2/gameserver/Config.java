@@ -732,6 +732,7 @@ public class Config
 	public static double ALT_NPC_MAXMP_MODIFIER;
 	public static boolean ALLOW_TALK_WHILE_SITTING;
 	public static boolean PARTY_LEADER_ONLY_CAN_INVITE;
+	public static boolean PARTY_MATCHMAKING_ON_ENTERWORLD;
 	// public static boolean ALLOW_CLANSKILLS;
 	public static boolean ALLOW_LEARN_TRANS_SKILLS_WO_QUEST;
 	public static boolean ALLOW_MANOR;
@@ -1624,6 +1625,7 @@ public class Config
 		// ALLOW_CLANSKILLS = altSettings.getProperty("AllowClanSkills", true);
 		ALLOW_LEARN_TRANS_SKILLS_WO_QUEST = altSettings.getProperty("AllowLearnTransSkillsWOQuest", false);
 		PARTY_LEADER_ONLY_CAN_INVITE = altSettings.getProperty("PartyLeaderOnlyCanInvite", true);
+		PARTY_MATCHMAKING_ON_ENTERWORLD = altSettings.getProperty("PartyMatchmakingOnEnterWorld", false);
 		ALLOW_TALK_WHILE_SITTING = altSettings.getProperty("AllowTalkWhileSitting", true);
 		ALLOW_NOBLE_TP_TO_ALL = altSettings.getProperty("AllowNobleTPToAll", false);
 		ALLOW_FAKE_PLAYERS = altSettings.getProperty("AllowFakePlayers", false);
