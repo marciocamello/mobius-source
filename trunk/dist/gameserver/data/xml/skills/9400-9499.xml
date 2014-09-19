@@ -84,7 +84,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9413" levels="1" name="Agathion Cute Trick - Jang Hyuk">
-		<set name="hitTime" val="3799"/>
+		<set name="hitTime" val="3800"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -98,7 +98,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9415" levels="1" name="Agathion Cute Trick - Park Jaebum">
-		<set name="hitTime" val="6199"/>
+		<set name="hitTime" val="6200"/>
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -294,10 +294,12 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
 		<set name="hitTime" val="5000"/>
+		<set name="castRange" val="40"/>
+		<set name="reuseDelay" val="6000"/>
 	</skill>
 	<skill id="9443" levels="1" name="Empty Hot Spring Water Bottle">
 		<set name="reuseDelay" val="6000"/>
-		<set name="hitTime" val="3000"/>
+		<set name="hitTime" val="5000"/>
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SUMMON_ITEM"/>
@@ -307,6 +309,7 @@
 		<set name="itemConsumeId" val="34887"/>
 		<set name="itemConsumeCount" val="1"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="9444" levels="1" name="Helping Seed">
 		<set name="icon" val="icon.skill0000"/>
@@ -470,7 +473,7 @@
 	</skill>
 	<skill id="9487" levels="1" name="Angel Cat's Blessing">
 		<set name="magicType" val="SPECIAL"/>
-		<set name="reuseDelay" val="2000"/>
+		<set name="reuseDelay" val="1800000"/>
 		<set name="magicLevel" val="1"/>
 		<set name="hitTime" val="100"/>
 		<set name="hitCancelTime" val="500"/>

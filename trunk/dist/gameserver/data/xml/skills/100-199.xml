@@ -31,6 +31,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="101" levels="40" name="Stun Shot">
 		<table name="#effectPoint">327 337 346 366 375 385 395 405 415 425 435 445 455 465 474 484 494 503 513 522 532 541 550 558 567 575 583 591 599 607 614 621 627 634 640 646 651 656 661 665</table>
@@ -571,6 +572,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="121" levels="6" name="Battle Roar">
 		<table name="#Tab-maxHp">1.1 1.15 1.2 1.25 1.3 1.35</table>
@@ -1249,6 +1251,7 @@
 			<table name="#elementPower">1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant6>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="191" levels="6" name="Focus Mind">
 		<table name="#magicLevel">36 43 49 55 64 72</table>

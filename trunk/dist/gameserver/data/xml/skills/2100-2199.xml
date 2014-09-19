@@ -926,6 +926,7 @@
 		<set name="itemConsumeId" val="6643"/>
 		<set name="itemConsumeCount" val="1"/>
 		<set name="isHandler" val="true"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2189" levels="1" name="Crystal Spice">
 		<set name="magicType" val="SPECIAL"/>
@@ -939,6 +940,7 @@
 		<set name="itemConsumeCount" val="1"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2190" levels="9" name="Large Green Fat Fish">
 		<set name="magicLevel" val="1"/>

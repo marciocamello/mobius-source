@@ -110,6 +110,7 @@
 		<set name="skillType" val="RESTORATION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isHandler" val="true"/>
+		<set name="reuseDelay" val="-1000"/>
 	</skill>
 	<skill id="2511" levels="1" name="Transformation Scroll: Gatekeeper">
 		<set name="magicType" val="SPECIAL"/>

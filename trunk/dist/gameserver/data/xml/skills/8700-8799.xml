@@ -5,12 +5,16 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8701" levels="1" name="Special Talisman (R99-grade) - Shield Defense (Active)">
 		<set name="icon" val="icon.r85_talisman_pd_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8702" levels="1" name="Special Talisman (R-grade) - Momentum">
 		<set name="magicLevel" val="85"/>
@@ -45,92 +49,120 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8707" levels="1" name="Special Talisman (R90-grade) - Momentum (Active)">
 		<set name="icon" val="icon.r85_talisman_md_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8708" levels="1" name="Special Talisman (R95-grade) - Momentum (Active)">
 		<set name="icon" val="icon.r85_talisman_md_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8709" levels="1" name="Special Talisman (R99-grade) - Momentum (Active)">
 		<set name="icon" val="icon.r85_talisman_md_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8710" levels="1" name="Special Talisman (R-grade) - Mana Drain (Active)">
 		<set name="icon" val="icon.r_talisman_mh_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8711" levels="1" name="Special Talisman (R90-grade) - Mana Drain (Active)">
 		<set name="icon" val="icon.r_talisman_mh_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8712" levels="1" name="Special Talisman (R95-grade) - Mana Drain (Active)">
 		<set name="icon" val="icon.r_talisman_mh_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8713" levels="1" name="Special Talisman (R99-grade) - Mana Drain (Active)">
 		<set name="icon" val="icon.r_talisman_mh_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8714" levels="1" name="Steal Mana">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="8715" levels="1" name="Steal Mana">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="8716" levels="1" name="Steal Mana">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="8717" levels="1" name="Steal Mana">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="8718" levels="1" name="Special Talisman (R-grade) - Blood Siphon (Active)">
 		<set name="icon" val="icon.r_talisman_cr_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8719" levels="1" name="Special Talisman (R90-grade) - Blood Siphon (Active)">
 		<set name="icon" val="icon.r_talisman_cr_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8720" levels="1" name="Special Talisman (R95-grade) - Blood Siphon (Active)">
 		<set name="icon" val="icon.r_talisman_cr_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8721" levels="1" name="Special Talisman (R99-grade) - Blood Siphon (Active)">
 		<set name="icon" val="icon.r_talisman_cr_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8722" levels="1" name="Special Talisman (R-grade) - Increase Range">
 		<set name="magicLevel" val="85"/>
@@ -165,54 +197,72 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8727" levels="1" name="Special Talisman (R90-grade) - Increase Range (Active)">
 		<set name="icon" val="icon.r85_talisman_pa_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8728" levels="1" name="Special Talisman (R95-grade) - Increase Range (Active)">
 		<set name="icon" val="icon.r85_talisman_pa_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8729" levels="1" name="Special Talisman (R99-grade) - Increase Range (Active)">
 		<set name="icon" val="icon.r85_talisman_pa_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8730" levels="1" name="Special Talisman (R-grade) - Increase Servitor Enhancement (Active)">
 		<set name="icon" val="icon.r85_sp_talisman_sm_st_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8731" levels="1" name="Special Talisman (R90-grade) - Increase Servitor Enhancement (Active)">
 		<set name="icon" val="icon.r90_sp_talisman_sm_st_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8732" levels="1" name="Special Talisman (R95-grade) - Increase Servitor Enhancement (Active)">
 		<set name="icon" val="icon.r95_sp_talisman_sm_st_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8733" levels="1" name="Special Talisman (R99-grade) - Increase Servitor Enhancement (Active)">
 		<set name="icon" val="icon.r99_sp_talisman_sm_st_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8734" levels="1" name="Special Talisman (R99-grade) - Increase Servitor Enhancement (Active)">
 		<set name="icon" val="icon.r_sp_talisman_sm_rt_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8735" levels="1" name="Special Talisman (R-grade) - Increase Magic Cancel">
 		<set name="magicLevel" val="99"/>
@@ -226,6 +276,8 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8737" levels="1" name="Special Talisman (R-grade) - MP Recovery">
 		<set name="magicLevel" val="85"/>
@@ -295,24 +347,32 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8747" levels="1" name="Special Talisman (R90-grade) - Increase Heal Enhancement (Active)">
 		<set name="icon" val="icon.r85_talisman_hp_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8748" levels="1" name="Special Talisman (R95-grade) - Increase Heal Enhancement (Active)">
 		<set name="icon" val="icon.r85_talisman_hp_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8749" levels="1" name="Special Talisman (R99-grade) - Increase Heal Enhancement (Active)">
 		<set name="icon" val="icon.r85_talisman_hp_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="360000"/>
 	</skill>
 	<skill id="8774" levels="1" name="Special Talisman (R-grade) - Cancel Debuff (Active)">
 		<set name="magicType" val="SPECIAL"/>

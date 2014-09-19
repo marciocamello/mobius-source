@@ -36,6 +36,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5302" levels="9" name="Poison">
 		<table name="#stackOrder">8 8 9 9 9 10 10 10 10</table>
@@ -57,6 +58,7 @@
 		<for>
 			<effect abnormal="poison" count="10" name="Poison" stackOrder="#stackOrder" time="3" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5303" levels="9" name="Bleed">
 		<table name="#stackOrder">8 8 9 9 9 10 10 10 10</table>
@@ -78,6 +80,7 @@
 		<for>
 			<effect abnormal="bleeding" count="10" name="Bleed" stackType="Bleed" stackOrder="#stackOrder" time="3" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5304" levels="9" name="Paralysis">
 		<table name="#mpConsume2">76 78 80 82 84 84 85 86 87</table>
@@ -98,6 +101,7 @@
 		<for>
 			<effect count="1" name="Paralyze" stackOrder="-1" stackType="paralyze" time="30" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5305" levels="9" name="Poison">
 		<table name="#effectPoint">100 100 100 100 100 100 100 100 100</table>
@@ -673,6 +677,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5335" levels="9" name="Power Shot">
 		<table name="#mpConsume2">151 156 160 164 167 168 169 171 173</table>
@@ -737,6 +742,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="fire"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5339" levels="9" name="Power Shot">
 		<table name="#mpConsume2">151 156 160 164 167 168 169 171 173</table>
@@ -802,6 +808,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="water"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5343" levels="9" name="Power Shot">
 		<table name="#mpConsume2">151 156 160 164 167 168 169 171 173</table>
@@ -867,6 +874,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="wind"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5347" levels="9" name="Power Shot">
 		<table name="#mpConsume2">151 156 160 164 167 168 169 171 173</table>
@@ -932,6 +940,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="earth"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5351" levels="9" name="Power Shot">
 		<table name="#mpConsume2">151 156 160 164 167 168 169 171 173</table>
@@ -997,6 +1006,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="holy"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5355" levels="9" name="Power Shot">
 		<table name="#mpConsume2">151 156 160 164 167 168 169 171 173</table>
@@ -1062,6 +1072,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="unholy"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5359" levels="9" name="Power Shot">
 		<table name="#mpConsume2">151 156 160 164 167 168 169 171 173</table>
@@ -1131,6 +1142,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5363" levels="9" name="Poison">
 		<table name="#stackOrder">8 8 9 9 9 10 10 10 10</table>
@@ -1152,6 +1164,7 @@
 		<for>
 			<effect abnormal="poison" count="10" name="Poison" stackOrder="#stackOrder" time="3" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5364" levels="9" name="Bleed">
 		<table name="#stackOrder">8 8 9 9 9 10 10 10 10</table>
@@ -1173,6 +1186,7 @@
 		<for>
 			<effect abnormal="bleeding" count="10" name="Bleed" stackType="Bleed" stackOrder="#stackOrder" time="3" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5365" levels="9" name="Paralysis">
 		<table name="#activateRate">30 31 33 35 37 39 41 43 45</table>
@@ -1194,6 +1208,7 @@
 		<for>
 			<effect count="1" name="Paralyze" stackOrder="-1" stackType="paralyze" time="30" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5366" levels="9" name="Poison">
 		<table name="#stackOrder">8 8 9 9 9 10 10 10 10</table>

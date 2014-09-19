@@ -1311,24 +1311,32 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="180000"/>
 	</skill>
 	<skill id="21173" levels="1" name="Reinforced Authority - WIT + 1 / INT + 1">
 		<set name="icon" val="BranchSys2.icon.br_soulavatar_stat_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="180000"/>
 	</skill>
 	<skill id="21174" levels="1" name="Reinforced Authority - WIT + 1 / MEN + 1">
 		<set name="icon" val="BranchSys2.icon.br_soulavatar_stat_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="180000"/>
 	</skill>
 	<skill id="21175" levels="1" name="Reinforced Authority - CON + 1 / DEX + 1">
 		<set name="icon" val="BranchSys2.icon.br_soulavatar_stat_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="180000"/>
 	</skill>
 	<skill id="21176" levels="1" name="Divine Protection - Holy">
 		<set name="icon" val="BranchSys2.icon.br_soulavatar_attr_i00"/>
@@ -1419,6 +1427,8 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="1200000"/>
 	</skill>
 	<skill id="21191" levels="1" name="Release Agathion's Seal - Phoenix">
 		<set name="magicType" val="SPECIAL"/>
@@ -1438,12 +1448,16 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="14400000"/>
 	</skill>
 	<skill id="21193" levels="1" name="Power of Guardian Deity">
 		<set name="icon" val="BranchSys2.icon.br_paiwan_cap_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="21194" levels="1" name="Release Agathion's Seal - Three-headed Dragon">
 		<set name="magicType" val="SPECIAL"/>
@@ -1471,6 +1485,7 @@
 		<for>
 			<effect count="1" name="Transformation" stackType="vitalityRegen" time="3600" val="20002"/>
 		</for>
+		<set name="hitTime" val="500"/>
 	</skill>
 	<skill id="21196" levels="1" name="Blessed Child Transformation Skill: Sujin">
 		<set name="magicType" val="SPECIAL"/>
@@ -1485,23 +1500,31 @@
 		<for>
 			<effect count="1" name="Transformation" stackType="vitalityRegen" time="3600" val="20003"/>
 		</for>
+		<set name="hitTime" val="500"/>
 	</skill>
 	<skill id="21197" levels="1" name="Induk's Buff">
 		<set name="icon" val="BranchSys2.icon.br_pekingopera_mask_a_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1800000"/>
 	</skill>
 	<skill id="21198" levels="1" name="Silence of Loyalty">
 		<set name="icon" val="BranchSys2.icon.br_pekingopera_mask_b_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="1800000"/>
 	</skill>
 	<skill id="21199" levels="1" name="Vitality of Courage">
 		<set name="icon" val="BranchSys2.icon.br_pekingopera_mask_c_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1800000"/>
 	</skill>
 </list>

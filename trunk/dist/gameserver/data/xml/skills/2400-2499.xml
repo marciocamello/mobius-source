@@ -10,6 +10,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2401" levels="1" name="Mana Recovery Potion (Battleground)">
 		<set name="magicType" val="SPECIAL"/>

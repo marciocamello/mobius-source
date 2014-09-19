@@ -5,138 +5,161 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12801" levels="1" name="Box for the Awakened">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12802" levels="1" name="Box for the Awakened">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12803" levels="1" name="Box for the Awakened">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12804" levels="1" name="Box for the Awakened">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12805" levels="1" name="Box for the Awakened">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12806" levels="1" name="Box for the Awakened">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12807" levels="1" name="Box for the Awakened">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12808" levels="1" name="Hardener Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12809" levels="1" name="Hardener Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12810" levels="1" name="Hardener Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12811" levels="1" name="Hardener Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12812" levels="1" name="Hardener Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12813" levels="1" name="Hardener Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12814" levels="1" name="Hardener Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12815" levels="1" name="Hardener Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12816" levels="1" name="Hardener Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12817" levels="1" name="Hardener Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12818" levels="1" name="Hardener Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12819" levels="1" name="Hardener Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12820" levels="1" name="Hardener Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12821" levels="1" name="Hardener Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12822" levels="1" name="Guardian Warrior's Reward Box">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12823" levels="1" name="Destiny Scroll: Enchant Weapon (D-grade)">
 		<set name="icon" val="icon.skill0000"/>
@@ -293,138 +316,161 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12849" levels="1" name="Hardener Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12850" levels="1" name="Hardener Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12851" levels="1" name="Weapon Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12852" levels="1" name="Weapon Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12853" levels="1" name="Weapon Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12854" levels="1" name="Weapon Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12855" levels="1" name="Weapon Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12856" levels="1" name="Weapon Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12857" levels="1" name="Weapon Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12858" levels="1" name="Weapon Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12859" levels="1" name="Armor Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12860" levels="1" name="Armor Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12861" levels="1" name="Armor Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12862" levels="1" name="Armor Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12863" levels="1" name="Armor Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12864" levels="1" name="Armor Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12865" levels="1" name="Armor Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12866" levels="1" name="Armor Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12867" levels="1" name="Weapon Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12868" levels="1" name="Armor Pouch">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12869" levels="1" name="Lesser Giant's Fortune Box">
 		<set name="icon" val="icon.etc_pi_gift_box_i04"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="12870" levels="1" name="Talking Island Homemade Cookie">
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="12871" levels="1" name="Hero's Treasure Chest">
 		<set name="icon" val="icon.skill0000"/>
@@ -497,6 +543,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="12883" levels="1" name="Rabbit Ears - STR">
 		<set name="icon" val="icon.accessory_rabbit_ear_i00"/>
@@ -587,12 +634,16 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="100"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="12898" levels="1" name="Noblesse Blessing">
 		<set name="icon" val="icon.skill1323"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="100"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="12899" levels="1" name="Vitality Recovering Cake">
 		<set name="icon" val="icon.skill0000"/>

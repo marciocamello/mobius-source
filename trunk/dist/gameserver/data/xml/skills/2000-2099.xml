@@ -62,7 +62,7 @@
 	<skill id="2005" levels="1" name="Nectar">
 		<set name="magicType" val="SPECIAL"/>
 		<set name="icon" val="icon.skill0000"/>
-		<set name="reuseDelay" val="1000"/>
+		<set name="reuseDelay" val="2000"/>
 		<set name="magicLevel" val="1"/>
 		<set name="castRange" val="200"/>
 		<set name="itemConsumeId" val="6391"/>
@@ -862,6 +862,7 @@
 		<set name="target" val="TARGET_CHEST"/>
 		<set name="skillType" val="UNLOCK"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="2066" levels="1" name="Item - Fight Song Crystal">
 		<set name="magicType" val="SPECIAL"/>

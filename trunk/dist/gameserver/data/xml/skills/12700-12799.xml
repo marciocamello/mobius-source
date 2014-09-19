@@ -1193,5 +1193,6 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 </list>

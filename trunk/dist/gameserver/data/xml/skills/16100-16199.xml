@@ -5,5 +5,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="10000"/>
 	</skill>
 </list>

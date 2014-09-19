@@ -5,35 +5,43 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="7000"/>
 	</skill>
 	<skill id="6701" levels="1" name="Penalty Kick Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="7000"/>
 	</skill>
 	<skill id="6702" levels="1" name="Blessing of Cheers">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2700"/>
+		<set name="reuseDelay" val="1800000"/>
 	</skill>
 	<skill id="6703" levels="1" name="Blessing of Cheers">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2700"/>
+		<set name="reuseDelay" val="1800000"/>
 	</skill>
 	<skill id="6704" levels="1" name="Blessing of Cheers">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2700"/>
+		<set name="reuseDelay" val="1800000"/>
 	</skill>
 	<skill id="6705" levels="1" name="Stun">
 		<set name="icon" val="icon.skill0100"/>
 		<set name="coolTime" val="300"/>
-		<set name="reuseDelay" val="15000"/>
+		<set name="reuseDelay" val="30000"/>
 		<set name="power" val="4623"/>
 		<set name="magicLevel" val="83"/>
 		<set name="hitTime" val="3000"/>
@@ -48,17 +56,21 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="100"/>
 	</skill>
 	<skill id="6706" levels="1" name="Piercing Attack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="100"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="30000"/>
 	</skill>
 	<skill id="6707" levels="1" name="Self-destruction">
 		<set name="icon" val="icon.skill6876"/>
 		<set name="coolTime" val="300"/>
-		<set name="reuseDelay" val="80000"/>
+		<set name="reuseDelay" val="30000"/>
 		<set name="power" val="41654"/>
 		<set name="magicLevel" val="83"/>
 		<set name="hitTime" val="1500"/>
@@ -73,7 +85,7 @@
 	<skill id="6708" levels="1" name="Self-destruction">
 		<set name="icon" val="icon.skill6876"/>
 		<set name="coolTime" val="300"/>
-		<set name="reuseDelay" val="80000"/>
+		<set name="reuseDelay" val="30000"/>
 		<set name="power" val="41654"/>
 		<set name="magicLevel" val="83"/>
 		<set name="hitTime" val="1500"/>
@@ -90,16 +102,17 @@
 		<set name="power" val="6000"/>
 		<set name="skillRaduis" val="300"/>
 		<set name="hitTime" val="1500"/>
-		<set name="reuseDelay" val="15000"/>
+		<set name="reuseDelay" val="30000"/>
 		<set name="target" val="TARGET_MULTIFACE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="300"/>
 	</skill>
 	<skill id="6710" levels="1" name="Etis Haste">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="hitTime" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="reuseDelay" val="15000"/>
+		<set name="reuseDelay" val="20000"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
@@ -112,7 +125,7 @@
 		<set name="icon" val="icon.skill0000"/>
 		<set name="hitTime" val="1000"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="reuseDelay" val="15000"/>
+		<set name="reuseDelay" val="20000"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
@@ -285,8 +298,8 @@
 		<set name="power" val="450"/>
 		<set name="hitTime" val="1500"/>
 		<set name="coolTime" val="500"/>
-		<set name="reuseDelay" val="20000"/>
-		<set name="castRange" val="400"/>
+		<set name="reuseDelay" val="3000"/>
+		<set name="castRange" val="600"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HEAL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -299,7 +312,7 @@
 		<set name="icon" val="icon.skill1218"/>
 		<set name="reuseDelay" val="20000"/>
 		<set name="magicLevel" val="60"/>
-		<set name="castRange" val="400"/>
+		<set name="castRange" val="600"/>
 		<set name="coolTime" val="500"/>
 		<set name="hitTime" val="1000"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -345,12 +358,12 @@
 	<skill id="6728" levels="1" name="Recharge of Elcadia">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1013"/>
-		<set name="reuseDelay" val="30000"/>
+		<set name="reuseDelay" val="3000"/>
 		<set name="power" val="136"/>
 		<set name="magicLevel" val="80"/>
 		<set name="castRange" val="400"/>
 		<set name="coolTime" val="500"/>
-		<set name="hitTime" val="1000"/>
+		<set name="hitTime" val="6000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="MANAHEAL"/>
@@ -360,7 +373,7 @@
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1392"/>
 		<set name="magicLevel" val="60"/>
-		<set name="hitTime" val="1000"/>
+		<set name="hitTime" val="500"/>
 		<set name="coolTime" val="500"/>
 		<set name="castRange" val="400"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -371,15 +384,16 @@
 				<add order="0x40" stat="defenceHoly" val="30"/>
 			</effect>
 		</for>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="6730" levels="1" name="Greater Battle Heal of Elcadia">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1218"/>
-		<set name="reuseDelay" val="20000"/>
+		<set name="reuseDelay" val="1000"/>
 		<set name="power" val="858"/>
 		<set name="magicLevel" val="60"/>
-		<set name="castRange" val="400"/>
-		<set name="hitTime" val="1500"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="2000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HEAL"/>
@@ -390,18 +404,24 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
 	</skill>
 	<skill id="6732" levels="1" name="Mirage">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="6733" levels="1" name="Antharas' Stigma">
 		<set name="icon" val="icon.skill5860"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="6734" levels="1" name="Energy of Destruction">
 		<set name="icon" val="icon.skill0129"/>
@@ -420,54 +440,67 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="6737" levels="1" name="Heal">
 		<set name="icon" val="icon.skill1401"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="90000"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="6738" levels="1" name="Hold">
 		<set name="icon" val="icon.skill4047"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="6739" levels="1" name="Presentation - Behemoth Leader Casting Preparation">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="45000"/>
 	</skill>
 	<skill id="6740" levels="1" name="Presentation - Behemoth Leader Casting">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="6741" levels="1" name="Presentation - Behemoth Leader Casting Failure">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="6742" levels="1" name="Presentation - Behemoth Object Channeling">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
+		<set name="hitTime" val="90000"/>
 	</skill>
 	<skill id="6743" levels="1" name="Dark Wound">
 		<set name="icon" val="icon.skill6876"/>
 		<set name="coolTime" val="300"/>
-		<set name="reuseDelay" val="10000"/>
+		<set name="reuseDelay" val="1000"/>
 		<set name="magicLevel" val="83"/>
 		<set name="power" val="14654"/>
 		<set name="hitTime" val="2000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="34"/>
 		<set name="target" val="TARGET_ONE"/>
-		<set name="castRange" val="400"/>
+		<set name="castRange" val="1500"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="trait" val="BLEED"/>
 		<set name="saveVs" val="CON"/>
@@ -483,24 +516,36 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="6745" levels="1" name="Dark Space">
 		<set name="icon" val="icon.skill1445"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="6746" levels="1" name="Dark Space">
 		<set name="icon" val="icon.skill1445"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="6747" levels="1" name="Dark Blade">
 		<set name="icon" val="icon.skill1445"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="60"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="6748" levels="1" name="Stun Attack">
 		<set name="icon" val="icon.skill6748"/>
@@ -520,6 +565,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="6" val="0"/>
 		</for>
+		<set name="castRange" val="150"/>
 	</skill>
 	<skill id="6749" levels="1" name="Devil Strike">
 		<set name="icon" val="icon.skill6876"/>
@@ -534,11 +580,12 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
 	</skill>
 	<skill id="6750" levels="1" name="Power Strike">
 		<set name="icon" val="icon.skill6876"/>
 		<set name="coolTime" val="300"/>
-		<set name="reuseDelay" val="8000"/>
+		<set name="reuseDelay" val="5000"/>
 		<set name="power" val="17654"/>
 		<set name="magicLevel" val="83"/>
 		<set name="hitTime" val="1500"/>
@@ -548,17 +595,21 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
 	</skill>
 	<skill id="6751" levels="1" name="Blow Attack">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="6752" levels="1" name="Revival">
 		<set name="icon" val="icon.skill6861"/>
 		<set name="coolTime" val="300"/>
-		<set name="reuseDelay" val="30000"/>
+		<set name="reuseDelay" val="300000"/>
 		<set name="magicLevel" val="83"/>
 		<set name="hitTime" val="2000"/>
 		<set name="hitCancelTime" val="500"/>
@@ -586,11 +637,12 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
 	</skill>
 	<skill id="6754" levels="1" name="Bleed">
 		<set name="icon" val="icon.skill6748"/>
 		<set name="coolTime" val="300"/>
-		<set name="reuseDelay" val="20000"/>
+		<set name="reuseDelay" val="10000"/>
 		<set name="magicLevel" val="83"/>
 		<set name="hitTime" val="1500"/>
 		<set name="hitCancelTime" val="500"/>
@@ -612,7 +664,7 @@
 		<set name="magicLevel" val="84"/>
 		<set name="reuseDelay" val="8000"/>
 		<set name="coolTime" val="300"/>
-		<set name="castRange" val="600"/>
+		<set name="castRange" val="900"/>
 		<set name="hitTime" val="2500"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="34"/>
@@ -640,7 +692,7 @@
 	<skill id="6757" levels="1" name="Decrease Speed">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill6873"/>
-		<set name="reuseDelay" val="25000"/>
+		<set name="reuseDelay" val="60000"/>
 		<set name="magicLevel" val="84"/>
 		<set name="coolTime" val="300"/>
 		<set name="castRange" val="900"/>
@@ -662,7 +714,7 @@
 		<set name="coolTime" val="300"/>
 		<set name="reuseDelay" val="60000"/>
 		<set name="magicLevel" val="83"/>
-		<set name="hitTime" val="2000"/>
+		<set name="hitTime" val="1500"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="34"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -678,10 +730,10 @@
 	<skill id="6759" levels="1" name="Death Shot">
 		<set name="icon" val="icon.skill6876"/>
 		<set name="coolTime" val="300"/>
-		<set name="reuseDelay" val="12000"/>
+		<set name="reuseDelay" val="5000"/>
 		<set name="power" val="17654"/>
 		<set name="magicLevel" val="83"/>
-		<set name="castRange" val="600"/>
+		<set name="castRange" val="900"/>
 		<set name="hitTime" val="1500"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="34"/>
@@ -702,11 +754,12 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
 	</skill>
 	<skill id="6761" levels="1" name="Dragon Blow Strike">
 		<set name="icon" val="icon.skill6876"/>
 		<set name="coolTime" val="300"/>
-		<set name="reuseDelay" val="8000"/>
+		<set name="reuseDelay" val="5000"/>
 		<set name="power" val="18654"/>
 		<set name="magicLevel" val="83"/>
 		<set name="hitTime" val="1500"/>
@@ -720,9 +773,9 @@
 	<skill id="6762" levels="1" name="Rage">
 		<set name="icon" val="icon.skill6861"/>
 		<set name="coolTime" val="300"/>
-		<set name="reuseDelay" val="60000"/>
+		<set name="reuseDelay" val="300000"/>
 		<set name="magicLevel" val="83"/>
-		<set name="hitTime" val="2000"/>
+		<set name="hitTime" val="1000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="34"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -747,14 +800,15 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
 	</skill>
 	<skill id="6764" levels="1" name="Dragon Earth Shot">
 		<set name="icon" val="icon.skill6876"/>
 		<set name="coolTime" val="300"/>
-		<set name="reuseDelay" val="15000"/>
+		<set name="reuseDelay" val="5000"/>
 		<set name="power" val="27654"/>
 		<set name="magicLevel" val="83"/>
-		<set name="castRange" val="600"/>
+		<set name="castRange" val="900"/>
 		<set name="hitTime" val="1500"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="34"/>
@@ -777,6 +831,7 @@
 		<for>
 			<effect count="1" name="HealPercent" time="0" val="100"/>
 		</for>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="6766" levels="1" name="Earth Tremor">
 		<set name="magicType" val="MAGIC"/>
@@ -784,7 +839,7 @@
 		<set name="power" val="184"/>
 		<set name="magicLevel" val="84"/>
 		<set name="coolTime" val="300"/>
-		<set name="castRange" val="600"/>
+		<set name="castRange" val="900"/>
 		<set name="hitTime" val="2500"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="34"/>
@@ -798,11 +853,12 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="6768" levels="1" name="Stun Attack">
 		<set name="icon" val="icon.skill6748"/>
 		<set name="coolTime" val="300"/>
-		<set name="reuseDelay" val="15000"/>
+		<set name="reuseDelay" val="5000"/>
 		<set name="power" val="14654"/>
 		<set name="magicLevel" val="83"/>
 		<set name="hitTime" val="1500"/>
@@ -817,11 +873,12 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="5" val="0"/>
 		</for>
+		<set name="castRange" val="150"/>
 	</skill>
 	<skill id="6769" levels="1" name="Petrify">
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill6873"/>
-		<set name="reuseDelay" val="40000"/>
+		<set name="reuseDelay" val="5000"/>
 		<set name="magicLevel" val="84"/>
 		<set name="coolTime" val="300"/>
 		<set name="castRange" val="900"/>
@@ -842,7 +899,7 @@
 	<skill id="6770" levels="1" name="Heal">
 		<set name="icon" val="icon.skill6861"/>
 		<set name="coolTime" val="300"/>
-		<set name="reuseDelay" val="20000"/>
+		<set name="reuseDelay" val="5000"/>
 		<set name="magicLevel" val="83"/>
 		<set name="hitTime" val="1500"/>
 		<set name="hitCancelTime" val="500"/>
@@ -857,6 +914,7 @@
 				<def name="negateCount" val="10"/>
 			</effect>
 		</for>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="6771" levels="1" name="Devil Strike">
 		<set name="icon" val="icon.skill6876"/>
@@ -871,11 +929,12 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
 	</skill>
 	<skill id="6772" levels="1" name="Power Strike">
 		<set name="icon" val="icon.skill6876"/>
 		<set name="coolTime" val="300"/>
-		<set name="reuseDelay" val="8000"/>
+		<set name="reuseDelay" val="5000"/>
 		<set name="power" val="22312"/>
 		<set name="magicLevel" val="83"/>
 		<set name="hitTime" val="1500"/>
@@ -884,13 +943,14 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
 	</skill>
 	<skill id="6773" levels="1" name="Rage">
 		<set name="icon" val="icon.skill6861"/>
 		<set name="coolTime" val="300"/>
 		<set name="reuseDelay" val="60000"/>
 		<set name="magicLevel" val="83"/>
-		<set name="hitTime" val="2000"/>
+		<set name="hitTime" val="1500"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="34"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -921,11 +981,12 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="10" val="0"/>
 		</for>
+		<set name="castRange" val="150"/>
 	</skill>
 	<skill id="6775" levels="1" name="Soul Breath">
 		<set name="icon" val="icon.skill6876"/>
 		<set name="coolTime" val="300"/>
-		<set name="reuseDelay" val="12000"/>
+		<set name="reuseDelay" val="5000"/>
 		<set name="power" val="8312"/>
 		<set name="magicLevel" val="83"/>
 		<set name="hitTime" val="1500"/>
@@ -935,6 +996,7 @@
 		<set name="target" val="TARGET_MULTIFACE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
 	</skill>
 	<skill id="6776" levels="1" name="Paralysis">
 		<set name="icon" val="icon.skill6876"/>
@@ -945,7 +1007,7 @@
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="34"/>
 		<set name="target" val="TARGET_ONE"/>
-		<set name="castRange" val="400"/>
+		<set name="castRange" val="900"/>
 		<set name="skillType" val="DEBUFF"/>
 		<set name="delayedEffect" val="5459"/>
 		<set name="trait" val="PARALYZE"/>
@@ -962,9 +1024,9 @@
 	<skill id="6777" levels="1" name="Bleeding Gash">
 		<set name="icon" val="icon.skill6876"/>
 		<set name="coolTime" val="300"/>
-		<set name="reuseDelay" val="80000"/>
+		<set name="reuseDelay" val="5000"/>
 		<set name="magicLevel" val="83"/>
-		<set name="hitTime" val="2500"/>
+		<set name="hitTime" val="1500"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="34"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -993,6 +1055,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
 	</skill>
 	<skill id="6779" levels="1" name="Paralysis">
 		<set name="icon" val="icon.skill1170"/>
@@ -1023,6 +1086,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
 	</skill>
 	<skill id="6786" levels="1" name="Presentation - Etis Transformation Effect">
 		<set name="icon" val="icon.skill0000"/>
@@ -1035,54 +1099,63 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
 	</skill>
 	<skill id="6788" levels="1" name="Presentation - Etis Post-Transformation">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="6789" levels="1" name="Presentation - Etis' Defeat">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="6000"/>
 	</skill>
 	<skill id="6790" levels="1" name="Presentation - Etis Kneeling">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="30000"/>
 	</skill>
 	<skill id="6791" levels="1" name="Presentation - Dialogue with Elcadia 1">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="6792" levels="1" name="Presentation - Dialogue with Elcadia 2">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="30000"/>
 	</skill>
 	<skill id="6793" levels="1" name="Presentation - Dialogue with Elcadia 3">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2000"/>
 	</skill>
 	<skill id="6794" levels="1" name="Presentation - Elcadia Casting 1">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="6795" levels="1" name="Presentation - Elcadia Casting 2">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="5000"/>
 	</skill>
 	<skill id="6796" levels="1" name="Presentation - Meteor Effect">
 		<set name="icon" val="icon.skill0000"/>

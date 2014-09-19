@@ -115,7 +115,7 @@
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="0"/>
 		<set name="mpConsume1" val="40"/>
-		<set name="castRange" val="30"/>
+		<set name="castRange" val="600"/>
 		<set name="power" val="15803"/>
 		<set name="magicLevel" val="85"/>
 		<set name="coolTime" val="1500"/>
@@ -417,7 +417,7 @@
 		<table name="#mpConsume2">66 68 70 72 74 76 78 80</table>
 		<table name="#powerPvP">0</table>
 		<set name="powerPvP" val="#powerPvP"/>
-		<set name="reuseDelay" val="6000"/>
+		<set name="reuseDelay" val="5000"/>
 		<set name="hitTime" val="1200"/>
 		<set name="castRange" val="40"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -638,18 +638,22 @@
 		<for>
 			<sub order="0x40" stat="critDamRcpt" val="100"/>
 		</for>
+		<set name="castRange" val="600"/>
 	</skill>
 	<skill id="10767" levels="1" name="Half-kill">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for/>
+		<set name="castRange" val="1100"/>
 	</skill>
 	<skill id="10768" levels="1" name="Blink">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for/>
+		<set name="hitTime" val="300"/>
+		<set name="reuseDelay" val="15000"/>
 	</skill>
 	<skill id="10769" levels="5" name="Impact Shot">
 		<table name="#magicLevel">85 86 87 88 89</table>
@@ -870,7 +874,7 @@
 		<set name="powerPvP" val="#powerPvP"/>
 		<set name="reuseDelay" val="15000"/>
 		<set name="relationSkillsId" val="223;508;24;"/>
-		<set name="hitTime" val="2200"/>
+		<set name="hitTime" val="2900"/>
 		<set name="castRange" val="1100"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="elementPower" val="#elementPower"/>
@@ -945,6 +949,7 @@
 			<table name="#flyRadius">-460 -470 -480 -490 -500 -510 -520 -530 -540 -550</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant1>
+		<set name="castRange" val="300"/>
 	</skill>
 	<skill id="10775" levels="3" name="Confusion Decoy">
 		<table name="#npcId">13074 13075 13076</table>
@@ -954,7 +959,7 @@
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="#reuseDelay"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="hitTime" val="2000"/>
+		<set name="hitTime" val="1000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1062,7 +1067,7 @@
 		<table name="#stunPow">0</table>
 		<table name="#rootPow">0</table>
 		<set name="reuseDelay" val="120000"/>
-		<set name="hitTime" val="1500"/>
+		<set name="hitTime" val="800"/>
 		<set name="castRange" val="800"/>
 		<set name="relationSkillsId" val="354;99;490;"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -1207,6 +1212,8 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="CONT"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="2200"/>
 	</skill>
 	<skill id="10783" levels="4" name="Mind's Eye">
 		<table name="#magicLevel">85 88 89 90</table>
@@ -1354,7 +1361,7 @@
 	<skill id="10788" levels="1" name="Remote Control">
 		<set name="mpConsume" val="10"/>
 		<set name="reuseDelay" val="10000"/>
-		<set name="hitTime" val="1000"/>
+		<set name="hitTime" val="800"/>
 		<set name="castRange" val="900"/>
 		<set name="magicLevel" val="91"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -1372,6 +1379,7 @@
 		<set name="addSkills" val="5270;#skill"/>
 		<set name="npcId" val="13040"/>
 		<for/>
+		<set name="hitTime" val="800"/>
 	</skill>
 	<skill id="10790" levels="1" name="Explosion Trap">
 		<table name="#mpConsume2">10</table>
@@ -1434,7 +1442,7 @@
 		<set name="reuseDelay" val="5000"/>
 		<set name="relationSkillsId" val="939"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="hitTime" val="1200"/>
+		<set name="hitTime" val="800"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="target" val="TARGET_AURA"/>
@@ -1460,6 +1468,8 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="800"/>
 	</skill>
 	<skill id="10795" levels="1" name="Thunder Purity">
 		<set name="target" val="TARGET_OWNER"/>
@@ -1472,18 +1482,24 @@
 				<def name="negateCount" val="10"/>
 			</effect>
 		</for>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="2500"/>
 	</skill>
 	<skill id="10796" levels="1" name="Hawk Gust">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="500"/>
 	</skill>
 	<skill id="10797" levels="1" name="Thunder Feather Blast">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1080"/>
 	</skill>
 	<skill id="10798" levels="1" name="Thunder Sharp Claw">
 		<set name="power" val="9850"/>

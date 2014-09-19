@@ -6,6 +6,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="7101" levels="1" name="Clan-exclusive Pet Aerial Thrust">
 		<set name="hitTime" val="1500"/>
@@ -13,6 +14,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="7102" levels="1" name="Summon Clan Pet">
 		<set name="hitTime" val="5000"/>
@@ -36,6 +38,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="100"/>
 	</skill>
 	<skill id="7105" levels="1" name="Incubation Possible">
 		<set name="reuseDelay" val="2000"/>
@@ -43,6 +46,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="100"/>
 	</skill>
 	<skill id="7106" levels="1" name="Optimal Temperature Incubation Success">
 		<set name="reuseDelay" val="2000"/>

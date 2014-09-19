@@ -81,6 +81,7 @@
 			</effect>
 			<effect count="#decay-count" name="DamOverTime" time="0" val="#dmg"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="303" levels="4" name="Soul of Sagittarius">
 		<table name="#mp">1.10 1.15 1.20 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25</table>
@@ -553,6 +554,7 @@
 			<table name="#powerPvP">7768 7901 8035 8168 8302 8435 8569 8702 8836 8969 9103 9236 9370 3503 9637 9770 9903 10037 10170 10304 10437 10571 10704 10838 10971 11105 11238 11372 11505 11639</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant7>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="316" levels="1" name="Aegis">
 		<set name="icon" val="icon.skill0316"/>
@@ -587,6 +589,7 @@
 				<set order="0x80" stat="poleTargetCount" val="0"/>
 			</effect>
 		</for>
+		<set name="hitTime" val="2000"/>
 	</skill>
 	<skill id="318" levels="1" name="Aegis Stance">
 		<table name="#sDef">0.70</table>
@@ -662,6 +665,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 			<table name="#mpConsume2">74 72 71 69 68 67 65 64 62 61 59 58 56 55 53 52 50 49 48 46 45 43 42 40 39 37 36 34 33 32</table>
 		</enchant2>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="321" levels="10" name="Blinding Blow">
 		<table name="#effectPoint">307 311 314 317 320 323 326 328 331 333</table>
@@ -702,6 +706,7 @@
 				<add order="0x40" stat="runSpd" val="40"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="322" levels="6" name="Shield Fortress">
 		<table name="#mpConsumeTick">0.4</table>
@@ -777,6 +782,7 @@
 				<target castledoor="true"/>
 			</and>
 		</cond>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="326" levels="1" name="Build Advanced Headquarters">
 		<set name="magicType" val="SPECIAL"/>
@@ -1080,6 +1086,7 @@
 				<add order="0x40" stat="hpEff" val="30"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="342" levels="1" name="Touch of Death">
 		<table name="#activateRate">80</table>
@@ -1121,6 +1128,7 @@
 				<def name="negateCount" val="5"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="343" levels="1" name="Lethal Shot">
 		<table name="#powerPvP">0</table>
@@ -1246,6 +1254,7 @@
 			<table name="#powerPvP">5880 5986 6092 6198 6304 6410 6516 6622 6728 6834 6940 7046 7152 7258 7364</table>
 			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant7>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="345" levels="1" name="Sonic Rage">
 		<set name="icon" val="icon.skill0345"/>
@@ -1353,6 +1362,7 @@
 		<set name="skillType" val="SPOIL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="349" levels="1" name="Song of Renewal">
 		<table name="#abnormal_time">120</table>
@@ -1485,6 +1495,7 @@
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="2" val="0"/>
 			<effect count="1" name="RemoveTarget" stackOrder="-1" stackType="RemoveTarget" time="0" val="0" chance="80" isReflectable="false"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="353" levels="1" name="Shield Slam">
 		<table name="#activateRate">40</table>
@@ -1527,6 +1538,7 @@
 			</effect>
 			<effect count="1" name="RemoveTarget" stackOrder="-1" stackType="RemoveTarget" time="0" val="0" chance="80" isReflectable="false"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="354" levels="1" name="Hamstring Shot">
 		<table name="#activateRate">40</table>
@@ -1710,6 +1722,7 @@
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 			<effect count="1" name="RemoveTarget" stackOrder="-1" stackType="RemoveTarget" time="0" val="0" chance="80" isReflectable="false"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="359" levels="1" name="Eye of Hunter">
 		<table name="#Power">1.3</table>
@@ -1881,6 +1894,7 @@
 				<mul order="0x30" stat="mDef" val="0.7"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="363" levels="1" name="Song of Meditation">
 		<table name="#abnormal_time">120</table>
@@ -2014,7 +2028,7 @@
 		<set name="levelModifier" val="1"/>
 		<set name="affectLimit" val="10;10"/>
 		<set name="icon" val="icon.skill0367"/>
-		<set name="reuseDelay" val="30000"/>
+		<set name="reuseDelay" val="15000"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="hitTime" val="2000"/>
 		<set name="hitCancelTime" val="500"/>

@@ -5,228 +5,337 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="2500"/>
 	</skill>
 	<skill id="14002" levels="3" name="Transfixion Attack">
 		<set name="icon" val="icon.skill0484"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="100"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14003" levels="3" name="Straight Slash">
 		<set name="icon" val="icon.skill0122"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="2500"/>
 	</skill>
 	<skill id="14004" levels="3" name="Front Elven Bow">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="14005" levels="3" name="Battlefront Slash">
 		<set name="icon" val="icon.skill0320"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14006" levels="3" name="Shield Stun">
 		<set name="icon" val="icon.skill0092"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="14007" levels="3" name="Power Blow">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="250"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="14008" levels="3" name="Power Zeppelin">
 		<set name="icon" val="icon.skill0493"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1000"/>
+		<set name="hitTime" val="100"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14009" levels="3" name="Electric Shock">
 		<set name="icon" val="icon.skill1172"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
+		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="14010" levels="3" name="Electric Range">
 		<set name="icon" val="icon.skill0279"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1000"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14011" levels="3" name="Electric Staff">
 		<set name="icon" val="icon.skill1265"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1000"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14012" levels="3" name="Iron Deal">
 		<set name="icon" val="icon.skill0320"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="300"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14013" levels="3" name="Iron Drop Deal">
 		<set name="icon" val="icon.skill0320"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="200"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14014" levels="3" name="Power Front Slash">
 		<set name="icon" val="icon.skill0320"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14015" levels="1" name="Circle Slash">
 		<set name="icon" val="icon.skill0036"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14016" levels="1" name="Elven Bow Range">
 		<set name="icon" val="icon.skill0320"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="250"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14017" levels="1" name="Thunder Storm">
 		<set name="icon" val="icon.skill0048"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="300"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14018" levels="1" name="Downward Blow">
 		<set name="icon" val="icon.skill0320"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="300"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14019" levels="1" name="Ice Chill Spell">
 		<set name="icon" val="icon.skill1184"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14020" levels="1" name="Ice Wall">
 		<set name="icon" val="icon.skill1184"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1000"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14021" levels="1" name="Ice Chill Range">
 		<set name="icon" val="icon.skill1184"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14022" levels="1" name="Ice Drop">
 		<set name="icon" val="icon.skill1184"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1000"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14023" levels="1" name="Hero's Teleport">
 		<set name="icon" val="icon.skill0793"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="1500"/>
 	</skill>
 	<skill id="14024" levels="1" name="Ancient Hero's Roar">
 		<set name="icon" val="icon.skill0320"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="300"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14025" levels="1" name="Hero's Arrow Shaft">
 		<set name="icon" val="icon.skill0772"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1000"/>
 	</skill>
 	<skill id="14026" levels="1" name="Hero's Sword Energy">
 		<set name="icon" val="icon.skill0122"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="14027" levels="1" name="Hero's Rage">
 		<set name="icon" val="icon.skill0122"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="14028" levels="1" name="Hero's Influence">
 		<set name="icon" val="icon.skill0024"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="10000"/>
 	</skill>
 	<skill id="14029" levels="1" name="Hero's Influence">
 		<set name="icon" val="icon.skill0024"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="10000"/>
 	</skill>
 	<skill id="14030" levels="1" name="Hero's Magic">
 		<set name="icon" val="icon.skill1230"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1000"/>
+		<set name="hitTime" val="2000"/>
 	</skill>
 	<skill id="14031" levels="1" name="Hero's Magic">
 		<set name="icon" val="icon.skill1230"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1000"/>
+		<set name="hitTime" val="2000"/>
 	</skill>
 	<skill id="14032" levels="1" name="Red Net">
 		<set name="icon" val="icon.skill14032"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14033" levels="1" name="Vital Spot Attack">
 		<set name="icon" val="icon.skill0016"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="300"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14034" levels="1" name="Waist Slash">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="300"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14035" levels="1" name="Octavis' Obedience">
 		<set name="icon" val="icon.skill0045"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="14036" levels="1" name="Vulnerability Attack">
 		<set name="icon" val="icon.skill0484"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="14037" levels="1" name="Front Foot Attack">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="14038" levels="1" name="Power Strike">
 		<set name="icon" val="icon.skill0320"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="14039" levels="1" name="Curse Shock">
 		<table name="#power">20483 22595 24708 26821 28934 30343</table>
@@ -241,11 +350,11 @@
 		<set name="critRate" val="10"/>
 		<set name="skillRadius" val="350"/>
 		<set name="reuseDelay" val="30000"/>
-		<set name="hitTime" val="2190"/>
+		<set name="hitTime" val="1500"/>
 		<set name="coolTime" val="296"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="20"/>
+		<set name="castRange" val="400"/>
 		<set name="effectRange" val="20"/>
 		<set name="ignoreShield" val="true"/>
 		<for>
@@ -264,11 +373,11 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="critRate" val="10"/>
 		<set name="reuseDelay" val="30000"/>
-		<set name="hitTime" val="2190"/>
+		<set name="hitTime" val="1500"/>
 		<set name="coolTime" val="296"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="20"/>
+		<set name="castRange" val="40"/>
 		<set name="effectRange" val="20"/>
 		<set name="ignoreShield" val="true"/>
 	</skill>
@@ -277,138 +386,178 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="14042" levels="6" name="Disarm">
 		<set name="icon" val="icon.skill0485"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="14043" levels="6" name="Double Blow">
 		<set name="icon" val="icon.skill0005"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="14044" levels="1" name="Teleport">
 		<set name="icon" val="icon.skill1448"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="14045" levels="6" name="Fairy Attack">
 		<set name="icon" val="icon.skill1147"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="14046" levels="6" name="Fairy Curse Gloom">
 		<set name="icon" val="icon.skill1263"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="14047" levels="6" name="Fairy Curse Poison">
 		<set name="icon" val="icon.skill1168"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="14048" levels="1" name="Fairy Acumen">
 		<set name="icon" val="icon.skill1085"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="14049" levels="1" name="Fairy Heal">
 		<set name="icon" val="icon.skill1258"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="14050" levels="4" name="Power Strike">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="14051" levels="4" name="Decrease P. Def.">
 		<set name="icon" val="icon.skill0116"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="14052" levels="4" name="Rush">
 		<set name="icon" val="icon.skill0484"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="100"/>
 	</skill>
 	<skill id="14053" levels="4" name="Mace Downward Strike">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="14054" levels="4" name="Wood Upward Strike">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="5000"/>
 	</skill>
 	<skill id="14055" levels="4" name="Power Shot">
 		<set name="icon" val="icon.skill0056"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="14056" levels="4" name="Power Arrow">
 		<set name="icon" val="icon.skill0924"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="14057" levels="1" name="Teleport">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="5000"/>
 	</skill>
 	<skill id="14058" levels="2" name="X Strike">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="100"/>
 	</skill>
 	<skill id="14059" levels="2" name="Sneer Attack">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="14060" levels="2" name="Hold">
 		<set name="icon" val="icon.skill1201"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="14061" levels="2" name="Frontal Brandish">
 		<set name="icon" val="icon.skill0320"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="14062" levels="2" name="Sleep">
 		<set name="icon" val="icon.skill1069"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="14063" levels="1" name="Rush">
 		<set name="icon" val="icon.skill0484"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="100"/>
 	</skill>
 	<skill id="14064" levels="1" name="Wisp Heal">
 		<set name="reuseDelay" val="10000"/>
@@ -419,13 +568,14 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HEAL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
 	</skill>
 	<skill id="14065" levels="1" name="Wisp Heal">
 		<set name="reuseDelay" val="10000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1258"/>
-		<set name="castRange" val="300"/>
+		<set name="castRange" val="600"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="BUFF"/>
@@ -436,58 +586,71 @@
 		<set name="magicLevel" val="85"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1258"/>
-		<set name="castRange" val="300"/>
+		<set name="castRange" val="600"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
 	</skill>
 	<skill id="14067" levels="11" name="Big Blind Light">
 		<set name="reuseDelay" val="10000"/>
 		<set name="magicLevel" val="85"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1258"/>
-		<set name="castRange" val="300"/>
+		<set name="castRange" val="600"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
 	</skill>
 	<skill id="14068" levels="6" name="Garden Inducement">
 		<set name="icon" val="icon.skill1239"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="300"/>
+		<set name="hitTime" val="500"/>
 	</skill>
 	<skill id="14069" levels="6" name="Garden Dark Magic">
 		<set name="icon" val="icon.skill0279"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="200"/>
+		<set name="hitTime" val="2000"/>
 	</skill>
 	<skill id="14070" levels="6" name="Branch Straightening">
 		<set name="icon" val="icon.skill0096"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="200"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="14071" levels="6" name="Destroyer's Friction">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="14072" levels="6" name="Gardener Blow">
 		<set name="icon" val="icon.skill4037"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="100"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="14073" levels="6" name="Garden Destroyer Slash">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="60"/>
+		<set name="hitTime" val="2000"/>
 	</skill>
 	<skill id="14074" levels="1" name="Garden Destroyer Slash">
 		<set name="icon" val="icon.skill0048"/>
@@ -512,24 +675,30 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="200"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="14078" levels="6" name="Pirate Gardener Shock">
 		<set name="icon" val="icon.skill0048"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="200"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="14079" levels="1" name="Garden Reflect">
 		<set name="icon" val="icon.skill4095"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="14080" levels="1" name="Self Defense">
 		<set name="icon" val="icon.skill0110"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="14081" levels="6" name="Garden Judgment">
 		<set name="mpConsume" val="324"/>
@@ -538,11 +707,11 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="critRate" val="10"/>
 		<set name="reuseDelay" val="10000"/>
-		<set name="hitTime" val="3500"/>
+		<set name="hitTime" val="3000"/>
 		<set name="coolTime" val="296"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="20"/>
+		<set name="castRange" val="80"/>
 		<set name="effectRange" val="20"/>
 		<set name="ignoreShield" val="true"/>
 	</skill>
@@ -553,11 +722,11 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="critRate" val="10"/>
 		<set name="reuseDelay" val="10000"/>
-		<set name="hitTime" val="5600"/>
+		<set name="hitTime" val="5000"/>
 		<set name="coolTime" val="296"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="20"/>
+		<set name="castRange" val="150"/>
 		<set name="effectRange" val="20"/>
 		<set name="ignoreShield" val="true"/>
 	</skill>
@@ -566,36 +735,46 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="100"/>
 	</skill>
 	<skill id="14084" levels="6" name="Garden Range Bleed">
 		<set name="icon" val="icon.skill0096"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="200"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="14085" levels="1" name="Protection">
 		<set name="icon" val="icon.skill1258"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="200"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="14086" levels="1" name="Apherus Gate Key Discovery">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="14087" levels="6" name="Apherus' Binding">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
+		<set name="hitTime" val="500"/>
 	</skill>
 	<skill id="14088" levels="1" name="Garden Apherus Recovery">
 		<set name="icon" val="icon.skill1268"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="10000"/>
 	</skill>
 	<skill id="14089" levels="5" name="Reflect">
 		<set name="mpConsume" val="324"/>
@@ -604,11 +783,11 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="critRate" val="10"/>
 		<set name="reuseDelay" val="10000"/>
-		<set name="hitTime" val="1600"/>
+		<set name="hitTime" val="1500"/>
 		<set name="coolTime" val="296"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="20"/>
+		<set name="castRange" val="100"/>
 		<set name="effectRange" val="20"/>
 		<set name="ignoreShield" val="true"/>
 	</skill>
@@ -617,18 +796,22 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="200"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="14091" levels="6" name="Rose Poison">
 		<set name="icon" val="icon.skill1069"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="100"/>
 	</skill>
 	<skill id="14092" levels="6" name="Entangle">
 		<set name="icon" val="icon.skill1201"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="100"/>
 	</skill>
 	<skill id="14093" levels="5" name="Sakum Follower Blow">
 		<table name="#mpConsume">24 25 26 27 28</table>
@@ -685,17 +868,23 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="80"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="14098" levels="6" name="Sahara Blow">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="80"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="14099" levels="6" name="Lachik Front Foot Attack">
 		<set name="icon" val="icon.skill0003"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="80"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 </list>

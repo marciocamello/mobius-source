@@ -18,6 +18,7 @@
 		<for>
 			<effect count="1" name="MuteAll" time="20" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5901" levels="2" name="Mist of Oblivion">
 		<table name="#mpConsume2">60 179</table>
@@ -173,6 +174,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5910" levels="1" name="Stronghold Attack">
 		<set name="magicType" val="MAGIC"/>
@@ -922,6 +924,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="saveVs" val="CON"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5970" levels="1" name="Seduced Knight's Help">
 		<set name="magicType" val="MAGIC"/>
@@ -1037,6 +1040,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="unholy"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5976" levels="3" name="Dark Storm">
 		<table name="#mpConsume2">50 61 75</table>
@@ -1070,6 +1074,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="unholy"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5978" levels="1" name="Devil Strike">
 		<set name="icon" val="icon.skill0000"/>

@@ -62,6 +62,7 @@
 			</effect>
 			<effect count="1" name="Hate" time="0" val="#effectPoint"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="401" levels="10" name="Judgment">
 		<table name="#cAtk">0.75 0.75 0.75 0.75 0.75 0.7 0.7 0.7 0.7 0.65</table>
@@ -126,6 +127,7 @@
 			</effect>
 			<effect count="1" name="Hate" time="0" val="#effectPoint"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="402" levels="10" name="Arrest">
 		<table name="#effectPoint">4429 4478 4527 4577 4627 4678 4730 4782 4834 4887</table>
@@ -466,6 +468,7 @@
 				<mul order="0x30" stat="blowRate" val="#Tab-blowRate"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="410" levels="3" name="Mortal Strike">
 		<table name="#blowRate">1.1 1.15 1.2</table>
@@ -1867,6 +1870,7 @@
 		<cond msgId="113" addName="1">
 			<using kind="Sword,Blunt,Rapier"/>
 		</cond>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="469" levels="1" name="Rapid Attack">
 		<set name="magicType" val="MAGIC"/>
@@ -2036,6 +2040,7 @@
 		<cond msgId="113" addName="1">
 			<using kind="Sword,Blunt,Ancient Sword"/>
 		</cond>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="477" levels="37" name="Dark Smash">
 		<table name="#elementPower">0</table>
@@ -2079,6 +2084,7 @@
 			<table name="#powerPvP">2602 2647 2691 2736 2781 2825 2870 2915 2959 3004 3049 3094 3138 3183 3228 3272 3317 3362 3406 3451 3496 3541 3585 3630 3675 3719 3764 3809 3853 3898</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant4>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="478" levels="15" name="Double Thrust">
 		<table name="#effectPoint">96 100 104 111 115 119 128 132 136 145 150 154 164 169 173</table>
@@ -2103,6 +2109,7 @@
 		<cond msgId="113" addName="1">
 			<using kind="Rapier"/>
 		</cond>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="479" levels="1" name="Hard March">
 		<set name="icon" val="icon.skill0479"/>
@@ -2244,6 +2251,7 @@
 				<mul order="0x90" stat="pAtk" val="0.6"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="486" levels="2" name="Increase Range">
 		<table name="#dist">200 400</table>
@@ -2296,6 +2304,7 @@
 		<cond msgId="113" addName="1">
 			<using kind="Crossbow"/>
 		</cond>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="490" levels="2" name="Fast Shot">
 		<table name="#effectPoint">303 549</table>
@@ -2334,6 +2343,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="492" levels="25" name="Spread Wing">
 		<table name="#mpConsume2">50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75</table>
@@ -2364,6 +2374,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 			<table name="#mpConsume2">73 72 71 69 68 67 66 64 63 62 61 59 58 57 56 54 53 52 50 49 48 47 45 44 43 42 40 39 38 37</table>
 		</enchant2>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="493" levels="28" name="Storm Assault">
 		<table name="#powerPvP">0</table>

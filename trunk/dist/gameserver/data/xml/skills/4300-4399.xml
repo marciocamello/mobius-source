@@ -1166,6 +1166,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4378" levels="12" name="Damage Shield">
 		<table name="#mpConsume2">12 19 26 35 45 55 65 69 72 75 77 78</table>
@@ -1230,6 +1231,7 @@
 				<mul order="0x30" stat="pDef" val="0.77"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4383" levels="1" name="Aggression Stone">
 		<set name="icon" val="icon.skill0000"/>

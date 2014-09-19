@@ -705,6 +705,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="9060" levels="1" name="Maguen Plasma Collector">
 		<set name="magicType" val="SPECIAL"/>
@@ -854,6 +855,8 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="100"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="9074" levels="1" name="Salmon Porridge">
 		<set name="magicType" val="SPECIAL"/>
@@ -880,18 +883,24 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
+		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="9076" levels="1" name="Secret Gate Key">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="reuseDelay" val="8000"/>
 	</skill>
 	<skill id="9077" levels="1" name="Open Packaged Book">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="9078" levels="1" name="Hot Springs Recovery Potion">
 		<set name="itemConsumeId" val="17018"/>

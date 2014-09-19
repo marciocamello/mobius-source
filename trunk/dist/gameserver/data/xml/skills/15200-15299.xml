@@ -85,6 +85,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="-1000"/>
 	</skill>
 	<skill id="15210" levels="1" name="Pa'agrio's Gift 2">
 		<set name="coolTime" val="1000"/>
@@ -93,6 +94,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="-1000"/>
 	</skill>
 	<skill id="15211" levels="1" name="Pa'agrio's Gift 3">
 		<set name="coolTime" val="1000"/>
@@ -101,6 +103,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="-1000"/>
 	</skill>
 	<skill id="15212" levels="1" name="Pa'agrio's Gift 4">
 		<set name="coolTime" val="1000"/>
@@ -109,6 +112,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="-1000"/>
 	</skill>
 	<skill id="15213" levels="1" name="Guillotine's Advent">
 		<set name="coolTime" val="500"/>

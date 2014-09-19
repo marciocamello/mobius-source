@@ -110,6 +110,7 @@
 		<set name="skillRadius" val="200"/>
 		<set name="skillType" val="AGGRESSION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="504" levels="37" name="Triple Thrust">
 		<table name="#elementPower">0</table>
@@ -171,6 +172,7 @@
 			<table name="#powerPvP">3123 3177 3230 3284 3338 3391 3445 3499 3552 3606 3659 3713 3767 3820 3874 3928 3981 4035 4089 4142 4196 4249 4303 4357 4410 4464 4518 4571 4625 4679</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant7>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="505" levels="28" name="Shining Edge">
 		<table name="#elementPower">0</table>
@@ -234,6 +236,7 @@
 			<table name="#powerPvP">5574 5670 5766 5862 5957 6053 6149 6245 6340 6436 6532 6628 6723 6819 6915 7011 7107 7202 7298 7394 7490 7585 7681 7777 7873 7968 8064 8160 8256 8352</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant7>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="506" levels="4" name="Checkmate">
 		<table name="#elementPower">0</table>
@@ -283,6 +286,7 @@
 			<table name="#powerPvP">5574 5670 5766 5862 5957 6053 6149 6245 6340 6436 6532 6628 6723 6819 6915 7011 7107 7202 7298 7394 7490 7585 7681 7777 7873 7968 8064 8160 8256 8352</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant4>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="507" levels="37" name="Twin Shot">
 		<table name="#elementPower">0</table>

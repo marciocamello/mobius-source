@@ -14,12 +14,14 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="19102" levels="1" name="Chaos Sympathy">
 		<set name="icon" val="icon.skill1505"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1200"/>
 	</skill>
 	<skill id="19103" levels="1" name="Resident Power">
 		<set name="icon" val="icon.skill0050"/>

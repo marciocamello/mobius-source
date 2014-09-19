@@ -16,6 +16,7 @@
 		<for>
 			<effect abnormal="bleeding" count="10" name="Bleed" stackOrder="10" time="20" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5501" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
@@ -34,6 +35,7 @@
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 			<effect count="1" name="RemoveTarget" stackOrder="-1" stackType="RemoveTarget" time="0" val="0" chance="50" isReflectable="false"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5502" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
@@ -732,6 +734,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="trait" val="SHOCK"/>
 		<set name="saveVs" val="CON"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5552" levels="12" name="Heal Up">
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
@@ -1015,6 +1018,7 @@
 				<mul order="0x30" stat="critChanceRcpt" val="1.3"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5566" levels="1" name="Force of Destruction">
 		<set name="magicType" val="SPECIAL"/>
@@ -1248,6 +1252,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5581" levels="1" name="Divine Beast Stun Attack">
 		<set name="icon" val="icon.skill0100"/>
@@ -1266,6 +1271,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="5582" levels="1" name="Divine Beast Fire Breath">
 		<set name="affectLimit" val="5;12"/>

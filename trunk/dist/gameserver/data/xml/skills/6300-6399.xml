@@ -52,6 +52,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="sacred"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6304" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
@@ -71,6 +72,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="3" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6305" levels="1" name="Divine Gnosis">
 		<set name="icon" val="icon.skill0000"/>
@@ -104,6 +106,7 @@
 		<for>
 			<effect abnormal="bleeding" count="1" name="Bleed" stackType="Bleed" stackOrder="9" time="10" val="#power"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6307" levels="1" name="Opus of the Hand">
 		<set name="magicType" val="MAGIC"/>
@@ -184,6 +187,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="sacred"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6312" levels="1" name="Launch Holy Sword Energy">
 		<set name="icon" val="icon.skill0000"/>
@@ -251,6 +255,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="sacred"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6316" levels="1" name="Execution of Authority">
 		<set name="magicType" val="MAGIC"/>
@@ -431,6 +436,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="sacred"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6327" levels="1" name="Divinity Worship">
 		<set name="icon" val="icon.skill0000"/>
@@ -445,6 +451,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="sacred"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6328" levels="1" name="Fighter Judgement">
 		<set name="magicType" val="MAGIC"/>
@@ -476,6 +483,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="sacred"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6330" levels="1" name="Salmon Porridge Attack">
 		<set name="icon" val="icon.skill0000"/>
@@ -492,6 +500,7 @@
 				<mul order="0x30" stat="maxHp" val="1.05"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6331" levels="1" name="Campfire Tired">
 		<set name="levelModifier" val="1"/>
@@ -537,6 +546,7 @@
 		<for>
 			<effect abnormal="bleeding" count="1" name="Bleed" stackType="Bleed" stackOrder="3" time="3" val="200"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6334" levels="1" name="Stun">
 		<set name="levelModifier" val="1"/>
@@ -557,6 +567,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="4" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6335" levels="1" name="Electric Rain 1">
 		<set name="magicType" val="MAGIC"/>
@@ -604,6 +615,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6338" levels="1" name="Red Slash 2">
 		<set name="icon" val="icon.skill0000"/>
@@ -617,12 +629,13 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6339" levels="1" name="Divine Hammer Attack">
 		<set name="levelModifier" val="2"/>
 		<set name="icon" val="icon.skill0096"/>
 		<set name="coolTime" val="500"/>
-		<set name="reuseDelay" val="10000"/>
+		<set name="reuseDelay" val="1000"/>
 		<set name="power" val="4563"/>
 		<set name="magicLevel" val="84"/>
 		<set name="castRange" val="600"/>
@@ -643,7 +656,7 @@
 		<set name="levelModifier" val="1"/>
 		<set name="icon" val="icon.skill0100"/>
 		<set name="coolTime" val="500"/>
-		<set name="reuseDelay" val="10000"/>
+		<set name="reuseDelay" val="1000"/>
 		<set name="power" val="4563"/>
 		<set name="magicLevel" val="83"/>
 		<set name="hitTime" val="1500"/>
@@ -658,18 +671,23 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="4" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6341" levels="1" name="Stronghold Water Cannon">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="500"/>
 	</skill>
 	<skill id="6342" levels="1" name="Trap Over Steam">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="6343" levels="2" name="Maguen Plasma - Power">
 		<table name="#pAtk">1.02 1.03</table>
@@ -799,6 +817,9 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="6371" levels="1" name="Invincibility">
 		<set name="icon" val="icon.skill0000"/>
@@ -819,24 +840,33 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="6373" levels="1" name="Thunderbolt">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="6374" levels="1" name="Notification - Thunderbolts">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="6375" levels="1" name="Notification - Thunderbolts">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="6376" levels="9" name="Sonic Strike">
 		<table name="#limit">0.9 0.8 0.7 0.6 0.5 0.4 0.3 0.2 0.1</table>
@@ -864,6 +894,8 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="6378" levels="1" name="Earth Shift">
 		<set name="magicType" val="MAGIC"/>
@@ -1227,6 +1259,7 @@
 				<mul order="0x30" stat="runSpd" val="0.8"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6396" levels="1" name="Kokracon Panic">
 		<set name="levelModifier" val="1"/>
@@ -1269,6 +1302,7 @@
 		<for>
 			<effect name="Stun" time="3" val="0" effectPower="50" effectType="STUN" stackOrder="1" stackType="Stun"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6398" levels="1" name="Kokracon Sonic Shout">
 		<set name="levelModifier" val="1"/>

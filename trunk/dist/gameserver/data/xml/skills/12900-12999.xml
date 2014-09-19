@@ -428,6 +428,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
 	</skill>
 	<skill id="12936" levels="1" name="Blessed Scroll of Escape">
 		<set name="hitTime" val="200"/>

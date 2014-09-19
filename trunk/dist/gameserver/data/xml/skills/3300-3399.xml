@@ -325,6 +325,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="3329" levels="1" name="Power Slash">
 		<set name="icon" val="icon.weapon_unique_zariche_i00"/>
@@ -337,6 +338,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="3330" levels="1" name="Air Blade">
 		<set name="affectLimit" val="6;12"/>
@@ -350,6 +352,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="3331" levels="1" name="Enslave">
 		<set name="levelModifier" val="1"/>

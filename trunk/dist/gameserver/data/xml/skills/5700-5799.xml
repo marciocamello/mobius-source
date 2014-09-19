@@ -1076,12 +1076,16 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="6000"/>
 	</skill>
 	<skill id="5770" levels="12" name="not_used">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="6000"/>
 	</skill>
 	<skill id="5771" levels="1" name="Buff Control">
 		<set name="magicType" val="MAGIC"/>

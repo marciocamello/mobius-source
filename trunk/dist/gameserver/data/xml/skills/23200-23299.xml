@@ -5,12 +5,13 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="10000"/>
 	</skill>
 	<skill id="23201" levels="1" name="Ball Trapping Gnosian Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="magicLevel" val="85"/>
-		<set name="hitTime" val="3000"/>
+		<set name="hitTime" val="7000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -24,7 +25,7 @@
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="magicLevel" val="85"/>
-		<set name="hitTime" val="3000"/>
+		<set name="hitTime" val="7000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -38,7 +39,7 @@
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="magicLevel" val="85"/>
-		<set name="hitTime" val="3000"/>
+		<set name="hitTime" val="7000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -52,7 +53,7 @@
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="magicLevel" val="85"/>
-		<set name="hitTime" val="3000"/>
+		<set name="hitTime" val="7000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -66,7 +67,7 @@
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="magicLevel" val="85"/>
-		<set name="hitTime" val="3000"/>
+		<set name="hitTime" val="7000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -80,7 +81,7 @@
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="magicLevel" val="85"/>
-		<set name="hitTime" val="3000"/>
+		<set name="hitTime" val="7000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -94,7 +95,7 @@
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="magicLevel" val="85"/>
-		<set name="hitTime" val="3000"/>
+		<set name="hitTime" val="7000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -108,7 +109,7 @@
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="magicLevel" val="85"/>
-		<set name="hitTime" val="3000"/>
+		<set name="hitTime" val="7000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -122,7 +123,7 @@
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="magicLevel" val="85"/>
-		<set name="hitTime" val="3000"/>
+		<set name="hitTime" val="7000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -137,24 +138,35 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
+		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="1500"/>
 	</skill>
 	<skill id="23211" levels="85" name="Prominence">
 		<set name="icon" val="icon.skill1230"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="23212" levels="85" name="Flame Strike">
 		<set name="icon" val="icon.skill1181"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
+		<set name="hitTime" val="2500"/>
+		<set name="reuseDelay" val="7000"/>
 	</skill>
 	<skill id="23213" levels="2" name="Berserker Spirit">
 		<set name="icon" val="icon.skill1062"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="6000"/>
 	</skill>
 	<skill id="23214" levels="1" name="Good/Bad of Life">
 		<set name="icon" val="icon.skill0001"/>
@@ -187,6 +199,8 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="23218" levels="1" name="Flower Fairy Spirit Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute"/>
@@ -207,6 +221,8 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="23220" levels="1" name="Cheerleader Orodriel Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute"/>
@@ -227,6 +243,8 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="7200000"/>
 	</skill>
 	<skill id="23222" levels="1" name="Cheerleader Lanya Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute"/>
@@ -247,6 +265,8 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="7200000"/>
 	</skill>
 	<skill id="23224" levels="1" name="Cheerleader Naonin Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute"/>
@@ -267,6 +287,8 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="7200000"/>
 	</skill>
 	<skill id="23226" levels="1" name="Cheerleader Mortia Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute"/>
@@ -287,6 +309,8 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="7200000"/>
 	</skill>
 	<skill id="23228" levels="1" name="Cheerleader Kaurin Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute"/>
@@ -307,6 +331,8 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="7200000"/>
 	</skill>
 	<skill id="23230" levels="1" name="Cheerleader Meruril Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute"/>
@@ -327,6 +353,8 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="7200000"/>
 	</skill>
 	<skill id="23232" levels="1" name="Handy Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute"/>
@@ -347,18 +375,23 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="7200000"/>
 	</skill>
 	<skill id="23234" levels="1" name="Singer and Dancer Agathion Cute Trick">
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="23235" levels="1" name="Singer and Dancer Agathion Special Skill: Song of Hunter">
 		<set name="icon" val="icon.skill_agathion_special"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="1200000"/>
 	</skill>
 	<skill id="23236" levels="1" name="Agathion Cute Trick - Zaken's Spirit Swords">
 		<set name="icon" val="icon.skill_agathion_cute"/>
@@ -378,366 +411,497 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="7200000"/>
 	</skill>
 	<skill id="23238" levels="1" name="Master's Blessing - Pa'agrio's Eye">
 		<set name="icon" val="icon.skill1364"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23239" levels="1" name="Master's Blessing - Pa'agrio's Soul">
 		<set name="icon" val="icon.skill1365"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23240" levels="1" name="Master's Blessing - Chant of Magnus">
 		<set name="icon" val="icon.skill1413"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23241" levels="1" name="Master's Blessing - Chant of Blood Awakening">
 		<set name="icon" val="icon.skill1519"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23242" levels="1" name="Master's Blessing - Spike">
 		<set name="icon" val="icon.skill0826"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23243" levels="1" name="Master's Blessing - Bowstring">
 		<set name="icon" val="icon.skill0827"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23244" levels="1" name="Master's Blessing - Hard Tanning">
 		<set name="icon" val="icon.skill0829"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23245" levels="1" name="Master's Blessing - Embroider">
 		<set name="icon" val="icon.skill0830"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23246" levels="1" name="Master's Blessing - Counter Critical">
 		<set name="icon" val="icon.skill1542"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23247" levels="1" name="Master's Blessing - Elemental Resistance">
 		<set name="icon" val="icon.skill1352"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23248" levels="1" name="Master's Blessing - Arcane Protection">
 		<set name="icon" val="icon.skill1354"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23249" levels="1" name="Master's Call">
 		<set name="icon" val="icon.skill1429"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="23250" levels="1" name="Agathion Cute Trick - Cow">
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="23251" levels="1" name="Agathion Cute Trick - Makeshift Bat">
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="23252" levels="1" name="Agathion Cute Trick - Griffin">
 		<set name="icon" val="icon.skill_agathion_cute"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
 	</skill>
 	<skill id="23253" levels="1" name="Master's Blessing - Focus">
 		<set name="icon" val="icon.skill1077"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23254" levels="1" name="Master's Blessing - Death Whisper">
 		<set name="icon" val="icon.skill1242"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23255" levels="1" name="Master's Blessing - Haste">
 		<set name="icon" val="icon.skill1086"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23256" levels="1" name="Master's Blessing - Guidance">
 		<set name="icon" val="icon.skill1240"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23257" levels="1" name="Master's Blessing - Blessed Body">
 		<set name="icon" val="icon.skill1045"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23258" levels="1" name="Master's Blessing - Blessed Soul">
 		<set name="icon" val="icon.skill1048"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23259" levels="1" name="Master's Blessing - Agility">
 		<set name="icon" val="icon.skill1087"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23260" levels="1" name="Master's Blessing - Acumen">
 		<set name="icon" val="icon.skill1085"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23261" levels="1" name="Master's Blessing - Decrease Weight">
 		<set name="icon" val="icon.skill1257"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23262" levels="1" name="Master's Blessing - Might">
 		<set name="icon" val="icon.skill1068"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23263" levels="1" name="Master's Blessing - Shield">
 		<set name="icon" val="icon.skill1040"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23264" levels="1" name="Master's Blessing - Magic Barrier">
 		<set name="icon" val="icon.skill1036"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23265" levels="1" name="Master's Blessing - Vampiric Rage">
 		<set name="icon" val="icon.skill1268"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23266" levels="1" name="Master's Blessing - Empower">
 		<set name="icon" val="icon.skill1059"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23267" levels="1" name="Master's Blessing - Wind Walk">
 		<set name="icon" val="icon.skill1204"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23268" levels="1" name="Master's Blessing - Berserker Spirit">
 		<set name="icon" val="icon.skill1062"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23269" levels="1" name="Master's Blessing - Greater Might">
 		<set name="icon" val="icon.skill1388"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23270" levels="1" name="Master's Blessing - Greater Shield">
 		<set name="icon" val="icon.skill1389"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23271" levels="1" name="Master's Blessing - Wild Magic">
 		<set name="icon" val="icon.skill1303"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23272" levels="1" name="Master's Blessing - Clarity">
 		<set name="icon" val="icon.skill1397"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23273" levels="1" name="Master's Blessing - Prophecy of Water">
 		<set name="icon" val="icon.skill1355"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23274" levels="1" name="Master's Blessing - Prophecy of Fire">
 		<set name="icon" val="icon.skill1356"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23275" levels="1" name="Master's Blessing - Prophecy of Wind">
 		<set name="icon" val="icon.skill1357"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23276" levels="1" name="Master's Blessing - Chant of Victory">
 		<set name="icon" val="icon.skill1363"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23277" levels="1" name="Master's Blessing - Improve Combat">
 		<set name="icon" val="icon.skill1499"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23278" levels="1" name="Master's Blessing - Improve Magic">
 		<set name="icon" val="icon.skill1500"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23279" levels="1" name="Master's Blessing - Improve Condition">
 		<set name="icon" val="icon.skill1501"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23280" levels="1" name="Master's Blessing - Improve Critical Attack">
 		<set name="icon" val="icon.skill1502"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23281" levels="1" name="Master's Blessing - Improve Shield Defense">
 		<set name="icon" val="icon.skill1503"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23282" levels="1" name="Master's Blessing - Improve Movement">
 		<set name="icon" val="icon.skill1504"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23283" levels="1" name="Master's Blessing - Sharpen Edge">
 		<set name="icon" val="icon.skill0825"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23284" levels="1" name="Master's Blessing - Face Harden">
 		<set name="icon" val="icon.skill0828"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23285" levels="1" name="Master's Blessing - Noblesse Blessing">
 		<set name="icon" val="icon.skill1323"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23286" levels="1" name="Master's Blessing - Pa'agrio's Eye">
 		<set name="icon" val="icon.skill1364"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23287" levels="1" name="Master's Blessing - Pa'agrio's Soul">
 		<set name="icon" val="icon.skill1365"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23288" levels="1" name="Master's Blessing - Chant of Magnus">
 		<set name="icon" val="icon.skill1413"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23289" levels="1" name="Master's Blessing - Chant of Blood Awakening">
 		<set name="icon" val="icon.skill1519"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23290" levels="1" name="Master's Blessing - Spike">
 		<set name="icon" val="icon.skill0826"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23291" levels="1" name="Master's Blessing - Bowstring">
 		<set name="icon" val="icon.skill0827"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23292" levels="1" name="Master's Blessing - Hard Tanning">
 		<set name="icon" val="icon.skill0829"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23293" levels="1" name="Master's Blessing - Embroider">
 		<set name="icon" val="icon.skill0830"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23294" levels="1" name="Master's Blessing - Counter Critical">
 		<set name="icon" val="icon.skill1542"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23295" levels="1" name="Master's Blessing - Elemental Resistance">
 		<set name="icon" val="icon.skill1352"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23296" levels="1" name="Master's Blessing - Arcane Protection">
 		<set name="icon" val="icon.skill1354"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="23297" levels="1" name="Rudolph's Blessing">
 		<set name="icon" val="BranchSys.icon.br_xmas_weapon_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2700"/>
+		<set name="reuseDelay" val="600000"/>
 	</skill>
 	<skill id="23298" levels="1" name="Flame Hawk">
 		<set name="icon" val="icon.skill0771"/>

@@ -13,6 +13,7 @@
 				<mul order="0x30" stat="fall" val="0.6"/>
 			</effect>
 		</for>
+		<set name="castRange" val="600"/>
 	</skill>
 	<skill id="22301" levels="1" name="Party Cake">
 		<set name="icon" val="BranchSys.icon.br_birthday_cake_i00"/>
@@ -25,12 +26,14 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22303" levels="1" name="Party Cake">
 		<set name="icon" val="BranchSys.icon.br_birthday_cake_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
 	</skill>
 	<skill id="22304" levels="1" name="Campfire's Warmth">
 		<set name="icon" val="icon.etc_torch_on_i00"/>
@@ -43,18 +46,23 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="600000"/>
 	</skill>
 	<skill id="22306" levels="1" name="Event - Scroll: Summon Bad Bunny">
 		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="10000"/>
 	</skill>
 	<skill id="22307" levels="1" name="Event - Scroll: Summon Bad Bunny Captain">
 		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="10000"/>
 	</skill>
 	<skill id="22308" levels="1" name="Event - Scroll: Summon Liverless Bunny">
 		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
@@ -73,12 +81,18 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
+		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="1000"/>
 	</skill>
 	<skill id="22311" levels="1" name="Cupid's Enhanced Cure">
 		<set name="icon" val="icon.skill3260"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
+		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="4000"/>
 	</skill>
 	<skill id="22312" levels="1" name="Birthday Vitality Buff">
 		<set name="magicType" val="SPECIAL"/>
@@ -96,12 +110,15 @@
 		<for>
 			<effect count="1" name="Vitality" stackType="vitalityRegen" stackOrder="1" time="14400" val="0"/>
 		</for>
+		<set name="hitTime" val="100"/>
+		<set name="reuseDelay" val="14400000"/>
 	</skill>
 	<skill id="22313" levels="1" name="Pa'agrio's Warm Breeze (4-hour)">
 		<set name="icon" val="BranchSys2.Icon.pi_wind_of_paagrio"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22314" levels="1" name="1st Place Treasure Sack">
 		<set name="icon" val="icon.skill0000"/>
@@ -456,18 +473,21 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="22373" levels="1" name="Starfall">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="22374" levels="1" name="Sweet Chocolate">
 		<set name="icon" val="BranchSys.icon.br_valentine_darkchoco_i00"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22375" levels="1" name="Valentine's Day Love Pouch">
 		<set name="icon" val="icon.skill0000"/>
@@ -480,6 +500,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22377" levels="1" name="Bad Bunny's Necklace Pack">
 		<set name="icon" val="icon.skill0000"/>
@@ -606,6 +627,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3600000"/>
 	</skill>
 	<skill id="22398" levels="1" name="Allegra Box">
 		<set name="icon" val="icon.skill0000"/>

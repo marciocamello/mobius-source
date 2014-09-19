@@ -41,6 +41,8 @@
 		<for>
 			<effect abnormal="invul2" count="1" name="Invulnerable" stackOrder="-1" stackType="Invulnerable" time="10" val="0" cancelOnAction="true"/>
 		</for>
+		<set name="hitTime" val="200"/>
+		<set name="reuseDelay" val="600000"/>
 	</skill>
 	<skill id="1905" levels="1" name="Swiftness">
 		<set name="target" val="TARGET_SELF"/>
@@ -75,6 +77,8 @@
 				<add order="0x40" stat="mEvas" val="30"/>
 			</effect>
 		</for>
+		<set name="hitTime" val="200"/>
+		<set name="reuseDelay" val="600000"/>
 	</skill>
 	<skill id="1908" levels="1" name="Delicacy">
 		<set name="target" val="TARGET_SELF"/>
@@ -138,6 +142,8 @@
 				<def name="negateCount" val="10"/>
 			</effect>
 		</for>
+		<set name="hitTime" val="200"/>
+		<set name="reuseDelay" val="900000"/>
 	</skill>
 	<skill id="1913" levels="1" name="Life Siphon">
 		<set name="target" val="TARGET_SELF"/>
@@ -159,6 +165,8 @@
 				<mul order="0x30" stat="pDef" val="0.85"/>
 			</effect>
 		</for>
+		<set name="hitTime" val="200"/>
+		<set name="reuseDelay" val="600000"/>
 	</skill>
 	<skill id="1915" levels="1" name="Blessing of Fire">
 		<set name="target" val="TARGET_SELF"/>
@@ -192,10 +200,11 @@
 		<for>
 			<effect count="1" name="AddSkills" val="0" displayId="1918"/>
 		</for>
+		<set name="reuseDelay" val="300000"/>
 	</skill>
 	<skill id="1918" levels="1" name="Undying Will">
 		<set name="magicLevel" val="85"/>
-		<set name="reuseDelay" val="8000"/>
+		<set name="reuseDelay" val="300000"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -203,6 +212,7 @@
 		<for>
 			<effect abnormal="invul2" count="1" name="Invulnerable" stackOrder="-1" stackType="Invulnerable" time="5" val="0" cancelOnAction="false"/>
 		</for>
+		<set name="hitTime" val="200"/>
 	</skill>
 	<skill id="1919" levels="1" name="Dexterity">
 		<set name="target" val="TARGET_SELF"/>
@@ -225,6 +235,8 @@
 				<add order="0x40" stat="reflectDam" val="50"/>
 			</effect>
 		</for>
+		<set name="hitTime" val="200"/>
+		<set name="reuseDelay" val="600000"/>
 	</skill>
 	<skill id="1921" levels="1" name="Blessing of Earth">
 		<set name="target" val="TARGET_SELF"/>
@@ -246,6 +258,8 @@
 		<for>
 			<effect count="1" name="KnockDown" stackOrder="-1" stackType="Stun" time="3" val="0" chance="50"/>
 		</for>
+		<set name="hitTime" val="200"/>
+		<set name="reuseDelay" val="600000"/>
 	</skill>
 	<skill id="1923" levels="1" name="Battle Instinct">
 		<set name="target" val="TARGET_SELF"/>
@@ -281,6 +295,8 @@
 				<add order="0x40" stat="debuffResist" val="80"/>
 			</effect>
 		</for>
+		<set name="hitTime" val="200"/>
+		<set name="reuseDelay" val="600000"/>
 	</skill>
 	<skill id="1926" levels="1" name="Body Reinforcement">
 		<set name="icon" val="icon.skill0538"/>
@@ -344,6 +360,7 @@
 				<mul order="0x30" stat="pAtk" val="1.01"/>
 			</effect>
 		</for>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="1929" levels="1" name="Tyrr Aura">
 		<table name="#magicLevel">85</table>
@@ -376,6 +393,7 @@
 				<mul order="0x30" stat="rCrit" val="1.01"/>
 			</effect>
 		</for>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="1931" levels="1" name="Othell Aura">
 		<table name="#magicLevel">85</table>
@@ -408,6 +426,7 @@
 				<mul order="0x30" stat="pAtkSpd" val="1.01"/>
 			</effect>
 		</for>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="1933" levels="1" name="Yul Aura">
 		<table name="#magicLevel">85</table>
@@ -440,6 +459,7 @@
 				<mul order="0x30" stat="regMp" val="1.5"/>
 			</effect>
 		</for>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="1935" levels="1" name="Feoh Aura">
 		<table name="#magicLevel">85</table>
@@ -472,6 +492,7 @@
 				<mul order="0x30" stat="mAtkSpd" val="1.01"/>
 			</effect>
 		</for>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="1937" levels="1" name="Wynn Aura">
 		<table name="#magicLevel">85</table>
@@ -505,6 +526,7 @@
 				<mul order="0x30" stat="mpConsumePhysical" val="0.97"/>
 			</effect>
 		</for>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="1939" levels="1" name="Aeore Aura">
 		<table name="#magicLevel">85</table>
@@ -537,6 +559,7 @@
 				<mul order="0x30" stat="mAtk" val="1.01"/>
 			</effect>
 		</for>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="1941" levels="1" name="Physical Nail Attack">
 		<set name="icon" val="icon.skill0539"/>
@@ -569,6 +592,7 @@
 		<set name="soulBoost" val="true"/>
 		<set name="overHit" val="true"/>
 		<set name="behind" val="true"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="1943" levels="1" name="Wing Rush">
 		<set name="affectLimit" val="5;12"/>
@@ -586,6 +610,7 @@
 		<set name="flyType" val="CHARGE"/>
 		<set name="flyRadius" val="600"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="1944" levels="1" name="Death Arrow">
 		<set name="magicType" val="MAGIC"/>
@@ -620,6 +645,7 @@
 		<set name="skillType" val="MDAM"/>
 		<set name="skillRadius" val="300"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="1952" levels="1" name="Block Wynn Force">
 		<!-- Wynn Momentum is not applied. -->
@@ -664,6 +690,7 @@
 				<add order="0x40" stat="runSpd" val="4"/>
 			</effect>
 		</for>
+		<set name="hitTime" val="2500"/>
 	</skill>
 	<skill id="1955" levels="3" name="Party Solidarity">
 		<set name="icon" val="icon.skill1955"/>
@@ -686,6 +713,7 @@
 				<mul order="0x30" stat="pReuse" val="#reuse"/>
 			</effect>
 		</for>
+		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="1956" levels="4" name="Sub - P. Atk./M. Atk. Increase">
 		<table name="#Atk">1.01 1.02 1.03 1.04</table>

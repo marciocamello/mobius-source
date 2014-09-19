@@ -1338,6 +1338,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6493" levels="28" name="Holy Attack">
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>
@@ -1351,6 +1352,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6494" levels="28" name="Holy Attack">
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>
@@ -1364,6 +1366,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="6495" levels="28" name="Holy Attack">
 		<table name="#mpConsume2">13 20 28 38 50 61 65 69 73 75 77 78 80 80 81 82 82 83 83 84 84 84 84 85 85 85 85 85</table>

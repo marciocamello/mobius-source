@@ -235,6 +235,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4709" levels="10" name="Cursed Blow">
 		<table name="#effectPoint">279 296 311 323 328 333 337 340 341 342</table>
@@ -254,6 +255,7 @@
 		<set name="blow" val="true"/>
 		<set name="onCrit" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4710" levels="12" name="Wild Stun">
 		<table name="#effectPoint">49 73 102 135 170 202 226 235 240 243 246 248</table>
@@ -279,6 +281,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4711" levels="12" name="Wild Defense">
 		<table name="#effectPoint">138 204 285 379 477 566 635 659 676 689 700 709</table>
@@ -437,6 +440,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4720" levels="12" name="Power Strike">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -452,6 +456,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4721" levels="12" name="Power Strike">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -467,6 +472,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4722" levels="12" name="Power Strike">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -482,6 +488,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4723" levels="12" name="Power Strike">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -497,6 +504,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4724" levels="12" name="Stun">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -518,6 +526,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4725" levels="12" name="Stun">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -539,6 +548,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4726" levels="12" name="Stun">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -560,6 +570,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4727" levels="12" name="Stun">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -581,6 +592,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4728" levels="12" name="Stun">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -602,6 +614,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4729" levels="12" name="Mortal Blow">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -619,6 +632,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="blow" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4730" levels="12" name="Mortal Blow">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -636,6 +650,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="blow" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4731" levels="12" name="Mortal Blow">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -653,6 +668,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="blow" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4732" levels="12" name="Mortal Blow">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -670,6 +686,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="blow" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4733" levels="12" name="Mortal Blow">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -687,6 +704,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="blow" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4734" levels="12" name="Spinning Slasher">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -782,6 +800,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4740" levels="12" name="Power Strike">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -797,6 +816,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4741" levels="12" name="Power Strike">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -812,6 +832,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4742" levels="12" name="Power Strike">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -827,6 +848,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4743" levels="12" name="Power Strike">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -842,6 +864,7 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4744" levels="12" name="Stun">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -863,6 +886,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4745" levels="12" name="Stun">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -884,6 +908,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4746" levels="12" name="Stun">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -905,6 +930,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4747" levels="12" name="Stun">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -926,6 +952,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4748" levels="12" name="Stun">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -947,6 +974,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4749" levels="12" name="Mortal Blow">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -964,6 +992,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="blow" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4750" levels="12" name="Mortal Blow">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -981,6 +1010,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="blow" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4751" levels="12" name="Mortal Blow">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -998,6 +1028,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="blow" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4752" levels="12" name="Mortal Blow">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -1015,6 +1046,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="blow" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4753" levels="12" name="Mortal Blow">
 		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
@@ -1032,6 +1064,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="blow" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="4754" levels="12" name="Power Shot">
 		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>

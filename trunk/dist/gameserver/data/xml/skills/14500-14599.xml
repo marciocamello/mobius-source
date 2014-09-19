@@ -4,7 +4,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="hitTime" val="11000"/>
+		<set name="hitTime" val="10000"/>
 		<for/>
 	</skill>
 	<skill id="14571" levels="5" name="Shilen's Breath">
@@ -40,5 +40,7 @@
 		<for>
 			<effect count="1" name="Petrification" stackOrder="-1" stackType="paralyze" time="5" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1000"/>
 	</skill>
 </list>

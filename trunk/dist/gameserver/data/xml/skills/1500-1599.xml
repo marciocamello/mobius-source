@@ -179,7 +179,7 @@
 		<set name="magicType" val="MAGIC"/>
 		<set name="affectLimit" val="10;10"/>
 		<set name="icon" val="icon.skill1508"/>
-		<set name="reuseDelay" val="8000"/>
+		<set name="reuseDelay" val="30000"/>
 		<set name="magicLevel" val="81"/>
 		<set name="hitTime" val="1500"/>
 		<set name="hitCancelTime" val="500"/>
@@ -605,7 +605,7 @@
 		<table name="#power">51 52 54 55 57 58 60 61 63 64 66 68 69 71 72 74 75 77 78 80 81 83 85 86 88 89 90 92 93 95 96 97 99 100 101 102 103 105 106 107 108 109</table>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1523"/>
-		<set name="reuseDelay" val="1000"/>
+		<set name="reuseDelay" val="2000"/>
 		<set name="power" val="#power"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="castRange" val="750"/>
@@ -1612,6 +1612,7 @@
 				<target hasBuffId="1570"/>
 			</not>
 		</cond>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="1567" levels="1" name="Class Change">
 		<set name="magicType" val="SPECIAL"/>
@@ -1628,6 +1629,7 @@
 				<target hasBuffId="1570"/>
 			</not>
 		</cond>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="1568" levels="1" name="Class Change">
 		<set name="magicType" val="SPECIAL"/>
@@ -1644,6 +1646,7 @@
 				<target hasBuffId="1570"/>
 			</not>
 		</cond>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="1569" levels="1" name="Class Change">
 		<set name="magicType" val="SPECIAL"/>
@@ -1660,6 +1663,7 @@
 				<target hasBuffId="1570"/>
 			</not>
 		</cond>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="1570" levels="1" name="Identity Crisis">
 		<set name="icon" val="icon.skill1570"/>
@@ -1670,6 +1674,7 @@
 		<for>
 			<effect count="1" name="Buff" stackTypes="sub_job" time="15"/>
 		</for>
+		<set name="reuseDelay" val="3000"/>
 	</skill>
 	<skill id="1571" levels="1" name="Awakened Class Inventory Increase">
 		<set name="icon" val="icon.skill1571"/>

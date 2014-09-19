@@ -900,6 +900,7 @@
 		<cond msgId="113" addName="1">
 			<player instance_zone="43"/>
 		</cond>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="8239" levels="1" name="Critical Up">
 		<set name="icon" val="icon.skill5760"/>
@@ -996,6 +997,7 @@
 		<cond msgId="113" addName="1">
 			<player instance_zone="44"/>
 		</cond>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="8244" levels="1" name="Transform Gatekeeper">
 		<set name="magicType" val="SPECIAL"/>
@@ -1413,6 +1415,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="trait" val="SHOCK"/>
 		<set name="saveVs" val="CON"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="8277" levels="1" name="Transform Native">
 		<set name="magicType" val="MAGIC"/>

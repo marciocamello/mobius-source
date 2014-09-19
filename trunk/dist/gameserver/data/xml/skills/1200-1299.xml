@@ -525,7 +525,7 @@
 		<set name="icon" val="icon.skill1225"/>
 		<set name="reuseDelay" val="#reuseDelay"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="hitTime" val="6000"/>
+		<set name="hitTime" val="15000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -555,7 +555,7 @@
 		<set name="icon" val="icon.skill1226"/>
 		<set name="reuseDelay" val="#reuseDelay"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="hitTime" val="6000"/>
+		<set name="hitTime" val="15000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -584,7 +584,7 @@
 		<set name="icon" val="icon.skill1227"/>
 		<set name="reuseDelay" val="#reuseDelay"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="hitTime" val="6000"/>
+		<set name="hitTime" val="15000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -612,7 +612,7 @@
 		<set name="icon" val="icon.skill1228"/>
 		<set name="reuseDelay" val="#reuseDelay"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="hitTime" val="6000"/>
+		<set name="hitTime" val="15000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>

@@ -545,6 +545,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="10000"/>
 	</skill>
 	<skill id="2857" levels="1" name="Holiday Event - Enchant Scroll (Wizard)">
 		<set name="magicType" val="SPECIAL"/>
@@ -555,6 +556,7 @@
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="10000"/>
 	</skill>
 	<skill id="2858" levels="1" name="Holiday Red Sock">
 		<set name="magicType" val="SPECIAL"/>

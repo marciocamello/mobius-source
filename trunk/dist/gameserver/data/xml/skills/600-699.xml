@@ -524,6 +524,7 @@
 		<cond msgId="144">
 			<target mobId="13098"/>
 		</cond>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="631" levels="6" name="Emergent Ability: Attack">
 		<table name="#pAtk">10 20 28 35 42 49</table>
@@ -1329,6 +1330,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="676" levels="1" name="Divine Warrior Sonic Blaster">
 		<set name="icon" val="icon.skill_transform_s_attack"/>
@@ -1464,6 +1466,7 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="683" levels="1" name="Divine Knight Thunder Storm">
 		<set name="levelModifier" val="1"/>
@@ -1595,6 +1598,7 @@
 				<mul order="0x30" stat="runSpd" val="0.8"/>
 			</effect>
 		</for>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="689" levels="1" name="Divine Rogue Deadly Blow">
 		<set name="icon" val="icon.skill_transform_s_attack"/>
@@ -1613,6 +1617,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="lethal1" val="10"/>
 		<set name="nextAction" val="attack"/>
+		<set name="castRange" val="40"/>
 	</skill>
 	<skill id="690" levels="1" name="Divine Rogue Agility">
 		<set name="magicType" val="MAGIC"/>
