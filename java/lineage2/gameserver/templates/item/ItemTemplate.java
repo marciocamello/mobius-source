@@ -1219,4 +1219,13 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return false;
 	}
+	
+	/**
+	 * Checks if is attribute crystal.
+	 * @return true, if is attribute crystal
+	 */
+	public boolean isAttributeCrystal()
+	{
+		return (_itemId == 9552) || (_itemId == 9553) || (_itemId == 9554) || (_itemId == 9555) || (_itemId == 9556) || (_itemId == 9557);
+	}
 }
