@@ -476,8 +476,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="1"/>
 			<add stat="mAtk" order="0x10" value="1"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="22362" name="Emerald Dualsword">
@@ -494,8 +494,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="1"/>
 			<add stat="mAtk" order="0x10" value="1"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<armor id="22363" name="Mount - Black Bear" add_name="7-day">
@@ -538,8 +538,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="1"/>
 			<add stat="mAtk" order="0x10" value="1"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="22366" name="Black Bear Claw">
@@ -556,8 +556,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="1"/>
 			<add stat="mAtk" order="0x10" value="1"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<armor id="22367" name="Black Bear Hat" add_name="7-day">
@@ -744,8 +744,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="1"/>
 			<add stat="mAtk" order="0x10" value="1"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="22388" name="Halloween Scythe" add_name="Event">
@@ -762,8 +762,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="1"/>
 			<add stat="mAtk" order="0x10" value="1"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<armor id="22389" name="Halloween Cloak" add_name="7-day (Event)">
@@ -777,7 +777,7 @@
 		<set name="ex_type" value="CLOAK"/>
 		<for>
 			<add stat="pDef" order="0x10" value="20"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -792,7 +792,7 @@
 		<set name="ex_type" value="CLOAK"/>
 		<for>
 			<add stat="pDef" order="0x10" value="20"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>

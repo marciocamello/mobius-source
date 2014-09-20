@@ -27,7 +27,6 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.skills.EffectType;
 import lineage2.gameserver.skills.effects.EffectTemplate;
-import lineage2.gameserver.tables.AttributeDamageResistTable;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.utils.PositionUtils;
 
@@ -1360,22 +1359,45 @@ public class Formulas
 			return value;
 		}
 		
-		Double attDiff = attacker.calcStat(element.getAttack(), power) - defender.calcStat(element.getDefence(), 0.);
-		
-		if ((pAttacker != null) && pAttacker.isDebug())
+		if ((pAttacker != null) && pAttacker.isGM() && Config.DEBUG)
 		{
 			pAttacker.sendMessage("Element: " + element.name());
 			pAttacker.sendMessage("Attack: " + attacker.calcStat(element.getAttack(), power));
 			pAttacker.sendMessage("Defence: " + defender.calcStat(element.getDefence(), 0.));
-			pAttacker.sendMessage("Modifier: " + (attDiff < 0 ? "On defense " : "On attack ") + AttributeDamageResistTable.getInstance().getAttributeBonus(attDiff));
+			pAttacker.sendMessage("Modifier: " + getElementMod(defender.calcStat(element.getDefence(), 0.), attacker.calcStat(element.getAttack(), power)));
 		}
-		
-		if (attDiff < 0)
+		return value * getElementMod(defender.calcStat(element.getDefence(), 0.), attacker.calcStat(element.getAttack(), power));
+	}
+	
+	/**
+	 * Method getElementMod.
+	 * @param defense double
+	 * @param attack double
+	 * @return double
+	 */
+	private static double getElementMod(double defense, double attack)
+	{
+		double diff = attack - defense;
+		if (diff <= 0)
 		{
-			return value / AttributeDamageResistTable.getInstance().getAttributeBonus(attDiff);
+			return 1.0;
 		}
-		
-		return value * AttributeDamageResistTable.getInstance().getAttributeBonus(attDiff);
+		else if (diff < 50)
+		{
+			return 1.0 + (diff * 0.003948);
+		}
+		else if (diff < 150)
+		{
+			return 1.2;
+		}
+		else if (diff < 300)
+		{
+			return 1.4;
+		}
+		else
+		{
+			return 1.7;
+		}
 	}
 	
 	/**
@@ -1386,8 +1408,7 @@ public class Formulas
 	 */
 	public static Element getAttackElement(Creature attacker, Creature target)
 	{
-		double val, max = Double.MIN_VALUE, maxElementDefenseVal = Double.MIN_VALUE;
-		Element maxElementDefense = Element.NONE;
+		double val, max = Double.MIN_VALUE;
 		Element result = Element.NONE;
 		
 		for (Element e : Element.VALUES)
@@ -1396,13 +1417,12 @@ public class Formulas
 			
 			if (val <= 0.)
 			{
-				if ((target != null) && ((target.calcStat(e.getDefence(), 0., null, null)) > maxElementDefenseVal))
-				{
-					maxElementDefenseVal = target.calcStat(e.getDefence(), 0., null, null);
-					maxElementDefense = e;
-				}
-				
 				continue;
+			}
+			
+			if (target != null)
+			{
+				val -= target.calcStat(e.getDefence(), 0., null, null);
 			}
 			
 			if (val > max)
@@ -1410,11 +1430,6 @@ public class Formulas
 				max = val;
 				result = e;
 			}
-		}
-		
-		if ((result == Element.NONE) && (target != null))
-		{
-			return maxElementDefense;
 		}
 		
 		return result;

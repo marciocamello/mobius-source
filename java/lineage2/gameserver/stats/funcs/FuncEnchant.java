@@ -12,18 +12,13 @@
  */
 package lineage2.gameserver.stats.funcs;
 
-import lineage2.gameserver.Config;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.tables.EnchantHPBonusTable;
-import lineage2.gameserver.tables.EnchantStatBonusTable;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.item.ItemType;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @author Mobius
@@ -31,17 +26,6 @@ import org.slf4j.LoggerFactory;
  */
 public class FuncEnchant extends Func
 {
-	private static final Logger _log = LoggerFactory.getLogger(EnchantStatBonusTable.class);
-	private static final int _limit1 = Config.OVERENCHANT_LIMIT1;
-	private static final int _limit2 = Config.OVERENCHANT_LIMIT2;
-	private static final int _limit3 = Config.OVERENCHANT_LIMIT3;
-	private static final int _limit4 = Config.OVERENCHANT_LIMIT4;
-	private static final double _overEnchantMul1 = Config.OVERENCHANT_MUL1;
-	private static final double _overEnchantMul2 = Config.OVERENCHANT_MUL2;
-	private static final double _overEnchantMul3 = Config.OVERENCHANT_MUL3;
-	private static final double _overEnchantMul4 = Config.OVERENCHANT_MUL4;
-	private static final double _blessedMultiplier = Config.BLESSED_ARMOR_WEAPON_MUL;
-	
 	/**
 	 * Constructor for FuncEnchant.
 	 * @param stat Stats
@@ -63,272 +47,137 @@ public class FuncEnchant extends Func
 	{
 		ItemInstance item = (ItemInstance) owner;
 		int enchant = item.getEnchantLevel();
-		
-		if (enchant == 0)
-		{
-			return;
-		}
-		
-		ItemType itemType = item.getItemType();
-		boolean isBlessed = item.getTemplate().isBlessedEquipment();
-		boolean isTopGrade = false;
-		int crystal = item.getTemplate().getCrystalType().cry;
-		Integer bodyPart = item.getBodyPart();
-		
-		if (crystal == ItemTemplate.CRYSTAL_R)
-		{
-			isTopGrade = true;
-		}
+		int overenchant = Math.max(0, enchant - 3);
 		
 		switch (stat)
 		{
 			case SHIELD_DEFENCE:
-				double defenseBonus = EnchantStatBonusTable.getInstance().getDefenseBonus(crystal, enchant, _limit1);
-				env.value += (int) calcStatBonus(enchant, defenseBonus, isBlessed, false, isTopGrade, false);
-				break;
-			
 			case MAGIC_DEFENCE:
-			{
-				defenseBonus = EnchantStatBonusTable.getInstance().getDefenseBonus(crystal, enchant, _limit1);
-				env.value += (int) calcStatBonus(enchant, defenseBonus, isBlessed, false, isTopGrade, false);
-				break;
-			}
-			
 			case POWER_DEFENCE:
 			{
-				defenseBonus = EnchantStatBonusTable.getInstance().getDefenseBonus(crystal, enchant, _limit1);
-				env.value += (int) calcStatBonus(enchant, defenseBonus, isBlessed, false, isTopGrade, false);
-				break;
+				env.value += enchant + (overenchant * 2);
+				return;
 			}
 			
 			case MAX_HP:
 			{
 				env.value += EnchantHPBonusTable.getInstance().getHPBonus(item);
-				break;
+				return;
 			}
 			
-			case RUN_SPEED:
-				if (item.isArmor() && (enchant > _limit1))
-				{
-					double runSpdBonus = EnchantStatBonusTable.getInstance().getStatBonus(bodyPart, false);
-					
-					if (runSpdBonus == 0)
-					{
-						_log.info("FuncEnchant: Error, item: " + item.getId() + " - " + item.getName() + " has no run speed bonus for the body part.");
-						break;
-					}
-					
-					env.value += (int) calcStatBonus(enchant, runSpdBonus, isBlessed, true, isTopGrade, false);
-				}
-				
-				break;
-			
-			case CRITICAL_RATE:
-				if (item.isArmor() && (enchant > _limit1))
-				{
-					double critRateBonus = EnchantStatBonusTable.getInstance().getStatBonus(bodyPart, false);
-					
-					if (critRateBonus == 0)
-					{
-						_log.info("FuncEnchant: Error, item: " + item.getId() + " - " + item.getName() + " has no critical rate bonus for the body part.");
-						break;
-					}
-					
-					env.value += ((Math.round(calcStatBonus(enchant, critRateBonus, isBlessed, true, isTopGrade, false) * Math.pow(10, 1)) / Math.pow(10, 1)) * 2);
-				}
-				
-				return;
-				
-			case MCRITICAL_RATE:
-				if (item.isArmor() && (enchant > _limit1))
-				{
-					double mcritRateBonus = EnchantStatBonusTable.getInstance().getStatBonus(bodyPart, true);
-					
-					if (mcritRateBonus == 0)
-					{
-						_log.info("FuncEnchant: Error, item: " + item.getId() + " - " + item.getName() + " has no magic Critical rate bonus for the body part.");
-						break;
-					}
-					
-					env.value += calcStatBonus(enchant, mcritRateBonus, isBlessed, true, isTopGrade, false);
-				}
-				
-				return;
-				
-			case ACCURACY_COMBAT:
-				if (item.isArmor() && (enchant > _limit1))
-				{
-					double accCombatBonus = EnchantStatBonusTable.getInstance().getStatBonus(bodyPart, false);
-					
-					if (accCombatBonus == 0)
-					{
-						_log.info("FuncEnchant: Error, item: " + item.getId() + " - " + item.getName() + " has no accuracy bonus for the body part.");
-						break;
-					}
-					
-					env.value += (int) calcStatBonus(enchant, accCombatBonus, isBlessed, true, isTopGrade, false);
-				}
-				
-				return;
-				
-			case MACCURACY_COMBAT:
-				if (item.isArmor() && (enchant > _limit1))
-				{
-					double maccCombatBonus = EnchantStatBonusTable.getInstance().getStatBonus(bodyPart, true);
-					
-					if (maccCombatBonus == 0)
-					{
-						_log.info("FuncEnchant: Error, item: " + item.getId() + " - " + item.getName() + " has no Magic Accuracy bonus for the body part.");
-						break;
-					}
-					
-					env.value += (int) calcStatBonus(enchant, maccCombatBonus, isBlessed, true, isTopGrade, false);
-				}
-				
-				return;
-				
-			case EVASION_RATE:
-				if (item.isArmor() && (enchant > _limit1))
-				{
-					double evasionBonus = EnchantStatBonusTable.getInstance().getStatBonus(bodyPart, false);
-					
-					if (evasionBonus == 0)
-					{
-						_log.info("FuncEnchant: Error, item: " + item.getId() + " - " + item.getName() + " has no evasion bonus for the body part.");
-						break;
-					}
-					
-					env.value += (int) calcStatBonus(enchant, evasionBonus, isBlessed, true, isTopGrade, false);
-				}
-				
-				return;
-				
-			case MEVASION_RATE:
-				if (item.isArmor() && (enchant > _limit1))
-				{
-					double mevasionBonus = EnchantStatBonusTable.getInstance().getStatBonus(bodyPart, false);
-					
-					if (mevasionBonus == 0)
-					{
-						_log.info("FuncEnchant: Error, item: " + item.getId() + " - " + item.getName() + " has no Magic Evasion bonus for the body part.");
-						break;
-					}
-					
-					env.value += (int) calcStatBonus(enchant, mevasionBonus, isBlessed, true, isTopGrade, false);
-				}
-				
-				return;
-				
 			case MAGIC_ATTACK:
 			{
-				if (item.isWeapon())
+				switch (item.getTemplate().getCrystalType().cry)
 				{
-					double mAtkWeaponEnchant = EnchantStatBonusTable.getInstance().getWeaponStatBonus((WeaponType) itemType, crystal, true);
-					env.value += (int) calcStatBonus(enchant, mAtkWeaponEnchant, isBlessed, false, isTopGrade, true);
-				}
-				else if (item.isArmor() && (enchant > _limit1))
-				{
-					double mAtkArmorBonus = EnchantStatBonusTable.getInstance().getStatBonus(bodyPart, true);
-					
-					if (mAtkArmorBonus == 0)
-					{
-						_log.info("FuncEnchant: Error, item: " + item.getId() + " - " + item.getName() + " has no Magic Attack bonus for the body part.");
+					case ItemTemplate.CRYSTAL_R:
+						env.value += 5 * (enchant + overenchant);
 						break;
-					}
 					
-					env.value += (int) calcStatBonus(enchant, mAtkArmorBonus, isBlessed, true, isTopGrade, false);
+					case ItemTemplate.CRYSTAL_S:
+						env.value += 4 * (enchant + overenchant);
+						break;
+					
+					case ItemTemplate.CRYSTAL_A:
+						env.value += 3 * (enchant + overenchant);
+						break;
+					
+					case ItemTemplate.CRYSTAL_B:
+						env.value += 3 * (enchant + overenchant);
+						break;
+					
+					case ItemTemplate.CRYSTAL_C:
+						env.value += 3 * (enchant + overenchant);
+						break;
+					
+					case ItemTemplate.CRYSTAL_D:
+					case ItemTemplate.CRYSTAL_NONE:
+						env.value += 2 * (enchant + overenchant);
+						break;
 				}
-				
 				return;
 			}
 			
 			case POWER_ATTACK:
 			{
-				if (item.isWeapon())
+				ItemType itemType = item.getItemType();
+				boolean isBow = (itemType == WeaponType.BOW) || (itemType == WeaponType.CROSSBOW);
+				boolean isSword = ((itemType == WeaponType.DUALFIST) || (itemType == WeaponType.DUAL) || (itemType == WeaponType.BIGSWORD) || (itemType == WeaponType.SWORD) || (itemType == WeaponType.RAPIER) || (itemType == WeaponType.ANCIENTSWORD)) && (item.getTemplate().getBodyPart() == ItemTemplate.SLOT_LR_HAND);
+				switch (item.getTemplate().getCrystalType().cry)
 				{
-					double pAtkWeaponEnchant = EnchantStatBonusTable.getInstance().getWeaponStatBonus((WeaponType) itemType, crystal, false);
-					env.value += (int) calcStatBonus(enchant, pAtkWeaponEnchant, isBlessed, false, isTopGrade, true);
-				}
-				else if (item.isArmor() && (enchant > _limit1))
-				{
-					double pAtkArmorBonus = EnchantStatBonusTable.getInstance().getStatBonus(bodyPart, false);
-					
-					if (pAtkArmorBonus == 0)
-					{
-						_log.info("FuncEnchant: Error, item: " + item.getId() + " - " + item.getName() + " has no Physical Attack bonus for the body part.");
+					case ItemTemplate.CRYSTAL_R:
+						if (isBow)
+						{
+							env.value += 12 * (enchant + overenchant);
+						}
+						else if (isSword)
+						{
+							env.value += 7 * (enchant + overenchant);
+						}
+						else
+						{
+							env.value += 6 * (enchant + overenchant);
+						}
 						break;
-					}
 					
-					env.value += (int) calcStatBonus(enchant, pAtkArmorBonus, isBlessed, true, isTopGrade, false);
+					case ItemTemplate.CRYSTAL_S:
+						if (isBow)
+						{
+							env.value += 10 * (enchant + overenchant);
+						}
+						else if (isSword)
+						{
+							env.value += 6 * (enchant + overenchant);
+						}
+						else
+						{
+							env.value += 5 * (enchant + overenchant);
+						}
+						break;
+					
+					case ItemTemplate.CRYSTAL_A:
+						if (isBow)
+						{
+							env.value += 8 * (enchant + overenchant);
+						}
+						else if (isSword)
+						{
+							env.value += 5 * (enchant + overenchant);
+						}
+						else
+						{
+							env.value += 4 * (enchant + overenchant);
+						}
+						break;
+					
+					case ItemTemplate.CRYSTAL_B:
+					case ItemTemplate.CRYSTAL_C:
+						if (isBow)
+						{
+							env.value += 6 * (enchant + overenchant);
+						}
+						else if (isSword)
+						{
+							env.value += 4 * (enchant + overenchant);
+						}
+						else
+						{
+							env.value += 3 * (enchant + overenchant);
+						}
+						break;
+					
+					case ItemTemplate.CRYSTAL_D:
+					case ItemTemplate.CRYSTAL_NONE:
+						if (isBow)
+						{
+							env.value += 4 * (enchant + overenchant);
+						}
+						else
+						{
+							env.value += 2 * (enchant + overenchant);
+						}
+						break;
 				}
-				
-				return;
 			}
-			
-			default:
-				break;
 		}
-	}
-	
-	private double calcStatBonus(Integer enchantLevel, double enchantBonus, boolean isBlessedItem, boolean isArmorStat, boolean topgrade, boolean isWeapon)
-	{
-		double blessed = 1;
-		
-		if (isBlessedItem)
-		{
-			blessed = _blessedMultiplier;
-		}
-		
-		double basicBonus = (enchantBonus * blessed);
-		
-		if (!(Math.round((float) (basicBonus)) == 0) && !((Math.round((float) (basicBonus)) - (enchantBonus * blessed)) < 0.5))
-		{
-			basicBonus = Math.round((float) (basicBonus));
-		}
-		
-		if (enchantLevel <= _limit1)
-		{
-			double result = basicBonus * enchantLevel;
-			result = Math.round((float) result);
-			return result;
-		}
-		else if (enchantLevel <= _limit2)
-		{
-			double result = (basicBonus * (enchantLevel - _limit1) * (!isArmorStat ? _overEnchantMul1 : 1));
-			
-			if (!isArmorStat)
-			{
-				result += basicBonus * _limit1;
-			}
-			
-			result = Math.round((float) result);
-			return result;
-		}
-		else if ((enchantLevel > _limit2) && (!(isWeapon && (enchantLevel > _limit3) && topgrade)))
-		{
-			double result = (basicBonus * (_limit2 - _limit1) * (!isArmorStat ? _overEnchantMul1 : 1)) + (basicBonus * (enchantLevel - _limit2) * (!isArmorStat && topgrade ? _overEnchantMul2 : _overEnchantMul1));
-			
-			if (!isArmorStat)
-			{
-				result += basicBonus * _limit1;
-			}
-			
-			result = Math.round((float) result);
-			return result;
-		}
-		else if (isWeapon && ((enchantLevel > _limit3) && (enchantLevel <= _limit4)) && topgrade)
-		{
-			double result = (basicBonus * _limit1) + (basicBonus * (_limit2 - _limit1) * (!isArmorStat ? _overEnchantMul1 : 1)) + (basicBonus * (_limit3 - _limit2) * _overEnchantMul2) + (basicBonus * (enchantLevel - _limit3) * _overEnchantMul3);
-			result = Math.round((float) result);
-			return result;
-		}
-		else if (isWeapon && (enchantLevel > _limit4) && topgrade)
-		{
-			double result = (basicBonus * _limit1) + (basicBonus * (_limit2 - _limit1) * (!isArmorStat ? _overEnchantMul1 : 1)) + (basicBonus * (_limit3 - _limit2) * _overEnchantMul2) + (basicBonus * (_limit4 - _limit3) * _overEnchantMul3) + (basicBonus * (enchantLevel - _limit4) * _overEnchantMul4);
-			result = Math.round((float) result);
-			return result;
-		}
-		
-		return 0;
 	}
 }

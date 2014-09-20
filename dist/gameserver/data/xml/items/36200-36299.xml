@@ -15,8 +15,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="1333"/>
 			<add stat="mAtk" order="0x10" value="414"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
@@ -34,8 +34,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="602"/>
 			<add stat="mAtk" order="0x10" value="486"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
@@ -53,8 +53,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="602"/>
 			<add stat="mAtk" order="0x10" value="486"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
@@ -72,8 +72,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="733"/>
 			<add stat="mAtk" order="0x10" value="535"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
@@ -91,8 +91,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="916"/>
 			<add stat="mAtk" order="0x10" value="414"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
@@ -110,8 +110,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="752"/>
 			<add stat="mAtk" order="0x10" value="414"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
@@ -129,8 +129,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="916"/>
 			<add stat="mAtk" order="0x10" value="414"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
@@ -148,8 +148,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="881"/>
 			<add stat="mAtk" order="0x10" value="521"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
@@ -167,8 +167,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="1007"/>
 			<add stat="mAtk" order="0x10" value="521"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
@@ -186,8 +186,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="1225"/>
 			<add stat="mAtk" order="0x10" value="521"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
@@ -205,8 +205,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="1007"/>
 			<add stat="mAtk" order="0x10" value="521"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
@@ -224,8 +224,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="1225"/>
 			<add stat="mAtk" order="0x10" value="521"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
@@ -243,8 +243,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="1007"/>
 			<add stat="mAtk" order="0x10" value="521"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
@@ -262,8 +262,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="1983"/>
 			<add stat="mAtk" order="0x10" value="521"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
@@ -281,8 +281,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="1786"/>
 			<add stat="mAtk" order="0x10" value="521"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
@@ -300,8 +300,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="805"/>
 			<add stat="mAtk" order="0x10" value="696"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
@@ -319,8 +319,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="805"/>
 			<add stat="mAtk" order="0x10" value="696"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
@@ -338,8 +338,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="981"/>
 			<add stat="mAtk" order="0x10" value="765"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
@@ -357,8 +357,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="1225"/>
 			<add stat="mAtk" order="0x10" value="521"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
@@ -376,8 +376,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="1007"/>
 			<add stat="mAtk" order="0x10" value="521"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
@@ -395,8 +395,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="1225"/>
 			<add stat="mAtk" order="0x10" value="521"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
