@@ -17,11 +17,11 @@ import lineage2.gameserver.instancemanager.AwakingManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.model.base.ClassLevel;
-import lineage2.gameserver.model.base.ClassType2;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExChangeToAwakenedClass;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
+import lineage2.gameserver.utils.ItemFunctions;
 
 public final class PowerfulDeviceInstance extends NpcInstance
 {
@@ -41,59 +41,39 @@ public final class PowerfulDeviceInstance extends NpcInstance
 		{
 			return;
 		}
-		
 		if (command.equalsIgnoreCase("Awaken"))
 		{
 			int essencesCount = AwakingManager.getInstance().giveGiantEssences(player, true);
 			NpcHtmlMessage htmlMessage = new NpcHtmlMessage(getObjectId());
 			htmlMessage.replace("%SP%", String.valueOf(sp));
 			htmlMessage.replace("%ESSENCES%", String.valueOf(essencesCount));
-			
 			htmlMessage.setFile("default/" + getId() + "-4.htm");
 			player.sendPacket(htmlMessage);
 		}
 		else if (command.equalsIgnoreCase("Awaken1"))
 		{
 			NpcHtmlMessage htmlMessage = new NpcHtmlMessage(getObjectId());
-			htmlMessage.setFile("awaken/" + player.getActiveSubClass().getClassId() + ".htm");
+			htmlMessage.setFile("awaken/" + player.getClassId().getId() + ".htm");
 			player.sendPacket(htmlMessage);
 		}
 		else if (command.equalsIgnoreCase("Awaken2"))
 		{
 			calculateNextClass(player);
-			
 			player.setVar("AwakenPrepared", "true", -1);
 			player.setVar("AwakenedID", NextClassId, -1);
 			player.sendPacket(new ExChangeToAwakenedClass(NextClassId));
+			player.addExpAndSp(0L, sp);
+			player.getInventory().removeItemByItemId(SCROLL_OF_AFTERLIFE, 1);
+			AwakingManager.getInstance().giveGiantEssences(player, false);
+			ItemFunctions.addItem(player, 32778, 1, true);
+			AwakingManager.getInstance().getRaceSkill(player);
 		}
 	}
 	
 	@Override
 	public void showChatWindow(Player player, int val, Object... replace)
 	{
-		final int NpcID = getId();
-		final ClassType2 currentClassType = player.getClassId().getType2();
-		final ClassId[] classType = getClassIdsByNpc(NpcID);
-		
-		boolean correctNPC = false;
-		
-		for (final ClassId classID : classType)
-		{
-			if (classID.getType2() == currentClassType)
-			{
-				correctNPC = true;
-				break;
-			}
-		}
-		
-		if (!correctNPC)
-		{
-			showChatWindow(player, getHtmlPath(NpcID, 2, player), replace);
-			return;
-		}
-		
-		String htmltext;
-		
+		String htmlpath;
 		if (val == 0)
 		{
 			if ((player.getClassId().getClassLevel() == ClassLevel.Third) && (player.getInventory().getCountOf(SCROLL_OF_AFTERLIFE) > 0))
@@ -110,7 +90,15 @@ public final class PowerfulDeviceInstance extends NpcInstance
 				
 				if (player.getPets().size() > 0)
 				{
-					htmltext = getHtmlPath(getId(), 1, player);
+					htmlpath = getHtmlPath(getId(), 1, player);
+				}
+				else if (!classSynk(player))
+				{
+					htmlpath = getHtmlPath(getId(), 2, player);
+				}
+				else if (player.getLevel() < 85)
+				{
+					htmlpath = getHtmlPath(getId(), val, player);
 				}
 				else
 				{
@@ -118,7 +106,7 @@ public final class PowerfulDeviceInstance extends NpcInstance
 					{
 						player.setVar("AwakenedOldIDClass", player.getClassId().getId(), -1);
 					}
-					htmltext = getHtmlPath(getId(), 3, player);
+					htmlpath = getHtmlPath(getId(), 3, player);
 				}
 				if (player.getVarB("AwakenPrepared", false))
 				{
@@ -128,20 +116,20 @@ public final class PowerfulDeviceInstance extends NpcInstance
 			}
 			else
 			{
-				htmltext = getHtmlPath(getId(), val, player);
+				htmlpath = getHtmlPath(getId(), val, player);
 			}
 		}
 		else
 		{
-			htmltext = getHtmlPath(getId(), val, player);
+			htmlpath = getHtmlPath(getId(), val, player);
 		}
 		
-		showChatWindow(player, htmltext, replace);
+		showChatWindow(player, htmlpath, replace);
 	}
 	
 	private void calculateNextClass(Player player)
 	{
-		switch (player.getActiveSubClass().getClassId())
+		switch (player.getClassId().getId())
 		{
 			case 88:
 				NextClassId = 152;
@@ -251,77 +239,69 @@ public final class PowerfulDeviceInstance extends NpcInstance
 		}
 	}
 	
-	ClassId[] getClassIdsByNpc(final int NpcId)
+	private boolean classSynk(Player player)
 	{
-		switch (NpcId)
+		int oldId = player.getClassId().getId();
+		switch (getId())
 		{
-			case 33404:
-				return new ClassId[]
-				{
-					ClassId.AEORE_CARDINAL,
-					ClassId.AEORE_EVA_SAINT,
-					ClassId.AEORE_SHILLEN_SAINT
-				};
+		
 			case 33397:
-				return new ClassId[]
+				if ((oldId == 90) || (oldId == 91) || (oldId == 99) || (oldId == 106))
 				{
-					ClassId.SIGEL_PHOENIX_KNIGHT,
-					ClassId.SIGEL_HELL_KNIGHT,
-					ClassId.SIGEL_EVAS_TEMPLAR,
-					ClassId.SIGEL_SHILLIEN_TEMPLAR
-				};
-			case 33400:
-				return new ClassId[]
-				{
-					ClassId.YUL_SAGITTARIUS,
-					ClassId.YUL_MOONLIGHT_SENTINEL,
-					ClassId.YUL_GHOST_SENTINEL,
-					ClassId.YUL_TRICKSTER
-				};
-			case 33402:
-				return new ClassId[]
-				{
-					ClassId.ISS_HIEROPHANT,
-					ClassId.ISS_SWORD_MUSE,
-					ClassId.ISS_SPECTRAL_DANCER,
-					ClassId.ISS_DOMINATOR,
-					ClassId.ISS_DOOMCRYER
-				};
-			case 33399:
-				return new ClassId[]
-				{
-					ClassId.OTHELL_ADVENTURER,
-					ClassId.OTHELL_WIND_RIDER,
-					ClassId.OTHELL_GHOST_HUNTER,
-					ClassId.OTHELL_FORTUNE_SEEKER
-				};
+					return true;
+				}
+				
+				break;
 			case 33398:
-				return new ClassId[]
+				if ((oldId == 88) || (oldId == 89) || (oldId == 113) || (oldId == 114) || (oldId == 118) || (oldId == 131))
 				{
-					ClassId.TYRR_DUELIST,
-					ClassId.TYRR_DREADNOUGHT,
-					ClassId.TYRR_TITAN,
-					ClassId.TYRR_MAESTRO,
-					ClassId.TYRR_GRAND_KHAVATARI,
-					ClassId.TYRR_DOOMBRINGER
-				};
+					return true;
+				}
+				
+				break;
+			case 33399:
+				if ((oldId == 93) || (oldId == 101) || (oldId == 108) || (oldId == 117))
+				{
+					return true;
+				}
+				
+				break;
+			case 33400:
+				if ((oldId == 92) || (oldId == 102) || (oldId == 109) || (oldId == 134))
+				{
+					return true;
+				}
+				
+				break;
 			case 33401:
-				return new ClassId[]
+				if ((oldId == 94) || (oldId == 95) || (oldId == 103) || (oldId == 110) || (oldId == 132) || (oldId == 133))
 				{
-					ClassId.FEOH_ARCHMAGE,
-					ClassId.FEOH_SOULTAKER,
-					ClassId.FEOH_MYSTIC_MUSE,
-					ClassId.FEOH_STORM_SCREAMER,
-					ClassId.FEOH_SOUL_HOUND
-				};
+					return true;
+				}
+				
+				break;
+			case 33402:
+				if ((oldId == 98) || (oldId == 116) || (oldId == 115) || (oldId == 100) || (oldId == 107) || (oldId == 136))
+				{
+					return true;
+				}
+				
+				break;
 			case 33403:
-				return new ClassId[]
+				if ((oldId == 96) || (oldId == 104) || (oldId == 111))
 				{
-					ClassId.WYNN_ARCANA_LORD,
-					ClassId.WYNN_ELEMENTAL_MASTER,
-					ClassId.WYNN_SPECTRAL_MASTER
-				};
+					return true;
+				}
+				
+				break;
+			case 33404:
+				if ((oldId == 97) || (oldId == 105) || (oldId == 112))
+				{
+					return true;
+				}
+				break;
 		}
-		return null;
+		
+		return false;
 	}
 }

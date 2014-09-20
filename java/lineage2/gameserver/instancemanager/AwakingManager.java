@@ -477,30 +477,30 @@ public class AwakingManager implements OnPlayerEnterListener
 	public void SetAwakingId(Player player)
 	{
 		int _oldId = player.getClassId().getId();
-		giveGiantEssences(player, false);
+		player.broadcastPacket(new SocialAction(player.getObjectId(), 20));
 		
 		if (Config.ALT_DELETE_SKILL_PROF) // its important part of correct skill assignment this If sentence, removed from player.java
 		{
 			onTransferOnlyRemoveSkills(player);
 		}
 		
-		if (player.getActiveSubClass().isBase())
-		{
-			ItemFunctions.addItem(player, CHAOS_POMANDER, 2, true);
-		}
-		
-		if (player.getActiveSubClass().isDual())
-		{
-			ItemFunctions.addItem(player, CHAOS_POMANDER_DUAL_CLASS, 2, true);
-		}
-		
+		getRaceSkill(player);
 		player.setClassId(_CA.get(_oldId), false, false);
 		player.broadcastUserInfo();
-		player.sendUserInfo();
-		player.updateStats();
-		player.broadcastPacket(new SocialAction(player.getObjectId(), 20));
 		giveItems(player, _oldId, _CA.get(_oldId));
-		getRaceSkill(player);
+		giveItemsChaosPomander(player);
+		giveItemsChaosEssence(player);
+		giveGiantEssences(player, false);
+	}
+	
+	public void giveItemsChaosPomander(Player player)
+	{
+		ItemFunctions.addItem(player, player.isBaseClassActive() ? CHAOS_POMANDER : CHAOS_POMANDER_DUAL_CLASS, 2, true);
+	}
+	
+	public void giveItemsChaosEssence(Player player)
+	{
+		ItemFunctions.addItem(player, player.isBaseClassActive() ? CHAOS_ESSENCE : CHAOS_ESSENCE_DUAL_CLASS, 1, true);
 	}
 	
 	/**
@@ -568,7 +568,6 @@ public class AwakingManager implements OnPlayerEnterListener
 		{
 			ItemFunctions.addItem(player, AWAKEN_POWER.get(newClassId), 1, true);
 			ItemFunctions.addItem(player, LEGACY_WEAPONS.get(previousClassId), 1, true);
-			ItemFunctions.addItem(player, CHAOS_ESSENCE, 1, true);
 		}
 		else
 		{
@@ -579,7 +578,6 @@ public class AwakingManager implements OnPlayerEnterListener
 			}
 			
 			ItemFunctions.addItem(player, CLOAK_DUAL_CLASS.get(newClassId), 1, true);
-			ItemFunctions.addItem(player, CHAOS_ESSENCE_DUAL_CLASS, 1, true);
 		}
 	}
 	
