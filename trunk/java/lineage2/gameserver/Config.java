@@ -531,6 +531,9 @@ public class Config
 	public static int ENCHANT_CHANCE_WEAPON;
 	public static int ENCHANT_CHANCE_ARMOR;
 	public static int ENCHANT_CHANCE_ACCESSORY;
+	public static int ENCHANT_CHANCE_BLESSED_WEAPON;
+	public static int ENCHANT_CHANCE_BLESSED_ARMOR;
+	public static int ENCHANT_CHANCE_BLESSED_ACCESSORY;
 	public static int ENCHANT_CHANCE_CRYSTAL_WEAPON;
 	public static int ENCHANT_CHANCE_CRYSTAL_ARMOR;
 	public static int ENCHANT_CHANCE_CRYSTAL_ACCESSORY;
@@ -1335,10 +1338,13 @@ public class Config
 		WAREHOUSE_SLOTS_DWARF = otherSettings.getProperty("BaseWarehouseSlotsForDwarf", 120);
 		WAREHOUSE_SLOTS_CLAN = otherSettings.getProperty("MaximumWarehouseSlotsForClan", 200);
 		FREIGHT_SLOTS = otherSettings.getProperty("MaximumFreightSlots", 10);
-		ENCHANT_CHANCE_WEAPON = otherSettings.getProperty("EnchantChance", 66);
+		ENCHANT_CHANCE_WEAPON = otherSettings.getProperty("EnchantChanceWeapon", 66);
 		ENCHANT_CHANCE_ARMOR = otherSettings.getProperty("EnchantChanceArmor", ENCHANT_CHANCE_WEAPON);
 		ENCHANT_CHANCE_ACCESSORY = otherSettings.getProperty("EnchantChanceAccessory", ENCHANT_CHANCE_ARMOR);
-		ENCHANT_CHANCE_CRYSTAL_WEAPON = otherSettings.getProperty("EnchantChanceCrystal", 66);
+		ENCHANT_CHANCE_BLESSED_WEAPON = otherSettings.getProperty("EnchantChanceBlessedWeapon", 66);
+		ENCHANT_CHANCE_BLESSED_ARMOR = otherSettings.getProperty("EnchantChanceBlessedCrystalArmor", ENCHANT_CHANCE_CRYSTAL_WEAPON);
+		ENCHANT_CHANCE_BLESSED_ACCESSORY = otherSettings.getProperty("EnchantChanceBlessedAccessory", ENCHANT_CHANCE_CRYSTAL_ARMOR);
+		ENCHANT_CHANCE_CRYSTAL_WEAPON = otherSettings.getProperty("EnchantChanceCrystalWeapon", 66);
 		ENCHANT_CHANCE_CRYSTAL_ARMOR = otherSettings.getProperty("EnchantChanceCrystalArmor", ENCHANT_CHANCE_CRYSTAL_WEAPON);
 		ENCHANT_CHANCE_CRYSTAL_ACCESSORY = otherSettings.getProperty("EnchantChanceCrystalAccessory", ENCHANT_CHANCE_CRYSTAL_ARMOR);
 		SAFE_ENCHANT_COMMON = otherSettings.getProperty("SafeEnchantCommon", 3);

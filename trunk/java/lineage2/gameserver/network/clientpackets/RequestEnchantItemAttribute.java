@@ -14,6 +14,7 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.util.Rnd;
+import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.items.ItemInstance;
@@ -171,7 +172,17 @@ public class RequestEnchantItemAttribute extends L2GameClientPacket
 			return;
 		}
 		
-		if (Rnd.chance(asi.getChance()))
+		int chance; // = asi.getChance(); ?
+		if (stone.getTemplate().isAttributeCrystal())
+		{
+			chance = Config.ENCHANT_ATTRIBUTE_CRYSTAL_CHANCE;
+		}
+		else
+		{
+			chance = Config.ENCHANT_ATTRIBUTE_STONE_CHANCE;
+		}
+		
+		if (Rnd.chance(chance))
 		{
 			if (itemToEnchant.getEnchantLevel() == 0)
 			{

@@ -136,6 +136,54 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 			int safeEnchantLevel = item.getTemplate().getBodyPart() == 32768 ? (esi.getSafe() + 1) : esi.getSafe();
 			int chance = esi.getChance();
 			
+			switch (esi.getType())
+			{
+				case NORMAL:
+					if (item.isWeapon())
+					{
+						chance = Config.ENCHANT_CHANCE_WEAPON;
+					}
+					else if (item.isArmor())
+					{
+						chance = Config.ENCHANT_CHANCE_ARMOR;
+					}
+					else
+					{
+						chance = Config.ENCHANT_CHANCE_ACCESSORY;
+					}
+					break;
+				
+				case BLESSED:
+					if (item.isWeapon())
+					{
+						chance = Config.ENCHANT_CHANCE_BLESSED_WEAPON;
+					}
+					else if (item.isArmor())
+					{
+						chance = Config.ENCHANT_CHANCE_BLESSED_ARMOR;
+					}
+					else
+					{
+						chance = Config.ENCHANT_CHANCE_BLESSED_ACCESSORY;
+					}
+					break;
+				
+				case CRYSTALL:
+					if (item.isWeapon())
+					{
+						chance = Config.ENCHANT_CHANCE_CRYSTAL_WEAPON;
+					}
+					else if (item.isArmor())
+					{
+						chance = Config.ENCHANT_CHANCE_CRYSTAL_ARMOR;
+					}
+					else
+					{
+						chance = Config.ENCHANT_CHANCE_CRYSTAL_ACCESSORY;
+					}
+					break;
+			}
+			
 			if (catalyst != null)
 			{
 				chance += ItemFunctions.getCatalystPower(catalyst.getId());
