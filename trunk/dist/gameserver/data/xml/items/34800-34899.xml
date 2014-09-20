@@ -167,9 +167,9 @@
 		<set name="ex_type" value="RING"/>
 		<for>
 			<add stat="mDef" order="0x10" value="62"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="34832" name="Squash Earring (Wizard)" add_name="Event">
@@ -184,9 +184,9 @@
 		<set name="ex_type" value="EARRING"/>
 		<for>
 			<add stat="mDef" order="0x10" value="92"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="34833" name="Afro Hair">
@@ -481,7 +481,7 @@
 		<set name="ex_type" value="BELT"/>
 		<for>
 			<add stat="pDef" order="0x10" value="19"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -498,7 +498,7 @@
 		<set name="ex_type" value="BELT"/>
 		<for>
 			<add stat="pDef" order="0x10" value="19"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -515,7 +515,7 @@
 		<set name="ex_type" value="BELT"/>
 		<for>
 			<add stat="pDef" order="0x10" value="19"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -532,7 +532,7 @@
 		<set name="ex_type" value="BELT"/>
 		<for>
 			<add stat="pDef" order="0x10" value="19"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -549,7 +549,7 @@
 		<set name="ex_type" value="BELT"/>
 		<for>
 			<add stat="pDef" order="0x10" value="19"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -566,7 +566,7 @@
 		<set name="ex_type" value="BELT"/>
 		<for>
 			<add stat="pDef" order="0x10" value="19"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -583,7 +583,7 @@
 		<set name="ex_type" value="BELT"/>
 		<for>
 			<add stat="pDef" order="0x10" value="19"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -600,7 +600,7 @@
 		<set name="ex_type" value="BELT"/>
 		<for>
 			<add stat="pDef" order="0x10" value="19"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>

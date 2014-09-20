@@ -17,7 +17,7 @@
 			<add stat="pDef" order="0x10" value="241"/>
 			<enchant stat="rCrit" order="0x40" value="0"/>
 			<enchant stat="mCritRate" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -37,7 +37,7 @@
 			<add stat="pDef" order="0x10" value="96"/>
 			<enchant stat="accCombat" order="0x40" value="0"/>
 			<enchant stat="maccCombat" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -56,7 +56,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="96"/>
 			<enchant stat="runSpd" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -95,7 +95,7 @@
 			<add stat="pDef" order="0x10" value="144"/>
 			<enchant stat="rEvas" order="0x40" value="0"/>
 			<enchant stat="mEvas" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -113,9 +113,9 @@
 		<set name="ex_type" value="UPPER_PIECE"/>
 		<for>
 			<add stat="pDef" order="0x10" value="289"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
@@ -136,7 +136,7 @@
 			<add stat="pDef" order="0x10" value="181"/>
 			<enchant stat="rCrit" order="0x40" value="0"/>
 			<enchant stat="mCritRate" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -156,7 +156,7 @@
 			<add stat="pDef" order="0x10" value="96"/>
 			<enchant stat="accCombat" order="0x40" value="0"/>
 			<enchant stat="maccCombat" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -174,7 +174,7 @@
 		<set name="ex_type" value="FEET"/>
 		<for>
 			<add stat="pDef" order="0x10" value="96"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="runSpd" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
@@ -195,7 +195,7 @@
 			<add stat="pDef" order="0x10" value="144"/>
 			<enchant stat="rEvas" order="0x40" value="0"/>
 			<enchant stat="mEvas" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -213,9 +213,9 @@
 		<set name="ex_type" value="UPPER_PIECE"/>
 		<for>
 			<add stat="pDef" order="0x10" value="193"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
@@ -236,7 +236,7 @@
 			<add stat="pDef" order="0x10" value="121"/>
 			<enchant stat="rCrit" order="0x40" value="0"/>
 			<enchant stat="mCritRate" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -256,7 +256,7 @@
 			<add stat="pDef" order="0x10" value="96"/>
 			<enchant stat="accCombat" order="0x40" value="0"/>
 			<enchant stat="maccCombat" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -275,7 +275,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="96"/>
 			<enchant stat="runSpd" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -293,7 +293,7 @@
 			<add stat="pDef" order="0x10" value="150"/>
 			<enchant stat="rEvas" order="0x40" value="0"/>
 			<enchant stat="mEvas" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -309,9 +309,9 @@
 		<set name="ex_type" value="UPPER_PIECE"/>
 		<for>
 			<add stat="pDef" order="0x10" value="401"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
@@ -330,7 +330,7 @@
 			<add stat="pDef" order="0x10" value="250"/>
 			<enchant stat="rCrit" order="0x40" value="0"/>
 			<enchant stat="mCritRate" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -348,7 +348,7 @@
 			<add stat="pDef" order="0x10" value="100"/>
 			<enchant stat="accCombat" order="0x40" value="0"/>
 			<enchant stat="maccCombat" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -365,7 +365,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="100"/>
 			<enchant stat="runSpd" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -394,7 +394,7 @@
 			<add stat="pDef" order="0x10" value="150"/>
 			<enchant stat="rEvas" order="0x40" value="0"/>
 			<enchant stat="mEvas" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -410,9 +410,9 @@
 		<set name="ex_type" value="UPPER_PIECE"/>
 		<for>
 			<add stat="pDef" order="0x10" value="301"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
@@ -431,7 +431,7 @@
 			<add stat="pDef" order="0x10" value="188"/>
 			<enchant stat="rCrit" order="0x40" value="0"/>
 			<enchant stat="mCritRate" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -449,7 +449,7 @@
 			<add stat="pDef" order="0x10" value="100"/>
 			<enchant stat="accCombat" order="0x40" value="0"/>
 			<enchant stat="maccCombat" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -465,7 +465,7 @@
 		<set name="ex_type" value="FEET"/>
 		<for>
 			<add stat="pDef" order="0x10" value="100"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="runSpd" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
@@ -484,7 +484,7 @@
 			<add stat="pDef" order="0x10" value="150"/>
 			<enchant stat="rEvas" order="0x40" value="0"/>
 			<enchant stat="mEvas" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -500,9 +500,9 @@
 		<set name="ex_type" value="UPPER_PIECE"/>
 		<for>
 			<add stat="pDef" order="0x10" value="201"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
@@ -521,7 +521,7 @@
 			<add stat="pDef" order="0x10" value="125"/>
 			<enchant stat="rCrit" order="0x40" value="0"/>
 			<enchant stat="mCritRate" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -539,7 +539,7 @@
 			<add stat="pDef" order="0x10" value="100"/>
 			<enchant stat="accCombat" order="0x40" value="0"/>
 			<enchant stat="maccCombat" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -556,7 +556,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="100"/>
 			<enchant stat="runSpd" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -575,7 +575,7 @@
 			<add stat="pDef" order="0x10" value="114"/>
 			<enchant stat="rEvas" order="0x40" value="0"/>
 			<enchant stat="mEvas" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -593,9 +593,9 @@
 		<enchant4_skill id="13310" level="1"/>
 		<for>
 			<add stat="pDef" order="0x10" value="304"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
@@ -615,7 +615,7 @@
 			<add stat="pDef" order="0x10" value="190"/>
 			<enchant stat="rCrit" order="0x40" value="0"/>
 			<enchant stat="mCritRate" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -634,7 +634,7 @@
 			<add stat="pDef" order="0x10" value="76"/>
 			<enchant stat="accCombat" order="0x40" value="0"/>
 			<enchant stat="maccCombat" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -652,7 +652,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="76"/>
 			<enchant stat="runSpd" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -689,7 +689,7 @@
 			<add stat="pDef" order="0x10" value="114"/>
 			<enchant stat="rEvas" order="0x40" value="0"/>
 			<enchant stat="mEvas" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -707,9 +707,9 @@
 		<enchant4_skill id="13311" level="1"/>
 		<for>
 			<add stat="pDef" order="0x10" value="228"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
@@ -729,7 +729,7 @@
 			<add stat="pDef" order="0x10" value="143"/>
 			<enchant stat="rCrit" order="0x40" value="0"/>
 			<enchant stat="mCritRate" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -748,7 +748,7 @@
 			<add stat="pDef" order="0x10" value="76"/>
 			<enchant stat="accCombat" order="0x40" value="0"/>
 			<enchant stat="maccCombat" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -766,7 +766,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="76"/>
 			<enchant stat="runSpd" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -785,7 +785,7 @@
 			<add stat="pDef" order="0x10" value="114"/>
 			<enchant stat="rEvas" order="0x40" value="0"/>
 			<enchant stat="mEvas" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -803,9 +803,9 @@
 		<enchant4_skill id="13312" level="1"/>
 		<for>
 			<add stat="pDef" order="0x10" value="152"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
@@ -825,7 +825,7 @@
 			<add stat="pDef" order="0x10" value="95"/>
 			<enchant stat="rCrit" order="0x40" value="0"/>
 			<enchant stat="mCritRate" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -844,7 +844,7 @@
 			<add stat="pDef" order="0x10" value="76"/>
 			<enchant stat="accCombat" order="0x40" value="0"/>
 			<enchant stat="maccCombat" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -862,7 +862,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="76"/>
 			<enchant stat="runSpd" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -881,7 +881,7 @@
 			<add stat="pDef" order="0x10" value="126"/>
 			<enchant stat="rEvas" order="0x40" value="0"/>
 			<enchant stat="mEvas" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -899,9 +899,9 @@
 		<enchant4_skill id="13310" level="1"/>
 		<for>
 			<add stat="pDef" order="0x10" value="335"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
@@ -921,7 +921,7 @@
 			<add stat="pDef" order="0x10" value="209"/>
 			<enchant stat="rCrit" order="0x40" value="0"/>
 			<enchant stat="mCritRate" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -940,7 +940,7 @@
 			<add stat="pDef" order="0x10" value="84"/>
 			<enchant stat="accCombat" order="0x40" value="0"/>
 			<enchant stat="maccCombat" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -958,7 +958,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="84"/>
 			<enchant stat="runSpd" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -995,7 +995,7 @@
 			<add stat="pDef" order="0x10" value="126"/>
 			<enchant stat="rEvas" order="0x40" value="0"/>
 			<enchant stat="mEvas" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1013,9 +1013,9 @@
 		<enchant4_skill id="13311" level="1"/>
 		<for>
 			<add stat="pDef" order="0x10" value="251"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
@@ -1035,7 +1035,7 @@
 			<add stat="pDef" order="0x10" value="157"/>
 			<enchant stat="rCrit" order="0x40" value="0"/>
 			<enchant stat="mCritRate" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1054,7 +1054,7 @@
 			<add stat="pDef" order="0x10" value="84"/>
 			<enchant stat="accCombat" order="0x40" value="0"/>
 			<enchant stat="maccCombat" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1072,7 +1072,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="84"/>
 			<enchant stat="runSpd" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1091,7 +1091,7 @@
 			<add stat="pDef" order="0x10" value="126"/>
 			<enchant stat="rEvas" order="0x40" value="0"/>
 			<enchant stat="mEvas" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1109,9 +1109,9 @@
 		<enchant4_skill id="13312" level="1"/>
 		<for>
 			<add stat="pDef" order="0x10" value="168"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
@@ -1131,7 +1131,7 @@
 			<add stat="pDef" order="0x10" value="105"/>
 			<enchant stat="rCrit" order="0x40" value="0"/>
 			<enchant stat="mCritRate" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1150,7 +1150,7 @@
 			<add stat="pDef" order="0x10" value="84"/>
 			<enchant stat="accCombat" order="0x40" value="0"/>
 			<enchant stat="maccCombat" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1167,7 +1167,7 @@
 		<set name="ex_type" value="FEET"/>
 		<for>
 			<add stat="pDef" order="0x10" value="84"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1186,7 +1186,7 @@
 			<add stat="pDef" order="0x10" value="139"/>
 			<enchant stat="rEvas" order="0x40" value="0"/>
 			<enchant stat="mEvas" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1204,9 +1204,9 @@
 		<enchant4_skill id="13310" level="1"/>
 		<for>
 			<add stat="pDef" order="0x10" value="370"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
@@ -1226,7 +1226,7 @@
 			<add stat="pDef" order="0x10" value="231"/>
 			<enchant stat="rCrit" order="0x40" value="0"/>
 			<enchant stat="mCritRate" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1245,7 +1245,7 @@
 			<add stat="pDef" order="0x10" value="93"/>
 			<enchant stat="accCombat" order="0x40" value="0"/>
 			<enchant stat="maccCombat" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1263,7 +1263,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="93"/>
 			<enchant stat="runSpd" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1300,7 +1300,7 @@
 			<add stat="pDef" order="0x10" value="139"/>
 			<enchant stat="rEvas" order="0x40" value="0"/>
 			<enchant stat="mEvas" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1318,9 +1318,9 @@
 		<enchant4_skill id="13311" level="1"/>
 		<for>
 			<add stat="pDef" order="0x10" value="278"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
@@ -1340,7 +1340,7 @@
 			<add stat="pDef" order="0x10" value="173"/>
 			<enchant stat="rCrit" order="0x40" value="0"/>
 			<enchant stat="mCritRate" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1359,7 +1359,7 @@
 			<add stat="pDef" order="0x10" value="93"/>
 			<enchant stat="accCombat" order="0x40" value="0"/>
 			<enchant stat="maccCombat" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1377,7 +1377,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="93"/>
 			<enchant stat="runSpd" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1396,7 +1396,7 @@
 			<add stat="pDef" order="0x10" value="139"/>
 			<enchant stat="rEvas" order="0x40" value="0"/>
 			<enchant stat="mEvas" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1414,9 +1414,9 @@
 		<enchant4_skill id="13312" level="1"/>
 		<for>
 			<add stat="pDef" order="0x10" value="185"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
@@ -1436,7 +1436,7 @@
 			<add stat="pDef" order="0x10" value="116"/>
 			<enchant stat="rCrit" order="0x40" value="0"/>
 			<enchant stat="mCritRate" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1455,7 +1455,7 @@
 			<add stat="pDef" order="0x10" value="93"/>
 			<enchant stat="accCombat" order="0x40" value="0"/>
 			<enchant stat="maccCombat" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1473,7 +1473,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="93"/>
 			<enchant stat="runSpd" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1492,7 +1492,7 @@
 			<add stat="pDef" order="0x10" value="144"/>
 			<enchant stat="rEvas" order="0x40" value="0"/>
 			<enchant stat="mEvas" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1510,9 +1510,9 @@
 		<enchant4_skill id="13310" level="1"/>
 		<for>
 			<add stat="pDef" order="0x10" value="385"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
@@ -1532,7 +1532,7 @@
 			<add stat="pDef" order="0x10" value="241"/>
 			<enchant stat="rCrit" order="0x40" value="0"/>
 			<enchant stat="mCritRate" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1551,7 +1551,7 @@
 			<add stat="pDef" order="0x10" value="96"/>
 			<enchant stat="accCombat" order="0x40" value="0"/>
 			<enchant stat="maccCombat" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1569,7 +1569,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="96"/>
 			<enchant stat="runSpd" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1606,7 +1606,7 @@
 			<add stat="pDef" order="0x10" value="144"/>
 			<enchant stat="rEvas" order="0x40" value="0"/>
 			<enchant stat="mEvas" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1624,9 +1624,9 @@
 		<enchant4_skill id="13311" level="1"/>
 		<for>
 			<add stat="pDef" order="0x10" value="289"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
@@ -1646,7 +1646,7 @@
 			<add stat="pDef" order="0x10" value="181"/>
 			<enchant stat="rCrit" order="0x40" value="0"/>
 			<enchant stat="mCritRate" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1665,7 +1665,7 @@
 			<add stat="pDef" order="0x10" value="96"/>
 			<enchant stat="accCombat" order="0x40" value="0"/>
 			<enchant stat="maccCombat" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1683,7 +1683,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="96"/>
 			<enchant stat="runSpd" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1702,7 +1702,7 @@
 			<add stat="pDef" order="0x10" value="144"/>
 			<enchant stat="rEvas" order="0x40" value="0"/>
 			<enchant stat="mEvas" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1720,9 +1720,9 @@
 		<enchant4_skill id="13312" level="1"/>
 		<for>
 			<add stat="pDef" order="0x10" value="193"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
@@ -1742,7 +1742,7 @@
 			<add stat="pDef" order="0x10" value="121"/>
 			<enchant stat="rCrit" order="0x40" value="0"/>
 			<enchant stat="mCritRate" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1761,7 +1761,7 @@
 			<add stat="pDef" order="0x10" value="96"/>
 			<enchant stat="accCombat" order="0x40" value="0"/>
 			<enchant stat="maccCombat" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1779,7 +1779,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="96"/>
 			<enchant stat="runSpd" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1800,7 +1800,7 @@
 			<add stat="pDef" order="0x10" value="114"/>
 			<enchant stat="rEvas" order="0x40" value="0"/>
 			<enchant stat="mEvas" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1819,9 +1819,9 @@
 		<set name="ex_type" value="UPPER_PIECE"/>
 		<for>
 			<add stat="pDef" order="0x10" value="304"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 			<add order="0x10" stat="openCloakSlot" value="1"/>
 		</for>
@@ -1843,7 +1843,7 @@
 			<add stat="pDef" order="0x10" value="190"/>
 			<enchant stat="rCrit" order="0x40" value="0"/>
 			<enchant stat="mCritRate" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1864,7 +1864,7 @@
 			<add stat="pDef" order="0x10" value="76"/>
 			<enchant stat="accCombat" order="0x40" value="0"/>
 			<enchant stat="maccCombat" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -1884,7 +1884,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="76"/>
 			<enchant stat="runSpd" order="0x40" value="0"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>

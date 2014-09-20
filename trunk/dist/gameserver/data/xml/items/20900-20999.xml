@@ -1045,8 +1045,8 @@
 			<add stat="mAtk" order="0x10" value="1"/>
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
 			<set stat="baseCrit" order="0x08" value="8.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="20972" name="Sujin Transformation Stick" add_name="Blessed Child Transformation">
@@ -1071,8 +1071,8 @@
 			<add stat="mAtk" order="0x10" value="1"/>
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
 			<set stat="baseCrit" order="0x08" value="8.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<armor id="20973" name="Opera Mask - Liu Bei" add_name="Buff of Virtue, Age of the Three Kingdoms">

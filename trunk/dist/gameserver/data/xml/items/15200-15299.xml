@@ -827,8 +827,8 @@
 			<add stat="mAtk" order="0x10" value="17"/>
 			<set stat="baseCrit" order="0x08" value="80"/>
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="15281" name="Transparent 2HS (NPC)">
@@ -849,8 +849,8 @@
 			<add stat="mAtk" order="0x10" value="39"/>
 			<set stat="baseCrit" order="0x08" value="80"/>
 			<set stat="atkBaseSpeed" order="0x08" value="325"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<armor id="15282" name="Gludio Water Royal Guard Necklace">
@@ -868,7 +868,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="106"/>
 			<add stat="maxMp" order="0x10" value="46"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="15283" name="Dion Holy Royal Guard Necklace">
@@ -886,7 +886,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="106"/>
 			<add stat="maxMp" order="0x10" value="46"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="15284" name="Giran Wind Royal Guard Necklace">
@@ -904,7 +904,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="106"/>
 			<add stat="maxMp" order="0x10" value="46"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="15285" name="Oren Dark Royal Guard Necklace">
@@ -922,7 +922,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="106"/>
 			<add stat="maxMp" order="0x10" value="46"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="15286" name="Aden Earth Royal Guard Necklace">
@@ -940,7 +940,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="106"/>
 			<add stat="maxMp" order="0x10" value="46"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="15287" name="Innadril Water Royal Guard Necklace">
@@ -958,7 +958,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="106"/>
 			<add stat="maxMp" order="0x10" value="46"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="15288" name="Goddard Fire Royal Guard Necklace">
@@ -976,7 +976,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="106"/>
 			<add stat="maxMp" order="0x10" value="46"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="15289" name="Rune Fire Royal Guard Necklace">
@@ -994,7 +994,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="106"/>
 			<add stat="maxMp" order="0x10" value="46"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="15290" name="Schuttgart Wind Royal Guard Necklace">
@@ -1012,7 +1012,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="106"/>
 			<add stat="maxMp" order="0x10" value="46"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="15291" name="Gludio Earth Royal Guard Ring">
@@ -1034,7 +1034,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="60"/>
 			<add stat="maxMp" order="0x10" value="23"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="15292" name="Dion Water Royal Guard Ring">
@@ -1056,7 +1056,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="60"/>
 			<add stat="maxMp" order="0x10" value="23"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="15293" name="Giran Fire Royal Guard Ring">
@@ -1078,7 +1078,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="60"/>
 			<add stat="maxMp" order="0x10" value="23"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="15294" name="Oren Earth Royal Guard Ring">
@@ -1100,7 +1100,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="60"/>
 			<add stat="maxMp" order="0x10" value="23"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="15295" name="Aden Holy Royal Guard Ring">
@@ -1122,7 +1122,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="60"/>
 			<add stat="maxMp" order="0x10" value="23"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="15296" name="Innadril Holy Royal Guard Ring">
@@ -1144,7 +1144,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="60"/>
 			<add stat="maxMp" order="0x10" value="23"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="15297" name="Goddard Dark Royal Guard Ring">
@@ -1166,7 +1166,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="60"/>
 			<add stat="maxMp" order="0x10" value="23"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="15298" name="Rune Wind Royal Guard Ring">
@@ -1188,7 +1188,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="60"/>
 			<add stat="maxMp" order="0x10" value="23"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="15299" name="Schuttgart Dark Royal Guard Ring">
@@ -1210,7 +1210,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="60"/>
 			<add stat="maxMp" order="0x10" value="23"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 </list>

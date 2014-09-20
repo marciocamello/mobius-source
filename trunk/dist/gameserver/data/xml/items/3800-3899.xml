@@ -806,9 +806,9 @@
 		<for>
 			<add stat="pDef" order="0x10" value="13"/>
 			<add stat="mDef" order="0x10" value="16"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="3892" name="Wolf's Durable Leather Armor">
@@ -824,9 +824,9 @@
 		<for>
 			<add stat="pDef" order="0x10" value="16"/>
 			<add stat="mDef" order="0x10" value="18"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="3893" name="Wolf's Wooden Armor">
@@ -842,9 +842,9 @@
 		<for>
 			<add stat="pDef" order="0x10" value="19"/>
 			<add stat="mDef" order="0x10" value="20"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="3894" name="Wolf's Ring Mail">
@@ -860,9 +860,9 @@
 		<for>
 			<add stat="pDef" order="0x10" value="22"/>
 			<add stat="mDef" order="0x10" value="23"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="3895" name="Wolf's Bone Armor">
@@ -878,9 +878,9 @@
 		<for>
 			<add stat="pDef" order="0x10" value="26"/>
 			<add stat="mDef" order="0x10" value="26"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="3896" name="Wolf's Scale Mail">
@@ -896,9 +896,9 @@
 		<for>
 			<add stat="pDef" order="0x10" value="30"/>
 			<add stat="mDef" order="0x10" value="29"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="3897" name="Wolf's Bronze Armor">
@@ -914,9 +914,9 @@
 		<for>
 			<add stat="pDef" order="0x10" value="33"/>
 			<add stat="mDef" order="0x10" value="31"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="3898" name="Wolf's Plate Mail">
@@ -932,9 +932,9 @@
 		<for>
 			<add stat="pDef" order="0x10" value="37"/>
 			<add stat="mDef" order="0x10" value="33"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="3899" name="Wolf's Steel Armor">
@@ -950,9 +950,9 @@
 		<for>
 			<add stat="pDef" order="0x10" value="40"/>
 			<add stat="mDef" order="0x10" value="36"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 </list>

@@ -385,7 +385,7 @@
 		<set name="ex_type" value="PET_EQUIPMENT"/>
 		<for>
 			<add stat="pDef" order="0x10" value="112"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -401,7 +401,7 @@
 		<set name="ex_type" value="PET_EQUIPMENT"/>
 		<for>
 			<add stat="pDef" order="0x10" value="124"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -417,7 +417,7 @@
 		<set name="ex_type" value="PET_EQUIPMENT"/>
 		<for>
 			<add stat="pDef" order="0x10" value="136"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -433,7 +433,7 @@
 		<set name="ex_type" value="PET_EQUIPMENT"/>
 		<for>
 			<add stat="pDef" order="0x10" value="148"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -449,7 +449,7 @@
 		<set name="ex_type" value="PET_EQUIPMENT"/>
 		<for>
 			<add stat="pDef" order="0x10" value="160"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -465,7 +465,7 @@
 		<set name="ex_type" value="PET_EQUIPMENT"/>
 		<for>
 			<add stat="pDef" order="0x10" value="171"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -481,7 +481,7 @@
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<for>
 			<add stat="mDef" order="0x10" value="22"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="12747" name="Ruby Pendant">
@@ -496,7 +496,7 @@
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<for>
 			<add stat="mDef" order="0x10" value="30"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="12748" name="Sapphire Pendant">
@@ -511,7 +511,7 @@
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<for>
 			<add stat="mDef" order="0x10" value="40"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="12749" name="Diamond Pendant">
@@ -526,7 +526,7 @@
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<for>
 			<add stat="mDef" order="0x10" value="52"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="12750" name="Enria Pendant">
@@ -541,7 +541,7 @@
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<for>
 			<add stat="mDef" order="0x10" value="66"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="12751" name="Thons Pendant">
@@ -556,7 +556,7 @@
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<for>
 			<add stat="mDef" order="0x10" value="80"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="12752" name="Asofe Pendant">
@@ -571,7 +571,7 @@
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<for>
 			<add stat="mDef" order="0x10" value="94"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<etcitem id="12753" name="Scroll of Escape: Kamael Village">
@@ -1066,8 +1066,8 @@
 			<add stat="mAtk" order="0x10" value="1"/>
 			<set stat="baseCrit" order="0x08" value="80"/>
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="12794" name="X Stick" add_name="30-day">
@@ -1092,8 +1092,8 @@
 			<add stat="mAtk" order="0x10" value="1"/>
 			<set stat="baseCrit" order="0x08" value="80"/>
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="12795" name="Scissors Stick" add_name="30-day">
@@ -1118,8 +1118,8 @@
 			<add stat="mAtk" order="0x10" value="1"/>
 			<set stat="baseCrit" order="0x08" value="80"/>
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="12796" name="Rock Stick" add_name="30-day">
@@ -1144,8 +1144,8 @@
 			<add stat="mAtk" order="0x10" value="1"/>
 			<set stat="baseCrit" order="0x08" value="80"/>
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="12797" name="Paper Stick" add_name="30-day">
@@ -1170,8 +1170,8 @@
 			<add stat="mAtk" order="0x10" value="1"/>
 			<set stat="baseCrit" order="0x08" value="80"/>
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="12798" name="Snowman Transformation Stick">
@@ -1198,8 +1198,8 @@
 			<add stat="mAtk" order="0x10" value="1"/>
 			<set stat="baseCrit" order="0x08" value="80"/>
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="12799" name="Scarecrow Transformation Stick">
@@ -1226,8 +1226,8 @@
 			<add stat="mAtk" order="0x10" value="1"/>
 			<set stat="baseCrit" order="0x08" value="80"/>
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 </list>

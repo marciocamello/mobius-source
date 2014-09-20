@@ -75,7 +75,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="48"/>
 			<add stat="maxMp" order="0x10" value="21"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="21207" name="Baium's Ring" add_name="30-day">
@@ -100,7 +100,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="48"/>
 			<add stat="maxMp" order="0x10" value="21"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="21208" name="Zaken's Earring" add_name="30-day">
@@ -125,7 +125,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="71"/>
 			<add stat="maxMp" order="0x10" value="31"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<etcitem id="21209" name="MP Recovery Potion Pack">
@@ -224,7 +224,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="48"/>
 			<add stat="maxMp" order="0x10" value="21"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="21219" name="Baium's Ring" add_name="180-day">
@@ -249,7 +249,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="48"/>
 			<add stat="maxMp" order="0x10" value="21"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="21220" name="Zaken's Earring" add_name="180-day">
@@ -274,7 +274,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="71"/>
 			<add stat="maxMp" order="0x10" value="31"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="21221" name="Valakas' Necklace" add_name="180-day">
@@ -298,7 +298,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="125"/>
 			<add stat="maxMp" order="0x10" value="50"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="21222" name="Antharas' Earring" add_name="180-day">
@@ -323,7 +323,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="94"/>
 			<add stat="maxMp" order="0x10" value="37"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<etcitem id="21223" name="Transformation Scroll: Anakim Pack">

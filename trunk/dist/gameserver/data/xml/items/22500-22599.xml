@@ -438,8 +438,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="1"/>
 			<add stat="mAtk" order="0x10" value="1"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<etcitem id="22550" name="Scroll: Enchant Weapon (A-grade)" add_name="Event">

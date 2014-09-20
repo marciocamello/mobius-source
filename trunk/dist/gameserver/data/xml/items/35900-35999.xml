@@ -742,8 +742,8 @@
 		<for>
 			<add stat="pAtk" order="0x10" value="1067"/>
 			<add stat="mAtk" order="0x10" value="298"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>

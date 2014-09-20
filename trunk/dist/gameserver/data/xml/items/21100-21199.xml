@@ -106,8 +106,8 @@
 			<set stat="atkBaseSpeed" order="0x08" value="325"/>
 			<set stat="baseCrit" order="0x08" value="4.0"/>
 			<add stat="accCombat" order="0x10" value="4.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21111" name="Warm Bear Paws" add_name="7-day">
@@ -129,8 +129,8 @@
 			<set stat="atkBaseSpeed" order="0x08" value="325"/>
 			<set stat="baseCrit" order="0x08" value="4.0"/>
 			<add stat="accCombat" order="0x10" value="4.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<armor id="21112" name="Stag Beetle Hat">
@@ -622,7 +622,7 @@
 		<set name="ex_type" value="RING"/>
 		<for>
 			<add stat="mDef" order="0x10" value="7"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="21160" name="Wedding Ring - Female">
@@ -638,7 +638,7 @@
 		<set name="ex_type" value="RING"/>
 		<for>
 			<add stat="mDef" order="0x10" value="7"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<etcitem id="21161" name="Wedding Cake Pack">
@@ -678,8 +678,8 @@
 			<add stat="mAtk" order="0x10" value="1"/>
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
 			<set stat="baseCrit" order="0x08" value="1.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<etcitem id="21164" name="Honeymoon Ticket" add_name="7-day">

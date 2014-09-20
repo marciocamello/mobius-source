@@ -13,7 +13,7 @@
 		<set name="ex_type" value="UPPER_PIECE"/>
 		<for>
 			<add stat="pDef" order="0x10" value="170"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -29,7 +29,7 @@
 		<set name="ex_type" value="LOWER_PIECE"/>
 		<for>
 			<add stat="pDef" order="0x10" value="106"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -45,7 +45,7 @@
 		<set name="ex_type" value="HELMET"/>
 		<for>
 			<add stat="pDef" order="0x10" value="92"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -61,7 +61,7 @@
 		<set name="ex_type" value="GLOVES"/>
 		<for>
 			<add stat="pDef" order="0x10" value="61"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -77,7 +77,7 @@
 		<set name="ex_type" value="FEET"/>
 		<for>
 			<add stat="pDef" order="0x10" value="61"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -101,7 +101,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="113"/>
 			<add stat="maxMp" order="0x10" value="592"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -118,7 +118,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="71"/>
 			<add stat="maxMp" order="0x10" value="370"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -134,7 +134,7 @@
 		<set name="ex_type" value="HELMET"/>
 		<for>
 			<add stat="pDef" order="0x10" value="92"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -150,7 +150,7 @@
 		<set name="ex_type" value="GLOVES"/>
 		<for>
 			<add stat="pDef" order="0x10" value="61"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -166,7 +166,7 @@
 		<set name="ex_type" value="FEET"/>
 		<for>
 			<add stat="pDef" order="0x10" value="61"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -183,7 +183,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="15"/>
 			<add stat="rEvas" order="0x10" value="-8"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -208,7 +208,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="71"/>
 			<add stat="maxMp" order="0x10" value="31"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="21814" name="Tateossian Ring of Fortune" add_name="90-day">
@@ -225,7 +225,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="48"/>
 			<add stat="maxMp" order="0x10" value="21"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="21815" name="Tateossian Necklace of Fortune" add_name="90-day">
@@ -241,7 +241,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="95"/>
 			<add stat="maxMp" order="0x10" value="42"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<etcitem id="21816" name="Tateossian Accessory of Fortune Pack (S-grade)" add_name="90-day">
@@ -265,7 +265,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="79"/>
 			<add stat="maxMp" order="0x10" value="35"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="21818" name="Dynasty Necklace of Fortune" add_name="90-day">
@@ -281,7 +281,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="106"/>
 			<add stat="maxMp" order="0x10" value="46"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="21819" name="Dynasty Ring of Fortune" add_name="90-day">
@@ -298,7 +298,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="60"/>
 			<add stat="maxMp" order="0x10" value="23"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<etcitem id="21820" name="Dynasty Accessory of Fortune Pack (S-grade)" add_name="90-day">
@@ -327,8 +327,8 @@
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
 			<set stat="baseCrit" order="0x08" value="4.0"/>
 			<add stat="accCombat" order="0x10" value="4.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21822" name="Angel Slayer of Fortune" add_name="90-day">
@@ -350,8 +350,8 @@
 			<set stat="atkBaseSpeed" order="0x08" value="433"/>
 			<set stat="baseCrit" order="0x08" value="12.0"/>
 			<add stat="accCombat" order="0x10" value="-3.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21823" name="Draconic Bow of Fortune" add_name="90-day">
@@ -374,8 +374,8 @@
 			<set stat="atkBaseSpeed" order="0x08" value="293"/>
 			<set stat="baseCrit" order="0x08" value="12.0"/>
 			<add stat="accCombat" order="0x10" value="-3.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21824" name="Basalt Battlehammer of Fortune" add_name="90-day">
@@ -397,8 +397,8 @@
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
 			<set stat="baseCrit" order="0x08" value="4.0"/>
 			<add stat="accCombat" order="0x10" value="4.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21825" name="Forgotten Blade of Fortune" add_name="90-day">
@@ -419,8 +419,8 @@
 			<add stat="mAtk" order="0x10" value="132"/>
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
 			<set stat="baseCrit" order="0x08" value="8.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21826" name="Heaven's Divider of Fortune" add_name="90-day">
@@ -441,8 +441,8 @@
 			<add stat="mAtk" order="0x10" value="132"/>
 			<set stat="atkBaseSpeed" order="0x08" value="325"/>
 			<set stat="baseCrit" order="0x08" value="8.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21827" name="Demon Splinter of Fortune" add_name="90-day">
@@ -464,8 +464,8 @@
 			<set stat="atkBaseSpeed" order="0x08" value="325"/>
 			<set stat="baseCrit" order="0x08" value="4.0"/>
 			<add stat="accCombat" order="0x10" value="4.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21828" name="Tallum Blade*Dark Legion's Edge of Fortune" add_name="90-day">
@@ -486,8 +486,8 @@
 			<add stat="mAtk" order="0x10" value="132"/>
 			<set stat="atkBaseSpeed" order="0x08" value="325"/>
 			<set stat="baseCrit" order="0x08" value="8.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21829" name="Saint Spear of Fortune" add_name="90-day">
@@ -509,8 +509,8 @@
 			<set stat="atkBaseSpeed" order="0x08" value="325"/>
 			<set stat="baseCrit" order="0x08" value="8.0"/>
 			<add stat="accCombat" order="0x10" value="-3.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21830" name="Gram of Fortune" add_name="90-day">
@@ -532,8 +532,8 @@
 			<set stat="atkBaseSpeed" order="0x08" value="350"/>
 			<set stat="baseCrit" order="0x08" value="8.0"/>
 			<add stat="accCombat" order="0x10" value="2.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21831" name="Laevateinn of Fortune" add_name="90-day">
@@ -555,8 +555,8 @@
 			<set stat="atkBaseSpeed" order="0x08" value="406"/>
 			<set stat="baseCrit" order="0x08" value="10.0"/>
 			<add stat="accCombat" order="0x10" value="-1.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21832" name="Sarunga of Fortune" add_name="90-day">
@@ -578,8 +578,8 @@
 			<set stat="atkBaseSpeed" order="0x08" value="303"/>
 			<set stat="baseCrit" order="0x08" value="10.0"/>
 			<add stat="accCombat" order="0x10" value="-1.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21833" name="Dynasty Phantom of Fortune" add_name="90-day">
@@ -600,8 +600,8 @@
 			<add stat="mAtk" order="0x10" value="202"/>
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
 			<set stat="baseCrit" order="0x08" value="8.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21834" name="Dynasty Knife of Fortune" add_name="90-day">
@@ -623,8 +623,8 @@
 			<set stat="atkBaseSpeed" order="0x08" value="433"/>
 			<set stat="baseCrit" order="0x08" value="12.0"/>
 			<add stat="accCombat" order="0x10" value="-3.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21835" name="Dynasty Bow of Fortune" add_name="90-day">
@@ -647,8 +647,8 @@
 			<set stat="atkBaseSpeed" order="0x08" value="293"/>
 			<set stat="baseCrit" order="0x08" value="12.0"/>
 			<add stat="accCombat" order="0x10" value="-3.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21836" name="Dynasty Cudgel of Fortune" add_name="90-day">
@@ -670,8 +670,8 @@
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
 			<set stat="baseCrit" order="0x08" value="4.0"/>
 			<add stat="accCombat" order="0x10" value="4.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21837" name="Dynasty Sword of Fortune" add_name="90-day">
@@ -692,8 +692,8 @@
 			<add stat="mAtk" order="0x10" value="151"/>
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
 			<set stat="baseCrit" order="0x08" value="8.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21838" name="Dynasty Blade of Fortune" add_name="90-day">
@@ -714,8 +714,8 @@
 			<add stat="mAtk" order="0x10" value="151"/>
 			<set stat="atkBaseSpeed" order="0x08" value="325"/>
 			<set stat="baseCrit" order="0x08" value="8.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21839" name="Dynasty Bagh-Nakh of Fortune" add_name="90-day">
@@ -737,8 +737,8 @@
 			<set stat="atkBaseSpeed" order="0x08" value="325"/>
 			<set stat="baseCrit" order="0x08" value="4.0"/>
 			<add stat="accCombat" order="0x10" value="4.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21840" name="Dynasty Dualsword of Fortune" add_name="90-day">
@@ -759,8 +759,8 @@
 			<add stat="mAtk" order="0x10" value="151"/>
 			<set stat="atkBaseSpeed" order="0x08" value="325"/>
 			<set stat="baseCrit" order="0x08" value="8.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21841" name="Dynasty Halberd of Fortune" add_name="90-day">
@@ -782,8 +782,8 @@
 			<set stat="atkBaseSpeed" order="0x08" value="325"/>
 			<set stat="baseCrit" order="0x08" value="8.0"/>
 			<add stat="accCombat" order="0x10" value="-3.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21842" name="Dynasty Ancient Sword of Fortune" add_name="90-day">
@@ -805,8 +805,8 @@
 			<set stat="atkBaseSpeed" order="0x08" value="350"/>
 			<set stat="baseCrit" order="0x08" value="8.0"/>
 			<add stat="accCombat" order="0x10" value="2.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21843" name="Dynasty Rapier of Fortune" add_name="90-day">
@@ -828,8 +828,8 @@
 			<set stat="atkBaseSpeed" order="0x08" value="406"/>
 			<set stat="baseCrit" order="0x08" value="10.0"/>
 			<add stat="accCombat" order="0x10" value="-1.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="21844" name="Dynasty Crossbow of Fortune" add_name="90-day">
@@ -851,8 +851,8 @@
 			<set stat="atkBaseSpeed" order="0x08" value="303"/>
 			<set stat="baseCrit" order="0x08" value="10.0"/>
 			<add stat="accCombat" order="0x10" value="-1.0"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<etcitem id="21845" name="Mysterious No-grade Soulshot">

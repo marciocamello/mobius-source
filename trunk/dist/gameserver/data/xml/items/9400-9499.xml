@@ -220,7 +220,7 @@
 		<set name="ex_type" value="UPPER_PIECE"/>
 		<for>
 			<add stat="pDef" order="0x10" value="226"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -241,7 +241,7 @@
 		</cond>
 		<for>
 			<add stat="pDef" order="0x10" value="226"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -262,7 +262,7 @@
 		</cond>
 		<for>
 			<add stat="pDef" order="0x10" value="226"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -283,7 +283,7 @@
 		</cond>
 		<for>
 			<add stat="pDef" order="0x10" value="226"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -304,7 +304,7 @@
 		</cond>
 		<for>
 			<add stat="pDef" order="0x10" value="226"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -322,7 +322,7 @@
 		<set name="ex_type" value="LOWER_PIECE"/>
 		<for>
 			<add stat="pDef" order="0x10" value="141"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -340,7 +340,7 @@
 		<set name="ex_type" value="HELMET"/>
 		<for>
 			<add stat="pDef" order="0x10" value="92"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -358,7 +358,7 @@
 		<set name="ex_type" value="GLOVES"/>
 		<for>
 			<add stat="pDef" order="0x10" value="61"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -376,7 +376,7 @@
 		<set name="ex_type" value="FEET"/>
 		<for>
 			<add stat="pDef" order="0x10" value="61"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -394,7 +394,7 @@
 		<set name="ex_type" value="UPPER_PIECE"/>
 		<for>
 			<add stat="pDef" order="0x10" value="170"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -415,7 +415,7 @@
 		</cond>
 		<for>
 			<add stat="pDef" order="0x10" value="170"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -436,7 +436,7 @@
 		</cond>
 		<for>
 			<add stat="pDef" order="0x10" value="170"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -454,7 +454,7 @@
 		<set name="ex_type" value="LOWER_PIECE"/>
 		<for>
 			<add stat="pDef" order="0x10" value="106"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -472,7 +472,7 @@
 		<set name="ex_type" value="HELMET"/>
 		<for>
 			<add stat="pDef" order="0x10" value="92"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -490,7 +490,7 @@
 		<set name="ex_type" value="GLOVES"/>
 		<for>
 			<add stat="pDef" order="0x10" value="61"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -508,7 +508,7 @@
 		<set name="ex_type" value="FEET"/>
 		<for>
 			<add stat="pDef" order="0x10" value="61"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -527,7 +527,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="113"/>
 			<add stat="maxMp" order="0x10" value="592"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -549,7 +549,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="113"/>
 			<add stat="maxMp" order="0x10" value="592"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -571,7 +571,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="113"/>
 			<add stat="maxMp" order="0x10" value="592"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -593,7 +593,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="113"/>
 			<add stat="maxMp" order="0x10" value="592"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -615,7 +615,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="113"/>
 			<add stat="maxMp" order="0x10" value="592"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -634,7 +634,7 @@
 		<for>
 			<add stat="pDef" order="0x10" value="71"/>
 			<add stat="maxMp" order="0x10" value="370"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -652,7 +652,7 @@
 		<set name="ex_type" value="HELMET"/>
 		<for>
 			<add stat="pDef" order="0x10" value="92"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -670,7 +670,7 @@
 		<set name="ex_type" value="GLOVES"/>
 		<for>
 			<add stat="pDef" order="0x10" value="61"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -688,7 +688,7 @@
 		<set name="ex_type" value="FEET"/>
 		<for>
 			<add stat="pDef" order="0x10" value="61"/>
-			<enchant stat="pDef" order="0x40" value="0"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
@@ -735,8 +735,8 @@
 			<add stat="mAtk" order="0x10" value="151"/>
 			<set stat="baseCrit" order="0x08" value="80"/>
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="9443" name="Dynasty Blade">
@@ -760,8 +760,8 @@
 			<add stat="mAtk" order="0x10" value="151"/>
 			<set stat="baseCrit" order="0x08" value="80"/>
 			<set stat="atkBaseSpeed" order="0x08" value="325"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="9444" name="Dynasty Phantom">
@@ -785,8 +785,8 @@
 			<add stat="mAtk" order="0x10" value="202"/>
 			<set stat="baseCrit" order="0x08" value="80"/>
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="9445" name="Dynasty Bow">
@@ -813,8 +813,8 @@
 			<set stat="baseCrit" order="0x08" value="120"/>
 			<set stat="atkBaseSpeed" order="0x08" value="293"/>
 			<add stat="accCombat" order="0x10" value="-4.0000"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="9446" name="Dynasty Knife">
@@ -838,8 +838,8 @@
 			<set stat="baseCrit" order="0x08" value="120"/>
 			<set stat="atkBaseSpeed" order="0x08" value="433"/>
 			<add stat="accCombat" order="0x10" value="-4.0000"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="9447" name="Dynasty Halberd">
@@ -866,8 +866,8 @@
 			<set stat="baseCrit" order="0x08" value="80"/>
 			<set stat="atkBaseSpeed" order="0x08" value="325"/>
 			<add stat="accCombat" order="0x10" value="-4.0000"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="9448" name="Dynasty Cudgel">
@@ -891,8 +891,8 @@
 			<set stat="baseCrit" order="0x08" value="40"/>
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
 			<add stat="accCombat" order="0x10" value="5.0000"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="9449" name="Dynasty Mace">
@@ -917,8 +917,8 @@
 			<set stat="baseCrit" order="0x08" value="40"/>
 			<set stat="atkBaseSpeed" order="0x08" value="379"/>
 			<add stat="accCombat" order="0x10" value="5.0000"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<weapon id="9450" name="Dynasty Bagh-Nakh">
@@ -942,8 +942,8 @@
 			<set stat="baseCrit" order="0x08" value="40"/>
 			<set stat="atkBaseSpeed" order="0x08" value="325"/>
 			<add stat="accCombat" order="0x10" value="5.0000"/>
-			<enchant stat="pAtk" order="0x40" value="0"/>
-			<enchant stat="mAtk" order="0x40" value="0"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
 	<etcitem id="9451" name="Dynastic Essence">
@@ -969,7 +969,7 @@
 		<set name="ex_type" value="EARRING"/>
 		<for>
 			<add stat="mDef" order="0x10" value="71"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9453" name="Sealed Dynasty Necklace">
@@ -986,7 +986,7 @@
 		<set name="ex_type" value="NECKLACE"/>
 		<for>
 			<add stat="mDef" order="0x10" value="95"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9454" name="Sealed Dynasty Ring">
@@ -1004,7 +1004,7 @@
 		<set name="ex_type" value="RING"/>
 		<for>
 			<add stat="mDef" order="0x10" value="53"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9455" name="Dynasty Earring">
@@ -1023,7 +1023,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="79"/>
 			<add stat="maxMp" order="0x10" value="35"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9456" name="Dynasty Necklace">
@@ -1041,7 +1041,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="106"/>
 			<add stat="maxMp" order="0x10" value="46"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9457" name="Dynasty Ring">
@@ -1060,7 +1060,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="60"/>
 			<add stat="maxMp" order="0x10" value="23"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9458" name="Dynasty Earring" add_name="Stun Resistance">
@@ -1082,7 +1082,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="27"/>
 			<add stat="maxMp" order="0x10" value="35"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9459" name="Dynasty Necklace" add_name="Stun Resistance">
@@ -1103,7 +1103,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="36"/>
 			<add stat="maxMp" order="0x10" value="46"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9460" name="Dynasty Ring" add_name="Stun Resistance">
@@ -1125,7 +1125,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="18"/>
 			<add stat="maxMp" order="0x10" value="23"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9461" name="Dynasty Earring" add_name="Poison Resistance">
@@ -1147,7 +1147,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="27"/>
 			<add stat="maxMp" order="0x10" value="35"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9462" name="Dynasty Necklace" add_name="Poison Resistance">
@@ -1168,7 +1168,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="36"/>
 			<add stat="maxMp" order="0x10" value="46"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9463" name="Dynasty Ring" add_name="Poison Resistance">
@@ -1190,7 +1190,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="18"/>
 			<add stat="maxMp" order="0x10" value="23"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9464" name="Dynasty Earring" add_name="Bleed Resistance">
@@ -1212,7 +1212,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="27"/>
 			<add stat="maxMp" order="0x10" value="35"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9465" name="Dynasty Necklace" add_name="Bleed Resistance">
@@ -1233,7 +1233,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="36"/>
 			<add stat="maxMp" order="0x10" value="46"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9466" name="Dynasty Ring" add_name="Bleed Resistance">
@@ -1255,7 +1255,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="18"/>
 			<add stat="maxMp" order="0x10" value="23"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9467" name="Dynasty Earring" add_name="Sleep Resistance">
@@ -1277,7 +1277,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="27"/>
 			<add stat="maxMp" order="0x10" value="35"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9468" name="Dynasty Necklace" add_name="Sleep Resistance">
@@ -1298,7 +1298,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="36"/>
 			<add stat="maxMp" order="0x10" value="46"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9469" name="Dynasty Ring" add_name="Sleep Resistance">
@@ -1320,7 +1320,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="18"/>
 			<add stat="maxMp" order="0x10" value="23"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9470" name="Dynasty Earring" add_name="Paralysis Resistance">
@@ -1342,7 +1342,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="27"/>
 			<add stat="maxMp" order="0x10" value="35"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9471" name="Dynasty Necklace" add_name="Paralysis Resistance">
@@ -1363,7 +1363,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="36"/>
 			<add stat="maxMp" order="0x10" value="46"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9472" name="Dynasty Ring" add_name="Paralysis Resistance">
@@ -1385,7 +1385,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="18"/>
 			<add stat="maxMp" order="0x10" value="23"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9473" name="Dynasty Earring" add_name="Hold Resistance">
@@ -1407,7 +1407,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="27"/>
 			<add stat="maxMp" order="0x10" value="35"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9474" name="Dynasty Necklace" add_name="Hold Resistance">
@@ -1428,7 +1428,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="36"/>
 			<add stat="maxMp" order="0x10" value="46"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9475" name="Dynasty Ring" add_name="Hold Resistance">
@@ -1450,7 +1450,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="18"/>
 			<add stat="maxMp" order="0x10" value="23"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9476" name="Dynasty Earring" add_name="Fear Resistance">
@@ -1472,7 +1472,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="27"/>
 			<add stat="maxMp" order="0x10" value="35"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9477" name="Dynasty Necklace" add_name="Fear Resistance">
@@ -1493,7 +1493,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="36"/>
 			<add stat="maxMp" order="0x10" value="46"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9478" name="Dynasty Ring" add_name="Fear Resistance">
@@ -1515,7 +1515,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="18"/>
 			<add stat="maxMp" order="0x10" value="23"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9479" name="Dynasty Earring (Not in Use)" add_name="Dark Attack Resistance">
@@ -1534,7 +1534,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="27"/>
 			<add stat="maxMp" order="0x10" value="35"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9480" name="Dynasty Necklace (Not in Use)" add_name="Dark Attack Resistance">
@@ -1552,7 +1552,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="36"/>
 			<add stat="maxMp" order="0x10" value="46"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<armor id="9481" name="Dynasty Ring (Not in Use)" add_name="Dark Attack Resistance">
@@ -1571,7 +1571,7 @@
 		<for>
 			<add stat="mDef" order="0x10" value="18"/>
 			<add stat="maxMp" order="0x10" value="23"/>
-			<enchant stat="mDef" order="0x40" value="0"/>
+			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
 	<etcitem id="9482" name="Recipe: Sealed Dynasty Breastplate (60%)">
