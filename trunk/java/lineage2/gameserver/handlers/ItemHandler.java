@@ -13,6 +13,7 @@
 package lineage2.gameserver.handlers;
 
 import lineage2.commons.data.xml.AbstractHolder;
+import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
@@ -56,7 +57,7 @@ public class ItemHandler extends AbstractHolder
 			{
 				warn("Item not found: " + itemId + " handler: " + handler.getClass().getSimpleName());
 			}
-			else if (template.getHandler() != IItemHandler.NULL)
+			else if (Config.DEBUG && (template.getHandler() != IItemHandler.NULL))
 			{
 				warn("Duplicate handler for item: " + itemId + "(" + template.getHandler().getClass().getSimpleName() + "," + handler.getClass().getSimpleName() + ")");
 			}
