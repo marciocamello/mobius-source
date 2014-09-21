@@ -711,7 +711,11 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 			
 			if (getSkill().getDelayedEffect() > 0)
 			{
-				SkillTable.getInstance().getInfo(getSkill().getDelayedEffect(), 1).getEffects(_effector, _effected, false, false);
+				Skill delayErrects = SkillTable.getInstance().getInfo(getSkill().getDelayedEffect(), 1);
+				if (delayErrects != null)
+				{
+					delayErrects.getEffects(_effector, _effected, false, false);
+				}
 			}
 			
 			boolean msg = !isHidden() && (getEffected().getEffectList().getEffectsCountForSkill(getSkill().getId()) == 1);
