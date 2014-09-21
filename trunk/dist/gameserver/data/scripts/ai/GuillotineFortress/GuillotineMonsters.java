@@ -15,8 +15,10 @@ package ai.GuillotineFortress;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.Creature;
+import lineage2.gameserver.model.EffectList;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.tables.SkillTable;
@@ -44,21 +46,36 @@ public final class GuillotineMonsters extends Fighter
 	{
 		super.onEvtAttacked(attacker, damage);
 		NpcInstance actor = getActor();
+		if (attacker == null)
+		{
+			return;
+		}
+		
 		Player player = (Player) attacker;
 		double actor_hp_precent = actor.getCurrentHpPercents();
 		
 		if ((actor_hp_precent < 85) && _chekerLocked)
 		{
 			_chekerLocked = false;
-			actor.getEffectList().stopEffect(SkillTable.getInstance().getInfo(15208, 9));
-			
-			if (attacker.isPlayer())
+			EffectList effectList = actor.getEffectList();
+			if (effectList != null)
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.CHAOS_SHIELD_BREAKTHROUGH, 10000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
+				effectList.stopEffect(SkillTable.getInstance().getInfo(15208, 9));
+				
+				if (attacker.isPlayer())
+				{
+					player.sendPacket(new ExShowScreenMessage(NpcString.CHAOS_SHIELD_BREAKTHROUGH, 10000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
+				}
 			}
 		}
 		
-		if ((player.getInventory().getItemByItemId(34898) != null) && Rnd.chance(1))
+		PcInventory playerInventory = player.getInventory();
+		if (playerInventory == null)
+		{
+			return;
+		}
+		
+		if ((playerInventory.getItemByItemId(34898) != null) && Rnd.chance(1))
 		{
 			NpcUtils.spawnSingle(23212, player.getLoc(), player.getReflection());
 			player.getInventory().destroyItemByItemId(34898, 1);
