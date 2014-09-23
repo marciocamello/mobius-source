@@ -610,7 +610,7 @@
 			</not>
 		</cond>
 		<for>
-			<effect count="1" name="Buff" time="8" val="0">
+			<effect count="1" name="Buff" time="11" val="0">
 				<mul order="0x30" stat="cAtk" val="2">
 					<not>
 						<using kind="Bow, Crossbow"/>

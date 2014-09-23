@@ -272,9 +272,19 @@
 	</skill>
 	<skill id="13441" levels="1" name="Queen Ant's Soul Ring">
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="poisonResist" val="30"/>
+			<add order="0x40" stat="accCombat" val="2"/>
+			<mul order="0x30" stat="rCrit" val="1.32"/>
+			<mul order="0x30" stat="cAtk" val="1.35"/>
+			<add order="0x40" stat="mCritRate" val="20"/>
+			<add order="0x40" stat="rootResist" val="20"/>
+			<add order="0x40" stat="poisonPower" val="30"/>
+			<add order="0x40" stat="rootPower" val="20"/>
+		</for>
 	</skill>
 	<skill id="13442" levels="1" name="Orfen's Soul Earring">
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00"/>

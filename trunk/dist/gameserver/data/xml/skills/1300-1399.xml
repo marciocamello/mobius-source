@@ -765,7 +765,7 @@
 		<set name="icon" val="icon.skill1334"/>
 		<set name="reuseDelay" val="5000"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="hitTime" val="15000"/>
+		<set name="hitTime" val="6000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -2221,7 +2221,7 @@
 		<set name="hitCancelTime" val="2000"/>
 		<set name="mpConsume1" val="22"/>
 		<set name="mpConsume2" val="87"/>
-		<set name="activateRate" val="50"/>
+		<set name="activateRate" val="80"/>
 		<set name="itemConsumeId" val="3031"/>
 		<set name="itemConsumeCount" val="80"/>
 		<set name="target" val="TARGET_AREA"/>
@@ -2239,7 +2239,7 @@
 			</not>
 		</cond>
 		<for>
-			<effect count="1" name="MuteAll" time="60" val="0">
+			<effect count="1" name="MuteAll" time="15" val="0">
 				<mul order="0x30" stat="mDef" val="0.5"/>
 				<mul order="0x30" stat="pDef" val="0.5"/>
 				<mul order="0x30" stat="rShld" val="0.5"/>
@@ -2337,7 +2337,7 @@
 		<set name="reuseDelay" val="75000"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="castRange" val="500"/>
-		<set name="hitTime" val="1500"/>
+		<set name="hitTime" val="5000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -2378,7 +2378,7 @@
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="power" val="#power"/>
 		<set name="castRange" val="900"/>
-		<set name="hitTime" val="2000"/>
+		<set name="hitTime" val="6000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>

@@ -5,10 +5,11 @@
 		<table name="#magicLevel">85 90 95 99</table>
 		<set name="icon" val="icon.skill10317"/>
 		<set name="castRange" val="1100"/>
+		<set name="reuseDelay" val="7000"/>
 		<set name="magicLvl" val="#magicLevel"/>
 		<set name="mpConsume" val="171"/>
 		<set name="reuseDelay" val="10000"/>
-		<set name="hitTime" val="2000"/>
+		<set name="hitTime" val="6000"/>
 		<set name="power" val="#power"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="target" val="TARGET_ONE"/>
