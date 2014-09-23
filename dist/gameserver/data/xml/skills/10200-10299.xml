@@ -64,7 +64,7 @@
 		<table name="#effectPoint">438</table>
 		<table name="#magicLevel">85</table>
 		<set name="reuseDelay" val="6000"/>
-		<set name="hitTime" val="500"/>
+		<set name="hitTime" val="1800"/>
 		<set name="effectPoint" val="#effectPoint"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -95,7 +95,7 @@
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="0"/>
 		<set name="mpConsume1" val="40"/>
-		<set name="castRange" val="600"/>
+		<set name="castRange" val="30"/>
 		<set name="power" val="15803"/>
 		<set name="magicLevel" val="85"/>
 		<set name="coolTime" val="1500"/>
@@ -285,10 +285,11 @@
 		<table name="#powerPvP">0</table>
 		<table name="#element">none</table>
 		<table name="#elementPower">0</table>
+		<set name="reuseDelay" val="2699"/>
 		<set name="castRange" val="40"/>
 		<set name="relationSkillsId" val="116;362;284;1;920;501;190;281;"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="activateRate" val="30"/>
+		<set name="activateRate" val="60"/>
 		<set name="nextAction" val="attack"/>
 		<set name="power" val="#Power"/>
 		<set name="powerPvP" val="#powerPvP"/>
@@ -360,8 +361,6 @@
 				<mul order="0x30" stat="pDef" val="0.77"/>
 			</effect>
 		</for>
-		<set name="hitTime" val="1090"/>
-		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="10260" levels="8" name="Mega Strike">
 		<table name="#power">15303 15831 16889 17947 19005 20063 21121 22179</table>
@@ -530,6 +529,7 @@
 		</for>
 		<set name="castRange" val="40"/>
 		<set name="hitTime" val="1690"/>
+		<set name="reuseDelay" val="30999"/>
 	</skill>
 	<skill id="10263" levels="8" name="Hurricane Blaster">
 		<table name="#Power">551 566 598 630 662 693 725 757</table>
@@ -550,8 +550,9 @@
 		<set name="charges" val="7"/>
 		<set name="isOffensive" val="true"/>
 		<set name="nextAction" val="attack"/>
-		<set name="hitTime" val="1200"/>
+		<set name="hitTime" val="1500"/>
 		<set name="reuseDelay" val="900"/>
+		<set name="castRange" val="600"/>
 		<cond msgId="113" addName="1">
 			<not>
 				<using kind="Bow,Crossbow"/>
@@ -606,7 +607,6 @@
 			<table name="#power">789 805 820 836 852 868 884 900 916 932</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant9>
-		<set name="castRange" val="600"/>
 	</skill>
 	<skill id="10265" levels="8" name="Eruption">
 		<table name="#Power">11557 11956 12754 13553 14351 15150 15948 16747</table>
@@ -614,6 +614,7 @@
 		<table name="#element">none</table>
 		<table name="#powerPvP">0</table>
 		<table name="#elementPower">0</table>
+		<set name="reuseDelay" val="5999"/>
 		<set name="relationSkillsId" val="9;36;17;496;"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="nextAction" val="attack"/>
@@ -630,7 +631,7 @@
 		<set name="criticalRate" val="10"/>
 		<set name="overHit" val="true"/>
 		<set name="unaggroing" val="true"/>
-		<set name="skillRadius" val="500"/>
+		<set name="skillRadius" val="40"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="113" addName="1">
@@ -690,21 +691,19 @@
 		<for>
 			<effect name="Stun" time="2" val="0" effectPower="65" effectType="STUN" stackOrder="1" stackType="stun"/>
 		</for>
-		<set name="castRange" val="40"/>
-		<set name="hitTime" val="1390"/>
 	</skill>
 	<skill id="10266" levels="8" name="Giant Punch">
 		<table name="#mpConsume2">76 79 81 84 87 90 92 95</table>
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
-		<table name="#reuseDelay">120000</table>
+		<table name="#reuseDelay">65998</table>
 		<table name="#activateRate">50</table>
 		<table name="#pdef">1</table>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="magicLvl" val="#magicLevel"/>
 		<set name="nextActionAttack" val="true"/>
 		<set name="target" val="TARGET_AURA"/>
-		<set name="reuseDelay" val="120000"/>
-		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="60999"/>
+		<set name="hitTime" val="1300"/>
 		<set name="coolTime" val="296"/>
 		<set name="skillRadius" val="500"/>
 		<set name="skillType" val="PDAM"/>
@@ -742,7 +741,7 @@
 	<skill id="10267" levels="6" name="Hurricane Rush">
 		<table name="#mpConsume2">38 39 41 43 44 47</table>
 		<table name="#magicLevel">85 87 90 93 96 99</table>
-		<table name="#reuseDelay">15000</table>
+		<table name="#reuseDelay">15999</table>
 		<table name="#activateRate">50</table>
 		<table name="#pdef">1</table>
 		<set name="nextAction" val="attack"/>
@@ -754,15 +753,15 @@
 		<set name="isDebuff" val="true"/>
 		<set name="lvlDepend" val="1"/>
 		<set name="magicLvl" val="#magicLevel"/>
-		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="mpConsume2" val="47"/>
 		<set name="nextActionAttack" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="reuseDelay" val="#reuseDelay"/>
+		<set name="reuseDelay" val="15999"/>
 		<set name="saveVs" val="CON"/>
 		<set name="skillType" val="DEBUFF"/>
 		<set name="SSBoost" val="2.0"/>
 		<set name="target" val="TARGET_TUNNEL"/>
-		<set name="activateRate" val="#activateRate"/>
+		<set name="activateRate" val="50"/>
 		<set name="isSkillTimePermanent" val="true"/>
 		<cond msg="Requires Pole, Sword, Blunt, Dual Sword, Big Blunt, Big Sword, Dual Fist.">
 			<using kind="Pole, Sword, Blunt, Dual Sword, Big Blunt, Big Sword, Dual Fist, Dual Blunt"/>
@@ -795,7 +794,6 @@
 				<mul order="0x30" stat="pDef" val="#pdef"/>
 			</effect>
 		</for>
-		<set name="hitTime" val="500"/>
 	</skill>
 	<skill id="10268" levels="6" name="Rolling Thunder">
 		<table name="#mp">1</table>
@@ -827,7 +825,7 @@
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="flyType" val="CHARGE"/>
 		<set name="flyRadius" val="600"/>
-		<set name="coolTime" val="1100"/>
+		<set name="reuseDelay" val="5999"/>
 		<set name="activateRate" val="#activateRate"/>
 		<set name="nextAction" val="attack"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -899,10 +897,11 @@
 			</effect>
 		</for>
 		<set name="castRange" val="600"/>
-		<set name="hitTime" val="890"/>
+		<set name="hitTime" val="499"/>
 	</skill>
 	<skill id="10270" levels="1" name="Second Wind">
 		<table name="#time">120</table>
+		<set name="reuseDelay" val="120999"/>
 		<set name="relationSkillsId" val="121;1561;20006;441;"/>
 		<set name="magicLevel" val="93"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -920,13 +919,13 @@
 			<effect count="1" name="HealPercent" time="0" val="35"/>
 			<effect count="1" name="HealCPPercent" time="0" val="15"/>
 		</for>
-		<set name="hitTime" val="1200"/>
 	</skill>
 	<skill id="10271" levels="2" name="Power Provoke">
 		<table name="#effectPoint">2384 2684</table>
 		<table name="#magicLevel">97 99</table>
 		<table name="#activateRate">75</table>
 		<table name="#radius">1500</table>
+		<set name="reuseDelay" val="4699"/>
 		<set name="activateRate" val="#activateRate"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="effectPoint" val="#effectPoint"/>
@@ -954,7 +953,6 @@
 				<mul order="0x30" stat="pDef" val="0.80"/>
 			</effect>
 		</for>
-		<set name="hitTime" val="1200"/>
 	</skill>
 	<skill id="10273" levels="4" name="Lightning Disarm">
 		<table name="#Def">0.9 0.85 0.8 0.75</table>
@@ -989,6 +987,7 @@
 			</effect>
 		</for>
 		<set name="hitTime" val="1200"/>
+		<set name="reuseDelay" val="120999"/>
 	</skill>
 	<skill id="10274" levels="4" name="Berserker">
 		<table name="#magicLevel">85 90 95 99</table>
@@ -1041,6 +1040,7 @@
 			</effect>
 		</for>
 		<set name="hitTime" val="1200"/>
+		<set name="reuseDelay" val="320999"/>
 	</skill>
 	<skill id="10275" levels="1" name="Infinity Strike">
 		<table name="#power">34026</table>
@@ -1073,6 +1073,7 @@
 		</enchant3>
 		<set name="castRange" val="40"/>
 		<set name="hitTime" val="2500"/>
+		<set name="reuseDelay" val="30999"/>
 	</skill>
 	<skill id="10276" levels="1" name="Force of Nature">
 		<table name="#charges">10</table>
@@ -1081,7 +1082,7 @@
 		<set name="hitTime" val="1200"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="38"/>
-		<table name="#reuseDelay">60000</table>
+		<table name="#reuseDelay">67000</table>
 		<set name="reuseDelay" val="#reuseDelay"/>
 		<table name="#heal">0</table>
 		<table name="#healCp">0</table>
@@ -1123,10 +1124,10 @@
 				</mul>
 			</effect>
 		</for>
-		<set name="hitTime" val="1200"/>
 	</skill>
 	<skill id="10278" levels="8" name="Reduce Anger">
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<set name="reuseDelay" val="30999"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="activateRate" val="90"/>
 		<set name="target" val="TARGET_AURA"/>
@@ -1140,7 +1141,6 @@
 		<for>
 			<effect count="3" name="UnAggro" stackOrder="1" stackType="UnAggro" time="120" val="0"/>
 		</for>
-		<set name="hitTime" val="1200"/>
 	</skill>
 	<skill id="10279" levels="1" name="Giant Barrier">
 		<table name="#time">10</table>
@@ -1152,6 +1152,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="dispelType" val="negative"/>
+		<set name="reuseDelay" val="320999"/>
 		<cond msg="Can be only used when HP is 20% or lower">
 			<player percentHP="#hpperc"/>
 		</cond>
@@ -1173,7 +1174,6 @@
 				<add order="0x40" stat="stunPower" val="#Stun"/>
 			</effect>
 		</for>
-		<set name="hitTime" val="1200"/>
 	</skill>
 	<skill id="10280" levels="1" name="Momentum Charge">
 		<set name="target" val="TARGET_SELF"/>
@@ -1190,6 +1190,9 @@
 		<table name="#power">21958 23344</table>
 		<table name="#powerPvP">0</table>
 		<table name="#magicLevel">95 96</table>
+		<set name="hitTime" val="750"/>
+		<set name="coolTime" val="500"/>
+		<set name="reuseDelay" val="30999"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="nextAction" val="attack"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -1217,8 +1220,6 @@
 			<table name="#power">24311 24805 25317 25830 26897 28006 29159 30357 31603 32898</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
-		<set name="castRange" val="40"/>
-		<set name="hitTime" val="2500"/>
 	</skill>
 	<skill id="10283" levels="1" name="Increase Momentum">
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1311,7 +1312,6 @@
 		<for>
 			<effect abnormal="poison" count="5" name="Poison" stackOrder="#abnormalLvl" time="3" val="#dot"/>
 		</for>
-		<set name="hitTime" val="500"/>
 	</skill>
 	<skill id="10288" levels="8" name="Hurricane Storm">
 		<table name="#power">11557 11956 12754 13553 14351 15150 15948 16747</table>
@@ -1382,6 +1382,7 @@
 		</enchant8>
 		<set name="castRange" val="500"/>
 		<set name="hitTime" val="1790"/>
+		<set name="reuseDelay" val="10999"/>
 	</skill>
 	<skill id="10289" levels="4" name="Boost">
 		<table name="#skillPower">1.3 1.35 1.4 1.45</table>
@@ -1389,6 +1390,7 @@
 		<table name="#Time">60 60 60 60</table>
 		<table name="#Stun">0 0 0 0</table>
 		<table name="#Knockdown">0 0 0 0</table>
+		<set name="reuseDelay" val="180999"/>
 		<set name="aggroPoints" val="597"/>
 		<set name="magicLevel" val="85"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -1414,18 +1416,17 @@
 				<add order="0x40" stat="stunPower" val="#Stun"/>
 			</effect>
 		</for>
-		<set name="hitTime" val="2000"/>
 	</skill>
 	<skill id="10290" levels="8" name="Hurricane Slasher">
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="target" val="TARGET_SELF"/>
 		<for/>
-		<set name="hitTime" val="1800"/>
 	</skill>
 	<skill id="10291" levels="1" name="Feral Bear Cry">
 		<table name="#time">300</table>
 		<table name="#knockdown">0</table>
+		<set name="reuseDelay" val="30999"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -1444,11 +1445,11 @@
 				<add order="0x40" stat="knockDownPower" val="#knockdown"/>
 			</effect>
 		</for>
-		<set name="hitTime" val="2000"/>
 	</skill>
 	<skill id="10292" levels="1" name="Feral Ogre Cry">
 		<table name="#time">300</table>
 		<table name="#knockdown">0</table>
+		<set name="reuseDelay" val="30999"/>
 		<set name="relationSkillsId" val="500;78;830;482;109;94;828;139;829;130;"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1471,11 +1472,11 @@
 				<add order="0x40" stat="knockDownPower" val="#knockdown"/>
 			</effect>
 		</for>
-		<set name="hitTime" val="2000"/>
 	</skill>
 	<skill id="10293" levels="1" name="Feral Puma Cry">
 		<table name="#time">300</table>
 		<table name="#knockdown">0</table>
+		<set name="reuseDelay" val="30999"/>
 		<set name="magicLevel" val="85"/>
 		<set name="relationSkillsId" val="282;130;500;78;822;482;823;94;824;139;"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1495,11 +1496,11 @@
 				<add order="0x40" stat="knockDownPower" val="#knockdown"/>
 			</effect>
 		</for>
-		<set name="hitTime" val="2000"/>
 	</skill>
 	<skill id="10294" levels="1" name="Feral Rabbit Cry">
 		<table name="#time">300</table>
 		<table name="#knockdown">0</table>
+		<set name="reuseDelay" val="30999"/>
 		<set name="relationSkillsId" val="451;823;298;"/>
 		<set name="aggroPoints" val="582"/>
 		<set name="magicLevel" val="85"/>
@@ -1520,11 +1521,11 @@
 				<add order="0x40" stat="knockDownPower" val="#knockdown"/>
 			</effect>
 		</for>
-		<set name="hitTime" val="2000"/>
 	</skill>
 	<skill id="10295" levels="1" name="Hawk Cry">
 		<table name="#time">300</table>
 		<table name="#knockdown">0</table>
+		<set name="reuseDelay" val="30999"/>
 		<set name="relationSkillsId" val="425;"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1544,11 +1545,11 @@
 				<add order="0x40" stat="knockDownPower" val="#knockdown"/>
 			</effect>
 		</for>
-		<set name="hitTime" val="2000"/>
 	</skill>
 	<skill id="10296" levels="1" name="Spirit of the Hunter">
 		<table name="#Power">1.45</table>
 		<table name="#Time">600</table>
+		<set name="reuseDelay" val="30999"/>
 		<set name="relationSkillsId" val="87;104;359;"/>
 		<set name="effectPoint" val="666"/>
 		<set name="magicLevel" val="85"/>
@@ -1565,11 +1566,11 @@
 				</mul>
 			</effect>
 		</for>
-		<set name="hitTime" val="2000"/>
 	</skill>
 	<skill id="10297" levels="1" name="Spirit of the Slayer">
 		<table name="#Power">1.45</table>
 		<table name="#Time">600</table>
+		<set name="reuseDelay" val="30999"/>
 		<set name="effectPoint" val="669"/>
 		<set name="magicLevel" val="86"/>
 		<set name="relationSkillsId" val="88;80;360;"/>
@@ -1589,17 +1590,16 @@
 				</mul>
 			</effect>
 		</for>
-		<set name="hitTime" val="2000"/>
 	</skill>
 	<skill id="10298" levels="1" name="Power Revival">
 		<set name="magicLevel" val="85"/>
+		<set name="reuseDelay" val="660999"/>
 		<set name="aggroPoints" val="100"/>
 		<set name="relationSkillsId" val="181;833;"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="power" val="100"/>
 		<set name="skillType" val="HEAL_PERCENT"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="10299" levels="1" name="Stun Spear">
 		<set name="magicLevel" val="85"/>
@@ -1609,6 +1609,5 @@
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="3" val="0"/>
 		</for>
-		<set name="castRange" val="40"/>
 	</skill>
 </list>

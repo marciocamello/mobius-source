@@ -213,7 +213,7 @@
 	<skill id="11820" levels="1" name="Power of Saha">
 		<table name="#mpConsume2">70</table>
 		<table name="#time">1800</table>
-		<set name="reuseDelay" val="2000"/>
+		<set name="reuseDelay" val="4000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
@@ -237,7 +237,7 @@
 	<skill id="11821" levels="1" name="Critical of Saha">
 		<table name="#mpConsume2">70</table>
 		<table name="#time">1800</table>
-		<set name="reuseDelay" val="2000"/>
+		<set name="reuseDelay" val="4000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
@@ -262,7 +262,7 @@
 	<skill id="11822" levels="1" name="Force of Saha">
 		<table name="#mpConsume2">70</table>
 		<table name="#time">1800</table>
-		<set name="reuseDelay" val="2000"/>
+		<set name="reuseDelay" val="4000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
@@ -285,7 +285,7 @@
 	<skill id="11823" levels="1" name="Speed of Saha">
 		<table name="#mpConsume2">70</table>
 		<table name="#time">1800</table>
-		<set name="reuseDelay" val="2000"/>
+		<set name="reuseDelay" val="4000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
@@ -310,7 +310,7 @@
 	<skill id="11824" levels="1" name="Resistance of Saha">
 		<table name="#mpConsume2">70</table>
 		<table name="#time">1800</table>
-		<set name="reuseDelay" val="2000"/>
+		<set name="reuseDelay" val="4000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
@@ -334,7 +334,7 @@
 	<skill id="11825" levels="1" name="Clarity of Saha">
 		<table name="#mpConsume2">70</table>
 		<table name="#time">1800</table>
-		<set name="reuseDelay" val="2000"/>
+		<set name="reuseDelay" val="4000"/>
 		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
@@ -360,7 +360,7 @@
 		<table name="#mpConsume2">70</table>
 		<table name="#time">3600</table>
 		<set name="reuseDelay" val="3600000"/>
-		<set name="hitTime" val="4000"/>
+		<set name="hitTime" val="700"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
 		<set name="target" val="TARGET_ONE"/>

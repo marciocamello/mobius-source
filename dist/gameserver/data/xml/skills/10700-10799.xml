@@ -45,7 +45,7 @@
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="power" val="#power"/>
 		<set name="target" val="TARGET_AREA"/>
-		<set name="reuseDelay" val="10000"/>
+		<set name="reuseDelay" val="4699"/>
 		<set name="magicType" val="SPECIAL"/>
 		<set name="isPerm" val="true"/>
 		<set name="hitTime" val="800"/>
@@ -115,7 +115,7 @@
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="0"/>
 		<set name="mpConsume1" val="40"/>
-		<set name="castRange" val="600"/>
+		<set name="castRange" val="30"/>
 		<set name="power" val="15803"/>
 		<set name="magicLevel" val="85"/>
 		<set name="coolTime" val="1500"/>
@@ -278,7 +278,7 @@
 			<using kind="Bow,Crossbow"/>
 		</cond>
 		<for>
-			<effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="stance" time="5" val="0.2">
+			<effect count="360" name="LDManaDamOverTime" stackOrder="1" stackType="stance" time="5" val="0.2">
 				<mul order="0x30" stat="cAtk" val="#powIncrease"/>
 				<mul order="0x30" stat="pAtk" val="#powIncrease"/>
 				<mul order="0x30" stat="skillPower" val="#powIncrease"/>
@@ -308,7 +308,7 @@
 			<using kind="Bow,Crossbow"/>
 		</cond>
 		<for>
-			<effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="stance" time="5" val="0.2">
+			<effect count="360" name="LDManaDamOverTime" stackOrder="1" stackType="stance" time="5" val="0.2">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
 				<add order="0x40" stat="runSpd" val="#Spd"/>
 				<mul order="0x30" stat="pReuse" val="#reuse"/>
@@ -337,7 +337,7 @@
 			<using kind="Bow,Crossbow"/>
 		</cond>
 		<for>
-			<effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="stance" time="5" val="0.2">
+			<effect count="360" name="LDManaDamOverTime" stackOrder="1" stackType="stance" time="5" val="0.2">
 				<add order="0x40" stat="accCombat" val="#accCombat"/>
 				<add order="0x40" stat="pAtkRange" val="#Range"/>
 				<mul order="0x30" stat="rCrit" val="#rCrit"/>
@@ -417,7 +417,7 @@
 		<table name="#mpConsume2">66 68 70 72 74 76 78 80</table>
 		<table name="#powerPvP">0</table>
 		<set name="powerPvP" val="#powerPvP"/>
-		<set name="reuseDelay" val="5000"/>
+		<set name="reuseDelay" val="6000"/>
 		<set name="hitTime" val="1200"/>
 		<set name="castRange" val="40"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -560,9 +560,10 @@
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="relationSkillsId" val="627;343;"/>
 		<set name="criticalRate" val="10"/>
+		<set name="lethal1" val="60"/>
 		<set name="elementPower" val="#elementPower"/>
 		<set name="element" val="#element"/>
-		<set name="activateRate" val="60"/>
+		<set name="activateRate" val="80"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="overHit" val="true"/>
@@ -638,22 +639,18 @@
 		<for>
 			<sub order="0x40" stat="critDamRcpt" val="100"/>
 		</for>
-		<set name="castRange" val="600"/>
 	</skill>
 	<skill id="10767" levels="1" name="Half-kill">
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for/>
-		<set name="castRange" val="1100"/>
 	</skill>
 	<skill id="10768" levels="1" name="Blink">
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for/>
-		<set name="hitTime" val="300"/>
-		<set name="reuseDelay" val="15000"/>
 	</skill>
 	<skill id="10769" levels="5" name="Impact Shot">
 		<table name="#magicLevel">85 86 87 88 89</table>
@@ -874,7 +871,7 @@
 		<set name="powerPvP" val="#powerPvP"/>
 		<set name="reuseDelay" val="15000"/>
 		<set name="relationSkillsId" val="223;508;24;"/>
-		<set name="hitTime" val="2900"/>
+		<set name="hitTime" val="2200"/>
 		<set name="castRange" val="1100"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="elementPower" val="#elementPower"/>
@@ -959,7 +956,7 @@
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="#reuseDelay"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="hitTime" val="1000"/>
+		<set name="hitTime" val="2000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -1067,7 +1064,7 @@
 		<table name="#stunPow">0</table>
 		<table name="#rootPow">0</table>
 		<set name="reuseDelay" val="120000"/>
-		<set name="hitTime" val="800"/>
+		<set name="hitTime" val="1500"/>
 		<set name="castRange" val="800"/>
 		<set name="relationSkillsId" val="354;99;490;"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -1361,7 +1358,7 @@
 	<skill id="10788" levels="1" name="Remote Control">
 		<set name="mpConsume" val="10"/>
 		<set name="reuseDelay" val="10000"/>
-		<set name="hitTime" val="800"/>
+		<set name="hitTime" val="1000"/>
 		<set name="castRange" val="900"/>
 		<set name="magicLevel" val="91"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -1442,7 +1439,7 @@
 		<set name="reuseDelay" val="5000"/>
 		<set name="relationSkillsId" val="939"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="hitTime" val="800"/>
+		<set name="hitTime" val="1200"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="target" val="TARGET_AURA"/>

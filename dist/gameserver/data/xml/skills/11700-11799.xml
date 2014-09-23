@@ -197,18 +197,25 @@
 		</enchant1>
 	</skill>
 	<skill id="11758" levels="1" name="Celestial Protection">
-		<set name="reuseDelay" val="120000"/>
-		<set name="hitTime" val="500"/>
-		<set name="magicLevel" val="85"/>
 		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.skill1418"/>
+		<set name="reuseDelay" val="120000"/>
+		<set name="magicLevel" val="85"/>
+		<set name="castRange" val="400"/>
+		<set name="castTime" val="400"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume1" val="12"/>
+		<set name="mpConsume2" val="48"/>
 		<set name="target" val="TARGET_PARTY_ONE"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="castRange" val="600"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="relationSkillsId" val="1418;"/>
-		<set name="delayedEffect" val="11833"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="delayedEffect" val="11834"/>
+		<cond msgId="113" addName="1">
+			<target pvp="true"/>
+		</cond>
 		<for>
-			<effect abnormal="invul2" count="1" name="Invulnerable" stackOrder="-1" stackType="Invulnerable" time="10" val="0"/>
+			<effect abnormal="invul2" count="1" name="Invulnerable" stackOrder="-1" stackType="Invulnerable" time="10" val="0" cancelOnAction="false"/>
 		</for>
 	</skill>
 	<skill id="11759" levels="1" name="Celestial Party Protection">
@@ -376,7 +383,7 @@
 		<for>
 			<effect count="10" name="HealOverTime" time="1" val="#regHp"/>
 			<effect count="10" name="ManaHealOverTime" time="1" val="#regMp"/>
-			<effect abnormal="dancestun" count="1" name="Petrification" stackOrder="-1" stackType="paralyze" time="#time" val="0"/>
+			<effect abnormal="invul1" count="1" name="Petrification" stackOrder="-1" stackType="paralyze" time="#time" val="0"/>
 		</for>
 	</skill>
 	<skill id="11766" levels="8" name="Dark Blast">
@@ -385,9 +392,9 @@
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
 		<table name="#powerPvP">0</table>
-		<set name="reuseDelay" val="2400"/>
-		<set name="coolTime" val="500"/>
-		<set name="hitTime" val="3500"/>
+		<set name="reuseDelay" val="2000"/>
+		<set name="castRange" val="900"/>
+		<set name="castTime" val="2280"/>
 		<set name="powerPvP" val="#powerPvP"/>
 		<set name="elementPower" val="#elementPower"/>
 		<set name="element" val="#element"/>
@@ -424,7 +431,6 @@
 			<table name="#power">156 158 159 161 163 165 167 169 170 172</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant5>
-		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="11767" levels="8" name="Mass Dark Veil">
 		<table name="#magicLevel">85 86 87 88 89 90 91 92</table>
@@ -432,9 +438,9 @@
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
 		<table name="#powerPvP">0</table>
-		<set name="reuseDelay" val="15000"/>
-		<set name="coolTime" val="500"/>
-		<set name="hitTime" val="5500"/>
+		<set name="reuseDelay" val="6799"/>
+		<set name="castRange" val="900"/>
+		<set name="castTime" val="3780"/>
 		<set name="powerPvP" val="#powerPvP"/>
 		<set name="elementPower" val="#elementPower"/>
 		<set name="element" val="#element"/>
@@ -471,13 +477,12 @@
 			<table name="#power">143 144 146 148 150 151 153 155 156 158</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant5>
-		<set name="castRange" val="600"/>
 	</skill>
 	<skill id="11768" levels="1" name="Rebirth">
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="600000"/>
 		<set name="coolTime" val="200"/>
-		<set name="hitTime" val="3000"/>
+		<set name="hitTime" val="300"/>
 		<set name="magicLevel" val="85"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="13"/>
@@ -504,15 +509,16 @@
 	<skill id="11769" levels="6" name="Dark Backfire">
 		<table name="#mpConsum">1.5 2.0 2.5 3.0 3.5 4.0</table>
 		<table name="#magicLevel">85 87 90 93 96 99</table>
-		<table name="#activateRate">50</table>
+		<table name="#activateRate">80</table>
 		<table name="#patkspd">.8</table>
 		<table name="#matkspd">.8</table>
-		<set name="reuseDelay" val="30000"/>
-		<set name="coolTime" val="500"/>
-		<set name="hitTime" val="1500"/>
+		<set name="time" val="100"/>
+		<set name="reuseDelay" val="30999"/>
+		<set name="castRange" val="600"/>
+		<set name="castTime" val="1500"/>
 		<set name="levelModifier" val="2"/>
 		<set name="magicType" val="MAGIC"/>
-		<set name="activateRate" val="#activateRate"/>
+		<set name="activateRate" val="80"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="DEBUFF"/>
@@ -541,7 +547,6 @@
 				<mul order="0x30" stat="mpConsumePhysical" val="#mpConsum"/>
 			</effect>
 		</for>
-		<set name="castRange" val="600"/>
 	</skill>
 	<skill id="11770" levels="1" name="Dissolve">
 		<table name="#mpConsume2">50</table>
@@ -693,13 +698,14 @@
 		<table name="#activateRate">80</table>
 		<table name="#mpConsume2">40</table>
 		<table name="#time">60</table>
+		<set name="time" val="60"/>
 		<set name="reuseDelay" val="4000"/>
 		<set name="coolTime" val="800"/>
 		<set name="hitTime" val="1500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="activateRate" val="#activateRate"/>
+		<set name="activateRate" val="80"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="power" val="#abnormal"/>
 		<set name="skillType" val="DEBUFF"/>

@@ -557,6 +557,20 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_fruit_juice_glass_bottle_i10"/>
 	</etcitem>
+	<armor id="36254" name="Queen Ant's Soul Ring">
+		<set name="crystal_type" value="R"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_FINGER"/>
+			<slot id="LEFT_FINGER"/>
+		</equip>
+		<set name="ex_type" value="RING"/>
+		<skills>
+			<skill id="13441" level="1"/>
+		</skills>
+	</armor>
 	<etcitem id="36256" name="Transformation Scroll: Anakim">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
@@ -799,7 +813,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.cursed_free_r99"/>
 	</etcitem>
-		<etcitem id="36289" name="Unbind Scroll: Weapon (R95-grade)">
+	<etcitem id="36289" name="Unbind Scroll: Weapon (R95-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

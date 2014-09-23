@@ -30,9 +30,11 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<effect name="Buff" time="20" val="0">
-			<mul order="0x30" stat="pDef" val="5000"/>
-		</effect>
+		<for>
+			<effect count="1" name="Buff" time="20" val="0">
+				<add order="0x40" stat="pDef" val="5000"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="11226" levels="4" name="Superior Wizardry">
 		<table name="#mAtk">1.05 1.06 1.07 1.10</table>
@@ -50,10 +52,10 @@
 	<skill id="11241" levels="1" name="Shadow Snare">
 		<table name="#activateRate">100</table>
 		<set name="coolTime" val="733"/>
-		<set name="reuseDelay" val="15000"/>
+		<set name="reuseDelay" val="17000"/>
 		<set name="power" val="3925"/>
 		<set name="magicLevel" val="80"/>
-		<set name="hitTime" val="1000"/>
+		<set name="hitTime" val="1067"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="322"/>
 		<set name="target" val="TARGET_AREA"/>
@@ -62,7 +64,6 @@
 		<set name="skillType" val="DEBUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
-		<set name="castRange" val="900"/>
 	</skill>
 	<skill id="11242" levels="1" name="Shadow Snare Zone">
 		<table name="#power">126 130 140 146</table>
@@ -109,10 +110,10 @@
 		<for/>
 	</skill>
 	<skill id="11247" levels="1" name="">
-		<set name="reuseDelay" val="3000"/>
-		<set name="hitTime" val="3380"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="2000"/>
 		<set name="mpConsume2" val="40"/>
-		<set name="castRange" val="900"/>
+		<set name="castRange" val="700"/>
 		<set name="power" val="230"/>
 		<set name="magicLevel" val="85"/>
 		<set name="coolTime" val="300"/>
@@ -150,10 +151,10 @@
 		</for>
 	</skill>
 	<skill id="11249" levels="1" name="">
-		<set name="reuseDelay" val="3000"/>
-		<set name="hitTime" val="3700"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="2000"/>
 		<set name="mpConsume2" val="40"/>
-		<set name="castRange" val="900"/>
+		<set name="castRange" val="700"/>
 		<set name="power" val="230"/>
 		<set name="magicLevel" val="85"/>
 		<set name="coolTime" val="300"/>
@@ -359,8 +360,8 @@
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
 		<table name="#mpConsume2">54 58 62 66 70 74 78 82</table>
 		<table name="#activateRate">80 81 82 83 84 85 86 87</table>
-		<set name="activateRate" val="#activateRate"/>
-		<set name="reuseDelay" val="30000"/>
+		<set name="activateRate" val="80"/>
+		<set name="reuseDelay" val="9699"/>
 		<set name="hitTime" val="1200"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
@@ -404,9 +405,9 @@
 		<table name="#magicLevel">85 86 87 88 89</table>
 		<table name="#mpConsume2">65</table>
 		<table name="#activateRate">80 81 82 83 84</table>
-		<set name="activateRate" val="#activateRate"/>
-		<set name="reuseDelay" val="3000"/>
-		<set name="hitTime" val="1490"/>
+		<set name="activateRate" val="80"/>
+		<set name="reuseDelay" val="9699"/>
+		<set name="hitTime" val="1200"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="relationSkillsId" val="1168;"/>
 		<set name="castRange" val="600"/>
@@ -440,7 +441,7 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant4>
 		<for>
-			<effect count="4" name="DamOverTime" time="1" val="#DOT" abnormal="bleeding"/>
+			<effect count="10" name="DamOverTime" time="1" val="#DOT" abnormal="bleeding"/>
 		</for>
 	</skill>
 	<skill id="11261" levels="6" name="Mark of Plague">
@@ -448,8 +449,8 @@
 		<table name="#magicLevel">85 86 87 88 89 90</table>
 		<table name="#mpConsume2">65</table>
 		<table name="#activateRate">80 81 82 83 84 85</table>
-		<set name="activateRate" val="#activateRate"/>
-		<set name="reuseDelay" val="3000"/>
+		<set name="activateRate" val="80"/>
+		<set name="reuseDelay" val="9699"/>
 		<set name="hitTime" val="1500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
@@ -482,7 +483,7 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant4>
 		<for>
-			<effect count="15" name="DamOverTime" time="1" val="#DOT" stackOrder="7" abnormal="poison"/>
+			<effect count="10" name="DamOverTime" time="1" val="#DOT" stackOrder="7" abnormal="poison"/>
 		</for>
 	</skill>
 	<skill id="11262" levels="6" name="Mark of Trick">
@@ -490,11 +491,12 @@
 		<table name="#magicLevel">85 86 87 88 89 90</table>
 		<table name="#mpConsume2">65</table>
 		<table name="#activateRate">80 81 82 83 84 85</table>
-		<set name="activateRate" val="#activateRate"/>
-		<set name="reuseDelay" val="3000"/>
-		<set name="hitTime" val="1500"/>
+		<set name="activateRate" val="80"/>
+		<set name="reuseDelay" val="6699"/>
+		<set name="time" val="90"/>
+		<set name="castTime" val="1500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
-		<set name="castRange" val="600"/>
+		<set name="castRange" val="900"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="mpInitialConsume" val="5"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -523,7 +525,7 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant4>
 		<for>
-			<effect count="5" name="DamOverTime" time="1" val="#DOT" stackOrder="7" abnormal="poison"/>
+			<effect count="10" name="DamOverTime" time="1" val="#DOT" stackOrder="7" abnormal="poison"/>
 			<effect name="Mute" time="5" val="0" stackOrder="1" stackType="silence"/>
 		</for>
 	</skill>
@@ -536,7 +538,7 @@
 		<table name="#element">none</table>
 		<set name="powerPvP" val="#powerPvP"/>
 		<set name="reuseDelay" val="30000"/>
-		<set name="hitTime" val="2560"/>
+		<set name="hitTime" val="1500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
 		<set name="magicLevel" val="#magicLevel"/>
@@ -642,7 +644,6 @@
 		<set name="skillRadius" val="-2"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 		<for/>
-		<set name="castRange" val="-2"/>
 	</skill>
 	<skill id="11266" levels="1" name="Summon Death Gate">
 		<set name="lifeTime" val="30"/>
@@ -687,7 +688,7 @@
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="5000"/>
-		<set name="hitTime" val="1500"/>
+		<set name="hitTime" val="6000"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="15"/>
 		<set name="mpConsume2" val="58"/>
@@ -860,7 +861,7 @@
 		<table name="#reuseDelay">300000</table>
 		<table name="#healhp">0</table>
 		<table name="#healmp">0</table>
-		<set name="hitTime" val="1500"/>
+		<set name="hitTime" val="1700"/>
 		<set name="reuseDelay" val="#reuseDelay"/>
 		<set name="magicLvl" val="#magicLevel"/>
 		<set name="mpConsume1" val="8"/>
@@ -914,7 +915,7 @@
 		<table name="#pdef">1</table>
 		<table name="#mdef">1</table>
 		<set name="reuseDelay" val="300000"/>
-		<set name="hitTime" val="10000"/>
+		<set name="castTime" val="10000"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="900"/>
 		<set name="magicLevel" val="#magicLevel"/>
@@ -1031,7 +1032,7 @@
 		<table name="#mpConsume2">111 114 118 122 126 130 134</table>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="reuseDelay" val="7000"/>
-		<set name="hitTime" val="660"/>
+		<set name="hitTime" val="700"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="coolTime" val="500"/>
 		<set name="flyType" val="DUMMY"/>
@@ -1067,7 +1068,7 @@
 		<set name="reuseDelay" val="5000"/>
 		<set name="power" val="#power"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="castRange" val="900"/>
+		<set name="castRange" val="500"/>
 		<set name="hitTime" val="2560"/>
 		<set name="coolTime" val="500"/>
 		<set name="hitCancelTime" val="500"/>
@@ -1233,7 +1234,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isOffensive" val="false"/>
 		<set name="effectPoint" val="408"/>
-		<set name="castRange" val="600"/>
+		<set name="castRange" val="1000"/>
 		<set name="hitTime" val="3000"/>
 		<set name="useSS" val="false"/>
 		<set name="isHideUseMessage" val="true"/>
@@ -1253,7 +1254,7 @@
 		<set name="skillType" val="DEBUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isOffensive" val="true"/>
-		<set name="castRange" val="600"/>
+		<set name="castRange" val="1000"/>
 		<set name="hitTime" val="3000"/>
 		<set name="useSS" val="false"/>
 		<set name="isHideUseMessage" val="true"/>
@@ -1274,7 +1275,7 @@
 		<set name="skillType" val="ROOT"/>
 		<set name="trait" val="HOLD"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="600"/>
+		<set name="castRange" val="1000"/>
 		<set name="hitTime" val="3000"/>
 		<set name="useSS" val="false"/>
 		<set name="isHideUseMessage" val="true"/>
@@ -1388,7 +1389,7 @@
 		<set name="reuseDelay" val="5000"/>
 		<set name="hitTime" val="3360"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
-		<set name="castRange" val="900"/>
+		<set name="castRange" val="600"/>
 		<set name="relationSkillsId" val="1148;1530;"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="effectPoint" val="#effectPoint"/>
@@ -1459,7 +1460,7 @@
 		<set name="skillRadius" val="1000"/>
 		<set name="effectPoint" val="398"/>
 		<set name="reuseDelay" val="30000"/>
-		<set name="hitTime" val="5000"/>
+		<set name="hitTime" val="5200"/>
 		<set name="magicLvl" val="91"/>
 		<set name="skillType" val="BALANCE"/>
 		<set name="magicType" val="MAGIC"/>
@@ -1468,6 +1469,5 @@
 		<enchant1 levels="10" name="Cost">
 			<table name="#mpConsume2">60 57 55 52 50 47 45 42 40 37</table>
 		</enchant1>
-		<set name="castRange" val="900"/>
 	</skill>
 </list>

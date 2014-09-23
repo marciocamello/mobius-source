@@ -155,9 +155,14 @@
 		<table name="#mpConsume2">70</table>
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
+		<set name="castRange" val="600"/>
+		<set name="reuseDelay" val="15999"/>
+		<set name="effectRange" val="600"/>
+		<set name="coolTime" val="1100"/>
 		<set name="element" val="#element"/>
 		<set name="elementPower" val="#elementPower"/>
 		<set name="flyType" val="CHARGE"/>
+		<set name="flyRadius" val="600"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="nextAction" val="attack"/>
 		<set name="relationSkillsId" val="939;1244;105;1245;1484;102;1209;1564;122;98;6921;4481;6873;8573"/>
@@ -171,9 +176,6 @@
 		<for>
 			<effect name="Stun" time="1" val="0" stackOrder="1" stackType="stun"/>
 		</for>
-		<set name="castRange" val="600"/>
-		<set name="hitTime" val="800"/>
-		<set name="reuseDelay" val="10000"/>
 	</skill>
 	<skill id="11509" levels="8" name="Crippling Attack">
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -181,7 +183,9 @@
 		<table name="#powerPvP">0</table>
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
-		<set name="power" val="#power"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="7000"/>
+		<set name="castRange" val="40"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="elementPower" val="#elementPower"/>
 		<set name="element" val="#element"/>
@@ -247,7 +251,7 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant9>
 		<for>
-			<effect name="Debuff" time="20" val="0"	stackType="iss_debuff_crippling" stackOrder="1">
+			<effect name="Debuff" time="22" val="1"	stackType="iss_debuff_crippling" stackOrder="1">
 				<mul order="0x30" stat="pDef" val="0.7"/>
 				<mul order="0x30" stat="mDef" val="0.7"/>
 				<sub order="0x40" stat="rEvas" val="10"/>
@@ -256,9 +260,6 @@
 				</sub>
 			</effect>
 		</for>
-		<set name="castRange" val="40"/>
-		<set name="hitTime" val="910"/>
-		<set name="reuseDelay" val="7000"/>
 	</skill>
 	<skill id="11510" levels="8" name="Shadow Blade">
 		<table name="#power">9133 9769 10404 11040 11675 12311 12946 13582</table>
@@ -266,6 +267,9 @@
 		<table name="#powerPvP">0</table>
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="7000"/>
+		<set name="castRange" val="40"/>
 		<set name="power" val="#power"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="elementPower" val="#elementPower"/>
@@ -339,9 +343,6 @@
 				</sub>
 			</effect>
 		</for>
-		<set name="castRange" val="40"/>
-		<set name="hitTime" val="1010"/>
-		<set name="reuseDelay" val="7000"/>
 	</skill>
 	<skill id="11511" levels="8" name="Death Strike">
 		<table name="#power">14326 14819 15803 16788 17773 18758 19743 20727</table>
@@ -351,6 +352,9 @@
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
 		<set name="effectPoint" val="#effectPoint"/>
+		<set name="hitTime" val="1410"/>
+		<set name="reuseDelay" val="7000"/>
+		<set name="castRange" val="40"/>
 		<set name="power" val="#power"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="elementPower" val="#elementPower"/>
@@ -417,9 +421,6 @@
 			<table name="#power">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant9>
-		<set name="castRange" val="40"/>
-		<set name="hitTime" val="1410"/>
-		<set name="reuseDelay" val="7000"/>
 	</skill>
 	<skill id="11513" levels="8" name="Mass Crippling Attack">
 		<table name="#power">10263 10616 11322 12027 12733 13438 14144 14849</table>
@@ -427,6 +428,9 @@
 		<table name="#powerPvP">0</table>
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
+		<set name="hitTime" val="1210"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="castRange" val="40"/>
 		<set name="power" val="#power"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="elementPower" val="#elementPower"/>
@@ -502,9 +506,6 @@
 				</sub>
 			</effect>
 		</for>
-		<set name="castRange" val="40"/>
-		<set name="hitTime" val="1210"/>
-		<set name="reuseDelay" val="10000"/>
 	</skill>
 	<skill id="11514" levels="8" name="Mass Shadow Blade">
 		<table name="#power">11722 12525 13327 14130 14933 15736 16539 17342</table>
@@ -513,6 +514,9 @@
 		<table name="#powerPvP">0</table>
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
+		<set name="hitTime" val="1410"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="castRange" val="40"/>
 		<set name="power" val="#power"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="elementPower" val="#elementPower"/>
@@ -588,9 +592,6 @@
 				</sub>
 			</effect>
 		</for>
-		<set name="castRange" val="40"/>
-		<set name="hitTime" val="1410"/>
-		<set name="reuseDelay" val="10000"/>
 	</skill>
 	<skill id="11515" levels="1" name="Confusion Bomber">
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -676,6 +677,11 @@
 				<mul order="0x30" stat="mDef" val="1.2"/>
 				<mul order="0x30" stat="runSpd" val="#spd"/>
 				<add order="0x40" stat="debuffResist" val="10"/>
+				<triggers>
+					<trigger id="6059" level="1" type="RECEIVE_DAMAGE" chance="80">
+						<player damage="200;0"/>
+					</trigger>
+				</triggers>
 			</effect>
 		</for>
 	</skill>
@@ -1005,7 +1011,7 @@
 		<set name="magicLevel" val="97"/>
 		<table name="#mpConsume2">170</table>
 		<set name="reuseDelay" val="600000"/>
-		<set name="hitTime" val="700"/>
+		<set name="hitTime" val="3000"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="target" val="TARGET_PARTY"/>
 		<set name="skillRadius" val="1000"/>
@@ -1162,6 +1168,9 @@
 	<skill id="11539" levels="8" name="Petrify">
 		<set name="magicLevel" val="85"/>
 		<set name="power" val="300"/>
+		<set name="reuseDelay" val="120000"/>
+		<set name="hitTime" val="1700"/>
+		<set name="castRange" val="900"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="skillType" val="PARALYZE"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -1174,8 +1183,6 @@
 				<set order="0x80" stat="regHp" val="0"/>
 			</effect>
 		</for>
-		<set name="castRange" val="900"/>
-		<set name="hitTime" val="1700"/>
 	</skill>
 	<skill id="11540" levels="4" name="Quick Escape">
 		<table name="#mDef">3000 3500 4000 4500</table>
@@ -1685,7 +1692,7 @@
 		<table name="#mpConsume2">70</table>
 		<table name="#time">120</table>
 		<set name="reuseDelay" val="3000"/>
-		<set name="hitTime" val="2500"/>
+		<set name="hitTime" val="3500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_PARTY"/>
@@ -2084,11 +2091,6 @@
 		<set name="hitCancelTime" val="500"/>
 		<set name="reuseDelay" val="2000"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
-		<triggers>
-			<trigger id="11569" level="1" type="RECEIVE_DAMAGE" chance="25">
-				<player damage="300;0"/>
-			</trigger>
-		</triggers>
 		<for>
 			<effect count="1" name="Buff" time="#time" val="0">
 				<mul order="0x30" stat="maxMp" val="1.2"/>
@@ -2103,6 +2105,11 @@
 				<mul order="0x30" stat="critDamRcpt" val="1.3"/>
 				<mul order="0x30" stat="runSpd" val="#runSpd"/>
 				<mul order="0x30" stat="cAtk" val="1.2"/>
+				<triggers>
+					<trigger id="6059" level="1" type="RECEIVE_DAMAGE" chance="80">
+						<player damage="200;0"/>
+					</trigger>
+				</triggers>
 			</effect>
 		</for>
 	</skill>

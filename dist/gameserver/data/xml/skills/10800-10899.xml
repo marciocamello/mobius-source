@@ -26,7 +26,7 @@
 		<table name="#mpConsume2">20 22 24 25 28</table>
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="500"/>
-		<set name="castRange" val="700"/>
+		<set name="castRange" val="900"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="relationSkillsId" val="522;122;"/>
 		<set name="magicLvl" val="#magicLevel"/>
@@ -164,6 +164,7 @@
 		<set name="hitTime" val="500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="magicLevel" val="#magicLevel"/>
+		<set name="isAwakeningToggle" val="true"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CONT"/>
 		<set name="operateType" val="OP_TOGGLE"/>
@@ -171,7 +172,7 @@
 			<using kind="Bow,Crossbow"/>
 		</cond>
 		<for>
-			<effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="stance" time="5" val="0.2">
+			<effect count="360" name="LDManaDamOverTime" stackOrder="1" stackType="stance" time="5" val="0.2">
 				<mul order="0x30" stat="pAtk" val="#pAtk"/>
 				<mul order="0x30" stat="pDef" val="#pDef"/>
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd"/>
@@ -210,7 +211,7 @@
 			<using kind="Bow,Crossbow"/>
 		</cond>
 		<for>
-			<effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="stance" time="5" val="0.2">
+			<effect count="360" name="LDManaDamOverTime" stackOrder="1" stackType="stance" time="5" val="0.2">
 				<mul order="0x30" stat="pAtk" val="#pAtk"/>
 				<div order="0x30" stat="pReuse" val="#pReuse"/>
 			</effect>
