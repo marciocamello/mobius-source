@@ -421,10 +421,8 @@
 		<table name="#element">none</table>
 		<table name="#elementPower">0</table>
 		<set name="weaponsAllowed" val="2"/>
-		<set name="flyRadius" val="50"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
-		<set name="flyType" val="DUMMY"/>
 		<set name="power" val="#power"/>
 		<set name="element" val="#element"/>
 		<set name="elementPower" val="#elementPower"/>
@@ -503,10 +501,8 @@
 		<table name="#element">none</table>
 		<table name="#elementPower">0</table>
 		<set name="weaponsAllowed" val="2"/>
-		<set name="flyRadius" val="50"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="flyType" val="DUMMY"/>
 		<set name="power" val="#power"/>
 		<set name="element" val="#element"/>
 		<set name="elementPower" val="#elementPower"/>
@@ -807,6 +803,7 @@
 		<table name="#ref">0.60 0.40 0.20 1</table>
 		<table name="#time">30</table>
 		<table name="#speed">0</table>
+		<table name="#rd">300 200 150 100</table>
 		<table name="#stunPower">0</table>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="skillType" val="BUFF"/>
@@ -843,11 +840,13 @@
 				<add order="0x40" stat="runSpd" val="#speed"/>
 				<add order="0x40" stat="pDef" val="#pDef"/>
 				<add order="0x40" stat="mDef" val="#pDef"/>
-				<mul order="0x30" stat="reflectDam" val="#ref"/>
-				<mul order="0x40" stat="cancelResist" val="1.8"/>
-				<set order="0x30" stat="receiveDamageLimit" val="300">
-					<player damage="300;0"/>
-				</set>
+				<mul order="0x30" stat="reflectDam" val="1.8"/>
+				<add order="0x40" stat="reflectPhysicSkill" val="100"/>
+				<add order="0x40" stat="reflectMagicSkill" val="100"/>
+				<add order="0x40" stat="reflectMSkillDam" val="100"/>
+				<add order="0x40" stat="reflectPSkillDam" val="100"/>
+				<add order="0x40" stat="cancelResist" val="80"/>
+				<set order="0x30" stat="receiveDamageLimit" val="100"/>
 			</effect>
 		</for>
 	</skill>
@@ -1643,7 +1642,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="cancelable" val="false"/>
 		<set name="isCubic" val="true"/>
-		<set name="relationSkillsId" val="97;"/>
+		<set name="relationSkillsId" val="97;779;780;"/>
 		<for>
 			<effect name="Cubic" stackType="knight_cubic" stackOrder="1" time="900">
 				<def name="cubicId" val="15"/>
@@ -2117,7 +2116,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<mul order="0x30" stat="pDef" val="#pDef"/>
-			<mul order="0x30" stat="mDef" val="#pDef"/>
+			<mul order="0x30" stat="mDef" val="#mDef"/>
 		</for>
 		<triggers>
 			<trigger id="10067" level="1" type="RECEIVE_DAMAGE" chance="30">
@@ -2136,8 +2135,10 @@
 		<set name="saveVs" val="STR"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
-			<mul order="0x30" stat="pDef" val="#pDef"/>
-			<mul order="0x30" stat="mDef" val="#pDef"/>
+			<effect count="1" name="Buff" time="10" val="0" stackOrder="1" stackType="Soul_TANK_Human">
+				<mul order="0x30" stat="pDef" val="#pDef"/>
+				<mul order="0x30" stat="mDef" val="#mDef"/>
+			</effect>
 		</for>
 	</skill>
 	<skill id="10068" levels="4" name="Summon Blood Panther">
@@ -2193,15 +2194,12 @@
 		<table name="#magicLevel">85 90 95 99</table>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="icon" val="icon.skill10066"/>
-		<set name="hitTime" val="1000"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="reuseDelay" val="1000"/>
 		<set name="saveVs" val="STR"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<mul order="0x30" stat="pDef" val="#pDef"/>
-			<mul order="0x30" stat="mDef" val="#pDef"/>
+			<mul order="0x30" stat="mDef" val="#mDef"/>
 		</for>
 		<triggers>
 			<trigger id="10072" level="1" type="RECEIVE_DAMAGE" chance="30">
@@ -2219,9 +2217,20 @@
 		<set name="reuseDelay" val="1000"/>
 		<set name="isTrigger" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<table name="#pDef">1.02 1.03 1.04 1.06</table>
+		<table name="#mDef">1.01 1.02 1.03 1.04</table>
+		<table name="#effect">1.01 1.02 1.03 1.04</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
-			<mul order="0x30" stat="pDef" val="#pDef"/>
-			<mul order="0x30" stat="mDef" val="#mDef"/>
+			<effect count="1" name="Buff" time="10" val="0" stackOrder="1" stackType="Soul_TANK_Elf">
+				<mul order="0x30" stat="pDef" val="#pDef"/>
+				<mul order="0x30" stat="mDef" val="#mDef"/>
+				<mul order="0x30" stat="hpEff" val="#effect"/>
+			</effect>
 		</for>
 	</skill>
 	<skill id="10073" levels="4" name="Summon Buff Cubic">
@@ -2312,11 +2321,11 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<mul order="0x30" stat="pDef" val="#pDef"/>
-			<mul order="0x30" stat="mDef" val="#pDef"/>
+			<mul order="0x30" stat="mDef" val="#mDef"/>
 		</for>
 		<triggers>
-			<trigger id="10078" level="#LVL" type="RECEIVE_DAMAGE" chance="100">
-				<player damage="1;0"/>
+			<trigger id="10078" level="1" type="RECEIVE_DAMAGE" chance="30">
+				<player damage="50;0"/>
 			</trigger>
 		</triggers>
 	</skill>
@@ -2331,8 +2340,10 @@
 		<set name="isTrigger" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
-			<mul order="0x30" stat="pDef" val="#pDef"/>
-			<mul order="0x30" stat="mDef" val="#pDef"/>
+			<effect count="1" name="Buff" time="10" val="0" stackOrder="1" stackType="Soul_TANK_Dark_Elf">
+				<mul order="0x30" stat="pDef" val="#pDef"/>
+				<mul order="0x30" stat="mDef" val="#mDef"/>
+			</effect>
 		</for>
 	</skill>
 	<skill id="10079" levels="4" name="Summon Phantom Cubic">
@@ -2370,7 +2381,7 @@
 		<set name="reuseDelay" val="5000"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="hitTime" val="6000"/>
-		<set name="hitCancelTime" val="500"/>
+		<set name="hitCancelTime" val="200"/>
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2387,21 +2398,22 @@
 	</skill>
 	<skill id="10081" levels="4" name="Lightning Root">
 		<table name="#magicLevel">85 90 95 99</table>
-		<table name="#magic">15574 18556 20701 22848</table>
+		<table name="#mpConsume2">87 95 103 110</table>
+		<table name="#dmg">15574 18556 20701 22848</table>
+		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="magicType" val="MAGIC"/>
-		<set name="icon" val="icon.skill1170"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="useSS" val="false"/>
-		<set name="power" val="#magic"/>
+		<set name="power" val="#dmg"/>
+		<set name="activateRate" val="35"/>
 		<set name="target" val="TARGET_ONE"/>
-		<set name="skillType" val="PDAM"/>
+		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="delayedEffect" val="6125"/>
-		<set name="castRange" val="1000"/>
-		<set name="hitTime" val="3000"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="1500"/>
 		<set name="trait" val="PARALYZE"/>
 		<set name="saveVs" val="STR"/>
-		<set name="reuseDelay" val="5000"/>
+		<set name="reuseDelay" val="10000"/>
 		<for>
 			<effect count="1" name="Paralyze" time="5" val="0"/>
 		</for>
@@ -2411,6 +2423,7 @@
 		<table name="#p">0.95 0.93 0.90 0.95</table>
 		<table name="#m">0.95 0.93 0.90 0.95</table>
 		<set name="levelModifier" val="1"/>
+		<set name="reuseDelay" val="10000"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1170"/>
 		<set name="magicLevel" val="#magicLevel"/>
@@ -2419,9 +2432,7 @@
 		<set name="skillType" val="DEBUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="delayedEffect" val="6125"/>
-		<set name="isHideUseMessage" val="true"/>
-		<set name="castRange" val="1000"/>
-		<set name="hitTime" val="3000"/>
+		<set name="isHideUseMessage" val="True"/>
 		<for>
 			<effect count="1" name="Debuff" time="5" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="#p"/>
@@ -2434,6 +2445,7 @@
 		<table name="#p">0.95 0.93 0.90 0.95</table>
 		<table name="#m">0.95 0.93 0.90 0.95</table>
 		<set name="levelModifier" val="1"/>
+		<set name="reuseDelay" val="10000"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill1170"/>
 		<set name="magicLevel" val="#magicLevel"/>
@@ -2443,8 +2455,6 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="delayedEffect" val="6125"/>
 		<set name="isHideUseMessage" val="true"/>
-		<set name="castRange" val="1000"/>
-		<set name="hitTime" val="3000"/>
 		<for>
 			<effect count="1" name="Debuff" time="5" val="0">
 				<mul order="0x30" stat="pDef" val="#p"/>
