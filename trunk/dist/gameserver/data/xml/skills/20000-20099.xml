@@ -74,4 +74,17 @@
 			<effect count="1" name="HealCPPercent" time="0" val="15"/>
 		</for>
 	</skill>
+	<skill id="20007" levels="1" name="Block Invincibility">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="-1" stackType="Invulnerable" time="120" val="0">
+				<add order="0x40" stat="runSpd" val="5"/>
+				<mul order="0x30" stat="regHp" val="1.2"/>
+				<mul order="0x30" stat="regMp" val="1.2"/>
+			</effect>
+		</for>
+	</skill>
 </list>
