@@ -4714,6 +4714,7 @@
 		<item id="8518"/>
 		<item id="8519"/>
 		<item id="8520"/>
+		<item id="17600"/>
 	</tradelist>
 	<tradelist npc="-1" shop="9931">
 		<item id="955"/>
@@ -9728,7 +9729,7 @@
 		<item id="16850"/>
 		<item id="16851"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11007"> <!-- Requiem R-Grade Weapons/Shield (Normal) -->
+	<tradelist npc="-1" shop="11007"> <!-- Requiem R-Grade Weapons (Normal) -->
 		<item id="17290"/>
 		<item id="17291"/>
 		<item id="17292"/>
@@ -9743,9 +9744,8 @@
 		<item id="17301"/>
 		<item id="17302"/>
 		<item id="17303"/>
-		<item id="17309"/>	
 	</tradelist>
-	<tradelist npc="-1" shop="11008"> <!-- Requiem R-Grade Weapons/Shield (Blessed) -->
+	<tradelist npc="-1" shop="11008"> <!-- Requiem R-Grade Weapons (Blessed) -->
 		<item id="17967"/>
 		<item id="17968"/>
 		<item id="17969"/>
@@ -9759,10 +9759,9 @@
 		<item id="17977"/>
 		<item id="17978"/>
 		<item id="17979"/>
-		<item id="17980"/>
-		<item id="17986"/>	
+		<item id="17980"/>	
 	</tradelist>
-	<tradelist npc="-1" shop="11009"> <!-- Requiem R-Grade Weapons/Shield (Normal + SA) -->
+	<tradelist npc="-1" shop="11009"> <!-- Requiem R-Grade Weapons (Normal + SA) -->
 		<item id="18578"/>
 		<item id="18579"/>
 		<item id="18580"/>
@@ -9806,7 +9805,7 @@
 		<item id="18618"/>
 		<item id="18619"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11010"> <!-- Requiem R-Grade Weapons/Shield (Blessed + SA) -->
+	<tradelist npc="-1" shop="11010"> <!-- Requiem R-Grade Weapons (Blessed + SA) -->
 		<item id="18662"/>
 		<item id="18663"/>
 		<item id="18664"/>
@@ -9850,7 +9849,7 @@
 		<item id="18702"/>
 		<item id="18703"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11011"> <!-- Requiem R-Grade Weapons/Shield (Blessed + SA +SA) -->
+	<tradelist npc="-1" shop="11011"> <!-- Requiem R-Grade Weapons (Blessed + SA +SA) -->
 		<item id="19980"/>
 		<item id="19981"/>
 		<item id="19982"/>
@@ -9894,7 +9893,7 @@
 		<item id="30020"/>
 		<item id="30021"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11012"> <!-- Apocalypse R-Grade Weapons/Shield (Normal) -->
+	<tradelist npc="-1" shop="11012"> <!-- Apocalypse R-Grade Weapons (Normal) -->
 		<item id="17324"/>
 		<item id="17325"/>
 		<item id="17326"/>
@@ -9909,9 +9908,8 @@
 		<item id="17335"/>
 		<item id="17336"/>
 		<item id="17337"/>
-		<item id="17343"/>	
 	</tradelist>
-	<tradelist npc="-1" shop="11013"> <!-- Apocalypse R-Grade Weapons/Shield (Blessed) -->
+	<tradelist npc="-1" shop="11013"> <!-- Apocalypse R-Grade Weapons (Blessed) -->
 		<item id="18001"/>
 		<item id="18002"/>
 		<item id="18003"/>
@@ -9926,9 +9924,8 @@
 		<item id="18012"/>
 		<item id="18013"/>
 		<item id="18014"/>
-		<item id="18020"/>	
 	</tradelist>
-	<tradelist npc="-1" shop="11014"> <!-- Apocalypse R-Grade Weapons/Shield (Normal + SA) -->
+	<tradelist npc="-1" shop="11014"> <!-- Apocalypse R-Grade Weapons (Normal + SA) -->
 		<item id="18704"/>
 		<item id="18705"/>
 		<item id="18706"/>
@@ -9972,7 +9969,7 @@
 		<item id="18744"/>
 		<item id="18745"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11015"> <!-- Apocalypse R-Grade Weapons/Shield (Blessed + SA) -->
+	<tradelist npc="-1" shop="11015"> <!-- Apocalypse R-Grade Weapons (Blessed + SA) -->
 		<item id="18788"/>
 		<item id="18789"/>
 		<item id="18790"/>
@@ -10016,7 +10013,7 @@
 		<item id="18828"/>
 		<item id="18829"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11016"> <!-- Apocalypse R-Grade Weapons/Shield (Blessed + SA +SA) -->
+	<tradelist npc="-1" shop="11016"> <!-- Apocalypse R-Grade Weapons (Blessed + SA +SA) -->
 		<item id="30064"/>
 		<item id="30065"/>
 		<item id="30066"/>
@@ -10060,7 +10057,7 @@
 		<item id="30104"/>
 		<item id="30105"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11017"> <!-- Specter R95-Grade Weapons/Shield (Normal) -->
+	<tradelist npc="-1" shop="11017"> <!-- Specter R95-Grade Weapons (Normal) -->
 		<item id="17382"/>
 		<item id="17383"/>
 		<item id="17384"/>
@@ -10074,10 +10071,9 @@
 		<item id="17392"/>
 		<item id="17393"/>
 		<item id="17394"/>
-		<item id="17395"/>
-		<item id="17401"/>	
+		<item id="17395"/>	
 	</tradelist>
-	<tradelist npc="-1" shop="11018"> <!-- Specter R95-Grade Weapons/Shield (Blessed) -->
+	<tradelist npc="-1" shop="11018"> <!-- Specter R95-Grade Weapons (Blessed) -->
 		<item id="18035"/>
 		<item id="18036"/>
 		<item id="18037"/>
@@ -10092,9 +10088,8 @@
 		<item id="18046"/>
 		<item id="18047"/>
 		<item id="18048"/>
-		<item id="18054"/>	
 	</tradelist>
-	<tradelist npc="-1" shop="11019"> <!-- Specter R95-Grade Weapons/Shield (Normal + SA) -->
+	<tradelist npc="-1" shop="11019"> <!-- Specter R95-Grade Weapons (Normal + SA) -->
 		<item id="18830"/>
 		<item id="18831"/>
 		<item id="18832"/>
@@ -10138,7 +10133,7 @@
 		<item id="18870"/>
 		<item id="18871"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11020"> <!-- Specter R95-Grade Weapons/Shield (Blessed + SA) -->
+	<tradelist npc="-1" shop="11020"> <!-- Specter R95-Grade Weapons (Blessed + SA) -->
 		<item id="18914"/>
 		<item id="18915"/>
 		<item id="18916"/>
@@ -10182,7 +10177,7 @@
 		<item id="18954"/>
 		<item id="18955"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11021"> <!-- Specter R95-Grade Weapons/Shield (Blessed + SA +SA) -->
+	<tradelist npc="-1" shop="11021"> <!-- Specter R95-Grade Weapons (Blessed + SA +SA) -->
 		<item id="30148"/>
 		<item id="30149"/>
 		<item id="30150"/>
@@ -10226,7 +10221,7 @@
 		<item id="30188"/>
 		<item id="30189"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11022"> <!-- Amaranthine R99-Grade Weapons/Shield (Normal) -->
+	<tradelist npc="-1" shop="11022"> <!-- Amaranthine R99-Grade Weapons (Normal) -->
 		<item id="17416"/>
 		<item id="17417"/>
 		<item id="17418"/>
@@ -10241,9 +10236,8 @@
 		<item id="17427"/>
 		<item id="17428"/>
 		<item id="17429"/>
-		<item id="17435"/>	
 	</tradelist>
-	<tradelist npc="-1" shop="11023"> <!-- Amaranthine R99-Grade Weapons/Shield (Blessed) -->
+	<tradelist npc="-1" shop="11023"> <!-- Amaranthine R99-Grade Weapons (Blessed) -->
 		<item id="18069"/>
 		<item id="18070"/>
 		<item id="18071"/>
@@ -10257,10 +10251,9 @@
 		<item id="18079"/>
 		<item id="18080"/>
 		<item id="18081"/>
-		<item id="18082"/>
-		<item id="18088"/>	
+		<item id="18082"/>	
 	</tradelist>
-	<tradelist npc="-1" shop="11024"> <!-- Amaranthine R99-Grade Weapons/Shield (Normal + SA) -->
+	<tradelist npc="-1" shop="11024"> <!-- Amaranthine R99-Grade Weapons (Normal + SA) -->
 		<item id="18956"/>
 		<item id="18957"/>
 		<item id="18958"/>
@@ -10304,7 +10297,7 @@
 		<item id="18996"/>
 		<item id="18997"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11025"> <!-- Amaranthine R99-Grade Weapons/Shield (Blessed + SA) -->
+	<tradelist npc="-1" shop="11025"> <!-- Amaranthine R99-Grade Weapons (Blessed + SA) -->
 		<item id="19040"/>
 		<item id="19041"/>
 		<item id="19042"/>
@@ -10348,7 +10341,7 @@
 		<item id="19080"/>
 		<item id="19081"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11026"> <!-- Amaranthine R99-Grade Weapons/Shield (Blessed + SA +SA) -->
+	<tradelist npc="-1" shop="11026"> <!-- Amaranthine R99-Grade Weapons (Blessed + SA +SA) -->
 		<item id="30232"/>
 		<item id="30233"/>
 		<item id="30234"/>
@@ -10392,7 +10385,7 @@
 		<item id="30272"/>
 		<item id="30273"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11027"> <!-- Requiem R-Grade Weapons/Shield (Normal + SA +SA) -->
+	<tradelist npc="-1" shop="11027"> <!-- Requiem R-Grade Weapons (Normal + SA +SA) -->
 		<item id="19938"/>
 		<item id="19939"/>
 		<item id="19940"/>
@@ -10436,7 +10429,7 @@
 		<item id="19978"/>
 		<item id="19979"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11028"> <!-- Apocalypse R2-Grade Weapons/Shield (Normal + SA +SA) -->
+	<tradelist npc="-1" shop="11028"> <!-- Apocalypse R2-Grade Weapons (Normal + SA +SA) -->
 		<item id="30022"/>
 		<item id="30023"/>
 		<item id="30024"/>
@@ -10480,7 +10473,7 @@
 		<item id="30062"/>
 		<item id="30063"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11029"> <!-- Specter R95-Grade Weapons/Shield (Normal + SA +SA) -->
+	<tradelist npc="-1" shop="11029"> <!-- Specter R95-Grade Weapons (Normal + SA +SA) -->
 		<item id="30106"/>
 		<item id="30107"/>
 		<item id="30108"/>
@@ -10524,7 +10517,7 @@
 		<item id="30146"/>
 		<item id="30147"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11030"> <!-- Amaranthine R99-Grade Weapons/Shield (Normal + SA +SA) -->
+	<tradelist npc="-1" shop="11030"> <!-- Amaranthine R99-Grade Weapons (Normal + SA +SA) -->
 		<item id="30190"/>
 		<item id="30191"/>
 		<item id="30192"/>
@@ -10568,7 +10561,7 @@
 		<item id="30230"/>
 		<item id="30231"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11031"> <!-- Immortal R-Grade Armors/Sigil (Normal) -->
+	<tradelist npc="-1" shop="11031"> <!-- Immortal R-Grade Armors/Shields/Sigils (Normal) -->
 		<item id="17304"/>
 		<item id="17305"/>
 		<item id="17306"/>
@@ -10586,7 +10579,7 @@
 		<item id="17319"/>
 		<item id="17320"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11032"> <!-- Immortal R-Grade Armors/Sigil (Blessed) -->
+	<tradelist npc="-1" shop="11032"> <!-- Immortal R-Grade Armors/Shields/Sigils (Blessed) -->
 		<item id="17981"/>
 		<item id="17982"/>
 		<item id="17983"/>
@@ -10604,7 +10597,7 @@
 		<item id="17996"/>
 		<item id="17997"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11033"> <!-- Twilight R2-Grade Armors/Sigil (Normal) -->
+	<tradelist npc="-1" shop="11033"> <!-- Twilight R2-Grade Armors/Shields/Sigils (Normal) -->
 		<item id="17338"/>
 		<item id="17339"/>
 		<item id="17340"/>
@@ -10622,12 +10615,13 @@
 		<item id="17353"/>
 		<item id="17354"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11034"> <!-- Twilight R2-Grade Armors/Sigil (Blessed) -->
+	<tradelist npc="-1" shop="11034"> <!-- Twilight R2-Grade Armors/Shields/Sigils (Blessed) -->
 		<item id="18015"/>
 		<item id="18016"/>
 		<item id="18017"/>
 		<item id="18018"/>
 		<item id="18019"/>
+		<item id="18020"/>
 		<item id="18021"/>
 		<item id="18022"/>
 		<item id="18023"/>
@@ -10640,12 +10634,13 @@
 		<item id="18030"/>
 		<item id="18031"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11035"> <!-- Seraph R95-Grade Armors/Sigil (Normal) -->
+	<tradelist npc="-1" shop="11035"> <!-- Seraph R95-Grade Armors/Shields/Sigils (Normal) -->
 		<item id="17396"/>
 		<item id="17397"/>
 		<item id="17398"/>
 		<item id="17399"/>
 		<item id="17400"/>
+		<item id="17401"/>
 		<item id="17402"/>
 		<item id="17403"/>
 		<item id="17404"/>
@@ -10658,12 +10653,13 @@
 		<item id="17411"/>
 		<item id="17412"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11036"> <!-- Seraph R95-Grade Armors/Sigil (Blessed) -->
+	<tradelist npc="-1" shop="11036"> <!-- Seraph R95-Grade Armors/Shields/Sigils (Blessed) -->
 		<item id="18049"/>
 		<item id="18050"/>
 		<item id="18051"/>
 		<item id="18052"/>
 		<item id="18053"/>
+		<item id="18054"/>
 		<item id="18055"/>
 		<item id="18056"/>
 		<item id="18057"/>
@@ -10676,12 +10672,13 @@
 		<item id="18064"/>
 		<item id="18065"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11037"> <!-- Eternal R99-Grade Armors/Sigil (Normal) -->
+	<tradelist npc="-1" shop="11037"> <!-- Eternal R99-Grade Armors/Shields/Sigils (Normal) -->
 		<item id="17430"/>
 		<item id="17431"/>
 		<item id="17432"/>
 		<item id="17433"/>
 		<item id="17434"/>
+		<item id="17435"/>
 		<item id="17436"/>
 		<item id="17437"/>
 		<item id="17438"/>
@@ -10694,12 +10691,13 @@
 		<item id="17445"/>
 		<item id="17446"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11038"> <!-- Eternal R99-Grade Armors/Sigil (Blessed) -->
+	<tradelist npc="-1" shop="11038"> <!-- Eternal R99-Grade Armors/Shields/Sigils (Blessed) -->
 		<item id="18083"/>
 		<item id="18084"/>
 		<item id="18085"/>
 		<item id="18086"/>
 		<item id="18087"/>
+		<item id="18088"/>
 		<item id="18089"/>
 		<item id="18090"/>
 		<item id="18091"/>
@@ -10901,7 +10899,7 @@
 		<item id="6620"/>
 		<item id="6621"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11061"> <!-- Improved Immortal R-Grade Armors/Sigil (Normal) -->
+	<tradelist npc="-1" shop="11061"> <!-- Improved Immortal R-Grade Armors/Shields/Sigils (Normal) -->
 		<item id="19522"/>
 		<item id="19523"/>
 		<item id="19524"/>
@@ -10933,7 +10931,7 @@
 		<item id="19744"/>
 		<item id="19745"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11062"> <!-- Improved Immortal R-Grade Armors/Sigil (Blessed) -->
+	<tradelist npc="-1" shop="11062"> <!-- Improved Immortal R-Grade Armors/Shields/Sigils (Blessed) -->
 		<item id="19650"/>
 		<item id="19651"/>
 		<item id="19652"/>
@@ -10965,7 +10963,7 @@
 		<item id="19872"/>
 		<item id="19873"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11063"> <!-- Improved Twilight R-Grade Armors/Sigil (Normal) -->
+	<tradelist npc="-1" shop="11063"> <!-- Improved Twilight R-Grade Armors/Shields/Sigils (Normal) -->
 		<item id="19538"/>
 		<item id="19539"/>
 		<item id="19540"/>
@@ -10997,7 +10995,7 @@
 		<item id="19760"/>
 		<item id="19761"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11064"> <!-- Improved Twilight R-Grade Armors/Sigil (Blessed) -->
+	<tradelist npc="-1" shop="11064"> <!-- Improved Twilight R-Grade Armors/Shields/Sigils (Blessed) -->
 		<item id="19666"/>
 		<item id="19667"/>
 		<item id="19668"/>
@@ -11029,7 +11027,7 @@
 		<item id="19888"/>
 		<item id="19889"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11065"> <!-- Improved Seraph R-Grade Armors/Sigil (Normal) -->
+	<tradelist npc="-1" shop="11065"> <!-- Improved Seraph R-Grade Armors/Shields/Sigils (Normal) -->
 		<item id="19554"/>
 		<item id="19555"/>
 		<item id="19556"/>
@@ -11061,7 +11059,7 @@
 		<item id="19776"/>
 		<item id="19777"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11066"> <!-- Improved Seraph R-Grade Armors/Sigil (Blessed) -->
+	<tradelist npc="-1" shop="11066"> <!-- Improved Seraph R-Grade Armors/Shields/Sigils (Blessed) -->
 		<item id="19682"/>
 		<item id="19683"/>
 		<item id="19684"/>
@@ -11093,7 +11091,7 @@
 		<item id="19904"/>
 		<item id="19905"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11067"> <!-- Improved Eternal R-Grade Armors/Sigil (Normal) -->
+	<tradelist npc="-1" shop="11067"> <!-- Improved Eternal R-Grade Armors/Shields/Sigils (Normal) -->
 		<item id="19570"/>
 		<item id="19571"/>
 		<item id="19572"/>
@@ -11125,7 +11123,7 @@
 		<item id="19792"/>
 		<item id="19793"/>
 	</tradelist>
-	<tradelist npc="-1" shop="11068"> <!-- Improved Eternal R-Grade Armors/Sigil (Blessed) -->
+	<tradelist npc="-1" shop="11068"> <!-- Improved Eternal R-Grade Armors/Shields/Sigils (Blessed) -->
 		<item id="19698"/>
 		<item id="19699"/>
 		<item id="19700"/>
@@ -11640,5 +11638,13 @@
 		<item id="35030"/>
 		<item id="35031"/>
 		<item id="35032"/>
+	</tradelist>
+	<tradelist npc="-1" shop="11083"> <!-- Blessed Awakening Boss Jewels -->
+		<item id="19463"/>
+		<item id="36946"/>
+		<item id="36948"/>
+		<item id="19464"/>
+		<item id="35570"/>
+		<item id="37522"/>
 	</tradelist>
 </list>
