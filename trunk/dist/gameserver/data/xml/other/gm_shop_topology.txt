@@ -74,10 +74,10 @@ ID		Item	Grade Type	Item Name
 11074	EtcItem	X	LifeStones	<!-- Awakening Life Stones -->
 11075	Weapons	R99	Bloody	<!-- Bloody Amaranthine Weapons -->
 11076	Weapons	R99	Dark	<!-- Dark Amaranthine Weapons -->
-// HTML Support Needed
 11077	Armors	R99	Bloody	<!-- Bloody Eternal Armors (Normal) -->
 11078	Armors	R99	Bloody	<!-- Bloody Eternal Armors (Improved Attack) -->
 11079	Armors	R99	Bloody	<!-- Bloody Eternal Armors (Improved Defense) -->
 11080	Armors	R99	Dark	<!-- Dark Eternal Armors (Normal) -->
 11081	Armors	R99	Dark	<!-- Dark Eternal Armors (Improved Attack) -->
 11082	Armors	R99	Dark	<!-- Dark Eternal Armors (Improved Defense) -->
+11083	Jewels	R	Blessed	<!-- Blessed Awakening Boss Jewels -->
