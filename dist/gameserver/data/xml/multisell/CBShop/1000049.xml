@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<config showall="false" notax="true" keepenchanted="true"/>
+	<config showall="true" notax="true" keepenchanted="true"/>
 	<item>
 		<ingredient id="33888" count="1"/>
 		<ingredient id="19440" count="19"/>

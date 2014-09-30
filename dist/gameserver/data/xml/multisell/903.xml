@@ -1,0 +1,158 @@
+﻿<?xml version="1.0"?>
+<list xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" npcCheck="false" ns0:noNamespaceSchemaLocation="../../xsd/multisell.xsd">
+	<item id="1"> Pets / start<ingredient id="57" count="50000000" enchant="0"/>
+		<production id="13017" count="1"/>
+	</item>
+	<item id="2">
+		<ingredient id="57" count="50000000" enchant="0"/>
+		<production id="13018" count="1"/>
+	</item>
+	<item id="3">
+		<ingredient id="57" count="50000000" enchant="0"/>
+		<production id="13019" count="1"/>
+	</item>
+	<item id="4">
+		<ingredient id="57" count="50000000" enchant="0"/>
+		<production id="13020" count="1"/>
+	</item>
+	<item id="5">
+		<ingredient id="57" count="50000000" enchant="0"/>
+		<production id="14061" count="1"/>
+	</item>
+	<item id="6">
+		<ingredient id="57" count="50000000" enchant="0"/>
+		<production id="14062" count="1"/>
+	</item>
+	<item id="7">
+		<ingredient id="57" count="50000000" enchant="0"/>
+		<production id="14063" count="1"/>
+	</item>
+	<item id="8">
+		<ingredient id="57" count="50000000" enchant="0"/>
+		<production id="14064" count="1"/>
+	</item> Pets / end 	<item id="13">  Dyes / start<ingredient id="57" count="125000000"/>
+		<production id="17697" count="10"/>
+	</item>
+	<item id="14">
+		<ingredient id="57" count="125000000"/>
+		<production id="17698" count="10"/>
+	</item>
+	<item id="15">
+		<ingredient id="57" count="125000000"/>
+		<production id="17699" count="10"/>
+	</item>
+	<item id="16">
+		<ingredient id="57" count="125000000"/>
+		<production id="17700" count="10"/>
+	</item>
+	<item id="17">
+		<ingredient id="57" count="125000000"/>
+		<production id="17701" count="10"/>
+	</item>
+	<item id="18">
+		<ingredient id="57" count="125000000"/>
+		<production id="17702" count="10"/>
+	</item>
+	<item id="19">
+		<ingredient id="57" count="250000000"/>
+		<production id="17703" count="10"/>
+	</item>
+	<item id="20">
+		<ingredient id="57" count="250000000"/>
+		<production id="17704" count="10"/>
+	</item>
+	<item id="21">
+		<ingredient id="57" count="250000000"/>
+		<production id="17705" count="10"/>
+	</item>
+	<item id="22">
+		<ingredient id="57" count="250000000"/>
+		<production id="17706" count="10"/>
+	</item>
+	<item id="23">
+		<ingredient id="57" count="250000000"/>
+		<production id="17707" count="10"/>
+	</item>
+	<item id="24">
+		<ingredient id="57" count="250000000"/>
+		<production id="17708" count="10"/>
+	</item>
+	<item id="25">
+		<ingredient id="57" count="500000000"/>
+		<production id="17709" count="10"/>
+	</item>
+	<item id="26">
+		<ingredient id="57" count="500000000"/>
+		<production id="17710" count="10"/>
+	</item>
+	<item id="27">
+		<ingredient id="57" count="500000000"/>
+		<production id="17711" count="10"/>
+	</item>
+	<item id="28">
+		<ingredient id="57" count="500000000"/>
+		<production id="17712" count="10"/>
+	</item>
+	<item id="29">
+		<ingredient id="57" count="500000000"/>
+		<production id="17713" count="10"/>
+	</item>
+	<item id="30">
+		<ingredient id="57" count="500000000"/>
+		<production id="17714" count="10"/>
+	</item> Dyes / end 	<item> codex / start<ingredient id="57" count="750000"/>
+		<production id="9627" count="1"/>
+	</item>
+	<item>
+		<ingredient id="57" count="2500000"/>
+		<production id="30297" count="1"/>
+	</item> codex / end<item id="33"> belt<ingredient id="4037" count="500"/>
+		<production id="35564" count="1"/>
+	</item> belt end 	RB Jewels:<item>
+		<ingredient id="4037" count="50"/>
+		<production id="16025" count="1"/>
+	</item>
+	<item>
+		<ingredient id="4037" count="150"/>
+		<production id="6657" count="1"/>
+	</item>
+	<item>
+		<ingredient id="4037" count="50"/>
+		<production id="8191" count="1"/>
+	</item>
+	<item>
+		<ingredient id="4037" count="300"/>
+		<production id="35570" count="1"/>
+	</item>
+	<item>
+		<ingredient id="4037" count="50"/>
+		<production id="6660" count="1"/>
+	</item>
+	<item>
+		<ingredient id="4037" count="50"/>
+		<production id="6658" count="1"/>
+	</item>
+	<item>
+		<ingredient id="4037" count="300"/>
+		<production id="17623" count="1"/>
+	</item>
+	<item>
+		<ingredient id="4037" count="50"/>
+		<production id="6662" count="1"/>
+	</item>
+	<item>
+		<ingredient id="4037" count="50"/>
+		<production id="10170" count="1"/>
+	</item>
+	<item>
+		<ingredient id="4037" count="50"/>
+		<production id="6661" count="1"/>
+	</item>
+	<item>
+		<ingredient id="4037" count="50"/>
+		<production id="6659" count="1"/>
+	</item>
+	<item>
+		<ingredient id="4037" count="150"/>
+		<production id="6656" count="1"/>
+	</item>RB Jewels End</list>
