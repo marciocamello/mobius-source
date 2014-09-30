@@ -23,12 +23,14 @@ public class HennaItemInfo extends L2GameServerPacket
 	private final int _int;
 	private final int _wit;
 	private final int _men;
+	private final int _canEquip;
 	private final long _adena;
 	private final Henna _henna;
 	
 	public HennaItemInfo(Henna henna, Player player)
 	{
 		_henna = henna;
+		_canEquip = _henna.isForThisClass(player) ? 0x01 : 0x00;
 		_adena = player.getAdena();
 		_str = player.getSTR();
 		_dex = player.getDEX();
@@ -41,12 +43,12 @@ public class HennaItemInfo extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeC(0xe4);
+		writeC(0xE4);
 		writeD(_henna.getSymbolId()); // symbol Id
 		writeD(_henna.getDyeId()); // item id of dye
 		writeQ(_henna.getDrawCount());
 		writeQ(_henna.getPrice());
-		writeD(1); // able to draw or not 0 is false and 1 is true
+		writeD(_canEquip); // meet the requirement or not
 		writeQ(_adena);
 		writeD(_int); // current INT
 		writeC(_int + _henna.getStatINT()); // equip INT
