@@ -23,12 +23,14 @@ public class HennaUnequipInfo extends L2GameServerPacket
 	private final int _int;
 	private final int _wit;
 	private final int _men;
+	private final int _canEquip;
 	private final long _adena;
 	private final Henna _henna;
 	
 	public HennaUnequipInfo(Henna henna, Player player)
 	{
 		_henna = henna;
+		_canEquip = _henna.isForThisClass(player) ? 0x01 : 0x00;
 		_adena = player.getAdena();
 		_str = player.getSTR();
 		_dex = player.getDEX();
@@ -46,19 +48,19 @@ public class HennaUnequipInfo extends L2GameServerPacket
 		writeD(_henna.getDyeId()); // item id of dye
 		writeQ(_henna.getDrawCount());
 		writeQ(_henna.getPrice());
-		writeD(1); // able to draw or not 0 is false and 1 is true
+		writeD(_canEquip); // meet the requirement or not
 		writeQ(_adena);
 		writeD(_int); // current INT
-		writeC(_int + _henna.getStatINT()); // equip INT
+		writeC(_int - _henna.getStatINT()); // unequip INT
 		writeD(_str); // current STR
-		writeC(_str + _henna.getStatSTR()); // equip STR
+		writeC(_str - _henna.getStatSTR()); // unequip STR
 		writeD(_con); // current CON
-		writeC(_con + _henna.getStatCON()); // equip CON
+		writeC(_con - _henna.getStatCON()); // unequip CON
 		writeD(_men); // current MEM
-		writeC(_men + _henna.getStatMEN()); // equip MEM
+		writeC(_men - _henna.getStatMEN()); // unequip MEM
 		writeD(_dex); // current DEX
-		writeC(_dex + _henna.getStatDEX()); // equip DEX
+		writeC(_dex - _henna.getStatDEX()); // unequip DEX
 		writeD(_wit); // current WIT
-		writeC(_wit + _henna.getStatWIT()); // equip WIT
+		writeC(_wit - _henna.getStatWIT()); // unequip WIT
 	}
 }
