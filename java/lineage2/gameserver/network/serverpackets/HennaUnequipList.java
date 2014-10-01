@@ -12,9 +12,6 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.templates.Henna;
 
@@ -22,18 +19,22 @@ public class HennaUnequipList extends L2GameServerPacket
 {
 	private final int _emptySlots;
 	private final long _adena;
-	private final List<Henna> availHenna = new ArrayList<>(3);
+	private final HennaData[] _hennas = new HennaData[3];
+	private int _count;
 	
 	public HennaUnequipList(Player player)
 	{
 		_adena = player.getAdena();
 		_emptySlots = player.getHennaEmptySlots();
 		
-		for (int i = 1; i <= 3; i++)
+		_count = 0;
+		Henna h;
+		
+		for (int i = 0; i < _hennas.length; i++)
 		{
-			if (player.getHenna(i) != null)
+			if ((h = player.getHenna(i + 1)) != null)
 			{
-				availHenna.add(player.getHenna(i));
+				_hennas[_count++] = new HennaData(h, h.isForThisClass(player) ? 0x01 : 0x00);
 			}
 		}
 	}
@@ -44,15 +45,29 @@ public class HennaUnequipList extends L2GameServerPacket
 		writeC(0xE6);
 		writeQ(_adena);
 		writeD(_emptySlots);
-		writeD(availHenna.size());
+		writeD(_count);
 		
-		for (Henna henna : availHenna)
+		for (int i = 0; i < _count; i++)
 		{
-			writeD(henna.getSymbolId()); // symbolid
-			writeD(henna.getDyeId()); // itemid of dye
-			writeQ(henna.getDrawCount());
-			writeQ(henna.getPrice());
-			writeD(1); // meet the requirement or not
+			HennaData henna = _hennas[i];
+			
+			writeD(henna._symbol.getSymbolId()); // symbolid
+			writeD(henna._symbol.getDyeId()); // itemid of dye
+			writeQ(henna._symbol.getDrawCount());
+			writeQ(henna._symbol.getPrice());
+			writeD(henna._valid); // meet the requirement or not
+		}
+	}
+	
+	private class HennaData
+	{
+		final Henna _symbol;
+		final int _valid;
+		
+		public HennaData(Henna he, int valid)
+		{
+			_symbol = he;
+			_valid = valid;
 		}
 	}
 }

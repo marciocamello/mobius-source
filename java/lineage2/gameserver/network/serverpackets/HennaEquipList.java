@@ -23,7 +23,7 @@ public class HennaEquipList extends L2GameServerPacket
 {
 	private final int _emptySlots;
 	private final long _adena;
-	private final List<Henna> _hennas = new ArrayList<>();
+	private final List<HennaData> _hennas = new ArrayList<>();
 	
 	public HennaEquipList(Player player)
 	{
@@ -35,7 +35,7 @@ public class HennaEquipList extends L2GameServerPacket
 		{
 			if (player.getInventory().getItemByItemId(element.getDyeId()) != null)
 			{
-				_hennas.add(element);
+				_hennas.add(new HennaData(element, element.isForThisClass(player) ? 0x01 : 0x00));
 			}
 		}
 	}
@@ -43,7 +43,7 @@ public class HennaEquipList extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeC(0xee);
+		writeC(0xEE);
 		writeQ(_adena);
 		writeD(_emptySlots);
 		
@@ -51,13 +51,13 @@ public class HennaEquipList extends L2GameServerPacket
 		{
 			writeD(_hennas.size());
 			
-			for (Henna henna : _hennas)
+			for (HennaData henna : _hennas)
 			{
-				writeD(henna.getSymbolId()); // symbolid
-				writeD(henna.getDyeId()); // itemid of dye
-				writeQ(henna.getDrawCount());
-				writeQ(henna.getPrice());
-				writeD(1); // meet the requirement or not
+				writeD(henna._symbol.getSymbolId()); // symbolid
+				writeD(henna._symbol.getDyeId()); // itemid of dye
+				writeQ(henna._symbol.getDrawCount());
+				writeQ(henna._symbol.getPrice());
+				writeD(henna._valid); // meet the requirement or not
 			}
 		}
 		else
@@ -68,6 +68,18 @@ public class HennaEquipList extends L2GameServerPacket
 			writeQ(0x00);
 			writeQ(0x00);
 			writeD(0x00);
+		}
+	}
+	
+	private class HennaData
+	{
+		final Henna _symbol;
+		final int _valid;
+		
+		public HennaData(Henna he, int valid)
+		{
+			_symbol = he;
+			_valid = valid;
 		}
 	}
 }

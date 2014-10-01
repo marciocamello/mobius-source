@@ -23,14 +23,14 @@ public class HennaUnequipInfo extends L2GameServerPacket
 	private final int _int;
 	private final int _wit;
 	private final int _men;
-	private final int _canEquip;
+	private final int _valid;
 	private final long _adena;
 	private final Henna _henna;
 	
 	public HennaUnequipInfo(Henna henna, Player player)
 	{
 		_henna = henna;
-		_canEquip = _henna.isForThisClass(player) ? 0x01 : 0x00;
+		_valid = _henna.isForThisClass(player) ? 0x01 : 0x00;
 		_adena = player.getAdena();
 		_str = player.getSTR();
 		_dex = player.getDEX();
@@ -48,7 +48,7 @@ public class HennaUnequipInfo extends L2GameServerPacket
 		writeD(_henna.getDyeId()); // item id of dye
 		writeQ(_henna.getDrawCount());
 		writeQ(_henna.getPrice());
-		writeD(_canEquip); // meet the requirement or not
+		writeD(_valid); // meet the requirement or not
 		writeQ(_adena);
 		writeD(_int); // current INT
 		writeC(_int - _henna.getStatINT()); // unequip INT
