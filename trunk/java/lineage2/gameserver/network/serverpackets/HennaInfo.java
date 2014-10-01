@@ -13,10 +13,11 @@
 package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.templates.Henna;
 
 public class HennaInfo extends L2GameServerPacket
 {
-	private final Henna[] _hennas = new Henna[3];
+	private final HennaData[] _hennas = new HennaData[3];
 	private final int _str;
 	private final int _con;
 	private final int _dex;
@@ -28,13 +29,13 @@ public class HennaInfo extends L2GameServerPacket
 	public HennaInfo(Player player)
 	{
 		_count = 0;
-		lineage2.gameserver.templates.Henna h;
+		Henna h;
 		
-		for (int i = 0; i < 3; i++)
+		for (int i = 0; i < _hennas.length; i++)
 		{
 			if ((h = player.getHenna(i + 1)) != null)
 			{
-				_hennas[_count++] = new Henna(h.getSymbolId(), h.isForThisClass(player));
+				_hennas[_count++] = new HennaData(h.getSymbolId(), h.isForThisClass(player) ? 0x01 : 0x00);
 			}
 		}
 		
@@ -58,20 +59,19 @@ public class HennaInfo extends L2GameServerPacket
 		writeC(_wit); // equip WIT
 		writeD(3); // interlude, slots?
 		writeD(_count);
-		
 		for (int i = 0; i < _count; i++)
 		{
 			writeD(_hennas[i]._symbolId);
-			writeD(_hennas[i]._valid ? _hennas[i]._symbolId : 0);
+			writeD(_hennas[i]._valid);
 		}
 	}
 	
-	private static class Henna
+	private class HennaData
 	{
 		final int _symbolId;
-		final boolean _valid;
+		final int _valid;
 		
-		public Henna(int sy, boolean valid)
+		public HennaData(int sy, int valid)
 		{
 			_symbolId = sy;
 			_valid = valid;
