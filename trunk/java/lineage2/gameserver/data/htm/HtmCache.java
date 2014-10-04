@@ -136,7 +136,8 @@ public class HtmCache
 			}
 			else
 			{
-				if (file.getName().endsWith(".htm"))
+				final String fName = file.getName();
+				if (fName.endsWith(".htm") || fName.endsWith(".html"))
 				{
 					try
 					{
