@@ -7845,4 +7845,9 @@ public abstract class Creature extends GameObject
 		
 		super.onActionTargeted(player, forced);
 	}
+	
+	public boolean isHungry()
+	{
+		return false;
+	}
 }
