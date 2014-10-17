@@ -36,6 +36,7 @@ import lineage2.gameserver.model.base.Experience;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.PetInventory;
 import lineage2.gameserver.model.items.attachment.FlagItemAttachment;
+import lineage2.gameserver.network.serverpackets.ExChangeNpcState;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
@@ -83,7 +84,7 @@ public class PetInstance extends Summon
 			else if (getCurrentFed() <= (0.10 * getMaxFed()))
 			{
 				owner.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2PetInstance.UnSummonHungryPet", owner));
-				unSummon();
+				owner.getSummonList().unsummonPet(false);
 				return;
 			}
 			
@@ -248,6 +249,7 @@ public class PetInstance extends Summon
 	{
 		super.onSpawn();
 		startFeed(false);
+		broadcastFatigueState();
 	}
 	
 	/**
@@ -873,7 +875,12 @@ public class PetInstance extends Summon
 	@Override
 	public int getPAtkSpd()
 	{
-		return (int) calcStat(Stats.POWER_ATTACK_SPEED, calcStat(Stats.ATK_BASE, _data.getAtkSpeed(), null, null), null, null);
+		int val = super.getPAtkSpd();
+		if (isHungry())
+		{
+			val = val / 2;
+		}
+		return val;
 	}
 	
 	/**
@@ -883,7 +890,12 @@ public class PetInstance extends Summon
 	@Override
 	public int getMAtkSpd()
 	{
-		return (int) calcStat(Stats.MAGIC_ATTACK_SPEED, _data.getCastSpeed(), null, null);
+		int val = super.getMAtkSpd();
+		if (isHungry())
+		{
+			val = val / 2;
+		}
+		return val;
 	}
 	
 	/**
@@ -891,9 +903,39 @@ public class PetInstance extends Summon
 	 * @return int
 	 */
 	@Override
-	public int getRunSpeed()
+	public final int getRunSpeed()
 	{
-		return getSpeed(_data.getSpeed());
+		int val = super.getRunSpeed();
+		if (isHungry())
+		{
+			val = val / 2;
+		}
+		return val;
+	}
+	
+	/**
+	 * Method getWalkSpeed.
+	 * @return int
+	 */
+	@Override
+	public final int getWalkSpeed()
+	{
+		int val = super.getWalkSpeed();
+		if (isHungry())
+		{
+			val = val / 2;
+		}
+		return val;
+	}
+	
+	/**
+	 * Method getMovementSpeedMultiplier.
+	 * @return double
+	 */
+	@Override
+	public final double getMovementSpeedMultiplier()
+	{
+		return super.getMovementSpeedMultiplier() * (isHungry() ? 0.5d : 1.0d);
 	}
 	
 	/**
@@ -1010,7 +1052,8 @@ public class PetInstance extends Summon
 	 */
 	public void setCurrentFed(int num)
 	{
-		_curFed = Math.min(getMaxFed(), Math.max(0, num));
+		_curFed = num > getMaxFed() ? getMaxFed() : num;
+		broadcastFatigueState();
 	}
 	
 	/**
@@ -1326,5 +1369,30 @@ public class PetInstance extends Summon
 	public int getSummonSkillLvl()
 	{
 		return 0;
+	}
+	
+	/**
+	 * Method isHungry.
+	 * @return boolean
+	 */
+	@Override
+	public final boolean isHungry()
+	{
+		return getCurrentFed() < (0.55 * getMaxFed());
+	}
+	
+	/**
+	 * Method broadcastFatigueState.
+	 */
+	void broadcastFatigueState()
+	{
+		if (isHungry())
+		{
+			getPlayer().broadcastPacket(new ExChangeNpcState(getObjectId(), 0x64));
+		}
+		else
+		{
+			getPlayer().broadcastPacket(new ExChangeNpcState(getObjectId(), 0x65));
+		}
 	}
 }
