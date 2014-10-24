@@ -5,6 +5,7 @@
 		<set name="icon" value="icon.weapon_crabel_i10"/>
 		<set name="weight" value="2010"/>
 		<set name="type" value="POLE"/>
+		<set name="ex_type" value="POLE"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -32,6 +33,7 @@
 		<set name="icon" value="icon.weapon_castron_i10"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
+		<set name="ex_type" value="BOW"/>
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -59,6 +61,7 @@
 		<set name="icon" value="icon.weapon_stilla_i10"/>
 		<set name="weight" value="1580"/>
 		<set name="type" value="CROSSBOW"/>
+		<set name="ex_type" value="CROSSBOW"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -86,6 +89,7 @@
 		<set name="icon" value="icon.weaon_serapear_i10"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -99,10 +103,10 @@
 			<slot id="RIGHT_HAND"/>
 		</equip>
 		<for>
-			<add order="0x08" stat="pAtk" value="558"/>
-			<add order="0x08" stat="mAtk" value="405"/>
+			<add order="0x8" stat="pAtk" value="558"/>
+			<add order="0x8" stat="mAtk" value="405"/>
 			<add order="0x10" stat="accCombat" value="8"/>
-			<add order="0x08" stat="atkBaseSpeed" value="379"/>
+			<add order="0x08" stat="atkBaseSpeed" value="325"/>
 			<set stat="baseCrit" order="0x08" value="80"/>
 			<enchant value="0" order="0x0C" stat="pAtk"/>
 			<enchant value="0" order="0x0C" stat="mAtk"/>
@@ -113,6 +117,7 @@
 		<set name="icon" value="icon.weapon_pilia_i10"/>
 		<set name="weight" value="1080"/>
 		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -140,6 +145,7 @@
 		<set name="icon" value="icon.weapon_shaelon_i10"/>
 		<set name="weight" value="1080"/>
 		<set name="type" value="BIGBLUNT"/>
+		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -167,6 +173,7 @@
 		<set name="icon" value="icon.weapon_r_dualsword_i10"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="DUAL"/>
+		<set name="ex_type" value="DUAL_SWORD"/>		
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -194,6 +201,7 @@
 		<set name="icon" value="icon.weapon_r_dualdagger_i10"/>
 		<set name="weight" value="2050"/>
 		<set name="type" value="DUALDAGGER"/>
+		<set name="ex_type" value="DUAL_DAGGER"/>		
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -221,6 +229,7 @@
 		<set name="icon" value="icon.weapon_r_dualblunt_i10"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="DUALBLUNT"/>
+		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -248,6 +257,7 @@
 		<set name="icon" value="icon.weapon_stanpid_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
+		<set name="ex_type" value="DAGGER"/>
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -276,6 +286,7 @@
 		<set name="icon" value="icon.weapon_stanpid_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
+		<set name="ex_type" value="DAGGER"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -304,6 +315,7 @@
 		<set name="icon" value="icon.weapon_stanpid_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
+		<set name="ex_type" value="DAGGER"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -332,6 +344,7 @@
 		<set name="icon" value="icon.weapon_plenitas_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -360,6 +373,7 @@
 		<set name="icon" value="icon.weapon_plenitas_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -388,6 +402,7 @@
 		<set name="icon" value="icon.weapon_plenitas_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -416,6 +431,7 @@
 		<set name="icon" value="icon.weapon_bauen_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
+		<set name="ex_type" value="BIG_SWORD"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -444,6 +460,7 @@
 		<set name="icon" value="icon.weapon_bauen_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
+		<set name="ex_type" value="BIG_SWORD"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -472,6 +489,7 @@
 		<set name="icon" value="icon.weapon_bauen_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
+		<set name="ex_type" value="BIG_SWORD"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -500,6 +518,7 @@
 		<set name="icon" value="icon.weapon_qutram_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -528,6 +547,7 @@
 		<set name="icon" value="icon.weapon_qutram_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -556,6 +576,7 @@
 		<set name="icon" value="icon.weapon_qutram_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -584,6 +605,7 @@
 		<set name="icon" value="icon.weapon_durga_i11"/>
 		<set name="weight" value="1550"/>
 		<set name="type" value="DUALFIST"/>
+		<set name="ex_type" value="HAND_TO_HAND"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -612,6 +634,7 @@
 		<set name="icon" value="icon.weapon_durga_i11"/>
 		<set name="weight" value="1550"/>
 		<set name="type" value="DUALFIST"/>
+		<set name="ex_type" value="HAND_TO_HAND"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -640,6 +663,7 @@
 		<set name="icon" value="icon.weapon_durga_i11"/>
 		<set name="weight" value="1550"/>
 		<set name="type" value="DUALFIST"/>
+		<set name="ex_type" value="HAND_TO_HAND"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -668,6 +692,7 @@
 		<set name="icon" value="icon.weapon_crabel_i11"/>
 		<set name="weight" value="2010"/>
 		<set name="type" value="POLE"/>
+		<set name="ex_type" value="POLE"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -696,6 +721,7 @@
 		<set name="icon" value="icon.weapon_crabel_i11"/>
 		<set name="weight" value="2010"/>
 		<set name="type" value="POLE"/>
+		<set name="ex_type" value="POLE"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -724,6 +750,7 @@
 		<set name="icon" value="icon.weapon_crabel_i11"/>
 		<set name="weight" value="2010"/>
 		<set name="type" value="POLE"/>
+		<set name="ex_type" value="POLE"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -752,6 +779,7 @@
 		<set name="icon" value="icon.weapon_castron_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
+		<set name="ex_type" value="BOW"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -780,6 +808,7 @@
 		<set name="icon" value="icon.weapon_castron_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
+		<set name="ex_type" value="BOW"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -808,6 +837,7 @@
 		<set name="icon" value="icon.weapon_castron_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
+		<set name="ex_type" value="BOW"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -836,6 +866,7 @@
 		<set name="icon" value="icon.weapon_stilla_i11"/>
 		<set name="weight" value="1580"/>
 		<set name="type" value="CROSSBOW"/>
+		<set name="ex_type" value="CROSSBOW"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -864,6 +895,7 @@
 		<set name="icon" value="icon.weapon_stilla_i11"/>
 		<set name="weight" value="1580"/>
 		<set name="type" value="CROSSBOW"/>
+		<set name="ex_type" value="CROSSBOW"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -892,6 +924,7 @@
 		<set name="icon" value="icon.weapon_stilla_i11"/>
 		<set name="weight" value="1580"/>
 		<set name="type" value="CROSSBOW"/>
+		<set name="ex_type" value="CROSSBOW"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -920,6 +953,7 @@
 		<set name="icon" value="icon.weaon_serapear_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="MAGIC_SWORD"/>	
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -948,6 +982,7 @@
 		<set name="icon" value="icon.weaon_serapear_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="MAGIC_SWORD"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -976,6 +1011,7 @@
 		<set name="icon" value="icon.weaon_serapear_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="MAGIC_SWORD"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1004,6 +1040,7 @@
 		<set name="icon" value="icon.weapon_pilia_i11"/>
 		<set name="weight" value="1080"/>
 		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="MAGIC_BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1032,6 +1069,7 @@
 		<set name="icon" value="icon.weapon_pilia_i11"/>
 		<set name="weight" value="1080"/>
 		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="MAGIC_BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1060,6 +1098,7 @@
 		<set name="icon" value="icon.weapon_pilia_i11"/>
 		<set name="weight" value="1080"/>
 		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="MAGIC_BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1088,6 +1127,7 @@
 		<set name="icon" value="icon.weapon_shaelon_i11"/>
 		<set name="weight" value="1080"/>
 		<set name="type" value="BIGBLUNT"/>
+		<set name="ex_type" value="BIG_MAGIC_BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1116,6 +1156,7 @@
 		<set name="icon" value="icon.weapon_shaelon_i11"/>
 		<set name="weight" value="1080"/>
 		<set name="type" value="BIGBLUNT"/>
+		<set name="ex_type" value="BIG_MAGIC_BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1144,6 +1185,7 @@
 		<set name="icon" value="icon.weapon_shaelon_i11"/>
 		<set name="weight" value="1080"/>
 		<set name="type" value="BIGBLUNT"/>
+		<set name="ex_type" value="BIG_MAGIC_BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1172,6 +1214,7 @@
 		<set name="icon" value="icon.weapon_r_dualsword_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="DUAL"/>
+		<set name="ex_type" value="DUAL_SWORD"/>		
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -1200,6 +1243,7 @@
 		<set name="icon" value="icon.weapon_r_dualsword_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="DUAL"/>
+		<set name="ex_type" value="DUAL_SWORD"/>		
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -1228,6 +1272,7 @@
 		<set name="icon" value="icon.weapon_r_dualsword_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="DUAL"/>
+		<set name="ex_type" value="DUAL_SWORD"/>		
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -1256,6 +1301,7 @@
 		<set name="icon" value="icon.weapon_r_dualdagger_i11"/>
 		<set name="weight" value="2050"/>
 		<set name="type" value="DUALDAGGER"/>
+		<set name="ex_type" value="DUAL_DAGGER"/>		
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -1283,6 +1329,7 @@
 		<set name="icon" value="icon.weapon_r_dualdagger_i11"/>
 		<set name="weight" value="2050"/>
 		<set name="type" value="DUALDAGGER"/>
+		<set name="ex_type" value="DUAL_DAGGER"/>		
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -1311,6 +1358,7 @@
 		<set name="icon" value="icon.weapon_r_dualdagger_i11"/>
 		<set name="weight" value="2050"/>
 		<set name="type" value="DUALDAGGER"/>
+		<set name="ex_type" value="DUAL_DAGGER"/>		
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -1339,6 +1387,7 @@
 		<set name="icon" value="icon.weapon_r_dualblunt_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="DUALBLUNT"/>
+		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>		
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -1367,6 +1416,7 @@
 		<set name="icon" value="icon.weapon_r_dualblunt_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="DUALBLUNT"/>
+		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>		
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -1395,6 +1445,7 @@
 		<set name="icon" value="icon.weapon_r_dualblunt_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="DUALBLUNT"/>
+		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>		
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -1423,6 +1474,7 @@
 		<set name="icon" value="icon.weapon_stanpid_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
+		<set name="ex_type" value="DAGGER"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1452,6 +1504,7 @@
 		<set name="icon" value="icon.weapon_stanpid_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
+		<set name="ex_type" value="DAGGER"/>	
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1481,6 +1534,7 @@
 		<set name="icon" value="icon.weapon_stanpid_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
+		<set name="ex_type" value="DAGGER"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1510,6 +1564,7 @@
 		<set name="icon" value="icon.weapon_plenitas_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1539,6 +1594,7 @@
 		<set name="icon" value="icon.weapon_plenitas_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1568,6 +1624,7 @@
 		<set name="icon" value="icon.weapon_plenitas_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1597,6 +1654,7 @@
 		<set name="icon" value="icon.weapon_bauen_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
+		<set name="ex_type" value="BIG_SWORD"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1626,6 +1684,7 @@
 		<set name="icon" value="icon.weapon_bauen_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
+		<set name="ex_type" value="BIG_SWORD"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1655,6 +1714,7 @@
 		<set name="icon" value="icon.weapon_bauen_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
+		<set name="ex_type" value="BIG_SWORD"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1684,6 +1744,7 @@
 		<set name="icon" value="icon.weapon_qutram_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1713,6 +1774,7 @@
 		<set name="icon" value="icon.weapon_qutram_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1742,6 +1804,7 @@
 		<set name="icon" value="icon.weapon_qutram_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1771,6 +1834,7 @@
 		<set name="icon" value="icon.weapon_durga_i11"/>
 		<set name="weight" value="1550"/>
 		<set name="type" value="DUALFIST"/>
+		<set name="ex_type" value="HAND_TO_HAND"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1800,6 +1864,7 @@
 		<set name="icon" value="icon.weapon_durga_i11"/>
 		<set name="weight" value="1550"/>
 		<set name="type" value="DUALFIST"/>
+		<set name="ex_type" value="HAND_TO_HAND"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1829,6 +1894,7 @@
 		<set name="icon" value="icon.weapon_durga_i11"/>
 		<set name="weight" value="1550"/>
 		<set name="type" value="DUALFIST"/>
+		<set name="ex_type" value="HAND_TO_HAND"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1858,6 +1924,7 @@
 		<set name="icon" value="icon.weapon_crabel_i11"/>
 		<set name="weight" value="2010"/>
 		<set name="type" value="POLE"/>
+		<set name="ex_type" value="POLE"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1887,6 +1954,7 @@
 		<set name="icon" value="icon.weapon_crabel_i11"/>
 		<set name="weight" value="2010"/>
 		<set name="type" value="POLE"/>
+		<set name="ex_type" value="POLE"/>	
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1916,6 +1984,7 @@
 		<set name="icon" value="icon.weapon_crabel_i11"/>
 		<set name="weight" value="2010"/>
 		<set name="type" value="POLE"/>
+		<set name="ex_type" value="POLE"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1945,6 +2014,7 @@
 		<set name="icon" value="icon.weapon_castron_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
+		<set name="ex_type" value="BOW"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1974,6 +2044,7 @@
 		<set name="icon" value="icon.weapon_castron_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
+		<set name="ex_type" value="BOW"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -2003,6 +2074,7 @@
 		<set name="icon" value="icon.weapon_castron_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
+		<set name="ex_type" value="BOW"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -2032,6 +2104,7 @@
 		<set name="icon" value="icon.weapon_stilla_i11"/>
 		<set name="weight" value="1580"/>
 		<set name="type" value="CROSSBOW"/>
+		<set name="ex_type" value="CROSSBOW"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -2061,6 +2134,7 @@
 		<set name="icon" value="icon.weapon_stilla_i11"/>
 		<set name="weight" value="1580"/>
 		<set name="type" value="CROSSBOW"/>
+		<set name="ex_type" value="CROSSBOW"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -2090,6 +2164,7 @@
 		<set name="icon" value="icon.weapon_stilla_i11"/>
 		<set name="weight" value="1580"/>
 		<set name="type" value="CROSSBOW"/>
+		<set name="ex_type" value="CROSSBOW"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -2119,6 +2194,7 @@
 		<set name="icon" value="icon.weaon_serapear_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="MAGIC_SWORD"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -2148,6 +2224,7 @@
 		<set name="icon" value="icon.weaon_serapear_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="MAGIC_SWORD"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -2177,6 +2254,7 @@
 		<set name="icon" value="icon.weaon_serapear_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="MAGIC_SWORD"/>
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -2206,6 +2284,7 @@
 		<set name="icon" value="icon.weapon_pilia_i11"/>
 		<set name="weight" value="1080"/>
 		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="MAGIC_BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -2235,6 +2314,7 @@
 		<set name="icon" value="icon.weapon_pilia_i11"/>
 		<set name="weight" value="1080"/>
 		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="MAGIC_BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -2264,6 +2344,7 @@
 		<set name="icon" value="icon.weapon_pilia_i11"/>
 		<set name="weight" value="1080"/>
 		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="MAGIC_BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -2293,6 +2374,7 @@
 		<set name="icon" value="icon.weapon_shaelon_i11"/>
 		<set name="weight" value="1080"/>
 		<set name="type" value="BIGBLUNT"/>
+		<set name="ex_type" value="BIG_MAGIC_BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -2322,6 +2404,7 @@
 		<set name="icon" value="icon.weapon_shaelon_i11"/>
 		<set name="weight" value="1080"/>
 		<set name="type" value="BIGBLUNT"/>
+		<set name="ex_type" value="BIG_MAGIC_BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -2351,6 +2434,7 @@
 		<set name="icon" value="icon.weapon_shaelon_i11"/>
 		<set name="weight" value="1080"/>
 		<set name="type" value="BIGBLUNT"/>
+		<set name="ex_type" value="BIG_MAGIC_BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -2380,6 +2464,7 @@
 		<set name="icon" value="icon.weapon_r_dualsword_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="DUAL"/>
+		<set name="ex_type" value="DUAL_SWORD"/>		
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -2409,6 +2494,7 @@
 		<set name="icon" value="icon.weapon_r_dualsword_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="DUAL"/>
+		<set name="ex_type" value="DUAL_SWORD"/>		
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -2438,6 +2524,7 @@
 		<set name="icon" value="icon.weapon_r_dualsword_i11"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="DUAL"/>
+		<set name="ex_type" value="DUAL_SWORD"/>		
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -2467,6 +2554,7 @@
 		<set name="icon" value="icon.weapon_r_dualdagger_i11"/>
 		<set name="weight" value="2050"/>
 		<set name="type" value="DUALDAGGER"/>
+		<set name="ex_type" value="DUAL_DAGGER"/>		
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -2496,6 +2584,7 @@
 		<set name="icon" value="icon.weapon_r_dualdagger_i11"/>
 		<set name="weight" value="2050"/>
 		<set name="type" value="DUALDAGGER"/>
+		<set name="ex_type" value="DUAL_DAGGER"/>		
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -2525,6 +2614,7 @@
 		<set name="icon" value="icon.weapon_r_dualdagger_i11"/>
 		<set name="weight" value="2050"/>
 		<set name="type" value="DUALDAGGER"/>
+		<set name="ex_type" value="DUAL_DAGGER"/>		
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -2554,6 +2644,7 @@
 		<set name="icon" value="icon.weapon_r_dualblunt_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="DUALBLUNT"/>
+		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>		
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -2583,6 +2674,7 @@
 		<set name="icon" value="icon.weapon_r_dualblunt_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="DUALBLUNT"/>
+		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>		
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -2612,6 +2704,7 @@
 		<set name="icon" value="icon.weapon_r_dualblunt_i11"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="DUALBLUNT"/>
+		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>		
 		<set name="price" value="273134400"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="20692"/>
@@ -2641,6 +2734,7 @@
 		<set name="icon" value="icon.weapon_stanpid_i20"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
+		<set name="ex_type" value="DAGGER"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -2668,6 +2762,7 @@
 		<set name="icon" value="icon.weapon_plenitas_i20"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -2695,6 +2790,7 @@
 		<set name="icon" value="icon.weapon_bauen_i20"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="BIG_SWORD"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -2722,6 +2818,7 @@
 		<set name="icon" value="icon.weapon_qutram_i20"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -2749,6 +2846,7 @@
 		<set name="icon" value="icon.weapon_durga_i20"/>
 		<set name="weight" value="1550"/>
 		<set name="type" value="DUALFIST"/>
+		<set name="ex_type" value="HAND_TO_HAND"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -2776,6 +2874,7 @@
 		<set name="icon" value="icon.weapon_crabel_i20"/>
 		<set name="weight" value="2010"/>
 		<set name="type" value="POLE"/>
+		<set name="ex_type" value="POLE"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -2803,6 +2902,7 @@
 		<set name="icon" value="icon.weapon_castron_i20"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="BOW"/>
+		<set name="ex_type" value="BOW"/>	
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>

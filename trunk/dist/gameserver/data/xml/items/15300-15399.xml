@@ -1404,8 +1404,7 @@
 		</cond>
 	</etcitem>
 	<etcitem id="15382" name="Event - Scroll: Enchant Vitality Belt" add_name="Event">
-		<set name="class" value="OTHER"/>
-		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.event_energy_enchant_scroll_i00"/>
 		<set name="stackable" value="true"/>

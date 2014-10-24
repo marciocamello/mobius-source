@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<list>
+	<chaos_skill_tree>
+		<skill id="1904" level="1" name="Unbind" min_level="85" item_id="37374"/>
+		<skill id="1907" level="1" name="Prevision" min_level="85" item_id="37374"/>
+		<skill id="1912" level="1" name="Disparition" min_level="85" item_id="37374"/>
+		<skill id="1914" level="1" name="Savage" min_level="85" item_id="37374"/>
+		<skill id="1917" level="1" name="Undying Will" min_level="85" item_id="37374"/>
+		<skill id="1920" level="1" name="Endurance" min_level="85" item_id="37374"/>
+		<skill id="1922" level="1" name="Earth Tremor" min_level="85" item_id="37374"/>
+		<skill id="1925" level="1" name="Soul Protection" min_level="85" item_id="37374"/>
+	</chaos_skill_tree>
+</list>

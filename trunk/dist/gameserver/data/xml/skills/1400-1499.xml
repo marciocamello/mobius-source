@@ -145,7 +145,7 @@
 		<set name="target" val="TARGET_PARTY_ONE"/>
 		<set name="skillType" val="CALL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="-2"/>
+		<set name="castRange" val="32767"/>
 	</skill>
 	<skill id="1404" levels="1" name="Word of Invitation">
 		<set name="magicType" val="MAGIC"/>
@@ -3045,7 +3045,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
-			<effect count="1" name="Buff" stackOrder="10" stackType="pAtk;pDef" time="2400" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="pAtk;pDef" time="2400" val="0">
 				<mul order="0x30" stat="pAtk" val="1.15"/>
 				<mul order="0x30" stat="pDef" val="1.15"/>
 			</effect>

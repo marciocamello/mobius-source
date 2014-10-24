@@ -560,10 +560,13 @@
 		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="22247" levels="1" name="Scroll: Enchant Power Shirt">
+		<set name="magicType" val="SPECIAL"/>	
 		<set name="icon" val="icon.skill0000"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_ITEM"/>
+		<set name="skillType" val="ENCHANT_ARMOR"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
 	</skill>
 	<skill id="22248" levels="1" name="Blessed Scroll: Enchant Power Shirt">
 		<set name="icon" val="icon.skill0000"/>

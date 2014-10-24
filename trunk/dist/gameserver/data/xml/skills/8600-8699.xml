@@ -273,32 +273,48 @@
 		</for>
 	</skill>
 	<skill id="8624" levels="1" name="Talisman (R-grade) - Max HP">
+		<table name="#HP">219</table>
 		<set name="magicLevel" val="85"/>
 		<set name="icon" val="icon.r85_talisman_hp_up_passive"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxHp" val="#HP"/>
+		</for>		
 	</skill>
 	<skill id="8625" levels="1" name="Talisman (R90-grade) - Max HP">
+		<table name="#HP">246</table>	
 		<set name="magicLevel" val="90"/>
 		<set name="icon" val="icon.r85_talisman_hp_up_passive"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxHp" val="#HP"/>
+		</for>			
 	</skill>
 	<skill id="8626" levels="1" name="Talisman (R95-grade) - Max HP">
+		<table name="#HP">277</table>	
 		<set name="magicLevel" val="95"/>
 		<set name="icon" val="icon.r85_talisman_hp_up_passive"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxHp" val="#HP"/>
+		</for>			
 	</skill>
 	<skill id="8627" levels="1" name="Talisman (R99-grade) - Max HP">
+		<table name="#HP">305</table>	
 		<set name="magicLevel" val="99"/>
 		<set name="icon" val="icon.r85_talisman_hp_up_passive"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxHp" val="#HP"/>
+		</for>			
 	</skill>
 	<skill id="8628" levels="1" name="Talisman (R-grade) - Max MP">
 		<set name="magicLevel" val="85"/>

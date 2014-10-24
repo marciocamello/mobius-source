@@ -98,7 +98,7 @@
 		<set name="hitTime" val="500"/>
 		<set name="reuseDelay" val="5000"/>
 	</skill>
-	<skill id="10999" levels="1" name="">
+	<skill id="10999" levels="1" name="Yul Archer Air Chain Skill">
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="2000"/>
 		<set name="castRange" val="700"/>

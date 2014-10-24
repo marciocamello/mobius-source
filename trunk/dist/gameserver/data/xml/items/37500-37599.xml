@@ -246,6 +246,9 @@
 			<slot id="RIGHT_FINGER"/>
 			<slot id="LEFT_FINGER"/>
 		</equip>
+		<skills>
+			<skill id="13539" level="1"/>
+		</skills>		
 		<for>
 			<add stat="mDef" order="0x10" value="79"/>
 			<add stat="maxMp" order="0x60" value="31"/>
@@ -260,6 +263,9 @@
 		<equip>
 			<slot id="NECKLACE"/>
 		</equip>
+		<skills>
+			<skill id="13540" level="1"/>
+		</skills>		
 		<for>
 			<add stat="mDef" order="0x10" value="158"/>
 			<add stat="maxMp" order="0x60" value="62"/>

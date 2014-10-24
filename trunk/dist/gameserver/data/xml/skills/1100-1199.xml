@@ -1331,7 +1331,6 @@
 	<skill id="1182" levels="3" name="Water Resistance">
 		<table name="#res">10 15 20</table>
 		<table name="#effectPoint">243 379 418</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">18 28 31</table>
 		<table name="#mpConsume1">5 7 8</table>
@@ -1364,7 +1363,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant3>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="AquaAtr" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="AquaAtr" time="#abnormal_time" val="0">
 				<add order="0x40" stat="defenceWater" val="#res"/>
 			</effect>
 		</for>
@@ -1432,7 +1431,6 @@
 	<skill id="1189" levels="3" name="Wind Resistance">
 		<table name="#res">10 15 20</table>
 		<table name="#effectPoint">331 379 418</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">24 28 31</table>
 		<table name="#mpConsume1">6 7 8</table>
@@ -1465,7 +1463,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant3>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="WindAtr" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="WindAtr" time="#abnormal_time" val="0">
 				<add order="0x40" stat="defenceWind" val="#res"/>
 			</effect>
 		</for>
@@ -1473,7 +1471,6 @@
 	<skill id="1191" levels="3" name="Fire Resistance">
 		<table name="#res">10 15 20</table>
 		<table name="#effectPoint">285 379 418</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">21 28 31</table>
 		<table name="#mpConsume1">6 7 8</table>
@@ -1506,7 +1503,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant3>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="FireAtr" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="FireAtr" time="#abnormal_time" val="0">
 				<add order="0x40" stat="defenceFire" val="#res"/>
 			</effect>
 		</for>

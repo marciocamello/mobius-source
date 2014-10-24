@@ -654,7 +654,7 @@
 		<set name="coolTime" val="500"/>
 		<set name="reuseDelay" val="6000"/>
 		<set name="magicLevel" val="85"/>
-		<set name="hitTime" val="26720"/>
+		<set name="hitTime" val="20000"/>
 		<set name="hitCancelTime" val="26720"/>
 		<set name="mpConsume2" val="42"/>
 		<set name="target" val="TARGET_AURA"/>
@@ -680,7 +680,7 @@
 		<set name="skillType" val="MDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="power" val="834"/>
-		<set name="skillRadius" val="400"/>
+		<set name="skillRadius" val="600"/>
 	</skill>
 	<skill id="5845" levels="12" name="Trigger Bleed">
 		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>

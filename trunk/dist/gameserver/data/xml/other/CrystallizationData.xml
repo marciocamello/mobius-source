@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/CrystallizationData.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../other/CrystallizationData.xsd">
 	<grade type="R">
 		<crystal count="1451">
 			<item id="17526" count="1" chance="36.0"/>

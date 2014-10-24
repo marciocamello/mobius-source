@@ -369,6 +369,9 @@
 		<equip>
 			<slot id="BACK"/>
 		</equip>
+		<skills>
+			<skill id="19039" level="1"/>
+		</skills>		
 		<attributes>
 			<attribute element="fire" value="10"/>
 			<attribute element="water" value="10"/>
@@ -377,10 +380,6 @@
 			<attribute element="holy" value="10"/>
 			<attribute element="unholy" value="10"/>
 		</attributes>
-		<skills>
-			<skill id="19039" level="1"/>
-			<skill id="19041" level="1"/>
-		</skills>
 		<for>
 			<add stat="pDef" order="0x10" value="50"/>
 			<add stat="mDef" order="0x10" value="40"/>
@@ -400,6 +399,9 @@
 		<equip>
 			<slot id="BACK"/>
 		</equip>
+		<skills>
+			<skill id="19040" level="1"/>
+		</skills>		
 		<attributes>
 			<attribute element="fire" value="10"/>
 			<attribute element="water" value="10"/>
@@ -408,10 +410,6 @@
 			<attribute element="holy" value="10"/>
 			<attribute element="unholy" value="10"/>
 		</attributes>
-		<skills>
-			<skill id="19040" level="1"/>
-			<skill id="19041" level="1"/>
-		</skills>
 		<for>
 			<add stat="pDef" order="0x10" value="50"/>
 			<add stat="mDef" order="0x10" value="40"/>
@@ -1407,6 +1405,9 @@
 		<equip>
 			<slot id="BACK"/>
 		</equip>
+		<skills>
+			<skill id="19037" level="1"/>
+		</skills>		
 		<attributes>
 			<attribute element="fire" value="15"/>
 			<attribute element="water" value="15"/>
@@ -1415,10 +1416,6 @@
 			<attribute element="holy" value="15"/>
 			<attribute element="unholy" value="15"/>
 		</attributes>
-		<skills>
-			<skill id="19037" level="1"/>
-			<skill id="19042" level="1"/>
-		</skills>
 		<for>
 			<add stat="pDef" order="0x10" value="50"/>
 			<add stat="mDef" order="0x10" value="40"/>
@@ -1437,6 +1434,9 @@
 		<equip>
 			<slot id="BACK"/>
 		</equip>
+		<skills>
+			<skill id="19038" level="1"/>
+		</skills>		
 		<attributes>
 			<attribute element="fire" value="15"/>
 			<attribute element="water" value="15"/>
@@ -1445,10 +1445,6 @@
 			<attribute element="holy" value="15"/>
 			<attribute element="unholy" value="15"/>
 		</attributes>
-		<skills>
-			<skill id="19038" level="1"/>
-			<skill id="19042" level="1"/>
-		</skills>
 		<for>
 			<add stat="pDef" order="0x10" value="50"/>
 			<add stat="mDef" order="0x10" value="40"/>

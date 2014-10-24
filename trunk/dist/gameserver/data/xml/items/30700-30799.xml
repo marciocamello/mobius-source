@@ -1866,8 +1866,7 @@
 	</weapon>
 	<weapon id="30780" name="Bound Immortal Edge" add_name="Critical Drain">
 		<set name="icon" value="icon.weapon_invincible_blade_i01"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="weight" value="1980"/>
 		<set name="rnd_dam" value="15"/>
 		<equip>
@@ -1875,8 +1874,13 @@
 		</equip>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="ex_type" value="ANCIENT_SWORD"/>
+		<set name="destroyable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="crystal_count" value="158"/>
+		<set name="crystallizable" value="true"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystal_count" value="0"/>
+		<set name="crystal_count" value="1"/>		
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
 		<for>
@@ -1887,7 +1891,6 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
 	</weapon>
 	<weapon id="30781" name="Bound Ecliptic Axe">
 		<set name="icon" value="icon.weapon_eclipse_axe_i00"/>

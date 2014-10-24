@@ -108,6 +108,7 @@
 		</equip>
 		<set name="ex_type" value="NECKLACE"/>
 		<for>
+			<add stat="maxMp" order="0x10" value="53"/>		
 			<add stat="mDef" order="0x10" value="123"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
@@ -125,6 +126,7 @@
 		</equip>
 		<set name="ex_type" value="EARRING"/>
 		<for>
+			<add stat="maxMp" order="0x10" value="40"/>		
 			<add stat="mDef" order="0x10" value="92"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
@@ -142,6 +144,7 @@
 		</equip>
 		<set name="ex_type" value="RING"/>
 		<for>
+			<add stat="maxMp" order="0x10" value="26"/>		
 			<add stat="mDef" order="0x10" value="62"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>

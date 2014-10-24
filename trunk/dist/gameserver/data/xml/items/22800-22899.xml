@@ -8,6 +8,9 @@
 		<set name="type" value="DUALFIST"/>
 		<set name="ex_type" value="HAND_TO_HAND"/>
 		<set name="weight" value="1550"/>
+		<set name="destroyable" value="true"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>		
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
 		<set name="rnd_dam" value="20"/>
@@ -24,11 +27,74 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
+	<weapon id="22814" name="Maliss Stormer">
+		<set name="crystal_count" value="7050"/>
+		<set name="crystal_type" value="S80"/>
+		<set name="crystallizable" value="true"/>
+		<set name="icon" value="icon.weapon_vesper_stormer_i00"/>
+		<set name="price" value="143356000"/>
+		<set name="rnd_dam" value="10"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="destroyable" value="true"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>		
+		<set name="type" value="POLE"/>
+		<set name="ex_type" value="POLE"/>
+		<set name="weight" value="2010"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<skills>
+			<skill id="3599" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="396"/>
+			<add stat="mAtk" order="0x10" value="176"/>
+			<set stat="baseCrit" order="0x08" value="80"/>
+			<set stat="atkBaseSpeed" order="0x08" value="325"/>
+			<add stat="accCombat" order="0x10" value="-4.0000"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="22821" name="Steregos' Dagger">
+		<set name="crystal_count" value="7050"/>
+		<set name="crystal_type" value="S80"/>
+		<set name="crystallizable" value="true"/>
+		<set name="icon" value="icon.weapon_vesper_shaper_i00"/>
+		<set name="price" value="143356000"/>
+		<set name="rnd_dam" value="5"/>
+		<set name="soulshots" value="1"/>
+		<set name="spiritshots" value="1"/>
+		<set name="destroyable" value="true"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>		
+		<set name="type" value="DAGGER"/>
+		<set name="ex_type" value="DAGGER"/>
+		<set name="weight" value="1520"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<for>
+			<add stat="pAtk" order="0x10" value="346"/>
+			<add stat="mAtk" order="0x10" value="176"/>
+			<set stat="baseCrit" order="0x08" value="120"/>
+			<set stat="atkBaseSpeed" order="0x08" value="433"/>
+			<add stat="accCombat" order="0x10" value="-4.0000"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>	
 	<weapon id="22828" name="Ron's Dual Blunt Weapon">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="BranchSys3.Icon.g_beam_dualblunt"/>
 		<set name="price" value="0"/>
+		<set name="destroyable" value="true"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>		
 		<set name="type" value="DUALBLUNT"/>
+		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>
 		<set name="weight" value="1740"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>

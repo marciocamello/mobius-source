@@ -6,7 +6,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x40" stat="mCritDamage" val="381"/>
+			<add order="0x40" stat="mCritDamage" val="181"/>
 		</for>
 	</skill>
 	<skill id="13301" levels="3" name="Magic Two-handed Blunt Special Ability">
@@ -15,7 +15,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x40" stat="mCritDamage" val="381"/>
+			<add order="0x40" stat="mCritDamage" val="181"/>
 			<add order="0x40" stat="mAtk" val="44"/>
 			<mul order="0x40" stat="mAtkSpd" val="1.01"/>
 		</for>
@@ -26,7 +26,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x40" stat="mCritDamage" val="381"/>
+			<add order="0x40" stat="mCritDamage" val="181"/>
 			<add order="0x40" stat="mAtk" val="44"/>
 			<mul order="0x40" stat="mAtkSpd" val="1.01"/>
 		</for>
@@ -37,7 +37,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x40" stat="mCritDamage" val="381"/>
+			<add order="0x40" stat="mCritDamage" val="181"/>
 			<add order="0x40" stat="mAtk" val="44"/>
 			<mul order="0x40" stat="mAtkSpd" val="1.01"/>
 		</for>
@@ -48,7 +48,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x40" stat="mCritDamage" val="381"/>
+			<add order="0x40" stat="mCritDamage" val="181"/>
 			<add order="0x40" stat="mAtk" val="44"/>
 			<mul order="0x40" stat="mAtkSpd" val="1.01"/>
 		</for>
@@ -59,7 +59,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x40" stat="mCritDamage" val="381"/>
+			<add order="0x40" stat="mCritDamage" val="181"/>
 			<add order="0x40" stat="mAtk" val="44"/>
 			<mul order="0x40" stat="mAtkSpd" val="1.01"/>
 		</for>

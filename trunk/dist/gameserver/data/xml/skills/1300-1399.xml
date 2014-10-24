@@ -225,13 +225,12 @@
 			<table name="#mpConsume2">197 194 190 187 184 180 177 174 170 167 164 160 157 154 150 147 144 140 137 134 130 127 123 120 117 113 110 107 103 100</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#power" stackType="rCrit" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="rCrit" time="#abnormal_time" val="0">
 				<add order="0x40" stat="rCrit" val="#rCrit"/>
 			</effect>
 		</for>
 	</skill>
 	<skill id="1309" levels="3" name="Chant of Eagle">
-		<table name="#stackOrder">1 2 3</table>
 		<table name="#Tab-accCombat">2 3 4</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">137 170 189</table>
@@ -259,7 +258,7 @@
 			<table name="#mpConsume2">185 182 179 176 173 170 166 163 160 157 154 151 148 144 141 138 135 132 129 126 122 119 116 113 110 107 103 100 97 94</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#stackOrder" stackType="accuracyUp" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="accuracyUp" time="#abnormal_time" val="0">
 				<add order="0x40" stat="accCombat" val="#Tab-accCombat"/>
 			</effect>
 		</for>
@@ -292,7 +291,7 @@
 			<table name="#mpConsume2">213 209 206 202 198 195 191 188 184 180 177 173 169 166 162 159 155 151 148 144 141 137 133 130 126 122 119 115 112 108</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#Tab-absorbDam" stackType="vampRage" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="vampRage" time="#abnormal_time" val="0">
 				<add order="0x40" stat="absorbDam" val="#Tab-absorbDam"/>
 			</effect>
 		</for>
@@ -1891,7 +1890,7 @@
 			<table name="#mpConsume2">218 210 203 195 188 180 172 165 157 150 142 135 127 120 112</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="3" stackType="resist_debuff_dispel" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="resist_debuff_dispel" time="#abnormal_time" val="0">
 				<add order="0x40" stat="cancelResist" val="30"/>
 				<add order="0x40" stat="debuffResist" val="20"/>
 			</effect>
@@ -1977,7 +1976,7 @@
 			<table name="#mpConsume2">216 209 201 194 186 179 171 164 156 149 141 134 126 119 112</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="10" stackType="accuracyUp" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="accuracyUp" time="#abnormal_time" val="0">
 				<sub order="0x40" stat="critChanceRcpt" val="30"/>
 				<add order="0x40" stat="accCombat" val="4"/>
 			</effect>
@@ -2011,7 +2010,7 @@
 			<table name="#mpConsume2">216 209 201 194 186 179 171 164 156 149 141 134 126 119 112</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="10" stackType="mAtk;MagicDefUp" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="mAtk;MagicDefUp" time="#abnormal_time" val="0">
 				<mul order="0x30" stat="mAtk" val="1.75"/>
 				<mul order="0x30" stat="mDef" val="1.3"/>
 			</effect>
@@ -2606,7 +2605,7 @@
 	<skill id="1388" levels="3" name="Greater Might">
 		<table name="#pAtk">1.04 1.07 1.10</table>
 		<table name="#spiritOre">1 2 3</table>
-		<table name="#order">1 2 3</table>
+		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">43 49 55</table>
 		<table name="#mpConsume1">11 13 14</table>
@@ -2635,7 +2634,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#order" stackType="Great" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="Great" time="#abnormal_time" val="0">
 				<mul order="0x30" stat="pAtk" val="#pAtk"/>
 			</effect>
 		</for>
@@ -2643,7 +2642,7 @@
 	<skill id="1389" levels="3" name="Greater Shield">
 		<table name="#pDef">1.05 1.10 1.15</table>
 		<table name="#spiritOre">1 2 3</table>
-		<table name="#order">1 2 3</table>
+		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">43 49 55</table>
 		<table name="#mpConsume1">11 13 14</table>
@@ -2672,7 +2671,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#order" stackType="Great" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="Great" time="#abnormal_time" val="0">
 				<mul order="0x30" stat="pDef" val="#pDef"/>
 			</effect>
 		</for>
@@ -2680,7 +2679,6 @@
 	<skill id="1390" levels="3" name="War Chant">
 		<table name="#pAtk">1.04 1.07 1.10</table>
 		<table name="#spiritOre">4 8 12</table>
-		<table name="#order">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">170 195 217</table>
 		<table name="#mpConsume1">43 49 55</table>
@@ -2709,7 +2707,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#order" stackType="Great" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="Great" time="#abnormal_time" val="0">
 				<mul order="0x30" stat="pAtk" val="#pAtk"/>
 			</effect>
 		</for>
@@ -2717,7 +2715,6 @@
 	<skill id="1391" levels="3" name="Chant of Earth">
 		<table name="#pDef">1.05 1.10 1.15</table>
 		<table name="#spiritOre">4 8 12</table>
-		<table name="#order">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">170 195 217</table>
 		<table name="#mpConsume1">43 49 55</table>
@@ -2746,7 +2743,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#order" stackType="Great" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="Great" time="#abnormal_time" val="0">
 				<mul order="0x30" stat="pDef" val="#pDef"/>
 			</effect>
 		</for>
@@ -2793,7 +2790,6 @@
 	</skill>
 	<skill id="1393" levels="3" name="Dark Attack Resistance">
 		<table name="#Res">15 23 30</table>
-		<table name="#order">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">43 49 55</table>
 		<table name="#mpConsume1">11 13 14</table>
@@ -2826,7 +2822,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant3>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#order" stackType="DarkAtr" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="DarkAtr" time="#abnormal_time" val="0">
 				<add order="0x40" stat="defenceUnholy" val="#Res"/>
 			</effect>
 		</for>

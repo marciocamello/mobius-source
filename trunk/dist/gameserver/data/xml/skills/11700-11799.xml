@@ -19,7 +19,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11749" levels="1" name="">
+	<skill id="11749" levels="1" name="Iss Enchanter Air Chain Skill">
 		<set name="reuseDelay" val="10000"/>
 		<set name="coolTime" val="500"/>
 		<set name="hitTime" val="2000"/>
@@ -35,7 +35,7 @@
 		<set name="isSkillTimePermanent" val="true"/>
 		<set name="isAlterSkill" val="true"/>
 	</skill>
-	<skill id="11750" levels="1" name="">
+	<skill id="11750" levels="1" name="Iss Enchanter Knock Chain Skill">
 		<set name="reuseDelay" val="10000"/>
 		<set name="coolTime" val="500"/>
 		<set name="castRange" val="900"/>
@@ -119,6 +119,7 @@
 		<set name="hitTime" val="2200"/>
 		<set name="castRange" val="600"/>
 		<set name="magicType" val="MAGIC"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="target" val="TARGET_PARTY_ONE"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="magicLevel" val="#magicLevel"/>
@@ -140,6 +141,7 @@
 		</for>
 	</skill>
 	<skill id="11755" levels="8" name="Radiant Heal">
+		<table name="#mpConsume2">138 138 141 143 146 148 151 153</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#power">1488 1495 1507 1519 1532 1544 1557 1570</table>
 		<set name="reuseDelay" val="3000"/>
@@ -148,6 +150,7 @@
 		<set name="castRange" val="600"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="power" val="#power"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HEAL_HP_CP"/>
@@ -161,7 +164,9 @@
 	<skill id="11756" levels="8" name="Panic Heal">
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#power">1488 1495 1507 1519 1532 1544 1557 1570</table>
+		<table name="#mpConsume2">207 208 212 216 218 222 226 230</table>
 		<set name="reuseDelay" val="1000"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="coolTime" val="500"/>
 		<set name="hitTime" val="1500"/>
 		<set name="castRange" val="600"/>
@@ -180,11 +185,13 @@
 	<skill id="11757" levels="8" name="Brilliant Heal">
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
 		<table name="#power">1191 1200 1210 1220 1230 1240 1250 1261</table>
+		<table name="#mpConsume2">277 281 286 290 295 300 305 310</table>
 		<set name="reuseDelay" val="5000"/>
 		<set name="coolTime" val="500"/>
 		<set name="hitTime" val="6500"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="power" val="#power"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="target" val="TARGET_PARTY"/>
 		<set name="skillRadius" val="900"/>
@@ -234,11 +241,13 @@
 		</for>
 	</skill>
 	<skill id="11760" levels="8" name="Radiant Recharge">
+		<table name="#mpConsume2">183 186 188 192 196 200 203 207</table>
 		<table name="#power">166 167 170 174 177 180 183 187</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<set name="reuseDelay" val="3000"/>
 		<set name="coolTime" val="500"/>
 		<set name="hitTime" val="5500"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="power" val="#power"/>
@@ -248,7 +257,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1013;"/>
 		<cond msgId="113" addName="1">
-			<target forbiddenClassIds="29;42;105;112;146"/>
+			<target forbiddenClassIds="29;42;105;112;146;179;180;181"/>
 		</cond>
 		<enchant1 levels="10" name="Cost">
 			<table name="#power">190 191 193 195 198 201 205 208 210 215</table>
@@ -259,11 +268,13 @@
 		</for>
 	</skill>
 	<skill id="11761" levels="5" name="Brilliant Recharge">
+		<table name="#mpConsume2"> 3900 3970 4030 4110 4180</table>
 		<table name="#power">140 143 145 148 150</table>
 		<table name="#magicLevel">85 86 87 88 89</table>
 		<set name="reuseDelay" val="300000"/>
 		<set name="coolTime" val="500"/>
 		<set name="hitTime" val="5500"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="power" val="#power"/>
@@ -281,6 +292,8 @@
 		</for>
 	</skill>
 	<skill id="11762" levels="1" name="Balance Heal">
+		<table name="#mpConsume2">178</table>
+		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="reuseDelay" val="20000"/>
 		<set name="coolTime" val="1000"/>
 		<set name="hitTime" val="1500"/>
@@ -387,11 +400,13 @@
 		</for>
 	</skill>
 	<skill id="11766" levels="8" name="Dark Blast">
+		<table name="#mpConsume2">70 72 76 78 82 85 88 92</table>
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
 		<table name="#power">128 132 136 140 144 146 150 154</table>
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
 		<table name="#powerPvP">0</table>
+		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="reuseDelay" val="2000"/>
 		<set name="castRange" val="900"/>
 		<set name="castTime" val="2280"/>
@@ -435,9 +450,11 @@
 	<skill id="11767" levels="8" name="Mass Dark Veil">
 		<table name="#magicLevel">85 86 87 88 89 90 91 92</table>
 		<table name="#power">117 119 123 126 129 133 136 139</table>
+		<table name="#mpConsume2">423 432 450 468 487 506 526 547</table>
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
 		<table name="#powerPvP">0</table>
+		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="reuseDelay" val="6799"/>
 		<set name="castRange" val="900"/>
 		<set name="castTime" val="3780"/>
@@ -507,11 +524,12 @@
 		</for>
 	</skill>
 	<skill id="11769" levels="6" name="Dark Backfire">
-		<table name="#mpConsum">1.5 2.0 2.5 3.0 3.5 4.0</table>
+		<table name="#mpConsume2">35 36 38 41 43 46</table>
 		<table name="#magicLevel">85 87 90 93 96 99</table>
 		<table name="#activateRate">80</table>
 		<table name="#patkspd">.8</table>
 		<table name="#matkspd">.8</table>
+		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="time" val="100"/>
 		<set name="reuseDelay" val="30999"/>
 		<set name="castRange" val="600"/>
@@ -543,8 +561,6 @@
 			<effect count="1" name="Buff" time="30" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="#patkspd"/>
 				<mul order="0x30" stat="mAtkSpd" val="#matkspd"/>
-				<mul order="0x30" stat="mpConsum" val="#mpConsum"/>
-				<mul order="0x30" stat="mpConsumePhysical" val="#mpConsum"/>
 			</effect>
 		</for>
 	</skill>
@@ -672,6 +688,7 @@
 		<table name="#magicLevel">85 86 89 92</table>
 		<table name="#mpConsume2">96 106 117 127</table>
 		<table name="#npcid">14925 14944 14945 14946</table>
+		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="reuseDelay" val="10000"/>
 		<set name="coolTime" val="500"/>
 		<set name="hitTime" val="5000"/>
@@ -696,7 +713,7 @@
 		<table name="#mdef">0.9 0.85 0.8 0.75 0.75</table>
 		<table name="#abnormal">6 7 8 9 10</table>
 		<table name="#activateRate">80</table>
-		<table name="#mpConsume2">40</table>
+		<table name="#mpConsume2">40 42 45 47 52</table>
 		<table name="#time">60</table>
 		<set name="time" val="60"/>
 		<set name="reuseDelay" val="4000"/>
@@ -735,7 +752,7 @@
 		<table name="#magicLevel">85 86 87 88 89 90</table>
 		<table name="#activateRate">50</table>
 		<table name="#abnormal_time">20</table>
-		<table name="#mpConsume2">40</table>
+		<table name="#mpConsume2">26 26 27 30 31 33</table>
 		<set name="reuseDelay" val="30000"/>
 		<set name="hitTime" val="1500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -784,9 +801,11 @@
 		</for>
 	</skill>
 	<skill id="11780" levels="6" name="Dark Devour">
+		<table name="#mpConsume2">35 36 37 40 42 45</table>
 		<table name="#magicLevel">85 86 89 92 95 98</table>
 		<table name="#hpEff">0.50 0.52 0.56 0.6 0.65 0.7</table>
 		<table name="#activateRate">50</table>
+		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="reuseDelay" val="30000"/>
 		<set name="coolTime" val="500"/>
 		<set name="hitTime" val="1500"/>
@@ -861,7 +880,8 @@
 		<table name="#power">85.0 90.0 95.0 100.0</table>
 		<table name="#effectPoint">121 196 290 374</table>
 		<table name="#magicLevel">90 92 93 95</table>
-		<table name="#mpConsume2">50</table>
+		<table name="#mpConsume2">35 38 42 46</table>
+		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="reuseDelay" val="10000"/>
 		<set name="coolTime" val="500"/>
 		<set name="hitTime" val="2000"/>
@@ -882,7 +902,7 @@
 		<table name="#power">90.0 95.0 100.0</table>
 		<table name="#effectPoint">196 290 374</table>
 		<table name="#magicLevel">92 93 95</table>
-		<table name="#mpConsume2">150</table>
+		<table name="#mpConsume2">133 145 152</table>
 		<set name="reuseDelay" val="600000"/>
 		<set name="coolTime" val="500"/>
 		<set name="hitTime" val="3000"/>

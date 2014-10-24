@@ -1093,12 +1093,14 @@
 			<mul order="0x90" stat="runSpd" val="#rateSpd"/>
 		</for>
 	</skill>
-	<skill id="4271" levels="8" name="Momentum">
-		<set name="icon" val="icon.skill4271_1"/>
-		<set name="magicLevel" val="1"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+	<skill id="4271" levels="15" name="Momentum">
+		<set name="reuseDelay" val="4000"/>
+		<set name="magicLevel" val="97"/>
+		<set name="icon" val="icon.skill4271"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CHARGE"/>
+		<set name="maxCharges" val="15"/>
 	</skill>
 	<skill id="4272" levels="1" name="Greater Bow/Crossbow Resistance">
 		<table name="#Tab-bowRcpt">70</table>

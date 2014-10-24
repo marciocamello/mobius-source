@@ -564,9 +564,9 @@
 	<skill id="6054" levels="1" name="Switch State">
 		<set name="icon" val="icon.skill0000"/>
 		<set name="magicLevel" val="85"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_TOGGLE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="operateType" val="OP_ACTIVE_TOGGLE"/>
 	</skill>
 	<skill id="6055" levels="1" name="Report Status">
 		<set name="magicType" val="SPECIAL"/>
