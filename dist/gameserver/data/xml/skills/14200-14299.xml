@@ -521,8 +521,8 @@
 	</skill>
 	<skill id="14262" levels="2" name="Flame Hurl">
 		<set name="icon" val="icon.skill1230"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="600"/>
 		<set name="hitTime" val="1500"/>
@@ -721,18 +721,23 @@
 		<set name="castRange" val="1000"/>
 	</skill>
 	<skill id="14285" levels="1" name="Octavis' Arrow Shaft">
+		<set name="levelModifier" val="1"/>
+		<set name="magicType" val="SPECIAL"/>
 		<set name="castRange" val="1000"/>
 		<set name="power" val="50000"/>
-		<set name="coolTime" val="10"/>
-		<set name="effectRange" val="1000"/>
 		<set name="hitTime" val="5000"/>
-		<set name="magicLvl" val="0"/>
+		<set name="magicLvl" val="99"/>
 		<set name="mpConsume" val="50"/>
 		<set name="nextActionAttack" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="508;"/>		
 		<set name="reuseDelay" val="5000"/>
+		<set name="skillRadius" val="1000"/>
 		<set name="skillType" val="PDAM"/>
-		<set name="target" val="TARGET_ONE"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="icon" val="icon.skill0507"/>	
+		<set name="saveVs" val="CON"/>
+		<set name="trait" val="BLEED"/>
 	</skill>
 	<skill id="14286" levels="1" name="Teleport">
 		<set name="icon" val="icon.skill0000"/>

@@ -56,10 +56,40 @@
 		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="130"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<enchant_options>
+			<level val="4">
+				<option id="24975"/>
+			</level>
+			<level val="5">
+				<option id="24976"/>
+				<option id="24981"/>
+			</level>
+			<level val="6">
+				<option id="24977"/>
+				<option id="24981"/>
+			</level>
+			<level val="7">
+				<option id="24978"/>
+				<option id="24981"/>
+				<option id="24982"/>
+			</level>
+			<level val="8">
+				<option id="24979"/>
+				<option id="24981"/>
+				<option id="24982"/>
+			</level>
+			<level val="9">
+				<option id="24980"/>
+				<option id="24981"/>
+				<option id="24983"/>
+			</level>
+		</enchant_options>
 		<equip>
-			<slot id="CHEST"/>
+			<slot id="UNDERWEAR"/>
 		</equip>
-		<set name="ex_type" value="UPPER_PIECE"/>
+		<set name="ex_type" value="UNDERWEAR"/>
 		<for>
 			<add stat="pDef" order="0x10" value="28"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>

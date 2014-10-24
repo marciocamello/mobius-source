@@ -267,7 +267,7 @@
 		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="#stackLevel" stackType="MagicDefUp;pAtk;pDef;mAtk">
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="MagicDefUp;pAtk;pDef;mAtk">
 				<mul order="0x30" stat="pDef" val="1.15"/>
 				<mul order="0x30" stat="pAtk" val="#pAtk"/>
 				<mul order="0x30" stat="mAtk" val="#mAtk"/>
@@ -290,7 +290,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1356;1413;1363;"/>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="#stackLevel" stackType="ancient">
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="ancient">
 				<mul order="0x30" stat="maxMp" val="1.2"/>
 				<mul order="0x30" stat="regHp" val="1.2"/>
 				<add order="0x40" stat="mCritRate" val="20"/>
@@ -321,7 +321,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1044;1045;1501;1048;"/>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="#stackLevel" stackType="hp_up;hpregen;mp_up">
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="hp_up;hpregen;mp_up">
 				<mul order="0x30" stat="maxHp" val="#vuln"/>
 				<mul order="0x30" stat="maxMp" val="#vuln"/>
 				<mul order="0x30" stat="maxCp" val="#vuln"/>
@@ -344,7 +344,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1476;1242;1253;1308;1518;1077;"/>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="#stackLevel" stackType="impulse;rCrit;cAtk">
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="impulse;rCrit;cAtk">
 				<mul order="0x30" stat="rCrit" val="#vuln"/>
 				<mul order="0x30" stat="cAtk" val="1.35"/>
 				<add order="0x40" stat="mCritRate" val="20"/>
@@ -369,7 +369,7 @@
 		<set name="magicLevel" val="85"/>
 		<set name="relationSkillsId" val="1535;230;1461;1240;1252;1309;"/>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="#stackLevel" stackType="accuracyUp;SpeedUp;Poem_Arfa;rEvas;CoP">
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="accuracyUp;SpeedUp;Poem_Arfa;rEvas;CoP">
 				<add order="0x40" stat="accCombat" val="#vuln"/>
 				<add order="0x40" stat="rEvas" val="#vuln"/>
 				<add order="0x40" stat="mEvas" val="#vuln"/>
@@ -394,7 +394,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1002;1251;1310;971;1519;1086;"/>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="#stackLevel" stackType="vampRage;pAtkSpeedUp;mAtkSpeedUp">
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="vampRage;pAtkSpeedUp;mAtkSpeedUp">
 				<add order="0x40" stat="absorbDam" val="9"/>
 				<mul order="0x30" stat="pAtkSpd" val="#vuln1"/>
 				<mul order="0x30" stat="mAtkSpd" val="#vuln2"/>
@@ -414,7 +414,7 @@
 		<set name="relationSkillsId" val="1283;1590;264;1243;1389;1391;271;"/>
 		<enchant4 levels="10" name="Recycle" enchRoute="9"/>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="shieldProbUp;sDef;Harmony_isa;Great;HarmonyGuardian_1;HarmonyGuardian_2;song_of_hunter;dance_of_fire;dance_of_warrior;song_of_earth;rhythm_of_critical;rhythm_of_combat;berserk">
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="Great;shieldProbUp;sDef;Harmony_isa;Great;HarmonyGuardian_1;HarmonyGuardian_2;song_of_hunter;dance_of_fire;dance_of_warrior;song_of_earth;rhythm_of_critical;rhythm_of_combat;berserk">
 				<mul order="0x30" stat="pAtk" val="1.12"/>
 				<mul order="0x30" stat="pDef" val="1.45"/>
 				<add order="0x40" stat="rShld" val="30"/>
@@ -462,7 +462,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="267;273;349;1588;1078;365;336;1596;337;"/>
 		<for>
-			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="concentration;Harmony_isa;buff_one;HarmonyMage_1;HarmonyMage_2;HarmonyMage_3;rhythm_of_magic;dance_of_mystic;song_of_warding;dance_of_siren;song_of_renewal;rhythm_of_start;berserk">
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="Great;concentration;Harmony_isa;buff_one;HarmonyMage_1;HarmonyMage_2;HarmonyMage_3;rhythm_of_magic;dance_of_mystic;song_of_warding;dance_of_siren;song_of_renewal;rhythm_of_start;berserk">
 				<mul order="0x30" stat="pAtk" val="1.08"/>
 				<mul order="0x30" stat="mAtk" val="1.40"/>
 				<mul order="0x30" stat="mAtkSpd" val="1.08"/>

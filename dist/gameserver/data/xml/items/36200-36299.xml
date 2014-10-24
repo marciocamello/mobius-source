@@ -571,6 +571,20 @@
 			<skill id="13441" level="1"/>
 		</skills>
 	</armor>
+	<armor id="36255" name="Orfen's Soul Earring">
+		<set name="crystal_type" value="R"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<set name="ex_type" value="RING"/>
+		<skills>
+			<skill id="13442" level="1"/>
+		</skills>
+	</armor>	
 	<etcitem id="36256" name="Transformation Scroll: Anakim">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
@@ -578,6 +592,19 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_trans_4f_s_b_01"/>
 	</etcitem>
+	<armor id="36257" name="Lilith' Soul Necklace">
+		<set name="crystal_type" value="R"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="NECKLACE"/>
+		</equip>
+		<set name="ex_type" value="NECKLACE"/>
+		<skills>
+			<skill id="13442" level="1"/>
+		</skills>
+	</armor>	
 	<etcitem id="36258" name="Transformation Potion: Queen Ant">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>

@@ -1,13 +1,19 @@
 <?xml version="1.0"?>
 <list>
 	<skill id="10300" levels="3" name="Last Attack">
+		<!-- Done by Rest Zone Team 2014 -->
 		<table name="#targetHp">20</table>
 		<table name="#magicLevel">90 95 99</table>
-		<table name="#activateRate">30 40 50</table>
+		<table name="#power">24004 27526 30343</table>
+		<table name="#mp">92 99 105</table>
+		<set name="mpConsume" val="#mp"/>
+		<set name="hitTime" val="1690"/>
+		<set name="power" val="#power"/>
+		<set name="skillRadius" val="40"/>
 		<set name="target" val="TARGET_ONE"/>
-		<set name="skillType" val="DEBUFF"/>
+		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="activateRate" val="#activateRate"/>
+		<set name="reuseDelay" val="32000"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<cond msgId="113" addName="1">
 			<and>
@@ -15,16 +21,19 @@
 				<target mob="true"/>
 			</and>
 		</cond>
+		<cond msg="Requires Pole, Sword, Blunt, Dual Sword, Big Blunt, Big Sword, Dual Fist.">
+			<using kind="Pole, Sword, Blunt, Dual Sword, Big Blunt, Big Sword, Dual Fist, Dual Blunt"/>
+			<and>
+				<target mindistance="150"/>
+				<not>
+					<using kind="Bow, Crossbow"/>
+				</not>
+			</and>
+		</cond>
 		<enchant1 levels="10" name="Cost"/>
 		<enchant2 name="Decrease Penalty">
 			<table name="#targetHp">21 22 23 24 25 26 27 28 29 30</table>
 		</enchant2>
-		<for>
-			<effect name="HpToOne"/>
-		</for>
-		<set name="castRange" val="40"/>
-		<set name="hitTime" val="1690"/>
-		<set name="reuseDelay" val="15000"/>
 	</skill>
 	<skill id="10301" levels="1" name="Maximum Force Mastery">
 		<set name="magicLevel" val="85"/>
@@ -254,10 +263,10 @@
 			<mul order="0x40" stat="pvpPhysDmgBonus" val="1.05"/>
 		</for>
 	</skill>
-	<skill id="10317" levels="4" name="Thunder Slasher">
+	<skill id="10317" levels="1" name="Thunder Slasher">
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume2">78 87 99 103</table>
-		<table name="#power">26003 30409 35883 37680</table>
+		<table name="#power">26003</table>
 		<table name="#rCrit">40 42 45 48</table>
 		<set name="reuseDelay" val="15999"/>
 		<set name="power" val="#power"/>
@@ -272,6 +281,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="shieldignore" val="true"/>
+		<set name="activateRate" val="80"/>		
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="5" val="0"/>
 		</for>

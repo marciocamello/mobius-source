@@ -1096,7 +1096,7 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
+		<set name="destroyable" value="true"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.ench_wp_potion_violet_i00"/>
 		<set name="stackable" value="true"/>
@@ -1109,7 +1109,7 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
+		<set name="destroyable" value="true"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.ench_am_potion_violet_i00"/>
 		<set name="stackable" value="true"/>
@@ -1219,7 +1219,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="storeable" value="false"/>
-		<set name="destroyable" value="false"/>
+		<set name="destroyable" value="true"/>
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="0"/>
@@ -1254,7 +1254,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="storeable" value="false"/>
-		<set name="destroyable" value="false"/>
+		<set name="destroyable" value="true"/>
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="0"/>
@@ -1283,7 +1283,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="storeable" value="false"/>
-		<set name="destroyable" value="false"/>
+		<set name="destroyable" value="true"/>
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="0"/>
@@ -1312,7 +1312,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="storeable" value="false"/>
-		<set name="destroyable" value="false"/>
+		<set name="destroyable" value="true"/>
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="0"/>
@@ -1341,7 +1341,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="storeable" value="false"/>
-		<set name="destroyable" value="false"/>
+		<set name="destroyable" value="true"/>
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="0"/>
@@ -1370,7 +1370,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="storeable" value="false"/>
-		<set name="destroyable" value="false"/>
+		<set name="destroyable" value="true"/>
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="0"/>
@@ -1399,7 +1399,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="storeable" value="false"/>
-		<set name="destroyable" value="false"/>
+		<set name="destroyable" value="true"/>
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="0"/>
@@ -1429,7 +1429,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="storeable" value="false"/>
-		<set name="destroyable" value="false"/>
+		<set name="destroyable" value="true"/>
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="0"/>

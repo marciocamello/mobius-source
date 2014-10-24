@@ -949,6 +949,9 @@
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="1520"/>
+		<set name="destroyable" value="true"/>
+		<set name="crystal_count" value="1659"/>
+		<set name="crystallizable" value="true"/>		
 		<equip>
 			<slot id="RIGHT_HAND"/>
 		</equip>
@@ -977,6 +980,9 @@
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
 		<set name="weight" value="1520"/>
+		<set name="destroyable" value="true"/>	
+		<set name="crystal_count" value="1659"/>
+		<set name="crystallizable" value="true"/>		
 		<equip>
 			<slot id="RIGHT_HAND"/>
 		</equip>
@@ -1006,6 +1012,9 @@
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1740"/>
+		<set name="destroyable" value="true"/>		
+		<set name="crystal_count" value="1659"/>
+		<set name="crystallizable" value="true"/>
 		<equip>
 			<slot id="RIGHT_HAND"/>
 		</equip>
@@ -1035,6 +1044,9 @@
 		<set name="type" value="BIGBLUNT"/>
 		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
 		<set name="weight" value="1740"/>
+		<set name="destroyable" value="true"/>		
+		<set name="crystal_count" value="1659"/>
+		<set name="crystallizable" value="true"/>
 		<equip>
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
@@ -1065,6 +1077,9 @@
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
 		<set name="weight" value="1740"/>
+		<set name="destroyable" value="true"/>		
+		<set name="crystal_count" value="1659"/>
+		<set name="crystallizable" value="true"/>		
 		<equip>
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
@@ -1093,6 +1108,9 @@
 		<set name="type" value="DUALFIST"/>
 		<set name="ex_type" value="HAND_TO_HAND"/>
 		<set name="weight" value="1550"/>
+		<set name="destroyable" value="true"/>	
+		<set name="crystal_count" value="1659"/>
+		<set name="crystallizable" value="true"/>		
 		<equip>
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
@@ -1122,6 +1140,9 @@
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
 		<set name="weight" value="2010"/>
+		<set name="destroyable" value="true"/>	
+		<set name="crystal_count" value="1659"/>
+		<set name="crystallizable" value="true"/>		
 		<equip>
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
@@ -1155,6 +1176,9 @@
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1080"/>
+		<set name="destroyable" value="true"/>	
+		<set name="crystal_count" value="1659"/>
+		<set name="crystallizable" value="true"/>
 		<equip>
 			<slot id="RIGHT_HAND"/>
 		</equip>
@@ -1185,6 +1209,9 @@
 		<set name="type" value="BIGBLUNT"/>
 		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
 		<set name="weight" value="1080"/>
+		<set name="destroyable" value="true"/>	
+		<set name="crystal_count" value="1659"/>
+		<set name="crystallizable" value="true"/>		
 		<equip>
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
@@ -1215,6 +1242,9 @@
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="1520"/>
+		<set name="destroyable" value="true"/>	
+		<set name="crystal_count" value="1659"/>
+		<set name="crystallizable" value="true"/>		
 		<equip>
 			<slot id="RIGHT_HAND"/>
 		</equip>
@@ -1246,6 +1276,9 @@
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
 		<set name="weight" value="1520"/>
+		<set name="destroyable" value="true"/>	
+		<set name="crystal_count" value="1659"/>
+		<set name="crystallizable" value="true"/>		
 		<equip>
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
@@ -1276,6 +1309,9 @@
 		<set name="type" value="RAPIER"/>
 		<set name="ex_type" value="RAPIER"/>
 		<set name="weight" value="1280"/>
+		<set name="destroyable" value="true"/>	
+		<set name="crystal_count" value="1659"/>
+		<set name="crystallizable" value="true"/>		
 		<equip>
 			<slot id="RIGHT_HAND"/>
 		</equip>
@@ -1306,6 +1342,9 @@
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="ex_type" value="ANCIENT_SWORD"/>
 		<set name="weight" value="1800"/>
+		<set name="destroyable" value="true"/>	
+		<set name="crystal_count" value="1659"/>
+		<set name="crystallizable" value="true"/>		
 		<equip>
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
@@ -1337,6 +1376,9 @@
 		<set name="type" value="CROSSBOW"/>
 		<set name="ex_type" value="CROSSBOW"/>
 		<set name="weight" value="1580"/>
+		<set name="destroyable" value="true"/>		
+		<set name="crystal_count" value="1659"/>
+		<set name="crystallizable" value="true"/>		
 		<equip>
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>

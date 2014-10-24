@@ -314,7 +314,7 @@
 		<set name="icon" value="icon.weapon_arcorda_i00"/>
 		<set name="rnd_dam" value="20"/>
 		<equip>
-			<slot id="RIGHT_HAND"/>
+			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
@@ -333,7 +333,7 @@
 		<set name="icon" value="icon.weapon_arcorda_i00"/>
 		<set name="rnd_dam" value="20"/>
 		<equip>
-			<slot id="RIGHT_HAND"/>
+			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
@@ -624,7 +624,7 @@
 		<set name="icon" value="icon.weapon_spigel_i00"/>
 		<set name="rnd_dam" value="10"/>
 		<equip>
-			<slot id="RIGHT_HAND"/>
+			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -720,7 +720,7 @@
 		<set name="icon" value="icon.weapon_arcorda_i00"/>
 		<set name="rnd_dam" value="20"/>
 		<equip>
-			<slot id="RIGHT_HAND"/>
+			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
@@ -1352,12 +1352,14 @@
 		<set name="icon" value="icon.etc_spell_shot_gold_i01"/>
 	</etcitem>
 	<etcitem id="33794" name="Blessed Spiritshot (R-grade)" add_name="Event">
-		<set name="class" value="OTHER"/>
-		<set name="ex_type" value="OTHER_ITEMS"/>
-		<set name="crystal_type" value="NONE"/>
+		<set name="freightable" value="true"/>
+		<set name="class" value="CONSUMABLE"/>
+		<set name="crystal_type" value="R"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.blessed_spiritshot_r_i00"/>
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
-		<set name="icon" value="icon.blessed_spiritshot_r_i00"/>
+		<set name="weight" value="1"/>
 	</etcitem>
 	<etcitem id="33795" name="Returning Hero's Vitality Replenishing Juice 3-unit Pack" add_name="Event">
 		<set name="class" value="OTHER"/>

@@ -161,8 +161,11 @@
 		<set name="weight" value="1800"/>
 		<set name="rnd_dam" value="10"/>
 		<equip>
-			<slot id="RIGHT_HAND"/>
+			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
+		<skills>
+			<skill id="3599" level="1"/>
+		</skills>		
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
 		<set name="crystal_type" value="S"/>
@@ -186,8 +189,11 @@
 		<set name="weight" value="1800"/>
 		<set name="rnd_dam" value="10"/>
 		<equip>
-			<slot id="RIGHT_HAND"/>
+			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
+		<skills>
+			<skill id="3599" level="1"/>
+		</skills>		
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
 		<set name="crystal_type" value="S"/>
@@ -214,8 +220,11 @@
 		<set name="weight" value="1800"/>
 		<set name="rnd_dam" value="10"/>
 		<equip>
-			<slot id="RIGHT_HAND"/>
+			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
+		<skills>
+			<skill id="3599" level="1"/>
+		</skills>		
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
 		<set name="crystal_type" value="S"/>
@@ -242,8 +251,11 @@
 		<set name="weight" value="1800"/>
 		<set name="rnd_dam" value="10"/>
 		<equip>
-			<slot id="RIGHT_HAND"/>
+			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
+		<skills>
+			<skill id="3599" level="1"/>
+		</skills>		
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
 		<set name="crystal_type" value="S"/>

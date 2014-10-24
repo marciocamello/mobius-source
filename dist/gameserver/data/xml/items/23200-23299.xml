@@ -92,75 +92,207 @@
 	</etcitem>
 	<etcitem id="23211" name="Drake Maul Appearance Stone">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_twohand_blunt"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="23212" name="Freya's Staff Appearance Stone">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_twohand_blunt"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="23213" name="Spezion's Claw Appearance Stone">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_dualfist"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="23214" name="Maliss Stormer Appearance Stone">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_pole"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="23215" name="Steregos' Dagger Appearance Stone">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_dagger"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="23216" name="Ron's Dual Blunt Weapon Appearance Stone">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_dualblunt"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="23217" name="Darion's Hellblade Appearance Stone">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_sword"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="23218" name="Doll Blader's Butcher Blades Appearance Stone">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_dualdagger"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="23219" name="Tiat's Claw of Destruction Appearance Stone">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_blunt"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="23220" name="Aenkinel's Blades of Delusion Appearance Stone">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_dual"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="23221" name="Yehan Klanikus' Blood Brother Appearance Stone">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_twohand_sword"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="23222" name="Mardil's Fan Appearance Stone">
 		<set name="icon" value="BranchSys3.Icon.g_shape_shifting_sword"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="23223" name="Monster Weapon Appearance Stone Pack A">
 		<set name="icon" value="icon.event_hero_treasure_box_i00"/>

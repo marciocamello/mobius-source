@@ -132,10 +132,8 @@
 		<set name="isMusic" val="true"/>
 		<set name="dispelType" val="negative"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="200"/>		
 		<for>
-			<effect count="1" name="Buff" time="5" val="0">
-				<add order="0x40" stat="runSpd" val="30"/>
-			</effect>
 			<effect count="1" name="BlockTarget" time="5" val="0"/>
 			<effect count="1" name="DispelEffects" time="0" val="0">
 				<def name="dispelType" val="cleanse"/>
@@ -143,7 +141,6 @@
 				<def name="negateCount" val="10"/>
 			</effect>
 		</for>
-		<set name="hitTime" val="200"/>
 	</skill>
 	<skill id="1913" levels="1" name="Life Siphon">
 		<set name="target" val="TARGET_SELF"/>
@@ -1087,7 +1084,7 @@
 		<set name="isAwakeningToggle" val="true"/>
 		<for>
 			<effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="DualMaximumHp" stackOrder="1">
-				<add order="0x40" stat="maxHp" val="463"/>
+				<add order="0x40" stat="maxHp" val="#HP"/>
 			</effect>
 		</for>
 	</skill>

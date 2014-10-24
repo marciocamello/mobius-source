@@ -411,6 +411,75 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_ev_kalie_treasure_box"/>
 	</etcitem>
+	<armor id="36167" name="Nurka's Belt">
+		<set name="crystal_type" value="R"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="enchantable" value="true"/>
+		<set name="destroyable" value="true"/>
+		<set name="crystal_count" value="3597"/>
+		<set name="crystallizable" value="true"/>	
+		<set name="icon" value="icon.dual_belt1"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="440"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="25"/>
+		</for>
+		<skills>
+			<skill id="13411" level="1"/>
+		</skills>
+	</armor>
+	<armor id="36168" name="Lidia's Belt">
+		<set name="crystal_type" value="R"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="enchantable" value="true"/>
+		<set name="destroyable" value="true"/>
+		<set name="crystal_count" value="3597"/>
+		<set name="crystallizable" value="true"/>		
+		<set name="icon" value="icon.dual_belt1"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="440"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="25"/>
+		</for>
+		<skills>
+			<skill id="13411" level="1"/>
+		</skills>
+	</armor>	
+	<armor id="36169" name="Gustav's Belt">
+		<set name="crystal_type" value="R"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="enchantable" value="true"/>
+		<set name="destroyable" value="true"/>
+		<set name="crystal_count" value="3597"/>
+		<set name="crystallizable" value="true"/>	
+		<set name="icon" value="icon.dual_belt1"/>
+		<set name="price" value="0"/>
+		<set name="type" value="LIGHT"/>
+		<set name="weight" value="440"/>
+		<equip>
+			<slot id="BELT"/>
+		</equip>
+		<for>
+			<add stat="pDef" order="0x10" value="25"/>
+		</for>
+		<skills>
+			<skill id="13411" level="1"/>
+		</skills>
+	</armor>
 	<etcitem id="36170" name="Scroll of Escape: Fog of Blood Region">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>

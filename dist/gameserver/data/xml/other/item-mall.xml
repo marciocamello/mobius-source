@@ -7,16 +7,16 @@
 	category: 4 - package
 	category: 5 - other
 	tabId = 1 Event
-	tabId = 2 Reccomended
+	tabId = 2 Recommended
 	tabId = 4 Popular
 	payment_item_id = -1 - Account points (ruofflike)
 	payment_item_id > 0 - Ingame items (Adena, coints, etc)
 	Base Parameters: <product id="0" name=""  price="0" category="5" tabId="2"  is_event="false" is_best="false" is_new="false" on_sale="false" sale_start_date="1980/01/01 08:00" sale_end_date="2037/06/01 08:00" on_sale="true">
 	<config payment_item_id="57" recent_list_size="5"/>
 	-->
-	<!-- Discovery Pack -->
-	<product id="1010001" category="4" price="8" tabId="2" on_sale="true">
-		<component item_id="22568" count="1"/>
+	<!-- Ruler's Authority -->
+	<product id="1010001" name="Ruler's Authority" category="5" price="2500" tabId="2" is_event="true" is_best="true" on_sale="true">
+		<component item_id="35564" count="1"/>
 	</product>
 	<!-- Adventure Pack -->
 	<product id="1010002" category="4" price="8" tabId="2" on_sale="true">

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="12000" levels="1" name="">
+	<skill id="12000" levels="1" name="Aeore Chain Skill Knock Blow">
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="2000"/>
 		<set name="mpConsume2" val="40"/>
@@ -56,30 +56,30 @@
 		<set name="SummonMinCount" val="120"/>
 		<skill id="12005" levels="1" name="Spray Insecticide">
 			<set name="icon" val="icon.bug_spray_a"/>
-		<set name="castRange" val="150"/>
+			<set name="castRange" val="150"/>
 			<set name="target" val="TARGET_ONE"/>
 			<set name="reuseDelay" val="3000"/>
 			<set name="skillType" val="BUFF"/>
 			<set name="operateType" val="OP_ACTIVE"/>
-		<set name="hitTime" val="3000"/>
+			<set name="hitTime" val="3000"/>
 		</skill>
 		<skill id="12006" levels="1" name="Spray Insecticide">
 			<set name="icon" val="icon.bug_spray_b"/>
-		<set name="castRange" val="150"/>
+			<set name="castRange" val="150"/>
 			<set name="target" val="TARGET_ONE"/>
 			<set name="reuseDelay" val="3000"/>
 			<set name="skillType" val="BUFF"/>
 			<set name="operateType" val="OP_ACTIVE"/>
-		<set name="hitTime" val="3000"/>
+			<set name="hitTime" val="3000"/>
 		</skill>
 		<skill id="12007" levels="1" name="Spray Insecticide">
 			<set name="icon" val="icon.bug_spray_c"/>
-		<set name="castRange" val="150"/>
+			<set name="castRange" val="150"/>
 			<set name="target" val="TARGET_ONE"/>
 			<set name="reuseDelay" val="3000"/>
 			<set name="skillType" val="BUFF"/>
 			<set name="operateType" val="OP_ACTIVE"/>
-		<set name="hitTime" val="3000"/>
+			<set name="hitTime" val="3000"/>
 		</skill>
 	</skill>
 	<skill id="12008" levels="1" name="Orbis' Reflect Shield">

@@ -43,9 +43,9 @@
 		<set name="type" value="NONE"/>
 		<set name="weight" value="130"/>
 		<equip>
-			<slot id="CHEST"/>
+			<slot id="UNDERWEAR"/>
 		</equip>
-		<set name="ex_type" value="UPPER_PIECE"/>
+		<set name="ex_type" value="UNDERWEAR"/>
 		<for>
 			<add stat="pDef" order="0x10" value="28"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
@@ -58,9 +58,9 @@
 		<set name="type" value="NONE"/>
 		<set name="weight" value="130"/>
 		<equip>
-			<slot id="CHEST"/>
+			<slot id="UNDERWEAR"/>
 		</equip>
-		<set name="ex_type" value="UPPER_PIECE"/>
+		<set name="ex_type" value="UNDERWEAR"/>
 		<for>
 			<add stat="pDef" order="0x10" value="28"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
@@ -73,9 +73,9 @@
 		<set name="type" value="NONE"/>
 		<set name="weight" value="130"/>
 		<equip>
-			<slot id="CHEST"/>
+			<slot id="UNDERWEAR"/>
 		</equip>
-		<set name="ex_type" value="UPPER_PIECE"/>
+		<set name="ex_type" value="UNDERWEAR"/>
 		<for>
 			<add stat="pDef" order="0x10" value="28"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
@@ -88,9 +88,9 @@
 		<set name="type" value="NONE"/>
 		<set name="weight" value="130"/>
 		<equip>
-			<slot id="CHEST"/>
+			<slot id="UNDERWEAR"/>
 		</equip>
-		<set name="ex_type" value="UPPER_PIECE"/>
+		<set name="ex_type" value="UNDERWEAR"/>
 		<for>
 			<add stat="pDef" order="0x10" value="28"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>

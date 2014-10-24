@@ -3,7 +3,8 @@
 <list>
 	<awakening_keep_skill_tree>
 		<awakenClass id="148">
-			<fromClass id="90"><!-- Phoenix Knight -->
+			<fromClass id="90">
+				<!-- Phoenix Knight -->
 				<keepSkill id="110"/>
 				<keepSkill id="318"/>
 				<keepSkill id="197"/>
@@ -47,7 +48,6 @@
 				<keepSkill id="404"/>
 				<keepSkill id="147"/>
 				<keepSkill id="403"/>
-				<keepSkill id="217"/>
 				<keepSkill id="92"/>
 				<keepSkill id="322"/>
 				<keepSkill id="406"/>
@@ -67,7 +67,8 @@
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="149">
-			<fromClass id="91"><!-- Hell Knight-->
+			<fromClass id="91">
+				<!-- Hell Knight-->
 				<keepSkill id="110"/>
 				<keepSkill id="318"/>
 				<keepSkill id="86"/>
@@ -79,7 +80,6 @@
 				<keepSkill id="147"/>
 				<keepSkill id="283"/>
 				<keepSkill id="403"/>
-				<keepSkill id="217"/>
 				<keepSkill id="92"/>
 				<keepSkill id="322"/>
 				<keepSkill id="401"/>
@@ -109,7 +109,6 @@
 				<keepSkill id="147"/>
 				<keepSkill id="283"/>
 				<keepSkill id="403"/>
-				<keepSkill id="217"/>
 				<keepSkill id="92"/>
 				<keepSkill id="322"/>
 				<keepSkill id="401"/>
@@ -129,7 +128,8 @@
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="150">
-			<fromClass id="99"><!-- Eva Templar -->
+			<fromClass id="99">
+				<!-- Eva Templar -->
 				<keepSkill id="110"/>
 				<keepSkill id="197"/>
 				<keepSkill id="153"/>
@@ -143,7 +143,6 @@
 				<keepSkill id="147"/>
 				<keepSkill id="10"/>
 				<keepSkill id="449"/>
-				<keepSkill id="217"/>
 				<keepSkill id="322"/>
 				<keepSkill id="402"/>
 				<keepSkill id="102"/>
@@ -177,7 +176,6 @@
 				<keepSkill id="147"/>
 				<keepSkill id="10"/>
 				<keepSkill id="449"/>
-				<keepSkill id="217"/>
 				<keepSkill id="322"/>
 				<keepSkill id="402"/>
 				<keepSkill id="102"/>
@@ -199,7 +197,8 @@
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="151">
-			<fromClass id="106"><!-- Shillen Templar -->
+			<fromClass id="106">
+				<!-- Shillen Templar -->
 				<keepSkill id="110"/>
 				<keepSkill id="153"/>
 				<keepSkill id="316"/>
@@ -212,7 +211,6 @@
 				<keepSkill id="191"/>
 				<keepSkill id="147"/>
 				<keepSkill id="33"/>
-				<keepSkill id="217"/>
 				<keepSkill id="322"/>
 				<keepSkill id="402"/>
 				<keepSkill id="401"/>
@@ -246,7 +244,6 @@
 				<keepSkill id="147"/>
 				<keepSkill id="10"/>
 				<keepSkill id="449"/>
-				<keepSkill id="217"/>
 				<keepSkill id="322"/>
 				<keepSkill id="402"/>
 				<keepSkill id="102"/>
@@ -267,8 +264,10 @@
 				<keepSkill id="984"/>
 			</fromClass>
 		</awakenClass>
-		<awakenClass id="152"> <!-- Tyrr Warrior -->
-			<fromClass id="88"><!-- Duelist -->
+		<awakenClass id="152">
+			<!-- Tyrr Warrior -->
+			<fromClass id="88">
+				<!-- Duelist -->
 				<keepSkill id="80"/>
 				<keepSkill id="87"/>
 				<keepSkill id="88"/>
@@ -281,7 +280,6 @@
 				<keepSkill id="9"/>
 				<keepSkill id="6"/>
 				<keepSkill id="7"/>
-				<keepSkill id="257"/>
 				<keepSkill id="261"/>
 				<keepSkill id="1"/>
 				<keepSkill id="290"/>
@@ -314,7 +312,6 @@
 				<keepSkill id="9"/>
 				<keepSkill id="6"/>
 				<keepSkill id="7"/>
-				<keepSkill id="257"/>
 				<keepSkill id="261"/>
 				<keepSkill id="1"/>
 				<keepSkill id="290"/>
@@ -336,7 +333,8 @@
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="153">
-			<fromClass id="89"><!-- Dreadnought -->
+			<fromClass id="89">
+				<!-- Dreadnought -->
 				<keepSkill id="87"/>
 				<keepSkill id="104"/>
 				<keepSkill id="80"/>
@@ -381,7 +379,6 @@
 				<keepSkill id="9"/>
 				<keepSkill id="6"/>
 				<keepSkill id="7"/>
-				<keepSkill id="257"/>
 				<keepSkill id="261"/>
 				<keepSkill id="1"/>
 				<keepSkill id="290"/>
@@ -403,14 +400,14 @@
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="154">
-			<fromClass id="113"><!-- Titan -->
+			<fromClass id="113">
+				<!-- Titan -->
 				<keepSkill id="176"/>
 				<keepSkill id="34"/>
 				<keepSkill id="121"/>
 				<keepSkill id="148"/>
 				<keepSkill id="227"/>
 				<keepSkill id="211"/>
-				<keepSkill id="257"/>
 				<keepSkill id="36"/>
 				<keepSkill id="423"/>
 				<keepSkill id="315"/>
@@ -433,7 +430,8 @@
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="155">
-			<fromClass id="114"><!-- Grand Khavatari -->
+			<fromClass id="114">
+				<!-- Grand Khavatari -->
 				<keepSkill id="319"/>
 				<keepSkill id="282"/>
 				<keepSkill id="109"/>
@@ -466,20 +464,19 @@
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="156">			
-			<fromClass id="118"><!-- Maestro -->
+			<fromClass id="118">
+				<!-- Maestro -->
 				<keepSkill id="822"/>
 				<keepSkill id="824"/>
 				<keepSkill id="823"/>
 				<keepSkill id="34"/>
-				<keepSkill id="1561"/>
-				
+				<keepSkill id="1561"/>		
 				<keepSkill id="172"/>
 				<keepSkill id="148"/>
 				<keepSkill id="25"/>
 				<keepSkill id="227"/>
 				<keepSkill id="211"/>
 				<keepSkill id="301"/>
-				<keepSkill id="205"/>
 				<keepSkill id="36"/>
 				<keepSkill id="212"/>
 				<keepSkill id="190"/>
@@ -498,7 +495,8 @@
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="157">			
-			<fromClass id="131"><!-- Doombringer -->
+			<fromClass id="131">
+				<!-- Doombringer -->
 				<keepSkill id="481"/>
 				<keepSkill id="832"/>
 				<keepSkill id="833"/>
@@ -525,8 +523,10 @@
 			<fromClass id="140">
 			</fromClass>
 		</awakenClass>
-		<awakenClass id="158"> <!-- Othell Rogue -->
-			<fromClass id="93"><!-- Adventurer -->
+		<awakenClass id="158">
+			<!-- Othell Rogue -->
+			<fromClass id="93">
+				<!-- Adventurer -->
 				<keepSkill id="221"/>
 				<keepSkill id="821"/>
 				<keepSkill id="60"/>
@@ -568,7 +568,8 @@
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="159">
-			<fromClass id="101"><!-- Wind Rider -->
+			<fromClass id="101">
+				<!-- Wind Rider -->
 				<keepSkill id="221"/>
 				<keepSkill id="821"/>
 				<keepSkill id="60"/>
@@ -610,7 +611,8 @@
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="160">
-			<fromClass id="108"><!-- Ghost Hunter -->
+			<fromClass id="108">
+				<!-- Ghost Hunter -->
 				<keepSkill id="221"/>
 				<keepSkill id="821"/>
 				<keepSkill id="169"/>
@@ -655,18 +657,17 @@
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="161">
-			<fromClass id="117"><!-- Fortune Seeker -->
+			<fromClass id="117">
+				<!-- Fortune Seeker -->
 				<keepSkill id="998"/>
 				<keepSkill id="60"/>
-				<keepSkill id="34"/>
-				
+				<keepSkill id="34"/>				
 				<keepSkill id="148"/>
 				<keepSkill id="209"/>
 				<keepSkill id="263"/>
 				<keepSkill id="227"/>
 				<keepSkill id="30"/>
 				<keepSkill id="211"/>
-				<keepSkill id="205"/>
 				<keepSkill id="36"/>				
 				<keepSkill id="952"/>
 				<keepSkill id="212"/>
@@ -687,8 +688,10 @@
 			<fromClass id="141">
 			</fromClass>
 		</awakenClass>
-		<awakenClass id="162"> <!-- Yul Archer -->
-			<fromClass id="92"><!-- Sagittarius -->
+		<awakenClass id="162">
+			<!-- Yul Archer -->
+			<fromClass id="92">
+				<!-- Sagittarius -->
 				<keepSkill id="113"/>
 				<keepSkill id="169"/>
 				<keepSkill id="99"/>
@@ -717,9 +720,11 @@
 			</fromClass>
 			<fromClass id="141">
 			</fromClass>
-			</awakenClass>
-		<awakenClass id="163"> <!-- Yul Archer -->
-			<fromClass id="102"><!-- Moonlight Sentinel -->
+		</awakenClass>
+		<awakenClass id="163">
+			<!-- Yul Archer -->
+			<fromClass id="102">
+				<!-- Moonlight Sentinel -->
 				<keepSkill id="113"/>
 				<keepSkill id="169"/>
 				<keepSkill id="99"/>
@@ -751,8 +756,10 @@
 			<fromClass id="142">
 			</fromClass>
 		</awakenClass>
-		<awakenClass id="164"> <!-- Yul Archer -->
-			<fromClass id="109"><!-- Ghost Sentinel -->
+		<awakenClass id="164">
+			<!-- Yul Archer -->
+			<fromClass id="109">
+				<!-- Ghost Sentinel -->
 				<keepSkill id="113"/>
 				<keepSkill id="169"/>
 				<keepSkill id="99"/>
@@ -781,11 +788,14 @@
 				<keepSkill id="334"/>
 				<keepSkill id="987"/>
 				<keepSkill id="990"/>
-			</fromClass><fromClass id="142">
+			</fromClass>
+			<fromClass id="142">
 			</fromClass>
 		</awakenClass>
-		<awakenClass id="165"> <!-- Yul Archer -->
-			<fromClass id="134"><!-- Trickster -->
+		<awakenClass id="165">
+			<!-- Yul Archer -->
+			<fromClass id="134">
+				<!-- Trickster -->
 				<keepSkill id="489"/>
 				<keepSkill id="486"/>
 				<keepSkill id="481"/>
@@ -816,11 +826,14 @@
 				<keepSkill id="334"/>
 				<keepSkill id="987"/>
 				<keepSkill id="990"/>
-			</fromClass><fromClass id="142">
+			</fromClass>
+			<fromClass id="142">
 			</fromClass>
 		</awakenClass>
-		<awakenClass id="166"> <!-- Feoh Wizard -->
-			<fromClass id="94"><!-- Archmage -->
+		<awakenClass id="166">
+			<!-- Feoh Wizard -->
+			<fromClass id="94">
+				<!-- Archmage -->
 				<keepSkill id="164"/>
 				<keepSkill id="1232"/>
 				<keepSkill id="228"/>
@@ -861,11 +874,13 @@
 				<keepSkill id="1554"/>
 				<keepSkill id="1555"/>
 				<keepSkill id="1556"/>
-			</fromClass><fromClass id="143">
+			</fromClass>
+			<fromClass id="143">
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="167">			
-			<fromClass id="95"><!-- Soultaker -->
+			<fromClass id="95">
+				<!-- Soultaker -->
 				<keepSkill id="164"/>
 				<keepSkill id="228"/>
 				<keepSkill id="1157"/>
@@ -900,20 +915,20 @@
 				<keepSkill id="925"/>
 				<keepSkill id="328"/>
 				<keepSkill id="329"/>
-				<keepSkill id="1344"/>
 				<keepSkill id="331"/>
 				<keepSkill id="1336"/>
 				<keepSkill id="434"/>
-				<keepSkill id="1345"/>
 				<keepSkill id="337"/>
 				<keepSkill id="1337"/>
 				<keepSkill id="1423"/>
 				<keepSkill id="1422"/>
-			</fromClass><fromClass id="143">
+			</fromClass>
+			<fromClass id="143">
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="168">
-			<fromClass id="103"><!-- Mystic Muse -->
+			<fromClass id="103">
+				<!-- Mystic Muse -->
 				<keepSkill id="164"/>
 				<keepSkill id="228"/>
 				<keepSkill id="1238"/>
@@ -959,11 +974,13 @@
 				<keepSkill id="1554"/>
 				<keepSkill id="1555"/>
 				<keepSkill id="1556"/>
-			</fromClass><fromClass id="143">
+			</fromClass>
+			<fromClass id="143">
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="169">
-			<fromClass id="110"><!-- Storm Screamer -->
+			<fromClass id="110">
+				<!-- Storm Screamer -->
 				<keepSkill id="164"/>
 				<keepSkill id="228"/>
 				<keepSkill id="1157"/>
@@ -1008,11 +1025,13 @@
 				<keepSkill id="1554"/>
 				<keepSkill id="1555"/>
 				<keepSkill id="1556"/>
-			</fromClass><fromClass id="143">
+			</fromClass>
+			<fromClass id="143">
 			</fromClass>	
 		</awakenClass>
 		<awakenClass id="170">
-			<fromClass id="132"><!-- Male Soul Hound -->
+			<fromClass id="132">
+				<!-- Male Soul Hound -->
 				<keepSkill id="481"/>
 				<keepSkill id="1474"/>
 				<keepSkill id="832"/>
@@ -1049,9 +1068,11 @@
 				<keepSkill id="1554"/>
 				<keepSkill id="1555"/>
 				<keepSkill id="1556"/>
-			</fromClass><fromClass id="143">
+			</fromClass>
+			<fromClass id="143">
 			</fromClass>		
-			<fromClass id="133"><!-- Female Soul Hound -->
+			<fromClass id="133">
+				<!-- Female Soul Hound -->
 				<keepSkill id="481"/>
 				<keepSkill id="1474"/>
 				<keepSkill id="832"/>
@@ -1088,11 +1109,14 @@
 				<keepSkill id="1554"/>
 				<keepSkill id="1555"/>
 				<keepSkill id="1556"/>
-			</fromClass><fromClass id="143">
+			</fromClass>
+			<fromClass id="143">
 			</fromClass>
 		</awakenClass>
-		<awakenClass id="171"> <!-- Iss Enchanter -->
-			<fromClass id="98"><!-- Hierophant -->
+		<awakenClass id="171">
+			<!-- Iss Enchanter -->
+			<fromClass id="98">
+				<!-- Hierophant -->
 				<keepSkill id="1068"/>
 				<keepSkill id="1191"/>
 				<keepSkill id="1040"/>
@@ -1143,11 +1167,13 @@
 				<keepSkill id="1356"/>
 				<keepSkill id="1411"/>
 				<keepSkill id="1412"/>
-			</fromClass><fromClass id="144">
+			</fromClass>
+			<fromClass id="144">
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="172">
-			<fromClass id="100"><!-- Sword Muse -->
+			<fromClass id="100">
+				<!-- Sword Muse -->
 				<keepSkill id="269"/>
 				<keepSkill id="1586"/>
 				<keepSkill id="267"/>
@@ -1172,7 +1198,6 @@
 				<keepSkill id="191"/>
 				<keepSkill id="147"/>
 				<keepSkill id="407"/>
-				<keepSkill id="217"/>
 				<keepSkill id="305"/>
 				<keepSkill id="402"/>
 				<keepSkill id="58"/>
@@ -1190,11 +1215,13 @@
 				<keepSkill id="1596"/>
 				<keepSkill id="455"/>
 				<keepSkill id="986"/>
-			</fromClass><fromClass id="144">
+			</fromClass>
+			<fromClass id="144">
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="173">
-			<fromClass id="107"><!-- Spectral Dancer -->
+			<fromClass id="107">
+				<!-- Spectral Dancer -->
 				<keepSkill id="274"/>
 				<keepSkill id="277"/>
 				<keepSkill id="1585"/>
@@ -1235,11 +1262,13 @@
 				<keepSkill id="1595"/>
 				<keepSkill id="455"/>
 				<keepSkill id="986"/>
-			</fromClass><fromClass id="144">
+			</fromClass>
+			<fromClass id="144">
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="174">
-			<fromClass id="115"><!-- Dominator -->
+			<fromClass id="115">
+				<!-- Dominator -->
 				<keepSkill id="164"/>
 				<keepSkill id="1003"/>
 				<keepSkill id="1261"/>
@@ -1292,7 +1321,8 @@
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="175">			
-			<fromClass id="116"><!-- Doomcryer -->
+			<fromClass id="116">
+				<!-- Doomcryer -->
 				<keepSkill id="1007"/>
 				<keepSkill id="164"/>
 				<keepSkill id="1009"/>
@@ -1334,11 +1364,14 @@
 				<keepSkill id="436"/>
 				<keepSkill id="1461"/>
 				<keepSkill id="1413"/>
-			</fromClass><fromClass id="144">
+			</fromClass>
+			<fromClass id="144">
 			</fromClass>
 		</awakenClass>
-		<awakenClass id="176"> <!-- Wynn Summoner -->
-			<fromClass id="96"><!-- Arcana Lord -->
+		<awakenClass id="176">
+			<!-- Wynn Summoner -->
+			<fromClass id="96">
+				<!-- Arcana Lord -->
 				<keepSkill id="164"/>
 				<keepSkill id="1144"/>
 				<keepSkill id="1139"/>
@@ -1372,11 +1405,13 @@
 				<keepSkill id="781"/>
 				<keepSkill id="1557"/>
 				<keepSkill id="1558"/>
-			</fromClass><fromClass id="145">
+			</fromClass>
+			<fromClass id="145">
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="177">
-			<fromClass id="104"><!-- Elemental Master -->
+			<fromClass id="104">
+				<!-- Elemental Master -->
 				<keepSkill id="164"/>
 				<keepSkill id="1139"/>
 				<keepSkill id="1141"/>
@@ -1410,11 +1445,13 @@
 				<keepSkill id="782"/>
 				<keepSkill id="1557"/>
 				<keepSkill id="1558"/>
-			</fromClass><fromClass id="145">
+			</fromClass>
+			<fromClass id="145">
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="178">
-			<fromClass id="111"><!-- Spectral Master -->
+			<fromClass id="111">
+				<!-- Spectral Master -->
 				<keepSkill id="164"/>
 				<keepSkill id="1139"/>
 				<keepSkill id="1141"/>
@@ -1451,11 +1488,14 @@
 				<keepSkill id="783"/>
 				<keepSkill id="1557"/>
 				<keepSkill id="1558"/>
-			</fromClass><fromClass id="145">
+			</fromClass>
+			<fromClass id="145">
 			</fromClass>
 		</awakenClass>
-		<awakenClass id="179"> <!-- Aerore Healer -->
-			<fromClass id="97"><!-- Cardinal -->
+		<awakenClass id="179">
+			<!-- Aerore Healer -->
+			<fromClass id="97">
+				<!-- Cardinal -->
 				<keepSkill id="164"/>
 				<keepSkill id="228"/>
 				<keepSkill id="1012"/>
@@ -1471,7 +1511,6 @@
 				<keepSkill id="1525"/>
 				<keepSkill id="1523"/>
 				<keepSkill id="1528"/>
-				<keepSkill id="235"/>
 				<keepSkill id="1016"/>
 				<keepSkill id="1034"/>
 				<keepSkill id="1028"/>
@@ -1481,7 +1520,6 @@
 				<keepSkill id="1524"/>
 				<keepSkill id="1069"/>
 				<keepSkill id="146"/>
-				<keepSkill id="249"/>
 				<keepSkill id="1395"/>
 				<keepSkill id="1394"/>
 				<keepSkill id="229"/>
@@ -1502,11 +1540,13 @@
 				<keepSkill id="1410"/>
 				<keepSkill id="1425"/>
 				<keepSkill id="1553"/>
-			</fromClass><fromClass id="146">
+			</fromClass>
+			<fromClass id="146">
 			</fromClass>
 		</awakenClass>
 		<awakenClass id="180">
-			<fromClass id="105"><!-- Eva Saint -->
+			<fromClass id="105">
+				<!-- Eva Saint -->
 				<keepSkill id="1068"/>
 				<keepSkill id="1033"/>
 				<keepSkill id="1040"/>
@@ -1529,7 +1569,6 @@
 				<keepSkill id="1523"/>
 				<keepSkill id="1528"/>
 				<keepSkill id="1393"/>
-				<keepSkill id="235"/>
 				<keepSkill id="1016"/>
 				<keepSkill id="1013"/>
 				<keepSkill id="1028"/>
@@ -1538,7 +1577,6 @@
 				<keepSkill id="1273"/>
 				<keepSkill id="1069"/>
 				<keepSkill id="146"/>
-				<keepSkill id="249"/>
 				<keepSkill id="1206"/>
 				<keepSkill id="1395"/>
 				<keepSkill id="1397"/>
@@ -1557,11 +1595,13 @@
 				<keepSkill id="1355"/>
 				<keepSkill id="1428"/>
 				<keepSkill id="1553"/>
-			</fromClass><fromClass id="146">
+			</fromClass>
+			<fromClass id="146">
 			</fromClass>	
 		</awakenClass>
 		<awakenClass id="181">
-			<fromClass id="112"><!-- Shillen Saint -->
+			<fromClass id="112">
+				<!-- Shillen Saint -->
 				<keepSkill id="1068"/>
 				<keepSkill id="1189"/>
 				<keepSkill id="1040"/>
@@ -1587,13 +1627,11 @@
 				<keepSkill id="1523"/>
 				<keepSkill id="1528"/>
 				<keepSkill id="1392"/>
-				<keepSkill id="235"/>
 				<keepSkill id="1016"/>
 				<keepSkill id="1013"/>
 				<keepSkill id="1401"/>
 				<keepSkill id="1524"/>
 				<keepSkill id="146"/>
-				<keepSkill id="249"/>
 				<keepSkill id="1206"/>
 				<keepSkill id="1395"/>
 				<keepSkill id="229"/>
@@ -1610,7 +1648,8 @@
 				<keepSkill id="1428"/>
 				<keepSkill id="1508"/>
 				<keepSkill id="1553"/>
-			</fromClass><fromClass id="146">
+			</fromClass>
+			<fromClass id="146">
 			</fromClass>
 		</awakenClass>
 	</awakening_keep_skill_tree>

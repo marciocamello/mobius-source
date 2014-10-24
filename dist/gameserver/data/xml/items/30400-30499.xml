@@ -9,7 +9,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="storeable" value="false"/>
-		<set name="destroyable" value="false"/>
+		<set name="destroyable" value="true"/>
 		<set name="enchantable" value="false"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
@@ -45,7 +45,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="storeable" value="false"/>
-		<set name="destroyable" value="false"/>
+		<set name="destroyable" value="true"/>
 		<set name="enchantable" value="false"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
@@ -81,7 +81,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="storeable" value="false"/>
-		<set name="destroyable" value="false"/>
+		<set name="destroyable" value="true"/>
 		<set name="enchantable" value="false"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
@@ -117,7 +117,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="storeable" value="false"/>
-		<set name="destroyable" value="false"/>
+		<set name="destroyable" value="true"/>
 		<set name="enchantable" value="false"/>
 		<set name="type" value="DUAL"/>
 		<set name="ex_type" value="DUAL_SWORD"/>
@@ -153,7 +153,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="storeable" value="false"/>
-		<set name="destroyable" value="false"/>
+		<set name="destroyable" value="true"/>
 		<set name="enchantable" value="false"/>
 		<set name="type" value="DUALDAGGER"/>
 		<set name="ex_type" value="DUAL_DAGGER"/>
@@ -190,7 +190,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="storeable" value="false"/>
-		<set name="destroyable" value="false"/>
+		<set name="destroyable" value="true"/>
 		<set name="enchantable" value="false"/>
 		<set name="type" value="DUALBLUNT"/>
 		<set name="crystal_type" value="R"/>
@@ -1773,10 +1773,10 @@
 		<set name="weight" value="1380"/>
 		<set name="rnd_dam" value="10"/>
 		<equip>
-			<slot id="RIGHT_HAND"/>
+			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
-		<set name="type" value="SWORD"/>
-		<set name="ex_type" value="SWORD"/>
+		<set name="type" value="BIGSWORD"/>
+		<set name="ex_type" value="BIG_SWORD"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystal_count" value="102"/>
 		<set name="soulshots" value="1"/>
@@ -1798,10 +1798,10 @@
 		<set name="weight" value="1380"/>
 		<set name="rnd_dam" value="10"/>
 		<equip>
-			<slot id="RIGHT_HAND"/>
+			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
-		<set name="type" value="SWORD"/>
-		<set name="ex_type" value="SWORD"/>
+		<set name="type" value="BIGSWORD"/>
+		<set name="ex_type" value="BIG_SWORD"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystal_count" value="102"/>
 		<set name="soulshots" value="1"/>
@@ -1826,10 +1826,10 @@
 		<set name="weight" value="1380"/>
 		<set name="rnd_dam" value="10"/>
 		<equip>
-			<slot id="RIGHT_HAND"/>
+			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
-		<set name="type" value="SWORD"/>
-		<set name="ex_type" value="SWORD"/>
+		<set name="type" value="BIGSWORD"/>
+		<set name="ex_type" value="BIG_SWORD"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystal_count" value="102"/>
 		<set name="soulshots" value="1"/>
@@ -1854,10 +1854,10 @@
 		<set name="weight" value="1380"/>
 		<set name="rnd_dam" value="10"/>
 		<equip>
-			<slot id="RIGHT_HAND"/>
+			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
-		<set name="type" value="SWORD"/>
-		<set name="ex_type" value="SWORD"/>
+		<set name="type" value="BIGSWORD"/>
+		<set name="ex_type" value="BIG_SWORD"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystal_count" value="102"/>
 		<set name="soulshots" value="1"/>

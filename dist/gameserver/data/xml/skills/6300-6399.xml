@@ -1270,6 +1270,7 @@
 		<set name="magicLevel" val="85"/>
 		<set name="castRange" val="600"/>
 		<set name="hitTime" val="2000"/>
+		<set name="isDebuff" val="true"/>		
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume1" val="22"/>
 		<set name="mpConsume2" val="88"/>
@@ -1280,7 +1281,8 @@
 		<set name="trait" val="DERANGEMENT"/>
 		<set name="saveVs" val="MEN"/>
 		<for>
-			<effect count="3" name="Fear" time="6" val="0"/>
+			<effect count="3" name="Fear" stackOrder="-1" stackType="Fear" time="1" val="0">
+			</effect>			
 		</for>
 	</skill>
 	<skill id="6397" levels="1" name="Kokracon Staggering Blow">

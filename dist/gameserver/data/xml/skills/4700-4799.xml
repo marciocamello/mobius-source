@@ -517,14 +517,14 @@
 		<set name="hitTime" val="830"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
-		<set name="activateRate" val="80"/>
+		<set name="activateRate" val="50"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="trait" val="SHOCK"/>
 		<set name="saveVs" val="CON"/>
 		<for>
-			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
+			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="3" val="0"/>
 		</for>
 		<set name="castRange" val="40"/>
 	</skill>

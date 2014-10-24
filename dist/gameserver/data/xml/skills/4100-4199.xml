@@ -1358,8 +1358,8 @@
 		<for>
 			<effect count="1" name="DispelEffects" time="0" val="0">
 				<def name="dispelType" val="cancellation"/>
-				<def name="cancelRate" val="10"/>
-				<def name="negateCount" val="5"/>
+				<def name="cancelRate" val="1"/>
+				<def name="negateCount" val="1"/>
 			</effect>
 		</for>
 	</skill>

@@ -76,7 +76,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10249" levels="1" name="">
+	<skill id="10249" levels="1" name="Sigel Knight Air Chain Skill">
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="2000"/>
 		<set name="mpConsume2" val="40"/>
@@ -86,12 +86,13 @@
 		<set name="coolTime" val="300"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="target" val="TARGET_ONE"/>
-		<set name="overHit" val="true"/>&gt;<set name="operateType" val="OP_ACTIVE"/>
+		<set name="overHit" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
 		<set name="isSkillTimePermanent" val="true"/>
 		<set name="isAlterSkill" val="true"/>
 	</skill>
-	<skill id="10250" levels="1" name="">
+	<skill id="10250" levels="1" name="Sigel Knight Knock Chain Skill">
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="0"/>
 		<set name="mpConsume1" val="40"/>
@@ -119,6 +120,10 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="relationSkillsId" val="474;216;330;1474;422;205;1527;210;228;141;472;168;925;331;421;"/>
+		<triggers>
+			<trigger id="10284" level="1" type="CRIT" chance="80">
+			</trigger>
+		</triggers>			
 		<enchant1 levels="10" name="Power">
 			<table name="#pAtk">400 425 449 474 499 523 548 572 597 622</table>
 		</enchant1>
@@ -133,7 +138,7 @@
 			</add>
 			<add order="0x40" stat="poleTargetCount" val="10">
 				<using kind="Pole"/>
-			</add>
+			</add>		
 		</for>
 	</skill>
 	<skill id="10252" levels="1" name="Superior Dual Weapon Mastery">
@@ -221,6 +226,7 @@
 		<set name="relationSkillsId" val="992;993;"/>
 		<set name="skillType" val="DRAIN"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="chargeBoost" val="true"/>
 		<set name="absorbPart" val="#absorbPart"/>
 		<set name="absorbAbs" val="0"/>
 		<enchant1 levels="10" name="Power">
@@ -289,13 +295,13 @@
 		<set name="castRange" val="40"/>
 		<set name="relationSkillsId" val="116;362;284;1;920;501;190;281;"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="activateRate" val="60"/>
+		<set name="activateRate" val="85"/>
 		<set name="nextAction" val="attack"/>
 		<set name="power" val="#Power"/>
 		<set name="powerPvP" val="#powerPvP"/>
 		<set name="element" val="#element"/>
 		<set name="elementPower" val="#elementPower"/>
-		<set name="criticalRate" val="10"/>
+		<set name="criticalRate" val="35"/>
 		<set name="overHit" val="true"/>
 		<set name="saveVs" val="CON"/>
 		<set name="skillType" val="PDAM"/>
@@ -548,8 +554,9 @@
 		<set name="criticalRate" val="10"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="charges" val="7"/>
+		<set name="alterSkillsId" val="10499;10500;14579"/>		
+		<set name="activateRate" val="100"/>		
 		<set name="isOffensive" val="true"/>
-		<set name="nextAction" val="attack"/>
 		<set name="hitTime" val="1500"/>
 		<set name="reuseDelay" val="900"/>
 		<set name="castRange" val="600"/>
@@ -607,6 +614,11 @@
 			<table name="#power">789 805 820 836 852 868 884 900 916 932</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant9>
+		<for>
+			<effect count="1" name="Debuff" stackOrder="-1" stackType="pAtkDown" time="10" val="0">
+				<mul order="0x30" stat="pDef" val="0.77"/>
+			</effect>
+		</for>		
 	</skill>
 	<skill id="10265" levels="8" name="Eruption">
 		<table name="#Power">11557 11956 12754 13553 14351 15150 15948 16747</table>
@@ -631,7 +643,7 @@
 		<set name="criticalRate" val="10"/>
 		<set name="overHit" val="true"/>
 		<set name="unaggroing" val="true"/>
-		<set name="skillRadius" val="40"/>
+		<set name="skillRadius" val="100"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="113" addName="1">
@@ -994,6 +1006,7 @@
 		<table name="#time">60</table>
 		<table name="#hpperc">60</table>
 		<table name="#Stun">0</table>
+		<table name="#debuffResist">40 50 60 70</table>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -1017,7 +1030,7 @@
 		<enchant5 levels="10" name="Recycle" enchRoute="9"/>
 		<for>
 			<effect name="Buff" time="#time" val="0" stackOrder="11" stackType="guts">
-				<add order="0x40" stat="debuffResist" val="20"/>
+				<add order="0x40" stat="debuffResist" val="#debuffResist"/>
 				<add order="0x40" stat="runSpd" val="20"/>
 				<add order="0x40" stat="pAtk" val="1000"/>
 				<add order="0x40" stat="accCombat" val="6"/>
@@ -1181,8 +1194,8 @@
 		<set name="operateType" val="OP_TOGGLE"/>
 		<set name="relationSkillsId" val="8;50;"/>
 		<for>
-			<effect count="0x7fffffff" name="ChargesOverTime" time="4" val="150">
-				<def name="maxCharges" val="10"/>
+			<effect count="0x7fffffff" name="ChargesOverTime" time="2" val="150">
+				<def name="maxCharges" val="15"/>
 			</effect>
 		</for>
 	</skill>
@@ -1222,10 +1235,15 @@
 		</enchant3>
 	</skill>
 	<skill id="10283" levels="1" name="Increase Momentum">
-		<set name="operateType" val="OP_PASSIVE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="reuseDelay" val="4000"/>
+		<set name="magicLevel" val="97"/>
+		<set name="icon" val="icon.skill10283"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="target" val="TARGET_SELF"/>
-		<for/>
+		<set name="skillType" val="CHARGE"/>
+		<set name="maxCharges" val="15"/>
+		<for>
+		</for>
 	</skill>
 	<skill id="10284" levels="3" name="Lightning Force">
 		<table name="#pAtkSpd">1.10 1.12 1.15</table>
@@ -1326,10 +1344,13 @@
 		<set name="powerModPercent2" val="1.5"/>
 		<set name="target" val="TARGET_MULTIFACE"/>
 		<set name="criticalRate" val="10"/>
-		<set name="skillRadius" val="85"/>
+		<set name="skillRadius" val="400"/>
 		<set name="overHit" val="true"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
+		<set name="hitTime" val="1790"/>
+		<set name="reuseDelay" val="10999"/>		
 		<cond msgId="113" addName="1">
 			<not>
 				<using kind="Bow,Crossbow"/>
@@ -1380,9 +1401,6 @@
 			<table name="#power">17546 17945 18344 18744 19143 19542 19941 20341 20740 21139</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant8>
-		<set name="castRange" val="500"/>
-		<set name="hitTime" val="1790"/>
-		<set name="reuseDelay" val="10999"/>
 	</skill>
 	<skill id="10289" levels="4" name="Boost">
 		<table name="#skillPower">1.3 1.35 1.4 1.45</table>
@@ -1471,6 +1489,7 @@
 				<mul order="0x30" stat="maxHp" val="1.1"/>
 				<add order="0x40" stat="knockDownPower" val="#knockdown"/>
 			</effect>
+			<effect count="1" name="HealPercent" time="0" val="10"/>			
 		</for>
 	</skill>
 	<skill id="10293" levels="1" name="Feral Puma Cry">

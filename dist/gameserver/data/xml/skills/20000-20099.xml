@@ -86,5 +86,5 @@
 				<mul order="0x30" stat="regMp" val="1.2"/>
 			</effect>
 		</for>
-	</skill>
+	</skill>	
 </list>

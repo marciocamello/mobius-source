@@ -1871,6 +1871,7 @@
 		<set name="icon" value="icon.weapon_stanpid_i10"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="DAGGER"/>
+		<set name="ex_type" value="DAGGER"/>		
 		<set name="price" value="227297226"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1896,8 +1897,10 @@
 	</weapon>
 	<weapon id="35096" name="Dark Amaranthine Cutter">
 		<set name="icon" value="icon.weapon_plenitas_i10"/>
+		<set name="type" value="SWORD"/>		
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>		
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
 		<set name="price" value="227297226"/>
@@ -1925,6 +1928,7 @@
 		<set name="icon" value="icon.weapon_bauen_i10"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BIGSWORD"/>
+		<set name="ex_type" value="BIG_SWORD"/>		
 		<set name="price" value="227297226"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -1953,6 +1957,7 @@
 		<set name="icon" value="icon.weapon_qutram_i10"/>
 		<set name="weight" value="1740"/>
 		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BLUNT_WEAPON"/>		
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
 		<set name="price" value="227297226"/>
@@ -1980,6 +1985,7 @@
 		<set name="icon" value="icon.weapon_durga_i10"/>
 		<set name="weight" value="1550"/>
 		<set name="type" value="DUALFIST"/>
+		<set name="ex_type" value="HAND_TO_HAND"/>		
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
 		<set name="price" value="227297226"/>

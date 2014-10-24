@@ -365,6 +365,7 @@
 		<set name="icon" value="icon.Summon_orc_1hs_wp_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="144"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
@@ -384,6 +385,7 @@
 		<set name="icon" value="icon.embryo_dark_knight_wp_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="144"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
@@ -403,6 +405,7 @@
 		<set name="icon" value="icon.octabis_a_wp_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="MAGIC_SWORD"/>
 		<set name="weight" value="144"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
@@ -422,6 +425,7 @@
 		<set name="icon" value="icon.Summon_orc_dual_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="DUAL"/>
+		<set name="ex_type" value="DUAL_SWORD"/>
 		<set name="weight" value="247"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
@@ -441,6 +445,7 @@
 		<set name="icon" value="icon.seknus_1hs_wp_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="MAGIC_SWORD"/>
 		<set name="weight" value="247"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
@@ -460,6 +465,7 @@
 		<set name="icon" value="icon.summon_orc_blunt_wp_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="172"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
@@ -479,6 +485,7 @@
 		<set name="icon" value="icon.ice_heavy_knight_blunt_wp_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="MAGIC_BLUNT_WEAPON"/>
 		<set name="weight" value="172"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
@@ -498,6 +505,7 @@
 		<set name="icon" value="icon.summon_orc_dualblunt_wp_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="DUALBLUNT"/>
+		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>
 		<set name="weight" value="250"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
@@ -517,6 +525,7 @@
 		<set name="icon" value="icon.Deathslayer_a_wp_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="DAGGER"/>
+		<set name="ex_type" value="DAGGER"/>
 		<set name="weight" value="106"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
@@ -536,6 +545,7 @@
 		<set name="icon" value="icon.Deathslayer_a_dual_wp_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="DUALDAGGER"/>
+		<set name="ex_type" value="DUAL_DAGGER"/>
 		<set name="weight" value="205"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
@@ -555,6 +565,7 @@
 		<set name="icon" value="icon.undead_killer_2hs_wp_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="BIG_SWORD"/>
 		<set name="weight" value="209"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
@@ -574,6 +585,7 @@
 		<set name="icon" value="icon.Summon_orc_pole_wp_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="POLE"/>
+		<set name="ex_type" value="POLE"/>
 		<set name="weight" value="205"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
@@ -593,6 +605,7 @@
 		<set name="icon" value="icon.fairy_elder_2hs_wp_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BIG_MAGIC_BLUNT_WEAPON"/>
 		<set name="weight" value="101"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
@@ -612,6 +625,7 @@
 		<set name="icon" value="icon.satyr_shaman_2hs_wp_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BIG_MAGIC_BLUNT_WEAPON"/>
 		<set name="weight" value="101"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
@@ -631,6 +645,7 @@
 		<set name="icon" value="icon.pailaka_invader_hand_wp_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="DUALFIST"/>
+		<set name="ex_type" value="HAND_TO_HAND"/>
 		<set name="weight" value="152"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
@@ -650,6 +665,7 @@
 		<set name="icon" value="icon.pailaka_invader_bow_wp_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="BOW"/>
+		<set name="ex_type" value="BOW"/>
 		<set name="weight" value="181"/>
 		<set name="soulshots" value="6"/>
 		<set name="spiritshots" value="3"/>
@@ -670,6 +686,7 @@
 		<set name="icon" value="icon.centaur_archer_bowgun_wp_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="BOW"/>
+		<set name="ex_type" value="BOW"/>
 		<set name="weight" value="181"/>
 		<set name="soulshots" value="6"/>
 		<set name="spiritshots" value="3"/>
@@ -689,6 +706,7 @@
 		<set name="icon" value="icon.metucellar_form_bowgun_wp_i00"/>
 		<set name="price" value="0"/>
 		<set name="type" value="CROSSBOW"/>
+		<set name="ex_type" value="CROSSBOW"/>
 		<set name="weight" value="181"/>
 		<set name="soulshots" value="6"/>
 		<set name="spiritshots" value="3"/>
@@ -725,123 +743,343 @@
 	</weapon>
 	<etcitem id="37067" name="Monster Weapon Appearance Stone: Theor's Sword">
 		<set name="icon" value="icon.shape_shifting_sword_i00"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37068" name="Monster Weapon Appearance Stone: Sword of Corruption">
 		<set name="icon" value="icon.shape_shifting_sword_i00"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37069" name="Monster Weapon Appearance Stone: Octavis' Sword">
 		<set name="icon" value="icon.shape_shifting_sword_i00"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37070" name="Monster Weapon Appearance Stone: Tegaffe's Dualsword">
 		<set name="icon" value="icon.shape_shifting_dual_i00"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37071" name="Monster Weapon Appearance Stone: Seknus' One-handed Magic Sword">
 		<set name="icon" value="icon.shape_shifting_sword_i00"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37072" name="Monster Weapon Appearance Stone: Tebot's Axe">
 		<set name="icon" value="icon.shape_shifting_blunt_i00"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37073" name="Monster Weapon Appearance Stone: Glakias' Hammer">
 		<set name="icon" value="icon.shape_shifting_blunt_i00"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37074" name="Monster Weapon Appearance Stone: Tebot's Dual Blunt Weapon">
 		<set name="icon" value="icon.shape_shifting_dualblunt_i00"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37075" name="Monster Weapon Appearance Stone: Drakos' Dagger">
 		<set name="icon" value="icon.shape_shifting_dagger_i00"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37076" name="Monster Weapon Appearance Stone: Drakos' Dual Dagger">
 		<set name="icon" value="icon.shape_shifting_dualdagger_i00"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37077" name="Monster Weapon Appearance Stone: Guillotine's Greatsword">
 		<set name="icon" value="icon.shape_shifting_twohand_sword_i00"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37078" name="Monster Weapon Appearance Stone: Thesakar's Axe">
 		<set name="icon" value="icon.shape_shifting_pole_i00"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37079" name="Monster Weapon Appearance Stone: Mimilead's Staff">
 		<set name="icon" value="icon.shape_shifting_magic_twohand_blunt_i00"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37080" name="Monster Weapon Appearance Stone: Satyr's Staff">
 		<set name="icon" value="icon.shape_shifting_magic_twohand_blunt_i00"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37081" name="Monster Weapon Appearance Stone: Kanadis' Hand">
 		<set name="icon" value="icon.shape_shifting_dualfist_i00"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37082" name="Monster Weapon Appearance Stone: Kanadis' Bow">
 		<set name="icon" value="icon.shape_shifting_bow_i00"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37083" name="Monster Weapon Appearance Stone: Centaur's Bow">
 		<set name="icon" value="icon.shape_shifting_twohand_crossbow_i00"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37084" name="Monster Weapon Appearance Stone: Spicula's Crossbow">
 		<set name="icon" value="icon.shape_shifting_twohand_crossbow_i00"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37085" name="Monster Weapon Appearance Stone: Theor's Shield">
 		<set name="icon" value="icon.shape_shifting_shield_i00"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37086" name="Monster Weapon Appearance Stone: Shield of Corruption">
 		<set name="icon" value="icon.shape_shifting_shield_i00"/>
-		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37087" name="Dimensional Energy - Stage 1">
 		<set name="icon" value="icon.etc_magic_energy_i00"/>

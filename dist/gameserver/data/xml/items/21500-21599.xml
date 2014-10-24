@@ -816,12 +816,16 @@
 	</armor>
 	<etcitem id="21581" name="Scroll: Enchant Power Shirt">
 		<set name="icon" value="BranchSys2.icon.etc_scroll_of_enchant_shirt_i01"/>
-		<set name="weight" value="120"/>
 		<set name="stackable" value="true"/>
-		<set name="class" value="OTHER"/>
-		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="sellable" value="false"/>
+		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="type" value="OTHER"/>
+		<set name="type" value="SCROLL"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="21582" name="Blessed Scroll: Enchant Power Shirt">
 		<set name="icon" value="BranchSys2.icon.etc_scroll_of_enchant_shirt_i00"/>

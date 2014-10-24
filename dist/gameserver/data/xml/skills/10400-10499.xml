@@ -27,7 +27,7 @@
 		<set name="hitTime" val="500"/>
 		<set name="reuseDelay" val="5000"/>
 	</skill>
-	<skill id="10499" levels="1" name="">
+	<skill id="10499" levels="1" name="Tyrr Warrior Air Chain Skill">
 		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="2000"/>
 		<set name="mpConsume2" val="40"/>

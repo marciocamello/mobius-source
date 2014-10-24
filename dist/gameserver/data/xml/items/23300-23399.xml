@@ -10,14 +10,16 @@
 	<armor id="23301" name="Sayha's Shirt">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.pi_shirt_of_wolf_2nd_wind"/>
-		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="130"/>
 		<equip>
-			<slot id="CHEST"/>
+			<slot id="UNDERWEAR"/>
 		</equip>
+		<set name="ex_type" value="UNDERWEAR"/>
 		<for>
 			<add stat="pDef" order="0x10" value="28"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
 	<etcitem id="23302" name="Blessed Scroll: Enchant Elemental Shirt Pack">
@@ -35,14 +37,16 @@
 	<armor id="23304" name="Eva's Shirt">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.pi_shirt_of_wolf_2nd_water"/>
-		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="130"/>
 		<equip>
-			<slot id="CHEST"/>
+			<slot id="UNDERWEAR"/>
 		</equip>
+		<set name="ex_type" value="UNDERWEAR"/>
 		<for>
 			<add stat="pDef" order="0x10" value="28"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
 	<etcitem id="23305" name="Blessed Scroll: Enchant Elemental Shirt Pack">
@@ -60,14 +64,16 @@
 	<armor id="23307" name="Maphr's Shirt">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.pi_shirt_of_wolf_2nd_earth"/>
-		<set name="price" value="0"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="130"/>
 		<equip>
-			<slot id="CHEST"/>
+			<slot id="UNDERWEAR"/>
 		</equip>
+		<set name="ex_type" value="UNDERWEAR"/>
 		<for>
 			<add stat="pDef" order="0x10" value="28"/>
+			<enchant stat="pDef" order="0x0C" value="0"/>
+			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
 	<etcitem id="23308" name="Recipe: Elven Radler" add_name="Event">

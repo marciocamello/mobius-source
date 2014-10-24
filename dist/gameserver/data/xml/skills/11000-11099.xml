@@ -231,6 +231,8 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="overHit" val="true"/>
 		<set name="element" val="Fire"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2280"/>		
 		<enchant1 levels="10" name="Cost">
 			<table name="#power">162 163 165 167 170 171 173 175 177 178</table>
 		</enchant1>
@@ -247,8 +249,6 @@
 				<def name="skillLevels" val="1"/>
 			</effect>
 		</for>
-		<set name="castRange" val="900"/>
-		<set name="hitTime" val="2280"/>
 	</skill>
 	<skill id="11013" levels="8" name="Elemental Spike (water)">
 		<table name="#powerPvP">0</table>
@@ -264,6 +264,8 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="overHit" val="true"/>
 		<set name="element" val="Water"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2280"/>		
 		<enchant1 levels="10" name="Cost">
 			<table name="#power">162 163 165 167 170 171 173 175 177 178</table>
 		</enchant1>
@@ -280,8 +282,6 @@
 				<def name="skillLevels" val="1"/>
 			</effect>
 		</for>
-		<set name="castRange" val="900"/>
-		<set name="hitTime" val="2280"/>
 	</skill>
 	<skill id="11014" levels="8" name="Elemental Spike (wind)">
 		<table name="#powerPvP">0</table>
@@ -297,6 +297,8 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="overHit" val="true"/>
 		<set name="element" val="Wind"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2280"/>		
 		<enchant1 levels="10" name="Cost">
 			<table name="#power">162 163 165 167 170 171 173 175 177 178</table>
 		</enchant1>
@@ -313,8 +315,6 @@
 				<def name="skillLevels" val="1"/>
 			</effect>
 		</for>
-		<set name="castRange" val="900"/>
-		<set name="hitTime" val="2280"/>
 	</skill>
 	<skill id="11015" levels="8" name="Elemental Spike (earth)">
 		<table name="#powerPvP">0</table>
@@ -330,6 +330,8 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="overHit" val="true"/>
 		<set name="element" val="Earth"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2280"/>		
 		<enchant1 levels="10" name="Cost">
 			<table name="#power">162 163 165 167 170 171 173 175 177 178</table>
 		</enchant1>
@@ -346,8 +348,6 @@
 				<def name="skillLevels" val="1"/>
 			</effect>
 		</for>
-		<set name="castRange" val="900"/>
-		<set name="hitTime" val="2280"/>
 	</skill>
 	<skill id="11016" levels="8" name="Elemental Spike (4 attributes)">
 		<table name="#powerPvP">0</table>
@@ -362,6 +362,8 @@
 		<set name="skillType" val="MDAM"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="overHit" val="true"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2280"/>		
 		<enchant1 levels="10" name="Cost">
 			<table name="#power">162 163 165 167 170 171 173 175 177 178</table>
 		</enchant1>
@@ -372,8 +374,6 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">162 163 165 167 170 171 173 175 177 178</table>
 		</enchant3>
-		<set name="castRange" val="900"/>
-		<set name="hitTime" val="2280"/>
 	</skill>
 	<skill id="11017" levels="8" name="Elemental Crash">
 		<table name="#powerPvP">0</table>
@@ -390,6 +390,8 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="overHit" val="true"/>
 		<set name="reuseDelay" val="#reuseDelay"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2780"/>		
 		<enchant1 levels="10" name="Cost">
 			<table name="#power">175 177 179 181 183 186 188 190 192 194</table>
 			<table name="#mpConsume1">13 12 12 11 11 10 10 9 8 8</table>
@@ -406,8 +408,6 @@
 			<table name="#reuseDelay">2300 2200 2100 2100 2000 1900 1800 1800 1700 1600</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
-		<set name="castRange" val="900"/>
-		<set name="hitTime" val="2780"/>
 	</skill>
 	<skill id="11018" levels="8" name="Elemental Crash (fire)">
 		<table name="#powerPvP">0</table>
@@ -423,6 +423,8 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="element" val="Fire"/>
 		<set name="overHit" val="true"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2780"/>		
 		<for>
 			<effect count="1" name="CallSkills" time="0" val="0">
 				<def name="skillIds" val="11082"/>
@@ -439,8 +441,6 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">193 195 197 199 201 205 207 209 211 213</table>
 		</enchant3>
-		<set name="castRange" val="900"/>
-		<set name="hitTime" val="2780"/>
 	</skill>
 	<skill id="11019" levels="8" name="Elemental Crash (water)">
 		<table name="#powerPvP">0</table>
@@ -580,6 +580,9 @@
 		<set name="skillType" val="EMDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="overHit" val="true"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="6080"/>
+		<set name="reuseDelay" val="6699"/>
 		<enchant1 levels="10" name="Cost">
 			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
 		</enchant1>
@@ -590,8 +593,6 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
 		</enchant3>
-		<set name="castRange" val="900"/>
-		<set name="hitTime" val="6080"/>
 	</skill>
 	<skill id="11024" levels="8" name="Elemental Destruction (fire)">
 		<table name="#powerPvP">0</table>
@@ -607,6 +608,9 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="overHit" val="true"/>
 		<set name="element" val="Fire"/>
+		<set name="reuseDelay" val="6699"/>		
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="6080"/>		
 		<enchant1 levels="10" name="Cost">
 			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
 		</enchant1>
@@ -617,8 +621,6 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
 		</enchant3>
-		<set name="castRange" val="900"/>
-		<set name="hitTime" val="6080"/>
 	</skill>
 	<skill id="11025" levels="8" name="Elemental Destruction (water)">
 		<table name="#powerPvP">0</table>
@@ -634,6 +636,9 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="overHit" val="true"/>
 		<set name="element" val="Water"/>
+		<set name="reuseDelay" val="6699"/>		
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="6080"/>		
 		<enchant1 levels="10" name="Cost">
 			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
 		</enchant1>
@@ -644,8 +649,6 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
 		</enchant3>
-		<set name="castRange" val="900"/>
-		<set name="hitTime" val="6080"/>
 	</skill>
 	<skill id="11026" levels="8" name="Elemental Destruction (wind)">
 		<table name="#powerPvP">0</table>
@@ -661,6 +664,9 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="overHit" val="true"/>
 		<set name="element" val="Wind"/>
+		<set name="reuseDelay" val="6699"/>		
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="6080"/>		
 		<enchant1 levels="10" name="Cost">
 			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
 		</enchant1>
@@ -671,8 +677,6 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
 		</enchant3>
-		<set name="castRange" val="900"/>
-		<set name="hitTime" val="6080"/>
 	</skill>
 	<skill id="11027" levels="8" name="Elemental Destruction (earth)">
 		<table name="#powerPvP">0</table>
@@ -688,6 +692,9 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="overHit" val="true"/>
 		<set name="element" val="Earth"/>
+		<set name="reuseDelay" val="6699"/>		
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="6080"/>		
 		<enchant1 levels="10" name="Cost">
 			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
 		</enchant1>
@@ -698,8 +705,6 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
 		</enchant3>
-		<set name="castRange" val="900"/>
-		<set name="hitTime" val="6080"/>
 	</skill>
 	<skill id="11028" levels="8" name="Elemental Destruction (4 attributes)">
 		<table name="#powerPvP">0</table>
@@ -714,6 +719,9 @@
 		<set name="skillType" val="MDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="overHit" val="true"/>
+		<set name="reuseDelay" val="6699"/>		
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="6080"/>		
 		<enchant1 levels="10" name="Cost">
 			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
 		</enchant1>
@@ -724,8 +732,6 @@
 		<enchant3 levels="10" name="Recycle" enchRoute="9">
 			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
 		</enchant3>
-		<set name="castRange" val="900"/>
-		<set name="hitTime" val="6080"/>
 	</skill>
 	<skill id="11029" levels="5" name="Death Breath">
 		<table name="#dmg">480 494 509 523 537</table>
