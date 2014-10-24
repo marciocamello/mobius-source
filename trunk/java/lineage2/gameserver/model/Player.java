@@ -5923,7 +5923,7 @@ public final class Player extends Playable implements PlayerGroup
 				}
 				else if (activeWeapon.getItemType() == WeaponType.CROSSBOW)
 				{
-					getInventory().findArrowForCrossbow(activeWeapon.getTemplate());
+					_arrowItem = getInventory().findArrowForCrossbow(activeWeapon.getTemplate());
 				}
 			}
 			
