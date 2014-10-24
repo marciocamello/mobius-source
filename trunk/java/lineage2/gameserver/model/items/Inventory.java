@@ -736,7 +736,7 @@ public abstract class Inventory extends ItemContainer
 				final ItemTemplate rHandItemTemplate = rHandItem == null ? null : rHandItem.getTemplate();
 				final ItemTemplate newItem = item.getTemplate();
 				
-				if (newItem.getItemType() == EtcItemType.ARROW)
+				if ((newItem.getItemType() == EtcItemType.ARROW) || (newItem.getItemType() == EtcItemType.UNLIMITED_ARROW))
 				{
 					if (rHandItemTemplate == null)
 					{
