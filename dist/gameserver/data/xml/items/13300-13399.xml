@@ -5,20 +5,20 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.blessed_feather_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="13301" name="My Teleport Scroll (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.bookmark_book_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="5"/>
 	</etcitem>
@@ -26,10 +26,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.bookmark_scroll_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="5"/>
 	</etcitem>
@@ -37,9 +37,9 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.pet_controler_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
 	</etcitem>
@@ -47,9 +47,9 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.pet_controler_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
 	</etcitem>
@@ -57,9 +57,9 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.pet_controler_i01"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
 	</etcitem>
@@ -67,9 +67,9 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.pet_controler_i01"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
 	</etcitem>
@@ -77,22 +77,22 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.color_name_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="5"/>
 	</etcitem>
 	<armor id="13308" name="Mount - Darkmane Pacer (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="30"/>
 		<equip>
@@ -106,12 +106,12 @@
 	<armor id="13309" name="Agathion - Love (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="43200"/>
 		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="30"/>
 		<equip>
@@ -127,12 +127,12 @@
 	<armor id="13310" name="Kat the Cat Hat (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="43200"/>
 		<set name="icon" value="icon.accessory_cat_the_cat_cap_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -143,12 +143,12 @@
 	<armor id="13311" name="Feline Queen Hat (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="43200"/>
 		<set name="icon" value="icon.accessory_queen_of_cat_cap_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -159,12 +159,12 @@
 	<armor id="13312" name="Monster Eye Hat (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="43200"/>
 		<set name="icon" value="icon.accessory_monstereye_cap_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -175,12 +175,12 @@
 	<armor id="13313" name="Brown Bear Hat (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="43200"/>
 		<set name="icon" value="icon.accessory_brown_bear_cap_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -191,12 +191,12 @@
 	<armor id="13314" name="Fungus Hat (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="43200"/>
 		<set name="icon" value="icon.accessory_fungus_cap_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -207,12 +207,12 @@
 	<armor id="13315" name="Skull Hat (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="43200"/>
 		<set name="icon" value="icon.accessory_skeleton_cap_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -223,12 +223,12 @@
 	<armor id="13316" name="Ornithomimus Hat (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="43200"/>
 		<set name="icon" value="icon.accessory_ornithomimus_cap_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -239,12 +239,12 @@
 	<armor id="13317" name="Feline King Hat (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="43200"/>
 		<set name="icon" value="icon.accessory_king_of_cat_cap_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -255,12 +255,12 @@
 	<armor id="13318" name="Kai the Cat Hat (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="43200"/>
 		<set name="icon" value="icon.accessory_chi_the_cat_cap_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -271,15 +271,15 @@
 	<weapon id="13319" name="O Stick (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="43200"/>
 		<set name="icon" value="icon.weapon_o_stick_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -297,15 +297,15 @@
 	<weapon id="13320" name="X Stick (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="43200"/>
 		<set name="icon" value="icon.weapon_x_stick_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -323,15 +323,15 @@
 	<weapon id="13321" name="Scissors Stick (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="43200"/>
 		<set name="icon" value="icon.weapon_scissors_stick_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -349,15 +349,15 @@
 	<weapon id="13322" name="Rock Stick (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="43200"/>
 		<set name="icon" value="icon.weapon_rock_stick_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -375,15 +375,15 @@
 	<weapon id="13323" name="Paper Stick (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="43200"/>
 		<set name="icon" value="icon.weapon_diver_stick_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -401,15 +401,15 @@
 	<weapon id="13324" name="Pumpkin Transformation Stick (Event)" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="43200"/>
 		<set name="icon" value="icon.weapon_pumpkin_stick_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -427,12 +427,12 @@
 	<armor id="13325" name="Kat the Cat Hat (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.accessory_cat_the_cat_cap_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -443,12 +443,12 @@
 	<armor id="13326" name="Feline Queen Hat (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.accessory_queen_of_cat_cap_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -459,12 +459,12 @@
 	<armor id="13327" name="Monster Eye Hat (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.accessory_monstereye_cap_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -475,12 +475,12 @@
 	<armor id="13328" name="Brown Bear Hat (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.accessory_brown_bear_cap_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -491,12 +491,12 @@
 	<armor id="13329" name="Fungus Hat (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.accessory_fungus_cap_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -507,12 +507,12 @@
 	<armor id="13330" name="Skull Hat (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.accessory_skeleton_cap_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -523,12 +523,12 @@
 	<armor id="13331" name="Ornithomimus Hat (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.accessory_ornithomimus_cap_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -539,12 +539,12 @@
 	<armor id="13332" name="Feline King Hat (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.accessory_king_of_cat_cap_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -555,12 +555,12 @@
 	<armor id="13333" name="Kai the Cat Hat (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.accessory_chi_the_cat_cap_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -571,15 +571,15 @@
 	<weapon id="13334" name="O Stick (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.weapon_o_stick_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -597,15 +597,15 @@
 	<weapon id="13335" name="X Stick (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.weapon_x_stick_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -623,15 +623,15 @@
 	<weapon id="13336" name="Scissors Stick (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.weapon_scissors_stick_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -649,15 +649,15 @@
 	<weapon id="13337" name="Rock Stick (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.weapon_rock_stick_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -675,15 +675,15 @@
 	<weapon id="13338" name="Paper Stick (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.weapon_diver_stick_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -701,15 +701,15 @@
 	<weapon id="13339" name="Pumpkin Transformation Stick (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.weapon_pumpkin_stick_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -727,12 +727,12 @@
 	<armor id="13340" name="Agathion - Love (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="30"/>
 		<equip>
@@ -750,10 +750,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -762,10 +762,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -774,10 +774,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -786,10 +786,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -798,10 +798,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -810,10 +810,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -822,10 +822,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -834,10 +834,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -846,10 +846,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -858,10 +858,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -870,10 +870,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -882,10 +882,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -894,10 +894,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -906,10 +906,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -918,10 +918,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -930,10 +930,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -942,10 +942,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -954,10 +954,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -966,10 +966,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -978,10 +978,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -990,10 +990,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1002,10 +1002,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1014,10 +1014,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1026,10 +1026,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1038,10 +1038,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1050,10 +1050,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1062,10 +1062,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1074,10 +1074,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1086,10 +1086,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1098,10 +1098,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1110,10 +1110,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1122,10 +1122,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1134,10 +1134,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1146,10 +1146,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1158,10 +1158,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1170,10 +1170,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1182,10 +1182,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1194,10 +1194,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1206,10 +1206,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1218,10 +1218,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1230,10 +1230,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1242,11 +1242,11 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="43200"/>
 		<set name="icon" value="icon.special_cube_i00"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<skills>
 			<skill id="2606" level="1"/>
@@ -1256,10 +1256,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_ticket_red_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1268,10 +1268,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1280,10 +1280,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
@@ -1292,10 +1292,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="S"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_sp_crystal_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
 		<skills>
@@ -1307,10 +1307,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="S"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_sp_crystal_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
 		<skills>
@@ -1322,10 +1322,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="S"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_sp_crystal_i01"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
 		<skills>
@@ -1334,10 +1334,10 @@
 	</etcitem>
 	<armor id="13389" name="Kratei Scale Shirt" add_name="CP">
 		<set name="crystal_type" value="A"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_shirts_a_i04"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="130"/>
 		<equip>
@@ -1356,10 +1356,10 @@
 	</armor>
 	<armor id="13390" name="Kratei Mithril Shirt" add_name="CP">
 		<set name="crystal_type" value="S"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_shirts_s_i05"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="130"/>
 		<equip>
@@ -1378,10 +1378,10 @@
 	</armor>
 	<armor id="13391" name="Kratei Striped Scale Shirt" add_name="CP">
 		<set name="crystal_type" value="A"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_stripe_shirts_a_i04"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="130"/>
 		<equip>
@@ -1400,10 +1400,10 @@
 	</armor>
 	<armor id="13392" name="Kratei Striped Mithril Shirt" add_name="CP">
 		<set name="crystal_type" value="S"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_stripe_shirts_s_i05"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="130"/>
 		<equip>
@@ -1422,11 +1422,11 @@
 	</armor>
 	<armor id="13393" name="Shadow Item: Monkey Hat">
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="100"/>
 		<set name="icon" value="icon.monkey_cap_i00"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -1436,11 +1436,11 @@
 	</armor>
 	<armor id="13394" name="Shadow Item: Pig Hat">
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="100"/>
 		<set name="icon" value="icon.event_pig_cap_i00"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -1451,10 +1451,10 @@
 	<etcitem id="13395" name="Scroll of Escape: Talking Island Village">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_scroll_of_return_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SCROLL"/>
 		<set name="weight" value="30"/>
 		<skills>
@@ -1465,10 +1465,10 @@
 	<etcitem id="13396" name="Scroll of Escape: Elven Village">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_scroll_of_return_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SCROLL"/>
 		<set name="weight" value="30"/>
 		<skills>
@@ -1479,10 +1479,10 @@
 	<etcitem id="13397" name="Scroll of Escape: Dark Elf Village">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_scroll_of_return_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SCROLL"/>
 		<set name="weight" value="30"/>
 		<skills>
@@ -1493,10 +1493,10 @@
 	<etcitem id="13398" name="Scroll of Escape: Orc Village">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_scroll_of_return_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SCROLL"/>
 		<set name="weight" value="30"/>
 		<skills>
@@ -1507,10 +1507,10 @@
 	<etcitem id="13399" name="Scroll of Escape: Dwarven Village">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_scroll_of_return_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SCROLL"/>
 		<set name="weight" value="30"/>
 		<skills>

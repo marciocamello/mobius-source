@@ -2,19 +2,19 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<weapon id="16000" name="Jade Claw {PvP}" add_name="Health">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_jademice_claw_i01"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="ex_type" value="HAND_TO_HAND"/>
 		<set name="weight" value="1550"/>
@@ -38,19 +38,19 @@
 		</for>
 	</weapon>
 	<weapon id="16001" name="Demitelum {PvP}" add_name="Haste">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_ghostcleaner_i01"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
 		<set name="weight" value="2010"/>
@@ -73,19 +73,19 @@
 		</for>
 	</weapon>
 	<weapon id="16002" name="Demitelum {PvP}" add_name="Health">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_ghostcleaner_i01"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
 		<set name="weight" value="2010"/>
@@ -108,19 +108,19 @@
 		</for>
 	</weapon>
 	<weapon id="16003" name="Demitelum {PvP}" add_name="Guidance">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_ghostcleaner_i01"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
 		<set name="weight" value="2010"/>
@@ -144,19 +144,19 @@
 	</weapon>
 	<weapon id="16004" name="Sacredium {PvP}" add_name="Mana Up">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_sacredumors_i01"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1080"/>
@@ -180,19 +180,19 @@
 	</weapon>
 	<weapon id="16005" name="Sacredium {PvP}" add_name="Acumen">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_sacredumors_i01"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1080"/>
@@ -216,19 +216,19 @@
 	</weapon>
 	<weapon id="16006" name="Sacredium {PvP}" add_name="MP Regeneration">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_sacredumors_i01"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1080"/>
@@ -252,19 +252,19 @@
 	</weapon>
 	<weapon id="16007" name="Cyclic Cane {PvP}" add_name="Magic Hold">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_psyskilt_cane_i01"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BIGBLUNT"/>
 		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
 		<set name="weight" value="1080"/>
@@ -290,19 +290,19 @@
 	</weapon>
 	<weapon id="16008" name="Cyclic Cane {PvP}" add_name="Empower">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_psyskilt_cane_i01"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BIGBLUNT"/>
 		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
 		<set name="weight" value="1080"/>
@@ -326,19 +326,19 @@
 	</weapon>
 	<weapon id="16009" name="Cyclic Cane {PvP}" add_name="MP Regeneration">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_psyskilt_cane_i01"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BIGBLUNT"/>
 		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
 		<set name="weight" value="1080"/>
@@ -362,19 +362,19 @@
 	</weapon>
 	<weapon id="16010" name="Archangel Sword {PvP}" add_name="Magic Hold">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_archangel_sword_i001"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="1520"/>
@@ -399,19 +399,19 @@
 	</weapon>
 	<weapon id="16011" name="Archangel Sword {PvP}" add_name="Mana Up">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_archangel_sword_i001"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="1520"/>
@@ -434,19 +434,19 @@
 	</weapon>
 	<weapon id="16012" name="Archangel Sword {PvP}" add_name="Acumen">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_archangel_sword_i001"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="1520"/>
@@ -469,20 +469,20 @@
 	</weapon>
 	<weapon id="16013" name="Recurve Thorne Bow {PvP}" add_name="Critical Slow">
 		<set name="atk_reuse" value="1500"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_recurvethorne_bow_i01"/>
 		<set name="mp_consume" value="6"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
 		<set name="weight" value="1520"/>
@@ -505,20 +505,20 @@
 	</weapon>
 	<weapon id="16014" name="Recurve Thorne Bow {PvP}" add_name="Cheap Shot">
 		<set name="atk_reuse" value="1500"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_recurvethorne_bow_i01"/>
 		<set name="mp_consume" value="6"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
 		<set name="weight" value="1520"/>
@@ -542,20 +542,20 @@
 	</weapon>
 	<weapon id="16015" name="Recurve Thorne Bow {PvP}" add_name="Focus">
 		<set name="atk_reuse" value="1500"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_recurvethorne_bow_i01"/>
 		<set name="mp_consume" value="6"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
 		<set name="weight" value="1520"/>
@@ -578,19 +578,19 @@
 		</for>
 	</weapon>
 	<weapon id="16016" name="Heavenstare Rapier {PvP}" add_name="Focus">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_heavenstair_rapier_i01"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="40"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="RAPIER"/>
 		<set name="ex_type" value="RAPIER"/>
 		<set name="weight" value="1280"/>
@@ -614,19 +614,19 @@
 		</for>
 	</weapon>
 	<weapon id="16017" name="Heavenstare Rapier {PvP}" add_name="Haste">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_heavenstair_rapier_i01"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="40"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="RAPIER"/>
 		<set name="ex_type" value="RAPIER"/>
 		<set name="weight" value="1280"/>
@@ -650,19 +650,19 @@
 		</for>
 	</weapon>
 	<weapon id="16018" name="Heavenstare Rapier {PvP}" add_name="Health">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_heavenstair_rapier_i01"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="40"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="RAPIER"/>
 		<set name="ex_type" value="RAPIER"/>
 		<set name="weight" value="1280"/>
@@ -686,19 +686,19 @@
 		</for>
 	</weapon>
 	<weapon id="16019" name="Pyseal Blade {PvP}" add_name="Focus">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_pyseal_blade_i01"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="15"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="ex_type" value="ANCIENT_SWORD"/>
 		<set name="weight" value="1800"/>
@@ -721,19 +721,19 @@
 		</for>
 	</weapon>
 	<weapon id="16020" name="Pyseal Blade {PvP}" add_name="Haste">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_pyseal_blade_i01"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="15"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="ex_type" value="ANCIENT_SWORD"/>
 		<set name="weight" value="1800"/>
@@ -756,19 +756,19 @@
 		</for>
 	</weapon>
 	<weapon id="16021" name="Pyseal Blade {PvP}" add_name="Health">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_pyseal_blade_i01"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="15"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="ex_type" value="ANCIENT_SWORD"/>
 		<set name="weight" value="1800"/>
@@ -792,19 +792,19 @@
 	</weapon>
 	<weapon id="16022" name="Thorne Crossbow {PvP}" add_name="Critical Slow">
 		<set name="atk_reuse" value="400"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_thorne_crossbow_i01"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="ex_type" value="CROSSBOW"/>
 		<set name="weight" value="1580"/>
@@ -827,19 +827,19 @@
 	</weapon>
 	<weapon id="16023" name="Thorne Crossbow {PvP}" add_name="Cheap Shot">
 		<set name="atk_reuse" value="400"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_thorne_crossbow_i01"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="ex_type" value="CROSSBOW"/>
 		<set name="weight" value="1580"/>
@@ -863,19 +863,19 @@
 	</weapon>
 	<weapon id="16024" name="Thorne Crossbow {PvP}" add_name="Focus">
 		<set name="atk_reuse" value="400"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_thorne_crossbow_i01"/>
 		<set name="price" value="205668000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="ex_type" value="CROSSBOW"/>
 		<set name="weight" value="1580"/>
@@ -901,7 +901,7 @@
 		<set name="crystal_count" value="729"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
-		<set name="augmentable" value="false"/>
+		<set name="augmentable" value="true"/>
 		<set name="icon" value="icon.accessary_queen_of_ice_necklace_i00"/>
 		<set name="price" value="15192000"/>
 		<set name="type" value="NONE"/>
@@ -923,7 +923,7 @@
 		<set name="crystal_count" value="729"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystallizable" value="true"/>
-		<set name="augmentable" value="false"/>
+		<set name="augmentable" value="true"/>
 		<set name="icon" value="icon.accessary_queen_of_ice_necklace_i00"/>
 		<set name="price" value="15192000"/>
 		<set name="type" value="NONE"/>
@@ -1122,7 +1122,7 @@
 	<weapon id="16043" name="Vesper Slasher - Great Gale">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_slasher_i00"/>
 		<set name="kamael_convert" value="16055"/>
 		<set name="price" value="143356000"/>
@@ -1178,7 +1178,7 @@
 	<weapon id="16045" name="Vesper Shaper - Great Gale">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_shaper_i00"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="5"/>
@@ -1206,7 +1206,7 @@
 	<weapon id="16046" name="Vesper Fighter - Great Gale">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_fighter_i00"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="5"/>
@@ -1234,7 +1234,7 @@
 	<weapon id="16047" name="Vesper Stormer - Thunder">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_stormer_i00"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="10"/>
@@ -1263,7 +1263,7 @@
 	<weapon id="16048" name="Vesper Avenger - Landslide">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_avenger_i00"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="20"/>
@@ -1291,7 +1291,7 @@
 	<weapon id="16049" name="Vesper Retributer - Great Gale">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_retributer_i00"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="20"/>
@@ -1320,7 +1320,7 @@
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_caster_i00"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="20"/>
@@ -1349,7 +1349,7 @@
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_singer_i00"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="20"/>
@@ -1378,7 +1378,7 @@
 		<set name="atk_reuse" value="1500"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_thrower_i00"/>
 		<set name="kamael_convert" value="16054"/>
 		<set name="mp_consume" value="6"/>
@@ -1439,7 +1439,7 @@
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_schutze_i00"/>
 		<set name="kamael_convert" value="16043"/>
 		<set name="price" value="143356000"/>
@@ -1468,7 +1468,7 @@
 	<weapon id="16055" name="Vesper Nagan - Great Gale">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_nagen_i00"/>
 		<set name="kamael_convert" value="16052"/>
 		<set name="price" value="143356000"/>
@@ -1584,7 +1584,7 @@
 	<weapon id="16059" name="Vesper Slasher - Great Gale" add_name="Haste">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_slasher_i01"/>
 		<set name="kamael_convert" value="16095"/>
 		<set name="price" value="143356000"/>
@@ -1613,7 +1613,7 @@
 	<weapon id="16060" name="Vesper Slasher - Great Gale" add_name="Health">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_slasher_i01"/>
 		<set name="kamael_convert" value="16096"/>
 		<set name="price" value="143356000"/>
@@ -1642,7 +1642,7 @@
 	<weapon id="16061" name="Vesper Slasher - Great Gale" add_name="Focus">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_slasher_i01"/>
 		<set name="kamael_convert" value="16097"/>
 		<set name="price" value="143356000"/>
@@ -1761,7 +1761,7 @@
 	<weapon id="16065" name="Vesper Shaper - Great Gale" add_name="Critical Damage">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_shaper_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="5"/>
@@ -1790,7 +1790,7 @@
 	<weapon id="16066" name="Vesper Shaper - Great Gale" add_name="HP Drain">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_shaper_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="5"/>
@@ -1819,7 +1819,7 @@
 	<weapon id="16067" name="Vesper Shaper - Great Gale" add_name="Haste">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_shaper_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="5"/>
@@ -1848,7 +1848,7 @@
 	<weapon id="16068" name="Vesper Fighter - Great Gale" add_name="Focus">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_fighter_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="5"/>
@@ -1877,7 +1877,7 @@
 	<weapon id="16069" name="Vesper Fighter - Great Gale" add_name="Health">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_fighter_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="5"/>
@@ -1906,7 +1906,7 @@
 	<weapon id="16070" name="Vesper Fighter - Great Gale" add_name="Critical Stun">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_fighter_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="5"/>
@@ -1935,7 +1935,7 @@
 	<weapon id="16071" name="Vesper Stormer - Thunder" add_name="Health">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_stormer_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="10"/>
@@ -1964,7 +1964,7 @@
 	<weapon id="16072" name="Vesper Stormer - Thunder" add_name="Guidance">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_stormer_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="10"/>
@@ -1993,7 +1993,7 @@
 	<weapon id="16073" name="Vesper Stormer - Thunder" add_name="Haste">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_stormer_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="10"/>
@@ -2022,7 +2022,7 @@
 	<weapon id="16074" name="Vesper Avenger - Landslide" add_name="HP Drain">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_avenger_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="20"/>
@@ -2051,7 +2051,7 @@
 	<weapon id="16075" name="Vesper Avenger - Landslide" add_name="Health">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_avenger_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="20"/>
@@ -2080,7 +2080,7 @@
 	<weapon id="16076" name="Vesper Avenger - Landslide" add_name="HP Regeneration">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_avenger_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="20"/>
@@ -2109,7 +2109,7 @@
 	<weapon id="16077" name="Vesper Retributer - Great Gale" add_name="HP Regeneration">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_retributer_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="20"/>
@@ -2138,7 +2138,7 @@
 	<weapon id="16078" name="Vesper Retributer - Great Gale" add_name="Health">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_retributer_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="20"/>
@@ -2167,7 +2167,7 @@
 	<weapon id="16079" name="Vesper Retributer - Great Gale" add_name="HP Drain">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_retributer_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="20"/>
@@ -2197,7 +2197,7 @@
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_caster_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="20"/>
@@ -2227,7 +2227,7 @@
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_caster_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="20"/>
@@ -2257,7 +2257,7 @@
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_caster_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="20"/>
@@ -2287,7 +2287,7 @@
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_singer_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="20"/>
@@ -2317,7 +2317,7 @@
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_singer_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="20"/>
@@ -2347,7 +2347,7 @@
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_singer_i01"/>
 		<set name="price" value="143356000"/>
 		<set name="rnd_dam" value="20"/>
@@ -2380,7 +2380,7 @@
 		<set name="atk_reuse" value="1500"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_thrower_i01"/>
 		<set name="kamael_convert" value="16092"/>
 		<set name="mp_consume" value="6"/>
@@ -2413,7 +2413,7 @@
 		<set name="atk_reuse" value="1500"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_thrower_i01"/>
 		<set name="kamael_convert" value="16093"/>
 		<set name="mp_consume" value="6"/>
@@ -2445,7 +2445,7 @@
 		<set name="atk_reuse" value="1500"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_thrower_i01"/>
 		<set name="kamael_convert" value="16094"/>
 		<set name="mp_consume" value="6"/>
@@ -2570,7 +2570,7 @@
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_schutze_i01"/>
 		<set name="kamael_convert" value="16086"/>
 		<set name="price" value="143356000"/>
@@ -2602,7 +2602,7 @@
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_schutze_i01"/>
 		<set name="kamael_convert" value="16087"/>
 		<set name="price" value="143356000"/>
@@ -2633,7 +2633,7 @@
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_schutze_i01"/>
 		<set name="kamael_convert" value="16088"/>
 		<set name="price" value="143356000"/>
@@ -2663,7 +2663,7 @@
 	<weapon id="16095" name="Vesper Nagan - Great Gale" add_name="Haste">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_nagen_i01"/>
 		<set name="kamael_convert" value="16059"/>
 		<set name="price" value="143356000"/>
@@ -2693,7 +2693,7 @@
 	<weapon id="16096" name="Vesper Nagan - Great Gale" add_name="Health">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_nagen_i01"/>
 		<set name="kamael_convert" value="16060"/>
 		<set name="price" value="143356000"/>
@@ -2723,7 +2723,7 @@
 	<weapon id="16097" name="Vesper Nagan - Great Gale" add_name="Focus">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_nagen_i01"/>
 		<set name="kamael_convert" value="16061"/>
 		<set name="price" value="143356000"/>

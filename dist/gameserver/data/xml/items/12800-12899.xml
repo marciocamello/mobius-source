@@ -4,15 +4,15 @@
 	<weapon id="12800" name="Pumpkin Transformation Stick" add_name="30-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="43200"/>
 		<set name="icon" value="icon.weapon_pumpkin_stick_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -30,14 +30,14 @@
 	<weapon id="12801" name="Condolence Flowerpot A">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pig_candy_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -58,14 +58,14 @@
 	<weapon id="12802" name="Condolence Flowerpot B">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pig_candy_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -86,14 +86,14 @@
 	<weapon id="12803" name="Congratulatory Flowerpot A">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pig_candy_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -114,14 +114,14 @@
 	<weapon id="12804" name="Congratulatory Flowerpot B">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pig_candy_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -142,14 +142,14 @@
 	<weapon id="12805" name="Flower Arrangement">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pig_candy_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -170,14 +170,14 @@
 	<weapon id="12806" name="Bomb">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pig_candy_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -198,14 +198,14 @@
 	<weapon id="12807" name="Direction Board">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pig_candy_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -226,14 +226,14 @@
 	<weapon id="12808" name="Fruit Basket">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pig_candy_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -254,14 +254,14 @@
 	<weapon id="12809" name="Arranged Clams">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pig_candy_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -282,14 +282,14 @@
 	<weapon id="12810" name="Halloween Pumpkin">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pig_candy_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -310,7 +310,7 @@
 	<armor id="12811" name="Arcana Sigil">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.arcana_sigil_i00"/>
 		<set name="price" value="3355000"/>
 		<set name="type" value="SIGIL"/>
@@ -329,7 +329,7 @@
 	<armor id="12812" name="Dynasty Sigil">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.dynasty_sigil_i00"/>
 		<set name="price" value="6404000"/>
 		<set name="type" value="SIGIL"/>
@@ -348,7 +348,7 @@
 	<armor id="12813" name="Vesper Sigil">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.verper_sigil_i00"/>
 		<set name="price" value="12250000"/>
 		<set name="type" value="SIGIL"/>
@@ -366,14 +366,14 @@
 	</armor>
 	<weapon id="12814" name="Shadow Item: Gatekeeper Transformation Stick">
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="60"/>
 		<set name="icon" value="icon.etc_gateleeper_stick_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -395,11 +395,11 @@
 	</weapon>
 	<armor id="12815" name="Red Talisman - Max CP">
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="65"/>
 		<set name="icon" value="icon.etc_talisman_i00"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
 		<equip>
@@ -412,11 +412,11 @@
 	</armor>
 	<armor id="12816" name="Red Talisman - CP Regeneration">
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="65"/>
 		<set name="icon" value="icon.etc_talisman_i00"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
 		<equip>
@@ -429,11 +429,11 @@
 	</armor>
 	<armor id="12817" name="Yellow Talisman - Increase Momentum">
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="65"/>
 		<set name="icon" value="icon.etc_talisman_i02"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
 		<equip>
@@ -446,11 +446,11 @@
 	</armor>
 	<armor id="12818" name="Yellow Talisman - Damage Transition">
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="65"/>
 		<set name="icon" value="icon.etc_talisman_i02"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
 		<equip>
@@ -506,20 +506,20 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_crystal_blue_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="12824" name="Pathfinder Supplies (Level 1)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_treasure_box_i01"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 		<skills>
@@ -531,10 +531,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_treasure_box_i01"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 		<skills>
@@ -546,10 +546,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_treasure_box_i03"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 		<skills>
@@ -561,10 +561,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_treasure_box_i03"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 		<skills>
@@ -576,10 +576,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_treasure_box_i04"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 		<skills>
@@ -591,10 +591,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_treasure_box_i04"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 		<skills>
@@ -606,10 +606,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_treasure_box_i05"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 		<skills>
@@ -621,10 +621,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_treasure_box_i05"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 		<skills>
@@ -636,10 +636,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_treasure_box_i06"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 		<skills>
@@ -651,10 +651,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_treasure_box_i06"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 		<skills>
@@ -666,10 +666,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_treasure_box_i07"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 		<skills>
@@ -679,11 +679,11 @@
 	</etcitem>
 	<armor id="12835" name="Shadow Item: Teddy Bear Hat">
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="300"/>
 		<set name="icon" value="icon.accessory_bear_cap_i00"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -693,11 +693,11 @@
 	</armor>
 	<armor id="12836" name="Shadow Item: Piggy Hat">
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="300"/>
 		<set name="icon" value="icon.accessory_pig_cap_i00"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -707,11 +707,11 @@
 	</armor>
 	<armor id="12837" name="Shadow Item: Jester Hat">
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="300"/>
 		<set name="icon" value="icon.accessory_jester_cap_i00"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -721,10 +721,10 @@
 	</armor>
 	<armor id="12838" name="Fish Hat (Event)">
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.accessory_fish_cap_i00"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -734,10 +734,10 @@
 	</armor>
 	<armor id="12839" name="Medieval Party Mask (Event)">
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.accessory_middle_age_party_mask_i00"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="10"/>
 		<equip>
@@ -854,19 +854,19 @@
 		<set name="weight" value="2"/>
 	</etcitem>
 	<weapon id="12852" name="Naga Storm - Molar {PvP}" add_name="Focus">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_naga_storm_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
 		<set name="weight" value="930"/>
@@ -890,19 +890,19 @@
 		</for>
 	</weapon>
 	<weapon id="12853" name="Naga Storm - Molar {PvP}" add_name="Critical Damage">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_naga_storm_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
 		<set name="weight" value="930"/>
@@ -926,19 +926,19 @@
 		</for>
 	</weapon>
 	<weapon id="12854" name="Naga Storm - Molar {PvP}" add_name="Back Blow">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_naga_storm_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
 		<set name="weight" value="930"/>
@@ -963,19 +963,19 @@
 	</weapon>
 	<weapon id="12855" name="Daimon Crystal - Wisdom {PvP}" add_name="Mana Up">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_crystal_of_deamon_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BIGBLUNT"/>
 		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
 		<set name="weight" value="880"/>
@@ -1000,19 +1000,19 @@
 	</weapon>
 	<weapon id="12856" name="Daimon Crystal - Wisdom {PvP}" add_name="Acumen">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_crystal_of_deamon_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BIGBLUNT"/>
 		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
 		<set name="weight" value="880"/>
@@ -1037,19 +1037,19 @@
 	</weapon>
 	<weapon id="12857" name="Daimon Crystal - Wisdom {PvP}" add_name="Magic Mental Shield">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_crystal_of_deamon_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BIGBLUNT"/>
 		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
 		<set name="weight" value="880"/>
@@ -1075,19 +1075,19 @@
 		</for>
 	</weapon>
 	<weapon id="12858" name="Barakiel's Axe - Mild {PvP}" add_name="Health">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_barakiel_axe_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1550"/>
@@ -1111,19 +1111,19 @@
 		</for>
 	</weapon>
 	<weapon id="12859" name="Barakiel's Axe - Mild {PvP}" add_name="Haste">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_barakiel_axe_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1550"/>
@@ -1147,19 +1147,19 @@
 		</for>
 	</weapon>
 	<weapon id="12860" name="Barakiel's Axe - Mild {PvP}" add_name="Focus">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_barakiel_axe_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1550"/>
@@ -1184,19 +1184,19 @@
 	</weapon>
 	<weapon id="12861" name="Screaming Vengeance - Concentration {PvP}" add_name="Cheap Shot">
 		<set name="atk_reuse" value="400"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_soul_shooter_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="ex_type" value="CROSSBOW"/>
 		<set name="weight" value="1640"/>
@@ -1228,19 +1228,19 @@
 	</weapon>
 	<weapon id="12862" name="Screaming Vengeance - Concentration {PvP}" add_name="Focus">
 		<set name="atk_reuse" value="400"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_soul_shooter_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="ex_type" value="CROSSBOW"/>
 		<set name="weight" value="1640"/>
@@ -1265,19 +1265,19 @@
 	</weapon>
 	<weapon id="12863" name="Screaming Vengeance - Concentration {PvP}" add_name="Quick Recovery">
 		<set name="atk_reuse" value="332"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_soul_shooter_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="ex_type" value="CROSSBOW"/>
 		<set name="weight" value="1640"/>
@@ -1307,19 +1307,19 @@
 		</for>
 	</weapon>
 	<weapon id="12864" name="Behemoth' Tuning Fork - Destruction {PvP}" add_name="Focus">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_tuning_fork_of_behemoth_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BIGBLUNT"/>
 		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
 		<set name="weight" value="1890"/>
@@ -1343,19 +1343,19 @@
 		</for>
 	</weapon>
 	<weapon id="12865" name="Behemoth' Tuning Fork - Destruction {PvP}" add_name="Health">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_tuning_fork_of_behemoth_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BIGBLUNT"/>
 		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
 		<set name="weight" value="1890"/>
@@ -1379,19 +1379,19 @@
 		</for>
 	</weapon>
 	<weapon id="12866" name="Behemoth' Tuning Fork - Destruction {PvP}" add_name="Anger">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_tuning_fork_of_behemoth_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BIGBLUNT"/>
 		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
 		<set name="weight" value="1890"/>
@@ -1415,19 +1415,19 @@
 		</for>
 	</weapon>
 	<weapon id="12867" name="Durendal - Earth {PvP}" add_name="Focus">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_death_bringer_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="15"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="ex_type" value="ANCIENT_SWORD"/>
 		<set name="weight" value="1820"/>
@@ -1451,19 +1451,19 @@
 		</for>
 	</weapon>
 	<weapon id="12868" name="Durendal - Earth {PvP}" add_name="Haste">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_death_bringer_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="15"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="ex_type" value="ANCIENT_SWORD"/>
 		<set name="weight" value="1820"/>
@@ -1487,19 +1487,19 @@
 		</for>
 	</weapon>
 	<weapon id="12869" name="Durendal - Earth {PvP}" add_name="Health">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_death_bringer_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="15"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="ex_type" value="ANCIENT_SWORD"/>
 		<set name="weight" value="1820"/>
@@ -1524,20 +1524,20 @@
 	</weapon>
 	<weapon id="12870" name="Shyeed's Bow - Concentration {PvP}" add_name="Cheap Shot">
 		<set name="atk_reuse" value="820"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_shyid_bow_i01"/>
 		<set name="mp_consume" value="5"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="2"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
 		<set name="weight" value="1640"/>
@@ -1569,20 +1569,20 @@
 	</weapon>
 	<weapon id="12871" name="Shyeed's Bow - Concentration {PvP}" add_name="Focus">
 		<set name="atk_reuse" value="820"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_shyid_bow_i01"/>
 		<set name="mp_consume" value="5"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="2"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
 		<set name="weight" value="1640"/>
@@ -1607,20 +1607,20 @@
 	</weapon>
 	<weapon id="12872" name="Shyeed's Bow - Concentration {PvP}" add_name="Quick Recovery">
 		<set name="atk_reuse" value="639"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_shyid_bow_i01"/>
 		<set name="mp_consume" value="5"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="2"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
 		<set name="weight" value="1640"/>
@@ -1650,19 +1650,19 @@
 		</for>
 	</weapon>
 	<weapon id="12873" name="Sword of Ipos - Earth {PvP}" add_name="Focus">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_sword_of_ipos_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
 		<set name="weight" value="1820"/>
@@ -1685,19 +1685,19 @@
 		</for>
 	</weapon>
 	<weapon id="12874" name="Sword of Ipos - Earth {PvP}" add_name="Haste">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_sword_of_ipos_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
 		<set name="weight" value="1820"/>
@@ -1720,19 +1720,19 @@
 		</for>
 	</weapon>
 	<weapon id="12875" name="Sword of Ipos - Earth {PvP}" add_name="Health">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_sword_of_ipos_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
 		<set name="weight" value="1820"/>
@@ -1755,19 +1755,19 @@
 		</for>
 	</weapon>
 	<weapon id="12876" name="Sobekk's Hurricane - Landslide {PvP}" add_name="Rsk. Haste">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_sobekk_hurricane_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="ex_type" value="HAND_TO_HAND"/>
 		<set name="weight" value="1330"/>
@@ -1791,19 +1791,19 @@
 		</for>
 	</weapon>
 	<weapon id="12877" name="Sobekk's Hurricane - Landslide {PvP}" add_name="Haste">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_sobekk_hurricane_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="ex_type" value="HAND_TO_HAND"/>
 		<set name="weight" value="1330"/>
@@ -1827,19 +1827,19 @@
 		</for>
 	</weapon>
 	<weapon id="12878" name="Sobekk's Hurricane - Landslide {PvP}" add_name="Critical Drain">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_sobekk_hurricane_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="ex_type" value="HAND_TO_HAND"/>
 		<set name="weight" value="1330"/>
@@ -1866,19 +1866,19 @@
 		</for>
 	</weapon>
 	<weapon id="12879" name="Sirra's Blade - Landslide {PvP}" add_name="Haste">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_sirr_blade_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="1300"/>
@@ -1901,19 +1901,19 @@
 		</for>
 	</weapon>
 	<weapon id="12880" name="Sirra's Blade - Landslide {PvP}" add_name="Health">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_sirr_blade_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="1300"/>
@@ -1936,19 +1936,19 @@
 		</for>
 	</weapon>
 	<weapon id="12881" name="Sirra's Blade - Landslide {PvP}" add_name="Critical Poison">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_sirr_blade_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="1300"/>
@@ -1973,19 +1973,19 @@
 		</for>
 	</weapon>
 	<weapon id="12882" name="Eclair Bijou - Landslide {PvP}" add_name="Haste">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_greed_stinger_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="40"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="RAPIER"/>
 		<set name="ex_type" value="RAPIER"/>
 		<set name="weight" value="1300"/>
@@ -2010,19 +2010,19 @@
 		</for>
 	</weapon>
 	<weapon id="12883" name="Eclair Bijou - Landslide {PvP}" add_name="Health">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_greed_stinger_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="40"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="RAPIER"/>
 		<set name="ex_type" value="RAPIER"/>
 		<set name="weight" value="1300"/>
@@ -2047,19 +2047,19 @@
 		</for>
 	</weapon>
 	<weapon id="12884" name="Eclair Bijou - Landslide {PvP}" add_name="Critical Poison">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_greed_stinger_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="40"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="RAPIER"/>
 		<set name="ex_type" value="RAPIER"/>
 		<set name="weight" value="1300"/>
@@ -2086,19 +2086,19 @@
 		</for>
 	</weapon>
 	<weapon id="12885" name="Tiphon's Spear - Landslide {PvP}" add_name="Critical Stun">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_tiphon_spear_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
 		<set name="weight" value="1820"/>
@@ -2124,19 +2124,19 @@
 		</for>
 	</weapon>
 	<weapon id="12886" name="Tiphon's Spear - Landslide {PvP}" add_name="Long Blow">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_tiphon_spear_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
 		<set name="weight" value="1820"/>
@@ -2166,19 +2166,19 @@
 		</for>
 	</weapon>
 	<weapon id="12887" name="Tiphon's Spear - Landslide {PvP}" add_name="Wild Blow">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_tiphon_spear_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
 		<set name="weight" value="1820"/>
@@ -2208,19 +2208,19 @@
 		</for>
 	</weapon>
 	<weapon id="12888" name="Tallum Blade*Damascus - Landslide {PvP}">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DUAL"/>
 		<set name="ex_type" value="DUAL_SWORD"/>
 		<set name="weight" value="1890"/>
@@ -2244,19 +2244,19 @@
 	</weapon>
 	<weapon id="12889" name="Themis' Tongue - Cleverness {PvP}" add_name="Mana Up">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_tongue_of_themis_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="820"/>
@@ -2280,19 +2280,19 @@
 	</weapon>
 	<weapon id="12890" name="Themis' Tongue - Cleverness {PvP}" add_name="Magic Mental Shield">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_tongue_of_themis_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="820"/>
@@ -2318,19 +2318,19 @@
 	</weapon>
 	<weapon id="12891" name="Themis' Tongue - Cleverness {PvP}" add_name="Magic Focus">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_tongue_of_themis_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="820"/>
@@ -2357,19 +2357,19 @@
 	</weapon>
 	<weapon id="12892" name="Cabrio's Hand - Cleverness {PvP}" add_name="Conversion">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_hand_of_cabrio_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1510"/>
@@ -2395,19 +2395,19 @@
 	</weapon>
 	<weapon id="12893" name="Cabrio's Hand - Cleverness {PvP}" add_name="Mana Up">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_hand_of_cabrio_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1510"/>
@@ -2432,19 +2432,19 @@
 	</weapon>
 	<weapon id="12894" name="Cabrio's Hand - Cleverness {PvP}" add_name="Magic Silence">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_hand_of_cabrio_i01"/>
 		<set name="price" value="26968400"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1510"/>
@@ -2470,19 +2470,19 @@
 		</for>
 	</weapon>
 	<weapon id="12895" name="Gram - Thunder {PvP}" add_name="Haste">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_gram_i01"/>
 		<set name="price" value="42759400"/>
 		<set name="rnd_dam" value="15"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="ex_type" value="ANCIENT_SWORD"/>
 		<set name="weight" value="1800"/>
@@ -2506,19 +2506,19 @@
 		</for>
 	</weapon>
 	<weapon id="12896" name="Gram - Thunder {PvP}" add_name="Health">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_gram_i01"/>
 		<set name="price" value="42759400"/>
 		<set name="rnd_dam" value="15"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="ex_type" value="ANCIENT_SWORD"/>
 		<set name="weight" value="1800"/>
@@ -2542,19 +2542,19 @@
 		</for>
 	</weapon>
 	<weapon id="12897" name="Gram - Thunder {PvP}" add_name="Focus">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_gram_i01"/>
 		<set name="price" value="42759400"/>
 		<set name="rnd_dam" value="15"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="ex_type" value="ANCIENT_SWORD"/>
 		<set name="weight" value="1800"/>
@@ -2578,19 +2578,19 @@
 		</for>
 	</weapon>
 	<weapon id="12898" name="Demon Splinter - Thunder {PvP}" add_name="Focus">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_demon_splinter_i01"/>
 		<set name="price" value="42759400"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="ex_type" value="HAND_TO_HAND"/>
 		<set name="weight" value="1350"/>
@@ -2614,19 +2614,19 @@
 		</for>
 	</weapon>
 	<weapon id="12899" name="Demon Splinter - Thunder {PvP}" add_name="Health">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_demon_splinter_i01"/>
 		<set name="price" value="42759400"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="ex_type" value="HAND_TO_HAND"/>
 		<set name="weight" value="1350"/>

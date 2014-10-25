@@ -1037,7 +1037,7 @@
 		<set name="type" value="NONE"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="crystal_count" value="0"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<armor id="17573" name="Test-Sigil">
 		<set name="crystal_type" value="S80"/>

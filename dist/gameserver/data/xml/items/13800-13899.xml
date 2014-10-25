@@ -19,11 +19,11 @@
 	</etcitem>
 	<armor id="13802" name="Native's Hood">
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.armor_leather_helmet_i00"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="70"/>
 		<equip>
@@ -41,11 +41,11 @@
 	</armor>
 	<armor id="13803" name="Native's Tunic">
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.armor_t34_u_i00"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="LIGHT"/>
 		<set name="weight" value="4720"/>
 		<equip>
@@ -63,11 +63,11 @@
 	</armor>
 	<armor id="13804" name="Native's Pants">
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.armor_t34_l_i00"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="LIGHT"/>
 		<set name="weight" value="1700"/>
 		<equip>
@@ -85,11 +85,11 @@
 	</armor>
 	<armor id="13805" name="Guards of the Dawn Helmet">
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.armor_leather_helmet_i02"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="70"/>
 		<equip>
@@ -107,11 +107,11 @@
 	</armor>
 	<armor id="13806" name="Guards of the Dawn Tunic">
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.armor_t08_u_i00"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="LIGHT"/>
 		<set name="weight" value="4720"/>
 		<equip>
@@ -129,11 +129,11 @@
 	</armor>
 	<armor id="13807" name="Guards of the Dawn Pants">
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.armor_t08_l_i00"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="LIGHT"/>
 		<set name="weight" value="1700"/>
 		<equip>
@@ -153,21 +153,21 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_holy_water_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<weapon id="13809" name="Court Wizard's Magic Staff">
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_apprentices_rod_i00"/>
 		<set name="rnd_dam" value="0"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<skills>
 			<skill id="2634" level="1"/>
@@ -177,135 +177,135 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_letter_envelope_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="13811" name="Keucereus' Introduction - Seed of Infinity">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_letter_white_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13812" name="Keucereus' Introduction - Seed of Destruction">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_letter_white_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13813" name="Croop's Introduction">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_letter_red_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13814" name="Jacob's Necklace">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.accessary_necklace_of_protection_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13815" name="Croop's Letter Requesting a Memorial Service">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_scroll_white_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13816" name="Deadman's Herb">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_herb_blue_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13817" name="Priest Cain's Investigation Report">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_paper_black_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13818" name="Athebaldt's Introduction">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_letter_white_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13819" name="Native's Gloves">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.armor_short_leather_gloves_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13820" name="Frog King's Bead">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_crystal_ball_blue_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13821" name="Grandma Tess' Candy Pouch">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pouch_brown_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13822" name="Guards of the Dawn Identity Card">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_royal_membership_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13823" name="Emperor Shunaiman's Contract">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_crest_red_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13824" name="Ancient Seal Stone of Mammon">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_water_rune_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13825" name="Einhasad's Grail">
@@ -340,9 +340,9 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_apprentices_spellbook_i01"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13830" name="Tomlan Kamos' Cellular Tissue">
@@ -445,7 +445,7 @@
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.weapon_monster_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="2"/>
 		<set name="spiritshots" value="2"/>
 		<set name="type" value="BIGSWORD"/>
@@ -466,15 +466,15 @@
 	<weapon id="13843" name="Draconic Peltast Weapon">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystallizable" value="false"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_doomed_dagger_i00"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="2"/>
 		<set name="spiritshots" value="2"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
 		<set name="weight" value="300"/>
@@ -505,18 +505,18 @@
 		</skills>
 	</etcitem>
 	<weapon id="13845" name="Attribute Master Yin's Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10"/>
 		<set name="icon" value="icon.weapon_long_sword_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="2"/>
 		<set name="spiritshots" value="2"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="1560"/>
@@ -536,20 +536,20 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_royal_seal_of_lord_i04"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13847" name="Mysterious Fragment">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_statue_of_einhasad_bronze_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13848" name="Headless Knight's Armor">
@@ -588,20 +588,20 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_roll_of_paper_black_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13853" name="Destroyed Darkness Fragment Powder">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_powder_black_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 		<skills>
 			<skill id="2615" level="1"/>
@@ -611,20 +611,20 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_powder_white_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13855" name="Sacred Light Fragment">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_piece_holy_light"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<skills>
 			<skill id="2839" level="1"/>
@@ -690,10 +690,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_debris_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13864" name="Seal of Tiat">
@@ -708,130 +708,130 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_totem_black_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13866" name="Restless Soul">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.soul_facet_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13867" name="Tiat Charm">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.tiat_breath_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13868" name="Yehan Klodekus' Badge">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_badge_black_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13869" name="Yehan Klanikus' Badge">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_badge_silver_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13870" name="Lich Crystal">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_crystal_ball_green_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13871" name="Vulture's Golden Feather">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_feather_gold_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13872" name="Swallowed Skull">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_skull_white_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13873" name="Swallowed Sternum">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_rib_white_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13874" name="Swallowed Bones">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_piece_bone_white_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13875" name="Deadman's Remains">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_piece_bone_black_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13876" name="Banshee Queen's Eye">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_eyeball_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13877" name="Drake's Flesh">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_meat_of_monstereye_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<etcitem id="13878" name="Rotten Blood">
@@ -859,18 +859,18 @@
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<weapon id="13881" name="Attribute Master Yang's Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10"/>
 		<set name="icon" value="icon.weapon_long_sword_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="2"/>
 		<set name="spiritshots" value="2"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="1560"/>
@@ -976,7 +976,7 @@
 	<armor id="13885" name="Sealed Arcana Sigil">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.arcana_sigil_i01"/>
 		<set name="price" value="3355000"/>
 		<set name="type" value="SIGIL"/>
@@ -995,7 +995,7 @@
 	<armor id="13886" name="Sealed Dynasty Sigil">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.armor_dynasty_sigil_i01"/>
 		<set name="price" value="6404000"/>
 		<set name="type" value="SIGIL"/>
@@ -1014,7 +1014,7 @@
 	<armor id="13887" name="Sealed Vesper Sigil">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.armor_verper_sigil_i01"/>
 		<set name="price" value="12250000"/>
 		<set name="type" value="SIGIL"/>
@@ -1031,7 +1031,7 @@
 		</for>
 	</armor>
 	<armor id="13888" name="Sealed Lord's Cloak">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.feud_load_cloak_i01"/>
 		<set name="price" value="28671000"/>
@@ -1048,7 +1048,7 @@
 		</for>
 	</armor>
 	<armor id="13889" name="Holy Spirit's Cloak (Kamael)">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.vesper_cloack_i00"/>
 		<set name="price" value="28671000"/>
@@ -1068,7 +1068,7 @@
 		</for>
 	</armor>
 	<armor id="13890" name="Holy Spirit's Cloak">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.vesper_cloack_i00"/>
 		<set name="price" value="28671000"/>
@@ -1088,7 +1088,7 @@
 		</for>
 	</armor>
 	<armor id="13891" name="Holy Spirit's Cloak (Light Armor)">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.vesper_cloack_i00"/>
 		<set name="price" value="28671000"/>
@@ -1108,7 +1108,7 @@
 		</for>
 	</armor>
 	<armor id="13892" name="Holy Spirit's Cloak (Robe)">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.vesper_cloack_i00"/>
 		<set name="price" value="28671000"/>

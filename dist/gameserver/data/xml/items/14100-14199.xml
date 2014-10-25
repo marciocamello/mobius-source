@@ -4,12 +4,12 @@
 	<armor id="14100" name="Agathion - Teddy Girl (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="30"/>
 		<equip>
@@ -25,12 +25,12 @@
 	<armor id="14101" name="Agathion - Angry Devil (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="30"/>
 		<equip>
@@ -46,12 +46,12 @@
 	<armor id="14102" name="Agathion - Shiny (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="30"/>
 		<equip>
@@ -67,12 +67,12 @@
 	<armor id="14103" name="Agathion - Sobbing (Event)" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="10080"/>
 		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="30"/>
 		<equip>
@@ -87,12 +87,12 @@
 	</armor>
 	<armor id="14104" name="Shadow Item: Agathion - Essence Collector">
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="600"/>
 		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>
 		<set name="price" value="200000"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
 		<equip>
@@ -1398,7 +1398,7 @@
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_schutze_i01"/>
 		<set name="kamael_convert" value="14148"/>
 		<set name="price" value="143356000"/>
@@ -1436,7 +1436,7 @@
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_schutze_i01"/>
 		<set name="kamael_convert" value="14149"/>
 		<set name="price" value="143356000"/>
@@ -1466,7 +1466,7 @@
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_vesper_schutze_i01"/>
 		<set name="kamael_convert" value="14150"/>
 		<set name="price" value="143356000"/>
@@ -1730,7 +1730,7 @@
 	<etcitem id="14170" name="Forgotten Scroll: Seed of Revenge">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_shield_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1741,7 +1741,7 @@
 	<etcitem id="14171" name="Forgotten Scroll: Hell Scream">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_shield_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1752,7 +1752,7 @@
 	<etcitem id="14172" name="Forgotten Scroll: Spirit of the Phoenix">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_shield_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1763,7 +1763,7 @@
 	<etcitem id="14173" name="Forgotten Scroll: Eva's Will">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_shield_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1774,7 +1774,7 @@
 	<etcitem id="14174" name="Forgotten Scroll: Pain of Shilen">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_shield_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1785,7 +1785,7 @@
 	<etcitem id="14175" name="Forgotten Scroll: Exciting Adventure">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_sword_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1796,7 +1796,7 @@
 	<etcitem id="14176" name="Forgotten Scroll: Wind Riding">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_sword_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1807,7 +1807,7 @@
 	<etcitem id="14177" name="Forgotten Scroll: Ghost Walking">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_sword_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1818,7 +1818,7 @@
 	<etcitem id="14178" name="Forgotten Scroll: Flame Hawk">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_sword_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1829,7 +1829,7 @@
 	<etcitem id="14179" name="Forgotten Scroll: Arrow Rain">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_sword_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1840,7 +1840,7 @@
 	<etcitem id="14180" name="Forgotten Scroll: Ghost Piercing">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_sword_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1851,7 +1851,7 @@
 	<etcitem id="14181" name="Forgotten Scroll: Dread Pool">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_sword_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1862,7 +1862,7 @@
 	<etcitem id="14182" name="Forgotten Scroll: Force of Destruction">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_sword_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1873,7 +1873,7 @@
 	<etcitem id="14183" name="Forgotten Scroll: Demolition Impact">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_sword_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1884,7 +1884,7 @@
 	<etcitem id="14184" name="Forgotten Scroll: Golem Armor">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_sword_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1895,7 +1895,7 @@
 	<etcitem id="14185" name="Forgotten Scroll: Wild Shot">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_sword_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1906,7 +1906,7 @@
 	<etcitem id="14186" name="Forgotten Scroll: Lightning Shock">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_magic_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1917,7 +1917,7 @@
 	<etcitem id="14187" name="Forgotten Scroll: Flame Armor">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_magic_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1928,7 +1928,7 @@
 	<etcitem id="14188" name="Forgotten Scroll: Frost Armor">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_magic_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1939,7 +1939,7 @@
 	<etcitem id="14189" name="Forgotten Scroll: Hurricane Armor">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_magic_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1950,7 +1950,7 @@
 	<etcitem id="14190" name="Forgotten Scroll: Vampiric Mist">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_magic_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1981,7 +1981,7 @@
 	<etcitem id="14193" name="Forgotten Scroll: Sublime Self-sacrifice">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_magic_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -1992,7 +1992,7 @@
 	<etcitem id="14194" name="Forgotten Scroll: Blessing of Eva">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_magic_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -2003,7 +2003,7 @@
 	<etcitem id="14195" name="Forgotten Scroll: Lord of Vampires">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_magic_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -2014,7 +2014,7 @@
 	<etcitem id="14196" name="Forgotten Scroll: Thorn Root">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_magic_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -2025,7 +2025,7 @@
 	<etcitem id="14197" name="Forgotten Scroll: Seal of Limit">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_magic_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -2036,7 +2036,7 @@
 	<etcitem id="14198" name="Forgotten Scroll: Song of Purification">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_sword_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>
@@ -2047,7 +2047,7 @@
 	<etcitem id="14199" name="Forgotten Scroll: Dance of Berserker">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="BranchSys2.Icon.br_spell_books_sword_i01"/>
 		<set name="price" value="120000"/>
 		<set name="stackable" value="true"/>

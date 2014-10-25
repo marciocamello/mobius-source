@@ -409,7 +409,7 @@
 	<armor id="13941" name="Top-grade Magic Pouch Cloth Belt">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.armor_magic_pouch_belt_i00"/>
 		<set name="price" value="45100"/>
 		<set name="type" value="LIGHT"/>
@@ -745,7 +745,7 @@
 	<armor id="13957" name="Top-grade Magic Pin Cloth Belt">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.armor_magic_pin_belt_i00"/>
 		<set name="price" value="45100"/>
 		<set name="type" value="LIGHT"/>
@@ -1028,14 +1028,14 @@
 	<weapon id="13971" name="Fantasy Red Boing Hammer">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_bbyong_hammer_a_i00"/>
 		<set name="rnd_dam" value="1"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="2"/>
 		<set name="spiritshots" value="2"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1710"/>
@@ -1058,14 +1058,14 @@
 	<weapon id="13972" name="Fantasy Blue Boing Hammer">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_bbyong_hammer_b_i00"/>
 		<set name="rnd_dam" value="1"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="2"/>
 		<set name="spiritshots" value="2"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1710"/>
@@ -1088,14 +1088,14 @@
 	<weapon id="13973" name="Small Fantasy Red Boing Hammer">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_bbyong_hammer_c_i00"/>
 		<set name="rnd_dam" value="1"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="2"/>
 		<set name="spiritshots" value="2"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1710"/>
@@ -1118,14 +1118,14 @@
 	<weapon id="13974" name="Small Fantasy Blue Boing Hammer">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_bbyong_hammer_d_i00"/>
 		<set name="rnd_dam" value="1"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="2"/>
 		<set name="spiritshots" value="2"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1710"/>
@@ -1146,7 +1146,7 @@
 		</for>
 	</weapon>
 	<armor id="13975" name="Poison Bottle 1">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
 		<set name="icon" value="icon.etc_fruit_juice_glass_bottle_i00"/>
 		<set name="type" value="LIGHT"/>
@@ -1162,7 +1162,7 @@
 		</for>
 	</armor>
 	<armor id="13976" name="Poison Bottle 2">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.etc_fruit_juice_glass_bottle_i01"/>
 		<set name="type" value="LIGHT"/>
@@ -1178,7 +1178,7 @@
 		</for>
 	</armor>
 	<armor id="13977" name="Poison Bottle 3">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.etc_fruit_juice_glass_bottle_i02"/>
 		<set name="type" value="LIGHT"/>
@@ -1314,7 +1314,7 @@
 	<weapon id="13983" name="Monster Only (Death Knight_2hs)">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_two_handed_sword_i00"/>
 		<set name="price" value="743500"/>
 		<set name="rnd_dam" value="10"/>
@@ -1360,7 +1360,7 @@
 	<weapon id="13985" name="Monster Only (Death Slayer_r)">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="6680500"/>
 		<set name="rnd_dam" value="10"/>
@@ -1385,7 +1385,7 @@
 	<weapon id="13986" name="Monster Only (Death Slayer_l)">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="6680500"/>
 		<set name="rnd_dam" value="10"/>
@@ -1410,7 +1410,7 @@
 	<weapon id="13987" name="Monster Only (Savage Warrior)">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="B"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_mon_ravager_silen_axe_i00"/>
 		<set name="price" value="6680500"/>
 		<set name="rnd_dam" value="20"/>

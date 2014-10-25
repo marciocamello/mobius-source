@@ -3,14 +3,14 @@
 <list>
 	<weapon id="15300" name="Transparent Dual (NPC)">
 		<set name="crystal_type" value="S80"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DUAL"/>
 		<set name="ex_type" value="DUAL_SWORD"/>
 		<set name="weight" value="2080"/>
@@ -28,14 +28,14 @@
 	</weapon>
 	<weapon id="15301" name="Transparent Pole (NPC)">
 		<set name="crystal_type" value="S80"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_long_spear_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="3"/>
 		<set name="spiritshots" value="3"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
 		<set name="weight" value="1950"/>
@@ -55,15 +55,15 @@
 	<weapon id="15302" name="Transparent Bow (NPC)">
 		<set name="atk_reuse" value="820"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_long_bow_i00"/>
 		<set name="mp_consume" value="2"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="6"/>
 		<set name="spiritshots" value="2"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
 		<set name="weight" value="1830"/>
@@ -82,14 +82,14 @@
 	</weapon>
 	<weapon id="15303" name="Transparent Claw (NPC)">
 		<set name="crystal_type" value="S80"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_foxs_nail_i00"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="ex_type" value="HAND_TO_HAND"/>
 		<set name="weight" value="1013"/>
@@ -109,14 +109,14 @@
 	<weapon id="15304" name="Transparent Crossbow (NPC)">
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_hunting_gun_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="4"/>
 		<set name="spiritshots" value="2"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="ex_type" value="CROSSBOW"/>
 		<set name="weight" value="1850"/>
@@ -135,14 +135,14 @@
 	</weapon>
 	<weapon id="15305" name="Transparent Rapier (NPC)">
 		<set name="crystal_type" value="S80"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_rapier_i00"/>
 		<set name="rnd_dam" value="40"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="2"/>
 		<set name="spiritshots" value="2"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="RAPIER"/>
 		<set name="ex_type" value="RAPIER"/>
 		<set name="weight" value="1520"/>
@@ -162,14 +162,14 @@
 	</weapon>
 	<weapon id="15306" name="Transparent Dual Dagger (NPC)">
 		<set name="crystal_type" value="S80"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.dual_dagger_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DUALDAGGER"/>
 		<set name="ex_type" value="DUAL_DAGGER"/>
 		<set name="weight" value="2150"/>
@@ -190,10 +190,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_saint_pomander_bishop_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
 	</etcitem>
@@ -201,10 +201,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_saint_pomander_elder_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
 	</etcitem>
@@ -212,22 +212,22 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_saint_pomander_silienelder_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
 	</etcitem>
 	<weapon id="15310" name="Einhasad's Sacred Sword">
 		<set name="crystal_type" value="S"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_the_sword_of_hero_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="150"/>
@@ -255,13 +255,13 @@
 		<set name="weight" value="10"/>
 	</etcitem>
 	<armor id="15312" name="Dawn's Bracelet">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="S"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.accessory_lbracelet_of_dawn"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="15"/>
 		<equip>
@@ -274,13 +274,13 @@
 	</armor>
 	<weapon id="15313" name="Player Commendation - Forgotten Blade" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="S"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_forgotten_blade_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="1300"/>
@@ -301,13 +301,13 @@
 	</weapon>
 	<weapon id="15314" name="Player Commendation - Basalt Battlehammer" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="S"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_basalt_battlehammer_i00"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1570"/>
@@ -330,13 +330,13 @@
 	<weapon id="15315" name="Player Commendation - Imperial Staff" add_name="PC-exclusive Weapon">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="S"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_imperial_staff_i00"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BIGBLUNT"/>
 		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
 		<set name="weight" value="910"/>
@@ -358,13 +358,13 @@
 	</weapon>
 	<weapon id="15316" name="Player Commendation - Angel Slayer" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="S"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_angel_slayer_i00"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
 		<set name="weight" value="950"/>
@@ -386,13 +386,13 @@
 	</weapon>
 	<weapon id="15317" name="Player Commendation - Dragon Hunter Axe" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="S"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_dragon_hunter_axe_i00"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BIGBLUNT"/>
 		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
 		<set name="weight" value="1820"/>
@@ -414,13 +414,13 @@
 	</weapon>
 	<weapon id="15318" name="Player Commendation - Saint Spear" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="S"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_saint_spear_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
 		<set name="weight" value="1800"/>
@@ -442,13 +442,13 @@
 	</weapon>
 	<weapon id="15319" name="Player Commendation - Demon Splinter" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="S"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_demon_splinter_i00"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="ex_type" value="HAND_TO_HAND"/>
 		<set name="weight" value="1350"/>
@@ -470,13 +470,13 @@
 	</weapon>
 	<weapon id="15320" name="Player Commendation - Heaven's Divider" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="S"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_heavens_divider_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
 		<set name="weight" value="1380"/>
@@ -498,13 +498,13 @@
 	<weapon id="15321" name="Player Commendation - Arcana Mace" add_name="PC-exclusive Weapon">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="S"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_arcana_mace_i00"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1300"/>
@@ -527,14 +527,14 @@
 	<weapon id="15322" name="Player Commendation - Draconic Bow" add_name="PC-exclusive Weapon">
 		<set name="atk_reuse" value="1500"/>
 		<set name="crystal_type" value="S"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_draconic_bow_i00"/>
 		<set name="mp_consume" value="6"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
 		<set name="weight" value="1650"/>
@@ -556,13 +556,13 @@
 	</weapon>
 	<weapon id="15323" name="Player Commendation - Laevateinn" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="S"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_leavatein_i00"/>
 		<set name="rnd_dam" value="40"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="RAPIER"/>
 		<set name="ex_type" value="RAPIER"/>
 		<set name="weight" value="1300"/>
@@ -585,13 +585,13 @@
 	</weapon>
 	<weapon id="15324" name="Player Commendation - Gram" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="S"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_gram_i01"/>
 		<set name="rnd_dam" value="15"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="ex_type" value="ANCIENT_SWORD"/>
 		<set name="weight" value="1800"/>
@@ -614,13 +614,13 @@
 	<weapon id="15325" name="Player Commendation - Sarunga" add_name="PC-exclusive Weapon">
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_type" value="S"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_sarnga_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="ex_type" value="CROSSBOW"/>
 		<set name="weight" value="1600"/>
@@ -642,13 +642,13 @@
 	</weapon>
 	<weapon id="15326" name="Player Commendation - Tallum Blade*Dark Legion's Edge" add_name="PC-exclusive Weapon">
 		<set name="crystal_type" value="S"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DUAL"/>
 		<set name="ex_type" value="DUAL_SWORD"/>
 		<set name="weight" value="2080"/>
@@ -816,15 +816,15 @@
 	<weapon id="15342" name="Aqua Elf Transformation Harp" add_name="60-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="86400"/>
 		<set name="icon" value="icon.harp_of_transform_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -844,24 +844,24 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<weapon id="15344" name="Aqua Elf Transformation Harp (Event)" add_name="60-day">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="86400"/>
 		<set name="icon" value="icon.harp_of_transform_i00"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="0"/>
 		<set name="spiritshots" value="0"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<equip>
@@ -881,20 +881,20 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="15346" name="Player Commendation - Scroll: Enchant Weapon (S-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_scroll_of_enchant_weapon_i05"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 		<cond msgId="1508">
@@ -907,10 +907,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_scroll_of_enchant_weapon_i04"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 		<cond msgId="1508">
@@ -923,10 +923,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_scroll_of_enchant_weapon_i03"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 		<cond msgId="1508">
@@ -939,10 +939,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_scroll_of_enchant_weapon_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 		<cond msgId="1508">
@@ -955,10 +955,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_scroll_of_enchant_weapon_i01"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 		<cond msgId="1508">
@@ -969,11 +969,11 @@
 	</etcitem>
 	<armor id="15351" name="Seal Removal Bracelet_Towbat">
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="5"/>
 		<equip>
@@ -1082,9 +1082,9 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_exchange_ticket_i04"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 		<skills>
@@ -1096,9 +1096,9 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_exchange_ticket_i04"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
@@ -1106,9 +1106,9 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_exchange_ticket_i00"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
@@ -1116,9 +1116,9 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_exchange_ticket_i01"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
@@ -1126,9 +1126,9 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_exchange_ticket_i02"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
@@ -1136,9 +1136,9 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_exchange_ticket_i03"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
@@ -1147,10 +1147,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_int_symbol_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="15365" name="Lucky Cool Pack">
@@ -1158,10 +1158,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_int_symbol_i01"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="15366" name="Watermelon seed">
@@ -1194,10 +1194,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.event_honey_watermelon_seed_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<cond msgId="1508">
 			<not>
@@ -1209,10 +1209,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.event_watermelon_seed_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<cond msgId="1508">
 			<not>
@@ -1225,10 +1225,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<cond msgId="1508">
 			<not>
@@ -1241,10 +1241,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<cond msgId="1508">
 			<not>
@@ -1256,10 +1256,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.event_big_july_seven_park_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<cond msgId="1508">
 			<not>
@@ -1275,10 +1275,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.event_july_seven_park_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<cond msgId="1508">
 			<not>
@@ -1291,10 +1291,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<cond msgId="1508">
 			<not>
@@ -1307,10 +1307,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<cond msgId="1508">
 			<not>
@@ -1322,10 +1322,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.event_big_july_seven_park_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<cond msgId="1508">
 			<not>
@@ -1341,10 +1341,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.event_july_seven_park_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<cond msgId="1508">
 			<not>
@@ -1357,10 +1357,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<cond msgId="1508">
 			<not>
@@ -1373,10 +1373,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.event_steamed_rice_cake_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="15380" name="Steamed Rice Cake (Event)">
@@ -1384,10 +1384,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.event_steamed_rice_cake_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="15381" name="Event - Herdsman's Love Scroll" add_name="Event">

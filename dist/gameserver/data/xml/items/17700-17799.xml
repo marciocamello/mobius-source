@@ -172,7 +172,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="17717" name="Agninoa Dualsword {PvP}">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
@@ -195,7 +195,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<etcitem id="17718" name="Petrified Giant's Hand">
 		<set name="class" value="OTHER"/>

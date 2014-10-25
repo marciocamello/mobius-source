@@ -1038,7 +1038,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="17451" name="Blessed Kaliel Cutter">
 		<set name="icon" value="icon.weapon_vesper_cutter_i00"/>
@@ -1062,7 +1062,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="17452" name="Blessed Kaliel Slasher">
 		<set name="icon" value="icon.weapon_vesper_slasher_i00"/>
@@ -1086,7 +1086,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="17453" name="Blessed Kaliel Avenger">
 		<set name="icon" value="icon.weapon_vesper_avenger_i00"/>
@@ -1110,7 +1110,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="17454" name="Blessed Kaliel Fighter">
 		<set name="icon" value="icon.weapon_octoclaw_i00"/>
@@ -1134,7 +1134,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="17455" name="Blessed Kaliel Stormer">
 		<set name="icon" value="icon.weapon_vesper_stormer_i00"/>
@@ -1158,7 +1158,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="17456" name="Blessed Kaliel Thrower">
 		<set name="icon" value="icon.weapon_vesper_thrower_i00"/>
@@ -1183,7 +1183,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="17457" name="Blessed Kaliel Shooter">
 		<set name="icon" value="icon.weapon_vesper_schutze_i00"/>
@@ -1208,7 +1208,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="17458" name="Blessed Kaliel Buster">
 		<set name="icon" value="icon.weapon_vesper_burster_i00"/>
@@ -1232,7 +1232,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="17459" name="Blessed Kaliel Caster">
 		<set name="icon" value="icon.weapon_vesper_caster_i00"/>
@@ -1256,7 +1256,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="17460" name="Blessed Kaliel Retributer">
 		<set name="icon" value="icon.weapon_vesper_singer_i00"/>
@@ -1280,7 +1280,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="17461" name="Blessed Kaliel Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
@@ -1304,7 +1304,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="17462" name="Blessed Kaliel Dual Dagger">
 		<set name="icon" value="icon.weapon_r_dualdagger_i00"/>
@@ -1328,7 +1328,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="17463" name="Blessed Kaliel Dual Blunt Weapon">
 		<set name="icon" value="icon.weapon_r_dualblunt_i00"/>
@@ -1351,7 +1351,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<armor id="17464" name="Blessed Durandia Helmet" add_name="Heavy Armor">
 		<set name="crystal_type" value="R99"/>
@@ -1447,7 +1447,7 @@
 			<enchant stat="sDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<armor id="17470" name="Blessed Durandia Leather Helmet" add_name="Light Armor">
 		<set name="crystal_type" value="R99"/>

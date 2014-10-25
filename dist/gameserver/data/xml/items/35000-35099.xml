@@ -71,6 +71,7 @@
 		<equip>
 			<slot id="HEAD"/>
 		</equip>
+		<set name="ex_type" value="HELMET"/>		
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="960"/>
 		<set name="crystallizable" value="true"/>
@@ -90,6 +91,7 @@
 		<equip>
 			<slot id="CHEST"/>
 		</equip>
+		<set name="ex_type" value="UPPER_PIECE"/>		
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5133"/>
 		<set name="crystal_type" value="R99"/>
@@ -110,6 +112,7 @@
 		<equip>
 			<slot id="LEGS"/>
 		</equip>
+		<set name="ex_type" value="LOWER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4820"/>
 		<set name="crystal_type" value="R99"/>
@@ -130,6 +133,7 @@
 		<equip>
 			<slot id="GLOVES"/>
 		</equip>
+		<set name="ex_type" value="GLOVES"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="640"/>
 		<set name="crystal_type" value="R99"/>
@@ -150,6 +154,7 @@
 		<equip>
 			<slot id="FEET"/>
 		</equip>
+		<set name="ex_type" value="FEET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2560"/>
 		<set name="crystal_type" value="R99"/>
@@ -169,6 +174,7 @@
 		<equip>
 			<slot id="HEAD"/>
 		</equip>
+		<set name="ex_type" value="HELMET"/>		
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="960"/>
 		<set name="crystallizable" value="true"/>
@@ -188,6 +194,7 @@
 		<equip>
 			<slot id="CHEST"/>
 		</equip>
+		<set name="ex_type" value="UPPER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5133"/>
 		<set name="crystal_type" value="R99"/>
@@ -210,6 +217,7 @@
 		<equip>
 			<slot id="LEGS"/>
 		</equip>
+		<set name="ex_type" value="LOWER_PIECE"/>		
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4820"/>
 		<set name="crystal_type" value="R99"/>
@@ -232,6 +240,7 @@
 		<equip>
 			<slot id="GLOVES"/>
 		</equip>
+		<set name="ex_type" value="GLOVES"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="640"/>
 		<set name="crystal_type" value="R99"/>
@@ -252,6 +261,7 @@
 		<equip>
 			<slot id="FEET"/>
 		</equip>
+		<set name="ex_type" value="FEET"/>		
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2560"/>
 		<set name="crystal_type" value="R99"/>
@@ -271,6 +281,7 @@
 		<equip>
 			<slot id="HEAD"/>
 		</equip>
+		<set name="ex_type" value="HELMET"/>		
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="960"/>
 		<set name="crystal_type" value="R99"/>
@@ -290,6 +301,7 @@
 		<equip>
 			<slot id="CHEST"/>
 		</equip>
+		<set name="ex_type" value="UPPER_PIECE"/>		
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5133"/>
 		<set name="crystal_type" value="R99"/>
@@ -312,6 +324,7 @@
 		<equip>
 			<slot id="LEGS"/>
 		</equip>
+		<set name="ex_type" value="LOWER_PIECE"/>		
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4820"/>
 		<set name="crystal_type" value="R99"/>
@@ -333,6 +346,7 @@
 		<equip>
 			<slot id="GLOVES"/>
 		</equip>
+		<set name="ex_type" value="GLOVES"/>		
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="640"/>
 		<set name="crystal_type" value="R99"/>
@@ -352,6 +366,7 @@
 		<equip>
 			<slot id="FEET"/>
 		</equip>
+		<set name="ex_type" value="FEET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2560"/>
 		<set name="crystal_type" value="R99"/>
@@ -371,6 +386,7 @@
 		<equip>
 			<slot id="HEAD"/>
 		</equip>
+		<set name="ex_type" value="HELMET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="960"/>
 		<set name="crystal_type" value="R99"/>
@@ -390,6 +406,7 @@
 		<equip>
 			<slot id="CHEST"/>
 		</equip>
+		<set name="ex_type" value="UPPER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5133"/>
 		<set name="crystal_type" value="R99"/>
@@ -410,6 +427,7 @@
 		<equip>
 			<slot id="LEGS"/>
 		</equip>
+		<set name="ex_type" value="LOWER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4820"/>
 		<set name="crystal_type" value="R99"/>
@@ -430,6 +448,7 @@
 		<equip>
 			<slot id="GLOVES"/>
 		</equip>
+		<set name="ex_type" value="GLOVES"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="640"/>
 		<set name="crystal_type" value="R99"/>
@@ -450,6 +469,7 @@
 		<equip>
 			<slot id="FEET"/>
 		</equip>
+		<set name="ex_type" value="FEET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2560"/>
 		<set name="crystal_type" value="R99"/>
@@ -469,6 +489,7 @@
 		<equip>
 			<slot id="HEAD"/>
 		</equip>
+		<set name="ex_type" value="HELMET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="960"/>
 		<set name="crystal_type" value="R99"/>
@@ -488,6 +509,7 @@
 		<equip>
 			<slot id="CHEST"/>
 		</equip>
+		<set name="ex_type" value="UPPER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5133"/>
 		<set name="crystal_type" value="R99"/>
@@ -510,6 +532,7 @@
 		<equip>
 			<slot id="LEGS"/>
 		</equip>
+		<set name="ex_type" value="LOWER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4820"/>
 		<set name="crystal_type" value="R99"/>
@@ -532,6 +555,7 @@
 		<equip>
 			<slot id="GLOVES"/>
 		</equip>
+		<set name="ex_type" value="GLOVES"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="640"/>
 		<set name="crystal_type" value="R99"/>
@@ -552,6 +576,7 @@
 		<equip>
 			<slot id="FEET"/>
 		</equip>
+		<set name="ex_type" value="FEET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2560"/>
 		<set name="crystal_type" value="R99"/>
@@ -571,6 +596,7 @@
 		<equip>
 			<slot id="HEAD"/>
 		</equip>
+		<set name="ex_type" value="HELMET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="960"/>
 		<set name="crystal_type" value="R99"/>
@@ -590,6 +616,7 @@
 		<equip>
 			<slot id="CHEST"/>
 		</equip>
+		<set name="ex_type" value="UPPER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5133"/>
 		<set name="crystal_type" value="R99"/>
@@ -612,6 +639,7 @@
 		<equip>
 			<slot id="LEGS"/>
 		</equip>
+		<set name="ex_type" value="LOWER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4820"/>
 		<set name="crystal_type" value="R99"/>
@@ -633,6 +661,7 @@
 		<equip>
 			<slot id="GLOVES"/>
 		</equip>
+		<set name="ex_type" value="GLOVES"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="640"/>
 		<set name="crystal_type" value="R99"/>
@@ -652,6 +681,7 @@
 		<equip>
 			<slot id="FEET"/>
 		</equip>
+		<set name="ex_type" value="FEET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2560"/>
 		<set name="crystal_type" value="R99"/>
@@ -671,6 +701,7 @@
 		<equip>
 			<slot id="HEAD"/>
 		</equip>
+		<set name="ex_type" value="HELMET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="960"/>
 		<set name="crystal_type" value="R99"/>
@@ -690,6 +721,7 @@
 		<equip>
 			<slot id="CHEST"/>
 		</equip>
+		<set name="ex_type" value="UPPER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5133"/>
 		<set name="crystal_type" value="R99"/>
@@ -710,6 +742,7 @@
 		<equip>
 			<slot id="LEGS"/>
 		</equip>
+		<set name="ex_type" value="LOWER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4820"/>
 		<set name="crystal_type" value="R99"/>
@@ -730,6 +763,7 @@
 		<equip>
 			<slot id="GLOVES"/>
 		</equip>
+		<set name="ex_type" value="GLOVES"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="640"/>
 		<set name="crystal_type" value="R99"/>
@@ -750,6 +784,7 @@
 		<equip>
 			<slot id="FEET"/>
 		</equip>
+		<set name="ex_type" value="FEET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2560"/>
 		<set name="crystal_type" value="R99"/>
@@ -769,6 +804,7 @@
 		<equip>
 			<slot id="HEAD"/>
 		</equip>
+		<set name="ex_type" value="HELMET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="960"/>
 		<set name="crystal_type" value="R99"/>
@@ -788,6 +824,7 @@
 		<equip>
 			<slot id="CHEST"/>
 		</equip>
+		<set name="ex_type" value="UPPER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5133"/>
 		<set name="crystal_type" value="R99"/>
@@ -810,6 +847,7 @@
 		<equip>
 			<slot id="LEGS"/>
 		</equip>
+		<set name="ex_type" value="LOWER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4820"/>
 		<set name="crystal_type" value="R99"/>
@@ -832,6 +870,7 @@
 		<equip>
 			<slot id="GLOVES"/>
 		</equip>
+		<set name="ex_type" value="GLOVES"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="640"/>
 		<set name="crystal_type" value="R99"/>
@@ -852,6 +891,7 @@
 		<equip>
 			<slot id="FEET"/>
 		</equip>
+		<set name="ex_type" value="FEET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2560"/>
 		<set name="crystal_type" value="R99"/>
@@ -871,6 +911,7 @@
 		<equip>
 			<slot id="HEAD"/>
 		</equip>
+		<set name="ex_type" value="HELMET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="960"/>
 		<set name="crystal_type" value="R99"/>
@@ -890,6 +931,7 @@
 		<equip>
 			<slot id="CHEST"/>
 		</equip>
+		<set name="ex_type" value="UPPER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5133"/>
 		<set name="crystal_type" value="R99"/>
@@ -912,6 +954,7 @@
 		<equip>
 			<slot id="LEGS"/>
 		</equip>
+		<set name="ex_type" value="LOWER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4820"/>
 		<set name="crystal_type" value="R99"/>
@@ -933,6 +976,7 @@
 		<equip>
 			<slot id="GLOVES"/>
 		</equip>
+		<set name="ex_type" value="GLOVES"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="640"/>
 		<set name="crystal_type" value="R99"/>
@@ -952,6 +996,7 @@
 		<equip>
 			<slot id="FEET"/>
 		</equip>
+		<set name="ex_type" value="FEET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2560"/>
 		<set name="crystal_type" value="R99"/>
@@ -971,6 +1016,7 @@
 		<equip>
 			<slot id="HEAD"/>
 		</equip>
+		<set name="ex_type" value="HELMET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="960"/>
 		<set name="crystal_type" value="R99"/>
@@ -990,6 +1036,7 @@
 		<equip>
 			<slot id="CHEST"/>
 		</equip>
+		<set name="ex_type" value="UPPER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5133"/>
 		<set name="crystal_type" value="R99"/>
@@ -1010,6 +1057,7 @@
 		<equip>
 			<slot id="LEGS"/>
 		</equip>
+		<set name="ex_type" value="LOWER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4820"/>
 		<set name="crystal_type" value="R99"/>
@@ -1030,6 +1078,7 @@
 		<equip>
 			<slot id="GLOVES"/>
 		</equip>
+		<set name="ex_type" value="GLOVES"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="640"/>
 		<set name="crystal_type" value="R99"/>
@@ -1050,6 +1099,7 @@
 		<equip>
 			<slot id="FEET"/>
 		</equip>
+		<set name="ex_type" value="FEET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2560"/>
 		<set name="crystal_type" value="R99"/>
@@ -1069,6 +1119,7 @@
 		<equip>
 			<slot id="HEAD"/>
 		</equip>
+		<set name="ex_type" value="HELMET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="960"/>
 		<set name="crystal_type" value="R99"/>
@@ -1088,6 +1139,7 @@
 		<equip>
 			<slot id="CHEST"/>
 		</equip>
+		<set name="ex_type" value="UPPER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5133"/>
 		<set name="crystal_type" value="R99"/>
@@ -1110,6 +1162,7 @@
 		<equip>
 			<slot id="LEGS"/>
 		</equip>
+		<set name="ex_type" value="LOWER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4820"/>
 		<set name="crystal_type" value="R99"/>
@@ -1132,6 +1185,7 @@
 		<equip>
 			<slot id="GLOVES"/>
 		</equip>
+		<set name="ex_type" value="GLOVES"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="640"/>
 		<set name="crystal_type" value="R99"/>
@@ -1152,6 +1206,7 @@
 		<equip>
 			<slot id="FEET"/>
 		</equip>
+		<set name="ex_type" value="FEET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2560"/>
 		<set name="crystal_type" value="R99"/>
@@ -1171,6 +1226,7 @@
 		<equip>
 			<slot id="HEAD"/>
 		</equip>
+		<set name="ex_type" value="HELMET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="960"/>
 		<set name="crystal_type" value="R99"/>
@@ -1190,6 +1246,7 @@
 		<equip>
 			<slot id="CHEST"/>
 		</equip>
+		<set name="ex_type" value="UPPER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5133"/>
 		<set name="crystal_type" value="R99"/>
@@ -1212,6 +1269,7 @@
 		<equip>
 			<slot id="LEGS"/>
 		</equip>
+		<set name="ex_type" value="LOWER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4820"/>
 		<set name="crystal_type" value="R99"/>
@@ -1233,6 +1291,7 @@
 		<equip>
 			<slot id="GLOVES"/>
 		</equip>
+		<set name="ex_type" value="GLOVES"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="640"/>
 		<set name="crystal_type" value="R99"/>
@@ -1252,6 +1311,7 @@
 		<equip>
 			<slot id="FEET"/>
 		</equip>
+		<set name="ex_type" value="FEET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2560"/>
 		<set name="crystal_type" value="R99"/>
@@ -1271,6 +1331,7 @@
 		<equip>
 			<slot id="HEAD"/>
 		</equip>
+		<set name="ex_type" value="HELMET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="960"/>
 		<set name="crystal_type" value="R99"/>
@@ -1290,6 +1351,7 @@
 		<equip>
 			<slot id="CHEST"/>
 		</equip>
+		<set name="ex_type" value="UPPER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5133"/>
 		<set name="crystal_type" value="R99"/>
@@ -1310,6 +1372,7 @@
 		<equip>
 			<slot id="LEGS"/>
 		</equip>
+		<set name="ex_type" value="LOWER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4820"/>
 		<set name="crystal_type" value="R99"/>
@@ -1330,6 +1393,7 @@
 		<equip>
 			<slot id="GLOVES"/>
 		</equip>
+		<set name="ex_type" value="GLOVES"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="640"/>
 		<set name="crystal_type" value="R99"/>
@@ -1350,6 +1414,7 @@
 		<equip>
 			<slot id="FEET"/>
 		</equip>
+		<set name="ex_type" value="FEET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2560"/>
 		<set name="crystal_type" value="R99"/>
@@ -1369,6 +1434,7 @@
 		<equip>
 			<slot id="HEAD"/>
 		</equip>
+		<set name="ex_type" value="HELMET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="960"/>
 		<set name="crystal_type" value="R99"/>
@@ -1388,6 +1454,7 @@
 		<equip>
 			<slot id="CHEST"/>
 		</equip>
+		<set name="ex_type" value="UPPER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5133"/>
 		<set name="crystal_type" value="R99"/>
@@ -1410,6 +1477,7 @@
 		<equip>
 			<slot id="LEGS"/>
 		</equip>
+		<set name="ex_type" value="LOWER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4820"/>
 		<set name="crystal_type" value="R99"/>
@@ -1432,6 +1500,7 @@
 		<equip>
 			<slot id="GLOVES"/>
 		</equip>
+		<set name="ex_type" value="GLOVES"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="640"/>
 		<set name="crystal_type" value="R99"/>
@@ -1452,6 +1521,7 @@
 		<equip>
 			<slot id="FEET"/>
 		</equip>
+		<set name="ex_type" value="FEET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2560"/>
 		<set name="crystal_type" value="R99"/>
@@ -1471,6 +1541,7 @@
 		<equip>
 			<slot id="HEAD"/>
 		</equip>
+		<set name="ex_type" value="HELMET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="960"/>
 		<set name="crystal_type" value="R99"/>
@@ -1490,6 +1561,7 @@
 		<equip>
 			<slot id="CHEST"/>
 		</equip>
+		<set name="ex_type" value="UPPER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5133"/>
 		<set name="crystal_type" value="R99"/>
@@ -1512,6 +1584,7 @@
 		<equip>
 			<slot id="LEGS"/>
 		</equip>
+		<set name="ex_type" value="LOWER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4820"/>
 		<set name="crystal_type" value="R99"/>
@@ -1533,6 +1606,7 @@
 		<equip>
 			<slot id="GLOVES"/>
 		</equip>
+		<set name="ex_type" value="GLOVES"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="640"/>
 		<set name="crystal_type" value="R99"/>
@@ -1552,6 +1626,7 @@
 		<equip>
 			<slot id="FEET"/>
 		</equip>
+		<set name="ex_type" value="FEET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2560"/>
 		<set name="crystal_type" value="R99"/>
@@ -1571,6 +1646,7 @@
 		<equip>
 			<slot id="HEAD"/>
 		</equip>
+		<set name="ex_type" value="HELMET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="960"/>
 		<set name="crystal_type" value="R99"/>
@@ -1590,6 +1666,7 @@
 		<equip>
 			<slot id="CHEST"/>
 		</equip>
+		<set name="ex_type" value="UPPER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5133"/>
 		<set name="crystal_type" value="R99"/>
@@ -1611,6 +1688,7 @@
 		<equip>
 			<slot id="LEGS"/>
 		</equip>
+		<set name="ex_type" value="LOWER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4820"/>
 		<set name="crystal_type" value="R99"/>
@@ -1631,6 +1709,7 @@
 		<equip>
 			<slot id="GLOVES"/>
 		</equip>
+		<set name="ex_type" value="GLOVES"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="640"/>
 		<set name="crystal_type" value="R99"/>
@@ -1651,6 +1730,7 @@
 		<equip>
 			<slot id="FEET"/>
 		</equip>
+		<set name="ex_type" value="FEET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2560"/>
 		<set name="crystal_type" value="R99"/>
@@ -1670,6 +1750,7 @@
 		<equip>
 			<slot id="HEAD"/>
 		</equip>
+		<set name="ex_type" value="HELMET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="960"/>
 		<set name="crystal_type" value="R99"/>
@@ -1689,6 +1770,7 @@
 		<equip>
 			<slot id="CHEST"/>
 		</equip>
+		<set name="ex_type" value="UPPER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5133"/>
 		<set name="crystal_type" value="R99"/>
@@ -1711,6 +1793,7 @@
 		<equip>
 			<slot id="LEGS"/>
 		</equip>
+		<set name="ex_type" value="LOWER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4820"/>
 		<set name="crystal_type" value="R99"/>
@@ -1733,6 +1816,7 @@
 		<equip>
 			<slot id="GLOVES"/>
 		</equip>
+		<set name="ex_type" value="GLOVES"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="640"/>
 		<set name="crystal_type" value="R99"/>
@@ -1753,6 +1837,7 @@
 		<equip>
 			<slot id="FEET"/>
 		</equip>
+		<set name="ex_type" value="FEET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2560"/>
 		<set name="crystal_type" value="R99"/>
@@ -1772,6 +1857,7 @@
 		<equip>
 			<slot id="HEAD"/>
 		</equip>
+		<set name="ex_type" value="HELMET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="960"/>
 		<set name="crystal_type" value="R99"/>
@@ -1791,6 +1877,7 @@
 		<equip>
 			<slot id="CHEST"/>
 		</equip>
+		<set name="ex_type" value="UPPER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5133"/>
 		<set name="crystal_type" value="R99"/>
@@ -1813,6 +1900,7 @@
 		<equip>
 			<slot id="LEGS"/>
 		</equip>
+		<set name="ex_type" value="LOWER_PIECE"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4820"/>
 		<set name="crystal_type" value="R99"/>
@@ -1834,6 +1922,7 @@
 		<equip>
 			<slot id="GLOVES"/>
 		</equip>
+		<set name="ex_type" value="GLOVES"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="640"/>
 		<set name="crystal_type" value="R99"/>
@@ -1853,6 +1942,7 @@
 		<equip>
 			<slot id="FEET"/>
 		</equip>
+		<set name="ex_type" value="FEET"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2560"/>
 		<set name="crystal_type" value="R99"/>

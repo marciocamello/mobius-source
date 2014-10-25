@@ -113,7 +113,7 @@
 	<armor id="16305" name="Moirai Sigil">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_tysandy_sigil_i01"/>
 		<set name="price" value="8839000"/>
 		<set name="type" value="SIGIL"/>
@@ -477,7 +477,7 @@
 	<armor id="16322" name="Vesper Sigil">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.verper_sigil_i01"/>
 		<set name="price" value="12250000"/>
 		<set name="type" value="SIGIL"/>
@@ -793,7 +793,7 @@
 	<armor id="16339" name="Sealed Moirai Sigil">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_tysandy_sigil_i00"/>
 		<set name="price" value="8839000"/>
 		<set name="type" value="SIGIL"/>
@@ -1106,7 +1106,7 @@
 	<armor id="16356" name="Sealed Vesper Sigil">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.armor_verper_sigil_i01"/>
 		<set name="price" value="12250000"/>
 		<set name="type" value="SIGIL"/>
@@ -1489,10 +1489,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_braided_hemp_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 		<cond msgId="1508">
 			<not>

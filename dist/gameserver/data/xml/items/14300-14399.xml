@@ -484,7 +484,7 @@
         <set name="crystal_count" value="144"/>
         <set name="crystal_type" value="C"/>
         <set name="crystallizable" value="true"/>
-        <set name="dropable" value="false"/>
+        <set name="dropable" value="true"/>
         <set name="price" value="217200"/>
         <set name="sellable" value="true"/>
         <set name="tradeable" value="true"/>
@@ -517,7 +517,7 @@
         <set name="crystal_count" value="72"/>
         <set name="crystal_type" value="C"/>
         <set name="crystallizable" value="true"/>
-        <set name="dropable" value="false"/>
+        <set name="dropable" value="true"/>
         <set name="price" value="108600"/>
         <set name="sellable" value="true"/>
         <set name="tradeable" value="true"/>
@@ -559,7 +559,7 @@
         <set name="crystal_count" value="52"/>
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="true"/>
-        <set name="dropable" value="false"/>
+        <set name="dropable" value="true"/>
         <set name="price" value="237000"/>
         <set name="sellable" value="true"/>
         <set name="tradeable" value="true"/>
@@ -582,7 +582,7 @@
         <set name="crystal_count" value="105"/>
         <set name="crystal_type" value="B"/>
         <set name="crystallizable" value="true"/>
-        <set name="dropable" value="false"/>
+        <set name="dropable" value="true"/>
         <set name="price" value="474000"/>
         <set name="sellable" value="true"/>
         <set name="tradeable" value="true"/>
@@ -624,7 +624,7 @@
         <set name="crystal_count" value="53"/>
         <set name="crystal_type" value="A"/>
         <set name="crystallizable" value="true"/>
-        <set name="dropable" value="false"/>
+        <set name="dropable" value="true"/>
         <set name="price" value="499500"/>
         <set name="sellable" value="true"/>
         <set name="tradeable" value="true"/>
@@ -648,7 +648,7 @@
         <set name="crystal_count" value="106"/>
         <set name="crystal_type" value="A"/>
         <set name="crystallizable" value="true"/>
-        <set name="dropable" value="false"/>
+        <set name="dropable" value="true"/>
         <set name="price" value="999000"/>
         <set name="sellable" value="true"/>
         <set name="tradeable" value="true"/>
@@ -679,10 +679,10 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.etc_coins_silver_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<etcitem id="14352" name="Mysterious Sculpture">
@@ -774,19 +774,19 @@
 		<set name="type" value="QUEST"/>
 	</etcitem>
 	<weapon id="14363" name="Icarus Sawsword {PvP}">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_sowsword_i00"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="1520"/>
@@ -808,19 +808,19 @@
 		</for>
 	</weapon>
 	<weapon id="14364" name="Icarus Disperser {PvP}">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_disperser_i00"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
 		<set name="weight" value="1520"/>
@@ -845,19 +845,19 @@
 	</weapon>
 	<weapon id="14365" name="Icarus Spirit {PvP}">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_spirits_i00"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="1520"/>
@@ -880,19 +880,19 @@
 		</for>
 	</weapon>
 	<weapon id="14366" name="Icarus Heavy Arms {PvP}">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_heavy_arms_i00"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
 		<set name="weight" value="1740"/>
@@ -914,19 +914,19 @@
 		</for>
 	</weapon>
 	<weapon id="14367" name="Icarus Trident {PvP}">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_trident_i00"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
 		<set name="weight" value="2010"/>
@@ -949,19 +949,19 @@
 		</for>
 	</weapon>
 	<weapon id="14368" name="Icarus Hammer {PvP}">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_hammer_i00"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1740"/>
@@ -984,19 +984,19 @@
 		</for>
 	</weapon>
 	<weapon id="14369" name="Icarus Hand {PvP}">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_knuckle_i00"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DUALFIST"/>
 		<set name="ex_type" value="HAND_TO_HAND"/>
 		<set name="weight" value="1550"/>
@@ -1021,19 +1021,19 @@
 	</weapon>
 	<weapon id="14370" name="Icarus Hall {PvP}">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_stick_i00"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1080"/>
@@ -1058,20 +1058,20 @@
 	</weapon>
 	<weapon id="14371" name="Icarus Spitter {PvP}">
 		<set name="atk_reuse" value="1500"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_spiter_i00"/>
 		<set name="mp_consume" value="6"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
 		<set name="weight" value="1520"/>
@@ -1094,19 +1094,19 @@
 		</for>
 	</weapon>
 	<weapon id="14372" name="Icarus Stinger {PvP}">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_stinger_i00"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="40"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="RAPIER"/>
 		<set name="ex_type" value="RAPIER"/>
 		<set name="weight" value="1280"/>
@@ -1130,19 +1130,19 @@
 		</for>
 	</weapon>
 	<weapon id="14373" name="Icarus Wingblade {PvP}">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_wing_blade_i00"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="15"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="ANCIENTSWORD"/>
 		<set name="ex_type" value="ANCIENT_SWORD"/>
 		<set name="weight" value="1800"/>
@@ -1167,19 +1167,19 @@
 	</weapon>
 	<weapon id="14374" name="Icarus Shooter {PvP}">
 		<set name="atk_reuse" value="400"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_shooter_i00"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="CROSSBOW"/>
 		<set name="ex_type" value="CROSSBOW"/>
 		<set name="weight" value="1580"/>
@@ -1202,19 +1202,19 @@
 		</for>
 	</weapon>
 	<weapon id="14375" name="Icarus Dualsword {PvP}">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DUAL"/>
 		<set name="ex_type" value="DUAL_SWORD"/>
 		<set name="weight" value="1520"/>
@@ -1236,19 +1236,19 @@
 		</for>
 	</weapon>
 	<weapon id="14376" name="Icarus Sawsword {PvP}" add_name="Focus">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_sowsword_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="1520"/>
@@ -1270,19 +1270,19 @@
 		</for>
 	</weapon>
 	<weapon id="14377" name="Icarus Sawsword {PvP}" add_name="Health">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_sowsword_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="1520"/>
@@ -1304,19 +1304,19 @@
 		</for>
 	</weapon>
 	<weapon id="14378" name="Icarus Sawsword {PvP}" add_name="Light Armor">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_sowsword_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="1520"/>
@@ -1338,19 +1338,19 @@
 		</for>
 	</weapon>
 	<weapon id="14379" name="Icarus Heavy Arms {PvP}" add_name="Focus">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_heavy_arms_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
 		<set name="weight" value="1740"/>
@@ -1372,19 +1372,19 @@
 		</for>
 	</weapon>
 	<weapon id="14380" name="Icarus Heavy Arms {PvP}" add_name="Health">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_heavy_arms_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
 		<set name="weight" value="1740"/>
@@ -1406,19 +1406,19 @@
 		</for>
 	</weapon>
 	<weapon id="14381" name="Icarus Heavy Arms {PvP}" add_name="Light Armor">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_heavy_arms_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BIGSWORD"/>
 		<set name="ex_type" value="BIG_SWORD"/>
 		<set name="weight" value="1740"/>
@@ -1441,19 +1441,19 @@
 	</weapon>
 	<weapon id="14382" name="Icarus Spirit {PvP}" add_name="Acumen">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_spirits_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="1520"/>
@@ -1476,19 +1476,19 @@
 	</weapon>
 	<weapon id="14383" name="Icarus Spirit {PvP}" add_name="Mana Up">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_spirits_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="1520"/>
@@ -1511,19 +1511,19 @@
 	</weapon>
 	<weapon id="14384" name="Icarus Spirit {PvP}" add_name="Conversion">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_spirits_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="SWORD"/>
 		<set name="ex_type" value="SWORD"/>
 		<set name="weight" value="1520"/>
@@ -1547,20 +1547,20 @@
 	</weapon>
 	<weapon id="14385" name="Icarus Spitter {PvP}" add_name="Cheap Shot">
 		<set name="atk_reuse" value="1500"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_spiter_i01"/>
 		<set name="mp_consume" value="6"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
 		<set name="weight" value="1520"/>
@@ -1591,20 +1591,20 @@
 	</weapon>
 	<weapon id="14386" name="Icarus Spitter {PvP}" add_name="Guidance">
 		<set name="atk_reuse" value="1500"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_spiter_i01"/>
 		<set name="mp_consume" value="6"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
 		<set name="weight" value="1520"/>
@@ -1628,20 +1628,20 @@
 	</weapon>
 	<weapon id="14387" name="Icarus Spitter {PvP}" add_name="Focus">
 		<set name="atk_reuse" value="1500"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_spiter_i01"/>
 		<set name="mp_consume" value="6"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BOW"/>
 		<set name="ex_type" value="BOW"/>
 		<set name="weight" value="1520"/>
@@ -1664,19 +1664,19 @@
 		</for>
 	</weapon>
 	<weapon id="14388" name="Icarus Disperser {PvP}" add_name="Focus">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_disperser_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
 		<set name="weight" value="1520"/>
@@ -1700,19 +1700,19 @@
 		</for>
 	</weapon>
 	<weapon id="14389" name="Icarus Disperser {PvP}" add_name="Evasion">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_disperser_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
 		<set name="weight" value="1520"/>
@@ -1736,19 +1736,19 @@
 		</for>
 	</weapon>
 	<weapon id="14390" name="Icarus Disperser {PvP}" add_name="Critical Damage">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_disperser_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="5"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="DAGGER"/>
 		<set name="ex_type" value="DAGGER"/>
 		<set name="weight" value="1520"/>
@@ -1772,19 +1772,19 @@
 		</for>
 	</weapon>
 	<weapon id="14391" name="Icarus Trident {PvP}" add_name="Anger">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_trident_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
 		<set name="weight" value="2010"/>
@@ -1807,19 +1807,19 @@
 		</for>
 	</weapon>
 	<weapon id="14392" name="Icarus Trident {PvP}" add_name="Critical Stun">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_trident_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
 		<set name="weight" value="2010"/>
@@ -1844,19 +1844,19 @@
 		</for>
 	</weapon>
 	<weapon id="14393" name="Icarus Trident {PvP}" add_name="Light Armor">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_trident_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="10"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="POLE"/>
 		<set name="ex_type" value="POLE"/>
 		<set name="weight" value="2010"/>
@@ -1879,19 +1879,19 @@
 		</for>
 	</weapon>
 	<weapon id="14394" name="Icarus Hammer {PvP}" add_name="Anger">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_hammer_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1740"/>
@@ -1914,19 +1914,19 @@
 		</for>
 	</weapon>
 	<weapon id="14395" name="Icarus Hammer {PvP}" add_name="Health">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_hammer_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1740"/>
@@ -1949,19 +1949,19 @@
 		</for>
 	</weapon>
 	<weapon id="14396" name="Icarus Hammer {PvP}" add_name="Rsk. Focus">
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_hammer_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1740"/>
@@ -1985,19 +1985,19 @@
 	</weapon>
 	<weapon id="14397" name="Icarus Hall {PvP}" add_name="Mana Up">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_stick_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1080"/>
@@ -2021,19 +2021,19 @@
 	</weapon>
 	<weapon id="14398" name="Icarus Hall {PvP}" add_name="Conversion">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_stick_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1080"/>
@@ -2058,19 +2058,19 @@
 	</weapon>
 	<weapon id="14399" name="Icarus Hall {PvP}" add_name="Acumen">
 		<set name="is_magic_weapon" value="true"/>
-		<set name="attributable" value="false"/>
-		<set name="augmentable" value="false"/>
+		<set name="attributable" value="true"/>
+		<set name="augmentable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="crystallizable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_icarus_stick_i01"/>
 		<set name="price" value="103439000"/>
 		<set name="rnd_dam" value="20"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="BLUNT"/>
 		<set name="ex_type" value="BLUNT_WEAPON"/>
 		<set name="weight" value="1080"/>

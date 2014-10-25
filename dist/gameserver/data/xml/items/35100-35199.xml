@@ -89,7 +89,7 @@
 		<set name="icon" value="icon.weaon_serapear_i10"/>
 		<set name="weight" value="1520"/>
 		<set name="type" value="SWORD"/>
-		<set name="ex_type" value="SWORD"/>		
+		<set name="ex_type" value="MAGIC_SWORD"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -117,7 +117,7 @@
 		<set name="icon" value="icon.weapon_pilia_i10"/>
 		<set name="weight" value="1080"/>
 		<set name="type" value="BLUNT"/>
-		<set name="ex_type" value="BLUNT_WEAPON"/>		
+		<set name="ex_type" value="MAGIC_BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>
@@ -145,7 +145,7 @@
 		<set name="icon" value="icon.weapon_shaelon_i10"/>
 		<set name="weight" value="1080"/>
 		<set name="type" value="BIGBLUNT"/>
-		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>		
+		<set name="ex_type" value="BIG_MAGIC_BLUNT_WEAPON"/>		
 		<set name="price" value="227607600"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="17243"/>

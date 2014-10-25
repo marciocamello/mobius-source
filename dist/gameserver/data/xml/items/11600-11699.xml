@@ -99,7 +99,7 @@
 		</for>
 	</armor>
 	<weapon id="11605" name="Common Item - Steel Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -125,10 +125,10 @@
 		</for>
 	</weapon>
 	<weapon id="11606" name="Common Item - Reinforced Bow">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_strengthening_bow_i00"/>
 		<set name="kamael_convert" value="11624"/>
 		<set name="mp_consume" value="1"/>
@@ -153,7 +153,7 @@
 		</for>
 	</weapon>
 	<weapon id="11607" name="Common Item - Rapier">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -181,7 +181,7 @@
 		</for>
 	</weapon>
 	<weapon id="11608" name="Common Item - Bagh-Nakh">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -207,7 +207,7 @@
 		</for>
 	</weapon>
 	<weapon id="11609" name="Common Item - Proof of Revenge">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
@@ -232,7 +232,7 @@
 		</for>
 	</weapon>
 	<weapon id="11610" name="Common Item - Bone Staff">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
@@ -259,7 +259,7 @@
 		</for>
 	</weapon>
 	<weapon id="11611" name="Common Item - Priest Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
@@ -285,7 +285,7 @@
 		</for>
 	</weapon>
 	<weapon id="11612" name="Common Item - Branch of Life">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
@@ -310,7 +310,7 @@
 		</for>
 	</weapon>
 	<weapon id="11613" name="Common Item - Crafted Dagger">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -336,7 +336,7 @@
 		</for>
 	</weapon>
 	<weapon id="11614" name="Common Item - Saber">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -362,7 +362,7 @@
 		</for>
 	</weapon>
 	<weapon id="11615" name="Common Item - Scalpel">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -388,7 +388,7 @@
 		</for>
 	</weapon>
 	<weapon id="11616" name="Common Item - Temptation of Abyss">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
@@ -413,7 +413,7 @@
 		</for>
 	</weapon>
 	<weapon id="11617" name="Common Item - Assassin Knife">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -439,7 +439,7 @@
 		</for>
 	</weapon>
 	<weapon id="11618" name="Common Item - Work Hammer">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -465,7 +465,7 @@
 		</for>
 	</weapon>
 	<weapon id="11619" name="Common Item - Scroll of Wisdom">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
@@ -490,7 +490,7 @@
 		</for>
 	</weapon>
 	<weapon id="11620" name="Common Item - Talwar">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -517,7 +517,7 @@
 		</for>
 	</weapon>
 	<weapon id="11621" name="Common Item - Talwar">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -544,7 +544,7 @@
 		</for>
 	</weapon>
 	<weapon id="11622" name="Common Item - Trident">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -573,7 +573,7 @@
 		</for>
 	</weapon>
 	<weapon id="11623" name="Common Item - Hand Axe">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -599,7 +599,7 @@
 		</for>
 	</weapon>
 	<weapon id="11624" name="Common Item - Field Gun">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -626,7 +626,7 @@
 		</for>
 	</weapon>
 	<weapon id="11625" name="Common Item - Heavy Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -652,7 +652,7 @@
 		</for>
 	</weapon>
 	<weapon id="11626" name="Common Item - Heavy Mace">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -678,7 +678,7 @@
 		</for>
 	</weapon>
 	<weapon id="11627" name="Common Item - Mace of Prayer">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
@@ -705,7 +705,7 @@
 		</for>
 	</weapon>
 	<weapon id="11628" name="Common Item - Knight's Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -731,7 +731,7 @@
 		</for>
 	</weapon>
 	<weapon id="11629" name="Common Item - Dark Elven Bow">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -759,7 +759,7 @@
 		</for>
 	</weapon>
 	<weapon id="11630" name="Common Item - Doom Hammer">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
@@ -786,7 +786,7 @@
 		</for>
 	</weapon>
 	<weapon id="11631" name="Common Item - Dwarven Trident">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -815,7 +815,7 @@
 		</for>
 	</weapon>
 	<weapon id="11632" name="Common Item - Longbow">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -843,7 +843,7 @@
 		</for>
 	</weapon>
 	<weapon id="11633" name="Common Item - Staff of Mana">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
@@ -870,7 +870,7 @@
 		</for>
 	</weapon>
 	<weapon id="11634" name="Common Item - Mystic Staff">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
@@ -897,7 +897,7 @@
 		</for>
 	</weapon>
 	<weapon id="11635" name="Common Item - Bastard Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -923,7 +923,7 @@
 		</for>
 	</weapon>
 	<weapon id="11636" name="Common Item - Spinebone Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -949,7 +949,7 @@
 		</for>
 	</weapon>
 	<weapon id="11637" name="Common Item - Divine Tome">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="69"/>
 		<set name="crystal_type" value="D"/>
@@ -974,7 +974,7 @@
 		</for>
 	</weapon>
 	<weapon id="11638" name="Common Item - Mace of Judgment">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
@@ -1001,7 +1001,7 @@
 		</for>
 	</weapon>
 	<weapon id="11639" name="Common Item - Military Talwar">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1027,7 +1027,7 @@
 		</for>
 	</weapon>
 	<weapon id="11640" name="Common Item - Elven Bow">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1055,7 +1055,7 @@
 		</for>
 	</weapon>
 	<weapon id="11641" name="Common Item - Mace of Miracle">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
@@ -1082,7 +1082,7 @@
 		</for>
 	</weapon>
 	<weapon id="11642" name="Common Item - Single-Edged Jamadhr">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1108,7 +1108,7 @@
 		</for>
 	</weapon>
 	<weapon id="11643" name="Common Item - Artisan's Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1134,7 +1134,7 @@
 		</for>
 	</weapon>
 	<weapon id="11644" name="Common Item - Conjuror's Staff">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
@@ -1161,7 +1161,7 @@
 		</for>
 	</weapon>
 	<weapon id="11645" name="Common Item - Tomahawk">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1187,7 +1187,7 @@
 		</for>
 	</weapon>
 	<weapon id="11646" name="Common Item - Poniard Dagger">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1213,7 +1213,7 @@
 		</for>
 	</weapon>
 	<weapon id="11647" name="Common Item - Pike">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1242,7 +1242,7 @@
 		</for>
 	</weapon>
 	<weapon id="11648" name="Common Item - Fleuret">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1270,7 +1270,7 @@
 		</for>
 	</weapon>
 	<weapon id="11649" name="Common Item - Fleuret">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1298,7 +1298,7 @@
 		</for>
 	</weapon>
 	<weapon id="11650" name="Common Item - Fleuret">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1326,7 +1326,7 @@
 		</for>
 	</weapon>
 	<weapon id="11651" name="Common Item - Fleuret">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1354,7 +1354,7 @@
 		</for>
 	</weapon>
 	<weapon id="11652" name="Common Item - Hand Crossbow">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1381,7 +1381,7 @@
 		</for>
 	</weapon>
 	<weapon id="11653" name="Common Item - Hand Crossbow">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1408,7 +1408,7 @@
 		</for>
 	</weapon>
 	<weapon id="11654" name="Common Item - Hand Crossbow">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="48"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1435,7 +1435,7 @@
 		</for>
 	</weapon>
 	<weapon id="11655" name="Common Item - Sword of Magic">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="53"/>
 		<set name="crystal_type" value="D"/>
@@ -1461,7 +1461,7 @@
 		</for>
 	</weapon>
 	<weapon id="11656" name="Common Item - Sword of Mystic">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="53"/>
 		<set name="crystal_type" value="D"/>
@@ -1487,7 +1487,7 @@
 		</for>
 	</weapon>
 	<weapon id="11657" name="Common Item - Sword of Occult">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="53"/>
 		<set name="crystal_type" value="D"/>
@@ -1513,10 +1513,10 @@
 		</for>
 	</weapon>
 	<weapon id="11658" name="Common Item - Saber*Saber">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="34240"/>
 		<set name="rnd_dam" value="10"/>
@@ -1538,7 +1538,7 @@
 		</for>
 	</weapon>
 	<weapon id="11659" name="Common Item - Gastraphetes">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="69"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1566,7 +1566,7 @@
 		</for>
 	</weapon>
 	<weapon id="11660" name="Common Item - Shilen Knife">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="69"/>
 		<set name="crystal_type" value="D"/>
@@ -1593,7 +1593,7 @@
 		</for>
 	</weapon>
 	<weapon id="11661" name="Common Item - Dwarven Pike">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="69"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1622,7 +1622,7 @@
 		</for>
 	</weapon>
 	<weapon id="11662" name="Common Item - Dagger of Mana">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="69"/>
 		<set name="crystal_type" value="D"/>
@@ -1649,7 +1649,7 @@
 		</for>
 	</weapon>
 	<weapon id="11663" name="Common Item - Staff of Magic">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="69"/>
 		<set name="crystal_type" value="D"/>
@@ -1676,7 +1676,7 @@
 		</for>
 	</weapon>
 	<weapon id="11664" name="Common Item - Mystic Knife">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="69"/>
 		<set name="crystal_type" value="D"/>
@@ -1703,7 +1703,7 @@
 		</for>
 	</weapon>
 	<weapon id="11665" name="Common Item - Triple-Edged Jamadhr">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="69"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1729,7 +1729,7 @@
 		</for>
 	</weapon>
 	<weapon id="11666" name="Common Item - Spiked Club">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="69"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1755,7 +1755,7 @@
 		</for>
 	</weapon>
 	<weapon id="11667" name="Common Item - Two-handed Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="69"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1781,7 +1781,7 @@
 		</for>
 	</weapon>
 	<weapon id="11668" name="Common Item - Estoc">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="69"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1809,7 +1809,7 @@
 		</for>
 	</weapon>
 	<weapon id="11669" name="Common Item - Estoc">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="69"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1837,7 +1837,7 @@
 		</for>
 	</weapon>
 	<weapon id="11670" name="Common Item - Elven Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="69"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1863,7 +1863,7 @@
 		</for>
 	</weapon>
 	<weapon id="11671" name="Common Item - War Hammer">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="69"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1892,7 +1892,7 @@
 		</for>
 	</weapon>
 	<weapon id="11672" name="Common Item - Conjuror's Knife">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="69"/>
 		<set name="crystal_type" value="D"/>
@@ -1919,7 +1919,7 @@
 		</for>
 	</weapon>
 	<weapon id="11673" name="Common Item - Kukuri">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="69"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1945,7 +1945,7 @@
 		</for>
 	</weapon>
 	<weapon id="11674" name="Common Item - Crossbow">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="69"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1972,7 +1972,7 @@
 		</for>
 	</weapon>
 	<weapon id="11675" name="Common Item - Crimson Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="69"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -1998,7 +1998,7 @@
 		</for>
 	</weapon>
 	<weapon id="11676" name="Common Item - Tome of Blood">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="69"/>
 		<set name="crystal_type" value="D"/>
@@ -2023,7 +2023,7 @@
 		</for>
 	</weapon>
 	<weapon id="11677" name="Common Item - Field Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="69"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -2050,11 +2050,11 @@
 		</for>
 	</weapon>
 	<weapon id="11678" name="Common Item - Sage's Blood">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_blood_of_saints_i00"/>
 		<set name="price" value="37400"/>
 		<set name="rnd_dam" value="10"/>
@@ -2075,10 +2075,10 @@
 		</for>
 	</weapon>
 	<weapon id="11679" name="Common Item - Saber*Knight's Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="40710"/>
 		<set name="rnd_dam" value="10"/>
@@ -2100,10 +2100,10 @@
 		</for>
 	</weapon>
 	<weapon id="11680" name="Common Item - Saber*Bastard Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="40710"/>
 		<set name="rnd_dam" value="10"/>
@@ -2125,10 +2125,10 @@
 		</for>
 	</weapon>
 	<weapon id="11681" name="Common Item - Saber*Spinebone Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="40710"/>
 		<set name="rnd_dam" value="10"/>
@@ -2150,10 +2150,10 @@
 		</for>
 	</weapon>
 	<weapon id="11682" name="Common Item - Saber*Artisan's Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="40710"/>
 		<set name="rnd_dam" value="10"/>
@@ -2175,10 +2175,10 @@
 		</for>
 	</weapon>
 	<weapon id="11683" name="Common Item - Reinforced Longbow">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_strengthening_long_bow_i00"/>
 		<set name="kamael_convert" value="11701"/>
 		<set name="mp_consume" value="2"/>
@@ -2203,10 +2203,10 @@
 		</for>
 	</weapon>
 	<weapon id="11684" name="Common Item - Knight's Sword*Knight's Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="52050"/>
 		<set name="rnd_dam" value="10"/>
@@ -2228,7 +2228,7 @@
 		</for>
 	</weapon>
 	<weapon id="11685" name="Common Item - Maingauche">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="96"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -2254,7 +2254,7 @@
 		</for>
 	</weapon>
 	<weapon id="11686" name="Common Item - Morning Star">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="96"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -2280,10 +2280,10 @@
 		</for>
 	</weapon>
 	<weapon id="11687" name="Common Item - Bastard Sword*Knight's Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="52050"/>
 		<set name="rnd_dam" value="10"/>
@@ -2305,10 +2305,10 @@
 		</for>
 	</weapon>
 	<weapon id="11688" name="Common Item - Bastard Sword*Bastard Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="52050"/>
 		<set name="rnd_dam" value="10"/>
@@ -2330,10 +2330,10 @@
 		</for>
 	</weapon>
 	<weapon id="11689" name="Common Item - Bastard Sword*Spinebone Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="52050"/>
 		<set name="rnd_dam" value="10"/>
@@ -2355,10 +2355,10 @@
 		</for>
 	</weapon>
 	<weapon id="11690" name="Common Item - Bastard Sword*Artisan's Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="52050"/>
 		<set name="rnd_dam" value="10"/>
@@ -2380,7 +2380,7 @@
 		</for>
 	</weapon>
 	<weapon id="11691" name="Common Item - Bich'Hwa">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="96"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -2406,7 +2406,7 @@
 		</for>
 	</weapon>
 	<weapon id="11692" name="Common Item - Priest Mace">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="96"/>
 		<set name="crystal_type" value="D"/>
@@ -2433,7 +2433,7 @@
 		</for>
 	</weapon>
 	<weapon id="11693" name="Common Item - Goat Head Staff">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="96"/>
 		<set name="crystal_type" value="D"/>
@@ -2460,10 +2460,10 @@
 		</for>
 	</weapon>
 	<weapon id="11694" name="Common Item - Saber*Elven Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="52050"/>
 		<set name="rnd_dam" value="10"/>
@@ -2485,10 +2485,10 @@
 		</for>
 	</weapon>
 	<weapon id="11695" name="Common Item - Saber*Crimson Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="52050"/>
 		<set name="rnd_dam" value="10"/>
@@ -2510,7 +2510,7 @@
 		</for>
 	</weapon>
 	<weapon id="11696" name="Common Item - Sword of Magic Fog">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_count" value="96"/>
 		<set name="crystal_type" value="D"/>
@@ -2536,7 +2536,7 @@
 		</for>
 	</weapon>
 	<weapon id="11697" name="Common Item - Skull Breaker">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="96"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -2562,10 +2562,10 @@
 		</for>
 	</weapon>
 	<weapon id="11698" name="Common Item - Spinebone Sword*Knight's Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="52050"/>
 		<set name="rnd_dam" value="10"/>
@@ -2587,10 +2587,10 @@
 		</for>
 	</weapon>
 	<weapon id="11699" name="Common Item - Spinebone Sword*Spinebone Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="D"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="52050"/>
 		<set name="rnd_dam" value="10"/>

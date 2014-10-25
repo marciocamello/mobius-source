@@ -98,7 +98,7 @@
 	<armor id="15605" name="Vorpal Sigil">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.belleface_i00"/>
 		<set name="price" value="14658000"/>
 		<set name="type" value="SIGIL"/>
@@ -411,7 +411,7 @@
 	<armor id="15622" name="Moirai Sigil">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S80"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.weapon_tysandy_sigil_i01"/>
 		<set name="price" value="8839000"/>
 		<set name="type" value="SIGIL"/>
@@ -938,7 +938,7 @@
 		<set name="weight" value="60"/>
 	</etcitem>
 	<weapon id="15676" name="Triumph Blade">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_tysandy_blade_i00"/>
 		<set name="kamael_convert" value="15687"/>
@@ -970,7 +970,7 @@
 		</for>
 	</weapon>
 	<weapon id="15677" name="Triumph Dagger">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_tysandy_dagger_i00"/>
 		<set name="price" value="171530000"/>
@@ -1002,7 +1002,7 @@
 		</for>
 	</weapon>
 	<weapon id="15678" name="Triumph Hammer">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_tysandy_hammer_i00"/>
 		<set name="price" value="171530000"/>
@@ -1034,7 +1034,7 @@
 		</for>
 	</weapon>
 	<weapon id="15679" name="Triumph Crusher">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_tysandy_crusher_i00"/>
 		<set name="price" value="171530000"/>
@@ -1066,7 +1066,7 @@
 		</for>
 	</weapon>
 	<weapon id="15680" name="Triumph Two Hand Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_tysandy_two_hand_sword_i00"/>
 		<set name="kamael_convert" value="15688"/>
@@ -1098,7 +1098,7 @@
 		</for>
 	</weapon>
 	<weapon id="15681" name="Triumph Jamadhr">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_tysandy_jamadhr_i00"/>
 		<set name="price" value="171530000"/>
@@ -1130,7 +1130,7 @@
 		</for>
 	</weapon>
 	<weapon id="15682" name="Triumph Spear">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_tysandy_spear_i00"/>
 		<set name="price" value="171530000"/>
@@ -1165,7 +1165,7 @@
 		</for>
 	</weapon>
 	<weapon id="15683" name="Triumph Staff">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_tysandy_staff_i00"/>
@@ -1198,7 +1198,7 @@
 		</for>
 	</weapon>
 	<weapon id="15684" name="Triumph Two Hand Staff">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_tysandy_twohand_staff_i00"/>
@@ -1231,7 +1231,7 @@
 		</for>
 	</weapon>
 	<weapon id="15685" name="Triumph Magic Sword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_tysandy_magic_sword_i00"/>
@@ -1263,7 +1263,7 @@
 		</for>
 	</weapon>
 	<weapon id="15686" name="Triumph Bow">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="atk_reuse" value="1500"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_tysandy_bow_i00"/>
@@ -1298,7 +1298,7 @@
 		</for>
 	</weapon>
 	<weapon id="15687" name="Triumph Rapier">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.weapon_tysandy_rapier_i00"/>
 		<set name="kamael_convert" value="15676"/>
@@ -1331,7 +1331,7 @@
 		</for>
 	</weapon>
 	<weapon id="15688" name="Triumph Ancientsword">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.weapon_tysandy_ancient_sword_i00"/>
 		<set name="kamael_convert" value="15680"/>
@@ -1364,7 +1364,7 @@
 		</for>
 	</weapon>
 	<weapon id="15689" name="Triumph Crossbow">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_type" value="S80"/>
 		<set name="icon" value="icon.seapon_tysandy_crossbow_i00"/>

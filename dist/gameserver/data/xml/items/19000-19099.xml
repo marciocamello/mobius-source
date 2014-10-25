@@ -628,7 +628,7 @@
 			<slot id="RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="SWORD"/>
-		<set name="ex_type" value="SWORD"/>
+		<set name="ex_type" value="MAGIC_SWORD"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="431"/>
 		<set name="crystallizable" value="true"/>
@@ -656,7 +656,7 @@
 			<slot id="RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="SWORD"/>
-		<set name="ex_type" value="SWORD"/>
+		<set name="ex_type" value="MAGIC_SWORD"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="431"/>
 		<set name="crystallizable" value="true"/>
@@ -681,7 +681,7 @@
 			<slot id="RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="SWORD"/>
-		<set name="ex_type" value="SWORD"/>
+		<set name="ex_type" value="MAGIC_SWORD"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="431"/>
 		<set name="crystallizable" value="true"/>
@@ -710,7 +710,7 @@
 			<slot id="RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="BLUNT"/>
-		<set name="ex_type" value="BLUNT_WEAPON"/>
+		<set name="ex_type" value="MAGIC_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="431"/>
 		<set name="crystallizable" value="true"/>
@@ -739,7 +739,7 @@
 			<slot id="RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="BLUNT"/>
-		<set name="ex_type" value="BLUNT_WEAPON"/>
+		<set name="ex_type" value="MAGIC_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="431"/>
 		<set name="crystallizable" value="true"/>
@@ -768,7 +768,7 @@
 			<slot id="RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="BLUNT"/>
-		<set name="ex_type" value="BLUNT_WEAPON"/>
+		<set name="ex_type" value="MAGIC_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="431"/>
 		<set name="crystallizable" value="true"/>
@@ -793,7 +793,7 @@
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="BIGBLUNT"/>
-		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
+		<set name="ex_type" value="BIG_MAGIC_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="431"/>
 		<set name="crystallizable" value="true"/>
@@ -818,7 +818,7 @@
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="BIGBLUNT"/>
-		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
+		<set name="ex_type" value="BIG_MAGIC_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="431"/>
 		<set name="crystallizable" value="true"/>
@@ -846,7 +846,7 @@
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="BIGBLUNT"/>
-		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
+		<set name="ex_type" value="BIG_MAGIC_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="431"/>
 		<set name="crystallizable" value="true"/>
@@ -1042,6 +1042,7 @@
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="DUALBLUNT"/>
+		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>	
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="517"/>
 		<set name="crystallizable" value="true"/>
@@ -1069,6 +1070,7 @@
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="DUALBLUNT"/>
+		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>		
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="517"/>
 		<set name="crystallizable" value="true"/>
@@ -1096,6 +1098,7 @@
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="DUALBLUNT"/>
+		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="517"/>
 		<set name="crystallizable" value="true"/>
@@ -1799,7 +1802,7 @@
 			<slot id="RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="SWORD"/>
-		<set name="ex_type" value="SWORD"/>
+		<set name="ex_type" value="MAGIC_SWORD"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="8621"/>
 		<set name="crystallizable" value="true"/>
@@ -1827,7 +1830,7 @@
 			<slot id="RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="SWORD"/>
-		<set name="ex_type" value="SWORD"/>
+		<set name="ex_type" value="MAGIC_SWORD"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="8621"/>
 		<set name="crystallizable" value="true"/>
@@ -1855,7 +1858,7 @@
 			<slot id="RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="SWORD"/>
-		<set name="ex_type" value="SWORD"/>
+		<set name="ex_type" value="MAGIC_SWORD"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="8621"/>
 		<set name="crystallizable" value="true"/>
@@ -1884,7 +1887,7 @@
 			<slot id="RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="BLUNT"/>
-		<set name="ex_type" value="BLUNT_WEAPON"/>
+		<set name="ex_type" value="MAGIC_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="8621"/>
 		<set name="crystallizable" value="true"/>
@@ -1913,7 +1916,7 @@
 			<slot id="RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="BLUNT"/>
-		<set name="ex_type" value="BLUNT_WEAPON"/>
+		<set name="ex_type" value="MAGIC_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="8621"/>
 		<set name="crystallizable" value="true"/>
@@ -1942,7 +1945,7 @@
 			<slot id="RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="BLUNT"/>
-		<set name="ex_type" value="BLUNT_WEAPON"/>
+		<set name="ex_type" value="MAGIC_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="8621"/>
 		<set name="crystallizable" value="true"/>
@@ -1970,7 +1973,7 @@
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="BIGBLUNT"/>
-		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
+		<set name="ex_type" value="BIG_MAGIC_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="8621"/>
 		<set name="crystallizable" value="true"/>
@@ -1998,7 +2001,7 @@
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="BIGBLUNT"/>
-		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
+		<set name="ex_type" value="BIG_MAGIC_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="8621"/>
 		<set name="crystallizable" value="true"/>
@@ -2026,7 +2029,7 @@
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="BIGBLUNT"/>
-		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
+		<set name="ex_type" value="BIG_MAGIC_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="8621"/>
 		<set name="crystallizable" value="true"/>
@@ -2222,6 +2225,7 @@
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="DUALBLUNT"/>
+		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="10346"/>
 		<set name="crystallizable" value="true"/>
@@ -2249,6 +2253,7 @@
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="DUALBLUNT"/>
+		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="10346"/>
 		<set name="crystallizable" value="true"/>
@@ -2276,6 +2281,7 @@
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="DUALBLUNT"/>
+		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="10346"/>
 		<set name="crystallizable" value="true"/>

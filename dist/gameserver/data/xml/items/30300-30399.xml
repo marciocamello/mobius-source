@@ -915,7 +915,7 @@
 	</armor>
 	<armor id="30366" name="Boots">
 		<set name="crystal_type" value="R"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="icon" value="icon.armor_t97_b_i00"/>
 		<set name="type" value="NONE"/>
@@ -932,7 +932,7 @@
 	</armor>
 	<armor id="30367" name="Gloves">
 		<set name="crystal_type" value="R"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="icon" value="icon.armor_t97_g_i00"/>
 		<set name="type" value="NONE"/>
@@ -1239,7 +1239,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="30393" name="Infinity Cutter">
 		<set name="icon" value="icon.weapon_the_sword_of_hero_i00"/>
@@ -1268,7 +1268,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="30394" name="Infinity Slasher">
 		<set name="icon" value="icon.weapon_the_two_handed_sword_of_hero_i00"/>
@@ -1297,7 +1297,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="30395" name="Infinity Avenger">
 		<set name="icon" value="icon.weapon_the_axe_of_hero_i00"/>
@@ -1326,7 +1326,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="30396" name="Infinity Fighter">
 		<set name="icon" value="icon.weapon_the_fist_of_hero_i00"/>
@@ -1355,7 +1355,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="30397" name="Infinity Stormer">
 		<set name="icon" value="icon.weapon_the_pole_of_hero_i00"/>
@@ -1384,7 +1384,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="30398" name="Infinity Thrower">
 		<set name="icon" value="icon.weapon_the_bow_of_hero_i00"/>
@@ -1414,7 +1414,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="30399" name="Infinity Shooter">
 		<set name="icon" value="icon.weapon_infinity_shooter_i00"/>
@@ -1444,6 +1444,6 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 </list>
