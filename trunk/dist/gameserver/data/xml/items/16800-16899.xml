@@ -334,14 +334,14 @@
 		<set name="type" value="OTHER"/>
 	</etcitem>
 	<armor id="16854" name="Majestic Earring of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
 		<equip>
@@ -356,14 +356,14 @@
 		</for>
 	</armor>
 	<armor id="16855" name="Majestic Necklace of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
 		<equip>
@@ -377,14 +377,14 @@
 		</for>
 	</armor>
 	<armor id="16856" name="Majestic Ring of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
 		<equip>
@@ -399,14 +399,14 @@
 		</for>
 	</armor>
 	<armor id="16857" name="Black Ore Earring of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.accessary_earing_of_black_ore_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
 		<equip>
@@ -420,14 +420,14 @@
 		</for>
 	</armor>
 	<armor id="16858" name="Black Ore Necklace of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.accessary_necklace_of_black_ore_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
 		<equip>
@@ -440,14 +440,14 @@
 		</for>
 	</armor>
 	<armor id="16859" name="Black Ore Ring of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.accessary_ring_of_black_ore_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
 		<equip>
@@ -461,14 +461,14 @@
 		</for>
 	</armor>
 	<armor id="16860" name="Sealed Earring of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.accessary_earing_of_binding_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
 		<equip>
@@ -482,14 +482,14 @@
 		</for>
 	</armor>
 	<armor id="16861" name="Sealed Necklace of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.accessary_necklace_of_binding_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
 		<equip>
@@ -502,14 +502,14 @@
 		</for>
 	</armor>
 	<armor id="16862" name="Sealed Ring of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.accessary_ring_of_binding_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
 		<equip>
@@ -523,14 +523,14 @@
 		</for>
 	</armor>
 	<armor id="16863" name="Elven Earring of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.accessary_elven_earing_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
 		<equip>
@@ -544,14 +544,14 @@
 		</for>
 	</armor>
 	<armor id="16864" name="Elven Necklace of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.accessary_elven_necklace_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
 		<equip>
@@ -564,14 +564,14 @@
 		</for>
 	</armor>
 	<armor id="16865" name="Elven Ring of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.accessary_elven_ring_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
 		<equip>
@@ -585,14 +585,14 @@
 		</for>
 	</armor>
 	<armor id="16866" name="Dark Crystal Robe of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t76_ul_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="MAGIC"/>
 		<set name="weight" value="2450"/>
 		<equip>
@@ -607,14 +607,14 @@
 		</for>
 	</armor>
 	<armor id="16867" name="Dark Crystal Helmet of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_helmet_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="570"/>
 		<equip>
@@ -628,14 +628,14 @@
 		</for>
 	</armor>
 	<armor id="16868" name="Dark Crystal Gloves of Fortune - Robe" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t76_g_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="580"/>
 		<equip>
@@ -649,14 +649,14 @@
 		</for>
 	</armor>
 	<armor id="16869" name="Dark Crystal Boots of Fortune - Robe" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t76_b_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="1110"/>
 		<equip>
@@ -670,7 +670,7 @@
 		</for>
 	</armor>
 	<weapon id="16870" name="Dark Crystal Shield of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.shield_dark_crystal_shield_i00"/>
 		<set name="price" value="0"/>
@@ -688,14 +688,14 @@
 		</for>
 	</weapon>
 	<armor id="16871" name="Avadon Robe of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t59_ul_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="MAGIC"/>
 		<set name="weight" value="2540"/>
 		<equip>
@@ -710,14 +710,14 @@
 		</for>
 	</armor>
 	<armor id="16872" name="Avadon Circlet of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_leather_helmet_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="590"/>
 		<equip>
@@ -731,14 +731,14 @@
 		</for>
 	</armor>
 	<armor id="16873" name="Avadon Gloves of Fortune - Robe" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t59_g_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="590"/>
 		<equip>
@@ -752,14 +752,14 @@
 		</for>
 	</armor>
 	<armor id="16874" name="Avadon Boots of Fortune - Robe" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t59_b_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="1180"/>
 		<equip>
@@ -773,7 +773,7 @@
 		</for>
 	</armor>
 	<weapon id="16875" name="Avadon Shield of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.shield_avadon_shield_i00"/>
 		<set name="price" value="0"/>
@@ -791,14 +791,14 @@
 		</for>
 	</weapon>
 	<armor id="16876" name="Karmian Tunic of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t53_u_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="MAGIC"/>
 		<set name="weight" value="1980"/>
 		<equip>
@@ -813,14 +813,14 @@
 		</for>
 	</armor>
 	<armor id="16877" name="Karmian Stockings of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t53_l_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="MAGIC"/>
 		<set name="weight" value="970"/>
 		<equip>
@@ -835,14 +835,14 @@
 		</for>
 	</armor>
 	<armor id="16878" name="Karmian Gloves of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t53_g_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="620"/>
 		<equip>
@@ -856,14 +856,14 @@
 		</for>
 	</armor>
 	<armor id="16879" name="Karmian Boots of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t53_b_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="1230"/>
 		<equip>
@@ -877,14 +877,14 @@
 		</for>
 	</armor>
 	<armor id="16880" name="Mithril Tunic of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t51_u_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="MAGIC"/>
 		<set name="weight" value="2010"/>
 		<equip>
@@ -899,14 +899,14 @@
 		</for>
 	</armor>
 	<armor id="16881" name="Mithril Stockings of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t51_l_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="MAGIC"/>
 		<set name="weight" value="980"/>
 		<equip>
@@ -921,14 +921,14 @@
 		</for>
 	</armor>
 	<armor id="16882" name="Elven Mithril Gloves of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t51_g_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="640"/>
 		<equip>
@@ -942,14 +942,14 @@
 		</for>
 	</armor>
 	<armor id="16883" name="Elven Mithril Boots of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t51_b_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="1250"/>
 		<equip>
@@ -963,14 +963,14 @@
 		</for>
 	</armor>
 	<armor id="16884" name="Dark Crystal Leather Armor of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t75_u_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="LIGHT"/>
 		<set name="weight" value="4300"/>
 		<equip>
@@ -984,14 +984,14 @@
 		</for>
 	</armor>
 	<armor id="16885" name="Dark Crystal Leggings of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t75_l_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="LIGHT"/>
 		<set name="weight" value="1480"/>
 		<equip>
@@ -1005,14 +1005,14 @@
 		</for>
 	</armor>
 	<armor id="16886" name="Dark Crystal Gloves of Fortune - Light Armor" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t75_g_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="580"/>
 		<equip>
@@ -1026,14 +1026,14 @@
 		</for>
 	</armor>
 	<armor id="16887" name="Dark Crystal Boots of Fortune - Light Armor" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t75_b_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="1110"/>
 		<equip>
@@ -1047,14 +1047,14 @@
 		</for>
 	</armor>
 	<armor id="16888" name="Leather Armor of Doom of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t72_ul_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="LIGHT"/>
 		<set name="weight" value="5500"/>
 		<equip>
@@ -1068,14 +1068,14 @@
 		</for>
 	</armor>
 	<armor id="16889" name="Doom Helmet of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_leather_helmet_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="580"/>
 		<equip>
@@ -1089,14 +1089,14 @@
 		</for>
 	</armor>
 	<armor id="16890" name="Doom Gloves of Fortune - Heavy Armor" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t71_g_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="580"/>
 		<equip>
@@ -1110,14 +1110,14 @@
 		</for>
 	</armor>
 	<armor id="16891" name="Doom Gloves of Fortune - Light Armor" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t72_g_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="580"/>
 		<equip>
@@ -1131,14 +1131,14 @@
 		</for>
 	</armor>
 	<armor id="16892" name="Doom Boots of Fortune - Heavy Armor" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t71_b_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="1130"/>
 		<equip>
@@ -1152,14 +1152,14 @@
 		</for>
 	</armor>
 	<armor id="16893" name="Doom Boots of Fortune - Light Armor" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t72_b_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="1130"/>
 		<equip>
@@ -1173,14 +1173,14 @@
 		</for>
 	</armor>
 	<armor id="16894" name="Doom Plate Armor of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t71_ul_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="HEAVY"/>
 		<set name="weight" value="9980"/>
 		<equip>
@@ -1194,7 +1194,7 @@
 		</for>
 	</armor>
 	<weapon id="16895" name="Doom Shield of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.shield_doom_shield_i00"/>
 		<set name="price" value="0"/>
@@ -1212,14 +1212,14 @@
 		</for>
 	</weapon>
 	<armor id="16896" name="Plated Leather Armor of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t47_u_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="LIGHT"/>
 		<set name="weight" value="4450"/>
 		<equip>
@@ -1233,14 +1233,14 @@
 		</for>
 	</armor>
 	<armor id="16897" name="Plated Leather Gaiters of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t47_l_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="LIGHT"/>
 		<set name="weight" value="1560"/>
 		<equip>
@@ -1254,14 +1254,14 @@
 		</for>
 	</armor>
 	<armor id="16898" name="Plated Leather Boots of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t47_b_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="1220"/>
 		<equip>
@@ -1275,14 +1275,14 @@
 		</for>
 	</armor>
 	<armor id="16899" name="Plated Leather Gloves of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t47_g_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="610"/>
 		<equip>

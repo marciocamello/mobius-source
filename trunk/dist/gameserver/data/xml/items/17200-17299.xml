@@ -126,9 +126,9 @@
 	<etcitem id="17213" name="Solina's Biography">
 		<set name="icon" value="icon.etc_old_evil_book_i00"/>
 		<set name="weight" value="10"/>
-		<set name="tradeable" value="false"/>
-		<set name="dropable" value="false"/>
-		<set name="sellable" value="false"/>
+		<set name="tradeable" value="true"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -534,9 +534,9 @@
 		<set name="icon" value="icon.etc_charm_of_courage_i05"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
-		<set name="dropable" value="false"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>

@@ -2,7 +2,7 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<armor id="12300" name="Common Item - Sealed Imperial Crusader Gauntlets">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="12"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -21,7 +21,7 @@
 		</for>
 	</armor>
 	<armor id="12301" name="Common Item - Sealed Imperial Crusader Boots">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="12"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -40,10 +40,10 @@
 		</for>
 	</armor>
 	<weapon id="12302" name="Common Item - Sealed Imperial Crusader Shield">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.shield_imperial_crusader_shield_i02"/>
 		<set name="price" value="272800"/>
 		<set name="rnd_dam" value="0"/>
@@ -60,7 +60,7 @@
 		</for>
 	</weapon>
 	<armor id="12303" name="Common Item - Sealed Imperial Crusader Helmet">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="19"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -79,7 +79,7 @@
 		</for>
 	</armor>
 	<armor id="12304" name="Common Item - Sealed Imperial Crusader Breastplate">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="50"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -98,7 +98,7 @@
 		</for>
 	</armor>
 	<armor id="12305" name="Common Item - Imperial Crusader Gaiters">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="31"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -117,7 +117,7 @@
 		</for>
 	</armor>
 	<armor id="12306" name="Common Item - Imperial Crusader Gauntlets">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="12"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -136,7 +136,7 @@
 		</for>
 	</armor>
 	<armor id="12307" name="Common Item - Imperial Crusader Boots">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="12"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -155,10 +155,10 @@
 		</for>
 	</armor>
 	<weapon id="12308" name="Common Item - Imperial Crusader Shield">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="S"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.shield_imperial_crusader_shield_i00"/>
 		<set name="price" value="272800"/>
 		<set name="rnd_dam" value="0"/>
@@ -178,7 +178,7 @@
 		</for>
 	</weapon>
 	<armor id="12309" name="Common Item - Imperial Crusader Helmet">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="19"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -197,7 +197,7 @@
 		</for>
 	</armor>
 	<armor id="12310" name="Common Item - Imperial Crusader Breastplate">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="50"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -216,7 +216,7 @@
 		</for>
 	</armor>
 	<armor id="12311" name="Common Item - Red Crescent">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="2"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -235,7 +235,7 @@
 		</for>
 	</armor>
 	<armor id="12312" name="Common Item - Necklace of Devotion">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -253,7 +253,7 @@
 		</for>
 	</armor>
 	<armor id="12313" name="Common Item - Ring of Devotion">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="1"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -272,7 +272,7 @@
 		</for>
 	</armor>
 	<armor id="12314" name="Common Item - Earring of Magic">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -291,7 +291,7 @@
 		</for>
 	</armor>
 	<armor id="12315" name="Common Item - Magic Necklace">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -309,7 +309,7 @@
 		</for>
 	</armor>
 	<armor id="12316" name="Common Item - Ring of Magic">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="2"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -328,7 +328,7 @@
 		</for>
 	</armor>
 	<armor id="12317" name="Common Item - Near Forest Necklace">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -346,7 +346,7 @@
 		</for>
 	</armor>
 	<armor id="12318" name="Common Item - Tiger's Eye">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -365,7 +365,7 @@
 		</for>
 	</armor>
 	<armor id="12319" name="Common Item - Black Pearl Ring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -384,7 +384,7 @@
 		</for>
 	</armor>
 	<armor id="12320" name="Common Item - Elven Necklace">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="9"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -402,7 +402,7 @@
 		</for>
 	</armor>
 	<armor id="12321" name="Common Item - Elven Ring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -421,7 +421,7 @@
 		</for>
 	</armor>
 	<armor id="12322" name="Common Item - Elven Earring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -440,7 +440,7 @@
 		</for>
 	</armor>
 	<armor id="12323" name="Common Item - Mithril Ring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -459,7 +459,7 @@
 		</for>
 	</armor>
 	<armor id="12324" name="Common Item - Dark Necklace">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="11"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -477,7 +477,7 @@
 		</for>
 	</armor>
 	<armor id="12325" name="Common Item - Onyx Beast's Eye">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="8"/>
 		<set name="crystal_type" value="D"/>
 		<set name="crystallizable" value="true"/>
@@ -496,7 +496,7 @@
 		</for>
 	</armor>
 	<armor id="12326" name="Common Item - Moonstone Earring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="2"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -515,7 +515,7 @@
 		</for>
 	</armor>
 	<armor id="12327" name="Common Item - Aquastone Necklace">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -533,7 +533,7 @@
 		</for>
 	</armor>
 	<armor id="12328" name="Common Item - Aquastone Ring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="1"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -552,7 +552,7 @@
 		</for>
 	</armor>
 	<armor id="12329" name="Common Item - Earring of Protection">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -571,7 +571,7 @@
 		</for>
 	</armor>
 	<armor id="12330" name="Common Item - Necklace of Protection">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -589,7 +589,7 @@
 		</for>
 	</armor>
 	<armor id="12331" name="Common Item - Ring of Protection">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="2"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -608,7 +608,7 @@
 		</for>
 	</armor>
 	<armor id="12332" name="Common Item - Earring of Seal">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -627,7 +627,7 @@
 		</for>
 	</armor>
 	<armor id="12333" name="Common Item - Ring of Ages">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -646,7 +646,7 @@
 		</for>
 	</armor>
 	<armor id="12334" name="Common Item - Necklace of Mermaid">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="7"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -664,7 +664,7 @@
 		</for>
 	</armor>
 	<armor id="12335" name="Common Item - Nassen's Earring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="8"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -683,7 +683,7 @@
 		</for>
 	</armor>
 	<armor id="12336" name="Common Item - Necklace of Seal">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="10"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -701,7 +701,7 @@
 		</for>
 	</armor>
 	<armor id="12337" name="Common Item - Ring of Seal">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -720,7 +720,7 @@
 		</for>
 	</armor>
 	<armor id="12338" name="Common Item - Adamantite Earring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -739,7 +739,7 @@
 		</for>
 	</armor>
 	<armor id="12339" name="Common Item - Adamantite Necklace">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -757,7 +757,7 @@
 		</for>
 	</armor>
 	<armor id="12340" name="Common Item - Adamantite Ring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="2"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -776,7 +776,7 @@
 		</for>
 	</armor>
 	<armor id="12341" name="Common Item - Black Ore Earring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -795,7 +795,7 @@
 		</for>
 	</armor>
 	<armor id="12342" name="Common Item - Black Ore Necklace">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="8"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -813,7 +813,7 @@
 		</for>
 	</armor>
 	<armor id="12343" name="Common Item - Black Ore Ring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -832,7 +832,7 @@
 		</for>
 	</armor>
 	<armor id="12344" name="Common Item - Sealed Phoenix Necklace">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
@@ -850,7 +850,7 @@
 		</for>
 	</armor>
 	<armor id="12345" name="Common Item - Sealed Phoenix Earring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
@@ -869,7 +869,7 @@
 		</for>
 	</armor>
 	<armor id="12346" name="Common Item - Sealed Phoenix Ring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
@@ -888,7 +888,7 @@
 		</for>
 	</armor>
 	<armor id="12347" name="Common Item - Phoenix Necklace">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
@@ -907,7 +907,7 @@
 		</for>
 	</armor>
 	<armor id="12348" name="Common Item - Phoenix Ring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
@@ -927,7 +927,7 @@
 		</for>
 	</armor>
 	<armor id="12349" name="Common Item - Phoenix Earring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
@@ -947,7 +947,7 @@
 		</for>
 	</armor>
 	<armor id="12350" name="Common Item - Sealed Majestic Necklace">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="9"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
@@ -965,7 +965,7 @@
 		</for>
 	</armor>
 	<armor id="12351" name="Common Item - Sealed Majestic Ring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
@@ -984,7 +984,7 @@
 		</for>
 	</armor>
 	<armor id="12352" name="Common Item - Sealed Majestic Earring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="7"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
@@ -1003,7 +1003,7 @@
 		</for>
 	</armor>
 	<armor id="12353" name="Common Item - Majestic Necklace">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="9"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
@@ -1022,7 +1022,7 @@
 		</for>
 	</armor>
 	<armor id="12354" name="Common Item - Majestic Ring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
@@ -1042,7 +1042,7 @@
 		</for>
 	</armor>
 	<armor id="12355" name="Common Item - Majestic Earring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="7"/>
 		<set name="crystal_type" value="A"/>
 		<set name="crystallizable" value="true"/>
@@ -1062,7 +1062,7 @@
 		</for>
 	</armor>
 	<armor id="12356" name="Common Item - Sealed Tateossian Necklace">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="17"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -1080,7 +1080,7 @@
 		</for>
 	</armor>
 	<armor id="12357" name="Common Item - Sealed Tateossian Ring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="9"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -1099,7 +1099,7 @@
 		</for>
 	</armor>
 	<armor id="12358" name="Common Item - Sealed Tateossian Earring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="13"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -1118,7 +1118,7 @@
 		</for>
 	</armor>
 	<armor id="12359" name="Common Item - Tateossian Necklace">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="17"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -1137,7 +1137,7 @@
 		</for>
 	</armor>
 	<armor id="12360" name="Common Item - Tateossian Ring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="9"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -1157,7 +1157,7 @@
 		</for>
 	</armor>
 	<armor id="12361" name="Common Item - Tateossian Earring">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="13"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -1181,11 +1181,11 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.ench_wp_stone_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
@@ -1194,11 +1194,11 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.ench_wp_stone_i01"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
@@ -1207,11 +1207,11 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.ench_wp_stone_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
@@ -1220,11 +1220,11 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.ench_wp_stone_i03"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
@@ -1233,11 +1233,11 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.ench_wp_stone_i04"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
@@ -1246,11 +1246,11 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.ench_am_stone_i00"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
@@ -1259,11 +1259,11 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.ench_am_stone_i01"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
@@ -1272,11 +1272,11 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.ench_am_stone_i02"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
@@ -1285,11 +1285,11 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.ench_am_stone_i03"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
@@ -1298,11 +1298,11 @@
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="destroyable" value="false"/>
-		<set name="dropable" value="false"/>
+		<set name="destroyable" value="true"/>
+		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.ench_am_stone_i04"/>
 		<set name="stackable" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>

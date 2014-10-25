@@ -2,7 +2,7 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<armor id="12100" name="Common Item - Karmian Stockings">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -22,7 +22,7 @@
 		</for>
 	</armor>
 	<armor id="12101" name="Common Item - Plated Leather Boots">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="2"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -41,7 +41,7 @@
 		</for>
 	</armor>
 	<weapon id="12102" name="Common Item - Dwarven Chain Shield">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="2"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -64,7 +64,7 @@
 		</for>
 	</weapon>
 	<armor id="12103" name="Common Item - Plated Leather Gaiters">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -83,7 +83,7 @@
 		</for>
 	</armor>
 	<armor id="12104" name="Common Item - Plated Leather Gloves">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="2"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -102,7 +102,7 @@
 		</for>
 	</armor>
 	<armor id="12105" name="Common Item - Plated Leather Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -121,7 +121,7 @@
 		</for>
 	</armor>
 	<armor id="12106" name="Common Item - Great Helmet">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -140,7 +140,7 @@
 		</for>
 	</armor>
 	<weapon id="12107" name="Common Item - Knight's Shield">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="2"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -163,7 +163,7 @@
 		</for>
 	</weapon>
 	<armor id="12108" name="Common Item - Dwarven Chain Gloves">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="2"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -182,7 +182,7 @@
 		</for>
 	</armor>
 	<armor id="12109" name="Common Item - Dwarven Chain Gaiters">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -201,7 +201,7 @@
 		</for>
 	</armor>
 	<armor id="12110" name="Common Item - Dwarven Chain Mail Shirt">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="9"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -220,7 +220,7 @@
 		</for>
 	</armor>
 	<armor id="12111" name="Common Item - Rind Leather Gaiters">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -239,7 +239,7 @@
 		</for>
 	</armor>
 	<armor id="12112" name="Common Item - Rind Leather Gloves">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="2"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -258,7 +258,7 @@
 		</for>
 	</armor>
 	<armor id="12113" name="Common Item - Rind Leather Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="7"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -277,7 +277,7 @@
 		</for>
 	</armor>
 	<armor id="12114" name="Common Item - Rind Leather Boots">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="2"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -296,7 +296,7 @@
 		</for>
 	</armor>
 	<armor id="12115" name="Common Item - Robe of Seal">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="11"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -316,7 +316,7 @@
 		</for>
 	</armor>
 	<armor id="12116" name="Common Item - Gloves of Seal">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="2"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -335,7 +335,7 @@
 		</for>
 	</armor>
 	<armor id="12117" name="Common Item - Silk Shirt">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="27"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -354,7 +354,7 @@
 		</for>
 	</armor>
 	<armor id="12118" name="Common Item - Crimson Boots">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="2"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -373,7 +373,7 @@
 		</for>
 	</armor>
 	<armor id="12119" name="Common Item - Mithril Gauntlets">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -392,7 +392,7 @@
 		</for>
 	</armor>
 	<armor id="12120" name="Common Item - Shining Circlet">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -411,7 +411,7 @@
 		</for>
 	</armor>
 	<armor id="12121" name="Common Item - Demon's Boots">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -430,7 +430,7 @@
 		</for>
 	</armor>
 	<armor id="12122" name="Common Item - Demon's Gloves">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -449,7 +449,7 @@
 		</for>
 	</armor>
 	<armor id="12123" name="Common Item - Demon's Tunic">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="12"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -469,7 +469,7 @@
 		</for>
 	</armor>
 	<armor id="12124" name="Common Item - Demon's Stockings">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="8"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -489,7 +489,7 @@
 		</for>
 	</armor>
 	<armor id="12125" name="Common Item - Compound Boots">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -508,10 +508,10 @@
 		</for>
 	</armor>
 	<weapon id="12126" name="Common Item - Compound Shield">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="C"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.shield_composite_shield_i00"/>
 		<set name="price" value="10900"/>
 		<set name="rnd_dam" value="0"/>
@@ -531,7 +531,7 @@
 		</for>
 	</weapon>
 	<armor id="12127" name="Common Item - Compound Helmet">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="6"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -550,7 +550,7 @@
 		</for>
 	</armor>
 	<armor id="12128" name="Common Item - Compound Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="27"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -569,7 +569,7 @@
 		</for>
 	</armor>
 	<weapon id="12129" name="Common Item - Tower Shield">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -592,7 +592,7 @@
 		</for>
 	</weapon>
 	<armor id="12130" name="Common Item - Theca Leather Gaiters">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="8"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -611,7 +611,7 @@
 		</for>
 	</armor>
 	<armor id="12131" name="Common Item - Theca Leather Gloves">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -630,7 +630,7 @@
 		</for>
 	</armor>
 	<armor id="12132" name="Common Item - Theca Leather Boots">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -649,7 +649,7 @@
 		</for>
 	</armor>
 	<armor id="12133" name="Common Item - Theca Leather Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="13"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -668,7 +668,7 @@
 		</for>
 	</armor>
 	<armor id="12134" name="Common Item - Drake Leather Gloves">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="7"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -687,7 +687,7 @@
 		</for>
 	</armor>
 	<armor id="12135" name="Common Item - Drake Leather Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="32"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -706,7 +706,7 @@
 		</for>
 	</armor>
 	<armor id="12136" name="Common Item - Drake Leather Boots">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="7"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -725,7 +725,7 @@
 		</for>
 	</armor>
 	<armor id="12137" name="Common Item - Divine Gloves">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="7"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -744,7 +744,7 @@
 		</for>
 	</armor>
 	<armor id="12138" name="Common Item - Divine Tunic">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="20"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -764,7 +764,7 @@
 		</for>
 	</armor>
 	<armor id="12139" name="Common Item - Divine Stockings">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="12"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -784,7 +784,7 @@
 		</for>
 	</armor>
 	<armor id="12140" name="Common Item - Striped Silk Shirt">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="60"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -803,7 +803,7 @@
 		</for>
 	</armor>
 	<armor id="12141" name="Common Item - Full Plate Gauntlets">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="7"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -822,7 +822,7 @@
 		</for>
 	</armor>
 	<armor id="12142" name="Common Item - Full Plate Boots">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="7"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -841,7 +841,7 @@
 		</for>
 	</armor>
 	<weapon id="12143" name="Common Item - Full Plate Shield">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="7"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -864,7 +864,7 @@
 		</for>
 	</weapon>
 	<armor id="12144" name="Common Item - Full Plate Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="42"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -883,7 +883,7 @@
 		</for>
 	</armor>
 	<armor id="12145" name="Common Item - Full Plate Helmet">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="10"/>
 		<set name="crystal_type" value="C"/>
 		<set name="crystallizable" value="true"/>
@@ -902,7 +902,7 @@
 		</for>
 	</armor>
 	<armor id="12146" name="Common Item - Sealed Zubei's Gauntlets">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -921,7 +921,7 @@
 		</for>
 	</armor>
 	<armor id="12147" name="Common Item - Sealed Zubei's Boots">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -940,7 +940,7 @@
 		</for>
 	</armor>
 	<armor id="12148" name="Common Item - Sealed Avadon Gloves">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -959,7 +959,7 @@
 		</for>
 	</armor>
 	<armor id="12149" name="Common Item - Sealed Avadon Boots">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -978,7 +978,7 @@
 		</for>
 	</armor>
 	<armor id="12150" name="Common Item - Zubei's Leather Gaiters">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -997,7 +997,7 @@
 		</for>
 	</armor>
 	<armor id="12151" name="Common Item - Zubei's Leather Shirt">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="8"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1016,7 +1016,7 @@
 		</for>
 	</armor>
 	<armor id="12152" name="Common Item - Zubei's Gaiters">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="7"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1035,7 +1035,7 @@
 		</for>
 	</armor>
 	<armor id="12153" name="Common Item - Zubei's Gauntlets" add_name="Heavy Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1054,7 +1054,7 @@
 		</for>
 	</armor>
 	<armor id="12154" name="Common Item - Zubei's Gauntlets" add_name="Light Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1073,7 +1073,7 @@
 		</for>
 	</armor>
 	<armor id="12155" name="Common Item - Zubei's Gauntlets" add_name="Robe">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1092,7 +1092,7 @@
 		</for>
 	</armor>
 	<armor id="12156" name="Common Item - Zubei's Boots" add_name="Heavy Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1111,7 +1111,7 @@
 		</for>
 	</armor>
 	<armor id="12157" name="Common Item - Zubei's Boots" add_name="Light Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1130,7 +1130,7 @@
 		</for>
 	</armor>
 	<armor id="12158" name="Common Item - Zubei's Boots" add_name="Robe">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1149,7 +1149,7 @@
 		</for>
 	</armor>
 	<weapon id="12159" name="Common Item - Zubei's Shield">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1172,7 +1172,7 @@
 		</for>
 	</weapon>
 	<armor id="12160" name="Common Item - Zubei's Helmet">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1191,7 +1191,7 @@
 		</for>
 	</armor>
 	<armor id="12161" name="Common Item - Zubei's Breastplate">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="11"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1210,7 +1210,7 @@
 		</for>
 	</armor>
 	<armor id="12162" name="Common Item - Avadon Gloves" add_name="Heavy Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1229,7 +1229,7 @@
 		</for>
 	</armor>
 	<armor id="12163" name="Common Item - Avadon Gloves" add_name="Light Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1248,7 +1248,7 @@
 		</for>
 	</armor>
 	<armor id="12164" name="Common Item - Avadon Gloves" add_name="Robe">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1267,7 +1267,7 @@
 		</for>
 	</armor>
 	<armor id="12165" name="Common Item - Avadon Leather Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="14"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1286,7 +1286,7 @@
 		</for>
 	</armor>
 	<armor id="12166" name="Common Item - Avadon Robe">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="14"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1306,7 +1306,7 @@
 		</for>
 	</armor>
 	<armor id="12167" name="Common Item - Avadon Boots" add_name="Heavy Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1325,7 +1325,7 @@
 		</for>
 	</armor>
 	<armor id="12168" name="Common Item - Avadon Boots" add_name="Light Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1344,7 +1344,7 @@
 		</for>
 	</armor>
 	<armor id="12169" name="Common Item - Avadon Boots" add_name="Robe">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1363,7 +1363,7 @@
 		</for>
 	</armor>
 	<armor id="12170" name="Common Item - Avadon Circlet">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="4"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1382,7 +1382,7 @@
 		</for>
 	</armor>
 	<weapon id="12171" name="Common Item - Avadon Shield">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="3"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1405,7 +1405,7 @@
 		</for>
 	</weapon>
 	<armor id="12172" name="Common Item - Avadon Gaiters">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="7"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1424,7 +1424,7 @@
 		</for>
 	</armor>
 	<armor id="12173" name="Common Item - Avadon Breastplate">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="11"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1443,7 +1443,7 @@
 		</for>
 	</armor>
 	<armor id="12174" name="Common Item - Thin Leather Shirt">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="29"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1462,7 +1462,7 @@
 		</for>
 	</armor>
 	<armor id="12175" name="Common Item - Tunic of Zubei">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="8"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1482,7 +1482,7 @@
 		</for>
 	</armor>
 	<armor id="12176" name="Common Item - Stockings of Zubei">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1502,7 +1502,7 @@
 		</for>
 	</armor>
 	<armor id="12177" name="Common Item - Doom Gloves" add_name="Heavy Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1521,7 +1521,7 @@
 		</for>
 	</armor>
 	<armor id="12178" name="Common Item - Doom Gloves" add_name="Light Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1540,7 +1540,7 @@
 		</for>
 	</armor>
 	<armor id="12179" name="Common Item - Doom Gloves" add_name="Robe">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1559,7 +1559,7 @@
 		</for>
 	</armor>
 	<armor id="12180" name="Common Item - Doom Boots" add_name="Heavy Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1578,7 +1578,7 @@
 		</for>
 	</armor>
 	<armor id="12181" name="Common Item - Doom Boots" add_name="Light Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1597,7 +1597,7 @@
 		</for>
 	</armor>
 	<armor id="12182" name="Common Item - Doom Boots" add_name="Robe">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1616,7 +1616,7 @@
 		</for>
 	</armor>
 	<weapon id="12183" name="Common Item - Doom Shield">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1639,7 +1639,7 @@
 		</for>
 	</weapon>
 	<armor id="12184" name="Common Item - Doom Plate Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="33"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1658,7 +1658,7 @@
 		</for>
 	</armor>
 	<armor id="12185" name="Common Item - Doom Helmet">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="8"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1677,7 +1677,7 @@
 		</for>
 	</armor>
 	<armor id="12186" name="Common Item - Leather Armor of Doom">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="24"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1696,7 +1696,7 @@
 		</for>
 	</armor>
 	<armor id="12187" name="Common Item - Sealed Doom Gloves">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1715,7 +1715,7 @@
 		</for>
 	</armor>
 	<armor id="12188" name="Common Item - Sealed Doom Boots">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1734,7 +1734,7 @@
 		</for>
 	</armor>
 	<armor id="12189" name="Common Item - Sealed Blue Wolf Boots">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1753,7 +1753,7 @@
 		</for>
 	</armor>
 	<armor id="12190" name="Common Item - Sealed Blue Wolf Gloves">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1772,7 +1772,7 @@
 		</for>
 	</armor>
 	<armor id="12191" name="Common Item - Thin Striped Leather Shirt">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="44"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1791,7 +1791,7 @@
 		</for>
 	</armor>
 	<armor id="12192" name="Common Item - Tunic of Doom">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="15"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1811,7 +1811,7 @@
 		</for>
 	</armor>
 	<armor id="12193" name="Common Item - Blue Wolf Gaiters">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="13"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1830,7 +1830,7 @@
 		</for>
 	</armor>
 	<armor id="12194" name="Common Item - Blue Wolf Leather Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="24"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1849,7 +1849,7 @@
 		</for>
 	</armor>
 	<armor id="12195" name="Common Item - Blue Wolf Boots" add_name="Heavy Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1868,7 +1868,7 @@
 		</for>
 	</armor>
 	<armor id="12196" name="Common Item - Blue Wolf Boots" add_name="Light Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1887,7 +1887,7 @@
 		</for>
 	</armor>
 	<armor id="12197" name="Common Item - Blue Wolf Boots" add_name="Robe">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1906,7 +1906,7 @@
 		</for>
 	</armor>
 	<armor id="12198" name="Common Item - Blue Wolf Gloves" add_name="Heavy Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>
@@ -1925,7 +1925,7 @@
 		</for>
 	</armor>
 	<armor id="12199" name="Common Item - Blue Wolf Gloves" add_name="Light Armor">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystal_type" value="B"/>
 		<set name="crystallizable" value="true"/>

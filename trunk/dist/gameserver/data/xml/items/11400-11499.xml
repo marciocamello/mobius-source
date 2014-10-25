@@ -727,7 +727,7 @@
 	<armor id="11436" name="(Not in Use) Holy Spirit's Cloak">
 		<set name="crystal_count" value="0"/>
 		<set name="crystal_type" value="A"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="icon" value="icon.armor_back09"/>
 		<set name="price" value="1160000"/>
 		<set name="type" value="NONE"/>

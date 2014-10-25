@@ -299,10 +299,10 @@
 	</etcitem>
 	<weapon id="17831" name="Bound Requiem Shaper">
 		<set name="icon" value="icon.weapon_aspeda_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1520"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="5"/>
@@ -329,10 +329,10 @@
 	</weapon>
 	<weapon id="17832" name="Bound Requiem Cutter">
 		<set name="icon" value="icon.weapon_estia_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1520"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="10"/>
@@ -358,8 +358,8 @@
 	</weapon>
 	<weapon id="17833" name="Bound Requiem Slasher">
 		<set name="icon" value="icon.weapon_polion_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1740"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="10"/>
@@ -384,8 +384,8 @@
 	</weapon>
 	<weapon id="17834" name="Bound Requiem Avenger">
 		<set name="icon" value="icon.weapon_batista_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1740"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="20"/>
@@ -410,8 +410,8 @@
 	</weapon>
 	<weapon id="17835" name="Bound Requiem Fighter">
 		<set name="icon" value="icon.weapon_fantasma_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1550"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="5"/>
@@ -436,8 +436,8 @@
 	</weapon>
 	<weapon id="17836" name="Bound Requiem Stormer">
 		<set name="icon" value="icon.weapon_soryu_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="2010"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="10"/>
@@ -462,8 +462,8 @@
 	</weapon>
 	<weapon id="17837" name="Bound Requiem Thrower">
 		<set name="icon" value="icon.weapon_grabathus_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1520"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="5"/>
@@ -489,8 +489,8 @@
 	</weapon>
 	<weapon id="17838" name="Bound Requiem Shooter">
 		<set name="icon" value="icon.weapon_shyayaka_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1580"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="10"/>
@@ -516,8 +516,8 @@
 	</weapon>
 	<weapon id="17839" name="Bound Requiem Buster">
 		<set name="icon" value="icon.weapon_kaynon_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1520"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="10"/>
@@ -525,7 +525,7 @@
 			<slot id="RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="SWORD"/>
-		<set name="ex_type" value="SWORD"/>
+		<set name="ex_type" value="MAGIC_SWORD"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="37"/>
 		<set name="crystallizable" value="true"/>
@@ -542,8 +542,8 @@
 	</weapon>
 	<weapon id="17840" name="Bound Requiem Caster">
 		<set name="icon" value="icon.weapon_anatrian_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1080"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="20"/>
@@ -551,7 +551,7 @@
 			<slot id="RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="BLUNT"/>
-		<set name="ex_type" value="BLUNT_WEAPON"/>
+		<set name="ex_type" value="MAGIC_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="37"/>
 		<set name="crystallizable" value="true"/>
@@ -568,8 +568,8 @@
 	</weapon>
 	<weapon id="17841" name="Bound Requiem Retributer">
 		<set name="icon" value="icon.weapon_grangkaz_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1080"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="20"/>
@@ -577,7 +577,7 @@
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="BIGBLUNT"/>
-		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
+		<set name="ex_type" value="BIG_MAGIC_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="37"/>
 		<set name="crystallizable" value="true"/>
@@ -594,8 +594,8 @@
 	</weapon>
 	<weapon id="17842" name="Bound Requiem Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1520"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="10"/>
@@ -620,8 +620,8 @@
 	</weapon>
 	<weapon id="17843" name="Bound Requiem Dual Dagger">
 		<set name="icon" value="icon.weapon_r_dualdagger_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="2050"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="10"/>
@@ -646,8 +646,8 @@
 	</weapon>
 	<weapon id="17844" name="Bound Requiem Dual Blunt Weapon">
 		<set name="icon" value="icon.weapon_r_dualblunt_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1740"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="20"/>
@@ -655,6 +655,7 @@
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="DUALBLUNT"/>
+		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="44"/>
 		<set name="crystallizable" value="true"/>
@@ -673,8 +674,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="7"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="530"/>
@@ -694,8 +695,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="19"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t501_u_i00"/>
 		<set name="type" value="HEAVY"/>
 		<set name="weight" value="7520"/>
@@ -716,8 +717,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="12"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t501_l_i00"/>
 		<set name="type" value="HEAVY"/>
 		<set name="weight" value="3170"/>
@@ -737,8 +738,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t501_g_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="510"/>
@@ -758,8 +759,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t501_b_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="1070"/>
@@ -776,8 +777,8 @@
 	</armor>
 	<weapon id="17850" name="Bound Immortal Shield" add_name="Heavy Armor">
 		<set name="icon" value="icon.weapon_sacon_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1130"/>
 		<set name="price" value="2000000"/>
 		<equip>
@@ -799,8 +800,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="7"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_leather_helmet_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="530"/>
@@ -820,8 +821,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="19"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t502_u_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="weight" value="4140"/>
@@ -842,8 +843,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="12"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t502_l_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="weight" value="1320"/>
@@ -863,8 +864,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t502_g_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="510"/>
@@ -884,8 +885,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t502_b_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="1070"/>
@@ -904,8 +905,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="7"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_circlet_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="530"/>
@@ -923,8 +924,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="19"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t503_u_i00"/>
 		<set name="type" value="MAGIC"/>
 		<set name="weight" value="1750"/>
@@ -945,8 +946,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="12"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t503_l_i00"/>
 		<set name="type" value="MAGIC"/>
 		<set name="weight" value="850"/>
@@ -966,8 +967,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t503_g_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="510"/>
@@ -987,8 +988,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="4"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t503_b_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="1070"/>
@@ -1007,8 +1008,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.weapon_karyen_i00"/>
 		<set name="type" value="SIGIL"/>
 		<set name="ex_type" value="SIGIL"/>
@@ -1026,8 +1027,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="5"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.r1_necklace_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
@@ -1046,8 +1047,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="3"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.r1_earring_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
@@ -1067,8 +1068,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="2"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.r1_ring_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
@@ -1086,8 +1087,8 @@
 	</armor>
 	<weapon id="17865" name="Bound Apocalypse Shaper">
 		<set name="icon" value="icon.weapon_phasian_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1520"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="5"/>
@@ -1113,8 +1114,8 @@
 	</weapon>
 	<weapon id="17866" name="Bound Apocalypse Cutter">
 		<set name="icon" value="icon.weapon_pasis_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1520"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="10"/>
@@ -1139,8 +1140,8 @@
 	</weapon>
 	<weapon id="17867" name="Bound Apocalypse Slasher">
 		<set name="icon" value="icon.weapon_volver_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1740"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="10"/>
@@ -1165,8 +1166,8 @@
 	</weapon>
 	<weapon id="17868" name="Bound Apocalypse Avenger">
 		<set name="icon" value="icon.weapon_raksilion_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1740"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="20"/>
@@ -1191,8 +1192,8 @@
 	</weapon>
 	<weapon id="17869" name="Bound Apocalypse Fighter">
 		<set name="icon" value="icon.weapon_kirche_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1550"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="5"/>
@@ -1217,8 +1218,8 @@
 	</weapon>
 	<weapon id="17870" name="Bound Apocalypse Stormer">
 		<set name="icon" value="icon.weapon_grave_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="2010"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="10"/>
@@ -1243,8 +1244,8 @@
 	</weapon>
 	<weapon id="17871" name="Bound Apocalypse Thrower">
 		<set name="icon" value="icon.weapon_spina_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1520"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="5"/>
@@ -1270,8 +1271,8 @@
 	</weapon>
 	<weapon id="17872" name="Bound Apocalypse Shooter">
 		<set name="icon" value="icon.weapon_medianox_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1580"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="10"/>
@@ -1297,8 +1298,8 @@
 	</weapon>
 	<weapon id="17873" name="Bound Apocalypse Buster">
 		<set name="icon" value="icon.weapon_imerose_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1520"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="10"/>
@@ -1306,7 +1307,7 @@
 			<slot id="RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="SWORD"/>
-		<set name="ex_type" value="SWORD"/>
+		<set name="ex_type" value="MAGIC_SWORD"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="90"/>
 		<set name="crystallizable" value="true"/>
@@ -1323,8 +1324,8 @@
 	</weapon>
 	<weapon id="17874" name="Bound Apocalypse Caster">
 		<set name="icon" value="icon.weapon_yuke_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1080"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="20"/>
@@ -1332,7 +1333,7 @@
 			<slot id="RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="BLUNT"/>
-		<set name="ex_type" value="BLUNT_WEAPON"/>
+		<set name="ex_type" value="MAGIC_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="90"/>
 		<set name="crystallizable" value="true"/>
@@ -1349,8 +1350,8 @@
 	</weapon>
 	<weapon id="17875" name="Bound Apocalypse Retributer">
 		<set name="icon" value="icon.weapon_herencia_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1080"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="20"/>
@@ -1358,7 +1359,7 @@
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="BIGBLUNT"/>
-		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
+		<set name="ex_type" value="BIG_MAGIC_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="90"/>
 		<set name="crystallizable" value="true"/>
@@ -1375,8 +1376,8 @@
 	</weapon>
 	<weapon id="17876" name="Bound Apocalypse Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1520"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="10"/>
@@ -1401,8 +1402,8 @@
 	</weapon>
 	<weapon id="17877" name="Bound Apocalypse Dual Dagger">
 		<set name="icon" value="icon.weapon_r_dualdagger_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="2050"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="10"/>
@@ -1427,8 +1428,8 @@
 	</weapon>
 	<weapon id="17878" name="Bound Apocalypse Dual Blunt Weapon">
 		<set name="icon" value="icon.weapon_r_dualblunt_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1740"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="20"/>
@@ -1436,6 +1437,7 @@
 			<slot id="LEFT_RIGHT_HAND"/>
 		</equip>
 		<set name="type" value="DUALBLUNT"/>
+		<set name="ex_type" value="DUAL_BLUNT_WEAPON"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="108"/>
 		<set name="crystallizable" value="true"/>
@@ -1454,8 +1456,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="17"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_helmet_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="530"/>
@@ -1475,8 +1477,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="47"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t601_u_i00"/>
 		<set name="type" value="HEAVY"/>
 		<set name="weight" value="7520"/>
@@ -1497,8 +1499,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="29"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t601_l_i00"/>
 		<set name="type" value="HEAVY"/>
 		<set name="weight" value="3170"/>
@@ -1518,8 +1520,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="11"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t601_g_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="510"/>
@@ -1539,8 +1541,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="11"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t601_b_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="1070"/>
@@ -1557,8 +1559,8 @@
 	</armor>
 	<weapon id="17884" name="Bound Twilight Shield" add_name="Heavy Armor">
 		<set name="icon" value="icon.kratere_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="price" value="2000000"/>
 		<set name="weight" value="1130"/>
 		<equip>
@@ -1580,8 +1582,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="17"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_leather_helmet_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="530"/>
@@ -1601,8 +1603,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="47"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t602_u_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="weight" value="4140"/>
@@ -1623,8 +1625,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="29"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t602_l_i00"/>
 		<set name="type" value="LIGHT"/>
 		<set name="weight" value="1320"/>
@@ -1644,8 +1646,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="11"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t602_g_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="510"/>
@@ -1665,8 +1667,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="11"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t602_b_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="1070"/>
@@ -1685,8 +1687,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="17"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_circlet_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="530"/>
@@ -1706,8 +1708,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="47"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t603_u_i00"/>
 		<set name="type" value="MAGIC"/>
 		<set name="weight" value="1750"/>
@@ -1728,8 +1730,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="29"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t603_l_i00"/>
 		<set name="type" value="MAGIC"/>
 		<set name="weight" value="850"/>
@@ -1749,8 +1751,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="11"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t603_g_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="510"/>
@@ -1770,8 +1772,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="11"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.armor_t603_b_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="1070"/>
@@ -1789,8 +1791,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="12"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.weapon_dynaksus_i00"/>
 		<set name="type" value="SIGIL"/>
 		<set name="ex_type" value="SIGIL"/>
@@ -1808,8 +1810,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="12"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.r2_necklace_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
@@ -1828,8 +1830,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="9"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.r2_earring_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
@@ -1849,8 +1851,8 @@
 		<set name="crystal_type" value="R"/>
 		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="6"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="icon" value="icon.r2_ring_i00"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
@@ -1868,8 +1870,8 @@
 	</armor>
 	<weapon id="17899" name="Bound Specter Shaper">
 		<set name="icon" value="icon.weapon_ignicion_i00"/>
-		<set name="dropable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="dropable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="1520"/>
 		<set name="price" value="2000000"/>
 		<set name="rnd_dam" value="5"/>

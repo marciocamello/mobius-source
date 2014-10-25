@@ -716,7 +716,7 @@
 			<enchant stat="sDef" order="0x40" value="0"/>
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<armor id="30443" name="Bound Stockings of Zubei">
 		<set name="crystal_type" value="B"/>
@@ -1106,7 +1106,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="30460" name="Bound Sword of Revolution*Elven Long Sword">
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
@@ -1131,7 +1131,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="30461" name="Bound Sword of Revolution">
 		<set name="icon" value="icon.weapon_sword_of_revolution_i00"/>
@@ -1305,7 +1305,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="30468" name="Bound Hell Hound" add_name="Guidance">
 		<set name="icon" value="icon.weapon_hell_hound_i01"/>
@@ -1334,7 +1334,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="30469" name="Bound Hell Hound" add_name="Quick Recovery">
 		<set name="icon" value="icon.weapon_hell_hound_i01"/>
@@ -1360,7 +1360,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="30470" name="Bound Hell Hound" add_name="Cheap Shot">
 		<set name="icon" value="icon.weapon_hell_hound_i01"/>
@@ -1386,7 +1386,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="30471" name="Bound Heavy Mace">
 		<set name="icon" value="icon.weapon_heavy_mace_i00"/>
@@ -1899,7 +1899,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<weapon id="30491" name="Bound Field Sword">
 		<set name="icon" value="icon.weapon_tulwar_i00"/>
@@ -1924,7 +1924,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<armor id="30492" name="Bound Ring of Devotion">
 		<set name="crystal_type" value="D"/>
@@ -2119,6 +2119,6 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 </list>

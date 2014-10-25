@@ -2,14 +2,14 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
 	<armor id="16900" name="Full Plate Helmet of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_leather_helmet_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="600"/>
 		<equip>
@@ -23,14 +23,14 @@
 		</for>
 	</armor>
 	<armor id="16901" name="Full Plate Armor of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t62_ul_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="HEAVY"/>
 		<set name="weight" value="10480"/>
 		<equip>
@@ -44,14 +44,14 @@
 		</for>
 	</armor>
 	<armor id="16902" name="Full Plate Boots of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t62_b_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="1200"/>
 		<equip>
@@ -65,14 +65,14 @@
 		</for>
 	</armor>
 	<armor id="16903" name="Full Plate Gauntlets of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t62_g_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="600"/>
 		<equip>
@@ -86,7 +86,7 @@
 		</for>
 	</armor>
 	<weapon id="16904" name="Full Plate Shield of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
 		<set name="icon" value="icon.shield_full_plate_shield_i00"/>
 		<set name="price" value="0"/>
@@ -104,14 +104,14 @@
 		</for>
 	</weapon>
 	<armor id="16905" name="Manticore Skin Shirt of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t42_u_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="LIGHT"/>
 		<set name="weight" value="4520"/>
 		<equip>
@@ -125,14 +125,14 @@
 		</for>
 	</armor>
 	<armor id="16906" name="Manticore Skin Gaiters of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t42_l_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="LIGHT"/>
 		<set name="weight" value="1550"/>
 		<equip>
@@ -146,14 +146,14 @@
 		</for>
 	</armor>
 	<armor id="16907" name="Manticore Skin Boots of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t42_b_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="1260"/>
 		<equip>
@@ -167,14 +167,14 @@
 		</for>
 	</armor>
 	<armor id="16908" name="Manticore Skin Gloves of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t42_g_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="630"/>
 		<equip>
@@ -188,14 +188,14 @@
 		</for>
 	</armor>
 	<armor id="16909" name="Brigandine of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t43_u_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="HEAVY"/>
 		<set name="weight" value="8320"/>
 		<equip>
@@ -209,14 +209,14 @@
 		</for>
 	</armor>
 	<armor id="16910" name="Brigandine Gaiters of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t43_l_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="HEAVY"/>
 		<set name="weight" value="3820"/>
 		<equip>
@@ -230,14 +230,14 @@
 		</for>
 	</armor>
 	<armor id="16911" name="Brigandine Helmet of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_leather_helmet_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="630"/>
 		<equip>
@@ -251,14 +251,14 @@
 		</for>
 	</armor>
 	<armor id="16912" name="Brigandine Boots of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t43_b_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="1250"/>
 		<equip>
@@ -272,14 +272,14 @@
 		</for>
 	</armor>
 	<armor id="16913" name="Brigandine Gauntlets of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t43_g_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="630"/>
 		<equip>
@@ -293,7 +293,7 @@
 		</for>
 	</armor>
 	<weapon id="16914" name="Brigandine Shield of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.shield_brigandine_shield_i00"/>
 		<set name="price" value="0"/>
@@ -311,14 +311,14 @@
 		</for>
 	</weapon>
 	<armor id="16915" name="Armor of Nightmare of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t80_ul_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="HEAVY"/>
 		<set name="weight" value="9580"/>
 		<equip>
@@ -332,14 +332,14 @@
 		</for>
 	</armor>
 	<armor id="16916" name="Helm of Nightmare of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_leather_helmet_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="560"/>
 		<equip>
@@ -353,14 +353,14 @@
 		</for>
 	</armor>
 	<armor id="16917" name="Gauntlets of Nightmare of Fortune - Heavy Armor" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t80_g_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="550"/>
 		<equip>
@@ -374,14 +374,14 @@
 		</for>
 	</armor>
 	<armor id="16918" name="Boots of Nightmare of Fortune - Heavy Armor" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
-		<set name="dropable" value="false"/>
+		<set name="dropable" value="true"/>
 		<set name="durability" value="129600"/>
 		<set name="icon" value="icon.armor_t80_b_i00"/>
-		<set name="sellable" value="false"/>
+		<set name="sellable" value="true"/>
 		<set name="temporal" value="true"/>
-		<set name="tradeable" value="false"/>
+		<set name="tradeable" value="true"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="1110"/>
 		<equip>
@@ -395,7 +395,7 @@
 		</for>
 	</armor>
 	<weapon id="16919" name="Shield of Nightmare of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.shield_shield_of_nightmare_i00"/>
 		<set name="price" value="0"/>
@@ -413,7 +413,7 @@
 		</for>
 	</weapon>
 	<weapon id="16920" name="Sword of Miracles of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.weapon_sword_of_miracle_i01"/>
 		<set name="price" value="0"/>
@@ -436,7 +436,7 @@
 		</for>
 	</weapon>
 	<weapon id="16921" name="Wizard's Tear of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.weapon_tears_of_wizard_i01"/>
 		<set name="price" value="0"/>
@@ -459,7 +459,7 @@
 		</for>
 	</weapon>
 	<weapon id="16922" name="Homunkulus' Sword of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
 		<set name="icon" value="icon.weapon_homunkuluss_sword_i01"/>
 		<set name="price" value="0"/>
@@ -482,7 +482,7 @@
 		</for>
 	</weapon>
 	<weapon id="16923" name="Staff of Life of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.weapon_life_stick_i00"/>
 		<set name="price" value="0"/>
@@ -506,7 +506,7 @@
 		</for>
 	</weapon>
 	<weapon id="16924" name="Naga Storm of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.weapon_naga_storm_i01"/>
 		<set name="price" value="0"/>
@@ -530,7 +530,7 @@
 		</for>
 	</weapon>
 	<weapon id="16925" name="Kris of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.weapon_kris_i01"/>
 		<set name="price" value="0"/>
@@ -554,7 +554,7 @@
 		</for>
 	</weapon>
 	<weapon id="16926" name="Dark Screamer of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
 		<set name="icon" value="icon.weapon_dark_screamer_i01"/>
 		<set name="price" value="0"/>
@@ -578,7 +578,7 @@
 		</for>
 	</weapon>
 	<weapon id="16927" name="Mithril Dagger of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.weapon_mithril_dagger_i00"/>
 		<set name="price" value="0"/>
@@ -602,7 +602,7 @@
 		</for>
 	</weapon>
 	<weapon id="16928" name="Shyeed's Bow of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="atk_reuse" value="820"/>
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.weapon_shyid_bow_i01"/>
@@ -628,7 +628,7 @@
 		</for>
 	</weapon>
 	<weapon id="16929" name="Bow of Peril of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="atk_reuse" value="1500"/>
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.weapon_hazard_bow_i01"/>
@@ -654,7 +654,7 @@
 		</for>
 	</weapon>
 	<weapon id="16930" name="Eminence Bow of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="atk_reuse" value="1500"/>
 		<set name="crystal_type" value="C"/>
 		<set name="icon" value="icon.weapon_eminence_bow_i01"/>
@@ -680,7 +680,7 @@
 		</for>
 	</weapon>
 	<weapon id="16931" name="Light Crossbow of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="atk_reuse" value="1500"/>
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.weapon_cyclone_bow_i00"/>
@@ -706,7 +706,7 @@
 		</for>
 	</weapon>
 	<weapon id="16932" name="Barakiel's Axe of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.weapon_barakiel_axe_i01"/>
 		<set name="price" value="0"/>
@@ -730,7 +730,7 @@
 		</for>
 	</weapon>
 	<weapon id="16933" name="Art of Battle Axe of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.weapon_art_of_battle_axe_i01"/>
 		<set name="price" value="0"/>
@@ -754,7 +754,7 @@
 		</for>
 	</weapon>
 	<weapon id="16934" name="Yaksa Mace of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
 		<set name="icon" value="icon.weapon_yaksa_mace_i01"/>
 		<set name="price" value="0"/>
@@ -778,7 +778,7 @@
 		</for>
 	</weapon>
 	<weapon id="16935" name="Bonebreaker of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.weapon_bonebreaker_i00"/>
 		<set name="price" value="0"/>
@@ -802,7 +802,7 @@
 		</for>
 	</weapon>
 	<weapon id="16936" name="Sirra's Blade of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.weapon_sirr_blade_i01"/>
 		<set name="price" value="0"/>
@@ -825,7 +825,7 @@
 		</for>
 	</weapon>
 	<weapon id="16937" name="Damascus Sword of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.weapon_sword_of_damascus_i01"/>
 		<set name="price" value="0"/>
@@ -848,7 +848,7 @@
 		</for>
 	</weapon>
 	<weapon id="16938" name="Samurai Long Sword of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
 		<set name="icon" value="icon.weapon_samurai_longsword_i01"/>
 		<set name="price" value="0"/>
@@ -871,7 +871,7 @@
 		</for>
 	</weapon>
 	<weapon id="16939" name="Elven Long Sword of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.weapon_elven_long_sword_i00"/>
 		<set name="price" value="0"/>
@@ -894,7 +894,7 @@
 		</for>
 	</weapon>
 	<weapon id="16940" name="Sword of Ipos of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.weapon_sword_of_ipos_i01"/>
 		<set name="price" value="0"/>
@@ -917,7 +917,7 @@
 		</for>
 	</weapon>
 	<weapon id="16941" name="Guardian's Sword of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.weapon_guardians_sword_i01"/>
 		<set name="price" value="0"/>
@@ -940,7 +940,7 @@
 		</for>
 	</weapon>
 	<weapon id="16942" name="Berserker Blade of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
 		<set name="icon" value="icon.weapon_berserker_blade_i01"/>
 		<set name="price" value="0"/>
@@ -963,7 +963,7 @@
 		</for>
 	</weapon>
 	<weapon id="16943" name="Claymore of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.weapon_claymore_i00"/>
 		<set name="price" value="0"/>
@@ -986,7 +986,7 @@
 		</for>
 	</weapon>
 	<weapon id="16944" name="Sobekk's Hurricane of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.weapon_sobekk_hurricane_i01"/>
 		<set name="price" value="0"/>
@@ -1010,7 +1010,7 @@
 		</for>
 	</weapon>
 	<weapon id="16945" name="Bellion Cestus of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.weapon_bellion_cestus_i01"/>
 		<set name="price" value="0"/>
@@ -1034,7 +1034,7 @@
 		</for>
 	</weapon>
 	<weapon id="16946" name="Great Pata of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
 		<set name="icon" value="icon.weapon_great_pata_i01"/>
 		<set name="price" value="0"/>
@@ -1058,7 +1058,7 @@
 		</for>
 	</weapon>
 	<weapon id="16947" name="Scallop Jamadhr of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.weapon_scallop_jamadhr_i00"/>
 		<set name="price" value="0"/>
@@ -1082,7 +1082,7 @@
 		</for>
 	</weapon>
 	<weapon id="16948" name="Tallum Blade*Damascus of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="0"/>
@@ -1105,7 +1105,7 @@
 		</for>
 	</weapon>
 	<weapon id="16949" name="Samurai Long Sword*Samurai Long Sword of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="0"/>
@@ -1128,7 +1128,7 @@
 		</for>
 	</weapon>
 	<weapon id="16950" name="Spirit Sword*Raid Sword of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="0"/>
@@ -1151,7 +1151,7 @@
 		</for>
 	</weapon>
 	<weapon id="16951" name="Bastard Sword*Elven Sword of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>
 		<set name="price" value="0"/>
@@ -1174,7 +1174,7 @@
 		</for>
 	</weapon>
 	<weapon id="16952" name="Tiphon's Spear of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.weapon_tiphon_spear_i01"/>
 		<set name="price" value="0"/>
@@ -1198,7 +1198,7 @@
 		</for>
 	</weapon>
 	<weapon id="16953" name="Lance of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.weapon_lancia_i01"/>
 		<set name="price" value="0"/>
@@ -1222,7 +1222,7 @@
 		</for>
 	</weapon>
 	<weapon id="16954" name="Orcish Poleaxe of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
 		<set name="icon" value="icon.weapon_orcish_poleaxe_i01"/>
 		<set name="price" value="0"/>
@@ -1246,7 +1246,7 @@
 		</for>
 	</weapon>
 	<weapon id="16955" name="Glaive of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.weapon_glaive_i00"/>
 		<set name="price" value="0"/>
@@ -1270,7 +1270,7 @@
 		</for>
 	</weapon>
 	<weapon id="16956" name="Durendal of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.weapon_death_bringer_i01"/>
 		<set name="price" value="0"/>
@@ -1294,7 +1294,7 @@
 		</for>
 	</weapon>
 	<weapon id="16957" name="Dismantler of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.weapon_dismantler_i01"/>
 		<set name="price" value="0"/>
@@ -1318,7 +1318,7 @@
 		</for>
 	</weapon>
 	<weapon id="16958" name="Saber Tooth of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
 		<set name="icon" value="icon.weapon_invincible_blade_i01"/>
 		<set name="price" value="0"/>
@@ -1342,7 +1342,7 @@
 		</for>
 	</weapon>
 	<weapon id="16959" name="General's Katzbalger of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.weapon_tulwar_i00"/>
 		<set name="price" value="0"/>
@@ -1366,7 +1366,7 @@
 		</for>
 	</weapon>
 	<weapon id="16960" name="Eclair Bijou of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.weapon_greed_stinger_i01"/>
 		<set name="price" value="0"/>
@@ -1390,7 +1390,7 @@
 		</for>
 	</weapon>
 	<weapon id="16961" name="Colichemarde of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.weapon_colichemarde_i01"/>
 		<set name="price" value="0"/>
@@ -1414,7 +1414,7 @@
 		</for>
 	</weapon>
 	<weapon id="16962" name="Admiral's Estoc of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="C"/>
 		<set name="icon" value="icon.weapon_blink_slasher_i01"/>
 		<set name="price" value="0"/>
@@ -1438,7 +1438,7 @@
 		</for>
 	</weapon>
 	<weapon id="16963" name="Grand Epee of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.weapon_rapier_i00"/>
 		<set name="price" value="0"/>
@@ -1462,7 +1462,7 @@
 		</for>
 	</weapon>
 	<weapon id="16964" name="Screaming Vengeance of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.weapon_soul_shooter_i01"/>
@@ -1487,7 +1487,7 @@
 		</for>
 	</weapon>
 	<weapon id="16965" name="Hell Hound of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.weapon_hell_hound_i01"/>
@@ -1512,7 +1512,7 @@
 		</for>
 	</weapon>
 	<weapon id="16966" name="Sharpshooter of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_type" value="C"/>
 		<set name="icon" value="icon.weapon_taslam_i01"/>
@@ -1537,7 +1537,7 @@
 		</for>
 	</weapon>
 	<weapon id="16967" name="Cranequin of Fortune" add_name="90-day">
-		<set name="enchantable" value="false"/>
+		<set name="enchantable" value="true"/>
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.weapon_hunting_gun_i00"/>

@@ -1169,7 +1169,7 @@
 	</armor>
 	<armor id="17358" name="Belt of Insolence">
 		<set name="crystal_type" value="B"/>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 		<set name="crystal_count" value="0"/>
 		<set name="icon" value="icon.belt_of_oman"/>
 		<set name="type" value="LIGHT"/>
@@ -1432,7 +1432,7 @@
 			<enchant stat="pAtk" order="0x0C" value="0"/>
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
-		<set name="crystallizable" value="false"/>
+		<set name="crystallizable" value="true"/>
 	</weapon>
 	<etcitem id="17373" name="Apherus Door Key">
 		<set name="class" value="OTHER"/>
@@ -1498,8 +1498,8 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.agathion_magmeld_teleport"/>
 		<set name="type" value="NONE"/>
-		<set name="sellable" value="false"/>
-		<set name="tradeable" value="false"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
 		<set name="weight" value="150"/>
 		<equip>
 			<slot id="LEFT_BRACELET"/>
