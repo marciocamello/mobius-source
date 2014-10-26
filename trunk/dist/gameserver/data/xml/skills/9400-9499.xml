@@ -399,7 +399,6 @@
 	</skill>
 	<skill id="9459" levels="1" name="Tauti's Wrath">
 		<set name="reuseDelay" val="15000"/>
-		<set name="coolTime" val="300"/>
 		<set name="hitTime" val="1500"/>
 		<set name="icon" val="icon.weapon_tauti_one_hand_axe_i01"/>
 		<set name="target" val="TARGET_AURA"/>
@@ -408,6 +407,11 @@
 		<set name="power" val="27552"/>
 		<set name="elements" val="unholy"/>
 		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="trait" val="KNOCKDOWN"/>
+		<set name="activateRate" val="90"/>
+		<for>
+			<effect name="KnockDown" time="3" val="0" stackOrder="1" stackType="KnockDown"/>
+		</for>		
 	</skill>
 	<skill id="9460" levels="1" name="Tauti's Authority">
 		<set name="reuseDelay" val="15000"/>

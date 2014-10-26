@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <list>
 	<skill id="10300" levels="3" name="Last Attack">
-		<!-- Done by Rest Zone Team 2014 -->
 		<table name="#targetHp">20</table>
 		<table name="#magicLevel">90 95 99</table>
 		<table name="#power">24004 27526 30343</table>

@@ -836,7 +836,7 @@
 		<table name="#magicLevel">43 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85 85</table>
 		<table name="#power">201 241 281 314 339 361 382 390 398 405 413 418 422 426 430 434 468</table>
 		<set name="magicType" val="MAGIC"/>
-		<set name="icon" val="icon.skill4051"/>
+		<set name="icon" val="icon.skill0000"/>
 		<set name="power" val="#power"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="castRange" val="600"/>
@@ -846,9 +846,10 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="HEAL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="isHideUseMessage" val="true"/>
+		<set name="isHideUseMessage" val="false"/>
 		<set name="castRange" val="1000"/>
-		<set name="hitTime" val="500"/>
+		<set name="hitTime" val="300"/>
+		<set name="delayedEffect" val="1125"/>		
 	</skill>
 	<skill id="4052" levels="15" name="Cubic Poison">
 		<table name="#abnormal_lv">5 6 7 7 7 8</table>

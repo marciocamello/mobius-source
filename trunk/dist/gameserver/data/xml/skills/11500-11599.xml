@@ -1867,6 +1867,8 @@
 		<set name="skillRadius" val="600"/>
 		<set name="skillType" val="CHAIN_HEAL"/>
 		<set name="target" val="TARGET_ONE"/>
+		<set name="target" val="TARGET_CLAN"/>	
+		<set name="target" val="TARGET_SELF"/>		
 		<set name="relationSkillsId" val="1229;1488;58;1553" />
 		<enchant1 name="mpConsume" val="#ench1mpConsume" />
 	</skill>

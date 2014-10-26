@@ -112,10 +112,7 @@
 		</for>
 	</skill>
 	<skill id="11174" levels="3" name="Shadow Snare Zone">
-		<table name="#mpConsume2">123 127 132 136 140 144</table>
-		<table name="#magicLevel">89 91 93 95 97 99</table>
-		<set name="mpConsume2" val="#mpConsume2"/>
-		<set name="nextActionAttack" val="true"/>
+		<set name="isDebuff" val="true"/>
 		<set name="target" val="TARGET_AREA"/>
 		<set name="reuseDelay" val="45000"/>
 		<set name="hitTime" val="1500"/>
@@ -124,19 +121,19 @@
 		<set name="effectRange" val="900"/>
 		<set name="saveVs" val="CON"/>
 		<set name="skillType" val="DEBUFF"/>
-		<set name="magicLvl" val="#magicLevel"/>
+		<set name="magicLvl" val="94"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
-			<effect count="1" name="TargetToMe" time="1" val="0"/>
+			<effect count="3" name="TargetToMe" time="3" val="0"/>
 		</for>
 	</skill>
 	<skill id="11175" levels="3" name="Shadow Snare Zone">
 		<table name="#mpConsume2">123 127 132 136 140 144</table>
 		<table name="#magicLevel">89 91 93 95 97 99</table>
 		<set name="mpConsume2" val="#mpConsume2"/>
-		<set name="nextActionAttack" val="true"/>
+		<set name="isDebuff" val="true"/>
 		<set name="target" val="TARGET_AREA"/>
-		<set name="reuseDelay" val="45000"/>
+		<set name="reuseDelay" val="2000"/>
 		<set name="hitTime" val="1500"/>
 		<set name="coolTime" val="700"/>
 		<set name="castRange" val="600"/>
@@ -146,7 +143,7 @@
 		<set name="magicLvl" val="#magicLevel"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
-			<effect count="1" name="TargetToMe" time="1" val="0"/>
+			<effect count="1" name="TargetToMe" time="3" val="0"/>
 		</for>
 	</skill>
 	<skill id="11179" levels="1" name="Yoke Status">
