@@ -808,7 +808,7 @@
 		<set name="power" val="#power"/>
 		<set name="powerPvP" val="#powerPvP"/>
 		<set name="save" val="4"/>
-		<set name="activateRate" val="50"/>
+		<set name="activateRate" val="100"/>
 		<set name="flyType" val="THROW_HORIZONTAL"/>
 		<set name="flyRadius" val="#flyradius"/>
 		<set name="target" val="TARGET_AURA"/>
@@ -1038,7 +1038,7 @@
 		<set name="powerPvP" val="#powerPvP"/>
 		<set name="target" val="TARGET_AREA"/>
 		<set name="skillRadius" val="200"/>
-		<set name="skillType" val="EMDAM"/>
+		<set name="skillType" val="MDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="overHit" val="true"/>
 		<enchant1 levels="10" name="Cost">
@@ -1637,7 +1637,7 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant5>
 		<for>
-			<effect count="15" name="Fear" stackOrder="-1" stackType="Fear" time="1" val="0">
+			<effect count="10" name="Fear" stackOrder="-1" stackType="Fear" time="1" val="0" cancelOnDebuff="false">
 				<mul order="0x30" stat="runSpd" val="#spd"/>
 				<mul order="0x30" stat="pDef" val="#pdef"/>
 				<mul order="0x30" stat="mDef" val="#mdef"/>
@@ -1687,7 +1687,7 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant5>
 		<for>
-			<effect count="15" name="Fear" stackOrder="-1" stackType="Fear" time="1" val="0">
+			<effect count="10" name="Fear" stackOrder="-1" stackType="Fear" time="1" val="0" cancelOnDebuff="true">
 				<mul order="0x30" stat="runSpd" val="#spd"/>
 				<mul order="0x30" stat="pDef" val="#pdef"/>
 				<mul order="0x30" stat="mDef" val="#mdef"/>
@@ -1701,8 +1701,10 @@
 		<table name="#magicLevel">85 87 90 93 96 99</table>
 		<table name="#reuseDelay">15000</table>
 		<table name="#powerPvP">0</table>
-		<table name="#radius">250</table>
-		<table name="#flyradius">-250</table>
+		<table name="#radius">300</table>
+		<table name="#flyradius">-300</table>
+		<table name="#flycourse">180</table>
+		<set name="flyCourse" val="#flycourse"/>		
 		<set name="reuseDelay" val="15000"/>
 		<set name="hitTime" val="800"/>
 		<set name="coolTime" val="200"/>
@@ -1753,21 +1755,19 @@
 		<table name="#mpConsume2">191 202 214</table>
 		<table name="#magicLevel">91 94 97</table>
 		<set name="lifeTime" val="5"/>
-		<set name="hitTime" val="1000"/>
-		<set name="lvlDepend" val="1"/>
 		<set name="isDebuff" val="true"/>
+		<set name="isOffensive" val="true"/>		
 		<set name="magicType" val="MAGIC"/>
 		<set name="magicLvl" val="#magicLevel"/>
 		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="reuseDelay" val="15000"/>
-		<set name="saveVs" val="CON"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="SUMMON"/>
 		<set name="summonType" val="SYMBOL"/>
 		<set name="npcId" val="19115"/>
-		<set name="addSkills" val="11059;1"/>
+		<set name="addSkills" val="11174;3"/>
 		<set name="castRange" val="900"/>
 		<set name="relationSkillsId" val="1446;"/>
 		<enchant1 levels="10" name="Cost"/>
@@ -1775,7 +1775,6 @@
 	<skill id="11059" levels="1" name="Shadow Snare Zone">
 		<set name="target" val="TARGET_AURA"/>
 		<set name="skillRadius" val="350"/>
-		<set name="saveVs" val="CON"/>
 		<set name="isDebuff" val="true"/>
 		<set name="isOffensive" val="true"/>
 		<set name="reuseDelay" val="2000"/>
@@ -1829,7 +1828,7 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant5>
 		<for>
-			<effect name="Buff" time="#time" val="0" stackOrder="1" stackType="speed_up">
+			<effect name="Buff" time="#time" val="0" stackOrder="1" stackType="speed_up" cancelOnAttacked="true">
 				<add order="0x40" stat="runSpd" val="#runSpd"/>
 				<mul order="0x30" stat="pDef" val="#pdef"/>
 				<mul order="0x30" stat="mDef" val="#mdef"/>
@@ -1930,7 +1929,7 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant2>
 		<for>
-			<effect count="15" name="Fear" stackOrder="-1" stackType="Fear" time="1" val="0">
+			<effect count="3" name="Fear" stackOrder="-1" stackType="Fear" time="1" val="0" cancelOnAttacked="true">
 				<mul order="0x30" stat="runSpd" val="#runspd"/>
 			</effect>
 		</for>
@@ -1958,7 +1957,7 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant2>
 		<for>
-			<effect count="15" name="Fear" stackOrder="-1" stackType="Fear" time="1" val="0">
+			<effect count="3" name="Fear" stackOrder="-1" stackType="Fear" time="1" val="0" cancelOnAttacked="true">
 				<mul order="0x30" stat="runSpd" val="#runspd"/>
 			</effect>
 		</for>
@@ -2331,7 +2330,7 @@
 		<table name="#mpConsume2">56 58 62 66 70 74</table>
 		<table name="#magicLevel">85 87 90 93 96 99</table>
 		<table name="#flycourse">180</table>
-		<table name="#flyradius">500</table>
+		<table name="#flyradius">300</table>
 		<table name="#radius">300</table>
 		<set name="flyType" val="DUMMY"/>
 		<set name="flyCourse" val="#flycourse"/>
@@ -2403,10 +2402,31 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<enchant1 levels="10" name="Cost"/>
 		<for>
-			<effect name="Debuff" time="40" val="0" stackOrder="1" stackType="reuse_delay_up">
+			<effect name="Debuff" val="0" stackOrder="-1" stackType="reuse_delay_up">
 				<mul order="0x30" stat="mReuse" val="3"/>
 				<mul order="0x30" stat="pReuse" val="3"/>
 			</effect>
 		</for>
 	</skill>
+	<skill id="11096" levels="1" name="Damaged Area">
+		<table name="#power">130 140 146</table>
+		<table name="#magicLevel">85 87 88</table>
+		<table name="#mpConsume2">50 51 52</table>
+		<set name="reuseDelay" val="2000"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="flyRadius" val="-280"/>
+		<set name="flyType" val="THROW_HORIZONTAL"/>
+		<set name="isDebuff" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="power" val="#power"/>
+		<set name="skillRadius" val="350"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="saveVs" val="CON"/>
+		<set name="target" val="TARGET_AURA"/>
+		<for>
+			<effect count="5" name="TargetToMe" time="1" val="0" chance="100"/>
+		</for>
+	</skill>	
 </list>

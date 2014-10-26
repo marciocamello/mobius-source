@@ -1,16 +1,23 @@
 <?xml version="1.0"?>
 <list>
-	<skill id="90001" levels="1" name="Mana potion">
-		<set name="icon" val=""/>
-		<set name="displayId" val="2005"/>
-		<set name="itemConsumeId" val="728"/>
-		<set name="itemConsumeCount" val="1"/>
-		<set name="isHandler" val="true"/>
-		<set name="target" val="TARGET_SELF"/>
+	<skill id="90001" levels="20" name="Cubic Mana Restore">
+		<table name="#effectPoint">408 467 523 566 597 624 646 653 660 667 674 677 679 682 685 687 700 750 780 801</table>
+		<table name="#magicLevel">43 49 55 60 64 68 72 74 76 78 80 81 82 83 84 85 85</table>
+		<table name="#power">201 241 281 314 339 361 382 390 398 405 413 418 422 426 430 434 468</table>
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.skill4051"/>
+		<set name="power" val="#power"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="castRange" val="600"/>
+		<set name="effectPoint" val="#effectPoint"/>
+		<set name="useSS" val="false"/>
+		<set name="staticPower" val="true"/>
+		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="MANAHEAL"/>
-		<set name="power" val="2000"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="altUse" val="true"/>
+		<set name="isHideUseMessage" val="false"/>
+		<set name="castRange" val="1000"/>
+		<set name="hitTime" val="300"/>
 	</skill>
 	<skill id="90002" levels="1" name="Hat STR">
 		<set name="magicLevel" val="1"/>

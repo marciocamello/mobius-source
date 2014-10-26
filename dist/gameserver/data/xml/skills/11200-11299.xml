@@ -1235,11 +1235,11 @@
 		<set name="isOffensive" val="false"/>
 		<set name="effectPoint" val="408"/>
 		<set name="castRange" val="1000"/>
-		<set name="hitTime" val="3000"/>
+		<set name="hitTime" val="300"/>
 		<set name="useSS" val="false"/>
 		<set name="isHideUseMessage" val="true"/>
 		<for>
-			<effect count="1" name="DispelEffects" time="0" val="0">
+			<effect count="1" name="DispelEffects" time="6" val="0">
 				<def name="dispelType" val="cleanse"/>
 				<def name="cancelRate" val="100"/>
 				<def name="negateCount" val="1"/>
@@ -1255,11 +1255,11 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isOffensive" val="true"/>
 		<set name="castRange" val="1000"/>
-		<set name="hitTime" val="3000"/>
+		<set name="hitTime" val="300"/>
 		<set name="useSS" val="false"/>
 		<set name="isHideUseMessage" val="true"/>
 		<for>
-			<effect count="1" name="DispelEffects" time="0" val="0">
+			<effect count="1" name="DispelEffects" time="6" val="0">
 				<def name="dispelType" val="cancellation"/>
 				<def name="cancelRate" val="100"/>
 				<def name="negateCount" val="5"/>

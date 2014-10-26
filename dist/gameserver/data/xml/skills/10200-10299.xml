@@ -831,7 +831,7 @@
 		<table name="#magicLevel">87 89 91 93 95 97 99</table>
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
-		<table name="#activateRate">50</table>
+		<table name="#activateRate">80</table>
 		<set name="relationSkillsId" val="995;"/>
 		<set name="isSkillTimePermanent" val="true"/>
 		<set name="magicLevel" val="#magicLevel"/>
@@ -846,9 +846,11 @@
 		<set name="element" val="#element"/>
 		<set name="criticalRate" val="10"/>
 		<set name="skillType" val="PDAM"/>
-		<set name="target" val="TARGET_ONE"/>
+		<set name="target" val="TARGET_MULTIFACE"/>
 		<set name="max_charges" val="5"/>
 		<set name="chargeBoost" val="true"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="499"/>		
 		<cond msgId="113" addName="1">
 			<not>
 				<using kind="Bow,Crossbow"/>
@@ -908,8 +910,6 @@
 				<mul order="0x30" stat="runSpd" val="0.7"/>
 			</effect>
 		</for>
-		<set name="castRange" val="600"/>
-		<set name="hitTime" val="499"/>
 	</skill>
 	<skill id="10270" levels="1" name="Second Wind">
 		<table name="#time">120</table>
