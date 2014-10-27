@@ -1,5 +1,68 @@
 <?xml version="1.0"?>
 <list>
+	<skill id="11101" levels="1" name="Elemental Destruction: Fire">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="-1" stackType="DamageElemental" time="10" val="0"/>
+		</for>
+	</skill>
+	<skill id="11102" levels="1" name="Elemental Destruction: Water">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="-1" stackType="DamageElemental" time="10" val="0"/>
+		</for>
+	</skill>
+	<skill id="11103" levels="1" name="Elemental Destruction: Wind">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="-1" stackType="DamageElemental" time="10" val="0"/>
+		</for>
+	</skill>
+	<skill id="11104" levels="1" name="Elemental Destruction: Earth">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="-1" stackType="DamageElemental" time="10" val="0"/>
+		</for>
+	</skill>
+	<skill id="11105" levels="1" name="Elemental Destruction: 4 Attributes">
+		<table name="#powerPvP">0</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#power">392 404 415 426 437 448 460 471</table>
+		<set name="magicType" val="MAGIC"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="relationSkillsId" val="1451;1235;1453;1456;1439;1159;1230;1513;1239"/>
+		<set name="power" val="#power"/>
+		<set name="powerPvP" val="#powerPvP"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="overHit" val="true"/>
+		<set name="reuseDelay" val="6699"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="6080"/>
+		<enchant1 levels="10" name="Cost">
+			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
+		</enchant1>
+		<enchant2 name="Duel">
+			<table name="#powerPvP">524 530 536 542 548 554 561 568 573 580</table>
+			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
+		</enchant2>
+		<enchant3 levels="10" name="Recycle" enchRoute="9">
+			<table name="#power">524 530 536 542 548 554 561 568 573 580</table>
+		</enchant3>
+	</skill>
 	<skill id="11106" levels="4" name="Elemental Burst">
 		<table name="#power">470 511 537 565</table>
 		<table name="#magicLevel">85 90 95 99</table>
@@ -13,8 +76,92 @@
 		<set name="power" val="#power"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="EMDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="11107" levels="4" name="Elemental Burst: Fire">
+		<table name="#power">470 511 537 565</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<set name="icon" val="icon.skill10317"/>
+		<set name="castRange" val="1100"/>
+		<set name="reuseDelay" val="7000"/>
+		<set name="magicLvl" val="#magicLevel"/>
+		<set name="mpConsume" val="171"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="6000"/>
+		<set name="power" val="#power"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="Fire"/>
 		<set name="skillType" val="MDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="negateSkill" val="11024"/>
+		<cond msgId="113" addName="1">
+			<target hasBuffId="11101"/>
+		</cond>
+	</skill>
+	<skill id="11108" levels="4" name="Elemental Burst: Water">
+		<table name="#power">470 511 537 565</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<set name="icon" val="icon.skill10317"/>
+		<set name="castRange" val="1100"/>
+		<set name="reuseDelay" val="7000"/>
+		<set name="magicLvl" val="#magicLevel"/>
+		<set name="mpConsume" val="171"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="6000"/>
+		<set name="power" val="#power"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="Water"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="negateSkill" val="11025"/>
+		<cond msgId="113" addName="1">
+			<target hasBuffId="11102"/>
+		</cond>
+	</skill>
+	<skill id="11109" levels="4" name="Elemental Burst: Wind">
+		<table name="#power">470 511 537 565</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<set name="icon" val="icon.skill10317"/>
+		<set name="castRange" val="1100"/>
+		<set name="reuseDelay" val="7000"/>
+		<set name="magicLvl" val="#magicLevel"/>
+		<set name="mpConsume" val="171"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="6000"/>
+		<set name="power" val="#power"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="Wind"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="negateSkill" val="11026"/>
+		<cond msgId="113" addName="1">
+			<target hasBuffId="11103"/>
+		</cond>
+	</skill>
+	<skill id="11110" levels="4" name="Elemental Burst: Earth">
+		<table name="#power">470 511 537 565</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<set name="icon" val="icon.skill10317"/>
+		<set name="castRange" val="1100"/>
+		<set name="reuseDelay" val="7000"/>
+		<set name="magicLvl" val="#magicLevel"/>
+		<set name="mpConsume" val="171"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="6000"/>
+		<set name="power" val="#power"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="Earth"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="negateSkill" val="11027"/>
+		<cond msgId="113" addName="1">
+			<target hasBuffId="11104"/>
+		</cond>
 	</skill>
 	<skill id="11124" levels="4" name="Superior Wizardry">
 		<table name="#Tab-mAtk">1.05 1.06 1.07 1.10</table>
