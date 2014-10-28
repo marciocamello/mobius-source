@@ -769,7 +769,7 @@
 	</npc>
 	<npc id="32915" name="Wisp" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="TalkingIsland.SwampSpirit"/>
+		<set name="ai_type" value="Wispes"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -805,9 +805,6 @@
 		<ai_params>
 			<set name="TargetEnabled" value="false"/>
 		</ai_params>
-		<skills>
-			<skill id="4416" level="2"/>
-		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
@@ -819,7 +816,7 @@
 	</npc>
 	<npc id="32916" name="Large Wisp" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="TalkingIsland.SwampSpirit"/>
+		<set name="ai_type" value="Wispes"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -855,9 +852,6 @@
 		<ai_params>
 			<set name="TargetEnabled" value="false"/>
 		</ai_params>
-		<skills>
-			<skill id="4416" level="2"/>
-		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
@@ -869,7 +863,7 @@
 	</npc>
 	<npc id="32917" name="Red Wisp" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Wispes"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -905,9 +899,6 @@
 		<ai_params>
 			<set name="TargetEnabled" value="false"/>
 		</ai_params>
-		<skills>
-			<skill id="4416" level="2"/>
-		</skills>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
