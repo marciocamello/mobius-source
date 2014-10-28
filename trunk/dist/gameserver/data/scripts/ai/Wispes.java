@@ -59,18 +59,16 @@ public final class Wispes extends DefaultAI
 					{
 						npc.broadcastPacket(new MagicSkillUse(npc, player, 14064, 1, 0, 0));
 						npc.callSkill(SkillTable.getInstance().getInfo(14064, 1), target, true);
+						target.clear();
+						npc.deleteMe();
 					}
 					else if (npc.getId() == 32916)
 					{
 						npc.broadcastPacket(new MagicSkillUse(npc, player, 14065, 1, 0, 0));
 						npc.callSkill(SkillTable.getInstance().getInfo(14065, 1), target, true);
+						target.clear();
+						npc.deleteMe();
 					}
-				}
-				
-				if (target.size() > 0)
-				{
-					target.clear();
-					npc.deleteMe();
 				}
 			}
 		}
