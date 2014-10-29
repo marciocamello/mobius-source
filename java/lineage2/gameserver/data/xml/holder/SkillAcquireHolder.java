@@ -725,7 +725,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 			
 			if (temp == null)
 			{
-				if (!(((classID >= 58) && (classID <= 87)) || ((classID >= 119) && (classID <= 122)) || (classID == 137) || (classID == 138)))
+				if (!(((classID >= 58) && (classID <= 87)) || ((classID >= 119) && (classID <= 122)) || (classID == 137) || (classID == 138) || (classID == 147)))
 				{
 					info("Not found NORMAL skill learn for class " + classID);
 				}
