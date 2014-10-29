@@ -53,7 +53,7 @@ public final class LevelBonusParser extends AbstractFileParser<LevelBonusHolder>
 	@Override
 	public File getXMLFile()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/xml/pc_parameters/lvl_bonus_data.xml");
+		return new File(Config.DATAPACK_ROOT, "data/xml/chars/LevelBonusData.xml");
 	}
 	
 	/**
@@ -63,7 +63,7 @@ public final class LevelBonusParser extends AbstractFileParser<LevelBonusHolder>
 	@Override
 	public String getDTDFileName()
 	{
-		return "lvl_bonus_data.dtd";
+		return "LevelBonusData.dtd";
 	}
 	
 	/**
