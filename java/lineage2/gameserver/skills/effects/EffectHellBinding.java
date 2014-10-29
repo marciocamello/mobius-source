@@ -37,14 +37,50 @@ public final class EffectHellBinding extends Effect
 		_ChainedAirSkills.put(140, 10499);
 		_ChainedAirSkills.put(141, 10749);
 		_ChainedAirSkills.put(142, 10999);
+		_ChainedAirSkills.put(143, 11247);
 		_ChainedAirSkills.put(143, 11249);
 		_ChainedAirSkills.put(144, 11749);
 		_ChainedAirSkills.put(145, 11499);
 		_ChainedAirSkills.put(146, 11999);
+		_ChainedAirSkills.put(148, 10249);
+		_ChainedAirSkills.put(149, 10249);
+		_ChainedAirSkills.put(150, 10249);
+		_ChainedAirSkills.put(151, 10249);
+		_ChainedAirSkills.put(152, 10499);
+		_ChainedAirSkills.put(153, 10499);
+		_ChainedAirSkills.put(154, 10499);
+		_ChainedAirSkills.put(155, 10499);
+		_ChainedAirSkills.put(156, 10499);
+		_ChainedAirSkills.put(157, 10499);
+		_ChainedAirSkills.put(158, 10749);
+		_ChainedAirSkills.put(159, 10749);
+		_ChainedAirSkills.put(160, 10749);
+		_ChainedAirSkills.put(161, 10749);
+		_ChainedAirSkills.put(162, 10999);
+		_ChainedAirSkills.put(163, 10999);
+		_ChainedAirSkills.put(164, 10999);
+		_ChainedAirSkills.put(165, 10999);
+		_ChainedAirSkills.put(166, 11247);
+		_ChainedAirSkills.put(167, 11247);
+		_ChainedAirSkills.put(168, 11247);
+		_ChainedAirSkills.put(169, 11247);
+		_ChainedAirSkills.put(170, 11247);
+		_ChainedAirSkills.put(171, 11749);
+		_ChainedAirSkills.put(172, 11749);
+		_ChainedAirSkills.put(173, 11749);
+		_ChainedAirSkills.put(174, 11749);
+		_ChainedAirSkills.put(175, 11749);
+		_ChainedAirSkills.put(176, 11499);
+		_ChainedAirSkills.put(177, 11499);
+		_ChainedAirSkills.put(178, 11499);
+		_ChainedAirSkills.put(179, 11999);
+		_ChainedAirSkills.put(180, 11999);
+		_ChainedAirSkills.put(181, 11999);
 		_ChainedTemporalReplace.put(10249, 10008); // FIXME: Sometime causes: java.lang.ArrayIndexOutOfBoundsException
 		_ChainedTemporalReplace.put(10499, 10258); // FIXME: Sometime causes: java.lang.ArrayIndexOutOfBoundsException
 		_ChainedTemporalReplace.put(10749, 10508); // FIXME: Sometime causes: java.lang.ArrayIndexOutOfBoundsException
 		_ChainedTemporalReplace.put(10999, 10760); // FIXME: Sometime causes: java.lang.ArrayIndexOutOfBoundsException
+		_ChainedTemporalReplace.put(11247, 11017); // FIXME: Sometime causes: java.lang.ArrayIndexOutOfBoundsException
 		_ChainedTemporalReplace.put(11249, 11017); // FIXME: Sometime causes: java.lang.ArrayIndexOutOfBoundsException
 		_ChainedTemporalReplace.put(11749, 11509); // FIXME: Sometime causes: java.lang.ArrayIndexOutOfBoundsException
 		_ChainedTemporalReplace.put(11499, 11263); // FIXME: Sometime causes: java.lang.ArrayIndexOutOfBoundsException
