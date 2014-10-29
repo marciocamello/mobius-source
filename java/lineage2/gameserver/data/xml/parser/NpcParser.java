@@ -73,7 +73,7 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 	@Override
 	public File getXMLDir()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/xml/npc/");
+		return new File(Config.DATAPACK_ROOT, "data/xml/npcs/");
 	}
 	
 	/**
