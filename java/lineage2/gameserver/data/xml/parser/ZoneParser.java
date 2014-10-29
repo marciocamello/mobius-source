@@ -64,7 +64,7 @@ public class ZoneParser extends AbstractDirParser<ZoneHolder>
 	@Override
 	public File getXMLDir()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/xml/zone/");
+		return new File(Config.DATAPACK_ROOT, "data/xml/zones/");
 	}
 	
 	/**
