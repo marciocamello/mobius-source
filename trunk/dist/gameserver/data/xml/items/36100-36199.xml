@@ -457,7 +457,7 @@
 			<skill id="13411" level="1"/>
 		</skills>
 	</armor>	
-		<armor id="36169" name="Gustav's Belt">
+	<armor id="36169" name="Gustav's Belt">
 		<set name="crystal_type" value="R"/>
 		<set name="dropable" value="true"/>
 		<set name="sellable" value="true"/>

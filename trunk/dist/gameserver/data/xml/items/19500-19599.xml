@@ -302,6 +302,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 		<set name="type" value="NONE"/>
+		<set name="ex_type" value="SHIELD"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="82"/>
 		<for>
@@ -608,6 +609,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 		<set name="type" value="NONE"/>
+		<set name="ex_type" value="SHIELD"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="199"/>
 		<for>
@@ -914,6 +916,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 		<set name="type" value="NONE"/>
+		<set name="ex_type" value="SHIELD"/>
 		<set name="crystal_type" value="R95"/>
 		<set name="crystal_count" value="429"/>
 		<for>
@@ -1220,6 +1223,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 		<set name="type" value="NONE"/>
+		<set name="ex_type" value="SHIELD"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="945"/>
 		<for>
@@ -1537,6 +1541,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 		<set name="type" value="NONE"/>
+		<set name="ex_type" value="SHIELD"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="5"/>
 		<for>

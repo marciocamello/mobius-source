@@ -483,6 +483,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 		<set name="type" value="NONE"/>
+		<set name="ex_type" value="SHIELD"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="248"/>
 		<set name="isBlessed" value="true"/>
@@ -1235,6 +1236,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 		<set name="type" value="NONE"/>
+		<set name="ex_type" value="SHIELD"/>
 		<set name="crystal_type" value="R95"/>
 		<set name="crystal_count" value="0"/>
 		<set name="isBlessed" value="true"/>
@@ -1802,6 +1804,7 @@
 		<set name="soulshots" value="1"/>
 		<set name="spiritshots" value="1"/>
 		<set name="isBlessed" value="true"/>
+		<enchant4_skill id="13304" level="3"/>		
 		<for>
 			<add stat="pAtk" order="0x10" value="587"/>
 			<add stat="mAtk" order="0x10" value="371"/>
@@ -1995,6 +1998,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 		<set name="type" value="NONE"/>
+		<set name="ex_type" value="SHIELD"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="1182"/>
 		<set name="isBlessed" value="true"/>
