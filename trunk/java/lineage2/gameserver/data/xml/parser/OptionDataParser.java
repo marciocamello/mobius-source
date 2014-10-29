@@ -55,7 +55,7 @@ public final class OptionDataParser extends StatParser<OptionDataHolder>
 	@Override
 	public File getXMLDir()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/xml/option_data");
+		return new File(Config.DATAPACK_ROOT, "data/xml/options");
 	}
 	
 	/**
@@ -76,7 +76,7 @@ public final class OptionDataParser extends StatParser<OptionDataHolder>
 	@Override
 	public String getDTDFileName()
 	{
-		return "option_data.dtd";
+		return "options.dtd";
 	}
 	
 	/**
