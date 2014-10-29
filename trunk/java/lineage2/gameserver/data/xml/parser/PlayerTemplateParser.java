@@ -68,7 +68,7 @@ public final class PlayerTemplateParser extends AbstractDirParser<PlayerTemplate
 	@Override
 	public File getXMLDir()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/xml/pc_parameters/template_data/");
+		return new File(Config.DATAPACK_ROOT, "data/xml/chars/playerTemplates/");
 	}
 	
 	/**
@@ -89,7 +89,7 @@ public final class PlayerTemplateParser extends AbstractDirParser<PlayerTemplate
 	@Override
 	public String getDTDFileName()
 	{
-		return "template_data.dtd";
+		return "playerTemplates.dtd";
 	}
 	
 	/**

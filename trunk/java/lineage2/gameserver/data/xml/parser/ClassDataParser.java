@@ -42,7 +42,7 @@ public class ClassDataParser extends AbstractDirParser<ClassDataHolder>
 	@Override
 	public File getXMLDir()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/xml/pc_parameters/class_data/");
+		return new File(Config.DATAPACK_ROOT, "data/xml/chars/baseStats/");
 	}
 	
 	@Override
@@ -54,7 +54,7 @@ public class ClassDataParser extends AbstractDirParser<ClassDataHolder>
 	@Override
 	public String getDTDFileName()
 	{
-		return "class_data.dtd";
+		return "baseStats.dtd";
 	}
 	
 	@Override
