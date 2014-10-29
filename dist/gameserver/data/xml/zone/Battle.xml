@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "zone.dtd">
 <list>
-	<zone name="[olympiad_arena_147]" type="'Battle">
+	<zone name="[olympiad_arena_147]" type="Battle">
 		<polygon>
 			<coords loc="-86216 -251304"/>
 			<coords loc="-86152 -254280"/>
@@ -9,7 +9,7 @@
 			<coords loc="-89880 -251336"/>
 		</polygon>
 	</zone>
-	<zone name="[olympiad_arena_148]" type="'Battle">
+	<zone name="[olympiad_arena_148]" type="Battle">
 		<polygon>
 			<coords loc="-73816 -253880"/>
 			<coords loc="-77112 -253880"/>
@@ -17,7 +17,7 @@
 			<coords loc="-73816 -251032"/>
 		</polygon>
 	</zone>
-	<zone name="[olympiad_arena_149]" type="'Battle">
+	<zone name="[olympiad_arena_149]" type="Battle">
 		<polygon>
 			<coords loc="-86504 -240488"/>
 			<coords loc="-89640 -240488"/>
@@ -25,7 +25,7 @@
 			<coords loc="-86504 -238232"/>
 		</polygon>
 	</zone>
-	<zone name="[olympiad_arena_150]" type="'Battle">
+	<zone name="[olympiad_arena_150]" type="Battle">
 		<polygon>
 			<coords loc="-77048 -240744"/>
 			<coords loc="-73848 -240744"/>
@@ -33,7 +33,7 @@
 			<coords loc="-76984 -237640"/>
 		</polygon>
 	</zone>
-	<zone name="[dion_monster_pvp]" type="'Battle">
+	<zone name="[dion_monster_pvp]" type="Battle">
 		<set name="index" val="1"/>
 		<set name="entering_message_no" val="283"/>
 		<set name="leaving_message_no" val="284"/>
@@ -44,7 +44,7 @@
 			<coords loc="11941 184010 -3596 -3396"/>
 		</polygon>
 	</zone>
-	<zone name="[gludin_pvp]" type="'Battle">
+	<zone name="[gludin_pvp]" type="Battle">
 		<set name="index" val="2"/>
 		<set name="entering_message_no" val="283"/>
 		<set name="leaving_message_no" val="284"/>
@@ -55,7 +55,7 @@
 			<coords loc="-88408 142708 -3752 -3352"/>
 		</polygon>
 	</zone>
-	<zone name="[giran_pvp_battle]" type="'Battle">
+	<zone name="[giran_pvp_battle]" type="Battle">
 		<set name="index" val="3"/>
 		<set name="entering_message_no" val="283"/>
 		<set name="leaving_message_no" val="284"/>
@@ -66,7 +66,7 @@
 			<coords loc="72495 143258 -3850 -3350"/>
 		</polygon>
 	</zone>
-	<zone name="[colosseum_battle]" type="'Battle">
+	<zone name="[colosseum_battle]" type="Battle">
 		<set name="index" val="4"/>
 		<set name="entering_message_no" val="283"/>
 		<set name="leaving_message_no" val="284"/>
@@ -104,7 +104,7 @@
 			<coords loc="148040 47000 -3508 -3308"/>
 		</polygon>
 	</zone>
-	<zone name="[colosseum_ctf_red_base]" type="'Battle">
+	<zone name="[colosseum_ctf_red_base]" type="Battle">
 		<set name="index" val="5"/>
 		<polygon>
 			<coords loc="148616 47672 -3508 -3308"/>
@@ -113,7 +113,7 @@
 			<coords loc="148280 47288 -3508 -3308"/>
 		</polygon>
 	</zone>
-	<zone name="[colosseum_ctf_blue_base]" type="'Battle">
+	<zone name="[colosseum_ctf_blue_base]" type="Battle">
 		<set name="index" val="6"/>
 		<polygon>
 			<coords loc="150376 45896 -3508 -3308"/>
@@ -122,7 +122,7 @@
 			<coords loc="150664 46248 -3508 -3308"/>
 		</polygon>
 	</zone>
-	<zone name="[tvt_arena1]" type="'Battle">
+	<zone name="[tvt_arena1]" type="Battle">
 		<set name="index" val="9000"/>
 		<set name="entering_message_no" val="283"/>
 		<set name="leaving_message_no" val="284"/>
@@ -144,7 +144,7 @@
 			<coords loc="73890 142656 -3778 0"/>
 		</restart_point>
 	</zone>
-	<zone name="[tvt_arena2]" type="'Battle">
+	<zone name="[tvt_arena2]" type="Battle">
 		<set name="index" val="9001"/>
 		<set name="entering_message_no" val="283"/>
 		<set name="leaving_message_no" val="284"/>
@@ -166,7 +166,7 @@
 			<coords loc="73890 142656 -3778 0"/>
 		</restart_point>
 	</zone>
-	<zone name="[tvt_arena3]" type="'Battle">
+	<zone name="[tvt_arena3]" type="Battle">
 		<set name="index" val="9002"/>
 		<set name="entering_message_no" val="283"/>
 		<set name="leaving_message_no" val="284"/>
@@ -189,7 +189,7 @@
 			<coords loc="73890 142656 -3778 0"/>
 		</restart_point>
 	</zone>
-	<zone name="[UnderGroundPvP1]" type="'Battle">
+	<zone name="[UnderGroundPvP1]" type="Battle">
 		<set name="index" val="10"/>
 		<set name="entering_message_no" val="283"/>
 		<set name="leaving_message_no" val="284"/>
@@ -257,7 +257,7 @@
 			<coords loc="-82199 -49470 -10352 -10252"/>
 		</PKrestart_point>
 	</zone>
-	<zone name="[block_checker_1]" type="'Battle">
+	<zone name="[block_checker_1]" type="Battle">
 		<polygon>
 			<coords loc="-57365 -62900 -2467 -2167"/>
 			<coords loc="-56393 -62902 -2467 -2167"/>
@@ -265,7 +265,7 @@
 			<coords loc="-57369 -61930 -2467 -2167"/>
 		</polygon>
 	</zone>
-	<zone name="[block_checker_2]" type="'Battle">
+	<zone name="[block_checker_2]" type="Battle">
 		<polygon>
 			<coords loc="-58537 -62902 -2469 -2169"/>
 			<coords loc="-57565 -62903 -2469 -2169"/>
@@ -273,7 +273,7 @@
 			<coords loc="-58541 -61932 -2469 -2169"/>
 		</polygon>
 	</zone>
-	<zone name="[block_checker_3]" type="'Battle">
+	<zone name="[block_checker_3]" type="Battle">
 		<polygon>
 			<coords loc="-57368 -64034 -2451 -2151"/>
 			<coords loc="-56397 -64035 -2451 -2151"/>
@@ -281,7 +281,7 @@
 			<coords loc="-57372 -63063 -2451 -2151"/>
 		</polygon>
 	</zone>
-	<zone name="[block_checker_4]" type="'Battle">
+	<zone name="[block_checker_4]" type="Battle">
 		<polygon>
 			<coords loc="-58535 -64035 -2463 -2163"/>
 			<coords loc="-57563 -64037 -2463 -2163"/>
@@ -289,7 +289,7 @@
 			<coords loc="-58539 -63065 -2463 -2163"/>
 		</polygon>
 	</zone>
-	<zone name="[gvg_battle_zone]" type="'Battle">
+	<zone name="[gvg_battle_zone]" type="Battle">
 		<set name="index" val="14"/>
 		<polygon>
 			<coords loc="139944 139656 -16000 -15200"/>
@@ -302,7 +302,7 @@
 			<coords loc="148216 139656 -16000 -15200"/>
 		</polygon>
 	</zone>
-	<zone name="[kratei_cube_1]" type="'Battle">
+	<zone name="[kratei_cube_1]" type="Battle">
 		<set name="index" val="11"/>
 		<set name="enabled" val="true"/>
 		<set name="entering_message_no" val="283"/>
@@ -314,7 +314,7 @@
 			<coords loc="-77350 -21000 -9000 -7500"/>
 		</polygon>
 	</zone>
-	<zone name="[kratei_cube_2]" type="'Battle">
+	<zone name="[kratei_cube_2]" type="Battle">
 		<set name="index" val="12"/>
 		<set name="enabled" val="true"/>
 		<set name="entering_message_no" val="283"/>
@@ -326,7 +326,7 @@
 			<coords loc="-77300 -86400 -9000 -7500"/>
 		</polygon>
 	</zone>
-	<zone name="[kratei_cube_3]" type="'Battle">
+	<zone name="[kratei_cube_3]" type="Battle">
 		<set name="index" val="13"/>
 		<set name="enabled" val="true"/>
 		<set name="entering_message_no" val="283"/>
