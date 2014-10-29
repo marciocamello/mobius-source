@@ -97,7 +97,7 @@ public final class ArenaManagerInstance extends WarehouseInstance
 		
 		if (command.equalsIgnoreCase("ArenaBuff"))
 		{
-			if (player.isCursedWeaponEquipped() || player.isInZone(Zone.ZoneType.battle_zone))
+			if (player.isCursedWeaponEquipped() || player.isInZone(Zone.ZoneType.Battle))
 			{
 				return;
 			}
@@ -137,7 +137,7 @@ public final class ArenaManagerInstance extends WarehouseInstance
 		}
 		else if (command.equals("CPRecovery"))
 		{
-			if (player.isCursedWeaponEquipped() || player.isInZone(Zone.ZoneType.battle_zone))
+			if (player.isCursedWeaponEquipped() || player.isInZone(Zone.ZoneType.Battle))
 			{
 				return;
 			}
@@ -157,7 +157,7 @@ public final class ArenaManagerInstance extends WarehouseInstance
 		}
 		else if (command.equals("HPRecovery"))
 		{
-			if (player.isCursedWeaponEquipped() || player.isInZone(Zone.ZoneType.battle_zone))
+			if (player.isCursedWeaponEquipped() || player.isInZone(Zone.ZoneType.Battle))
 			{
 				return;
 			}

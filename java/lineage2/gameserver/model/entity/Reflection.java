@@ -955,8 +955,8 @@ public class Reflection
 			
 			switch (zone.getType())
 			{
-				case no_landing:
-				case SIEGE:
+				case NoLanding:
+				case Siege:
 					zone.addListener(NoLandingZoneListener.STATIC);
 					break;
 				
@@ -964,7 +964,7 @@ public class Reflection
 					zone.addListener(new AirshipControllerZoneListener());
 					break;
 				
-				case RESIDENCE:
+				case Residence:
 					zone.addListener(ResidenceEnterLeaveListenerImpl.STATIC);
 					break;
 				
@@ -1022,8 +1022,8 @@ public class Reflection
 			
 			switch (zone.getType())
 			{
-				case no_landing:
-				case SIEGE:
+				case NoLanding:
+				case Siege:
 					zone.addListener(NoLandingZoneListener.STATIC);
 					break;
 				
@@ -1031,7 +1031,7 @@ public class Reflection
 					zone.addListener(new AirshipControllerZoneListener());
 					break;
 				
-				case RESIDENCE:
+				case Residence:
 					zone.addListener(ResidenceEnterLeaveListenerImpl.STATIC);
 					break;
 				

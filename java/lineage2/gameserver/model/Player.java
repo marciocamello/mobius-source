@@ -4530,12 +4530,12 @@ public final class Player extends Playable implements PlayerGroup
 			WorldStatisticsManager.getInstance().updateStat(attacker.getPlayer(), CategoryType.DAMAGE_TO_PC_MAX, getActiveClassId(), (long) damage);
 			WorldStatisticsManager.getInstance().updateStat(this, CategoryType.DAMAGE_FROM_PC, (long) damage);
 			
-			if ((attacker.getKarma() > 0) && (getEffectList().getEffectsBySkillId(5182) != null) && !isInZone(ZoneType.SIEGE))
+			if ((attacker.getKarma() > 0) && (getEffectList().getEffectsBySkillId(5182) != null) && !isInZone(ZoneType.Siege))
 			{
 				return;
 			}
 			
-			if ((getKarma() > 0) && (attacker.getEffectList().getEffectsBySkillId(5182) != null) && !attacker.isInZone(ZoneType.SIEGE))
+			if ((getKarma() > 0) && (attacker.getEffectList().getEffectsBySkillId(5182) != null) && !attacker.isInZone(ZoneType.Siege))
 			{
 				return;
 			}
@@ -6560,7 +6560,7 @@ public final class Player extends Playable implements PlayerGroup
 					{
 						for (Zone zone : zones)
 						{
-							if (zone.getType() == ZoneType.no_restart)
+							if (zone.getType() == ZoneType.NoRestart)
 							{
 								if (((System.currentTimeMillis() / 1000L) - player.getLastAccess()) > zone.getRestartTime())
 								{
@@ -6568,7 +6568,7 @@ public final class Player extends Playable implements PlayerGroup
 									player.setLoc(TeleportUtils.getRestartLocation(player, RestartType.TO_VILLAGE));
 								}
 							}
-							else if (zone.getType() == ZoneType.SIEGE)
+							else if (zone.getType() == ZoneType.Siege)
 							{
 								SiegeEvent<?, ?> siegeEvent = player.getEvent(SiegeEvent.class);
 								
@@ -7907,7 +7907,7 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	public boolean checkLandingState()
 	{
-		if (isInZone(ZoneType.no_landing))
+		if (isInZone(ZoneType.NoLanding))
 		{
 			return false;
 		}

@@ -264,7 +264,7 @@ public final class Valakas extends DefaultAI
 	{
 		final NpcInstance actor = getActor();
 		
-		if (actor.isInZone(Zone.ZoneType.poison))
+		if (actor.isInZone(Zone.ZoneType.Poison))
 		{
 			if ((actor.getEffectList() != null) && (actor.getEffectList().getEffectsBySkill(s_lava_skin) == null))
 			{

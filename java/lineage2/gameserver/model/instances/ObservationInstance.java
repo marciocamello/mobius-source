@@ -74,7 +74,7 @@ public final class ObservationInstance extends NpcInstance
 			
 			for (Zone z : zones)
 			{
-				if ((z.getType() == Zone.ZoneType.SIEGE) && z.isActive())
+				if ((z.getType() == Zone.ZoneType.Siege) && z.isActive())
 				{
 					doObserve(player, val);
 					return;

@@ -751,7 +751,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		
 		for (Zone z : _reflection.getZones())
 		{
-			z.setType(ZoneType.peace_zone);
+			z.setType(ZoneType.Peace);
 		}
 		
 		cleanPlayers();
@@ -781,7 +781,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		sayToAll("scripts.events.CtF.AnnounceFight", null);
 		for (Zone z : _reflection.getZones())
 		{
-			z.setType(ZoneType.battle_zone);
+			z.setType(ZoneType.Battle);
 		}
 		_endTask = executeTask("events.CaptureTheFlag.CaptureTheFlag", "endOfTime", new Object[0], 300000);
 	}
@@ -795,7 +795,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 	{
 		for (Zone z : _reflection.getZones())
 		{
-			z.setType(ZoneType.peace_zone);
+			z.setType(ZoneType.Peace);
 		}
 		
 		if (_endTask != null)

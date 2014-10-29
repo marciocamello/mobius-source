@@ -12,8 +12,8 @@
  */
 package handlers.voicedcommands;
 
-import static lineage2.gameserver.model.Zone.ZoneType.no_restart;
-import static lineage2.gameserver.model.Zone.ZoneType.no_summon;
+import static lineage2.gameserver.model.Zone.ZoneType.NoRestart;
+import static lineage2.gameserver.model.Zone.ZoneType.NoSummon;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -372,7 +372,7 @@ public class Wedding implements IVoicedCommandHandler, ScriptFile
 			return false;
 		}
 		
-		if (partner.isInOlympiadMode() || activeChar.isMovementDisabled() || activeChar.isMuted(null) || activeChar.isInOlympiadMode() || activeChar.isInDuel() || activeChar.getPlayer().isTerritoryFlagEquipped() || partner.isInZone(no_summon))
+		if (partner.isInOlympiadMode() || activeChar.isMovementDisabled() || activeChar.isMuted(null) || activeChar.isInOlympiadMode() || activeChar.isInDuel() || activeChar.getPlayer().isTerritoryFlagEquipped() || partner.isInZone(NoSummon))
 		{
 			activeChar.sendMessage(new CustomMessage("common.TryLater", activeChar));
 			return false;
@@ -384,7 +384,7 @@ public class Wedding implements IVoicedCommandHandler, ScriptFile
 			return false;
 		}
 		
-		if (partner.isInZoneBattle() || partner.isInZone(Zone.ZoneType.SIEGE) || partner.isInZone(no_restart) || partner.isInOlympiadMode() || activeChar.isInZoneBattle() || activeChar.isInZone(Zone.ZoneType.SIEGE) || activeChar.isInZone(no_restart) || activeChar.isInOlympiadMode() || (partner.getReflection() != ReflectionManager.DEFAULT) || partner.isInZone(no_summon) || activeChar.isInObserverMode() || partner.isInObserverMode())
+		if (partner.isInZoneBattle() || partner.isInZone(Zone.ZoneType.Siege) || partner.isInZone(NoRestart) || partner.isInOlympiadMode() || activeChar.isInZoneBattle() || activeChar.isInZone(Zone.ZoneType.Siege) || activeChar.isInZone(NoRestart) || activeChar.isInOlympiadMode() || (partner.getReflection() != ReflectionManager.DEFAULT) || partner.isInZone(NoSummon) || activeChar.isInObserverMode() || partner.isInObserverMode())
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessage.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
 			return false;

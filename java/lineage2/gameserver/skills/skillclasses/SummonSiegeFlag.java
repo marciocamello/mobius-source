@@ -100,7 +100,7 @@ public class SummonSiegeFlag extends Skill
 			case OUTPOST:
 			case NORMAL:
 			case ADVANCED:
-				if (player.isInZone(Zone.ZoneType.RESIDENCE))
+				if (player.isInZone(Zone.ZoneType.Residence))
 				{
 					player.sendPacket(SystemMsg.YOU_CANNOT_SET_UP_A_BASE_HERE, new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 					return false;

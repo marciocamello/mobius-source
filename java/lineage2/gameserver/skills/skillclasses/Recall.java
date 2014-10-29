@@ -125,7 +125,7 @@ public class Recall extends Skill
 			}
 		}
 		
-		if (activeChar.isInZone(ZoneType.no_escape) || ((_townId > 0) && (activeChar.getReflection() != null) && (activeChar.getReflection().getCoreLoc() != null)))
+		if (activeChar.isInZone(ZoneType.NoEscape) || ((_townId > 0) && (activeChar.getReflection() != null) && (activeChar.getReflection().getCoreLoc() != null)))
 		{
 			if (activeChar.isPlayer())
 			{

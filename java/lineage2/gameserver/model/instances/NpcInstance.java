@@ -1031,7 +1031,7 @@ public class NpcInstance extends Creature
 			return null;
 		}
 		
-		if (Config.SERVICES_OFFSHORE_NO_CASTLE_TAX && isInZone(ZoneType.offshore))
+		if (Config.SERVICES_OFFSHORE_NO_CASTLE_TAX && isInZone(ZoneType.Offshore))
 		{
 			return null;
 		}

@@ -3903,7 +3903,7 @@ public abstract class Creature extends GameObject
 			{
 				zone = _zones.get(i);
 				
-				if (zone.getType() == ZoneType.water)
+				if (zone.getType() == ZoneType.Water)
 				{
 					if ((waterZ == Integer.MIN_VALUE) || (waterZ < zone.getTerritory().getZmax()))
 					{
@@ -4054,7 +4054,7 @@ public abstract class Creature extends GameObject
 	 */
 	public boolean isInZonePeace()
 	{
-		return isInZone(ZoneType.peace_zone) && !isInZoneBattle();
+		return isInZone(ZoneType.Peace) && !isInZoneBattle();
 	}
 	
 	/**
@@ -4063,7 +4063,7 @@ public abstract class Creature extends GameObject
 	 */
 	public boolean isInZoneBattle()
 	{
-		return isInZone(ZoneType.battle_zone);
+		return isInZone(ZoneType.Battle);
 	}
 	
 	/**
@@ -4072,7 +4072,7 @@ public abstract class Creature extends GameObject
 	 */
 	public boolean isInWater()
 	{
-		return isInZone(ZoneType.water) && !(isInBoat() || isBoat() || isFlying());
+		return isInZone(ZoneType.Water) && !(isInBoat() || isBoat() || isFlying());
 	}
 	
 	/**
@@ -4204,7 +4204,7 @@ public abstract class Creature extends GameObject
 				{
 					ZoneType type = zone.getType();
 					
-					if ((type == ZoneType.battle_zone) || (type == ZoneType.peace_zone) || (type == ZoneType.offshore) || (type == ZoneType.dummy))
+					if ((type == ZoneType.Battle) || (type == ZoneType.Peace) || (type == ZoneType.Offshore) || (type == ZoneType.Dummy))
 					{
 						return zone.getSpawn();
 					}
@@ -4238,7 +4238,7 @@ public abstract class Creature extends GameObject
 				{
 					ZoneType type = zone.getType();
 					
-					if ((type == ZoneType.battle_zone) || (type == ZoneType.peace_zone) || (type == ZoneType.offshore) || (type == ZoneType.dummy))
+					if ((type == ZoneType.Battle) || (type == ZoneType.Peace) || (type == ZoneType.Offshore) || (type == ZoneType.Dummy))
 					{
 						return zone.getPKSpawn();
 					}
@@ -4895,12 +4895,12 @@ public abstract class Creature extends GameObject
 		
 		if ((attacker != null) && attacker.isPlayer() && (Math.abs(attacker.getLevel() - getLevel()) > 10))
 		{
-			if ((attacker.getKarma() < 0) && (getEffectList().getEffectsBySkillId(5182) != null) && !isInZone(ZoneType.SIEGE))
+			if ((attacker.getKarma() < 0) && (getEffectList().getEffectsBySkillId(5182) != null) && !isInZone(ZoneType.Siege))
 			{
 				return;
 			}
 			
-			if ((getKarma() < 0) && (attacker.getEffectList().getEffectsBySkillId(5182) != null) && !attacker.isInZone(ZoneType.SIEGE))
+			if ((getKarma() < 0) && (attacker.getEffectList().getEffectsBySkillId(5182) != null) && !attacker.isInZone(ZoneType.Siege))
 			{
 				return;
 			}

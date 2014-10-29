@@ -12,8 +12,8 @@
  */
 package lineage2.gameserver.skills.skillclasses;
 
-import static lineage2.gameserver.model.Zone.ZoneType.no_restart;
-import static lineage2.gameserver.model.Zone.ZoneType.no_summon;
+import static lineage2.gameserver.model.Zone.ZoneType.NoRestart;
+import static lineage2.gameserver.model.Zone.ZoneType.NoSummon;
 
 import java.util.List;
 
@@ -167,7 +167,7 @@ public class Call extends Skill
 			return new SystemMessage(SystemMessage.NOTHING_HAPPENED);
 		}
 		
-		if (activeChar.isInZoneBattle() || activeChar.isInZone(Zone.ZoneType.SIEGE) || activeChar.isInZone(no_restart) || activeChar.isInZone(no_summon) || activeChar.isInBoat() || (activeChar.getReflection() != ReflectionManager.DEFAULT))
+		if (activeChar.isInZoneBattle() || activeChar.isInZone(Zone.ZoneType.Siege) || activeChar.isInZone(NoRestart) || activeChar.isInZone(NoSummon) || activeChar.isInBoat() || (activeChar.getReflection() != ReflectionManager.DEFAULT))
 		{
 			return new SystemMessage(SystemMessage.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION);
 		}
@@ -197,7 +197,7 @@ public class Call extends Skill
 			return new SystemMessage(SystemMessage.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_CURRENTLY_PARTICIPATING_IN_THE_GRAND_OLYMPIAD);
 		}
 		
-		if (target.isInZoneBattle() || target.isInZone(Zone.ZoneType.SIEGE) || target.isInZone(no_restart) || target.isInZone(no_summon) || (target.getReflection() != ReflectionManager.DEFAULT) || target.isInBoat())
+		if (target.isInZoneBattle() || target.isInZone(Zone.ZoneType.Siege) || target.isInZone(NoRestart) || target.isInZone(NoSummon) || (target.getReflection() != ReflectionManager.DEFAULT) || target.isInBoat())
 		{
 			return new SystemMessage(SystemMessage.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING);
 		}

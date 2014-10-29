@@ -274,7 +274,7 @@ public final class ErosionHallDefence extends Reflection
 	{
 		for (NpcInstance npc : mob.getAroundNpc(900, 300))
 		{
-			if ((npc.getId() == UnstableSeed) && (mob.getZone(Zone.ZoneType.poison) == npc.getZone(Zone.ZoneType.poison)))
+			if ((npc.getId() == UnstableSeed) && (mob.getZone(Zone.ZoneType.Poison) == npc.getZone(Zone.ZoneType.Poison)))
 			{
 				return npc;
 			}

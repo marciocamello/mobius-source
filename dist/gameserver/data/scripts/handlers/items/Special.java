@@ -188,7 +188,7 @@ public final class Special extends SimpleItemHandler
 	// DestroyedDarknessFragmentPowder -> DestroyedLightFragmentPowde
 	private boolean use13853(Player player, boolean ctrl)
 	{
-		if (!player.isInZone(ZoneType.mother_tree))
+		if (!player.isInZone(ZoneType.Affected))
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
 			return false;
@@ -285,7 +285,7 @@ public final class Special extends SimpleItemHandler
 	 */
 	private boolean use14835(Player player, boolean ctrl)
 	{
-		if (player.isActionsDisabled() || player.isInOlympiadMode() || player.isInZone(ZoneType.no_escape))
+		if (player.isActionsDisabled() || player.isInOlympiadMode() || player.isInZone(ZoneType.NoEscape))
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(14835));
 			return false;

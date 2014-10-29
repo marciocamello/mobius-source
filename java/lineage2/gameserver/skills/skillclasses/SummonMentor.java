@@ -82,7 +82,7 @@ public class SummonMentor extends Skill
 			}
 		}
 		
-		if (activeChar.isInZone(Zone.ZoneType.no_escape) && (activeChar.getReflection() != null) && (activeChar.getReflection().getCoreLoc() != null))
+		if (activeChar.isInZone(Zone.ZoneType.NoEscape) && (activeChar.getReflection() != null) && (activeChar.getReflection().getCoreLoc() != null))
 		{
 			if (activeChar.isPlayer())
 			{

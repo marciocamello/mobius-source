@@ -98,7 +98,7 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 		{
 			Player winner = actor.getPlayer();
 			
-			if ((winner == null) || !victim.isPlayer() || (winner.getLevel() < 40) || (winner == victim) || (victim.getEvent(DominionSiegeEvent.class) == DominionSiegeEvent.this) || !actor.isInZone(Zone.ZoneType.SIEGE) || !victim.isInZone(Zone.ZoneType.SIEGE))
+			if ((winner == null) || !victim.isPlayer() || (winner.getLevel() < 40) || (winner == victim) || (victim.getEvent(DominionSiegeEvent.class) == DominionSiegeEvent.this) || !actor.isInZone(Zone.ZoneType.Siege) || !victim.isInZone(Zone.ZoneType.Siege))
 			{
 				return;
 			}
@@ -479,7 +479,7 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 	@Override
 	public void giveItem(Player player, int itemId, long count)
 	{
-		Zone zone = player.getZone(Zone.ZoneType.SIEGE);
+		Zone zone = player.getZone(Zone.ZoneType.Siege);
 		if (zone == null)
 		{
 			count = 0;
@@ -554,7 +554,7 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 	@Override
 	public Location getEnterLoc(Player player)
 	{
-		Zone zone = player.getZone(Zone.ZoneType.SIEGE);
+		Zone zone = player.getZone(Zone.ZoneType.Siege);
 		if (zone == null)
 		{
 			return player.getLoc();
@@ -593,8 +593,8 @@ public class DominionSiegeEvent extends SiegeEvent<Dominion, SiegeClanObject>
 	@Override
 	public boolean canRessurect(Player resurrectPlayer, Creature target, boolean force)
 	{
-		boolean playerInZone = resurrectPlayer.isInZone(Zone.ZoneType.SIEGE);
-		boolean targetInZone = target.isInZone(Zone.ZoneType.SIEGE);
+		boolean playerInZone = resurrectPlayer.isInZone(Zone.ZoneType.Siege);
+		boolean targetInZone = target.isInZone(Zone.ZoneType.Siege);
 		// if both are out of reach - res enabled
 		if (!playerInZone && !targetInZone)
 		{

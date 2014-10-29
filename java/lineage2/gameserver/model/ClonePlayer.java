@@ -181,7 +181,7 @@ public class ClonePlayer extends Playable
 		{
 			Player pk = (Player) killer;
 			
-			if (isInZone(ZoneType.SIEGE))
+			if (isInZone(ZoneType.Siege))
 			{
 				return;
 			}

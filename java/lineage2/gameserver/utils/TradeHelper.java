@@ -158,7 +158,7 @@ public final class TradeHelper
 	{
 		long tax = (long) ((price * Config.SERVICES_TRADE_TAX) / 100);
 		
-		if (seller.isInZone(Zone.ZoneType.offshore))
+		if (seller.isInZone(Zone.ZoneType.Offshore))
 		{
 			tax = (long) ((price * Config.SERVICES_OFFSHORE_TRADE_TAX) / 100);
 		}
