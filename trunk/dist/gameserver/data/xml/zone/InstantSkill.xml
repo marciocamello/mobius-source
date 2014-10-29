@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "zone.dtd">
 <list>
-	<zone name="[spa_12]" type="'InstantSkill">
+	<zone name="[spa_12]" type="InstantSkill">
 		<set name="enabled" val="true"/>
 		<set name="target" val="pc"/>
 		<set name="skill_name" val="4557;1"/>
@@ -20,7 +20,7 @@
 			<coords loc="141213 -109266 -3634 -3434"/>
 		</polygon>
 	</zone>
-	<zone name="[spa_22]" type="'InstantSkill">
+	<zone name="[spa_22]" type="InstantSkill">
 		<set name="enabled" val="true"/>
 		<set name="target" val="pc"/>
 		<set name="skill_name" val="4556;1"/>
@@ -36,7 +36,7 @@
 			<coords loc="140081 -105295 -3668 -3468"/>
 		</polygon>
 	</zone>
-	<zone name="[spa_32]" type="'InstantSkill">
+	<zone name="[spa_32]" type="InstantSkill">
 		<set name="enabled" val="true"/>
 		<set name="target" val="pc"/>
 		<set name="skill_name" val="4558;1"/>
@@ -54,7 +54,7 @@
 			<coords loc="144832 -104959 -3724 -3524"/>
 		</polygon>
 	</zone>
-	<zone name="[spa_42]" type="'InstantSkill">
+	<zone name="[spa_42]" type="InstantSkill">
 		<set name="enabled" val="true"/>
 		<set name="target" val="pc"/>
 		<set name="skill_name" val="4556;1"/>
@@ -71,7 +71,7 @@
 			<coords loc="152069 -107905 -2871 -2671"/>
 		</polygon>
 	</zone>
-	<zone name="[spa_52]" type="'InstantSkill">
+	<zone name="[spa_52]" type="InstantSkill">
 		<set name="enabled" val="true"/>
 		<set name="target" val="pc"/>
 		<set name="skill_name" val="4558;1"/>
@@ -89,7 +89,7 @@
 			<coords loc="155283 -105478 -2787 -2587"/>
 		</polygon>
 	</zone>
-	<zone name="[spa_62]" type="'InstantSkill">
+	<zone name="[spa_62]" type="InstantSkill">
 		<set name="enabled" val="true"/>
 		<set name="target" val="pc"/>
 		<set name="skill_name" val="4557;1"/>
@@ -106,7 +106,7 @@
 			<coords loc="156683 -109569 -2717 -2517"/>
 		</polygon>
 	</zone>
-	<zone name="[spa_72]" type="'InstantSkill">
+	<zone name="[spa_72]" type="InstantSkill">
 		<set name="enabled" val="true"/>
 		<set name="target" val="pc"/>
 		<set name="skill_name" val="4556;1"/>
@@ -124,7 +124,7 @@
 			<coords loc="152099 -116415 -1609 -1409"/>
 		</polygon>
 	</zone>
-	<zone name="[spa_82]" type="'InstantSkill">
+	<zone name="[spa_82]" type="InstantSkill">
 		<set name="enabled" val="true"/>
 		<set name="target" val="pc"/>
 		<set name="skill_name" val="4558;1"/>
@@ -141,7 +141,7 @@
 			<coords loc="152937 -112409 -1694 -1494"/>
 		</polygon>
 	</zone>
-	<zone name="[spa_92]" type="'InstantSkill">
+	<zone name="[spa_92]" type="InstantSkill">
 		<set name="enabled" val="true"/>
 		<set name="target" val="pc"/>
 		<set name="skill_name" val="4557;1"/>
@@ -157,7 +157,7 @@
 			<coords loc="157439 -115101 -1979 -1779"/>
 		</polygon>
 	</zone>
-	<zone name="[spa_102]" type="'InstantSkill">
+	<zone name="[spa_102]" type="InstantSkill">
 		<set name="enabled" val="true"/>
 		<set name="target" val="pc"/>
 		<set name="skill_name" val="4557;1"/>
