@@ -58,7 +58,7 @@ public final class SkillAcquireParser extends AbstractDirParser<SkillAcquireHold
 	@Override
 	public File getXMLDir()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/xml/skill_tree/");
+		return new File(Config.DATAPACK_ROOT, "data/xml/skillTrees/");
 	}
 	
 	/**
