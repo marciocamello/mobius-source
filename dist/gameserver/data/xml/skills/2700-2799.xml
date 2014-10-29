@@ -15,7 +15,7 @@
 		<set name="npcId" val="13173"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="14"/>
@@ -36,7 +36,7 @@
 		<set name="npcId" val="13174"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="15"/>
@@ -57,7 +57,7 @@
 		<set name="npcId" val="13175"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="16"/>
@@ -78,7 +78,7 @@
 		<set name="npcId" val="13176"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="17"/>
@@ -99,7 +99,7 @@
 		<set name="npcId" val="13177"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="18"/>
@@ -120,7 +120,7 @@
 		<set name="npcId" val="13178"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="19"/>
@@ -141,7 +141,7 @@
 		<set name="npcId" val="13179"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="20"/>
@@ -162,7 +162,7 @@
 		<set name="npcId" val="13180"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="21"/>
@@ -183,7 +183,7 @@
 		<set name="npcId" val="13169"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="10"/>
@@ -204,7 +204,7 @@
 		<set name="npcId" val="13170"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="11"/>
@@ -225,7 +225,7 @@
 		<set name="npcId" val="13171"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="12"/>
@@ -246,7 +246,7 @@
 		<set name="npcId" val="13172"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="13"/>
@@ -267,7 +267,7 @@
 		<set name="npcId" val="13173"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="14"/>
@@ -288,7 +288,7 @@
 		<set name="npcId" val="13174"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="15"/>
@@ -309,7 +309,7 @@
 		<set name="npcId" val="13175"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="16"/>
@@ -330,7 +330,7 @@
 		<set name="npcId" val="13176"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="17"/>
@@ -351,7 +351,7 @@
 		<set name="npcId" val="13177"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="18"/>
@@ -372,7 +372,7 @@
 		<set name="npcId" val="13178"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="19"/>
@@ -393,7 +393,7 @@
 		<set name="npcId" val="13179"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="20"/>
@@ -414,7 +414,7 @@
 		<set name="npcId" val="13180"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="21"/>
@@ -435,7 +435,7 @@
 		<set name="npcId" val="13169"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="10"/>
@@ -456,7 +456,7 @@
 		<set name="npcId" val="13170"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="11"/>
@@ -477,7 +477,7 @@
 		<set name="npcId" val="13171"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="12"/>
@@ -498,7 +498,7 @@
 		<set name="npcId" val="13172"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="13"/>
@@ -519,7 +519,7 @@
 		<set name="npcId" val="13173"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="14"/>
@@ -540,7 +540,7 @@
 		<set name="npcId" val="13174"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="15"/>
@@ -561,7 +561,7 @@
 		<set name="npcId" val="13175"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="16"/>
@@ -582,7 +582,7 @@
 		<set name="npcId" val="13176"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="17"/>
@@ -603,7 +603,7 @@
 		<set name="npcId" val="13177"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="18"/>
@@ -624,7 +624,7 @@
 		<set name="npcId" val="13178"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="19"/>
@@ -645,7 +645,7 @@
 		<set name="npcId" val="13179"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="20"/>
@@ -666,7 +666,7 @@
 		<set name="npcId" val="13180"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="21"/>
@@ -687,7 +687,7 @@
 		<set name="npcId" val="13169"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="10"/>
@@ -708,7 +708,7 @@
 		<set name="npcId" val="13170"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="11"/>
@@ -729,7 +729,7 @@
 		<set name="npcId" val="13171"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="12"/>
@@ -750,7 +750,7 @@
 		<set name="npcId" val="13172"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="13"/>
@@ -771,7 +771,7 @@
 		<set name="npcId" val="13173"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="14"/>
@@ -792,7 +792,7 @@
 		<set name="npcId" val="13174"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="15"/>
@@ -813,7 +813,7 @@
 		<set name="npcId" val="13175"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="16"/>
@@ -834,7 +834,7 @@
 		<set name="npcId" val="13176"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="17"/>
@@ -855,7 +855,7 @@
 		<set name="npcId" val="13177"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="18"/>
@@ -876,7 +876,7 @@
 		<set name="npcId" val="13178"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="19"/>
@@ -897,7 +897,7 @@
 		<set name="npcId" val="13179"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="20"/>
@@ -918,7 +918,7 @@
 		<set name="npcId" val="13180"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="21"/>
@@ -939,7 +939,7 @@
 		<set name="npcId" val="13169"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="10"/>
@@ -960,7 +960,7 @@
 		<set name="npcId" val="13170"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="11"/>
@@ -981,7 +981,7 @@
 		<set name="npcId" val="13171"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="12"/>
@@ -1002,7 +1002,7 @@
 		<set name="npcId" val="13172"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="13"/>
@@ -1023,7 +1023,7 @@
 		<set name="npcId" val="13173"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="14"/>
@@ -1044,7 +1044,7 @@
 		<set name="npcId" val="13174"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="15"/>
@@ -1065,7 +1065,7 @@
 		<set name="npcId" val="13175"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="16"/>
@@ -1086,7 +1086,7 @@
 		<set name="npcId" val="13176"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="17"/>
@@ -1107,7 +1107,7 @@
 		<set name="npcId" val="13177"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="18"/>
@@ -1128,7 +1128,7 @@
 		<set name="npcId" val="13178"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="19"/>
@@ -1149,7 +1149,7 @@
 		<set name="npcId" val="13179"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="20"/>
@@ -1170,7 +1170,7 @@
 		<set name="npcId" val="13180"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="21"/>
@@ -1191,7 +1191,7 @@
 		<set name="npcId" val="13169"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="10"/>
@@ -1212,7 +1212,7 @@
 		<set name="npcId" val="13170"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="11"/>
@@ -1233,7 +1233,7 @@
 		<set name="npcId" val="13171"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="12"/>
@@ -1254,7 +1254,7 @@
 		<set name="npcId" val="13172"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="13"/>
@@ -1275,7 +1275,7 @@
 		<set name="npcId" val="13173"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="14"/>
@@ -1296,7 +1296,7 @@
 		<set name="npcId" val="13174"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="15"/>
@@ -1317,7 +1317,7 @@
 		<set name="npcId" val="13175"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="16"/>
@@ -1338,7 +1338,7 @@
 		<set name="npcId" val="13176"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="17"/>
@@ -1359,7 +1359,7 @@
 		<set name="npcId" val="13177"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="18"/>
@@ -1380,7 +1380,7 @@
 		<set name="npcId" val="13178"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="19"/>
@@ -1401,7 +1401,7 @@
 		<set name="npcId" val="13179"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="20"/>
@@ -1422,7 +1422,7 @@
 		<set name="npcId" val="13180"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="21"/>
@@ -1443,7 +1443,7 @@
 		<set name="npcId" val="13169"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="10"/>
@@ -1464,7 +1464,7 @@
 		<set name="npcId" val="13170"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="11"/>
@@ -1485,7 +1485,7 @@
 		<set name="npcId" val="13171"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="12"/>
@@ -1506,7 +1506,7 @@
 		<set name="npcId" val="13172"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="13"/>
@@ -1527,7 +1527,7 @@
 		<set name="npcId" val="13173"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="14"/>
@@ -1548,7 +1548,7 @@
 		<set name="npcId" val="13174"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="15"/>
@@ -1569,7 +1569,7 @@
 		<set name="npcId" val="13175"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="16"/>
@@ -1590,7 +1590,7 @@
 		<set name="npcId" val="13176"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="17"/>
@@ -1611,7 +1611,7 @@
 		<set name="npcId" val="13177"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="18"/>
@@ -1632,7 +1632,7 @@
 		<set name="npcId" val="13178"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="19"/>
@@ -1653,7 +1653,7 @@
 		<set name="npcId" val="13179"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="20"/>
@@ -1674,7 +1674,7 @@
 		<set name="npcId" val="13180"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="2955">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Transformation" time="1800" val="21"/>

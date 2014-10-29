@@ -1292,7 +1292,7 @@
 		<set name="skillType" val="RECALL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="113" addName="1">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 	</skill>
 	<skill id="2393" levels="1" name="Blessed Scroll of Resurrection (Battleground)">
@@ -1311,7 +1311,7 @@
 		<set name="skillType" val="RESURRECT"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="113" addName="1">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 	</skill>
 	<skill id="2394" levels="1" name="Transformation Scroll (Battleground)">
@@ -1340,7 +1340,7 @@
 		<set name="skillType" val="HEAL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="113" addName="1">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 	</skill>
 	<skill id="2396" levels="1" name="Mental Potion">
@@ -1356,7 +1356,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="altUse" val="true"/>
 		<cond msgId="113" addName="1">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Buff" stackOrder="1" stackType="mental" time="1200" val="0">
@@ -1379,7 +1379,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="altUse" val="true"/>
 		<cond msgId="113" addName="1">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Petrification" stackOrder="-1" stackType="paralyze" time="10" val="0"/>
@@ -1398,7 +1398,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="altUse" val="true"/>
 		<cond msgId="113" addName="1">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<for>
 			<effect count="1" name="Buff" stackType="Dash" time="15" val="0">
