@@ -1314,6 +1314,7 @@
 		<set name="tradable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="type" value="NONE"/>
+		<set name="ex_type" value="SHIELD"/>
 		<equip>
 			<slot id="LEFT_HAND"/>
 		</equip>
@@ -1575,6 +1576,7 @@
 		<set name="tradable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="type" value="NONE"/>
+		<set name="ex_type" value="SHIELD"/>
 		<equip>
 			<slot id="LEFT_HAND"/>
 		</equip>

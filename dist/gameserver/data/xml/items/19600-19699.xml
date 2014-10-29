@@ -156,6 +156,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 		<set name="type" value="NONE"/>
+		<set name="ex_type" value="SHIELD"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="12"/>
 		<for>
@@ -490,6 +491,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 		<set name="type" value="NONE"/>
+		<set name="ex_type" value="SHIELD"/>
 		<set name="crystal_type" value="R95"/>
 		<set name="crystal_count" value="26"/>
 		<for>
@@ -824,6 +826,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 		<set name="type" value="NONE"/>
+		<set name="ex_type" value="SHIELD"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="59"/>
 		<for>
@@ -1153,6 +1156,7 @@
 		</equip>
 		<set name="isBlessed" value="true"/>
 		<set name="type" value="NONE"/>
+		<set name="ex_type" value="SHIELD"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="102"/>
 		<for>
@@ -1472,6 +1476,7 @@
 		</equip>
 		<set name="isBlessed" value="true"/>
 		<set name="type" value="NONE"/>
+		<set name="ex_type" value="SHIELD"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="248"/>
 		<for>
@@ -1788,6 +1793,7 @@
 		<set name="weight" value="1130"/>
 		<set name="isBlessed" value="true"/>
 		<set name="type" value="NONE"/>
+		<set name="ex_type" value="SHIELD"/>
 		<set name="crystal_type" value="R95"/>
 		<set name="destroyable" value="true"/>
 		<set name="sellable" value="true"/>

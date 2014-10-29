@@ -785,6 +785,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 		<set name="type" value="NONE"/>
+		<set name="ex_type" value="SHIELD"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="5"/>
 		<set name="crystallizable" value="true"/>
@@ -1567,6 +1568,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 		<set name="type" value="NONE"/>
+		<set name="ex_type" value="SHIELD"/>
 		<set name="crystal_type" value="R"/>
 		<set name="crystal_count" value="12"/>
 		<for>

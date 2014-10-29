@@ -228,6 +228,7 @@
 		</equip>
 		<set name="isBlessed" value="true"/>
 		<set name="type" value="NONE"/>
+		<set name="ex_type" value="SHIELD"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="1182"/>
 		<for>
@@ -536,6 +537,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 		<set name="type" value="NONE"/>
+		<set name="ex_type" value="SHIELD"/>
 		<set name="crystal_type" value="R99"/>
 		<set name="crystal_count" value="0"/>
 		<set name="crystallizable" value="false"/>
