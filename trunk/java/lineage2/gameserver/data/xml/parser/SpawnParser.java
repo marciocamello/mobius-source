@@ -63,7 +63,7 @@ public final class SpawnParser extends AbstractDirParser<SpawnHolder>
 	@Override
 	public File getXMLDir()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/xml/spawn/");
+		return new File(Config.DATAPACK_ROOT, "data/xml/spawns/");
 	}
 	
 	/**
