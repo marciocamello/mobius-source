@@ -619,7 +619,7 @@
 		<set name="isPreservedOnDeath" val="true"/>
 		<set name="cancelable" val="false"/>
 		<cond msgId="113" addName="1">
-			<zone type="SIEGE"/>
+			<zone type="Siege"/>
 		</cond>
 		<cond msgId="1902">
 			<and>

@@ -513,7 +513,7 @@
 				<not>
 					<player percentCP="50"/>
 				</not>
-				<zone type="SIEGE"/>
+				<zone type="Siege"/>
 			</and>
 		</cond>
 		<for>
@@ -547,7 +547,7 @@
 				<not>
 					<player percentCP="50"/>
 				</not>
-				<zone type="SIEGE"/>
+				<zone type="Siege"/>
 			</and>
 		</cond>
 		<for>
