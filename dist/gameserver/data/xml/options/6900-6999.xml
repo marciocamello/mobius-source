@@ -1,0 +1,591 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "options.dtd">
+<list>
+	<option id="6900">
+		<for>
+			<add order="0x60" stat="mAtk" value="11.707"/>
+			<add order="0x60" stat="accCombat" value="1.25122"/>
+		</for>
+	</option>
+	<option id="6901">
+		<for>
+			<add order="0x60" stat="mAtk" value="11.707"/>
+			<add order="0x60" stat="baseCrit" value="13.54821016"/>
+		</for>
+	</option>
+	<option id="6902">
+		<for>
+			<add order="0x60" stat="regHp" value="0.30222"/>
+			<add order="0x60" stat="regMp" value="0.19941"/>
+		</for>
+	</option>
+	<option id="6903">
+		<for>
+			<add order="0x60" stat="regHp" value="0.30222"/>
+			<add order="0x60" stat="regCp" value="0.30222"/>
+		</for>
+	</option>
+	<option id="6904">
+		<for>
+			<add order="0x60" stat="regHp" value="0.30222"/>
+			<add order="0x60" stat="rEvas" value="1.25122"/>
+		</for>
+	</option>
+	<option id="6905">
+		<for>
+			<add order="0x60" stat="regHp" value="0.30222"/>
+			<add order="0x60" stat="accCombat" value="1.25122"/>
+		</for>
+	</option>
+	<option id="6906">
+		<for>
+			<add order="0x60" stat="regHp" value="0.30222"/>
+			<add order="0x60" stat="baseCrit" value="13.54821016"/>
+		</for>
+	</option>
+	<option id="6907">
+		<for>
+			<add order="0x60" stat="regMp" value="0.19941"/>
+			<add order="0x60" stat="regCp" value="0.30222"/>
+		</for>
+	</option>
+	<option id="6908">
+		<for>
+			<add order="0x60" stat="regMp" value="0.19941"/>
+			<add order="0x60" stat="rEvas" value="1.25122"/>
+		</for>
+	</option>
+	<option id="6909">
+		<for>
+			<add order="0x60" stat="regMp" value="0.19941"/>
+			<add order="0x60" stat="accCombat" value="1.25122"/>
+		</for>
+	</option>
+	<option id="6910">
+		<for>
+			<add order="0x60" stat="regMp" value="0.19941"/>
+			<add order="0x60" stat="baseCrit" value="13.54821016"/>
+		</for>
+	</option>
+	<option id="6911">
+		<for>
+			<add order="0x60" stat="regCp" value="0.30222"/>
+			<add order="0x60" stat="rEvas" value="1.25122"/>
+		</for>
+	</option>
+	<option id="6912">
+		<for>
+			<add order="0x60" stat="regCp" value="0.30222"/>
+			<add order="0x60" stat="accCombat" value="1.25122"/>
+		</for>
+	</option>
+	<option id="6913">
+		<for>
+			<add order="0x60" stat="regCp" value="0.30222"/>
+			<add order="0x60" stat="baseCrit" value="13.54821016"/>
+		</for>
+	</option>
+	<option id="6914">
+		<for>
+			<add order="0x60" stat="rEvas" value="1.25122"/>
+			<add order="0x60" stat="accCombat" value="1.25122"/>
+		</for>
+	</option>
+	<option id="6915">
+		<for>
+			<add order="0x60" stat="rEvas" value="1.25122"/>
+			<add order="0x60" stat="baseCrit" value="13.54821016"/>
+		</for>
+	</option>
+	<option id="6916">
+		<for>
+			<add order="0x60" stat="accCombat" value="1.25122"/>
+			<add order="0x60" stat="baseCrit" value="13.54821016"/>
+		</for>
+	</option>
+	<option id="6917">
+		<for>
+			<add order="0x60" stat="pDef" value="36.808"/>
+		</for>
+	</option>
+	<option id="6918">
+		<for>
+			<add order="0x60" stat="mDef" value="29.584"/>
+		</for>
+	</option>
+	<option id="6919">
+		<for>
+			<add order="0x60" stat="maxHp" value="93.267"/>
+		</for>
+	</option>
+	<option id="6920">
+		<for>
+			<add order="0x60" stat="maxMp" value="108.575"/>
+		</for>
+	</option>
+	<option id="6921">
+		<for>
+			<add order="0x60" stat="maxCp" value="140.782"/>
+		</for>
+	</option>
+	<option id="6922">
+		<for>
+			<add order="0x60" stat="pAtk" value="21.242"/>
+		</for>
+	</option>
+	<option id="6923">
+		<for>
+			<add order="0x60" stat="mAtk" value="24.553"/>
+		</for>
+	</option>
+	<option id="6924">
+		<for>
+			<add order="0x60" stat="regHp" value="0.59598"/>
+		</for>
+	</option>
+	<option id="6925">
+		<for>
+			<add order="0x60" stat="regMp" value="0.37797"/>
+		</for>
+	</option>
+	<option id="6926">
+		<for>
+			<add order="0x60" stat="regCp" value="0.59598"/>
+		</for>
+	</option>
+	<option id="6927">
+		<for>
+			<add order="0x60" stat="rEvas" value="2.502444"/>
+		</for>
+	</option>
+	<option id="6928">
+		<for>
+			<add order="0x60" stat="accCombat" value="2.502444"/>
+		</for>
+	</option>
+	<option id="6929">
+		<for>
+			<add order="0x60" stat="baseCrit" value="27.096463632000003"/>
+		</for>
+	</option>
+	<option id="6930">
+		<for>
+			<add order="0x60" stat="pDef" value="18.832"/>
+			<add order="0x60" stat="mDef" value="14.448"/>
+		</for>
+	</option>
+	<option id="6931">
+		<for>
+			<add order="0x60" stat="pDef" value="18.832"/>
+			<add order="0x60" stat="maxHp" value="45.549"/>
+		</for>
+	</option>
+	<option id="6932">
+		<for>
+			<add order="0x60" stat="pDef" value="18.832"/>
+			<add order="0x60" stat="maxMp" value="53.025"/>
+		</for>
+	</option>
+	<option id="6933">
+		<for>
+			<add order="0x60" stat="pDef" value="18.832"/>
+			<add order="0x60" stat="maxCp" value="68.754"/>
+		</for>
+	</option>
+	<option id="6934">
+		<for>
+			<add order="0x60" stat="pDef" value="18.832"/>
+			<add order="0x60" stat="pAtk" value="10.374"/>
+		</for>
+	</option>
+	<option id="6935">
+		<for>
+			<add order="0x60" stat="pDef" value="18.832"/>
+			<add order="0x60" stat="mAtk" value="11.991"/>
+		</for>
+	</option>
+	<option id="6936">
+		<for>
+			<add order="0x60" stat="pDef" value="18.832"/>
+			<add order="0x60" stat="regHp" value="0.29106"/>
+		</for>
+	</option>
+	<option id="6937">
+		<for>
+			<add order="0x60" stat="pDef" value="18.832"/>
+			<add order="0x60" stat="regMp" value="0.18459"/>
+		</for>
+	</option>
+	<option id="6938">
+		<for>
+			<add order="0x60" stat="pDef" value="18.832"/>
+			<add order="0x60" stat="regCp" value="0.29106"/>
+		</for>
+	</option>
+	<option id="6939">
+		<for>
+			<add order="0x60" stat="pDef" value="18.832"/>
+			<add order="0x60" stat="rEvas" value="1.188661"/>
+		</for>
+	</option>
+	<option id="6940">
+		<for>
+			<add order="0x60" stat="pDef" value="18.832"/>
+			<add order="0x60" stat="accCombat" value="1.188661"/>
+		</for>
+	</option>
+	<option id="6941">
+		<for>
+			<add order="0x60" stat="pDef" value="18.832"/>
+			<add order="0x60" stat="baseCrit" value="12.870821308"/>
+		</for>
+	</option>
+	<option id="6942">
+		<for>
+			<add order="0x60" stat="mDef" value="15.136"/>
+			<add order="0x60" stat="maxHp" value="45.549"/>
+		</for>
+	</option>
+	<option id="6943">
+		<for>
+			<add order="0x60" stat="mDef" value="15.136"/>
+			<add order="0x60" stat="maxMp" value="53.025"/>
+		</for>
+	</option>
+	<option id="6944">
+		<for>
+			<add order="0x60" stat="mDef" value="15.136"/>
+			<add order="0x60" stat="maxCp" value="68.754"/>
+		</for>
+	</option>
+	<option id="6945">
+		<for>
+			<add order="0x60" stat="mDef" value="15.136"/>
+			<add order="0x60" stat="pAtk" value="10.374"/>
+		</for>
+	</option>
+	<option id="6946">
+		<for>
+			<add order="0x60" stat="mDef" value="15.136"/>
+			<add order="0x60" stat="mAtk" value="11.991"/>
+		</for>
+	</option>
+	<option id="6947">
+		<for>
+			<add order="0x60" stat="mDef" value="15.136"/>
+			<add order="0x60" stat="regHp" value="0.29106"/>
+		</for>
+	</option>
+	<option id="6948">
+		<for>
+			<add order="0x60" stat="mDef" value="15.136"/>
+			<add order="0x60" stat="regMp" value="0.18459"/>
+		</for>
+	</option>
+	<option id="6949">
+		<for>
+			<add order="0x60" stat="mDef" value="15.136"/>
+			<add order="0x60" stat="regCp" value="0.29106"/>
+		</for>
+	</option>
+	<option id="6950">
+		<for>
+			<add order="0x60" stat="mDef" value="15.136"/>
+			<add order="0x60" stat="rEvas" value="1.188661"/>
+		</for>
+	</option>
+	<option id="6951">
+		<for>
+			<add order="0x60" stat="mDef" value="15.136"/>
+			<add order="0x60" stat="accCombat" value="1.188661"/>
+		</for>
+	</option>
+	<option id="6952">
+		<for>
+			<add order="0x60" stat="mDef" value="15.136"/>
+			<add order="0x60" stat="baseCrit" value="12.870821308"/>
+		</for>
+	</option>
+	<option id="6953">
+		<for>
+			<add order="0x60" stat="maxHp" value="47.718"/>
+			<add order="0x60" stat="maxMp" value="53.025"/>
+		</for>
+	</option>
+	<option id="6954">
+		<for>
+			<add order="0x60" stat="maxHp" value="47.718"/>
+			<add order="0x60" stat="maxCp" value="68.754"/>
+		</for>
+	</option>
+	<option id="6955">
+		<for>
+			<add order="0x60" stat="maxHp" value="47.718"/>
+			<add order="0x60" stat="pAtk" value="10.374"/>
+		</for>
+	</option>
+	<option id="6956">
+		<for>
+			<add order="0x60" stat="maxHp" value="47.718"/>
+			<add order="0x60" stat="mAtk" value="11.991"/>
+		</for>
+	</option>
+	<option id="6957">
+		<for>
+			<add order="0x60" stat="maxHp" value="47.718"/>
+			<add order="0x60" stat="regHp" value="0.29106"/>
+		</for>
+	</option>
+	<option id="6958">
+		<for>
+			<add order="0x60" stat="maxHp" value="47.718"/>
+			<add order="0x60" stat="regMp" value="0.18459"/>
+		</for>
+	</option>
+	<option id="6959">
+		<for>
+			<add order="0x60" stat="maxHp" value="47.718"/>
+			<add order="0x60" stat="regCp" value="0.29106"/>
+		</for>
+	</option>
+	<option id="6960">
+		<for>
+			<add order="0x60" stat="maxHp" value="47.718"/>
+			<add order="0x60" stat="rEvas" value="1.188661"/>
+		</for>
+	</option>
+	<option id="6961">
+		<for>
+			<add order="0x60" stat="maxHp" value="47.718"/>
+			<add order="0x60" stat="accCombat" value="1.188661"/>
+		</for>
+	</option>
+	<option id="6962">
+		<for>
+			<add order="0x60" stat="maxHp" value="47.718"/>
+			<add order="0x60" stat="baseCrit" value="12.870821308"/>
+		</for>
+	</option>
+	<option id="6963">
+		<for>
+			<add order="0x60" stat="maxMp" value="55.55"/>
+			<add order="0x60" stat="maxCp" value="68.754"/>
+		</for>
+	</option>
+	<option id="6964">
+		<for>
+			<add order="0x60" stat="maxMp" value="55.55"/>
+			<add order="0x60" stat="pAtk" value="10.374"/>
+		</for>
+	</option>
+	<option id="6965">
+		<for>
+			<add order="0x60" stat="maxMp" value="55.55"/>
+			<add order="0x60" stat="mAtk" value="11.991"/>
+		</for>
+	</option>
+	<option id="6966">
+		<for>
+			<add order="0x60" stat="maxMp" value="55.55"/>
+			<add order="0x60" stat="regHp" value="0.29106"/>
+		</for>
+	</option>
+	<option id="6967">
+		<for>
+			<add order="0x60" stat="maxMp" value="55.55"/>
+			<add order="0x60" stat="regMp" value="0.18459"/>
+		</for>
+	</option>
+	<option id="6968">
+		<for>
+			<add order="0x60" stat="maxMp" value="55.55"/>
+			<add order="0x60" stat="regCp" value="0.29106"/>
+		</for>
+	</option>
+	<option id="6969">
+		<for>
+			<add order="0x60" stat="maxMp" value="55.55"/>
+			<add order="0x60" stat="rEvas" value="1.188661"/>
+		</for>
+	</option>
+	<option id="6970">
+		<for>
+			<add order="0x60" stat="maxMp" value="55.55"/>
+			<add order="0x60" stat="accCombat" value="1.188661"/>
+		</for>
+	</option>
+	<option id="6971">
+		<for>
+			<add order="0x60" stat="maxMp" value="55.55"/>
+			<add order="0x60" stat="baseCrit" value="12.870821308"/>
+		</for>
+	</option>
+	<option id="6972">
+		<for>
+			<add order="0x60" stat="maxCp" value="72.028"/>
+			<add order="0x60" stat="pAtk" value="10.374"/>
+		</for>
+	</option>
+	<option id="6973">
+		<for>
+			<add order="0x60" stat="maxCp" value="72.028"/>
+			<add order="0x60" stat="mAtk" value="11.991"/>
+		</for>
+	</option>
+	<option id="6974">
+		<for>
+			<add order="0x60" stat="maxCp" value="72.028"/>
+			<add order="0x60" stat="regHp" value="0.29106"/>
+		</for>
+	</option>
+	<option id="6975">
+		<for>
+			<add order="0x60" stat="maxCp" value="72.028"/>
+			<add order="0x60" stat="regMp" value="0.18459"/>
+		</for>
+	</option>
+	<option id="6976">
+		<for>
+			<add order="0x60" stat="maxCp" value="72.028"/>
+			<add order="0x60" stat="regCp" value="0.29106"/>
+		</for>
+	</option>
+	<option id="6977">
+		<for>
+			<add order="0x60" stat="maxCp" value="72.028"/>
+			<add order="0x60" stat="rEvas" value="1.188661"/>
+		</for>
+	</option>
+	<option id="6978">
+		<for>
+			<add order="0x60" stat="maxCp" value="72.028"/>
+			<add order="0x60" stat="accCombat" value="1.188661"/>
+		</for>
+	</option>
+	<option id="6979">
+		<for>
+			<add order="0x60" stat="maxCp" value="72.028"/>
+			<add order="0x60" stat="baseCrit" value="12.870821308"/>
+		</for>
+	</option>
+	<option id="6980">
+		<for>
+			<add order="0x60" stat="pAtk" value="10.868"/>
+			<add order="0x60" stat="mAtk" value="11.991"/>
+		</for>
+	</option>
+	<option id="6981">
+		<for>
+			<add order="0x60" stat="pAtk" value="10.868"/>
+			<add order="0x60" stat="regHp" value="0.29106"/>
+		</for>
+	</option>
+	<option id="6982">
+		<for>
+			<add order="0x60" stat="pAtk" value="10.868"/>
+			<add order="0x60" stat="regMp" value="0.18459"/>
+		</for>
+	</option>
+	<option id="6983">
+		<for>
+			<add order="0x60" stat="pAtk" value="10.868"/>
+			<add order="0x60" stat="regCp" value="0.29106"/>
+		</for>
+	</option>
+	<option id="6984">
+		<for>
+			<add order="0x60" stat="pAtk" value="10.868"/>
+			<add order="0x60" stat="rEvas" value="1.188661"/>
+		</for>
+	</option>
+	<option id="6985">
+		<for>
+			<add order="0x60" stat="pAtk" value="10.868"/>
+			<add order="0x60" stat="accCombat" value="1.188661"/>
+		</for>
+	</option>
+	<option id="6986">
+		<for>
+			<add order="0x60" stat="pAtk" value="10.868"/>
+			<add order="0x60" stat="baseCrit" value="12.870821308"/>
+		</for>
+	</option>
+	<option id="6987">
+		<for>
+			<add order="0x60" stat="mAtk" value="12.562"/>
+			<add order="0x60" stat="regHp" value="0.29106"/>
+		</for>
+	</option>
+	<option id="6988">
+		<for>
+			<add order="0x60" stat="mAtk" value="12.562"/>
+			<add order="0x60" stat="regMp" value="0.18459"/>
+		</for>
+	</option>
+	<option id="6989">
+		<for>
+			<add order="0x60" stat="mAtk" value="12.562"/>
+			<add order="0x60" stat="regCp" value="0.29106"/>
+		</for>
+	</option>
+	<option id="6990">
+		<for>
+			<add order="0x60" stat="mAtk" value="12.562"/>
+			<add order="0x60" stat="rEvas" value="1.188661"/>
+		</for>
+	</option>
+	<option id="6991">
+		<for>
+			<add order="0x60" stat="mAtk" value="12.562"/>
+			<add order="0x60" stat="accCombat" value="1.188661"/>
+		</for>
+	</option>
+	<option id="6992">
+		<for>
+			<add order="0x60" stat="mAtk" value="12.562"/>
+			<add order="0x60" stat="baseCrit" value="12.870821308"/>
+		</for>
+	</option>
+	<option id="6993">
+		<for>
+			<add order="0x60" stat="regHp" value="0.30492"/>
+			<add order="0x60" stat="regMp" value="0.18459"/>
+		</for>
+	</option>
+	<option id="6994">
+		<for>
+			<add order="0x60" stat="regHp" value="0.30492"/>
+			<add order="0x60" stat="regCp" value="0.29106"/>
+		</for>
+	</option>
+	<option id="6995">
+		<for>
+			<add order="0x60" stat="regHp" value="0.30492"/>
+			<add order="0x60" stat="rEvas" value="1.188661"/>
+		</for>
+	</option>
+	<option id="6996">
+		<for>
+			<add order="0x60" stat="regHp" value="0.30492"/>
+			<add order="0x60" stat="accCombat" value="1.188661"/>
+		</for>
+	</option>
+	<option id="6997">
+		<for>
+			<add order="0x60" stat="regHp" value="0.30492"/>
+			<add order="0x60" stat="baseCrit" value="12.870821308"/>
+		</for>
+	</option>
+	<option id="6998">
+		<for>
+			<add order="0x60" stat="regMp" value="0.19338"/>
+			<add order="0x60" stat="regCp" value="0.29106"/>
+		</for>
+	</option>
+	<option id="6999">
+		<for>
+			<add order="0x60" stat="regMp" value="0.19338"/>
+			<add order="0x60" stat="rEvas" value="1.188661"/>
+		</for>
+	</option>
+</list>

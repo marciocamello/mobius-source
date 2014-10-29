@@ -286,7 +286,7 @@ public final class ItemParser extends StatParser<ItemHolder>
 								
 								if (optionData == null)
 								{
-									error("Not found option_data for id: " + optionElement.attributeValue("id") + "; item_id: " + set.get("item_id"));
+									error("Not found option data for id: " + optionElement.attributeValue("id") + "; item_id: " + set.get("item_id"));
 									continue;
 								}
 								
