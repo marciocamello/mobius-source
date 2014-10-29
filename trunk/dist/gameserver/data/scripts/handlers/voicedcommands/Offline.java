@@ -61,7 +61,7 @@ public class Offline extends Functions implements IVoicedCommandHandler, ScriptF
 			return false;
 		}
 		
-		if (!activeChar.isInZone(Zone.ZoneType.offshore) && Config.SERVICES_OFFLINE_TRADE_ALLOW_OFFSHORE)
+		if (!activeChar.isInZone(Zone.ZoneType.Offshore) && Config.SERVICES_OFFLINE_TRADE_ALLOW_OFFSHORE)
 		{
 			show(new CustomMessage("trade.OfflineNoTradeZoneOnlyOffshore", activeChar), activeChar);
 			return false;

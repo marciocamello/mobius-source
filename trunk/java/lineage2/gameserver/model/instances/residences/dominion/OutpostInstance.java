@@ -85,7 +85,7 @@ public class OutpostInstance extends SiegeFlagInstance
 		
 		StatsSet set = new StatsSet();
 		set.set("name", StringUtils.EMPTY);
-		set.set("type", Zone.ZoneType.dummy);
+		set.set("type", Zone.ZoneType.Dummy);
 		set.set("territory", new Territory().add(c));
 		
 		_zone = new Zone(new ZoneTemplate(set));

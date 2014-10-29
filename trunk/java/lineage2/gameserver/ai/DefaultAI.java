@@ -1215,7 +1215,7 @@ public class DefaultAI extends CharacterAI
 			return;
 		}
 		
-		if (actor.isRaid() && (actor.isInZonePeace() || actor.isInZoneBattle() || actor.isInZone(ZoneType.SIEGE)))
+		if (actor.isRaid() && (actor.isInZonePeace() || actor.isInZoneBattle() || actor.isInZone(ZoneType.Siege)))
 		{
 			teleportHome();
 			return;

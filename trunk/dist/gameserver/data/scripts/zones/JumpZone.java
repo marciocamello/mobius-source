@@ -73,7 +73,7 @@ public final class JumpZone implements ScriptFile
 	@Override
 	public void onLoad()
 	{
-		jumpZones = ReflectionUtils.getZonesByType(Zone.ZoneType.JUMPING);
+		jumpZones = ReflectionUtils.getZonesByType(Zone.ZoneType.Jumping);
 		zoneTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new ZoneTask(), 1000L, 1000L);
 	}
 	

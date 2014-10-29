@@ -46,14 +46,14 @@ public class ConditionPlayerSummonSiegeGolem extends Condition
 			return false;
 		}
 		
-		Zone zone = player.getZone(Zone.ZoneType.RESIDENCE);
+		Zone zone = player.getZone(Zone.ZoneType.Residence);
 		
 		if (zone != null)
 		{
 			return false;
 		}
 		
-		zone = player.getZone(Zone.ZoneType.SIEGE);
+		zone = player.getZone(Zone.ZoneType.Siege);
 		
 		if (zone == null)
 		{

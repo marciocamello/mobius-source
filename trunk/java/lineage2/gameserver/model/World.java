@@ -1291,7 +1291,7 @@ public class World
 		
 		for (Zone zone : zones)
 		{
-			if ((zone != null) && (zone.getType() == ZoneType.water) && zone.checkIfInZone(loc.getX(), loc.getY(), loc.getZ(), reflection))
+			if ((zone != null) && (zone.getType() == ZoneType.Water) && zone.checkIfInZone(loc.getX(), loc.getY(), loc.getZ(), reflection))
 			{
 				return zone;
 			}

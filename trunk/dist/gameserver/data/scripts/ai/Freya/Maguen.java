@@ -66,7 +66,7 @@ public final class Maguen extends Fighter
 		ThreadPoolManager.getInstance().schedule(new Despawn(), 10000L);
 		final List<Creature> around = getActor().getAroundCharacters(800, 300);
 		
-		if (!getActor().isInZone(ZoneType.dummy) && (around != null) && !around.isEmpty())
+		if (!getActor().isInZone(ZoneType.Dummy) && (around != null) && !around.isEmpty())
 		{
 			final ExShowScreenMessage sm = new ExShowScreenMessage(NpcString.MAGUEN_APPEARANCE, 5000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true);
 			
@@ -95,7 +95,7 @@ public final class Maguen extends Fighter
 		
 		final NpcInstance actor = getActor();
 		
-		if (actor.isInZone(ZoneType.dummy))
+		if (actor.isInZone(ZoneType.Dummy))
 		{
 			switch (actor.getNpcState())
 			{

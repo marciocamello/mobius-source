@@ -38,7 +38,7 @@ public final class SiegePiece implements ScriptFile
 	{
 		_zoneListener = new ZoneListener();
 		
-		for (Zone zone : ReflectionUtils.getZonesByType(ZoneType.peace_zone))
+		for (Zone zone : ReflectionUtils.getZonesByType(ZoneType.Peace))
 		{
 			zone.addListener(_zoneListener);
 		}

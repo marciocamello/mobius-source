@@ -1321,7 +1321,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 					return SystemMsg.THAT_IS_AN_INCORRECT_TARGET;
 				}
 				
-				if (player.isInZone(ZoneType.epic) != pcTarget.isInZone(ZoneType.epic))
+				if (player.isInZone(ZoneType.Epic) != pcTarget.isInZone(ZoneType.Epic))
 				{
 					return SystemMsg.THAT_IS_AN_INCORRECT_TARGET;
 				}
@@ -1419,7 +1419,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 						}
 					}
 					
-					if (activeChar.isInZone(ZoneType.SIEGE) && target.isInZone(ZoneType.SIEGE))
+					if (activeChar.isInZone(ZoneType.Siege) && target.isInZone(ZoneType.Siege))
 					{
 						return null;
 					}

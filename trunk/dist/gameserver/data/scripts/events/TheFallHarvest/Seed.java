@@ -82,7 +82,7 @@ public final class Seed extends ScriptItemHandler
 	{
 		final Player activeChar = (Player) playable;
 		
-		if (activeChar.isInZone(ZoneType.RESIDENCE))
+		if (activeChar.isInZone(ZoneType.Residence))
 		{
 			return false;
 		}

@@ -87,7 +87,7 @@ public class FishingSkill extends Skill
 			return false;
 		}
 		
-		if (!player.isInZone(ZoneType.FISHING) || player.isInWater())
+		if (!player.isInZone(ZoneType.Fishing) || player.isInWater())
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANT_FISH_HERE));
 			return false;
@@ -125,7 +125,7 @@ public class FishingSkill extends Skill
 		
 		for (Zone zone : zones)
 		{
-			if (zone.getType() == ZoneType.FISHING)
+			if (zone.getType() == ZoneType.Fishing)
 			{
 				z = zone.getTerritory().getZmax();
 				isInWater = true;
@@ -167,7 +167,7 @@ public class FishingSkill extends Skill
 			return;
 		}
 		
-		Zone zone = player.getZone(ZoneType.FISHING);
+		Zone zone = player.getZone(ZoneType.Fishing);
 		
 		if (zone == null)
 		{

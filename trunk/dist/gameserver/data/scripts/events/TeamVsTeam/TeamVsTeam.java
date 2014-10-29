@@ -629,7 +629,7 @@ public class TeamVsTeam extends Functions implements ScriptFile, OnDeathListener
 		
 		for (Zone z : reflection.getZones())
 		{
-			z.setType(ZoneType.peace_zone);
+			z.setType(ZoneType.Peace);
 		}
 		
 		cleanPlayers();
@@ -651,7 +651,7 @@ public class TeamVsTeam extends Functions implements ScriptFile, OnDeathListener
 		sayToAll("scripts.events.TvT.AnnounceFight", null);
 		for (Zone z : reflection.getZones())
 		{
-			z.setType(ZoneType.battle_zone);
+			z.setType(ZoneType.Battle);
 		}
 		_endTask = executeTask("events.TeamVsTeam.TeamVsTeam", "endBattle", new Object[0], 600000);
 		_startedTime = System.currentTimeMillis() + 600000;
@@ -723,7 +723,7 @@ public class TeamVsTeam extends Functions implements ScriptFile, OnDeathListener
 		removeAura();
 		for (Zone z : reflection.getZones())
 		{
-			z.setType(ZoneType.peace_zone);
+			z.setType(ZoneType.Peace);
 		}
 		boxes.clear();
 		

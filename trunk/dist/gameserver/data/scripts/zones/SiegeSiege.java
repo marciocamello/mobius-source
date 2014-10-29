@@ -39,7 +39,7 @@ public final class SiegeSiege implements ScriptFile
 	{
 		_zoneListener = new ZoneListener();
 		
-		for (Zone zone : ReflectionUtils.getZonesByType(ZoneType.SIEGE))
+		for (Zone zone : ReflectionUtils.getZonesByType(ZoneType.Siege))
 		{
 			zone.addListener(_zoneListener);
 		}

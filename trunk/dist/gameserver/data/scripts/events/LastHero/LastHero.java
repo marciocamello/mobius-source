@@ -540,7 +540,7 @@ public class LastHero extends Functions implements ScriptFile, OnDeathListener, 
 		
 		for (Zone z : reflection.getZones())
 		{
-			z.setType(ZoneType.peace_zone);
+			z.setType(ZoneType.Peace);
 		}
 		
 		cleanPlayers();
@@ -565,7 +565,7 @@ public class LastHero extends Functions implements ScriptFile, OnDeathListener, 
 		sayToAll("scripts.events.LastHero.AnnounceFight", null);
 		for (Zone z : reflection.getZones())
 		{
-			z.setType(ZoneType.battle_zone);
+			z.setType(ZoneType.Battle);
 		}
 		_endTask = executeTask("events.LastHero.LastHero", "endBattle", new Object[0], 300000);
 	}
@@ -577,7 +577,7 @@ public class LastHero extends Functions implements ScriptFile, OnDeathListener, 
 		
 		for (Zone z : reflection.getZones())
 		{
-			z.setType(ZoneType.peace_zone);
+			z.setType(ZoneType.Peace);
 		}
 		boxes.clear();
 		if (live_list.size() == 1)

@@ -40,12 +40,12 @@ public class BookMarkList
 {
 	private static final ZoneType[] FORBIDDEN_ZONES = new ZoneType[]
 	{
-		ZoneType.RESIDENCE,
-		ZoneType.ssq_zone,
-		ZoneType.battle_zone,
-		ZoneType.SIEGE,
-		ZoneType.no_restart,
-		ZoneType.no_summon,
+		ZoneType.Residence,
+		ZoneType.SevenSigns,
+		ZoneType.Battle,
+		ZoneType.Siege,
+		ZoneType.NoRestart,
+		ZoneType.NoSummon,
 	};
 	private static final Logger _log = LoggerFactory.getLogger(BookMarkList.class);
 	private final Player owner;
