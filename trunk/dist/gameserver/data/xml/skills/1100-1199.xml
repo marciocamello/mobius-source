@@ -361,7 +361,6 @@
 	<skill id="1139" levels="2" name="Servitor Magic Shield">
 		<table name="#Tab-mDef">1.23 1.3</table>
 		<table name="#effectPoint">418 495</table>
-		<table name="#abnormal_lv">2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">31 38</table>
 		<table name="#mpConsume1">8 10</table>
@@ -389,7 +388,7 @@
 			<table name="#mpConsume2">37 36 36 35 34 34 33 32 32 31 31 30 29 29 28 27 27 26 25 25 24 24 23 22 22 21 20 20 19 19</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="MagicDefUp" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="MagicDefUp" time="#abnormal_time" val="0">
 				<mul order="0x30" stat="mDef" val="#Tab-mDef"/>
 			</effect>
 		</for>
@@ -397,7 +396,6 @@
 	<skill id="1140" levels="3" name="Servitor Physical Shield">
 		<table name="#Tab-pDef">1.08 1.12 1.15</table>
 		<table name="#effectPoint">379 457 532</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">28 35 41</table>
 		<table name="#mpConsume1">7 9 11</table>
@@ -425,7 +423,7 @@
 			<table name="#mpConsume2">40 39 38 38 37 36 36 35 34 34 33 32 32 31 30 30 29 28 28 27 26 25 25 24 23 23 22 21 21 20</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="pDef" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="pDef" time="#abnormal_time" val="0">
 				<mul order="0x30" stat="pDef" val="#Tab-pDef"/>
 			</effect>
 		</for>
@@ -433,7 +431,6 @@
 	<skill id="1141" levels="2" name="Servitor Haste">
 		<table name="#Tab-pAtkSpd">1.15 1.33</table>
 		<table name="#effectPoint">418 495</table>
-		<table name="#abnormal_lv">1 2</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">31 38</table>
 		<table name="#mpConsume1">8 10</table>
@@ -461,7 +458,7 @@
 			<table name="#mpConsume2">37 36 36 35 34 34 33 32 32 31 31 30 29 29 28 27 27 26 25 25 24 24 23 22 22 21 20 20 19 19</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="pAtkSpeedUp" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="pAtkSpeedUp" time="#abnormal_time" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
 			</effect>
 		</for>
@@ -469,7 +466,6 @@
 	<skill id="1144" levels="2" name="Servitor Wind Walk">
 		<table name="#Tab-runSpd">20 33</table>
 		<table name="#effectPoint">331 457</table>
-		<table name="#abnormal_lv">1 2</table>
 		<table name="#abnormal_time">1200 1200</table>
 		<table name="#mpConsume2">24 36</table>
 		<table name="#mpConsume1">6 10</table>
@@ -497,7 +493,7 @@
 			<table name="#mpConsume2">34 33 33 32 32 31 30 30 29 29 28 28 27 26 26 25 25 24 23 23 22 22 21 21 20 19 19 18 18 17</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="SpeedUp" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="SpeedUp" time="#abnormal_time" val="0">
 				<add order="0x40" stat="runSpd" val="#Tab-runSpd"/>
 			</effect>
 		</for>
@@ -505,7 +501,6 @@
 	<skill id="1145" levels="3" name="Servitor Magic Boost">
 		<table name="#Tab-mAtk">1.55 1.65 1.75</table>
 		<table name="#effectPoint">331 457 532</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">24 36 42</table>
 		<table name="#mpConsume1">6 10 12</table>
@@ -533,7 +528,7 @@
 			<table name="#mpConsume2">41 40 39 39 38 37 37 36 35 35 34 33 32 32 31 30 30 29 28 28 27 26 25 25 24 23 23 22 21 21</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="mAtk" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="mAtk" time="#abnormal_time" val="0">
 				<mul order="0x30" stat="mAtk" val="#Tab-mAtk"/>
 			</effect>
 		</for>
@@ -541,7 +536,6 @@
 	<skill id="1146" levels="3" name="Mighty Servitor">
 		<table name="#Tab-pAtk">1.08 1.12 1.15</table>
 		<table name="#effectPoint">331 457 532</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">24 36 42</table>
 		<table name="#mpConsume1">6 10 12</table>
@@ -569,7 +563,7 @@
 			<table name="#mpConsume2">41 40 39 39 38 37 37 36 35 35 34 33 32 32 31 30 30 29 28 28 27 26 25 25 24 23 23 22 21 21</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="pAtk" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="pAtk" time="#abnormal_time" val="0">
 				<mul order="0x30" stat="pAtk" val="#Tab-pAtk"/>
 			</effect>
 		</for>

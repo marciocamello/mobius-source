@@ -914,7 +914,6 @@
 	</skill>
 	<skill id="1432" levels="2" name="Increase Power">
 		<table name="#pAtk">1.08 1.12</table>
-		<table name="#abnormal">1 2</table>
 		<table name="#mpConsume2">10 20</table>
 		<table name="#mpConsume1">3 5</table>
 		<table name="#magicLevel">10 28</table>
@@ -930,7 +929,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal" stackType="pAtk" time="1200" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="pAtk" time="1200" val="0">
 				<mul order="0x30" stat="pAtk" val="#pAtk"/>
 			</effect>
 		</for>
@@ -1219,7 +1218,6 @@
 	</skill>
 	<skill id="1441" levels="3" name="Soul to Empower">
 		<table name="#Tab-mAtk">1.55 1.65 1.75</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#mpConsume2">30 40 60</table>
 		<table name="#mpConsume1">8 10 12</table>
 		<table name="#magicLevel">43 55 64</table>
@@ -1235,14 +1233,13 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="mAtk" time="1200" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="mAtk" time="1200" val="0">
 				<mul order="0x30" stat="mAtk" val="#Tab-mAtk"/>
 			</effect>
 		</for>
 	</skill>
 	<skill id="1442" levels="3" name="Darkness Protection">
 		<table name="#Res">15 23 30</table>
-		<table name="#order">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">43 49 55</table>
 		<table name="#mpConsume1">11 13 14</table>
@@ -1269,7 +1266,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#order" stackType="DarkAtr" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="DarkAtr" time="#abnormal_time" val="0">
 				<add order="0x40" stat="defenceUnholy" val="#Res"/>
 			</effect>
 		</for>
@@ -2009,7 +2006,7 @@
 			<table name="#mpConsume2">227 223 219 215 211 208 204 200 196 192 188 184 181 177 173</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" time="#abnormal_time" val="0" stackOrder="1" stackType="CoP">
+			<effect count="1" name="Buff" time="1" val="0" stackOrder="1" stackType="CoP">
 				<mul order="0x30" stat="critDamRcpt" val="0.7"/>
 			</effect>
 		</for>
@@ -2322,7 +2319,6 @@
 		<table name="#pAtk">1.3 1.4 1.5</table>
 		<table name="#cAtk">1.3 1.4 1.5</table>
 		<table name="#rCrit">30 40 50</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">15</table>
 		<table name="#reuseDelay">300000</table>
 		<table name="#mpConsume2">56 70 85</table>
@@ -2354,7 +2350,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant3>
 		<for>
-			<effect count="1" name="Buff" time="#abnormal_time" val="0" stackOrder="#abnormal_lv" stackType="impulse">
+			<effect count="1" name="Buff" time="#abnormal_time" val="0" stackOrder="1" stackType="impulse">
 				<mul order="0x30" stat="pAtk" val="#pAtk"/>
 				<mul order="0x30" stat="cAtk" val="#cAtk"/>
 				<add order="0x40" stat="rCrit" val="#rCrit"/>
@@ -2363,7 +2359,6 @@
 	</skill>
 	<skill id="1477" levels="3" name="Vampiric Impulse">
 		<table name="#absorbDam">60 70 80</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">15</table>
 		<table name="#reuseDelay">300000</table>
 		<table name="#mpConsume2">75 95 106</table>
@@ -2395,7 +2390,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant3>
 		<for>
-			<effect count="1" name="Buff" time="#abnormal_time" val="0" stackOrder="#abnormal_lv" stackType="impulse">
+			<effect count="1" name="Buff" time="#abnormal_time" val="0" stackOrder="1" stackType="impulse">
 				<add order="0x40" stat="absorbDam" val="#absorbDam"/>
 			</effect>
 		</for>
@@ -2444,7 +2439,6 @@
 	<skill id="1479" levels="3" name="Magic Impulse">
 		<table name="#Tab-mAtk">1.75 1.85 1.95</table>
 		<table name="#mCrit">3 6 9</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">15</table>
 		<table name="#reuseDelay">300000</table>
 		<table name="#mpConsume2">80 92 101</table>
@@ -2476,7 +2470,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant3>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="impulse" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="impulse" time="#abnormal_time" val="0">
 				<mul order="0x30" stat="mAtk" val="#Tab-mAtk"/>
 				<mul order="0x30" stat="mAtkSpd" val="1.15"/>
 				<add order="0x40" stat="mCritRate" val="#mCrit"/>
