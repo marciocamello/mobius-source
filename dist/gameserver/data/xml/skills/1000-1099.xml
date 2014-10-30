@@ -24,7 +24,6 @@
 	<skill id="1002" levels="3" name="Chant of Flame">
 		<table name="#Tab-mAtkSpd">1.15 1.23 1.3</table>
 		<table name="#effectPoint">285 418 532</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">84 123 163</table>
 		<table name="#mpConsume1">21 31 41</table>
@@ -60,7 +59,6 @@
 	<skill id="1003" levels="3" name="Pa'agrio's Gift">
 		<table name="#Tab-pAtk">1.08 1.12 1.15</table>
 		<table name="#effectPoint">285 379 457</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">84 111 137</table>
 		<table name="#mpConsume1">21 28 35</table>
@@ -97,7 +95,6 @@
 	<skill id="1004" levels="3" name="Pa'agrio's Wisdom">
 		<table name="#effectPoint">379 457 532</table>
 		<table name="#abnormal_time">1200</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#Tab-mAtkSpd">1.15 1.23 1.3</table>
 		<table name="#mpConsume2">111 137 163</table>
 		<table name="#mpConsume1">28 35 41</table>
@@ -133,7 +130,6 @@
 	</skill>
 	<skill id="1005" levels="3" name="Pa'agrio's Blessing">
 		<table name="#Tab-pDef">1.08 1.12 1.15</table>
-		<table name="#power">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#effectPoint">331 418 495</table>
 		<table name="#mpConsume2">96 123 150</table>
@@ -170,7 +166,6 @@
 	</skill>
 	<skill id="1006" levels="3" name="Chant of Fire">
 		<table name="#Tab-mDef">1.15 1.23 1.3</table>
-		<table name="#power">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#effectPoint">204 379 495</table>
 		<table name="#mpConsume2">61 111 150</table>
@@ -206,7 +201,6 @@
 	</skill>
 	<skill id="1007" levels="3" name="Chant of Battle">
 		<table name="#Tab-pAtk">1.08 1.12 1.15</table>
-		<table name="#stackOrder">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#effectPoint">162 243 418</table>
 		<table name="#mpConsume2">48 70 123</table>
@@ -243,7 +237,6 @@
 	<skill id="1008" levels="3" name="Pa'agrio's Glory">
 		<table name="#Tab-mDef">1.15 1.23 1.3</table>
 		<table name="#effectPoint">379 457 532</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">111 137 163</table>
 		<table name="#mpConsume1">28 35 41</table>
@@ -280,7 +273,6 @@
 	<skill id="1009" levels="3" name="Chant of Shielding">
 		<table name="#Tab-pDef">1.08 1.12 1.15</table>
 		<table name="#effectPoint">204 285 379</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">61 84 111</table>
 		<table name="#mpConsume1">16 21 28</table>
@@ -316,7 +308,6 @@
 	<skill id="1010" levels="3" name="Soul Shield">
 		<table name="#Tab-pDef">1.08 1.12 1.15</table>
 		<table name="#effectPoint">121 243 331</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">8 18 24</table>
 		<table name="#mpConsume1">2 5 6</table>
@@ -618,7 +609,6 @@
 	<skill id="1032" levels="3" name="Invigor">
 		<table name="#bleedResist">30 40 50</table>
 		<table name="#effectPoint">379 457 532</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">28 35 41</table>
 		<table name="#mpConsume1">7 9 11</table>
@@ -736,7 +726,6 @@
 	<skill id="1035" levels="4" name="Mental Shield">
 		<table name="#effectPoint">243 379 457 532</table>
 		<table name="#mentalResist">20 30 40 50</table>
-		<table name="#abnormal_lv">1 2 3 4</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">18 28 35 41</table>
 		<table name="#mpConsume1">5 7 9 11</table>
@@ -764,7 +753,7 @@
 			<table name="#mpConsume2">40 39 38 38 37 36 36 35 34 34 33 32 32 31 30 30 29 28 28 27 26 25 25 24 23 23 22 21 21 20</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="mental" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="mental" time="#abnormal_time" val="0">
 				<add order="0x40" stat="rootResist" val="#mentalResist"/>
 				<add order="0x40" stat="sleepResist" val="#mentalResist"/>
 				<add order="0x40" stat="mentalResist" val="#mentalResist"/>
@@ -774,7 +763,6 @@
 	<skill id="1036" levels="2" name="Magic Barrier">
 		<table name="#Tab-mDef">1.23 1.3</table>
 		<table name="#effectPoint">418 495</table>
-		<table name="#abnormal_lv">2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">31 38</table>
 		<table name="#mpConsume1">8 10</table>
@@ -802,7 +790,7 @@
 			<table name="#mpConsume2">37 36 36 35 34 34 33 32 32 31 31 30 29 29 28 27 27 26 25 25 24 24 23 22 22 21 20 20 19 19</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="MagicDefUp" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="MagicDefUp" time="#abnormal_time" val="0">
 				<mul order="0x30" stat="mDef" val="#Tab-mDef"/>
 			</effect>
 		</for>
@@ -810,7 +798,6 @@
 	<skill id="1040" levels="3" name="Shield">
 		<table name="#rate">1.08 1.12 1.15</table>
 		<table name="#effectPoint">121 243 418</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">8 18 31</table>
 		<table name="#mpConsume1">2 5 8</table>
@@ -838,7 +825,7 @@
 			<table name="#mpConsume2">30 29 29 28 28 27 27 26 26 25 25 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17 16 16 15</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="pDef" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="pDef" time="#abnormal_time" val="0">
 				<mul order="0x30" stat="pDef" val="#rate"/>
 			</effect>
 		</for>
@@ -925,7 +912,6 @@
 	<skill id="1044" levels="3" name="Regeneration">
 		<table name="#rate">1.1 1.15 1.2</table>
 		<table name="#effectPoint">331 457 532</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">24 35 41</table>
 		<table name="#mpConsume1">6 9 11</table>
@@ -997,7 +983,6 @@
 		<table name="#Tab-regMp">1.72 2.16 2.74 3.09</table>
 		<table name="#itemConsumeCount">7 9 12 15</table>
 		<table name="#effectPoint">379 457 566 635</table>
-		<table name="#abnormal_lv">1 2 3 4</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">28 35 44 52</table>
 		<table name="#mpConsume1">7 9 11 13</table>
@@ -1025,7 +1010,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="mpregen" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="mpregen" time="#abnormal_time" val="0">
 				<add order="0x40" stat="regMp" val="#Tab-regMp"/>
 			</effect>
 		</for>
@@ -1143,7 +1128,6 @@
 	<skill id="1059" levels="3" name="Empower">
 		<table name="#Tab-mAtk">1.55 1.65 1.75</table>
 		<table name="#effectPoint">243 418 495</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">18 31 38</table>
 		<table name="#mpConsume1">5 8 10</table>
@@ -1171,7 +1155,7 @@
 			<table name="#mpConsume2">37 36 36 35 34 34 33 32 32 31 31 30 29 29 28 27 27 26 25 25 24 24 23 22 22 21 20 20 19 19</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="mAtk" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="mAtk" time="#abnormal_time" val="0">
 				<mul order="0x30" stat="mAtk" val="#Tab-mAtk"/>
 			</effect>
 		</for>
@@ -1184,7 +1168,6 @@
 		<table name="#runSpd">5 8</table>
 		<table name="#rEvas">2 4</table>
 		<table name="#effectPoint">331 495</table>
-		<table name="#abnormal_lv">1 2</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">24 38</table>
 		<table name="#mpConsume1">6 10</table>
@@ -1212,7 +1195,7 @@
 			<table name="#mpConsume2">37 36 36 35 34 34 33 32 32 31 31 30 29 29 28 27 27 26 25 25 24 24 23 22 22 21 20 20 19 19</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="berserk" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="berserk" time="#abnormal_time" val="0">
 				<mul order="0x30" stat="mAtk" val="#Tab-mAtk"/>
 				<mul order="0x30" stat="pAtk" val="#Tab-rate"/>
 				<mul order="0x30" stat="pDef" val="#pDef"/>
@@ -1420,7 +1403,6 @@
 	<skill id="1073" levels="2" name="Eva's Kiss">
 		<table name="#breath">4 6</table>
 		<table name="#effectPoint">121 417</table>
-		<table name="#abnormal_lv">1 2</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">16 38</table>
 		<table name="#mpConsume1">4 10</table>
@@ -1448,7 +1430,7 @@
 			<table name="#mpConsume2">37 36 36 35 34 34 33 32 32 31 31 30 29 29 28 27 27 26 25 25 24 24 23 22 22 21 20 20 19 19</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="Breath" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="Breath" time="#abnormal_time" val="0">
 				<mul order="0x30" stat="breath" val="#breath"/>
 			</effect>
 		</for>
@@ -1674,7 +1656,6 @@
 	<skill id="1086" levels="2" name="Haste">
 		<table name="#Tab-pAtkSpd">1.15 1.33</table>
 		<table name="#effectPoint">418 495</table>
-		<table name="#abnormal_lv">1 2</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">31 38</table>
 		<table name="#mpConsume1">8 10</table>
@@ -1702,7 +1683,7 @@
 			<table name="#mpConsume2">37 36 36 35 34 34 33 32 32 31 31 30 29 29 28 27 27 26 25 25 24 24 23 22 22 21 20 20 19 19</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="pAtkSpeedUp" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="pAtkSpeedUp" time="#abnormal_time" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="#Tab-pAtkSpd"/>
 			</effect>
 		</for>
@@ -1710,7 +1691,6 @@
 	<skill id="1087" levels="3" name="Agility">
 		<table name="#Tab-rEvas">2 3 4</table>
 		<table name="#effectPoint">243 418 495</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">18 31 38</table>
 		<table name="#mpConsume1">5 8 10</table>
@@ -1738,7 +1718,7 @@
 			<table name="#mpConsume2">37 36 36 35 34 34 33 32 32 31 31 30 29 29 28 27 27 26 25 25 24 24 23 22 22 21 20 20 19 19</table>
 		</enchant2>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="rEvas" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="rEvas" time="#abnormal_time" val="0">
 				<add order="0x40" stat="rEvas" val="#Tab-rEvas"/>
 			</effect>
 		</for>

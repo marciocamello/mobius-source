@@ -763,7 +763,6 @@
 	<skill id="1232" levels="3" name="Blazing Skin">
 		<table name="#reflectDam">10 15 20</table>
 		<table name="#effectPoint">379 457 532</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#pDef">1</table>
 		<table name="#fireRcpt">0</table>
@@ -801,7 +800,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant4>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="DmgShield" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="DmgShield" time="#abnormal_time" val="0">
 				<add order="0x40" stat="reflectDam" val="#reflectDam"/>
 				<mul order="0x30" stat="pDef" val="#pDef"/>
 				<add order="0x40" stat="defenceFire" val="#fireRcpt"/>
@@ -1055,7 +1054,6 @@
 	<skill id="1238" levels="3" name="Freezing Skin">
 		<table name="#power">10 15 20</table>
 		<table name="#effectPoint">379 457 532</table>
-		<table name="#abnormal_lv">1 2 3</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#pDef">1</table>
 		<table name="#waterRcpt">0</table>
@@ -1092,7 +1090,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant4>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#abnormal_lv" stackType="DmgShield" time="#abnormal_time" val="0">
+			<effect count="1" name="Buff" stackOrder="1" stackType="DmgShield" time="#abnormal_time" val="0">
 				<add order="0x40" stat="reflectDam" val="#power"/>
 				<mul order="0x30" stat="pDef" val="#pDef"/>
 				<add order="0x40" stat="defenceWater" val="#waterRcpt"/>
@@ -1766,7 +1764,6 @@
 		</enchant2>
 	</skill>
 	<skill id="1259" levels="4" name="Stun Resistance">
-		<table name="#res">15 20 30 40</table>
 		<table name="#abnormal_time">1200</table>
 		<table name="#mpConsume2">28 38 46 52</table>
 		<table name="#mpConsume1">7 10 12 13</table>
@@ -1797,8 +1794,8 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant3>
 		<for>
-			<effect count="1" name="Buff" stackOrder="#res" stackType="shockRcpt" time="#abnormal_time" val="0">
-				<add order="0x40" stat="stunResist" val="#res"/>
+			<effect count="1" name="Buff" stackOrder="1" stackType="shockRcpt" time="#abnormal_time" val="0">
+				<add order="0x40" stat="stunResist" val="1.0"/>
 			</effect>
 		</for>
 	</skill>
