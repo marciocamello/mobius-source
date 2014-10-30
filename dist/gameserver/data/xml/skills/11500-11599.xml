@@ -10,7 +10,8 @@
 		<set name="coolTime" val="300"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="target" val="TARGET_ONE"/>
-		<set name="overHit" val="true"/>&gt;<set name="isSkillTimePermanent" val="true"/>
+		<set name="overHit" val="true"/>
+		<set name="isSkillTimePermanent" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
 		<set name="isSkillTimePermanent" val="true"/>
@@ -683,8 +684,8 @@
 				<mul order="0x30" stat="runSpd" val="#spd"/>
 				<add order="0x40" stat="debuffResist" val="10"/>
 				<triggers>
-					<trigger id="6059" level="1" type="RECEIVE_DAMAGE" chance="80">
-						<player damage="200;0"/>
+					<trigger id="11569" level="1" type="RECEIVE_DAMAGE" chance="25">
+						<player damage="300;0"/>
 					</trigger>
 				</triggers>
 			</effect>
@@ -1852,25 +1853,34 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11570" levels="1" name="Healing Melody">
-		<table name="#ench1mpConsume">187 181 175 169 163 156 150 144 138 132</table>
-		<set name="hitTime" val="2000"/>
-		<set name="magicLvl" val="85"/>
-		<set name="mpConsume2" val="582"/>
+	<skill id="11569" levels="1" name="Critical Damage Increase">	
+		<set name="reuseDelay" val="15000"/>		
+		<set name="target" val="TARGET_SELF"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="10">
+				<mul order="0x30" stat="cAtk" val="1.15"/>
+				<mul order="0x30" stat="mCritDamage" val="1.15"/>
+			</effect>
+		</for>
+	</skill>	
+	<skill id="11570" levels="1" name="Healing Melody">
 		<set name="magicType" val="MAGIC"/>
 		<set name="effectPoint" val="398"/>
+		<set name="hitTime" val="2000"/>
+		<set name="magicLvl" val="85"/>
 		<set name="castRange" val="900"/>
+		<set name="healRadius" val="350"/>
+		<set name="mpConsume2" val="155"/>
+		<set name="mpConsume1" val="39"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="healPercents" val="35;32;30;27;25;23;21;20;10;10;10"/>
-		<set name="reuseDelay" val="2000"/>
+		<set name="healPercents" val="30;27;24;21;18;15;12;10;10;10;10"/>
+		<set name="reuseDelay" val="5000"/>
 		<set name="skillRadius" val="600"/>
 		<set name="skillType" val="CHAIN_HEAL"/>
 		<set name="target" val="TARGET_ONE"/>
-		<set name="target" val="TARGET_CLAN"/>	
-		<set name="target" val="TARGET_SELF"/>		
-		<set name="relationSkillsId" val="1229;1488;58;1553" />
-		<enchant1 name="mpConsume" val="#ench1mpConsume" />
 	</skill>
 	<skill id="11571" levels="1" name="Recovery Melody">
 		<table name="#mpConsume2">120</table>
@@ -2119,8 +2129,8 @@
 				<mul order="0x30" stat="runSpd" val="#runSpd"/>
 				<mul order="0x30" stat="cAtk" val="1.2"/>
 				<triggers>
-					<trigger id="6059" level="1" type="RECEIVE_DAMAGE" chance="80">
-						<player damage="200;0"/>
+					<trigger id="11569" level="1" type="RECEIVE_DAMAGE" chance="25">
+						<player damage="300;0"/>
 					</trigger>
 				</triggers>
 			</effect>
