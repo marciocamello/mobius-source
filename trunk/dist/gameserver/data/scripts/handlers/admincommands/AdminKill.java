@@ -21,8 +21,6 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.ScriptFile;
 
-import org.apache.commons.lang3.math.NumberUtils;
-
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
@@ -67,7 +65,7 @@ public class AdminKill implements IAdminCommandHandler, ScriptFile
 				break;
 			
 			case "admin_damage":
-				handleDamage(activeChar, NumberUtils.toInt(wordList[1], 1));
+				handleDamage(activeChar, Integer.valueOf(wordList[1]));
 				break;
 		}
 		

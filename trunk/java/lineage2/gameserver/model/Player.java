@@ -311,7 +311,6 @@ import lineage2.gameserver.utils.TeleportUtils;
 import lineage2.gameserver.utils.Util;
 
 import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 import org.napile.primitive.Containers;
@@ -5523,7 +5522,7 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if (Config.SERVICES_ENABLE_NO_CARRIER)
 		{
-			time = NumberUtils.toInt(getVar("noCarrier"), Config.SERVICES_NO_CARRIER_DEFAULT_TIME);
+			time = getVar("noCarrier") != null ? getVarInt("noCarrier") : Config.SERVICES_NO_CARRIER_DEFAULT_TIME;
 		}
 		
 		scheduleDelete(time * 1000L);

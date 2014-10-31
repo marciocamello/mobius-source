@@ -23,8 +23,6 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.CustomSpawnTable;
 
-import org.apache.commons.lang3.math.NumberUtils;
-
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
@@ -56,7 +54,7 @@ public class AdminDelete implements IAdminCommandHandler, ScriptFile
 		switch (command)
 		{
 			case "admin_delete":
-				GameObject obj = wordList.length == 1 ? activeChar.getTarget() : GameObjectsStorage.getNpc(NumberUtils.toInt(wordList[1]));
+				GameObject obj = wordList.length == 1 ? activeChar.getTarget() : GameObjectsStorage.getNpc(Integer.valueOf(wordList[1]));
 				
 				if ((obj != null) && obj.isNpc())
 				{

@@ -20,8 +20,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.ScriptFile;
 
-import org.apache.commons.lang3.math.NumberUtils;
-
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
@@ -55,7 +53,7 @@ public class AdminPetition implements IAdminCommandHandler, ScriptFile
 			return false;
 		}
 		
-		int petitionId = NumberUtils.toInt(wordList.length > 1 ? wordList[1] : "-1", -1);
+		int petitionId = Integer.valueOf(wordList.length > 1 ? wordList[1] : "-1");
 		switch (command)
 		{
 			case "admin_view_petitions":

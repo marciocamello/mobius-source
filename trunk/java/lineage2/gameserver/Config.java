@@ -39,7 +39,6 @@ import lineage2.gameserver.network.loginservercon.ServerType;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.BooleanUtils;
-import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.commons.lang3.reflect.FieldUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -2336,15 +2335,15 @@ public class Config
 			}
 			else if (field.getType() == int.class)
 			{
-				field.setInt(null, NumberUtils.toInt(value));
+				field.setInt(null, Integer.valueOf(value));
 			}
 			else if (field.getType() == long.class)
 			{
-				field.setLong(null, NumberUtils.toLong(value));
+				field.setLong(null, Long.valueOf(value));
 			}
 			else if (field.getType() == double.class)
 			{
-				field.setDouble(null, NumberUtils.toDouble(value));
+				field.setDouble(null, Double.valueOf(value));
 			}
 			else if (field.getType() == String.class)
 			{

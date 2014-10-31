@@ -18,8 +18,6 @@ import lineage2.gameserver.instancemanager.HellboundManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.scripts.ScriptFile;
 
-import org.apache.commons.lang3.math.NumberUtils;
-
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
@@ -54,13 +52,13 @@ public class AdminHellbound implements IAdminCommandHandler, ScriptFile
 		{
 			case "admin_hbadd":
 				HellboundManager.addConfidence(Long.parseLong(wordList[1]));
-				activeChar.sendMessage("Added " + NumberUtils.toInt(wordList[1], 1) + " to Hellbound confidence");
+				activeChar.sendMessage("Added " + Integer.valueOf(wordList[1]) + " to Hellbound confidence");
 				activeChar.sendMessage("Hellbound confidence is now " + HellboundManager.getConfidence());
 				break;
 			
 			case "admin_hbsub":
 				HellboundManager.reduceConfidence(Long.parseLong(wordList[1]));
-				activeChar.sendMessage("Reduced confidence by " + NumberUtils.toInt(wordList[1], 1));
+				activeChar.sendMessage("Reduced confidence by " + Integer.valueOf(wordList[1]));
 				activeChar.sendMessage("Hellbound confidence is now " + HellboundManager.getConfidence());
 				break;
 			
