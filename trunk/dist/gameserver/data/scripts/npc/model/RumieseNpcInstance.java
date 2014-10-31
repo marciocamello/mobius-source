@@ -12,7 +12,7 @@
  */
 package npc.model;
 
-import instances.IsthinaNormal;
+import instances.IstinaInstance;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -23,12 +23,11 @@ import lineage2.gameserver.utils.ReflectionUtils;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public final class RumieseNpcInstance extends NpcInstance
 {
-	private static final int normalIsthinaInstId = 169;
-	private static final int hardIsthinaInstId = 170;
+	private static final int NORMAL_MODE_ISTINA_INS_ID = 169;
+	private static final int HARD_MODE_ISTINA_INS_ID = 170;
 	
 	/**
 	 * Constructor for RumieseNpcInstance.
@@ -53,55 +52,51 @@ public final class RumieseNpcInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("request_normalisthina"))
+		Reflection r = player.getActiveReflection();
+		
+		switch (command)
 		{
-			Reflection r = player.getActiveReflection();
-			
-			if (r != null)
-			{
-				if (player.canReenterInstance(normalIsthinaInstId))
+			case "request_normalisthina":
+				if (r != null)
 				{
-					player.teleToLocation(r.getTeleportLoc(), r);
+					if (player.canReenterInstance(NORMAL_MODE_ISTINA_INS_ID))
+					{
+						player.teleToLocation(-177104, 146452, -11389, r);
+					}
 				}
-			}
-			else if (player.canEnterInstance(normalIsthinaInstId))
-			{
-				ReflectionUtils.enterReflection(player, new IsthinaNormal(), normalIsthinaInstId);
-			}
-		}
-		else if (command.equalsIgnoreCase("request_hardisthina"))
-		{
-			Reflection r = player.getActiveReflection();
-			
-			if (r != null)
-			{
-				if (player.canReenterInstance(hardIsthinaInstId))
+				else if (player.canEnterInstance(NORMAL_MODE_ISTINA_INS_ID))
 				{
-					player.teleToLocation(r.getTeleportLoc(), r);
+					ReflectionUtils.enterReflection(player, new IstinaInstance(), NORMAL_MODE_ISTINA_INS_ID);
 				}
-			}
-			else if (player.canEnterInstance(hardIsthinaInstId))
-			{
-				ReflectionUtils.enterReflection(player, new IsthinaNormal(), hardIsthinaInstId);
-			}
-		}
-		else if (command.equalsIgnoreCase("request_takemyprize"))
-		{
-		}
-		else if (command.equalsIgnoreCase("request_Device"))
-		{
-			if (ItemFunctions.getItemCount(player, 17608) > 0)
-			{
-				showChatWindow(player, "default/" + getId() + "-no.htm");
-				return;
-			}
+				break;
 			
-			Functions.addItem(player, 17608, 1);
-			showChatWindow(player, "default/" + getId() + "-ok.htm");
-		}
-		else
-		{
-			super.onBypassFeedback(player, command);
+			case "request_hardisthina":
+				if (r != null)
+				{
+					if (player.canReenterInstance(HARD_MODE_ISTINA_INS_ID))
+					{
+						player.teleToLocation(-177104, 146452, -11389, r);
+					}
+				}
+				else if (player.canEnterInstance(HARD_MODE_ISTINA_INS_ID))
+				{
+					ReflectionUtils.enterReflection(player, new IstinaInstance(), HARD_MODE_ISTINA_INS_ID);
+				}
+				break;
+			
+			case "request_Device":
+				if (ItemFunctions.getItemCount(player, 17608) > 0)
+				{
+					showChatWindow(player, "default/" + getId() + "-no.htm");
+					return;
+				}
+				Functions.addItem(player, 17608, 1);
+				showChatWindow(player, "default/" + getId() + "-ok.htm");
+				break;
+			
+			default:
+				super.onBypassFeedback(player, command);
+				break;
 		}
 	}
 }

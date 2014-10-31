@@ -5756,8 +5756,8 @@
 		<set name="collision_radius" value="100.0"/>
 		<set name="collision_height" value="111.3"/>
 		<set name="level" value="94"/>
-		<set name="type" value="ReflectionBoss"/>
-		<set name="ai_type" value="Isthina"/>
+		<set name="type" value="RaidBoss"/>
+		<set name="ai_type" value="Istina"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="40836019"/>
 		<set name="baseHpRate" value="1.0"/>
@@ -5782,6 +5782,11 @@
 		<set name="baseMAtkSpd" value="373"/>
 		<set name="baseRunSpd" value="190"/>
 		<set name="baseWalkSpd" value="90"/>
+		<skills>
+			<skill id="4416" level="3"/>
+			<skill id="14708" level="1"/>
+			<skill id="5463" level="1"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -5790,96 +5795,16 @@
 			<defence attribute="holy" value="300"/>
 			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="43.28528">
-				<reward item_id="18147" min="1" max="1" chance="9.15669"/>
-				<reward item_id="18142" min="1" max="1" chance="9.13167"/>
-				<reward item_id="18137" min="1" max="1" chance="9.12866"/>
-				<reward item_id="18138" min="1" max="1" chance="9.12566"/>
-				<reward item_id="18143" min="1" max="1" chance="9.09764"/>
-				<reward item_id="18145" min="1" max="1" chance="9.09664"/>
-				<reward item_id="18144" min="1" max="1" chance="9.08763"/>
-				<reward item_id="18141" min="1" max="1" chance="9.05559"/>
-				<reward item_id="18146" min="1" max="1" chance="9.04159"/>
-				<reward item_id="18140" min="1" max="1" chance="9.03958"/>
-				<reward item_id="18139" min="1" max="1" chance="9.03859"/>
-			</group>
-			<group chance="3.57445">
-				<reward item_id="17325" min="1" max="1" chance="9.0909"/>
-				<reward item_id="17334" min="1" max="1" chance="9.0909"/>
-				<reward item_id="17333" min="1" max="1" chance="9.0909"/>
-				<reward item_id="17332" min="1" max="1" chance="9.0909"/>
-				<reward item_id="17330" min="1" max="1" chance="9.0909"/>
-				<reward item_id="17329" min="1" max="1" chance="9.0909"/>
-				<reward item_id="17324" min="1" max="1" chance="9.0909"/>
-				<reward item_id="17328" min="1" max="1" chance="9.0909"/>
-				<reward item_id="17331" min="1" max="1" chance="9.0909"/>
-				<reward item_id="17327" min="1" max="1" chance="9.0909"/>
-				<reward item_id="17326" min="1" max="1" chance="9.0909"/>
-			</group>
-			<group chance="43.31906">
-				<reward item_id="18167" min="1" max="1" chance="5.94602"/>
-				<reward item_id="18154" min="1" max="1" chance="5.93900"/>
-				<reward item_id="18164" min="1" max="1" chance="5.93800"/>
-				<reward item_id="18156" min="1" max="1" chance="5.91799"/>
-				<reward item_id="18157" min="1" max="1" chance="5.90799"/>
-				<reward item_id="18165" min="1" max="1" chance="5.90499"/>
-				<reward item_id="18158" min="1" max="1" chance="5.89800"/>
-				<reward item_id="18159" min="1" max="1" chance="5.88200"/>
-				<reward item_id="18153" min="1" max="1" chance="5.87999"/>
-				<reward item_id="18155" min="1" max="1" chance="5.86898"/>
-				<reward item_id="18162" min="1" max="1" chance="5.86700"/>
-				<reward item_id="18160" min="1" max="1" chance="5.85499"/>
-				<reward item_id="18166" min="1" max="1" chance="5.84800"/>
-				<reward item_id="18163" min="1" max="1" chance="5.84500"/>
-				<reward item_id="18152" min="1" max="1" chance="5.84398"/>
-				<reward item_id="18161" min="1" max="1" chance="5.82999"/>
-				<reward item_id="18151" min="1" max="1" chance="5.82798"/>
-			</group>
-			<group chance="5.52415">
-				<reward item_id="17338" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17339" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17353" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17354" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17351" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17350" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17348" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17347" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17346" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17345" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17344" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17343" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17349" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17342" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17341" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17340" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17352" min="1" max="1" chance="5.88235"/>
-			</group>
-			<group chance="4.29712">
-				<reward item_id="19453" min="1" max="1" chance="33.6257"/>
-				<reward item_id="19452" min="1" max="1" chance="33.2929"/>
-				<reward item_id="19451" min="1" max="1" chance="33.0812"/>
-			</group>
-			<group chance="34.242">
-				<reward item_id="19448" min="1" max="1" chance="85.47982"/>
-				<reward item_id="19444" min="1" max="1" chance="14.52018"/>
-			</group>
-		</rewardlist>
-		<skills>
-			<skill id="4416" level="3"/>
-			<skill id="14708" level="1"/>
-			<skill id="5463" level="1"/>
-		</skills>
 	</npc>
 	<npc id="29196" name="Istina" title="Queen of Annihilation">
 		<set name="aggroRange" value="500"/>
 		<set name="collision_radius" value="100.0"/>
 		<set name="collision_height" value="135.0"/>
 		<set name="level" value="99"/>
-		<set name="type" value="ReflectionBoss"/>
-		<set name="ai_type" value="Isthina"/>
+		<set name="type" value="RaidBoss"/>
+		<set name="ai_type" value="Istina"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="31561374"/>
+		<set name="baseHpMax" value="41029787"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseHpReg" value="20"/>
 		<set name="baseMpMax" value="5357"/>
@@ -5902,6 +5827,11 @@
 		<set name="baseMAtkSpd" value="373"/>
 		<set name="baseRunSpd" value="190"/>
 		<set name="baseWalkSpd" value="90"/>
+		<skills>
+			<skill id="4416" level="3"/>
+			<skill id="14709" level="1"/>
+			<skill id="5463" level="1"/>
+		</skills>
 		<attributes>
 			<defence attribute="fire" value="240"/>
 			<defence attribute="water" value="240"/>
@@ -5910,44 +5840,6 @@
 			<defence attribute="holy" value="240"/>
 			<defence attribute="unholy" value="240"/>
 		</attributes>
-		<skills>
-			<skill id="4416" level="3"/>
-			<skill id="14709" level="1"/>
-			<skill id="5463" level="1"/>
-		</skills>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="83.29789">
-				<reward item_id="18098" min="1" max="1" chance="5.95654"/>
-				<reward item_id="18087" min="1" max="1" chance="5.95255"/>
-				<reward item_id="18084" min="1" max="1" chance="5.95054"/>
-				<reward item_id="18093" min="1" max="1" chance="5.91550"/>
-				<reward item_id="18092" min="1" max="1" chance="5.91150"/>
-				<reward item_id="18086" min="1" max="1" chance="5.90950"/>
-				<reward item_id="18094" min="1" max="1" chance="5.89748"/>
-				<reward item_id="18095" min="1" max="1" chance="5.88246"/>
-				<reward item_id="18089" min="1" max="1" chance="5.87846"/>
-				<reward item_id="18096" min="1" max="1" chance="5.87546"/>
-				<reward item_id="18091" min="1" max="1" chance="5.86845"/>
-				<reward item_id="18085" min="1" max="1" chance="5.85544"/>
-				<reward item_id="18099" min="1" max="1" chance="5.83641"/>
-				<reward item_id="18083" min="1" max="1" chance="5.83241"/>
-				<reward item_id="18088" min="1" max="1" chance="5.82741"/>
-				<reward item_id="18097" min="1" max="1" chance="5.82540"/>
-				<reward item_id="18090" min="1" max="1" chance="5.82440"/>
-			</group>
-			<group chance="16.7021">
-				<reward item_id="19455" min="1" max="1" chance="33.47147"/>
-				<reward item_id="19456" min="1" max="1" chance="33.46148"/>
-				<reward item_id="19454" min="1" max="1" chance="33.06703"/>
-			</group>
-			<group chance="50.000">
-				<reward item_id="19448" min="1" max="1" chance="47.19778"/>
-				<reward item_id="18561" min="1" max="1" chance="16.56611"/>
-				<reward item_id="18560" min="1" max="1" chance="16.03569"/>
-				<reward item_id="18562" min="1" max="1" chance="15.45791"/>
-				<reward item_id="19446" min="1" max="1" chance="4.74251"/>
-			</group>
-		</rewardlist>
 	</npc>
 	<npc id="29197" name="Earth Wyrm Trasken" title="Hell's Gate">
 		<set name="aggroRange" value="0"/>
