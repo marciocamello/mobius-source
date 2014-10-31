@@ -906,7 +906,7 @@
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="7324"/>
+		<set name="baseHpMax" value="4660000.468"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="13"/>
 		<set name="baseMpMax" value="2253"/>
@@ -1546,8 +1546,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="1"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="30"/>
 		<attributes>
 			<defence attribute="fire" value="160"/>
 			<defence attribute="water" value="160"/>

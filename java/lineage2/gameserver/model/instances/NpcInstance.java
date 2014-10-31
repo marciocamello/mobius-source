@@ -1010,6 +1010,11 @@ public class NpcInstance extends Creature
 		return _hasRandomWalk;
 	}
 	
+	public void setRandomWalk(boolean value)
+	{
+		_hasRandomWalk = value;
+	}
+	
 	/**
 	 * Method getCastle.
 	 * @return Castle

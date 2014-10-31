@@ -1,0 +1,10 @@
+<?xml version='1.0'?>
+<!DOCTYPE list SYSTEM "multisell.dtd">
+<list>
+	<config showall="true" notax="true" keepenchanted="false"/>
+	<item>
+		<ingredient id="34883" count="1"/>
+		<ingredient id="19455" count="1"/>
+		<production id="34859" count="1"/>
+	</item>
+</list>
