@@ -3,65 +3,107 @@
 	<skill id="8500" levels="1" name="Pink Talisman - CON">
 		<set name="icon" val="icon.etc_talisman_event_i00"/>
 		<set name="magicLevel" val="55"/>
-		<set name="target" val="TARGET_NONE"/>
+		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="Buff">
+				<add order="0x10" stat="CON" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8501" levels="1" name="Pink Talisman - INT">
 		<set name="icon" val="icon.etc_talisman_event_i00"/>
 		<set name="magicLevel" val="55"/>
-		<set name="target" val="TARGET_NONE"/>
+		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="Buff">
+				<add order="0x10" stat="INT" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8502" levels="1" name="Pink Talisman - WIT">
 		<set name="icon" val="icon.etc_talisman_event_i00"/>
 		<set name="magicLevel" val="55"/>
-		<set name="target" val="TARGET_NONE"/>
+		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="Buff">
+				<add order="0x10" stat="WIT" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8503" levels="1" name="Pink Talisman - MEN">
 		<set name="icon" val="icon.etc_talisman_event_i00"/>
 		<set name="magicLevel" val="55"/>
-		<set name="target" val="TARGET_NONE"/>
+		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="Buff">
+				<add order="0x10" stat="MEN" val="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8504" levels="1" name="Pink Talisman - Stun Resistance">
 		<set name="icon" val="icon.etc_talisman_event_i01"/>
 		<set name="magicLevel" val="55"/>
-		<set name="target" val="TARGET_NONE"/>
+		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="stunResist" val="15"/>
+		</for>
 	</skill>
 	<skill id="8505" levels="1" name="Pink Talisman - Sleep Resistance">
 		<set name="icon" val="icon.etc_talisman_event_i01"/>
 		<set name="magicLevel" val="55"/>
-		<set name="target" val="TARGET_NONE"/>
+		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="sleepResist" val="15"/>
+		</for>
 	</skill>
 	<skill id="8506" levels="1" name="Pink Talisman - Hold Resistance">
 		<set name="icon" val="icon.etc_talisman_event_i01"/>
 		<set name="magicLevel" val="55"/>
-		<set name="target" val="TARGET_NONE"/>
+		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="rootResist" val="15"/>
+		</for>
 	</skill>
 	<skill id="8507" levels="1" name="Pink Talisman - Paralysis Resistance">
 		<set name="icon" val="icon.etc_talisman_event_i01"/>
 		<set name="magicLevel" val="55"/>
-		<set name="target" val="TARGET_NONE"/>
+		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<sub order="0x40" stat="paralyzeResist" val="15"/>
+		</for>
 	</skill>
 	<skill id="8508" levels="1" name="Pink Talisman - All STAT">
 		<set name="icon" val="icon.etc_talisman_event_i02"/>
 		<set name="magicLevel" val="55"/>
-		<set name="target" val="TARGET_NONE"/>
+		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="Buff">
+				<add order="0x10" stat="STR" val="1" />
+				<add order="0x10" stat="DEX" val="1" />
+				<add order="0x10" stat="CON" val="1" />
+				<add order="0x10" stat="INT" val="1" />
+				<add order="0x10" stat="WIT" val="1" />
+				<add order="0x10" stat="MEN" val="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8509" levels="1" name="Blessed Escape">
 		<set name="magicType" val="SPECIAL"/>
