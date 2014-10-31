@@ -1355,15 +1355,25 @@
 	<skill id="8498" levels="1" name="Pink Talisman - STR">
 		<set name="icon" val="icon.etc_talisman_event_i00"/>
 		<set name="magicLevel" val="55"/>
-		<set name="target" val="TARGET_NONE"/>
+		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="Buff">
+				<add order="0x10" stat="STR" val="2"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8499" levels="1" name="Pink Talisman - DEX">
 		<set name="icon" val="icon.etc_talisman_event_i00"/>
 		<set name="magicLevel" val="55"/>
-		<set name="target" val="TARGET_NONE"/>
+		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<effect name="Buff">
+				<add order="0x10" stat="DEX" val="2"/>
+			</effect>
+		</for>
 	</skill>
 </list>
