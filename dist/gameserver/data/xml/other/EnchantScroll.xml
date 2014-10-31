@@ -126,4 +126,8 @@
 	<item id="22559" type="NORMAL" target="ARMOR" grade="S" chance="55" min="0" safe="3" max="16"/>
 	<item id="22560" type="NORMAL" target="WEAPON" grade="R" chance="55" min="0" safe="3" max="16"/>
 	<item id="22561" type="NORMAL" target="ARMOR" grade="R" chance="55" min="0" safe="3" max="16"/>
+	<item id="36163" type="GIANT" target="WEAPON" grade="R" chance="33" min="0" safe="3" max="16"/>
+	<item id="36164" type="GIANT" target="ARMOR" grade="R" chance="33" min="0" safe="3" max="16"/>
+	<item id="36386" type="GIANT" target="WEAPON" grade="R" chance="33" min="0" safe="3" max="16"/>	
+	<item id="36389" type="GIANT" target="ARMOR" grade="R" chance="33" min="0" safe="3" max="16"/>
 </list>

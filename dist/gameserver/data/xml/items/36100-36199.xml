@@ -380,13 +380,18 @@
 		<set name="icon" value="icon.bless_scroll_r99"/>
 	</etcitem>
 	<etcitem id="36163" name="Giant's Scroll: Enchant Weapon (R-grade)">
-		<set name="class" value="OTHER"/>
+		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
-		<set name="weight" value="100"/>
-		<set name="stackable" value="true"/>
-		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.giant_scrl_of_ench_wp_r"/>
-	</etcitem>
+		<set name="price" value="0"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="SCROLL"/>
+		<set name="weight" value="120"/>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>	</etcitem>
 	<etcitem id="36164" name="Giant's Scroll: Enchant Armor (R-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
