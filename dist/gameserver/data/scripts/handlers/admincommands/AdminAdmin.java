@@ -37,8 +37,6 @@ import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.stats.Stats;
 
-import org.apache.commons.lang3.math.NumberUtils;
-
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
@@ -231,8 +229,8 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					{
 						final String val = fullString.substring(15).trim();
 						String[] vals = val.split(" ");
-						int range = NumberUtils.toInt(vals[0], 0);
-						int astate = vals.length > 1 ? NumberUtils.toInt(vals[1], 0) : 0;
+						int range = Integer.valueOf(vals[0]);
+						int astate = vals.length > 1 ? Integer.valueOf(vals[1]) : 0;
 						
 						for (NpcInstance n : activeChar.getAroundNpc(range, 200))
 						{

@@ -26,8 +26,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.scripts.ScriptFile;
 
-import org.apache.commons.lang3.math.NumberUtils;
-
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
@@ -63,11 +61,11 @@ public class AdminShutdown implements IAdminCommandHandler, ScriptFile
 			switch (command)
 			{
 				case "admin_server_shutdown":
-					Shutdown.getInstance().schedule(NumberUtils.toInt(wordList[1], -1), Shutdown.SHUTDOWN);
+					Shutdown.getInstance().schedule(Integer.valueOf(wordList[1]), Shutdown.SHUTDOWN);
 					break;
 				
 				case "admin_server_restart":
-					Shutdown.getInstance().schedule(NumberUtils.toInt(wordList[1], -1), Shutdown.RESTART);
+					Shutdown.getInstance().schedule(Integer.valueOf(wordList[1]), Shutdown.RESTART);
 					break;
 				
 				case "admin_server_abort":

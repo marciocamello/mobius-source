@@ -84,6 +84,7 @@ public class EffectDispelEffects extends Effect
 							if (element == element2)
 							{
 								_buffList.add(e);
+								continue;
 							}
 						}
 					}
