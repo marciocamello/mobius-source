@@ -53,6 +53,7 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
+import lineage2.gameserver.utils.Util;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
@@ -535,7 +536,7 @@ public class Quest
 		{
 			int count = st.getInt(info.getVarName());
 			
-			if (!find && ArrayUtils.contains(info.getNpcIds(), npc.getId()))
+			if (!find && Util.contains(info.getNpcIds(), npc.getId()))
 			{
 				find = true;
 				

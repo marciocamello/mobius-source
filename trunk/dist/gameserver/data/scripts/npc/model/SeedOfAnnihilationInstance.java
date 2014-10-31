@@ -17,8 +17,7 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.templates.npc.MinionData;
 import lineage2.gameserver.templates.npc.NpcTemplate;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Mobius
@@ -105,11 +104,11 @@ public final class SeedOfAnnihilationInstance extends MonsterInstance
 	{
 		super(objectId, template);
 		
-		if (ArrayUtils.contains(BISTAKON_MOBS, template.getId()))
+		if (Util.contains(BISTAKON_MOBS, template.getId()))
 		{
 			addMinions(BISTAKON_MINIONS[Rnd.get(BISTAKON_MINIONS.length)], template);
 		}
-		else if (ArrayUtils.contains(COKRAKON_MOBS, template.getId()))
+		else if (Util.contains(COKRAKON_MOBS, template.getId()))
 		{
 			addMinions(COKRAKON_MINIONS[Rnd.get(COKRAKON_MINIONS.length)], template);
 		}

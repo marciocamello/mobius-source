@@ -18,8 +18,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 public class Q00462_StuffedAncientHeroes extends Quest implements ScriptFile
 {
@@ -149,7 +148,7 @@ public class Q00462_StuffedAncientHeroes extends Quest implements ScriptFile
 			return null;
 		}
 		
-		if ((npc != null) && ArrayUtils.contains(Bosses, npc.getId()))
+		if ((npc != null) && Util.contains(Bosses, npc.getId()))
 		{
 			if (st.getInt("1bk") == 1)
 			{

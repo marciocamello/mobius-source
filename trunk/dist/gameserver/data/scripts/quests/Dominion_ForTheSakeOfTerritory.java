@@ -24,8 +24,7 @@ import lineage2.gameserver.model.entity.events.impl.DominionSiegeRunnerEvent;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Smo
@@ -197,55 +196,55 @@ public abstract class Dominion_ForTheSakeOfTerritory extends Quest
 		
 		if (st.getCond() == 1)
 		{
-			if (ArrayUtils.contains(catapultas, npc.getId()))
+			if (Util.contains(catapultas, npc.getId()))
 			{
 				st.setCond(2);
 			}
-			else if (ArrayUtils.contains(supplyBoxes, npc.getId()))
+			else if (Util.contains(supplyBoxes, npc.getId()))
 			{
 				st.setCond(3);
 			}
-			else if (ArrayUtils.contains(militaryUnitLeaders, npc.getId()) || ArrayUtils.contains(religionUnitLeaders, npc.getId()) || ArrayUtils.contains(economicUnitLeaders, npc.getId()))
+			else if (Util.contains(militaryUnitLeaders, npc.getId()) || Util.contains(religionUnitLeaders, npc.getId()) || Util.contains(economicUnitLeaders, npc.getId()))
 			{
 				st.setCond(4);
 			}
 		}
 		else if (st.getCond() == 2)
 		{
-			if (ArrayUtils.contains(supplyBoxes, npc.getId()))
+			if (Util.contains(supplyBoxes, npc.getId()))
 			{
 				st.setCond(5);
 			}
-			else if (ArrayUtils.contains(militaryUnitLeaders, npc.getId()) || ArrayUtils.contains(religionUnitLeaders, npc.getId()) || ArrayUtils.contains(economicUnitLeaders, npc.getId()))
+			else if (Util.contains(militaryUnitLeaders, npc.getId()) || Util.contains(religionUnitLeaders, npc.getId()) || Util.contains(economicUnitLeaders, npc.getId()))
 			{
 				st.setCond(6);
 			}
 		}
 		else if (st.getCond() == 3)
 		{
-			if (ArrayUtils.contains(catapultas, npc.getId()))
+			if (Util.contains(catapultas, npc.getId()))
 			{
 				st.setCond(7);
 			}
-			else if (ArrayUtils.contains(militaryUnitLeaders, npc.getId()) || ArrayUtils.contains(religionUnitLeaders, npc.getId()) || ArrayUtils.contains(economicUnitLeaders, npc.getId()))
+			else if (Util.contains(militaryUnitLeaders, npc.getId()) || Util.contains(religionUnitLeaders, npc.getId()) || Util.contains(economicUnitLeaders, npc.getId()))
 			{
 				st.setCond(8);
 			}
 		}
 		else if (st.getCond() == 4)
 		{
-			if (ArrayUtils.contains(catapultas, npc.getId()))
+			if (Util.contains(catapultas, npc.getId()))
 			{
 				st.setCond(9);
 			}
-			else if (ArrayUtils.contains(supplyBoxes, npc.getId()))
+			else if (Util.contains(supplyBoxes, npc.getId()))
 			{
 				st.setCond(10);
 			}
 		}
 		else if (st.getCond() == 5)
 		{
-			if (ArrayUtils.contains(militaryUnitLeaders, npc.getId()) || ArrayUtils.contains(religionUnitLeaders, npc.getId()) || ArrayUtils.contains(economicUnitLeaders, npc.getId()))
+			if (Util.contains(militaryUnitLeaders, npc.getId()) || Util.contains(religionUnitLeaders, npc.getId()) || Util.contains(economicUnitLeaders, npc.getId()))
 			{
 				st.setCond(11);
 				handleReward(st);
@@ -253,7 +252,7 @@ public abstract class Dominion_ForTheSakeOfTerritory extends Quest
 		}
 		else if (st.getCond() == 6)
 		{
-			if (ArrayUtils.contains(supplyBoxes, npc.getId()))
+			if (Util.contains(supplyBoxes, npc.getId()))
 			{
 				st.setCond(11);
 				handleReward(st);
@@ -261,7 +260,7 @@ public abstract class Dominion_ForTheSakeOfTerritory extends Quest
 		}
 		else if (st.getCond() == 7)
 		{
-			if (ArrayUtils.contains(militaryUnitLeaders, npc.getId()) || ArrayUtils.contains(religionUnitLeaders, npc.getId()) || ArrayUtils.contains(economicUnitLeaders, npc.getId()))
+			if (Util.contains(militaryUnitLeaders, npc.getId()) || Util.contains(religionUnitLeaders, npc.getId()) || Util.contains(economicUnitLeaders, npc.getId()))
 			{
 				st.setCond(11);
 				handleReward(st);
@@ -269,7 +268,7 @@ public abstract class Dominion_ForTheSakeOfTerritory extends Quest
 		}
 		else if (st.getCond() == 8)
 		{
-			if (ArrayUtils.contains(catapultas, npc.getId()))
+			if (Util.contains(catapultas, npc.getId()))
 			{
 				st.setCond(11);
 				handleReward(st);
@@ -277,7 +276,7 @@ public abstract class Dominion_ForTheSakeOfTerritory extends Quest
 		}
 		else if (st.getCond() == 9)
 		{
-			if (ArrayUtils.contains(supplyBoxes, npc.getId()))
+			if (Util.contains(supplyBoxes, npc.getId()))
 			{
 				st.setCond(11);
 				handleReward(st);
@@ -285,7 +284,7 @@ public abstract class Dominion_ForTheSakeOfTerritory extends Quest
 		}
 		else if (st.getCond() == 10)
 		{
-			if (ArrayUtils.contains(catapultas, npc.getId()))
+			if (Util.contains(catapultas, npc.getId()))
 			{
 				st.setCond(11);
 				handleReward(st);

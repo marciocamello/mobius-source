@@ -28,8 +28,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.Earthquake;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Mobius
@@ -119,7 +118,7 @@ public final class SiegeGolem extends DefaultAI
 			
 			for (Creature target : list)
 			{
-				if ((target != null) && !target.isDead() && ArrayUtils.contains(ATTACK_IDS, target.getId()))
+				if ((target != null) && !target.isDead() && Util.contains(ATTACK_IDS, target.getId()))
 				{
 					Skill sk = SkillTable.getInstance().getInfo(SKILL_ID, 1);
 					
@@ -202,7 +201,7 @@ public final class SiegeGolem extends DefaultAI
 	@Override
 	public boolean canAttackCharacter(Creature target)
 	{
-		return ArrayUtils.contains(ATTACK_IDS, target.getId());
+		return Util.contains(ATTACK_IDS, target.getId());
 	}
 	
 	/**
@@ -213,7 +212,7 @@ public final class SiegeGolem extends DefaultAI
 	@Override
 	public boolean checkAggression(Creature target)
 	{
-		return ArrayUtils.contains(ATTACK_IDS, target.getId());
+		return Util.contains(ATTACK_IDS, target.getId());
 	}
 	
 	/**

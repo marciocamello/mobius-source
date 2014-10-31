@@ -18,8 +18,7 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 public class Q00423_TakeYourBestShot extends Quest implements ScriptFile
 {
@@ -123,7 +122,7 @@ public class Q00423_TakeYourBestShot extends Quest implements ScriptFile
 		
 		if (cond == 1)
 		{
-			if (ArrayUtils.contains(TantaClan, npcId) && Rnd.chance(2))
+			if (Util.contains(TantaClan, npcId) && Rnd.chance(2))
 			{
 				Location loc = st.getPlayer().getLoc();
 				addSpawn(TantaGuard, loc.getX(), loc.getY(), loc.getZ(), 0, 100, 120000);

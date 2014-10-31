@@ -32,8 +32,7 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.ReflectionUtils;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Mobius
@@ -77,7 +76,7 @@ public final class StakatoNest extends Fighter
 	{
 		super(actor);
 		
-		if (ArrayUtils.contains(BIZARRE_COCOON, actor.getId()))
+		if (Util.contains(BIZARRE_COCOON, actor.getId()))
 		{
 			actor.setIsInvul(true);
 			actor.startImmobilized();
@@ -238,7 +237,7 @@ public final class StakatoNest extends Fighter
 	{
 		final NpcInstance actor = getActor();
 		
-		if ((actor == null) || !ArrayUtils.contains(BIZARRE_COCOON, actor.getId()) || (caster == null) || (skill.getId() != SKILL_GROWTH_ACCELERATOR))
+		if ((actor == null) || !Util.contains(BIZARRE_COCOON, actor.getId()) || (caster == null) || (skill.getId() != SKILL_GROWTH_ACCELERATOR))
 		{
 			super.onEvtSeeSpell(skill, caster);
 			return;
@@ -356,7 +355,7 @@ public final class StakatoNest extends Fighter
 	@Override
 	protected boolean randomWalk()
 	{
-		return (ArrayUtils.contains(BIZARRE_COCOON, getActor().getId()) || (getActor().getId() == QUEEN_SHYEED)) ? false : true;
+		return (Util.contains(BIZARRE_COCOON, getActor().getId()) || (getActor().getId() == QUEEN_SHYEED)) ? false : true;
 	}
 	
 	/**
@@ -366,6 +365,6 @@ public final class StakatoNest extends Fighter
 	@Override
 	protected boolean randomAnimation()
 	{
-		return ArrayUtils.contains(BIZARRE_COCOON, getActor().getId()) ? false : true;
+		return Util.contains(BIZARRE_COCOON, getActor().getId()) ? false : true;
 	}
 }

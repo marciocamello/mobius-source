@@ -17,8 +17,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 public class Q00692_HowToOpposeEvil extends Quest implements ScriptFile
 {
@@ -300,15 +299,15 @@ public class Q00692_HowToOpposeEvil extends Quest implements ScriptFile
 		
 		if (cond == 3)
 		{
-			if (ArrayUtils.contains(SOD, npcId))
+			if (Util.contains(SOD, npcId))
 			{
 				st.rollAndGive(FleetSteedTroupsTotem, (int) Config.RATE_QUESTS_REWARD * 1, 17);
 			}
-			else if (ArrayUtils.contains(SOI, npcId))
+			else if (Util.contains(SOI, npcId))
 			{
 				st.rollAndGive(NucleusofanIncompleteSoul, (int) Config.RATE_QUESTS_REWARD * 1, 17);
 			}
-			else if (ArrayUtils.contains(SOA, npcId))
+			else if (Util.contains(SOA, npcId))
 			{
 				st.rollAndGive(SpiritStoneDust, (int) Config.RATE_QUESTS_REWARD * 1, 20);
 			}

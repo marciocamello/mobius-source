@@ -18,8 +18,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author cruel
@@ -140,7 +139,7 @@ public class Q00751_LiberatingTheSpirits extends Quest implements ScriptFile
 		
 		if (cond == 1)
 		{
-			if (ArrayUtils.contains(Mobs, npc.getId()))
+			if (Util.contains(Mobs, npc.getId()))
 			{
 				Party party = st.getPlayer().getParty();
 				

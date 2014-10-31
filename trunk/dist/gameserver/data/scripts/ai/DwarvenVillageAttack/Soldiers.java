@@ -17,8 +17,7 @@ import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.AggroList;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Mobius
@@ -68,7 +67,7 @@ public final class Soldiers extends Fighter
 			return (ai != null) && (ai.hate > 0);
 		}
 		
-		return ArrayUtils.contains(ATTACK_IDS, target.getId());
+		return Util.contains(ATTACK_IDS, target.getId());
 	}
 	
 	/**
@@ -84,7 +83,7 @@ public final class Soldiers extends Fighter
 			return false;
 		}
 		
-		if (target.isNpc() && !ArrayUtils.contains(ATTACK_IDS, target.getId()))
+		if (target.isNpc() && !Util.contains(ATTACK_IDS, target.getId()))
 		{
 			return false;
 		}

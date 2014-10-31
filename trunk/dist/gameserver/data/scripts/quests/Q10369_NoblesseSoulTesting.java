@@ -26,8 +26,7 @@ import lineage2.gameserver.network.serverpackets.components.SceneMovie;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Jocy,vegax
@@ -185,7 +184,7 @@ public class Q10369_NoblesseSoulTesting extends Quest implements ScriptFile, OnM
 			st.setCond(3);
 		}
 		
-		if ((st.getCond() == 8) && ArrayUtils.contains(HotSprings, npcId) && Rnd.chance(40))
+		if ((st.getCond() == 8) && Util.contains(HotSprings, npcId) && Rnd.chance(40))
 		{
 			st.giveItems(HardLeather, 1);
 			st.playSound("ItemSound.quest_itemget");
@@ -197,7 +196,7 @@ public class Q10369_NoblesseSoulTesting extends Quest implements ScriptFile, OnM
 			st.playSound(SOUND_MIDDLE);
 		}
 		
-		if ((st.getCond() == 12) && ArrayUtils.contains(IsleOf, npcId) && Rnd.chance(40))
+		if ((st.getCond() == 12) && Util.contains(IsleOf, npcId) && Rnd.chance(40))
 		{
 			st.giveItems(HfCeoW, 1);
 			st.playSound("ItemSound.quest_itemget");

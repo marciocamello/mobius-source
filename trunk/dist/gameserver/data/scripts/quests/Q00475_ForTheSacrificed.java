@@ -16,8 +16,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 public class Q00475_ForTheSacrificed extends Quest implements ScriptFile
 {
@@ -157,7 +156,7 @@ public class Q00475_ForTheSacrificed extends Quest implements ScriptFile
 	{
 		int npcId = npc.getId();
 		
-		if ((st.getCond() == 1) && ArrayUtils.contains(mobstohunt, npcId) && (st.getQuestItemsCount(ashsw) < 30))
+		if ((st.getCond() == 1) && Util.contains(mobstohunt, npcId) && (st.getQuestItemsCount(ashsw) < 30))
 		{
 			st.rollAndGive(ashsw, 1, chance);
 			st.playSound(SOUND_ITEMGET);

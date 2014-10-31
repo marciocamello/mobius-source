@@ -16,8 +16,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author GodWorld & Bonux
@@ -125,7 +124,7 @@ public class Q00943_FillingTheEnergyOfDestruction extends Quest implements Scrip
 		int npcId = npc.getId();
 		int cond = st.getCond();
 		
-		if (ArrayUtils.contains(RAID_BOSSES, npcId))
+		if (Util.contains(RAID_BOSSES, npcId))
 		{
 			if (cond == 1)
 			{

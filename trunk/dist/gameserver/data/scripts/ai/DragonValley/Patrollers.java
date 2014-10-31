@@ -19,8 +19,7 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Mobius
@@ -128,7 +127,7 @@ public class Patrollers extends Fighter
 		{
 			_lastPoint = 0;
 			
-			if (ArrayUtils.contains(_teleporters, npc.getId()))
+			if (Util.contains(_teleporters, npc.getId()))
 			{
 				npc.teleToLocation(_points[_lastPoint]);
 			}

@@ -33,8 +33,7 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Smo
@@ -158,7 +157,7 @@ public class TerritoryWardObject implements SpawnableObject, FlagItemAttachment
 	public boolean canCast(Player player, Skill skill)
 	{
 		Skill[] skills = player.getActiveWeaponItem().getAttachedSkills();
-		if (!ArrayUtils.contains(skills, skill))
+		if (!Util.contains(skills, skill))
 		{
 			player.sendPacket(SystemMsg.THAT_WEAPON_CANNOT_USE_ANY_OTHER_SKILL_EXCEPT_THE_WEAPONS_SKILL);
 			return false;

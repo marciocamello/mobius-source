@@ -17,8 +17,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 public class Q00290_ThreatRemoval extends Quest implements ScriptFile
 {
@@ -149,11 +148,11 @@ public class Q00290_ThreatRemoval extends Quest implements ScriptFile
 		
 		if (cond == 1)
 		{
-			if (ArrayUtils.contains(SelMahumTrainers, npc.getId()))
+			if (Util.contains(SelMahumTrainers, npc.getId()))
 			{
 				st.rollAndGive(SelMahumIDTag, 1, 93.2);
 			}
-			else if (ArrayUtils.contains(SelMahumRecruits, npc.getId()))
+			else if (Util.contains(SelMahumRecruits, npc.getId()))
 			{
 				st.rollAndGive(SelMahumIDTag, 1, 36.3);
 			}

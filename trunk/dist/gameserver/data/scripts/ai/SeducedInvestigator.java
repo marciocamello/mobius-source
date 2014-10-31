@@ -25,8 +25,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import lineage2.gameserver.tables.SkillTable;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Mobius
@@ -77,7 +76,7 @@ public final class SeducedInvestigator extends Fighter
 		{
 			for (NpcInstance npc : around)
 			{
-				if (ArrayUtils.contains(_allowedTargets, npc.getId()))
+				if (Util.contains(_allowedTargets, npc.getId()))
 				{
 					actor.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, npc, 300);
 				}

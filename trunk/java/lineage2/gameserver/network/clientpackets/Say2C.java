@@ -36,8 +36,8 @@ import lineage2.gameserver.tables.FakePlayersTable;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.MapUtils;
 import lineage2.gameserver.utils.Strings;
+import lineage2.gameserver.utils.Util;
 
-import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -137,7 +137,7 @@ public class Say2C extends L2GameClientPacket
 			return;
 		}
 		
-		if ((Config.CHATFILTER_MIN_LEVEL > 0) && ArrayUtils.contains(Config.CHATFILTER_CHANNELS, _type.ordinal()) && (activeChar.getLevel() < Config.CHATFILTER_MIN_LEVEL))
+		if ((Config.CHATFILTER_MIN_LEVEL > 0) && Util.contains(Config.CHATFILTER_CHANNELS, _type.ordinal()) && (activeChar.getLevel() < Config.CHATFILTER_MIN_LEVEL))
 		{
 			if (Config.CHATFILTER_WORK_TYPE == 1)
 			{
@@ -152,7 +152,7 @@ public class Say2C extends L2GameClientPacket
 		
 		boolean globalchat = (_type != ChatType.ALLIANCE) && (_type != ChatType.CLAN) && (_type != ChatType.PARTY);
 		
-		if ((globalchat || ArrayUtils.contains(Config.BAN_CHANNEL_LIST, _type.ordinal())) && (activeChar.getNoChannel() != 0))
+		if ((globalchat || Util.contains(Config.BAN_CHANNEL_LIST, _type.ordinal())) && (activeChar.getNoChannel() != 0))
 		{
 			if ((activeChar.getNoChannelRemained() > 0) || (activeChar.getNoChannel() < 0))
 			{

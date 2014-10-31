@@ -39,8 +39,7 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author pchayka
@@ -852,7 +851,7 @@ public final class Frintezza extends Reflection
 	{
 		for (NpcInstance n : getNpcs())
 		{
-			if (ArrayUtils.contains(npcArray, n.getId()))
+			if (Util.contains(npcArray, n.getId()))
 			{
 				if (block)
 				{
@@ -926,18 +925,18 @@ public final class Frintezza extends Reflection
 					
 					for (NpcInstance n : getNpcs())
 					{
-						if (ArrayUtils.contains(blockANpcs, n.getId()))
+						if (Util.contains(blockANpcs, n.getId()))
 						{
 							n.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, getPlayers().get(Rnd.get(getPlayers().size())), 200);
 						}
 					}
 				}
-				else if (ArrayUtils.contains(blockANpcs, self.getId()))
+				else if (Util.contains(blockANpcs, self.getId()))
 				{
 					// ToCheck: find easier way
 					for (NpcInstance n : getNpcs())
 					{
-						if (ArrayUtils.contains(blockANpcs, n.getId()) && !n.isDead())
+						if (Util.contains(blockANpcs, n.getId()) && !n.isDead())
 						{
 							return;
 						}
@@ -967,7 +966,7 @@ public final class Frintezza extends Reflection
 					
 					blockUnblockNpcs(false, blockBNpcs);
 				}
-				else if (ArrayUtils.contains(blockBNpcs, self.getId()))
+				else if (Util.contains(blockBNpcs, self.getId()))
 				{
 					if (Rnd.chance(10))
 					{
@@ -977,7 +976,7 @@ public final class Frintezza extends Reflection
 					// ToCheck: find easier way
 					for (NpcInstance n : getNpcs())
 					{
-						if ((ArrayUtils.contains(blockBNpcs, n.getId()) || ArrayUtils.contains(blockANpcs, n.getId())) && !n.isDead())
+						if ((Util.contains(blockBNpcs, n.getId()) || Util.contains(blockANpcs, n.getId())) && !n.isDead())
 						{
 							return;
 						}

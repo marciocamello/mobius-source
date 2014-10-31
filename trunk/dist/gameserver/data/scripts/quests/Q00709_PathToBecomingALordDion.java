@@ -23,8 +23,7 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Smo
@@ -254,7 +253,7 @@ public class Q00709_PathToBecomingALordDion extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		if ((st.getCond() == 6) && ArrayUtils.contains(OlMahums, npc.getId()))
+		if ((st.getCond() == 6) && Util.contains(OlMahums, npc.getId()))
 		{
 			if (Rnd.chance(10))
 			{
@@ -262,7 +261,7 @@ public class Q00709_PathToBecomingALordDion extends Quest implements ScriptFile
 				st.setCond(7);
 			}
 		}
-		if ((st.getState() == STARTED) && (st.getCond() == 0) && isLordAvailable(8, st) && ArrayUtils.contains(Manragoras, npc.getId()))
+		if ((st.getState() == STARTED) && (st.getCond() == 0) && isLordAvailable(8, st) && Util.contains(Manragoras, npc.getId()))
 		{
 			if (st.getQuestItemsCount(MandragoraRoot) < 100)
 			{

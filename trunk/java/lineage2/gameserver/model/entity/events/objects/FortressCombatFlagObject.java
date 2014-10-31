@@ -26,8 +26,8 @@ import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
+import lineage2.gameserver.utils.Util;
 
-import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -209,7 +209,7 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 	{
 		Skill[] skills = player.getActiveWeaponItem().getAttachedSkills();
 		
-		if (!ArrayUtils.contains(skills, skill))
+		if (!Util.contains(skills, skill))
 		{
 			player.sendPacket(SystemMsg.THAT_WEAPON_CANNOT_USE_ANY_OTHER_SKILL_EXCEPT_THE_WEAPONS_SKILL);
 			return false;

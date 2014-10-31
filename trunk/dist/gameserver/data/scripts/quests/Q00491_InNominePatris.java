@@ -18,8 +18,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 public class Q00491_InNominePatris extends Quest implements ScriptFile
 {
@@ -142,7 +141,7 @@ public class Q00491_InNominePatris extends Quest implements ScriptFile
 		
 		if (npcId == sirik)
 		{
-			if ((cond == 0) && ArrayUtils.contains(classesav, classid))
+			if ((cond == 0) && Util.contains(classesav, classid))
 			{
 				if (isAvailableFor(st.getPlayer()))
 				{
@@ -178,7 +177,7 @@ public class Q00491_InNominePatris extends Quest implements ScriptFile
 	{
 		int npcId = npc.getId();
 		
-		if ((st.getCond() == 1) && ArrayUtils.contains(mobstohunt, npcId) && (st.getQuestItemsCount(Fragment) < 50))
+		if ((st.getCond() == 1) && Util.contains(mobstohunt, npcId) && (st.getQuestItemsCount(Fragment) < 50))
 		{
 			st.rollAndGive(Fragment, 1, chance);
 			st.playSound(SOUND_ITEMGET);

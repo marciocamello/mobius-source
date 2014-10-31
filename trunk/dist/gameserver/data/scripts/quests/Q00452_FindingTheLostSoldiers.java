@@ -16,8 +16,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 public class Q00452_FindingTheLostSoldiers extends Quest implements ScriptFile
 {
@@ -72,7 +71,7 @@ public class Q00452_FindingTheLostSoldiers extends Quest implements ScriptFile
 				st.playSound(SOUND_ACCEPT);
 			}
 		}
-		else if (ArrayUtils.contains(SOLDIER_CORPSES, npc.getId()) && (st.getCond() == 1))
+		else if (Util.contains(SOLDIER_CORPSES, npc.getId()) && (st.getCond() == 1))
 		{
 			st.giveItems(TAG_ID, 1);
 			st.setCond(2);
@@ -135,7 +134,7 @@ public class Q00452_FindingTheLostSoldiers extends Quest implements ScriptFile
 					break;
 			}
 		}
-		else if (ArrayUtils.contains(SOLDIER_CORPSES, npc.getId()))
+		else if (Util.contains(SOLDIER_CORPSES, npc.getId()))
 		{
 			if (st.getCond() == 1)
 			{

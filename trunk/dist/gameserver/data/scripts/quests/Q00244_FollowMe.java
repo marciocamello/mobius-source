@@ -20,8 +20,7 @@ import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /*
  */
@@ -235,7 +234,7 @@ public class Q00244_FollowMe extends Quest implements ScriptFile
 		
 		if (st.getCond() == 1)
 		{
-			if ((ArrayUtils.contains(monstersValley, npc.getId())) && (Rnd.chance(50)))
+			if ((Util.contains(monstersValley, npc.getId())) && (Rnd.chance(50)))
 			{
 				st.giveItems(ITEM_TAMLIN_ORC_MARK, 1, true);
 				st.playSound("ItemSound.quest_itemget");
@@ -249,7 +248,7 @@ public class Q00244_FollowMe extends Quest implements ScriptFile
 		}
 		else if (st.getCond() == 4)
 		{
-			if (ArrayUtils.contains(monstersValley, npc.getId()))
+			if (Util.contains(monstersValley, npc.getId()))
 			{
 				if ((player.getPledgeType() == Clan.SUBUNIT_ACADEMY) && (player.getSponsor() != 0))
 				{

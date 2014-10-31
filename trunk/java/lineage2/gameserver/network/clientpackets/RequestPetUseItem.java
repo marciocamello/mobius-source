@@ -20,8 +20,7 @@ import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.utils.ItemFunctions;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Mobius
@@ -91,7 +90,7 @@ public class RequestPetUseItem extends L2GameClientPacket
 			return;
 		}
 		
-		if (ArrayUtils.contains(Config.ALT_ALLOWED_PET_POTIONS, item.getId()))
+		if (Util.contains(Config.ALT_ALLOWED_PET_POTIONS, item.getId()))
 		{
 			Skill[] skills = item.getTemplate().getAttachedSkills();
 			

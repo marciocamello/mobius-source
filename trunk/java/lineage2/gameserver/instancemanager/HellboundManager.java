@@ -31,8 +31,8 @@ import lineage2.gameserver.model.Territory;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
+import lineage2.gameserver.utils.Util;
 
-import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -384,7 +384,7 @@ public class HellboundManager
 		
 		for (HellboundSpawn hbsi : _list)
 		{
-			if (ArrayUtils.contains(hbsi.getStages(), getHellboundLevel()))
+			if (Util.contains(hbsi.getStages(), getHellboundLevel()))
 			{
 				try
 				{

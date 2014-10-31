@@ -17,8 +17,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 public class Q00486_BeWell extends Quest implements ScriptFile
 {
@@ -148,7 +147,7 @@ public class Q00486_BeWell extends Quest implements ScriptFile
 			return null;
 		}
 		
-		if (ArrayUtils.contains(Mobs, npc.getId()) && Rnd.chance(50))
+		if (Util.contains(Mobs, npc.getId()) && Rnd.chance(50))
 		{
 			st.giveItems(STAKATO_PAN, 2);
 			st.playSound(SOUND_MIDDLE);

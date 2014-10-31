@@ -18,8 +18,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExChangeClientEffectInfo;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Mobius
@@ -61,11 +60,11 @@ public final class SirraInstance extends NpcInstance
 	{
 		String htmlpath = null;
 		
-		if (ArrayUtils.contains(questInstances, getReflection().getInstancedZoneId()))
+		if (Util.contains(questInstances, getReflection().getInstancedZoneId()))
 		{
 			htmlpath = "default/32762.htm";
 		}
-		else if (ArrayUtils.contains(warInstances, getReflection().getInstancedZoneId()))
+		else if (Util.contains(warInstances, getReflection().getInstancedZoneId()))
 		{
 			DoorInstance door = getReflection().getDoor(23140101);
 			

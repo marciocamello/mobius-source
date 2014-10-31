@@ -29,8 +29,7 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessa
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Mobius
@@ -131,7 +130,7 @@ public final class Tiat extends Fighter
 			
 			for (NpcInstance npc : World.getAroundNpc(actor))
 			{
-				if (ArrayUtils.contains(TIAT_MINION_IDS, npc.getId()))
+				if (Util.contains(TIAT_MINION_IDS, npc.getId()))
 				{
 					npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, attacker, 30000);
 				}
