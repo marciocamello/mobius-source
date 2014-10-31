@@ -39,6 +39,7 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 {
 	private int _objectId;
 	private int _catalystObjId;
+        private int _EnchantAmount = 1;
 	
 	/**
 	 * Method readImpl.
@@ -182,8 +183,21 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 						chance = Config.ENCHANT_CHANCE_CRYSTAL_ACCESSORY;
 					}
 					break;
+                                case GIANT:
+                                        _EnchantAmount = Rnd.get(1, 3);
+                                        if (item.isWeapon())
+					{
+						chance = Config.ENCHANT_CHANCE_GIANT_WEAPON;
 			}
-			
+					else if (item.isArmor())
+					{
+						chance = Config.ENCHANT_CHANCE_GIANT_ARMOR;
+					}
+					else
+					{
+						chance = Config.ENCHANT_CHANCE_GIANT_ACCESSORY;
+					}
+			}
 			if (catalyst != null)
 			{
 				chance += ItemFunctions.getCatalystPower(catalyst.getId());
@@ -217,7 +231,7 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 			
 			if (Rnd.chance(chance))
 			{
-				item.setEnchantLevel(item.getEnchantLevel() + 1);
+				item.setEnchantLevel(item.getEnchantLevel() + _EnchantAmount);
 				item.setJdbcState(JdbcEntityState.UPDATED);
 				item.update();
 				
@@ -294,7 +308,43 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 						}
 						
 						break;
+                                        case GIANT:
+						if (item.isEquipped())
+						{
+							player.sendDisarmMessage(item);
+						}
 					
+						if (!inventory.destroyItem(item, 1L))
+						{
+							player.sendActionFailed();
+							return;
+						}
+						
+						crystalId = item.getCrystalType().cry;
+						
+						if ((crystalId > 0) && (item.getTemplate().getCrystalCount() > 0))
+						{
+							int crystalAmount = (int) (item.getTemplate().getCrystalCount() * 0.87D);
+							
+							if (item.getEnchantLevel() > 3)
+							{
+								crystalAmount = (int) (crystalAmount + (item.getTemplate().getCrystalCount() * 0.25D * (item.getEnchantLevel() - 3)));
+							}
+							
+							if (crystalAmount < 1)
+							{
+								crystalAmount = 1;
+							}
+							
+							player.sendPacket(new EnchantResult(1, crystalId, crystalAmount));
+							ItemFunctions.addItem(player, crystalId, crystalAmount, true);
+						}
+						else
+						{
+							player.sendPacket(EnchantResult.FAILED_NO_CRYSTALS);
+						}
+						
+						break;
 					case DESTRUCTION:
 						item.setEnchantLevel(item.getEnchantLevel());
 						item.setJdbcState(JdbcEntityState.UPDATED);
