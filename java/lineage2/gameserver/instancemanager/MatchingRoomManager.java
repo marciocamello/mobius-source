@@ -21,8 +21,8 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.matching.MatchingRoom;
 import lineage2.gameserver.templates.mapregion.RestartArea;
 import lineage2.gameserver.templates.mapregion.RestartPoint;
+import lineage2.gameserver.utils.Util;
 
-import org.apache.commons.lang3.ArrayUtils;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
 
@@ -116,7 +116,7 @@ public class MatchingRoomManager
 		{
 			if (($member.getLevel() >= minLevel) && ($member.getLevel() <= maxLevel))
 			{
-				if ((classes.length == 0) || ArrayUtils.contains(classes, $member.getClassId().getId()))
+				if ((classes.length == 0) || Util.contains(classes, $member.getClassId().getId()))
 				{
 					res.add($member);
 				}

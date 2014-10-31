@@ -17,8 +17,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 public class Q10371_GraspThyPower extends Quest implements ScriptFile
 {
@@ -143,7 +142,7 @@ public class Q10371_GraspThyPower extends Quest implements ScriptFile
 			}
 			else if (cond == 0)
 			{
-				if (isAvailableFor(st.getPlayer()) && ArrayUtils.contains(classesav, classid))
+				if (isAvailableFor(st.getPlayer()) && Util.contains(classesav, classid))
 				{
 					htmltext = "start.htm";
 				}

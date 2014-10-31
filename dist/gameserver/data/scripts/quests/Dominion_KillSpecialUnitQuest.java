@@ -24,8 +24,7 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Smo
@@ -78,7 +77,7 @@ public abstract class Dominion_KillSpecialUnitQuest extends Quest implements Scr
 			return null;
 		}
 		
-		if (!ArrayUtils.contains(_classIds, killed.getClassId()))
+		if (!Util.contains(_classIds, killed.getClassId()))
 		{
 			return null;
 		}

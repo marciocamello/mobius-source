@@ -24,8 +24,7 @@ import lineage2.gameserver.network.serverpackets.ExShowUsmVideo;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.HtmlUtils;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 public class Q10360_CertificationOfFate extends Quest implements ScriptFile
 {
@@ -349,7 +348,7 @@ public class Q10360_CertificationOfFate extends Quest implements ScriptFile
 			{
 				htmltext = "0re-c.htm";
 			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && ArrayUtils.contains(classesav, classid))
+			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && Util.contains(classesav, classid))
 			{
 				htmltext = "0-1re.htm";
 			}
@@ -369,7 +368,7 @@ public class Q10360_CertificationOfFate extends Quest implements ScriptFile
 			{
 				htmltext = "0r-c.htm";
 			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && ArrayUtils.contains(classesav, classid))
+			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && Util.contains(classesav, classid))
 			{
 				htmltext = "0-1r.htm";
 			}
@@ -389,7 +388,7 @@ public class Q10360_CertificationOfFate extends Quest implements ScriptFile
 			{
 				htmltext = "0t-c.htm";
 			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && ArrayUtils.contains(classesav, classid))
+			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && Util.contains(classesav, classid))
 			{
 				htmltext = "0-1t.htm";
 			}
@@ -409,7 +408,7 @@ public class Q10360_CertificationOfFate extends Quest implements ScriptFile
 			{
 				htmltext = "0d-c.htm";
 			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && ArrayUtils.contains(classesav, classid))
+			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && Util.contains(classesav, classid))
 			{
 				htmltext = "0-1d.htm";
 			}
@@ -429,7 +428,7 @@ public class Q10360_CertificationOfFate extends Quest implements ScriptFile
 			{
 				htmltext = "0g-c.htm";
 			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && ArrayUtils.contains(classesav, classid))
+			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && Util.contains(classesav, classid))
 			{
 				htmltext = "0-1g.htm";
 			}
@@ -449,7 +448,7 @@ public class Q10360_CertificationOfFate extends Quest implements ScriptFile
 			{
 				htmltext = "0e-c.htm";
 			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && ArrayUtils.contains(classesav, classid))
+			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && Util.contains(classesav, classid))
 			{
 				htmltext = "0-1e.htm";
 			}
@@ -469,7 +468,7 @@ public class Q10360_CertificationOfFate extends Quest implements ScriptFile
 			{
 				htmltext = "0ew-c.htm";
 			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && ArrayUtils.contains(classesav, classid))
+			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && Util.contains(classesav, classid))
 			{
 				htmltext = "0-1ew.htm";
 			}
@@ -489,7 +488,7 @@ public class Q10360_CertificationOfFate extends Quest implements ScriptFile
 			{
 				htmltext = "0m-c.htm";
 			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && ArrayUtils.contains(classesav, classid))
+			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && Util.contains(classesav, classid))
 			{
 				htmltext = "0-1m.htm";
 			}

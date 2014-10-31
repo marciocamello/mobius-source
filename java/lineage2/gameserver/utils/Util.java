@@ -26,7 +26,13 @@ import java.util.regex.PatternSyntaxException;
 
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
+import lineage2.gameserver.model.Skill;
+import lineage2.gameserver.model.Zone;
+import lineage2.gameserver.model.base.ClassId;
+import lineage2.gameserver.model.items.etcitems.AppearanceStone.ShapeTargetType;
 import lineage2.gameserver.model.reward.RewardList;
+import lineage2.gameserver.templates.item.ExItemType;
+import lineage2.gameserver.templates.item.ItemTemplate.Grade;
 
 /**
  * @author Mobius
@@ -716,5 +722,124 @@ public class Util
 	{
 		double degree = clientHeading / 182.044444444;
 		return degree;
+	}
+	
+	/**
+	 * @param array - the array to look into
+	 * @param obj - the integer to search for
+	 * @return {@code true} if the {@code array} contains the {@code obj}, {@code false} otherwise
+	 */
+	public static boolean contains(int[] array, int obj)
+	{
+		for (int element : array)
+		{
+			if (element == obj)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	/**
+	 * @param zones - the zones to look into
+	 * @param zone - the zone to search for
+	 * @return {@code true} if the {@code zones} contains the {@code zone}, {@code false} otherwise
+	 */
+	public static boolean contains(Zone[] zones, Zone zone)
+	{
+		for (Zone element : zones)
+		{
+			if (element == zone)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	/**
+	 * @param grades - the grades to look into
+	 * @param grade - the grade to search for
+	 * @return {@code true} if the {@code grades} contains the {@code grade}, {@code false} otherwise
+	 */
+	public static boolean contains(Grade[] grades, Grade grade)
+	{
+		for (Grade element : grades)
+		{
+			if (element == grade)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	/**
+	 * @param classIds - the classIds to look into
+	 * @param classId - the classId to search for
+	 * @return {@code true} if the {@code classIds} contains the {@code classId}, {@code false} otherwise
+	 */
+	public static boolean contains(ClassId[] classIds, ClassId classId)
+	{
+		for (ClassId element : classIds)
+		{
+			if (element == classId)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	/**
+	 * @param skills - the skills to look into
+	 * @param skill - the skill to search for
+	 * @return {@code true} if the {@code skills} contains the {@code skill}, {@code false} otherwise
+	 */
+	public static boolean contains(Skill[] skills, Skill skill)
+	{
+		for (Skill element : skills)
+		{
+			if (element == skill)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	/**
+	 * @param shapeTargetTypes - the shapeTargetTypes to look into
+	 * @param shapeTargetType - the shapeTargetType to search for
+	 * @return {@code true} if the {@code shapeTargetTypes} contains the {@code shapeTargetType}, {@code false} otherwise
+	 */
+	public static boolean contains(ShapeTargetType[] shapeTargetTypes, ShapeTargetType shapeTargetType)
+	{
+		for (ShapeTargetType element : shapeTargetTypes)
+		{
+			if (element == shapeTargetType)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	/**
+	 * @param itemTypes - the itemTypes to look into
+	 * @param itemType - the itemType to search for
+	 * @return {@code true} if the {@code itemTypes} contains the {@code itemType}, {@code false} otherwise
+	 */
+	public static boolean contains(ExItemType[] itemTypes, ExItemType itemType)
+	{
+		for (ExItemType element : itemTypes)
+		{
+			if (element == itemType)
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 }

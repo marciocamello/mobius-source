@@ -14,8 +14,7 @@ package lineage2.gameserver.model.quest.startcondition.impl;
 
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.quest.startcondition.ICheckStartCondition;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Mobius
@@ -43,6 +42,6 @@ public class ClassLevelCondition implements ICheckStartCondition
 	@Override
 	public boolean checkCondition(Player player)
 	{
-		return ArrayUtils.contains(classLevels, player.getClassId().getClassLevel().ordinal());
+		return Util.contains(classLevels, player.getClassId().getClassLevel().ordinal());
 	}
 }

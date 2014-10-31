@@ -22,8 +22,7 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ExChangeAttributeItemList;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.item.ItemTemplate;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Mobius
@@ -111,7 +110,7 @@ public final class CristallChangeAttr extends ScriptItemHandler
 		{
 			if (item.isWeapon() && (item.getAttackElementValue() > 0))
 			{
-				if (ArrayUtils.contains(grades, item.getCrystalType()))
+				if (Util.contains(grades, item.getCrystalType()))
 				{
 					itemsList.add(new ItemInfo(item));
 				}

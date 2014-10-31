@@ -1325,7 +1325,7 @@ public final class ItemBroker extends Functions
 			this.price = price;
 			this.count = count;
 			this.enchant = enchant;
-			rare = org.apache.commons.lang3.ArrayUtils.contains(RARE_ITEMS, itemId);
+			rare = Util.contains(RARE_ITEMS, itemId);
 			StringBuilder out = new StringBuilder(70);
 			
 			if (enchant > 0)

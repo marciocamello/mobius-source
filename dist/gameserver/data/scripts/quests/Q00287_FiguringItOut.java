@@ -17,8 +17,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 public class Q00287_FiguringItOut extends Quest implements ScriptFile
 {
@@ -227,7 +226,7 @@ public class Q00287_FiguringItOut extends Quest implements ScriptFile
 		
 		if (cond == 1)
 		{
-			if (ArrayUtils.contains(TantaClan, npcId) && Rnd.chance(60))
+			if (Util.contains(TantaClan, npcId) && Rnd.chance(60))
 			{
 				st.giveItems(VialofTantaBlood, 1, true);
 			}

@@ -18,8 +18,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 public class Q00483_IntendedTactic extends Quest implements ScriptFile
 {
@@ -156,7 +155,7 @@ public class Q00483_IntendedTactic extends Quest implements ScriptFile
 		
 		if (cond == 1)
 		{
-			if ((ArrayUtils.contains(CON5, npc.getId())) && (Rnd.chance(25)))
+			if ((Util.contains(CON5, npc.getId())) && (Rnd.chance(25)))
 			{
 				st.giveItems(CON2, 1);
 				st.playSound("SOUND_ITEMGET");
@@ -167,7 +166,7 @@ public class Q00483_IntendedTactic extends Quest implements ScriptFile
 					st.playSound("SOUND_MIDDLE");
 				}
 			}
-			else if (ArrayUtils.contains(CON6, npc.getId()))
+			else if (Util.contains(CON6, npc.getId()))
 			{
 				if (st.getQuestItemsCount(CON3) <= 0)
 				{
@@ -178,7 +177,7 @@ public class Q00483_IntendedTactic extends Quest implements ScriptFile
 		}
 		else if (cond == 2)
 		{
-			if (ArrayUtils.contains(CON6, npc.getId()))
+			if (Util.contains(CON6, npc.getId()))
 			{
 				if (st.getQuestItemsCount(CON3) <= 0)
 				{

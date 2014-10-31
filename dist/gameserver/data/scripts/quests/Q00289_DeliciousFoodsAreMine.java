@@ -17,8 +17,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 public class Q00289_DeliciousFoodsAreMine extends Quest implements ScriptFile
 {
@@ -246,7 +245,7 @@ public class Q00289_DeliciousFoodsAreMine extends Quest implements ScriptFile
 		
 		if (cond == 1)
 		{
-			if (ArrayUtils.contains(SelMahums, npc.getId()) || (npc.getId() == SelChef))
+			if (Util.contains(SelMahums, npc.getId()) || (npc.getId() == SelChef))
 			{
 				if (!st.rollAndGive(FullBarrelofSoup, 1, 15))
 				{

@@ -22,8 +22,7 @@ import lineage2.gameserver.network.serverpackets.EventTrigger;
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author pchayka
@@ -386,14 +385,14 @@ public class Q10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 		int npcId = npc.getId();
 		Player player = st.getPlayer();
 		
-		if (ArrayUtils.contains(SolinaGuardians, npcId) && checkGuardians(player, SolinaGuardians))
+		if (Util.contains(SolinaGuardians, npcId) && checkGuardians(player, SolinaGuardians))
 		{
 			player.broadcastPacket(new EventTrigger(21100100, false));
 			player.showQuestMovie(ExStartScenePlayer.SCENE_SSQ2_SOLINA_TOMB_CLOSING);
 			player.broadcastPacket(new EventTrigger(21100102, true));
 		}
 		
-		if (ArrayUtils.contains(TombGuardians, npcId))
+		if (Util.contains(TombGuardians, npcId))
 		{
 			if (checkGuardians(player, TombGuardians))
 			{
@@ -455,7 +454,7 @@ public class Q10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 	{
 		for (NpcInstance n : player.getReflection().getNpcs())
 		{
-			if (ArrayUtils.contains(npcIds, n.getId()) && !n.isDead())
+			if (Util.contains(npcIds, n.getId()) && !n.isDead())
 			{
 				return false;
 			}

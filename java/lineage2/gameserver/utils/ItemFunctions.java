@@ -34,8 +34,6 @@ import lineage2.gameserver.templates.item.ArmorTemplate.ArmorType;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
 
-import org.apache.commons.lang3.ArrayUtils;
-
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
@@ -248,7 +246,7 @@ public final class ItemFunctions
 			return new SystemMessage(SystemMessage.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 		}
 		
-		if (ArrayUtils.contains(ItemTemplate.ITEM_ID_CASTLE_CIRCLET, itemId) && ((clan == null) || (itemId != ItemTemplate.ITEM_ID_CASTLE_CIRCLET[clan.getCastle()])))
+		if (Util.contains(ItemTemplate.ITEM_ID_CASTLE_CIRCLET, itemId) && ((clan == null) || (itemId != ItemTemplate.ITEM_ID_CASTLE_CIRCLET[clan.getCastle()])))
 		{
 			return new SystemMessage(SystemMessage.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 		}

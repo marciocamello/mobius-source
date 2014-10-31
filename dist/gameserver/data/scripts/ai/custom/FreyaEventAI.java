@@ -21,8 +21,7 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Mobius
@@ -105,7 +104,7 @@ public final class FreyaEventAI extends DefaultAI
 		
 		final Player player = caster.getPlayer();
 		
-		if (ArrayUtils.contains(GIFT_SKILLS, skill.getId()))
+		if (Util.contains(GIFT_SKILLS, skill.getId()))
 		{
 			if (Rnd.chance(GIFT_CHANCE))
 			{

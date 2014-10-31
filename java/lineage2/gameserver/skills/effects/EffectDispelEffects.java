@@ -23,8 +23,6 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
 
-import org.apache.commons.lang3.ArrayUtils;
-
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
@@ -77,9 +75,18 @@ public class EffectDispelEffects extends Effect
 			}
 			else if (_dispelType.equals("bane"))
 			{
-				if (!e.isOffensive() && ArrayUtils.contains(_stackTypes, e.getStackType()) && e.isCancelable())
+				if (!e.isOffensive() && e.isCancelable())
 				{
-					_buffList.add(e);
+					for (String element : _stackTypes)
+					{
+						for (String element2 : e.getStackType())
+						{
+							if (element == element2)
+							{
+								_buffList.add(e);
+							}
+						}
+					}
 				}
 			}
 			else if (_dispelType.equals("cleanse"))

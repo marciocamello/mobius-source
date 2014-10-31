@@ -28,8 +28,7 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessa
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.utils.Location;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 public final class KartiaLabyrinth90Solo extends Reflection
 {
@@ -565,7 +564,7 @@ public final class KartiaLabyrinth90Solo extends Reflection
 			
 			for (NpcInstance n : getNpcs())
 			{
-				if (!ArrayUtils.contains(supporter, n.getId()))
+				if (!Util.contains(supporter, n.getId()))
 				{
 					n.deleteMe();
 				}

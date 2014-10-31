@@ -17,8 +17,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 public class Q00456_DontKnowDontCare extends Quest implements ScriptFile
 {
@@ -203,7 +202,7 @@ public class Q00456_DontKnowDontCare extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int cond = st.getCond();
 		
-		if (ArrayUtils.contains(SeparatedSoul, npc.getId()))
+		if (Util.contains(SeparatedSoul, npc.getId()))
 		{
 			switch (st.getState())
 			{

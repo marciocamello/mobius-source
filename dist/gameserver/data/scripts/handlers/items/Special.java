@@ -28,9 +28,7 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
-
-import org.apache.commons.lang3.ArrayUtils;
-
+import lineage2.gameserver.utils.Util;
 import quests.Q00464_Oath;
 import bosses.AntharasManager;
 import bosses.ValakasManager;
@@ -168,7 +166,7 @@ public final class Special extends SimpleItemHandler
 		};
 		final GameObject t = player.getTarget();
 		
-		if ((t == null) || !t.isNpc() || !ArrayUtils.contains(npcs, ((NpcInstance) t).getId()))
+		if ((t == null) || !t.isNpc() || !Util.contains(npcs, ((NpcInstance) t).getId()))
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(8556));
 			return false;
@@ -224,7 +222,7 @@ public final class Special extends SimpleItemHandler
 		{
 			final int _door = ((DoorInstance) target).getDoorId();
 			
-			if (ArrayUtils.contains(allowedDoors, _door))
+			if (Util.contains(allowedDoors, _door))
 			{
 				player.getReflection().openDoor(_door);
 			}
@@ -262,7 +260,7 @@ public final class Special extends SimpleItemHandler
 		{
 			final int _door = ((DoorInstance) target).getDoorId();
 			
-			if (ArrayUtils.contains(allowedDoors, _door))
+			if (Util.contains(allowedDoors, _door))
 			{
 				useItem(player, 13809, 1);
 				player.getReflection().openDoor(_door);

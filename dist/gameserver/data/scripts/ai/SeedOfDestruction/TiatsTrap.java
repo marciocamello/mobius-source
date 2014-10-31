@@ -18,8 +18,7 @@ import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Mobius
@@ -116,15 +115,15 @@ public final class TiatsTrap extends DefaultAI
 		{
 			Skill skill = null;
 			
-			if (ArrayUtils.contains(holdTraps, actor.getId()))
+			if (Util.contains(holdTraps, actor.getId()))
 			{
 				skill = SkillTable.getInstance().getInfo(4186, 9);
 			}
-			else if (ArrayUtils.contains(damageTraps, actor.getId()))
+			else if (Util.contains(damageTraps, actor.getId()))
 			{
 				skill = SkillTable.getInstance().getInfo(5311, 9);
 			}
-			else if (ArrayUtils.contains(stunTraps, actor.getId()))
+			else if (Util.contains(stunTraps, actor.getId()))
 			{
 				skill = SkillTable.getInstance().getInfo(4072, 10);
 			}

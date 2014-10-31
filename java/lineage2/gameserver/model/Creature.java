@@ -120,8 +120,8 @@ import lineage2.gameserver.templates.spawn.WalkerRouteTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.PositionUtils;
+import lineage2.gameserver.utils.Util;
 
-import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
@@ -1426,7 +1426,7 @@ public abstract class Creature extends GameObject
 				
 				if (ie != null)
 				{
-					if (ArrayUtils.contains(ie.getTemplate().getParam().getIntegerArray("skillId"), skill.getId()))
+					if (Util.contains(ie.getTemplate().getParam().getIntegerArray("skillId"), skill.getId()))
 					{
 						itr.remove();
 						continue;
@@ -3963,7 +3963,7 @@ public abstract class Creature extends GameObject
 				{
 					zone = _zones.get(i);
 					
-					if (!ArrayUtils.contains(zones, zone) || !zone.checkIfInZone(getX(), getY(), getZ(), getReflection()))
+					if (!Util.contains(zones, zone) || !zone.checkIfInZone(getX(), getY(), getZ(), getReflection()))
 					{
 						leaving.add(zone);
 					}

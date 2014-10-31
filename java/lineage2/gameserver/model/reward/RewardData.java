@@ -21,8 +21,7 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.templates.item.ItemTemplate;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Mobius
@@ -45,7 +44,7 @@ public class RewardData implements Cloneable
 	{
 		_item = ItemHolder.getInstance().getTemplate(itemId);
 		
-		if (_item.isArrow() || (Config.NO_RATE_EQUIPMENT && _item.isEquipment()) || (Config.NO_RATE_KEY_MATERIAL && _item.isKeyMatherial()) || (Config.NO_RATE_RECIPES && _item.isRecipe()) || ArrayUtils.contains(Config.NO_RATE_ITEMS, itemId))
+		if (_item.isArrow() || (Config.NO_RATE_EQUIPMENT && _item.isEquipment()) || (Config.NO_RATE_KEY_MATERIAL && _item.isKeyMatherial()) || (Config.NO_RATE_RECIPES && _item.isRecipe()) || Util.contains(Config.NO_RATE_ITEMS, itemId))
 		{
 			_notRate = true;
 		}

@@ -24,9 +24,7 @@ import lineage2.gameserver.skills.effects.EffectTemplate;
 import lineage2.gameserver.skills.skillclasses.Transformation;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.funcs.FuncTemplate;
-
-import org.apache.commons.lang3.ArrayUtils;
-
+import lineage2.gameserver.utils.Util;
 import gnu.trove.list.array.TIntArrayList;
 import gnu.trove.map.hash.TIntObjectHashMap;
 import gnu.trove.set.hash.TIntHashSet;
@@ -211,7 +209,7 @@ public class EffectList
 		{
 			skillId = e.getSkill().getId();
 			
-			if (ArrayUtils.contains(skillIds, skillId))
+			if (Util.contains(skillIds, skillId))
 			{
 				return true;
 			}

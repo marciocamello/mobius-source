@@ -308,6 +308,7 @@ import lineage2.gameserver.utils.SiegeUtils;
 import lineage2.gameserver.utils.SqlBatch;
 import lineage2.gameserver.utils.Strings;
 import lineage2.gameserver.utils.TeleportUtils;
+import lineage2.gameserver.utils.Util;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.math.NumberUtils;
@@ -14555,7 +14556,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		for (Reflection r : ReflectionManager.getInstance().getAll())
 		{
-			if ((r != null) && ArrayUtils.contains(r.getVisitors(), getObjectId()))
+			if ((r != null) && Util.contains(r.getVisitors(), getObjectId()))
 			{
 				return r;
 			}
@@ -15451,7 +15452,7 @@ public final class Player extends Playable implements PlayerGroup
 					break;
 				}
 				
-				if (ArrayUtils.contains(newProductList, itemId))
+				if (Util.contains(newProductList, itemId))
 				{
 					continue;
 				}

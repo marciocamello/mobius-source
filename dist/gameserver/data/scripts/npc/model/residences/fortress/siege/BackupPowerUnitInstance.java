@@ -21,8 +21,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.templates.npc.NpcTemplate;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Mobius
@@ -172,7 +171,7 @@ public final class BackupPowerUnitInstance extends NpcInstance
 		{
 			int val = Rnd.get(0, LIMIT);
 			
-			if (ArrayUtils.contains(_generated, val))
+			if (Util.contains(_generated, val))
 			{
 				continue;
 			}

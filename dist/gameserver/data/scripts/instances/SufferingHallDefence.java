@@ -25,8 +25,7 @@ import lineage2.gameserver.network.serverpackets.ExSendUIEvent;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.utils.Location;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author pchayka
@@ -103,7 +102,7 @@ public final class SufferingHallDefence extends Reflection
 				return;
 			}
 			
-			if (ArrayUtils.contains(monsters, self.getId()) && !checkAliveMonsters())
+			if (Util.contains(monsters, self.getId()) && !checkAliveMonsters())
 			{
 				if (monstersSpawnTask != null)
 				{
@@ -275,7 +274,7 @@ public final class SufferingHallDefence extends Reflection
 		
 		for (NpcInstance n : getNpcs())
 		{
-			if (n.isMonster() && ArrayUtils.contains(monsters, n.getId()))
+			if (n.isMonster() && Util.contains(monsters, n.getId()))
 			{
 				n.setRunning();
 				n.moveToLocation(roomCenter, 200, false);
@@ -289,7 +288,7 @@ public final class SufferingHallDefence extends Reflection
 	{
 		for (NpcInstance n : getNpcs())
 		{
-			if (ArrayUtils.contains(monsters, n.getId()) && !n.isDead())
+			if (Util.contains(monsters, n.getId()) && !n.isDead())
 			{
 				return true;
 			}

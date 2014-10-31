@@ -27,8 +27,7 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.ReflectionUtils;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 public class Q00144_PailakaInjuredDragon extends Quest implements ScriptFile
 {
@@ -428,7 +427,7 @@ public class Q00144_PailakaInjuredDragon extends Quest implements ScriptFile
 				break;
 		}
 		
-		if (ArrayUtils.contains(Pailaka3rd, npcId))
+		if (Util.contains(Pailaka3rd, npcId))
 		{
 			if (Rnd.get(100) < 30)
 			{
@@ -436,7 +435,7 @@ public class Q00144_PailakaInjuredDragon extends Quest implements ScriptFile
 			}
 		}
 		
-		if (ArrayUtils.contains(Antelopes, npcId))
+		if (Util.contains(Antelopes, npcId))
 		{
 			st.dropItem(npc, ANTELOPDROP[Rnd.get(ANTELOPDROP.length)], Rnd.get(1, 10));
 		}

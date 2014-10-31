@@ -17,8 +17,7 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.utils.Location;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Mobius
@@ -74,7 +73,7 @@ public final class ThroneOfDestruction extends DefaultAI
 	{
 		for (NpcInstance npc : getActor().getReflection().getNpcs())
 		{
-			if (ArrayUtils.contains(checkNpcs, npc.getId()) && !npc.isDead())
+			if (Util.contains(checkNpcs, npc.getId()) && !npc.isDead())
 			{
 				return false;
 			}

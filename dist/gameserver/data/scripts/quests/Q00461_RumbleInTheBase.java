@@ -16,8 +16,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 public class Q00461_RumbleInTheBase extends Quest implements ScriptFile
 {
@@ -120,7 +119,7 @@ public class Q00461_RumbleInTheBase extends Quest implements ScriptFile
 		{
 			if ((st.getQuestItemsCount(ShoesStringofSelMahum) < 10) && (st.getQuestItemsCount(ShinySalmon) < 5))
 			{
-				if ((st.getQuestItemsCount(ShoesStringofSelMahum) < 10) && ArrayUtils.contains(SelMahums, npcId))
+				if ((st.getQuestItemsCount(ShoesStringofSelMahum) < 10) && Util.contains(SelMahums, npcId))
 				{
 					st.rollAndGive(ShoesStringofSelMahum, 1, 20);
 				}

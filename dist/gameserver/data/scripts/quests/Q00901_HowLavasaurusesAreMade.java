@@ -16,8 +16,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 public class Q00901_HowLavasaurusesAreMade extends Quest implements ScriptFile
 {
@@ -153,7 +152,7 @@ public class Q00901_HowLavasaurusesAreMade extends Quest implements ScriptFile
 	{
 		if (st.getCond() == 1)
 		{
-			if (!ArrayUtils.contains(KILLING_MONSTERS, npc.getId()))
+			if (!Util.contains(KILLING_MONSTERS, npc.getId()))
 			{
 				return null;
 			}

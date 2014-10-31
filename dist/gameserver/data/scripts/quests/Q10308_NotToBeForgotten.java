@@ -17,8 +17,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 public class Q10308_NotToBeForgotten extends Quest implements ScriptFile
 {
@@ -131,7 +130,7 @@ public class Q10308_NotToBeForgotten extends Quest implements ScriptFile
 			return null;
 		}
 		
-		if (ArrayUtils.contains(MONSTERS, npc.getId()) && (st.getCond() == 1))
+		if (Util.contains(MONSTERS, npc.getId()) && (st.getCond() == 1))
 		{
 			if (st.rollAndGive(ITEM_LEGACY_CORE, 1, 3, 40, DROP_CHANCE))
 			{

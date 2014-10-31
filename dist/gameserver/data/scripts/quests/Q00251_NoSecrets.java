@@ -16,8 +16,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 public class Q00251_NoSecrets extends Quest implements ScriptFile
 {
@@ -109,11 +108,11 @@ public class Q00251_NoSecrets extends Quest implements ScriptFile
 		
 		if (cond == 1)
 		{
-			if ((st.getQuestItemsCount(SelMahumTrainingDiary) < 10) && ArrayUtils.contains(SelMahumTrainers, npc.getId()))
+			if ((st.getQuestItemsCount(SelMahumTrainingDiary) < 10) && Util.contains(SelMahumTrainers, npc.getId()))
 			{
 				st.rollAndGive(SelMahumTrainingDiary, 1, 40);
 			}
-			else if ((st.getQuestItemsCount(SelMahumTrainingTimetable) < 5) && ArrayUtils.contains(SelMahumRecruits, npc.getId()))
+			else if ((st.getQuestItemsCount(SelMahumTrainingTimetable) < 5) && Util.contains(SelMahumRecruits, npc.getId()))
 			{
 				st.rollAndGive(SelMahumTrainingTimetable, 1, 25);
 			}

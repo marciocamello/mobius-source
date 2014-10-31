@@ -18,8 +18,7 @@ import lineage2.gameserver.dao.MailDAO;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.mail.Mail;
 import lineage2.gameserver.network.serverpackets.ExShowSentPostList;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author Mobius
@@ -71,7 +70,7 @@ public class RequestExDeleteSentPost extends L2GameClientPacket
 		{
 			for (Mail mail : mails)
 			{
-				if (ArrayUtils.contains(_list, mail.getMessageId()))
+				if (Util.contains(_list, mail.getMessageId()))
 				{
 					if (mail.getAttachments().isEmpty())
 					{

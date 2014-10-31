@@ -22,6 +22,7 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author pchayka
@@ -365,18 +366,18 @@ public class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest implements S
 				htmltext = "relicguard_q10294_5.htm";
 			}
 		}
-		else if (org.apache.commons.lang3.ArrayUtils.contains(RelicWatcher, npcId))
+		else if (Util.contains(RelicWatcher, npcId))
 		{
 			if (cond == 2)
 			{
 				htmltext = "relicwatcher_q10294_1.htm";
 			}
 		}
-		else if (org.apache.commons.lang3.ArrayUtils.contains(ReadingDesk, npcId))
+		else if (Util.contains(ReadingDesk, npcId))
 		{
 			if (cond == 2)
 			{
-				if (org.apache.commons.lang3.ArrayUtils.contains(YellowRoomDesks, npcId))
+				if (Util.contains(YellowRoomDesks, npcId))
 				{
 					if (npcId == YellowTrueReadingDesk)
 					{
@@ -387,7 +388,7 @@ public class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest implements S
 						htmltext = "readingdesk_q10294_false.htm";
 					}
 				}
-				else if (org.apache.commons.lang3.ArrayUtils.contains(GreenRoomDesks, npcId))
+				else if (Util.contains(GreenRoomDesks, npcId))
 				{
 					if (npcId == GreenTrueReadingDesk)
 					{
@@ -398,7 +399,7 @@ public class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest implements S
 						htmltext = "readingdesk_q10294_false.htm";
 					}
 				}
-				else if (org.apache.commons.lang3.ArrayUtils.contains(BlueRoomDesks, npcId))
+				else if (Util.contains(BlueRoomDesks, npcId))
 				{
 					if (npcId == BlueTrueReadingDesk)
 					{
@@ -409,7 +410,7 @@ public class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest implements S
 						htmltext = "readingdesk_q10294_false.htm";
 					}
 				}
-				else if (org.apache.commons.lang3.ArrayUtils.contains(RedRoomDesks, npcId))
+				else if (Util.contains(RedRoomDesks, npcId))
 				{
 					if (npcId == RedTrueReadingDesk)
 					{

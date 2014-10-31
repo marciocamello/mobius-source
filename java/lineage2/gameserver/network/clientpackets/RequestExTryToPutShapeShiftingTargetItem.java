@@ -24,8 +24,7 @@ import lineage2.gameserver.network.serverpackets.ExShapeShiftingResult;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.item.ExItemType;
 import lineage2.gameserver.templates.item.ItemTemplate.Grade;
-
-import org.apache.commons.lang3.ArrayUtils;
+import lineage2.gameserver.utils.Util;
 
 /**
  * @author kick
@@ -113,7 +112,7 @@ public class RequestExTryToPutShapeShiftingTargetItem extends L2GameClientPacket
 		
 		if ((stoneGrades != null) && (stoneGrades.length > 0))
 		{
-			if (!ArrayUtils.contains(stoneGrades, targetItem.getTemplate().getItemGrade()))
+			if (!Util.contains(stoneGrades, targetItem.getTemplate().getItemGrade()))
 			{
 				player.sendPacket(SystemMsg.ITEM_GRADES_DO_NOT_MATCH);
 				return;
@@ -129,11 +128,11 @@ public class RequestExTryToPutShapeShiftingTargetItem extends L2GameClientPacket
 			return;
 		}
 		
-		if (!ArrayUtils.contains(targetTypes, ShapeTargetType.ALL))
+		if (!Util.contains(targetTypes, ShapeTargetType.ALL))
 		{
 			if (targetItem.isWeapon())
 			{
-				if (!ArrayUtils.contains(targetTypes, ShapeTargetType.WEAPON))
+				if (!Util.contains(targetTypes, ShapeTargetType.WEAPON))
 				{
 					player.sendPacket(SystemMsg.WEAPONS_ONLY);
 					return;
@@ -141,7 +140,7 @@ public class RequestExTryToPutShapeShiftingTargetItem extends L2GameClientPacket
 			}
 			else if (targetItem.isArmor())
 			{
-				if (!ArrayUtils.contains(targetTypes, ShapeTargetType.ARMOR))
+				if (!Util.contains(targetTypes, ShapeTargetType.ARMOR))
 				{
 					player.sendPacket(SystemMsg.ARMOR_ONLY);
 					return;
@@ -149,7 +148,7 @@ public class RequestExTryToPutShapeShiftingTargetItem extends L2GameClientPacket
 			}
 			else
 			{
-				if (!ArrayUtils.contains(targetTypes, ShapeTargetType.ACCESSORY))
+				if (!Util.contains(targetTypes, ShapeTargetType.ACCESSORY))
 				{
 					player.sendPacket(SystemMsg.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
 					return;
@@ -161,7 +160,7 @@ public class RequestExTryToPutShapeShiftingTargetItem extends L2GameClientPacket
 		
 		if ((itemTypes != null) && (itemTypes.length > 0))
 		{
-			if (!ArrayUtils.contains(itemTypes, targetItem.getExItemType()))
+			if (!Util.contains(itemTypes, targetItem.getExItemType()))
 			{
 				player.sendPacket(SystemMsg.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
 				return;
