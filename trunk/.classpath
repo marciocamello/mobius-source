@@ -10,7 +10,7 @@
 	<classpathentry kind="lib" path="dist/libs/ehcache-core-2.6.8.jar"/>
 	<classpathentry kind="lib" path="dist/libs/javolution-5.5.1.jar" sourcepath="dist/libs/javolution-5.5.1-src.zip"/>
 	<classpathentry kind="lib" path="dist/libs/log4j-1.2.17.jar"/>
-	<classpathentry kind="lib" path="dist/libs/mysql-connector-java-5.1.31-bin.jar"/>
+	<classpathentry kind="lib" path="dist/libs/mysql-connector-java-5.1.33-bin.jar"/>
 	<classpathentry kind="lib" path="dist/libs/napile.primitive.jar" sourcepath="dist/libs/napile.primitive-src.zip"/>
 	<classpathentry kind="lib" path="dist/libs/slf4j-api-1.7.7.jar"/>
 	<classpathentry kind="lib" path="dist/libs/slf4j-log4j12-1.7.7.jar"/>
