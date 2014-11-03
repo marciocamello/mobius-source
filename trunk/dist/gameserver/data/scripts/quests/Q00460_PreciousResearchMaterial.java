@@ -76,7 +76,7 @@ public class Q00460_PreciousResearchMaterial extends Quest implements ScriptFile
 				case COMPLETED:
 					htmltext = "completed";
 					break;
-					
+				
 				case CREATED:
 					if (isAvailableFor(st.getPlayer()))
 					{
@@ -90,7 +90,7 @@ public class Q00460_PreciousResearchMaterial extends Quest implements ScriptFile
 						htmltext = "daily";
 					}
 					break;
-					
+				
 				case STARTED:
 					if (st.getCond() == 1)
 					{

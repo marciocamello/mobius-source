@@ -20,30 +20,15 @@ import lineage2.gameserver.scripts.ScriptFile;
 public class Q10305_UnstoppableFutileEfforts extends Quest implements ScriptFile
 {
 	public static final String A_LIST = "A_LIST";
+	
 	// npc
 	private static final int NOETI = 32895;
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
 	
 	public Q10305_UnstoppableFutileEfforts()
 	{
 		super(false);
 		addStartNpc(NOETI);
 		addTalkId(NOETI);
-		
 		addLevelCheck(90, 99);
 		addQuestCompletedCheck(Q10302_UnsettlingShadowAndRumors.class);
 		addKillNpcWithLog(1, A_LIST, 5, 22866, 22882, 22890, 22898, 22874, 22870, 22886, 22910, 22902, 22894, 22878);
@@ -66,6 +51,7 @@ public class Q10305_UnstoppableFutileEfforts extends Quest implements ScriptFile
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
 		st.getPlayer();
+		String htmlText = NO_QUEST_DIALOG;
 		int npcId = npc.getId();
 		int state = st.getState();
 		int cond = st.getCond();
@@ -104,7 +90,7 @@ public class Q10305_UnstoppableFutileEfforts extends Quest implements ScriptFile
 				return "32895-8.htm";
 			}
 		}
-		return "noquest";
+		return htmlText;
 	}
 	
 	@Override
@@ -123,4 +109,20 @@ public class Q10305_UnstoppableFutileEfforts extends Quest implements ScriptFile
 		
 		return null;
 	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
+	}
+	
 }

@@ -47,44 +47,50 @@ public class Q10312_AbandonedGodsCreature extends Quest implements ScriptFile
 			return "noquest";
 		}
 		
-		if (event.equalsIgnoreCase("33031-06.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
+			case "33031-06.htm":
+			{
+				st.setCond(1);
+				st.setState(STARTED);
+				st.playSound(SOUND_ACCEPT);
+				break;
+			}
+			case "33031-10.htm":
+			{
+				st.addExpAndSp(46847289, 20739487);
+				st.giveItems(REWARD_GIANTS_WARSMITH_HOLDER, 1);
+				st.giveItems(REWARD_GIANTS_REORIN_MOLD, 1);
+				st.giveItems(REWARD_GIANTS_ARCSMITH_ANVIL, 1);
+				st.giveItems(REWARD_GIANTS_WARSMITH_MOLD, 1);
+				st.playSound(SOUND_FINISH);
+				st.exitCurrentQuest(false);
+				break;
+			}
+			case "33031-11.htm":
+			{
+				st.addExpAndSp(46847289, 20739487);
+				st.giveItems(REWARD_ENCHANT_ARMOR_AR, 2);
+				st.playSound(SOUND_FINISH);
+				st.exitCurrentQuest(false);
+				break;
+			}
+			case "33031-12.htm":
+			{
+				st.addExpAndSp(46847289, 20739487);
+				st.giveItems(REWARD_HARDENER_POUNCH_R, 1);
+				st.playSound(SOUND_FINISH);
+				st.exitCurrentQuest(false);
+				break;
+			}
 		}
-		else if (event.equalsIgnoreCase("33031-10.htm"))
-		{
-			st.addExpAndSp(46847289, 20739487);
-			st.giveItems(REWARD_GIANTS_WARSMITH_HOLDER, 1);
-			st.giveItems(REWARD_GIANTS_REORIN_MOLD, 1);
-			st.giveItems(REWARD_GIANTS_ARCSMITH_ANVIL, 1);
-			st.giveItems(REWARD_GIANTS_WARSMITH_MOLD, 1);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(false);
-		}
-		else if (event.equalsIgnoreCase("33031-11.htm"))
-		{
-			st.addExpAndSp(46847289, 20739487);
-			st.giveItems(REWARD_ENCHANT_ARMOR_AR, 2);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(false);
-		}
-		else if (event.equalsIgnoreCase("33031-12.htm"))
-		{
-			st.addExpAndSp(46847289, 20739487);
-			st.giveItems(REWARD_HARDENER_POUNCH_R, 1);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(false);
-		}
-		
 		return event;
 	}
 	
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		String htmltext = "noquest";
+		String htmltext = NO_QUEST_DIALOG;
 		
 		if (st == null)
 		{
@@ -94,7 +100,7 @@ public class Q10312_AbandonedGodsCreature extends Quest implements ScriptFile
 		Player player = st.getPlayer();
 		QuestState previous = player.getQuestState(Q10310_TwistedCreationTree.class);
 		
-		if (npc.getId() == 33031)
+		if (npc.getId() == NPC_HORPINA)
 		{
 			if ((previous == null) || (!previous.isCompleted()) || (player.getLevel() < 90))
 			{
