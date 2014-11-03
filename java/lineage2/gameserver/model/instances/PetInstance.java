@@ -1011,7 +1011,7 @@ public class PetInstance extends Summon
 	@Override
 	public NpcTemplate getTemplate()
 	{
-		return (NpcTemplate) _template;
+		return _template;
 	}
 	
 	/**

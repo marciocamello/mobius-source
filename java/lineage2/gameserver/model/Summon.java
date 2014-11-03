@@ -62,6 +62,7 @@ public abstract class Summon extends Playable
 {
 	private static final int SUMMON_DISAPPEAR_RANGE = 2500;
 	private final Player _owner;
+	protected final NpcTemplate _template;
 	private int _spawnAnimation = 2;
 	protected long _exp = 0;
 	protected int _sp = 0;
@@ -78,8 +79,8 @@ public abstract class Summon extends Playable
 	public Summon(int objectId, NpcTemplate template, Player owner)
 	{
 		super(objectId, template);
+		_template = template;
 		_owner = owner;
-		
 		if (template.getSkills().size() > 0)
 		{
 			for (TIntObjectIterator<Skill> iterator = template.getSkills().iterator(); iterator.hasNext();)
@@ -178,7 +179,7 @@ public abstract class Summon extends Playable
 	@Override
 	public NpcTemplate getTemplate()
 	{
-		return (NpcTemplate) _template;
+		return _template;
 	}
 	
 	/**
@@ -892,6 +893,26 @@ public abstract class Summon extends Playable
 	{
 		Player owner = getPlayer();
 		return owner.getTeam();
+	}
+	
+	/**
+	 * AttackSpeedMultiplier for summons.
+	 * @return double
+	 */
+	@Override
+	public double getAttackSpeedMultiplier()
+	{
+		return (1.1 * getPAtkSpd()) / _template.getBasePAtkSpeed();
+	}
+	
+	/**
+	 * MovementSpeedMultiplier for summons.
+	 * @return double
+	 */
+	@Override
+	public double getMovementSpeedMultiplier()
+	{
+		return (getRunSpeed() * 1.) / _template.getBaseRunSpeed();
 	}
 	
 	/**
