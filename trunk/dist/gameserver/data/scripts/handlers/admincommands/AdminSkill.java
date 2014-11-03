@@ -12,6 +12,7 @@
  */
 package handlers.admincommands;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -63,7 +64,8 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 		"admin_show_effects",
 		"admin_debug_stats",
 		"admin_remove_cooldown",
-		"admin_buff"
+		"admin_buff",
+		"admin_call_skill"
 	};
 	
 	private static Skill[] adminSkills;
@@ -150,7 +152,6 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 			case "admin_remove_cooldown":
 				activeChar.resetReuse();
 				activeChar.sendPacket(new SkillCoolTime(activeChar));
-				activeChar.sendMessage("Oткат в�?ех �?килов обнулен.");
 				break;
 			
 			case "admin_buff":
@@ -160,6 +161,14 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 				}
 				
 				activeChar.sendSkillList();
+				break;
+			
+			case "admin_call_skill":
+				List<Creature> target = new ArrayList<>();
+				target.add(activeChar.getTarget() != null ? (Creature) activeChar.getTarget() : activeChar);
+				activeChar.callSkill(SkillTable.getInstance().getInfo(Integer.valueOf(wordList[1]), Integer.valueOf(wordList[2]) > 1 ? Integer.valueOf(wordList[2]) : 1), target, false);
+				// Use method bellow if you want to cast skill / spend mana.
+				// activeChar.doCast(SkillTable.getInstance().getInfo(Integer.valueOf(wordList[1]), Integer.valueOf(wordList[2]) > 1 ? Integer.valueOf(wordList[2]) : 1), activeChar.getTarget() != null ? (Creature) activeChar.getTarget() : activeChar, false);
 				break;
 		}
 		
