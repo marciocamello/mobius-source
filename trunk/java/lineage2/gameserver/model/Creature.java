@@ -2389,7 +2389,7 @@ public abstract class Creature extends GameObject
 	 * Method getAttackSpeedMultiplier.
 	 * @return double
 	 */
-	public final double getAttackSpeedMultiplier()
+	public double getAttackSpeedMultiplier()
 	{
 		return (1.1 * getPAtkSpd()) / getTemplate().getBasePAtkSpd();
 	}

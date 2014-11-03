@@ -109,6 +109,8 @@ public final class NpcTemplate extends CharTemplate
 	private RandomActions _randomActions = null;
 	private final TIntObjectHashMap<WalkerRoute> _walkerRoute = new TIntObjectHashMap<>();
 	private final boolean displayHpBar;
+	private final double _basePAtkSpeed;
+	private final int _baseRunSpeed;
 	
 	/**
 	 * Constructor for NpcTemplate.
@@ -117,6 +119,8 @@ public final class NpcTemplate extends CharTemplate
 	public NpcTemplate(StatsSet set)
 	{
 		super(set);
+		_basePAtkSpeed = set.getDouble("basePAtkSpd"); // for AttackSpeedMultiplier
+		_baseRunSpeed = set.getInteger("baseRunSpd"); // for MovementSpeedMultiplier
 		npcId = set.getInteger("npcId");
 		displayId = set.getInteger("displayId");
 		name = set.getString("name");
@@ -364,6 +368,24 @@ public final class NpcTemplate extends CharTemplate
 	public RewardList getRewardList(RewardType t)
 	{
 		return _rewards.get(t);
+	}
+	
+	/**
+	 * Method getBasePAtkSpeed.
+	 * @return _basePAtkSPeed
+	 */
+	public double getBasePAtkSpeed()
+	{
+		return _basePAtkSpeed;
+	}
+	
+	/**
+	 * Method getBaseRunSpeed.
+	 * @return _baseRunSpeed
+	 */
+	public int getBaseRunSpeed()
+	{
+		return _baseRunSpeed;
 	}
 	
 	/**
