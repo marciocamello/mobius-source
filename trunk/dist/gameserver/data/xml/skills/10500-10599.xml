@@ -2,9 +2,9 @@
 <list>
 	<skill id="10500" levels="1" name="Tyrr Warrior Knock Chain Skill">
 		<set name="reuseDelay" val="10000"/>
-		<set name="hitTime" val="0"/>
+		<set name="hitTime" val="2000"/>
 		<set name="mpConsume1" val="40"/>
-		<set name="castRange" val="30"/>
+		<set name="castRange" val="45"/>
 		<set name="power" val="15803"/>
 		<set name="magicLevel" val="85"/>
 		<set name="coolTime" val="1500"/>

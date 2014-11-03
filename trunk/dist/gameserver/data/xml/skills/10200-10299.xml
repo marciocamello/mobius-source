@@ -91,6 +91,7 @@
 		<set name="nextAction" val="attack"/>
 		<set name="isSkillTimePermanent" val="true"/>
 		<set name="isAlterSkill" val="true"/>
+		<set name="activateRate" val="80"/>
 	</skill>
 	<skill id="10250" levels="1" name="Sigel Knight Knock Chain Skill">
 		<set name="reuseDelay" val="10000"/>
@@ -107,6 +108,7 @@
 		<set name="nextAction" val="attack"/>
 		<set name="isSkillTimePermanent" val="true"/>
 		<set name="isAlterSkill" val="true"/>
+		<set name="activateRate" val="80"/>
 		<cond msgId="113" addName="1">
 			<not>
 				<using kind="Bow, Crossbow"/>
@@ -363,7 +365,7 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant9>
 		<for>
-			<effect count="1" name="Buff" stackOrder="3" stackType="pAtkDown" time="10" val="0">
+			<effect count="1" name="Debuff" stackOrder="3" stackType="pAtkDown" time="10" val="0">
 				<mul order="0x30" stat="pDef" val="0.77"/>
 			</effect>
 		</for>

@@ -10,13 +10,13 @@
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="CONT"/>
-		<set name="operateType" val="OP_TOGGLE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="113" addName="1">
 			<using kind="Bow,Crossbow"/>
 		</cond>
 		<for>
-			<effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="stance" time="5" val="0.2">
+			<effect count="360" name="LDManaDamOverTime" stackOrder="1" stackType="guts" time="5" val="0.2">
 				<mul order="0x30" stat="pAtk" val="#pAtk"/>
 				<mul order="0x30" stat="pAtkRange" val="#pAtkRange"/>
 			</effect>
@@ -45,13 +45,13 @@
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="target" val="TARGET_SELF"/>
-		<set name="skillType" val="CONT"/>
-		<set name="operateType" val="OP_TOGGLE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="113" addName="1">
 			<using kind="Bow,Crossbow"/>
 		</cond>
 		<for>
-			<effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="stance" time="5" val="0.2">
+			<effect count="360" name="LDManaDamOverTime" stackOrder="1" stackType="guts" time="5" val="0.2">
 				<mul order="0x30" stat="pAtk" val="#pAtk"/>
 				<mul order="0x30" stat="pvpPhysDmgBonus" val="#pvpPhysDmgBonus"/>
 			</effect>

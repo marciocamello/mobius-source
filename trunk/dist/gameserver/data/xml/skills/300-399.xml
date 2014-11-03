@@ -1152,10 +1152,10 @@
 		<set name="powerPvP" val="#powerPvP"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="overHit" val="true"/>
-		<set name="criticalRate" val="10"/>
+		<set name="criticalRate" val="50"/>
 		<set name="skillType" val="LETHAL_SHOT"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="lethal1" val="10"/>
+		<set name="lethal1" val="100"/>
 		<set name="nextAction" val="attack"/>
 		<set name="trait" val="DEATH"/>
 		<enchant1 levels="15" name="Power">

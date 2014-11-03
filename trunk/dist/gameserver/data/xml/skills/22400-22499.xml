@@ -62,6 +62,15 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
+	<skill id="22447" levels="1" name="Blessed Spiritshot (R-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SPIRITSHOT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+	</skill>	
 	<skill id="22448" levels="5" name="Soulshot Medium Pack (R-grade)">
 		<set name="magicLevel" val="1"/>
 		<set name="magicType" val="SPECIAL"/>

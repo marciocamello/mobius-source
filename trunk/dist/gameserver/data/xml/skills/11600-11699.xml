@@ -167,15 +167,15 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect count="1" name="Buff" time="#abnormal_time" val="0" stackOrder="2" stackType="ShieldSong">
-				<mul order="0x30" stat="pDef" val="1.05"/>
-				<mul order="0x30" stat="bowWpnVuln" val="1.10"/>
-				<mul order="0x30" stat="crossbowWpnVuln" val="1.10"/>
-				<add order="0x40" stat="defenceFire" val="20"/>
-				<add order="0x40" stat="defenceWater" val="20"/>
-				<add order="0x40" stat="defenceWind" val="20"/>
-				<add order="0x40" stat="defenceEarth" val="20"/>
-				<add order="0x40" stat="defenceHoly" val="20"/>
-				<add order="0x40" stat="defenceUnholy" val="20"/>
+			<mul order="0x30" stat="pDef" val="1.05"/>
+			<mul order="0x30" stat="bowWpnVuln" val="1.10"/>
+			<mul order="0x30" stat="crossbowWpnVuln" val="1.10"/>
+			<add order="0x40" stat="defenceFire" val="20"/>
+			<add order="0x40" stat="defenceWater" val="20"/>
+			<add order="0x40" stat="defenceWind" val="20"/>
+			<add order="0x40" stat="defenceEarth" val="20"/>
+			<add order="0x40" stat="defenceHoly" val="20"/>
+			<add order="0x40" stat="defenceUnholy" val="20"/>
 			</effect>			
 		</for>
 	</skill>
