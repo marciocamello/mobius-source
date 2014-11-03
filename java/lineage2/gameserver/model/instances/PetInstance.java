@@ -1268,7 +1268,7 @@ public class PetInstance extends Summon
 		}
 		else
 		{
-			owner.sendPacket(new SystemMessage(SystemMessage.THE_PET_GAVE_DAMAGE_OF_S1).addNumber(damage));
+			owner.sendPacket(new SystemMessage(SystemMessage.THE_PET_GAVE_DAMAGE_OF_S1).addNumber(damage).addDamage(target, target, -damage));
 		}
 	}
 	
@@ -1295,7 +1295,7 @@ public class PetInstance extends Summon
 				sm.addString(attacker.getName());
 			}
 			
-			sm.addNumber((long) damage);
+			sm.addNumber((long) damage).addDamage(this, attacker, -damage);
 			owner.sendPacket(sm);
 		}
 	}

@@ -536,7 +536,7 @@ public class Config
 	public static int ENCHANT_CHANCE_CRYSTAL_WEAPON;
 	public static int ENCHANT_CHANCE_CRYSTAL_ARMOR;
 	public static int ENCHANT_CHANCE_CRYSTAL_ACCESSORY;
-        public static int ENCHANT_CHANCE_GIANT_WEAPON;
+	public static int ENCHANT_CHANCE_GIANT_WEAPON;
 	public static int ENCHANT_CHANCE_GIANT_ARMOR;
 	public static int ENCHANT_CHANCE_GIANT_ACCESSORY;
 	public static int ENCHANT_MAX;
@@ -1349,7 +1349,7 @@ public class Config
 		ENCHANT_CHANCE_CRYSTAL_WEAPON = otherSettings.getProperty("EnchantChanceCrystalWeapon", 66);
 		ENCHANT_CHANCE_CRYSTAL_ARMOR = otherSettings.getProperty("EnchantChanceCrystalArmor", ENCHANT_CHANCE_CRYSTAL_WEAPON);
 		ENCHANT_CHANCE_CRYSTAL_ACCESSORY = otherSettings.getProperty("EnchantChanceCrystalAccessory", ENCHANT_CHANCE_CRYSTAL_ARMOR);
-                ENCHANT_CHANCE_GIANT_WEAPON = otherSettings.getProperty("EnchantChanceGiantWeapon", 66);
+		ENCHANT_CHANCE_GIANT_WEAPON = otherSettings.getProperty("EnchantChanceGiantWeapon", 66);
 		ENCHANT_CHANCE_GIANT_ARMOR = otherSettings.getProperty("EnchantChanceGiantArmor", ENCHANT_CHANCE_GIANT_WEAPON);
 		ENCHANT_CHANCE_GIANT_ACCESSORY = otherSettings.getProperty("EnchantChanceGiantAccessory", ENCHANT_CHANCE_GIANT_ARMOR);
 		SAFE_ENCHANT_COMMON = otherSettings.getProperty("SafeEnchantCommon", 3);

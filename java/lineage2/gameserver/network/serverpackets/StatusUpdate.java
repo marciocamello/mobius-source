@@ -24,7 +24,7 @@ public class StatusUpdate extends L2GameServerPacket
 {
 	private final Creature _actor;
 	private List<int[]> attributes = Collections.emptyList();
-	private boolean hpRegActive = true;
+	boolean hpRegActive = true;
 	
 	public StatusUpdate setHpRegActive(boolean v)
 	{
@@ -304,7 +304,19 @@ public class StatusUpdate extends L2GameServerPacket
 		writeC(0x18);
 		writeD(_actor.getObjectId());
 		writeD(getReceiverId());
-		writeD(hpRegActive);
+		boolean show = false;
+		if ((_actor.getObjectId()) == (getReceiverId()))
+		{
+			show = true;
+		}
+		for (int[] CP : attributes)
+		{
+			if ((CP[0] == 33) || (CP[0] == 34))
+			{
+				show = false;
+			}
+		}
+		writeD(show);
 		writeD(attributes.size());
 		
 		for (int[] temp : attributes)

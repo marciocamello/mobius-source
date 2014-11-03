@@ -39,7 +39,7 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 {
 	private int _objectId;
 	private int _catalystObjId;
-        private int _EnchantAmount = 1;
+	private int _EnchantAmount = 1;
 	
 	/**
 	 * Method readImpl.
@@ -183,12 +183,12 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 						chance = Config.ENCHANT_CHANCE_CRYSTAL_ACCESSORY;
 					}
 					break;
-                                case GIANT:
-                                        _EnchantAmount = Rnd.get(1, 3);
-                                        if (item.isWeapon())
+				case GIANT:
+					_EnchantAmount = Rnd.get(1, 3);
+					if (item.isWeapon())
 					{
 						chance = Config.ENCHANT_CHANCE_GIANT_WEAPON;
-			}
+					}
 					else if (item.isArmor())
 					{
 						chance = Config.ENCHANT_CHANCE_GIANT_ARMOR;
@@ -308,12 +308,12 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 						}
 						
 						break;
-                                        case GIANT:
+					case GIANT:
 						if (item.isEquipped())
 						{
 							player.sendDisarmMessage(item);
 						}
-					
+						
 						if (!inventory.destroyItem(item, 1L))
 						{
 							player.sendActionFailed();
