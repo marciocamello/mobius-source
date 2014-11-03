@@ -1059,7 +1059,7 @@
 		<set name="icon" val="icon.skilltransform3"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="TRANSFORMATION"/>
-		<set name="addSkills" val="619;1;5491;1"/>
+		<set name="addSkills" val="9206;1;619;1"/>
 		<set name="npcId" val="13130"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isCommon" val="true"/>

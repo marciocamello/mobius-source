@@ -79,6 +79,10 @@ public class PetDataTable
 	public final static int TURTLE_ASCETIC_ID = 16053;
 	public final static int DEINONYCHUS_ID = 16067;
 	public final static int GUARDIANS_STRIDER_ID = 16068;
+	public final static int RACCOON_ID = 16094;
+	public final static int WHITE_CAT_ID = 16095;
+	public final static int DESERT_FOX_ID = 16096;
+	public final static int TRAINING_PET_ID = 16097;
 	private final TIntObjectHashMap<PetData> _pets = new TIntObjectHashMap<>();
 	
 	/**
@@ -318,7 +322,11 @@ public class PetDataTable
 		TOY_KNIGHT(TOY_KNIGHT_ID, 14061, -1, false, 25, 12, .30, 2, 2),
 		TURTLE_ASCETIC(TURTLE_ASCETIC_ID, 14064, -1, false, 25, 12, .30, 2, 2),
 		DEINONYCHUS(DEINONYCHUS_ID, 14828, 2515, false, 55, 12, .30, 2, 2),
-		GUARDIANS_STRIDER(GUARDIANS_STRIDER_ID, 14819, 5168, true, 55, 12, .30, 2, 2);
+		GUARDIANS_STRIDER(GUARDIANS_STRIDER_ID, 14819, 5168, true, 55, 12, .30, 2, 2),
+		RACCON(RACCOON_ID, 34905, -1, false, 25, 12, .30, 2, 2),
+		WHITE_CAT(WHITE_CAT_ID, 34906, -1, false, 25, 12, .30, 2, 2),
+		DESERT_FOX(DESERT_FOX_ID, 34907, -1, false, 25, 12, .30, 2, 2),
+		TRAINING_PET(TRAINING_PET_ID, 34908, -1, false, 25, 12, .30, 2, 2);
 		private final int _npcId;
 		private final int _controlItemId;
 		private final int _foodId;
@@ -761,6 +769,10 @@ public class PetDataTable
 			case SPIRIT_SHAMAN_ID:
 			case TOY_KNIGHT_ID:
 			case TURTLE_ASCETIC_ID:
+			case RACCOON_ID:
+			case WHITE_CAT_ID:
+			case DESERT_FOX_ID:
+			case TRAINING_PET_ID:
 				return true;
 				
 			default:

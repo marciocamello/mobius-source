@@ -12,7 +12,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect name="Transformation" time="1800" val="129">
-				<add order="0x40" stat="runSpd" val="50"/>
+				<mul order="0x30" stat="runSpd" val="1.4"/>
 			</effect>
 		</for>
 	</skill>
@@ -28,7 +28,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect name="Transformation" time="1800" val="130">
-				<add order="0x40" stat="runSpd" val="50"/>
+				<mul order="0x30" stat="runSpd" val="1.4"/>
 			</effect>
 		</for>
 	</skill>
@@ -44,7 +44,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect name="Transformation" time="1800" val="131">
-				<add order="0x40" stat="runSpd" val="50"/>
+				<mul order="0x30" stat="runSpd" val="1.4"/>
 			</effect>
 		</for>
 	</skill>
@@ -60,7 +60,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect name="Transformation" time="1800" val="132">
-				<add order="0x40" stat="runSpd" val="50"/>
+				<mul order="0x30" stat="runSpd" val="1.4"/>
 			</effect>
 		</for>
 	</skill>
@@ -76,7 +76,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect name="Transformation" time="1800" val="133">
-				<add order="0x40" stat="runSpd" val="50"/>
+				<mul order="0x30" stat="runSpd" val="1.4"/>
 			</effect>
 		</for>
 	</skill>
@@ -92,7 +92,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect name="Transformation" time="1800" val="134">
-				<add order="0x40" stat="runSpd" val="50"/>
+				<mul order="0x30" stat="runSpd" val="1.4"/>
 			</effect>
 		</for>
 	</skill>
@@ -108,7 +108,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect name="Transformation" time="1800" val="135">
-				<add order="0x40" stat="runSpd" val="50"/>
+				<mul order="0x30" stat="runSpd" val="1.4"/>
 			</effect>
 		</for>
 	</skill>
@@ -124,7 +124,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect name="Transformation" time="1800" val="136">
-				<add order="0x40" stat="runSpd" val="50"/>
+				<mul order="0x30" stat="runSpd" val="1.4"/>
 			</effect>
 		</for>
 	</skill>
