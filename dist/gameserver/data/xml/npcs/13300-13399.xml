@@ -437,10 +437,10 @@
 	<npc id="13311" name="Awakened Knight's Mount" title="">
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.5"/>
-		<set name="level" value="86"/>
-		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Npc"/>
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseHpRate" value="1.0"/>
@@ -477,10 +477,10 @@
 	<npc id="13312" name="Awakened Warrior's Mount" title="">
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.5"/>
-		<set name="level" value="86"/>
-		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Npc"/>
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseHpRate" value="1.0"/>
@@ -517,10 +517,10 @@
 	<npc id="13313" name="Awakened Rogue's Mount" title="">
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.25"/>
-		<set name="level" value="86"/>
-		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Npc"/>
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseHpRate" value="1.0"/>
@@ -558,9 +558,9 @@
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="type" value="Npc"/>
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseHpRate" value="1.0"/>
@@ -598,9 +598,9 @@
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.25"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="type" value="Npc"/>
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseHpRate" value="1.0"/>
@@ -638,9 +638,9 @@
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.25"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="type" value="Npc"/>
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseHpRate" value="1.0"/>
@@ -678,9 +678,9 @@
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="type" value="Npc"/>
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseHpRate" value="1.0"/>
@@ -718,9 +718,9 @@
 		<set name="collision_radius" value="31.0"/>
 		<set name="collision_height" value="32.5"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="type" value="Npc"/>
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2880.376"/>
 		<set name="baseHpRate" value="1.0"/>
