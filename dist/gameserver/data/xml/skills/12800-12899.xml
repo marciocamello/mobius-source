@@ -282,10 +282,19 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="12843" levels="1" name="Elixir Pack (R-grade)">
-		<set name="icon" val="icon.skill0000"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+	    <set name="hitTime" val="50"/>
+        <set name="magicType" val="MAGIC"/>
+        <set name="magicLevel" val="1"/>
+        <set name="target" val="TARGET_SELF"/>
+		<set name="itemConsumeId" val="32737"/>
+        <set name="itemConsumeCount" val="1"/>
+        <set name="skillType" val="RESTORE_ITEM"/>
+        <set name="operateType" val="OP_ACTIVE"/>
+        <set name="isHandler" val="true"/>
+        <set name="altUse" val="true"/>
+		<effect name="RestorationRandom" time="0">
+            <def name="Items" val="{[32316:1]10.0};{[30357:1]30.0};{[30358:1]30.0};{[30359:1]30.0}"/>
+        </effect>
 	</skill>
 	<skill id="12844" levels="1" name="Elixir Pack (D-grade)">
 		<set name="icon" val="icon.skill0000"/>

@@ -752,7 +752,7 @@
 		<set name="flyType" val="THROW_HORIZONTAL"/>
 		<set name="flySpeed" val="900"/>
 		<set name="isUsingWhileCasting" val="true"/>
-		<set name="isSkillTimePermanent" val="true"/>
+		<set name="isSkillTimePermanent" val="true"/>	
 		<cond msgId="113" addName="1">
 			<using kind="Shield"/>
 		</cond>

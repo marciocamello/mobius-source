@@ -207,7 +207,13 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="negateEffects" val="Root;Paralyze;Debuff"/>
 		<set name="negateStackType" val="RunSpeedDown;pAtkSpdDown"/>
-		<for/>
+		<for>
+			<effect count="1" name="DispelEffects" time="0" val="0">
+				<def name="dispelType" val="cleanse"/>
+				<def name="cancelRate" val="100"/>
+				<def name="negateCount" val="10"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="11310" levels="1" name="Mass Servitor Ultimate Defense">
 		<table name="#pDef">4680</table>

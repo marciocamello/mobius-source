@@ -37,6 +37,9 @@ import lineage2.gameserver.skills.effects.EffectCubic;
 import lineage2.gameserver.skills.effects.EffectCurseOfLifeFlow;
 import lineage2.gameserver.skills.effects.EffectDamOverTime;
 import lineage2.gameserver.skills.effects.EffectDamOverTimeLethal;
+import lineage2.gameserver.skills.effects.EffectDamageHealMpToEffector;
+import lineage2.gameserver.skills.effects.EffectDamageHealToEffector;
+import lineage2.gameserver.skills.effects.EffectDamageHealToEffectorAndPets;
 import lineage2.gameserver.skills.effects.EffectDeathImmunity;
 import lineage2.gameserver.skills.effects.EffectDebuffImmunity;
 import lineage2.gameserver.skills.effects.EffectDestroySummon;
@@ -133,6 +136,9 @@ public enum EffectType
 	CharmOfCourage(EffectCharmOfCourage.class, null, true),
 	CPDamPercent(EffectCPDamPercent.class, null, true),
 	Cubic(EffectCubic.class, null, true),
+	DamageHealMpToEffector(EffectDamageHealMpToEffector.class, null, false),
+	DamageHealToEffector(EffectDamageHealToEffector.class, null, false),
+	DamageHealToEffectorAndPets(EffectDamageHealToEffectorAndPets.class, null, false),
 	DamOverTime(EffectDamOverTime.class, null, false),
 	DamOverTimeLethal(EffectDamOverTimeLethal.class, null, false),
 	DeathImmunity(EffectDeathImmunity.class, null, false),

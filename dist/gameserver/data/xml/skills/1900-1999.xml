@@ -666,12 +666,14 @@
 	</skill>
 	<skill id="1954" levels="1" name="Flying Body Reinforcement">
 		<set name="icon" val="icon.skill1954"/>
-		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="2500"/>
+		<set name="hpConsume" val="200"/>
+		<set name="mpConsume2" val="70"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="TRANSFORMATION"/>
 		<set name="isReuseDelayPermanent" val="true"/>
 		<set name="addSkills" val="950;-2;951;-2;1544;-2;1545;1;953;1;932;0;619;1;5491;1"/>
-		<set name="npcId" val="13142"/>
+		<set name="npcId" val="13089"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect count="1" name="Transformation" time="3600" val="260">
@@ -691,7 +693,6 @@
 				<add order="0x40" stat="runSpd" val="4"/>
 			</effect>
 		</for>
-		<set name="hitTime" val="2500"/>
 	</skill>
 	<skill id="1955" levels="3" name="Party Solidarity">
 		<set name="icon" val="icon.skill1955"/>
@@ -1053,7 +1054,7 @@
 			<target player="true"/>
 		</cond>
 		<for>
-			<effect count="1" name="Buff" time="5" val="0">
+			<effect count="1" name="Debuff" time="5" val="0">
 				<div order="0x30" stat="runSpd" val="1.9">
 					<target player="true"/>
 				</div>

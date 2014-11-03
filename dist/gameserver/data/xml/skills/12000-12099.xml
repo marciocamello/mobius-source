@@ -11,7 +11,8 @@
 		<set name="skillType" val="MDAM"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="target" val="TARGET_ONE"/>
-		<set name="overHit" val="true"/>&gt;<set name="operateType" val="OP_ACTIVE"/>
+		<set name="overHit" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
 		<set name="isSkillTimePermanent" val="true"/>
 		<set name="isAlterSkill" val="true"/>

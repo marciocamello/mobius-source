@@ -52,7 +52,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	private static final int ACTING = 2;
 	private static final int FINISHING = 3;
 	private static final int FINISHED = 4;
-	protected final Creature _effector;
+	public final Creature _effector;
 	public final Creature _effected;
 	protected final Skill _skill;
 	protected final int _displayId;

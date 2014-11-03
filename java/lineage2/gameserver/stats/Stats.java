@@ -132,6 +132,8 @@ public enum Stats
 	FIST_WPN_VULNERABILITY("fistWpnVuln", 10., 200., 100.),
 	ABSORB_DAMAGE_PERCENT("absorbDam", 0., 100.),
 	ABSORB_DAMAGEMP_PERCENT("absorbDamMp", 0., 100.),
+	DAMAGE_HEAL_TO_EFFECTOR("damageHealToEffector", 0., 100.),
+	DAMAGE_HEAL_MP_TO_EFFECTOR("damageHealMpToEffector", 0., 100.),
 	TRANSFER_TO_SUMMON_DAMAGE_PERCENT("transferPetDam", 0., 100.),
 	TRANSFER_TO_EFFECTOR_DAMAGE_PERCENT("transferToEffectorDam", 0., 100.),
 	TRANSFER_TO_MP_DAMAGE_PERCENT("transferToMpDam", 0., 100.),
