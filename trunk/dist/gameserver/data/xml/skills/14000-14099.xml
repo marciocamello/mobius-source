@@ -198,108 +198,182 @@
 		<set name="reuseDelay" val="5000"/>
 	</skill>
 	<skill id="14023" levels="1" name="Hero's Teleport">
-		<set name="icon" val="icon.skill0793"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="400"/>
-		<set name="hitTime" val="1500"/>
 		<set name="reuseDelay" val="1500"/>
+		<set name="hitTime" val="1500"/>
+		<set name="abnormal_time" val="1"/>
+		<set name="abnormal_level" val="1"/>
+		<set name="abnormal_type" val="fly_away"/>
+		<set name="skillRadius" val="350"/>
+		<set name="magicLevel" val="99"/>
+		<set name="icon" val="icon.skill0793"/>
+		<set name="activateRate" val="45"/>
+		<set name="power" val="90"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="saveVs" val="MEN"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="KnockBack"/>
+		</for>
 	</skill>
 	<skill id="14024" levels="1" name="Ancient Hero's Roar">
-		<set name="icon" val="icon.skill0320"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="300"/>
-		<set name="hitTime" val="2000"/>
 		<set name="reuseDelay" val="5000"/>
+		<set name="hitTime" val="2000"/>
+		<set name="abnormal_time" val="3"/>
+		<set name="abnormal_level" val="1"/>
+		<set name="abnormal_type" val="fly_away"/>
+		<set name="power" val="90"/>
+		<set name="mpConsume2" val="87"/>
+		<set name="trait" val="DERANGEMENT"/>
+		<set name="magicLevel" val="99"/>
+		<set name="icon" val="icon.skill0320"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="350"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="3" time="1" name="Fear"/>
+		</for>
 	</skill>
 	<skill id="14025" levels="1" name="Hero's Arrow Shaft">
+		<set name="magicLevel" val="99"/>
 		<set name="icon" val="icon.skill0772"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="skillRadius" val="350" />
+		<set name="power" val="150000" />
+		<set name="mpConsume2" val="87" />
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="hitTime" val="1000"/>
 	</skill>
 	<skill id="14026" levels="1" name="Hero's Sword Energy">
-		<set name="icon" val="icon.skill0122"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="900"/>
-		<set name="hitTime" val="1500"/>
 		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="1500"/>
+		<set name="magicLevel" val="99"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0122"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="power" val="150000" />
+		<set name="castRange" val="900" />
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="14027" levels="1" name="Hero's Rage">
-		<set name="icon" val="icon.skill0122"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="900"/>
-		<set name="hitTime" val="1500"/>
 		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="1500"/>
+		<set name="magicLevel" val="99"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0122"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="350"/>
+		<set name="power" val="100000"/>
+		<set name="activateRate" val="100"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="saveVs" val="CON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="KnockBack"/>
+		</for>
 	</skill>
 	<skill id="14028" levels="1" name="Hero's Influence">
-		<set name="icon" val="icon.skill0024"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="2000"/>
-		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="4000"/>
+		<set name="magicLevel" val="99"/>
+		<set name="power" val="3000"/>
+		<set name="mpConsume2" val="87"/>
+		<set name="icon" val="icon.skill0024"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="450"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="14029" levels="1" name="Hero's Influence">
-		<set name="icon" val="icon.skill0024"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="2000"/>
-		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="2000"/>
+		<set name="magicLevel" val="99"/>
+		<set name="power" val="3000"/>
+		<set name="mpConsume2" val="87"/>
+		<set name="icon" val="icon.skill0024"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="450"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="14030" levels="1" name="Hero's Magic">
-		<set name="icon" val="icon.skill1230"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="1000"/>
+		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="2000"/>
+		<set name="magicLevel" val="99"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="power" val="50000"/>
+		<set name="skillRadius" val="350"/>
+		<set name="icon" val="icon.skill1230"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="14031" levels="1" name="Hero's Magic">
-		<set name="icon" val="icon.skill1230"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="1000"/>
+		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="2000"/>
+		<set name="magicLevel" val="99"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="power" val="50000"/>
+		<set name="skillRadius" val="350"/>
+		<set name="icon" val="icon.skill1230"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="14032" levels="1" name="Red Net">
-		<set name="icon" val="icon.skill14032"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="600"/>
-		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="5000"/>
+		<set name="coolTime" val="500"/>
+		<set name="hitTime" val="4000"/>
+		<set name="abnormal_time" val="5"/>
+		<set name="activateRate" val="90"/>
+		<set name="mpConsume2" val="85"/>
+		<set name="abnormal_level" val="1"/>
+		<set name="abnormal_type" val="stun"/>
+		<set name="icon" val="icon.skill14032"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="trait" val="SHOCK"/>
+		<set name="power" val="10000"/>
+		<set name="castRange" val="600"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="saveVs" val="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
 	</skill>
 	<skill id="14033" levels="1" name="Vital Spot Attack">
-		<set name="icon" val="icon.skill0016"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="300"/>
-		<set name="hitTime" val="3000"/>
 		<set name="reuseDelay" val="5000"/>
+		<set name="hitTime" val="3000"/>
+		<set name="icon" val="icon.skill0016"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="mpConsume2" val="85" />
+		<set name="magicLevel" val="95" />
+		<set name="castRange" val="300" />
+		<set name="power" val="60000" />
 	</skill>
 	<skill id="14034" levels="1" name="Waist Slash">
-		<set name="icon" val="icon.skill0003"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="300"/>
-		<set name="hitTime" val="3000"/>
 		<set name="reuseDelay" val="5000"/>
+		<set name="hitTime" val="3000"/>
+		<set name="abnormal_effect" val="DOT_BLEEDING"/>
+		<set name="abnormal_time" val="5"/>
+		<set name="abnormal_level" val="1"/>
+		<set name="abnormal_type" val="bleeding"/>
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BLEED"/>
+		<set name="castRange" val="300"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="trait" val="BLEED"/>
+		<set name="saveVs" val="CON"/>
+		<for>
+			<effect count="5" time="1" name="Bleed" val="300">
+				<mul order="0x30" stat="runSpd" val="0.8"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="14035" levels="1" name="Octavis' Obedience">
 		<set name="icon" val="icon.skill0045"/>

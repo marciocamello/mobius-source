@@ -5497,29 +5497,19 @@
 		<set name="rewardSp" value="186080440"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="ReflectionBoss"/>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="100.000">
-				<reward item_id="19457" min="1" max="1" chance="5.0000"/>
-				<reward item_id="19458" min="1" max="1" chance="5.0000"/>
-				<reward item_id="19459" min="1" max="1" chance="5.0000"/>
-				<reward item_id="19460" min="1" max="1" chance="5.0000"/>
-				<reward item_id="19461" min="1" max="1" chance="5.0000"/>
-				<reward item_id="19462" min="1" max="1" chance="5.0000"/>
-			</group>
-		</rewardlist>
+		<set name="type" value="RaidBoss"/>
 		<skills>
 			<skill id="4416" level="6"/>
 			<skill id="14726" level="1"/>
 			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="280"/>
+			<defence attribute="water" value="280"/>
+			<defence attribute="wind" value="280"/>
+			<defence attribute="earth" value="280"/>
+			<defence attribute="holy" value="280"/>
+			<defence attribute="unholy" value="280"/>
 		</attributes>
 	</npc>
 	<npc id="29192" name="Octavis' Beast" title="">
@@ -5553,7 +5543,7 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="66.0"/>
 		<set name="collision_height" value="56.0"/>
-		<set name="type" value="Monster"/>
+		<set name="type" value="RaidBoss"/>
 		<set name="ai_type" value="Octavis.OctavisRider"/>
 		<set name="level" value="98"/>
 		<set name="baseHpRate" value="1.0"/>
@@ -5568,17 +5558,17 @@
 			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="260"/>
+			<defence attribute="water" value="260"/>
+			<defence attribute="wind" value="260"/>
+			<defence attribute="earth" value="260"/>
+			<defence attribute="holy" value="260"/>
+			<defence attribute="unholy" value="260"/>
 		</attributes>
 	</npc>
 	<npc id="29193" name="Octavis" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="ai_type" value="Octavis.Octavis"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="57"/>
 		<set name="baseCritRate" value="40"/>
@@ -5610,19 +5600,19 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="ReflectionBoss"/>
+		<set name="type" value="RaidBoss"/>
 		<skills>
 			<skill id="4416" level="6"/>
 			<skill id="14726" level="1"/>
 			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="260"/>
+			<defence attribute="water" value="260"/>
+			<defence attribute="wind" value="260"/>
+			<defence attribute="earth" value="260"/>
+			<defence attribute="holy" value="260"/>
+			<defence attribute="unholy" value="260"/>
 		</attributes>
 	</npc>
 	<npc id="29194" name="Octavis" title="">
@@ -5630,8 +5620,8 @@
 		<set name="collision_radius" value="17.0"/>
 		<set name="collision_height" value="81.0"/>
 		<set name="level" value="98"/>
-		<set name="type" value="ReflectionBoss"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="type" value="RaidBoss"/>
+		<set name="ai_type" value="Octavis.Octavis"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="57"/>
 		<set name="baseCritRate" value="40"/>
@@ -5664,92 +5654,20 @@
 			<skill id="4416" level="6"/>
 			<skill id="14726" level="1"/>
 			<skill id="5467" level="1"/>
+			<skill id="14030" level="1" />
+			<skill id="14031" level="1" />
+			<skill id="14279" level="1" />
+			<skill id="14280" level="1" />
+			<skill id="14281" level="1" />
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300"/>
+			<defence attribute="water" value="300"/>
+			<defence attribute="wind" value="300"/>
+			<defence attribute="earth" value="300"/>
+			<defence attribute="holy" value="300"/>
+			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="47.17588">
-				<reward item_id="18178" min="1" max="1" chance="8.28048"/>
-				<reward item_id="18197" min="1" max="1" chance="5.44839"/>
-				<reward item_id="18201" min="1" max="1" chance="5.43922"/>
-				<reward item_id="18190" min="1" max="1" chance="5.43279"/>
-				<reward item_id="18186" min="1" max="1" chance="5.43004"/>
-				<reward item_id="18199" min="1" max="1" chance="5.42637"/>
-				<reward item_id="18196" min="1" max="1" chance="5.42546"/>
-				<reward item_id="18187" min="1" max="1" chance="5.42177"/>
-				<reward item_id="18185" min="1" max="1" chance="5.40066"/>
-				<reward item_id="18191" min="1" max="1" chance="5.39608"/>
-				<reward item_id="18194" min="1" max="1" chance="5.38046"/>
-				<reward item_id="18189" min="1" max="1" chance="5.37497"/>
-				<reward item_id="18200" min="1" max="1" chance="5.37403"/>
-				<reward item_id="18198" min="1" max="1" chance="5.37221"/>
-				<reward item_id="18188" min="1" max="1" chance="5.36761"/>
-				<reward item_id="18192" min="1" max="1" chance="5.35017"/>
-				<reward item_id="18193" min="1" max="1" chance="5.34374"/>
-				<reward item_id="18195" min="1" max="1" chance="5.33548"/>
-			</group>
-			<group chance="43.29201">
-				<reward item_id="18181" min="1" max="1" chance="9.15739"/>
-				<reward item_id="18171" min="1" max="1" chance="9.14237"/>
-				<reward item_id="18180" min="1" max="1" chance="9.12036"/>
-				<reward item_id="18179" min="1" max="1" chance="9.10537"/>
-				<reward item_id="18172" min="1" max="1" chance="9.09336"/>
-				<reward item_id="18176" min="1" max="1" chance="9.09336"/>
-				<reward item_id="18177" min="1" max="1" chance="9.08735"/>
-				<reward item_id="18173" min="1" max="1" chance="9.06936"/>
-				<reward item_id="18175" min="1" max="1" chance="9.06534"/>
-				<reward item_id="18174" min="1" max="1" chance="9.04233"/>
-				<reward item_id="18178" min="1" max="1" chance="9.02335"/>
-			</group>
-			<group chance="5.52177">
-				<reward item_id="17404" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17407" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17408" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17398" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17406" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17405" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17403" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17402" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17401" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17400" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17409" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17410" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17411" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17396" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17397" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17412" min="1" max="1" chance="5.88235"/>
-				<reward item_id="17399" min="1" max="1" chance="5.88235"/>
-			</group>
-			<group chance="3.57291">
-				<reward item_id="17383" min="1" max="1" chance="9.0909"/>
-				<reward item_id="17389" min="1" max="1" chance="9.0909"/>
-				<reward item_id="17391" min="1" max="1" chance="9.0909"/>
-				<reward item_id="17382" min="1" max="1" chance="9.0909"/>
-				<reward item_id="17384" min="1" max="1" chance="9.0909"/>
-				<reward item_id="17385" min="1" max="1" chance="9.0909"/>
-				<reward item_id="17386" min="1" max="1" chance="9.0909"/>
-				<reward item_id="17387" min="1" max="1" chance="9.0909"/>
-				<reward item_id="17388" min="1" max="1" chance="9.0909"/>
-				<reward item_id="17390" min="1" max="1" chance="9.0909"/>
-				<reward item_id="17392" min="1" max="1" chance="9.0909"/>
-			</group>
-			<group chance="4.34379">
-				<reward item_id="19457" min="1" max="1" chance="33.83842"/>
-				<reward item_id="19458" min="1" max="1" chance="33.31008"/>
-				<reward item_id="19459" min="1" max="1" chance="32.85149"/>
-			</group>
-			<group chance="25.079">
-				<reward item_id="19447" min="1" max="1" chance="39.92982"/>
-				<reward item_id="17747" min="1" max="1" chance="39.91786"/>
-				<reward item_id="19445" min="1" max="1" chance="20.15232"/>
-			</group>
-		</rewardlist>
 	</npc>
 	<npc id="29195" name="Istina" title="Queen of Annihilation">
 		<set name="aggroRange" value="500"/>
