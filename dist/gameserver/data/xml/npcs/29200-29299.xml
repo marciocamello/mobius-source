@@ -439,30 +439,30 @@
 	</npc>
 	<npc id="29209" name="Octavis" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Octavis.OctavisFollower"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="65014387"/>
+		<set name="baseHpMax" value="84508703"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="8.5"/>
 		<set name="baseINT" value="42"/>
 		<set name="baseMAtk" value="663"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseMDef" value="250"/>
+		<set name="baseMDef" value="5250"/>
 		<set name="baseMEN" value="20"/>
 		<set name="baseMpMax" value="1674.8"/>
 		<set name="baseMpReg" value="3.0"/>
 		<set name="basePAtk" value="971"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseRunSpd" value="1"/>
+		<set name="basePDef" value="4341"/>
+		<set name="baseRunSpd" value="190"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="78"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseWalkSpd" value="90"/>
 		<set name="collision_height" value="68.0"/>
 		<set name="collision_radius" value="50.0"/>
 		<set name="level" value="99"/>
@@ -471,19 +471,22 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="RaidBoss"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true" />
+		</ai_params>
 		<skills>
 			<skill id="4416" level="6"/>
 			<skill id="14726" level="1"/>
 			<skill id="5467" level="1"/>
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="160"/>
+			<defence attribute="water" value="160"/>
+			<defence attribute="wind" value="160"/>
+			<defence attribute="earth" value="160"/>
+			<defence attribute="holy" value="160"/>
+			<defence attribute="unholy" value="160"/>
 		</attributes>
 	</npc>
 	<npc id="29210" name="Octavis' Beast" title="">
@@ -507,8 +510,8 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseShldRate" value="0"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseWalkSpd" value="1"/>
-		<set name="baseRunSpd" value="1"/>
+		<set name="baseWalkSpd" value="90"/>
+		<set name="baseRunSpd" value="190"/>
 		<set name="rndDam" value="30"/>
 		<set name="baseEvasionRate" value="0"/>
 		<set name="baseAccuracyRate" value="0"/>
@@ -517,8 +520,8 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="66.0"/>
 		<set name="collision_height" value="56.0"/>
-		<set name="type" value="Monster"/>
-		<set name="ai_type" value="OctavisRider"/>
+		<set name="type" value="RaidBoss"/>
+		<set name="ai_type" value="Octavis.OctavisRider"/>
 		<set name="level" value="99"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="rewardExp" value="0"/>
@@ -527,12 +530,12 @@
 		<set name="aggroRange" value="0"/>
 		<set name="shots" value="NONE"/>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="160"/>
+			<defence attribute="water" value="160"/>
+			<defence attribute="wind" value="160"/>
+			<defence attribute="earth" value="160"/>
+			<defence attribute="holy" value="160"/>
+			<defence attribute="unholy" value="160"/>
 		</attributes>
 		<skills>
 			<skill id="5464" level="1"/>
@@ -541,30 +544,30 @@
 	</npc>
 	<npc id="29211" name="Octavis" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="ai_type" value="Octavis.Octavis"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseDEX" value="30"/>
-		<set name="baseHpMax" value="56373122"/>
+		<set name="baseHpMax" value="73285059"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="13"/>
 		<set name="baseINT" value="21"/>
-		<set name="baseMAtk" value="2173"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseMDef" value="713"/>
+		<set name="baseMAtk" value="5663"/>
+		<set name="baseMAtkSpd" value="253"/>
+		<set name="baseMDef" value="5250"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="2958"/>
+		<set name="baseMpMax" value="1675"/>
 		<set name="baseMpReg" value="4"/>
-		<set name="basePAtk" value="4687"/>
+		<set name="basePAtk" value="24000"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="802"/>
-		<set name="baseRunSpd" value="1"/>
+		<set name="basePDef" value="4341"/>
+		<set name="baseRunSpd" value="190"/>
 		<set name="baseSTR" value="40"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="70"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseWalkSpd" value="90"/>
 		<set name="collision_height" value="81.0"/>
 		<set name="collision_radius" value="17.0"/>
 		<set name="level" value="99"/>
@@ -573,57 +576,51 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Monster"/>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="100.000">
-				<reward item_id="19457" min="1" max="1" chance="5.0000"/>
-				<reward item_id="19458" min="1" max="1" chance="5.0000"/>
-				<reward item_id="19459" min="1" max="1" chance="5.0000"/>
-				<reward item_id="19460" min="1" max="1" chance="5.0000"/>
-				<reward item_id="19461" min="1" max="1" chance="5.0000"/>
-				<reward item_id="19462" min="1" max="1" chance="5.0000"/>
-			</group>
-		</rewardlist>
+		<set name="type" value="RaidBoss"/>
+		<faction name="octavis_clan" range="400" />
 		<skills>
 			<skill id="4416" level="6"/>
-			<skill id="14726" level="1"/>
+			<skill id="14726" level="1" />
 			<skill id="5467" level="1"/>
+			<skill id="14027" level="1" />
+			<skill id="14575" level="1" />
+			<skill id="14026" level="1" />
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="160"/>
+			<defence attribute="water" value="160"/>
+			<defence attribute="wind" value="160"/>
+			<defence attribute="earth" value="160"/>
+			<defence attribute="holy" value="160"/>
+			<defence attribute="unholy" value="160"/>
 		</attributes>
 	</npc>
 	<npc id="29212" name="Octavis" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Octavis.Octavis"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="75"/>
+		<set name="baseCON" value="82"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="35392934"/>
+		<set name="baseHpMax" value="46010814"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="8.5"/>
 		<set name="baseINT" value="42"/>
-		<set name="baseMAtk" value="663"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseMDef" value="250"/>
+		<set name="baseMAtk" value="5663"/>
+		<set name="baseMAtkSpd" value="253"/>
+		<set name="baseMDef" value="5250"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1674.8"/>
+		<set name="baseMpMax" value="1675"/>
 		<set name="baseMpReg" value="3.0"/>
-		<set name="basePAtk" value="971"/>
+		<set name="basePAtk" value="24000"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="341"/>
-		<set name="baseRunSpd" value="1"/>
+		<set name="basePDef" value="4341"/>
+		<set name="baseRunSpd" value="190"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="78"/>
-		<set name="baseWalkSpd" value="1"/>
+		<set name="baseWalkSpd" value="90"/>
 		<set name="collision_height" value="81.0"/>
 		<set name="collision_radius" value="17.0"/>
 		<set name="level" value="99"/>
@@ -632,19 +629,26 @@
 		<set name="rewardSp" value="186080440"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="RaidBoss" />
+		<faction name="octavis_clan" range="400" />
 		<skills>
-			<skill id="4416" level="6"/>
-			<skill id="14726" level="1"/>
-			<skill id="5467" level="1"/>
+			<skill id="5464" level="1" />
+			<skill id="4416" level="6" />
+			<skill id="14726" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="14030" level="1" />
+			<skill id="14031" level="1" />
+			<skill id="14279" level="1" />
+			<skill id="14280" level="1" />
+			<skill id="14281" level="1" />
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="160"/>
+			<defence attribute="water" value="160"/>
+			<defence attribute="wind" value="160"/>
+			<defence attribute="earth" value="160"/>
+			<defence attribute="holy" value="160"/>
+			<defence attribute="unholy" value="160"/>
 		</attributes>
 	</npc>
 	<npc id="29213" name="Baylor" title="Warden">

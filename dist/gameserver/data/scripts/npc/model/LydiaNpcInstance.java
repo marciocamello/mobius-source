@@ -20,14 +20,14 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ReflectionUtils;
 
 /**
- * @author KilRoy 32892 (Tipia) TODO[K]: Hard mode Octavis
+ * @author Mobius + Nache
  */
-public final class TipiaNpcInstance extends NpcInstance
+public final class LydiaNpcInstance extends NpcInstance
 {
-	private static final int normalOctavisInstId = 180;
-	private static final int hardOctavisInstId = 181;
+	private static final int NORMAL_OCTAVIS_INST_ID = 180;
+	private static final int HARD_OCTAVIS_INST_ID = 181;
 	
-	public TipiaNpcInstance(int objectId, NpcTemplate template)
+	public LydiaNpcInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
@@ -45,33 +45,35 @@ public final class TipiaNpcInstance extends NpcInstance
 		switch (command)
 		{
 			case "request_normaloctavis":
+			{
 				if (r != null)
 				{
-					if (player.canReenterInstance(normalOctavisInstId))
+					if (player.canReenterInstance(NORMAL_OCTAVIS_INST_ID))
 					{
-						player.teleToLocation(r.getTeleportLoc(), r);
+						player.teleToLocation(208404, 120572, -10014, r);
 					}
 				}
-				else if (player.canEnterInstance(normalOctavisInstId))
+				else if (player.canEnterInstance(NORMAL_OCTAVIS_INST_ID))
 				{
-					ReflectionUtils.enterReflection(player, new OctavisInstance(), normalOctavisInstId);
+					ReflectionUtils.enterReflection(player, new OctavisInstance(), NORMAL_OCTAVIS_INST_ID);
 				}
 				break;
-			
+			}
 			case "request_hardoctavis":
+			{
 				if (r != null)
 				{
-					if (player.canReenterInstance(hardOctavisInstId))
+					if (player.canReenterInstance(HARD_OCTAVIS_INST_ID))
 					{
-						player.teleToLocation(r.getTeleportLoc(), r);
+						player.teleToLocation(208404, 120572, -10014, r);
 					}
 				}
-				else if (player.canEnterInstance(hardOctavisInstId))
+				else if (player.canEnterInstance(HARD_OCTAVIS_INST_ID))
 				{
-					ReflectionUtils.enterReflection(player, new OctavisInstance(), hardOctavisInstId);
+					ReflectionUtils.enterReflection(player, new OctavisInstance(), HARD_OCTAVIS_INST_ID);
 				}
 				break;
-			
+			}
 			default:
 				super.onBypassFeedback(player, command);
 				break;

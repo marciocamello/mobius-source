@@ -32,6 +32,24 @@
 			</effect>
 		</for>
 	</skill>
+	<skill id="14575" levels="1" name="Medusa soul">
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="2000"/>
+		<set name="magicLevel" val="99"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="activateRate" val="75"/>
+		<set name="icon" val="icon.skill4111"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="700"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Petrification" stackOrder="-1" stackType="paralyze" time="7" val="0">
+				<set order="0x80" stat="regHp" val="0"/>
+				<set order="0x80" stat="regMp" val="0"/>
+			</effect>
+		</for>
+	</skill>
 	<skill id="14590" levels="1" name="Cry of Destiny - Dark Paralysis">
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="DEBUFF"/>
