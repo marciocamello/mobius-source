@@ -165,7 +165,9 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 			
 			case "admin_call_skill":
 				List<Creature> target = new ArrayList<>();
-				target.add(activeChar.getTarget() != null ? (Creature) activeChar.getTarget() : activeChar);
+				// Always use self as target. Can be changed with code bellow.
+				// target.add(activeChar.getTarget() != null ? (Creature) activeChar.getTarget() : activeChar);
+				target.add(activeChar);
 				activeChar.callSkill(SkillTable.getInstance().getInfo(Integer.valueOf(wordList[1]), Integer.valueOf(wordList[2]) > 1 ? Integer.valueOf(wordList[2]) : 1), target, false);
 				// Use method bellow if you want to cast skill / spend mana.
 				// activeChar.doCast(SkillTable.getInstance().getInfo(Integer.valueOf(wordList[1]), Integer.valueOf(wordList[2]) > 1 ? Integer.valueOf(wordList[2]) : 1), activeChar.getTarget() != null ? (Creature) activeChar.getTarget() : activeChar, false);
