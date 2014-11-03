@@ -45,41 +45,47 @@ public class Q10310_TwistedCreationTree extends Quest implements ScriptFile
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
+		String htmlText = NO_QUEST_DIALOG;
 		if (st == null)
 		{
-			return "noquest";
+			return htmlText;
 		}
 		
-		if (event.equalsIgnoreCase("33032-06.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
+			case "33032-06.htm":
+			{
+				st.setCond(1);
+				st.setState(STARTED);
+				st.playSound(SOUND_ACCEPT);
+				break;
+			}
+			case "33031-03.htm":
+			{
+				st.setCond(2);
+				st.playSound(SOUND_MIDDLE);
+				break;
+			}
+			case "33031-05.htm":
+			{
+				st.addExpAndSp(50178765, 21980595);
+				st.giveItems(57, 3424540, true);
+				st.playSound(SOUND_FINISH);
+				st.exitCurrentQuest(false);
+				break;
+			}
 		}
-		else if (event.equalsIgnoreCase("33031-03.htm"))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("33031-05.htm"))
-		{
-			st.addExpAndSp(50178765, 21980595);
-			st.giveItems(57, 3424540, true);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(false);
-		}
-		
 		return event;
 	}
 	
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		String htmltext = "noquest";
+		String htmlText = NO_QUEST_DIALOG;
 		
 		if (st == null)
 		{
-			return htmltext;
+			return htmlText;
 		}
 		
 		int npcId = npc.getId();
@@ -97,15 +103,15 @@ public class Q10310_TwistedCreationTree extends Quest implements ScriptFile
 			switch (st.getState())
 			{
 				case COMPLETED:
-					htmltext = "33032-02.htm";
+					htmlText = "33032-02.htm";
 					break;
 				
 				case CREATED:
-					htmltext = "33032-01.htm";
+					htmlText = "33032-01.htm";
 					break;
 				
 				case STARTED:
-					htmltext = "33032-07.htm";
+					htmlText = "33032-07.htm";
 			}
 		}
 		else if (npcId == NPC_HORPINA)
@@ -113,17 +119,17 @@ public class Q10310_TwistedCreationTree extends Quest implements ScriptFile
 			switch (st.getState())
 			{
 				case COMPLETED:
-					htmltext = "completed";
+					htmlText = "completed";
 					break;
 				
 				case STARTED:
 					if (st.getCond() == 1)
 					{
-						htmltext = "33031-01.htm";
+						htmlText = "33031-01.htm";
 					}
 					else if (st.getCond() == 2)
 					{
-						htmltext = "33031-03.htm";
+						htmlText = "33031-03.htm";
 					}
 					else
 					{
@@ -132,12 +138,12 @@ public class Q10310_TwistedCreationTree extends Quest implements ScriptFile
 							break;
 						}
 						
-						htmltext = "33031-04.htm";
+						htmlText = "33031-04.htm";
 					}
 			}
 		}
 		
-		return htmltext;
+		return htmlText;
 	}
 	
 	@Override

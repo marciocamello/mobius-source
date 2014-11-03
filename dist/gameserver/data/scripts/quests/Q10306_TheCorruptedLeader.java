@@ -23,6 +23,7 @@ public class Q10306_TheCorruptedLeader extends Quest implements ScriptFile
 {
 	private static final int NPC_NAOMI_KASHERON = 32896;
 	private static final int MOB_KIMERIAN = 32896;
+	
 	private static final int[] CRYSTALS =
 	{
 		9552,
@@ -49,28 +50,31 @@ public class Q10306_TheCorruptedLeader extends Quest implements ScriptFile
 		{
 			return event;
 		}
-		
-		if (event.equalsIgnoreCase("32896-05.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
+			case "32896-05.htm":
+			{
+				st.setCond(1);
+				st.setState(STARTED);
+				st.playSound(SOUND_ACCEPT);
+				break;
+			}
+			case "32896-08.htm":
+			{
+				st.playSound(SOUND_FINISH);
+				st.addExpAndSp(9479594, 4104484);
+				st.giveItems(CRYSTALS[Rnd.get(CRYSTALS.length)], 1);
+				st.exitCurrentQuest(false);
+				break;
+			}
 		}
-		else if (event.equalsIgnoreCase("32896-08.htm"))
-		{
-			st.playSound(SOUND_FINISH);
-			st.addExpAndSp(9479594, 4104484);
-			st.giveItems(CRYSTALS[Rnd.get(CRYSTALS.length)], 1);
-			st.exitCurrentQuest(false);
-		}
-		
 		return event;
 	}
 	
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		String htmltext = "noquest";
+		String htmltext = NO_QUEST_DIALOG;
 		
 		if (st == null)
 		{

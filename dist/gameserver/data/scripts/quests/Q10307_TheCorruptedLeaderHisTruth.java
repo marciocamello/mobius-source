@@ -47,7 +47,6 @@ public class Q10307_TheCorruptedLeaderHisTruth extends Quest implements ScriptFi
 		{
 			return "noquest";
 		}
-		
 		if (event.equalsIgnoreCase("32896-05.htm"))
 		{
 			st.setCond(1);
@@ -73,7 +72,7 @@ public class Q10307_TheCorruptedLeaderHisTruth extends Quest implements ScriptFi
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		String htmltext = "noquest";
+		String htmltext = NO_QUEST_DIALOG;
 		
 		if (st == null)
 		{
