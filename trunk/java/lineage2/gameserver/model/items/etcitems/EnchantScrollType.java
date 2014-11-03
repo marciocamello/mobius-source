@@ -20,7 +20,7 @@ public enum EnchantScrollType
 {
 	NORMAL,
 	BLESSED,
-        GIANT,
+	GIANT,
 	ANCIENT,
 	DESTRUCTION,
 	ITEM_MALL,

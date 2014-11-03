@@ -3906,7 +3906,8 @@ public final class Player extends Playable implements PlayerGroup
 	public void broadcastStatusUpdate()
 	{
 		super.broadcastStatusUpdate();
-		sendPacket(new StatusUpdate(this).addAttribute(StatusUpdateField.CUR_HP, StatusUpdateField.CUR_MP, StatusUpdateField.CUR_CP, StatusUpdateField.MAX_HP, StatusUpdateField.MAX_MP, StatusUpdateField.MAX_CP));
+		sendPacket(new StatusUpdate(this).addAttribute(StatusUpdateField.CUR_HP, StatusUpdateField.CUR_MP, StatusUpdateField.MAX_HP, StatusUpdateField.MAX_MP));
+		sendPacket(new StatusUpdate(this).addAttribute(StatusUpdateField.CUR_CP, StatusUpdateField.MAX_CP));
 		
 		if (isInParty())
 		// Send the Server->Client packet PartySmallWindowUpdate with current HP, MP and Level to all other L2Player of the Party
@@ -14180,21 +14181,21 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			if (magic)
 			{
-				sendPacket(new SystemMessage(SystemMessage.MAGIC_CRITICAL_HIT).addName(this).addDamage(target, target, damage));
+				sendPacket(new SystemMessage(SystemMessage.MAGIC_CRITICAL_HIT).addName(this));
 			}
 			else
 			{
-				sendPacket(new SystemMessage(SystemMessage.C1_HAD_A_CRITICAL_HIT).addName(this).addDamage(target, target, damage));
+				sendPacket(new SystemMessage(SystemMessage.C1_HAD_A_CRITICAL_HIT).addName(this));
 			}
 		}
 		
 		if (miss)
 		{
-			sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_WENT_ASTRAY).addName(this).addDamage(target, target, damage));
+			sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_WENT_ASTRAY).addName(this));
 		}
 		else if (!target.isDamageBlocked())
 		{
-			sendPacket(new SystemMessage(SystemMessage.C1_HAS_GIVEN_C2_DAMAGE_OF_S3).addName(this).addName(target).addNumber(damage).addDamage(target, target, damage));
+			sendPacket(new SystemMessage(SystemMessage.C1_HAS_GIVEN_C2_DAMAGE_OF_S3).addName(this).addName(target).addNumber(damage).addDamage(target, target, -damage));
 		}
 		
 		if (target.isPlayer())
@@ -14220,7 +14221,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		if (attacker != this)
 		{
-			sendPacket(new SystemMessage(SystemMessage.C1_HAS_RECEIVED_DAMAGE_OF_S3_FROM_C2).addName(this).addName(attacker).addNumber((long) damage).addDamage(attacker, attacker, damage));
+			sendPacket(new SystemMessage(SystemMessage.C1_HAS_RECEIVED_DAMAGE_OF_S3_FROM_C2).addName(this).addName(attacker).addNumber(damage));
 		}
 	}
 	
