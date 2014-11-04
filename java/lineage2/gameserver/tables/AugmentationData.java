@@ -156,7 +156,7 @@ public class AugmentationData
 		
 		for (int i = 0; i < 10; i++)
 		{
-			_log.info("AugmentationData: Loaded: " + _blueSkills[i].size() + " blue, " + _purpleSkills[i].size() + " purple and " + _redSkills[i].size() + " red skills for lifeStoneLevel " + i);
+			_log.info("Loaded " + _blueSkills[i].size() + " blue, " + _purpleSkills[i].size() + " purple and " + _redSkills[i].size() + " red skills for lifestone lv" + i);
 		}
 	}
 	

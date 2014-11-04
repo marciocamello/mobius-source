@@ -272,7 +272,7 @@ public final class FourSepulchersSpawn extends Functions implements ScriptFile
 			_archonSpawned.put(npcId, false);
 		}
 		
-		_log.info("FourSepulchersManager: loaded " + count + " Church of duke monsters spawns.");
+		_log.info("FourSepulchersManager: loaded " + count + " Church of duke NPC spawns.");
 	}
 	
 	/**
@@ -282,7 +282,7 @@ public final class FourSepulchersSpawn extends Functions implements ScriptFile
 	{
 		_magicalMonsters.clear();
 		int count = loadSpawn(_magicalMonsters, 2);
-		_log.info("FourSepulchersManager: loaded " + count + " magical monsters spawns.");
+		_log.info("FourSepulchersManager: loaded " + count + " magical NPC spawns.");
 	}
 	
 	/**
@@ -292,7 +292,7 @@ public final class FourSepulchersSpawn extends Functions implements ScriptFile
 	{
 		_physicalMonsters.clear();
 		int count = loadSpawn(_physicalMonsters, 1);
-		_log.info("FourSepulchersManager: loaded " + count + " physical monsters spawns.");
+		_log.info("FourSepulchersManager: loaded " + count + " physical NPC spawns.");
 	}
 	
 	/**

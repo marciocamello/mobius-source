@@ -169,7 +169,9 @@ public abstract class GlobalEvent extends LoggerObject
 	 */
 	protected void printInfo()
 	{
-		info(getName() + " time - " + TimeUtils.toSimpleFormat(startTimeMillis()));
+		// info(getName() + " time - " + TimeUtils.toSimpleFormat(startTimeMillis()));
+		info(getName());
+		info("Time: " + TimeUtils.toSimpleFormat(startTimeMillis()));
 	}
 	
 	/**

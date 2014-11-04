@@ -98,7 +98,8 @@ public class DelusionChamberManager
 	 */
 	private void load()
 	{
-		int countGood = 0, countBad = 0;
+		int countGood = 0;
+		// int countBad = 0;
 		
 		try
 		{
@@ -210,10 +211,10 @@ public class DelusionChamberManager
 												_rooms.get(type).get(roomId).getSpawns().add(spawnDat);
 												countGood++;
 											}
-											else
-											{
-												countBad++;
-											}
+											// else
+											// {
+											// countBad++;
+											// }
 										}
 									}
 								}
@@ -237,7 +238,7 @@ public class DelusionChamberManager
 		}
 		
 		_log.info("DelusionChamberManager: Loaded " + typeSize + " room types with " + roomSize + " rooms.");
-		_log.info("DelusionChamberManager: Loaded " + countGood + " delusion chamber spawns, " + countBad + " errors.");
+		_log.info("DelusionChamberManager: Loaded " + countGood + " delusion chamber spawns.");// , " + countBad + " errors.");
 	}
 	
 	/**

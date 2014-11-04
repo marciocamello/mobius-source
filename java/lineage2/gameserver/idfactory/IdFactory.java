@@ -146,7 +146,7 @@ public abstract class IdFactory
 				
 				if (size > 0)
 				{
-					_log.info("IdFactory: Extracted " + size + " used id's from " + table[0]);
+					_log.info("IdFactory: Extracted " + size + " used IDs from " + table[0] + ".");
 				}
 			}
 		}
@@ -156,7 +156,7 @@ public abstract class IdFactory
 		}
 		int[] extracted = objectIds.toArray();
 		Arrays.sort(extracted);
-		_log.info("IdFactory: Extracted total " + extracted.length + " used id's.");
+		_log.info("IdFactory: Extracted total " + extracted.length + " used IDs.");
 		return extracted;
 	}
 	

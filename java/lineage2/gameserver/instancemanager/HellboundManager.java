@@ -421,7 +421,7 @@ public class HellboundManager
 			}
 		}
 		
-		_log.info("HellboundManager: Spawned " + _spawnList.size() + " mobs and NPCs according to the current Hellbound stage");
+		_log.info("HellboundManager: Spawned " + _spawnList.size() + " mobs and NPCs.");
 	}
 	
 	/**

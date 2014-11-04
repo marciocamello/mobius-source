@@ -980,16 +980,16 @@ public final class SkillAcquireHolder extends AbstractHolder
 	@Override
 	public void log()
 	{
-		info("load " + sizeHashMap(_normalSkillTree) + " normal learns for " + _normalSkillTree.size() + " classes.");
-		info("load " + sizeHashMap(_transferSkillTree) + " transfer learns for " + _transferSkillTree.size() + " classes.");
-		info("load " + sizeHashMap(_transformationSkillTree) + " transformation learns for " + _transformationSkillTree.size() + " races.");
-		info("load " + sizeHashMap(_fishingSkillTree) + " fishing learns for " + _fishingSkillTree.size() + " races.");
-		info("load " + (sizeHashMapInt(_AwakenClassKeepSkills) + _AwakenGeneralKeepSkills.size()) + " Skill to mantain on Awakening for " + _AwakenClassKeepSkills.size() + " awaken classes.");
-		info("load " + _certificationSkillTree.size() + " certification learns.");
-		info("load " + _dualCertificationSkillTree.size() + " dual certification learns.");
-		info("load " + _collectionSkillTree.size() + " collection learns.");
-		info("load " + _pledgeSkillTree.size() + " pledge learns.");
-		info("load " + _subUnitSkillTree.size() + " sub unit learns.");
+		info("load " + sizeHashMap(_normalSkillTree) + " normal skills for " + _normalSkillTree.size() + " classes.");
+		info("load " + sizeHashMap(_transferSkillTree) + " transfer skills for " + _transferSkillTree.size() + " classes.");
+		info("load " + sizeHashMap(_transformationSkillTree) + " transformation skill for " + _transformationSkillTree.size() + " races.");
+		info("load " + sizeHashMap(_fishingSkillTree) + " fishing skills for " + _fishingSkillTree.size() + " races.");
+		info("load " + (sizeHashMapInt(_AwakenClassKeepSkills) + _AwakenGeneralKeepSkills.size()) + " Awaken maintain skills.");
+		info("load " + _certificationSkillTree.size() + " certification skills.");
+		info("load " + _dualCertificationSkillTree.size() + " dual certification skills.");
+		info("load " + _collectionSkillTree.size() + " collection skills.");
+		info("load " + _pledgeSkillTree.size() + " pledge skills.");
+		info("load " + _subUnitSkillTree.size() + " sub unit skills.");
 	}
 	
 	/**

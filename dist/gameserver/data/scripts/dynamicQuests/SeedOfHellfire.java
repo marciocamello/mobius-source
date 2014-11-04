@@ -65,7 +65,7 @@ public final class SeedOfHellfire extends DynamicQuest implements ScriptFile
 		zoneSouth.addListener(_zoneListener);
 		zoneNorth = ReflectionUtils.getZone(QUEST_ZONE_NORTH);
 		zoneNorth.addListener(_zoneListener);
-		_log.info("Dynamic Quest: Loaded quest ID " + QUEST_ID + ". Name: Seed of Hellfire - Zone Quest");
+		_log.info("Dynamic Quest: ID " + QUEST_ID + ". Name: Seed of Hellfire - Zone Quest");
 	}
 	
 	@Override

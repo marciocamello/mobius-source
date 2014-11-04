@@ -121,24 +121,24 @@ public final class FourSepulchersManager extends Functions implements ScriptFile
 		{
 			cleanUp();
 			_changeEntryTimeTask = ThreadPoolManager.getInstance().schedule(new ChangeEntryTime(), 0);
-			_log.info("FourSepulchersManager: Beginning in Entry time");
+			_log.info("FourSepulchersManager: Starting in Entry time");
 		}
 		else if ((currentTime >= _entryTimeEnd) && (currentTime < _warmUpTimeEnd))
 		{
 			cleanUp();
 			_changeWarmUpTimeTask = ThreadPoolManager.getInstance().schedule(new ChangeWarmUpTime(), 0);
-			_log.info("FourSepulchersManager: Beginning in WarmUp time");
+			_log.info("FourSepulchersManager: Starting in WarmUp time");
 		}
 		else if ((currentTime >= _warmUpTimeEnd) && (currentTime < _attackTimeEnd))
 		{
 			cleanUp();
 			_changeAttackTimeTask = ThreadPoolManager.getInstance().schedule(new ChangeAttackTime(), 0);
-			_log.info("FourSepulchersManager: Beginning in Attack time");
+			_log.info("FourSepulchersManager: Starting in Attack time");
 		}
 		else
 		{
 			_changeCoolDownTimeTask = ThreadPoolManager.getInstance().schedule(new ChangeCoolDownTime(), 0);
-			_log.info("FourSepulchersManager: Beginning in Cooldown time");
+			_log.info("FourSepulchersManager: Starting in Cooldown time");
 		}
 	}
 	
@@ -598,7 +598,8 @@ public final class FourSepulchersManager extends Functions implements ScriptFile
 				{
 					if ((min % 5) == 0)
 					{
-						_log.info(Calendar.getInstance().getTime() + " Atk announce scheduled to " + min + " minute of this hour.");
+						_log.info("Scheduled at " + Calendar.getInstance().getTime());
+						_log.info("Atk announce scheduled to " + min + " minute of this hour.");
 						Calendar inter = Calendar.getInstance();
 						inter.set(Calendar.MINUTE, (int) min);
 						ThreadPoolManager.getInstance().schedule(new ManagerSay(), inter.getTimeInMillis() - Calendar.getInstance().getTimeInMillis());

@@ -455,7 +455,7 @@ public final class BaylorManager extends Functions implements ScriptFile
 		_zone = ReflectionUtils.getZone("[baylor_epic]");
 		_zone.addListener(BaylorZoneListener.getInstance());
 		_isAlreadyEnteredOtherParty = false;
-		Log.add("BaylorManager : State of Baylor is " + _state.getState() + ".", "bosses");
+		Log.add("BaylorManager: State of Baylor is " + _state.getState() + ".", "bosses");
 		
 		if (!_state.getState().equals(EpicBossState.State.NOTSPAWN))
 		{
@@ -463,8 +463,8 @@ public final class BaylorManager extends Functions implements ScriptFile
 		}
 		
 		final Date dt = new Date(_state.getRespawnDate());
-		Log.add("BaylorManager : Next spawn date of Baylor is " + dt + ".", "bosses");
-		Log.add("BaylorManager : Init BaylorManager.", "bosses");
+		Log.add("BaylorManager: Next spawn date is " + dt + ".", "bosses");
+		Log.add("BaylorManager: Init BaylorManager.", "bosses");
 	}
 	
 	/**

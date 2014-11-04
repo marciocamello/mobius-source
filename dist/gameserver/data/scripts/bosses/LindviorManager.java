@@ -351,7 +351,7 @@ public final class LindviorManager extends Functions implements ScriptFile, OnDe
 			setIntervalEndTask();
 		}
 		
-		_log.info("LindviorManager: Next spawn date of Lindvior is " + TimeUtils.toSimpleFormat(EPIC_BOSS_STATE.getRespawnDate()) + ".");
+		_log.info("LindviorManager: Next spawn date is " + TimeUtils.toSimpleFormat(EPIC_BOSS_STATE.getRespawnDate()) + ".");
 	}
 	
 	/**

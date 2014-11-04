@@ -379,7 +379,7 @@ public final class SailrenManager extends Functions implements ScriptFile, OnDea
 			setIntervalEndTask();
 		}
 		
-		_log.info("SailrenManager: Next spawn date of Sailren is " + TimeUtils.toSimpleFormat(_state.getRespawnDate()) + ".");
+		_log.info("SailrenManager: Next spawn date is " + TimeUtils.toSimpleFormat(_state.getRespawnDate()) + ".");
 	}
 	
 	/**

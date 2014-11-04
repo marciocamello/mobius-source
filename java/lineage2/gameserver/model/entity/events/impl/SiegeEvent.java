@@ -568,13 +568,18 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	{
 		final long startSiegeMillis = startTimeMillis();
 		
+		/*
+		 * if (startSiegeMillis == 0) { info(getName() + " time - undefined"); } else { info(getName() + " time - " + TimeUtils.toSimpleFormat(startSiegeMillis)); }
+		 */
+		
+		info(getName());
 		if (startSiegeMillis == 0)
 		{
-			info(getName() + " time - undefined");
+			info("Time: Undefined");
 		}
 		else
 		{
-			info(getName() + " time - " + TimeUtils.toSimpleFormat(startSiegeMillis));
+			info("Time: " + TimeUtils.toSimpleFormat(startSiegeMillis));
 		}
 	}
 	

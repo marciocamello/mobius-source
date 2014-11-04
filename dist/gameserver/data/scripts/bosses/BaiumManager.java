@@ -462,7 +462,7 @@ public final class BaiumManager extends Functions implements ScriptFile, OnDeath
 			setIntervalEndTask();
 		}
 		
-		_log.info("BaiumManager: Next spawn date: " + TimeUtils.toSimpleFormat(_state.getRespawnDate()));
+		_log.info("BaiumManager: Next spawn date is " + TimeUtils.toSimpleFormat(_state.getRespawnDate()));
 	}
 	
 	/**

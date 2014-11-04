@@ -506,8 +506,9 @@ public class Olympiad
 		countDown = (countDown - numMins) / 60;
 		int numHours = (int) Math.floor(countDown % 24);
 		int numDays = (int) Math.floor((countDown - numHours) / 24);
-		_log.info("Olympiad System: Competition Period Starts in " + numDays + " days, " + numHours + " hours and " + numMins + " mins.");
-		_log.info("Olympiad System: Event starts/started: " + _compStart.getTime());
+		_log.info("Olympiad System: Competition Period Starts in...");
+		_log.info("Olympiad System: " + numDays + " days, " + numHours + " hours and " + numMins + " mins.");
+		_log.info("Olympiad System: Start time: " + _compStart.getTime());
 		ThreadPoolManager.getInstance().schedule(new CompStartTask(), getMillisToCompBegin());
 	}
 	
