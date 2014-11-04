@@ -161,7 +161,7 @@ public final class ValakasManager extends Functions implements ScriptFile, OnDea
 	private static ScheduledFuture<?> _onAnnihilatedTask = null;
 	private static final int Valakas = 29028;
 	private static final int _teleportCubeId = 31759;
-	static EpicBossState _state;
+	public static EpicBossState _state;
 	private static Zone _zone;
 	static long _lastAttackTime = 0;
 	private static final int FWV_LIMITUNTILSLEEP = 20 * 60000;

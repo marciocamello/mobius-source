@@ -68,7 +68,7 @@ public final class AntharasManager extends Functions implements ScriptFile, OnDe
 	private static ScheduledFuture<?> _moveAtRandomTask;
 	static ScheduledFuture<?> _sleepCheckTask;
 	private static ScheduledFuture<?> _onAnnihilatedTask;
-	static EpicBossState _state;
+	public static EpicBossState _state;
 	private static Zone _zone;
 	static long _lastAttackTime = 0;
 	private static final int FWA_LIMITUNTILSLEEP = 15 * 60000;
