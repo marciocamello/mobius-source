@@ -121,7 +121,7 @@ public final class exchange extends Functions
 		
 		if (!Config.SERVICES_EXCHANGE_BABY_PET_ENABLED)
 		{
-			show("Серви�? откл�?чен.", player);
+			show("Service is unavailable.", player);
 			return;
 		}
 		
@@ -177,7 +177,7 @@ public final class exchange extends Functions
 		
 		if (!Config.SERVICES_CHANGE_PET_NAME_ENABLED)
 		{
-			show("Серви�? откл�?чен.", player);
+			show("Service is unavailable.", player);
 			return;
 		}
 		
@@ -185,7 +185,7 @@ public final class exchange extends Functions
 		
 		if ((pl_pet == null) || !pl_pet.isPet())
 		{
-			show("�?итомец должен быт�? вызван.", player);
+			show("Pet not found.", player);
 			return;
 		}
 		
@@ -204,7 +204,7 @@ public final class exchange extends Functions
 				player.sendPacket(new InventoryUpdate().addModifiedItem(control));
 			}
 			
-			show("�?м�? �?терто.", player);
+			show("Name is erased.", player);
 		}
 		else if (Config.SERVICES_CHANGE_PET_NAME_ITEM == 57)
 		{
@@ -230,7 +230,7 @@ public final class exchange extends Functions
 		
 		if (!Config.SERVICES_EXCHANGE_BABY_PET_ENABLED)
 		{
-			show("Серви�? откл�?чен.", player);
+			show("Service is unavailable.", player);
 			return;
 		}
 		
@@ -238,7 +238,7 @@ public final class exchange extends Functions
 		
 		if ((pl_pet == null) || pl_pet.isDead() || !((pl_pet.getId() == PetDataTable.IMPROVED_BABY_BUFFALO_ID) || (pl_pet.getId() == PetDataTable.IMPROVED_BABY_KOOKABURRA_ID)))
 		{
-			show("�?ет должен быт�? вызван.", player);
+			show("Pet not found.", player);
 			return;
 		}
 		
@@ -250,7 +250,7 @@ public final class exchange extends Functions
 			control.update();
 			player.sendPacket(new InventoryUpdate().addModifiedItem(control));
 			player.getSummonList().unsummonPet(false);
-			show("�?ет изменен.", player);
+			show("Exchange complete.", player);
 		}
 		else if (Config.SERVICES_EXCHANGE_BABY_PET_ITEM == 57)
 		{
@@ -276,7 +276,7 @@ public final class exchange extends Functions
 		
 		if (!Config.SERVICES_EXCHANGE_BABY_PET_ENABLED)
 		{
-			show("Серви�? откл�?чен.", player);
+			show("Service is unavailable.", player);
 			return;
 		}
 		
@@ -284,13 +284,13 @@ public final class exchange extends Functions
 		
 		if ((pl_pet == null) || pl_pet.isDead() || !((pl_pet.getId() == PetDataTable.IMPROVED_BABY_COUGAR_ID) || (pl_pet.getId() == PetDataTable.IMPROVED_BABY_KOOKABURRA_ID)))
 		{
-			show("�?ет должен быт�? вызван.", player);
+			show("Pet not found.", player);
 			return;
 		}
 		
 		if (Config.ALT_IMPROVED_PETS_LIMITED_USE && player.isMageClass())
 		{
-			show("Этот пет тол�?ко дл�? воинов.", player);
+			show("This is a warrior pet.", player);
 			return;
 		}
 		
@@ -298,14 +298,11 @@ public final class exchange extends Functions
 		{
 			ItemInstance control = player.getInventory().getItemByObjectId(pl_pet.getControlItemObjId());
 			control.setId(L2Pet.IMPROVED_BABY_BUFFALO.getControlItemId());
-			control/**
-			 * Method exToKookaburra.
-			 */
-			.setJdbcState(JdbcEntityState.UPDATED);
+			control.setJdbcState(JdbcEntityState.UPDATED);
 			control.update();
 			player.sendPacket(new InventoryUpdate().addModifiedItem(control));
 			player.getSummonList().unsummonPet(false);
-			show("�?ет изменен.", player);
+			show("Exchange complete.", player);
 		}
 		else if (Config.SERVICES_EXCHANGE_BABY_PET_ITEM == 57)
 		{
@@ -317,6 +314,9 @@ public final class exchange extends Functions
 		}
 	}
 	
+	/**
+	 * Method exToKookaburra.
+	 */
 	public void exToKookaburra()
 	{
 		Player player = getSelf();
@@ -328,7 +328,7 @@ public final class exchange extends Functions
 		
 		if (!Config.SERVICES_EXCHANGE_BABY_PET_ENABLED)
 		{
-			show("Серви�? откл�?чен.", player);
+			show("Service is unavailable.", player);
 			return;
 		}
 		
@@ -336,13 +336,13 @@ public final class exchange extends Functions
 		
 		if ((pl_pet == null) || pl_pet.isDead() || !((pl_pet.getId() == PetDataTable.IMPROVED_BABY_BUFFALO_ID) || (pl_pet.getId() == PetDataTable.IMPROVED_BABY_COUGAR_ID)))
 		{
-			show("�?ет должен быт�? вызван.", player);
+			show("Pet not found.", player);
 			return;
 		}
 		
 		if (Config.ALT_IMPROVED_PETS_LIMITED_USE && !player.isMageClass())
 		{
-			show("Этот пет тол�?ко дл�? магов.", player);
+			show("This is a fighter pet.", player);
 			return;
 		}
 		
@@ -354,7 +354,7 @@ public final class exchange extends Functions
 			control.update();
 			player.sendPacket(new InventoryUpdate().addModifiedItem(control));
 			player.getSummonList().unsummonPet(false);
-			show("�?ет изменен.", player);
+			show("Exchange complete.", player);
 		}
 		else if (Config.SERVICES_EXCHANGE_BABY_PET_ITEM == 57)
 		{
@@ -492,12 +492,12 @@ public final class exchange extends Functions
 		
 		if (Config.SERVICES_CHANGE_PET_NAME_ENABLED)
 		{
-			ret = "<br>[scripts_services.petevolve.exchange:showErasePetName|�?бнулит�? им�? у пета]";
+			ret = "<br>[scripts_services.petevolve.exchange:showErasePetName|Erase pet name.]";
 		}
 		
 		if (Config.SERVICES_EXCHANGE_BABY_PET_ENABLED)
 		{
-			ret += "<br>[scripts_services.petevolve.exchange:showBabyPetExchange|�?бмен�?т�? Improved Baby пета]";
+			ret += "<br>[scripts_services.petevolve.exchange:showBabyPetExchange|Exchange baby pet.]";
 		}
 		
 		return ret;
