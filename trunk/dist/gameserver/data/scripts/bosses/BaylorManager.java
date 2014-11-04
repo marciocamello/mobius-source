@@ -315,7 +315,7 @@ public final class BaylorManager extends Functions implements ScriptFile
 	static ScheduledFuture<?> _socialTask = null;
 	static ScheduledFuture<?> _endSceneTask = null;
 	private static boolean _isAlreadyEnteredOtherParty = false;
-	static EpicBossState _state;
+	public static EpicBossState _state;
 	private static Zone _zone;
 	private static final int FWBA_ACTIVITYTIMEOFMOBS = 120 * 60000;
 	private static final int FWBA_FIXINTERVALOFBAYLORSPAWN = 1440 * 60000;

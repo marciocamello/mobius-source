@@ -301,6 +301,23 @@ public class RaidBossSpawnManager
 	}
 	
 	/**
+	 * Method getRespawnDelay.
+	 * @param bossId int
+	 * @return Status
+	 */
+	public long getRespawnDelay(int bossId)
+	{
+		Spawner spawner = _spawntable.get(bossId);
+		
+		if (spawner == null)
+		{
+			return 0;
+		}
+		
+		return spawner.getRespawnDelay();
+	}
+	
+	/**
 	 * Method isDefined.
 	 * @param bossId int
 	 * @return boolean

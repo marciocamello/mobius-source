@@ -304,7 +304,7 @@ public final class SailrenManager extends Functions implements ScriptFile, OnDea
 	private static final int Pterosaur = 22199;
 	private static final int Tyrannosaurus = 22217;
 	private static final int TeleportCubeId = 31759;
-	static EpicBossState _state;
+	public static EpicBossState _state;
 	private static Zone _zone;
 	private static final Location _enter = new Location(27734, -6938, -1982);
 	private static final boolean FWS_ENABLESINGLEPLAYER = Boolean.TRUE;

@@ -267,7 +267,7 @@ public final class BaiumManager extends Functions implements ScriptFile, OnDeath
 	private static ScheduledFuture<?> _socialTask = null;
 	private static ScheduledFuture<?> _socialTask2 = null;
 	private static ScheduledFuture<?> _onAnnihilatedTask = null;
-	static EpicBossState _state;
+	public static EpicBossState _state;
 	static long _lastAttackTime = 0;
 	private static NpcInstance _npcBaium;
 	static SimpleSpawner _statueSpawn = null;
