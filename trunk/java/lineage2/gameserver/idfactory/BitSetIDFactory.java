@@ -92,7 +92,7 @@ class BitSetIDFactory extends IdFactory
 			
 			nextFreeId = new AtomicInteger(freeIds.nextClearBit(0));
 			initialized = true;
-			_log.info("IdFactory: " + freeIds.size() + " id's available.");
+			_log.info("IdFactory: " + freeIds.size() + " IDs available.");
 		}
 		catch (Exception e)
 		{
@@ -145,7 +145,7 @@ class BitSetIDFactory extends IdFactory
 			}
 			else
 			{
-				throw new NullPointerException("Ran out of valid Id's.");
+				throw new NullPointerException("Ran out of valid IDs.");
 			}
 		}
 		

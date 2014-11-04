@@ -94,7 +94,7 @@ public final class LabyrinthOfHarnak extends DynamicQuest implements ScriptFile
 		zoneFirstSecond.addListener(_zoneListener);
 		zoneThird = ReflectionUtils.getZone(QUEST_ZONE_THIRD);
 		zoneThird.addListener(_zoneListener);
-		_log.info("Dynamic Quest: Loaded quest ID " + QUEST_ID + ". Name: Labyrinth of Harnak - Zone Quest");
+		_log.info("Dynamic Quest: ID " + QUEST_ID + ". Name: Labyrinth of Harnak - Zone Quest");
 	}
 	
 	@Override

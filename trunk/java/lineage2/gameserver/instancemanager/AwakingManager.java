@@ -409,7 +409,8 @@ public class AwakingManager implements OnPlayerEnterListener
 		ALTER_SKILLS.put(Integer.valueOf(180), _AlterAerore);
 		ALTER_SKILLS.put(Integer.valueOf(181), _AlterAerore);
 		
-		_log.info("AwakingManager: Loaded 34 Awaking class for " + _CA.size() + " normal class. Loaded " + LEGACY_WEAPONS.size() + " Legacy Weapons.");
+		_log.info("AwakingManager: Loaded 34 Awaking class for " + _CA.size() + " normal class.");
+		_log.info("AwakingManager: Loaded " + LEGACY_WEAPONS.size() + " Legacy Weapons.");
 	}
 	
 	/**

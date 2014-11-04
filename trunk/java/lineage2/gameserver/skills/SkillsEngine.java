@@ -114,7 +114,8 @@ public class SkillsEngine
 			}
 		}
 		
-		_log.info("SkillsEngine: Loaded " + result.size() + " skill templates from XML files. Max id: " + maxId + ", max level: " + maxLvl);
+		_log.info("SkillsEngine: Loaded " + result.size() + " skill templates from XML files.");
+		_log.info("SkillsEngine: Max id: " + maxId + ", max level: " + maxLvl);
 		return result;
 	}
 }

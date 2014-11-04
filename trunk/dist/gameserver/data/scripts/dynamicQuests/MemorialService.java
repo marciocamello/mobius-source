@@ -184,7 +184,7 @@ public final class MemorialService extends DynamicQuest implements ScriptFile
 	@Override
 	public void onLoad()
 	{
-		_log.info("Dynamic Quest: Loaded quest ID " + QUEST_ID + ". Name: Memorial Service - Campaign");
+		_log.info("Dynamic Quest: ID " + QUEST_ID + ". Name: Memorial Service - Campaign");
 	}
 	
 	@Override

@@ -245,9 +245,9 @@ public class GameServer
 		}
 		
 		ItemHandler.getInstance();
-		AdminCommandHandler.getInstance().log();
-		UserCommandHandler.getInstance().log();
-		VoicedCommandHandler.getInstance().log();
+		AdminCommandHandler.getInstance();
+		UserCommandHandler.getInstance();
+		VoicedCommandHandler.getInstance();
 		TaskManager.getInstance();
 		_log.info("=[Events]=========================================");
 		ResidenceHolder.getInstance().callInit();
@@ -256,7 +256,7 @@ public class GameServer
 		BoatHolder.getInstance().spawnAll();
 		CastleManorManager.getInstance();
 		Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
-		_log.info("IdFactory: Free ObjectID's remaining: " + IdFactory.getInstance().size());
+		_log.info("IdFactory: Free Object IDs remaining: " + IdFactory.getInstance().size());
 		CoupleManager.getInstance();
 		
 		if (Config.ALT_FISH_CHAMPIONSHIP_ENABLED)

@@ -527,7 +527,7 @@ public final class AntharasManager extends Functions implements ScriptFile, OnDe
 			setIntervalEndTask();
 		}
 		
-		_log.info("AntharasManager: Next spawn date of Antharas is " + TimeUtils.toSimpleFormat(_state.getRespawnDate()) + ".");
+		_log.info("AntharasManager: Next spawn date is " + TimeUtils.toSimpleFormat(_state.getRespawnDate()) + ".");
 	}
 	
 	/**

@@ -150,8 +150,7 @@ public class GameTimeController
 		_gameStartTime = getDayStartTime();
 		GameServer.getInstance().addListener(new OnStartListenerImpl());
 		StringBuilder msg = new StringBuilder();
-		msg.append("GameTimeController: initialized.").append(' ');
-		msg.append("Current time is ");
+		msg.append("GameTimeController: Current time is ");
 		msg.append(getGameHour()).append(':');
 		
 		if (getGameMin() < 10)

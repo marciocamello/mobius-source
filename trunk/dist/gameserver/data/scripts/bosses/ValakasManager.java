@@ -879,7 +879,7 @@ public final class ValakasManager extends Functions implements ScriptFile, OnDea
 			setIntervalEndTask();
 		}
 		
-		_log.info("ValakasManager: Next spawn date of Valakas is " + TimeUtils.toSimpleFormat(_state.getRespawnDate()) + ".");
+		_log.info("ValakasManager: Next spawn date is " + TimeUtils.toSimpleFormat(_state.getRespawnDate()) + ".");
 	}
 	
 	/**
