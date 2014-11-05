@@ -18061,7 +18061,7 @@
 			<skill id="1916" level="1" name="Energetic" race="orc" min_level="85"/>
 			<skill id="1917" level="1" name="Undying Will" race="orc" min_level="85"/>
 			<skill id="1919" level="1" name="Dexterity" min_level="85" />
-			<skill id="1921" level="1" name="Earth Blessing" min_level="85" />
+			<skill id="1921" level="1" name="Earth Blessing" min_level="85" />			
 			<skill id="1920" level="1" name="Endurance" min_level="85" />
 			<skill id="1922" level="1" name="Earth Tremor" race="dwarf" min_level="85"/>
 			<skill id="19088" level="1" name="Summon Siege Golem" race="dwarf" min_level="85"/>
@@ -18075,7 +18075,7 @@
 			<skill id="1923" level="1" name="Battle Instinct" min_level="85" />
 			<skill id="1924" level="1" name="Dark Blessing" min_level="85" />
 			<skill id="1926" level="1" name="Body Reinforcement" min_level="85" />
-			<skill id="1954" level="1" name="Flying Body Reinforcement" min_level="85" />
+			<skill id="1954" level="1" name="Flying Body Reinforcement" min_level="85" />			
 			<skill id="1925" level="1" name="Soul Protection" race="kamael" min_level="85"/>
 			<skill id="194" level="1" name="Lucky" min_level="1"/>
 			<skill id="10499" level="1" name="Tyrr Warrior Air Chain Skill" min_level="85"/>
@@ -19032,7 +19032,7 @@
 			<skill id="1908" level="1" name="Delicacy" race="elf" min_level="85"/>
 			<skill id="1909" level="1" name="Sharpness" min_level="85"/>
 			<skill id="1911" level="1" name="Wind Blessing" min_level="85" />
-			<skill id="1910" level="1" name="Dark Presence" min_level="85" />
+			<skill id="1910" level="1" name="Dark Presence" min_level="85" />			
 			<skill id="1912" level="1" name="Disparition" race="darkelf" min_level="85"/>
 			<skill id="1913" level="1" name="Life Siphon" race="darkelf" min_level="85"/>
 			<skill id="1914" level="1" name="Savage" race="orc" min_level="85"/>
@@ -19465,13 +19465,13 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>	
 			<skill id="10249" level="1" name="Sigel Knight Air Chain Skill" min_level="85"/>
 			<skill id="10250" level="1" name="Sigel Knight Knock Chain Skill" min_level="85"/>
 			<skill id="239" level="8" name="Expertise R" min_level="85" />
@@ -19500,7 +19500,7 @@
 			<skill id="10010" level="1" cost="50" name="Justice Punishment" min_level="85" />
 			<skill id="10025" level="1" cost="50" name="Knight Frenzy" min_level="85" />
 			<skill id="1901" level="1" min_level="85" name="Aim" />
-			<skill id="1902" level="1" min_level="85" name="Mental Fortress" />
+			<skill id="1902" level="1" min_level="85" name="Mental Fortress" />			
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
 			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
 			<skill id="10017" level="1" cost="50" name="Final Ultimate Defense" min_level="85" />
@@ -19640,17 +19640,17 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>	
 			<skill id="1901" level="1" min_level="85" name="Aim" />
 			<skill id="1902" level="1" min_level="85" name="Mental Fortress" />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
-			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
+			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />			
 			<skill id="10001" level="1" cost="50" name="Superior Sword/Blunt Weapon Mastery" min_level="85" />
 			<skill id="10002" level="1" cost="50" name="Superior Heavy Armor Mastery" min_level="85" />
 			<skill id="10003" level="1" cost="50" name="Superior Shield Mastery" min_level="85" />
@@ -19795,7 +19795,7 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
@@ -19805,7 +19805,7 @@
 			<skill id="1905" level="1" min_level="85" name="Swiftness" />
 			<skill id="1906" level="1" min_level="85" name="Water Blessing"  />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
-			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
+			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />			
 			<skill id="10001" level="1" cost="50" name="Superior Sword/Blunt Weapon Mastery" min_level="85" />
 			<skill id="10002" level="1" cost="50" name="Superior Heavy Armor Mastery" min_level="85" />
 			<skill id="10003" level="1" cost="50" name="Superior Shield Mastery" min_level="85" />
@@ -19961,17 +19961,17 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>	
 			<skill id="1909" level="1" name="Sharpness" min_level="85"/>
 			<skill id="1911" level="1" name="Wind Blessing" min_level="85" />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
-			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
+			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />				
 			<skill id="10001" level="1" cost="50" name="Superior Sword/Blunt Weapon Mastery" min_level="85" />
 			<skill id="10002" level="1" cost="50" name="Superior Heavy Armor Mastery" min_level="85" />
 			<skill id="10003" level="1" cost="50" name="Superior Shield Mastery" min_level="85" />
@@ -20105,7 +20105,7 @@
 			<skill id="10079" level="1" cost="50" name="Summon Phantom Cubic" min_level="85" />
 			<skill id="10079" level="2" cost="50" name="Summon Phantom Cubic" min_level="90" />
 			<skill id="10079" level="3" cost="50" name="Summon Phantom Cubic" min_level="95" />
-			<skill id="10079" level="4" cost="50" name="Summon Phantom Cubic" min_level="99" />
+			<skill id="10079" level="4" cost="50" name="Summon Phantom Cubic" min_level="99" />			
 			<skill id="10043" level="1" cost="50" name="Summon Knight Cubic" min_level="85" />
 			<skill id="10043" level="2" cost="50" name="Summon Knight Cubic" min_level="86" />
 			<skill id="10043" level="3" cost="50" name="Summon Knight Cubic" min_level="88" />
@@ -20127,7 +20127,7 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
@@ -20137,7 +20137,7 @@
 			<skill id="1901" level="1" min_level="85" name="Aim" />
 			<skill id="1902" level="1" min_level="85" name="Mental Fortress" />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
-			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
+			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />			
 			<skill id="10251" level="1" cost="50" name="Superior Weapon Mastery" min_level="85" />
 			<skill id="10252" level="1" cost="50" name="Superior Dual Weapon Mastery" min_level="85" />
 			<skill id="10253" level="1" cost="50" name="Superior Heavy Armor Mastery" min_level="85" />
@@ -20280,17 +20280,17 @@
 			<skill id="8601" level="1" cost="50" name="Summon Battle Scar" min_level="85" />
 			<skill id="194" level="1" name="Lucky" min_level="1"/>
 			<skill id="10499" level="1" name="Tyrr Warrior Air Chain Skill" min_level="85" />
-			<skill id="10500" level="1" name="Tyrr Warrior Knock Chain Skill" min_level="85" />
+			<skill id="10500" level="1" name="Tyrr Warrior Knock Chain Skill" min_level="85" />			
 			<skill id="10300" level="1" cost="50" name="The Last Attack" min_level="90"/>
 			<skill id="10300" level="2" cost="50" name="The Last Attack" min_level="95"/>
-			<skill id="10300" level="3" cost="50" name="The Last Attack" min_level="99"/>
+			<skill id="10300" level="3" cost="50" name="The Last Attack" min_level="99"/>			
 		</class>
 		<class id="153">
 			<!-- Tyrr Dreadnought -->
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
@@ -20300,7 +20300,7 @@
 			<skill id="1901" level="1" min_level="85" name="Aim" />
 			<skill id="1902" level="1" min_level="85" name="Mental Fortress" />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
-			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
+			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />	
 			<skill id="10251" level="1" cost="50" name="Superior Weapon Mastery" min_level="85" />
 			<skill id="10252" level="1" cost="50" name="Superior Dual Weapon Mastery" min_level="85" />
 			<skill id="10253" level="1" cost="50" name="Superior Heavy Armor Mastery" min_level="85" />
@@ -20435,17 +20435,17 @@
 			<skill id="8601" level="1" cost="50" name="Summon Battle Scar" min_level="85" />
 			<skill id="194" level="1" name="Lucky" min_level="1"/>
 			<skill id="10499" level="1" name="Tyrr Warrior Air Chain Skill" min_level="85"/>
-			<skill id="10500" level="1" name="Tyrr Warrior Knock Chain Skill" min_level="85"/>
+			<skill id="10500" level="1" name="Tyrr Warrior Knock Chain Skill" min_level="85"/>			
 			<skill id="10300" level="1" cost="50" name="The Last Attack" min_level="90"/>
 			<skill id="10300" level="2" cost="50" name="The Last Attack" min_level="95"/>
-			<skill id="10300" level="3" cost="50" name="The Last Attack" min_level="99"/>
+			<skill id="10300" level="3" cost="50" name="The Last Attack" min_level="99"/>			
 		</class>
 		<class id="154">
 			<!-- Tyrr Titan -->
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
@@ -20455,7 +20455,7 @@
 			<skill id="1915" level="1" name="Fire Blessing" min_level="85" />
 			<skill id="1916" level="1" name="Energetic" min_level="85" />
 			<skill id="1571" level="1" name="Each Class Inventory Increase" min_level="85" />
-			<skill id="1597" level="1" name="Each Class Weight Increase" min_level="85" />
+			<skill id="1597" level="1" name="Each Class Weight Increase" min_level="85" />			
 			<skill id="10251" level="1" cost="50" name="Superior Weapon Mastery" min_level="85" />
 			<skill id="10252" level="1" cost="50" name="Superior Dual Weapon Mastery" min_level="85" />
 			<skill id="10253" level="1" cost="50" name="Superior Heavy Armor Mastery" min_level="85" />
@@ -20590,23 +20590,23 @@
 			<skill id="8601" level="1" cost="50" name="Summon Battle Scar" min_level="85" />
 			<skill id="194" level="1" name="Lucky" min_level="1"/>
 			<skill id="10499" level="1" name="Tyrr Warrior Air Chain Skill" min_level="85"/>
-			<skill id="10500" level="1" name="Tyrr Warrior Knock Chain Skill" min_level="85"/>
+			<skill id="10500" level="1" name="Tyrr Warrior Knock Chain Skill" min_level="85"/>			
 			<skill id="10300" level="1" cost="50" name="The Last Attack" min_level="90"/>
 			<skill id="10300" level="2" cost="50" name="The Last Attack" min_level="95"/>
-			<skill id="10300" level="3" cost="50" name="The Last Attack" min_level="99"/>
+			<skill id="10300" level="3" cost="50" name="The Last Attack" min_level="99"/>			
 		</class>
 		<class id="155">
 			<!-- Tyrr Grand Khavatari -->
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>	
 			<skill id="1915" level="1" name="Fire Blessing" min_level="85" />
 			<skill id="1916" level="1" name="Energetic" min_level="85" />
 			<skill id="1571" level="1" name="Each Class Inventory Increase" min_level="85" />
@@ -20743,17 +20743,17 @@
 			<skill id="8601" level="1" cost="50" name="Summon Battle Scar" min_level="85" />
 			<skill id="194" level="1" name="Lucky" min_level="1"/>
 			<skill id="10499" level="1" name="Tyrr Warrior Air Chain Skill" min_level="85"/>
-			<skill id="10500" level="1" name="Tyrr Warrior Knock Chain Skill" min_level="85"/>
+			<skill id="10500" level="1" name="Tyrr Warrior Knock Chain Skill" min_level="85"/>			
 			<skill id="10300" level="1" cost="50" name="The Last Attack" min_level="90"/>
 			<skill id="10300" level="2" cost="50" name="The Last Attack" min_level="95"/>
-			<skill id="10300" level="3" cost="50" name="The Last Attack" min_level="99"/>
+			<skill id="10300" level="3" cost="50" name="The Last Attack" min_level="99"/>			
 		</class>
 		<class id="156">
 			<!-- Tyrr Maestro -->
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
@@ -20770,15 +20770,15 @@
 			<skill id="172" level="11" cost="0" name="Create Item" min_level="85"/>
 			<skill id="172" level="12" cost="0" name="Create Item" min_level="87"/>
 			<skill id="172" level="13" cost="0" name="Create Item" min_level="95"/>
-			<skill id="172" level="14" cost="0" name="Create Item" min_level="99"/>
+			<skill id="172" level="14" cost="0" name="Create Item" min_level="99"/>					
 			<skill id="1320" level="1" cost="50" name="Create Common Item" min_level="85"/>
 			<skill id="1322" level="1" name="Common Craft" min_level="1"/>
 			<skill id="1919" level="1" name="Dexterity" min_level="85" />
 			<skill id="1921" level="1" name="Earth Blessing" min_level="85" />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
-			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
+			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />	
 			<skill id="19088" level="1" name="Summon Siege Golem" min_level="85" />
-			<skill id="19089" level="1" name="Summon Wild Hog Cannon" min_level="85" />
+			<skill id="19089" level="1" name="Summon Wild Hog Cannon" min_level="85" />			
 			<skill id="10251" level="1" cost="50" name="Superior Weapon Mastery" min_level="85" />
 			<skill id="10252" level="1" cost="50" name="Superior Dual Weapon Mastery" min_level="85" />
 			<skill id="10253" level="1" cost="50" name="Superior Heavy Armor Mastery" min_level="85" />
@@ -20913,17 +20913,17 @@
 			<skill id="8601" level="1" cost="50" name="Summon Battle Scar" min_level="85" />
 			<skill id="194" level="1" name="Lucky" min_level="1"/>
 			<skill id="10499" level="1" name="Tyrr Warrior Air Chain Skill" min_level="85"/>
-			<skill id="10500" level="1" name="Tyrr Warrior Knock Chain Skill" min_level="85"/>
+			<skill id="10500" level="1" name="Tyrr Warrior Knock Chain Skill" min_level="85"/>			
 			<skill id="10300" level="1" cost="50" name="The Last Attack" min_level="90"/>
 			<skill id="10300" level="2" cost="50" name="The Last Attack" min_level="95"/>
-			<skill id="10300" level="3" cost="50" name="The Last Attack" min_level="99"/>
+			<skill id="10300" level="3" cost="50" name="The Last Attack" min_level="99"/>			
 		</class>
 		<class id="157">
 			<!-- Tyrr Doombringer -->
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
@@ -20931,7 +20931,7 @@
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
 			<skill id="248" level="6" name="Crystallize" min_level="85"/>
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
-			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
+			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />			
 			<skill id="1923" level="1" name="Battle Instinct" min_level="85" />
 			<skill id="1924" level="1" name="Dark Blessing" min_level="85" />
 			<skill id="1926" level="1" name="Body Reinforcement" min_level="85" />
@@ -21074,27 +21074,27 @@
 			<skill id="8601" level="1" cost="50" name="Summon Battle Scar" min_level="85" />
 			<skill id="194" level="1" name="Lucky" min_level="1"/>
 			<skill id="10499" level="1" name="Tyrr Warrior Air Chain Skill" min_level="85"/>
-			<skill id="10500" level="1" name="Tyrr Warrior Knock Chain Skill" min_level="85"/>
+			<skill id="10500" level="1" name="Tyrr Warrior Knock Chain Skill" min_level="85"/>			
 			<skill id="10300" level="1" cost="50" name="The Last Attack" min_level="90"/>
 			<skill id="10300" level="2" cost="50" name="The Last Attack" min_level="95"/>
-			<skill id="10300" level="3" cost="50" name="The Last Attack" min_level="99"/>
+			<skill id="10300" level="3" cost="50" name="The Last Attack" min_level="99"/>			
 		</class>
 		<class id="158">
 			<!-- Othell Adventure -->
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>	
 			<skill id="1901" level="1" min_level="85" name="Aim" />
 			<skill id="1902" level="1" min_level="85" name="Mental Fortress" />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
-			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
+			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />	
 			<skill id="10501" level="1" cost="50" name="Superior Dagger Mastery" min_level="85" />
 			<skill id="10502" level="1" cost="50" name="Superior Dual Dagger Mastery" min_level="85" />
 			<skill id="10503" level="1" cost="50" name="Superior Light Armor Mastery" min_level="85" />
@@ -21229,22 +21229,22 @@
 			<skill id="10561" level="1" cost="50" name="Superior Vitality" min_level="85" />
 			<skill id="10561" level="2" cost="50" name="Superior Vitality" min_level="90" />
 			<skill id="10561" level="3" cost="50" name="Superior Vitality" min_level="95" />
-			<skill id="10561" level="4" cost="50" name="Superior Vitality" min_level="99" />
+			<skill id="10561" level="4" cost="50" name="Superior Vitality" min_level="99" />			
 			<skill id="239" level="8" cost="0" name="Expertise R" min_level="85" />
 			<skill id="239" level="9" cost="0" name="Expertise R95" min_level="95" />
 			<skill id="239" level="10" cost="0" name="Expertise R99" min_level="99" />
 			<skill id="8602" level="1" cost="50" name="Summon Blood Tail" min_level="85" />
 			<skill id="194" level="1" name="Lucky" min_level="1"/>
-			<skill id="10554" level="1" cost="50" name="Power Bluff" min_level="85"/>
+			<skill id="10554" level="1" cost="50" name="Power Bluff" min_level="85"/>			
 			<skill id="10749" level="1" name="Othell Rogue Air Chain Skill" min_level="85"/>
-			<skill id="10750" level="1" name="Othell Rogue Knock Chain Skill" min_level="85"/>
+			<skill id="10750" level="1" name="Othell Rogue Knock Chain Skill" min_level="85"/>			
 		</class>
 		<class id="159">
 			<!-- Othell Wind Rider -->
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
@@ -21389,22 +21389,22 @@
 			<skill id="10608" level="1" cost="50" name="Superior Haste" min_level="85" />
 			<skill id="10608" level="2" cost="50" name="Superior Haste" min_level="90" />
 			<skill id="10608" level="3" cost="50" name="Superior Haste" min_level="95" />
-			<skill id="10608" level="4" cost="50" name="Superior Haste" min_level="99" />
+			<skill id="10608" level="4" cost="50" name="Superior Haste" min_level="99" />		
 			<skill id="239" level="8" cost="0" name="Expertise R" min_level="85" />
 			<skill id="239" level="9" cost="0" name="Expertise R95" min_level="95" />
 			<skill id="239" level="10" cost="0" name="Expertise R99" min_level="99" />
 			<skill id="8602" level="1" cost="50" name="Summon Blood Tail" min_level="85" />
 			<skill id="194" level="1" name="Lucky" min_level="1"/>
-			<skill id="10554" level="1" cost="50" name="Power Bluff" min_level="85"/>
+			<skill id="10554" level="1" cost="50" name="Power Bluff" min_level="85"/>			
 			<skill id="10749" level="1" name="Othell Rogue Air Chain Skill" min_level="85"/>
-			<skill id="10750" level="1" name="Othell Rogue Knock Chain Skill" min_level="85"/>
+			<skill id="10750" level="1" name="Othell Rogue Knock Chain Skill" min_level="85"/>			
 		</class>
 		<class id="160">
 			<!-- Othell Ghost Hunter -->
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
@@ -21555,26 +21555,26 @@
 			<skill id="239" level="10" cost="0" name="Expertise R99" min_level="99" />
 			<skill id="8602" level="1" cost="50" name="Summon Blood Tail" min_level="85" />
 			<skill id="194" level="1" name="Lucky" min_level="1"/>
-			<skill id="10554" level="1" cost="50" name="Power Bluff" min_level="85"/>
+			<skill id="10554" level="1" cost="50" name="Power Bluff" min_level="85"/>			
 			<skill id="10749" level="1" name="Othell Rogue Air Chain Skill" min_level="85"/>
-			<skill id="10750" level="1" name="Othell Rogue Knock Chain Skill" min_level="85"/>
+			<skill id="10750" level="1" name="Othell Rogue Knock Chain Skill" min_level="85"/>			
 		</class>
 		<class id="161">
 			<!-- Othell Fortune Seeker -->
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>	
 			<skill id="1919" level="1" name="Dexterity" min_level="85" />
 			<skill id="1921" level="1" name="Earth Blessing" min_level="85" />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
-			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
+			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />			
 			<skill id="10501" level="1" cost="50" name="Superior Dagger Mastery" min_level="85" />
 			<skill id="10502" level="1" cost="50" name="Superior Dual Dagger Mastery" min_level="85" />
 			<skill id="10503" level="1" cost="50" name="Superior Light Armor Mastery" min_level="85" />
@@ -21729,26 +21729,26 @@
 			<skill id="239" level="10" cost="0" name="Expertise R99" min_level="99" />
 			<skill id="8602" level="1" cost="50" name="Summon Blood Tail" min_level="85" />
 			<skill id="194" level="1" name="Lucky" min_level="1"/>
-			<skill id="10554" level="1" cost="50" name="Power Bluff" min_level="85"/>
+			<skill id="10554" level="1" cost="50" name="Power Bluff" min_level="85"/>			
 			<skill id="10749" level="1" name="Othell Rogue Air Chain Skill" min_level="85"/>
-			<skill id="10750" level="1" name="Othell Rogue Knock Chain Skill" min_level="85"/>
+			<skill id="10750" level="1" name="Othell Rogue Knock Chain Skill" min_level="85"/>			
 		</class>
 		<class id="162">
 			<!-- Yul Saggitarius -->
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>	
 			<skill id="1901" level="1" min_level="85" name="Aim" />
 			<skill id="1902" level="1" min_level="85" name="Mental Fortress" />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
-			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
+			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />	
 			<skill id="10751" level="1" cost="50" name="Superior Bow/Crossbow Mastery" min_level="85" />
 			<skill id="10752" level="1" cost="50" name="Superior Light Armor Mastery" min_level="85" />
 			<skill id="10753" level="1" cost="50" name="Superior Hawkeye Mastery" min_level="85" />
@@ -21906,13 +21906,13 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>	
 			<skill id="1905" level="1" min_level="85" name="Swiftness" />
 			<skill id="1906" level="1" min_level="85" name="Water Blessing"  />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
@@ -22074,13 +22074,13 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>	
 			<skill id="1909" level="1" name="Sharpness" min_level="85"/>
 			<skill id="1911" level="1" name="Wind Blessing" min_level="85" />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
@@ -22242,7 +22242,7 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
@@ -22254,7 +22254,7 @@
 			<skill id="1926" level="1" name="Body Reinforcement" min_level="85" />
 			<skill id="1954" level="1" name="Flying Body Reinforcement" min_level="85" />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
-			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
+			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />			
 			<skill id="10751" level="1" cost="50" name="Superior Bow/Crossbow Mastery" min_level="85" />
 			<skill id="10752" level="1" cost="50" name="Superior Light Armor Mastery" min_level="85" />
 			<skill id="10753" level="1" cost="50" name="Superior Hawkeye Mastery" min_level="85" />
@@ -22412,19 +22412,19 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>	
 			<skill id="1901" level="1" min_level="85" name="Aim" />
 			<skill id="1902" level="1" min_level="85" name="Mental Fortress" />
 			<skill id="11247" level="1" name="Feoh Wizard Air Chain Skill" min_level="85"/>
-			<skill id="11249" level="1" name="Feoh Wizard Knock Chain Skill" min_level="85"/>
+			<skill id="11249" level="1" name="Feoh Wizard Knock Chain Skill" min_level="85"/>			
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
-			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
+			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />			
 			<skill id="11001" level="1" cost="50" name="Superior Weapon Mastery" min_level="85" />
 			<skill id="11002" level="1" cost="50" name="Superior Robe Mastery" min_level="85" />
 			<skill id="11003" level="1" cost="50" name="Superior Anti Magic" min_level="85" />
@@ -22586,19 +22586,19 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>	
 			<skill id="1901" level="1" min_level="85" name="Aim" />
 			<skill id="1902" level="1" min_level="85" name="Mental Fortress" />
 			<skill id="11247" level="1" name="Feoh Wizard Air Chain Skill" min_level="85"/>
-			<skill id="11249" level="1" name="Feoh Wizard Knock Chain Skill" min_level="85"/>
+			<skill id="11249" level="1" name="Feoh Wizard Knock Chain Skill" min_level="85"/>			
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
-			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
+			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />		
 			<skill id="11001" level="1" cost="50" name="Superior Weapon Mastery" min_level="85" />
 			<skill id="11002" level="1" cost="50" name="Superior Robe Mastery" min_level="85" />
 			<skill id="11003" level="1" cost="50" name="Superior Anti Magic" min_level="85" />
@@ -22757,7 +22757,7 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
@@ -22767,9 +22767,9 @@
 			<skill id="1905" level="1" min_level="85" name="Swiftness" />
 			<skill id="1906" level="1" min_level="85" name="Water Blessing"  />
 			<skill id="11247" level="1" name="Feoh Wizard Air Chain Skill" min_level="85"/>
-			<skill id="11249" level="1" name="Feoh Wizard Knock Chain Skill" min_level="85"/>
+			<skill id="11249" level="1" name="Feoh Wizard Knock Chain Skill" min_level="85"/>			
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
-			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
+			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />	
 			<skill id="11001" level="1" cost="50" name="Superior Weapon Mastery" min_level="85" />
 			<skill id="11002" level="1" cost="50" name="Superior Robe Mastery" min_level="85" />
 			<skill id="11003" level="1" cost="50" name="Superior Anti Magic" min_level="85" />
@@ -22931,19 +22931,19 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>				
 			<skill id="1909" level="1" name="Sharpness" min_level="85"/>
 			<skill id="1911" level="1" name="Wind Blessing" min_level="85" />
 			<skill id="11247" level="1" name="Feoh Wizard Air Chain Skill" min_level="85"/>
-			<skill id="11249" level="1" name="Feoh Wizard Knock Chain Skill" min_level="85"/>
+			<skill id="11249" level="1" name="Feoh Wizard Knock Chain Skill" min_level="85"/>			
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
-			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
+			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />	
 			<skill id="11001" level="1" cost="50" name="Superior Weapon Mastery" min_level="85" />
 			<skill id="11002" level="1" cost="50" name="Superior Robe Mastery" min_level="85" />
 			<skill id="11003" level="1" cost="50" name="Superior Anti Magic" min_level="85" />
@@ -23105,22 +23105,22 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>				
 			<skill id="1923" level="1" name="Battle Instinct" min_level="85" />
 			<skill id="1924" level="1" name="Dark Blessing" min_level="85" />
 			<skill id="1926" level="1" name="Body Reinforcement" min_level="85" />
-			<skill id="1954" level="1" name="Flying Body Reinforcement" min_level="85" />
+			<skill id="1954" level="1" name="Flying Body Reinforcement" min_level="85" />	
 			<skill id="6092" level="1" name="Lightning Shock" min_level="85" />
 			<skill id="11247" level="1" name="Feoh Wizard Air Chain Skill" min_level="85"/>
-			<skill id="11249" level="1" name="Feoh Wizard Knock Chain Skill" min_level="85"/>
+			<skill id="11249" level="1" name="Feoh Wizard Knock Chain Skill" min_level="85"/>			
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
-			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
+			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />			
 			<skill id="11001" level="1" cost="50" name="Superior Weapon Mastery" min_level="85" />
 			<skill id="11002" level="1" cost="50" name="Superior Robe Mastery" min_level="85" />
 			<skill id="11003" level="1" cost="50" name="Superior Anti Magic" min_level="85" />
@@ -23283,19 +23283,19 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>				
 			<skill id="1901" level="1" min_level="85" name="Aim" />
 			<skill id="1902" level="1" min_level="85" name="Mental Fortress" />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
-			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
+			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />	
 			<skill id="11501" level="1" cost="50" name="Superior Dual Weapon Mastery" min_level="85" />
-			<skill id="10001" level="1" cost="50" name="Superior Sword/Blunt Weapon Mastery" min_level="85"/>
+			<skill id="10001" level="1" cost="50" name="Superior Sword/Blunt Weapon Mastery" min_level="85"/>			
 			<skill id="11502" level="1" cost="50" name="Superior Robe Mastery" min_level="85" />
 			<skill id="11503" level="1" cost="50" name="Superior Light Armor Mastery" min_level="85" />
 			<skill id="11504" level="1" cost="50" name="Superior Heavy Armor Mastery" min_level="85" />
@@ -23463,19 +23463,19 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>				
 			<skill id="1905" level="1" min_level="85" name="Swiftness" />
 			<skill id="1906" level="1" min_level="85" name="Water Blessing"  />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
 			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
 			<skill id="11501" level="1" cost="50" name="Superior Dual Weapon Mastery" min_level="85" />
-			<skill id="10001" level="1" cost="50" name="Superior Sword/Blunt Weapon Mastery" min_level="85"/>
+			<skill id="10001" level="1" cost="50" name="Superior Sword/Blunt Weapon Mastery" min_level="85"/>			
 			<skill id="11502" level="1" cost="50" name="Superior Robe Mastery" min_level="85" />
 			<skill id="11503" level="1" cost="50" name="Superior Light Armor Mastery" min_level="85" />
 			<skill id="11504" level="1" cost="50" name="Superior Heavy Armor Mastery" min_level="85" />
@@ -23496,7 +23496,7 @@
 			<skill id="11583" level="1" cost="0" name="Superior Song of Mastery" min_level="85" />
 			<skill id="11583" level="2" cost="0" name="Superior Song of Mastery" min_level="90" />
 			<skill id="11583" level="3" cost="0" name="Superior Song of Mastery" min_level="95" />
-			<skill id="11583" level="4" cost="0" name="Superior Song of Mastery" min_level="99" />
+			<skill id="11583" level="4" cost="0" name="Superior Song of Mastery" min_level="99" />			
 			<skill id="11509" level="1" cost="50" name="Crippling Attack" min_level="85" />
 			<skill id="11509" level="2" cost="50" name="Crippling Attack" min_level="86" />
 			<skill id="11509" level="3" cost="50" name="Crippling Attack" min_level="88" />
@@ -23644,13 +23644,13 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>				
 			<skill id="1909" level="1" name="Sharpness" min_level="85"/>
 			<skill id="1911" level="1" name="Wind Blessing" min_level="85" />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
@@ -23685,7 +23685,7 @@
 			<skill id="11585" level="1" cost="0" name="Superior Dance of Mastery" min_level="85" />
 			<skill id="11585" level="2" cost="0" name="Superior Dance of Mastery" min_level="90" />
 			<skill id="11585" level="3" cost="0" name="Superior Dance of Mastery" min_level="95" />
-			<skill id="11585" level="4" cost="0" name="Superior Dance of Mastery" min_level="99" />
+			<skill id="11585" level="4" cost="0" name="Superior Dance of Mastery" min_level="99" />			
 			<skill id="11510" level="1" cost="50" name="Shadow Blade" min_level="85" />
 			<skill id="11510" level="2" cost="50" name="Shadow Blade" min_level="87" />
 			<skill id="11510" level="3" cost="50" name="Shadow Blade" min_level="89" />
@@ -23825,18 +23825,18 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>			
 			<skill id="1915" level="1" name="Fire Blessing" min_level="85" />
 			<skill id="1916" level="1" name="Energetic" min_level="85" />
 			<skill id="1571" level="1" name="Each Class Inventory Increase" min_level="85" />
 			<skill id="1597" level="1" name="Each Class Weight Increase" min_level="85" />
-			<skill id="10001" level="1" cost="50" name="Superior Sword/Blunt Weapon Mastery" min_level="85"/>
+			<skill id="10001" level="1" cost="50" name="Superior Sword/Blunt Weapon Mastery" min_level="85"/>			
 			<skill id="11501" level="1" cost="50" name="Superior Dual Weapon Mastery" min_level="85" />
 			<skill id="11502" level="1" cost="50" name="Superior Robe Mastery" min_level="85" />
 			<skill id="11503" level="1" cost="50" name="Superior Light Armor Mastery" min_level="85" />
@@ -23847,7 +23847,7 @@
 			<skill id="11588" level="1" cost="0" name="Superior Wizard Mastery" min_level="85" />
 			<skill id="11588" level="2" cost="0" name="Superior Wizard Mastery" min_level="90" />
 			<skill id="11588" level="3" cost="0" name="Superior Wizard Mastery" min_level="95" />
-			<skill id="11588" level="4" cost="0" name="Superior Wizard Mastery" min_level="99" />
+			<skill id="11588" level="4" cost="0" name="Superior Wizard Mastery" min_level="99" />			
 			<skill id="11603" level="1" cost="50" name="Mass Restriction" min_level="85" />
 			<skill id="11603" level="2" cost="50" name="Mass Restriction" min_level="90" />
 			<skill id="11603" level="3" cost="50" name="Mass Restriction" min_level="95" />
@@ -23863,7 +23863,7 @@
 			<skill id="11586" level="1" cost="50" name="Pa'agrio's Bravery" min_level="85" />
 			<skill id="11586" level="2" cost="50" name="Pa'agrio's Bravery" min_level="90" />
 			<skill id="11586" level="3" cost="50" name="Pa'agrio's Bravery" min_level="95" />
-			<skill id="11586" level="4" cost="50" name="Pa'agrio's Bravery" min_level="99" />
+			<skill id="11586" level="4" cost="50" name="Pa'agrio's Bravery" min_level="99" />			
 			<skill id="11508" level="1" cost="50" name="Assault Rush" min_level="85" />
 			<skill id="11508" level="2" cost="50" name="Assault Rush" min_level="87" />
 			<skill id="11508" level="3" cost="50" name="Assault Rush" min_level="90" />
@@ -24017,18 +24017,18 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>				
 			<skill id="1915" level="1" name="Fire Blessing" min_level="85" />
 			<skill id="1916" level="1" name="Energetic" min_level="85" />
 			<skill id="1571" level="1" name="Each Class Inventory Increase" min_level="85" />
 			<skill id="1597" level="1" name="Each Class Weight Increase" min_level="85" />
-			<skill id="10001" level="1" cost="50" name="Superior Sword/Blunt Weapon Mastery" min_level="85"/>
+			<skill id="10001" level="1" cost="50" name="Superior Sword/Blunt Weapon Mastery" min_level="85"/>			
 			<skill id="11501" level="1" cost="50" name="Superior Dual Weapon Mastery" min_level="85" />
 			<skill id="11502" level="1" cost="50" name="Superior Robe Mastery" min_level="85" />
 			<skill id="11503" level="1" cost="50" name="Superior Light Armor Mastery" min_level="85" />
@@ -24049,7 +24049,7 @@
 			<skill id="11599" level="1" cost="50" name="Combat Cry" min_level="85" />
 			<skill id="11599" level="2" cost="50" name="Combat Cry" min_level="90" />
 			<skill id="11599" level="3" cost="50" name="Combat Cry" min_level="95" />
-			<skill id="11599" level="4" cost="50" name="Combat Cry" min_level="99" />
+			<skill id="11599" level="4" cost="50" name="Combat Cry" min_level="99" />			
 			<skill id="11509" level="1" cost="50" name="Crippling Attack" min_level="85" />
 			<skill id="11509" level="2" cost="50" name="Crippling Attack" min_level="86" />
 			<skill id="11509" level="3" cost="50" name="Crippling Attack" min_level="88" />
@@ -24197,17 +24197,17 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>				
 			<skill id="1901" level="1" min_level="85" name="Aim" />
 			<skill id="1902" level="1" min_level="85" name="Mental Fortress" />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
-			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
+			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />	
 			<skill id="239" level="8" min_level="85" name="Expertise R"/>
 			<skill id="239" level="9" min_level="95" name="Expertise R95"/>
 			<skill id="239" level="10" min_level="99" name="Expertise R99"/>
@@ -24391,20 +24391,20 @@
 			<skill id="11322" level="5" cost="50" name="Summon Wynn Feline Queen" min_level="93"/>
 			<skill id="11322" level="6" cost="50" name="Summon Wynn Feline Queen" min_level="95"/>
 			<skill id="11322" level="7" cost="50" name="Summon Wynn Feline Queen" min_level="97"/>
-			<skill id="11322" level="8" cost="50" name="Summon Wynn Feline Queen" min_level="99"/>
+			<skill id="11322" level="8" cost="50" name="Summon Wynn Feline Queen" min_level="99"/>			
 		</class>
 		<class id="177">
 			<!-- Wynn Elemental Master -->
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>		
 			<skill id="11330" level="1" cost="0" name="Summon Wynn Magnus" min_level="85"/>
 			<skill id="11330" level="2" cost="50" name="Summon Wynn Magnus" min_level="87"/>
 			<skill id="11330" level="3" cost="50" name="Summon Wynn Magnus" min_level="89"/>
@@ -24428,7 +24428,7 @@
 			<skill id="11332" level="5" cost="50" name="Unicorn's Aggression" min_level="93"/>
 			<skill id="11332" level="6" cost="50" name="Unicorn's Aggression" min_level="95"/>
 			<skill id="11332" level="7" cost="50" name="Unicorn's Aggression" min_level="97"/>
-			<skill id="11332" level="8" cost="50" name="Unicorn's Aggression" min_level="99"/>
+			<skill id="11332" level="8" cost="50" name="Unicorn's Aggression" min_level="99"/>	
 			<skill id="1905" level="1" min_level="85" name="Swiftness" />
 			<skill id="1906" level="1" min_level="85" name="Water Blessing" />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
@@ -24601,17 +24601,17 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>				
 			<skill id="1909" level="1" name="Sharpness" min_level="85"/>
 			<skill id="1911" level="1" name="Wind Blessing" min_level="85" />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
-			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
+			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />			
 			<skill id="11338" level="1" cost="0" name="Summon Wynn Nightshade" min_level="85"/>
 			<skill id="11338" level="2" cost="50" name="Summon Wynn Nightshade" min_level="87"/>
 			<skill id="11338" level="3" cost="50" name="Summon Wynn Nightshade" min_level="89"/>
@@ -24635,7 +24635,7 @@
 			<skill id="11340" level="5" cost="50" name="Summon Wynn Soulless" min_level="93"/>
 			<skill id="11340" level="6" cost="50" name="Summon Wynn Soulless" min_level="95"/>
 			<skill id="11340" level="7" cost="50" name="Summon Wynn Soulless" min_level="97"/>
-			<skill id="11340" level="8" cost="50" name="Summon Wynn Soulless" min_level="99"/>
+			<skill id="11340" level="8" cost="50" name="Summon Wynn Soulless" min_level="99"/>	
 			<skill id="239" level="8" min_level="85" name="Expertise R"/>
 			<skill id="239" level="9" min_level="95" name="Expertise R95"/>
 			<skill id="239" level="10" min_level="99" name="Expertise R99"/>
@@ -24802,17 +24802,17 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>			
 			<skill id="1901" level="1" min_level="85" name="Aim" />
 			<skill id="1902" level="1" min_level="85" name="Mental Fortress" />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
-			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />
+			<skill id="1572" level="1" name="Awakened Class Weight Increase" min_level="85" />	
 			<skill id="239" level="8" min_level="85" name="Expertise R"/>
 			<skill id="239" level="9" min_level="95" name="Expertise R95"/>
 			<skill id="239" level="10" min_level="99" name="Expertise R99"/>
@@ -25007,13 +25007,13 @@
 			<skill id="1986" level="1" name="Dual Maximum HP" min_level="85"/>
 			<skill id="1986" level="2" name="Dual Maximum HP" min_level="90"/>
 			<skill id="1986" level="3" name="Dual Maximum HP" min_level="95"/>
-			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>
+			<skill id="1986" level="4" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="248" level="1" name="Crystallize" min_level="85"/>
 			<skill id="248" level="2" name="Crystallize" min_level="85"/>
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>		
 			<skill id="1905" level="1" min_level="85" name="Swiftness" />
 			<skill id="1906" level="1" min_level="85" name="Water Blessing"  />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
@@ -25218,7 +25218,7 @@
 			<skill id="248" level="3" name="Crystallize" min_level="85"/>
 			<skill id="248" level="4" name="Crystallize" min_level="85"/>
 			<skill id="248" level="5" name="Crystallize" min_level="85"/>
-			<skill id="248" level="6" name="Crystallize" min_level="85"/>
+			<skill id="248" level="6" name="Crystallize" min_level="85"/>			
 			<skill id="1909" level="1" name="Sharpness" min_level="85"/>
 			<skill id="1911" level="1" name="Wind Blessing" min_level="85" />
 			<skill id="1571" level="1" name="Awakened Class Inventory Increase" min_level="85" />
@@ -25414,9 +25414,7 @@
 			<skill id="11746" level="1" cost="50" name="Superior Inquisition" min_level="85"/>
 		</class>
 		<class id="182">
-			<!-- Ertheia Fighter -->
-			<skill id="194" level="1" name="Lucky" min_level="1"/>
-			<skill id="1322" level="1" name="Common Craft" min_level="1"/>
+			<!-- Level 1 Ertheia Fighter  -->
 			<skill id="30400" level="1" name="Divine Wind" min_level="1"/>
 			<skill id="30401" level="1" name="Tenacity" min_level="1"/>
 			<skill id="30402" level="1" name="Efficacy" min_level="1"/>
@@ -25424,81 +25422,300 @@
 			<skill id="30500" level="1" cost="2" name="Lateral Hit" min_level="5"/>
 			<skill id="30540" level="1" cost="2" name="Eminent Fist Weapon Mastery" min_level="5"/>
 			<skill id="30541" level="1" cost="2" name="Eminent Light Armor Mastery" min_level="5"/>
+			<!-- Level 20 -->
 			<skill id="30500" level="2" cost="6" name="Lateral Hit" min_level="20"/>
-			<skill id="30500" level="3" cost="11" name="Lateral Hit" min_level="28"/>
-			<skill id="30500" level="4" cost="20" name="Lateral Hit" min_level="36"/>
-			<skill id="30500" level="5" cost="50" name="Lateral Hit" min_level="42"/>
-			<skill id="30500" level="6" cost="75" name="Lateral Hit" min_level="46"/>
-			<skill id="30500" level="7" cost="107" name="Lateral Hit" min_level="50"/>
-			<skill id="30500" level="8" cost="145" name="Lateral Hit" min_level="54"/>
-			<skill id="30500" level="9" cost="291" name="Lateral Hit" min_level="58"/>
-			<skill id="30500" level="10" cost="347" name="Lateral Hit" min_level="62"/>
-			<skill id="30500" level="11" cost="691" name="Lateral Hit" min_level="66"/>
-			<skill id="30500" level="12" cost="1222" name="Lateral Hit" min_level="70"/>
-			<skill id="30500" level="13" cost="1996" name="Lateral Hit" min_level="74"/>
-			<skill id="30500" level="14" cost="4500" name="Lateral Hit" min_level="77"/>
-			<skill id="30500" level="15" cost="7500" name="Lateral Hit" min_level="79"/>
-			<skill id="30500" level="16" cost="10500" name="Lateral Hit" min_level="81"/>
-			<skill id="30500" level="17" cost="13125" name="Lateral Hit" min_level="83"/>
-			<skill id="30500" level="18" cost="15000" name="Lateral Hit" min_level="85"/>
-			<skill id="30500" level="19" cost="90000" name="Lateral Hit" min_level="87"/>
-			<skill id="30500" level="20" cost="150000" name="Lateral Hit" min_level="89"/>
-			<skill id="30500" level="21" cost="600000" name="Lateral Hit" min_level="91"/>
-			<skill id="30500" level="22" cost="660000" name="Lateral Hit" min_level="93"/>
-			<skill id="30500" level="23" cost="1500000" name="Lateral Hit" min_level="95"/>
-			<skill id="30500" level="24" cost="7470000" name="Lateral Hit" min_level="97"/>
-			<skill id="30500" level="25" cost="7500000" name="Lateral Hit" min_level="99"/>
-			<skill id="30501" level="1" cost="6" name="Backspin Blow" min_level="20"/>
-			<skill id="30501" level="2" cost="11" name="Backspin Blow" min_level="28"/>
-			<skill id="30501" level="3" cost="20" name="Backspin Blow" min_level="36"/>
-			<skill id="30501" level="4" cost="50" name="Backspin Blow" min_level="42"/>
-			<skill id="30501" level="5" cost="75" name="Backspin Blow" min_level="46"/>
-			<skill id="30501" level="6" cost="107" name="Backspin Blow" min_level="50"/>
-			<skill id="30501" level="7" cost="145" name="Backspin Blow" min_level="54"/>
-			<skill id="30501" level="8" cost="291" name="Backspin Blow" min_level="58"/>
-			<skill id="30501" level="9" cost="347" name="Backspin Blow" min_level="62"/>
-			<skill id="30501" level="10" cost="691" name="Backspin Blow" min_level="66"/>
-			<skill id="30501" level="11" cost="1222" name="Backspin Blow" min_level="70"/>
-			<skill id="30501" level="12" cost="1996" name="Backspin Blow" min_level="74"/>
-			<skill id="30501" level="13" cost="4500" name="Backspin Blow" min_level="77"/>
-			<skill id="30501" level="14" cost="7500" name="Backspin Blow" min_level="79"/>
-			<skill id="30501" level="15" cost="10500" name="Backspin Blow" min_level="81"/>
-			<skill id="30501" level="16" cost="13125" name="Backspin Blow" min_level="83"/>
-			<skill id="30501" level="17" cost="15000" name="Backspin Blow" min_level="85"/>
-			<skill id="30501" level="18" cost="90000" name="Backspin Blow" min_level="87"/>
-			<skill id="30501" level="19" cost="150000" name="Backspin Blow" min_level="89"/>
-			<skill id="30501" level="20" cost="600000" name="Backspin Blow" min_level="91"/>
-			<skill id="30501" level="21" cost="660000" name="Backspin Blow" min_level="93"/>
-			<skill id="30501" level="22" cost="1500000" name="Backspin Blow" min_level="95"/>
-			<skill id="30501" level="23" cost="7470000" name="Backspin Blow" min_level="97"/>
-			<skill id="30501" level="24" cost="7500000" name="Backspin Blow" min_level="99"/>
-			<skill id="30540" level="2" cost="6" name="Eminent Fist Weapon Mastery" min_level="20"/>
-			<skill id="30540" level="3" cost="42" name="Eminent Fist Weapon Mastery" min_level="40"/>
-			<skill id="30540" level="4" cost="119" name="Eminent Fist Weapon Mastery" min_level="52"/>
-			<skill id="30540" level="5" cost="443" name="Eminent Fist Weapon Mastery" min_level="64"/>
-			<skill id="30540" level="6" cost="3000" name="Eminent Fist Weapon Mastery" min_level="76"/>
-			<skill id="30540" level="7" cost="9000" name="Eminent Fist Weapon Mastery" min_level="80"/>
-			<skill id="30540" level="8" cost="15000" name="Eminent Fist Weapon Mastery" min_level="85"/>
-			<skill id="30540" level="9" cost="555000" name="Eminent Fist Weapon Mastery" min_level="90"/>
-			<skill id="30540" level="10" cost="1500000" name="Eminent Fist Weapon Mastery" min_level="95"/>
-			<skill id="30540" level="11" cost="7500000" name="Eminent Fist Weapon Mastery" min_level="99"/>
-			<skill id="30541" level="2" cost="6" name="Eminent Light Armor Mastery" min_level="20"/>
-			<skill id="30541" level="3" cost="42" name="Eminent Light Armor Mastery" min_level="40"/>
-			<skill id="30541" level="4" cost="119" name="Eminent Light Armor Mastery" min_level="52"/>
-			<skill id="30541" level="5" cost="443" name="Eminent Light Armor Mastery" min_level="64"/>
-			<skill id="30541" level="6" cost="3000" name="Eminent Light Armor Mastery" min_level="76"/>
-			<skill id="30541" level="7" cost="9000" name="Eminent Light Armor Mastery" min_level="80"/>
-			<skill id="30541" level="8" cost="15000" name="Eminent Light Armor Mastery" min_level="85"/>
-			<skill id="30541" level="9" cost="555000" name="Eminent Light Armor Mastery" min_level="90"/>
-			<skill id="30541" level="10" cost="1500000" name="Eminent Light Armor Mastery" min_level="95"/>
-			<skill id="30541" level="11" cost="7500000" name="Eminent Light Armor Mastery" min_level="99"/>
 			<skill id="30542" level="1" cost="6" name="Eminent Stability" min_level="20"/>
+			<skill id="30540" level="2" cost="6" name="Eminent Fist Weapon Mastery" min_level="20"/>
+			<skill id="30541" level="2" cost="6" name="Eminent Light Armor Mastery" min_level="20"/>
+			<skill id="30501" level="1" cost="6" name="Backspin Blow" min_level="20"/>
+			<skill id="30508" level="1" cost="6" name="Right Sidestep" min_level="20"/>
+			<!-- Level 28 -->
+			<skill id="30500" level="3" cost="11" name="Lateral Hit" min_level="28"/>
+			<skill id="30501" level="2" cost="11" name="Backspin Blow" min_level="28"/>
+			<skill id="30508" level="2" cost="11" name="Right Sidestep" min_level="28"/>
+			<!-- Level 36 -->
+			<skill id="30500" level="4" cost="20" name="Lateral Hit" min_level="36"/>
+			<skill id="30501" level="3" cost="20" name="Backspin Blow" min_level="36"/>
+			<skill id="30508" level="3" cost="20" name="Right Sidestep" min_level="36"/>
+		</class>	
+		<class id="184">
+			<!-- Level 40 Ertheia Marauder -->
+			<skill id="30522" level="1" cost="42" name="Eminent Attack Movement" min_level="40"/>
+			<skill id="30511" level="1" cost="42" name="Air Light" min_level="40"/>
+			<skill id="30514" level="1" cost="42" name="Fluid Weave" min_level="40"/>
 			<skill id="30542" level="2" cost="42" name="Eminent Stability" min_level="40"/>
+			<skill id="30540" level="3" cost="42" name="Eminent Fist Weapon Mastery" min_level="40"/>
+			<skill id="30541" level="3" cost="42" name="Eminent Light Armor Mastery" min_level="40"/>
+			<skill id="30545" level="1" cost="42" name="Eminent Ability" min_level="40"/>
+			<skill id="30502" level="1" cost="42" name="Chin Strike" min_level="40"/>
+			<skill id="30507" level="1" cost="42" name="Left Sidestep" min_level="40"/>
+			<!-- Level 42 -->
+			<skill id="30500" level="5" cost="50" name="Lateral Hit" min_level="42"/>
+			<skill id="30501" level="4" cost="50" name="Backspin Blow" min_level="42"/>
+			<!-- Level 44 -->
+			<skill id="30502" level="2" cost="57" name="Chin Strike" min_level="44"/>
+			<skill id="30507" level="2" cost="57" name="Left Sidestep" min_level="44"/>
+			<!-- Level 46 -->
+			<skill id="30500" level="6" cost="75" name="Lateral Hit" min_level="46"/>
+			<skill id="30501" level="5" cost="75" name="Backspin Blow" min_level="46"/>
+			<skill id="30508" level="5" cost="75" name="Right Sidestep" min_level="46"/>
+			<!-- Level 48 -->
+			<skill id="30502" level="3" cost="95" name="Chin Strike" min_level="48"/>
+			<skill id="30507" level="3" cost="95" name="Left Sidestep" min_level="48"/>
+			<!-- Level 50 -->
+			<skill id="30500" level="7" cost="107" name="Lateral Hit" min_level="50"/>
+			<skill id="30501" level="6" cost="107" name="Backspin Blow" min_level="50"/>
+			<skill id="30508" level="6" cost="107" name="Right Sidestep" min_level="50"/>
+			<!-- Level 52 -->
+			<skill id="1405" level="1" cost="119" name="Divine Inspiration" min_level="52"/>
+			<skill id="30540" level="4" cost="119" name="Eminent Fist Weapon Mastery" min_level="52"/>
+			<skill id="30541" level="4" cost="119" name="Eminent Light Armor Mastery" min_level="52"/>
+			<skill id="30502" level="4" cost="119" name="Chin Strike" min_level="52"/>
+			<skill id="30507" level="4" cost="119" name="Left Sidestep" min_level="52"/>
+			<!-- Level 54 -->
+			<skill id="30500" level="8" cost="145" name="Lateral Hit" min_level="54"/>
+			<skill id="30501" level="7" cost="145" name="Backspin Blow" min_level="54"/>
+			<skill id="30508" level="7" cost="145" name="Right Sidestep" min_level="54"/>
+			<!-- Level 56 -->
+			<skill id="30502" level="5" cost="171" name="Chin Strike" min_level="56"/>
+			<skill id="30507" level="5" cost="171" name="Left Sidestep" min_level="56"/>
+			<!-- Level 58 -->
+			<skill id="30502" level="6" cost="291" name="Chin Strike" min_level="58"/>
+			<skill id="30507" level="6" cost="291" name="Left Sidestep" min_level="58"/>
+			<!-- Level 61 -->
+			<skill id="1405" level="2" cost="300" name="Divine Inspiration" min_level="61"/>
+			<!-- Level 62 -->
+			<skill id="30500" level="10" cost="347" name="Lateral Hit" min_level="62"/>
+			<skill id="30501" level="9" cost="347" name="Backspin Blow" min_level="62"/>
+			<skill id="30508" level="9" cost="347" name="Right Sidestep" min_level="62"/>
+			<!-- Level 64 -->
+			<skill id="30540" level="5" cost="553" name="Eminent Fist Weapon Mastery" min_level="64"/>
+			<skill id="30541" level="5" cost="553" name="Eminent Light Armor Mastery" min_level="64"/>
+			<skill id="30502" level="7" cost="553" name="Chin Strike" min_level="64"/>
+			<skill id="30507" level="7" cost="553" name="Left Sidestep" min_level="64"/>
+			<!-- Level 66 -->
+			<skill id="30500" level="11" cost="691" name="Lateral Hit" min_level="66"/>
+			<skill id="30501" level="10" cost="691" name="Backspin Blow" min_level="66"/>
+			<skill id="30508" level="10" cost="691" name="Right Sidestep" min_level="66"/>			
+			<!-- Level 68 -->
+			<skill id="30502" level="8" cost="948" name="Chin Strike" min_level="68"/>
+			<skill id="30507" level="8" cost="948" name="Left Sidestep" min_level="68"/>	
+			<!-- Level 70 -->
+			<skill id="30500" level="12" cost="1222" name="Lateral Hit" min_level="70"/>
+			<skill id="30501" level="11" cost="1222" name="Backspin Blow" min_level="70"/>
+			<skill id="30508" level="11" cost="1222" name="Right Sidestep" min_level="70"/>
+			<!-- Level 72 -->
+			<skill id="30502" level="9" cost="1469" name="Chin Strike" min_level="72"/>
+			<skill id="30507" level="9" cost="1469" name="Left Sidestep" min_level="72"/>
+			<!-- Level 74 -->
+			<skill id="30500" level="13" cost="1996" name="Lateral Hit" min_level="74"/>
+			<skill id="30501" level="12" cost="1996" name="Backspin Blow" min_level="74"/>
+			<skill id="30508" level="12" cost="1996" name="Right Sidestep" min_level="74"/>
+		</class>	
+		<class id="186">
+			<!-- Level 76 Ertheia Ripper -->
+			<skill id="1405" level="3" cost="3000" name="Divine Inspiration" min_level="76"/>
+			<skill id="1405" level="3" cost="3000" name="Divine Inspiration" min_level="76"/>	
+			<skill id="30504" level="1" cost="3000" name="Gravity Hit" min_level="76"/>
+			<skill id="30530" level="1" cost="3000" name="Crushing Air" min_level="76"/>
 			<skill id="30542" level="3" cost="3000" name="Eminent Stability" min_level="76"/>
+			<skill id="30540" level="6" cost="3000" name="Eminent Fist Weapon Mastery" min_level="76"/>
+			<skill id="30541" level="6" cost="3000" name="Eminent Light Armor Mastery" min_level="76"/>
+			<skill id="30544" level="1" cost="3000" name="Eminent Trait Resistance" min_level="76"/>
+			<skill id="30543" level="1" cost="3000" name="Eminent Attribute Resistance" min_level="76"/>
+			<skill id="30545" level="2" cost="3000" name="Eminent Ability" min_level="76"/>
+			<skill id="30512" level="1" cost="3000" name="Distortion" min_level="76"/>
+			<skill id="30526" level="1" cost="3000" name="Heavy Punch" min_level="76"/>
+			<skill id="30502" level="10" cost="3000" name="Chin Strike" min_level="76"/>
+			<skill id="30507" level="10" cost="3000" name="Left Sidestep" min_level="76"/>	
+			<skill id="30509" level="1" cost="3000" name="Back Step" min_level="76"/>
+			<!-- Level 77 -->
+			<skill id="30500" level="14" cost="4500" name="Lateral Hit" min_level="77"/>
+			<skill id="30501" level="13" cost="4500" name="Backspin Blow" min_level="77"/>
+			<skill id="30508" level="13" cost="4500" name="Right Sidestep" min_level="77"/>			
+			<!-- Level 78 -->
+			<skill id="30504" level="2" cost="6000" name="Gravity Hit" min_level="78"/>
+			<skill id="30530" level="2" cost="6000" name="Crushing Air" min_level="78"/>	
+			<skill id="30502" level="11" cost="6000" name="Chin Strike" min_level="78"/>
+			<skill id="30507" level="11" cost="6000" name="Left Sidestep" min_level="78"/>	
+			<!-- Level 79 -->
+			<skill id="30500" level="15" cost="7500" name="Lateral Hit" min_level="79"/>
+			<skill id="30506" level="1" cost="7500" name="Distant Kick" min_level="79"/>
+			<skill id="30501" level="14" cost="7500" name="Backspin Blow" min_level="79"/>
+			<skill id="30508" level="14" cost="7500" name="Right Sidestep" min_level="79"/>
+			<!-- Level 80 -->
+			<skill id="30504" level="3" cost="9000" name="Gravity Hit" min_level="80"/>
+			<skill id="30530" level="3" cost="9000" name="Crushing Air" min_level="80"/>
+			<skill id="30540" level="7" cost="9000" name="Eminent Fist Weapon Mastery" min_level="80"/>
+			<skill id="30541" level="7" cost="9000" name="Eminent Light Armor Mastery" min_level="80"/>			
+			<skill id="30502" level="12" cost="9000" name="Chin Strike" min_level="80"/>
+			<skill id="30507" level="12" cost="9000" name="Left Sidestep" min_level="80"/>			
+			<!-- Level 81 -->
+			<skill id="30500" level="16" cost="10500" name="Lateral Hit" min_level="81"/>
+			<skill id="30506" level="2" cost="10500" name="Distant Kick" min_level="81"/>
+			<skill id="30501" level="15" cost="10500" name="Backspin Blow" min_level="81"/>
+			<skill id="30508" level="15" cost="10500" name="Right Sidestep" min_level="81"/>	
+			<!-- Level 82 -->
+			<skill id="30504" level="4" cost="12000" name="Gravity Hit" min_level="82"/>
+			<skill id="30530" level="4" cost="12000" name="Crushing Air" min_level="82"/>	
+			<skill id="30502" level="13" cost="12000" name="Chin Strike" min_level="82"/>
+			<skill id="30507" level="13" cost="12000" name="Left Sidestep" min_level="82"/>	
+			<!-- Level 83 -->
+			<skill id="30500" level="17" cost="13125" name="Lateral Hit" min_level="83"/>
+			<skill id="30506" level="3" cost="13125" name="Distant Kick" min_level="83"/>
+			<skill id="30501" level="16" cost="13125" name="Backspin Blow" min_level="83"/>
+			<skill id="30508" level="16" cost="13125" name="Right Sidestep" min_level="83"/>	
+			<!-- Level 84 -->
+			<skill id="30504" level="5" cost="14250" name="Gravity Hit" min_level="84"/>
+			<skill id="30530" level="5" cost="14250" name="Crushing Air" min_level="84"/>	
+			<skill id="30502" level="14" cost="14250" name="Chin Strike" min_level="84"/>
+			<skill id="30507" level="14" cost="14250" name="Left Sidestep" min_level="84"/>
+		</class>	
+		<class id="188">
+			<!-- Level 85 Ertheia Eviscerator -->
+			<skill id="30602" level="1" name="Eviscerator Aura" min_level="85"/>
+			<skill id="30500" level="18" cost="15000" name="Lateral Hit" min_level="85"/>
+			<skill id="30400" level="2" name="Divine Wind" min_level="85"/>			
+			<skill id="30504" level="6" cost="15000" name="Gravity Hit" min_level="85"/>
+			<skill id="30511" level="2" cost="15000" name="Air Light" min_level="85"/>	
+			<skill id="1986" level="1" cost="15000" name="Dual Maximum HP" min_level="85"/>
+			<skill id="30600" level="1" name="Additional Hit" min_level="85"/>
+			<skill id="30601" level="1" name="Additional Hit" min_level="85"/>
+			<skill id="30518" level="1" cost="15000" name="Reverse Weight" min_level="85"/>
+			<skill id="30401" level="2" name="Tenacity" min_level="2"/>			
+			<skill id="30514" level="2" cost="15000" name="Fluid Weave" min_level="85"/>	
 			<skill id="30542" level="4" cost="15000" name="Eminent Stability" min_level="85"/>
+			<skill id="30540" level="8" cost="15000" name="Eminent Fist Weapon Mastery" min_level="85"/>
+			<skill id="30541" level="8" cost="15000" name="Eminent Light Armor Mastery" min_level="85"/>
+			<skill id="30544" level="2" cost="15000" name="Eminent Trait Resistance" min_level="85"/>
+			<skill id="30543" level="2" cost="15000" name="Eminent Attribute Resistance" min_level="85"/>	
+			<skill id="30545" level="3" cost="15000" name="Eminent Ability" min_level="85"/>
+			<skill id="30520" level="1" cost="15000" name="Steel Mind" min_level="85"/>
+			<skill id="1320" level="10" name="Create Common Craft" min_level="85"/>
+			<skill id="30506" level="4" cost="15000" name="Distant Kick" min_level="85"/>
+			<skill id="30503" level="1" cost="15000" name="Spinning Kick" min_level="85"/>
+			<skill id="30501" level="17" cost="15000" name="Backspin Blow" min_level="85"/>
+			<skill id="30517" level="1" cost="15000" name="Heavy Hand" min_level="85"/>
+			<skill id="30508" level="17" cost="15000" name="Right Sidestep" min_level="85"/>
+			<skill id="30402" level="2" name="Efficacy" min_level="85"/>
+			<!-- Level 86 -->
+			<skill id="30530" level="6" cost="75000" name="Crushing Air" min_level="86"/>
+			<skill id="30518" level="2" cost="75000" name="Reverse Weight" min_level="86"/>	
+			<skill id="30503" level="2" cost="75000" name="Spinning Kick" min_level="86"/>			
+			<skill id="30502" level="15" cost="75000" name="Chin Strike" min_level="86"/>
+			<skill id="30507" level="15" cost="75000" name="Left Sidestep" min_level="86"/>	
+			<!-- Level 87 -->
+			<skill id="30500" level="19" cost="90000" name="Lateral Hit" min_level="87"/>			
+			<skill id="30504" level="7" cost="90000" name="Gravity Hit" min_level="87"/>
+			<skill id="30505" level="1" cost="90000" name="Pressure Punch" min_level="87"/>
+			<skill id="30506" level="5" cost="90000" name="Distant Kick" min_level="87"/>
+			<skill id="30501" level="18" cost="90000" name="Backspin Blow" min_level="87"/>
+			<skill id="30517" level="2" cost="90000" name="Heavy Hand" min_level="87"/>
+			<skill id="30508" level="18" cost="90000" name="Right Sidestep" min_level="87"/>
+			<!-- Level 88 -->
+			<skill id="30530" level="7" cost="120000" name="Crushing Air" min_level="88"/>
+			<skill id="30518" level="3" cost="120000" name="Reverse Weight" min_level="88"/>	
+			<skill id="30503" level="3" cost="120000" name="Spinning Kick" min_level="88"/>			
+			<skill id="30502" level="16" cost="120000" name="Chin Strike" min_level="88"/>
+			<skill id="30507" level="16" cost="120000" name="Left Sidestep" min_level="88"/>
+			<!-- Level 89 -->
+			<skill id="30500" level="20" cost="150000" name="Lateral Hit" min_level="89"/>			
+			<skill id="30504" level="8" cost="150000" name="Gravity Hit" min_level="89"/>
+			<skill id="30505" level="2" cost="150000" name="Pressure Punch" min_level="89"/>
+			<skill id="30506" level="6" cost="150000" name="Distant Kick" min_level="89"/>
+			<skill id="30501" level="19" cost="150000" name="Backspin Blow" min_level="89"/>
+			<skill id="30517" level="3" cost="150000" name="Heavy Hand" min_level="89"/>
+			<skill id="30508" level="19" cost="150000" name="Right Sidestep" min_level="89"/>	
+			<skill id="30509" level="2" cost="150000" name="Back Step" min_level="89"/>			
+			<!-- Level 90 -->
+			<skill id="1986" level="2" cost="555000" name="Dual Maximum HP" min_level="90"/>
+			<skill id="30530" level="8" cost="555000" name="Crushing Air" min_level="90"/>
+			<skill id="30518" level="4" cost="555000" name="Reverse Weight" min_level="90"/>			
 			<skill id="30542" level="5" cost="555000" name="Eminent Stability" min_level="90"/>
+			<skill id="30540" level="9" cost="555000" name="Eminent Fist Weapon Mastery" min_level="90"/>
+			<skill id="30541" level="9" cost="555000" name="Eminent Light Armor Mastery" min_level="90"/>
+			<skill id="30503" level="4" cost="555000" name="Spinning Kick" min_level="90"/>			
+			<skill id="30502" level="17" cost="555000" name="Chin Strike" min_level="90"/>
+			<skill id="30507" level="17" cost="555000" name="Left Sidestep" min_level="90"/>
+			<!-- Level 91 -->
+			<skill id="30500" level="21" cost="600000" name="Lateral Hit" min_level="91"/>			
+			<skill id="30504" level="9" cost="600000" name="Gravity Hit" min_level="91"/>
+			<skill id="30505" level="3" cost="600000" name="Pressure Punch" min_level="91"/>
+			<skill id="30506" level="7" cost="600000" name="Distant Kick" min_level="91"/>
+			<skill id="30501" level="20" cost="600000" name="Backspin Blow" min_level="91"/>
+			<skill id="30517" level="4" cost="600000" name="Heavy Hand" min_level="91"/>
+			<skill id="30508" level="20" cost="600000" name="Right Sidestep" min_level="91"/>	
+			<!-- Level 92 -->
+			<skill id="30530" level="9" cost="630000" name="Crushing Air" min_level="92"/>
+			<skill id="30518" level="5" cost="630000" name="Reverse Weight" min_level="92"/>	
+			<skill id="30503" level="5" cost="630000" name="Spinning Kick" min_level="92"/>			
+			<skill id="30502" level="18" cost="630000" name="Chin Strike" min_level="92"/>
+			<skill id="30507" level="18" cost="630000" name="Left Sidestep" min_level="92"/>	
+			<!-- Level 93 -->
+			<skill id="30500" level="22" cost="660000" name="Lateral Hit" min_level="93"/>			
+			<skill id="30504" level="10" cost="660000" name="Gravity Hit" min_level="93"/>
+			<skill id="30516" level="1" cost="660000" name="Gravity Barrier" min_level="93"/>
+			<skill id="30505" level="4" cost="660000" name="Pressure Punch" min_level="93"/>
+			<skill id="30506" level="8" cost="660000" name="Distant Kick" min_level="93"/>
+			<skill id="30501" level="21" cost="660000" name="Backspin Blow" min_level="93"/>
+			<skill id="30517" level="5" cost="660000" name="Heavy Hand" min_level="93"/>
+			<skill id="30508" level="21" cost="660000" name="Right Sidestep" min_level="93"/>
+			<!-- Level 94 -->
+			<skill id="30530" level="10" cost="720000" name="Crushing Air" min_level="94"/>
+			<skill id="30518" level="6" cost="720000" name="Reverse Weight" min_level="94"/>	
+			<skill id="30503" level="6" cost="720000" name="Spinning Kick" min_level="94"/>			
+			<skill id="30502" level="19" cost="720000" name="Chin Strike" min_level="94"/>
+			<skill id="30507" level="19" cost="720000" name="Left Sidestep" min_level="94"/>	
+			<!-- Level 95 -->
+			<skill id="30500" level="23" cost="1500000" name="Lateral Hit" min_level="95"/>			
+			<skill id="30504" level="11" cost="1500000" name="Gravity Hit" min_level="95"/>
+			<skill id="30511" level="3" cost="1500000" name="Air Light" min_level="95"/>		
+			<skill id="30505" level="5" cost="1500000" name="Pressure Punch" min_level="95"/>			
+			<skill id="1986" level="3" cost="1500000" name="Dual Maximum HP" min_level="95"/>			
 			<skill id="30542" level="6" cost="1500000" name="Eminent Stability" min_level="95"/>
+			<skill id="30540" level="10" cost="1500000" name="Eminent Fist Weapon Mastery" min_level="95"/>
+			<skill id="30541" level="10" cost="1500000" name="Eminent Light Armor Mastery" min_level="95"/>			
+			<skill id="30506" level="9" cost="1500000" name="Distant Kick" min_level="95"/>
+			<skill id="30501" level="22" cost="1500000" name="Backspin Blow" min_level="95"/>
+			<skill id="30517" level="6" cost="1500000" name="Heavy Hand" min_level="95"/>
+			<skill id="30508" level="22" cost="1500000" name="Right Sidestep" min_level="95"/>			
+			<!-- Level 96 -->
+			<skill id="30530" level="11" cost="7455000" name="Crushing Air" min_level="96"/>
+			<skill id="30518" level="7" cost="7455000" name="Reverse Weight" min_level="96"/>	
+			<skill id="30503" level="7" cost="7455000" name="Spinning Kick" min_level="96"/>			
+			<skill id="30502" level="20" cost="7455000" name="Chin Strike" min_level="96"/>
+			<skill id="30507" level="20" cost="7455000" name="Left Sidestep" min_level="96"/>	
+			<!-- Level 97 -->
+			<skill id="30500" level="24" cost="7470000" name="Lateral Hit" min_level="97"/>			
+			<skill id="30504" level="12" cost="7470000" name="Gravity Hit" min_level="97"/>
+			<skill id="30505" level="6" cost="7470000" name="Pressure Punch" min_level="97"/>
+			<skill id="30506" level="10" cost="7470000" name="Distant Kick" min_level="97"/>
+			<skill id="30501" level="23" cost="7470000" name="Backspin Blow" min_level="97"/>
+			<skill id="30517" level="7" cost="7470000" name="Heavy Hand" min_level="97"/>
+			<skill id="30508" level="23" cost="7470000" name="Right Sidestep" min_level="97"/>	
+			<!-- Level 98 -->
+			<skill id="30530" level="12" cost="7485000" name="Crushing Air" min_level="98"/>
+			<skill id="30519" level="1" cost="7485000" name="Warped Space" min_level="98"/>
+			<skill id="30518" level="8" cost="7485000" name="Reverse Weight" min_level="98"/>	
+			<skill id="30503" level="8" cost="7485000" name="Spinning Kick" min_level="98"/>			
+			<skill id="30502" level="21" cost="7485000" name="Chin Strike" min_level="98"/>
+			<skill id="30507" level="21" cost="7485000" name="Left Sidestep" min_level="98"/>			
+			<!-- Level 99 -->
+			<skill id="1405" level="5" cost="5000000" name="Divine Inspiration" min_level="99"/>
+			<skill id="1405" level="6" cost="5000000" name="Divine Inspiration" min_level="99"/>			
+			<skill id="30500" level="25" cost="7500000" name="Lateral Hit" min_level="99"/>			
+			<skill id="30504" level="13" cost="7500000" name="Gravity Hit" min_level="99"/>	
+			<skill id="30505" level="7" cost="7500000" name="Pressure Punch" min_level="99"/>			
+			<skill id="1986" level="4" cost="7500000" name="Dual Maximum HP" min_level="99"/>			
 			<skill id="30542" level="7" cost="7500000" name="Eminent Stability" min_level="99"/>
+			<skill id="30540" level="11" cost="7500000" name="Eminent Fist Weapon Mastery" min_level="99"/>
+			<skill id="30541" level="11" cost="7500000" name="Eminent Light Armor Mastery" min_level="99"/>	
+			<skill id="30515" level="1" cost="7500000" name="Spallation" min_level="99"/>
+			<skill id="30520" level="2" cost="7500000" name="Steel Mind" min_level="99"/>			
+			<skill id="30506" level="11" cost="7500000" name="Distant Kick" min_level="99"/>
+			<skill id="30501" level="24" cost="7500000" name="Backspin Blow" min_level="99"/>
+			<skill id="30517" level="8" cost="7500000" name="Heavy Hand" min_level="99"/>
+			<skill id="30508" level="24" cost="7500000" name="Right Sidestep" min_level="99"/>
 		</class>
 		<class id="183">
 			<!-- Ertheia Wizard -->

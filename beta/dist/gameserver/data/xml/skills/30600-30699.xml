@@ -1,0 +1,65 @@
+<list>
+	<skill id="30600" levels="1" name="Additional Hit">
+		<!-- TODO Eviscerator Combo Skills -->
+		<table name="#magicLevel">87 89 91 93 95 97 99</table>
+		<table name="#power">6466 6916 7390 7888 28134 30832 34221 38446</table>
+		<set name="coolTime" val="296"/>
+		<set name="reuseDelay" val="4000"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="power" val="#power"/>
+		<set name="nextAction" val="attack"/>
+		<set name="weaponsAllowed" val="1024"/>
+		<set name="castRange" val="40"/>
+	</skill>
+	<skill id="30601" levels="1" name="Additional Hit">
+		<!-- TODO Eviscerator Combo Skills -->
+		<table name="#magicLevel">87 89 91 93 95 97 99</table>
+		<table name="#power">6466 6916 7390 7888 28134 30832 34221 38446</table>
+		<set name="coolTime" val="296"/>
+		<set name="reuseDelay" val="4000"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="power" val="#power"/>
+		<set name="nextAction" val="attack"/>
+		<set name="weaponsAllowed" val="1024"/>
+		<set name="castRange" val="40"/>
+	</skill>	
+	<skill id="30602" levels="1" name="Eviscerator Aura">
+		<table name="#magicLevel">85</table>
+		<set name="effectPoint" val="467"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="operateType" val="OP_ACTIVE_TOGGLE"/>
+		<set name="isAuraSkill" val="true"/>
+		<set name="isMusic" val="true"/>
+		<for>
+			<effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelAura" stackOrder="1">
+				<def name="forceSkillId" val="30603"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="30603" levels="1" name="Eviscerator Force">
+		<table name="#magicLevel">85</table>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE_TOGGLE"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="isMusic" val="true"/>
+		<for>
+			<effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelForce" stackOrder="1">
+				<def name="auraSkillId" val="30602"/>
+				<mul order="0x30" stat="PhysSkillDmgStatic" val="1.01"/>
+			</effect>
+		</for>
+		<set name="reuseDelay" val="5000"/>
+	</skill>
+</list>
