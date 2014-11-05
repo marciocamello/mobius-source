@@ -585,7 +585,7 @@
 		<teleportlist>
 			<sublist id="1">
 				<target loc="-14593 123936 -3120" item_id="57" price="7300" name="1010005" castle_id="1"/>
-				<target loc="-111988 257240 -1376" item_id="57" price="11000" name="1010001"/>
+				<target loc="-113432 256568 -1534" item_id="57" price="11000" name="1010001"/>
 				<target loc="44734 49210 -3056" item_id="57" price="16000" name="1010155"/>
 				<target loc="11167 16012 -4584" item_id="57" price="16000" name="1010156"/>
 				<target loc="115357 -178212 -928" item_id="57" price="38000" name="1010158"/>

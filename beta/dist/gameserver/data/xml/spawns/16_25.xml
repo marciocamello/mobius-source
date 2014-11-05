@@ -704,7 +704,7 @@
 		<npc id="33022"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-112256" y="256960" z="-1456" h="33680"/>
+		<point x="-113496" y="256664" z="-1530" h="57343"/>
 		<npc id="30006"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">

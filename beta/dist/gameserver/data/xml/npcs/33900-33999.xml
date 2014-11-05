@@ -2544,7 +2544,7 @@
 			<sublist id="1">
 				<target loc="-80684 149770 -3040" item_id="57" price="11000" name="1010004"/>
 				<target loc="-14593 123936 -3120" item_id="57" price="14000" name="1010005" castle_id="1"/>
-				<target loc="-111988 257240 -1376" item_id="57" price="1300" name="1010001"/>
+				<target loc="-113432 256568 -1534" item_id="57" price="1300" name="1010001"/>
 				<target loc="-82441 244204 -3747" item_id="57" price="160" name="1010742"/>
 			</sublist>
 			<sublist id="2">

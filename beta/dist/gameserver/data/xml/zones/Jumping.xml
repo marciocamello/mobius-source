@@ -3,7 +3,7 @@
 <list>
 	<zone name="[jumping_talking_island_12]" type="Jumping">
 		<set name="jumping_track" val="12"/>
-		<circle loc="-112552 257048 120 -1540 -1470"/>
+		<circle loc="-113208 256456 120 -1540 -1470"/>
 	</zone>
 	<zone name="[jumping_talking_island_20]" type="Jumping">
 		<set name="jumping_track" val="20"/>

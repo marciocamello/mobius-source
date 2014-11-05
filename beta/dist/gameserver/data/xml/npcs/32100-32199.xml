@@ -3157,7 +3157,7 @@
 			<sublist id="1">
 				<target loc="-14593 123936 -3120" item_id="57" price="12000" name="1010005" castle_id="1"/>
 				<target loc="146783 25808 -2008" item_id="57" price="26000" name="1010023" castle_id="5"/>
-				<target loc="-111988 257240 -1376" item_id="57" price="100000" name="1010001"/>
+				<target loc="-113432 256568 -1534" item_id="57" price="100000" name="1010001"/>
 				<target loc="9744 15645 -4568" item_id="57" price="13000" name="1010156"/>
 				<target loc="46951 51550 -2976" item_id="57" price="16000" name="1010155"/>
 				<target loc="115120 -178224 -880" item_id="57" price="32000" name="1010158"/>

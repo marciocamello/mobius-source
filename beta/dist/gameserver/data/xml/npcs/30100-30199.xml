@@ -1590,7 +1590,7 @@
 			<sublist id="1">
 				<target loc="-14593 123936 -3120" item_id="57" price="12000" name="1010005" castle_id="1"/>
 				<target loc="115357 -178212 -928" item_id="57" price="22000" name="1010009"/>
-				<target loc="-111988 257240 -1376" item_id="57" price="27000" name="1010001"/>
+				<target loc="-113432 256568 -1534" item_id="57" price="27000" name="1010001"/>
 				<target loc="-44124 -113390 -240" item_id="57" price="13000" name="1010157"/>
 				<target loc="-117001 46589 360" item_id="57" price="13000" name="1010648"/>
 				<target loc="-15826 30477 -3616" item_id="57" price="790" name="1010164"/>
@@ -2160,7 +2160,7 @@
 			<sublist id="1">
 				<target loc="-14593 123936 -3120" item_id="57" price="9200" name="1010005" castle_id="1"/>
 				<target loc="115357 -178212 -928" item_id="57" price="23000" name="1010009"/>
-				<target loc="-111988 257240 -1376" item_id="57" price="26000" name="1010001"/>
+				<target loc="-113432 256568 -1534" item_id="57" price="26000" name="1010001"/>
 				<target loc="-44124 -113390 -240" item_id="57" price="18000" name="1010157"/>
 				<target loc="-117001 46589 360" item_id="57" price="16000" name="1010648"/>
 				<target loc="21362 51122 -3688" item_id="57" price="710" name="1010167"/>
@@ -3362,7 +3362,7 @@
 				<target loc="15472 142880 -2688" item_id="57" price="11000" name="1001002" castle_id="2"/>
 				<target loc="87126 -143520 -1288" item_id="57" price="19000" name="1010574" castle_id="9"/>
 				<target loc="-14593 123936 -3120" item_id="57" price="11000" name="1010005" castle_id="1"/>
-				<target loc="-111988 257240 -1376" item_id="57" price="84000" name="1010001"/>
+				<target loc="-113432 256568 -1534" item_id="57" price="84000" name="1010001"/>
 				<target loc="85475 16087 -3672" item_id="57" price="3700" name="1010014"/>
 				<target loc="117088 76931 -2688" item_id="57" price="4100" name="1010020"/>
 				<target loc="105918 109759 -3192" item_id="57" price="6100" name="1010022"/>
