@@ -12,7 +12,7 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.Creature;
 
 /**
  * @author Mobius
@@ -20,15 +20,29 @@ import lineage2.gameserver.model.Player;
  */
 public class ExMagicAttackInfo extends L2GameServerPacket
 {
-	Player player;
+	public static final int NORMAL = 0;
+	public static final int CRIT = 1;
+	public static final int CRIT_ADD = 2;
+	public static final int OVERHIT = 3;
+	public static final int MISS = 4;
+	public static final int BLOCK = 5;
+	public static final int RESIST = 6;
+	public static final int IMMUNE = 7;
+	private final Creature _attacker;
+	private final Creature _target;
+	private final int _info;
 	
 	/**
 	 * Constructor for ExMagicAttackInfo.
-	 * @param _player Player
+	 * @param attacker Creature
+	 * @param target Creature
+	 * @param info int
 	 */
-	public ExMagicAttackInfo(Player _player)
+	public ExMagicAttackInfo(Creature attacker, Creature target, int info)
 	{
-		player = _player;
+		_attacker = attacker;
+		_target = target;
+		_info = info;
 	}
 	
 	/**
@@ -38,8 +52,8 @@ public class ExMagicAttackInfo extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0xFB);
-		writeD(player.getObjectId());
-		writeD(player.getTargetId());
-		writeD(0x01);
+		writeD(_attacker.getObjectId());
+		writeD(_target.getObjectId());
+		writeD(_info);
 	}
 }

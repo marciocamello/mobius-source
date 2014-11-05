@@ -304,19 +304,19 @@ public class StatusUpdate extends L2GameServerPacket
 		writeC(0x18);
 		writeD(_actor.getObjectId());
 		writeD(getReceiverId());
-		boolean show = false;
+		
 		if ((_actor.getObjectId()) == (getReceiverId()))
 		{
-			show = true;
+			hpRegActive = true;
 		}
 		for (int[] CP : attributes)
 		{
 			if ((CP[0] == 33) || (CP[0] == 34))
 			{
-				show = false;
+				hpRegActive = false;
 			}
 		}
-		writeD(show);
+		writeD(hpRegActive);
 		writeD(attributes.size());
 		
 		for (int[] temp : attributes)

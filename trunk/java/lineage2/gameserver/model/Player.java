@@ -203,6 +203,7 @@ import lineage2.gameserver.network.serverpackets.ExBR_AgathionEnergyInfo;
 import lineage2.gameserver.network.serverpackets.ExBR_ExtraUserInfo;
 import lineage2.gameserver.network.serverpackets.ExBasicActionList;
 import lineage2.gameserver.network.serverpackets.ExDominionWarStart;
+import lineage2.gameserver.network.serverpackets.ExMagicAttackInfo;
 import lineage2.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp;
 import lineage2.gameserver.network.serverpackets.ExNotifyPremiumItem;
 import lineage2.gameserver.network.serverpackets.ExOlympiadMatchEnd;
@@ -14181,6 +14182,7 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			if (magic)
 			{
+                sendPacket(new ExMagicAttackInfo(this, target, 1));
 				sendPacket(new SystemMessage(SystemMessage.MAGIC_CRITICAL_HIT).addName(this));
 			}
 			else
