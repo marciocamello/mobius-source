@@ -3540,6 +3540,8 @@
 		</attributes>
 	</npc>
 	<npc id="16094" name="Clan-exclusive Pet" title="Raccoon">
+		<set name="collision_radius" value="9.0"/>
+		<set name="collision_height" value="9.5"/>
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
