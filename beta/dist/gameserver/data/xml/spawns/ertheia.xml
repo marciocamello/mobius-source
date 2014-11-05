@@ -3,58 +3,110 @@
 <list>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-80600" y="251672" z="-3051" h="16383"/>
-		<npc id="33931"/> <!-- Navari -->
+		<npc id="33931"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-78641" y="251076" z="-2973" h="32767"/>
-		<npc id="33932"/> <!-- Gereth -->
+		<npc id="33932"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-80488" y="251688" z="-3094" h="24575"/>
-		<npc id="33940"/> <!-- Vinath -->
+		<npc id="33940"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-80680" y="251736" z="-3095" h="0"/>
-		<npc id="33941"/> <!-- Senath -->
+		<npc id="33941"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-82030" y="249944" z="-3343" h="32767"/>
-		<npc id="33942"/> <!-- Ayanthe -->
+		<npc id="33942"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-81944" y="249912" z="-3345" h="49151"/>
-		<npc id="33943"/> <!-- Katalin -->
+		<npc id="33943"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-79808" y="247552" z="-3487" h="20352"/>
-		<npc id="33947"/> <!-- Grakon (Warehouse Keeper) -->
+		<npc id="33947"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-82113" y="250047" z="-3360" h="29412"/>
-		<npc id="33950"/> <!-- Adventurer's Guide -->
+		<npc id="33950"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-79175" y="250275" z="-2978" h="11547"/>
-		<npc id="34005"/> <!-- Dia -->
+		<npc id="34005"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-79144" y="250264" z="-3001" h="16383"/>
-		<npc id="34006"/> <!-- Dia's Fox -->
+		<npc id="34006"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-77779" y="248545" z="-3298" h="32767"/>
-		<npc id="33935"/> <!-- Evna (Weapon Merchant) -->
+		<npc id="33935"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-77647" y="248024" z="-3297" h="32767"/>
-		<npc id="33934"/> <!-- Denya (Armor Merchant) -->
+		<npc id="33934"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-80771" y="247602" z="-3457" h="32767"/>
-		<npc id="33948"/> <!-- Astiel (Gatekeeper) -->
+		<npc id="33948"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-78008" y="247736" z="-3316" h="32767"/>
+		<npc id="33936"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-78234" y="247628" z="-3317" h="32767"/>
+		<npc id="33937"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-81128" y="249848" z="-3392" h="0"/>
+		<npc id="33933"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-81704" y="249816" z="-3392" h="0"/>
+		<npc id="33978"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
 		<point x="-82136" y="250184" z="-3391" h="49151"/>
-		<npc id="19546"/> <!-- Dummy (Training) -->
+		<npc id="19546"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-82232" y="250216" z="-3392" h="49151"/>
+		<npc id="19546"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-82312" y="250216" z="-3392" h="49151"/>
+		<npc id="19546"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-82376" y="250136" z="-3392" h="49151"/>
+		<npc id="19546"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-82392" y="250024" z="-3392" h="49151"/>
+		<npc id="19546"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-82408" y="249928" z="-3392" h="49151"/>
+		<npc id="19546"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-82408" y="249816" z="-3392" h="49151"/>
+		<npc id="19546"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-82360" y="249720" z="-3392" h="49151"/>
+		<npc id="19546"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-82296" y="249640" z="-3392" h="49151"/>
+		<npc id="19546"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-82200" y="249592" z="-3392" h="49151"/>
+		<npc id="19546"/>
 	</spawn>
 </list>
