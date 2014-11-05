@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DropListData.xsd">
+	<npc id="18885">
+		<droplist>
+			<category id="1" chance="70">
+				<item id="57" min="4416" max="8914" chance="100"/>
+			</category>
+			<category id="2" chance="2.6039">
+				<item id="10222" min="1" max="1" chance="0.0055"/>
+				<item id="10404" min="1" max="1" chance="1.8209"/>
+				<item id="14110" min="1" max="1" chance="0.073"/>
+				<item id="14114" min="1" max="1" chance="0.073"/>
+				<item id="14117" min="1" max="1" chance="0.073"/>
+				<item id="15668" min="1" max="1" chance="32.6515"/>
+				<item id="15672" min="1" max="1" chance="32.6515"/>
+				<item id="15675" min="1" max="1" chance="32.6516"/>
+			</category>
+			<category id="3" chance="22.937">
+				<item id="1879" min="1" max="1" chance="49.6806"/>
+				<item id="34990" min="29" max="29" chance="28.4742"/>
+				<item id="9628" min="1" max="1" chance="2.3379"/>
+				<item id="9630" min="1" max="1" chance="1.5689"/>
+				<item id="9629" min="1" max="1" chance="1.296"/>
+				<item id="34991" min="15" max="15" chance="3.9744"/>
+				<item id="1890" min="1" max="1" chance="4.5509"/>
+				<item id="1888" min="1" max="1" chance="9.0328"/>
+				<item id="10483" min="1" max="1" chance="2.07"/>
+				<item id="10484" min="1" max="1" chance="0.5175"/>
+				<item id="10485" min="1" max="1" chance="0.0518"/>
+				<item id="10380" min="1" max="1" chance="0.0192"/>
+				<item id="9553" min="1" max="1" chance="0.0597"/>
+			</category>
+		</droplist>
+		<spoillist>
+			<item id="10404" min="1" max="1" chance="0.2892"/>
+			<item id="10402" min="1" max="1" chance="0.2892"/>
+			<item id="34990" min="10" max="10" chance="5.3068"/>
+			<item id="10380" min="1" max="1" chance="0.0436"/>
+			<item id="10378" min="1" max="1" chance="0.0436"/>
+			<item id="15804" min="1" max="1" chance="0.5799"/>
+			<item id="15805" min="1" max="1" chance="0.5799"/>
+			<item id="15806" min="1" max="1" chance="0.5799"/>
+		</spoillist>
+	</npc>
+</list>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DropListData.xsd">
+	<npc id="22375">
+		<droplist>
+			<category id="1" chance="70.000">
+				<item id="57" min="18763" max="37877" chance="100.00000"/>
+			</category>
+			<category id="2" chance="11.236">
+				<item id="15694" min="1" max="1" chance="0.13310"/>
+				<item id="15695" min="1" max="1" chance="0.13310"/>
+				<item id="15645" min="1" max="1" chance="49.86690"/>
+				<item id="15646" min="1" max="1" chance="49.86690"/>
+			</category>
+			<category id="3" chance="84.854">
+				<item id="1879" min="3" max="9" chance="20.60601"/>
+				<item id="34990" min="29" max="31" chance="24.49799"/>
+				<item id="9628" min="1" max="1" chance="5.81816"/>
+				<item id="9630" min="1" max="1" chance="3.90429"/>
+				<item id="9629" min="1" max="1" chance="3.22531"/>
+				<item id="9551" min="1" max="1" chance="5.93448"/>
+				<item id="1873" min="12" max="36" chance="14.76649"/>
+				<item id="34991" min="36" max="108" chance="15.14361"/>
+				<item id="34992" min="24" max="72" chance="13.55618"/>
+				<item id="1889" min="4" max="12" chance="6.38624"/>
+				<item id="4044" min="5" max="15" chance="2.92266"/>
+				<item id="6851" min="1" max="1" chance="0.88387"/>
+				<item id="6873" min="1" max="1" chance="0.35355"/>
+				<item id="6901" min="1" max="1" chance="0.35355"/>
+			</category>
+			<category id="100" chance="65.570">
+				<item id="9599" min="3" max="9" chance="100.00000"/>
+			</category>
+		</droplist>
+		<spoillist>
+			<item id="15647" min="1" max="1" chance="13.65020"/>
+			<item id="15693" min="1" max="1" chance="24.46870"/>
+			<item id="15692" min="1" max="1" chance="24.46870"/>
+			<item id="15775" min="1" max="1" chance="1.82150"/>
+			<item id="15776" min="1" max="1" chance="1.82150"/>
+			<item id="15777" min="1" max="1" chance="1.82150"/>
+			<item id="15791" min="1" max="1" chance="2.60220"/>
+			<item id="15790" min="1" max="1" chance="2.60220"/>
+		</spoillist>
+	</npc>
+</list>

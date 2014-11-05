@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "events.dtd">
+<list>
+	<event id="57" name="Traban Chamber" type="SIEGE_EVENT" impl="ClanHallAuction"/>
+</list>

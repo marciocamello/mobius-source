@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="40195" name="Scroll of Escape: Faeron Village">
+		<set name="class" value="CONSUMABLE"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_scroll_of_return_i00"/>
+		<set name="tradeable" value="true"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="SCROLL"/>
+		<skills>
+			<skill id="18105" level="1"/>
+		</skills>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<set name="capsuled" value="true"/>
+	</etcitem>
+</list>

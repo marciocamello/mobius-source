@@ -1,0 +1,542 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "restoration_info.dtd">
+<list>
+	<restoration skill_id="2500" skill_level="1" name="Beast Soulshot Compressed Pack">
+		<group chance="100.0">
+			<item id="6645" min_count="500" max_count="500"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2501" skill_level="1" name="Beast Spiritshot Compressed Pack">
+		<group chance="100.0">
+			<item id="6646" min_count="500" max_count="500"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2502" skill_level="1" name="Blessed Beast Spiritshot Compressed Pack">
+		<group chance="100.0">
+			<item id="6647" min_count="500" max_count="500"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2504" skill_level="1" name="Old Agathion">
+		<group chance="100.0">
+			<item id="6471" min_count="20" max_count="20"/>
+			<item id="5094" min_count="40" max_count="40"/>
+			<item id="9814" min_count="3" max_count="3"/>
+			<item id="9816" min_count="4" max_count="4"/>
+			<item id="9817" min_count="4" max_count="4"/>
+			<item id="9815" min_count="2" max_count="2"/>
+			<item id="57" min_count="6000000" max_count="6000000"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2510" skill_level="1" name="Wondrous Cubic">
+		<group chance="35.0">
+			<item id="10633" min_count="1" max_count="1"/>
+		</group>
+		<group chance="25.0">
+			<item id="10642" min_count="1" max_count="1"/>
+		</group>
+		<group chance="20.0">
+			<item id="10634" min_count="1" max_count="1"/>
+		</group>
+		<group chance="10.0">
+			<item id="10643" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0">
+			<item id="10635" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.0">
+			<item id="10644" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.2">
+			<item id="10636" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.8">
+			<item id="10645" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.6">
+			<item id="10637" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.4">
+			<item id="10646" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2532" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="4" max_count="4"/>
+			<item id="1463" min_count="50" max_count="50"/>
+			<item id="2510" min_count="50" max_count="50"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2533" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="4" max_count="4"/>
+			<item id="1463" min_count="100" max_count="100"/>
+			<item id="2510" min_count="100" max_count="100"/>
+			<item id="956" min_count="1" max_count="1"/>
+			<item id="8623" min_count="3" max_count="3"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2534" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="4" max_count="4"/>
+			<item id="1463" min_count="100" max_count="100"/>
+			<item id="2510" min_count="100" max_count="100"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2535" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="2" max_count="2"/>
+			<item id="1463" min_count="150" max_count="150"/>
+			<item id="2510" min_count="150" max_count="150"/>
+			<item id="956" min_count="1" max_count="1"/>
+			<item id="8623" min_count="3" max_count="3"/>
+			<item id="8629" min_count="2" max_count="2"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2536" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="5" max_count="5"/>
+			<item id="1463" min_count="210" max_count="210"/>
+			<item id="2510" min_count="210" max_count="210"/>
+			<item id="956" min_count="1" max_count="1"/>
+			<item id="8623" min_count="3" max_count="3"/>
+			<item id="8629" min_count="3" max_count="3"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2537" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="7" max_count="7"/>
+			<item id="1463" min_count="300" max_count="300"/>
+			<item id="2510" min_count="300" max_count="300"/>
+			<item id="956" min_count="1" max_count="1"/>
+			<item id="955" min_count="1" max_count="1"/>
+			<item id="8623" min_count="7" max_count="7"/>
+			<item id="8629" min_count="7" max_count="7"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2538" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="5" max_count="5"/>
+			<item id="1463" min_count="140" max_count="140"/>
+			<item id="2510" min_count="140" max_count="140"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2539" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="7" max_count="7"/>
+			<item id="1463" min_count="250" max_count="250"/>
+			<item id="2510" min_count="250" max_count="250"/>
+			<item id="956" min_count="1" max_count="1"/>
+			<item id="8623" min_count="5" max_count="5"/>
+			<item id="8629" min_count="4" max_count="4"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2540" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="6" max_count="6"/>
+			<item id="1463" min_count="200" max_count="200"/>
+			<item id="2510" min_count="200" max_count="200"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2541" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="11" max_count="11"/>
+			<item id="1463" min_count="500" max_count="500"/>
+			<item id="2510" min_count="500" max_count="500"/>
+			<item id="956" min_count="1" max_count="1"/>
+			<item id="955" min_count="1" max_count="1"/>
+			<item id="8623" min_count="10" max_count="10"/>
+			<item id="8629" min_count="10" max_count="10"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2542" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="7" max_count="7"/>
+			<item id="1463" min_count="400" max_count="400"/>
+			<item id="2510" min_count="400" max_count="400"/>
+			<item id="956" min_count="1" max_count="1"/>
+			<item id="8623" min_count="6" max_count="6"/>
+			<item id="8629" min_count="6" max_count="6"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2543" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="9" max_count="9"/>
+			<item id="1463" min_count="400" max_count="400"/>
+			<item id="2510" min_count="400" max_count="400"/>
+			<item id="956" min_count="1" max_count="1"/>
+			<item id="8623" min_count="9" max_count="9"/>
+			<item id="8629" min_count="8" max_count="8"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2544" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="10" max_count="10"/>
+			<item id="1463" min_count="500" max_count="500"/>
+			<item id="2510" min_count="500" max_count="500"/>
+			<item id="956" min_count="2" max_count="2"/>
+			<item id="955" min_count="1" max_count="1"/>
+			<item id="8623" min_count="15" max_count="15"/>
+			<item id="8629" min_count="15" max_count="15"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2545" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="7" max_count="7"/>
+			<item id="1464" min_count="150" max_count="150"/>
+			<item id="2511" min_count="150" max_count="150"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2546" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="5" max_count="5"/>
+			<item id="1464" min_count="120" max_count="120"/>
+			<item id="2511" min_count="120" max_count="120"/>
+			<item id="952" min_count="1" max_count="1"/>
+			<item id="8624" min_count="5" max_count="5"/>
+			<item id="8630" min_count="4" max_count="4"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2547" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="11" max_count="11"/>
+			<item id="1464" min_count="150" max_count="150"/>
+			<item id="2511" min_count="150" max_count="150"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2548" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="7" max_count="7"/>
+			<item id="1464" min_count="300" max_count="300"/>
+			<item id="2511" min_count="300" max_count="300"/>
+			<item id="952" min_count="1" max_count="1"/>
+			<item id="951" min_count="1" max_count="1"/>
+			<item id="8624" min_count="7" max_count="7"/>
+			<item id="8630" min_count="7" max_count="7"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2549" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="6" max_count="6"/>
+			<item id="1464" min_count="200" max_count="200"/>
+			<item id="2511" min_count="200" max_count="200"/>
+			<item id="8624" min_count="7" max_count="7"/>
+			<item id="8630" min_count="6" max_count="6"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2550" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="10" max_count="10"/>
+			<item id="1464" min_count="250" max_count="250"/>
+			<item id="2511" min_count="250" max_count="250"/>
+			<item id="952" min_count="1" max_count="1"/>
+			<item id="8624" min_count="8" max_count="8"/>
+			<item id="8630" min_count="7" max_count="7"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2551" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="10" max_count="10"/>
+			<item id="1464" min_count="350" max_count="350"/>
+			<item id="2511" min_count="350" max_count="350"/>
+			<item id="952" min_count="2" max_count="2"/>
+			<item id="951" min_count="1" max_count="1"/>
+			<item id="8624" min_count="10" max_count="10"/>
+			<item id="8630" min_count="10" max_count="10"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2552" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="6" max_count="6"/>
+			<item id="1465" min_count="100" max_count="100"/>
+			<item id="2512" min_count="100" max_count="100"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2553" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="10" max_count="10"/>
+			<item id="1465" min_count="200" max_count="200"/>
+			<item id="2512" min_count="200" max_count="200"/>
+			<item id="8625" min_count="7" max_count="7"/>
+			<item id="8631" min_count="7" max_count="7"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2554" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="8" max_count="8"/>
+			<item id="1465" min_count="120" max_count="120"/>
+			<item id="2512" min_count="120" max_count="120"/>
+			<item id="8625" min_count="7" max_count="7"/>
+			<item id="8631" min_count="7" max_count="7"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2555" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="15" max_count="15"/>
+			<item id="1464" min_count="300" max_count="300"/>
+			<item id="2511" min_count="300" max_count="300"/>
+			<item id="952" min_count="2" max_count="2"/>
+			<item id="951" min_count="1" max_count="1"/>
+			<item id="8624" min_count="15" max_count="15"/>
+			<item id="8630" min_count="14" max_count="14"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2556" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="4" max_count="4"/>
+			<item id="1465" min_count="200" max_count="200"/>
+			<item id="2512" min_count="200" max_count="200"/>
+			<item id="948" min_count="1" max_count="1"/>
+			<item id="8625" min_count="5" max_count="5"/>
+			<item id="8631" min_count="5" max_count="5"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2557" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="10" max_count="10"/>
+			<item id="1465" min_count="250" max_count="250"/>
+			<item id="2512" min_count="250" max_count="250"/>
+			<item id="948" min_count="1" max_count="1"/>
+			<item id="8625" min_count="6" max_count="6"/>
+			<item id="8631" min_count="6" max_count="6"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2558" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="15" max_count="15"/>
+			<item id="1465" min_count="380" max_count="380"/>
+			<item id="2512" min_count="380" max_count="380"/>
+			<item id="948" min_count="2" max_count="2"/>
+			<item id="8625" min_count="12" max_count="12"/>
+			<item id="8631" min_count="12" max_count="12"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2559" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="5" max_count="5"/>
+			<item id="1466" min_count="120" max_count="120"/>
+			<item id="2513" min_count="120" max_count="120"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2560" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="10" max_count="10"/>
+			<item id="1466" min_count="250" max_count="250"/>
+			<item id="2513" min_count="250" max_count="250"/>
+			<item id="8626" min_count="9" max_count="9"/>
+			<item id="8632" min_count="9" max_count="9"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2561" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="5" max_count="5"/>
+			<item id="1466" min_count="150" max_count="150"/>
+			<item id="2513" min_count="150" max_count="150"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2562" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="4" max_count="4"/>
+			<item id="1465" min_count="100" max_count="100"/>
+			<item id="2512" min_count="100" max_count="100"/>
+			<item id="947" min_count="1" max_count="1"/>
+			<item id="8625" min_count="3" max_count="3"/>
+			<item id="8631" min_count="3" max_count="3"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2563" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="10" max_count="10"/>
+			<item id="1466" min_count="300" max_count="300"/>
+			<item id="2513" min_count="300" max_count="300"/>
+			<item id="8626" min_count="10" max_count="10"/>
+			<item id="8632" min_count="10" max_count="10"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2564" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="3" max_count="3"/>
+			<item id="1466" min_count="140" max_count="140"/>
+			<item id="2513" min_count="140" max_count="140"/>
+			<item id="730" min_count="1" max_count="1"/>
+			<item id="8626" min_count="5" max_count="5"/>
+			<item id="8632" min_count="5" max_count="5"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2565" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="6" max_count="6"/>
+			<item id="1466" min_count="250" max_count="250"/>
+			<item id="2513" min_count="250" max_count="250"/>
+			<item id="730" min_count="2" max_count="2"/>
+			<item id="8626" min_count="6" max_count="6"/>
+			<item id="8632" min_count="6" max_count="6"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2566" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="9" max_count="9"/>
+			<item id="1467" min_count="130" max_count="130"/>
+			<item id="2514" min_count="130" max_count="130"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2567" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="10" max_count="10"/>
+			<item id="1467" min_count="350" max_count="350"/>
+			<item id="2514" min_count="350" max_count="350"/>
+			<item id="8627" min_count="12" max_count="12"/>
+			<item id="8633" min_count="11" max_count="11"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2568" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="10" max_count="10"/>
+			<item id="1466" min_count="350" max_count="350"/>
+			<item id="2513" min_count="350" max_count="350"/>
+			<item id="730" min_count="2" max_count="2"/>
+			<item id="8626" min_count="10" max_count="10"/>
+			<item id="8632" min_count="10" max_count="10"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2569" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="12" max_count="12"/>
+			<item id="1467" min_count="360" max_count="360"/>
+			<item id="2514" min_count="360" max_count="360"/>
+			<item id="8627" min_count="12" max_count="12"/>
+			<item id="8633" min_count="12" max_count="12"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2570" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="6" max_count="6"/>
+			<item id="1467" min_count="140" max_count="140"/>
+			<item id="2514" min_count="140" max_count="140"/>
+			<item id="960" min_count="1" max_count="1"/>
+			<item id="8627" min_count="4" max_count="4"/>
+			<item id="8633" min_count="3" max_count="3"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2571" skill_level="1" name="Pathfinder Supplies">
+		<group chance="100.0">
+			<item id="1539" min_count="15" max_count="15"/>
+			<item id="1467" min_count="360" max_count="360"/>
+			<item id="2514" min_count="360" max_count="360"/>
+			<item id="960" min_count="1" max_count="1"/>
+			<item id="8627" min_count="11" max_count="11"/>
+			<item id="8633" min_count="11" max_count="11"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2572" skill_level="1" name="Pathfinder's Reward">
+		<group chance="3.2">
+			<item id="947" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2573" skill_level="1" name="Pathfinder's Reward">
+		<group chance="1.6111">
+			<item id="729" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2574" skill_level="1" name="Pathfinder's Reward">
+		<group chance="1.14">
+			<item id="959" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2575" skill_level="1" name="Pathfinder's Reward">
+		<group chance="19.8">
+			<item id="9546" min_count="1" max_count="1"/>
+		</group>
+		<group chance="19.8">
+			<item id="9548" min_count="1" max_count="1"/>
+		</group>
+		<group chance="19.8">
+			<item id="9550" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.98">
+			<item id="959" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1">
+			<item id="9442" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1">
+			<item id="9443" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1">
+			<item id="9444" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1">
+			<item id="9445" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1">
+			<item id="9446" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1">
+			<item id="9447" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1">
+			<item id="9448" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1">
+			<item id="9449" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1">
+			<item id="9450" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1">
+			<item id="10252" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.1">
+			<item id="10253" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.0">
+			<item id="15645" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.0">
+			<item id="15646" min_count="1" max_count="1"/>
+		</group>
+		<group chance="1.0">
+			<item id="15647" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="2576" skill_level="1" name="Pathfinder's Reward">
+		<group chance="26.4">
+			<item id="9546" min_count="1" max_count="1"/>
+		</group>
+		<group chance="26.4">
+			<item id="9548" min_count="1" max_count="1"/>
+		</group>
+		<group chance="26.4">
+			<item id="9550" min_count="1" max_count="1"/>
+		</group>
+		<group chance="3.84">
+			<item id="959" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.13">
+			<item id="10215" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.13">
+			<item id="10216" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.13">
+			<item id="10217" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.13">
+			<item id="10218" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.13">
+			<item id="10219" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.13">
+			<item id="10220" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.13">
+			<item id="10221" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.13">
+			<item id="10222" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.13">
+			<item id="10223" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+</list>

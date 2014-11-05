@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "restoration_info.dtd">
+<list>
+	<restoration skill_id="3332" skill_level="1" name="Orange Talisman - Hot Springs CP Potion">
+		<group chance="100.0">
+			<item id="10166" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="3333" skill_level="1" name="Orange Talisman - Elixir of Life (A-grade)">
+		<group chance="100.0">
+			<item id="8626" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="3334" skill_level="1" name="Orange Talisman - Elixir of Mind (A-grade)">
+		<group chance="100.0">
+			<item id="8632" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+</list>

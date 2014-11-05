@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="14800" levels="1" name="Master's Blessing - Elemental Resistance">
+		<set name="icon" val="icon.skill11565"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14801" levels="1" name="Master's Blessing - Holy Attack Resistance">
+		<set name="icon" val="icon.skill11567"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14802" levels="1" name="Master's Blessing - Mental Attack Resistance">
+		<set name="icon" val="icon.skill11824"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14803" levels="1" name="Garden Dark Magic">
+		<set name="icon" val="icon.skill0279"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14804" levels="1" name="Damage Reflect Resistance">
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="120000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" val="1">
+				<mul order="0x30" stat="reflectDam" val="1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="14805" levels="1" name="Damage Reflect Resistance">
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="120000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" val="1">
+				<mul order="0x30" stat="reflectDam" val="2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="14806" levels="1" name="Damage Reflect Resistance">
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="120000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" val="1">
+				<mul order="0x30" stat="reflectDam" val="3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="14807" levels="1" name="Damage Reflect Resistance">
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="120000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" val="1">
+				<mul order="0x30" stat="reflectDam" val="4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="14808" levels="1" name="Damage Reflect Resistance">
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="120000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" val="1">
+				<mul order="0x30" stat="reflectDam" val="5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="14809" levels="1" name="Damage Reflect Resistance">
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="120000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" val="1">
+				<mul order="0x30" stat="reflectDam" val="6"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="14810" levels="1" name="Damage Reflect Resistance">
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="120000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" val="1">
+				<mul order="0x30" stat="reflectDam" val="7"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="14811" levels="1" name="Damage Reflect Resistance">
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="120000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" val="1">
+				<mul order="0x30" stat="reflectDam" val="8"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="14812" levels="1" name="Damage Reflect Resistance">
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="120000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" val="1">
+				<mul order="0x30" stat="reflectDam" val="9"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="14813" levels="1" name="Damage Reflect Resistance">
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="120000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" val="1">
+				<mul order="0x30" stat="reflectDam" val="1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="14814" levels="1" name="Lethal Strike Resistance">
+		<set name="icon" val="icon.skill0263"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14815" levels="1" name="Lethal Strike Resistance">
+		<set name="icon" val="icon.skill0263"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14816" levels="1" name="Lethal Strike Resistance">
+		<set name="icon" val="icon.skill0263"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14817" levels="1" name="Lethal Strike Resistance">
+		<set name="icon" val="icon.skill0263"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14818" levels="1" name="Lethal Strike Resistance">
+		<set name="icon" val="icon.skill0263"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14819" levels="1" name="Lethal Strike Resistance">
+		<set name="icon" val="icon.skill0263"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14820" levels="1" name="Lethal Strike Resistance">
+		<set name="icon" val="icon.skill0263"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14821" levels="1" name="Lethal Strike Resistance">
+		<set name="icon" val="icon.skill0263"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14822" levels="1" name="Lethal Strike Resistance">
+		<set name="icon" val="icon.skill0263"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14823" levels="1" name="Lethal Strike Resistance">
+		<set name="icon" val="icon.skill0263"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+</list>

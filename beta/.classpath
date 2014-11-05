@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="dist/libs/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="dist/libs/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="dist/libs/commons-lang3-3.3.2.jar"/>
+	<classpathentry kind="lib" path="dist/libs/commons-pool-1.6.jar"/>
+	<classpathentry kind="lib" path="dist/libs/dom4j-2.0.0-ALPHA-2.jar"/>
+	<classpathentry kind="lib" path="dist/libs/ecj-4.4.jar"/>
+	<classpathentry kind="lib" path="dist/libs/ehcache-core-2.6.8.jar"/>
+	<classpathentry kind="lib" path="dist/libs/javolution-5.5.1.jar" sourcepath="dist/libs/javolution-5.5.1-src.zip"/>
+	<classpathentry kind="lib" path="dist/libs/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="dist/libs/mysql-connector-java-5.1.33-bin.jar"/>
+	<classpathentry kind="lib" path="dist/libs/napile.primitive.jar" sourcepath="dist/libs/napile.primitive-src.zip"/>
+	<classpathentry kind="lib" path="dist/libs/slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="dist/libs/slf4j-log4j12-1.7.7.jar"/>
+	<classpathentry kind="lib" path="dist/libs/trove-3.0.3.jar"/>
+	<classpathentry kind="src" path="dist/gameserver/data/scripts"/>
+	<classpathentry kind="src" path="java"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

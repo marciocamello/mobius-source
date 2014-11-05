@@ -1,0 +1,567 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="15600" levels="1" name="Lindvior's Attack">
+		<set name="icon" val="icon.skill1275"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15601" levels="1" name="Lindvior's Attack">
+		<set name="icon" val="icon.skill1275"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15602" levels="1" name="Breath">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15603" levels="1" name="Disrupt Recharge">
+		<set name="icon" val="icon.skill14444"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15604" levels="1" name="Disrupt Recharge">
+		<set name="icon" val="icon.skill1042"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15605" levels="1" name="Recharge Possible">
+		<set name="icon" val="icon.skill0005"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15606" levels="1" name="Recharge">
+		<set name="icon" val="icon.skill14444"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15607" levels="1" name="Depleted">
+		<set name="icon" val="icon.skill1064"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15608" levels="7" name="Power Strike">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15609" levels="7" name="Decrease P. Def.">
+		<set name="icon" val="icon.skill1422"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15610" levels="7" name="Spinning Slasher">
+		<set name="icon" val="icon.skill0922"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15611" levels="7" name="Tornado Slasher">
+		<set name="icon" val="icon.skill0922"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15612" levels="7" name="Thunder Storm">
+		<set name="icon" val="icon.skill0100"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15613" levels="7" name="Ranged Magic">
+		<set name="icon" val="icon.skill1167"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15614" levels="7" name="Decrease M. Def.">
+		<set name="icon" val="icon.skill1422"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15615" levels="7" name="Increase P. Atk.">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15616" levels="7" name="Aggression">
+		<set name="icon" val="icon.skill10027"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15617" levels="7" name="Power Smash">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15618" levels="7" name="Power Strike">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15619" levels="7" name="Knock Back">
+		<set name="icon" val="icon.skill0101"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15620" levels="7" name="Power Shot">
+		<set name="icon" val="icon.skill0056"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15621" levels="7" name="Stun Shot">
+		<set name="icon" val="icon.skill0056"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15622" levels="7" name="Ranged Magic">
+		<set name="icon" val="icon.skill1167"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15623" levels="7" name="Push Up">
+		<set name="icon" val="icon.skill1042"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15624" levels="7" name="Heal">
+		<set name="icon" val="icon.skill1401"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15625" levels="7" name="Raid Chain Strike">
+		<set name="icon" val="icon.skill10015"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15626" levels="1" name="Raid Boss (Lv. 86)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15627" levels="1" name="Raid Boss (Lv. 93)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15628" levels="1" name="Raid Boss (Lv. 95)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15629" levels="1" name="Nerva's Mental Blow">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15630" levels="1" name="Stun Trap">
+		<set name="icon" val="icon.skill0100"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15631" levels="1" name="Lindvior's Roar">
+		<set name="icon" val="icon.skill4107"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15632" levels="1" name="Replenish Energy">
+		<set name="icon" val="icon.skill14444"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15633" levels="1" name="Raid Boss (Lv. 99)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15634" levels="1" name="Raid Boss (Lv. 99)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15635" levels="1" name="Raid Boss (Lv. 99)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15636" levels="1" name="Dimensional Teleport">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15637" levels="1" name="Dimensional Space">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15638" levels="1" name="Lindvior">
+		<set name="icon" val="icon.skillboss"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15639" levels="1" name="Mysterious Fear">
+		<set name="icon" val="icon.skill1169"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15640" levels="1" name="Antharas' Explosive Rage">
+		<set name="icon" val="icon.skill5086"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15641" levels="1" name="Valakas' Explosive Rage">
+		<set name="icon" val="icon.skill5086"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15642" levels="1" name="Horn Melody (Adventurer)">
+		<table name="#pAtk">1.17 1.19 1.21 1.23</table>
+		<table name="#mAtk">1.79 1.83 1.87 1.91</table>
+		<table name="#stackLevel">11 12 13 14</table>
+		<table name="#mpConsume2">190</table>
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="700"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="magicLevel" val="85"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="MagicDefUp;pAtk;pDef;mAtk">
+				<mul order="0x30" stat="pDef" val="1.15"/>
+				<mul order="0x30" stat="pAtk" val="#pAtk"/>
+				<mul order="0x30" stat="mAtk" val="#mAtk"/>
+				<mul order="0x30" stat="mDef" val="1.30"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="15643" levels="1" name="Drum Melody (Adventurer)">
+		<table name="#spd">0.85 0.9 0.95 1.0</table>
+		<table name="#stackLevel">11 12 13 14</table>
+		<table name="#mpConsume2">170</table>
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="700"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="magicLevel" val="85"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="1356;1413;1363;"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="ancient">
+				<mul order="0x30" stat="maxMp" val="1.2"/>
+				<mul order="0x30" stat="regHp" val="1.2"/>
+				<add order="0x40" stat="mCritRate" val="20"/>
+				<mul order="0x30" stat="cAtk" val="1.2"/>
+				<mul order="0x30" stat="pAtk" val="1.1"/>
+				<mul order="0x30" stat="pDef" val="1.2"/>
+				<mul order="0x30" stat="pAtkSpd" val="1.2"/>
+				<mul order="0x30" stat="mAtkSpd" val="1.2"/>
+				<mul order="0x30" stat="mAtk" val="1.2"/>
+				<mul order="0x30" stat="mDef" val="1.2"/>
+				<mul order="0x30" stat="runSpd" val="#spd"/>
+				<add order="0x40" stat="debuffResist" val="10"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="15644" levels="1" name="Pipe Organ Melody (Adventurer)">
+		<table name="#vuln">1.37 1.39 1.41 1.43</table>
+		<table name="#mpConsume2">170</table>
+		<table name="#stackLevel">11 12 13 14</table>
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="700"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="magicLevel" val="85"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="1044;1045;1501;1048;"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="hp_up;hpregen;mp_up">
+				<mul order="0x30" stat="maxHp" val="#vuln"/>
+				<mul order="0x30" stat="maxMp" val="#vuln"/>
+				<mul order="0x30" stat="maxCp" val="#vuln"/>
+				<mul order="0x30" stat="regHp" val="1.20"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="15645" levels="1" name="Guitar Melody (Adventurer)">
+		<table name="#vuln">1.32 1.34 1.36 1.38</table>
+		<table name="#mpConsume2">170</table>
+		<table name="#stackLevel">11 12 13 14</table>
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="700"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="magicLevel" val="85"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="1476;1242;1253;1308;1518;1077;"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="impulse;rCrit;cAtk">
+				<mul order="0x30" stat="rCrit" val="#vuln"/>
+				<mul order="0x30" stat="cAtk" val="1.35"/>
+				<add order="0x40" stat="mCritRate" val="20"/>
+				<mul order="0x30" stat="mpConsum" val="0.9"/>
+				<mul order="0x30" stat="mpConsumePhysical" val="0.8"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="15646" levels="1" name="Harp Melody (Adventurer)">
+		<table name="#vuln">5 6 7 8</table>
+		<table name="#vuln2">34 35 36 37</table>
+		<table name="#stackLevel">11 12 13 14</table>
+		<table name="#mpConsume2">170</table>
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="700"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="magicLevel" val="85"/>
+		<set name="relationSkillsId" val="1535;230;1461;1240;1252;1309;"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="accuracyUp;SpeedUp;Poem_Arfa;rEvas;CoP">
+				<add order="0x40" stat="accCombat" val="#vuln"/>
+				<add order="0x40" stat="rEvas" val="#vuln"/>
+				<add order="0x40" stat="mEvas" val="#vuln"/>
+				<add order="0x40" stat="runSpd" val="#vuln2"/>
+				<mul order="0x30" stat="critDamRcpt" val="0.7"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="15647" levels="1" name="Lute Melody (Adventurer)">
+		<table name="#vuln1">1.34 1.35 1.36 1.37</table>
+		<table name="#vuln2">1.31 1.32 1.33 1.34</table>
+		<table name="#stackLevel">11 12 13 14</table>
+		<table name="#mpConsume2">170</table>
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="700"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="magicLevel" val="85"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="1002;1251;1310;971;1519;1086;"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="vampRage;pAtkSpeedUp;mAtkSpeedUp">
+				<add order="0x40" stat="absorbDam" val="9"/>
+				<mul order="0x30" stat="pAtkSpd" val="#vuln1"/>
+				<mul order="0x30" stat="mAtkSpd" val="#vuln2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="15648" levels="1" name="Knight's Harmony (Adventurer)">
+		<table name="#mpConsume2">170</table>
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="700"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="magicLevel" val="85"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="1283;1590;264;1243;1389;1391;271;"/>
+		<enchant4 levels="10" name="Recycle" enchRoute="9"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="Great;shieldProbUp;sDef;Harmony_isa;Great;HarmonyGuardian_1;HarmonyGuardian_2;song_of_hunter;dance_of_fire;dance_of_warrior;song_of_earth;rhythm_of_critical;rhythm_of_combat;berserk">
+				<mul order="0x30" stat="pAtk" val="1.12"/>
+				<mul order="0x30" stat="pDef" val="1.45"/>
+				<add order="0x40" stat="rShld" val="30"/>
+				<mul order="0x30" stat="sDef" val="1.50"/>
+				<add order="0x40" stat="rCrit" val="100"/>
+				<mul order="0x30" stat="cAtk" val="1.35"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="15649" levels="1" name="Warrior's Harmony (Adventurer)">
+		<table name="#mpConsume2">170</table>
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="700"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="magicLevel" val="85"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="1062;1388;274;1562;1586;1390;269;1261;"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="Great;Harmony;Harmony_isa;HarmonyBerserk_1;HarmonyBerserk_2;dance_of_warrior;song_of_earth;rhythm_of_combat;dance_of_fire;song_of_hunter;rhythm_of_critical;berserk">
+				<mul order="0x30" stat="pAtk" val="1.35"/>
+				<mul order="0x30" stat="mAtk" val="1.16"/>
+				<mul order="0x30" stat="mAtkSpd" val="1.08"/>
+				<mul order="0x30" stat="pAtkSpd" val="1.08"/>
+				<mul order="0x30" stat="cAtk" val="1.35"/>
+				<add order="0x40" stat="rCrit" val="100"/>
+				<add order="0x40" stat="runSpd" val="8"/>
+				<mul order="0x30" stat="pDef" val="0.92"/>
+				<mul order="0x30" stat="mDef" val="0.84"/>
+				<sub order="0x40" stat="rEvas" val="4"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="15650" levels="1" name="Wizard's Harmony (Adventurer)">
+		<table name="#mpConsume2">170</table>
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="700"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="magicLevel" val="85"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="267;273;349;1588;1078;365;336;1596;337;"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="Great;concentration;Harmony_isa;buff_one;HarmonyMage_1;HarmonyMage_2;HarmonyMage_3;rhythm_of_magic;dance_of_mystic;song_of_warding;dance_of_siren;song_of_renewal;rhythm_of_start;berserk">
+				<mul order="0x30" stat="pAtk" val="1.08"/>
+				<mul order="0x30" stat="mAtk" val="1.40"/>
+				<mul order="0x30" stat="mAtkSpd" val="1.08"/>
+				<mul order="0x30" stat="pAtkSpd" val="1.08"/>
+				<mul order="0x30" stat="mDef" val="1.14"/>
+				<add order="0x40" stat="mCritRate" val="100"/>
+				<add order="0x40" stat="mpEff" val="20"/>
+				<add order="0x40" stat="runSpd" val="8"/>
+				<mul order="0x30" stat="pDef" val="0.92"/>
+				<sub order="0x30" stat="rEvas" val="4"/>
+				<mul order="0x30" stat="mpConsum" val="0.85"/>
+				<mul order="0x30" stat="mpConsumePhysical" val="0.95"/>
+				<mul order="0x30" stat="mReuse" val="0.8"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="15651" levels="1" name="Prevailing Sonata (Adventurer)">
+		<table name="#mpConsume2">140</table>
+		<table name="#reuseDelay">2000</table>
+		<set name="reuseDelay" val="#reuseDelay"/>
+		<set name="hitTime" val="700"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="magicLevel" val="85"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="isDance" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="363;276;1001;275;1592;304;"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="5" stackType="song_of_vitality;song_of_meditation;dance_of_concentration;dance_of_fury;rhythm_of_fighter;rhythm_of_magician">
+				<mul order="0x30" stat="mAtkSpd" val="1.30"/>
+				<mul order="0x30" stat="pAtkSpd" val="1.15"/>
+				<mul order="0x30" stat="maxHp" val="1.30"/>
+				<mul order="0x30" stat="regMp" val="1.20"/>
+				<mul order="0x30" stat="mpConsum" val="0.90"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="15652" levels="1" name="Daring Sonata (Adventurer)">
+		<table name="#mpConsume2">170</table>
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="700"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="magicLevel" val="85"/>
+		<set name="isDance" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="1284;310;1594;305;"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="rhythm_of_revenge;DmgShield;song_of_vengeance;dance_of_vampire;dance_of_berserker">
+				<mul order="0x30" stat="pAtk" val="1.08"/>
+				<mul order="0x30" stat="mAtk" val="1.16"/>
+				<mul order="0x30" stat="mAtkSpd" val="1.08"/>
+				<mul order="0x30" stat="pAtkSpd" val="1.08"/>
+				<mul order="0x30" stat="pDef" val="0.97"/>
+				<mul order="0x30" stat="mDef" val="0.89"/>
+				<sub order="0x40" stat="rEvas" val="4"/>
+				<add order="0x40" stat="absorbDam" val="8"/>
+				<add order="0x40" stat="reflectDam" val="10"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="15653" levels="1" name="Refreshing Sonata (Adventurer)">
+		<table name="#mpConsume2">170</table>
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="700"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="magicLevel" val="85"/>
+		<set name="isDance" val="true"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="268;266;272;364;1073;265;"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="song_of_wind;song_of_water;song_of_life;song_of_champion;Breath;dance_of_inspiration;">
+				<mul order="0x30" stat="regHp" val="1.20"/>
+				<mul order="0x30" stat="mpConsum" val="0.80"/>
+				<add order="0x30" stat="accCombat" val="4"/>
+				<add order="0x40" stat="runSpd" val="20"/>
+				<mul order="0x30" stat="pReuse" val="0.90"/>
+				<mul order="0x30" stat="mReuse" val="0.90"/>
+				<add order="0x30" stat="rEvas" val="3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="15654" levels="1" name="Master's Blessing - GM's Courage">
+		<set name="icon" val="icon.skill5661"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="15655" levels="1" name="Master's Blessing - GM's Protection">
+		<set name="icon" val="icon.skill5662"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+</list>

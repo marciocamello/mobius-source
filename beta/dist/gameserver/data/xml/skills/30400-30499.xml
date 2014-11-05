@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="30400" levels="2" name="Divine Wind">
+		<table name="#magicLevel">1 20</table>
+		<table name="#vul">10 20</table>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="defenceWind" val="#vul"/>
+			<add order="0x40" stat="defenceHoly" val="#vul"/>
+		</for>
+	</skill>
+	<skill id="30401" levels="2" name="Tenacity">
+		<table name="#magicLevel">1 20</table>
+		<table name="#hp">1.01 1.02</table>
+		<table name="#spd">4 7</table>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="maxHp" val="#hp"/>
+			<add order="0x40" stat="runSpd" val="#spd"/>
+		</for>
+	</skill>
+	<skill id="30402" levels="2" name="Efficacy">
+		<table name="#magicLevel">1 20</table>
+		<table name="#vul">0.99 0.98</table>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mpConsumePhysical" val="#vul"/>
+		</for>
+	</skill>
+</list>

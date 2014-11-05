@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="19100" levels="1" name="Light Armor Mastery - Test">
+		<set name="icon" val="icon.skill19100"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="19101" levels="1" name="Chain Blow - Test">
+		<set name="reuseDelay" val="5000"/>
+		<set name="coolTime" val="699"/>
+		<set name="hitTime" val="1130"/>
+		<set name="icon" val="icon.skill19101"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+	</skill>
+	<skill id="19102" levels="1" name="Chaos Sympathy">
+		<set name="icon" val="icon.skill1505"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1200"/>
+	</skill>
+	<skill id="19103" levels="1" name="Resident Power">
+		<set name="icon" val="icon.skill0050"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxCp" val="700"/>
+			<mul order="0x30" stat="pvpPhysDefenceBonus" val="1.03"/>
+			<mul order="0x30" stat="pvpPhysSkillDefenceBonus" val="1.03"/>
+			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.03"/>
+		</for>
+	</skill>
+	<skill id="19104" levels="2" name="Resident Power">
+		<set name="icon" val="icon.skill0050"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxCp" val="1000"/>
+			<mul order="0x30" stat="pvpPhysDefenceBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDefenceBonus" val="1.05"/>
+			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" val="1.05"/>
+		</for>
+	</skill>
+	<skill id="19105" levels="1" name="Resident Advantage">
+		<set name="icon" val="icon.skill0820"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" val="1.13">
+				<player maxLevel="84"/>
+			</mul>
+			<mul order="0x30" stat="mAtkSpd" val="1.13">
+				<player maxLevel="84"/>
+			</mul>
+			<mul order="0x30" stat="runSpd" val="1.13">
+				<player maxLevel="84"/>
+			</mul>
+		</for>
+	</skill>
+	<skill id="19106" levels="2" name="Resident Advantage">
+		<set name="icon" val="icon.skill0820"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" val="1.15">
+				<player maxLevel="84"/>
+			</mul>
+			<mul order="0x30" stat="mAtkSpd" val="1.15">
+				<player maxLevel="84"/>
+			</mul>
+			<mul order="0x30" stat="runSpd" val="1.15">
+				<player maxLevel="84"/>
+			</mul>
+		</for>
+	</skill>
+	<skill id="19107" levels="1" name="Resident Guidance">
+		<set name="icon" val="icon.skill0788_3"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="ExpMultiplier" val="0.03"/>
+		</for>
+	</skill>
+	<skill id="19108" levels="2" name="Resident Guidance">
+		<set name="icon" val="icon.skill0788_5"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="ExpMultiplier" val="0.05"/>
+		</for>
+	</skill>
+	<skill id="19109" levels="4" name="Siege Golem's Spirit">
+		<set name="icon" val="icon.skill19109"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="19110" levels="5" name="Clan Resilience">
+		<set name="icon" val="icon.skill_tough_spirit"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="19111" levels="5" name="Clan Steadfastness">
+		<set name="icon" val="icon.skill_heavy_heart"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="19112" levels="1" name="Clan Escape">
+		<set name="icon" val="icon.skill_pledge_party_recall"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="19113" levels="1" name="Clan Escape Lock">
+		<set name="icon" val="icon.skill_recall"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="19114" levels="1" name="Clan Resurrection Lock">
+		<set name="icon" val="icon.skill_resurrection"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="19115" levels="1" name="Air Bike">
+		<set name="icon" val="icon.etc_dwarf_craft_vehicle"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="19116" levels="1" name="Summon Lyn Draco">
+		<set name="icon" val="icon.etc_lind_vehicle"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="19117" levels="1" name="Dimensional Defense">
+		<set name="icon" val="icon.skill14216"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="19118" levels="4" name="Bike Ability">
+		<set name="icon" val="icon.skill_transform_etc"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+</list>

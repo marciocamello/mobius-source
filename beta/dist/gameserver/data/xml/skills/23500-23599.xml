@@ -1,0 +1,450 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="23500" levels="1" name="(Harp Melody)">
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="500"/>
+		<set name="icon" val="icon.skill11521"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23501" levels="1" name="(Harp Melody)">
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="500"/>
+		<set name="icon" val="icon.skill11521"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23502" levels="1" name="(Lute Melody)">
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="500"/>
+		<set name="icon" val="icon.skill11518"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23503" levels="1" name="(Lute Melody)">
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="500"/>
+		<set name="icon" val="icon.skill11518"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23504" levels="1" name="(Knight's Harmony)">
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="500"/>
+		<set name="icon" val="icon.skill11523"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+	</skill>
+	<skill id="23505" levels="1" name="(Warrior's Harmony)">
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="500"/>
+		<set name="icon" val="icon.skill11524"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+	</skill>
+	<skill id="23506" levels="1" name="(Wizard's Harmony)">
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="500"/>
+		<set name="icon" val="icon.skill11525"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+	</skill>
+	<skill id="23507" levels="1" name="(Prevailing Sonata)">
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="500"/>
+		<set name="icon" val="icon.skill11529"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23508" levels="1" name="(Daring Sonata)">
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="500"/>
+		<set name="icon" val="icon.skill11530"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23509" levels="1" name="(Refreshing Sonata)">
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="500"/>
+		<set name="icon" val="icon.skill11532"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23510" levels="1" name="(Brilliant Heal)">
+		<set name="reuseDelay" val="5000"/>
+		<set name="hitTime" val="700"/>
+		<set name="icon" val="icon.skill11757"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23511" levels="1" name="Ancient Kartia's End (Presentation)">
+		<set name="hitTime" val="500"/>
+		<set name="icon" val="icon.skill1296"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
+	</skill>
+	<skill id="23512" levels="1" name="Zombification">
+		<set name="icon" val="icon.skilltransform3"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23513" levels="1" name="Zombified">
+		<set name="icon" val="icon.skill11780"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23514" levels="1" name="Zombie Bite">
+		<set name="icon" val="icon.skill1310"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23515" levels="1" name="Zombie Leap">
+		<set name="icon" val="icon.skill0221"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23516" levels="1" name="Petrify">
+		<set name="hitTime" val="500"/>
+		<set name="icon" val="icon.skill1540"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23517" levels="1" name="Summon Tree of Life - NPC">
+		<set name="icon" val="icon.skill1229"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23518" levels="1" name="Bloody Grand Blow">
+		<set name="reuseDelay" val="4000"/>
+		<set name="coolTime" val="300"/>
+		<set name="hitTime" val="1200"/>
+		<set name="icon" val="icon.skill23518"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23519" levels="1" name="Jermann - Discord">
+		<set name="reuseDelay" val="1200000"/>
+		<set name="icon" val="BranchSys3.Icon.g_skill23380"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1000"/>
+	</skill>
+	<skill id="23520" levels="1" name="Weaken Crystal">
+		<set name="icon" val="icon.skill1224"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23521" levels="1" name="Weaken Crystal">
+		<set name="icon" val="icon.skill1224"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23522" levels="1" name="Zombie King's Pestilent Cyclone">
+		<set name="icon" val="icon.skill6435"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23523" levels="1" name="Zombie Camouflage">
+		<set name="icon" val="icon.skill0922"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23524" levels="1" name="Zombie Bite">
+		<set name="icon" val="icon.skill1310"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23525" levels="1" name="Zombified">
+		<set name="icon" val="icon.skill11780"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23526" levels="1" name="Zombification Side Effects">
+		<set name="icon" val="icon.skill11780"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23527" levels="1" name="Zombie Shaman's Curse">
+		<set name="icon" val="icon.skill5086"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23528" levels="1" name="Event Campaign - Zombie Attack">
+		<set name="icon" val="icon.skill4290"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23529" levels="1" name="Event Campaign - Zombie Attack">
+		<set name="icon" val="icon.skill4290"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23530" levels="1" name="Event Campaign - Zombie Attack">
+		<set name="icon" val="icon.skill4290"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23531" levels="1" name="Event Campaign - Zombie Attack">
+		<set name="icon" val="icon.skill4290"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23532" levels="1" name="Start Event">
+		<set name="icon" val="icon.skill1310"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23533" levels="1" name="Start Event">
+		<set name="icon" val="icon.skill1310"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23534" levels="1" name="Start Event">
+		<set name="icon" val="icon.skill1310"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23535" levels="1" name="Start Event">
+		<set name="icon" val="icon.skill1310"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23536" levels="1" name="Elixir of Blessing - Horn Melody">
+		<set name="icon" val="icon.skill11517"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23537" levels="1" name="Elixir of Blessing - Drum Melody">
+		<set name="icon" val="icon.skill11522"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23538" levels="1" name="Elixir of Blessing - Pipe Organ Melody">
+		<set name="icon" val="icon.skill11519"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23539" levels="1" name="Elixir of Blessing - Guitar Melody">
+		<set name="icon" val="icon.skill11520"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23540" levels="1" name="Elixir of Blessing - Harp Melody">
+		<set name="icon" val="icon.skill11521"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23541" levels="1" name="Elixir of Blessing - Lute Melody">
+		<set name="icon" val="icon.skill11518"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23542" levels="1" name="Uthanka Agathion Cute Trick">
+		<set name="icon" val="icon.skill_agathion_cute"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23543" levels="1" name="Lance Smash">
+		<set name="icon" val="icon.skill0100"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23544" levels="1" name="Piercing Attack">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23545" levels="1" name="Whirlwind">
+		<set name="icon" val="icon.skill10266"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23546" levels="1" name="(Battle Cry)">
+		<set name="icon" val="icon.skill1068"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23547" levels="1" name="(Power Strike)">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23548" levels="1" name="Aggression">
+		<set name="icon" val="icon.skill10027"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23549" levels="1" name="Lightning Wave">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23550" levels="1" name="Thunder Bolt">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23551" levels="1" name="Transform: Giant Rat">
+		<set name="icon" val="icon.skill11537"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23552" levels="1" name="Instant Recovery">
+		<set name="icon" val="icon.skill1258"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23553" levels="1" name="(Wind Strike)">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23554" levels="1" name="Blessing of Queen">
+		<set name="icon" val="icon.skill1040"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23555" levels="1" name="(Power Smash)">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23556" levels="1" name="Piercing Attack">
+		<set name="icon" val="icon.skill0096"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23557" levels="1" name="Energy Burst">
+		<set name="icon" val="icon.skill1160"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23558" levels="1" name="(Chain Strike)">
+		<set name="icon" val="icon.skill10016"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23559" levels="1" name="Mega Storm Strike">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23560" levels="1" name="Decrease P. Def.">
+		<set name="icon" val="icon.skill0122"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23561" levels="1" name="Massive Blow">
+		<set name="icon" val="icon.skill0096"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23562" levels="1" name="Black Out">
+		<set name="icon" val="icon.skill10266"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23563" levels="1" name="Body Slice">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23564" levels="1" name="Agathion Cute Trick - Griffin">
+		<set name="icon" val="icon.skill_agathion_cute"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23565" levels="1" name="Griffin Agathion Special Skill: Wind Walk">
+		<set name="icon" val="icon.skill_agathion_special"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23566" levels="1" name="Blessed Griffin Egg">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23567" levels="1" name="Cancel Transformation">
+		<set name="icon" val="icon.skilltransform2"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="23568" levels="1" name="Monster Dueling">
+		<set name="icon" val="BranchSys3.icon1.g_ev_sponsor_token"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+</list>

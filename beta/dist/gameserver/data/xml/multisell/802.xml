@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<list>
+	<config showall="true" notax="true" ignoreprice="true" keepenchanted="false"/>
+	<item>
+		<ingredient id="7833" count="1"/>
+		<production id="10473" count="1"/>
+	</item>
+</list>

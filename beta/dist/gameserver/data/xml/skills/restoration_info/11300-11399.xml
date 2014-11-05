@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "restoration_info.dtd">
+<list>
+	<restoration skill_id="11316" skill_level="1" name="Summon Soulshots" consume_item_id="17371">
+		<group chance="80">
+			<item id="20332" min_count="1900" max_count="1900"/>
+		</group>
+		<group chance="20">
+			<item id="20334" min_count="380" max_count="380"/>
+		</group>
+	</restoration>
+</list>

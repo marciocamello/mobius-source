@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="10903" levels="4" name="Hawk Eye">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#pAtkRange">1.05 1.06 1.07 1.10</table>
+		<table name="#pAtk">1.05 1.06 1.07 1.10</table>
+		<table name="#mpConsume2">36 40 41 46</table>
+		<set name="reuseDelay" val="1000"/>
+		<set name="hitTime" val="500"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<using kind="Bow,Crossbow"/>
+		</cond>
+		<for>
+			<effect count="360" name="LDManaDamOverTime" stackOrder="1" stackType="guts" time="5" val="0.2">
+				<mul order="0x30" stat="pAtk" val="#pAtk"/>
+				<mul order="0x30" stat="pAtkRange" val="#pAtkRange"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10904" levels="4" name="Superior Skill Mastery">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#pAtkRange">1.05 1.06 1.07 1.10</table>
+		<set name="reuseDelay" val="30000"/>
+		<set name="hitTime" val="500"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkRange" val="#pAtkRange"/>
+		</for>
+	</skill>
+	<skill id="10950" levels="4" name="Vengeful Sniper">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#pvpPhysDmgBonus">1.05 1.06 1.07 1.10</table>
+		<table name="#pAtk">1.05 1.06 1.07 1.10</table>
+		<table name="#mpConsume2">36 40 41 46</table>
+		<set name="reuseDelay" val="1000"/>
+		<set name="hitTime" val="500"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="113" addName="1">
+			<using kind="Bow,Crossbow"/>
+		</cond>
+		<for>
+			<effect count="360" name="LDManaDamOverTime" stackOrder="1" stackType="guts" time="5" val="0.2">
+				<mul order="0x30" stat="pAtk" val="#pAtk"/>
+				<mul order="0x30" stat="pvpPhysDmgBonus" val="#pvpPhysDmgBonus"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10951" levels="4" name="Superior Instinct Mastery">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#pvpPhysDmgBonus">1.05 1.06 1.07 1.10</table>
+		<set name="reuseDelay" val="30000"/>
+		<set name="hitTime" val="500"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="#pvpPhysDmgBonus"/>
+		</for>
+	</skill>
+	<skill id="10997" levels="1" name="Archer - Individual Passive">
+		<table name="#magicLevel">85</table>
+		<set name="reuseDelay" val="8000"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isTrigger" val="true"/>
+		<for>
+			<effect count="1" name="Buff" time="5" val="0">
+				<add order="0x40" stat="runSpd" val="30"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10998" levels="1" name="Archer - Individual">
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="10997" level="1" type="RECEIVE_DAMAGE" chance="50">
+				<player damage="100;0"/>
+			</trigger>
+		</triggers>
+		<for/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="5000"/>
+	</skill>
+	<skill id="10999" levels="1" name="Yul Archer Air Chain Skill">
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="2000"/>
+		<set name="castRange" val="700"/>
+		<set name="mpConsume2" val="10"/>
+		<set name="flyType" val="THROW_HORIZONTAL"/>
+		<set name="flyRadius" val="-200"/>
+		<set name="magicLevel" val="85"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="overHit" val="true"/>
+		<set name="power" val="19158"/>
+		<set name="skillRadius" val="250"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="target" val="TARGET_MULTIFACE"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<set name="isAlterSkill" val="true"/>
+		<cond msgId="113" addName="1">
+			<using kind="Bow,Crossbow"/>
+		</cond>
+	</skill>
+</list>

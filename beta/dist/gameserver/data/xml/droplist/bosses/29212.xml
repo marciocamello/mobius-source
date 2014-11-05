@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../DropListData.xsd">
+	<npc id="29212">
+		<droplist>
+			<category id="1" chance="100">
+				<item id="19462" min="1" max="1" chance="61.88679"/>
+				<item id="17383" min="1" max="1" chance="2.64150"/>
+				<item id="17391" min="1" max="1" chance="2.26415"/>
+				<item id="17386" min="1" max="1" chance="1.88679"/>
+				<item id="17388" min="1" max="1" chance="1.88679"/>
+				<item id="17418" min="1" max="1" chance="1.50943"/>
+				<item id="17389" min="1" max="1" chance="1.50943"/>
+				<item id="17382" min="1" max="1" chance="1.50943"/>
+				<item id="19458" min="1" max="1" chance="1.50943"/>
+				<item id="17426" min="1" max="1" chance="1.50943"/>
+				<item id="19459" min="1" max="1" chance="1.50943"/>
+				<item id="17384" min="1" max="1" chance="1.13207"/>
+				<item id="17390" min="1" max="1" chance="1.13207"/>
+				<item id="17387" min="1" max="1" chance="0.75471"/>
+				<item id="17392" min="1" max="1" chance="0.75471"/>
+				<item id="19457" min="1" max="1" chance="0.75471"/>
+				<item id="17385" min="1" max="1" chance="0.75471"/>
+				<item id="17417" min="1" max="1" chance="0.30000"/>
+				<item id="17424" min="1" max="1" chance="0.30000"/>
+				<item id="17422" min="1" max="1" chance="0.30000"/>
+				<item id="17423" min="1" max="1" chance="0.30000"/>
+				<item id="17419" min="1" max="1" chance="0.30000"/>
+				<item id="17425" min="1" max="1" chance="0.30000"/>
+				<item id="17420" min="1" max="1" chance="0.30000"/>
+				<item id="17416" min="1" max="1" chance="0.30000"/>
+				<item id="17421" min="1" max="1" chance="0.30000"/>
+				<item id="36287" min="1" max="1" chance="60.00000"/>
+				<item id="36290" min="1" max="1" chance="33.58490"/>
+				<item id="19448" min="1" max="1" chance="30.18867"/>
+				<item id="36389" min="1" max="1" chance="24.15094"/>
+				<item id="19447" min="1" max="1" chance="23.01886"/>
+				<item id="36386" min="1" max="1" chance="22.64150"/>
+				<item id="18561" min="1" max="1" chance="10.56603"/>
+				<item id="17700" min="1" max="1" chance="10.56603"/>
+				<item id="18560" min="1" max="1" chance="10.18867"/>
+				<item id="18562" min="1" max="1" chance="9.43396"/>
+				<item id="17699" min="1" max="1" chance="9.05660"/>
+				<item id="17697" min="1" max="1" chance="9.05660"/>
+				<item id="17706" min="1" max="1" chance="8.67924"/>
+				<item id="17747" min="1" max="1" chance="8.30188"/>
+				<item id="17701" min="1" max="1" chance="8.30188"/>
+				<item id="17698" min="1" max="1" chance="7.92452"/>
+				<item id="19446" min="1" max="1" chance="6.41509"/>
+				<item id="17705" min="1" max="1" chance="6.41509"/>
+				<item id="17702" min="1" max="1" chance="5.66037"/>
+				<item id="17703" min="1" max="1" chance="5.66037"/>
+				<item id="17708" min="1" max="1" chance="4.52830"/>
+				<item id="17709" min="1" max="1" chance="4.52830"/>
+				<item id="17704" min="1" max="1" chance="4.52830"/>
+				<item id="17707" min="1" max="1" chance="3.77358"/>
+				<item id="17714" min="1" max="1" chance="3.01886"/>
+				<item id="17710" min="1" max="1" chance="2.64150"/>
+				<item id="17712" min="1" max="1" chance="2.64150"/>
+				<item id="17711" min="1" max="1" chance="1.50943"/>
+				<item id="17713" min="1" max="1" chance="1.50943"/>
+			</category>
+		</droplist>
+	</npc>
+</list>

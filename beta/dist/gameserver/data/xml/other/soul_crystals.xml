@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "soul_crystals.dtd">
+<list>
+	<crystal level="0" item_id="4629" next_item_id="4630"/>
+	<crystal level="1" item_id="4630" next_item_id="4631"/>
+	<crystal level="2" item_id="4631" next_item_id="4632"/>
+	<crystal level="3" item_id="4632" next_item_id="4633"/>
+	<crystal level="4" item_id="4633" next_item_id="4634"/>
+	<crystal level="5" item_id="4634" next_item_id="4635"/>
+	<crystal level="6" item_id="4635" next_item_id="4636"/>
+	<crystal level="7" item_id="4636" next_item_id="4637"/>
+	<crystal level="8" item_id="4637" next_item_id="4638"/>
+	<crystal level="9" item_id="4638" next_item_id="4639"/>
+	<crystal level="10" item_id="4639" next_item_id="5577"/>
+	<crystal level="11" item_id="5577" next_item_id="5580"/>
+	<crystal level="12" item_id="5580" next_item_id="5908"/>
+	<crystal level="13" item_id="5908" next_item_id="9570" cursed_next_item_id="10160"/>
+	<crystal level="14" item_id="9570" next_item_id="10480"/>
+	<crystal level="15" item_id="10480" next_item_id="13071"/>
+	<crystal level="16" item_id="13071" next_item_id="15541"/>
+	<crystal level="17" item_id="15541" next_item_id="15826"/>
+	<crystal level="0" item_id="4640" next_item_id="4641"/>
+	<crystal level="1" item_id="4641" next_item_id="4642"/>
+	<crystal level="2" item_id="4642" next_item_id="4643"/>
+	<crystal level="3" item_id="4643" next_item_id="4644"/>
+	<crystal level="4" item_id="4644" next_item_id="4645"/>
+	<crystal level="5" item_id="4645" next_item_id="4646"/>
+	<crystal level="6" item_id="4646" next_item_id="4647"/>
+	<crystal level="7" item_id="4647" next_item_id="4648"/>
+	<crystal level="8" item_id="4648" next_item_id="4649"/>
+	<crystal level="9" item_id="4649" next_item_id="4650"/>
+	<crystal level="10" item_id="4650" next_item_id="5578"/>
+	<crystal level="11" item_id="5578" next_item_id="5581"/>
+	<crystal level="12" item_id="5581" next_item_id="5911"/>
+	<crystal level="13" item_id="5911" next_item_id="9572" cursed_next_item_id="10162"/>
+	<crystal level="14" item_id="9572" next_item_id="10482"/>
+	<crystal level="15" item_id="10482" next_item_id="13073"/>
+	<crystal level="16" item_id="13073" next_item_id="15543"/>
+	<crystal level="17" item_id="15543" next_item_id="15828"/>
+	<crystal level="0" item_id="4651" next_item_id="4652"/>
+	<crystal level="1" item_id="4652" next_item_id="4653"/>
+	<crystal level="2" item_id="4653" next_item_id="4654"/>
+	<crystal level="3" item_id="4654" next_item_id="4655"/>
+	<crystal level="4" item_id="4655" next_item_id="4656"/>
+	<crystal level="5" item_id="4656" next_item_id="4657"/>
+	<crystal level="6" item_id="4657" next_item_id="4658"/>
+	<crystal level="7" item_id="4658" next_item_id="4659"/>
+	<crystal level="8" item_id="4659" next_item_id="4660"/>
+	<crystal level="9" item_id="4660" next_item_id="4661"/>
+	<crystal level="10" item_id="4661" next_item_id="5579"/>
+	<crystal level="11" item_id="5579" next_item_id="5582"/>
+	<crystal level="12" item_id="5582" next_item_id="5914"/>
+	<crystal level="13" item_id="5914" next_item_id="9571" cursed_next_item_id="10161"/>
+	<crystal level="14" item_id="9571" next_item_id="10481"/>
+	<crystal level="15" item_id="10481" next_item_id="13072"/>
+	<crystal level="16" item_id="13072" next_item_id="15542"/>
+	<crystal level="17" item_id="15542" next_item_id="15827"/>
+</list>

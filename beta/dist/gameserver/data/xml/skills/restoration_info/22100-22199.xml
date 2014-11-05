@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "restoration_info.dtd">
+<list>
+	<restoration skill_id="22101" skill_level="1" name="Fortune Box of Love">
+		<group chance="40.0">
+			<item id="20590" min_count="1" max_count="1"/>
+		</group>
+		<group chance="60.0">
+			<item id="9207" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="22102" skill_level="1" name="Soul Magic Box">
+		<group chance="100.0">
+			<item id="20623" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="22108" skill_level="1" name="Halloween Toy Box">
+		<group chance="20.0">
+			<item id="20712" min_count="1" max_count="1"/>
+		</group>
+		<group chance="20.0">
+			<item id="20713" min_count="1" max_count="1"/>
+		</group>
+		<group chance="20.0">
+			<item id="20714" min_count="1" max_count="1"/>
+		</group>
+		<group chance="20.0">
+			<item id="20715" min_count="1" max_count="1"/>
+		</group>
+		<group chance="20.0">
+			<item id="20716" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="22109" skill_level="1" name="Shiny Halloween Toy Box">
+		<group chance="20.0">
+			<item id="20718" min_count="1" max_count="1"/>
+		</group>
+		<group chance="20.0">
+			<item id="20719" min_count="1" max_count="1"/>
+		</group>
+		<group chance="20.0">
+			<item id="20720" min_count="1" max_count="1"/>
+		</group>
+		<group chance="20.0">
+			<item id="20721" min_count="1" max_count="1"/>
+		</group>
+		<group chance="20.0">
+			<item id="20722" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="22114" skill_level="1" name="Transformation Scroll Pack">
+		<group chance="33.0">
+			<item id="20364" min_count="1" max_count="1"/>
+		</group>
+		<group chance="33.0">
+			<item id="20365" min_count="1" max_count="1"/>
+		</group>
+		<group chance="34.0">
+			<item id="20366" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="22115" skill_level="1" name="Santa's Weapon Coupon Box">
+		<group chance="99.99949">
+			<item id="20755" min_count="1" max_count="1"/>
+		</group>
+		<group chance="5.1E-4">
+			<item id="20757" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="22167" skill_level="1" name="April Fool's Day Vesper Weapon Gift">
+		<group chance="13.32">
+			<item id="13457" min_count="1" max_count="1"/>
+		</group>
+		<group chance="6.66">
+			<item id="13458" min_count="1" max_count="1"/>
+		</group>
+		<group chance="6.66">
+			<item id="13459" min_count="1" max_count="1"/>
+		</group>
+		<group chance="6.66">
+			<item id="13460" min_count="1" max_count="1"/>
+		</group>
+		<group chance="6.66">
+			<item id="13461" min_count="1" max_count="1"/>
+		</group>
+		<group chance="6.66">
+			<item id="13462" min_count="1" max_count="1"/>
+		</group>
+		<group chance="6.66">
+			<item id="13463" min_count="1" max_count="1"/>
+		</group>
+		<group chance="6.66">
+			<item id="13464" min_count="1" max_count="1"/>
+		</group>
+		<group chance="6.66">
+			<item id="13466" min_count="1" max_count="1"/>
+		</group>
+		<group chance="6.66">
+			<item id="13467" min_count="1" max_count="1"/>
+		</group>
+		<group chance="6.66">
+			<item id="13468" min_count="1" max_count="1"/>
+		</group>
+		<group chance="6.66">
+			<item id="13469" min_count="1" max_count="1"/>
+		</group>
+		<group chance="6.66">
+			<item id="13470" min_count="1" max_count="1"/>
+		</group>
+		<group chance="6.66">
+			<item id="13465" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="22169" skill_level="1" name="Soccer Ball of Cheering Release">
+		<group chance="45.0">
+			<item id="6575" min_count="2" max_count="2"/>
+		</group>
+		<group chance="30.0">
+			<item id="6573" min_count="1" max_count="1"/>
+		</group>
+		<group chance="15.0">
+			<item id="6571" min_count="1" max_count="1"/>
+		</group>
+		<group chance="9.4">
+			<item id="6569" min_count="1" max_count="1"/>
+		</group>
+		<group chance="0.6">
+			<item id="6577" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+	<restoration skill_id="22179" skill_level="1" name="Fortuna of Chaos">
+		<group chance="13.999">
+			<item id="8618" min_count="3" max_count="3"/>
+		</group>
+		<group chance="26.0">
+			<item id="8619" min_count="1" max_count="1"/>
+		</group>
+		<group chance="17.0">
+			<item id="8620" min_count="3" max_count="3"/>
+		</group>
+		<group chance="0.011">
+			<item id="8621" min_count="1" max_count="1"/>
+		</group>
+		<group chance="4.0">
+			<item id="14700" min_count="25" max_count="25"/>
+		</group>
+		<group chance="4.0">
+			<item id="14701" min_count="12" max_count="12"/>
+		</group>
+		<group chance="5.0">
+			<item id="21038" min_count="6" max_count="6"/>
+		</group>
+		<group chance="5.0">
+			<item id="9627" min_count="1" max_count="1"/>
+		</group>
+		<group chance="19.0">
+			<item id="6622" min_count="3" max_count="3"/>
+		</group>
+		<group chance="1.5">
+			<item id="21030" min_count="4" max_count="4"/>
+		</group>
+		<group chance="1.5">
+			<item id="21031" min_count="4" max_count="4"/>
+		</group>
+		<group chance="1.0">
+			<item id="21032" min_count="8" max_count="8"/>
+		</group>
+		<group chance="1.0">
+			<item id="21033" min_count="8" max_count="8"/>
+		</group>
+		<group chance="1.0">
+			<item id="21037" min_count="5" max_count="5"/>
+		</group>
+	</restoration>
+</list>

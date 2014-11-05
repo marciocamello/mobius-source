@@ -1,0 +1,504 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "options.dtd">
+<list>
+	<option id="15500">
+		<skills>
+			<skill id="3146" level="1"/>
+		</skills>
+	</option>
+	<option id="15501">
+		<skills>
+			<skill id="3160" level="6"/>
+		</skills>
+	</option>
+	<option id="15502">
+		<skills>
+			<skill id="3183" level="6"/>
+		</skills>
+	</option>
+	<option id="15503">
+		<skills>
+			<skill id="3180" level="6"/>
+		</skills>
+	</option>
+	<option id="15504">
+		<skills>
+			<skill id="3184" level="6"/>
+		</skills>
+	</option>
+	<option id="15505">
+		<skills>
+			<skill id="3186" level="6"/>
+		</skills>
+	</option>
+	<option id="15506">
+		<skills>
+			<skill id="3185" level="6"/>
+		</skills>
+	</option>
+	<option id="15507">
+		<skills>
+			<skill id="3181" level="6"/>
+		</skills>
+	</option>
+	<option id="15508">
+		<skills>
+			<skill id="3182" level="6"/>
+		</skills>
+	</option>
+	<option id="15509">
+		<skills>
+			<skill id="3191" level="6"/>
+		</skills>
+	</option>
+	<option id="15510">
+		<skills>
+			<skill id="3187" level="6"/>
+		</skills>
+	</option>
+	<option id="15511">
+		<skills>
+			<skill id="3189" level="6"/>
+		</skills>
+	</option>
+	<option id="15512">
+		<skills>
+			<skill id="3176" level="6"/>
+		</skills>
+	</option>
+	<option id="15513">
+		<skills>
+			<skill id="3173" level="6"/>
+		</skills>
+	</option>
+	<option id="15514">
+		<skills>
+			<skill id="3177" level="6"/>
+		</skills>
+	</option>
+	<option id="15515">
+		<skills>
+			<skill id="3179" level="6"/>
+		</skills>
+	</option>
+	<option id="15516">
+		<skills>
+			<skill id="3178" level="6"/>
+		</skills>
+	</option>
+	<option id="15517">
+		<skills>
+			<skill id="3174" level="6"/>
+		</skills>
+	</option>
+	<option id="15518">
+		<skills>
+			<skill id="3175" level="6"/>
+		</skills>
+	</option>
+	<option id="15519">
+		<skills>
+			<skill id="3152" level="6"/>
+		</skills>
+	</option>
+	<option id="15520">
+		<skills>
+			<skill id="3193" level="6"/>
+		</skills>
+	</option>
+	<option id="15521">
+		<skills>
+			<skill id="3171" level="6"/>
+		</skills>
+	</option>
+	<option id="15522">
+		<skills>
+			<skill id="3155" level="6"/>
+		</skills>
+	</option>
+	<option id="15523">
+		<skills>
+			<skill id="3153" level="6"/>
+		</skills>
+	</option>
+	<option id="15524">
+		<skills>
+			<skill id="3167" level="6"/>
+		</skills>
+	</option>
+	<option id="15525">
+		<skills>
+			<skill id="3168" level="6"/>
+		</skills>
+	</option>
+	<option id="15526">
+		<triggers>
+			<trigger id="3084" level="6" type="ATTACK" chance="1.0"/>
+		</triggers>
+	</option>
+	<option id="15527">
+		<triggers>
+			<trigger id="3092" level="6" type="ATTACK" chance="1.0"/>
+		</triggers>
+	</option>
+	<option id="15528">
+		<triggers>
+			<trigger id="3090" level="6" type="ATTACK" chance="1.0"/>
+		</triggers>
+	</option>
+	<option id="15529">
+		<triggers>
+			<trigger id="3086" level="6" type="ATTACK" chance="1.0"/>
+		</triggers>
+	</option>
+	<option id="15530">
+		<triggers>
+			<trigger id="3091" level="6" type="ATTACK" chance="1.0"/>
+		</triggers>
+	</option>
+	<option id="15531">
+		<triggers>
+			<trigger id="3089" level="6" type="ATTACK" chance="1.0"/>
+		</triggers>
+	</option>
+	<option id="15532">
+		<triggers>
+			<trigger id="3112" level="6" type="CRIT" chance="5.0"/>
+		</triggers>
+	</option>
+	<option id="15533">
+		<triggers>
+			<trigger id="3120" level="6" type="CRIT" chance="5.0"/>
+		</triggers>
+	</option>
+	<option id="15534">
+		<triggers>
+			<trigger id="3118" level="6" type="CRIT" chance="5.0"/>
+		</triggers>
+	</option>
+	<option id="15535">
+		<triggers>
+			<trigger id="3114" level="6" type="CRIT" chance="5.0"/>
+		</triggers>
+	</option>
+	<option id="15536">
+		<triggers>
+			<trigger id="3119" level="6" type="CRIT" chance="5.0"/>
+		</triggers>
+	</option>
+	<option id="15537">
+		<triggers>
+			<trigger id="3117" level="6" type="CRIT" chance="5.0"/>
+		</triggers>
+	</option>
+	<option id="15538">
+		<skills>
+			<skill id="3227" level="6"/>
+		</skills>
+	</option>
+	<option id="15539">
+		<skills>
+			<skill id="3221" level="6"/>
+		</skills>
+	</option>
+	<option id="15540">
+		<skills>
+			<skill id="3235" level="6"/>
+		</skills>
+	</option>
+	<option id="15541">
+		<skills>
+			<skill id="3213" level="6"/>
+		</skills>
+	</option>
+	<option id="15542">
+		<skills>
+			<skill id="3223" level="6"/>
+		</skills>
+	</option>
+	<option id="15543">
+		<skills>
+			<skill id="3225" level="6"/>
+		</skills>
+	</option>
+	<option id="15544">
+		<skills>
+			<skill id="3222" level="6"/>
+		</skills>
+	</option>
+	<option id="15545">
+		<skills>
+			<skill id="3229" level="6"/>
+		</skills>
+	</option>
+	<option id="15546">
+		<skills>
+			<skill id="3209" level="6"/>
+		</skills>
+	</option>
+	<option id="15547">
+		<skills>
+			<skill id="3207" level="6"/>
+		</skills>
+	</option>
+	<option id="15548">
+		<skills>
+			<skill id="3216" level="6"/>
+		</skills>
+	</option>
+	<option id="15549">
+		<skills>
+			<skill id="3224" level="6"/>
+		</skills>
+	</option>
+	<option id="15550">
+		<skills>
+			<skill id="3214" level="6"/>
+		</skills>
+	</option>
+	<option id="15551">
+		<skills>
+			<skill id="3208" level="6"/>
+		</skills>
+	</option>
+	<option id="15552">
+		<skills>
+			<skill id="3211" level="6"/>
+		</skills>
+	</option>
+	<option id="15553">
+		<skills>
+			<skill id="3219" level="6"/>
+		</skills>
+	</option>
+	<option id="15554">
+		<skills>
+			<skill id="3215" level="6"/>
+		</skills>
+	</option>
+	<option id="15555">
+		<skills>
+			<skill id="3218" level="6"/>
+		</skills>
+	</option>
+	<option id="15556">
+		<skills>
+			<skill id="3234" level="6"/>
+		</skills>
+	</option>
+	<option id="15557">
+		<skills>
+			<skill id="3220" level="6"/>
+		</skills>
+	</option>
+	<option id="15558">
+		<skills>
+			<skill id="3217" level="6"/>
+		</skills>
+	</option>
+	<option id="15559">
+		<skills>
+			<skill id="3230" level="6"/>
+		</skills>
+	</option>
+	<option id="15560">
+		<skills>
+			<skill id="3226" level="6"/>
+		</skills>
+	</option>
+	<option id="15561">
+		<triggers>
+			<trigger id="3097" level="6" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/>
+		</triggers>
+	</option>
+	<option id="15562">
+		<triggers>
+			<trigger id="3105" level="6" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/>
+		</triggers>
+	</option>
+	<option id="15563">
+		<triggers>
+			<trigger id="3103" level="6" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/>
+		</triggers>
+	</option>
+	<option id="15564">
+		<triggers>
+			<trigger id="3099" level="6" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/>
+		</triggers>
+	</option>
+	<option id="15565">
+		<triggers>
+			<trigger id="3104" level="6" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/>
+		</triggers>
+	</option>
+	<option id="15566">
+		<triggers>
+			<trigger id="3102" level="6" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="2.0"/>
+		</triggers>
+	</option>
+	<option id="15567">
+		<skills>
+			<skill id="3246" level="6"/>
+		</skills>
+	</option>
+	<option id="15568">
+		<skills>
+			<skill id="3238" level="6"/>
+		</skills>
+	</option>
+	<option id="15569">
+		<skills>
+			<skill id="3241" level="6"/>
+		</skills>
+	</option>
+	<option id="15570">
+		<skills>
+			<skill id="3245" level="6"/>
+		</skills>
+	</option>
+	<option id="15571">
+		<skills>
+			<skill id="3240" level="6"/>
+		</skills>
+	</option>
+	<option id="15572">
+		<skills>
+			<skill id="3244" level="6"/>
+		</skills>
+	</option>
+	<option id="15573">
+		<skills>
+			<skill id="3243" level="6"/>
+		</skills>
+	</option>
+	<option id="15574">
+		<skills>
+			<skill id="3251" level="6"/>
+		</skills>
+	</option>
+	<option id="15575">
+		<skills>
+			<skill id="3202" level="1"/>
+		</skills>
+	</option>
+	<option id="15576">
+		<skills>
+			<skill id="3164" level="1"/>
+		</skills>
+	</option>
+	<option id="15577">
+		<skills>
+			<skill id="3141" level="6"/>
+		</skills>
+	</option>
+	<option id="15578">
+		<skills>
+			<skill id="3204" level="1"/>
+		</skills>
+	</option>
+	<option id="15579">
+		<skills>
+			<skill id="3198" level="6"/>
+		</skills>
+	</option>
+	<option id="15580">
+		<skills>
+			<skill id="3147" level="1"/>
+		</skills>
+	</option>
+	<option id="15581">
+		<skills>
+			<skill id="3158" level="1"/>
+		</skills>
+	</option>
+	<option id="15582">
+		<skills>
+			<skill id="3142" level="6"/>
+		</skills>
+	</option>
+	<option id="15583">
+		<skills>
+			<skill id="3205" level="2"/>
+		</skills>
+	</option>
+	<option id="15584">
+		<skills>
+			<skill id="3197" level="6"/>
+		</skills>
+	</option>
+	<option id="15585">
+		<skills>
+			<skill id="3199" level="1"/>
+		</skills>
+	</option>
+	<option id="15586">
+		<skills>
+			<skill id="3161" level="1"/>
+		</skills>
+	</option>
+	<option id="15587">
+		<skills>
+			<skill id="3201" level="1"/>
+		</skills>
+	</option>
+	<option id="15588">
+		<skills>
+			<skill id="3163" level="1"/>
+		</skills>
+	</option>
+	<option id="15589">
+		<skills>
+			<skill id="3200" level="1"/>
+		</skills>
+	</option>
+	<option id="15590">
+		<skills>
+			<skill id="3162" level="1"/>
+		</skills>
+	</option>
+	<option id="15591">
+		<skills>
+			<skill id="3159" level="1"/>
+		</skills>
+	</option>
+	<option id="15592">
+		<skills>
+			<skill id="3148" level="6"/>
+		</skills>
+	</option>
+	<option id="15593">
+		<triggers>
+			<trigger id="3094" level="6" type="ATTACK" chance="1.0"/>
+		</triggers>
+	</option>
+	<option id="15594">
+		<triggers>
+			<trigger id="3082" level="6" type="ATTACK" chance="1.0"/>
+		</triggers>
+	</option>
+	<option id="15595">
+		<triggers>
+			<trigger id="3088" level="6" type="ATTACK" chance="1.0"/>
+		</triggers>
+	</option>
+	<option id="15596">
+		<triggers>
+			<trigger id="3093" level="6" type="ATTACK" chance="1.0"/>
+		</triggers>
+	</option>
+	<option id="15597">
+		<triggers>
+			<trigger id="3087" level="6" type="ATTACK" chance="1.0"/>
+		</triggers>
+	</option>
+	<option id="15598">
+		<triggers>
+			<trigger id="3085" level="6" type="ATTACK" chance="1.0"/>
+		</triggers>
+	</option>
+	<option id="15599">
+		<triggers>
+			<trigger id="3122" level="6" type="CRIT" chance="5.0"/>
+		</triggers>
+	</option>
+</list>

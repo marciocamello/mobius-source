@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<list>
+	<config showall="false" notax="true" nokey="true" keepenchanted="false"/>
+	<item>
+		<ingredient id="8869" count="1"/>
+		<production id="8821" count="1"/>
+	</item>
+	<item>
+		<ingredient id="8869" count="1"/>
+		<production id="8822" count="1"/>
+	</item>
+	<item>
+		<ingredient id="8869" count="1"/>
+		<production id="8823" count="1"/>
+	</item>
+	<item>
+		<ingredient id="8869" count="1"/>
+		<production id="8824" count="1"/>
+	</item>
+	<item>
+		<ingredient id="8869" count="1"/>
+		<production id="8825" count="1"/>
+	</item>
+	<item>
+		<ingredient id="8869" count="1"/>
+		<production id="8826" count="1"/>
+	</item>
+	<item>
+		<ingredient id="8869" count="1"/>
+		<production id="8827" count="1"/>
+	</item>
+	<item>
+		<ingredient id="8869" count="1"/>
+		<production id="8828" count="1"/>
+	</item>
+	<item>
+		<ingredient id="8869" count="1"/>
+		<production id="8829" count="1"/>
+	</item>
+	<item>
+		<ingredient id="8870" count="1"/>
+		<production id="8926" count="1"/>
+	</item>
+	<item>
+		<ingredient id="8870" count="1"/>
+		<production id="8927" count="1"/>
+	</item>
+	<item>
+		<ingredient id="8870" count="1"/>
+		<production id="8928" count="1"/>
+	</item>
+	<item>
+		<ingredient id="8870" count="1"/>
+		<production id="8929" count="1"/>
+	</item>
+	<item>
+		<ingredient id="8870" count="1"/>
+		<production id="8930" count="1"/>
+	</item>
+	<item>
+		<ingredient id="8870" count="1"/>
+		<production id="8931" count="1"/>
+	</item>
+	<item>
+		<ingredient id="8870" count="1"/>
+		<production id="8932" count="1"/>
+	</item>
+	<item>
+		<ingredient id="8870" count="1"/>
+		<production id="8933" count="1"/>
+	</item>
+	<item>
+		<ingredient id="8870" count="1"/>
+		<production id="8934" count="1"/>
+	</item>
+	<item>
+		<ingredient id="8870" count="1"/>
+		<production id="10011" count="1"/>
+	</item>
+	<item>
+		<ingredient id="8870" count="1"/>
+		<production id="8937" count="1"/>
+	</item>
+</list>

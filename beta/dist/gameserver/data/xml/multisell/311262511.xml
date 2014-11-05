@@ -1,0 +1,2654 @@
+<?xml version="1.0"?>
+<list>
+	<config showall="false" notax="true" keepenchanted="true"/>
+	<item>
+		<ingredient count="1" id="156"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="86"/>
+	</item>
+	<item>
+		<ingredient count="1" id="156"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="179"/>
+	</item>
+	<item>
+		<ingredient count="1" id="156"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="180"/>
+	</item>
+	<item>
+		<ingredient count="1" id="156"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="181"/>
+	</item>
+	<item>
+		<ingredient count="1" id="156"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="182"/>
+	</item>
+	<item>
+		<ingredient count="1" id="166"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="86"/>
+	</item>
+	<item>
+		<ingredient count="1" id="166"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="179"/>
+	</item>
+	<item>
+		<ingredient count="1" id="166"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="180"/>
+	</item>
+	<item>
+		<ingredient count="1" id="166"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="181"/>
+	</item>
+	<item>
+		<ingredient count="1" id="166"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="182"/>
+	</item>
+	<item>
+		<ingredient count="1" id="167"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="86"/>
+	</item>
+	<item>
+		<ingredient count="1" id="167"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="179"/>
+	</item>
+	<item>
+		<ingredient count="1" id="167"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="180"/>
+	</item>
+	<item>
+		<ingredient count="1" id="167"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="181"/>
+	</item>
+	<item>
+		<ingredient count="1" id="167"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="182"/>
+	</item>
+	<item>
+		<ingredient count="1" id="168"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="86"/>
+	</item>
+	<item>
+		<ingredient count="1" id="168"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="179"/>
+	</item>
+	<item>
+		<ingredient count="1" id="168"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="180"/>
+	</item>
+	<item>
+		<ingredient count="1" id="168"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="181"/>
+	</item>
+	<item>
+		<ingredient count="1" id="168"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="182"/>
+	</item>
+	<item>
+		<ingredient count="1" id="178"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="183"/>
+	</item>
+	<item>
+		<ingredient count="1" id="178"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="184"/>
+	</item>
+	<item>
+		<ingredient count="1" id="178"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="185"/>
+	</item>
+	<item>
+		<ingredient count="1" id="86"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="157"/>
+	</item>
+	<item>
+		<ingredient count="1" id="179"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="157"/>
+	</item>
+	<item>
+		<ingredient count="1" id="180"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="157"/>
+	</item>
+	<item>
+		<ingredient count="1" id="181"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="157"/>
+	</item>
+	<item>
+		<ingredient count="1" id="182"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="157"/>
+	</item>
+	<item>
+		<ingredient count="1" id="183"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="186"/>
+	</item>
+	<item>
+		<ingredient count="1" id="184"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="186"/>
+	</item>
+	<item>
+		<ingredient count="1" id="185"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="186"/>
+	</item>
+	<item>
+		<ingredient count="1" id="157"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="88"/>
+	</item>
+	<item>
+		<ingredient count="1" id="157"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="158"/>
+	</item>
+	<item>
+		<ingredient count="1" id="157"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="169"/>
+	</item>
+	<item>
+		<ingredient count="1" id="157"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="172"/>
+	</item>
+	<item>
+		<ingredient count="1" id="186"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="90"/>
+	</item>
+	<item>
+		<ingredient count="1" id="88"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="159"/>
+	</item>
+	<item>
+		<ingredient count="1" id="88"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="189"/>
+	</item>
+	<item>
+		<ingredient count="1" id="90"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="187"/>
+	</item>
+	<item>
+		<ingredient count="1" id="90"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="188"/>
+	</item>
+	<item>
+		<ingredient count="1" id="90"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="190"/>
+	</item>
+	<item>
+		<ingredient count="1" id="158"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="159"/>
+	</item>
+	<item>
+		<ingredient count="1" id="158"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="189"/>
+	</item>
+	<item>
+		<ingredient count="1" id="169"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="159"/>
+	</item>
+	<item>
+		<ingredient count="1" id="169"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="189"/>
+	</item>
+	<item>
+		<ingredient count="1" id="172"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="159"/>
+	</item>
+	<item>
+		<ingredient count="1" id="172"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="189"/>
+	</item>
+	<item>
+		<ingredient count="1" id="159"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="89"/>
+	</item>
+	<item>
+		<ingredient count="1" id="159"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="160"/>
+	</item>
+	<item>
+		<ingredient count="1" id="159"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="161"/>
+	</item>
+	<item>
+		<ingredient count="1" id="159"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="173"/>
+	</item>
+	<item>
+		<ingredient count="1" id="159"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="193"/>
+	</item>
+	<item>
+		<ingredient count="1" id="187"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="191"/>
+	</item>
+	<item>
+		<ingredient count="1" id="187"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="192"/>
+	</item>
+	<item>
+		<ingredient count="1" id="187"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="194"/>
+	</item>
+	<item>
+		<ingredient count="1" id="188"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="191"/>
+	</item>
+	<item>
+		<ingredient count="1" id="188"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="192"/>
+	</item>
+	<item>
+		<ingredient count="1" id="188"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="194"/>
+	</item>
+	<item>
+		<ingredient count="1" id="189"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="89"/>
+	</item>
+	<item>
+		<ingredient count="1" id="189"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="160"/>
+	</item>
+	<item>
+		<ingredient count="1" id="189"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="161"/>
+	</item>
+	<item>
+		<ingredient count="1" id="189"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="173"/>
+	</item>
+	<item>
+		<ingredient count="1" id="189"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="193"/>
+	</item>
+	<item>
+		<ingredient count="1" id="190"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="191"/>
+	</item>
+	<item>
+		<ingredient count="1" id="190"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="192"/>
+	</item>
+	<item>
+		<ingredient count="1" id="190"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="194"/>
+	</item>
+	<item>
+		<ingredient count="1" id="89"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="2502"/>
+	</item>
+	<item>
+		<ingredient count="1" id="160"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="2502"/>
+	</item>
+	<item>
+		<ingredient count="1" id="161"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="2502"/>
+	</item>
+	<item>
+		<ingredient count="1" id="173"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="2502"/>
+	</item>
+	<item>
+		<ingredient count="1" id="191"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="195"/>
+	</item>
+	<item>
+		<ingredient count="1" id="192"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="195"/>
+	</item>
+	<item>
+		<ingredient count="1" id="193"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="2502"/>
+	</item>
+	<item>
+		<ingredient count="1" id="194"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="195"/>
+	</item>
+	<item>
+		<ingredient count="1" id="195"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="197"/>
+	</item>
+	<item>
+		<ingredient count="1" id="195"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="198"/>
+	</item>
+	<item>
+		<ingredient count="1" id="195"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="199"/>
+	</item>
+	<item>
+		<ingredient count="1" id="195"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="200"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2502"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="162"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2502"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="174"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2502"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="196"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2502"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="201"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2502"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="202"/>
+	</item>
+	<item>
+		<ingredient count="1" id="162"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="2503"/>
+	</item>
+	<item>
+		<ingredient count="1" id="174"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="2503"/>
+	</item>
+	<item>
+		<ingredient count="1" id="196"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="2503"/>
+	</item>
+	<item>
+		<ingredient count="1" id="197"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="204"/>
+	</item>
+	<item>
+		<ingredient count="1" id="197"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="205"/>
+	</item>
+	<item>
+		<ingredient count="1" id="197"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="206"/>
+	</item>
+	<item>
+		<ingredient count="1" id="198"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="204"/>
+	</item>
+	<item>
+		<ingredient count="1" id="198"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="205"/>
+	</item>
+	<item>
+		<ingredient count="1" id="198"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="206"/>
+	</item>
+	<item>
+		<ingredient count="1" id="199"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="204"/>
+	</item>
+	<item>
+		<ingredient count="1" id="199"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="205"/>
+	</item>
+	<item>
+		<ingredient count="1" id="199"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="206"/>
+	</item>
+	<item>
+		<ingredient count="1" id="200"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="204"/>
+	</item>
+	<item>
+		<ingredient count="1" id="200"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="205"/>
+	</item>
+	<item>
+		<ingredient count="1" id="200"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="206"/>
+	</item>
+	<item>
+		<ingredient count="1" id="201"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="2503"/>
+	</item>
+	<item>
+		<ingredient count="1" id="202"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="2503"/>
+	</item>
+	<item>
+		<ingredient count="1" id="203"/>
+		<ingredient count="1620000" id="5575"/>
+		<production count="1" id="204"/>
+	</item>
+	<item>
+		<ingredient count="1" id="203"/>
+		<ingredient count="1620000" id="5575"/>
+		<production count="1" id="205"/>
+	</item>
+	<item>
+		<ingredient count="1" id="203"/>
+		<ingredient count="1620000" id="5575"/>
+		<production count="1" id="206"/>
+	</item>
+	<item>
+		<ingredient count="1" id="274"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="275"/>
+	</item>
+	<item>
+		<ingredient count="1" id="274"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="276"/>
+	</item>
+	<item>
+		<ingredient count="1" id="274"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="277"/>
+	</item>
+	<item>
+		<ingredient count="1" id="275"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="278"/>
+	</item>
+	<item>
+		<ingredient count="1" id="276"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="278"/>
+	</item>
+	<item>
+		<ingredient count="1" id="277"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="278"/>
+	</item>
+	<item>
+		<ingredient count="1" id="278"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="279"/>
+	</item>
+	<item>
+		<ingredient count="1" id="279"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="280"/>
+	</item>
+	<item>
+		<ingredient count="1" id="280"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="281"/>
+	</item>
+	<item>
+		<ingredient count="1" id="281"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="282"/>
+	</item>
+	<item>
+		<ingredient count="1" id="281"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="285"/>
+	</item>
+	<item>
+		<ingredient count="1" id="282"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="283"/>
+	</item>
+	<item>
+		<ingredient count="1" id="285"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="283"/>
+	</item>
+	<item>
+		<ingredient count="1" id="283"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="286"/>
+	</item>
+	<item>
+		<ingredient count="1" id="220"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="222"/>
+	</item>
+	<item>
+		<ingredient count="1" id="221"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="222"/>
+	</item>
+	<item>
+		<ingredient count="1" id="222"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="223"/>
+	</item>
+	<item>
+		<ingredient count="1" id="222"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="238"/>
+	</item>
+	<item>
+		<ingredient count="1" id="222"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="239"/>
+	</item>
+	<item>
+		<ingredient count="1" id="222"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="240"/>
+	</item>
+	<item>
+		<ingredient count="1" id="222"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="241"/>
+	</item>
+	<item>
+		<ingredient count="1" id="223"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="224"/>
+	</item>
+	<item>
+		<ingredient count="1" id="223"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="1660"/>
+	</item>
+	<item>
+		<ingredient count="1" id="238"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="224"/>
+	</item>
+	<item>
+		<ingredient count="1" id="238"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="1660"/>
+	</item>
+	<item>
+		<ingredient count="1" id="239"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="224"/>
+	</item>
+	<item>
+		<ingredient count="1" id="239"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="1660"/>
+	</item>
+	<item>
+		<ingredient count="1" id="240"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="224"/>
+	</item>
+	<item>
+		<ingredient count="1" id="240"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="1660"/>
+	</item>
+	<item>
+		<ingredient count="1" id="241"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="224"/>
+	</item>
+	<item>
+		<ingredient count="1" id="241"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="1660"/>
+	</item>
+	<item>
+		<ingredient count="1" id="224"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="225"/>
+	</item>
+	<item>
+		<ingredient count="1" id="1660"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="225"/>
+	</item>
+	<item>
+		<ingredient count="1" id="225"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="226"/>
+	</item>
+	<item>
+		<ingredient count="1" id="225"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="232"/>
+	</item>
+	<item>
+		<ingredient count="1" id="226"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="227"/>
+	</item>
+	<item>
+		<ingredient count="1" id="226"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="242"/>
+	</item>
+	<item>
+		<ingredient count="1" id="230"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="227"/>
+	</item>
+	<item>
+		<ingredient count="1" id="230"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="242"/>
+	</item>
+	<item>
+		<ingredient count="1" id="232"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="227"/>
+	</item>
+	<item>
+		<ingredient count="1" id="232"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="242"/>
+	</item>
+	<item>
+		<ingredient count="1" id="227"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="231"/>
+	</item>
+	<item>
+		<ingredient count="1" id="227"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="233"/>
+	</item>
+	<item>
+		<ingredient count="1" id="242"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="231"/>
+	</item>
+	<item>
+		<ingredient count="1" id="242"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="233"/>
+	</item>
+	<item>
+		<ingredient count="1" id="231"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="228"/>
+	</item>
+	<item>
+		<ingredient count="1" id="233"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="228"/>
+	</item>
+	<item>
+		<ingredient count="1" id="258"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="259"/>
+	</item>
+	<item>
+		<ingredient count="1" id="259"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="260"/>
+	</item>
+	<item>
+		<ingredient count="1" id="260"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="261"/>
+	</item>
+	<item>
+		<ingredient count="1" id="261"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="262"/>
+	</item>
+	<item>
+		<ingredient count="1" id="262"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="263"/>
+	</item>
+	<item>
+		<ingredient count="1" id="263"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="4233"/>
+	</item>
+	<item>
+		<ingredient count="1" id="4233"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="265"/>
+	</item>
+	<item>
+		<ingredient count="1" id="265"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="266"/>
+	</item>
+	<item>
+		<ingredient count="1" id="101"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="315"/>
+	</item>
+	<item>
+		<ingredient count="1" id="312"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="315"/>
+	</item>
+	<item>
+		<ingredient count="1" id="313"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="315"/>
+	</item>
+	<item>
+		<ingredient count="1" id="314"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="315"/>
+	</item>
+	<item>
+		<ingredient count="1" id="315"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="316"/>
+	</item>
+	<item>
+		<ingredient count="1" id="315"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="317"/>
+	</item>
+	<item>
+		<ingredient count="1" id="316"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="318"/>
+	</item>
+	<item>
+		<ingredient count="1" id="317"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="318"/>
+	</item>
+	<item>
+		<ingredient count="1" id="325"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="326"/>
+	</item>
+	<item>
+		<ingredient count="1" id="291"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="292"/>
+	</item>
+	<item>
+		<ingredient count="1" id="291"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="295"/>
+	</item>
+	<item>
+		<ingredient count="1" id="292"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="293"/>
+	</item>
+	<item>
+		<ingredient count="1" id="292"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="296"/>
+	</item>
+	<item>
+		<ingredient count="1" id="295"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="293"/>
+	</item>
+	<item>
+		<ingredient count="1" id="295"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="296"/>
+	</item>
+	<item>
+		<ingredient count="1" id="293"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="93"/>
+	</item>
+	<item>
+		<ingredient count="1" id="293"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="294"/>
+	</item>
+	<item>
+		<ingredient count="1" id="296"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="93"/>
+	</item>
+	<item>
+		<ingredient count="1" id="296"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="294"/>
+	</item>
+	<item>
+		<ingredient count="1" id="93"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="297"/>
+	</item>
+	<item>
+		<ingredient count="1" id="294"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="297"/>
+	</item>
+	<item>
+		<ingredient count="1" id="297"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="96"/>
+	</item>
+	<item>
+		<ingredient count="1" id="297"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="298"/>
+	</item>
+	<item>
+		<ingredient count="1" id="297"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="302"/>
+	</item>
+	<item>
+		<ingredient count="1" id="96"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="94"/>
+	</item>
+	<item>
+		<ingredient count="1" id="298"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="94"/>
+	</item>
+	<item>
+		<ingredient count="1" id="302"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="94"/>
+	</item>
+	<item>
+		<ingredient count="1" id="94"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="95"/>
+	</item>
+	<item>
+		<ingredient count="1" id="95"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="299"/>
+	</item>
+	<item>
+		<ingredient count="1" id="301"/>
+		<ingredient count="1620000" id="5575"/>
+		<production count="1" id="299"/>
+	</item>
+	<item>
+		<ingredient count="1" id="303"/>
+		<ingredient count="1620000" id="5575"/>
+		<production count="1" id="299"/>
+	</item>
+	<item>
+		<ingredient count="1" id="123"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="69"/>
+	</item>
+	<item>
+		<ingredient count="1" id="123"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="125"/>
+	</item>
+	<item>
+		<ingredient count="1" id="123"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="126"/>
+	</item>
+	<item>
+		<ingredient count="1" id="123"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="128"/>
+	</item>
+	<item>
+		<ingredient count="1" id="69"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="127"/>
+	</item>
+	<item>
+		<ingredient count="1" id="69"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="130"/>
+	</item>
+	<item>
+		<ingredient count="1" id="125"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="127"/>
+	</item>
+	<item>
+		<ingredient count="1" id="125"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="130"/>
+	</item>
+	<item>
+		<ingredient count="1" id="126"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="127"/>
+	</item>
+	<item>
+		<ingredient count="1" id="126"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="130"/>
+	</item>
+	<item>
+		<ingredient count="1" id="128"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="127"/>
+	</item>
+	<item>
+		<ingredient count="1" id="128"/>
+		<ingredient count="387600" id="5575"/>
+		<production count="1" id="130"/>
+	</item>
+	<item>
+		<ingredient count="1" id="127"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="129"/>
+	</item>
+	<item>
+		<ingredient count="1" id="130"/>
+		<ingredient count="519600" id="5575"/>
+		<production count="1" id="129"/>
+	</item>
+	<item>
+		<ingredient count="1" id="129"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="2499"/>
+	</item>
+	<item>
+		<ingredient count="1" id="70"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="71"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2499"/>
+		<ingredient count="588000" id="5575"/>
+		<production count="1" id="72"/>
+	</item>
+	<item>
+		<ingredient count="1" id="72"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="73"/>
+	</item>
+	<item>
+		<ingredient count="1" id="72"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="74"/>
+	</item>
+	<item>
+		<ingredient count="1" id="72"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="131"/>
+	</item>
+	<item>
+		<ingredient count="1" id="72"/>
+		<ingredient count="696000" id="5575"/>
+		<production count="1" id="133"/>
+	</item>
+	<item>
+		<ingredient count="1" id="73"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="75"/>
+	</item>
+	<item>
+		<ingredient count="1" id="73"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="76"/>
+	</item>
+	<item>
+		<ingredient count="1" id="73"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="77"/>
+	</item>
+	<item>
+		<ingredient count="1" id="73"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="84"/>
+	</item>
+	<item>
+		<ingredient count="1" id="73"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="132"/>
+	</item>
+	<item>
+		<ingredient count="1" id="73"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="134"/>
+	</item>
+	<item>
+		<ingredient count="1" id="73"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="145"/>
+	</item>
+	<item>
+		<ingredient count="1" id="74"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="75"/>
+	</item>
+	<item>
+		<ingredient count="1" id="74"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="76"/>
+	</item>
+	<item>
+		<ingredient count="1" id="74"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="77"/>
+	</item>
+	<item>
+		<ingredient count="1" id="74"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="84"/>
+	</item>
+	<item>
+		<ingredient count="1" id="74"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="132"/>
+	</item>
+	<item>
+		<ingredient count="1" id="74"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="134"/>
+	</item>
+	<item>
+		<ingredient count="1" id="74"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="145"/>
+	</item>
+	<item>
+		<ingredient count="1" id="131"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="75"/>
+	</item>
+	<item>
+		<ingredient count="1" id="131"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="76"/>
+	</item>
+	<item>
+		<ingredient count="1" id="131"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="77"/>
+	</item>
+	<item>
+		<ingredient count="1" id="131"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="84"/>
+	</item>
+	<item>
+		<ingredient count="1" id="131"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="132"/>
+	</item>
+	<item>
+		<ingredient count="1" id="131"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="134"/>
+	</item>
+	<item>
+		<ingredient count="1" id="131"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="145"/>
+	</item>
+	<item>
+		<ingredient count="1" id="133"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="75"/>
+	</item>
+	<item>
+		<ingredient count="1" id="133"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="76"/>
+	</item>
+	<item>
+		<ingredient count="1" id="133"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="77"/>
+	</item>
+	<item>
+		<ingredient count="1" id="133"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="84"/>
+	</item>
+	<item>
+		<ingredient count="1" id="133"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="132"/>
+	</item>
+	<item>
+		<ingredient count="1" id="133"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="134"/>
+	</item>
+	<item>
+		<ingredient count="1" id="133"/>
+		<ingredient count="1716000" id="5575"/>
+		<production count="1" id="145"/>
+	</item>
+	<item>
+		<ingredient count="1" id="75"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="135"/>
+	</item>
+	<item>
+		<ingredient count="1" id="76"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="135"/>
+	</item>
+	<item>
+		<ingredient count="1" id="77"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="135"/>
+	</item>
+	<item>
+		<ingredient count="1" id="84"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="135"/>
+	</item>
+	<item>
+		<ingredient count="1" id="132"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="135"/>
+	</item>
+	<item>
+		<ingredient count="1" id="134"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="135"/>
+	</item>
+	<item>
+		<ingredient count="1" id="145"/>
+		<ingredient count="2196000" id="5575"/>
+		<production count="1" id="135"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2516"/>
+		<ingredient count="219600" id="5575"/>
+		<production count="1" id="2517"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2516"/>
+		<ingredient count="219600" id="5575"/>
+		<production count="1" id="2518"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2516"/>
+		<ingredient count="219600" id="5575"/>
+		<production count="1" id="2519"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2516"/>
+		<ingredient count="219600" id="5575"/>
+		<production count="1" id="2520"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2517"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2521"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2517"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2522"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2517"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2525"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2517"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2526"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2517"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2527"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2517"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2528"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2517"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2533"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2517"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2534"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2517"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2535"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2517"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2540"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2517"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2541"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2517"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2546"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2518"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2521"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2518"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2522"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2518"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2525"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2518"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2526"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2518"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2527"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2518"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2528"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2518"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2533"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2518"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2534"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2518"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2535"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2518"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2540"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2518"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2541"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2518"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2546"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2519"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2521"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2519"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2522"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2519"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2525"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2519"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2526"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2519"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2527"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2519"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2528"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2519"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2533"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2519"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2534"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2519"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2535"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2519"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2540"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2519"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2541"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2519"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2546"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2520"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2521"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2520"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2522"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2520"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2525"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2520"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2526"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2520"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2527"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2520"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2528"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2520"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2533"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2520"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2534"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2520"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2535"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2520"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2540"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2520"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2541"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2520"/>
+		<ingredient count="408000" id="5575"/>
+		<production count="1" id="2546"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2521"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2529"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2521"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2530"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2521"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2536"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2521"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2537"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2521"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2542"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2521"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2543"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2521"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2547"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2521"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2548"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2522"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2529"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2522"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2530"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2522"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2536"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2522"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2537"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2522"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2542"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2522"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2543"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2522"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2547"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2522"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2548"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2525"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2529"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2525"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2530"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2525"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2536"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2525"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2537"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2525"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2542"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2525"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2543"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2525"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2547"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2525"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2548"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2526"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2529"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2526"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2530"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2526"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2536"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2526"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2537"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2526"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2542"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2526"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2543"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2526"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2547"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2526"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2548"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2527"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2529"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2527"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2530"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2527"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2536"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2527"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2537"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2527"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2542"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2527"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2543"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2527"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2547"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2527"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2548"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2528"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2529"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2528"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2530"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2528"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2536"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2528"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2537"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2528"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2542"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2528"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2543"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2528"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2547"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2528"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2548"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2533"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2529"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2533"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2530"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2533"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2536"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2533"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2537"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2533"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2542"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2533"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2543"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2533"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2547"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2533"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2548"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2534"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2529"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2534"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2530"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2534"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2536"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2534"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2537"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2534"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2542"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2534"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2543"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2534"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2547"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2534"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2548"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2535"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2529"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2535"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2530"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2535"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2536"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2535"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2537"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2535"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2542"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2535"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2543"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2535"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2547"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2535"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2548"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2540"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2529"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2540"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2530"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2540"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2536"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2540"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2537"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2540"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2542"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2540"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2543"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2540"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2547"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2540"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2548"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2541"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2529"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2541"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2530"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2541"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2536"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2541"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2537"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2541"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2542"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2541"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2543"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2541"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2547"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2541"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2548"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2546"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2529"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2546"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2530"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2546"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2536"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2546"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2537"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2546"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2542"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2546"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2543"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2546"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2547"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2546"/>
+		<ingredient count="312000" id="5575"/>
+		<production count="1" id="2548"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2529"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2523"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2529"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2551"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2529"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2552"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2529"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2555"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2530"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2523"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2530"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2551"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2530"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2552"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2530"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2555"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2536"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2523"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2536"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2551"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2536"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2552"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2536"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2555"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2537"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2523"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2537"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2551"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2537"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2552"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2537"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2555"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2542"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2523"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2542"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2551"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2542"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2552"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2542"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2555"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2543"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2523"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2543"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2551"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2543"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2552"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2543"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2555"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2547"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2523"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2547"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2551"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2547"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2552"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2547"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2555"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2548"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2523"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2548"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2551"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2548"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2552"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2548"/>
+		<ingredient count="360000" id="5575"/>
+		<production count="1" id="2555"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2523"/>
+		<ingredient count="192000" id="5575"/>
+		<production count="1" id="2531"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2523"/>
+		<ingredient count="192000" id="5575"/>
+		<production count="1" id="2538"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2523"/>
+		<ingredient count="192000" id="5575"/>
+		<production count="1" id="2544"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2523"/>
+		<ingredient count="192000" id="5575"/>
+		<production count="1" id="2549"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2551"/>
+		<ingredient count="192000" id="5575"/>
+		<production count="1" id="2531"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2551"/>
+		<ingredient count="192000" id="5575"/>
+		<production count="1" id="2538"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2551"/>
+		<ingredient count="192000" id="5575"/>
+		<production count="1" id="2544"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2551"/>
+		<ingredient count="192000" id="5575"/>
+		<production count="1" id="2549"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2552"/>
+		<ingredient count="192000" id="5575"/>
+		<production count="1" id="2531"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2552"/>
+		<ingredient count="192000" id="5575"/>
+		<production count="1" id="2538"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2552"/>
+		<ingredient count="192000" id="5575"/>
+		<production count="1" id="2544"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2552"/>
+		<ingredient count="192000" id="5575"/>
+		<production count="1" id="2549"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2555"/>
+		<ingredient count="192000" id="5575"/>
+		<production count="1" id="2531"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2555"/>
+		<ingredient count="192000" id="5575"/>
+		<production count="1" id="2538"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2555"/>
+		<ingredient count="192000" id="5575"/>
+		<production count="1" id="2544"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2555"/>
+		<ingredient count="192000" id="5575"/>
+		<production count="1" id="2549"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2531"/>
+		<ingredient count="204000" id="5575"/>
+		<production count="1" id="2524"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2538"/>
+		<ingredient count="204000" id="5575"/>
+		<production count="1" id="2524"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2544"/>
+		<ingredient count="204000" id="5575"/>
+		<production count="1" id="2524"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2549"/>
+		<ingredient count="204000" id="5575"/>
+		<production count="1" id="2524"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2524"/>
+		<ingredient count="216000" id="5575"/>
+		<production count="1" id="2532"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2524"/>
+		<ingredient count="216000" id="5575"/>
+		<production count="1" id="2539"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2524"/>
+		<ingredient count="216000" id="5575"/>
+		<production count="1" id="2545"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2524"/>
+		<ingredient count="216000" id="5575"/>
+		<production count="1" id="2550"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2524"/>
+		<ingredient count="216000" id="5575"/>
+		<production count="1" id="2553"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2524"/>
+		<ingredient count="216000" id="5575"/>
+		<production count="1" id="2556"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2532"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="2554"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2532"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="2557"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2532"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="2558"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2539"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="2554"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2539"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="2557"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2539"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="2558"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2545"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="2554"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2545"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="2557"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2545"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="2558"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2550"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="2554"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2550"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="2557"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2550"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="2558"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2553"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="2554"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2553"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="2557"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2553"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="2558"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2556"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="2554"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2556"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="2557"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2556"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="2558"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2554"/>
+		<ingredient count="564000" id="5575"/>
+		<production count="1" id="2559"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2557"/>
+		<ingredient count="564000" id="5575"/>
+		<production count="1" id="2559"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2558"/>
+		<ingredient count="564000" id="5575"/>
+		<production count="1" id="2559"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2559"/>
+		<ingredient count="576000" id="5575"/>
+		<production count="1" id="2560"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2560"/>
+		<ingredient count="1152000" id="5575"/>
+		<production count="1" id="2561"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2561"/>
+		<ingredient count="600000" id="5575"/>
+		<production count="1" id="2562"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2561"/>
+		<ingredient count="600000" id="5575"/>
+		<production count="1" id="2563"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2561"/>
+		<ingredient count="600000" id="5575"/>
+		<production count="1" id="2564"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2561"/>
+		<ingredient count="600000" id="5575"/>
+		<production count="1" id="2565"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2562"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2572"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2562"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2573"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2562"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2574"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2562"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2575"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2562"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2582"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2562"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2583"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2562"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2584"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2562"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2591"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2562"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2592"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2562"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2599"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2563"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2572"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2563"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2573"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2563"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2574"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2563"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2575"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2563"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2582"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2563"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2583"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2563"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2584"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2563"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2591"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2563"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2592"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2563"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2599"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2564"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2572"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2564"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2573"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2564"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2574"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2564"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2575"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2564"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2582"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2564"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2583"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2564"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2584"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2564"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2591"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2564"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2592"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2564"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2599"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2565"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2572"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2565"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2573"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2565"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2574"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2565"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2575"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2565"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2582"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2565"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2583"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2565"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2584"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2565"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2591"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2565"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2592"/>
+	</item>
+	<item>
+		<ingredient count="1" id="2565"/>
+		<ingredient count="1020000" id="5575"/>
+		<production count="1" id="2599"/>
+	</item>
+	<item>
+		<ingredient count="1" id="7885"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="69"/>
+	</item>
+	<item>
+		<ingredient count="1" id="7885"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="125"/>
+	</item>
+	<item>
+		<ingredient count="1" id="7885"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="126"/>
+	</item>
+	<item>
+		<ingredient count="1" id="7885"/>
+		<ingredient count="282000" id="5575"/>
+		<production count="1" id="128"/>
+	</item>
+	<item>
+		<ingredient count="1" id="7881"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="70"/>
+	</item>
+	<item>
+		<ingredient count="1" id="7886"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="2499"/>
+	</item>
+	<item>
+		<ingredient count="1" id="7890"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="159"/>
+	</item>
+	<item>
+		<ingredient count="1" id="7890"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="189"/>
+	</item>
+	<item>
+		<ingredient count="1" id="7896"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="187"/>
+	</item>
+	<item>
+		<ingredient count="1" id="7896"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="188"/>
+	</item>
+	<item>
+		<ingredient count="1" id="7896"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="190"/>
+	</item>
+	<item>
+		<ingredient count="1" id="7898"/>
+		<ingredient count="480000" id="5575"/>
+		<production count="1" id="203"/>
+	</item>
+</list>

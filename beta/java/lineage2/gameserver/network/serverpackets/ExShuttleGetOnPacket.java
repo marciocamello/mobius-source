@@ -1,0 +1,45 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+package lineage2.gameserver.network.serverpackets;
+
+import lineage2.gameserver.model.Playable;
+import lineage2.gameserver.model.entity.boat.Shuttle;
+import lineage2.gameserver.utils.Location;
+
+/**
+ * @author Bonux
+ */
+public class ExShuttleGetOnPacket extends L2GameServerPacket
+{
+	private final int _playerObjectId;
+	private final int _shuttleId;
+	private final Location _loc;
+	
+	public ExShuttleGetOnPacket(Playable cha, Shuttle shuttle, Location loc)
+	{
+		_playerObjectId = cha.getObjectId();
+		_shuttleId = shuttle.getBoatId();
+		_loc = loc;
+	}
+	
+	@Override
+	protected final void writeImpl()
+	{
+		writeEx(0xCC);
+		writeD(_playerObjectId); // Player ObjID
+		writeD(_shuttleId); // Shuttle ID (Arkan: 1,2; Cruma: 3)
+		writeD(_loc.getX()); // X in shuttle
+		writeD(_loc.getY()); // Y in shuttle
+		writeD(_loc.getZ()); // Z in shuttle
+	}
+}

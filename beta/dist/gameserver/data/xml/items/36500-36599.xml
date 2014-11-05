@@ -1,0 +1,1072 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<weapon id="36500" name="Valakas Cutter" add_name="Top-grade">
+		<set name="weight" value="1520"/>
+		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<attributes>
+			<attribute element="fire" value="450"/>
+		</attributes>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<skills>
+			<skill id="8901" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8896" level="1"/>
+			<skill id="8895" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="2884"/>
+			<add stat="mAtk" order="0x10" value="1257"/>
+			<add stat="pAtkSpd" order="0x08" value="379"/>
+			<add stat="rCrit" order="0x08" value="80"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36501" name="Valakas Slasher" add_name="Top-grade">
+		<set name="weight" value="1740"/>
+		<set name="type" value="BIGSWORD"/>
+		<set name="ex_type" value="BIG_SWORD"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<attributes>
+			<attribute element="fire" value="450"/>
+		</attributes>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<skills>
+			<skill id="8901" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8896" level="1"/>
+			<skill id="8895" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="3509"/>
+			<add stat="mAtk" order="0x10" value="1257"/>
+			<add stat="pAtkSpd" order="0x08" value="325"/>
+			<add stat="rCrit" order="0x08" value="80"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36502" name="Valakas Thrower" add_name="Top-grade">
+		<set name="weight" value="1520"/>
+		<set name="type" value="BOW"/>
+		<set name="ex_type" value="BOW"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<attributes>
+			<attribute element="fire" value="450"/>
+		</attributes>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<skills>
+			<skill id="8901" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8896" level="1"/>
+			<skill id="8895" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="5678"/>
+			<add stat="mAtk" order="0x10" value="1257"/>
+			<add stat="pAtkSpd" order="0x08" value="293"/>
+			<add stat="accCombat" order="0x10" value="3.75"/>
+			<add stat="rCrit" order="0x08" value="120"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36503" name="Valakas Buster" add_name="Top-grade">
+		<set name="weight" value="1520"/>
+		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<attributes>
+			<attribute element="fire" value="450"/>
+		</attributes>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<skills>
+			<skill id="8903" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8896" level="1"/>
+			<skill id="8895" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="2307"/>
+			<add stat="mAtk" order="0x10" value="1676"/>
+			<add stat="pAtkSpd" order="0x08" value="379"/>
+			<add stat="rCrit" order="0x08" value="80"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36504" name="Valakas Caster" add_name="Top-grade">
+		<set name="weight" value="1080"/>
+		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BLUNT_WEAPON"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<attributes>
+			<attribute element="fire" value="450"/>
+		</attributes>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<skills>
+			<skill id="8903" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8896" level="1"/>
+			<skill id="8895" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="2307"/>
+			<add stat="mAtk" order="0x10" value="1676"/>
+			<add stat="pAtkSpd" order="0x08" value="379"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+			<add stat="rCrit" order="0x08" value="60"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36505" name="Valakas Retributer" add_name="Top-grade">
+		<set name="weight" value="1080"/>
+		<set name="type" value="BIGBLUNT"/>
+		<set name="ex_type" value="BIG_BLUNT_WEAPON"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<attributes>
+			<attribute element="fire" value="450"/>
+		</attributes>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<skills>
+			<skill id="8903" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8896" level="1"/>
+			<skill id="8895" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="2809"/>
+			<add stat="mAtk" order="0x10" value="1843"/>
+			<add stat="pAtkSpd" order="0x08" value="325"/>
+			<add stat="accCombat" order="0x10" value="8"/>
+			<add stat="rCrit" order="0x08" value="60"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36506" name="Lindvior Shaper" add_name="Top-grade">
+		<set name="weight" value="1520"/>
+		<set name="type" value="DAGGER"/>
+		<set name="ex_type" value="DAGGER"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<attributes>
+			<attribute element="wind" value="450"/>
+		</attributes>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<skills>
+			<skill id="8901" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8898" level="1"/>
+			<skill id="8899" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="2523"/>
+			<add stat="mAtk" order="0x10" value="1257"/>
+			<add stat="pAtkSpd" order="0x08" value="433"/>
+			<add stat="accCombat" order="0x10" value="3.75"/>
+			<add stat="rCrit" order="0x08" value="120"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36507" name="Lindvior Thrower" add_name="Top-grade">
+		<set name="weight" value="1520"/>
+		<set name="type" value="BOW"/>
+		<set name="ex_type" value="BOW"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<attributes>
+			<attribute element="wind" value="450"/>
+		</attributes>
+		<skills>
+			<skill id="8901" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8898" level="1"/>
+			<skill id="8899" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="5678"/>
+			<add stat="mAtk" order="0x10" value="1257"/>
+			<add stat="pAtkSpd" order="0x08" value="293"/>
+			<add stat="accCombat" order="0x10" value="3.75"/>
+			<add stat="rCrit" order="0x08" value="120"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36508" name="Lindvior Slasher" add_name="Top-grade">
+		<set name="weight" value="1740"/>
+		<set name="type" value="BIGSWORD"/>
+		<set name="ex_type" value="BIG_SWORD"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<attributes>
+			<attribute element="wind" value="450"/>
+		</attributes>
+		<skills>
+			<skill id="8901" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8898" level="1"/>
+			<skill id="8899" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="3509"/>
+			<add stat="mAtk" order="0x10" value="1257"/>
+			<add stat="pAtkSpd" order="0x08" value="325"/>
+			<add stat="rCrit" order="0x08" value="80"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36509" name="Lindvior Caster" add_name="Top-grade">
+		<set name="weight" value="1520"/>
+		<set name="type" value="BLUNT"/>
+		<set name="ex_type" value="BLUNT_WEAPON"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<attributes>
+			<attribute element="wind" value="450"/>
+		</attributes>
+		<skills>
+			<skill id="8903" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8898" level="1"/>
+			<skill id="8899" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="2307"/>
+			<add stat="mAtk" order="0x10" value="1676"/>
+			<add stat="pAtkSpd" order="0x08" value="379"/>
+			<add stat="rCrit" order="0x08" value="80"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36510" name="Lindvior Cutter" add_name="Top-grade">
+		<set name="weight" value="1520"/>
+		<set name="type" value="SWORD"/>
+		<set name="ex_type" value="SWORD"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="RIGHT_HAND"/>
+		</equip>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<attributes>
+			<attribute element="wind" value="450"/>
+		</attributes>
+		<skills>
+			<skill id="8901" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8898" level="1"/>
+			<skill id="8899" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="2884"/>
+			<add stat="mAtk" order="0x10" value="1257"/>
+			<add stat="pAtkSpd" order="0x08" value="379"/>
+			<add stat="rCrit" order="0x08" value="80"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36511" name="Lindvior Shooter" add_name="Top-grade">
+		<set name="weight" value="1580"/>
+		<set name="type" value="CROSSBOW"/>
+		<set name="ex_type" value="CROSSBOW"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>
+		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<attributes>
+			<attribute element="wind" value="450"/>
+		</attributes>
+		<skills>
+			<skill id="8901" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8898" level="1"/>
+			<skill id="8899" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="5678"/>
+			<add stat="mAtk" order="0x10" value="1257"/>
+			<add stat="pAtkSpd" order="0x08" value="325"/>
+			<add stat="accCombat" order="0x10" value="3.75"/>
+			<add stat="rCrit" order="0x08" value="120"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<weapon id="36512" name="Lindvior Dual Dagger" add_name="Top-grade">
+		<set name="weight" value="2050"/>
+		<set name="type" value="DUALDAGGER"/>
+		<set name="ex_type" value="DUAL_DAGGER"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="dropable" value="true"/>
+		<set name="sellable" value="true"/>		<set name="tradeable" value="true"/>
+		<set name="soulshots" value="1"/>
+		<set name="crystal_count" value="2352"/>
+		<set name="spiritshots" value="1"/>
+		<set name="price" value="0"/>
+		<equip>
+			<slot id="LEFT_RIGHT_HAND"/>
+		</equip>
+		<cond msgId="1507">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+		<attributes>
+			<attribute element="wind" value="450"/>
+		</attributes>
+		<skills>
+			<skill id="8901" level="1"/>
+			<skill id="8890" level="1"/>
+			<skill id="8898" level="1"/>
+			<skill id="8899" level="1"/>
+		</skills>
+		<for>
+			<add stat="pAtk" order="0x10" value="2523"/>
+			<add stat="mAtk" order="0x10" value="1257"/>
+			<add stat="pAtkSpd" order="0x08" value="433"/>
+			<add stat="accCombat" order="0x10" value="3.75"/>
+			<add stat="rCrit" order="0x08" value="120"/>
+			<enchant stat="pAtk" order="0x0C" value="0"/>
+			<enchant stat="mAtk" order="0x0C" value="0"/>
+		</for>
+	</weapon>
+	<etcitem id="36513" name="Elcyum Powder">
+		<set name="icon" value="icon.etc_broken_crystal_gold_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36514" name="Elcyum Crystal">
+		<set name="icon" value="icon.etc_earth_crystal_1_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36515" name="Elcyum">
+		<set name="icon" value="icon.etc_crystal_cave_crystal_i0"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36516" name="Worn Leather">
+		<set name="icon" value="icon.etc_leather_normal"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36517" name="Leather">
+		<set name="icon" value="icon.etc_leather_normal"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36518" name="Durable Leather">
+		<set name="icon" value="icon.etc_leather_normal"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36519" name="Quality Leather">
+		<set name="icon" value="icon.etc_leather_normal"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36520" name="Exquisite Leather">
+		<set name="icon" value="icon.etc_leather_normal"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36521" name="Iron Ore">
+		<set name="icon" value="icon.etc_lump_gray_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36522" name="Silver">
+		<set name="icon" value="icon.etc_silver_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36523" name="Adamantite">
+		<set name="icon" value="icon.etc_adamantite_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36524" name="Orichalcum">
+		<set name="icon" value="icon.etc_oricalcum_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36525" name="Durandil">
+		<set name="icon" value="icon.etc_lump_silver_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36526" name="Fiber">
+		<set name="icon" value="icon.etc_fiber_normal"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36527" name="Synthetic Fiber">
+		<set name="icon" value="icon.etc_fiber_normal"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36528" name="Metallic Fiber">
+		<set name="icon" value="icon.etc_fiber_normal"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36529" name="Quality Fiber">
+		<set name="icon" value="icon.etc_fiber_normal"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36530" name="Exquisite Fiber">
+		<set name="icon" value="icon.etc_fiber_normal"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36531" name="Thread">
+		<set name="icon" value="icon.etc_strap_normal"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36532" name="Thin Braid">
+		<set name="icon" value="icon.etc_strap_normal"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36533" name="Synthetic Braid">
+		<set name="icon" value="icon.etc_strap_normal"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36534" name="Durable Braid">
+		<set name="icon" value="icon.etc_strap_normal"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36535" name="Quality Braid">
+		<set name="icon" value="icon.etc_strap_normal"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36536" name="Worn Leather Braid">
+		<set name="icon" value="icon.etc_strap_leather"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36537" name="Leather Braid">
+		<set name="icon" value="icon.etc_strap_leather"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36538" name="Durable Leather Braid">
+		<set name="icon" value="icon.etc_strap_leather"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36539" name="Quality Leather Braid">
+		<set name="icon" value="icon.etc_strap_leather"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36540" name="Exquisite Leather Braid">
+		<set name="icon" value="icon.etc_strap_leather"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36541" name="Steel Wire">
+		<set name="icon" value="icon.etc_strap_metal"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36542" name="Silver Wire">
+		<set name="icon" value="icon.etc_strap_metal"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36543" name="Adamantite Wire">
+		<set name="icon" value="icon.etc_strap_metal"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36544" name="Orichalcum Wire">
+		<set name="icon" value="icon.etc_strap_metal"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36545" name="Durandil Wire">
+		<set name="icon" value="icon.etc_strap_metal"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36546" name="Weapon Fragment (Low-grade)">
+		<set name="icon" value="icon.etc_r_weapon_piece_i01"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36547" name="Weapon Fragment">
+		<set name="icon" value="icon.etc_r_weapon_piece_i01"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36548" name="Weapon Fragment (Mid-grade)">
+		<set name="icon" value="icon.etc_r_weapon_piece_i01"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36549" name="Weapon Fragment (High-grade)">
+		<set name="icon" value="icon.etc_r_weapon_piece_i01"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36550" name="Weapon Fragment (Top-grade)">
+		<set name="icon" value="icon.etc_r_weapon_piece_i01"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36551" name="Armor Fragment (Low-grade)">
+		<set name="icon" value="icon.etc_r_armor_piece_i01"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36552" name="Armor Fragment">
+		<set name="icon" value="icon.etc_r_armor_piece_i01"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36553" name="Armor Fragment (Mid-grade)">
+		<set name="icon" value="icon.etc_r_armor_piece_i01"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36554" name="Armor Fragment (High-grade)">
+		<set name="icon" value="icon.etc_r_armor_piece_i01"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36555" name="Armor Fragment (Top-grade)">
+		<set name="icon" value="icon.etc_r_armor_piece_i01"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36556" name="Accessory Gem (Low-grade)">
+		<set name="icon" value="icon.etc_r_acc_piece_i01"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36557" name="Accessory Gem">
+		<set name="icon" value="icon.etc_r_acc_piece_i01"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36558" name="Accessory Gem (Mid-grade)">
+		<set name="icon" value="icon.etc_r_acc_piece_i01"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36559" name="Accessory Gem (High-grade)">
+		<set name="icon" value="icon.etc_r_acc_piece_i01"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36560" name="Accessory Gem (Top-grade)">
+		<set name="icon" value="icon.etc_r_acc_piece_i01"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36561" name="Cokes">
+		<set name="icon" value="icon.etc_synthetic_cokes_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36562" name="Greater Cokes">
+		<set name="icon" value="icon.etc_synthetic_cokes_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36563" name="Synthetic Cokes">
+		<set name="icon" value="icon.etc_synthetic_cokes_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36564" name="Greater Synthetic Cokes">
+		<set name="icon" value="icon.etc_synthetic_cokes_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36565" name="Exquisite Synthetic Cokes">
+		<set name="icon" value="icon.etc_synthetic_cokes_i00"/>
+		<set name="weight" value="2"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36566" name="Friendship Cube Pack (Yum Yum)" add_name="Event">
+		<set name="icon" value="icon.event_six_party_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36567" name="Friendship Cube Pack (Nom Nom)" add_name="Event">
+		<set name="icon" value="icon.event_six_party_box_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36568" name="Friendship Cube (30-day)" add_name="Event">
+		<set name="icon" value="icon.etc_pink_crystal_cube_pc_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36569" name="Yum Yum Candy Gift Box" add_name="Event">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36570" name="Nom Nom Candy Gift Box" add_name="Event">
+		<set name="icon" value="icon.etc_pi_gift_box_i04"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36571" name="Yum Yum Candy (30-day)" add_name="Event">
+		<set name="icon" value="icon.etc_whiteday_candy_i05"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36572" name="Nom Nom Candy (30-day)" add_name="Event">
+		<set name="icon" value="icon.etc_whiteday_candy_i06"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36573" name="Friendship Summon Cube (30-day)" add_name="Event">
+		<set name="icon" value="icon.etc_pink_crystal_cube_pc_i00"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36574" name="Scroll: Modify Weapon (R-grade)">
+		<set name="icon" value="icon.weapon_change_i06"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36575" name="Scroll: Modify Weapon (S-grade)">
+		<set name="icon" value="icon.weapon_change_i05"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36576" name="Scroll: Modify Weapon (A-grade)">
+		<set name="icon" value="icon.weapon_change_i04"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36577" name="Scroll: Modify Weapon (B-grade)">
+		<set name="icon" value="icon.weapon_change_i03"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36578" name="Scroll: Modify Weapon (C-grade)">
+		<set name="icon" value="icon.weapon_change_i02"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36579" name="Scroll: Modify Weapon (D-grade)">
+		<set name="icon" value="icon.weapon_change_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36580" name="Blessed Scroll: Modify Weapon (R-grade)">
+		<set name="icon" value="icon.pr_weapon_change_i06"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36581" name="Blessed Scroll: Modify Weapon (S-grade)">
+		<set name="icon" value="icon.pr_weapon_change_i05"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36582" name="Blessed Scroll: Modify Weapon (A-grade)">
+		<set name="icon" value="icon.pr_weapon_change_i04"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36583" name="Blessed Scroll: Modify Weapon (B-grade)">
+		<set name="icon" value="icon.pr_weapon_change_i03"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36584" name="Blessed Scroll: Modify Weapon (C-grade)">
+		<set name="icon" value="icon.pr_weapon_change_i02"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36585" name="Blessed Scroll: Modify Weapon (D-grade)">
+		<set name="icon" value="icon.pr_weapon_change_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36586" name="Scroll: Modify Armor (R-grade)">
+		<set name="icon" value="icon.armor_change_i06"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36587" name="Scroll: Modify Armor (S-grade)">
+		<set name="icon" value="icon.armor_change_i05"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36588" name="Scroll: Modify Armor (A-grade)">
+		<set name="icon" value="icon.armor_change_i04"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36589" name="Scroll: Modify Armor (B-grade)">
+		<set name="icon" value="icon.armor_change_i03"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36590" name="Scroll: Modify Armor (C-grade)">
+		<set name="icon" value="icon.armor_change_i02"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36591" name="Scroll: Modify Armor (D-grade)">
+		<set name="icon" value="icon.armor_change_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36592" name="Blessed Scroll: Modify Armor (R-grade)">
+		<set name="icon" value="icon.pr_armor_change_i06"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36593" name="Blessed Scroll: Modify Armor (S-grade)">
+		<set name="icon" value="icon.pr_armor_change_i05"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36594" name="Blessed Scroll: Modify Armor (A-grade)">
+		<set name="icon" value="icon.pr_armor_change_i04"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36595" name="Blessed Scroll: Modify Armor (B-grade)">
+		<set name="icon" value="icon.pr_armor_change_i03"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36596" name="Blessed Scroll: Modify Armor (C-grade)">
+		<set name="icon" value="icon.pr_armor_change_i02"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36597" name="Blessed Scroll: Modify Armor (D-grade)">
+		<set name="icon" value="icon.pr_armor_change_i01"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36598" name="Scroll: Restore Equipment (R-grade)">
+		<set name="icon" value="icon.change_restore_i06"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="36599" name="Scroll: Restore Equipment (S-grade)">
+		<set name="icon" value="icon.change_restore_i05"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+</list>

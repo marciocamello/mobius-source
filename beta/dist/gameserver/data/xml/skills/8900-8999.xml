@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="8900" levels="1" name="Dragon's Sealed Power- Fighter">
+		<set name="magicType" val="MAGIC"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="pAtkSpd" val="300"/>
+			<add order="0x40" stat="rCrit" val="100"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="maxHp" val="1.30"/>
+			<mul order="0x30" stat="maxCp" val="1.30"/>
+			<mul order="0x30" stat="maxMp" val="1.30"/>
+			<mul order="0x30" stat="pAtk" val="2.0">
+				<target race="Dragons"/>
+			</mul>
+		</for>
+	</skill>
+	<skill id="8901" levels="1" name="Dragon's Power - Fighter">
+		<set name="magicType" val="MAGIC"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="pAtkSpd" val="1500"/>
+			<add order="0x40" stat="rCrit" val="500"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" val="1.30"/>
+			<mul order="0x30" stat="maxMp" val="2.0"/>
+			<mul order="0x30" stat="maxHp" val="2.0"/>
+			<mul order="0x30" stat="maxCp" val="3.0"/>
+			<mul order="0x30" stat="pAtk" val="4.0">
+				<target race="Dragons"/>
+			</mul>
+		</for>
+	</skill>
+	<skill id="8902" levels="1" name="Dragon's Sealed Power- Mage">
+		<set name="magicType" val="MAGIC"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="mAtkSpd" val="300"/>
+			<add order="0x40" stat="mCritRate" val="100"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.15"/>
+			<mul order="0x30" stat="maxHp" val="1.30"/>
+			<mul order="0x30" stat="maxMp" val="1.30"/>
+			<mul order="0x30" stat="maxCp" val="1.30"/>
+			<mul order="0x30" stat="pAtk" val="2.0">
+				<target race="Dragons"/>
+			</mul>
+		</for>
+	</skill>
+	<skill id="8903" levels="1" name="Dragon's Power - Mage">
+		<set name="magicType" val="MAGIC"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="mAtkSpd" val="1999"/>
+			<add order="0x40" stat="mCritRate" val="500"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" val="1.30"/>
+			<mul order="0x30" stat="maxMp" val="2.0"/>
+			<mul order="0x30" stat="maxHp" val="2.0"/>
+			<mul order="0x30" stat="maxCp" val="3.0"/>
+			<mul order="0x30" stat="pAtk" val="4.0">
+				<target race="Dragons"/>
+			</mul>
+		</for>
+	</skill>
+</list>

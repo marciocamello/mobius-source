@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="18105" levels="1" name="Scroll of Escape: Faeron Village">
+		<table name="#itemConsumeId">40195</table>
+		<table name="#townId">23</table>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="20000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="townId" val="#townId"/>
+		<set name="itemConsumeId" val="#itemConsumeId"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RECALL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+</list>

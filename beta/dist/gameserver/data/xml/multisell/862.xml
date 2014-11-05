@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<list xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" ns0:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<item>
+		<ingredient count="1" id="34989"/>
+		<ingredient count="72" id="35562"/>
+		<ingredient count="1000" id="19440"/>
+		<production count="1" id="35649"/>
+	</item>
+</list>

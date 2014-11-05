@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "tree.dtd">
+<list>
+	<pledge_skill_tree>
+		<skill id="370" level="1" cost="1000" name="Clan Body" min_level="5"/>
+		<skill id="371" level="1" cost="1000" name="Clan Spirituality" min_level="5"/>
+		<skill id="372" level="1" cost="1000" name="Clan Soul" min_level="5"/>
+		<skill id="373" level="1" cost="1000" name="Clan Regeneration" min_level="5"/>
+		<skill id="374" level="1" cost="1000" name="Clan Morale" min_level="5"/>
+		<skill id="375" level="1" cost="1000" name="Clan Clarity" min_level="5"/>
+		<skill id="376" level="1" cost="1000" name="Clan Might" min_level="5"/>
+		<skill id="377" level="1" cost="1000" name="Clan Shield" min_level="5"/>
+		<skill id="378" level="1" cost="1000" name="Clan Empower" min_level="5"/>
+		<skill id="379" level="1" cost="1000" name="Clan M. Def." min_level="5"/>
+		<skill id="380" level="1" cost="1000" name="Clan Guidance" min_level="5"/>
+		<skill id="381" level="1" cost="1000" name="Clan Agility" min_level="5"/>
+		<skill id="382" level="1" cost="1000" name="Clan Shield Defense" min_level="5"/>
+		<skill id="383" level="1" cost="1000" name="Clan Shield Block" min_level="5"/>
+		<skill id="384" level="1" cost="1000" name="Clan Cyclonic Resistance" min_level="5"/>
+		<skill id="385" level="1" cost="1000" name="Clan Magmatic Resistance" min_level="5"/>
+		<skill id="386" level="1" cost="1000" name="Clan Stun Resistance" min_level="5"/>
+		<skill id="387" level="1" cost="1000" name="Clan Hold Resistance" min_level="5"/>
+		<skill id="388" level="1" cost="1000" name="Clan Sleep Resistance" min_level="5"/>
+		<skill id="389" level="1" cost="1000" name="Clan Wind Walk" min_level="5"/>
+		<skill id="390" level="1" cost="1000" name="Clan Luck" min_level="5"/>
+		<skill id="391" level="1" name="Clan Imperium" min_level="5"/>
+		<skill id="19003" level="1" cost="1000" name="Clan Resistance Hall" min_level="5"/>
+		<skill id="19004" level="1" cost="1000" name="Clan De-Buff Control" min_level="5"/>
+		<skill id="19005" level="1" cost="1000" name="Clan Muzzle Control" min_level="5"/>
+		<skill id="19006" level="1" cost="1000" name="Clan Mental Control" min_level="5"/>
+		<skill id="370" level="2" cost="3600" name="Clan Body" min_level="7"/>
+		<skill id="371" level="2" cost="3600" name="Clan Spirituality" min_level="7"/>
+		<skill id="372" level="2" cost="3600" name="Clan Soul" min_level="7"/>
+		<skill id="373" level="2" cost="3600" name="Clan Regeneration" min_level="7"/>
+		<skill id="374" level="2" cost="3600" name="Clan Morale" min_level="7"/>
+		<skill id="375" level="2" cost="3600" name="Clan Clarity" min_level="7"/>
+		<skill id="376" level="2" cost="3600" name="Clan Might" min_level="7"/>
+		<skill id="377" level="2" cost="3600" name="Clan Shield" min_level="7"/>
+		<skill id="378" level="2" cost="3600" name="Clan Empower" min_level="7"/>
+		<skill id="379" level="2" cost="3600" name="Clan M. Def." min_level="7"/>
+		<skill id="380" level="2" cost="3600" name="Clan Guidance" min_level="7"/>
+		<skill id="381" level="2" cost="3600" name="Clan Agility" min_level="7"/>
+		<skill id="382" level="2" cost="3600" name="Clan Shield Defense" min_level="7"/>
+		<skill id="383" level="2" cost="3600" name="Clan Shield Block" min_level="7"/>
+		<skill id="384" level="2" cost="3600" name="Clan Cyclonic Resistance" min_level="7"/>
+		<skill id="385" level="2" cost="3600" name="Clan Magmatic Resistance" min_level="7"/>
+		<skill id="386" level="2" cost="3600" name="Clan Stun Resistance" min_level="7"/>
+		<skill id="387" level="2" cost="3600" name="Clan Hold Resistance" min_level="7"/>
+		<skill id="388" level="2" cost="3600" name="Clan Sleep Resistance" min_level="7"/>
+		<skill id="389" level="2" cost="3600" name="Clan Wind Walk" min_level="7"/>
+		<skill id="390" level="2" cost="3600" name="Clan Luck" min_level="7"/>
+		<skill id="19003" level="2" cost="3600" name="Clan Resistance Hall" min_level="7"/>
+		<skill id="19004" level="2" cost="3600" name="Clan De-Buff Control" min_level="7"/>
+		<skill id="19005" level="2" cost="3600" name="Clan Muzzle Control" min_level="7"/>
+		<skill id="19006" level="2" cost="3600" name="Clan Mental Control" min_level="7"/>
+		<skill id="19007" level="1" cost="10000" name="Clan Summon" min_level="7"/>
+		<skill id="19016" level="1" cost="15000" name="Clan Boundary" min_level="8"/>
+		<skill id="370" level="3" cost="7700" name="Clan Body" min_level="9"/>
+		<skill id="371" level="3" cost="7700" name="Clan Spirituality" min_level="9"/>
+		<skill id="372" level="3" cost="7700" name="Clan Soul" min_level="9"/>
+		<skill id="373" level="3" cost="7700" name="Clan Regeneration" min_level="9"/>
+		<skill id="374" level="3" cost="7700" name="Clan Morale" min_level="9"/>
+		<skill id="375" level="3" cost="7700" name="Clan Clarity" min_level="9"/>
+		<skill id="376" level="3" cost="7700" name="Clan Might" min_level="9"/>
+		<skill id="377" level="3" cost="7700" name="Clan Shield" min_level="9"/>
+		<skill id="378" level="3" cost="7700" name="Clan Empower" min_level="9"/>
+		<skill id="379" level="3" cost="7700" name="Clan M. Def." min_level="9"/>
+		<skill id="380" level="3" cost="7700" name="Clan Guidance" min_level="9"/>
+		<skill id="381" level="3" cost="7700" name="Clan Agility" min_level="9"/>
+		<skill id="382" level="3" cost="7700" name="Clan Shield Defense" min_level="9"/>
+		<skill id="383" level="3" cost="7700" name="Clan Shield Block" min_level="9"/>
+		<skill id="384" level="3" cost="7700" name="Clan Cyclonic Resistance" min_level="9"/>
+		<skill id="385" level="3" cost="7700" name="Clan Magmatic Resistance" min_level="9"/>
+		<skill id="386" level="3" cost="7700" name="Clan Stun Resistance" min_level="9"/>
+		<skill id="387" level="3" cost="7700" name="Clan Hold Resistance" min_level="9"/>
+		<skill id="388" level="3" cost="7700" name="Clan Sleep Resistance" min_level="9"/>
+		<skill id="389" level="3" cost="7700" name="Clan Wind Walk" min_level="9"/>
+		<skill id="19003" level="3" cost="7700" name="Clan Resistance Hall" min_level="9"/>
+		<skill id="19004" level="3" cost="7700" name="Clan De-Buff Control" min_level="9"/>
+		<skill id="19005" level="3" cost="7700" name="Clan Muzzle Control" min_level="9"/>
+		<skill id="19006" level="3" cost="7700" name="Clan Mental Control" min_level="9"/>
+		<skill id="19010" level="1" cost="15000" name="Clan Copy" min_level="9"/>
+		<skill id="19013" level="1" cost="20000" name="Clan Un-debuff" min_level="9"/>
+		<skill id="19015" level="1" cost="15000" name="Clan Friendly" min_level="9"/>
+		<skill id="370" level="4" cost="8200" name="Clan Body" min_level="10"/>
+		<skill id="371" level="4" cost="8200" name="Clan Spirituality" min_level="10"/>
+		<skill id="372" level="4" cost="8200" name="Clan Soul" min_level="10"/>
+		<skill id="373" level="4" cost="8200" name="Clan Regeneration" min_level="10"/>
+		<skill id="374" level="4" cost="8200" name="Clan Morale" min_level="10"/>
+		<skill id="375" level="4" cost="8200" name="Clan Clarity" min_level="10"/>
+		<skill id="376" level="4" cost="8200" name="Clan Might" min_level="10"/>
+		<skill id="377" level="4" cost="8200" name="Clan Shield" min_level="10"/>
+		<skill id="378" level="4" cost="8200" name="Clan Empower" min_level="10"/>
+		<skill id="379" level="4" cost="8200" name="Clan M. Def." min_level="10"/>
+		<skill id="380" level="4" cost="8200" name="Clan Guidance" min_level="10"/>
+		<skill id="381" level="4" cost="8200" name="Clan Agility" min_level="10"/>
+		<skill id="382" level="4" cost="8200" name="Clan Shield Defense" min_level="10"/>
+		<skill id="383" level="4" cost="8200" name="Clan Shield Block" min_level="10"/>
+		<skill id="384" level="4" cost="8200" name="Clan Cyclonic Resistance" min_level="10"/>
+		<skill id="385" level="4" cost="8200" name="Clan Magmatic Resistance" min_level="10"/>
+		<skill id="386" level="4" cost="8200" name="Clan Stun Resistance" min_level="10"/>
+		<skill id="387" level="4" cost="8200" name="Clan Hold Resistance" min_level="10"/>
+		<skill id="388" level="4" cost="8200" name="Clan Sleep Resistance" min_level="10"/>
+		<skill id="19003" level="4" cost="8200" name="Clan Resistance Hall" min_level="10"/>
+		<skill id="19004" level="4" cost="8200" name="Clan De-Buff Control" min_level="10"/>
+		<skill id="19005" level="4" cost="8200" name="Clan Muzzle Control" min_level="10"/>
+		<skill id="19006" level="4" cost="8200" name="Clan Mental Control" min_level="10"/>
+		<skill id="19017" level="1" cost="20000" name="Clan Prison" min_level="10"/>
+		<skill id="370" level="5" cost="10000" name="Clan Body" min_level="11"/>
+		<skill id="371" level="5" cost="10000" name="Clan Spirituality" min_level="11"/>
+		<skill id="372" level="5" cost="10000" name="Clan Soul" min_level="11"/>
+		<skill id="373" level="5" cost="10000" name="Clan Regeneration" min_level="11"/>
+		<skill id="374" level="5" cost="10000" name="Clan Morale" min_level="11"/>
+		<skill id="375" level="5" cost="10000" name="Clan Clarity" min_level="11"/>
+		<skill id="376" level="5" cost="10000" name="Clan Might" min_level="11"/>
+		<skill id="377" level="5" cost="10000" name="Clan Shield" min_level="11"/>
+		<skill id="378" level="5" cost="10000" name="Clan Empower" min_level="11"/>
+		<skill id="379" level="5" cost="10000" name="Clan M. Def." min_level="11"/>
+		<skill id="380" level="5" cost="10000" name="Clan Guidance" min_level="11"/>
+		<skill id="381" level="5" cost="10000" name="Clan Agility" min_level="11"/>
+		<skill id="382" level="5" cost="10000" name="Clan Shield Defense" min_level="11"/>
+		<skill id="383" level="5" cost="10000" name="Clan Shield Block" min_level="11"/>
+		<skill id="384" level="5" cost="10000" name="Clan Cyclonic Resistance" min_level="11"/>
+		<skill id="385" level="5" cost="10000" name="Clan Magmatic Resistance" min_level="11"/>
+		<skill id="386" level="5" cost="10000" name="Clan Stun Resistance" min_level="11"/>
+		<skill id="387" level="5" cost="10000" name="Clan Hold Resistance" min_level="11"/>
+		<skill id="388" level="5" cost="10000" name="Clan Sleep Resistance" min_level="11"/>
+		<skill id="19003" level="5" cost="10000" name="Clan Resistance Hall" min_level="11"/>
+		<skill id="19004" level="5" cost="10000" name="Clan De-Buff Control" min_level="11"/>
+		<skill id="19005" level="5" cost="10000" name="Clan Muzzle Control" min_level="11"/>
+		<skill id="19006" level="5" cost="10000" name="Clan Mental Control" min_level="11"/>
+		<skill id="19008" level="1" cost="25000" name="Clan Guardian" min_level="11"/>
+		<skill id="19014" level="1" cost="20000" name="Clan Defense" min_level="11"/>
+	</pledge_skill_tree>
+</list>

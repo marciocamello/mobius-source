@@ -1,0 +1,879 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="14700" levels="1" name="Maximum Defense">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect abnormal="invul1" count="1" name="Buff" stackOrder="-1" stackType="Immobilize" time="60" val="0">
+				<mul order="0x30" stat="pAtk" val="1.25"/>
+				<mul order="0x30" stat="mAtk" val="1.50"/>
+				<add order="0x40" stat="pDef" val="1800"/>
+				<add order="0x40" stat="mDef" val="1620"/>
+				<add order="0x40" stat="regHp" val="300"/>
+				<add order="0x40" stat="regMp" val="300"/>
+				<add order="0x40" stat="cancelResist" val="80"/>
+			</effect>
+		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="700"/>
+	</skill>
+	<skill id="14701" levels="1" name="Brutal Agony">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="100"/>
+		<set name="hitTime" val="2000"/>
+	</skill>
+	<skill id="14702" levels="1" name="Invasion of Darkness">
+		<set name="icon" val="icon.skill0056"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
+		<set name="hitTime" val="3000"/>
+	</skill>
+	<skill id="14703" levels="1" name="Cycle of Blood">
+		<set name="icon" val="icon.skill0096"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
+		<set name="hitTime" val="2500"/>
+	</skill>
+	<skill id="14704" levels="1" name="Forced Yoke">
+		<set name="icon" val="icon.skill10015"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="1500"/>
+	</skill>
+	<skill id="14705" levels="1" name="Stun Resistance">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14706" levels="1" name="Stun Resistance">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14707" levels="1" name="Stun Resistance">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14708" levels="1" name="Istina">
+		<set name="icon" val="icon.skillboss"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14709" levels="1" name="Istina">
+		<set name="icon" val="icon.skillboss"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14710" levels="1" name="Raid Boss (Lv. 97)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14711" levels="1" name="Raid Boss (Lv. 97)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14712" levels="1" name="Raid Boss (Lv. 96)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14713" levels="1" name="Raid Boss (Lv. 96)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14714" levels="1" name="Raid Boss (Lv. 98)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14715" levels="1" name="Raid Boss (Lv. 98)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14716" levels="1" name="Raid Boss (Lv. 98)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14717" levels="1" name="Trasken">
+		<set name="icon" val="icon.skillboss"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14718" levels="1" name="Raid Boss (Lv. 92)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14719" levels="1" name="Raid Boss (Lv. 95)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14720" levels="1" name="Raid Boss (Lv. 88)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14721" levels="1" name="Raid Boss (Lv. 94)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14722" levels="1" name="Raid Boss (Lv. 98)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14723" levels="1" name="Raid Boss (Lv. 94)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14724" levels="1" name="Raid Boss (Lv. 43)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14725" levels="1" name="Raid Boss (Lv. 43)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14726" levels="1" name="Octavis">
+		<set name="icon" val="icon.skillboss"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14727" levels="1" name="Balok">
+		<set name="icon" val="icon.skillboss"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14728" levels="1" name="Raid Boss (Lv. 97)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14729" levels="1" name="Raid Boss (Lv. 92)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14730" levels="1" name="Raid Boss (Lv. 94)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14731" levels="1" name="Raid Boss (Lv. 95)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14732" levels="1" name="Raid Boss (Lv. 96)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14733" levels="1" name="Raid Boss (Lv. 93)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14734" levels="1" name="Raid Boss (Lv. 96)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14735" levels="1" name="Raid Boss (Lv. 96)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14736" levels="1" name="Light Heal">
+		<set name="hitTime" val="500"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="skillType" val="HEAL_WITH_CP"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="castRange" val="600"/>
+		<set name="power" val="1488"/>
+		<set name="reuseDelay" val="3000"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_ONE"/>
+	</skill>
+	<skill id="14737" levels="1" name="Seal">
+		<set name="icon" val="icon.skill1042"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
+		<set name="hitTime" val="120000"/>
+		<set name="reuseDelay" val="30000"/>
+	</skill>
+	<skill id="14738" levels="1" name="Olympiad - Horn Melody">
+		<set name="icon" val="icon.skill11517"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="reuseDelay" val="2000"/>
+	</skill>
+	<skill id="14739" levels="1" name="Olympiad - Drum Melody">
+		<set name="icon" val="icon.skill11522"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="reuseDelay" val="2000"/>
+	</skill>
+	<skill id="14740" levels="1" name="Olympiad - Pipe Organ Melody">
+		<set name="icon" val="icon.skill11519"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="reuseDelay" val="2000"/>
+	</skill>
+	<skill id="14741" levels="1" name="Olympiad - Guitar Melody">
+		<set name="icon" val="icon.skill11520"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="reuseDelay" val="2000"/>
+	</skill>
+	<skill id="14742" levels="1" name="Olympiad - Harp Melody">
+		<set name="icon" val="icon.skill11521"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="reuseDelay" val="2000"/>
+	</skill>
+	<skill id="14743" levels="1" name="Olympiad - Lute Melody">
+		<set name="icon" val="icon.skill11518"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="reuseDelay" val="2000"/>
+	</skill>
+	<skill id="14744" levels="1" name="Olympiad - Knight's Harmony">
+		<set name="icon" val="icon.skill11523"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="reuseDelay" val="2000"/>
+	</skill>
+	<skill id="14745" levels="1" name="Olympiad - Warrior's Harmony">
+		<set name="icon" val="icon.skill11524"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="reuseDelay" val="2000"/>
+	</skill>
+	<skill id="14746" levels="1" name="Olympiad - Wizard's Harmony">
+		<set name="icon" val="icon.skill11525"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="reuseDelay" val="2000"/>
+	</skill>
+	<skill id="14747" levels="1" name="Raid Boss (Lv. 88)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14748" levels="1" name="Raid Boss (Lv. 98)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14749" levels="1" name="Raid Boss (Lv. 97)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14750" levels="1" name="Raid Boss (Lv. 97)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14751" levels="1" name="Raid Boss (Lv. 97)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14752" levels="1" name="Raid Boss (Lv. 97)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14753" levels="1" name="Raid Boss (Lv. 97)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14754" levels="1" name="Raid Boss (Lv. 97)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14755" levels="1" name="Raid Boss (Lv. 97)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14756" levels="1" name="Raid Boss (Lv. 97)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14757" levels="1" name="Raid Boss (Lv. 97)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14758" levels="1" name="Raid Boss (Lv. 59)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14759" levels="1" name="Raid Boss (Lv. 62)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14760" levels="1" name="Raid Boss (Lv. 66)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14761" levels="1" name="Raid Boss (Lv. 70)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14762" levels="1" name="Raid Boss (Lv. 72)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14763" levels="1" name="Raid Boss (Lv. 75)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14764" levels="1" name="Raid Boss (Lv. 75)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14765" levels="5" name="Blood Siphon Resistance">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14766" levels="1" name="Light of Divine Protection">
+		<set name="icon" val="icon.skill14766"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="120000"/>
+	</skill>
+	<skill id="14767" levels="1" name="Siege Punch">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="4600"/>
+		<set name="reuseDelay" val="5000"/>
+	</skill>
+	<skill id="14768" levels="1" name="Raid Boss (Lv. 85)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14769" levels="1" name="Raid Boss (Lv. 82)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14770" levels="1" name="Raid Boss (Lv. 99)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14771" levels="1" name="Raid Boss (Lv. 29)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14772" levels="1" name="Raid Boss (Lv. 39)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14773" levels="1" name="Raid Boss (Lv. 49)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14774" levels="1" name="Raid Boss (Lv. 59)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14775" levels="1" name="Raid Boss (Lv. 69)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14776" levels="1" name="Raid Boss (Lv. 78)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14777" levels="1" name="Raid Boss (Lv. 81)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14778" levels="1" name="Raid Boss (Lv. 83)">
+		<set name="icon" val="icon.skillraid"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14779" levels="1" name="Master's Blessing - Horn Melody">
+		<set name="icon" val="icon.skill11517"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="mpConsume2" val="1"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="1006;1040;1517;989;1036;988;1007;123;1009;871;"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="14" stackType="MagicDefUp;pAtk;pDef;mAtk">
+				<mul order="0x30" stat="pDef" val="1.15"/>
+				<mul order="0x30" stat="pAtk" val="1.23"/>
+				<mul order="0x30" stat="mAtk" val="1.91"/>
+				<mul order="0x30" stat="mDef" val="1.30"/>
+			</effect>
+		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14780" levels="1" name="Master's Blessing - Drum Melody">
+		<set name="icon" val="icon.skill11522"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="mpConsume2" val="1"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="1356;1413;1363"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="ancient">
+				<mul order="0x30" stat="maxMp" val="1.2"/>
+				<mul order="0x30" stat="regHp" val="1.2"/>
+				<add order="0x40" stat="mCritRate" val="20"/>
+				<mul order="0x30" stat="cAtk" val="1.2"/>
+				<mul order="0x30" stat="pAtk" val="1.1"/>
+				<mul order="0x30" stat="pDef" val="1.2"/>
+				<mul order="0x30" stat="pAtkSpd" val="1.2"/>
+				<mul order="0x30" stat="mAtkSpd" val="1.2"/>
+				<mul order="0x30" stat="mAtk" val="1.2"/>
+				<mul order="0x30" stat="mDef" val="1.2"/>
+				<mul order="0x30" stat="runSpd" val="1.0"/>
+				<add order="0x40" stat="debuffResist" val="10"/>
+			</effect>
+		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14781" levels="1" name="Master's Blessing - Pipe Organ Melody">
+		<set name="icon" val="icon.skill11519"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="mpConsume2" val="1"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="1044;1045;1501;1048"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="11" stackType="hp_up;hpregen;mp_up">
+				<mul order="0x30" stat="maxHp" val="1.43"/>
+				<mul order="0x30" stat="maxMp" val="1.43"/>
+				<mul order="0x30" stat="maxCp" val="1.43"/>
+				<mul order="0x30" stat="regHp" val="1.20"/>
+			</effect>
+		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14782" levels="1" name="Master's Blessing - Guitar Melody">
+		<set name="icon" val="icon.skill11520"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="mpConsume2" val="1"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="1476;1242;1253;1308;1518;1077"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="14" stackType="impulse;rCrit;cAtk">
+				<mul order="0x30" stat="rCrit" val="1.38"/>
+				<mul order="0x30" stat="cAtk" val="1.35"/>
+				<add order="0x40" stat="mCritRate" val="20"/>
+				<mul order="0x30" stat="mpConsum" val="0.9"/>
+				<mul order="0x30" stat="mpConsumePhysical" val="0.8"/>
+			</effect>
+		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14783" levels="1" name="Master's Blessing - Harp Melody">
+		<set name="icon" val="icon.skill11521"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="mpConsume2" val="1"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="1535;230;1461;1240;1252;1309"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="14" stackType="accuracyUp;SpeedUp;Poem_Arfa;rEvas;CoP">
+				<add order="0x40" stat="accCombat" val="8"/>
+				<add order="0x40" stat="rEvas" val="8"/>
+				<add order="0x40" stat="mEvas" val="8"/>
+				<add order="0x40" stat="runSpd" val="37"/>
+				<mul order="0x30" stat="critDamRcpt" val="0.7"/>
+			</effect>
+		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14784" levels="1" name="Master's Blessing - Lute Melody">
+		<set name="icon" val="icon.skill11518"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="mpConsume2" val="1"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="1002;1251;1310;971;1519;1086"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="14" stackType="vampRage;pAtkSpeedUp;mAtkSpeedUp">
+				<add order="0x40" stat="absorbDam" val="9"/>
+				<mul order="0x30" stat="pAtkSpd" val="1.37"/>
+				<mul order="0x30" stat="mAtkSpd" val="1.34"/>
+			</effect>
+		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14785" levels="1" name="Master's Blessing - Knight's Harmony">
+		<set name="icon" val="icon.skill11523"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="mpConsume2" val="1"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="1283;1590;264;1243;1389;1391;271"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="shieldProbUp;sDef;Harmony_isa;Great;HarmonyGuardian_1;HarmonyGuardian_2;song_of_hunter;dance_of_fire;dance_of_warrior;song_of_earth;rhythm_of_critical;rhythm_of_combat;berserk">
+				<mul order="0x30" stat="pAtk" val="1.12"/>
+				<mul order="0x30" stat="pDef" val="1.45"/>
+				<add order="0x40" stat="rShld" val="30"/>
+				<mul order="0x30" stat="sDef" val="1.50"/>
+				<add order="0x40" stat="rCrit" val="100"/>
+				<mul order="0x30" stat="cAtk" val="1.35"/>
+			</effect>
+		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14786" levels="1" name="Master's Blessing - Warrior's Harmony">
+		<set name="icon" val="icon.skill11524"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="mpConsume2" val="1"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="1062;1388;274;1562;1586;1390;269;1261"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="Great;Harmony;Harmony_isa;HarmonyBerserk_1;HarmonyBerserk_2;dance_of_warrior;song_of_earth;rhythm_of_combat;dance_of_fire;song_of_hunter;rhythm_of_critical;berserk">
+				<mul order="0x30" stat="pAtk" val="1.35"/>
+				<mul order="0x30" stat="mAtk" val="1.16"/>
+				<mul order="0x30" stat="mAtkSpd" val="1.08"/>
+				<mul order="0x30" stat="pAtkSpd" val="1.08"/>
+				<mul order="0x30" stat="cAtk" val="1.35"/>
+				<add order="0x40" stat="rCrit" val="100"/>
+				<add order="0x40" stat="runSpd" val="8"/>
+				<mul order="0x30" stat="pDef" val="0.92"/>
+				<mul order="0x30" stat="mDef" val="0.84"/>
+				<sub order="0x40" stat="rEvas" val="4"/>
+			</effect>
+		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14787" levels="1" name="Master's Blessing - Wizard's Harmony">
+		<set name="icon" val="icon.skill11525"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="mpConsume2" val="1"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="267;273;349;1588;1078;365;336;1596;337"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="concentration;Harmony_isa;buff_one;HarmonyMage_1;HarmonyMage_2;HarmonyMage_3;rhythm_of_magic;dance_of_mystic;song_of_warding;dance_of_siren;song_of_renewal;rhythm_of_start;berserk">
+				<mul order="0x30" stat="pAtk" val="1.08"/>
+				<mul order="0x30" stat="mAtk" val="1.40"/>
+				<mul order="0x30" stat="mAtkSpd" val="1.08"/>
+				<mul order="0x30" stat="pAtkSpd" val="1.08"/>
+				<mul order="0x30" stat="mDef" val="1.14"/>
+				<add order="0x40" stat="mCritRate" val="100"/>
+				<add order="0x40" stat="mpEff" val="20"/>
+				<add order="0x40" stat="runSpd" val="8"/>
+				<mul order="0x30" stat="pDef" val="0.92"/>
+				<sub order="0x30" stat="rEvas" val="4"/>
+				<mul order="0x30" stat="mpConsum" val="0.85"/>
+				<mul order="0x30" stat="mpConsumePhysical" val="0.95"/>
+				<mul order="0x30" stat="mReuse" val="0.8"/>
+			</effect>
+		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14788" levels="1" name="Master's Blessing - Elemental Resistance">
+		<set name="icon" val="icon.skill11565"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="mpConsume2" val="1"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="1549;307;1182;481;306;1189;308;1548;529;1352;309;1191"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="elementalResist;IsaElement;song_of_elemental;song_of_sguard;dance_of_eguard;song_of_fguard;dance_of_aguard;FireAtr;AquaAtr;EarthAtr;WindAtr">
+				<add order="0x40" stat="defenceFire" val="30"/>
+				<add order="0x40" stat="defenceWater" val="30"/>
+				<add order="0x40" stat="defenceWind" val="30"/>
+				<add order="0x40" stat="defenceEarth" val="30"/>
+			</effect>
+		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14789" levels="1" name="Master's Blessing - Holy Attack Resistance">
+		<set name="icon" val="icon.skill11567"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="mpConsume2" val="1"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="270;196;1392;1393;1033;530;277;1032"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="divineResist;dance_of_alignment;dance_of_light;song_of_invocation;HolyAtr;DarkAtr;poisonResist;bleedResist">
+				<add order="0x40" stat="defenceHoly" val="30"/>
+				<add order="0x40" stat="defenceUnholy" val="30"/>
+				<add order="0x40" stat="poisonResist" val="50"/>
+				<add order="0x40" stat="bleedResist" val="50"/>
+			</effect>
+		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14790" levels="1" name="Master's Blessing - Mental Attack Resistance">
+		<set name="icon" val="icon.skill11824"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="mpConsume2" val="1"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="relationSkillsId" val="311;1035;1362;1415"/>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="mental;resist_debuff_dispel;dance_of_protection">
+				<add order="0x40" stat="rootResist" val="50"/>
+				<add order="0x40" stat="sleepResist" val="50"/>
+				<add order="0x40" stat="mentalResist" val="50"/>
+				<add order="0x40" stat="cancelResist" val="30"/>
+				<add order="0x40" stat="debuffResist" val="20"/>
+			</effect>
+		</for>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14791" levels="1" name="Master's Blessing - Horn Melody">
+		<set name="icon" val="icon.skill11517"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14792" levels="1" name="Master's Blessing - Drum Melody">
+		<set name="icon" val="icon.skill11522"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14793" levels="1" name="Master's Blessing - Pipe Organ Melody">
+		<set name="icon" val="icon.skill11519"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14794" levels="1" name="Master's Blessing - Guitar Melody">
+		<set name="icon" val="icon.skill11520"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14795" levels="1" name="Master's Blessing - Harp Melody">
+		<set name="icon" val="icon.skill11521"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14796" levels="1" name="Master's Blessing - Lute Melody">
+		<set name="icon" val="icon.skill11518"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14797" levels="1" name="Master's Blessing - Knight's Harmony">
+		<set name="icon" val="icon.skill11523"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14798" levels="1" name="Master's Blessing - Warrior's Harmony">
+		<set name="icon" val="icon.skill11524"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14799" levels="1" name="Master's Blessing - Wizard's Harmony">
+		<set name="icon" val="icon.skill11525"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+</list>

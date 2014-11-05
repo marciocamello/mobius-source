@@ -1,0 +1,32 @@
+﻿<?xml version="1.0"?>
+<list>
+	<config showall="true" notax="true" keepenchanted="false"/>
+	<item>
+		<ingredient count="700" id="57"/>
+		<production count="1" id="4411"/>
+	</item>
+	<item>
+		<ingredient count="700" id="57"/>
+		<production count="1" id="4412"/>
+	</item>
+	<item>
+		<ingredient count="700" id="57"/>
+		<production count="1" id="4413"/>
+	</item>
+	<item>
+		<ingredient count="700" id="57"/>
+		<production count="1" id="4414"/>
+	</item>
+	<item>
+		<ingredient count="700" id="57"/>
+		<production count="1" id="4415"/>
+	</item>
+	<item>
+		<ingredient count="700" id="57"/>
+		<production count="1" id="4416"/>
+	</item>
+	<item>
+		<ingredient count="700" id="57"/>
+		<production count="1" id="4417"/>
+	</item>
+</list>

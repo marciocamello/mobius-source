@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="20000" levels="1" name="Block Checker Search">
+		<set name="icon" val="BranchSys2.icon.br_s_search_treasure1_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="5000"/>
+	</skill>
+	<skill id="20001" levels="1" name="Block Checker Hammer Punch">
+		<set name="icon" val="BranchSys2.icon.br_s_hammerpunch_treasure1_i001"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="60000"/>
+	</skill>
+	<skill id="20002" levels="1" name="Dragon Kick">
+		<set name="icon" val="icon.skill_transform_s_attack"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="20"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="7000"/>
+	</skill>
+	<skill id="20003" levels="1" name="Dragon Slash">
+		<set name="icon" val="icon.skill_transform_s_attack"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="20"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="7000"/>
+	</skill>
+	<skill id="20004" levels="1" name="Dragon Dash">
+		<set name="icon" val="icon.skill_transform_buff"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="25000"/>
+	</skill>
+	<skill id="20005" levels="1" name="Dragon Aura">
+		<set name="icon" val="icon.skill_transform_buff"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="1800000"/>
+	</skill>
+	<skill id="20006" levels="1" name="Soul Roar">
+		<set name="icon" val="BranchSys2.icon.skill20006"/>
+		<table name="#effectPoint">611</table>
+		<table name="#magicLevel">62</table>
+		<set name="reuseDelay" val="240000"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="350"/>
+		<set name="mpConsume1" val="58"/>
+		<set name="mpConsume2" val="14"/>
+		<set name="effectPoint" val="#effectPoint"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" time="600" val="0">
+				<mul order="0x30" stat="maxHp" val="1.15"/>
+				<mul order="0x30" stat="maxCp" val="1.15"/>
+			</effect>
+			<effect count="1" name="HealPercent" time="0" val="15"/>
+			<effect count="1" name="HealCPPercent" time="0" val="15"/>
+		</for>
+	</skill>
+	<skill id="20007" levels="1" name="Block Invincibility">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="-1" stackType="Invulnerable" time="120" val="0">
+				<add order="0x40" stat="runSpd" val="5"/>
+				<mul order="0x30" stat="regHp" val="1.2"/>
+				<mul order="0x30" stat="regMp" val="1.2"/>
+			</effect>
+		</for>
+	</skill>	
+</list>

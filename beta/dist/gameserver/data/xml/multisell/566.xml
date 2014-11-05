@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<list>
+	<config no_tax="true"/>
+	<item>
+		<production id="8618" count="1"/>
+		<ingredient id="57" count="400000"/>
+	</item>
+	<item>
+		<production id="9649" count="1"/>
+		<ingredient id="57" count="2640000"/>
+	</item>
+	<item>
+		<production id="9632" count="100"/>
+		<ingredient id="17" count="100"/>
+	</item>
+	<item>
+		<production id="9635" count="100"/>
+		<ingredient id="1343" count="100"/>
+	</item>
+	<item>
+		<production id="9636" count="100"/>
+		<ingredient id="1344" count="100"/>
+	</item>
+	<item>
+		<production id="9637" count="100"/>
+		<ingredient id="1345" count="100"/>
+	</item>
+</list>

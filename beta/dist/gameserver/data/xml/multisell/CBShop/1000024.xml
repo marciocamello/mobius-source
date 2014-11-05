@@ -1,0 +1,51 @@
+﻿<?xml version="1.0"?>
+<list maintainEnchantment="true">
+	<item id="1">
+		<ingredient id="57" count="75000000"/>
+		<production id="4613" count="10"/>
+	</item>
+	<item id="2">
+		<ingredient id="57" count="75000000"/>
+		<production id="4614" count="10"/>
+	</item>
+	<item id="3">
+		<ingredient id="57" count="75000000"/>
+		<production id="4615" count="10"/>
+	</item>
+	<item id="4">
+		<ingredient id="57" count="75000000"/>
+		<production id="4616" count="10"/>
+	</item>
+	<item id="5">
+		<ingredient id="57" count="75000000"/>
+		<production id="4617" count="10"/>
+	</item>
+	<item id="6">
+		<ingredient id="57" count="75000000"/>
+		<production id="4618" count="10"/>
+	</item>
+	<item id="7">
+		<ingredient id="57" count="75000000"/>
+		<production id="4619" count="10"/>
+	</item>
+	<item id="8">
+		<ingredient id="57" count="75000000"/>
+		<production id="4620" count="10"/>
+	</item>
+	<item id="9">
+		<ingredient id="57" count="75000000"/>
+		<production id="4621" count="10"/>
+	</item>
+	<item id="10">
+		<ingredient id="57" count="75000000"/>
+		<production id="4622" count="10"/>
+	</item>
+	<item id="11">
+		<ingredient id="57" count="75000000"/>
+		<production id="4623" count="10"/>
+	</item>
+	<item id="12">
+		<ingredient id="57" count="75000000"/>
+		<production id="4624" count="10"/>
+	</item>
+</list>

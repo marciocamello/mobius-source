@@ -1,0 +1,761 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="14400" levels="1" name="Valakas Dragon Breath">
+		<set name="icon" val="icon.skill4683"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="3000"/>
+	</skill>
+	<skill id="14401" levels="1" name="Valakas Dragon Breath">
+		<set name="icon" val="icon.skill4683"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="3000"/>
+	</skill>
+	<skill id="14402" levels="1" name="Destruction of the Body">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
+	</skill>
+	<skill id="14403" levels="1" name="Destruction of the Soul">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
+	</skill>
+	<skill id="14404" levels="1" name="Valakas Fear">
+		<set name="icon" val="icon.skill4689"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+	</skill>
+	<skill id="14405" levels="1" name="Wide-bodied Valakas">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="4000"/>
+	</skill>
+	<skill id="14406" levels="1" name="Decrease Valakas Defense">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="4000"/>
+	</skill>
+	<skill id="14407" levels="1" name="Lavasaurus Alpha Attack">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1200"/>
+		<set name="hitTime" val="2000"/>
+	</skill>
+	<skill id="14408" levels="1" name="Lavasaurus Alpha Heal">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1200"/>
+		<set name="hitTime" val="2000"/>
+	</skill>
+	<skill id="14409" levels="1" name="Infection">
+		<set name="icon" val="icon.skill1167"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="5000"/>
+	</skill>
+	<skill id="14410" levels="1" name="Dragon's Trace">
+		<set name="icon" val="icon.skill1167"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="5000"/>
+	</skill>
+	<skill id="14411" levels="1" name="Energy of Extreme Dragon">
+		<set name="icon" val="icon.skill0088"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="3000"/>
+	</skill>
+	<skill id="14412" levels="1" name="Incubatioin">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2000"/>
+	</skill>
+	<skill id="14413" levels="1" name="Incubatioin">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+	</skill>
+	<skill id="14414" levels="1" name="Stigma of Judgment">
+		<set name="icon" val="icon.skill0015"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1500"/>
+	</skill>
+	<skill id="14415" levels="1" name="Stigma of Judgment">
+		<set name="icon" val="icon.skill10777"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1500"/>
+	</skill>
+	<skill id="14416" levels="1" name="Ultimate Judgment">
+		<set name="icon" val="icon.skill5876"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2000"/>
+	</skill>
+	<skill id="14417" levels="1" name="Verdict">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1500"/>
+		<set name="hitTime" val="500"/>
+	</skill>
+	<skill id="14418" levels="1" name="Trap Setup">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2000"/>
+	</skill>
+	<skill id="14419" levels="1" name="Vladimir's Darkness Attack">
+		<set name="icon" val="icon.skill0476"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="700"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="3000"/>
+	</skill>
+	<skill id="14420" levels="1" name="Follower's Sacrifice">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="700"/>
+		<set name="hitTime" val="2000"/>
+	</skill>
+	<skill id="14421" levels="1" name="Lazearth' Attack">
+		<set name="icon" val="icon.skill14421"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+	</skill>
+	<skill id="14422" levels="1" name="Energy of Death">
+		<set name="icon" val="icon.skill14422"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="700"/>
+		<set name="hitTime" val="10000"/>
+	</skill>
+	<skill id="14423" levels="1" name="Byron's Darkness Attack">
+		<set name="icon" val="icon.skill0476"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="700"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="3000"/>
+	</skill>
+	<skill id="14424" levels="1" name="Ken's Mark">
+		<set name="icon" val="icon.skill14424"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="500"/>
+	</skill>
+	<skill id="14425" levels="1" name="Ken's Blow">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1080"/>
+		<set name="reuseDelay" val="3000"/>
+	</skill>
+	<skill id="14426" levels="1" name="Ken's Recovery">
+		<set name="icon" val="icon.skill1044"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="2000"/>
+	</skill>
+	<skill id="14427" levels="1" name="Power Shot">
+		<set name="icon" val="icon.skill0056"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="700"/>
+		<set name="hitTime" val="2000"/>
+	</skill>
+	<skill id="14428" levels="1" name="Fire Blindly">
+		<set name="icon" val="icon.skill0772"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="700"/>
+		<set name="hitTime" val="5000"/>
+	</skill>
+	<skill id="14429" levels="1" name="Head Marksman's Attack">
+		<set name="icon" val="icon.skill0056"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="700"/>
+		<set name="hitTime" val="5000"/>
+	</skill>
+	<skill id="14430" levels="1" name="Heal">
+		<set name="icon" val="icon.skill1011"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="700"/>
+		<set name="hitTime" val="2000"/>
+	</skill>
+	<skill id="14431" levels="1" name="Strike">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
+		<set name="hitTime" val="2000"/>
+	</skill>
+	<skill id="14432" levels="1" name="Stun">
+		<set name="icon" val="icon.skill0048"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="5000"/>
+	</skill>
+	<skill id="14433" levels="1" name="Digest">
+		<set name="icon" val="icon.skill0096"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+	</skill>
+	<skill id="14434" levels="1" name="Feeler Vibration">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+	</skill>
+	<skill id="14435" levels="1" name="Feeler Vibration">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="10000"/>
+	</skill>
+	<skill id="14436" levels="1" name="Obedience Status">
+		<set name="icon" val="icon.skill1042"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1000"/>
+	</skill>
+	<skill id="14437" levels="1" name="Pledge Guardian's Yoke">
+		<set name="icon" val="icon.skill14437"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="600000"/>
+	</skill>
+	<skill id="14438" levels="1" name="Twin Destroyer's Yoke">
+		<set name="icon" val="icon.skill14438"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="600000"/>
+	</skill>
+	<skill id="14439" levels="1" name="Vampiric Marauder's Yoke">
+		<set name="icon" val="icon.skill14439"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="600000"/>
+	</skill>
+	<skill id="14440" levels="1" name="Ghost Pursuer's Yoke">
+		<set name="icon" val="icon.skill14440"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="600000"/>
+	</skill>
+	<skill id="14441" levels="1" name="Forgotten Scholar's Yoke">
+		<set name="icon" val="icon.skill14441"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="600000"/>
+	</skill>
+	<skill id="14442" levels="1" name="Battleground Ruler's Yoke">
+		<set name="icon" val="icon.skill14442"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="600000"/>
+	</skill>
+	<skill id="14443" levels="1" name="Consciousness Summoner's Yoke">
+		<set name="icon" val="icon.skill14443"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="600000"/>
+	</skill>
+	<skill id="14444" levels="1" name="Heavenly Ascetic's Yoke">
+		<set name="icon" val="icon.skill14444"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="600000"/>
+	</skill>
+	<skill id="14445" levels="8" name="Harnak's Decree">
+		<set name="icon" val="icon.skill1068"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
+	</skill>
+	<skill id="14446" levels="1" name="Sleep">
+		<set name="icon" val="icon.skill1069"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14447" levels="1" name="Chains of Hatred">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="1500"/>
+	</skill>
+	<skill id="14448" levels="1" name="Blink">
+		<set name="icon" val="icon.skill10768"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
+		<set name="hitTime" val="300"/>
+	</skill>
+	<skill id="14449" levels="1" name="Dedicated Blow">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="100"/>
+		<set name="hitTime" val="1500"/>
+	</skill>
+	<skill id="14450" levels="1" name="Dedicated Shot">
+		<set name="icon" val="icon.skill0056"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="1500"/>
+	</skill>
+	<skill id="14451" levels="1" name="Multi Shot">
+		<set name="icon" val="icon.skill0987"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="1500"/>
+	</skill>
+	<skill id="14452" levels="1" name="Berserk">
+		<set name="icon" val="icon.skill1068"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
+	</skill>
+	<skill id="14453" levels="1" name="Magic Shot">
+		<set name="icon" val="icon.skill1275"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
+		<set name="hitTime" val="1500"/>
+	</skill>
+	<skill id="14454" levels="1" name="Magic Bombing">
+		<set name="icon" val="icon.skill1296"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
+		<set name="hitTime" val="3000"/>
+	</skill>
+	<skill id="14455" levels="1" name="Healing">
+		<set name="icon" val="icon.skill1258"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="1500"/>
+	</skill>
+	<skill id="14456" levels="1" name="Wide Area Healing">
+		<set name="icon" val="icon.skill1258"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="1500"/>
+	</skill>
+	<skill id="14457" levels="1" name="Physical Immunity">
+		<set name="icon" val="icon.skill0110"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
+	</skill>
+	<skill id="14458" levels="1" name="Magical Immunity">
+		<set name="icon" val="icon.skill0110"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
+	</skill>
+	<skill id="14459" levels="1" name="Stun Shot">
+		<set name="icon" val="icon.skill0101"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="200"/>
+		<set name="hitTime" val="2000"/>
+	</skill>
+	<skill id="14460" levels="1" name="Sleep">
+		<set name="icon" val="icon.skill1069"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="200"/>
+		<set name="hitTime" val="2000"/>
+	</skill>
+	<skill id="14461" levels="1" name="Fear">
+		<set name="icon" val="icon.skill1092"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="200"/>
+		<set name="hitTime" val="1500"/>
+	</skill>
+	<skill id="14462" levels="1" name="Apherus Curse">
+		<set name="icon" val="icon.skill1170"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="2000"/>
+	</skill>
+	<skill id="14463" levels="1" name="Apherus Curse">
+		<set name="icon" val="icon.skill1170"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+	</skill>
+	<skill id="14464" levels="1" name="Apherus Space">
+		<set name="icon" val="icon.skill0048"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1000"/>
+		<set name="reuseDelay" val="2000"/>
+	</skill>
+	<skill id="14465" levels="1" name="Apherus' Binding">
+		<set name="icon" val="icon.skill0006"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="5000"/>
+	</skill>
+	<skill id="14466" levels="1" name="Weaken">
+		<set name="icon" val="icon.skill1160"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="100"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="20000"/>
+	</skill>
+	<skill id="14467" levels="1" name="Chains of Hatred">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="2000"/>
+	</skill>
+	<skill id="14468" levels="1" name="Axis Collapse">
+		<set name="icon" val="icon.skill0347"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2000"/>
+	</skill>
+	<skill id="14469" levels="1" name="Aerial Yoke">
+		<set name="icon" val="icon.skill1072"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
+		<set name="hitTime" val="2000"/>
+	</skill>
+	<skill id="14470" levels="1" name="Short-range Marksmanship">
+		<set name="icon" val="icon.skill0056"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="2000"/>
+	</skill>
+	<skill id="14471" levels="1" name="Great Magic Bombing">
+		<set name="icon" val="icon.skill1296"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="2000"/>
+	</skill>
+	<skill id="14472" levels="1" name="Summon Subordinate">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="60000"/>
+	</skill>
+	<skill id="14473" levels="1" name="Healing">
+		<set name="icon" val="icon.skill1258"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="5000"/>
+	</skill>
+	<skill id="14474" levels="1" name="Octavis Connection">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1000"/>
+	</skill>
+	<skill id="14475" levels="1" name="Octavis Connection">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1000"/>
+	</skill>
+	<skill id="14476" levels="1" name="Sacrifice">
+		<set name="icon" val="icon.skill1011"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+	</skill>
+	<skill id="14477" levels="1" name="Sacrifice">
+		<set name="icon" val="icon.skill1011"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="350"/>
+		<set name="hitTime" val="3000"/>
+	</skill>
+	<skill id="14478" levels="1" name="Antharas Berserk">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14479" levels="1" name="Antharas Berserk">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14480" levels="1" name="Antharas Berserk">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14481" levels="1" name="Antharas Berserk">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14482" levels="1" name="Antharas Berserk">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14483" levels="1" name="Valakas Neutralization">
+		<set name="icon" val="icon.skill1235"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="2000"/>
+		<set name="hitTime" val="1000"/>
+	</skill>
+	<skill id="14484" levels="1" name="Aerial Attack">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="200"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="10000"/>
+	</skill>
+	<skill id="14485" levels="1" name="High-speed Shot">
+		<set name="icon" val="icon.skill1086"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
+	</skill>
+	<skill id="14486" levels="1" name="High-speed Casting">
+		<set name="icon" val="icon.skill1085"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
+	</skill>
+	<skill id="14487" levels="1" name="Poison Cloud">
+		<set name="icon" val="icon.skill1167"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
+	</skill>
+	<skill id="14488" levels="1" name="Hide">
+		<set name="icon" val="icon.skill0922"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
+	</skill>
+	<skill id="14489" levels="1" name="Recharge">
+		<set name="icon" val="icon.skill1147"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="5000"/>
+	</skill>
+	<skill id="14490" levels="1" name="Silence">
+		<set name="icon" val="icon.skill1064"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="3000"/>
+	</skill>
+	<skill id="14491" levels="1" name="Rage">
+		<set name="icon" val="icon.skill1062"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+	</skill>
+	<skill id="14492" levels="1" name="Frantic">
+		<set name="icon" val="icon.skill1062"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+	</skill>
+	<skill id="14493" levels="1" name="Rampage">
+		<set name="icon" val="icon.skill1062"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+	</skill>
+	<skill id="14494" levels="1" name="Tear Gas">
+		<set name="icon" val="icon.skill1298"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+	</skill>
+	<skill id="14495" levels="1" name="Damage Shield">
+		<set name="icon" val="icon.skill0086"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="2000"/>
+	</skill>
+	<skill id="14496" levels="1" name="Darkness Explosion">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14497" levels="1" name="Hereditary Suffering">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14498" levels="1" name="Decaying Darkness">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14499" levels="1" name="Decaying Darkness">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+</list>

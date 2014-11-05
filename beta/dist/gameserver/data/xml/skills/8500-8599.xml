@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="8500" levels="1" name="Pink Talisman - CON">
+		<set name="icon" val="icon.etc_talisman_event_i00"/>
+		<set name="magicLevel" val="55"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8501" levels="1" name="Pink Talisman - INT">
+		<set name="icon" val="icon.etc_talisman_event_i00"/>
+		<set name="magicLevel" val="55"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8502" levels="1" name="Pink Talisman - WIT">
+		<set name="icon" val="icon.etc_talisman_event_i00"/>
+		<set name="magicLevel" val="55"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8503" levels="1" name="Pink Talisman - MEN">
+		<set name="icon" val="icon.etc_talisman_event_i00"/>
+		<set name="magicLevel" val="55"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8504" levels="1" name="Pink Talisman - Stun Resistance">
+		<set name="icon" val="icon.etc_talisman_event_i01"/>
+		<set name="magicLevel" val="55"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8505" levels="1" name="Pink Talisman - Sleep Resistance">
+		<set name="icon" val="icon.etc_talisman_event_i01"/>
+		<set name="magicLevel" val="55"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8506" levels="1" name="Pink Talisman - Hold Resistance">
+		<set name="icon" val="icon.etc_talisman_event_i01"/>
+		<set name="magicLevel" val="55"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8507" levels="1" name="Pink Talisman - Paralysis Resistance">
+		<set name="icon" val="icon.etc_talisman_event_i01"/>
+		<set name="magicLevel" val="55"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8508" levels="1" name="Pink Talisman - All STAT">
+		<set name="icon" val="icon.etc_talisman_event_i02"/>
+		<set name="magicLevel" val="55"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8509" levels="1" name="Blessed Escape">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.accessory_highangel_circlet_i00"/>
+		<set name="reuseDelay" val="3600000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="200"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="8510" levels="1" name="Summon Friend">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="reuseDelay" val="3600000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="10000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="-2"/>
+	</skill>
+	<skill id="8511" levels="1" name="Blessing of Victory">
+		<set name="icon" val="BranchSys2.icon.br_worldcup_hair_i02"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="8512" levels="1" name="Olympic Athlete's Tenacity">
+		<set name="icon" val="BranchSys2.icon.br_spirit_of_brave_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
+	</skill>
+	<skill id="8513" levels="1" name="Olympic Athlete's Spell of Blessing">
+		<set name="icon" val="BranchSys2.icon.br_spell_of_blessing_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
+	</skill>
+	<skill id="8514" levels="1" name="Olympic Athlete's Energy of Victory">
+		<set name="icon" val="BranchSys2.icon.br_obsession_of_winning_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="2000"/>
+	</skill>
+	<skill id="8515" levels="1" name="Release Agathion's Seal - Ball Trapping Gnosian">
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+	</skill>
+	<skill id="8516" levels="1" name="Release Agathion's Seal - Ball Trapping Orodriel">
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+	</skill>
+	<skill id="8517" levels="1" name="Release Agathion's Seal - Penalty Kick">
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+	</skill>
+	<skill id="8518" levels="1" name="Notifier">
+		<set name="icon" val="icon.skill5239"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="15000"/>
+	</skill>
+	<skill id="8519" levels="1" name="Notifier">
+		<set name="icon" val="icon.skill5239"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="15000"/>
+	</skill>
+	<skill id="8520" levels="1" name="Notifier">
+		<set name="icon" val="icon.skill5239"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="15000"/>
+	</skill>
+	<skill id="8521" levels="1" name="Release Agathion's Seal - Antharas">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="magicLevel" val="85"/>
+		<set name="hitTime" val="3000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="useSS" val="false"/>
+		<set name="npcId" val="16077"/>
+		<set name="summonType" val="agathion"/>
+		<cond msgId="1509">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
+	</skill>
+	<skill id="8522" levels="1" name="Release Agathion's Seal - Nevit's Messenger Kanna">
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+	</skill>
+	<skill id="8523" levels="1" name="Release Agathion's Seal - Guardian of Dawn Kallesin">
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+	</skill>
+	<skill id="8524" levels="1" name="Hero's Holy Attack">
+		<set name="icon" val="icon.weapon_the_sword_of_hero_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="8525" levels="1" name="Hero's Holy Attack">
+		<set name="icon" val="icon.weapon_the_staff_of_hero_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="8526" levels="1" name="Shiny Bracelet">
+		<set name="icon" val="icon.accessory_shiny_bracelet"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="8527" levels="1" name="Release Agathion's Seal - Magmeld Fairy">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.etc_summon_aga_agit_i00"/>
+		<set name="magicLevel" val="75"/>
+		<set name="hitTime" val="3000"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="SUMMON"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="useSS" val="false"/>
+		<set name="npcId" val="16080"/>
+		<set name="summonType" val="agathion"/>
+	</skill>
+	<skill id="8569" levels="1" name="Sonic Rage">
+		<table name="#Power">757</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#element">none</table>
+		<table name="#powerPvP">0</table>
+		<table name="#elementPower">0</table>
+		<set name="icon" val="icon.skill18569"/>		
+		<set name="relationSkillsId" val="346;345;939;"/>
+		<set name="powerPvP" val="#powerPvP"/>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="element" val="#element"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="power" val="#Power"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="CHARGE"/>
+		<set name="criticalRate" val="10"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="charges" val="7"/>
+		<set name="alterSkillsId" val="10499;10500;14579"/>		
+		<set name="activateRate" val="100"/>		
+		<set name="isOffensive" val="true"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="900"/>
+		<set name="castRange" val="600"/>
+		<cond msgId="113" addName="1">
+			<not>
+				<using kind="Bow,Crossbow"/>
+			</not>
+		</cond>
+		<enchant1 levels="10" name="Cost">
+			<table name="#power">789 805 820 836 852 868 884 900 916 932</table>
+			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant1>
+		<enchant2 name="Duel">
+			<table name="#powerPvP">789 805 820 836 852 868 884 900 916 932</table>
+			<table name="#power">789 805 820 836 852 868 884 900 916 932</table>
+			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant2>
+		<enchant3 name="Fire Attack">
+			<table name="#element">fire</table>
+			<table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+			<table name="#power">789 805 820 836 852 868 884 900 916 932</table>
+			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant3>
+		<enchant4 name="Water Attack">
+			<table name="#element">water</table>
+			<table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+			<table name="#power">789 805 820 836 852 868 884 900 916 932</table>
+			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant4>
+		<enchant5 name="Wind Attack">
+			<table name="#element">wind</table>
+			<table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+			<table name="#power">789 805 820 836 852 868 884 900 916 932</table>
+			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant5>
+		<enchant6 name="Earth Attack">
+			<table name="#element">earth</table>
+			<table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+			<table name="#power">789 805 820 836 852 868 884 900 916 932</table>
+			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant6>
+		<enchant7 name="Holy Attack">
+			<table name="#element">holy</table>
+			<table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+			<table name="#power">789 805 820 836 852 868 884 900 916 932</table>
+			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant7>
+		<enchant8 name="Dark Attack">
+			<table name="#element">unholy</table>
+			<table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+			<table name="#power">789 805 820 836 852 868 884 900 916 932</table>
+			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant8>
+		<enchant9 levels="10" name="Recycle">
+			<table name="#power">789 805 820 836 852 868 884 900 916 932</table>
+			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
+		</enchant9>
+		<for>
+			<effect count="1" name="Debuff" stackOrder="-1" stackType="pAtkDown" time="10" val="0">
+				<mul order="0x30" stat="pDef" val="0.77"/>
+			</effect>
+		</for>		
+	</skill>	
+</list>

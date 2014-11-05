@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "options.dtd">
+<list>
+	<option id="30177">
+		<for>
+			<add order="0x40" stat="mDef" value="1"/>
+		</for>
+	</option>
+	<option id="30178">
+		<for>
+			<add order="0x40" stat="mDef" value="2"/>
+		</for>
+	</option>
+	<option id="30179">
+		<for>
+			<add order="0x40" stat="mDef" value="3"/>
+		</for>
+	</option>
+	<option id="30180">
+		<for>
+			<add order="0x40" stat="mDef" value="4"/>
+		</for>
+	</option>
+	<option id="30181">
+		<for>
+			<add order="0x40" stat="mDef" value="5"/>
+		</for>
+	</option>
+	<option id="30182">
+		<for>
+			<add order="0x40" stat="mDef" value="6"/>
+		</for>
+	</option>
+	<option id="30183">
+		<for>
+			<add order="0x40" stat="mDef" value="7"/>
+		</for>
+	</option>
+	<option id="30184">
+		<for>
+			<add order="0x40" stat="mDef" value="8"/>
+		</for>
+	</option>
+	<option id="30185">
+		<for>
+			<add order="0x40" stat="mDef" value="9"/>
+		</for>
+	</option>
+	<option id="30186">
+		<for>
+			<add order="0x40" stat="mDef" value="10"/>
+		</for>
+	</option>
+	<option id="30187">
+		<for>
+			<add order="0x40" stat="mDef" value="11"/>
+		</for>
+	</option>
+	<option id="30188">
+		<for>
+			<add order="0x40" stat="mDef" value="12"/>
+		</for>
+	</option>
+	<option id="30189">
+		<for>
+			<add order="0x40" stat="mDef" value="13"/>
+		</for>
+	</option>
+	<option id="30190">
+		<for>
+			<add order="0x40" stat="mDef" value="14"/>
+		</for>
+	</option>
+	<option id="30191">
+		<for>
+			<add order="0x40" stat="mDef" value="15"/>
+		</for>
+	</option>
+	<option id="30192">
+		<for>
+			<add order="0x40" stat="mDef" value="16"/>
+		</for>
+	</option>
+	<option id="30193">
+		<for>
+			<add order="0x40" stat="mDef" value="17"/>
+		</for>
+	</option>
+	<option id="30194">
+		<for>
+			<add order="0x40" stat="mDef" value="18"/>
+		</for>
+	</option>
+	<option id="30195">
+		<for>
+			<add order="0x40" stat="mDef" value="19"/>
+		</for>
+	</option>
+	<option id="30196">
+		<for>
+			<add order="0x40" stat="mDef" value="20"/>
+		</for>
+	</option>
+	<option id="30197">
+		<for>
+			<add order="0x40" stat="mDef" value="21"/>
+		</for>
+	</option>
+	<option id="30198">
+		<for>
+			<add order="0x40" stat="mDef" value="22"/>
+		</for>
+	</option>
+	<option id="30199">
+		<for>
+			<add order="0x40" stat="mDef" value="23"/>
+		</for>
+	</option>
+</list>

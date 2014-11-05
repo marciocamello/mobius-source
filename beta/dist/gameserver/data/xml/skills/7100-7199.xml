@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="7100" levels="1" name="Clan-exclusive Pet Stun">
+		<set name="hitTime" val="1000"/>
+		<set name="icon" val="icon.skill5168"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+	</skill>
+	<skill id="7101" levels="1" name="Clan-exclusive Pet Aerial Thrust">
+		<set name="hitTime" val="1500"/>
+		<set name="icon" val="icon.skill11276"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+	</skill>
+	<skill id="7102" levels="1" name="Summon Clan Pet">
+		<set name="hitTime" val="5000"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="7103" levels="1" name="Helping Tree CP Recovery Range">
+		<set name="hitTime" val="300"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="7104" levels="1" name="Pa'agrio's Hand">
+		<set name="reuseDelay" val="2000"/>
+		<set name="coolTime" val="500"/>
+		<set name="hitTime" val="1000"/>
+		<set name="icon" val="icon.skill11775"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="100"/>
+	</skill>
+	<skill id="7105" levels="1" name="Incubation Possible">
+		<set name="reuseDelay" val="2000"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="100"/>
+	</skill>
+	<skill id="7106" levels="1" name="Optimal Temperature Incubation Success">
+		<set name="reuseDelay" val="2000"/>
+		<set name="coolTime" val="800"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="7107" levels="1" name="Incubation Success">
+		<set name="reuseDelay" val="2000"/>
+		<set name="coolTime" val="800"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="7108" levels="1" name="Incubation Failure">
+		<set name="reuseDelay" val="2000"/>
+		<set name="coolTime" val="800"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="7109" levels="1" name="Summon Bratty Angma">
+		<set name="reuseDelay" val="10000"/>
+		<set name="coolTime" val="500"/>
+		<set name="hitTime" val="3000"/>
+		<set name="icon" val="icon.skill0028"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="7110" levels="1" name="Summon Bratty Angma">
+		<set name="reuseDelay" val="10000"/>
+		<set name="coolTime" val="500"/>
+		<set name="hitTime" val="3000"/>
+		<set name="icon" val="icon.skill0028"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="7111" levels="1" name="Summon Bratty Angma">
+		<set name="reuseDelay" val="10000"/>
+		<set name="coolTime" val="500"/>
+		<set name="hitTime" val="3000"/>
+		<set name="icon" val="icon.skill0028"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="7112" levels="1" name="Summon Bratty Angma">
+		<set name="reuseDelay" val="10000"/>
+		<set name="coolTime" val="500"/>
+		<set name="hitTime" val="3000"/>
+		<set name="icon" val="icon.skill0028"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="7113" levels="1" name="Pet Invincibility Effect">
+		<set name="hitTime" val="500"/>
+		<set name="icon" val="icon.skill0442"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="7114" levels="1" name="Spellbook: Clan Flag">
+		<set name="ride_state" val="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" val="1500"/>
+		<set name="magicLevel" val="841"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="7115" levels="1" name="Energy of Chaos">
+		<set name="icon" val="icon.skill0810"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="7116" levels="1" name="Spellbook: Air Bike">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+</list>

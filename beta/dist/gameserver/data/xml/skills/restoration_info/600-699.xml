@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "restoration_info.dtd">
+<list>
+	<restoration skill_id="620" skill_level="1" name="Quiver of Bolts (B-grade)">
+		<group chance="30.0">
+			<item id="9635" min_count="700" max_count="700"/>
+		</group>
+		<group chance="50.0">
+			<item id="9635" min_count="1400" max_count="1400"/>
+		</group>
+		<group chance="20.0">
+			<item id="9635" min_count="2800" max_count="2800"/>
+		</group>
+	</restoration>
+	<restoration skill_id="621" skill_level="1" name="Create Special Bolt">
+		<group chance="100.0">
+			<item id="10113" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
+</list>

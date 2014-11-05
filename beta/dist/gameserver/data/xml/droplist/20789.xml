@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DropListData.xsd">
+	<npc id="20789">
+		<droplist>
+			<category id="1" chance="70">
+				<item id="57" min="333" max="668" chance="100"/>
+			</category>
+			<category id="2" chance="1.1485">
+				<item id="393" min="1" max="1" chance="1.0427"/>
+				<item id="1938" min="1" max="1" chance="41.0057"/>
+				<item id="394" min="1" max="1" chance="1.0427"/>
+				<item id="415" min="1" max="1" chance="1.6666"/>
+				<item id="1939" min="1" max="1" chance="53.5758"/>
+				<item id="416" min="1" max="1" chance="1.6665"/>
+			</category>
+			<category id="3" chance="24.8481">
+				<item id="34991" min="3" max="3" chance="14.4222"/>
+				<item id="34992" min="4" max="4" chance="9.8678"/>
+				<item id="1884" min="1" max="1" chance="13.0125"/>
+				<item id="1889" min="1" max="1" chance="1.4097"/>
+				<item id="5220" min="1" max="1" chance="0.8458"/>
+				<item id="2275" min="1" max="1" chance="0.151"/>
+				<item id="1661" min="1" max="1" chance="4.2291"/>
+				<item id="1341" min="10" max="30" chance="70.4841"/>
+			</category>
+		</droplist>
+		<spoillist>
+			<item id="2030" min="1" max="1" chance="0.9246"/>
+			<item id="2188" min="1" max="1" chance="5.6469"/>
+			<item id="2154" min="1" max="1" chance="8.4644"/>
+		</spoillist>
+	</npc>
+</list>

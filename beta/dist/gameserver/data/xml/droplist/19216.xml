@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DropListData.xsd">
+	<npc id="19216">
+		<droplist>
+			<category id="3" chance="4.566">
+				<item id="17527" min="1" max="1" chance="93.42970"/>
+				<item id="17526" min="1" max="1" chance="6.57030"/>
+			</category>
+		</droplist>
+	</npc>
+</list>

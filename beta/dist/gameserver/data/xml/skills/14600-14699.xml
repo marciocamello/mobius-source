@@ -1,0 +1,881 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="14600" levels="1" name="Chain Skills">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14601" levels="1" name="Cry of Destiny - Mark of Weakness">
+		<table name="#DOT">174</table>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="1200"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume" val="1"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="skillType" val="POISON"/>
+		<set name="power" val="70"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_ONE"/>
+		<for>
+			<effect count="10" name="DamOverTime" time="1" val="#DOT" stackOrder="7" stackType="poison1" abnormal="poison"/>
+		</for>
+	</skill>
+	<skill id="14602" levels="1" name="Cry of Destiny - Mark of Plague">
+		<table name="#DOT">238</table>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume" val="1"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="skillType" val="POISON"/>
+		<set name="power" val="70"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_ONE"/>
+		<for>
+			<effect count="10" name="DamOverTime" time="1" val="#DOT" stackOrder="7" stackType="poison2" abnormal="poison"/>
+		</for>
+	</skill>
+	<skill id="14603" levels="1" name="Cry of Destiny - Exile">
+		<table name="#DOT">167</table>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="3000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume" val="1"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="skillType" val="POISON"/>
+		<set name="power" val="70"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_ONE"/>
+		<for>
+			<effect count="10" name="DamOverTime" time="1" val="#DOT" stackOrder="7" stackType="poison2" abnormal="poison"/>
+		</for>
+	</skill>
+	<skill id="14604" levels="1" name="Chain Skills">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14605" levels="1" name="Cry of Destiny - Crippling Attack">
+		<table name="#Tab">0.7</table>
+		<set name="power" val="5175"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" time="300">
+				<mul order="0x30" stat="pDef" val="#Tab"/>
+				<mul order="0x30" stat="mDef" val="#Tab"/>
+				<mul order="0x30" stat="rEvas" val="0.9"/>
+			</effect>
+		</for>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="910"/>
+	</skill>
+	<skill id="14606" levels="1" name="Cry of Destiny - Death Strike">
+		<set name="power" val="9444"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1410"/>
+	</skill>
+	<skill id="14607" levels="1" name="Cry of Destiny - Pipe Organ Melody">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" time="10">
+				<add order="0x40" stat="maxHp" val="2572"/>
+				<add order="0x40" stat="maxMp" val="953"/>
+				<mul order="0x30" stat="regHp" val="1.2"/>
+				<mul order="0x30" stat="regMp" val="1.2"/>
+			</effect>
+		</for>
+		<set name="hitTime" val="700"/>
+	</skill>
+	<skill id="14608" levels="1" name="Chain Skills">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14609" levels="1" name="Cry of Destiny - Dark Blast">
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="power" val="124"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_ONE"/>
+	</skill>
+	<skill id="14610" levels="1" name="Cry of Destiny - Radiant Heal">
+		<set name="hitTime" val="3000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="skillType" val="HEAL_WITH_CP"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="power" val="1488"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_SELF"/>
+	</skill>
+	<skill id="14611" levels="1" name="Cry of Destiny - Dark Force">
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="2000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="power" val="113"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="effetRange" val="600"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14612" levels="1" name="Press the icon to use the chain skill.">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="EFFECT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3000"/>
+		<for>
+			<effect count="1" name="Buff" time="4" alterData="457"/>
+		</for>
+	</skill>
+	<skill id="14613" levels="1" name="Press the icon to use the chain skill.">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="EFFECT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3000"/>
+		<for>
+			<effect count="1" name="Buff" time="4" alterData="458"/>
+		</for>
+	</skill>
+	<skill id="14614" levels="1" name="Press the icon to use the chain skill.">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="EFFECT"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="3000"/>
+		<for>
+			<effect count="1" name="Buff" time="4" alterData="459"/>
+		</for>
+	</skill>
+	<skill id="14615" levels="1" name="Teredor Biting">
+		<set name="icon" val="icon.skill0122"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
+		<set name="hitTime" val="1500"/>
+	</skill>
+	<skill id="14616" levels="1" name="Blood Siphon">
+		<set name="icon" val="icon.skill1042"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
+	</skill>
+	<skill id="14617" levels="1" name="Knock Down Resistance">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14618" levels="1" name="Knock Back Resistance">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14619" levels="1" name="Disarm Resistance">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14620" levels="1" name="Aerial Yoke Resistance 1">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14621" levels="1" name="Pulling Resistance">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14622" levels="1" name="Banishment Resistance">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14623" levels="1" name="Mutation Resistance">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14624" levels="1" name="Apherus Dark Space">
+		<set name="icon" val="icon.skill0048"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="1000"/>
+		<set name="reuseDelay" val="2000"/>
+	</skill>
+	<skill id="14625" levels="1" name="Release of Power">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="skillType" val="HEAL"/>
+		<set name="power" val="1488"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="30000"/>
+		<set name="hitTime" val="10000"/>
+		<set name="castRange" val="900"/>
+	</skill>
+	<skill id="14626" levels="1" name="Mental Attack Resistance">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14627" levels="1" name="Foul Secretion">
+		<set name="icon" val="icon.skill0122"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="300"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="10000"/>
+	</skill>
+	<skill id="14628" levels="1" name="Gastric Juice Eruption">
+		<set name="icon" val="icon.skill1184"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="300"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="10000"/>
+	</skill>
+	<skill id="14629" levels="1" name="Corpse Grinding">
+		<set name="icon" val="icon.skill0096"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="100"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="10000"/>
+	</skill>
+	<skill id="14630" levels="1" name="Discard Decayed Branch">
+		<set name="icon" val="icon.skill0101"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="10000"/>
+	</skill>
+	<skill id="14631" levels="1" name="Foul Spore">
+		<set name="icon" val="icon.skill1064"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="10000"/>
+	</skill>
+	<skill id="14632" levels="1" name="Terrifying Sword Dance">
+		<set name="icon" val="icon.skill1086"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="7000"/>
+		<set name="reuseDelay" val="30000"/>
+	</skill>
+	<skill id="14633" levels="1" name="Severed Ankle">
+		<set name="icon" val="icon.skill0261"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="100"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="10000"/>
+	</skill>
+	<skill id="14634" levels="1" name="Stigma's Despair">
+		<set name="icon" val="icon.skill14634"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="300"/>
+		<set name="hitTime" val="7000"/>
+		<set name="reuseDelay" val="15000"/>
+	</skill>
+	<skill id="14635" levels="1" name="Corpse Explosion">
+		<set name="icon" val="icon.skill14635"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="100"/>
+		<set name="hitTime" val="5000"/>
+	</skill>
+	<skill id="14636" levels="1" name="Merciless Grip">
+		<set name="icon" val="icon.skill1042"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="60000"/>
+	</skill>
+	<skill id="14637" levels="1" name="Driving Fog">
+		<set name="icon" val="icon.skill0014637"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="5000"/>
+		<set name="reuseDelay" val="10000"/>
+	</skill>
+	<skill id="14638" levels="1" name="Blade Claw">
+		<set name="icon" val="icon.skill0096"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="100"/>
+		<set name="hitTime" val="2500"/>
+	</skill>
+	<skill id="14639" levels="1" name="Compound Poison">
+		<set name="icon" val="icon.skill0129"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="200"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="15000"/>
+	</skill>
+	<skill id="14640" levels="1" name="High-speed Movement">
+		<set name="icon" val="icon.skill1087"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="10000"/>
+	</skill>
+	<skill id="14641" levels="1" name="Earthquake">
+		<set name="icon" val="icon.skill0014641"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="5000"/>
+	</skill>
+	<skill id="14642" levels="1" name="Sever">
+		<set name="icon" val="icon.skill0261"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="100"/>
+		<set name="hitTime" val="2500"/>
+	</skill>
+	<skill id="14643" levels="1" name="Summon">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="20000"/>
+	</skill>
+	<skill id="14644" levels="1" name="White Dog's Fang">
+		<set name="icon" val="icon.skill0014644"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="80"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="10000"/>
+	</skill>
+	<skill id="14645" levels="1" name="Dark Arrow">
+		<set name="icon" val="icon.skill0101"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
+		<set name="hitTime" val="500"/>
+	</skill>
+	<skill id="14646" levels="1" name="Polarization">
+		<set name="icon" val="icon.skill0115"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="300"/>
+		<set name="hitTime" val="5000"/>
+		<set name="reuseDelay" val="30000"/>
+	</skill>
+	<skill id="14647" levels="1" name="Polarization">
+		<set name="icon" val="icon.skill0115"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="300"/>
+	</skill>
+	<skill id="14648" levels="1" name="Flood">
+		<set name="icon" val="icon.skill1062"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="reuseDelay" val="30000"/>
+	</skill>
+	<skill id="14649" levels="1" name="Bounce">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<for/>
+	</skill>
+	<skill id="14650" levels="1" name="Corpse' Blow">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="15000"/>
+	</skill>
+	<skill id="14651" levels="1" name="Stun">
+		<set name="icon" val="icon.skill0092"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1200"/>
+	</skill>
+	<skill id="14652" levels="1" name="Blood Siphon">
+		<set name="icon" val="icon.skill1268"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1000"/>
+	</skill>
+	<skill id="14653" levels="1" name="Rigor Mortis">
+		<set name="icon" val="icon.skill0110"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1000"/>
+	</skill>
+	<skill id="14654" levels="1" name="Darkness Drain">
+		<set name="icon" val="icon.skill1401"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="2000"/>
+	</skill>
+	<skill id="14655" levels="1" name="Barrier of Reflection">
+		<set name="icon" val="icon.skill0086"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1000"/>
+	</skill>
+	<skill id="14656" levels="1" name="Corpse Lunacy">
+		<set name="icon" val="icon.skill1068"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1000"/>
+	</skill>
+	<skill id="14657" levels="1" name="Lingering Lunacy">
+		<set name="icon" val="icon.skill1170"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14658" levels="1" name="Spinning Slasher">
+		<set name="icon" val="icon.skill0036"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="10000"/>
+	</skill>
+	<skill id="14659" levels="1" name="Stun">
+		<set name="icon" val="icon.skill0092"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1200"/>
+	</skill>
+	<skill id="14660" levels="1" name="Blood Strike">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14661" levels="1" name="Darkness Wave">
+		<set name="icon" val="icon.skill0056"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14662" levels="1" name="Darkness Shiver">
+		<set name="icon" val="icon.skill0056"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="14663" levels="1" name="Guardian's Blow">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="15000"/>
+	</skill>
+	<skill id="14664" levels="1" name="Destruction Blow">
+		<set name="icon" val="icon.skill0003"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="15000"/>
+	</skill>
+	<skill id="14665" levels="1" name="Ferocious Charge">
+		<set name="icon" val="icon.skill0493"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="15000"/>
+	</skill>
+	<skill id="14666" levels="1" name="Penetrating Blow">
+		<set name="icon" val="icon.skill0056"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="3000"/>
+		<set name="reuseDelay" val="15000"/>
+	</skill>
+	<skill id="14667" levels="1" name="Flames of Judgment">
+		<set name="icon" val="icon.skill1230"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="1200"/>
+	</skill>
+	<skill id="14668" levels="1" name="Firestorm of Judgment">
+		<set name="icon" val="icon.skill1296"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="500"/>
+		<set name="hitTime" val="4000"/>
+		<set name="reuseDelay" val="5000"/>
+	</skill>
+	<skill id="14649" levels="1" name="Bounce">
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<for/>
+	</skill>
+	<skill id="14670" levels="1" name="Earth Wyrm Feeler Strike">
+		<set name="icon" val="icon.skill0036"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14671" levels="1" name="Earth Wyrm Feeler Strike">
+		<set name="icon" val="icon.skill0036"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="14672" levels="1" name="Bounce">
+		<set name="icon" val="icon.skill4107"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+	</skill>
+	<skill id="14673" levels="1" name="Cry of Destiny - Shield Charge">
+		<set name="power" val="1500"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="800"/>
+		<set name="mpConsume" val="1"/>
+		<set name="castRange" val="40"/>
+		<for>
+			<effect name="Buff" time="9" val="0" abnormalLvl="1" abnormalType="critical_dmg_down" effectPower="80">
+				<basemul order="0x30" stat="critDamRcpt" val="1.1"/>
+				<mul order="0x30" stat="pDef" val="0.9"/>
+				<sub order="0x40" stat="rEvas" val="2"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="14674" levels="1" name="Cry of Destiny - Chain Strike">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="500"/>
+		<set name="mpConsume" val="1"/>
+		<set name="castRange" val="600"/>
+		<for>
+			<effect count="1" name="TargetToMe" time="1" val="0"/>
+		</for>
+	</skill>
+	<skill id="14675" levels="1" name="Cry of Destiny - Last Judgment">
+		<set name="icon" val="icon.skill10009"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1200"/>
+	</skill>
+	<skill id="14676" levels="1" name="Cry of Destiny - Armor Destruction">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1090"/>
+		<set name="hitCancelTime" val="200"/>
+		<set name="mpConsume" val="1"/>
+		<set name="castRange" val="40"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="power" val="1300"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="3" stackType="pDefDown" time="20" val="0">
+				<mul order="0x30" stat="pDef" val="0.85"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="14677" levels="1" name="Cry of Destiny - Giant Punch">
+		<set name="icon" val="icon.skill10266"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1000"/>
+	</skill>
+	<skill id="14678" levels="1" name="Cry of Destiny - Power Bomber">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="1490"/>
+		<set name="hitCancelTime" val="200"/>
+		<set name="mpConsume" val="1"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="power" val="2000"/>
+		<set name="castRange" val="40"/>
+		<for>
+			<effect name="Stun" time="2" val="0" effectPower="65" effectType="STUN" abnormalLvl="1" abnormalType="stun"/>
+		</for>
+	</skill>
+	<skill id="14679" levels="1" name="Cry of Destiny - Heart Breaker">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="830"/>
+		<set name="hitCancelTime" val="699"/>
+		<set name="mpConsume" val="0"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="power" val="1700"/>
+		<set name="castRange" val="40"/>
+		<set name="overHit" val="true"/>
+		<set name="lethal1" val="10"/>
+	</skill>
+	<skill id="14680" levels="1" name="Cry of Destiny - Dark Paralysis">
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="magicLevel" val="85"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Petrification" stackOrder="-1" stackType="paralyze" time="5" val="0"/>
+		</for>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1000"/>
+	</skill>
+	<skill id="14686" levels="1" name="Cry of Destiny - Elemental Crash">
+		<table name="#magicLevel">85</table>
+		<table name="#mpInitialConsume">7</table>
+		<table name="#power">143</table>
+		<table name="#mpConsume2">65</table>
+		<set name="reuseDelay" val="6000"/>
+		<set name="hitTime" val="2780"/>
+		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="castRange" val="600"/>
+		<set name="element" val="0"/>
+		<set name="elementPower" val="80"/>
+		<set name="isDebuff" val="true"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="saveVs" val="MEN"/>
+		<set name="power" val="20"/>
+		<set name="lvlDepend" val="1"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="mpInitialConsume" val="#mpInitialConsume"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="power" val="#power"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="target" val="TARGET_ONE"/>
+		<for>
+			<effect count="5" name="Fear" time="2" val="0" stackOrder="1" stackType="fear"/>
+		</for>
+	</skill>
+	<skill id="14687" levels="1" name="Cry of Destiny - Hell Binding">
+		<set name="icon" val="icon.skill11050"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="1500"/>
+	</skill>
+	<skill id="14688" levels="2" name="Cry of Destiny - Mark of Weakness">
+		<table name="#DOT">40 5</table>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="1200"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume" val="1"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="skillType" val="POISON"/>
+		<set name="power" val="70"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_ONE"/>
+		<for>
+			<effect count="10" name="DamOverTime" time="1" val="#DOT" stackOrder="7" stackType="poison1" abnormal="poison"/>
+		</for>
+	</skill>
+	<skill id="14689" levels="2" name="Cry of Destiny - Mark of Plague">
+		<table name="#DOT">70 8</table>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume" val="1"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="skillType" val="POISON"/>
+		<set name="power" val="70"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_ONE"/>
+		<for>
+			<effect count="10" name="DamOverTime" time="1" val="#DOT" stackOrder="7" stackType="poison2" abnormal="poison"/>
+		</for>
+	</skill>
+	<skill id="14690" levels="1" name="Cry of Destiny - Exile">
+		<set name="icon" val="icon.skill11273"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="3000"/>
+	</skill>
+	<skill id="14691" levels="1" name="Cry of Destiny - Crippling Attack">
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="910"/>
+		<set name="hitCancelTime" val="300"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="power" val="1300"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_ONE"/>
+		<for>
+			<effect name="Debuff" time="5" val="0">
+				<mul order="0x30" stat="pDef" val="0.70"/>
+				<mul order="0x30" stat="mDef" val="0.70"/>
+				<add order="0x40" stat="rEvas" val="10"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="14692" levels="1" name="Cry of Destiny - Death Strike">
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1410"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="power" val="1400"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_ONE"/>
+	</skill>
+	<skill id="14693" levels="1" name="Cry of Destiny - Pipe Organ Melody">
+		<set name="hitTime" val="700"/>
+		<set name="hitCancelTime" val="300"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="power" val="1400"/>
+		<set name="mpConsume" val="1"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<for>
+			<effect name="Buff" time="1800" val="0" stackOrder="1" stackType="buff">
+				<add order="0x40" stat="maxHp" val="2572"/>
+				<add order="0x40" stat="maxMp" val="953"/>
+				<mul order="0x30" stat="regHp" val="1.20"/>
+				<mul order="0x30" stat="regMp" val="1.20"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="14694" levels="1" name="Cry of Destiny - Dark Blast">
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="power" val="31"/>
+		<set name="mpConsume" val="1"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_ONE"/>
+	</skill>
+	<skill id="14695" levels="1" name="Cry of Destiny - Radiant Heal">
+		<set name="icon" val="icon.skill11755"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="3000"/>
+	</skill>
+	<skill id="14696" levels="1" name="Cry of Destiny - Dark Force">
+		<set name="icon" val="icon.skill0101"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="2000"/>
+	</skill>
+	<skill id="14697" levels="1" name="Ghost's Hell Binding">
+		<set name="icon" val="icon.skill11050"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="1500"/>
+		<set name="reuseDelay" val="120000"/>
+	</skill>
+	<skill id="14698" levels="1" name="Current Shock">
+		<set name="hitTime" val="3000"/>
+		<set name="skillRadius" val="600"/>
+		<set name="isDebuff" val="true"/>
+		<set name="magicType" val="MAGIC"/>
+		<set name="lvlDepend" val="1"/>
+		<set name="magicLvl" val="18"/>
+		<set name="mpConsume" val="0"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="target" val="TARGET_AURA"/>
+		<for>
+			<effect count="2" name="DamOverTime" time="2" val="67"/>
+		</for>
+	</skill>
+	<skill id="14699" levels="1" name="Greeting of Suffering">
+		<set name="icon" val="icon.skill0411"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="2000"/>
+		<set name="reuseDelay" val="4000"/>
+	</skill>
+</list>

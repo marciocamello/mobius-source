@@ -1,0 +1,1134 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="9000" levels="1" name="Player Commendation - Scroll: Enchant Armor (D-grade)">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9001" levels="1" name="Player Commendation - Scroll: Enchant Armor (C-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9002" levels="1" name="Player Commendation - Scroll: Enchant Armor (B-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9003" levels="1" name="Player Commendation - Scroll: Enchant Armor (A-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9004" levels="1" name="Player Commendation - Scroll: Enchant Armor (S-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9005" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (D-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9006" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (C-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9007" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (B-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9008" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (A-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9009" levels="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (S-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9010" levels="1" name="Cool Pack">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill1184"/>
+		<set name="coolTime" val="700"/>
+		<set name="reuseDelay" val="1000"/>
+		<set name="magicLevel" val="85"/>
+		<set name="castRange" val="200"/>
+		<set name="hitTime" val="1300"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9011" levels="1" name="Might">
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
+		<set name="magicLevel" val="85"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9012" levels="1" name="Shield">
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
+		<set name="magicLevel" val="85"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9013" levels="1" name="Wind Walk">
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
+		<set name="magicLevel" val="85"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9014" levels="15" name="Focus">
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
+		<set name="magicLevel" val="85"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9015" levels="1" name="Death Whisper">
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
+		<set name="magicLevel" val="85"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9016" levels="1" name="Guidance">
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
+		<set name="magicLevel" val="85"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9017" levels="1" name="Blessed Shield">
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
+		<set name="magicLevel" val="85"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9018" levels="1" name="Blessed Body">
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
+		<set name="magicLevel" val="85"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9019" levels="1" name="Haste">
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
+		<set name="magicLevel" val="85"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9020" levels="1" name="Vampiric Rage">
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
+		<set name="magicLevel" val="85"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9021" levels="1" name="Berserker Spirit">
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
+		<set name="magicLevel" val="85"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9022" levels="1" name="Magic Barrier">
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
+		<set name="magicLevel" val="85"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9023" levels="1" name="Blessed Soul">
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
+		<set name="magicLevel" val="85"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9024" levels="1" name="Empower">
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
+		<set name="magicLevel" val="85"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9025" levels="1" name="Acumen">
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
+		<set name="magicLevel" val="85"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9026" levels="1" name="Clarity">
+		<set name="magicType" val="MAGIC"/>
+		<set name="icon" val="icon.etc_hot_spring_nectar_i00"/>
+		<set name="magicLevel" val="85"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9027" levels="1" name="Player Commendation Instant Lottery Ticket">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9028" levels="1" name="Lucky Cool Pack">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill1184"/>
+		<set name="coolTime" val="700"/>
+		<set name="reuseDelay" val="1000"/>
+		<set name="magicLevel" val="85"/>
+		<set name="castRange" val="200"/>
+		<set name="hitTime" val="1300"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9029" levels="1" name="Watermelon Seed">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="1500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9030" levels="1" name="Honey Watermelon Seed">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="1500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9031" levels="1" name="Copied Watermelon Seed">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="1500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9032" levels="1" name="Copied Honey Watermelon Seed">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="1500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9033" levels="1" name="Herdsman's Love Scroll">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9034" levels="1" name="Scroll: Enchant Vitality Belt">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9035" levels="1" name="Steamed Rice Cake">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.etc.event_steamed_rice_cake_i00"/>
+		<set name="reuseDelay" val="1800000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="100"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9036" levels="1" name="Special July 7th Parcel">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9037" levels="1" name="Special July 7th Parcel (Event)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9038" levels="1" name="Steamed Rice Cake">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="3600000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9039" levels="1" name="Steamed Rice Cake">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="3600000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9040" levels="1" name="PC Points">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="604800000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9041" levels="1" name="6th Anniversary Cake">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.event_six_party_cake_i00"/>
+		<set name="reuseDelay" val="43200000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9042" levels="1" name="6th Anniversary Cube">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="82800000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9043" levels="1" name="6th Anniversary Cube">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="82800000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9044" levels="1" name="6th Anniversary Cube">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="82800000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9045" levels="1" name="6th Anniversary Cube">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="82800000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9046" levels="1" name="6th Anniversary Cube">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="82800000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9047" levels="1" name="6th Anniversary Cube">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="82800000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9048" levels="1" name="6th Anniversary Cube">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="82800000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9049" levels="1" name="Golden Spice">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="1500"/>
+		<set name="magicLevel" val="1"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="1000"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BEAST_FEED"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="itemConsumeId" val="15474"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_FEEDABLE_BEAST"/>
+		<cond msgId="109">
+			<or>
+				<target mobId="18873"/>
+				<target mobId="18874"/>
+				<target mobId="18875"/>
+				<target mobId="18876"/>
+				<target mobId="18877"/>
+				<target mobId="18878"/>
+				<target mobId="18879"/>
+				<target mobId="18880"/>
+				<target mobId="18881"/>
+				<target mobId="18882"/>
+				<target mobId="18883"/>
+				<target mobId="18884"/>
+				<target mobId="18885"/>
+				<target mobId="18886"/>
+				<target mobId="18887"/>
+				<target mobId="18888"/>
+				<target mobId="18889"/>
+				<target mobId="18890"/>
+				<target mobId="18891"/>
+				<target mobId="18892"/>
+				<target mobId="18893"/>
+				<target mobId="18894"/>
+				<target mobId="18895"/>
+				<target mobId="18896"/>
+				<target mobId="18897"/>
+				<target mobId="18898"/>
+				<target mobId="18899"/>
+				<target mobId="18900"/>
+			</or>
+		</cond>
+	</skill>
+	<skill id="9050" levels="1" name="Crystal Spice">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="1500"/>
+		<set name="magicLevel" val="1"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="1000"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BEAST_FEED"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="itemConsumeId" val="15475"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_FEEDABLE_BEAST"/>
+		<cond msgId="109">
+			<or>
+				<target mobId="18873"/>
+				<target mobId="18874"/>
+				<target mobId="18875"/>
+				<target mobId="18876"/>
+				<target mobId="18877"/>
+				<target mobId="18878"/>
+				<target mobId="18879"/>
+				<target mobId="18880"/>
+				<target mobId="18881"/>
+				<target mobId="18882"/>
+				<target mobId="18883"/>
+				<target mobId="18884"/>
+				<target mobId="18885"/>
+				<target mobId="18886"/>
+				<target mobId="18887"/>
+				<target mobId="18888"/>
+				<target mobId="18889"/>
+				<target mobId="18890"/>
+				<target mobId="18891"/>
+				<target mobId="18892"/>
+				<target mobId="18893"/>
+				<target mobId="18894"/>
+				<target mobId="18895"/>
+				<target mobId="18896"/>
+				<target mobId="18897"/>
+				<target mobId="18898"/>
+				<target mobId="18899"/>
+				<target mobId="18900"/>
+			</or>
+		</cond>
+	</skill>
+	<skill id="9051" levels="1" name="Blessed Golden Spice">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="1500"/>
+		<set name="magicLevel" val="1"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="1000"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BEAST_FEED"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="itemConsumeId" val="15476"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_FEEDABLE_BEAST"/>
+		<cond msgId="109">
+			<or>
+				<target mobId="18873"/>
+				<target mobId="18880"/>
+				<target mobId="18887"/>
+				<target mobId="18894"/>
+			</or>
+		</cond>
+	</skill>
+	<skill id="9052" levels="1" name="Blessed Crystal Spice">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="1500"/>
+		<set name="magicLevel" val="1"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="1000"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BEAST_FEED"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="itemConsumeId" val="15477"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_FEEDABLE_BEAST"/>
+		<cond msgId="109">
+			<or>
+				<target mobId="18873"/>
+				<target mobId="18880"/>
+				<target mobId="18887"/>
+				<target mobId="18894"/>
+			</or>
+		</cond>
+	</skill>
+	<skill id="9053" levels="1" name="Golden Spice (S-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="1500"/>
+		<set name="magicLevel" val="1"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="1000"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BEAST_FEED"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="itemConsumeId" val="15478"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_FEEDABLE_BEAST"/>
+		<cond msgId="109">
+			<or>
+				<target mobId="18873"/>
+				<target mobId="18880"/>
+				<target mobId="18887"/>
+				<target mobId="18894"/>
+			</or>
+		</cond>
+	</skill>
+	<skill id="9054" levels="1" name="Crystal Spice (S-grade)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="1500"/>
+		<set name="magicLevel" val="1"/>
+		<set name="castRange" val="400"/>
+		<set name="hitTime" val="1000"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BEAST_FEED"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="itemConsumeId" val="15479"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_FEEDABLE_BEAST"/>
+		<cond msgId="109">
+			<or>
+				<target mobId="18873"/>
+				<target mobId="18880"/>
+				<target mobId="18887"/>
+				<target mobId="18894"/>
+			</or>
+		</cond>
+	</skill>
+	<skill id="9055" levels="1" name="Golden Spice Capsule">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="1000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9056" levels="1" name="Crystal Spice Capsule">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="1000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9057" levels="1" name="Frozen Core">
+		<set name="icon" val="icon.skill1418"/>
+		<set name="reuseDelay" val="1200000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="1500"/>
+		<set name="target" val="TARGET_COMMCHANNEL"/>
+		<set name="skillRadius" val="2000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isOffensive" val="false"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="isHandler" val="true"/>
+		<cond msgId="113" addName="1">
+			<or>
+				<player instance_zone="139"/>
+				<player instance_zone="144"/>
+			</or>
+		</cond>
+		<for>
+			<effect count="1" name="IgnoreSkill" stackOrder="1" stackType="IgnoreSkill" time="10" val="0">
+				<def name="skillId" val="6662;6274;6275"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="9058" levels="1" name="Black Frozen Core">
+		<set name="icon" val="icon.skill1418"/>
+		<set name="reuseDelay" val="1200000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="1500"/>
+		<set name="itemConsumeId" val="15470"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="target" val="TARGET_COMMCHANNEL"/>
+		<set name="skillRadius" val="2000"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isOffensive" val="false"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="isHandler" val="true"/>
+		<cond msgId="113" addName="1">
+			<or>
+				<player instance_zone="139"/>
+				<player instance_zone="144"/>
+			</or>
+		</cond>
+		<for>
+			<effect count="1" name="IgnoreSkill" stackOrder="1" stackType="IgnoreSkill" time="10" val="0">
+				<def name="skillId" val="6662;6274;6275"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="9059" levels="1" name="Torch Light">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="2000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="2000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="castRange" val="40"/>
+	</skill>
+	<skill id="9060" levels="1" name="Maguen Plasma Collector">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="9000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="4000"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isHandler" val="true"/>
+		<set name="isOffensive" val="false"/>
+		<cond msgId="144">
+			<target mobId="18839"/>
+		</cond>
+	</skill>
+	<skill id="9061" levels="1" name="Scroll: Summon Uldie">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="3000"/>
+		<set name="hitCancelTime" val="1500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9062" levels="1" name="Scroll: Summon Belldandy">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="3000"/>
+		<set name="hitCancelTime" val="1500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9063" levels="1" name="Scroll: Summon Skooldie">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="3000"/>
+		<set name="hitCancelTime" val="1500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9064" levels="1" name="Halloween Toy Box">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="2000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9065" levels="1" name="Shiny Halloween Toy Box">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="2000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9066" levels="1" name="Transformation Scroll Pack">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="2000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="TRANSFORMATION"/>
+		<set name="isReuseDelayPermanent" val="true"/>
+		<set name="addSkills" val="963;1;619;1;5491;1"/>
+		<set name="npcId" val="13156"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<for>
+			<effect count="1" name="Transformation" time="18000" val="219"/>
+		</for>
+	</skill>
+	<skill id="9067" levels="1" name="Vitality Maintaining Potion">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.etc_lesser_potion_blue_i00"/>
+		<set name="reuseDelay" val="1800000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9068" levels="2" name="Vitality Maintaining Potion">
+		<table name="#itemConsumeId">15438 15440</table>
+		<table name="#effectTime">600 1800</table>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00"/>
+		<set name="reuseDelay" val="3600000"/>
+		<set name="itemConsumeId" val="#itemConsumeId"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="altUse" val="true"/>
+		<for>
+			<effect count="1" name="Vitality" stackType="vitalityRegen" stackOrder="1" time="#effectTime" val="0"/>
+		</for>
+	</skill>
+	<skill id="9069" levels="1" name="Scroll: 10,000 SP">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="2000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9070" levels="1" name="Halloween Pumpkin">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="2000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9071" levels="1" name="Halloween Pumpkin (Event)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="2000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9072" levels="1" name="Small Halloween Pumpkin">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="2000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9073" levels="1" name="Energy of HP Drain">
+		<set name="icon" val="icon.xel_mahun_vampiric_rage_i00"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="hitTime" val="100"/>
+		<set name="reuseDelay" val="2000"/>
+	</skill>
+	<skill id="9074" levels="1" name="Salmon Porridge">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="600000"/>
+		<set name="power" val="2300"/>
+		<set name="magicLevel" val="1"/>
+		<set name="itemConsumeId" val="15492"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="altUse" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="HEAL"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<cond msgId="1902">
+			<and>
+				<player minLevel="76"/>
+				<player maxLevel="90"/>
+			</and>
+		</cond>
+	</skill>
+	<skill id="9075" levels="1" name="Awful Soup">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="150"/>
+		<set name="hitTime" val="1000"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="9076" levels="1" name="Secret Gate Key">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="40"/>
+		<set name="reuseDelay" val="8000"/>
+	</skill>
+	<skill id="9077" levels="1" name="Open Packaged Book">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="reuseDelay" val="1000"/>
+	</skill>
+	<skill id="9078" levels="1" name="Hot Springs Recovery Potion">
+		<set name="itemConsumeId" val="17018"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="icon" val="icon.etc_cp_potion_i01"/>
+		<set name="isHandler" val="true"/>
+		<set name="altUse" val="true"/>
+		<set name="reuseDelay" val="300000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Buff" time="30" val="0">
+				<mul order="0x40" stat="regHp" val="1.3"/>
+				<mul order="0x40" stat="regMp" val="1.3"/>
+				<mul order="0x40" stat="regCp" val="1.3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="9079" levels="1" name="Scroll: Santa's Buff">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.mysterious_wedding_i00"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9080" levels="1" name="Santa's Stockings">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9081" levels="1" name="Holiday Cake">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.event_six_party_cake_i00"/>
+		<set name="reuseDelay" val="3600000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9082" levels="1" name="White Winter Wish Candle">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.etc_candle_white_i00"/>
+		<set name="reuseDelay" val="1800000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="100"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9083" levels="1" name="Holiday Cake (Event)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.event_six_party_cake_i00"/>
+		<set name="reuseDelay" val="3600000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9084" levels="1" name="White Winter Wish Candle (Event)">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.etc_candle_white_i00"/>
+		<set name="reuseDelay" val="1800000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="100"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+	</skill>
+	<skill id="9085" levels="1" name="Santa' Gift">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="reuseDelay" val="2000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9086" levels="1" name="Santa - CP Potion">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9087" levels="1" name="Create Item">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9088" levels="1" name="Cupid's Cure">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill3260"/>
+		<set name="reuseDelay" val="1000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="castRange" val="500"/>
+		<set name="hitTime" val="1000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume2" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9089" levels="1" name="Cupid's Enhanced Cure">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill3260"/>
+		<set name="reuseDelay" val="4000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="castRange" val="500"/>
+		<set name="hitTime" val="1000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume2" val="1"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9090" levels="1" name="Fighter's Will">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9091" levels="1" name="Archer's Will">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9092" levels="1" name="Magician's Will">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="81"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9093" levels="1" name="Protection of Rune">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9094" levels="1" name="Protection of Elemental">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9095" levels="1" name="Protection of Alignment">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill0000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9096" levels="1" name="Event - Scroll: Summon Baby White Tiger">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="1500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9097" levels="1" name="Event - Scroll: Summon Baby White Tiger Captain">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
+		<set name="reuseDelay" val="10000"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="1500"/>
+		<set name="hitCancelTime" val="1500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9098" levels="1" name="Event - Scroll: Summon Gloomy Baby White Tiger">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitCancelTime" val="1500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+	<skill id="9099" levels="1" name="Event - Scroll: Summon Gloomy Baby White Tiger Captain">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.etc_scroll_of_return_i00"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitCancelTime" val="1500"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+	</skill>
+</list>

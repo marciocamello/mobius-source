@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<list>
+	<config showall="true" notax="false" keepenchanted="false"/>
+	<item>
+		<ingredient id="19450" count="60"/>
+		<production id="19316" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="60"/>
+		<production id="19317" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="60"/>
+		<production id="19318" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="60"/>
+		<production id="19319" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="60"/>
+		<production id="19320" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="60"/>
+		<production id="19321" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="60"/>
+		<production id="19322" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="60"/>
+		<production id="19323" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="60"/>
+		<production id="19324" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="60"/>
+		<production id="19325" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="60"/>
+		<production id="19326" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="3"/>
+		<production id="19169" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="3"/>
+		<production id="19170" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="3"/>
+		<production id="19171" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="3"/>
+		<production id="19172" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="3"/>
+		<production id="19173" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="3"/>
+		<production id="19174" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="3"/>
+		<production id="19175" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="3"/>
+		<production id="19176" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="3"/>
+		<production id="19177" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="3"/>
+		<production id="19178" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="3"/>
+		<production id="19179" count="1"/>
+	</item>
+	<item>
+		<ingredient id="19450" count="20"/>
+		<production id="19305" count="1"/>
+	</item>
+</list>

@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<list>
+	<config showall="true" notax="true" keepenchanted="true"/>
+	<item>
+		<ingredient count="1" id="13457"/>
+		<ingredient count="1" id="8678"/>
+		<ingredient count="1" id="5126"/>
+		<ingredient count="7168000" id="5575"/>
+		<production count="1" id="52"/>
+	</item>
+	<item>
+		<ingredient count="1" id="9442"/>
+		<ingredient count="1" id="2500"/>
+		<ingredient count="1" id="5126"/>
+		<ingredient count="3747300" id="5575"/>
+		<production count="1" id="10004"/>
+	</item>
+	<item>
+		<ingredient count="1" id="10215"/>
+		<ingredient count="1" id="2500"/>
+		<ingredient count="1" id="5126"/>
+		<ingredient count="5172000" id="5575"/>
+		<production count="1" id="10415"/>
+	</item>
+	<item>
+		<ingredient count="1" id="80"/>
+		<ingredient count="1" id="2500"/>
+		<ingredient count="1" id="5126"/>
+		<ingredient count="3240000" id="5575"/>
+		<production count="1" id="6580"/>
+	</item>
+	<item>
+		<ingredient count="1" id="11272"/>
+		<ingredient count="1" id="2500"/>
+		<ingredient count="1" id="5126"/>
+		<ingredient count="3747300" id="5575"/>
+		<production count="1" id="11251"/>
+	</item>
+	<item>
+		<ingredient count="1" id="11305"/>
+		<ingredient count="1" id="2500"/>
+		<ingredient count="1" id="5126"/>
+		<ingredient count="5172000" id="5575"/>
+		<production count="1" id="11300"/>
+	</item>
+	<item>
+		<ingredient count="1" id="11058"/>
+		<ingredient count="1" id="2500"/>
+		<ingredient count="1" id="5126"/>
+		<ingredient count="3240000" id="5575"/>
+		<production count="1" id="11234"/>
+	</item>
+	<item>
+		<ingredient count="1" id="80"/>
+		<ingredient count="1" id="11080"/>
+		<ingredient count="1" id="5126"/>
+		<ingredient count="3240000" id="5575"/>
+		<production count="1" id="11234"/>
+	</item>
+	<item>
+		<ingredient count="1" id="9446"/>
+		<ingredient count="1" id="236"/>
+		<ingredient count="1" id="5126"/>
+		<ingredient count="4395000" id="5575"/>
+		<production count="1" id="13882"/>
+	</item>
+	<item>
+		<ingredient count="1" id="10216"/>
+		<ingredient count="1" id="236"/>
+		<ingredient count="1" id="5126"/>
+		<ingredient count="6089000" id="5575"/>
+		<production count="1" id="13883"/>
+	</item>
+	<item>
+		<ingredient count="1" id="11247"/>
+		<ingredient count="1" id="236"/>
+		<ingredient count="1" id="5126"/>
+		<ingredient count="4395000" id="5575"/>
+		<production count="1" id="14526"/>
+	</item>
+	<item>
+		<ingredient count="1" id="11301"/>
+		<ingredient count="1" id="236"/>
+		<ingredient count="1" id="5126"/>
+		<ingredient count="6089000" id="5575"/>
+		<production count="1" id="14527"/>
+	</item>
+	<item>
+		<ingredient count="1" id="13460"/>
+		<ingredient count="1" id="8682"/>
+		<ingredient count="1" id="5126"/>
+		<ingredient count="8577000" id="5575"/>
+		<production count="1" id="13884"/>
+	</item>
+	<item>
+		<ingredient count="1" id="16042"/>
+		<ingredient count="1" id="8678"/>
+		<ingredient count="1" id="5126"/>
+		<ingredient count="7168000" id="5575"/>
+		<production count="1" id="16150"/>
+	</item>
+	<item>
+		<ingredient count="1" id="16045"/>
+		<ingredient count="1" id="8682"/>
+		<ingredient count="1" id="5126"/>
+		<ingredient count="8577000" id="5575"/>
+		<production count="1" id="16148"/>
+	</item>
+	<item>
+		<ingredient count="1" id="15559"/>
+		<ingredient count="1" id="8682"/>
+		<ingredient count="1" id="5126"/>
+		<ingredient count="12280000" id="5575"/>
+		<production count="1" id="16152"/>
+	</item>
+	<item>
+		<ingredient count="1" id="15558"/>
+		<ingredient count="1" id="8678"/>
+		<ingredient count="1" id="5126"/>
+		<ingredient count="9975000" id="5575"/>
+		<production count="1" id="16154"/>
+	</item>
+	<item>
+		<ingredient count="1" id="15545"/>
+		<ingredient count="1" id="6367"/>
+		<ingredient count="1" id="5126"/>
+		<ingredient count="17867000" id="5575"/>
+		<production count="1" id="16156"/>
+	</item>
+	<item>
+		<ingredient count="1" id="15544"/>
+		<ingredient count="1" id="6364"/>
+		<ingredient count="1" id="5126"/>
+		<ingredient count="13939000" id="5575"/>
+		<production count="1" id="16158"/>
+	</item>
+</list>

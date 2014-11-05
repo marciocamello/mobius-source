@@ -1,0 +1,28 @@
+﻿XML:
+
+311262516 - the old version revised masterwork, left for compatibility
+
+Hardcoded:
+
+9999 - exchange of equal value
+9998 - exchange for a fee for AA
+9997 - exchange for crystals
+
+1002 - unseal B
+1003 - reseal B
+1005 - unseal A
+1007 - reseal A
+1008 - unseal S
+4000 - SA inset in C, B
+4001 - SA in A Box
+40011 - insert SA in S/S80
+4002 - SA recess
+311262517 - Refinement masterwork
+364790006 - adding PvP bonus to weapon
+364790007 - extracting PvP bonus of weapons
+
+Config:
+showall - even show that it is impossible to acquire , default true
+notax - not taxed , default false
+keepenchanted - the exchange saved sharpening , default false
+nokey - if so, it checks for all the ingredients , not just the equipment , default false
