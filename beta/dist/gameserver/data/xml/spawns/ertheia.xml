@@ -50,7 +50,7 @@
 		<npc id="33934"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-80771" y="247602" z="-3457" h="32767"/>
+		<point x="-80771" y="247602" z="-3457" h="4836"/>
 		<npc id="33948"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
@@ -62,7 +62,7 @@
 		<npc id="33937"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-81128" y="249848" z="-3392" h="0"/>
+		<point x="-81128" y="249848" z="-3392" h="51707"/>
 		<npc id="33933"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
