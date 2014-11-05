@@ -276,13 +276,14 @@
 		</skills>
 		<teleportlist>
 			<sublist id="1">
-				<target loc="-14593 123936 -3120" item_id="57" price="12000" name="1010005" castle_id="1"/>
 				<target loc="-80684 149770 -3040" item_id="57" price="18000" name="1010004"/>
 				<target loc="11167 16012 -4584" item_id="57" price="24000" name="1010156"/>
 				<target loc="115357 -178212 -928" item_id="57" price="46000" name="1010158"/>
 				<target loc="44734 49210 -3056" item_id="57" price="23000" name="1010155"/>
 				<target loc="-44124 -113390 -240" item_id="57" price="35000" name="1010157"/>
 				<target loc="-117001 46589 360" item_id="57" price="20000" name="1010648"/>
+				<target loc="-14593 123936 -3120" item_id="57" price="12000" name="1010005" castle_id="1"/>
+				<target loc="-80536 247716 -3488" item_id="57" price="1300" name="1010741"/>
 			</sublist>
 			<sublist id="2">
 				<target loc="-87328 142266 -3640" item_id="57" price="1000" name="1010506"/>
