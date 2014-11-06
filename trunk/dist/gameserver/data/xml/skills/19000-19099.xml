@@ -569,6 +569,7 @@
 	</skill>
 	<skill id="19088" levels="4" name="Summon Siege Golem">
 		<table name="#npcId">15054 15055 15056 15057</table>
+		<table name="#magicLevel">85 90 95 99</table>
 		<set name="mpConsume2" val="530"/>
 		<set name="itemConsumeId" val="17371"/>
 		<set name="itemConsumeCount" val="400"/>
@@ -586,6 +587,7 @@
 	</skill>
 	<skill id="19089" levels="4" name="Summon Wild Hog Cannon">
 		<table name="#npcId">15058 15059 15060 15061</table>
+		<table name="#magicLevel">85 90 95 99</table>
 		<set name="mpConsume2" val="530"/>
 		<set name="itemConsumeId" val="17371"/>
 		<set name="itemConsumeCount" val="600"/>
@@ -603,6 +605,7 @@
 	</skill>
 	<skill id="19090" levels="4" name="Summon Swoop Cannon">
 		<table name="#npcId">15062 15063 15064 15065</table>
+		<table name="#magicLevel">85 90 95 99</table>
 		<set name="mpConsume2" val="530"/>
 		<set name="itemConsumeCount" val="500"/>
 		<set name="itemConsumeId" val="17371"/>
