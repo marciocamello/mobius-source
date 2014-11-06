@@ -166,7 +166,7 @@ public class Q00751_LiberatingTheSpirits extends Quest implements ScriptFile
 				}
 				else
 				{
-					if (st.getQuestItemsCount(Deadmans_Flesh) < 50)
+					if (st.getQuestItemsCount(Deadmans_Flesh) < 40)
 					{
 						st.giveItems(Deadmans_Flesh, 1);
 						st.playSound(SOUND_ITEMGET);

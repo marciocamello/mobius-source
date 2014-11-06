@@ -650,7 +650,7 @@
 	</skill>
 	<skill id="11774" levels="4" name="Summon Tree of Life">
 		<table name="#skill">1 2 3 4</table>
-		<table name="#magicLevel">85 86 89 92</table>
+		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume2">185 205 225 243</table>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="lifeTime" val="30"/>
@@ -685,7 +685,7 @@
 	</skill>
 	<skill id="11776" levels="4" name="Summon Lumi">
 		<table name="#lifeTime">3600 3600 3600 3600</table>
-		<table name="#magicLevel">85 86 89 92</table>
+		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume2">96 106 117 127</table>
 		<table name="#npcid">14925 14944 14945 14946</table>
 		<set name="mpConsume2" val="#mpConsume2"/>
