@@ -18955,4 +18955,508 @@
 			<item id="22291" count="1" chance="100"/>
 		</products>
 	</recipe>
+	<recipe id="4000" name="Recipe: Requiem Shaper (60%)" level="11" mp_consume="258" success_rate="60" item_id="36732" is_dwarven="true">
+		<materials>
+			<item id="36732" count="1"/>
+			<item id="36794" count="10"/>
+			<item id="36543" count="13"/>
+			<item id="36523" count="28"/>
+			<item id="36543" count="13"/>
+			<item id="36548" count="11"/>
+			<item id="36563" count="9"/>
+			<item id="19440" count="4"/>
+			<item id="17371" count="181"/>
+		</materials>
+		<products>
+			<item id="17290" count="1" chance="99"/>
+			<item id="17967" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4001" name="Recipe: Requiem Slasher(60%)" level="11" mp_consume="258" success_rate="60" item_id="36733" is_dwarven="true">
+		<materials>
+			<item id="36733" count="1"/>
+			<item id="36795" count="10"/>
+			<item id="36543" count="13"/>
+			<item id="36523" count="28"/>
+			<item id="36543" count="13"/>
+			<item id="36548" count="11"/>
+			<item id="36563" count="9"/>
+			<item id="19440" count="4"/>
+			<item id="17371" count="181"/>
+		</materials>
+		<products>
+			<item id="17291" count="1" chance="99"/>
+			<item id="17968" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4002" name="Recipe: Requiem Cutter(60%)" level="11" mp_consume="258" success_rate="60" item_id="36734" is_dwarven="true">
+		<materials>
+			<item id="36734" count="1"/>
+			<item id="36796" count="10"/>
+			<item id="36543" count="13"/>
+			<item id="36523" count="28"/>
+			<item id="36543" count="13"/>
+			<item id="36548" count="11"/>
+			<item id="36563" count="9"/>
+			<item id="19440" count="4"/>
+			<item id="17371" count="181"/>
+		</materials>
+		<products>
+			<item id="17292" count="1" chance="99"/>
+			<item id="17969" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4003" name="Recipe: Requiem Slasher(60%)" level="11" mp_consume="258" success_rate="60" item_id="36735" is_dwarven="true">
+		<materials>
+			<item id="36735" count="1"/>
+			<item id="36797" count="10"/>
+			<item id="36543" count="13"/>
+			<item id="36523" count="28"/>
+			<item id="36543" count="13"/>
+			<item id="36548" count="11"/>
+			<item id="36563" count="9"/>
+			<item id="19440" count="4"/>
+			<item id="17371" count="181"/>
+		</materials>
+		<products>
+			<item id="17293" count="1" chance="99"/>
+			<item id="17970" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4004" name="Recipe: Requiem Fighter(60%)" level="11" mp_consume="258" success_rate="60" item_id="36736" is_dwarven="true">
+		<materials>
+			<item id="36736" count="1"/>
+			<item id="36798" count="10"/>
+			<item id="36543" count="13"/>
+			<item id="36523" count="28"/>
+			<item id="36543" count="13"/>
+			<item id="36548" count="11"/>
+			<item id="36563" count="9"/>
+			<item id="19440" count="4"/>
+			<item id="17371" count="181"/>
+		</materials>
+		<products>
+			<item id="17294" count="1" chance="99"/>
+			<item id="17971" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4005" name="Recipe: Requiem Fighter(60%)" level="11" mp_consume="258" success_rate="60" item_id="36737" is_dwarven="true">
+		<materials>
+			<item id="36737" count="1"/>
+			<item id="36799" count="10"/>
+			<item id="36543" count="13"/>
+			<item id="36523" count="28"/>
+			<item id="36543" count="13"/>
+			<item id="36548" count="11"/>
+			<item id="36563" count="9"/>
+			<item id="19440" count="4"/>
+			<item id="17371" count="181"/>
+		</materials>
+		<products>
+			<item id="17295" count="1" chance="99"/>
+			<item id="17972" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4006" name="Recipe: Requiem Thrower(60%)" level="11" mp_consume="258" success_rate="60" item_id="36738" is_dwarven="true">
+		<materials>
+			<item id="36738" count="1"/>
+			<item id="36800" count="10"/>
+			<item id="36543" count="13"/>
+			<item id="36523" count="28"/>
+			<item id="36543" count="13"/>
+			<item id="36548" count="11"/>
+			<item id="36563" count="9"/>
+			<item id="19440" count="4"/>
+			<item id="17371" count="181"/>
+		</materials>
+		<products>
+			<item id="17296" count="1" chance="99"/>
+			<item id="17973" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4007" name="Recipe: Requiem Shooter(60%)" level="11" mp_consume="258" success_rate="60" item_id="36739" is_dwarven="true">
+		<materials>
+			<item id="36739" count="1"/>
+			<item id="36801" count="10"/>
+			<item id="36543" count="13"/>
+			<item id="36523" count="28"/>
+			<item id="36543" count="13"/>
+			<item id="36548" count="11"/>
+			<item id="36563" count="9"/>
+			<item id="19440" count="4"/>
+			<item id="17371" count="181"/>
+		</materials>
+		<products>
+			<item id="17297" count="1" chance="99"/>
+			<item id="17974" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4008" name="Recipe: Requiem Buster(60%)" level="11" mp_consume="258" success_rate="60" item_id="36740" is_dwarven="true">
+		<materials>
+			<item id="36740" count="1"/>
+			<item id="36802" count="10"/>
+			<item id="36543" count="13"/>
+			<item id="36523" count="28"/>
+			<item id="36543" count="13"/>
+			<item id="36548" count="11"/>
+			<item id="36563" count="9"/>
+			<item id="19440" count="4"/>
+			<item id="17371" count="181"/>
+		</materials>
+		<products>
+			<item id="17298" count="1" chance="99"/>
+			<item id="17975" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4009" name="Recipe: Requiem Caster(60%)" level="11" mp_consume="258" success_rate="60" item_id="36741" is_dwarven="true">
+		<materials>
+			<item id="36741" count="1"/>
+			<item id="36803" count="10"/>
+			<item id="36543" count="13"/>
+			<item id="36523" count="28"/>
+			<item id="36543" count="13"/>
+			<item id="36548" count="11"/>
+			<item id="36563" count="9"/>
+			<item id="19440" count="4"/>
+			<item id="17371" count="181"/>
+		</materials>
+		<products>
+			<item id="17299" count="1" chance="99"/>
+			<item id="17976" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4010" name="Recipe: Requiem Caster(60%)" level="11" mp_consume="258" success_rate="60" item_id="36742" is_dwarven="true">
+		<materials>
+			<item id="36742" count="1"/>
+			<item id="36804" count="10"/>
+			<item id="36543" count="13"/>
+			<item id="36523" count="28"/>
+			<item id="36543" count="13"/>
+			<item id="36548" count="11"/>
+			<item id="36563" count="9"/>
+			<item id="19440" count="4"/>
+			<item id="17371" count="181"/>
+		</materials>
+		<products>
+			<item id="17299" count="1" chance="99"/>
+			<item id="17976" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4011" name="Recipe: Immortal Heavy Helmet (60%)" level="11" mp_consume="258" success_rate="60" item_id="36743" is_dwarven="true">
+		<materials>
+			<item id="36743" count="1"/>
+			<item id="36805" count="10"/>
+			<item id="36523" count="4"/>
+			<item id="36543" count="2"/>
+			<item id="36553" count="2"/>
+			<item id="36563" count="1"/>
+			<item id="19440" count="1"/>
+			<item id="17371" count="23"/>
+		</materials>
+		<products>
+			<item id="17304" count="1" chance="99"/>
+			<item id="17981" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4012" name="Recipe: Immortal Heavy Breastplate (60%)" level="11" mp_consume="258" success_rate="60" item_id="36744" is_dwarven="true">
+		<materials>
+			<item id="36744" count="1"/>
+			<item id="36806" count="10"/>
+			<item id="36523" count="9"/>
+			<item id="36543" count="5"/>
+			<item id="36553" count="4"/>
+			<item id="36563" count="3"/>
+			<item id="19440" count="2"/>
+			<item id="17371" count="59"/>
+		</materials>
+		<products>
+			<item id="17305" count="1" chance="99"/>
+			<item id="17982" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4013" name="Recipe: Immortal Heavy Gaiter (60%)" level="11" mp_consume="258" success_rate="60" item_id="36745" is_dwarven="true">
+		<materials>
+			<item id="36745" count="1"/>
+			<item id="36807" count="10"/>
+			<item id="36523" count="6"/>
+			<item id="36543" count="3"/>
+			<item id="36553" count="2"/>
+			<item id="36563" count="2"/>
+			<item id="19440" count="1"/>
+			<item id="17371" count="37"/>
+		</materials>
+		<products>
+			<item id="17306" count="1" chance="99"/>
+			<item id="17983" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4014" name="Recipe: Immortal Heavy Glove (60%)" level="11" mp_consume="258" success_rate="60" item_id="36746" is_dwarven="true">
+		<materials>
+			<item id="36746" count="1"/>
+			<item id="36808" count="10"/>
+			<item id="36523" count="3"/>
+			<item id="36543" count="2"/>
+			<item id="36553" count="1"/>
+			<item id="36563" count="1"/>
+			<item id="19440" count="1"/>
+			<item id="17371" count="15"/>
+		</materials>
+		<products>
+			<item id="17307" count="1" chance="99"/>
+			<item id="17984" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4015" name="Recipe: Immortal Heavy Shoes (60%)" level="11" mp_consume="258" success_rate="60" item_id="36747" is_dwarven="true">
+		<materials>
+			<item id="36747" count="1"/>
+			<item id="36809" count="10"/>
+			<item id="36523" count="3"/>
+			<item id="36543" count="2"/>
+			<item id="36553" count="1"/>
+			<item id="36563" count="1"/>
+			<item id="19440" count="1"/>
+			<item id="17371" count="15"/>
+		</materials>
+		<products>
+			<item id="17308" count="1" chance="99"/>
+			<item id="17985" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4016" name="Recipe: Immortal Heavy Shield (60%)" level="11" mp_consume="258" success_rate="60" item_id="36748" is_dwarven="true">
+		<materials>
+			<item id="36748" count="1"/>
+			<item id="36810" count="10"/>
+			<item id="36523" count="3"/>
+			<item id="36543" count="2"/>
+			<item id="36553" count="1"/>
+			<item id="36563" count="1"/>
+			<item id="19440" count="1"/>
+			<item id="17371" count="15"/>
+		</materials>
+		<products>
+			<item id="17309" count="1" chance="99"/>
+			<item id="17986" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4017" name="Recipe: Immortal Leather Helmet (60%)" level="11" mp_consume="258" success_rate="60" item_id="36749" is_dwarven="true">
+		<materials>
+			<item id="36749" count="1"/>
+			<item id="36811" count="10"/>
+			<item id="36518" count="9"/>
+			<item id="36538" count="3"/>
+			<item id="36553" count="2"/>
+			<item id="36563" count="1"/>
+			<item id="19440" count="1"/>
+			<item id="17371" count="23"/>
+		</materials>
+		<products>
+			<item id="17310" count="1" chance="99"/>
+			<item id="17987" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4018" name="Recipe: Immortal Leather Armor (60%)" level="11" mp_consume="258" success_rate="60" item_id="36750" is_dwarven="true">
+		<materials>
+			<item id="36750" count="1"/>
+			<item id="36812" count="10"/>
+			<item id="36518" count="24"/>
+			<item id="36538" count="6"/>
+			<item id="36553" count="4"/>
+			<item id="36563" count="3"/>
+			<item id="19440" count="2"/>
+			<item id="17371" count="59"/>
+		</materials>
+		<products>
+			<item id="17311" count="1" chance="99"/>
+			<item id="17988" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4019" name="Recipe: Immortal Leather Leggings (60%)" level="11" mp_consume="258" success_rate="60" item_id="36751" is_dwarven="true">
+		<materials>
+			<item id="36751" count="1"/>
+			<item id="36813" count="10"/>
+			<item id="36518" count="15"/>
+			<item id="36538" count="4"/>
+			<item id="36553" count="2"/>
+			<item id="36563" count="2"/>
+			<item id="19440" count="1"/>
+			<item id="17371" count="37"/>
+		</materials>
+		<products>
+			<item id="17312" count="1" chance="99"/>
+			<item id="17989" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4020" name="Recipe: Immortal Leather Gloves(60%)" level="11" mp_consume="258" success_rate="60" item_id="36752" is_dwarven="true">
+		<materials>
+			<item id="36752" count="1"/>
+			<item id="36814" count="10"/>
+			<item id="36518" count="6"/>
+			<item id="36538" count="2"/>
+			<item id="36553" count="1"/>
+			<item id="36563" count="1"/>
+			<item id="19440" count="1"/>
+			<item id="17371" count="15"/>
+		</materials>
+		<products>
+			<item id="17313" count="1" chance="99"/>
+			<item id="17990" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4021" name="Recipe: Immortal Leather Shoes(60%)" level="11" mp_consume="258" success_rate="60" item_id="36753" is_dwarven="true">
+		<materials>
+			<item id="36753" count="1"/>
+			<item id="36815" count="10"/>
+			<item id="36518" count="6"/>
+			<item id="36538" count="2"/>
+			<item id="36553" count="1"/>
+			<item id="36563" count="1"/>
+			<item id="19440" count="1"/>
+			<item id="17371" count="15"/>
+		</materials>
+		<products>
+			<item id="17314" count="1" chance="99"/>
+			<item id="17991" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4022" name="Recipe: Immortal Robe Circlet(60%)" level="11" mp_consume="258" success_rate="60" item_id="36754" is_dwarven="true">
+		<materials>
+			<item id="36754" count="1"/>
+			<item id="36816" count="10"/>
+			<item id="36528" count="10"/>
+			<item id="36533" count="3"/>
+			<item id="36553" count="2"/>
+			<item id="36563" count="1"/>
+			<item id="19440" count="1"/>
+			<item id="17371" count="23"/>
+		</materials>
+		<products>
+			<item id="17315" count="1" chance="99"/>
+			<item id="17992" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4022" name="Recipe: Immortal Robe Tunic(60%)" level="11" mp_consume="258" success_rate="60" item_id="36755" is_dwarven="true">
+		<materials>
+			<item id="36755" count="1"/>
+			<item id="36817" count="10"/>
+			<item id="36528" count="26"/>
+			<item id="36533" count="8"/>
+			<item id="36553" count="4"/>
+			<item id="36563" count="3"/>
+			<item id="19440" count="2"/>
+			<item id="17371" count="59"/>
+		</materials>
+		<products>
+			<item id="17316" count="1" chance="99"/>
+			<item id="17993" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4023" name="Recipe: Immortal Robe Stockings(60%)" level="11" mp_consume="258" success_rate="60" item_id="36756" is_dwarven="true">
+		<materials>
+			<item id="36756" count="1"/>
+			<item id="36818" count="10"/>
+			<item id="36528" count="16"/>
+			<item id="36533" count="5"/>
+			<item id="36553" count="2"/>
+			<item id="36563" count="2"/>
+			<item id="19440" count="1"/>
+			<item id="17371" count="37"/>
+		</materials>
+		<products>
+			<item id="17317" count="1" chance="99"/>
+			<item id="17994" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4024" name="Recipe: Immortal Robe Gloves(60%)" level="11" mp_consume="258" success_rate="60" item_id="36757" is_dwarven="true">
+		<materials>
+			<item id="36757" count="1"/>
+			<item id="36819" count="10"/>
+			<item id="36528" count="7"/>
+			<item id="36533" count="2"/>
+			<item id="36553" count="1"/>
+			<item id="36563" count="1"/>
+			<item id="19440" count="1"/>
+			<item id="17371" count="15"/>
+		</materials>
+		<products>
+			<item id="17318" count="1" chance="99"/>
+			<item id="17995" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4025" name="Recipe: Immortal Robe Shoes(60%)" level="11" mp_consume="258" success_rate="60" item_id="36758" is_dwarven="true">
+		<materials>
+			<item id="36758" count="1"/>
+			<item id="36820" count="10"/>
+			<item id="36528" count="7"/>
+			<item id="36533" count="2"/>
+			<item id="36553" count="1"/>
+			<item id="36563" count="1"/>
+			<item id="19440" count="1"/>
+			<item id="17371" count="15"/>
+		</materials>
+		<products>
+			<item id="17319" count="1" chance="99"/>
+			<item id="17996" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4026" name="Recipe: Immortal Robe Shoes(60%)" level="11" mp_consume="258" success_rate="60" item_id="36759" is_dwarven="true">
+		<materials>
+			<item id="36759" count="1"/>
+			<item id="36821" count="10"/>
+			<item id="36518" count="7"/>
+			<item id="36538" count="2"/>
+			<item id="36553" count="1"/>
+			<item id="36563" count="1"/>
+			<item id="19440" count="1"/>
+			<item id="17371" count="15"/>
+		</materials>
+		<products>
+			<item id="17320" count="1" chance="99"/>
+			<item id="17997" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4027" name="Recipe: Immortal Necklace(60%)" level="11" mp_consume="258" success_rate="60" item_id="36760" is_dwarven="true">
+		<materials>
+			<item id="36760" count="1"/>
+			<item id="36822" count="10"/>
+			<item id="36523" count="6"/>
+			<item id="36558" count="4"/>
+			<item id="36563" count="1"/>
+			<item id="19440" count="1"/>
+			<item id="17371" count="20"/>
+		</materials>
+		<products>
+			<item id="17321" count="1" chance="99"/>
+			<item id="17998" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4028" name="Recipe: Immortal Earing(60%)" level="11" mp_consume="258" success_rate="60" item_id="36761" is_dwarven="true">
+		<materials>
+			<item id="36761" count="1"/>
+			<item id="36823" count="10"/>
+			<item id="36523" count="5"/>
+			<item id="36558" count="3"/>
+			<item id="36563" count="1"/>
+			<item id="19440" count="1"/>
+			<item id="17371" count="15"/>
+		</materials>
+		<products>
+			<item id="17322" count="1" chance="99"/>
+			<item id="17999" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4029" name="Recipe: Immortal Ring(60%)" level="11" mp_consume="258" success_rate="60" item_id="36762" is_dwarven="true">
+		<materials>
+			<item id="36762" count="1"/>
+			<item id="36824" count="10"/>
+			<item id="36523" count="3"/>
+			<item id="36558" count="2"/>
+			<item id="36563" count="1"/>
+			<item id="19440" count="1"/>
+			<item id="17371" count="10"/>
+		</materials>
+		<products>
+			<item id="17323" count="1" chance="99"/>
+			<item id="18000" count="1" chance="1"/>
+		</products>
+	</recipe>
 </list>
