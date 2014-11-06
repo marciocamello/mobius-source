@@ -30,7 +30,6 @@ import lineage2.gameserver.tables.SkillTable;
 
 /**
  * @author blacksmoke
- * @Contribution Krash
  */
 public class Q10734_DoOrDie extends Quest implements ScriptFile
 {
@@ -80,60 +79,54 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
-		Player player = st.getPlayer();
+		Player player = qs.getPlayer();
 		List<Creature> target = new ArrayList<>();
 		target.add(player);
 		
 		switch (event)
 		{
-			case "quest_fighter_ac":
-				st.setState(STARTED);
-				st.setCond(1);
-				st.playSound(SOUND_ACCEPT);
-				htmltext = "33943-3.htm";
-				st.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ATTACK_THE_TRAINING_DUMMY, 4500, ScreenMessageAlign.TOP_CENTER));
-				break;
-			
-			case "quest_wizard_ac":
-				st.setState(STARTED);
-				st.setCond(1);
-				st.playSound(SOUND_ACCEPT);
-				htmltext = "33942-3.htm";
-				st.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ATTACK_THE_TRAINING_DUMMY, 4500, ScreenMessageAlign.TOP_CENTER));
+			case "quest_ac":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				if (qs.getPlayer().getClassId().getId() == 182) // Ertheia Fighter
+				{
+					htmltext = "33943-3.htm";
+				}
+				if (qs.getPlayer().getClassId().getId() == 183) // Ertheia Wizard
+				{
+					htmltext = "33942-3.htm";
+				}
+				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ATTACK_THE_TRAINING_DUMMY, 4500, ScreenMessageAlign.TOP_CENTER));
 				break;
 			
 			case "buffs_info":
-				if (st.getPlayer().getClassId().getId() == 182) // Ertheia Fighter
+				qs.showTutorialHTML(TutorialShowHtml.QT_002, TutorialShowHtml.TYPE_WINDOW);
+				if (qs.getPlayer().getClassId().getId() == 182) // Ertheia Fighter
 				{
-					st.showTutorialHTML(TutorialShowHtml.QT_002, TutorialShowHtml.TYPE_WINDOW);
 					htmltext = "33950-3.htm";
 				}
-				else if (st.getPlayer().getClassId().getId() == 183) // Ertheia Wizard
+				else if (qs.getPlayer().getClassId().getId() == 183) // Ertheia Wizard
 				{
-					st.showTutorialHTML(TutorialShowHtml.QT_002, TutorialShowHtml.TYPE_WINDOW);
 					htmltext = "33950-5.htm";
 				}
 				break;
 			
 			case "buff":
-				if (st.getPlayer().getClassId().getId() == 182) // Ertheia Fighter
+				doSupportMagic(npc, player);
+				qs.playSound(SOUND_MIDDLE);
+				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ATTACK_THE_TRAINING_DUMMY, 4500, ScreenMessageAlign.TOP_CENTER));
+				qs.setCond(6);
+				if (qs.getPlayer().getClassId().getId() == 182) // Ertheia Fighter
 				{
-					doSupportMagic(npc, player);
 					htmltext = "33950-4.htm";
-					st.setCond(6);
-					st.playSound(SOUND_MIDDLE);
-					st.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ATTACK_THE_TRAINING_DUMMY, 4500, ScreenMessageAlign.TOP_CENTER));
 				}
-				else if (st.getPlayer().getClassId().getId() == 183) // Ertheia Wizard
+				else if (qs.getPlayer().getClassId().getId() == 183) // Ertheia Wizard
 				{
-					doSupportMagic(npc, player);
-					htmltext = "33950-5.htm";
-					st.setCond(7);
-					st.playSound(SOUND_MIDDLE);
-					st.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ATTACK_THE_TRAINING_DUMMY, 4500, ScreenMessageAlign.TOP_CENTER));
+					htmltext = "33950-6.htm";
 				}
 				break;
 		}
@@ -142,12 +135,15 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
+		int cond = qs.getCond();
 		int npcId = npc.getId();
-		String htmltext = "noquest";
-		if (st.isCompleted())
+		boolean e_warrior = qs.getPlayer().getClassId().getId() == 182;
+		boolean e_wizard = qs.getPlayer().getClassId().getId() == 183;
+		
+		String htmltext = null;
+		if (qs.isCompleted())
 		{
 			return "quest_completed.htm";
 		}
@@ -158,21 +154,31 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 				switch (cond)
 				{
 					case 0:
-						if (isAvailableFor(st.getPlayer()))
+						if (isAvailableFor(qs.getPlayer()))
 						{
-							htmltext = "33943-1.htm";
+							if (e_warrior)
+							{
+								htmltext = "33943-1.htm";
+							}
+							else if (e_wizard)
+							{
+								htmltext = "Go To Ayanthe 33943-8.htm";
+							}
 						}
 						break;
 					
 					case 1:
-						htmltext = "33943-4.htm";
+						if (e_warrior)
+						{
+							htmltext = "33943-4.htm";
+						}
 						break;
 					
 					case 3:
 						htmltext = "33943-5.htm";
-						st.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.TALK_TO_THE_APPRENTICE_ADVENTURERS_GUIDE, 4500, ScreenMessageAlign.TOP_CENTER));
-						st.setCond(5);
-						st.playSound(SOUND_MIDDLE);
+						qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.TALK_TO_THE_APPRENTICE_ADVENTURERS_GUIDE, 4500, ScreenMessageAlign.TOP_CENTER));
+						qs.setCond(5);
+						qs.playSound(SOUND_MIDDLE);
 						break;
 					
 					case 5:
@@ -180,10 +186,10 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 						break;
 					
 					case 8:
-						st.giveItems(57, 7000);
-						st.getPlayer().addExpAndSp(805, 2);
-						st.playSound(SOUND_FINISH);
-						st.exitCurrentQuest(false);
+						qs.giveItems(57, 7000);
+						qs.getPlayer().addExpAndSp(805, 2);
+						qs.playSound(SOUND_FINISH);
+						qs.exitCurrentQuest(false);
 						htmltext = "33943-7.htm";
 						break;
 					
@@ -197,32 +203,42 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 				switch (cond)
 				{
 					case 0:
-						if (isAvailableFor(st.getPlayer()))
+						if (isAvailableFor(qs.getPlayer()))
 						{
-							htmltext = "33942-1.htm";
+							if (e_warrior)
+							{
+								htmltext = "Go To Katalin 33942-8.htm";
+							}
+							else if (e_wizard)
+							{
+								htmltext = "33942-1.htm";
+							}
 						}
 						break;
 					
 					case 1:
-						htmltext = "33942-4.htm";
+						if (e_wizard)
+						{
+							htmltext = "33942-4.htm";
+						}
 						break;
 					
-					case 3:
+					case 2:
 						htmltext = "33942-5.htm";
-						st.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.TALK_TO_THE_APPRENTICE_ADVENTURERS_GUIDE, 4500, ScreenMessageAlign.TOP_CENTER));
-						st.setCond(5);
-						st.playSound(SOUND_MIDDLE);
+						qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.TALK_TO_THE_APPRENTICE_ADVENTURERS_GUIDE, 4500, ScreenMessageAlign.TOP_CENTER));
+						qs.setCond(4);
+						qs.playSound(SOUND_MIDDLE);
 						break;
 					
-					case 5:
+					case 4:
 						htmltext = "33942-6.htm";
 						break;
 					
-					case 8:
-						st.giveItems(57, 7000);
-						st.getPlayer().addExpAndSp(805, 2);
-						st.playSound(SOUND_FINISH);
-						st.exitCurrentQuest(false);
+					case 7:
+						qs.giveItems(57, 7000);
+						qs.getPlayer().addExpAndSp(805, 2);
+						qs.playSound(SOUND_FINISH);
+						qs.exitCurrentQuest(false);
 						htmltext = "33942-7.htm";
 						break;
 					
@@ -239,18 +255,19 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 						htmltext = "33950-nc.htm";
 						break;
 					
+					case 4:
 					case 5:
 						htmltext = "33950-1.htm";
 						break;
 					
 					case 6:
 						htmltext = "33950-4.htm";
-						doSupportMagic(npc, st.getPlayer());
+						doSupportMagic(npc, qs.getPlayer());
 						break;
 					
 					case 7:
-						htmltext = "33950-6.htm";
-						doSupportMagic(npc, st.getPlayer());
+						htmltext = "33950-7.htm";
+						doSupportMagic(npc, qs.getPlayer());
 						break;
 					
 					default:
@@ -264,24 +281,33 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		switch (st.getCond())
+		final int cond = qs.getCond();
+		
+		if (cond == 1)
 		{
-			case 1:
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(3);
-				break;
-			
-			case 6:
-				st.setCond(8);
-				st.playSound(SOUND_MIDDLE);
-				break;
-			
-			case 7:
-				st.setCond(8);
-				st.playSound(SOUND_MIDDLE);
-				break;
+			qs.playSound(SOUND_MIDDLE);
+			if (qs.getPlayer().getClassId().getId() == 182)
+			{
+				qs.setCond(3);
+			}
+			else if (qs.getPlayer().getClassId().getId() == 183)
+			{
+				qs.setCond(2);
+			}
+		}
+		else if (cond == 6)
+		{
+			qs.playSound(SOUND_MIDDLE);
+			if (qs.getPlayer().getClassId().getId() == 182)
+			{
+				qs.setCond(8);
+			}
+			else if (qs.getPlayer().getClassId().getId() == 183)
+			{
+				qs.setCond(7);
+			}
 		}
 		
 		return null;
@@ -307,6 +333,37 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 				npc.callSkill(SkillTable.getInstance().getInfo(buff, 1), target, true);
 			}
 		}
+	}
+	
+	// Need to use this (quest need to be available only at one npc for warrior/wizard)
+	public boolean checkStartNpc(NpcInstance npc, Player player)
+	{
+		int npcId = npc.getId();
+		int classId = player.getClassId().getId();
+		
+		switch (npcId)
+		{
+			case Katalin:
+				if (classId == 182)
+				{
+					return true;
+				}
+				return false;
+				
+			case Ayanthe:
+				if (classId == 183)
+				{
+					return true;
+				}
+				return false;
+		}
+		
+		return true;
+	}
+	
+	public boolean checkTalkNpc(NpcInstance npc, QuestState st)
+	{
+		return checkStartNpc(npc, st.getPlayer());
 	}
 	
 	@Override
