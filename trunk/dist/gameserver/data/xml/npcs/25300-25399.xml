@@ -1959,7 +1959,7 @@
 	</npc>
 	<npc id="25328" name="Eilhalder von Hellmann" title="Raid Boss">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Quest024Fighter"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2053,7 +2053,7 @@
 	</npc>
 	<npc id="25329" name="Violet" title="Raid Fighter">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Quest024Mystic"/>
+		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2115,7 +2115,7 @@
 	</npc>
 	<npc id="25330" name="Kurstin" title="Raid Fighter">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Quest024Mystic"/>
+		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2177,7 +2177,7 @@
 	</npc>
 	<npc id="25331" name="Mina" title="Raid Fighter">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Quest024Mystic"/>
+		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -2239,7 +2239,7 @@
 	</npc>
 	<npc id="25332" name="Dorian" title="Raid Fighter">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Quest024Fighter"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>

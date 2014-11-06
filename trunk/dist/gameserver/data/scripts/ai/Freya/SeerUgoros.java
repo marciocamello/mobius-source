@@ -18,10 +18,8 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
-import quests.Q00288_HandleWithCare;
 
 /**
  * @author Mobius
@@ -29,7 +27,6 @@ import quests.Q00288_HandleWithCare;
  */
 public final class SeerUgoros extends Mystic
 {
-	private int _weeds = 0;
 	private static final Skill _skill = SkillTable.getInstance().getInfo(6426, 1);
 	
 	/**
@@ -78,7 +75,6 @@ public final class SeerUgoros extends Mystic
 					actor.doCast(_skill, n, true);
 					actor.setCurrentHp(actor.getMaxHp(), false);
 					actor.broadcastCharInfo();
-					_weeds++;
 					return;
 				}
 			}
@@ -94,24 +90,6 @@ public final class SeerUgoros extends Mystic
 	@Override
 	protected void onEvtDead(Creature killer)
 	{
-		final QuestState qs = killer.getPlayer().getQuestState(Q00288_HandleWithCare.class);
-		
-		if ((qs != null) && (qs.getCond() == 1))
-		{
-			if (_weeds < 5)
-			{
-				qs.giveItems(15497, 1);
-				qs.setCond(3);
-			}
-			else
-			{
-				qs.giveItems(15498, 1);
-				qs.setCond(2);
-			}
-		}
-		
-		_weeds = 0;
-		
 		if (!getActor().getReflection().isDefault())
 		{
 			getActor().getReflection().addSpawnWithoutRespawn(32740, new Location(95688, 85688, -3757, 0), 0);
