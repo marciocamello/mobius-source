@@ -13,26 +13,16 @@
 package npc.model.residences.dominion;
 
 import lineage2.gameserver.data.xml.holder.MultiSellHolder;
-import lineage2.gameserver.instancemanager.QuestManager;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.entity.events.impl.DominionSiegeEvent;
-import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.entity.residence.Dominion;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.model.quest.Quest;
-import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
-import lineage2.gameserver.network.serverpackets.SkillList;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.ItemFunctions;
-import quests.Q00234_FatesWhisper;
-import quests.Q00235_MimirsElixir;
-import quests.Q00236_SeedsOfChaos;
 
 /**
  * @author Smo
@@ -67,54 +57,6 @@ public class TerritoryManagerInstance extends NpcInstance
 			else
 			{
 				MultiSellHolder.getInstance().SeparateAndSend(npcId, player, 0);
-			}
-		}
-		else if (command.equalsIgnoreCase("buyNobless"))
-		{
-			if (player.isNoble())
-			{
-				return; // TODO [VISTALL] unknown
-			}
-			if (player.consumeItem(badgeId, 100L))
-			{
-				Quest q = QuestManager.getQuest(Q00234_FatesWhisper.class);
-				QuestState qs = player.getQuestState(q.getClass());
-				if (qs != null)
-				{
-					qs.exitCurrentQuest(true);
-				}
-				q.newQuestState(player, Quest.COMPLETED);
-				
-				if (player.getRace() == Race.kamael)
-				{
-					qs = player.getQuestState(Q00236_SeedsOfChaos.class);
-					if (qs != null)
-					{
-						qs.exitCurrentQuest(true);
-					}
-					q.newQuestState(player, Quest.COMPLETED);
-				}
-				else
-				{
-					q = QuestManager.getQuest(Q00235_MimirsElixir.class);
-					qs = player.getQuestState(q.getClass());
-					if (qs != null)
-					{
-						qs.exitCurrentQuest(true);
-					}
-					q.newQuestState(player, Quest.COMPLETED);
-				}
-				
-				Olympiad.addNoble(player);
-				player.setNoble(true);
-				player.updatePledgeClass();
-				player.updateNobleSkills();
-				player.sendPacket(new SkillList(player));
-				player.broadcastUserInfo();
-			}
-			else
-			{
-				player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
 			}
 		}
 		else if (command.equalsIgnoreCase("calculate"))

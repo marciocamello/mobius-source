@@ -1921,7 +1921,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value="LineageNPC.e_trader_FOrc"/>
-		<set name="type" value="Sally"/>
+		<set name="type" value="Npc"/>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
