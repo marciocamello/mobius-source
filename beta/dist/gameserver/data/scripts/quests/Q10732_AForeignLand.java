@@ -28,21 +28,6 @@ public class Q10732_AForeignLand extends Quest implements ScriptFile
 	private static final int NAVARI = 33931;
 	private static final int GERETH = 33932;
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q10732_AForeignLand()
 	{
 		super(false);
@@ -56,23 +41,25 @@ public class Q10732_AForeignLand extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		Player player = st.getPlayer();
-		if (event.equalsIgnoreCase("quest_ac"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			player.sendPacket(new ExShowUsmVideo(ExShowUsmVideo.Q014));
-			htmltext = "0-3.htm";
-		}
 		
-		if (event.equalsIgnoreCase("qet_rev"))
+		switch (event)
 		{
-			st.showTutorialHTML(TutorialShowHtml.QT_001, TutorialShowHtml.TYPE_WINDOW);
-			htmltext = "1-2.htm";
-			st.giveItems(57, 3000);
-			st.getPlayer().addExpAndSp(75, 2);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
+			case "quest_ac":
+				st.setState(STARTED);
+				st.setCond(1);
+				st.playSound(SOUND_ACCEPT);
+				player.sendPacket(new ExShowUsmVideo(ExShowUsmVideo.Q014));
+				htmltext = "0-3.htm";
+				break;
+			
+			case "qet_rev":
+				st.showTutorialHTML(TutorialShowHtml.QT_001, TutorialShowHtml.TYPE_WINDOW);
+				htmltext = "1-2.htm";
+				st.giveItems(57, 3000);
+				st.getPlayer().addExpAndSp(75, 2);
+				st.exitCurrentQuest(false);
+				st.playSound(SOUND_FINISH);
+				break;
 		}
 		
 		return htmltext;
@@ -85,37 +72,54 @@ public class Q10732_AForeignLand extends Quest implements ScriptFile
 		int npcId = npc.getId();
 		String htmltext = "noquest";
 		
-		if (npcId == NAVARI)
+		switch (npcId)
 		{
-			if (st.isCompleted())
-			{
-				htmltext = "0-c.htm";
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()))
-			{
-				htmltext = "0-1.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-4.htm";
-			}
-		}
-		else if (npcId == GERETH)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "1-c.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = "1-t.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "1-1.htm";
-			}
+			case NAVARI:
+				if (st.isCompleted())
+				{
+					htmltext = "0-c.htm";
+				}
+				else if ((cond == 0) && isAvailableFor(st.getPlayer()))
+				{
+					htmltext = "0-1.htm";
+				}
+				else if (cond == 1)
+				{
+					htmltext = "0-4.htm";
+				}
+				break;
+			
+			case GERETH:
+				if (st.isCompleted())
+				{
+					htmltext = "1-c.htm";
+				}
+				else if (cond == 0)
+				{
+					htmltext = "1-t.htm";
+				}
+				else if (cond == 1)
+				{
+					htmltext = "1-1.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

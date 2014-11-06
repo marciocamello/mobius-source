@@ -30,6 +30,7 @@ import lineage2.gameserver.tables.SkillTable;
 
 /**
  * @author blacksmoke
+ * @Contribution Krash
  */
 public class Q10734_DoOrDie extends Quest implements ScriptFile
 {
@@ -68,25 +69,10 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 		
 	};
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q10734_DoOrDie()
 	{
 		super(false);
-		addStartNpc(Katalin);
+		addStartNpc(Katalin, Ayanthe);
 		addTalkId(Katalin, Ayanthe, Adventurers_Guide);
 		addKillId(Training_Dummy);
 		addLevelCheck(1, 20);
@@ -101,29 +87,57 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 		List<Creature> target = new ArrayList<>();
 		target.add(player);
 		
-		if (event.equalsIgnoreCase("quest_ac"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			htmltext = "33943-3.htm";
-			st.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ATTACK_THE_TRAINING_DUMMY, 4500, ScreenMessageAlign.TOP_CENTER));
+			case "quest_fighter_ac":
+				st.setState(STARTED);
+				st.setCond(1);
+				st.playSound(SOUND_ACCEPT);
+				htmltext = "33943-3.htm";
+				st.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ATTACK_THE_TRAINING_DUMMY, 4500, ScreenMessageAlign.TOP_CENTER));
+				break;
 			
+			case "quest_wizard_ac":
+				st.setState(STARTED);
+				st.setCond(1);
+				st.playSound(SOUND_ACCEPT);
+				htmltext = "33942-3.htm";
+				st.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ATTACK_THE_TRAINING_DUMMY, 4500, ScreenMessageAlign.TOP_CENTER));
+				break;
+			
+			case "buffs_info":
+				if (st.getPlayer().getClassId().getId() == 182) // Ertheia Fighter
+				{
+					st.showTutorialHTML(TutorialShowHtml.QT_002, TutorialShowHtml.TYPE_WINDOW);
+					htmltext = "33950-3.htm";
+				}
+				else if (st.getPlayer().getClassId().getId() == 183) // Ertheia Wizard
+				{
+					st.showTutorialHTML(TutorialShowHtml.QT_002, TutorialShowHtml.TYPE_WINDOW);
+					htmltext = "33950-5.htm";
+				}
+				break;
+			
+			case "buff":
+				if (st.getPlayer().getClassId().getId() == 182) // Ertheia Fighter
+				{
+					doSupportMagic(npc, player);
+					htmltext = "33950-4.htm";
+					st.setCond(6);
+					st.playSound(SOUND_MIDDLE);
+					st.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ATTACK_THE_TRAINING_DUMMY, 4500, ScreenMessageAlign.TOP_CENTER));
+				}
+				else if (st.getPlayer().getClassId().getId() == 183) // Ertheia Wizard
+				{
+					doSupportMagic(npc, player);
+					htmltext = "33950-5.htm";
+					st.setCond(7);
+					st.playSound(SOUND_MIDDLE);
+					st.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ATTACK_THE_TRAINING_DUMMY, 4500, ScreenMessageAlign.TOP_CENTER));
+				}
+				break;
 		}
-		if (event.equalsIgnoreCase("buffs_info"))
-		{
-			// TODO Adventurers' Guide
-			st.showTutorialHTML(TutorialShowHtml.QT_002, TutorialShowHtml.TYPE_WINDOW);
-			htmltext = "33950-3.htm";
-		}
-		if (event.equalsIgnoreCase("buff"))
-		{
-			doSupportMagic(npc, player);
-			htmltext = "33950-4.htm";
-			st.setCond(6);
-			st.playSound(SOUND_MIDDLE);
-			st.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ATTACK_THE_TRAINING_DUMMY, 4500, ScreenMessageAlign.TOP_CENTER));
-		}
+		
 		return htmltext;
 	}
 	
@@ -133,90 +147,141 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getId();
 		String htmltext = "noquest";
+		if (st.isCompleted())
+		{
+			return "quest_completed.htm";
+		}
 		
-		if (npcId == Katalin)
+		switch (npcId)
 		{
-			if (st.isCompleted())
-			{
-				htmltext = "quest_completed.htm";
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()))
-			{
-				htmltext = "33943-1.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "33943-4.htm";
-			}
-			else if (cond == 3)
-			{
-				htmltext = "33943-5.htm";
-				st.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.TALK_TO_THE_APPRENTICE_ADVENTURERS_GUIDE, 4500, ScreenMessageAlign.TOP_CENTER));
-				st.setCond(5);
-				st.playSound(SOUND_MIDDLE);
-			}
-			else if (cond == 5)
-			{
-				htmltext = "33943-6.htm";
-			}
-			else if (cond == 8)
-			{
-				st.giveItems(57, 7000);
-				st.getPlayer().addExpAndSp(805, 2);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(false);
-				htmltext = "33943-7.htm";
-			}
-			else
-			{
-				htmltext = "noqu.htm";
-			}
+			case Katalin:
+				switch (cond)
+				{
+					case 0:
+						if (isAvailableFor(st.getPlayer()))
+						{
+							htmltext = "33943-1.htm";
+						}
+						break;
+					
+					case 1:
+						htmltext = "33943-4.htm";
+						break;
+					
+					case 3:
+						htmltext = "33943-5.htm";
+						st.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.TALK_TO_THE_APPRENTICE_ADVENTURERS_GUIDE, 4500, ScreenMessageAlign.TOP_CENTER));
+						st.setCond(5);
+						st.playSound(SOUND_MIDDLE);
+						break;
+					
+					case 5:
+						htmltext = "33943-6.htm";
+						break;
+					
+					case 8:
+						st.giveItems(57, 7000);
+						st.getPlayer().addExpAndSp(805, 2);
+						st.playSound(SOUND_FINISH);
+						st.exitCurrentQuest(false);
+						htmltext = "33943-7.htm";
+						break;
+					
+					default:
+						htmltext = "noqu.htm";
+						break;
+				}
+				break;
+			
+			case Ayanthe:
+				switch (cond)
+				{
+					case 0:
+						if (isAvailableFor(st.getPlayer()))
+						{
+							htmltext = "33942-1.htm";
+						}
+						break;
+					
+					case 1:
+						htmltext = "33942-4.htm";
+						break;
+					
+					case 3:
+						htmltext = "33942-5.htm";
+						st.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.TALK_TO_THE_APPRENTICE_ADVENTURERS_GUIDE, 4500, ScreenMessageAlign.TOP_CENTER));
+						st.setCond(5);
+						st.playSound(SOUND_MIDDLE);
+						break;
+					
+					case 5:
+						htmltext = "33942-6.htm";
+						break;
+					
+					case 8:
+						st.giveItems(57, 7000);
+						st.getPlayer().addExpAndSp(805, 2);
+						st.playSound(SOUND_FINISH);
+						st.exitCurrentQuest(false);
+						htmltext = "33942-7.htm";
+						break;
+					
+					default:
+						htmltext = "noqu.htm";
+						break;
+				}
+				break;
+			
+			case Adventurers_Guide:
+				switch (cond)
+				{
+					case 0:
+						htmltext = "33950-nc.htm";
+						break;
+					
+					case 5:
+						htmltext = "33950-1.htm";
+						break;
+					
+					case 6:
+						htmltext = "33950-4.htm";
+						doSupportMagic(npc, st.getPlayer());
+						break;
+					
+					case 7:
+						htmltext = "33950-6.htm";
+						doSupportMagic(npc, st.getPlayer());
+						break;
+					
+					default:
+						htmltext = "noqu.htm";
+						break;
+				}
+				break;
 		}
-		else if (npcId == Ayanthe)
-		{
-			// TODO
-		}
-		else if (npcId == Adventurers_Guide)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "quest_completed.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = "33950-nc.htm";
-			}
-			else if (cond == 5)
-			{
-				htmltext = "33950-1.htm";
-			}
-			else if (cond == 6)
-			{
-				htmltext = "33950-4.htm";
-				doSupportMagic(npc, st.getPlayer());
-			}
-			else
-			{
-				htmltext = "noqu.htm";
-			}
-		}
+		
 		return htmltext;
 	}
 	
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getId();
-		
-		if ((st.getCond() == 1) && (npcId == Training_Dummy))
+		switch (st.getCond())
 		{
-			st.playSound(SOUND_MIDDLE);
-			st.setCond(3);
-		}
-		else if ((st.getCond() == 6) && (npcId == Training_Dummy))
-		{
-			st.setCond(8);
-			st.playSound(SOUND_MIDDLE);
+			case 1:
+				st.playSound(SOUND_MIDDLE);
+				st.setCond(3);
+				break;
+			
+			case 6:
+				st.setCond(8);
+				st.playSound(SOUND_MIDDLE);
+				break;
+			
+			case 7:
+				st.setCond(8);
+				st.playSound(SOUND_MIDDLE);
+				break;
 		}
 		
 		return null;
@@ -242,5 +307,20 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 				npc.callSkill(SkillTable.getInstance().getInfo(buff, 1), target, true);
 			}
 		}
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

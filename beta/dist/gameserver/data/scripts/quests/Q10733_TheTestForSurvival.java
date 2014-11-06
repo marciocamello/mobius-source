@@ -20,6 +20,7 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 /**
  * @author blacksmoke
+ * @Contribution: Krash
  */
 public class Q10733_TheTestForSurvival extends Quest implements ScriptFile
 {
@@ -29,6 +30,134 @@ public class Q10733_TheTestForSurvival extends Quest implements ScriptFile
 	private static final int Ayanthe = 33942;
 	
 	private static final int Gereth_Recommendtion = 39519;
+	
+	public Q10733_TheTestForSurvival()
+	{
+		super(false);
+		addStartNpc(Gereth);
+		addTalkId(Gereth, Dia, Katalin, Ayanthe);
+		addQuestItem(Gereth_Recommendtion);
+		addLevelCheck(1, 20);
+		addQuestCompletedCheck(Q10732_AForeignLand.class);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "quest_ac":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				qs.showTutorialHTML(TutorialShowHtml.QT_027, TutorialShowHtml.TYPE_WINDOW);
+				qs.giveItems(Gereth_Recommendtion, 1);
+				htmltext = "33932-2.htm";
+				break;
+			
+			case "quest_fighter_cont":
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				htmltext = "34005-3.htm";
+				break;
+			
+			case "quest_wizard_cont":
+				qs.setCond(3);
+				qs.playSound(SOUND_MIDDLE);
+				htmltext = "34005-6.htm";
+				break;
+			
+			case "qet_rev":
+				htmltext = "33943-2.htm";
+				qs.giveItems(57, 5000);
+				qs.takeItems(Gereth_Recommendtion, 1);
+				qs.getPlayer().addExpAndSp(295, 2);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(false);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		int cond = qs.getCond();
+		int npcId = npc.getId();
+		String htmltext = "noquest";
+		if (qs.isCompleted())
+		{
+			return "quest_completed.htm";
+		}
+		
+		switch (npcId)
+		{
+			case Gereth:
+				switch (cond)
+				{
+					case 0:
+						if (isAvailableFor(qs.getPlayer()))
+						{
+							htmltext = "33932-1.htm";
+						}
+						break;
+					
+					case 1:
+						htmltext = "33932-3.htm";
+						break;
+					
+					default:
+						htmltext = "noqu.htm";
+						break;
+				}
+				break;
+			
+			case Dia:
+				if (cond == 0)
+				{
+					htmltext = "34005-nc.htm";
+				}
+				else if ((cond == 1) && (qs.getQuestItemsCount(Gereth_Recommendtion) > 0))
+				{
+					if (qs.getPlayer().getClassId().getId() == 182) // Ertheia Fighter
+					{
+						htmltext = "34005-1.htm";
+					}
+					else if (qs.getPlayer().getClassId().getId() == 183) // Ertheia Wizard
+					{
+						htmltext = "34005-4.htm";
+					}
+				}
+				break;
+			
+			case Katalin:
+				if (cond == 0)
+				{
+					htmltext = "33943-4.htm";
+				}
+				else if ((cond == 2) && (qs.getQuestItemsCount(Gereth_Recommendtion) > 0))
+				{
+					htmltext = "33943-1.htm";
+				}
+				break;
+			
+			case Ayanthe:
+				if (cond == 0)
+				{
+					htmltext = "33942-4.htm";
+				}
+				else if ((cond == 3) && (qs.getQuestItemsCount(Gereth_Recommendtion) > 0))
+				{
+					htmltext = "33942-1.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -43,120 +172,5 @@ public class Q10733_TheTestForSurvival extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10733_TheTestForSurvival()
-	{
-		super(false);
-		addStartNpc(Gereth);
-		addTalkId(Gereth, Dia, Katalin, Ayanthe);
-		addQuestItem(Gereth_Recommendtion);
-		addLevelCheck(1, 20);
-		addQuestCompletedCheck(Q10732_AForeignLand.class);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("quest_ac"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			st.showTutorialHTML(TutorialShowHtml.QT_027, TutorialShowHtml.TYPE_WINDOW);
-			st.giveItems(Gereth_Recommendtion, 1);
-			htmltext = "33932-2.htm";
-		}
-		if (event.equalsIgnoreCase("quest_cont"))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-			htmltext = "34005-3.htm";
-		}
-		if (event.equalsIgnoreCase("qet_rev"))
-		{
-			htmltext = "33943-2.htm";
-			st.giveItems(57, 5000);
-			st.takeItems(Gereth_Recommendtion, 1);
-			st.getPlayer().addExpAndSp(295, 2);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(false);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		
-		if (npcId == Gereth)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "quest_completed.htm";
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()))
-			{
-				htmltext = "33932-1.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "33932-3.htm";
-			}
-			else
-			{
-				htmltext = "noqu.htm";
-			}
-		}
-		else if (npcId == Dia)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "quest_completed.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = "34005-nc.htm";
-			}
-			else if ((cond == 1) && (st.getQuestItemsCount(Gereth_Recommendtion) > 0))
-			{
-				// TODO check if is different html for Ertheia Fighter / Wizard
-				if (st.getPlayer().getClassId().getId() == 182) // Ertheia Fighter
-				{
-					htmltext = "34005-1.htm";
-				}
-				else if (st.getPlayer().getClassId().getId() == 183) // Ertheia Wizard
-				{
-					htmltext = "34005-4.htm";
-				}
-			}
-		}
-		
-		else if (npcId == Katalin)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "quest_completed.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = "33943-4.htm";
-			}
-			else if ((cond == 2) && (st.getQuestItemsCount(Gereth_Recommendtion) > 0))
-			{
-				htmltext = "33943-1.htm";
-			}
-		}
-		else if (npcId == Ayanthe)
-		{
-			// TODO need html files for Ertheia wizard
-		}
-		return htmltext;
 	}
 }
