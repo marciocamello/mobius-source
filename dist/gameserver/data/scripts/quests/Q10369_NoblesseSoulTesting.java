@@ -290,9 +290,9 @@ public class Q10369_NoblesseSoulTesting extends Quest implements ScriptFile, OnM
 			{
 				st.takeItems(Ashes, -1);
 				st.takeItems(SummoningStone, -1);
-				st.giveItems(7694, 1);
-				st.giveItems(7562, 10);
-				st.giveItems(34983, 1);
+				st.giveItems(NoblessTiara, 1);
+				st.giveItems(DimensionalDiamond, 10);
+				st.giveItems(NoblessePrivi, 1);
 				st.addExpAndSp(12625440, 0);
 				st.setState(COMPLETED);
 				st.exitCurrentQuest(false);
