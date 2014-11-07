@@ -12,7 +12,8 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import javolution.util.FastList;
+import java.util.ArrayList;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.instancemanager.CursedWeaponsManager;
 import lineage2.gameserver.instancemanager.ReflectionManager;
@@ -97,7 +98,7 @@ public class CharInfo extends L2GameServerPacket
 	private int _curMP;
 	private int _maxMP;
 	private int _curCP;
-	private FastList<Integer> _aveList;
+	private ArrayList<Integer> _aveList;
 	private PcInventory _inventory;
 	private int _talismanCount;
 	private boolean _openCloak;
