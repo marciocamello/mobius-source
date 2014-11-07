@@ -241,13 +241,10 @@ public class Config
 	public static boolean ALT_CHECK_SKILLS_AWAKENING;
 	public static boolean ALT_GAME_EXP_LOST;
 	public static boolean ALT_ARENA_EXP;
-	// public static boolean ALT_GAME_SUBCLASS_WITHOUT_QUESTS;
-	public static boolean ALT_ALLOW_SUBCLASS_WITHOUT_BAIUM;
 	public static int ALT_GAME_LEVEL_TO_GET_SUBCLASS;
 	public static int ALT_MAX_LEVEL;
 	public static int ALT_MAX_SUB_LEVEL;
 	public static int ALT_MAX_DUAL_SUB_LEVEL;
-	// public static int ALT_GAME_SUB_ADD;
 	public static boolean ALT_GAME_SUB_BOOK;
 	public static double[] ALT_GAME_DUALCLASS_REAWAKENING_COST;
 	public static int ALT_GAME_RESET_CERTIFICATION_COST;
@@ -1525,10 +1522,7 @@ public class Config
 		ALT_GAME_SHOW_DROPLIST = altSettings.getProperty("AltShowDroplist", true);
 		ALLOW_NPC_SHIFTCLICK = altSettings.getProperty("AllowShiftClick", false);
 		ALT_FULL_NPC_STATS_PAGE = altSettings.getProperty("AltFullStatsPage", false);
-		// ALT_GAME_SUBCLASS_WITHOUT_QUESTS = altSettings.getProperty("AltAllowSubClassWithoutQuest", false);
-		ALT_ALLOW_SUBCLASS_WITHOUT_BAIUM = altSettings.getProperty("AltAllowSubClassWithoutBaium", true);
 		ALT_GAME_LEVEL_TO_GET_SUBCLASS = altSettings.getProperty("AltLevelToGetSubclass", 75);
-		// ALT_GAME_SUB_ADD = altSettings.getProperty("AltSubAdd", 0);
 		ALT_GAME_SUB_BOOK = altSettings.getProperty("AltSubBook", false);
 		ALT_GAME_RESET_CERTIFICATION_COST = altSettings.getProperty("AltResetCertificationCost", 10000000);
 		ALT_GAME_RESET_DUALCERTIFICATION_COST = altSettings.getProperty("AltResetDualCertificationCost", 20000000);
