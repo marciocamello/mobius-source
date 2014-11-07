@@ -14,93 +14,44 @@ package lineage2.gameserver.network.serverpackets;
 
 import javolution.util.FastList;
 import lineage2.gameserver.Config;
+import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.instancemanager.CursedWeaponsManager;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.TeamType;
+import lineage2.gameserver.model.Zone.ZoneType;
 import lineage2.gameserver.model.instances.DecoyInstance;
 import lineage2.gameserver.model.items.Inventory;
-import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.model.matching.MatchingRoom;
 import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.skills.effects.EffectCubic;
+import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class CharInfo extends L2GameServerPacket
 {
-	private static final Logger _log = LoggerFactory.getLogger(CharInfo.class);
-	private int[][] _inv;
-	private int _mAtkSpd;
-	private int _pAtkSpd;
+	private Player _activeChar;
+	private Location _loc;
+	private String _name;
+	private String _title;
+	private int _title_color;
+	private int _objId;
 	private int _runSpd;
 	private int _walkSpd;
 	private int _swimSpd;
-	private int _flRunSpd;
-	private int _flWalkSpd;
 	private int _flyRunSpd;
 	private int _flyWalkSpd;
-	private Location _loc;
-	private Location _fishLoc;
-	private String _name;
-	private String _title;
-	private int _objId;
-	private int _race;
-	private int _sex;
-	private int _baseClass;
-	private int _PvpFlag;
-	private int _karma;
-	private int _recomHave;
 	private double _movementSpeedMultiplier;
 	private double _attackSpeedMultiplier;
-	private double _colRadius;
-	private double _colHeight;
-	private int _hairStyle;
-	private int _hairColor;
-	private int _face;
 	private int _clanId;
 	private int _clanCrestId;
 	private int _largeClanCrestId;
 	private int _allyId;
 	private int _allyCrestId;
-	private int _classId;
-	private int _sit;
-	private int _run;
-	private int _combat;
-	private int _dead;
-	private int _privateStore;
-	private int _enchant;
-	private int _noble;
-	private int _hero;
-	private int _fishing;
-	private int _mountType;
-	private int _pledgeClass;
-	private int _pledgeType;
-	private int _clanRepScore;
-	private int _cwLevel;
-	private int _mountNpcId;
-	private int _nameColor;
-	private int _title_color;
-	private int _transformation;
-	private int _agathionId;
 	private int _clanBoatObjectId;
 	private EffectCubic[] _cubics;
-	private boolean _isPartyRoomLeader;
-	private boolean _isFlying;
-	private TeamType _team;
-	private int _curHP;
-	private int _maxHP;
-	private int _curMP;
-	private int _maxMP;
-	private int _curCP;
 	private FastList<Integer> _aveList;
-	private PcInventory _inventory;
-	private int _talismanCount;
-	private boolean _openCloak;
 	
 	public CharInfo(Player cha)
 	{
@@ -114,13 +65,6 @@ public class CharInfo extends L2GameServerPacket
 	
 	public CharInfo(Creature cha)
 	{
-		if (cha == null)
-		{
-			System.out.println("CharInfo: cha is null!");
-			Thread.dumpStack();
-			return;
-		}
-		
 		if (cha.isInvisible())
 		{
 			return;
@@ -131,20 +75,19 @@ public class CharInfo extends L2GameServerPacket
 			return;
 		}
 		
-		Player player = cha.getPlayer();
-		
-		if (player == null)
+		_activeChar = cha.getPlayer();
+		if (_activeChar == null)
 		{
 			return;
 		}
 		
-		if (player.isInBoat())
+		if (_activeChar.isInBoat())
 		{
-			_loc = player.getInBoatPosition();
+			_loc = _activeChar.getInBoatPosition();
 			
-			if (player.isClanAirShipDriver())
+			if (_activeChar.isClanAirShipDriver())
 			{
-				_clanBoatObjectId = player.getBoat().getBoatId();
+				_clanBoatObjectId = _activeChar.getBoat().getBoatId();
 			}
 		}
 		
@@ -155,82 +98,53 @@ public class CharInfo extends L2GameServerPacket
 		
 		_objId = cha.getObjectId();
 		
-		if ((player.getTransformationName() != null) || (((player.getReflection() == ReflectionManager.GIRAN_HARBOR) || (player.getReflection() == ReflectionManager.PARNASSUS)) && (player.getPrivateStoreType() != Player.STORE_PRIVATE_NONE)))
+		if ((_activeChar.getTransformationName() != null) || (((_activeChar.getReflection() == ReflectionManager.GIRAN_HARBOR) || (_activeChar.getReflection() == ReflectionManager.PARNASSUS)) && (_activeChar.getPrivateStoreType() != Player.STORE_PRIVATE_NONE)))
 		{
-			_name = player.getTransformationName() != null ? player.getTransformationName() : player.getName();
+			_name = _activeChar.getTransformationName() != null ? _activeChar.getTransformationName() : _activeChar.getName();
 			_title = "";
 			_clanId = 0;
 			_clanCrestId = 0;
 			_allyId = 0;
 			_allyCrestId = 0;
 			_largeClanCrestId = 0;
-			
-			if (player.isCursedWeaponEquipped())
-			{
-				_cwLevel = CursedWeaponsManager.getInstance().getLevel(player.getCursedWeaponEquippedId());
-			}
 		}
 		else
 		{
-			_name = player.getName();
+			_name = _activeChar.getName();
 			
-			if (player.getPrivateStoreType() != Player.STORE_PRIVATE_NONE)
+			if (_activeChar.getPrivateStoreType() != Player.STORE_PRIVATE_NONE)
 			{
 				_title = "";
 			}
-			else if (!player.isConnected())
+			else if (!_activeChar.isConnected())
 			{
 				_title = "NO CARRIER";
 				_title_color = 255;
 			}
 			else
 			{
-				_title = player.getTitle();
-				_title_color = player.getTitleColor();
+				_title = _activeChar.getTitle();
+				_title_color = _activeChar.getTitleColor();
 			}
 			
-			Clan clan = player.getClan();
+			Clan clan = _activeChar.getClan();
 			Alliance alliance = clan == null ? null : clan.getAlliance();
-			//
+			
 			_clanId = clan == null ? 0 : clan.getClanId();
 			_clanCrestId = clan == null ? 0 : clan.getCrestId();
 			_largeClanCrestId = clan == null ? 0 : clan.getCrestLargeId();
-			//
+			
 			_allyId = alliance == null ? 0 : alliance.getAllyId();
 			_allyCrestId = alliance == null ? 0 : alliance.getAllyCrestId();
-			_cwLevel = 0;
 		}
 		
-		if (player.isMounted())
-		{
-			_enchant = 0;
-			_mountNpcId = player.getMountNpcId() + 1000000;
-			_mountType = player.getMountType();
-		}
-		else
-		{
-			_enchant = player.getEnchantEffect();
-			_mountNpcId = 0;
-			_mountType = 0;
-		}
+		_attackSpeedMultiplier = _activeChar.getAttackSpeedMultiplier();
+		_movementSpeedMultiplier = _activeChar.getMovementSpeedMultiplier();
+		_runSpd = (int) (_activeChar.getRunSpeed() / _movementSpeedMultiplier);
+		_walkSpd = (int) (_activeChar.getWalkSpeed() / _movementSpeedMultiplier);
+		_swimSpd = _activeChar.getSwimSpeed();
 		
-		_inv = new int[Inventory.PAPERDOLL_MAX][2];
-		
-		for (int PAPERDOLL_ID : PAPERDOLL_ORDER)
-		{
-			_inv[PAPERDOLL_ID][0] = player.getInventory().getPaperdollItemId(PAPERDOLL_ID);
-			_inv[PAPERDOLL_ID][1] = player.getInventory().getPaperdollAugmentationId(PAPERDOLL_ID);
-		}
-		
-		_mAtkSpd = player.getMAtkSpd();
-		_pAtkSpd = player.getPAtkSpd();
-		_movementSpeedMultiplier = player.getMovementSpeedMultiplier();
-		_runSpd = (int) (player.getRunSpeed() / _movementSpeedMultiplier);
-		_walkSpd = (int) (player.getWalkSpeed() / _movementSpeedMultiplier);
-		_flRunSpd = 0; // TODO:
-		_flWalkSpd = 0; // TODO:
-		
-		if (player.isFlying())
+		if (_activeChar.isFlying())
 		{
 			_flyRunSpd = _runSpd;
 			_flyWalkSpd = _walkSpd;
@@ -241,206 +155,256 @@ public class CharInfo extends L2GameServerPacket
 			_flyWalkSpd = 0;
 		}
 		
-		_swimSpd = player.getSwimSpeed();
-		_race = player.getRace().ordinal();
-		_sex = player.getSex();
-		_baseClass = player.getBaseClassId();
-		_PvpFlag = player.getPvpFlag();
-		_karma = player.getKarma();
-		_attackSpeedMultiplier = player.getAttackSpeedMultiplier();
-		_colRadius = player.getColRadius();
-		_colHeight = player.getColHeight();
-		_hairStyle = player.getHairStyle();
-		_hairColor = player.getHairColor();
-		_face = player.getFace();
-		
-		if ((_clanId > 0) && (player.getClan() != null))
-		{
-			_clanRepScore = player.getClan().getReputationScore();
-		}
-		else
-		{
-			_clanRepScore = 0;
-		}
-		
-		_sit = player.isSitting() ? 0 : 1; // standing = 1 sitting = 0
-		_run = player.isRunning() ? 1 : 0; // running = 1 walking = 0
-		_combat = player.isInCombat() ? 1 : 0;
-		_dead = player.isAlikeDead() ? 1 : 0;
-		_privateStore = player.isInObserverMode() ? Player.STORE_OBSERVING_GAMES : player.getPrivateStoreType();
-		_cubics = player.getCubics().toArray(new EffectCubic[player.getCubics().size()]);
-		_recomHave = player.isGM() ? 0 : player.getRecomHave();
-		_classId = player.getClassId().getId();
-		_team = player.getTeam();
-		_noble = player.isNoble() ? 1 : 0; // 0x01: symbol on char menu ctrl+I
-		_hero = player.isHero() || (player.isGM() && Config.GM_HERO_AURA) ? 1 : 0;
-		_fishing = player.isFishing() ? 1 : 0;
-		_fishLoc = player.getFishLoc();
-		_nameColor = player.getNameColor(); // New C5
-		_pledgeClass = player.getPledgeClass();
-		_pledgeType = player.getPledgeType();
-		_transformation = player.getTransformation();
-		_agathionId = player.getAgathionId();
-		_isPartyRoomLeader = (player.getMatchingRoom() != null) && (player.getMatchingRoom().getType() == MatchingRoom.PARTY_MATCHING) && (player.getMatchingRoom().getLeader() == player);
-		_isFlying = player.isInFlyingTransform();
-		_talismanCount = player.getTalismanCount();
-		_openCloak = player.getOpenCloak();
-		_curCP = (int) player.getCurrentCp();
-		_curHP = (int) player.getCurrentHp();
-		_maxHP = player.getMaxHp();
-		_curMP = (int) player.getCurrentMp();
-		_maxMP = player.getMaxMp();
-		_aveList = player.getAveList();
-		_inventory = player.getInventory();
+		_cubics = _activeChar.getCubics().toArray(new EffectCubic[_activeChar.getCubics().size()]);
+		_aveList = _activeChar.getAveList();
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
-		
-		if (activeChar == null)
+		if (_activeChar == null)
 		{
 			return;
 		}
 		
-		if (_objId == 0)
+		final NpcTemplate template = _activeChar.isPolymorphed() ? NpcHolder.getInstance().getTemplate(_activeChar.getPolyId()) : null;
+		if (template != null)
 		{
-			return;
-		}
-		
-		if (activeChar.getObjectId() == _objId)
-		{
-			_log.error("You cant send CharInfo about his character to active user!!!");
-			return;
-		}
-		
-		writeC(0x31);
-		writeD(_loc.getX());
-		writeD(_loc.getY());
-		writeD(_loc.getZ() + Config.CLIENT_Z_SHIFT);
-		writeD(_clanBoatObjectId);
-		writeD(_objId);
-		writeS(_name);
-		writeH(_race);
-		writeC(_sex);
-		writeD(_baseClass);
-		
-		for (int PAPERDOLL_ID : PAPERDOLL_ORDER)
-		{
-			writeD(_inv[PAPERDOLL_ID][0]);
-		}
-		
-		for (int PAPERDOLL_ID : PAPERDOLL_ORDER)
-		{
-			writeD(_inv[PAPERDOLL_ID][1]);
-		}
-		
-		writeD(_talismanCount);
-		writeD((_openCloak) ? 1 : 0);
-		writeD(_inventory.getVisualItemId(Inventory.PAPERDOLL_RHAND));
-		writeD(_inventory.getVisualItemId(Inventory.PAPERDOLL_LHAND));
-		writeD(0x00);
-		writeD(_inventory.getVisualItemId(Inventory.PAPERDOLL_GLOVES));
-		writeD(_inventory.getVisualItemId(Inventory.PAPERDOLL_CHEST));
-		writeD(_inventory.getVisualItemId(Inventory.PAPERDOLL_LEGS));
-		writeD(_inventory.getVisualItemId(Inventory.PAPERDOLL_FEET));
-		writeD(_inventory.getVisualItemId(Inventory.PAPERDOLL_HAIR));
-		writeD(_inventory.getVisualItemId(Inventory.PAPERDOLL_DHAIR));
-		writeD(_PvpFlag);
-		writeD(_karma);
-		writeD(_mAtkSpd);
-		writeD(_pAtkSpd);
-		writeD(0x00);
-		writeD(_runSpd);
-		writeD(_walkSpd);
-		writeD(_swimSpd);
-		writeD(_swimSpd);
-		writeD(_flRunSpd);
-		writeD(_flWalkSpd);
-		writeD(_flyRunSpd);
-		writeD(_flyWalkSpd);
-		writeF(_movementSpeedMultiplier);
-		writeF(_attackSpeedMultiplier);
-		writeF(_colRadius);
-		writeF(_colHeight);
-		writeD(_hairStyle);
-		writeD(_hairColor);
-		writeD(_face);
-		writeS(_title);
-		writeD(_clanId);
-		writeD(_clanCrestId);
-		writeD(_allyId);
-		writeD(_allyCrestId);
-		writeC(_sit);
-		writeC(_run);
-		writeC(_combat);
-		writeC(_dead);
-		writeC(0x00); // is invisible
-		writeC(_mountType); // 1-on Strider, 2-on Wyvern, 3-on Great Wolf, 0-no mount
-		writeC(_privateStore);
-		writeH(_cubics.length);
-		
-		for (EffectCubic cubic : _cubics)
-		{
-			writeH(cubic == null ? 0 : cubic.getId());
-		}
-		
-		writeC(_isPartyRoomLeader ? 0x01 : 0x00); // find party members
-		writeC(_isFlying ? 0x02 : 0x00);
-		writeH(_recomHave);
-		writeD(_mountNpcId);
-		writeD(_classId);
-		writeD(0x00); // special effects? circles around player...
-		writeC(_enchant);
-		writeC(_team.ordinal()); // team circle around feet 1 = Blue, 2 = red
-		writeD(_largeClanCrestId);
-		writeC(_noble);
-		writeC(_hero);
-		writeC(_fishing);
-		writeD(_fishLoc.getX());
-		writeD(_fishLoc.getY());
-		writeD(_fishLoc.getZ());
-		writeD(_nameColor);
-		writeD(_loc.getHeading());
-		writeD(_pledgeClass);
-		writeD(_pledgeType);
-		writeD(_title_color);
-		writeD(_cwLevel);
-		writeD(_clanRepScore);
-		writeD(_transformation);
-		writeD(_agathionId);
-		writeD(0x01); // T2
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
-		writeD(_curCP);
-		writeD(_curHP);
-		writeD(_maxHP);
-		writeD(_curMP);
-		writeD(_maxMP);
-		writeD(0x00);
-		writeD(0x00);
-		writeC(0x00);
-		
-		if (_aveList != null)
-		{
-			writeD(_aveList.size());
-			
-			for (int i : _aveList)
+			writeC(0x0C);
+			writeD(_objId);
+			writeC(0x00);
+			writeC(0x25);
+			writeC(0x00);
+			writeC(0xED);
+			if ((template.getLHandId() > 0) || (template.getRHandId() > 0) || (template.getChestId() > 0))
 			{
-				writeD(i);
+				writeC(0xFE);
+			}
+			else
+			{
+				writeC(0xBE);
+			}
+			writeC(0x4E);
+			writeC(0xA2);
+			writeC(0x0C);
+			int len_poly_title = 0;
+			if (_activeChar.getTitle() != null)
+			{
+				len_poly_title = _activeChar.getTitle().length();
+			}
+			writeC(7 + (len_poly_title * 2));
+			writeC(_activeChar.getKarma() < 0 ? 1 : 0);
+			writeH(0);
+			writeH(0);
+			writeS(_activeChar.getTitle());
+			if ((template.getLHandId() > 0) || (template.getRHandId() > 0) || (template.getChestId() > 0))
+			{
+				writeH(68);
+			}
+			else
+			{
+				writeH(56);
+			}
+			writeD(template.getId() + 1000000); // npctype id
+			writeD(_loc.getX());
+			writeD(_loc.getY());
+			writeD(_loc.getZ());
+			writeD(_loc.getHeading());
+			writeD(_activeChar.getMAtkSpd());
+			writeD(_activeChar.getPAtkSpd());
+			putFloat((float) _activeChar.getMovementSpeedMultiplier());
+			putFloat((float) _activeChar.getAttackSpeedMultiplier());
+			if ((template.getRHandId() > 0) || (template.getChestId() > 0) || (template.getLHandId() > 0))
+			{
+				writeD(template.getRHandId()); // right hand weapon
+				writeD(template.getChestId()); // chest
+				writeD(template.getLHandId()); // left hand weapon
+			}
+			writeC(1);
+			writeC(_activeChar.isRunning() ? 1 : 0);
+			writeC(_activeChar.isInZone(ZoneType.Water) ? 1 : _activeChar.isFlying() ? 2 : 0);
+			writeD(_activeChar.isFlying() ? 1 : 0);
+			writeC(0);
+			writeC(0);
+			writeH(0);
+			writeD((int) _activeChar.getCurrentHp());
+			writeD(_activeChar.getMaxHp());
+			
+			writeC((_activeChar.isInCombat() ? 1 : 0) + (_activeChar.isAlikeDead() ? 2 : 0) + (/* template.isTargetable() ? 4 : 0 */4) + (template.isShowName() ? 8 : 0));
+			
+			if (_aveList != null)
+			{
+				writeD(_aveList.size());
+				
+				for (int i : _aveList)
+				{
+					writeD(i);
+				}
 			}
 		}
 		else
 		{
+			writeC(0x31);
+			writeD(_activeChar.getX());
+			writeD(_activeChar.getY());
+			writeD(_activeChar.getZ());
+			writeD(_clanBoatObjectId);
+			writeD(_objId);
+			writeS(_name);
+			writeH(_activeChar.getRace().ordinal());
+			writeC(_activeChar.getSex());
+			writeD(_activeChar.getBaseClassId());
+			
+			for (int slot : PAPERDOLL_ORDER)
+			{
+				writeD(_activeChar.getInventory().getPaperdollItemId(slot));
+			}
+			
+			writeD(_activeChar.getInventory().getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND));
+			writeD(_activeChar.getInventory().getPaperdollAugmentationId(Inventory.PAPERDOLL_LHAND));
+			writeD(_activeChar.getInventory().getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND));
+			
+			writeC(_activeChar.getTalismanCount());
+			
+			writeD(0);
+			writeD(0);
+			writeD(0);
+			writeD(0);
+			writeD(0);
+			writeD(0);
+			writeD(0);
+			writeD(0);
+			writeD(0);
+			
+			writeC(_activeChar.getPvpFlag());
+			int Karma = 0 - _activeChar.getKarma();
+			writeD(Karma);
+			
+			writeD(_activeChar.getMAtkSpd());
+			writeD(_activeChar.getPAtkSpd());
+			
+			writeH(_runSpd);
+			writeH(_walkSpd);
+			writeH(_swimSpd);
+			writeH(_swimSpd);
+			writeH(_flyRunSpd);
+			writeH(_flyWalkSpd);
+			writeH(_flyRunSpd);
+			writeH(_flyWalkSpd);
+			writeF(_movementSpeedMultiplier);
+			writeF(_attackSpeedMultiplier);
+			
+			writeF(_activeChar.getCollisionRadius());
+			writeF(_activeChar.getCollisionHeight());
+			
+			writeD(_activeChar.getHairStyle());
+			writeD(_activeChar.getHairColor());
+			writeD(_activeChar.getFace());
+			writeS(_title);
+			
+			if (!_activeChar.isCursedWeaponEquipped())
+			{
+				writeD(_clanId);
+				writeD(_clanCrestId);
+				writeD(_allyId);
+				writeD(_allyCrestId);
+			}
+			else
+			{
+				writeD(0x00);
+				writeD(0x00);
+				writeD(0x00);
+				writeD(0x00);
+			}
+			
+			writeC(_activeChar.isSitting() ? 0 : 1); // standing = 1 sitting = 0
+			writeC(_activeChar.isRunning() ? 1 : 0); // running = 1 walking = 0
+			writeC(_activeChar.isInCombat() ? 1 : 0);
+			
+			writeC(!_activeChar.isInOlympiadMode() && _activeChar.isAlikeDead() ? 1 : 0);
+			
+			writeC(0x00); // FIXME: GM??? invisible = 1 visible =0
+			
+			writeC(_activeChar.isMounted() ? _activeChar.getMountType() : 0); // 1-on Strider, 2-on Wyvern, 3-on Great Wolf, 0-no mount
+			writeC(_activeChar.isInObserverMode() ? Player.STORE_OBSERVING_GAMES : _activeChar.getPrivateStoreType());
+			
+			writeH(_cubics.length);
+			for (EffectCubic cubic : _cubics)
+			{
+				writeH(cubic == null ? 0 : cubic.getId());
+			}
+			
+			writeC((_activeChar.getMatchingRoom() != null) && (_activeChar.getMatchingRoom().getType() == MatchingRoom.PARTY_MATCHING) && (_activeChar.getMatchingRoom().getLeader() == _activeChar) ? 1 : 0);
+			
+			writeC(_activeChar.isInZone(ZoneType.Water) ? 1 : _activeChar.isFlying() ? 2 : 0);
+			
+			writeH(_activeChar.getRecomHave()); // Blue value for name (0 = white, 255 = pure blue)
+			writeD(_activeChar.getMountNpcId() > 0 ? _activeChar.getMountNpcId() + 1000000 : 0);
+			writeD(_activeChar.getClassId().getId());
 			writeD(0x00);
+			writeC(_activeChar.isMounted() ? 0 : _activeChar.getEnchantEffect());
+			
+			writeC(_activeChar.getTeam().ordinal());
+			
+			writeD(_largeClanCrestId);
+			writeC(_activeChar.isNoble() ? 1 : 0); // Symbol on char menu ctrl+I
+			writeC(_activeChar.isHero() || (_activeChar.isGM() && Config.GM_HERO_AURA) ? 1 : 0); // Hero Aura
+			
+			writeC(_activeChar.isFishing() ? 1 : 0); // 0x01: Fishing Mode (Cant be undone by setting back to 0)
+			writeD(_activeChar.getFishLoc().getX());
+			writeD(_activeChar.getFishLoc().getY());
+			writeD(_activeChar.getFishLoc().getZ());
+			
+			writeD(_activeChar.getNameColor());
+			
+			writeD(_loc.getHeading());
+			
+			writeC(_activeChar.getPledgeClass());
+			writeH(_activeChar.getPledgeType());
+			
+			writeD(_title_color);
+			
+			writeC(_activeChar.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_activeChar.getCursedWeaponEquippedId()) : 0);
+			
+			writeD(_activeChar.getClanId() > 0 ? _activeChar.getClan().getReputationScore() : 0);
+			
+			// T1
+			writeD(_activeChar.getTransformation());
+			writeD(_activeChar.getAgathionId());
+			
+			// T2
+			writeC(0x01);
+			
+			// T2.3
+			writeD((int) _activeChar.getCurrentCp());
+			writeD(_activeChar.getMaxHp());
+			writeD((int) _activeChar.getCurrentHp());
+			writeD(_activeChar.getMaxMp());
+			writeD((int) _activeChar.getCurrentMp());
+			writeC(0);
+			
+			// java.util.List<Integer> el = _activeChar.getEffectIdList();
+			// if (gmSeeInvis && !el.contains(21))
+			// {
+			// el.add(21);
+			// }
+			if (_aveList != null)
+			{
+				writeD(_aveList.size());
+				
+				for (int i : _aveList)
+				{
+					writeD(i);
+				}
+			}
+			
+			writeC(0);
+			writeC(1);
+			writeC(0);
 		}
-		
-		writeC(0x00);
 	}
 	
-	private static final int[] PAPERDOLL_ORDER =
+	private static final int[] PAPERDOLL_ORDER = new int[]
 	{
 		Inventory.PAPERDOLL_UNDER,
 		Inventory.PAPERDOLL_HEAD,
@@ -451,17 +415,8 @@ public class CharInfo extends L2GameServerPacket
 		Inventory.PAPERDOLL_LEGS,
 		Inventory.PAPERDOLL_FEET,
 		Inventory.PAPERDOLL_BACK,
-		Inventory.PAPERDOLL_LRHAND,
+		Inventory.PAPERDOLL_RHAND,
 		Inventory.PAPERDOLL_HAIR,
-		Inventory.PAPERDOLL_DHAIR,
-		Inventory.PAPERDOLL_RBRACELET,
-		Inventory.PAPERDOLL_LBRACELET,
-		Inventory.PAPERDOLL_DECO1,
-		Inventory.PAPERDOLL_DECO2,
-		Inventory.PAPERDOLL_DECO3,
-		Inventory.PAPERDOLL_DECO4,
-		Inventory.PAPERDOLL_DECO5,
-		Inventory.PAPERDOLL_DECO6,
-		Inventory.PAPERDOLL_BELT
+		Inventory.PAPERDOLL_DHAIR
 	};
 }

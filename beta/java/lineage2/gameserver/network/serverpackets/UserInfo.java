@@ -81,14 +81,14 @@ public class UserInfo extends L2GameServerPacket
 		}
 		
 		String title = _activeChar.getTitle();
-		if (_activeChar.isInvisible())
-		{
-			title = "Invisible";
-		}
+		// if (_activeChar.isInvisible())
+		// {
+		// title = "Invisible";
+		// }
+		
 		if (_activeChar.isPolymorphed())
 		{
 			if (NpcHolder.getInstance().getTemplate(_activeChar.getPolyId()) != null)
-			
 			{
 				title += " (" + NpcHolder.getInstance().getTemplate(_activeChar.getPolyId()).name + ")";
 			}

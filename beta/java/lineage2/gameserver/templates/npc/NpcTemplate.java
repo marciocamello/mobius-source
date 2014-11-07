@@ -820,4 +820,26 @@ public final class NpcTemplate extends CharTemplate
 	{
 		return displayHpBar;
 	}
+	
+	public int getRHandId()
+	{
+		return rhand;
+	}
+	
+	public int getLHandId()
+	{
+		return lhand;
+	}
+	
+	public boolean isShowName()
+	{
+		// FIXME:
+		return name.length() > 0;
+	}
+	
+	public int getChestId()
+	{
+		// TODO: Auto-generated method stub
+		return 0;
+	}
 }
