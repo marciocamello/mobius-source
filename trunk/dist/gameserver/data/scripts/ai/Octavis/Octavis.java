@@ -23,12 +23,12 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.tables.SkillTable;
+import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
 
 /**
  * @author Mobius and Nache
  */
-
 public class Octavis extends Fighter
 {
 	public static final Location LAIR_CENTER = new Location(207190, 120574, -10009);
@@ -53,6 +53,9 @@ public class Octavis extends Fighter
 	public static final Skill VOLCANO_ZONE = SkillTable.getInstance().getInfo(14025, 1);
 	public static final Skill OCTAVIS_POWER1 = SkillTable.getInstance().getInfo(14028, 1);
 	public static final Skill OCTAVIS_POWER2 = SkillTable.getInstance().getInfo(14029, 1);
+	
+	// Items
+	private static final int OCTAVIS_CRYSTAL = 37505;
 	
 	public Octavis(NpcInstance actor)
 	{
@@ -228,4 +231,19 @@ public class Octavis extends Fighter
 		}
 		super.onEvtAggression(target, aggro);
 	}
+	
+	@Override
+	protected void onEvtDead(Creature killer)
+	{
+		NpcInstance npc = getActor();
+		if (npc.getId() == OCTAVIS_HARD_THIRD)
+		{
+			for (Player p : killer.getReflection().getPlayers())
+			{
+				ItemFunctions.addItem(p, OCTAVIS_CRYSTAL, 1, true);
+			}
+		}
+		super.onEvtDead(killer);
+	}
+	
 }

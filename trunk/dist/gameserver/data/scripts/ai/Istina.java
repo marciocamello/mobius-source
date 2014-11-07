@@ -34,6 +34,7 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.PlaySound;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.tables.SkillTable;
+import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
 
 /**
@@ -66,6 +67,9 @@ public class Istina extends Fighter
 	final Zone RED_RING_LOC;
 	final Zone BLUE_RING_LOC;
 	final Zone GREEN_RING_LOC;
+	
+	// Items
+	public static final int ISTINA_CRYSTAL = 37506;
 	
 	boolean isHard = false;
 	ScheduledFuture<?> _effectCheckTask = null;
@@ -480,5 +484,19 @@ public class Istina extends Fighter
 			npc.broadcastPacket(new EventTrigger(RED_RING, false));
 			npc.broadcastPacket(new EventTrigger(BLUE_RING, false));
 		}
+	}
+	
+	@Override
+	protected void onEvtDead(Creature killer)
+	{
+		NpcInstance npc = getActor();
+		if (npc.getId() == ISTINA_HARD)
+		{
+			for (Player p : killer.getReflection().getPlayers())
+			{
+				ItemFunctions.addItem(p, ISTINA_CRYSTAL, 1, true);
+			}
+		}
+		super.onEvtDead(killer);
 	}
 }
