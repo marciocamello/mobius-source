@@ -12,7 +12,8 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import javolution.util.FastList;
+import java.util.ArrayList;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.instancemanager.CursedWeaponsManager;
@@ -140,7 +141,7 @@ public class UserInfo extends L2GameServerPacket
 	private final boolean _openCloak;
 	private final double _expPercent;
 	private final TeamType _team;
-	private final FastList<Integer> _aveList;
+	private final ArrayList<Integer> _aveList;
 	private final PcInventory _inventory;
 	
 	public UserInfo(Player player)

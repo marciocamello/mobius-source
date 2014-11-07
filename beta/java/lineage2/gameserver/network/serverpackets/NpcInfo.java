@@ -12,7 +12,8 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import javolution.util.FastList;
+import java.util.ArrayList;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Summon;
@@ -75,7 +76,7 @@ public class NpcInfo extends L2GameServerPacket
 	NpcString _titleNpcString = NpcString.NONE;
 	TeamType _team;
 	int _transformId;
-	private FastList<Integer> _aveList;
+	private ArrayList<Integer> _aveList;
 	boolean _waterZone;
 	protected double _moveMultiplier;
 	protected double _spdMultiplier;

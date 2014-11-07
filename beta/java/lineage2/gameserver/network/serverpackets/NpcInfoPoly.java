@@ -12,7 +12,8 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import javolution.util.FastList;
+import java.util.ArrayList;
+
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
@@ -50,7 +51,7 @@ public class NpcInfoPoly extends L2GameServerPacket
 	final double _colRadius;
 	final double _colHeight;
 	final TeamType _team;
-	private final FastList<Integer> _aveList;
+	private final ArrayList<Integer> _aveList;
 	protected double _moveMultiplier;
 	protected double _spdMultiplier;
 	

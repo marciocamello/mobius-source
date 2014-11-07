@@ -32,7 +32,6 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-import javolution.util.FastList;
 import lineage2.commons.collections.LazyArrayList;
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.lang.reference.HardReferences;
@@ -340,7 +339,7 @@ public abstract class Creature extends GameObject
 	private int _abnormalEffects;
 	private int _abnormalEffects2;
 	private int _abnormalEffects3;
-	private final FastList<Integer> _aveList = new FastList<>();
+	private final ArrayList<Integer> _aveList = new ArrayList<>();
 	protected boolean _isAttackAborted;
 	protected long _attackEndTime;
 	protected long _attackReuseEndTime;
@@ -2325,9 +2324,9 @@ public abstract class Creature extends GameObject
 	
 	/**
 	 * Method getAveList.
-	 * @return FastList<Integer>
+	 * @return ArrayList<Integer>
 	 */
-	public FastList<Integer> getAveList()
+	public ArrayList<Integer> getAveList()
 	{
 		return _aveList;
 	}

@@ -12,7 +12,8 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import javolution.util.FastList;
+import java.util.ArrayList;
+
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.instancemanager.CursedWeaponsManager;
@@ -51,7 +52,7 @@ public class CharInfo extends L2GameServerPacket
 	private int _allyCrestId;
 	private int _clanBoatObjectId;
 	private EffectCubic[] _cubics;
-	private FastList<Integer> _aveList;
+	private ArrayList<Integer> _aveList;
 	
 	public CharInfo(Player cha)
 	{

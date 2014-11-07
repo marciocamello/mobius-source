@@ -12,7 +12,8 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import javolution.util.FastList;
+import java.util.List;
+
 import lineage2.gameserver.model.Player;
 
 public class ExBR_ExtraUserInfo extends L2GameServerPacket
@@ -20,7 +21,7 @@ public class ExBR_ExtraUserInfo extends L2GameServerPacket
 	@SuppressWarnings("unused")
 	private final int _objectId;
 	@SuppressWarnings("unused")
-	private final FastList<Integer> _effect;
+	private final List<Integer> _effect;
 	
 	public ExBR_ExtraUserInfo(Player cha)
 	{
