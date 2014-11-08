@@ -123,9 +123,8 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="relationSkillsId" val="474;216;330;1474;422;205;1527;210;228;141;472;168;925;331;421;"/>
 		<triggers>
-			<trigger id="10284" level="1" type="CRIT" chance="80">
-			</trigger>
-		</triggers>			
+			<trigger id="10284" level="1" type="CRIT" chance="80"/>
+		</triggers>
 		<enchant1 levels="10" name="Power">
 			<table name="#pAtk">400 425 449 474 499 523 548 572 597 622</table>
 		</enchant1>
@@ -140,7 +139,7 @@
 			</add>
 			<add order="0x40" stat="poleTargetCount" val="10">
 				<using kind="Pole"/>
-			</add>		
+			</add>
 		</for>
 	</skill>
 	<skill id="10252" levels="1" name="Superior Dual Weapon Mastery">
@@ -478,6 +477,9 @@
 		<set name="ignoreShield" val="true"/>
 		<set name="max_charges" val="5"/>
 		<set name="chargeBoost" val="true"/>
+		<set name="castRange" val="40"/>
+		<set name="hitTime" val="1690"/>
+		<set name="reuseDelay" val="30999"/>
 		<cond msgId="113" addName="1">
 			<not>
 				<using kind="Bow,Crossbow"/>
@@ -535,9 +537,6 @@
 		<for>
 			<effect count="1" name="KnockDown" stackOrder="-1" stackType="KnockDown" time="2" val="0"/>
 		</for>
-		<set name="castRange" val="40"/>
-		<set name="hitTime" val="1690"/>
-		<set name="reuseDelay" val="30999"/>
 	</skill>
 	<skill id="10263" levels="8" name="Hurricane Blaster">
 		<table name="#Power">551 566 598 630 662 693 725 757</table>
@@ -556,8 +555,8 @@
 		<set name="criticalRate" val="10"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="charges" val="7"/>
-		<set name="alterSkillsId" val="10499;10500;14579"/>		
-		<set name="activateRate" val="100"/>		
+		<set name="alterSkillsId" val="10499;10500;14579"/>
+		<set name="activateRate" val="100"/>
 		<set name="isOffensive" val="true"/>
 		<set name="hitTime" val="1500"/>
 		<set name="reuseDelay" val="900"/>
@@ -620,7 +619,7 @@
 			<effect count="1" name="Debuff" stackOrder="-1" stackType="pAtkDown" time="10" val="0">
 				<mul order="0x30" stat="pDef" val="0.77"/>
 			</effect>
-		</for>		
+		</for>
 	</skill>
 	<skill id="10265" levels="8" name="Eruption">
 		<table name="#Power">11557 11956 12754 13553 14351 15150 15948 16747</table>
@@ -852,7 +851,7 @@
 		<set name="max_charges" val="5"/>
 		<set name="chargeBoost" val="true"/>
 		<set name="castRange" val="600"/>
-		<set name="hitTime" val="499"/>		
+		<set name="hitTime" val="499"/>
 		<cond msgId="113" addName="1">
 			<not>
 				<using kind="Bow,Crossbow"/>
@@ -1244,8 +1243,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CHARGE"/>
 		<set name="maxCharges" val="15"/>
-		<for>
-		</for>
+		<for/>
 	</skill>
 	<skill id="10284" levels="3" name="Lightning Force">
 		<table name="#pAtkSpd">1.10 1.12 1.15</table>
@@ -1352,7 +1350,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="500"/>
 		<set name="hitTime" val="1790"/>
-		<set name="reuseDelay" val="10999"/>		
+		<set name="reuseDelay" val="10999"/>
 		<cond msgId="113" addName="1">
 			<not>
 				<using kind="Bow,Crossbow"/>
@@ -1491,7 +1489,7 @@
 				<mul order="0x30" stat="maxHp" val="1.1"/>
 				<add order="0x40" stat="knockDownPower" val="#knockdown"/>
 			</effect>
-			<effect count="1" name="HealPercent" time="0" val="10"/>			
+			<effect count="1" name="HealPercent" time="0" val="10"/>
 		</for>
 	</skill>
 	<skill id="10293" levels="1" name="Feral Puma Cry">

@@ -28,7 +28,7 @@
 		<set name="nextAction" val="attack"/>
 		<set name="weaponsAllowed" val="1024"/>
 		<set name="castRange" val="40"/>
-	</skill>	
+	</skill>
 	<skill id="30602" levels="1" name="Eviscerator Aura">
 		<table name="#magicLevel">85</table>
 		<set name="effectPoint" val="467"/>
@@ -58,6 +58,39 @@
 			<effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelForce" stackOrder="1">
 				<def name="auraSkillId" val="30602"/>
 				<mul order="0x30" stat="PhysSkillDmgStatic" val="1.01"/>
+			</effect>
+		</for>
+		<set name="reuseDelay" val="5000"/>
+	</skill>
+	<skill id="30605" levels="1" name="Sayha's Seer Aura">
+		<table name="#magicLevel">85</table>
+		<set name="effectPoint" val="467"/>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="CONT"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="reuseDelay" val="5000"/>
+		<set name="operateType" val="OP_ACTIVE_TOGGLE"/>
+		<set name="isAuraSkill" val="true"/>
+		<set name="isMusic" val="true"/>
+		<for>
+			<effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelAura" stackOrder="1">
+				<def name="forceSkillId" val="30606"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="30606" levels="1" name="Sayha's Seer Force">
+		<table name="#magicLevel">85</table>
+		<set name="magicLevel" val="#magicLevel"/>
+		<set name="target" val="TARGET_PARTY"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE_TOGGLE"/>
+		<set name="skillRadius" val="1000"/>
+		<set name="isMusic" val="true"/>
+		<for>
+			<effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelForce" stackOrder="1">
+				<def name="auraSkillId" val="30605"/>
+				<mul order="0x30" stat="mCritRate" val="1.01"/>
 			</effect>
 		</for>
 		<set name="reuseDelay" val="5000"/>

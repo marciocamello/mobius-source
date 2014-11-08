@@ -25124,7 +25124,7 @@
 			<skill id="30500" level="4" cost="20" name="Lateral Hit" min_level="36"/>
 			<skill id="30501" level="3" cost="20" name="Backspin Blow" min_level="36"/>
 			<skill id="30508" level="3" cost="20" name="Right Sidestep" min_level="36"/>
-		</class>	
+		</class>
 		<class id="184">
 			<!-- Level 40 Ertheia Marauder -->
 			<skill id="30522" level="1" cost="42" name="Eminent Attack Movement" min_level="40"/>
@@ -25183,10 +25183,10 @@
 			<!-- Level 66 -->
 			<skill id="30500" level="11" cost="691" name="Lateral Hit" min_level="66"/>
 			<skill id="30501" level="10" cost="691" name="Backspin Blow" min_level="66"/>
-			<skill id="30508" level="10" cost="691" name="Right Sidestep" min_level="66"/>			
+			<skill id="30508" level="10" cost="691" name="Right Sidestep" min_level="66"/>
 			<!-- Level 68 -->
 			<skill id="30502" level="8" cost="948" name="Chin Strike" min_level="68"/>
-			<skill id="30507" level="8" cost="948" name="Left Sidestep" min_level="68"/>	
+			<skill id="30507" level="8" cost="948" name="Left Sidestep" min_level="68"/>
 			<!-- Level 70 -->
 			<skill id="30500" level="12" cost="1222" name="Lateral Hit" min_level="70"/>
 			<skill id="30501" level="11" cost="1222" name="Backspin Blow" min_level="70"/>
@@ -25198,11 +25198,11 @@
 			<skill id="30500" level="13" cost="1996" name="Lateral Hit" min_level="74"/>
 			<skill id="30501" level="12" cost="1996" name="Backspin Blow" min_level="74"/>
 			<skill id="30508" level="12" cost="1996" name="Right Sidestep" min_level="74"/>
-		</class>	
+		</class>
 		<class id="186">
 			<!-- Level 76 Ertheia Ripper -->
 			<skill id="1405" level="3" cost="3000" name="Divine Inspiration" min_level="76"/>
-			<skill id="1405" level="3" cost="3000" name="Divine Inspiration" min_level="76"/>	
+			<skill id="1405" level="3" cost="3000" name="Divine Inspiration" min_level="76"/>
 			<skill id="30504" level="1" cost="3000" name="Gravity Hit" min_level="76"/>
 			<skill id="30530" level="1" cost="3000" name="Crushing Air" min_level="76"/>
 			<skill id="30542" level="3" cost="3000" name="Eminent Stability" min_level="76"/>
@@ -25214,17 +25214,17 @@
 			<skill id="30512" level="1" cost="3000" name="Distortion" min_level="76"/>
 			<skill id="30526" level="1" cost="3000" name="Heavy Punch" min_level="76"/>
 			<skill id="30502" level="10" cost="3000" name="Chin Strike" min_level="76"/>
-			<skill id="30507" level="10" cost="3000" name="Left Sidestep" min_level="76"/>	
+			<skill id="30507" level="10" cost="3000" name="Left Sidestep" min_level="76"/>
 			<skill id="30509" level="1" cost="3000" name="Back Step" min_level="76"/>
 			<!-- Level 77 -->
 			<skill id="30500" level="14" cost="4500" name="Lateral Hit" min_level="77"/>
 			<skill id="30501" level="13" cost="4500" name="Backspin Blow" min_level="77"/>
-			<skill id="30508" level="13" cost="4500" name="Right Sidestep" min_level="77"/>			
+			<skill id="30508" level="13" cost="4500" name="Right Sidestep" min_level="77"/>
 			<!-- Level 78 -->
 			<skill id="30504" level="2" cost="6000" name="Gravity Hit" min_level="78"/>
-			<skill id="30530" level="2" cost="6000" name="Crushing Air" min_level="78"/>	
+			<skill id="30530" level="2" cost="6000" name="Crushing Air" min_level="78"/>
 			<skill id="30502" level="11" cost="6000" name="Chin Strike" min_level="78"/>
-			<skill id="30507" level="11" cost="6000" name="Left Sidestep" min_level="78"/>	
+			<skill id="30507" level="11" cost="6000" name="Left Sidestep" min_level="78"/>
 			<!-- Level 79 -->
 			<skill id="30500" level="15" cost="7500" name="Lateral Hit" min_level="79"/>
 			<skill id="30506" level="1" cost="7500" name="Distant Kick" min_level="79"/>
@@ -25234,48 +25234,48 @@
 			<skill id="30504" level="3" cost="9000" name="Gravity Hit" min_level="80"/>
 			<skill id="30530" level="3" cost="9000" name="Crushing Air" min_level="80"/>
 			<skill id="30540" level="7" cost="9000" name="Eminent Fist Weapon Mastery" min_level="80"/>
-			<skill id="30541" level="7" cost="9000" name="Eminent Light Armor Mastery" min_level="80"/>			
+			<skill id="30541" level="7" cost="9000" name="Eminent Light Armor Mastery" min_level="80"/>
 			<skill id="30502" level="12" cost="9000" name="Chin Strike" min_level="80"/>
-			<skill id="30507" level="12" cost="9000" name="Left Sidestep" min_level="80"/>			
+			<skill id="30507" level="12" cost="9000" name="Left Sidestep" min_level="80"/>
 			<!-- Level 81 -->
 			<skill id="30500" level="16" cost="10500" name="Lateral Hit" min_level="81"/>
 			<skill id="30506" level="2" cost="10500" name="Distant Kick" min_level="81"/>
 			<skill id="30501" level="15" cost="10500" name="Backspin Blow" min_level="81"/>
-			<skill id="30508" level="15" cost="10500" name="Right Sidestep" min_level="81"/>	
+			<skill id="30508" level="15" cost="10500" name="Right Sidestep" min_level="81"/>
 			<!-- Level 82 -->
 			<skill id="30504" level="4" cost="12000" name="Gravity Hit" min_level="82"/>
-			<skill id="30530" level="4" cost="12000" name="Crushing Air" min_level="82"/>	
+			<skill id="30530" level="4" cost="12000" name="Crushing Air" min_level="82"/>
 			<skill id="30502" level="13" cost="12000" name="Chin Strike" min_level="82"/>
-			<skill id="30507" level="13" cost="12000" name="Left Sidestep" min_level="82"/>	
+			<skill id="30507" level="13" cost="12000" name="Left Sidestep" min_level="82"/>
 			<!-- Level 83 -->
 			<skill id="30500" level="17" cost="13125" name="Lateral Hit" min_level="83"/>
 			<skill id="30506" level="3" cost="13125" name="Distant Kick" min_level="83"/>
 			<skill id="30501" level="16" cost="13125" name="Backspin Blow" min_level="83"/>
-			<skill id="30508" level="16" cost="13125" name="Right Sidestep" min_level="83"/>	
+			<skill id="30508" level="16" cost="13125" name="Right Sidestep" min_level="83"/>
 			<!-- Level 84 -->
 			<skill id="30504" level="5" cost="14250" name="Gravity Hit" min_level="84"/>
-			<skill id="30530" level="5" cost="14250" name="Crushing Air" min_level="84"/>	
+			<skill id="30530" level="5" cost="14250" name="Crushing Air" min_level="84"/>
 			<skill id="30502" level="14" cost="14250" name="Chin Strike" min_level="84"/>
 			<skill id="30507" level="14" cost="14250" name="Left Sidestep" min_level="84"/>
-		</class>	
+		</class>
 		<class id="188">
 			<!-- Level 85 Ertheia Eviscerator -->
 			<skill id="30602" level="1" name="Eviscerator Aura" min_level="85"/>
 			<skill id="30500" level="18" cost="15000" name="Lateral Hit" min_level="85"/>
-			<skill id="30400" level="2" name="Divine Wind" min_level="85"/>			
+			<skill id="30400" level="2" name="Divine Wind" min_level="85"/>
 			<skill id="30504" level="6" cost="15000" name="Gravity Hit" min_level="85"/>
-			<skill id="30511" level="2" cost="15000" name="Air Light" min_level="85"/>	
+			<skill id="30511" level="2" cost="15000" name="Air Light" min_level="85"/>
 			<skill id="1986" level="1" cost="15000" name="Dual Maximum HP" min_level="85"/>
 			<skill id="30600" level="1" name="Additional Hit" min_level="85"/>
 			<skill id="30601" level="1" name="Additional Hit" min_level="85"/>
 			<skill id="30518" level="1" cost="15000" name="Reverse Weight" min_level="85"/>
-			<skill id="30401" level="2" name="Tenacity" min_level="2"/>			
-			<skill id="30514" level="2" cost="15000" name="Fluid Weave" min_level="85"/>	
+			<skill id="30401" level="2" name="Tenacity" min_level="2"/>
+			<skill id="30514" level="2" cost="15000" name="Fluid Weave" min_level="85"/>
 			<skill id="30542" level="4" cost="15000" name="Eminent Stability" min_level="85"/>
 			<skill id="30540" level="8" cost="15000" name="Eminent Fist Weapon Mastery" min_level="85"/>
 			<skill id="30541" level="8" cost="15000" name="Eminent Light Armor Mastery" min_level="85"/>
 			<skill id="30544" level="2" cost="15000" name="Eminent Trait Resistance" min_level="85"/>
-			<skill id="30543" level="2" cost="15000" name="Eminent Attribute Resistance" min_level="85"/>	
+			<skill id="30543" level="2" cost="15000" name="Eminent Attribute Resistance" min_level="85"/>
 			<skill id="30545" level="3" cost="15000" name="Eminent Ability" min_level="85"/>
 			<skill id="30520" level="1" cost="15000" name="Steel Mind" min_level="85"/>
 			<skill id="1320" level="10" name="Create Common Craft" min_level="85"/>
@@ -25287,12 +25287,12 @@
 			<skill id="30402" level="2" name="Efficacy" min_level="85"/>
 			<!-- Level 86 -->
 			<skill id="30530" level="6" cost="75000" name="Crushing Air" min_level="86"/>
-			<skill id="30518" level="2" cost="75000" name="Reverse Weight" min_level="86"/>	
-			<skill id="30503" level="2" cost="75000" name="Spinning Kick" min_level="86"/>			
+			<skill id="30518" level="2" cost="75000" name="Reverse Weight" min_level="86"/>
+			<skill id="30503" level="2" cost="75000" name="Spinning Kick" min_level="86"/>
 			<skill id="30502" level="15" cost="75000" name="Chin Strike" min_level="86"/>
-			<skill id="30507" level="15" cost="75000" name="Left Sidestep" min_level="86"/>	
+			<skill id="30507" level="15" cost="75000" name="Left Sidestep" min_level="86"/>
 			<!-- Level 87 -->
-			<skill id="30500" level="19" cost="90000" name="Lateral Hit" min_level="87"/>			
+			<skill id="30500" level="19" cost="90000" name="Lateral Hit" min_level="87"/>
 			<skill id="30504" level="7" cost="90000" name="Gravity Hit" min_level="87"/>
 			<skill id="30505" level="1" cost="90000" name="Pressure Punch" min_level="87"/>
 			<skill id="30506" level="5" cost="90000" name="Distant Kick" min_level="87"/>
@@ -25301,45 +25301,45 @@
 			<skill id="30508" level="18" cost="90000" name="Right Sidestep" min_level="87"/>
 			<!-- Level 88 -->
 			<skill id="30530" level="7" cost="120000" name="Crushing Air" min_level="88"/>
-			<skill id="30518" level="3" cost="120000" name="Reverse Weight" min_level="88"/>	
-			<skill id="30503" level="3" cost="120000" name="Spinning Kick" min_level="88"/>			
+			<skill id="30518" level="3" cost="120000" name="Reverse Weight" min_level="88"/>
+			<skill id="30503" level="3" cost="120000" name="Spinning Kick" min_level="88"/>
 			<skill id="30502" level="16" cost="120000" name="Chin Strike" min_level="88"/>
 			<skill id="30507" level="16" cost="120000" name="Left Sidestep" min_level="88"/>
 			<!-- Level 89 -->
-			<skill id="30500" level="20" cost="150000" name="Lateral Hit" min_level="89"/>			
+			<skill id="30500" level="20" cost="150000" name="Lateral Hit" min_level="89"/>
 			<skill id="30504" level="8" cost="150000" name="Gravity Hit" min_level="89"/>
 			<skill id="30505" level="2" cost="150000" name="Pressure Punch" min_level="89"/>
 			<skill id="30506" level="6" cost="150000" name="Distant Kick" min_level="89"/>
 			<skill id="30501" level="19" cost="150000" name="Backspin Blow" min_level="89"/>
 			<skill id="30517" level="3" cost="150000" name="Heavy Hand" min_level="89"/>
-			<skill id="30508" level="19" cost="150000" name="Right Sidestep" min_level="89"/>	
-			<skill id="30509" level="2" cost="150000" name="Back Step" min_level="89"/>			
+			<skill id="30508" level="19" cost="150000" name="Right Sidestep" min_level="89"/>
+			<skill id="30509" level="2" cost="150000" name="Back Step" min_level="89"/>
 			<!-- Level 90 -->
 			<skill id="1986" level="2" cost="555000" name="Dual Maximum HP" min_level="90"/>
 			<skill id="30530" level="8" cost="555000" name="Crushing Air" min_level="90"/>
-			<skill id="30518" level="4" cost="555000" name="Reverse Weight" min_level="90"/>			
+			<skill id="30518" level="4" cost="555000" name="Reverse Weight" min_level="90"/>
 			<skill id="30542" level="5" cost="555000" name="Eminent Stability" min_level="90"/>
 			<skill id="30540" level="9" cost="555000" name="Eminent Fist Weapon Mastery" min_level="90"/>
 			<skill id="30541" level="9" cost="555000" name="Eminent Light Armor Mastery" min_level="90"/>
-			<skill id="30503" level="4" cost="555000" name="Spinning Kick" min_level="90"/>			
+			<skill id="30503" level="4" cost="555000" name="Spinning Kick" min_level="90"/>
 			<skill id="30502" level="17" cost="555000" name="Chin Strike" min_level="90"/>
 			<skill id="30507" level="17" cost="555000" name="Left Sidestep" min_level="90"/>
 			<!-- Level 91 -->
-			<skill id="30500" level="21" cost="600000" name="Lateral Hit" min_level="91"/>			
+			<skill id="30500" level="21" cost="600000" name="Lateral Hit" min_level="91"/>
 			<skill id="30504" level="9" cost="600000" name="Gravity Hit" min_level="91"/>
 			<skill id="30505" level="3" cost="600000" name="Pressure Punch" min_level="91"/>
 			<skill id="30506" level="7" cost="600000" name="Distant Kick" min_level="91"/>
 			<skill id="30501" level="20" cost="600000" name="Backspin Blow" min_level="91"/>
 			<skill id="30517" level="4" cost="600000" name="Heavy Hand" min_level="91"/>
-			<skill id="30508" level="20" cost="600000" name="Right Sidestep" min_level="91"/>	
+			<skill id="30508" level="20" cost="600000" name="Right Sidestep" min_level="91"/>
 			<!-- Level 92 -->
 			<skill id="30530" level="9" cost="630000" name="Crushing Air" min_level="92"/>
-			<skill id="30518" level="5" cost="630000" name="Reverse Weight" min_level="92"/>	
-			<skill id="30503" level="5" cost="630000" name="Spinning Kick" min_level="92"/>			
+			<skill id="30518" level="5" cost="630000" name="Reverse Weight" min_level="92"/>
+			<skill id="30503" level="5" cost="630000" name="Spinning Kick" min_level="92"/>
 			<skill id="30502" level="18" cost="630000" name="Chin Strike" min_level="92"/>
-			<skill id="30507" level="18" cost="630000" name="Left Sidestep" min_level="92"/>	
+			<skill id="30507" level="18" cost="630000" name="Left Sidestep" min_level="92"/>
 			<!-- Level 93 -->
-			<skill id="30500" level="22" cost="660000" name="Lateral Hit" min_level="93"/>			
+			<skill id="30500" level="22" cost="660000" name="Lateral Hit" min_level="93"/>
 			<skill id="30504" level="10" cost="660000" name="Gravity Hit" min_level="93"/>
 			<skill id="30516" level="1" cost="660000" name="Gravity Barrier" min_level="93"/>
 			<skill id="30505" level="4" cost="660000" name="Pressure Punch" min_level="93"/>
@@ -25349,69 +25349,341 @@
 			<skill id="30508" level="21" cost="660000" name="Right Sidestep" min_level="93"/>
 			<!-- Level 94 -->
 			<skill id="30530" level="10" cost="720000" name="Crushing Air" min_level="94"/>
-			<skill id="30518" level="6" cost="720000" name="Reverse Weight" min_level="94"/>	
-			<skill id="30503" level="6" cost="720000" name="Spinning Kick" min_level="94"/>			
+			<skill id="30518" level="6" cost="720000" name="Reverse Weight" min_level="94"/>
+			<skill id="30503" level="6" cost="720000" name="Spinning Kick" min_level="94"/>
 			<skill id="30502" level="19" cost="720000" name="Chin Strike" min_level="94"/>
-			<skill id="30507" level="19" cost="720000" name="Left Sidestep" min_level="94"/>	
+			<skill id="30507" level="19" cost="720000" name="Left Sidestep" min_level="94"/>
 			<!-- Level 95 -->
-			<skill id="30500" level="23" cost="1500000" name="Lateral Hit" min_level="95"/>			
+			<skill id="30500" level="23" cost="1500000" name="Lateral Hit" min_level="95"/>
 			<skill id="30504" level="11" cost="1500000" name="Gravity Hit" min_level="95"/>
-			<skill id="30511" level="3" cost="1500000" name="Air Light" min_level="95"/>		
-			<skill id="30505" level="5" cost="1500000" name="Pressure Punch" min_level="95"/>			
-			<skill id="1986" level="3" cost="1500000" name="Dual Maximum HP" min_level="95"/>			
+			<skill id="30511" level="3" cost="1500000" name="Air Light" min_level="95"/>
+			<skill id="30505" level="5" cost="1500000" name="Pressure Punch" min_level="95"/>
+			<skill id="1986" level="3" cost="1500000" name="Dual Maximum HP" min_level="95"/>
 			<skill id="30542" level="6" cost="1500000" name="Eminent Stability" min_level="95"/>
 			<skill id="30540" level="10" cost="1500000" name="Eminent Fist Weapon Mastery" min_level="95"/>
-			<skill id="30541" level="10" cost="1500000" name="Eminent Light Armor Mastery" min_level="95"/>			
+			<skill id="30541" level="10" cost="1500000" name="Eminent Light Armor Mastery" min_level="95"/>
 			<skill id="30506" level="9" cost="1500000" name="Distant Kick" min_level="95"/>
 			<skill id="30501" level="22" cost="1500000" name="Backspin Blow" min_level="95"/>
 			<skill id="30517" level="6" cost="1500000" name="Heavy Hand" min_level="95"/>
-			<skill id="30508" level="22" cost="1500000" name="Right Sidestep" min_level="95"/>			
+			<skill id="30508" level="22" cost="1500000" name="Right Sidestep" min_level="95"/>
 			<!-- Level 96 -->
 			<skill id="30530" level="11" cost="7455000" name="Crushing Air" min_level="96"/>
-			<skill id="30518" level="7" cost="7455000" name="Reverse Weight" min_level="96"/>	
-			<skill id="30503" level="7" cost="7455000" name="Spinning Kick" min_level="96"/>			
+			<skill id="30518" level="7" cost="7455000" name="Reverse Weight" min_level="96"/>
+			<skill id="30503" level="7" cost="7455000" name="Spinning Kick" min_level="96"/>
 			<skill id="30502" level="20" cost="7455000" name="Chin Strike" min_level="96"/>
-			<skill id="30507" level="20" cost="7455000" name="Left Sidestep" min_level="96"/>	
+			<skill id="30507" level="20" cost="7455000" name="Left Sidestep" min_level="96"/>
 			<!-- Level 97 -->
-			<skill id="30500" level="24" cost="7470000" name="Lateral Hit" min_level="97"/>			
+			<skill id="30500" level="24" cost="7470000" name="Lateral Hit" min_level="97"/>
 			<skill id="30504" level="12" cost="7470000" name="Gravity Hit" min_level="97"/>
 			<skill id="30505" level="6" cost="7470000" name="Pressure Punch" min_level="97"/>
 			<skill id="30506" level="10" cost="7470000" name="Distant Kick" min_level="97"/>
 			<skill id="30501" level="23" cost="7470000" name="Backspin Blow" min_level="97"/>
 			<skill id="30517" level="7" cost="7470000" name="Heavy Hand" min_level="97"/>
-			<skill id="30508" level="23" cost="7470000" name="Right Sidestep" min_level="97"/>	
+			<skill id="30508" level="23" cost="7470000" name="Right Sidestep" min_level="97"/>
 			<!-- Level 98 -->
 			<skill id="30530" level="12" cost="7485000" name="Crushing Air" min_level="98"/>
 			<skill id="30519" level="1" cost="7485000" name="Warped Space" min_level="98"/>
-			<skill id="30518" level="8" cost="7485000" name="Reverse Weight" min_level="98"/>	
-			<skill id="30503" level="8" cost="7485000" name="Spinning Kick" min_level="98"/>			
+			<skill id="30518" level="8" cost="7485000" name="Reverse Weight" min_level="98"/>
+			<skill id="30503" level="8" cost="7485000" name="Spinning Kick" min_level="98"/>
 			<skill id="30502" level="21" cost="7485000" name="Chin Strike" min_level="98"/>
-			<skill id="30507" level="21" cost="7485000" name="Left Sidestep" min_level="98"/>			
+			<skill id="30507" level="21" cost="7485000" name="Left Sidestep" min_level="98"/>
 			<!-- Level 99 -->
 			<skill id="1405" level="5" cost="5000000" name="Divine Inspiration" min_level="99"/>
-			<skill id="1405" level="6" cost="5000000" name="Divine Inspiration" min_level="99"/>			
-			<skill id="30500" level="25" cost="7500000" name="Lateral Hit" min_level="99"/>			
-			<skill id="30504" level="13" cost="7500000" name="Gravity Hit" min_level="99"/>	
-			<skill id="30505" level="7" cost="7500000" name="Pressure Punch" min_level="99"/>			
-			<skill id="1986" level="4" cost="7500000" name="Dual Maximum HP" min_level="99"/>			
+			<skill id="1405" level="6" cost="5000000" name="Divine Inspiration" min_level="99"/>
+			<skill id="30500" level="25" cost="7500000" name="Lateral Hit" min_level="99"/>
+			<skill id="30504" level="13" cost="7500000" name="Gravity Hit" min_level="99"/>
+			<skill id="30505" level="7" cost="7500000" name="Pressure Punch" min_level="99"/>
+			<skill id="1986" level="4" cost="7500000" name="Dual Maximum HP" min_level="99"/>
 			<skill id="30542" level="7" cost="7500000" name="Eminent Stability" min_level="99"/>
 			<skill id="30540" level="11" cost="7500000" name="Eminent Fist Weapon Mastery" min_level="99"/>
-			<skill id="30541" level="11" cost="7500000" name="Eminent Light Armor Mastery" min_level="99"/>	
+			<skill id="30541" level="11" cost="7500000" name="Eminent Light Armor Mastery" min_level="99"/>
 			<skill id="30515" level="1" cost="7500000" name="Spallation" min_level="99"/>
-			<skill id="30520" level="2" cost="7500000" name="Steel Mind" min_level="99"/>			
+			<skill id="30520" level="2" cost="7500000" name="Steel Mind" min_level="99"/>
 			<skill id="30506" level="11" cost="7500000" name="Distant Kick" min_level="99"/>
 			<skill id="30501" level="24" cost="7500000" name="Backspin Blow" min_level="99"/>
 			<skill id="30517" level="8" cost="7500000" name="Heavy Hand" min_level="99"/>
 			<skill id="30508" level="24" cost="7500000" name="Right Sidestep" min_level="99"/>
 		</class>
 		<class id="183">
-			<!-- Ertheia Wizard -->
-			<skill id="194" level="1" name="Lucky" min_level="1"/>
-			<skill id="1322" level="1" name="Common Craft" min_level="1"/>
+			<!-- Ertheia Wizard Level 1 -->
+			<skill id="30001" level="1" name="Hydro Attack" min_level="1"/>
 			<skill id="30400" level="1" name="Divine Wind" min_level="1"/>
 			<skill id="30401" level="1" name="Tenacity" min_level="1"/>
 			<skill id="30402" level="1" name="Efficacy" min_level="1"/>
-			<skill id="30001" level="1" name="Hydro Attack" min_level="1"/>
+			<!-- Level 5 -->
+			<skill id="30040" level="1" name="Eminent Blunt Weapon Mastery" min_level="5"/>
+			<skill id="30041" level="1" name="Eminent Robe Mastery" min_level="5"/>
+			<!-- Level 20 -->
+			<skill id="30001" level="2" cost="6" name="Hydro Attack" min_level="20"/>
+			<skill id="30042" level="1" cost="6" name="Eminent Quick Recovery" min_level="20"/>
+			<skill id="30040" level="2" cost="6" name="Eminent Blunt Weapon Mastery" min_level="20"/>
+			<skill id="30041" level="2" cost="6" name="Eminent Robe Mastery" min_level="20"/>
+			<skill id="30008" level="1" cost="6" name="Wind Blend" min_level="20"/>
+			<!-- Level 28 -->
+			<skill id="30001" level="3" cost="14" name="Hydro Attack" min_level="28"/>
+			<!-- Level 36 -->
+			<skill id="30001" level="4" cost="30" name="Hydro Attack" min_level="36"/>
+		</class>
+		<class id="185">
+			<!-- Cloud Breaker Level 40 -->
+			<skill id="30004" level="1" cost="45" name="Hydro Strike" min_level="40"/>
+			<skill id="30017" level="1" cost="45" name="Squall" min_level="40"/>
+			<skill id="30012" level="1" cost="45" name="Air Rush" min_level="40"/>
+			<skill id="30016" level="1" cost="45" name="Eye of the Storm" min_level="40"/>
+			<skill id="30042" level="2" cost="45" name="Eminent Quick Recovery" min_level="40"/>
+			<skill id="30040" level="3" cost="45" name="Eminent Blunt Weapon Mastery" min_level="40"/>
+			<skill id="30041" level="3" cost="45" name="Eminent Robe Mastery" min_level="40"/>
+			<skill id="30045" level="1" cost="45" name="Eminent Ability" min_level="40"/>
+			<!-- Level 42 -->
+			<skill id="30001" level="5" cost="51" name="Hydro Attack" min_level="42"/>
+			<!-- Level 44 -->
+			<skill id="30004" level="2" cost="56" name="Hydro Strike" min_level="44"/>
+			<skill id="30012" level="2" cost="56" name="Air Rush" min_level="44"/>
+			<!-- Level 46 -->
+			<skill id="30001" level="6" cost="78" name="Hydro Attack" min_level="46"/>
+			<!-- Level 48 -->
+			<skill id="30004" level="3" cost="101" name="Hydro Strike" min_level="48"/>
+			<skill id="30012" level="3" cost="101" name="Air Rush" min_level="48"/>
+			<!-- Level 50 -->
+			<skill id="30001" level="7" cost="123" name="Hydro Attack" min_level="50"/>
+			<!-- Level 52 -->
+			<skill id="1405" level="1" cost="144" name="Divine Inspiration" min_level="52"/>
+			<skill id="30004" level="4" cost="101" name="Hydro Strike" min_level="52"/>
+			<skill id="30012" level="4" cost="101" name="Air Rush" min_level="52"/>
+			<skill id="30040" level="4" cost="101" name="Eminent Blunt Weapon Mastery" min_level="52"/>
+			<skill id="30041" level="4" cost="101" name="Eminent Robe Mastery" min_level="52"/>
+			<!-- Level 54 -->
+			<skill id="30001" level="8" cost="152" name="Hydro Attack" min_level="54"/>
+			<!-- Level 56 -->
+			<skill id="30004" level="5" cost="158" name="Hydro Strike" min_level="56"/>
+			<skill id="30012" level="5" cost="158" name="Air Rush" min_level="56"/>
+			<!-- Level 58 -->
+			<skill id="30004" level="6" cost="227" name="Hydro Strike" min_level="58"/>
+			<skill id="30012" level="6" cost="227" name="Air Rush" min_level="58"/>
+			<!-- Level 60 -->
+			<skill id="30001" level="9" cost="227" name="Hydro Attack" min_level="60"/>
+			<skill id="30003" level="1" cost="227" name="Hydro Flare" min_level="60"/>
+			<!-- Level 61 -->
+			<skill id="1405" level="2" cost="294" name="Divine Inspiration" min_level="61"/>
+			<!-- Level 62 -->
+			<skill id="30001" level="10" cost="301" name="Hydro Attack" min_level="62"/>
+			<skill id="30003" level="2" cost="301" name="Hydro Flare" min_level="62"/>
+			<!-- Level 64 -->
+			<skill id="30004" level="7" cost="315" name="Hydro Strike" min_level="64"/>
+			<skill id="30012" level="7" cost="315" name="Air Rush" min_level="64"/>
+			<skill id="30040" level="5" cost="315" name="Eminent Blunt Weapon Mastery" min_level="64"/>
+			<skill id="30041" level="5" cost="315" name="Eminent Robe Mastery" min_level="64"/>
+			<!-- Level 66 -->
+			<skill id="30001" level="11" cost="515" name="Hydro Attack" min_level="66"/>
+			<skill id="30003" level="3" cost="515" name="Hydro Flare" min_level="66"/>
+			<!-- Level 68 -->
+			<skill id="30004" level="8" cost="717" name="Hydro Strike" min_level="68"/>
+			<skill id="30012" level="8" cost="717" name="Air Rush" min_level="68"/>
+			<!-- Level 70 -->
+			<skill id="30001" level="12" cost="919" name="Hydro Attack" min_level="70"/>
+			<skill id="30003" level="4" cost="919" name="Hydro Flare" min_level="70"/>
+			<!-- Level 72 -->
+			<skill id="30004" level="9" cost="1122" name="Hydro Strike" min_level="72"/>
+			<skill id="30012" level="9" cost="1122" name="Air Rush" min_level="72"/>
+			<!-- Level 74 -->
+			<skill id="30001" level="13" cost="1686" name="Hydro Attack" min_level="74"/>
+			<skill id="30003" level="5" cost="1686" name="Hydro Flare" min_level="74"/>
+		</class>
+		<class id="187">
+			<!-- Stratomancer Level 76 -->
+			<skill id="1405" level="3" cost="2250" name="Divine Inspiration" min_level="76"/>
+			<skill id="1405" level="4" cost="2250" name="Divine Inspiration" min_level="76"/>
+			<skill id="30004" level="10" cost="2250" name="Hydro Strike" min_level="76"/>
+			<skill id="30014" level="1" cost="2250" name="Compelling Wind" min_level="76"/>
+			<skill id="30017" level="2" cost="2250" name="Squall" min_level="76"/>
+			<skill id="30012" level="10" cost="2250" name="Air Rush" min_level="76"/>
+			<skill id="30016" level="2" cost="2250" name="Eye of the Storm" min_level="76"/>
+			<skill id="30011" level="1" cost="2250" name="Threatening Wind" min_level="76"/>
+			<skill id="30042" level="3" cost="2250" name="Eminent Quick Recovery" min_level="76"/>
+			<skill id="30040" level="6" cost="2250" name="Eminent Blunt Weapon Mastery" min_level="76"/>
+			<skill id="30041" level="6" cost="2250" name="Eminent Robe Mastery" min_level="76"/>
+			<skill id="30044" level="1" cost="2250" name="Eminent Trait Resistance" min_level="76"/>
+			<skill id="30043" level="1" cost="2250" name="Eminent Attribute Resistance" min_level="76"/>
+			<skill id="30045" level="2" cost="2250" name="Eminent Ability" min_level="76"/>
+			<!-- Level 77 -->
+			<skill id="30001" level="14" cost="3000" name="Hydro Attack" min_level="77"/>
+			<skill id="30003" level="6" cost="3000" name="Hydro Flare" min_level="77"/>
+			<!-- Level 78 -->
+			<skill id="30004" level="11" cost="4500" name="Hydro Strike" min_level="78"/>
+			<skill id="30014" level="2" cost="4500" name="Compelling Wind" min_level="78"/>
+			<skill id="30012" level="11" cost="4500" name="Air Rush" min_level="78"/>
+			<skill id="30011" level="2" cost="4500" name="Threatening Wind" min_level="78"/>
+			<skill id="30007" level="1" cost="4500" name="Hydro Drain" min_level="78"/>
+			<!-- Level 79 -->
+			<skill id="30001" level="15" cost="6000" name="Hydro Attack" min_level="79"/>
+			<skill id="30003" level="7" cost="6000" name="Hydro Flare" min_level="79"/>
+			<!-- Level 80 -->
+			<skill id="30004" level="12" cost="7500" name="Hydro Strike" min_level="80"/>
+			<skill id="30014" level="3" cost="7500" name="Compelling Wind" min_level="80"/>
+			<skill id="30009" level="1" cost="7500" name="Deceptive Blink" min_level="80"/>
+			<skill id="30012" level="12" cost="7500" name="Air Rush" min_level="80"/>
+			<skill id="30011" level="3" cost="7500" name="Threatening Wind" min_level="80"/>
+			<skill id="30007" level="2" cost="7500" name="Hydro Drain" min_level="80"/>
+			<skill id="30040" level="7" cost="7500" name="Eminent Blunt Weapon Mastery" min_level="80"/>
+			<skill id="30041" level="7" cost="7500" name="Eminent Robe Mastery" min_level="80"/>
+			<!-- Level 81 -->
+			<skill id="30001" level="16" cost="8250" name="Hydro Attack" min_level="81"/>
+			<skill id="30003" level="8" cost="8250" name="Hydro Flare" min_level="81"/>
+			<!-- Level 82 -->
+			<skill id="30004" level="13" cost="9750" name="Hydro Strike" min_level="82"/>
+			<skill id="30014" level="4" cost="9750" name="Compelling Wind" min_level="82"/>
+			<skill id="30009" level="2" cost="9750" name="Deceptive Blink" min_level="82"/>
+			<skill id="30012" level="13" cost="9750" name="Air Rush" min_level="82"/>
+			<skill id="30011" level="4" cost="9750" name="Threatening Wind" min_level="82"/>
+			<skill id="30007" level="3" cost="9750" name="Hydro Drain" min_level="82"/>
+			<!-- Level 83 -->
+			<skill id="30001" level="17" cost="11250" name="Hydro Attack" min_level="83"/>
+			<skill id="30003" level="9" cost="11250" name="Hydro Flare" min_level="83"/>
+			<!-- Level 84 -->
+			<skill id="30004" level="14" cost="12750" name="Hydro Strike" min_level="84"/>
+			<skill id="30014" level="5" cost="12750" name="Compelling Wind" min_level="84"/>
+			<skill id="30009" level="3" cost="12750" name="Deceptive Blink" min_level="84"/>
+			<skill id="30012" level="14" cost="12750" name="Air Rush" min_level="84"/>
+			<skill id="30011" level="5" cost="12750" name="Threatening Wind" min_level="84"/>
+			<skill id="30007" level="4" cost="12750" name="Hydro Drain" min_level="84"/>
+		</class>
+		<class id="189">
+			<!-- Sayha's Seer Level 85 -->
+			<skill id="8905" level="1" name="Summon Sayha's Seer Fox" min_level="85"/>
+			<skill id="30605" level="1" name="Sayha's Seer Aura" min_level="85"/>
+			<skill id="30001" level="18" cost="15000" name="Hydro Attack" min_level="85"/>
+			<skill id="30004" level="15" cost="15000" name="Hydro Strike" min_level="85"/>
+			<skill id="30400" level="2" name="Divine Wind" min_level="85"/>
+			<skill id="1986" level="1" cost="15000" name="Dual Maximum HP" min_level="85"/>
+			<skill id="30017" level="3" cost="15000" name="Squall" min_level="85"/>
+			<skill id="30401" level="2" name="Tenacity" min_level="85"/>
+			<skill id="30003" level="10" cost="15000" name="Hydro Flare" min_level="85"/>
+			<skill id="30019" level="1" cost="15000" name="Sayha's Word" min_level="85"/>
+			<skill id="30012" level="15" cost="15000" name="Air Rush" min_level="85"/>
+			<skill id="30016" level="3" cost="15000" name="Eye of the Storm" min_level="85"/>
+			<skill id="30031" level="1" cost="15000" name="Magic Potential" min_level="85"/>
+			<skill id="30007" level="5" cost="15000" name="Hydro Drain" min_level="85"/>
+			<skill id="30042" level="4" cost="15000" name="Eminent Quick Recovery" min_level="85"/>
+			<skill id="30040" level="8" cost="15000" name="Eminent Blunt Weapon Mastery" min_level="85"/>
+			<skill id="30041" level="8" cost="15000" name="Eminent Robe Mastery" min_level="85"/>
+			<skill id="30044" level="2" cost="15000" name="Eminent Trait Resistance" min_level="85"/>
+			<skill id="30043" level="2" cost="15000" name="Eminent Attribute Resistance" min_level="85"/>
+			<skill id="30045" level="3" cost="15000" name="Eminent Ability" min_level="85"/>
+			<skill id="30008" level="2" cost="15000" name="Wind Blend" min_level="85"/>
+			<skill id="1320" level="10" name="Create Common Item" min_level="85"/>
+			<skill id="172" level="11" name="Create Item" min_level="85"/>
+			<skill id="30402" level="2" name="Efficacy" min_level="85"/>
+			<skill id="30020" level="1" cost="15000" name="Sayha's Fury" min_level="85"/>
+			<skill id="30006" level="1" cost="15000" name="Storm Rage" min_level="85"/>
+			<!-- Level 86 -->
+			<skill id="30014" level="6" cost="75000" name="Compelling Wind" min_level="86"/>
+			<skill id="30003" level="11" cost="75000" name="Hydro Flare" min_level="86"/>
+			<skill id="30009" level="4" cost="75000" name="Deceptive Blink" min_level="86"/>
+			<skill id="30011" level="6" cost="75000" name="Threatening Wind" min_level="86"/>
+			<skill id="30007" level="6" cost="75000" name="Hydro Drain" min_level="86"/>
+			<!-- Level 87 -->
+			<skill id="30001" level="19" cost="90000" name="Hydro Attack" min_level="87"/>
+			<skill id="30004" level="16" cost="90000" name="Hydro Strike" min_level="87"/>
+			<skill id="30019" level="2" cost="90000" name="Sayha's Word" min_level="87"/>
+			<skill id="30012" level="16" cost="90000" name="Air Rush" min_level="87"/>
+			<skill id="30006" level="2" cost="90000" name="Storm Rage" min_level="87"/>
+			<!-- Level 88 -->
+			<skill id="30014" level="7" cost="120000" name="Compelling Wind" min_level="88"/>
+			<skill id="30010" level="1" cost="120000" name="Windy Refuge" min_level="88"/>
+			<skill id="30003" level="12" cost="120000" name="Hydro Flare" min_level="88"/>
+			<skill id="30009" level="5" cost="120000" name="Deceptive Blink" min_level="88"/>
+			<skill id="30011" level="7" cost="120000" name="Threatening Wind" min_level="88"/>
+			<skill id="30007" level="7" cost="120000" name="Hydro Drain" min_level="88"/>
+			<!-- Level 89 -->
+			<skill id="30001" level="20" cost="150000" name="Hydro Attack" min_level="89"/>
+			<skill id="30004" level="17" cost="150000" name="Hydro Strike" min_level="89"/>
+			<skill id="30019" level="3" cost="150000" name="Sayha's Word" min_level="89"/>
+			<skill id="30012" level="17" cost="150000" name="Air Rush" min_level="89"/>
+			<skill id="30006" level="3" cost="150000" name="Storm Rage" min_level="89"/>
+			<!-- Level 90 -->
+			<skill id="1986" level="2" cost="555000" name="Dual Maximum HP" min_level="90"/>
+			<skill id="30014" level="8" cost="555000" name="Compelling Wind" min_level="90"/>
+			<skill id="30003" level="13" cost="555000" name="Hydro Flare" min_level="90"/>
+			<skill id="30009" level="6" cost="555000" name="Deceptive Blink" min_level="90"/>
+			<skill id="30011" level="8" cost="555000" name="Threatening Wind" min_level="90"/>
+			<skill id="30007" level="8" cost="555000" name="Hydro Drain" min_level="90"/>
+			<skill id="30042" level="5" cost="555000" name="Eminent Quick Recovery" min_level="90"/>
+			<skill id="30040" level="9" cost="555000" name="Eminent Blunt Weapon Mastery" min_level="90"/>
+			<skill id="30041" level="9" cost="555000" name="Eminent Robe Mastery" min_level="90"/>
+			<skill id="30008" level="3" cost="555000" name="Wind Blend" min_level="90"/>
+			<skill id="172" level="12" name="Create Item" min_level="90"/>
+			<!-- Level 91 -->
+			<skill id="30001" level="21" cost="600000" name="Hydro Attack" min_level="91"/>
+			<skill id="30004" level="18" cost="600000" name="Hydro Strike" min_level="91"/>
+			<skill id="30019" level="4" cost="600000" name="Sayha's Word" min_level="91"/>
+			<skill id="30012" level="18" cost="600000" name="Air Rush" min_level="91"/>
+			<skill id="30006" level="4" cost="600000" name="Storm Rage" min_level="91"/>
+			<!-- Level 92 -->
+			<skill id="30014" level="9" cost="630000" name="Compelling Wind" min_level="92"/>
+			<skill id="30003" level="14" cost="630000" name="Hydro Flare" min_level="92"/>
+			<skill id="30009" level="7" cost="630000" name="Deceptive Blink" min_level="92"/>
+			<skill id="30011" level="9" cost="630000" name="Threatening Wind" min_level="92"/>
+			<skill id="30007" level="9" cost="630000" name="Hydro Drain" min_level="92"/>
+			<!-- Level 93 -->
+			<skill id="30018" level="1" cost="660000" name="Windy Illusion" min_level="93"/>
+			<skill id="30001" level="22" cost="600000" name="Hydro Attack" min_level="93"/>
+			<skill id="30004" level="19" cost="600000" name="Hydro Strike" min_level="93"/>
+			<skill id="30019" level="5" cost="600000" name="Sayha's Word" min_level="93"/>
+			<skill id="30012" level="19" cost="600000" name="Air Rush" min_level="93"/>
+			<skill id="30006" level="5" cost="600000" name="Storm Rage" min_level="93"/>
+			<!-- Level 94 -->
+			<skill id="30014" level="10" cost="720000" name="Compelling Wind" min_level="94"/>
+			<skill id="30003" level="15" cost="720000" name="Hydro Flare" min_level="94"/>
+			<skill id="30009" level="8" cost="720000" name="Deceptive Blink" min_level="94"/>
+			<skill id="30011" level="10" cost="720000" name="Threatening Wind" min_level="94"/>
+			<skill id="30007" level="10" cost="720000" name="Hydro Drain" min_level="94"/>
+			<skill id="30008" level="4" cost="720000" name="Wind Blend" min_level="94"/>
+			<!-- Level 95 -->
+			<skill id="30001" level="23" cost="1500000" name="Hydro Attack" min_level="95"/>
+			<skill id="30004" level="20" cost="1500000" name="Hydro Strike" min_level="95"/>
+			<skill id="1986" level="3" cost="1500000" name="Dual Maximum HP" min_level="95"/>
+			<skill id="30019" level="6" cost="1500000" name="Sayha's Word" min_level="95"/>
+			<skill id="30012" level="20" cost="1500000" name="Air Rush" min_level="95"/>
+			<skill id="30042" level="6" cost="1500000" name="Eminent Quick Recovery" min_level="95"/>
+			<skill id="30040" level="10" cost="1500000" name="Eminent Blunt Weapon Mastery" min_level="95"/>
+			<skill id="30041" level="10" cost="1500000" name="Eminent Robe Mastery" min_level="95"/>
+			<skill id="172" level="13" name="Create Item" min_level="95"/>
+			<skill id="30006" level="6" cost="1500000" name="Storm Rage" min_level="95"/>
+			<!-- Level 96 -->
+			<skill id="30014" level="11" cost="7455000" name="Compelling Wind" min_level="96"/>
+			<skill id="30003" level="16" cost="7455000" name="Hydro Flare" min_level="96"/>
+			<skill id="30009" level="9" cost="7455000" name="Deceptive Blink" min_level="96"/>
+			<skill id="30011" level="11" cost="7455000" name="Threatening Wind" min_level="96"/>
+			<skill id="30007" level="11" cost="7455000" name="Hydro Drain" min_level="96"/>
+			<!-- Level 97 -->
+			<skill id="30001" level="24" cost="7470000" name="Hydro Attack" min_level="97"/>
+			<skill id="30004" level="21" cost="7470000" name="Hydro Strike" min_level="97"/>
+			<skill id="30019" level="7" cost="7470000" name="Sayha's Word" min_level="97"/>
+			<skill id="30012" level="21" cost="7470000" name="Air Rush" min_level="97"/>
+			<skill id="30006" level="7" cost="7470000" name="Storm Rage" min_level="97"/>
+			<!-- Level 98 -->
+			<skill id="30014" level="12" cost="7485000" name="Compelling Wind" min_level="98"/>
+			<skill id="30003" level="17" cost="7485000" name="Hydro Flare" min_level="98"/>
+			<skill id="30009" level="10" cost="7485000" name="Deceptive Blink" min_level="98"/>
+			<skill id="30011" level="12" cost="7485000" name="Threatening Wind" min_level="98"/>
+			<skill id="30007" level="12" cost="7485000" name="Hydro Drain" min_level="98"/>
+			<skill id="30029" level="1" cost="7485000" name="Divine Storm" min_level="98"/>
+			<skill id="30008" level="5" cost="7485000" name="Wind Blend" min_level="98"/>
+			<!-- Level 99 -->
+			<skill id="30022" level="1" cost="7500000" name="Sayha's Blessing" min_level="99"/>
+			<skill id="1405" level="5" cost="5000000" name="Divine Inspiration" min_level="99"/>
+			<skill id="1405" level="6" cost="5000000" name="Divine Inspiration" min_level="99"/>
+			<skill id="30001" level="25" cost="7500000" name="Hydro Attack" min_level="99"/>
+			<skill id="30004" level="22" cost="7500000" name="Hydro Strike" min_level="99"/>
+			<skill id="30013" level="1" cost="7500000" name="Switch Places" min_level="99"/>
+			<skill id="1986" level="4" cost="7500000" name="Dual Maximum HP" min_level="99"/>
+			<skill id="30019" level="8" cost="7500000" name="Sayha's Word" min_level="99"/>
+			<skill id="30012" level="22" cost="7500000" name="Air Rush" min_level="99"/>
+			<skill id="30042" level="7" cost="7500000" name="Eminent Quick Recovery" min_level="99"/>
+			<skill id="30040" level="11" cost="7500000" name="Eminent Blunt Weapon Mastery" min_level="99"/>
+			<skill id="30041" level="11" cost="7500000" name="Eminent Robe Mastery" min_level="99"/>
+			<skill id="172" level="14" name="Create Item" min_level="99"/>
+			<skill id="30006" level="8" cost="7500000" name="Storm Rage" min_level="99"/>
 		</class>
 	</normal_skill_tree>
 </list>

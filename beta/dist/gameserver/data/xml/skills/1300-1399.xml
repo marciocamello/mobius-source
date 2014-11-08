@@ -412,7 +412,7 @@
 		<set name="isCommon" val="true"/>
 	</skill>
 	<skill id="1320" levels="10" name="Create Common Item">
-		<table name="#magicLevel">5 20 28 36 43 49 55 62 70 85 </table>
+		<table name="#magicLevel">5 20 28 36 43 49 55 62 70 85</table>
 		<set name="icon" val="icon.skill0172"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="target" val="TARGET_SELF"/>

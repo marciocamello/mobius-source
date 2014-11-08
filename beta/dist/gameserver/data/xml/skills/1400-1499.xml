@@ -164,9 +164,9 @@
 		<set name="skillRadius" val="-2"/>
 		<set name="castRange" val="-2"/>
 	</skill>
-	<skill id="1405" levels="4" name="Divine Inspiration">
-		<table name="#add">1 2 3 4</table>
-		<table name="#magicLevel">52 61 76 76</table>
+	<skill id="1405" levels="6" name="Divine Inspiration">
+		<table name="#add">1 2 3 4 5 6</table>
+		<table name="#magicLevel">52 61 76 76 99 99</table>
 		<set name="icon" val="icon.skill1405"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="target" val="TARGET_SELF"/>
