@@ -12,35 +12,44 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
+import lineage2.gameserver.utils.Location;
 
-/**
- * sample 06 8f19904b 2522d04b 00000000 80 950c0000 4af50000 08f2ffff 0000 - 0 damage (missed 0x80) 06 85071048 bc0e504b 32000000 10 fc41ffff fd240200 a6f5ffff 0100 bc0e504b 33000000 10 3....
- * <p/>
- * format dddc dddh (ddc)
- */
 public class Attack extends L2GameServerPacket
 {
-	private static final int FLAG = 0x00; // Usual kick unprinted.
-	private static final int FLAG_MISS = 0x01; // Dodged the blow.
-	private static final int FLAG_CRIT = 0x04; // Crit.
-	private static final int FLAG_SHIELD = 0x06; // Block Crit.
-	private static final int FLAG_SOULSHOT = 0x08; // Beat with a pacifier.
+	private final int _attackerObjId;
+	private final boolean _soulshot;
+	private final int _ssGrade;
+	private final Location _attackerLoc;
+	private final Location _targetLoc;
+	private final List<Hit> _hits = new ArrayList<>();
+	
+	private static final int FLAG = 0x00; // No message.
+	private static final int FLAG_MISS = 0x01; // Dodged attack.
+	private static final int FLAG_CRIT = 0x04; // Critical hit.
+	private static final int FLAG_SHIELD = 0x06; // Blocked attack.
+	private static final int FLAG_SOULSHOT = 0x08; // SoulShot.
 	
 	private class Hit
 	{
-		int _targetId, _damage, _flags;
+		int _targetId, _damage, _ssGrade, _flags;
 		
-		Hit(GameObject target, int damage, boolean miss, boolean crit, boolean shld)
+		Hit(GameObject target, int damage, boolean miss, boolean crit, boolean shld, boolean soulshot, int ssGrade)
 		{
 			_targetId = target.getObjectId();
 			_damage = damage;
+			_ssGrade = ssGrade;
 			_flags = FLAG;
 			
 			if (miss)
 			{
 				_flags = FLAG_MISS;
+				_ssGrade = -1;
 			}
 			else if (shld)
 			{
@@ -51,41 +60,50 @@ public class Attack extends L2GameServerPacket
 				_flags = FLAG_CRIT;
 			}
 			
-			if (_soulshot)
+			if (soulshot)
 			{
 				_flags |= FLAG_SOULSHOT;
 			}
 		}
-	}
-	
-	private final int _attackerId;
-	public final boolean _soulshot;
-	private final int _grade;
-	private final int _x;
-	private final int _y;
-	private final int _z;
-	private final int _tx;
-	private final int _ty;
-	private final int _tz;
-	private Hit[] hits;
-	
-	public Attack(Creature attacker, Creature target, boolean ss, int grade)
-	{
-		_attackerId = attacker.getObjectId();
-		_soulshot = ss;
-		_grade = grade;
-		_x = attacker.getX();
-		_y = attacker.getY();
-		_z = attacker.getZ();
-		_tx = target.getX();
-		_ty = target.getY();
-		_tz = target.getZ();
-		hits = new Hit[0];
+		
+		public int getTargetId()
+		{
+			return _targetId;
+		}
+		
+		public int getDamage()
+		{
+			return _damage;
+		}
+		
+		public int getFlags()
+		{
+			return _flags;
+		}
+		
+		public int getSSGrade()
+		{
+			return _ssGrade;
+		}
 	}
 	
 	/**
-	 * Add this hit (target, damage, miss, critical, shield) to the Server-Client packet Attack.<BR>
-	 * <BR>
+	 * @param attacker
+	 * @param target
+	 * @param useShots
+	 * @param ssGrade
+	 */
+	public Attack(Creature attacker, Creature target, boolean useShots, int ssGrade)
+	{
+		_attackerObjId = attacker.getObjectId();
+		_soulshot = useShots;
+		_ssGrade = ssGrade;
+		_attackerLoc = attacker.getLoc();
+		_targetLoc = target.getLoc();
+	}
+	
+	/**
+	 * Adds hit to the attack (Attacks such as dual dagger/sword/fist has two hits)
 	 * @param target
 	 * @param damage
 	 * @param miss
@@ -94,51 +112,62 @@ public class Attack extends L2GameServerPacket
 	 */
 	public void addHit(GameObject target, int damage, boolean miss, boolean crit, boolean shld)
 	{
-		// Get the last position in the hits table
-		int pos = hits.length;
-		// Create a new Hit object
-		Hit[] tmp = new Hit[pos + 1];
-		// Add the new Hit object to hits table
-		System.arraycopy(hits, 0, tmp, 0, hits.length);
-		tmp[pos] = new Hit(target, damage, miss, crit, shld);
-		hits = tmp;
+		_hits.add(new Hit(target, damage, miss, crit, shld, _soulshot, _ssGrade));
 	}
 	
 	/**
-	 * Return True if the Server-Client packet Attack conatins at least 1 hit.<BR>
-	 * <BR>
-	 * @return
+	 * @return {@code true} if current attack contains at least 1 hit.
 	 */
 	public boolean hasHits()
 	{
-		return hits.length > 0;
+		return !_hits.isEmpty();
+	}
+	
+	/**
+	 * @return {@code true} if attack has soul shot charged.
+	 */
+	public boolean hasSoulshot()
+	{
+		return _soulshot;
+	}
+	
+	/**
+	 * Writes current hit
+	 * @param hit
+	 */
+	private void writeHit(Hit hit)
+	{
+		writeD(hit.getTargetId());
+		writeD(hit.getDamage());
+		writeD(hit.getFlags());
+		writeD(hit.getSSGrade());
+	}
+	
+	private void writeHits(Hit hit)
+	{
+		writeD(hit.getTargetId());
+		writeD(0);
+		writeD(hit.getDamage());
+		writeD(hit.getFlags());
+		writeD(hit.getSSGrade());
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
+		final Iterator<Hit> it = _hits.iterator();
 		writeC(0x33);
-		writeD(_attackerId);
-		writeD(hits[0]._targetId);
-		writeC(0x00);
-		writeD(hits[0]._damage);
-		writeD(hits[0]._flags);
-		writeD(_grade);
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
-		writeH(hits.length - 1);
 		
-		for (int i = 1; i < hits.length; i++)
+		writeD(_attackerObjId);
+		writeHits(it.next());
+		writeLoc(_attackerLoc);
+		
+		writeH(_hits.size() - 1);
+		while (it.hasNext())
 		{
-			writeD(hits[i]._targetId);
-			writeD(hits[i]._damage);
-			writeD(hits[i]._flags);
-			writeD(_grade);
+			writeHit(it.next());
 		}
 		
-		writeD(_tx);
-		writeD(_ty);
-		writeD(_tz);
+		writeLoc(_targetLoc);
 	}
 }

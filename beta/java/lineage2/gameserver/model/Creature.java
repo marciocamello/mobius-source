@@ -1805,14 +1805,14 @@ public abstract class Creature extends GameObject
 		
 		if (!miss1)
 		{
-			AttackInfo info = Formulas.calcPhysDam(this, target, null, false, false, attack._soulshot, false);
+			AttackInfo info = Formulas.calcPhysDam(this, target, null, false, false, attack.hasSoulshot(), false);
 			damage1 = (int) (info.damage * multiplier);
 			reflectableDamage1 = (int) (info.reflectableDamage * multiplier);
 			shld1 = info.shld;
 			crit1 = info.crit;
 		}
 		
-		ThreadPoolManager.getInstance().schedule(new HitTask(this, target, damage1, reflectableDamage1, crit1, miss1, attack._soulshot, shld1, unchargeSS, notify), sAtk);
+		ThreadPoolManager.getInstance().schedule(new HitTask(this, target, damage1, reflectableDamage1, crit1, miss1, attack.hasSoulshot(), shld1, unchargeSS, notify), sAtk);
 		attack.addHit(target, damage1, miss1, crit1, shld1);
 	}
 	
@@ -1839,7 +1839,7 @@ public abstract class Creature extends GameObject
 		
 		if (!miss1)
 		{
-			AttackInfo info = Formulas.calcPhysDam(this, target, null, false, false, attack._soulshot, false);
+			AttackInfo info = Formulas.calcPhysDam(this, target, null, false, false, attack.hasSoulshot(), false);
 			damage1 = (int) info.damage;
 			damage2 = (int) info.reflectableDamage;
 			shld1 = info.shld;
@@ -1848,7 +1848,7 @@ public abstract class Creature extends GameObject
 			damage1 *= ((Math.min(range, getDistance(target)) / range) * .4) + 0.8;
 		}
 		
-		ThreadPoolManager.getInstance().schedule(new HitTask(this, target, damage1, damage2, crit1, miss1, attack._soulshot, shld1, true, true), sAtk);
+		ThreadPoolManager.getInstance().schedule(new HitTask(this, target, damage1, damage2, crit1, miss1, attack.hasSoulshot(), shld1, true, true), sAtk);
 		attack.addHit(target, damage2, miss1, crit1, shld1);
 	}
 	
@@ -1872,7 +1872,7 @@ public abstract class Creature extends GameObject
 		
 		if (!miss1)
 		{
-			AttackInfo info = Formulas.calcPhysDam(this, target, null, true, false, attack._soulshot, false);
+			AttackInfo info = Formulas.calcPhysDam(this, target, null, true, false, attack.hasSoulshot(), false);
 			damage1 = (int) info.damage;
 			reflectableDamage1 = (int) info.reflectableDamage;
 			shld1 = info.shld;
@@ -1881,15 +1881,15 @@ public abstract class Creature extends GameObject
 		
 		if (!miss2)
 		{
-			AttackInfo info = Formulas.calcPhysDam(this, target, null, true, false, attack._soulshot, false);
+			AttackInfo info = Formulas.calcPhysDam(this, target, null, true, false, attack.hasSoulshot(), false);
 			damage2 = (int) info.damage;
 			reflectableDamage2 = (int) info.reflectableDamage;
 			shld2 = info.shld;
 			crit2 = info.crit;
 		}
 		
-		ThreadPoolManager.getInstance().schedule(new HitTask(this, target, damage1, reflectableDamage1, crit1, miss1, attack._soulshot, shld1, true, false), sAtk / 2);
-		ThreadPoolManager.getInstance().schedule(new HitTask(this, target, damage2, reflectableDamage2, crit2, miss2, attack._soulshot, shld2, false, true), sAtk);
+		ThreadPoolManager.getInstance().schedule(new HitTask(this, target, damage1, reflectableDamage1, crit1, miss1, attack.hasSoulshot(), shld1, true, false), sAtk / 2);
+		ThreadPoolManager.getInstance().schedule(new HitTask(this, target, damage2, reflectableDamage2, crit2, miss2, attack.hasSoulshot(), shld2, false, true), sAtk);
 		attack.addHit(target, damage1, miss1, crit1, shld1);
 		attack.addHit(target, damage2, miss2, crit2, shld2);
 	}

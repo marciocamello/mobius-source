@@ -20,6 +20,7 @@ import lineage2.gameserver.model.base.MultiSellIngredient;
 import lineage2.gameserver.network.GameClient;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 import lineage2.gameserver.templates.item.ItemTemplate;
+import lineage2.gameserver.utils.Location;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -144,6 +145,17 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 		writeH(0x00);
 		writeH(0x00);
 		writeH(0x00);
+	}
+	
+	/**
+	 * Writes 3 D (int32) with current location x, y, z
+	 * @param loc
+	 */
+	protected void writeLoc(Location loc)
+	{
+		writeD(loc.getX());
+		writeD(loc.getY());
+		writeD(loc.getZ());
 	}
 	
 	public String getType()
