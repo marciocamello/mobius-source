@@ -1210,11 +1210,14 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 			return;
 		}
 		
-		int size = buf.remaining();
-		_log.warn("Unknown Packet: 0x" + Integer.toHexString(opcode) + " on State: " + state.name() + " Client: " + client.toString());
-		byte[] array = new byte[size];
+		final int size = buf.remaining();
+		final byte[] array = new byte[size];
 		buf.get(array);
-		_log.warn(Util.printData(array, size));
+		_log.warn("Unknown Packet: 0x" + Integer.toHexString(opcode) + " on State: " + state.name() + " Client: " + client.toString());
+		if (size > 0)
+		{
+			_log.warn(Util.printData(array, size));
+		}
 	}
 	
 	private void printDebugDoubleOpcode(int opcode, int id2, ByteBuffer buf, GameClientState state, GameClient client)
@@ -1225,11 +1228,14 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 			return;
 		}
 		
-		int size = buf.remaining();
-		_log.warn("Unknown Packet: 0x" + Integer.toHexString(opcode) + ":0x" + Integer.toHexString(id2) + " on State: " + state.name() + " Client: " + client.toString());
-		byte[] array = new byte[size];
+		final int size = buf.remaining();
+		final byte[] array = new byte[size];
 		buf.get(array);
-		_log.warn(Util.printData(array, size));
+		_log.warn("Unknown Packet: 0x" + Integer.toHexString(opcode) + ":0x" + Integer.toHexString(id2) + " on State: " + state.name() + " Client: " + client.toString());
+		if (size > 0)
+		{
+			_log.warn(Util.printData(array, size));
+		}
 	}
 	
 	@Override
