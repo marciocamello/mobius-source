@@ -52,26 +52,16 @@ public class FriendList extends L2GameServerPacket
 		writeC(0x75);
 		writeD(_friends.size());
 		
-		for (FriendInfo f : _friends)
+		for (FriendInfo friendInfo : _friends)
 		{
-			writeD(0x00);
-			writeS(f.name);
-			writeD(f.online);
 			
-			if (f.online)
-			{
-				writeD(f.objectId);
-				writeD(f.level);
-				writeD(f.classId);
-			}
-			else
-			{
-				writeD(0);
-				writeD(f.classId);
-				writeD(f.level);
-			}
-			
-			writeS(f.name);
+			writeD(0);
+			writeS(friendInfo.name); // name
+			writeD(friendInfo.online ? 1 : 0); // online or offline
+			writeD(friendInfo.objectId); // object_id
+			writeD(friendInfo.level); // 603
+			writeD(friendInfo.classId); // 603
+			writeS(""); // 603
 		}
 	}
 	

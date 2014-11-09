@@ -19,6 +19,8 @@ import lineage2.gameserver.network.serverpackets.ExPledgeCrestLarge;
 public class RequestPledgeCrestLarge extends L2GameClientPacket
 {
 	private int _crestId;
+	@SuppressWarnings("unused")
+	private int _unk;
 	
 	/**
 	 * Method readImpl.
@@ -27,6 +29,7 @@ public class RequestPledgeCrestLarge extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_crestId = readD();
+		_unk = readD();
 	}
 	
 	/**
@@ -48,7 +51,7 @@ public class RequestPledgeCrestLarge extends L2GameClientPacket
 		}
 		
 		byte[] data = CrestCache.getInstance().getPledgeCrestLarge(_crestId);
-		
+		int clanId = activeChar.getClanId();
 		if (data != null)
 		{
 			for (int i = 0; i <= 4; i++)
@@ -59,13 +62,13 @@ public class RequestPledgeCrestLarge extends L2GameClientPacket
 				if (i < 4)
 				{
 					System.arraycopy(data, (14336 * i), dest1, 0, 14336);
-					ExPledgeCrestLarge pcl = new ExPledgeCrestLarge(_crestId, dest1, i);
+					ExPledgeCrestLarge pcl = new ExPledgeCrestLarge(clanId, _crestId, dest1, i);
 					sendPacket(pcl);
 				}
 				else
 				{
 					System.arraycopy(data, (14336 * i), dest2, 0, 8320);
-					ExPledgeCrestLarge pcl = new ExPledgeCrestLarge(_crestId, dest2, i);
+					ExPledgeCrestLarge pcl = new ExPledgeCrestLarge(clanId, _crestId, dest2, i);
 					sendPacket(pcl);
 				}
 			}

@@ -17,10 +17,12 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class ExBR_NewIConCashBtnWnd extends L2GameServerPacket
 {
+	private int _hasUpdate;
+	
 	@Override
 	protected void writeImpl()
 	{
 		writeEx(0x13A);
-		writeH(0);
+		writeH(_hasUpdate);
 	}
 }

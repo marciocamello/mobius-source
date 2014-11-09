@@ -41,6 +41,7 @@ public class NpcHtmlMessage extends L2GameServerPacket
 	protected static final Logger _log = LoggerFactory.getLogger(NpcHtmlMessage.class);
 	protected static final Pattern objectId = Pattern.compile("%objectId%");
 	protected static final Pattern playername = Pattern.compile("%playername%");
+	private final int _itemId;
 	protected int _npcObjId;
 	protected String _html;
 	protected String _file = null;
@@ -90,6 +91,8 @@ public class NpcHtmlMessage extends L2GameServerPacket
 		{
 			setFile(filename);
 		}
+		
+		_itemId = 0;
 	}
 	
 	public NpcHtmlMessage(Player player, NpcInstance npc, String filename, int val)
@@ -113,11 +116,20 @@ public class NpcHtmlMessage extends L2GameServerPacket
 			_npcObjId = npc.getObjectId();
 			player.setLastNpc(npc);
 		}
+		
+		_itemId = 0;
 	}
 	
 	public NpcHtmlMessage(int npcObjId)
 	{
 		_npcObjId = npcObjId;
+		_itemId = 0;
+	}
+	
+	public NpcHtmlMessage(int npcObjId, int itemId)
+	{
+		_npcObjId = npcObjId;
+		_itemId = itemId;
 	}
 	
 	public final NpcHtmlMessage setHtml(String text)
@@ -227,7 +239,7 @@ public class NpcHtmlMessage extends L2GameServerPacket
 		writeC(0x19);
 		writeD(_npcObjId);
 		writeS(_html);
-		writeD(0x00);
+		writeD(_itemId);
 		writeD(0x00);
 	}
 }

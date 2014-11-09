@@ -28,5 +28,6 @@ public class JoinParty extends L2GameServerPacket
 	{
 		writeC(0x3A);
 		writeD(_response);
+		writeD(0x00);
 	}
 }

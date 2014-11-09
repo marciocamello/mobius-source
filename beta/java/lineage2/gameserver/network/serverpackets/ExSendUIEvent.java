@@ -46,18 +46,16 @@ public class ExSendUIEvent extends NpcStringContainer
 	{
 		writeEx(0x8F);
 		writeD(_objectId);
-		writeD(_isHide); // ID timer (any style)
+		writeD(_isHide); // 0 = show, 1 = hide (there is 2 = pause and 3 = resume also but they don't work well you can only pause count down and you cannot resume it because resume hides the counter).
 		writeD(0x00); // unknown
 		writeD(0x00); // unknown
-		writeS(String.valueOf(_isIncrease)); // Name indicator
+		writeS(String.valueOf(_isIncrease)); // 0 = count down, 1 = count up
+		// will disappear 10 seconds
+		// before it ends)
 		writeS(String.valueOf(_startTime / 60)); // timer starting minute(s)
 		writeS(String.valueOf(_startTime % 60)); // timer starting second(s)
 		writeS(String.valueOf(_endTime / 60)); // timer length minute(s) (timer
-		// will disappear 10 seconds
-		// before it ends)
 		writeS(String.valueOf(_endTime % 60)); // timer length second(s) (timer
-		// will disappear 10 seconds
-		// before it ends)
 		writeElements();
 	}
 }

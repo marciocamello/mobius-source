@@ -144,6 +144,6 @@ public final class RequestExEnchantSkillInfoDetail extends L2GameClientPacket
 			adenaCount = (int) (cost[0] * spMult);
 		}
 		
-		activeChar.sendPacket(new ExEnchantSkillInfoDetail(_skillId, _skillLvl, sp, esd.getRate(activeChar), bookId, adenaCount));
+		activeChar.sendPacket(new ExEnchantSkillInfoDetail(_type, _skillId, _skillLvl, sp, esd.getRate(activeChar), bookId, adenaCount));
 	}
 }

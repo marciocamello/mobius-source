@@ -20,5 +20,7 @@ public class ExOlympiadMatchEnd extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0x2D);
+		writeD(0x01); // olympiadObjectId (1-9)
+		writeD(0x02); // 0x01, 0x02
 	}
 }

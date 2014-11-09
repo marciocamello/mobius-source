@@ -22,11 +22,13 @@ import lineage2.gameserver.model.mail.Mail;
 public class ExShowSentPostList extends L2GameServerPacket
 {
 	private final List<Mail> mails;
+	private final int _actualTime;
 	
 	public ExShowSentPostList(Player cha)
 	{
 		mails = MailDAO.getInstance().getSentMailByOwnerId(cha.getObjectId());
 		CollectionUtils.eqSort(mails);
+		_actualTime = (int) (System.currentTimeMillis() / 1000L);
 	}
 	
 	// d dx[dSSddddd]
@@ -34,7 +36,7 @@ public class ExShowSentPostList extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0xAD);
-		writeD((int) (System.currentTimeMillis() / 1000L));
+		writeD(_actualTime);
 		writeD(mails.size());
 		
 		for (Mail mail : mails)

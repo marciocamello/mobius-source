@@ -88,6 +88,7 @@ public class GMViewPledgeInfo extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x96);
+		writeD(0x00); // 603
 		writeS(char_name);
 		writeD(clan_id);
 		writeD(0x00);
@@ -102,6 +103,7 @@ public class GMViewPledgeInfo extends L2GameServerPacket
 		writeD(rep);
 		writeD(0);
 		writeD(0);
+		writeD(0x00); // 603
 		writeD(ally_id);
 		writeS(ally_name);
 		writeD(ally_crest_id);

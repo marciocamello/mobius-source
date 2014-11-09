@@ -19,20 +19,22 @@ public class SpawnEmitter extends L2GameServerPacket
 {
 	private final int _monsterObjId;
 	private final int _playerObjId;
+	private final int _unk1;
 	
 	public SpawnEmitter(NpcInstance monster, Player player)
 	{
 		_playerObjId = player.getObjectId();
 		_monsterObjId = monster.getObjectId();
+		_unk1 = 0x00;
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
-		// ddd
 		writeEx(0x5e);
+		
 		writeD(_monsterObjId);
 		writeD(_playerObjId);
-		writeD(0x00); // unk
+		writeD(_unk1);
 	}
 }

@@ -18,11 +18,9 @@ public class EtcStatusUpdate extends L2GameServerPacket
 {
 	private final int IncreasedForce;
 	private final int WeightPenalty;
-	private final int MessageRefusal;
 	private final int DangerArea;
 	private final int armorExpertisePenalty;
 	private final int weaponExpertisePenalty;
-	private final int CharmOfCourage;
 	private final int DeathPenaltyLevel;
 	private final int ConsumedSouls;
 	
@@ -30,13 +28,15 @@ public class EtcStatusUpdate extends L2GameServerPacket
 	{
 		IncreasedForce = player.getIncreasedForce();
 		WeightPenalty = player.getWeightPenalty();
-		MessageRefusal = player.getMessageRefusal() || (player.getNoChannel() != 0) || player.isBlockAll() ? 1 : 0;
-		DangerArea = player.isInDangerArea() ? 2 : 0;
 		armorExpertisePenalty = player.getArmorsExpertisePenalty();
 		weaponExpertisePenalty = player.getWeaponsExpertisePenalty();
-		CharmOfCourage = player.isCharmOfCourage() ? 4 : 0;
 		DeathPenaltyLevel = player.getDeathPenalty() == null ? 0 : player.getDeathPenalty().getLevel(player);
 		ConsumedSouls = player.getConsumedSouls();
+		
+		int messageRefusal = player.getMessageRefusal() || (player.getNoChannel() != 0) || player.isBlockAll() ? 1 : 0;
+		int charmOfCourage = player.isCharmOfCourage() ? 2 : 0;
+		int dangerZone = player.isInDangerArea() ? 4 : 0;
+		DangerArea = messageRefusal + charmOfCourage + dangerZone;
 	}
 	
 	@Override
@@ -44,17 +44,15 @@ public class EtcStatusUpdate extends L2GameServerPacket
 	{
 		// dddddddd
 		writeC(0xf9); // Packet type
+		// TODO: Momentum
 		writeC(IncreasedForce); // skill id 4271, 7 lvl
-		writeD(WeightPenalty); // skill id 4270, 4 lvl
-		// writeD(MessageRefusal); // skill id 4269, 1 lvl
-		// writeD(DangerArea); // skill id 4268, 1 lvl
-		writeC(weaponExpertisePenalty); // weapon grade penalty, skill 6209 in epilogue
-		writeC(armorExpertisePenalty); // armor grade penalty, skill 6213 in epilogue
-		// writeD(CharmOfCourage); // Charm of Courage,
+		writeD(WeightPenalty); // skill id 4270, 4 lvl // 1-4 weight penalty, lvl (1=50%, 2=66.6%, 3=80%, 4=100%)
+		writeC(weaponExpertisePenalty); // weapon grade penalty, skill 6209 in epilogue // Weapon Grade Penalty [1-4]
+		writeC(armorExpertisePenalty); // armor grade penalty, skill 6213 in epilogue // Armor Grade Penalty [1-4]
 		// "Prevents experience value decreasing if killed during a siege war".
-		writeC(DeathPenaltyLevel); // Death Penalty max lvl 15,
+		writeC(DeathPenaltyLevel); // Death Penalty max lvl 15,// 1-15 death penalty, lvl (combat ability decreased due to death)
 		// "Combat ability is decreased due to death."
 		writeC(ConsumedSouls);
-		writeC(MessageRefusal + DangerArea + CharmOfCourage);
+		writeC(DangerArea); // 603 4, 0
 	}
 }

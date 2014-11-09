@@ -17,10 +17,12 @@ import lineage2.gameserver.model.Player;
 public class ShowMiniMap extends L2GameServerPacket
 {
 	private final int _mapId;
+	private final int _sevenSignPeriod;
 	
 	public ShowMiniMap(Player player, int mapId)
 	{
 		_mapId = mapId;
+		_sevenSignPeriod = 0; // 0 - Preparation
 	}
 	
 	@Override
@@ -28,6 +30,6 @@ public class ShowMiniMap extends L2GameServerPacket
 	{
 		writeC(0xa3);
 		writeD(_mapId);
-		writeC(0x00);
+		writeC(_sevenSignPeriod);
 	}
 }

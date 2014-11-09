@@ -10,33 +10,33 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.gameserver.network.serverpackets;
+package lineage2.gameserver.network.clientpackets;
 
-public class ExPledgeCrestLarge extends L2GameServerPacket
+import lineage2.gameserver.network.serverpackets.CharacterSelectionInfo;
+import lineage2.gameserver.network.serverpackets.ExLoginVitalityEffectInfo;
+
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
+public class RequestGotoLobby extends L2GameClientPacket
 {
-	private final int _crestId;
-	private final int _clanId;
-	private final byte[] _data;
-	private final int _i;
-	
-	public ExPledgeCrestLarge(int clanId, int crestId, byte[] data, int i)
+	/**
+	 * Method readImpl.
+	 */
+	@Override
+	protected void readImpl()
 	{
-		_clanId = clanId;
-		_crestId = crestId;
-		_data = data;
-		_i = i;
 	}
 	
+	/**
+	 * Method runImpl.
+	 */
 	@Override
-	protected final void writeImpl()
+	protected void runImpl()
 	{
-		writeEx(0x1b);
-		writeD(0x02);
-		writeD(_clanId);
-		writeD(_crestId);
-		writeD(_i); // split number
-		writeD(65664); // total size
-		writeD(_data.length); // split size
-		writeB(_data); // split data
+		CharacterSelectionInfo cl = new CharacterSelectionInfo(getClient().getLogin(), getClient().getSessionKey().playOkID1);
+		ExLoginVitalityEffectInfo vl = new ExLoginVitalityEffectInfo(cl.getCharInfo());
+		sendPacket(cl, vl);
 	}
 }

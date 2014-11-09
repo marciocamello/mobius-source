@@ -12,27 +12,32 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import lineage2.gameserver.dao.CharacterDAO;
+import lineage2.gameserver.model.Player;
 
 /**
  * @author Smo
  */
 public class ExBlockRemoveResult extends L2GameServerPacket
 {
-	private static final String _S__FE_ED_EXBLOCKREMOVERESULT = "[S] FE:ED ExBlockRemoveResult";
-	private final int objId;
+	private static final String _S__FE_ED_EXBLOCKREMOVERESULT = "[S] FE:EE ExBlockRemoveResult";
+	private final String _name;
+	private final int _unlocked;
 	
-	public ExBlockRemoveResult(int OID)
+	public ExBlockRemoveResult(Player cha, boolean unlocked)
 	{
-		objId = OID;
+		_unlocked = unlocked ? 1 : 0;
+		_name = cha.getName();
 	}
 	
 	@Override
 	protected void writeImpl()
 	{
 		writeEx(0xEE);
-		writeD(0x00);
-		writeS(CharacterDAO.getInstance().getNameByObjectId(objId));
+		writeD(_unlocked);
+		if (_unlocked > 0)
+		{
+			writeS(_name);
+		}
 	}
 	
 	@Override

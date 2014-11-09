@@ -70,6 +70,8 @@ public enum Stats
 	STAT_INT("INT", 1., 150.),
 	STAT_WIT("WIT", 1., 150.),
 	STAT_MEN("MEN", 1., 150.),
+	STAT_LUC("LUC", 1., 150.),
+	STAT_CHA("CHA", 1., 150.),
 	BREATH("breath"),
 	FALL("fall"),
 	EXP_LOST("expLost"),

@@ -15,10 +15,6 @@ package lineage2.gameserver.network.serverpackets;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.utils.Location;
 
-/**
- * format dddddd (player id, target id, distance, startx, starty, startz)
- * <p>
- */
 public class ValidateLocation extends L2GameServerPacket
 {
 	private final int _chaObjId;
@@ -39,5 +35,6 @@ public class ValidateLocation extends L2GameServerPacket
 		writeD(_loc.getY());
 		writeD(_loc.getZ());
 		writeD(_loc.getHeading());
+		writeC(0xFF);
 	}
 }

@@ -23,9 +23,7 @@ public class ExPartyPetWindowAdd extends L2GameServerPacket
 	private final int maxHp;
 	private final int curMp;
 	private final int maxMp;
-	private final int level;
 	private final int summonId;
-	private final String name;
 	
 	public ExPartyPetWindowAdd(Summon summon)
 	{
@@ -33,12 +31,10 @@ public class ExPartyPetWindowAdd extends L2GameServerPacket
 		ownerId = summon.getPlayer().getObjectId();
 		npcId = summon.getTemplate().getId() + 1000000;
 		type = summon.getSummonType();
-		name = summon.getName();
 		curHp = (int) summon.getCurrentHp();
 		maxHp = summon.getMaxHp();
 		curMp = (int) summon.getCurrentMp();
 		maxMp = summon.getMaxMp();
-		level = summon.getLevel();
 	}
 	
 	@Override
@@ -47,13 +43,11 @@ public class ExPartyPetWindowAdd extends L2GameServerPacket
 		writeEx(0x18);
 		writeD(summonId);
 		writeD(npcId);
-		writeD(type);
+		writeC(type);
 		writeD(ownerId);
-		writeS(name);
 		writeD(curHp);
 		writeD(maxHp);
 		writeD(curMp);
 		writeD(maxMp);
-		writeD(level);
 	}
 }

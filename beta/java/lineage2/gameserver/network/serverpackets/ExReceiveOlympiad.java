@@ -62,9 +62,9 @@ public abstract class ExReceiveOlympiad extends L2GameServerPacket
 			
 			for (ArenaInfo arena : _arenaList)
 			{
-				writeD(arena._id);
+				writeD(arena._id); // Stadium Id (Arena 1 = 0)
 				writeD(arena._matchType);
-				writeD(arena._status);
+				writeD(arena._status); // (1 = Standby, 2 = Playing)
 				writeS(arena._name1);
 				writeS(arena._name2);
 			}
@@ -106,7 +106,7 @@ public abstract class ExReceiveOlympiad extends L2GameServerPacket
 		public void addPlayer(int team, TeamMember member, int gameResultPoints)
 		{
 			int points = Config.OLYMPIAD_OLDSTYLE_STAT ? 0 : member.getStat().getInteger(Olympiad.POINTS, 0);
-			PlayerInfo playerInfo = new PlayerInfo(member.getName(), member.getClanName(), member.getClassId(), points, gameResultPoints, (int) member.getDamage());
+			PlayerInfo playerInfo = new PlayerInfo(member.getName(), member.getClanName(), member.getPlayer().getClanId(), member.getClassId(), points, gameResultPoints, (int) member.getDamage());
 			
 			if (_players[team] == null)
 			{
@@ -120,12 +120,12 @@ public abstract class ExReceiveOlympiad extends L2GameServerPacket
 		protected void writeImpl()
 		{
 			super.writeImpl();
-			writeD(_tie);
+			writeD(_tie); // 0 - win, 1 - tie
 			writeS(_name);
 			
 			for (int i = 0; i < _players.length; i++)
 			{
-				writeD(i + 1);
+				writeD(i + 1); // lose team / win team
 				List<PlayerInfo> players = _players[i] == null ? Collections.<PlayerInfo> emptyList() : _players[i];
 				writeD(players.size());
 				
@@ -133,7 +133,7 @@ public abstract class ExReceiveOlympiad extends L2GameServerPacket
 				{
 					writeS(playerInfo._name);
 					writeS(playerInfo._clanName);
-					writeD(0x00);
+					writeD(playerInfo._clanId);
 					writeD(playerInfo._classId);
 					writeD(playerInfo._damage);
 					writeD(playerInfo._currentPoints);
@@ -146,15 +146,17 @@ public abstract class ExReceiveOlympiad extends L2GameServerPacket
 		{
 			final String _name;
 			final String _clanName;
+			final int _clanId;
 			final int _classId;
 			final int _currentPoints;
 			final int _gamePoints;
 			final int _damage;
 			
-			public PlayerInfo(String name, String clanName, int classId, int currentPoints, int gamePoints, int damage)
+			public PlayerInfo(String name, String clanName, int clanId, int classId, int currentPoints, int gamePoints, int damage)
 			{
 				_name = name;
 				_clanName = clanName;
+				_clanId = clanId;
 				_classId = classId;
 				_currentPoints = currentPoints;
 				_gamePoints = gamePoints;
@@ -174,6 +176,6 @@ public abstract class ExReceiveOlympiad extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0xD5);
-		writeD(_type);
+		writeD(_type); // Type 0 = Match List, 1 = Match Result
 	}
 }

@@ -439,7 +439,8 @@ public abstract class Summon extends Playable
 	public void sendStatusUpdate()
 	{
 		Player owner = getPlayer();
-		owner.sendPacket(new PetStatusUpdate(this));
+		// TODO: Test this !!!
+		owner.sendPacket(new PetStatusUpdate(this, 0));
 	}
 	
 	/**

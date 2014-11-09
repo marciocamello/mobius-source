@@ -34,6 +34,6 @@ public class FinishRotating extends L2GameServerPacket
 		writeD(_charId);
 		writeD(_degree);
 		writeD(_speed);
-		writeD(0x00); // ??
+		writeD(-2); // ??
 	}
 }

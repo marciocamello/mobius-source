@@ -53,6 +53,11 @@ public class CharInfo extends L2GameServerPacket
 	private int _clanBoatObjectId;
 	private EffectCubic[] _cubics;
 	private ArrayList<Integer> _aveList;
+	private int _specialEffect;
+	private int _showHairAccessory;
+	private int _abilityPoints;
+	private int _structType;
+	private int _isAttackable;
 	
 	public CharInfo(Player cha)
 	{
@@ -158,6 +163,12 @@ public class CharInfo extends L2GameServerPacket
 		
 		_cubics = _activeChar.getCubics().toArray(new EffectCubic[_activeChar.getCubics().size()]);
 		_aveList = _activeChar.getAveList();
+		
+		_showHairAccessory = 1;
+		_abilityPoints = 0;
+		_specialEffect = 0;
+		_structType = 37;
+		_isAttackable = 1;
 	}
 	
 	@Override
@@ -168,14 +179,14 @@ public class CharInfo extends L2GameServerPacket
 			return;
 		}
 		
+		// TODO: Temporary fixed. Need to be implemented as BitMasks and in other class !!!
 		final NpcTemplate template = _activeChar.isPolymorphed() ? NpcHolder.getInstance().getTemplate(_activeChar.getPolyId()) : null;
 		if (template != null)
 		{
 			writeC(0x0C);
 			writeD(_objId);
 			writeC(0x00);
-			writeC(0x25);
-			writeC(0x00);
+			writeH(_structType);
 			writeC(0xED);
 			if ((template.getLHandId() > 0) || (template.getRHandId() > 0) || (template.getChestId() > 0))
 			{
@@ -188,16 +199,13 @@ public class CharInfo extends L2GameServerPacket
 			writeC(0x4E);
 			writeC(0xA2);
 			writeC(0x0C);
-			int len_poly_title = 0;
-			if (_activeChar.getTitle() != null)
-			{
-				len_poly_title = _activeChar.getTitle().length();
-			}
-			writeC(7 + (len_poly_title * 2));
-			writeC(_activeChar.getKarma() < 0 ? 1 : 0);
+			writeC(0x07);
+			writeC(_isAttackable);
+			writeC(0);
+			writeC(0);
 			writeH(0);
-			writeH(0);
-			writeS(_activeChar.getTitle());
+			// writeS(_activeChar.getTitle());
+			writeS("");
 			if ((template.getLHandId() > 0) || (template.getRHandId() > 0) || (template.getChestId() > 0))
 			{
 				writeH(68);
@@ -224,10 +232,11 @@ public class CharInfo extends L2GameServerPacket
 			writeC(1);
 			writeC(_activeChar.isRunning() ? 1 : 0);
 			writeC(_activeChar.isInZone(ZoneType.Water) ? 1 : _activeChar.isFlying() ? 2 : 0);
-			writeD(_activeChar.isFlying() ? 1 : 0);
+			writeC(_activeChar.isFlying() ? 1 : 0);
 			writeC(0);
 			writeC(0);
-			writeH(0);
+			writeC(0);
+			writeD(0);
 			writeD((int) _activeChar.getCurrentHp());
 			writeD(_activeChar.getMaxHp());
 			
@@ -235,11 +244,11 @@ public class CharInfo extends L2GameServerPacket
 			
 			if (_aveList != null)
 			{
-				writeD(_aveList.size());
+				writeH(_aveList.size());
 				
 				for (int i : _aveList)
 				{
-					writeD(i);
+					writeH(i);
 				}
 			}
 		}
@@ -261,21 +270,30 @@ public class CharInfo extends L2GameServerPacket
 				writeD(_activeChar.getInventory().getPaperdollItemId(slot));
 			}
 			
-			writeD(_activeChar.getInventory().getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND));
-			writeD(_activeChar.getInventory().getPaperdollAugmentationId(Inventory.PAPERDOLL_LHAND));
-			writeD(_activeChar.getInventory().getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND));
+			writeH(_activeChar.getInventory().getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND));
+			writeH(0x00); // TODO: Second Effect 2
+			writeH(0x00); // TODO: Shield/Sigil Effect 1
+			writeH(0x00); // TODO: Shield/Sigil Effect 2
+			// Weapon in second hand
+			writeH(_activeChar.getInventory().getPaperdollAugmentationId(Inventory.PAPERDOLL_LHAND));
+			writeH(0x00); // TODO: Second Effect 2
 			
 			writeC(_activeChar.getTalismanCount());
 			
-			writeD(0);
-			writeD(0);
-			writeD(0);
-			writeD(0);
-			writeD(0);
-			writeD(0);
-			writeD(0);
-			writeD(0);
-			writeD(0);
+			// for (int slot : PAPERDOLL_ORDER)
+			// {
+			// writeD(_activeChar.getInventory().getPaperdollItemId(slot));
+			// }
+			
+			writeD(0); // Visible Weapon
+			writeD(0); // Visible Shield [Sigil]
+			writeD(0); // Visible Weapon / Two Handed
+			writeD(0); // Visible Gloves
+			writeD(0); // Visible Upper Body
+			writeD(0); // Visible Lower Body
+			writeD(0); // Visible Boots
+			writeD(0); // Visible Hair Accessory (top)
+			writeD(0); // Visible Hair Accessory (bottom)
 			
 			writeC(_activeChar.getPvpFlag());
 			int Karma = 0 - _activeChar.getKarma();
@@ -382,26 +400,21 @@ public class CharInfo extends L2GameServerPacket
 			writeD((int) _activeChar.getCurrentHp());
 			writeD(_activeChar.getMaxMp());
 			writeD((int) _activeChar.getCurrentMp());
-			writeC(0);
+			writeC(_specialEffect);
 			
-			// java.util.List<Integer> el = _activeChar.getEffectIdList();
-			// if (gmSeeInvis && !el.contains(21))
-			// {
-			// el.add(21);
-			// }
 			if (_aveList != null)
 			{
 				writeD(_aveList.size());
 				
 				for (int i : _aveList)
 				{
-					writeD(i);
+					writeH(i);
 				}
 			}
 			
 			writeC(0);
-			writeC(1);
-			writeC(0);
+			writeC(_showHairAccessory);
+			writeC(_abilityPoints);
 		}
 	}
 	

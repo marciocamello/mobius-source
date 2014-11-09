@@ -18,20 +18,23 @@ package lineage2.gameserver.network.serverpackets;
  */
 public class ExCallToChangeClass extends L2GameServerPacket
 {
-	private final int classId;
-	private final boolean showMsg;
+	private final int _classId;
+	private final int _showAnimation;
+	private final int _canChange;
 	
-	public ExCallToChangeClass(int classId, boolean showMsg)
+	public ExCallToChangeClass(int classId, boolean showAnimation, boolean canChange)
 	{
-		this.classId = classId;
-		this.showMsg = showMsg;
+		_classId = classId;
+		_showAnimation = showAnimation ? 1 : 0;
+		_canChange = canChange ? 1 : 0;
 	}
 	
 	@Override
 	protected void writeImpl()
 	{
 		writeEx(0xFE);
-		writeD(classId); // New Class Id
-		writeD(showMsg); // Show Message
+		writeD(_classId); // New Class Id
+		writeD(_showAnimation); // 0 icon, window-the request to change the Saba 1, 2 and TD-0
+		writeD(_canChange); // Show Message
 	}
 }

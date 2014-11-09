@@ -53,6 +53,7 @@ public class ExPartyRoomMember extends L2GameServerPacket
 			writeS(member_info.name);
 			writeD(member_info.classId);
 			writeD(member_info.level);
+			
 			writeD(member_info.location);
 			writeD(member_info.memberType);
 			writeD(member_info.instanceReuses.length);

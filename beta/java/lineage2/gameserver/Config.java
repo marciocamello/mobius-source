@@ -595,7 +595,6 @@ public class Config
 	// public static double RESIDENCE_LEASE_MULTIPLIER;
 	public static boolean ACCEPT_ALTERNATE_ID;
 	public static int REQUEST_ID;
-	// public static boolean ANNOUNCE_MAMMON_SPAWN;
 	public static int GM_NAME_COLOR;
 	public static boolean GM_HERO_AURA;
 	public static int NORMAL_NAME_COLOR;
@@ -858,7 +857,7 @@ public class Config
 	public static boolean LOGIN_SERVER_IS_PVP;
 	public static int LOGIN_SERVER_AGE_LIMIT;
 	public static int LOGIN_SERVER_SERVER_TYPE;
-	// public static int SAFE_ENCHANT_LVL;
+	public static int MAX_CHARACTERS_NUMBER_PER_ACCOUNT;
 	public static boolean REMOVE_UNKNOWN_QUEST;
 	public static boolean ALLOW_MENTOR_BUFFS_IN_OFFLINE_MODE;
 	public static boolean STARTING_LOC;
@@ -881,6 +880,7 @@ public class Config
 		LOGIN_SERVER_GM_ONLY = serverSettings.getProperty("ServerGMOnly", false);
 		LOGIN_SERVER_BRACKETS = serverSettings.getProperty("ServerBrackets", false);
 		LOGIN_SERVER_IS_PVP = serverSettings.getProperty("PvPServer", false);
+		MAX_CHARACTERS_NUMBER_PER_ACCOUNT = serverSettings.getProperty("CharMaxNumber", 7);
 		
 		for (String a : serverSettings.getProperty("ServerType", ArrayUtils.EMPTY_STRING_ARRAY))
 		{
@@ -1372,13 +1372,11 @@ public class Config
 		MAX_PVTCRAFT_SLOTS = otherSettings.getProperty("MaxPvtManufactureSlots", 20);
 		SENDSTATUS_TRADE_JUST_OFFLINE = otherSettings.getProperty("SendStatusTradeJustOffline", false);
 		SENDSTATUS_TRADE_MOD = otherSettings.getProperty("SendStatusTradeMod", 1.);
-		// ANNOUNCE_MAMMON_SPAWN = otherSettings.getProperty("AnnounceMammonSpawn", true);
 		GM_NAME_COLOR = Integer.decode("0x" + otherSettings.getProperty("GMNameColor", "00CCFF"));
 		GM_HERO_AURA = otherSettings.getProperty("GMHeroAura", false);
 		NORMAL_NAME_COLOR = Integer.decode("0x" + otherSettings.getProperty("NormalNameColor", "FFFFFF"));
 		CLANLEADER_NAME_COLOR = Integer.decode("0x" + otherSettings.getProperty("ClanleaderNameColor", "FFFFFF"));
 		GAME_POINT_ITEM_ID = otherSettings.getProperty("GamePointItemId", -1);
-		// SAFE_ENCHANT_LVL = otherSettings.getProperty("SafeEnchant", 0);
 		REMOVE_UNKNOWN_QUEST = otherSettings.getProperty("RemoveUnknownQuest", false);
 		ALLOW_MENTOR_BUFFS_IN_OFFLINE_MODE = otherSettings.getProperty("AllowMentorBuffsInOfflineMode", false);
 		STARTING_LOC = otherSettings.getProperty("StartingLoc", false);

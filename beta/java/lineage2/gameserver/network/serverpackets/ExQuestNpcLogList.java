@@ -43,9 +43,10 @@ public class ExQuestNpcLogList extends L2GameServerPacket
 		
 		for (QuestNpcLogInfo entry : vars)
 		{
-			int[] i = new int[2];
+			int[] i = new int[3];
 			i[0] = entry.getNpcIds()[0] + 1000000;
-			i[1] = state.getInt(entry.getVarName());
+			i[1] = 0; // npc index?
+			i[2] = state.getInt(entry.getVarName());
 			_logList.add(i);
 		}
 	}
@@ -61,8 +62,8 @@ public class ExQuestNpcLogList extends L2GameServerPacket
 		{
 			int[] values = _logList.get(i);
 			writeD(values[0]);
-			writeC(0); // npc index?
-			writeD(values[1]);
+			writeC(values[1]);
+			writeD(values[2]);
 		}
 	}
 }

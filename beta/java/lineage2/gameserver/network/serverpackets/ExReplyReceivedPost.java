@@ -30,7 +30,7 @@ public class ExReplyReceivedPost extends AbstractItemPacket
 	{
 		writeEx(0xAC);
 		writeD(mail.getType().ordinal());
-		
+		writeD(0x00); // 603
 		if (mail.getType() == Mail.SenderType.SYSTEM)
 		{
 			writeD(0x00);// unknown1
@@ -47,7 +47,7 @@ public class ExReplyReceivedPost extends AbstractItemPacket
 		
 		// Type = Normal
 		writeD(mail.getMessageId());
-		writeD(0x00);// unknown2
+		writeD(mail.isPayOnDelivery() ? 1 : 0);
 		writeD(0x00);// unknown3
 		writeS(mail.getSenderName());
 		writeS(mail.getTopic());
@@ -61,7 +61,6 @@ public class ExReplyReceivedPost extends AbstractItemPacket
 		}
 		
 		writeQ(mail.getPrice());
-		writeD(0x00); // unk
 		writeD(mail.isReturnable());
 		writeD(mail.getReceiverId());
 	}

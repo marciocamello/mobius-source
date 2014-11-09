@@ -38,12 +38,57 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 	private final String _loginName;
 	private final int _sessionId;
 	private final CharSelectionInfo charSelectionInfo;
+	private final int _size;
+	private final int _maxCharPerAcc;
+	private int _lastUsedIndex;
+	private final int _playMode;
+	private final int _isKoreaClient;
+	private final int _gift;
+	private final int _unk;
+	private final int _serverId;
+	private final int _builderLevel;
+	private boolean _petObjectId;
+	private boolean _petLvl;
+	private boolean _petFood;
+	private boolean _petFoodLvl;
+	private double _petHP;
+	private double _petMP;
+	private final int _unk2;
 	
 	public CharacterSelectionInfo(String loginName, int sessionId)
 	{
 		_sessionId = sessionId;
 		_loginName = loginName;
 		charSelectionInfo = loadCharacterSelectInfo(loginName);
+		
+		_size = charSelectionInfo.size();
+		// Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
+		_maxCharPerAcc = Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT;
+		_unk = 0;
+		_unk2 = 1;
+		_playMode = 2; // 100% free play
+		_isKoreaClient = 0;
+		_gift = 0;
+		_serverId = 1;
+		_builderLevel = 0;
+		
+		CharSelectInfoPackage lastUsed = null;
+		int i = -1;
+		for (CharSelectInfoPackage info : charSelectionInfo)
+		{
+			i++;
+			if (lastUsed == null)
+			{
+				lastUsed = info;
+				continue;
+			}
+			
+			if (lastUsed.getLastAccess() < info.getLastAccess())
+			{
+				lastUsed = info;
+				_lastUsedIndex = i;
+			}
+		}
 	}
 	
 	public CharSelectionInfo getCharInfo()
@@ -54,28 +99,15 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		int size = charSelectionInfo.size();
 		writeC(0x09);
-		writeD(size);
-		writeD(0x07);
-		writeC(0x00);
-		writeC(0x01);
-		writeC(0x02);
-		writeD(0x00);
-		long lastAccess = -1L;
-		int lastUsed = -1;
-		
-		for (CharSelectInfoPackage info : charSelectionInfo)
-		{
-			if (lastAccess < info.getLastAccess())
-			{
-				lastAccess = info.getLastAccess();
-				lastUsed++;
-			}
-		}
+		writeD(_size);
+		writeD(_maxCharPerAcc);
+		writeC(_unk);
+		writeC(_playMode);
+		writeD(_isKoreaClient);
+		writeC(_gift);
 		
 		int i = 0;
-		
 		for (CharSelectInfoPackage charInfoPackage : charSelectionInfo)
 		{
 			writeS(charInfoPackage.getName());
@@ -83,11 +115,11 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 			writeS(_loginName);
 			writeD(_sessionId);
 			writeD(charInfoPackage.getClanId());
-			writeD(0x00);
+			writeD(_builderLevel);
 			writeD(charInfoPackage.getSex());
 			writeD(charInfoPackage.getRace());
 			writeD(charInfoPackage.getBaseClassId());
-			writeD(0x01);
+			writeD(_serverId);
 			writeD(charInfoPackage.getX());
 			writeD(charInfoPackage.getY());
 			writeD(charInfoPackage.getZ());
@@ -106,6 +138,7 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 			{
 				writeD(0x00);
 			}
+			
 			writeD(0x00);
 			writeD(0x00);
 			
@@ -133,43 +166,53 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 			writeD(charInfoPackage.getHairStyle());
 			writeD(charInfoPackage.getHairColor());
 			writeD(charInfoPackage.getFace());
+			
 			writeF(charInfoPackage.getMaxHp()); // hp max
 			writeF(charInfoPackage.getMaxMp()); // mp max
 			writeD(charInfoPackage.getAccessLevel() > -100 ? charInfoPackage.getDeleteTimer() : -1);
 			writeD(charInfoPackage.getClassId());
-			writeD(i == lastUsed ? 1 : 0);
+			writeD(i == _lastUsedIndex ? 1 : 0);
 			writeC(Math.min(charInfoPackage.getPaperdollEnchantEffect(Inventory.PAPERDOLL_RHAND), 127));
-			writeD(charInfoPackage.getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND));
-			int weaponId = charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_RHAND);
+			writeH(charInfoPackage.getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND));
+			writeH(charInfoPackage.getPaperdollAugmentationId(Inventory.PAPERDOLL_LHAND));
+			writeD(getTransform(charInfoPackage));
+			writeD(_petObjectId);
+			writeD(_petLvl);
+			writeD(_petFood);
+			writeD(_petFoodLvl);
+			writeF(_petHP);
+			writeF(_petMP);
 			
-			if (weaponId == 8190)
-			{
-				writeD(301);
-			}
-			else if (weaponId == 8689)
-			{
-				writeD(302);
-			}
-			else
-			{
-				writeD(0x00);
-			}
-			
-			for (int j = 0; j < 4; j++)
-			{
-				writeD(0x00);
-			}
-			
-			writeF(0.0D);
-			writeF(0.0D);
 			writeD(charSelectionInfo.getVitalityPoints());
 			writeD(200); // Vitality percent
-			writeD(5); // Vitaliti items count
+			writeD(5); // Vitality items count
 			writeD(charInfoPackage.getAccessLevel() > -100 ? 0x01 : 0x00);
-			writeC(0x00);
-			writeC(0x00);
-			writeC(1);
+			writeC(charInfoPackage.getNoblesse());
+			writeC(charInfoPackage.getHero());
+			writeC(_unk2);
 			i++;
+		}
+	}
+	
+	/**
+	 * @param charInfoPackage
+	 * @return
+	 */
+	private int getTransform(CharSelectInfoPackage charInfoPackage)
+	{
+		int weaponId = charInfoPackage.getPaperdollItemId(Inventory.PAPERDOLL_RHAND);
+		
+		if (weaponId == 8190)
+		{
+			return 301;
+		}
+		else if (weaponId == 8689)
+		{
+			return 302;
+		}
+		else
+		{
+			return 0;
 		}
 	}
 	

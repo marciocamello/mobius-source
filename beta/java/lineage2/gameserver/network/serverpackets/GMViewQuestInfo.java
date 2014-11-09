@@ -35,7 +35,6 @@ public class GMViewQuestInfo extends L2GameServerPacket
 		if (quests.length == 0)
 		{
 			writeH(0);
-			writeH(0);
 			return;
 		}
 		
@@ -48,7 +47,6 @@ public class GMViewQuestInfo extends L2GameServerPacket
 			writeD(qs == null ? 0 : qs.getInt("cond"));
 		}
 		
-		writeH(0); // количество элементов типа: ddQd , как-то связано с
-		// предметами
+		writeH(0);
 	}
 }

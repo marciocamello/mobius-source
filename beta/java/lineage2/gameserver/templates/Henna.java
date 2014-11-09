@@ -31,6 +31,8 @@ public class Henna
 	private final int _statMEN;
 	private final int _statDEX;
 	private final int _statWIT;
+	private final int _statLUC;
+	private final int _statCHA;
 	private final int _skillId;
 	private final TIntArrayList _classes;
 	
@@ -46,10 +48,12 @@ public class Henna
 	 * @param str int
 	 * @param dex int
 	 * @param men int
+	 * @param luc int
+	 * @param cha int
 	 * @param skillId int
 	 * @param classes TIntArrayList
 	 */
-	public Henna(int symbolId, int dyeId, long price, long drawCount, int wit, int intA, int con, int str, int dex, int men, int skillId, TIntArrayList classes)
+	public Henna(int symbolId, int dyeId, long price, long drawCount, int wit, int intA, int con, int str, int dex, int men, int luc, int cha, int skillId, TIntArrayList classes)
 	{
 		_symbolId = symbolId;
 		_dyeId = dyeId;
@@ -61,6 +65,8 @@ public class Henna
 		_statMEN = men;
 		_statDEX = dex;
 		_statWIT = wit;
+		_statLUC = luc;
+		_statCHA = cha;
 		_classes = classes;
 		_skillId = skillId;
 	}
@@ -144,6 +150,24 @@ public class Henna
 	public int getStatWIT()
 	{
 		return _statWIT;
+	}
+	
+	/**
+	 * Method getStatLUC.
+	 * @return int
+	 */
+	public int getStatLUC()
+	{
+		return _statLUC;
+	}
+	
+	/**
+	 * Method getStatCHA.
+	 * @return int
+	 */
+	public int getStatCHA()
+	{
+		return _statCHA;
 	}
 	
 	/**

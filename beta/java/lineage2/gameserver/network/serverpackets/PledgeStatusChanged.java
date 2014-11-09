@@ -12,13 +12,9 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Clan;
 
-/**
- * sample 0000: cd b0 98 a0 48 1e 01 00 00 00 00 00 00 00 00 00 ....H........... 0010: 00 00 00 00 00 .....
- * <p/>
- * format ddddd
- */
 public class PledgeStatusChanged extends L2GameServerPacket
 {
 	private final int leader_id;
@@ -31,8 +27,9 @@ public class PledgeStatusChanged extends L2GameServerPacket
 	private final int allyId;
 	private final int allyCrestId;
 	
-	public PledgeStatusChanged(Clan clan)
+	public PledgeStatusChanged(Player player)
 	{
+		Clan clan = player.getClan();
 		leader_id = clan.getLeaderId();
 		clan_id = clan.getClanId();
 		level = clan.getLevel();

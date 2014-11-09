@@ -79,7 +79,7 @@ public class CharacterSelected extends L2GameClientPacket
 		}
 		
 		client.setState(GameClientState.IN_GAME);
-		sendPacket(new CharSelected(activeChar, client.getSessionKey().playOkID1));
 		sendPacket(new ExSubjobInfo(activeChar, false));
+		sendPacket(new CharSelected(activeChar, client.getSessionKey().playOkID1));
 	}
 }

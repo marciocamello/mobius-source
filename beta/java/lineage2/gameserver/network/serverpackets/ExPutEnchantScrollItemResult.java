@@ -12,31 +12,25 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-public class ExPledgeCrestLarge extends L2GameServerPacket
+/**
+ * @author nBd
+ */
+public class ExPutEnchantScrollItemResult extends L2GameServerPacket
 {
-	private final int _crestId;
-	private final int _clanId;
-	private final byte[] _data;
-	private final int _i;
+	private final int _result;
 	
-	public ExPledgeCrestLarge(int clanId, int crestId, byte[] data, int i)
+	/**
+	 * @param result
+	 */
+	public ExPutEnchantScrollItemResult(int result)
 	{
-		_clanId = clanId;
-		_crestId = crestId;
-		_data = data;
-		_i = i;
+		_result = result;
 	}
 	
 	@Override
-	protected final void writeImpl()
+	protected void writeImpl()
 	{
-		writeEx(0x1b);
-		writeD(0x02);
-		writeD(_clanId);
-		writeD(_crestId);
-		writeD(_i); // split number
-		writeD(65664); // total size
-		writeD(_data.length); // split size
-		writeB(_data); // split data
+		writeEx(0x152);
+		writeD(_result);
 	}
 }

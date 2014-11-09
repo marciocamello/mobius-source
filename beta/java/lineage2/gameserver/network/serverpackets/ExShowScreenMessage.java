@@ -36,7 +36,10 @@ public class ExShowScreenMessage extends NpcStringContainer
 	private final boolean _effect;
 	private final ScreenMessageAlign _text_align;
 	private final int _time;
-	private final int _unk;
+	private final int _unk1;
+	private final int _unk2;
+	private final int _unk3;
+	private final boolean _fade;
 	
 	public ExShowScreenMessage(String text, int time, ScreenMessageAlign text_align, boolean big_font)
 	{
@@ -52,30 +55,48 @@ public class ExShowScreenMessage extends NpcStringContainer
 		_text_align = text_align;
 		_big_font = big_font;
 		_effect = showEffect;
-		_unk = 0;
+		_unk1 = 0x00;
+		_unk2 = 0x00;
+		_unk3 = 0x00;
+		_fade = false;
 	}
 	
 	public ExShowScreenMessage(NpcString t, int time, ScreenMessageAlign text_align, String... params)
 	{
-		this(t, time, text_align, true, STRING_TYPE, -1, false, 0, params);
+		this(t, time, text_align, true, STRING_TYPE, -1, false, false, 0, 0, 0, params);
 	}
 	
 	public ExShowScreenMessage(NpcString npcString, int time, ScreenMessageAlign text_align, boolean big_font, String... params)
 	{
-		this(npcString, time, text_align, big_font, STRING_TYPE, -1, false, 0, params);
+		this(npcString, time, text_align, big_font, STRING_TYPE, -1, false, false, 0, 0, 0, params);
 	}
 	
 	public ExShowScreenMessage(NpcString npcString, int time, ScreenMessageAlign text_align, boolean big_font, boolean showEffect, String... params)
 	{
-		this(npcString, time, text_align, big_font, STRING_TYPE, -1, showEffect, 0, params);
+		this(npcString, time, text_align, big_font, STRING_TYPE, -1, showEffect, false, 0, 0, 0, params);
+	}
+	
+	public ExShowScreenMessage(NpcString npcString, int time, ScreenMessageAlign text_align, boolean big_font, boolean showEffect, boolean fade, String... params)
+	{
+		this(npcString, time, text_align, big_font, STRING_TYPE, -1, showEffect, fade, 0, 0, 0, params);
 	}
 	
 	public ExShowScreenMessage(NpcString npcString, int time, ScreenMessageAlign text_align, boolean big_font, int type, int systemMsg, boolean showEffect, String... params)
 	{
-		this(npcString, time, text_align, big_font, type, systemMsg, showEffect, 0, params);
+		this(npcString, time, text_align, big_font, type, systemMsg, showEffect, false, 0, 0, 0, params);
 	}
 	
 	public ExShowScreenMessage(NpcString npcString, int time, ScreenMessageAlign text_align, boolean big_font, int type, int systemMsg, boolean showEffect, int unk, String... params)
+	{
+		this(npcString, time, text_align, big_font, type, systemMsg, showEffect, false, unk, 0, 0, params);
+	}
+	
+	public ExShowScreenMessage(NpcString npcString, int time, ScreenMessageAlign text_align, boolean big_font, int type, int systemMsg, boolean showEffect, boolean fade, String... params)
+	{
+		this(npcString, time, text_align, big_font, type, systemMsg, showEffect, fade, 0, 0, 0, params);
+	}
+	
+	public ExShowScreenMessage(NpcString npcString, int time, ScreenMessageAlign text_align, boolean big_font, int type, int systemMsg, boolean fade, boolean showEffect, int unk1, int unk2, int unk3, String... params)
 	{
 		super(npcString, params);
 		_type = type;
@@ -84,7 +105,10 @@ public class ExShowScreenMessage extends NpcStringContainer
 		_text_align = text_align;
 		_big_font = big_font;
 		_effect = showEffect;
-		_unk = unk;
+		_unk1 = unk1;
+		_unk2 = unk2;
+		_unk3 = unk3;
+		_fade = fade;
 	}
 	
 	@Override
@@ -94,13 +118,13 @@ public class ExShowScreenMessage extends NpcStringContainer
 		writeD(_type); // 0 - system messages, 1 - your defined text
 		writeD(_sysMessageId); // system message id (_type must be 0 otherwise no effect)
 		writeD(_text_align.ordinal() + 1);
-		writeD(0x00); // ?
+		writeD(_unk1);
 		writeD(_big_font ? 0 : 1);
-		writeD(0x00); // ?
-		writeD(_unk); // ?
+		writeD(_unk2);
+		writeD(_unk3);
 		writeD(_effect ? 1 : 0); // upper effect (0 - disabled, 1 enabled) - _position must be 2 (center) otherwise no effect
 		writeD(_time);
-		writeD(0x01); // ?
+		writeD(_fade ? 0x01 : 0x00);
 		writeElements();
 	}
 }

@@ -21,12 +21,9 @@ public class RequestSetPledgeCrestLarge extends L2GameClientPacket
 {
 	private int _length;
 	private byte[] _data;
-	private final int _request;
-	
-	public RequestSetPledgeCrestLarge(int i)
-	{
-		_request = i;
-	}
+	private int _request;
+	@SuppressWarnings("unused")
+	private int _total;
 	
 	private byte[] concatenateByteArrays(byte[] a, byte[] b)
 	{
@@ -42,8 +39,9 @@ public class RequestSetPledgeCrestLarge extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		readD();
-		_length = readD();
+		_request = readD(); // _data index 0/1/2/3/4
+		_total = readD(); // _length-Total 14336*4+8320=65664
+		_length = readD();// _length-Split 14336/14336/14336/14336/8320
 		
 		if ((_length != 0) && (_length == _buf.remaining()))
 		{

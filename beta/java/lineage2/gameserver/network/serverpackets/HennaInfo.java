@@ -24,6 +24,8 @@ public class HennaInfo extends L2GameServerPacket
 	private final int _int;
 	private final int _wit;
 	private final int _men;
+	private final int _luc;
+	private final int _cha;
 	private int _count;
 	
 	public HennaInfo(Player player)
@@ -45,20 +47,22 @@ public class HennaInfo extends L2GameServerPacket
 		_int = player.getHennaStatINT();
 		_wit = player.getHennaStatWIT();
 		_men = player.getHennaStatMEN();
+		_luc = player.getHennaStatLUC();
+		_cha = player.getHennaStatCHA();
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
-		writeC(0xe5);
+		writeC(0xE5);
 		writeC(_int); // equip INT
 		writeC(_str); // equip STR
 		writeC(_con); // equip CON
 		writeC(_men); // equip MEM
 		writeC(_dex); // equip DEX
 		writeC(_wit); // equip WIT
-		writeC(0); // equip New-1
-		writeC(0); // equip New-2
+		writeC(_luc); // equip LUC
+		writeC(_cha); // equip CHA
 		writeD(3); // interlude, slots?
 		writeD(_count);
 		for (int i = 0; i < _count; i++)

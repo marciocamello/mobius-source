@@ -38,6 +38,8 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 	private final int _int;
 	private final int _wit;
 	private final int _men;
+	private final int _luc;
+	private final int _cha;
 	private final int _sp;
 	private final int curHp;
 	private final int maxHp;
@@ -115,6 +117,8 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		_int = cha.getINT();
 		_wit = cha.getWIT();
 		_men = cha.getMEN();
+		_luc = 0 /* cha.getLUC() */;
+		_cha = 0 /* cha.getCHA() */;
 		curHp = (int) cha.getCurrentHp();
 		maxHp = cha.getMaxHp();
 		curMp = (int) cha.getCurrentMp();
@@ -193,6 +197,7 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x95);
+		
 		writeD(_loc.getX());
 		writeD(_loc.getY());
 		writeD(_loc.getZ());
@@ -211,6 +216,8 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		writeD(_int);
 		writeD(_wit);
 		writeD(_men);
+		writeD(_luc);
+		writeD(_cha);
 		writeD(maxHp);
 		writeD(curHp);
 		writeD(maxMp);
@@ -224,19 +231,42 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		{
 			writeD(_inv[PAPERDOLL_ID][0]);
 		}
+		writeD(0); // 603
+		writeD(0); // 603
+		writeD(0); // 603
+		writeD(0); // 603
+		writeD(0); // 603
+		writeD(0); // 603
+		writeD(0); // 603
 		
 		for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
 		{
 			writeD(_inv[PAPERDOLL_ID][1]);
 		}
+		writeD(0); // 603
+		writeD(0); // 603
+		writeD(0); // 603
+		writeD(0); // 603
+		writeD(0); // 603
+		writeD(0); // 603
+		writeD(0); // 603
 		
 		for (int PAPERDOLL_ID : Inventory.PAPERDOLL_ORDER)
 		{
 			writeD(_inv[PAPERDOLL_ID][2]);
 		}
+		writeD(0); // 603
+		writeD(0); // 603
+		writeD(0); // 603
+		writeD(0); // 603
+		writeD(0); // 603
+		writeD(0); // 603
+		writeD(0); // 603
 		
 		writeD(talismans);
 		writeD(openCloak ? 0x01 : 0x00);
+		writeD(0x00); // 603
+		writeH(0x00); // 603
 		writeD(_patk);
 		writeD(_patkspd);
 		writeD(_pdef);
@@ -244,11 +274,18 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		writeD(accuracy);
 		writeD(crit);
 		writeD(_matk);
+		
 		writeD(_matkspd);
 		writeD(_patkspd);
 		writeD(_mdef);
-		writeD(pvp_flag);
+		
+		writeD(evasion); // 603-Magic tEvasionRate
+		writeD(accuracy); // 603-Magic Accuracy
+		writeD(crit); // 603-Magic MCriticalHit
+		
+		writeD(pvp_flag); // 0-non-pvp 1-pvp = violett name
 		writeD(karma);
+		
 		writeD(_runSpd);
 		writeD(_walkSpd);
 		writeD(_swimSpd); // swimspeed
@@ -257,6 +294,7 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		writeD(_walkSpd);
 		writeD(_runSpd);
 		writeD(_walkSpd);
+		
 		writeF(move_speed);
 		writeF(attack_speed);
 		writeF(col_radius);
@@ -297,5 +335,7 @@ public class GMViewCharacterInfo extends L2GameServerPacket
 		writeH(defenceUnholy);
 		writeD(fame);
 		writeD(vitality);
+		writeD(0); // 603
+		writeD(0); // 603
 	}
 }

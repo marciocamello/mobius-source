@@ -20,8 +20,10 @@ import lineage2.gameserver.model.entity.residence.Fortress;
  */
 public class ExShowFortressSiegeInfo extends L2GameServerPacket
 {
+	@SuppressWarnings("unused")
 	private final int _fortressId;
 	private final int _commandersMax;
+	@SuppressWarnings("unused")
 	private int _commandersCurrent;
 	
 	public ExShowFortressSiegeInfo(Fortress fortress)
@@ -46,8 +48,9 @@ public class ExShowFortressSiegeInfo extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0x17);
-		writeD(_fortressId);
-		writeD(_commandersMax);
-		writeD(_commandersCurrent);
+		writeH(0x00);
+		// writeD(_fortressId);
+		// writeD(_commandersMax);
+		// writeD(_commandersCurrent);
 	}
 }

@@ -38,11 +38,11 @@ public class ExFishingStart extends L2GameServerPacket
 	{
 		writeEx(0x1e);
 		writeD(_charObjId);
-		writeD(_fishType); // fish type
+		writeC(_fishType); // fish type
 		writeD(_loc.getX()); // x poisson
 		writeD(_loc.getY()); // y poisson
 		writeD(_loc.getZ()); // z poisson
 		writeC(_isNightLure ? 0x01 : 0x00); // 0 = day lure 1 = night lure
-		writeC(0x01); // result Button
+		// writeC(0x01); // result Button
 	}
 }

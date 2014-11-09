@@ -46,5 +46,6 @@ public class PartyRoomInfo extends L2GameServerPacket
 		writeD(_lootDist); // loot distribution 1-Random 2-Random includ. etc
 		writeD(_location); // location
 		writeS(_title); // room name
+		writeH(0x105); // 603 // Unknown
 	}
 }

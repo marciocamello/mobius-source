@@ -51,11 +51,9 @@ public class ExQuestItemList extends AbstractItemPacket
 		}
 		
 		writeH(_lockItems.length);
-		
 		if (_lockItems.length > 0)
 		{
 			writeC(_lockType.ordinal());
-			
 			for (int i : _lockItems)
 			{
 				writeD(i);

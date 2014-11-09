@@ -30,6 +30,8 @@ import lineage2.gameserver.utils.Log;
 public class RequestCrystallizeItem extends L2GameClientPacket
 {
 	private int _objectId;
+	@SuppressWarnings("unused")
+	private long _count;
 	
 	/**
 	 * Method readImpl.
@@ -38,7 +40,7 @@ public class RequestCrystallizeItem extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_objectId = readD();
-		readQ();
+		_count = readQ();
 	}
 	
 	/**

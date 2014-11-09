@@ -2674,6 +2674,24 @@ public abstract class Creature extends GameObject
 	}
 	
 	/**
+	 * Method getLUC.
+	 * @return int
+	 */
+	public int getLUC()
+	{
+		return (int) calcStat(Stats.STAT_LUC, _template.getBaseAttr().getLUC(), null, null);
+	}
+	
+	/**
+	 * Method getCHA.
+	 * @return int
+	 */
+	public int getCHA()
+	{
+		return (int) calcStat(Stats.STAT_CHA, _template.getBaseAttr().getCHA(), null, null);
+	}
+	
+	/**
 	 * Method getAroundCharacters.
 	 * @param radius int
 	 * @param height int
@@ -4663,7 +4681,6 @@ public abstract class Creature extends GameObject
 		{
 			skillId = getCastingSkill().getId();
 			
-			// TODO: CHAIN SKILL MINOR FIX
 			if (getCastingSkill().isAlterSkill())
 			{
 				if (getCastingTarget().isAirBinded())
@@ -4675,7 +4692,6 @@ public abstract class Creature extends GameObject
 					getCastingTarget().getEffectList().stopEffects(EffectType.KnockDown);
 				}
 			}
-			// ----------------
 		}
 		
 		clearCastVars();

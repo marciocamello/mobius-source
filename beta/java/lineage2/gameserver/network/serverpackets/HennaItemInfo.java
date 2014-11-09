@@ -23,6 +23,8 @@ public class HennaItemInfo extends L2GameServerPacket
 	private final int _int;
 	private final int _wit;
 	private final int _men;
+	private final int _luc;
+	private final int _cha;
 	private final int _valid;
 	private final long _adena;
 	private final Henna _henna;
@@ -38,6 +40,8 @@ public class HennaItemInfo extends L2GameServerPacket
 		_int = player.getINT();
 		_wit = player.getWIT();
 		_men = player.getMEN();
+		_luc = player.getLUC();
+		_cha = player.getCHA();
 	}
 	
 	@Override
@@ -62,10 +66,10 @@ public class HennaItemInfo extends L2GameServerPacket
 		writeC(_dex + _henna.getStatDEX()); // equip DEX
 		writeD(_wit); // current WIT
 		writeC(_wit + _henna.getStatWIT()); // equip WIT
-		writeD(0); // current New-1
-		writeC(0); // equip New-1
-		writeD(0); // current New-2
-		writeC(0); // equip New-2
+		writeD(_luc); // current LUC
+		writeC(_luc + _henna.getStatLUC()); // unequip LUC
+		writeD(_cha); // current CHA
+		writeC(_cha + _henna.getStatCHA()); // unequip CHA
 		writeD(0x00);
 	}
 }

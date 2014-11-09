@@ -66,7 +66,8 @@ public class ExOlympiadSpelledInfo extends L2GameServerPacket
 		{
 			writeD(temp.skillId);
 			writeH(temp.level);
-			writeD(temp.duration);
+			writeD(0);
+			writeH(temp.duration);
 		}
 	}
 }

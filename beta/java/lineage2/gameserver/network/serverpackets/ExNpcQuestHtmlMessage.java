@@ -82,6 +82,7 @@ public class ExNpcQuestHtmlMessage extends NpcHtmlMessage
 		_html = playername.matcher(_html).replaceAll(player.getName());
 		player.cleanBypasses(false);
 		_html = player.encodeBypasses(_html, false);
+		
 		writeEx(0x8E);
 		writeD(_npcObjId);
 		writeS(_html);

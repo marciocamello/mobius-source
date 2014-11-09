@@ -34,6 +34,8 @@ import lineage2.gameserver.templates.item.ItemTemplate;
 public class RequestEnchantItemAttribute extends L2GameClientPacket
 {
 	private int _objectId;
+	@SuppressWarnings("unused")
+	private long _unk;
 	
 	/**
 	 * Method readImpl.
@@ -42,6 +44,7 @@ public class RequestEnchantItemAttribute extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_objectId = readD();
+		_unk = readQ();
 	}
 	
 	/**

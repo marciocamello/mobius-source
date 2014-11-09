@@ -674,7 +674,7 @@ public final class VillageMasterInstance extends NpcInstance
 			}
 			
 			PledgeShowInfoUpdate pu = new PledgeShowInfoUpdate(clan);
-			PledgeStatusChanged ps = new PledgeStatusChanged(clan);
+			PledgeStatusChanged ps = new PledgeStatusChanged(player);
 			
 			for (UnitMember mbr : clan)
 			{

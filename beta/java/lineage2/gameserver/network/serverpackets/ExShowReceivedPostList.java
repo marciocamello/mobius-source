@@ -40,17 +40,8 @@ public class ExShowReceivedPostList extends L2GameServerPacket
 		for (Mail mail : mails)
 		{
 			writeD(mail.getType().ordinal());
-			
-			if (mail.getType() == Mail.SenderType.SYSTEM)
-			{
-				writeD(mail.getSystemMsg1());
-				writeD(mail.getMessageId());
-			}
-			else
-			{
-				writeD(mail.getMessageId());
-			}
-			
+			// writeD(mail.getType() == Mail.SenderType.SYSTEM ? mail.getSystemMsg1() : 0x00); TODO: Test this !!!
+			writeD(mail.getMessageId());
 			writeS(mail.getTopic());
 			writeS(mail.getSenderName());
 			writeD(mail.isPayOnDelivery() ? 1 : 0);

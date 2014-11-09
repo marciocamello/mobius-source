@@ -18,9 +18,6 @@ import java.util.List;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.quest.QuestState;
 
-/**
- * format: h[dd]b
- */
 public class QuestList extends L2GameServerPacket
 {
 	/**
@@ -47,7 +44,8 @@ public class QuestList extends L2GameServerPacket
 				questlist.add(new int[]
 				{
 					quest.getQuest().getId(),
-					quest.getInt(QuestState.VAR_COND)
+					quest.getInt(QuestState.VAR_COND),
+					0x00
 				});
 			}
 		}
@@ -62,7 +60,8 @@ public class QuestList extends L2GameServerPacket
 		for (int[] q : questlist)
 		{
 			writeD(q[0]);
-			writeD(q[1]);
+			writeH(q[1]);
+			writeH(q[2]); // 603 - targetNpcId ???
 		}
 		
 		writeB(unk);

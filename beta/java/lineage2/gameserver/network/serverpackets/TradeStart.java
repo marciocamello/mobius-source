@@ -23,10 +23,12 @@ public class TradeStart extends AbstractItemPacket
 {
 	private final List<ItemInfo> _tradelist = new ArrayList<>();
 	private final int targetId;
+	private final int level;
 	
 	public TradeStart(Player player, Player target)
 	{
 		targetId = target.getObjectId();
+		level = target.getLevel();
 		ItemInstance[] items = player.getInventory().getItems();
 		
 		for (ItemInstance item : items)
@@ -43,6 +45,9 @@ public class TradeStart extends AbstractItemPacket
 	{
 		writeC(0x14);
 		writeD(targetId);
+		writeC(0x01);
+		writeC(level);
+		
 		writeH(_tradelist.size());
 		
 		for (ItemInfo item : _tradelist)

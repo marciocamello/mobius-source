@@ -60,6 +60,6 @@ public class SocialAction extends L2GameServerPacket
 		writeC(0x27);
 		writeD(_playerId);
 		writeD(_actionId);
-		writeD(_unk);
+		writeD(_unk); // TODO: Test this !!!
 	}
 }

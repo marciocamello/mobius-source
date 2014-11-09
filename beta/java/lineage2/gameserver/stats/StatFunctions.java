@@ -198,7 +198,8 @@ public class StatFunctions
 		@Override
 		public void calc(Env env)
 		{
-			env.value *= BaseStats.STR.calcBonus(env.character) * env.character.getLevelMod();
+			// env.value *= BaseStats.STR.calcBonus(env.character) * env.character.getLevelMod();
+			env.value *= (BaseStats.STR.calcBonus(env.character) + BaseStats.CHA.calcBonus(env.character)) * env.character.getLevelMod(); // Ertheia
 		}
 	}
 	
@@ -224,7 +225,8 @@ public class StatFunctions
 		@Override
 		public void calc(Env env)
 		{
-			double ib = BaseStats.INT.calcBonus(env.character);
+			// double ib = BaseStats.INT.calcBonus(env.character);
+			double ib = BaseStats.INT.calcBonus(env.character) + BaseStats.CHA.calcBonus(env.character); // Ertheia
 			double lvlb = env.character.getLevelMod();
 			env.value *= lvlb * lvlb * ib * ib;
 		}
@@ -252,7 +254,8 @@ public class StatFunctions
 		@Override
 		public void calc(Env env)
 		{
-			env.value *= env.character.getLevelMod();
+			// env.value *= env.character.getLevelMod();
+			env.value *= env.character.getLevelMod() * BaseStats.CHA.calcBonus(env.character); // Ertheia
 		}
 	}
 	
@@ -278,7 +281,8 @@ public class StatFunctions
 		@Override
 		public void calc(Env env)
 		{
-			env.value *= BaseStats.MEN.calcBonus(env.character) * env.character.getLevelMod();
+			// env.value *= BaseStats.MEN.calcBonus(env.character) * env.character.getLevelMod();
+			env.value *= (BaseStats.MEN.calcBonus(env.character) + BaseStats.CHA.calcBonus(env.character)) * env.character.getLevelMod(); // Ertheia
 		}
 	}
 	
@@ -561,7 +565,8 @@ public class StatFunctions
 		@Override
 		public void calc(Env env)
 		{
-			env.value *= BaseStats.DEX.calcBonus(env.character);
+			// env.value *= BaseStats.DEX.calcBonus(env.character);
+			env.value *= BaseStats.DEX.calcBonus(env.character) + BaseStats.CHA.calcBonus(env.character);
 		}
 	}
 	
@@ -587,7 +592,8 @@ public class StatFunctions
 		@Override
 		public void calc(Env env)
 		{
-			env.value *= BaseStats.WIT.calcBonus(env.character);
+			// env.value *= BaseStats.WIT.calcBonus(env.character);
+			env.value *= BaseStats.WIT.calcBonus(env.character) + BaseStats.CHA.calcBonus(env.character);
 		}
 	}
 	
@@ -777,6 +783,62 @@ public class StatFunctions
 		}
 	}
 	
+	private static class FuncHennaLUC extends Func
+	{
+		static final FuncHennaLUC func = new FuncHennaLUC();
+		
+		/**
+		 * Constructor for FuncHennaLUC.
+		 */
+		private FuncHennaLUC()
+		{
+			super(Stats.STAT_LUC, 0x10, null);
+		}
+		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
+		@Override
+		public void calc(Env env)
+		{
+			Player pc = (Player) env.character;
+			
+			if (pc != null)
+			{
+				env.value = Math.max(1, env.value + pc.getHennaStatLUC());
+			}
+		}
+	}
+	
+	private static class FuncHennaCHA extends Func
+	{
+		static final FuncHennaCHA func = new FuncHennaCHA();
+		
+		/**
+		 * Constructor for FuncHennaCHA.
+		 */
+		private FuncHennaCHA()
+		{
+			super(Stats.STAT_CHA, 0x10, null);
+		}
+		
+		/**
+		 * Method calc.
+		 * @param env Env
+		 */
+		@Override
+		public void calc(Env env)
+		{
+			Player pc = (Player) env.character;
+			
+			if (pc != null)
+			{
+				env.value = Math.max(1, env.value + pc.getHennaStatCHA());
+			}
+		}
+	}
+	
 	/**
 	 * @author Mobius
 	 */
@@ -799,7 +861,8 @@ public class StatFunctions
 		@Override
 		public void calc(Env env)
 		{
-			env.value *= BaseStats.CON.calcBonus(env.character);
+			// env.value *= BaseStats.CON.calcBonus(env.character);
+			env.value *= BaseStats.CON.calcBonus(env.character) + BaseStats.CHA.calcBonus(env.character);
 		}
 	}
 	
@@ -825,7 +888,8 @@ public class StatFunctions
 		@Override
 		public void calc(Env env)
 		{
-			env.value *= BaseStats.CON.calcBonus(env.character);
+			// env.value *= BaseStats.CON.calcBonus(env.character);
+			env.value *= BaseStats.CON.calcBonus(env.character) + BaseStats.CHA.calcBonus(env.character);
 		}
 	}
 	
@@ -851,7 +915,8 @@ public class StatFunctions
 		@Override
 		public void calc(Env env)
 		{
-			env.value *= BaseStats.MEN.calcBonus(env.character);
+			// env.value *= BaseStats.MEN.calcBonus(env.character);
+			env.value *= BaseStats.MEN.calcBonus(env.character) + BaseStats.CHA.calcBonus(env.character);
 		}
 	}
 	
@@ -1827,6 +1892,8 @@ public class StatFunctions
 			cha.addStatFunc(FuncHennaMEN.func);
 			cha.addStatFunc(FuncHennaCON.func);
 			cha.addStatFunc(FuncHennaWIT.func);
+			cha.addStatFunc(FuncHennaLUC.func);
+			cha.addStatFunc(FuncHennaCHA.func);
 			cha.addStatFunc(FuncInventory.func);
 			cha.addStatFunc(FuncWarehouse.func);
 			cha.addStatFunc(FuncTradeLimit.func);

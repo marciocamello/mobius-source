@@ -12,20 +12,36 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+/**
+ * @author UnAfraid
+ */
 public class ExChangeClientEffectInfo extends L2GameServerPacket
 {
-	private final int _state;
+	public static final ExChangeClientEffectInfo STATIC_FREYA_DEFAULT = new ExChangeClientEffectInfo(1);
+	public static final ExChangeClientEffectInfo STATIC_FREYA_DESTROYED = new ExChangeClientEffectInfo(2);
+	
+	private final int _type, _key, _state;
 	
 	public ExChangeClientEffectInfo(int state)
 	{
 		_state = state;
+		_type = 0;
+		_key = 0;
+	}
+	
+	public ExChangeClientEffectInfo(int type, int key, int state)
+	{
+		_state = state;
+		_type = type;
+		_key = key;
 	}
 	
 	@Override
 	protected void writeImpl()
 	{
 		writeEx(0xC3);
-		writeD(0);
+		writeD(_type);
+		writeD(_key);
 		writeD(_state);
 	}
 }

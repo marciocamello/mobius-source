@@ -12,25 +12,30 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import lineage2.gameserver.dao.CharacterDAO;
+import lineage2.gameserver.model.Player;
 
 /**
  * @author Smo
  */
 public class ExBlockAddResult extends L2GameServerPacket
 {
-	private final int objId;
+	private final String _name;
+	private final int _blocked;
 	
-	public ExBlockAddResult(int OID)
+	public ExBlockAddResult(Player cha, boolean blocked)
 	{
-		objId = OID;
+		_blocked = blocked ? 1 : 0;
+		_name = cha.getName();
 	}
 	
 	@Override
 	protected void writeImpl()
 	{
 		writeEx(0xED);
-		writeD(0x00);
-		writeS(CharacterDAO.getInstance().getNameByObjectId(objId));
+		writeD(_blocked);
+		if (_blocked > 0)
+		{
+			writeS(_name);
+		}
 	}
 }

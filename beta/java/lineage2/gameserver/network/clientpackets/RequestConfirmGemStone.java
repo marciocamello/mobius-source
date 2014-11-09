@@ -83,6 +83,6 @@ public class RequestConfirmGemStone extends AbstractRefinePacket
 			return;
 		}
 		
-		activeChar.sendPacket(new ExPutCommissionResultForVariationMake(_gemstoneItemObjId, _gemstoneCount), new SystemMessage(SystemMessage.PRESS_THE_AUGMENT_BUTTON_TO_BEGIN));
+		activeChar.sendPacket(new ExPutCommissionResultForVariationMake(_gemstoneItemObjId, gemstoneItem.getId(), _gemstoneCount), new SystemMessage(SystemMessage.PRESS_THE_AUGMENT_BUTTON_TO_BEGIN));
 	}
 }

@@ -61,6 +61,7 @@ public class RequestConfirmTargetItem extends AbstractRefinePacket
 			return;
 		}
 		
-		activeChar.sendPacket(new ExPutItemResultForVariationMake(_itemObjId), new SystemMessage(SystemMessage.SELECT_THE_CATALYST_FOR_AUGMENTATION));
+		int itemId = item.getId();
+		activeChar.sendPacket(new ExPutItemResultForVariationMake(_itemObjId, itemId), new SystemMessage(SystemMessage.SELECT_THE_CATALYST_FOR_AUGMENTATION));
 	}
 }

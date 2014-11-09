@@ -109,6 +109,8 @@ public abstract class Inventory extends ItemContainer
 		Inventory.PAPERDOLL_STONE6
 	};
 	
+	public static final int ADENA_ID = 57;
+	
 	/**
 	 * @author Mobius
 	 */

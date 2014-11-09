@@ -55,7 +55,7 @@ public class CharTemplate
 	 */
 	public CharTemplate(StatsSet set)
 	{
-		_baseAttr = new StatAttributes(set.getInteger("baseINT", 0), set.getInteger("baseSTR", 0), set.getInteger("baseCON", 0), set.getInteger("baseMEN", 0), set.getInteger("baseDEX", 0), set.getInteger("baseWIT", 0));
+		_baseAttr = new StatAttributes(set.getInteger("baseINT", 0), set.getInteger("baseSTR", 0), set.getInteger("baseCON", 0), set.getInteger("baseMEN", 0), set.getInteger("baseDEX", 0), set.getInteger("baseWIT", 0), set.getInteger("baseLUC", 0), set.getInteger("baseCHA", 0));
 		_baseHpMax = set.getDouble("baseHpMax", 0);
 		_baseCpMax = set.getDouble("baseCpMax", 0);
 		_baseMpMax = set.getDouble("baseMpMax", 0);
@@ -339,6 +339,8 @@ public class CharTemplate
 		npcDat.set("baseINT", 0);
 		npcDat.set("baseWIT", 0);
 		npcDat.set("baseMEN", 0);
+		npcDat.set("baseLUC", 0);
+		npcDat.set("baseCHA", 0);
 		npcDat.set("baseHpMax", 0);
 		npcDat.set("baseCpMax", 0);
 		npcDat.set("baseMpMax", 0);

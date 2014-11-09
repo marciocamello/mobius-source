@@ -445,6 +445,8 @@ public final class Player extends Playable implements PlayerGroup
 	private int _hennaMEN;
 	private int _hennaWIT;
 	private int _hennaCON;
+	private int _hennaLUC;
+	private int _hennaCHA;
 	private Party _party;
 	private Location _lastPartyPosition;
 	private Clan _clan;
@@ -2582,6 +2584,26 @@ public final class Player extends Playable implements PlayerGroup
 	}
 	
 	/**
+	 * Method getLUC.
+	 * @return int
+	 */
+	@Override
+	public int getLUC()
+	{
+		return Math.max(getTemplate().getMinAttr().getLUC(), Math.min(getTemplate().getMaxAttr().getLUC(), super.getLUC()));
+	}
+	
+	/**
+	 * Method getCHA.
+	 * @return int
+	 */
+	@Override
+	public int getCHA()
+	{
+		return Math.max(getTemplate().getMinAttr().getCHA(), Math.min(getTemplate().getMaxAttr().getCHA(), super.getCHA()));
+	}
+	
+	/**
 	 * Method getMaxCp.
 	 * @return int
 	 */
@@ -4031,7 +4053,7 @@ public final class Player extends Playable implements PlayerGroup
 			return;
 		}
 		
-		sendPacket(new UserInfo(this), new ExBR_ExtraUserInfo(this));
+		sendPacket(new UserInfo(this));
 		DominionSiegeEvent siegeEvent = getEvent(DominionSiegeEvent.class);
 		if (siegeEvent != null)
 		{
@@ -7696,6 +7718,8 @@ public final class Player extends Playable implements PlayerGroup
 		_hennaMEN = 0;
 		_hennaWIT = 0;
 		_hennaDEX = 0;
+		_hennaLUC = 0;
+		_hennaCHA = 0;
 		
 		for (int i = 0; i < 3; i++)
 		{
@@ -7717,6 +7741,8 @@ public final class Player extends Playable implements PlayerGroup
 			_hennaCON += henna.getStatCON();
 			_hennaWIT += henna.getStatWIT();
 			_hennaDEX += henna.getStatDEX();
+			_hennaLUC += henna.getStatLUC();
+			_hennaCHA += henna.getStatCHA();
 		}
 		
 		if (_hennaINT > 15)
@@ -7747,6 +7773,16 @@ public final class Player extends Playable implements PlayerGroup
 		if (_hennaDEX > 15)
 		{
 			_hennaDEX = 15;
+		}
+		
+		if (_hennaLUC > 15)
+		{
+			_hennaLUC = 15;
+		}
+		
+		if (_hennaCHA > 15)
+		{
+			_hennaCHA = 15;
 		}
 	}
 	
@@ -7817,6 +7853,24 @@ public final class Player extends Playable implements PlayerGroup
 	public int getHennaStatDEX()
 	{
 		return _hennaDEX;
+	}
+	
+	/**
+	 * Method getHennaStatLUC.
+	 * @return int
+	 */
+	public int getHennaStatLUC()
+	{
+		return _hennaLUC;
+	}
+	
+	/**
+	 * Method getHennaStatCHA.
+	 * @return int
+	 */
+	public int getHennaStatCHA()
+	{
+		return _hennaCHA;
 	}
 	
 	/**
@@ -8543,6 +8597,7 @@ public final class Player extends Playable implements PlayerGroup
 			updateTargetSelectionInfo();
 		}
 		
+		// TODO: Test this !!
 		sendUserInfo();
 		
 		for (Summon summon : getSummonList())
@@ -14185,7 +14240,7 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			if (magic)
 			{
-                sendPacket(new ExMagicAttackInfo(this, target, 1));
+				sendPacket(new ExMagicAttackInfo(this, target, 1));
 				sendPacket(new SystemMessage(SystemMessage.MAGIC_CRITICAL_HIT).addName(this));
 			}
 			else

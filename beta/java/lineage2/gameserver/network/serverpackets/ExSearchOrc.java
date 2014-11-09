@@ -15,6 +15,7 @@ package lineage2.gameserver.network.serverpackets;
 public class ExSearchOrc extends L2GameServerPacket
 {
 	// bchb
+	@SuppressWarnings("unused")
 	private final static byte[] _test =
 	{
 		(byte) 0xE4,
@@ -88,6 +89,6 @@ public class ExSearchOrc extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeEx(0x46);
-		writeB(_test);
+		// writeB(_test);
 	}
 }

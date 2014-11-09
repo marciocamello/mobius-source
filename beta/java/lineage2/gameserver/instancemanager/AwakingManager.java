@@ -441,7 +441,7 @@ public class AwakingManager implements OnPlayerEnterListener
 		}
 		
 		int newClass = _CA.get(player.getClassId().getId());
-		player.sendPacket(new ExCallToChangeClass(newClass, false));
+		player.sendPacket(new ExCallToChangeClass(newClass, true, false));
 	}
 	
 	/**
@@ -712,7 +712,7 @@ public class AwakingManager implements OnPlayerEnterListener
 		player.sendSkillList();
 	}
 	
-	public void checkAwakenPlayerSkills(Player player) // For check on subclass change and logon
+	public void checkAwakenPlayerSkills(Player player) // For check on subclass change and logon.
 	{
 		int classId = player.getActiveClassId();
 		boolean delete = false;
@@ -729,7 +729,7 @@ public class AwakingManager implements OnPlayerEnterListener
 		SkillsCheck.addAll(SkillAcquireHolder.getInstance().getAwakenClassSkillForCheck(classId));
 		SkillsCheck.addAll(SkillAcquireHolder.getInstance().getAllAwakenSkillsByClass(classId));
 		
-		if (player.getTransformation() == 0) // if the character log on with a transformation, do not remove any skill
+		if (player.getTransformation() == 0) // if the character log on with a transformation, do not remove any skill.
 		{
 			for (Skill skl : player.getAllSkills())
 			{
@@ -788,7 +788,7 @@ public class AwakingManager implements OnPlayerEnterListener
 		if (player.getActiveSubClass().isBase() || player.getActiveSubClass().isDual())
 		{
 			player.sendPacket(new ExShowUsmVideo(ExShowUsmVideo.Q010));
-			player.sendPacket(new ExCallToChangeClass(_CA.get(player.getClassId().getId()), true));
+			player.sendPacket(new ExCallToChangeClass(_CA.get(player.getClassId().getId()), true, true));
 		}
 	}
 	

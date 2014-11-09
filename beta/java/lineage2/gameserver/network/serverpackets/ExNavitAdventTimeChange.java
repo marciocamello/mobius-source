@@ -27,7 +27,7 @@ public class ExNavitAdventTimeChange extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeEx(0xE5);
-		writeC(_active);
-		writeD(_time); // in minutes
+		writeC(_active); // state 0 - pause 1 - started
+		writeD(_time); // left time in minutes and state is automatically changed to quit
 	}
 }

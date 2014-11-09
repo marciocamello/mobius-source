@@ -15,14 +15,14 @@ package lineage2.gameserver.network.serverpackets;
 public class ExPutItemResultForVariationMake extends L2GameServerPacket
 {
 	private final int _itemObjId;
+	private final int _itemId;
 	private final int _unk1;
-	private final int _unk2;
 	
-	public ExPutItemResultForVariationMake(int itemObjId)
+	public ExPutItemResultForVariationMake(int itemObjId, int itemId)
 	{
 		_itemObjId = itemObjId;
+		_itemId = itemId;
 		_unk1 = 1;
-		_unk2 = 1;
 	}
 	
 	@Override
@@ -30,7 +30,7 @@ public class ExPutItemResultForVariationMake extends L2GameServerPacket
 	{
 		writeEx(0x54);
 		writeD(_itemObjId);
+		writeD(_itemId);
 		writeD(_unk1);
-		writeD(_unk2);
 	}
 }

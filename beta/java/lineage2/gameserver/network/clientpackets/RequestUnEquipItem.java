@@ -21,7 +21,6 @@ import lineage2.gameserver.templates.item.ItemTemplate;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-@Deprecated
 public class RequestUnEquipItem extends L2GameClientPacket
 {
 	private int _slot;

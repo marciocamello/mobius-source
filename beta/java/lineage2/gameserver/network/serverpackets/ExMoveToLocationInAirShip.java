@@ -20,15 +20,16 @@ public class ExMoveToLocationInAirShip extends L2GameServerPacket
 {
 	private final int char_id;
 	private final int boat_id;
-	private final Location _origin;
 	private final Location _destination;
+	private final int _heading;
 	
 	public ExMoveToLocationInAirShip(Player cha, Boat boat, Location origin, Location destination)
 	{
 		char_id = cha.getObjectId();
+		_heading = cha.getHeading();
 		boat_id = boat.getBoatId();
-		_origin = origin;
 		_destination = destination;
+		
 	}
 	
 	@Override
@@ -40,8 +41,6 @@ public class ExMoveToLocationInAirShip extends L2GameServerPacket
 		writeD(_destination.getX());
 		writeD(_destination.getY());
 		writeD(_destination.getZ());
-		writeD(_origin.getX());
-		writeD(_origin.getY());
-		writeD(_origin.getZ());
+		writeD(_heading);
 	}
 }

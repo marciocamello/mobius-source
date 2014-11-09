@@ -15,18 +15,18 @@ package lineage2.gameserver.network.serverpackets;
 public class ExPutCommissionResultForVariationMake extends L2GameServerPacket
 {
 	private final int _gemstoneObjId;
-	private final int _unk1;
-	private final int _unk3;
+	private final int _itemId;
 	private final long _gemstoneCount;
-	private final long _unk2;
+	private final int _unk1;
+	private final int _unk2;
 	
-	public ExPutCommissionResultForVariationMake(int gemstoneObjId, long count)
+	public ExPutCommissionResultForVariationMake(int gemstoneObjId, int itemId, long count)
 	{
 		_gemstoneObjId = gemstoneObjId;
-		_unk1 = 1;
+		_itemId = itemId;
 		_gemstoneCount = count;
+		_unk1 = 0;
 		_unk2 = 1;
-		_unk3 = 1;
 	}
 	
 	@Override
@@ -34,9 +34,9 @@ public class ExPutCommissionResultForVariationMake extends L2GameServerPacket
 	{
 		writeEx(0x56);
 		writeD(_gemstoneObjId);
-		writeD(_unk1);
+		writeD(_itemId);
 		writeQ(_gemstoneCount);
-		writeQ(_unk2);
-		writeD(_unk3);
+		writeQ(_unk1);
+		writeD(_unk2);
 	}
 }

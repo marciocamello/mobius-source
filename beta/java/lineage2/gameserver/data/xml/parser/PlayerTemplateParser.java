@@ -161,7 +161,9 @@ public final class PlayerTemplateParser extends AbstractDirParser<PlayerTemplate
 							int men = Integer.parseInt(e.attributeValue("men"));
 							int dex = Integer.parseInt(e.attributeValue("dex"));
 							int wit = Integer.parseInt(e.attributeValue("wit"));
-							StatAttributes attr = new StatAttributes(_int, str, con, men, dex, wit);
+							int luc = Integer.parseInt(e.attributeValue("luc"));
+							int cha = Integer.parseInt(e.attributeValue("cha"));
+							StatAttributes attr = new StatAttributes(_int, str, con, men, dex, wit, luc, cha);
 							
 							if ("min_attributes".equalsIgnoreCase(e.getName()))
 							{

@@ -25,6 +25,6 @@ public class ExNavitAdventPointInfo extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeEx(0xE3);
-		writeD(_points);
+		writeD(_points); // 72 = 1%, max 7200 = 100%
 	}
 }

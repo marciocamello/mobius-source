@@ -287,6 +287,26 @@ public class CloneInstance extends ClonePlayer
 	}
 	
 	/**
+	 * Method getLUC.
+	 * @return int
+	 */
+	@Override
+	public int getLUC()
+	{
+		return _owner.getLUC();
+	}
+	
+	/**
+	 * Method getCHA.
+	 * @return int
+	 */
+	@Override
+	public int getCHA()
+	{
+		return _owner.getCHA();
+	}
+	
+	/**
 	 * Method getMAtk.
 	 * @param target Creature
 	 * @param skill Skill

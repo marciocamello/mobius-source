@@ -32,7 +32,7 @@ import org.apache.commons.lang3.StringUtils;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class RequestExReceivePost extends L2GameClientPacket
+public class RequestPostAttachment extends L2GameClientPacket
 {
 	private int postId;
 	

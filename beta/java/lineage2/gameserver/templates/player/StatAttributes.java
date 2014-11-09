@@ -24,6 +24,8 @@ public class StatAttributes
 	private int _men = 0;
 	private int _dex = 0;
 	private int _wit = 0;
+	private int _luc = 0;
+	private int _cha = 0;
 	
 	/**
 	 * Constructor for StatAttributes.
@@ -33,8 +35,10 @@ public class StatAttributes
 	 * @param men int
 	 * @param dex int
 	 * @param wit int
+	 * @param luc int
+	 * @param cha int
 	 */
-	public StatAttributes(int inte, int str, int con, int men, int dex, int wit)
+	public StatAttributes(int inte, int str, int con, int men, int dex, int wit, int luc, int cha)
 	{
 		_int = inte;
 		_str = str;
@@ -42,6 +46,8 @@ public class StatAttributes
 		_men = men;
 		_dex = dex;
 		_wit = wit;
+		_luc = luc;
+		_cha = cha;
 	}
 	
 	/**
@@ -96,5 +102,23 @@ public class StatAttributes
 	public int getWIT()
 	{
 		return _wit;
+	}
+	
+	/**
+	 * Method getLUC.
+	 * @return int
+	 */
+	public int getLUC()
+	{
+		return _luc;
+	}
+	
+	/**
+	 * Method getCHA.
+	 * @return int
+	 */
+	public int getCHA()
+	{
+		return _cha;
 	}
 }

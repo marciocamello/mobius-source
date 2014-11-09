@@ -135,7 +135,7 @@ public class AdminPledge implements IAdminCommandHandler, ScriptFile
 					}
 					
 					PledgeShowInfoUpdate pu = new PledgeShowInfoUpdate(clan);
-					PledgeStatusChanged ps = new PledgeStatusChanged(clan);
+					PledgeStatusChanged ps = new PledgeStatusChanged(target);
 					
 					for (Player member : clan.getOnlineMembers(0))
 					{

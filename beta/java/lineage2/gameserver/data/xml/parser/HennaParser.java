@@ -90,6 +90,8 @@ public final class HennaParser extends AbstractFileParser<HennaHolder>
 			int con = Integer.parseInt(hennaElement.attributeValue("con"));
 			int dex = Integer.parseInt(hennaElement.attributeValue("dex"));
 			int men = Integer.parseInt(hennaElement.attributeValue("men"));
+			int luc = Integer.parseInt(hennaElement.attributeValue("luc"));
+			int cha = Integer.parseInt(hennaElement.attributeValue("cha"));
 			int skillId = hennaElement.attributeValue("skillId") == null ? 0 : Integer.parseInt(hennaElement.attributeValue("skillId"));
 			TIntArrayList list = new TIntArrayList();
 			
@@ -99,7 +101,7 @@ public final class HennaParser extends AbstractFileParser<HennaHolder>
 				list.add(Integer.parseInt(classElement.attributeValue("id")));
 			}
 			
-			Henna henna = new Henna(symbolId, dyeId, price, drawCount, wit, _int, con, str, dex, men, skillId, list);
+			Henna henna = new Henna(symbolId, dyeId, price, drawCount, wit, _int, con, str, dex, men, luc, cha, skillId, list);
 			getHolder().addHenna(henna);
 		}
 	}

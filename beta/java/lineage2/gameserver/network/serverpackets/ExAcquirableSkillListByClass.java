@@ -50,14 +50,13 @@ public class ExAcquirableSkillListByClass extends L2GameServerPacket
 			}
 			
 			writeD(sk.getId());
-			writeH(sk.getLevel());
+			writeD(sk.getLevel());
 			writeQ(sk.getCost());
 			writeC(sk.getMinLevel());
-			writeC(0x00);
+			writeC(sk.getDualClassMinLvl());
 			
 			Map<Integer, Long> req = sk.getRequiredItems();
-			
-			writeC(req.size());
+			writeD(req.size());
 			for (Integer key : req.keySet())
 			{
 				writeD(key);
@@ -65,7 +64,6 @@ public class ExAcquirableSkillListByClass extends L2GameServerPacket
 			}
 			
 			Skill relskill = SkillTable.getInstance().getInfo(sk.getId(), sk.getLevel());
-			
 			if ((relskill != null) && relskill.isRelationSkill())
 			{
 				int[] _dels = relskill.getRelationSkills();
@@ -74,12 +72,12 @@ public class ExAcquirableSkillListByClass extends L2GameServerPacket
 				for (int skillId : _dels)
 				{
 					writeD(skillId); // skillId
-					writeH(SkillTable.getInstance().getBaseLevel(skillId)); // skillLvl
+					writeD(SkillTable.getInstance().getBaseLevel(skillId)); // skillLvl
 				}
 			}
 			else
 			{
-				writeC(0x00);
+				writeD(0x00);
 			}
 		}
 	}

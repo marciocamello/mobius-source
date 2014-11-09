@@ -43,6 +43,7 @@ public class GMViewSkillInfo extends L2GameServerPacket
 			writeD(skill.isPassive() ? 1 : 0);
 			writeD(skill.getDisplayLevel());
 			writeD(skill.getId());
+			writeD(-1); // 603
 			writeC(_targetChar.isUnActiveSkill(skill.getId()) ? 0x01 : 0x00);
 			writeC(SkillTable.getInstance().getMaxLevel(skill.getId()) > 100 ? 1 : 0);
 		}

@@ -18,6 +18,7 @@ import lineage2.gameserver.utils.Location;
 public class PetStatusUpdate extends L2GameServerPacket
 {
 	private final int type;
+	private final int type2;
 	private final int obj_id;
 	private final int level;
 	private final int maxFed;
@@ -32,7 +33,7 @@ public class PetStatusUpdate extends L2GameServerPacket
 	private final Location _loc;
 	private final String title;
 	
-	public PetStatusUpdate(final Summon summon)
+	public PetStatusUpdate(final Summon summon, int addType)
 	{
 		type = summon.getSummonType();
 		obj_id = summon.getObjectId();
@@ -48,13 +49,13 @@ public class PetStatusUpdate extends L2GameServerPacket
 		exp = summon.getExp();
 		exp_this_lvl = summon.getExpForThisLevel();
 		exp_next_lvl = summon.getExpForNextLevel();
+		type2 = addType;
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0xb6);
-		// dddddSdddddddQQQd
 		writeD(type);
 		writeD(obj_id);
 		writeD(_loc.getX());
@@ -71,6 +72,6 @@ public class PetStatusUpdate extends L2GameServerPacket
 		writeQ(exp);
 		writeQ(exp_this_lvl);// 0% absolute value
 		writeQ(exp_next_lvl);// 100% absolute value
-		writeD(0x00); // L2WT GoD...
+		writeD(type2);
 	}
 }

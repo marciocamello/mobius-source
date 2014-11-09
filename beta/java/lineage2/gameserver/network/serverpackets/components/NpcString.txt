@@ -11128,6 +11128,12 @@
 	IT_TELEPORTS_THE_GUARD_MEMBERS_OF_THE_SCHUTTGART_CASTLE_TO_THE_INSIDE_OF_THE_CASTLE(10004440),
 	// Text: It teleports the guard members of the Elmore Imperial Castle to the inside of the castle.
 	IT_TELEPORTS_THE_GUARD_MEMBERS_OF_THE_ELMORE_IMPERIAL_CASTLE_TO_THE_INSIDE_OF_THE_CASTLE(10004441),
+	// Text: You can't ride a kokaru now.
+	YOU_CANT_RIDE_A_KOOKARU_NOW(1811297),
+	// Text: Begin tutorial quest.
+	BEGIN_TUTORIAL_QUESTS(1600026),
+	// Text: Newbie helper has casted buffs on $s1.
+	NEWBIE_HELPER_HAS_CASTED_BUFFS_ON_S1(1600027),
 	// Text: Legendary Tales
 	LEGENDARY_TALES(25401),
 	// Text: Legendary Tales (In Progress)

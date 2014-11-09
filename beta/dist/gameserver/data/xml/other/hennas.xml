@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "hennas.dtd">
 <list>
-	<henna name="symbol_s+1c-3_d" symbol_id="1" dye_id="4445" price="5100" wit="0" int="0" men="0" dex="0" str="1" con="-3">
+	<henna name="symbol_s+1c-3_d" symbol_id="1" dye_id="4445" price="5100" wit="0" int="0" men="0" dex="0" str="1" con="-3" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -24,7 +24,7 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_s+1d-3_d" symbol_id="2" dye_id="4446" price="5100" wit="0" int="0" men="0" dex="-3" str="1" con="0">
+	<henna name="symbol_s+1d-3_d" symbol_id="2" dye_id="4446" price="5100" wit="0" int="0" men="0" dex="-3" str="1" con="0" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -47,7 +47,7 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_c+1s-3_d" symbol_id="3" dye_id="4447" price="5100" wit="0" int="0" men="0" dex="0" str="-3" con="1">
+	<henna name="symbol_c+1s-3_d" symbol_id="3" dye_id="4447" price="5100" wit="0" int="0" men="0" dex="0" str="-3" con="1" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -70,7 +70,7 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_c+1d-3_d" symbol_id="4" dye_id="4448" price="5100" wit="0" int="0" men="0" dex="-3" str="0" con="1">
+	<henna name="symbol_c+1d-3_d" symbol_id="4" dye_id="4448" price="5100" wit="0" int="0" men="0" dex="-3" str="0" con="1" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -93,7 +93,7 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_d+1s-3_d" symbol_id="5" dye_id="4449" price="5100" wit="0" int="0" men="0" dex="1" str="-3" con="0">
+	<henna name="symbol_d+1s-3_d" symbol_id="5" dye_id="4449" price="5100" wit="0" int="0" men="0" dex="1" str="-3" con="0" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -116,7 +116,7 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_d+1c-3_d" symbol_id="6" dye_id="4450" price="5100" wit="0" int="0" men="0" dex="1" str="0" con="-3">
+	<henna name="symbol_d+1c-3_d" symbol_id="6" dye_id="4450" price="5100" wit="0" int="0" men="0" dex="1" str="0" con="-3" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -139,13 +139,13 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_i+1m-3_d" symbol_id="7" dye_id="4451" price="5100" wit="0" int="1" men="-3" dex="0" str="0" con="0">
+	<henna name="symbol_i+1m-3_d" symbol_id="7" dye_id="4451" price="5100" wit="0" int="1" men="-3" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="10"/>
 		<class id="11"/>
 		<class id="26"/>
 		<class id="39"/>
 	</henna>
-	<henna name="symbol_i+1w-3_d" symbol_id="8" dye_id="4452" price="5100" wit="-3" int="1" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_i+1w-3_d" symbol_id="8" dye_id="4452" price="5100" wit="-3" int="1" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -164,13 +164,13 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_m+1i-3_d" symbol_id="9" dye_id="4453" price="5100" wit="0" int="-3" men="1" dex="0" str="0" con="0">
+	<henna name="symbol_m+1i-3_d" symbol_id="9" dye_id="4453" price="5100" wit="0" int="-3" men="1" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="10"/>
 		<class id="11"/>
 		<class id="26"/>
 		<class id="39"/>
 	</henna>
-	<henna name="symbol_m+1w-3_d" symbol_id="10" dye_id="4454" price="5100" wit="-3" int="0" men="1" dex="0" str="0" con="0">
+	<henna name="symbol_m+1w-3_d" symbol_id="10" dye_id="4454" price="5100" wit="-3" int="0" men="1" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="10"/>
 		<class id="11"/>
 		<class id="15"/>
@@ -180,7 +180,7 @@
 		<class id="42"/>
 		<class id="50"/>
 	</henna>
-	<henna name="symbol_w+1i-3_d" symbol_id="11" dye_id="4455" price="5100" wit="1" int="-3" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_w+1i-3_d" symbol_id="11" dye_id="4455" price="5100" wit="1" int="-3" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -199,7 +199,7 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_w+1m-3_d" symbol_id="12" dye_id="4456" price="5100" wit="1" int="0" men="-3" dex="0" str="0" con="0">
+	<henna name="symbol_w+1m-3_d" symbol_id="12" dye_id="4456" price="5100" wit="1" int="0" men="-3" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="10"/>
 		<class id="11"/>
 		<class id="15"/>
@@ -209,30 +209,7 @@
 		<class id="42"/>
 		<class id="50"/>
 	</henna>
-	<henna name="symbol_s+1c-2_d" symbol_id="13" dye_id="4457" price="12000" wit="0" int="0" men="0" dex="0" str="1" con="-2">
-		<class id="1"/>
-		<class id="4"/>
-		<class id="7"/>
-		<class id="10"/>
-		<class id="11"/>
-		<class id="15"/>
-		<class id="19"/>
-		<class id="22"/>
-		<class id="26"/>
-		<class id="29"/>
-		<class id="32"/>
-		<class id="35"/>
-		<class id="39"/>
-		<class id="42"/>
-		<class id="45"/>
-		<class id="47"/>
-		<class id="50"/>
-		<class id="54"/>
-		<class id="56"/>
-		<class id="125"/>
-		<class id="126"/>
-	</henna>
-	<henna name="symbol_s+1d-2_d" symbol_id="14" dye_id="4458" price="12000" wit="0" int="0" men="0" dex="-2" str="1" con="0">
+	<henna name="symbol_s+1c-2_d" symbol_id="13" dye_id="4457" price="12000" wit="0" int="0" men="0" dex="0" str="1" con="-2" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -255,7 +232,7 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_c+1s-2_d" symbol_id="15" dye_id="4459" price="12000" wit="0" int="0" men="0" dex="0" str="-2" con="1">
+	<henna name="symbol_s+1d-2_d" symbol_id="14" dye_id="4458" price="12000" wit="0" int="0" men="0" dex="-2" str="1" con="0" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -278,7 +255,7 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_c+1d-2_d" symbol_id="16" dye_id="4460" price="12000" wit="0" int="0" men="0" dex="-2" str="0" con="1">
+	<henna name="symbol_c+1s-2_d" symbol_id="15" dye_id="4459" price="12000" wit="0" int="0" men="0" dex="0" str="-2" con="1" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -301,7 +278,7 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_d+1s-2_d" symbol_id="17" dye_id="4461" price="12000" wit="0" int="0" men="0" dex="1" str="-2" con="0">
+	<henna name="symbol_c+1d-2_d" symbol_id="16" dye_id="4460" price="12000" wit="0" int="0" men="0" dex="-2" str="0" con="1" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -324,7 +301,7 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_d+1c-2_d" symbol_id="18" dye_id="4462" price="12000" wit="0" int="0" men="0" dex="1" str="0" con="-2">
+	<henna name="symbol_d+1s-2_d" symbol_id="17" dye_id="4461" price="12000" wit="0" int="0" men="0" dex="1" str="-2" con="0" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -347,77 +324,7 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_i+1m-2_d" symbol_id="19" dye_id="4463" price="12000" wit="0" int="1" men="-2" dex="0" str="0" con="0">
-		<class id="10"/>
-		<class id="11"/>
-		<class id="26"/>
-		<class id="39"/>
-	</henna>
-	<henna name="symbol_i+1w-2_d" symbol_id="20" dye_id="4464" price="12000" wit="-2" int="1" men="0" dex="0" str="0" con="0">
-		<class id="1"/>
-		<class id="4"/>
-		<class id="7"/>
-		<class id="10"/>
-		<class id="11"/>
-		<class id="19"/>
-		<class id="22"/>
-		<class id="26"/>
-		<class id="32"/>
-		<class id="35"/>
-		<class id="39"/>
-		<class id="45"/>
-		<class id="47"/>
-		<class id="54"/>
-		<class id="56"/>
-		<class id="125"/>
-		<class id="126"/>
-	</henna>
-	<henna name="symbol_m+1i-2_d" symbol_id="21" dye_id="4465" price="12000" wit="0" int="-2" men="1" dex="0" str="0" con="0">
-		<class id="10"/>
-		<class id="11"/>
-		<class id="26"/>
-		<class id="39"/>
-	</henna>
-	<henna name="symbol_m+1w-2_d" symbol_id="22" dye_id="4466" price="12000" wit="-2" int="0" men="1" dex="0" str="0" con="0">
-		<class id="10"/>
-		<class id="11"/>
-		<class id="15"/>
-		<class id="26"/>
-		<class id="29"/>
-		<class id="39"/>
-		<class id="42"/>
-		<class id="50"/>
-	</henna>
-	<henna name="symbol_w+1i-2_d" symbol_id="23" dye_id="4467" price="12000" wit="1" int="-2" men="0" dex="0" str="0" con="0">
-		<class id="1"/>
-		<class id="4"/>
-		<class id="7"/>
-		<class id="10"/>
-		<class id="11"/>
-		<class id="19"/>
-		<class id="22"/>
-		<class id="26"/>
-		<class id="32"/>
-		<class id="35"/>
-		<class id="39"/>
-		<class id="45"/>
-		<class id="47"/>
-		<class id="54"/>
-		<class id="56"/>
-		<class id="125"/>
-		<class id="126"/>
-	</henna>
-	<henna name="symbol_w+1m-2_d" symbol_id="24" dye_id="4468" price="12000" wit="1" int="0" men="-2" dex="0" str="0" con="0">
-		<class id="10"/>
-		<class id="11"/>
-		<class id="15"/>
-		<class id="26"/>
-		<class id="29"/>
-		<class id="39"/>
-		<class id="42"/>
-		<class id="50"/>
-	</henna>
-	<henna name="symbol_s+1c-1_d" symbol_id="25" dye_id="4469" price="35000" wit="0" int="0" men="0" dex="0" str="1" con="-1">
+	<henna name="symbol_d+1c-2_d" symbol_id="18" dye_id="4462" price="12000" wit="0" int="0" men="0" dex="1" str="0" con="-2" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -440,7 +347,77 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_s+1d-1_d" symbol_id="26" dye_id="4470" price="35000" wit="0" int="0" men="0" dex="-1" str="1" con="0">
+	<henna name="symbol_i+1m-2_d" symbol_id="19" dye_id="4463" price="12000" wit="0" int="1" men="-2" dex="0" str="0" con="0" luc="0" cha="0">
+		<class id="10"/>
+		<class id="11"/>
+		<class id="26"/>
+		<class id="39"/>
+	</henna>
+	<henna name="symbol_i+1w-2_d" symbol_id="20" dye_id="4464" price="12000" wit="-2" int="1" men="0" dex="0" str="0" con="0" luc="0" cha="0">
+		<class id="1"/>
+		<class id="4"/>
+		<class id="7"/>
+		<class id="10"/>
+		<class id="11"/>
+		<class id="19"/>
+		<class id="22"/>
+		<class id="26"/>
+		<class id="32"/>
+		<class id="35"/>
+		<class id="39"/>
+		<class id="45"/>
+		<class id="47"/>
+		<class id="54"/>
+		<class id="56"/>
+		<class id="125"/>
+		<class id="126"/>
+	</henna>
+	<henna name="symbol_m+1i-2_d" symbol_id="21" dye_id="4465" price="12000" wit="0" int="-2" men="1" dex="0" str="0" con="0" luc="0" cha="0">
+		<class id="10"/>
+		<class id="11"/>
+		<class id="26"/>
+		<class id="39"/>
+	</henna>
+	<henna name="symbol_m+1w-2_d" symbol_id="22" dye_id="4466" price="12000" wit="-2" int="0" men="1" dex="0" str="0" con="0" luc="0" cha="0">
+		<class id="10"/>
+		<class id="11"/>
+		<class id="15"/>
+		<class id="26"/>
+		<class id="29"/>
+		<class id="39"/>
+		<class id="42"/>
+		<class id="50"/>
+	</henna>
+	<henna name="symbol_w+1i-2_d" symbol_id="23" dye_id="4467" price="12000" wit="1" int="-2" men="0" dex="0" str="0" con="0" luc="0" cha="0">
+		<class id="1"/>
+		<class id="4"/>
+		<class id="7"/>
+		<class id="10"/>
+		<class id="11"/>
+		<class id="19"/>
+		<class id="22"/>
+		<class id="26"/>
+		<class id="32"/>
+		<class id="35"/>
+		<class id="39"/>
+		<class id="45"/>
+		<class id="47"/>
+		<class id="54"/>
+		<class id="56"/>
+		<class id="125"/>
+		<class id="126"/>
+	</henna>
+	<henna name="symbol_w+1m-2_d" symbol_id="24" dye_id="4468" price="12000" wit="1" int="0" men="-2" dex="0" str="0" con="0" luc="0" cha="0">
+		<class id="10"/>
+		<class id="11"/>
+		<class id="15"/>
+		<class id="26"/>
+		<class id="29"/>
+		<class id="39"/>
+		<class id="42"/>
+		<class id="50"/>
+	</henna>
+	<henna name="symbol_s+1c-1_d" symbol_id="25" dye_id="4469" price="35000" wit="0" int="0" men="0" dex="0" str="1" con="-1" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -463,7 +440,7 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_c+1s-1_d" symbol_id="27" dye_id="4471" price="35000" wit="0" int="0" men="0" dex="0" str="-1" con="1">
+	<henna name="symbol_s+1d-1_d" symbol_id="26" dye_id="4470" price="35000" wit="0" int="0" men="0" dex="-1" str="1" con="0" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -486,7 +463,7 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_c+1d-1_d" symbol_id="28" dye_id="4472" price="35000" wit="0" int="0" men="0" dex="-1" str="0" con="1">
+	<henna name="symbol_c+1s-1_d" symbol_id="27" dye_id="4471" price="35000" wit="0" int="0" men="0" dex="0" str="-1" con="1" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -509,7 +486,7 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_d+1s-1_d" symbol_id="29" dye_id="4473" price="35000" wit="0" int="0" men="0" dex="1" str="-1" con="0">
+	<henna name="symbol_c+1d-1_d" symbol_id="28" dye_id="4472" price="35000" wit="0" int="0" men="0" dex="-1" str="0" con="1" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -532,7 +509,7 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_d+1c-1_d" symbol_id="30" dye_id="4474" price="35000" wit="0" int="0" men="0" dex="1" str="0" con="-1">
+	<henna name="symbol_d+1s-1_d" symbol_id="29" dye_id="4473" price="35000" wit="0" int="0" men="0" dex="1" str="-1" con="0" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -555,13 +532,36 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_i+1m-1_d" symbol_id="31" dye_id="4475" price="35000" wit="0" int="1" men="-1" dex="0" str="0" con="0">
+	<henna name="symbol_d+1c-1_d" symbol_id="30" dye_id="4474" price="35000" wit="0" int="0" men="0" dex="1" str="0" con="-1" luc="0" cha="0">
+		<class id="1"/>
+		<class id="4"/>
+		<class id="7"/>
+		<class id="10"/>
+		<class id="11"/>
+		<class id="15"/>
+		<class id="19"/>
+		<class id="22"/>
+		<class id="26"/>
+		<class id="29"/>
+		<class id="32"/>
+		<class id="35"/>
+		<class id="39"/>
+		<class id="42"/>
+		<class id="45"/>
+		<class id="47"/>
+		<class id="50"/>
+		<class id="54"/>
+		<class id="56"/>
+		<class id="125"/>
+		<class id="126"/>
+	</henna>
+	<henna name="symbol_i+1m-1_d" symbol_id="31" dye_id="4475" price="35000" wit="0" int="1" men="-1" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="10"/>
 		<class id="11"/>
 		<class id="26"/>
 		<class id="39"/>
 	</henna>
-	<henna name="symbol_i+1w-1_d" symbol_id="32" dye_id="4476" price="35000" wit="-1" int="1" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_i+1w-1_d" symbol_id="32" dye_id="4476" price="35000" wit="-1" int="1" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -580,13 +580,13 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_m+1i-1_d" symbol_id="33" dye_id="4477" price="35000" wit="0" int="-1" men="1" dex="0" str="0" con="0">
+	<henna name="symbol_m+1i-1_d" symbol_id="33" dye_id="4477" price="35000" wit="0" int="-1" men="1" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="10"/>
 		<class id="11"/>
 		<class id="26"/>
 		<class id="39"/>
 	</henna>
-	<henna name="symbol_m+1w-1_d" symbol_id="34" dye_id="4478" price="35000" wit="-1" int="0" men="1" dex="0" str="0" con="0">
+	<henna name="symbol_m+1w-1_d" symbol_id="34" dye_id="4478" price="35000" wit="-1" int="0" men="1" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="10"/>
 		<class id="11"/>
 		<class id="15"/>
@@ -596,7 +596,7 @@
 		<class id="42"/>
 		<class id="50"/>
 	</henna>
-	<henna name="symbol_w+1i-1_d" symbol_id="35" dye_id="4479" price="35000" wit="1" int="-1" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_w+1i-1_d" symbol_id="35" dye_id="4479" price="35000" wit="1" int="-1" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="1"/>
 		<class id="4"/>
 		<class id="7"/>
@@ -615,7 +615,7 @@
 		<class id="125"/>
 		<class id="126"/>
 	</henna>
-	<henna name="symbol_w+1m-1_d" symbol_id="36" dye_id="4480" price="35000" wit="1" int="0" men="-1" dex="0" str="0" con="0">
+	<henna name="symbol_w+1m-1_d" symbol_id="36" dye_id="4480" price="35000" wit="1" int="0" men="-1" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="10"/>
 		<class id="11"/>
 		<class id="15"/>
@@ -625,7 +625,7 @@
 		<class id="42"/>
 		<class id="50"/>
 	</henna>
-	<henna name="symbol_s+1c-3_c" symbol_id="37" dye_id="4481" price="12000" wit="0" int="0" men="0" dex="0" str="1" con="-3">
+	<henna name="symbol_s+1c-3_c" symbol_id="37" dye_id="4481" price="12000" wit="0" int="0" men="0" dex="0" str="1" con="-3" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -699,7 +699,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_s+1d-3_c" symbol_id="38" dye_id="4482" price="24600" wit="0" int="0" men="0" dex="-3" str="1" con="0">
+	<henna name="symbol_s+1d-3_c" symbol_id="38" dye_id="4482" price="24600" wit="0" int="0" men="0" dex="-3" str="1" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -773,7 +773,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+1s-3_c" symbol_id="39" dye_id="4483" price="24600" wit="0" int="0" men="0" dex="0" str="-3" con="1">
+	<henna name="symbol_c+1s-3_c" symbol_id="39" dye_id="4483" price="24600" wit="0" int="0" men="0" dex="0" str="-3" con="1" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -847,7 +847,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+1d-3_c" symbol_id="40" dye_id="4484" price="24600" wit="0" int="0" men="0" dex="-3" str="0" con="1">
+	<henna name="symbol_c+1d-3_c" symbol_id="40" dye_id="4484" price="24600" wit="0" int="0" men="0" dex="-3" str="0" con="1" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -921,7 +921,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+1s-3_c" symbol_id="41" dye_id="4485" price="30000" wit="0" int="0" men="0" dex="1" str="-3" con="0">
+	<henna name="symbol_d+1s-3_c" symbol_id="41" dye_id="4485" price="30000" wit="0" int="0" men="0" dex="1" str="-3" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -995,7 +995,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+1c-3_c" symbol_id="42" dye_id="4486" price="30000" wit="0" int="0" men="0" dex="1" str="0" con="-3">
+	<henna name="symbol_d+1c-3_c" symbol_id="42" dye_id="4486" price="30000" wit="0" int="0" men="0" dex="1" str="0" con="-3" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -1069,7 +1069,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_i+1m-3_c" symbol_id="43" dye_id="4487" price="30000" wit="0" int="1" men="-3" dex="0" str="0" con="0">
+	<henna name="symbol_i+1m-3_c" symbol_id="43" dye_id="4487" price="30000" wit="0" int="1" men="-3" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -1085,7 +1085,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_i+1w-3_c" symbol_id="44" dye_id="4488" price="30000" wit="-3" int="1" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_i+1w-3_c" symbol_id="44" dye_id="4488" price="30000" wit="-3" int="1" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -1147,7 +1147,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_m+1i-3_c" symbol_id="45" dye_id="4489" price="30000" wit="0" int="-3" men="1" dex="0" str="0" con="0">
+	<henna name="symbol_m+1i-3_c" symbol_id="45" dye_id="4489" price="30000" wit="0" int="-3" men="1" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -1163,7 +1163,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_m+1w-3_c" symbol_id="46" dye_id="4490" price="12000" wit="-3" int="0" men="1" dex="0" str="0" con="0">
+	<henna name="symbol_m+1w-3_c" symbol_id="46" dye_id="4490" price="12000" wit="-3" int="0" men="1" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -1191,7 +1191,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_w+1i-3_c" symbol_id="47" dye_id="4491" price="30000" wit="1" int="-3" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_w+1i-3_c" symbol_id="47" dye_id="4491" price="30000" wit="1" int="-3" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -1253,7 +1253,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_w+1m-3_c" symbol_id="48" dye_id="4492" price="12000" wit="1" int="0" men="-3" dex="0" str="0" con="0">
+	<henna name="symbol_w+1m-3_c" symbol_id="48" dye_id="4492" price="12000" wit="1" int="0" men="-3" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -1281,7 +1281,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_s+1c-2_c" symbol_id="49" dye_id="4493" price="24600" wit="0" int="0" men="0" dex="0" str="1" con="-2">
+	<henna name="symbol_s+1c-2_c" symbol_id="49" dye_id="4493" price="24600" wit="0" int="0" men="0" dex="0" str="1" con="-2" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -1355,7 +1355,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_s+1d-2_c" symbol_id="50" dye_id="4494" price="30000" wit="0" int="0" men="0" dex="-2" str="1" con="0">
+	<henna name="symbol_s+1d-2_c" symbol_id="50" dye_id="4494" price="30000" wit="0" int="0" men="0" dex="-2" str="1" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -1429,7 +1429,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+1s-2_c" symbol_id="51" dye_id="4495" price="35000" wit="0" int="0" men="0" dex="0" str="-2" con="1">
+	<henna name="symbol_c+1s-2_c" symbol_id="51" dye_id="4495" price="35000" wit="0" int="0" men="0" dex="0" str="-2" con="1" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -1503,7 +1503,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+1d-2_c" symbol_id="52" dye_id="4496" price="35000" wit="0" int="0" men="0" dex="-2" str="0" con="1">
+	<henna name="symbol_c+1d-2_c" symbol_id="52" dye_id="4496" price="35000" wit="0" int="0" men="0" dex="-2" str="0" con="1" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -1577,7 +1577,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+1s-2_c" symbol_id="53" dye_id="4497" price="36000" wit="0" int="0" men="0" dex="1" str="-2" con="0">
+	<henna name="symbol_d+1s-2_c" symbol_id="53" dye_id="4497" price="36000" wit="0" int="0" men="0" dex="1" str="-2" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -1651,7 +1651,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+1c-2_c" symbol_id="54" dye_id="4498" price="36000" wit="0" int="0" men="0" dex="1" str="0" con="-2">
+	<henna name="symbol_d+1c-2_c" symbol_id="54" dye_id="4498" price="36000" wit="0" int="0" men="0" dex="1" str="0" con="-2" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -1725,7 +1725,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_i+1m-2_c" symbol_id="55" dye_id="4499" price="50000" wit="0" int="1" men="-2" dex="0" str="0" con="0">
+	<henna name="symbol_i+1m-2_c" symbol_id="55" dye_id="4499" price="50000" wit="0" int="1" men="-2" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -1741,7 +1741,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_i+1w-2_c" symbol_id="56" dye_id="4500" price="36000" wit="-2" int="1" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_i+1w-2_c" symbol_id="56" dye_id="4500" price="36000" wit="-2" int="1" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -1803,7 +1803,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_m+1i-2_c" symbol_id="57" dye_id="4501" price="36000" wit="0" int="-2" men="1" dex="0" str="0" con="0">
+	<henna name="symbol_m+1i-2_c" symbol_id="57" dye_id="4501" price="36000" wit="0" int="-2" men="1" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -1819,7 +1819,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_m+1w-2_c" symbol_id="58" dye_id="4502" price="21000" wit="-2" int="0" men="1" dex="0" str="0" con="0">
+	<henna name="symbol_m+1w-2_c" symbol_id="58" dye_id="4502" price="21000" wit="-2" int="0" men="1" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -1847,7 +1847,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_w+1i-2_c" symbol_id="59" dye_id="4503" price="30000" wit="1" int="-2" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_w+1i-2_c" symbol_id="59" dye_id="4503" price="30000" wit="1" int="-2" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -1909,7 +1909,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_w+1m-2_c" symbol_id="60" dye_id="4504" price="36000" wit="1" int="0" men="-2" dex="0" str="0" con="0">
+	<henna name="symbol_w+1m-2_c" symbol_id="60" dye_id="4504" price="36000" wit="1" int="0" men="-2" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -1937,7 +1937,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_s+2c-4_c" symbol_id="61" dye_id="4505" price="24600" wit="0" int="0" men="0" dex="0" str="2" con="-4">
+	<henna name="symbol_s+2c-4_c" symbol_id="61" dye_id="4505" price="24600" wit="0" int="0" men="0" dex="0" str="2" con="-4" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -2011,7 +2011,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_s+2d-4_c" symbol_id="62" dye_id="4506" price="24600" wit="0" int="0" men="0" dex="-4" str="2" con="0">
+	<henna name="symbol_s+2d-4_c" symbol_id="62" dye_id="4506" price="24600" wit="0" int="0" men="0" dex="-4" str="2" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -2085,7 +2085,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+2s-4_c" symbol_id="63" dye_id="4507" price="24600" wit="0" int="0" men="0" dex="0" str="-4" con="2">
+	<henna name="symbol_c+2s-4_c" symbol_id="63" dye_id="4507" price="24600" wit="0" int="0" men="0" dex="0" str="-4" con="2" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -2159,7 +2159,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+2d-4_c" symbol_id="64" dye_id="4508" price="24600" wit="0" int="0" men="0" dex="-4" str="0" con="2">
+	<henna name="symbol_c+2d-4_c" symbol_id="64" dye_id="4508" price="24600" wit="0" int="0" men="0" dex="-4" str="0" con="2" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -2233,7 +2233,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+2s-4_c" symbol_id="65" dye_id="4509" price="24600" wit="0" int="0" men="0" dex="2" str="-4" con="0">
+	<henna name="symbol_d+2s-4_c" symbol_id="65" dye_id="4509" price="24600" wit="0" int="0" men="0" dex="2" str="-4" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -2307,7 +2307,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+2c-4_c" symbol_id="66" dye_id="4510" price="24600" wit="0" int="0" men="0" dex="2" str="0" con="-4">
+	<henna name="symbol_d+2c-4_c" symbol_id="66" dye_id="4510" price="24600" wit="0" int="0" men="0" dex="2" str="0" con="-4" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -2381,7 +2381,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_i+2m-4_c" symbol_id="67" dye_id="4511" price="24600" wit="0" int="2" men="-4" dex="0" str="0" con="0">
+	<henna name="symbol_i+2m-4_c" symbol_id="67" dye_id="4511" price="24600" wit="0" int="2" men="-4" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -2397,7 +2397,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_i+2w-4_c" symbol_id="68" dye_id="4512" price="24600" wit="-4" int="2" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_i+2w-4_c" symbol_id="68" dye_id="4512" price="24600" wit="-4" int="2" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -2459,7 +2459,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_m+2i-4_c" symbol_id="69" dye_id="4513" price="24600" wit="0" int="-4" men="2" dex="0" str="0" con="0">
+	<henna name="symbol_m+2i-4_c" symbol_id="69" dye_id="4513" price="24600" wit="0" int="-4" men="2" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -2475,7 +2475,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_m+2w-4_c" symbol_id="70" dye_id="4514" price="30000" wit="-4" int="0" men="2" dex="0" str="0" con="0">
+	<henna name="symbol_m+2w-4_c" symbol_id="70" dye_id="4514" price="30000" wit="-4" int="0" men="2" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -2503,7 +2503,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_w+2i-4_c" symbol_id="71" dye_id="4515" price="30000" wit="2" int="-4" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_w+2i-4_c" symbol_id="71" dye_id="4515" price="30000" wit="2" int="-4" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -2565,7 +2565,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_w+2m-4_c" symbol_id="72" dye_id="4516" price="30000" wit="2" int="0" men="-4" dex="0" str="0" con="0">
+	<henna name="symbol_w+2m-4_c" symbol_id="72" dye_id="4516" price="30000" wit="2" int="0" men="-4" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -2593,7 +2593,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_s+2c-3_c" symbol_id="73" dye_id="4517" price="30000" wit="0" int="0" men="0" dex="0" str="2" con="-3">
+	<henna name="symbol_s+2c-3_c" symbol_id="73" dye_id="4517" price="30000" wit="0" int="0" men="0" dex="0" str="2" con="-3" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -2667,7 +2667,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_s+2d-3_c" symbol_id="74" dye_id="4518" price="35000" wit="0" int="0" men="0" dex="-3" str="2" con="0">
+	<henna name="symbol_s+2d-3_c" symbol_id="74" dye_id="4518" price="35000" wit="0" int="0" men="0" dex="-3" str="2" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -2741,7 +2741,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+2s-3_c" symbol_id="75" dye_id="4519" price="35000" wit="0" int="0" men="0" dex="0" str="-3" con="2">
+	<henna name="symbol_c+2s-3_c" symbol_id="75" dye_id="4519" price="35000" wit="0" int="0" men="0" dex="0" str="-3" con="2" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -2815,7 +2815,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+2d-3_c" symbol_id="76" dye_id="4520" price="35000" wit="0" int="0" men="0" dex="-3" str="0" con="2">
+	<henna name="symbol_c+2d-3_c" symbol_id="76" dye_id="4520" price="35000" wit="0" int="0" men="0" dex="-3" str="0" con="2" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -2889,7 +2889,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+2s-3_c" symbol_id="77" dye_id="4521" price="27000" wit="0" int="0" men="0" dex="2" str="-3" con="0">
+	<henna name="symbol_d+2s-3_c" symbol_id="77" dye_id="4521" price="27000" wit="0" int="0" men="0" dex="2" str="-3" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -2963,7 +2963,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+2c-3_c" symbol_id="78" dye_id="4522" price="27000" wit="0" int="0" men="0" dex="2" str="0" con="-3">
+	<henna name="symbol_d+2c-3_c" symbol_id="78" dye_id="4522" price="27000" wit="0" int="0" men="0" dex="2" str="0" con="-3" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -3037,7 +3037,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_i+2m-3_c" symbol_id="79" dye_id="4523" price="27000" wit="0" int="2" men="-3" dex="0" str="0" con="0">
+	<henna name="symbol_i+2m-3_c" symbol_id="79" dye_id="4523" price="27000" wit="0" int="2" men="-3" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -3053,7 +3053,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_i+2w-3_c" symbol_id="80" dye_id="4524" price="30000" wit="-3" int="2" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_i+2w-3_c" symbol_id="80" dye_id="4524" price="30000" wit="-3" int="2" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -3115,7 +3115,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_m+2i-3_c" symbol_id="81" dye_id="4525" price="30000" wit="0" int="-3" men="2" dex="0" str="0" con="0">
+	<henna name="symbol_m+2i-3_c" symbol_id="81" dye_id="4525" price="30000" wit="0" int="-3" men="2" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -3131,7 +3131,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_m+2w-3_c" symbol_id="82" dye_id="4526" price="30000" wit="-3" int="0" men="2" dex="0" str="0" con="0">
+	<henna name="symbol_m+2w-3_c" symbol_id="82" dye_id="4526" price="30000" wit="-3" int="0" men="2" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -3159,7 +3159,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_w+2i-3_c" symbol_id="83" dye_id="4527" price="30000" wit="2" int="-3" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_w+2i-3_c" symbol_id="83" dye_id="4527" price="30000" wit="2" int="-3" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -3221,7 +3221,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_w+2m-3_c" symbol_id="84" dye_id="4528" price="30000" wit="2" int="0" men="-3" dex="0" str="0" con="0">
+	<henna name="symbol_w+2m-3_c" symbol_id="84" dye_id="4528" price="30000" wit="2" int="0" men="-3" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -3249,7 +3249,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_s+3c-5_c" symbol_id="85" dye_id="4529" price="30000" wit="0" int="0" men="0" dex="0" str="3" con="-5">
+	<henna name="symbol_s+3c-5_c" symbol_id="85" dye_id="4529" price="30000" wit="0" int="0" men="0" dex="0" str="3" con="-5" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -3323,7 +3323,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_s+3d-5_c" symbol_id="86" dye_id="4530" price="30000" wit="0" int="0" men="0" dex="-5" str="3" con="0">
+	<henna name="symbol_s+3d-5_c" symbol_id="86" dye_id="4530" price="30000" wit="0" int="0" men="0" dex="-5" str="3" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -3397,7 +3397,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+3s-5_c" symbol_id="87" dye_id="4531" price="30000" wit="0" int="0" men="0" dex="0" str="-5" con="3">
+	<henna name="symbol_c+3s-5_c" symbol_id="87" dye_id="4531" price="30000" wit="0" int="0" men="0" dex="0" str="-5" con="3" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -3471,7 +3471,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+3d-5_c" symbol_id="88" dye_id="4532" price="30000" wit="0" int="0" men="0" dex="-5" str="0" con="3">
+	<henna name="symbol_c+3d-5_c" symbol_id="88" dye_id="4532" price="30000" wit="0" int="0" men="0" dex="-5" str="0" con="3" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -3545,7 +3545,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+3s-5_c" symbol_id="89" dye_id="4533" price="30000" wit="0" int="0" men="0" dex="3" str="-5" con="0">
+	<henna name="symbol_d+3s-5_c" symbol_id="89" dye_id="4533" price="30000" wit="0" int="0" men="0" dex="3" str="-5" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -3619,7 +3619,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+3c-5_c" symbol_id="90" dye_id="4534" price="30000" wit="0" int="0" men="0" dex="3" str="0" con="-5">
+	<henna name="symbol_d+3c-5_c" symbol_id="90" dye_id="4534" price="30000" wit="0" int="0" men="0" dex="3" str="0" con="-5" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -3693,7 +3693,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_i+3m-5_c" symbol_id="91" dye_id="4535" price="30000" wit="0" int="3" men="-5" dex="0" str="0" con="0">
+	<henna name="symbol_i+3m-5_c" symbol_id="91" dye_id="4535" price="30000" wit="0" int="3" men="-5" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -3709,7 +3709,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_i+3w-5_c" symbol_id="92" dye_id="4536" price="30000" wit="-5" int="3" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_i+3w-5_c" symbol_id="92" dye_id="4536" price="30000" wit="-5" int="3" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -3771,7 +3771,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_m+3i-5_c" symbol_id="93" dye_id="4537" price="30000" wit="0" int="-5" men="3" dex="0" str="0" con="0">
+	<henna name="symbol_m+3i-5_c" symbol_id="93" dye_id="4537" price="30000" wit="0" int="-5" men="3" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -3787,7 +3787,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_m+3w-5_c" symbol_id="94" dye_id="4538" price="30000" wit="-5" int="0" men="3" dex="0" str="0" con="0">
+	<henna name="symbol_m+3w-5_c" symbol_id="94" dye_id="4538" price="30000" wit="-5" int="0" men="3" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -3815,7 +3815,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_w+3i-5_c" symbol_id="95" dye_id="4539" price="30000" wit="3" int="-5" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_w+3i-5_c" symbol_id="95" dye_id="4539" price="30000" wit="3" int="-5" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -3877,7 +3877,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_w+3m-5_c" symbol_id="96" dye_id="4540" price="30000" wit="3" int="0" men="-5" dex="0" str="0" con="0">
+	<henna name="symbol_w+3m-5_c" symbol_id="96" dye_id="4540" price="30000" wit="3" int="0" men="-5" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -3905,7 +3905,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_s+3c-4_c" symbol_id="97" dye_id="4541" price="30000" wit="0" int="0" men="0" dex="0" str="3" con="-4">
+	<henna name="symbol_s+3c-4_c" symbol_id="97" dye_id="4541" price="30000" wit="0" int="0" men="0" dex="0" str="3" con="-4" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -3979,7 +3979,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_s+3d-4_c" symbol_id="98" dye_id="4542" price="30000" wit="0" int="0" men="0" dex="-4" str="3" con="0">
+	<henna name="symbol_s+3d-4_c" symbol_id="98" dye_id="4542" price="30000" wit="0" int="0" men="0" dex="-4" str="3" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -4053,7 +4053,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+3s-4_c" symbol_id="99" dye_id="4543" price="50000" wit="0" int="0" men="0" dex="0" str="-4" con="3">
+	<henna name="symbol_c+3s-4_c" symbol_id="99" dye_id="4543" price="50000" wit="0" int="0" men="0" dex="0" str="-4" con="3" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -4127,7 +4127,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+3d-4_c" symbol_id="100" dye_id="4544" price="50000" wit="0" int="0" men="0" dex="-4" str="0" con="3">
+	<henna name="symbol_c+3d-4_c" symbol_id="100" dye_id="4544" price="50000" wit="0" int="0" men="0" dex="-4" str="0" con="3" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -4201,7 +4201,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+3s-4_c" symbol_id="101" dye_id="4545" price="50000" wit="0" int="0" men="0" dex="3" str="-4" con="0">
+	<henna name="symbol_d+3s-4_c" symbol_id="101" dye_id="4545" price="50000" wit="0" int="0" men="0" dex="3" str="-4" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -4275,7 +4275,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+3c-4_c" symbol_id="102" dye_id="4546" price="50000" wit="0" int="0" men="0" dex="3" str="0" con="-4">
+	<henna name="symbol_d+3c-4_c" symbol_id="102" dye_id="4546" price="50000" wit="0" int="0" men="0" dex="3" str="0" con="-4" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -4349,7 +4349,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_i+3m-4_c" symbol_id="103" dye_id="4547" price="50000" wit="0" int="3" men="-4" dex="0" str="0" con="0">
+	<henna name="symbol_i+3m-4_c" symbol_id="103" dye_id="4547" price="50000" wit="0" int="3" men="-4" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -4365,7 +4365,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_i+3w-4_c" symbol_id="104" dye_id="4548" price="50000" wit="-4" int="3" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_i+3w-4_c" symbol_id="104" dye_id="4548" price="50000" wit="-4" int="3" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -4427,7 +4427,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_m+3i-4_c" symbol_id="105" dye_id="4549" price="50000" wit="0" int="-4" men="3" dex="0" str="0" con="0">
+	<henna name="symbol_m+3i-4_c" symbol_id="105" dye_id="4549" price="50000" wit="0" int="-4" men="3" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -4443,7 +4443,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_m+3w-4_c" symbol_id="106" dye_id="4550" price="50000" wit="-4" int="0" men="3" dex="0" str="0" con="0">
+	<henna name="symbol_m+3w-4_c" symbol_id="106" dye_id="4550" price="50000" wit="-4" int="0" men="3" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -4471,7 +4471,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_w+3i-4_c" symbol_id="107" dye_id="4551" price="50000" wit="3" int="-4" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_w+3i-4_c" symbol_id="107" dye_id="4551" price="50000" wit="3" int="-4" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -4533,7 +4533,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_w+3m-4_c" symbol_id="108" dye_id="4552" price="50000" wit="3" int="0" men="-4" dex="0" str="0" con="0">
+	<henna name="symbol_w+3m-4_c" symbol_id="108" dye_id="4552" price="50000" wit="3" int="0" men="-4" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -4561,7 +4561,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_s+1c-1_c" symbol_id="109" dye_id="4553" price="50000" wit="0" int="0" men="0" dex="0" str="1" con="-1">
+	<henna name="symbol_s+1c-1_c" symbol_id="109" dye_id="4553" price="50000" wit="0" int="0" men="0" dex="0" str="1" con="-1" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -4635,7 +4635,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_s+1d-1_c" symbol_id="110" dye_id="4554" price="50000" wit="0" int="0" men="0" dex="-1" str="1" con="0">
+	<henna name="symbol_s+1d-1_c" symbol_id="110" dye_id="4554" price="50000" wit="0" int="0" men="0" dex="-1" str="1" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -4709,7 +4709,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+1s-1_c" symbol_id="111" dye_id="4555" price="50000" wit="0" int="0" men="0" dex="0" str="-1" con="1">
+	<henna name="symbol_c+1s-1_c" symbol_id="111" dye_id="4555" price="50000" wit="0" int="0" men="0" dex="0" str="-1" con="1" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -4783,7 +4783,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+1d-1_c" symbol_id="112" dye_id="4556" price="50000" wit="0" int="0" men="0" dex="-1" str="0" con="1">
+	<henna name="symbol_c+1d-1_c" symbol_id="112" dye_id="4556" price="50000" wit="0" int="0" men="0" dex="-1" str="0" con="1" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -4857,7 +4857,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+1s-1_c" symbol_id="113" dye_id="4557" price="50000" wit="0" int="0" men="0" dex="1" str="-1" con="0">
+	<henna name="symbol_d+1s-1_c" symbol_id="113" dye_id="4557" price="50000" wit="0" int="0" men="0" dex="1" str="-1" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -4931,7 +4931,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+1c-1_c" symbol_id="114" dye_id="4558" price="50000" wit="0" int="0" men="0" dex="1" str="0" con="-1">
+	<henna name="symbol_d+1c-1_c" symbol_id="114" dye_id="4558" price="50000" wit="0" int="0" men="0" dex="1" str="0" con="-1" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -5005,7 +5005,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_i+1m-1_c" symbol_id="115" dye_id="4559" price="90000" wit="0" int="1" men="-1" dex="0" str="0" con="0">
+	<henna name="symbol_i+1m-1_c" symbol_id="115" dye_id="4559" price="90000" wit="0" int="1" men="-1" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -5021,7 +5021,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_i+1w-1_c" symbol_id="116" dye_id="4560" price="50000" wit="-1" int="1" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_i+1w-1_c" symbol_id="116" dye_id="4560" price="50000" wit="-1" int="1" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -5083,7 +5083,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_m+1i-1_c" symbol_id="117" dye_id="4561" price="50000" wit="0" int="-1" men="1" dex="0" str="0" con="0">
+	<henna name="symbol_m+1i-1_c" symbol_id="117" dye_id="4561" price="50000" wit="0" int="-1" men="1" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -5099,7 +5099,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_m+1w-1_c" symbol_id="118" dye_id="4562" price="50000" wit="-1" int="0" men="1" dex="0" str="0" con="0">
+	<henna name="symbol_m+1w-1_c" symbol_id="118" dye_id="4562" price="50000" wit="-1" int="0" men="1" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -5127,7 +5127,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_w+1i-1_c" symbol_id="119" dye_id="4563" price="50000" wit="1" int="-1" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_w+1i-1_c" symbol_id="119" dye_id="4563" price="50000" wit="1" int="-1" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -5189,7 +5189,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_w+1m-1_c" symbol_id="120" dye_id="4564" price="50000" wit="1" int="0" men="-1" dex="0" str="0" con="0">
+	<henna name="symbol_w+1m-1_c" symbol_id="120" dye_id="4564" price="50000" wit="1" int="0" men="-1" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -5217,7 +5217,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_s+4c-6_c" symbol_id="121" dye_id="4565" price="36000" wit="0" int="0" men="0" dex="0" str="4" con="-6">
+	<henna name="symbol_s+4c-6_c" symbol_id="121" dye_id="4565" price="36000" wit="0" int="0" men="0" dex="0" str="4" con="-6" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -5291,7 +5291,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_s+4d-6_c" symbol_id="122" dye_id="4566" price="36000" wit="0" int="0" men="0" dex="-6" str="4" con="0">
+	<henna name="symbol_s+4d-6_c" symbol_id="122" dye_id="4566" price="36000" wit="0" int="0" men="0" dex="-6" str="4" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -5365,7 +5365,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+4s-6_c" symbol_id="123" dye_id="4567" price="50000" wit="0" int="0" men="0" dex="0" str="-6" con="4">
+	<henna name="symbol_c+4s-6_c" symbol_id="123" dye_id="4567" price="50000" wit="0" int="0" men="0" dex="0" str="-6" con="4" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -5439,7 +5439,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+4d-6_c" symbol_id="124" dye_id="4568" price="50000" wit="0" int="0" men="0" dex="-6" str="0" con="4">
+	<henna name="symbol_c+4d-6_c" symbol_id="124" dye_id="4568" price="50000" wit="0" int="0" men="0" dex="-6" str="0" con="4" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -5513,7 +5513,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+4s-6_c" symbol_id="125" dye_id="4569" price="30000" wit="0" int="0" men="0" dex="4" str="-6" con="0">
+	<henna name="symbol_d+4s-6_c" symbol_id="125" dye_id="4569" price="30000" wit="0" int="0" men="0" dex="4" str="-6" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -5587,7 +5587,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+4c-6_c" symbol_id="126" dye_id="4570" price="36000" wit="0" int="0" men="0" dex="4" str="0" con="-6">
+	<henna name="symbol_d+4c-6_c" symbol_id="126" dye_id="4570" price="36000" wit="0" int="0" men="0" dex="4" str="0" con="-6" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -5661,7 +5661,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_i+4m-6_c" symbol_id="127" dye_id="4571" price="36000" wit="0" int="4" men="-6" dex="0" str="0" con="0">
+	<henna name="symbol_i+4m-6_c" symbol_id="127" dye_id="4571" price="36000" wit="0" int="4" men="-6" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -5677,7 +5677,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_i+4w-6_c" symbol_id="128" dye_id="4572" price="30000" wit="-6" int="4" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_i+4w-6_c" symbol_id="128" dye_id="4572" price="30000" wit="-6" int="4" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -5739,7 +5739,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_m+4i-6_c" symbol_id="129" dye_id="4573" price="36000" wit="0" int="-6" men="4" dex="0" str="0" con="0">
+	<henna name="symbol_m+4i-6_c" symbol_id="129" dye_id="4573" price="36000" wit="0" int="-6" men="4" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -5755,7 +5755,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_m+4w-6_c" symbol_id="130" dye_id="4574" price="36000" wit="-6" int="0" men="4" dex="0" str="0" con="0">
+	<henna name="symbol_m+4w-6_c" symbol_id="130" dye_id="4574" price="36000" wit="-6" int="0" men="4" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -5783,7 +5783,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_w+4i-6_c" symbol_id="131" dye_id="4575" price="36000" wit="4" int="-6" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_w+4i-6_c" symbol_id="131" dye_id="4575" price="36000" wit="4" int="-6" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -5845,7 +5845,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_w+4m-6_c" symbol_id="132" dye_id="4576" price="30000" wit="4" int="0" men="-6" dex="0" str="0" con="0">
+	<henna name="symbol_w+4m-6_c" symbol_id="132" dye_id="4576" price="30000" wit="4" int="0" men="-6" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -5873,7 +5873,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_s+4c-5_c" symbol_id="133" dye_id="4577" price="36000" wit="0" int="0" men="0" dex="0" str="4" con="-5">
+	<henna name="symbol_s+4c-5_c" symbol_id="133" dye_id="4577" price="36000" wit="0" int="0" men="0" dex="0" str="4" con="-5" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -5947,7 +5947,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_s+4d-5_c" symbol_id="134" dye_id="4578" price="90000" wit="0" int="0" men="0" dex="-5" str="4" con="0">
+	<henna name="symbol_s+4d-5_c" symbol_id="134" dye_id="4578" price="90000" wit="0" int="0" men="0" dex="-5" str="4" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -6021,7 +6021,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+4s-5_c" symbol_id="135" dye_id="4579" price="90000" wit="0" int="0" men="0" dex="0" str="-5" con="4">
+	<henna name="symbol_c+4s-5_c" symbol_id="135" dye_id="4579" price="90000" wit="0" int="0" men="0" dex="0" str="-5" con="4" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -6095,7 +6095,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+4d-5_c" symbol_id="136" dye_id="4580" price="90000" wit="0" int="0" men="0" dex="-5" str="0" con="4">
+	<henna name="symbol_c+4d-5_c" symbol_id="136" dye_id="4580" price="90000" wit="0" int="0" men="0" dex="-5" str="0" con="4" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -6169,7 +6169,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+4s-5_c" symbol_id="137" dye_id="4581" price="36000" wit="0" int="0" men="0" dex="4" str="-5" con="0">
+	<henna name="symbol_d+4s-5_c" symbol_id="137" dye_id="4581" price="36000" wit="0" int="0" men="0" dex="4" str="-5" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -6243,7 +6243,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+4c-5_c" symbol_id="138" dye_id="4582" price="36000" wit="0" int="0" men="0" dex="4" str="0" con="-5">
+	<henna name="symbol_d+4c-5_c" symbol_id="138" dye_id="4582" price="36000" wit="0" int="0" men="0" dex="4" str="0" con="-5" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -6317,7 +6317,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_i+4m-5_c" symbol_id="139" dye_id="4583" price="90000" wit="0" int="4" men="-5" dex="0" str="0" con="0">
+	<henna name="symbol_i+4m-5_c" symbol_id="139" dye_id="4583" price="90000" wit="0" int="4" men="-5" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -6333,7 +6333,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_i+4w-5_c" symbol_id="140" dye_id="4584" price="36000" wit="-5" int="4" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_i+4w-5_c" symbol_id="140" dye_id="4584" price="36000" wit="-5" int="4" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -6395,7 +6395,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_m+4i-5_c" symbol_id="141" dye_id="4585" price="90000" wit="0" int="-5" men="4" dex="0" str="0" con="0">
+	<henna name="symbol_m+4i-5_c" symbol_id="141" dye_id="4585" price="90000" wit="0" int="-5" men="4" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -6411,7 +6411,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_m+4w-5_c" symbol_id="142" dye_id="4586" price="90000" wit="-5" int="0" men="4" dex="0" str="0" con="0">
+	<henna name="symbol_m+4w-5_c" symbol_id="142" dye_id="4586" price="90000" wit="-5" int="0" men="4" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -6439,7 +6439,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_w+4i-5_c" symbol_id="143" dye_id="4587" price="36000" wit="4" int="-5" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_w+4i-5_c" symbol_id="143" dye_id="4587" price="36000" wit="4" int="-5" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -6501,7 +6501,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_w+4m-5_c" symbol_id="144" dye_id="4588" price="36000" wit="4" int="0" men="-5" dex="0" str="0" con="0">
+	<henna name="symbol_w+4m-5_c" symbol_id="144" dye_id="4588" price="36000" wit="4" int="0" men="-5" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -6529,7 +6529,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_s+2c-2_c" symbol_id="145" dye_id="4589" price="60000" wit="0" int="0" men="0" dex="0" str="2" con="-2">
+	<henna name="symbol_s+2c-2_c" symbol_id="145" dye_id="4589" price="60000" wit="0" int="0" men="0" dex="0" str="2" con="-2" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -6603,7 +6603,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_s+2d-2_c" symbol_id="146" dye_id="4590" price="60000" wit="0" int="0" men="0" dex="-2" str="2" con="0">
+	<henna name="symbol_s+2d-2_c" symbol_id="146" dye_id="4590" price="60000" wit="0" int="0" men="0" dex="-2" str="2" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -6677,7 +6677,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+2s-2_c" symbol_id="147" dye_id="4591" price="60000" wit="0" int="0" men="0" dex="0" str="-2" con="2">
+	<henna name="symbol_c+2s-2_c" symbol_id="147" dye_id="4591" price="60000" wit="0" int="0" men="0" dex="0" str="-2" con="2" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -6751,7 +6751,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+2d-2_c" symbol_id="148" dye_id="4592" price="60000" wit="0" int="0" men="0" dex="-2" str="0" con="2">
+	<henna name="symbol_c+2d-2_c" symbol_id="148" dye_id="4592" price="60000" wit="0" int="0" men="0" dex="-2" str="0" con="2" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -6825,7 +6825,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+2s-2_c" symbol_id="149" dye_id="4593" price="60000" wit="0" int="0" men="0" dex="2" str="-2" con="0">
+	<henna name="symbol_d+2s-2_c" symbol_id="149" dye_id="4593" price="60000" wit="0" int="0" men="0" dex="2" str="-2" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -6899,7 +6899,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+2c-2_c" symbol_id="150" dye_id="4594" price="60000" wit="0" int="0" men="0" dex="2" str="0" con="-2">
+	<henna name="symbol_d+2c-2_c" symbol_id="150" dye_id="4594" price="60000" wit="0" int="0" men="0" dex="2" str="0" con="-2" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -6973,7 +6973,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_i+2m-2_c" symbol_id="151" dye_id="4595" price="60000" wit="0" int="2" men="-2" dex="0" str="0" con="0">
+	<henna name="symbol_i+2m-2_c" symbol_id="151" dye_id="4595" price="60000" wit="0" int="2" men="-2" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -6989,7 +6989,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_i+2w-2_c" symbol_id="152" dye_id="4596" price="90000" wit="-2" int="2" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_i+2w-2_c" symbol_id="152" dye_id="4596" price="90000" wit="-2" int="2" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -7051,7 +7051,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_m+2i-2_c" symbol_id="153" dye_id="4597" price="60000" wit="0" int="-2" men="2" dex="0" str="0" con="0">
+	<henna name="symbol_m+2i-2_c" symbol_id="153" dye_id="4597" price="60000" wit="0" int="-2" men="2" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -7067,7 +7067,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_m+2w-2_c" symbol_id="154" dye_id="4598" price="60000" wit="-2" int="0" men="2" dex="0" str="0" con="0">
+	<henna name="symbol_m+2w-2_c" symbol_id="154" dye_id="4598" price="60000" wit="-2" int="0" men="2" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -7095,7 +7095,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_w+2i-2_c" symbol_id="155" dye_id="4599" price="60000" wit="2" int="-2" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_w+2i-2_c" symbol_id="155" dye_id="4599" price="60000" wit="2" int="-2" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -7157,7 +7157,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_w+2m-2_c" symbol_id="156" dye_id="4600" price="60000" wit="2" int="0" men="-2" dex="0" str="0" con="0">
+	<henna name="symbol_w+2m-2_c" symbol_id="156" dye_id="4600" price="60000" wit="2" int="0" men="-2" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -7185,7 +7185,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_s+3c-3_c" symbol_id="157" dye_id="4601" price="90000" wit="0" int="0" men="0" dex="0" str="3" con="-3">
+	<henna name="symbol_s+3c-3_c" symbol_id="157" dye_id="4601" price="90000" wit="0" int="0" men="0" dex="0" str="3" con="-3" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -7259,7 +7259,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_s+3d-3_c" symbol_id="158" dye_id="4602" price="90000" wit="0" int="0" men="0" dex="-3" str="3" con="0">
+	<henna name="symbol_s+3d-3_c" symbol_id="158" dye_id="4602" price="90000" wit="0" int="0" men="0" dex="-3" str="3" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -7333,7 +7333,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+3s-3_c" symbol_id="159" dye_id="4603" price="90000" wit="0" int="0" men="0" dex="0" str="-3" con="3">
+	<henna name="symbol_c+3s-3_c" symbol_id="159" dye_id="4603" price="90000" wit="0" int="0" men="0" dex="0" str="-3" con="3" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -7407,7 +7407,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+3d-3_c" symbol_id="160" dye_id="4604" price="90000" wit="0" int="0" men="0" dex="-3" str="0" con="3">
+	<henna name="symbol_c+3d-3_c" symbol_id="160" dye_id="4604" price="90000" wit="0" int="0" men="0" dex="-3" str="0" con="3" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -7481,7 +7481,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+3s-3_c" symbol_id="161" dye_id="4605" price="90000" wit="0" int="0" men="0" dex="3" str="-3" con="0">
+	<henna name="symbol_d+3s-3_c" symbol_id="161" dye_id="4605" price="90000" wit="0" int="0" men="0" dex="3" str="-3" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -7555,7 +7555,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+3c-3_c" symbol_id="162" dye_id="4606" price="90000" wit="0" int="0" men="0" dex="3" str="0" con="-3">
+	<henna name="symbol_d+3c-3_c" symbol_id="162" dye_id="4606" price="90000" wit="0" int="0" men="0" dex="3" str="0" con="-3" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -7629,7 +7629,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_i+3m-3_c" symbol_id="163" dye_id="4607" price="90000" wit="0" int="3" men="-3" dex="0" str="0" con="0">
+	<henna name="symbol_i+3m-3_c" symbol_id="163" dye_id="4607" price="90000" wit="0" int="3" men="-3" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -7645,7 +7645,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_i+3w-3_c" symbol_id="164" dye_id="4608" price="90000" wit="-3" int="3" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_i+3w-3_c" symbol_id="164" dye_id="4608" price="90000" wit="-3" int="3" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -7707,7 +7707,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_m+3i-3_c" symbol_id="165" dye_id="4609" price="90000" wit="0" int="-3" men="3" dex="0" str="0" con="0">
+	<henna name="symbol_m+3i-3_c" symbol_id="165" dye_id="4609" price="90000" wit="0" int="-3" men="3" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -7723,7 +7723,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_m+3w-3_c" symbol_id="166" dye_id="4610" price="90000" wit="-3" int="0" men="3" dex="0" str="0" con="0">
+	<henna name="symbol_m+3w-3_c" symbol_id="166" dye_id="4610" price="90000" wit="-3" int="0" men="3" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -7751,7 +7751,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_w+3i-3_c" symbol_id="167" dye_id="4611" price="90000" wit="3" int="-3" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_w+3i-3_c" symbol_id="167" dye_id="4611" price="90000" wit="3" int="-3" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -7813,7 +7813,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_w+3m-3_c" symbol_id="168" dye_id="4612" price="90000" wit="3" int="0" men="-3" dex="0" str="0" con="0">
+	<henna name="symbol_w+3m-3_c" symbol_id="168" dye_id="4612" price="90000" wit="3" int="0" men="-3" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -7841,7 +7841,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_s+4c-4_c" symbol_id="169" dye_id="4613" price="145000" wit="0" int="0" men="0" dex="0" str="4" con="-4">
+	<henna name="symbol_s+4c-4_c" symbol_id="169" dye_id="4613" price="145000" wit="0" int="0" men="0" dex="0" str="4" con="-4" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -7915,7 +7915,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_s+4d-4_c" symbol_id="170" dye_id="4614" price="145000" wit="0" int="0" men="0" dex="-4" str="4" con="0">
+	<henna name="symbol_s+4d-4_c" symbol_id="170" dye_id="4614" price="145000" wit="0" int="0" men="0" dex="-4" str="4" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -7989,7 +7989,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+4s-4_c" symbol_id="171" dye_id="4615" price="145000" wit="0" int="0" men="0" dex="0" str="-4" con="4">
+	<henna name="symbol_c+4s-4_c" symbol_id="171" dye_id="4615" price="145000" wit="0" int="0" men="0" dex="0" str="-4" con="4" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -8063,7 +8063,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_c+4d-4_c" symbol_id="172" dye_id="4616" price="145000" wit="0" int="0" men="0" dex="-4" str="0" con="4">
+	<henna name="symbol_c+4d-4_c" symbol_id="172" dye_id="4616" price="145000" wit="0" int="0" men="0" dex="-4" str="0" con="4" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -8137,7 +8137,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+4s-4_c" symbol_id="173" dye_id="4617" price="145000" wit="0" int="0" men="0" dex="4" str="-4" con="0">
+	<henna name="symbol_d+4s-4_c" symbol_id="173" dye_id="4617" price="145000" wit="0" int="0" men="0" dex="4" str="-4" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -8211,7 +8211,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_d+4c-4_c" symbol_id="174" dye_id="4618" price="145000" wit="0" int="0" men="0" dex="4" str="0" con="-4">
+	<henna name="symbol_d+4c-4_c" symbol_id="174" dye_id="4618" price="145000" wit="0" int="0" men="0" dex="4" str="0" con="-4" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -8285,7 +8285,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_i+4m-4_c" symbol_id="175" dye_id="4619" price="145000" wit="0" int="4" men="-4" dex="0" str="0" con="0">
+	<henna name="symbol_i+4m-4_c" symbol_id="175" dye_id="4619" price="145000" wit="0" int="4" men="-4" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -8301,7 +8301,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_i+4w-4_c" symbol_id="176" dye_id="4620" price="145000" wit="-4" int="4" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_i+4w-4_c" symbol_id="176" dye_id="4620" price="145000" wit="-4" int="4" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -8363,7 +8363,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_m+4i-4_c" symbol_id="177" dye_id="4621" price="145000" wit="0" int="-4" men="4" dex="0" str="0" con="0">
+	<henna name="symbol_m+4i-4_c" symbol_id="177" dye_id="4621" price="145000" wit="0" int="-4" men="4" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -8379,7 +8379,7 @@
 		<class id="110"/>
 		<class id="111"/>
 	</henna>
-	<henna name="symbol_m+4w-4_c" symbol_id="178" dye_id="4622" price="145000" wit="-4" int="0" men="4" dex="0" str="0" con="0">
+	<henna name="symbol_m+4w-4_c" symbol_id="178" dye_id="4622" price="145000" wit="-4" int="0" men="4" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -8407,7 +8407,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="symbol_w+4i-4_c" symbol_id="179" dye_id="4623" price="145000" wit="4" int="-4" men="0" dex="0" str="0" con="0">
+	<henna name="symbol_w+4i-4_c" symbol_id="179" dye_id="4623" price="145000" wit="4" int="-4" men="0" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="2"/>
 		<class id="3"/>
 		<class id="5"/>
@@ -8469,7 +8469,7 @@
 		<class id="135"/>
 		<class id="136"/>
 	</henna>
-	<henna name="symbol_w+4m-4_c" symbol_id="180" dye_id="4624" price="145000" wit="4" int="0" men="-4" dex="0" str="0" con="0">
+	<henna name="symbol_w+4m-4_c" symbol_id="180" dye_id="4624" price="145000" wit="4" int="0" men="-4" dex="0" str="0" con="0" luc="0" cha="0">
 		<class id="12"/>
 		<class id="13"/>
 		<class id="14"/>
@@ -8497,7 +8497,7 @@
 		<class id="115"/>
 		<class id="116"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="181" dye_id="17625" price="145000" str="3" con="0" dex="-2" int="0" men="0" wit="0">
+	<henna name="GoD_dye" symbol_id="181" dye_id="17625" price="145000" str="3" con="0" dex="-2" int="0" men="0" wit="0" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -8541,7 +8541,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="182" dye_id="17626" price="145000" str="0" con="-2" dex="3" int="0" men="0" wit="0">
+	<henna name="GoD_dye" symbol_id="182" dye_id="17626" price="145000" str="0" con="-2" dex="3" int="0" men="0" wit="0" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -8585,7 +8585,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="183" dye_id="17627" price="145000" str="-2" con="3" dex="0" int="0" men="0" wit="0">
+	<henna name="GoD_dye" symbol_id="183" dye_id="17627" price="145000" str="-2" con="3" dex="0" int="0" men="0" wit="0" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -8629,7 +8629,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="184" dye_id="17628" price="145000" str="0" con="0" dex="0" int="3" men="0" wit="-2">
+	<henna name="GoD_dye" symbol_id="184" dye_id="17628" price="145000" str="0" con="0" dex="0" int="3" men="0" wit="-2" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -8673,7 +8673,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="185" dye_id="17629" price="145000" str="0" con="0" dex="0" int="0" men="-2" wit="3">
+	<henna name="GoD_dye" symbol_id="185" dye_id="17629" price="145000" str="0" con="0" dex="0" int="0" men="-2" wit="3" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -8717,7 +8717,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="186" dye_id="17630" price="145000" str="0" con="0" dex="0" int="-2" men="3" wit="0">
+	<henna name="GoD_dye" symbol_id="186" dye_id="17630" price="145000" str="0" con="0" dex="0" int="-2" men="3" wit="0" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -8761,7 +8761,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="187" dye_id="17631" price="145000" str="3" con="0" dex="-2" int="0" men="0" wit="0" skillId="13031">
+	<henna name="GoD_dye" symbol_id="187" dye_id="17631" price="145000" str="3" con="0" dex="-2" int="0" men="0" wit="0" skillId="13031" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -8805,7 +8805,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="188" dye_id="17632" price="145000" str="0" con="-2" dex="3" int="0" men="0" wit="0" skillId="13032">
+	<henna name="GoD_dye" symbol_id="188" dye_id="17632" price="145000" str="0" con="-2" dex="3" int="0" men="0" wit="0" skillId="13032" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -8849,7 +8849,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="189" dye_id="17633" price="145000" str="-2" con="3" dex="0" int="0" men="0" wit="0" skillId="13033">
+	<henna name="GoD_dye" symbol_id="189" dye_id="17633" price="145000" str="-2" con="3" dex="0" int="0" men="0" wit="0" skillId="13033" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -8893,7 +8893,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="190" dye_id="17634" price="145000" str="0" con="0" dex="0" int="3" men="0" wit="-2" skillId="13034">
+	<henna name="GoD_dye" symbol_id="190" dye_id="17634" price="145000" str="0" con="0" dex="0" int="3" men="0" wit="-2" skillId="13034" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -8937,7 +8937,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="191" dye_id="17635" price="145000" str="0" con="0" dex="0" int="0" men="-2" wit="3" skillId="13035">
+	<henna name="GoD_dye" symbol_id="191" dye_id="17635" price="145000" str="0" con="0" dex="0" int="0" men="-2" wit="3" skillId="13035" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -8981,7 +8981,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="192" dye_id="17636" price="145000" str="0" con="0" dex="0" int="-2" men="3" wit="0" skillId="13036">
+	<henna name="GoD_dye" symbol_id="192" dye_id="17636" price="145000" str="0" con="0" dex="0" int="-2" men="3" wit="0" skillId="13036" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9025,7 +9025,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="193" dye_id="17637" price="145000" str="3" con="0" dex="-1" int="0" men="0" wit="0" skillId="13031">
+	<henna name="GoD_dye" symbol_id="193" dye_id="17637" price="145000" str="3" con="0" dex="-1" int="0" men="0" wit="0" skillId="13031" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9069,7 +9069,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="194" dye_id="17638" price="145000" str="0" con="-1" dex="3" int="0" men="0" wit="0" skillId="13032">
+	<henna name="GoD_dye" symbol_id="194" dye_id="17638" price="145000" str="0" con="-1" dex="3" int="0" men="0" wit="0" skillId="13032" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9113,7 +9113,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="195" dye_id="17639" price="145000" str="-1" con="3" dex="0" int="0" men="0" wit="0" skillId="13033">
+	<henna name="GoD_dye" symbol_id="195" dye_id="17639" price="145000" str="-1" con="3" dex="0" int="0" men="0" wit="0" skillId="13033" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9157,7 +9157,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="196" dye_id="17640" price="145000" str="0" con="0" dex="0" int="3" men="0" wit="-1" skillId="13034">
+	<henna name="GoD_dye" symbol_id="196" dye_id="17640" price="145000" str="0" con="0" dex="0" int="3" men="0" wit="-1" skillId="13034" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9201,7 +9201,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="197" dye_id="17641" price="145000" str="0" con="0" dex="0" int="0" men="-1" wit="3" skillId="13035">
+	<henna name="GoD_dye" symbol_id="197" dye_id="17641" price="145000" str="0" con="0" dex="0" int="0" men="-1" wit="3" skillId="13035" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9245,7 +9245,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="198" dye_id="17642" price="145000" str="0" con="0" dex="0" int="-1" men="3" wit="0" skillId="13036">
+	<henna name="GoD_dye" symbol_id="198" dye_id="17642" price="145000" str="0" con="0" dex="0" int="-1" men="3" wit="0" skillId="13036" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9289,7 +9289,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="199" dye_id="17643" price="145000" str="4" con="0" dex="-3" int="0" men="0" wit="0">
+	<henna name="GoD_dye" symbol_id="199" dye_id="17643" price="145000" str="4" con="0" dex="-3" int="0" men="0" wit="0" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9333,7 +9333,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="200" dye_id="17644" price="145000" str="0" con="-3" dex="4" int="0" men="0" wit="0">
+	<henna name="GoD_dye" symbol_id="200" dye_id="17644" price="145000" str="0" con="-3" dex="4" int="0" men="0" wit="0" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9377,7 +9377,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="201" dye_id="17645" price="145000" str="-3" con="4" dex="0" int="0" men="0" wit="0">
+	<henna name="GoD_dye" symbol_id="201" dye_id="17645" price="145000" str="-3" con="4" dex="0" int="0" men="0" wit="0" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9421,7 +9421,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="202" dye_id="17646" price="145000" str="0" con="0" dex="0" int="4" men="0" wit="-3">
+	<henna name="GoD_dye" symbol_id="202" dye_id="17646" price="145000" str="0" con="0" dex="0" int="4" men="0" wit="-3" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9465,7 +9465,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="203" dye_id="17647" price="145000" str="0" con="0" dex="0" int="0" men="-3" wit="4">
+	<henna name="GoD_dye" symbol_id="203" dye_id="17647" price="145000" str="0" con="0" dex="0" int="0" men="-3" wit="4" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9509,7 +9509,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="204" dye_id="17648" price="145000" str="0" con="0" dex="0" int="-3" men="4" wit="0">
+	<henna name="GoD_dye" symbol_id="204" dye_id="17648" price="145000" str="0" con="0" dex="0" int="-3" men="4" wit="0" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9553,7 +9553,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="205" dye_id="17649" price="145000" str="4" con="-3" dex="0" int="-3" men="4" wit="0" skillId="13037">
+	<henna name="GoD_dye" symbol_id="205" dye_id="17649" price="145000" str="4" con="-3" dex="0" int="-3" men="4" wit="0" skillId="13037" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9597,7 +9597,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="206" dye_id="17650" price="145000" str="4" con="-3" dex="0" int="-3" men="4" wit="0" skillId="13038">
+	<henna name="GoD_dye" symbol_id="206" dye_id="17650" price="145000" str="4" con="-3" dex="0" int="-3" men="4" wit="0" skillId="13038" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9641,7 +9641,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="207" dye_id="17651" price="145000" str="-3" con="4" dex="0" int="0" men="0" wit="0" skillId="13039">
+	<henna name="GoD_dye" symbol_id="207" dye_id="17651" price="145000" str="-3" con="4" dex="0" int="0" men="0" wit="0" skillId="13039" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9685,7 +9685,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="208" dye_id="17652" price="145000" str="0" con="0" dex="0" int="4" men="0" wit="-3" skillId="13040">
+	<henna name="GoD_dye" symbol_id="208" dye_id="17652" price="145000" str="0" con="0" dex="0" int="4" men="0" wit="-3" skillId="13040" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9729,7 +9729,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="209" dye_id="17653" price="145000" str="0" con="0" dex="0" int="0" men="-3" wit="4" skillId="13041">
+	<henna name="GoD_dye" symbol_id="209" dye_id="17653" price="145000" str="0" con="0" dex="0" int="0" men="-3" wit="4" skillId="13041" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9773,7 +9773,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="210" dye_id="17654" price="145000" str="0" con="0" dex="0" int="-3" men="4" wit="0" skillId="13042">
+	<henna name="GoD_dye" symbol_id="210" dye_id="17654" price="145000" str="0" con="0" dex="0" int="-3" men="4" wit="0" skillId="13042" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9817,7 +9817,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="211" dye_id="17655" price="145000" str="4" con="0" dex="-2" int="0" men="0" wit="0" skillId="13037">
+	<henna name="GoD_dye" symbol_id="211" dye_id="17655" price="145000" str="4" con="0" dex="-2" int="0" men="0" wit="0" skillId="13037" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9861,7 +9861,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="212" dye_id="17656" price="145000" str="0" con="-2" dex="4" int="0" men="0" wit="0" skillId="13038">
+	<henna name="GoD_dye" symbol_id="212" dye_id="17656" price="145000" str="0" con="-2" dex="4" int="0" men="0" wit="0" skillId="13038" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9905,7 +9905,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="213" dye_id="17657" price="145000" str="-2" con="4" dex="0" int="0" men="0" wit="0" skillId="13039">
+	<henna name="GoD_dye" symbol_id="213" dye_id="17657" price="145000" str="-2" con="4" dex="0" int="0" men="0" wit="0" skillId="13039" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9949,7 +9949,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="214" dye_id="17658" price="145000" str="0" con="0" dex="0" int="4" men="0" wit="-2" skillId="13040">
+	<henna name="GoD_dye" symbol_id="214" dye_id="17658" price="145000" str="0" con="0" dex="0" int="4" men="0" wit="-2" skillId="13040" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -9993,7 +9993,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="215" dye_id="17659" price="145000" str="0" con="0" dex="0" int="0" men="-2" wit="4" skillId="13041">
+	<henna name="GoD_dye" symbol_id="215" dye_id="17659" price="145000" str="0" con="0" dex="0" int="0" men="-2" wit="4" skillId="13041" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10037,7 +10037,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="216" dye_id="17660" price="145000" str="0" con="0" dex="0" int="-2" men="4" wit="0" skillId="13042">
+	<henna name="GoD_dye" symbol_id="216" dye_id="17660" price="145000" str="0" con="0" dex="0" int="-2" men="4" wit="0" skillId="13042" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10081,7 +10081,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="217" dye_id="17661" price="145000" str="5" con="0" dex="-4" int="0" men="0" wit="0">
+	<henna name="GoD_dye" symbol_id="217" dye_id="17661" price="145000" str="5" con="0" dex="-4" int="0" men="0" wit="0" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10125,7 +10125,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="218" dye_id="17662" price="145000" str="0" con="-4" dex="5" int="0" men="0" wit="0">
+	<henna name="GoD_dye" symbol_id="218" dye_id="17662" price="145000" str="0" con="-4" dex="5" int="0" men="0" wit="0" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10169,7 +10169,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="219" dye_id="17663" price="145000" str="-4" con="5" dex="0" int="0" men="0" wit="0">
+	<henna name="GoD_dye" symbol_id="219" dye_id="17663" price="145000" str="-4" con="5" dex="0" int="0" men="0" wit="0" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10213,7 +10213,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="220" dye_id="17664" price="145000" str="0" con="0" dex="0" int="5" men="0" wit="-4">
+	<henna name="GoD_dye" symbol_id="220" dye_id="17664" price="145000" str="0" con="0" dex="0" int="5" men="0" wit="-4" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10257,7 +10257,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="221" dye_id="17665" price="145000" str="0" con="0" dex="0" int="0" men="-4" wit="5">
+	<henna name="GoD_dye" symbol_id="221" dye_id="17665" price="145000" str="0" con="0" dex="0" int="0" men="-4" wit="5" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10301,7 +10301,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="222" dye_id="17666" price="145000" str="0" con="0" dex="0" int="-4" men="5" wit="0" skillId="13048">
+	<henna name="GoD_dye" symbol_id="222" dye_id="17666" price="145000" str="0" con="0" dex="0" int="-4" men="5" wit="0" skillId="13048" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10345,7 +10345,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="223" dye_id="17667" price="145000" str="5" con="0" dex="-4" int="0" men="0" wit="0" skillId="13043">
+	<henna name="GoD_dye" symbol_id="223" dye_id="17667" price="145000" str="5" con="0" dex="-4" int="0" men="0" wit="0" skillId="13043" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10389,7 +10389,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="224" dye_id="17668" price="145000" str="0" con="-4" dex="5" int="0" men="0" wit="0" skillId="13044">
+	<henna name="GoD_dye" symbol_id="224" dye_id="17668" price="145000" str="0" con="-4" dex="5" int="0" men="0" wit="0" skillId="13044" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10433,7 +10433,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="225" dye_id="17669" price="145000" str="-4" con="5" dex="0" int="0" men="0" wit="0" skillId="13045">
+	<henna name="GoD_dye" symbol_id="225" dye_id="17669" price="145000" str="-4" con="5" dex="0" int="0" men="0" wit="0" skillId="13045" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10477,7 +10477,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="226" dye_id="17670" price="145000" str="0" con="0" dex="0" int="5" men="0" wit="-4" skillId="13046">
+	<henna name="GoD_dye" symbol_id="226" dye_id="17670" price="145000" str="0" con="0" dex="0" int="5" men="0" wit="-4" skillId="13046" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10521,7 +10521,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="227" dye_id="17671" price="145000" str="0" con="0" dex="0" int="0" men="-4" wit="5" skillId="13047">
+	<henna name="GoD_dye" symbol_id="227" dye_id="17671" price="145000" str="0" con="0" dex="0" int="0" men="-4" wit="5" skillId="13047" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10565,7 +10565,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="228" dye_id="17672" price="145000" str="0" con="0" dex="0" int="-4" men="5" wit="0" skillId="13048">
+	<henna name="GoD_dye" symbol_id="228" dye_id="17672" price="145000" str="0" con="0" dex="0" int="-4" men="5" wit="0" skillId="13048" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10609,7 +10609,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="229" dye_id="17673" price="145000" str="5" con="0" dex="-3" int="0" men="0" wit="0" skillId="13043">
+	<henna name="GoD_dye" symbol_id="229" dye_id="17673" price="145000" str="5" con="0" dex="-3" int="0" men="0" wit="0" skillId="13043" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10653,7 +10653,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="230" dye_id="17674" price="145000" str="0" con="-3" dex="5" int="0" men="0" wit="0" skillId="13044">
+	<henna name="GoD_dye" symbol_id="230" dye_id="17674" price="145000" str="0" con="-3" dex="5" int="0" men="0" wit="0" skillId="13044" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10697,7 +10697,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="231" dye_id="17675" price="145000" str="-3" con="5" dex="0" int="0" men="0" wit="0" skillId="13045">
+	<henna name="GoD_dye" symbol_id="231" dye_id="17675" price="145000" str="-3" con="5" dex="0" int="0" men="0" wit="0" skillId="13045" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10741,7 +10741,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="232" dye_id="17676" price="145000" str="0" con="0" dex="0" int="5" men="0" wit="-3" skillId="13046">
+	<henna name="GoD_dye" symbol_id="232" dye_id="17676" price="145000" str="0" con="0" dex="0" int="5" men="0" wit="-3" skillId="13046" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10785,7 +10785,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="233" dye_id="17677" price="145000" str="0" con="0" dex="0" int="0" men="-3" wit="5" skillId="13047">
+	<henna name="GoD_dye" symbol_id="233" dye_id="17677" price="145000" str="0" con="0" dex="0" int="0" men="-3" wit="5" skillId="13047" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10829,7 +10829,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="234" dye_id="17678" price="145000" str="0" con="0" dex="0" int="-3" men="5" wit="0" skillId="13048">
+	<henna name="GoD_dye" symbol_id="234" dye_id="17678" price="145000" str="0" con="0" dex="0" int="-3" men="5" wit="0" skillId="13048" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10873,7 +10873,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="235" dye_id="17679" price="145000" str="5" con="0" dex="-2" int="0" men="0" wit="0">
+	<henna name="GoD_dye" symbol_id="235" dye_id="17679" price="145000" str="5" con="0" dex="-2" int="0" men="0" wit="0" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10917,7 +10917,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="236" dye_id="17680" price="145000" str="0" con="-2" dex="5" int="0" men="0" wit="0">
+	<henna name="GoD_dye" symbol_id="236" dye_id="17680" price="145000" str="0" con="-2" dex="5" int="0" men="0" wit="0" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -10961,7 +10961,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="237" dye_id="17681" price="145000" str="-2" con="5" dex="0" int="0" men="0" wit="0">
+	<henna name="GoD_dye" symbol_id="237" dye_id="17681" price="145000" str="-2" con="5" dex="0" int="0" men="0" wit="0" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11005,7 +11005,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="238" dye_id="17682" price="145000" str="0" con="0" dex="0" int="5" men="0" wit="-2">
+	<henna name="GoD_dye" symbol_id="238" dye_id="17682" price="145000" str="0" con="0" dex="0" int="5" men="0" wit="-2" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11049,7 +11049,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="239" dye_id="17683" price="145000" str="0" con="0" dex="0" int="0" men="-2" wit="5">
+	<henna name="GoD_dye" symbol_id="239" dye_id="17683" price="145000" str="0" con="0" dex="0" int="0" men="-2" wit="5" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11093,7 +11093,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="240" dye_id="17684" price="145000" str="0" con="0" dex="0" int="-2" men="5" wit="0">
+	<henna name="GoD_dye" symbol_id="240" dye_id="17684" price="145000" str="0" con="0" dex="0" int="-2" men="5" wit="0" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11137,7 +11137,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="241" dye_id="17685" price="145000" str="5" con="0" dex="-2" int="0" men="0" wit="0" skillId="13049">
+	<henna name="GoD_dye" symbol_id="241" dye_id="17685" price="145000" str="5" con="0" dex="-2" int="0" men="0" wit="0" skillId="13049" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11181,7 +11181,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="242" dye_id="17686" price="145000" str="0" con="-2" dex="5" int="0" men="0" wit="0" skillId="13050">
+	<henna name="GoD_dye" symbol_id="242" dye_id="17686" price="145000" str="0" con="-2" dex="5" int="0" men="0" wit="0" skillId="13050" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11225,7 +11225,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="243" dye_id="17687" price="145000" str="-2" con="5" dex="0" int="0" men="0" wit="0" skillId="13051">
+	<henna name="GoD_dye" symbol_id="243" dye_id="17687" price="145000" str="-2" con="5" dex="0" int="0" men="0" wit="0" skillId="13051" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11269,7 +11269,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="244" dye_id="17688" price="145000" str="0" con="0" dex="0" int="5" men="0" wit="-2" skillId="13052">
+	<henna name="GoD_dye" symbol_id="244" dye_id="17688" price="145000" str="0" con="0" dex="0" int="5" men="0" wit="-2" skillId="13052" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11313,7 +11313,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="245" dye_id="17689" price="145000" str="0" con="0" dex="0" int="0" men="-2" wit="5" skillId="13053">
+	<henna name="GoD_dye" symbol_id="245" dye_id="17689" price="145000" str="0" con="0" dex="0" int="0" men="-2" wit="5" skillId="13053" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11357,7 +11357,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="246" dye_id="17690" price="145000" str="0" con="0" dex="0" int="-2" men="5" wit="0" skillId="13054">
+	<henna name="GoD_dye" symbol_id="246" dye_id="17690" price="145000" str="0" con="0" dex="0" int="-2" men="5" wit="0" skillId="13054" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11401,7 +11401,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="247" dye_id="17691" price="145000" str="5" con="0" dex="-1" int="0" men="0" wit="0" skillId="13049">
+	<henna name="GoD_dye" symbol_id="247" dye_id="17691" price="145000" str="5" con="0" dex="-1" int="0" men="0" wit="0" skillId="13049" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11445,7 +11445,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="248" dye_id="17692" price="145000" str="0" con="-1" dex="5" int="0" men="0" wit="0" skillId="13050">
+	<henna name="GoD_dye" symbol_id="248" dye_id="17692" price="145000" str="0" con="-1" dex="5" int="0" men="0" wit="0" skillId="13050" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11489,7 +11489,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="249" dye_id="17693" price="145000" str="-1" con="5" dex="0" int="0" men="0" wit="0" skillId="13051">
+	<henna name="GoD_dye" symbol_id="249" dye_id="17693" price="145000" str="-1" con="5" dex="0" int="0" men="0" wit="0" skillId="13051" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11533,7 +11533,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="250" dye_id="17694" price="145000" str="0" con="0" dex="0" int="5" men="0" wit="-1" skillId="13052">
+	<henna name="GoD_dye" symbol_id="250" dye_id="17694" price="145000" str="0" con="0" dex="0" int="5" men="0" wit="-1" skillId="13052" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11577,7 +11577,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="251" dye_id="17695" price="145000" str="0" con="0" dex="0" int="0" men="-1" wit="5" skillId="13053">
+	<henna name="GoD_dye" symbol_id="251" dye_id="17695" price="145000" str="0" con="0" dex="0" int="0" men="-1" wit="5" skillId="13053" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11621,7 +11621,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="252" dye_id="17696" price="145000" str="0" con="0" dex="0" int="-1" men="5" wit="0" skillId="13054">
+	<henna name="GoD_dye" symbol_id="252" dye_id="17696" price="145000" str="0" con="0" dex="0" int="-1" men="5" wit="0" skillId="13054" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11665,7 +11665,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="253" dye_id="17697" price="145000" str="5" con="0" dex="0" int="0" men="0" wit="0">
+	<henna name="GoD_dye" symbol_id="253" dye_id="17697" price="145000" str="5" con="0" dex="0" int="0" men="0" wit="0" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11709,7 +11709,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="254" dye_id="17698" price="145000" str="0" con="0" dex="5" int="0" men="0" wit="0">
+	<henna name="GoD_dye" symbol_id="254" dye_id="17698" price="145000" str="0" con="0" dex="5" int="0" men="0" wit="0" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11753,7 +11753,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="255" dye_id="17699" price="145000" str="0" con="5" dex="0" int="0" men="0" wit="0">
+	<henna name="GoD_dye" symbol_id="255" dye_id="17699" price="145000" str="0" con="5" dex="0" int="0" men="0" wit="0" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11797,7 +11797,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="256" dye_id="17700" price="145000" str="0" con="0" dex="0" int="5" men="0" wit="0">
+	<henna name="GoD_dye" symbol_id="256" dye_id="17700" price="145000" str="0" con="0" dex="0" int="5" men="0" wit="0" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11841,7 +11841,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="257" dye_id="17701" price="145000" str="0" con="0" dex="0" int="0" men="0" wit="5">
+	<henna name="GoD_dye" symbol_id="257" dye_id="17701" price="145000" str="0" con="0" dex="0" int="0" men="0" wit="5" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11885,7 +11885,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="258" dye_id="17702" price="145000" str="0" con="0" dex="0" int="-1" men="0" wit="5">
+	<henna name="GoD_dye" symbol_id="258" dye_id="17702" price="145000" str="0" con="0" dex="0" int="-1" men="0" wit="5" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11929,7 +11929,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="259" dye_id="17703" price="145000" str="5" con="0" dex="0" int="0" men="0" wit="0" skillId="13055">
+	<henna name="GoD_dye" symbol_id="259" dye_id="17703" price="145000" str="5" con="0" dex="0" int="0" men="0" wit="0" skillId="13055" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -11973,7 +11973,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="260" dye_id="17704" price="145000" str="0" con="0" dex="5" int="0" men="0" wit="0" skillId="13056">
+	<henna name="GoD_dye" symbol_id="260" dye_id="17704" price="145000" str="0" con="0" dex="5" int="0" men="0" wit="0" skillId="13056" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -12017,7 +12017,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="261" dye_id="17705" price="145000" str="0" con="5" dex="0" int="0" men="0" wit="0" skillId="13057">
+	<henna name="GoD_dye" symbol_id="261" dye_id="17705" price="145000" str="0" con="5" dex="0" int="0" men="0" wit="0" skillId="13057" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -12061,7 +12061,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="262" dye_id="17706" price="145000" str="0" con="0" dex="0" int="5" men="0" wit="0" skillId="13058">
+	<henna name="GoD_dye" symbol_id="262" dye_id="17706" price="145000" str="0" con="0" dex="0" int="5" men="0" wit="0" skillId="13058" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -12105,7 +12105,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="263" dye_id="17707" price="145000" str="0" con="0" dex="0" int="0" men="0" wit="5" skillId="13059">
+	<henna name="GoD_dye" symbol_id="263" dye_id="17707" price="145000" str="0" con="0" dex="0" int="0" men="0" wit="5" skillId="13059" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -12149,7 +12149,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="264" dye_id="17708" price="145000" str="0" con="0" dex="0" int="0" men="5" wit="0" skillId="13060">
+	<henna name="GoD_dye" symbol_id="264" dye_id="17708" price="145000" str="0" con="0" dex="0" int="0" men="5" wit="0" skillId="13060" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -12193,7 +12193,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="265" dye_id="17709" price="145000" str="5" con="0" dex="1" int="0" men="0" wit="0" skillId="13055">
+	<henna name="GoD_dye" symbol_id="265" dye_id="17709" price="145000" str="5" con="0" dex="1" int="0" men="0" wit="0" skillId="13055" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -12237,7 +12237,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="266" dye_id="17710" price="145000" str="0" con="1" dex="5" int="0" men="0" wit="0" skillId="13056">
+	<henna name="GoD_dye" symbol_id="266" dye_id="17710" price="145000" str="0" con="1" dex="5" int="0" men="0" wit="0" skillId="13056" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -12281,7 +12281,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="267" dye_id="17711" price="145000" str="1" con="5" dex="0" int="0" men="0" wit="0" skillId="13057">
+	<henna name="GoD_dye" symbol_id="267" dye_id="17711" price="145000" str="1" con="5" dex="0" int="0" men="0" wit="0" skillId="13057" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -12325,7 +12325,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="268" dye_id="17712" price="145000" str="0" con="0" dex="0" int="5" men="0" wit="1" skillId="13058">
+	<henna name="GoD_dye" symbol_id="268" dye_id="17712" price="145000" str="0" con="0" dex="0" int="5" men="0" wit="1" skillId="13058" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -12369,7 +12369,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="269" dye_id="17713" price="145000" str="0" con="0" dex="0" int="0" men="1" wit="5" skillId="13059">
+	<henna name="GoD_dye" symbol_id="269" dye_id="17713" price="145000" str="0" con="0" dex="0" int="0" men="1" wit="5" skillId="13059" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>
@@ -12413,7 +12413,7 @@
 		<class id="180"/>
 		<class id="181"/>
 	</henna>
-	<henna name="GoD_dye" symbol_id="270" dye_id="17714" price="145000" str="0" con="0" dex="0" int="1" men="5" wit="0" skillId="13060">
+	<henna name="GoD_dye" symbol_id="270" dye_id="17714" price="145000" str="0" con="0" dex="0" int="1" men="5" wit="0" skillId="13060" luc="0" cha="0">
 		<class id="139"/>
 		<class id="140"/>
 		<class id="141"/>

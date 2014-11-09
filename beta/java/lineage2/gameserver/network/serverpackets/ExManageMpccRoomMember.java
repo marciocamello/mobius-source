@@ -36,12 +36,12 @@ public class ExManageMpccRoomMember extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeEx(0x9F);
+		writeEx(0x0A);
 		writeD(_type);
 		writeD(_memberInfo.objectId);
 		writeS(_memberInfo.name);
-		writeD(_memberInfo.level);
 		writeD(_memberInfo.classId);
+		writeD(_memberInfo.level);
 		writeD(_memberInfo.location);
 		writeD(_memberInfo.memberType);
 	}

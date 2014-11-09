@@ -76,8 +76,8 @@ import lineage2.gameserver.network.serverpackets.ExTutorialList;
 import lineage2.gameserver.network.serverpackets.ExUnReadMailCount;
 import lineage2.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import lineage2.gameserver.network.serverpackets.ExVitalityEffectInfo;
+import lineage2.gameserver.network.serverpackets.FriendList;
 import lineage2.gameserver.network.serverpackets.HennaInfo;
-import lineage2.gameserver.network.serverpackets.L2FriendList;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.MagicAndSkillList;
 import lineage2.gameserver.network.serverpackets.MagicSkillLaunched;
@@ -295,7 +295,7 @@ public class EnterWorld extends L2GameClientPacket
 			activeChar.mentoringLoginConditions();
 		}
 		
-		sendPacket(new L2FriendList(activeChar), new ExStorageMaxCount(activeChar), new QuestList(activeChar), new ExBasicActionList(activeChar), new EtcStatusUpdate(activeChar));
+		sendPacket(new FriendList(activeChar), new ExStorageMaxCount(activeChar), new QuestList(activeChar), new ExBasicActionList(activeChar), new EtcStatusUpdate(activeChar));
 		activeChar.checkHpMessages(activeChar.getMaxHp(), activeChar.getCurrentHp());
 		activeChar.checkDayNightMessages();
 		
@@ -340,6 +340,7 @@ public class EnterWorld extends L2GameClientPacket
 		}
 		
 		activeChar.entering = false;
+		// TODO: Test this !!!
 		activeChar.sendUserInfo();
 		
 		if (activeChar.isSitting())
@@ -519,6 +520,7 @@ public class EnterWorld extends L2GameClientPacket
 		}
 		else
 		{
+			// TODO: test this !!!
 			activeChar.sendUserInfo();
 		}
 		

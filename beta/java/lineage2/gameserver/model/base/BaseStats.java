@@ -124,6 +124,34 @@ public enum BaseStats
 			return actor == null ? 1. : MENbonus[actor.getMEN()];
 		}
 	},
+	LUC
+	{
+		@Override
+		public final int getStat(Creature actor)
+		{
+			return actor == null ? 1 : actor.getLUC();
+		}
+		
+		@Override
+		public final double calcBonus(Creature actor)
+		{
+			return actor == null ? 1. : LUCbonus[actor.getLUC()];
+		}
+	},
+	CHA
+	{
+		@Override
+		public final int getStat(Creature actor)
+		{
+			return actor == null ? 1 : actor.getCHA();
+		}
+		
+		@Override
+		public final double calcBonus(Creature actor)
+		{
+			return actor == null ? 1. : CHAbonus[actor.getCHA()];
+		}
+	},
 	NONE;
 	public static final BaseStats[] VALUES = values();
 	protected static final Logger _log = LoggerFactory.getLogger(BaseStats.class);
@@ -134,6 +162,8 @@ public enum BaseStats
 	static final double[] WITbonus = new double[MAX_STAT_VALUE];
 	static final double[] CONbonus = new double[MAX_STAT_VALUE];
 	static final double[] MENbonus = new double[MAX_STAT_VALUE];
+	static final double[] LUCbonus = new double[MAX_STAT_VALUE];
+	static final double[] CHAbonus = new double[MAX_STAT_VALUE];
 	
 	/**
 	 * Method getStat.
@@ -310,6 +340,36 @@ public enum BaseStats
 								i = Integer.valueOf(d.getAttributes().getNamedItem("value").getNodeValue());
 								val = Integer.valueOf(d.getAttributes().getNamedItem("bonus").getNodeValue());
 								WITbonus[i + 1] = (1000 + val) / 1000;
+							}
+						}
+					}
+					
+					if (n.getNodeName().equalsIgnoreCase("LUC"))
+					{
+						for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
+						{
+							String node = d.getNodeName();
+							
+							if (node.equalsIgnoreCase("stat"))
+							{
+								i = Integer.valueOf(d.getAttributes().getNamedItem("value").getNodeValue());
+								val = Integer.valueOf(d.getAttributes().getNamedItem("bonus").getNodeValue());
+								LUCbonus[i + 1] = (1000 + val) / 1000;
+							}
+						}
+					}
+					
+					if (n.getNodeName().equalsIgnoreCase("CHA"))
+					{
+						for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
+						{
+							String node = d.getNodeName();
+							
+							if (node.equalsIgnoreCase("stat"))
+							{
+								i = Integer.valueOf(d.getAttributes().getNamedItem("value").getNodeValue());
+								val = Integer.valueOf(d.getAttributes().getNamedItem("bonus").getNodeValue());
+								CHAbonus[i + 1] = (1000 + val) / 1000;
 							}
 						}
 					}

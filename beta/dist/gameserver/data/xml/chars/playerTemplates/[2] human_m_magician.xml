@@ -20,9 +20,9 @@
 			</start_points>
 		</creation_data>
 		<stats_data>
-			<min_attributes int="10" str="10" con="10" men="10" dex="10" wit="10"/>
-			<max_attributes int="150" str="150" con="150" men="150" dex="150" wit="150"/>
-			<base_attributes int="79" str="38" con="41" men="78" dex="27" wit="78"/>
+			<min_attributes int="10" str="10" con="10" men="10" dex="10" wit="10" luc="10" cha="10"/>
+			<max_attributes int="150" str="150" con="150" men="150" dex="150" wit="150" luc="150" cha="150"/>
+			<base_attributes int="79" str="38" con="41" men="78" dex="27" wit="78" luc="34" cha="41"/>
 			<armor_defence chest="15" legs="8" helmet="12" boots="7" gloves="8" underwear="3" cloak="1"/>
 			<jewel_defence r_earring="9" l_earring="9" r_ring="5" l_ring="5" necklace="13"/>
 			<base_stats>

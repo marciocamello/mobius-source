@@ -15,6 +15,7 @@ package lineage2.gameserver.network.serverpackets;
 public class ExVariationCancelResult extends L2GameServerPacket
 {
 	private final int _closeWindow;
+	@SuppressWarnings("unused")
 	private final int _unk1;
 	
 	public ExVariationCancelResult(int result)
@@ -27,7 +28,7 @@ public class ExVariationCancelResult extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeEx(0x59);
-		writeD(_unk1);
+		// writeD(_unk1); TODO: Test it !!!
 		writeD(_closeWindow);
 	}
 }

@@ -36,6 +36,7 @@ public final class SkillLearn implements Comparable<SkillLearn>
 	private final Race _race;
 	private final Map<Integer, Long> required_items;
 	private final List<Integer> delete_skills;
+	private final int _dualClassMinLvl;
 	
 	/**
 	 * Constructor for SkillLearn.
@@ -64,6 +65,7 @@ public final class SkillLearn implements Comparable<SkillLearn>
 		_race = race;
 		this.required_items = required_items;
 		this.delete_skills = delete_skills;
+		_dualClassMinLvl = 0; // TODO: Implement this !!!
 	}
 	
 	/**
@@ -91,6 +93,15 @@ public final class SkillLearn implements Comparable<SkillLearn>
 	public int getMinLevel()
 	{
 		return _minLevel;
+	}
+	
+	/**
+	 * Method getDualClassMinLvl.
+	 * @return int
+	 */
+	public int getDualClassMinLvl()
+	{
+		return _dualClassMinLvl;
 	}
 	
 	/**

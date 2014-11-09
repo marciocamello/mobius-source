@@ -12,19 +12,20 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
+import lineage2.commons.math.SafeMath;
 import lineage2.gameserver.dao.MailDAO;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.World;
+import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.mail.Mail;
-import lineage2.gameserver.network.serverpackets.ExNoticePostArrived;
-import lineage2.gameserver.network.serverpackets.ExShowReceivedPostList;
+import lineage2.gameserver.network.serverpackets.ExShowSentPostList;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.utils.Log;
 
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public class RequestExRejectPost extends L2GameClientPacket
+public class RequestCancelPostAttachment extends L2GameClientPacket
 {
 	private int postId;
 	
@@ -86,29 +87,72 @@ public class RequestExRejectPost extends L2GameClientPacket
 			return;
 		}
 		
-		Mail mail = MailDAO.getInstance().getReceivedMailByMailId(activeChar.getObjectId(), postId);
+		Mail mail = MailDAO.getInstance().getSentMailByMailId(activeChar.getObjectId(), postId);
 		
 		if (mail != null)
 		{
-			if ((mail.getType() != Mail.SenderType.NORMAL) || mail.getAttachments().isEmpty())
+			if (mail.getAttachments().isEmpty())
 			{
 				activeChar.sendActionFailed();
 				return;
 			}
 			
-			int expireTime = (360 * 3600) + (int) (System.currentTimeMillis() / 1000L);
-			Mail reject = mail.reject();
-			mail.delete();
-			reject.setExpireTime(expireTime);
-			reject.save();
-			Player sender = World.getPlayer(reject.getReceiverId());
+			activeChar.getInventory().writeLock();
 			
-			if (sender != null)
+			try
 			{
-				sender.sendPacket(ExNoticePostArrived.STATIC_TRUE);
+				int slots = 0;
+				long weight = 0;
+				
+				for (ItemInstance item : mail.getAttachments())
+				{
+					weight = SafeMath.addAndCheck(weight, SafeMath.mulAndCheck(item.getCount(), item.getTemplate().getWeight()));
+					
+					if (!item.getTemplate().isStackable() || (activeChar.getInventory().getItemByItemId(item.getId()) == null))
+					{
+						slots++;
+					}
+				}
+				
+				if (!activeChar.getInventory().validateWeight(weight))
+				{
+					sendPacket(new SystemMessage(SystemMessage.YOU_COULD_NOT_CANCEL_RECEIPT_BECAUSE_YOUR_INVENTORY_IS_FULL));
+					return;
+				}
+				
+				if (!activeChar.getInventory().validateCapacity(slots))
+				{
+					sendPacket(new SystemMessage(SystemMessage.YOU_COULD_NOT_CANCEL_RECEIPT_BECAUSE_YOUR_INVENTORY_IS_FULL));
+					return;
+				}
+				
+				ItemInstance[] items;
+				synchronized (mail.getAttachments())
+				{
+					items = mail.getAttachments().toArray(new ItemInstance[mail.getAttachments().size()]);
+					mail.getAttachments().clear();
+				}
+				
+				for (ItemInstance item : items)
+				{
+					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_ACQUIRED_S2_S1).addItemName(item.getId()).addNumber(item.getCount()));
+					Log.LogItem(activeChar, Log.PostCancel, item);
+					activeChar.getInventory().addItem(item);
+				}
+				
+				mail.delete();
+				activeChar.sendPacket(new SystemMessage(SystemMessage.MAIL_SUCCESSFULLY_CANCELLED));
+			}
+			catch (ArithmeticException ae)
+			{
+				// empty catch clause
+			}
+			finally
+			{
+				activeChar.getInventory().writeUnlock();
 			}
 		}
 		
-		activeChar.sendPacket(new ExShowReceivedPostList(activeChar));
+		activeChar.sendPacket(new ExShowSentPostList(activeChar));
 	}
 }

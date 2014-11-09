@@ -26,8 +26,8 @@ public class ExVitalityPointInfo extends L2GameServerPacket
 	{
 		writeEx(0xA1);
 		writeD(_vitality);
-		writeD(0);
-		writeD(0);
-		writeD(0);
+		// writeD(0);
+		// writeD(0);
+		// writeD(0);
 	}
 }

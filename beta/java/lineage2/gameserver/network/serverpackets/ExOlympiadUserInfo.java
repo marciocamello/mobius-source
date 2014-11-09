@@ -41,10 +41,12 @@ public class ExOlympiadUserInfo extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeEx(0x7B);
+		
 		writeC(_side);
 		writeD(obj_id);
 		writeS(_name);
 		writeD(class_id);
+		
 		writeD(curHp);
 		writeD(maxHp);
 		writeD(curCp);

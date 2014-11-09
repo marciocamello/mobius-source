@@ -54,6 +54,7 @@ public class ExShowSeedMapInfo extends L2GameServerPacket
 			writeD(loc.getY());
 			writeD(loc.getZ());
 			
+			// TODO: Unhardcode this !!!
 			switch (loc.getHeading())
 			{
 				case 1: // Seed of Destruction
@@ -65,12 +66,14 @@ public class ExShowSeedMapInfo extends L2GameServerPacket
 					{
 						writeD(2772);
 					}
-					
 					break;
 				
 				case 2: // Seed of Immortality
 					writeD(SoIManager.getCurrentStage() + 2765);
 					break;
+				
+				default:
+					writeD(0x00);
 			}
 		}
 	}

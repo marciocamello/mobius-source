@@ -52,7 +52,8 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 	
 	/**
 	 * Method iterator.
-	 * @return Iterator<CharSelectInfoPackage> * @see java.lang.Iterable#iterator()
+	 * @return Iterator<CharSelectInfoPackage>
+	 * @see java.lang.Iterable#iterator()
 	 */
 	@Override
 	public Iterator<CharSelectInfoPackage> iterator()
@@ -119,6 +120,8 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 		private final ItemInstance[] _paperdoll;
 		private int _accesslevel = 0;
 		private int _x = 0, _y = 0, _z = 0;
+		private boolean _noblesse;
+		private boolean _hero;
 		
 		/**
 		 * Constructor for CharSelectInfoPackage.
@@ -774,6 +777,38 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 		public void setPvP(int pvp)
 		{
 			_pvp = pvp;
+		}
+		
+		/**
+		 * @return the _noblesse
+		 */
+		public boolean getNoblesse()
+		{
+			return _noblesse;
+		}
+		
+		/**
+		 * @param noblesse the _noblesse to set
+		 */
+		public void setNoblesse(boolean noblesse)
+		{
+			_noblesse = noblesse;
+		}
+		
+		/**
+		 * @return the _hero
+		 */
+		public boolean getHero()
+		{
+			return _hero;
+		}
+		
+		/**
+		 * @param hero the _hero to set
+		 */
+		public void setHero(boolean hero)
+		{
+			_hero = hero;
 		}
 	}
 }

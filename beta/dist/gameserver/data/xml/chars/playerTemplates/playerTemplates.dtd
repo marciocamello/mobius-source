@@ -30,7 +30,9 @@
 	con CDATA #REQUIRED
 	men CDATA #REQUIRED
 	dex CDATA #REQUIRED
-	wit CDATA #REQUIRED>
+	wit CDATA #REQUIRED
+	luc CDATA #REQUIRED
+	cha CDATA #REQUIRED>
 
 <!ELEMENT max_attributes (#PCDATA)>
 <!ATTLIST max_attributes
@@ -39,7 +41,9 @@
 	con CDATA #REQUIRED
 	men CDATA #REQUIRED
 	dex CDATA #REQUIRED
-	wit CDATA #REQUIRED>
+	wit CDATA #REQUIRED
+	luc CDATA #REQUIRED
+	cha CDATA #REQUIRED>
 
 <!ELEMENT base_attributes (#PCDATA)>
 <!ATTLIST base_attributes
@@ -48,7 +52,9 @@
 	con CDATA #REQUIRED
 	men CDATA #REQUIRED
 	dex CDATA #REQUIRED
-	wit CDATA #REQUIRED>
+	wit CDATA #REQUIRED
+	luc CDATA #REQUIRED
+	cha CDATA #REQUIRED>
 
 <!ELEMENT armor_defence (#PCDATA)>
 <!ATTLIST armor_defence
