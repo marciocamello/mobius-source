@@ -69,7 +69,7 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 			readH();
 			_itemQ[i] = readQ();
 			_itemP[i] = readQ();
-			readD(); // 603
+			readD();
 			
 			if ((_itemQ[i] < 1) || (_itemP[i] < 1) || (ArrayUtils.indexOf(_items, _items[i]) < i))
 			{

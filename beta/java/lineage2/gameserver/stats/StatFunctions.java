@@ -254,8 +254,9 @@ public class StatFunctions
 		@Override
 		public void calc(Env env)
 		{
-			// env.value *= env.character.getLevelMod();
-			env.value *= env.character.getLevelMod() * BaseStats.CHA.calcBonus(env.character); // Ertheia
+			env.value *= env.character.getLevelMod();
+			// Line bellow commented because multiplying with cha bonus actually drops pDef.
+			// env.value *= env.character.getLevelMod() * BaseStats.CHA.calcBonus(env.character); // Ertheia
 		}
 	}
 	
