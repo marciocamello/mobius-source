@@ -22,35 +22,27 @@ public enum NpcString
 {
 	NONE(-1),
 	NONE2(2042),
-	// Text: The radio signal detector is responding. # A suspicious pile of
-	// stones catches your eye.
+	// Text: The radio signal detector is responding. # A suspicious pile of stones catches your eye.
 	THE_RADIO_SIGNAL_DETECTOR_IS_RESPONDING_A_SUSPICIOUS_PILE_OF_STONES_CATCHES_YOUR_EYE(11453),
 	// Text: Att... attack... $s1. Ro... rogue... $s2..
 	ATT__ATTACK__S1__RO__ROGUE__S2(46350),
-	// Text: Listen, you villagers. Our liege, who will soon become a lord, has
-	// defeated the Headless Knight. You can now rest easy!
+	// Text: Listen, you villagers. Our liege, who will soon become a lord, has defeated the Headless Knight. You can now rest easy!
 	LISTEN_YOU_VILLAGERS_OUR_LIEGE_WHO_WILL_SOON_BECAME_A_LORD_HAS_DEFEATED_THE_HEADLESS_KNIGHT(70854),
 	// $s1 has become lord of the Town of Gludio. Long may he reign!
 	S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_GLUDIO(70859),
 	// Text: $s1 has become lord of the Town of Dion. Long may he reign!
 	S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_DION(70959),
-	// Text: $s1 has become the lord of the Town of Giran. May there be glory in
-	// the territory of Giran!
+	// Text: $s1 has become the lord of the Town of Giran. May there be glory in the territory of Giran!
 	S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_GIRAN(71059),
-	// Text: $s1 has become the lord of the Town of Oren. May there be glory in
-	// the territory of Oren!
+	// Text: $s1 has become the lord of the Town of Oren. May there be glory in the territory of Oren!
 	S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_OREN(71259),
-	// Text: $s1 has become the lord of the Town of Aden. May there be glory in
-	// the territory of Aden!
+	// Text: $s1 has become the lord of the Town of Aden. May there be glory in the territory of Aden!
 	S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_ADEN(71351),
-	// Text: $s1 has become the lord of the Town of Schuttgart. May there be
-	// glory in the territory of Schuttgart!
+	// Text: $s1 has become the lord of the Town of Schuttgart. May there be glory in the territory of Schuttgart!
 	S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_SCHUTTGART(71459),
-	// Text: $s1 has become the lord of the Town of Innadril. May there be glory
-	// in the territory of Innadril!
+	// Text: $s1 has become the lord of the Town of Innadril. May there be glory in the territory of Innadril!
 	S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_INNADRIL(71159),
-	// Text: $s1 has become the lord of the Town of Rune. May there be glory in
-	// the territory of Rune!
+	// Text: $s1 has become the lord of the Town of Rune. May there be glory in the territory of Rune!
 	S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_RUNE(71659),
 	// Text: Protect the catapult of Gludio!
 	PROTECT_THE_CATAPULT_OF_GLUDIO(72951),
@@ -278,22 +270,17 @@ public enum NpcString
 	THERE_HAS_BEEN_NO_WINNING_LOTTERY_TICKET(1000177),
 	// Text: Your lucky numbers have been selected above.
 	YOUR_LUCKY_NUMBERS_HAVE_BEEN_SELECTED_ABOVE(1000179),
-	// Text: Prepare to die, foreign invaders! I am Gustav, the eternal ruler of
-	// this fortress and I have taken up my sword to repel thee!
+	// Text: Prepare to die, foreign invaders! I am Gustav, the eternal ruler of this fortress and I have taken up my sword to repel thee!
 	PREPARE_TO_DIE_FOREIGN_INVADERS_I_AM_GUSTAV_THE_ETERNAL_RULER_OF_THIS_FORTRESS_AND_I_HAVE_TAKEN_UP_MY_SWORD_TO_REPEL_THEE(1000275),
-	// Text: Glory to Aden, the Kingdom of the Lion! Glory to Sir Gustav, our
-	// immortal lord!
+	// Text: Glory to Aden, the Kingdom of the Lion! Glory to Sir Gustav, our immortal lord!
 	GLORY_TO_ADEN_THE_KINGDOM_OF_THE_LION_GLORY_TO_SIR_GUSTAV_OUR_IMMORTAL_LORD(1000276),
 	// Text: Soldiers of Gustav, go forth and destroy the invaders!
 	SOLDIERS_OF_GUSTAV_GO_FORTH_AND_DESTROY_THE_INVADERS(1000277),
-	// Text: This is unbelievable! Have I really been defeated? I shall return
-	// and take your head!
+	// Text: This is unbelievable! Have I really been defeated? I shall return and take your head!
 	THIS_IS_UNBELIEVABLE_HAVE_I_REALLY_BEEN_DEFEATED_I_SHALL_RETURN_AND_TAKE_YOUR_HEAD(1000278),
-	// Text: Could it be that I have reached my end? I cannot die without honor,
-	// without the permission of Sir Gustav!
+	// Text: Could it be that I have reached my end? I cannot die without honor, without the permission of Sir Gustav!
 	COULD_IT_BE_THAT_I_HAVE_REACHED_MY_END_I_CANNOT_DIE_WITHOUT_HONOR_WITHOUT_THE_PERMISSION_OF_SIR_GUSTAV(1000279),
-	// Text: Ah, the bitter taste of defeat... I fear my torments are not
-	// over...
+	// Text: Ah, the bitter taste of defeat... I fear my torments are not over...
 	AH_THE_BITTER_TASTE_OF_DEFEAT_I_FEAR_MY_TORMENTS_ARE_NOT_OVER(1000280),
 	// This world will soon be annihilated!
 	THIS_WORLD_WILL_SOON_BE_ANNIHILATED(1000303),
@@ -343,26 +330,19 @@ public enum NpcString
 	NO_OWNER(1000512),
 	// Text: **unregistered**
 	__UNREGISTERED__(1000495),
-	// Arrogant fool! You dare to challenge me, the Ruler of Flames? Here is
-	// your reward!
+	// Arrogant fool! You dare to challenge me, the Ruler of Flames? Here is your reward!
 	VALAKAS_ARROGAANT_FOOL_YOU_DARE_TO_CHALLENGE_ME(1000519),
-	// Valakas finds your attacks to be annoying and disruptive to his
-	// concentration. Keep it up!
+	// Valakas finds your attacks to be annoying and disruptive to his concentration. Keep it up!
 	VALAKAS_FINDS_YOU_ATTACKS_ANNOYING_SILENCE(1801071),
-	// Valakas' P.Def. is momentarily decreased because a warrior sliced a great
-	// gash in his side!
+	// Valakas' P.Def. is momentarily decreased because a warrior sliced a great gash in his side!
 	VALAKAS_PDEF_ISM_DECREACED_SLICED_DASH(1801072),
-	// Your attacks have overwhelmed Valakas, momentarily distracting him from
-	// his rage! Now's the time to attack!
+	// Your attacks have overwhelmed Valakas, momentarily distracting him from his rage! Now's the time to attack!
 	VALAKAS_OVERWHELMED_BY_ATTACK_NOW_TIME_ATTACK(1801073),
-	// Your ranged attacks are provoking Valakas. If this continues, you might
-	// find yourself in a dangerous situation.
+	// Your ranged attacks are provoking Valakas. If this continues, you might find yourself in a dangerous situation.
 	VALAKAS_RANGED_ATTACKS_PROVOKED(1801074),
-	// Your sneaky counterattacks have heightened Valakas' rage, increasing his
-	// attack power.
+	// Your sneaky counterattacks have heightened Valakas' rage, increasing his attack power.
 	VALAKAS_HEIGHTENED_BY_COUNTERATTACKS(1801075),
-	// Your ranged attacks have enraged Valakas, causing him to attack his
-	// target relentlessly.
+	// Your ranged attacks have enraged Valakas, causing him to attack his target relentlessly.
 	VALAKAS_RANGED_ATTACKS_ENRAGED_TARGET_FREE(1801076),
 	// The evil Fire Dragon Valakas has been defeated!
 	SOMETHING_LIKE_THAT_COMES_OUT_OF_THE_RUINS(1811287),
@@ -415,29 +395,21 @@ public enum NpcString
 	SCHUTTGART(1001009),
 	// Text: A black moon... Now do you understand that he has opened his eyes?
 	A_BLACK_MOON_NOW_DO_YOU_UNDERSTAND_THAT_HE_HAS_OPENED_HIS_EYES(1010221),
-	// Text: Clouds of blood are gathering. Soon, it will start to rain. The
-	// rain of crimson blood...
+	// Text: Clouds of blood are gathering. Soon, it will start to rain. The rain of crimson blood...
 	CLOUDS_OF_BLOOD_ARE_GATHERING_SOON_IT_WILL_START_TO_RAIN_THE_RAIN_OF_CRIMSON_BLOOD(1010222),
-	// Text: While the foolish light was asleep, the darkness will awaken first.
-	// Uh huh huh...
+	// Text: While the foolish light was asleep, the darkness will awaken first. Uh huh huh...
 	WHILE_THE_FOOLISH_LIGHT_WAS_ASLEEP_THE_DARKNESS_WILL_AWAKEN_FIRST_UH(1010223),
-	// Text: It is the deepest darkness. With its arrival, the world will soon
-	// die.
+	// Text: It is the deepest darkness. With its arrival, the world will soon die.
 	IT_IS_THE_DEEPEST_DARKNESS_WITH_ITS_ARRIVAL_THE_WORLD_WILL_SOON_DIE(1010224),
 	// Text: Death is just a new beginning. Huhu... Fear not.
 	DEATH_IS_JUST_A_NEW_BEGINNING_HUHU_FEAR_NOT(1010225),
-	// Text: Ahh! Beautiful goddess of death! Cover over the filth of this world
-	// with your darkness!
+	// Text: Ahh! Beautiful goddess of death! Cover over the filth of this world with your darkness!
 	AHH_BEAUTIFUL_GODDES_OF_DEATH_COVER_OVER_THE_FILTH_OF_THOS_WORLD_YOUR_DARKNESS(1010226),
-	// Text: The goddess's resurrection has already begun. Huhu... Insignificant
-	// creatures like you can do nothing!
+	// Text: The goddess's resurrection has already begun. Huhu... Insignificant creatures like you can do nothing!
 	THE_GODDESS_RESURRECTION_HAS_ALREADY_BEGUN_HUHU_INSIGNIFICANT_CREATURES_LIKE_YOU_CAN_DO_NOTHING(1010227),
-	// Text: Who dares to covet the throne of our castle! Leave immediately or
-	// you will pay the price of your audacity with your very own blood!
+	// Text: Who dares to covet the throne of our castle! Leave immediately or you will pay the price of your audacity with your very own blood!
 	WHO_DARES_TO_COVET_THE_THRONE_OF_OUR_CASTLE__LEAVE_IMMEDIATELY_OR_YOU_WILL_PAY_THE_PRICE_OF_YOUR_AUDACITY_WITH_YOUR_VERY_OWN_BLOOD(1010623),
-	// Text: Hmm, those who are not of the bloodline are coming this way to take
-	// over the castle?! Humph! The bitter grudges of the dead. You must not
-	// make light of their power!
+	// Text: Hmm, those who are not of the bloodline are coming this way to take over the castle?! Humph! The bitter grudges of the dead. You must not make light of their power!
 	HMM_THOSE_WHO_ARE_NOT_OF_THE_BLOODLINE_ARE_COMING_THIS_WAY_TO_TAKE_OVER_THE_CASTLE__HUMPH__THE_BITTER_GRUDGES_OF_THE_DEAD(1010624),
 	AARGH_IF_I_DIE_THEN_THE_MAGIC_FORCE_FIELD_OF_BLOOD_WILL(1010625),
 	// Text: It's not over yet... It won't be... over... like this... Never...
@@ -446,24 +418,17 @@ public enum NpcString
 	OOOH_WHO_POURED_NECTAR_ON_MY_HEAD_WHILE_I_WAS_SLEEPING(1010627),
 	// Text: Undecided
 	UNDECIDED(1010635),
-	// Text: Heh Heh... I see that the feast has begun! Be wary! The curse of
-	// the Hellmann family has poisoned this land!
+	// Text: Heh Heh... I see that the feast has begun! Be wary! The curse of the Hellmann family has poisoned this land!
 	HEH_HEH_I_SEE_THAT_THE_FEAST_HAS_BEGAN_BE_WARY_THE_CURSE_OF_THE_HELLMANN_FAMILY_HAS_POISONED_THIS_LAND(1010636),
-	// Text: Arise, my faithful servants! You, my people who have inherited the
-	// blood. It is the calling of my daughter. The feast of blood will now
-	// begin!
+	// Text: Arise, my faithful servants! You, my people who have inherited the blood. It is the calling of my daughter. The feast of blood will now begin!
 	ARISE_MY_FAITHFUL_SERVANTS_YOU_MY_PEOPLE_WHO_HAVE_INHERITED_THE_BLOOD(1010637),
-	// Text: Grarr! For the next 2 minutes or so, the game arena are will be
-	// cleaned. Throw any items you don't need to the floor now.
+	// Text: Grarr! For the next 2 minutes or so, the game arena are will be cleaned. Throw any items you don't need to the floor now.
 	GRARR_FOR_THE_NEXT_2_MINUTES_OR_SO_THE_GAME_ARENA_ARE_WILL_BE_CLEANED(1010639),
-	// Text: Match begins in $s1 minute(s). Please gather around the
-	// administrator.
+	// Text: Match begins in $s1 minute(s). Please gather around the administrator.
 	MATCH_BEGINS_IN_S1_MINUTES(1800080),
-	// Text: The match is automatically canceled because you are too far from
-	// the admission manager.
+	// Text: The match is automatically canceled because you are too far from the admission manager.
 	THE_MATCH_IS_AUTOMATICALLY_CANCELED_BECAUSE_YOU_ARE_TOO_FAR_FROM_THE_ADMISSION_MANAGER(1800081),
-	// Text: Match cancelled. Opponent did not meet the stadium admission
-	// requirements.
+	// Text: Match cancelled. Opponent did not meet the stadium admission requirements.
 	MATCH_CANCELLED(1800123),
 	// Text: Begin stage 1
 	BEGIN_STAGE_1_FREYA(1801086),
@@ -497,21 +462,17 @@ public enum NpcString
 	ALPEN_BUFFALO(1801108),
 	// Text: Alpen Grendel
 	ALPEN_GRENDEL(1801109),
-	// Text: We have broken through the gate! Destroy the encampment and move to
-	// the Command Post!
+	// Text: We have broken through the gate! Destroy the encampment and move to the Command Post!
 	WE_HAVE_BROKEN_THROUGH_THE_GATE_DESTROY_THE_ENCAMPMENT_AND_MOVE_TO_THE_COMMAND_POST(1300001),
-	// Text: The command gate has opened! Capture the flag quickly and raise it
-	// high to proclaim our victory!
+	// Text: The command gate has opened! Capture the flag quickly and raise it high to proclaim our victory!
 	THE_COMMAND_GATE_HAS_OPENED_CAPTURE_THE_FLAG_QUICKLY_AND_RAISE_IT_HIGH_TO_PROCLAIM_OUR_VICTORY(1300002),
 	// Text: The gods have forsaken us... Retreat!!
 	THE_GODS_HAVE_FORSAKEN_US__RETREAT(1300003),
-	// Text: You may have broken our arrows, but you will never break our will!
-	// Archers, retreat!
+	// Text: You may have broken our arrows, but you will never break our will! Archers, retreat!
 	YOU_MAY_HAVE_BROKEN_OUR_ARROWS_BUT_YOU_WILL_NEVER_BREAK_OUR_WILL_ARCHERS_RETREAT(1300004),
 	// Volunteers, stand back!
 	AT_LAST_THE_MAGIC_FIELD_THAT_PROTECTS_THE_FORTRESS_HAS_WEAKENED_VOLUNTEERS_STAND_BACK(1300005),
-	// Text: Aiieeee! Command Center! This is guard unit! We need backup right
-	// away!
+	// Text: Aiieeee! Command Center! This is guard unit! We need backup right away!
 	AIIEEEE_COMMAND_CENTER_THIS_IS_GUARD_UNIT_WE_NEED_BACKUP_RIGHT_AWAY(1300006),
 	// Text: Fortress power disabled.
 	FORTRESS_POWER_DISABLED(1300007),
@@ -525,11 +486,9 @@ public enum NpcString
 	SPIRIT_OF_FIRE_UNLEASH_YOUR_POWER_BURN_THE_ENEMY(1300014),
 	// Text: Do you need my power? You seem to be struggling.
 	DO_YOU_NEED_MY_POWER_YOU_SEEM_TO_BE_STRUGGLING(1300016),
-	// Text: Don't think that it's gonna end like this. Your ambition will soon
-	// be destroyed as well.
+	// Text: Don't think that it's gonna end like this. Your ambition will soon be destroyed as well.
 	DONT_THINK_THAT_ITS_GONNA_END_LIKE_THIS(1300018),
-	// Text: I feel so much grief that I can't even take care of myself. There
-	// isn't any reason for me to stay here any longer.
+	// Text: I feel so much grief that I can't even take care of myself. There isn't any reason for me to stay here any longer.
 	I_FEEL_SO_MUCH_GRIEF_THAT_I_CANT_EVEN_TAKE_CARE_OF_MYSELF(1300020),
 	// Text: Independent State
 	INDEPENDENT_STATE(1300122),
@@ -543,8 +502,7 @@ public enum NpcString
 	SECOND_PASSWORD_HAS_BEEN_ENTERED(1300126),
 	// Text: Password has not been entered.
 	PASSWORD_HAS_NOT_BEEN_ENTERED(1300127),
-	// Text: Attempt $s1 / 3 is in progress. => This is the third attempt on
-	// $s1.
+	// Text: Attempt $s1 / 3 is in progress. => This is the third attempt on $s1.
 	ATTEMPT_S1__3_IS_IN_PROGRESS(1300128),
 	// Text: The 1st Mark is correct.
 	THE_1ST_MARK_IS_CORRECT(1300129),
@@ -552,8 +510,7 @@ public enum NpcString
 	THE_2ND_MARK_IS_CORRECT(1300130),
 	// Text: The Marks have not been assembled.
 	THE_MARKS_HAVE_NOT_BEEN_ASSEMBLED(1300131),
-	// Text: Olympiad class-free team match is going to begin in Arena $s1 in a
-	// moment.
+	// Text: Olympiad class-free team match is going to begin in Arena $s1 in a moment.
 	OLYMPIAD_CLASSFREE_TEAM_MATCH_IS_GOING_TO_BEGIN_IN_ARENA_S1_IN_A_MOMENT(1300132),
 	// Text: Domain Fortress
 	DOMAIN_FORTRESS(1300133),
@@ -569,39 +526,27 @@ public enum NpcString
 	BEGIN_STAGE_3(1300152),
 	// Text: What a predicament... my attempts were unsuccessful.
 	WHAT_A_PREDICAMENT_MY_ATTEMPTS_WERE_UNSUCCESSUFUL(1300162),
-	// Text: Courage! Ambition! Passion! Mercenaries who want to realize their
-	// dream of fighting in the territory war, come to me! Fortune and glory are
-	// waiting for you!
+	// Text: Courage! Ambition! Passion! Mercenaries who want to realize their dream of fighting in the territory war, come to me! Fortune and glory are waiting for you!
 	COURAGE_AMBITION_PASSION_MERCENARIES_WHO_WANT_TO_REALIZE_THEIR_DREAM_OF_FIGHTING_IN_THE_TERRITORY_WAR_COME_TO_ME_FORTUNE_AND_GLORY_ARE_WAITING_FOR_YOU(1300163),
-	// Text: Do you wish to fight? Are you afraid? No matter how hard you try,
-	// you have nowhere to run. But if you face it head on, our mercenary troop
-	// will help you out!
+	// Text: Do you wish to fight? Are you afraid? No matter how hard you try, you have nowhere to run. But if you face it head on, our mercenary troop will help you out!
 	DO_YOU_WISH_TO_FIGHT_ARE_YOU_AFRAID_NO_MATTER_HOW_HARD_YOU_TRY_YOU_HAVE_NOWHERE_TO_RUN(1300164),
 	// Text: Charge! Charge! Charge!
 	CHARGE_CHARGE_CHARGE(1300165),
-	// Text: Olympiad class-free individual match is going to begin in Arena $s1
-	// in a moment.
+	// Text: Olympiad class-free individual match is going to begin in Arena $s1 in a moment.
 	OLYMPIAD_CLASSFREE_INDIVIDUAL_MATCH_IS_GOING_TO_BEGIN_IN_ARENA_S1_IN_A_MOMENT(1300166),
-	// Text: Olympiad class individual match is going to begin in Arena $s1 in a
-	// moment.
+	// Text: Olympiad class individual match is going to begin in Arena $s1 in a moment.
 	OLYMPIAD_CLASS_INDIVIDUAL_MATCH_IS_GOING_TO_BEGIN_IN_ARENA_S1_IN_A_MOMENT(1300167),
-	// Text: The airship has been summoned. It will automatically depart in 5
-	// minutes.
+	// Text: The airship has been summoned. It will automatically depart in 5 minutes.
 	AIRSHIP_IS_SUMMONED_IS_DEPART_IN_5_MINUTES(1800219),
-	// Text: The regularly scheduled airship has arrived. It will depart for the
-	// Aden continent in 1 minute.
+	// Text: The regularly scheduled airship has arrived. It will depart for the Aden continent in 1 minute.
 	AIRSHIP_IS_ARRIVED_IT_WILL_DEPART_TO_ADEN_IN_1_MINUTE(1800220),
-	// Text: The regularly scheduled airship that flies to the Aden continent
-	// has departed.
+	// Text: The regularly scheduled airship that flies to the Aden continent has departed.
 	AIRSHIP_IS_DEPARTED_TO_ADEN(1800221),
-	// Text: The regularly scheduled airship has arrived. It will depart for the
-	// Gracia continent in 1 minute.
+	// Text: The regularly scheduled airship has arrived. It will depart for the Gracia continent in 1 minute.
 	AIRSHIP_IS_ARRIVED_IT_WILL_DEPART_TO_GRACIA_IN_1_MINUTE(1800222),
-	// Text: The regularly scheduled airship that flies to the Gracia continent
-	// has departed.
+	// Text: The regularly scheduled airship that flies to the Gracia continent has departed.
 	AIRSHIP_IS_DEPARTED_TO_GRACIA(1800223),
-	// Text: Another airship has been summoned to the wharf. Please try again
-	// later.
+	// Text: Another airship has been summoned to the wharf. Please try again later.
 	IN_AIR_HARBOR_ALREADY_AIRSHIP_DOCKED_PLEASE_WAIT_AND_TRY_AGAIN(1800224),
 	// Text: Attack
 	ATTACK(1800243),
@@ -619,25 +564,19 @@ public enum NpcString
 	THE_MATCH_WILL_BEGIN_IN_S1_MINUTES(1800206),
 	// Text: The match will begin shortly.
 	THE_MATCH_WILL_BEGIN_SHORTLY(1800207),
-	// Text: Registration for the next match will end at %s minutes after the
-	// hour.
+	// Text: Registration for the next match will end at %s minutes after the hour.
 	REGISTRATION_FOR_THE_NEXT_MATCH_WILL_END_AT_S1_MINUTES_AFTER_HOUR(1800208),
-	// Text: Even though you bring something called a gift among your humans, it
-	// would just be problematic for me...
+	// Text: Even though you bring something called a gift among your humans, it would just be problematic for me...
 	EVEN_THOUGH_YOU_BRING_SOMETHING_CALLED_A_GIFT_AMONG_YOUR_HUMANS_IT_WOULD_JUST_BE_PROBLEMATIC_FOR_ME(1801190),
-	// Text: I just don't know what expression I should have it appeared on me.
-	// Are human's emotions like this feeling?
+	// Text: I just don't know what expression I should have it appeared on me. Are human's emotions like this feeling?
 	I_JUST_DONT_KNOW_WHAT_EXPRESSION_I_SHOULD_HAVE_IT_APPEARED_ON_ME(1801191),
 	// Text: The feeling of thanks is just too much distant memory for me...
 	THE_FEELING_OF_THANKS_IS_JUST_TOO_MUCH_DISTANT_MEMORY_FOR_ME(1801192),
 	// Text: But I kind of miss it... Like I had felt this feeling before...
 	BUT_I_KIND_OF_MISS_IT(1801193),
-	// Text: I am Ice Queen Freya... This feeling and emotion are nothing but a
-	// part of Melissa'a memories.
+	// Text: I am Ice Queen Freya... This feeling and emotion are nothing but a part of Melissa'a memories.
 	I_AM_ICE_QUEEN_FREYA(1801194),
-	// Text: Dear $s1... Think of this as my appreciation for the gift. Take
-	// this with you. There's nothing strange about it. It's just a bit of my
-	// capriciousness...
+	// Text: Dear $s1... Think of this as my appreciation for the gift. Take this with you. There's nothing strange about it. It's just a bit of my capriciousness...
 	DEAR_S1(1801195),
 	// Text: Rulers of the seal! I bring you wondrous gifts!
 	RULERS_OF_THE_SEAL_I_BRING_YOU_WONDROUS_GIFTS(1000431),
@@ -676,48 +615,37 @@ public enum NpcString
 	I_FEEL_STRONG_MAGIC_FLOW(1801111),
 	// Text: I haven't eaten anything, I'm so weak~
 	I_HAVENT_EATEN_ANYTHING_IM_SO_WEAK(1800290),
-	// Text: We must search high and low in every room for the reading desk that
-	// contains the book we seek.
+	// Text: We must search high and low in every room for the reading desk that contains the book we seek.
 	WE_MUST_SEARCH_HIGH_AND_LOW_IN_EVERY_ROOM_FOR_THE_READING_DESK_THAT_CONTAINS_THE_BOOK_WE_SEEK(1029450),
-	// Text: Remember the content of the books that you found. You can't take
-	// them out with you.
+	// Text: Remember the content of the books that you found. You can't take them out with you.
 	REMEMBER_THE_CONTENT_OF_THE_BOOKS_THAT_YOU_FOUND(1029451),
-	// Text: It seems that you cannot remember to the room of the watcher who
-	// found the book.
+	// Text: It seems that you cannot remember to the room of the watcher who found the book.
 	IT_SEEMS_THAT_YOU_CANNOT_REMEMBER_TO_THE_ROOM_OF_THE_WATCHER_WHO_FOUND_THE_BOOK(1029452),
 	// Text: Your work here is done, so return to the central guardian.
 	YOUR_WORK_HERE_IS_DONE_SO_RETURN_TO_THE_CENTRAL_GUARDIAN(1029453),
-	// Text: The guardian of the seal doesn't seem to get injured at all until
-	// the barrier is destroyed.
+	// Text: The guardian of the seal doesn't seem to get injured at all until the barrier is destroyed.
 	THE_GUARDIAN_OF_THE_SEAL_DOESNT_SEEM_TO_GET_INJURED_AT_ALL_UNTIL_THE_BARRIER_IS_DESTROYED(1029550),
-	// Text: The device located in the room in front of the guardian of the seal
-	// is definitely the barrier that controls the guardian's power.
+	// Text: The device located in the room in front of the guardian of the seal is definitely the barrier that controls the guardian's power.
 	THE_DEVICE_LOCATED_IN_THE_ROOM_IN_FRONT_OF_THE_GUARDIAN_OF_THE_SEAL_IS_DEFINITELY_THE_BARRIER_THAT_CONTROLS_THE_GUARDIANS_POWER(1029551),
-	// Text: To remove the barrier, you must find the relics that fit the
-	// barrier and activate the device.
+	// Text: To remove the barrier, you must find the relics that fit the barrier and activate the device.
 	TO_REMOVE_THE_BARRIER_YOU_MUST_FIND_THE_RELICS_THAT_FIT_THE_BARRIER_AND_ACTIVATE_THE_DEVICE(1029552),
-	// Text: All the guardians were defeated, and the seal was removed. Teleport
-	// to the center.
+	// Text: All the guardians were defeated, and the seal was removed. Teleport to the center.
 	ALL_THE_GUARDIANS_WERE_DEFEATED_AND_THE_SEAL_WAS_REMOVED(1029553),
 	// Text: What took so long? I waited for ever.
 	WHAT_TOOK_SO_LONG_I_WAITED_FOR_EVER(1029350),
 	// Text: I must ask Librarian Sophia about the book.
 	I_MUST_ASK_LIBRARIAN_SOPHIA_ABOUT_THE_BOOK(1029351),
-	// Text: This library... It's huge but there aren't many useful books,
-	// right?
+	// Text: This library... It's huge but there aren't many useful books, right?
 	THIS_LIBRARY(1029352),
 	// Text: An underground library... I hate damp and smelly places...
 	AN_UNDERGROUND_LIBRARY(1029353),
 	// Text: The book that we seek is certainly here. Search inch by inch.
 	THE_BOOK_THAT_WE_SEEK_IS_CERTAINLY_HERE(1029354),
-	// Text: You foolish invaders who disturb the rest of Solina, be gone from
-	// this place.
+	// Text: You foolish invaders who disturb the rest of Solina, be gone from this place.
 	YOU_FOOLISH_INVADERS_WHO_DISTURB_THE_REST_OF_SOLINA_BE_GONE_FROM_THIS_PLACE(1029460),
-	// Text: I know not what you seek, but this truth cannot be handled by mere
-	// humans.
+	// Text: I know not what you seek, but this truth cannot be handled by mere humans.
 	I_KNOW_NOT_WHAT_YOU_SEEK_BUT_THIS_TRUTH_CANNOT_BE_HANDLED_BY_MERE_HUMANS(1029461),
-	// Text: I will not stand by and watch your foolish actions. I warn you,
-	// leave this place at once.
+	// Text: I will not stand by and watch your foolish actions. I warn you, leave this place at once.
 	I_WILL_NOT_STAND_BY_AND_WATCH_YOUR_FOOLISH_ACTIONS(1029462),
 	// Text: Come and eat.
 	COME_AND_EAT(1801117),
@@ -731,89 +659,65 @@ public enum NpcString
 	HALL_OF_EROSION(1800241),
 	// Text: Heart of Immortality
 	HEART_OF_IMMORTALITY(1800242),
-	// Text: You can hear the undead of Ekimus rushing toward you. $s1 $s2, it
-	// has now begun!
+	// Text: You can hear the undead of Ekimus rushing toward you. $s1 $s2, it has now begun!
 	YOU_CAN_HEAR_THE_UNDEAD_OF_EKIMUS_RUSHING_TOWARD_YOU(1800263),
-	// Text: The tumor inside $s1 has been destroyed! \nIn order to draw out the
-	// cowardly Cohemenes, you must destroy all the tumors!
+	// Text: The tumor inside $s1 has been destroyed! \nIn order to draw out the cowardly Cohemenes, you must destroy all the tumors!
 	THE_TUMOR_INSIDE_S1_HAS_BEEN_DESTROYED_NIN_ORDER_TO_DRAW_OUT_THE_COWARDLY_COHEMENES_YOU_MUST_DESTROY_ALL_THE_TUMORS(1800274),
-	// Text: The tumor inside $s1 has completely revived. \nThe restrengthened
-	// Cohemenes has fled deeper inside the seed...
+	// Text: The tumor inside $s1 has completely revived. \nThe restrengthened Cohemenes has fled deeper inside the seed...
 	THE_TUMOR_INSIDE_S1_HAS_COMPLETELY_REVIVED(1800275),
-	// Text: All the tumors inside $s1 have been destroyed! Driven into a
-	// corner, Cohemenes appears close by!
+	// Text: All the tumors inside $s1 have been destroyed! Driven into a corner, Cohemenes appears close by!
 	ALL_THE_TUMORS_INSIDE_S1_HAVE_BEEN_DESTROYED_DRIVEN_INTO_A_CORNER_COHEMENES_APPEARS_CLOSE_BY(1800299),
-	// Text: $s1's party has moved to a different location through the crack in
-	// the tumor!
+	// Text: $s1's party has moved to a different location through the crack in the tumor!
 	S1S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR(1800247),
-	// Text: $s1's party has entered the Chamber of Ekimus through the crack in
-	// the tumor!
+	// Text: $s1's party has entered the Chamber of Ekimus through the crack in the tumor!
 	S1S_PARTY_HAS_ENTERED_THE_CHAMBER_OF_EKIMUS_THROUGH_THE_CRACK_IN_THE_TUMOR(1800248),
-	// Text: Ekimus has sensed abnormal activity. \nThe advancing party is
-	// forcefully expelled!
+	// Text: Ekimus has sensed abnormal activity. \nThe advancing party is forcefully expelled!
 	EKIMUS_HAS_SENSED_ABNORMAL_ACTIVITY(1800249),
-	// Text: C'mon, c'mon! Show your face, you little rats! Let me see what the
-	// doomed weaklings are scheming!
+	// Text: C'mon, c'mon! Show your face, you little rats! Let me see what the doomed weaklings are scheming!
 	CMON_CMON_SHOW_YOUR_FACE_YOU_LITTLE_RATS_LET_ME_SEE_WHAT_THE_DOOMED_WEAKLINGS_ARE_SCHEMING(1800233),
-	// Text: Impressive.... Hahaha it's so much fun, but I need to chill a
-	// little while. Argekunte, clear the way!
+	// Text: Impressive.... Hahaha it's so much fun, but I need to chill a little while. Argekunte, clear the way!
 	IMPRESSIVE(1800234),
-	// Text: Kyahaha! Since the tumor has been resurrected, I no longer need to
-	// waste my time on you!
+	// Text: Kyahaha! Since the tumor has been resurrected, I no longer need to waste my time on you!
 	KYAHAHA_SINCE_THE_TUMOR_HAS_BEEN_RESURRECTED_I_NO_LONGER_NEED_TO_WASTE_MY_TIME_ON_YOU(1800235),
-	// Text: Keu... I will leave for now... But don't think this is over... The
-	// Seed of Infinity can never die...
+	// Text: Keu... I will leave for now... But don't think this is over... The Seed of Infinity can never die...
 	KEU(1800236),
 	// Text: $s1 minute(s) are remaining.
 	S1_MINUTES_ARE_REMAINING(1010643),
-	// Text: Congratulations! You have succeeded at $s1 $s2! The instance will
-	// shortly expire.
+	// Text: Congratulations! You have succeeded at $s1 $s2! The instance will shortly expire.
 	CONGRATULATIONS_YOU_HAVE_SUCCEEDED_AT_S1_S2_THE_INSTANCE_WILL_SHORTLY_EXPIRE(1800245),
 	// Text: You have failed at $s1 $s2... The instance will shortly expire.
 	YOU_HAVE_FAILED_AT_S1_S2(1800246),
 	// Text: You will participate in $s1 $s2 shortly. Be prepared for anything.
 	YOU_WILL_PARTICIPATE_IN_S1_S2_SHORTLY(1800262),
-	// Text: I shall accept your challenge, $s1! Come and die in the arms of
-	// immortality!
+	// Text: I shall accept your challenge, $s1! Come and die in the arms of immortality!
 	I_SHALL_ACCEPT_YOUR_CHALLENGE_S1_COME_AND_DIE_IN_THE_ARMS_OF_IMMORTALITY(1800261),
-	// Text: The tumor inside $s1 that has provided energy \n to Ekimus is
-	// destroyed!
+	// Text: The tumor inside $s1 that has provided energy \n to Ekimus is destroyed!
 	THE_TUMOR_INSIDE_S1_THAT_HAS_PROVIDED_ENERGY_N_TO_EKIMUS_IS_DESTROYED(1800302),
-	// Text: The tumor inside $s1 has been completely resurrected \n and started
-	// to energize Ekimus again...
+	// Text: The tumor inside $s1 has been completely resurrected \n and started to energize Ekimus again...
 	THE_TUMOR_INSIDE_S1_HAS_BEEN_COMPLETELY_RESURRECTED_N_AND_STARTED_TO_ENERGIZE_EKIMUS_AGAIN(1800303),
-	// Text: With all connections to the tumor severed, Ekimus has lost its
-	// power to control the Feral Hound!
+	// Text: With all connections to the tumor severed, Ekimus has lost its power to control the Feral Hound!
 	WITH_ALL_CONNECTIONS_TO_THE_TUMOR_SEVERED_EKIMUS_HAS_LOST_ITS_POWER_TO_CONTROL_THE_FERAL_HOUND(1800269),
-	// Text: With the connection to the tumor restored, Ekimus has regained
-	// control over the Feral Hound...
+	// Text: With the connection to the tumor restored, Ekimus has regained control over the Feral Hound...
 	WITH_THE_CONNECTION_TO_THE_TUMOR_RESTORED_EKIMUS_HAS_REGAINED_CONTROL_OVER_THE_FERAL_HOUND(1800270),
-	// Text: There is no party currently challenging Ekimus. \n If no party
-	// enters within $s1 seconds, the attack on the Heart of Immortality will
-	// fail...
+	// Text: There is no party currently challenging Ekimus. \n If no party enters within $s1 seconds, the attack on the Heart of Immortality will fail...
 	THERE_IS_NO_PARTY_CURRENTLY_CHALLENGING_EKIMUS(1800229),
 	// Text: You can feel the surging energy of death from the tumor.
 	YOU_CAN_FEEL_THE_SURGING_ENERGY_OF_DEATH_FROM_THE_TUMOR(1800264),
 	// Text: The area near the tumor is full of ominous energy.
 	THE_AREA_NEAR_THE_TUMOR_IS_FULL_OF_OMINOUS_ENERGY(1800265),
-	// Text: The tumor inside $s1 has been destroyed! \nThe nearby Undead that
-	// were attacking Seed of Life start losing their energy and run away!
+	// Text: The tumor inside $s1 has been destroyed! \nThe nearby Undead that were attacking Seed of Life start losing their energy and run away!
 	THE_TUMOR_INSIDE_S1_HAS_BEEN_DESTROYED_NTHE_NEARBY_UNDEAD_THAT_WERE_ATTACKING_SEED_OF_LIFE_START_LOSING_THEIR_ENERGY_AND_RUN_AWAY(1800300),
-	// Text: The tumor inside $s1 has completely revived. \nRecovered nearby
-	// Undead are swarming toward Seed of Life...
+	// Text: The tumor inside $s1 has completely revived. \nRecovered nearby Undead are swarming toward Seed of Life...
 	THE_TUMOR_INSIDE_S1_HAS_COMPLETELY_REVIVED_(1800301),
-	// Text: The tumor inside $s1 has been destroyed! \nThe speed that Ekimus
-	// calls out his prey has slowed down!
+	// Text: The tumor inside $s1 has been destroyed! \nThe speed that Ekimus calls out his prey has slowed down!
 	THE_TUMOR_INSIDE_S1_HAS_BEEN_DESTROYED_NTHE_SPEED_THAT_EKIMUS_CALLS_OUT_HIS_PREY_HAS_SLOWED_DOWN(1800304),
-	// Text: The tumor inside $s1 has completely revived. \nEkimus started to
-	// regain his energy and is desperately looking for his prey...
+	// Text: The tumor inside $s1 has completely revived. \nEkimus started to regain his energy and is desperately looking for his prey...
 	THE_TUMOR_INSIDE_S1_HAS_COMPLETELY_REVIVED__(1800305),
 	// Text: Bring more, more souls...!
 	BRING_MORE_MORE_SOULS(1800306),
 	// Text: Ha, ha, ha!...
 	HA_HA_HA(7164),
-	// Text: The Soul Coffin has awakened Ekimus. If $s1 more Soul Coffin(s) are
-	// created, the defense of the Heart of Immortality will fail...
+	// Text: The Soul Coffin has awakened Ekimus. If $s1 more Soul Coffin(s) are created, the defense of the Heart of Immortality will fail...
 	THE_SOUL_COFFIN_HAS_AWAKENED_EKIMUS(1800232),
 	// Text: Yum-yum, yum-yum
 	YUMYUM_YUMYUM(1800291),
@@ -856,8 +760,7 @@ public enum NpcString
 	SPEAK_WITH_ME_ABOUT_TRAVELING_AROUND_ADEN(1811308),
 	// Text: Look at all the newbies. Ha ha ha.
 	LOOK_AT_ALL_THE_NEWBIES_HA_HA_HA(1811292),
-	// Text: To your right the Administrative district and to the left is the
-	// Museum.
+	// Text: To your right the Administrative district and to the left is the Museum.
 	TO_YOUR_RIGHT_THE_ADMINISTRATIVE_DISTRICT_AND_TO_THE_LEFT_IS_THE_MUSEUM(1032340),
 	// Text: When you use the teleporter, you can go to the Ye Sagira Ruins.
 	WHEN_YOU_USE_THE_TELEPORTER_YOU_CAN_GO_TO_THE_YE_SAGIRA_RUINS(1032341),
@@ -873,8 +776,7 @@ public enum NpcString
 	KIDS_THESE_DAYS(1811257),
 	// Text: When I was young...
 	WHEN_I_WAS_YOUNG(1811258),
-	// Text: Information is collected in the Museum where can learn about the
-	// heroes.
+	// Text: Information is collected in the Museum where can learn about the heroes.
 	INFORMATION_IS_COLLECTED_IN_THE_MUSEUM_WHERE_CAN_LEARN_ABOUT_THE_HEROES(1032355),
 	// Text: Visit the Administration Office to form a clan.
 	VISIT_THE_ADMINISTRATION_OFFICE_TO_FORM_A_CLAN(1032356),
@@ -897,8 +799,7 @@ public enum NpcString
 	// Text: While training in the Training Grounds, it becomes progressively
 	// difficult.
 	WHILE_TRAINING_IN_THE_TRAINING_GROUNDS_IT_BECOMES_PROGRESSIVELY_DIFFICULT(1032344),
-	// Text: Training Grounds access? You need to speak with Pantheon in the
-	// Museum.
+	// Text: Training Grounds access? You need to speak with Pantheon in the Museum.
 	TRAINING_GROUNDS_ACCESS_YOU_NEED_TO_SPEAK_WITH_PANTHEON_IN_THE_MUSEUM(1032345),
 	// Text: I haven't felt this good in ages.
 	I_HAVEN_T_FELT_THIS_GOOD_IN_AGES(1811244),
@@ -982,8 +883,7 @@ public enum NpcString
 	WE_SAW_PEOPLE_USE_SAYUNE_OTHER_THAN_THE_GIANT_S_SERVANTS(11021701),
 	// Text: It's because they have become Awaken… the power of the Giant's.
 	IT_S_BECAUSE_THEY_HAVE_BECOME_AWAKEN_THE_POWER_OF_THE_GIANT_S(11021702),
-	// Text: Duh, you can't use Sayune without powers of Giants in the first
-	// place.
+	// Text: Duh, you can't use Sayune without powers of Giants in the first place.
 	DUH_YOU_CAN_T_USE_SAYUNE_WITHOUT_POWERS_OF_GIANTS_IN_THE_FIRST_PLACE(11021703),
 	// Text: I think that's why many people come to visit Celphine.
 	I_THINK_THAT_S_WHY_MANY_PEOPLE_COME_TO_VISIT_CELPHINE(11021704),
@@ -1146,8 +1046,7 @@ public enum NpcString
 	PEUNGLUI_MUGLANEP(1800857),
 	// Message: Target recognition achieved. Attack sequence commencing.
 	TARGET_RECOGNITION_ACHIEVED_ATTACK_SEQUENCE_COMMENCING(1800852),
-	// Message: Alert! Alert! Damage detection recognized. Countermeasures
-	// enabled.
+	// Message: Alert! Alert! Damage detection recognized. Countermeasures enabled.
 	ALERT_ALERT_DAMAGE_DETECTION_RECOGNIZED_COUNTERMEASURES_ENABLED(1800851),
 	DARK_POWER_SEEPS_OUT_FROM_THE_MIDDLE_OF_THE_TOWN(8888106),
 	// Message: You win if you get to Ye Sagira Ruins first.
@@ -1340,8 +1239,16 @@ public enum NpcString
 	YOU_MUST_DESTROY_THE_MESSENGER_SHILEN(18564),
 	TALK_TO_QUEEN_NAVARI(1802510),
 	ATTACK_THE_TRAINING_DUMMY(1802511),
+	QUEEN_NAVARI_HAS_SENT_A_LETTER(1802512),
 	TALK_TO_THE_APPRENTICE_ADVENTURERS_GUIDE(1802513),
-	QUEEN_NAVARI_CALLS(1802616);
+	ATTACK_THE_MONSTER(1802514),
+	TALK_TO_MAGISTER_AYANTHE(1802515),
+	FIGHT_USING_SKILLS(1802516),
+	TALK_TO_MASTER_KATALIN(1802517),
+	QUEEN_NAVARI_CALLS(1802616),
+	RICKY_IS_NOT_HERE(1802617),
+	TALK_TO_KATALIN_TO_LEAVE_THE_TRAINING_GROUNDS(1802618),
+	TALK_TO_AYANTHE_TO_LEAVE_THE_TRAINING_GROUNDS(1802619);
 	private final int _id;
 	private final int _size;
 	
