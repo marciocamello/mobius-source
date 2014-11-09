@@ -141,8 +141,8 @@ public class UserInfo extends L2GameServerPacket
 		writeH(_activeChar.getINT());
 		writeH(_activeChar.getWIT());
 		writeH(_activeChar.getMEN());
-		writeH(0);
-		writeH(0);
+		writeH(_activeChar.getLUC());
+		writeH(_activeChar.getCHA());
 		
 		writeH(14);
 		writeD(_activeChar.getMaxHp());
