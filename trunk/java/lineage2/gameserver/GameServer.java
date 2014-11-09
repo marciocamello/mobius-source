@@ -38,7 +38,6 @@ import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.idfactory.IdFactory;
 import lineage2.gameserver.instancemanager.ArcanManager;
 import lineage2.gameserver.instancemanager.AwakingManager;
-import lineage2.gameserver.instancemanager.BloodAltarManager;
 import lineage2.gameserver.instancemanager.CastleManorManager;
 import lineage2.gameserver.instancemanager.CoupleManager;
 import lineage2.gameserver.instancemanager.CursedWeaponsManager;
@@ -271,7 +270,6 @@ public class GameServer
 		SoIManager.getInstance();
 		SoHManager.getInstance();
 		HarnakUndegroundManager.getInstance();
-		BloodAltarManager.getInstance();
 		L2TopManager.getInstance();
 		MMOTopManager.getInstance();
 		SMSWayToPay.getInstance();

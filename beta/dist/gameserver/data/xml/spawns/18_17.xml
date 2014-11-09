@@ -193,16 +193,4 @@
 		<point x="-53912" y="-82732" z="-8340" h="0"/>
 		<npc id="32506"/>
 	</spawn>
-	<spawn group="bloodaltar_dead_npc" count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-45464" y="-118184" z="-232" h="0"/>
-		<npc id="4328"/>
-	</spawn>
-	<spawn group="bloodaltar_dead_npc" count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-45448" y="-118472" z="-232" h="40961"/>
-		<npc id="4328"/>
-	</spawn>
-	<spawn group="bloodaltar_dead_npc" count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-45544" y="-118328" z="-232" h="32768"/>
-		<npc id="4327"/>
-	</spawn>
 </list>
