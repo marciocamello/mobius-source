@@ -1,5 +1,5 @@
 @Echo off
-TITLE GoD Database Installer
+TITLE Mobius Project - Database Installer
 cls
 echo This script will help you install the server database.
 echo To continue, press the space bar to exit Ctrl + C
@@ -10,7 +10,7 @@ mysql --help >nul 2>nul
 if errorlevel 1 goto nomysql
 echo  - MySQL...       ok
 echo ======================================================================
-echo GoD Server is ready for installation.
+echo Database installer is ready.
 echo Please perform the initial configuration
 echo ======================================================================
 set DO_INSTALL=Y
@@ -22,7 +22,7 @@ set INSTALL_MODE=login
 set DB_HOST=localhost
 set DB_USER=root
 set DB_PASSWORD= 
-set DB_NAME=l2god
+set DB_NAME=lineage2
 :step2
 
 set /P DB_HOST=The database server [%DB_HOST%]:
