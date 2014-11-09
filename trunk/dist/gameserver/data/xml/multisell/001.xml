@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<list>
+	<config showall="true" notax="true" keepenchanted="false"/>
+	<item>
+		<production id="37521" count="1"/>
+		<ingredient id="22173" count="1"/>
+		<ingredient id="37520" count="1"/>
+	</item>
+	<item>
+		<production id="37521" count="1"/>
+		<ingredient id="6658" count="1"/>
+		<ingredient id="37520" count="1"/>
+	</item>
+	<item>
+		<production id="19463" count="1"/>
+		<ingredient id="6656" count="1"/>
+		<ingredient id="19465" count="10"/>
+	</item>
+	<item>
+		<production id="16026" count="1"/>
+		<ingredient id="16025" count="1"/>
+		<ingredient id="16027" count="1"/>
+	</item>
+	<item>
+		<production id="19464" count="1"/>
+		<ingredient id="6657" count="1"/>
+		<ingredient id="19466" count="10"/>
+	</item>
+	<item>
+		<production id="37522" count="1"/>
+		<ingredient id="8191" count="1"/>
+		<ingredient id="37519" count="1"/>
+	</item>
+	<item>
+		<production id="36255" count="1"/>
+		<ingredient id="6661" count="1"/>
+		<ingredient id="36253" count="1"/>
+	</item>
+	<item>
+		<production id="36254" count="1"/>
+		<ingredient id="6660" count="1"/>
+		<ingredient id="36252" count="1"/>
+	</item>
+	<item>
+		<production id="36254" count="1"/>
+		<ingredient id="22174" count="1"/>
+		<ingredient id="36252" count="1"/>
+	</item>
+</list>

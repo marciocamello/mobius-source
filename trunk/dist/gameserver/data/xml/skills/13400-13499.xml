@@ -276,27 +276,49 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x40" stat="poisonResist" val="30"/>
-			<add order="0x40" stat="accCombat" val="2"/>
-			<mul order="0x30" stat="rCrit" val="1.32"/>
-			<mul order="0x30" stat="cAtk" val="1.35"/>
+			<mul order="0x30" stat="stunResist" val="1.25"/>
+			<mul order="0x30" stat="poisonResist" val="1.25"/>
+			<mul order="0x30" stat="bleedResist" val="1.25"/>
+			<mul order="0x30" stat="stunPower" val="1.25"/>
+			<mul order="0x30" stat="poisonPower" val="1.25"/>
+			<mul order="0x30" stat="bleedPower" val="1.25"/>
+			<mul order="0x30" stat="cAtk" val="1.15"/>
+			<mul order="0x30" stat="mCritDamage" val="1.15"/>
+			<add order="0x40" stat="rCrit" val="20"/>
 			<add order="0x40" stat="mCritRate" val="20"/>
-			<add order="0x40" stat="rootResist" val="20"/>
-			<add order="0x40" stat="poisonPower" val="30"/>
-			<add order="0x40" stat="rootPower" val="20"/>
+			<add order="0x40" stat="accCombat" val="4"/>
+			<add order="0x40" stat="maccCombat" val="4"/>
 		</for>
 	</skill>
 	<skill id="13442" levels="1" name="Orfen's Soul Earring">
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="sleepResist" val="1.25"/>
+			<mul order="0x30" stat="paralyzeResist" val="1.25"/>
+			<mul order="0x30" stat="mentalResist" val="1.25"/>
+			<mul order="0x30" stat="sleepPower" val="1.25"/>
+			<mul order="0x30" stat="paralyzePower" val="1.25"/>
+			<mul order="0x30" stat="mentalPower" val="1.25"/>
+			<mul order="0x30" stat="healPower" val="1.10"/>
+			<mul order="0x30" stat="mpConsum" val="1.05"/>
+			<mul order="0x30" stat="absorbDam" val="1.04"/>
+		</for>
 	</skill>
 	<skill id="13443" levels="1" name="Lilith' Soul Necklace">
 		<set name="icon" val="icon.accessary_blessed_lilith"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="mCritRate" val="20"/>
+			<mul order="0x30" stat="paralyzeResist" val="1.20"/>
+			<mul order="0x30" stat="mentalResist" val="1.20"/>
+			<mul order="0x30" stat="paralyzePower" val="1.20"/>
+			<mul order="0x30" stat="mentalPower" val="1.20"/>
+		</for>
 	</skill>
 	<skill id="13444" levels="1" name="Earth Resistance Ring">
 		<set name="icon" val="icon.accessary_inferno_ring_i00"/>

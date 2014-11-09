@@ -584,7 +584,7 @@
 		<skills>
 			<skill id="13442" level="1"/>
 		</skills>
-	</armor>	
+	</armor>
 	<etcitem id="36256" name="Transformation Scroll: Anakim">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
@@ -602,9 +602,9 @@
 		</equip>
 		<set name="ex_type" value="NECKLACE"/>
 		<skills>
-			<skill id="13442" level="1"/>
+			<skill id="13443" level="1"/>
 		</skills>
-	</armor>	
+	</armor>
 	<etcitem id="36258" name="Transformation Potion: Queen Ant">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>

@@ -413,15 +413,45 @@
 	</skill>
 	<skill id="13539" levels="1" name="Baium's Soul Ring">
 		<set name="icon" val="icon.accessory_ring_of_baium_i00"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="stunResist" val="1.25"/>
+			<mul order="0x30" stat="rootResist" val="1.25"/>
+			<mul order="0x30" stat="mentalResist" val="1.25"/>
+			<mul order="0x30" stat="stunPower" val="1.25"/>
+			<mul order="0x30" stat="rootPower" val="1.25"/>
+			<mul order="0x30" stat="mentalPower" val="1.25"/>
+			<mul order="0x30" stat="cAtk" val="1.15"/>
+			<mul order="0x30" stat="mCritDamage" val="1.15"/>
+			<mul order="0x30" stat="pAtkSpd" val="1.05"/>
+			<mul order="0x30" stat="mAtkSpd" val="1.05"/>
+			<add order="0x40" stat="accCombat" val="4"/>
+			<add order="0x40" stat="maccCombat" val="4"/>
+		</for>
 	</skill>
 	<skill id="13540" levels="1" name="Frintezza's Soul Necklace">
 		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="poisonResist" val="1.20"/>
+			<mul order="0x30" stat="bleedResist" val="1.20"/>
+			<mul order="0x30" stat="stunResist" val="1.20"/>
+			<mul order="0x30" stat="rootResist" val="1.20"/>
+			<mul order="0x30" stat="paralyzeResist" val="1.20"/>
+			<mul order="0x30" stat="poisonPower" val="1.20"/>
+			<mul order="0x30" stat="bleedPower" val="1.25"/>
+			<mul order="0x30" stat="stunPower" val="1.20"/>
+			<mul order="0x30" stat="rootPower" val="1.20"/>
+			<mul order="0x30" stat="paralyzePower" val="1.20"/>
+			<mul order="0x30" stat="reflectDam" val="1.05"/>
+			<add order="0x40" stat="runSpd" val="5"/>
+			<mul order="0x30" stat="mReuse" val="0.90"/>
+			<mul order="0x30" stat="pReuse" val="0.90"/>
+		</for>
 	</skill>
 	<skill id="13541" levels="1" name="Octavis' Shirt">
 		<set name="magicLevel" val="1"/>
