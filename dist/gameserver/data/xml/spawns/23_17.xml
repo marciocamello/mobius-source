@@ -1808,30 +1808,6 @@
 		<point x="109189" y="-76118" z="-1080" h="18767"/>
 		<npc id="22800"/>
 	</spawn>
-	<spawn group="bloodaltar_alive_npc" count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="119976" y="219320" z="-3384" h="32768"/>
-		<npc id="4325"/>
-	</spawn>
-	<spawn group="bloodaltar_alive_npc" count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="119896" y="219160" z="-3392" h="32768"/>
-		<npc id="4324"/>
-	</spawn>
-	<spawn group="bloodaltar_alive_npc" count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="119992" y="219016" z="-3384" h="52200"/>
-		<npc id="4325"/>
-	</spawn>
-	<spawn group="bloodaltar_dead_npc" count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="119976" y="219320" z="-3384" h="32768"/>
-		<npc id="4328"/>
-	</spawn>
-	<spawn group="bloodaltar_dead_npc" count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="119896" y="219160" z="-3392" h="32768"/>
-		<npc id="4327"/>
-	</spawn>
-	<spawn group="bloodaltar_dead_npc" count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="119992" y="219016" z="-3384" h="52200"/>
-		<npc id="4328"/>
-	</spawn>
 	<spawn group="western_fortress_peace_merchant" count="1" respawn="15000" respawn_random="0" period_of_day="none">
 		<point x="113798" y="-18726" z="-1697" h="0"/>
 		<npc id="36211"/>
