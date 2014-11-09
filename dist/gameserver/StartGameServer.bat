@@ -1,7 +1,7 @@
 @echo off
 REM Bigger console window
 REM @mode con:cols=108 lines=42
-title GoD: Game Server Console
+title Lindvior: Game Server Console
 :start
 echo Starting GameServer.
 echo.

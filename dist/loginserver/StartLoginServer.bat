@@ -1,5 +1,5 @@
 @echo off
-title GoD: Login Server Console
+title Lindvior: Login Server Console
 :start
 echo Starting LoginServer.
 echo.
