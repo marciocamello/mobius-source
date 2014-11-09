@@ -51,7 +51,7 @@ public class MultiSellList extends L2GameServerPacket
 	{
 		writeC(0xD0);
 		writeD(_listId);
-		writeC(0x00); // 603
+		writeC(0x00);
 		writeD(_page);
 		writeD(_finished);
 		writeD(Config.MULTISELL_SIZE);
@@ -77,13 +77,15 @@ public class MultiSellList extends L2GameServerPacket
 				ItemTemplate template = itemId > 0 ? ItemHolder.getInstance().getTemplate(prod.getItemId()) : null;
 				
 				writeD(itemId);
-				writeQ((itemId > 0) && (template != null) ? template.getBodyPart() : 0);
+				writeD((itemId > 0) && (template != null) ? template.getBodyPart() : 0);
+				writeD(0x00); // ???
 				writeH((itemId > 0) && (template != null) ? template.getType2ForPackets() : 0);
 				writeQ(prod.getItemCount());
 				writeH(prod.getItemEnchant());
 				writeD(prod.getChance());
+				// TODO: Two item augmentations need to be implement
 				writeD(/* prod.getAugmentId() */0x00);
-				writeD(/* prod.getMana() */0x00);
+				writeD(/* prod.getSndAugmentId() */0x00);
 				writeItemElements(prod);
 			}
 			
@@ -97,8 +99,9 @@ public class MultiSellList extends L2GameServerPacket
 				writeQ(i.getItemCount());
 				
 				writeH(i.getItemEnchant());
+				// TODO: Two item augmentations need to be implement
 				writeD(/* prod.getAugmentId() */0x00);
-				writeD(/* prod.getMana() */0x00);
+				writeD(/* prod.getSndAugmentId() */0x00);
 				writeItemElements(i);
 			}
 		}

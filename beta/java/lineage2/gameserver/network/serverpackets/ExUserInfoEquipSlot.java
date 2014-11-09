@@ -34,18 +34,17 @@ public class ExUserInfoEquipSlot extends L2GameServerPacket
 		writeD(_activeChar.getObjectId());
 		writeH(Inventory.PAPERDOLL_MAX);
 		
-		writeB(new byte[]
-		{
-			-1,
-			-1,
-			-1,
-			-1,
-			-1
-		});
+		// TODO: BitMask
+		writeC(0xFF);
+		writeC(0xFF);
+		writeC(0xFF);
+		writeC(0xFF);
+		writeC(0xFF);
 		
+		int blockSize = 16 + 2;
 		for (int order : Inventory.PAPERDOLL_ORDER)
 		{
-			writeH(0x12);
+			writeH(blockSize);
 			writeD(_activeChar.getInventory().getPaperdollObjectId(order));
 			writeD(_activeChar.getInventory().getPaperdollItemId(order));
 			writeH(_activeChar.getInventory().getPaperdollAugmentationId(order));

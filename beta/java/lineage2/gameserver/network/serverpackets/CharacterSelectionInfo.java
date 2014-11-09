@@ -27,6 +27,7 @@ import lineage2.gameserver.model.base.Experience;
 import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.base.SubClassType;
 import lineage2.gameserver.model.items.Inventory;
+import lineage2.gameserver.network.flags.CharacterPlayMode;
 import lineage2.gameserver.utils.AutoBan;
 
 import org.slf4j.Logger;
@@ -66,7 +67,7 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 		_maxCharPerAcc = Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT;
 		_unk = 0;
 		_unk2 = 1;
-		_playMode = 2; // 100% free play
+		_playMode = CharacterPlayMode.FREE_PLAY.getFlag(); // 100% free play
 		_isKoreaClient = 0;
 		_gift = 0;
 		_serverId = 1;
