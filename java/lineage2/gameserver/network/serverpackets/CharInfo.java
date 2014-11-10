@@ -12,7 +12,7 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import lineage2.gameserver.Config;
 import lineage2.gameserver.instancemanager.CursedWeaponsManager;
@@ -98,7 +98,7 @@ public class CharInfo extends L2GameServerPacket
 	private int _curMP;
 	private int _maxMP;
 	private int _curCP;
-	private ArrayList<Integer> _aveList;
+	private List<Integer> _aveList;
 	private PcInventory _inventory;
 	private int _talismanCount;
 	private boolean _openCloak;

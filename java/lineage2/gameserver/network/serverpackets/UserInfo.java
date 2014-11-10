@@ -12,7 +12,7 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -141,7 +141,7 @@ public class UserInfo extends L2GameServerPacket
 	private final boolean _openCloak;
 	private final double _expPercent;
 	private final TeamType _team;
-	private final ArrayList<Integer> _aveList;
+	private final List<Integer> _aveList;
 	private final PcInventory _inventory;
 	
 	public UserInfo(Player player)
