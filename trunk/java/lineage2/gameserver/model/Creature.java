@@ -339,7 +339,7 @@ public abstract class Creature extends GameObject
 	private int _abnormalEffects;
 	private int _abnormalEffects2;
 	private int _abnormalEffects3;
-	private final ArrayList<Integer> _aveList = new ArrayList<>();
+	private final List<Integer> _aveList = new ArrayList<>();
 	protected boolean _isAttackAborted;
 	protected long _attackEndTime;
 	protected long _attackReuseEndTime;
@@ -2324,9 +2324,9 @@ public abstract class Creature extends GameObject
 	
 	/**
 	 * Method getAveList.
-	 * @return ArrayList<Integer>
+	 * @return List<Integer>
 	 */
-	public ArrayList<Integer> getAveList()
+	public List<Integer> getAveList()
 	{
 		return _aveList;
 	}

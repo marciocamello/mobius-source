@@ -12,7 +12,7 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
@@ -52,7 +52,7 @@ public class CharInfo extends L2GameServerPacket
 	private int _allyCrestId;
 	private int _clanBoatObjectId;
 	private EffectCubic[] _cubics;
-	private ArrayList<Integer> _aveList;
+	private List<Integer> _aveList;
 	private int _specialEffect;
 	private int _showHairAccessory;
 	private int _abilityPoints;

@@ -12,7 +12,7 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Creature;
@@ -76,7 +76,7 @@ public class NpcInfo extends L2GameServerPacket
 	NpcString _titleNpcString = NpcString.NONE;
 	TeamType _team;
 	int _transformId;
-	private ArrayList<Integer> _aveList;
+	private List<Integer> _aveList;
 	boolean _waterZone;
 	protected double _moveMultiplier;
 	protected double _spdMultiplier;

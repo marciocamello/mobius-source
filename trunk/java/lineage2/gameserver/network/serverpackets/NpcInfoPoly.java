@@ -12,7 +12,7 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.model.Creature;
@@ -49,7 +49,7 @@ public class NpcInfoPoly extends L2GameServerPacket
 	private final double _colRadius;
 	private final double _colHeight;
 	private final TeamType _team;
-	private final ArrayList<Integer> _aveList;
+	private final List<Integer> _aveList;
 	
 	public NpcInfoPoly(Player cha)
 	{
