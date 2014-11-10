@@ -1,5 +1,4 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
  * Foundation, either version 3 of the License, or (at your option) any later version.
  *
@@ -196,7 +195,7 @@ public class UserInfo extends L2GameServerPacket
 		_uiv2 = uiv2;
 		_uiv3 = uiv3;
 		_structType = 23;
-		_builderLvl = 0;
+		_builderLvl = player.isGM() ? 1 : 0; // fix for using //admin command
 		
 		if (player.getTransformationName() != null)
 		{
