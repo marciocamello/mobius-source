@@ -40,6 +40,7 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.entity.olympiad.OlympiadGame;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.startcondition.ICheckStartCondition;
+import lineage2.gameserver.model.quest.startcondition.impl.ClassCondition;
 import lineage2.gameserver.model.quest.startcondition.impl.ClassLevelCondition;
 import lineage2.gameserver.model.quest.startcondition.impl.PlayerLevelCondition;
 import lineage2.gameserver.model.quest.startcondition.impl.QuestCompletedCondition;
@@ -666,6 +667,15 @@ public class Quest
 	}
 	
 	/**
+	 * Method addClassCheck.
+	 * @param classId int[]
+	 */
+	public void addClassCheck(int... classId)
+	{
+		_startConditionList.add(new ClassCondition(classId));
+	}
+	
+	/**
 	 * Method addSubClassCheck.
 	 */
 	public void addSubClassCheck()
@@ -748,7 +758,6 @@ public class Quest
 		}
 		
 		fStringId = (fStringId * 100) + state;
-		// TODO : need to check (blacksmoke)
 		return font.concat(HtmlUtils.htmlNpcString(fStringId)).concat("</font></Button>");
 	}
 	

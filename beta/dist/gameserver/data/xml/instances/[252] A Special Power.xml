@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "instances.dtd">
+<list>
+	<instance id="252" name="Faeron Training Grounds" maxChannels="25" collapseIfEmpty="10" timelimit="5">
+		<collapse on-party-dismiss="true" timer="60"/>
+		<level min="4" max="20"/>
+		<party min="1" max="1"/>
+		<return loc="-82088 249880 -3392"/>
+		<teleport loc="-74903 240618 -3584"/>
+		<remove itemId="0" count="0" necessary="false"/>
+		<give itemId="0" count="0"/>
+		<quest id="10736"/>
+		<reuse resetReuse="1 15 * * *" setUponEntry="false" sharedReuseGroup="0"/>
+		<spawns>
+			<spawn mobId="33945" type="point" respawn="0">
+				<coords loc="-74904 240616 -3619 26634"/>
+			</spawn>
+		</spawns>
+	</instance>
+</list>

@@ -25,14 +25,15 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public class Q10732_AForeignLand extends Quest implements ScriptFile
 {
-	private static final int NAVARI = 33931;
-	private static final int GERETH = 33932;
+	private static final int Navari = 33931;
+	private static final int Gereth = 33932;
 	
 	public Q10732_AForeignLand()
 	{
 		super(false);
-		addStartNpc(NAVARI);
-		addTalkId(NAVARI, GERETH);
+		addStartNpc(Navari);
+		addTalkId(Navari);
+		addTalkId(Gereth);
 		addLevelCheck(1, 20);
 	}
 	
@@ -49,12 +50,12 @@ public class Q10732_AForeignLand extends Quest implements ScriptFile
 				st.setCond(1);
 				st.playSound(SOUND_ACCEPT);
 				player.sendPacket(new ExShowUsmVideo(ExShowUsmVideo.Q014));
-				htmltext = "0-3.htm";
+				htmltext = "33931-3.htm";
 				break;
 			
 			case "qet_rev":
 				st.showTutorialHTML(TutorialShowHtml.QT_001, TutorialShowHtml.TYPE_WINDOW);
-				htmltext = "1-2.htm";
+				htmltext = "33932-2.htm";
 				st.giveItems(57, 3000);
 				st.getPlayer().addExpAndSp(75, 2);
 				st.exitCurrentQuest(false);
@@ -66,41 +67,37 @@ public class Q10732_AForeignLand extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
+		int cond = qs.getCond();
 		int npcId = npc.getId();
-		String htmltext = "noquest";
+		String htmltext = null;
+		if (qs.isCompleted())
+		{
+			return "quest_completed.htm";
+		}
 		
 		switch (npcId)
 		{
-			case NAVARI:
-				if (st.isCompleted())
+			case Navari:
+				if ((cond == 0) && isAvailableFor(qs.getPlayer()))
 				{
-					htmltext = "0-c.htm";
-				}
-				else if ((cond == 0) && isAvailableFor(st.getPlayer()))
-				{
-					htmltext = "0-1.htm";
+					htmltext = "33931-1.htm";
 				}
 				else if (cond == 1)
 				{
-					htmltext = "0-4.htm";
+					htmltext = "33931-4.htm";
 				}
 				break;
 			
-			case GERETH:
-				if (st.isCompleted())
+			case Gereth:
+				if (cond == 0)
 				{
-					htmltext = "1-c.htm";
-				}
-				else if (cond == 0)
-				{
-					htmltext = "1-t.htm";
+					htmltext = "33932-3.htm";
 				}
 				else if (cond == 1)
 				{
-					htmltext = "1-1.htm";
+					htmltext = "33932-1.htm";
 				}
 				break;
 		}

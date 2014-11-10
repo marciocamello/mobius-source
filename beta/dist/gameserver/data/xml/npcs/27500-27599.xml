@@ -563,7 +563,7 @@
 		<set name="shots" value="NONE"/>
 	</npc>
 	<npc id="27526" name="Floato" title="Quest Monster">
-		<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="6.5"/>
 		<set name="collision_height" value="18.5"/>
@@ -572,7 +572,7 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="108"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="5"/>
 		<set name="baseMpMax" value="467"/>
 		<set name="baseMpReg" value="4"/>
 		<set name="baseSTR" value="40"/>
@@ -581,16 +581,16 @@
 		<set name="baseINT" value="21"/>
 		<set name="baseWIT" value="70"/>
 		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="276"/>
+		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="9"/>
-		<set name="basePAtk" value="52"/>
-		<set name="basePDef" value="137"/>
-		<set name="baseMAtk" value="24"/>
-		<set name="baseMDef" value="119"/>
-		<set name="basePAtkSpd" value="279"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="21"/>
+		<set name="basePDef" value="60"/>
+		<set name="baseMAtk" value="12"/>
+		<set name="baseMDef" value="54"/>
+		<set name="basePAtkSpd" value="182"/>
 		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseMAtkSpd" value="160"/>
 		<set name="baseRunSpd" value="120"/>
 		<set name="baseWalkSpd" value="8"/>
 		<set name="shots" value="NONE"/>
@@ -605,7 +605,7 @@
 		</attributes>
 	</npc>
 	<npc id="27527" name="Ratel" title="Quest Monster">
-		<set name="aggroRange" value="300"/>
+		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="6.5"/>
 		<set name="collision_height" value="18.5"/>
@@ -614,7 +614,7 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="108"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="5"/>
 		<set name="baseMpMax" value="467"/>
 		<set name="baseMpReg" value="4"/>
 		<set name="baseSTR" value="40"/>
@@ -623,16 +623,16 @@
 		<set name="baseINT" value="21"/>
 		<set name="baseWIT" value="70"/>
 		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="276"/>
+		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="9"/>
-		<set name="basePAtk" value="52"/>
-		<set name="basePDef" value="137"/>
-		<set name="baseMAtk" value="24"/>
-		<set name="baseMDef" value="119"/>
-		<set name="basePAtkSpd" value="279"/>
+		<set name="rewardSp" value="0"/>
+		<set name="basePAtk" value="21"/>
+		<set name="basePDef" value="60"/>
+		<set name="baseMAtk" value="12"/>
+		<set name="baseMDef" value="54"/>
+		<set name="basePAtkSpd" value="182"/>
 		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseMAtkSpd" value="160"/>
 		<set name="baseRunSpd" value="120"/>
 		<set name="baseWalkSpd" value="8"/>
 		<set name="shots" value="NONE"/>
