@@ -74,7 +74,10 @@ public final class HelpBook extends ScriptItemHandler
 		13134,
 		13135,
 		13136,
-		17213
+		17213,
+		33801,
+		34767,
+		36950
 	};
 	
 	/**
