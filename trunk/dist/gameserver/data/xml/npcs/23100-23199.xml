@@ -823,7 +823,7 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="108"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="19"/>
 		<set name="baseMpMax" value="467"/>
 		<set name="baseMpReg" value="4"/>
 		<set name="baseSTR" value="40"/>
@@ -1300,7 +1300,6 @@
 		</skills>
 	</npc>
 	<npc id="23122" name="Eyesaroch" title="Husk">
-		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="29.0"/>
@@ -1318,9 +1317,9 @@
 		<set name="baseINT" value="21"/>
 		<set name="baseWIT" value="70"/>
 		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="0"/>
+		<set name="rewardExp" value="879"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
+		<set name="rewardSp" value="39"/>
 		<set name="basePAtk" value="115"/>
 		<set name="basePDef" value="191"/>
 		<set name="baseMAtk" value="53"/>
@@ -1481,8 +1480,8 @@
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseWalkSpd" value="30"/>
+		<set name="baseRunSpd" value="1"/>
+		<set name="baseWalkSpd" value="1"/>
 		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="160"/>

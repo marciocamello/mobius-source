@@ -5838,9 +5838,9 @@
 		<set name="baseINT" value="21"/>
 		<set name="baseWIT" value="70"/>
 		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="0"/>
+		<set name="rewardExp" value="717"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
+		<set name="rewardSp" value="34"/>
 		<set name="basePAtk" value="104"/>
 		<set name="basePDef" value="184"/>
 		<set name="baseMAtk" value="48"/>
