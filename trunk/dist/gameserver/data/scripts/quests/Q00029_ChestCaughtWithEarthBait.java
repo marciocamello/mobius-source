@@ -19,11 +19,138 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00029_ChestCaughtWithEarthBait extends Quest implements ScriptFile
 {
-	final int Willie = 31574;
-	final int Anabel = 30909;
-	final int SmallPurpleTreasureChest = 6507;
-	final int SmallGlassBox = 7627;
-	final int PlatedLeatherGloves = 2455;
+	// Npcs
+	private final static int Willie = 31574;
+	private final static int Anabel = 30909;
+	// Items
+	private final static int SmallPurpleTreasureChest = 6507;
+	private final static int SmallGlassBox = 7627;
+	private final static int PlatedLeatherGloves = 2455;
+	
+	public Q00029_ChestCaughtWithEarthBait()
+	{
+		super(false);
+		addStartNpc(Willie);
+		addTalkId(Anabel);
+		addQuestItem(SmallGlassBox);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "fisher_willeri_q0029_0104.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "fisher_willeri_q0029_0201.htm":
+				if (qs.getQuestItemsCount(SmallPurpleTreasureChest) > 0)
+				{
+					qs.setCond(2);
+					qs.playSound(SOUND_MIDDLE);
+					qs.takeItems(SmallPurpleTreasureChest, 1);
+					qs.giveItems(SmallGlassBox, 1);
+				}
+				else
+				{
+					htmltext = "fisher_willeri_q0029_0202.htm";
+				}
+				break;
+			
+			case "29_GiveGlassBox":
+				if (qs.getQuestItemsCount(SmallGlassBox) == 1)
+				{
+					htmltext = "magister_anabel_q0029_0301.htm";
+					qs.takeItems(SmallGlassBox, -1);
+					qs.giveItems(PlatedLeatherGloves, 1);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(false);
+				}
+				else
+				{
+					htmltext = "magister_anabel_q0029_0302.htm";
+					qs.exitCurrentQuest(true);
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		
+		switch (npcId)
+		{
+			case Willie:
+				if (qs.getState() == CREATED)
+				{
+					if (qs.getPlayer().getLevel() < 48)
+					{
+						htmltext = "fisher_willeri_q0029_0102.htm";
+						qs.exitCurrentQuest(true);
+					}
+					else
+					{
+						QuestState WilliesSpecialBait = qs.getPlayer().getQuestState(Q00052_WilliesSpecialBait.class);
+						
+						if (WilliesSpecialBait != null)
+						{
+							if (WilliesSpecialBait.isCompleted())
+							{
+								htmltext = "fisher_willeri_q0029_0101.htm";
+							}
+							else
+							{
+								htmltext = "fisher_willeri_q0029_0102.htm";
+								qs.exitCurrentQuest(true);
+							}
+						}
+						else
+						{
+							htmltext = "fisher_willeri_q0029_0103.htm";
+							qs.exitCurrentQuest(true);
+						}
+					}
+				}
+				else if (cond == 1)
+				{
+					htmltext = "fisher_willeri_q0029_0105.htm";
+					
+					if (qs.getQuestItemsCount(SmallPurpleTreasureChest) == 0)
+					{
+						htmltext = "fisher_willeri_q0029_0106.htm";
+					}
+				}
+				else if (cond == 2)
+				{
+					htmltext = "fisher_willeri_q0029_0203.htm";
+				}
+				break;
+			
+			case Anabel:
+				if (cond == 2)
+				{
+					htmltext = "magister_anabel_q0029_0201.htm";
+				}
+				else
+				{
+					htmltext = "magister_anabel_q0029_0302.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -38,127 +165,5 @@ public class Q00029_ChestCaughtWithEarthBait extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00029_ChestCaughtWithEarthBait()
-	{
-		super(false);
-		addStartNpc(Willie);
-		addTalkId(Anabel);
-		addQuestItem(SmallGlassBox);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equals("fisher_willeri_q0029_0104.htm"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equals("fisher_willeri_q0029_0201.htm"))
-		{
-			if (st.getQuestItemsCount(SmallPurpleTreasureChest) > 0)
-			{
-				st.setCond(2);
-				st.playSound(SOUND_MIDDLE);
-				st.takeItems(SmallPurpleTreasureChest, 1);
-				st.giveItems(SmallGlassBox, 1);
-			}
-			else
-			{
-				htmltext = "fisher_willeri_q0029_0202.htm";
-			}
-		}
-		else if (event.equals("29_GiveGlassBox"))
-		{
-			if (st.getQuestItemsCount(SmallGlassBox) == 1)
-			{
-				htmltext = "magister_anabel_q0029_0301.htm";
-				st.takeItems(SmallGlassBox, -1);
-				st.giveItems(PlatedLeatherGloves, 1);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(false);
-			}
-			else
-			{
-				htmltext = "magister_anabel_q0029_0302.htm";
-				st.exitCurrentQuest(true);
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		int id = st.getState();
-		int cond = st.getCond();
-		
-		if (npcId == Willie)
-		{
-			if (id == CREATED)
-			{
-				if (st.getPlayer().getLevel() < 48)
-				{
-					htmltext = "fisher_willeri_q0029_0102.htm";
-					st.exitCurrentQuest(true);
-				}
-				else
-				{
-					QuestState WilliesSpecialBait = st.getPlayer().getQuestState(Q00052_WilliesSpecialBait.class);
-					
-					if (WilliesSpecialBait != null)
-					{
-						if (WilliesSpecialBait.isCompleted())
-						{
-							htmltext = "fisher_willeri_q0029_0101.htm";
-						}
-						else
-						{
-							htmltext = "fisher_willeri_q0029_0102.htm";
-							st.exitCurrentQuest(true);
-						}
-					}
-					else
-					{
-						htmltext = "fisher_willeri_q0029_0103.htm";
-						st.exitCurrentQuest(true);
-					}
-				}
-			}
-			else if (cond == 1)
-			{
-				htmltext = "fisher_willeri_q0029_0105.htm";
-				
-				if (st.getQuestItemsCount(SmallPurpleTreasureChest) == 0)
-				{
-					htmltext = "fisher_willeri_q0029_0106.htm";
-				}
-			}
-			else if (cond == 2)
-			{
-				htmltext = "fisher_willeri_q0029_0203.htm";
-			}
-		}
-		else if (npcId == Anabel)
-		{
-			if (cond == 2)
-			{
-				htmltext = "magister_anabel_q0029_0201.htm";
-			}
-			else
-			{
-				htmltext = "magister_anabel_q0029_0302.htm";
-			}
-		}
-		
-		return htmltext;
 	}
 }

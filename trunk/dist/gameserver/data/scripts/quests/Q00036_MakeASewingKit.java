@@ -19,10 +19,156 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00036_MakeASewingKit extends Quest implements ScriptFile
 {
-	final int REINFORCED_STEEL = 7163;
-	final int ARTISANS_FRAME = 1891;
-	final int ORIHARUKON = 1893;
-	final int SEWING_KIT = 7078;
+	// Npc
+	private final static int FERRIS = 30847;
+	// Monster
+	private final static int REINFORCED_STEEL_GOLEM = 20566;
+	// Items
+	private final static int REINFORCED_STEEL = 7163;
+	private final static int ARTISANS_FRAME = 1891;
+	private final static int ORIHARUKON = 1893;
+	private final static int SEWING_KIT = 7078;
+	
+	public Q00036_MakeASewingKit()
+	{
+		super(false);
+		addStartNpc(FERRIS);
+		addTalkId(FERRIS);
+		addKillId(REINFORCED_STEEL_GOLEM);
+		addQuestItem(REINFORCED_STEEL);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		final int cond = qs.getCond();
+		
+		switch (event)
+		{
+			case "head_blacksmith_ferris_q0036_0104.htm":
+				if (cond == 0)
+				{
+					qs.setCond(1);
+					qs.setState(STARTED);
+					qs.playSound(SOUND_ACCEPT);
+				}
+				break;
+			
+			case "head_blacksmith_ferris_q0036_0201.htm":
+				if (cond == 2)
+				{
+					qs.takeItems(REINFORCED_STEEL, 5);
+					qs.setCond(3);
+				}
+				break;
+			
+			case "head_blacksmith_ferris_q0036_0301.htm":
+				if ((qs.getQuestItemsCount(ORIHARUKON) >= 10) && (qs.getQuestItemsCount(ARTISANS_FRAME) >= 10))
+				{
+					qs.takeItems(ORIHARUKON, 10);
+					qs.takeItems(ARTISANS_FRAME, 10);
+					qs.giveItems(SEWING_KIT, 1);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(true);
+				}
+				else
+				{
+					htmltext = "head_blacksmith_ferris_q0036_0203.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		
+		switch (cond)
+		{
+			case 0:
+				if (qs.getQuestItemsCount(SEWING_KIT) == 0)
+				{
+					if (qs.getPlayer().getLevel() >= 60)
+					{
+						final QuestState fwear = qs.getPlayer().getQuestState(Q00037_MakeFormalWear.class);
+						
+						if ((fwear != null) && (fwear.getState() == STARTED))
+						{
+							if (fwear.getCond() == 6)
+							{
+								htmltext = "head_blacksmith_ferris_q0036_0101.htm";
+							}
+							else
+							{
+								qs.exitCurrentQuest(true);
+							}
+						}
+						else
+						{
+							qs.exitCurrentQuest(true);
+						}
+					}
+					else
+					{
+						htmltext = "head_blacksmith_ferris_q0036_0103.htm";
+					}
+				}
+				break;
+			
+			case 1:
+				if (qs.getQuestItemsCount(REINFORCED_STEEL) < 5)
+				{
+					htmltext = "head_blacksmith_ferris_q0036_0106.htm";
+				}
+				break;
+			
+			case 2:
+				if (qs.getQuestItemsCount(REINFORCED_STEEL) == 5)
+				{
+					htmltext = "head_blacksmith_ferris_q0036_0105.htm";
+				}
+				break;
+			
+			case 3:
+				if ((qs.getQuestItemsCount(ORIHARUKON) < 10) || (qs.getQuestItemsCount(ARTISANS_FRAME) < 10))
+				{
+					htmltext = "head_blacksmith_ferris_q0036_0204.htm";
+				}
+				else if ((qs.getQuestItemsCount(ORIHARUKON) >= 10) && (qs.getQuestItemsCount(ARTISANS_FRAME) >= 10))
+				{
+					htmltext = "head_blacksmith_ferris_q0036_0203.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if ((qs.getCond() == 1) && (qs.getQuestItemsCount(REINFORCED_STEEL) < 5))
+		{
+			qs.giveItems(REINFORCED_STEEL, 1);
+			
+			if (qs.getQuestItemsCount(REINFORCED_STEEL) == 5)
+			{
+				qs.playSound(SOUND_MIDDLE);
+				qs.setCond(2);
+			}
+			else
+			{
+				qs.playSound(SOUND_ITEMGET);
+			}
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -37,125 +183,5 @@ public class Q00036_MakeASewingKit extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00036_MakeASewingKit()
-	{
-		super(false);
-		addStartNpc(30847);
-		addTalkId(30847);
-		addTalkId(30847);
-		addKillId(20566);
-		addQuestItem(REINFORCED_STEEL);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		int cond = st.getCond();
-		
-		if (event.equals("head_blacksmith_ferris_q0036_0104.htm") && (cond == 0))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equals("head_blacksmith_ferris_q0036_0201.htm") && (cond == 2))
-		{
-			st.takeItems(REINFORCED_STEEL, 5);
-			st.setCond(3);
-		}
-		else if (event.equals("head_blacksmith_ferris_q0036_0301.htm"))
-		{
-			if ((st.getQuestItemsCount(ORIHARUKON) >= 10) && (st.getQuestItemsCount(ARTISANS_FRAME) >= 10))
-			{
-				st.takeItems(ORIHARUKON, 10);
-				st.takeItems(ARTISANS_FRAME, 10);
-				st.giveItems(SEWING_KIT, 1);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(true);
-			}
-			else
-			{
-				htmltext = "head_blacksmith_ferris_q0036_0203.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int cond = st.getCond();
-		
-		if ((cond == 0) && (st.getQuestItemsCount(SEWING_KIT) == 0))
-		{
-			if (st.getPlayer().getLevel() >= 60)
-			{
-				QuestState fwear = st.getPlayer().getQuestState(Q00037_MakeFormalWear.class);
-				
-				if ((fwear != null) && (fwear.getState() == STARTED))
-				{
-					if (fwear.getCond() == 6)
-					{
-						htmltext = "head_blacksmith_ferris_q0036_0101.htm";
-					}
-					else
-					{
-						st.exitCurrentQuest(true);
-					}
-				}
-				else
-				{
-					st.exitCurrentQuest(true);
-				}
-			}
-			else
-			{
-				htmltext = "head_blacksmith_ferris_q0036_0103.htm";
-			}
-		}
-		else if ((cond == 1) && (st.getQuestItemsCount(REINFORCED_STEEL) < 5))
-		{
-			htmltext = "head_blacksmith_ferris_q0036_0106.htm";
-		}
-		else if ((cond == 2) && (st.getQuestItemsCount(REINFORCED_STEEL) == 5))
-		{
-			htmltext = "head_blacksmith_ferris_q0036_0105.htm";
-		}
-		else if ((cond == 3) && ((st.getQuestItemsCount(ORIHARUKON) < 10) || (st.getQuestItemsCount(ARTISANS_FRAME) < 10)))
-		{
-			htmltext = "head_blacksmith_ferris_q0036_0204.htm";
-		}
-		else if ((cond == 3) && (st.getQuestItemsCount(ORIHARUKON) >= 10) && (st.getQuestItemsCount(ARTISANS_FRAME) >= 10))
-		{
-			htmltext = "head_blacksmith_ferris_q0036_0203.htm";
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		if (st.getQuestItemsCount(REINFORCED_STEEL) < 5)
-		{
-			st.giveItems(REINFORCED_STEEL, 1);
-			
-			if (st.getQuestItemsCount(REINFORCED_STEEL) == 5)
-			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(2);
-			}
-			else
-			{
-				st.playSound(SOUND_ITEMGET);
-			}
-		}
-		
-		return null;
 	}
 }

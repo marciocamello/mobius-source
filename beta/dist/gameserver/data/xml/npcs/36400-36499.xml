@@ -3906,7 +3906,7 @@
 	</npc>
 	<npc id="36481" name="Mercenary Captain" title="Gludio">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.MercenaryCaptain"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3938,7 +3938,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="residences.dominion.MercenaryCaptain"/>
+		<set name="type" value="Npc"/>
 		<equip>
 			<rhand item_id="2500"/>
 			<lhand item_id="6377"/>
@@ -3957,7 +3957,7 @@
 	</npc>
 	<npc id="36482" name="Mercenary Captain" title="Dion">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.MercenaryCaptain"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -3989,7 +3989,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="residences.dominion.MercenaryCaptain"/>
+		<set name="type" value="Npc"/>
 		<equip>
 			<rhand item_id="2500"/>
 			<lhand item_id="6377"/>
@@ -4008,7 +4008,7 @@
 	</npc>
 	<npc id="36483" name="Mercenary Captain" title="Giran">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.MercenaryCaptain"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4040,7 +4040,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="residences.dominion.MercenaryCaptain"/>
+		<set name="type" value="Npc"/>
 		<equip>
 			<rhand item_id="2500"/>
 			<lhand item_id="6377"/>
@@ -4059,7 +4059,7 @@
 	</npc>
 	<npc id="36484" name="Mercenary Captain" title="Oren">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.MercenaryCaptain"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4091,7 +4091,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="residences.dominion.MercenaryCaptain"/>
+		<set name="type" value="Npc"/>
 		<equip>
 			<rhand item_id="2500"/>
 			<lhand item_id="6377"/>
@@ -4110,7 +4110,7 @@
 	</npc>
 	<npc id="36485" name="Mercenary Captain" title="Aden">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.MercenaryCaptain"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4142,7 +4142,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="residences.dominion.MercenaryCaptain"/>
+		<set name="type" value="Npc"/>
 		<equip>
 			<rhand item_id="2500"/>
 			<lhand item_id="6377"/>
@@ -4161,7 +4161,7 @@
 	</npc>
 	<npc id="36486" name="Mercenary Captain" title="Innadril">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.MercenaryCaptain"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4193,7 +4193,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="residences.dominion.MercenaryCaptain"/>
+		<set name="type" value="Npc"/>
 		<equip>
 			<rhand item_id="2500"/>
 			<lhand item_id="6377"/>
@@ -4212,7 +4212,7 @@
 	</npc>
 	<npc id="36487" name="Mercenary Captain" title="Goddard">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.MercenaryCaptain"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4244,7 +4244,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="residences.dominion.MercenaryCaptain"/>
+		<set name="type" value="Npc"/>
 		<equip>
 			<rhand item_id="2500"/>
 			<lhand item_id="6377"/>
@@ -4263,7 +4263,7 @@
 	</npc>
 	<npc id="36488" name="Mercenary Captain" title="Rune">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.MercenaryCaptain"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4295,7 +4295,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="residences.dominion.MercenaryCaptain"/>
+		<set name="type" value="Npc"/>
 		<equip>
 			<rhand item_id="2500"/>
 			<lhand item_id="6377"/>
@@ -4314,7 +4314,7 @@
 	</npc>
 	<npc id="36489" name="Mercenary Captain" title="Schuttgart">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.MercenaryCaptain"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -4346,7 +4346,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="residences.dominion.MercenaryCaptain"/>
+		<set name="type" value="Npc"/>
 		<equip>
 			<rhand item_id="2500"/>
 			<lhand item_id="6377"/>

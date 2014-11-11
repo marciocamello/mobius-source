@@ -19,8 +19,8 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00016_TheComingDarkness extends Quest implements ScriptFile
 {
-	public final int HIERARCH = 31517;
-	public final int[][] ALTAR_LIST =
+	private static final int HIERARCH = 31517;
+	private static final int[][] ALTAR_LIST =
 	{
 		{
 			31512,
@@ -45,21 +45,6 @@ public class Q00016_TheComingDarkness extends Quest implements ScriptFile
 	};
 	public final int CRYSTAL_OF_SEAL = 7167;
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q00016_TheComingDarkness()
 	{
 		super(false);
@@ -74,25 +59,25 @@ public class Q00016_TheComingDarkness extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("31517-02.htm"))
+		if (event.equals("31517-02.htm"))
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.giveItems(CRYSTAL_OF_SEAL, 5);
-			st.playSound(SOUND_ACCEPT);
+			qs.setState(STARTED);
+			qs.setCond(1);
+			qs.giveItems(CRYSTAL_OF_SEAL, 5);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		
 		for (int[] element : ALTAR_LIST)
 		{
-			if (event.equalsIgnoreCase(String.valueOf(element[0]) + "-02.htm"))
+			if (event.equals(String.valueOf(element[0]) + "-02.htm"))
 			{
-				st.takeItems(CRYSTAL_OF_SEAL, 1);
-				st.setCond(Integer.valueOf(element[1] + 1));
-				st.playSound(SOUND_MIDDLE);
+				qs.takeItems(CRYSTAL_OF_SEAL, 1);
+				qs.setCond(Integer.valueOf(element[1] + 1));
+				qs.playSound(SOUND_MIDDLE);
 			}
 		}
 		
@@ -100,42 +85,39 @@ public class Q00016_TheComingDarkness extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
 		
-		if (npcId == 31517)
+		if (cond < 1)
 		{
-			if (cond < 1)
+			if (qs.getPlayer().getLevel() < 61)
 			{
-				if (st.getPlayer().getLevel() < 61)
-				{
-					htmltext = "31517-00.htm";
-					st.exitCurrentQuest(true);
-				}
-				else
-				{
-					htmltext = "31517-01.htm";
-				}
+				htmltext = "31517-00.htm";
+				qs.exitCurrentQuest(true);
 			}
-			else if ((cond > 0) && (cond < 6) && (st.getQuestItemsCount(CRYSTAL_OF_SEAL) > 0))
+			else
 			{
-				htmltext = "31517-02r.htm";
+				htmltext = "31517-01.htm";
 			}
-			else if ((cond > 0) && (cond < 6) && (st.getQuestItemsCount(CRYSTAL_OF_SEAL) < 1))
-			{
-				htmltext = "31517-proeb.htm";
-				st.exitCurrentQuest(false);
-			}
-			else if ((cond > 5) && (st.getQuestItemsCount(CRYSTAL_OF_SEAL) < 1))
-			{
-				htmltext = "31517-03.htm";
-				st.addExpAndSp(1795524, 1679808);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(false);
-			}
+		}
+		else if ((cond > 0) && (cond < 6) && (qs.getQuestItemsCount(CRYSTAL_OF_SEAL) > 0))
+		{
+			htmltext = "31517-02r.htm";
+		}
+		else if ((cond > 0) && (cond < 6) && (qs.getQuestItemsCount(CRYSTAL_OF_SEAL) < 1))
+		{
+			htmltext = "31517-proeb.htm";
+			qs.exitCurrentQuest(false);
+		}
+		else if ((cond > 5) && (qs.getQuestItemsCount(CRYSTAL_OF_SEAL) < 1))
+		{
+			htmltext = "31517-03.htm";
+			qs.addExpAndSp(1795524, 1679808);
+			qs.playSound(SOUND_FINISH);
+			qs.exitCurrentQuest(false);
 		}
 		
 		for (int[] element : ALTAR_LIST)
@@ -144,7 +126,7 @@ public class Q00016_TheComingDarkness extends Quest implements ScriptFile
 			{
 				if (cond == element[1])
 				{
-					if (st.getQuestItemsCount(CRYSTAL_OF_SEAL) > 0)
+					if (qs.getQuestItemsCount(CRYSTAL_OF_SEAL) > 0)
 					{
 						htmltext = String.valueOf(element[0]) + "-01.htm";
 					}
@@ -161,5 +143,20 @@ public class Q00016_TheComingDarkness extends Quest implements ScriptFile
 		}
 		
 		return htmltext;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

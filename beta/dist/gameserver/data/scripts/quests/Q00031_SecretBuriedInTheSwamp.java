@@ -19,13 +19,198 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00031_SecretBuriedInTheSwamp extends Quest implements ScriptFile
 {
-	final int ABERCROMBIE = 31555;
-	final int FORGOTTEN_MONUMENT_1 = 31661;
-	final int FORGOTTEN_MONUMENT_2 = 31662;
-	final int FORGOTTEN_MONUMENT_3 = 31663;
-	final int FORGOTTEN_MONUMENT_4 = 31664;
-	final int CORPSE_OF_DWARF = 31665;
-	final int KRORINS_JOURNAL = 7252;
+	// Npcs
+	private final static int ABERCROMBIE = 31555;
+	private final static int FORGOTTEN_MONUMENT_1 = 31661;
+	private final static int FORGOTTEN_MONUMENT_2 = 31662;
+	private final static int FORGOTTEN_MONUMENT_3 = 31663;
+	private final static int FORGOTTEN_MONUMENT_4 = 31664;
+	private final static int CORPSE_OF_DWARF = 31665;
+	// Item
+	private final static int KRORINS_JOURNAL = 7252;
+	
+	public Q00031_SecretBuriedInTheSwamp()
+	{
+		super(false);
+		addStartNpc(ABERCROMBIE);
+		addTalkId(FORGOTTEN_MONUMENT_1, FORGOTTEN_MONUMENT_2, FORGOTTEN_MONUMENT_3, FORGOTTEN_MONUMENT_4);
+		addQuestItem(KRORINS_JOURNAL);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		final int cond = qs.getCond();
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "31555-1.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "31665-1.htm":
+				if (cond == 1)
+				{
+					qs.setCond(2);
+					qs.playSound(SOUND_ITEMGET);
+					qs.giveItems(KRORINS_JOURNAL, 1);
+				}
+				break;
+			
+			case "31555-4.htm":
+				if (cond == 2)
+				{
+					qs.setCond(3);
+				}
+				break;
+			
+			case "31661-1.htm":
+				if (cond == 3)
+				{
+					qs.setCond(4);
+				}
+				break;
+			
+			case "31662-1.htm":
+				if (cond == 4)
+				{
+					qs.setCond(5);
+				}
+				break;
+			
+			case "31663-1.htm":
+				if (cond == 5)
+				{
+					qs.setCond(6);
+				}
+				break;
+			
+			case "31664-1.htm":
+				if (cond == 6)
+				{
+					qs.setCond(7);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+			
+			case "31555-7.htm":
+				if (cond == 7)
+				{
+					qs.takeItems(KRORINS_JOURNAL, -1);
+					qs.addExpAndSp(1650970, 1631640);
+					qs.giveItems(ADENA_ID, 343430);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(false);
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		
+		switch (npcId)
+		{
+			case ABERCROMBIE:
+				switch (cond)
+				{
+					case 0:
+						if (qs.getPlayer().getLevel() >= 66)
+						{
+							htmltext = "31555-0.htm";
+						}
+						else
+						{
+							htmltext = "31555-0a.htm";
+							qs.exitCurrentQuest(true);
+						}
+						break;
+					
+					case 1:
+						htmltext = "31555-2.htm";
+						break;
+					
+					case 2:
+						htmltext = "31555-3.htm";
+						break;
+					
+					case 3:
+						htmltext = "31555-5.htm";
+						break;
+					
+					case 7:
+						htmltext = "31555-6.htm";
+						break;
+				}
+				break;
+			
+			case CORPSE_OF_DWARF:
+				if (cond == 1)
+				{
+					htmltext = "31665-0.htm";
+				}
+				else if (cond == 2)
+				{
+					htmltext = "31665-2.htm";
+				}
+				break;
+			
+			case FORGOTTEN_MONUMENT_1:
+				if (cond == 3)
+				{
+					htmltext = "31661-0.htm";
+				}
+				else if (cond > 3)
+				{
+					htmltext = "31661-2.htm";
+				}
+				break;
+			
+			case FORGOTTEN_MONUMENT_2:
+				if (cond == 4)
+				{
+					htmltext = "31662-0.htm";
+				}
+				else if (cond > 4)
+				{
+					htmltext = "31662-2.htm";
+				}
+				break;
+			
+			case FORGOTTEN_MONUMENT_3:
+				if (cond == 5)
+				{
+					htmltext = "31663-0.htm";
+				}
+				else if (cond > 5)
+				{
+					htmltext = "31663-2.htm";
+				}
+				break;
+			
+			case FORGOTTEN_MONUMENT_4:
+				if (cond == 6)
+				{
+					htmltext = "31664-0.htm";
+				}
+				else if (cond > 6)
+				{
+					htmltext = "31664-2.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -40,166 +225,5 @@ public class Q00031_SecretBuriedInTheSwamp extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00031_SecretBuriedInTheSwamp()
-	{
-		super(false);
-		addStartNpc(ABERCROMBIE);
-		
-		for (int i = 31661; i <= 31665; i++)
-		{
-			addTalkId(i);
-		}
-		
-		addQuestItem(KRORINS_JOURNAL);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		int cond = st.getCond();
-		String htmltext = event;
-		
-		if (event.equals("31555-1.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equals("31665-1.htm") && (cond == 1))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_ITEMGET);
-			st.giveItems(KRORINS_JOURNAL, 1);
-		}
-		else if (event.equals("31555-4.htm") && (cond == 2))
-		{
-			st.setCond(3);
-		}
-		else if (event.equals("31661-1.htm") && (cond == 3))
-		{
-			st.setCond(4);
-		}
-		else if (event.equals("31662-1.htm") && (cond == 4))
-		{
-			st.setCond(5);
-		}
-		else if (event.equals("31663-1.htm") && (cond == 5))
-		{
-			st.setCond(6);
-		}
-		else if (event.equals("31664-1.htm") && (cond == 6))
-		{
-			st.setCond(7);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equals("31555-7.htm") && (cond == 7))
-		{
-			st.takeItems(KRORINS_JOURNAL, -1);
-			st.addExpAndSp(1650970, 1631640);
-			st.giveItems(ADENA_ID, 343430);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(false);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (npcId == ABERCROMBIE)
-		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() >= 66)
-				{
-					htmltext = "31555-0.htm";
-				}
-				else
-				{
-					htmltext = "31555-0a.htm";
-					st.exitCurrentQuest(true);
-				}
-			}
-			else if (cond == 1)
-			{
-				htmltext = "31555-2.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "31555-3.htm";
-			}
-			else if (cond == 3)
-			{
-				htmltext = "31555-5.htm";
-			}
-			else if (cond == 7)
-			{
-				htmltext = "31555-6.htm";
-			}
-		}
-		else if (npcId == CORPSE_OF_DWARF)
-		{
-			if (cond == 1)
-			{
-				htmltext = "31665-0.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "31665-2.htm";
-			}
-		}
-		else if (npcId == FORGOTTEN_MONUMENT_1)
-		{
-			if (cond == 3)
-			{
-				htmltext = "31661-0.htm";
-			}
-			else if (cond > 3)
-			{
-				htmltext = "31661-2.htm";
-			}
-		}
-		else if (npcId == FORGOTTEN_MONUMENT_2)
-		{
-			if (cond == 4)
-			{
-				htmltext = "31662-0.htm";
-			}
-			else if (cond > 4)
-			{
-				htmltext = "31662-2.htm";
-			}
-		}
-		else if (npcId == FORGOTTEN_MONUMENT_3)
-		{
-			if (cond == 5)
-			{
-				htmltext = "31663-0.htm";
-			}
-			else if (cond > 5)
-			{
-				htmltext = "31663-2.htm";
-			}
-		}
-		else if (npcId == FORGOTTEN_MONUMENT_4)
-		{
-			if (cond == 6)
-			{
-				htmltext = "31664-0.htm";
-			}
-			else if (cond > 6)
-			{
-				htmltext = "31664-2.htm";
-			}
-		}
-		
-		return htmltext;
 	}
 }

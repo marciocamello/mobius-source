@@ -19,11 +19,99 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00026_TiredOfWaiting extends Quest implements ScriptFile
 {
+	// Npcs
 	private final static int ISAEL = 30655;
 	private final static int KITZKA = 31045;
+	// Items
 	private final static int LARGE_DRAGON_BONE = 17248;
 	private final static int WILL_OF_ANTHARAS = 17266;
 	private final static int SEALED_BLOOD_CRYSTAL = 17267;
+	
+	public Q00026_TiredOfWaiting()
+	{
+		super(false);
+		addStartNpc(ISAEL);
+		addTalkId(KITZKA);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "quest_accept":
+				htmltext = "isael_q0026_05.htm";
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "LARGE_DRAGON_BONE":
+				htmltext = "kitzka_q0026_03.htm";
+				qs.giveItems(LARGE_DRAGON_BONE, 1, false);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(false);
+				break;
+			
+			case "WILL_OF_ANTHARAS":
+				htmltext = "kitzka_q0026_04.htm";
+				qs.giveItems(WILL_OF_ANTHARAS, 1, false);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(false);
+				break;
+			
+			case "SEALED_BLOOD_CRYSTAL":
+				htmltext = "kitzka_q0026_05.htm";
+				qs.giveItems(SEALED_BLOOD_CRYSTAL, 1, false);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(false);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		
+		switch (npcId)
+		{
+			case ISAEL:
+				if (cond == 0)
+				{
+					if (qs.getPlayer().getLevel() >= 80)
+					{
+						htmltext = "isael_q0026_02.htm";
+					}
+					else
+					{
+						htmltext = "isael_q0026_01.htm";
+						qs.exitCurrentQuest(true);
+					}
+				}
+				else if (cond == 1)
+				{
+					htmltext = "isael_q0026_03.htm";
+				}
+				break;
+			
+			case KITZKA:
+				if (cond == 1)
+				{
+					htmltext = "kitzka_q0026_01.htm";
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -38,91 +126,5 @@ public class Q00026_TiredOfWaiting extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00026_TiredOfWaiting()
-	{
-		super(false);
-		addStartNpc(ISAEL);
-		addTalkId(KITZKA);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState qs, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("quest_accept"))
-		{
-			htmltext = "isael_q0026_05.htm";
-			qs.setCond(1);
-			qs.setState(STARTED);
-			qs.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("LARGE_DRAGON_BONE"))
-		{
-			htmltext = "kitzka_q0026_03.htm";
-			qs.giveItems(LARGE_DRAGON_BONE, 1, false);
-			qs.playSound(SOUND_FINISH);
-			qs.exitCurrentQuest(false);
-		}
-		else if (event.equalsIgnoreCase("WILL_OF_ANTHARAS"))
-		{
-			htmltext = "kitzka_q0026_04.htm";
-			qs.giveItems(WILL_OF_ANTHARAS, 1, false);
-			qs.playSound(SOUND_FINISH);
-			qs.exitCurrentQuest(false);
-		}
-		else if (event.equalsIgnoreCase("SEALED_BLOOD_CRYSTAL"))
-		{
-			htmltext = "kitzka_q0026_05.htm";
-			qs.giveItems(SEALED_BLOOD_CRYSTAL, 1, false);
-			qs.playSound(SOUND_FINISH);
-			qs.exitCurrentQuest(false);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		switch (npcId)
-		{
-			case ISAEL:
-				if (cond == 0)
-				{
-					if (st.getPlayer().getLevel() >= 80)
-					{
-						htmltext = "isael_q0026_02.htm";
-					}
-					else
-					{
-						htmltext = "isael_q0026_01.htm";
-						st.exitCurrentQuest(true);
-					}
-				}
-				else if (cond == 1)
-				{
-					htmltext = "isael_q0026_03.htm";
-				}
-				
-				break;
-			
-			case KITZKA:
-				if (cond == 1)
-				{
-					htmltext = "kitzka_q0026_01.htm";
-					st.playSound(SOUND_MIDDLE);
-				}
-				
-				break;
-		}
-		
-		return htmltext;
 	}
 }

@@ -19,11 +19,137 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00027_ChestCaughtWithWindBait extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int Lanosco = 31570;
 	private static final int Shaling = 31434;
+	// Items
 	private static final int StrangeGolemBlueprint = 7625;
 	private static final int BigBlueTreasureChest = 6500;
 	private static final int BlackPearlRing = 880;
+	
+	public Q00027_ChestCaughtWithWindBait()
+	{
+		super(false);
+		addStartNpc(Lanosco);
+		addTalkId(Shaling);
+		addQuestItem(StrangeGolemBlueprint);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "fisher_lanosco_q0027_0104.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "fisher_lanosco_q0027_0201.htm":
+				if (qs.getQuestItemsCount(BigBlueTreasureChest) > 0)
+				{
+					qs.takeItems(BigBlueTreasureChest, 1);
+					qs.giveItems(StrangeGolemBlueprint, 1);
+					qs.setCond(2);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				else
+				{
+					htmltext = "fisher_lanosco_q0027_0202.htm";
+				}
+				break;
+			
+			case "blueprint_seller_shaling_q0027_0301.htm":
+				if (qs.getQuestItemsCount(StrangeGolemBlueprint) == 1)
+				{
+					qs.takeItems(StrangeGolemBlueprint, -1);
+					qs.giveItems(BlackPearlRing, 1);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(false);
+				}
+				else
+				{
+					htmltext = "blueprint_seller_shaling_q0027_0302.htm";
+					qs.exitCurrentQuest(true);
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		
+		switch (npcId)
+		{
+			case Lanosco:
+				if (qs.getState() == CREATED)
+				{
+					if (qs.getPlayer().getLevel() < 27)
+					{
+						htmltext = "fisher_lanosco_q0027_0101.htm";
+						qs.exitCurrentQuest(true);
+					}
+					else
+					{
+						QuestState LanoscosSpecialBait = qs.getPlayer().getQuestState(Q00050_LanoscosSpecialBait.class);
+						
+						if (LanoscosSpecialBait != null)
+						{
+							if (LanoscosSpecialBait.isCompleted())
+							{
+								htmltext = "fisher_lanosco_q0027_0101.htm";
+							}
+							else
+							{
+								htmltext = "fisher_lanosco_q0027_0102.htm";
+								qs.exitCurrentQuest(true);
+							}
+						}
+						else
+						{
+							htmltext = "fisher_lanosco_q0027_0103.htm";
+							qs.exitCurrentQuest(true);
+						}
+					}
+				}
+				else if (cond == 1)
+				{
+					htmltext = "fisher_lanosco_q0027_0105.htm";
+					
+					if (qs.getQuestItemsCount(BigBlueTreasureChest) == 0)
+					{
+						htmltext = "fisher_lanosco_q0027_0106.htm";
+					}
+				}
+				else if (cond == 2)
+				{
+					htmltext = "fisher_lanosco_q0027_0203.htm";
+				}
+				break;
+			
+			case Shaling:
+				if (cond == 2)
+				{
+					htmltext = "blueprint_seller_shaling_q0027_0201.htm";
+				}
+				else
+				{
+					htmltext = "blueprint_seller_shaling_q0027_0302.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -38,132 +164,5 @@ public class Q00027_ChestCaughtWithWindBait extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00027_ChestCaughtWithWindBait()
-	{
-		super(false);
-		addStartNpc(Lanosco);
-		addTalkId(Shaling);
-		addQuestItem(StrangeGolemBlueprint);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equals("fisher_lanosco_q0027_0104.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equals("fisher_lanosco_q0027_0201.htm"))
-		{
-			if (st.getQuestItemsCount(BigBlueTreasureChest) > 0)
-			{
-				st.takeItems(BigBlueTreasureChest, 1);
-				st.giveItems(StrangeGolemBlueprint, 1);
-				st.setCond(2);
-				st.playSound(SOUND_MIDDLE);
-			}
-			else
-			{
-				htmltext = "fisher_lanosco_q0027_0202.htm";
-			}
-		}
-		else if (event.equals("blueprint_seller_shaling_q0027_0301.htm"))
-		{
-			if (st.getQuestItemsCount(StrangeGolemBlueprint) == 1)
-			{
-				st.takeItems(StrangeGolemBlueprint, -1);
-				st.giveItems(BlackPearlRing, 1);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(false);
-			}
-			else
-			{
-				htmltext = "blueprint_seller_shaling_q0027_0302.htm";
-				st.exitCurrentQuest(true);
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		int id = st.getState();
-		
-		if (npcId == Lanosco)
-		{
-			if (id == CREATED)
-			{
-				if (st.getPlayer().getLevel() < 27)
-				{
-					htmltext = "fisher_lanosco_q0027_0101.htm";
-					st.exitCurrentQuest(true);
-				}
-				else
-				{
-					QuestState LanoscosSpecialBait = st.getPlayer().getQuestState(Q00050_LanoscosSpecialBait.class);
-					
-					if (LanoscosSpecialBait != null)
-					{
-						if (LanoscosSpecialBait.isCompleted())
-						{
-							htmltext = "fisher_lanosco_q0027_0101.htm";
-						}
-						else
-						{
-							htmltext = "fisher_lanosco_q0027_0102.htm";
-							st.exitCurrentQuest(true);
-						}
-					}
-					else
-					{
-						htmltext = "fisher_lanosco_q0027_0103.htm";
-						st.exitCurrentQuest(true);
-					}
-				}
-			}
-			else if (cond == 1)
-			{
-				htmltext = "fisher_lanosco_q0027_0105.htm";
-				
-				if (st.getQuestItemsCount(BigBlueTreasureChest) == 0)
-				{
-					htmltext = "fisher_lanosco_q0027_0106.htm";
-				}
-			}
-			else if (cond == 2)
-			{
-				htmltext = "fisher_lanosco_q0027_0203.htm";
-			}
-		}
-		else if (npcId == Shaling)
-		{
-			if (cond == 2)
-			{
-				htmltext = "blueprint_seller_shaling_q0027_0201.htm";
-			}
-			else
-			{
-				htmltext = "blueprint_seller_shaling_q0027_0302.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		return null;
 	}
 }

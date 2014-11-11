@@ -485,7 +485,7 @@
 	</npc>
 	<npc id="36510" name="Religious Association Leader" title="Gludio">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.ReligiousAssociationLeader"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="27"/>
 		<set name="baseMageCritRate" value="50"/>
@@ -644,7 +644,7 @@
 	</npc>
 	<npc id="36513" name="Economic Association Leader" title="Gludio">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.EconomicAssociationLeader"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseMageCritRate" value="50"/>
@@ -801,7 +801,7 @@
 	</npc>
 	<npc id="36516" name="Religious Association Leader" title="Dion">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.ReligiousAssociationLeader"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="27"/>
 		<set name="baseMageCritRate" value="50"/>
@@ -960,7 +960,7 @@
 	</npc>
 	<npc id="36519" name="Economic Association Leader" title="Dion">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.EconomicAssociationLeader"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseMageCritRate" value="50"/>
@@ -1117,7 +1117,7 @@
 	</npc>
 	<npc id="36522" name="Religious Association Leader" title="Giran">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.ReligiousAssociationLeader"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="27"/>
 		<set name="baseMageCritRate" value="50"/>
@@ -1276,7 +1276,7 @@
 	</npc>
 	<npc id="36525" name="Economic Association Leader" title="Giran">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.EconomicAssociationLeader"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseMageCritRate" value="50"/>
@@ -1433,7 +1433,7 @@
 	</npc>
 	<npc id="36528" name="Religious Association Leader" title="Oren">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.ReligiousAssociationLeader"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="27"/>
 		<set name="baseMageCritRate" value="50"/>
@@ -1592,7 +1592,7 @@
 	</npc>
 	<npc id="36531" name="Economic Association Leader" title="Oren">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.EconomicAssociationLeader"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseMageCritRate" value="50"/>
@@ -1749,7 +1749,7 @@
 	</npc>
 	<npc id="36534" name="Religious Association Leader" title="Aden">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.ReligiousAssociationLeader"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="27"/>
 		<set name="baseMageCritRate" value="50"/>
@@ -1908,7 +1908,7 @@
 	</npc>
 	<npc id="36537" name="Economic Association Leader" title="Aden">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.EconomicAssociationLeader"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseMageCritRate" value="50"/>
@@ -2065,7 +2065,7 @@
 	</npc>
 	<npc id="36540" name="Religious Association Leader" title="Innadril">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.ReligiousAssociationLeader"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="27"/>
 		<set name="baseMageCritRate" value="50"/>
@@ -2224,7 +2224,7 @@
 	</npc>
 	<npc id="36543" name="Economic Association Leader" title="Innadril">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.EconomicAssociationLeader"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseMageCritRate" value="50"/>
@@ -2381,7 +2381,7 @@
 	</npc>
 	<npc id="36546" name="Religious Association Leader" title="Goddard">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.ReligiousAssociationLeader"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="27"/>
 		<set name="baseMageCritRate" value="50"/>
@@ -2540,7 +2540,7 @@
 	</npc>
 	<npc id="36549" name="Economic Association Leader" title="Goddard">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.EconomicAssociationLeader"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseMageCritRate" value="50"/>
@@ -2697,7 +2697,7 @@
 	</npc>
 	<npc id="36552" name="Religious Association Leader" title="Rune">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.ReligiousAssociationLeader"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="27"/>
 		<set name="baseMageCritRate" value="50"/>
@@ -2856,7 +2856,7 @@
 	</npc>
 	<npc id="36555" name="Economic Association Leader" title="Rune">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.EconomicAssociationLeader"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseMageCritRate" value="50"/>
@@ -3013,7 +3013,7 @@
 	</npc>
 	<npc id="36558" name="Religious Association Leader" title="Schuttgart">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.ReligiousAssociationLeader"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="27"/>
 		<set name="baseMageCritRate" value="50"/>
@@ -3172,7 +3172,7 @@
 	</npc>
 	<npc id="36561" name="Economic Association Leader" title="Schuttgart">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="residences.dominion.EconomicAssociationLeader"/>
+		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
 		<set name="baseMageCritRate" value="50"/>

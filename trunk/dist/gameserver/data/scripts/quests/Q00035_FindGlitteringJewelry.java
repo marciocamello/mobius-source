@@ -19,11 +19,190 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00035_FindGlitteringJewelry extends Quest implements ScriptFile
 {
-	final int ROUGH_JEWEL = 7162;
-	final int ORIHARUKON = 1893;
-	final int SILVER_NUGGET = 1873;
-	final int THONS = 4044;
-	final int JEWEL_BOX = 7077;
+	// Npcs
+	private final static int ELLIE = 30091;
+	private final static int FELTON = 30879;
+	// Monster
+	private final static int ALIGATOR = 20135;
+	// Items
+	private final static int ROUGH_JEWEL = 7162;
+	private final static int ORIHARUKON = 1893;
+	private final static int SILVER_NUGGET = 1873;
+	private final static int THONS = 4044;
+	private final static int JEWEL_BOX = 7077;
+	
+	public Q00035_FindGlitteringJewelry()
+	{
+		super(false);
+		addStartNpc(ELLIE);
+		addTalkId(ELLIE, FELTON);
+		addKillId(ALIGATOR);
+		addQuestItem(ROUGH_JEWEL);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		final int cond = qs.getCond();
+		
+		switch (event)
+		{
+			case "30091-1.htm":
+				if (cond == 0)
+				{
+					qs.setCond(1);
+					qs.setState(STARTED);
+					qs.playSound(SOUND_ACCEPT);
+				}
+				break;
+			
+			case "30879-1.htm":
+				if (cond == 1)
+				{
+					qs.setCond(2);
+				}
+				break;
+			
+			case "30091-3.htm":
+				if (cond == 3)
+				{
+					if (qs.getQuestItemsCount(ROUGH_JEWEL) == 10)
+					{
+						qs.takeItems(ROUGH_JEWEL, -1);
+						qs.setCond(4);
+					}
+					else
+					{
+						htmltext = "30091-hvnore.htm";
+					}
+				}
+				break;
+			
+			case "30091-5.htm":
+				if (cond == 4)
+				{
+					if ((qs.getQuestItemsCount(ORIHARUKON) >= 5) && (qs.getQuestItemsCount(SILVER_NUGGET) >= 500) && (qs.getQuestItemsCount(THONS) >= 150))
+					{
+						qs.takeItems(ORIHARUKON, 5);
+						qs.takeItems(SILVER_NUGGET, 500);
+						qs.takeItems(THONS, 150);
+						qs.giveItems(JEWEL_BOX, 1);
+						qs.playSound(SOUND_FINISH);
+						qs.exitCurrentQuest(true);
+					}
+					else
+					{
+						htmltext = "30091-hvnmat-bug.htm";
+					}
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		
+		switch (npcId)
+		{
+			case ELLIE:
+				switch (cond)
+				{
+					case 0:
+						if (qs.getQuestItemsCount(JEWEL_BOX) == 0)
+						{
+							if (qs.getPlayer().getLevel() >= 60)
+							{
+								QuestState fwear = qs.getPlayer().getQuestState(Q00037_MakeFormalWear.class);
+								
+								if ((fwear != null) && (fwear.getCond() == 6))
+								{
+									htmltext = "30091-0.htm";
+								}
+								else
+								{
+									qs.exitCurrentQuest(true);
+								}
+							}
+							else
+							{
+								htmltext = "30091-6.htm";
+								qs.exitCurrentQuest(true);
+							}
+						}
+						break;
+					
+					case 1:
+						htmltext = "30091-1r.htm";
+						break;
+					
+					case 2:
+						htmltext = "30091-1r2.htm";
+						break;
+					
+					case 3:
+						if (qs.getQuestItemsCount(ROUGH_JEWEL) == 10)
+						{
+							htmltext = "30091-2.htm";
+						}
+						break;
+					
+					case 4:
+						if ((qs.getQuestItemsCount(ORIHARUKON) < 5) || (qs.getQuestItemsCount(SILVER_NUGGET) < 500) || (qs.getQuestItemsCount(THONS) < 150))
+						{
+							htmltext = "30091-hvnmat.htm";
+						}
+						else if ((qs.getQuestItemsCount(ORIHARUKON) >= 5) && (qs.getQuestItemsCount(SILVER_NUGGET) >= 500) && (qs.getQuestItemsCount(THONS) >= 150))
+						{
+							htmltext = "30091-4.htm";
+						}
+						break;
+				}
+				break;
+			
+			case FELTON:
+				if (cond == 1)
+				{
+					htmltext = "30879-0.htm";
+				}
+				else if (cond == 2)
+				{
+					htmltext = "30879-1r.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		final long count = qs.getQuestItemsCount(ROUGH_JEWEL);
+		
+		if ((qs.getCond() == 2) && (count < 10))
+		{
+			qs.giveItems(ROUGH_JEWEL, 1);
+			
+			if (qs.getQuestItemsCount(ROUGH_JEWEL) == 10)
+			{
+				qs.playSound(SOUND_MIDDLE);
+				qs.setCond(3);
+			}
+			else
+			{
+				qs.playSound(SOUND_ITEMGET);
+			}
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -38,152 +217,5 @@ public class Q00035_FindGlitteringJewelry extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00035_FindGlitteringJewelry()
-	{
-		super(false);
-		addStartNpc(30091);
-		addTalkId(30091);
-		addTalkId(30879);
-		addKillId(20135);
-		addQuestItem(ROUGH_JEWEL);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		int cond = st.getCond();
-		
-		if (event.equals("30091-1.htm") && (cond == 0))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equals("30879-1.htm") && (cond == 1))
-		{
-			st.setCond(2);
-		}
-		else if (event.equals("30091-3.htm") && (cond == 3))
-		{
-			if (st.getQuestItemsCount(ROUGH_JEWEL) == 10)
-			{
-				st.takeItems(ROUGH_JEWEL, -1);
-				st.setCond(4);
-			}
-			else
-			{
-				htmltext = "30091-hvnore.htm";
-			}
-		}
-		else if (event.equals("30091-5.htm") && (cond == 4))
-		{
-			if ((st.getQuestItemsCount(ORIHARUKON) >= 5) && (st.getQuestItemsCount(SILVER_NUGGET) >= 500) && (st.getQuestItemsCount(THONS) >= 150))
-			{
-				st.takeItems(ORIHARUKON, 5);
-				st.takeItems(SILVER_NUGGET, 500);
-				st.takeItems(THONS, 150);
-				st.giveItems(JEWEL_BOX, 1);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(true);
-			}
-			else
-			{
-				htmltext = "30091-hvnmat-bug.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (npcId == 30091)
-		{
-			if ((cond == 0) && (st.getQuestItemsCount(JEWEL_BOX) == 0))
-			{
-				if (st.getPlayer().getLevel() >= 60)
-				{
-					QuestState fwear = st.getPlayer().getQuestState(Q00037_MakeFormalWear.class);
-					
-					if ((fwear != null) && (fwear.getCond() == 6))
-					{
-						htmltext = "30091-0.htm";
-					}
-					else
-					{
-						st.exitCurrentQuest(true);
-					}
-				}
-				else
-				{
-					htmltext = "30091-6.htm";
-					st.exitCurrentQuest(true);
-				}
-			}
-			else if (cond == 1)
-			{
-				htmltext = "30091-1r.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "30091-1r2.htm";
-			}
-			else if ((cond == 3) && (st.getQuestItemsCount(ROUGH_JEWEL) == 10))
-			{
-				htmltext = "30091-2.htm";
-			}
-			else if ((cond == 4) && ((st.getQuestItemsCount(ORIHARUKON) < 5) || (st.getQuestItemsCount(SILVER_NUGGET) < 500) || (st.getQuestItemsCount(THONS) < 150)))
-			{
-				htmltext = "30091-hvnmat.htm";
-			}
-			else if ((cond == 4) && (st.getQuestItemsCount(ORIHARUKON) >= 5) && (st.getQuestItemsCount(SILVER_NUGGET) >= 500) && (st.getQuestItemsCount(THONS) >= 150))
-			{
-				htmltext = "30091-4.htm";
-			}
-		}
-		else if (npcId == 30879)
-		{
-			if (cond == 1)
-			{
-				htmltext = "30879-0.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "30879-1r.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		long count = st.getQuestItemsCount(ROUGH_JEWEL);
-		
-		if (count < 10)
-		{
-			st.giveItems(ROUGH_JEWEL, 1);
-			
-			if (st.getQuestItemsCount(ROUGH_JEWEL) == 10)
-			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(3);
-			}
-			else
-			{
-				st.playSound(SOUND_ITEMGET);
-			}
-		}
-		
-		return null;
 	}
 }

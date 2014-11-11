@@ -19,9 +19,168 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00033_MakeAPairOfDressShoes extends Quest implements ScriptFile
 {
-	final int LEATHER = 1882;
-	final int THREAD = 1868;
-	final int DRESS_SHOES_BOX = 7113;
+	// Npcs
+	private final static int WOODLEY = 30838;
+	private final static int IAN = 30164;
+	private final static int LEIKAR = 31520;
+	// Items
+	private final static int LEATHER = 1882;
+	private final static int THREAD = 1868;
+	private final static int DRESS_SHOES_BOX = 7113;
+	
+	public Q00033_MakeAPairOfDressShoes()
+	{
+		super(false);
+		addStartNpc(WOODLEY);
+		addTalkId(WOODLEY, IAN, LEIKAR);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "30838-1.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "31520-1.htm":
+				qs.setCond(2);
+				break;
+			
+			case "30838-3.htm":
+				qs.setCond(3);
+				break;
+			
+			case "30838-5.htm":
+				if ((qs.getQuestItemsCount(LEATHER) >= 200) && (qs.getQuestItemsCount(THREAD) >= 600) && (qs.getQuestItemsCount(ADENA_ID) >= 200000))
+				{
+					qs.takeItems(LEATHER, 200);
+					qs.takeItems(THREAD, 600);
+					qs.takeItems(ADENA_ID, 200000);
+					qs.setCond(4);
+				}
+				else
+				{
+					htmltext = "You don't have enough materials";
+				}
+				break;
+			
+			case "30164-1.htm":
+				if (qs.getQuestItemsCount(ADENA_ID) >= 300000)
+				{
+					qs.takeItems(ADENA_ID, 300000);
+					qs.setCond(5);
+				}
+				else
+				{
+					htmltext = "30164-havent.htm";
+				}
+				break;
+			
+			case "30838-7.htm":
+				qs.giveItems(DRESS_SHOES_BOX, 1);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(true);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		
+		switch (npcId)
+		{
+			case WOODLEY:
+				switch (cond)
+				{
+					case 0:
+						if (qs.getQuestItemsCount(DRESS_SHOES_BOX) == 0)
+						{
+							if (qs.getPlayer().getLevel() >= 60)
+							{
+								QuestState fwear = qs.getPlayer().getQuestState(Q00037_MakeFormalWear.class);
+								
+								if ((fwear != null) && (fwear.getCond() == 7))
+								{
+									htmltext = "30838-0.htm";
+								}
+								else
+								{
+									qs.exitCurrentQuest(true);
+								}
+							}
+							else
+							{
+								htmltext = "30838-00.htm";
+							}
+						}
+						break;
+					
+					case 1:
+						htmltext = "30838-1.htm";
+						break;
+					
+					case 2:
+						htmltext = "30838-2.htm";
+						break;
+					
+					case 3:
+						if ((qs.getQuestItemsCount(LEATHER) >= 200) && (qs.getQuestItemsCount(THREAD) >= 600) && (qs.getQuestItemsCount(ADENA_ID) >= 200000))
+						{
+							htmltext = "30838-4.htm";
+						}
+						else if ((qs.getQuestItemsCount(LEATHER) < 200) || (qs.getQuestItemsCount(THREAD) < 600) || (qs.getQuestItemsCount(ADENA_ID) < 200000))
+						{
+							htmltext = "30838-4r.htm";
+						}
+						break;
+					
+					case 4:
+						htmltext = "30838-5r.htm";
+						break;
+					
+					case 5:
+						htmltext = "30838-6.htm";
+						break;
+				}
+				break;
+			
+			case LEIKAR:
+				if (cond == 1)
+				{
+					htmltext = "31520-0.htm";
+				}
+				else if (cond == 2)
+				{
+					htmltext = "31520-1r.htm";
+				}
+				break;
+			
+			case IAN:
+				if (cond == 4)
+				{
+					htmltext = "30164-0.htm";
+				}
+				else if (cond == 5)
+				{
+					htmltext = "30164-2.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -36,150 +195,5 @@ public class Q00033_MakeAPairOfDressShoes extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00033_MakeAPairOfDressShoes()
-	{
-		super(false);
-		addStartNpc(30838);
-		addTalkId(30838);
-		addTalkId(30838);
-		addTalkId(30164);
-		addTalkId(31520);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equals("30838-1.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equals("31520-1.htm"))
-		{
-			st.setCond(2);
-		}
-		else if (event.equals("30838-3.htm"))
-		{
-			st.setCond(3);
-		}
-		else if (event.equals("30838-5.htm"))
-		{
-			if ((st.getQuestItemsCount(LEATHER) >= 200) && (st.getQuestItemsCount(THREAD) >= 600) && (st.getQuestItemsCount(ADENA_ID) >= 200000))
-			{
-				st.takeItems(LEATHER, 200);
-				st.takeItems(THREAD, 600);
-				st.takeItems(ADENA_ID, 200000);
-				st.setCond(4);
-			}
-			else
-			{
-				htmltext = "You don't have enough materials";
-			}
-		}
-		else if (event.equals("30164-1.htm"))
-		{
-			if (st.getQuestItemsCount(ADENA_ID) >= 300000)
-			{
-				st.takeItems(ADENA_ID, 300000);
-				st.setCond(5);
-			}
-			else
-			{
-				htmltext = "30164-havent.htm";
-			}
-		}
-		else if (event.equals("30838-7.htm"))
-		{
-			st.giveItems(DRESS_SHOES_BOX, 1);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(true);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (npcId == 30838)
-		{
-			if ((cond == 0) && (st.getQuestItemsCount(DRESS_SHOES_BOX) == 0))
-			{
-				if (st.getPlayer().getLevel() >= 60)
-				{
-					QuestState fwear = st.getPlayer().getQuestState(Q00037_MakeFormalWear.class);
-					
-					if ((fwear != null) && (fwear.getCond() == 7))
-					{
-						htmltext = "30838-0.htm";
-					}
-					else
-					{
-						st.exitCurrentQuest(true);
-					}
-				}
-				else
-				{
-					htmltext = "30838-00.htm";
-				}
-			}
-			else if (cond == 1)
-			{
-				htmltext = "30838-1.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "30838-2.htm";
-			}
-			else if ((cond == 3) && (st.getQuestItemsCount(LEATHER) >= 200) && (st.getQuestItemsCount(THREAD) >= 600) && (st.getQuestItemsCount(ADENA_ID) >= 200000))
-			{
-				htmltext = "30838-4.htm";
-			}
-			else if ((cond == 3) && ((st.getQuestItemsCount(LEATHER) < 200) || (st.getQuestItemsCount(THREAD) < 600) || (st.getQuestItemsCount(ADENA_ID) < 200000)))
-			{
-				htmltext = "30838-4r.htm";
-			}
-			else if (cond == 4)
-			{
-				htmltext = "30838-5r.htm";
-			}
-			else if (cond == 5)
-			{
-				htmltext = "30838-6.htm";
-			}
-		}
-		else if (npcId == 31520)
-		{
-			if (cond == 1)
-			{
-				htmltext = "31520-0.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "31520-1r.htm";
-			}
-		}
-		else if (npcId == 30164)
-		{
-			if (cond == 4)
-			{
-				htmltext = "30164-0.htm";
-			}
-			else if (cond == 5)
-			{
-				htmltext = "30164-2.htm";
-			}
-		}
-		
-		return htmltext;
 	}
 }
