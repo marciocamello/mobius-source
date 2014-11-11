@@ -19,15 +19,172 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00044_HelpTheSon extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int LUNDY = 30827;
 	private static final int DRIKUS = 30505;
+	// Monsters
+	private static final int MAILLE_GUARD = 20921;
+	private static final int MAILLE_SCOUT = 20920;
+	private static final int MAILLE_LIZARDMAN = 20919;
+	// Items
 	private static final int WORK_HAMMER = 168;
 	private static final int GEMSTONE_FRAGMENT = 7552;
 	private static final int GEMSTONE = 7553;
 	private static final int PET_TICKET = 7585;
-	private static final int MAILLE_GUARD = 20921;
-	private static final int MAILLE_SCOUT = 20920;
-	private static final int MAILLE_LIZARDMAN = 20919;
+	
+	public Q00044_HelpTheSon()
+	{
+		super(false);
+		addStartNpc(LUNDY);
+		addTalkId(LUNDY, DRIKUS);
+		addKillId(MAILLE_GUARD, MAILLE_SCOUT, MAILLE_LIZARDMAN);
+		addQuestItem(GEMSTONE_FRAGMENT);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "1":
+				htmltext = "pet_manager_lundy_q0044_0104.htm";
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "3":
+				if (qs.getQuestItemsCount(WORK_HAMMER) > 0)
+				{
+					htmltext = "pet_manager_lundy_q0044_0201.htm";
+					qs.takeItems(WORK_HAMMER, 1);
+					qs.setCond(2);
+				}
+				break;
+			
+			case "4":
+				if (qs.getQuestItemsCount(GEMSTONE_FRAGMENT) >= 30)
+				{
+					htmltext = "pet_manager_lundy_q0044_0301.htm";
+					qs.takeItems(GEMSTONE_FRAGMENT, -1);
+					qs.giveItems(GEMSTONE, 1);
+					qs.setCond(4);
+				}
+				break;
+			
+			case "5":
+				if (qs.getQuestItemsCount(GEMSTONE) > 0)
+				{
+					htmltext = "high_prefect_drikus_q0044_0401.htm";
+					qs.takeItems(GEMSTONE, 1);
+					qs.setCond(5);
+				}
+				break;
+			
+			case "7":
+				htmltext = "pet_manager_lundy_q0044_0501.htm";
+				qs.giveItems(PET_TICKET, 1);
+				qs.exitCurrentQuest(false);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		
+		switch (qs.getState())
+		{
+			case CREATED:
+				if (qs.getPlayer().getLevel() >= 24)
+				{
+					htmltext = "pet_manager_lundy_q0044_0101.htm";
+				}
+				else
+				{
+					qs.exitCurrentQuest(true);
+					htmltext = "pet_manager_lundy_q0044_0103.htm";
+				}
+				break;
+			
+			case STARTED:
+				if (npcId == LUNDY)
+				{
+					switch (cond)
+					{
+						case 1:
+							if (qs.getQuestItemsCount(WORK_HAMMER) == 0)
+							{
+								htmltext = "pet_manager_lundy_q0044_0106.htm";
+							}
+							else
+							{
+								htmltext = "pet_manager_lundy_q0044_0105.htm";
+							}
+							break;
+						
+						case 2:
+							htmltext = "pet_manager_lundy_q0044_0204.htm";
+							break;
+						
+						case 3:
+							htmltext = "pet_manager_lundy_q0044_0203.htm";
+							break;
+						
+						case 4:
+							htmltext = "pet_manager_lundy_q0044_0303.htm";
+							break;
+						
+						case 5:
+							htmltext = "pet_manager_lundy_q0044_0401.htm";
+							break;
+					}
+				}
+				else if (npcId == DRIKUS)
+				{
+					if ((cond == 4) && (qs.getQuestItemsCount(GEMSTONE) > 0))
+					{
+						htmltext = "high_prefect_drikus_q0044_0301.htm";
+					}
+					else if (cond == 5)
+					{
+						htmltext = "high_prefect_drikus_q0044_0403.htm";
+					}
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if ((qs.getCond() == 2) && (qs.getQuestItemsCount(GEMSTONE_FRAGMENT) < 30))
+		{
+			qs.giveItems(GEMSTONE_FRAGMENT, 1);
+			
+			if (qs.getQuestItemsCount(GEMSTONE_FRAGMENT) >= 30)
+			{
+				qs.playSound(SOUND_MIDDLE);
+				qs.setCond(3);
+				qs.playSound(SOUND_ITEMGET);
+			}
+			else
+			{
+				qs.playSound(SOUND_ITEMGET);
+			}
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -42,150 +199,5 @@ public class Q00044_HelpTheSon extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00044_HelpTheSon()
-	{
-		super(false);
-		addStartNpc(LUNDY);
-		addTalkId(DRIKUS);
-		addKillId(MAILLE_GUARD);
-		addKillId(MAILLE_SCOUT);
-		addKillId(MAILLE_LIZARDMAN);
-		addQuestItem(GEMSTONE_FRAGMENT);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equals("1"))
-		{
-			htmltext = "pet_manager_lundy_q0044_0104.htm";
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equals("3") && (st.getQuestItemsCount(WORK_HAMMER) > 0))
-		{
-			htmltext = "pet_manager_lundy_q0044_0201.htm";
-			st.takeItems(WORK_HAMMER, 1);
-			st.setCond(2);
-		}
-		else if (event.equals("4") && (st.getQuestItemsCount(GEMSTONE_FRAGMENT) >= 30))
-		{
-			htmltext = "pet_manager_lundy_q0044_0301.htm";
-			st.takeItems(GEMSTONE_FRAGMENT, -1);
-			st.giveItems(GEMSTONE, 1);
-			st.setCond(4);
-		}
-		else if (event.equals("5") && (st.getQuestItemsCount(GEMSTONE) > 0))
-		{
-			htmltext = "high_prefect_drikus_q0044_0401.htm";
-			st.takeItems(GEMSTONE, 1);
-			st.setCond(5);
-		}
-		else if (event.equals("7"))
-		{
-			htmltext = "pet_manager_lundy_q0044_0501.htm";
-			st.giveItems(PET_TICKET, 1);
-			st.exitCurrentQuest(false);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		int id = st.getState();
-		
-		if (id == CREATED)
-		{
-			if (st.getPlayer().getLevel() >= 24)
-			{
-				htmltext = "pet_manager_lundy_q0044_0101.htm";
-			}
-			else
-			{
-				st.exitCurrentQuest(true);
-				htmltext = "pet_manager_lundy_q0044_0103.htm";
-			}
-		}
-		else if (id == STARTED)
-		{
-			int cond = st.getCond();
-			
-			if (npcId == LUNDY)
-			{
-				if (cond == 1)
-				{
-					if (st.getQuestItemsCount(WORK_HAMMER) == 0)
-					{
-						htmltext = "pet_manager_lundy_q0044_0106.htm";
-					}
-					else
-					{
-						htmltext = "pet_manager_lundy_q0044_0105.htm";
-					}
-				}
-				else if (cond == 2)
-				{
-					htmltext = "pet_manager_lundy_q0044_0204.htm";
-				}
-				else if (cond == 3)
-				{
-					htmltext = "pet_manager_lundy_q0044_0203.htm";
-				}
-				else if (cond == 4)
-				{
-					htmltext = "pet_manager_lundy_q0044_0303.htm";
-				}
-				else if (cond == 5)
-				{
-					htmltext = "pet_manager_lundy_q0044_0401.htm";
-				}
-			}
-			else if (npcId == DRIKUS)
-			{
-				if ((cond == 4) && (st.getQuestItemsCount(GEMSTONE) > 0))
-				{
-					htmltext = "high_prefect_drikus_q0044_0301.htm";
-				}
-				else if (cond == 5)
-				{
-					htmltext = "high_prefect_drikus_q0044_0403.htm";
-				}
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		
-		if ((cond == 2) && (st.getQuestItemsCount(GEMSTONE_FRAGMENT) < 30))
-		{
-			st.giveItems(GEMSTONE_FRAGMENT, 1);
-			
-			if (st.getQuestItemsCount(GEMSTONE_FRAGMENT) >= 30)
-			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(3);
-				st.playSound(SOUND_ITEMGET);
-			}
-			else
-			{
-				st.playSound(SOUND_ITEMGET);
-			}
-		}
-		
-		return null;
 	}
 }

@@ -19,6 +19,7 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00115_TheOtherSideOfTruth extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int Rafforty = 32020;
 	private static final int Misa = 32018;
 	private static final int Kierre = 32022;
@@ -26,6 +27,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest implements ScriptFile
 	private static final int Ice_Sculpture2 = 32077;
 	private static final int Ice_Sculpture3 = 32078;
 	private static final int Ice_Sculpture4 = 32079;
+	// Items
 	private static final int Misas_Letter = 8079;
 	private static final int Raffortys_Letter = 8080;
 	private static final int Piece_of_Tablet = 8081;
@@ -35,115 +37,107 @@ public class Q00115_TheOtherSideOfTruth extends Quest implements ScriptFile
 	{
 		super(false);
 		addStartNpc(Rafforty);
-		addTalkId(Misa);
-		addTalkId(Kierre);
-		addTalkId(Ice_Sculpture1);
-		addTalkId(Ice_Sculpture2);
-		addTalkId(Ice_Sculpture3);
-		addTalkId(Ice_Sculpture4);
-		addQuestItem(Misas_Letter);
-		addQuestItem(Raffortys_Letter);
-		addQuestItem(Piece_of_Tablet);
-		addQuestItem(Report_Piece);
+		addTalkId(Misa, Kierre, Ice_Sculpture1, Ice_Sculpture2, Ice_Sculpture3, Ice_Sculpture4);
+		addQuestItem(Misas_Letter, Raffortys_Letter, Piece_of_Tablet, Report_Piece);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		int _state = st.getState();
-		
-		if (event.equalsIgnoreCase("32020-02.htm") && (_state == CREATED))
+		if (event.equals("32020-02.htm") && (qs.getState() == CREATED))
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
+			qs.setState(STARTED);
+			qs.setCond(1);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		
-		if (_state != STARTED)
+		if (qs.getState() != STARTED)
 		{
 			return event;
 		}
 		
-		if (event.equalsIgnoreCase("32020-06.htm") || event.equalsIgnoreCase("32020-08a.htm"))
+		switch (event)
 		{
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(true);
-		}
-		else if (event.equalsIgnoreCase("32020-05.htm"))
-		{
-			st.setCond(3);
-			st.takeItems(Misas_Letter, 1);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("32020-08.htm") || event.equalsIgnoreCase("32020-07a.htm"))
-		{
-			st.setCond(4);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("32020-12.htm"))
-		{
-			st.setCond(5);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("32018-04.htm"))
-		{
-			st.setCond(7);
-			st.takeItems(Raffortys_Letter, 1);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("Sculpture-04a.htm"))
-		{
-			st.setCond(8);
-			st.playSound(SOUND_MIDDLE);
+			case "32020-06.htm":
+			case "32020-08a.htm":
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(true);
+				break;
 			
-			if ((st.getInt("32021") == 0) && (st.getInt("32077") == 0))
-			{
-				st.giveItems(Piece_of_Tablet, 1);
-			}
+			case "32020-05.htm":
+				qs.setCond(3);
+				qs.takeItems(Misas_Letter, 1);
+				qs.playSound(SOUND_MIDDLE);
+				break;
 			
-			return "Sculpture-04.htm";
+			case "32020-08.htm":
+			case "32020-07a.htm":
+				qs.setCond(4);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "32020-12.htm":
+				qs.setCond(5);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "32018-04.htm":
+				qs.setCond(7);
+				qs.takeItems(Raffortys_Letter, 1);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "Sculpture-04a.htm":
+				qs.setCond(8);
+				qs.playSound(SOUND_MIDDLE);
+				if ((qs.getInt("32021") == 0) && (qs.getInt("32077") == 0))
+				{
+					qs.giveItems(Piece_of_Tablet, 1);
+				}
+				return "Sculpture-04.htm";
+				
+			case "32022-02.htm":
+				qs.setCond(9);
+				qs.giveItems(Report_Piece, 1);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "32020-16.htm":
+				qs.setCond(10);
+				qs.takeItems(Report_Piece, 1);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "32020-18.htm":
+				if (qs.getQuestItemsCount(Piece_of_Tablet) > 0)
+				{
+					qs.giveItems(ADENA_ID, 60044);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(false);
+				}
+				else
+				{
+					qs.setCond(11);
+					qs.playSound(SOUND_MIDDLE);
+					return "32020-19.htm";
+				}
+				break;
+			
+			case "32020-19.htm":
+				qs.setCond(11);
+				qs.playSound(SOUND_MIDDLE);
+				break;
 		}
-		else if (event.equalsIgnoreCase("32022-02.htm"))
-		{
-			st.setCond(9);
-			st.giveItems(Report_Piece, 1);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("32020-16.htm"))
-		{
-			st.setCond(10);
-			st.takeItems(Report_Piece, 1);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("32020-18.htm"))
-		{
-			if (st.getQuestItemsCount(Piece_of_Tablet) > 0)
-			{
-				st.giveItems(ADENA_ID, 60044);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(false);
-			}
-			else
-			{
-				st.setCond(11);
-				st.playSound(SOUND_MIDDLE);
-				return "32020-19.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("32020-19.htm"))
-		{
-			st.setCond(11);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.startsWith("32021") || event.startsWith("32077"))
+		
+		if (event.startsWith("32021") || event.startsWith("32077"))
 		{
 			if (event.contains("-pick"))
 			{
-				st.set("talk", "1");
+				qs.set("talk", "1");
 				event = event.replace("-pick", "");
 			}
 			
-			st.set(event, "1");
+			qs.set(event, "1");
 			return "Sculpture-05.htm";
 		}
 		
@@ -151,156 +145,151 @@ public class Q00115_TheOtherSideOfTruth extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int _state = st.getState();
-		
-		if (_state == COMPLETED)
+		if (qs.getState() == COMPLETED)
 		{
 			return "completed";
 		}
 		
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		
-		if (_state == CREATED)
+		if (qs.getState() == CREATED)
 		{
 			if (npcId != Rafforty)
 			{
 				return "noquest";
 			}
 			
-			if (st.getPlayer().getLevel() >= 53)
+			if (qs.getPlayer().getLevel() >= 53)
 			{
-				st.setCond(0);
+				qs.setCond(0);
 				return "32020-01.htm";
 			}
 			
-			st.exitCurrentQuest(true);
+			qs.exitCurrentQuest(true);
 			return "32020-00.htm";
 		}
 		
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		
-		if ((npcId == Rafforty) && (_state == STARTED))
+		if (qs.getState() != STARTED)
 		{
-			if (cond == 1)
-			{
-				return "32020-03.htm";
-			}
-			else if (cond == 2)
-			{
-				return "32020-04.htm";
-			}
-			else if (cond == 3)
-			{
-				return "32020-05.htm";
-			}
-			else if (cond == 4)
-			{
-				return "32020-11.htm";
-			}
-			else if (cond == 5)
-			{
-				st.setCond(6);
-				st.giveItems(Raffortys_Letter, 1);
-				st.playSound(SOUND_MIDDLE);
-				return "32020-13.htm";
-			}
-			else if (cond == 6)
-			{
-				return "32020-14.htm";
-			}
-			else if (cond == 9)
-			{
-				return "32020-15.htm";
-			}
-			else if (cond == 10)
-			{
-				return "32020-17.htm";
-			}
-			else if (cond == 11)
-			{
-				return "32020-20.htm";
-			}
-			else if (cond == 12)
-			{
-				st.giveItems(ADENA_ID, 193350);
-				st.addExpAndSp(956590, 789630);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(false);
-				return "32020-18.htm";
-			}
+			return "noquest";
 		}
-		else if ((npcId == Misa) && (_state == STARTED))
+		
+		switch (npcId)
 		{
-			if (cond == 1)
-			{
-				st.setCond(2);
-				st.giveItems(Misas_Letter, 1);
-				st.playSound(SOUND_MIDDLE);
-				return "32018-01.htm";
-			}
-			else if (cond == 2)
-			{
-				return "32018-02.htm";
-			}
-			else if (cond == 6)
-			{
-				return "32018-03.htm";
-			}
-			else if (cond == 7)
-			{
-				return "32018-05.htm";
-			}
-		}
-		else if ((npcId == Kierre) && (_state == STARTED))
-		{
-			if (cond == 8)
-			{
-				return "32022-01.htm";
-			}
-			else if (cond == 9)
-			{
-				return "32022-03.htm";
-			}
-		}
-		else if (((npcId == Ice_Sculpture1) || (npcId == Ice_Sculpture2) || (npcId == Ice_Sculpture3) || (npcId == Ice_Sculpture4)) && (_state == STARTED))
-		{
-			if (cond == 7)
-			{
-				String _npcId = String.valueOf(npcId);
-				int npcId_flag = st.getInt(_npcId);
-				
-				if ((npcId == Ice_Sculpture1) || (npcId == Ice_Sculpture2))
+			case Rafforty:
+				switch (cond)
 				{
-					int talk_flag = st.getInt("talk");
-					return npcId_flag == 1 ? "Sculpture-02.htm" : talk_flag == 1 ? "Sculpture-06.htm" : "Sculpture-03-" + _npcId + ".htm";
+					case 1:
+						return "32020-03.htm";
+						
+					case 2:
+						return "32020-04.htm";
+						
+					case 3:
+						return "32020-05.htm";
+						
+					case 4:
+						return "32020-11.htm";
+						
+					case 5:
+						qs.setCond(6);
+						qs.giveItems(Raffortys_Letter, 1);
+						qs.playSound(SOUND_MIDDLE);
+						return "32020-13.htm";
+						
+					case 6:
+						return "32020-14.htm";
+						
+					case 9:
+						return "32020-15.htm";
+						
+					case 10:
+						return "32020-17.htm";
+						
+					case 11:
+						return "32020-20.htm";
+						
+					case 12:
+						qs.giveItems(ADENA_ID, 193350);
+						qs.addExpAndSp(956590, 789630);
+						qs.playSound(SOUND_FINISH);
+						qs.exitCurrentQuest(false);
+						return "32020-18.htm";
 				}
-				else if (npcId_flag == 1)
+				break;
+			
+			case Misa:
+				switch (cond)
 				{
-					return "Sculpture-02.htm";
+					case 1:
+						qs.setCond(2);
+						qs.giveItems(Misas_Letter, 1);
+						qs.playSound(SOUND_MIDDLE);
+						return "32018-01.htm";
+						
+					case 2:
+						return "32018-02.htm";
+						
+					case 6:
+						return "32018-03.htm";
+						
+					case 7:
+						return "32018-05.htm";
 				}
-				else
+				break;
+			
+			case Kierre:
+				if (cond == 8)
 				{
-					st.set(_npcId, "1");
-					return "Sculpture-01.htm";
+					return "32022-01.htm";
 				}
-			}
-			else if (cond == 8)
-			{
-				return "Sculpture-04.htm";
-			}
-			else if (cond == 11)
-			{
-				st.setCond(12);
-				st.giveItems(Piece_of_Tablet, 1);
-				st.playSound(SOUND_MIDDLE);
-				return "Sculpture-07.htm";
-			}
-			else if (cond == 12)
-			{
-				return "Sculpture-08.htm";
-			}
+				else if (cond == 9)
+				{
+					return "32022-03.htm";
+				}
+				break;
+			
+			case Ice_Sculpture1:
+			case Ice_Sculpture2:
+			case Ice_Sculpture3:
+			case Ice_Sculpture4:
+				switch (cond)
+				{
+					case 7:
+						String _npcId = String.valueOf(npcId);
+						int npcId_flag = qs.getInt(_npcId);
+						if ((npcId == Ice_Sculpture1) || (npcId == Ice_Sculpture2))
+						{
+							int talk_flag = qs.getInt("talk");
+							return npcId_flag == 1 ? "Sculpture-02.htm" : talk_flag == 1 ? "Sculpture-06.htm" : "Sculpture-03-" + _npcId + ".htm";
+						}
+						else if (npcId_flag == 1)
+						{
+							return "Sculpture-02.htm";
+						}
+						else
+						{
+							qs.set(_npcId, "1");
+							return "Sculpture-01.htm";
+						}
+						
+					case 8:
+						return "Sculpture-04.htm";
+						
+					case 11:
+						qs.setCond(12);
+						qs.giveItems(Piece_of_Tablet, 1);
+						qs.playSound(SOUND_MIDDLE);
+						return "Sculpture-07.htm";
+						
+					case 12:
+						return "Sculpture-08.htm";
+				}
+				break;
 		}
 		
 		return "noquest";

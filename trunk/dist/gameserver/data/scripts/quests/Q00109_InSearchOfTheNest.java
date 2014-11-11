@@ -19,12 +19,122 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00109_InSearchOfTheNest extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int PIERCE = 31553;
 	private static final int CORPSE = 32015;
 	private static final int KAHMAN = 31554;
+	// Items
 	private static final int MEMO = 8083;
 	private static final int GOLDEN_BADGE_RECRUIT = 7246;
 	private static final int GOLDEN_BADGE_SOLDIER = 7247;
+	
+	public Q00109_InSearchOfTheNest()
+	{
+		super(false);
+		addStartNpc(PIERCE);
+		addTalkId(CORPSE, KAHMAN);
+		addQuestItem(MEMO);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		final int cond = qs.getCond();
+		
+		switch (event)
+		{
+			case "Memo":
+				if (cond == 1)
+				{
+					qs.giveItems(MEMO, 1);
+					qs.setCond(2);
+					qs.playSound(SOUND_ITEMGET);
+					htmltext = "You've find something...";
+				}
+				break;
+			
+			case "merc_cap_peace_q0109_0301.htm":
+				if (cond == 2)
+				{
+					qs.takeItems(MEMO, -1);
+					qs.setCond(3);
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		
+		switch (qs.getState())
+		{
+			case CREATED:
+				if ((qs.getPlayer().getLevel() >= 66) && (npcId == PIERCE) && ((qs.getQuestItemsCount(GOLDEN_BADGE_RECRUIT) > 0) || (qs.getQuestItemsCount(GOLDEN_BADGE_SOLDIER) > 0)))
+				{
+					qs.setState(STARTED);
+					qs.playSound(SOUND_ACCEPT);
+					qs.setCond(1);
+					htmltext = "merc_cap_peace_q0109_0105.htm";
+				}
+				else
+				{
+					htmltext = "merc_cap_peace_q0109_0103.htm";
+					qs.exitCurrentQuest(true);
+				}
+				break;
+			
+			case STARTED:
+				switch (npcId)
+				{
+					case CORPSE:
+						if (cond == 1)
+						{
+							htmltext = "corpse_of_scout_q0109_0101.htm";
+						}
+						else if (cond == 2)
+						{
+							htmltext = "corpse_of_scout_q0109_0203.htm";
+						}
+						break;
+					
+					case PIERCE:
+						if (cond == 1)
+						{
+							htmltext = "merc_cap_peace_q0109_0304.htm";
+						}
+						else if (cond == 2)
+						{
+							htmltext = "merc_cap_peace_q0109_0201.htm";
+						}
+						else if (cond == 3)
+						{
+							htmltext = "merc_cap_peace_q0109_0303.htm";
+						}
+						break;
+					
+					case KAHMAN:
+						if (cond == 3)
+						{
+							htmltext = "merc_kahmun_q0109_0401.htm";
+							qs.addExpAndSp(8550000, 9950000);
+							qs.giveItems(ADENA_ID, 1800000);
+							qs.exitCurrentQuest(false);
+							qs.playSound(SOUND_FINISH);
+						}
+						break;
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -39,112 +149,5 @@ public class Q00109_InSearchOfTheNest extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00109_InSearchOfTheNest()
-	{
-		super(false);
-		addStartNpc(PIERCE);
-		addTalkId(CORPSE);
-		addTalkId(KAHMAN);
-		addQuestItem(MEMO);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		int cond = st.getCond();
-		
-		if (event.equalsIgnoreCase("Memo") && (cond == 1))
-		{
-			st.giveItems(MEMO, 1);
-			st.setCond(2);
-			st.playSound(SOUND_ITEMGET);
-			htmltext = "You've find something...";
-		}
-		else if (event.equalsIgnoreCase("merc_cap_peace_q0109_0301.htm") && (cond == 2))
-		{
-			st.takeItems(MEMO, -1);
-			st.setCond(3);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		int id = st.getState();
-		
-		if (id == COMPLETED)
-		{
-			return "completed";
-		}
-		
-		int cond = st.getCond();
-		String htmltext = "noquest";
-		
-		if (id == CREATED)
-		{
-			if ((st.getPlayer().getLevel() >= 66) && (npcId == PIERCE) && ((st.getQuestItemsCount(GOLDEN_BADGE_RECRUIT) > 0) || (st.getQuestItemsCount(GOLDEN_BADGE_SOLDIER) > 0)))
-			{
-				st.setState(STARTED);
-				st.playSound(SOUND_ACCEPT);
-				st.setCond(1);
-				htmltext = "merc_cap_peace_q0109_0105.htm";
-			}
-			else
-			{
-				htmltext = "merc_cap_peace_q0109_0103.htm";
-				st.exitCurrentQuest(true);
-			}
-		}
-		else if (id == STARTED)
-		{
-			if (npcId == CORPSE)
-			{
-				if (cond == 1)
-				{
-					htmltext = "corpse_of_scout_q0109_0101.htm";
-				}
-				else if (cond == 2)
-				{
-					htmltext = "corpse_of_scout_q0109_0203.htm";
-				}
-			}
-			else if (npcId == PIERCE)
-			{
-				if (cond == 1)
-				{
-					htmltext = "merc_cap_peace_q0109_0304.htm";
-				}
-				else if (cond == 2)
-				{
-					htmltext = "merc_cap_peace_q0109_0201.htm";
-				}
-				else if (cond == 3)
-				{
-					htmltext = "merc_cap_peace_q0109_0303.htm";
-				}
-			}
-			else if ((npcId == KAHMAN) && (cond == 3))
-			{
-				htmltext = "merc_kahmun_q0109_0401.htm";
-				st.addExpAndSp(8550000, 9950000);
-				st.giveItems(ADENA_ID, 1800000);
-				st.exitCurrentQuest(false);
-				st.playSound(SOUND_FINISH);
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		return null;
 	}
 }

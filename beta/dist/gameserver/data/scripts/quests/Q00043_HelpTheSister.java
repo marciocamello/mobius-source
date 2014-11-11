@@ -19,15 +19,174 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00043_HelpTheSister extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int COOPER = 30829;
 	private static final int GALLADUCCI = 30097;
+	// Monsters
+	private static final int SPECTER = 20171;
+	private static final int SORROW_MAIDEN = 20197;
+	// Items
 	private static final int CRAFTED_DAGGER = 220;
 	private static final int MAP_PIECE = 7550;
 	private static final int MAP = 7551;
 	private static final int PET_TICKET = 7584;
-	private static final int SPECTER = 20171;
-	private static final int SORROW_MAIDEN = 20197;
+	// Other
 	private static final int MAX_COUNT = 30;
+	
+	public Q00043_HelpTheSister()
+	{
+		super(false);
+		addStartNpc(COOPER);
+		addTalkId(GALLADUCCI);
+		addKillId(SPECTER);
+		addKillId(SORROW_MAIDEN);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "1":
+				htmltext = "pet_manager_cooper_q0043_0104.htm";
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "3":
+				if (qs.getQuestItemsCount(CRAFTED_DAGGER) > 0)
+				{
+					htmltext = "pet_manager_cooper_q0043_0201.htm";
+					qs.takeItems(CRAFTED_DAGGER, 1);
+					qs.setCond(2);
+				}
+				break;
+			
+			case "4":
+				if (qs.getQuestItemsCount(MAP_PIECE) >= MAX_COUNT)
+				{
+					htmltext = "pet_manager_cooper_q0043_0301.htm";
+					qs.takeItems(MAP_PIECE, MAX_COUNT);
+					qs.giveItems(MAP, 1);
+					qs.setCond(4);
+				}
+				break;
+			
+			case "5":
+				if (qs.getQuestItemsCount(MAP) > 0)
+				{
+					htmltext = "galladuchi_q0043_0401.htm";
+					qs.takeItems(MAP, 1);
+					qs.setCond(5);
+				}
+				break;
+			
+			case "7":
+				htmltext = "pet_manager_cooper_q0043_0501.htm";
+				qs.giveItems(PET_TICKET, 1);
+				qs.setCond(0);
+				qs.exitCurrentQuest(false);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		
+		switch (qs.getState())
+		{
+			case CREATED:
+				if (qs.getPlayer().getLevel() >= 26)
+				{
+					htmltext = "pet_manager_cooper_q0043_0101.htm";
+				}
+				else
+				{
+					qs.exitCurrentQuest(true);
+					htmltext = "pet_manager_cooper_q0043_0103.htm";
+				}
+				break;
+			
+			case STARTED:
+				if (npcId == COOPER)
+				{
+					switch (cond)
+					{
+						case 1:
+							if (qs.getQuestItemsCount(CRAFTED_DAGGER) == 0)
+							{
+								htmltext = "pet_manager_cooper_q0043_0106.htm";
+							}
+							else
+							{
+								htmltext = "pet_manager_cooper_q0043_0105.htm";
+							}
+							break;
+						
+						case 2:
+							htmltext = "pet_manager_cooper_q0043_0204.htm";
+							break;
+						
+						case 3:
+							htmltext = "pet_manager_cooper_q0043_0203.htm";
+							break;
+						
+						case 4:
+							htmltext = "pet_manager_cooper_q0043_0303.htm";
+							break;
+						
+						case 5:
+							htmltext = "pet_manager_cooper_q0043_0401.htm";
+							break;
+					}
+				}
+				else if (npcId == GALLADUCCI)
+				{
+					if ((cond == 4) && (qs.getQuestItemsCount(MAP) > 0))
+					{
+						htmltext = "galladuchi_q0043_0301.htm";
+					}
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if (qs.getCond() == 2)
+		{
+			final long pieces = qs.getQuestItemsCount(MAP_PIECE);
+			
+			if (pieces < MAX_COUNT)
+			{
+				qs.giveItems(MAP_PIECE, 1);
+				
+				if (pieces < (MAX_COUNT - 1))
+				{
+					qs.playSound(SOUND_ITEMGET);
+				}
+				else
+				{
+					qs.playSound(SOUND_MIDDLE);
+					qs.setCond(3);
+				}
+			}
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -42,149 +201,5 @@ public class Q00043_HelpTheSister extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00043_HelpTheSister()
-	{
-		super(false);
-		addStartNpc(COOPER);
-		addTalkId(GALLADUCCI);
-		addKillId(SPECTER);
-		addKillId(SORROW_MAIDEN);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equals("1"))
-		{
-			htmltext = "pet_manager_cooper_q0043_0104.htm";
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equals("3") && (st.getQuestItemsCount(CRAFTED_DAGGER) > 0))
-		{
-			htmltext = "pet_manager_cooper_q0043_0201.htm";
-			st.takeItems(CRAFTED_DAGGER, 1);
-			st.setCond(2);
-		}
-		else if (event.equals("4") && (st.getQuestItemsCount(MAP_PIECE) >= MAX_COUNT))
-		{
-			htmltext = "pet_manager_cooper_q0043_0301.htm";
-			st.takeItems(MAP_PIECE, MAX_COUNT);
-			st.giveItems(MAP, 1);
-			st.setCond(4);
-		}
-		else if (event.equals("5") && (st.getQuestItemsCount(MAP) > 0))
-		{
-			htmltext = "galladuchi_q0043_0401.htm";
-			st.takeItems(MAP, 1);
-			st.setCond(5);
-		}
-		else if (event.equals("7"))
-		{
-			htmltext = "pet_manager_cooper_q0043_0501.htm";
-			st.giveItems(PET_TICKET, 1);
-			st.setCond(0);
-			st.exitCurrentQuest(false);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		int id = st.getState();
-		
-		if (id == CREATED)
-		{
-			if (st.getPlayer().getLevel() >= 26)
-			{
-				htmltext = "pet_manager_cooper_q0043_0101.htm";
-			}
-			else
-			{
-				st.exitCurrentQuest(true);
-				htmltext = "pet_manager_cooper_q0043_0103.htm";
-			}
-		}
-		else if (id == STARTED)
-		{
-			int cond = st.getCond();
-			
-			if (npcId == COOPER)
-			{
-				if (cond == 1)
-				{
-					if (st.getQuestItemsCount(CRAFTED_DAGGER) == 0)
-					{
-						htmltext = "pet_manager_cooper_q0043_0106.htm";
-					}
-					else
-					{
-						htmltext = "pet_manager_cooper_q0043_0105.htm";
-					}
-				}
-				else if (cond == 2)
-				{
-					htmltext = "pet_manager_cooper_q0043_0204.htm";
-				}
-				else if (cond == 3)
-				{
-					htmltext = "pet_manager_cooper_q0043_0203.htm";
-				}
-				else if (cond == 4)
-				{
-					htmltext = "pet_manager_cooper_q0043_0303.htm";
-				}
-				else if (cond == 5)
-				{
-					htmltext = "pet_manager_cooper_q0043_0401.htm";
-				}
-			}
-			else if (npcId == GALLADUCCI)
-			{
-				if ((cond == 4) && (st.getQuestItemsCount(MAP) > 0))
-				{
-					htmltext = "galladuchi_q0043_0301.htm";
-				}
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		
-		if (cond == 2)
-		{
-			long pieces = st.getQuestItemsCount(MAP_PIECE);
-			
-			if (pieces < MAX_COUNT)
-			{
-				st.giveItems(MAP_PIECE, 1);
-				
-				if (pieces < (MAX_COUNT - 1))
-				{
-					st.playSound(SOUND_ITEMGET);
-				}
-				else
-				{
-					st.playSound(SOUND_MIDDLE);
-					st.setCond(3);
-				}
-			}
-		}
-		
-		return null;
 	}
 }

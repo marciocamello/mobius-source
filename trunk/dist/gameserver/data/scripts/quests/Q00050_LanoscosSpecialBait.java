@@ -20,11 +20,116 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00050_LanoscosSpecialBait extends Quest implements ScriptFile
 {
-	private final int Lanosco = 31570;
-	private final int SingingWind = 21026;
-	private final int EssenceofWind = 7621;
-	private final int WindFishingLure = 7610;
-	private final Integer FishSkill = 1315;
+	// Npc
+	private static final int Lanosco = 31570;
+	// Monster
+	private static final int SingingWind = 21026;
+	// Items
+	private static final int EssenceofWind = 7621;
+	private static final int WindFishingLure = 7610;
+	// Skill
+	private static final int FishSkill = 1315;
+	
+	public Q00050_LanoscosSpecialBait()
+	{
+		super(false);
+		addStartNpc(Lanosco);
+		addTalkId(Lanosco);
+		addKillId(SingingWind);
+		addQuestItem(EssenceofWind);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "fisher_lanosco_q0050_0104.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "fisher_lanosco_q0050_0201.htm":
+				if (qs.getQuestItemsCount(EssenceofWind) < 100)
+				{
+					htmltext = "fisher_lanosco_q0050_0202.htm";
+				}
+				else
+				{
+					qs.unset("cond");
+					qs.takeItems(EssenceofWind, -1);
+					qs.giveItems(WindFishingLure, 4);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(false);
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		
+		if (qs.getState() == CREATED)
+		{
+			if (qs.getPlayer().getLevel() < 27)
+			{
+				htmltext = "fisher_lanosco_q0050_0103.htm";
+				qs.exitCurrentQuest(true);
+			}
+			else if (qs.getPlayer().getSkillLevel(FishSkill) >= 8)
+			{
+				htmltext = "fisher_lanosco_q0050_0101.htm";
+			}
+			else
+			{
+				htmltext = "fisher_lanosco_q0050_0102.htm";
+				qs.exitCurrentQuest(true);
+			}
+		}
+		else if ((cond == 1) || (cond == 2))
+		{
+			if (qs.getQuestItemsCount(EssenceofWind) < 100)
+			{
+				htmltext = "fisher_lanosco_q0050_0106.htm";
+				qs.setCond(1);
+			}
+			else
+			{
+				htmltext = "fisher_lanosco_q0050_0105.htm";
+			}
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if ((qs.getCond() == 1) && (qs.getQuestItemsCount(EssenceofWind) < 100) && Rnd.chance(30))
+		{
+			qs.giveItems(EssenceofWind, 1);
+			
+			if (qs.getQuestItemsCount(EssenceofWind) == 100)
+			{
+				qs.playSound(SOUND_MIDDLE);
+				qs.setCond(2);
+			}
+			else
+			{
+				qs.playSound(SOUND_ITEMGET);
+			}
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -39,114 +144,5 @@ public class Q00050_LanoscosSpecialBait extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00050_LanoscosSpecialBait()
-	{
-		super(false);
-		addStartNpc(Lanosco);
-		addTalkId(Lanosco);
-		addKillId(SingingWind);
-		addQuestItem(EssenceofWind);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equals("fisher_lanosco_q0050_0104.htm"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equals("fisher_lanosco_q0050_0201.htm"))
-		{
-			if (st.getQuestItemsCount(EssenceofWind) < 100)
-			{
-				htmltext = "fisher_lanosco_q0050_0202.htm";
-			}
-			else
-			{
-				st.unset("cond");
-				st.takeItems(EssenceofWind, -1);
-				st.giveItems(WindFishingLure, 4);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(false);
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		int cond = st.getCond();
-		int id = st.getState();
-		
-		if (npcId == Lanosco)
-		{
-			if (id == CREATED)
-			{
-				if (st.getPlayer().getLevel() < 27)
-				{
-					htmltext = "fisher_lanosco_q0050_0103.htm";
-					st.exitCurrentQuest(true);
-				}
-				else if (st.getPlayer().getSkillLevel(FishSkill) >= 8)
-				{
-					htmltext = "fisher_lanosco_q0050_0101.htm";
-				}
-				else
-				{
-					htmltext = "fisher_lanosco_q0050_0102.htm";
-					st.exitCurrentQuest(true);
-				}
-			}
-			else if ((cond == 1) || (cond == 2))
-			{
-				if (st.getQuestItemsCount(EssenceofWind) < 100)
-				{
-					htmltext = "fisher_lanosco_q0050_0106.htm";
-					st.setCond(1);
-				}
-				else
-				{
-					htmltext = "fisher_lanosco_q0050_0105.htm";
-				}
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		
-		if ((npcId == SingingWind) && (st.getCond() == 1))
-		{
-			if ((st.getQuestItemsCount(EssenceofWind) < 100) && Rnd.chance(30))
-			{
-				st.giveItems(EssenceofWind, 1);
-				
-				if (st.getQuestItemsCount(EssenceofWind) == 100)
-				{
-					st.playSound(SOUND_MIDDLE);
-					st.setCond(2);
-				}
-				else
-				{
-					st.playSound(SOUND_ITEMGET);
-				}
-			}
-		}
-		
-		return null;
 	}
 }

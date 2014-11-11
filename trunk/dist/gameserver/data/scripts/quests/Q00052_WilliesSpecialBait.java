@@ -20,15 +20,116 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00052_WilliesSpecialBait extends Quest implements ScriptFile
 {
+	// Npc
 	private final static int Willie = 31574;
-	private final static int[] TarlkBasilisks =
-	{
-		20573,
-		20574
-	};
+	// Monsters
+	private final static int TarlkBasilisk1 = 20573;
+	private final static int TarlkBasilisk2 = 20574;
+	// Items
 	private final static int EyeOfTarlkBasilisk = 7623;
 	private final static int EarthFishingLure = 7612;
-	private final static Integer FishSkill = 1315;
+	// Skill
+	private final static int FishSkill = 1315;
+	
+	public Q00052_WilliesSpecialBait()
+	{
+		super(false);
+		addStartNpc(Willie);
+		addKillId(TarlkBasilisk1, TarlkBasilisk2);
+		addQuestItem(EyeOfTarlkBasilisk);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "fisher_willeri_q0052_0104.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "fisher_willeri_q0052_0201.htm":
+				if (qs.getQuestItemsCount(EyeOfTarlkBasilisk) < 100)
+				{
+					htmltext = "fisher_willeri_q0052_0202.htm";
+				}
+				else
+				{
+					qs.unset("cond");
+					qs.takeItems(EyeOfTarlkBasilisk, -1);
+					qs.giveItems(EarthFishingLure, 4);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(false);
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		
+		if (qs.getState() == CREATED)
+		{
+			if (qs.getPlayer().getLevel() < 48)
+			{
+				htmltext = "fisher_willeri_q0052_0103.htm";
+				qs.exitCurrentQuest(true);
+			}
+			else if (qs.getPlayer().getSkillLevel(FishSkill) >= 16)
+			{
+				htmltext = "fisher_willeri_q0052_0101.htm";
+			}
+			else
+			{
+				htmltext = "fisher_willeri_q0052_0102.htm";
+				qs.exitCurrentQuest(true);
+			}
+		}
+		else if ((cond == 1) || (cond == 2))
+		{
+			if (qs.getQuestItemsCount(EyeOfTarlkBasilisk) < 100)
+			{
+				htmltext = "fisher_willeri_q0052_0106.htm";
+				qs.setCond(1);
+			}
+			else
+			{
+				htmltext = "fisher_willeri_q0052_0105.htm";
+			}
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState st)
+	{
+		if ((st.getCond() == 1) && (st.getQuestItemsCount(EyeOfTarlkBasilisk) < 100) && Rnd.chance(30))
+		{
+			st.giveItems(EyeOfTarlkBasilisk, 1);
+			
+			if (st.getQuestItemsCount(EyeOfTarlkBasilisk) == 100)
+			{
+				st.playSound(SOUND_MIDDLE);
+				st.setCond(2);
+			}
+			else
+			{
+				st.playSound(SOUND_ITEMGET);
+			}
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -43,113 +144,5 @@ public class Q00052_WilliesSpecialBait extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00052_WilliesSpecialBait()
-	{
-		super(false);
-		addStartNpc(Willie);
-		addKillId(TarlkBasilisks);
-		addQuestItem(EyeOfTarlkBasilisk);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equals("fisher_willeri_q0052_0104.htm"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equals("fisher_willeri_q0052_0201.htm"))
-		{
-			if (st.getQuestItemsCount(EyeOfTarlkBasilisk) < 100)
-			{
-				htmltext = "fisher_willeri_q0052_0202.htm";
-			}
-			else
-			{
-				st.unset("cond");
-				st.takeItems(EyeOfTarlkBasilisk, -1);
-				st.giveItems(EarthFishingLure, 4);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(false);
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		int cond = st.getCond();
-		int id = st.getState();
-		
-		if (npcId == Willie)
-		{
-			if (id == CREATED)
-			{
-				if (st.getPlayer().getLevel() < 48)
-				{
-					htmltext = "fisher_willeri_q0052_0103.htm";
-					st.exitCurrentQuest(true);
-				}
-				else if (st.getPlayer().getSkillLevel(FishSkill) >= 16)
-				{
-					htmltext = "fisher_willeri_q0052_0101.htm";
-				}
-				else
-				{
-					htmltext = "fisher_willeri_q0052_0102.htm";
-					st.exitCurrentQuest(true);
-				}
-			}
-			else if ((cond == 1) || (cond == 2))
-			{
-				if (st.getQuestItemsCount(EyeOfTarlkBasilisk) < 100)
-				{
-					htmltext = "fisher_willeri_q0052_0106.htm";
-					st.setCond(1);
-				}
-				else
-				{
-					htmltext = "fisher_willeri_q0052_0105.htm";
-				}
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		
-		if ((npcId == TarlkBasilisks[0]) || ((npcId == TarlkBasilisks[1]) && (st.getCond() == 1)))
-		{
-			if ((st.getQuestItemsCount(EyeOfTarlkBasilisk) < 100) && Rnd.chance(30))
-			{
-				st.giveItems(EyeOfTarlkBasilisk, 1);
-				
-				if (st.getQuestItemsCount(EyeOfTarlkBasilisk) == 100)
-				{
-					st.playSound(SOUND_MIDDLE);
-					st.setCond(2);
-				}
-				else
-				{
-					st.playSound(SOUND_ITEMGET);
-				}
-			}
-		}
-		
-		return null;
 	}
 }

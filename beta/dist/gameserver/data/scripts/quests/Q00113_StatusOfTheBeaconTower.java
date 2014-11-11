@@ -19,9 +19,83 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00113_StatusOfTheBeaconTower extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int MOIRA = 31979;
 	private static final int TORRANT = 32016;
+	// Item
 	private static final int BOX = 8086;
+	
+	public Q00113_StatusOfTheBeaconTower()
+	{
+		super(false);
+		addStartNpc(MOIRA);
+		addTalkId(TORRANT);
+		addQuestItem(BOX);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "seer_moirase_q0113_0104.htm":
+				qs.setCond(1);
+				qs.giveItems(BOX, 1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "torant_q0113_0201.htm":
+				qs.giveItems(ADENA_ID, 247600);
+				qs.addExpAndSp(1147830, 1352735);
+				qs.takeItems(BOX, 1);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(false);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		
+		if (qs.getCond() == COMPLETED)
+		{
+			htmltext = "completed";
+		}
+		else if (npcId == MOIRA)
+		{
+			if (qs.getCond() == CREATED)
+			{
+				if (qs.getPlayer().getLevel() >= 40)
+				{
+					htmltext = "seer_moirase_q0113_0101.htm";
+				}
+				else
+				{
+					htmltext = "seer_moirase_q0113_0103.htm";
+					qs.exitCurrentQuest(true);
+				}
+			}
+			else if (cond == 1)
+			{
+				htmltext = "seer_moirase_q0113_0105.htm";
+			}
+		}
+		else if ((npcId == TORRANT) && (qs.getQuestItemsCount(BOX) == 1))
+		{
+			htmltext = "torant_q0113_0101.htm";
+		}
+		
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -36,76 +110,5 @@ public class Q00113_StatusOfTheBeaconTower extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00113_StatusOfTheBeaconTower()
-	{
-		super(false);
-		addStartNpc(MOIRA);
-		addTalkId(TORRANT);
-		addQuestItem(BOX);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("seer_moirase_q0113_0104.htm"))
-		{
-			st.setCond(1);
-			st.giveItems(BOX, 1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("torant_q0113_0201.htm"))
-		{
-			st.giveItems(ADENA_ID, 247600);
-			st.addExpAndSp(1147830, 1352735);
-			st.takeItems(BOX, 1);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(false);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int id = st.getState();
-		int cond = st.getCond();
-		
-		if (id == COMPLETED)
-		{
-			htmltext = "completed";
-		}
-		else if (npcId == MOIRA)
-		{
-			if (id == CREATED)
-			{
-				if (st.getPlayer().getLevel() >= 40)
-				{
-					htmltext = "seer_moirase_q0113_0101.htm";
-				}
-				else
-				{
-					htmltext = "seer_moirase_q0113_0103.htm";
-					st.exitCurrentQuest(true);
-				}
-			}
-			else if (cond == 1)
-			{
-				htmltext = "seer_moirase_q0113_0105.htm";
-			}
-		}
-		else if ((npcId == TORRANT) && (st.getQuestItemsCount(BOX) == 1))
-		{
-			htmltext = "torant_q0113_0101.htm";
-		}
-		
-		return htmltext;
 	}
 }
