@@ -26,6 +26,7 @@ import lineage2.gameserver.utils.Util;
 
 public class Q00129_PailakaDevilsLegacy extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int DISURVIVOR = 32498;
 	private static final int SUPPORTER = 32501;
 	private static final int DADVENTURER = 32508;
@@ -42,6 +43,7 @@ public class Q00129_PailakaDevilsLegacy extends Quest implements ScriptFile
 	private static final int KAMS = 18629;
 	private static final int ALKASO = 18631;
 	private static final int LEMATAN = 18633;
+	// Items
 	private static final int ScrollOfEscape = 736;
 	private static final int SWORD = 13042;
 	private static final int ENCHSWORD = 13043;
@@ -77,208 +79,211 @@ public class Q00129_PailakaDevilsLegacy extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		Player player = st.getPlayer();
+		final Player player = qs.getPlayer();
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("Enter"))
+		switch (event)
 		{
-			enterInstance(player);
-			return null;
-		}
-		else if (event.equalsIgnoreCase("32498-02.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("32498-05.htm"))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("32501-03.htm"))
-		{
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
-			st.giveItems(SWORD, 1);
+			case "Enter":
+				enterInstance(player);
+				return null;
+				
+			case "32498-02.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "32498-05.htm":
+				qs.setCond(2);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "32501-03.htm":
+				qs.setCond(3);
+				qs.playSound(SOUND_MIDDLE);
+				qs.giveItems(SWORD, 1);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		int id = st.getState();
-		Player player = st.getPlayer();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		final int id = qs.getState();
+		final Player player = qs.getPlayer();
 		
-		if (npcId == DISURVIVOR)
+		switch (npcId)
 		{
-			if (cond == 0)
-			{
-				if ((player.getLevel() < 61) || (player.getLevel() > 67))
+			case DISURVIVOR:
+				if (cond == 0)
+				{
+					if ((player.getLevel() < 61) || (player.getLevel() > 67))
+					{
+						htmltext = "32498-no.htm";
+						qs.exitCurrentQuest(true);
+					}
+					else
+					{
+						return "32498-01.htm";
+					}
+				}
+				else if (id == COMPLETED)
 				{
 					htmltext = "32498-no.htm";
-					st.exitCurrentQuest(true);
+				}
+				else if ((cond == 1) || (cond == 2))
+				{
+					htmltext = "32498-06.htm";
 				}
 				else
 				{
-					return "32498-01.htm";
+					htmltext = "32498-07.htm";
 				}
-			}
-			else if (id == COMPLETED)
-			{
-				htmltext = "32498-no.htm";
-			}
-			else if ((cond == 1) || (cond == 2))
-			{
-				htmltext = "32498-06.htm";
-			}
-			else
-			{
-				htmltext = "32498-07.htm";
-			}
-		}
-		else if (npcId == SUPPORTER)
-		{
-			if ((cond == 1) || (cond == 2))
-			{
-				htmltext = "32501-01.htm";
-			}
-			else
-			{
-				htmltext = "32501-04.htm";
-			}
-		}
-		else if (npcId == DADVENTURER)
-		{
-			if ((st.getQuestItemsCount(SWORD) > 0) && (st.getQuestItemsCount(KDROP) == 0))
-			{
-				htmltext = "32508-01.htm";
-			}
+				break;
 			
-			if ((st.getQuestItemsCount(ENCHSWORD) > 0) && (st.getQuestItemsCount(ADROP) == 0))
-			{
-				htmltext = "32508-01.htm";
-			}
+			case SUPPORTER:
+				if ((cond == 1) || (cond == 2))
+				{
+					htmltext = "32501-01.htm";
+				}
+				else
+				{
+					htmltext = "32501-04.htm";
+				}
+				break;
 			
-			if ((st.getQuestItemsCount(SWORD) == 0) && (st.getQuestItemsCount(KDROP) > 0))
-			{
-				htmltext = "32508-05.htm";
-			}
-			
-			if ((st.getQuestItemsCount(ENCHSWORD) == 0) && (st.getQuestItemsCount(ADROP) > 0))
-			{
-				htmltext = "32508-05.htm";
-			}
-			
-			if ((st.getQuestItemsCount(SWORD) == 0) && (st.getQuestItemsCount(ENCHSWORD) == 0))
-			{
-				htmltext = "32508-05.htm";
-			}
-			
-			if ((st.getQuestItemsCount(KDROP) == 0) && (st.getQuestItemsCount(ADROP) == 0))
-			{
-				htmltext = "32508-01.htm";
-			}
-			
-			if (player.getSummonList().size() > 0)
-			{
-				htmltext = "32508-04.htm";
-			}
-			
-			if ((st.getQuestItemsCount(SWORD) > 0) && (st.getQuestItemsCount(KDROP) > 0))
-			{
-				st.takeItems(SWORD, 1);
-				st.takeItems(KDROP, 1);
-				st.giveItems(ENCHSWORD, 1);
-				htmltext = "32508-02.htm";
-			}
-			
-			if ((st.getQuestItemsCount(ENCHSWORD) > 0) && (st.getQuestItemsCount(ADROP) > 0))
-			{
-				st.takeItems(ENCHSWORD, 1);
-				st.takeItems(ADROP, 1);
-				st.giveItems(LASTSWORD, 1);
-				htmltext = "32508-03.htm";
-			}
-			
-			if (st.getQuestItemsCount(LASTSWORD) > 0)
-			{
-				htmltext = "32508-03.htm";
-			}
-		}
-		else if (npcId == DADVENTURER2)
-		{
-			if (cond == 4)
-			{
+			case DADVENTURER:
+				if ((qs.getQuestItemsCount(SWORD) > 0) && (qs.getQuestItemsCount(KDROP) == 0))
+				{
+					htmltext = "32508-01.htm";
+				}
+				if ((qs.getQuestItemsCount(ENCHSWORD) > 0) && (qs.getQuestItemsCount(ADROP) == 0))
+				{
+					htmltext = "32508-01.htm";
+				}
+				if ((qs.getQuestItemsCount(SWORD) == 0) && (qs.getQuestItemsCount(KDROP) > 0))
+				{
+					htmltext = "32508-05.htm";
+				}
+				if ((qs.getQuestItemsCount(ENCHSWORD) == 0) && (qs.getQuestItemsCount(ADROP) > 0))
+				{
+					htmltext = "32508-05.htm";
+				}
+				if ((qs.getQuestItemsCount(SWORD) == 0) && (qs.getQuestItemsCount(ENCHSWORD) == 0))
+				{
+					htmltext = "32508-05.htm";
+				}
+				if ((qs.getQuestItemsCount(KDROP) == 0) && (qs.getQuestItemsCount(ADROP) == 0))
+				{
+					htmltext = "32508-01.htm";
+				}
 				if (player.getSummonList().size() > 0)
 				{
-					htmltext = "32511-03.htm";
+					htmltext = "32508-04.htm";
 				}
-				else
+				if ((qs.getQuestItemsCount(SWORD) > 0) && (qs.getQuestItemsCount(KDROP) > 0))
 				{
-					st.giveItems(ScrollOfEscape, 1);
-					st.giveItems(PBRACELET, 1);
-					st.addExpAndSp(4010000, 1235000);
-					st.giveItems(ADENA_ID, 411500);
-					st.setCond(5);
-					st.setState(COMPLETED);
-					st.playSound(SOUND_FINISH);
-					st.exitCurrentQuest(false);
-					player.getReflection().startCollapseTimer(60000);
-					player.setVitality(Config.MAX_VITALITY);
-					htmltext = "32511-01.htm";
+					qs.takeItems(SWORD, 1);
+					qs.takeItems(KDROP, 1);
+					qs.giveItems(ENCHSWORD, 1);
+					htmltext = "32508-02.htm";
 				}
-			}
-			else if (id == COMPLETED)
-			{
-				htmltext = "32511-02.htm";
-			}
+				if ((qs.getQuestItemsCount(ENCHSWORD) > 0) && (qs.getQuestItemsCount(ADROP) > 0))
+				{
+					qs.takeItems(ENCHSWORD, 1);
+					qs.takeItems(ADROP, 1);
+					qs.giveItems(LASTSWORD, 1);
+					htmltext = "32508-03.htm";
+				}
+				if (qs.getQuestItemsCount(LASTSWORD) > 0)
+				{
+					htmltext = "32508-03.htm";
+				}
+				break;
+			
+			case DADVENTURER2:
+				if (cond == 4)
+				{
+					if (player.getSummonList().size() > 0)
+					{
+						htmltext = "32511-03.htm";
+					}
+					else
+					{
+						qs.giveItems(ScrollOfEscape, 1);
+						qs.giveItems(PBRACELET, 1);
+						qs.addExpAndSp(4010000, 1235000);
+						qs.giveItems(ADENA_ID, 411500);
+						qs.setCond(5);
+						qs.setState(COMPLETED);
+						qs.playSound(SOUND_FINISH);
+						qs.exitCurrentQuest(false);
+						player.getReflection().startCollapseTimer(60000);
+						player.setVitality(Config.MAX_VITALITY);
+						htmltext = "32511-01.htm";
+					}
+				}
+				else if (id == COMPLETED)
+				{
+					htmltext = "32511-02.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		Player player = st.getPlayer();
-		int npcId = npc.getId();
-		int refId = player.getReflectionId();
+		final Player player = qs.getPlayer();
+		final int npcId = npc.getId();
+		final int refId = player.getReflectionId();
 		
-		if ((npcId == KAMS) && (st.getQuestItemsCount(KDROP) == 0))
-		{
-			st.giveItems(KDROP, 1);
-		}
-		else if ((npcId == ALKASO) && (st.getQuestItemsCount(ADROP) == 0))
-		{
-			st.giveItems(ADROP, 1);
-		}
-		else if (npcId == LEMATAN)
-		{
-			st.setCond(4);
-			st.playSound(SOUND_MIDDLE);
-			addSpawnToInstance(DADVENTURER2, new Location(84990, -208376, -3342, 55000), 0, refId);
-		}
-		else if (Util.contains(Pailaka2nd, npcId))
+		if (Util.contains(Pailaka2nd, npcId))
 		{
 			if (Rnd.get(100) < 80)
 			{
-				st.dropItem(npc, HERBS[Rnd.get(HERBS.length)], Rnd.get(1, 2));
+				qs.dropItem(npc, HERBS[Rnd.get(HERBS.length)], Rnd.get(1, 2));
 			}
 		}
-		else if (npcId == CHEST)
+		
+		switch (npcId)
 		{
-			if (Rnd.get(100) < 80)
-			{
-				st.dropItem(npc, CHESTDROP[Rnd.get(CHESTDROP.length)], Rnd.get(1, 10));
-			}
+			case KAMS:
+				if (qs.getQuestItemsCount(KDROP) == 0)
+				{
+					qs.giveItems(KDROP, 1);
+				}
+				break;
+			
+			case ALKASO:
+				if (qs.getQuestItemsCount(ADROP) == 0)
+				{
+					qs.giveItems(ADROP, 1);
+				}
+				break;
+			
+			case LEMATAN:
+				qs.setCond(4);
+				qs.playSound(SOUND_MIDDLE);
+				addSpawnToInstance(DADVENTURER2, new Location(84990, -208376, -3342, 55000), 0, refId);
+				break;
+			
+			case CHEST:
+				if (Rnd.get(100) < 80)
+				{
+					qs.dropItem(npc, CHESTDROP[Rnd.get(CHESTDROP.length)], Rnd.get(1, 10));
+				}
+				break;
 		}
 		
 		return null;
@@ -286,7 +291,7 @@ public class Q00129_PailakaDevilsLegacy extends Quest implements ScriptFile
 	
 	private void enterInstance(Player player)
 	{
-		Reflection r = player.getActiveReflection();
+		final Reflection r = player.getActiveReflection();
 		
 		if (r != null)
 		{

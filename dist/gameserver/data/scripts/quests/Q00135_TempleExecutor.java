@@ -23,10 +23,12 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00135_TempleExecutor extends Quest implements ScriptFile
 {
+	// Npcs
 	private final static int Shegfield = 30068;
 	private final static int Pano = 30078;
 	private final static int Alex = 30291;
 	private final static int Sonin = 31773;
+	// Monsters
 	private final static int[] mobs =
 	{
 		20781,
@@ -35,6 +37,7 @@ public class Q00135_TempleExecutor extends Quest implements ScriptFile
 		21106,
 		21107
 	};
+	// Items
 	private final static int Stolen_Cargo = 10328;
 	private final static int Hate_Crystal = 10329;
 	private final static int Old_Treasure_Map = 10330;
@@ -47,169 +50,163 @@ public class Q00135_TempleExecutor extends Quest implements ScriptFile
 	{
 		super(false);
 		addStartNpc(Shegfield);
-		addTalkId(Alex);
-		addTalkId(Sonin);
-		addTalkId(Pano);
+		addTalkId(Alex, Sonin, Pano);
 		addKillId(mobs);
-		addQuestItem(Stolen_Cargo);
-		addQuestItem(Hate_Crystal);
-		addQuestItem(Old_Treasure_Map);
-		addQuestItem(Sonins_Credentials);
-		addQuestItem(Panos_Credentials);
-		addQuestItem(Alexs_Credentials);
+		addQuestItem(Stolen_Cargo, Hate_Crystal, Old_Treasure_Map, Sonins_Credentials, Panos_Credentials, Alexs_Credentials);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		int _state = st.getState();
+		final int _state = qs.getState();
 		
-		if (event.equalsIgnoreCase("shegfield_q0135_03.htm") && (_state == CREATED))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("shegfield_q0135_13.htm") && (_state == STARTED))
-		{
-			st.playSound(SOUND_FINISH);
-			st.unset("Report");
-			st.giveItems(ADENA_ID, 16924);
-			st.giveItems(Badge_Temple_Executor, 1);
-			st.exitCurrentQuest(false);
-		}
-		else if (event.equalsIgnoreCase("shegfield_q0135_04.htm") && (_state == STARTED))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("alankell_q0135_07.htm") && (_state == STARTED))
-		{
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
+			case "shegfield_q0135_03.htm":
+				if (_state == CREATED)
+				{
+					qs.setCond(1);
+					qs.setState(STARTED);
+					qs.playSound(SOUND_ACCEPT);
+				}
+				break;
+			
+			case "shegfield_q0135_13.htm":
+				if (_state == STARTED)
+				{
+					qs.playSound(SOUND_FINISH);
+					qs.unset("Report");
+					qs.giveItems(ADENA_ID, 16924);
+					qs.giveItems(Badge_Temple_Executor, 1);
+					qs.exitCurrentQuest(false);
+				}
+				break;
+			
+			case "shegfield_q0135_04.htm":
+				if (_state == STARTED)
+				{
+					qs.setCond(2);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+			
+			case "alankell_q0135_07.htm":
+				if (_state == STARTED)
+				{
+					qs.setCond(3);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int _state = st.getState();
+		final int npcId = npc.getId();
+		final int cond = qs.getCond();
+		final int _state = qs.getState();
 		
-		if (_state == COMPLETED)
+		switch (_state)
 		{
-			return "completed";
-		}
-		
-		int npcId = npc.getId();
-		
-		if (_state == CREATED)
-		{
-			if (npcId != Shegfield)
-			{
-				return "noquest";
-			}
-			
-			if (st.getPlayer().getLevel() < 35)
-			{
-				st.exitCurrentQuest(true);
-				return "shegfield_q0135_02.htm";
-			}
-			
-			st.setCond(0);
-			return "shegfield_q0135_01.htm";
-		}
-		
-		int cond = st.getCond();
-		
-		if ((npcId == Shegfield) && (_state == STARTED))
-		{
-			if (cond == 1)
-			{
-				return "shegfield_q0135_03.htm";
-			}
-			
-			if (cond == 5)
-			{
-				if (st.getInt("Report") == 1)
-				{
-					return "shegfield_q0135_09.htm";
-				}
+			case COMPLETED:
+				return "completed";
 				
-				if ((st.getQuestItemsCount(Sonins_Credentials) > 0) && (st.getQuestItemsCount(Panos_Credentials) > 0) && (st.getQuestItemsCount(Alexs_Credentials) > 0))
+			case CREATED:
+				if (npcId != Shegfield)
 				{
-					st.takeItems(Panos_Credentials, -1);
-					st.takeItems(Sonins_Credentials, -1);
-					st.takeItems(Alexs_Credentials, -1);
-					st.set("Report", "1");
-					return "shegfield_q0135_08.htm";
+					return "noquest";
 				}
-				
-				return "noquest";
-			}
-			
-			return "shegfield_q0135_06.htm";
-		}
-		
-		if ((npcId == Alex) && (_state == STARTED))
-		{
-			if (cond == 2)
-			{
-				return "alankell_q0135_02.htm";
-			}
-			
-			if (cond == 3)
-			{
-				return "alankell_q0135_08.htm";
-			}
-			
-			if (cond == 4)
-			{
-				if ((st.getQuestItemsCount(Sonins_Credentials) > 0) && (st.getQuestItemsCount(Panos_Credentials) > 0))
+				if (qs.getPlayer().getLevel() < 35)
 				{
-					st.setCond(5);
-					st.takeItems(Old_Treasure_Map, -1);
-					st.giveItems(Alexs_Credentials, 1);
-					st.playSound(SOUND_MIDDLE);
-					return "alankell_q0135_10.htm";
+					qs.exitCurrentQuest(true);
+					return "shegfield_q0135_02.htm";
 				}
+				qs.setCond(0);
+				return "shegfield_q0135_01.htm";
 				
-				return "alankell_q0135_09.htm";
-			}
-			
-			if (cond == 5)
-			{
-				return "alankell_q0135_11.htm";
-			}
+			case STARTED:
+				switch (npcId)
+				{
+					case Shegfield:
+						if (cond == 1)
+						{
+							return "shegfield_q0135_03.htm";
+						}
+						if (cond == 5)
+						{
+							if (qs.getInt("Report") == 1)
+							{
+								return "shegfield_q0135_09.htm";
+							}
+							
+							if ((qs.getQuestItemsCount(Sonins_Credentials) > 0) && (qs.getQuestItemsCount(Panos_Credentials) > 0) && (qs.getQuestItemsCount(Alexs_Credentials) > 0))
+							{
+								qs.takeItems(Panos_Credentials, -1);
+								qs.takeItems(Sonins_Credentials, -1);
+								qs.takeItems(Alexs_Credentials, -1);
+								qs.set("Report", "1");
+								return "shegfield_q0135_08.htm";
+							}
+							
+							return "noquest";
+						}
+						return "shegfield_q0135_06.htm";
+						
+					case Alex:
+						switch (cond)
+						{
+							case 2:
+								return "alankell_q0135_02.htm";
+								
+							case 3:
+								return "alankell_q0135_08.htm";
+								
+							case 4:
+								if ((qs.getQuestItemsCount(Sonins_Credentials) > 0) && (qs.getQuestItemsCount(Panos_Credentials) > 0))
+								{
+									qs.setCond(5);
+									qs.takeItems(Old_Treasure_Map, -1);
+									qs.giveItems(Alexs_Credentials, 1);
+									qs.playSound(SOUND_MIDDLE);
+									return "alankell_q0135_10.htm";
+								}
+								return "alankell_q0135_09.htm";
+								
+							case 5:
+								return "alankell_q0135_11.htm";
+						}
+						break;
+					
+					case Sonin:
+						if (qs.getQuestItemsCount(Stolen_Cargo) < 10)
+						{
+							return "warehouse_keeper_sonin_q0135_04.htm";
+						}
+						qs.takeItems(Stolen_Cargo, -1);
+						qs.giveItems(Sonins_Credentials, 1);
+						qs.playSound(SOUND_MIDDLE);
+						return "warehouse_keeper_sonin_q0135_03.htm";
+						
+					case Pano:
+						if (cond == 4)
+						{
+							if (qs.getQuestItemsCount(Hate_Crystal) < 10)
+							{
+								return "pano_q0135_04.htm";
+							}
+							
+							qs.takeItems(Hate_Crystal, -1);
+							qs.giveItems(Panos_Credentials, 1);
+							qs.playSound(SOUND_MIDDLE);
+							return "pano_q0135_03.htm";
+						}
+						break;
+				}
+				break;
 		}
-		
-		if ((npcId == Sonin) && (_state == STARTED))
-		{
-			if (st.getQuestItemsCount(Stolen_Cargo) < 10)
-			{
-				return "warehouse_keeper_sonin_q0135_04.htm";
-			}
-			
-			st.takeItems(Stolen_Cargo, -1);
-			st.giveItems(Sonins_Credentials, 1);
-			st.playSound(SOUND_MIDDLE);
-			return "warehouse_keeper_sonin_q0135_03.htm";
-		}
-		
-		if ((npcId == Pano) && (_state == STARTED) && (cond == 4))
-		{
-			if (st.getQuestItemsCount(Hate_Crystal) < 10)
-			{
-				return "pano_q0135_04.htm";
-			}
-			
-			st.takeItems(Hate_Crystal, -1);
-			st.giveItems(Panos_Credentials, 1);
-			st.playSound(SOUND_MIDDLE);
-			return "pano_q0135_03.htm";
-		}
-		
 		return "noquest";
 	}
 	
@@ -240,9 +237,8 @@ public class Q00135_TempleExecutor extends Quest implements ScriptFile
 				return null;
 			}
 			
-			int drop = drops.get(Rnd.get(drops.size()));
+			final int drop = drops.get(Rnd.get(drops.size()));
 			qs.giveItems(drop, 1);
-			
 			if ((drops.size() == 1) && (qs.getQuestItemsCount(drop) >= 10))
 			{
 				qs.setCond(4);

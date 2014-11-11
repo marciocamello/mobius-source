@@ -19,12 +19,179 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00124_MeetingTheElroki extends Quest implements ScriptFile
 {
-	public final int Marquez = 32113;
-	public final int Mushika = 32114;
-	public final int Asamah = 32115;
-	public final int Karakawei = 32117;
-	public final int Mantarasa = 32118;
-	public final int Mushika_egg = 8778;
+	// Npcs
+	private static final int Marquez = 32113;
+	private static final int Mushika = 32114;
+	private static final int Asamah = 32115;
+	private static final int Karakawei = 32117;
+	private static final int Mantarasa = 32118;
+	// Item
+	private static final int Mushika_egg = 8778;
+	
+	public Q00124_MeetingTheElroki()
+	{
+		super(false);
+		addStartNpc(Marquez);
+		addTalkId(Mushika, Asamah, Karakawei, Mantarasa);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		final int cond = qs.getCond();
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "marquez_q0124_03.htm":
+				qs.setState(STARTED);
+				break;
+			
+			case "marquez_q0124_04.htm":
+				if (cond == 0)
+				{
+					qs.setCond(1);
+					qs.setState(STARTED);
+					qs.playSound(SOUND_ACCEPT);
+				}
+				break;
+			
+			case "marquez_q0124_06.htm":
+				if (cond == 1)
+				{
+					qs.setCond(2);
+					qs.playSound(SOUND_ITEMGET);
+				}
+				break;
+			
+			case "mushika_q0124_03.htm":
+				if (cond == 2)
+				{
+					qs.setCond(3);
+					qs.playSound(SOUND_ITEMGET);
+				}
+				break;
+			
+			case "asama_q0124_06.htm":
+				if (cond == 3)
+				{
+					qs.setCond(4);
+					qs.playSound(SOUND_ITEMGET);
+				}
+				break;
+			
+			case "shaman_caracawe_q0124_03.htm":
+				if (cond == 4)
+				{
+					qs.set("id", "1");
+				}
+				break;
+			
+			case "shaman_caracawe_q0124_05.htm":
+				if (cond == 4)
+				{
+					qs.setCond(5);
+					qs.playSound(SOUND_ITEMGET);
+				}
+				break;
+			
+			case "egg_of_mantarasa_q0124_02.htm":
+				if (cond == 5)
+				{
+					qs.giveItems(Mushika_egg, 1);
+					qs.setCond(6);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		
+		switch (npcId)
+		{
+			case Marquez:
+				switch (cond)
+				{
+					case 0:
+						if (qs.getPlayer().getLevel() < 75)
+						{
+							htmltext = "marquez_q0124_02.htm";
+							qs.exitCurrentQuest(true);
+						}
+						else
+						{
+							htmltext = "marquez_q0124_01.htm";
+						}
+						break;
+					
+					case 1:
+						htmltext = "marquez_q0124_04.htm";
+						break;
+					
+					case 2:
+						htmltext = "marquez_q0124_07.htm";
+						break;
+				}
+				break;
+			
+			case Mushika:
+				if (cond == 2)
+				{
+					htmltext = "mushika_q0124_01.htm";
+				}
+				break;
+			
+			case Asamah:
+				if (cond == 3)
+				{
+					htmltext = "asama_q0124_03.htm";
+				}
+				else if (cond == 6)
+				{
+					htmltext = "asama_q0124_08.htm";
+					qs.takeItems(Mushika_egg, 1);
+					qs.addExpAndSp(1109665, 1229015);
+					qs.giveItems(ADENA_ID, 236510);
+					qs.playSound(SOUND_FINISH);
+					qs.setState(COMPLETED);
+					qs.exitCurrentQuest(false);
+				}
+				break;
+			
+			case Karakawei:
+				if (cond == 4)
+				{
+					htmltext = "shaman_caracawe_q0124_01.htm";
+					
+					if (qs.getInt("id") == 1)
+					{
+						htmltext = "shaman_caracawe_q0124_03.htm";
+					}
+					else if (cond == 5)
+					{
+						htmltext = "shaman_caracawe_q0124_07.htm";
+					}
+				}
+				break;
+			
+			case Mantarasa:
+				if (cond == 5)
+				{
+					htmltext = "egg_of_mantarasa_q0124_01.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -39,147 +206,5 @@ public class Q00124_MeetingTheElroki extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00124_MeetingTheElroki()
-	{
-		super(false);
-		addStartNpc(Marquez);
-		addTalkId(Mushika);
-		addTalkId(Asamah);
-		addTalkId(Karakawei);
-		addTalkId(Mantarasa);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		int cond = st.getCond();
-		String htmltext = event;
-		
-		if (event.equals("marquez_q0124_03.htm"))
-		{
-			st.setState(STARTED);
-		}
-		
-		if (event.equals("marquez_q0124_04.htm") && (cond == 0))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		if (event.equals("marquez_q0124_06.htm") && (cond == 1))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_ITEMGET);
-		}
-		
-		if (event.equals("mushika_q0124_03.htm") && (cond == 2))
-		{
-			st.setCond(3);
-			st.playSound(SOUND_ITEMGET);
-		}
-		
-		if (event.equals("asama_q0124_06.htm") && (cond == 3))
-		{
-			st.setCond(4);
-			st.playSound(SOUND_ITEMGET);
-		}
-		
-		if (event.equals("shaman_caracawe_q0124_03.htm") && (cond == 4))
-		{
-			st.set("id", "1");
-		}
-		
-		if (event.equals("shaman_caracawe_q0124_05.htm") && (cond == 4))
-		{
-			st.setCond(5);
-			st.playSound(SOUND_ITEMGET);
-		}
-		
-		if (event.equals("egg_of_mantarasa_q0124_02.htm") && (cond == 5))
-		{
-			st.giveItems(Mushika_egg, 1);
-			st.setCond(6);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (npcId == Marquez)
-		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() < 75)
-				{
-					htmltext = "marquez_q0124_02.htm";
-					st.exitCurrentQuest(true);
-				}
-				else
-				{
-					htmltext = "marquez_q0124_01.htm";
-				}
-			}
-			else if (cond == 1)
-			{
-				htmltext = "marquez_q0124_04.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "marquez_q0124_07.htm";
-			}
-		}
-		else if ((npcId == Mushika) && (cond == 2))
-		{
-			htmltext = "mushika_q0124_01.htm";
-		}
-		else if (npcId == Asamah)
-		{
-			if (cond == 3)
-			{
-				htmltext = "asama_q0124_03.htm";
-			}
-			else if (cond == 6)
-			{
-				htmltext = "asama_q0124_08.htm";
-				st.takeItems(Mushika_egg, 1);
-				st.addExpAndSp(1109665, 1229015);
-				st.giveItems(ADENA_ID, 236510);
-				st.playSound(SOUND_FINISH);
-				st.setState(COMPLETED);
-				st.exitCurrentQuest(false);
-			}
-		}
-		else if (npcId == Karakawei)
-		{
-			if (cond == 4)
-			{
-				htmltext = "shaman_caracawe_q0124_01.htm";
-				
-				if (st.getInt("id") == 1)
-				{
-					htmltext = "shaman_caracawe_q0124_03.htm";
-				}
-				else if (cond == 5)
-				{
-					htmltext = "shaman_caracawe_q0124_07.htm";
-				}
-			}
-		}
-		else if ((npcId == Mantarasa) && (cond == 5))
-		{
-			htmltext = "egg_of_mantarasa_q0124_01.htm";
-		}
-		
-		return htmltext;
 	}
 }
