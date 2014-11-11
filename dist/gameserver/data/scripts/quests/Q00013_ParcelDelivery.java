@@ -19,7 +19,84 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00013_ParcelDelivery extends Quest implements ScriptFile
 {
+	// Npcs
+	private static final int FUNDIN = 31274;
+	private static final int VULCAN = 31539;
+	// Item
 	private static final int PACKAGE = 7263;
+	
+	public Q00013_ParcelDelivery()
+	{
+		super(false);
+		addStartNpc(FUNDIN);
+		addTalkId(FUNDIN, VULCAN);
+		addQuestItem(PACKAGE);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "mineral_trader_fundin_q0013_0104.htm":
+				qs.setCond(1);
+				qs.giveItems(PACKAGE, 1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "warsmith_vulcan_q0013_0201.htm":
+				qs.takeItems(PACKAGE, -1);
+				qs.giveItems(ADENA_ID, 157834, true);
+				qs.addExpAndSp(589092, 58794);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(false);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		
+		switch (npcId)
+		{
+			case FUNDIN:
+				if (cond == 0)
+				{
+					if (qs.getPlayer().getLevel() >= 74)
+					{
+						htmltext = "mineral_trader_fundin_q0013_0101.htm";
+					}
+					else
+					{
+						htmltext = "mineral_trader_fundin_q0013_0103.htm";
+						qs.exitCurrentQuest(true);
+					}
+				}
+				else if (cond == 1)
+				{
+					htmltext = "mineral_trader_fundin_q0013_0105.htm";
+				}
+				break;
+			
+			case VULCAN:
+				if ((cond == 1) && (qs.getQuestItemsCount(PACKAGE) == 1))
+				{
+					htmltext = "warsmith_vulcan_q0013_0101.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -34,75 +111,5 @@ public class Q00013_ParcelDelivery extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00013_ParcelDelivery()
-	{
-		super(false);
-		addStartNpc(31274);
-		addTalkId(31274);
-		addTalkId(31539);
-		addQuestItem(PACKAGE);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("mineral_trader_fundin_q0013_0104.htm"))
-		{
-			st.setCond(1);
-			st.giveItems(PACKAGE, 1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("warsmith_vulcan_q0013_0201.htm"))
-		{
-			st.takeItems(PACKAGE, -1);
-			st.giveItems(ADENA_ID, 157834, true);
-			st.addExpAndSp(589092, 58794);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(false);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (npcId == 31274)
-		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() >= 74)
-				{
-					htmltext = "mineral_trader_fundin_q0013_0101.htm";
-				}
-				else
-				{
-					htmltext = "mineral_trader_fundin_q0013_0103.htm";
-					st.exitCurrentQuest(true);
-				}
-			}
-			else if (cond == 1)
-			{
-				htmltext = "mineral_trader_fundin_q0013_0105.htm";
-			}
-		}
-		else if (npcId == 31539)
-		{
-			if ((cond == 1) && (st.getQuestItemsCount(PACKAGE) == 1))
-			{
-				htmltext = "warsmith_vulcan_q0013_0101.htm";
-			}
-		}
-		
-		return htmltext;
 	}
 }
