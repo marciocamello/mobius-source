@@ -21,25 +21,25 @@ import lineage2.gameserver.scripts.ScriptFile;
 public class Q00038_DragonFangs extends Quest implements ScriptFile
 {
 	// Npcs
-	public final int ROHMER = 30344;
-	public final int LUIS = 30386;
-	public final int IRIS = 30034;
+	private static final int ROHMER = 30344;
+	private static final int LUIS = 30386;
+	private static final int IRIS = 30034;
 	// Monsters
-	public final int LANGK_LIZARDMAN_LIEUTENANT = 20357;
-	public final int LANGK_LIZARDMAN_SENTINEL = 21100;
-	public final int LANGK_LIZARDMAN_LEADER = 20356;
-	public final int LANGK_LIZARDMAN_SHAMAN = 21101;
+	private static final int LANGK_LIZARDMAN_LIEUTENANT = 20357;
+	private static final int LANGK_LIZARDMAN_SENTINEL = 21100;
+	private static final int LANGK_LIZARDMAN_LEADER = 20356;
+	private static final int LANGK_LIZARDMAN_SHAMAN = 21101;
 	// Items
-	public final int FEATHER_ORNAMENT = 7173;
-	public final int TOOTH_OF_TOTEM = 7174;
-	public final int LETTER_OF_IRIS = 7176;
-	public final int LETTER_OF_ROHMER = 7177;
-	public final int TOOTH_OF_DRAGON = 7175;
-	public final int BONE_HELMET = 45;
-	public final int ASSAULT_BOOTS = 1125;
-	public final int BLUE_BUCKSKIN_BOOTS = 1123;
+	private static final int FEATHER_ORNAMENT = 7173;
+	private static final int TOOTH_OF_TOTEM = 7174;
+	private static final int LETTER_OF_IRIS = 7176;
+	private static final int LETTER_OF_ROHMER = 7177;
+	private static final int TOOTH_OF_DRAGON = 7175;
+	private static final int BONE_HELMET = 45;
+	private static final int ASSAULT_BOOTS = 1125;
+	private static final int BLUE_BUCKSKIN_BOOTS = 1123;
 	// Other
-	public final int CHANCE_FOR_QUEST_ITEMS = 100;
+	private static final int CHANCE_FOR_QUEST_ITEMS = 100;
 	
 	public Q00038_DragonFangs()
 	{

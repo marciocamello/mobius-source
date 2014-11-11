@@ -19,16 +19,234 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00039_RedEyedInvaders extends Quest implements ScriptFile
 {
-	final int BBN = 7178;
-	final int RBN = 7179;
-	final int IP = 7180;
-	final int GML = 7181;
-	final int[] REW =
+	// Npcs
+	private static final int BABENCO = 30334;
+	private static final int BATHIS = 30332;
+	// Monsters
+	private static final int LIZARDMAN = 20919;
+	private static final int LIZARDMAN_SCOUT = 20920;
+	private static final int LIZARDMAN_GUARD = 20921;
+	private static final int GIANT_ARANEID = 20925;
+	// Items
+	private static final int BBN = 7178;
+	private static final int RBN = 7179;
+	private static final int IP = 7180;
+	private static final int GML = 7181;
+	private static final int[] REWARDS =
 	{
 		6521,
 		6529,
 		6535
 	};
+	
+	public Q00039_RedEyedInvaders()
+	{
+		super(false);
+		addStartNpc(BABENCO);
+		addTalkId(BABENCO, BATHIS);
+		addKillId(LIZARDMAN, LIZARDMAN_SCOUT, LIZARDMAN_GUARD, GIANT_ARANEID);
+		addQuestItem(new int[]
+		{
+			BBN,
+			IP,
+			RBN,
+			GML
+		});
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "guard_babenco_q0039_0104.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "captain_bathia_q0039_0201.htm":
+				qs.setCond(2);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "captain_bathia_q0039_0301.htm":
+				if ((qs.getQuestItemsCount(BBN) == 100) && (qs.getQuestItemsCount(RBN) == 100))
+				{
+					qs.setCond(4);
+					qs.takeItems(BBN, -1);
+					qs.takeItems(RBN, -1);
+					qs.playSound(SOUND_ACCEPT);
+				}
+				else
+				{
+					htmltext = "captain_bathia_q0039_0203.htm";
+				}
+				break;
+			
+			case "captain_bathia_q0039_0401.htm":
+				if ((qs.getQuestItemsCount(IP) == 30) && (qs.getQuestItemsCount(GML) == 30))
+				{
+					qs.takeItems(IP, -1);
+					qs.takeItems(GML, -1);
+					qs.giveItems(REWARDS[0], 60);
+					qs.giveItems(REWARDS[1], 1);
+					qs.giveItems(REWARDS[2], 500);
+					qs.addExpAndSp(62366, 2783);
+					qs.setCond(0);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(false);
+				}
+				else
+				{
+					htmltext = "captain_bathia_q0039_0304.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		
+		switch (npcId)
+		{
+			case BABENCO:
+				if (cond == 0)
+				{
+					if (qs.getPlayer().getLevel() < 20)
+					{
+						htmltext = "guard_babenco_q0039_0102.htm";
+						qs.exitCurrentQuest(true);
+					}
+					else if (qs.getPlayer().getLevel() >= 20)
+					{
+						htmltext = "guard_babenco_q0039_0101.htm";
+					}
+				}
+				else if (cond == 1)
+				{
+					htmltext = "guard_babenco_q0039_0105.htm";
+				}
+				break;
+			
+			case BATHIS:
+				switch (cond)
+				{
+					case 1:
+						htmltext = "captain_bathia_q0039_0101.htm";
+						break;
+					
+					case 2:
+						if ((qs.getQuestItemsCount(BBN) < 100) || (qs.getQuestItemsCount(RBN) < 100))
+						{
+							htmltext = "captain_bathia_q0039_0203.htm";
+						}
+						break;
+					
+					case 3:
+						if ((qs.getQuestItemsCount(BBN) == 100) && (qs.getQuestItemsCount(RBN) == 100))
+						{
+							htmltext = "captain_bathia_q0039_0202.htm";
+						}
+						break;
+					
+					case 4:
+						if ((qs.getQuestItemsCount(IP) < 30) || (qs.getQuestItemsCount(GML) < 30))
+						{
+							htmltext = "captain_bathia_q0039_0304.htm";
+						}
+						break;
+					
+					case 5:
+						if ((qs.getQuestItemsCount(IP) == 30) && (qs.getQuestItemsCount(GML) == 30))
+						{
+							htmltext = "captain_bathia_q0039_0303.htm";
+						}
+						break;
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		final int npcId = npc.getId();
+		final int cond = qs.getCond();
+		
+		if (cond == 2)
+		{
+			switch (npcId)
+			{
+				case LIZARDMAN:
+				case LIZARDMAN_SCOUT:
+					if (qs.getQuestItemsCount(BBN) <= 99)
+					{
+						qs.giveItems(BBN, 1);
+					}
+					break;
+				
+				case LIZARDMAN_GUARD:
+					if (qs.getQuestItemsCount(RBN) <= 99)
+					{
+						qs.giveItems(RBN, 1);
+					}
+					break;
+			}
+			
+			if ((qs.getQuestItemsCount(BBN) + qs.getQuestItemsCount(RBN)) == 200)
+			{
+				qs.setCond(3);
+				qs.playSound(SOUND_MIDDLE);
+			}
+			else
+			{
+				qs.playSound(SOUND_ITEMGET);
+			}
+		}
+		else if (cond == 4)
+		{
+			switch (npcId)
+			{
+				case LIZARDMAN_SCOUT:
+				case LIZARDMAN_GUARD:
+					if (qs.getQuestItemsCount(IP) <= 29)
+					{
+						qs.giveItems(IP, 1);
+					}
+					break;
+				
+				case GIANT_ARANEID:
+					if (qs.getQuestItemsCount(GML) <= 29)
+					{
+						qs.giveItems(GML, 1);
+					}
+					break;
+			}
+			
+			if ((qs.getQuestItemsCount(IP) + qs.getQuestItemsCount(GML)) == 60)
+			{
+				qs.setCond(5);
+				qs.playSound(SOUND_MIDDLE);
+			}
+			else
+			{
+				qs.playSound(SOUND_ITEMGET);
+			}
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -43,178 +261,5 @@ public class Q00039_RedEyedInvaders extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00039_RedEyedInvaders()
-	{
-		super(false);
-		addStartNpc(30334);
-		addTalkId(30332);
-		addKillId(20919);
-		addKillId(20920);
-		addKillId(20921);
-		addKillId(20925);
-		addQuestItem(new int[]
-		{
-			BBN,
-			IP,
-			RBN,
-			GML
-		});
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equals("guard_babenco_q0039_0104.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equals("captain_bathia_q0039_0201.htm"))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equals("captain_bathia_q0039_0301.htm"))
-		{
-			if ((st.getQuestItemsCount(BBN) == 100) && (st.getQuestItemsCount(RBN) == 100))
-			{
-				st.setCond(4);
-				st.takeItems(BBN, -1);
-				st.takeItems(RBN, -1);
-				st.playSound(SOUND_ACCEPT);
-			}
-			else
-			{
-				htmltext = "captain_bathia_q0039_0203.htm";
-			}
-		}
-		else if (event.equals("captain_bathia_q0039_0401.htm"))
-		{
-			if ((st.getQuestItemsCount(IP) == 30) && (st.getQuestItemsCount(GML) == 30))
-			{
-				st.takeItems(IP, -1);
-				st.takeItems(GML, -1);
-				st.giveItems(REW[0], 60);
-				st.giveItems(REW[1], 1);
-				st.giveItems(REW[2], 500);
-				st.addExpAndSp(62366, 2783);
-				st.setCond(0);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(false);
-			}
-			else
-			{
-				htmltext = "captain_bathia_q0039_0304.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		int cond = st.getCond();
-		
-		if (npcId == 30334)
-		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() < 20)
-				{
-					htmltext = "guard_babenco_q0039_0102.htm";
-					st.exitCurrentQuest(true);
-				}
-				else if (st.getPlayer().getLevel() >= 20)
-				{
-					htmltext = "guard_babenco_q0039_0101.htm";
-				}
-			}
-			else if (cond == 1)
-			{
-				htmltext = "guard_babenco_q0039_0105.htm";
-			}
-		}
-		else if (npcId == 30332)
-		{
-			if (cond == 1)
-			{
-				htmltext = "captain_bathia_q0039_0101.htm";
-			}
-			else if ((cond == 2) && ((st.getQuestItemsCount(BBN) < 100) || (st.getQuestItemsCount(RBN) < 100)))
-			{
-				htmltext = "captain_bathia_q0039_0203.htm";
-			}
-			else if ((cond == 3) && (st.getQuestItemsCount(BBN) == 100) && (st.getQuestItemsCount(RBN) == 100))
-			{
-				htmltext = "captain_bathia_q0039_0202.htm";
-			}
-			else if ((cond == 4) && ((st.getQuestItemsCount(IP) < 30) || (st.getQuestItemsCount(GML) < 30)))
-			{
-				htmltext = "captain_bathia_q0039_0304.htm";
-			}
-			else if ((cond == 5) && (st.getQuestItemsCount(IP) == 30) && (st.getQuestItemsCount(GML) == 30))
-			{
-				htmltext = "captain_bathia_q0039_0303.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (cond == 2)
-		{
-			if (((npcId == 20919) || (npcId == 20920)) && (st.getQuestItemsCount(BBN) <= 99))
-			{
-				st.giveItems(BBN, 1);
-			}
-			else if ((npcId == 20921) && (st.getQuestItemsCount(RBN) <= 99))
-			{
-				st.giveItems(RBN, 1);
-			}
-			
-			st.playSound(SOUND_ITEMGET);
-			
-			if ((st.getQuestItemsCount(BBN) + st.getQuestItemsCount(RBN)) == 200)
-			{
-				st.setCond(3);
-				st.playSound(SOUND_MIDDLE);
-			}
-		}
-		
-		if (cond == 4)
-		{
-			if (((npcId == 20920) || (npcId == 20921)) && (st.getQuestItemsCount(IP) <= 29))
-			{
-				st.giveItems(IP, 1);
-			}
-			else if ((npcId == 20925) && (st.getQuestItemsCount(GML) <= 29))
-			{
-				st.giveItems(GML, 1);
-			}
-			
-			st.playSound(SOUND_ITEMGET);
-			
-			if ((st.getQuestItemsCount(IP) + st.getQuestItemsCount(GML)) == 60)
-			{
-				st.setCond(5);
-				st.playSound(SOUND_MIDDLE);
-			}
-		}
-		
-		return null;
 	}
 }

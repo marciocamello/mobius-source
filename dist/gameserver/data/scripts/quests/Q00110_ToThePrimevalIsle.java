@@ -19,81 +19,71 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00110_ToThePrimevalIsle extends Quest implements ScriptFile
 {
-	final int ANTON = 31338;
-	final int MARQUEZ = 32113;
-	final int ANCIENT_BOOK = 8777;
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
+	// Npcs
+	private static final int ANTON = 31338;
+	private static final int MARQUEZ = 32113;
+	// Item
+	private static final int ANCIENT_BOOK = 8777;
 	
 	public Q00110_ToThePrimevalIsle()
 	{
 		super(false);
 		addStartNpc(ANTON);
-		addTalkId(ANTON);
-		addTalkId(MARQUEZ);
+		addTalkId(ANTON, MARQUEZ);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equals("1"))
+		switch (event)
 		{
-			htmltext = "scroll_seller_anton_q0110_05.htm";
-			st.setCond(1);
-			st.giveItems(ANCIENT_BOOK, 1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equals("2") && (st.getQuestItemsCount(ANCIENT_BOOK) > 0))
-		{
-			htmltext = "marquez_q0110_05.htm";
-			st.playSound(SOUND_FINISH);
-			st.giveItems(ADENA_ID, 189208);
-			st.addExpAndSp(887732, 983212);
-			st.takeItems(ANCIENT_BOOK, -1);
-			st.exitCurrentQuest(false);
-		}
-		else if (event.equals("3"))
-		{
-			htmltext = "marquez_q0110_06.htm";
-			st.exitCurrentQuest(true);
+			case "1":
+				htmltext = "scroll_seller_anton_q0110_05.htm";
+				qs.setCond(1);
+				qs.giveItems(ANCIENT_BOOK, 1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "2":
+				if (qs.getQuestItemsCount(ANCIENT_BOOK) > 0)
+				{
+					htmltext = "marquez_q0110_05.htm";
+					qs.playSound(SOUND_FINISH);
+					qs.giveItems(ADENA_ID, 189208);
+					qs.addExpAndSp(887732, 983212);
+					qs.takeItems(ANCIENT_BOOK, -1);
+					qs.exitCurrentQuest(false);
+				}
+				break;
+			
+			case "3":
+				htmltext = "marquez_q0110_06.htm";
+				qs.exitCurrentQuest(true);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int id = st.getState();
-		int cond = st.getCond();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
 		
-		if (id == CREATED)
+		if (qs.getState() == CREATED)
 		{
-			if (st.getPlayer().getLevel() >= 75)
+			if (qs.getPlayer().getLevel() >= 75)
 			{
 				htmltext = "scroll_seller_anton_q0110_01.htm";
 			}
 			else
 			{
-				st.exitCurrentQuest(true);
+				qs.exitCurrentQuest(true);
 				htmltext = "scroll_seller_anton_q0110_02.htm";
 			}
 		}
@@ -104,11 +94,11 @@ public class Q00110_ToThePrimevalIsle extends Quest implements ScriptFile
 				htmltext = "scroll_seller_anton_q0110_07.htm";
 			}
 		}
-		else if (id == STARTED)
+		else if (qs.getState() == STARTED)
 		{
 			if ((npcId == MARQUEZ) && (cond == 1))
 			{
-				if (st.getQuestItemsCount(ANCIENT_BOOK) == 0)
+				if (qs.getQuestItemsCount(ANCIENT_BOOK) == 0)
 				{
 					htmltext = "marquez_q0110_07.htm";
 				}
@@ -123,8 +113,17 @@ public class Q00110_ToThePrimevalIsle extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public void onLoad()
 	{
-		return null;
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }
